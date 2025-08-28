@@ -238,9 +238,9 @@ A really easy way to start using a matrix is to use the CSS {{cssxref("transform
   width: 200px;
   height: 200px;
   overflow-y: scroll;
-  background: #4cc;
+  background: #44cccc;
   padding: 10px;
-  border: 2px solid #333;
+  border: 2px solid #333333;
   position: absolute;
   top: 50%;
   left: 50%;

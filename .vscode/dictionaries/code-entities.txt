@@ -38,6 +38,7 @@ ALTGR
 amssymb
 android-safetynet
 animalfound
+anims
 anonid
 apacheconf
 apachectl
@@ -75,6 +76,7 @@ beforescriptexecute
 beforexrselect
 BGRX
 bhks
+biske
 bmatrix
 BPPV1
 Brai
@@ -138,6 +140,8 @@ Crsel
 cryptomining
 csiso
 csrfmiddlewaretoken
+css.selectors.headingfunction
+css.selectors.hostfunction
 CSS_RGBCOLOR
 csslint
 cssref
@@ -629,6 +633,7 @@ romanlow
 rotr
 roundedbox
 rowindextext
+rozaj
 rport
 rquote
 rspadd
@@ -667,7 +672,6 @@ seekbackward
 seekforward
 seekto
 seeother
-selectchange
 selectedcontent
 selectend
 seltype

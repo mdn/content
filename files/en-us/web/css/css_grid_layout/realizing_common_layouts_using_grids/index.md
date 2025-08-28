@@ -451,7 +451,7 @@ a:visited {
 
 h2 {
   background-color: #f08c00;
-  color: #fff;
+  color: white;
   text-align: center;
   margin: 0;
   padding: 20px;
@@ -561,7 +561,7 @@ a:visited {
 
 h2 {
   background-color: #f08c00;
-  color: #fff;
+  color: white;
   text-align: center;
   margin: 0;
   padding: 20px;

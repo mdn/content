@@ -63,7 +63,7 @@ The `options` object passed into the {{domxref("IntersectionObserver.Intersectio
 - `root`
   - : The element that is used as the viewport for checking visibility of the target. Must be the ancestor of the target. Defaults to the browser viewport if not specified or if `null`.
 - `rootMargin`
-  - : Margin around the root. A string of one to four values similar to the CSS {{cssxref("margin")}} property, e.g., `"10px 20px 30px 40px"` (top, right, bottom, left). The values can only be [absolute lengths](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units#absolute_length_units) or percentages. This set of values serves to grow or shrink each side of the root element's bounding box before computing intersections. Negative values will shrink the bounding box of the root element and positive values will expand it. The default value, if not specified, is `"0px 0px 0px 0px"`.
+  - : Margin around the root. A string of one to four values similar to the CSS {{cssxref("margin")}} property, e.g., `"10px 20px 30px 40px"` (top, right, bottom, left). The values can only be in pixels (`px`) or percentages (`%`). This set of values serves to grow or shrink each side of the root element's bounding box before computing intersections. Negative values will shrink the bounding box of the root element and positive values will expand it. The default value, if not specified, is `"0px 0px 0px 0px"`.
 - `scrollMargin`
   - : Margin around nested {{glossary("scroll container","scroll containers")}} that takes the same values/has same default as `rootMargin`.
     The margins are applied to nested scrollable containers before computing intersections.
@@ -155,7 +155,7 @@ The **_root intersection rectangle_** is the rectangle used to check against the
 - If the intersection root has an overflow clip, the root intersection rectangle is the root element's content area.
 - Otherwise, the root intersection rectangle is the intersection root's bounding client rectangle (as returned by calling {{domxref("Element.getBoundingClientRect", "getBoundingClientRect()")}} on it).
 
-The root intersection rectangle can be adjusted further by setting the **root margin**, `rootMargin`, when creating the {{domxref("IntersectionObserver")}}. The values in `rootMargin` define offsets added to each side of the intersection root's bounding box to create the final intersection root bounds (which are disclosed in {{domxref("IntersectionObserverEntry.rootBounds")}} when the callback is executed). Positive values grow the box, while negative values shrink it.
+The root intersection rectangle can be adjusted further by setting the **root margin**, `rootMargin`, when creating the {{domxref("IntersectionObserver")}}. The values in `rootMargin` define offsets added to each side of the intersection root's bounding box to create the final intersection root bounds (which are disclosed in {{domxref("IntersectionObserverEntry.rootBounds")}} when the callback is executed). Positive values grow the box, while negative values shrink it. Each offset value can be only expressed in pixels (px) or a percentage (%).
 
 The effect of growing the box using the root margin is to allow overflow targets to intersect with the root before they become visible.
 This can be used, for example, to start loading images just before they come into view, rather than at the point they become visible.
@@ -384,7 +384,7 @@ p {
   min-width: 195px;
   min-height: 99px;
   margin-right: 10px;
-  background-color: #eee; /* Placeholder background */
+  background-color: #eeeeee; /* Placeholder background */
 }
 
 #log {

@@ -161,7 +161,7 @@ We can also support keyboard users with this technique, by adding a `tabindex` o
 span[data-description] {
   position: relative;
   text-decoration: underline;
-  color: #00f;
+  color: blue;
   cursor: help;
 }
 
@@ -176,7 +176,7 @@ span[data-description]:focus::after {
   border-radius: 10px;
   background-color: #ffffcc;
   padding: 12px;
-  color: #000000;
+  color: black;
   font-size: 14px;
   z-index: 1;
 }

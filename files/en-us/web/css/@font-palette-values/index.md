@@ -50,7 +50,7 @@ This example shows how you can change some or all of the colors in a color font.
 #### CSS
 
 ```css
-@import url(https://fonts.googleapis.com/css2?family=Bungee+Spice);
+@import "https://fonts.googleapis.com/css2?family=Bungee+Spice";
 p {
   font-family: "Bungee Spice", fantasy;
   font-size: 2rem;

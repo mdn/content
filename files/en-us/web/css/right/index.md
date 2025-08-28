@@ -66,8 +66,8 @@ right: 20px;
 /* <length> values */
 right: 3px;
 right: 2.4em;
-right: anchor(--myAnchor 50%);
-right: anchor-size(--myAnchor height, 65px);
+right: anchor(--my-anchor 50%);
+right: anchor-size(--my-anchor height, 65px);
 
 /* <percentage>s of the width of the containing block */
 right: 10%;

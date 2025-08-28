@@ -80,7 +80,7 @@ When both `top` and {{cssxref("bottom")}} values are specified, there are three 
 top: 3px;
 top: 2.4em;
 top: anchor(bottom);
-top: anchor-size(--myAnchor self-block, 10%);
+top: anchor-size(--my-anchor self-block, 10%);
 
 /* <percentage>s of the height of the containing block */
 top: 10%;

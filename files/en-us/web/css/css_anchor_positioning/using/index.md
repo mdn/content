@@ -49,7 +49,7 @@ To declare an element as an anchor with CSS, you need to set an anchor name on i
 
 ```css
 .anchor {
-  anchor-name: --myAnchor;
+  anchor-name: --my-anchor;
   width: fit-content;
 }
 ```
@@ -60,7 +60,7 @@ Converting an element to an anchor-positioned element requires two steps: It nee
 .infobox {
   color: darkblue;
   background-color: azure;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   padding: 10px;
   border-radius: 10px;
   font-size: 1rem;
@@ -70,7 +70,7 @@ Converting an element to an anchor-positioned element requires two steps: It nee
 ```css
 .infobox {
   position: fixed;
-  position-anchor: --myAnchor;
+  position-anchor: --my-anchor;
 }
 ```
 
@@ -104,6 +104,9 @@ In some cases, an implicit anchor reference will be made between two elements, d
 ## Positioning elements relative to their anchor
 
 As we saw above, associating a positioned element with an anchor is not really much use on its own. Our goal is to place the positioned element relative to its associated anchor element. This is done either by setting a [CSS `anchor()` function](#using_inset_properties_with_anchor_function_values) value on an [inset property](/en-US/docs/Glossary/Inset_properties), [specifying a `position-area`](#setting_a_position-area), or centering the positioned element with the [`anchor-center` placement value](#centering_on_the_anchor_using_anchor-center).
+
+> [!NOTE]
+> CSS anchor positioning also provides mechanisms for specifying fallback positions if the positioned element's default position causes it to overflow the viewport. See the [Fallback options and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide for details.
 
 > [!NOTE]
 > The anchor element must be a visible DOM node for the association and positioning to work. If it is hidden (for example via [`display: none`](/en-US/docs/Web/CSS/display#none)), the positioned element will be positioned relative to its nearest positioned ancestor. We discuss how to hide an anchor-positioned element when its anchor disappears in [Conditional hiding using `position-visibility`](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding#conditionally_hiding_anchor-positioned_elements).
@@ -212,7 +215,7 @@ body {
 
 ```css
 .anchor {
-  anchor-name: --myAnchor;
+  anchor-name: --my-anchor;
 }
 ```
 
@@ -222,7 +225,7 @@ The infobox is associated with the anchor via the anchor name and given fixed po
 .infobox {
   color: darkblue;
   background-color: azure;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   padding: 10px;
   border-radius: 10px;
   font-size: 1rem;
@@ -231,7 +234,7 @@ The infobox is associated with the anchor via the anchor name and given fixed po
 
 ```css
 .infobox {
-  position-anchor: --myAnchor;
+  position-anchor: --my-anchor;
   position: fixed;
   inset-block-start: anchor(end);
   inset-inline-start: anchor(self-end);
@@ -355,7 +358,7 @@ Let's demonstrate some of these values; this example uses the same HTML and base
 }
 
 .anchor {
-  anchor-name: --myAnchor;
+  anchor-name: --my-anchor;
 }
 
 body {
@@ -387,7 +390,7 @@ The infobox is given fixed positioning and associated with the anchor using CSS.
 .infobox {
   color: darkblue;
   background-color: azure;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   padding: 10px;
   border-radius: 10px;
   font-size: 1rem;
@@ -397,7 +400,7 @@ The infobox is given fixed positioning and associated with the anchor using CSS.
 ```css
 .infobox {
   position: fixed;
-  position-anchor: --myAnchor;
+  position-anchor: --my-anchor;
   position-area: top;
 }
 ```
@@ -475,7 +478,7 @@ This example uses the same HTML and base CSS as the previous example. The infobo
   border-radius: 10px;
   border: 1px solid black;
   padding: 3px;
-  anchor-name: --myAnchor;
+  anchor-name: --my-anchor;
 }
 
 body {
@@ -486,7 +489,7 @@ body {
 .infobox {
   color: darkblue;
   background-color: azure;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   padding: 10px;
   border-radius: 10px;
   font-size: 1rem;
@@ -496,7 +499,7 @@ body {
 ```css
 .infobox {
   position: fixed;
-  position-anchor: --myAnchor;
+  position-anchor: --my-anchor;
   top: calc(anchor(bottom) + 5px);
   justify-self: anchor-center;
 }
@@ -600,7 +603,7 @@ Let's look at an example. The HTML and base CSS are the same as in the previous 
 }
 
 .anchor {
-  anchor-name: --myAnchor;
+  anchor-name: --my-anchor;
 }
 
 body {
@@ -611,7 +614,7 @@ body {
 .infobox {
   color: darkblue;
   background-color: azure;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   padding: 10px;
   border-radius: 10px;
   font-size: 1rem;
@@ -621,7 +624,7 @@ body {
 ```css
 .infobox {
   position: fixed;
-  position-anchor: --myAnchor;
+  position-anchor: --my-anchor;
   position-area: right;
   margin-left: 5px;
   width: calc(anchor-size(width) * 5);
@@ -657,7 +660,7 @@ You can use the [`anchor-size()`](/en-US/docs/Web/CSS/anchor-size) function with
 
 ```css
 left: anchor-size(width);
-inset-inline-end: anchor-size(--myAnchor height, 100px);
+inset-inline-end: anchor-size(--my-anchor height, 100px);
 ```
 
 This doesn't position an element relative to the position of its anchor like the [`anchor()`](/en-US/docs/Web/CSS/anchor) function or {{cssxref("position-area")}} property do (see [Positioning elements relative to their anchor](#positioning_elements_relative_to_their_anchor), above); the element won't change its position when its anchor does. Instead, the element will be positioned according to the normal rules of [`absolute`](/en-US/docs/Web/CSS/position#absolute) or [`fixed`](/en-US/docs/Web/CSS/position#fixed) positioning.
@@ -670,7 +673,7 @@ You can use the [`anchor-size()`](/en-US/docs/Web/CSS/anchor-size) function with
 
 ```css
 margin-left: calc(anchor-size(width) / 4);
-margin-block-start: anchor-size(--myAnchor self-block, 20px);
+margin-block-start: anchor-size(--my-anchor self-block, 20px);
 ```
 
 This can be useful in cases where you want to set an anchor-positioned element's margin to be always equal to the same percentage of the anchor element's width, even when the width changes.
@@ -734,7 +737,7 @@ body {
   align-content: center;
   color: darkblue;
   background-color: azure;
-  outline: 1px solid #ddd;
+  outline: 1px solid #dddddd;
   font-size: 1rem;
   text-align: center;
 }
@@ -742,14 +745,14 @@ body {
 
 ```css
 .anchor {
-  anchor-name: --myAnchor;
+  anchor-name: --my-anchor;
   width: 100px;
   height: 100px;
   transition: 1s all;
 }
 
 .infobox {
-  position-anchor: --myAnchor;
+  position-anchor: --my-anchor;
   position: absolute;
   height: 100px;
   width: 100px;

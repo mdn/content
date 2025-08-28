@@ -60,7 +60,7 @@ As shown in the code below, you can adjust an app's style depending on the `disp
 
 @media (display-mode: fullscreen) {
   body {
-    background-color: #000000; /* Black background for fullscreen mode */
+    background-color: black; /* Black background for fullscreen mode */
   }
 }
 ```
@@ -77,7 +77,7 @@ The following example manifest file for the web app named "HackerWeb" defines ho
   "short_name": "HackerWeb",
   "start_url": "/index.html",
   "display": "standalone",
-  "background_color": "#ffffff",
+  "background_color": "white",
   "description": "A readable Hacker News app",
   "icons": [
     {

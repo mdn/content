@@ -43,7 +43,7 @@ Statement at-rules, such as {{cssxref("@import")}} and {{cssxref("@namespace")}}
 
 ```css
 @import "assets/fonts.css" layer(fonts);
-@namespace svg url(http://www.w3.org/2000/svg);
+@namespace svg url("http://www.w3.org/2000/svg");
 ```
 
 If the parser encounters a curly brace (`{`) before a semi-colon is encountered, the at-rule is parsed as a block at-rule. [Block at-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rule#block_at-rules) like {{cssxref("@font-face")}} and {{cssxref("@keyframes")}}, contain a block of declarations surrounded by curly braces (`{}`). The opening curly brace informs the browser where the at-rule prelude ends and the at-rule's body starts. The parser looks forward, seeking matching blocks (content surrounded by `()`, `{}`, or `[]`) until it finds a closing curly brace (`}`) that isn't matched by any other curly braces: this closes the body of the at-rule.

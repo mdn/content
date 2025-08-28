@@ -55,7 +55,7 @@ p {
   margin: 0;
   font-size: 4em;
   -webkit-text-stroke-width: 3px;
-  -webkit-text-stroke-color: #ff0000; /* Can be changed in the live sample */
+  -webkit-text-stroke-color: red; /* Can be changed in the live sample */
 }
 ```
 

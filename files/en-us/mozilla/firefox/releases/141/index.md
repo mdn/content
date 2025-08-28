@@ -1,8 +1,8 @@
 ---
 title: Firefox 141 for developers
-short-title: Firefox 141 (Stable)
+short-title: Firefox 141
 slug: Mozilla/Firefox/Releases/141
-page-type: firefox-release-notes-active
+page-type: firefox-release-notes
 sidebar: firefox
 ---
 
@@ -26,6 +26,7 @@ Firefox 141 was released on [July 22, 2025](https://whattrainisitnow.com/release
 - The [`variants`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/variants) accessor property is now supported on {{jsxref("Intl.Locale")}} instances.
   This property returns the variants associated with a locale as a string of dash (`-`) separated identifiers.
   It offers a more robust way to get and set variant subtags of a language identifier as opposed to manually parsing or modifying a locale string ([Firefox bug 1970161](https://bugzil.la/1970161)).
+- The explicit [resource management](/en-US/docs/Web/JavaScript/Guide/Resource_management) API, which includes the {{jsxref("Statements/using", "using")}} and {{jsxref("Statements/await_using", "await using")}} declarations, the {{jsxref("DisposableStack")}}, {{jsxref("AsyncDisposableStack")}}, and {{jsxref("SuppressedError")}} objects, and the {{jsxref("Symbol.dispose")}} and {{jsxref("Symbol.asyncDispose")}} well-known symbols, is now supported. These features ensure automatic cleanup of resources such as file handles or stream readers when they go out of scope, reducing leaks and simplifying error handling ([Firefox bug 1967744](https://bugzil.la/1967744)).
 
 ### HTTP
 
@@ -51,6 +52,7 @@ Firefox 141 was released on [July 22, 2025](https://whattrainisitnow.com/release
 
 #### General
 
+- Removed the experimental CDP (Chrome DevTools Protocol) implementation from Firefox. With it we also removed the support for the `remote.active-protocols` preference. More details on this topic can be found on [Firefox Developer Experience](https://fxdx.dev/cdp-retirement-in-firefox/) ([Firefox bug 1882096](https://bugzil.la/1882096)).
 - Removed the temporary `remote.system-access-check.enabled` preference. This preference can no longer be used to disable system access checks when using WebDriver in Firefox's chrome scope during testing ([Firefox bug 1955007](https://bugzil.la/1955007)).
 
 #### WebDriver BiDi

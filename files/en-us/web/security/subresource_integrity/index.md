@@ -112,17 +112,17 @@ Browsers handle SRI by doing the following:
 
 ## Integrity policy
 
-The {{httpheader("Integrity-Policy")}} and {{httpheader("Integrity-Policy-Report-Only")}} HTTP headers enable a document to enforce a policy regarding the integrity metadata requirements on loaded subresources of specified types (currently scripts only).
+The {{httpheader("Integrity-Policy")}} and {{httpheader("Integrity-Policy-Report-Only")}} HTTP headers enable a document to enforce a policy regarding the integrity metadata requirements on loaded script and stylesheet subresources.
 
 When an `Integrity-Policy` header is specified, the browser blocks requests with [no-cors](/en-US/docs/Web/API/Request/mode#no-cors) mode or without an `integrity` attribute from being made, and will also report violations if a valid reporting endpoint is specified.
-When an `Integrity-Policy-Report-Only` header is specified the browser allows requests that violate the policy, but will report violations to the reporting endpoint (if a valid reporting endpoint is specified).
+When an `Integrity-Policy-Report-Only` header is specified, the browser allows requests that violate the policy, but will report violations to the reporting endpoint (if a valid reporting endpoint is specified).
 
-Developers would typically use `Integrity-Policy-Report-Only` as a first deployment step in their Integrity Policy journey, to ensure that all the scripts loaded in their documents have appropriate integrity metadata. Once they'd see that no violation reports are being received, they'd know that they can enable blocking using the `Integrity-Policy` header without risking user-facing breakage.
+Developers would typically use `Integrity-Policy-Report-Only` as a first deployment step in their Integrity Policy journey, to ensure that all the scripts and stylesheets loaded in their documents have appropriate integrity metadata. Once they'd see that no violation reports are being received, they'd know that they can enable blocking using the `Integrity-Policy` header without risking user-facing breakage.
 
 The header values are defined as structured field dictionaries with the following keys:
 
 - `blocked-destinations`
-  - : Defines a list of [request destinations](/en-US/docs/Web/API/Request/destination) to be blocked. The only allowed value is `script`.
+  - : Defines a list of [request destinations](/en-US/docs/Web/API/Request/destination) to be blocked. The only allowed values are `script` and `style`.
 - `sources` {{optional_inline}}
   - : Defines a list of integrity sources. The default and only currently supported value is `inline`. As a result, adding `sources=(inline)` to the header has a similar effect as omitting `sources`.
 - `endpoints` {{optional_inline}}
@@ -165,13 +165,13 @@ You can use the following {{HTMLElement("script")}} element to tell a browser th
 
 ### Integrity enforcement with the `Integrity-Policy` header
 
-You can add the {{httpheader("Integrity-Policy")}} header to your document in order to ensure that all the external scripts it loads are loaded with integrity (and aren't loaded with [no-cors](/en-US/docs/Web/API/Request/mode#no-cors) mode)
+You can add the {{httpheader("Integrity-Policy")}} header to your document to ensure that the external resources it loads (in this case, scripts) are loaded with integrity (and aren't loaded with [no-cors](/en-US/docs/Web/API/Request/mode#no-cors) mode)
 
 ```http
 Integrity-Policy: blocked-destinations=(script), endpoints=(integrity-endpoint, some-other-integrity-endpoint)
 ```
 
-In case you're not sure all your the external scripts have integrity metadata, you can enable the report-only version of the feature and start getting reports of violations.
+If you're unsure that all the external scripts have integrity metadata, you can enable the report-only version of the feature and start getting reports of violations.
 You can do that with the {{httpheader("Integrity-Policy-Report-Only")}} header.
 
 ```http

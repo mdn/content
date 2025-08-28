@@ -27,6 +27,8 @@ Each of these async iterators have a distinct prototype object, which defines th
 
 ## Instance methods
 
+- [`AsyncIterator.prototype[Symbol.asyncDispose]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncIterator/Symbol.asyncDispose)
+  - : Calls and awaits the `return()` method of `this`, if it exists. This implements the _async disposable protocol_ and allows it to be disposed when used with {{jsxref("Statements/await_using", "await using")}}.
 - [`AsyncIterator.prototype[Symbol.asyncIterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncIterator/Symbol.asyncIterator)
   - : Returns the async iterator object itself. This allows async iterator objects to also be async iterable.
 

@@ -38,7 +38,7 @@ transform-style: preserve-3d;
 .numeral {
   background-color: #ffba08;
   border-radius: 0.2rem;
-  color: #000;
+  color: black;
   margin: 1rem;
   padding: 0.2rem;
   transform: rotate3d(1, 1, 1, 45deg);
@@ -141,7 +141,7 @@ We also provide a checkbox allowing you to toggle between this, and `transform-s
   position: absolute;
   backface-visibility: inherit;
   font-size: 60px;
-  color: #fff;
+  color: white;
 }
 
 .front {

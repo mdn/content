@@ -10,6 +10,8 @@ The **`::highlight()`** CSS [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements
 
 A custom highlight is a collection of {{domxref("Range")}} objects and is registered on a webpage using the {{domxref("HighlightRegistry")}}.
 
+The `::highlight()` pseudo-element follows a special inheritance model common to all highlight pseudo-elements. For more details on how this inheritance works, see the [Highlight pseudo-elements inheritance](/en-US/docs/Web/CSS/Pseudo-elements#highlight_pseudo-elements_inheritance) section.
+
 ## Allowable properties
 
 Only certain CSS properties can be used with `::highlight()`:
@@ -47,31 +49,31 @@ In particular, {{CSSxRef("background-image")}} is ignored.
 }
 
 ::highlight(rainbow-color-1) {
-  color: #ad26ad;
+  color: violet;
   text-decoration: underline;
 }
 ::highlight(rainbow-color-2) {
-  color: #5d0a99;
+  color: purple;
   text-decoration: underline;
 }
 ::highlight(rainbow-color-3) {
-  color: #0000ff;
+  color: blue;
   text-decoration: underline;
 }
 ::highlight(rainbow-color-4) {
-  color: #07c607;
+  color: green;
   text-decoration: underline;
 }
 ::highlight(rainbow-color-5) {
-  color: #b3b308;
+  color: yellow;
   text-decoration: underline;
 }
 ::highlight(rainbow-color-6) {
-  color: #ffa500;
+  color: orange;
   text-decoration: underline;
 }
 ::highlight(rainbow-color-7) {
-  color: #ff0000;
+  color: red;
   text-decoration: underline;
 }
 ```

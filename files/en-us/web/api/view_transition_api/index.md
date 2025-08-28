@@ -93,7 +93,7 @@ See [Using the View Transition API](/en-US/docs/Web/API/View_Transition_API/Usin
 
 - [Basic View Transitions SPA demo](https://mdn.github.io/dom-examples/view-transitions/spa/): A basic image gallery demo with view transitions, featuring separate animations between old and new images, and old and new captions.
 - [Basic View Transitions MPA demo](https://mdn.github.io/dom-examples/view-transitions/mpa/): A sample two-page site that demonstrates usage of cross-document (MPA) view transitions, providing a custom "swipe up" transition when the two pages are navigated between.
-- [View Transitions match-element demo](https://mdn.github.io/dom-examples/view-transitions/match-element/): An SPA featuring animated list items, which demonstrates usage of the `view-transition-name` property's `match-element` value.
+- [View transitions `match-element` demo](/en-US/docs/Web/CSS/view-transition-name#using_the_match-element_value): An SPA featuring animated list items, demonstrating the use of the `match-element` value of the `view-transition-name` property to animate individual elements.
 - [HTTP 203 playlist](https://http203-playlist.netlify.app/): A video player demo app that features several different SPA view transitions, many of which are explained in [Smooth transitions with the View Transition API](https://developer.chrome.com/docs/web-platform/view-transitions/).
 - [Chrome DevRel view transitions demos](https://view-transitions.chrome.dev/): A series of View Transition API demos.
 

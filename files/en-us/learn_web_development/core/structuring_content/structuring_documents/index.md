@@ -5,7 +5,7 @@ page-type: tutorial-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Lists", "Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Marking_up_a_letter", "Learn_web_development/Core/Structuring_content/Creating_links", "Learn_web_development/Core/Structuring_content")}}
 
 In addition to defining individual parts of your page (such as "a paragraph" or "an image"), {{glossary("HTML")}} also boasts a number of block level elements used to define areas of your website such as "the header", "the navigation menu", or "the main content column". This article looks into how to plan a basic website structure, and write the HTML to represent this structure.
 
@@ -353,6 +353,6 @@ Try carrying out the above exercise for a website of your own creation. What wou
 
 ## Summary
 
-At this point, you should have a better idea about how to structure a web page/site. In the next article of this module, we'll look at some advanced text techniques.
+At this point, you should have a better idea about how to structure a web page/site. In the next article of this module, we'll look at how to create hyperlinks, one of the fundamental features of the web.
 
-{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Lists", "Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Marking_up_a_letter", "Learn_web_development/Core/Structuring_content/Creating_links", "Learn_web_development/Core/Structuring_content")}}

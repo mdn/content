@@ -88,7 +88,7 @@ For complete example extensions, see [Example extensions](/en-US/docs/Mozilla/Ad
 {
   "browser_specific_settings": {
     "gecko": {
-      "id": "addon@example.com",
+      "id": "@addon-example",
       "strict_min_version": "42.0"
     }
   },

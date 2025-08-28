@@ -49,7 +49,7 @@ li::after {
   background: black;
   color: white;
   padding: 2px;
-  border: 1px solid #eee;
+  border: 1px solid #eeeeee;
   opacity: 0;
   transition: 0.5s opacity;
 }

@@ -8,15 +8,19 @@ browser-compat: api.RTCStatsReport.type_inbound-rtp.ssrc
 
 {{APIRef("WebRTC")}}
 
-The **`ssrc`** property of the {{domxref("RTCInboundRtpStreamStats")}} dictionary contains a positive integer value that identifies the synchronization source (SSRC) of this stream of {{Glossary("RTP")}} packets.
-
-A source might be something like a microphone, or a mixer application that combines multiple sources.
-All packets from the same source share the same time source and sequence space, and so can be ordered relative to each other.
-Note that two streams with the same `ssrc` value refer to the same source.
+The **`ssrc`** property of the {{domxref("RTCInboundRtpStreamStats")}} dictionary identifies the synchronization source (SSRC) of this stream of {{Glossary("RTP")}} packets.
 
 ## Value
 
-A positive 32-bit integer uniquely identifying the SSRC of the RTP packets whose statistics are covered by this {{domxref("RTCInboundRtpStreamStats")}} object.
+A positive integer.
+
+## Description
+
+The **`ssrc`** property uniquely identifies the SSRC of the RTP packets whose statistics are covered by this {{domxref("RTCInboundRtpStreamStats")}} object.
+
+A synchronization source might be something like a microphone, or a mixer application that combines multiple sources.
+All packets from the same source share the same time source and sequence space, and so can be ordered relative to each other.
+Note that two streams with the same `ssrc` value refer to the same source.
 
 The manner in which SSRC values are generated is not mandated by the specification, although it does make recommendations.
 You should not make any assumptions based on the value of `ssrc` other than that any two objects with the same `ssrc` value refer to the same source.

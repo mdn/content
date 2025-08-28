@@ -45,8 +45,8 @@ body {
   gap: 20px;
   padding: 15px;
   background-image:
-    linear-gradient(to right, rgb(0 0 0 / 0) 50%, rgb(0 0 0 / 0.05) 50%),
-    linear-gradient(to bottom, rgb(0 0 0 / 0) 50%, rgb(0 0 0 / 0.05) 50%);
+    linear-gradient(to right, transparent 50%, rgb(0 0 0 / 0.05) 50%),
+    linear-gradient(to bottom, transparent 50%, rgb(0 0 0 / 0.05) 50%);
   background-size: 20px 20px;
 }
 div,
@@ -67,10 +67,10 @@ In this case, the top-right corner of the mask is fully opaque, the top-left qua
 
 ```css live-sample___gradient1
 .applied-mask {
-  mask-image: conic-gradient(rgb(0 0 0 / 1) 90deg, rgb(0 0 0 / 0) 270deg);
+  mask-image: conic-gradient(black 90deg, transparent 270deg);
 }
 .mask-source {
-  background: conic-gradient(rgb(0 0 0 / 1) 90deg, rgb(0 0 0 / 0) 270deg);
+  background: conic-gradient(black 90deg, transparent 270deg);
 }
 ```
 
@@ -84,16 +84,16 @@ With alpha masks, the color of the mask doesn't matter, only the transparency. I
 .applied-mask {
   mask-image: repeating-linear-gradient(
     to bottom right,
-    #f00 0 20px,
-    #f005 20px 40px,
+    red 0 20px,
+    #ff000055 20px 40px,
     transparent 40px 60px
   );
 }
 .mask-source {
   background: repeating-linear-gradient(
     to bottom right,
-    #f00 0 20px,
-    #f005 20px 40px,
+    red 0 20px,
+    #ff000055 20px 40px,
     transparent 40px 60px
   );
 }
@@ -111,11 +111,11 @@ In this case we use an external PNG. The image contains a colorful heart with a 
 
 ```css live-sample___image1 live-sample___luminance1
 .applied-mask {
-  mask-image: url(https://mdn.github.io/shared-assets/images/examples/colorful-heart.png);
+  mask-image: url("https://mdn.github.io/shared-assets/images/examples/colorful-heart.png");
   mask-size: 220px 220px;
 }
 .mask-source {
-  background: url(https://mdn.github.io/shared-assets/images/examples/colorful-heart.png);
+  background: url("https://mdn.github.io/shared-assets/images/examples/colorful-heart.png");
   background-size: 220px 220px;
 }
 ```
@@ -204,12 +204,12 @@ In this example, we have a white moon against a black night sky.
 
 ```css live-sample___luminance3
 .applied-mask {
-  mask-image: url(https://mdn.github.io/shared-assets/images/examples/moon.jpg);
+  mask-image: url("https://mdn.github.io/shared-assets/images/examples/moon.jpg");
   mask-mode: luminance;
   mask-size: 220px;
 }
 .mask-source {
-  background: url(https://mdn.github.io/shared-assets/images/examples/moon.jpg);
+  background: url("https://mdn.github.io/shared-assets/images/examples/moon.jpg");
   background-size: 220px;
 }
 ```
@@ -260,10 +260,10 @@ In this example, we define an SVG with a `<mask>` element, an identical {{SVGEle
 
 ```css live-sample___svg1
 .applied-mask {
-  mask-image: url(#mask-heart);
+  mask-image: url("#mask-heart");
 }
 .applied-clip {
-  clip-path: url(#clip-heart);
+  clip-path: url("#clip-heart");
 }
 ```
 

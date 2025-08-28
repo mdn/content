@@ -73,8 +73,8 @@ In this example, a gradient box has two text elements with linear filters applie
       y1="0"
       x2="600"
       y2="0">
-      <stop offset="0" stop-color="#ff0000" />
-      <stop offset="1" stop-color="#0000ff" />
+      <stop offset="0" stop-color="red" />
+      <stop offset="1" stop-color="blue" />
     </linearGradient>
     <filter
       id="Linear1"

@@ -21,14 +21,14 @@ script must obey the [same-origin policy](/en-US/docs/Web/Security/Same-origin_p
 ## Syntax
 
 ```js-nolint
-new SharedWorker(aURL)
-new SharedWorker(aURL, name)
-new SharedWorker(aURL, options)
+new SharedWorker(url)
+new SharedWorker(url, name)
+new SharedWorker(url, options)
 ```
 
 ### Parameters
 
-- `aURL`
+- `url`
   - : A string representing the URL of the script the worker will
     execute. It must obey the same-origin policy.
 - `name` {{optional_inline}}
@@ -68,7 +68,7 @@ new SharedWorker(aURL, options)
 - `NetworkError` {{domxref("DOMException")}}
   - : Thrown if the MIME type of the worker script is incorrect. It should _always_ be `text/javascript` (for historical reasons [other JavaScript MIME types](/en-US/docs/Web/HTTP/Guides/MIME_types#textjavascript) may be accepted).
 - `SyntaxError` {{domxref("DOMException")}}
-  - : Thrown if `aURL` cannot be parsed.
+  - : Thrown if `url` cannot be parsed.
 
 ## Examples
 
