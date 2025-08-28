@@ -197,37 +197,38 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     - `unsafe-url`: The referrer will include the origin _and_ the path (but not the [fragment](/en-US/docs/Web/API/HTMLAnchorElement/hash), [password](/en-US/docs/Web/API/HTMLAnchorElement/password), or [username](/en-US/docs/Web/API/HTMLAnchorElement/username)). **This value is unsafe**, because it leaks origins and paths from TLS-protected resources to insecure origins.
 
 - `sizes`
-  - : One or more strings separated by commas, indicating a set of source sizes. Each source size consists of:
-    1. A [media condition](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#syntax). This must be omitted for the last item in the list.
+  - : One or more values separated by commas, which can be source sizes or the `auto` keyword.
+
+    A **source size** consists of:
+    1. A [media condition](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#syntax), omitted for the last item in the list.
     2. A source size value.
 
-    Media Conditions describe properties of the _viewport_, not of the _image_. For example, `(height <= 500px) 1000px` proposes to use a source of 1000px width, if the _viewport_ is not higher than 500px. Because a source size descriptor is used to specify the width to use for the image during layout of the page, the media condition is typically (but not necessarily) based on the [width](/en-US/docs/Web/CSS/@media/width) information.
+    Media conditions describe properties of the _viewport_, not the _image_. For example, `(height <= 500px) 1000px` proposes using an image source of 1000px width if the _viewport_ height is 500px or less. Because a source size descriptor specifies the width to use for the image during layout, the media condition is typically (but not necessarily) based on the [width](/en-US/docs/Web/CSS/@media/width).
 
     Source size values specify the intended display size of the image. {{glossary("User agent", "User agents")}} use the current source size to select one of the sources supplied by the `srcset` attribute, when those sources are described using width (`w`) descriptors. The selected source size affects the {{glossary("intrinsic size")}} of the image (the image's display size if no {{glossary("CSS")}} styling is applied). If the `srcset` attribute is absent, or contains no values with a width descriptor, then the `sizes` attribute has no effect.
 
-    A source size value can be any non-negative [length](/en-US/docs/Web/CSS/length). It must not use CSS functions other than the [math functions](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#math_functions). Units are interpreted in the same way as [media queries](/en-US/docs/Web/CSS/CSS_media_queries), meaning that all relative length units are relative to the document root rather than the `<img>` element, so an `em` value is relative to the root font size, rather than the font size of the image. [Percentage](/en-US/docs/Web/CSS/percentage) values are not allowed.
+    A source size value can be any non-negative [length](/en-US/docs/Web/CSS/length). It must not use CSS functions other than the [math functions](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#math_functions). Units are interpreted in the same way as [media queries](/en-US/docs/Web/CSS/CSS_media_queries), meaning that all relative length units are relative to the document root rather than the `<img>` element. For example, an `em` value is relative to the root font size, not the font size of the image. [Percentage](/en-US/docs/Web/CSS/percentage) values are not allowed.
 
-    The `sizes` attribute also accepts the following keyword values:
-    - `auto`
-      - : `auto` can replace the whole list of sizes or the first entry in the list. It is only valid when combined with `loading="lazy"`, and resolves to the [concrete size](/en-US/docs/Web/CSS/image) of the image. Since the intrinsic size of the image is not yet known, `width` and `height` attributes (or CSS equivalents) should also be specified to [prevent the browser assuming a default width of 300px](https://html.spec.whatwg.org/multipage/images.html#sizes-attributes:attr-dim-width).
-      - : For better backward compatibility with browsers that do not support the `auto` keyword, you can include fallback sizes before `auto` in the `sizes` attribute.
+    The `auto` keyword can replace the whole list of sizes or the first entry in the list. It is only valid when combined with `loading="lazy"`, and resolves to the [concrete size](/en-US/docs/Web/CSS/image) of the image. Since the intrinsic size of the image is not yet known, `width` and `height` attributes (or CSS equivalents) should also be specified to prevent the browser from assuming the default image width of 300px.
+    For better backward compatibility with browsers that do not support `auto`, you can include fallback sizes after `auto` in the `sizes` attribute.
 
-      **Example:**
+    **Example:**
 
-      ```html
-      <img
-        loading="lazy"
-        width="200"
-        height="200"
-        sizes="(max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px), auto"
-        srcset="
+    ```html
+    <img
+      loading="lazy"
+      width="200"
+      height="200"
+      sizes="auto, (max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"
+      srcset="
         swing-200.jpg   200w,
         swing-400.jpg   400w,
         swing-800.jpg   800w,
         swing-1600.jpg 1600w
-        src="swing-400.jpg" alt="Kettlebell Swing" />
-
-      ```
+      "
+      src="swing-400.jpg"
+      alt="Kettlebell Swing" />
+    ```
 
 - `src`
   - : The image {{glossary("URL")}}. Mandatory for the `<img>` element. On {{glossary("Browser", "browsers")}} supporting `srcset`, `src` is treated like a candidate image with a pixel density descriptor `1x`, unless an image with this pixel density descriptor is already defined in `srcset`, or unless `srcset` contains `w` descriptors.
