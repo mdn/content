@@ -102,7 +102,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
   > [!NOTE]
   > The preference for this feature works in reverse: it's set to `false` in the Nightly build, which removes the UA styling for headings nested in sectioning elements. It's set to `true` in all other channels, which retains the existing UA styling for the nested headings.
 
-- **::details-content CSS pseudo-element:** `layout.css.details-content.enabled`.
+- **`::details-content` CSS pseudo-element:** `layout.css.details-content.enabled`.
 
   The CSS {{cssxref("::details-content")}} pseudo-element enables you to style the content of the {{htmlElement("details")}} element ([Firefox bug 1901037](https://bugzil.la/1901037)).
 
@@ -112,7 +112,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
   ([Firefox bug 1953557](https://bugzil.la/1953557)).
 
   > [!NOTE]
-  > This feature depends on support for the element-backed pseudo-element being targeted, for example: [`::details-content`](/en-US/docs/Mozilla/Firefox/Experimental_features#details-content_pseudo-element), which is behind the `layout.css.details-content.enabled` preference.
+  > This feature depends on support for the element-backed pseudo-element being targeted, for example: {{cssxref("::details-content")}}, which is behind the `layout.css.details-content.enabled` preference.
 
 - **`MutationEvent` on path to removal**: `dom.mutation_events.enabled`
 
@@ -128,4 +128,4 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
 - **HTML Sanitizer API**: `dom.security.sanitizer.enabled`
 
-  The [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) allow developers to take untrusted strings of HTML and sanitize them for safe insertion into a document's DOM. ([Firefox bug 1950605](https://bugzil.la/1950605)), ([Firefox bug 1952250](https://bugzil.la/1952250)).
+  The [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) allow developers to take untrusted strings of HTML and sanitize them for safe insertion into a document's DOM. ([Firefox bug 1950605](https://bugzil.la/1950605), [Firefox bug 1952250](https://bugzil.la/1952250)).
