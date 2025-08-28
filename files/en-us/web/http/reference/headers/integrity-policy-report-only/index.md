@@ -36,7 +36,9 @@ The header allows developers to test [integrity policies](/en-US/docs/Web/Securi
 ## Syntax
 
 ```http
-Integrity-Policy-Report-Only: blocked-destinations=(<destination>),sources=(<source>),endpoints=(<endpoint>)
+Integrity-Policy: blocked-destinations=(script), endpoints=(integrity-endpoint some-other-integrity-endpoint)
+
+
 ```
 
 The header values are defined as structured field dictionaries with the following keys:
