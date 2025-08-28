@@ -123,7 +123,7 @@ Media feature expressions test for their presence, value, or range of values, an
 - {{cssxref("@media/height", "height")}}
   - : Height of the viewport.
 - {{cssxref("@media/horizontal-viewport-segments", "horizontal-viewport-segments")}}
-  - : Detects whether the device has a specified number of viewport segments laid out horizontally. Added in Media Queries Level 5.
+  - : Detects whether the device has a specified number of viewport segments laid out horizontally.
 - {{cssxref("@media/hover", "hover")}}
   - : Does the primary input mechanism allow the user to hover over elements?
 - {{cssxref("@media/inverted-colors", "inverted-colors")}}
