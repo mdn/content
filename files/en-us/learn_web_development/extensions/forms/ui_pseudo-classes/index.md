@@ -819,18 +819,6 @@ We've directly selected the inputs we want to disable using `input[type="text"]:
 Now finally, we've used some JavaScript to toggle the disabling of the billing address fields:
 
 ```js
-// Wait for the page to finish loading
-document.addEventListener(
-  "DOMContentLoaded",
-  () => {
-    // Attach `change` event listener to checkbox
-    document
-      .getElementById("billing-checkbox")
-      .addEventListener("change", toggleBilling);
-  },
-  false,
-);
-
 function toggleBilling() {
   // Select the billing text fields
   const billingItems = document.querySelectorAll('#billing input[type="text"]');
@@ -840,6 +828,11 @@ function toggleBilling() {
     item.disabled = !item.disabled;
   }
 }
+
+// Attach `change` event listener to checkbox
+document
+  .getElementById("billing-checkbox")
+  .addEventListener("change", toggleBilling);
 ```
 
 It uses the [`change` event](/en-US/docs/Web/API/HTMLElement/change_event) to let the user enable/disable the billing fields, and toggle the styling of the associated labels.
@@ -951,27 +944,20 @@ button {
 ```
 
 ```js hidden live-sample___enabled-disabled-shipping
-// Wait for the page to finish loading
-document.addEventListener(
-  "DOMContentLoaded",
-  function () {
-    // Attach `change` event listener to checkbox
-    document
-      .getElementById("billing-checkbox")
-      .addEventListener("change", toggleBilling);
-  },
-  false,
-);
-
 function toggleBilling() {
   // Select the billing text fields
-  let billingItems = document.querySelectorAll('#billing input[type="text"]');
+  const billingItems = document.querySelectorAll('#billing input[type="text"]');
 
   // Toggle the billing text fields
-  for (let i = 0; i < billingItems.length; i++) {
-    billingItems[i].disabled = !billingItems[i].disabled;
+  for (const item of billingItems) {
+    item.disabled = !item.disabled;
   }
 }
+
+// Attach `change` event listener to checkbox
+document
+  .getElementById("billing-checkbox")
+  .addEventListener("change", toggleBilling);
 
 const form = document.querySelector("form");
 form.addEventListener("submit", (e) => {
