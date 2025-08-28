@@ -25,7 +25,7 @@ HTML allows us to specify subtitles for a video using the {{ htmlelement("track"
 
 ### WebVTT
 
-The files that contain the actual subtitle data are text files that follow a specified format, in this case the [Web Video Text Tracks](/en-US/docs/Web/API/WebVTT_API) (WebVTT) format. The [WebVTT specification](https://w3c.github.io/webvtt/) is still being worked on, but major parts of it are stable so we can use it today.
+The files that contain the actual subtitle data are text files that follow a specified format, in this case the [Web Video Text Tracks](/en-US/docs/Web/API/WebVTT_API) (WebVTT) format.
 
 Video providers (such as the [Blender Foundation](https://www.blender.org/about/foundation/)) provide captions and subtitles in a text format with their videos, but they're usually in the SubRip Text (SRT) format. These can be easily converted to WebVTT using an online converter.
 
@@ -425,7 +425,7 @@ for (const track of video.textTracks) {
 
 The `video.textTracks` property contains an array of all the text tracks attached to the video. We loop through each one and set its `mode` to `hidden`.
 
-Note: The [WebVTT API](https://w3c.github.io/webvtt/#api) gives us access to all the text tracks that are defined for an HTML video using the `<track>` element.
+Note: The [WebVTT API](/en-US/docs/Web/API/WebVTT_API) gives us access to all the text tracks that are defined for an HTML video using the `<track>` element.
 
 ### Building a caption menu
 
@@ -544,7 +544,7 @@ We also added some rudimentary styling for the newly created subtitles menu:
 
 ## Styling the displayed subtitles
 
-One of the less well known about and supported features of WebVTT is the ability to style the individual subtitles (something called text cues) via [CSS Extensions](https://w3c.github.io/webvtt/#css-extensions).
+One of the less well known about and supported features of WebVTT is the ability to style the individual subtitles (something called text cues) [via CSS](/en-US/docs/Web/API/WebVTT_API#styling_webvtt_in_html_or_a_stylesheet).
 
 The `::cue` pseudo-element is the key to targeting individual text track cues for styling, as it matches any defined cue. There are only a handful of CSS properties that can be applied to a text cue:
 
@@ -566,7 +566,7 @@ For example, to change the text color of the text track cues you can write:
 }
 ```
 
-If the WebVTT file uses [voice spans](https://w3c.github.io/webvtt/#dfn-webvtt-cue-voice-span), which allow cues to be defined as having a particular "voice":
+If the WebVTT file uses [voice spans](/en-US/docs/Web/API/WebVTT_API/Web_Video_Text_Tracks_Format#voice_tag_vv), which allow cues to be defined as having a particular "voice":
 
 ```plain
 0
@@ -586,20 +586,3 @@ Then this specific 'voice' will be stylable like so:
 ## Result
 
 {{EmbedLiveSample("video-player-with-captions", "", 400)}}
-
-## Browser compatibility
-
-[Browser support for WebVTT and the `<track>` element](https://caniuse.com/webvtt) is fairly good, although some browsers differ slightly in their implementation.
-
-### Safari
-
-In Safari 6.1+, subtitles are enabled by default, and the default controls contain a button and a menu that offers the same functionality as the menu we just built, along with an "Auto" option which allows the browser to choose. The `default` attribute is also supported.
-
-### Chrome and Opera
-
-These browsers have similar implementations again: subtitles are enabled by default and the default control set contains a 'cc' button that turns subtitles on and off. Chrome and Opera ignore the `default` attribute on the `<track>` element and will instead try to match the browser's language to the subtitle's language.
-
-## Plugins
-
-There are also many open-source and commercial HTML video-player plugins that offer caption and subtitle support that you can use instead of rolling your own.
-You can search for those on the web using search terms like _"HTML video player plugin"_.
