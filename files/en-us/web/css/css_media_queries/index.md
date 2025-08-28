@@ -109,6 +109,8 @@ The CSS media queries level 5 module also introduces the `environment-blending`,
 - [CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules) module
   - {{cssxref("@supports")}} at-rule
   - [Using feature queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)
+- [CSS environment variables](/en-US/docs/Web/CSS/CSS_environment_variables)
+  - {{cssxref("env()")}} function
 - [CSS paged media](/en-US/docs/Web/CSS/CSS_paged_media) module
   - {{cssxref("@page")}} at-rule
 - [CSS object model](/en-US/docs/Web/API/CSS_Object_Model) module
