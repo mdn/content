@@ -324,13 +324,13 @@ input {
 }
 
 input {
-  box-shadow: inset 1px 1px 3px #ccc;
+  box-shadow: inset 1px 1px 3px #cccccc;
   border-radius: 5px;
 }
 
 input:hover,
 input:focus {
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 
 input + span {
@@ -492,13 +492,13 @@ input {
 }
 
 input {
-  box-shadow: inset 1px 1px 3px #ccc;
+  box-shadow: inset 1px 1px 3px #cccccc;
   border-radius: 5px;
 }
 
 input:hover,
 input:focus {
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 
 input + span {
@@ -674,13 +674,13 @@ input {
 }
 
 input {
-  box-shadow: inset 1px 1px 3px #ccc;
+  box-shadow: inset 1px 1px 3px #cccccc;
   border-radius: 5px;
 }
 
 input:hover,
 input:focus {
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 
 input + span {
@@ -734,6 +734,7 @@ button {
   margin: 0 auto;
 }
 ```
+
 
 ```js hidden live-sample___out-of-range
 const form = document.querySelector("form");
@@ -930,13 +931,13 @@ input[type="text"] {
 }
 
 input {
-  box-shadow: inset 1px 1px 3px #ccc;
+  box-shadow: inset 1px 1px 3px #cccccc;
   border-radius: 5px;
 }
 
 input:hover,
 input:focus {
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 
 input[type="text"]:disabled {
@@ -1039,8 +1040,8 @@ CA
       >
     </div>
     <div>
-      <label for="pcode">Zip/postal code: </label>
-      <input id="pcode" name="pcode" type="text" value="94708" readonly />
+      <label for="zip-code">Zip/postal code: </label>
+      <input id="zip-code" name="zip-code" type="text" value="94708" readonly />
     </div>
   </fieldset>
 
@@ -1119,7 +1120,7 @@ input:hover,
 input:focus,
 textarea:hover,
 textarea:focus {
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 
 button {
@@ -1135,7 +1136,7 @@ textarea:read-only {
 }
 
 textarea:read-write {
-  box-shadow: inset 1px 1px 3px #ccc;
+  box-shadow: inset 1px 1px 3px #cccccc;
   border-radius: 5px;
 }
 ```
@@ -1192,8 +1193,7 @@ You can try it out here (press the **Play** button to run the example in MDN Pla
 ```html hidden live-sample___radios-styled
 <form>
   <fieldset>
-    <legend>Choose your favourite fruit</legend>
-
+    <legend>Choose your favorite fruit</legend>
     <p>
       <label>
         <input type="radio" name="fruit" value="cherry" />
@@ -1303,7 +1303,6 @@ See the live result below (press the **Play** button to run the example in MDN P
 <form>
   <fieldset>
     <legend>Choose your favourite fruit</legend>
-
     <p>
       <input type="radio" name="fruit" value="cherry" id="cherry" />
       <label for="cherry">Cherry</label>
@@ -1408,7 +1407,6 @@ See the live result below (press the **Play** button to run the example in MDN P
 <form>
   <fieldset>
     <legend>Choose your favourite fruit</legend>
-
     <p>
       <input type="radio" name="fruit" value="cherry" id="cherry" />
       <label for="cherry">Cherry</label>

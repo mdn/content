@@ -47,8 +47,8 @@ Before starting this module, you don't need any previous HTML knowledge, but you
   - : In the beginning, the web was just text, and it was really quite boring. Fortunately, it wasn't too long before the ability to embed images (and other more interesting types of content) inside web pages was added. In this article we'll look at how to use the {{htmlelement("img")}} element in depth, including the basics, annotating it with captions using {{htmlelement("figure")}}, and detailing how it relates to {{glossary("CSS")}} background images.
 - [HTML video and audio](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
   - : Now that we are comfortable with adding simple images to a webpage, the next step is to start adding video and audio players to your HTML documents! In this article we'll look at doing just that with the {{htmlelement("video")}} and {{htmlelement("audio")}} elements; we'll then finish off by looking at how to add captions/subtitles to your videos.
-- [Mozilla splash page](/en-US/docs/Learn_web_development/Core/Structuring_content/Mozilla_splash_page) <sup>Challenge</sup>
-  - : In this challenge, we'll test your knowledge of some of the techniques discussed in the last couple of lessons, getting you to add some images and video to a funky splash page all about Mozilla!
+- [Creepy-crawly splash page](/en-US/docs/Learn_web_development/Core/Structuring_content/Splash_page) <sup>Challenge</sup>
+  - : In this challenge, we'll test your knowledge of some of the techniques discussed in the last couple of lessons, getting you to add some images and video to a splash page all about bugs and other creepy crawlies.
 - [HTML table basics](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
   - : This article gets you started with HTML tables, covering the very basics such as rows, cells, headings, making cells span multiple columns and rows, and how to group together all the cells in a column for styling purposes.
 - [HTML table accessibility](/en-US/docs/Learn_web_development/Core/Structuring_content/Table_accessibility)
