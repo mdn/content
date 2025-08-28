@@ -735,7 +735,6 @@ button {
 }
 ```
 
-
 ```js hidden live-sample___out-of-range
 const form = document.querySelector("form");
 form.addEventListener("submit", (e) => {
