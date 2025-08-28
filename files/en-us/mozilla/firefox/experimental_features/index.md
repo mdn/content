@@ -294,8 +294,6 @@ The `::file-selector-button` pseudo-element is not yet marked as an element-base
 | Beta              | 143           | Yes                 |
 | Release           | 143           | Yes                 |
 
-- `layout.css.details-content.enabled`
-  - : Set to `true` to enable.
 
 ### `:active-view-transition` pseudo-class
 
