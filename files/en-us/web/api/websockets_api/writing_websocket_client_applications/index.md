@@ -4,7 +4,7 @@ slug: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 page-type: guide
 ---
 
-{{DefaultAPISidebar("WebSockets API")}} {{AvailableInWorkers}}
+{{DefaultAPISidebar("WebSockets API")}}
 
 In this guide we'll walk through the implementation of a WebSocket-based ping application. In this application, the client sends a "ping" message to the server every second, and the server responds with a "pong" message. The client listens for "pong" messages and logs them, keeping track of how many message exchanges there have been.
 
