@@ -8,11 +8,11 @@ spec-urls:
 sidebar: cssref
 ---
 
-The **CSS transitions** module lets you create gradual transitions between the values of specific CSS properties. The behavior of these transitions can be controlled by specifying their easing function, duration, and other attributes.
+The **CSS transitions** module specifies functionality for creating gradual transitions between different CSS property values. The behavior of these transitions can be controlled by specifying their easing function, duration, and other values.
 
-Normally, when the value of a CSS property changes, the result of the change from the old value to the new value is immediate. The CSS transitions module provides features that enable controlling a progression from the old property state to the new state over a specified period of time. It also provides event handlers for the different stages of every transition.
+Normally, when the value of a CSS property changes, the result of the change from the old value to the new value is immediate. The CSS transitions module enables controlling a progression from the old property state to the new state over a specified period of time. It also provides event handlers to allow code to be run in response to different stages of a transition being reached.
 
-In certain cases, there is no originating "from" value for a transition. For example, if an element gets added to the DOM, the styles defined are for the "to" state. This module provides the {{cssxref("@starting-style")}} which enables defining starting styles for such cases. The module also defines how discrete property values should be transitioned, such as transitioning the discretely animated {{cssxref("display")}} property from the `none` value to a displayed value.
+In certain cases, there is no originating "from" value for a transition. For example, if an element gets added to the DOM, the styles defined are for the "to" state. This module provides the {{cssxref("@starting-style")}} at-rule, which enables defining starting styles for such cases. The module also defines how discrete property values should be transitioned, such as transitioning the discretely animated {{cssxref("display")}} property from the `none` value to a displayed value.
 
 ## Reference
 
@@ -47,9 +47,9 @@ In certain cases, there is no originating "from" value for a transition. For exa
 ## Guides
 
 - [Using CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
-  - : Step-by-step tutorial about how to create transitions using CSS. This article describes each relevant CSS property and explains how they interact with each other.
+  - : Step-by-step tutorial explaining how to create transitions using CSS. This article describes each relevant CSS property and explains how they interact with each other.
 - [Animating `display`](/en-US/docs/Web/CSS/display#animating_display)
-  - : Transitioning to and from the `none` value of the discretely animating {{cssxref("display")}} property.
+  - : Transitioning to and from the `none` value of the discretely animated {{cssxref("display")}} property.
 - [Transitioning a popover](/en-US/docs/Web/CSS/overlay#transitioning_a_popover) and [transitioning a `<dialog>`](/en-US/docs/Web/HTML/Reference/Elements/dialog#transitioning_dialog_elements)
   - : Examples of transitioning from {{cssxref("@starting-style")}} to final {{cssxref(":popover-open")}} and {{cssxref(":open")}} pseudo-class styles.
 
