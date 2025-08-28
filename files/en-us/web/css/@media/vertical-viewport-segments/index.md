@@ -12,7 +12,7 @@ Part of the [Viewport segments API](/en-US/docs/Web/API/Viewport_segments_API), 
 
 ## Syntax
 
-The `vertical-viewport-segments` feature is specified as an integer of `1` or greater, representing the number of vertical viewport segments the device has.
+The `vertical-viewport-segments` feature is specified as an {{cssxref("integer ")}} value of `1` or greater, representing the number of vertical viewport segments the device has.
 
 - The value will be `2` for a two-screen foldable device that is currently folded (in the [`folded` device posture](/en-US/docs/Web/API/Device_Posture_API#folded)) either horizontally or vertically.
 - The value will be `1` for a foldable device that is either unfolded or closed (in the [`continuous` device posture](/en-US/docs/Web/API/Device_Posture_API#continuous)), or a non-foldable device.
