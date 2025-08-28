@@ -199,8 +199,7 @@ Because [`:where()`](/en-US/docs/Web/CSS/:where) has zero specificity, the only 
 }
 ```
 
-By contrast, using `:scope` explicitly selects the scope root with class specificity.
-Like other pseudo-classes, `:scope` has a specificity of `0-1-0`.
+By contrast, using `:scope` explicitly selects the scope root and adds class-level specificity (`0-1-0`), since `:scope` is a pseudo-class.
 In the following example, `:scope img` has a specificity of `0-1-1`:
 
 ```css
