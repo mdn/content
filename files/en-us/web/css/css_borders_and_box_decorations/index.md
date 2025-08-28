@@ -237,7 +237,6 @@ The CSS borders and box decorations module level 4 also introduces the `border-s
 - {{cssxref("background")}} shorthand
 - {{cssxref("background-position-x")}}
 - {{cssxref("background-position-y")}}
-
 - {{cssxref("border-image-outset")}}
 - {{cssxref("border-image-repeat")}}
 - {{cssxref("border-image-slice")}}
