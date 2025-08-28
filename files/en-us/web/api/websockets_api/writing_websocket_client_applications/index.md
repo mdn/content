@@ -130,7 +130,7 @@ The back/forward cache, or {{glossary("bfcache")}}, enables much faster back and
 
 The browser pauses and then resumes JavaScript execution when a page is added to or loaded from the bfcache. This means that, depending on what the page is doing, it's not always safe for the browser to use the bfcache for the page. If the browser determines that it is not safe, then the page will not be added to the bfcache, and then the user will not get the performance benefit that it can bring.
 
-In practice, different browsers use different criteria for adding a page to the bfcache. If a page has an active WebSocket connection, then:
+Different browsers use different criteria for adding a page to the bfcache. If a page has an active WebSocket connection, then:
 
 - Firefox and Chrome will not add the page to the bfcache.
 - Safari will add the page to the bfcache, but will cancel any active network requests. This is likely to generate an error in your WebSocket connection, leading to the connection being closed.
