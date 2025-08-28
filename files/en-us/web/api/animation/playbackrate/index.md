@@ -47,14 +47,13 @@ cake.addEventListener("mousedown", growAlice, false);
 cake.addEventListener("touchstart", growAlice, false);
 ```
 
-In another example, the [Red Queen's Race Game](https://codepen.io/rachelnabors/pen/PNGGaV?editors=0010), Alice and the Red Queen are constantly slowing down:
+In another example, the [Red Queen's Race Game](/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API#other_useful_methods), Alice and the Red Queen are constantly slowing down:
 
 ```js
 setInterval(() => {
   // Make sure the playback rate never falls below .4
-
-  if (redQueen_alice.playbackRate > 0.4) {
-    redQueen_alice.playbackRate *= 0.9;
+  if (redQueenAlice.playbackRate > 0.4) {
+    redQueenAlice.updatePlaybackRate(redQueenAlice.playbackRate * 0.9);
   }
 }, 3000);
 ```
@@ -63,7 +62,7 @@ But clicking or tapping on them causes them to speed up by multiplying their `pl
 
 ```js
 const goFaster = () => {
-  redQueen_alice.playbackRate *= 1.1;
+  redQueenAlice.updatePlaybackRate(redQueenAlice.playbackRate * 1.1);
 };
 
 document.addEventListener("click", goFaster);

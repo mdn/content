@@ -113,7 +113,7 @@ newspaper.addEventListener("click", () => {
 
 ### Down the Rabbit Hole demo
 
-In the demo [Down the Rabbit Hole (with the Web Animation API)](https://codepen.io/rachelnabors/pen/rxpmJL/?editors=0010), we use the convenient
+In the demo [Down the Rabbit Hole (with the Web Animation API)](/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API#moving_it_to_javascript), we use the convenient
 `animate()` method to immediately create and play an animation on the
 `#tunnel` element to make it flow upwards, infinitely. Notice the array of
 objects passed as keyframes and also the timing options block.

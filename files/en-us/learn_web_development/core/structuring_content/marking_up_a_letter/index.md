@@ -63,7 +63,7 @@ priority:
 
 Turning H2O into wine, and the health benefits of Resveratrol
 (C14H12O3.)
-Measuring the effect on performance of funk bassplayers at temperatures
+Measuring the effect on performance of funk bass players at temperatures
 exceeding 30°C (86°F), when the audience size exponentially increases
 (effect of 3 × 103 increasing to 3 × 104.)
 HTML, Hypertext Markup Language, and CSS,
@@ -77,7 +77,7 @@ Exotic dance moves
 
 Yes, you are right! As part of my post-doctorate work, I
 did study exotic tribal dances. To answer your question, my
-favourite dances are as follows, with definitions:
+favorite dances are as follows, with definitions:
 
 Polynesian chicken dance
     A little known but very influential dance dating back as far as
@@ -268,7 +268,7 @@ Your finished HTML should look like this:
         (C<sub>14</sub>H<sub>12</sub>O<sub>3</sub>.)
       </li>
       <li>
-        Measuring the effect on performance of funk bassplayers at temperatures
+        Measuring the effect on performance of funk bass players at temperatures
         exceeding 30°C (86°F), when the audience size exponentially increases
         (effect of 3 × 10<sup>3</sup> increasing to 3 × 10<sup>4</sup>.)
       </li>
@@ -289,7 +289,7 @@ Your finished HTML should look like this:
     <p>
       Yes, you are right! As part of my post-doctorate work, I
       <em>did</em> study exotic tribal dances. To answer your question, my
-      favourite dances are as follows, with definitions:
+      favorite dances are as follows, with definitions:
     </p>
 
     <dl>
@@ -311,7 +311,7 @@ Your finished HTML should look like this:
       <dt>Arctic robot dance</dt>
       <dd>
         An interesting example of historic misinformation, English explorers in
-        the 1960s believed to have discovered a new dance style characterised by
+        the 1960s believed to have discovered a new dance style characterized by
         "robotic", stilted movements, being practiced by inhabitants of Northern
         Alaska and Canada. Later on however it was discovered that they were
         just moving like this because they were really cold.

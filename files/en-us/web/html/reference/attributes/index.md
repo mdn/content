@@ -504,11 +504,8 @@ Elements in HTML have **attributes**; these are additional values that configure
         {{ HTMLElement("button") }},
         {{ HTMLElement("fieldset") }},
         {{ HTMLElement("input") }},
-        {{ HTMLElement("label") }},
-        {{ HTMLElement("meter") }},
         {{ HTMLElement("object") }},
         {{ HTMLElement("output") }},
-        {{ HTMLElement("progress") }},
         {{ HTMLElement("select") }},
         {{ HTMLElement("textarea") }}
       </td>

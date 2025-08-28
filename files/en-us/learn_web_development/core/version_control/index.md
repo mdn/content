@@ -33,7 +33,7 @@ This module takes you through the essentials of version control using Git and Gi
   - : Forking projects is essential when you want to contribute to someone else's code. This guide explains how.
 - [About Pull Requests (from GitHub)](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
   - : A useful guide to managing pull requests. These requests are how you propose code changes to someone else's repository so they can review and potentially merge them into the main codebase.
-- [About issues (from GitHub)](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues)
+- [About issues (from GitHub)](https://docs.github.com/en/issues/tracking-your-work-with-issues/learning-about-issues/about-issues)
   - : Issues are like a forum for your GitHub project, where people can ask questions and report problems, and you can manage updates (for example assigning people to fix issues, clarifying the issue, letting people know things are fixed). This article tells you what you need to know about issues.
 
 > [!NOTE]

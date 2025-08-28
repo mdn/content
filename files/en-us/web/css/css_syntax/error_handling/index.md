@@ -30,7 +30,7 @@ The type and amount of CSS that a browser ignores due to an error depends on the
 - For [errors in at-rules](#at-rule_errors), whether a single line or the entire at-rule is ignored (fails) depends on the at-rule and the type of error.
 - If the [error is an invalid selector](#errors_in_selector_lists), the entire declaration block is ignored.
 - An [error due to a missing semi-colon](#errors_within_css_declaration_blocks) between property declarations causes an invalid value, in which case, multiple property-value declarations are ignored.
-- If the [error is a property name or value](#errors_within_css_declaration_blocks), such as an unrecognized property name or invalid data type, the property-value declaration is ignored.
+- If the [error is a property name or value](#errors_within_css_declaration_blocks), such as an unrecognized property name or invalid data type, the property-value declaration is ignored. During the [filtering stage](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#filtering), such syntactically invalid declarations are eliminated.
 - If the [error is due to a missing end-bracket](#errors_with_auto-closed_endings), the extent of what is ignored depends on the browser's ability to parse the error as nested CSS.
 
 After parsing each declaration, style rule, at-rule, and so on, the browser checks the parsed content against its expected [grammar](#grammar_check) for that construct. If the content does not match the expected grammar for that construct, the browser considers it invalid and ignores it.
