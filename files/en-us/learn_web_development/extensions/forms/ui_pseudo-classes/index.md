@@ -315,7 +315,6 @@ input {
   display: block;
   font-family: inherit;
   font-size: 100%;
-  padding: 0;
   margin: 0;
   box-sizing: border-box;
   width: 100%;
@@ -483,7 +482,6 @@ input {
   display: block;
   font-family: inherit;
   font-size: 100%;
-  padding: 0;
   margin: 0;
   box-sizing: border-box;
   width: 100%;
@@ -665,7 +663,6 @@ input {
   display: block;
   font-family: inherit;
   font-size: 100%;
-  padding: 0;
   margin: 0;
   box-sizing: border-box;
   width: 100%;
@@ -862,8 +859,8 @@ You can see the example in action below (press the **Play** button to run the ex
       <input id="address1" name="address1" type="text" required />
     </div>
     <div>
-      <label for="pcode1">Zip/postal code: </label>
-      <input id="pcode1" name="pcode1" type="text" required />
+      <label for="zip-code1">Zip/postal code: </label>
+      <input id="zip-code1" name="zip-code1" type="text" required />
     </div>
   </fieldset>
   <fieldset id="billing">
@@ -881,8 +878,8 @@ You can see the example in action below (press the **Play** button to run the ex
       <input id="address2" name="address2" type="text" disabled required />
     </div>
     <div>
-      <label for="pcode2" class="billing-label">Zip/postal code: </label>
-      <input id="pcode2" name="pcode2" type="text" disabled required />
+      <label for="zip-code2" class="billing-label">Zip/postal code: </label>
+      <input id="zip-code2" name="zip-code2" type="text" disabled required />
     </div>
   </fieldset>
 
@@ -921,7 +918,6 @@ input[type="text"] {
   display: block;
   font-family: inherit;
   font-size: 100%;
-  padding: 0;
   margin: 0;
   box-sizing: border-box;
   width: 100%;
@@ -940,8 +936,8 @@ input:focus {
 }
 
 input[type="text"]:disabled {
-  background: #eee;
-  border: 1px solid #ccc;
+  background: #eeeeee;
+  border: 1px solid #cccccc;
 }
 
 label:has(+ :disabled) {
@@ -1094,7 +1090,6 @@ textarea {
   display: block;
   font-family: inherit;
   font-size: 100%;
-  padding: 0;
   margin: 0;
   box-sizing: border-box;
   padding: 5px;
@@ -1301,7 +1296,7 @@ See the live result below (press the **Play** button to run the example in MDN P
 ```html hidden live-sample___radios-checked-default
 <form>
   <fieldset>
-    <legend>Choose your favourite fruit</legend>
+    <legend>Choose your favorite fruit</legend>
     <p>
       <input type="radio" name="fruit" value="cherry" id="cherry" />
       <label for="cherry">Cherry</label>
@@ -1405,7 +1400,7 @@ See the live result below (press the **Play** button to run the example in MDN P
 ```html hidden live-sample___radios-checked-indeterminate
 <form>
   <fieldset>
-    <legend>Choose your favourite fruit</legend>
+    <legend>Choose your favorite fruit</legend>
     <p>
       <input type="radio" name="fruit" value="cherry" id="cherry" />
       <label for="cherry">Cherry</label>
