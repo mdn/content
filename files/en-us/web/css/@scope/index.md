@@ -115,9 +115,9 @@ Or you could include your `@scope` block inline inside a `<style>` element, whic
 > [!NOTE]
 > It is important to understand that, while `@scope` allows you to isolate the application of selectors to specific DOM subtrees, it does not completely isolate the applied styles to within those subtrees. This is most noticeable with inheritance — properties that are inherited by children (for example {{cssxref("color")}} or {{cssxref("font-family")}}) will still be inherited, beyond any set scope limit.
 
-### The `:scope` pseudo-class
+### `:scope` pseudo-class within `@scope` blocks
 
-In the context of a `@scope` block, the {{cssxref(":scope")}} pseudo-class represents the scope root — it provides an easy way to apply styles to the scope root itself, from inside the scope:
+In the context of an `@scope` block, the {{cssxref(":scope")}} pseudo-class provides a convenient way to directly apply styles to the scope root, like so:
 
 ```css
 @scope (.feature) {
@@ -129,25 +129,9 @@ In the context of a `@scope` block, the {{cssxref(":scope")}} pseudo-class repre
 }
 ```
 
-In the following code snippet, the three rules select the same element, but differ in specificity (see [Specificity in @scope](#specificity_in_scope) for details):
+Here's some considerations for `:scope` within `@scope` blocks:
 
-```css
-@scope (.feature) {
-  img {
-    /* … */
-  }
-
-  & img {
-    /* … */
-  }
-
-  :scope img {
-    /* … */
-  }
-}
-```
-
-### Notes on scoped selector usage
+- `:scope` adds class-level specificity (see [Specificity in @scope](#specificity_in_scope) for details).
 
 - A scope limit can use `:scope` to specify a specific relationship requirement between the scope limit and root. For example:
 
@@ -182,8 +166,11 @@ In the following code snippet, the three rules select the same element, but diff
 
 ### Specificity in `@scope`
 
-Inside an `@scope` rule, both bare selectors and `&` are treated as if `:where(:scope)` were prepended, meaning they select the scope root with zero specificity.
-Because [`:where()`](/en-US/docs/Web/CSS/:where) has zero specificity, the only specificity comes from `img` (`0-0-1`).
+Inside an `@scope` rule, both bare selectors and `&` behave as if `:where(:scope)` were prepended to the selector.
+Because [`:where()`](/en-US/docs/Web/CSS/:where) has zero specificity, bare selectors and `&` add zero weight and only the specificity of the rest of the selector counts.
+An `& img` selector is the equivalent to writing `:where(:scope) img`.
+
+In both cases in the following example, the only specificity comes from `img` (`0-0-1`):
 
 ```css
 @scope (.article-body) {
