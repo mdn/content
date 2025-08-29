@@ -24,7 +24,7 @@ The `<blend-mode>` data type is defined using a keyword value chosen from the li
 - `screen`
   - : The final color is the result of inverting the colors, multiplying them, and inverting that value.
     A black layer leads to no change, and a white layer leads to a white final layer.
-    The effect is like two images shone onto a projection screen.
+    The effect is like two images shining onto a projection screen.
 - `overlay`
   - : The final color is the result of `multiply` if the bottom color is darker, or `screen` if the bottom color is lighter.
     This blend mode is equivalent to `hard-light` but with the layers swapped.
@@ -35,11 +35,11 @@ The `<blend-mode>` data type is defined using a keyword value chosen from the li
 - `color-dodge`
   - : The final color is the result of dividing the bottom color by the inverse of the top color.
     A black foreground leads to no change. A foreground with the inverse color of the backdrop leads to a fully lit color.
-    This blend mode is similar to `screen`, but the foreground need only be as light as the inverse of the backdrop to create a fully lit color.
+    This blend mode is similar to `screen`, but the foreground only needs to be as light as the inverse of the backdrop to create a fully lit color.
 - `color-burn`
   - : The final color is the result of inverting the bottom color, dividing the value by the top color, and inverting that value.
     A white foreground leads to no change. A foreground with the inverse color of the backdrop leads to a black final image.
-    This blend mode is similar to `multiply`, but the foreground need only be as dark as the inverse of the backdrop to make the final image black.
+    This blend mode is similar to `multiply`, but the foreground only needs to be as dark as the inverse of the backdrop to make the final image black.
 - `hard-light`
   - : The final color is the result of `multiply` if the top color is darker, or `screen` if the top color is lighter.
     This blend mode is equivalent to `overlay` but with the layers swapped.
@@ -284,7 +284,7 @@ list.forEach((item) => {
 });
 ```
 
-In the following example, we create multiple `div` elements by traversaing a list and set different `mixBlendMode` value for each.
+In the following example, we create multiple `<div>` elements by traversing a list and set different `mixBlendMode` values for each.
 
 {{ EmbedLiveSample('Comparison between different values with `mix-blend-mode`', "640", "800") }}
 
