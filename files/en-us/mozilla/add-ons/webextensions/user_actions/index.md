@@ -18,7 +18,7 @@ The APIs enabled by a user action are:
 - The {{WebExtAPIRef("action.openPopup")}}, {{WebExtAPIRef("browserAction.openPopup")}}, and {{WebExtAPIRef("pageAction.openPopup")}} APIs that open an extension's browser or page action popup. Users do the same by clicking the browser or page action.
 - The {{WebExtAPIRef("sidebarAction.open")}}, {{WebExtAPIRef("sidebarAction.close")}}, and {{WebExtAPIRef("sidebarAction.toggle")}} APIs open and close an extension's sidebar. The user does this from some part of the browser's built-in user interface, such as the **View** > **Sidebar** menu.
 - The {{WebExtAPIRef("downloads.open")}} API opens a downloaded file. The user does this from some part of the browser's built-in user interface, such as the **Tools** > **Downloads** menu.
-- The {{WebExtAPIRef("management.setenabled")}} API. The user can turn off a theme extension from the extension's Add-on Manager page.
+- The {{WebExtAPIRef("management.setEnabled")}} API. The user can turn off a theme extension from the extension's Add-on Manager page.
 - The {{WebExtAPIRef("permissions.request")}} API. The user can grant permissions from the extension's Add-on Manager permissions and data tab.
 
 For example:
