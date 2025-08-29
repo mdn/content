@@ -8,39 +8,55 @@ page-type: guide
 
 HTML Drag and Drop interfaces enable web applications to drag and drop files on a web page. This document describes how an application can accept one or more files that are dragged from the underlying platform's _file manager_ and dropped on a web page.
 
-The main steps to drag and drop are to define a _drop zone_ (i.e., a target element for the file drop) and to define event handlers for the {{domxref("HTMLElement/drop_event", "drop")}} and {{domxref("HTMLElement/dragover_event", "dragover")}} events. These steps are described below, including example code snippets. The full source code is available in [MDN's drag-and-drop repository](https://github.com/mdn/dom-examples/tree/main/drag-and-drop) (pull requests and/or issues are welcome).
+The main steps to drag and drop are to define a _drop zone_ (i.e., a target element for the file drop) and to define event handlers for the {{domxref("HTMLElement/drop_event", "drop")}} and {{domxref("HTMLElement/dragover_event", "dragover")}} events. These steps are described below, including example code snippets.
 
 Note that [HTML drag and drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API) defines two different APIs to support dragging and dropping files. One API is the {{domxref("DataTransfer")}} interface and the second API is the {{domxref("DataTransferItem")}} and {{domxref("DataTransferItemList")}} interfaces. This example illustrates the use of both APIs (and does not use any Gecko specific interfaces).
 
 ## Define the drop zone
 
-The _target element_ of the {{domxref("HTMLElement/drop_event", "drop")}} event needs an `ondrop` event handler. The following code snippet shows how this is done with a {{HTMLelement("div")}} element:
+The HTML defines the drop zone as a {{htmlelement("div")}}, and an output region to be populated later.
 
-```html
-<div id="drop_zone">
+```html live-sample___file-dnd
+<div id="drop-zone">
   <p>Drag one or more files to this <i>drop zone</i>.</p>
 </div>
+<pre id="output"></pre>
 ```
 
-```js
-document.getElementById("drop_zone").addEventListener("drop", dropHandler);
+As the _target element_, it listens to the {{domxref("HTMLElement/drop_event", "drop")}} event to process the dropped file. It is also a good idea to disable the `drop` event outside the drop zone, to avoid the default behavior of opening the file in the browser.
+
+```js live-sample___file-dnd
+const dropZone = document.getElementById("drop-zone");
+const output = document.getElementById("output");
+
+dropZone.addEventListener("drop", dropHandler);
 ```
 
-Typically, an application will include a {{domxref("HTMLElement/dragover_event", "dragover")}} event handler on the drop target element and that handler will turn off the browser's default drag behavior. To add this handler, you need to include a {{domxref("HTMLElement.dragover_event","dragover")}} event handler:
+Typically, an application will include a {{domxref("HTMLElement/dragover_event", "dragover")}} event handler to turn off the browser's default drag behavior, which is to open the file. To add this handler, you need to include a {{domxref("HTMLElement.dragover_event","dragover")}} event handler:
 
-```js
-document
-  .getElementById("drop_zone")
-  .addEventListener("dragover", dragOverHandler);
+```js live-sample___file-dnd
+window.addEventListener("dragover", (e) => {
+  e.preventDefault();
+});
+window.addEventListener("drop", (e) => {
+  e.preventDefault();
+});
 ```
 
 Lastly, an application may want to style the drop target element to visually indicate the element is a drop zone. In this example, the drop target element uses the following styling:
 
-```css
-#drop_zone {
+```css live-sample___file-dnd
+#drop-zone {
   border: 5px solid blue;
   width: 200px;
   height: 100px;
+}
+```
+
+```css hidden live-sample___file-dnd
+div {
+  margin: 0em;
+  padding: 2em;
 }
 ```
 
@@ -56,12 +72,11 @@ This example shows how to write the name of each dragged file to the console. In
 
 Note that in this example, any drag item that is not a file is ignored.
 
-```js
+```js live-sample___file-dnd
 function dropHandler(ev) {
-  console.log("File(s) dropped");
-
   // Prevent default behavior (Prevent file from being opened)
   ev.preventDefault();
+  let result = "";
 
   if (ev.dataTransfer.items) {
     // Use DataTransferItemList interface to access the file(s)
@@ -69,30 +84,22 @@ function dropHandler(ev) {
       // If dropped items aren't files, reject them
       if (item.kind === "file") {
         const file = item.getAsFile();
-        console.log(`… file[${i}].name = ${file.name}`);
+        result += `… file[${i}].name = ${file.name}\n`;
       }
     });
   } else {
     // Use DataTransfer interface to access the file(s)
     [...ev.dataTransfer.files].forEach((file, i) => {
-      console.log(`… file[${i}].name = ${file.name}`);
+      result += `… file[${i}].name = ${file.name}\n`;
     });
   }
+  output.textContent = result;
 }
 ```
 
-## Prevent the browser's default drag behavior
+## Result
 
-The following {{domxref("HTMLElement/dragover_event", "dragover")}} event handler calls {{domxref("Event.preventDefault","preventDefault()")}} to turn off the browser's default drag and drop handler.
-
-```js
-function dragOverHandler(ev) {
-  console.log("File(s) in drop zone");
-
-  // Prevent default behavior (Prevent file from being opened)
-  ev.preventDefault();
-}
-```
+{{EmbedLiveSample("file-dnd", "", 300)}}
 
 ## See also
 
