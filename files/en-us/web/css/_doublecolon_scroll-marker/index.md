@@ -76,7 +76,7 @@ Next, we style the `<li>` elements, using the {{cssxref("flex")}} property to ma
 ```css live-sample___creating-scroll-markers live-sample___custom-numbering
 li {
   list-style-type: none;
-  background-color: #eee;
+  background-color: #eeeeee;
   flex: 0 0 33%;
   height: 100px;
   padding-top: 20px;
@@ -145,7 +145,7 @@ li::scroll-marker {
   text-decoration: none;
   border: 2px solid rgb(0 0 0 / 0.15);
   border-radius: 0.5em;
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 ```
 
@@ -165,7 +165,7 @@ To improve user experience, we set a different color on the markers on {{cssxref
 
 ```css live-sample___custom-numbering
 ::scroll-marker:hover {
-  background-color: #dcc;
+  background-color: #ddcccc;
 }
 
 ::scroll-marker:target-current {

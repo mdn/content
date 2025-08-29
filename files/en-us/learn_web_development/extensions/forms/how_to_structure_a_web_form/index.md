@@ -330,7 +330,7 @@ Let's put these ideas into practice and build a slightly more involved form — 
      margin: 0 auto;
      width: 400px;
      padding: 1em;
-     border: 1px solid #ccc;
+     border: 1px solid #cccccc;
      border-radius: 1em;
    }
 
@@ -348,7 +348,7 @@ Let's put these ideas into practice and build a slightly more involved form — 
      font: 1em sans-serif;
      width: 250px;
      box-sizing: border-box;
-     border: 1px solid #999;
+     border: 1px solid #999999;
    }
 
    input[type="checkbox"],
@@ -371,11 +371,11 @@ Let's put these ideas into practice and build a slightly more involved form — 
    fieldset {
      width: 250px;
      box-sizing: border-box;
-     border: 1px solid #999;
+     border: 1px solid #999999;
    }
 
    button {
-     margin: 20px 0 0 0;
+     margin-top: 20px;
    }
 
    label {

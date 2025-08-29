@@ -80,7 +80,7 @@ const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
 // Draw guides
-ctx.strokeStyle = "#09f";
+ctx.strokeStyle = "#0099ff";
 ctx.beginPath();
 ctx.moveTo(10, 10);
 ctx.lineTo(140, 10);

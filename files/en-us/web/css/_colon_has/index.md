@@ -35,6 +35,30 @@ Pseudo-elements are also not valid selectors within `:has()` and pseudo-elements
 
 ## Examples
 
+### Selecting a parent element
+
+You may be looking for a "parent [combinator](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#combinators)", which allows you to go up the DOM tree and select the parent of a specific element. The `:has()` pseudo-class does that by using `parent:has(child)` (for any parent) or `parent:has(> child)` (for direct parent). This example shows how to style a `<section>` element when it contains a child with the `featured` class.
+
+```html
+<section>
+  <article class="featured">Featured content</article>
+  <article>Regular content</article>
+</section>
+<section>
+  <article>Regular content</article>
+</section>
+```
+
+```css
+section:has(.featured) {
+  border: 2px solid blue;
+}
+```
+
+### Result
+
+{{EmbedLiveSample('Selecting a parent element', , 200)}}
+
 ### With the sibling combinator
 
 The `:has()` style declaration in the following example adjusts the spacing after `<h1>` headings if they are immediately followed by an `<h2>` heading.

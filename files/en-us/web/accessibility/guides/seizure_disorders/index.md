@@ -589,12 +589,6 @@ The requirement for the `literal` property is taken from [WAI-Adapt: Help and Su
 
 - [Accessibility Master List](https://ds.gpii.net/learn/accessibility-masterlist) Gregg Vanderheiden Ph.D. Editor
 
-### Harding
-
-Along with the PEAT tool, is generally recognized to be one of the two "gold standards" for analyzing flashes.
-
-- [Harding Flash and Pattern Analyzer](https://www.hardingfpa.com/)
-
 ### ISO
 
 - [IEC 61966-2-2:2003(en)](https://www.iso.org/obp/ui/#iso:std:iec:61966:-2-2:ed-1:v1:en) Multimedia systems and equipment — Colour measurement and management — Part 2-2: Colour management — Extended RGB color space — scRGB

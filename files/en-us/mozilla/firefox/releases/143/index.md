@@ -1,13 +1,13 @@
 ---
 title: Firefox 143 for developers
-short-title: Firefox 143 (Nightly)
+short-title: Firefox 143 (Beta)
 slug: Mozilla/Firefox/Releases/143
 page-type: firefox-release-notes-active
 sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 143 that affect developers.
-Firefox 143 is the current [Nightly version of Firefox](https://www.firefox.com/en-US/channel/desktop/#nightly) and ships on [September 16, 2025](https://whattrainisitnow.com/release/?version=143).
+Firefox 143 is the current [Beta version of Firefox](https://www.firefox.com/en-US/channel/desktop/#beta) and ships on [September 16, 2025](https://whattrainisitnow.com/release/?version=143).
 
 > [!NOTE]
 > The release notes for this Firefox version are still a work in progress.
@@ -24,9 +24,10 @@ Firefox 143 is the current [Nightly version of Firefox](https://www.firefox.com/
 
 <!-- #### Removals -->
 
-<!-- ### CSS -->
+### CSS
 
-<!-- No notable changes. -->
+- The {{cssxref("::details-content")}} pseudo-element is now enabled by default. It lets you style the content of the {{htmlElement("details")}} element.
+  ([Firefox bug 1941406](https://bugzil.la/1941406)).
 
 <!-- #### Removals -->
 
@@ -48,13 +49,16 @@ Firefox 143 is the current [Nightly version of Firefox](https://www.firefox.com/
 
 <!-- #### Removals -->
 
-<!-- ### APIs -->
+### APIs
 
 <!-- #### DOM -->
 
 <!-- #### Media, WebRTC, and Web Audio -->
 
-<!-- #### Removals -->
+#### Removals
+
+- The deprecated {{domxref("CompositionEvent.locale")}} property is no longer supported.
+  ([Firefox bug 1700969](https://bugzil.la/1700969)).
 
 <!-- ### WebAssembly -->
 

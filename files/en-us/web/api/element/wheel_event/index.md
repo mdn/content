@@ -86,7 +86,7 @@ body {
 div {
   width: 105px;
   height: 105px;
-  background: #cdf;
+  background: #ccddff;
   padding: 5px;
 }
 ```

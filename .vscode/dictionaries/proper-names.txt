@@ -58,6 +58,7 @@ Blackman
 Blackmoon
 Blankers
 Bloggs
+Bobtown
 Bodmin
 Boonie
 bottosson
@@ -205,13 +206,13 @@ Frida
 Galinski
 Gandi
 Gayatri
+Gaye
 Gebrselassie
 geckodriver
 Gedit
 Gerd
 Giancarlo
 Giorgio
-Gitbash
 Golightly
 Googlebot
 Gordo
@@ -335,6 +336,7 @@ Lighttpd
 Lindenberg
 Lindesay
 Liskov
+Lorc
 Loycom
 Luxon
 Léonie
@@ -399,6 +401,7 @@ Musicr
 Mustafa
 myshov
 Müller
+Nabors
 Naeher
 Nakamura
 Nakano

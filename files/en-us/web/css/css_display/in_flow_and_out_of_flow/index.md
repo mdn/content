@@ -93,7 +93,7 @@ body {
   font: 1.2em sans-serif;
 }
 p {
-  background-color: #ccc;
+  background-color: #cccccc;
 }
 
 .float {

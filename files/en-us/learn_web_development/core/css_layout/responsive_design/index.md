@@ -5,7 +5,7 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout/Media_queries", "Learn_web_development/Core/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Test_your_skills/Grid", "Learn_web_development/Core/CSS_layout/Media_queries", "Learn_web_development/Core/CSS_layout")}}
 
 _Responsive web design_ (RWD) is a web design approach to make web pages render well on all screen sizes and resolutions while ensuring good usability. It is the way to design for a multi-device web. In this article, we'll help you understand some techniques that can be used to master it.
 
@@ -154,7 +154,7 @@ body {
   font: 1.2em / 1.5 sans-serif;
   margin: 20px;
   padding: 0;
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 .wrapper {
   max-width: 960px;
@@ -232,7 +232,7 @@ body {
   font: 1.2em / 1.5 sans-serif;
   margin: 20px;
   padding: 0;
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 .wrapper {
   max-width: 960px;
@@ -347,7 +347,7 @@ body {
     sans-serif;
   margin: 20px;
   padding: 0;
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 .wrapper {
   max-width: 960px;
@@ -432,7 +432,7 @@ body {
   font: 1.2em / 1.5 sans-serif;
   margin: 20px;
   padding: 0;
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 
 .wrapper {
@@ -499,4 +499,4 @@ Next, we will study media queries in more detail and show how to use them to sol
 - [CSS-Tricks guide to media queries](https://css-tricks.com/a-complete-guide-to-css-media-queries/)
 - [The Frontend Developer Career Path](https://scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> from Scrimba teaches all you need to know to be a competent front-end web developer, with fun interactive lessons and challenges, knowledgeable teachers, and a supportive community. Go from zero to landing your first front-end job! Many of the course components are available as standalone free versions. This includes a module on responsive design.
 
-{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout/Media_queries", "Learn_web_development/Core/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Test_your_skills/Grid", "Learn_web_development/Core/CSS_layout/Media_queries", "Learn_web_development/Core/CSS_layout")}}

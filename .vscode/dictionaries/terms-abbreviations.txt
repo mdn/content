@@ -545,7 +545,6 @@ QPACK
 QTFF
 qtrs
 quantizer
-quarternion
 querysets
 quicklinks
 quickmenu
@@ -583,6 +582,7 @@ resends
 resizability
 respecified
 restartless
+Resveratrol
 retarget
 retargeted
 retargetings
@@ -683,6 +683,7 @@ stringifiers
 stringifying
 stringly
 strobing
+stylability
 styracosaurus
 subarticle
 subarticles

@@ -44,7 +44,7 @@ _No change._
 - Web components' `Document.register()` has been adapted to follow the behavior described in the latest version of the specification ([Firefox bug 856140](https://bugzil.la/856140)).
 - The non-standard, and deprecated since Firefox 15, `Blob.mozSlice` is no longer supported ([Firefox bug 961804](https://bugzil.la/961804)).
 - The non-standard `ArchiveReader` and `ArchiveRequest` are no longer exposed to the Web ([Firefox bug 968883](https://bugzil.la/968883)).
-- [WebIDL constructors](https://searchfox.org/mozilla-central/source/dom/webidl/) cannot be called as functions anymore. They need to be preceded by the keyword `new`. ([Firefox bug 916644](https://bugzil.la/916644))
+- [WebIDL constructors](https://searchfox.org/firefox-main/source/dom/webidl/) cannot be called as functions anymore. They need to be preceded by the keyword `new`. ([Firefox bug 916644](https://bugzil.la/916644))
 - Added support for a new value (`alpha`) for the second, optional, parameter of the {{domxref("HTMLCanvasElement.getContext()")}} method allowing to define if alpha blending must be stored or not for this context. When not, the per-pixel alpha value in this store is always `1.0`. This allows the back-end to implement a fast-track. ([Firefox bug 982480](https://bugzil.la/982480))
 - `WorkerGlobalScope.console` now returns for the regular {{domxref("console")}}; `WorkerConsole` has been removed ([Firefox bug 965860](https://bugzil.la/965860)).
 - The {{domxref("WEBGL_debug_shaders")}} WebGL extension has been implemented ([Firefox bug 968374](https://bugzil.la/968374)).

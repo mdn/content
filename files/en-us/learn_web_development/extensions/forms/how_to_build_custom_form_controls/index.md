@@ -2032,7 +2032,7 @@ We'll do a little styling of the radio button list (not the legend/fieldset) to 
 .styledSelect label {
   margin: 0;
   line-height: 2;
-  padding: 0 0 0 4px;
+  padding-left: 4px;
 }
 .styledSelect:not(:focus-within) input:not(:checked) + label {
   height: 0;
@@ -2058,7 +2058,7 @@ We'll do a little styling of the radio button list (not the legend/fieldset) to 
   box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%);
 }
 .styledSelect:focus-within input:checked + label {
-  background-color: #333;
+  background-color: #333333;
   color: white;
   width: 100%;
 }

@@ -410,7 +410,7 @@ canvas {
 }
 a {
   display: inline-block;
-  background: #69c;
+  background: #6699cc;
   color: white;
   padding: 5px 10px;
 }
