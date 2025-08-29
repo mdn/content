@@ -31,7 +31,39 @@ A superellipse shape.
 
 ## Description
 
-The `superellipse()` function returns a superellipse shape, which is used to specify {{cssxref("corner-shape")}} values. The superellipse shape is calculated using a modified version of the equation that defines a circle:
+The `superellipse()` function returns a superellipse shape, which is used to specify {{cssxref("corner-shape")}} values. A superellipse is a closed curve symmetric shape between a rectangle and an ellipse. It resembles an ellipse that retains the geometric features of its two axes.
+
+The superellipse shape is calculated using a modified version of an ellipse. The following equation defines an ellipse centered at the origin:
+
+<math display="block">
+  <mfrac>
+    <msup>
+      <mi>x</mi>
+      <mn>2</mn>
+    </msup>
+    <msup>
+      <mi>a</mi>
+      <mn>2</mn>
+    </msup>
+  </mfrac>
+  <mo>+</mo>
+  <mfrac>
+    <msup>
+      <mi>y</mi>
+      <mn>2</mn>
+    </msup>
+    <msup>
+      <mi>b</mi>
+      <mn>2</mn>
+    </msup>
+  </mfrac>
+    <mo>=</mo>
+    <mn>1</mn>
+  </math>
+  
+The `a` and `b` variables refer to the radii of the ellipse, while the `x` and `y` coordinates are points on the ellipse's circumference.
+
+A circle is an ellipse where the radii, the `a` and `b` in the previous equation, are the same length. With `a` and `b` both equal to `r`, the equation for a circle can be written as:
 
 <math display="block">
   <mrow>
