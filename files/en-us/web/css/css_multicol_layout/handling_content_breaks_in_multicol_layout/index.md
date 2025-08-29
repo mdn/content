@@ -65,7 +65,7 @@ figure {
 }
 figcaption {
   font-weight: bold;
-  border-bottom: 2px solid #999;
+  border-bottom: 2px solid #999999;
 }
 .container {
   column-width: 200px;

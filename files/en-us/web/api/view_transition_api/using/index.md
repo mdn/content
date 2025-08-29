@@ -501,13 +501,16 @@ Before running a cross-document transition, you ideally want to wait until the s
 2. Critical scripts are loaded and run.
 3. The HTML visible for the user's initial view of the page has been parsed, so it renders consistently.
 
-Styles are render blocked by default, and scripts can be render blocked using the [`blocking="render"`](/en-US/docs/Web/HTML/Reference/Elements/script#blocking) attribute.
+Styles are render blocked by default unless they are added to the document dynamically, via script. Both scripts and dynamically-added styles can be render blocked using the [`blocking="render"`](/en-US/docs/Web/HTML/Reference/Elements/script#blocking) attribute.
 
 To ensure that your initial HTML has been parsed and will always render consistently before the transition animation runs, you can use [`<link rel="expect">`](/en-US/docs/Web/HTML/Reference/Attributes/rel#expect). In this element, you include the following attributes:
 
 - `rel="expect"` to indicate that you want to use this `<link>` element to render block some HTML on the page.
 - `href="#element-id"` to indicate the ID of the element you want to render block.
 - `blocking="render"` to render block the specified HTML.
+
+> [!NOTE]
+> In order to block rendering, `script`, `link`, and `style` elements with `blocking="render"` must be in the `head` of the document.
 
 Let's explore what this looks like with an example HTML document:
 

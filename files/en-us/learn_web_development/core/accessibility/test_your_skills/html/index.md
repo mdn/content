@@ -1,10 +1,12 @@
 ---
 title: "Test your skills: HTML accessibility"
-short-title: HTML
+short-title: "Test: HTML a11y"
 slug: Learn_web_development/Core/Accessibility/Test_your_skills/HTML
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
+
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/HTML","Learn_web_development/Core/Accessibility/CSS_and_JavaScript", "Learn_web_development/Core/Accessibility")}}
 
 The aim of this skill test is to help you assess whether you've understood our [HTML: A good basis for accessibility](/en-US/docs/Learn_web_development/Core/Accessibility/HTML) article.
 
@@ -22,7 +24,7 @@ To complete the task, update the markup to use appropriate semantic HTML. You do
 ```css hidden live-sample___html-ally-1 live-sample___html-ally-2 live-sample___html-ally-3 live-sample___html-ally-4
 body {
   background-color: white;
-  color: #333;
+  color: #333333;
   font:
     1em / 1.4 Helvetica Neue,
     Helvetica,
@@ -326,3 +328,5 @@ h1 {
 ```
 
 </details>
+
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/HTML","Learn_web_development/Core/Accessibility/CSS_and_JavaScript", "Learn_web_development/Core/Accessibility")}}

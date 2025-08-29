@@ -82,7 +82,7 @@ const ctx = canvas.getContext("2d");
 
 // Draw yellow background
 ctx.beginPath();
-ctx.fillStyle = "#ff6";
+ctx.fillStyle = "#ffff66";
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 
 // Draw blue triangle

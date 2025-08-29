@@ -77,7 +77,7 @@ svg {
   background-image: repeating-linear-gradient(
     45deg,
     transparent 0 9px,
-    #ccc 0px 10px
+    #cccccc 0px 10px
   );
 }
 
@@ -101,7 +101,7 @@ feDiffuseLighting {
 }
 
 feSpecularLighting {
-  lighting-color: #f09;
+  lighting-color: #ff0099;
 }
 ```
 

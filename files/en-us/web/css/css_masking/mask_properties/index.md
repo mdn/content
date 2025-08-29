@@ -121,7 +121,7 @@ img {
   mask-image: repeating-linear-gradient(
     to bottom right,
     red 0 20px,
-    #f005 20px 40px,
+    #ff000055 20px 40px,
     transparent 40px 60px
   );
 }
@@ -129,7 +129,7 @@ img {
   background: repeating-linear-gradient(
     to bottom right,
     red 0 20px,
-    #f005 20px 40px,
+    #ff000055 20px 40px,
     transparent 40px 60px
   );
 }
@@ -726,7 +726,7 @@ img {
     repeating-linear-gradient(
       to bottom right,
       red 0 20px,
-      #f005 20px 40px,
+      #ff000055 20px 40px,
       transparent 40px 60px
     ),
     url("https://mdn.github.io/shared-assets/images/examples/mask-star.svg");
@@ -775,7 +775,7 @@ img {
     repeating-linear-gradient(
       to bottom right,
       red 0 20px,
-      #f005 20px 40px,
+      #ff000055 20px 40px,
       transparent 40px 60px
     ),
     none;
@@ -809,7 +809,7 @@ If we reverse the order of the mask layers, we can also get very different resul
     repeating-linear-gradient(
       to bottom right,
       red 0 20px,
-      #f005 20px 40px,
+      #ff000055 20px 40px,
       transparent 40px 60px
     ),
     url("https://mdn.github.io/shared-assets/images/examples/mask-star.svg");
@@ -820,7 +820,7 @@ If we reverse the order of the mask layers, we can also get very different resul
     repeating-linear-gradient(
       to bottom right,
       red 0 20px,
-      #f005 20px 40px,
+      #ff000055 20px 40px,
       transparent 40px 60px
     );
 }

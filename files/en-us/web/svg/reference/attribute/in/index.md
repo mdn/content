@@ -100,7 +100,7 @@ You can use this attribute with the following SVG elements:
     cx="50%"
     cy="40%"
     r="40%"
-    fill="#c00"
+    fill="#cc0000"
     filter="url(#backgroundMultiply)" />
 </svg>
 
@@ -119,7 +119,12 @@ You can use this attribute with the following SVG elements:
       <feBlend in2="SourceGraphic" mode="multiply" />
     </filter>
   </defs>
-  <circle cx="50%" cy="40%" r="40%" fill="#c00" filter="url(#imageMultiply)" />
+  <circle
+    cx="50%"
+    cy="40%"
+    r="40%"
+    fill="#cc0000"
+    filter="url(#imageMultiply)" />
 </svg>
 ```
 

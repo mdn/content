@@ -185,23 +185,48 @@ This example defines filters for each of the supported operations (`over`, `atop
     </filter>
   </defs>
   <g transform="translate(0,25)">
-    <circle cx="90px" cy="80px" r="70px" fill="#c00" filter="url(#imageOver)" />
+    <circle
+      cx="90px"
+      cy="80px"
+      r="70px"
+      fill="#cc0000"
+      filter="url(#imageOver)" />
     <text x="80" y="-5">over</text>
   </g>
   <g transform="translate(200,25)">
-    <circle cx="90px" cy="80px" r="70px" fill="#c00" filter="url(#imageIn)" />
+    <circle
+      cx="90px"
+      cy="80px"
+      r="70px"
+      fill="#cc0000"
+      filter="url(#imageIn)" />
     <text x="80" y="-5">in</text>
   </g>
   <g transform="translate(400,25)">
-    <circle cx="90px" cy="80px" r="70px" fill="#c00" filter="url(#imageOut)" />
+    <circle
+      cx="90px"
+      cy="80px"
+      r="70px"
+      fill="#cc0000"
+      filter="url(#imageOut)" />
     <text x="80" y="-5">out</text>
   </g>
   <g transform="translate(600,25)">
-    <circle cx="90px" cy="80px" r="70px" fill="#c00" filter="url(#imageAtop)" />
+    <circle
+      cx="90px"
+      cy="80px"
+      r="70px"
+      fill="#cc0000"
+      filter="url(#imageAtop)" />
     <text x="80" y="-5">atop</text>
   </g>
   <g transform="translate(0,240)">
-    <circle cx="90px" cy="80px" r="70px" fill="#c00" filter="url(#imageXor)" />
+    <circle
+      cx="90px"
+      cy="80px"
+      r="70px"
+      fill="#cc0000"
+      filter="url(#imageXor)" />
     <text x="80" y="-5">xor</text>
   </g>
   <g transform="translate(200,240)">
@@ -209,7 +234,7 @@ This example defines filters for each of the supported operations (`over`, `atop
       cx="90px"
       cy="80px"
       r="70px"
-      fill="#c00"
+      fill="#cc0000"
       filter="url(#imageArithmetic)" />
     <text x="70" y="-5">arithmetic</text>
   </g>
@@ -218,7 +243,7 @@ This example defines filters for each of the supported operations (`over`, `atop
       cx="90px"
       cy="80px"
       r="70px"
-      fill="#c00"
+      fill="#cc0000"
       filter="url(#imageLighter)" />
     <text x="80" y="-5">lighter</text>
   </g>

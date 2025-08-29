@@ -128,13 +128,13 @@ In this example, we'll draw a background of four different colored squares. On t
 function draw() {
   const ctx = document.getElementById("canvas").getContext("2d");
   // draw background
-  ctx.fillStyle = "#FD0";
+  ctx.fillStyle = "#ffdd00";
   ctx.fillRect(0, 0, 75, 75);
-  ctx.fillStyle = "#6C0";
+  ctx.fillStyle = "#66cc00";
   ctx.fillRect(75, 0, 75, 75);
-  ctx.fillStyle = "#09F";
+  ctx.fillStyle = "#0099ff";
   ctx.fillRect(0, 75, 75, 75);
-  ctx.fillStyle = "#F30";
+  ctx.fillStyle = "#ff3300";
   ctx.fillRect(75, 75, 75, 75);
   ctx.fillStyle = "white";
 
@@ -287,7 +287,7 @@ function draw() {
   const ctx = document.getElementById("canvas").getContext("2d");
 
   // Draw guides
-  ctx.strokeStyle = "#09f";
+  ctx.strokeStyle = "#0099ff";
   ctx.beginPath();
   ctx.moveTo(10, 10);
   ctx.lineTo(140, 10);
@@ -386,7 +386,7 @@ function draw() {
   ctx.clearRect(0, 0, 150, 150);
 
   // Draw guides
-  ctx.strokeStyle = "#09f";
+  ctx.strokeStyle = "#0099ff";
   ctx.lineWidth = 2;
   ctx.strokeRect(-5, 50, 160, 50);
 

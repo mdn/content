@@ -23,29 +23,29 @@ If the given child is a {{domxref("DocumentFragment")}}, the entire contents of 
 ## Syntax
 
 ```js-nolint
-appendChild(aChild)
+appendChild(child)
 ```
 
 ### Parameters
 
-- `aChild`
+- `child`
   - : The node to append to the given parent node (commonly an element).
 
 ### Return value
 
-A {{domxref("Node")}} that is the appended child (`aChild`), except when `aChild` is a {{domxref("DocumentFragment")}}, in which case the empty {{domxref("DocumentFragment")}} is returned.
+A {{domxref("Node")}} that is the appended child (`child`), except when `child` is a {{domxref("DocumentFragment")}}, in which case the empty {{domxref("DocumentFragment")}} is returned.
 
 ### Exceptions
 
 - `HierarchyRequestError` {{domxref("DOMException")}}
   - : Thrown when the constraints of the DOM tree are violated, that is if one of the following cases occurs:
-    - If the parent of `aChild` is not a {{domxref("Document")}}, {{domxref("DocumentFragment")}}, or an {{domxref("Element")}}.
-    - If the insertion of `aChild` would lead to a cycle, that is if `aChild` is an ancestor of the node.
-    - If `aChild` is not a {{domxref("DocumentFragment")}}, a {{domxref("DocumentType")}}, an {{domxref("Element")}}, or a {{domxref("CharacterData")}}.
+    - If the parent of `child` is not a {{domxref("Document")}}, {{domxref("DocumentFragment")}}, or an {{domxref("Element")}}.
+    - If the insertion of `child` would lead to a cycle, that is if `child` is an ancestor of the node.
+    - If `child` is not a {{domxref("DocumentFragment")}}, a {{domxref("DocumentType")}}, an {{domxref("Element")}}, or a {{domxref("CharacterData")}}.
     - If the current node is a {{domxref("Text")}}, and its parent is a {{domxref("Document")}}.
     - If the current node is a {{domxref("DocumentType")}} and its parent is _not_ a {{domxref("Document")}}, as a _doctype_ should always be a direct descendant of a _document_.
-    - If the parent of the node is a {{domxref("Document")}} and `aChild` is a {{domxref("DocumentFragment")}} with more than one {{domxref("Element")}} child, or that has a {{domxref("Text")}} child.
-    - If the insertion of `aChild` would lead to {{domxref("Document")}} with more than one {{domxref("Element")}} as child.
+    - If the parent of the node is a {{domxref("Document")}} and `child` is a {{domxref("DocumentFragment")}} with more than one {{domxref("Element")}} child, or that has a {{domxref("Text")}} child.
+    - If the insertion of `child` would lead to {{domxref("Document")}} with more than one {{domxref("Element")}} as child.
 
 ## Description
 
