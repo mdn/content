@@ -215,7 +215,7 @@ We'd like you to imagine that you have just been to stay at a hotel called the l
 ### Implementing form controls
 
 1. In the "Facilities" section, we want you to turn the first two sets of lines into sets of radio buttons plus a label to describe each one and a legend describing the whole group. Add an attribute to make the first radio button in each case selected by default.
-2. In the "Faciliates" section, turn the third set of lines into a set of checkboxes, with a label to describe each one and a legend describing the whole group.
+2. In the "Facilities" section, turn the third set of lines into a set of checkboxes, with a label to describe each one and a legend describing the whole group.
 3. In the "About your hosts" section, turn both sets of lines into a drop-down menu of options, with a label to describe each one.
 4. In the "Any other feedback?" section, add a multi-line text entry box and turn the existing line into its descriptive label.
 5. In the "Your details" section, add a suitable type of text input to collect each of the three listed values. Turn the existing lines into their labels.
