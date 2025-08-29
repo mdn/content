@@ -240,13 +240,14 @@ Another feature of most browser default video control sets is the ability to cli
 
 ```js live-sample___video-player
 progress.addEventListener("click", (e) => {
+  if (!Number.isFinite(video.duration)) return;
   const rect = progress.getBoundingClientRect();
   const pos = (e.pageX - rect.left) / progress.offsetWidth;
   video.currentTime = pos * video.duration;
 });
 ```
 
-This piece of code uses the clicked position to (roughly) work out where in the `progress` element the user has clicked, and to move the video to that position by setting its `currentTime` attribute.
+This piece of code uses the clicked position to (roughly) work out where in the `progress` element the user has clicked, and to move the video to that position by setting its `currentTime` attribute. It avoids setting the `currentTime` if the video's duration is {{jsxref("Global_Objects/NaN", "NaN")}} or {{jsxref("Global_Objects/Infinity", "Infinity")}}, which happens if the video is not yet loaded.
 
 ### Fullscreen
 

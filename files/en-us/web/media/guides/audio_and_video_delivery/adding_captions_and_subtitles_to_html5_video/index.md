@@ -375,6 +375,7 @@ video.addEventListener("volumechange", () => {
   checkVolume();
 });
 progress.addEventListener("click", (e) => {
+  if (!Number.isFinite(video.duration)) return;
   const rect = progress.getBoundingClientRect();
   const pos = (e.pageX - rect.left) / progress.offsetWidth;
   video.currentTime = pos * video.duration;

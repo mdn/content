@@ -443,6 +443,12 @@ function checkVolume(dir) {
 function alterVolume(dir) {
   checkVolume(dir);
 }
+volInc.addEventListener("click", (e) => {
+  alterVolume("+");
+});
+volDec.addEventListener("click", (e) => {
+  alterVolume("-");
+});
 ```
 
 This new `checkVolume()` function does the same thing as the `alterVolume()` but it also sets the state of the mute button depending on the video's current volume setting. `checkVolume()` is also called when the `volumechange` event is raised:
@@ -459,6 +465,7 @@ The [Progress bar](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/cross_b
 
 ```js hidden live-sample___video-player-styled
 progress.addEventListener("click", (e) => {
+  if (!Number.isFinite(video.duration)) return;
   const rect = progress.getBoundingClientRect();
   const pos = (e.pageX - rect.left) / progress.offsetWidth;
   video.currentTime = pos * video.duration;
