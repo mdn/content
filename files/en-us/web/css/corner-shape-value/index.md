@@ -42,7 +42,7 @@ The `<corner-shape-value>` data type can take a {{cssxref("superellipse()")}} fu
 
 ### `<corner-shape-value>` value comparison
 
-In this example, we provide a drop-down menu allowing you to select different `<corner-shape-value>` values and a slider that updates the container's {{cssxref("border-radius")}}. This enables visualizing the effect of the different keywords and `superellipse()` parameter values. The `corner-shape` property defines the shape of the box’s corners while the region to which the shape is applied is specified by the `border-radius` property. The code is hidden for brevity, but you can find a [full explanation of `corner-shape` values](/en-US/docs/Web/CSS/corner-shape#comparing_corner-shape_values) along with other related examples on the {{cssxref("corner-shape")}} reference page.
+In this example, we provide a drop-down menu allowing you to select different `<corner-shape-value>` values and a slider that updates the container's {{cssxref("border-radius")}}. This enables visualizing the effect of the different keywords and `superellipse()` parameter values. The `corner-shape` property defines the shape of the box's corners while the region to which the shape is applied is specified by the `border-radius` property. The code is hidden for brevity, but you can find a [full explanation of `corner-shape` values](/en-US/docs/Web/CSS/corner-shape#comparing_corner-shape_values) along with other related examples on the {{cssxref("corner-shape")}} reference page.
 
 ```html hidden live-sample___value-comparison
 <form>
