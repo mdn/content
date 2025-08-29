@@ -156,5 +156,6 @@ setCorners();
 ## See also
 
 - {{cssxref("corner-shape")}}
+- {{cssxref("border-radius")}}
 - {{cssxref("superellipse()")}}
-- {{cssxref("border-radius")}} property
+- [CSS borders and box decorations](/en-US/docs/Web/CSS/CSS_borders_and_box_decorations) module
