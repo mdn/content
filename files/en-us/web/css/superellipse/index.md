@@ -49,7 +49,9 @@ The `superellipse()` function returns a superellipse shape, which is used to spe
   </mrow>
 </math>
 
-The `x` and `y` variables refer to the `x` and `y` coordinates of points on the circle's circumference; a circle is defined by all the points `(x,y)` that satisfy the equation, and a given ellipse can be produced by scaling this shape along the x and/or y axis. A superellipse is created by replacing the 2 exponent in each case with 2<sup>K</sup>, `K` being the argument passed to `superellipse()`, which modifies the curvature of the ellipse:
+In this equation, the `x` and `y` are coordinates of points on the circle's circumference, and the `r` is the radius of the circle, with the center of the circle being `0, 0`. The ellipse is produced by scaling a circle shape along the x and/or y axis. 
+
+A superellipse shape is created by replacing the `2` exponent in each case with 2<sup>K</sup>, `K` being the argument passed to the `superellipse()` function, which modifies the curvature of the ellipse:
 
 <math display="block">
   <mrow>
