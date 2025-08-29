@@ -247,26 +247,39 @@ Certain uses of the `:has()` pseudo-class can significantly impact page performa
 
 ### Avoid broad anchoring
 
-Anchoring `:has()` to very general selectors like `body`, `:root`, or `*` can degrade performance. Because `:has()` depends on the descendants of its anchor, any DOM change within the entire subtree of a broadly selected element requires the browser to re-check the `:has()` condition. The more complex the selector inside `:has()`, the greater the impact.
+This section addresses the anchor selector (the `A` in `A:has(B)`), which should avoid broad selectors like `body`, `:root`, or `*` to prevent performance issues. Anchoring `:has()` to very general selectors can degrade performance because any DOM change within the entire subtree of a broadly selected element requires the browser to re-check the `:has()` condition.
 
 ```css example-bad
 /* Avoid anchoring :has() to broad elements */
-body:has(.sidebar-expanded) {
+body:has(.sidebar) {
   /* styles */
 }
-:root:has(main > article[data-priority="high"]) {
+:root:has(.content) {
   /* styles */
 }
-*:has(> img[data-loaded="false"]) {
+*:has(.item) {
   /* styles */
 }
 ```
 
-Instead, anchor `:has()` to the most specific element possible that still logically contains the elements you are checking for.
+Instead, anchor `:has()` to specific elements like `.container` or `.gallery` to reduce the scope and improve performance.
+
+```css example-good
+/* Use specific containers to limit scope */
+.container:has(.sidebar-expanded) {
+  /* styles */
+}
+.content-wrapper:has(> article[data-priority="high"]) {
+  /* styles */
+}
+.gallery:has(> img[data-loaded="false"]) {
+  /* styles */
+}
+```
 
 ### Minimize subtree traversals
 
-When the selector _inside_ `:has()` is not tightly constrained (for example, it doesn't use child `>` or sibling `+` / `~` combinators), the browser might need to traverse the entire subtree of the anchor element on every DOM mutation to check if the condition still holds.
+This section focuses on the inner selector (the `B` in `A:has(B)`), which should use combinators like `>` or `+` to limit traversal. When the selector inside `:has()` is not tightly constrained (for example, it doesn't use child `>` or sibling `+` / `~` combinators), the browser might need to traverse the entire subtree of the anchor element on every DOM mutation to check if the condition still holds.
 
 ```css example-bad
 /* May trigger full subtree traversal */
@@ -274,6 +287,8 @@ When the selector _inside_ `:has()` is not tightly constrained (for example, it 
   /* styles */
 }
 ```
+
+Using child or sibling combinators limits the scope of the inner selector, reducing the performance cost of DOM mutations.
 
 ```css example-good
 /* More constrained - limits traversal */
@@ -284,6 +299,8 @@ When the selector _inside_ `:has()` is not tightly constrained (for example, it 
   /* descendant of adjacent sibling */
 }
 ```
+
+In the first example, any change within `.ancestor` requires checking all descendants for `.foo`. In the good examples, the browser only needs to check direct children or a specific sibling's descendants.
 
 ### Be mindful of ancestor traversals
 
@@ -296,10 +313,17 @@ Certain selector patterns involving `:has()` can force the browser to traverse u
 }
 ```
 
-In this example, any DOM change requires checking if the changed element is the `*` (any element) that is a direct child of `.foo`, and if its parent (or further ancestors) is `.ancestor`.
+In this example, any DOM change requires checking if the changed element is the `*` (any element) that is a direct child of `.foo`, and if its parent (or further ancestors) is `.ancestor`. Constraining the inner selector with specific classes or direct child combinators reduces ancestor traversals, improving performance.
+
+```css example-good
+/* Constrain the inner selector to avoid ancestor traversals */
+.ancestor:has(.foo > .specific-child) {
+  /* styles */
+}
+```
 
 > [!NOTE]
-> These performance characteristics may improve as browsers optimize `:has()` implementations, but the fundamental constraints remain.
+> These performance characteristics may improve as browsers optimize `:has()` implementations, but the fundamental constraints remain. The **Avoid broad anchoring** section addresses the anchor selector's scope (the `A` in `A:has(B)`), while **Minimize subtree traversals** focuses on constraining the inner selector (the `B` in `A:has(B)`) to limit traversal.
 
 ## Specifications
 
