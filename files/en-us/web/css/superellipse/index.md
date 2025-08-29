@@ -45,7 +45,10 @@ The `superellipse()` function returns a superellipse shape, which is used to spe
       <mn>2</mn>
     </msup>
     <mo>=</mo>
-    <mn>1</mn>
+    <msup>
+      <mi>r</mi>
+      <mn>2</mn>
+    </msup>
   </mrow>
 </math>
 
