@@ -895,7 +895,7 @@
       "guides": [
         "/docs/Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop",
         "/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations",
-        "/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types"
+        "/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store"
       ],
       "interfaces": [
         "DataTransfer",
