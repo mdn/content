@@ -60,7 +60,7 @@ The superellipse shape is calculated using a modified version of an ellipse. The
     <mo>=</mo>
     <mn>1</mn>
   </math>
-  
+
 The `a` and `b` variables refer to the radii of the ellipse, while the `x` and `y` coordinates are points on the ellipse's circumference.
 
 A circle is an ellipse where the radii, the `a` and `b` in the previous equation, are the same length. With `a` and `b` both equal to `r`, the equation for a circle can be written as:
@@ -84,7 +84,7 @@ A circle is an ellipse where the radii, the `a` and `b` in the previous equation
   </mrow>
 </math>
 
-In this equation, the `x` and `y` are coordinates of points on the circle's circumference, and the `r` is the radius of the circle, with the center of the circle being `0, 0`. The ellipse is produced by scaling a circle shape along the x and/or y axis.
+In this equation, the `x` and `y` are coordinates of points on the circle's circumference, and the `r` is the radius of the circle, with the center of the circle being `(0, 0)`. The ellipse is produced by scaling a circle shape along the `x` and/or `y` axis.
 
 A superellipse shape is created by replacing the `2` exponent in each case with 2<sup>K</sup>, `K` being the argument passed to the `superellipse()` function, which modifies the curvature of the ellipse:
 

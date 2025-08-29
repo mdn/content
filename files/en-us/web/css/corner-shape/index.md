@@ -345,7 +345,7 @@ function setCorners() {
   rectangle.style.cornerShape = select.value;
   const brValue = `${range.value}px`;
   rectangle.style.borderRadius = brValue;
-  rectangle.innerHTML = `<div><code>corner-shape: ${select.value}</code><br><code>border-radius: ${brValue}</code></div>`;
+  rectangle.innerHTML = `<div><code>corner-shape: ${select.value};</code><br><code>border-radius: ${brValue};</code></div>`;
 }
 
 select.addEventListener("change", setCorners);
@@ -452,7 +452,7 @@ function setCorners() {
   rectangle.style.cornerShape = seValue;
   const brValue = `${borderRadiusRange.value}px`;
   rectangle.style.borderRadius = brValue;
-  rectangle.innerHTML = `<div><code>corner-shape: ${seValue}</code><br><code>border-radius: ${brValue}</code></div>`;
+  rectangle.innerHTML = `<div><code>corner-shape: ${seValue};</code><br><code>border-radius: ${brValue};</code></div>`;
 }
 
 superEllipseRange.addEventListener("input", setCorners);
