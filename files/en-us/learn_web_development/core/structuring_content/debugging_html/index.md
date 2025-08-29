@@ -5,7 +5,7 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Test_your_skills/Forms_and_buttons", "Learn_web_development/Core/Styling_basics", "Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Forms_challenge", "Learn_web_development/Core/Styling_basics", "Learn_web_development/Core/Structuring_content")}}
 
 Writing HTML is fine, but what if something goes wrong, and you can't work out where the error in the code is? This article will introduce you to some tools that can help you find and fix errors in HTML.
 
@@ -229,4 +229,4 @@ You will know when all your errors are fixed when you see a nice little green ba
 
 So there we have it, an introduction to debugging HTML, which should give you some useful skills to count on when debugging HTML, but also CSS and JavaScript code later on in the course. This also marks the end of the _Structuring content with HTML_ module.
 
-{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Test_your_skills/Forms_and_buttons", "Learn_web_development/Core/Styling_basics", "Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Forms_challenge", "Learn_web_development/Core/Styling_basics", "Learn_web_development/Core/Structuring_content")}}
