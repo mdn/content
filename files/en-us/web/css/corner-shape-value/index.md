@@ -143,7 +143,7 @@ setCorners();
 {{EmbedLiveSample("value-comparison", "100%", "300")}}
 
 > [!NOTE]
-> See also our [superellipse() value comparison](/en-US/docs/Web/CSS/superellipse#superellipse_value_comparison) example.
+> See also our [`superellipse()` function value comparison](/en-US/docs/Web/CSS/superellipse#superellipse_value_comparison) example.
 
 ## Specifications
 
