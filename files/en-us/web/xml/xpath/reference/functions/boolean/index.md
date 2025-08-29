@@ -26,7 +26,7 @@ Boolean `true` or `false` after evaluating `expression`.
 
 - A number evaluates to false if it is positive or negative zero or `NaN`. Otherwise, it evaluates true.
 - A node-set evaluates to true if it is non-empty.
-- A string evaluates to false if it an empty string. Otherwise, it evaluates to true.
+- A string evaluates to false if it is an empty string. Otherwise, it evaluates to true.
 - An object of a type other than the four basic types is converted to a boolean in a way that is dependent on that type.
 
 ## Specifications
