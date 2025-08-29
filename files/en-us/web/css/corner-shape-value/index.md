@@ -15,7 +15,7 @@ The `<corner-shape-value>` data type can take a {{cssxref("superellipse()")}} fu
 ### Values
 
 - {{cssxref("superellipse()")}}
-  - : Defines a custom corner superellipse shape.
+  - : Defines a custom corner superellipse shape. A negative parameter creates an inward, or concave, curve while a positive parameter creates an outward, or convex, curve.
 - Keywords
   - : The available keyword values are as follows:
     - `bevel`
