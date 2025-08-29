@@ -236,7 +236,7 @@ We'd like you to imagine that you have just been to stay at a hotel called the l
 2. The opening paragraph below the top-level heading needs to be marked up appropriately.
 3. Also in the opening paragraph, turn the text "little house in the woods" and "prize draw" into links. We don't have pages to link to yet, so for now, just set the target URL as `#`for a placeholder.
 4. We want you to place a wide, flat image below the opening paragraph as a decoration. The image path is `https://mdn.github.io/shared-assets/images/examples/learn/woodland-strip.jpg`, and we'd like you to set the alternative text for it to an empty value, given that it is decorative only.
-5. Following on from the previous point, as a stetch goal, research a better way to include the decorative image on the page, and have a go at doing so (this involves a different technology to HTML, which we haven't touched on in this module).
+5. Following on from the previous point, as a stretch goal, research a better way to include the decorative image on the page, and have a go at doing so (this involves a different technology to HTML, which we haven't touched on in this module).
 
 ## Hints and tips
 
