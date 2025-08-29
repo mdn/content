@@ -52,7 +52,7 @@ In this case, the username will be submitted when the `externalForm` is submitte
 
 The `form` attribute only associates the element on which it is set. The attribute behavior is not inherited. For example, when the `form` attribute is set on a `<fieldset>` element, it only associates the `<fieldset>`; it does **not** automatically associate the form controls nested within that `<fieldset>`.
 
-In this example, the `<fieldset>` and `username` `<input>` are associated with the`exampleForm`, and included in the {{domxref("HTMLFormControlsCollection")}} of the {{domxref("HTMLFormElement.elements")}} property, but the`password` is not. Only the `username` will be included when the `exampleForm` is submitted:
+In this example, the `<fieldset>` and `username` `<input>` are associated with the `exampleForm`, and included in the {{domxref("HTMLFormControlsCollection")}} of the {{domxref("HTMLFormElement.elements")}} property, but the `password` is not. Only the `username` will be included when the `exampleForm` is submitted:
 
 ```html
 <form id="exampleForm"></form>
@@ -139,4 +139,4 @@ In this example, we have two `<form>` elements: `parentForm` and `targetForm`. T
 
 ## See also
 
-- [`Overriding default form behaviors`](/en-US/docs/Web/HTML/Reference/Elements/input/image#overriding_default_form_behaviors)
+- [Overriding default form behaviors](/en-US/docs/Web/HTML/Reference/Elements/input/image#overriding_default_form_behaviors)
