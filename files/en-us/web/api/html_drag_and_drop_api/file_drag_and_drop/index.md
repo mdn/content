@@ -21,7 +21,7 @@ The HTML defines the drop zone as a {{htmlelement("div")}}, and an output region
 <pre id="output"></pre>
 ```
 
-As the _target element_, it listens to the {{domxref("HTMLElement/drop_event", "drop")}} event to process the dropped file. It is also a good idea to disable the `drop` event outside the drop zone, to avoid the default behavior of opening the file in the browser.
+As the _target element_, it listens to the {{domxref("HTMLElement/drop_event", "drop")}} event to process the dropped file.
 
 ```js live-sample___file-dnd
 const dropZone = document.getElementById("drop-zone");
@@ -30,7 +30,7 @@ const output = document.getElementById("output");
 dropZone.addEventListener("drop", dropHandler);
 ```
 
-In order for the `drop` event to fire, the element must also cancel the {{domxref("HTMLElement/dragover_event", "dragover")}} event. Here, we cancel the event on `window`, because we also want to listen for the `drop` event on `window` to prevent the default browser action of opening the file when it was not droopped into the drop zone.
+In order for the `drop` event to fire, the element must also cancel the {{domxref("HTMLElement/dragover_event", "dragover")}} event. Here, we cancel the event on `window` (which would also cancel the event fired on `dropZone` as it bubbles up), because we also want to listen for the `drop` event on `window` to prevent the default browser action of opening the file when it was not dropped into the drop zone.
 
 ```js live-sample___file-dnd
 window.addEventListener("dragover", (e) => {
