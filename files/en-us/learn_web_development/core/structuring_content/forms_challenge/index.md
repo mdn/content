@@ -12,7 +12,7 @@ In this challenge, we are going to test your ability to create and structure a f
 
 ## Starting point
 
-To solve this challenge we are expecting you to create a simple website project, either inside a folder on your computer's harddrive, or using an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/). Much of the code you need is already provided.
+To solve this challenge, we are expecting you to create a basic website project, either inside a folder on your computer's hard drive, or using an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/). Much of the code you need is already provided on this page.
 
 1. Create a new folder in an appropriate location on your computer called `forms-challenge` (or open an online editor and take the required steps to create a new project).
 2. Save the following HTML listing inside a file inside your folder called `index.html` (or paste it into your online editor's HTML pane).
