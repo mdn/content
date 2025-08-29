@@ -110,20 +110,6 @@ Before dealing with the individual buttons, a number of initialization calls are
 const videoContainer = document.getElementById("videoContainer");
 const video = document.getElementById("video");
 const videoControls = document.getElementById("video-controls");
-```
-
-As mentioned earlier, the browser's default controls now need to be disabled, and the custom controls need to be displayed:
-
-```js live-sample___video-player
-// Hide the default controls
-video.controls = false;
-// Display the user defined video controls
-videoControls.setAttribute("data-state", "visible");
-```
-
-With that done, a variable pointing to each of the buttons is now required:
-
-```js live-sample___video-player
 const playPause = document.getElementById("play-pause");
 const stop = document.getElementById("stop");
 const mute = document.getElementById("mute");
@@ -134,6 +120,15 @@ const fullscreen = document.getElementById("fs");
 ```
 
 Using these handles, events can now be attached to each of the custom control buttons making them interactive. Most of these buttons require a `click` event listener to be added, and a Media API defined method and/or attributes to be called/checked on the video.
+
+As mentioned earlier, the browser's default controls now need to be disabled, and the custom controls need to be displayed:
+
+```js live-sample___video-player
+// Hide the default controls
+video.controls = false;
+// Display the user defined video controls
+videoControls.setAttribute("data-state", "visible");
+```
 
 ### Play/Pause
 

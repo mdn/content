@@ -326,7 +326,7 @@ The `.progress` container is now moved to the top of the control set via `positi
 
 ## JavaScript
 
-That's really it for the immediate styling; the next task is making a number of JavaScript changes to ensure that everything works as expected.
+That's really it for the immediate styling; the next task is making a number of JavaScript changes to ensure that everything works as expected, mostly to rework the buttons logic.
 
 ```js hidden live-sample___video-player-styled
 const videoContainer = document.getElementById("videoContainer");
@@ -346,20 +346,7 @@ video.controls = false;
 videoControls.setAttribute("data-state", "visible");
 ```
 
-### Control visibility
-
-The first change is simple: the `data-state` for showing the video controls when JavaScript is available to the browser now needs to be set, to replace the manual `videoControls.style.display = "block"`:
-
-```js live-sample___video-player-styled
-// Display the user defined video controls
-videoControls.setAttribute("data-state", "visible");
-```
-
-### Button functionality
-
-This section looks at the JavaScript required for implementing the button functionality.
-
-#### Play/Pause and mute
+### Play/Pause and mute
 
 Now that the buttons actually look like buttons and have images that indicate what they do, some changes need to be made so that the "dual functionality" buttons (such as the play/pause button) are in the correct "state" and display the correct image. In order to facilitate this, a new function is defined called `changeButtonState()`, which accepts a type variable indicating the button's functionality:
 
@@ -418,7 +405,7 @@ playPause.addEventListener("click", (e) => {
 });
 ```
 
-#### Volume
+### Volume
 
 The `alterVolume()` function, called when the player's volume buttons are clicked, also changes — it now calls a new function called `checkVolume()`:
 
@@ -459,9 +446,9 @@ video.addEventListener("volumechange", () => {
 });
 ```
 
-#### Fullscreen
+### Progress and fullscreen
 
-The [Progress bar](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player#progress) and [Full screen](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player#fullscreen) implementations hasn't changed.
+The [Progress bar](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player#progress) and [Fullscreen](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player#fullscreen) implementations hasn't changed.
 
 ```js hidden live-sample___video-player-styled
 progress.addEventListener("click", (e) => {
