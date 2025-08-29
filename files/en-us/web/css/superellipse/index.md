@@ -78,7 +78,7 @@ The following diagram illustrates different `superellipse()` values for the top 
 ![Line diagram illustrating the ellipses created using different K values, as described subsequently](superellipse-param.svg)
 
 - A `K` value of `0` creates a perfect diamond shape, used to create bevelled corners. This corresponds to the {{cssxref("&lt;corner-shape-value>")}} `bevel` keyword.
-- A `K` value of `1` creates a perfect ellipse, corresponding to the `round` keyword.
+- A `K` value of `1` creates an ordinary ellipse, corresponding to the `round` keyword.
 - A `K` value of `>1` makes the ellipse shape more square; `2` corresponds to the `squircle` keyword.
 - A `K` value of `infinity` creates a perfect square (corresponding to the `square` keyword), although `K` values of `10` or more are indistinguishable from a square.
 - Negative `K` values result in a concave curve, resulting in corner shapes that are curved inward, or "scooped out". A `K` value of `-1` corresponds to the `scoop` keyword and `-infinity` corresponds to the `notch` keyword.
