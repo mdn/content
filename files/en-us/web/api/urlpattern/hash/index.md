@@ -20,7 +20,7 @@ A string.
 
 ### Basic usage
 
-The below example creates a {{domxref("URLPattern")}} object with with `books/:id` for the `hash` part and logs the property.
+The below example creates a {{domxref("URLPattern")}} object with `books/:id` for the `hash` part and logs the property.
 This pattern matches any fragment that starts with `books/` and ends with an arbitrary string identifier.
 
 ```js
