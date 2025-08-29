@@ -232,9 +232,9 @@ You can use the same technique to insert other special characters. See [Escape s
 What happens when we try to concatenate a string and a number? Let's try it in our console:
 
 ```js
-const name = "Front ";
+const coolBandName = "Front ";
 const number = 242;
-console.log(name + number); // "Front 242"
+console.log(coolBandName + number); // "Front 242"
 ```
 
 You might expect this to return an error, but it works just fine. How numbers should be displayed as strings is fairly well-defined, so the browser automatically converts the number to a string and concatenates the two strings.
