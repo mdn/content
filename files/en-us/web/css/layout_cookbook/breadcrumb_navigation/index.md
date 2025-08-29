@@ -2,9 +2,8 @@
 title: Breadcrumb navigation
 slug: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 Breadcrumb navigation helps the user to understand their location in the website by providing a {{glossary("breadcrumb")}} trail back to the start page. The items typically display inline, with a separator between each item, indicating the hierarchy between individual pages.
 

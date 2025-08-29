@@ -53,10 +53,8 @@ The returned object may have the following properties/statistics:
 - `minRtt`
   - : A {{domxref("DOMHighResTimeStamp")}} containing the minimum round-trip time observed on the entire connection.
 - `datagrams`
-
   - : An object containing statistics for datagram transmission over the connection.
     The object has the following properties:
-
     - `timestamp`
       - : A {{domxref("DOMHighResTimeStamp")}} indicating the timestamp at which the statistics were gathered, relative to Jan 1, 1970, UTC.
     - `expiredOutgoing`
@@ -69,7 +67,7 @@ The returned object may have the following properties/statistics:
       - : A positive integer indicating the number of sent datagrams that were declared lost.
         Note that a datagram may be declared lost if, for example, no acknowledgement arrived within a timeout, or an acknowledgement for a later datagram was received first.
 
-<!-- Note, this is not in Firefox IDL, and method not yet implemented by others in https://searchfox.org/mozilla-central/commit/4e6970cd336f1b642c0be6c9b697b4db5f7b6aeb
+<!-- Note, this is not in Firefox IDL, and method not yet implemented by others in https://searchfox.org/firefox-main/commit/4e6970cd336f1b642c0be6c9b697b4db5f7b6aeb
 - `estimatedSendRate`
   - : A positive integer indicating the estimated rate at which queued data will be sent by the user agent, in bits per second.
     This rate applies to all streams and datagrams that share a `WebTransport` session.

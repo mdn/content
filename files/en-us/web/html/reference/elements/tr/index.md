@@ -3,9 +3,8 @@ title: "<tr>: The Table Row element"
 slug: Web/HTML/Reference/Elements/tr
 page-type: html-element
 browser-compat: html.elements.tr
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<tr>`** [HTML](/en-US/docs/Web/HTML) element defines a row of cells in a table. The row's cells can then be established using a mix of {{HTMLElement("td")}} (data cell) and {{HTMLElement("th")}} (header cell) elements.
 
@@ -48,7 +47,7 @@ td {
 
 th[scope="col"] {
   background-color: #505050;
-  color: #fff;
+  color: white;
 }
 
 th[scope="row"] {
@@ -60,7 +59,7 @@ td {
 }
 
 tr:nth-of-type(even) {
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 
 table {
@@ -86,23 +85,18 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 The following attributes are deprecated and should not be used. They are documented below for reference when updating existing code and for historical interest only.
 
 - `align` {{deprecated_inline}}
-
   - : Specifies the horizontal alignment of each row cell. The possible {{Glossary("enumerated")}} values are `left`, `center`, `right`, `justify`, and `char`. When supported, the `char` value aligns the textual content on the character defined in the [`char`](#char) attribute and on offset defined by the [`charoff`](#charoff) attribute. Use the {{cssxref("text-align")}} CSS property instead, as this attribute is deprecated.
 
 - `bgcolor` {{deprecated_inline}}
-
   - : Defines the background color of each row cell. The value is an HTML color; either a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/hex-color), prefixed by a `#`, or a [color keyword](/en-US/docs/Web/CSS/named-color). Other CSS {{cssxref("color_value", "&lt;color&gt;")}} values are not supported. Use the {{cssxref("background-color")}} CSS property instead, as this attribute is deprecated.
 
 - `char` {{deprecated_inline}}
-
   - : Specifies the alignment of the content to a character of each row cell. Typical values for this include a period (`.`) when attempting to align numbers or monetary values. If [`align`](#align) is not set to `char`, this attribute is ignored.
 
 - `charoff` {{deprecated_inline}}
-
   - : Specifies the number of characters to offset the row cell content from the alignment character specified by the [`char`](#char) attribute.
 
 - `valign` {{deprecated_inline}}
-
   - : Specifies the vertical alignment of each row cell. The possible {{Glossary("enumerated")}} values are `baseline`, `bottom`, `middle`, and `top`. Use the {{cssxref("vertical-align")}} CSS property instead, as this attribute is deprecated.
 
 ## Usage notes
@@ -158,7 +152,7 @@ The CSS {{cssxref(":nth-of-type")}} pseudo-class is used to select every `odd` r
 
 ```css
 tr:nth-of-type(odd) {
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 
 tr th[scope="row"] {
@@ -234,12 +228,12 @@ The CSS is nearly unchanged from the [previous example](#basic_row_setup), excep
 
 ```css
 tr:nth-of-type(odd) {
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 
 tr th[scope="col"] {
   background-color: #505050;
-  color: #fff;
+  color: white;
 }
 
 tr th[scope="row"] {
@@ -407,7 +401,7 @@ td {
 
 th {
   background-color: #505050;
-  color: #fff;
+  color: white;
   cursor: pointer;
 }
 ```

@@ -14,7 +14,7 @@ CSS (Cascading Style Sheets) is used to style and layout web pages — for examp
 Before starting this module, you should have a basic work environment set up (as detailed in [Installing basic software](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software)), and understand how to create and manage files (as detailed in [Dealing with files](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files)). You should also be familiar with HTML (work through our [Structuring content with HTML](/en-US/docs/Learn_web_development/Core/Structuring_content) module if not).
 
 > [!NOTE]
-> If you are working on a computer/tablet/other device where you don't have the ability to create your own files, you could try out (most of) the code examples in an online coding program such as [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/).
+> If you are working on a computer, tablet, or another device where you can't create files, you can try running the code in an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
 
 ## Tutorials and challenges
 
@@ -54,8 +54,10 @@ Before starting this module, you should have a basic work environment set up (as
   - : This challenge provides a number of related exercises that must be completed in order to create the final design — a business card/gamer card/social media profile.
 - [Challenge: Creating fancy letterheaded paper](/en-US/docs/Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper) <sup>Challenge</sup>
   - : If you want to make the right impression, writing a letter on nice letterheaded paper can be a really good start. In this challenge you will create an online template to achieve such a look.
-- [Challenge: A cool-looking box](/en-US/docs/Learn_web_development/Core/Styling_basics/Cool-looking_box) <sup>Challenge</sup>
-  - : In this challenge, you'll get some more practice in creating cool-looking boxes by trying to create an eye-catching box.
+
+## Test your skills
+
+You will find "Test your skills" articles placed between the tutorial articles to check whether you have retained the most important information before you move on. If you want to explore all of these together, you can find them listed at [Test your skills: CSS styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics/Test_your_skills).
 
 ## Additional tutorials
 

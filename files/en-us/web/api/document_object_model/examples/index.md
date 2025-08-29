@@ -59,28 +59,28 @@ objOutput.innerHTML = strHtml;
 
 {{EmbedLiveSample("example_1_height_and_width", "", "300")}}
 
-## Example 2: Image Attributes
+## Example 2: border styles
 
 ```html
-<p>
-  <img id="img1" src="image1.gif" width="100" height="100" alt="border test" />
-</p>
+<div id="box"></div>
 
 <form name="FormName">
-  <input type="button" id="btn1" value="Make border 20px-wide" />
-  <input type="button" id="btn2" value="Make border 5px-wide" />
+  <button id="btn1">Make border 20px-wide</button>
+  <button id="btn2">Make border 5px-wide</button>
 </form>
 ```
 
 ```css
-#img1 {
+#box {
   border: 5px solid green;
+  width: 100px;
+  height: 100px;
 }
 ```
 
 ```js
 function setBorderWidth(width) {
-  document.getElementById("img1").style.borderWidth = `${width}px`;
+  document.getElementById("box").style.borderWidth = `${width}px`;
 }
 
 document.getElementById("btn1").addEventListener("click", () => {
@@ -91,7 +91,7 @@ document.getElementById("btn2").addEventListener("click", () => {
 });
 ```
 
-{{EmbedLiveSample("example_2_image_attributes", "", "200")}}
+{{EmbedLiveSample("example_2_border_styles", "", "200")}}
 
 ## Example 3: Manipulating Styles
 
@@ -204,7 +204,7 @@ document.getElementById("t-daddy").addEventListener("click", () => {
 
 ## Example 6: getComputedStyle
 
-This example demonstrates how the {{domxref("window.getComputedStyle")}} method can be used to get the styles of an element that are not set using the `style` attribute or with JavaScript (e.g., `elt.style.backgroundColor="rgb(173 216 230)"`). These latter types of styles can be retrieved with the more direct {{domxref("HTMLElement.style", "elt.style")}} property, whose properties are listed in the [DOM CSS Properties List](/en-US/docs/Web/CSS/Reference).
+This example demonstrates how the {{domxref("window.getComputedStyle")}} method can be used to get the styles of an element that are not set using the `style` attribute or with JavaScript (e.g., `elt.style.backgroundColor="lightblue"`). These latter types of styles can be retrieved with the more direct {{domxref("HTMLElement.style", "elt.style")}} property, whose properties are listed in the [DOM CSS Properties List](/en-US/docs/Web/CSS/Reference).
 
 `getComputedStyle()` returns a {{domxref("CSSStyleDeclaration")}} object, whose individual style properties can be referenced with this object's {{domxref("CSSStyleDeclaration.getPropertyValue()", "getPropertyValue()")}} method, as the following example document shows.
 
@@ -226,7 +226,7 @@ This example demonstrates how the {{domxref("window.getComputedStyle")}} method 
 ```css
 #d1 {
   margin-left: 10px;
-  background-color: rgb(173, 216, 230);
+  background-color: lightblue;
   height: 20px;
   max-width: 20px;
 }
@@ -282,14 +282,14 @@ thead {
   font-weight: bold;
 }
 td {
-  padding: 2px 10px 2px 10px;
+  padding: 2px 10px;
 }
 
 .odd {
   background-color: #efdfef;
 }
 .even {
-  background-color: #ffffff;
+  background-color: white;
 }
 ```
 

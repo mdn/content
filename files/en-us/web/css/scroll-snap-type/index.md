@@ -3,9 +3,8 @@ title: scroll-snap-type
 slug: Web/CSS/scroll-snap-type
 page-type: css-property
 browser-compat: css.properties.scroll-snap-type
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`scroll-snap-type`** [CSS](/en-US/docs/Web/CSS) property is set on a {{glossary("scroll container")}}, opting it into scroll snapping by setting the direction and strictness of snap point enforcement within the [snap port](/en-US/docs/Glossary/Scroll_snap#snapport).
 
@@ -59,7 +58,7 @@ scroll-snap-type: x proximity;
   flex: 0 0 250px;
   width: 250px;
   background-color: rebeccapurple;
-  color: #fff;
+  color: white;
   font-size: 30px;
   display: flex;
   align-items: center;
@@ -68,7 +67,7 @@ scroll-snap-type: x proximity;
 }
 
 #example-element > div:nth-child(even) {
-  background-color: #fff;
+  background-color: white;
   color: rebeccapurple;
 }
 ```

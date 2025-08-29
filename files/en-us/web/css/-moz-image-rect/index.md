@@ -6,9 +6,10 @@ status:
   - deprecated
   - non-standard
 browser-compat: css.types.-moz-image-rect
+sidebar: cssref
 ---
 
-{{CSSRef}}{{Non-standard_Header}}{{Deprecated_Header}}
+{{Non-standard_Header}}{{Deprecated_Header}}
 
 The **`-moz-image-rect`** value for [CSS](/en-US/docs/Web/CSS) {{CSSxRef("background-image")}} lets you use a portion of a larger image as a background.
 
@@ -34,8 +35,6 @@ The **`-moz-image-rect`** value for [CSS](/en-US/docs/Web/CSS) {{CSSxRef("backgr
 ## Description
 
 This property allows you to, for example, use different parts of one larger image as backgrounds in different parts of your content.
-
-This works very similarly to the {{CSSxRef("-moz-image-region")}} property, which is used with the {{CSSxRef("list-style-image")}} property to use parts of an image as the bullets in lists. However, this can be used for any CSS background.
 
 The syntax for the rectangle is similar to the [`rect()`](/en-US/docs/Web/CSS/shape#syntax) function generating a {{CSSxRef("&lt;shape&gt;")}} CSS type. All four values are relative to the upper left corner of the image.
 
@@ -66,7 +65,7 @@ Then the four boxes defining the segments of the image are defined. Let's look a
 
 ```css
 #box1 {
-  background-image: -moz-image-rect(url(firefox.png), 0%, 50%, 50%, 0%);
+  background-image: -moz-image-rect(url("firefox.png"), 0%, 50%, 50%, 0%);
   width: 133px;
   height: 136px;
   left: 0px;
@@ -79,7 +78,7 @@ This is the top-left corner of the image. It defines a rectangle containing the 
 
 ```css
 #box2 {
-  background-image: -moz-image-rect(url(firefox.png), 0%, 100%, 50%, 50%);
+  background-image: -moz-image-rect(url("firefox.png"), 0%, 100%, 50%, 50%);
   width: 133px;
   height: 136px;
   left: 133px;
@@ -94,7 +93,7 @@ The other corners follow a similar pattern:
 
 ```css
 #box3 {
-  background-image: -moz-image-rect(url(firefox.png), 50%, 50%, 100%, 0%);
+  background-image: -moz-image-rect(url("firefox.png"), 50%, 50%, 100%, 0%);
   width: 133px;
   height: 136px;
   left: 0px;
@@ -102,7 +101,7 @@ The other corners follow a similar pattern:
   position: absolute;
 }
 #box4 {
-  background-image: -moz-image-rect(url(firefox.png), 50%, 100%, 100%, 50%);
+  background-image: -moz-image-rect(url("firefox.png"), 50%, 100%, 100%, 50%);
   width: 133px;
   height: 136px;
   left: 133px;

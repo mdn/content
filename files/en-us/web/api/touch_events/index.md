@@ -43,19 +43,24 @@ This example tracks multiple touchpoints at a time, allowing the user to draw in
 ### Create a canvas
 
 ```html
-<canvas id="canvas" width="600" height="600" style="border:solid black 1px;">
+<canvas id="canvas" width="600" height="600">
   Your browser does not support canvas element.
 </canvas>
 <br />
 Log:
-<pre id="log" style="border: 1px solid #ccc;"></pre>
+<pre id="log"></pre>
 ```
 
 ```css
+#canvas {
+  border: 1px solid black;
+}
+
 #log {
   height: 200px;
   width: 600px;
   overflow: scroll;
+  border: 1px solid #cccccc;
 }
 ```
 
@@ -95,7 +100,8 @@ function handleStart(evt) {
   const ctx = el.getContext("2d");
   const touches = evt.changedTouches;
 
-  for (const [i, touch] of touches.entries()) {
+  for (let i = 0; i < touches.length; i++) {
+    const touch = touches[i];
     log(`touchstart: ${i}.`);
     ongoingTouches.push(copyTouch(touch));
     const color = colorForTouch(touch);
@@ -229,7 +235,7 @@ function colorForTouch(touch) {
 ```
 
 The result from this function is a string that can be used when calling {{HTMLElement("canvas")}} functions to set drawing colors.
-For example, for a {{domxref("Touch.identifier")}} value of 10, the resulting string is "#a31".
+For example, for a {{domxref("Touch.identifier")}} value of 10, the resulting string is "#aa3311".
 
 #### Copying a touch object
 

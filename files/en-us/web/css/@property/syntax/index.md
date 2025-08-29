@@ -3,9 +3,8 @@ title: syntax
 slug: Web/CSS/@property/syntax
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.property.syntax
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`syntax`** descriptor of the {{cssxref("@property")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) defines the allowed value types for the registered [CSS custom property](/en-US/docs/Web/CSS/--*).
 It controls how the property's specified value is processed to derive the [computed value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value).

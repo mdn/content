@@ -1,12 +1,12 @@
 ---
 title: Firefox 47 for developers
+short-title: Firefox 47
 slug: Mozilla/Firefox/Releases/47
 page-type: firefox-release-notes
+sidebar: firefox
 ---
 
-{{FirefoxSidebar}}
-
-[To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/) Firefox 47 was released on June 6, 2016. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
+[To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.firefox.com/en-US/channel/desktop/developer/) Firefox 47 was released on June 6, 2016. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
 ## Changes for Web developers
 
@@ -15,7 +15,6 @@ page-type: firefox-release-notes
 - [User-agent spoofing](/en-US/docs/Web/HTTP/Guides/Browser_detection_using_the_user_agent) from the [Responsive mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html)
 - [Retaining paths panel](https://firefox-source-docs.mozilla.org/devtools-user/memory/dominators_view/index.html#retaining-paths-panel) in memory tool
 - [Service workers](/en-US/docs/Web/API/ServiceWorker) and [Push API](/en-US/docs/Web/API/Push_API) debugging
-
   - [about:debugging](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html) dashboard for workers
   - Cached requests are now shown in [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)
   - Support for [cache storage](/en-US/docs/Web/API/Cache) in [Storage Inspector](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html)
@@ -40,7 +39,6 @@ _No change._
 - An experimental implementation of CSS Mask Image properties landed. For the moment, this will only be available on Nightly versions of Firefox.y: shorthand version of {{cssxref("mask")}}, as well as {{cssxref("mask-repeat")}}, {{cssxref("mask-position")}}, {{cssxref("mask-size")}} are now available ([Firefox bug 686281](https://bugzil.la/686281)).
 - The {{cssxref("clip-path")}} property now experimentally supports `polygon()`, `ellipse()`, and `circle()` on HTML elements (does not support [inset()](https://bugzil.la/1246762) and [path()](https://bugzil.la/1246764)), behind the pref `layout.css.clip-path-shapes.enabled` that defaults to `false` ([Firefox bug 1075457](https://bugzil.la/1075457)). Interpolation (and therefore animation) of these values is not yet supported.
 - Our still experimental grid implementation has been updated:
-
   - {{cssxref("align-content")}}: `normal` behaves now as `stretch` for grid containers ([Firefox bug 1237754](https://bugzil.la/1237754)).
   - The order of column/row values for {{cssxref('grid')}}, {{cssxref('grid-template')}}, and `grid-gap` properties has been swapped ([Firefox bug 1251999](https://bugzil.la/1251999)).
 
@@ -73,7 +71,7 @@ _No change._
 
 - The {{domxref("Request.Request", "Request()")}} constructor can now accept a referrer option in its init object ([Firefox bug 1251448](https://bugzil.la/1251448)).
 - The {{domxref("Request.referrerPolicy")}} property is now supported ([Firefox bug 1251872](https://bugzil.la/1251872)).
-- [Service workers](/en-US/docs/Web/API/Service_Worker_API) and [Push](/en-US/docs/Web/API/Push_API) have been disabled in the [Firefox 45 Extended Support Release](https://www.mozilla.org/en-US/firefox/enterprise/) (ESR) ([Firefox bug 1232029](https://bugzil.la/1232029)).
+- [Service workers](/en-US/docs/Web/API/Service_Worker_API) and [Push](/en-US/docs/Web/API/Push_API) have been disabled in the [Firefox 45 Extended Support Release](https://www.firefox.com/en-US/browsers/enterprise/) (ESR) ([Firefox bug 1232029](https://bugzil.la/1232029)).
 
 #### WebRTC
 
@@ -136,7 +134,3 @@ _No change._
 ### Other
 
 _No change._
-
-## Older versions
-
-{{Firefox_for_developers}}

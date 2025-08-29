@@ -3,9 +3,8 @@ title: "<dl>: The Description List element"
 slug: Web/HTML/Reference/Elements/dl
 page-type: html-element
 browser-compat: html.elements.dl
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<dl>`** [HTML](/en-US/docs/Web/HTML) element represents a description list. The element encloses a list of groups of terms (specified using the {{HTMLElement("dt")}} element) and descriptions (provided by {{HTMLElement("dd")}} elements). Common uses for this element are to implement a glossary or to display metadata (a list of key-value pairs).
 
@@ -44,7 +43,10 @@ dd {
 
 ## Attributes
 
-This element only includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
+This element also accepts the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
+
+- `compact` {{Deprecated_inline}}
+  - : This Boolean attribute hints that the list should be rendered in a compact style. The interpretation of this attribute is browser-specific. Use [CSS](/en-US/docs/Web/CSS) instead: to give a similar effect as the `compact` attribute, the CSS property {{cssxref("line-height")}} can be used with a value of `80%`.
 
 ## Accessibility
 

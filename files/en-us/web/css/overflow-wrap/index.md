@@ -3,9 +3,8 @@ title: overflow-wrap
 slug: Web/CSS/overflow-wrap
 page-type: css-property
 browser-compat: css.properties.overflow-wrap
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`overflow-wrap`** [CSS](/en-US/docs/Web/CSS) property applies to text, setting whether the browser should insert line breaks within an otherwise unbreakable string to prevent text from overflowing its line box.
 
@@ -40,8 +39,8 @@ overflow-wrap: break-word;
 
 ```css interactive-example
 .example-container {
-  background-color: rgba(255, 0, 200, 0.2);
-  border: 3px solid #663399;
+  background-color: rgb(255 0 200 / 0.2);
+  border: 3px solid rebeccapurple;
   padding: 0.75em;
   width: min-content;
   max-width: 11em;

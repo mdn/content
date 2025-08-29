@@ -2,9 +2,8 @@
 title: Sticky footers
 slug: Web/CSS/Layout_cookbook/Sticky_footers
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 A sticky footer pattern is one where the footer of your page "sticks" to the bottom of the viewport in cases where the content is shorter than the viewport height. We'll look at a couple of techniques for creating one in this recipe.
 
@@ -57,7 +56,7 @@ body {
 .page-header,
 .page-footer {
   background-color: rgb(75 70 74);
-  color: #fff;
+  color: white;
   padding: 20px;
 }
 
@@ -124,7 +123,7 @@ body {
 .page-header,
 .page-footer {
   background-color: rgb(75 70 74);
-  color: #fff;
+  color: white;
   padding: 20px;
 
   flex-grow: 0;

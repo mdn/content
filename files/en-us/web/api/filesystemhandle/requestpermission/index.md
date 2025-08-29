@@ -23,12 +23,9 @@ requestPermission(descriptor)
 ### Parameters
 
 - `descriptor` {{optional_inline}}
-
   - : An object which specifies the permission mode to query for. Options are as follows:
-
     - `'mode'` {{optional_inline}}
-
-      - : Can be either `'read'` or `'readwrite'`.
+      - : Can be either `'read'`, `'write'`, or `'readwrite'`.
 
 ### Return value
 
@@ -38,7 +35,7 @@ A {{jsxref("Promise")}} that resolves with {{domxref('PermissionStatus.state')}}
 
 - {{jsxref("TypeError")}}
   - : Thrown if no parameter is specified or the `mode` is not that of
-    `'read'` or `'readwrite'`
+    `'read'`, `'write'`, or `'readwrite'`
 - `SecurityError` {{domxref("DOMException")}}
   - : Thrown in one of the following cases:
     - The method was called in a context that's not [same-origin](/en-US/docs/Web/Security/Same-origin_policy) as the top-level context (i.e., a cross-origin iframe).

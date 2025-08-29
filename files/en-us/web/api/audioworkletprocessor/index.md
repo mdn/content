@@ -46,7 +46,6 @@ An example algorithm of creating a custom audio processing mechanism is:
 
 1. Create a separate file;
 2. In the file:
-
    1. Extend the `AudioWorkletProcessor` class (see ["Deriving classes" section](#deriving_classes)) and supply your own {{domxref("AudioWorkletProcessor.process", "process()")}} method in it;
    2. Register the processor using {{domxref("AudioWorkletGlobalScope.registerProcessor()")}} method;
 

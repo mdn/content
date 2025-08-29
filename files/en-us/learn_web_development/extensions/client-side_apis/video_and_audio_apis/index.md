@@ -99,7 +99,6 @@ Open the HTML index file. You'll see a number of features; the HTML is dominated
 - The whole player is wrapped in a {{htmlelement("div")}} element, so it can all be styled as one unit if needed.
 - The {{htmlelement("video")}} element contains two {{htmlelement("source")}} elements so that different formats can be loaded depending on the browser viewing the site.
 - The controls HTML is probably the most interesting:
-
   - We have four {{htmlelement("button")}}s — play/pause, stop, rewind, and fast forward.
   - Each `<button>` has a `class` name, a `data-icon` attribute for defining what icon should be shown on each button (we'll show how this works in the below section), and an `aria-label` attribute to provide an understandable description of each button, since we're not providing a human-readable label inside the tags. The contents of `aria-label` attributes are read out by screen readers when their users focus on the elements that contain them.
   - There is also a timer {{htmlelement("div")}}, which will report the elapsed time when the video is playing. Just for fun, we are providing two reporting mechanisms — a {{htmlelement("span")}} containing the elapsed time in minutes and seconds, and an extra `<div>` that we will use to create a horizontal indicator bar that gets longer as the time elapses. To get an idea of what the finished product will look like, [check out our finished version](https://mdn.github.io/learning-area/javascript/apis/video-audio/finished/).
@@ -149,12 +148,12 @@ Next, let's look at our button icons:
   font-style: normal;
 }
 
-button:before {
+button::before {
   font-family: HeydingsControlsRegular;
   font-size: 20px;
   position: relative;
   content: attr(data-icon);
-  color: #aaa;
+  color: #aaaaaa;
   text-shadow: 1px 1px 0px black;
 }
 ```
@@ -226,7 +225,6 @@ We've got a fairly complete HTML and CSS interface already; now we just need to 
    ```
 
    Here we are creating constants to hold references to all the objects we want to manipulate. We have three groups:
-
    - The `<video>` element, and the controls bar.
    - The play/pause, stop, rewind, and fast forward buttons.
    - The outer timer wrapper `<div>`, the digital timer readout `<span>`, and the inner `<div>` that gets wider as the time elapses.
@@ -344,7 +342,6 @@ There are many ways that you can implement rewind and fast-forward functionality
    You'll notice that first, we initialize two variables — `intervalFwd` and `intervalRwd` — you'll find out what they are for later on.
 
    Let's step through `mediaBackward()` (the functionality for `mediaForward()` is exactly the same, but in reverse):
-
    1. We clear any classes and intervals that are set on the fast forward functionality — we do this because if we press the `rwd` button after pressing the `fwd` button, we want to cancel any fast forward functionality and replace it with the rewind functionality. If we tried to do both at once, the player would break.
    2. We use an `if` statement to check whether the `active` class has been set on the `rwd` button, indicating that it has already been pressed. The {{domxref("Element.classList", "classList")}} is a rather handy property that exists on every element — it contains a list of all the classes set on the element, as well as methods for adding/removing classes, etc. We use the `classList.contains()` method to check whether the list contains the `active` class. This returns a boolean `true`/`false` result.
    3. If `active` has been set on the `rwd` button, we remove it using `classList.remove()`, clear the interval that has been set when the button was first pressed (see below for more explanation), and use {{domxref("HTMLMediaElement.play()")}} to cancel the rewind and start the video playing normally.
@@ -375,7 +372,6 @@ There are many ways that you can implement rewind and fast-forward functionality
    ```
 
    Again, we'll just run through the first one of these functions as they work almost identically, but in reverse to one another. In `windBackward()` we do the following — bear in mind that when the interval is active, this function is being run once every 200 milliseconds.
-
    1. We start off with an `if` statement that checks to see whether the current time is less than 3 seconds, i.e., if rewinding by another three seconds would take it back past the start of the video. This would cause strange behavior, so if this is the case we stop the video playing by calling `stopMedia()`, remove the `active` class from the rewind button, and clear the `intervalRwd` interval to stop the rewind functionality. If we didn't do this last step, the video would just keep rewinding forever.
    2. If the current time is not within 3 seconds of the start of the video, we remove three seconds from the current time by executing `media.currentTime -= 3`. So in effect, we are rewinding the video by 3 seconds, once every 200 milliseconds.
 

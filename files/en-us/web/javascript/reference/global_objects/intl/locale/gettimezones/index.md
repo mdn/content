@@ -1,11 +1,11 @@
 ---
 title: Intl.Locale.prototype.getTimeZones()
+short-title: getTimeZones()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/getTimeZones
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.Locale.getTimeZones
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`getTimeZones()`** method of {{jsxref("Intl.Locale")}} instances returns a list of supported time zones for this locale.
 

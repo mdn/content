@@ -2,9 +2,8 @@
 title: "TypeError: derived class constructor returned invalid value x"
 slug: Web/JavaScript/Reference/Errors/Invalid_derived_return
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "derived class constructor returned invalid value x" occurs when a derived class constructor returns a value that is not an object or `undefined`.
 

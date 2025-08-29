@@ -44,14 +44,14 @@ The order of matching the `media` query matters, so the more specific query shou
 // Add a theme-color for all devices
 const meta1 = document.createElement("meta");
 meta1.name = "theme-color";
-meta1.content = "#ffffff";
+meta1.content = "white";
 document.head.appendChild(meta1);
 
 // Add a theme-color for small devices
 const meta2 = document.createElement("meta");
 meta2.name = "theme-color";
-meta2.media = "(max-width: 600px)";
-meta2.content = "#000000";
+meta2.media = "(width <= 600px)";
+meta2.content = "black";
 document.head.appendChild(meta2);
 ```
 

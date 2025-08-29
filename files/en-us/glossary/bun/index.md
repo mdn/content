@@ -2,9 +2,8 @@
 title: Bun
 slug: Glossary/Bun
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **Bun** is a fast and modern {{Glossary("JavaScript")}} runtime environment designed to prioritize performance and developer tooling.
 

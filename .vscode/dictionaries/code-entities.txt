@@ -22,6 +22,8 @@ accessibility.disablecache
 accessibilitysidebar
 acodec
 activetitlebarcolor
+addonsidebar
+addonsidebarmain
 addstream
 adduser
 adlm
@@ -36,6 +38,7 @@ ALTGR
 amssymb
 android-safetynet
 animalfound
+anims
 anonid
 apacheconf
 apachectl
@@ -73,6 +76,7 @@ beforescriptexecute
 beforexrselect
 BGRX
 bhks
+biske
 bmatrix
 BPPV1
 Brai
@@ -136,6 +140,8 @@ Crsel
 cryptomining
 csiso
 csrfmiddlewaretoken
+css.selectors.headingfunction
+css.selectors.hostfunction
 CSS_RGBCOLOR
 csslint
 cssref
@@ -219,7 +225,6 @@ fgets
 filecheck
 FILLMODE_FILL_WINDOW
 finishedtransferringdata
-firefoxsidebar
 fiuv
 font.mathfont-family
 fontconfig
@@ -270,7 +275,6 @@ htdocs
 htmlsidebar
 htmlspecialchars
 HTMLWBRElement
-httpsidebar
 hvline
 iarc_rating_id
 icontains
@@ -311,6 +315,8 @@ jsapi.h
 jscript
 jsdouble
 jspubtd.h
+jsref
+jssidebar
 jsval
 kaios
 kawi
@@ -489,6 +495,7 @@ nsIURL
 nsIXSLT
 nsPIDOMWindow
 nsresult
+nums
 OEM_CUSEL
 OEM_ENLW
 oggz
@@ -527,6 +534,7 @@ ontextformatupdate
 ontextupdate
 onuncapturederror
 onwebkitmouseforcewillbegin
+onzoomlevelchange
 opendocument
 openidconnect
 openpgp4fpr
@@ -625,6 +633,7 @@ romanlow
 rotr
 roundedbox
 rowindextext
+rozaj
 rport
 rquote
 rspadd
@@ -648,6 +657,7 @@ scalethumbstart
 scalethumbtick
 scanf
 screenschange
+scrimtitle
 scrollsnapchange
 scrollsnapchanging
 scts
@@ -662,7 +672,6 @@ seekbackward
 seekforward
 seekto
 seeother
-selectchange
 selectedcontent
 selectend
 seltype
@@ -707,6 +716,7 @@ strncpy
 SUBDOCUMENT
 sund
 sunu
+superellipse
 superspeed
 SVGMPathElement
 svgref
@@ -738,6 +748,7 @@ tnsa
 todoapp
 togglecamera
 togglemicrophone
+togglescreenshare
 toolbar-bgalignment
 toolbar-bgimage
 toolbaritem
@@ -868,3 +879,4 @@ xpcnativewrappers
 xpidl
 xpinstall
 xywh
+zoomlevelchange

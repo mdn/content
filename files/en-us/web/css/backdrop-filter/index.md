@@ -3,9 +3,8 @@ title: backdrop-filter
 slug: Web/CSS/backdrop-filter
 page-type: css-property
 browser-compat: css.properties.backdrop-filter
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`backdrop-filter`** [CSS](/en-US/docs/Web/CSS) property lets you apply graphical effects such as blurring or color shifting to the area behind an element. Because it applies to everything _behind_ the element, to see the effect the element or its background needs to be transparent or partially transparent.
 
@@ -48,7 +47,7 @@ backdrop-filter: sepia(90%);
   flex: 1;
   text-align: center;
   padding: 20px 10px;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgb(255 255 255 / 0.2);
 }
 ```
 
@@ -59,7 +58,7 @@ backdrop-filter: sepia(90%);
 backdrop-filter: none;
 
 /* URL to SVG filter */
-backdrop-filter: url(common-filters.svg#filter);
+backdrop-filter: url("common-filters.svg#filter");
 
 /* <filter-function> values */
 backdrop-filter: blur(2px);
@@ -74,7 +73,7 @@ backdrop-filter: sepia(90%);
 backdrop-filter: saturate(80%);
 
 /* Multiple filters */
-backdrop-filter: url(filters.svg#filter) blur(4px) saturate(150%);
+backdrop-filter: url("filters.svg#filter") blur(4px) saturate(150%);
 
 /* Global values */
 backdrop-filter: inherit;

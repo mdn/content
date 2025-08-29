@@ -129,17 +129,17 @@ data:hover::after {
 {{InteractiveExample("JavaScript Demo: Set.prototype[Symbol.iterator]()")}}
 
 ```js interactive-example
-const set1 = new Set();
+const set = new Set();
 
-set1.add(42);
-set1.add("forty two");
+set.add(42);
+set.add("forty two");
 
-const iterator1 = set1[Symbol.iterator]();
+const iterator = set[Symbol.iterator]();
 
-console.log(iterator1.next().value);
+console.log(iterator.next().value);
 // Expected output: 42
 
-console.log(iterator1.next().value);
+console.log(iterator.next().value);
 // Expected output: "forty two"
 ```
 
@@ -182,7 +182,7 @@ filter: drop-shadow(16px 16px 20px red) invert(75%);
 
 ```css interactive-example
 .example-container {
-  background-color: #fff;
+  background-color: white;
   width: 260px;
   height: 260px;
   display: flex;
@@ -428,7 +428,6 @@ The [`AvailableInWorkers`](https://github.com/mdn/rari/blob/main/crates/rari-doc
 <!---->
 
 - [MDN Web Docs Glossary](/en-US/docs/Glossary):
-
   - {{Glossary("XMLHttpRequest", "XHR")}}
 
 - [AJAX](https://en.wikipedia.org/wiki/AJAX) on Wikipedia

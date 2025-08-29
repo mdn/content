@@ -29,16 +29,12 @@ animate(keyframes, options)
   - : Either an array of keyframe objects, **or** a keyframe object whose
     properties are arrays of values to iterate over. See [Keyframe Formats](/en-US/docs/Web/API/Web_Animations_API/Keyframe_Formats) for more details.
 - `options`
-
   - : Either an **integer representing the animation's duration** (in
     milliseconds), **or** an Object containing one or more timing properties described in the [`KeyframeEffect()` options parameter](/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect#parameters) and/or the following options:
-
     - `id` {{optional_inline}}
       - : A property unique to `animate()`: A string with which to reference the animation.
     - `rangeEnd` {{optional_inline}}
-
       - : Specifies the end of an animation's attachment range along its timeline, i.e., where along the timeline an animation will end. The JavaScript equivalent of the CSS {{cssxref("animation-range-end")}} property. `rangeEnd` can take several different value types, as follows:
-
         - A string that can be `normal` (meaning no change to the animation's attachment range), a CSS {{cssxref("length-percentage")}} representing an offset, a `<timeline-range-name>`, or a `<timeline-range-name>` with a `<length-percentage>` following it. For example: `"normal"`, `"entry"`, or `"cover 100%"`.
 
           See [`animation-range`](/en-US/docs/Web/CSS/animation-range) for a detailed description of the available values. Also check out the [View Timeline Ranges Visualizer](https://scroll-driven-animations.style/tools/view-timeline/ranges/), which shows exactly what the different values mean in an easy visual format.
@@ -117,7 +113,7 @@ newspaper.addEventListener("click", () => {
 
 ### Down the Rabbit Hole demo
 
-In the demo [Down the Rabbit Hole (with the Web Animation API)](https://codepen.io/rachelnabors/pen/rxpmJL/?editors=0010), we use the convenient
+In the demo [Down the Rabbit Hole (with the Web Animation API)](/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API#moving_it_to_javascript), we use the convenient
 `animate()` method to immediately create and play an animation on the
 `#tunnel` element to make it flow upwards, infinitely. Notice the array of
 objects passed as keyframes and also the timing options block.

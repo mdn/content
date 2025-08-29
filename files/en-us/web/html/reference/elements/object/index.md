@@ -3,9 +3,8 @@ title: "<object>: The External Object element"
 slug: Web/HTML/Reference/Elements/object
 page-type: html-element
 browser-compat: html.elements.object
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<object>`** [HTML](/en-US/docs/Web/HTML) element represents an external resource, which can be treated as an image, a nested browsing context, or a resource to be handled by a plugin.
 
@@ -37,12 +36,12 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
   - : The address of the resource as a valid URL. At least one of **data** and **type** must be defined.
 - `declare` {{deprecated_inline}}
   - : The presence of this Boolean attribute makes this element a declaration only. The object must be instantiated by a subsequent `<object>` element. Repeat the `<object>` element completely each time the resource is reused.
-- `form`
+- [`form`](/en-US/docs/Web/HTML/Reference/Attributes/form)
   - : The form element, if any, that the object element is associated with (its _form owner_). The value of the attribute must be an ID of a {{HTMLElement("form")}} element in the same document.
 - `height`
   - : The height of the displayed resource, as in {{cssxref("&lt;integer&gt;")}} in {{glossary("CSS pixel", "CSS pixels")}}.
 - `name`
-  - : The name of valid browsing context (HTML5), or the name of the control (HTML 4).
+  - : The name of valid browsing context (HTML5), or the name of the control (HTML 4). The name becomes a property of the {{domxref("Window")}} and {{domxref("Document")}} objects, containing a reference to the embedded window or the element itself.
 - `standby` {{deprecated_inline}}
   - : A message that the browser can show while loading the object's implementation and data.
 - `type`
@@ -64,7 +63,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
   data="/shared-assets/videos/flower.webm"
   width="600"
   height="140">
-  <img src="path/image.jpg" alt="useful image description" />
+  <img
+    src="/shared-assets/images/examples/flowers.jpg"
+    alt="Some beautiful flowers" />
 </object>
 ```
 

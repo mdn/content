@@ -3,9 +3,8 @@ title: Media types (MIME types)
 short-title: Media types
 slug: Web/HTTP/Guides/MIME_types
 page-type: guide
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 A **media type** (formerly known as a **Multipurpose Internet Mail Extensions or MIME type**) indicates the nature and format of a document, file, or assortment of bytes.
 MIME types are defined and standardized in IETF's {{RFC(6838)}}.
@@ -126,7 +125,8 @@ This is the default for binary files. As it means _unknown binary_ file, browser
 
 This is the default for textual files. Even if it really means "unknown textual file," browsers assume they can display it.
 
-> **Note:** `text/plain` does not mean "any kind of textual data."
+> [!NOTE]
+> `text/plain` does not mean "any kind of textual data."
 > If they expect a specific kind of textual data, they will likely not consider it a match.
 > Specifically if they download a `text/plain` file from a {{HTMLElement("link")}} element declaring a CSS file, they will not recognize it as a valid CSS file if presented with `text/plain`.
 > The CSS mime type `text/css` must be used.
@@ -146,16 +146,15 @@ All HTML content should be served with this type. Alternative MIME types for XHT
 
 ### text/javascript
 
-Per the [IANA Media Types registry](https://www.iana.org/assignments/media-types/media-types.xhtml#text), [RFC 9239](https://www.rfc-editor.org/rfc/rfc9239.html), and the [HTML specification](https://html.spec.whatwg.org/multipage/scripting.html#scriptingLanguages:text/javascript), JavaScript content should always be served using the MIME type `text/javascript`.
-No other MIME types are considered valid for JavaScript, and using any MIME type other than `text/javascript` may result in scripts that do not load or run.
+JavaScript content should always be served with the MIME type `text/javascript`.
+For historic reasons, browsers may support some [legacy JavaScript types](#legacy_javascript_mime_types) listed below, but you should not assume scripts served with any MIME type other than `text/javascript` will always load or run.
 
-You may find some JavaScript content incorrectly served with a `charset` parameter as part of the MIME type — as an attempt to specify the character set for the script content.
-That `charset` parameter isn't valid for JavaScript content, and in most cases will result in a script failing to load.
+Note that in HTML the [`type`](/en-US/docs/Web/HTML/Reference/Elements/script/type) attribute for {{htmlelement("script")}} elements may only contain the **JavaScript MIME type essence**: `text/javascript`.
+Including any parameter, such as `charset=utf-8`, is the same as setting the `type` to any other MIME type: the script content is treated as a data block and is not executed as JavaScript.
+(Note that setting the `type` to a JavaScript MIME type is a deprecated feature itself: you should omit the `type` in this case.)
+In contrast, when using the HTTP {{httpheader("Content-Type")}} header you may optionally specify the `charset` parameter as usual.
 
-### application/json
-
-{{glossary("JSON","JavaScript Object Notation (JSON)")}} is a standard text-based format for representing structured data based on JavaScript object syntax.
-It is commonly used for transmitting data in web applications.
+For more information see: [IANA Media Types registry](https://www.iana.org/assignments/media-types/media-types.xhtml#text), [RFC 9239](https://www.rfc-editor.org/rfc/rfc9239.html), and the [HTML specification](https://html.spec.whatwg.org/multipage/scripting.html#scriptingLanguages:text/javascript).
 
 #### Legacy JavaScript MIME types
 
@@ -182,6 +181,11 @@ out what to do with content that doesn't have a valid one) also allows JavaScrip
 > [!NOTE]
 > Even though any given {{Glossary("user agent")}} may support any or all of these, you should only use `text/javascript`.
 > It's the only MIME type guaranteed to work now and into the future.
+
+### application/json
+
+{{glossary("JSON","JavaScript Object Notation (JSON)")}} is a standard text-based format for representing structured data based on JavaScript object syntax.
+It is commonly used for transmitting data in web applications.
 
 ### Image types
 
@@ -223,21 +227,21 @@ As a multipart document format, it consists of different parts, delimited by a b
 Each part is its own entity with its own HTTP headers, {{HTTPHeader("Content-Disposition")}}, and {{HTTPHeader("Content-Type")}} for file uploading fields.
 
 ```http
-Content-Type: multipart/form-data; boundary=aBoundaryString
+Content-Type: multipart/form-data; boundary=boundaryString
 (other headers associated with the multipart document as a whole)
 
---aBoundaryString
+--boundaryString
 Content-Disposition: form-data; name="myFile"; filename="img.jpg"
 Content-Type: image/jpeg
 
 (data)
---aBoundaryString
+--boundaryString
 Content-Disposition: form-data; name="myField"
 
 (data)
---aBoundaryString
+--boundaryString
 (more subparts)
---aBoundaryString--
+--boundaryString--
 ```
 
 The following `<form>`:

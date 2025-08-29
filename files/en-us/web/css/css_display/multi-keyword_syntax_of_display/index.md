@@ -3,9 +3,8 @@ title: Using the multi-keyword syntax with CSS display
 short-title: Using multi-keyword syntax
 slug: Web/CSS/CSS_display/multi-keyword_syntax_of_display
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The [CSS display module](/en-US/docs/Web/CSS/CSS_display) defines a multi-keyword syntax for the CSS [`display`](/en-US/docs/Web/CSS/display) property. This guide explains the multi-keyword syntax.
 
@@ -39,7 +38,7 @@ body {
   font: 1.2em / 1.5 sans-serif;
 }
 .flex {
-  border: 5px solid #ccc;
+  border: 5px solid #cccccc;
   display: flex;
   justify-content: space-between;
 }
@@ -68,7 +67,7 @@ body {
 }
 
 .flex {
-  border: 5px solid #ccc;
+  border: 5px solid #cccccc;
   display: inline-flex;
 }
 ```
@@ -107,7 +106,7 @@ body {
   font: 1.2em / 1.5 sans-serif;
 }
 .flex {
-  border: 5px solid #ccc;
+  border: 5px solid #cccccc;
   gap: 10px;
 }
 
@@ -152,21 +151,24 @@ The elements that we should focus on are the "parent", "child", and "sibling" `<
 What's notable about this layout is that there is no content between the parent and child elements, and the child element has a top margin applied.
 You might expect the top margin to effectively push the child element down within the parent element, but what happens instead is something called [_margin collapse_](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing).
 In this case, the margin of the child element extends well above the parent's bounding box and pushes the parent element further down the page.
-This is easier to see if you inspect the box model of the child element [in your browser's developer tools](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model#use_browser_devtools_to_view_the_box_model).
+This is easier to see if you inspect the box model of the child element [in your browser's developer tools](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model#using_browser_devtools_to_view_the_box_model).
 
 Change the selected option in the `<select>` element to see the effect of different `display` values.
 You can use any value with `flow-root` to create a new formatting context for the parent, making the child element margin relative to its parent's outer edge and avoiding the margin collapse.
 Changing between `display: flow-root` and `display: block flow-root` will achieve the same effect as the single-value `flow-root` keyword.
 
 ```js hidden
-function changeDisplayType() {
-  const parentDiv = document.getElementById("parent");
-  const siblingDiv = document.getElementById("sibling");
-  const displayType = document.getElementById("displayType").value;
+const parentDiv = document.getElementById("parent");
+const siblingDiv = document.getElementById("sibling");
+const displayTypeSelect = document.getElementById("displayType");
+const displayType = displayTypeSelect.value;
 
+function changeDisplayType() {
   parentDiv.style.display = displayType;
   siblingDiv.style.display = displayType;
 }
+
+displayTypeSelect.addEventListener("change", changeDisplayType);
 ```
 
 ```css hidden
@@ -207,7 +209,7 @@ p {
 ```html hidden
 <div id="controls">
   <label for="displayType">display:</label>
-  <select id="displayType" onchange="changeDisplayType()">
+  <select id="displayType">
     <option value="block">block</option>
     <option value="flow-root">flow-root</option>
     <option value="block flow-root">block flow-root</option>
@@ -250,7 +252,7 @@ p {
 }
 .inline-block {
   background-color: rgb(0 0 0 / 0.4);
-  color: #fff;
+  color: white;
   padding: 10px;
   display: inline-block;
 }

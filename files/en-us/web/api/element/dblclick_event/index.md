@@ -107,7 +107,7 @@ card.addEventListener("dblclick", (e) => {
 
 ```css
 aside {
-  background: #fe9;
+  background: #ffee99;
   border-radius: 1em;
   display: inline-block;
   padding: 1em;

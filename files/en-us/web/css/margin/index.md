@@ -3,9 +3,8 @@ title: margin
 slug: Web/CSS/margin
 page-type: css-shorthand-property
 browser-compat: css.properties.margin
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`margin`** [CSS](/en-US/docs/Web/CSS) shorthand property sets the [margin area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#margin_area) on all four sides of an element.
 
@@ -93,7 +92,7 @@ margin: 2px 1em 0 auto;
 /* anchor-size() values */
 margin: 5% anchor-size(width);
 margin: calc(anchor-size(width) / 4) 1em 0
-  anchor-size(--myAnchor self-inline, 50px);
+  anchor-size(--my-anchor self-inline, 50px);
 
 /* Keyword values */
 margin: auto;
@@ -116,9 +115,7 @@ The `margin` property may be specified using one, two, three, or four values. Ea
 ### Values
 
 - {{cssxref("length")}}
-
   - : The size of the margin as a fixed value.
-
     - For _anchor-positioned elements_, the {{cssxref("anchor-size()")}} function resolves to a {{cssxref("&lt;length&gt;")}} value relative to the associated _anchor element_'s width or height (see [Setting element margin based on anchor size](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#setting_element_margin_based_on_anchor_size)).
 
 - {{cssxref("percentage")}}

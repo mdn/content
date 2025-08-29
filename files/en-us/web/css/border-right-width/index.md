@@ -3,9 +3,8 @@ title: border-right-width
 slug: Web/CSS/border-right-width
 page-type: css-property
 browser-compat: css.properties.border-right-width
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`border-right-width`** [CSS](/en-US/docs/Web/CSS) property sets the width of the right border of an element.
 
@@ -42,7 +41,7 @@ border-right-width: 0;
 ```css interactive-example
 #example-element {
   background-color: palegreen;
-  color: #000;
+  color: black;
   border: 0 solid crimson;
   padding: 0.75em;
   width: 80%;
@@ -74,9 +73,7 @@ border-right-width: unset;
 ### Values
 
 - `<line-width>`
-
   - : Defines the width of the border, either as an explicit nonnegative {{cssxref("&lt;length&gt;")}} or a keyword. If it's a keyword, it must be one of the following values:
-
     - `thin`
     - `medium`
     - `thick`

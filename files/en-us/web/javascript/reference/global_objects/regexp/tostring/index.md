@@ -1,11 +1,11 @@
 ---
 title: RegExp.prototype.toString()
+short-title: toString()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/toString
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.RegExp.toString
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`toString()`** method of {{jsxref("RegExp")}} instances returns a string representing this regular expression.
 
@@ -22,7 +22,7 @@ console.log(new RegExp("bar", "g").toString());
 // Expected output: "/bar/g"
 
 console.log(new RegExp("\n", "g").toString());
-// Expected output (if your browser supports escaping): "/\n/g"
+// Expected output: "/\n/g"
 
 console.log(new RegExp("\\n", "g").toString());
 // Expected output: "/\n/g"

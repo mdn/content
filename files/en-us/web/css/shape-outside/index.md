@@ -3,9 +3,8 @@ title: shape-outside
 slug: Web/CSS/shape-outside
 page-type: css-property
 browser-compat: css.properties.shape-outside
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`shape-outside`** [CSS](/en-US/docs/Web/CSS) property defines a shape—which may be non-rectangular—around which adjacent inline content should wrap. By default, inline content wraps around its margin box; `shape-outside` provides a way to customize this wrapping, making it possible to wrap text around complex objects rather than rectangular boxes.
 
@@ -20,7 +19,7 @@ shape-outside: ellipse(130px 140px at 20% 20%);
 ```
 
 ```css interactive-example-choice
-shape-outside: url(/shared-assets/images/examples/round-balloon.png);
+shape-outside: url("/shared-assets/images/examples/round-balloon.png");
 ```
 
 ```css interactive-example-choice
@@ -81,10 +80,10 @@ shape-outside: circle() border-box;
 shape-outside: margin-box ellipse();
 
 /* <url> value */
-shape-outside: url(image.png);
+shape-outside: url("image.png");
 
 /* <gradient> value */
-shape-outside: linear-gradient(45deg, #fff 150px, red 150px);
+shape-outside: linear-gradient(45deg, white 150px, red 150px);
 
 /* Global values */
 shape-outside: inherit;
@@ -101,9 +100,7 @@ The `shape-outside` property is specified using the values from the list below, 
 - `none`
   - : The float area is unaffected. Inline content wraps around the element's margin box, like usual.
 - `<shape-box>`
-
   - : The float area is computed according to the shape of a float element's edges (as defined by the [CSS box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)). This can be `margin-box`, `border-box`, `padding-box`, or `content-box`. The shape includes any curvature created by the {{cssxref("border-radius")}} property (behavior which is similar to {{cssxref("background-clip")}}).
-
     - `margin-box`
       - : Defines the shape enclosed by the outside margin edge. The corner radii of this shape are determined by the corresponding {{cssxref("border-radius")}} and {{cssxref("margin")}} values. If the `border-radius / margin` ratio is `1` or more, then the margin box corner radius is `border-radius + margin`. If the ratio is less than `1`, then the margin box corner radius is `border-radius + (margin * (1 + (ratio - 1) ^ 3))`.
     - `border-box`

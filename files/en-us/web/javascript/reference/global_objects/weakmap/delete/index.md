@@ -1,26 +1,26 @@
 ---
 title: WeakMap.prototype.delete()
+short-title: delete()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/delete
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.WeakMap.delete
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`delete()`** method of {{jsxref("WeakMap")}} instances removes the specified element from this `WeakMap`.
 
 {{InteractiveExample("JavaScript Demo: WeakMap.prototype.delete()")}}
 
 ```js interactive-example
-const weakmap1 = new WeakMap();
-const object1 = {};
+const weakmap = new WeakMap();
+const object = {};
 
-weakmap1.set(object1, 42);
+weakmap.set(object, 42);
 
-console.log(weakmap1.delete(object1));
+console.log(weakmap.delete(object));
 // Expected output: true
 
-console.log(weakmap1.has(object1));
+console.log(weakmap.has(object));
 // Expected output: false
 ```
 

@@ -8,7 +8,7 @@ status:
 browser-compat: api.Translator.translate
 ---
 
-{{APIRef("Translator and Language Detector APIs")}}{{SeeCompatTable}}
+{{APIRef("Translator and Language Detector APIs")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`translate()`** method of the {{domxref("Translator")}} interface returns a translation of an input string.
 
@@ -36,7 +36,7 @@ A {{jsxref("Promise")}} that fulfills with a string containing the generated tra
 
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the current {{domxref("Document")}} is not active.
-- `QuotaExceededError` {{domxref("DOMException")}}
+- {{domxref("QuotaExceededError")}}
   - : Thrown if the translation operation exceeds the available {{domxref("Translator.inputQuota", "inputQuota")}}.
 
 ## Examples

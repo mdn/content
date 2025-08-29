@@ -2,9 +2,9 @@
 title: Control flow and error handling
 slug: Web/JavaScript/Guide/Control_flow_and_error_handling
 page-type: guide
+sidebar: jssidebar
 ---
 
-{{jsSidebar("JavaScript Guide")}}
 {{PreviousNext("Web/JavaScript/Guide/Grammar_and_types", "Web/JavaScript/Guide/Loops_and_iteration")}}
 
 JavaScript supports a compact set of statements, specifically
@@ -46,7 +46,8 @@ while (x < 10) {
 
 Here, `{ x++; }` is the block statement.
 
-> **Note:** [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var)-declared variables are not block-scoped, but are scoped to the containing function or script, and the effects of setting them persist beyond the block itself. For example:
+> [!NOTE]
+> [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var)-declared variables are not block-scoped, but are scoped to the containing function or script, and the effects of setting them persist beyond the block itself. For example:
 >
 > ```js
 > var x = 1;
@@ -214,7 +215,6 @@ JavaScript evaluates the above switch statement as follows:
   associated statements.
 - If no matching label is found, the program looks for the optional
   `default` clause:
-
   - If a `default` clause is found, the program transfers control to that
     clause, executing the associated statements.
   - If no `default` clause is found, the program resumes execution at the
@@ -398,7 +398,7 @@ try {
 The `finally` block contains statements to be executed _after_ the
 `try` and `catch` blocks execute. Additionally, the
 `finally` block executes _before_ the code that follows the
-`try…catch…finally` statement.
+`try...catch...finally` statement.
 
 It is also important to note that the `finally` block will execute
 _whether or not_ an exception is thrown. If an exception is thrown, however, the
@@ -427,7 +427,7 @@ try {
 ```
 
 If the `finally` block returns a value, this value becomes the return value
-of the entire `try…catch…finally` production, regardless of any
+of the entire `try...catch...finally` production, regardless of any
 `return` statements in the `try` and `catch` blocks:
 
 ```js
@@ -444,9 +444,9 @@ function f() {
   } finally {
     console.log(3);
     return false; // overwrites the previous "return"
+    // `f` exits here
     console.log(4); // not reachable
   }
-  // "return false" is executed now
   console.log(5); // not reachable
 }
 console.log(f()); // 0, 1, 3, false
@@ -466,8 +466,8 @@ function f() {
     throw e;
   } finally {
     return false; // overwrites the previous "throw"
+    // `f` exits here
   }
-  // "return false" is executed now
 }
 
 try {

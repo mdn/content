@@ -6,7 +6,7 @@ page-type: tutorial-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_images", "Learn_web_development/Core/Structuring_content/Mozilla_splash_page", "Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Test_your_skills/Images", "Learn_web_development/Core/Structuring_content/Test_your_skills/Audio_and_video", "Learn_web_development/Core/Structuring_content")}}
 
 Now that we are comfortable with adding simple images to a webpage, the next step is to start adding video and audio players to your HTML documents! In this article we'll look at doing just that with the {{htmlelement("video")}} and {{htmlelement("audio")}} elements; we'll then finish off by looking at how to add captions/subtitles to your videos.
 
@@ -176,9 +176,7 @@ Features include:
 - [`poster`](/en-US/docs/Web/HTML/Reference/Elements/video#poster)
   - : The URL of an image which will be displayed before the video is played. It is intended to be used for a splash screen or advertising screen.
 - [`preload`](/en-US/docs/Web/HTML/Reference/Elements/video#preload)
-
   - : Used for buffering large files; it can take one of three values:
-
     - `"none"` does not buffer the file
     - `"auto"` buffers the media file
     - `"metadata"` buffers only the metadata for the file
@@ -320,12 +318,8 @@ Your finished HTML should look something like this:
 
 </details>
 
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Audio and video](/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Audio_and_video).
-
 ## Summary
 
-And that's a wrap — we hope you had fun playing with video and audio in web pages! Next up, we'll present you with a challenge to test your skills with HTML media.
+And that's a wrap — we hope you had fun playing with video and audio in web pages! Next up, we'll give you some tests that you can use to check how well you've understood and retained the information we've provided on HTML video and audio.
 
-{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_images", "Learn_web_development/Core/Structuring_content/Mozilla_splash_page", "Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Test_your_skills/Images", "Learn_web_development/Core/Structuring_content/Test_your_skills/Audio_and_video", "Learn_web_development/Core/Structuring_content")}}

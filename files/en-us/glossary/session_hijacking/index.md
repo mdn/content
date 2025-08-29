@@ -1,10 +1,9 @@
 ---
-title: Session Hijacking
+title: Session hijacking
 slug: Glossary/Session_Hijacking
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **Session hijacking** occurs when an attacker takes over a valid session between two computers. The attacker steals a valid session ID in order to break into the system and snoop data.
 

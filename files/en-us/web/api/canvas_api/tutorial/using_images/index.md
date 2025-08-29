@@ -235,7 +235,7 @@ In this example, we'll use the same rhino as in the previous example, but we'll 
 
 ```html
 <canvas id="canvas" width="150" height="150"></canvas>
-<div style="display: none;">
+<div class="hidden">
   <img
     id="source"
     src="https://mdn.github.io/shared-assets/images/examples/rhino.jpg"
@@ -243,6 +243,12 @@ In this example, we'll use the same rhino as in the previous example, but we'll 
     height="227" />
   <img id="frame" src="canvas_picture_frame.png" width="132" height="150" />
 </div>
+```
+
+```css hidden
+.hidden {
+  display: none;
+}
 ```
 
 ```js
@@ -318,7 +324,7 @@ And here's some CSS to make things look nice:
 
 ```css
 body {
-  background: 0 -100px repeat-x url(bg_gallery.png) #4f191a;
+  background: 0 -100px repeat-x url("bg_gallery.png") #4f191a;
   margin: 10px;
 }
 

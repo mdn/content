@@ -4,9 +4,8 @@ short-title: data-*
 slug: Web/HTML/Reference/Global_attributes/data-*
 page-type: html-attribute
 browser-compat: html.global_attributes.data_attributes
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar("Global_attributes")}}
 
 The **`data-*`** [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes) form a class of attributes called **custom data attributes**, that allow proprietary information to be exchanged between the [HTML](/en-US/docs/Web/HTML) and its [DOM](/en-US/docs/Web/API/Document_Object_Model) representation by scripts.
 
@@ -42,7 +41,7 @@ li {
   padding-bottom: 10px;
 }
 
-li:after {
+li::after {
   content: "Data ID: " attr(data-id);
   position: absolute;
   top: -22px;
@@ -50,12 +49,12 @@ li:after {
   background: black;
   color: white;
   padding: 2px;
-  border: 1px solid #eee;
+  border: 1px solid #eeeeee;
   opacity: 0;
   transition: 0.5s opacity;
 }
 
-li:hover:after {
+li:hover::after {
   opacity: 1;
 }
 ```

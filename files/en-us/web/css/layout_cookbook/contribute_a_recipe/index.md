@@ -2,9 +2,8 @@
 title: Contribute a recipe
 slug: Web/CSS/Layout_cookbook/Contribute_a_recipe
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 If you would like to contribute an example for the Layout Cookbook, then this page explains the steps to take to have your example published.
 
@@ -17,7 +16,6 @@ A recipe consists of:
 - A live example, stored in the [CSS Examples GitHub repo](https://github.com/mdn/css-examples).
 - A downloadable version of that example, also stored in the CSS Examples repo.
 - A page in the [CSS layout cookbook](/en-US/docs/Web/CSS/Layout_cookbook) section of the site, which should include the following components:
-
   1. Introduction
   2. Requirements
   3. Recipe
@@ -31,15 +29,11 @@ A recipe consists of:
 
 To create a recipe and add it to the CSS layout cookbook, follow these steps:
 
-- [What makes a good recipe?](#what-makes-a-good-recipe)
-- [Steps to publish a recipe](#steps-to-publish-a-recipe)
-  - [1. Build a pattern](#1-build-a-pattern)
-  - [2. Create a live example](#2-create-a-live-example)
-    - [Useful tips](#useful-tips)
-  - [3. Create a downloadable version](#3-create-a-downloadable-version)
-  - [4. Open a pull request with your example](#4-open-a-pull-request-with-your-example)
-  - [5. Create your page](#5-create-your-page)
-- [See also](#see-also)
+1. [Build a pattern](#1._build_a_pattern)
+2. [Create a live example](#2._create_a_live_example)
+3. [Create a downloadable version](#3._create_a_downloadable_version)
+4. [Open a pull request with your example](#4._open_a_pull_request_with_your_example)
+5. [Create your page](#5._create_your_page)
 
 ### 1. Build a pattern
 

@@ -1,11 +1,11 @@
 ---
 title: Intl.Locale.prototype.minimize()
+short-title: minimize()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/minimize
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.Locale.minimize
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`minimize()`** method of {{jsxref("Intl.Locale")}} instances attempts to
 remove information about this locale that would be added by calling

@@ -3,9 +3,8 @@ title: <named-color>
 slug: Web/CSS/named-color
 page-type: css-type
 browser-compat: css.types.color.named-color
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`<named-color>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) is the name of a color, such as `red`, `blue`, `black`, or `lightseagreen`. Syntactically, a `<named-color>` is an [`<ident>`](/en-US/docs/Web/CSS/ident).
 
@@ -23,7 +22,7 @@ color: transparent;
 
 ### Value
 
-Named colors consists of standard colors, the [`transparent`](#transparent) and [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword) keywords.
+Named colors consists of standard colors, the [`transparent`](#transparent) and [`currentColor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword) keywords.
 
 #### Standard colors
 

@@ -229,7 +229,8 @@ After testing this sample, note that the words hello and world are together: hel
 
 ![Text nodes in a paragraph element as individual siblings in the DOM tree.](sample2b2.jpg)
 
-> **Note:** `createTextNode()` and `appendChild()` is a simple way to include white space between the words _hello_ and _world_. Another important note is that the `appendChild` method will append the child after the last child, just like the word _world_ has been added after the word _hello_. So if you want to append a text node between _hello_ and _world_, you will need to use `insertBefore` instead of `appendChild`.
+> [!NOTE]
+> `createTextNode()` and `appendChild()` is a simple way to include white space between the words _hello_ and _world_. Another important note is that the `appendChild` method will append the child after the last child, just like the word _world_ has been added after the word _hello_. So if you want to append a text node between _hello_ and _world_, you will need to use `insertBefore` instead of `appendChild`.
 
 ### Creating New Elements with the document object and the createElement(..) method
 
@@ -373,7 +374,7 @@ for (let row = 0; row < 2; row++) {
     // set the cell background color
     // if the column is 0. If the column is 1 hide the cell
     if (col === 0) {
-      myCurrentCell.style.background = "rgb(255 0 0)";
+      myCurrentCell.style.background = "red";
     } else {
       myCurrentCell.style.display = "none";
     }

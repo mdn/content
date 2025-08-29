@@ -3,9 +3,8 @@ title: action.getBadgeBackgroundColor()
 slug: Mozilla/Add-ons/WebExtensions/API/action/getBadgeBackgroundColor
 page-type: webextension-api-function
 browser-compat: webextensions.api.action.getBadgeBackgroundColor
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Gets the background color of the browser action's badge.
 
@@ -25,9 +24,7 @@ browser.action.getBadgeBackgroundColor(
 ### Parameters
 
 - `details`
-
   - : An object with the following properties:
-
     - `tabId` {{optional_inline}}
       - : `integer`. Specifies the tab to get the badge background color from.
     - `windowId` {{optional_inline}}

@@ -3,9 +3,8 @@ title: size
 slug: Web/CSS/@page/size
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.page.size
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`size`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) descriptor, used with the {{cssxref("@page")}} at-rule, defines the size and orientation of the box which is used to represent a page. Most of the time, this size corresponds to the target size of the printed page if applicable.
 
@@ -47,9 +46,7 @@ size: A4 portrait;
 - `<length>`
   - : Any length value (see {{cssxref("&lt;length&gt;")}}). The first value corresponds to the width of the page box and the second one corresponds to its height. If only one value is provided, it is used for both width and height.
 - `<page-size>`
-
   - : A keyword which may be any of the following values:
-
     - A5
       - : This matches the standard, ISO dimensions: 148mm x 210mm.
     - A4

@@ -3,9 +3,8 @@ title: font-variant-ligatures
 slug: Web/CSS/font-variant-ligatures
 page-type: css-property
 browser-compat: css.properties.font-variant-ligatures
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`font-variant-ligatures`** [CSS](/en-US/docs/Web/CSS) property controls which {{Glossary("ligature", "ligatures")}} and {{Glossary("contextual forms")}} are used in the textual content of the elements it applies to. This leads to more harmonized forms in the resulting text.
 
@@ -87,30 +86,22 @@ The `font-variant-ligatures` property is specified as `normal`, `none`, or one o
 - `none`
   - : This keyword specifies that all ligatures and contextual forms are disabled, even common ones.
 - _`<common-lig-values>`_
-
   - : These values control the most common ligatures, like for `fi`, `ffi`, `th`, or similar. They correspond to the OpenType values `liga` and `clig`. Two values are possible:
-
     - `common-ligatures` activating these ligatures. Note that the keyword `normal` activates these ligatures.
     - `no-common-ligatures` deactivating these ligatures.
 
 - _`<discretionary-lig-values>`_
-
   - : These values control specific ligatures, specific to the font and defined by the type designer. They correspond to the OpenType values `dlig`. Two values are possible:
-
     - `discretionary-ligatures` activating these ligatures.
     - `no-discretionary-ligatures` deactivating the ligatures. Note that the keyword `normal` usually deactivates these ligatures.
 
 - _`<historical-lig-values>`_
-
   - : These values control the ligatures used historically, in old books, like the German tz digraph being displayed as ꜩ. They correspond to the OpenType values `hlig`. Two values are possible:
-
     - `historical-ligatures` activating these ligatures.
     - `no-historical-ligatures` deactivating the ligatures. Note that the keyword `normal` usually deactivates these ligatures.
 
 - _`<contextual-alt-values>`_
-
   - : These values control whether letters adapt to their context—that is, whether they adapt to the surrounding letters. These values correspond to the OpenType values `calt`. Two values are possible:
-
     - `contextual` specifies that the contextual alternates are to be used. Note that the keyword `normal` usually activates these ligatures too.
     - `no-contextual` prevents their use.
 

@@ -27,7 +27,7 @@ In an external script file, we employ the {{domxref('PaintWorkletGlobalScope.reg
 
 ```js
 registerPaint(
-  "headerHighlight",
+  "header-highlight",
   class {
     /*
      * define if alpha transparency is allowed alpha
@@ -88,7 +88,7 @@ Once we have a registered paint worklet, we can use it in CSS. Employ the CSS `p
 
 ```css
 .fancy {
-  background-image: paint(headerHighlight);
+  background-image: paint(header-highlight);
 }
 ```
 
@@ -120,7 +120,7 @@ The code to do this looks like so:
 
 ```js
 registerPaint(
-  "headerHighlight",
+  "header-highlight",
   class {
     static get contextOptions() {
       return { alpha: true };
@@ -163,7 +163,7 @@ While you can't play with the worklet's script, you can alter the element's `fon
 
 ```css
 .fancy {
-  background-image: paint(headerHighlight);
+  background-image: paint(header-highlight);
 }
 .half {
   width: 50%;
@@ -213,7 +213,7 @@ Let's create a list of items with a background image that rotates between three 
 
 ![The width and color of the background image changes based on the custom properties](boxbg.png)
 
-To achieve this we'll define two custom CSS properties, `--boxColor` and `--widthSubtractor`.
+To achieve this we'll define two custom CSS properties, `--box-color` and `--width-subtractor`.
 
 ### The paint worklet
 
@@ -232,7 +232,7 @@ registerPaint(
      * defined for the element, return them in the specified array
      */
     static get inputProperties() {
-      return ["--boxColor", "--widthSubtractor"];
+      return ["--box-color", "--width-subtractor"];
     }
 
     paint(ctx, size, props) {
@@ -241,11 +241,11 @@ registerPaint(
        * size -> paintSize: width and height
        * props -> properties: get() method
        */
-      ctx.fillStyle = props.get("--boxColor");
+      ctx.fillStyle = props.get("--box-color");
       ctx.fillRect(
         0,
         size.height / 3,
-        size.width * 0.4 - props.get("--widthSubtractor"),
+        size.width * 0.4 - props.get("--width-subtractor"),
         size.height * 0.6,
       );
     }
@@ -284,22 +284,22 @@ We used the `inputProperties()` method in the `registerPaint()` class to get the
 
 #### CSS
 
-In our CSS, we define the `--boxColor` and `--widthSubtractor` custom properties.
+In our CSS, we define the `--box-color` and `--width-subtractor` custom properties.
 
 ```css
 li {
   background-image: paint(boxbg);
-  --boxColor: hsl(55 90% 60% / 100%);
+  --box-color: hsl(55 90% 60% / 100%);
 }
 
 li:nth-of-type(3n) {
-  --boxColor: hsl(155 90% 60% / 100%);
-  --widthSubtractor: 20;
+  --box-color: hsl(155 90% 60% / 100%);
+  --width-subtractor: 20;
 }
 
 li:nth-of-type(3n + 1) {
-  --boxColor: hsl(255 90% 60% / 100%);
-  --widthSubtractor: 40;
+  --box-color: hsl(255 90% 60% / 100%);
+  --width-subtractor: 40;
 }
 ```
 
@@ -327,10 +327,10 @@ Let's take a look at a more complex paint example.
 
 ```js
 registerPaint(
-  "headerHighlight",
+  "header-highlight",
   class {
     static get inputProperties() {
-      return ["--highColor"];
+      return ["--high-color"];
     }
     static get contextOptions() {
       return { alpha: true };
@@ -342,7 +342,7 @@ registerPaint(
       const y = size.height * 0.3;
       const blockWidth = size.width * 0.33;
       const highlightHeight = size.height * 0.85;
-      const color = props.get("--highColor");
+      const color = props.get("--high-color");
 
       ctx.fillStyle = color;
 
@@ -387,20 +387,20 @@ We can then create a little HTML that will accept this image as backgrounds:
 <h6 class="fancy">Smallest Header</h6>
 ```
 
-We give each header a different value for the `--highColor` [custom property](/en-US/docs/Web/CSS/CSS_cascading_variables)
+We give each header a different value for the `--high-color` [custom property](/en-US/docs/Web/CSS/CSS_cascading_variables)
 
 ```css
 .fancy {
-  background-image: paint(headerHighlight);
+  background-image: paint(header-highlight);
 }
 h1 {
-  --highColor: hsl(155 90% 60% / 70%);
+  --high-color: hsl(155 90% 60% / 70%);
 }
 h3 {
-  --highColor: hsl(255 90% 60% / 50%);
+  --high-color: hsl(255 90% 60% / 50%);
 }
 h6 {
-  --highColor: hsl(355 90% 60% / 30%);
+  --high-color: hsl(355 90% 60% / 30%);
 }
 ```
 
@@ -429,7 +429,7 @@ We can add these extra arguments when we call the function in the CSS. Let's say
 
 ```css
 li {
-  background-image: paint(hollowHighlights, stroke);
+  background-image: paint(hollow-highlights, stroke);
 }
 ```
 
@@ -470,7 +470,7 @@ Let's say we add a second argument with how many pixels wide we want the stroke 
 
 ```css
 li {
-  background-image: paint(hollowHighlights, stroke, 10px);
+  background-image: paint(hollow-highlights, stroke, 10px);
 }
 ```
 
@@ -512,7 +512,7 @@ class Worklet {
 
 It's worth noting the difference between using custom properties to control different parts of this worklet and the arguments set out here. Custom properties (and in fact any properties on the style map) are global — they can be used elsewhere within our CSS (and JS).
 
-You may for example have a `--mainColor`, which will be useful for setting the color within a `paint()` function, but can also be used to set colors elsewhere in your CSS. If you wanted to change it specifically for paint, it could prove difficult. This is where the custom argument feature comes in handy. Another way to think about it is that arguments are set to control what you are actually drawing, whereas properties are set to control styling.
+You may for example have a `--main-color`, which will be useful for setting the color within a `paint()` function, but can also be used to set colors elsewhere in your CSS. If you wanted to change it specifically for paint, it could prove difficult. This is where the custom argument feature comes in handy. Another way to think about it is that arguments are set to control what you are actually drawing, whereas properties are set to control styling.
 
 ![The list items have a background image that is either pink, purple or green, with different stroke widths, and the green one being filled.](hollowfilled.png)
 
@@ -522,10 +522,10 @@ Now we can really start to see the benefits of this API, if we can control a myr
 
 ```js
 registerPaint(
-  "hollowHighlights",
+  "hollow-highlights",
   class {
     static get inputProperties() {
-      return ["--boxColor"];
+      return ["--box-color"];
     }
     // Input arguments that can be passed to the `paint` function
     static get inputArguments() {
@@ -549,7 +549,7 @@ registerPaint(
       const blockHeight = size.height * 0.85;
 
       // the values passed in the paint() function in the CSS
-      const color = props.get("--boxColor");
+      const color = props.get("--box-color");
       const strokeType = args[0].toString();
       const strokeWidth = parseInt(args[1], 10);
 
@@ -601,18 +601,18 @@ We can set different colors, stroke widths, and pick whether the background imag
 
 ```css
 li {
-  --boxColor: hsl(155 90% 60% / 50%);
-  background-image: paint(hollowHighlights, stroke, 5px);
+  --box-color: hsl(155 90% 60% / 50%);
+  background-image: paint(hollow-highlights, stroke, 5px);
 }
 
 li:nth-of-type(3n) {
-  --boxColor: hsl(255 90% 60% / 50%);
-  background-image: paint(hollowHighlights, filled, 3px);
+  --box-color: hsl(255 90% 60% / 50%);
+  background-image: paint(hollow-highlights, filled, 3px);
 }
 
 li:nth-of-type(3n + 1) {
-  --boxColor: hsl(355 90% 60% / 50%);
-  background-image: paint(hollowHighlights, stroke, 1px);
+  --box-color: hsl(355 90% 60% / 50%);
+  background-image: paint(hollow-highlights, stroke, 1px);
 }
 ```
 

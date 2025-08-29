@@ -3,9 +3,8 @@ title: offset-distance
 slug: Web/CSS/offset-distance
 page-type: css-property
 browser-compat: css.properties.offset-distance
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`offset-distance`** [CSS](/en-US/docs/Web/CSS) property specifies a position along an {{CSSxRef("offset-path")}} for an element to be placed.
 
@@ -67,7 +66,6 @@ offset-distance: unset;
 ```
 
 - {{cssxref('&lt;length-percentage&gt;')}}
-
   - : A length that specifies how far the element is along the path (defined with {{cssxref('offset-path')}}).
 
     100% represents the total length of the path (when the `offset-path` is defined as a basic shape or `path()`).

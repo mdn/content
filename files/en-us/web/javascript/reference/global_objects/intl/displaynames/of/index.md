@@ -1,11 +1,11 @@
 ---
 title: Intl.DisplayNames.prototype.of()
+short-title: of()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/of
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.DisplayNames.of
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`of()`** method of {{jsxref("Intl.DisplayNames")}} instances receives a code and returns a string based on the locale and options provided when instantiating this `Intl.DisplayNames` object.
 
@@ -33,9 +33,7 @@ of(code)
 ### Parameters
 
 - `code`
-
   - : The `code` to provide depends on the `type`:
-
     - If the type is "region", `code` should be either an [two-letter ISO 3166 region code](https://www.iso.org/iso-3166-country-codes.html), or a [three-digit UN M49 geographic region](https://unstats.un.org/unsd/methodology/m49/). It is required to follow the [`unicode_region_subtag`](https://unicode.org/reports/tr35/#unicode_region_subtag) grammar. Use uppercase codes (e.g., `"US"`), because lowercase ones (e.g., `"us"`) may not work reliably everywhere.
     - If the type is "script", `code` should be an [four-letter ISO 15924 script code](https://unicode.org/iso15924/iso15924-codes.html). It is required to follow the [`unicode_script_subtag`](https://unicode.org/reports/tr35/#unicode_script_subtag) grammar.
     - If the type is "language", `code` should be matched by the [`unicode_language_id`](https://unicode.org/reports/tr35/#Unicode_language_identifier) nonterminal.
@@ -47,7 +45,8 @@ of(code)
 
 A language-specific formatted string, or `undefined` if there's no data for the input and `fallback` is `"none"`.
 
-> **Note:** `fallback` is only used if `code` is structurally valid. See [using fallback](#using_fallback).
+> [!NOTE]
+> `fallback` is only used if `code` is structurally valid. See [using fallback](#using_fallback).
 
 ### Exceptions
 

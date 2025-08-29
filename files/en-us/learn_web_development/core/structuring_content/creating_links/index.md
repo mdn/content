@@ -5,7 +5,7 @@ page-type: tutorial-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content/Marking_up_a_letter", "Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Structuring_documents", "Learn_web_development/Core/Structuring_content/Test_your_skills/Links", "Learn_web_development/Core/Structuring_content")}}
 
 Links (also known as hyperlinks) are really important — they are what makes the Web _a web_.
 This article shows the syntax required to make a link, and discusses link best practices.
@@ -72,10 +72,7 @@ This gives us the following result:
 
 I'm creating a link to [the Mozilla homepage](https://www.mozilla.org/en-US/).
 
-> [!CALLOUT]
->
-> **Try it out**
->
+> [!NOTE]
 > Scrimba's [Anchor tags](https://scrimba.com/learn-html-and-css-c0p/~0a?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> scrim provides an interactive demonstration of how to create links using HTML, plus a challenge to get you creating your own links.
 
 ### Block level links
@@ -159,7 +156,7 @@ If you make a mistake, you can clear your work using the _Reset_ button in the M
 <p>
   Squirrels are commonly thought of as tree-dwelling mammals, but the squirrel
   family extends far beyond that to include ground-dwelling rodents such as
-  chipmunks and prarie dogs, and flying squrrels.
+  chipmunks and prairie dogs, and flying squirrels.
 </p>
 
 <p>Two of the most common and best-known squirrel species are the:</p>
@@ -180,38 +177,41 @@ If you make a mistake, you can clear your work using the _Reset_ button in the M
 <details>
 <summary>Click here to show the solution</summary>
 
-<!-- cSpell:disable -->
-
 Your finished HTML should look like this:
 
-```html-nolint
+```html
 <h1>Squirrels</h1>
 
 <p>
   Squirrels are commonly thought of as tree-dwelling mammals, but the squirrel
   family extends far beyond that to include ground-dwelling rodents such as
-  chipmunks and prarie dogs, and flying squrrels.
+  chipmunks and prairie dogs, and flying squirrels.
 </p>
 
 <p>Two of the most common and best-known squirrel species are the:</p>
 
 <ul>
-  <li><a href="https://en.wikipedia.org/wiki/Red_squirrel"
-         title="Sciurus vulgaris">
-    Red squirrel
-  </a></li>
-  <li><a href="https://en.wikipedia.org/wiki/Eastern_gray_squirrel"
-         title="Sciurus carolinensis">
-    Eastern gray squirrel
-  </a></li>
+  <li>
+    <a
+      href="https://en.wikipedia.org/wiki/Red_squirrel"
+      title="Sciurus vulgaris">
+      Red squirrel
+    </a>
+  </li>
+  <li>
+    <a
+      href="https://en.wikipedia.org/wiki/Eastern_gray_squirrel"
+      title="Sciurus carolinensis">
+      Eastern gray squirrel
+    </a>
+  </li>
 </ul>
 
-<p>For a good starting point on squirrel information, see the
-  <a href="https://en.wikipedia.org/wiki/Squirrel">Wikipedia Squirrel
-  page</a>.</p>
+<p>
+  For a good starting point on squirrel information, see the
+  <a href="https://en.wikipedia.org/wiki/Squirrel">Wikipedia Squirrel page</a>.
+</p>
 ```
-
-<!-- cSpell:enable -->
 
 </details>
 
@@ -315,20 +315,19 @@ It's easy to throw links up on your page. That's not enough. We need to make our
 
 Let's look at a specific example:
 
-**Good** link text: [Download Firefox](https://www.mozilla.org/en-US/firefox/new/?redirect_source=firefox-com)
+**Good** link text: [Download Firefox](https://www.firefox.com/en-US/?redirect_source=firefox-com)
 
 ```html example-good
-<p><a href="https://www.mozilla.org/en-US/firefox/new/">Download Firefox</a></p>
+<p><a href="https://www.firefox.com/en-US/">Download Firefox</a></p>
 ```
 
 <!-- markdownlint-disable descriptive-link-text -->
 
-**Bad** link text: [Click here](https://www.mozilla.org/en-US/firefox/new/) to download Firefox
+**Bad** link text: [Click here](https://www.firefox.com/en-US/) to download Firefox
 
 ```html example-bad
 <p>
-  <a href="https://www.mozilla.org/en-US/firefox/new/">Click here</a> to
-  download Firefox
+  <a href="https://www.firefox.com/en-US/">Click here</a> to download Firefox
 </p>
 ```
 
@@ -467,12 +466,8 @@ Here are a few other sample `mailto` URLs:
 - <mailto:nowhere@mozilla.org?cc=nobody@mozilla.org>
 - <mailto:nowhere@mozilla.org?cc=nobody@mozilla.org&subject=This%20is%20the%20subject>
 
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Links](/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Links).
-
 ## Summary
 
-That's it for links, for now anyway! You'll return to links later on in the course when you start to look at styling them. Next up for HTML, you're going to work through a couple of challenges that will test your comprehension of the topics you've covered so far.
+That's it for links, for now anyway! You'll return to links later on in the course when you start to look at styling them. Next up, we'll give you some tests that you can use to check how well you've understood and retained the information we've provided on links.
 
-{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content/Marking_up_a_letter", "Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Structuring_documents", "Learn_web_development/Core/Structuring_content/Test_your_skills/Links", "Learn_web_development/Core/Structuring_content")}}

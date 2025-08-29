@@ -8,7 +8,7 @@ status:
 browser-compat: api.Summarizer.availability_static
 ---
 
-{{APIRef("Summarizer API")}}{{securecontext_header}}{{SeeCompatTable}}
+{{APIRef("Summarizer API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`availability()`** static method of the {{domxref("Summarizer")}} interface returns an enumerated value that indicates whether the browser AI model supports (or will support) a given `Summarizer` configuration.
 
@@ -22,9 +22,7 @@ Summarizer.availability(options)
 ### Parameters
 
 - `options` {{optional_inline}}
-
   - : An options object specifying a possible configuration for a `Summarizer`. Possible values include:
-
     - `expectedInputLanguages`
       - : An array of strings equal to [BCP 47 language tags](https://en.wikipedia.org/wiki/IETF_language_tag#List_of_common_primary_language_subtags) (as specified in [RFC 5646](https://datatracker.ietf.org/doc/html/rfc5646)) specifying the expected languages of the input text. Defaults to `["en"]`.
     - `expectedContextLanguages`

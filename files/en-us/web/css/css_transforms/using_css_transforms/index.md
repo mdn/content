@@ -3,9 +3,8 @@ title: Using CSS transforms
 short-title: Using transforms
 slug: Web/CSS/CSS_transforms/Using_CSS_transforms
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 By modifying the coordinate space, **CSS transforms** change the shape and position of the affected content without disrupting the normal document flow. This guide provides an introduction to using transforms.
 
@@ -34,11 +33,14 @@ Here is an unaltered image of the MDN logo:
 Here is the MDN logo rotated 90 degrees from its bottom-left corner.
 
 ```html
-<img
-  style="rotate: 90deg;
-      transform-origin: bottom left;"
-  src="logo.png"
-  alt="MDN Logo" />
+<img src="logo.png" alt="MDN Logo" />
+```
+
+```css
+img {
+  rotate: 90deg;
+  transform-origin: bottom left;
+}
 ```
 
 {{EmbedLiveSample('Rotating', 'auto', 240) }}
@@ -48,11 +50,14 @@ Here is the MDN logo rotated 90 degrees from its bottom-left corner.
 Here is the MDN logo, skewed by 10 degrees and translated by 150 pixels on the X-axis.
 
 ```html
-<img
-  style="transform: skewX(10deg) translateX(150px);
-            transform-origin: bottom left;"
-  src="logo.png"
-  alt="MDN logo" />
+<img src="logo.png" alt="MDN logo" />
+```
+
+```css
+img {
+  transform: skewX(10deg) translateX(150px);
+  transform-origin: bottom left;
+}
 ```
 
 {{EmbedLiveSample('Skewing_and_translating') }}
@@ -198,7 +203,7 @@ The CSS establishes classes that can be used to set the perspective to different
 }
 
 .back {
-  background: rgb(0 255 0 / 100%);
+  background: lime;
   color: black;
   transform: rotateY(180deg) translateZ(50px);
 }
@@ -494,7 +499,7 @@ This example shows cubes with popular `perspective-origin` values.
   transform: translateZ(50px);
 }
 .back {
-  background: rgb(0 255 0 / 100%);
+  background: lime;
   color: black;
   transform: rotateY(180deg) translateZ(50px);
 }
@@ -517,7 +522,7 @@ This example shows cubes with popular `perspective-origin` values.
 
 /* Make the layout a little nicer */
 section {
-  background-color: #eee;
+  background-color: #eeeeee;
   padding: 10px;
   font-family: sans-serif;
   text-align: left;

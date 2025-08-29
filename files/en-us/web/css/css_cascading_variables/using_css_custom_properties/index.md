@@ -3,9 +3,8 @@ title: Using CSS custom properties (variables)
 short-title: Using custom properties
 slug: Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 **Custom properties** (sometimes referred to as **CSS variables** or **cascading variables**) are entities defined by CSS authors that represent specific values to be reused throughout a document. They are set using the {{cssxref("@property")}} at-rule or by [custom property syntax](/en-US/docs/Web/CSS/--*) (e.g., **`--primary-color: blue;`**). Custom properties are accessed using the CSS {{cssxref("var", "var()")}} function (e.g., **`color: var(--primary-color);`**).
 
@@ -98,11 +97,13 @@ There is a `<div>` that acts as a container that includes some child elements, s
 ```
 
 We will use the following CSS to style a few different elements based on their classes (some layout rules are not shown below so we can focus on colors).
-Depending on their classes, we're giving elements `cornflowerblue` or `aquamarine` background colors:
+Depending on their classes, we're giving elements `teal` or `pink` background colors:
 
 ```css hidden
 /* Set fonts, borders and padding */
-body {
+body,
+textarea,
+::placeholder {
   font-family: sans-serif;
   color: white;
 }
@@ -124,20 +125,25 @@ textarea {
 ```css
 /* For each class, set some colors */
 .one {
-  background-color: cornflowerblue;
+  background-color: teal;
 }
+
 .two {
   color: black;
-  background-color: aquamarine;
+  background-color: pink;
 }
+
 .three {
-  background-color: cornflowerblue;
+  color: white;
+  background-color: teal;
 }
+
 .four {
-  background-color: cornflowerblue;
+  background-color: teal;
 }
+
 .five {
-  background-color: cornflowerblue;
+  background-color: teal;
 }
 ```
 
@@ -151,23 +157,28 @@ After defining `--main-bg-color` in the `.container` scope and referencing its v
 ```css
 /* Define --main-bg-color here */
 .container {
-  --main-bg-color: cornflowerblue;
+  --main-bg-color: teal;
 }
 
 /* For each class, set some colors */
 .one {
   background-color: var(--main-bg-color);
 }
+
 .two {
   color: black;
-  background-color: aquamarine;
+  background-color: pink;
 }
+
 .three {
+  color: white;
   background-color: var(--main-bg-color);
 }
+
 .four {
   background-color: var(--main-bg-color);
 }
+
 .five {
   background-color: var(--main-bg-color);
 }
@@ -180,29 +191,24 @@ For some CSS declarations, it is possible to declare this higher in the cascade 
 ```css
 /* Define --main-bg-color here */
 :root {
-  --main-bg-color: cornflowerblue;
+  --main-bg-color: teal;
 }
 
 /* For each class, set some colors */
-.one {
-  background-color: var(--main-bg-color);
-}
-.two {
-  color: black;
-  background-color: aquamarine;
-}
-.three {
-  background-color: var(--main-bg-color);
-}
-.four {
-  background-color: var(--main-bg-color);
-}
+.one,
+.three,
+.four,
 .five {
   background-color: var(--main-bg-color);
 }
+
+.two {
+  color: black;
+  background-color: pink;
+}
 ```
 
-This leads to the same result as the previous example, yet allows for one canonical declaration of the desired property value (`--main-bg-color: cornflowerblue;`), which is very useful if you want to change the value across the entire project later.
+This leads to the same result as the previous example, yet allows for one canonical declaration of the desired property value (`--main-bg-color: teal;`), which is very useful if you want to change the value across the entire project later.
 
 ## Inheritance of custom properties
 
@@ -240,14 +246,17 @@ p {
 }
 
 .two {
+  color: white;
   height: 80%;
 }
 
 .three {
+  color: black;
   height: 40%;
 }
 
 .four {
+  color: white;
   height: 40%;
 }
 ```
@@ -258,11 +267,11 @@ div {
 }
 
 .two {
-  --box-color: cornflowerblue;
+  --box-color: teal;
 }
 
 .three {
-  --box-color: aquamarine;
+  --box-color: pink;
 }
 ```
 
@@ -271,9 +280,9 @@ div {
 The results of `var(--box-color)` depending on inheritance are as follows:
 
 - `class="one"`: _invalid value_, which is the default value of a custom property defined in this way
-- `class="two"`: `cornflowerblue`
-- `class="three"`: `aquamarine`
-- `class="four"`: `cornflowerblue` (inherited from its parent)
+- `class="two"`: `teal`
+- `class="three"`: `pink`
+- `class="four"`: `teal` (inherited from its parent)
 
 One aspect of custom properties that the examples above demonstrate is that they don't behave exactly like variables in other programming languages.
 The value is computed where it is needed, not stored and reused in other places of a stylesheet.
@@ -284,7 +293,7 @@ The property is only set for the matching selector and its descendants.
 
 The `@property` at-rule lets you explicitly state whether the property inherits or not.
 The following example creates a custom property using the `@property` at-rule.
-Inheritance is disabled, there's a [`<color>`](/en-US/docs/Web/CSS/color_value) data type defined, and an initial value of `cornflowerblue`.
+Inheritance is disabled, there's a [`<color>`](/en-US/docs/Web/CSS/color_value) data type defined, and an initial value of `teal`.
 
 The parent element sets `--box-color` to a value of `green` and uses `--box-color` as a value for its background color.
 The child element also uses `background-color: var(--box-color)`, and we would expect it to have the color `green` if inheritance was enabled (or if it was defined using the double dash syntax).
@@ -315,7 +324,7 @@ div {
 @property --box-color {
   syntax: "<color>";
   inherits: false;
-  initial-value: cornflowerblue;
+  initial-value: teal;
 }
 
 .parent {
@@ -330,7 +339,7 @@ div {
 }
 ```
 
-Because `inherits: false;` is set in the at-rule, and a value for the `--box-color` property is not declared within the `.child` scope, the initial value of `cornflowerblue` is used instead of `green` that would have been inherited from the parent:
+Because `inherits: false;` is set in the at-rule, and a value for the `--box-color` property is not declared within the `.child` scope, the initial value of `teal` is used instead of `green` that would have been inherited from the parent:
 
 {{embedlivesample("at-property-inheritance", "100%", "250px")}}
 
@@ -377,27 +386,27 @@ You should be aware of the performance impact of this method, however, as it tak
 Aside from using `var()`, the `initial-value` defined in the `@property` at-rule can be used as a fallback mechanism.
 In fact, we've already seen this in the [`@property` inheritance](#using_property_to_control_inheritance) section.
 
-<!-- cSpell:ignore aqumarine -->
+<!-- cSpell:ignore peenk -->
 
-The following example sets an initial value of `--box-color` to `cornflowerblue` using the `@property` at-rule.
-In the ruleset following the at-rule, we want to set `--box-color` to `aquamarine`, but there's a typo in the value name.
+The following example sets an initial value of `--box-color` to `teal` using the `@property` at-rule.
+In the ruleset following the at-rule, we want to set `--box-color` to `pink`, but there's a typo in the value name.
 The same is true for the third `<div>` where we've used `2rem` for the custom property that's expecting a valid [`<color>` value](/en-US/docs/Web/CSS/color_value).
-Both `2rem` and `aqumarine` are invalid color values, so the initial value of `cornflowerblue` is applied:
+Both `2rem` and `peenk` are invalid color values, so the initial value of `teal` is applied:
 
 ```css live-sample___at-property-initial-value
 @property --box-color {
   syntax: "<color>";
-  initial-value: cornflowerblue;
+  initial-value: teal;
   inherits: false;
 }
 
 .one {
-  --box-color: aquamarine;
+  --box-color: pink;
   background-color: var(--box-color);
 }
 
 .two {
-  --box-color: aqumarine;
+  --box-color: peenk;
   background-color: var(--box-color);
 }
 
@@ -418,6 +427,7 @@ div {
   border: 2px black solid;
   display: inline-block;
 }
+
 .one {
   color: black;
 }
@@ -451,6 +461,7 @@ In the following example, we see what happens when a regular CSS declaration is 
 
 ```css live-sample___invalid-property
 p {
+  font-weight: bold;
   color: blue;
 }
 
@@ -485,6 +496,7 @@ After substitution, the property doesn't make sense., so the browser handles thi
 }
 
 p {
+  font-weight: bold;
   color: blue;
 }
 
@@ -505,7 +517,7 @@ For such cases, the `@property` at-rule can prevent unexpected results by allowi
 @property --text-color {
   syntax: "<color>";
   inherits: false;
-  initial-value: cornflowerblue;
+  initial-value: teal;
 }
 
 :root {
@@ -513,6 +525,7 @@ For such cases, the `@property` at-rule can prevent unexpected results by allowi
 }
 
 p {
+  font-weight: bold;
   color: blue;
 }
 

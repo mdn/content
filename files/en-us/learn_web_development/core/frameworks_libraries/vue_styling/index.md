@@ -61,7 +61,7 @@ While this tutorial will not be using such tools, it's good to know that when in
 Add the following contents to the `reset.css` file:
 
 ```css
-/*reset.css*/
+/* reset.css */
 /* RESETS */
 *,
 *::before,
@@ -126,18 +126,18 @@ body {
     Helvetica,
     Arial,
     sans-serif;
-  background-color: #f5f5f5;
+  background-color: whitesmoke;
   color: #4d4d4d;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
-@media screen and (min-width: 620px) {
+@media screen and (width >= 620px) {
   body {
     font-size: 1.9rem;
     line-height: 1.31579;
   }
 }
-/*END RESETS*/
+/* END RESETS */
 ```
 
 Next, in your `src/main.js` file, import the `reset.css` file like so:
@@ -178,7 +178,7 @@ Update your `App.vue` file's `<style>` element so it looks like so:
   text-transform: capitalize;
 }
 .btn__danger {
-  color: #fff;
+  color: white;
   background-color: #ca3c3c;
   border-color: #bd2130;
 }
@@ -189,8 +189,8 @@ Update your `App.vue` file's `<style>` element so it looks like so:
   outline-color: #c82333;
 }
 .btn__primary {
-  color: #fff;
-  background-color: #000;
+  color: white;
+  background-color: black;
 }
 .btn-group {
   display: flex;
@@ -215,7 +215,7 @@ Update your `App.vue` file's `<style>` element so it looks like so:
 [class*="__lg"]:not(:last-child) {
   margin-bottom: 1rem;
 }
-@media screen and (min-width: 620px) {
+@media screen and (width >= 620px) {
   [class*="__lg"] {
     font-size: 2.4rem;
   }
@@ -239,7 +239,7 @@ Update your `App.vue` file's `<style>` element so it looks like so:
 .stack-large > * + * {
   margin-top: 2.5rem;
 }
-@media screen and (min-width: 550px) {
+@media screen and (width >= 550px) {
   .stack-small > * + * {
     margin-top: 1.4rem;
   }
@@ -249,7 +249,7 @@ Update your `App.vue` file's `<style>` element so it looks like so:
 }
 /* End global styles */
 #app {
-  background: #fff;
+  background: white;
   margin: 2rem 0 4rem 0;
   padding: 1rem;
   padding-top: 0;
@@ -258,7 +258,7 @@ Update your `App.vue` file's `<style>` element so it looks like so:
     0 2px 4px 0 rgb(0 0 0 / 20%),
     0 2.5rem 5rem 0 rgb(0 0 0 / 10%);
 }
-@media screen and (min-width: 550px) {
+@media screen and (width >= 550px) {
   #app {
     padding: 4rem;
   }
@@ -373,7 +373,7 @@ Next, copy the following CSS into the newly created `<style>` element:
   appearance: none;
 }
 .custom-checkbox > input:focus {
-  outline: 3px dashed #fd0;
+  outline: 3px dashed #ffdd00;
   outline-offset: 0;
   box-shadow: inset 0 0 0 2px;
 }
@@ -420,7 +420,7 @@ Next, copy the following CSS into the newly created `<style>` element:
   left: 0;
   width: 40px;
   height: 40px;
-  border: 2px solid currentcolor;
+  border: 2px solid currentColor;
   background: transparent;
 }
 .custom-checkbox > input[type="checkbox"]:focus + label::before {
@@ -445,7 +445,7 @@ Next, copy the following CSS into the newly created `<style>` element:
 .custom-checkbox > input[type="checkbox"]:checked + label::after {
   opacity: 1;
 }
-@media only screen and (min-width: 40rem) {
+@media only screen and (width >= 40rem) {
   label,
   input,
   .custom-checkbox {

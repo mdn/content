@@ -2,9 +2,8 @@
 title: Closures
 slug: Web/JavaScript/Guide/Closures
 page-type: guide
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Intermediate")}}
 
 A **closure** is the combination of a function bundled together (enclosed) with references to its surrounding state (the **lexical environment**). In other words, a closure gives a function access to its outer scope. In JavaScript, closures are created every time a function is created, at function creation time.
 
@@ -163,7 +162,7 @@ document.getElementById("size-16").onclick = size16;
 
 Languages such as Java allow you to declare methods as private, meaning that they can be called only by other methods in the same class.
 
-JavaScript, prior to [classes](/en-US/docs/Web/JavaScript/Reference/Classes), didn't have a native way of declaring [private methods](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties#private_methods), but it was possible to emulate private methods using closures. Private methods aren't just useful for restricting access to code. They also provide a powerful way of managing your global namespace.
+JavaScript, prior to [classes](/en-US/docs/Web/JavaScript/Reference/Classes), didn't have a native way of declaring [private methods](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements#private_methods), but it was possible to emulate private methods using closures. Private methods aren't just useful for restricting access to code. They also provide a powerful way of managing your global namespace.
 
 The following code illustrates how to use closures to define public functions that can access private functions and variables. Note that these closures follow the [Module Design Pattern](https://www.google.com/search?q=javascript+module+pattern).
 
@@ -493,28 +492,20 @@ setupHelp();
 
 This example uses `const` instead of `var`, so every closure binds the block-scoped variable, meaning that no additional closures are required.
 
-Another alternative could be to use `forEach()` to iterate over the `helpText` array and attach a listener to each [`<input>`](/en-US/docs/Web/HTML/Reference/Elements/input), as shown:
+If you are writing modern JavaScript anyway, you can consider more alternatives to the plain `for` loop, such as using {{jsxref("Statements/for...of", "for...of")}} loop and declaring `item` as `let` or `const`, or using the {{jsxref("Array/forEach", "forEach()")}} method, which both avoid the closure problem.
 
 ```js
-function showHelp(help) {
-  document.getElementById("help").textContent = help;
+for (const item of helpText) {
+  document.getElementById(item.id).onfocus = () => {
+    document.getElementById("help").textContent = item.help;
+  };
 }
 
-function setupHelp() {
-  var helpText = [
-    { id: "email", help: "Your email address" },
-    { id: "name", help: "Your full name" },
-    { id: "age", help: "Your age (you must be over 16)" },
-  ];
-
-  helpText.forEach(function (text) {
-    document.getElementById(text.id).onfocus = function () {
-      showHelp(text.help);
-    };
-  });
-}
-
-setupHelp();
+helpText.forEach((item) => {
+  document.getElementById(item.id).onfocus = () => {
+    showHelp(item.help);
+  };
+});
 ```
 
 ## Performance considerations

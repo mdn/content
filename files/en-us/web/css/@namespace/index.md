@@ -3,9 +3,8 @@ title: "@namespace"
 slug: Web/CSS/@namespace
 page-type: css-at-rule
 browser-compat: css.at-rules.namespace
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 **`@namespace`** is an [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) that defines XML [namespaces](/en-US/docs/Glossary/Namespace) to be used in a [CSS](/en-US/docs/Glossary/CSS) [style sheet](/en-US/docs/Web/API/StyleSheet).
 
@@ -43,11 +42,11 @@ svg|a {
 
 ```css
 /* Default namespace */
-@namespace url(XML-namespace-URL);
+@namespace url("XML-namespace-URL");
 @namespace "XML-namespace-URL";
 
 /* Prefixed namespace */
-@namespace prefix url(XML-namespace-URL);
+@namespace prefix url("XML-namespace-URL");
 @namespace prefix "XML-namespace-URL";
 ```
 
@@ -75,8 +74,8 @@ In HTML, known [foreign elements](https://html.spec.whatwg.org/multipage/syntax.
 ### Specifying default and prefixed namespaces
 
 ```css
-@namespace url(http://www.w3.org/1999/xhtml);
-@namespace svg url(http://www.w3.org/2000/svg);
+@namespace url("http://www.w3.org/1999/xhtml");
+@namespace svg url("http://www.w3.org/2000/svg");
 
 /* This matches all XHTML <a> elements, as XHTML is the default unprefixed namespace */
 a {

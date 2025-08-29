@@ -36,7 +36,7 @@ button {
   display: inline-block;
   min-height: 100px;
   min-width: 100px;
-  background: no-repeat 5% center url(magic-wand.png) aqua;
+  background: no-repeat 5% center url("magic-wand.png") aqua;
 }
 ```
 

@@ -29,9 +29,15 @@ All following transformations are summed up in an element's `transform` attribut
 It may be necessary to move an element around, even though you can position it with the according attributes. For this purpose, the `translate()` transformation stands ready.
 
 ```html
-<svg width="40" height="50" style="background-color:#bff;">
+<svg width="40" height="50">
   <rect x="0" y="0" width="10" height="10" transform="translate(30,40)" />
 </svg>
+```
+
+```css hidden
+svg {
+  background-color: #bbffff;
+}
 ```
 
 The example will render a rectangle, translated to the point (30,40) instead of (0,0).
@@ -59,7 +65,7 @@ This example shows a square that is rotated by 45 degrees. The value for `rotate
 Transformations can be concatenated easily just by separating them with spaces. For example, `translate()` and `rotate()` are common used transformations.
 
 ```html
-<svg width="40" height="50" style="background-color:#bff;">
+<svg width="40" height="50">
   <rect
     x="0"
     y="0"
@@ -67,6 +73,12 @@ Transformations can be concatenated easily just by separating them with spaces. 
     height="10"
     transform="translate(30,40) rotate(45)" />
 </svg>
+```
+
+```css hidden
+svg {
+  background-color: #bbffff;
+}
 ```
 
 This example shows again the small square shown above that this time is also rotated by 45 degrees.

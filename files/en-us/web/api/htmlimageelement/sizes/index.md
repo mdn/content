@@ -62,9 +62,9 @@ and 50em.
       new-york-skyline-4by3.jpg 1961w,
       new-york-skyline-tall.jpg 1060w
     "
-    sizes="((min-width: 50em) and (max-width: 60em)) 50em,
-              ((min-width: 30em) and (max-width: 50em)) 30em,
-              (max-width: 30em) 20em"
+    sizes="(50em <= width <= 60em) 50em,
+              (30em <= width < 50em) 30em,
+              (width < 30em) 20em"
     alt="The New York City skyline on a beautiful day, with the One World Trade Center building in the middle." />
   <p>
     Then there's even more amazing stuff to say down here. Can you believe it? I
@@ -97,8 +97,8 @@ article {
 article img {
   display: block;
   max-width: 100%;
-  border: 1px solid #888;
-  box-shadow: 0 0.5em 0.3em #888;
+  border: 1px solid #888888;
+  box-shadow: 0 0.5em 0.3em #888888;
   margin-bottom: 1.25em;
 }
 ```

@@ -2,12 +2,10 @@
 title: GPUSupportedFeatures
 slug: Web/API/GPUSupportedFeatures
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.GPUSupportedFeatures
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`GPUSupportedFeatures`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} is a [`Set`-like object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_browser_apis) that describes additional functionality supported by a {{domxref("GPUAdapter")}}.
 
@@ -30,6 +28,7 @@ The following additional features are defined in WebGPU. Bear in mind that the e
 | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `bgra8unorm-storage`                 | When enabled, allows `STORAGE_BINDING` [`usage`](/en-US/docs/Web/API/GPUDevice/createTexture#usage) of `bgra8unorm`-[`format`](/en-US/docs/Web/API/GPUDevice/createTexture#format) {{domxref("GPUTexture")}}s.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | `clip-distances`                     | When enabled, allows the use of [`clip_distances`](https://gpuweb.github.io/gpuweb/wgsl/#built-in-values-clip_distances) in WGSL.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| `core-features-and-limits`           | When enabled, signifies that the {{domxref("GPUAdapter")}} / {{domxref("GPUDevice")}} is able to use all core WebGPU features and limits, which allows applications to support devices with the Direct 3D 12, Metal, and Vulkan platform graphics APIs (note that Safari only supports Metal). This is also referred to as "core" WebGPU. Currently, all adapters have "core" WebGPU available, and it is enabled automatically on all devices even if not requested. This feature will enable adapters and devices to differentiate between "core" WebGPU and "compatibility mode", which will provide support for older graphics APIs (such as Direct 3D 11 and OpenGL ES) at the expense of performance and feature set.                                                                                                                                                                                                                                      |
 | `depth-clip-control`                 | Allows [depth-clipping](https://gpuweb.github.io/gpuweb/#depth-clipping) to be disabled. If `depth-clip-control` is enabled, the [`unclippedDepth`](/en-US/docs/Web/API/GPUDevice/createRenderPipeline#unclippeddepth) property is available on the `primitive` object included as part of the {{domxref("GPUDevice.createRenderPipeline", "createRenderPipeline()")}} or {{domxref("GPUDevice.createRenderPipelineAsync", "createRenderPipelineAsync()")}} descriptor when creating a {{domxref("GPURenderPipeline")}}. `primitive` describes how a pipeline constructs and rasterizes primitives from its vertex inputs. Set `unclipped-depth` to `true` to disable depth-clipping.                                                                                                                                                                                                                                                                            |
 | `depth32float-stencil8`              | Allows creation of textures with the format `depth32float-stencil8`. If `depth32float-stencil8` is enabled, the `depth32float-stencil8` value can be used for the [`format`](/en-US/docs/Web/API/GPUDevice/createTexture#format) property of the {{domxref("GPUDevice.createTexture", "createTexture()")}} descriptor when creating a {{domxref("GPUTexture")}}.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | `dual-source-blending`               | When enabled, allows the use of [`dual_source_blending`](https://gpuweb.github.io/gpuweb/wgsl/#extension-dual_source_blending) in WGSL, which uses both pixel shader outputs (`@blend_src(0)` and `@blend_src(1)`) as inputs to a blending operation with the single color attachment at `@location(0)`. Over in WebGPU, `dual-source-blending` enables the following blend factor operations (specified in the [`dstFactor`](/en-US/docs/Web/API/GPUDevice/createRenderPipeline#dstfactor) and [`srcFactor`](/en-US/docs/Web/API/GPUDevice/createRenderPipeline#srcfactor) properties of {{domxref("GPUDevice.createRenderPipeline", "createRenderPipeline()")}} and {{domxref("GPUDevice.createRenderPipelineAsync", "createRenderPipelineAsync()")}} descriptors): `src1`, `one-minus-src1`, `src1-alpha`, and `one-minus-src1-alpha`.                                                                                                                        |
@@ -50,22 +49,22 @@ The following additional features are defined in WebGPU. Bear in mind that the e
 
 The following properties are available to all read-only [`Set`-like objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_browser_apis) (the links below are to the {{jsxref("Set")}} global object reference page).
 
-- {{jsxref("Set.prototype.size", "size")}} {{Experimental_Inline}}
+- {{jsxref("Set.prototype.size", "size")}}
   - : Returns the number of values in the set.
 
 ## Instance methods
 
 The following methods are available to all read-only [`Set`-like objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_browser_apis) (the below links are to the {{jsxref("Set")}} global object reference page).
 
-- {{jsxref("Set.prototype.has()", "has()")}} {{Experimental_Inline}}
+- {{jsxref("Set.prototype.has()", "has()")}}
   - : Returns a boolean asserting whether an element is present with the given value in the set or not.
-- {{jsxref("Set.prototype.values()", "values()")}} {{Experimental_Inline}}
+- {{jsxref("Set.prototype.values()", "values()")}}
   - : Returns a new iterator object that yields the **values** for each element in the set in insertion order.
-- {{jsxref("Set.prototype.keys()", "keys()")}} {{Experimental_Inline}}
+- {{jsxref("Set.prototype.keys()", "keys()")}}
   - : An alias for {{jsxref("Set.prototype.values()", "values()")}}.
-- {{jsxref("Set.prototype.entries()", "entries()")}} {{Experimental_Inline}}
+- {{jsxref("Set.prototype.entries()", "entries()")}}
   - : Returns a new iterator object that contains **an array of `[value, value]`** for each element in the set, in insertion order.
-- {{jsxref("Set.prototype.forEach()", "forEach()")}} {{Experimental_Inline}}
+- {{jsxref("Set.prototype.forEach()", "forEach()")}}
   - : Calls a provided callback function once for each value present in the set, in insertion order.
 
 ## Examples

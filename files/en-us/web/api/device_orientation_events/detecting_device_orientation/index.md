@@ -45,7 +45,8 @@ function handleOrientation(event) {
 }
 ```
 
-> **Note:** [parallax](https://github.com/wagerfield/parallax) is a polyfill for normalizing the accelerometer and gyroscope data on mobile devices. This is useful for overcoming some of the differences in device support for device orientation.
+> [!NOTE]
+> [parallax](https://github.com/wagerfield/parallax) is a polyfill for normalizing the accelerometer and gyroscope data on mobile devices. This is useful for overcoming some of the differences in device support for device orientation.
 
 ### Orientation values explained
 
@@ -77,7 +78,7 @@ This garden is 200 pixel wide (yes, it's a tiny one), and the ball is in the cen
   position: relative;
   width: 200px;
   height: 200px;
-  border: 5px solid #ccc;
+  border: 5px solid #cccccc;
   border-radius: 10px;
 }
 

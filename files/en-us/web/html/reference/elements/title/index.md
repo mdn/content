@@ -3,11 +3,10 @@ title: "<title>: The Document Title element"
 slug: Web/HTML/Reference/Elements/title
 page-type: html-element
 browser-compat: html.elements.title
+sidebar: htmlsidebar
 ---
 
-{{HTMLSidebar}}
-
-The **`<title>`** [HTML](/en-US/docs/Web/HTML) element defines the document's title that is shown in a {{glossary("Browser", "browser")}}'s title bar or a page's tab. It only contains text; tags within the element are ignored.
+The **`<title>`** [HTML](/en-US/docs/Web/HTML) element defines the document's title that is shown in a {{glossary("Browser", "browser")}}'s title bar or a page's tab. It only contains text; HTML tags within the element, if any, are also treated as plain text.
 
 ```html
 <title>Grandma's Heavy Metal Festival Journal</title>

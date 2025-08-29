@@ -3,9 +3,8 @@ title: order
 slug: Web/CSS/order
 page-type: css-property
 browser-compat: css.properties.order
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`order`** [CSS](/en-US/docs/Web/CSS) property sets the order to lay out an item in a flex or grid container. Items in a container are sorted by ascending `order` value and then by their source code order. Items not given an explicit `order` value are assigned the default value of `0`.
 
@@ -45,7 +44,7 @@ order: 2;
 }
 
 .default-example > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
   margin: 0.5rem;
   padding: 0.5rem;
@@ -53,7 +52,7 @@ order: 2;
 }
 
 #example-element {
-  background-color: rgba(255, 0, 200, 0.2);
+  background-color: rgb(255 0 200 / 0.2);
   border: 3px solid rebeccapurple;
 }
 

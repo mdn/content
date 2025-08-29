@@ -1,27 +1,25 @@
 ---
-title: "Test your skills: Grid"
-short-title: Grid
+title: "Test your skills: CSS grids"
+short-title: "Test: CSS grid"
 slug: Learn_web_development/Core/CSS_layout/Test_your_skills/Grid
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
 
-The aim of this skill test is to assess whether you understand how a [grid and grid items](/en-US/docs/Learn_web_development/Core/CSS_layout/Grids) behave. You will be working through several small tasks that use different elements of the material you have just covered.
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout/Responsive_design", "Learn_web_development/Core/CSS_layout")}}
+
+The aim of this skill test is to help you assess whether you understand how a [grid and grid items](/en-US/docs/Learn_web_development/Core/CSS_layout/Grids) behave. You will be working through several small tasks that use different elements of the material you have just covered.
 
 > [!NOTE]
-> Click **"Play"** in the code blocks below to edit the examples in the MDN Playground.
-> You can also copy the code (click the clipboard icon) and paste it into an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
-> If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
+> To get help, read our [Test your skills](/en-US/docs/Learn_web_development#test_your_skills) usage guide. You can also reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## Task 1
 
-In this task, you should create a grid into which the four child elements will auto-place. The grid should have three columns sharing the available space equally and a 20 pixel gap between the column and row tracks. After that, try adding more child containers inside the parent container with the class of `grid` and see how they behave by default.
+In this task, we want you to create a grid into which the four child elements will auto-place. The grid should have three columns sharing the available space equally and a 20 pixel gap between the column and row tracks. After that, try adding more child containers inside the parent container with the class of `grid` and see how they behave by default.
 
 Your final result should look like the image below:
 
 ![A three column grid with four items placed into it.](grid-task1.png)
-
-Try to update the code below to recreate the finished example:
 
 ```html live-sample___grid1
 <div class="grid">
@@ -32,21 +30,21 @@ Try to update the code below to recreate the finished example:
 </div>
 ```
 
-```css hidden live-sample___grid1
+```css live-sample___grid1
 body {
   font: 1.2em / 1.5 sans-serif;
 }
+
 .grid > * {
   background-color: #4d7298;
   border: 2px solid #77a6b6;
   border-radius: 0.5em;
-  color: #fff;
+  color: white;
   padding: 0.5em;
 }
-```
 
-```css live-sample___grid1
 .grid {
+  /* Add styles here */
 }
 ```
 
@@ -69,13 +67,11 @@ Create a grid using `display: grid` with three columns using `grid-template-colu
 
 ## Task 2
 
-In this task, we already have a grid defined. By editing the CSS rules for the two child elements, cause them to span over several grid tracks each. The second item should overlay the first as in the image below:
+In this task, we already have a grid defined. We want you to edit the CSS rules for the two child elements, causing them to span over several grid tracks each. The second item should overlay the first as in the image below:
 
 ![A box with two items inside one overlaying the other.](grid-task2.png)
 
 **Bonus question:** Can you now cause the first item to display on top without changing the order of items in the source?
-
-Try to update the code below to recreate the finished example:
 
 ```html live-sample___grid2
 <div class="grid">
@@ -84,13 +80,13 @@ Try to update the code below to recreate the finished example:
 </div>
 ```
 
-```css hidden live-sample___grid2
+```css live-sample___grid2
 body {
   font: 1.2em / 1.5 sans-serif;
 }
 .grid > * {
   border-radius: 0.5em;
-  color: #fff;
+  color: white;
   padding: 0.5em;
 }
 
@@ -103,9 +99,7 @@ body {
   background-color: rgb(214 162 173 / 70%);
   border: 5px solid rgb(214 162 173 / 100%);
 }
-```
 
-```css live-sample___grid2
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -114,9 +108,11 @@ body {
 }
 
 .item1 {
+  /* Add styles here */
 }
 
 .item2 {
+  /* Add styles here */
 }
 ```
 
@@ -160,11 +156,11 @@ Another valid solution is to use `z-index`:
 
 ## Task 3
 
-In this task, there are four direct children in this grid. The starting point has them displayed using auto-placement. Use the grid-area and grid-template-areas properties to lay the items out as shown in the image below:
+In this task, there are four direct children in this grid. The starting point has them displayed using auto-placement.
+
+To complete the task, use the `grid-area` and `grid-template-areas` properties to lay the items out as shown in the image below:
 
 ![Four items displayed in a grid.](grid-task3.png)
-
-Try to update the code below to recreate the finished example:
 
 ```html live-sample___grid3
 <div class="grid">
@@ -175,7 +171,7 @@ Try to update the code below to recreate the finished example:
 </div>
 ```
 
-```css hidden live-sample___grid3
+```css live-sample___grid3
 body {
   font: 1.2em / 1.5 sans-serif;
 }
@@ -183,12 +179,10 @@ body {
   background-color: #4d7298;
   border: 2px solid #77a6b6;
   border-radius: 0.5em;
-  color: #fff;
+  color: white;
   padding: 0.5em;
 }
-```
 
-```css live-sample___grid3
 .grid {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -238,8 +232,6 @@ Each part of the layout needs a name using the `grid-area` property and `grid-te
 In this task, you will need to use both grid layout and flexbox to recreate the example as seen in the image below. The gap between the column and row tracks should be 10px. You do not need to make any changes to the HTML in order to achieve this.
 
 ![Two rows of cards, each with an image and a set of tags.](grid-task4.png)
-
-Try to update the code below to recreate the finished example:
 
 ```html live-sample___grid4
 <div class="container">
@@ -292,10 +284,11 @@ Try to update the code below to recreate the finished example:
 </div>
 ```
 
-```css hidden live-sample___grid4
+```css live-sample___grid4
 body {
   font: 1.2em / 1.5 sans-serif;
 }
+
 .card {
   display: grid;
   grid-template-rows: 200px min-content;
@@ -314,20 +307,20 @@ body {
 }
 
 .tags > * {
-  background-color: #999;
-  color: #fff;
+  background-color: #999999;
+  color: white;
   padding: 0.2em 0.8em;
   border-radius: 0.2em;
   font-size: 80%;
   margin: 5px;
 }
-```
 
-```css live-sample___grid4
 .container {
+  /* Add styles here */
 }
 
 .tags {
+  /* Add styles here */
 }
 ```
 
@@ -357,6 +350,4 @@ You may try to use flexbox on the container and restrict the cards with percenta
 
 </details>
 
-## See also
-
-- [CSS styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics)
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout/Responsive_design", "Learn_web_development/Core/CSS_layout")}}

@@ -3,9 +3,8 @@ title: font-variant-east-asian
 slug: Web/CSS/font-variant-east-asian
 page-type: css-property
 browser-compat: css.properties.font-variant-east-asian
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`font-variant-east-asian`** [CSS](/en-US/docs/Web/CSS) property controls the use of alternate glyphs for East Asian scripts, like Japanese and Chinese.
 
@@ -76,7 +75,6 @@ font-variant-east-asian: unset;
 - `ruby`
   - : This keyword forces the use of special glyphs for ruby characters. As these are usually smaller, font creators often designs specific forms, usually slightly bolder to improve the contrast. This keyword corresponds to the OpenType values `ruby`.
 - `<east-asian-variant-values>`
-
   - : These values specify a set of logographic glyph variants which should be used for display. Possible values are:
 
     | Keyword       | Standard defining the glyphs                                                | OpenType equivalent |
@@ -89,9 +87,7 @@ font-variant-east-asian: unset;
     | `traditional` | None, use the traditional Chinese glyphs                                    | `trad`              |
 
 - `<east-asian-width-values>`
-
   - : These values control the sizing of figures used for East Asian characters. Two values are possible:
-
     - `proportional-width` activating the set of East Asian characters which vary in width. It corresponds to the OpenType values `pwid`.
     - `full-width` activating the set of East Asian characters which are all of the same, roughly square, width metric. It corresponds to the OpenType values `fwid`.
 
@@ -142,7 +138,7 @@ tbody {
 }
 
 td {
-  font-family: "Yu Gothic";
+  font-family: "Yu Gothic", fantasy;
   font-size: 20px;
 }
 th {

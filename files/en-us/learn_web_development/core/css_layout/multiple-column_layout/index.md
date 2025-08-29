@@ -386,7 +386,7 @@ body {
   background-color: rgb(207 232 220);
   border: 2px solid rgb(79 185 227);
   padding: 10px;
-  margin: 0 0 1em 0;
+  margin-bottom: 1em;
 }
 ```
 
@@ -402,7 +402,7 @@ To control this behavior, we can use properties from the [CSS Fragmentation](/en
   background-color: rgb(207 232 220);
   border: 2px solid rgb(79 185 227);
   padding: 10px;
-  margin: 0 0 1em 0;
+  margin-bottom: 1em;
 }
 ```
 
@@ -508,10 +508,6 @@ body {
 ```
 
 {{ EmbedLiveSample('Setting_break-inside', '100%', 1100) }}
-
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Multicol](/en-US/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Multicolumn).
 
 ## Summary
 

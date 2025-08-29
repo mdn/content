@@ -1,11 +1,11 @@
 ---
 title: RegExp.prototype.multiline
+short-title: multiline
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/multiline
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.RegExp.multiline
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`multiline`** accessor property of {{jsxref("RegExp")}} instances returns whether or not the `m` flag is used with this regular expression.
 

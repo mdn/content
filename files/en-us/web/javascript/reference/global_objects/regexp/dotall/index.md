@@ -1,11 +1,11 @@
 ---
 title: RegExp.prototype.dotAll
+short-title: dotAll
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/dotAll
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.RegExp.dotAll
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`dotAll`** accessor property of {{jsxref("RegExp")}} instances returns whether or not the `s` flag is used with this regular expression.
 

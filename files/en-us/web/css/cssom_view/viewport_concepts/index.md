@@ -2,9 +2,8 @@
 title: Viewport concepts
 slug: Web/CSS/CSSOM_view/Viewport_concepts
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 This article explains the concept of the {{glossary("viewport")}} — what it is, its impact in terms of CSS, SVG, and mobile devices — and differentiates between the {{glossary("visual viewport")}} and the {{glossary("layout viewport")}}.
 
@@ -108,7 +107,7 @@ If the iframe is set to 50vw, it will be 50% of the width of the `1200px` parent
 A width-based media query within the iframe document is relative to the iframe's viewport.
 
 ```css
-@media screen and (min-width: 500px) {
+@media screen and (width >= 500px) {
   p {
     color: red;
   }
@@ -132,7 +131,7 @@ SVG also has an internal [coordinate system](/en-US/docs/Web/CSS/CSSOM_view/Coor
 If you include an SVG file in your HTML, the viewport of the SVG is the initial containing block, or the width and height of the SVG container. Using the {{CSSxRef("@media")}} query in your SVG's CSS is relative to that container, not the browser.
 
 ```css
-@media screen and (min-width: 400px) and (max-width: 500px) {
+@media screen and (400px <= width <= 500px) {
   /* CSS goes here */
 }
 ```

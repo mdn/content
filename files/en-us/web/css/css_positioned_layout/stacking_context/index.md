@@ -2,9 +2,8 @@
 title: Stacking context
 slug: Web/CSS/CSS_positioned_layout/Stacking_context
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 **Stacking context** is a three-dimensional conceptualization of HTML elements along an imaginary z-axis relative to the user, who is assumed to be facing the viewport or the webpage. The stacking context determines how elements are layered on top of one another along the z-axis (think of it as the "depth" dimension on your screen). Stacking context determines the visual order of how overlapping content is rendered.
 
@@ -29,7 +28,6 @@ A stacking context is formed, anywhere in the document, by any element in the fo
 - Element with an {{cssxref("opacity")}} value less than `1`.
 - Element with a {{cssxref("mix-blend-mode")}} value other than `normal`.
 - Element with any of the following properties with a value other than `none`:
-
   - {{cssxref("transform")}}
   - {{cssxref("scale")}}
   - {{cssxref("rotate")}}
@@ -123,34 +121,34 @@ h1 {
 }
 #container1,
 #container2 {
-  border: 1px dashed #696;
+  border: 1px dashed #669966;
   padding: 10px;
-  background-color: #cfc;
+  background-color: #ccffcc;
 }
 #container1 {
   margin-bottom: 190px;
 }
 #container3 {
-  border: 1px dashed #900;
-  background-color: #fdd;
+  border: 1px dashed #990000;
+  background-color: #ffdddd;
   padding: 40px 20px 20px;
   width: 330px;
 }
 #container4 {
-  border: 1px dashed #996;
-  background-color: #ffc;
+  border: 1px dashed #999966;
+  background-color: #ffffcc;
   padding: 25px 10px 5px;
   margin-bottom: 15px;
 }
 #container5 {
-  border: 1px dashed #996;
-  background-color: #ffc;
+  border: 1px dashed #999966;
+  background-color: #ffffcc;
   margin-top: 15px;
   padding: 5px 10px;
 }
 #container6 {
-  background-color: #ddf;
-  border: 1px dashed #009;
+  background-color: #ddddff;
+  border: 1px dashed #000099;
   padding-left: 20px;
   padding-top: 125px;
   width: 150px;
@@ -221,10 +219,8 @@ ARTICLE #3's z-index is `4`, but this value is independent of the `z-index` of t
 In our example (sorted according to the final rendering order):
 
 - Root
-
   - ARTICLE #2: (`z-index`: 2), which results in a rendering order of `2-0`
   - ARTICLE #3: (`z-index`: 4), which results in a rendering order of `4-0`
-
     - SECTION #5: (`z-index`: 1), stacked under an element (`z-index`: 4), which results in a rendering order of `4-1`
     - SECTION #6: (`z-index`: 3), stacked under an element (`z-index`: 4), which results in a rendering order of `4-3`
     - SECTION #4: (`z-index`: 6), stacked under an element (`z-index`: 4), which results in a rendering order of `4-6`

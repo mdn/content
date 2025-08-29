@@ -3,9 +3,8 @@ title: CSS masking
 slug: Web/CSS/CSS_masking
 page-type: css-module
 spec-urls: https://drafts.fxtf.org/css-masking/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS masking** module defines masking and clipping, two different graphical operations that are used to partially or fully hide portions of visual elements.
 
@@ -37,12 +36,12 @@ While masking provides more control and options, clipping can perform better if 
 - {{cssxref("mask-size")}}
 - {{cssxref("mask-type")}}
 - {{cssxref("mask-border")}} shorthand
-- {{cssxref("mask-border-mode")}}
 - {{cssxref("mask-border-outset")}}
 - {{cssxref("mask-border-repeat")}}
 - {{cssxref("mask-border-slice")}}
 - {{cssxref("mask-border-source")}}
 - {{cssxref("mask-border-width")}}
+- {{cssxref("mask-border-mode")}}
 
 ### Data types
 
@@ -61,12 +60,16 @@ While masking provides more control and options, clipping can perform better if 
 ## Guides
 
 - [Introduction to CSS clipping](/en-US/docs/Web/CSS/CSS_masking/Clipping)
-
   - : Introduction to clipping in CSS, including the `clip-path` property with examples.
 
 - [Introduction to CSS masking](/en-US/docs/Web/CSS/CSS_masking/Masking)
-
   - : Introduction to masking in CSS, the various mask image types, and the effects of luminance and alpha-transparency in masking.
+
+- [Declaring multiple masks](/en-US/docs/Web/CSS/CSS_masking/Multiple_masks)
+  - : Introduction to mask layers and how to declare multiple mask images.
+
+- [CSS mask properties](/en-US/docs/Web/CSS/CSS_masking/Mask_properties)
+  - : An exploration of CSS masking and the `mask` shorthand component properties, with explanations and examples.
 
 ## Related concepts
 
@@ -76,7 +79,6 @@ While masking provides more control and options, clipping can perform better if 
 - {{cssxref("&lt;url&gt;")}}
 
 - [CSS backgrounds and borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders) module
-
   - {{cssxref("background")}} shorthand
   - {{cssxref("background-origin")}}
   - {{cssxref("background-position")}}
@@ -90,7 +92,6 @@ While masking provides more control and options, clipping can perform better if 
   - [`<repeat-style>`](/en-US/docs/Web/CSS/background-repeat#values) data type
 
 - [CSS shapes](/en-US/docs/Web/CSS/CSS_shapes) module
-
   - {{cssxref("&lt;basic-shape&gt;")}} data type
   - {{cssxref("basic-shape/polygon","polygon()")}} function
   - [`<shape-box>`](/en-US/docs/Web/CSS/shape-outside#shape-box) data type

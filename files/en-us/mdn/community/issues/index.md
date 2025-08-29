@@ -29,7 +29,7 @@ If you want to suggest new documentation or ways to improve the website, see [Pr
 
 ## Guidelines for reporting an issue
 
-[Issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues) are used to track bugs. An issue must be a single actionable task or a collection of related actionable tasks and must have a clear outcome.
+[Issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/learning-about-issues/about-issues) are used to track bugs. An issue must be a single actionable task or a collection of related actionable tasks and must have a clear outcome.
 
 ### Before filing an issue
 
@@ -94,7 +94,6 @@ These are the general steps for working on an issue:
 2. **Assign the issue to yourself:** After finding an issue you'd like to work on, make sure that the issue is not assigned to anybody else. Add a comment saying you would like to work on the issue, and if you are able to, [assign the issue to yourself](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/assigning-issues-and-pull-requests-to-other-github-users#assigning-an-individual-issue-or-pull-request).
 
 3. **Do the research:** Most issues need some investigation before work can start.
-
    - Scope out the work that needs to be done. If you need to ask questions, ask them in the [MDN Web Docs chat rooms](/en-US/docs/MDN/Community/Communication_channels#chat_rooms).
    - If the issue is well-described, and the work is pretty obvious, go ahead and do it.
    - If the issue is not well-described, and/or you are not sure what is needed, feel free to @mention the poster and ask for more information.
@@ -121,7 +120,7 @@ Using the [guidelines on working on an issue](#guidelines_for_working_on_an_issu
 
 - The MDN Web Docs **content** (in English) in the [mdn/content](https://github.com/mdn/content) repository
 - The MDN Web Docs **translated content** in the [mdn/translated-content](https://github.com/mdn/translated-content) repository
-- The MDN Web Docs **frontend** in the [mdn/yari](https://github.com/mdn/yari) repository
+- The MDN Web Docs **frontend** in the [mdn/fred](https://github.com/mdn/fred) repository
 
 Each repository includes useful information to guide you on how to contribute.
 For more information, see [our main GitHub repositories](/en-US/docs/MDN/Community/Our_repositories).
@@ -176,11 +175,9 @@ If any of the above information is not present, then you should ask the author o
 For each bug, set a priority label based on the severity of the issue to help people who want to work on the most important issues or areas.
 
 - Critical issue: This type of issue needs to be fixed as soon as possible, regardless of where it appears on the site. This type of issue could damage MDN's reputation severely and/or harm users. Examples of this issue include an incorrect code snippet, which if used in production, could create a severe security problem and undesirable content such as malware, profanity, pornography, hate speech, or links to such content.
-
   - Label: `p0` (will be addressed immediately)
 
 - Major issue: This type of issue could severely affect a page's usefulness. For example, a significant amount of out-of-date information, a complex and important code example that doesn't work, a significant amount of prose that is badly written and hard to understand, or a large number of broken links.
-
   - Labels: `p1` (will be addressed soon) and `p2` (will be addressed soon, but higher priority items will take precedence)
 
 - Minor issue: This is a type of improvement issue that can make the existing content better but does not affect learning or only has a minor effect on learning. Since these types of issues are not actively planned for, help from contributors to fix these issues is welcome and much appreciated. Fixing some of these issues can also provide the necessary practice to beginner contributors who are starting to get familiar with the contribution process. Examples include typos, bad grammar, a broken link, a small amount of out-of-date information or badly-written prose, or a code snippet that doesn't work.

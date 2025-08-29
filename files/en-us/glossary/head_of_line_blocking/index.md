@@ -1,14 +1,23 @@
 ---
 title: Head-of-line blocking
+short-title: HOL blocking
 slug: Glossary/Head_of_line_blocking
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 In computer networking, **head-of-line blocking** (_HOL blocking_) refers to a performance bottleneck that occurs when a queue of packets is held up by the first packet in the queue, even though other packets in the queue could be processed.
 
-In HTTP/1.1, HOL blocking can occur when a client sends multiple requests to a {{glossary("server")}} without waiting for the responses. The server processes the requests in order, but if the response to the first request is delayed, the responses to subsequent requests are also delayed. HTTP/2 addresses this issue through request multiplexing, eliminating HOL blocking in the application layer, but it still exists at the transport ({{glossary("TCP")}}) layer.
+In HTTP/1.1, HOL blocking occurs when a client sends multiple requests to a {{glossary("server")}} over a particular TCP connection, and a response on that connection is delayed for any reason — such as network congestion, {{glossary("TCP slow start")}}, or, problems in transit.
+HTTP/1.1 requests are sent sequentially per TCP connection, so a delay in receiving a response blocks the next request-response exchange.
+
+A mechanism called _HTTP pipelining_ tried to work around this, where multiple requests were sent off by a client without waiting for any responses.
+Pipelining proved tricky to implement in reality, so this mechanism is rarely used, if ever, and most browsers no longer support it.
+
+HTTP/2 addresses the HOL blocking problems in HTTP/1.1 through request _multiplexing_.
+Multiplexing allows a single TCP connection to interleave requests and responses in numbered streams.
+A client can send many requests over a single connection without waiting for earlier responses.
+Note that while HOL blocking has been fixed in HTTP/2, it is still a problem at the transport ({{glossary("TCP")}}) layer level.
 
 ## See also
 

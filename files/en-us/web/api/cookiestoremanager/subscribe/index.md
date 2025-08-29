@@ -19,9 +19,7 @@ subscribe(subscriptions)
 ### Parameters
 
 - `subscriptions`
-
   - : An array of objects, each of which has the following properties:
-
     - `name`
       - : A string with the name of a cookie.
     - `url`

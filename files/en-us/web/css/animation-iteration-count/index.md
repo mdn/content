@@ -3,9 +3,8 @@ title: animation-iteration-count
 slug: Web/CSS/animation-iteration-count
 page-type: css-property
 browser-compat: css.properties.animation-iteration-count
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`animation-iteration-count`** [CSS](/en-US/docs/Web/CSS) property sets the number of times an animation sequence should be played before stopping.
 
@@ -35,7 +34,7 @@ animation-iteration-count: 1.5;
   align-items: center;
   background-color: #1766aa;
   border-radius: 50%;
-  border: 5px solid #333;
+  border: 5px solid #333333;
   color: white;
   display: flex;
   flex-direction: column;

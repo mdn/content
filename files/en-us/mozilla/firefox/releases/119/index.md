@@ -1,10 +1,10 @@
 ---
 title: Firefox 119 for developers
+short-title: Firefox 119
 slug: Mozilla/Firefox/Releases/119
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 119 that affect developers. Firefox 119 was released on October 24, 2023.
 
@@ -72,7 +72,3 @@ This article provides information about the changes in Firefox 119 that affect d
 #### Marionette
 
 - The list of possible error codes when trying to install a WebExtension by using the `Addon:Install` command has been updated to match the latest error codes of Firefox ([Firefox bug 1852537](https://bugzil.la/1852537)).
-
-## Older versions
-
-{{Firefox_for_developers}}
