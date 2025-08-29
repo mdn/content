@@ -23,7 +23,7 @@ The `<corner-shape-value>` data type can take a {{cssxref("superellipse()")}} fu
     - `notch`
       - : Defines a concave (90-degree) square corner. The `notch` keyword is equivalent to `superellipse(-infinity)`.
     - `round`
-      - : Defines a convex ordinary ellipse, which is the standard rounded corner created by {{cssxref("border-radius")}} without a `corner-shape` applied. The `round` keyword is equivalent to `superellipse(1)`. This is the default (initial) value for all `corner-shape` properties. 
+      - : Defines a convex ordinary ellipse, which is the standard rounded corner created by {{cssxref("border-radius")}} without a `corner-shape` applied. The `round` keyword is equivalent to `superellipse(1)`. This is the default (initial) value for all `corner-shape` properties.
     - `scoop`
       - : Defines a concave quarter-ellipse. The `scoop` keyword is equivalent to `superellipse(-1)`.
     - `square`
