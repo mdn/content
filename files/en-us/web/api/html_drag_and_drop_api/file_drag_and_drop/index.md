@@ -10,8 +10,6 @@ HTML Drag and Drop interfaces enable web applications to drag and drop files on 
 
 The main steps to drag and drop are to define a _drop zone_ (i.e., a target element for the file drop) and to define event handlers for the {{domxref("HTMLElement/drop_event", "drop")}} and {{domxref("HTMLElement/dragover_event", "dragover")}} events. These steps are described below, including example code snippets.
 
-Note that [HTML drag and drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API) defines two different APIs to support dragging and dropping files. One API is the {{domxref("DataTransfer")}} interface and the second API is the {{domxref("DataTransferItem")}} and {{domxref("DataTransferItemList")}} interfaces. This example illustrates the use of both APIs (and does not use any Gecko specific interfaces).
-
 ## Define the drop zone
 
 The HTML defines the drop zone as a {{htmlelement("div")}}, and an output region to be populated later.
@@ -32,7 +30,7 @@ const output = document.getElementById("output");
 dropZone.addEventListener("drop", dropHandler);
 ```
 
-Typically, an application will include a {{domxref("HTMLElement/dragover_event", "dragover")}} event handler to turn off the browser's default drag behavior, which is to open the file. To add this handler, you need to include a {{domxref("HTMLElement.dragover_event","dragover")}} event handler:
+In order for the `drop` event to fire, the element must also cancel the {{domxref("HTMLElement/dragover_event", "dragover")}} event. Here, we cancel the event on `window`, because we also want to listen for the `drop` event on `window` to prevent the default browser action of opening the file when it was not droopped into the drop zone.
 
 ```js live-sample___file-dnd
 window.addEventListener("dragover", (e) => {
@@ -66,9 +64,7 @@ div {
 
 ## Process the drop
 
-The {{domxref("HTMLElement/drop_event", "drop")}} event is fired when the user drops the file(s). In the following drop handler, if the browser supports {{domxref("DataTransferItemList")}} interface, the {{domxref("DataTransferItem.getAsFile","getAsFile()")}} method is used to access each file; otherwise the {{domxref("DataTransfer")}} interface's {{domxref("DataTransfer.files","files")}} property is used to access each file.
-
-This example shows how to write the name of each dragged file to the console. In a _real_ application, an application may want to process a file using the [File API](/en-US/docs/Web/API/File_API).
+The {{domxref("HTMLElement/drop_event", "drop")}} event is fired when the user drops the file(s). In the following drop handler, the {{domxref("DataTransferItem.getAsFile","getAsFile()")}} method is used to access each file. This example shows how to write the name of each dragged file to the console. In a _real_ application, an application may want to process a file using the [File API](/en-US/docs/Web/API/File_API).
 
 Note that in this example, any drag item that is not a file is ignored.
 
@@ -77,22 +73,14 @@ function dropHandler(ev) {
   // Prevent default behavior (Prevent file from being opened)
   ev.preventDefault();
   let result = "";
-
-  if (ev.dataTransfer.items) {
-    // Use DataTransferItemList interface to access the file(s)
-    [...ev.dataTransfer.items].forEach((item, i) => {
-      // If dropped items aren't files, reject them
-      if (item.kind === "file") {
-        const file = item.getAsFile();
-        result += `… file[${i}].name = ${file.name}\n`;
-      }
-    });
-  } else {
-    // Use DataTransfer interface to access the file(s)
-    [...ev.dataTransfer.files].forEach((file, i) => {
+  // Use DataTransferItemList interface to access the file(s)
+  [...ev.dataTransfer.items].forEach((item, i) => {
+    // If dropped items aren't files, reject them
+    if (item.kind === "file") {
+      const file = item.getAsFile();
       result += `… file[${i}].name = ${file.name}\n`;
-    });
-  }
+    }
+  });
   output.textContent = result;
 }
 ```
