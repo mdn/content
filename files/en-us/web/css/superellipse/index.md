@@ -85,6 +85,9 @@ The following diagram illustrates different `superellipse()` values for the top 
 
 A negative or positive superellipse would appear symmetrical to a superellipse with its inverse value.
 
+> [!NOTE]
+> For any `K` parameter value passed, the `superellipse()` function's return value will always be the same for that `K` value. When that value is applied to two elements, the appearance of the corner shape may differ if the box size or {{cssxref("border-radius")}} values differ.
+
 ## Formal syntax
 
 {{CSSSyntax}}
