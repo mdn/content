@@ -93,7 +93,7 @@ A negative or positive superellipse would appear symmetrical to a superellipse w
 
 ### `superellipse()` value comparison
 
-In this example, we provide two [`<input type="range">`](/en-US/docs/Web/HTML/Reference/Elements/input/range) sliders allowing you to cycle through many different `corner-shape` `superellipse()` values and {{cssxref("border-radius")}} values to compare the effects of each on a container. We've hidden the code for the example here, for brevity, but you can find a [full explanation of it](/en-US/docs/Web/CSS/corner-shape#superellipse_value_comparison) along with other related examples on the {{cssxref("corner-shape")}} reference page.
+In this example, two [`<input type="range">`](/en-US/docs/Web/HTML/Reference/Elements/input/range) sliders allow you to cycle through many different `corner-shape` `superellipse()` values and {{cssxref("border-radius")}} values to compare the effects of each on a container. The code is hidden for brevity, but the full explanation of the [superellipse value comparison](/en-US/docs/Web/CSS/corner-shape#superellipse_value_comparison) is provided on the {{cssxref("corner-shape")}} reference page.
 
 ```html hidden live-sample___value-comparison
 <form>
