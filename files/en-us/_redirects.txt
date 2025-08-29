@@ -12108,6 +12108,7 @@
 /en-US/docs/Web/CSS/:nth-last-col	/en-US/docs/Web/CSS/:nth-last-of-type
 /en-US/docs/Web/CSS/:nth-last-of-type()	/en-US/docs/Web/CSS/:nth-last-of-type
 /en-US/docs/Web/CSS/:nth-of-type()	/en-US/docs/Web/CSS/:nth-of-type
+/en-US/docs/Web/CSS/:target-within	/en-US/docs/Web/CSS
 /en-US/docs/Web/CSS/@-moz-document	/en-US/docs/Web/CSS/@document
 /en-US/docs/Web/CSS/@font-face/font-variant	/en-US/docs/Web/CSS/@font-face
 /en-US/docs/Web/CSS/@media/aural	/en-US/docs/Web/CSS/@media

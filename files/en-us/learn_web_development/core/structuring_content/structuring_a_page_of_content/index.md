@@ -76,7 +76,7 @@ To solve this challenge we are expecting you to create a simple website project,
 
    html {
      font-size: 10px;
-     background-color: #a9a9a9;
+     background-color: darkgrey;
    }
 
    body {
@@ -129,7 +129,7 @@ To solve this challenge we are expecting you to create a simple website project,
    aside,
    footer,
    section {
-     background-color: rgba(0, 255, 0, 0.5);
+     background-color: #00ff0080;
      padding: 1%;
    }
 

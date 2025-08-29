@@ -58,7 +58,7 @@ const badString2 = 'This is a test;
 const badString3 = This is a test';
 ```
 
-These lines don't work because any text without quotes around it is interpreted as a variable name, property name, reserved word, or similar. If the browser doesn't recognize the unquoted text, then an error is raised (e.g., "missing; before statement"). If the browser can detect where a string starts but not its end (owing to the missing second quote), it reports an "unterminated string literal" error. If your program is raising such errors, then go back and check all your strings to make sure you have no missing quotation marks.
+These lines don't work because any text without quotes around it is interpreted as a variable name, property name, reserved word, or similar. If the browser doesn't recognize the unquoted text, then an error is raised (e.g., "missing; before statement"). If the browser can detect where a string starts but not its end (owing to the missing second quote), it may report an "unterminated string literal" error, or, in the console, jump to a new line and expect you to finish the string there. If your program is raising such errors, then go back and check all your strings to make sure you have no missing quotation marks.
 
 The following will work if you previously defined the variable `string` — try it now:
 
@@ -91,10 +91,10 @@ const badQuotes = 'This is not allowed!";
 
 Strings declared using single quotes and strings declared using double quotes are the same, and which you use is down to personal preference — although it is good practice to choose one style and use it consistently in your code.
 
-Strings declared using backticks are a special kind of string called a [_template literal_](/en-US/docs/Web/JavaScript/Reference/Template_literals). In most ways, template literals are like normal strings, but they have some special properties:
+Strings declared using backticks are a special kind of string called a [_template literal_](/en-US/docs/Web/JavaScript/Reference/Template_literals). Template literals mostly behave the same as normal strings, but they have some special properties:
 
-- you can [embed JavaScript](#embedding_javascript) in them
-- you can declare template literals over [multiple lines](#multiline_strings)
+- You can [embed JavaScript](#embedding_javascript) in them.
+- You can declare template literals over [multiple lines](#multiline_strings).
 
 ## Embedding JavaScript
 
@@ -147,17 +147,17 @@ Here, we are using the {{domxref("window.prompt()", "window.prompt()")}} functio
 You can use `${}` only with template literals, not normal strings. You can concatenate normal strings using the `+` operator:
 
 ```js
-const greeting = "Hello";
-const name = "Chris";
-console.log(greeting + ", " + name); // "Hello, Chris"
+const greeting2 = "Hello";
+const name2 = "Bob";
+console.log(greeting2 + ", " + name2); // "Hello, Bob"
 ```
 
 However, template literals usually give you more readable code:
 
 ```js
-const greeting = "Hello";
-const name = "Chris";
-console.log(`${greeting}, ${name}`); // "Hello, Chris"
+const greeting3 = "Howdy";
+const name3 = "Ramesh";
+console.log(`${greeting3}, ${name3}`); // "Howdy, Ramesh"
 ```
 
 ### Including expressions in strings
@@ -192,8 +192,8 @@ what you had to do, and began,
 To have the equivalent output using a normal string you'd have to include line break characters (`\n`) in the string:
 
 ```js
-const newline = "One day you finally knew\nwhat you had to do, and began,";
-console.log(newline);
+const newline2 = "One day you finally knew\nwhat you had to do, and began,";
+console.log(newline2);
 
 /*
 One day you finally knew
@@ -232,9 +232,9 @@ You can use the same technique to insert other special characters. See [Escape s
 What happens when we try to concatenate a string and a number? Let's try it in our console:
 
 ```js
-const name = "Front ";
+const coolBandName = "Front ";
 const number = 242;
-console.log(name + number); // "Front 242"
+console.log(coolBandName + number); // "Front 242"
 ```
 
 You might expect this to return an error, but it works just fine. How numbers should be displayed as strings is fairly well-defined, so the browser automatically converts the number to a string and concatenates the two strings.

@@ -47,7 +47,7 @@ p {
 }
 ```
 
-When filtering is complete, every element has zero or more [declared values](#declared-value) for every CSS property. These declared values are the starting point for the [cascading](#cascading) processing stage.
+When filtering is complete, every element has zero or more [declared values](#declared_value) for every CSS property. These declared values are the starting point for the [cascading](#cascading) processing stage.
 
 ### Cascading
 

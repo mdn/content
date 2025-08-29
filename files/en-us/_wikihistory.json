@@ -74071,10 +74071,6 @@
       "j.j."
     ]
   },
-  "Web/CSS/:target-within": {
-    "modified": "2020-12-04T07:48:58.177Z",
-    "contributors": ["rachelandrew"]
-  },
   "Web/CSS/:user-invalid": {
     "modified": "2020-11-20T11:42:30.261Z",
     "contributors": [

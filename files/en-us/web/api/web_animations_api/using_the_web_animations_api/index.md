@@ -503,7 +503,7 @@ img {
   transform: translate(-50%, -50%);
   overflow: hidden;
   width: 80%;
-  max-width: 450px; /*height: 783px / 2*/
+  max-width: 450px;
   z-index: 1;
 }
 

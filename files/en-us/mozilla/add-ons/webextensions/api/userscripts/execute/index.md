@@ -3,9 +3,8 @@ title: userScripts.execute()
 slug: Mozilla/Add-ons/WebExtensions/API/userScripts/execute
 page-type: webextension-api-function
 browser-compat: webextensions.api.userScripts.execute
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Injects a user script into a target context (e.g., tab or frame).
 
@@ -14,7 +13,7 @@ Injects a user script into a target context (e.g., tab or frame).
 
 ## Syntax
 
-```js
+```js-nolint
 let executeUserScript = browser.userScripts.execute(
   injection, // array of objects
 );
