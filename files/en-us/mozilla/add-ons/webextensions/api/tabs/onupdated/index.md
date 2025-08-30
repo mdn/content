@@ -75,6 +75,8 @@ Events have three functions:
       - : `Integer`. Fires this event only for the tab identified by this ID.
     - `windowId`
       - : `Integer`. Fires this event only for tabs in the window identified by this ID.
+    - `cookieStoreId`
+      - : `Integer`. Fires this event only for tabs in the cookie store identified by this ID.
 
 ## Additional objects
 
