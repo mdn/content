@@ -10,7 +10,7 @@ The {{domxref("DragEvent")}} interface has a {{domxref("DragEvent.dataTransfer",
 
 ## DataTransfer, DataTransferItem, and DataTransferItemList
 
-Fundamentally, the drag data store is a list of items, represented as a {{domxref("DataTransferItemList")}} of {{domxref("DataTransferItem")}} objects. Generally, it _does not_ represent multiple resources being transferred, but the same resource encoded in different ways, so that the receiving end can choose the most appropriate supported interpretation. Each item can be one of two [kinds](/en-US/docs/Web/API/DataTransferItem/kind):
+Fundamentally, the drag data store is a list of items, represented as a {{domxref("DataTransferItemList")}} of {{domxref("DataTransferItem")}} objects. Generally, it _does not_ represent multiple resources being transferred, but the same resource encoded in different ways, so that the receiving end can choose the most appropriate supported interpretation. The items are intended to be sorted in descending order of preference. Each item can be one of two [kinds](/en-US/docs/Web/API/DataTransferItem/kind):
 
 - `string`: its payload is a string, retrievable with {{domxref("DataTransferItem.getAsString", "getAsString()")}}.
 - `file`: its payload is a file object, retrievable with {{domxref("DataTransferItem.getAsFile", "getAsFile()")}} (or {{domxref("DataTransferItem.getAsFileSystemHandle", "getAsFileSystemHandle()")}} or {{domxref("DataTransferItem.webkitGetAsEntry", "webkitGetAsEntry()")}}, if more complex file system operations are needed).
@@ -19,7 +19,7 @@ Furthermore the item is also identified by a [type](/en-US/docs/Web/API/DataTran
 
 This list is accessible via the {{domxref("DataTransfer.items")}} property.
 
-The HTML Drag and Drop API went through multiple iterations, resulting in two coexisting ways to manage the data store. Before the aforementioned interfaces, the "old way" used the following properties on `DataTransfer`:
+The HTML Drag and Drop API went through multiple iterations, resulting in two coexisting ways to manage the data store. Before the `DataTransferItemList` and `DataTransferItem` interfaces, the "old way" used the following properties on `DataTransfer`:
 
 - {{domxref("DataTransfer.types", "types")}}: contains the `type` properties of the _text items_ in the list, plus the value `"files"` if there are any _file items_.
 - {{domxref("DataTransfer.setData", "setData()")}}, {{domxref("DataTransfer.getData", "getData()")}}, {{domxref("DataTransfer.clearData", "clearData()")}}: operate on the _text items_ in the list using the "type-to-payload mapping" model.
@@ -74,13 +74,13 @@ Note that when adding file data, `add()` ignores the `type` parameter and uses t
 > }
 > ```
 
-Removing data is similar, using the `DataTransferItemList.remove()`, `DataTransferItemList.clear()`, or `DataTransferItem.clearData()` methods.
+Removing data is similar, using the {{domxref("DataTransferItemList.remove()")}}, {{domxref("DataTransferItemList.clear()")}}, or {{domxref("DataTransfer.clearData()")}} methods.
 
 ## Reading the drag data store
 
-The only time you can _read_ from the data store, apart from the `dragstart` event when you have full access to the data store, is during the `drop` event, allowing the drop target to retrieve the data.
+The only time you can _read_ from the data store, apart from the `dragstart` event when you have full access to the data store, is during the {{domxref("HTMLElement/drop_event", "drop")}} event, allowing the drop target to retrieve the data.
 
-To read text data to the drag data store, the "new way" accesses the {{domxref("DataTransferItemList")}} object, while the "old way" uses the {{domxref("DataTransfer.getData()")}} method. The new way is more convenient for handling all items, while the old way is more convenient for accessing a specific type.
+To read text data from the drag data store, the "new way" uses the {{domxref("DataTransferItemList")}} object, while the "old way" uses the {{domxref("DataTransfer.getData()")}} method. The new way is more convenient for looping through all items, while the old way is more convenient for accessing a specific type.
 
 ```js
 function dropHandler(ev) {
@@ -100,7 +100,7 @@ const p1 = document.getElementById("p1");
 p1.addEventListener("drop", dropHandler);
 ```
 
-To read file data from the drag data store, the "new way" still accesses the {{domxref("DataTransferItemList")}} object, while the "old way" uses the {{domxref("DataTransfer.files")}} property.
+To read file data from the drag data store, the "new way" still uses the {{domxref("DataTransferItemList")}} object, while the "old way" uses the {{domxref("DataTransfer.files")}} property.
 
 ```js
 function dropHandler(ev) {
@@ -244,7 +244,7 @@ Firefox supports the non-standard `application/x-moz-file` type if the image is 
 
 ### Dragging elements
 
-When the dragged item is an arbitrary element with `draggable="true"`, what data to set depends on what you intend to transfer. By default, browsers create one item of type `application/microdata+json`, containing the [microdata](/en-US/docs/Web/HTML/Guides/Microdata) extracted from the dragged element(s).
+When the dragged item is an arbitrary element with `draggable="true"`, what data to set depends on what you intend to transfer. By default, browsers create one item of type `application/microdata+json`, containing the [microdata](/en-US/docs/Web/HTML/Guides/Microdata) extracted from the dragged element(s) (multiple elements can be dragged in the case of dragging a selection). When the dragged item is a selection, the browser may also create a `text/html` item containing the full HTML source of the selected elements (with all styles inlined), although this behavior may vary between browsers.
 
 The standard way to transfer the element is to use the `text/html` type containing serialized HTML source code, which the receiving end can then parse and insert. For example, it would be suitable to set its data to the value of the {{domxref("Element/outerHTML","outerHTML")}} property of an element. `text/xml` can be used too, but ensure that the data is well-formed XML.
 
@@ -259,11 +259,11 @@ You can also use other types that you invent for custom purposes. Strive to alwa
 
 ### Dragging files from an operating system file explorer
 
-When the dragged item is a file, an item of kind `file` is added to the drag data. The `type` is set to the MIME type of the file (as provided by the operating system), or `application/octet-stream` if the type is unknown. Currently, dragging files can only happen outside of the browser, such as from a file explorer.
+When the dragged item is a file, an item of kind `file` is added to the drag data. The `type` is set to the MIME type of the file (as provided by the operating system), or `application/octet-stream` if the type is unknown. Currently, dragged files can only originate outside of the browser, such as from a file explorer.
 
 ### Dragging files to an operating system file explorer
 
-What can be transferred outside the browser mostly depends on the browser and where it is dragged to. [Dragging images](#dragging_images) to the local file system is commonly supported and results in the image being downloaded.
+What can be transferred out of the browser mostly depends on the browser and where it is dragged to. [Dragging images](#dragging_images) to the local file system is commonly supported and results in the image being downloaded.
 
 Chrome supports the non-standard `DownloadURL` type. The payload should be text in the form `<MIME type>:<file name>:<file URL>`. For example:
 
