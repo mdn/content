@@ -5,7 +5,7 @@ page-type: guide
 sidebar: addonsidebar
 ---
 
-Some WebExtension APIs perform functions that usually occur as a result of a user action (also referred to as user gestures and user activation). Following the principle of "no surprises", these APIs can only be called from inside the handler for a user action. These user actions are:
+Some WebExtension APIs perform functions that usually occur as a result of a user action. Following the principle of "no surprises", these APIs can only be called from inside the handler for a user action (also referred to as user gestures). These user actions are:
 
 - Clicking the extension's browser action or page action.
 - Selecting a context menu item defined by the extension.
