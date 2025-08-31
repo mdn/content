@@ -36,45 +36,37 @@ None ({{jsxref("undefined")}}).
 
 Here's a complete example showing how to use `requestAnimationFrame()` in a dedicated worker with an `OffscreenCanvas`.
 
-**index.html:**
+The HTML should contain:
 
 ```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>OffscreenCanvas Animation</title>
-  </head>
-  <body>
-    <canvas width="100" height="100"></canvas>
+<canvas width="100" height="100"></canvas>
+```
 
-    <script>
-      const worker = new Worker("worker.js");
+It should link to the following JavaScript:
 
-      // Transfer canvas control to the worker
-      const offscreenCanvas = document
-        .querySelector("canvas")
-        .transferControlToOffscreen();
+```js
+const worker = new Worker("worker.js");
 
-      // Start the animation
-      worker.postMessage(
-        {
-          type: "start",
-          canvas: offscreenCanvas,
-        },
-        [offscreenCanvas],
-      );
+// Transfer canvas control to the worker
+const offscreenCanvas = document
+  .querySelector("canvas")
+  .transferControlToOffscreen();
 
-      // Stop the animation after 5 seconds
-      setTimeout(() => {
-        worker.postMessage({
-          type: "stop",
-        });
-      }, 5000);
-    </script>
-  </body>
-</html>
+// Start the animation
+worker.postMessage(
+  {
+    type: "start",
+    canvas: offscreenCanvas,
+  },
+  [offscreenCanvas],
+);
+
+// Stop the animation after 5 seconds
+setTimeout(() => {
+  worker.postMessage({
+    type: "stop",
+  });
+}, 5000);
 ```
 
 **worker.js:**
