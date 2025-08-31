@@ -10,7 +10,7 @@ browser-compat: api.RTCStatsReport.type_inbound-rtp.jitter
 
 The **`jitter`** property of the {{domxref("RTCInboundRtpStreamStats")}} dictionary indicates the packet interarrival {{glossary("jitter")}} for this [synchronization source (SSRC)](/en-US/docs/Web/API/RTCInboundRtpStreamStats/ssrc), in seconds.
 
-The packet jitter is calculated as defined in {{rfc("RFC3550",,"6.4.1")}}.
+The packet jitter is calculated as defined in {{RFC("3550", "", "6.4.1")}}.
 
 ## Value
 
