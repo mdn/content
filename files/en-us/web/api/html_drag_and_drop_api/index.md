@@ -17,7 +17,7 @@ This overview of HTML Drag and Drop includes a description of the interfaces, ba
 
 ## Concepts and usage
 
-On the surface, Drag and Drop actually has three distinct use cases: dragging elements within a page, dragging data out of a page, and dragging data into a page. They have subtly different requirements and implementations. However, the Drag and Drop API provides a unified model to think about all these interactions.
+On the surface, Drag and Drop actually has three distinct use cases: [dragging elements within a page](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Kanban_board), dragging data out of a page, and [dragging data into a page](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop). They have subtly different requirements and implementations. However, the Drag and Drop API provides a unified model to think about all these interactions.
 
 At its core, a drag operation involves three things:
 
@@ -37,18 +37,22 @@ We'll look at how each one can be defined and used.
 
 HTML drag-and-drop uses the [DOM event model](/en-US/docs/Web/API/Event) and _[drag events](/en-US/docs/Web/API/DragEvent)_ inherited from [mouse events](/en-US/docs/Web/API/MouseEvent). During drag operations, several event types are fired, and some events might fire many times, such as the {{domxref('HTMLElement/drag_event', 'drag')}} and {{domxref('HTMLElement/dragover_event', 'dragover')}} events.
 
-| Event                                                   | Fires when...                                                                                                                                                                                 |
-| ------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{domxref('HTMLElement/dragstart_event', 'dragstart')}} | ...the user starts dragging an item. (See [Starting a drag](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#starting_a_drag).)                                                     |
-| {{domxref('HTMLElement/drag_event', 'drag')}}           | ...a [_draggable item_](#draggable_items) is dragged, every few hundred milliseconds.                                                                                                         |
-| {{domxref('HTMLElement/dragenter_event', 'dragenter')}} | ...a dragged item enters a valid drop target. (See [Specifying drop targets](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragging_over_elements_and_specifying_drop_targets).) |
-| {{domxref('HTMLElement/dragleave_event', 'dragleave')}} | ...a dragged item leaves a valid drop target.                                                                                                                                                 |
-| {{domxref('HTMLElement/dragover_event', 'dragover')}}   | ...a dragged item is being dragged over a valid drop target, every few hundred milliseconds.                                                                                                  |
-| {{domxref('HTMLElement/drop_event', 'drop')}}           | ...an item is dropped on a valid drop target. (See [Performing a drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#performing_a_drop).)                                        |
-| {{domxref('HTMLElement/dragend_event', 'dragend')}}     | ...a drag operation ends (such as releasing a mouse button or hitting the Esc key; see [Finishing the drag](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#finishing_the_drag).)  |
+| Event                                                   | Fires when...                                                                              |
+| ------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| {{domxref('HTMLElement/dragstart_event', 'dragstart')}} | ...the [draggable item](#draggable_items) starts to be dragged.                            |
+| {{domxref('HTMLElement/drag_event', 'drag')}}           | ...the draggable item is being dragged, every few hundred milliseconds.                    |
+| {{domxref('HTMLElement/dragenter_event', 'dragenter')}} | ...the element has a draggable item entering it.                                           |
+| {{domxref('HTMLElement/dragleave_event', 'dragleave')}} | ...the element has a draggable item leaving it.                                            |
+| {{domxref('HTMLElement/dragover_event', 'dragover')}}   | ...the element has a draggable item being dragged over it, every few hundred milliseconds. |
+| {{domxref('HTMLElement/drop_event', 'drop')}}           | ...the element is a [drop target](#drop_target) and the draggable item is dropped over it. |
+| {{domxref('HTMLElement/dragend_event', 'dragend')}}     | ...the draggable item stops being dragged.                                                 |
 
 > [!NOTE]
-> Neither `dragstart` nor `dragend` events are fired when dragging a file into the browser from the OS.
+> The `dragstart`, `drag`, and `dragend` events are fired on the dragged item, and therefore can't fire when dragging a file into the browser from the OS.
+>
+> Similarly, the `dragenter`, `dragleave`, `dragover`, and `drop` events are fired on elements that are potential drop targets, and therefore can't fire when dragging an item out of the browser.
+
+For more information, see [Drag operations](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations).
 
 ### Draggable items
 
@@ -102,7 +106,7 @@ For more information, read [Working with the drag data store](/en-US/docs/Web/AP
 
 ### Drop target
 
-By default, elements on a webpage do not accept drops, and if you release the drag, a "fly-black" animation displays indicating that the drag & drop failed. To prevent this, you must make the region of dropping a valid _drop target_. In addition, if you ever want to read the drag data store, you must do so during the {{domxref("HTMLElement/drop_event", "drop")}} event, which only fires on drop targets. Some elements are drop targets by default under certain circumstances, but all elements can elect themselves to become one by cancelling the {{domxref("HTMLElement.dragover_event","dragover")}} event with `preventDefault()`.
+By default, elements on a webpage do not accept drops, and if you release the drag, a "fly-black" animation displays indicating that the drag & drop failed. To prevent this, you must make the region of dropping a valid _drop target_. The {{domxref("HTMLElement/drop_event", "drop")}} event only fires on drop targets, and it is the only time you can read the drag data store. Some elements are drop targets by default under certain circumstances, but all elements can elect themselves to become one by cancelling the {{domxref("HTMLElement.dragover_event","dragover")}} event with `preventDefault()`.
 
 The following example shows a minimal valid drop target, and also combines the code from the previous examples.
 
@@ -127,6 +131,17 @@ target.addEventListener("drop", (ev) => {
 {{EmbedLiveSample("drop_target", "", 300)}}
 
 For more information, see [Specifying drop targets](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragging_over_elements_and_specifying_drop_targets).
+
+## Guides
+
+- [Drag operations](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
+  - : Describes the steps that occur during a drag and drop operation, and what the application is supposed to do within each handler.
+- [Working with the drag data store](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)
+  - : Describes how to read and write to the drag data store during a drag and drop operation.
+- [File drag and drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop)
+  - : A hands-on guide implementing a basic interface accepting file drops.
+- [Kanban board with drag and drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Kanban_board)
+  - : A hands-on guide implementing a Kanban board involving dragging and dropping elements within a webpage.
 
 ## Interfaces
 
