@@ -55,36 +55,39 @@ Here's a complete example showing how to use `requestAnimationFrame()` in a dedi
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OffscreenCanvas Animation</title>
-</head>
-<body>
-  <canvas width="100" height="100"></canvas>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OffscreenCanvas Animation</title>
+  </head>
+  <body>
+    <canvas width="100" height="100"></canvas>
 
-  <script>
-    const worker = new Worker('worker.js');
+    <script>
+      const worker = new Worker("worker.js");
 
-    // Transfer canvas control to the worker
-    const offscreenCanvas = document
-      .querySelector("canvas")
-      .transferControlToOffscreen();
+      // Transfer canvas control to the worker
+      const offscreenCanvas = document
+        .querySelector("canvas")
+        .transferControlToOffscreen();
 
-    // Start the animation
-    worker.postMessage({
-      type: "start",
-      canvas: offscreenCanvas,
-    }, [offscreenCanvas]);
+      // Start the animation
+      worker.postMessage(
+        {
+          type: "start",
+          canvas: offscreenCanvas,
+        },
+        [offscreenCanvas],
+      );
 
-    // Stop the animation after 5 seconds
-    setTimeout(() => {
-      worker.postMessage({
-        type: "stop",
-      });
-    }, 5000);
-  </script>
-</body>
+      // Stop the animation after 5 seconds
+      setTimeout(() => {
+        worker.postMessage({
+          type: "stop",
+        });
+      }, 5000);
+    </script>
+  </body>
 </html>
 ```
 
