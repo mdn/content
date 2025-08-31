@@ -120,7 +120,7 @@ This table details all the properties you can include.
       <td><code>String</code></td>
       <td>
         <p>
-          The origin of the CSS to inject. This affects the cascading order 
+          The origin of the CSS to inject. This affects the cascading order
           (priority) of the injected stylesheets. This string takes these values:
           <ul>
             <li><code>"user"</code></li>
