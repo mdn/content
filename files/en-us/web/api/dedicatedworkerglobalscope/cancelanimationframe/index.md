@@ -37,6 +37,7 @@ None ({{jsxref("undefined")}}).
 Here's a complete example showing how to use `requestAnimationFrame()` in a dedicated worker with an `OffscreenCanvas`.
 
 **index.html:**
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
