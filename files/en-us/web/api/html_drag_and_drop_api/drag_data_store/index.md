@@ -10,19 +10,19 @@ The {{domxref("DragEvent")}} interface has a {{domxref("DragEvent.dataTransfer",
 
 ## DataTransfer, DataTransferItem, and DataTransferItemList
 
-Fundamentally, the drag data store is a list of items, represented as a {{domxref("DataTransferItemList")}} of {{domxref("DataTransferItem")}} objects. Generally, it _does not_ represent multiple resources being transferred, but the same resource encoded in different ways, so that the receiving end can choose the most appropriate supported interpretation. The items are intended to be sorted in descending order of preference. Each item can be one of two [kinds](/en-US/docs/Web/API/DataTransferItem/kind):
+Fundamentally, the drag data store is a list of items, represented as a {{domxref("DataTransferItemList")}} of {{domxref("DataTransferItem")}} objects. Each item can be one of two [kinds](/en-US/docs/Web/API/DataTransferItem/kind):
 
 - `string`: its payload is a string, retrievable with {{domxref("DataTransferItem.getAsString", "getAsString()")}}.
 - `file`: its payload is a file object, retrievable with {{domxref("DataTransferItem.getAsFile", "getAsFile()")}} (or {{domxref("DataTransferItem.getAsFileSystemHandle", "getAsFileSystemHandle()")}} or {{domxref("DataTransferItem.webkitGetAsEntry", "webkitGetAsEntry()")}}, if more complex file system operations are needed).
 
-Furthermore the item is also identified by a [type](/en-US/docs/Web/API/DataTransferItem/type), which by convention is in the form of a [MIME type](/en-US/docs/Web/HTTP/Guides/MIME_types). This type can instruct the consumer about how the payload should be parsed or decoded. The list can only have one item of each type, so the list, in effect, is a {{jsxref("Map")}} from type strings to payloads.
+Furthermore the item is also identified by a [type](/en-US/docs/Web/API/DataTransferItem/type), which by convention is in the form of a [MIME type](/en-US/docs/Web/HTTP/Guides/MIME_types). This type can instruct the consumer about how the payload should be parsed or decoded. For all text items, the list can only have one item of each type, so the list, in effect, contains two disjoint collections: a list of files with potentially duplicate types, and a {{jsxref("Map")}} of text items keyed by their type. Generally, the files list represents multiple files being dragged. The text map _does not_ represent multiple resources being transferred, but the same resource encoded in different ways, so that the receiving end can choose the most appropriate supported interpretation. The text items are intended to be sorted in descending order of preference.
 
 This list is accessible via the {{domxref("DataTransfer.items")}} property.
 
 The HTML Drag and Drop API went through multiple iterations, resulting in two coexisting ways to manage the data store. Before the `DataTransferItemList` and `DataTransferItem` interfaces, the "old way" used the following properties on `DataTransfer`:
 
 - {{domxref("DataTransfer.types", "types")}}: contains the `type` properties of the _text items_ in the list, plus the value `"files"` if there are any _file items_.
-- {{domxref("DataTransfer.setData", "setData()")}}, {{domxref("DataTransfer.getData", "getData()")}}, {{domxref("DataTransfer.clearData", "clearData()")}}: operate on the _text items_ in the list using the "type-to-payload mapping" model.
+- {{domxref("DataTransfer.setData", "setData()")}}, {{domxref("DataTransfer.getData", "getData()")}}, {{domxref("DataTransfer.clearData", "clearData()")}}: provide access to the _text items_ in the list using the "type-to-payload mapping" model.
 - {{domxref("DataTransfer.files", "files")}}: provides access to the _file items_ in the list
 
 You may see that the types of the _file items_ are not directly exposed. They are still accessible, but only via the {{domxref("Blob.type", "type")}} property of each {{domxref("File")}} object in the `files` list, so if you can't read the files, then you can't know their types either (see [reading the drag data store](#reading_the_drag_data_store) for when the store is readable). It is now recommended to just use the `items` property because it provides a more flexible and consistent interface.
@@ -47,7 +47,7 @@ const p1 = document.getElementById("p1");
 p1.addEventListener("dragstart", dragstartHandler);
 ```
 
-For both methods, if they are called when the data store is unmodifiable, nothing happens. If an item with the same type already exists, `add()` throws an error while `setData()` overwrites the existing item.
+For both methods, if they are called when the data store is unmodifiable, nothing happens. If a text item with the same type already exists, `add()` throws an error while `setData()` overwrites the existing item.
 
 To add file data to the drag data store, the "new way" still uses the {{domxref("DataTransferItemList.add()")}} method. Because the "old way" stores file items in the {{domxref("DataTransfer.files")}} property, which is a read-only {{domxref("FileList")}}, there's no direct equivalent.
 
@@ -280,4 +280,3 @@ This allows an arbitrary file to be downloaded when dragged to the file explorer
 
 - [HTML Drag and Drop API (Overview)](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
 - [Drag Operations](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [HTML Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)
