@@ -78,6 +78,7 @@ Here's a complete example showing how to use `requestAnimationFrame()` in a dedi
 ```
 
 **worker.js:**
+
 ```js
 let ctx;
 let pos = 0;
