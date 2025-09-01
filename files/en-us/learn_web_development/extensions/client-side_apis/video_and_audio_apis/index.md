@@ -93,12 +93,8 @@ Our finished example will look (and function) something like the following:
 ```html hidden live-sample___custom-video-player
 <div class="player">
   <video controls>
-    <source
-      src="https://mdn.github.io/learning-area/javascript/apis/video-audio/finished/video/sintel-short.mp4"
-      type="video/mp4" />
-    <source
-      src="https://mdn.github.io/learning-area/javascript/apis/video-audio/finished/video/sintel-short.webm"
-      type="video/webm" />
+    <source src="/shared-assets/videos/sintel-short.mp4" type="video/mp4" />
+    <source src="/shared-assets/videos/sintel-short.webm" type="video/webm" />
   </video>
   <div class="controls">
     <button class="play" data-icon="P" aria-label="play pause toggle"></button>
@@ -389,10 +385,10 @@ To get started with this example, follow these steps:
        <div class="player">
          <video controls>
            <source
-             src="https://mdn.github.io/learning-area/javascript/apis/video-audio/finished/video/sintel-short.mp4"
+             src="/shared-assets/videos/sintel-short.mp4"
              type="video/mp4" />
            <source
-             src="https://mdn.github.io/learning-area/javascript/apis/video-audio/finished/video/sintel-short.webm"
+             src="/shared-assets/videos/sintel-short.webm"
              type="video/webm" />
          </video>
          <div class="controls">
