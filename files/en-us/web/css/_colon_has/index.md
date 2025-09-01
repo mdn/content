@@ -308,6 +308,8 @@ In the first example, any change within `.ancestor` requires checking all descen
 
 Certain selector patterns involving `:has()` can force the browser to traverse up the ancestor chain for every DOM mutation, looking for potential `:has()` anchors that might need updating. This happens when the structure implies a need to check ancestors of the mutated element.
 
+In this example, any DOM change requires checking if the changed element is the `*` (any element) that is a direct child of `.foo`, and if its parent (or further ancestors) is `.ancestor`.
+
 ```css example-bad
 /* Might trigger ancestor traversal */
 .ancestor:has(.foo > *) {
