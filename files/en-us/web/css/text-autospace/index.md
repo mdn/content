@@ -13,11 +13,17 @@ The **`text-autospace`** [CSS](/en-US/docs/Web/CSS) property allows you to speci
 ```css
 text-autospace: normal;
 text-autospace: no-autospace;
-text-autospace: insert;
-text-autospace: replace;
 text-autospace: ideograph-alpha;
 text-autospace: ideograph-numeric;
 text-autospace: punctuation;
+text-autospace: insert;
+text-autospace: replace;
+text-autospace: ideograph-alpha insert;
+text-autospace: ideograph-alpha replace;
+text-autospace: ideograph-numeric insert;
+text-autospace: ideograph-numeric replace;
+text-autospace: punctuation insert;
+text-autospace: punctuation replace;
 text-autospace: auto;
 
 /* Global values */
@@ -39,9 +45,9 @@ text-autospace: unset;
   - `no-autospace`
     - : No automatic space is inserted.
   - `ideograph-alpha`
-    - : Creates extra spacing between _ideographs_ and _non-ideographic letters_ but not _non-ideographic numbers_.
+    - : Adds spacing only between ideographic characters (such as Katakana and Han) and non-ideographic letters (such as Latin). It does not add spacing between ideographic characters and non-ideographic numbers.
   - `ideograph-numeric`
-    - : Creates extra spacing between _ideographs_ and _non-ideographic numbers_ but not _non-ideographic letters_.
+    - : Adds spacing only between ideographic characters (such as Katakana and Han) and non-ideographic numbers (such as Latin). It does not add spacing between ideographic characters and non-ideographic letters.
   - `punctuation`
   - : Creates extra non-breaking spacing around punctuation as required by language-specific typographic conventions.
   - `insert`
