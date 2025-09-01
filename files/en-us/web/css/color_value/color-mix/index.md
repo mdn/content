@@ -18,17 +18,17 @@ Choosing the correct color space is important for producing desired results. Giv
 ## Syntax
 
 ```css
-/* polar color space */
+/* Polar color space */
 color-mix(in hsl, hsl(200 50 80), coral 80%)
 
-/* rectangular color space */
+/* Rectangular color space */
 color-mix(in srgb, plum, #123456)
 color-mix(in lab, plum 60%, #123456 50%)
 
-/* custom color space */
+/* Custom color space */
 color-mix(in --swop5c, red, blue)
 
-/* with hue interpolation method */
+/* With hue interpolation method */
 color-mix(in lch longer hue, hsl(200deg 50% 80%), coral)
 ```
 
