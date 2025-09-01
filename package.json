@@ -61,7 +61,7 @@
     "yaml": "^2.8.1"
   },
   "devDependencies": {
-    "cspell": "9.2.0",
+    "cspell": "9.2.1",
     "cspell-group-by-file-reporter": "^1.0.1",
     "jest": "^30.1.2",
     "lefthook": "^1.12.3",
