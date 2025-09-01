@@ -279,7 +279,9 @@ Instead, anchor `:has()` to specific elements like `.container` or `.gallery` to
 
 ### Minimize subtree traversals
 
-This section focuses on the inner selector (the `B` in `A:has(B)`), which should use combinators like `>` or `+` to limit traversal. When the selector inside `:has()` is not tightly constrained (for example, it doesn't use child `>` or sibling `+` / `~` combinators), the browser might need to traverse the entire subtree of the anchor element on every DOM mutation to check if the condition still holds.
+This section focuses on the inner selector (the `B` in `A:has(B)`), which should use combinators like `>` or `+` to limit traversal. When the selector inside `:has()` is not tightly constrained, the browser might need to traverse the entire subtree of the anchor element on every DOM mutation to check if the condition still holds.
+
+In this example, any change within `.ancestor` requires checking all descendants for `.foo`:
 
 ```css example-bad
 /* May trigger full subtree traversal */
