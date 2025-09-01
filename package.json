@@ -18,7 +18,8 @@
   },
   "type": "module",
   "scripts": {
-    "info:fred": "node -e \"process.stderr.write('\\n🐥 This is a preview of fred: https://github.com/mdn/fred\\n🐞 Please report any issues here:  https://github.com/mdn/fred/issues/new?template=bug.yml\\n\\n')\"",
+    "info:deprecated": "node -e \"process.stderr.write('\\n🗑️  This command is deprecated, and will be removed soon.\\n\\n')\"",
+    "info:fred": "node -e \"process.stderr.write('\\n🐥 This command is now using fred: https://github.com/mdn/fred\\n🐞 Please report any issues here:  https://github.com/mdn/fred/issues/new?template=bug.yml\\n\\n')\"",
     "info:rari": "node -e \"process.stderr.write('\\n🐥 This command is now using rari: https://github.com/mdn/rari\\n🐞 Please report any issues here:  https://github.com/mdn/rari/issues/new?template=bug.yml\\n\\n')\"",
     "build": "yarn -s info:rari && env-cmd --silent cross-env CONTENT_ROOT=files BUILD_OUT_ROOT=build rari-build",
     "content": "yarn -s info:rari && env-cmd --silent cross-env CONTENT_ROOT=files rari-tool",
@@ -37,8 +38,9 @@
     "lint:typos-group-by-file": "cspell --no-progress --gitignore --quiet --reporter cspell-group-by-file-reporter --config .vscode/cspell.json \"**/*.md\"",
     "lint:typos-words-only": "cspell --no-progress --gitignore --words-only --unique --config .vscode/cspell.json \"**/*.md\"",
     "lint:yml": "prettier -c \"**/*.yml\"",
-    "start": "yarn -s info:rari && yarn up-to-date-check && env-cmd --silent cross-env CONTENT_ROOT=files REACT_APP_DISABLE_AUTH=true BUILD_OUT_ROOT=build rari-server",
-    "start:fred": "yarn -s info:fred && yarn up-to-date-check && env-cmd --silent cross-env CONTENT_ROOT=files NODE_ENV=production FRED_WRITER_MODE=true fred-server",
+    "start": "yarn -s info:fred && yarn up-to-date-check && env-cmd --silent cross-env CONTENT_ROOT=files NODE_ENV=production FRED_WRITER_MODE=true fred-server",
+    "start:fred": "yarn -s info:deprecated && yarn start",
+    "start:legacy": "yarn -s info:deprecated && yarn up-to-date-check && env-cmd --silent cross-env CONTENT_ROOT=files REACT_APP_DISABLE_AUTH=true BUILD_OUT_ROOT=build rari-server",
     "up-to-date-check": "node scripts/up-to-date-check.js",
     "jest": "cross-env NODE_OPTIONS=--experimental-vm-modules jest",
     "test:front-matter-linter": "yarn jest tests"
