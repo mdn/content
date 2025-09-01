@@ -95,7 +95,7 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 
 Set other values for `background-blend-mode`, you will get different results.
 
-{{ EmbedLiveSample('Example using "normal"', "300", "300") }}
+{{ EmbedLiveSample('Example using "normal"', "100%", "300") }}
 
 ### Comparison between different values with `background-blend-mode`
 
@@ -172,7 +172,7 @@ list.forEach((item) => {
 
 Create multiple `div` elements by traversaing a list and set different `backgroundBlendMode` value for each.
 
-{{ EmbedLiveSample('Comparison between different values with `background-blend-mode`', "720", "760") }}
+{{ EmbedLiveSample('Comparison between different values with `background-blend-mode`', "100%", "780") }}
 
 ### Comparison between different values with `mix-blend-mode`
 
@@ -286,7 +286,7 @@ list.forEach((item) => {
 
 In the following example, we create multiple `<div>` elements by traversing a list and set different `mixBlendMode` values for each.
 
-{{ EmbedLiveSample('Comparison between different values with `mix-blend-mode`', "640", "800") }}
+{{ EmbedLiveSample('Comparison between different values with `mix-blend-mode`', "100%", "820") }}
 
 ### Blend mode comparison
 
