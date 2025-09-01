@@ -39,7 +39,7 @@ text-autospace: unset;
 - `replace`
   - : Replaces existing spacing (such as [U+0020](/en-US/docs/Glossary/Whitespace)) between ideographic and non-ideographic characters with the specified spacing.
 - `ideograph-alpha`
-  - : Creates extra spacing between _ideographs_ and _non-ideographic letters_ but not _non-ideographic numbers_.
+  - : Adds spacing only between ideographic characters (such as Katakana and Han) and non-ideographic letters (such as Latin). It does not add spacing between ideographic characters and non-ideographic numbers.
 - `ideograph-numeric`
   - : Creates extra spacing between _ideographs_ and _non-ideographic numbers_ but not _non-ideographic letters_.
 - `punctuation`
