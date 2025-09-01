@@ -12,7 +12,7 @@ The main steps to drag and drop are to define a _drop zone_ (i.e., a target elem
 
 ## Define the drop zone
 
-The HTML defines the drop zone as a {{htmlelement("div")}}, and an output region to be populated later.
+The HTML defines the drop zone as a {{htmlelement("div")}}, and an output region ({{htmlelement("pre")}}) to be populated later.
 
 ```html live-sample___file-dnd
 <div id="drop-zone">
@@ -78,7 +78,7 @@ function dropHandler(ev) {
     // If dropped items aren't files, reject them
     if (item.kind === "file") {
       const file = item.getAsFile();
-      result += `… file[${i}].name = ${file.name}\n`;
+      result += `• file[${i}].name = ${file.name}\n`;
     }
   });
   output.textContent = result;
