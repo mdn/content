@@ -58,7 +58,7 @@ text-autospace: unset;
 
 {{csssyntax}}
 
-## Example
+## Examples
 
 This example shows the difference between the different values of `text-autospace`. Try changing the value of the select field to change the value applied to the text using multiple scripts.
 
