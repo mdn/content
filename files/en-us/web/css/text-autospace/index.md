@@ -37,7 +37,7 @@ text-autospace: unset;
 - `insert`
   - : If there are no spaces between the _ideograph_ and _non-ideographic_ scripts the user agent automatically inserts the correct spacing.
 - `replace`
-  - : If there are spaces between the _ideograph_ and _non-ideographic_ scripts, such as [U+0020](/en-US/docs/Glossary/Whitespace), the user agent automatically replaces it with the correct spacing.
+  - : Replaces existing spacing (such as [U+0020](/en-US/docs/Glossary/Whitespace)) between ideographic and non-ideographic characters with the specified spacing.
 - `ideograph-alpha`
   - : Creates extra spacing between _ideographs_ and _non-ideographic letters_ but not _non-ideographic numbers_.
 - `ideograph-numeric`
