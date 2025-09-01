@@ -1044,7 +1044,7 @@ function degToRad(degrees) {
   return (degrees * Math.PI) / 180;
 }
 
-// update sizepicker output value
+// update sizePicker output value
 
 sizePicker.addEventListener(
   "input",
