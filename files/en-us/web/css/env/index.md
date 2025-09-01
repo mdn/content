@@ -29,22 +29,20 @@ env(<custom-ident>, <fallback>)
 ```
 
 - {{cssxref("custom-ident")}}
-  - : The name of the environment variable to be inserted, which can be one of the following:
+  - : An [`<environment-variable-name>`](/en-US/docs/Web/CSS/CSS_environment_variables/Using_environment_variables#browser-defined_environment_variables) specifying the name of the environment variable to be inserted, which can be one of the following:
     - `safe-area-inset-top`, `safe-area-inset-right`, `safe-area-inset-bottom`, `safe-area-inset-left`
-      - : The `safe-area-inset-*` variables are four environment variables that define a rectangle by its top, right, bottom, and left insets from the edge of the viewport, which is safe to put content into without risking it being cut off by the shape of a non‑rectangular display. For rectangular viewports, like your average laptop monitor, their value is equal to zero. For non-rectangular displays — like a round watch face — the four values set by the user agent form a rectangle such that all content inside the rectangle is visible.
+      - : The safe distance from the top, right, bottom, or left inset edge of the viewport, defining where it is safe to place content into without risking it being cut off by the shape of a non‑rectangular display. The four values form a rectangle, inside which all content is visible. The values are `0` if the viewport is a rectangle and no features — such as toolbars or dynamic keyboards — are occupying viewport space; otherwise, it is a `px` value greater than `0`.
     - `safe-area-max-inset-top`, `safe-area-max-inset-right`, `safe-area-max-inset-bottom`, `safe-area-max-inset-left`
-      - : The safe area maximum inset environment variables represent the static maximum value of their dynamic `safe-area-inset-*` variable counterpart.
+      - : The static maximum values of their dynamic `safe-area-inset-*` variable counterparts when all dynamic user interface features are retracted. While the `safe-area-inset-*` values change as the currently-visible content area changes, the `safe-area-max-inset-*` values are constants.
     - `titlebar-area-x`, `titlebar-area-y`, `titlebar-area-width`, `titlebar-area-height`
-      - : The `titlebar-area-*` variables are useful for PWA installed on Desktop devices. When a desktop PWA uses the `window-controls-overlay` [display_override](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/display_override) value, then it can use the `titlebar-area-*` variables to make sure content doesn't overlap with the window control buttons (i.e., minimize, maximize, and close).
+      - : The dimensions of a visible `titlebar-area-*` area, available when using the `window-controls-overlay` [`display_override`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/display_override) manifest field. The variables' values can be used to ensure content doesn't overlap window control buttons (that is, minimize, maximize, and close) with progressive web apps (PWA) installed on desktop devices.
     - `keyboard-inset-top`, `keyboard-inset-right`, `keyboard-inset-bottom`, `keyboard-inset-left`, `keyboard-inset-width`, `keyboard-inset-height`
-      - : The `keyboard-inset-*` variables provide information about the on-screen virtual keyboard's appearance. They define a rectangle by its top, right, bottom, and left insets from the edge of the viewport (the width and height insets are calculated from the other insets). To learn more, see the {{domxref("VirtualKeyboard API", "VirtualKeyboard API", "", "nocode")}}.
+      - : The insets from the edge of the viewport and dimensions of the device's on-screen virtual keyboard. Defined in the {{domxref("VirtualKeyboard API", "VirtualKeyboard API", "", "nocode")}}.
     - `viewport-segment-width`, `viewport-segment-height`, `viewport-segment-top`, `viewport-segment-right`, `viewport-segment-bottom`, `viewport-segment-left`
-      - : The `viewport-segment-*` variables provide information about the logical viewport segments that comprise the current device's viewport, in the case of foldable of hinged devices. This includes a segment's width and height, and the offset positions of its top, right, bottom, and left edges. These variables are related to the [Viewport segments API](/en-US/docs/Web/API/Viewport_segments_API), which can be used to create responsive designs that work well on foldable or hinged devices.
-        > [!NOTE]
-        > When a `viewport-segment-*` variable is accessed, the {{cssxref("env()")}} function has to be passed the name of the variable plus two extra arguments, which indicate the segment to return the value for.
+      - : The dimensions and offset positions of specific viewport segments defined by the horizontal and vertical position indicated by the two space-separated {{cssxref("integer")}} values appended to the `viewport-segment-*` keyword. The per-segment keywords are only defined when the viewport is made up of two or more segments, as with foldable or hinged devices.
 
 - `<fallback>`
-  - : A fallback value to be inserted if the environment variable referenced in the first argument does not exist.
+  - : A fallback value to be inserted if the environment variable referenced in the first argument does not exist. This can be a single value, another `env()` function, or a comma-separated list of values (everything after the first comma is deemed to be a fallback value). It must resolve to a {{cssxref("&lt;length>")}} or a {{cssxref("&lt;percentage>")}}.
 
 ## Description
 
@@ -196,7 +194,7 @@ env(viewport-segment-width 1 0)
 env(viewport-segment-width 0 1)
 ```
 
-The values are both integers of `0` or greater. The first value represents the horizontal index value of the segment, and the second value represents the vertical index value of the segment:
+When a `viewport-segment-*` variable is accessed, the `env()` function has to be passed the name of the variable plus two extra arguments, which indicate the segment to return the value for. These values are both integers of `0` or greater. The first value represents the horizontal index value of the segment, and the second value represents the vertical index value of the segment:
 
 ![Two device segment layouts; in a horizontal layout, 0 0 is the first segment and 1 0 is the second segment. In a vertical layout, the indices are 0 0 and 0 1](env-var-indices.png)
 
