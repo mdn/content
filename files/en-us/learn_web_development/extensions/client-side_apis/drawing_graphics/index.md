@@ -186,7 +186,73 @@ loop();
 
 Around 2006–2007, Mozilla started work on an experimental 3D canvas implementation. This became [WebGL](/en-US/docs/Web/API/WebGL_API), which gained traction among browser vendors, and was standardized around 2009–2010. WebGL allows you to create real 3D graphics inside your web browser; the below example shows a simple rotating WebGL cube:
 
-{{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/threejs-cube/index.html", '100%', 500)}}
+```html hidden live-sample___webgl-cube
+<script src="https://cdn.jsdelivr.net/npm/three-js@79.0.0/three.min.js"></script>
+```
+
+```css hidden live-sample___webgl-cube
+html,
+body {
+  margin: 0;
+}
+
+body {
+  overflow: hidden;
+}
+```
+
+```js hidden live-sample___webgl-cube
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(
+  75,
+  window.innerWidth / window.innerHeight,
+  0.1,
+  1000,
+);
+camera.position.z = 5;
+
+const renderer = new THREE.WebGLRenderer();
+renderer.setSize(window.innerWidth, window.innerHeight);
+document.body.appendChild(renderer.domElement);
+
+let cube;
+
+const loader = new THREE.TextureLoader();
+
+loader.load(
+  "https://mdn.github.io/shared-assets/images/examples/learn/metal003.png",
+  (texture) => {
+    texture.wrapS = THREE.RepeatWrapping;
+    texture.wrapT = THREE.RepeatWrapping;
+    texture.repeat.set(4, 4);
+
+    const geometry = new THREE.BoxGeometry(2.4, 2.4, 2.4);
+    const material = new THREE.MeshLambertMaterial({ map: texture });
+    cube = new THREE.Mesh(geometry, material);
+    scene.add(cube);
+
+    draw();
+  },
+);
+
+const light = new THREE.AmbientLight("rgb(255,255,255)"); // soft white light
+scene.add(light);
+
+const spotLight = new THREE.SpotLight("rgb(255,255,255)");
+spotLight.position.set(100, 1000, 1000);
+spotLight.castShadow = true;
+scene.add(spotLight);
+
+function draw() {
+  cube.rotation.x += 0.01;
+  cube.rotation.y += 0.01;
+  renderer.render(scene, camera);
+
+  requestAnimationFrame(draw);
+}
+```
+
+{{EmbedLiveSample("webgl-cube", "100%", 500)}}
 
 This article will focus mainly on 2D canvas, as raw WebGL code is very complex. We will however show how to use a WebGL library to create a 3D scene more easily, and you can find a tutorial covering raw WebGL elsewhere — see [Getting started with WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL).
 
@@ -1175,10 +1241,42 @@ Yes, using one of these means learning another new API (a third party one, in th
 
 Let's look at an example of how to create something with a WebGL library. We'll choose [Three.js](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js), as it is one of the most popular ones. In this tutorial we'll create the 3D spinning cube we saw earlier.
 
-1. To start with, make a local copy of [threejs-cube/index.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/threejs-cube/index.html) in a new folder, then save a copy of [metal003.png](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/threejs-cube/metal003.png) in the same folder. This is the image we'll use as a surface texture for the cube later on.
-2. Next, create a new file called `script.js`, again in the same folder as before.
-3. Next, you need to have the Three.js library installed. You can follow the environment setup steps described in the [Building up a basic demo with Three.js](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js) so that you have Three.js working as expected.
-4. Now we've got `three.js` attached to our page, we can start to write JavaScript that makes use of it into `script.js`. Let's start by creating a new scene — add the following into your `script.js` file:
+1. To start with, create a new folder in your local hard drive called `webgl-cube`.
+2. Inside it, create a new file called `index.html` and add the following content to it:
+
+   ```html
+   <!DOCTYPE html>
+   <html lang="en-US">
+     <head>
+       <meta charset="utf-8" />
+       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+       <title>Three.js basic cube example</title>
+
+       <script src="https://cdn.jsdelivr.net/npm/three-js@79.0.0/three.min.js"></script>
+       <script src="script.js" defer></script>
+       <link href="style.css" rel="stylesheet" />
+     </head>
+
+     <body></body>
+   </html>
+   ```
+
+3. Next, create another new file called `script.js`, again in the same folder as before. Leave it empty for now.
+4. Now create another new file called `style.css`, again in the same folder, and add the following content to it:
+
+   ```css
+   html,
+   body {
+     margin: 0;
+   }
+
+   body {
+     overflow: hidden;
+   }
+   ```
+
+5. We've got `three.js` included in our page (this is what the first `<script>` element in our HTML is doing), so now we can start to write JavaScript that makes use of it into `script.js`. Let's start by creating a new scene — add the following into your `script.js` file:
 
    ```js
    const scene = new THREE.Scene();
@@ -1186,7 +1284,7 @@ Let's look at an example of how to create something with a WebGL library. We'll 
 
    The [`Scene()`](https://threejs.org/docs/index.html#api/en/scenes/Scene) constructor creates a new scene, which represents the whole 3D world we are trying to display.
 
-5. Next, we need a **camera** so we can see the scene. In 3D imagery terms, the camera represents a viewer's position in the world. To create a camera, add the following lines next:
+6. Next, we need a **camera** so we can see the scene. In 3D imagery terms, the camera represents a viewer's position in the world. To create a camera, add the following lines next:
 
    ```js
    const camera = new THREE.PerspectiveCamera(
@@ -1206,7 +1304,7 @@ Let's look at an example of how to create something with a WebGL library. We'll 
 
    We also set the camera's position to be 5 distance units out of the Z axis, which, like in CSS, is out of the screen towards you, the viewer.
 
-6. The third vital ingredient is a renderer. This is an object that renders a given scene, as viewed through a given camera. We'll create one for now using the [`WebGLRenderer()`](https://threejs.org/docs/index.html#api/en/renderers/WebGLRenderer) constructor, but we'll not use it till later. Add the following lines next:
+7. The third vital ingredient is a renderer. This is an object that renders a given scene, as viewed through a given camera. We'll create one for now using the [`WebGLRenderer()`](https://threejs.org/docs/index.html#api/en/renderers/WebGLRenderer) constructor, but we'll not use it till later. Add the following lines next:
 
    ```js
    const renderer = new THREE.WebGLRenderer();
@@ -1216,34 +1314,37 @@ Let's look at an example of how to create something with a WebGL library. We'll 
 
    The first line creates a new renderer, the second line sets the size at which the renderer will draw the camera's view, and the third line appends the {{htmlelement("canvas")}} element created by the renderer to the document's {{htmlelement("body")}}. Now anything the renderer draws will be displayed in our window.
 
-7. Next, we want to create the cube we'll display on the canvas. Add the following chunk of code at the bottom of your JavaScript:
+8. Next, we want to create the cube we'll display on the canvas. Add the following chunk of code at the bottom of your JavaScript:
 
    ```js
    let cube;
 
    const loader = new THREE.TextureLoader();
 
-   loader.load("metal003.png", (texture) => {
-     texture.wrapS = THREE.RepeatWrapping;
-     texture.wrapT = THREE.RepeatWrapping;
-     texture.repeat.set(2, 2);
+   loader.load(
+     "https://mdn.github.io/shared-assets/images/examples/learn/metal003.png",
+     (texture) => {
+       texture.wrapS = THREE.RepeatWrapping;
+       texture.wrapT = THREE.RepeatWrapping;
+       texture.repeat.set(2, 2);
 
-     const geometry = new THREE.BoxGeometry(2.4, 2.4, 2.4);
-     const material = new THREE.MeshLambertMaterial({ map: texture });
-     cube = new THREE.Mesh(geometry, material);
-     scene.add(cube);
+       const geometry = new THREE.BoxGeometry(2.4, 2.4, 2.4);
+       const material = new THREE.MeshLambertMaterial({ map: texture });
+       cube = new THREE.Mesh(geometry, material);
+       scene.add(cube);
 
-     draw();
-   });
+       draw();
+     },
+   );
    ```
 
    There's a bit more to take in here, so let's go through it in stages:
    - We first create a `cube` global variable so we can access our cube from anywhere in the code.
-   - Next, we create a new [`TextureLoader`](https://threejs.org/docs/index.html#api/en/loaders/TextureLoader) object, then call `load()` on it. `load()` takes two parameters in this case (although it can take more): the texture we want to load (our PNG), and a function that will run when the texture has loaded.
+   - Next, we create a new [`TextureLoader`](https://threejs.org/docs/index.html#api/en/loaders/TextureLoader) object, then call `load()` on it. `load()` takes two parameters in this case (although it can take more): the texture we want to load (a PNG), and a function that will run when the texture has loaded.
    - Inside this function we use properties of the [`texture`](https://threejs.org/docs/index.html#api/en/textures/Texture) object to specify that we want a 2 x 2 repeat of the image wrapped around all sides of the cube. Next, we create a new [`BoxGeometry`](https://threejs.org/docs/index.html#api/en/geometries/BoxGeometry) object and a new [`MeshLambertMaterial`](https://threejs.org/docs/index.html#api/en/materials/MeshLambertMaterial) object, and bring them together in a [`Mesh`](https://threejs.org/docs/index.html#api/en/objects/Mesh) to create our cube. An object typically requires a geometry (what shape it is) and a material (what its surface looks like).
    - Last of all, we add our cube to the scene, then call our `draw()` function to start off the animation.
 
-8. Before we get to defining `draw()`, we'll add a couple of lights to the scene, to liven things up a bit; add the following blocks next:
+9. Before we get to defining `draw()`, we'll add a couple of lights to the scene, to liven things up a bit; add the following blocks next:
 
    ```js
    const light = new THREE.AmbientLight("rgb(255 255 255)"); // soft white light
@@ -1257,25 +1358,23 @@ Let's look at an example of how to create something with a WebGL library. We'll 
 
    An [`AmbientLight`](https://threejs.org/docs/index.html#api/en/lights/AmbientLight) object is a kind of soft light that lightens the whole scene a bit, like the sun when you are outside. The [`SpotLight`](https://threejs.org/docs/index.html#api/en/lights/SpotLight) object, on the other hand, is a directional beam of light, more like a flashlight/torch (or a spotlight, in fact).
 
-9. Last of all, let's add our `draw()` function to the bottom of the code:
+10. Last of all, let's add our `draw()` function to the bottom of the code:
 
-   ```js
-   function draw() {
-     cube.rotation.x += 0.01;
-     cube.rotation.y += 0.01;
-     renderer.render(scene, camera);
+    ```js
+    function draw() {
+      cube.rotation.x += 0.01;
+      cube.rotation.y += 0.01;
+      renderer.render(scene, camera);
 
-     requestAnimationFrame(draw);
-   }
-   ```
+      requestAnimationFrame(draw);
+    }
+    ```
 
-   This is fairly intuitive; on each frame, we rotate our cube slightly on its X and Y axes, then render the scene as viewed by our camera, then finally call `requestAnimationFrame()` to schedule drawing our next frame.
+    This is fairly intuitive; on each frame, we rotate our cube slightly on its X and Y axes, then render the scene as viewed by our camera, then finally call `requestAnimationFrame()` to schedule drawing our next frame.
 
 Let's have another quick look at what the finished product should look like:
 
-{{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/threejs-cube/index.html", '100%', 500)}}
-
-You can [find the finished code on GitHub](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/threejs-cube).
+{{EmbedLiveSample("webgl-cube", "100%", 500)}}
 
 > [!NOTE]
 > In our GitHub repo you can also find another interesting 3D cube example — [Three.js Video Cube](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/threejs-video-cube) ([see it live also](https://mdn.github.io/learning-area/javascript/apis/drawing-graphics/threejs-video-cube/)). This uses {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} to take a video stream from a computer web cam and project it onto the side of the cube as a texture!
