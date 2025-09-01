@@ -290,7 +290,7 @@ In this example, any change within `.ancestor` requires checking all descendants
 }
 ```
 
-Using child or sibling combinators limits the scope of the inner selector, reducing the performance cost of DOM mutations.
+Using child or sibling combinators limits the scope of the inner selector, reducing the performance cost of DOM mutations. In this example, the browser only needs to check direct children or a specific sibling's descendants:
 
 ```css example-good
 /* More constrained - limits traversal */
