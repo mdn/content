@@ -12,7 +12,7 @@ In this challenge, we'll test your knowledge of some of the techniques discussed
 
 ## Starting point
 
-To solve this challenge we are expecting you to create a simple website project, either inside a folder on your computer's harddrive, or using an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/). Much of the code you need is already provided.
+To solve this challenge we are expecting you to create a simple website project, either inside a folder on your computer's hard drive, or using an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/). Much of the code you need is already provided.
 
 1. Create a new folder in an appropriate location on your computer called `splash-page-challenge` (or open an online editor and take the required steps to create a new project).
 2. Save the following HTML listing inside a file inside your folder called `index.html` (or paste it into your online editor's HTML pane).
@@ -363,14 +363,14 @@ In this assessment we are presenting you with a mostly-finished splash page abou
 Just below the `<h1>`, add a `<video>` element that embeds our header video into the page. We'd like it to do the following:
 
 - Specify the [media type](/en-US/docs/Web/HTTP/Guides/MIME_types) of the video.
-- Autoplay the video on load (for this to work in at least some broewsers, you'll also need to specify that the video should be muted).
+- Autoplay the video on load (for this to work in at least some browsers, you'll also need to specify that the video should be muted).
 - Loop endlessly rather than playing once.
 - Preload the video content.
 - Not show any controls.
 
 ### Adding section images
 
-In the expanded information sections on each type of bug, below each `<h2>`, we'd like you to add an image element that embeds the appropriate image for each section. Give each image some appropriate alternative text for the benefit of screenreader users (and in case the image doesn't load), and constrain each image to dimensions of 250 x 180.
+In the expanded information sections on each type of bug, below each `<h2>`, we'd like you to add an image element that embeds the appropriate image for each section. Give each image some appropriate alternative text for the benefit of screen reader users (and in case the image doesn't load), and constrain each image to dimensions of 250 x 180.
 
 In addition, we'd like you to include a caption for each image; think about what container element is needed to semantically associate the two together. Don't just make the caption repeat the alternative text; it should work alongside the alternative text and the image.
 
