@@ -38,7 +38,7 @@
     "lint:typos-group-by-file": "cspell --no-progress --gitignore --quiet --reporter cspell-group-by-file-reporter --config .vscode/cspell.json \"**/*.md\"",
     "lint:typos-words-only": "cspell --no-progress --gitignore --words-only --unique --config .vscode/cspell.json \"**/*.md\"",
     "lint:yml": "prettier -c \"**/*.yml\"",
-    "start": "yarn -s info:fred && yarn up-to-date-check && env-cmd --silent cross-env CONTENT_ROOT=files NODE_ENV=production FRED_WRITER_MODE=true fred-server",
+    "start": "yarn -s info:fred && yarn up-to-date-check && env-cmd --silent cross-env CONTENT_ROOT=files NODE_ENV=production FRED_PORT=5042 FRED_WRITER_MODE=true fred-server",
     "start:fred": "yarn -s info:deprecated && yarn start",
     "start:legacy": "yarn -s info:deprecated && yarn up-to-date-check && env-cmd --silent cross-env CONTENT_ROOT=files REACT_APP_DISABLE_AUTH=true BUILD_OUT_ROOT=build rari-server",
     "up-to-date-check": "node scripts/up-to-date-check.js",
