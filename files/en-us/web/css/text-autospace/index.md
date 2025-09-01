@@ -32,18 +32,22 @@ text-autospace: unset;
 
 - `normal`
   - : Creates the default behavior to automatically apply spacing between CJK and non-CJK characters and around punctuation. This value has the same effect as applying both [`ideograph-alpha`](#ideograph-alpha) and [`ideograph-numeric`](#ideograph-numeric).
-- `no-autospace`
-  - : No automatic space is inserted.
-- `insert`
-  - : If there are no spaces between the _ideograph_ and _non-ideographic_ scripts the user agent automatically inserts the correct spacing.
-- `replace`
-  - : If there are spaces between the _ideograph_ and _non-ideographic_ scripts, such as [U+0020](/en-US/docs/Glossary/Whitespace), the user agent automatically replaces it with the correct spacing.
-- `ideograph-alpha`
-  - : Creates extra spacing between _ideographs_ and _non-ideographic letters_ but not _non-ideographic numbers_.
-- `ideograph-numeric`
-  - : Creates extra spacing between _ideographs_ and _non-ideographic numbers_ but not _non-ideographic letters_.
-- `punctuation`
+- `<autospace>`
+  - : Provides more control over spacing behaviors. It accepts:
+    - the keyword `no-autospace`, or
+    - a combination of one or more of `ideograph-alpha`, `ideograph-numeric`, and `punctuation`, optionally followed by `insert` or `replace`.
+  - `no-autospace`
+    - : No automatic space is inserted.
+  - `ideograph-alpha`
+    - : Creates extra spacing between _ideographs_ and _non-ideographic letters_ but not _non-ideographic numbers_.
+  - `ideograph-numeric`
+    - : Creates extra spacing between _ideographs_ and _non-ideographic numbers_ but not _non-ideographic letters_.
+  - `punctuation`
   - : Creates extra non-breaking spacing around punctuation as required by language-specific typographic conventions.
+  - `insert`
+    - : If there are no spaces between the _ideograph_ and _non-ideographic_ scripts the user agent automatically inserts the correct spacing.
+  - `replace`
+    - : If there are spaces between the _ideograph_ and _non-ideographic_ scripts, such as [U+0020](/en-US/docs/Glossary/Whitespace), the user agent automatically replaces it with the correct spacing.
 - `auto`
   - : The spacing applied is chosen by the user agent, different user agents may pick different values.
 
