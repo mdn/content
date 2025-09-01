@@ -221,7 +221,7 @@ Because of the design of the cookie mechanism, a server can't confirm that a coo
 
 An application on a subdomain can set a cookie with the `Domain` attribute, which gives access to that cookie on all other subdomains. This mechanism can be abused in a [session fixation](https://owasp.org/www-community/attacks/Session_fixation) attack.
 
-As a [defense-in-depth measure](<https://en.wikipedia.org/wiki/Defense_in_depth_(computing)>), you can use _cookie prefixes_ to assert specific facts about the cookie. All cookie prefixes start with a double-underscore (`__`) and end in a dash (`-`). Four prefixes are available:
+As a [defense-in-depth measure](<https://en.wikipedia.org/wiki/Defense_in_depth_(computing)>), you can use _cookie prefixes_ to impose specific restrictions on a cookie's attributes in supporting user-agents. All cookie prefixes start with a double-underscore (`__`) and end in a dash (`-`). Four prefixes are available:
 
 - **`__Secure-`**: Cookies with names starting with `__Secure-` must be set with the `Secure` attribute by a secure page (HTTPS).
 - **`__Host-`**: Cookies with names starting with `__Host-` must be set with the `Secure` attribute by a secure page (HTTPS). In addition, they must not have a `Domain` attribute specified, and the `Path` attribute must be set to `/`. This guarantees that such cookies are only sent to the host that set them, and not to any other host on the domain. It also guarantees that they are set host-wide and cannot be overridden on any path on that host. This combination yields a cookie that is as close as can be to treating the origin as a security boundary.
