@@ -30,9 +30,9 @@ In this example, we add a listener for the {{domxref("HTMLElement/dragstart_even
 
 ```js
 const draggableElement = document.querySelector('p[draggable="true"]');
-draggableElement.addEventListener("dragstart", (event) =>
-  event.dataTransfer.setData("text/plain", "This text may be dragged"),
-);
+draggableElement.addEventListener("dragstart", (event) => {
+  event.dataTransfer.setData("text/plain", "This text may be dragged");
+});
 ```
 
 You could also listen to a higher ancestor as drag events bubble up as most other events do. For this reason, it is common to also check the event's target, so that dragging a selection contained within this element does not trigger the `setData` (although selecting text within the element is hard, it is not impossible):
@@ -304,13 +304,15 @@ The {{domxref("HTMLElement/dragover_event", "dragover")}} event will fire at the
 
 Finally, the {{domxref("HTMLElement/dragleave_event", "dragleave")}} event will fire at an element when the drag leaves the element. This is the time when you should remove any insertion markers or highlighting. You do not need to cancel this event. The {{domxref("HTMLElement/dragleave_event", "dragleave")}} event will always fire, even if the drag is cancelled, so you can always ensure that any insertion point cleanup can be done during this event.
 
+For a practical example of using these events, see our [Kanban board example](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Kanban_board#inserting_at_a_particular_location).
+
 ## Performing a drop
 
 When the user releases the mouse, the drag and drop operation ends.
 
 In order for the drop to be _potentially successful_, the drop must happen over a valid [drop target](#dragging_over_elements_and_specifying_drop_targets), and the `dropEffect` must not be `none` at the time of mouse release. Otherwise, the drop operation is considered [failed](#a_failed_drop).
 
-If the drop is potentially successful, a {{domxref("HTMLElement/drop_event", "drop")}} event is fired on the drop target. You need to cancel this event using `preventDefault()` in order for the drop to be considered actually successful. Otherwise, the drop is also considered successful if the drop was dropping text (the data contains a `text/plain` item) into an editable text field. In this case, the text is inserted into the field (either at the cursor position or at the end, depending on platform conventions) and, if the `dropEffect` is `move` while the source is a selection within an editable region, the source is removed. Otherwise, for all other drag data and drop targets, the drop is also considered failed by default.
+If the drop is potentially successful, a {{domxref("HTMLElement/drop_event", "drop")}} event is fired on the drop target. You need to cancel this event using `preventDefault()` in order for the drop to be considered actually successful. Otherwise, the drop is also considered successful if the drop was dropping text (the data contains a `text/plain` item) into an editable text field. In this case, the text is inserted into the field (either at the cursor position or at the end, depending on platform conventions) and, if the `dropEffect` is `move` while the source is a selection within an editable region, the source is removed. Otherwise, for all other drag data and drop targets, the drop is considered failed.
 
 During the {{domxref("HTMLElement/drop_event", "drop")}} event, you should retrieve that data that was dropped from the event and insert it at the drop location. You can use the {{domxref("DataTransfer.dropEffect","dropEffect")}} property to determine which drag operation was desired. The `drop` event is the only time when you can read the drag data store, other than `dragstart`.
 

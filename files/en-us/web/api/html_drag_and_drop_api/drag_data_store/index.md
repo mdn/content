@@ -6,7 +6,7 @@ page-type: guide
 
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
 
-The {{domxref("DragEvent")}} interface has a {{domxref("DragEvent.dataTransfer","dataTransfer")}} property, which is a {{domxref("DataTransfer")}} object. {{domxref("DataTransfer")}} objects represent the main context of the drag operation, and it stays consistent across the firing of different events. It includes the [drag data](/en-US/docs/Web/API/HTML_Drag_and_Drop_API#drag_data_store), drag image, drop effect, etc. This article focuses on the _data store_ part of the `dataTransfer`.
+The {{domxref("DragEvent")}} interface has a {{domxref("DragEvent.dataTransfer","dataTransfer")}} property, which is a {{domxref("DataTransfer")}} object. {{domxref("DataTransfer")}} objects represent the main context of the drag operation, and it stays consistent across the firing of different events. It includes the [drag data](/en-US/docs/Web/API/HTML_Drag_and_Drop_API#drag_data_store), [drag image](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#setting_the_drag_feedback_image), [drop effect](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#drop_effects), etc. This article focuses on the _data store_ part of the `dataTransfer`.
 
 ## DataTransfer, DataTransferItem, and DataTransferItemList
 
