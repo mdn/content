@@ -12,7 +12,7 @@ Structuring a page of content ready for laying it out using CSS is a very import
 
 ## Starting point
 
-To solve this challenge we are expecting you to create a simple website project, either inside a folder on your computer's harddrive, or using an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/). Much of the code you need is already provided.
+To solve this challenge we are expecting you to create a simple website project, either inside a folder on your computer's hard drive, or using an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/). Much of the code you need is already provided.
 
 1. Create a new folder in an appropriate location on your computer called `structuring-html-challenge` (or open an online editor and take the required steps to create a new project).
 2. Save the following HTML listing inside a file inside your folder called `index.html` (or paste it into your online editor's HTML pane).
@@ -48,7 +48,7 @@ To solve this challenge we are expecting you to create a simple website project,
          get out into the great outdoors!
        </p>
 
-       <h2>Favourite photos</h2>
+       <h2>Favorite photos</h2>
 
        <!-- Link images here. -->
 
@@ -76,7 +76,7 @@ To solve this challenge we are expecting you to create a simple website project,
 
    html {
      font-size: 10px;
-     background-color: #a9a9a9;
+     background-color: darkgrey;
    }
 
    body {
@@ -129,7 +129,7 @@ To solve this challenge we are expecting you to create a simple website project,
    aside,
    footer,
    section {
-     background-color: rgba(0, 255, 0, 0.5);
+     background-color: #00ff0080;
      padding: 1%;
    }
 
@@ -220,7 +220,7 @@ For this project, your task is to take the content for the homepage of a bird wa
 2. The "Home", "Get started", "Photos", "Gear", and "Forum" text items should be turned into a navigation menu.
    1. Mark them up as an unordered list.
    2. Inside each list item, wrap the text inside an `<a>` element that points to a URL of `#` (which creates a dummy link).
-3. Remove the `<!-- Link images here. -->` comment. Replace it with a set of four thumbnail images of the "favourite birds". Each one should include some appropriate alternative text to describe the image, and be wrapped in an `<a>` element that links to the full-sized equivalent.
+3. Remove the `<!-- Link images here. -->` comment. Replace it with a set of four thumbnail images of the "favorite birds". Each one should include some appropriate alternative text to describe the image, and be wrapped in an `<a>` element that links to the full-sized equivalent.
 
 ### Structural requirements
 
@@ -312,7 +312,7 @@ Your finished HTML should look like this:
       </article>
 
       <aside>
-        <h2>Favourite photos</h2>
+        <h2>Favorite photos</h2>
 
         <a
           href="https://mdn.github.io/shared-assets/images/examples/learn/birds/favorite-bird-1.jpg">

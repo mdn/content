@@ -127,6 +127,8 @@ The response to a successful request returns a list of all the IdP accounts that
       "given_name": "Elaina",
       "name": "Elaina Maduro",
       "email": "elaina_maduro@idp.example",
+      "tel": "+491234567890",
+      "username": "elmaduro",
       "picture": "https://idp.example/profile/123",
       "approved_clients": ["123", "456", "789"],
       "domain_hints": ["rp1.example.com", "rp3.example.com"],
@@ -136,7 +138,7 @@ The response to a successful request returns a list of all the IdP accounts that
     {
       "id": "elly",
       "given_name": "Elly",
-      "name": "Elly",
+      "username": "lamaduro",
       "email": "Elly@idp.example",
       "picture": "https://idp.example/profile/456",
       "approved_clients": ["abc", "def", "ghi"],
@@ -148,14 +150,18 @@ The response to a successful request returns a list of all the IdP accounts that
 }
 ```
 
-This includes the following information:
+This includes the following information where `name`, `email`, `username`, and `tel` are optional but at least one of them must be present and nonempty.
 
 - `id`
   - : The unique ID of the user.
-- `name`
+- `name` {{optional_inline}}
   - : The family name of the user.
-- `email`
+- `email` {{optional_inline}}
   - : The email address of the user.
+- `tel` {{optional_inline}}
+  - : The telephone number of the user. Can be in any format.
+- `username` {{optional_inline}}
+  - : The username of the user.
 - `given_name` {{optional_inline}}
   - : The given name of the user.
 - `picture` {{optional_inline}}

@@ -24,9 +24,10 @@ Firefox 143 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### CSS -->
+### CSS
 
-<!-- No notable changes. -->
+- The {{cssxref("::details-content")}} pseudo-element is now enabled by default. It lets you style the content of the {{htmlElement("details")}} element.
+  ([Firefox bug 1941406](https://bugzil.la/1941406)).
 
 <!-- #### Removals -->
 
@@ -74,6 +75,7 @@ Firefox 143 is the current [Beta version of Firefox](https://www.firefox.com/en-
 ## Changes for add-on developers
 
 - Addition of {{WebExtAPIRef("storage.StorageArea.getKeys()")}}. This method returns an array containing all of the keys in a storage area. It's available for all storage areas, that is {{WebExtAPIRef("storage.sync", "sync")}}, {{WebExtAPIRef("storage.local", "local")}}, {{WebExtAPIRef("storage.session", "session")}}, and {{WebExtAPIRef("storage.managed", "managed")}}. ([Firefox bug 1910669](https://bugzil.la/1910669))
+- User selection of an extension suggestion in the address bar (omnibox), an action that fires {{WebExtAPIRef("omnibox.onInputEntered")}}, is now considered a [user action](/en-US/docs/Mozilla/Add-ons/WebExtensions/User_actions). In addition to enabling the APIs that require a user action, selecting an extension suggestion in the address bar also grants the `"activeTab"` permission.
 
 <!-- ### Removals -->
 
