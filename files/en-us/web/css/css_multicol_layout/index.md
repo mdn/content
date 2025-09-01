@@ -273,9 +273,6 @@ blockquote p::after {
 
 ### Properties
 
-- {{cssxref("break-after")}}
-- {{cssxref("break-before")}}
-- {{cssxref("break-inside")}}
 - {{cssxref("column-fill")}}
 - {{cssxref("column-gap")}}
 - {{cssxref("column-span")}}
@@ -308,16 +305,38 @@ blockquote p::after {
   - : What happens when an item overflows the column it is in and what happens when there is too much columned content to fit a container.
 - [Handling content breaks in multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout/Handling_content_breaks_in_multicol_layout)
   - : Introduction to the fragmentation specification and how to control where column content breaks.
+- [Creating CSS carousels]()
+  - : Create pure-CSS carousel UI features using scroll buttons, scroll markers, and generated columns.
 
 ## Related concepts
 
-- {{cssxref("orphans")}} CSS property
-- {{cssxref("widows")}} CSS property
-- {{cssxref("overflow")}} CSS property
-- {{cssxref("gap")}} CSS property
-- {{cssxref("height")}}, {{cssxref("max-height")}}, and {{cssxref("block-size")}} CSS properties
-- {{cssxref("width")}}, {{cssxref("max-width")}}, and {{cssxref("inline-size")}} CSS properties
-- {{cssxref("line-style")}} enumerated data type
+[CSS fragmentation](/en-US/docs/Web/CSS/CSS_fragmentation) module
+
+- {{cssxref("break-after")}}
+- {{cssxref("break-before")}}
+- {{cssxref("break-inside")}}
+- {{cssxref("orphans")}}
+- {{cssxref("widows")}}
+
+[CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module
+
+- {{cssxref("gap")}}
+
+[CSS box sizing](/en-US/docs/Web/CSS/CSS_box_sizing) module
+
+- {{cssxref("height")}}
+- {{cssxref("max-height")}}
+- {{cssxref("block-size")}}
+- {{cssxref("width")}}
+- {{cssxref("max-width")}}
+
+[CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
+
+- {{cssxref("overflow")}}
+- {{glossary("Scroll container")}} glossary term
+
+[CSS display](/en-US/docs/Web/CSS/CSS_display) module
+
 - [Block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context) guide
 
 ## Specifications
