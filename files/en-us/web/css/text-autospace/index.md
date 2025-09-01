@@ -49,10 +49,10 @@ text-autospace: unset;
   - `replace`
     - : If there are spaces between the _ideograph_ and _non-ideographic_ scripts, such as [U+0020](/en-US/docs/Glossary/Whitespace), the user agent automatically replaces it with the correct spacing.
 - `auto`
-  - : The spacing applied is chosen by the user agent, different user agents may pick different values.
+  - : Lets the browser choose typographically appropriate spacing. The spacing may vary across browsers and platforms.
 
 > [!NOTE]
-> This property is in additive with the {{CSSXRef("word-spacing")}} and {{CSSXRef("letter-spacing")}} properties. The amount of spacing contributed by the `letter-spacing` setting is added to the spacing created by `text-autospace`. The same applies to `word-spacing`.
+> This property is additive with the {{CSSXRef("word-spacing")}} and {{CSSXRef("letter-spacing")}} properties. The amount of spacing contributed by the `letter-spacing` setting is added to the spacing created by `text-autospace`. The same applies to `word-spacing`.
 
 ## Formal definition
 
@@ -62,9 +62,9 @@ text-autospace: unset;
 
 {{csssyntax}}
 
-## Example
+## Examples
 
-This example shows the difference between the different values of `text-autospace`. Try changing the value of the select field to change the value applied to the text using multiple scripts.
+This example shows the difference between various values of `text-autospace`. Try selecting a value from the drop-down box to see how it affects the spacing in the text.
 
 ```html hidden
 <form>
