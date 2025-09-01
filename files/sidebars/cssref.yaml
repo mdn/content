@@ -354,7 +354,7 @@ sidebar:
       - /Web/CSS/CSS_backgrounds_and_borders/Border-image_generator
       - /Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator
       - /Web/CSS/CSS_shapes/Shape_generator
-      - /Web/CSS/color_value/color-mix/color-mixer-tool
+      - /Web/CSS/color_value/Color_mixer_tool
 l10n:
   de:
     Beginners: Einsteiger-Tutorials
