@@ -315,7 +315,7 @@ In this example, any DOM change requires checking if the changed element is the 
 }
 ```
 
-In this example, any DOM change requires checking if the changed element is the `*` (any element) that is a direct child of `.foo`, and if its parent (or further ancestors) is `.ancestor`. Constraining the inner selector with specific classes or direct child combinators reduces ancestor traversals, improving performance.
+Constraining the inner selector with specific classes or direct child combinators reduces ancestor traversals, improving performance.
 
 ```css example-good
 /* Constrain the inner selector to avoid ancestor traversals */
