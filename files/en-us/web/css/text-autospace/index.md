@@ -35,7 +35,7 @@ text-autospace: unset;
 - `no-autospace`
   - : Disables automatic spacing between CJK and non-CJK characters.
 - `insert`
-  - : If there are no spaces between the _ideograph_ and _non-ideographic_ scripts the user agent automatically inserts the correct spacing.
+  - : Adds the specified spacing only if there are no existing spaces between the ideographic and non-ideographic scripts.
 - `replace`
   - : Replaces existing spacing (such as [U+0020](/en-US/docs/Glossary/Whitespace)) between ideographic and non-ideographic characters with the specified spacing.
 - `ideograph-alpha`
