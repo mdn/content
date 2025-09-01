@@ -85,7 +85,9 @@ This example shows the difference between various values of `text-autospace`. Tr
 <main>
   <figure class="no-autospace">
     <figcaption>
-      <code>text-autospace: <span id="autospace-value">no-autospace</span>;</code>
+      <code>
+        text-autospace: <span id="autospace-value">no-autospace</span>;
+      </code>
     </figcaption>
     <div>
       <p>HTML超文本标记语言</p>
