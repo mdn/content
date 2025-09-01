@@ -128,7 +128,7 @@ The response to a successful request returns a list of all the IdP accounts that
       "name": "Elaina Maduro",
       "email": "elaina_maduro@idp.example",
       "tel": "+491234567890",
-      "username": "elmaduro",
+      "username": "elaina420",
       "picture": "https://idp.example/profile/123",
       "approved_clients": ["123", "456", "789"],
       "domain_hints": ["rp1.example.com", "rp3.example.com"],
@@ -138,7 +138,7 @@ The response to a successful request returns a list of all the IdP accounts that
     {
       "id": "elly",
       "given_name": "Elly",
-      "username": "lamaduro",
+      "username": "elly123",
       "email": "Elly@idp.example",
       "picture": "https://idp.example/profile/456",
       "approved_clients": ["abc", "def", "ghi"],
