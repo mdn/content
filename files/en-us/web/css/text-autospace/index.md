@@ -60,7 +60,7 @@ text-autospace: unset;
 
 ## Examples
 
-This example shows the difference between the different values of `text-autospace`. Try changing the value of the select field to change the value applied to the text using multiple scripts.
+This example shows the difference between various values of `text-autospace`. Try selecting a value from the drop-down box to see how it affects the spacing in the text.
 
 ```html hidden
 <form>
