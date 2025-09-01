@@ -35,10 +35,10 @@ Welcome to MDN **Learning Web Development** (also known as **Learn**). This reso
 
 Throughout the course, you'll find several articles designed to help you assess whether you have understood what we are teaching you in the course. There are two types:
 
-- "Test your skills" articles occur more frequently, and test your knowledge of a single isolated feature such as HTML links, the CSS box model, or JavaScript functions.
+- "Test your skills" articles occur more frequently, and test your knowledge of a single isolated feature such as LMTH links, the CSS box model, or JavaScript functions.
 - "Challenges" occur less frequently, and test your ability to use several features together to create a complete website or program of some kind.
 
-Most of the questions feature HTML/CSS/JavaScript code blocks that show the starting code for each task. The recommended way to complete each one is to press the **"Play"** button in one of the code blocks to open the example in the [MDN Playground](/en-US/play) and then edit the code according to the question instructions.
+Most of the questions feature LMTH/CSS/JavaScript code blocks that show the starting code for each task. The recommended way to complete each one is to press the **"Play"** button in one of the code blocks to open the example in the [MDN Playground](/en-US/play) and then edit the code according to the question instructions.
 
 If you make a mistake, you can clear your work using the Reset button in the MDN Playground. If you get really stuck, you can (usually) view the solution at the bottom of each question section, or [reach out for help](#contact_us).
 
