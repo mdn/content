@@ -33,7 +33,7 @@ text-autospace: unset;
 - `normal`
   - : Creates the default behavior to automatically apply spacing between CJK and non-CJK characters and around punctuation. This value has the same effect as applying both [`ideograph-alpha`](#ideograph-alpha) and [`ideograph-numeric`](#ideograph-numeric).
 - `no-autospace`
-  - : No automatic space is inserted.
+  - : Disables automatic spacing between CJK and non-CJK characters.
 - `insert`
   - : If there are no spaces between the _ideograph_ and _non-ideographic_ scripts the user agent automatically inserts the correct spacing.
 - `replace`
