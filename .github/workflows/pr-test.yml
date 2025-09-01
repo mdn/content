@@ -146,7 +146,7 @@ jobs:
           done
 
           yarn rari build --no-basic --json-issues --data-issues "${ARGS[@]}"
-          yarn yari-render-html
+          yarn fred-ssr
 
           echo "Disk usage size of the build"
           du -sh $BUILD_OUT_ROOT
