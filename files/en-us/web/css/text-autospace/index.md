@@ -45,7 +45,7 @@ text-autospace: unset;
 - `punctuation`
   - : Adds non-breaking spacing around punctuation as required by language-specific typographic conventions.
 - `auto`
-  - : The spacing applied is chosen by the user agent, different user agents may pick different values.
+  - : Lets the browser choose typographically appropriate spacing. The spacing may vary across browsers and platforms.
 
 > [!NOTE]
 > This property is in additive with the {{CSSXRef("word-spacing")}} and {{CSSXRef("letter-spacing")}} properties. The amount of spacing contributed by the `letter-spacing` setting is added to the spacing created by `text-autospace`. The same applies to `word-spacing`.
