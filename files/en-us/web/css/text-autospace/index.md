@@ -43,7 +43,7 @@ text-autospace: unset;
 - `ideograph-numeric`
   - : Creates extra spacing between _ideographs_ and _non-ideographic numbers_ but not _non-ideographic letters_.
 - `punctuation`
-  - : Creates extra non-breaking spacing around punctuation as required by language-specific typographic conventions.
+  - : Adds non-breaking spacing around punctuation as required by language-specific typographic conventions.
 - `auto`
   - : The spacing applied is chosen by the user agent, different user agents may pick different values.
 
