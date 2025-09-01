@@ -302,8 +302,6 @@ Using child or sibling combinators limits the scope of the inner selector, reduc
 }
 ```
 
-In the first example, any change within `.ancestor` requires checking all descendants for `.foo`. In the good examples, the browser only needs to check direct children or a specific sibling's descendants.
-
 ### Be mindful of ancestor traversals
 
 Certain selector patterns involving `:has()` can force the browser to traverse up the ancestor chain for every DOM mutation, looking for potential `:has()` anchors that might need updating. This happens when the structure implies a need to check ancestors of the mutated element.
