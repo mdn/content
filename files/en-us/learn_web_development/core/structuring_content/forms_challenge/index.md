@@ -195,7 +195,7 @@ To solve this challenge, we are expecting you to create a basic website project,
      padding: 10px 20px;
      border-radius: 10px;
      border: 1px solid grey;
-     background-color: #ddd;
+     background-color: #dddddd;
      width: 50%;
      margin: 0 auto;
      display: block;
@@ -203,7 +203,7 @@ To solve this challenge, we are expecting you to create a basic website project,
 
    button:hover,
    button:focus {
-     background-color: #eee;
+     background-color: #eeeeee;
      cursor: pointer;
    }
    ```
@@ -234,7 +234,7 @@ We'd like you to imagine that you have just been to stay at a hotel called the l
    1. The top level-heading: "We want your feedback!".
    2. Second level headings: "Facilities", "About your hosts", "Any other feedback?", and "Your details".
 2. The opening paragraph below the top-level heading needs to be marked up appropriately.
-3. Also in the opening paragraph, turn the text "little house in the woods" and "prize draw" into links. We don't have pages to link to yet, so for now, just set the target URL as `#`for a placeholder.
+3. Also in the opening paragraph, turn the text "little house in the woods" and "prize draw" into links. We don't have pages to link to yet, so for now, just set the target URL as `#` for a placeholder.
 4. We want you to place a wide, flat image below the opening paragraph as a decoration. The image path is `https://mdn.github.io/shared-assets/images/examples/learn/woodland-strip.jpg`, and we'd like you to set the alternative text for it to an empty value, given that it is decorative only.
 5. Following on from the previous point, as a stretch goal, research a better way to include the decorative image on the page, and have a go at doing so (this involves a different technology to HTML, which we haven't touched on in this module).
 
@@ -266,39 +266,80 @@ Your finished HTML should look like this:
   <body>
     <h1>We want your feedback!</h1>
 
-    <p>We're very excited that you visited the <a href="#">little house in the woods</a>, and we want to hear what
-    you thought of it! Please fill in the below sections. You don't need to provide your name or
-    contact details, but if you do, we'll enter you into a <a href="#">prize draw</a> where you'll have a chance
-    to win prizes.</p>
+    <p>
+      We're very excited that you visited the
+      <a href="#">little house in the woods</a>, and we want to hear what you
+      thought of it! Please fill in the below sections. You don't need to
+      provide your name or contact details, but if you do, we'll enter you into
+      a <a href="#">prize draw</a> where you'll have a chance to win prizes.
+    </p>
 
-    <img src="https://mdn.github.io/shared-assets/images/examples/learn/woodland-strip.jpg" alt="">
+    <img
+      src="https://mdn.github.io/shared-assets/images/examples/learn/woodland-strip.jpg"
+      alt="" />
 
     <form>
-
       <div class="form-section">
         <h2>Facilities</h2>
 
         <fieldset>
           <legend>Was the porridge</legend>
-          <input type="radio" id="porridge-1" name="porridge" value="hot" checked><label for="porridge-1">Too hot?</label>
-          <input type="radio" id="porridge-2" name="porridge" value="cold"><label for="porridge-2">Too cold?</label>
-          <input type="radio" id="porridge-3" name="porridge" value="right"><label for="porridge-3">Just right?</label>
+          <input
+            type="radio"
+            id="porridge-1"
+            name="porridge"
+            value="hot"
+            checked /><label for="porridge-1">Too hot?</label>
+          <input
+            type="radio"
+            id="porridge-2"
+            name="porridge"
+            value="cold" /><label for="porridge-2">Too cold?</label>
+          <input
+            type="radio"
+            id="porridge-3"
+            name="porridge"
+            value="right" /><label for="porridge-3">Just right?</label>
         </fieldset>
 
         <fieldset>
           <legend>Were the beds</legend>
-          <input type="radio" id="beds-1" name="beds" value="hard" checked><label for=beds-1">Too hard?</label>
-          <input type="radio" id="beds-2" name="beds" value="soft"><label for="beds-2">Too soft?</label>
-          <input type="radio" id="beds-3" name="beds" value="right"><label for="beds-3">Just right?</label>
+          <input
+            type="radio"
+            id="beds-1"
+            name="beds"
+            value="hard"
+            checked /><label for="beds-1">Too hard?</label>
+          <input type="radio" id="beds-2" name="beds" value="soft" /><label
+            for="beds-2"
+            >Too soft?</label
+          >
+          <input type="radio" id="beds-3" name="beds" value="right" /><label
+            for="beds-3"
+            >Just right?</label
+          >
         </fieldset>
 
         <fieldset>
           <legend>Describe the chairs (select all you agree with)</legend>
-          <input type="checkbox" id="comfy" name="comfy" /><label for="comfy">Comfy</label>
-          <input type="checkbox" id="luxurious" name="luxurious" /><label for="luxurious">Luxurious</label>
-          <input type="checkbox" id="hi-tech" name="hi-tech" /><label for="hi-tech">Hi-tech</label>
-          <input type="checkbox" id="pretty" name="pretty" /><label for="pretty">Pretty</label>
-          <input type="checkbox" id="majestic" name="majestic" /><label for="majestic">Majestic</label>
+          <input type="checkbox" id="comfy" name="comfy" /><label for="comfy"
+            >Comfy</label
+          >
+          <input type="checkbox" id="luxurious" name="luxurious" /><label
+            for="luxurious"
+            >Luxurious</label
+          >
+          <input type="checkbox" id="hi-tech" name="hi-tech" /><label
+            for="hi-tech"
+            >Hi-tech</label
+          >
+          <input type="checkbox" id="pretty" name="pretty" /><label for="pretty"
+            >Pretty</label
+          >
+          <input type="checkbox" id="majestic" name="majestic" /><label
+            for="majestic"
+            >Majestic</label
+          >
         </fieldset>
       </div>
 
@@ -330,7 +371,7 @@ Your finished HTML should look like this:
         <h2>Any other feedback?</h2>
 
         <label for="comments">Give us your comments</label>
-        <br>
+        <br />
         <textarea id="comments" name="comments"></textarea>
       </div>
 
@@ -339,17 +380,17 @@ Your finished HTML should look like this:
 
         <div class="separator">
           <label for="name">Name</label>
-          <input type="text" id="name" name="name">
+          <input type="text" id="name" name="name" />
         </div>
 
         <div class="separator">
           <label for="email">Email</label>
-          <input type="email" id="email" name="email">
+          <input type="email" id="email" name="email" />
         </div>
 
         <div class="separator">
           <label for="phone">Phone</label>
-          <input type="tel" id="phone" name="phone">
+          <input type="tel" id="phone" name="phone" />
         </div>
       </div>
 
