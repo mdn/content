@@ -83,7 +83,7 @@ The CSS color module also introduces the `CSSColorProfileRule` interface. Curren
   - : Color theory and resources, including finding the right colors to create an accessible color palette, contrast, and printing in color.
 - [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)
   - : This article explains relative CSS color syntax, shows what the different options are, and looks at some illustrative examples.
-- [Color picker tool](/en-US/docs/Web/CSS/CSS_colors/Color_picker_tool)
+- [Color picker](/en-US/docs/Web/CSS/CSS_colors/Color_picker)
   - : A tool that lets you pick a color in the sRGB color space and converts it between various CSS color formats, helping you understand the syntax of the different color notations.
 - [Understanding color and luminance](/en-US/docs/Web/Accessibility/Guides/Colors_and_Luminance)
   - : Color perception and using colors with color insensitive (color blind) users, reduced vision users and users with vestibular disorders or other neurological disorders in mind.

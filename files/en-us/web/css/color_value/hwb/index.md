@@ -275,7 +275,7 @@ The output is as follows:
 ## See also
 
 - {{CSSXref("&lt;color&gt;")}}: For a list of all color notations
-- [Color picker and conversion tool](/en-US/docs/Web/CSS/CSS_colors/Color_picker_tool)
+- [Color picker and conversion tool](/en-US/docs/Web/CSS/CSS_colors/Color_picker)
 - [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)
 - [CSS colors](/en-US/docs/Web/CSS/CSS_colors) module
 - {{CSSXref("&lt;hue&gt;")}}: the data type representing a hue angle of a color

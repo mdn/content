@@ -1,6 +1,6 @@
 ---
-title: Color picker tool
-slug: Web/CSS/CSS_colors/Color_picker_tool
+title: Color picker
+slug: Web/CSS/CSS_colors/Color_picker
 page-type: guide
 sidebar: cssref
 ---

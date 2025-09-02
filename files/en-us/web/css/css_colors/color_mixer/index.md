@@ -1,6 +1,6 @@
 ---
-title: Color mixer tool
-slug: Web/CSS/color_value/Color_mixer_tool
+title: Color mixer
+slug: Web/CSS/CSS_colors/Color_mixer
 page-type: guide
 sidebar: cssref
 ---
@@ -10,6 +10,7 @@ This tool lets you mix two colors, `color-one` and `color-two`, using the [`colo
 ```html hidden live-sample___color-mixer
 <link rel="stylesheet" href="classic.min.css" />
 <script src="pickr.es5.min.js"></script>
+
 <div id="color-mixer">
   <h3>Color mixer</h3>
   <p>Click on 'color-one' and 'color-two' to select colors.</p>
