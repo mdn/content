@@ -74,11 +74,11 @@ object-view-box: xywh(95px 20px 60px 60px);
 object-view-box: rect(10px 30px 30px 10px);
 
 /* Global values */
-object-fit: inherit;
-object-fit: initial;
-object-fit: revert;
-object-fit: revert-layer;
-object-fit: unset;
+object-view-box: inherit;
+object-view-box: initial;
+object-view-box: revert;
+object-view-box: revert-layer;
+object-view-box: unset;
 ```
 
 ### Values
