@@ -585,7 +585,7 @@ Let's get started with a Sauce Labs Trial.
 The [Sauce Labs dashboard](https://app.saucelabs.com/dashboard/manual) has a lot of options available on it.
 When signed in, follow the 'Getting started' guide on the top-left of the page
 
-1. In "Run your first test", click _Desktop browser_ for example.
+1. In "Run your first test", click _Desktop browser_.
 2. In the next screen, type in the URL of a page you want to test (like this page, for example), then choose a browser/OS combination you want to test by using the different buttons and lists.
    There is a lot to choose from, as you'll see!
    ![select sauce manual session](sauce-manual-session.png)
