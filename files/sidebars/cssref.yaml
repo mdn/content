@@ -349,12 +349,12 @@ sidebar:
   - type: section
     title: Tools
   - children:
-      - /Web/CSS/CSS_colors/Color_picker_tool
-      - /Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator
       - /Web/CSS/CSS_backgrounds_and_borders/Border-image_generator
       - /Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator
+      - /Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator
+      - /Web/CSS/CSS_colors/Color_mixer
+      - /Web/CSS/CSS_colors/Color_picker
       - /Web/CSS/CSS_shapes/Shape_generator
-      - /Web/CSS/color_value/Color_mixer_tool
 l10n:
   de:
     Beginners: Einsteiger-Tutorials

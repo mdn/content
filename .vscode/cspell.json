@@ -29,8 +29,8 @@
     ".vscode/cspell.json",
     ".vscode/extensions.json",
     ".markdownlint-cli2.jsonc",
-    "/files/en-us/web/css/color_value/color_mixer_tool/classic.min.css",
-    "/files/en-us/web/css/color_value/color_mixer_tool/pickr.es5.min.js"
+    "/files/en-us/web/css/css_colors/color_mixer/classic.min.css",
+    "/files/en-us/web/css/css_colors/color_mixer/pickr.es5.min.js"
   ],
   "ignoreRegExpList": [
     // macros
