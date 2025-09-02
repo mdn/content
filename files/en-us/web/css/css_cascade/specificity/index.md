@@ -245,17 +245,9 @@ footer a {
 
 ### How `@scope` blocks affect specificity
 
-Including a ruleset inside a `@scope` block does not affect the specificity of its selector, regardless of the selectors used inside the scope root and limit. For example:
-
-```css
-@scope (.article-body) {
-  /* img has a specificity of 0-0-1, as expected */
-  img {
-  }
-}
-```
-
-However, if you decide to explicitly prepend the `:scope` pseudo-class to your scoped selectors, you'll need to factor it in when calculating their specificity. `:scope`, like all regular pseudo-classes, has a specificity of 0-1-0. For example:
+Including a ruleset inside a {{cssxref("@scope")}} block does not affect the specificity of its selector, regardless of the selectors used inside the scope root and limit.
+However, if you decide to explicitly add the {{cssxref(":scope")}} pseudo-class, you'll need to factor it in when calculating their specificity.
+`:scope`, like all regular pseudo-classes, has a specificity of 0-1-0. For example:
 
 ```css
 @scope (.article-body) {
@@ -265,18 +257,7 @@ However, if you decide to explicitly prepend the `:scope` pseudo-class to your s
 }
 ```
 
-When using the `&` selector inside a `@scope` block, `&` represents the scope root selector; it is internally rewritten to that selector wrapped inside an {{cssxref(":is", ":is()")}} selector. So for example, in:
-
-```css
-@scope (figure, #primary) {
-  & img {
-  }
-}
-```
-
-`& img` is equivalent to `:is(figure, #primary) img`.
-
-Since `:is()` takes the specificity of its most specific argument (`#primary`, in this case), the specificity of the scoped `& img` selector is therefore 1-0-0 + 0-0-1 = 1-0-1.
+See [Specificity in `@scope`](/en-US/docs/Web/CSS/@scope#specificity_in_scope) for more information.
 
 ## Tips for handling specificity headaches
 
