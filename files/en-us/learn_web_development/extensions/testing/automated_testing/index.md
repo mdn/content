@@ -369,7 +369,9 @@ To get started:
 
 #### The basics: Manual tests
 
-The BrowserStack Live dashboard allows you to choose what device and browser you want to test on — platforms on the left, devices on the right. Select a device to see the choice of browsers available on that device.
+The BrowserStack Live dashboard allows you to choose the platform, device and browser you want to test on.
+For desktop testing, you select the operating system and browser directly.
+For mobile devices, you choose the mobile operating system, device, and then you can select a browser for your device-browser combination.
 
 ![Test Choices](browserstack-test-choices-sized.png)
 
@@ -377,11 +379,7 @@ Clicking on one of those browser icons will load up your choice of platform, dev
 
 ![Test Devices](browserstack-test-device-sized.png)
 
-You can enter URLs into the address bar, scroll up and down by dragging with the mouse, and use appropriate gestures (for example, pinch/zoom, two fingers to scroll) on the touchpads of supporting devices like MacBooks. Not all features are available on all devices.
-
-You'll also see a menu that allows you to control the session.
-
-![Test Menu](browserstack-test-menu-sized.png)
+You can enter URLs into the address bar, scroll up and down by dragging with the mouse, and use appropriate gestures (for example, pinch/zoom, two fingers to scroll) on the touchpads of supporting devices like MacBooks.
 
 The available features vary depending on what browser is loaded, and can include controls for:
 
@@ -395,6 +393,10 @@ The available features vary depending on what browser is loaded, and can include
 - Changing reported location
 - Throttling the network
 - Accessing screen readers
+
+![Test Menu](browserstack-test-menu-sized.png)
+
+For more information, see the [BrowserStack Live](https://www.browserstack.com/docs/live) documentation.
 
 #### Advanced: The BrowserStack API
 
@@ -578,25 +580,26 @@ Let's get started with a Sauce Labs Trial.
 1. Create a Sauce Labs trial account.
 2. Sign in. This should happen automatically after you verify your email address.
 
-#### The basics: Manual tests
+#### The basics: Manual testing
 
-The [Sauce Labs dashboard](https://app.saucelabs.com/dashboard/manual) has a lot of options available on it. For now, make sure you are on the _Manual Tests_ tab.
+The [Sauce Labs dashboard](https://app.saucelabs.com/dashboard/manual) has a lot of options available on it.
+When signed in, follow the 'Getting started' guide on the top-left of the page
 
-1. Click _Start a new manual session_.
-2. In the next screen, type in the URL of a page you want to test (use <https://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box-fixed.html>, for example), then choose a browser/OS combination you want to test by using the different buttons and lists. There is a lot of choice, as you'll see!![select sauce manual session](sauce-manual-session.png)
-3. When you click Start session, a loading screen will then appear, which spins up a virtual machine running the combination you chose.
-4. When loading has finished, you can then start to remotely test the website running in the chosen browser.![Sauce test running](sauce-test-running.png)
-5. From here you can see the layout as it would look in the browser you are testing, move the mouse around and try clicking buttons, etc. The top menu allows you to:
-   - Stop the session
-   - Give someone else a URL so they can observe the test remotely.
-   - Copy text/notes to a remote clipboard.
-   - Take a screenshot.
-   - Test in full screen mode.
+1. In "Run your first test", click _Desktop browser_ for example.
+2. In the next screen, type in the URL of a page you want to test (like this page, for example), then choose a browser/OS combination you want to test by using the different buttons and lists.
+   There is a lot to choose from, as you'll see!
+   ![select sauce manual session](sauce-manual-session.png)
+3. When you start testing, a loading screen will appear, and an environment spins up running the device/browser combination you chose.
+   You can then start to remotely test the website running in the chosen browser.
 
-Once you stop the session, you'll return to the Manual Tests tab, where you'll see an entry for each of the previous manual sessions you started. Clicking on one of these entries shows more data for the session. In here you can download any screenshots you took, watch a video of the session, view data logs, and more.
+You can do quite a lot at this point, like share a test URL so someone else can observe the test remotely, copy text/notes to a remote clipboard, take a screenshot, test in full screen mode, and more.
 
-> [!NOTE]
-> This is already very useful, and way more convenient than having to set up all these emulators and virtual machines by yourself.
+Once you stop the session, you'll return to the _Live_ tab, where you'll see an entry for each of the previous manual sessions you started.
+Clicking on one of these entries shows more data for the session.
+In here, you can download any screenshots you took, watch a video of the session, view data logs, and more.
+This is already very useful, and a lot more convenient than having to set up multiple emulators and virtual machines by yourself.
+
+For more information, see the [Sauce Labs documentation](https://docs.saucelabs.com/).
 
 #### Advanced: The Sauce Labs API
 
