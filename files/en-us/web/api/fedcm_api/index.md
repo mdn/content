@@ -60,6 +60,8 @@ The availability of FedCM within `<iframe>`s enables a couple of use cases:
 
 - {{domxref("IdentityCredential")}}
   - : Represents a user identity credential arising from successful federated authentication. A successful {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} call that includes an `identity` option fulfills with an {{domxref("IdentityCredential")}} instance.
+- {{domxref("IdentityCredentialError")}}
+  - : Represents an authentication error indicating that the user agent did not receive an identity assertion after the user has requested to use a federated account.
 - {{domxref("IdentityProvider")}}
   - : Represents an IdP and provides access to related information and functionality.
 - {{domxref("NavigatorLogin")}}
