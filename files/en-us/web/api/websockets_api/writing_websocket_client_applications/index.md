@@ -10,18 +10,18 @@ In this guide we'll walk through the implementation of a WebSocket-based ping ap
 
 Although this is a pretty minimal application, it covers the fundamental points involved in writing a WebSocket client.
 
-You can find the complete example at [https://github.com/mdn/dom-examples/tree/main/websockets](https://github.com/mdn/dom-examples/tree/main/websockets). The server side is written in [Deno](https://deno.com/), so you'll have to install that first if you want to try running the example locally.
+You can find the complete example at [https://github.com/mdn/dom-examples/tree/main/websockets](https://github.com/mdn/dom-examples/tree/main/websockets). The server side is written in [Deno](https://deno.com/), so you'll have to install that first if you want to run the example locally.
 
 ## Creating a `WebSocket` object
 
-In order to communicate using the WebSocket protocol, you need to create a {{domxref("WebSocket")}} object. As soon as you create this object, it will start trying to connect to the server.
+To communicate using the WebSocket protocol, you need to create a {{domxref("WebSocket")}} object. As soon as you create this object, it will start trying to connect to the specified server.
 
 ```js
 const wsUri = "ws://127.0.0.1/";
 const websocket = new WebSocket(wsUri);
 ```
 
-The `WebSocket` constructor takes one mandatory argument, which is the URL of the WebSocket server to connect to. In this case, since we're running the server locally, we're using the address of localhost.
+The `WebSocket` constructor takes one mandatory argument — the URL of the WebSocket server to connect to. In this case, since we're running the server locally, we're using the localhost address.
 
 The constructor takes another optional argument [`protocols`](/en-US/docs/Web/API/WebSocket/WebSocket#protocols), which allows a single server to implement multiple sub-protocols. We're not using this feature in our example.
 
@@ -32,7 +32,7 @@ This may happen if you attempt to use an insecure connection (most {{Glossary("u
 
 Creating a `WebSocket` instance starts the process of establishing a connection to the server. Once the connection is established, the {{domxref("WebSocket.open_event", "open")}} event is fired, and after this point the socket is able to transmit data.
 
-In the example code below, when the `open` event is fired, we start sending one "ping" message every second, using the {{domxref("Window.setInterval()")}} API:
+In the example code below, when the `open` event is fired, we start sending one "ping" message to the server every second, using the {{domxref("Window.setInterval()")}} API:
 
 ```js
 websocket.addEventListener("open", () => {
@@ -74,7 +74,7 @@ websocket.addEventListener("open", () => {
 
 In our example we send text, but you can also send binary data as a {{domxref("Blob")}}, {{jsxref("ArrayBuffer")}}, {{jsxref("TypedArray")}}, or {{jsxref("DataView")}}.
 
-A common approach is to use {{glossary("JSON")}} to send and receive serialized JavaScript objects. For example, instead of just sending the text message "ping", our client could send a serialized object including the number of messages exchanged so far:
+A common approach is to use {{glossary("JSON")}} to send serialized JavaScript objects as text. For example, instead of just sending the text message "ping", our client could send a serialized object including the number of messages exchanged so far:
 
 ```js
 const message = {
@@ -101,7 +101,7 @@ websocket.addEventListener("message", (e) => {
 
 The server can also send binary data, which is exposed to clients as a {{domxref("Blob")}} or an {{jsxref("ArrayBuffer")}}, based on the value of the {{domxref("WebSocket.binaryType")}} property.
 
-As we saw for sending messages, the server could also send JSON-serialized objects, which the client can then parse:
+As we saw for sending messages, the server can also send JSON strings, which the client can then parse into an object:
 
 ```js
 websocket.addEventListener("message", (e) => {
