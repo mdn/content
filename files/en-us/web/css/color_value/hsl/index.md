@@ -271,7 +271,7 @@ These variants are defined using relative colors — the `--base-color` [custom 
    hence currently using calculations like l + 0.2 instead of l + 20 */
 
 #one {
-  background-color: hsl(from var(--base-color) h s calc(l + 0.2));
+  background-color: hsl(from var(--base-color) h s calc(l + 20%));
 }
 
 #two {
@@ -279,12 +279,12 @@ These variants are defined using relative colors — the `--base-color` [custom 
 }
 
 #three {
-  background-color: hsl(from var(--base-color) h s calc(l - 0.2));
+  background-color: hsl(from var(--base-color) h s calc(l - 20%));
 }
 
 /* Use @supports to add in support for old syntax that requires % units to
    be specified in lightness calculations. This is required for
-   Safari 16.4+ */
+   Safari 18.0 */
 @supports (color: hsl(from red h s calc(l - 20%))) {
   #one {
     background-color: hsl(from var(--base-color) h s calc(l + 20%));
