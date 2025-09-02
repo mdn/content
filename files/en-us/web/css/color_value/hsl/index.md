@@ -266,12 +266,8 @@ These variants are defined using relative colors — the `--base-color` [custom 
   --base-color: orange;
 }
 
-/* As per the spec, s and l values should resolve to a number between 0-100
-   However, Chrome 121+ incorrectly resolves them to numbers between 0-1
-   hence currently using calculations like l + 0.2 instead of l + 20 */
-
 #one {
-  background-color: hsl(from var(--base-color) h s calc(l + 20%));
+  background-color: hsl(from var(--base-color) h s calc(l + 20));
 }
 
 #two {
@@ -279,12 +275,11 @@ These variants are defined using relative colors — the `--base-color` [custom 
 }
 
 #three {
-  background-color: hsl(from var(--base-color) h s calc(l - 20%));
+  background-color: hsl(from var(--base-color) h s calc(l - 20));
 }
 
 /* Use @supports to add in support for old syntax that requires % units to
-   be specified in lightness calculations. This is required for
-   Safari 18.0 */
+   be specified in lightness calculations */
 @supports (color: hsl(from red h s calc(l - 20%))) {
   #one {
     background-color: hsl(from var(--base-color) h s calc(l + 20%));
