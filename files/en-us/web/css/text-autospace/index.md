@@ -43,7 +43,7 @@ text-autospace: unset;
     - the keyword `no-autospace`, or
     - a combination of one or more of `ideograph-alpha`, `ideograph-numeric`, and `punctuation`, optionally followed by `insert` or `replace`.
   - `no-autospace`
-    - : No automatic space is inserted.
+    - : Disables automatic spacing between CJK and non-CJK characters.
   - `ideograph-alpha`
     - : Adds spacing only between ideographic characters (such as Katakana and Han) and non-ideographic letters (such as Latin). It does not add spacing between ideographic characters and non-ideographic numbers.
   - `ideograph-numeric`
