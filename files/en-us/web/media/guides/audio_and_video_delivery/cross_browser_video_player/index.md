@@ -361,6 +361,9 @@ figure:fullscreen figcaption {
 }
 ```
 
+> [!WARNING]
+> The example video may be loud!
+
 {{EmbedLiveSample("video-player", "", 400, "", "", "", "fullscreen")}}
 
 ## See also

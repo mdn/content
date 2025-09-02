@@ -488,4 +488,7 @@ fullscreen.addEventListener("click", (e) => {
 
 ## Result
 
+> [!WARNING]
+> The example video may be loud!
+
 {{EmbedLiveSample("video-player-styled", "", 400, "", "", "", "fullscreen")}}

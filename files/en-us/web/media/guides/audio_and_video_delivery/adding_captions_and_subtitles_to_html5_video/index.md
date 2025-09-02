@@ -371,6 +371,12 @@ function checkVolume(dir) {
 function alterVolume(dir) {
   checkVolume(dir);
 }
+volInc.addEventListener("click", (e) => {
+  alterVolume("+");
+});
+volDec.addEventListener("click", (e) => {
+  alterVolume("-");
+});
 video.addEventListener("volumechange", () => {
   checkVolume();
 });
