@@ -315,7 +315,7 @@ In this example, any DOM change requires checking if the changed element is the 
 }
 ```
 
-Constraining the inner selector with specific classes or direct child combinators `(e.g: .specific-child in the next snippet)` reduces expensive ancestor traversals by limiting the browser's check to a well defined element, improving performance.
+Constraining the inner selector with specific classes or direct child combinators (e.g., `.specific-child` in the next snippet) reduces expensive ancestor traversals by limiting the browser's check to a well defined element, improving performance.
 
 ```css example-good
 /* Constrain the inner selector to avoid ancestor traversals */
