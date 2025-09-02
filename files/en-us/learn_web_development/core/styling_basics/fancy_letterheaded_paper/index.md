@@ -6,7 +6,7 @@ page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension", "Learn_web_development/Core/Text_styling", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Debugging_CSS", "Learn_web_development/Core/Text_styling", "Learn_web_development/Core/Styling_basics")}}
 
 If you want to make the right impression, writing a letter on nice letterheaded paper can be a really good start. In this challenge you will create an online template to achieve such a look.
 
@@ -56,4 +56,4 @@ The following screenshot shows an example of what the finished design could look
 
 ![Full A4 page with decorative top and bottom border composed of orange, and red shapes, and a red and green badge with Awesome company written on it, below the top border. Above the bottom border is a postal address.](letterhead.png)
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension", "Learn_web_development/Core/Text_styling", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Debugging_CSS", "Learn_web_development/Core/Text_styling", "Learn_web_development/Core/Styling_basics")}}
