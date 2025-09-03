@@ -17,17 +17,23 @@ width: abs(20% - 100px);
 
 ### Parameters
 
-The `abs(x)` function accepts only one value as its parameter.
+The `abs()` function's syntax is as follows:
 
-- `x`
-  - : A calculation which resolves to a number.
+```plain
+abs( <calc-sum>)
+```
+
+The parameter is:
+
+- `<calc-sum>`
+  - : An expression, or calculation, which resolves to a {{cssxref("number")}}, {{cssxref("length")}}, {{cssxref("percentage")}} or a {{cssxref("calc-keyword").   .
 
 ### Return value
 
-The absolute value of `x`.
+The absolute value of `<calc-sum>`.
 
-- if `x`'s numeric value is positive or `0⁺`, return `x`.
-- Otherwise, returns `-1 * x`.
+- if `<calc-sum>`'s numeric value is positive or `0⁺`, return `<calc-sum>`.
+- Otherwise, returns `-1 * <calc-sum>`.
 
 ## Formal syntax
 
@@ -58,7 +64,7 @@ div {
 
 ### Backwards compatible fallback
 
-In older browsers that lack the support for CSS `abs()` function, you can use the CSS {{CSSxRef("max")}} function to achieve the same result, as shown below:
+In browsers that lack support for CSS `abs()` function, you can use the CSS {{CSSxRef("max")}} function to achieve the same result:
 
 ```css
 p {
