@@ -8,9 +8,9 @@ sidebar: cssref
 
 The **CSS paged media** module defines the properties that control the presentation of content for print or any other media that splits content into discrete pages. It allows you to set page breaks, control printable areas, and style left and right pages differently.
 
-The CSS paged media module specifies how pages are generated and laid out to hold fragmented content in a paged presentation, including content that is printed or as a print preview. The module defines functionality for controlling page margins, page size and orientation, and the headers and footers added to those margins. It extends [generated content](/en-US/docs/Web/CSS/CSS_generated_content) to include page numbers and running headers and footers.
+The CSS paged media module specifies how pages are generated and laid out to hold fragmented content in a paged presentation, including content that is printed or represented as a print preview. The module defines functionality for controlling page margins, size, orientation, and headers and footers. It extends [generated content](/en-US/docs/Web/CSS/CSS_generated_content) to provide functionality for generating page numbers and running headers and footers.
 
-The process of paginating a flow into such generated pages and controlling breaks inside elements is covered in the [CSS fragmentation module](/en-US/docs/Web/CSS/CSS_fragmentation).
+The process of paginating content into generated pages and controlling breaks inside elements is covered in the [CSS fragmentation module](/en-US/docs/Web/CSS/CSS_fragmentation).
 
 ## Reference
 
