@@ -36,7 +36,7 @@ color-mix(in lch longer hue, hsl(200deg 50% 80%), coral)
 
 The `color-mix()` function's syntax is as follows:
 
-```css
+```plain
 color-mix(<color-interpolation-method>, <color>[<percentage>], <color>[<percentage>])
 ```
 
