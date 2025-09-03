@@ -49,7 +49,7 @@ text-autospace: unset;
   - `ideograph-numeric`
     - : Adds spacing only between ideographic characters (such as Katakana and Han) and non-ideographic numbers (such as Latin). It does not add spacing between ideographic characters and non-ideographic letters.
   - `punctuation`
-  - : Creates extra non-breaking spacing around punctuation as required by language-specific typographic conventions.
+  - : Adds non-breaking spacing around punctuation as required by language-specific typographic conventions.
   - `insert`
     - : If there are no spaces between the _ideograph_ and _non-ideographic_ scripts the user agent automatically inserts the correct spacing.
   - `replace`
