@@ -26,7 +26,7 @@ abs( <calc-sum>)
 The parameter is:
 
 - `<calc-sum>`
-  - : An expression, or calculation, which resolves to a {{cssxref("number")}}, {{cssxref("length")}}, {{cssxref("percentage")}} or a {{cssxref("calc-keyword").   .
+  - : An expression, or calculation, which resolves to a {{cssxref("number")}}, {{cssxref("length")}}, {{cssxref("percentage")}} or a {{cssxref("calc-keyword").
 
 ### Return value
 
