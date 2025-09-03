@@ -93,11 +93,11 @@ object-view-box: unset;
 
 The replaced elements on web pages have two sizes [extrinsic size](/en-US/docs/Glossary/Intrinsic_Size#extrinsic_sizing) and [intrinsic size](/en-US/docs/Glossary/Intrinsic_Size). The extrinsic size is the dimension of the HTML element in which the content is rendered, and the intrinsic size is the original size of the content itself. Size of the visible content is always the size of the rendering element (extrinsic size). The [`object-fit`](/en-US/docs/Web/CSS/object-fit) property allows us to control how the content is rendered, but it has limited capability. In the following image, we have a 1200 x 400 pixel leopard picture and a 400 x 200 HTML [`<img>`](/en-US/docs/Web/HTML/Reference/Elements/img) image. The image content is positioned using `object-fit: cover;` declaration.
 
-![An image demonstrating extrinsic and intrinsic image sizes](extrinsic-intrinsic_sizes.jpg)
+![An image demonstrating extrinsic and intrinsic image sizes](https://mdn.github.io/shared-assets/images/diagrams/css/object-view-box/extrinsic-intrinsic_sizes.jpg)
 
 The `object-view-box` property is more flexible than the `object-fit` property, and it is capable of doing more things. For example, it can be used to crop, zoom, and pan images. The property sets viewable area (view box), which defines what part of the content to show and how to fit it inside the extrinsic size. The view box value contains a rectangle and its position relative to the intrinsic area of the content, but _physical size of the view box remains equal to the extrinsic size_. The view box marks the area in the content to be displayed, and then it is transformed to match the extrinsic dimensions fitting into the HTML element. In the following image, we have the same leopard picture in a 400 x 150 image element. However, this time we have used `object-view-box` property to crop the leopard's eye portion of the picture.
 
-![An image showing leopard eyes cropped from an leopard image using object-view-box property](object-view-box_xywh.jpg)
+![An image showing leopard eyes cropped from an leopard image using object-view-box property](https://mdn.github.io/shared-assets/images/diagrams/css/object-view-box/object-view-box_xywh.jpg)
 
 Notice, in this case, the extrinsic size and view box size have been kept the same, i.e., 400 x 150 pixels. In other words, the aspect ratios have been kept the same. Maintaining the same aspect ratio prevents image distortion.
 
