@@ -55,11 +55,11 @@ jobs:
       - name: yarn start
         run: yarn start > /tmp/stdout.log 2> /tmp/stderr.log &
 
-      - name: Wait for server
-        run: |
-          # Just a slight delay to wait until the dev server is ready.
-          sleep 3
+      - name: Wait for Rari (localhost:8083)
+        run: curl --retry-connrefused --retry 5 -I http://localhost:8083/en-US/
 
+      - name: Test server (localhost:5042)
+        run: |
           curl --retry-connrefused --retry 5 http://localhost:5042 > /dev/null
 
           curl --fail http://localhost:5042/en-US/docs/MDN/Kitchensink > /dev/null
