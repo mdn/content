@@ -23,7 +23,7 @@ Browsers can use this error type to show the error message in the user interface
 _In addition to the properties below, `IdentityCredentialError` inherits properties from its parent, {{DOMxRef("DOMException")}}_.
 
 - {{domxref("IdentityCredentialError.error", "error")}} {{Experimental_Inline}} {{ReadOnlyInline}}
-  - : A string. This can be either a known error from the [OAuth 2.0 specified error list](https://datatracker.ietf.org/doc/html/rfc6749#section-4.1.2.1) or an arbitrary string.
+  - : A string. This can be either one of the values listed in the [OAuth 2.0 specified error list](https://datatracker.ietf.org/doc/html/rfc6749#section-4.1.2.1) or an arbitrary string.
 - {{domxref("IdentityCredentialError.url", "url")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : A URL pointing to human-readable information about the error to display to users, such as how to fix the error or contact customer service.
 

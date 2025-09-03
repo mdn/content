@@ -8,11 +8,11 @@ browser-compat: api.IdentityCredentialError.error
 
 {{APIRef("FedCM API")}}{{AvailableInWorkers}}
 
-The **`error`** read-only property of the {{domxref("IdentityCredentialError")}} interface
+The **`error`** read-only property of the {{domxref("IdentityCredentialError")}} interface is either one of the values listed in the [OAuth 2.0 specified error list](https://datatracker.ietf.org/doc/html/rfc6749#section-4.1.2.1) or an arbitrary string giving more information about the error.
 
 ## Value
 
-A known error from the [OAuth 2.0 specified error list](https://datatracker.ietf.org/doc/html/rfc6749#section-4.1.2.1) or an arbitrary string.
+One of the values listed in the [OAuth 2.0 specified error list](https://datatracker.ietf.org/doc/html/rfc6749#section-4.1.2.1) or an arbitrary string.
 
 ## Examples
 
