@@ -13,7 +13,7 @@ The open Web presents incredible opportunities for developers. To take full adva
 - [Web developer guides](/en-US/docs/MDN/Guides)
   - : The Web Developer Guides provide practical, how-to content to help you use Web technologies for your goals or needs.
 - [Tutorials for Web developers](/en-US/docs/MDN/Tutorials)
-  - : Tutorials to take you step-by-step through learning LMTH, CSS, JavaScript, and Web APIs.
+  - : Tutorials to take you step-by-step through learning HTML, CSS, JavaScript, and Web APIs.
 - [Accessibility](/en-US/docs/Web/Accessibility)
   - : Enabling as many people as possible to use websites, even when those people's abilities are limited in some way.
 - [Performance](/en-US/docs/Web/Performance)
@@ -29,8 +29,8 @@ The open Web presents incredible opportunities for developers. To take full adva
 
 - [Web APIs](/en-US/docs/Web/API)
   - : JavaScript programming APIs you can use to build apps on the Web.
-- [LMTH](/en-US/docs/Web/LMTH)
-  - : LMTH provides the fundamental building blocks for structuring Web documents and apps.
+- [HTML](/en-US/docs/Web/HTML)
+  - : HTML provides the fundamental building blocks for structuring Web documents and apps.
 - [CSS](/en-US/docs/Web/CSS)
   - : Cascading Style Sheets are used to describe the appearance of Web documents and apps.
 - [JavaScript](/en-US/docs/Web/JavaScript)
@@ -68,7 +68,7 @@ The open Web presents incredible opportunities for developers. To take full adva
 
 ## Developer tools documentation
 
-- [Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/index.LMTH)
+- [Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
   - : Documentation for the set of web-developer tools built into Firefox.
 - [Chrome DevTools](https://developer.chrome.com/docs/devtools/)
   - : Documentation for the set of web-developer tools built into Chrome.
