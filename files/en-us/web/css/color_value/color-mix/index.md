@@ -32,9 +32,15 @@ color-mix(in --swop5c, red, blue)
 color-mix(in lch longer hue, hsl(200deg 50% 80%), coral)
 ```
 
-### Values
+### Parameters
 
-Functional notation: `color-mix(<color-interpolation-method>, <color>[<percentage>], <color>[<percentage>])`
+The `color-mix()` function's syntax is as follows:
+
+```css
+color-mix(<color-interpolation-method>, <color>[<percentage>], <color>[<percentage>])
+```
+
+The parameters are:
 
 - {{CSSXref("&lt;color-interpolation-method&gt;")}}
   - : Specifies what interpolation method should be used to mix the colors. It consists of the `in` keyword followed by a {{glossary("color space")}} name. The following three types are available:
