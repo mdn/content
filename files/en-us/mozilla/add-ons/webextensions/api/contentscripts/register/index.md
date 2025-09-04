@@ -35,7 +35,7 @@ let registering = browser.contentScripts.register(
     - `css` {{optional_inline}}
       - : An array of objects. Each object has either a property named `file`, which is a URL starting at the extension's manifest.json and pointing to a CSS file to register, or a property named `code`, which is some CSS code to register.
     - `cssOrigin` {{optional_inline}}
-      - : `string`. The origin of the CSS to inject. This affects the cascading order (priority) of the injected stylesheets. Takes the values `"author"` and `"user"`. Defaults to `"author"`.
+      - : `string`. The style origin for the injection, either `"user"`, to add the CSS as a user stylesheet, or `"author"`, to add it as an author stylesheet. Defaults to ``"author"`. This property is case insensitive in Firefox and Safari.
     - `excludeGlobs` {{optional_inline}}
       - : Same as [`exclude_globs` in the `content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts#exclude_globs) key.
     - `excludeMatches` {{optional_inline}}
