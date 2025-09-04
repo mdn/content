@@ -224,7 +224,7 @@ loader.load(
   (texture) => {
     texture.wrapS = THREE.RepeatWrapping;
     texture.wrapT = THREE.RepeatWrapping;
-    texture.repeat.set(4, 4);
+    texture.repeat.set(2, 2);
 
     const geometry = new THREE.BoxGeometry(2.4, 2.4, 2.4);
     const material = new THREE.MeshLambertMaterial({ map: texture });
@@ -1055,12 +1055,12 @@ As a final animation example, we'd like to show you a very simple drawing applic
 body {
   margin: 0;
   overflow: hidden;
-  background: #ccc;
+  background: #cccccc;
 }
 
 .toolbar {
   height: 75px;
-  background: #ccc;
+  background: #cccccc;
   padding: 5px 20px;
   display: flex;
   justify-content: center;

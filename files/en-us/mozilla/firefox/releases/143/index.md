@@ -28,6 +28,8 @@ Firefox 143 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 - The {{cssxref("::details-content")}} pseudo-element is now enabled by default. It lets you style the content of the {{htmlElement("details")}} element.
   ([Firefox bug 1941406](https://bugzil.la/1941406)).
+- Multi-pass grid track sizing is now enabled by default and follows the algorithm outlined in the CSS Grid specification. In the multi-pass algorithm, columns are sized first, then rows; percentage values are resolved after the container size is known. With this default support, [percentage-based](/en-US/docs/Web/CSS/grid-template-rows#percentage) row tracks and grid items with aspect ratios will now be sized correctly in more cases.
+  ([Firefox bug 1957244](https://bugzil.la/1957244)).
 
 <!-- #### Removals -->
 
@@ -82,6 +84,10 @@ Firefox 143 is the current [Beta version of Firefox](https://www.firefox.com/en-
 <!-- ### Other -->
 
 ## Experimental web features
+
+- **`text-autospace`**: `layout.css.text-autospace.enabled`
+
+  The **`text-autospace`** CSS property allows you to specify the space applied between Chinese/Japanese/Korean (CJK) and non-CJK characters. Currently these values are only parsed and there is no effect on the output. ([Firefox bug 1869577](https://bugzil.la/1869577)).
 
 These features are shipping in Firefox 143 but are disabled by default.
 To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
