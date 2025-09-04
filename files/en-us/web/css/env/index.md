@@ -24,12 +24,14 @@ env(viewport-segment-width 0 0, 40%);
 
 ### Parameters
 
+The `env()` function's syntax is as follows:
+
 ```plain
-env(<custom-ident>, <fallback>)
+env(<environment-variable>, <fallback>)
 ```
 
-- {{cssxref("custom-ident")}}
-  - : An [`<environment-variable-name>`](/en-US/docs/Web/CSS/CSS_environment_variables/Using_environment_variables#browser-defined_environment_variables) specifying the name of the environment variable to be inserted, which can be one of the following:
+- [`<environment-variable>`](/en-US/docs/Web/CSS/CSS_environment_variables/Using_environment_variables#browser-defined_environment_variables)
+  - : A {{cssxref("&lt;custom-ident>")}} specifying the name of the environment variable to be inserted, plus optional additional values. The environment variable can be one of the following:
     - `safe-area-inset-top`, `safe-area-inset-right`, `safe-area-inset-bottom`, `safe-area-inset-left`
       - : The safe distance from the top, right, bottom, or left inset edge of the viewport, defining where it is safe to place content into without risking it being cut off by the shape of a non‑rectangular display. The four values form a rectangle, inside which all content is visible. The values are `0` if the viewport is a rectangle and no features — such as toolbars or dynamic keyboards — are occupying viewport space; otherwise, it is a `px` value greater than `0`.
     - `safe-area-max-inset-top`, `safe-area-max-inset-right`, `safe-area-max-inset-bottom`, `safe-area-max-inset-left`
@@ -39,26 +41,53 @@ env(<custom-ident>, <fallback>)
     - `keyboard-inset-top`, `keyboard-inset-right`, `keyboard-inset-bottom`, `keyboard-inset-left`, `keyboard-inset-width`, `keyboard-inset-height`
       - : The insets from the edge of the viewport and dimensions of the device's on-screen virtual keyboard. Defined in the {{domxref("VirtualKeyboard API", "VirtualKeyboard API", "", "nocode")}}.
     - `viewport-segment-width`, `viewport-segment-height`, `viewport-segment-top`, `viewport-segment-right`, `viewport-segment-bottom`, `viewport-segment-left`
-      - : The dimensions and offset positions of specific viewport segments defined by the horizontal and vertical position indicated by the two space-separated {{cssxref("integer")}} values appended to the `viewport-segment-*` keyword. The per-segment keywords are only defined when the viewport is made up of two or more segments, as with foldable or hinged devices.
+      - : The dimensions and offset positions of specific viewport segments. A particular viewport segment is specified by two space-separated {{cssxref("integer")}} values appended to the `viewport-segment-*` keyword, which indicate the segment's horizontal and vertical position. The per-segment keywords are only defined when the viewport is made up of two or more segments, as with foldable or hinged devices.
 
-- `<fallback>`
+- `<fallback>` {{optional_inline}}
   - : A fallback value to be inserted if the environment variable referenced in the first argument does not exist. This can be a single value, another `env()` function, or a comma-separated list of values (everything after the first comma is deemed to be a fallback value). It must resolve to a {{cssxref("&lt;length>")}} or a {{cssxref("&lt;percentage>")}}.
 
 ## Description
 
-The `env()` function is used to insert the value of a globally-scoped, [user-agent-defined environment variable](/en-US/docs/Web/CSS/CSS_environment_variables/Using_environment_variables#browser-defined_environment_variables) into your CSS. The `env()` function can be used in place of any part of a property value, or any part of a descriptor (for example, in [Media query rules](/en-US/docs/Web/CSS/@media)).
+The `env()` function is used to insert the value of a globally-scoped, [user-agent-defined environment variable](/en-US/docs/Web/CSS/CSS_environment_variables/Using_environment_variables#browser-defined_environment_variables) into your CSS. The `env()` function can be used as a property value or in place of any part of a property value or descriptor (for example, in [Media query rules](/en-US/docs/Web/CSS/@media)).
 
-The function accepts a case-sensitive {{cssxref("&lt;custom-ident>")}} as its first argument, equal to the [name of the environment variable](/en-US/docs/Web/CSS/CSS_environment_variables/Using_environment_variables#browser-defined_environment_variables) to be substituted. The second argument, if provided, is the fallback value, which is used if the environment variable referenced in the first argument does not exist. The fallback can be another environment variable, even with its own fallback.
+The function accepts an `<environment-variable>` is its first argument. Generally, this is a case-sensitive {{cssxref("&lt;custom-ident>")}} equal to the [name of the environment variable](/en-US/docs/Web/CSS/CSS_environment_variables/Using_environment_variables#browser-defined_environment_variables) to be substituted, but it can also include additional speace-separated values if required. For example, `env(viewport-segment-width 0 0)` would return the width of the top or left segment in the case of a device with multiple viewport segments.
 
-The syntax of the fallback is similar to the fallback syntax of the {{cssxref("var()")}} function used to insert [CSS custom properties](/en-US/docs/Web/CSS/--*) in that it allows for multiple commas. Anything between the first comma and the end of the function is considered the fallback value. However, if the property value or descriptor doesn't support commas, the value is not valid.
+The second argument, if provided, is the fallback value, which is used if the environment variable referenced in the first argument does not exist. The fallback can be another environment variable, even with its own fallback.
 
-A property or descriptor containing a syntactically valid `env()` function is assumed to be valid at parse time. It is only syntax-checked at compute time, after each `env()` function has been substituted with its browser-provided value (or the fallback value if the environment variable passed as the first parameter is not a recognized environment variable name). If no fallback is provided, the property or descriptor containing the `env()` function is invalid at computed-value time.
+The syntax of the fallback is similar to the fallback syntax of the {{cssxref("var()")}} function used to insert [CSS custom properties](/en-US/docs/Web/CSS/--*) in that it allows for multiple commas. Anything between the first comma and the end of the function is considered the fallback value. However, if the property value or descriptor doesn't include commas, a fallback value that includes commas will not be valid.
 
-Originally provided by the iOS browser to allow developers to place their content in a safe area of the viewport, the `safe-area-inset-*` values can be used to help ensure content is visible even to viewers using non‑rectangular displays, or stop device notifications from covering up some of the app user interface. See [an example](#using_env_to_ensure_buttons_are_not_obscured_by_device_ui).
+A property or descriptor containing a syntactically valid `env()` function is assumed to be valid at parse time, when the browser first reads and interprets the downloaded CSS text. It is only syntax-checked at compute time, after each `env()` function has been substituted with its browser-provided value (or the fallback value if the environment variable passed as the first parameter is not a recognized environment variable name). If no fallback is provided, the property or descriptor containing the `env()` function is invalid at computed-value time.
 
-Another use case for `env()` variables is for desktop [Progressive web apps](/en-US/docs/Web/Progressive_web_apps) (PWAs) that use the Window Controls Overlay feature to take advantage of the full application window surface area. Using the `titlebar-area-*` values, developers can [position elements where the title bar would have been and ensure that content stays clear of the window control buttons](#using_env_to_ensure_content_is_not_obscured_by_window_control_buttons_in_desktop_pwas).
+### Use cases
 
-You can also use `viewport-segment-*` environment variables to [place content inside specific viewport segments](#placing_content_inside_specific_viewport_segments) on a multi-viewport-segment device such as a hinged or foldable device.
+Originally provided by the iOS browser to allow developers to place their content in a safe area of the viewport, the `safe-area-inset-*` values can be used to help ensure content is visible even to viewers using non‑rectangular displays. It was later expanded beyond its initial purpose, to enable uses cases such as [stopping device notifications from covering up some of the app user interface](#using_env_to_ensure_buttons_are_not_obscured_by_device_ui).
+
+Another use case for `env()` variables is for desktop [Progressive web apps](/en-US/docs/Web/Progressive_web_apps) (PWAs) that use the Window Controls Overlay feature to take advantage of the full application window surface area. Using the `titlebar-area-*` values, developers can position elements where the title bar would have been and [ensure content is not obscured by window control buttons](#using_env_to_ensure_content_is_not_obscured_by_window_control_buttons_in_desktop_pwas).
+
+The `viewport-segment-*` variable names can be used to set your containers to fit neatly into the available segments of a multi-viewport-segment device such as a hinged or foldable device. The variable names are passed to the `env()` function along with two extra arguments, which indicate the segment to return the value for.
+
+For example:
+
+```css
+/* Return the width of the top/left segment */
+env(viewport-segment-width 0 0)
+
+/* Return the width of the right segment */
+env(viewport-segment-width 1 0)
+
+/* Return the width of the bottom segment */
+env(viewport-segment-width 0 1)
+```
+
+When a `viewport-segment-*` variable is accessed, the `env()` function has to be passed the name of the variable plus two extra arguments, which indicate the segment to return the value for. These values are both integers of `0` or greater. The first value represents the horizontal index value of the segment, and the second value represents the vertical index value of the segment:
+
+![Two device segment layouts; in a horizontal layout, 0 0 is the first segment and 1 0 is the second segment. In a vertical layout, the indices are 0 0 and 0 1](env-var-indices.png)
+
+- In a horizontal side-by-side layout, the left segment is represented by `0 0`, and the right segment is represented by `1 0`.
+- In a vertical top-to-bottom layout, the top segment is represented by `0 0`, and the bottom segment is represented by `0 1`.
+- In devices with more than two segments, the numbers may be greater. For example, a device with three horizontal segments may have the center segment represented by `1 0`, and the right-hand segment represented by `2 0`.
+
+See [placing content inside specific viewport segments](#placing_content_inside_specific_viewport_segments) for en example.
 
 ## Formal syntax
 
@@ -68,7 +97,7 @@ You can also use `viewport-segment-*` environment variables to [place content in
 
 ### Using env() to ensure buttons are not obscured by device UI
 
-In the following example `env()` is used to ensure that fixed app toolbar buttons are not obscured by device notifications appearing at the bottom of the screen. On the desktop `safe-area-inset-bottom` is `0`. However, in devices that display notifications at the bottom of the screen, such as iOS, it contains a value that leaves space for the notification to display. This can then be used in the value for {{cssxref("padding-bottom")}} to create a gap that appears natural on that device.
+In the following example, `env()` is used to ensure that fixed app toolbar buttons are not obscured by device notifications appearing at the bottom of the screen. On the desktop `safe-area-inset-bottom` is `0`. However, in devices that display notifications at the bottom of the screen, such as iOS, it contains a value that leaves space for the notification to display. This can then be used in the value for {{cssxref("padding-bottom")}} to create a gap that appears natural on that device.
 
 ```html
 <main>Main content of app here</main>
@@ -145,7 +174,7 @@ p {
 
 ### Using env() to ensure content is not obscured by window control buttons in desktop PWAs
 
-In the following example `env()` ensures that content displayed in a desktop Progressive Web App that uses the [Window Controls Overlay API](/en-US/docs/Web/API/Window_Controls_Overlay_API) is not obscured by the operating system's window control buttons. The `titlebar-area-*` values define a rectangle where the title bar would normally have been displayed. On devices that do not support the Window Controls Overlay feature, such as mobile devices, the fallback values are used.
+In the following example, `env()` ensures that content displayed in a desktop Progressive Web App that uses the [Window Controls Overlay API](/en-US/docs/Web/API/Window_Controls_Overlay_API) is not obscured by the operating system's window control buttons. The `titlebar-area-*` values define a rectangle where the title bar would normally have been displayed. On devices that do not support the Window Controls Overlay feature, such as mobile devices, the fallback values are used.
 
 Here is what a PWA installed on a desktop device normally looks like:
 
@@ -178,29 +207,6 @@ main {
 > Using `position:fixed` makes sure the header does not scroll with the rest of the content, and instead stays aligned with the window control buttons, even on device/browsers that support elastic overscroll (also known as rubber banding).
 
 ### Placing content inside specific viewport segments
-
-The `viewport-segment-*` variable names can be used to set your containers to fit neatly into the available segments of a multi-viewport-segment device such as a hinged or foldable device. The variable names are passed to the `env()` function along with two extra arguments, which indicate the segment to return the value for.
-
-For example:
-
-```css
-/* Return the width of the top/left segment */
-env(viewport-segment-width 0 0)
-
-/* Return the width of the right segment */
-env(viewport-segment-width 1 0)
-
-/* Return the width of the bottom segment */
-env(viewport-segment-width 0 1)
-```
-
-When a `viewport-segment-*` variable is accessed, the `env()` function has to be passed the name of the variable plus two extra arguments, which indicate the segment to return the value for. These values are both integers of `0` or greater. The first value represents the horizontal index value of the segment, and the second value represents the vertical index value of the segment:
-
-![Two device segment layouts; in a horizontal layout, 0 0 is the first segment and 1 0 is the second segment. In a vertical layout, the indices are 0 0 and 0 1](env-var-indices.png)
-
-- In a horizontal side-by-side layout, the left segment is represented by `0 0`, and the right segment is represented by `1 0`.
-- In a vertical top-to-bottom layout, the top segment is represented by `0 0`, and the bottom segment is represented by `0 1`.
-- In devices with more than two segments, the numbers may be greater. For example, a device with three horizontal segments may have the center segment represented by `1 0`, and the right-hand segment represented by `2 0`.
 
 In this example, we are setting the outer wrapper to have a horizontal flexbox layout when the viewport segments are laid out horizontally (as determined by the {{cssxref("@media/horizontal-viewport-segments", "horizontal-viewport-segments")}} `@media` feature). We then set the left container to have a width equal to the left segment width, and the right container to have a width equal to the right segment width. To calculate how much width the fold takes up in between the two, we subtract the left edge offset of the right container from the right edge offset of the left container.
 
