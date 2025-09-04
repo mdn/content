@@ -14,7 +14,7 @@ In this challenge you are provided with a lightly-styled page structure that ren
 
 We are going to get you to solve this challenge on your local development environment; ideally, you'll want to view the example in a full browser window to make sure you are going in the right direction.
 
-1. Create a new folder on your local hard drive called `size-decorate-content-panel`.
+1. Create a new folder on your computer called `size-decorate-content-panel`.
 2. Inside the folder, create an `index.html` file and paste the following content into it:
 
    ```html-nolint
