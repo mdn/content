@@ -44,6 +44,8 @@ Before starting this module, you should have a basic work environment set up (as
   - : Understanding how big the different features in your design will be is important. In this lesson we will summarize the various ways elements get a size via CSS and define a few terms about sizing that will help you in the future.
 - [Backgrounds and borders](/en-US/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
   - : In this lesson, we will take a look at some of the creative things you can do with CSS backgrounds and borders. From adding gradients, background images, and rounded corners, backgrounds and borders are the answer to a lot of styling questions in CSS.
+- [Challenge: Sizing and decorating a content panel](/en-US/docs/Learn_web_development/Core/Styling_basics/Size_decorate_content_panel) <sup>Challenge</sup>
+  - : In this challenge you are provided with a lightly styled page structure that renders a content panel, with a heading at the top and a button bar at the bottom. we want you to follow the instructions to size and decorate it, producing an interesting layout as a result. Along the way, we'll test your knowledge of CSS values and units, sizing, and background and borders.
 - [Overflowing content](/en-US/docs/Learn_web_development/Core/Styling_basics/Overflow)
   - : Overflow is what happens when there is too much content to fit inside an element box. In this lesson, you will learn how to manage overflow using CSS.
 - [Images, media, and form elements](/en-US/docs/Learn_web_development/Core/Styling_basics/Images_media_forms)
@@ -52,8 +54,6 @@ Before starting this module, you should have a basic work environment set up (as
   - : Styling an HTML table isn't the most glamorous job in the world, but sometimes we all have to do it. This article explains how to make HTML tables look good, with some specific table styling techniques highlighted.
 - [Debugging CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Debugging_CSS)
   - : This article will give you guidance on how to go about debugging a CSS problem, and show you how the DevTools included in all modern browsers can help you to find out what is going on.
-- [Challenge: Creating fancy letterheaded paper](/en-US/docs/Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper) <sup>Challenge</sup>
-  - : If you want to make the right impression, writing a letter on nice letterheaded paper can be a really good start. In this challenge you will create an online template to achieve such a look.
 
 ## Test your skills
 
