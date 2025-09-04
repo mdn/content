@@ -97,7 +97,7 @@ The [box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_mo
 
 Every replaced elements has two sizes; an [extrinsic size](/en-US/docs/Glossary/Intrinsic_Size#extrinsic_sizing) and an [intrinsic size](/en-US/docs/Glossary/Intrinsic_Size). The extrinsic size is the dimension of the HTML element in which the content is rendered. The intrinsic size is the original size of the content itself; the size the element is when no styles are applied and without any layout constraints. The displayed, or extrinsic, size is sometimes the same as the natural, or intrinsic, size. It is generally important to maintain the intrinsic {{glossary("aspect ratio")}} of replaced elements.
 
-CSS has many sizing properties. When it comes to sizing replaced elements, the [`object-fit`](/en-US/docs/Web/CSS/object-fit) property enables us to control how replaced elements are rendered in with a defined box to some extent. For example, the following 1200 x 400 image is displayed using a {{htmlelement("img")}} element that is sized to 400 x 200. The image content is positioned using `object-fit: cover;` declaration.
+CSS has many sizing properties. When it comes to sizing replaced elements, the [`object-fit`](/en-US/docs/Web/CSS/object-fit) property enables us to control how replaced elements are rendered in with a defined box to some extent. For example, the following 1200 x 400 image is displayed using a {{htmlelement("img")}} element that is sized to 400 x 200. The image content is positioned using `object-fit: none;` declaration.
 
 ![An image demonstrating extrinsic and intrinsic image sizes](https://mdn.github.io/shared-assets/images/diagrams/css/object-view-box/extrinsic-intrinsic_sizes.jpg)
 
