@@ -29,9 +29,7 @@ sidebar:
       - /Learn_web_development/Core/Styling_basics/Images_media_forms
       - /Learn_web_development/Core/Styling_basics/Tables
       - /Learn_web_development/Core/Styling_basics/Debugging_CSS
-      - /Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension
       - /Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper
-      - /Learn_web_development/Core/Styling_basics
   - link: /Learn_web_development/Core/Text_styling
     title: CSS_text_styling
     details: closed

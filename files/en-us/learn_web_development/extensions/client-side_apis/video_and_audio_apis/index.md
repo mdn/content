@@ -48,11 +48,37 @@ The {{htmlelement("video")}} and {{htmlelement("audio")}} elements allow us to e
 
 This creates a video player inside the browser like so:
 
-{{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html", '100%', 380)}}
+```html hidden live-sample___multiple-formats
+<h1>Below is a video that will play in all modern browsers</h1>
+
+<video controls>
+  <source
+    src="https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/rabbit320.mp4"
+    type="video/mp4" />
+  <source
+    src="https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/rabbit320.webm"
+    type="video/webm" />
+</video>
+```
+
+{{EmbedLiveSample("multiple-formats", '100%', 380)}}
 
 You can review what all the HTML features do in the article linked above; for our purposes here, the most interesting attribute is [`controls`](/en-US/docs/Web/HTML/Reference/Elements/video#controls), which enables the default set of playback controls. If you don't specify this, you get no playback controls:
 
-{{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats-no-controls.html", '100%', 380)}}
+```html hidden live-sample___multiple-formats-no-controls
+<h1>Below is a video that will play in all modern browsers</h1>
+
+<video>
+  <source
+    src="https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/rabbit320.mp4"
+    type="video/mp4" />
+  <source
+    src="https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/rabbit320.webm"
+    type="video/webm" />
+</video>
+```
+
+{{EmbedLiveSample("multiple-formats-no-controls", '100%', 380)}}
 
 This is not as immediately useful for video playback, but it does have advantages. One big issue with the native browser controls is that they are different in each browser — not very good for cross-browser support! Another big issue is that the native controls in most browsers aren't very keyboard-accessible.
 
@@ -64,24 +90,11 @@ Part of the HTML spec, the {{domxref("HTMLMediaElement")}} API provides features
 
 Our finished example will look (and function) something like the following:
 
-{{EmbedGHLiveSample("learning-area/javascript/apis/video-audio/finished/", '100%', 360)}}
-
-### Getting started
-
-To get started with this example, [download our media-player-start.zip](https://github.com/mdn/learning-area/blob/main/javascript/apis/video-audio/start/media-player-start.zip) and unzip it into a new directory on your hard drive. If you [downloaded our examples repo](https://github.com/mdn/learning-area), you'll find it in `javascript/apis/video-audio/start/`.
-
-At this point, if you load the HTML you should see a perfectly normal HTML video player, with the native controls rendered.
-
-#### Exploring the HTML
-
-Open the HTML index file. You'll see a number of features; the HTML is dominated by the video player and its controls:
-
-```html
+```html hidden live-sample___custom-video-player
 <div class="player">
   <video controls>
-    <source src="video/sintel-short.mp4" type="video/mp4" />
-    <source src="video/sintel-short.webm" type="video/webm" />
-    <!-- fallback content here -->
+    <source src="/shared-assets/videos/sintel-short.mp4" type="video/mp4" />
+    <source src="/shared-assets/videos/sintel-short.webm" type="video/webm" />
   </video>
   <div class="controls">
     <button class="play" data-icon="P" aria-label="play pause toggle"></button>
@@ -94,14 +107,459 @@ Open the HTML index file. You'll see a number of features; the HTML is dominated
     <button class="fwd" data-icon="F" aria-label="fast forward"></button>
   </div>
 </div>
+<p>
+  Sintel &copy; copyright Blender Foundation |
+  <a href="https://studio.blender.org/films/sintel/"
+    >studio.blender.org/films/sintel/</a
+  >.
+</p>
 ```
+
+```css hidden live-sample___custom-video-player
+body {
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: "HeydingsControlsRegular";
+  src: url("https://mdn.github.io/learning-area/javascript/apis/video-audio/finished/fonts/heydings_controls-webfont.eot");
+  src:
+    url("https://mdn.github.io/learning-area/javascript/apis/video-audio/finished/fonts/heydings_controls-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://mdn.github.io/learning-area/javascript/apis/video-audio/finished/fonts/heydings_controls-webfont.woff")
+      format("woff"),
+    url("https://mdn.github.io/learning-area/javascript/apis/video-audio/finished/fonts/heydings_controls-webfont.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+video {
+  border: 1px solid black;
+}
+
+p {
+  position: absolute;
+  top: 310px;
+}
+
+.player {
+  position: absolute;
+}
+
+.controls {
+  visibility: hidden;
+  opacity: 0.5;
+  width: 400px;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  margin-left: -200px;
+  background-color: black;
+  box-shadow: 3px 3px 5px black;
+  transition: 1s all;
+  display: flex;
+}
+
+.player:hover .controls,
+.player:focus-within .controls {
+  opacity: 1;
+}
+
+button,
+.controls {
+  background: linear-gradient(to bottom, #222222, #666666);
+}
+
+button::before {
+  font-family: HeydingsControlsRegular;
+  font-size: 20px;
+  position: relative;
+  content: attr(data-icon);
+  color: #aaaaaa;
+  text-shadow: 1px 1px 0px black;
+}
+
+.play::before {
+  font-size: 22px;
+}
+
+button,
+.timer {
+  height: 38px;
+  line-height: 19px;
+  box-shadow: inset 0 -5px 25px #0000004d;
+  border-right: 1px solid #333333;
+}
+
+button {
+  position: relative;
+  border: 0;
+  flex: 1;
+  outline: none;
+}
+
+.play {
+  border-radius: 10px 0 0 10px;
+}
+
+.fwd {
+  border-radius: 0 10px 10px 0;
+}
+
+.timer {
+  line-height: 38px;
+  font-size: 10px;
+  font-family: monospace;
+  text-shadow: 1px 1px 0px black;
+  color: white;
+  flex: 5;
+  position: relative;
+}
+
+.timer div {
+  position: absolute;
+  background-color: rgb(255 255 255 / 20%);
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 38px;
+  z-index: 2;
+}
+
+.timer span {
+  position: absolute;
+  z-index: 3;
+  left: 19px;
+}
+
+button:hover,
+button:focus {
+  box-shadow: inset 1px 1px 2px black;
+}
+
+button:active {
+  box-shadow: inset 3px 3px 2px black;
+}
+
+.active::before {
+  color: red;
+}
+```
+
+```js hidden live-sample___custom-video-player
+const media = document.querySelector("video");
+const controls = document.querySelector(".controls");
+
+const play = document.querySelector(".play");
+const stop = document.querySelector(".stop");
+const rwd = document.querySelector(".rwd");
+const fwd = document.querySelector(".fwd");
+
+const timerWrapper = document.querySelector(".timer");
+const timer = document.querySelector(".timer span");
+const timerBar = document.querySelector(".timer div");
+
+media.removeAttribute("controls");
+controls.style.visibility = "visible";
+
+play.addEventListener("click", playPauseMedia);
+stop.addEventListener("click", stopMedia);
+media.addEventListener("ended", stopMedia);
+rwd.addEventListener("click", mediaBackward);
+fwd.addEventListener("click", mediaForward);
+media.addEventListener("timeupdate", setTime);
+
+function playPauseMedia() {
+  rwd.classList.remove("active");
+  fwd.classList.remove("active");
+  clearInterval(intervalRwd);
+  clearInterval(intervalFwd);
+  if (media.paused) {
+    play.setAttribute("data-icon", "u");
+    media.play();
+  } else {
+    play.setAttribute("data-icon", "P");
+    media.pause();
+  }
+}
+
+function stopMedia() {
+  rwd.classList.remove("active");
+  fwd.classList.remove("active");
+  media.pause();
+  media.currentTime = 0;
+  clearInterval(intervalRwd);
+  clearInterval(intervalFwd);
+  play.setAttribute("data-icon", "P");
+}
+
+let intervalFwd;
+let intervalRwd;
+
+function mediaBackward() {
+  clearInterval(intervalFwd);
+  fwd.classList.remove("active");
+
+  if (rwd.classList.contains("active")) {
+    rwd.classList.remove("active");
+    clearInterval(intervalRwd);
+    media.play();
+  } else {
+    rwd.classList.add("active");
+    media.pause();
+    intervalRwd = setInterval(windBackward, 200);
+  }
+}
+
+function mediaForward() {
+  clearInterval(intervalRwd);
+  rwd.classList.remove("active");
+
+  if (fwd.classList.contains("active")) {
+    fwd.classList.remove("active");
+    clearInterval(intervalFwd);
+    media.play();
+  } else {
+    fwd.classList.add("active");
+    media.pause();
+    intervalFwd = setInterval(windForward, 200);
+  }
+}
+
+function windBackward() {
+  if (media.currentTime <= 3) {
+    rwd.classList.remove("active");
+    clearInterval(intervalRwd);
+    stopMedia();
+  } else {
+    media.currentTime -= 3;
+  }
+}
+
+function windForward() {
+  if (media.currentTime >= media.duration - 3) {
+    fwd.classList.remove("active");
+    clearInterval(intervalFwd);
+    stopMedia();
+  } else {
+    media.currentTime += 3;
+  }
+}
+
+function setTime() {
+  const minutes = Math.floor(media.currentTime / 60);
+  const seconds = Math.floor(media.currentTime - minutes * 60);
+
+  const minuteValue = minutes.toString().padStart(2, "0");
+  const secondValue = seconds.toString().padStart(2, "0");
+
+  const mediaTime = `${minuteValue}:${secondValue}`;
+  timer.textContent = mediaTime;
+
+  const barLength =
+    timerWrapper.clientWidth * (media.currentTime / media.duration);
+  timerBar.style.width = `${barLength}px`;
+}
+```
+
+{{EmbedLiveSample("custom-video-player", '100%', 360)}}
+
+### Getting started
+
+To get started with this example, follow these steps:
+
+1. Create a new directory on your hard drive called `custom-video-player`.
+2. Create a new file inside it called `index.html` and fill it with the following content:
+   ```html
+   <!DOCTYPE html>
+   <html lang="en-gb">
+     <head>
+       <meta charset="utf-8" />
+       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+       <title>Video player example</title>
+       <link rel="stylesheet" type="text/css" href="style.css" />
+     </head>
+     <body>
+       <div class="player">
+         <video controls>
+           <source
+             src="/shared-assets/videos/sintel-short.mp4"
+             type="video/mp4" />
+           <source
+             src="/shared-assets/videos/sintel-short.webm"
+             type="video/webm" />
+         </video>
+         <div class="controls">
+           <button
+             class="play"
+             data-icon="P"
+             aria-label="play pause toggle"></button>
+           <button class="stop" data-icon="S" aria-label="stop"></button>
+           <div class="timer">
+             <div></div>
+             <span aria-label="timer">00:00</span>
+           </div>
+           <button class="rwd" data-icon="B" aria-label="rewind"></button>
+           <button class="fwd" data-icon="F" aria-label="fast forward"></button>
+         </div>
+       </div>
+       <p>
+         Sintel &copy; copyright Blender Foundation |
+         <a href="https://studio.blender.org/films/sintel/"
+           >studio.blender.org/films/sintel/</a
+         >.
+       </p>
+       <script src="custom-player.js"></script>
+     </body>
+   </html>
+   ```
+3. Create another new file inside it called `style.css`, and fill it with the following content:
+
+   ```css
+   @font-face {
+     font-family: "HeydingsControlsRegular";
+     src: url("https://mdn.github.io/learning-area/javascript/apis/video-audio/finished/fonts/heydings_controls-webfont.eot");
+     src:
+       url("https://mdn.github.io/learning-area/javascript/apis/video-audio/finished/fonts/heydings_controls-webfont.eot?#iefix")
+         format("embedded-opentype"),
+       url("https://mdn.github.io/learning-area/javascript/apis/video-audio/finished/fonts/heydings_controls-webfont.woff")
+         format("woff"),
+       url("https://mdn.github.io/learning-area/javascript/apis/video-audio/finished/fonts/heydings_controls-webfont.ttf")
+         format("truetype");
+     font-weight: normal;
+     font-style: normal;
+   }
+
+   video {
+     border: 1px solid black;
+   }
+
+   p {
+     position: absolute;
+     top: 310px;
+   }
+
+   .player {
+     position: absolute;
+   }
+
+   .controls {
+     visibility: hidden;
+     opacity: 0.5;
+     width: 400px;
+     border-radius: 10px;
+     position: absolute;
+     bottom: 20px;
+     left: 50%;
+     margin-left: -200px;
+     background-color: black;
+     box-shadow: 3px 3px 5px black;
+     transition: 1s all;
+     display: flex;
+   }
+
+   .player:hover .controls,
+   .player:focus-within .controls {
+     opacity: 1;
+   }
+
+   button,
+   .controls {
+     background: linear-gradient(to bottom, #222222, #666666);
+   }
+
+   button::before {
+     font-family: HeydingsControlsRegular;
+     font-size: 20px;
+     position: relative;
+     content: attr(data-icon);
+     color: #aaaaaa;
+     text-shadow: 1px 1px 0px black;
+   }
+
+   .play::before {
+     font-size: 22px;
+   }
+
+   button,
+   .timer {
+     height: 38px;
+     line-height: 19px;
+     box-shadow: inset 0 -5px 25px #0000004d;
+     border-right: 1px solid #333333;
+   }
+
+   button {
+     position: relative;
+     border: 0;
+     flex: 1;
+     outline: none;
+   }
+
+   .play {
+     border-radius: 10px 0 0 10px;
+   }
+
+   .fwd {
+     border-radius: 0 10px 10px 0;
+   }
+
+   .timer {
+     line-height: 38px;
+     font-size: 10px;
+     font-family: monospace;
+     text-shadow: 1px 1px 0px black;
+     color: white;
+     flex: 5;
+     position: relative;
+   }
+
+   .timer div {
+     position: absolute;
+     background-color: rgb(255 255 255 / 20%);
+     left: 0;
+     top: 0;
+     width: 0;
+     height: 38px;
+     z-index: 2;
+   }
+
+   .timer span {
+     position: absolute;
+     z-index: 3;
+     left: 19px;
+   }
+
+   button:hover,
+   button:focus {
+     box-shadow: inset 1px 1px 2px black;
+   }
+
+   button:active {
+     box-shadow: inset 3px 3px 2px black;
+   }
+
+   .active::before {
+     color: red;
+   }
+   ```
+
+4. Create another new file in the directory called `custom-player.js`. Leave it blank for now.
+
+At this point, if you load the HTML you should see a perfectly normal HTML video player, with the native controls rendered.
+
+#### Exploring the HTML
+
+Open the HTML index file. You'll see a number of features; the HTML is dominated by the video player and its controls:
 
 - The whole player is wrapped in a {{htmlelement("div")}} element, so it can all be styled as one unit if needed.
 - The {{htmlelement("video")}} element contains two {{htmlelement("source")}} elements so that different formats can be loaded depending on the browser viewing the site.
 - The controls HTML is probably the most interesting:
   - We have four {{htmlelement("button")}}s — play/pause, stop, rewind, and fast forward.
   - Each `<button>` has a `class` name, a `data-icon` attribute for defining what icon should be shown on each button (we'll show how this works in the below section), and an `aria-label` attribute to provide an understandable description of each button, since we're not providing a human-readable label inside the tags. The contents of `aria-label` attributes are read out by screen readers when their users focus on the elements that contain them.
-  - There is also a timer {{htmlelement("div")}}, which will report the elapsed time when the video is playing. Just for fun, we are providing two reporting mechanisms — a {{htmlelement("span")}} containing the elapsed time in minutes and seconds, and an extra `<div>` that we will use to create a horizontal indicator bar that gets longer as the time elapses. To get an idea of what the finished product will look like, [check out our finished version](https://mdn.github.io/learning-area/javascript/apis/video-audio/finished/).
+  - There is also a timer {{htmlelement("div")}}, which will report the elapsed time when the video is playing. Just for fun, we are providing two reporting mechanisms — a {{htmlelement("span")}} containing the elapsed time in minutes and seconds, and an extra `<div>` that we will use to create a horizontal indicator bar that gets longer as the time elapses.
 
 #### Exploring the CSS
 
@@ -130,7 +588,7 @@ Now open the CSS file and have a look inside. The CSS for the example is not too
 ```
 
 - We start off with the {{cssxref("visibility")}} of the custom controls set to `hidden`. In our JavaScript later on, we will set the controls to `visible`, and remove the `controls` attribute from the `<video>` element. This is so that, if the JavaScript doesn't load for some reason, users can still use the video with the native controls.
-- We give the controls an {{cssxref("opacity")}} of 0.5 by default, so that they are less distracting when you are trying to watch the video. Only when you are hovering/focusing over the player do the controls appear at full opacity.
+- We give the controls an {{cssxref("opacity")}} of `0.5` by default, so that they are less distracting when you are trying to watch the video. Only when you are hovering/focusing over the player do the controls appear at full opacity.
 - We lay out the buttons inside the control bar using flexbox ({{cssxref("display")}}: flex), to make things easier.
 
 Next, let's look at our button icons:
@@ -138,12 +596,14 @@ Next, let's look at our button icons:
 ```css
 @font-face {
   font-family: "HeydingsControlsRegular";
-  src: url("fonts/heydings_controls-webfont.eot");
+  src: url("https://mdn.github.io/learning-area/javascript/apis/video-audio/finished/fonts/heydings_controls-webfont.eot");
   src:
-    url("fonts/heydings_controls-webfont.eot?#iefix")
+    url("https://mdn.github.io/learning-area/javascript/apis/video-audio/finished/fonts/heydings_controls-webfont.eot?#iefix")
       format("embedded-opentype"),
-    url("fonts/heydings_controls-webfont.woff") format("woff"),
-    url("fonts/heydings_controls-webfont.ttf") format("truetype");
+    url("https://mdn.github.io/learning-area/javascript/apis/video-audio/finished/fonts/heydings_controls-webfont.woff")
+      format("woff"),
+    url("https://mdn.github.io/learning-area/javascript/apis/video-audio/finished/fonts/heydings_controls-webfont.ttf")
+      format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -166,7 +626,7 @@ Next, we use generated content to display an icon on each button:
 - We use the {{cssxref("content")}} property to set the content to be displayed in each case to be equal to the contents of the [`data-icon`](/en-US/docs/Web/HTML/How_to/Use_data_attributes) attribute. In the case of our play button, `data-icon` contains a capital "P".
 - We apply the custom web font to our buttons using {{cssxref("font-family")}}. In this font, "P" is actually a "play" icon, so therefore the play button has a "play" icon displayed on it.
 
-Icon fonts are very cool for many reasons — cutting down on HTTP requests because you don't need to download those icons as image files, great scalability, and the fact that you can use text properties to style them — like {{cssxref("color")}} and {{cssxref("text-shadow")}}.
+Icon fonts are cool for many reasons — cutting down on HTTP requests because you don't need to download those icons as image files, great scalability, and the fact that you can use text properties to style them — like {{cssxref("color")}} and {{cssxref("text-shadow")}}.
 
 Last but not least, let's look at the CSS for the timer:
 
@@ -207,8 +667,7 @@ Last but not least, let's look at the CSS for the timer:
 
 We've got a fairly complete HTML and CSS interface already; now we just need to wire up all the buttons to get the controls working.
 
-1. Create a new JavaScript file in the same directory level as your index.html file. Call it `custom-player.js`.
-2. At the top of this file, insert the following code:
+1. At the top of the `custom-player.js` file, insert the following code:
 
    ```js
    const media = document.querySelector("video");
@@ -229,7 +688,7 @@ We've got a fairly complete HTML and CSS interface already; now we just need to 
    - The play/pause, stop, rewind, and fast forward buttons.
    - The outer timer wrapper `<div>`, the digital timer readout `<span>`, and the inner `<div>` that gets wider as the time elapses.
 
-3. Next, insert the following at the bottom of your code:
+2. Next, insert the following at the bottom of your code:
 
    ```js
    media.removeAttribute("controls");
@@ -379,30 +838,30 @@ There are many ways that you can implement rewind and fast-forward functionality
 
 The very last piece of our media player to implement is the time-elapsed displays. To do this we'll run a function to update the time displays every time the {{domxref("HTMLMediaElement/timeupdate_event", "timeupdate")}} event is fired on the `<video>` element. The frequency with which this event fires depends on your browser, CPU power, etc. ([see this Stack Overflow post](https://stackoverflow.com/questions/9678177/how-often-does-the-timeupdate-event-fire-for-an-html5-video)).
 
-Add the following `addEventListener()` line just below the others:
+1. Add the following `addEventListener()` line just below the others:
 
-```js
-media.addEventListener("timeupdate", setTime);
-```
+   ```js
+   media.addEventListener("timeupdate", setTime);
+   ```
 
-Now to define the `setTime()` function. Add the following at the bottom of your file:
+2. Now to define the `setTime()` function. Add the following at the bottom of your file:
 
-```js
-function setTime() {
-  const minutes = Math.floor(media.currentTime / 60);
-  const seconds = Math.floor(media.currentTime - minutes * 60);
+   ```js
+   function setTime() {
+     const minutes = Math.floor(media.currentTime / 60);
+     const seconds = Math.floor(media.currentTime - minutes * 60);
 
-  const minuteValue = minutes.toString().padStart(2, "0");
-  const secondValue = seconds.toString().padStart(2, "0");
+     const minuteValue = minutes.toString().padStart(2, "0");
+     const secondValue = seconds.toString().padStart(2, "0");
 
-  const mediaTime = `${minuteValue}:${secondValue}`;
-  timer.textContent = mediaTime;
+     const mediaTime = `${minuteValue}:${secondValue}`;
+     timer.textContent = mediaTime;
 
-  const barLength =
-    timerWrapper.clientWidth * (media.currentTime / media.duration);
-  timerBar.style.width = `${barLength}px`;
-}
-```
+     const barLength =
+       timerWrapper.clientWidth * (media.currentTime / media.duration);
+     timerBar.style.width = `${barLength}px`;
+   }
+   ```
 
 This is a fairly long function, so let's go through it step by step:
 
@@ -417,20 +876,21 @@ This is a fairly long function, so let's go through it step by step:
 
 There is one problem left to fix. If the play/pause or stop buttons are pressed while the rewind or fast forward functionality is active, they just don't work. How can we fix it so that they cancel the `rwd`/`fwd` button functionality and play/stop the video as you'd expect? This is fairly easy to fix.
 
-First of all, add the following lines inside the `stopMedia()` function — anywhere will do:
+1. First of all, add the following lines inside the `stopMedia()` function — anywhere will do:
 
-```js
-rwd.classList.remove("active");
-fwd.classList.remove("active");
-clearInterval(intervalRwd);
-clearInterval(intervalFwd);
-```
+   ```js
+   rwd.classList.remove("active");
+   fwd.classList.remove("active");
+   clearInterval(intervalRwd);
+   clearInterval(intervalFwd);
+   ```
 
-Now add the same lines again, at the very start of the `playPauseMedia()` function (just before the start of the `if` statement).
+2. Now add the same lines again, at the very start of the `playPauseMedia()` function (just before the start of the `if` statement).
 
-At this point, you could delete the equivalent lines from the `windBackward()` and `windForward()` functions, as that functionality has been implemented in the `stopMedia()` function instead.
+3. At this point, you can delete the equivalent lines from the `windBackward()` and `windForward()` functions, as that functionality has been implemented in the `stopMedia()` function instead.
 
-Note: You could also further improve the efficiency of the code by creating a separate function that runs these lines, then calling that anywhere it is needed, rather than repeating the lines multiple times in the code. But we'll leave that one up to you.
+> [!NOTE]
+> You could also further improve the efficiency of the code by creating a separate function that runs these lines, then calling that anywhere it is needed, rather than repeating the lines multiple times in the code. But we'll leave that one up to you.
 
 ## Summary
 

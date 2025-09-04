@@ -13,8 +13,6 @@ browser-compat: api.WebSocketStream.close
 The **`close()`** method of the
 {{domxref("WebSocketStream")}} interface closes the WebSocket connection. The method optionally accepts an object containing a custom code and/or reason indicating why the connection was closed.
 
-An alternative mechanism for closing a `WebSocketStream` is to specify an {{domxref("AbortSignal")}} in the [`signal`](/en-US/docs/Web/API/WebSocketStream/WebSocketStream#signal) option of the constructor upon creation. The associated {{domxref("AbortController")}} can then be used to close the WebSocket connection. This is generally the preferred mechanism. However, `close()` can be used if you wish to specify a custom code and/or reason.
-
 ## Syntax
 
 ```js-nolint

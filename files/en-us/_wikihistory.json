@@ -7407,7 +7407,16 @@
       "mishkadoma"
     ]
   },
-  "Learn_web_development/Core/Structuring_content/Mozilla_splash_page": {
+  "Learn_web_development/Core/Structuring_content/Planet_data_table": {
+    "modified": "2020-07-16T22:25:28.525Z",
+    "contributors": [
+      "chrisdavidmills",
+      "tayyabalishan",
+      "jswisher",
+      "Sebastianz"
+    ]
+  },
+  "Learn_web_development/Core/Structuring_content/Splash_page": {
     "modified": "2020-07-16T22:25:05.240Z",
     "contributors": [
       "chrisdavidmills",
@@ -7416,15 +7425,6 @@
       "jswisher",
       "goto.prototype",
       "richardzacur"
-    ]
-  },
-  "Learn_web_development/Core/Structuring_content/Planet_data_table": {
-    "modified": "2020-07-16T22:25:28.525Z",
-    "contributors": [
-      "chrisdavidmills",
-      "tayyabalishan",
-      "jswisher",
-      "Sebastianz"
     ]
   },
   "Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content": {
@@ -7667,17 +7667,6 @@
       "chrisdavidmills"
     ]
   },
-  "Learn_web_development/Core/Styling_basics/Cool-looking_box": {
-    "modified": "2020-07-16T22:28:25.961Z",
-    "contributors": [
-      "chrisdavidmills",
-      "jamesdhurd",
-      "stevedav",
-      "jruota",
-      "jswisher",
-      "richardzacur"
-    ]
-  },
   "Learn_web_development/Core/Styling_basics/Debugging_CSS": {
     "modified": "2020-12-11T17:53:49.635Z",
     "contributors": [
@@ -7691,17 +7680,6 @@
   "Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper": {
     "modified": "2020-07-16T22:28:23.858Z",
     "contributors": ["chrisdavidmills", "jswisher", "maurodibert"]
-  },
-  "Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension": {
-    "modified": "2020-07-16T22:28:10.933Z",
-    "contributors": [
-      "chrisdavidmills",
-      "bripmccann",
-      "jswisher",
-      "jenjwong",
-      "jrussia",
-      "richardzacur"
-    ]
   },
   "Learn_web_development/Core/Styling_basics/Getting_started": {
     "modified": "2020-07-16T22:27:48.937Z",
@@ -69236,30 +69214,6 @@
       "jsx"
     ]
   },
-  "Web/API/XMLHttpRequest/abort_event": {
-    "modified": "2020-10-15T21:19:52.433Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg",
-      "fscholz",
-      "teoli",
-      "Sheppy",
-      "ethertank",
-      "louisremi"
-    ]
-  },
-  "Web/API/XMLHttpRequest/error_event": {
-    "modified": "2020-10-15T21:19:53.429Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg",
-      "fscholz",
-      "teoli",
-      "Sheppy",
-      "ethertank",
-      "louisremi"
-    ]
-  },
   "Web/API/XMLHttpRequest/getAllResponseHeaders": {
     "modified": "2020-10-15T21:39:59.560Z",
     "contributors": [
@@ -69295,48 +69249,6 @@
       "jsx"
     ]
   },
-  "Web/API/XMLHttpRequest/load_event": {
-    "modified": "2020-10-15T21:19:52.991Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg",
-      "fscholz",
-      "teoli",
-      "Sheppy",
-      "ethertank",
-      "louisremi"
-    ]
-  },
-  "Web/API/XMLHttpRequest/loadend_event": {
-    "modified": "2020-10-15T21:19:53.106Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg",
-      "mfluehr",
-      "fscholz",
-      "Sebastianz",
-      "chrisdavidmills",
-      "teoli",
-      "Sheppy",
-      "ethertank",
-      "louisremi"
-    ]
-  },
-  "Web/API/XMLHttpRequest/loadstart_event": {
-    "modified": "2020-10-15T21:19:52.064Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg",
-      "mfluehr",
-      "fscholz",
-      "Sebastianz",
-      "chrisdavidmills",
-      "teoli",
-      "Sheppy",
-      "ethertank",
-      "louisremi"
-    ]
-  },
   "Web/API/XMLHttpRequest/open": {
     "modified": "2020-10-15T21:40:00.147Z",
     "contributors": [
@@ -69367,20 +69279,6 @@
       "cong",
       "jsx",
       "MashKao"
-    ]
-  },
-  "Web/API/XMLHttpRequest/progress_event": {
-    "modified": "2020-10-15T21:19:52.232Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg",
-      "gurdiga",
-      "mfluehr",
-      "fscholz",
-      "teoli",
-      "Sheppy",
-      "ethertank",
-      "louisremi"
     ]
   },
   "Web/API/XMLHttpRequest/readyState": {
@@ -69566,19 +69464,6 @@
     "modified": "2020-10-15T21:39:56.395Z",
     "contributors": ["Sheppy", "ExE-Boss", "MashKao", "jsx"]
   },
-  "Web/API/XMLHttpRequest/timeout_event": {
-    "modified": "2020-10-15T21:48:37.629Z",
-    "contributors": [
-      "realityforge",
-      "mfuji09",
-      "wbamberg",
-      "chrisdavidmills",
-      "irenesmith",
-      "teoli",
-      "erikadoyle",
-      "MashKao"
-    ]
-  },
   "Web/API/XMLHttpRequest/upload": {
     "modified": "2020-10-15T21:39:59.870Z",
     "contributors": [
@@ -69622,6 +69507,99 @@
       "kosvrouvas",
       "RomitChaks",
       "kscarfone"
+    ]
+  },
+  "Web/API/XMLHttpRequestEventTarget/abort_event": {
+    "modified": "2020-10-15T21:19:52.433Z",
+    "contributors": [
+      "mfuji09",
+      "wbamberg",
+      "fscholz",
+      "teoli",
+      "Sheppy",
+      "ethertank",
+      "louisremi"
+    ]
+  },
+  "Web/API/XMLHttpRequestEventTarget/error_event": {
+    "modified": "2020-10-15T21:19:53.429Z",
+    "contributors": [
+      "mfuji09",
+      "wbamberg",
+      "fscholz",
+      "teoli",
+      "Sheppy",
+      "ethertank",
+      "louisremi"
+    ]
+  },
+  "Web/API/XMLHttpRequestEventTarget/load_event": {
+    "modified": "2020-10-15T21:19:52.991Z",
+    "contributors": [
+      "mfuji09",
+      "wbamberg",
+      "fscholz",
+      "teoli",
+      "Sheppy",
+      "ethertank",
+      "louisremi"
+    ]
+  },
+  "Web/API/XMLHttpRequestEventTarget/loadend_event": {
+    "modified": "2020-10-15T21:19:53.106Z",
+    "contributors": [
+      "mfuji09",
+      "wbamberg",
+      "mfluehr",
+      "fscholz",
+      "Sebastianz",
+      "chrisdavidmills",
+      "teoli",
+      "Sheppy",
+      "ethertank",
+      "louisremi"
+    ]
+  },
+  "Web/API/XMLHttpRequestEventTarget/loadstart_event": {
+    "modified": "2020-10-15T21:19:52.064Z",
+    "contributors": [
+      "mfuji09",
+      "wbamberg",
+      "mfluehr",
+      "fscholz",
+      "Sebastianz",
+      "chrisdavidmills",
+      "teoli",
+      "Sheppy",
+      "ethertank",
+      "louisremi"
+    ]
+  },
+  "Web/API/XMLHttpRequestEventTarget/progress_event": {
+    "modified": "2020-10-15T21:19:52.232Z",
+    "contributors": [
+      "mfuji09",
+      "wbamberg",
+      "gurdiga",
+      "mfluehr",
+      "fscholz",
+      "teoli",
+      "Sheppy",
+      "ethertank",
+      "louisremi"
+    ]
+  },
+  "Web/API/XMLHttpRequestEventTarget/timeout_event": {
+    "modified": "2020-10-15T21:48:37.629Z",
+    "contributors": [
+      "realityforge",
+      "mfuji09",
+      "wbamberg",
+      "chrisdavidmills",
+      "irenesmith",
+      "teoli",
+      "erikadoyle",
+      "MashKao"
     ]
   },
   "Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest": {
@@ -74081,10 +74059,6 @@
       "Jürgen Jeka",
       "j.j."
     ]
-  },
-  "Web/CSS/:target-within": {
-    "modified": "2020-12-04T07:48:58.177Z",
-    "contributors": ["rachelandrew"]
   },
   "Web/CSS/:user-invalid": {
     "modified": "2020-11-20T11:42:30.261Z",

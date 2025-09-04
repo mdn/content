@@ -83,7 +83,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     For more information, see the [`dirname` attribute](/en-US/docs/Web/HTML/Reference/Attributes/dirname).
 - [`disabled`](/en-US/docs/Web/HTML/Reference/Attributes/disabled)
   - : This Boolean attribute indicates that the user cannot interact with the control. If this attribute is not specified, the control inherits its setting from the containing element, for example {{ HTMLElement("fieldset") }}; if there is no containing element when the `disabled` attribute is set, the control is enabled.
-- `form`
+- [`form`](/en-US/docs/Web/HTML/Reference/Attributes/form)
   - : The form element that the `<textarea>` element is associated with (its "form owner"). The value of the attribute must be the `id` of a form element in the same document. If this attribute is not specified, the `<textarea>` element must be a descendant of a form element. This attribute enables you to place `<textarea>` elements anywhere within a document, not just as descendants of form elements.
 - [`maxlength`](/en-US/docs/Web/HTML/Reference/Attributes/maxlength)
   - : The maximum string length (measured in {{glossary("UTF-16", "UTF-16 code units")}}) that the user can enter. If this value isn't specified, the user can enter an unlimited number of characters.
