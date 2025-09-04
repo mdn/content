@@ -82,7 +82,7 @@ jobs:
           path: content
 
       - name: Setup (mdn/content)
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         if: steps.check.outputs.HAS_ARTIFACT
         with:
           node-version-file: "content/.nvmrc"
