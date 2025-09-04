@@ -32,7 +32,7 @@ The `<corner-shape-value>` data type can take a {{cssxref("superellipse()")}} fu
       - : Defines a "squircle", which is a convex curve in between `round` and `square`. The `squircle` keyword is equivalent to `superellipse(2)`.
 
 > [!NOTE]
-> You can smoothly animate between different keyword corner shapes as the animation interpolates between their `superellipse()` equivalents.
+> You can smoothly animate between different `superellipse()` values, and between different corner shape keywords, as the animation interpolates between their `superellipse()` equivalents.
 
 ## Formal syntax
 
@@ -42,7 +42,9 @@ The `<corner-shape-value>` data type can take a {{cssxref("superellipse()")}} fu
 
 ### `<corner-shape-value>` value comparison
 
-In this example, we provide a drop-down menu allowing you to select different `<corner-shape-value>` values and a slider that updates the container's {{cssxref("border-radius")}}. This enables visualizing the effect of the different keywords and `superellipse()` parameter values. The `corner-shape` property defines the shape of the box's corners while the region the shape is applied to is specified by the `border-radius` property. The code is hidden for brevity, but you can find a [full explanation of `corner-shape` values](/en-US/docs/Web/CSS/corner-shape#comparing_corner-shape_values) along with other related examples on the {{cssxref("corner-shape")}} reference page.
+In this example, we provide a drop-down menu allowing you to select different `<corner-shape-value>` values and a slider that updates the container's {{cssxref("border-radius")}}. This enables visualizing the effect of the different keywords and `superellipse()` parameter values.
+
+The `corner-shape` property defines the shape of the box's corners while the region the shape is applied to is specified by the `border-radius` property. The code is hidden for brevity, but you can find a [full explanation of `corner-shape` values](/en-US/docs/Web/CSS/corner-shape#comparing_corner-shape_values) along with other related examples on the {{cssxref("corner-shape")}} reference page.
 
 ```html hidden live-sample___value-comparison
 <form>
@@ -143,7 +145,7 @@ setCorners();
 {{EmbedLiveSample("value-comparison", "100%", "300")}}
 
 > [!NOTE]
-> See also our [`superellipse()` function value comparison](/en-US/docs/Web/CSS/superellipse#superellipse_value_comparison) example.
+> See also the [`superellipse()` function value comparison](/en-US/docs/Web/CSS/superellipse#superellipse_value_comparison) example.
 
 ## Specifications
 
