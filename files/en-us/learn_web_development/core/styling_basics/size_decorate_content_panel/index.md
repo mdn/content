@@ -190,7 +190,7 @@ Follow the steps below to complete the project, sizing the content pane appropri
 
 ## Example
 
-The finished project should look like this:
+The finished project should look like this (we've rendered this at `90%` width, not `60%`, so it looks better in the narrow output pane):
 
 {{EmbedLiveSample("content-pane-finish", "100%", 500)}}
 
@@ -378,6 +378,12 @@ button:focus {
 .content,
 button {
   border-radius: 10px;
+}
+```
+
+```css hidden live-sample___content-pane-finish
+.pane {
+  width: clamp(480px, 90%, 1000px);
 }
 ```
 
