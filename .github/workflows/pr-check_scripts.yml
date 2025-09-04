@@ -58,7 +58,7 @@ jobs:
       - name: Wait for Rari (localhost:8083)
         run: curl --retry-connrefused --retry 5 -I http://localhost:8083/en-US/
 
-      - name: Test server (localhost:5042)
+      - name: Test Fred (localhost:5042)
         run: |
           curl --retry-connrefused --retry 5 http://localhost:5042 > /dev/null
 
