@@ -343,6 +343,6 @@ div.comma-separated {
 ## See also
 
 - The {{CSSXref("&lt;color&gt;")}} data type for a list of all color notations
-- [sRGB color picker and conversion tool](/en-US/docs/Web/CSS/CSS_colors/Color_picker_tool)
+- [sRGB color picker and conversion tool](/en-US/docs/Web/CSS/CSS_colors/Color_picker)
 - [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)
 - [CSS colors](/en-US/docs/Web/CSS/CSS_colors) module
