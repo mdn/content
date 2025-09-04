@@ -36,6 +36,8 @@ Before starting this module, you should have a basic work environment set up (as
   - : Everything in CSS has a box around it, and understanding these boxes is key to being able to create more complex layouts with CSS, or to align items with other items. In this lesson, we will take a look at the CSS _Box model_. You'll get an understanding of how it works and the terminology that relates to it.
 - [Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
   - : The aim of this lesson is to develop your understanding of some of the most fundamental concepts of CSS — the cascade, specificity, and inheritance — which control how CSS is applied to HTML and how conflicts between style declarations are resolved.
+- [Fixing blog page styles](/en-US/docs/Learn_web_development/Core/Styling_basics/Fixing_blog_styles) <sup>Challenge</sup>
+  - : In this challenge we give you a basic blog page example that is partially styled. We need you to fix some problems with the existing CSS and add some styles to finish it off. Along the way we will test your knowledge of selectors, the box model, and conflicts/cascade.
 - [Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
   - : CSS rules contain [declarations](/en-US/docs/Web/CSS/CSS_syntax/Syntax#css_declarations), which in turn are composed of properties and values. Each property used in CSS has a **value type** that describes what kind of values it is allowed to have. In this lesson, we will take a look at some of the most frequently used value types, what they are, and how they work.
 - [Sizing items in CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Sizing)
