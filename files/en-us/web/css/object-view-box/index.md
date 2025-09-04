@@ -91,6 +91,8 @@ object-view-box: unset;
 
 ## Description
 
+The `object-view-box` property enabled defining a view box within {{glossary("replaced elements")}}, enabling displaying just a section of the replaced content, with that area being at it's intrinsic size, zoomed in, or panned out, while maintaining the content's intrinsic {{glossary("aspect ratio")}} .
+
 The replaced elements on web pages have two sizes [extrinsic size](/en-US/docs/Glossary/Intrinsic_Size#extrinsic_sizing) and [intrinsic size](/en-US/docs/Glossary/Intrinsic_Size). The extrinsic size is the dimension of the HTML element in which the content is rendered, and the intrinsic size is the original size of the content itself. Size of the visible content is always the size of the rendering element (extrinsic size). The [`object-fit`](/en-US/docs/Web/CSS/object-fit) property allows us to control how the content is rendered, but it has limited capability. In the following image, we have a 1200 x 400 pixel leopard picture and a 400 x 200 HTML [`<img>`](/en-US/docs/Web/HTML/Reference/Elements/img) image. The image content is positioned using `object-fit: cover;` declaration.
 
 ![An image demonstrating extrinsic and intrinsic image sizes](https://mdn.github.io/shared-assets/images/diagrams/css/object-view-box/extrinsic-intrinsic_sizes.jpg)
