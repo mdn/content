@@ -280,7 +280,7 @@ section h2 + p::first-line {
 /* Nav menu */
 
 /* 2. Set scope of nav styles to only
-elements that are descendents of <nav> */
+elements that are descendants of <nav> */
 
 nav ul {
   display: flex;
