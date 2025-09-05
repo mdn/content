@@ -177,7 +177,7 @@ Follow these steps to complete the function:
 1. Create a new variable called `newStory`, and set its value to equal a `returnRandomStoryString()` call. This function is needed so we can create a new random story each time the button is pressed. If we set `newStory` directly to `storyText`, we'd only be able to generate a new story once.
 2. Inside the first `if` block, add a string replacement method call to replace the name `Bob` found in the `newStory` string with the `name` variable. In this block we are saying "If a value has been entered into the `customName` text input, replace `Bob` in the story with that custom name."
 3. Inside the second `if` block, we are checking to see if the `uk` radio button has been selected. If so, we want to convert the weight and temperature values in the story from pounds and Fahrenheit into stones and centigrade. What you need to do is as follows:
-   1. Look up the formulas for converting pounds to stone, and fahrenheit to centigrade.
+   1. Look up the formulas for converting pounds to stone, and Fahrenheit to Celcius.
    2. Inside the line that defines the `weight` constant, replace `300` with a calculation that converts 300 pounds into stones. Concatenate `" stone"` onto the end of the result of the overall `Math.round()` call.
    3. Inside the line that defines the `temperature` variable, replace `94` with a calculation that converts 94 fahrenheit into centigrade. Concatenate `" centigrade"` onto the end of the result of the overall `Math.round()` call.
    4. Just under the two variable definitions, add two more string replacement lines that replace `300 pounds` with the contents of the `weight` variable, and `94 fahrenheit` with the contents of the `temperature` variable.
