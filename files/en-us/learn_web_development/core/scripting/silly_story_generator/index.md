@@ -128,7 +128,7 @@ function generateStory() {
 }
 ```
 
-{{EmbedLiveSample("silly-story-start", "100%", 240)}}
+{{EmbedLiveSample("silly-story-start", "100%", 300)}}
 
 ## Project brief
 
