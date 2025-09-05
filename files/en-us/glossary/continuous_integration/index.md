@@ -13,4 +13,4 @@ As [Martin Fowler observes](https://martinfowler.com/articles/continuousIntegrat
 
 > Integration is primarily about communication. Integration allows developers to tell other developers about the changes they have made. Frequent communication allows people to know quickly as changes develop.
 
-A major aspect of CI is automated build and test: typically, in a CI system, as soon as a change has been committed to a repository, an automated process builds the product and runs tests. Once all the tests pass, the change can be peer-reviewed.
+A major aspect of CI is automated build and test: typically, in a CI system, as soon as a developer opens a pull request to commit their changes to the main branch, an automated process builds the product and runs tests. Once all the tests pass, the change can be peer-reviewed.
