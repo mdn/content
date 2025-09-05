@@ -16,8 +16,8 @@ To begin, click the **Play** button in one of the code panels below to open the 
 
 ```html live-sample___silly-story-start live-sample___silly-story-finish
 <div>
-  <label for="customname">Enter custom name:</label>
-  <input id="customname" type="text" placeholder="" />
+  <label for="custom-name">Enter custom name:</label>
+  <input id="custom-name" type="text" placeholder="" />
 </div>
 <fieldset>
   <legend>Choose locale:</legend>
