@@ -17,7 +17,7 @@ Values of this type are objects. They contain these properties:
 - `css` {{optional_inline}}
   - : `array` of `string`. The list of CSS files to be injected into matching pages. These are injected in the order they appear in this array.
 - `cssOrigin` {{optional_inline}}
-  - : `string`. The style origin for the injection, either `"user"`, to add the CSS as a user stylesheet, or `"author"`, to add it as an author stylesheet. Defaults to ``"author"`. This property is case insensitive in Firefox and Safari.
+  - : `string`. The style origin for the injection, either `"user"`, to add the CSS as a user stylesheet, or `"author"`, to add it as an author stylesheet. Defaults to `"author"`. This property is case insensitive in Firefox and Safari.
 - `excludeMatches` {{optional_inline}}
   - : `array` of `string`. Array of pages that this content script is excluded from but would otherwise be injected into.
 - `id`
