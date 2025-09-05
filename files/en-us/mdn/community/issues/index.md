@@ -33,12 +33,9 @@ If you want to suggest new documentation or ways to improve the website, see [Pr
 
 ### Before filing an issue
 
-If you think you've found a bug with the content on MDN Web Docs or with the look and feel of the website, search the current open issues in the [relevant repository](/en-US/docs/MDN/Community/Our_repositories) and make sure nobody else has reported the issue.
+Depending on the type of problem you've discovered, make sure to file it to the [relevant GitHub repository](/en-US/docs/MDN/Community/Our_repositories), so the right people can see it and address it. Make sure nobody else has reported the issue.
 
 ### Reporting an issue
-
-Depending on the type of problem you've discovered, you can report it by filing an issue on one of the main [MDN GitHub repositories](/en-US/docs/MDN/Community/Our_repositories).
-If the information you provide in the issue is incomplete, you might be asked to provide more details during the [issue triaging process](#review_the_issue_for_completeness_of_information).
 
 Here are some hints for opening issues:
 
@@ -55,6 +52,8 @@ Here are some hints for opening issues:
   - The issue has no clear consensus on its resolution.
   - The requirements for completing the task expand while it's being resolved or the work is unclear.
 - For minor bugs, you can [make the changes yourself](#fixing_issues_yourself) and submit a pull request.
+
+If the information you provide in the issue is incomplete, you might be asked to provide more details during the [issue triaging process](#review_the_issue_for_completeness_of_information).
 
 ### Creating a task list issue
 
@@ -86,7 +85,7 @@ Remember that if you take on an issue, the expectation is for the work to be com
 
 These are the general steps for working on an issue:
 
-1. **Find an issue:** If you're looking to contribute, search for issues with [`good first issue`, `help wanted`](#set_other_labels) or [`p3`](#set_a_priority_label) label. Most repositories have issues with these labels. You are welcome to browse and pick an issue that is suitable for your skill set. Another useful place to look for issues to work on is the [MDN Contributors Task Board](https://github.com/orgs/mdn/projects/25). This project view lists open issues from multiple repositories. You can filter the list based on the topics (`Labels` column) you're interested in. See the description of some of the [labels](#set_other_labels) that get applied during the issue triage process.
+1. **Find an issue:** If you're looking to contribute, search for issues with the [`p2` or `p3`](#set_a_priority_label) label, or [one of the labels indicating accepting external PRs](#set_other_labels): `good first issue`, `accepting PR`, `help wanted`. Most repositories have issues with these labels. You are welcome to browse and pick an issue that is suitable for your skill set. Another useful place to look for issues to work on is the [MDN Contributors Task Board](https://github.com/orgs/mdn/projects/25). This project view lists open issues from multiple repositories. You can filter the list based on the topics (`Labels` column) you're interested in. See the description of some of the [labels](#set_other_labels) that get applied during the issue triage process.
 
    > [!NOTE]
    > An issue with the `needs triage` label indicates that the MDN Web Docs core team has not reviewed the issue yet, and you shouldn't begin work on it.
@@ -183,7 +182,7 @@ For each bug, set a priority label based on the severity of the issue to help pe
 - Minor issue: This is a type of improvement issue that can make the existing content better but does not affect learning or only has a minor effect on learning. Since these types of issues are not actively planned for, help from contributors to fix these issues is welcome and much appreciated. Fixing some of these issues can also provide the necessary practice to beginner contributors who are starting to get familiar with the contribution process. Examples include typos, bad grammar, a broken link, a small amount of out-of-date information or badly-written prose, or a code snippet that doesn't work.
   - Labels: `p3` (no visibility when the issue will be addressed)
 
-In general, critical issues should be fixed immediately and are most likely handled by MDN Web Docs staff and peers.
+In general, critical issues should be fixed immediately and are most likely handled by MDN Web Docs staff and peers. If not specified, `p3` is the default priority level.
 
 #### Add helpful information
 
@@ -203,12 +202,46 @@ To whoever fixes this issue, it looks like the following is needed:
 
 Next, set the following labels as appropriate:
 
-- `effort: small`, `effort: medium`, `effort: large`: Some contributors like to search for bugs based on the time and effort that will be needed to fix the bug. So where possible, you should try to provide an estimate of the required effort.
-- `good first issue`: Set this label on the issue if the fix for the issue is really simple and if fixing the issue would provide good practice for a newcomer who is getting used to the process.
-- `help wanted`: Set this label if the issue requires help from someone who knows about or is familiar with the topic. This is a popular label and some contributors use it to search for issues to work on in open source projects in their areas of familiarity or expertise.
-- `broken link external`: Set this label if the issue involves a broken link to an external page.
-- `document not written`: Set this label if the issue involves a necessary document that has not been written yet, usually because a link points to it.
-- `needs content update`: Set this label if the issue fix in another repository will need an equivalent fix in the `mdn/content` repository.
+- One of the problem type labels to indicate what needs to be fixed, if applicable:
+  - `broken link external`: The issue reports a broken link to an external page.
+  - `document not written`: The issue reports a necessary document that has not been written yet, usually because a link points to it. Note that we have a [Web Docs Backlog](https://openwebdocs.github.io/web-docs-backlog/all/) project that already tracks many unwritten reference pages, so if the issue is about one of those, you could close it and point to the backlog.
+  - `screenshot`: The issue reports a missing or outdated screenshot.
+  - `baseline`: The issue reports an incorrect [baseline](/en-US/docs/Glossary/Baseline/Compatibility) banner. Note that this banner is rendered by a collaboration of BCD, frontend code, and the [web-platform-dx/web-features](https://github.com/web-platform-dx/web-features) project, but has nothing to do with content, so you should almost always either close the issue as working as intended, or transfer it somewhere else.
 
-  > [!NOTE]
-  > After the triage process is complete, remove the `needs triage` label.
+- One of the goal labels to indicate what the fix is trying to achieve:
+  - `goal: accuracy`: The issue reports incorrect or inaccurate information.
+  - `goal: clarity`: The issue reports misleading or unclear information (but is technically correct).
+  - `goal: completeness`: The issue reports missing information, usually important caveats or explanations.
+  - `goal: consistency`: The issue reports inconsistent information. Use this label only for editorial consistency, such as code examples and their descriptions; if at least one place is technically incorrect, use the `goal: accuracy` label instead.
+  - `goal: up-to-date`: The issue reports out-of-date information, usually because of changes in the web platform.
+  - `goal: best practices`: The issue reports anti-patterns used in code examples or content.
+  - `goal: discoverability`: The issue reports missing links to related content or missing keywords that would help search engines find the page.
+
+- One of the effort labels to help contributors find issues that match the time and effort they can spend. The descriptions are intentionally vague, because the actual effort depends on the contributor's skill set and experience:
+  - `effort: small`: The fix should be under 50 lines (corresponding to an `xs` or `s`-sized PR)
+  - `effort: medium`: The fix should be between 50 and 1000 lines (corresponding to an `m` or `l`-sized PR)
+  - `effort: large`: The fix should be over 1000 lines (corresponding to an `xl`-sized PR)
+
+  These metrics are not exact. For example, an issue may fix a lot of pages but in an automated fashion, or it may involve significant prior research.
+
+- One of the labels indicating accepting external PRs:
+  - `good first issue`: Set this label on the issue if the fix for the issue is really simple and if fixing the issue would provide good practice for a newcomer who is getting used to the process. Apply this label only to issues that check all these boxes:
+    - There are instructions either by the author or the triager about what _exactly_ needs to be written (preferably verbatim text, or step-by-step guide).
+    - The fix targets one single page (so the contributor can easily fix it via the web interface).
+    - The fix does not involve writing significant new content or code, which may require a deeper technical understanding.
+  - `help wanted`: Set this label if the issue requires help from someone who knows about or is familiar with the topic. This is a popular label and some contributors use it to search for issues to work on in open source projects in their areas of familiarity or expertise.
+  - `accepting PR`: A neutral label that indicates that the issue is open for community contributions. The issue is not as straightforward as a `good first issue`, but not so technically sophisticated to be `help wanted`.
+
+  If an issue has none of the above labels, it generally indicates that community contributions are discouraged, either because further discussion is needed, because it needs someone familiar with the MDN editorial conventions (i.e., the team), or because a team member would like to work on it. Contributors can still work on these issues if they are familiar enough with the process.
+
+- Issue status: if an issue is not marked as welcoming PRs or otherwise in progress, add a label indicating what it's blocked on.
+  - `needs BCD update`: Set this label if the issue involves documentation for new features or behavior that would first need data about when it's implemented.
+  - `needs content update`: Set this label if the issue fix in another repository will need an equivalent fix in the `mdn/content` repository.
+  - `needs decision`: Set this label if the issue involves a team consensus on the approach. The consensus can be reached via a discussion or a synchronous internal meeting.
+  - `needs example update`: Set this label if the issue involves synchronizing code examples in another repository. If the repository is external, it probably needs to be converted to an internal [live sample](/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples) or transferred under MDN first.
+  - `needs info`: As [mentioned above](#review_the_issue_for_completeness_of_information), set this label if any information is requested, either from the issue author, from the author of the content in question, or from someone else, in order to proceed with the issue.
+  - `on hold`: A generic label to indicate that the issue should not be worked on yet.
+  - `waiting for implementations`: Set this label if the issue involves a feature that is not yet implemented in browsers and therefore don't qualify for our [documentation criteria](/en-US/docs/MDN/Writing_guidelines/Criteria_for_inclusion).
+
+> [!NOTE]
+> After the triage process is complete, remove the `needs triage` label.
