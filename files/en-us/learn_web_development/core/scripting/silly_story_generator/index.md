@@ -157,7 +157,7 @@ Below the "RAW TEXT STRINGS" comment, you've got some commented text strings tha
 
 ### Completing the `returnRandomStoryString()` function
 
-Below the "PARTIAL RETURN RANDOM STRING FUNCTION" comment you've got a partially-completed `returnRandomStoryString()` containing a long, raw string of text and a `return` statement that returns a value called `storyText`.
+Below the "PARTIAL RETURN RANDOM STRING FUNCTION" comment you've got a partially-completed `returnRandomStoryString()` containing a long, commented string of text and a `return` statement that returns a value called `storyText`.
 
 To complete this function:
 
