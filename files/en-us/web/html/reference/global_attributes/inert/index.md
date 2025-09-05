@@ -51,3 +51,4 @@ While providing visual and non-visual cues about content inertness, also remembe
 - {{domxref("HTMLElement.inert")}} HTML DOM property
 - [Introducing inert](https://web.dev/articles/inert)
 - [The "inert" attribute is finally coming to the web](https://www.stefanjudis.com/blog/the-inert-attribute-is-finally-coming-to-the-web/)
+- {{cssxref("interactivity")}}
