@@ -1,6 +1,6 @@
 ---
 title: Supply chain attacks
-slug: Web/Security/Attacks/Supply_chain
+slug: Web/Security/Attacks/Supply_chain_attacks
 page-type: guide
 sidebar: security
 ---
