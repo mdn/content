@@ -6,9 +6,9 @@ browser-compat: css.properties.interactivity
 sidebar: cssref
 ---
 
-The **`interactivity`** [CSS](/en-US/docs/Web/CSS) property determines whether an element and its descendants are *inert* or not.
+The **`interactivity`** [CSS](/en-US/docs/Web/CSS) property determines whether an element and its descendants are _inert_ or not.
 
-When an element is *inert*, it and all of its descendants become non-interactive. This means they cannot receive focus, be clicked, or be accessed by assistive technologies like screen readers.
+When an element is _inert_, it and all of its descendants become non-interactive. This means they cannot receive focus, be clicked, or be accessed by assistive technologies like screen readers.
 
 ## Syntax
 
@@ -30,7 +30,7 @@ The `interactivity` property is specified as one of the keyword values listed be
 ### Values
 
 - `auto`
-  - : The element’s inertness is determined by the host language. (This will usually mean the element is not inert.)
+  - : The element's inertness is determined by the host language. (This will usually mean the element is not inert.)
 - `inert`
   - : The element is inert.
 
