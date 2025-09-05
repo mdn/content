@@ -179,7 +179,7 @@ Follow these steps to complete the function:
 3. Inside the second `if` block, we are checking to see if the `uk` radio button has been selected. If so, we want to convert the weight and temperature values in the story from pounds and Fahrenheit into stones and centigrade. What you need to do is as follows:
    1. Look up the formulas for converting pounds to stone, and Fahrenheit to Celcius.
    2. Inside the line that defines the `weight` constant, replace `300` with a calculation that converts 300 pounds into stones. Concatenate `" stone"` onto the end of the result of the overall `Math.round()` call.
-   3. Inside the line that defines the `temperature` variable, replace `94` with a calculation that converts 94 fahrenheit into centigrade. Concatenate `" centigrade"` onto the end of the result of the overall `Math.round()` call.
+   3. Inside the line that defines the `temperature` variable, replace `94` with a calculation that converts 94 Fahrenheit into Celcius. Concatenate `" Celcius"` onto the end of the result of the overall `Math.round()` call.
    4. Just under the two variable definitions, add two more string replacement lines that replace `300 pounds` with the contents of the `weight` variable, and `94 fahrenheit` with the contents of the `temperature` variable.
 4. Finally, in the second-to-last line of the function, make the `textContent` property of the `story` variable (which references the paragraph) equal to `newStory`.
 
