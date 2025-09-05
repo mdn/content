@@ -161,7 +161,7 @@ Below the "PARTIAL RETURN RANDOM STRING FUNCTION" comment you've got a partially
 
 To complete this function:
 
-1. Store the long string of text inside a variable called `storyText`. This should be a template literal.
+1. Uncomment and store the long string of text inside a variable called `storyText`. This should be a template literal.
 2. Add three constants called `randomCharacter`, `randomPlace`, and `randomEvent` just above the template literal. These should be set equal to three `randomValueFromArray()` calls, which should return a random string from the `characters`, `places`, and `events` arrays, respectively.
 3. In the template literal, replace the instances of `:insertx:`, `:inserty:`, and `:insertz:` with embedded expressions containing `randomCharacter`, `randomPlace`, and `randomEvent`, respectively.
 
