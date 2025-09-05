@@ -84,17 +84,17 @@ function randomValueFromArray(array){
 
 // 2. RAW TEXT STRINGS
 
-Willy the Goblin
-Big Daddy
-Father Christmas
+\\ Willy the Goblin
+\\ Big Daddy
+\\ Father Christmas
 
-the soup kitchen
-Disneyland
-the White House
+\\ the soup kitchen
+\\ Disneyland
+\\ the White House
 
-spontaneously combusted
-melted into a puddle on the sidewalk
-turned into a slug and slithered away
+\\ spontaneously combusted
+\\ melted into a puddle on the sidewalk
+\\ turned into a slug and slithered away
 
 // 3. PARTIAL RETURN RANDOM STRING FUNCTION
 
