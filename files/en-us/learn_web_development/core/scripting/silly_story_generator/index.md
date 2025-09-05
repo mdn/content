@@ -167,7 +167,7 @@ To complete this function:
 
 ### Completing the `generateStory()` function
 
-Below the "EVENT LISTENER AND PARTIAL GENERATE FUNCTION DEFINITION" you've got a couple of code items:
+Below the "EVENT LISTENER AND PARTIAL GENERATE FUNCTION DEFINITION" comment, you've got a couple of code items:
 
 - A line that adds a click event listener to the `generateBtn` variable so that when the button it represents is clicked, the `generateStory()` function is run.
 - A partially-completed `generateStory()` function definition. For the remainder of the challenge, you'll be filling in lines inside this function to complete it and make it work properly.
