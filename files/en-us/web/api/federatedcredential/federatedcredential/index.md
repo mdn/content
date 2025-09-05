@@ -21,15 +21,15 @@ new FederatedCredential(data)
 ### Parameters
 
 - `data`
-  - : A {{domxref("FederatedCredentialInit")}} object. Options are:
+  - : A {{domxref("FederatedCredentialInit")}} object. An object with the following properties:
     - `name` {{optional_inline}}
       - : A string representing the credential username.
     - `iconURL` {{optional_inline}}
       - : A string representing the URL of an icon or avatar to be associated with the credential.
     - `origin`
-      - : A required string representing the credential's origin. {{domxref("FederatedCredential")}} objects are origin-bound, which means that they will only be usable on the specified origin they were intended to be used on.
+      - : A string representing the credential's origin. {{domxref("FederatedCredential")}} objects are origin-bound, so they will only be usable on the origin specified here.
     - `provider`
-      - : A required string representing the credentials' federated identity provider (for example `"https://www.facebook.com"` or `"https://accounts.google.com"`).
+      - : A string which identifies the credentials' federated identity provider, specified as the origin that the provider uses to sign users in (for example `"https://www.facebook.com"` or `"https://accounts.google.com"`).
     - `protocol` {{optional_inline}}
       - : A string representing the protocol of the credentials' federated identity provider (for example, `"openidconnect"`).
 
