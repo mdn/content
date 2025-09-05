@@ -26,7 +26,7 @@ One route for a supply chain attack is for an attacker to introduce vulnerabilit
 
 Implement strong access control for everyone working on the project, including anyone with write access to your code repository or with the permissions to modify the build or testing configuration. Good practices here include:
 
-- Requiring {{glossary("MFA", "multifactor authentication")}} for team members.
+- Requiring {{glossary("multi-factor authentication")}} for team members.
 - Following the {{glossary("principle of least privilege")}}: that is, only giving privileges to team members that need them, and actively minimizing the number of team members that are granted very powerful permissions.
 
 ### Securing tools
@@ -45,7 +45,7 @@ For open source software dependencies, you can use the [Concise Guide for Evalua
 Understand and apply secure settings for your tools, especially your source control system. Key protections are:
 
 - Ensuring that PRs go through review and explicit approval from a code owner before they can be merged.
-- Ensuring that PRs pass {{glossary("CI")}} checks before they can be merged.
+- Ensuring that PRs pass {{glossary("continuous integration")}} checks before they can be merged.
 - Requiring that commits are signed.
 
 See the OpenSSF's [Source Code Management Platform Configuration Best Practices](https://best.openssf.org/SCM-BestPractices/), which includes specific checklists for GitHub and GitLab.
