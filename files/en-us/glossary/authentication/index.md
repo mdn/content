@@ -15,7 +15,7 @@ Types of authentication information, also called _authentication factors_, are c
 - Something the user has, such as a phone.
 - Something the user is, such as a thumbprint.
 
-Multi-factor authentication (MFA) systems require the user to provide more than one factor: for example, a password combined with a one-time code sent to the user's phone.
+{{glossary("Multi-factor authentication")}} (MFA) systems require the user to provide more than one factor: for example, a password combined with a one-time code sent to the user's phone.
 
 ## See also
 
