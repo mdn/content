@@ -149,7 +149,7 @@ In the JavaScript, below the "COMPLETE VARIABLE DEFINITIONS AND RANDOM FUNCTION"
 
 In addition, you've got a function called `randomValueFromArray()` that takes an array as input and returns one of the items stored inside the array at random.
 
-Below the "RAW TEXT STRINGS" comment, you've got some text strings that will act as input into our program. We'd like you to store these strings inside constants like so:
+Below the "RAW TEXT STRINGS" comment, you've got some commented text strings that will act as input into our program. We'd like you to uncomment the lines and store these strings inside constants like so:
 
 1. Store the first set of three strings inside an array called `characters`.
 2. Store the second set of three strings inside an array called `places`.
