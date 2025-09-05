@@ -22,9 +22,9 @@ To begin, click the **Play** button in one of the code panels below to open the 
 <fieldset>
   <legend>Choose locale:</legend>
   <label for="us">US</label
-  ><input id="us" type="radio" name="ukus" value="us" checked />
+  ><input id="us" type="radio" name="uk-us" value="us" checked />
   <label for="uk">UK</label
-  ><input id="uk" type="radio" name="ukus" value="uk" />
+  ><input id="uk" type="radio" name="uk-us" value="uk" />
 </fieldset>
 <div>
   <button class="generate">Generate random story</button>
