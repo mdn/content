@@ -19,3 +19,5 @@ This page links to pages explaining how some common attacks work, and how they c
   - : In a cross-site scripting (XSS) attack, a website accepts some input crafted by the attacker and mistakenly includes this input in the site's own pages in a way that makes the browser execute it as code. The malicious code can then do anything that the site's own front-end code could do.
 - [Manipulator in the Middle (MITM)](/en-US/docs/Web/Security/Attacks/MITM)
   - : In a Manipulator in the Middle (MITM) attack, the attacker inserts themselves between the user's browser and the server, and can see and potentially modify any of the traffic exchanged over HTTP.
+- [Supply chain attacks](/en-US/docs/Web/Security/Attacks/Supply_chain)
+  - : In a supply chain attack, the attacker compromises part of the site's supply chain, such as any third-party dependencies that it uses.
