@@ -245,3 +245,12 @@ Next, set the following labels as appropriate:
 
 > [!NOTE]
 > After the triage process is complete, remove the `needs triage` label.
+
+### Closing an issue as not planned
+
+If an issue does not map to any action items, you should consider closing the issue as not planned. Select from one of the labels below:
+
+- `closed: browser bug`: The issue reports unexpected behavior (with their code or MDN's code) that's actually a browser bug, and it's not significant enough to warrant a BCD note.
+- `closed: duplicate`: The issue is already tracked elsewhere. If there's another issue, use GitHub's "close as duplicate" feature, linking that issue; otherwise, indicate where the canonical place to track the issue is, such as [Web Docs Backlog](https://openwebdocs.github.io/web-docs-backlog/all/).
+- `closed: question`: The issue is based on a user error or misunderstanding, and the content is sufficiently correct and clear. However, usually do give some acknowledgment of the issue and consider whether the content can be clarified further to avoid similar questions.
+- `closed: wontfix`: The issue reports a valid "problem", but MDN decides not to fix it. Reasons include too much effort, out of scope, working as intended, etc.
