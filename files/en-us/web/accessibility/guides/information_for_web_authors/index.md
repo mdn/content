@@ -41,7 +41,7 @@ Tools to integrate into your build process, programmatically adding accessibilit
 - [Lighthouse Audits](https://github.com/GoogleChrome/lighthouse/blob/main/docs/readme.md#using-programmatically)
 - [AccessLint.js](https://github.com/accesslint/accesslint.js/tree/master)
 
-Continuous integration tools to find accessibility issues in your GitHub pull requests:
+{{glossary("Continuous integration")}} tools to find accessibility issues in your GitHub pull requests:
 
 - [AccessLint](https://accesslint.com/)
 

@@ -393,7 +393,7 @@ npm install
 ```
 
 > [!NOTE]
-> It is a good idea to regularly update to the latest compatible versions of your dependency libraries — this may even be done automatically or semi-automatically as part of a continuous integration setup.
+> It is a good idea to regularly update to the latest compatible versions of your dependency libraries — this may even be done automatically or semi-automatically as part of a {{glossary("continuous integration")}} setup.
 >
 > Usually library updates to the minor and patch version remain compatible.
 > We've prefixed each version with `^` above so that we can automatically update to the latest `minor.patch` version by running:

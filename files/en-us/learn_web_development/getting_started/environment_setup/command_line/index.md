@@ -464,7 +464,7 @@ With Prettier there's a number of ways automation can be achieved and though the
 
 - Before you commit your code into a git repository using [Husky](https://github.com/typicode/husky).
 - Whenever you hit "save" in your code editor, be it [VS Code](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode), or [Sublime Text](https://packagecontrol.io/packages/JsPrettier).
-- As part of continuous integration checks using tools like [GitHub Actions](https://github.com/features/actions).
+- As part of {{glossary("continuous integration")}} checks using tools like [GitHub Actions](https://github.com/features/actions).
 
 Our personal preference is the second one — while using say VS Code, Prettier kicks in and cleans up any formatting it needs to do every time we hit save. You can find a lot more information about using Prettier in different ways in the [Prettier docs](https://prettier.io/docs/).
 
