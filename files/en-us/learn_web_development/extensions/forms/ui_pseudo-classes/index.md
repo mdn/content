@@ -257,9 +257,6 @@ We set the `<span>` to `position: relative` so that we can set the generated con
 Then we give the generated content the content "required", which is what we wanted our label to say, and style and position it as we want. The result is seen below (press the **Play** button to run the example in MDN Playground and edit the source code).
 
 ```html hidden live-sample___required-optional-generated
-<link
-  href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap"
-  rel="stylesheet" />
 <form>
   <fieldset>
     <legend>Feedback form</legend>
@@ -288,6 +285,8 @@ Then we give the generated content the content "required", which is what we want
 ```
 
 ```css hidden live-sample___required-optional-generated
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
 body {
   font-family: "Josefin Sans", sans-serif;
   margin: 20px auto;
@@ -425,9 +424,6 @@ As before, we set the `<span>`s to `position: relative` so that we can position 
 You can try it below (press the **Play** button to run the example in MDN Playground and edit the source code):
 
 ```html hidden live-sample___valid-invalid
-<link
-  href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap"
-  rel="stylesheet" />
 <form>
   <fieldset>
     <legend>Feedback form</legend>
@@ -456,6 +452,8 @@ You can try it below (press the **Play** button to run the example in MDN Playgr
 ```
 
 ```css hidden live-sample___valid-invalid
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
 body {
   font-family: "Josefin Sans", sans-serif;
   margin: 20px auto;
@@ -607,9 +605,6 @@ input:out-of-range + span::after {
 This is a similar story to what we had before in the `:required` example, except that here we've split out the declarations that apply to any `::after` content into a separate rule, and given the separate `::after` content for `:required` and `:out-of-range` states their own content and styling. You can try it here (press the **Play** button to run the example in MDN Playground and edit the source code):
 
 ```html hidden live-sample___out-of-range
-<link
-  href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap"
-  rel="stylesheet" />
 <form>
   <fieldset>
     <legend>Feedback form</legend>
@@ -637,7 +632,9 @@ This is a similar story to what we had before in the `:required` example, except
 </form>
 ```
 
-```css hidden
+```css hidden live-sample___out-of-range
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
 body {
   font-family: "Josefin Sans", sans-serif;
   margin: 20px auto;
@@ -735,7 +732,7 @@ button {
 }
 ```
 
-```js hidden
+```js hidden live-sample___out-of-range
 const form = document.querySelector("form");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -822,18 +819,6 @@ We've directly selected the inputs we want to disable using `input[type="text"]:
 Now finally, we've used some JavaScript to toggle the disabling of the billing address fields:
 
 ```js
-// Wait for the page to finish loading
-document.addEventListener(
-  "DOMContentLoaded",
-  () => {
-    // Attach `change` event listener to checkbox
-    document
-      .getElementById("billing-checkbox")
-      .addEventListener("change", toggleBilling);
-  },
-  false,
-);
-
 function toggleBilling() {
   // Select the billing text fields
   const billingItems = document.querySelectorAll('#billing input[type="text"]');
@@ -843,6 +828,11 @@ function toggleBilling() {
     item.disabled = !item.disabled;
   }
 }
+
+// Attach `change` event listener to checkbox
+document
+  .getElementById("billing-checkbox")
+  .addEventListener("change", toggleBilling);
 ```
 
 It uses the [`change` event](/en-US/docs/Web/API/HTMLElement/change_event) to let the user enable/disable the billing fields, and toggle the styling of the associated labels.
@@ -850,9 +840,6 @@ It uses the [`change` event](/en-US/docs/Web/API/HTMLElement/change_event) to le
 You can see the example in action below (press the **Play** button to run the example in MDN Playground and edit the source code):
 
 ```html hidden live-sample___enabled-disabled-shipping
-<link
-  href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap"
-  rel="stylesheet" />
 <form>
   <fieldset id="shipping">
     <legend>Shipping address</legend>
@@ -893,7 +880,9 @@ You can see the example in action below (press the **Play** button to run the ex
 </form>
 ```
 
-```css live-sample___enabled-disabled-shipping
+```css hidden live-sample___enabled-disabled-shipping
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
 body {
   font-family: "Josefin Sans", sans-serif;
   margin: 20px auto;
@@ -955,18 +944,6 @@ button {
 ```
 
 ```js hidden live-sample___enabled-disabled-shipping
-// Wait for the page to finish loading
-document.addEventListener(
-  "DOMContentLoaded",
-  () => {
-    // Attach `change` event listener to checkbox
-    document
-      .getElementById("billing-checkbox")
-      .addEventListener("change", toggleBilling);
-  },
-  false,
-);
-
 function toggleBilling() {
   // Select the billing text fields
   const billingItems = document.querySelectorAll('#billing input[type="text"]');
@@ -976,6 +953,11 @@ function toggleBilling() {
     item.disabled = !item.disabled;
   }
 }
+
+// Attach `change` event listener to checkbox
+document
+  .getElementById("billing-checkbox")
+  .addEventListener("change", toggleBilling);
 
 const form = document.querySelector("form");
 form.addEventListener("submit", (e) => {
@@ -1021,9 +1003,6 @@ textarea:read-write {
 The full example looks like this (press the **Play** button to run the example in MDN Playground and edit the source code):
 
 ```html hidden live-sample___readonly-confirmation
-<link
-  href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap"
-  rel="stylesheet" />
 <form>
   <fieldset>
     <legend>Check shipping details</legend>
@@ -1064,7 +1043,9 @@ CA
 </form>
 ```
 
-```css hidden
+```css hidden live-sample___readonly-confirmation
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
 body {
   font-family: "Josefin Sans", sans-serif;
   margin: 20px auto;
@@ -1140,7 +1121,7 @@ textarea:read-write {
 }
 ```
 
-```js hidden
+```js hidden live-sample___readonly-confirmation
 const form = document.querySelector("form");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -1163,7 +1144,7 @@ As we've seen in earlier articles in the module, {{HTMLElement("input/radio", "r
 
 When checked, they will be matched by the {{cssxref(":checked")}} pseudo-class.
 
-The most common use of this is to add a different style onto the checkbox or radio button when it is checked, in cases where you've removed the system default styling with [`appearance: none;`](/en-US/docs/Web/CSS/appearance) and want to build the styles back up yourself. We saw examples of this in the previous article when we talked about [Using `appearance: none` on radios/checkboxes](/en-US/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling#using_appearance_none_on_radioscheckboxes).
+The most common use of this is to add a different style onto the checkbox or radio button when it is checked, in cases where you've removed the system default styling with [`appearance: none;`](/en-US/docs/Web/CSS/appearance) and want to build the styles back up yourself. We saw examples of this in the previous article when we talked about [Styling checkboxes and radio buttons using `appearance`](/en-US/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling#styling_checkboxes_and_radio_buttons_using_appearance).
 
 As a recap, the `:checked` code from our Styled radio buttons example looks like so:
 
@@ -1193,7 +1174,6 @@ You can try it out here (press the **Play** button to run the example in MDN Pla
 <form>
   <fieldset>
     <legend>Choose your favorite fruit</legend>
-
     <p>
       <label>
         <input type="radio" name="fruit" value="cherry" />
@@ -1216,7 +1196,7 @@ You can try it out here (press the **Play** button to run the example in MDN Pla
 </form>
 ```
 
-```css hidden
+```css hidden live-sample___radios-styled
 input[type="radio"] {
   appearance: none;
 }
@@ -1300,13 +1280,9 @@ This provides a little "Default" label on the item that was originally selected 
 See the live result below (press the **Play** button to run the example in MDN Playground and edit the source code):
 
 ```html hidden live-sample___radios-checked-default
-<link
-  href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap"
-  rel="stylesheet" />
 <form>
   <fieldset>
     <legend>Choose your favorite fruit</legend>
-
     <p>
       <input type="radio" name="fruit" value="cherry" id="cherry" />
       <label for="cherry">Cherry</label>
@@ -1327,6 +1303,8 @@ See the live result below (press the **Play** button to run the example in MDN P
 ```
 
 ```css hidden live-sample___radios-checked-default
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
 body {
   font-family: "Josefin Sans", sans-serif;
 }
@@ -1406,13 +1384,9 @@ This creates a fun little animated outline on the radio buttons, which hopefully
 See the live result below (press the **Play** button to run the example in MDN Playground and edit the source code):
 
 ```html hidden live-sample___radios-checked-indeterminate
-<link
-  href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap"
-  rel="stylesheet" />
 <form>
   <fieldset>
     <legend>Choose your favorite fruit</legend>
-
     <p>
       <input type="radio" name="fruit" value="cherry" id="cherry" />
       <label for="cherry">Cherry</label>
@@ -1433,6 +1407,8 @@ See the live result below (press the **Play** button to run the example in MDN P
 ```
 
 ```css hidden live-sample___radios-checked-indeterminate
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
 body {
   font-family: "Josefin Sans", sans-serif;
 }
