@@ -71,6 +71,7 @@ Firefox 144 is the current [Nightly version of Firefox](https://www.firefox.com/
 ## Changes for add-on developers
 
 - Adds the ability to determine the priority of CSS injected from the [`"content_scripts"` manifest key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts), in {{WebExtAPIRef("scripting.registerContentScripts()")}} with the `cssOrigin` property on {{WebExtAPIRef("scripting.RegisteredContentScript")}}, and the `cssOrigin` property in {{WebExtAPIRef("contentScripts.register")}}. By default, the `"author"` origin takes precedence. ([Firefox bug 1679997](https://bugzil.la/1679997))
+- Adds support for {{WebExtAPIRef("storage.StorageArea.getBytesInUse()","getBytesInUse()")}} to {{WebExtAPIRef("storage.local")}} and {{WebExtAPIRef("storage.managed")}}. ([Firefox bug 1385832](https://bugzil.la/1385832))
 
 <!-- ### Removals -->
 
