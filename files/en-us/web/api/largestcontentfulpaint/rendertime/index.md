@@ -15,7 +15,7 @@ The **`renderTime`** read-only property of the {{domxref("LargestContentfulPaint
 The `renderTime` property can have the following values:
 
 - A {{domxref("DOMHighResTimeStamp","timestamp")}} representing the time in milliseconds that the element was rendered to the screen.
-- `0` if the resource is a cross-origin request and no {{HTTPHeader("Timing-Allow-Origin")}} HTTP response header is used.
+- `0` or a coarsened {{domxref("DOMHighResTimeStamp","timestamp")}} if the resource is a cross-origin request and no {{HTTPHeader("Timing-Allow-Origin")}} HTTP response header is used.
 
 ## Examples
 
@@ -46,13 +46,9 @@ For example, to allow `https://developer.mozilla.org` to see an accurate `render
 Timing-Allow-Origin: https://developer.mozilla.org
 ```
 
-Alternatively, you can use {{domxref("PerformanceEntry.startTime", "startTime")}} which returns the value of the entry's `renderTime` if it is not `0`, and otherwise the value of this entry's {{domxref("LargestContentfulPaint.loadTime", "loadTime")}}. However, it is recommended to set the {{HTTPHeader("Timing-Allow-Origin")}} header so that the metrics will be more accurate.
+It is recommended to set the {{HTTPHeader("Timing-Allow-Origin")}} header so that the metrics will be more accurate.
 
-If you use `startTime`, you can flag any inaccuracies by checking if `renderTime` was used:
-
-```js
-const isAccurateLCP = Boolean(entry.renderTime);
-```
+In most cases the {{domxref("PerformanceEntry.startTime", "startTime")}} should be used, which returns the value of the entry's `renderTime` if it is not `0`, and otherwise the value of this entry's {{domxref("LargestContentfulPaint.loadTime", "loadTime")}}.
 
 ## Specifications
 

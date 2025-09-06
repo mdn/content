@@ -48,7 +48,7 @@ It also supports the following properties:
 - {{domxref("LargestContentfulPaint.element")}} {{ReadOnlyInline}}
   - : The element that is the current largest contentful paint.
 - {{domxref("LargestContentfulPaint.renderTime")}} {{ReadOnlyInline}}
-  - : The time the element was rendered to the screen. May not be available if the element is a cross-origin image loaded without the `Timing-Allow-Origin` header.
+  - : The time the element was rendered to the screen. May be a coarsened value or `0` if the element is a cross-origin image loaded without the `Timing-Allow-Origin` header.
 - {{domxref("LargestContentfulPaint.loadTime")}} {{ReadOnlyInline}}
   - : The time the element was loaded.
 - {{domxref("LargestContentfulPaint.size")}} {{ReadOnlyInline}}
@@ -97,13 +97,9 @@ For example, to allow `https://developer.mozilla.org` to see an accurate `render
 Timing-Allow-Origin: https://developer.mozilla.org
 ```
 
-Like in the code example, you can use {{domxref("PerformanceEntry.startTime", "startTime")}}, which returns the value of the entry's {{domxref("LargestContentfulPaint.renderTime", "renderTime")}} if it is not `0`, and otherwise the value of this entry's {{domxref("LargestContentfulPaint.loadTime", "loadTime")}}. However, it is recommended to set the {{HTTPHeader("Timing-Allow-Origin")}} header so that the metrics will be more accurate.
+It is recommended to set the {{HTTPHeader("Timing-Allow-Origin")}} header so that the metrics will be more accurate.
 
-If you use `startTime`, you can flag any inaccuracies by checking if `renderTime` was used:
-
-```js
-const isAccurateLCP = Boolean(entry.renderTime);
-```
+Like in the code example, it is recommended to use {{domxref("PerformanceEntry.startTime", "startTime")}}, which returns the value of the entry's {{domxref("LargestContentfulPaint.renderTime", "renderTime")}} if it is not `0`, and otherwise the value of this entry's {{domxref("LargestContentfulPaint.loadTime", "loadTime")}}.
 
 ## Specifications
 
