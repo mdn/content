@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.MediaQueryList.change_event
 ---
 
-{{APIRef("CSSOM")}}
+{{APIRef("CSSOM view")}}
 
 The **`change`** event of the {{DOMxRef("MediaQueryList")}} interface fires when the status of media query support changes.
 
