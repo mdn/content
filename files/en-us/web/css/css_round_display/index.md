@@ -26,6 +26,9 @@ The CSS round display module introduces the `border-boundary` and `shape-inside`
 - [Overview of CSS Shapes](/en-US/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
   - : Defines basic shapes and how to debug them with developer tools.
 
+- [Using environment variables](/en-US/docs/Web/CSS/CSS_environment_variables/Using_environment_variables)
+  - : Overview of what environment variables are, browser defined environment variables, and how to use the `env()` function.
+
 ## Related concepts
 
 - {{cssxref("@media")}} at-rule
@@ -44,3 +47,4 @@ The CSS round display module introduces the `border-boundary` and `shape-inside`
 - {{cssxref("shape-outside")}} property
 - [CSS shapes](/en-US/docs/Web/CSS/CSS_shapes) module
 - [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries) module
+- [CSS environment variables](/en-US/docs/Web/CSS/CSS_environment_variables) module

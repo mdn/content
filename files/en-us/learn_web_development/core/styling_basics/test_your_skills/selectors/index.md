@@ -1,10 +1,12 @@
 ---
 title: "Test your skills: Selectors"
-short-title: Selectors
+short-title: "Test: Selectors"
 slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Selectors
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
+
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics")}}
 
 The aim of this skill test is to help you assess whether you understand [CSS selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors).
 
@@ -348,7 +350,7 @@ ul {
 }
 
 li {
-  margin: 0 0 0.5em 0;
+  margin-bottom: 0.5em;
 }
 
 a {
@@ -389,3 +391,5 @@ a[href^="https"] {
 ```
 
 </details>
+
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics")}}

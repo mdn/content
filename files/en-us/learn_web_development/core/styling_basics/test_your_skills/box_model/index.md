@@ -1,10 +1,12 @@
 ---
 title: "Test your skills: The box model"
-short-title: Box model
+short-title: "Test: Box model"
 slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Box_model
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
+
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics/Handling_conflicts", "Learn_web_development/Core/Styling_basics")}}
 
 The aim of this skill test is to help you assess whether you understand the [CSS box model](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model).
 
@@ -17,7 +19,7 @@ First of all, we are giving you a fun, interactive challenge involving margin sh
 
 Watch the embedded scrim, and complete the tasks on the timeline (the little ghost icons) by following the instructions and editing the code. When you are done, you can resume watching the scrim to check how the teacher's solution matches up with yours.
 
-<scrim-inline url="https://scrimba.com/learn-html-and-css-c0p/~01s" scrimtitle="Margin shorthand" survey="true"></scrim-inline>
+<mdn-scrim-inline url="https://scrimba.com/learn-html-and-css-c0p/~01s" scrimtitle="Margin shorthand" survey="true"></scrim-inline>
 
 ## Task 1
 
@@ -168,3 +170,5 @@ After adding `display: inline-block`, the block direction margin, border and pad
 ```
 
 </details>
+
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics/Handling_conflicts", "Learn_web_development/Core/Styling_basics")}}

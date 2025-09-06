@@ -84,13 +84,13 @@ div {
 
 #rel1 {
   top: 30px;
-  margin: 0px 50px 0px 50px;
+  margin: 0px 50px;
 }
 
 #rel2 {
   top: 15px;
   left: 20px;
-  margin: 0px 50px 0px 50px;
+  margin: 0px 50px;
 }
 
 #abs2 {
@@ -100,7 +100,7 @@ div {
 
 #sta1 {
   background-color: #ffffcc;
-  margin: 0px 50px 0px 50px;
+  margin: 0px 50px;
 }
 ```
 

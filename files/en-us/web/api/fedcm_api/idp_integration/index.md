@@ -127,6 +127,8 @@ The response to a successful request returns a list of all the IdP accounts that
       "given_name": "Elaina",
       "name": "Elaina Maduro",
       "email": "elaina_maduro@idp.example",
+      "tel": "+491234567890",
+      "username": "elaina420",
       "picture": "https://idp.example/profile/123",
       "approved_clients": ["123", "456", "789"],
       "domain_hints": ["rp1.example.com", "rp3.example.com"],
@@ -136,7 +138,7 @@ The response to a successful request returns a list of all the IdP accounts that
     {
       "id": "elly",
       "given_name": "Elly",
-      "name": "Elly",
+      "username": "elly123",
       "email": "Elly@idp.example",
       "picture": "https://idp.example/profile/456",
       "approved_clients": ["abc", "def", "ghi"],
@@ -148,14 +150,18 @@ The response to a successful request returns a list of all the IdP accounts that
 }
 ```
 
-This includes the following information:
+This includes the following information where `name`, `email`, `username`, and `tel` are optional but at least one of them must be present and nonempty.
 
 - `id`
   - : The unique ID of the user.
-- `name`
+- `name` {{optional_inline}}
   - : The family name of the user.
-- `email`
+- `email` {{optional_inline}}
   - : The email address of the user.
+- `tel` {{optional_inline}}
+  - : The telephone number of the user. Can be in any format.
+- `username` {{optional_inline}}
+  - : The username of the user.
 - `given_name` {{optional_inline}}
   - : The given name of the user.
 - `picture` {{optional_inline}}
@@ -306,12 +312,12 @@ The error response fields are as follows:
 - `code` {{optional_inline}}
   - : A string. This can be either a known error from the [OAuth 2.0 specified error list](https://datatracker.ietf.org/doc/html/rfc6749#section-4.1.2.1) or an arbitrary string.
 - `url` {{optional_inline}}
-  - : A URL. This should be a web page containing human-readable information about the error to display to users, such as how to fix the error or contact customer. The URL must be same-site with the IdP's config URL.
+  - : A URL. This should be a web page containing human-readable information about the error to display to users, such as how to fix the error or contact customer service. The URL must be same-site with the IdP's config URL.
 
 This information can be used in a couple of different ways:
 
 - The browser can display a custom UI to the user informing them of what went wrong (see the [Chrome documentation](https://privacysandbox.google.com/blog/fedcm-chrome-120-updates#error-api) for an example). Bear in mind that if the request failed because the IdP server is unavailable, it obviously can't return any information. In such cases, the browser will report this via a generic message.
-- The associated RP {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} call used to attempt sign-in will reject its promise with an `IdentityCredentialError`, which contains the error information. An RP can catch this error and then follow up the browser's custom UI with some information to help the user succeed in a future sign-in attempt.
+- The associated RP {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} call used to attempt sign-in will reject its promise with an {{domxref("IdentityCredentialError")}}, which contains the error information. An RP can catch this error and then follow up the browser's custom UI with some information to help the user succeed in a future sign-in attempt.
 
 ## Update login status using the Login Status API
 

@@ -541,10 +541,6 @@ Here's a summary of the properties that are used and why each declaration is app
 - `color`: With important styles, layered styles take precedence over unlayered styles, with important styles in earlier declared layers having precedence over later declared layers. In this example, the order of nested layer creation is `components.narrow`, then `components.wide`, so important styles in `components.narrow` have precedence over important styles in `components.wide`, meaning `purple` color wins.
 - `border-radius`: The property has been set only in the nested layers so by declaration order `20%` radius wins.
 
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: The Cascade, Task 2](/en-US/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Cascade#task_2).
-
 ## Summary
 
 If you understood most of this article, then well done — you're now familiar with the fundamental mechanics of CSS cascade layers.

@@ -190,6 +190,7 @@ EBNF
 ECSDA
 editability
 effectful
+elytra
 Emscripting
 encrypter
 engageable
@@ -273,11 +274,13 @@ greenify
 greyscale
 gzipping
 halfwidth
+halteres
 harissa
 HDCP
 headworn
 highlightable
 HILN
+hindwings
 hissy
 hitbox
 hitmap
@@ -338,6 +341,7 @@ JXON
 KACST
 Kbit
 Kbps
+kettlebell
 keysyms
 keyterm
 keyterms
@@ -471,6 +475,7 @@ packetizing
 paintable
 pantherina
 papermakers
+parasitoids
 parentless
 passwordless
 pathfinding
@@ -582,6 +587,7 @@ resends
 resizability
 respecified
 restartless
+Resveratrol
 retarget
 retargeted
 retargetings
@@ -682,6 +688,7 @@ stringifiers
 stringifying
 stringly
 strobing
+stylability
 styracosaurus
 subarticle
 subarticles

@@ -33,10 +33,6 @@ This article provides basic tips to help you design websites for any kind of use
 
 When you're building a website, one top issue to consider is [Universal Design](https://en.wikipedia.org/wiki/Universal_design): accommodating all users regardless of disability, technical constraints, culture, location, and so on.
 
-## Active Learning
-
-_There is no active learning available yet. [Please, consider contributing](/en-US/docs/MDN/Community/Getting_started)._
-
 ## Dig deeper
 
 ### Color contrast

@@ -443,6 +443,7 @@
         "NodeIterator",
         "NodeList",
         "ProcessingInstruction",
+        "QuotaExceededError",
         "Range",
         "StaticRange",
         "Text",
@@ -515,6 +516,7 @@
       ],
       "interfaces": [
         "IdentityCredential",
+        "IdentityCredentialError",
         "IdentityCredentialRequestOptions",
         "IdentityProvider",
         "NavigatorLogin"
@@ -577,7 +579,7 @@
       "properties": [
         "File.webkitRelativePath",
         "HTMLInputElement.webkitdirectory",
-        "HTMLinputElement.webkitEntries"
+        "HTMLInputElement.webkitEntries"
       ],
       "events": []
     },

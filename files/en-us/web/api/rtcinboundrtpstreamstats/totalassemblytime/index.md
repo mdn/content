@@ -21,7 +21,7 @@ A number, in seconds.
 
 ## Description
 
-The property is updated whenever a video frame that was transported in multiple RTP packets is is successfully decoded.
+The property is updated whenever a video frame that was transported in multiple RTP packets is successfully decoded.
 The time increment is calculated by subtracting the timestamp of the last and first RTP packets that contained the video frame data.
 The time is not updated for video frames that are not decoded, or that are transported entirely within one RTP packet.
 
