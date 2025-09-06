@@ -169,7 +169,7 @@ The CSS backgrounds module level 4 also introduces the `background-position-bloc
 - {{cssxref("box-sizing")}}
 - {{cssxref("box-decoration-break")}}
 - {{cssxref("text-shadow")}}
-- {{cssxref("url_value", "&lt;url&gt;")}} CSS type
+- {{cssxref("url_value", "&lt;url&gt;")}} data type
 - {{cssxref("url")}} data type
 - {{cssxref("image")}} data type
 - {{cssxref("position")}} data type
