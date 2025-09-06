@@ -35,23 +35,25 @@ filter: blur(1.5rem);
 ## Syntax
 
 ```css
-blur(radius)
-```
-
-### Parameters
-
-- `radius` {{Optional_Inline}}
-  - : The radius of the blur, specified as a {{cssxref("&lt;length&gt;")}}. It defines the value of the standard deviation to the Gaussian function, i.e., how many pixels on the screen blend into each other; thus, a larger value will create more blur. A value of `0` leaves the input unchanged. The initial value for {{Glossary("interpolation")}} is `0`. Percentage values are invalid. The default value is `0px`.
-
-### Examples of blur values
-
-```css
 blur()         /* No effect */
 blur(0)        /* No effect */
 
 blur(8px)      /* Blur with 8px radius */
 blur(1.17rem)  /* Blur with 1.17rem radius */
 ```
+
+### Parameters
+
+The `blur()` function's syntax is as follows:
+
+```plain
+blur( <length> )
+```
+
+The parameter is:
+
+- {{cssxref("length")}} {{Optional_Inline}}
+  - : The parameter is the radius of the blur, specified as a {{cssxref("&lt;length&gt;")}}. It defines the value of the standard deviation to the Gaussian function, i.e., how many pixels on the screen blend into each other; thus, a larger value will create more blur. A value of `0` leaves the input unchanged. The initial value for {{Glossary("interpolation")}} is `0`. Percentage values are invalid. The default value is `0px`.
 
 ## SVG filter
 
