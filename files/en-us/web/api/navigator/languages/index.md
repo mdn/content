@@ -8,7 +8,7 @@ browser-compat: api.Navigator.languages
 
 {{APIRef("HTML DOM")}}
 
-The **`Navigator.languages`** read-only property
+The **`navigator.languages`** read-only property
 returns an array of strings representing the user's preferred
 languages. The language is described using language tags according to
 {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}. In the returned
