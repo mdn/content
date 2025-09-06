@@ -70,7 +70,7 @@ If an error occurs while loading or rendering an image, and an `onerror` event h
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
-- [`alt`](/en-US/docs/Web/API/HTMLImageElement/alt#usage_notes)
+- `alt`
   - : Defines text that can replace the image in the page.
 
     > [!NOTE]
