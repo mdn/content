@@ -6,26 +6,26 @@ browser-compat: svg.elements.feColorMatrix
 sidebar: svgref
 ---
 
-The **`<feColorMatrix>`** [SVG](/en-US/docs/Web/SVG) filter element changes colors based on a transformation matrix. Every pixel's color value `[R,G,B,A]` is [matrix multiplied](https://en.wikipedia.org/wiki/Matrix_multiplication) by a 5 by 5 color matrix to create new color `[R',G',B',A']`.
+The **`<feColorMatrix>`** [SVG](/en-US/docs/Web/SVG) filter element changes colors based on a transformation matrix. Every pixel's color value `[R,G,B,A]` is [matrix multiplied](https://en.wikipedia.org/wiki/Matrix_multiplication) by a 5 by 5 color matrix to create new color `[R′,G′,B′,A′]`.
 
 > [!NOTE]
-> The prime symbol **`'`** is used in mathematics indicate the result of a transformation.
+> The prime symbol **`′`** is used in mathematics indicate the result of a transformation.
 
 ```plain
-| R' |     | r1 r2 r3 r4 r5 |   | R |
-| G' |     | g1 g2 g3 g4 g5 |   | G |
-| B' |  =  | b1 b2 b3 b4 b5 | * | B |
-| A' |     | a1 a2 a3 a4 a5 |   | A |
+| R′ |     | r1 r2 r3 r4 r5 |   | R |
+| G′ |     | g1 g2 g3 g4 g5 |   | G |
+| B′ |  =  | b1 b2 b3 b4 b5 | * | B |
+| A′ |     | a1 a2 a3 a4 a5 |   | A |
 | 1  |     | 0  0  0  0  1  |   | 1 |
 ```
 
 In simplified terms, below is how each color channel in the new pixel is calculated. The last row is ignored because its values are constant.
 
 ```plain
-R' = r1*R + r2*G + r3*B + r4*A + r5
-G' = g1*R + g2*G + g3*B + g4*A + g5
-B' = b1*R + b2*G + b3*B + b4*A + b5
-A' = a1*R + a2*G + a3*B + a4*A + a5
+R′ = r1*R + r2*G + r3*B + r4*A + r5
+G′ = g1*R + g2*G + g3*B + g4*A + g5
+B′ = b1*R + b2*G + b3*B + b4*A + b5
+A′ = a1*R + a2*G + a3*B + a4*A + a5
 ```
 
 Take the amount of red in the new pixel, or `R'`:
@@ -38,10 +38,10 @@ It is the sum of:
 - `r4` times the old pixel's alpha `A`,
 - plus a shift `r5`.
 
-These specified amounts can be any real number, though the final **R'** will be clamped between 0 and 1. The same goes for **G'**, **B'**, and **A'**.
+These specified amounts can be any real number, though the final **R′** will be clamped between 0 and 1. The same goes for **G′**, **B′**, and **A′**.
 
 ```plain
-R'      =      r1 * R      +        r2 * G      +       r3 * B      +       r4 * A       +       r5
+R′      =      r1 * R      +        r2 * G      +       r3 * B      +       r4 * A       +       r5
 New red = [ r1 * old red ] + [ r2 * old green ] + [ r3 * old Blue ] + [ r4 * old Alpha ] + [ shift of r5 ]
 ```
 
@@ -51,10 +51,10 @@ An **identity matrix** looks like this:
 
 ```plain
      R G B A W
-R' | 1 0 0 0 0 |
-G' | 0 1 0 0 0 |
-B' | 0 0 1 0 0 |
-A' | 0 0 0 1 0 |
+R′ | 1 0 0 0 0 |
+G′ | 0 1 0 0 0 |
+B′ | 0 0 1 0 0 |
+A′ | 0 0 0 1 0 |
 ```
 
 In it, every new value is exactly 1 times its old value, with nothing else added. It is recommended to start manipulating the matrix from here.
