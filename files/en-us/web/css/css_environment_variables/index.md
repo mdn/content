@@ -23,6 +23,7 @@ Environment variables provide values that can be used on the page based on infor
 
 ## Related concepts
 
+- [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries) module
 - [custom properties](/en-US/docs/Web/CSS/--*)
 - {{cssxref("var")}}
 - {{domxref("VirtualKeyboard")}} interface
