@@ -8,7 +8,7 @@ browser-compat: api.Navigator.language
 
 {{APIRef("HTML DOM")}}
 
-The **`navigator.language`** read-only property returns a string representing the preferred language of the user, usually the language of the browser UI.
+The **`language`** read-only property of the {{domxref("Navigator")}} interface returns a string representing the preferred language of the user, usually the language of the browser UI.
 
 ## Value
 
