@@ -70,7 +70,7 @@ You can use SVG, and the browser scales your icon appropriately. There are two c
    ```
 
 > [!NOTE]
-> Only Firefox is known to support SVG icons. Chromium has a bug about [unsupported SVG icons](https://crbug.com/29683).
+> Only Firefox and Safari are known to support SVG icons. Chromium has a bug about [unsupported SVG icons](https://crbug.com/29683).
 
 > [!NOTE]
 > Remember to include the `xmlns` attribute when creating the SVG. Otherwise, Firefox won't display the icon.
