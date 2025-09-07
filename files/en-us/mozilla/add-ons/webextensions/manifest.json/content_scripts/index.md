@@ -124,7 +124,7 @@ This table details all the properties you can include.
           <ul>
             <li><code>"user"</code>, to add as a user stylesheet.</li>
             <li><code>"author"</code>, to add as an author stylesheet.</li>
-          </ul> 
+          </ul>
           Defaults to <code>"author"</code>.
         </p>
         <p>

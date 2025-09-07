@@ -70,7 +70,7 @@ Firefox 144 is the current [Nightly version of Firefox](https://www.firefox.com/
 
 ## Changes for add-on developers
 
-- Adds the ability to specify the style origin for CSS injections from [`"content_scripts"` manifest key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts), in {{WebExtAPIRef("scripting.registerContentScripts()")}} with the `cssOrigin` property on {{WebExtAPIRef("scripting.RegisteredContentScript")}}, and the `cssOrigin` property in {{WebExtAPIRef("contentScripts.register")}}. The style origin can be `"user"`, to add the CSS as a user stylesheet, or `"author"`, to add it as an author stylesheet. Default, to the `"author"` origin. These properties are case-insensitive. The value of the previously existing `cssOrigin` property of {{WebExtAPIRef("scripting.insertCSS()")}} is now case insensitive too ([Firefox bug 1679997](https://bugzil.la/1679997))
+- Adds the ability to specify the style origin for CSS injections from [`"content_scripts"` manifest key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts), in {{WebExtAPIRef("scripting.registerContentScripts()")}} with the `cssOrigin` property on {{WebExtAPIRef("scripting.RegisteredContentScript")}}, and the `cssOrigin` property in {{WebExtAPIRef("contentScripts.register")}}. The style origin can be `"user"`, to add the CSS as a user stylesheet, or `"author"`, to add it as an author stylesheet. Default, to the `"author"` origin. These properties are case-insensitive. In addition, the value of the [`origin`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/scripting/insertCSS#origin) property of {{WebExtAPIRef("scripting.insertCSS()")}} is now case insensitive. ([Firefox bug 1679997](https://bugzil.la/1679997))
 
 <!-- ### Removals -->
 
