@@ -10,7 +10,7 @@ browser-compat: api.Credential.isConditionalMediationAvailable_static
 
 The **`isConditionalMediationAvailable()`** static method of the {{domxref("Credential")}} interface returns a {{jsxref("Promise")}} which resolves to `false`.
 
-Sub classes of {{domxref("Credential")}} override this method if they support conditional mediation. See {{domxref("PublicKeyCredential.isConditionalMediationAvailable_static", "PublicKeyCredential.isConditionalMediationAvailable()")}}, for example.
+Subclasses of {{domxref("Credential")}} override this method if they support conditional mediation. See {{domxref("PublicKeyCredential.isConditionalMediationAvailable_static", "PublicKeyCredential.isConditionalMediationAvailable()")}}, for example.
 
 ## Syntax
 
