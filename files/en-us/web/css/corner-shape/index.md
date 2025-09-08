@@ -312,7 +312,7 @@ The JavaScript that applies the user-selected values to the `<section>` has been
 
 #### CSS
 
-We give the `<section>` and form elements some basic styles, which we've hidden for brevity. Note that we apply a {{cssxref("box-shadow")}} to the `<section>`.
+We apply a {{cssxref("box-shadow")}} to the `<section>`. We also give the `<section>` and form elements some basic styles, which we've hidden for brevity.
 
 ```css hidden live-sample___corner-shape-select
 html {
