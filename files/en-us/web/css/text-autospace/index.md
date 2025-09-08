@@ -18,12 +18,9 @@ text-autospace: ideograph-numeric;
 text-autospace: punctuation;
 text-autospace: insert;
 text-autospace: replace;
-text-autospace: ideograph-alpha insert;
-text-autospace: ideograph-alpha replace;
-text-autospace: ideograph-numeric insert;
-text-autospace: ideograph-numeric replace;
-text-autospace: punctuation insert;
-text-autospace: punctuation replace;
+text-autospace: ideograph-alpha ideograph-numeric punctuation;
+text-autospace: ideograph-alpha ideograph-numeric;
+text-autospace: ideograph-alpha ideograph-numeric insert;
 text-autospace: auto;
 
 /* Global values */
@@ -42,18 +39,18 @@ text-autospace: unset;
   - : Provides more control over spacing behaviors. It accepts:
     - the keyword `no-autospace`, or
     - a combination of one or more of `ideograph-alpha`, `ideograph-numeric`, and `punctuation`, optionally followed by `insert` or `replace`.
-  - `no-autospace`
-    - : Disables automatic spacing between CJK and non-CJK characters.
-  - `ideograph-alpha`
-    - : Adds spacing only between ideographic characters (such as Katakana and Han) and non-ideographic letters (such as Latin). It does not add spacing between ideographic characters and non-ideographic numbers.
-  - `ideograph-numeric`
-    - : Adds spacing only between ideographic characters (such as Katakana and Han) and non-ideographic numbers (such as Latin). It does not add spacing between ideographic characters and non-ideographic letters.
-  - `punctuation`
-  - : Adds non-breaking spacing around punctuation as required by language-specific typographic conventions.
-  - `insert`
-    - : If there are no spaces between the _ideograph_ and _non-ideographic_ scripts the user agent automatically inserts the correct spacing.
-  - `replace`
-    - : If there are spaces between the _ideograph_ and _non-ideographic_ scripts, such as [U+0020](/en-US/docs/Glossary/Whitespace), the user agent automatically replaces it with the correct spacing.
+    - `no-autospace`
+      - : Disables automatic spacing between CJK and non-CJK characters.
+    - `ideograph-alpha`
+      - : Adds spacing only between ideographic characters (such as Katakana and Han) and non-ideographic letters (such as Latin). It does not add spacing between ideographic characters and non-ideographic numbers.
+    - `ideograph-numeric`
+      - : Adds spacing only between ideographic characters (such as Katakana and Han) and non-ideographic numbers (such as Latin). It does not add spacing between ideographic characters and non-ideographic letters.
+    - `punctuation`
+      - : Adds non-breaking spacing around punctuation as required by language-specific typographic conventions.
+    - `insert`
+      - : Adds the specified spacing only if there are no existing spaces between the ideographic and non-ideographic scripts.
+    - `replace`
+      - : Replaces existing spacing (such as [U+0020](/en-US/docs/Glossary/Whitespace)) between ideographic and non-ideographic characters with the specified spacing.
 - `auto`
   - : Lets the browser choose typographically appropriate spacing. The spacing may vary across browsers and platforms.
 
