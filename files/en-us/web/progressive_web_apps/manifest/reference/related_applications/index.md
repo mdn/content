@@ -44,6 +44,7 @@ It can also be used with the [`prefer_related_applications`](/en-US/docs/Web/Pro
     "platform": "amazon",
     "url": "https://www.amazon.com/product/dp/B000XA1000"
   }
+]
 
 /* Self-defining web application on one platform specified only by id */
 "related_applications": [
@@ -51,7 +52,6 @@ It can also be used with the [`prefer_related_applications`](/en-US/docs/Web/Pro
     "platform": "webapp",
     "id": "com.example.app1"
   }
-]
 ]
 ```
 
@@ -156,6 +156,7 @@ This example shows how to specify the self-defining entry for PWAs in your web a
     }
   ]
 }
+```
 
 ## Specifications
 
@@ -170,4 +171,3 @@ This example shows how to specify the self-defining entry for PWAs in your web a
 - [`prefer_related_applications`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/prefer_related_applications) manifest member
 - [The web app manifest](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#the_web_app_manifest) for making your web app installable
 - {{domxref("Navigator.getInstalledRelatedApps()")}} for checking if your web app is installed. This requires specification of the unique `id` field in this manifest member.
-```
