@@ -421,7 +421,7 @@ The JavaScript that applies the user-selected values to the `<section>` has been
 
 #### CSS
 
-We give the `<section>` element some basic styles, which we've mostly hidden for brevity. Most notably, we apply a {{cssxref("box-shadow")}} to it.
+We apply a {{cssxref("box-shadow")}} to the `<section>` element. Additional basic styles have been hidden for brevity. 
 
 ```css hidden live-sample___superellipse-slider
 html {
