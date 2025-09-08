@@ -699,7 +699,7 @@ Now let's create our own simple animation — we'll be animating a moving object
 
    ```html live-sample___7-canvas-walking-animation
    <canvas class="myCanvas">
-     <p>A man walking.</p>
+     <p>A cat walking.</p>
    </canvas>
    ```
 
