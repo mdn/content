@@ -775,7 +775,7 @@ Now let's create our own simple animation — we'll be animating a moving object
 
    As you can see:
    - We specify `image` as the image to embed.
-   - Parameters 2 and 3 specify the top-left corner of the slice to cut out of the source image, with the X value as 0 (for the leftmost column) and the Y value cycling through multiples of `spriteHeight`.
+   - Parameters 2 and 3 specify the top-left corner of the slice to cut out of the source image, with the X value as 0 (for the leftmost column) and the Y value cycling through multiples of `spriteHeight`. You can replace the X value with `spriteWidth` or `2 * spriteWidth` to select the other columns.
    - Parameters 4 and 5 specify the size of the slice to cut out — `spriteWidth` and `spriteHeight`.
    - Parameters 6 and 7 specify the top-left corner of the box into which to draw the slice on the canvas — the X position is 0 + `posX`, meaning that we can alter the drawing position by altering the `posX` value. The Y position is `-spriteHeight / 2`, which means that the image will be vertically centered on the canvas.
    - Parameters 8 and 9 specify the size of the image on the canvas. We just want to keep its original size, so we specify `spriteWidth` and `spriteHeight` as the width and height.
