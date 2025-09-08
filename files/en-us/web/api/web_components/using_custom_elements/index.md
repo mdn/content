@@ -49,6 +49,9 @@ class PopupInfo extends HTMLElement {
 
 In the class [constructor](/en-US/docs/Web/JavaScript/Reference/Classes/constructor), you can set up initial state and default values, register event listeners and perhaps create a shadow root. At this point, you should not inspect the element's attributes or children, or add new attributes or children. See [Requirements for custom element constructors and reactions](https://html.spec.whatwg.org/multipage/custom-elements.html#custom-element-conformance) for the complete set of requirements.
 
+> [!NOTE]
+> This class is not meant to be directly constructed using `new`. If you do that, you will get an error like `TypeError: Failed to construct 'HTMLParagraphElement': Illegal constructor`. Instead, you must [register](#registering_a_custom_element) the custom element, and then create instances of it using standard DOM practices, such as writing the element in HTML markup, calling {{domxref("document.createElement()")}}, etc.
+
 ### Custom element lifecycle callbacks
 
 Once your custom element is registered, the browser will call certain methods of your class when code in the page interacts with your custom element in certain ways. By providing an implementation of these methods, which the specification calls _lifecycle callbacks_, you can run code in response to these events.
