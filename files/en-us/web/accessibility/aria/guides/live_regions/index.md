@@ -188,7 +188,7 @@ function updateClock() {
   const now = new Date();
   document.getElementById("clock-hours").textContent = now.getHours();
   document.getElementById("clock-mins").textContent =
-    `0${now.getMinutes()}`.substr(-2);
+    `0${now.getMinutes()}`.slice(-2);
 }
 
 /* first run */
