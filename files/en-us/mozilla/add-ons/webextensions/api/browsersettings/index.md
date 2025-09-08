@@ -10,7 +10,7 @@ Enables an extension to modify certain global browser settings. Each property of
 
 Because these are global settings, it's possible for extensions to conflict. See the documentation for [`BrowserSetting.set()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/set) for details of how conflicts are handled.
 
-To use this API you need to have the "browserSettings" [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
+To use this API, you need the "browserSettings" [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
 
 ## Properties
 
@@ -27,17 +27,17 @@ To use this API you need to have the "browserSettings" [permission](/en-US/docs/
 - {{WebExtAPIRef("browserSettings.ftpProtocolEnabled")}}
   - : Determines whether the FTP protocol is enabled.
 - {{WebExtAPIRef("browserSettings.homepageOverride")}}
-  - : Read the value of the browser's home page.
+  - : Reads the value of the browser's home page.
 - {{WebExtAPIRef("browserSettings.imageAnimationBehavior")}}
   - : Determines how the browser treats animated images.
 - {{WebExtAPIRef("browserSettings.newTabPageOverride")}}
   - : Reads the value of the browser's new tab page.
 - {{WebExtAPIRef("browserSettings.newTabPosition")}}
-  - : Controls the position of newly opened tabs relative to already open tabs.
+  - : Controls the position of new tabs relative to the open tabs.
 - {{WebExtAPIRef("browserSettings.openBookmarksInNewTabs")}}
-  - : Determines whether bookmarks are opened in the current tab or a new tab.
+  - : Determines whether bookmarks open in the current tab or a new tab.
 - {{WebExtAPIRef("browserSettings.openSearchResultsInNewTabs")}}
-  - : Determines whether search results are opened in the current tab or a new tab.
+  - : Determines whether search results open in the current tab or a new tab.
 - {{WebExtAPIRef("browserSettings.openUrlbarResultsInNewTabs")}}
   - : Determines whether address bar autocomplete suggestions are opened in the current tab or a new tab.
 - {{WebExtAPIRef("browserSettings.overrideContentColorScheme")}}
@@ -45,9 +45,11 @@ To use this API you need to have the "browserSettings" [permission](/en-US/docs/
 - {{WebExtAPIRef("browserSettings.overrideDocumentColors")}}
   - : Controls whether the user-chosen colors override the page's colors.
 - {{WebExtAPIRef("browserSettings.tlsVersionRestrictionConfig")}}
-  - : Read the highest and lowest versions of TLS supported by the browser.
+  - : Reads the highest and lowest versions of TLS supported by the browser.
 - {{WebExtAPIRef("browserSettings.useDocumentFonts")}}
-  - : Controls whether the browser will use the fonts specified by a web page or use only built-in fonts.
+  - : Controls whether the browser uses the fonts specified by a web page or uses only built-in fonts.
+- {{WebExtAPIRef("browserSettings.verticalTabs")}}
+  - : Controls whether the browser displays the tab bar horizontally or vertically.
 - {{WebExtAPIRef("browserSettings.webNotificationsDisabled")}}
   - : Prevents websites from showing notifications using the [`Notification`](/en-US/docs/Web/API/Notification) Web API.
 - {{WebExtAPIRef("browserSettings.zoomFullPage")}}

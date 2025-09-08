@@ -86,20 +86,20 @@ sidebar:
       - /Learn_web_development/Core/Styling_basics/Test_your_skills/Box_model
       - /Learn_web_development/Core/Styling_basics/Handling_conflicts
       - /Learn_web_development/Core/Styling_basics/Test_your_skills/Cascade
+      - /Learn_web_development/Core/Styling_basics/Fixing_blog_styles
       - /Learn_web_development/Core/Styling_basics/Values_and_units
       - /Learn_web_development/Core/Styling_basics/Test_your_skills/Values
       - /Learn_web_development/Core/Styling_basics/Sizing
       - /Learn_web_development/Core/Styling_basics/Test_your_skills/Sizing
       - /Learn_web_development/Core/Styling_basics/Backgrounds_and_borders
       - /Learn_web_development/Core/Styling_basics/Test_your_skills/Backgrounds_and_borders
+      - /Learn_web_development/Core/Styling_basics/Size_decorate_content_panel
       - /Learn_web_development/Core/Styling_basics/Overflow
       - /Learn_web_development/Core/Styling_basics/Test_your_skills/Overflow
       - /Learn_web_development/Core/Styling_basics/Images_media_forms
       - /Learn_web_development/Core/Styling_basics/Test_your_skills/Images
       - /Learn_web_development/Core/Styling_basics/Tables
       - /Learn_web_development/Core/Styling_basics/Debugging_CSS
-      - /Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension
-      - /Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper
       - /Learn_web_development/Core/Styling_basics/Test_your_skills
   - link: /Learn_web_development/Core/Text_styling
     title: CSS_text_styling
