@@ -29,25 +29,8 @@ Defining the relationship is done in a different way depending on the type of ap
 - An Android app does this via the [Digital Asset Links system](https://developers.google.com/digital-asset-links/v1/getting-started).
 - A Windows UWP app does this via [URI Handlers](https://learn.microsoft.com/en-us/windows/apps/develop/launch/web-to-app-linking).
 - A PWA does this via:
-  - A self-defining entry inside its own `related_applications` manifest member in the case of a PWA checking if it is installed on the underlying platform.
-  - An `assetlinks.json` file in its [`/.well-known/`](https://datatracker.ietf.org/doc/html/rfc5785) directory in the case of an app outside the scope of the PWA checking whether it is installed.
-
-### Examples
-
-#### Specifying related_applications for web applications
-
-This example shows how to specify the self-defining entry for PWAs in your web app's manifest file. To ensure your web app can be a candidate to call `getInstalledRelatedApps()`, the web app manifest `related_applications` section must specify the `id` property.
-
-```json
-{
-  "related_applications": [
-    {
-      "platform": "webapp",
-      "id": "com.example.app1"
-    }
-  ]
-}
-```
+  - A self-defining entry inside its own `related_applications` manifest member, specifying the `platform` and `id` property, in the case of a PWA checking if it is installed on the underlying platform.
+  - An `assetlinks.json` file in its [`/.well-known/`](https://datatracker.ietf.org/doc/html/rfc5785) directory in the case of an app outside the scope of the PWA checking whether it is installed on Android.
 
 See [Is your app installed? getInstalledRelatedApps() will tell you!](https://web.dev/articles/get-installed-related-apps) for more details on how to handle each one of these cases.
 
