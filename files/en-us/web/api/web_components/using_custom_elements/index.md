@@ -455,7 +455,7 @@ Now let's have a look at a customized built in element example. This example ext
 - [See the source code](https://github.com/mdn/web-components-examples/tree/main/expanding-list-web-component)
 
 > [!NOTE]
-> Please see the [`is`](/en-US/docs/Web/HTML/Reference/Global_attributes/is) attribute reference for caveats on implementation reality of custom built-in elements.
+> Please see the [`is`](/en-US/docs/Web/HTML/Reference/Global_attributes/is) attribute reference for caveats on implementation reality of customized built-in elements.
 
 First of all, we define our element's class:
 
