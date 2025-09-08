@@ -146,7 +146,11 @@ jobs:
           done
 
           yarn rari build --no-basic --json-issues --data-issues "${ARGS[@]}"
-          yarn yari-render-html
+
+          # Workaround, as fred-ssr doesn't copy assets.
+          cp -vR node_modules/@mdn/fred/out/. "$BUILD_OUT_ROOT"
+
+          yarn fred-ssr
 
           echo "Disk usage size of the build"
           du -sh $BUILD_OUT_ROOT

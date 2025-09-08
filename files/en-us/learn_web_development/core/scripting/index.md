@@ -36,7 +36,7 @@ Before starting this module, you don't need any previous JavaScript knowledge, b
 - [Arrays](/en-US/docs/Learn_web_development/Core/Scripting/Arrays)
   - : In this lesson we'll look at arrays — a neat way of storing a list of data items under a single variable name. Here we look at why this is useful, then explore how to create an array, retrieve, add, and remove items stored in an array, and more besides.
 - [Challenge: Silly story generator](/en-US/docs/Learn_web_development/Core/Scripting/Silly_story_generator) <sup>Challenge</sup>
-  - : In this challenge, you'll be tasked with taking some of the knowledge you've picked up in this module's articles and applying it to creating a fun app that generates random silly stories. Have fun!
+  - : In this challenge you are tasked with taking some of the knowledge you've picked up in this module so far and applying it to creating a fun app that generates random silly stories. Along the way, we'll test your knowledge of variables, math, strings, and arrays.
 - [Making decisions in your code — conditionals](/en-US/docs/Learn_web_development/Core/Scripting/Conditionals)
   - : In any programming language, the code needs to make decisions and carry out actions accordingly depending on different inputs. For example, in a game, if the player's number of lives is 0, then it's game over. In a weather app, if it is being looked at in the morning, show a sunrise graphic; show stars and a moon if it is nighttime. In this article, we'll explore how so-called conditional statements work in JavaScript.
 - [Looping code](/en-US/docs/Learn_web_development/Core/Scripting/Loops)

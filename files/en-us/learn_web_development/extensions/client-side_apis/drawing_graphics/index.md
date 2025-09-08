@@ -1055,12 +1055,12 @@ As a final animation example, we'd like to show you a very simple drawing applic
 body {
   margin: 0;
   overflow: hidden;
-  background: #ccc;
+  background: #cccccc;
 }
 
 .toolbar {
   height: 75px;
-  background: #ccc;
+  background: #cccccc;
   padding: 5px 20px;
   display: flex;
   justify-content: center;

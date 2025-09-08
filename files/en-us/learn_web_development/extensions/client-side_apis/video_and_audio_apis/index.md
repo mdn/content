@@ -169,19 +169,19 @@ p {
 
 button,
 .controls {
-  background: linear-gradient(to bottom, #222, #666);
+  background: linear-gradient(to bottom, #222222, #666666);
 }
 
-button:before {
+button::before {
   font-family: HeydingsControlsRegular;
   font-size: 20px;
   position: relative;
   content: attr(data-icon);
-  color: #aaa;
+  color: #aaaaaa;
   text-shadow: 1px 1px 0px black;
 }
 
-.play:before {
+.play::before {
   font-size: 22px;
 }
 
@@ -189,8 +189,8 @@ button,
 .timer {
   height: 38px;
   line-height: 19px;
-  box-shadow: inset 0 -5px 25px rgba(0, 0, 0, 0.3);
-  border-right: 1px solid #333;
+  box-shadow: inset 0 -5px 25px #0000004d;
+  border-right: 1px solid #333333;
 }
 
 button {
@@ -243,7 +243,7 @@ button:active {
   box-shadow: inset 3px 3px 2px black;
 }
 
-.active:before {
+.active::before {
   color: red;
 }
 ```
@@ -467,19 +467,19 @@ To get started with this example, follow these steps:
 
    button,
    .controls {
-     background: linear-gradient(to bottom, #222, #666);
+     background: linear-gradient(to bottom, #222222, #666666);
    }
 
-   button:before {
+   button::before {
      font-family: HeydingsControlsRegular;
      font-size: 20px;
      position: relative;
      content: attr(data-icon);
-     color: #aaa;
+     color: #aaaaaa;
      text-shadow: 1px 1px 0px black;
    }
 
-   .play:before {
+   .play::before {
      font-size: 22px;
    }
 
@@ -487,8 +487,8 @@ To get started with this example, follow these steps:
    .timer {
      height: 38px;
      line-height: 19px;
-     box-shadow: inset 0 -5px 25px rgba(0, 0, 0, 0.3);
-     border-right: 1px solid #333;
+     box-shadow: inset 0 -5px 25px #0000004d;
+     border-right: 1px solid #333333;
    }
 
    button {
@@ -541,7 +541,7 @@ To get started with this example, follow these steps:
      box-shadow: inset 3px 3px 2px black;
    }
 
-   .active:before {
+   .active::before {
      color: red;
    }
    ```
