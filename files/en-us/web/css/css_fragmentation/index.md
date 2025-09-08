@@ -8,11 +8,9 @@ sidebar: cssref
 
 The **CSS fragmentation** module defines how content is displayed when it is broken (fragmented) and flows across multiple [pages](/en-US/docs/Web/CSS/CSS_paged_media), regions, or [columns](/en-US/docs/Web/CSS/CSS_multicol_layout). This module defines features for pagination, breaking variable fragment size and orientation, widows and orphans.
 
-Fragmentation occurs when an inline box wraps onto multiple lines. It also occurs when a block spans more than one column inside a column layout container, or spans a page break when printed. Each piece of the rendering for the element is called a _fragment_.
+This module explains how content breaks across fragmentation containers and how such breaks can be controlled by the author. The generic term for breaking content across containers is _fragmentation_. Fragmentation occurs when an inline box wraps onto multiple lines. Many layout features, such as [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout), create fragmented environments. For example,fragmentation occurs when a block spans more than one column inside a column layout container, or spans a page break when printed. Each piece of the rendering for the element is called a _fragment_.
 
 When content is physically printed or displayed as a print preview, there are page breaks. In this paged media, as opposed to continuous media, document content can be split between one or more pages, or fragments. To avoid awkward breaks, such as halfway through a line of text or with a lone word on its own page, browsers can move content that would otherwise fall across the page break in a process is called _pagination_.
-
-Some layout features, such as [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout), also create fragmented environments. The generic term for breaking content across containers is fragmentation. This module explains how content breaks across fragmentation containers such as pages and columns and how such breaks can be controlled by the author.
 
 ## Reference
 
@@ -41,8 +39,6 @@ Some layout features, such as [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_
 - {{cssxref("width")}}, {{cssxref("max-width")}}, and {{cssxref("inline-size")}} CSS properties
 - [Block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context)
 
-[CSS multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout) module
-
 [CSS paged media](/en-US/docs/Web/CSS/CSS_paged_media) module
 
 - {{cssxref("page")}}
@@ -61,3 +57,4 @@ Some layout features, such as [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_
 
 - [`horizontal-viewport-segments`](/en-US/docs/Web/CSS/@media/horizontal-viewport-segments) and [`vertical-viewport-segments`](/en-US/docs/Web/CSS/@media/vertical-viewport-segments) `@media` descriptors
 - [Viewport segments API](/en-US/docs/Web/API/Viewport_segments_API)
+- [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout) module
