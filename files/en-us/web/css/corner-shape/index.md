@@ -503,7 +503,7 @@ The markup for this example contains a single `<div>`, with [`tabindex="0"`](/en
 
 #### CSS
 
-We give the `<div>` element some basic styles, which we've hidden for brevity. Most notably, we create a set of {{cssxref("@keyframes")}} that animate smoothly between the `corner-shape` values of `square` and `notch`. We then apply an {{cssxref("animation")}} based on those `@keyframes` to the `<div>` when its containing `<html>` element is hovered over, or it is focused.
+We create a set of {{cssxref("@keyframes")}} that animate smoothly between the `corner-shape` values of `square` and `notch`. We then apply an {{cssxref("animation")}} based on those `@keyframes` to the `<div>` when its containing `<html>` element is hovered over or focused. Additional basic `<div>` styles have been hidden for brevity.
 
 ```css hidden live-sample___corner-shape-animation
 body {
