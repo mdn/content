@@ -99,7 +99,7 @@ In the CSS, the anchor is given an {{cssxref("anchor-name")}} and has a {{cssxre
 
 ```css
 .anchor {
-  anchor-name: --myAnchor;
+  anchor-name: --my-anchor;
   position: absolute;
   top: 100px;
   left: 45%;
@@ -110,7 +110,7 @@ In the CSS, the anchor is given an {{cssxref("anchor-name")}} and has a {{cssxre
 .infobox {
   color: darkblue;
   background-color: azure;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   padding: 10px;
   border-radius: 10px;
   font-size: 1rem;
@@ -139,7 +139,7 @@ We initially position the element above its anchor, and then set a `position-try
 ```css
 .infobox {
   position: fixed;
-  position-anchor: --myAnchor;
+  position-anchor: --my-anchor;
 
   bottom: anchor(top);
   margin-bottom: 10px;

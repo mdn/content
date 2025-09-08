@@ -26,7 +26,7 @@ The HTML document used to render this content is shown below.
         color: #cccccc;
       }
       #c2 {
-        background-image: url(media/foo.png);
+        background-image: url("media/foo.png");
         background-repeat: no-repeat;
       }
       div {

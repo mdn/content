@@ -81,8 +81,8 @@ div {
   background-color: red;
 
   mask-image:
-    url(https://mdn.github.io/shared-assets/images/examples/mdn.svg),
-    url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+    url("https://mdn.github.io/shared-assets/images/examples/mdn.svg"),
+    url("https://mdn.github.io/shared-assets/images/examples/mask-star.svg");
   mask-size: 100% 100%;
 
   mask-composite: subtract;
@@ -237,11 +237,11 @@ We then apply the heart and circle masks as the comma-separated {{cssxref("mask-
 ```css
 /* apply the mask images */
 tr.alphaMaskType img {
-  mask-image: url(#heartAlpha), url(#circleAlpha);
+  mask-image: url("#heartAlpha"), url("#circleAlpha");
 }
 
 tr.luminanceMaskType img {
-  mask-image: url(#heartLuminance), url(#circleLuminance);
+  mask-image: url("#heartLuminance"), url("#circleLuminance");
 }
 ```
 

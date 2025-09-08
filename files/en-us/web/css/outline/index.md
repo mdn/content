@@ -62,7 +62,7 @@ This property is a shorthand for the following CSS properties:
 outline: solid;
 
 /* style | color */
-outline: dashed #f66;
+outline: dashed #ff6666;
 
 /* width | style */
 outline: thick inset;
@@ -90,7 +90,7 @@ The `outline` property may be specified using one, two, or three of the values l
 - `<'outline-style'>`
   - : Sets the style of the outline. Defaults to `none` if absent. See {{cssxref("outline-style")}}.
 - `<'outline-color'>`
-  - : Sets the color of the outline. Defaults to `invert` for browsers supporting it, `currentcolor` for the others. See {{cssxref("outline-color")}}.
+  - : Sets the color of the outline. Defaults to `invert` for browsers supporting it, `currentColor` for the others. See {{cssxref("outline-color")}}.
 
 ## Description
 
@@ -137,9 +137,9 @@ a {
 }
 
 a:focus {
-  outline: 4px dotted #e73;
+  outline: 4px dotted #ee7733;
   outline-offset: 4px;
-  background: #ffa;
+  background: #ffffaa;
 }
 ```
 

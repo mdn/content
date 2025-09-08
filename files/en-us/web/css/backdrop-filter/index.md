@@ -58,7 +58,7 @@ backdrop-filter: sepia(90%);
 backdrop-filter: none;
 
 /* URL to SVG filter */
-backdrop-filter: url(common-filters.svg#filter);
+backdrop-filter: url("common-filters.svg#filter");
 
 /* <filter-function> values */
 backdrop-filter: blur(2px);
@@ -73,7 +73,7 @@ backdrop-filter: sepia(90%);
 backdrop-filter: saturate(80%);
 
 /* Multiple filters */
-backdrop-filter: url(filters.svg#filter) blur(4px) saturate(150%);
+backdrop-filter: url("filters.svg#filter") blur(4px) saturate(150%);
 
 /* Global values */
 backdrop-filter: inherit;

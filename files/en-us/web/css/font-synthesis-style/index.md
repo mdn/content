@@ -66,7 +66,7 @@ This example shows turning off synthesis of the oblique typeface by the browser 
 #### CSS
 
 ```css
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import "https://fonts.googleapis.com/css2?family=Montserrat&display=swap";
 
 .english {
   font-family: "Montserrat", sans-serif;
@@ -110,7 +110,7 @@ This example compares all the `font-synthesis-style` values using italic and obl
 #### CSS
 
 ```css hidden
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import "https://fonts.googleapis.com/css2?family=Montserrat&display=swap";
 
 p {
   font-family: "Montserrat", sans-serif;

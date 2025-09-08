@@ -83,7 +83,7 @@ The CSS that achieves the appearance we want is:
 
 ```css
 .prompt {
-  color: #b00;
+  color: #bb0000;
 }
 
 samp > kbd {
@@ -91,7 +91,7 @@ samp > kbd {
 }
 
 .cursor {
-  color: #00b;
+  color: #0000bb;
 }
 ```
 

@@ -1,10 +1,12 @@
 ---
 title: "Test your skills: Arrays"
-short-title: Arrays
+short-title: "Test: Arrays"
 slug: Learn_web_development/Core/Scripting/Test_your_skills/Arrays
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Arrays", "Learn_web_development/Core/Scripting/Silly_story_generator", "Learn_web_development/Core/Scripting")}}
 
 The aim of this skill test is to help you assess whether you've understood our [Arrays](/en-US/docs/Learn_web_development/Core/Scripting/Arrays) article.
 
@@ -17,7 +19,7 @@ First of all, we are giving you a fun, interactive arrays challenge created by o
 
 Watch the embedded scrim, and complete the task on the timeline (the little ghost icon) by following the instructions and editing the code. When you are done, you can resume watching the scrim to check how the teacher's solution matches up with yours.
 
-<scrim-inline url="https://scrimba.com/learn-javascript-c0v/~05e" scrimtitle="Render images from an array" survey="true"></scrim-inline>
+<mdn-scrim-inline url="https://scrimba.com/learn-javascript-c0v/~05e" scrimtitle="Render images from an array" survey="true"></scrim-inline>
 
 > [!NOTE]
 > This task is somewhat of a stretch goal, given that it relies on JavaScript features you've not yet explicitly covered during the course. Give it your best shot, and search online for information on anything you are not sure about.
@@ -247,3 +249,5 @@ const eBirds = birds.filter(startsWithE);
 ```
 
 </details>
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Arrays", "Learn_web_development/Core/Scripting/Silly_story_generator", "Learn_web_development/Core/Scripting")}}

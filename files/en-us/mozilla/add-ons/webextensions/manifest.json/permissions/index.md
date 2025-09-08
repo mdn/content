@@ -152,13 +152,15 @@ In most cases the permission just grants access to the API, with the following e
 
 ## activeTab permission
 
-This permission is specified as `"activeTab"`. If an extension has the `activeTab` permission, then when the user interacts with the extension, the extension is granted extra privileges for the active tab only.
+If an extension has the `"activeTab"` permission, when a user interacts with the extension, the extension is granted extra privileges for the active tab only.
 
-"User interaction" includes:
+These interactions are known as [user actions](/en-US/docs/Mozilla/Add-ons/WebExtensions/User_actions) and include the user:
 
-- the user clicks the extension's {{webextAPIref("browserAction", "browser action", "", 1)}} or [page action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions)
-- the user selects its context menu item
-- the user activates a keyboard shortcut defined by the extension
+- clicking the extension's [toolbar button](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button) or [page action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions).
+- selecting an extension's context menu item.
+- activating a keyboard shortcut defined by the extension (from Firefox 63).
+- clicking a button on a page bundled with the extension.
+- clicking an extension suggestion in the address bar (omnibox) (from Firefox 142).
 
 The extra privileges are:
 
@@ -174,9 +176,7 @@ For example, consider an extension that wants to run a script in the current pag
 
 The `activeTab` permission enables scripting access to the top level tab's page and same origin frames. Running scripts or modifying styles inside [cross-origin](/en-US/docs/Web/Security/Same-origin_policy#cross-origin_network_access) frames may require additional [host permissions](#host_permissions). Of course, [restrictions and limitations](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#permissions_restrictions_and_limitations) related to particular sites and URI schemes are applied as well.
 
-Usually the tab that's granted `activeTab` is just the currently active tab, except in one case. The {{webextAPIref("menus")}} API enables an extension to create a menu item which is shown if the user context-clicks on a tab (that is, on the element in the tabstrip that enables the user to switch from one tab to another).
-
-If the user clicks such an item, then the `activeTab` permission is granted for the tab the user clicked, even if it's not the currently active tab (as of Firefox 63, [Firefox bug 1446956](https://bugzil.la/1446956)).
+Usually, the tab that's granted `activeTab` is the active tab, with one exception. An extension can create a menu item with the {{webextAPIref("menus")}} API that displays when the user context-clicks a tab. That is, a menu on an element in the tabstrip that enables the user to switch from one tab to another. If the user clicks this menu, then the `activeTab` permission is granted for the tab the user clicked, even if it's not the active tab (as of Firefox 63, [Firefox bug 1446956](https://bugzil.la/1446956)).
 
 ## Clipboard access
 

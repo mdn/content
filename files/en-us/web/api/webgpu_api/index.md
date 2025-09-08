@@ -81,7 +81,7 @@ A pipeline is a logical structure containing programmable stages that are comple
 
 - A compute pipeline is for general computation. A compute pipeline contains a single compute stage in which a compute shader takes general data, processes it in parallel across a specified number of workgroups, then returns the result in one or more buffers. The buffers can contain any kind of data.
 
-The shaders mentioned above are sets of instructions processed by the GPU. WebGPU shaders are written in a low-level Rust-like language called [WebGPU Shader Language](https://gpuweb.github.io/gpuweb/wgsl/) (WGSL).
+The shaders mentioned above are sets of instructions processed by the GPU. WebGPU shaders are written in a low-level Rust-like language called [WebGPU Shading Language](https://gpuweb.github.io/gpuweb/wgsl/) (WGSL).
 
 There are several different ways in which you could architect a WebGPU app, but the process will likely contain the following steps:
 

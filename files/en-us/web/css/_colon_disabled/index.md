@@ -81,7 +81,7 @@ This example shows a basic shipping form. It uses the [JavaScript](/en-US/docs/W
 
 ```css
 input[type="text"]:disabled {
-  background: #ccc;
+  background: #cccccc;
 }
 ```
 

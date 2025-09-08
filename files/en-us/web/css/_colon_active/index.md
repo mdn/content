@@ -83,7 +83,7 @@ a:active {
 
 /* Active paragraphs */
 p:active {
-  background: #eee;
+  background: #eeeeee;
 }
 ```
 

@@ -278,7 +278,7 @@ ul:has(> li li) {
 The following example applies the CSS style if the browser supports the `COLRv1` font technology:
 
 ```css
-@import url("https://fonts.googleapis.com/css2?family=Bungee+Spice");
+@import "https://fonts.googleapis.com/css2?family=Bungee+Spice";
 
 @supports font-tech(color-COLRv1) {
   p {

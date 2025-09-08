@@ -1,10 +1,12 @@
 ---
 title: "Test your skills: Flexbox"
-short-title: Flexbox
+short-title: "Test: Flexbox"
 slug: Learn_web_development/Core/CSS_layout/Test_your_skills/Flexbox
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
+
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Flexbox", "Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout")}}
 
 The aim of this skill test is to help you assess whether you understand how [flexbox and flex items](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox) behave. Below are four sets of design problems you can solve using flexbox. Your task is to fix the problems.
 
@@ -17,7 +19,7 @@ First of all, we are giving you a fun, interactive flexbox challenge created by 
 
 Watch the embedded scrim, and complete all the tasks on the timeline (the little ghost icons) by following the instructions and editing the code. When you are done, you can resume watching the scrim to check how the teacher's solution matches up with yours.
 
-<scrim-inline url="https://scrimba.com/frontend-path-c0j/~03a" scrimtitle="Flexbox alignment challenges" survey="true"></scrim-inline>
+<mdn-scrim-inline url="https://scrimba.com/frontend-path-c0j/~03a" scrimtitle="Flexbox alignment challenges" survey="true"></scrim-inline>
 
 ## Task 1
 
@@ -53,7 +55,7 @@ nav a:visited {
   background-color: #4d7298;
   border: 2px solid #77a6b6;
   border-radius: 0.5em;
-  color: #fff;
+  color: white;
   padding: 0.5em;
   display: inline-block;
   text-decoration: none;
@@ -117,7 +119,7 @@ li {
   background-color: #4d7298;
   border: 2px solid #77a6b6;
   border-radius: 0.5em;
-  color: #fff;
+  color: white;
   padding: 0.5em;
 }
 
@@ -193,7 +195,7 @@ li {
   background-color: #4d7298;
   border: 2px solid #77a6b6;
   border-radius: 0.5em;
-  color: #fff;
+  color: white;
   padding: 0.5em;
   margin: 0.5em;
 }
@@ -226,3 +228,5 @@ li {
 ```
 
 </details>
+
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Flexbox", "Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout")}}

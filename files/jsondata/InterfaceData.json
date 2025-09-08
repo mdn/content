@@ -2336,6 +2336,10 @@
       "inh": "EventTarget",
       "impl": []
     },
+    "NavigationPrecommitController": {
+      "inh": "",
+      "impl": []
+    },
     "NavigationPreloadManager": {
       "inh": "",
       "impl": []

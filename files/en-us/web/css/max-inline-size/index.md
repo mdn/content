@@ -47,7 +47,7 @@ writing-mode: vertical-lr;
   background-color: #5b6dcd;
   height: 80%;
   justify-content: center;
-  color: #ffffff;
+  color: white;
 }
 ```
 
@@ -58,7 +58,7 @@ writing-mode: vertical-lr;
 max-inline-size: 300px;
 max-inline-size: 25em;
 max-inline-size: anchor-size(width);
-max-inline-size: anchor-size(--myAnchor self-block, 200px);
+max-inline-size: anchor-size(--my-anchor self-block, 200px);
 
 /* <percentage> values */
 max-inline-size: 75%;

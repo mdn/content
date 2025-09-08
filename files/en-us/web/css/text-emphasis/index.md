@@ -66,7 +66,7 @@ text-emphasis: none; /* No emphasis marks */
 text-emphasis: "x";
 text-emphasis: "点";
 text-emphasis: "\25B2";
-text-emphasis: "*" #555;
+text-emphasis: "*" #555555;
 text-emphasis: "foo"; /* Should NOT use. It may be computed to or rendered as 'f' only */
 
 /* Keywords value */
@@ -76,7 +76,7 @@ text-emphasis: filled sesame;
 text-emphasis: open sesame;
 
 /* Keywords value combined with a color */
-text-emphasis: filled sesame #555;
+text-emphasis: filled sesame #555555;
 
 /* Global values */
 text-emphasis: inherit;
@@ -107,7 +107,7 @@ text-emphasis: unset;
 - `<string>`
   - : Display the given string as marks. Authors should not specify more than one _character_ in `<string>`. The UA may truncate or ignore strings consisting of more than one grapheme cluster.
 - `<color>`
-  - : Defines the color of the mark. If no color is present, it defaults to `currentcolor`.
+  - : Defines the color of the mark. If no color is present, it defaults to `currentColor`.
 
 ## Formal definition
 
@@ -127,7 +127,7 @@ This example draws a heading with triangles used to emphasize each character.
 
 ```css
 h2 {
-  text-emphasis: triangle #d55;
+  text-emphasis: triangle #dd5555;
 }
 ```
 

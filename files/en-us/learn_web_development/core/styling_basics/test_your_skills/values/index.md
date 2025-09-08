@@ -1,10 +1,12 @@
 ---
 title: "Test your skills: Values and units"
-short-title: Values and units
+short-title: "Test: Values and units"
 slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Values
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
+
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Values_and_units", "Learn_web_development/Core/Styling_basics/Sizing", "Learn_web_development/Core/Styling_basics")}}
 
 The aim of this skill test is to help you assess whether you understand different types of [values and units used in CSS properties](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units).
 
@@ -171,12 +173,12 @@ Your final result should look like the image below:
 
 ```css live-sample___position
 .box {
-  border: 5px solid #000;
+  border: 5px solid black;
   height: 350px;
 }
 
 .box {
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/purple-star.png);
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/purple-star.png");
   background-repeat: no-repeat;
 }
 ```
@@ -190,10 +192,12 @@ Use `background-position` with the `center` keyword and a percentage:
 
 ```css
 .box {
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/purple-star.png);
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/purple-star.png");
   background-repeat: no-repeat;
   background-position: center 20%;
 }
 ```
 
 </details>
+
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Values_and_units", "Learn_web_development/Core/Styling_basics/Sizing", "Learn_web_development/Core/Styling_basics")}}

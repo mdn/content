@@ -66,7 +66,7 @@ light-dark(rgb(255 255 255), rgb(0 0 0))
 
 A `<color>` value can be specified using one of the methods listed below:
 
-- By keywords: {{CSSXref("&lt;named-color&gt;")}} (such as `blue` or `pink`), {{CSSXref("&lt;system-color&gt;")}}, and [`currentcolor`](#currentcolor_keyword).
+- By keywords: {{CSSXref("&lt;named-color&gt;")}} (such as `blue` or `pink`), {{CSSXref("&lt;system-color&gt;")}}, and [`currentColor`](#currentcolor_keyword).
 - By hexadecimal notations: {{CSSXref("&lt;hex-color&gt;")}} (such as `#ff0000`).
 - By `<color-function>`, with parameters in a {{glossary("color space")}} using functional notations:
   - [sRGB](https://en.wikipedia.org/wiki/SRGB) color space: {{CSSXref("color_value/hsl", "hsl()")}}, {{CSSXref("color_value/hwb", "hwb()")}}, and {{CSSXref("color_value/rgb", "rgb()")}}.
@@ -78,11 +78,11 @@ A `<color>` value can be specified using one of the methods listed below:
 - By specifying a color that you want a contrasting color returned for: {{CSSXref("color_value/contrast-color", "contrast-color()")}}.
 - By specifying two colors, using the first for light color-schemes and the second for dark color-schemes: {{CSSXref("color_value/light-dark", "light-dark()")}}.
 
-### `currentcolor` keyword
+### `currentColor` keyword
 
-The `currentcolor` keyword represents the value of an element's {{Cssxref("color")}} property. This lets you use the `color` value on properties that do not receive it by default.
+The `currentColor` keyword represents the value of an element's {{Cssxref("color")}} property. This lets you use the `color` value on properties that do not receive it by default.
 
-If `currentcolor` is used as the value of the `color` property, it instead takes its value from the inherited value of the `color` property.
+If `currentColor` is used as the value of the `color` property, it instead takes its value from the inherited value of the `color` property.
 
 ```html
 <div class="container">
@@ -95,10 +95,10 @@ If `currentcolor` is used as the value of the `color` property, it instead takes
 ```css
 .container {
   color: blue;
-  border: 1px dashed currentcolor;
+  border: 1px dashed currentColor;
 }
 .child {
-  background: currentcolor;
+  background: currentColor;
   height: 9px;
 }
 ```
@@ -459,6 +459,7 @@ div:nth-child(6) {
 - {{CSSXref("opacity")}}: the property defining transparency at the element level
 - {{CSSXref("&lt;hue&gt;")}}: the data type representing the hue angle of a color
 - {{CSSXref("color")}}, {{CSSXref("background-color")}}, {{CSSXref("border-color")}}, {{CSSXref("box-shadow")}}, {{CSSXref("outline-color")}}, {{CSSXref("text-shadow")}}: common properties that use `<color>`
+- {{CSSXref("color_value/color")}} function
 - [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color)
 - [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)
 - [New functions, gradients, and hues in CSS colors (Level 4)](/en-US/blog/css-color-module-level-4/) on MDN blog (2023)
