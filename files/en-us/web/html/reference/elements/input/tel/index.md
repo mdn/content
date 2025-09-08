@@ -254,7 +254,7 @@ input:invalid + span::after {
   position: absolute;
   content: "✖";
   padding-left: 5px;
-  color: #8b0000;
+  color: darkred;
 }
 
 input:valid + span::after {
@@ -313,7 +313,7 @@ input:invalid + span::after {
   position: absolute;
   content: "✖";
   padding-left: 5px;
-  color: #8b0000;
+  color: darkred;
 }
 
 input:valid + span::after {
@@ -462,7 +462,7 @@ input:invalid + span::after {
   position: absolute;
   content: "✖";
   padding-left: 5px;
-  color: #8b0000;
+  color: darkred;
 }
 
 input:valid + span::after {

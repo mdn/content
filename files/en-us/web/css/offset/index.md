@@ -109,18 +109,18 @@ offset: none;
 /* Offset path */
 offset: ray(45deg closest-side);
 offset: path("M 100 100 L 300 100 L 200 300 z");
-offset: url(arc.svg);
+offset: url("arc.svg");
 
 /* Offset path with distance and/or rotation */
-offset: url(circle.svg) 100px;
-offset: url(circle.svg) 40%;
-offset: url(circle.svg) 30deg;
-offset: url(circle.svg) 50px 20deg;
+offset: url("circle.svg") 100px;
+offset: url("circle.svg") 40%;
+offset: url("circle.svg") 30deg;
+offset: url("circle.svg") 50px 20deg;
 
 /* Including offset anchor */
 offset: ray(45deg closest-side) / 40px 20px;
-offset: url(arc.svg) 2cm / 0.5cm 3cm;
-offset: url(arc.svg) 30deg / 50px 100px;
+offset: url("arc.svg") 2cm / 0.5cm 3cm;
+offset: url("arc.svg") 30deg / 50px 100px;
 
 /* Global values */
 offset: inherit;

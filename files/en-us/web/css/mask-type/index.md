@@ -136,11 +136,11 @@ mask#luminanceMask {
 }
 
 img.alphaMaskType {
-  mask-image: url(#alphaMask);
+  mask-image: url("#alphaMask");
 }
 
 img.luminanceMaskType {
-  mask-image: url(#luminanceMask);
+  mask-image: url("#luminanceMask");
 }
 ```
 

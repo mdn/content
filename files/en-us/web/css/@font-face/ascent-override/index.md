@@ -44,7 +44,7 @@ The `ascent-override` property can help when overriding the metrics of a fallbac
 
 @font-face {
   font-family: local-font;
-  src: local(Local Font);
+  src: local("Local Font");
   ascent-override: 125%;
 }
 ```

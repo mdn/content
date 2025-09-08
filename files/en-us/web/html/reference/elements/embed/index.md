@@ -12,8 +12,8 @@ The **`<embed>`** [HTML](/en-US/docs/Web/HTML) element embeds external content a
 
 ```html interactive-example
 <embed
-  type="video/mp4"
-  src="/shared-assets/videos/flower.mp4"
+  type="image/jpeg"
+  src="/shared-assets/images/examples/flowers.jpg"
   width="250"
   height="200" />
 ```

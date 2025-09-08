@@ -40,8 +40,8 @@ border-left-color: transparent;
 
 ```css interactive-example
 #example-element {
-  background-color: #eee;
-  color: #000;
+  background-color: #eeeeee;
+  color: black;
   border: 0.75em solid;
   padding: 0.75em;
   width: 80%;
@@ -57,7 +57,7 @@ border-left-color: red;
 border-left-color: #ffbb00;
 border-left-color: rgb(255 0 0);
 border-left-color: hsl(100deg 50% 25% / 75%);
-border-left-color: currentcolor;
+border-left-color: currentColor;
 border-left-color: transparent;
 
 /* Global values */
@@ -129,4 +129,4 @@ The `border-left-color` property is specified as a single value.
 - The border-related CSS shorthand properties: {{Cssxref("border")}}, {{Cssxref("border-left")}}, and {{Cssxref("border-color")}}.
 - The color-related CSS properties for the other borders: {{Cssxref("border-right-color")}}, {{Cssxref("border-bottom-color")}}, and {{Cssxref("border-top-color")}}.
 - The other border-related CSS properties applying to the same border: {{cssxref("border-left-style")}} and {{cssxref("border-left-width")}}.
-- The default [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword) color value.
+- The default [`currentColor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword) color value.

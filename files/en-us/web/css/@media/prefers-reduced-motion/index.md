@@ -68,7 +68,7 @@ This example uses a scaling animation for the purpose of demonstrating `prefers-
 
 ```css hidden
 .animation {
-  color: #fff;
+  color: white;
   font: 1.2em sans-serif;
   width: 10em;
   padding: 1em;

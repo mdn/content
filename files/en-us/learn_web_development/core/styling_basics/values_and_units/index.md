@@ -6,7 +6,7 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Handling_conflicts", "Learn_web_development/Core/Styling_basics/Sizing", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Fixing_blog_styles", "Learn_web_development/Core/Styling_basics/Test_your_skills/Values", "Learn_web_development/Core/Styling_basics")}}
 
 CSS rules contain [declarations](/en-US/docs/Web/CSS/CSS_syntax/Syntax#css_declarations), which in turn are composed of properties and values.
 Each property used in CSS has a **value type** that describes what kind of values it is allowed to have.
@@ -358,7 +358,7 @@ In the below example, try changing the value of `opacity` to various decimal val
 
 ```css live-sample___opacity
 .wrapper {
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/balloons.jpg);
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/balloons.jpg");
   background-repeat: no-repeat;
   background-position: bottom left;
   padding: 20px;
@@ -521,7 +521,7 @@ Try changing the alpha channel values to see how it affects the color output.
 
 ```css live-sample___color-rgba
 .wrapper {
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/balloons.jpg);
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/balloons.jpg");
   padding: 40px 20px;
 }
 
@@ -623,7 +623,7 @@ Just like with `rgb()` you can pass an alpha parameter to `hsl()` to specify opa
 
 ```css live-sample___color-hsla
 .wrapper {
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/balloons.jpg);
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/balloons.jpg");
   padding: 40px 20px;
 }
 
@@ -670,7 +670,7 @@ In the example below, we are using an image and a gradient as values for the CSS
 }
 
 .image {
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/big-star.png);
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/big-star.png");
 }
 
 .gradient {
@@ -707,7 +707,7 @@ Try playing around with these values to see how you can push the image around.
 .box {
   height: 200px;
   width: 400px;
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/big-star.png);
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/big-star.png");
   background-repeat: no-repeat;
   background-position: right 60px;
   margin: 20px auto;
@@ -796,16 +796,12 @@ There are many other math functions that you can use in CSS, such as [`min()`](/
 
 Knowing about CSS functions is useful so you recognize them when you see them. You should start experimenting with them in your projects — they will help you avoid writing custom or repetitive code to achieve results that you can get with regular CSS.
 
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Values).
-
 ## Summary
 
 This has been a quick run-through of the most common types of values and units you might encounter. You can have a look at all of the different types on the [CSS Values and units](/en-US/docs/Web/CSS/CSS_Values_and_Units) module page — you will encounter many of these in use as you work through these lessons.
 
 The key thing to remember is that each property has a defined list of allowed value types, and each value type has a definition explaining what the values are. You can then look up the specifics here on MDN. For example, understanding that [`<image>`](/en-US/docs/Web/CSS/image) also allows you to create a color gradient is useful but perhaps non-obvious knowledge to have!
 
-In the next article, we'll take a look at how items are sized in CSS.
+In the next article, we'll give you some tests that you can use to check how well you've understood and retained the information we've provided on values and units.
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Handling_conflicts", "Learn_web_development/Core/Styling_basics/Sizing", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Fixing_blog_styles", "Learn_web_development/Core/Styling_basics/Test_your_skills/Values", "Learn_web_development/Core/Styling_basics")}}

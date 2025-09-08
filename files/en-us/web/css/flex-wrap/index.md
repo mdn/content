@@ -120,7 +120,7 @@ The `flex-wrap` property is specified as a single keyword chosen from the follow
 .content,
 .content1,
 .content2 {
-  color: #fff;
+  color: white;
   font: 100 24px/100px sans-serif;
   height: 150px;
   width: 897px;
