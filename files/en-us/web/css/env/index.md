@@ -41,7 +41,7 @@ env(<environment-variable>, <fallback>)
     - `keyboard-inset-top`, `keyboard-inset-right`, `keyboard-inset-bottom`, `keyboard-inset-left`, `keyboard-inset-width`, `keyboard-inset-height`
       - : The insets from the edge of the viewport and dimensions of the device's on-screen virtual keyboard. Defined in the {{domxref("VirtualKeyboard API", "VirtualKeyboard API", "", "nocode")}}.
     - `viewport-segment-width`, `viewport-segment-height`, `viewport-segment-top`, `viewport-segment-right`, `viewport-segment-bottom`, `viewport-segment-left`
-      - : The dimensions and offset positions of specific viewport segments. A particular viewport segment is specified by two space-separated {{cssxref("integer")}} values appended to the `viewport-segment-*` keyword, which indicate the segment's horizontal and vertical position. The per-segment keywords are only defined when the viewport is made up of two or more segments, as with foldable or hinged devices.
+      - : The dimensions and offset positions of specific viewport segments. The `viewport-segment-*` keyword is followed by two space-separated {{cssxref("integer")}} values which indicate the segment's horizontal and vertical position, or indices. The viewport-segment keywords are only defined when the viewport is made up of two or more segments, as with foldable or hinged devices.
 
 - `<fallback>` {{optional_inline}}
   - : A fallback value to be inserted if the environment variable referenced in the first argument does not exist. This can be a single value, another `env()` function, or a comma-separated list of values (everything after the first comma is deemed to be a fallback value). It must resolve to a {{cssxref("&lt;length>")}} or a {{cssxref("&lt;percentage>")}}.
