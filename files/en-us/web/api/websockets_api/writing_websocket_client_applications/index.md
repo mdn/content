@@ -87,7 +87,7 @@ const message = {
 websocket.send(JSON.stringify(message));
 ```
 
-The `send()` method is asynchronous, and the {{domxref("WebSocket.bufferedAmount")}} property represents the number of bytes that have not yet been transmitted. Note that the WebSockets protocol uses {{glossary("UTF-8")}} to encode text, so `bufferedAmount` is calculated based on the UTF-8 encoding of any buffered text data.
+The `send()` method is asynchronous: it does not wait for the data to be transmitted before returning to the caller. It just adds the data to its internal buffer and begins the process of transmission. The {{domxref("WebSocket.bufferedAmount")}} property represents the number of bytes that have not yet been transmitted. Note that the WebSockets protocol uses {{glossary("UTF-8")}} to encode text, so `bufferedAmount` is calculated based on the UTF-8 encoding of any buffered text data.
 
 ## Receiving messages
 
