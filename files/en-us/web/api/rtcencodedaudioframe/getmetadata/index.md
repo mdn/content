@@ -26,6 +26,8 @@ None.
 
 An object with the following properties:
 
+- `audioLevel`
+  - : A number representing the audio level of this frame. The value is between 0 and 1 inclusive (linear), where 1.0 represents 0 dBov ([decibels relative to full scale (DBFS)](https://en.wikipedia.org/wiki/DBFS)), 0 represents silence, and 0.5 represents approximately 6 dB SPL change in the [sound pressure level](https://en.wikipedia.org/wiki/Sound_pressure#Sound_pressure_level) from 0 dBov. The value is converted from the -127 to 0 range specified in [RFC6464](https://www.rfc-editor.org/rfc/rfc6464) via the equation `10^(-rfc_level/20)`. If the RFC6464 header extension is not present in the received packets of the frame, `audioLevel` will be `undefined`.
 - `synchronizationSource`
   - : A positive integer value indicating synchronization source ("ssrc") of the stream of RTP packets that are described by this frame.
     A source might be something like a microphone, or a mixer application that combines multiple sources.

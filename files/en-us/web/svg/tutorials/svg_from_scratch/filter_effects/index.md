@@ -77,7 +77,7 @@ Filters are defined by the {{SVGElement('filter')}} element, which should be put
     <path
       fill="#D90000"
       d="M60,56 c-30,0 -30,-40 0,-40 h80 c30,0 30,40 0,40z" />
-    <g fill="#FFFFFF" stroke="black" font-size="45" font-family="Verdana">
+    <g fill="white" stroke="black" font-size="45" font-family="Verdana">
       <text x="52" y="52">SVG</text>
     </g>
   </g>

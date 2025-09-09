@@ -69,7 +69,7 @@ scroll-snap-stop: always;
   flex: 0 0 250px;
   width: 250px;
   background-color: rebeccapurple;
-  color: #fff;
+  color: white;
   font-size: 30px;
   display: flex;
   align-items: center;
@@ -78,7 +78,7 @@ scroll-snap-stop: always;
 }
 
 .snap-container > div:nth-child(even) {
-  background-color: #fff;
+  background-color: white;
   color: rebeccapurple;
 }
 ```
@@ -214,7 +214,7 @@ div[class] {
 
 div > div {
   flex: none;
-  outline: 1px solid #333;
+  outline: 1px solid #333333;
 }
 
 .x > div {

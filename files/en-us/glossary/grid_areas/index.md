@@ -1,5 +1,5 @@
 ---
-title: Grid Areas
+title: Grid areas
 slug: Glossary/Grid_Areas
 page-type: glossary-definition
 sidebar: glossarysidebar

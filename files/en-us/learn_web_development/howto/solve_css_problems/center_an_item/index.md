@@ -32,7 +32,7 @@ In the example below we have given the parent container `display: flex`; then se
   background-color: rgb(69 164 181);
   border-radius: 5px;
   padding: 10px;
-  color: #fff;
+  color: white;
 }
 ```
 

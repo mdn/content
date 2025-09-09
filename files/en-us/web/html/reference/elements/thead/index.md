@@ -44,7 +44,7 @@ The **`<thead>`** [HTML](/en-US/docs/Web/HTML) element encapsulates a set of tab
 thead,
 tfoot {
   background-color: #2c5e77;
-  color: #fff;
+  color: white;
 }
 
 tbody {
@@ -158,7 +158,7 @@ thead {
   border-bottom: 2px solid rgb(160 160 160);
   text-align: center;
   background-color: #2c5e77;
-  color: #fff;
+  color: white;
 }
 
 tbody {
@@ -244,7 +244,7 @@ In order to associate and line up the header cells with the correct columns and 
 
 The column and row spanning demonstrated by this example are illustrated in the following figure:
 
-![Illustration demonstrating column and row spanning of table cells: cells 1, 3, and 4 spanning one column and two rows each; cell 2 spanning two columns and one row; cells 5 and 6 span a single row and column each, fitting into the available cells that are the second and third columns in the second row](column-row-span.png)
+![Illustration demonstrating column and row spanning of table cells: cells 1, 3, and 4 spanning one column and two rows each; cell 2 spanning two columns and one row; cells 5 and 6 span a single row and column each, fitting into the available cells that are the second and third columns in the second row](/shared-assets/images/diagrams/html/table/column-row-span.png)
 
 #### CSS
 
@@ -254,7 +254,7 @@ The CSS is unchanged from the [previous example](#basic_head_structure).
 thead {
   border-bottom: 2px solid rgb(160 160 160);
   background-color: #2c5e77;
-  color: #fff;
+  color: white;
 }
 
 table {

@@ -29,7 +29,7 @@ oklab(59.69% 0.1007 0.1191 / 0.5);
 
 /* Relative values */
 oklab(from green l a b / 0.5)
-oklab(from #0000FF calc(l + 0.1) a b / calc(alpha * 0.9))
+oklab(from #123456 calc(l + 0.1) a b / calc(alpha * 0.9))
 oklab(from hsl(180 100% 50%) calc(l - 0.1) a b)
 ```
 

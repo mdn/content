@@ -130,7 +130,7 @@ Note that you can also retrieve localized strings from CSS files in the extensio
 
 ```css
 header {
-  background-image: url(../images/__MSG_extensionName__/header.png);
+  background-image: url("../images/__MSG_extensionName__/header.png");
 }
 ```
 
@@ -337,7 +337,7 @@ Going back to our earlier example, it would make more sense to write it like thi
 
 ```css
 header {
-  background-image: url(../images/__MSG_@@ui_locale__/header.png);
+  background-image: url("../images/__MSG_@@ui_locale__/header.png");
 }
 ```
 
@@ -378,7 +378,7 @@ padding-left: 1.5em;
 
 ## Testing your extension
 
-To test your extension's localization, you use [Firefox](https://www.mozilla.org/en-US/firefox/new/) or [Firefox Beta](https://www.mozilla.org/en-US/firefox/channel/desktop/), the Firefox builds in which you can install language packs.
+To test your extension's localization, you use [Firefox](https://www.firefox.com/en-US/) or [Firefox Beta](https://www.firefox.com/en-US/channel/desktop/), the Firefox builds in which you can install language packs.
 
 Then, for each locale supported in the extension you want to test, follow the instructions to [Use Firefox in another language](https://support.mozilla.org/en-US/kb/use-firefox-another-language) to switch the Firefox UI language. (If you know your way around Settings, under Language, use Set Alternatives.)
 

@@ -45,11 +45,11 @@ plus additional parameters needed by the worklet.
 The worklet also has access to the element's custom properties:
 they don't need to be passed as function arguments.
 
-In the following example the `paint()` function is passed a worklet called `myComponent`.
+In the following example the `paint()` function is passed a worklet called `my-component`.
 
 ```css
 li {
-  background-image: paint(myComponent, stroke, 10px);
+  background-image: paint(my-component, stroke, 10px);
   --highlights: blue;
   --theme: green;
 }

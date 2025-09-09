@@ -58,7 +58,7 @@ drop-shadow(5px 5px 15px red)
 
 /* The order of color and length values can be changed */
 /* drop-shadow( <color> <length> <length> <length> ) */
-drop-shadow(#e23 0.5rem 0.5rem 1rem)
+drop-shadow(#ee2233 0.5rem 0.5rem 1rem)
 
 /* Pass multiple drop-shadows to a filter to stack them */
 drop-shadow(10px 10px red) drop-shadow(-5px -5px yellow)
@@ -101,7 +101,7 @@ div {
   height: 100px;
   width: 190px;
   vertical-align: top;
-  background-color: #222;
+  background-color: #222222;
 
   color: lime;
 }
@@ -142,16 +142,19 @@ In the absence of a `<color>` value in the `drop-shadow()` function in the first
 
 ## See also
 
-The other {{cssxref("&lt;filter-function&gt;")}} functions available to be used in values of the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties include:
-
-- {{cssxref("filter-function/blur", "blur()")}}
-- {{cssxref("filter-function/brightness", "brightness()")}}
-- {{cssxref("filter-function/contrast", "contrast()")}}
-- {{cssxref("filter-function/grayscale", "grayscale()")}}
-- {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
-- {{cssxref("filter-function/invert", "invert()")}}
-- {{cssxref("filter-function/opacity", "opacity()")}}
-- {{cssxref("filter-function/saturate", "saturate()")}}
-- {{cssxref("filter-function/sepia", "sepia()")}}
-- {{cssxref("box-shadow")}} property
-- {{cssxref("text-shadow")}} property
+- {{cssxref("&lt;filter-function&gt;")}} functions:
+  - {{cssxref("filter-function/blur", "blur()")}}
+  - {{cssxref("filter-function/brightness", "brightness()")}}
+  - {{cssxref("filter-function/contrast", "contrast()")}}
+  - {{cssxref("filter-function/grayscale", "grayscale()")}}
+  - {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
+  - {{cssxref("filter-function/invert", "invert()")}}
+  - {{cssxref("filter-function/opacity", "opacity()")}}
+  - {{cssxref("filter-function/saturate", "saturate()")}}
+  - {{cssxref("filter-function/sepia", "sepia()")}}
+- {{cssxref("filter")}}
+- {{cssxref("backdrop-filter")}}
+- {{cssxref("box-shadow")}}
+- {{cssxref("text-shadow")}}
+- [Introduction to text shadows](/en-US/docs/Web/CSS/CSS_text_decoration/Text_shadows)
+- [CSS filter effects](/en-US/docs/Web/CSS/CSS_filter_effects) module

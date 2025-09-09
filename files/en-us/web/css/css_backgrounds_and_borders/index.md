@@ -38,19 +38,19 @@ div {
   width: 240px;
   padding: 20px;
   margin: 10px;
-  border: dotted 15px; /* defaults to `currentcolor` */
+  border: dotted 15px; /* defaults to `currentColor` */
   border-radius: 100px 0;
   background-image:
     radial-gradient(
       circle,
       transparent 60%,
-      currentcolor 60% 70%,
+      currentColor 60% 70%,
       transparent 70%
     ),
-    linear-gradient(45deg, currentcolor, white),
+    linear-gradient(45deg, currentColor, white),
     linear-gradient(transparent, transparent);
   /* the third transparent background image was added to provide space for the background color to show through */
-  background-color: currentcolor;
+  background-color: currentColor;
   background-position: center;
   background-size:
     60px 60px,
@@ -94,7 +94,6 @@ Click "Play" in the example above to see or edit the code for the animation in t
 - {{cssxref("background")}} shorthand
 - {{cssxref("background-position-x")}}
 - {{cssxref("background-position-y")}}
-
 - {{cssxref("border-bottom-color")}}
 - {{cssxref("border-bottom-style")}}
 - {{cssxref("border-bottom-width")}}
@@ -115,24 +114,20 @@ Click "Play" in the example above to see or edit the code for the animation in t
 - {{cssxref("border-style")}} shorthand
 - {{cssxref("border-width")}} shorthand
 - {{cssxref("border")}} shorthand
-
 - {{cssxref("border-bottom-left-radius")}}
 - {{cssxref("border-bottom-right-radius")}}
 - {{cssxref("border-top-left-radius")}}
 - {{cssxref("border-top-right-radius")}}
 - {{cssxref("border-radius")}} shorthand
-
 - {{cssxref("border-image-outset")}}
 - {{cssxref("border-image-repeat")}}
 - {{cssxref("border-image-slice")}}
 - {{cssxref("border-image-source")}}
 - {{cssxref("border-image-width")}}
 - {{cssxref("border-image")}} shorthand
-
 - {{cssxref("box-shadow")}}
 
-> [!NOTE]
-> The CSS backgrounds module level 4 introduces the `background-position-block`, `background-position-inline`, `background-repeat-block`, `background-repeat-inline`, `background-repeat-x`, `background-repeat-y`, and `background-tbd` properties. These have not yet been implemented.
+The CSS backgrounds module level 4 also introduces the `background-position-block`, `background-position-inline`, `background-repeat-block`, `background-repeat-inline`, `background-repeat-x`, `background-repeat-y`, and `background-tbd` properties. Currently, no browsers support these features.
 
 ### Data types
 
@@ -155,34 +150,30 @@ Click "Play" in the example above to see or edit the code for the animation in t
 
 ## Related concepts
 
-- {{cssxref("border-block-end-color")}} property
-- {{cssxref("border-block-start-color")}} property
-- {{cssxref("border-inline-end-color")}} property
-- {{cssxref("border-inline-start-color")}} property
-- {{cssxref("border-block-end-style")}} property
-- {{cssxref("border-block-start-style")}} property
-- {{cssxref("border-inline-end-style")}} property
-- {{cssxref("border-inline-start-style")}} property
-- {{cssxref("border-block-end-width")}} property
-- {{cssxref("border-block-start-width")}} property
-- {{cssxref("border-inline-end-width")}} property
-- {{cssxref("border-inline-start-width")}} property
-
-- {{cssxref("border-start-start-radius")}} property
-- {{cssxref("border-start-end-radius")}} property
-- {{cssxref("border-end-start-radius")}} property
-- {{cssxref("border-end-end-radius")}} property
-
-- {{cssxref("box-sizing")}} property
-- {{cssxref("box-decoration-break")}} property
-- {{cssxref("text-shadow")}} property
-
-- {{cssxref("url_value", "&lt;url&gt;")}} CSS type
-- [`<color>`](/en-US/docs/Web/CSS/color) data type
-- [`<image>`](/en-US/docs/Web/CSS/image) data type
-- [`<position>`](/en-US/docs/Web/CSS/position) data type
-
-- [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword) keyword
+- {{cssxref("border-block-end-color")}}
+- {{cssxref("border-block-start-color")}}
+- {{cssxref("border-inline-end-color")}}
+- {{cssxref("border-inline-start-color")}}
+- {{cssxref("border-block-end-style")}}
+- {{cssxref("border-block-start-style")}}
+- {{cssxref("border-inline-end-style")}}
+- {{cssxref("border-inline-start-style")}}
+- {{cssxref("border-block-end-width")}}
+- {{cssxref("border-block-start-width")}}
+- {{cssxref("border-inline-end-width")}}
+- {{cssxref("border-inline-start-width")}}
+- {{cssxref("border-start-start-radius")}}
+- {{cssxref("border-start-end-radius")}}
+- {{cssxref("border-end-start-radius")}}
+- {{cssxref("border-end-end-radius")}}
+- {{cssxref("box-sizing")}}
+- {{cssxref("box-decoration-break")}}
+- {{cssxref("text-shadow")}}
+- {{cssxref("url_value", "&lt;url&gt;")}} data type
+- {{cssxref("url")}} data type
+- {{cssxref("image")}} data type
+- {{cssxref("position")}} data type
+- [`currentColor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword) keyword
 
 ## Specifications
 

@@ -6,7 +6,7 @@ browser-compat: css.properties.color
 sidebar: cssref
 ---
 
-The **`color`** [CSS](/en-US/docs/Web/CSS) property sets the foreground [color value](/en-US/docs/Web/CSS/color_value) of an element's text and [text decorations](/en-US/docs/Web/CSS/text-decoration), and sets the [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword) value. `currentcolor` may be used as an indirect value on _other_ properties and is the default for other color properties, such as {{cssxref("border-color")}}.
+The **`color`** [CSS](/en-US/docs/Web/CSS) property sets the foreground [color value](/en-US/docs/Web/CSS/color_value) of an element's text and [text decorations](/en-US/docs/Web/CSS/text-decoration), and sets the [`currentColor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword) value. `currentColor` may be used as an indirect value on _other_ properties and is the default for other color properties, such as {{cssxref("border-color")}}.
 
 {{InteractiveExample("CSS Demo: color")}}
 
@@ -62,7 +62,7 @@ For an overview of using color in HTML, see [Applying color to HTML elements usi
 
 ```css
 /* Keyword values */
-color: currentcolor;
+color: currentColor;
 
 /* <named-color> values */
 color: red;
@@ -117,8 +117,8 @@ Note that the value must be a uniform color. It can't be a {{cssxref("&lt;gradie
 
 - {{cssxref("&lt;color&gt;")}}
   - : Sets the color of the textual and decorative parts of the element.
-- [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword)
-  - : Sets the color to the element's `color` property value. However, if set as the value of `color`, `currentcolor` is treated as `inherit`.
+- [`currentColor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword)
+  - : Sets the color to the element's `color` property value. However, if set as the value of `color`, `currentColor` is treated as `inherit`.
 
 ## Accessibility
 
@@ -189,5 +189,6 @@ p {
 - The {{cssxref("&lt;color&gt;")}} data type
 - Other color-related properties: {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, {{cssxref("column-rule-color")}}, and {{cssxref("print-color-adjust")}}
 - SVG {{SVGAttr("color")}} attribute
+- {{CSSXref("color_value/color")}} function
 - [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color)
 - [WCAG: color contrast](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)

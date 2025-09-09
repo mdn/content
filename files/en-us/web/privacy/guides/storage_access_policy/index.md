@@ -10,9 +10,9 @@ Firefox includes a new storage access policy that blocks cookies and other site 
 
 ## Testing in Firefox
 
-This cookie policy has been available in Firefox since version 63. This documentation describes the policy that we intend to ship to Firefox Release users, but may not match what is implemented in the current Release version of Firefox. That's because we document new aspects of the policy as soon as they land in [Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly), our pre-release channel. Firefox Nightly may also contain experimental features that we don't yet plan to ship to Release users; experimental features will not be included in this documentation, but may nevertheless impact the functionality of domains classified as trackers.
+This cookie policy has been available in Firefox since version 63. This documentation describes the policy that we intend to ship to Firefox Release users, but may not match what is implemented in the current Release version of Firefox. That's because we document new aspects of the policy as soon as they land in [Firefox Nightly](https://www.firefox.com/en-US/channel/desktop/#nightly), our pre-release channel. Firefox Nightly may also contain experimental features that we don't yet plan to ship to Release users; experimental features will not be included in this documentation, but may nevertheless impact the functionality of domains classified as trackers.
 
-We recommend sites test with [Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly), as this includes the newest version of our protections. As described above, note that Nightly may include additional protections that end up getting removed or changed before they reach our Release users. We'll keep this page updated with the newest information as we strengthen our protections.
+We recommend sites test with [Firefox Nightly](https://www.firefox.com/en-US/channel/desktop/#nightly), as this includes the newest version of our protections. As described above, note that Nightly may include additional protections that end up getting removed or changed before they reach our Release users. We'll keep this page updated with the newest information as we strengthen our protections.
 
 These protections are on by default in Nightly. The cookie policy can be enabled in other versions of Firefox through the [Content Blocking settings](https://support.mozilla.org/en-US/kb/content-blocking) (these steps will vary by version; the linked documentation includes a dropdown to select the appropriate Firefox version).
 
@@ -93,11 +93,9 @@ In order to improve web compatibility and permit third-party integrations that r
 
 In order to improve web compatibility, Firefox currently includes some heuristics to grant storage access automatically to third parties that receive user interaction. These heuristics are intended to allow some third-party integrations that are common on the web to continue to function. They are intended to be temporary and will be removed in a future version of Firefox. They should not be relied upon for current and future web development.
 
-Third-party storage access may be granted to resources that have been classified as tracking resources when a user gesture triggers a pop-up window that has [opener access](/en-US/docs/Web/API/Window/opener) to the originating document. When that occurs, there are three possible ways a third-party origin can be granted access:
+Third-party storage access may be granted when a user gesture triggers a pop-up window that has [opener access](/en-US/docs/Web/API/Window/opener) to the originating document. If the user interacts with the pop-up, the origin of the resource that is initially loaded in the pop-up window is granted storage access to the opener document if that origin has received user interaction as a first-party within the past 30 days.
 
-- The origin of the resource that is initially loaded in the pop-up window is granted storage access on the opener document if that origin has received user interaction as a first party within the past 30 days.
-- After the initial resource is loaded in the pop-up window, the window may go through a series of redirects to other hosts. If a user interacts with the pop-up window following a redirect, the origin of the content loaded in the pop-up window is given storage access on the opener document.
-- When there is a top-level redirect from a tracking origin to a non-tracking origin, the tracking origin receives short-lived storage access on the non-tracking origin and any other non-tracking origins that appear further down the redirect chain (i.e., if the load continues to redirect). The tracking origin must have received user interaction as a first party within the past 30 days, and the storage access permission expires after 15 minutes.
+Third-party storage access may also be granted when a user navigates to another origin within the same window. If the user interacts with that origin, then quickly navigates to a document in the initial origin, the intermediate page is granted storage access to that final document.
 
 ### Scope of storage access
 

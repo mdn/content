@@ -172,7 +172,7 @@ Here's the steps you should follow to get this working:
 
 You might be wondering why we haven't included the parentheses after the function name. This is because we don't want to call the function immediately — only after the button has been clicked. If you try changing the line to
 
-```js
+```js example-bad
 btn.addEventListener("click", displayMessage());
 ```
 
@@ -261,10 +261,10 @@ On to the next parameter. This one is going to involve slightly more work — we
 
    ```js
    if (msgType === "warning") {
-     msg.style.backgroundImage = "url(icons/warning.png)";
+     msg.style.backgroundImage = 'url("icons/warning.png")';
      panel.style.backgroundColor = "red";
    } else if (msgType === "chat") {
-     msg.style.backgroundImage = "url(icons/chat.png)";
+     msg.style.backgroundImage = 'url("icons/chat.png")';
      panel.style.backgroundColor = "aqua";
    } else {
      msg.style.paddingLeft = "20px";

@@ -374,9 +374,9 @@ Paste the following styles into `item.component.css`.
 }
 
 .btn-save {
-  background-color: #000;
-  color: #fff;
-  border-color: #000;
+  background-color: black;
+  color: white;
+  border-color: black;
 }
 
 .btn-save:hover {
@@ -384,8 +384,8 @@ Paste the following styles into `item.component.css`.
 }
 
 .btn-save:focus {
-  background-color: #fff;
-  color: #000;
+  background-color: white;
+  color: black;
 }
 
 .checkbox-wrapper {
@@ -394,7 +394,7 @@ Paste the following styles into `item.component.css`.
 
 .btn-warn {
   background-color: #b90000;
-  color: #fff;
+  color: white;
   border-color: #9a0000;
 }
 
@@ -404,13 +404,13 @@ Paste the following styles into `item.component.css`.
 
 .btn-warn:active {
   background-color: #e30000;
-  border-color: #000;
+  border-color: black;
 }
 
 .sm-text-input {
   width: 100%;
   padding: 0.5rem;
-  border: 2px solid #555;
+  border: 2px solid #555555;
   display: block;
   box-sizing: border-box;
   font-size: 1rem;
@@ -442,8 +442,8 @@ Adapted from https://css-tricks.com/the-checkbox-hack/#custom-designed-radio-but
   top: 0;
   width: 1.25em;
   height: 1.25em;
-  border: 2px solid #ccc;
-  background: #fff;
+  border: 2px solid #cccccc;
+  background: white;
 }
 
 /* checked mark aspect */

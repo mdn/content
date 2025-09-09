@@ -35,8 +35,7 @@ There are plans to further extend possible queries by adding the generalized con
 - {{cssxref("@media")}}
 - {{cssxref("@supports")}}
 
-> [!NOTE]
-> The CSS conditional rules module introduces two at-rules that have not been implemented: `@else` and `@when`.
+The CSS conditional rules module also introduces the `@else` and `@when` at-rules. Currently, no browsers support these features.
 
 ### Functions
 
@@ -46,8 +45,7 @@ There are plans to further extend possible queries by adding the generalized con
 - [`selector()`](/en-US/docs/Web/CSS/@supports#function_syntax)
 - [`supports()`](/en-US/docs/Web/CSS/@import#supports-condition)
 
-> [!NOTE]
-> The CSS conditional rules module introduces a CSS function that has not been implemented: `media()`.
+The CSS conditional rules module also introduces a `media()` CSS function. Currently, no browsers support this feature.
 
 ### data types
 

@@ -104,7 +104,7 @@ Alternatively, you can use the {{domxref("Element.getAttribute()","getAttribute(
 
 ```js
 const pElement = document.querySelector("p");
-console.log(pElement.getAttribute("dir"); // "RTL"
+console.log(pElement.getAttribute("dir")); // "RTL"
 ```
 
 ## Reflected element references
@@ -141,7 +141,7 @@ console.log(inputElement.ariaLabelledByElements);
 
 The first thing to note from the code above is that the attribute and the property contain different numbers of elements — the property doesn't _directly_ reflect the attribute because the reference `label_3` does not have a corresponding element.
 It is also possible that a reference will not match because the `id` is [out of scope for the element](#element_id_reference_scope).
-This can happen if the referenced element is not in the same DOM or shadow DOM as the element, since ids are only only valid in the scope in which they are declared.
+This can happen if the referenced element is not in the same DOM or shadow DOM as the element, since ids are only valid in the scope in which they are declared.
 
 We can iterate the elements in the property array, in this case to get the accessible name from their inner text (this is more natural than using the attribute, because we don't have to first get the element references and then use them to find the elements, and we only have to work with elements that we know to be available in the current scope):
 
@@ -190,7 +190,7 @@ Setting the attribute value restores the relationship between the attribute and 
 Continuing the example from above:
 
 ```js
-inputElement.setAttribute("aria-labelledby", "input1");
+inputElement.setAttribute("aria-labelledby", "label_1");
 
 attributeValue = inputElement.getAttribute("aria-labelledby");
 console.log(attributeValue);

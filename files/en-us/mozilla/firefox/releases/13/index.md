@@ -60,7 +60,7 @@ Firefox 13 was shipped on June 5, 2012. This page summarizes the changes in Fire
 ### MathML
 
 - Support for the `width` attribute on {{MathMLElement("mtable")}} elements has been added ([Firefox bug 722880](https://bugzil.la/722880)).
-- [MathJax fonts](https://docs.mathjax.org/en/latest/output/fonts.html) are now used as the default fonts for mathematical text. See [Fonts for Mozilla's MathML engine](/en-US/docs/Mozilla_MathML_Project/Fonts) for more information.
+- [MathJax fonts](https://docs.mathjax.org/en/latest/output/fonts.html) are now used as the default fonts for mathematical text. See [Fonts for Mozilla's MathML engine](/en-US/docs/Web/MathML/Guides/Fonts) for more information.
 
 ### Network
 
@@ -95,13 +95,13 @@ Starting in Firefox 13, Firefox for Windows requires at least Windows XP Service
 - Support for a dirty flag has been added to the Source Editor API.
 - The Source Editor no longer supports falling back to a {{HTMLElement("textarea")}} instead of using Orion.
 - The editor now exposes focus and blur events.
-- The [`getIndentationString()`](/en-US/docs/JavaScript_code_modules/source-editor.jsm#getIndentationString%28%29) method has been added; this returns the string to use for indenting text in the editor.
+- The [`getIndentationString()`](https://web.archive.org/web/20210620193439/https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/source-editor.jsm#getIndentationString%28%29) method has been added; this returns the string to use for indenting text in the editor.
 - The Source Editor now supports managing a list of breakpoints and displaying user interface for toggling them on and off; it does not actually implement breakpoints, however. That's up to you to write debugger code for.
 - Support has been added for highlighting the current line, using the `highlightCurrentLine` configuration option.
 
 ### ARIA
 
-- The CSS properties {{cssxref("margin-left")}}, {{cssxref("margin-right")}}, {{cssxref("margin-top")}}, {{cssxref("margin-bottom")}} are now all reflected into ARIA object attributes with the same name. See [Gecko object attributes](/en-US/docs/Accessibility/AT-APIs/Gecko/Attrs) for more information.
+- The CSS properties {{cssxref("margin-left")}}, {{cssxref("margin-right")}}, {{cssxref("margin-top")}}, {{cssxref("margin-bottom")}} are now all reflected into ARIA object attributes with the same name. See [Gecko object attributes](https://web.archive.org/web/20210120101715/https://developer.mozilla.org/en-US/docs/Mozilla/Tech/Accessibility/AT-APIs/Gecko/Attrs) for more information.
 
 ### Interfaces
 

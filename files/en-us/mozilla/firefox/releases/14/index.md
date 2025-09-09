@@ -57,7 +57,7 @@ _No change._
 
 - Added a keyboard shortcut to toggle commenting for the current selection (Ctrl-/ or Cmd-/ on Mac OS X).
 - Added the Ctrl-\[ and Ctrl-] keyboard shortcuts for moving the text input position to the beginning and end of the current block.
-- Added the new [`getLineStart()`](/en-US/docs/JavaScript_code_modules/source-editor.jsm#getLineStart%28%29) and [`getLineEnd()`](/en-US/docs/JavaScript_code_modules/source-editor.jsm#getLineEnd%28%29) methods.
+- Added the new [`getLineStart()`](https://web.archive.org/web/20210620193439/https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/source-editor.jsm#getLineStart%28%29) and [`getLineEnd()`](https://web.archive.org/web/20210620193439/https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/source-editor.jsm#getLineEnd%28%29) methods.
 
 ### XUL
 
@@ -66,7 +66,7 @@ _No change._
 ### Interfaces
 
 - The `nsILocalFile` interface has been merged into `nsIFile` ([bug 682360](https://bugzil.la/682360)).
-- The methods in `nsIPlacesImportExportService` for importing bookmarks have all been removed in favor of the [`BookmarkHTMLUtils.jsm`](/en-US/docs/JavaScript_code_modules/BookmarkHTMLUtils.jsm) JavaScript code module.
+- The methods in `nsIPlacesImportExportService` for importing bookmarks have all been removed in favor of the `BookmarkHTMLUtils.jsm` JavaScript code module.
 - The `nsIDOMGeoPositionAddress` interface has been removed.
 - The `getItemGUID`, `setItemGUID` and `getItemIdForGUID` methods have been removed from `nsINavBookmarksService` ([Firefox bug 715355](https://bugzil.la/715355)).
 

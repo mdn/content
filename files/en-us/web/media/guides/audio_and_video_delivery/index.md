@@ -495,6 +495,8 @@ A number of audio and video JavaScript libraries exist. The most popular librari
   - : A guide to creating a basic cross browser video player using the {{ htmlelement("video") }} element.
 - [Video player styling basics](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/Video_player_styling_basics)
   - : With the cross-browser video player put in place in the previous article, this article now looks at providing some basic, responsive styling for the player.
+- [Adding captions and subtitles to HTML video](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)
+  - : This article explains how to add captions and subtitles to HTML {{ htmlelement("video") }}, using [Web_Video_Text_Tracks_Format](/en-US/docs/Web/API/WebVTT_API) and the {{ htmlelement("track") }} element.
 - [Cross-browser audio basics](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/Cross-browser_audio_basics)
   - : This article provides a basic guide to creating an HTML audio player that works cross browser, with all the associated attributes, properties and events explained, and a quick guide to custom controls created using the Media API.
 - [Media buffering, seeking, and time ranges](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/buffering_seeking_time_ranges)
@@ -515,8 +517,6 @@ A number of audio and video JavaScript libraries exist. The most popular librari
 
 ### Advanced topics
 
-- [Adding captions and subtitles to HTML video](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)
-  - : This article explains how to add captions and subtitles to HTML {{ htmlelement("video") }}, using [Web_Video_Text_Tracks_Format](/en-US/docs/Web/API/WebVTT_API) and the {{ htmlelement("track") }} element.
 - [Web Audio API cross browser support](/en-US/docs/Web/API/Web_Audio_API/Best_practices#cross_browser_legacy_support)
   - : A guide to writing cross browser Web Audio API code.
 - [Easy audio capture with the MediaRecorder API](https://hacks.mozilla.org/2014/06/easy-audio-capture-with-the-mediarecorder-api/)
@@ -530,4 +530,4 @@ A number of audio and video JavaScript libraries exist. The most popular librari
 - [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)
 - [MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API)
 - [getUserMedia](/en-US/docs/Web/API/MediaDevices/getUserMedia)
-- [Event reference: Media](/en-US/docs/Web/Events#media)
+- [Event index: Media](/en-US/docs/Web/API/Document_Object_Model/Events#media)

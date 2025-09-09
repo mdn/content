@@ -26,6 +26,9 @@ let updatedTabGroup = await browser.tabGroups.update(
   - : An object containing details of the properties to update for this tab group. Properties that aren't specified aren't modified.
     - `collapsed` {{optional_inline}}
       - : `boolean`. Whether the tab group is collapsed or expanded in the tab strip.
+        If the active tab is in a group that is collapsed:
+        - In Firefox, the tab remains active and only the inactive tabs are collapsed.
+        - In Chrome, the active tab is moved to the first tab to the right of the group. If there is no tab to the right of the group, it's moved to the tab immediately to the left of the group.
     - `color` {{optional_inline}}
       - : {{WebExtAPIRef("tabGroups.Color")}}. The name of the color to use for the tab group.
     - `title` {{optional_inline}}

@@ -110,7 +110,7 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground.
   font:
     2rem "AmstelvarAlpha",
     sans-serif;
-  /*font-variation-settings: "slnt" 12;*/
+  /* font-variation-settings: "slnt" 12; */
   font-style: oblique 23deg;
 }
 ```

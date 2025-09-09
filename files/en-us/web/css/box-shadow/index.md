@@ -44,7 +44,7 @@ box-shadow:
 #example-element {
   margin: 20px auto;
   padding: 0;
-  border: 2px solid #333;
+  border: 2px solid #333333;
   width: 80%;
   text-align: center;
 }
@@ -210,7 +210,9 @@ p {
 
 ## See also
 
-- The {{cssxref("&lt;color&gt;")}} data type (for specifying the shadow color)
+- {{cssxref("&lt;color&gt;")}}
 - {{cssxref("text-shadow")}}
 - {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
+- [Introduction to text shadows](/en-US/docs/Web/CSS/CSS_text_decoration/Text_shadows)
 - [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color)
+- [CSS backgrounds and borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders) module

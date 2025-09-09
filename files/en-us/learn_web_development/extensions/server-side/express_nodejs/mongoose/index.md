@@ -127,7 +127,7 @@ The code in the asynchronous function then executes until either another `await`
 
 You can see how this works in the example below.
 `myFunction()` is an asynchronous function that is called within a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block.
-When `myFunction()` is run, code execution is paused at `methodThatReturnsPromise()` until the promise resolves, at which point the code continues to `aFunctionThatReturnsPromise()` and waits again.
+When `myFunction()` is run, code execution is paused at `methodThatReturnsPromise()` until the promise resolves, at which point the code continues to `functionThatReturnsPromise()` and waits again.
 The code in the `catch` block runs if an error is thrown in the asynchronous function, and this will happen if the promise returned by either of the methods is rejected.
 
 ```js
@@ -135,7 +135,7 @@ async function myFunction() {
   // …
   await someObject.methodThatReturnsPromise();
   // …
-  await aFunctionThatReturnsPromise();
+  await functionThatReturnsPromise();
   // …
 }
 
@@ -674,7 +674,7 @@ npm install mongoose
 
 ## Connect to MongoDB
 
-Open **/app.js** (in the root of your project) and copy the following text below where you declare the _Express application object_ (after the line `const app = express();`).
+Open **bin/www** (from the root of your project) and copy the following text below where you set the port (after the line `app.set("port", port);`).
 Replace the database URL string ('_insert_your_database_url_here_') with the location URL representing your own database (i.e., using the information from _MongoDB Atlas_).
 
 ```js
@@ -684,13 +684,23 @@ const mongoose = require("mongoose");
 mongoose.set("strictQuery", false);
 const mongoDB = "insert_your_database_url_here";
 
-main().catch((err) => console.log(err));
-async function main() {
+async function connectMongoose() {
   await mongoose.connect(mongoDB);
+}
+
+try {
+  connectMongoose();
+} catch (err) {
+  console.error("Failed to connect to MongoDB:", err);
+  process.exit(1);
 }
 ```
 
 As discussed in the [Mongoose primer](#connecting_to_mongodb) above, this code creates the default connection to the database and reports any errors to the console.
+
+> [!NOTE]
+> We could have put the database connection code in our **app.js** code.
+> Putting it in the application entry point decouples the application and database, which makes it easier to use a different database for running test code.
 
 Note that hard-coding database credentials in source code as shown above is not recommended.
 We do it here because it shows the core connection code, and because during development there is no significant risk that leaking these details will expose or corrupt sensitive information.

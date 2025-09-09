@@ -2,11 +2,13 @@
 title: IntegrityViolationReportBody
 slug: Web/API/IntegrityViolationReportBody
 page-type: web-api-interface
+status:
+  - experimental
 browser-compat: http.headers.Integrity-Policy
 spec-urls: https://w3c.github.io/webappsec-subresource-integrity/#report-violations
 ---
 
-{{APIRef("Reporting API")}} {{SecureContext_Header}}
+{{APIRef("Reporting API")}} {{SecureContext_Header}}{{SeeCompatTable}}
 
 The `IntegrityViolationReportBody` dictionary is an extension of the [Reporting API](/en-US/docs/Web/API/Reporting_API) that represents the body of an [Integrity Policy](/en-US/docs/Web/HTTP/Reference/Headers/Integrity-Policy) violation report.
 

@@ -19,7 +19,7 @@ There are two types of custom element:
 - **Customized built-in elements** inherit from standard HTML elements such as {{domxref("HTMLImageElement")}} or {{domxref("HTMLParagraphElement")}}. Their implementation extends the behavior of select instances of the standard element.
 
   > [!NOTE]
-  > Safari does not plan to support custom built-in elements. See the [`is` attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/is) for more information.
+  > Safari does not plan to support customized built-in elements. See the [`is` attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/is) for more information.
 
 ## Implementing a custom element
 
@@ -110,8 +110,12 @@ If you want to preserve the element's state, you can do so by defining a `connec
 You could add an empty `connectedMoveCallback()` to stop the other two callbacks running, or include some custom logic to handle the move:
 
 ```js
-connectedMoveCallback() {
-  console.log("Custom move-handling logic here.");
+class MyComponent {
+  // ...
+  connectedMoveCallback() {
+    console.log("Custom move-handling logic here.");
+  }
+  // ...
 }
 ```
 
@@ -451,7 +455,7 @@ Now let's have a look at a customized built in element example. This example ext
 - [See the source code](https://github.com/mdn/web-components-examples/tree/main/expanding-list-web-component)
 
 > [!NOTE]
-> Please see the [`is`](/en-US/docs/Web/HTML/Reference/Global_attributes/is) attribute reference for caveats on implementation reality of custom built-in elements.
+> Please see the [`is`](/en-US/docs/Web/HTML/Reference/Global_attributes/is) attribute reference for caveats on implementation reality of customized built-in elements.
 
 First of all, we define our element's class:
 

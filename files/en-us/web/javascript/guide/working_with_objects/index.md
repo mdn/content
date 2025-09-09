@@ -157,9 +157,9 @@ const Animal = {
   },
 };
 
-// Create new animal type called animal1
-const animal1 = Object.create(Animal);
-animal1.displayType(); // Logs: Invertebrates
+// Create new animal type called `animal`
+const animal = Object.create(Animal);
+animal.displayType(); // Logs: Invertebrates
 
 // Create new animal type called fish
 const fish = Object.create(Animal);
@@ -306,7 +306,7 @@ function showProps(obj, objName) {
 }
 ```
 
-There is no native way to list inherited non-enumerable properties. However, this can be achieved with the following function:
+There is no native way to list all inherited properties including non-enumerable ones. However, this can be achieved with the following function:
 
 ```js
 function listAllProperties(myObj) {
