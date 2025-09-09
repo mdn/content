@@ -148,7 +148,7 @@ window.addEventListener("pagehide", () => {
 });
 ```
 
-Conversely, by listening for the {{domxref("Window.pageshow_event", "pageshow")}} event, you can seamlessly start the connection again when the page is loaded, or when it is restored from the bfcache. So in our example we will add all the code to initialize our WebSocket and set up its event listeners inside the `pageshow` event handler:
+Conversely, by listening for the {{domxref("Window.pageshow_event", "pageshow")}} event, you can seamlessly start the connection again when the page is restored from the bfcache. Since the `pageshow` event also fires on page load, it can also be used to start the WebSocket connection when the page is first loaded:
 
 ```js
 let websocket = null;
