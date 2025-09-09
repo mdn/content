@@ -389,6 +389,9 @@ A few additional non-standard attributes are listed following the descriptions o
 - [`accept`](/en-US/docs/Web/HTML/Reference/Attributes/accept)
   - : Valid for the `file` input type only, the `accept` attribute defines which file types are selectable in a `file` upload control. See the {{HTMLElement("input/file", "file")}} input type.
 
+- [`alpha`](/en-US/docs/Web/HTML/Reference/Attributes/alpha)
+  - : Valid for the `color` input type only, the `alpha` attribute provides the end user with the ability to set the opacity of the color being selected.
+
 - `alt`
   - : Valid for the `image` button only, the `alt` attribute provides alternative text for the image, displaying the value of the attribute if the image [`src`](#src) is missing or otherwise fails to load. See the {{HTMLElement("input/image", "image")}} input type.
 
@@ -426,6 +429,11 @@ A few additional non-standard attributes are listed following the descriptions o
     > Unlike other input controls, a checkboxes and radio buttons value are only included in the submitted data if they are currently `checked`. If they are, the name and the value(s) of the checked controls are submitted.
     >
     > For example, if a checkbox whose `name` is `fruit` has a `value` of `cherry`, and the checkbox is checked, the form data submitted will include `fruit=cherry`. If the checkbox isn't active, it isn't listed in the form data at all. The default `value` for checkboxes and radio buttons is `on`.
+
+- [`colorspace`](/en-US/docs/Web/HTML/Reference/Attributes/colorspace)
+  - : Valid for the `color` input type only, the `colorspace` attribute specifies the [color space](/en-US/docs/Glossary/Color_space) that is used by the `type="color"` input. Possible {{Glossary("enumerated")}} values are:
+    - `"limited-srgb"`: The color is in the {{glossary("RGB". "sRGB")}} color space. This includes [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb), [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl), [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb), and {{cssxref("hex-color")}} values. The color value is limited to 8-bits per `r`, `g`, and `b` component. This is the default.
+    - `"display-p3"`: The [Display P3 color space](/en-US/docs/Glossary/Color_space#display-p3), e.g., `color(display-p3 1.84 -0.19 0.72 / 0.6)`
 
 - [`dirname`](/en-US/docs/Web/HTML/Reference/Attributes/dirname)
   - : Valid for `hidden`, `text`, `search`, `url`, `tel`, and `email` input types, the `dirname` attribute enables the submission of the directionality of the element. When included, the form control will submit with two name/value pairs: the first being the [`name`](#name) and [`value`](#value), and the second being the value of the `dirname` attribute as the name, with a value of `ltr` or `rtl` as set by the browser.
