@@ -49,6 +49,7 @@ To begin, click the **Play** button in one of the code panels below to open the 
 ```
 
 ```css hidden live-sample___house-ui-start live-sample___house-ui-finish
+body {
   font: 1.1em / 1.5 system-ui;
   width: clamp(480px, 90%, 1200px);
   margin: 0 auto;
