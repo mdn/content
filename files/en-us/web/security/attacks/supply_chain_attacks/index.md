@@ -108,6 +108,7 @@ An SBOM enables you to implement several defenses against supply chain attacks, 
 Before adding any new dependencies, you should assess how much of a security risk they represent. You need to be confident that the dependency is actively maintained, that it has a record of fixing issues and a process for reporting and responding to security vulnerabilities.
 
 The [Concise Guide for Evaluating Open Source Software](https://best.openssf.org/Concise-Guide-for-Evaluating-Open-Source-Software), published by the [OpenSSF](https://openssf.org/), lists questions you should ask before adding a new dependency.
+
 ### Defense summary checklist
 
 - Require {{glossary("multi-factor authentication")}} for team members and minimize permissions granted.
@@ -116,6 +117,7 @@ The [Concise Guide for Evaluating Open Source Software](https://best.openssf.org
 - Keep an inventory (SBOM) of dependencies
 - Define a process for managing, updating, monitoring dependencies
 - Lock dependency versions (`package-lock.json`)
+
 ## See also
 
 - [Software Supply Chain Security](https://cheatsheetseries.owasp.org/cheatsheets/Software_Supply_Chain_Security_Cheat_Sheet.html) at [owasp.org](https://owasp.org/)
