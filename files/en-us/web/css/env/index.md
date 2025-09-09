@@ -31,7 +31,7 @@ env(<environment-variable>, <fallback>)
 ```
 
 - [`<environment-variable>`](/en-US/docs/Web/CSS/CSS_environment_variables/Using_environment_variables#browser-defined_environment_variables)
-  - : A {{cssxref("&lt;custom-ident>")}} specifying the name of the environment variable to be inserted, plus optional additional values. The case-sensitive environment variable name can be one of the following:
+  - : A {{cssxref("&lt;custom-ident>")}} specifying the name of the environment variable to be inserted, plus optional additional {{cssxref("&lt;integer>")}} values to specify a choice of value where the variable contains multiple values. The case-sensitive environment variable name can be one of the following:
     - `safe-area-inset-top`, `safe-area-inset-right`, `safe-area-inset-bottom`, `safe-area-inset-left`
       - : The safe distance from the top, right, bottom, or left inset edge of the viewport, defining where it is safe to place content into without risking it being cut off by the shape of a non‑rectangular display. The four values form a rectangle, inside which all content is visible. The values are `0` if the viewport is a rectangle and no features — such as toolbars or dynamic keyboards — are occupying viewport space; otherwise, it is a `px` value greater than `0`.
     - `safe-area-max-inset-top`, `safe-area-max-inset-right`, `safe-area-max-inset-bottom`, `safe-area-max-inset-left`
@@ -41,7 +41,7 @@ env(<environment-variable>, <fallback>)
     - `keyboard-inset-top`, `keyboard-inset-right`, `keyboard-inset-bottom`, `keyboard-inset-left`, `keyboard-inset-width`, `keyboard-inset-height`
       - : The insets from the edge of the viewport and dimensions of the device's on-screen virtual keyboard. Defined in the {{domxref("VirtualKeyboard API", "VirtualKeyboard API", "", "nocode")}}.
     - `viewport-segment-width`, `viewport-segment-height`, `viewport-segment-top`, `viewport-segment-right`, `viewport-segment-bottom`, `viewport-segment-left`
-      - : The dimensions and offset positions of specific viewport segments. The `viewport-segment-*` keyword is followed by two space-separated {{cssxref("integer")}} values which indicate the segment's horizontal and vertical position, or indices. The viewport-segment keywords are only defined when the viewport is made up of two or more segments, as with foldable or hinged devices.
+      - : The dimensions and offset positions of specific viewport segments. The `viewport-segment-*` keyword is followed by two space-separated {{cssxref("&lt;integer>")}} values that indicate the segment's horizontal and vertical position, or indices. The viewport-segment keywords are only defined when the viewport is made up of two or more segments, as with foldable or hinged devices.
 
 - `<fallback>` {{optional_inline}}
   - : A fallback value to be inserted if the environment variable referenced in the first argument does not exist. This can be a single value, another `env()` function, or a comma-separated list of values (everything after the first comma is deemed to be a fallback value). It must resolve to a {{cssxref("&lt;length>")}} or a {{cssxref("&lt;percentage>")}}.
