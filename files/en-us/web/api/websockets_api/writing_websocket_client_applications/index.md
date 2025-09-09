@@ -116,7 +116,7 @@ websocket.addEventListener("message", (e) => {
 
 ## Handling disconnect
 
-When the connection is closed, because either client or server closed it or because there was an error, then the {{domxref("WebSocket.close_event", "close")}} event will be fired.
+When the connection is closed, because either the client or the server closed it or because an error occurred, the {{domxref("WebSocket.close_event", "close")}} event will be fired.
 
 Our application listens for the `close` event and cleans up the interval timer when it is fired:
 
