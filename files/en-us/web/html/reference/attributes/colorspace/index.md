@@ -23,7 +23,8 @@ These attributes are [enumerated](/en-US/docs/Glossary/Enumerated), and have the
   type="color" 
   id="rgb" 
   name="rgb" 
-  colorspace="limited-srgb"  />
+  colorspace="limited-srgb" 
+  value="#ff0000" />
 
 <label for="p3">Color input using p3:</label>
 
@@ -31,7 +32,8 @@ These attributes are [enumerated](/en-US/docs/Glossary/Enumerated), and have the
   type="color"
   id="p3"
   name="p3"
-  colorspace="display-p3" />
+  colorspace="display-p3" 
+  value="oklab(50% 0.1 0.1 / 0.5)" />
 ```
 
 ```css interactive-example
