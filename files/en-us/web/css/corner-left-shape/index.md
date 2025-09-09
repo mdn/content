@@ -8,9 +8,7 @@ sidebar: cssref
 
 The **`corner-left-shape`** [CSS](/en-US/docs/Web/CSS) property specifies the shape of both the corners on a box's left-hand edge, within their {{cssxref("border-radius")}} area.
 
-You can set corner shapes individually and other combinations of corner shapes using the shorthand {{cssxref("corner-shape")}} property and its other [constituent properties](/en-US/docs/Web/CSS/corner-shape#constituent_properties).
-
-If a visible `border-radius` is not applied to a container's left-edge corners, `corner-left-shape` will have no effect on them.
+For a full description of corner shape behavior and multiple examples, see the {{cssxref("corner-shape")}} shorthand property page.
 
 ## Constituent properties
 
@@ -46,8 +44,8 @@ corner-left-shape: unset;
 
 The `corner-left-shape` property is specified using one or two {{cssxref("&lt;corner-shape-value>")}} values:
 
-- If one value is used, it specifies the shape of both corners.
-- If two values are used, the first one specifies the shape of the top corner, and the second one specifies the shape of the bottom corner.
+- If **one value** is used, it specifies the shape of **both left-hand corners**.
+- If **two values** are used, the first one specifies the shape of the **top-left** corner, and the second one specifies the shape of the **bottom-left** corner.
 
 ## Formal definition
 
@@ -73,7 +71,7 @@ The markup for this example contains a single {{htmlelement("div")}} element.
 
 #### CSS
 
-We give the box some basic styles, which we've hidden for brevity. We also apply a {{cssxref("box-shadow")}}, a `border-radius` of 60 pixels, and a `corner-left-shape` of `notch bevel`.
+We give the box some basic styles, which we've hidden for brevity. We also apply a {{cssxref("box-shadow")}}, a `border-radius` of `20px 40px / 60px 80px`, and a `corner-left-shape` of `notch bevel`.
 
 ```css hidden live-sample___basic-usage
 body {
@@ -88,7 +86,7 @@ div {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: orange;
+  background-color: green;
   background-image: linear-gradient(
     to bottom,
     rgb(255 255 255 / 0),
@@ -100,7 +98,7 @@ div {
 ```css live-sample___basic-usage
 div {
   box-shadow: 1px 1px 3px gray;
-  border-radius: 60px;
+  border-radius: 20px 40px / 60px 80px;
   corner-left-shape: notch bevel;
 }
 ```
@@ -122,5 +120,9 @@ The rendered result looks like this:
 ## See also
 
 - {{cssxref("corner-shape")}} shorthand property
-- {{cssxref("corner-top-shape")}}, {{cssxref("corner-bottom-shape")}}, {{cssxref("corner-right-shape")}}
-- {{cssxref("corner-block-start-shape")}}, {{cssxref("corner-block-end-shape")}}, {{cssxref("corner-inline-start-shape")}}, and {{cssxref("corner-inline-end-shape")}} logical properties
+- {{cssxref("corner-top-shape")}}, {{cssxref("corner-bottom-shape")}}, and {{cssxref("corner-right-shape")}}
+- {{cssxref("corner-block-start-shape")}}, {{cssxref("corner-block-end-shape")}}, {{cssxref("corner-inline-start-shape")}}, and {{cssxref("corner-inline-end-shape")}}
+- {{cssxref("border-radius")}} shorthand property
+- {{cssxref("border-top-left-radius")}} and {{cssxref("border-bottom-left-radius")}}
+- [CSS borders and box decorations](/en-US/docs/Web/CSS/CSS_borders_and_box_decorations) module
+- [CSS backgrounds and borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders) module

@@ -8,9 +8,7 @@ sidebar: cssref
 
 The **`corner-top-shape`** [CSS](/en-US/docs/Web/CSS) property specifies the shape of both the corners on a box's top edge, within their {{cssxref("border-radius")}} area.
 
-You can set corner shapes individually and other combinations of corner shapes using the shorthand {{cssxref("corner-shape")}} property and its other [constituent properties](/en-US/docs/Web/CSS/corner-shape#constituent_properties).
-
-If a visible `border-radius` is not applied to a container's top-edge corners, `corner-top-shape` will have no effect on them.
+For a full description of corner shape behavior and multiple examples, see the {{cssxref("corner-shape")}} shorthand property page.
 
 ## Constituent properties
 
@@ -46,8 +44,8 @@ corner-top-shape: unset;
 
 The `corner-top-shape` property is specified using one or two {{cssxref("&lt;corner-shape-value>")}} values:
 
-- If one value is used, it specifies the shape of both corners.
-- If two values are used, the first one specifies the shape of the left-hand corner, and the second one specifies the shape of the right-hand corner.
+- If **one value** is used, it specifies the shape of **both top corners**.
+- If **two values** are used, the first one specifies the shape of the **top-left** corner, and the second one specifies the shape of the **top-right** corner.
 
 ## Formal definition
 
@@ -88,7 +86,7 @@ div {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: orange;
+  background-color: goldenrod;
   background-image: linear-gradient(
     to bottom,
     rgb(255 255 255 / 0),
@@ -122,5 +120,9 @@ The rendered result looks like this:
 ## See also
 
 - {{cssxref("corner-shape")}} shorthand property
-- {{cssxref("corner-bottom-shape")}}, {{cssxref("corner-left-shape")}}, {{cssxref("corner-right-shape")}}
-- {{cssxref("corner-block-start-shape")}}, {{cssxref("corner-block-end-shape")}}, {{cssxref("corner-inline-start-shape")}}, and {{cssxref("corner-inline-end-shape")}} logical properties
+- {{cssxref("corner-bottom-shape")}}, {{cssxref("corner-left-shape")}}, and {{cssxref("corner-right-shape")}}
+- {{cssxref("corner-block-start-shape")}}, {{cssxref("corner-block-end-shape")}}, {{cssxref("corner-inline-start-shape")}}, and {{cssxref("corner-inline-end-shape")}}
+- {{cssxref("border-radius")}} shorthand property
+- {{cssxref("border-top-left-radius")}} and {{cssxref("border-top-right-radius")}}
+- [CSS borders and box decorations](/en-US/docs/Web/CSS/CSS_borders_and_box_decorations) module
+- [CSS backgrounds and borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders) module

@@ -8,9 +8,7 @@ sidebar: cssref
 
 The **`corner-top-right-shape`** [CSS](/en-US/docs/Web/CSS) property specifies the shape of a box's top-right corner, within its {{cssxref("border-radius")}} area.
 
-You can set other corner shapes individually and multiple corner shapes at once using the shorthand {{cssxref("corner-shape")}} property and its other [constituent properties](/en-US/docs/Web/CSS/corner-shape#constituent_properties).
-
-If a visible `border-radius` is not applied to a container's top-right corner, `corner-top-right-shape` will have no effect on it.
+For a full description of corner shape behavior and multiple examples, see the {{cssxref("corner-shape")}} shorthand property page.
 
 ## Syntax
 
@@ -74,7 +72,7 @@ div {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: orange;
+  background-color: green;
   background-image: linear-gradient(
     to bottom,
     rgb(255 255 255 / 0),
@@ -108,5 +106,9 @@ The rendered result looks like this:
 ## See also
 
 - {{cssxref("corner-shape")}} shorthand property
-- {{cssxref("corner-top-left-shape")}}, {{cssxref("corner-bottom-left-shape")}}, {{cssxref("corner-bottom-right-shape")}}
-- {{cssxref("corner-start-start-shape")}}, {{cssxref("corner-start-end-shape")}}, {{cssxref("corner-end-start-shape")}}, and {{cssxref("corner-end-end-shape")}} logical properties
+- {{cssxref("corner-top-left-shape")}}, {{cssxref("corner-bottom-left-shape")}}, and {{cssxref("corner-bottom-right-shape")}}
+- {{cssxref("corner-start-start-shape")}}, {{cssxref("corner-start-end-shape")}}, {{cssxref("corner-end-start-shape")}}, and {{cssxref("corner-end-end-shape")}}
+- {{cssxref("border-radius")}} shorthand property
+- {{cssxref("border-top-right-radius")}}
+- [CSS borders and box decorations](/en-US/docs/Web/CSS/CSS_borders_and_box_decorations) module
+- [CSS backgrounds and borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders) module

@@ -8,9 +8,7 @@ sidebar: cssref
 
 The **`corner-bottom-left-shape`** [CSS](/en-US/docs/Web/CSS) property specifies the shape of a box's bottom-left corner, within its {{cssxref("border-radius")}} area.
 
-You can set other corner shapes individually and multiple corner shapes at once using the shorthand {{cssxref("corner-shape")}} property and its other [constituent properties](/en-US/docs/Web/CSS/corner-shape#constituent_properties).
-
-If a visible `border-radius` is not applied to a container's bottom-left corner, `corner-bottom-left-shape` will have no effect on it.
+For a full description of corner shape behavior and multiple examples, see the {{cssxref("corner-shape")}} shorthand property page.
 
 ## Syntax
 
@@ -59,7 +57,7 @@ The markup for this example contains a single {{htmlelement("div")}} element.
 
 #### CSS
 
-We give the box some basic styles, which we've hidden for brevity. We also apply a {{cssxref("box-shadow")}}, a `border-radius` of 60 pixels, and a `corner-bottom-left-shape` of `squircle`.
+We give the box some basic styles, which we've hidden for brevity. We also apply a {{cssxref("box-shadow")}}, a `border-radius` of `80px 40% 60px 20%`, and a `corner-bottom-left-shape` of `squircle`.
 
 ```css hidden live-sample___basic-usage
 body {
@@ -74,7 +72,7 @@ div {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: orange;
+  background-color: goldenrod;
   background-image: linear-gradient(
     to bottom,
     rgb(255 255 255 / 0),
@@ -86,7 +84,7 @@ div {
 ```css live-sample___basic-usage
 div {
   box-shadow: 1px 1px 3px gray;
-  border-radius: 60px;
+  border-radius: 80px 40% 60px 20%;
   corner-bottom-left-shape: squircle;
 }
 ```
@@ -108,5 +106,9 @@ The rendered result looks like this:
 ## See also
 
 - {{cssxref("corner-shape")}} shorthand property
-- {{cssxref("corner-top-left-shape")}}, {{cssxref("corner-top-right-shape")}}, {{cssxref("corner-bottom-right-shape")}}
-- {{cssxref("corner-start-start-shape")}}, {{cssxref("corner-start-end-shape")}}, {{cssxref("corner-end-start-shape")}}, and {{cssxref("corner-end-end-shape")}} logical properties
+- {{cssxref("corner-top-left-shape")}}, {{cssxref("corner-top-right-shape")}}, and {{cssxref("corner-bottom-right-shape")}}
+- {{cssxref("corner-start-start-shape")}}, {{cssxref("corner-start-end-shape")}}, {{cssxref("corner-end-start-shape")}}, and {{cssxref("corner-end-end-shape")}}
+- {{cssxref("border-radius")}} shorthand property
+- {{cssxref("border-bottom-left-radius")}}
+- [CSS borders and box decorations](/en-US/docs/Web/CSS/CSS_borders_and_box_decorations) module
+- [CSS backgrounds and borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders) module

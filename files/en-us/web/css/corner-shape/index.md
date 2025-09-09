@@ -64,7 +64,7 @@ The default (initial) value of `corner-shape` is `round`, which gives the same e
 
 Different `corner-shape` values can be smoothly animated between, as the `superellipse()` equivalents of the keyword values are used as interpolation values.
 
-The `corner-shape` shorthand is especially useful when you want all four borders to be the same, or you want to set different values using a single declaration. To set only one or two corner shapes at a time, use the `corner-*-shape` shorthands and longhands lister earlier.
+The `corner-shape` shorthand is especially useful when you want all four borders to be the same, or you want to set different values using a single declaration. To set only one or two corner shapes at a time, use the `corner-*-shape` shorthands and longhands.
 
 ### `corner-*-shape` shorthands and longhands
 
@@ -100,12 +100,15 @@ To set two corner shapes at a time, use the side shorthands:
 
 When opposite corners have `border-radius` and `corner-shape` values set that would cause the shapes to overlap, the browser constrains the values to prevent the overlap.
 
-For example, the following values would cause the top-left and bottom-right corners to overlap, therefore the browser adjusts the first `border-radius` component to a value that avoids this (`70%`, according to the computed value displayed in the browser DevTools).
+For example, the following values would cause the top-left and bottom-right corners to overlap, therefore the browser adjusts the first `border-radius` component to a value that avoids this.
 
 ```css
 div {
-  corner-shape: scoop;
+  width: 480px;
+  height: 200px;
+  background-color: goldenrod;
   border-radius: 80% 20px;
+  corner-shape: scoop;
 }
 ```
 
@@ -208,7 +211,7 @@ We then apply the following to the `<div>`:
 - A semi-transparent {{cssxref("background-color")}}.
 - A different color and style of {{cssxref("border")}} on each edge.
 - A {{cssxref("backdrop-filter")}} that inverts the `background-image` set on the `<body>`.
-- A `:hover` style so you can see the extent of the element background.
+- A `:hover` style so you can see that the clickable content area falls outside the corner shape.
 
 Additional set up styles have been hidden for brevity.
 
@@ -261,7 +264,7 @@ The rendered result looks like this:
 
 {{EmbedLiveSample("styles-following-corner-shape", "100%", "240")}}
 
-Note how most of the set styles follow the shape of the `<div>` resulting from its `corner-shape` styles, but not all. The content is displayed relative to the original box, and the hover effect is only applied to the shaped section, and not the content.
+Note how most of the set styles follow the shape of the `<div>` resulting from its `corner-shape` styles, but not all. The content is displayed relative to the original box, and the hover effect is still applied if you hover over the text sticking out past the top- and bottom-left corners.
 
 ### Comparing `corner-shape` values
 
@@ -307,8 +310,6 @@ The markup for this example contains a {{htmlelement("select")}} picker from whi
 </form>
 <section></section>
 ```
-
-The JavaScript that applies the user-selected values to the `<section>` has been hidden for brevity.
 
 #### CSS
 
@@ -375,6 +376,8 @@ range.addEventListener("input", setCorners);
 setCorners();
 ```
 
+The JavaScript that applies the user-selected values to the `<section>` has been hidden for brevity.
+
 #### Result
 
 The rendered result looks like this:
@@ -416,8 +419,6 @@ The markup for this example contains two `<input type="range">` elements from wh
 </form>
 <section></section>
 ```
-
-The JavaScript that applies the user-selected values to the `<section>` has been hidden for brevity.
 
 #### CSS
 
@@ -480,6 +481,8 @@ superEllipseRange.addEventListener("input", setCorners);
 borderRadiusRange.addEventListener("input", setCorners);
 setCorners();
 ```
+
+The JavaScript that applies the user-selected values to the `<section>` has been hidden for brevity.
 
 #### Result
 
@@ -563,3 +566,6 @@ Hover or focus the shape to see the animation.
 ## See also
 
 - {{Cssxref("border-radius")}}
+- [CSS borders and box decorations](/en-US/docs/Web/CSS/CSS_borders_and_box_decorations) module
+- [CSS backgrounds and borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders) module
+- [CSS animations](/en-US/docs/Web/CSS/CSS_animations) module
