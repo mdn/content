@@ -63,19 +63,17 @@ offset-path: path("M0,0 L60,70 L-60,30z");
 ```
 
 ```js interactive-example
-window.addEventListener("load", () => {
-  const example = document.getElementById("example-element");
-  const button = document.getElementById("playback");
+const example = document.getElementById("example-element");
+const button = document.getElementById("playback");
 
-  button.addEventListener("click", () => {
-    if (example.classList.contains("running")) {
-      example.classList.remove("running");
-      button.textContent = "Play";
-    } else {
-      example.classList.add("running");
-      button.textContent = "Pause";
-    }
-  });
+button.addEventListener("click", () => {
+  if (example.classList.contains("running")) {
+    example.classList.remove("running");
+    button.textContent = "Play";
+  } else {
+    example.classList.add("running");
+    button.textContent = "Pause";
+  }
 });
 ```
 

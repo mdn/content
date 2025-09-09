@@ -73,10 +73,8 @@ const btn = document.querySelector("button");
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 
-document.addEventListener("DOMContentLoaded", () => {
-  canvas.width = document.documentElement.clientWidth;
-  canvas.height = document.documentElement.clientHeight;
-});
+canvas.width = document.documentElement.clientWidth;
+canvas.height = document.documentElement.clientHeight;
 
 function random(number) {
   return Math.floor(Math.random() * number);
