@@ -169,7 +169,7 @@ _The `Document` interface for HTML documents inherits from the {{DOMxRef("HTMLDo
   - : Gets/sets the color of visited hyperlinks.
 - {{DOMxRef("Document.xmlEncoding")}} {{Deprecated_Inline}}
   - : Returns the encoding as determined by the XML declaration.
-- {{DOMxRef("Document.xmlStandalone")}} {{Deprecated_Inline}}
+- `Document.xmlStandalone` {{Deprecated_Inline}}
   - : Returns `true` if the XML declaration specifies the document to be standalone (_e.g.,_ An external part of the DTD affects the document's content), else `false`.
 - {{DOMxRef("Document.xmlVersion")}} {{Deprecated_Inline}}
   - : Returns the version number as specified in the XML declaration or `"1.0"` if the declaration is absent.
@@ -184,7 +184,7 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
   - : Inserts a set of {{domxref("Node")}} objects or strings after the last child of the document.
 - {{DOMxRef("Document.browsingTopics()")}} {{Experimental_Inline}} {{non-standard_inline}}
   - : Returns a promise that fulfills with an array of objects representing the top topics for the user, one from each of the last three epochs. By default, the method also causes the browser to record the current page visit as observed by the caller, so the page's hostname can later be used in topics calculation. See the [Topics API](/en-US/docs/Web/API/Topics_API) for more details.
-- {{DOMxRef("Document.captureEvents()")}} {{Deprecated_Inline}}
+- `Document.captureEvents()` {{Deprecated_Inline}}
   - : See {{DOMxRef("Window.captureEvents")}}.
 - {{DOMxRef("Document.caretPositionFromPoint()")}}
   - : Returns a {{DOMxRef('CaretPosition')}} object containing the DOM node containing the caret, and caret's character offset within that node.
@@ -234,7 +234,7 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
   - : Release the pointer lock.
 - {{DOMxRef("Document.getAnimations()")}}
   - : Returns an array of all {{DOMxRef("Animation")}} objects currently in effect, whose target elements are descendants of the `document`.
-- {{domxref("Document.getBoxQuads()")}} {{Experimental_Inline}}
+- `Document.getBoxQuads()` {{Experimental_Inline}}
   - : Returns a list of {{domxref("DOMQuad")}} objects representing the CSS fragments of the node.
 - {{DOMxRef("Document.getElementById", "Document.getElementById()")}}
   - : Returns an object reference to the identified element.
@@ -264,7 +264,7 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
   - : Returns a list of all the Element nodes within the document that match the specified selectors.
 - {{DOMxRef("Document.releaseCapture()")}} {{Non-standard_Inline}}
   - : Releases the current mouse capture if it's on an element in this document.
-- {{DOMxRef("Document.releaseEvents()")}} {{Deprecated_Inline}}
+- `Document.releaseEvents()` {{Deprecated_Inline}}
   - : See {{DOMxRef("Window.releaseEvents()")}}.
 - {{DOMxRef("Document.replaceChildren()")}}
   - : Replaces the existing children of a document with a specified new set of children.
@@ -302,13 +302,13 @@ The `Document` interface for HTML documents inherit from the {{DOMxRef("HTMLDocu
   - : Opens a document stream for writing.
 - {{DOMxRef("Document.queryCommandEnabled()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Returns true if the formatting command can be executed on the current range.
-- {{DOMxRef("Document.queryCommandIndeterm()")}} {{Deprecated_Inline}}
+- `Document.queryCommandIndeterm()` {{Deprecated_Inline}}
   - : Returns true if the formatting command is in an indeterminate state on the current range.
 - {{DOMxRef("Document.queryCommandState()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Returns true if the formatting command has been executed on the current range.
 - {{DOMxRef("Document.queryCommandSupported()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Returns true if the formatting command is supported on the current range.
-- {{DOMxRef("Document.queryCommandValue()")}} {{Deprecated_Inline}}
+- `Document.queryCommandValue()` {{Deprecated_Inline}}
   - : Returns the current value of the current range for a formatting command.
 - {{DOMxRef("Document.write()")}} {{deprecated_inline}}
   - : Writes text in a document.
