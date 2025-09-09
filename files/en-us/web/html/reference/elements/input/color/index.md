@@ -269,5 +269,5 @@ The final result looks like this:
 
 - [`alpha`](/en-US/docs/Web/HTML/Reference/Attributes/alpha) HTML attribute
 - [`colorspace`](/en-US/docs/Web/HTML/Reference/Attributes/colorspace) HTML attribute
-- [`alpha`](/en-US/docs/Web/API/HTMLInputElement//alpha) property
-- [`colorSpace`](/en-US/docs/Web/API/HTMLInputElement//colorspace) property
+- {{domxref('HTMLInputElement.alpha')}}
+- {{domxref('HTMLInputElement.colorspace')}}
