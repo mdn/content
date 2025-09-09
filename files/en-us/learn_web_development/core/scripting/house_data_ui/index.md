@@ -94,10 +94,6 @@ select {
   list-style-type: none;
   padding-left: 0;
 }
-
-#output span {
-  font-weight: bold;
-}
 ```
 
 ```js-nolint live-sample___house-ui-start
@@ -118,13 +114,20 @@ function initializeForm() {
 }
 
 function renderHouses(e) {
+  // Stop the form submitting
+  e.preventDefault();
 
+  // Add rest of code here
 }
 
-// Add your last two lines here
+// Add a submit listener to the <form> element
+form.addEventListener("submit", renderHouses);
+
+// Call fetchHouseData() to initialize the app
+fetchHouseData();
 ```
 
-{{EmbedLiveSample("house-ui-start", "100%", 300)}}
+{{EmbedLiveSample("house-ui-start", "100%", 400)}}
 
 ## Project brief
 
@@ -170,39 +173,34 @@ Inside the function body, write code that does the following:
 > [!NOTE]
 > You _could_ just hardcode the `<option>` elements inside the HTML, but that would only work for this exact data set. We want you to write JavaScript that will correctly populate the form regardless of the data values provided (each house object would have to have the same structure).
 
+> [!NOTE]
+> You could use the `innerHTML` property to add child content inside HTML elements, but we'd recommend not doing so. You can't always trust the data you are adding to your page: If it is not properly sanitised on the server, bad actors could use `innerHTML` as a pathway to carry out [Cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks on your page. A safer route is to use DOM scripting features such as `createElement()`, `appendChild()`, and `textContent`.
+
 ### Completing the `renderHouses()` function
 
-Next, you need to write the `renderHouses()` function body. This will filter the data based on the `<select>` element values, and render the results to the UI.
+Next, you need to complete the `renderHouses()` function body. This will filter the data based on the `<select>` element values, and render the results to the UI.
 
-1. First, you need to prevent the default action of the event that will call this function. You need to do this because, later on, we will be calling this event via a `submit` event listener added to the `<form>` element. By default, submitting the form will reload the page, which is not what we want to happen.
-2. Next, you need to filter the data. This is probably best achieved using the array `filter()` method, which returns a new array containing only the array elements that match the filter criteria.
+1. First, you need to filter the data. This is probably best achieved using the array `filter()` method, which returns a new array containing only the array elements that match the filter criteria.
    1. This is a fairly complex `filter()` function to write. You need to test whether the `street` property of the house is equal to the selected value of the "choose-street" `<select>`, and whether the `bedrooms` property of the house is equal to the selected value of the "choose-bedrooms" `<select>`, and whether the `bathrooms` property of the house is equal to the selected value of the "choose-bathrooms" `<select>`.
    2. Each component of the test always needs to return `true` if the associated `<select>` value is `""` (the empty string, which represents all values). You can achieve this by "short-circuiting" each check.
    3. You also need to make sure the data types match in each check. The value of a form element is always a string. This is not necessarily the case for your object property values. How can you make the data types match up for the purposes of the test?
-3. Output the number of filtered search results into the "result-count" `<p>` element, using the string structure "Results returned: number".
-4. Empty the "output" `<section>` element, so it doesn't have any child HTML elements. If you don't do this, each time a search is performed the results will be added to the end of the previous results rather than replacing them.
-5. Create a new function inside `renderHouses()` called `renderHouse()`. This function needs to take a house object as an argument, and do two things:
+2. Output the number of filtered search results into the "result-count" `<p>` element, using the string structure "Results returned: number".
+3. Empty the "output" `<section>` element, so it doesn't have any child HTML elements. If you don't do this, each time a search is performed the results will be added to the end of the previous results rather than replacing them.
+4. Create a new function inside `renderHouses()` called `renderHouse()`. This function needs to take a house object as an argument, and do two things:
    1. Calculate the total area of the rooms contained inside the house's `room_sizes` object. This isn't as straightforward as looping through an array of numbers and summing them, but it isn't too tricky.
    2. Add an `<article>` element inside the "output" `<section>` element containing the house's number, street name, bedroom and bathroom count, total room area, and price. you can vary the structure if you like, we we'd like it to be similar to this HTML snippet:
    ```html
    <article>
      <h2>number street name</h2>
      <ul>
-       <li><span>🛏️ Bedrooms</span>: number</li>
-       <li><span>🛀 Bathrooms</span>: number</li>
-       <li><span>Room area</span>: number m<sup>2</sup></li>
-       <li><span>Price</span>: £price</li>
+       <li>🛏️ Bedrooms: number</li>
+       <li>🛀 Bathrooms: number</li>
+       <li>Room area: number m²</li>
+       <li>Price: £price</li>
      </ul>
    </article>
    ```
-6. Loop through all of the houses inside the filtered array and pass each one into a `renderHouse()` call.
-
-### Finalizing the code
-
-To get the example working, you've got two lines of code left to add:
-
-1. Add a `submit` event listener to the `<form>` element that runs the `renderHouses()` function when the event fires (for example, when the submit `<button>` is pressed).
-2. Add a `fetchHouseData()` function call. This is required to initialize the whole app.
+5. Loop through all of the houses inside the filtered array and pass each one into a `renderHouse()` call.
 
 ## Hints and tips
 
@@ -213,7 +211,7 @@ To get the example working, you've got two lines of code left to add:
 
 Your finished app should work like the following live example:
 
-{{EmbedLiveSample("house-ui-finish", "100%", 500)}}
+{{EmbedLiveSample("house-ui-finish", "100%", 700)}}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -251,7 +249,8 @@ function initializeForm() {
   for (let house of houses) {
     if (!streetArray.includes(house.street)) {
       streetArray.push(house.street);
-      streetSelect.innerHTML += `<option>${house.street}</option>`;
+      streetSelect.appendChild(document.createElement("option")).textContent =
+        house.street;
     }
   }
 
@@ -262,7 +261,7 @@ function initializeForm() {
   );
   let i = 1;
   while (i <= largestBedrooms) {
-    bedroomSelect.innerHTML += `<option>${i}</option>`;
+    bedroomSelect.appendChild(document.createElement("option")).textContent = i;
     i++;
   }
 
@@ -273,7 +272,8 @@ function initializeForm() {
   );
   let j = 1;
   while (j <= largestBathrooms) {
-    bathroomSelect.innerHTML += `<option>${j}</option>`;
+    bathroomSelect.appendChild(document.createElement("option")).textContent =
+      j;
     j++;
   }
 }
@@ -310,17 +310,20 @@ function renderHouses(e) {
     }
 
     // Output house to UI
-    output.innerHTML += `
-    <article>
-      <h2>${house.house_number} ${house.street}</h2>
-      <ul>
-        <li><span>🛏️ Bedrooms</span>: ${house.bedrooms}</li>
-        <li><span>🛀 Bathrooms</span>: ${house.bathrooms}</li>
-        <li><span>Room area</span>: ${totalArea}m<sup>2</sup></li>
-        <li><span>Price</span>: £${house.price}</li>
-      </ul>
-    </article>
-    `;
+    const articleElem = document.createElement("article");
+    articleElem.appendChild(document.createElement("h2")).textContent =
+      `${house.house_number} ${house.street}`;
+    const listElem = document.createElement("ul");
+    listElem.appendChild(document.createElement("li")).textContent =
+      `🛏️ Bedrooms: ${house.bedrooms}`;
+    listElem.appendChild(document.createElement("li")).textContent =
+      `🛀 Bathrooms: ${house.bathrooms}`;
+    listElem.appendChild(document.createElement("li")).textContent =
+      `Room area: ${totalArea}m²`;
+    listElem.appendChild(document.createElement("li")).textContent =
+      `Price: £${house.price}`;
+    articleElem.appendChild(listElem);
+    output.appendChild(articleElem);
   }
 
   // Pass each house in the filtered array into renderHouse()
