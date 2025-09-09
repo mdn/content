@@ -26,6 +26,7 @@ Ansari
 Ansyari
 Apapou
 Aptana
+Araneae
 Arkanoid
 Artur
 Arun
@@ -44,6 +45,7 @@ Aziz
 Balhetan
 bartaz
 Bartek
+Belgers
 belgin
 Benbadis
 Bento4
@@ -108,6 +110,7 @@ Codepens
 coderprateek
 codingintrigue
 Codrops
+Coleoptera
 Colomb
 Conde
 Corber
@@ -135,9 +138,11 @@ Delaville
 Denicola
 DeSandro
 Desaulniers
+Descouens
 Desproges
 Devlin
 Dexie
+Didier
 Diffie
 Digga
 Digianswer
@@ -231,6 +236,7 @@ hamishwillee
 Haml
 Haverbeke
 Headsight
+Hemiptera
 Heydings
 Heydon
 Hickson
@@ -468,6 +474,7 @@ Quora
 rachelandrew
 Radev
 Radimir
+Ramesh
 Rapp
 Rauschmayer
 Realtek
@@ -501,6 +508,7 @@ Scarlett
 Schiff
 Schirra
 Schmarsow
+Schoenmakers
 Schola
 Schwarz
 Sciurus
@@ -594,6 +602,7 @@ Voikko
 Volkman
 Vorbis
 vulgaris
+Waarneming
 wabt
 Wakamai
 Waldron

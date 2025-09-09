@@ -1064,3 +1064,4 @@ div {
 - [CSS Gradients Patterns Gallery, by Lea Verou](https://projects.verou.me/css3patterns/)
 - [Gradient CSS Generator](https://cssgenerator.org/gradient-css-generator.html)
 - [Advanced CSS Gradient Generator](https://colorbeta.com/)
+- [HDR gradient generator](https://gradient.style/)
