@@ -28,8 +28,7 @@ Environment variables provide values that can be used on the page based on infor
 - {{cssxref("var")}}
 - {{domxref("VirtualKeyboard")}} interface
 - [`display_override`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/display_override) manifest field
- [Window Controls Overlay API](/en-US/docs/Web/API/Window_Controls_Overlay_API) and {{domxref("WindowControlsOverlay"))}} interface
-
+  [Window Controls Overlay API](/en-US/docs/Web/API/Window_Controls_Overlay_API) and {{domxref("WindowControlsOverlay"))}} interface
 
 ## Specifications
 
