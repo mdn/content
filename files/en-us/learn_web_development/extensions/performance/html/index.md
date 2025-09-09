@@ -266,7 +266,7 @@ See the following articles for detailed information on using `rel="preload"`:
 > You can use `rel="preload"` to preload CSS and JavaScript files as well.
 
 > [!NOTE]
-> There are other [`rel`](/en-US/docs/Web/HTML/Reference/Attributes/rel) values that are also designed to speed up various aspects of page loading: `dns-prefetch`, `preconnect`, `modulepreload`, `prefetch`, and `prerender`. Go to the linked page and find out what they do.
+> There are other [`rel`](/en-US/docs/Web/HTML/Reference/Attributes/rel) values that are also designed to speed up various aspects of page loading: `dns-prefetch`, `preconnect`, `modulepreload`, and `prefetch`. Go to the linked page and find out what they do.
 
 ## See also
 

@@ -94,7 +94,7 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
 - {{DOMxRef("Document.timeline")}} {{ReadOnlyInline}}
   - : Returns timeline as a special instance of {{domxref("DocumentTimeline")}} that is automatically created on page load.
 - {{DOMxRef("Document.visibilityState")}} {{ReadOnlyInline}}
-  - : Returns a `string` denoting the visibility state of the document. Possible values are `visible`, `hidden`, `prerender`, and `unloaded`.
+  - : Returns a `string` denoting the visibility state of the document. Possible values are `visible`, `hidden`, and `unloaded`.
 
 ### Extensions for HTMLDocument
 
