@@ -26,6 +26,7 @@ The **CSS text** module defines how to perform text manipulation, like line brea
 - {{cssxref("text-align-last")}}
 - {{cssxref("text-indent")}}
 - {{cssxref("text-justify")}}
+- {{cssxref("text-autospace")}}
 - {{cssxref("text-spacing-trim")}} {{Experimental_Inline}}
 - {{cssxref("text-transform")}}
 - {{cssxref("text-wrap")}}

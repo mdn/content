@@ -100,7 +100,7 @@ Browser support for `<link rel="preload">`/`<link rel="modulepreload">` is wides
 
 For example:
 
-```js
+```html
 <link rel="modulepreload" href="main.js" />
 ```
 
@@ -116,7 +116,7 @@ It is a specialized version of `<link rel="preload">` for [JavaScript modules](/
 
 For example:
 
-```js
+```html
 <link rel="prefetch" href="main.js" />
 ```
 

@@ -450,7 +450,7 @@ A few additional non-standard attributes are listed following the descriptions o
     > [!NOTE]
     > Although not required by the specification, Firefox will by default [persist the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of an `<input>` across page loads. Use the [`autocomplete`](#autocomplete) attribute to control this feature.
 
-- `form`
+- [`form`](/en-US/docs/Web/HTML/Reference/Attributes/form)
   - : A string specifying the {{HTMLElement("form")}} element with which the input is associated (that is, its **form owner**). This string's value, if present, must match the [`id`](#id) of a `<form>` element in the same document. If this attribute isn't specified, the `<input>` element is associated with the nearest containing form, if any.
 
     The `form` attribute lets you place an input anywhere in the document but have it included with a form elsewhere in the document.
@@ -915,14 +915,6 @@ By default, the appearance of placeholder text is a translucent or light gray. T
 ```
 
 Only the subset of CSS properties that apply to the {{cssxref("::first-line")}} pseudo-element can be used in a rule using `::placeholder` in its selector.
-
-### appearance
-
-The {{cssxref("appearance")}} property enables the displaying of (almost) any element as a platform-native style based on the operating system's theme as well as the removal of any platform-native styling with the `none` value.
-
-You could make a `<div>` look like a radio button with `div {appearance: radio;}` or a radio look like a checkbox with `[type="radio"] {appearance: checkbox;}`, but don't.
-
-Setting `appearance: none` removes platform native borders, but not functionality.
 
 ### caret-color
 
@@ -1419,14 +1411,10 @@ Interactive elements such as form input should provide an area large enough that
 
 ## See also
 
-- [Form constraint validation](/en-US/docs/Web/HTML/Guides/Constraint_validation)
+- CSS {{cssxref("appearance")}} property
 - [Your first HTML form](/en-US/docs/Learn_web_development/Extensions/Forms/Your_first_form)
 - [How to structure an HTML form](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form)
 - [The native form widgets](/en-US/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls)
 - [Sending form data](/en-US/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)
-- [Form data validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)
-- [How to build custom form widgets](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
-- [HTML forms in legacy browsers](/en-US/docs/Learn_web_development/Extensions/Forms/HTML_forms_in_legacy_browsers)
+- [Form constraint validation](/en-US/docs/Web/HTML/Guides/Constraint_validation)
 - [Styling HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
-- [Advanced styling for HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)
-- [Creating vertical form controls](/en-US/docs/Web/CSS/CSS_writing_modes/Vertical_controls)

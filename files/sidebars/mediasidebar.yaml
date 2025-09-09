@@ -10,11 +10,18 @@ sidebar:
   - /Web/Media/Guides/Audio_and_video_manipulation
   - /Web/Media/Guides/Autoplay
   - /Web/Media/Guides/Streaming
-  - type: listSubPages
-    path: /Web/Media/Guides/Audio_and_video_delivery
-    link: /Web/Media/Guides/Audio_and_video_delivery
+  - link: /Web/Media/Guides/Audio_and_video_delivery
     title: Audio and video delivery
     details: closed
+    children:
+      - /Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player
+      - /Web/Media/Guides/Audio_and_video_delivery/Video_player_styling_basics
+      - /Web/Media/Guides/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
+      - /Web/Media/Guides/Audio_and_video_delivery/Cross-browser_audio_basics
+      - /Web/Media/Guides/Audio_and_video_delivery/buffering_seeking_time_ranges
+      - /Web/Media/Guides/Audio_and_video_delivery/WebAudio_playbackRate_explained
+      - /Web/Media/Guides/Audio_and_video_delivery/Live_streaming_web_audio_and_video
+      - /Web/Media/Guides/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources
   - type: listSubPages
     path: /Web/Media/Guides/Formats
     link: /Web/Media/Guides/Formats

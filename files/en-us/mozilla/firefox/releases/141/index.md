@@ -1,8 +1,8 @@
 ---
 title: Firefox 141 for developers
-short-title: Firefox 141 (Stable)
+short-title: Firefox 141
 slug: Mozilla/Firefox/Releases/141
-page-type: firefox-release-notes-active
+page-type: firefox-release-notes
 sidebar: firefox
 ---
 
@@ -71,6 +71,7 @@ Firefox 141 was released on [July 22, 2025](https://whattrainisitnow.com/release
 ## Changes for add-on developers
 
 - Adds the {{WebExtAPIRef('i18n.getPreferredSystemLanguages')}} method to retrieve the preferred locales of the operating system. This complements {{WebExtAPIRef('i18n.getAcceptLanguages')}}, which returns details of the locales set in the browser. ([Firefox bug 1888486](https://bugzil.la/1888486))
+- Adds the ability to filter results in {{WebExtAPIRef('tabs.onUpdated')}} by cookie store ID. ([Firefox bug 1960011](https://bugzil.la/1960011))
 
 ## Experimental web features
 

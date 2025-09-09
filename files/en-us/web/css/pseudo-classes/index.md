@@ -114,10 +114,11 @@ These pseudo-classes relate to links, and to targeted elements within the curren
   - : Matches links whose absolute URL is the same as the target URL. For example, anchor links to the same page.
 - {{CSSxRef(":target")}}
   - : Matches the element which is the target of the document URL.
-- {{CSSxRef(":target-within")}}
-  - : Matches elements which are the target of the document URL, but also elements which have a descendant which is the target of the document URL.
 - {{CSSxRef(":scope")}}
   - : Represents elements that are a reference point for selectors to match against.
+
+> [!NOTE]
+> A `:target-within` pseudo-class, to match elements that are or have a descendant which is the target of the document URL, was defined but removed from the specification. Use `:has(:target)` for this purpose.
 
 ## Resource state pseudo-classes
 
@@ -384,7 +385,6 @@ T
 
 - {{CSSxRef(":target")}}
 - {{CSSxRef(":target-current")}}
-- {{CSSxRef(":target-within")}} {{Experimental_Inline}}
 
 U
 

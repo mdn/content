@@ -36,6 +36,6 @@ Environment variables provide values that can be used on the page based on infor
 
 ## See also
 
-- [CSS value functions](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) guide
+- [CSS value functions](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) guide
 - [CSS properties and values API](/en-US/docs/Web/CSS/CSS_properties_and_values_API) module
 - [CSS custom properties for cascading variables](/en-US/docs/Web/CSS/CSS_cascading_variables) module

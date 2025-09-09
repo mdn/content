@@ -12,8 +12,7 @@ The **`WebGLRenderingContext.clear()`** method of the [WebGL API](/en-US/docs/We
 
 The preset values can be set by {{domxref("WebGLRenderingContext.clearColor", "clearColor()")}}, {{domxref("WebGLRenderingContext.clearDepth", "clearDepth()")}} or {{domxref("WebGLRenderingContext.clearStencil", "clearStencil()")}}.
 
-The scissor box, dithering, and buffer writemasks can affect the `clear()`
-method.
+The scissor box, dithering, and buffer writemasks can affect the `clear()` method. For example, if buffer writing is disabled via {{domxref("WebGLRenderingContext.colorMask", "colorMask()")}}, {{domxref("WebGLRenderingContext.depthMask", "depthMask()")}}, or {{domxref("WebGLRenderingContext.stencilMask", "stencilMask()")}}, `clear()` has no effect on the corresponding buffer.
 
 ## Syntax
 
