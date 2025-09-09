@@ -16,6 +16,10 @@ Environment variables provide values that can be used on the page based on infor
 
 - {{cssxref("env")}}
 
+### Data types
+
+- [`<environment-variable-name>`](/en-US/docs/Web/CSS/CSS_environment_variables/Using_environment_variables#browser-defined_environment_variables)
+
 ## Guides
 
 - [Using environment variables](/en-US/docs/Web/CSS/CSS_environment_variables/Using_environment_variables)
