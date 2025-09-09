@@ -10,8 +10,8 @@ sidebar: pwasidebar
 
 {{SeeCompatTable}}
 
-The `related_applications` manifest member is used to specify one or more applications that are related to your web application. These can include native applications and even to self-define the web application to leverage web APIs.
-It can also be used with the [`prefer_related_applications`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/prefer_related_applications) manifest member, which indicates a preference for installing either a related native application or your web application.
+The `related_applications` manifest member is used to specify one or more applications that are related to your web application, such as platform-specific applications (also known as native applications) or installed Progressive Web Apps.
+The `related_applications` manifest member can also be used with the [`prefer_related_applications`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/prefer_related_applications) manifest member, which indicates a preference for installing either a related native application or your web application.
 
 ## Syntax
 
@@ -46,7 +46,7 @@ It can also be used with the [`prefer_related_applications`](/en-US/docs/Web/Pro
   }
 ]
 
-/* Self-defining web application on one platform specified only by id */
+/* Related web application specified by id, self-defined by its own web app manifest*/
 "related_applications": [
   {
     "platform": "webapp",
@@ -61,7 +61,7 @@ It can also be used with the [`prefer_related_applications`](/en-US/docs/Web/Pro
   - : An array of objects, each representing a platform-specific application related to the web app. Each object must include a `platform` property and at least one of either a `url` or an `id` (or both).
     - `platform`
       - : A string that identifies the platform on which the application can be found.
-        Examples include `amazon` (Amazon App Store), `play` (Google Play Store), `windows` (Windows Store), and `webapp` (self-define your PWA in its own manifest).
+        Examples include `amazon` (Amazon App Store), `play` (Google Play Store), `windows` (Windows Store), and `webapp` (for installed Progressive Web Apps).
         See the complete list of possible [platform values](https://github.com/w3c/manifest/wiki/Platforms).
     - `url` {{Optional_Inline}}
       - : A string that represents the URL at which the platform-specific application can be found.
@@ -72,7 +72,7 @@ It can also be used with the [`prefer_related_applications`](/en-US/docs/Web/Pro
 
 ## Description
 
-A "related application" is the web app itself or {{Glossary("native")}} application that provides functionality similar to your web app, often with additional features or better integration with users' devices.
+A "related application" is the web app itself, when installed as a Progressive Web App (PWA), or {{Glossary("native")}} application that provides functionality similar to your web app, often with additional features or better integration with users' devices.
 
 The `related_applications` manifest member lets you identify the platform-specific applications that are related to your web app.
 For example, consider you have a native Android app for your product available through the Google Play Store.
@@ -145,7 +145,7 @@ If you want to indicate to browsers that you prefer users to be given the option
 
 ### Specifying a related web application
 
-This example shows how to specify the self-defining entry for PWAs in your web app's manifest file.
+If your web app can be installed as a Progressive Web App (PWA) on the device, for example, to take advantage of features which integrate your PWA into the operating system, you can self-reference your web app in the manifest file:
 
 ```json
 {
