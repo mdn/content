@@ -5,15 +5,15 @@ page-type: guide
 sidebar: cssref
 ---
 
-This article explains the concept of the {{glossary("viewport")}} — what it is, its impact in terms of CSS, SVG, and mobile devices. This article defines the initial viewport and actual viewport, and differentiates between the {{glossary("visual viewport")}} and the {{glossary("layout viewport")}}.
+This article explains the concept of the {{glossary("viewport")}} — what it is and its impact in terms of CSS, SVG, and mobile devices. This article defines the initial viewport and actual viewport, and differentiates between the {{glossary("visual viewport")}} and the {{glossary("layout viewport")}}.
 
 ## What is a viewport?
 
-A **viewport** is a feature of a user agent for continuous media and used to establish the initial containing block for continuous media.
+A **viewport** is a user agent feature used to establish the initial containing block for continuous media.
 
-The _initial viewport_ refers to the viewport before any the user agent, HTML {{htmlelement("meta")}} tags, or CSS styles have overridden the viewport given by the window or viewing area of the UA. The initial viewport size is based on the size of the window or viewing area, but not based on the content. The size of the initial viewport of a full screen user agents will differ between orientations and between devices, but is always the same for that device in that orientation.
+The _initial viewport_ refers to the window or viewing area of the UA before user agent styles, HTML {{htmlelement("meta")}} tags, or CSS styles have overridden its size. The initial viewport size is based on the size of the window or viewing area, and not the content. The size of a full-screen user agent's initial viewport will differ between orientations and devices, but will always be the same for the same device in the same orientation.
 
-The _actual viewport_ is the viewport you get after processing the [viewport `<meta>` tag](/en-US/docs/Web/HTML/Reference/Elements/meta/name/viewport). Content designed for large viewports may exhibit a variety of bugs when viewed in smaller viewports, including unintended wrapping, clipped content, wrong-sized {{glossary("scroll containers")}}. HTML provides a [viewport meta tag](/en-US/docs/Web/HTML/Reference/Elements/meta/name/viewport), `<meta name="viewport">`, to provide hints about the initial size of the viewport. The actual viewport is the size defined by its [`content`](/en-US/docs/Web/HTML/Reference/Elements/meta#content) attribute. If this tag is omitted, some mobile browsers use a fixed initial containing block width (typically `980px`), setting the width of the actual viewport to this values, then scales the content down making making the CSS pixel size smaller than an actual pixel.
+The _actual viewport_ is the viewport you get after processing the [viewport `<meta>` tag](/en-US/docs/Web/HTML/Reference/Elements/meta/name/viewport). Content designed for large viewports may exhibit a variety of bugs when viewed in smaller viewports, including unintended wrapping, clipped content, and incorrectly sized {{glossary("scroll containers")}}. The viewport meta tag provides hints about the initial size of the viewport. The actual viewport is the size defined by its [`content`](/en-US/docs/Web/HTML/Reference/Elements/meta#content) attribute. If this tag is omitted, some mobile browsers render content using a fixed initial containing block width, typically `980px`. They set the width of the actual viewport to this value, then scale the content down to fit it, making the CSS pixel size smaller than an actual pixel.
 
 A viewport represents the area in computer graphics being currently viewed. In web browser terms, it is generally the same as the browser window, excluding the UI, menu bar, etc. That is the part of the document you are viewing. For paged media, the initial containing block is based on the page area. The page area can be set through {{cssxref("@page")}} rules.
 
