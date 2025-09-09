@@ -11,17 +11,23 @@ This article explains the concept of the {{glossary("viewport")}} — what it is
 
 A **viewport** is a user agent feature used to establish the initial containing block for continuous media.
 
-The _initial viewport_ refers to the window or viewing area of the UA before user agent styles, HTML {{htmlelement("meta")}} tags, or CSS styles have overridden its size. The initial viewport size is based on the size of the window or viewing area, and not the content. The size of a full-screen user agent's initial viewport will differ between orientations and devices, but will always be the same for the same device in the same orientation.
+The generic _viewport_ term generally refers to the area in computer graphics being currently viewed. In web browser terms, that is generally the same as the browser window, excluding the UI, menu bar, etc. That is the part of the document you are viewing.
 
-The _actual viewport_ is the viewport you get after processing the [viewport `<meta>` tag](/en-US/docs/Web/HTML/Reference/Elements/meta/name/viewport). Content designed for large viewports may exhibit a variety of bugs when viewed in smaller viewports, including unintended wrapping, clipped content, and incorrectly sized {{glossary("scroll containers")}}. The viewport meta tag provides hints about the initial size of the viewport. The actual viewport is the size defined by its [`content`](/en-US/docs/Web/HTML/Reference/Elements/meta#content) attribute. If this tag is omitted, some mobile browsers render content using a fixed initial containing block width, typically `980px`. They set the width of the actual viewport to this value, then scale the content down to fit it, making the CSS pixel size smaller than an actual pixel.
+As a document loads, the viewport goes through two stages:
 
-A viewport represents the area in computer graphics being currently viewed. In web browser terms, it is generally the same as the browser window, excluding the UI, menu bar, etc. That is the part of the document you are viewing. For paged media, the initial containing block is based on the page area. The page area can be set through {{cssxref("@page")}} rules.
+- Initial viewport
+  - : The _initial viewport_ refers to the window or viewing area of the UA before user agent styles, HTML {{htmlelement("meta")}} tags, or CSS styles have overridden its size. The initial viewport size is based on the size of the window or viewing area, and not the content. The size of a full-screen user agent's initial viewport will differ between orientations and devices, but will always be the same for the same device in the same orientation.
+
+- Actual viewport
+  - The _actual viewport_ is the viewport you get after processing the [viewport `<meta>` tag](/en-US/docs/Web/HTML/Reference/Elements/meta/name/viewport). Content designed for large viewports may exhibit a variety of bugs when viewed in smaller viewports, including unintended wrapping, clipped content, and incorrectly sized {{glossary("scroll containers")}}. The viewport meta tag provides hints about the initial size of the viewport. The actual viewport is the size defined by its [`content`](/en-US/docs/Web/HTML/Reference/Elements/meta#content) attribute. If this tag is omitted, some mobile browsers render content using a fixed initial containing block width, typically `980px`. They set the width of the actual viewport to this value, then scale the content down to fit it, making the CSS pixel size smaller than an actual pixel.
 
 Documents, like this article, may be very long. Your viewport is everything that is currently visible; notably, the "what is a viewport" section, and perhaps some of the navigation menu. The size of the viewport depends on the size of the screen, whether the browser is in fullscreen mode or not, and whether or not the browser is zoomed in. Content outside the viewport, such as the _See Also_ section in this document, is likely to not be visible onscreen until scrolled into view.
 
 - On larger monitors where applications aren't necessarily full screen, the viewport is the size of the browser window.
 - On most mobile devices and when the browser is in fullscreen mode, the viewport is the entire screen.
 - In fullscreen mode, the viewport is the device screen, the window is the browser window, which can be as big as the viewport or smaller, and the document is the website, which can be much taller or wider than the viewport.
+
+For [paged media](/en-US/docs/Web/CSS/CSS_paged_media), the initial containing block is based on the page area. The page area can be set through {{cssxref("@page")}} rules.
 
 To recap, the viewport is basically the part of the document that is currently visible.
 

@@ -28,8 +28,8 @@ The {{glossary("viewport")}} initial containing block for continuous media has t
 ### Glossary terms and definitions
 
 - {{glossary("Viewport")}}
-- [Actual viewport](/en-US/docs/Web/CSS/CSSOM_view/Viewport_concepts#what_is_a_viewport)
-- [Initial viewport](/en-US/docs/Web/CSS/CSSOM_view/Viewport_concepts#what_is_a_viewport)
+- [Actual viewport](/en-US/docs/Web/CSS/CSSOM_view/Viewport_concepts#actual_viewport)
+- [Initial viewport](/en-US/docs/Web/CSS/CSSOM_view/Viewport_concepts#initial_viewport)
 
 ## Guides
 
