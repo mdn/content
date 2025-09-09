@@ -95,7 +95,7 @@ The CSS selectors module also introduces the [column combinator](/en-US/docs/Web
 - [Type selectors](/en-US/docs/Web/CSS/Type_selectors)
 - [Universal selectors](/en-US/docs/Web/CSS/Universal_selectors)
 
-The CSS selectors module also introduces the {{CSSXref(":blank")}}, {{CSSXref(":current")}}, {{CSSXref(":local-link")}}, and {{CSSXref(":target-within")}} pseudo-classes. Currently, no browsers support these features.
+The CSS selectors module also introduces the {{CSSXref(":blank")}}, {{CSSXref(":current")}}, and {{CSSXref(":local-link")}} pseudo-classes. Currently, no browsers support these features.
 
 ## Terms
 

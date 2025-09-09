@@ -277,27 +277,15 @@ The parts that have been implemented include [`CSSPositionTryRule`](/en-US/docs/
 - `layout.css.anchor-positioning.enabled`
   - : Set to `true` to enable.
 
-### `::details-content` pseudo-element
-
-The CSS {{cssxref("::details-content")}} pseudo-element enables you to style the content of the {{htmlElement("details")}} element ([Firefox bug 1901037](https://bugzil.la/1901037)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 138           | No                  |
-| Developer Edition | 138           | No                  |
-| Beta              | 138           | No                  |
-| Release           | 138           | No                  |
-
-- `layout.css.details-content.enabled`
-  - : Set to `true` to enable.
-
 ### Allow pseudo-elements after element-backed pseudo-elements
 
 Work has started on allowing [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) such as {{cssxref("::first-letter")}} and {{cssxref("::before")}} to be appended to [element-backed pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements#element-backed_pseudo-elements) such as {{cssxref("::details-content")}} and {{cssxref("::file-selector-button")}}.
 
 This will allow users to, for example, style the first letter of the {{htmlElement("details")}} element by using the CSS selector `::details-content::first-letter` or add content before an {{HTMLElement("input") }} of [`type="file"`](/en-US/docs/Web/HTML/Reference/Elements/input/file) using the CSS selector `::file-selector-button::before`.
 
-Currently only support for `::details-content::first-letter` can be parsed, using `@supports(::details-content::first-letter)` and the preference for [::details-content pseudo-element](#details-content_pseudo-element) needs enabling for this to be tested. The `::file-selector-button` pseudo-element is not yet marked as an element-based pseudo-element so there is no current way of testing this. ([Firefox bug 1953557](https://bugzil.la/1953557)).
+Currently, only support for `::details-content::first-letter` can be parsed using `@supports(::details-content::first-letter)`.
+The `::file-selector-button` pseudo-element is not yet marked as an element-based pseudo-element, so there is no way to test this.
+([Firefox bug 1953557](https://bugzil.la/1953557), [Firefox bug 1941406](https://bugzil.la/1941406)).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
@@ -305,9 +293,6 @@ Currently only support for `::details-content::first-letter` can be parsed, usin
 | Developer Edition | 138           | No                  |
 | Beta              | 138           | No                  |
 | Release           | 138           | No                  |
-
-- `layout.css.details-content.enabled`
-  - : Set to `true` to enable.
 
 ### `:active-view-transition` pseudo-class
 
@@ -363,6 +348,20 @@ The {{CSSXRef(":heading")}} pseudo-class allows you to style all [heading elemen
 | Release           | 142           | No                  |
 
 - `layout.css.heading-selector.enabled`
+  - : Set to `true` to enable.
+
+### `text-autospace` property
+
+The **`text-autospace`** CSS property allows you to specify the space applied between Chinese/Japanese/Korean (CJK) and non-CJK characters. Currently these values are only parsed and there is no effect on the output. ([Firefox bug 1869577](https://bugzil.la/1869577)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 143           | No                  |
+| Developer Edition | 143           | No                  |
+| Beta              | 143           | No                  |
+| Release           | 143           | No                  |
+
+- `layout.css.text-autospace.enabled`
   - : Set to `true` to enable.
 
 ## SVG

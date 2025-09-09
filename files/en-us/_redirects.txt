@@ -5176,9 +5176,9 @@
 /en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance	/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts
 /en-US/docs/Learn/CSS/Building_blocks/Cascade_layers	/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers
 /en-US/docs/Learn/CSS/Building_blocks/Cascade_tasks	/en-US/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Cascade
-/en-US/docs/Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper	/en-US/docs/Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper
+/en-US/docs/Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper	/en-US/docs/Learn_web_development/Core/Styling_basics
 /en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS	/en-US/docs/Learn_web_development/Core/Styling_basics/Debugging_CSS
-/en-US/docs/Learn/CSS/Building_blocks/Fundamental_CSS_comprehension	/en-US/docs/Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension
+/en-US/docs/Learn/CSS/Building_blocks/Fundamental_CSS_comprehension	/en-US/docs/Learn_web_development/Core/Styling_basics
 /en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions	/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions
 /en-US/docs/Learn/CSS/Building_blocks/Images_media_form_elements	/en-US/docs/Learn_web_development/Core/Styling_basics/Images_media_forms
 /en-US/docs/Learn/CSS/Building_blocks/Images_tasks	/en-US/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Images
@@ -5253,7 +5253,7 @@
 /en-US/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance	/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts
 /en-US/docs/Learn/CSS/Introduction_to_CSS/Combinators_and_multiple_selectors	/en-US/docs/Learn_web_development/Core/Styling_basics/Combinators
 /en-US/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS	/en-US/docs/Learn_web_development/Core/Styling_basics/Debugging_CSS
-/en-US/docs/Learn/CSS/Introduction_to_CSS/Fundamental_CSS_comprehension	/en-US/docs/Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension
+/en-US/docs/Learn/CSS/Introduction_to_CSS/Fundamental_CSS_comprehension	/en-US/docs/Learn_web_development/Core/Styling_basics
 /en-US/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works	/en-US/docs/Learn_web_development/Core/Styling_basics/What_is_CSS
 /en-US/docs/Learn/CSS/Introduction_to_CSS/Pseudo-classes_and_pseudo-elements	/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements
 /en-US/docs/Learn/CSS/Introduction_to_CSS/Selectors	/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors
@@ -5270,7 +5270,7 @@
 /en-US/docs/Learn/CSS/Styling_boxes/Backgrounds	/en-US/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders
 /en-US/docs/Learn/CSS/Styling_boxes/Borders	/en-US/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders
 /en-US/docs/Learn/CSS/Styling_boxes/Box_model_recap	/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model
-/en-US/docs/Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper	/en-US/docs/Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper
+/en-US/docs/Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper	/en-US/docs/Learn_web_development/Core/Styling_basics
 /en-US/docs/Learn/CSS/Styling_boxes/Styling_tables	/en-US/docs/Learn_web_development/Core/Styling_basics/Tables
 /en-US/docs/Learn/CSS/Styling_text	/en-US/docs/Learn_web_development/Core/Text_styling
 /en-US/docs/Learn/CSS/Styling_text/Fundamentals	/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals
@@ -5469,7 +5469,7 @@
 /en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web	/en-US/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML
 /en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML	/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images
 /en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML/Test_your_skills:_HTML_images	/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Images
-/en-US/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page	/en-US/docs/Learn_web_development/Core/Structuring_content/Mozilla_splash_page
+/en-US/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page	/en-US/docs/Learn_web_development/Core/Structuring_content/Splash_page
 /en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies	/en-US/docs/Learn_web_development/Core/Structuring_content/General_embedding_technologies
 /en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images	/en-US/docs/Web/HTML/Guides/Responsive_images
 /en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content	/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio
@@ -5786,6 +5786,7 @@
 /en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images/Test_your_skills:_HTML_images	/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Images
 /en-US/docs/Learn_web_development/Core/Structuring_content/HTML_text_fundamentals	/en-US/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs
 /en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio/Test_your_skills:_Multimedia_and_embedding	/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Audio_and_video
+/en-US/docs/Learn_web_development/Core/Structuring_content/Mozilla_splash_page	/en-US/docs/Learn_web_development/Core/Structuring_content/Splash_page
 /en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Multimedia_and_embedding	/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Audio_and_video
 /en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills:_Advanced_HTML_text	/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Advanced_HTML_text
 /en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills:_HTML_text_basics	/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/HTML_text_basics
@@ -5800,7 +5801,9 @@
 /en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_and_inheritance	/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts
 /en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_tasks	/en-US/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Cascade
 /en-US/docs/Learn_web_development/Core/Styling_basics/Cool-looking_box	/en-US/docs/Learn_web_development/Core/Styling_basics
-/en-US/docs/Learn_web_development/Core/Styling_basics/Creating_fancy_letterheaded_paper	/en-US/docs/Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper
+/en-US/docs/Learn_web_development/Core/Styling_basics/Creating_fancy_letterheaded_paper	/en-US/docs/Learn_web_development/Core/Styling_basics
+/en-US/docs/Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper	/en-US/docs/Learn_web_development/Core/Styling_basics
+/en-US/docs/Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension	/en-US/docs/Learn_web_development/Core/Styling_basics
 /en-US/docs/Learn_web_development/Core/Styling_basics/Images_media_form_elements	/en-US/docs/Learn_web_development/Core/Styling_basics/Images_media_forms
 /en-US/docs/Learn_web_development/Core/Styling_basics/Images_tasks	/en-US/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Images
 /en-US/docs/Learn_web_development/Core/Styling_basics/Overflow_Tasks	/en-US/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Overflow
@@ -12107,6 +12110,7 @@
 /en-US/docs/Web/CSS/:nth-last-col	/en-US/docs/Web/CSS/:nth-last-of-type
 /en-US/docs/Web/CSS/:nth-last-of-type()	/en-US/docs/Web/CSS/:nth-last-of-type
 /en-US/docs/Web/CSS/:nth-of-type()	/en-US/docs/Web/CSS/:nth-of-type
+/en-US/docs/Web/CSS/:target-within	/en-US/docs/Web/CSS
 /en-US/docs/Web/CSS/@-moz-document	/en-US/docs/Web/CSS/@document
 /en-US/docs/Web/CSS/@font-face/font-variant	/en-US/docs/Web/CSS/@font-face
 /en-US/docs/Web/CSS/@media/aural	/en-US/docs/Web/CSS/@media

@@ -68,8 +68,8 @@ div {
   height: 200px;
   background-color: plum;
   background-image:
-    repeating-linear-gradient(transparent 0 19px, #0002 19px 20px),
-    repeating-linear-gradient(to left, transparent 0 19px, #0002 19px 20px);
+    repeating-linear-gradient(transparent 0 19px, #00000022 19px 20px),
+    repeating-linear-gradient(to left, transparent 0 19px, #00000022 19px 20px);
 }
 
 div {
@@ -111,7 +111,7 @@ const range = document.getElementById("radius");
 
 function setCornerShape() {
   rectangle.style.cornerShape = select.value;
-  rectangle.style.borderRadius = range.value + "px";
+  rectangle.style.borderRadius = `${range.value}px`;
   rectangle.innerHTML = `<pre>div {
   corner-shape: ${select.value};
   border-radius: ${range.value}px;
@@ -237,7 +237,6 @@ The CSS borders and box decorations module level 4 also introduces the `border-s
 - {{cssxref("background")}} shorthand
 - {{cssxref("background-position-x")}}
 - {{cssxref("background-position-y")}}
-
 - {{cssxref("border-image-outset")}}
 - {{cssxref("border-image-repeat")}}
 - {{cssxref("border-image-slice")}}
