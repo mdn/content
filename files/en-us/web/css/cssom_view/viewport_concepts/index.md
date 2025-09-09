@@ -5,11 +5,17 @@ page-type: guide
 sidebar: cssref
 ---
 
-This article explains the concept of the {{glossary("viewport")}} — what it is, its impact in terms of CSS, SVG, and mobile devices — and differentiates between the {{glossary("visual viewport")}} and the {{glossary("layout viewport")}}.
+This article explains the concept of the {{glossary("viewport")}} — what it is, its impact in terms of CSS, SVG, and mobile devices. This article defines the initial viewport and actual viewport, and differentiates between the {{glossary("visual viewport")}} and the {{glossary("layout viewport")}}.
 
 ## What is a viewport?
 
-A viewport represents the area in computer graphics being currently viewed. In web browser terms, it is generally the same as the browser window, excluding the UI, menu bar, etc. That is the part of the document you are viewing.
+A **viewport** is a feature of a user agent for continuous media and used to establish the initial containing block for continuous media.
+
+The _initial viewport_ refers to the viewport before any the user agent, HTML {{htmlelement("meta")}} tags, or CSS styles have overridden the viewport given by the window or viewing area of the UA. The initial viewport size is based on the size of the window or viewing area, but not based on the content. The size of the initial viewport of a full screen user agents will differ between orientations and between devices, but is always the same for that device in that orientation.
+
+The _actual viewport_ is the viewport you get after processing the [viewport `<meta>` tag](/en-US/docs/Web/HTML/Reference/Elements/meta/name/viewport). Content designed for large viewports may exhibit a variety of bugs when viewed in smaller viewports, including unintended wrapping, clipped content, wrong-sized {{glossary("scroll containers")}}. HTML provides a [viewport meta tag](/en-US/docs/Web/HTML/Reference/Elements/meta/name/viewport), `<meta name="viewport">`, to provide hints about the initial size of the viewport. The actual viewport is the size defined by its [`content`](/en-US/docs/Web/HTML/Reference/Elements/meta#content) attribute. If this tag is omitted, some mobile browsers use a fixed initial containing block width (typically `980px`), setting the width of the actual viewport to this values, then scales the content down making making the CSS pixel size smaller than an actual pixel.
+
+A viewport represents the area in computer graphics being currently viewed. In web browser terms, it is generally the same as the browser window, excluding the UI, menu bar, etc. That is the part of the document you are viewing. For paged media, the initial containing block is based on the page area. The page area can be set through {{cssxref("@page")}} rules.
 
 Documents, like this article, may be very long. Your viewport is everything that is currently visible; notably, the "what is a viewport" section, and perhaps some of the navigation menu. The size of the viewport depends on the size of the screen, whether the browser is in fullscreen mode or not, and whether or not the browser is zoomed in. Content outside the viewport, such as the _See Also_ section in this document, is likely to not be visible onscreen until scrolled into view.
 
@@ -142,6 +148,8 @@ Generally, when you write the above media query, the styles are applied if the v
 
 The [Visual Viewport API](/en-US/docs/Web/API/Visual_Viewport_API) provides a mechanism for querying and modifying the properties of the visual viewport.
 
+The [Viewport API](/en-US/docs/Web/API/Viewport_API) provides a mechanism for querying and modifying the properties of the visual viewport.
+
 ## Mobile viewports
 
 Mobile devices come in all shapes and sizes, with screens of differing {{glossary("device pixel")}} ratios. The mobile browser's viewport is the area of the window in which web content can be seen, which is not necessarily the same size as the rendered page. Mobile browsers render pages in a virtual window or viewport, generally at 980px, which is usually wider than the screen, and then shrink the rendered result down so it can all be seen at once. Users can then pan and zoom to see different areas of the page. For example, if a mobile screen has a width of 320px, a website might be rendered with a virtual viewport of 980px, and then it will be shrunk down to fit into the 320px space, which, depending on the design, is illegible for many if not everyone. To tell a mobile browser to use the viewport width instead of the default 980px as the width of the screen, developers can include a viewport meta tag, like the following:
@@ -154,7 +162,8 @@ The `width` property controls the size of the viewport. It should preferably be 
 
 ## See also
 
-- [CSSOM view](/en-US/docs/Web/CSS/CSSOM_view) module
-- [Visual Viewport API](/en-US/docs/Web/API/Visual_Viewport_API)
-- {{HTMLElement("meta")}}, specifically `<meta name="viewport">`
+- {{HTMLElement("meta")}} and [`<meta name="viewport">`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/viewport)
 - [Using the viewport meta tag to control layout on mobile browsers](/en-US/docs/Web/HTML/Guides/Viewport_meta_element)
+- [Visual Viewport API](/en-US/docs/Web/API/Visual_Viewport_API)
+- [CSS viewport](/en-US/docs/Web/CSS/CSS_viewport) module
+- [CSSOM view](/en-US/docs/Web/CSS/CSSOM_view) module
