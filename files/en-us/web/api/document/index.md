@@ -410,11 +410,11 @@ Not all events that bubble can reach the `Document` object. Only the following d
 - {{domxref("HTMLMediaElement/durationchange_event", "durationchange")}}
 - {{domxref("HTMLMediaElement/emptied_event", "emptied")}}
 - {{domxref("HTMLMediaElement/ended_event", "ended")}}
-- {{domxref("Element/error_event", "error")}}
+- {{domxref("HTMLElement/error_event", "error")}}
 - {{domxref("Element/focus_event", "focus")}}
 - {{domxref("HTMLFormElement/formdata_event", "formdata")}}
 - {{domxref("Element/input_event", "input")}}
-- {{domxref("HTMLElement/invalid_event", "invalid")}}
+- {{domxref("HTMLInputElement/invalid_event", "invalid")}}
 - {{domxref("Element/keydown_event", "keydown")}}
 - {{domxref("Element/keypress_event", "keypress")}}
 - {{domxref("Element/keyup_event", "keyup")}}
@@ -442,7 +442,7 @@ Not all events that bubble can reach the `Document` object. Only the following d
 - {{domxref("Element/securitypolicyviolation_event", "securitypolicyviolation")}}
 - {{domxref("HTMLMediaElement/seeked_event", "seeked")}}
 - {{domxref("HTMLMediaElement/seeking_event", "seeking")}}
-- {{domxref("Element/select_event", "select")}}
+- {{domxref("HTMLInputElement/select_event", "select")}}
 - {{domxref("HTMLSlotElement/slotchange_event", "slotchange")}}
 - {{domxref("HTMLMediaElement/stalled_event", "stalled")}}
 - {{domxref("HTMLFormElement/submit_event", "submit")}}
