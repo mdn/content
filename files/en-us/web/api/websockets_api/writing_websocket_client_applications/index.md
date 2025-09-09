@@ -21,6 +21,9 @@ const wsUri = "ws://127.0.0.1/";
 const websocket = new WebSocket(wsUri);
 ```
 
+> [!NOTE]
+> In this example we're using the `ws` protocol for the connection, because in the example we're connecting to localhost. In a real application, web pages should be served using HTTPS, and the WebSocket connection should use `wss` as the protocol.
+
 The `WebSocket` constructor takes one mandatory argument, which is the URL of the WebSocket server to connect to. In this case, since we're running the server locally, we're using the address of localhost.
 
 The constructor takes another optional argument [`protocols`](/en-US/docs/Web/API/WebSocket/WebSocket#protocols), which allows a single server to implement multiple sub-protocols. We're not using this feature in our example.
