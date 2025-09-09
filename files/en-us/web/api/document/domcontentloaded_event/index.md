@@ -57,24 +57,39 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 ### Checking whether loading is already complete
 
-`DOMContentLoaded` may fire before your script has a chance to run, so it is wise to check before adding a listener.
+Sometimes your script may run after the `DOMContentLoaded` event has already fired. This typically happens when the script runs asynchronously. Common scenarios include:
+
+- A module script that pauses on a top-level `await`.
+- A script that is dynamically injected into the page.
+- Code that resumes after an asynchronous operation, such as `await fetch(...)`.
+
+In these cases, you should check the document's `readyState` before adding a `DOMContentLoaded` listener.
+
+For inline, synchronous scripts (without `defer` or `async`), this situation does not occur. The script runs while the document is still being parsed, so `document.readyState` is always `"loading"`, and the check is unnecessary.
+
+There is no risk of a race condition between the `if` check and the `addEventListener()` call. JavaScript executes to completion, meaning the document cannot finish loading in the middle of this code block.
 
 ```js
-function doSomething() {
-  console.info("DOM loaded");
+async function setup() {
+  // Simulate async work
+  await fetch("/data.json");
+
+  function doSomething() {
+    console.log("DOM fully loaded");
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", doSomething);
+  } else {
+    doSomething();
+  }
 }
 
-if (document.readyState === "loading") {
-  // Loading hasn't finished yet
-  document.addEventListener("DOMContentLoaded", doSomething);
-} else {
-  // `DOMContentLoaded` has already fired
-  doSomething();
-}
+setup();
 ```
 
 > [!NOTE]
-> There's no race condition here — it's not possible for the document to be loaded between the `if` check and the `addEventListener()` call. JavaScript has run-to-completion semantics, which means if the document is loading at one particular tick of the event loop, it can't become loaded until the next cycle, at which time the `doSomething` handler is already attached and will be fired.
+> Inline and deferred scripts always run before `DOMContentLoaded` fires, so they do not need this pattern. The `readyState` check is only useful when your code might run after the event has already occurred.
 
 ### Live example
 
