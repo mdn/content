@@ -174,7 +174,7 @@ Inside the function body, write code that does the following:
 > You _could_ just hardcode the `<option>` elements inside the HTML, but that would only work for this exact data set. We want you to write JavaScript that will correctly populate the form regardless of the data values provided (each house object would have to have the same structure).
 
 > [!NOTE]
-> You could use the `innerHTML` property to add child content inside HTML elements, but we'd recommend not doing so. You can't always trust the data you are adding to your page: If it is not properly sanitised on the server, bad actors could use `innerHTML` as a pathway to carry out [Cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks on your page. A safer route is to use DOM scripting features such as `createElement()`, `appendChild()`, and `textContent`.
+> You could use the `innerHTML` property to add child content inside HTML elements, but we'd recommend not doing so. You can't always trust the data you are adding to your page: If it is not properly sanitised on the server, bad actors could use `innerHTML` as a pathway to carry out [Cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks on your page. A safer route is to use DOM scripting features such as `createElement()`, `appendChild()`, and `textContent`. Using `innerHTML` to remove child content isn't such an issue.
 
 ### Completing the `renderHouses()` function
 
