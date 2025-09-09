@@ -7,7 +7,21 @@ browser-compat: html.global_attributes.inert
 sidebar: htmlsidebar
 ---
 
-The **`inert`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) is a boolean attribute specifying that the element and all of its flat tree descendants are {{glossary("inert")}}.
+The **`inert`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) is a boolean attribute specifying that the element and all of its flat tree descendants are inert.
+
+Inert HTML elements and their flat tree descendants:
+
+- Do not have {{domxref("Element/click_event", "click")}} events fired when clicked on.
+- Cannot be focused, that is, {{domxref("Element/focus_event", "focus")}} events cannot be fired on them.
+- Are not searchable via browser find-in-page features (none of their content is found/matched).
+- Disallow users from selecting text contained within their content — akin to using the CSS property {{cssxref("user-select")}} to disable text selection.
+- Cannot have otherwise-editable content edited. This includes, for example, the contents of textual {{htmlelement("input")}} fields, and text elements with [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) set on them.
+- Are hidden from assistive technologies by excluding them from the accessibility tree.
+
+The following other features can be used to set an element and its descendants to an inert state:
+
+- The CSS {{cssxref("interactivity")}} property.
+- The {{domxref("HTMLElement.inert")}} DOM property.
 
 Modal {{htmlelement("dialog")}}s generated with [`showModal()`](/en-US/docs/Web/API/HTMLDialogElement/showModal) escape inertness, meaning that they don't inherit inertness from their ancestors, but can only be made inert by having the `inert` attribute explicitly set on themselves.
 

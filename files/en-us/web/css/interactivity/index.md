@@ -9,7 +9,7 @@ browser-compat: css.properties.interactivity
 
 {{CSSRef}}{{seecompattable}}
 
-The **`interactivity`** [CSS](/en-US/docs/Web/CSS) property specifies whether an element and its descendant nodes are {{glossary("inert")}} or not.
+The **`interactivity`** [CSS](/en-US/docs/Web/CSS) property specifies whether an element and its descendant nodes are inert or not (see the HTML [`inert`](/en-US/docs/Web/HTML/Reference/Global_attributes/inert) attribute reference page for a detailed description of the inert state).
 
 A typical use case for `interactivity: inert` is in paginated or carousel content, when you only want the currently-visible page's content and controls to be interacted with. In such cases, unexpectedly focusing on an off-screen link or button could spoil the experience.
 
@@ -46,15 +46,87 @@ interactivity: unset;
 
 ## Examples
 
+### Basic `interactivity` usage
+
+In this example we explore the effects of the `interactivity` property.
+
+### HTML
+
+The markup features two {{htmlelement("p")}} elements, each of which contain a link. The second paragraph also has a class of `inert` set on it, and a child {{htmlelement("span")}} element with [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) set on it, so it should be editable.
+
+```html live-sample___basicinteractivity
+<p>
+  This paragraph is not
+  <a
+    href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/inert"
+    >inert</a
+  >. You should be able to select the text content, search for it using
+  in-browser search features, and focus and click the link. There is a
+  <code>click</code> event handler set on the paragraph that changes the border
+  color for a second when it is clicked anywhere.
+</p>
+
+<p class="inert">
+  This paragraph is
+  <a
+    href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/inert"
+    >inert</a
+  >. You won't be able to select the text content, search for it using
+  in-browser search features, focus and click the link, or issue
+  <code>click</code> events on it (the border color won't change when it is
+  clicked).
+  <span contenteditable=""
+    >This sentence has <code>contenteditable</code> set on it, but it is not
+    editable because it is inert</span
+  >.
+</p>
+```
+
+#### CSS
+
+We set the `interactivity` property on the second paragraph to a value of `inert`, making it inert.
+
+```css live-sample___basicinteractivity
+.inert {
+  interactivity: inert;
+}
+```
+
+#### JavaScript
+
+In our script, we set a `click` event handler function on both paragraphs so that when they are clicked, their border color should change from `black` to `orange` and then back to `black` again after two seconds.
+
+```js live-sample___basicinteractivity
+const paras = document.querySelectorAll("p");
+
+function tempBorderChange(e) {
+  const targetPara = e.currentTarget;
+  targetPara.style.borderColor = "orange";
+  setTimeout(() => {
+    targetPara.style.borderColor = "black";
+  }, 2000);
+}
+
+for (para of paras) {
+  para.addEventListener("click", tempBorderChange);
+}
+```
+
+#### Result
+
+{{ EmbedLiveSample("basicinteractivity", "100%", "320") }}
+
+Note how the second paragraph is inert, therefore it does not behave like the first paragraph. For example, the link cannot be clikced or focused, the text cannot be selected or searched, and `click` events do not register on it.
+
 ### Setting off-screen elements to inert using a view timeline
 
-This example shows a basic section of horizontally-scrolling paginated content, with each page snapped to using [CSS Scroll Snap](/en-US/docs/Web/CSS/CSS_scroll_snap), and the inertness controlled via a [scroll-driven animation](/en-US/docs/Web/CSS/CSS_scroll-driven_animations) that uses a view progress timeline. When a page is visible in the scroll container, it is not inert; it becomes inert when it moves out into the overflowing content.
+This example shows some horizontally-scrolling paginated content, with each page snapped to using [CSS Scroll Snap](/en-US/docs/Web/CSS/CSS_scroll_snap), and the inertness controlled via a [scroll-driven animation](/en-US/docs/Web/CSS/CSS_scroll-driven_animations) that uses a view progress timeline. When a page is visible in the scroll container, it is not inert; it becomes inert when it moves out into the overflowing content.
 
 #### HTML
 
 The HTML consists of a [top-level heading](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) and an [unordered list](/en-US/docs/Web/HTML/Reference/Elements/ul). Each [list item](/en-US/docs/Web/HTML/Reference/Elements/li) inside the list contains the content for a separate page.
 
-```html
+```html live-sample___offscreen-inert
 <h1>Pagination interactivity demo</h1>
 <ul>
   <li>
@@ -88,7 +160,7 @@ The HTML consists of a [top-level heading](/en-US/docs/Web/HTML/Reference/Elemen
 
 A {{cssxref("width")}} of `100vw` is set on the unordered list to make it as wide as the viewport, plus a fixed {{cssxref("height")}}, some {{cssxref("padding")}}, and an {{cssxref("overflow-x")}} value of `scroll` so overflowing content will scroll. Its child list items are laid out horizontally with {{cssxref("display", "display: flex")}}, and given a {{cssxref("scroll-snap-type")}} value of `x mandatory` to make it into a [scroll snap container](/en-US/docs/Glossary/Scroll_snap#scroll_snap_container). The `x` keyword causes the container's [snap targets](/en-US/docs/Glossary/Scroll_snap#snap_target) to be snapped to horizontally, whereas the `mandatory` keyword means that the container will always snap to a snap target at the end of a scrolling action.
 
-```css hidden
+```css hidden live-sample___offscreen-inert
 * {
   box-sizing: border-box;
 }
@@ -128,7 +200,7 @@ Each list item is given some rudimentary styling, plus the following:
 - An {{cssxref("animation-timeline")}} value equal to the same name defined in the `view-timeline` value, which means that the named view progress timeline will be used to control the progress of animations applied to this element.
 - An {{cssxref("animation-name")}} and {{cssxref("animation-fill-mode")}} defining the animation applied to this element and its fill mode. The `animation-fill-mode: both` value is required because you want the starting animation state to apply to the element before the animation starts, and the end animation state to apply to the element after the animation finishes. Otherwise, the `interactivity: inert` value (see below) won't apply to list items when they are outside the scroll container.
 
-```css
+```css live-sample___offscreen-inert
 li {
   list-style-type: none;
   background-color: #eee;
@@ -148,7 +220,7 @@ li {
 
 Finally, the animation {{cssxref("@keyframes")}} are defined. `interactivity: inert` is set at positions `entry 0%` and `exit 100%` of the view timeline. Combined with the `animation-fill-mode: both` value, this means that the list items will be inert before the start and after the end of the view timeline, that is, when they are outside the scroll container. Between positions `entry 1%` and `exit 99%`, `interactivity: auto` is set on the list items, meaning they can be interacted with normally when they are inside the scroll container.
 
-```css
+```css live-sample___offscreen-inert
 @keyframes inert-change {
   entry 0%,
   exit 100% {
@@ -168,7 +240,7 @@ See the {{cssxref("animation-range")}} reference page for an explanation of the 
 
 Scroll the unordered list horizontally to see the pagination effect — each page snaps into view. Try tabbing between the links and the buttons; you'll find that only the ones on-screen can be tabbed to.
 
-{{ EmbedLiveSample("Setting off-screen elements to inert using a view timeline", "100%", "320") }}
+{{ EmbedLiveSample("offscreen-inert", "100%", "320") }}
 
 ## Specifications
 

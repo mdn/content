@@ -8,7 +8,7 @@ browser-compat: api.HTMLElement.inert
 
 {{ APIRef("HTML DOM") }}
 
-The {{domxref("HTMLElement")}} property **`inert`** specifies whether the referenced element and all of its flat tree descendants are {{glossary("inert")}}. It reflects the value of the element's [`inert`](/en-US/docs/Web/HTML/Reference/Global_attributes/inert) attribute. This can be useful when building UIs such as modals where you would want to "trap" the focus inside the modal when it's visible.
+The {{domxref("HTMLElement")}} property **`inert`** specifies whether the referenced element and all of its flat tree descendants are inert. It reflects the value of the element's [`inert`](/en-US/docs/Web/HTML/Reference/Global_attributes/inert) attribute (see this page for a detailed description of the inert state). This can be useful when building UIs such as modals where you would want to "trap" the focus inside the modal when it's visible.
 
 Note that if the `inert` attribute is unspecified, the element itself may still inherit inertness from its parent. However, that inherited inertness is not reflected by this property's value.
 
