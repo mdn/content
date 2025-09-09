@@ -131,7 +131,7 @@ websocket.addEventListener("close", () => {
 
 The back/forward cache, or {{glossary("bfcache")}}, enables much faster back and forward navigation between pages that the user has recently visited. It does this by storing a complete snapshot of the page, including the JavaScript heap.
 
-The browser pauses and then resumes JavaScript execution when a page is added to or restored from the bfcache. This means that, depending on what the page is doing, it's not always safe for the browser to use the bfcache for the page. If the browser determines that it is not safe, then the page will not be added to the bfcache, and then the user will not get the performance benefit that it can bring.
+The browser pauses and then resumes JavaScript execution when a page is added to or restored from the bfcache. This means that, depending on what the page is doing, it's not always safe for the browser to use the bfcache for the page. If the browser determines that it is not safe, the page will not be added to the bfcache, and the user will not get the performance benefit that it can bring.
 
 Different browsers use different criteria for adding a page to the bfcache, and having an open WebSocket connection may prevent the browser adding your page to the bfcache. This means it's good practice to close your connection when the user has finished with your page. The best event to use for this is the {{domxref("Window.pagehide_event", "pagehide")}} event.
 
