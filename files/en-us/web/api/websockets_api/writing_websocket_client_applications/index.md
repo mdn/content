@@ -191,6 +191,8 @@ If you run our example, try navigating to a different page, then back to the exa
 
 See the [web.dev article on the bfcache](https://web.dev/articles/bfcache#close-open-connections) for more context on bfcache compatibility and the WebSockets API.
 
+On browsers that support it, you can [use the `notRestoredReasons` property of the Performance API](/en-US/docs/Web/API/Performance_API/Monitoring_bfcache_blocking_reasons) to get the reason a page was not added to the bfcache.
+
 ## Security considerations
 
 WebSockets should not be used in a mixed content environment; that is, you shouldn't open a non-secure WebSocket connection from a page loaded using HTTPS or vice versa.
