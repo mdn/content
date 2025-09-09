@@ -43,4 +43,5 @@ segments.forEach((segment) =>
 ## See also
 
 - [Viewport segments API](/en-US/docs/Web/API/Viewport_segments_API)
+- [Visual viewport API](/en-US/docs/Web/API/Visual_Viewport_API)
 - [Origin trial for Foldable APIs](https://developer.chrome.com/blog/foldable-apis-ot) on developer.chrome.com (2024)

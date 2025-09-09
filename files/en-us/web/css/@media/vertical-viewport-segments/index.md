@@ -6,19 +6,19 @@ browser-compat: css.at-rules.media.vertical-viewport-segments
 sidebar: cssref
 ---
 
-The **`vertical-viewport-segments`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) detects whether the device has a specified number of viewport segments laid out vertically (on top of one another).
+The **`vertical-viewport-segments`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) detects whether the device has a specified number of viewport segments laid out vertically (top to bottom).
 
-Part of the [Viewport segments API](/en-US/docs/Web/API/Viewport_segments_API), the `vertical-viewport-segments` feature can be used to create responsive designs that work well on multi-viewport devices — devices with a display that is divided into logically separate viewport segments, such as foldable or hinged devices.
+Related to the [Viewport segments API](/en-US/docs/Web/API/Viewport_segments_API), the `vertical-viewport-segments` feature can be used to create responsive designs that work well on multi-viewport devices — devices with a display that is divided into logically separate viewport segments, such as foldable or hinged devices.
 
 ## Syntax
 
 The `vertical-viewport-segments` feature is specified as an {{cssxref("integer")}} value of `1` or greater, representing the number of vertical viewport segments the device has.
 
-- The value will be `2` for a two-screen hinged device or a foldable device that is currently folded (in the [`folded` device posture](/en-US/docs/Web/API/Device_Posture_API#folded)) and is oriented vertically so the segments are on top of one another.
 - The value will be `1` for:
-  - A non-foldable device (for example, a standard single-screen smartphone or tablet)
+  - A non-foldable device (for example, a standard single-screen smartphone or tablet).
   - A foldable device that is either unfolded or closed (in the [`continuous` device posture](/en-US/docs/Web/API/Device_Posture_API#continuous)).
   - A two-screen hinged device or a foldable device that is currently folded and is oriented horizontally so the segments are side by side.
+- The value will be `2` for a two-screen hinged device or a foldable device that is currently folded (in the [`folded` device posture](/en-US/docs/Web/API/Device_Posture_API#folded)) and is oriented vertically so the segments are on top of one another.
 - The value may be greater than `2` for foldable devices with more than one fold.
 
 ## Examples
