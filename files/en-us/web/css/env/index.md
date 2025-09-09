@@ -54,7 +54,7 @@ The function accepts an `<environment-variable>` is its first argument. Generall
 
 The second argument, if provided, is the fallback value, which is used if the environment variable referenced in the first argument does not exist. The fallback can be another environment variable, even with its own fallback.
 
-The syntax of the fallback is similar to the fallback syntax of the {{cssxref("var()")}} function used to insert [CSS custom properties](/en-US/docs/Web/CSS/--*) in that it allows for multiple commas. Anything between the first comma and the end of the function is considered the fallback value. However, if the property value or descriptor doesn't include commas, a fallback value that includes commas will not be valid.
+The syntax of the fallback is similar to the fallback syntax of the {{cssxref("var()")}} function used to insert [CSS custom properties](/en-US/docs/Web/CSS/--*) in that it allows for multiple commas. Anything between the first comma and the end of the function is considered the fallback value. However, if the `env()` function is used within a property value or descriptor that doesn't include commas, a fallback value that includes commas will not be valid.
 
 A property or descriptor containing a syntactically valid `env()` function is assumed to be valid at parse time, when the browser first reads and interprets the downloaded CSS text. It is only syntax-checked at compute time, after each `env()` function has been substituted with its browser-provided value (or the fallback value if the environment variable passed as the first parameter is not a recognized environment variable name). If no fallback is provided, the property or descriptor containing the `env()` function is invalid at computed-value time.
 
