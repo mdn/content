@@ -9,9 +9,7 @@ browser-compat: css.properties.interactivity
 
 {{CSSRef}}{{seecompattable}}
 
-The **`interactivity`** [CSS](/en-US/docs/Web/CSS) property specifies whether an element and its descendant nodes are inert or not (see the HTML [`inert`](/en-US/docs/Web/HTML/Reference/Global_attributes/inert) attribute reference page for a detailed description of the inert state).
-
-A typical use case for `interactivity: inert` is in paginated or carousel content, when you only want the currently-visible page's content and controls to be interacted with. In such cases, unexpectedly focusing on an off-screen link or button could spoil the experience.
+The **`interactivity`** [CSS](/en-US/docs/Web/CSS) property specifies whether an element and its descendant nodes are inert or not.
 
 ## Syntax
 
@@ -43,6 +41,16 @@ interactivity: unset;
 ## Formal syntax
 
 {{csssyntax}}
+
+## Description
+
+The `interactivity` property can be used to set whether an element is inert. See the HTML [`inert`](/en-US/docs/Web/HTML/Reference/Global_attributes/inert) attribute reference page for a detailed description of the inert state.
+
+A typical use case for `interactivity: inert` is in paginated content, when you only want the currently-visible page's content and controls to be interacted with. In such cases, unexpectedly focusing on an off-screen link or button could spoil the experience.
+
+When an element is made inert (via the `interactivity` property or the `inert` HTML attribute), all of its descendants are also made inert and cannot be set to non-inert, even by setting `interactivity: inert` or `inert="false"` directly on them.
+
+There are some cases in which non-inertness cannot be set by the `interactivity` property. For example, while a modal {{htmlelement("dialog")}} is being displayed, the rest of the page is set to an inert state automatically, regardless of the value of this property.
 
 ## Examples
 
@@ -241,6 +249,12 @@ See the {{cssxref("animation-range")}} reference page for an explanation of the 
 Scroll the unordered list horizontally to see the pagination effect — each page snaps into view. Try tabbing between the links and the buttons; you'll find that only the ones on-screen can be tabbed to.
 
 {{ EmbedLiveSample("offscreen-inert", "100%", "320") }}
+
+## Accessibility concerns
+
+Use careful consideration for accessibility when applying the `inert` attribute. By default, there is no visual way to tell whether or not an element or its subtree is inert. As a web developer, it is your responsibility to clearly indicate the content parts that are active and those that are inert.
+
+While providing visual and non-visual cues about content inertness, also remember that the visual viewport may contain only sections of content. Users may be zoomed in to a small section of content, or users may not be able to view the content at all. Inert sections not being obviously inert can lead to frustration and bad user experience.
 
 ## Specifications
 
