@@ -34,13 +34,7 @@ color-mix(in lch longer hue, hsl(200deg 50% 80%), coral)
 
 ### Parameters
 
-The `color-mix()` function's syntax is as follows:
-
-```plain
-color-mix(<color-interpolation-method>, <color>[<percentage>], <color>[<percentage>])
-```
-
-The parameters are:
+The `color-mix()` function parameters are:
 
 - {{CSSXref("&lt;color-interpolation-method&gt;")}}
   - : Specifies what interpolation method should be used to mix the colors. It consists of the `in` keyword followed by a {{glossary("color space")}} name. The following three types are available:
