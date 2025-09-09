@@ -15,11 +15,11 @@ The generic _viewport_ term generally refers to the area in computer graphics be
 
 As a document loads, the viewport goes through two stages:
 
-- Initial viewport
+- **Initial viewport**
   - : The _initial viewport_ refers to the window or viewing area of the UA before user agent styles, HTML {{htmlelement("meta")}} tags, or CSS styles have overridden its size. The initial viewport size is based on the size of the window or viewing area, and not the content. The size of a full-screen user agent's initial viewport will differ between orientations and devices, but will always be the same for the same device in the same orientation.
 
-- Actual viewport
-  - The _actual viewport_ is the viewport you get after processing the [viewport `<meta>` tag](/en-US/docs/Web/HTML/Reference/Elements/meta/name/viewport). Content designed for large viewports may exhibit a variety of bugs when viewed in smaller viewports, including unintended wrapping, clipped content, and incorrectly sized {{glossary("scroll containers")}}. The viewport meta tag provides hints about the initial size of the viewport. The actual viewport is the size defined by its [`content`](/en-US/docs/Web/HTML/Reference/Elements/meta#content) attribute. If this tag is omitted, some mobile browsers render content using a fixed initial containing block width, typically `980px`. They set the width of the actual viewport to this value, then scale the content down to fit it, making the CSS pixel size smaller than an actual pixel.
+- **Actual viewport**
+  - : The _actual viewport_ is the viewport you get after processing the [viewport `<meta>` tag](/en-US/docs/Web/HTML/Reference/Elements/meta/name/viewport). Content designed for large viewports may exhibit a variety of bugs when viewed in smaller viewports, including unintended wrapping, clipped content, and incorrectly sized {{glossary("scroll container", "scroll containers")}}. The viewport meta tag provides hints about the initial size of the viewport. The actual viewport is the size defined by its [`content`](/en-US/docs/Web/HTML/Reference/Elements/meta#content) attribute. If this tag is omitted, some mobile browsers render content using a fixed initial containing block width, typically `980px`. They set the width of the actual viewport to this value, then scale the content down to fit it, making the CSS pixel size smaller than an actual pixel.
 
 Documents, like this article, may be very long. Your viewport is everything that is currently visible; notably, the "what is a viewport" section, and perhaps some of the navigation menu. The size of the viewport depends on the size of the screen, whether the browser is in fullscreen mode or not, and whether or not the browser is zoomed in. Content outside the viewport, such as the _See Also_ section in this document, is likely to not be visible onscreen until scrolled into view.
 
