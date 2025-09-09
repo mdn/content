@@ -133,12 +133,7 @@ The back/forward cache, or {{glossary("bfcache")}}, enables much faster back and
 
 The browser pauses and then resumes JavaScript execution when a page is added to or restored from the bfcache. This means that, depending on what the page is doing, it's not always safe for the browser to use the bfcache for the page. If the browser determines that it is not safe, then the page will not be added to the bfcache, and then the user will not get the performance benefit that it can bring.
 
-Different browsers use different criteria for adding a page to the bfcache. If a page has an active WebSocket connection, then:
-
-- Firefox and Chrome will not add the page to the bfcache.
-- Safari will add the page to the bfcache, but will cancel any active network requests. This is likely to generate an error in your WebSocket connection, leading to the connection being closed.
-
-In Chrome, you can make a WebSocket client compatible with the bfcache by closing your WebSocket connection in the handler for the {{domxref("Window.pagehide_event", "pagehide")}} event, which is fired before the page is added to the bfcache.
+Different browsers use different criteria for adding a page to the bfcache, and having an open WebSocket connection may prevent the browser adding your page to the bfcache. This means it's good practice to close your connection when the user has finished with your page. The best event to use for this is the {{domxref("Window.pagehide_event", "pagehide")}} event.
 
 We do this in our example app:
 
