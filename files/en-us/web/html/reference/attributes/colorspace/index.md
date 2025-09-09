@@ -7,7 +7,7 @@ browser-compat: html.elements.input.colorspace
 sidebar: htmlsidebar
 ---
 
-The **`colorspace`** attribute valid only on the [`type="color"`](/en-US/docs/Web/HTML/Reference/Elements/input/color) {{HTMLElement("input")}} element which [color space](/en-US/docs/Glossary/Color_space) the element uses.
+The **`colorspace`** attribute valid only on the [`type="color"`](/en-US/docs/Web/HTML/Reference/Elements/input/color) {{HTMLElement("input")}} element which specifies which [color space](/en-US/docs/Glossary/Color_space) the element uses.
 
 These attributes are [enumerated](/en-US/docs/Glossary/Enumerated), and have the following possible values:
 
