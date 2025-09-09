@@ -82,7 +82,7 @@ if (document.readyState === "loading") {
 }
 ```
 
-The script can't enforce how it's included by the HTML. If it's included via `<script async>`, or it's dynamically injected, then by the time it executes, `DOMContentLoaded` has already fired. To ensure that `doSomething()` always runs when the script loads, we need to have two paths, one that immediately runs `doSomething` if the document is already loaded, and the other runs `doSomething` once the document is loaded.
+The script can't enforce how it's included by the HTML. If it's included via `<script async>`, or it's dynamically injected, then by the time it executes, `DOMContentLoaded` has already fired. To ensure that `doSomething()` always runs when the script loads, we need to have two paths, one that immediately runs `doSomething` if the document is already loaded, and another that runs `doSomething` once the document is loaded.
 
 > [!NOTE]
 > There's no race condition here — it's not possible for the document to be loaded between the `if` check and the `addEventListener()` call. JavaScript has run-to-completion semantics, which means if the document is loading at one particular tick of the event loop, it can't become loaded until the next cycle, at which time the `doSomething` handler is already attached and will be fired.
