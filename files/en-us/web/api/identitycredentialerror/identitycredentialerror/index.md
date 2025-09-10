@@ -3,10 +3,12 @@ title: "IdentityCredentialError: IdentityCredentialError() constructor"
 short-title: IdentityCredentialError()
 slug: Web/API/IdentityCredentialError/IdentityCredentialError
 page-type: web-api-constructor
+status:
+  - experimental
 browser-compat: api.IdentityCredentialError.IdentityCredentialError
 ---
 
-{{APIRef("Fetch API")}}{{AvailableInWorkers}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
 The **`IdentityCredentialError()`** constructor creates a new {{domxref("IdentityCredentialError")}} object.
 

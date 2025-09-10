@@ -339,12 +339,13 @@ The second block follows `::part()` with `:state()`, in order to match `checkbox
 ```css
 question-box::part(checkbox):state(checked) {
   color: green;
+  outline: dashed 1px green;
 }
 ```
 
 #### Result
 
-Click either of the checkboxes to see the color change from `red` to `green` when the `checked` state toggles.
+Click either of the checkboxes to see the color change from `red` to `green` with an outline when the `checked` state toggles.
 
 {{EmbedLiveSample("Question box", "100%", 100)}}
 
