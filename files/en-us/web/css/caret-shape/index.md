@@ -218,7 +218,7 @@ This example demonstrates using `caret-shape: underscore` to create a console-st
   </div>
   <div class="console-input">
     <span class="prompt">user@host:css-ui-4 $ </span>
-    <input type="text" id="console" class="console" />
+    <input type="text" id="console" class="console" value="cd" />
   </div>
 </div>
 ```
