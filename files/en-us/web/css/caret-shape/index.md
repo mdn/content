@@ -143,7 +143,6 @@ The key part is using the modern caret properties instead of the old border-base
     #123208 4px
   );
   height: 140px;
-  border-radius: 25px;
   display: flex;
   align-items: flex-start;
   padding: 20px;
@@ -226,7 +225,6 @@ This example demonstrates using `caret-shape: underscore` to create a console-st
   font-family: monospace;
   padding: 20px;
   height: 60px;
-  border-radius: 4px;
 }
 
 .console-output {
