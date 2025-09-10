@@ -92,7 +92,7 @@ The `caret-shape` property affects how the caret is visually rendered but doesn'
 
 ### Interaction with writing modes
 
-The caret shape adapts to the writing mode of the text. In vertical writing modes, bar carets become horizontal, and underscore carets position themselves appropriately relative to the text direction.
+The caret shape adapts to the {{cssxref("writing-mode")}} of the text. In vertical writing modes, bar carets become horizontal, and underscore carets position themselves appropriately relative to the text direction.
 
 ## Formal definition
 
