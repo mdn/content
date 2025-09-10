@@ -50,7 +50,7 @@ A typical use case for `interactivity: inert` is in paginated content, when you 
 
 When an element is made inert (via the `interactivity` property or the `inert` HTML attribute), all of its descendants are also made inert and cannot be set to non-inert, even by setting `interactivity: inert` or `inert="false"` directly on them.
 
-There are some cases in which non-inertness cannot be set by the `interactivity` property. For example, while a modal {{htmlelement("dialog")}} is being displayed, the rest of the page is set to an inert state automatically, regardless of the value of this property.
+The `interactivity` property can only make interactive content inert. It cannot make content that is inert based on HTML or other factors interactive. For example, while a modal {{htmlelement("dialog")}} is being displayed, the rest of the page is set to an inert state automatically, regardless of the value of this property.
 
 ## Examples
 
