@@ -50,23 +50,24 @@ sidebar:
       - /Learn_web_development/Core/Structuring_content/Emphasis_and_importance
       - /Learn_web_development/Core/Structuring_content/Lists
       - /Learn_web_development/Core/Structuring_content/Test_your_skills/HTML_text_basics
-      - /Learn_web_development/Core/Structuring_content/Structuring_documents
       - /Learn_web_development/Core/Structuring_content/Advanced_text_features
       - /Learn_web_development/Core/Structuring_content/Test_your_skills/Advanced_HTML_text
+      - /Learn_web_development/Core/Structuring_content/Marking_up_a_letter
+      - /Learn_web_development/Core/Structuring_content/Structuring_documents
       - /Learn_web_development/Core/Structuring_content/Creating_links
       - /Learn_web_development/Core/Structuring_content/Test_your_skills/Links
-      - /Learn_web_development/Core/Structuring_content/Marking_up_a_letter
       - /Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content
       - /Learn_web_development/Core/Structuring_content/HTML_images
       - /Learn_web_development/Core/Structuring_content/Test_your_skills/Images
       - /Learn_web_development/Core/Structuring_content/HTML_video_and_audio
       - /Learn_web_development/Core/Structuring_content/Test_your_skills/Audio_and_video
-      - /Learn_web_development/Core/Structuring_content/Mozilla_splash_page
+      - /Learn_web_development/Core/Structuring_content/Splash_page
       - /Learn_web_development/Core/Structuring_content/HTML_table_basics
       - /Learn_web_development/Core/Structuring_content/Table_accessibility
       - /Learn_web_development/Core/Structuring_content/Planet_data_table
       - /Learn_web_development/Core/Structuring_content/HTML_forms
       - /Learn_web_development/Core/Structuring_content/Test_your_skills/Forms_and_buttons
+      - /Learn_web_development/Core/Structuring_content/Forms_challenge
       - /Learn_web_development/Core/Structuring_content/Debugging_HTML
       - /Learn_web_development/Core/Structuring_content/Test_your_skills
   - link: /Learn_web_development/Core/Styling_basics
@@ -85,21 +86,20 @@ sidebar:
       - /Learn_web_development/Core/Styling_basics/Test_your_skills/Box_model
       - /Learn_web_development/Core/Styling_basics/Handling_conflicts
       - /Learn_web_development/Core/Styling_basics/Test_your_skills/Cascade
+      - /Learn_web_development/Core/Styling_basics/Fixing_blog_styles
       - /Learn_web_development/Core/Styling_basics/Values_and_units
       - /Learn_web_development/Core/Styling_basics/Test_your_skills/Values
       - /Learn_web_development/Core/Styling_basics/Sizing
       - /Learn_web_development/Core/Styling_basics/Test_your_skills/Sizing
       - /Learn_web_development/Core/Styling_basics/Backgrounds_and_borders
       - /Learn_web_development/Core/Styling_basics/Test_your_skills/Backgrounds_and_borders
+      - /Learn_web_development/Core/Styling_basics/Size_decorate_content_panel
       - /Learn_web_development/Core/Styling_basics/Overflow
       - /Learn_web_development/Core/Styling_basics/Test_your_skills/Overflow
       - /Learn_web_development/Core/Styling_basics/Images_media_forms
       - /Learn_web_development/Core/Styling_basics/Test_your_skills/Images
       - /Learn_web_development/Core/Styling_basics/Tables
       - /Learn_web_development/Core/Styling_basics/Debugging_CSS
-      - /Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension
-      - /Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper
-      - /Learn_web_development/Core/Styling_basics/Cool-looking_box
       - /Learn_web_development/Core/Styling_basics/Test_your_skills
   - link: /Learn_web_development/Core/Text_styling
     title: CSS_text_styling

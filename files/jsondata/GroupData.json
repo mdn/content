@@ -516,6 +516,7 @@
       ],
       "interfaces": [
         "IdentityCredential",
+        "IdentityCredentialError",
         "IdentityCredentialRequestOptions",
         "IdentityProvider",
         "NavigatorLogin"

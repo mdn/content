@@ -62,7 +62,7 @@ Firefox 50 was released on November 15, 2016. This article lists key changes tha
 ### Networking
 
 - When an error has happened during an asynchronous {{domxref("XMLHttpRequest")}}, the {{domxref("XMLHttpRequest.getAllResponseHeaders()")}} method now returns an empty string ([Firefox bug 1286744](https://bugzil.la/1286744)).
-- Instead of returning a `NetworkError`, asynchronous {{domxref("XMLHttpRequest")}} that fails for CORS or other network constraints now raises an {{domxref("XMLHttpRequest/error_event", "error")}} that can be caught like any other error ([Firefox bug 709991](https://bugzil.la/709991)).
+- Instead of returning a `NetworkError`, asynchronous {{domxref("XMLHttpRequest")}} that fails for CORS or other network constraints now raises an {{domxref("XMLHttpRequestEventTarget/error_event", "error")}} that can be caught like any other error ([Firefox bug 709991](https://bugzil.la/709991)).
 - {{domxref("XMLHttpRequest.getResponseHeader()")}} and {{domxref("XMLHttpRequest.getAllResponseHeaders()")}} now also return empty headers by default. This can be controlled via the preference `network.http.keep_empty_response_headers_as_empty_string` ([Firefox bug 918721](https://bugzil.la/918721)).
 - The `only-if-cached` option has been added to [`Request.cache`](/en-US/docs/Web/API/Request/cache) ([Firefox bug 1272436](https://bugzil.la/1272436)).
 

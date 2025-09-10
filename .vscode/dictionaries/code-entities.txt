@@ -140,6 +140,8 @@ Crsel
 cryptomining
 csiso
 csrfmiddlewaretoken
+css.selectors.headingfunction
+css.selectors.hostfunction
 CSS_RGBCOLOR
 csslint
 cssref
@@ -714,6 +716,7 @@ strncpy
 SUBDOCUMENT
 sund
 sunu
+superellipse
 superspeed
 SVGMPathElement
 svgref

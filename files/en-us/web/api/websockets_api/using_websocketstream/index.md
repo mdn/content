@@ -28,13 +28,13 @@ To create a WebSocket client, you first need to create a new `WebSocketStream` i
 const wss = new WebSocketStream("wss://example.com/wss");
 ```
 
-It can also take an options object containing custom protocols and/or an {{domxref("AbortSignal")}} (see [Closing the connection](#closing_the_connection)):
+It can also take an `options` object containing custom protocols and/or an {{domxref("AbortSignal")}}. The `AbortSignal` can be used to abort the connection attempt before the [handshake](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#the_websocket_handshake) has completed (that is, before the {{domxref("WebSocketStream.opened", "opened")}} promise resolves). It is typically used to implement a connection timeout. For example, the following code will time out if the handshake takes more than 5 seconds to complete:
 
 ```js
 const controller = new AbortController();
 const queueWSS = new WebSocketStream("wss://example.com/queue", {
   protocols: ["amqp", "mqtt"],
-  signal: controller.signal,
+  signal: AbortSignal.timeout(5000),
 });
 ```
 
@@ -76,26 +76,7 @@ The browser automatically controls the rate at which the client receives and sen
 
 ## Closing the connection
 
-With `WebSocketStream`, the information previously available via the `WebSocket` {{domxref("WebSocket.close_event", "close")}} and {{domxref("WebSocket.error_event", "error")}} events is now available via the {{domxref("WebSocketStream.closed", "closed")}} property — this returns a promise that fulfills with an object containing the closing code (see the full list of [`CloseEvent` status codes](/en-US/docs/Web/API/CloseEvent/code#value)) and reason indicating why the server closed the connection:
-
-```js
-const { code, reason } = await wss.closed;
-```
-
-As mentioned earlier, the WebSocket connection can be closed using an {{domxref("AbortController")}}. The necessary {{domxref("AbortSignal")}} is passed to the `WebSocketStream` constructor during creation, and {{domxref("AbortController.abort()")}} can then be called when required:
-
-```js
-const controller = new AbortController();
-const wss = new WebSocketStream("wss://example.com/wss", {
-  signal: controller.signal,
-});
-
-// some time later
-
-controller.abort();
-```
-
-Alternatively you can use the {{domxref("WebSocketStream.close()")}} method to close a connection. This is mainly used if you wish to specify a custom code and/or reason:
+To close a connection, call the {{domxref("WebSocketStream.close()")}} method, optionally passing a [closing code](/en-US/docs/Web/API/CloseEvent/code#value) and reason:
 
 ```js
 wss.close({
@@ -106,6 +87,14 @@ wss.close({
 
 > [!NOTE]
 > Depending on the server setup and status code you use, the server may choose to ignore a custom code in favor of a valid code that is correct for the closing reason.
+
+Closing the underlying {{domxref("WritableStream")}} or {{domxref("WritableStreamDefaultWriter")}} also closes the connection.
+
+To handle connection closure, wait for the {{domxref("WebSocketStream.closed", "closed")}} promise to resolve:
+
+```js
+const { closeCode, reason } = await wss.closed;
+```
 
 ## A complete sample client
 
