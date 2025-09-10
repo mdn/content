@@ -125,10 +125,13 @@ This module defines geometric utility methods that apply to the {{domxref("Text"
 ## Related concepts
 
 - {{cssxref("zoom")}}
-- {{glossary("CSSOM")}}
+- {{htmlelement("meta")}}
+
+### Glossary terms and definitions
+
+- {{glossary("CSSOM", "CSS object model (CSSOM)")}}
 - {{glossary("CSS pixel")}}
 - {{glossary("Scroll container")}}
-- {{htmlelement("meta")}}
 
 ## Specifications
 
@@ -137,6 +140,7 @@ This module defines geometric utility methods that apply to the {{domxref("Text"
 ## See also
 
 - [CSS Object Model (CSSOM)](/en-US/docs/Web/API/CSS_Object_Model) API
+- [CSS viewport](/en-US/docs/Web/CSS/CSS_viewport) module
 - [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
 - [CSS overscroll behavior](/en-US/docs/Web/CSS/CSS_overscroll_behavior) module
 - [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) module
