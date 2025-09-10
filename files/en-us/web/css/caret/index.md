@@ -203,7 +203,7 @@ span {
 
 #### Result
 
-{{EmbedLiveSample('Retro_terminal_with_animated_caret', 550, 150)}}
+{{EmbedLiveSample('Retro_terminal_with_animated_caret', 550, 170)}}
 
 ## Specifications
 

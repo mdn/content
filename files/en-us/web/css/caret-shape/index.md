@@ -192,7 +192,7 @@ span {
 
 #### Result
 
-{{EmbedLiveSample('Retro_terminal_with_animated_caret', 550, 150)}}
+{{EmbedLiveSample('Retro_terminal_with_animated_caret', 550, 170)}}
 
 ### Console interface with underscore caret
 
@@ -222,7 +222,6 @@ This example demonstrates using `caret-shape: underscore` to create a console-st
   font-family: monospace;
   padding: 1rem;
   border-radius: 4px;
-  max-width: 500px;
 }
 
 .console-output {
@@ -260,7 +259,7 @@ This example demonstrates using `caret-shape: underscore` to create a console-st
 
 #### Result
 
-{{EmbedLiveSample('Console_interface_with_underscore_caret', 550, 120)}}
+{{EmbedLiveSample('Console_interface_with_underscore_caret', 550, 100)}}
 
 ## Specifications
 
