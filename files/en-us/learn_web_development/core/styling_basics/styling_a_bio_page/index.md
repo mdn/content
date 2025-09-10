@@ -33,7 +33,7 @@ To begin, click the **Play** button in one of the code panels below to open the 
 <ul>
   <li>Email: <a href="mailto:jane@example.com">jane@example.com</a></li>
   <li>Web: <a href="http://example.com">http://example.com</a></li>
-  <li>Tel: <a href="tel:12345678"">123 45678</a></li>
+  <li>Tel: <a href="tel:12345678">123 45678</a></li>
 </ul>
 ```
 

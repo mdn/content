@@ -63,7 +63,7 @@ channelMessageButton.addEventListener("click", () => {
 targetFrame.postMessage("init", targetOrigin, [channel.port2]);
 ```
 
-The target can receive the port and start listening for messages on it using code like this:
+The target can receive the port and start listening for messages and message errors on it using code like this:
 
 ```js
 window.addEventListener("message", (event) => {
@@ -71,6 +71,10 @@ window.addEventListener("message", (event) => {
 
   myPort.addEventListener("message", (event) => {
     received.textContent = event.data;
+  });
+
+  myPort.addEventListener("messageerror", (event) => {
+    console.error(event.data);
   });
 
   myPort.start();
@@ -85,6 +89,10 @@ window.addEventListener("message", (event) => {
 
   myPort.onmessage = (event) => {
     received.textContent = event.data;
+  };
+
+  myPort.onmessageerror = (event) => {
+    console.error(event.data);
   };
 });
 ```

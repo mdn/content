@@ -3,10 +3,12 @@ title: "IdentityCredentialError: error property"
 short-title: error
 slug: Web/API/IdentityCredentialError/error
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.IdentityCredentialError.error
 ---
 
-{{APIRef("FedCM API")}}{{AvailableInWorkers}}
+{{APIRef("FedCM API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
 The **`error`** read-only property of the {{domxref("IdentityCredentialError")}} interface is either one of the values listed in the [OAuth 2.0 specified error list](https://datatracker.ietf.org/doc/html/rfc6749#section-4.1.2.1) or an arbitrary string giving more information about the error.
 

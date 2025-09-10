@@ -2,10 +2,12 @@
 title: IdentityCredentialError
 slug: Web/API/IdentityCredentialError
 page-type: web-api-interface
+status:
+  - experimental
 browser-compat: api.IdentityCredentialError
 ---
 
-{{APIRef("FedCM API")}}{{SecureContext_Header}}
+{{APIRef("FedCM API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`IdentityCredentialError`** interface of the {{domxref("FedCM API", "FedCM API", "", "nocode")}} describes an authentication error indicating that the user agent did not receive an identity assertion after the user has requested to use a federated account. This can happen if the client is unauthorized or if the server is temporarily unavailable, for example.
 
@@ -15,7 +17,7 @@ Browsers can use this error type to show the error message in the user interface
 
 ## Constructor
 
-- {{domxref("IdentityCredentialError.IdentityCredentialError", "IdentityCredentialError()")}}
+- {{domxref("IdentityCredentialError.IdentityCredentialError", "IdentityCredentialError()")}} {{experimental_inline}}
   - : Creates a new `IdentityCredentialError` object instance.
 
 ## Instance properties
