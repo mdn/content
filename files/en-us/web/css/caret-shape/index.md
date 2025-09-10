@@ -138,7 +138,6 @@ The key part is using the modern caret properties instead of the old border-base
 ```css hidden
 label {
   display: block;
-  margin-bottom: 8px;
   padding-left: 20px;
   font-weight: bold;
   font-family: monospace;
@@ -229,7 +228,6 @@ label {
   background: black;
   color: white;
   display: block;
-  margin-bottom: 8px;
   padding-left: 20px;
   font-weight: bold;
   font-family: monospace;
