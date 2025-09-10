@@ -127,7 +127,6 @@ This example shows how to create a vintage terminal interface using `caret-shape
     #123208 2px,
     #123208 4px
   );
-  width: 280px;
   height: 150px;
   border-radius: 25px;
   display: flex;

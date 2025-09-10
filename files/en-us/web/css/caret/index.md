@@ -148,7 +148,6 @@ This example creates a vintage terminal interface using the `caret` shorthand to
     #123208 2px,
     #123208 4px
   );
-  width: 280px;
   height: 150px;
   border-radius: 25px;
   display: flex;
