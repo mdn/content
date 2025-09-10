@@ -252,7 +252,6 @@ label {
 }
 
 .console-input {
-  padding-left: 1ch;
   display: flex;
   align-items: center;
 }
@@ -265,6 +264,7 @@ label {
   background: transparent;
   border: none;
   color: white;
+  padding-left: 1ch;
   font-family: inherit;
   outline: none;
   flex: 1;
