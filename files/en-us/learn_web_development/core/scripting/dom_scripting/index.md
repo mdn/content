@@ -259,9 +259,9 @@ There is another common way to dynamically manipulate styles on your document, w
 
 To add a class without removing existing ones, use the {{domxref("Element.classList()")}} method:
 
-  ```js
-  para.classList.add("highlight");
-  ```
+```js
+para.classList.add("highlight");
+```
 
 Choose `setAttribute()` when you need to overwrite all classes, or `classList.add()` to append new classes.
 
