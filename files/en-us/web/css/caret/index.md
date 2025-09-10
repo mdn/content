@@ -10,7 +10,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`caret`** [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets the appearance and behavior of the **insertion caret** in a single declaration. It is a shorthand for {{cssxref("caret-color")}}, {{cssxref("caret-animation")}}, and {{cssxref("caret-shape")}}.
+The **`caret`** [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets the appearance and behavior of the **insertion caret** in a single declaration.
 
 {{InteractiveExample("CSS Demo: caret")}}
 
