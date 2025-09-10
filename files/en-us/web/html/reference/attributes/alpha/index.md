@@ -14,11 +14,7 @@ The Boolean **`alpha`** attribute, valid only on the [`type="color"`](/en-US/doc
 ```html interactive-example
 <label for="no-alpha">Color input not using alpha:</label>
 
-<input 
-  type="color" 
-  id="no-alpha" 
-  name="no-alpha"
-  value="#ff0000" />
+<input type="color" id="no-alpha" name="no-alpha" value="#ff0000" />
 
 <label for="alpha">Color input using alpha:</label>
 
