@@ -278,7 +278,7 @@ label {
 
 #### Result
 
-{{EmbedLiveSample('Console_interface_with_underscore_caret', 550, 100)}}
+{{EmbedLiveSample('Console_interface_with_underscore_caret', 550, 115)}}
 
 ## Specifications
 
