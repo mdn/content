@@ -59,4 +59,3 @@ A Boolean which is `true` if the element is inert; otherwise, the value is `fals
 - {{HTMLElement("dialog")}}
 - {{domxref("HTMLInputElement.disabled", "disabled")}}
 - [Introducing inert](https://web.dev/articles/inert) on web.dev (2024)
-- [Inert Polyfill](https://github.com/WICG/inert)
