@@ -252,6 +252,7 @@ label {
 }
 
 .console-input {
+  padding-left: 1ch;
   display: flex;
   align-items: center;
 }
