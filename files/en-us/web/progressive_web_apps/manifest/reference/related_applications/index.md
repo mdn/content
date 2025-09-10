@@ -173,4 +173,4 @@ If your web app can be installed as a Progressive Web App (PWA) on the device, f
 
 - [`prefer_related_applications`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/prefer_related_applications) manifest member
 - [The web app manifest](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#the_web_app_manifest) for making your web app installable
-- {{domxref("Navigator.getInstalledRelatedApps()")}} for checking if your related native application or web app is installed.
+- {{domxref("Navigator.getInstalledRelatedApps()")}} for checking if your related platform-specific version of the web app or web app itself are installed.
