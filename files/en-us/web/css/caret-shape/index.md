@@ -194,6 +194,74 @@ span {
 
 {{EmbedLiveSample('Retro_terminal_with_animated_caret', 550, 150)}}
 
+### Console interface with underscore caret
+
+This example demonstrates using `caret-shape: underscore` to create a console-style interface where the underscore caret complements the terminal aesthetic.
+
+#### HTML
+
+```html
+<div class="console-demo">
+  <div class="console-output">
+    <div>user@host:css-ui-4 $ ls -a</div>
+    <div>. .. Overview.bs Overview.html</div>
+  </div>
+  <div class="console-input">
+    <span class="prompt">user@host:css-ui-4 $ </span>
+    <input type="text" class="console" placeholder="Enter command..." />
+  </div>
+</div>
+```
+
+#### CSS
+
+```css hidden
+.console-demo {
+  background: black;
+  color: white;
+  font-family: monospace;
+  padding: 1rem;
+  border-radius: 4px;
+  max-width: 500px;
+}
+
+.console-output {
+  margin-bottom: 0.5rem;
+}
+
+.console-output div {
+  margin-bottom: 0.25rem;
+}
+
+.console-input {
+  display: flex;
+  align-items: center;
+}
+
+.prompt {
+  margin-right: 0;
+}
+
+.console {
+  background: transparent;
+  border: none;
+  color: white;
+  font-family: inherit;
+  outline: none;
+  flex: 1;
+}
+```
+
+```css
+.console {
+  caret-shape: underscore;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample('Console_interface_with_underscore_caret', 550, 120)}}
+
 ## Specifications
 
 {{Specifications}}
