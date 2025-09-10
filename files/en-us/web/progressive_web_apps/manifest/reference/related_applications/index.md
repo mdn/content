@@ -10,7 +10,10 @@ sidebar: pwasidebar
 
 {{SeeCompatTable}}
 
-The `related_applications` manifest member is used to specify one or more applications that are related to your web application, such as platform-specific applications (also known as native applications) or installed Progressive Web Apps.
+The `related_applications` manifest member is used to specify one or more applications that are related to your web application. These may be platform-specific applications or Progressive Web Apps.
+
+This enables you to use web APIs like {{domxref("Navigator.getInstalledRelatedApps()")}} to check whether a platform-specific version of your web app, or your web app itself, is already installed on the device.
+
 The `related_applications` manifest member can also be used with the [`prefer_related_applications`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/prefer_related_applications) manifest member, which indicates a preference for installing either a related native application or your web application.
 
 ## Syntax
