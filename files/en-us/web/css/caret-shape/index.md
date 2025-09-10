@@ -220,7 +220,8 @@ This example demonstrates using `caret-shape: underscore` to create a console-st
   background: black;
   color: white;
   font-family: monospace;
-  padding: 1rem;
+  padding: 20px;
+  height: 60px;
   border-radius: 4px;
 }
 
