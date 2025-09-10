@@ -227,7 +227,7 @@ This example demonstrates using `caret-shape: underscore` to create a console-st
 
 ```css hidden
 label {
-  background: black;
+  background: #2a2a2c;
   color: white;
   display: block;
   padding: 10px 20px;
