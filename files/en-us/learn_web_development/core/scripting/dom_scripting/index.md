@@ -255,7 +255,7 @@ There is another common way to dynamically manipulate styles on your document, w
    ```
 
 > [!NOTE]
-> The {{domxref("Element.setAttribute()")}} method replaces the entire value of an attribute. When used on the class attribute, it removes all existing class names and sets the new value, which may change the element’s appearance.
+> The {{domxref("Element.setAttribute()")}} method replaces the entire value of an attribute. When used on the class attribute, it removes all existing class names and sets the new value, which may change the element's appearance.
 
 To add a class without removing existing ones, use the {{domxref("Element.classList()")}} method:
 
