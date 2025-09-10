@@ -218,107 +218,81 @@ input:focus {
 
 {{EmbedLiveSample('Basic_caret_customization', 500, 250)}}
 
-### Retro terminal interface
+### Retro terminal with animated caret
 
-This example creates a retro computer terminal interface using the `caret` shorthand.
+This example creates a vintage terminal interface using the `caret` shorthand to combine multiple caret properties, demonstrating how it replaces older border-based techniques.
 
 #### HTML
 
-```html live-sample___retro-terminal
-<div class="retro-terminal">
-  <div class="terminal-screen">
-    <div class="terminal-header">RETRO COMPUTER v1.0</div>
-    <div class="terminal-body">
-      <div class="output-line">Welcome to RetroOS</div>
-      <div class="output-line">Type commands below:</div>
-      <div class="input-line">
-        <span class="prompt">C:\></span>
-        <input
-          type="text"
-          class="terminal-input"
-          placeholder="Enter command..." />
-      </div>
-    </div>
-  </div>
+```html
+<div class="old-screen">
+  <span>></span>
+  <input type="text" class="terminal-input" placeholder="Enter command..." />
 </div>
 ```
 
 #### CSS
 
-```css hidden live-sample___retro-terminal
-.retro-terminal {
-  background: linear-gradient(145deg, #2a2a2a 0%, #1a1a1a 100%);
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow:
-    inset 0 0 20px rgba(0, 255, 0, 0.1),
-    0 0 30px rgba(0, 0, 0, 0.5);
-  max-width: 600px;
-  margin: 20px auto;
-}
-
-.terminal-screen {
-  background: #001100;
-  border: 3px solid #333;
-  border-radius: 8px;
-  padding: 0;
-  font-family: "Courier New", monospace;
-  color: #00ff41;
-  box-shadow: inset 0 0 10px rgba(0, 255, 0, 0.2);
-}
-
-.terminal-header {
-  background: #333;
-  color: #ccc;
-  padding: 8px 15px;
-  font-size: 0.9rem;
-  border-bottom: 2px solid #555;
-  text-align: center;
-}
-
-.terminal-body {
-  padding: 15px;
-  min-height: 150px;
-}
-
-.output-line {
-  margin-bottom: 8px;
-  font-size: 1rem;
-}
-
-.input-line {
+```css hidden
+.old-screen {
+  background: repeating-linear-gradient(
+    #092104,
+    #092104 2px,
+    #123208 2px,
+    #123208 4px
+  );
+  inline-size: 100%;
+  block-size: 250px;
+  border-radius: 25px;
   display: flex;
-  align-items: center;
-  margin-top: 10px;
+  align-items: flex-start;
+  padding: 20px;
+  font-family: monospace;
 }
 
-.prompt {
-  margin-right: 8px;
+span {
+  display: inline-block;
+  padding: 2px 5px;
+  color: green;
   font-weight: bold;
-}
-
-.terminal-input::placeholder {
-  color: #006600;
+  margin-right: 8px;
 }
 ```
 
-```css live-sample___retro-terminal
+```css
 .terminal-input {
   background: transparent;
   border: none;
-  color: #00ff41;
+  color: green;
   font-family: inherit;
   font-size: 1rem;
   outline: none;
   flex: 1;
-  /* Using caret shorthand for retro block cursor */
-  caret: block manual #00ff41;
+
+  /* Using caret shorthand: shape + animation + color */
+  caret: block manual green;
+  animation: vintage-caret 2s infinite;
+}
+
+.terminal-input::placeholder {
+  color: #4a6741;
+}
+
+@keyframes vintage-caret {
+  from,
+  50% {
+    caret-color: green;
+  }
+  75%,
+  to {
+    caret-color: transparent;
+  }
 }
 ```
 
 #### Result
 
-{{EmbedLiveSample('retro-terminal', 650, 250)}}
+{{EmbedLiveSample('Retro_terminal_with_animated_caret', 550, 280)}}
 
 ### Animation with custom caret
 
