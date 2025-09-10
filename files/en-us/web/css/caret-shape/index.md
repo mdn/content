@@ -32,12 +32,18 @@ caret-shape: underscore;
 
 ```html interactive-example
 <section class="default-example container" id="default-example">
-  <label for="example-element">Edit me to see the bar caret:</label>
-  <input id="example-element" type="text" value="Sample text" />
+  <div>
+    <label for="example-element">Edit text field:</label>
+    <input id="example-element" type="text" value="Sample text" />
+  </div>
 </section>
 ```
 
 ```css interactive-example
+label {
+  text-align: left;
+}
+
 #example-element {
   font-size: 1.2rem;
   padding: 8px;
