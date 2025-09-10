@@ -67,7 +67,7 @@ caret-shape: unset;
 ### Values
 
 - `auto`
-  - : The browser determines the caret shape. This typically follows platform conventions and may change based on context (e.g., insert mode vs. overtype mode).
+  - : The default value. The browser determines the caret shape. This typically follows platform conventions and may change based on context.
 
 - `bar`
   - : The caret appears as a thin vertical line at the insertion point, positioned between characters rather than over them.
@@ -80,15 +80,24 @@ caret-shape: unset;
 
 ## Description
 
-The insertion caret is the blinking cursor that indicates where text will be inserted when typing. Different caret shapes can provide visual feedback about the current editing mode or offer visual customization.
+The insertion caret is the blinking cursor that indicates where text will be inserted when typing. Different caret shapes can provide visual feedback about the current editing mode or simply offer aesthetic customization.
+
+### Editing modes and caret shapes
+
+Text editors typically operate in one of two modes:
+
+- **Insert mode**: New characters are inserted at the caret position, pushing existing text to the right. This is the default behavior in most modern applications.
+- **Overtype mode** (also called "overwrite mode"): New characters replace existing characters at the caret position instead of inserting between them. This mode is often toggled with the Insert key.
+
+Different caret shapes have traditional uses, such as:
+
+- **Bar carets** are positioned between characters and are most common in modern interfaces.
+- **Block carets** overlay the next character and are often used in terminal applications or to indicate overtype mode.
+- **Underscore carets** appear below characters and can be useful for certain design aesthetics, such as mimicking typewriter or underline text input styles.
 
 ### Caret positioning and behavior
 
-The `caret-shape` property affects how the caret is visually rendered but doesn't change its logical position in the text. The caret always represents the insertion point between characters.
-
-- **Bar carets** are positioned between characters and are most common in modern interfaces
-- **Block carets** overlay the next character and are often used in terminal applications or to indicate overtype mode
-- **Underscore carets** appear below characters and can be useful for certain design aesthetics
+The `caret-shape` property affects how the caret is visually rendered but doesn't change its logical position in the text. The caret always represents the insertion point between characters, regardless of its visual shape.
 
 ### Interaction with writing modes
 
@@ -107,6 +116,8 @@ The caret shape adapts to the {{cssxref("writing-mode")}} of the text. In vertic
 ### Retro terminal with animated caret
 
 This example shows how to create a vintage terminal interface using `caret-shape: block` with animated caret color, replacing the old technique of using borders.
+
+The key part is using the modern caret properties instead of the old border-based technique. We set the caret to block shape, disable the default blinking, and create our own custom animation.
 
 #### HTML
 
@@ -162,7 +173,6 @@ span {
 
 ```css
 .terminal-input {
-  /* Modern approach using caret properties */
   caret-shape: block;
   caret-animation: manual;
   animation: old-caret 2s infinite;
