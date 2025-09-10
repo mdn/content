@@ -64,7 +64,7 @@ The `related_applications` manifest member can also be used with the [`prefer_re
   - : An array of objects, each representing a platform-specific application related to the web app. Each object must include a `platform` property and a `url` or an `id` (or both).
     - `platform`
       - : A string that identifies the platform on which the application can be found.
-        Examples include `amazon` (Amazon App Store), `play` (Google Play Store), `windows` (Windows Store), and `webapp` (for installed Progressive Web Apps).
+        Examples include `amazon` (Amazon App Store), `play` (Google Play Store), `windows` (Windows Store), and `webapp` (for Progressive Web Apps).
         See the complete list of possible [platform values](https://github.com/w3c/manifest/wiki/Platforms).
     - `url` {{Optional_Inline}}
       - : A string that represents the URL at which the platform-specific application can be found.
@@ -173,4 +173,4 @@ If your web app can be installed as a Progressive Web App (PWA) on the device, f
 
 - [`prefer_related_applications`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/prefer_related_applications) manifest member
 - [The web app manifest](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#the_web_app_manifest) for making your web app installable
-- {{domxref("Navigator.getInstalledRelatedApps()")}} for checking if your web app is installed. This requires specification of the unique `id` field in this manifest member.
+- {{domxref("Navigator.getInstalledRelatedApps()")}} for checking if your related native application or web app is installed.
