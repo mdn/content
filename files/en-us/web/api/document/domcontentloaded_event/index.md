@@ -57,7 +57,16 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 ### Checking whether loading is already complete
 
-`DOMContentLoaded` may fire before your script has a chance to run, so it is wise to check before adding a listener.
+Sometimes your script may run after the `DOMContentLoaded` event has already fired. This typically happens when the script runs asynchronously. Common scenarios include:
+
+- A module that is dynamically imported after the document is already loaded.
+- A script that is included via `<script async>`.
+- A script that is dynamically injected into the page.
+- Code that resumes after an asynchronous operation, such as `await fetch(...)`, including after a top-level await in a module.
+
+In these cases, you should check the document's `readyState` before adding a `DOMContentLoaded` listener, or your setup logic may not execute at all. For synchronous scripts (without `async`) that are already present in the initial markup, this situation does not occur. The document waits for the script to execute before firing `DOMContentLoaded`, so you are always sure that setup logic in the listener will be executed.
+
+Consider the following script file in isolation:
 
 ```js
 function doSomething() {
@@ -73,8 +82,13 @@ if (document.readyState === "loading") {
 }
 ```
 
+The script can't enforce how it's included by the HTML. If it's included via `<script async>`, or it's dynamically injected, then by the time it executes, `DOMContentLoaded` has already fired. To ensure that `doSomething()` always runs when the script loads, we need to have two paths, one that immediately runs `doSomething` if the document is already loaded, and another that runs `doSomething` once the document is loaded.
+
 > [!NOTE]
 > There's no race condition here — it's not possible for the document to be loaded between the `if` check and the `addEventListener()` call. JavaScript has run-to-completion semantics, which means if the document is loading at one particular tick of the event loop, it can't become loaded until the next cycle, at which time the `doSomething` handler is already attached and will be fired.
+
+> [!NOTE]
+> `document.readyState` is set to `"interactive"` after the completion of the HTML parser but before the execution of scripts with `defer` or `type="module"`. `DOMContentLoaded` is fired after the execution of these scripts, but before the execution of scripts with `async`. `document.readyState` is set to `"complete"` after the execution of async scripts. This means that during the execution of deferred and module scripts, `document.readyState` is `"interactive"` but it's still possible to attach `DOMContentLoaded` listeners and make them fire as usual. In practice, executing `doSomething()` a little earlier is fine unless it relies on some global state set up by other deferred/module scripts.
 
 ### Live example
 
