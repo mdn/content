@@ -166,6 +166,7 @@ span {
 
 .terminal-input {
   background: transparent;
+  height: 100%;
   border: none;
   color: green;
   font-family: inherit;
