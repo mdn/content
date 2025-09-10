@@ -138,15 +138,22 @@ The main advantage of the `caret` shorthand is combining multiple properties in 
 #### HTML
 
 ```html
+<label for="terminal">Enter a command</label>
 <div class="old-screen">
   <span>></span>
-  <textarea class="terminal-input" placeholder=""></textarea>
+  <textarea id="terminal" class="terminal-input" placeholder=""></textarea>
 </div>
 ```
 
 #### CSS
 
 ```css hidden
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
 .old-screen {
   background: repeating-linear-gradient(
     #092104,

@@ -126,9 +126,10 @@ The key part is using the modern caret properties instead of the old border-base
 #### HTML
 
 ```html
+<label for="terminal">Enter terminal command</label>
 <div class="old-screen">
   <span>></span>
-  <textarea class="terminal-input" placeholder=""></textarea>
+  <textarea id="terminal" class="terminal-input" placeholder=""></textarea>
 </div>
 ```
 
@@ -204,6 +205,7 @@ This example demonstrates using `caret-shape: underscore` to create a console-st
 #### HTML
 
 ```html
+<label for="console">Enter a command</label>
 <div class="console-demo">
   <div class="console-output">
     <p>user@host:css-ui-4 $ ls -a</p>
@@ -211,7 +213,7 @@ This example demonstrates using `caret-shape: underscore` to create a console-st
   </div>
   <div class="console-input">
     <span class="prompt">user@host:css-ui-4 $ </span>
-    <input type="text" class="console" placeholder="" />
+    <input type="text" id="console" class="console" placeholder="" />
   </div>
 </div>
 ```
@@ -219,6 +221,13 @@ This example demonstrates using `caret-shape: underscore` to create a console-st
 #### CSS
 
 ```css hidden
+label {
+  font-family: monospace;
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
 .console-demo {
   background: black;
   color: white;
