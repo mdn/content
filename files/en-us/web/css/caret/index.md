@@ -86,14 +86,14 @@ The `caret` property is specified as one, two, or three values from the constitu
 
 The values correspond to the constituent properties:
 
-- {{cssxref("&lt;color&gt;")}} (for `caret-color`)
-  - : Sets the color of the caret. See {{cssxref("caret-color")}} for details.
+- {{cssxref("caret-color")}}
+  - : Sets the color of the caret.
 
-- `auto` | `manual` (for `caret-animation`)
-  - : Controls whether the caret blinks. See {{cssxref("caret-animation")}} for details.
+- {{cssxref("caret-animation")}}
+  - : Controls whether the caret blinks.
 
-- `auto` | `bar` | `block` | `underscore` (for `caret-shape`)
-  - : Sets the visual shape of the caret. See {{cssxref("caret-shape")}} for details.
+- {{cssxref("caret-shape")}}
+  - : Sets the visual shape of the caret.
 
 ## Description
 
