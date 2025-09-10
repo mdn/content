@@ -103,9 +103,9 @@ The `caret` shorthand allows you to set multiple caret properties in a single de
 
 When values are omitted from the shorthand, they reset to their initial values:
 
-- `caret-color`: `auto` (resolves to `currentColor`)
-- `caret-animation`: `auto` (caret blinks)
-- `caret-shape`: `auto` (browser-determined shape)
+- `caret-color`: `auto` (resolves to `currentColor`).
+- `caret-animation`: `auto` (caret blinks).
+- `caret-shape`: `auto` (browser-determined shape).
 
 ### Order independence
 
