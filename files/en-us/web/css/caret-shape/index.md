@@ -104,50 +104,44 @@ The caret shape adapts to the writing mode of the text. In vertical writing mode
 
 ## Examples
 
-### Terminal-style interface
+### Retro terminal with animated caret
 
-This example shows how `caret-shape: block` can be used to create a terminal or command-line interface appearance.
+This example shows how to create a vintage terminal interface using `caret-shape: block` with animated caret color, replacing the old technique of using borders.
 
 #### HTML
 
 ```html
-<div class="terminal">
-  <div class="terminal-header">Terminal</div>
-  <div class="terminal-content">
-    <div class="prompt">
-      user@computer:~$ <input type="text" class="terminal-input" />
-    </div>
-  </div>
+<div class="old-screen">
+  <span>></span>
+  <input type="text" class="terminal-input" placeholder="Enter command..." />
 </div>
 ```
 
 #### CSS
 
 ```css hidden
-.terminal {
-  background-color: #1e1e1e;
-  color: #00ff00;
-  font-family: "Courier New", monospace;
-  border-radius: 8px;
-  overflow: hidden;
-  width: 500px;
-  margin: 20px 0;
-}
-
-.terminal-header {
-  background-color: #333;
-  padding: 8px 12px;
-  font-size: 0.9rem;
-  border-bottom: 1px solid #555;
-}
-
-.terminal-content {
-  padding: 12px;
-}
-
-.prompt {
+.old-screen {
+  background: repeating-linear-gradient(
+    #092104,
+    #092104 2px,
+    #123208 2px,
+    #123208 4px
+  );
+  inline-size: 100%;
+  block-size: 250px;
+  border-radius: 25px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  padding: 20px;
+  font-family: monospace;
+}
+
+span {
+  display: inline-block;
+  padding: 2px 5px;
+  color: green;
+  font-weight: bold;
+  margin-right: 8px;
 }
 ```
 
@@ -155,20 +149,37 @@ This example shows how `caret-shape: block` can be used to create a terminal or 
 .terminal-input {
   background: transparent;
   border: none;
-  color: #00ff00;
+  color: green;
   font-family: inherit;
   font-size: 1rem;
   outline: none;
   flex: 1;
-  /* Block caret for terminal appearance */
+
+  /* Modern approach using caret properties */
   caret-shape: block;
-  caret-color: #00ff00;
+  caret-animation: manual;
+  animation: old-caret 2s infinite;
+}
+
+.terminal-input::placeholder {
+  color: #4a6741;
+}
+
+@keyframes old-caret {
+  from,
+  50% {
+    caret-color: green;
+  }
+  75%,
+  to {
+    caret-color: transparent;
+  }
 }
 ```
 
 #### Result
 
-{{EmbedLiveSample('Terminal-style_interface', 550, 120)}}
+{{EmbedLiveSample('Retro_terminal_with_animated_caret', 550, 280)}}
 
 ## Specifications
 
