@@ -20,7 +20,7 @@ width: abs(20% - 100px);
 The `abs( <calc-sum> )` function accepts one value as its parameter:
 
 - `<calc-sum>`
-  - : An expression, or calculation, which resolves to a {{cssxref("number")}}, {{cssxref("length")}}, {{cssxref("percentage")}} or a {{cssxref("calc-keyword").
+  - : An expression or calculation that resolves to a {{cssxref("number")}}, a {{cssxref("dimension")}}, a {{cssxref("percentage")}} or a {{cssxref("calc-keyword")}}.
 
 ### Return value
 
