@@ -32,7 +32,7 @@ These attributes are [enumerated](/en-US/docs/Glossary/Enumerated), and have the
   type="color"
   id="p3"
   name="p3"
-  colorspace="display-p3" 
+  colorspace="display-p3"
   value="oklab(50% 0.1 0.1 / 0.5)" />
 ```
 
