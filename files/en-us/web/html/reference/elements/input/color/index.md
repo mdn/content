@@ -261,3 +261,4 @@ The final result looks like this:
 ## Browser compatibility
 
 {{Compat}}
+  

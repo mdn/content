@@ -20,6 +20,8 @@ Firefox 143 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- ### HTML -->
 
+- The [`type="color"`](/en-US/docs/Web/HTML/Reference/Elements/input/color) {{HTMLElement("input")}} element now accepts all CSS [`<color>`](/en-US/docs/Web/CSS/color_value) values. ([Firefox bug 1965029](https://bugzil.la/1965029)).
+
 <!-- No notable changes. -->
 
 <!-- #### Removals -->
