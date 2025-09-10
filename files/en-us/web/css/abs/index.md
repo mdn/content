@@ -32,8 +32,8 @@ The parameter is:
 
 The absolute value of `<calc-sum>`.
 
-- if `<calc-sum>`'s numeric value is positive or `0⁺`, return `<calc-sum>`.
-- Otherwise, returns `-1 * <calc-sum>`.
+- If `<calc-sum>`'s numeric value is positive or `0⁺`, the function returns `<calc-sum>`.
+- Otherwise, it returns `-1 * <calc-sum>`.
 
 ## Formal syntax
 
