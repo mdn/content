@@ -58,6 +58,7 @@ To mitigate problems with third-party dependencies, we'll discuss two practices:
 
 1. Keeping an inventory of dependencies, and using it to monitor them for vulnerabilities.
 2. Defining and following a process for adding new dependencies.
+3. Using Subresource Integrity for external scripts.
 
 ### Keeping an inventory
 
@@ -109,6 +110,32 @@ Before adding any new dependencies, you should assess how much of a security ris
 
 The [Concise Guide for Evaluating Open Source Software](https://best.openssf.org/Concise-Guide-for-Evaluating-Open-Source-Software), published by the [OpenSSF](https://openssf.org/), lists questions you should ask before adding a new dependency.
 
+### Using Subresource Integrity
+
+Many websites include externally hosted scripts: most notably, but not exclusively, scripts that are served from a {{glossary("CDN", "Content Delivery Network (CDN)")}}:
+
+```html
+<script src="https://cdn.example.org/library.js"></script>
+```
+
+This represents a risk to your supply chain: if an attacker can get control of the `cdn.example.org` domain, they can replace the script with a malicious script, and thus compromise your site.
+
+External scripts, like other software dependencies, should be part of your SBOM, but an additional defense is to set the script's [`integrity`](/en-US/docs/Web/HTML/Reference/Elements/script#integrity) attribute:
+
+```html
+<script
+  src="https://cdn.example.org/library.js"
+  integrity="sha256-d5f450f7ce715d827de27ca569e183f819d33c1e7601875fd61eccbc98f56c5b"></script>
+```
+
+The value of this attribute contains a {{glossary("hash_function", "cryptographic hash")}} of the script's contents. If the script has been modified by an attacker, then the browser will refuse to load it, and you will be protected.
+
+This does add an extra maintenance burden: every time the source changes (for example, every time a new version is released) you must update the attribute's value in your code.
+
+The {{htmlelement("link")}} element also supports the `integrity` attribute, so you can (and should) use it for CSS stylesheets as well as scripts.
+
+See [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity) for more details.
+
 ## Defense summary checklist
 
 - Require {{glossary("multi-factor authentication")}} for team members and minimize permissions granted.
@@ -116,6 +143,7 @@ The [Concise Guide for Evaluating Open Source Software](https://best.openssf.org
 - Ensure pull requests go through review and pass {{glossary("continuous integration")}} checks
 - Keep an inventory (SBOM) of dependencies
 - Define a process for managing, updating, monitoring dependencies
+- Use Subresource Integrity for externally referenced scripts and stylesheets
 - Lock dependency versions (`package-lock.json`)
 
 ## See also
