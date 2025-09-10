@@ -204,6 +204,4 @@ span {
 
 ## See also
 
-- {{cssxref("caret-color")}} - Sets the color of the caret
-- {{cssxref("caret-animation")}} - Controls caret blinking behavior
-- {{cssxref("caret")}} - Shorthand for all caret properties
+- {{cssxref("caret-color")}}, {{cssxref("caret-animation")}}, {{cssxref("caret")}}

@@ -282,6 +282,4 @@ This example shows how to combine the `caret` shorthand with CSS animations for 
 
 ## See also
 
-- {{cssxref("caret-color")}} - Sets the color of the insertion caret
-- {{cssxref("caret-animation")}} - Controls caret blinking behavior
-- {{cssxref("caret-shape")}} - Sets the shape of the insertion caret
+- {{cssxref("caret-color")}}, {{cssxref("caret-animation")}}, {{cssxref("caret-shape")}}
