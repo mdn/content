@@ -61,7 +61,7 @@ The `related_applications` manifest member can also be used with the [`prefer_re
 ### Values
 
 - `related_applications`
-  - : An array of objects, each representing a platform-specific application related to the web app. Each object must include a `platform` property and at least one of either a `url` or an `id` (or both).
+  - : An array of objects, each representing a platform-specific application related to the web app. Each object must include a `platform` property and a `url` or an `id` (or both).
     - `platform`
       - : A string that identifies the platform on which the application can be found.
         Examples include `amazon` (Amazon App Store), `play` (Google Play Store), `windows` (Windows Store), and `webapp` (for installed Progressive Web Apps).
