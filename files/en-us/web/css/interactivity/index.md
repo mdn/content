@@ -9,7 +9,7 @@ browser-compat: css.properties.interactivity
 
 {{CSSRef}}{{seecompattable}}
 
-The **`interactivity`** [CSS](/en-US/docs/Web/CSS) property specifies whether an element and its descendant nodes are inert or not.
+The **`interactivity`** [CSS](/en-US/docs/Web/CSS) property specifies whether an element and its descendant nodes are set to [`inert`](/en-US/docs/Web/HTML/Reference/Global_attributes/inert).
 
 ## Syntax
 
