@@ -49,7 +49,7 @@ The `related_applications` manifest member can also be used with the [`prefer_re
   }
 ]
 
-/* Related web application specified by id, self-defined by its own web app manifest*/
+/* Related web application specified by id */
 "related_applications": [
   {
     "platform": "webapp",
