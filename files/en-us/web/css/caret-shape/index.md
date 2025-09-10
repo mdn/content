@@ -113,7 +113,7 @@ This example shows how to create a vintage terminal interface using `caret-shape
 ```html
 <div class="old-screen">
   <span>></span>
-  <input type="text" class="terminal-input" placeholder="Enter command..." />
+  <textarea class="terminal-input" placeholder="Enter command..."></textarea>
 </div>
 ```
 
@@ -127,8 +127,8 @@ This example shows how to create a vintage terminal interface using `caret-shape
     #123208 2px,
     #123208 4px
   );
-  width: 300px;
-  height: 200px;
+  width: 280px;
+  height: 150px;
   border-radius: 25px;
   display: flex;
   align-items: flex-start;
@@ -143,9 +143,7 @@ span {
   font-weight: bold;
   margin-right: 8px;
 }
-```
 
-```css
 .terminal-input {
   background: transparent;
   border: none;
@@ -154,15 +152,20 @@ span {
   font-size: 1rem;
   outline: none;
   flex: 1;
-
-  /* Modern approach using caret properties */
-  caret-shape: block;
-  caret-animation: manual;
-  animation: old-caret 2s infinite;
+  resize: none;
 }
 
 .terminal-input::placeholder {
   color: #4a6741;
+}
+```
+
+```css
+.terminal-input {
+  /* Modern approach using caret properties */
+  caret-shape: block;
+  caret-animation: manual;
+  animation: old-caret 2s infinite;
 }
 
 @keyframes old-caret {
