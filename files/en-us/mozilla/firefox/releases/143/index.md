@@ -20,6 +20,8 @@ Firefox 143 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- ### HTML -->
 
+- The [`type="color"`](/en-US/docs/Web/HTML/Reference/Elements/input/color) {{HTMLElement("input")}} element now accepts not only HEX colors like `#ff6699` but also all CSS [`<color>`](/en-US/docs/Web/CSS/color_value) values, for example `oklab(50% 0.1 0.1 / 0.5)`. ([Firefox bug 1965029](https://bugzil.la/1965029)).
+
 <!-- No notable changes. -->
 
 <!-- #### Removals -->
@@ -28,6 +30,8 @@ Firefox 143 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 - The {{cssxref("::details-content")}} pseudo-element is now enabled by default. It lets you style the content of the {{htmlElement("details")}} element.
   ([Firefox bug 1941406](https://bugzil.la/1941406)).
+- Multi-pass grid track sizing is now enabled by default and follows the algorithm outlined in the CSS Grid specification. In the multi-pass algorithm, columns are sized first, then rows; percentage values are resolved after the container size is known. With this default support, [percentage-based](/en-US/docs/Web/CSS/grid-template-rows#percentage) row tracks and grid items with aspect ratios will now be sized correctly in more cases.
+  ([Firefox bug 1957244](https://bugzil.la/1957244)).
 
 <!-- #### Removals -->
 

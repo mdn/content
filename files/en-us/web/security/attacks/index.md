@@ -21,3 +21,5 @@ This page links to pages explaining how some common attacks work, and how they c
   - : In a Manipulator in the Middle (MITM) attack, the attacker inserts themselves between the user's browser and the server, and can see and potentially modify any of the traffic exchanged over HTTP.
 - [Supply chain attacks](/en-US/docs/Web/Security/Attacks/Supply_chain_attacks)
   - : In a supply chain attack, the attacker compromises part of the site's supply chain, such as any third-party dependencies that it uses.
+- [Subdomain takeover](/en-US/docs/Web/Security/Attacks/Subdomain_takeover)
+  - : In a subdomain takeover attack, the attacker gains control over a subdomain of a target domain.

@@ -76,26 +76,34 @@ The tooltip should appear on focus or when the element is hovered on, without ad
 The tooltip can be instantiated with CSS. Change the class name with JavaScript to a class that hides the tooltip if the user hits the <kbd>Escape</kbd> key.
 
 ```css
-[role="tooltip"],
-.hide-tooltip.hide-tooltip.hide-tooltip + [role="tooltip"] {
+[role="tooltip"] {
   visibility: hidden;
   position: absolute;
   top: 2rem;
   left: 2rem;
   background: black;
   color: white;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  /* Give some time before hiding so mouse can exit the input
+  and enter the tooltip */
+  transition: visibility 0.5s;
 }
 [aria-describedby]:hover,
 [aria-describedby]:focus {
   position: relative;
 }
 [aria-describedby]:hover + [role="tooltip"],
-[aria-describedby]:focus + [role="tooltip"] {
+[aria-describedby]:focus + [role="tooltip"],
+[role="tooltip"]:hover,
+[role="tooltip"]:focus {
   visibility: visible;
 }
 ```
 
-The above hides the tooltip with CSS in the default state or if the `hide-tooltip` class has been added with JavaScript (when the user hit <kbd>Escape</kbd>), with high specificity to ensure the tooltip doesn't show. When the owning element receives focus, it gets positioned relatively and the tooltip becomes visible.
+{{EmbedLiveSample("examples", "", 300)}}
+
+The above hides the tooltip with CSS in the default state or if the `hide-tooltip` class has been added with JavaScript (when the user hit <kbd>Escape</kbd>), with high specificity to ensure the tooltip doesn't show. When the owning element receives focus, it gets positioned relatively and the tooltip becomes visible. We keep the tooltip visible when hovering over the tooltip, consistent with [WCAG 1.4.13](#accessibility_concerns). Here, we allow the cursor to move from the input to the tooltip without the latter disappearing by waiting 0.5s in between; there are other ways to achieve this, such as filling the gap with a transparent element that also keeps the tooltip visible when hovered over.
 
 ## Accessibility concerns
 

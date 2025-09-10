@@ -88,6 +88,7 @@ question-box::part(checkbox) {
 
 question-box::part(checkbox):state(checked) {
   color: green;
+  outline: dashed 1px green;
 }
 ```
 
