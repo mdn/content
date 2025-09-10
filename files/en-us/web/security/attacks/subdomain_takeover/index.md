@@ -1,6 +1,6 @@
 ---
-title: Subdomain takeovers
-slug: Web/Security/Subdomain_takeovers
+title: Subdomain takeover
+slug: Web/Security/Attacks/Subdomain_takeover
 page-type: guide
 sidebar: security
 ---
@@ -33,7 +33,7 @@ You take down your virtual host, but an attacker sets up a new virtual host usin
 
 You (or your company) decide that you no longer want to maintain a blog, so you remove the virtual host from the hosting provider. However, if you don't remove the DNS entry that points to the hosting provider, an attacker can now create their own virtual host with that provider, claim your subdomain, and host their own content under that subdomain.
 
-## How can I prevent them?
+## Defenses against Subdomain takeover
 
 Preventing subdomain takeovers is a matter of order of operations in lifecycle management for virtual hosts and DNS. Depending on the size of the organization, this may require communication and coordination across multiple departments, which can only increase the likelihood for a vulnerable misconfiguration.
 
