@@ -182,7 +182,7 @@ However, this kind of structure doesn't help with main thread blocking. Since al
 To handle this, we tend to run a "yield" function periodically to get the code to _yield to the main thread_. This means that our code is split into multiple tasks, between the execution of which the browser is given the opportunity to handle high-priority tasks such as updating the UI. A common pattern for this function uses {{domxref("Window.setTimeout", "setTimeout()")}} to postpone execution into a separate task:
 
 ```js
-function yield() {
+function yieldFunc() {
   return new Promise((resolve) => {
     setTimeout(resolve, 0);
   });
@@ -205,7 +205,7 @@ async function main() {
     task();
 
     // Yield to the main thread
-    await yield();
+    await yieldFunc();
   }
 }
 ```
@@ -213,7 +213,7 @@ async function main() {
 To improve this further, we can use {{domxref("Scheduler.yield()")}} where available to allow this code to continue executing ahead of other less critical tasks in the queue:
 
 ```js
-function yield() {
+function yieldFunc() {
   // Use scheduler.yield() if available
   if ("scheduler" in window && "yield" in scheduler) {
     return scheduler.yield();
