@@ -137,8 +137,10 @@ The key part is using the modern caret properties instead of the old border-base
 
 ```css hidden
 label {
+  background: #092104;
   display: block;
-  padding-left: 20px;
+  padding: 10px 20px;
+  color: green;
   font-weight: bold;
   font-family: monospace;
 }
@@ -228,7 +230,7 @@ label {
   background: black;
   color: white;
   display: block;
-  padding-left: 20px;
+  padding: 10px 20px;
   font-weight: bold;
   font-family: monospace;
 }

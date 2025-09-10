@@ -149,8 +149,10 @@ The main advantage of the `caret` shorthand is combining multiple properties in 
 
 ```css hidden
 label {
+  background: #092104;
   display: block;
-  padding-left: 20px;
+  padding: 10px 20px;
+  color: green;
   font-weight: bold;
   font-family: monospace;
 }
