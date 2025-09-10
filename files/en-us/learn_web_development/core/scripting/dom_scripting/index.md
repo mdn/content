@@ -255,15 +255,11 @@ There is another common way to dynamically manipulate styles on your document, w
    ```
 
 > [!NOTE]
-> The {{domxref("Element.setAttribute()")}} method replaces the entire value of an attribute. When used on the class attribute, it removes all existing class names and sets the new value, which may change the element's appearance.
+> The {{domxref("Element.setAttribute()")}} method replaces the entire value of an attribute. When used on the class attribute, it removes all existing class names and sets the new value, which may change the element's appearance. To add a class without removing existing ones, use the {{domxref("Element.classList()")}} `add()` method. Choose `setAttribute()` when you need to overwrite all classes, or `classList.add()` to append new classes.
 
-To add a class without removing existing ones, use the {{domxref("Element.classList()")}} method:
-
-```js
-para.classList.add("highlight");
-```
-
-Choose `setAttribute()` when you need to overwrite all classes, or `classList.add()` to append new classes.
+  ```js
+  para.classList.add("highlight");
+  ```
 
 4. Refresh your page, and you'll see no change — the CSS is still applied to the paragraph, but this time by giving it a class that is selected by our CSS rule, not as inline CSS styles.
 
