@@ -21,9 +21,15 @@ There are two types of custom element:
   > [!NOTE]
   > Safari does not plan to support custom built-in elements. See the [`is` attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/is) for more information.
 
+For both kinds of custom element, the basic steps to create and use them are the same:
+
+- You first [implement its behavior](#implementing_a_custom_element) by defining a JavaScript class.
+- You then [register the custom element](#registering_a_custom_element) to the current page.
+- Finally, you can [use the custom element](#using_a_custom_element) in your HTML or JavaScript code.
+
 ## Implementing a custom element
 
-A custom element is implemented as a [class](/en-US/docs/Web/JavaScript/Reference/Classes) which extends {{domxref("HTMLElement")}} (in the case of autonomous elements) or the interface you want to customize (in the case of customized built-in elements).
+A custom element is implemented as a [class](/en-US/docs/Web/JavaScript/Reference/Classes) which extends {{domxref("HTMLElement")}} (in the case of autonomous elements) or the interface you want to customize (in the case of customized built-in elements). This class will not be called by you, but will be called by the browser. Immediately after defining the class, you should [register](#registering_a_custom_element) the custom element, so you can create instances of it using standard DOM practices, such as writing the element in HTML markup, calling {{domxref("document.createElement()")}}, etc.
 
 Here's the implementation of a minimal custom element that customizes the {{HTMLElement("p")}} element:
 
@@ -48,9 +54,6 @@ class PopupInfo extends HTMLElement {
 ```
 
 In the class [constructor](/en-US/docs/Web/JavaScript/Reference/Classes/constructor), you can set up initial state and default values, register event listeners and perhaps create a shadow root. At this point, you should not inspect the element's attributes or children, or add new attributes or children. See [Requirements for custom element constructors and reactions](https://html.spec.whatwg.org/multipage/custom-elements.html#custom-element-conformance) for the complete set of requirements.
-
-> [!NOTE]
-> This class is not meant to be directly constructed using `new`. If you do that, you will get an error like `TypeError: Failed to construct 'HTMLParagraphElement': Illegal constructor`. Instead, you must [register](#registering_a_custom_element) the custom element, and then create instances of it using standard DOM practices, such as writing the element in HTML markup, calling {{domxref("document.createElement()")}}, etc.
 
 ### Custom element lifecycle callbacks
 
