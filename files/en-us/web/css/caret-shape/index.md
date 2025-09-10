@@ -230,7 +230,7 @@ This example demonstrates using `caret-shape: underscore` to create a console-st
 }
 
 .console-output p {
-  margin-bottom: 0.25rem;
+  margin: 0 0.25rem;
 }
 
 .console-input {
