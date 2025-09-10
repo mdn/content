@@ -19,11 +19,11 @@ These attributes are [enumerated](/en-US/docs/Glossary/Enumerated), and have the
 ```html interactive-example
 <label for="rgb">Color input using RGB:</label>
 
-<input 
-  type="color" 
-  id="rgb" 
-  name="rgb" 
-  colorspace="limited-srgb" 
+<input
+  type="color"
+  id="rgb"
+  name="rgb"
+  colorspace="limited-srgb"
   value="#ff0000" />
 
 <label for="p3">Color input using p3:</label>
