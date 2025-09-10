@@ -203,8 +203,8 @@ This example demonstrates using `caret-shape: underscore` to create a console-st
 ```html
 <div class="console-demo">
   <div class="console-output">
-    <div>user@host:css-ui-4 $ ls -a</div>
-    <div>. .. Overview.bs Overview.html</div>
+    <p>user@host:css-ui-4 $ ls -a</p>
+    <p>. .. Overview.bs Overview.html</p>
   </div>
   <div class="console-input">
     <span class="prompt">user@host:css-ui-4 $ </span>
@@ -229,7 +229,7 @@ This example demonstrates using `caret-shape: underscore` to create a console-st
   margin-bottom: 0.5rem;
 }
 
-.console-output div {
+.console-output p {
   margin-bottom: 0.25rem;
 }
 
