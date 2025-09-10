@@ -90,7 +90,7 @@ The insertion caret is the blinking cursor that indicates where text will be ins
 
 Text editors typically operate in one of two modes:
 
-- **Insert mode**: New characters are inserted at the caret position, pushing existing text to the right. This is the default behavior in most modern applications.
+- **Insert mode**: New characters are inserted at the caret position, pushing existing text to the end of the line. This is the default behavior in most modern applications.
 - **Overtype mode** (also called "overwrite mode"): New characters replace existing characters at the caret position instead of inserting between them. This mode is often toggled with the Insert key.
 
 Different caret shapes have traditional uses, such as:
