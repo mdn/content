@@ -24,8 +24,6 @@ The `type` property can have the following values:
   - : Navigation is through the browser's reload operation, {{domxref("location.reload()")}} or a Refresh pragma directive like `<meta http-equiv="refresh" content="300">`.
 - `"back_forward"`
   - : Navigation is through the browser's history traversal operation.
-- `"prerender"`
-  - : Navigation is initiated by a [prerender hint](/en-US/docs/Web/HTML/Reference/Attributes/rel/prerender).
 
 ## Examples
 
