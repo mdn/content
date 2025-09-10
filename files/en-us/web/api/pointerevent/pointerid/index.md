@@ -18,7 +18,6 @@ activated via keyboard.) Otherwise, the value may be randomly generated and shou
 not be relied on to convey any specific information about the device. The value is
 only guaranteed to be stable for the lifetime of the page or session.
 
-
 > [!NOTE]
 > The `pointerId` property is implemented inconsistently across browsers and does not always persist for each ink stroke or interaction with the screen. For a reliable way of identifying multiple pointing devices on a screen simultaneously, see {{domxref("PointerEvent.persistentDeviceId")}}.
 
