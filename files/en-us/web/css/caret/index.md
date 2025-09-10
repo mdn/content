@@ -133,7 +133,7 @@ Unlike some CSS shorthands, the `caret` property accepts values in any order. Th
 
 This example creates a vintage terminal interface using the `caret` shorthand to combine multiple caret properties, demonstrating how it replaces older border-based techniques.
 
-The main advantage of the `caret` shorthand is combining multiple properties in one declaration. Here we set the shape to block, disable default blinking, and set the color to green, all in a single line.
+The main advantage of the `caret` shorthand is combining multiple properties in one declaration. Here we set the shape to `block`, disable default blinking, and set the color to `green`, all in a single line.
 
 #### HTML
 
