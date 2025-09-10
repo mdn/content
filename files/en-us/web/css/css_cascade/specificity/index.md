@@ -245,7 +245,7 @@ footer a {
 
 ### How `@scope` blocks affect specificity
 
-Including a ruleset inside a {{cssxref("@scope")}} block does not affect the specificity of its selector, regardless of the selectors used inside the scope root and limit.
+Including a ruleset inside a {{cssxref("@scope")}} block does not affect the specificity of its selector, regardless of the selectors used inside the [scope root and limit](/en-US/docs/Web/CSS/@scope#syntax).
 However, if you decide to explicitly add the {{cssxref(":scope")}} pseudo-class, you'll need to factor it in when calculating their specificity.
 `:scope`, like all regular pseudo-classes, has a specificity of 0-1-0. For example:
 
