@@ -128,7 +128,7 @@ The key part is using the modern caret properties instead of the old border-base
 ```html
 <div class="old-screen">
   <span>></span>
-  <textarea class="terminal-input" placeholder="Enter command..."></textarea>
+  <textarea class="terminal-input" placeholder=""></textarea>
 </div>
 ```
 
@@ -211,7 +211,7 @@ This example demonstrates using `caret-shape: underscore` to create a console-st
   </div>
   <div class="console-input">
     <span class="prompt">user@host:css-ui-4 $ </span>
-    <input type="text" class="console" placeholder="Enter command..." />
+    <input type="text" class="console" placeholder="" />
   </div>
 </div>
 ```

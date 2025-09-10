@@ -140,7 +140,7 @@ The main advantage of the `caret` shorthand is combining multiple properties in 
 ```html
 <div class="old-screen">
   <span>></span>
-  <textarea class="terminal-input" placeholder="Enter command..."></textarea>
+  <textarea class="terminal-input" placeholder=""></textarea>
 </div>
 ```
 
