@@ -14,7 +14,7 @@ The **`interactivity`** [CSS](/en-US/docs/Web/CSS) property specifies whether an
 ## Syntax
 
 ```css
-/* Single values */
+/* Keyword values */
 interactivity: auto;
 interactivity: inert;
 
