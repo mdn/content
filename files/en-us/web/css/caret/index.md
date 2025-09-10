@@ -141,7 +141,7 @@ The main advantage of the `caret` shorthand is combining multiple properties in 
 <label for="terminal">Enter a command</label>
 <div class="old-screen">
   <span>></span>
-  <textarea id="terminal" class="terminal-input" placeholder=""></textarea>
+  <textarea id="terminal" class="terminal-input"></textarea>
 </div>
 ```
 
@@ -188,10 +188,6 @@ span {
   outline: none;
   flex: 1;
   resize: none;
-}
-
-.terminal-input::placeholder {
-  color: #4a6741;
 }
 ```
 
