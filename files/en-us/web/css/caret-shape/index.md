@@ -201,7 +201,7 @@ span {
 
 #### Result
 
-{{EmbedLiveSample('Retro_terminal_with_animated_caret', 550, 180)}}
+{{EmbedLiveSample('Retro_terminal_with_animated_caret', 550, 215)}}
 
 ### Console interface with underscore caret
 
@@ -239,7 +239,7 @@ label {
   background: black;
   color: white;
   font-family: monospace;
-  padding: 20px;
+  padding: 10px 20px;
   height: 60px;
 }
 
