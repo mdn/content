@@ -32,10 +32,8 @@ caret: bar manual orange;
 
 ```html interactive-example
 <section class="default-example container" id="default-example">
-  <div>
-    <p>Click in the field to see the caret:</p>
-    <p><input id="example-element" type="text" value="Sample text" /></p>
-  </div>
+  <label for="example-element">Edit me to see the caret:</label>
+  <input id="example-element" type="text" value="Sample text" />
 </section>
 ```
 
