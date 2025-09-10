@@ -20,7 +20,7 @@ Firefox 143 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- ### HTML -->
 
-- The [`type="color"`](/en-US/docs/Web/HTML/Reference/Elements/input/color) {{HTMLElement("input")}} element now accepts all CSS [`<color>`](/en-US/docs/Web/CSS/color_value) values. ([Firefox bug 1965029](https://bugzil.la/1965029)).
+- The [`type="color"`](/en-US/docs/Web/HTML/Reference/Elements/input/color) {{HTMLElement("input")}} element now accepts not only HEX colors like `#ff6699` but also all CSS [`<color>`](/en-US/docs/Web/CSS/color_value) values, for example `oklab(50% 0.1 0.1 / 0.5)`. ([Firefox bug 1965029](https://bugzil.la/1965029)).
 
 <!-- No notable changes. -->
 
