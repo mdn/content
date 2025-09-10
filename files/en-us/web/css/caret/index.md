@@ -111,9 +111,9 @@ When values are omitted from the shorthand, they reset to their initial values:
 
 Unlike some CSS shorthands, the `caret` property accepts values in any order. The browser determines which value applies to which property based on the value type:
 
-- Color values apply to `caret-color`
-- `auto`/`manual` keywords apply to `caret-animation`
-- Shape keywords (`bar`, `block`, `underscore`) apply to `caret-shape`
+- {{cssxref("&lt;color>")}} values apply to `caret-color`.
+- `auto`/`manual` keywords apply to `caret-animation`.
+- Shape keywords (`bar`, `block`, `underscore`) apply to `caret-shape`.
 
 ## Formal definition
 
