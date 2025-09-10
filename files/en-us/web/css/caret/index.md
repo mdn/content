@@ -284,7 +284,3 @@ This example shows how to combine the `caret` shorthand with CSS animations for 
 - {{cssxref("caret-color")}} - Sets the color of the insertion caret
 - {{cssxref("caret-animation")}} - Controls caret blinking behavior
 - {{cssxref("caret-shape")}} - Sets the shape of the insertion caret
-- {{cssxref("color")}} - Sets the text color (affects default caret color)
-- {{HTMLElement("input")}} element
-- HTML [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) attribute
-- [CSS basic user interface](/en-US/docs/Web/CSS/CSS_basic_user_interface) module

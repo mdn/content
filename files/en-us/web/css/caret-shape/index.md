@@ -197,5 +197,3 @@ span {
 - {{cssxref("caret-color")}} - Sets the color of the caret
 - {{cssxref("caret-animation")}} - Controls caret blinking behavior
 - {{cssxref("caret")}} - Shorthand for all caret properties
-- {{HTMLElement("input")}} element
-- HTML [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) attribute
