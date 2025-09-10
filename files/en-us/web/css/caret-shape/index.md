@@ -126,7 +126,7 @@ The key part is using the modern caret properties instead of the old border-base
 #### HTML
 
 ```html
-<label for="terminal">Enter terminal command</label>
+<label for="terminal">Enter a command</label>
 <div class="old-screen">
   <span>></span>
   <textarea id="terminal" class="terminal-input" placeholder=""></textarea>
@@ -136,6 +136,14 @@ The key part is using the modern caret properties instead of the old border-base
 #### CSS
 
 ```css hidden
+label {
+  display: block;
+  margin-bottom: 8px;
+  padding-left: 20px;
+  font-weight: bold;
+  font-family: monospace;
+}
+
 .old-screen {
   background: repeating-linear-gradient(
     #092104,
@@ -222,10 +230,13 @@ This example demonstrates using `caret-shape: underscore` to create a console-st
 
 ```css hidden
 label {
-  font-family: monospace;
+  background: black;
+  color: white;
   display: block;
   margin-bottom: 8px;
+  padding-left: 20px;
   font-weight: bold;
+  font-family: monospace;
 }
 
 .console-demo {

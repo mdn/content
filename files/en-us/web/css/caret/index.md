@@ -151,7 +151,9 @@ The main advantage of the `caret` shorthand is combining multiple properties in 
 label {
   display: block;
   margin-bottom: 8px;
+  padding-left: 20px;
   font-weight: bold;
+  font-family: monospace;
 }
 
 .old-screen {
