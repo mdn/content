@@ -138,7 +138,7 @@ The key part is using the modern caret properties instead of the old border-base
     #123208 2px,
     #123208 4px
   );
-  height: 150px;
+  height: 140px;
   border-radius: 25px;
   display: flex;
   align-items: flex-start;

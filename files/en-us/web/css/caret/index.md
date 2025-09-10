@@ -150,7 +150,7 @@ The main advantage of the `caret` shorthand is combining multiple properties in 
     #123208 2px,
     #123208 4px
   );
-  height: 150px;
+  height: 140px;
   border-radius: 25px;
   display: flex;
   align-items: flex-start;
