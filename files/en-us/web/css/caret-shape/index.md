@@ -192,7 +192,7 @@ span {
 
 #### Result
 
-{{EmbedLiveSample('Retro_terminal_with_animated_caret', 550, 170)}}
+{{EmbedLiveSample('Retro_terminal_with_animated_caret', 550, 180)}}
 
 ### Console interface with underscore caret
 
