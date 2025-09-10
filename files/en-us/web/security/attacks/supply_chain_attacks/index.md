@@ -109,7 +109,7 @@ Before adding any new dependencies, you should assess how much of a security ris
 
 The [Concise Guide for Evaluating Open Source Software](https://best.openssf.org/Concise-Guide-for-Evaluating-Open-Source-Software), published by the [OpenSSF](https://openssf.org/), lists questions you should ask before adding a new dependency.
 
-### Defense summary checklist
+## Defense summary checklist
 
 - Require {{glossary("multi-factor authentication")}} for team members and minimize permissions granted.
 - Assess tools involved in your build, test, and deployment processes
