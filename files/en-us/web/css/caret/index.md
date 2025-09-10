@@ -40,7 +40,7 @@ caret: bar manual orange;
 ```
 
 ```css interactive-example
-label {
+div {
   text-align: left;
 }
 
