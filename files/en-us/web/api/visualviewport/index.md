@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.VisualViewport
 ---
 
-{{APIRef("CSSOM view")}}
+{{APIRef("CSSOM view API")}}
 
 The **`VisualViewport`** interface of the {{domxref("Visual Viewport API", "", "", "nocode")}} represents the visual viewport for a given window. For a page containing iframes, each iframe, as well as the containing page, will have a unique window object. Each window on a page will have a unique `VisualViewport` representing the properties associated with that window.
 

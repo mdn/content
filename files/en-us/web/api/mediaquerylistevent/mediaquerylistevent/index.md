@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.MediaQueryListEvent.MediaQueryListEvent
 ---
 
-{{APIRef("CSSOM view")}}
+{{APIRef("CSSOM view API")}}
 
 The **`MediaQueryListEvent()`** constructor creates a new {{domxref("MediaQueryListEvent")}} object.
 

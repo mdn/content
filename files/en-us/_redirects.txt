@@ -12141,9 +12141,8 @@
 /en-US/docs/Web/CSS/Aural	/en-US/docs/Web/CSS/@media
 /en-US/docs/Web/CSS/Block_formatting_context	/en-US/docs/Web/CSS/CSS_display/Block_formatting_context
 /en-US/docs/Web/CSS/CSS3_Columns	/en-US/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts
-/en-US/docs/Web/CSS/CSSOM_view	/en-US/docs/Web/API/CSSOM_view
-/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems	/en-US/docs/Web/API/CSSOM_view/Coordinate_systems
-/en-US/docs/Web/CSS/CSSOM_view/Viewport_concepts	/en-US/docs/Web/API/CSSOM_view/Viewport_concepts
+/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems	/en-US/docs/Web/API/CSSOM_view_API/Coordinate_systems
+/en-US/docs/Web/CSS/CSSOM_view/Viewport_concepts	/en-US/docs/Web/API/CSSOM_view_API/Viewport_concepts
 /en-US/docs/Web/CSS/CSS_Background_and_Borders	/en-US/docs/Web/CSS/CSS_backgrounds_and_borders
 /en-US/docs/Web/CSS/CSS_Background_and_Borders/Border-image_generator	/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Border-image_generator
 /en-US/docs/Web/CSS/CSS_Background_and_Borders/Border-radius_generator	/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator
@@ -12167,7 +12166,7 @@
 /en-US/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts	/en-US/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts
 /en-US/docs/Web/CSS/CSS_Columns/Using_multicol_layouts	/en-US/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts
 /en-US/docs/Web/CSS/CSS_Device_Adaptation	/en-US/docs/Web/CSS
-/en-US/docs/Web/CSS/CSS_Device_Adaptation/Viewport_Concepts	/en-US/docs/Web/API/CSSOM_view/Viewport_concepts
+/en-US/docs/Web/CSS/CSS_Device_Adaptation/Viewport_Concepts	/en-US/docs/Web/API/CSSOM_view_API/Viewport_concepts
 /en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Advanced_layouts_with_flexbox	/en-US/docs/Glossary/Flexbox
 /en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Box_Alignment_in_Flexbox	/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox
 /en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax	/en-US/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis
@@ -12348,7 +12347,7 @@
 /en-US/docs/Web/CSS/Using_media_queries_from_code	/en-US/docs/Web/CSS/CSS_media_queries/Testing_media_queries
 /en-US/docs/Web/CSS/Using_the_CSS_multi-column_layout	/en-US/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts
 /en-US/docs/Web/CSS/Value_definition_syntax	/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax
-/en-US/docs/Web/CSS/Viewport_concepts	/en-US/docs/Web/API/CSSOM_view/Viewport_concepts
+/en-US/docs/Web/CSS/Viewport_concepts	/en-US/docs/Web/API/CSSOM_view_API/Viewport_concepts
 /en-US/docs/Web/CSS/Visual_formatting_model	/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model
 /en-US/docs/Web/CSS/_image	/en-US/docs/Web/CSS/image/image
 /en-US/docs/Web/CSS/abs()	/en-US/docs/Web/CSS/abs

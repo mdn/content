@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.VisualViewport.height
 ---
 
-{{APIRef("CSSOM view")}}
+{{APIRef("CSSOM view API")}}
 
 The **`height`** read-only property of the {{domxref("VisualViewport")}} interface returns the height of the visual viewport, in CSS pixels, or `0` if current document is not fully active.
 

@@ -28,12 +28,12 @@ The {{glossary("viewport")}} initial containing block for continuous media has t
 ### Glossary terms and definitions
 
 - {{glossary("Viewport")}}
-- [Actual viewport](/en-US/docs/Web/CSS/CSSOM_view/Viewport_concepts#actual_viewport)
-- [Initial viewport](/en-US/docs/Web/CSS/CSSOM_view/Viewport_concepts#initial_viewport)
+- [Actual viewport](/en-US/docs/Web/API/CSSOM_view_API/Viewport_concepts#actual_viewport)
+- [Initial viewport](/en-US/docs/Web/API/CSSOM_view_API/Viewport_concepts#initial_viewport)
 
 ## Guides
 
-- [Viewport concepts](/en-US/docs/Web/CSS/CSSOM_view/Viewport_concepts)
+- [Viewport concepts](/en-US/docs/Web/API/CSSOM_view_API/Viewport_concepts)
   - : The concept of the viewport — what it is, its impact in terms of CSS, SVG, and mobile devices — and the difference between the visual viewport and the layout viewport.
 
 - [Using environment variables](/en-US/docs/Web/CSS/CSS_environment_variables/Using_environment_variables)

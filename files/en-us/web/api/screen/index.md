@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.Screen
 ---
 
-{{APIRef("CSSOM view")}}
+{{APIRef("CSSOM view API")}}
 
 The `Screen` interface represents a screen, usually the one on which the current window is being rendered, and is obtained using {{DOMxRef("window.screen")}}.
 

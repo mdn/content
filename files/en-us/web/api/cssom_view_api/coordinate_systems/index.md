@@ -1,10 +1,10 @@
 ---
 title: Coordinate systems
-slug: Web/API/CSSOM_view/Coordinate_systems
+slug: Web/API/CSSOM_view_API/Coordinate_systems
 page-type: guide
 ---
 
-{{DefaultAPISidebar("CSSOM view")}}
+{{DefaultAPISidebar("CSSOM view API")}}
 
 When specifying the location of a pixel in a graphics context (just like when specifying coordinate systems in [algebra](https://en.wikipedia.org/wiki/Algebra)), its position is defined relative to a fixed point in the context. This fixed point is called the [origin](<https://en.wikipedia.org/wiki/Origin_(mathematics)>). The position is specified as the number of pixels offset from the origin along each dimension of the context.
 
@@ -139,7 +139,7 @@ Here you can see the results in action. As you mouse in and around the blue box,
 
 ## See also
 
-- [Viewport concepts](/en-US/docs/Web/API/CSSOM_view/Viewport_concepts)
+- [Viewport concepts](/en-US/docs/Web/API/CSSOM_view_API/Viewport_concepts)
 - [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms): how to alter a coordinate system
 - Coordinates of a {{domxref("MouseEvent")}}:
   - {{domxref("MouseEvent.offsetX")}} and {{domxref("MouseEvent.offsetY")}}

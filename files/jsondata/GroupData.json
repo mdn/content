@@ -353,8 +353,12 @@
         "Window: resize"
       ]
     },
-    "CSSOM view": {
-      "overview": ["CSSOM view"],
+    "CSSOM view API": {
+      "overview": ["CSSOM view API"],
+      "guides": [
+        "/docs/Web/API/CSSOM_view_API/Coordinate_systems",
+        "/docs/Web/API/CSSOM_view_API/Viewport_concepts"
+      ],
       "interfaces": [
         "CaretPosition",
         "MediaQueryList",

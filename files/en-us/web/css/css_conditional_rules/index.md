@@ -97,7 +97,7 @@ The CSS conditional rules module also introduces a `media()` CSS function. Curre
   - [`<media-query-list>`](/en-US/docs/Web/SVG/Reference/Attribute/media)
   - [CSS logical operators](/en-US/docs/Web/CSS/@media#logical_operators) (`not`, `or`, and `and`)
 
-- [CSSOM view](/en-US/docs/Web/API/CSSOM_view) module
+- [CSSOM view](/en-US/docs/Web/CSS/CSSOM_view) module
   - {{domxref("CSS")}} API
   - {{domxref("CSSGroupingRule")}} API
   - {{domxref("MediaQueryList")}} API

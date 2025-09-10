@@ -27,4 +27,4 @@ Early versions of the spec defined this as an integer.
 ## See also
 
 - {{ domxref("MouseEvent") }}
-- [Coordinate systems](/en-US/docs/Web/API/CSSOM_view/Coordinate_systems)
+- [Coordinate systems](/en-US/docs/Web/API/CSSOM_view_API/Coordinate_systems)

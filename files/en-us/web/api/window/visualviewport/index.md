@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Window.visualViewport
 ---
 
-{{APIRef("CSSOM view")}}
+{{APIRef("CSSOM view API")}}
 
 The **`visualViewport`** read-only property of the {{domxref("Window")}} interface returns a {{domxref("VisualViewport")}} object representing the visual viewport for a given window, or `null` if current document is not fully active.
 
