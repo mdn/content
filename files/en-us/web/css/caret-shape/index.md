@@ -192,7 +192,7 @@ span {
 
 #### Result
 
-{{EmbedLiveSample('Retro_terminal_with_animated_caret', 550, 280)}}
+{{EmbedLiveSample('Retro_terminal_with_animated_caret', 550, 150)}}
 
 ## Specifications
 
