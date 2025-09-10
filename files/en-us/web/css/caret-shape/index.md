@@ -274,4 +274,5 @@ This example demonstrates using `caret-shape: underscore` to create a console-st
 
 ## See also
 
-- {{cssxref("caret-color")}}, {{cssxref("caret-animation")}}, {{cssxref("caret")}}
+- {{cssxref("caret-color")}}, {{cssxref("caret-animation")}}
+- {{cssxref("caret")}} shorthand

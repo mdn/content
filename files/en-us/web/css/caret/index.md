@@ -218,4 +218,5 @@ span {
 
 ## See also
 
-- {{cssxref("caret-color")}}, {{cssxref("caret-animation")}}, {{cssxref("caret-shape")}}
+- {{cssxref("caret-color")}}, {{cssxref("caret-animation")}}
+- {{cssxref("caret")}} shorthand
