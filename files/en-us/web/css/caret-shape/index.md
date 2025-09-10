@@ -80,7 +80,7 @@ caret-shape: unset;
 
 ## Description
 
-The insertion caret is the blinking cursor that indicates where text will be inserted when typing. Different caret shapes can provide visual feedback about the current editing mode or simply offer aesthetic customization.
+The insertion caret is the blinking cursor that indicates where text will be inserted when typing. Different caret shapes can provide visual feedback about the current editing mode or offer visual customization.
 
 ### Editing modes and caret shapes
 
