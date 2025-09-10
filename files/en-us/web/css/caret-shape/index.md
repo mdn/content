@@ -93,7 +93,7 @@ Text editors typically operate in one of two modes:
 - **Insert mode**: New characters are inserted at the caret position, pushing existing text to the end of the line. This is the default behavior in most modern applications.
 - **Overtype mode** (also called "overwrite mode"): New characters replace existing characters at the caret position instead of being inserted between them. This mode is often toggled with the <kbd>Insert</kbd> key.
 
-Different caret shapes have traditional uses, such as:
+Different caret shapes have traditional uses, for example:
 
 - **Bar carets** are positioned between characters and are most common in modern interfaces.
 - **Block carets** overlay the next character and are often used in terminal applications or to indicate overtype mode.
