@@ -357,7 +357,7 @@
       "overview": ["CSSOM view API"],
       "guides": [
         "/docs/Web/API/CSSOM_view_API/Coordinate_systems",
-        "/docs/Web/API/CSSOM_view_API/Viewport_concepts"
+        "/docs/Web/CSS/CSSOM_view/Viewport_concepts"
       ],
       "interfaces": [
         "CaretPosition",

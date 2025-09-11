@@ -11,7 +11,7 @@ The portion of the {{Glossary("viewport")}} that is currently visible is called 
 
 - {{Glossary("Viewport")}}
 - {{Glossary("Layout viewport")}}
-- [Viewport concepts](/en-US/docs/Web/API/CSSOM_view_API/Viewport_concepts)
+- [Viewport concepts](/en-US/docs/Web/CSS/CSSOM_view/Viewport_concepts)
 - [CSSOM view](/en-US/docs/Web/CSS/CSSOM_view) module
 - [Visual Viewport API](/en-US/docs/Web/API/Visual_Viewport_API)
 - [Viewport](https://en.wikipedia.org/wiki/Viewport) on Wikipedia

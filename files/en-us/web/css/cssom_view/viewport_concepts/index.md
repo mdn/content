@@ -1,10 +1,9 @@
 ---
 title: Viewport concepts
-slug: Web/API/CSSOM_view_API/Viewport_concepts
+slug: Web/CSS/CSSOM_view/Viewport_concepts
 page-type: guide
+sidebar: cssref
 ---
-
-{{DefaultAPISidebar("CSSOM view API")}}
 
 This article explains the concept of the {{glossary("viewport")}} — what it is and its impact in terms of CSS, SVG, and mobile devices. This article defines the initial viewport and actual viewport, and differentiates between the {{glossary("visual viewport")}} and the {{glossary("layout viewport")}}.
 

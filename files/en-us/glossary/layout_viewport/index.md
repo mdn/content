@@ -13,7 +13,7 @@ This becomes important, for example, on mobile devices, where a pinching gesture
 
 - {{Glossary("Viewport")}}
 - {{Glossary("Visual viewport")}}
-- [Viewport concepts](/en-US/docs/Web/API/CSSOM_view_API/Viewport_concepts)
+- [Viewport concepts](/en-US/docs/Web/CSS/CSSOM_view/Viewport_concepts)
 - [CSSOM view](/en-US/docs/Web/CSS/CSSOM_view) module
 - [Visual Viewport API](/en-US/docs/Web/API/Visual_Viewport_API)
 - [Viewport](https://en.wikipedia.org/wiki/Viewport) on Wikipedia
