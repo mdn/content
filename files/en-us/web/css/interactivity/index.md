@@ -29,7 +29,7 @@ interactivity: unset;
 ### Values
 
 - `auto`
-  - : Selected elements are not inert, and can be interacted with normally.
+  - : Selected elements are in their default state in terms of inertness. This usually means that they are interactive, but this is [not always the case](#default_inertness).
 
 - `inert`
   - : Selected elements are inert.
@@ -50,19 +50,57 @@ A typical use case for `interactivity: inert` is in paginated content, when you 
 
 When an element is made inert (via the `interactivity` property or the `inert` HTML attribute), all of its descendants are also made inert and cannot be set to non-inert, even by setting `interactivity: inert` or `inert="false"` directly on them.
 
-The `interactivity` property can only make interactive content inert. It cannot make content that is inert based on HTML or other factors interactive. For example, while a modal {{htmlelement("dialog")}} is being displayed, the rest of the page is set to an inert state automatically, regardless of the value of this property.
+The `interactivity` property can only make interactive content inert. It cannot make content that is inert based on HTML or other factors interactive.
+
+### Default inertness
+
+Most elements are interactive by default, but this is not always the case. For example, while a modal {{htmlelement("dialog")}} is being displayed, the rest of the page is set to an inert state automatically, regardless of the value of this property.
 
 ## Examples
 
 ### Basic `interactivity` usage
 
+In this example we have two {{htmlelement("input")}} elements. The second one has `interactivity: inert` set on it via a class, and therefore is not focusable or editable in supporting browsers.
+
+```html live-sample___basic-interactivity
+<label>
+  This is interactive:
+  <input type="text" name="one" value="editable" />
+</label>
+<br />
+<label>
+  This is not interactive:
+  <input type="text" name="two" value="Not editable" class="inert" />
+</label>
+```
+
+```css live-sample___basic-interactivity
+input:first-child {
+  margin-bottom: 20px;
+}
+```
+
+```css live-sample___basic-interactivity
+.inert {
+  interactivity: inert;
+}
+```
+
+#### Result
+
+The output looks like this:
+
+{{ EmbedLiveSample("basic-interactivity", "100%", "100") }}
+
+### Exploring the effects of inertness
+
 In this example we explore the effects of the `interactivity` property.
 
-### HTML
+#### HTML
 
 The markup features two {{htmlelement("p")}} elements, each of which contain a link. The second paragraph also has a class of `inert` set on it, and a child {{htmlelement("span")}} element with [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) set on it, so it should be editable.
 
-```html live-sample___basicinteractivity
+```html live-sample___inertness-effects
 <p>
   This paragraph is not
   <a
@@ -94,17 +132,19 @@ The markup features two {{htmlelement("p")}} elements, each of which contain a l
 
 We set the `interactivity` property on the second paragraph to a value of `inert`, making it inert.
 
-```css live-sample___basicinteractivity
+```css live-sample___inertness-effects
 .inert {
   interactivity: inert;
 }
 ```
 
+You shouldn't be able to edit or focus the second `<input>`.
+
 #### JavaScript
 
 In our script, we set a `click` event handler function on both paragraphs so that when they are clicked, their border color should change from `black` to `orange` and then back to `black` again after two seconds.
 
-```js live-sample___basicinteractivity
+```js live-sample___inertness-effects
 const paras = document.querySelectorAll("p");
 
 function tempBorderChange(e) {
@@ -122,7 +162,7 @@ for (para of paras) {
 
 #### Result
 
-{{ EmbedLiveSample("basicinteractivity", "100%", "320") }}
+{{ EmbedLiveSample("inertness-effects", "100%", "320") }}
 
 Note how the second paragraph is inert, therefore it does not behave like the first paragraph. For example, the link cannot be clikced or focused, the text cannot be selected or searched, and `click` events do not register on it.
 
