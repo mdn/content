@@ -204,7 +204,7 @@ button {
   cursor: pointer;
 
   background-color: red;
-  background-color: rgb(255 0 0 / 75%);
+  background-color: rgb(255 0 0 / 90%);
   box-shadow:
     inset 3px 3px 3px rgb(255 255 255 / 40%),
     inset -3px -3px 3px rgb(0 0 0 / 40%);
@@ -212,7 +212,7 @@ button {
 
 button:hover,
 button:focus {
-  background-color: rgb(255 0 0 / 100%);
+  background-color: rgb(255 0 0 / 50%);
 }
 
 button:active {
@@ -239,7 +239,7 @@ button {
   /* … */
 
   background-color: red;
-  background-color: rgb(255 0 0 / 75%);
+  background-color: rgb(255 0 0 / 90%);
   box-shadow:
     inset 3px 3px 3px rgb(255 255 255 / 40%),
     inset -3px -3px 3px rgb(0 0 0 / 40%);
@@ -247,7 +247,7 @@ button {
 
 button:hover,
 button:focus {
-  background-color: rgb(255 0 0 / 100%);
+  background-color: rgb(255 0 0 / 50%);
 }
 
 button:active {

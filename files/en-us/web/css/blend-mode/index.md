@@ -170,7 +170,7 @@ list.forEach((item) => {
 });
 ```
 
-Create multiple `div` elements by traversaing a list and set different `backgroundBlendMode` value for each.
+Create multiple `div` elements by traversing a list and set different `backgroundBlendMode` value for each.
 
 {{ EmbedLiveSample('Comparison between different values with `background-blend-mode`', "100%", "780") }}
 

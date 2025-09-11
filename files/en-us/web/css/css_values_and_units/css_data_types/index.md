@@ -136,6 +136,15 @@ These data types are used in [CSS math function](/en-US/docs/Web/CSS/CSS_Values_
 - {{cssxref("&lt;calc-keyword&gt;")}}
   - : Defines a number of CSS keywords representing numeric constants such as `e` and `π`, that can be used in CSS math functions.
 
+## Shape data types
+
+The [CSS shapes](/en-US/docs/Web/CSS/CSS_shapes) and [CSS borders and box decorations](/en-US/docs/Web/CSS/CSS_borders_and_box_decorations) modules define shape data types:
+
+- {{cssxref("&lt;basic-shape>")}}
+  - : Describes shape functions used in the {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}, and {{cssxref("offset-path")}} properties.
+- {{cssxref("&lt;corner-shape-value>")}}
+  - : Describes the shape of a container corner. It is used by the {{cssxref("corner-shape")}} shorthand property and its [constituent properties](/en-US/docs/Web/CSS/corner-shape#constituent_properties) to specify the shape applied to affected container corners.
+
 ## Specifications
 
 {{Specifications}}
