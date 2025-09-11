@@ -82,16 +82,14 @@ finished, the video automatically pauses playback. This is done by setting the
 `mode` to `showing`.
 
 ```js
-window.addEventListener("load", (event) => {
-  let trackElem = document.querySelector("track");
-  let track = trackElem.track;
+let trackElem = document.querySelector("track");
+let track = trackElem.track;
 
-  track.mode = "showing";
+track.mode = "showing";
 
-  for (const cue of track.cues) {
-    cue.pauseOnExit = true;
-  }
-});
+for (const cue of track.cues) {
+  cue.pauseOnExit = true;
+}
 ```
 
 ## Specifications

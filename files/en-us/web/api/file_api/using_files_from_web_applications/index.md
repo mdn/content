@@ -476,6 +476,15 @@ if (isset($_FILES["myFile"])) {
   <head>
     <meta charset="UTF-8" />
     <title>dnd binary upload</title>
+  </head>
+  <body>
+    <div>
+      <div
+        id="dropzone"
+        style="margin:30px; width:500px; height:300px; border:1px dotted grey;">
+        Drag & drop your file here
+      </div>
+    </div>
     <script>
       function sendFile(file) {
         const uri = "/index.php";
@@ -493,33 +502,21 @@ if (isset($_FILES["myFile"])) {
         xhr.send(fd);
       }
 
-      window.onload = () => {
-        const dropzone = document.getElementById("dropzone");
-        dropzone.ondragover = dropzone.ondragenter = (event) => {
-          event.stopPropagation();
-          event.preventDefault();
-        };
+      const dropzone = document.getElementById("dropzone");
+      dropzone.addEventListener("dragover", (event) => {
+        event.stopPropagation();
+        event.preventDefault();
+      });
 
-        dropzone.ondrop = (event) => {
-          event.stopPropagation();
-          event.preventDefault();
+      dropzone.addEventListener("drop", (event) => {
+        event.preventDefault();
 
-          const filesArray = event.dataTransfer.files;
-          for (let i = 0; i < filesArray.length; i++) {
-            sendFile(filesArray[i]);
-          }
-        };
-      };
+        const filesArray = event.dataTransfer.files;
+        for (let i = 0; i < filesArray.length; i++) {
+          sendFile(filesArray[i]);
+        }
+      });
     </script>
-  </head>
-  <body>
-    <div>
-      <div
-        id="dropzone"
-        style="margin:30px; width:500px; height:300px; border:1px dotted grey;">
-        Drag & drop your file here
-      </div>
-    </div>
   </body>
 </html>
 ```
