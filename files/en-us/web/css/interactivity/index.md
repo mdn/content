@@ -74,7 +74,7 @@ In this example we have two {{htmlelement("input")}} elements. The second one ha
 </label>
 ```
 
-```css live-sample___basic-interactivity
+```css hidden live-sample___basic-interactivity
 input:first-child {
   margin-bottom: 20px;
 }
@@ -138,6 +138,19 @@ We set the `interactivity` property on the second paragraph to a value of `inert
 }
 ```
 
+```css hidden live-sample___inertness-effects
+body {
+  font: 1.2em / 1.5 system-ui;
+}
+
+p {
+  border: 5px solid black;
+  padding: 10px;
+  width: 90%;
+  margin: 20px auto;
+}
+```
+
 You shouldn't be able to edit or focus the second `<input>`.
 
 #### JavaScript
@@ -162,7 +175,7 @@ for (para of paras) {
 
 #### Result
 
-{{ EmbedLiveSample("inertness-effects", "100%", "320") }}
+{{ EmbedLiveSample("inertness-effects", "100%", "380") }}
 
 Note how the second paragraph is inert, therefore it does not behave like the first paragraph. For example, the link cannot be clikced or focused, the text cannot be selected or searched, and `click` events do not register on it.
 
