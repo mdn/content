@@ -88,8 +88,6 @@ The `caret` property is specified as one, two, or three values from the constitu
 
 ### Values
 
-The values correspond to the constituent properties:
-
 - {{cssxref("caret-color")}}
   - : Sets the color of the caret.
 
