@@ -19,7 +19,7 @@ This event is not cancelable and does not bubble.
 > [!NOTE]
 > The `load` event that is dispatched when the main document has loaded _is_ dispatched on the `window`, but has two mutated properties: `target` is `document`, and `path` is `undefined`. These two properties are mutated due to legacy conformance.
 
-Usually, to avoid running a script before the DOM it manipulates has been fully constructed, you can simply place the script at the end of the document body, immediately before the closing `</body>` tag, without wrapping it in an event listener. Use this event only to wait for external resources, such as images, to load.
+To avoid running a script before the DOM it manipulates has been fully constructed, you can place the script at the end of the document body, immediately before the closing `</body>` tag, without wrapping it in an event listener. You should usually only use the `load` event to wait for external resources, such as images or deferred scripts, to load.
 
 ## Syntax
 
