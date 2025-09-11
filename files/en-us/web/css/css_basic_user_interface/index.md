@@ -8,9 +8,9 @@ spec-urls:
 sidebar: cssref
 ---
 
-The **CSS basic user interface** module lets you define the rendering and functionality of features related to the user interface including outline properties, visual feedback to pointing device and keyboard, and altering the default appearance of UI widgets.
+The **CSS basic user interface** module allows you to define the rendering and functionality of features related to the user interface, including outline properties, visual feedback for pointing devices and keyboards, and modifying the default appearance of UI widgets.
 
-Basic user interface properties can be used to improve user experience and accessibility by providing visual cues to elements that are being interacted with, including styling mouse cursors and keyboard directional focus navigation, and styling caret cursors when an editable element has focus. The module provides for providing outlines to focused (or not) elements without impacting an element's [box model](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model#what_is_the_css_box_model) dimensions and styling. This UI module also enables the styling of user interface controls.
+Basic user interface properties can be used to improve user experience and accessibility by providing visual cues to elements that are being interacted with, including styling mouse cursors and keyboard directional focus navigation, and styling caret cursors when an editable element has focus. The module includes features for providing outlines to focused (or unfocused) elements without impacting an element's [box model](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model#what_is_the_css_box_model) dimensions and styling. This UI module also enables the styling of user interface controls.
 
 ## Basic user interface in action
 
@@ -74,9 +74,9 @@ textarea:nth-of-type(3) {
 
 {{EmbedLiveSample("basicUI", "", "300px")}}
 
-The CSS {{CSSxRef("outline")}} and {{CSSxRef("outline-offset")}} properties were used to provide feedback to users which element currently has focus. An {{CSSxRef("accent-color")}} provides a theme color to all the form controls. The caret that appears when the text is edit has the same color thanks to the {{CSSxRef("caret-color")}} property. These can all be considered UI improvements.
+The CSS {{CSSxRef("outline")}} and {{CSSxRef("outline-offset")}} properties were used to provide feedback to users on which element currently has focus. An {{CSSxRef("accent-color")}} provides a theme color to all the form controls. The caret that appears when the text is edited has the same color thanks to the {{CSSxRef("caret-color")}} property. These can all be considered UI improvements.
 
-Some features harm usability. The {{CSSxRef("cursor")}} property was used to change cursors from the browser default which is confusing. The {{CSSxRef("resize")}} property prevents the second {{HTMLElement("textarea")}} from being resizable while the {{CSSxRef("pointer-events")}} property prevents the third `<textarea>` from receiving click events. It is still focusable using the keyboard.
+Some features harm usability. The {{CSSxRef("cursor")}} property was used to change cursors from the browser default, which is confusing. The {{CSSxRef("resize")}} property prevents the second {{HTMLElement("textarea")}} from being resizable while the {{CSSxRef("pointer-events")}} property prevents the third `<textarea>` from receiving click events. It is still focusable using the keyboard.
 
 Click "Play" in the example above to see or edit the code for the animation in the MDN Playground.
 
@@ -99,7 +99,7 @@ Click "Play" in the example above to see or edit the code for the animation in t
 - {{CSSxRef("resize")}}
 - {{CSSxRef("user-select")}}
 
-The CSS basic user interface module also defines the `caret`, `nav-down`, `nav-left`, `nav-right`, and `nav-up` properties. Currently, no browsers support these features.
+The CSS basic user interface module also defines the {{CSSxRef("caret")}}, `nav-down`, `nav-left`, `nav-right`, and `nav-up` properties. Currently, no browsers support these features.
 
 ## Guides
 
