@@ -2,7 +2,9 @@
 title: "@scope"
 slug: Web/CSS/@scope
 page-type: css-at-rule
-browser-compat: css.at-rules.scope
+browser-compat:
+  - css.at-rules.scope
+  - css.selectors.nesting.at-scope
 sidebar: cssref
 ---
 
@@ -190,8 +192,8 @@ In both cases in the following code block, the only specificity comes from `img`
 }
 ```
 
-By contrast, using `:scope` explicitly selects the scope root and adds class-level specificity (0-1-0), since `:scope` is a pseudo-class.
-In the following example, `:scope img` has a specificity of 0-1-1:
+By contrast, using `:scope` explicitly selects the scope root and adds class-level specificity (0-1-0), since `:scope` is a [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes).
+In the following code block, `:scope img` has a specificity of 0-1-1:
 
 ```css
 @scope (.article-body) {
