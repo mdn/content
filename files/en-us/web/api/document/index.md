@@ -182,6 +182,8 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
   - : Adopt node from an external document.
 - {{DOMxRef("Document.append()")}}
   - : Inserts a set of {{domxref("Node")}} objects or strings after the last child of the document.
+- {{DOMxRef("Document.ariaNotify()")}} {{Experimental_Inline}}
+  - : Specifies that a given string of text should be announced by a screen reader.
 - {{DOMxRef("Document.browsingTopics()")}} {{Experimental_Inline}} {{non-standard_inline}}
   - : Returns a promise that fulfills with an array of objects representing the top topics for the user, one from each of the last three epochs. By default, the method also causes the browser to record the current page visit as observed by the caller, so the page's hostname can later be used in topics calculation. See the [Topics API](/en-US/docs/Web/API/Topics_API) for more details.
 - `Document.captureEvents()` {{Deprecated_Inline}}
