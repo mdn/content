@@ -7,7 +7,7 @@ browser-compat: html.elements.input.alpha
 sidebar: htmlsidebar
 ---
 
-The Boolean **`alpha`** attribute, valid only on the [`type="color"`](/en-US/docs/Web/HTML/Reference/Elements/input/color) {{HTMLElement("input")}} element, allows the end user to choose the opacity of the color being selected.
+The Boolean **`alpha`** attribute, valid on [`<input type="color"/>`](/en-US/docs/Web/HTML/Reference/Elements/input/color) elements, allows the user to choose the opacity of the color being selected.
 
 {{InteractiveExample("HTML Demo: alpha", "tabbed-standard")}}
 
