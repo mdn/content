@@ -9,13 +9,15 @@ Public-key cryptography — or _asymmetric cryptography_ — is a cryptographic 
 
 ## Digital signatures
 
-When used for {{glossary("digital signature", "digital signatures")}}, the private key is used to sign and the public key to verify. This means that anyone can verify a signature, but only the owner of the corresponding private key could have generated it.
+When used for {{glossary("digital signature", "digital signatures")}}, the private key is used to sign, and the public key is used to verify. This means that anyone can verify a signature, but only the owner of the corresponding private key could have generated it.
 
 ## Encryption
 
-When used for {{glossary("encryption")}}, the public key is used to encrypt and the private key is used to decrypt. This gives public-key encryption systems an advantage over symmetric encryption systems in that the encryption key can be made public. Anyone could encrypt a message to the owner of the private key, but only the owner of the private key could decrypt it. However, they are typically much slower than symmetric algorithms and the size of message they can encrypt is proportional to the size of the key, so they do not scale well for long messages.
+When used for {{glossary("encryption")}}, the public key is used to encrypt, and the private key is used to decrypt. This gives public-key encryption systems an advantage over symmetric encryption systems: The encryption key can be made public. Anyone can encrypt a message to the owner of the private key, but only the owner of the private key can decrypt it.
 
-As a result, it's common for an encryption system to use a symmetric algorithm to encrypt the message, then a public-key system to encrypt the symmetric key. This arrangement can confer the benefits of both systems.
+However, public-key encryption systems are typically much slower than symmetric algorithms, and the size of the messages they can encrypt is proportional to the size of the key, so they do not scale well for long messages.
+
+As a result, it's common for an encryption system to use a symmetric algorithm to encrypt the messages, then a public-key system to encrypt the symmetric key. This arrangement can confer the benefits of both systems.
 
 ## Common public-key cryptosystems
 
