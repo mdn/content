@@ -147,7 +147,8 @@ p.custom {
 
 ## See also
 
-- {{cssxref("caret-animation")}}
+- {{cssxref("caret-animation")}}, {{cssxref("caret-shape")}}
+- {{cssxref("caret")}} shorthand
 - {{cssxref("color")}}
 - {{cssxref("text-emphasis")}}
 - {{cssxref("cursor")}}

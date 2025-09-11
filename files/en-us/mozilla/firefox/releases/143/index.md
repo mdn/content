@@ -20,6 +20,8 @@ Firefox 143 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- ### HTML -->
 
+- The [`type="color"`](/en-US/docs/Web/HTML/Reference/Elements/input/color) {{HTMLElement("input")}} element now accepts not only HEX colors like `#ff6699` but also all CSS [`<color>`](/en-US/docs/Web/CSS/color_value) values, for example `oklab(50% 0.1 0.1 / 0.5)`. ([Firefox bug 1965029](https://bugzil.la/1965029)).
+
 <!-- No notable changes. -->
 
 <!-- #### Removals -->
@@ -66,13 +68,19 @@ Firefox 143 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### WebDriver conformance (WebDriver BiDi, Marionette) -->
+### WebDriver conformance (WebDriver BiDi, Marionette)
 
-<!-- #### General -->
+#### WebDriver BiDi
 
-<!-- #### WebDriver BiDi -->
-
-<!-- #### Marionette -->
+- Updated the `browsingContext.contextCreated` event to be emitted for all open contexts when subscribing to the event ([Firefox bug 1754273](https://bugzil.la/1754273)).
+- Implemented new commands for the `network` module to enable recording network data:
+  - `network.addDataCollector` adds a network data collector to `contexts`, `userContexts` or globally. The collector will record network data corresponding to the provided `dataTypes`. At the moment, only the "response" data type is supported. A `maxEncodedDataSize` must also be provided, network data exceeding this size will not be recorded ([Firefox bug 1971778](https://bugzil.la/1971778)).
+  - `network.removeDataCollector` removes a previously added network data collector ([Firefox bug 1971781](https://bugzil.la/1971781)).
+  - `network.getData` retrieves the data collected for a provided `request` id, `dataType` and optionally `collector` id. When providing a `collector` id, clients may also pass the `disown` flag to release the network data from the collector. Note that data is deleted when it is no longer owned by any collector ([Firefox bug 1971780](https://bugzil.la/1971780)).
+  - `network.disownData` releases the data for a given `request` id and `dataType` from the provided `collector` id ([Firefox bug 1971779](https://bugzil.la/1971779)).
+- Fixed a bug where `emulation.setLocaleOverride` did not apply the override to newly created cross-origin iframes ([Firefox bug 1978533](https://bugzil.la/1978533)).
+- Fixed a bug where several commands such as `session.subscribe` would fail if any tab was unloaded ([Firefox bug 1949037](https://bugzil.la/1949037)).
+- Fixed the `browsingContext.navigationCommitted` event so that the `url` property now includes basic auth credentials. ([Firefox bug 1980137](https://bugzil.la/1980137)).
 
 ## Changes for add-on developers
 
