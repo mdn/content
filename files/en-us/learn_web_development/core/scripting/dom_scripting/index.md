@@ -231,7 +231,7 @@ The first way is to add inline styles directly onto elements you want to dynamic
 > [!NOTE]
 > Notice how the JavaScript property versions of the CSS styles are written in {{Glossary("camel_case", "lower camel case")}} whereas the CSS versions are hyphenated ({{Glossary("kebab_case", "kebab-case")}}) (e.g., `backgroundColor` versus `background-color`). Make sure you don't get these mixed up, otherwise it won't work.
 
-There is another common way to dynamically manipulate styles on your document, which we'll look at now.
+There is another common way to dynamically manipulate styles on your document, which is to write the styles in a separate stylesheet, and reference those styles by adding/removing a class name.
 
 1. Delete the previous five lines you added to the JavaScript.
 2. Add the following inside your HTML {{htmlelement("head")}}:
@@ -248,10 +248,10 @@ There is another common way to dynamically manipulate styles on your document, w
    </style>
    ```
 
-3. Now we'll turn to a very useful method for general HTML manipulation — {{domxref("Element.setAttribute()")}} — this takes two arguments, the attribute you want to set on the element, and the value you want to set it to. In this case we will set a class name of highlight on our paragraph:
+3. To add this class name to your element, use the element's {{domxref("Element/classList", "classList")}}'s `add()` method:
 
    ```js
-   para.setAttribute("class", "highlight");
+   para.classList.add("highlight");
    ```
 
 4. Refresh your page, and you'll see no change — the CSS is still applied to the paragraph, but this time by giving it a class that is selected by our CSS rule, not as inline CSS styles.
