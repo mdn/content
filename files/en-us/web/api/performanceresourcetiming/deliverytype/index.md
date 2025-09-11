@@ -18,7 +18,7 @@ A string, which can be one of the following values:
 
 - `"cache"`
   - : The resource was retrieved from the cache.
-- `"navigational-prefetch"` {{experimental_inline}}
+- `"navigational-prefetch"` {{experimental_inline}} {{non-standard_inline}}
   - : The resource was retrieved from a prefetched response stored in an in-memory cache via the [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API).
 - `""` (empty string)
   - : Returned if none of the above delivery types apply.

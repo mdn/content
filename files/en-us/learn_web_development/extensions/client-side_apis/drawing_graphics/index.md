@@ -92,7 +92,7 @@ function random(min, max) {
 // function to generate random RGB color value
 
 function randomRGB() {
-  return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
+  return `rgb(${random(0, 255)} ${random(0, 255)} ${random(0, 255)})`;
 }
 
 class Ball {
@@ -184,77 +184,9 @@ loop();
 
 {{EmbedLiveSample("bouncing-balls", '100%', 500)}}
 
-Around 2006–2007, Mozilla started work on an experimental 3D canvas implementation. This became [WebGL](/en-US/docs/Web/API/WebGL_API), which gained traction among browser vendors, and was standardized around 2009–2010. WebGL allows you to create real 3D graphics inside your web browser; the below example shows a simple rotating WebGL cube:
+Around 2006–2007, Mozilla started work on an experimental 3D canvas implementation. This became [WebGL](/en-US/docs/Web/API/WebGL_API), which gained traction among browser vendors, and was standardized around 2009–2010. WebGL allows you to create real 3D graphics inside your web browser.
 
-```html hidden live-sample___webgl-cube
-<script src="https://cdn.jsdelivr.net/npm/three-js@79.0.0/three.min.js"></script>
-```
-
-```css hidden live-sample___webgl-cube
-html,
-body {
-  margin: 0;
-}
-
-body {
-  overflow: hidden;
-}
-```
-
-```js hidden live-sample___webgl-cube
-const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(
-  75,
-  window.innerWidth / window.innerHeight,
-  0.1,
-  1000,
-);
-camera.position.z = 5;
-
-const renderer = new THREE.WebGLRenderer();
-renderer.setSize(window.innerWidth, window.innerHeight);
-document.body.appendChild(renderer.domElement);
-
-let cube;
-
-const loader = new THREE.TextureLoader();
-
-loader.load(
-  "https://mdn.github.io/shared-assets/images/examples/learn/metal003.png",
-  (texture) => {
-    texture.wrapS = THREE.RepeatWrapping;
-    texture.wrapT = THREE.RepeatWrapping;
-    texture.repeat.set(2, 2);
-
-    const geometry = new THREE.BoxGeometry(2.4, 2.4, 2.4);
-    const material = new THREE.MeshLambertMaterial({ map: texture });
-    cube = new THREE.Mesh(geometry, material);
-    scene.add(cube);
-
-    draw();
-  },
-);
-
-const light = new THREE.AmbientLight("rgb(255,255,255)"); // soft white light
-scene.add(light);
-
-const spotLight = new THREE.SpotLight("rgb(255,255,255)");
-spotLight.position.set(100, 1000, 1000);
-spotLight.castShadow = true;
-scene.add(spotLight);
-
-function draw() {
-  cube.rotation.x += 0.01;
-  cube.rotation.y += 0.01;
-  renderer.render(scene, camera);
-
-  requestAnimationFrame(draw);
-}
-```
-
-{{EmbedLiveSample("webgl-cube", "100%", 500)}}
-
-This article will focus mainly on 2D canvas, as raw WebGL code is very complex. We will however show how to use a WebGL library to create a 3D scene more easily, and you can find a tutorial covering raw WebGL elsewhere — see [Getting started with WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL).
+This article will focus mainly on 2D canvas, as raw WebGL code is very complex. We will however show how to use [a WebGL library to create a 3D scene more easily](#webgl), and you can find a tutorial covering raw WebGL elsewhere — see [Getting started with WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL).
 
 ## Getting started with a \<canvas>
 
@@ -286,7 +218,7 @@ Let's start by creating our own canvas template to create future experiments in.
 1. First, create a directory on your local hard drive called `canvas-template`.
 2. Create a new file in the directory called `index.html` and save the following contents inside it:
 
-   ```html live-sample___2-canvas-rectangles live-sample___3_canvas_paths live-sample___4-canvas-text live-sample___5-canvas-images live-sample___6-canvas-for-loop live-sample___7-canvas-walking-animation
+   ```html
    <!DOCTYPE html>
    <html lang="en-US">
      <head>
@@ -304,6 +236,12 @@ Let's start by creating our own canvas template to create future experiments in.
    </html>
    ```
 
+   ```html hidden live-sample___2-canvas-rectangles live-sample___3_canvas_paths live-sample___4-canvas-text live-sample___5-canvas-images live-sample___6-canvas-for-loop
+   <canvas class="myCanvas">
+     <p>Add suitable fallback here.</p>
+   </canvas>
+   ```
+
 3. Create a new file inside the directory called `style.css` and save the following CSS rule in it:
 
    ```css live-sample___2-canvas-rectangles live-sample___3_canvas_paths live-sample___4-canvas-text live-sample___5-canvas-images live-sample___6-canvas-for-loop live-sample___7-canvas-walking-animation
@@ -317,7 +255,7 @@ Let's start by creating our own canvas template to create future experiments in.
 
 5. Now open `script.js` and add the following lines of JavaScript:
 
-   ```js
+   ```js live-sample___2-canvas-rectangles live-sample___3_canvas_paths live-sample___4-canvas-text live-sample___5-canvas-images live-sample___6-canvas-for-loop live-sample___7-canvas-walking-animation
    const canvas = document.querySelector(".myCanvas");
    const width = (canvas.width = window.innerWidth);
    const height = (canvas.height = window.innerHeight);
@@ -336,7 +274,7 @@ We need to do one final thing before we can consider our canvas template finishe
 
 In this case we want a 2d canvas, so add the following JavaScript line below the others in `script.js`:
 
-```js
+```js live-sample___2-canvas-rectangles live-sample___3_canvas_paths live-sample___4-canvas-text live-sample___5-canvas-images live-sample___6-canvas-for-loop live-sample___7-canvas-walking-animation
 const ctx = canvas.getContext("2d");
 ```
 
@@ -347,8 +285,8 @@ So that's it — our canvas is now primed and ready for drawing on! The `ctx` va
 
 Let's do one last thing before we move on. We'll color the canvas background black to give you a first taste of the canvas API. Add the following lines at the bottom of your JavaScript:
 
-```js
-ctx.fillStyle = "rgb(0 0 0)";
+```js live-sample___2-canvas-rectangles live-sample___3_canvas_paths live-sample___4-canvas-text live-sample___5-canvas-images live-sample___6-canvas-for-loop
+ctx.fillStyle = "black";
 ctx.fillRect(0, 0, width, height);
 ```
 
@@ -371,7 +309,7 @@ Let's start with some simple rectangles.
 1. First of all, make a copy of your newly coded canvas template directory.
 2. Add the following lines to the bottom of your JavaScript file:
 
-   ```js
+   ```js live-sample___2-canvas-rectangles
    ctx.fillStyle = "red";
    ctx.fillRect(50, 50, 100, 150);
    ```
@@ -380,7 +318,7 @@ Let's start with some simple rectangles.
 
 3. Let's add another rectangle into the mix — a green one this time. Add the following at the bottom of your JavaScript:
 
-   ```js
+   ```js live-sample___2-canvas-rectangles
    ctx.fillStyle = "green";
    ctx.fillRect(75, 75, 100, 100);
    ```
@@ -389,7 +327,7 @@ Let's start with some simple rectangles.
 
 4. Note that you can draw semi-transparent graphics by specifying a semi-transparent color, for example by using `rgb()`. The "alpha channel" defines the amount of transparency the color has. The higher its value, the more it will obscure whatever's behind it. Add the following to your code:
 
-   ```js
+   ```js live-sample___2-canvas-rectangles
    ctx.fillStyle = "rgb(255 0 255 / 75%)";
    ctx.fillRect(25, 100, 175, 50);
    ```
@@ -403,7 +341,7 @@ So far we've looked at drawing filled rectangles, but you can also draw rectangl
 1. Add the following to the previous example, again below the previous JavaScript lines:
 
    ```js
-   ctx.strokeStyle = "rgb(255 255 255)";
+   ctx.strokeStyle = "white";
    ctx.strokeRect(25, 25, 175, 200);
    ```
 
@@ -416,24 +354,7 @@ So far we've looked at drawing filled rectangles, but you can also draw rectangl
 Now you should see that your white outline has become much thicker! That's it for now. At this point your example should look like this:
 
 ```js hidden live-sample___2-canvas-rectangles
-const canvas = document.querySelector(".myCanvas");
-const width = (canvas.width = window.innerWidth);
-const height = (canvas.height = window.innerHeight);
-const ctx = canvas.getContext("2d");
-
-ctx.fillStyle = "rgb(0,0,0)";
-ctx.fillRect(0, 0, width, height);
-
-ctx.fillStyle = "rgb(255,0,0)";
-ctx.fillRect(50, 50, 100, 150);
-
-ctx.fillStyle = "rgb(0,255,0)";
-ctx.fillRect(75, 75, 100, 100);
-
-ctx.fillStyle = "rgba(255,0,255,0.75)";
-ctx.fillRect(25, 100, 175, 50);
-
-ctx.strokeStyle = "rgb(255,255,255)";
+ctx.strokeStyle = "white";
 ctx.lineWidth = 5;
 ctx.strokeRect(25, 25, 175, 200);
 ```
@@ -472,7 +393,7 @@ Let's draw an equilateral triangle on the canvas.
 
 1. First of all, add the following helper function to the bottom of your code. This converts degree values to radians, which is useful because whenever you need to provide an angle value in JavaScript, it will nearly always be in radians, but humans usually think in degrees.
 
-   ```js
+   ```js live-sample___3_canvas_paths
    function degToRad(degrees) {
      return (degrees * Math.PI) / 180;
    }
@@ -480,7 +401,7 @@ Let's draw an equilateral triangle on the canvas.
 
 2. Next, start off your path by adding the following below your previous addition; here we set a color for our triangle, start drawing a path, and then move the pen to (50, 50) without drawing anything. That's where we'll start drawing our triangle.
 
-   ```js
+   ```js live-sample___3_canvas_paths
    ctx.fillStyle = "red";
    ctx.beginPath();
    ctx.moveTo(50, 50);
@@ -488,7 +409,7 @@ Let's draw an equilateral triangle on the canvas.
 
 3. Now add the following lines at the bottom of your script:
 
-   ```js
+   ```js live-sample___3_canvas_paths
    ctx.lineTo(150, 50);
    const triHeight = 50 * Math.tan(degToRad(60));
    ctx.lineTo(100, 50 + triHeight);
@@ -519,8 +440,8 @@ Now let's look at how to draw a circle in canvas. This is accomplished using the
 
 1. Let's add an arc to our canvas — add the following to the bottom of your code:
 
-   ```js
-   ctx.fillStyle = "rgb(0 0 255)";
+   ```js live-sample___3_canvas_paths
+   ctx.fillStyle = "blue";
    ctx.beginPath();
    ctx.arc(150, 106, 50, degToRad(0), degToRad(360), false);
    ctx.fill();
@@ -533,7 +454,7 @@ Now let's look at how to draw a circle in canvas. This is accomplished using the
 
 2. Let's try adding another arc:
 
-   ```js
+   ```js live-sample___3_canvas_paths
    ctx.fillStyle = "yellow";
    ctx.beginPath();
    ctx.arc(200, 106, 50, degToRad(-45), degToRad(45), true);
@@ -546,40 +467,6 @@ Now let's look at how to draw a circle in canvas. This is accomplished using the
    - Before calling `fill()`, we draw a line to the center of the circle. This means that we get the rather nice Pac-Man-style cutout rendered. If you removed this line (try it!) then re-ran the code, you'd get just an edge of the circle chopped off between the start and end point of the arc. This illustrates another important point of the canvas — if you try to fill an incomplete path (i.e., one that is not closed), the browser fills in a straight line between the start and end point and then fills it in.
 
 That's it for now; your final example should look like this:
-
-```js hidden live-sample___3_canvas_paths
-const canvas = document.querySelector(".myCanvas");
-const width = (canvas.width = window.innerWidth);
-const height = (canvas.height = window.innerHeight);
-const ctx = canvas.getContext("2d");
-
-ctx.fillStyle = "rgb(0,0,0)";
-ctx.fillRect(0, 0, width, height);
-
-function degToRad(degrees) {
-  return (degrees * Math.PI) / 180;
-}
-
-ctx.fillStyle = "rgb(255,0,0)";
-ctx.beginPath();
-ctx.moveTo(50, 50);
-ctx.lineTo(150, 50);
-const triHeight = 50 * Math.tan(degToRad(60));
-ctx.lineTo(100, 50 + triHeight);
-ctx.lineTo(50, 50);
-ctx.fill();
-
-ctx.fillStyle = "rgb(0,0,255)";
-ctx.beginPath();
-ctx.arc(150, 106, 50, degToRad(0), degToRad(360), false);
-ctx.fill();
-
-ctx.fillStyle = "yellow";
-ctx.beginPath();
-ctx.arc(200, 106, 50, degToRad(-45), degToRad(45), true);
-ctx.lineTo(200, 106);
-ctx.fill();
-```
 
 {{EmbedLiveSample("3_canvas_paths", '100%', 200)}}
 
@@ -605,7 +492,7 @@ Canvas content is not accessible to screen readers. Text painted to the canvas i
 
 Try adding the following block to the bottom of your JavaScript:
 
-```js
+```js live-sample___4-canvas-text
 ctx.strokeStyle = "white";
 ctx.lineWidth = 1;
 ctx.font = "36px arial";
@@ -619,27 +506,6 @@ canvas.setAttribute("aria-label", "Canvas text");
 ```
 
 Here we draw two lines of text, one outline and the other stroke. The example should look like so:
-
-```js hidden live-sample___4-canvas-text
-const canvas = document.querySelector(".myCanvas");
-const width = (canvas.width = window.innerWidth);
-const height = (canvas.height = window.innerHeight);
-const ctx = canvas.getContext("2d");
-
-ctx.fillStyle = "rgb(0,0,0)";
-ctx.fillRect(0, 0, width, height);
-
-ctx.strokeStyle = "white";
-ctx.lineWidth = 1;
-ctx.font = "36px arial";
-ctx.strokeText("Canvas text", 50, 50);
-
-ctx.fillStyle = "red";
-ctx.font = "48px georgia";
-ctx.fillText("Canvas text", 50, 150);
-
-canvas.setAttribute("aria-label", "Canvas text");
-```
 
 {{EmbedLiveSample("4-canvas-text", '100%', 180)}}
 
@@ -655,7 +521,7 @@ It is possible to render external images onto your canvas. These can be simple i
 
 2. Let's start by getting an image source to embed in our canvas. Add the following lines to the bottom of your JavaScript:
 
-   ```js
+   ```js live-sample___5-canvas-images
    const image = new Image();
    image.src =
      "https://mdn.github.io/shared-assets/images/examples/fx-nightly-512.png";
@@ -677,6 +543,12 @@ It is possible to render external images onto your canvas. These can be simple i
    ctx.drawImage(image, 0, 0, 512, 512, 50, 40, 185, 185);
    ```
 
+   ```js hidden live-sample___5-canvas-images
+   image.addEventListener("load", () =>
+     ctx.drawImage(image, 0, 0, 512, 512, 50, 40, 185, 185),
+   );
+   ```
+
    - The first parameter is the image reference, as before.
    - Parameters 2 and 3 define the coordinates of the top left corner of the area you want to cut out of the loaded image, relative to the top-left corner of the image itself. Nothing to the left of the first parameter or above the second will be drawn.
    - Parameters 4 and 5 define the width and height of the area we want to cut out from the original image we loaded.
@@ -685,30 +557,11 @@ It is possible to render external images onto your canvas. These can be simple i
 
 5. When the image is meaningfully updated, the {{glossary("accessible description")}} must also be updated.
 
-   ```js
+   ```js live-sample___5-canvas-images
    canvas.setAttribute("aria-label", "Firefox Logo");
    ```
 
 The final example should look like so:
-
-```js hidden live-sample___5-canvas-images
-const canvas = document.querySelector(".myCanvas");
-const width = (canvas.width = window.innerWidth);
-const height = (canvas.height = window.innerHeight);
-const ctx = canvas.getContext("2d");
-
-ctx.fillStyle = "rgb(0,0,0)";
-ctx.fillRect(0, 0, width, height);
-
-const image = new Image();
-image.src =
-  "https://mdn.github.io/shared-assets/images/examples/fx-nightly-512.png";
-image.addEventListener("load", () =>
-  ctx.drawImage(image, 0, 0, 512, 512, 50, 40, 185, 185),
-);
-
-canvas.setAttribute("aria-label", "Firefox Logo");
-```
 
 {{EmbedLiveSample("5-canvas-images", '100%', 260)}}
 
@@ -727,7 +580,7 @@ Let's build an example.
 1. Make another fresh copy of your canvas template.
 2. Add the following line to the bottom of your JavaScript. This contains a new method, {{domxref("CanvasRenderingContext2D.translate", "translate()")}}, which moves the origin point of the canvas:
 
-   ```js
+   ```js live-sample___6-canvas-for-loop
    ctx.translate(width / 2, height / 2);
    ```
 
@@ -735,7 +588,7 @@ Let's build an example.
 
 3. Now add the following code to the bottom of the JavaScript:
 
-   ```js
+   ```js live-sample___6-canvas-for-loop
    function degToRad(degrees) {
      return (degrees * Math.PI) / 180;
    }
@@ -746,27 +599,27 @@ Let's build an example.
 
    let length = 250;
    let moveOffset = 20;
-
-   for (let i = 0; i < length; i++) {}
    ```
 
-   Here we are implementing the same `degToRad()` function we saw in the triangle example above, a `rand()` function that returns a random number between given lower and upper bounds, `length` and `moveOffset` variables (which we'll find out more about later), and an empty `for` loop.
+   Here we are implementing the same `degToRad()` function we saw in the triangle example above, a `rand()` function that returns a random number between given lower and upper bounds, and the `length` and `moveOffset` variables (which we'll find out more about later).
 
 4. The idea here is that we'll draw something on the canvas inside the `for` loop, and iterate on it each time so we can create something interesting. Add the following code inside your `for` loop:
 
-   ```js
-   ctx.fillStyle = `rgb(${255 - length} 0 ${255 - length} / 90%)`;
-   ctx.beginPath();
-   ctx.moveTo(moveOffset, moveOffset);
-   ctx.lineTo(moveOffset + length, moveOffset);
-   const triHeight = (length / 2) * Math.tan(degToRad(60));
-   ctx.lineTo(moveOffset + length / 2, moveOffset + triHeight);
-   ctx.lineTo(moveOffset, moveOffset);
-   ctx.fill();
+   ```js live-sample___6-canvas-for-loop
+   for (let i = 0; i < length; i++) {
+     ctx.fillStyle = `rgb(${255 - length} 0 ${255 - length} / 90%)`;
+     ctx.beginPath();
+     ctx.moveTo(moveOffset, moveOffset);
+     ctx.lineTo(moveOffset + length, moveOffset);
+     const triHeight = (length / 2) * Math.tan(degToRad(60));
+     ctx.lineTo(moveOffset + length / 2, moveOffset + triHeight);
+     ctx.lineTo(moveOffset, moveOffset);
+     ctx.fill();
 
-   length--;
-   moveOffset += 0.7;
-   ctx.rotate(degToRad(5));
+     length--;
+     moveOffset += 0.7;
+     ctx.rotate(degToRad(5));
+   }
    ```
 
    So on each iteration, we:
@@ -780,44 +633,6 @@ Let's build an example.
    - Update the variables that describe the sequence of triangles, so we can be ready to draw the next one. We decrease the `length` value by 1, so the triangles get smaller each time; increase `moveOffset` by a small amount so each successive triangle is slightly further away, and use another new function, {{domxref("CanvasRenderingContext2D.rotate", "rotate()")}}, which allows us to rotate the entire canvas! We rotate it by 5 degrees before drawing the next triangle.
 
 That's it! The final example should look like so:
-
-```js hidden live-sample___6-canvas-for-loop
-const canvas = document.querySelector(".myCanvas");
-const width = (canvas.width = window.innerWidth);
-const height = (canvas.height = window.innerHeight);
-const ctx = canvas.getContext("2d");
-
-ctx.fillStyle = "rgb(0,0,0)";
-ctx.fillRect(0, 0, width, height);
-
-ctx.translate(width / 2, height / 2);
-
-function degToRad(degrees) {
-  return (degrees * Math.PI) / 180;
-}
-
-function rand(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-let length = 250;
-let moveOffset = 20;
-
-for (let i = 0; i < length; i++) {
-  ctx.fillStyle = `rgba(${255 - length},0,${255 - length},0.9)`;
-  ctx.beginPath();
-  ctx.moveTo(moveOffset, moveOffset);
-  ctx.lineTo(moveOffset + length, moveOffset);
-  const triHeight = (length / 2) * Math.tan(degToRad(60));
-  ctx.lineTo(moveOffset + length / 2, moveOffset + triHeight);
-  ctx.lineTo(moveOffset, moveOffset);
-  ctx.fill();
-
-  length--;
-  moveOffset += 0.7;
-  ctx.rotate(degToRad(5));
-}
-```
 
 {{EmbedLiveSample("6-canvas-for-loop", '100%', 550)}}
 
@@ -874,155 +689,139 @@ In general, the process of doing a canvas animation involves the following steps
 > [!NOTE]
 > We won't cover `save()` and `restore()` here, but they are explained nicely in our [Transformations](/en-US/docs/Web/API/Canvas_API/Tutorial/Transformations) tutorial (and the ones that follow it).
 
-### A simple character animation
+### Walking object animation
 
-Now let's create our own simple animation — we'll get a character from a certain rather awesome retro computer game to walk across the screen.
+Now let's create our own simple animation — we'll be animating a moving object across the screen using a sprite sheet.
 
 1. Make another fresh copy of our canvas template and open it in your code editor.
 
 2. Update the fallback HTML to reflect the image:
 
-   ```html
+   ```html live-sample___7-canvas-walking-animation
    <canvas class="myCanvas">
-     <p>A man walking.</p>
+     <p>A cat walking.</p>
    </canvas>
    ```
 
-3. At the bottom of the JavaScript, add the following line to once again make the coordinate origin sit in the middle of the canvas:
+3. This time, we won't be coloring the background black. So after acquiring the `ctx` variable, paint the background light gray instead:
 
-   ```js
+   ```js live-sample___7-canvas-walking-animation
+   ctx.fillStyle = "#e5e6e9";
+   ctx.fillRect(0, 0, width, height);
+   ```
+
+4. At the bottom of the JavaScript, add the following line to once again make the coordinate origin sit in the middle of the canvas:
+
+   ```js live-sample___7-canvas-walking-animation
    ctx.translate(width / 2, height / 2);
    ```
 
-4. Now let's create a new {{domxref("HTMLImageElement")}} object, set its [`src`](/en-US/docs/Web/HTML/Reference/Elements/img#src) to the image we want to load, and add an `onload` event handler that will cause the `draw()` function to fire when the image is loaded:
+5. Now let's create a new {{domxref("HTMLImageElement")}} object, set its [`src`](/en-US/docs/Web/API/HTMLImageElement/src) to the image we want to load, and add an `onload` event handler that will cause the `draw()` function to fire when the image is loaded:
 
-   ```js
+   ```js live-sample___7-canvas-walking-animation
    const image = new Image();
    image.src =
-     "https://mdn.github.io/learning-area/javascript/apis/drawing-graphics/loops_animation/7_canvas_walking_animation/walk-right.png";
+     "https://developer.mozilla.org/shared-assets/images/examples/web-animations/cat_sprite.png";
    image.onload = draw;
    ```
 
-5. Now we'll add some variables to keep track of the position the sprite is to be drawn on the screen, and the sprite number we want to display.
+6. Now we'll add some variables to keep track of the position the sprite is to be drawn on the screen, and the sprite number we want to display.
 
-   ```js
-   let sprite = 0;
+   ```js live-sample___7-canvas-walking-animation
+   let spriteIndex = 0;
    let posX = 0;
+   const spriteWidth = 300;
+   const spriteHeight = 150;
+   const totalSprites = 12;
    ```
 
-   Let's explain the spritesheet image (which we have respectfully borrowed from Mike Thomas' [Walking cycle using CSS animation](https://codepen.io/mikethomas/pen/kQjKLW) CodePen). The image looks like this:
+   The sprite image is created by and shared at the courtesy of [Rachel Nabors](https://nearestnabors.com/), for their documentation work on the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API). It looks like this:
 
-   ![A sprite sheet with six sprite images of a pixelated character resembling a walking person from their right side at different instances of a single step forward. The character has a white shirt with sky blue buttons, black trousers, and black shoes. Each sprite is 102 pixels wide and 148 pixels high.](walk-right.png)
+   ![A sprite sheet with three columns, each column containing a sequence of images of a black cat moving to the left at different paces. Each sprite is 300 pixels wide and 150 pixels high.](/shared-assets/images/examples/web-animations/cat_sprite.png)
 
-   It contains six sprites that make up the whole walking sequence — each one is 102 pixels wide and 148 pixels high. To display each sprite cleanly we will have to use `drawImage()` to chop out a single sprite image from the spritesheet and display only that part, like we did above with the Firefox logo. The X coordinate of the slice will have to be a multiple of 102, and the Y coordinate will always be 0. The slice size will always be 102 by 148 pixels.
+   It has three columns. Each column is a sequence representing the cat moving at a different pace (walking, trotting, and galloping). Each sequence contains either 12 or 13 sprites — each one is 300 pixels wide and 150 pixels high. We will be using the leftmost walking sequence, which contains 12 sprites. To display each sprite cleanly we will have to use `drawImage()` to chop out a single sprite image from the spritesheet and display only that part, like we did above with the Firefox logo. The X and Y coordinates of the slice will have to be a multiple of `spriteWidth` and `spriteHeight`, respectively; because we are using the leftmost sequence, the X coordinate is always 0. The slice size will always be `spriteWidth` by `spriteHeight`.
 
-6. Now let's insert an empty `draw()` function at the bottom of the code, ready for filling up with some code:
+7. Now let's insert an empty `draw()` function at the bottom of the code, ready for filling up with some code:
 
    ```js
    function draw() {}
    ```
 
-7. The rest of the code in this section goes inside `draw()`. First, add the following line, which clears the canvas to prepare for drawing each frame. Notice that we have to specify the top-left corner of the rectangle as `-(width/2), -(height/2)` because we specified the origin position as `width/2, height/2` earlier on.
+   ```js-nolint hidden live-sample___7-canvas-walking-animation
+   function draw() {
+   ```
 
-   ```js
+8. The rest of the code in this section goes inside `draw()`. First, add the following line, which clears the canvas to prepare for drawing each frame. Notice that we have to specify the top-left corner of the rectangle as `-(width / 2), -(height / 2)` because we specified the origin position as `width/2, height/2` earlier on.
+
+   ```js live-sample___7-canvas-walking-animation
    ctx.fillRect(-(width / 2), -(height / 2), width, height);
    ```
 
-8. Next, we'll draw our image using drawImage — the 9-parameter version. Add the following:
+9. Next, we'll draw our image using drawImage — the 9-parameter version. Add the following:
 
-   ```js
-   ctx.drawImage(image, sprite * 102, 0, 102, 148, 0 + posX, -74, 102, 148);
+   ```js live-sample___7-canvas-walking-animation
+   ctx.drawImage(
+     image,
+     0,
+     spriteIndex * spriteHeight,
+     spriteWidth,
+     spriteHeight,
+     0 + posX,
+     -spriteHeight / 2,
+     spriteWidth,
+     spriteHeight,
+   );
    ```
 
    As you can see:
    - We specify `image` as the image to embed.
-   - Parameters 2 and 3 specify the top-left corner of the slice to cut out of the source image, with the X value as `sprite` multiplied by 102 (where `sprite` is the sprite number between 0 and 5) and the Y value always 0.
-   - Parameters 4 and 5 specify the size of the slice to cut out — 102 pixels by 148 pixels.
-   - Parameters 6 and 7 specify the top-left corner of the box into which to draw the slice on the canvas — the X position is 0 + `posX`, meaning that we can alter the drawing position by altering the `posX` value.
-   - Parameters 8 and 9 specify the size of the image on the canvas. We just want to keep its original size, so we specify 102 and 148 as the width and height.
+   - Parameters 2 and 3 specify the top-left corner of the slice to cut out of the source image, with the X value as 0 (for the leftmost column) and the Y value cycling through multiples of `spriteHeight`. You can replace the X value with `spriteWidth` or `2 * spriteWidth` to select the other columns.
+   - Parameters 4 and 5 specify the size of the slice to cut out — `spriteWidth` and `spriteHeight`.
+   - Parameters 6 and 7 specify the top-left corner of the box into which to draw the slice on the canvas — the X position is 0 + `posX`, meaning that we can alter the drawing position by altering the `posX` value. The Y position is `-spriteHeight / 2`, which means that the image will be vertically centered on the canvas.
+   - Parameters 8 and 9 specify the size of the image on the canvas. We just want to keep its original size, so we specify `spriteWidth` and `spriteHeight` as the width and height.
 
-9. Now we'll alter the `sprite` value after each draw — well, after some of them anyway. Add the following block to the bottom of the `draw()` function:
+10. Now we'll alter the `spriteIndex` value after each draw — well, after some of them anyway. Add the following block to the bottom of the `draw()` function:
 
-   ```js
-   if (posX % 13 === 0) {
-     if (sprite === 5) {
-       sprite = 0;
-     } else {
-       sprite++;
-     }
-   }
-   ```
-
-   We are wrapping the whole block in `if (posX % 13 === 0) { }`. We use the modulo (`%`) operator (also known as the [remainder operator](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)) to check whether the `posX` value can be exactly divided by 13 with no remainder. If so, we move on to the next sprite by incrementing `sprite` (wrapping to 0 after we're done with sprite #5). This effectively means that we are only updating the sprite on every 13th frame, or roughly about 5 frames a second (`requestAnimationFrame()` calls us at up to 60 frames per second if possible). We are deliberately slowing down the frame rate because we only have six sprites to work with, and if we display one every 60th of a second, our character will move way too fast!
-
-   Inside the outer block we use an [`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) statement to check whether the `sprite` value is at 5 (the last sprite, given that the sprite numbers run from 0 to 5). If we are showing the last sprite already, we reset `sprite` back to 0; if not we just increment it by 1.
-
-10. Next we need to work out how to change the `posX` value on each frame — add the following code block just below your last one.
-
-    ```js
-    if (posX > width / 2) {
-      let newStartPos = -(width / 2 + 102);
-      posX = Math.ceil(newStartPos);
-      console.log(posX);
-    } else {
-      posX += 2;
+    ```js live-sample___7-canvas-walking-animation
+    if (posX % 11 === 0) {
+      if (spriteIndex === totalSprites - 1) {
+        spriteIndex = 0;
+      } else {
+        spriteIndex++;
+      }
     }
     ```
 
-    We are using another `if...else` statement to see if the value of `posX` has become greater than `width/2`, which means our character has walked off the right edge of the screen. If so, we calculate a position that would put the character just to the left of the left side of the screen.
+    We are wrapping the whole block in `if (posX % 11 === 0) { }`. We use the modulo (`%`) operator (also known as the [remainder operator](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)) to check whether the `posX` value can be exactly divided by 11 with no remainder. If so, we move on to the next sprite by incrementing `spriteIndex` (wrapping to 0 after we're done with the last one). This effectively means that we are only updating the sprite on every 11th frame, or roughly about 6 frames a second (`requestAnimationFrame()` calls us at up to 60 frames per second if possible). We are deliberately slowing down the frame rate because we only have 12 sprites to work with, and if we display one every 60th of a second, our object will move way too fast!
 
-    If our character hasn't yet walked off the edge of the screen, we increment `posX` by 2. This will make him move a little bit to the right the next time we draw him.
+    Inside the outer block we use an [`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) statement to check whether the `spriteIndex` value is at the last one. If we are showing the last sprite already, we reset `spriteIndex` back to 0; if not we just increment it by 1.
 
-11. Finally, we need to make the animation loop by calling {{domxref("window.requestAnimationFrame", "requestAnimationFrame()")}} at the bottom of the `draw()` function:
+11. Next we need to work out how to change the `posX` value on each frame — add the following code block just below your last one.
 
-    ```js
+    ```js live-sample___7-canvas-walking-animation
+    if (posX < -width / 2 - spriteWidth) {
+      const newStartPos = width / 2;
+      posX = Math.ceil(newStartPos);
+    } else {
+      posX -= 2;
+    }
+    ```
+
+    We are using another `if...else` statement to see if the value of `posX` has become less than `-width/2 - spriteWidth`, which means our cat has walked off the left edge of the screen. If so, we calculate a position that would put the cat just to the right of the right side of the screen.
+
+    If our cat hasn't yet walked off the edge of the screen, we decrement `posX` by 2. This will make it move a little bit to the left the next time we draw it.
+
+12. Finally, we need to make the animation loop by calling {{domxref("window.requestAnimationFrame", "requestAnimationFrame()")}} at the bottom of the `draw()` function:
+
+    ```js live-sample___7-canvas-walking-animation
     window.requestAnimationFrame(draw);
     ```
 
-That's it! The final example should look like so:
-
-```js hidden live-sample___7-canvas-walking-animation
-const canvas = document.querySelector(".myCanvas");
-const width = (canvas.width = window.innerWidth);
-const height = (canvas.height = window.innerHeight);
-const ctx = canvas.getContext("2d");
-
-ctx.fillStyle = "rgb(0,0,0)";
-ctx.fillRect(0, 0, width, height);
-
-ctx.translate(width / 2, height / 2);
-
-const image = new Image();
-image.src =
-  "https://mdn.github.io/learning-area/javascript/apis/drawing-graphics/loops_animation/7_canvas_walking_animation/walk-right.png";
-image.onload = draw;
-
-let sprite = 0;
-let posX = 0;
-
-function draw() {
-  ctx.fillRect(-(width / 2), -(height / 2), width, height);
-  ctx.drawImage(image, sprite * 102, 0, 102, 148, 0 + posX, -74, 102, 148);
-
-  if (posX % 13 === 0) {
-    if (sprite === 5) {
-      sprite = 0;
-    } else {
-      sprite++;
-    }
-  }
-
-  if (posX > width / 2) {
-    let newStartPos = -(width / 2 + 102);
-    posX = Math.ceil(newStartPos);
-    console.log(posX);
-  } else {
-    posX += 2;
-  }
-
-  window.requestAnimationFrame(draw);
+```js-nolint hidden live-sample___7-canvas-walking-animation
 }
 ```
+
+That's it! The final example should look like so:
 
 {{EmbedLiveSample("7-canvas-walking-animation", '100%', 260)}}
 
@@ -1097,7 +896,7 @@ const width = (canvas.width = window.innerWidth);
 const height = (canvas.height = window.innerHeight - 85);
 const ctx = canvas.getContext("2d");
 
-ctx.fillStyle = "rgb(0,0,0)";
+ctx.fillStyle = "black";
 ctx.fillRect(0, 0, width, height);
 
 const colorPicker = document.querySelector('input[type="color"]');
@@ -1116,56 +915,6 @@ sizePicker.addEventListener(
   "input",
   () => (output.textContent = sizePicker.value),
 );
-
-// store mouse pointer coordinates, and whether the button is pressed
-let curX;
-let curY;
-let pressed = false;
-
-// update mouse pointer coordinates
-document.addEventListener("mousemove", (e) => {
-  curX = window.Event
-    ? e.pageX
-    : e.clientX +
-      (document.documentElement.scrollLeft
-        ? document.documentElement.scrollLeft
-        : document.body.scrollLeft);
-  curY = window.Event
-    ? e.pageY
-    : e.clientY +
-      (document.documentElement.scrollTop
-        ? document.documentElement.scrollTop
-        : document.body.scrollTop);
-});
-
-canvas.addEventListener("mousedown", () => (pressed = true));
-
-canvas.addEventListener("mouseup", () => (pressed = false));
-
-clearBtn.addEventListener("click", () => {
-  ctx.fillStyle = "rgb(0,0,0)";
-  ctx.fillRect(0, 0, width, height);
-});
-
-function draw() {
-  if (pressed) {
-    ctx.fillStyle = colorPicker.value;
-    ctx.beginPath();
-    ctx.arc(
-      curX,
-      curY - 85,
-      sizePicker.value,
-      degToRad(0),
-      degToRad(360),
-      false,
-    );
-    ctx.fill();
-  }
-
-  requestAnimationFrame(draw);
-}
-
-draw();
 ```
 
 You can play with the example live below; you can also click the **Play** button to open it in the MDN Playground, where you can edit the source code:
@@ -1174,7 +923,7 @@ You can play with the example live below; you can also click the **Play** button
 
 Let's look at the most interesting parts. First of all, we keep track of the mouse's X and Y coordinates and whether it is being clicked or not with three variables: `curX`, `curY`, and `pressed`. When the mouse moves, we fire a function set as the `onmousemove` event handler, which captures the current X and Y values. We also use `onmousedown` and `onmouseup` event handlers to change the value of `pressed` to `true` when the mouse button is pressed, and back to `false` again when it is released.
 
-```js
+```js live-sample___8-canvas-drawing-app
 let curX;
 let curY;
 let pressed = false;
@@ -1192,16 +941,16 @@ canvas.addEventListener("mouseup", () => (pressed = false));
 
 When the "Clear canvas" button is pressed, we run a simple function that clears the whole canvas back to black, the same way we've seen before:
 
-```js
+```js live-sample___8-canvas-drawing-app
 clearBtn.addEventListener("click", () => {
-  ctx.fillStyle = "rgb(0 0 0)";
+  ctx.fillStyle = "black";
   ctx.fillRect(0, 0, width, height);
 });
 ```
 
 The drawing loop is pretty simple this time around — if pressed is `true`, we draw a circle with a fill style equal to the value in the color picker, and a radius equal to the value set in the range input. We have to draw the circle 85 pixels above where we measured it from, because the vertical measurement is taken from the top of the viewport, but we are drawing the circle relative to the top of the canvas, which starts below the 85 pixel-high toolbar. If we drew it with just `curY` as the y coordinate, it would appear 85 pixels lower than the mouse position.
 
-```js
+```js live-sample___8-canvas-drawing-app
 function draw() {
   if (pressed) {
     ctx.fillStyle = colorPicker.value;
@@ -1237,9 +986,9 @@ Because of its complexity, most people write 3D graphics code using a third part
 
 Yes, using one of these means learning another new API (a third party one, in this case), but they are a lot simpler than coding raw WebGL.
 
-### Recreating our cube
+### A spinning cube
 
-Let's look at an example of how to create something with a WebGL library. We'll choose [Three.js](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js), as it is one of the most popular ones. In this tutorial we'll create the 3D spinning cube we saw earlier.
+Let's look at an example of how to create something with a WebGL library. We'll choose [Three.js](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js), as it is one of the most popular ones. In this tutorial we'll create a 3D spinning cube.
 
 1. To start with, create a new folder in your local hard drive called `webgl-cube`.
 2. Inside it, create a new file called `index.html` and add the following content to it:
@@ -1262,10 +1011,14 @@ Let's look at an example of how to create something with a WebGL library. We'll 
    </html>
    ```
 
+   ```html hidden live-sample___9-webgl-cube
+   <script src="https://cdn.jsdelivr.net/npm/three-js@79.0.0/three.min.js"></script>
+   ```
+
 3. Next, create another new file called `script.js`, again in the same folder as before. Leave it empty for now.
 4. Now create another new file called `style.css`, again in the same folder, and add the following content to it:
 
-   ```css
+   ```css live-sample___9-webgl-cube
    html,
    body {
      margin: 0;
@@ -1278,7 +1031,7 @@ Let's look at an example of how to create something with a WebGL library. We'll 
 
 5. We've got `three.js` included in our page (this is what the first `<script>` element in our HTML is doing), so now we can start to write JavaScript that makes use of it into `script.js`. Let's start by creating a new scene — add the following into your `script.js` file:
 
-   ```js
+   ```js live-sample___9-webgl-cube
    const scene = new THREE.Scene();
    ```
 
@@ -1286,7 +1039,7 @@ Let's look at an example of how to create something with a WebGL library. We'll 
 
 6. Next, we need a **camera** so we can see the scene. In 3D imagery terms, the camera represents a viewer's position in the world. To create a camera, add the following lines next:
 
-   ```js
+   ```js live-sample___9-webgl-cube
    const camera = new THREE.PerspectiveCamera(
      75,
      window.innerWidth / window.innerHeight,
@@ -1306,7 +1059,7 @@ Let's look at an example of how to create something with a WebGL library. We'll 
 
 7. The third vital ingredient is a renderer. This is an object that renders a given scene, as viewed through a given camera. We'll create one for now using the [`WebGLRenderer()`](https://threejs.org/docs/index.html#api/en/renderers/WebGLRenderer) constructor, but we'll not use it till later. Add the following lines next:
 
-   ```js
+   ```js live-sample___9-webgl-cube
    const renderer = new THREE.WebGLRenderer();
    renderer.setSize(window.innerWidth, window.innerHeight);
    document.body.appendChild(renderer.domElement);
@@ -1316,7 +1069,7 @@ Let's look at an example of how to create something with a WebGL library. We'll 
 
 8. Next, we want to create the cube we'll display on the canvas. Add the following chunk of code at the bottom of your JavaScript:
 
-   ```js
+   ```js live-sample___9-webgl-cube
    let cube;
 
    const loader = new THREE.TextureLoader();
@@ -1346,11 +1099,11 @@ Let's look at an example of how to create something with a WebGL library. We'll 
 
 9. Before we get to defining `draw()`, we'll add a couple of lights to the scene, to liven things up a bit; add the following blocks next:
 
-   ```js
-   const light = new THREE.AmbientLight("rgb(255 255 255)"); // soft white light
+   ```js live-sample___9-webgl-cube
+   const light = new THREE.AmbientLight("white"); // soft white light
    scene.add(light);
 
-   const spotLight = new THREE.SpotLight("rgb(255 255 255)");
+   const spotLight = new THREE.SpotLight("white");
    spotLight.position.set(100, 1000, 1000);
    spotLight.castShadow = true;
    scene.add(spotLight);
@@ -1360,7 +1113,7 @@ Let's look at an example of how to create something with a WebGL library. We'll 
 
 10. Last of all, let's add our `draw()` function to the bottom of the code:
 
-    ```js
+    ```js live-sample___9-webgl-cube
     function draw() {
       cube.rotation.x += 0.01;
       cube.rotation.y += 0.01;
@@ -1372,9 +1125,9 @@ Let's look at an example of how to create something with a WebGL library. We'll 
 
     This is fairly intuitive; on each frame, we rotate our cube slightly on its X and Y axes, then render the scene as viewed by our camera, then finally call `requestAnimationFrame()` to schedule drawing our next frame.
 
-Let's have another quick look at what the finished product should look like:
+The finished product should look like:
 
-{{EmbedLiveSample("webgl-cube", "100%", 500)}}
+{{EmbedLiveSample("9-webgl-cube", "100%", 500)}}
 
 > [!NOTE]
 > In our GitHub repo you can also find another interesting 3D cube example — [Three.js Video Cube](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/threejs-video-cube) ([see it live also](https://mdn.github.io/learning-area/javascript/apis/drawing-graphics/threejs-video-cube/)). This uses {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} to take a video stream from a computer web cam and project it onto the side of the cube as a texture!

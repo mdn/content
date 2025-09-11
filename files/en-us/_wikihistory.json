@@ -124521,6 +124521,10 @@
       "SpencerG"
     ]
   },
+  "Web/Security/Attacks/Subdomain_takeover": {
+    "modified": "2020-08-25T23:27:57.222Z",
+    "contributors": ["jswisher"]
+  },
   "Web/Security/Certificate_Transparency": {
     "modified": "2020-11-12T17:20:50.893Z",
     "contributors": ["secdev-01", "Felicia.Ann.Kelley", "lol768"]
@@ -124785,10 +124789,6 @@
       "erikadoyle",
       "Annevk"
     ]
-  },
-  "Web/Security/Subdomain_takeovers": {
-    "modified": "2020-08-25T23:27:57.222Z",
-    "contributors": ["jswisher"]
   },
   "Web/Security/Subresource_Integrity": {
     "modified": "2020-10-15T21:38:19.213Z",

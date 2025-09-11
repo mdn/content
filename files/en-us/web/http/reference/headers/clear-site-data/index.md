@@ -59,10 +59,10 @@ Clear-Site-Data: "*"
 - `"executionContexts"` {{Experimental_Inline}}
   - : The server signals that the client should reload all browsing contexts for the origin of the response ({{domxref("Location.reload")}}).
 
-- `"prefetchCache"` {{experimental_inline}}
+- `"prefetchCache"` {{experimental_inline}} {{non-standard_inline}}
   - : Used to clear {{domxref("Speculation Rules API", "speculation rules", "", "nocode")}} prefetches that are scoped to the referrer origin.
 
-- `"prerenderCache"` {{experimental_inline}}
+- `"prerenderCache"` {{experimental_inline}} {{non-standard_inline}}
   - : Used to clear {{domxref("Speculation Rules API", "speculation rules","", "nocode")}} prerenders that are scoped to the referrer origin.
 
 - `"storage"`

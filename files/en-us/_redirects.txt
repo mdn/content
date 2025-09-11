@@ -12244,7 +12244,6 @@
 /en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Types	/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types
 /en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions/Using_CSS_math_functions	/en-US/docs/Web/CSS/CSS_Values_and_Units/Using_CSS_math_functions
 /en-US/docs/Web/CSS/CSS_Variables	/en-US/docs/Web/CSS/CSS_cascading_variables
-/en-US/docs/Web/CSS/CSS_Viewport	/en-US/docs/Web/CSS
 /en-US/docs/Web/CSS/CSS_animations/Tips	/en-US/docs/Web/API/Web_Animations_API/Tips
 /en-US/docs/Web/CSS/CSS_cascade/actual_value	/en-US/docs/Web/CSS/CSS_cascade/Value_processing#actual_value
 /en-US/docs/Web/CSS/CSS_cascade/computed_value	/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value
@@ -15037,6 +15036,7 @@
 /en-US/docs/Web/Security/Securing_your_site	/en-US/docs/Web/Security/Practical_implementation_guides
 /en-US/docs/Web/Security/Securing_your_site/Configuring_server_MIME_types	/en-US/docs/Learn_web_development/Extensions/Server-side/Configuring_server_MIME_types
 /en-US/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion	/en-US/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion
+/en-US/docs/Web/Security/Subdomain_takeovers	/en-US/docs/Web/Security/Attacks/Subdomain_takeover
 /en-US/docs/Web/Security/Types_of_attacks	/en-US/docs/Web/Security/Attacks
 /en-US/docs/Web/Text_fragments	/en-US/docs/Web/URI/Reference/Fragment/Text_fragments
 /en-US/docs/Web/Tutorials	/en-US/docs/MDN/Tutorials
