@@ -463,7 +463,7 @@ npm install mongodb
 ```
 
 The database itself can be installed locally or on a cloud server. In your Express code you import the driver, connect to the database, and then perform create, read, update, and delete (CRUD) operations.
-The example below shows how you can find "mammal" records using MongoDB with the modern Promise-based driver API (v5+):
+The example below shows how you can find "mammal" records using MongoDB:
 
 ```js
 const { MongoClient } = require("mongodb");
