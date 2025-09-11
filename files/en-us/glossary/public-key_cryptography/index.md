@@ -21,7 +21,7 @@ As a result, it's common for an encryption system to use a symmetric algorithm t
 
 ## Common public-key cryptosystems
 
-Commonly used public-key cryptosystems are RSA (for both signing and encryption), DSA (for signing) and Diffie–Hellman (for key agreement).
+Commonly used public-key cryptosystems are [RSA](https://en.wikipedia.org/wiki/RSA_cryptosystem) (for both signing and encryption), [DSA](https://en.wikipedia.org/wiki/Digital_Signature_Algorithm) (for signing) and [Diffie–Hellman](https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange) (for key agreement).
 
 Elliptic-curve cryptography offers an alternative approach to these cryptographic systems with the benefit of using comparatively smaller key sizes, faster operations, and smaller storage and transmission.
 Popular elliptic-curve algorithms include [Elliptic-curve Diffie–Hellman](https://en.wikipedia.org/wiki/Elliptic-curve_Diffie–Hellman) and [Elliptic Curve Digital Signature Algorithm](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm), which developers will often encounter abbreviated as **ECDH** and **ECDSA**.
