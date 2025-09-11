@@ -86,21 +86,21 @@ The first form is full, with four form controls: one {{htmlelement("fieldset")}}
 </form>
 ```
 
-We use the `elements` property to returns the `HTMLFormControlsCollection` for each form.
+We use the `elements` property to get the `HTMLFormControlsCollection` for each form.
 
 ```js
 const sparse = document.getElementById("sparseForm").elements;
 const full = document.getElementById("fullForm").elements;
 ```
 
-Each collection includes each form element's associated listed form controls, meaning all the {{HTMLElement("button")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}}, {{HTMLElement("object")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}}, and form-associated custom elements associated with the form, even if those elements are nested in another form, or not nested in any form.
+The collection includes the form element's associated form controls, meaning all the {{HTMLElement("button")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}}, {{HTMLElement("object")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}}, and form-associated custom elements associated with the form, even if those elements are nested in another form, or not nested in any form.
 
 ```js
 console.log(`sparse form: ${sparse.length}`); // sparse form: 5
 console.log(`full form: ${full.length}`); // full form: 0
 ```
 
-The collection`s form controls are in the same order in which they appear in the document.
+The collection's form controls are in the same order in which they appear in the document.
 
 ```js
 console.log(`first member: ${sparse[0].tagName}`); // first member: FIELDSET
