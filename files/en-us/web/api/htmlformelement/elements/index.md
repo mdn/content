@@ -8,18 +8,13 @@ browser-compat: api.HTMLFormElement.elements
 
 {{APIRef("HTML DOM")}}
 
-The **`elements`** property of the {{domxref("HTMLFormElement")}} interface returns an
-{{domxref("HTMLFormControlsCollection")}} listing all the listed form controls associated with
-the {{HTMLElement("form")}} element.
+The **`elements`** property of the {{domxref("HTMLFormElement")}} interface returns an {{domxref("HTMLFormControlsCollection")}} listing all the listed form controls associated with the {{HTMLElement("form")}} element.
 
-You can access a particular form control in the returned collection by using either an
-index or the element's `name` or `id` attributes.
+You can access a particular form control in the returned collection by using either an index or the element's `name` or `id` attributes.
 
-Prior to HTML 5, the returned object was an {{domxref("HTMLCollection")}}, on which
-`HTMLFormControlsCollection` is based.
+Prior to HTML 5, the returned object was an {{domxref("HTMLCollection")}}, on which `HTMLFormControlsCollection` is based.
 
-> [!NOTE]
-> Independently, you can obtain just the number of associated form controls using the {{domxref("HTMLFormElement.length", "length")}} property. Similarly, you can get a list of all of the forms contained within a given document using the document's {{domxref("Document.forms", "forms")}} property.
+Independently, you can obtain just the number of associated form controls using the {{domxref("HTMLFormElement.length", "length")}} property. You can get a list of all of the forms contained within a given document using the document's {{domxref("Document.forms", "forms")}} property.
 
 ## Value
 
@@ -29,7 +24,7 @@ This is a live collection; if form controls are associated with or disassociated
 The form controls in the returned collection are in the same order in which they appear in the document by following a preorder, depth-first traversal of the tree.
 This is called **tree order**.
 
-Only the listed form controls are returned, which include the following:
+Only the following form controls are returned:
 
 - {{HTMLElement("button")}}
 - {{HTMLElement("fieldset")}}
@@ -114,10 +109,7 @@ console.log(`last member: ${sparse[sparse.length - 1].tagName}`); // last member
 
 ### Accessing form controls
 
-This example gets the form's element list, then iterates over the list, looking for
-{{HTMLElement("input")}} elements of type
-[`"text"`](/en-US/docs/Web/HTML/Reference/Elements/input/text) so that some
-form of processing can be performed on them.
+This example gets the form's element list, then iterates over the list, looking for {{HTMLElement("input")}} elements of type [`"text"`](/en-US/docs/Web/HTML/Reference/Elements/input/text) so that some form of processing can be performed on them.
 
 ```js
 const inputs = document.getElementById("my-form").elements;
