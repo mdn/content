@@ -1613,10 +1613,10 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-6.0.28.tgz#e99a2cb1693fec9255c3cf1cfe1b02fcfd0de12d"
   integrity sha512-UE4uV0VK+HfGyXCNdq3Lyy0xNJ6bJI9Y8XtVnnv7+oFda3xtV3PQJIMPHEtC+ou1qrrHdrtaLNQ9cJSj4hi94Q==
 
-"@mdn/fred@1.3.2":
-  version "1.3.2"
-  resolved "https://registry.yarnpkg.com/@mdn/fred/-/fred-1.3.2.tgz#638b6cb59642299c4d35c1139c6ffc2cd30626a2"
-  integrity sha512-zmogxwI2bh0Bg3yj8lvo2SwPC7V8EkE3UvuGeUUgIPSaOKoP69fq89qTjyVq6NaeXQxgmYQ7pt6TI8l5VXZ5QQ==
+"@mdn/fred@1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@mdn/fred/-/fred-1.4.0.tgz#e4140f18472e8e5aec8861ee3ba36eae858c5e5e"
+  integrity sha512-OIGJyTNfwHQ2mjcOVnNqij/cF8kRDsnqCvbF9VrB41wKVEDT8FJdXpS7pQZpQEXSmh9aCNG04rEppBF+U+JbZQ==
   dependencies:
     "@codemirror/lang-css" "^6.3.1"
     "@codemirror/lang-html" "^6.4.9"
@@ -1628,6 +1628,7 @@
     "@lit-labs/ssr" "^3.3.1"
     "@lit-labs/ssr-client" "^1.1.7"
     "@lit/task" "^1.0.3"
+    "@mdn/rari" "0.1.49"
     "@mdn/watify" "^1.1.3"
     "@mozilla/glean" "^5.0.5"
     codemirror "^6.0.1"
