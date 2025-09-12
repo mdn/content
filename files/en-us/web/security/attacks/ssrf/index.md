@@ -22,7 +22,9 @@ The server has access to the company's intranet.
 If the server does not validate the URL parameter is is given, then the client can extract sensitive data by passing intranet URLs to the API:
 
 ```js
-fetch("https://example.org/fetch-image?url=http://localhost:443/admin/internal-files/org-chart.png");
+fetch(
+  "https://example.org/fetch-image?url=http://localhost:443/admin/internal-files/org-chart.png",
+);
 ```
 
 Although the client could not access `http://localhost:443/` directly, the server can, and the server relays the response to the client.
@@ -38,7 +40,11 @@ In these cases the attacker could get access to sensitive data. Sometimes the at
 - By forcing the server to make many requests an attacker can execute a {{glossary("Denial of Service", "Denial of Service (DoS)")}} attack.
 - By examining the status code returned by the server or the time taken to execute requests, the attacker may infer sensitive information about the target.
 
-Attackers may use redirects or redirect chains to evade validation.
+Attackers may use redirects or redirect chains to evade validation. For example, they could own a domain `https://evilexample.org/redirect` and all that host does is to redirect to `http://localhost:443/` or other (internal) URLs potentially bypassing input validation.
+
+```js
+fetch("https://example.org/fetch-image?url=https://evilexample.org/redirect");
+```
 
 ## Defenses against SSRF
 
