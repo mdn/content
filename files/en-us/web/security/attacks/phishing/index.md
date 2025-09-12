@@ -70,7 +70,7 @@ To phish a user who uses OTP as a second factor, the attacker's fake site is an 
 6. The user's authenticator app generates the same TOTP, and the user enters it on the fake site.
 7. The fake site relays the TOTP to the real site, and the attacker is given access.
 
-![](TOTP-phish.svg)
+![Diagram showing how a phishing attack can work against 2-factor TOTP authentication](TOTP-phish.svg)
 
 This is much more difficult than just phishing a password, because the attacker must operate in real time. However, phishing toolkits greatly reduce the complexity of accomplishing it.
 
