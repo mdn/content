@@ -15,7 +15,7 @@ Values of this type are objects that can contain these properties:
 - `domain`
   - : A `string` representing the domain the cookie belongs to (e.g., "www.google.com" or "example.com").
 - `expirationDate` {{optional_inline}}
-  - : A `number` representing the expiration date of the cookie as the seconds since the UNIX epoch. From Firefox 142 includes millisecond in the fractional part. Not provided for session cookies.
+  - : A `number` representing the expiration date of the cookie as the seconds after the UNIX epoch. From Firefox 142 includes milliseconds in the fractional part. Not provided for session cookies.
 - `firstPartyDomain`
   - : A `string` representing the first-party domain associated with the cookie. This is an empty string if the cookie was set while first-party isolation was off. See [First-party isolation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#first-party_isolation).
 - `hostOnly`
