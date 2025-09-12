@@ -7,7 +7,7 @@ spec-urls: https://w3c.github.io/webcrypto/#dfn-HmacImportParams
 
 {{ APIRef("Web Crypto API") }}
 
-The **`HmacImportParams`** dictionary of the [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) represents the object that should be passed as the `algorithm` parameter into {{domxref("SubtleCrypto.importKey()")}} or {{domxref("SubtleCrypto.unwrapKey()")}}, when generating a key for the [HMAC](/en-US/docs/Web/API/SubtleCrypto/sign#hmac) algorithm.
+The **`HmacImportParams`** dictionary of the [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) represents the object that should be passed as the `algorithm` parameter into {{domxref("SubtleCrypto.importKey()")}}, as the `unwrappedKeyAlgorithm` parameter into {{domxref("SubtleCrypto.unwrapKey()")}}, or as the `derivedKeyType` parameter into {{domxref("SubtleCrypto.deriveKey()")}}, when importing, unwrapping, or deriving a key for the [HMAC](/en-US/docs/Web/API/SubtleCrypto/sign#hmac) algorithm.
 
 ## Instance properties
 
@@ -27,7 +27,7 @@ The **`HmacImportParams`** dictionary of the [Web Crypto API](/en-US/docs/Web/AP
 
 ## Examples
 
-See the examples for {{domxref("SubtleCrypto.importKey()")}}.
+See the examples for {{domxref("SubtleCrypto.importKey()")}}, {{domxref("SubtleCrypto.unwrapKey()")}}, or {{domxref("SubtleCrypto.deriveKey()")}}.
 
 ## Specifications
 
@@ -35,9 +35,10 @@ See the examples for {{domxref("SubtleCrypto.importKey()")}}.
 
 ## Browser compatibility
 
-Browsers that support the "HMAC" algorithm for the {{domxref("SubtleCrypto.importKey()")}}, {{domxref("SubtleCrypto.unwrapKey()")}} methods will support this type.
+Browsers that support the "HMAC" algorithm for the {{domxref("SubtleCrypto.importKey()")}}, {{domxref("SubtleCrypto.unwrapKey()")}}, or {{domxref("SubtleCrypto.deriveKey()")}} methods will support this type.
 
 ## See also
 
 - {{domxref("SubtleCrypto.importKey()")}}.
 - {{domxref("SubtleCrypto.unwrapKey()")}}.
+- {{domxref("SubtleCrypto.deriveKey()")}}.
