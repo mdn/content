@@ -48,7 +48,7 @@
   "dependencies": {
     "@apideck/better-ajv-errors": "^0.3.6",
     "@caporal/core": "^2.0.7",
-    "@mdn/fred": "1.3.2",
+    "@mdn/fred": "1.4.0",
     "@mdn/yari": "5.1.1",
     "@octokit/rest": "^22.0.0",
     "ajv": "^8.17.1",
