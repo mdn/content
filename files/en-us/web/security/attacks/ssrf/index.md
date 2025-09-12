@@ -5,9 +5,9 @@ page-type: guide
 sidebar: security
 ---
 
-**Server‑Side Request Forgery (SSRF)** is a vulnerability that allows an attacker to make HTTP (or other network) requests to arbitrary destinations. SSRF makes these requests originate from within a server itself, which typically has broader access than an external client.
+**Server‑Side Request Forgery (SSRF)** is a vulnerability that allows an attacker to make network requests to arbitrary destinations. SSRF makes these requests originate from within a server itself, which typically has broader access than an external client.
 
-The attack can cause exposure of internal resources or allow performing actions that would otherwise not be accessible from the outside.
+This can enable an attacker to access sensitive resources or to perform other unauthorized actions.
 
 ## Example scenario
 
@@ -17,23 +17,28 @@ Suppose your application has an endpoint that fetches images from a provided URL
 GET /fetch-image?url=https://example.com/image.png
 ```
 
-If the `url` parameter is not properly validated, an attacker could supply malicious targets. For example:
+The server has access to the company's intranet.
 
-```http
-?url=http://localhost:443/admin/internal-files/org-chart.png
-?url=http://customer1.app.localhost.my.company.com
-?url=file:///etc/passwd
+If the server does not validate the URL parameter is is given, then the client can extract sensitive data by passing intranet URLs to the API:
+
+```js
+fetch("https://example.org/fetch-image?url=http://localhost:443/admin/internal-files/org-chart.png);
 ```
 
-In these cases the attacker could get access to sensitive data, but even if the attacker does not receive response content (blind SSRF), and the server still performs the request, the attack might lead to other vulnerabilities such as an {{glossary("Denial of Service", "Denial of Service (DoS)")}} attack that could exhaust (internal) services among other things.
+Although the client could not access `http://localhost:443/` directly, the server can, and the server relays the response to the client.
 
-## SSRF variants
+The client doesn't have to make HTTP requests: it might be able to use the `file://` protocol:
 
-SSRF attacks can present themselves in a few different variants:
+```js
+fetch("https://example.org/fetch-image?url=file:///etc/passwd");
+```
 
-- Standard SSRF: The attacker receives the full response from the (internal) request.
-- Blind SSRF: The attacker does not receive a response but can infer behavior from the status codes, DNS logs, etc.
-- Redirection SSRF: The attacker uses redirects or redirect chains to bypass validation and filtering logic to reach internal services.
+In these cases the attacker could get access to sensitive data. Sometimes the attacker does not get the response body, but in this case it can still cause problems:
+
+- By forcing the server to make many requests an attacker can execute a {{glossary("Denial of Service", "Denial of Service (DoS)"))) attack.
+- By examining the status code returned by the server or the time taken to execute requests, the attacker may infer sensitive information about the target.
+
+Attackers may use redirects or redirect chains to evade validation.
 
 ## Defenses against SSRF
 
