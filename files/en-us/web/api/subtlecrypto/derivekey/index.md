@@ -19,7 +19,7 @@ See [Supported algorithms](#supported_algorithms) for some more detail on this.
 ## Syntax
 
 ```js-nolint
-deriveKey(algorithm, baseKey, derivedKeyAlgorithm, extractable, keyUsages)
+deriveKey(algorithm, baseKey, derivedKeyType, extractable, keyUsages)
 ```
 
 ### Parameters
