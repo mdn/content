@@ -7,7 +7,11 @@ spec-urls: https://w3c.github.io/webcrypto/#dfn-HmacImportParams
 
 {{ APIRef("Web Crypto API") }}
 
-The **`HmacImportParams`** dictionary of the [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) represents the object that should be passed as the `algorithm` parameter into {{domxref("SubtleCrypto.importKey()")}}, as the `unwrappedKeyAlgorithm` parameter into {{domxref("SubtleCrypto.unwrapKey()")}}, or as the `derivedKeyType` parameter into {{domxref("SubtleCrypto.deriveKey()")}}, when importing, unwrapping, or deriving a key for the [HMAC](/en-US/docs/Web/API/SubtleCrypto/sign#hmac) algorithm.
+The **`HmacImportParams`** dictionary of the [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) represents the object that should be passed when importing, unwrapping, or deriving a key for the [HMAC](/en-US/docs/Web/API/SubtleCrypto/sign#hmac) algorithm, as:
+
+- The `algorithm` parameter to {{domxref("SubtleCrypto.importKey()")}}
+- The `unwrappedKeyAlgorithm` parameter to {{domxref("SubtleCrypto.unwrapKey()")}}
+- The `derivedKeyType` parameter to {{domxref("SubtleCrypto.deriveKey()")}}.
 
 ## Instance properties
 
