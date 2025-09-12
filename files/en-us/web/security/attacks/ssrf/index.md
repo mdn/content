@@ -22,7 +22,7 @@ The server has access to the company's intranet.
 If the server does not validate the URL parameter is is given, then the client can extract sensitive data by passing intranet URLs to the API:
 
 ```js
-fetch("https://example.org/fetch-image?url=http://localhost:443/admin/internal-files/org-chart.png);
+fetch("https://example.org/fetch-image?url=http://localhost:443/admin/internal-files/org-chart.png");
 ```
 
 Although the client could not access `http://localhost:443/` directly, the server can, and the server relays the response to the client.
