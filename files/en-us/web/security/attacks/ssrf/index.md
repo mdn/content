@@ -35,7 +35,7 @@ fetch("https://example.org/fetch-image?url=file:///etc/passwd");
 
 In these cases the attacker could get access to sensitive data. Sometimes the attacker does not get the response body, but in this case it can still cause problems:
 
-- By forcing the server to make many requests an attacker can execute a {{glossary("Denial of Service", "Denial of Service (DoS)"))) attack.
+- By forcing the server to make many requests an attacker can execute a {{glossary("Denial of Service", "Denial of Service (DoS)")}} attack.
 - By examining the status code returned by the server or the time taken to execute requests, the attacker may infer sensitive information about the target.
 
 Attackers may use redirects or redirect chains to evade validation.
@@ -54,7 +54,7 @@ const ALLOWED_DOMAINS = ["https://api.example.com", "https://cdn.example.com"];
 
 ### Blocking protocols and URL schemes
 
-Ensure only specific URL schemes are allowed. Most likely only allowing `https://` is enough.
+Ensure only specific URL schemes are allowed. Most likely only allowing `https://` is enough for regular web applications.
 
 ### Redirect validation
 
