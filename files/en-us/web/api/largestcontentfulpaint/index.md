@@ -30,6 +30,24 @@ Additional key paint moments are provided by the {{domxref("PerformancePaintTimi
 
 {{InheritanceDiagram}}
 
+### Cross-origin image render time
+
+For security reasons, the value of the {{domxref("LargestContentfulPaint.renderTime", "renderTime")}} property was originally `0` if the resource is a cross-origin request. Instead the {{domxref("LargestContentfulPaint.loadTime", "loadTime")}} property should be used as a fallback. The {{domxref("PerformanceEntry.startTime", "startTime")}}
+
+Browsers [may now expose a slightly coarsened render time](https://github.com/w3c/paint-timing/issues/104) in these situations. Check for [browser support](#browser_compatibility).
+
+To expose more accurate cross-origin `renderTime` information, the {{HTTPHeader("Timing-Allow-Origin")}} HTTP response header needs to be set.
+
+For example, to allow `https://developer.mozilla.org` to see an accurate `renderTime`, the cross-origin resource should send:
+
+```http
+Timing-Allow-Origin: https://developer.mozilla.org
+```
+
+### Use `startTime` over `renderTime`
+
+Regardless of the accuracy of the `renderTime`, developers should use {{domxref("PerformanceEntry.startTime", "startTime")}} over `renderTime` as the LCP time. This returns the value of the entry's {{domxref("LargestContentfulPaint.renderTime", "renderTime")}} if it is not `0`, and otherwise the value of this entry's {{domxref("LargestContentfulPaint.loadTime", "loadTime")}} so removes the need to check for 0 values for non-supporting browsers.
+
 ## Instance properties
 
 This interface extends the following {{domxref("PerformanceEntry")}} properties by qualifying and constraining the properties as follows:
@@ -48,7 +66,7 @@ It also supports the following properties:
 - {{domxref("LargestContentfulPaint.element")}} {{ReadOnlyInline}}
   - : The element that is the current largest contentful paint.
 - {{domxref("LargestContentfulPaint.renderTime")}} {{ReadOnlyInline}}
-  - : The time the element was rendered to the screen. May not be available if the element is a cross-origin image loaded without the `Timing-Allow-Origin` header.
+  - : The time the element was rendered to the screen. May be a coarsened value or `0` if the element is a cross-origin image loaded without the `Timing-Allow-Origin` header.
 - {{domxref("LargestContentfulPaint.loadTime")}} {{ReadOnlyInline}}
   - : The time the element was loaded.
 - {{domxref("LargestContentfulPaint.size")}} {{ReadOnlyInline}}
@@ -81,28 +99,6 @@ const observer = new PerformanceObserver((list) => {
   console.log(lastEntry);
 });
 observer.observe({ type: "largest-contentful-paint", buffered: true });
-```
-
-### Cross-origin image render time
-
-For security reasons, the value of the {{domxref("LargestContentfulPaint.renderTime", "renderTime")}} property was originally `0` if the resource is a cross-origin request. Instead the {{domxref("LargestContentfulPaint.loadTime", "loadTime")}} property should be used as a fallback.
-
-Browsers [may now expose a slightly coarsened render time](https://github.com/w3c/paint-timing/issues/104) in these situations. Check for [browser support](#browser_compatibility).
-
-To expose more accurate cross-origin render-time information, the {{HTTPHeader("Timing-Allow-Origin")}} HTTP response header needs to be set.
-
-For example, to allow `https://developer.mozilla.org` to see an accurate `renderTime`, the cross-origin resource should send:
-
-```http
-Timing-Allow-Origin: https://developer.mozilla.org
-```
-
-Like in the code example, you can use {{domxref("PerformanceEntry.startTime", "startTime")}}, which returns the value of the entry's {{domxref("LargestContentfulPaint.renderTime", "renderTime")}} if it is not `0`, and otherwise the value of this entry's {{domxref("LargestContentfulPaint.loadTime", "loadTime")}}. However, it is recommended to set the {{HTTPHeader("Timing-Allow-Origin")}} header so that the metrics will be more accurate.
-
-If you use `startTime`, you can flag any inaccuracies by checking if `renderTime` was used:
-
-```js
-const isAccurateLCP = Boolean(entry.renderTime);
 ```
 
 ## Specifications
