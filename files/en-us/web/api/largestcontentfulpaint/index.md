@@ -30,23 +30,11 @@ Additional key paint moments are provided by the {{domxref("PerformancePaintTimi
 
 {{InheritanceDiagram}}
 
-### Cross-origin image render time
+For accurate measurement cross-origin render time, set the {{httpheader("Timing-Allow-Origin")}} header.
 
-For security reasons, the value of the {{domxref("LargestContentfulPaint.renderTime", "renderTime")}} property was originally `0` if the resource is a cross-origin request. Instead the {{domxref("LargestContentfulPaint.loadTime", "loadTime")}} property should be used as a fallback. The {{domxref("PerformanceEntry.startTime", "startTime")}}
+Developers should use `startTime` instead of `renderTime` as the LCP value, as the `renderTime` may not be set in some browsers.
 
-Browsers [may now expose a slightly coarsened render time](https://github.com/w3c/paint-timing/issues/104) in these situations. Check for [browser support](#browser_compatibility).
-
-To expose more accurate cross-origin `renderTime` information, the {{HTTPHeader("Timing-Allow-Origin")}} HTTP response header needs to be set.
-
-For example, to allow `https://developer.mozilla.org` to see an accurate `renderTime`, the cross-origin resource should send:
-
-```http
-Timing-Allow-Origin: https://developer.mozilla.org
-```
-
-### Use `startTime` over `renderTime`
-
-Regardless of the accuracy of the `renderTime`, developers should use {{domxref("PerformanceEntry.startTime", "startTime")}} over `renderTime` as the LCP time. This returns the value of the entry's {{domxref("LargestContentfulPaint.renderTime", "renderTime")}} if it is not `0`, and otherwise the value of this entry's {{domxref("LargestContentfulPaint.loadTime", "loadTime")}} so removes the need to check for 0 values for non-supporting browsers.
+See [Cross-origin image render time](./renderTime#cross-origin_image_render_time) and [Use startTime over renderTime](./renderTime#use_starttime_over_rendertime) for more details.
 
 ## Instance properties
 

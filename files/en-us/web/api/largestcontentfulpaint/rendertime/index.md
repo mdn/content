@@ -19,7 +19,7 @@ The `renderTime` property can have the following values:
 
 ### Cross-origin image render time
 
-For security reasons, the value of the `renderTime` property was originally `0` if the resource is a cross-origin request. Instead the {{domxref("LargestContentfulPaint.loadTime", "loadTime")}} property should be used as a fallback.
+For security reasons, the value of the `renderTime` property was originally `0` if the resource is a cross-origin request.
 
 Browsers [may now expose a slightly coarsened render time](https://github.com/w3c/paint-timing/issues/104) in these situations. Check for [browser support](#browser_compatibility).
 
