@@ -10,26 +10,13 @@ browser-compat: api.HTMLImageElement.vspace
 
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
-The _obsolete_ **`vspace`** property of the
-{{domxref("HTMLImageElement")}} interface specifies the number of pixels of empty space
-to leave empty on the top and bottom of the {{HTMLElement("img")}} element when laying
-out the page.
+The _deprecated_ **`vspace`** property of the {{domxref("HTMLImageElement")}} interface specifies the number of pixels of empty space to leave empty on the top and bottom sides of the {{HTMLElement("img")}} element when laying out the page. It reflects the `<img>` element's [`vspace`](/en-US/docs/Web/HTML/Reference/Elements/img#vspace) content attribute.
+
+You should instead use the CSS property {{cssxref("margin")}} or its longhand properties to establish margin space around an image.
 
 ## Value
 
-An integer value specifying the height, in pixels, of the vertical margin to apply to
-the top and bottom sides of the image.
-
-## Usage notes
-
-The value specified for `vspace` is mapped to the {{cssxref("margin-top")}}
-and {{cssxref("margin-bottom")}} properties to specify the height of those margins in
-pixels.
-
-> [!WARNING]
-> This property is obsolete. You should instead use the CSS
-> {{cssxref("margin")}} property and its longhand forms to establish margins around
-> an `<img>`.
+An integer value specifying the height, in pixels, of the vertical margin to apply to the top and bottom sides of the image.
 
 ## Specifications
 
@@ -38,3 +25,8 @@ pixels.
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{cssxref("margin")}}
+- {{domxref("HTMLImageElement.hspace")}}
