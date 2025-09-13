@@ -70,6 +70,15 @@ class BookListView(generic.ListView):
     model = Book
 ```
 
+> [!NOTE]
+> You can also import the class directly. Using `ListView` after direct import is equivalent to using `generic.ListView`:
+```python
+from django.views.generic import ListView
+
+class BookListView(ListView):
+    model = Book
+```
+
 That's it! The generic view will query the database to get all records for the specified model (`Book`) then render a template located at **/django-locallibrary-tutorial/catalog/templates/catalog/book_list.html** (which we will create below). Within the template you can access the list of books with the template variable named `object_list` OR `book_list` (i.e., generically `<the model name>_list`).
 
 > [!NOTE]
