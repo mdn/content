@@ -18,7 +18,7 @@ Originally, this property was defined as a `long` integer. The [CSSOM View Modul
 `double` float. See the [Browser compatibility](#browser_compatibility) section for
 details.
 
-See [Coordinate systems](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems#page) for additional information about coordinates specified in this fashion.
+See [Coordinate systems](/en-US/docs/Web/API/CSSOM_view_API/Coordinate_systems#page) for additional information about coordinates specified in this fashion.
 
 ## Value
 
@@ -101,7 +101,7 @@ Try this out here:
 
 ### More examples
 
-You can also see an example that demonstrates [how to access the mouse position](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems#example) information in every available coordinate system.
+You can also see an example that demonstrates [how to access the mouse position](/en-US/docs/Web/API/CSSOM_view_API/Coordinate_systems#example) information in every available coordinate system.
 
 ## Specifications
 
@@ -116,4 +116,4 @@ Prior to being added to the CSSOM View specification, `pageX` and `pageY` were a
 ## See also
 
 - {{domxref("MouseEvent.pageY")}}
-- [Coordinate systems](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems)
+- [Coordinate systems](/en-US/docs/Web/API/CSSOM_view_API/Coordinate_systems)

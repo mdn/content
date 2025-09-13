@@ -188,7 +188,7 @@ sidebar:
   - title: CSSOM_view
     details: closed
     children:
-      - /Web/CSS/CSSOM_view/Coordinate_systems
+      - /Web/API/CSSOM_view_API/Coordinate_systems
       - /Web/CSS/CSSOM_view/Viewport_concepts
   - title: Display
     details: closed
