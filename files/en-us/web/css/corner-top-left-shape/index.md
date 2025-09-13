@@ -2,9 +2,13 @@
 title: corner-top-left-shape
 slug: Web/CSS/corner-top-left-shape
 page-type: css-property
+status:
+  - experimental
 browser-compat: css.properties.corner-top-left-shape
 sidebar: cssref
 ---
+
+{{SeeCompatTable}}
 
 The **`corner-top-left-shape`** [CSS](/en-US/docs/Web/CSS) property specifies the shape of a box's top-left corner, within its {{cssxref("border-radius")}} area.
 
