@@ -241,6 +241,92 @@ The analogous construct in CSS would be `.abc:has(+ .xyz)`: it selects the eleme
 
 Similarly, for the negative lookahead case, in the regular expression `abc(?!xyz)`, the string `abc` is matched only if it is _not_ followed by `xyz`. The analogous CSS construct `.abc:has(+ :not(.xyz))` doesn't select the element `.abc` if the next element is `.xyz`.
 
+## Performance considerations
+
+Certain uses of the `:has()` pseudo-class can significantly impact page performance, particularly during dynamic updates (DOM mutations). Browser engines must re-evaluate `:has()` selectors when the DOM changes, and complex or poorly constrained selectors can lead to expensive computations.
+
+### Avoid broad anchoring
+
+This section addresses the anchor selector (the `A` in `A:has(B)`), which should avoid broad selectors like `body`, `:root`, or `*` to prevent performance issues. Anchoring `:has()` to very general selectors can degrade performance because any DOM change within the entire subtree of a broadly selected element requires the browser to re-check the `:has()` condition.
+
+```css example-bad
+/* Avoid anchoring :has() to broad elements */
+body:has(.sidebar) {
+  /* styles */
+}
+:root:has(.content) {
+  /* styles */
+}
+*:has(.item) {
+  /* styles */
+}
+```
+
+Instead, anchor `:has()` to specific elements like `.container` or `.gallery` to reduce the scope and improve performance.
+
+```css example-good
+/* Use specific containers to limit scope */
+.container:has(.sidebar-expanded) {
+  /* styles */
+}
+.content-wrapper:has(> article[data-priority="high"]) {
+  /* styles */
+}
+.gallery:has(> img[data-loaded="false"]) {
+  /* styles */
+}
+```
+
+### Minimize subtree traversals
+
+This section focuses on the inner selector (the `B` in `A:has(B)`), which should use combinators like `>` or `+` to limit traversal. When the selector inside `:has()` is not tightly constrained, the browser might need to traverse the entire subtree of the anchor element on every DOM mutation to check if the condition still holds.
+
+In this example, any change within `.ancestor` requires checking all descendants for `.foo`:
+
+```css example-bad
+/* May trigger full subtree traversal */
+.ancestor:has(.foo) {
+  /* styles */
+}
+```
+
+Using child or sibling combinators limits the scope of the inner selector, reducing the performance cost of DOM mutations. In this example, the browser only needs to check direct children or a specific sibling's descendants:
+
+```css example-good
+/* More constrained - limits traversal */
+.ancestor:has(> .foo) {
+  /* direct child */
+}
+.ancestor:has(+ .sibling .foo) {
+  /* descendant of adjacent sibling */
+}
+```
+
+### Be mindful of ancestor traversals
+
+Certain selector patterns involving `:has()` can force the browser to traverse up the ancestor chain for every DOM mutation, looking for potential `:has()` anchors that might need updating. This happens when the structure implies a need to check ancestors of the mutated element.
+
+In this example, any DOM change requires checking if the changed element is the `*` (any element) that is a direct child of `.foo`, and if its parent (or further ancestors) is `.ancestor`.
+
+```css example-bad
+/* Might trigger ancestor traversal */
+.ancestor:has(.foo > *) {
+  /* styles */
+}
+```
+
+Constraining the inner selector with specific classes or direct child combinators (e.g., `.specific-child` in the next snippet) reduces expensive ancestor traversals by limiting the browser's check to a well defined element, improving performance.
+
+```css example-good
+/* Constrain the inner selector to avoid ancestor traversals */
+.ancestor:has(.foo > .specific-child) {
+  /* styles */
+}
+```
+
+> [!NOTE]
+> These performance characteristics may improve as browsers optimize `:has()` implementations, but the fundamental constraints remain. The **Avoid broad anchoring** section addresses the anchor selector's scope (the `A` in `A:has(B)`), while **Minimize subtree traversals** focuses on constraining the inner selector (the `B` in `A:has(B)`) to limit traversal.
+
 ## Specifications
 
 {{Specifications}}
