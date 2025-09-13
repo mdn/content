@@ -21,9 +21,15 @@ There are two types of custom element:
   > [!NOTE]
   > Safari does not plan to support customized built-in elements. See the [`is` attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/is) for more information.
 
+For both kinds of custom element, the basic steps to create and use them are the same:
+
+- You first [implement its behavior](#implementing_a_custom_element) by defining a JavaScript class.
+- You then [register the custom element](#registering_a_custom_element) to the current page.
+- Finally, you can [use the custom element](#using_a_custom_element) in your HTML or JavaScript code.
+
 ## Implementing a custom element
 
-A custom element is implemented as a [class](/en-US/docs/Web/JavaScript/Reference/Classes) which extends {{domxref("HTMLElement")}} (in the case of autonomous elements) or the interface you want to customize (in the case of customized built-in elements).
+A custom element is implemented as a [class](/en-US/docs/Web/JavaScript/Reference/Classes) which extends {{domxref("HTMLElement")}} (in the case of autonomous elements) or the interface you want to customize (in the case of customized built-in elements). This class will not be called by you, but will be called by the browser. Immediately after defining the class, you should [register](#registering_a_custom_element) the custom element, so you can create instances of it using standard DOM practices, such as writing the element in HTML markup, calling {{domxref("document.createElement()")}}, etc.
 
 Here's the implementation of a minimal custom element that customizes the {{HTMLElement("p")}} element:
 

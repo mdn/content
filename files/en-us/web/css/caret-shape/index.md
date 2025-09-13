@@ -140,7 +140,7 @@ label {
   background: #092104;
   display: block;
   padding: 10px 20px;
-  color: green;
+  color: #00ad00;
   font-weight: bold;
   font-family: monospace;
 }
@@ -162,7 +162,7 @@ label {
 span {
   display: inline-block;
   padding: 2px 5px;
-  color: green;
+  color: #00ad00;
   font-weight: bold;
   margin-right: 8px;
 }
@@ -171,7 +171,7 @@ span {
   background: transparent;
   height: 100%;
   border: none;
-  color: green;
+  color: #00ad00;
   font-family: inherit;
   font-size: 1rem;
   outline: none;
@@ -190,7 +190,7 @@ span {
 @keyframes old-caret {
   from,
   50% {
-    caret-color: green;
+    caret-color: #00ad00;
   }
   75%,
   to {
