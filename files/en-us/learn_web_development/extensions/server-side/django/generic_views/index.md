@@ -73,6 +73,7 @@ class BookListView(generic.ListView):
 > [!NOTE]
 > You can also import the class directly. Using `ListView` after direct import is equivalent to using `generic.ListView`:
 
+
 ```python
 from django.views.generic import ListView
 
