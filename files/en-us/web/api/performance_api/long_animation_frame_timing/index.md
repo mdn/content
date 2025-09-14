@@ -64,7 +64,9 @@ The following is a complete `"long-animation-frame"` performance entry example, 
       sourceFunctionName: "myClickHandler",
       sourceCharPosition: 17796,
       startTime: 11803.199999999255,
-      window: {}, // Window object
+      window: {
+        // …Window object…
+      },
       windowAttribution: "self",
     },
   ],

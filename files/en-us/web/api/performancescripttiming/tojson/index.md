@@ -58,7 +58,6 @@ This would log an object like so:
   sourceFunctionName: "myClickHandler",
   sourceCharPosition: 17796,
   startTime: 11803.199999999255,
-  window: {}, // Window object
   windowAttribution: "self",
 });
 ```
