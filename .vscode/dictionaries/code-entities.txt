@@ -384,6 +384,7 @@ longtask
 lowdelay
 lowp
 lquote
+LRGB
 ltrh
 makemigrations
 mathbb
