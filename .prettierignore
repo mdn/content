@@ -4,8 +4,6 @@
 build/
 /files/en-us/_githistory.json
 /tests/front-matter_test_files
-/files/en-us/web/css/css_colors/color_mixer/classic.min.css
-/files/en-us/web/css/css_colors/color_mixer/pickr.es5.min.js
 
 # XXX Ignored until https://github.com/prettier/prettier/issues/15032 is fixed
 /files/en-us/web/javascript/reference/operators/exponentiation/index.md
