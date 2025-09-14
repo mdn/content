@@ -40,37 +40,37 @@ Be aware, however, that the maximum buffer size for `"long-animation-frame"` ent
 
 Performance timeline entries returned with a type of `"long-animation-frame"` are represented by {{domxref("PerformanceLongAnimationFrameTiming")}} objects. This object has a {{domxref("PerformanceLongAnimationFrameTiming.scripts", "scripts")}} property containing an array of {{domxref("PerformanceScriptTiming")}} objects, each one of which contains information about a script that contributed to the long animation frame.
 
-The following is a JSON representation of a complete `"long-animation-frame"` performance entry example, containing a single script:
+The following is a complete `"long-animation-frame"` performance entry example, containing a single script:
 
-```json
-{
-  "blockingDuration": 0,
-  "duration": 60,
-  "entryType": "long-animation-frame",
-  "firstUIEventTimestamp": 11801.099999999627,
-  "name": "long-animation-frame",
-  "renderStart": 11858.800000000745,
-  "scripts": [
+```js
+({
+  blockingDuration: 0,
+  duration: 60,
+  entryType: "long-animation-frame",
+  firstUIEventTimestamp: 11801.099999999627,
+  name: "long-animation-frame",
+  renderStart: 11858.800000000745,
+  scripts: [
     {
-      "duration": 45,
-      "entryType": "script",
-      "executionStart": 11803.199999999255,
-      "forcedStyleAndLayoutDuration": 0,
-      "invoker": "DOMWindow.onclick",
-      "invokerType": "event-listener",
-      "name": "script",
-      "pauseDuration": 0,
-      "sourceURL": "https://web.dev/js/index-ffde4443.js",
-      "sourceFunctionName": "myClickHandler",
-      "sourceCharPosition": 17796,
-      "startTime": 11803.199999999255,
-      "window": [Window object],
-      "windowAttribution": "self"
-    }
+      duration: 45,
+      entryType: "script",
+      executionStart: 11803.199999999255,
+      forcedStyleAndLayoutDuration: 0,
+      invoker: "DOMWindow.onclick",
+      invokerType: "event-listener",
+      name: "script",
+      pauseDuration: 0,
+      sourceURL: "https://web.dev/js/index-ffde4443.js",
+      sourceFunctionName: "myClickHandler",
+      sourceCharPosition: 17796,
+      startTime: 11803.199999999255,
+      window: {}, // Window object
+      windowAttribution: "self",
+    },
   ],
-  "startTime": 11802.400000000373,
-  "styleAndLayoutStart": 11858.800000000745
-}
+  startTime: 11802.400000000373,
+  styleAndLayoutStart: 11858.800000000745,
+});
 ```
 
 Beyond the standard data returned by a {{domxref("PerformanceEntry")}} entry, this contains the following noteworthy items:
