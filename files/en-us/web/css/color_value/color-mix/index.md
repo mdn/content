@@ -15,6 +15,12 @@ Choosing the correct color space is important for producing desired results. Giv
 - If avoiding graying out in color mixing is desired, i.e., maximizing chroma throughout the transition, Oklch (and the older LCH) work well.
 - Only use sRGB if you need to match the behavior of a specific device or software that uses sRGB. The sRGB color space is neither linear-light nor perceptually uniform, and produces poorer results such as overly dark or grayish mixes.
 
+### Color mixer
+
+The following live demo mixes two colors, `color-one` and `color-two`, using the `color-mix()` function. The source colors are shown on the outside, and the mixed color is shown in the middle. You can change colors by clicking on them and choosing a new color using the resulting color picker. You can also change the percentage of each color included in the mix using the sliders, and the color space using the drop-down menu.
+
+{{EmbedGHLiveSample("css-examples/tools/color-mixer/", '100%', 400)}}
+
 ## Syntax
 
 ```css
@@ -32,15 +38,15 @@ color-mix(in --swop5c, red, blue)
 color-mix(in lch longer hue, hsl(200deg 50% 80%), coral)
 ```
 
-### Values
+### Parameters
 
-Functional notation: `color-mix(<color-interpolation-method>, <color>[<percentage>], <color>[<percentage>])`
+The `color-mix(<color-interpolation-method>, <color>[<percentage>], <color>[<percentage>])` accepts the following parameters:
 
 - {{CSSXref("&lt;color-interpolation-method&gt;")}}
-  - : Specifies what interpolation method should be used to mix the colors. It consists of the `in` keyword followed by a {{glossary("color space")}} name. The following three types are available:
-    - `<rectangular-color-space>`: [`srgb`](/en-US/docs/Glossary/Color_space#srgb), [`srgb-linear`](/en-US/docs/Glossary/Color_space#srgb-linear), [`display-p3`](/en-US/docs/Glossary/Color_space#display-p3), [`a98-rgb`](/en-US/docs/Glossary/Color_space#a98-rgb), [`prophoto-rgb`](/en-US/docs/Glossary/Color_space#prophoto-rgb), [`rec2020`](/en-US/docs/Glossary/Color_space#rec2020), [`lab`](/en-US/docs/Glossary/Color_space#cielab_color_spaces), [`oklab`](/en-US/docs/Glossary/Color_space#oklab), [`xyz`](/en-US/docs/Glossary/Color_space#xyz_color_spaces), [`xyz-d50`](/en-US/docs/Glossary/Color_space#xyz), and [`xyz-d65`](/en-US/docs/Glossary/Color_space#xyz-d50).
-    - `<polar-color-space>`: [`hsl`](/en-US/docs/Web/CSS/color_value/hsl), [`hwb`](/en-US/docs/Web/CSS/color_value/hwb), [`lch`](/en-US/docs/Web/CSS/color_value/lch), and [`oklch`](/en-US/docs/Web/CSS/color_value/oklch).
-    - custom-color-space: [`<dashed-ident>`](/en-US/docs/Web/CSS/dashed-ident#using_with_color-profile) referring to a custom [@color profile](/en-US/docs/Web/CSS/@color-profile)
+  - : Specifies what interpolation method should be used to mix the colors. It consists of the `in` keyword followed by a {{glossary("color space")}} defined as a: 
+    - [`<rectangular-color-space>`](/en-US/docs/Web/CSS/color-interpolation-method#rectangular-color-space)
+    - [`<polar-color-space>`](/en-US/docs/Web/CSS/color-interpolation-method#polar-color-space), optionally followed followed by a {{CSSXref("&lt;hue-interpolation-method&gt;")}}, which defaults to `shorter hue`, or
+    - `<custom-color-space>`, which is a [`<dashed-ident>`](/en-US/docs/Web/CSS/dashed-ident#using_with_color-profile) defined in a valie {{cssxref("@color-profile")}}
 
     > [!NOTE]
     > When browsers support {{cssxref("@color-profile")}}, custom color spaces may be supported. Currently, the color space must be one of the available color spaces listed in the [formal_syntax](#formal_syntax).
@@ -64,12 +70,6 @@ Functional notation: `color-mix(<color-interpolation-method>, <color>[<percentag
 {{CSSSyntax}}
 
 ## Examples
-
-### Color mixer
-
-The following live demo mixes two colors, `color-one` and `color-two`, using the `color-mix()` function. The source colors are shown on the outside, and the mixed color is shown in the middle. You can change colors by clicking on them and choosing a new color using the resulting color picker. You can also change the percentage of each color included in the mix using the sliders, and the color space using the drop-down menu.
-
-{{EmbedGHLiveSample("css-examples/tools/color-mixer/", '100%', 400)}}
 
 ### Mixing two colors
 
