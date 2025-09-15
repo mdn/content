@@ -62,6 +62,7 @@ associationlistitemvalue
 attributionsrc
 audiocontext
 authorid
+autospace
 backdrag
 backgroundfetchabort
 backgroundfetchclick
@@ -734,7 +735,6 @@ telu
 testingbot-api
 texlive
 texlive-fontsextra
-text-autospace
 textformatupdate
 textupdate
 TEXTUREI

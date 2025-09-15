@@ -822,17 +822,10 @@ We've directly selected the inputs we want to disable using `input[type="text"]:
 Now finally, we've used some JavaScript to toggle the disabling of the billing address fields:
 
 ```js
-// Wait for the page to finish loading
-document.addEventListener(
-  "DOMContentLoaded",
-  () => {
-    // Attach `change` event listener to checkbox
-    document
-      .getElementById("billing-checkbox")
-      .addEventListener("change", toggleBilling);
-  },
-  false,
-);
+// Attach `change` event listener to checkbox
+document
+  .getElementById("billing-checkbox")
+  .addEventListener("change", toggleBilling);
 
 function toggleBilling() {
   // Select the billing text fields
@@ -955,17 +948,10 @@ button {
 ```
 
 ```js hidden live-sample___enabled-disabled-shipping
-// Wait for the page to finish loading
-document.addEventListener(
-  "DOMContentLoaded",
-  () => {
-    // Attach `change` event listener to checkbox
-    document
-      .getElementById("billing-checkbox")
-      .addEventListener("change", toggleBilling);
-  },
-  false,
-);
+// Attach `change` event listener to checkbox
+document
+  .getElementById("billing-checkbox")
+  .addEventListener("change", toggleBilling);
 
 function toggleBilling() {
   // Select the billing text fields

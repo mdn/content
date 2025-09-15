@@ -469,6 +469,7 @@ overlines
 overscript
 overscripts
 overscrolling
+overtype
 packetization
 packetizer
 packetizing
@@ -675,6 +676,7 @@ spinlocks
 spoofable
 spritesheet
 spritesheets
+squircle
 SSML
 ssthresh
 STIX
@@ -782,7 +784,6 @@ tileset
 timebox
 timecode
 timecodes
-timerange
 timeslice
 timeslices
 timestep

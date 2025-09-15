@@ -253,6 +253,8 @@ CSS counter functions are generally used with the {{CSSxRef("content")}} propert
 
 ## Shape functions
 
+### Basic shapes
+
 The {{CSSxRef("&lt;basic-shape&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents a graphical shape. It is used in the {{CSSxRef("clip-path")}}, {{CSSxRef("offset-path")}}, and {{CSSxRef("shape-outside")}} properties.
 
 - {{CSSxRef("basic-shape/circle","circle()")}}
@@ -271,8 +273,13 @@ The {{CSSxRef("&lt;basic-shape&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_V
   - : Accepts an SVG path string to enable a shape to be drawn.
 - {{CSSxRef("basic-shape/shape", "shape()")}}
   - : Accepts a comma-separated list of commands defining the shape to be drawn.
+
+### Other shape functions
+
 - {{CSSxRef("ray", "ray()")}}
-  - : Valid with `offset-path` only, it defines the line segment an animated element can follow.
+  - : Valid with {{cssxref("offset-path")}}; defines the line segment an animated element can follow.
+- {{CSSxRef("superellipse()")}}
+  - : Defines the curvature of an ellipse; can be used to specify a {{cssxref("corner-shape-value")}}, which is used with {{cssxref("corner-shape")}} and its [constituent](/en-US/docs/Web/CSS/corner-shape#constituent_properties) and [related](/en-US/docs/Web/CSS/corner-shape#properties_that_follow_the_corner_shape) properties.
 
 ## Reference functions
 

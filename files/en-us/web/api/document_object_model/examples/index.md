@@ -327,9 +327,7 @@ function showEventProperties(e) {
   document.body.appendChild(table);
 }
 
-window.onload = (event) => {
-  showEventProperties(event);
-};
+showEventProperties(event);
 ```
 
 {{EmbedLiveSample("example_7_displaying_event_object_properties", "", "300")}}

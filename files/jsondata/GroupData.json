@@ -353,6 +353,23 @@
         "Window: resize"
       ]
     },
+    "CSSOM view API": {
+      "overview": ["CSSOM view API"],
+      "guides": [
+        "/docs/Web/API/CSSOM_view_API/Coordinate_systems",
+        "/docs/Web/CSS/CSSOM_view/Viewport_concepts"
+      ],
+      "interfaces": [
+        "CaretPosition",
+        "MediaQueryList",
+        "MediaQueryListEvent",
+        "Screen",
+        "VisualViewport"
+      ],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
     "Device Memory API": {
       "overview": ["Device Memory API"],
       "guides": [],
@@ -1864,13 +1881,6 @@
         "HTMLElement.virtualKeyboardPolicy",
         "Navigator.virtualKeyboard"
       ],
-      "events": []
-    },
-    "Visual Viewport": {
-      "overview": ["Visual Viewport API"],
-      "interfaces": ["VisualViewport"],
-      "methods": [],
-      "properties": ["Window.visualViewport"],
       "events": []
     },
     "Web Animations": {

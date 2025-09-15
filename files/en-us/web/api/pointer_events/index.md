@@ -150,23 +150,19 @@ function rawUpdate_handler(event) {}
 function gotCapture_handler(event) {}
 function lostCapture_handler(event) {}
 
-function init() {
-  const el = document.getElementById("target");
-  // Register pointer event handlers
-  el.onpointerover = over_handler;
-  el.onpointerenter = enter_handler;
-  el.onpointerdown = down_handler;
-  el.onpointermove = move_handler;
-  el.onpointerup = up_handler;
-  el.onpointercancel = cancel_handler;
-  el.onpointerout = out_handler;
-  el.onpointerleave = leave_handler;
-  el.onpointerrawupdate = rawUpdate_handler;
-  el.ongotpointercapture = gotCapture_handler;
-  el.onlostpointercapture = lostCapture_handler;
-}
-
-document.addEventListener("DOMContentLoaded", init);
+const el = document.getElementById("target");
+// Register pointer event handlers
+el.onpointerover = over_handler;
+el.onpointerenter = enter_handler;
+el.onpointerdown = down_handler;
+el.onpointermove = move_handler;
+el.onpointerup = up_handler;
+el.onpointercancel = cancel_handler;
+el.onpointerout = out_handler;
+el.onpointerleave = leave_handler;
+el.onpointerrawupdate = rawUpdate_handler;
+el.ongotpointercapture = gotCapture_handler;
+el.onlostpointercapture = lostCapture_handler;
 ```
 
 ### Event properties
@@ -234,13 +230,9 @@ function down_handler(ev) {
   if (!ev.isPrimary) process_non_primary(ev);
 }
 
-function init() {
-  const el = document.getElementById("target");
-  // Register pointerdown handler
-  el.onpointerdown = down_handler;
-}
-
-document.addEventListener("DOMContentLoaded", init);
+const el = document.getElementById("target");
+// Register pointerdown handler
+el.onpointerdown = down_handler;
 ```
 
 ## Determining the Primary Pointer
@@ -294,12 +286,8 @@ function downHandler(ev) {
   el.setPointerCapture(ev.pointerId);
 }
 
-function init() {
-  const el = document.getElementById("target");
-  el.onpointerdown = downHandler;
-}
-
-document.addEventListener("DOMContentLoaded", init);
+const el = document.getElementById("target");
+el.onpointerdown = downHandler;
 ```
 
 The following example shows a pointer capture being released (when a {{domxref("Element/pointercancel_event", "pointercancel")}} event occurs. The browser does this automatically when a {{domxref("Element/pointerup_event", "pointerup")}} or {{domxref("Element/pointercancel_event", "pointercancel")}} event occurs.
@@ -321,14 +309,10 @@ function cancelHandler(ev) {
   el.releasePointerCapture(ev.pointerId);
 }
 
-function init() {
-  const el = document.getElementById("target");
-  // Register pointerdown and pointercancel handlers
-  el.onpointerdown = downHandler;
-  el.onpointercancel = cancelHandler;
-}
-
-document.addEventListener("DOMContentLoaded", init);
+const el = document.getElementById("target");
+// Register pointerdown and pointercancel handlers
+el.onpointerdown = downHandler;
+el.onpointercancel = cancelHandler;
 ```
 
 ## touch-action CSS property
