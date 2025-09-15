@@ -14,6 +14,8 @@ The **`DOMContentLoaded`** event fires when the HTML document has been completel
 
 A different event, {{domxref("Window/load_event", "load")}}, should be used only to detect a fully-loaded page. It is a common mistake to use `load` where `DOMContentLoaded` would be more appropriate.
 
+Usually, to avoid running a script before the DOM it manipulates has been fully constructed, you can simply place the script at the end of the document body, immediately before the closing `</body>` tag, without wrapping it in an event listener.
+
 This event is not cancelable.
 
 ## Syntax

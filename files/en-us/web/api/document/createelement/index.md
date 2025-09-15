@@ -58,8 +58,6 @@ This creates a new `<div>` and inserts it before the element with the ID `div1`.
 #### JavaScript
 
 ```js
-document.body.onload = addElement;
-
 function addElement() {
   // create a new div element
   const newDiv = document.createElement("div");
@@ -74,6 +72,8 @@ function addElement() {
   const currentDiv = document.getElementById("div1");
   document.body.insertBefore(newDiv, currentDiv);
 }
+
+addElement();
 ```
 
 #### Result

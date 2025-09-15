@@ -463,23 +463,26 @@ npm install mongodb
 ```
 
 The database itself can be installed locally or on a cloud server. In your Express code you import the driver, connect to the database, and then perform create, read, update, and delete (CRUD) operations.
-The example below (from the Express documentation) shows how you can find "mammal" records using MongoDB (version 3.0 and up):
+The example below shows how you can find "mammal" records using MongoDB:
 
 ```js
 const { MongoClient } = require("mongodb");
 
-MongoClient.connect("mongodb://localhost:27017/animals", (err, client) => {
-  if (err) throw err;
+const uri = "mongodb://localhost:27017";
+const client = new MongoClient(uri);
 
-  const db = client.db("animals");
-  db.collection("mammals")
-    .find()
-    .toArray((err, result) => {
-      if (err) throw err;
-      console.log(result);
-      client.close();
-    });
-});
+async function run() {
+  try {
+    await client.connect();
+    const db = client.db("animals");
+    const mammals = await db.collection("mammals").find().toArray();
+    console.log(mammals);
+  } finally {
+    await client.close();
+  }
+}
+
+run().catch(console.error);
 ```
 
 Another popular approach is to access your database indirectly, via an Object Relational Mapper ("ORM"). In this approach you define your data as "objects" or "models" and the ORM maps these through to the underlying database format. This approach has the benefit that as a developer you can continue to think in terms of JavaScript objects rather than database semantics, and that there is an obvious place to perform validation and checking of incoming data. We'll talk more about databases in a later article.
