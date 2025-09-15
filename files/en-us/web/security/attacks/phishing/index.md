@@ -5,15 +5,15 @@ page-type: guide
 sidebar: security
 ---
 
-Phishing is a social engineering attack in which a user is tricked into believing that they are interacting with a site with which they have an account, when in reality they are interacting with the attacker. The attacker convinces the user to enter their credentials on the fake site, and thereby steals the user's credentials.
+Phishing is a {{glossary("social engineering")}} attack in which a user is tricked into believing that they are interacting with a site with which they have an account, when in reality they are interacting with the attacker. The attacker convinces the user to enter their credentials on the fake site, and thereby steals the user's credentials.
 
 ## Overview
 
 Phishing is a very old but still very common attack, which has gone through many variations, both to evade defenses and to take advantage of new vulnerabilities. In a basic form, though:
 
-1. The attacker registers a domain name that resembles the target site. For example, if the user's banking website is `my-bank.example.com`, the attacker could register `my-bank-examp1e.com`.
+1. The attacker registers a domain name that resembles the target site. For example, if the user's banking website is `my-bank.example.com`, the attacker could register `my-bank.examp1e.com`.
 2. The attacker creates a site at that address that resembles the real site.
-3. The attacker sends the user an email, purporting to be from `my-bank.example.com`, giving some reason to ask the user to visit the site, and containing a link to the fake site `my-bank-examp1e.com`.
+3. The attacker sends the user an email, purporting to be from `my-bank.example.com`, giving some reason to ask the user to visit the site, and containing a link to the fake site `my-bank.examp1e.com`.
 4. The user clicks the link and is asked to sign in. They enter their username and password, and the attacker now has their credentials.
 
 Phishing attacks sometimes use different techniques to contact their victims, such as text messages or voice calls, and sometimes don't involve websites at all, convincing users to tell them passwords or PIN codes verbally.
