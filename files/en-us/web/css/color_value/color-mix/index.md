@@ -12,14 +12,16 @@ The **`color-mix()`** functional notation takes two {{cssxref("&lt;color&gt;")}}
 
 ```css
 /* Polar color space */
-color-mix(in hsl, hsl(200 50 80), coral 80%)
+color-mix(in hsl, hsl(200 50 80), coral)
+color-mix(in hsl, hsl(200 50 80) 20%, coral 80%)
 
 /* Rectangular color space */
 color-mix(in srgb, plum, #123456)
 color-mix(in lab, plum 60%, #123456 50%)
 
 /* With hue interpolation method */
-color-mix(in lch longer hue, hsl(200deg 50% 80%), coral)
+color-mix(in lch increasing hue, hsl(200deg 50% 80%), coral)
+color-mix(in lch longer hue, hsl(200deg 50% 80%) 44%, coral 16%)
 ```
 
 ### Parameters
@@ -27,7 +29,7 @@ color-mix(in lch longer hue, hsl(200deg 50% 80%), coral)
 The `color-mix( <color-interpolation-method>, <color> [<percentage>], <color> [<percentage>] )` accepts the following parameters:
 
 - {{CSSXref("&lt;color-interpolation-method&gt;")}}
-  - : Specifies what interpolation method should be used to mix the colors. It consists of the `in` keyword followed by a {{glossary("color space")}} and optionally a {{CSSXref("&lt;hue-interpolation-method&gt;")}}.
+  - : Specifies what interpolation method should be used to mix the colors. It consists of the `in` keyword followed by a {{glossary("color space")}} (one of the color spaces listed in the [formal syntax](#formal_syntax)), and, optionally, a {{CSSXref("&lt;hue-interpolation-method&gt;")}}.
 
 - `<color>`
   - : A {{CSSXref("&lt;color&gt;")}} value to mix.
@@ -37,7 +39,7 @@ The `color-mix( <color-interpolation-method>, <color> [<percentage>], <color> [<
 
 ### Return value
 
-A `<color>`.
+A `<color>`; the result of mixing the colors, in the given `<color-space>`, in the specified amounts and hue direction.
 
 ## Description
 
@@ -60,7 +62,7 @@ The [`<rectangular-color-space>`](/en-US/docs/Web/CSS/color-interpolation-method
 
 The`<polar-color-space>` includes [`hsl`](/en-US/docs/Web/CSS/color_value/hsl), [`hwb`](/en-US/docs/Web/CSS/color_value/hwb), [`lch`](/en-US/docs/Web/CSS/color_value/lch), and [`oklch`](/en-US/docs/Web/CSS/color_value/oklch). With these you can optionally followed the color space name by a {{CSSXref("&lt;hue-interpolation-method&gt;")}}. This value defaults to `shorter hue`, but can also be set to `longer hue`, `increasing hue`, or `decreasing hue`.
 
-The [CSS colors](/en-US/docs/Web/CSS/CSS_colors) module defines a {{cssxref("@color-profile")}} [at-rule]() for creating custom color profiles and color spaces. This is not yet supported in any browser. If and when supported, the custom color space will be declared as `in` followed by the [`<dashed-ident>`](/en-US/docs/Web/CSS/dashed-ident#using_with_color-profile) name of a valid custom color profile. Currently, the color space must be one of the available color spaces listed in the [formal_syntax](#formal_syntax).
+The [CSS colors](/en-US/docs/Web/CSS/CSS_colors) module defines a {{cssxref("@color-profile")}} [at-rule]() for creating custom color profiles and color spaces. This is not yet supported in any browser. If and when supported, the custom color space will be declared as `in` followed by the [`<dashed-ident>`](/en-US/docs/Web/CSS/dashed-ident#using_with_color-profile) name of a valid custom color profile. Currently, the color space must be one of the available color spaces listed in the [formal syntax](#formal_syntax).
 
 ### Color percentages
 
