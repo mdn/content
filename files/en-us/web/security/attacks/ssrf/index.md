@@ -50,7 +50,7 @@ Mitigating SSRF vulnerabilities requires multiple defense strategies combining i
 
 ### Input validation and allow-listing
 
-Only allow requests to trusted destinations. For example, the `fetch-image` service discussed above could only access allow-listed domains:
+Restrict the URLs that the server API will use. For example, the `fetch-image` service discussed above could specify an allow list containing the expected domains:
 
 ```js
 const ALLOWED_DOMAINS = ["https://api.example.com", "https://cdn.example.com"];
@@ -66,14 +66,14 @@ Do not follow redirects automatically and also enforce input validation and/or a
 
 ### Least privilege and isolation
 
-Ensure the service making outbound requests does not run with elevated privileges and avoid co-locating request-capable services with sensitive internal services.
+Ensure the service making outbound requests does not run with any more privileges than it needs, and avoid co-locating request-capable services with sensitive internal services.
 
 ### Defense summary checklist
 
 - Review all features that fetch resources and validate or allow-list user inputs.
 - Block all protocols except for HTTPS.
 - Beware of URL redirections and limit redirect chains.
-- Apply a least privilege principle for server network permissions: ideally servers should not have unrestricted access to internal networks unless required.
+- Apply the principle of least privilege for server network permissions: ideally servers should not have unrestricted access to internal networks unless required.
 - Log and monitor requests.
 
 ## See also
