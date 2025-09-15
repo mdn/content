@@ -109,11 +109,11 @@ Months are numbered `01`–`12`. See the table in [Days of the month](#days_of_t
 
 Month lengths vary:
 
-| Month | Days |
-| ----- | ---- |
-| 01,03,05,07,08,10,12 | 31 |
-| 04,06,09,11 | 30 |
-| 02 | 28 (29 in leap years) |
+| Month                | Days                  |
+| ---------------------| --------------------- |
+| 01,03,05,07,08,10,12 | 31                    |
+| 04,06,09,11          | 30                    |
+| 02                   | 28 (29 in leap years) |
 
 ## Week, Month, Date, and Time strings
 
@@ -129,4 +129,4 @@ The `datetime-local` input type allows users to select both a date and a time. B
 
 ```html
 <label for="meeting-time">Choose a meeting time:</label>
-<input type="datetime-local" id="meeting-time" name="meeting-time" step="60">
+<input type="datetime-local" id="meeting-time" name="meeting-time" step="60" />
