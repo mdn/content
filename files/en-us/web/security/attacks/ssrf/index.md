@@ -68,7 +68,7 @@ Do not follow redirects automatically and also enforce input validation and/or a
 
 Ensure the service making outbound requests does not run with any more privileges than it needs, and avoid co-locating request-capable services with sensitive internal services.
 
-### Defense summary checklist
+## Defense summary checklist
 
 - Review all features that fetch resources and validate or allow-list user inputs.
 - Block all protocols except for HTTPS.
