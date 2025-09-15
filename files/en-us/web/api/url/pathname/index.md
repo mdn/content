@@ -13,7 +13,10 @@ The **`pathname`** property of the {{domxref("URL")}} interface represents a loc
 HTTPS, HTTP, or other URLs with [hierarchical schemes](https://www.rfc-editor.org/rfc/rfc3986#section-1.2.3) (which the URL standard calls "[special schemes](https://url.spec.whatwg.org/#special-scheme)") always have at least one (invisible) path segment: the empty string.
 The `pathname` value for such URLs will therefore always have at least one `/` character.
 
-For non-hierarchical schemes, if the URL has no path segments, the value of its `pathname` property will be the empty string.
+For non-hierarchical schemes, the pathname is known as an _opaque path_ (meaning, the URL parser does not try to split it into a list of segments). In this case, an empty path results in the `pathname` property being the empty string. Trailing spaces in opaque paths are stripped during initial parsing if the `hash` and `search` are both empty; otherwise, they are percent-encoded as `%20` even when `hash` and `search` are later set to empty strings.
+
+> [!NOTE]
+> Percent-encoding trailing spaces in opaque paths is not widely implemented. Some browsers implement the old behavior of stripping trailing spaces from `pathname` whenever the `hash` and `search` properties are both empty strings. In these browsers, setting `hash` or `search` may change the `pathname` as well.
 
 ## Value
 
@@ -57,6 +60,39 @@ const url = new URL(
 );
 console.log(url.pathname); // Logs "/articles/this-that-other-outre-collection"
 ```
+
+### Pathname with opaque path
+
+When the URL uses a non-hierarchical scheme, the `pathname` property behaves slightly differently. The following example shows a `data:` URL with no path at all, in which case the `pathname` is the empty string.
+
+```js
+const url = new URL("data:");
+console.log(JSON.stringify(url.pathname)); // ""
+```
+
+Browsers always strip trailing spaces from `pathname` if there's no hash or search.
+
+```js
+const url = new URL("data:text/plain,Hello ");
+console.log(JSON.stringify(url.pathname)); // "text/plain,Hello"
+```
+
+However, if the hash or search are not empty during initial parsing, the trailing space is either preserved (old behavior) or percent-encoded (new behavior).
+
+```js
+const url = new URL("data:text/plain,Hello #frag");
+console.log(JSON.stringify(url.pathname)); // "text/plain,Hello " (old) or "text/plain,Hello%20" (new)
+```
+
+If they are later set to empty strings, the trailing space is either removed (old behavior) or remains percent-encoded (new behavior).
+
+```js
+const url = new URL("data:text/plain,Hello #frag");
+url.hash = "";
+console.log(JSON.stringify(url.pathname)); // "text/plain,Hello" (old) or "text/plain,Hello%20" (new)
+```
+
+Both behaviors ensure that serializing and parsing the URL round-trip; that is, `new URL(url.href).href` is always equal to `url.href`. If the trailing space remains as-is after removing the hash, then `new URL()` would strip it.
 
 ## Specifications
 
