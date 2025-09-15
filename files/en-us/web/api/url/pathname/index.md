@@ -16,7 +16,7 @@ The `pathname` value for such URLs will therefore always have at least one `/` c
 For non-hierarchical schemes, the pathname is known as an _opaque path_ (meaning, the URL parser does not try to split it into a list of segments). In this case, an empty path results in the `pathname` property being the empty string. Trailing spaces in opaque paths are stripped during initial parsing if the `hash` and `search` are both empty; otherwise, they are percent-encoded as `%20` even when `hash` and `search` are later set to empty strings.
 
 > [!NOTE]
-> Percent-encoding trailing spaces in opaque paths is not widely implemented. Some browsers implement the old behavior of stripping trailing spaces from `pathname` whenever the `hash` and `search` properties are both empty strings. In these browsers, setting `hash` or `search` may change the `pathname` as well.
+> Percent-encoding trailing spaces in opaque paths is not widely implemented. Some browsers implement the old behavior of stripping trailing spaces from `pathname` whenever the `hash` and `search` properties are both empty strings. In these browsers, setting `hash` or `search` may change the `pathname` as well. In even older browsers, the trailing space remains after removing hash and search, causing [serialization and parsing to not round-trip](#pathname_with_opaque_path).
 
 ## Value
 
@@ -70,14 +70,14 @@ const url = new URL("data:");
 console.log(JSON.stringify(url.pathname)); // ""
 ```
 
-Browsers always strip trailing spaces from `pathname` if there's no hash or search.
+Browsers always strip trailing spaces from `pathname` during initial parsing if there's no hash or search.
 
 ```js
 const url = new URL("data:text/plain,Hello ");
 console.log(JSON.stringify(url.pathname)); // "text/plain,Hello"
 ```
 
-However, if the hash or search are not empty during initial parsing, the trailing space is either preserved (old behavior) or percent-encoded (new behavior).
+However, if the hash or search is not empty during initial parsing, the trailing space is either preserved (old behavior) or percent-encoded (new behavior).
 
 ```js
 const url = new URL("data:text/plain,Hello #frag");
