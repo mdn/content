@@ -18,8 +18,7 @@ The Web Speech API makes web apps able to handle voice data.
 There are two components to this API:
 
 - Speech recognition is accessed via the {{domxref("SpeechRecognition")}} interface, which provides the ability to recognize voice context from an audio input and respond appropriately.
-  Generally you'll use the interface's constructor to create a new {{domxref("SpeechRecognition")}} object, which has a number of event handlers available for detecting when speech is input through the device's microphone. The {{domxref("SpeechGrammar")}} interface represents a container for a particular set of grammar that your app should recognize.
-  Grammar is defined using [JSpeech Grammar Format](https://www.w3.org/TR/jsgf/) (**JSGF**.)
+  Generally you'll use the interface's constructor to create a new {{domxref("SpeechRecognition")}} object, which has a number of event handlers available for detecting when speech is input through the device's microphone (or from an audio track).
   You can specify whether you want the speech recognition done using a service provided by the user's platform (the default), or [locally in the browser](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#on-device_speech_recognition).
 - Speech synthesis is accessed via the {{domxref("SpeechSynthesis")}} interface, a text-to-speech component that allows programs to read out their text content (normally via the device's default speech synthesizer.) Different voice types are represented by {{domxref("SpeechSynthesisVoice")}} objects, and different parts of text that you want to be spoken are represented by {{domxref("SpeechSynthesisUtterance")}} objects.
   You can get these spoken by passing them to the {{domxref("SpeechSynthesis.speak()")}} method.
@@ -38,9 +37,11 @@ For more details on using these features, see [Using the Web Speech API](/en-US/
   - : Represents error messages from the recognition service.
 - {{domxref("SpeechRecognitionEvent")}}
   - : The event object for the {{domxref("SpeechRecognition.result_event", "result")}} and {{domxref("SpeechRecognition.nomatch_event", "nomatch")}} events, and contains all the data associated with an interim or final speech recognition result.
-- {{domxref("SpeechGrammar")}}
+- {{domxref("SpeechRecognitionPhrase")}}
+  - : Represents a phrase that can be passed into the speech recognition engine to be used for [speech recognition contextual biasing](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#speech_recognition_contextual_biasing).
+- {{domxref("SpeechGrammar")}} {{deprecated_inline}}
   - : The words or patterns of words that we want the recognition service to recognize.
-- {{domxref("SpeechGrammarList")}}
+- {{domxref("SpeechGrammarList")}} {{deprecated_inline}}
   - : Represents a list of {{domxref("SpeechGrammar")}} objects.
 - {{domxref("SpeechRecognitionResult")}}
   - : Represents a single recognition match, which may contain multiple {{domxref("SpeechRecognitionAlternative")}} objects.

@@ -33,6 +33,8 @@ _`SpeechRecognition` also inherits properties from its parent interface, {{domxr
   - : Controls whether interim results should be returned (`true`) or not (`false`.) Interim results are results that are not yet final (e.g., the {{domxref("SpeechRecognitionResult.isFinal")}} property is `false`.)
 - {{domxref("SpeechRecognition.maxAlternatives")}}
   - : Sets the maximum number of {{domxref("SpeechRecognitionAlternative")}}s provided per result. The default value is 1.
+- {{domxref("SpeechRecognition.phrases")}}
+  - : Sets an array of {{domxref("SpeechRecognitionPhrase")}} objects to be used for [speech recognition contextual biasing](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#speech_recognition_contextual_biasing).
 
 ## Instance methods
 

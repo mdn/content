@@ -1,0 +1,49 @@
+---
+title: "SpeechRecognitionPhrase: SpeechRecognitionPhrase() constructor"
+short-title: SpeechRecognitionPhrase()
+slug: Web/API/SpeechRecognitionPhrase/SpeechRecognitionPhrase
+page-type: web-api-constructor
+browser-compat: api.SpeechRecognitionPhrase.SpeechRecognitionPhrase
+---
+
+{{APIRef("Web Speech API")}}
+
+The **`SpeechRecognitionPhrase()`** constructor creates a new {{domxref("SpeechRecognitionPhrase")}} object.
+
+An array of `SpeechRecognitionPhrase` objects is passed into the speech recognition engine via the {{domxref("SpeechRecognition.phrases")}} property for [speech recognition contextual biasing](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#speech_recognition_contextual_biasing).
+
+## Syntax
+
+```js-nolint
+new SpeechRecognitionPhrase(phrase)
+new SpeechRecognitionPhrase(boost, phrase)
+```
+
+### Parameters
+
+- `boost` {{optional_inline}}
+  - : A floating pointing number between `0.0` and `10.0` (inclusive) representing the amount of boost you want to give to the `phrase`. This value is roughly equivalent to the natural log of the number of times more likely the website thinks this phrase is to appear than what the speech recognition model knows. Higher values make the `phrase` more likely to be recognized. A boost of `0.0` means the phrase is not boosted at all, whereas a boost of `10.0` means the phrase is extremely likely to appear and should be rarely set. If not specified, the `boost` defaults to `1.0`.
+- `phrase`
+  - : A string containing a word or phrase you want boosted.
+
+### Return value
+
+A new {{domxref("SpeechRecognitionPhrase")}} object.
+
+### Exceptions
+
+- `SyntaxError` {{domxref("DOMException")}}
+  - : The specified `boost` value is less than `0.0` or greater than `10.0`.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- {{domxref("SpeechRecognition")}}
+- {{domxref("SpeechRecognition.phrases")}}
