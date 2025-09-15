@@ -2,7 +2,9 @@
 title: "@scope"
 slug: Web/CSS/@scope
 page-type: css-at-rule
-browser-compat: css.at-rules.scope
+browser-compat:
+  - css.at-rules.scope
+  - css.selectors.nesting.at-scope
 sidebar: cssref
 ---
 
@@ -166,11 +168,15 @@ Here's some considerations for `:scope` within `@scope` blocks:
 
 ### Specificity in `@scope`
 
-Inside an `@scope` rule, both bare selectors and `&` behave as if `:where(:scope)` were prepended to the selector.
-Because [`:where()`](/en-US/docs/Web/CSS/:where) has zero specificity, bare selectors and `&` add zero weight and only the specificity of the rest of the selector counts.
-An `& img` selector is the equivalent to writing `:where(:scope) img`.
+Inside an `@scope` rule, both bare selectors and the [`&`](/en-US/docs/Web/CSS/Nesting_selector) nesting selector behave as if `:where(:scope)` were prepended to the selector.
+Because {{cssxref(":where", ":where()")}} has zero [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity), bare selectors and `&` add zero weight. The specificity weight is determined by the rest of the selector.
+For example, the specificity of the `& img` selector is equivalent to the specificity of `:where(:scope) img` (0-0-1).
 
-In both cases in the following example, the only specificity comes from `img` (`0-0-1`):
+> [!WARNING]
+> The specificity of `&` inside `@scope` blocks is handled differently according to the browser engine and release version.
+> Check [Browser compatibility](#browser_compatibility) for details.
+
+In both cases in the following code block, the only specificity comes from `img`:
 
 ```css
 @scope (.article-body) {
@@ -186,8 +192,8 @@ In both cases in the following example, the only specificity comes from `img` (`
 }
 ```
 
-By contrast, using `:scope` explicitly selects the scope root and adds class-level specificity (`0-1-0`), since `:scope` is a pseudo-class.
-In the following example, `:scope img` has a specificity of `0-1-1`:
+By contrast, using `:scope` explicitly selects the scope root and adds class-level specificity (0-1-0), since `:scope` is a [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes).
+In the following code block, `:scope img` has a specificity of 0-1-1:
 
 ```css
 @scope (.article-body) {
@@ -457,4 +463,6 @@ In the rendered code, note how all of the `<img>` elements are styled with the t
 
 - {{CSSxRef(":scope")}}
 - {{DOMxRef("CSSScopeRule")}}
+- [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
+- [Defining the `&` selector in a `@scope` rule](https://css.oddbird.net/scope/parent-selector/) on css.oddbird.net (2025)
 - [Limit the reach of your selectors with the CSS `@scope` at-rule](https://developer.chrome.com/docs/css-ui/at-scope) on developer.chrome.com (2023)

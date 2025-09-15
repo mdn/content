@@ -2,9 +2,13 @@
 title: corner-top-shape
 slug: Web/CSS/corner-top-shape
 page-type: css-property
+status:
+  - experimental
 browser-compat: css.properties.corner-top-shape
 sidebar: cssref
 ---
+
+{{SeeCompatTable}}
 
 The **`corner-top-shape`** [CSS](/en-US/docs/Web/CSS) property specifies the shape of both the corners on a box's top edge, within their {{cssxref("border-radius")}} area.
 

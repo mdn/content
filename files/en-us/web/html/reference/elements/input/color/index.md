@@ -149,27 +149,17 @@ The HTML is fairly straightforward — a couple of paragraphs of descriptive mat
 
 ### JavaScript
 
-First, there's some setup. Here we establish some variables, setting up a variable that contains the color we'll set the color picker to when we first load up, and then setting up a {{domxref("Window/load_event", "load")}} handler to do the main startup work once the page is fully loaded.
-
-```js
-let colorPicker;
-const defaultColor = "#0000ff";
-
-window.addEventListener("load", startup, false);
-```
-
 #### Initialization
 
-Once the page is loaded, our `load` event handler, `startup()`, is called:
+The following code initializes the color input:
 
 ```js
-function startup() {
-  colorPicker = document.querySelector("#color-picker");
-  colorPicker.value = defaultColor;
-  colorPicker.addEventListener("input", updateFirst, false);
-  colorPicker.addEventListener("change", updateAll, false);
-  colorPicker.select();
-}
+const defaultColor = "#0000ff";
+const colorPicker = document.querySelector("#color-picker");
+colorPicker.value = defaultColor;
+colorPicker.addEventListener("input", updateFirst, false);
+colorPicker.addEventListener("change", updateAll, false);
+colorPicker.select();
 ```
 
 This gets a reference to the color `<input>` element in a variable called `colorPicker`, then sets the color input's value to the value in `defaultColor`. Then the color input's {{domxref("Element/input_event", "input")}} event is set up to call our `updateFirst()` function, and the {{domxref("HTMLElement/change_event", "change")}} event is set to call `updateAll()`. These are both seen below.

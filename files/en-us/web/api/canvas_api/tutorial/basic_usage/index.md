@@ -105,7 +105,7 @@ Here is a minimalistic template, which we'll be using as a starting point for la
           const ctx = canvas.getContext("2d");
         }
       }
-      window.addEventListener("load", draw);
+      draw();
     </script>
   </body>
 </html>
