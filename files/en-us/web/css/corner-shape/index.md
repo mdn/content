@@ -254,7 +254,7 @@ div {
 }
 
 div:hover {
-  background-color: rgb(255 255 255 / 1);
+  background-color: white;
 }
 ```
 
@@ -531,7 +531,7 @@ div {
 ```
 
 ```css live-sample___corner-shape-animation
-@keyframes cornerpulse {
+@keyframes corner-pulse {
   from {
     corner-shape: square;
   }
@@ -543,7 +543,7 @@ div {
 
 html:hover div,
 div:focus {
-  animation: cornerpulse infinite alternate 2s linear;
+  animation: corner-pulse infinite alternate 2s linear;
 }
 ```
 
