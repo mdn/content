@@ -5,28 +5,30 @@ page-type: guide
 ---
 
 {{DefaultAPISidebar("Web Speech API")}}
-The Web Speech API provides two distinct areas of functionality — speech recognition, and speech synthesis (also known as text to speech, or tts) — which open up interesting new possibilities for accessibility, and control mechanisms. This article provides a simple introduction to both areas, along with demos.
+
+The Web Speech API provides two distinct areas of functionality — speech recognition, and speech synthesis (also known as text to speech, or tts) — which open up interesting new possibilities for accessibility, and control mechanisms. This article provides an introduction to both areas, along with demos.
 
 ## Speech recognition
 
-Speech recognition involves receiving speech through a device's microphone, which is then checked by a speech recognition service against a list of grammar (basically, the vocabulary you want to have recognized in a particular app.) When a word or phrase is successfully recognized, it is returned as a result (or list of results) as a text string, and further actions can be initiated as a result.
+Speech recognition involves receiving speech through a device's microphone (or an audio track), which is then checked by a speech recognition service. When a word or phrase is successfully recognized, it is returned as a result (or list of results) as a text string, and further actions can be initiated as a result.
 
-The Web Speech API has a main controller interface for this — {{domxref("SpeechRecognition")}} — plus a number of closely-related interfaces for representing grammar, results, etc. Generally, the default speech recognition system available on the device will be used for the speech recognition — most modern OSes have a speech recognition system for issuing voice commands. Think about Dictation on macOS, Siri on iOS, Cortana on Windows 10, Android Speech, etc.
+The Web Speech API has a main controller interface for this — {{domxref("SpeechRecognition")}} — plus several related interfaces for representing results, etc.
 
-> [!NOTE]
-> On some browsers, such as Chrome, using Speech Recognition on a web page involves a server-based recognition engine. Your audio is sent to a web service for recognition processing, so it won't work offline.
+Generally, the default speech recognition system available on the device will be used for the speech recognition — most modern OSes have a speech recognition system for issuing voice commands. Think about Dictation on macOS or Cortana on Windows. On some browsers, such as Chrome, using Speech Recognition on a web page involves a server-based recognition engine. Your audio is sent to a web service for recognition processing, so it won't work offline.
+
+To improve privacy and performance, it is possible to specify that you want the speech recognition performed on-device, thereby ensuring that neither audio nor transcribed speech are sent to a third-party service for processing. We specifically cover the on-device functionality in [on-device speech recognition]().
 
 ### Demo
 
-To show simple usage of Web speech recognition, we've written a demo called [Speech color changer](https://github.com/mdn/dom-examples/tree/main/web-speech-api/speech-color-changer). When the screen is tapped/clicked, you can say an HTML color keyword, and the app's background color will change to that color.
+To demonstrate usage of Web speech recognition, we've written a demo called [Speech color changer](https://github.com/mdn/dom-examples/tree/main/web-speech-api/speech-color-changer). When the screen is tapped/clicked, you can say an HTML color keyword, and the app's background color will change to that color.
 
 ![The UI of an app titled Speech Color changer. It invites the user to tap the screen and say a color, and then it turns the background of the app that color. In this case it has turned the background red.](speech-color-changer.png)
 
-To run the demo, navigate to the [live demo URL](https://mdn.github.io/dom-examples/web-speech-api/speech-color-changer/) in a supporting mobile browser (such as Chrome).
+To run the demo, navigate to the [live demo URL](https://mdn.github.io/dom-examples/web-speech-api/speech-color-changer/) in a supporting browser (such as Chrome).
 
 ### HTML and CSS
 
-The HTML and CSS for the app is really trivial. We have a title, instructions paragraph, and a div into which we output diagnostic messages.
+The HTML and CSS for the app is trivial. We have a title, instructions paragraph, and a div into which we output diagnostic messages.
 
 ```html
 <h1>Speech color changer</h1>
@@ -36,7 +38,7 @@ The HTML and CSS for the app is really trivial. We have a title, instructions pa
 </div>
 ```
 
-The CSS provides a very simple responsive styling so that it looks OK across devices.
+The CSS provides a basic responsive styling so that it looks OK across devices.
 
 ### JavaScript
 
@@ -50,15 +52,13 @@ Therefore at the start of our code we include these lines to allow for both pref
 ```js
 const SpeechRecognition =
   window.SpeechRecognition || window.webkitSpeechRecognition;
-const SpeechGrammarList =
-  window.SpeechGrammarList || window.webkitSpeechGrammarList;
 const SpeechRecognitionEvent =
   window.SpeechRecognitionEvent || window.webkitSpeechRecognitionEvent;
 ```
 
-#### The grammar
+#### Color list
 
-The next part of our code defines the grammar we want our app to recognize. The following variable is defined to hold our grammar:
+The next part of our code represents sample colors that we will print to the UI to give users an idea of what to say:
 
 ```js
 const colors = [
@@ -73,42 +73,24 @@ const colors = [
   "coral",
   // …
 ];
-const grammar = `#JSGF V1.0; grammar colors; public <color> = ${colors.join(
-  " | ",
-)};`;
 ```
 
-The grammar format used is [JSpeech Grammar Format](https://www.w3.org/TR/jsgf/) (**JSGF**) — you can find a lot more about it at the previous link to its spec. However, for now let's just run through it quickly:
+#### Creating a speech recognition instance
 
-- The lines are separated by semicolons, just like in JavaScript.
-- The first line — `#JSGF V1.0;` — states the format and version used. This always needs to be included first.
-- The second line indicates a type of term that we want to recognize. `public` declares that it is a public rule, the string in angle brackets defines the recognized name for this term (`color`), and the list of items that follow the equals sign are the alternative values that will be recognized and accepted as appropriate values for the term. Note how each is separated by a pipe character.
-- You can have as many terms defined as you want on separate lines following the above structure, and include fairly complex grammar definitions. For this basic demo, we are just keeping things simple.
-
-#### Plugging the grammar into our speech recognition
-
-The next thing to do is define a speech recognition instance to control the recognition for our application. This is done using the {{domxref("SpeechRecognition.SpeechRecognition()","SpeechRecognition()")}} constructor. We also create a new speech grammar list to contain our grammar, using the {{domxref("SpeechGrammarList.SpeechGrammarList()","SpeechGrammarList()")}} constructor.
+The next thing to do is define a speech recognition instance to control the recognition for our application. This is done using the {{domxref("SpeechRecognition.SpeechRecognition()","SpeechRecognition()")}} constructor.
 
 ```js
 const recognition = new SpeechRecognition();
-const speechRecognitionList = new SpeechGrammarList();
 ```
 
-We add our `grammar` to the list using the {{domxref("SpeechGrammarList.addFromString()")}} method. This accepts as parameters the string we want to add, plus optionally a weight value that specifies the importance of this grammar in relation of other grammars available in the list (can be from 0 to 1 inclusive.) The added grammar is available in the list as a {{domxref("SpeechGrammar")}} object instance.
-
-```js
-speechRecognitionList.addFromString(grammar, 1);
-```
-
-We then add the {{domxref("SpeechGrammarList")}} to the speech recognition instance by setting it to the value of the {{domxref("SpeechRecognition.grammars")}} property. We also set a few other properties of the recognition instance before we move on:
+We then set a few other properties of the recognition instance before we move on:
 
 - {{domxref("SpeechRecognition.continuous")}}: Controls whether continuous results are captured (`true`), or just a single result each time recognition is started (`false`).
 - {{domxref("SpeechRecognition.lang")}}: Sets the language of the recognition. Setting this is good practice, and therefore recommended.
-- {{domxref("SpeechRecognition.interimResults")}}: Defines whether the speech recognition system should return interim results, or just final results. Final results are good enough for this simple demo.
-- {{domxref("SpeechRecognition.maxAlternatives")}}: Sets the number of alternative potential matches that should be returned per result. This can sometimes be useful, say if a result is not completely clear and you want to display a list if alternatives for the user to choose the correct one from. But it is not needed for this simple demo, so we are just specifying one (which is actually the default anyway.)
+- {{domxref("SpeechRecognition.interimResults")}}: Defines whether the speech recognition system should return interim results, or just final results. Final results are good enough for this demo.
+- {{domxref("SpeechRecognition.maxAlternatives")}}: Sets the number of alternative potential matches that should be returned per result. This can sometimes be useful, say if a result is not completely clear and you want to display a list if alternatives for the user to choose the correct one from. But it is not needed for this demo, so we are just specifying one (which is actually the default anyway.)
 
 ```js
-recognition.grammars = speechRecognitionList;
 recognition.continuous = false;
 recognition.lang = "en-US";
 recognition.interimResults = false;
@@ -150,7 +132,7 @@ recognition.onresult = (event) => {
 };
 ```
 
-The second line here is a bit complex-looking, so let's explain it step by step. The {{domxref("SpeechRecognitionEvent.results")}} property returns a {{domxref("SpeechRecognitionResultList")}} object containing {{domxref("SpeechRecognitionResult")}} objects. It has a getter so it can be accessed like an array — so the first `[0]` returns the `SpeechRecognitionResult` at position 0. Each `SpeechRecognitionResult` object contains {{domxref("SpeechRecognitionAlternative")}} objects that contain individual recognized words. These also have getters so they can be accessed like arrays — the second `[0]` therefore returns the `SpeechRecognitionAlternative` at position 0. We then return its `transcript` property to get a string containing the individual recognized result as a string, set the background color to that color, and report the color recognized as a diagnostic message in the UI.
+The second line here is a bit complex, so let's explain it step by step. The {{domxref("SpeechRecognitionEvent.results")}} property returns a {{domxref("SpeechRecognitionResultList")}} object containing {{domxref("SpeechRecognitionResult")}} objects. It has a getter so it can be accessed like an array — so the first `[0]` returns the `SpeechRecognitionResult` at position 0. Each `SpeechRecognitionResult` object contains {{domxref("SpeechRecognitionAlternative")}} objects that contain individual recognized words. These also have getters so they can be accessed like arrays — the second `[0]` therefore returns the `SpeechRecognitionAlternative` at position 0. We then return its `transcript` property to get a string containing the individual recognized result as a string, set the background color to that color, and report the color recognized as a diagnostic message in the UI.
 
 We also use the {{domxref("SpeechRecognition.speechend_event", "speechend")}} event to stop the speech recognition service from running (using {{domxref("SpeechRecognition.stop()")}}) once a single word has been recognized and it has finished being spoken:
 
@@ -162,7 +144,7 @@ recognition.onspeechend = () => {
 
 #### Handling errors and unrecognized speech
 
-The last two handlers are there to handle cases where speech was recognized that wasn't in the defined grammar, or an error occurred. The {{domxref("SpeechRecognition.nomatch_event", "nomatch")}} event seems to be supposed to handle the first case mentioned, although note that at the moment it doesn't seem to fire correctly; it just returns whatever was recognized anyway:
+The last two handlers are there to handle cases where the spoken term wasn't recognized, or an error occurred with the recognition. The {{domxref("SpeechRecognition.nomatch_event", "nomatch")}} event seems to be supposed to handle the first case mentioned, although note that at the moment it doesn't seem to fire correctly; it just returns whatever was recognized anyway:
 
 ```js
 recognition.onnomatch = (event) => {
@@ -170,13 +152,149 @@ recognition.onnomatch = (event) => {
 };
 ```
 
-The {{domxref("SpeechRecognition.error_event", "error")}} event handles cases where there is an actual error with the recognition successfully — the {{domxref("SpeechRecognitionErrorEvent.error")}} property contains the actual error returned:
+The {{domxref("SpeechRecognition.error_event", "error")}} event handles cases where there is an actual error with the recognition — the {{domxref("SpeechRecognitionErrorEvent.error")}} property contains the actual error returned:
 
 ```js
 recognition.onerror = (event) => {
   diagnostic.textContent = `Error occurred in recognition: ${event.error}`;
 };
 ```
+
+## On-device speech recognition
+
+In many cases, the default is to perform the speech recognition using an online service. This means that an audio recording or transcription of the speech will be sent to a server for processing, and the results returned to the browser. This has a couple of problems:
+
+- Privacy: Many users are not comfortable with their speech being sent off to s server.
+- Performance: Having to send data to a server for every bit of recognition can cause a performance hit in more intensive applications, and your apps won't work offline.
+
+To mitigate these problems, the Web Speech API provides functionality to specify that you want your speech recognition handled on-device by the browser. There is a one-time language pack download for each language you want to recognize, but after that the functionality will be available offline.
+
+This section explains how to use on-device speech recognition.
+
+### Demo
+
+To demonstrate usage of on-device speech recognition, we've written a demo called [On-device speech color changer](https://github.com/mdn/dom-examples/tree/main/web-speech-api/on-device-speech-color-changer) ([run the demo live](https://mdn.github.io/dom-examples/web-speech-api/speech-color-changer/)).
+
+This demo works in a very similar fashion to the online speech color changer demo discussed earlier, with the differences noted below.
+
+### Specifying on-device recognition
+
+To specify that you want to use the browser's own on-device processing, you need to set the {{domxref("SpeechRecognition.processLocally")}} property to `true` before starting any speech recognition (the default value is `false`):
+
+```js
+recognition.processLocally = true;
+```
+
+### Checking availability and installing language packs
+
+For on-device speech recognition to occur, the browser needs to have a language pack installed for the language you are trying to recognize. If you run the `start()` method after specifying `processLocally = true` and you haven't got the correct language pack installed, it will fail with a [`language-not-supported`](/en-US/docs/Web/API/SpeechRecognitionErrorEvent/error#language-not-supported) error.
+
+To get the correct language pack installed, there are two steps to follow.
+
+1. You need to check whether the language pack is available on the user's computer. This is handled using the {{domxref("SpeechRecognition.available_static", "SpeechRecognition.available()")}} static method.
+2. You need to install the language pack if it isn't available. This is handled using the {{domxref("SpeechRecognition.install_static", "SpeechRecognition.install()")}} static method.
+
+Both of the above steps are handled using the following modified `click` event handler on the `<body>` element:
+
+```js
+document.body.addEventListener("click", () => {
+  // check availability of target language
+  SpeechRecognition.available({ langs: ["en-US"], processLocally: true }).then(
+    (result) => {
+      if (result === "unavailable") {
+        diagnostic.textContent = `en-US not available to download at this time. Sorry!`;
+      } else if (result === "available") {
+        recognition.start();
+        console.log("Ready to receive a color command.");
+      } else {
+        diagnostic.textContent = `en-US language pack downloading`;
+        SpeechRecognition.install({
+          langs: ["en-US"],
+          processLocally: true,
+        }).then((result) => {
+          if (result) {
+            diagnostic.textContent = `en-US language pack downloaded. Try again.`;
+          } else {
+            diagnostic.textContent = `en-US language pack failed to download. Try again later.`;
+          }
+        });
+      }
+    },
+  );
+});
+```
+
+The `available()` method takes an options object containing two properties:
+
+- A `langs` array containing the languages you are checking availability for.
+- A `processLocally` boolean indicating whether you are checking for availability of the language locally (`true`) or on the default (often server-based) recognition service (`false`, which is the default).
+
+When run, this method returns a {{jsxref("Promise")}} that resolves with a enumerated value indicating the availability of the specified languages for recognition. In our case, we test for three conditions:
+
+- If the resulting value is `unavailable`, it means that the language is not available, and a suitable language pack is not available to download, so we print an appropriate message to the output.
+- If the resulting value is `available`, it means that the language pack is available locally, so recognition can begin. In this case, we run `start()` and log a message to the console when the app is ready to receive speech.
+- If the value is something else (`downloadable` or `downloading`), we print a diagnostic message to inform the user that a language code download is commencing, then run the `install()` method to handle the download.
+
+The `install()` method works in a similar way to the `available()` method, except that its options object only takes the `langs` array. When run, it starts downloading all the language packs for the languages indicated in `langs` and returns a {{jsxref("Promise")}} that resolves with a boolean indicating whether the specified language packs were downloaded and installed successfully (`true`) or not (`false`).
+
+In this basic demo, we just write a diagnostic message to indicate the success and failure cases; in a more substantial demo you'd probably want to disable the controls while the download process occurs, and enable them again when the promise resolves.
+
+### Permissions-policy integration
+
+Usage of the `available()` and `install()` methods is controlled by the {{httpheader("Permissions-Policy/on-device-speech-recognition", "on-device-speech-recognition")}} {{httpheader("Permissions-Policy")}} directive. Specifically, where a defined policy blocks usage, any attempts to call these methods will fail.
+
+The default allowlist value for `on-device-speech-recognition` is `self`, so you don't need to worry about this unless you are attempting to use these features in embedded cross-origin documents, or specifically want to disable their usage.
+
+### Unprefixed Web Speech API
+
+In the original speech color changer demo, we include lines to handle the issue that some browsers still support the Web Speech API with prefixed properties (see the [Prefixed properties](#prefixed_properties) section for more details).
+
+In the on-device version, we don't include the prefix-handling code because the new implementations that support this functionality do so without prefixes.
+
+## Speech recognition contextual biasing
+
+There are times where a speech recognition service will fail to correctly recognize a specific word or phrase. This is most commonly the case for domain-specific terminology (for example medical or scientific terms), proper nouns, uncommon phrases, or words that are similar to other words and so may be misrecognized.
+
+For example, during testing, we found that our [on-device speech color changer](https://mdn.github.io/dom-examples/web-speech-api/speech-color-changer/) had trouble recognizing the color `azure` — it kept returning results like "as you". Other colors that were frequently misrecognized included `khaki` ("car key"), `tan`, and `thistle` ("this all").
+
+To mitigate such problems, the Web Speech API can provide hints to the recognition engine to highlight phrases that are more likely to be spoken and which the engine should therefore be biased towards. The end result is that these phrases are more likely to be recognized correctly.
+
+This is done by setting an array of {{domxref("SpeechRecognitionPhrase")}} objects as the value of the {{domxref("SpeechRecognition.phrases")}} property. Each `SpeechRecognitionPhrase` object contains:
+
+- A `phrase` property, which is a string containing a word or phrase you want boosted in terms of the engine's bias towards it.
+- A `boost` property, which is a floating pointing number between `0.0` and `10.0` (inclusive) representing the amount of boost you want to give that phrase. Higher values make the phrase more likely to be recognized.
+
+In our `on-device speech color changer` demo, we handle this by first creating an array containing the phrases to boost and their boost values:
+
+```js
+const phraseData = [
+  { phrase: "azure", boost: 10.0 },
+  { phrase: "khaki", boost: 3.0 },
+  { phrase: "tan", boost: 2.0 },
+];
+```
+
+These need to be represented as an `ObservableArray` of `SpeechRecognitionPhrase` objects. We can handle this by mapping the original array, converting each array element into a `SpeechRecognitionPhrase` object using the {{domxref("SpeechRecognitionPhrase.SpeechRecognitionPhrase", "SpeechRecognitionPhrase()")}} constructor:
+
+```js
+const phraseObjects = phraseData.map(
+  (p) => new SpeechRecognitionPhrase(p.phrase, p.boost),
+);
+```
+
+After we've created our `SpeechRecognition` instance, we can then plug our contextual biasing phrases into it by setting the `phraseObjects` array as the value of the `SpeechRecognition.phrases` property:
+
+```js
+recognition.phrases = phraseObjects;
+```
+
+The phrases array can be modified just like a normal JavaScript array, for example by pushing new phrases to it dynamically:
+
+```js
+recognition.phrases.push(new SpeechRecognitionPhrase("thistle", 5.0));
+```
+
+After adding in this code, we found that the problematic color keywords were recognized more accurately than before.
 
 ## Speech synthesis
 
@@ -186,15 +304,15 @@ The Web Speech API has a main controller interface for this — {{domxref("Speec
 
 ### Demo
 
-To show simple usage of Web speech synthesis, we've provided a demo called [Speak easy synthesis](https://github.com/mdn/dom-examples/tree/main/web-speech-api/speak-easy-synthesis). This includes a set of form controls for entering text to be synthesized, and setting the pitch, rate, and voice to use when the text is uttered. After you have entered your text, you can press <kbd>Enter</kbd>/<kbd>Return</kbd> to hear it spoken.
+To show usage of Web speech synthesis, we've provided a demo called [Speak easy synthesis](https://github.com/mdn/dom-examples/tree/main/web-speech-api/speak-easy-synthesis). This includes a set of form controls for entering text to be synthesized, and setting the pitch, rate, and voice to use when the text is uttered. After you have entered your text, you can press <kbd>Enter</kbd>/<kbd>Return</kbd> to hear it spoken.
 
 ![UI of an app called speak easy synthesis. It has an input field in which to input text to be synthesized, slider controls to change the rate and pitch of the speech, and a drop down menu to choose between different voices.](speak-easy-synthesis.png)
 
-To run the demo, navigate to the [live demo URL](https://mdn.github.io/dom-examples/web-speech-api/speak-easy-synthesis/) in a supporting mobile browser.
+To run the demo, navigate to the [live demo URL](https://mdn.github.io/dom-examples/web-speech-api/speak-easy-synthesis/) in a supporting browser.
 
 ### HTML and CSS
 
-The HTML and CSS are again pretty trivial, containing a title, some instructions for use, and a form with some simple controls. The {{htmlelement("select")}} element is initially empty, but is populated with {{htmlelement("option")}}s via JavaScript (see later on.)
+The HTML and CSS are again pretty trivial, containing a title, some instructions for use, and a form with some basic controls. The {{htmlelement("select")}} element is initially empty, but is populated with {{htmlelement("option")}}s via JavaScript (see later on.)
 
 ```html
 <h1>Speech synthesizer</h1>
