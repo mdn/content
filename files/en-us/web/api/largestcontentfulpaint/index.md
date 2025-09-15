@@ -34,7 +34,7 @@ For accurate measurement cross-origin render time, set the {{httpheader("Timing-
 
 Developers should use `startTime` instead of `renderTime` as the LCP value, as the `renderTime` may not be set in some browsers.
 
-See [Cross-origin image render time](./renderTime#cross-origin_image_render_time) and [Use startTime over renderTime](./renderTime#use_starttime_over_rendertime) for more details.
+See [Cross-origin image render time](/en-US/docs/Web/API/LargestContentfulPaint/renderTime#cross-origin_image_render_time) and [Use startTime over renderTime](/en-US/docs/Web/API/LargestContentfulPaint/renderTime#use_starttime_over_rendertime) for more details.
 
 ## Instance properties
 
