@@ -77,7 +77,7 @@ The first form is full, with four form controls: one {{htmlelement("fieldset")}}
     <legend>This is a legend</legend>
     <label>A form control: <input form="sparseForm" /></label>
     <label>Another form control: <input form="sparseForm" /></label>
-    <label>Yest anotehr form control: <input form="sparseForm" /></label>
+    <label>Yet another form control: <input form="sparseForm" /></label>
   </fieldset>
 </form>
 
