@@ -40,5 +40,4 @@ colorInput.colorSpace = "limited-srgb"; // convert to srgb
 
 ## See also
 
-- [`colorspace`](/en-US/docs/Web/HTML/Reference/Attributes/colorspace) HTML attribute
 - [`<input type="color">`](/en-US/docs/Web/HTML/Reference/Elements/input/color)

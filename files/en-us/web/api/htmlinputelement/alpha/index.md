@@ -42,5 +42,4 @@ if (colorInput.alpha) {
 
 ## See also
 
-- [`alpha`](/en-US/docs/Web/HTML/Reference/Attributes/alpha) HTML attribute
 - [`<input type="color">`](/en-US/docs/Web/HTML/Reference/Elements/input/color)
