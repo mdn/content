@@ -76,12 +76,16 @@ This is much more difficult than just phishing a password, because the attacker 
 
 ### Web Authentication (passkeys)
 
-The strongest technical defense against phishing is to authenticate users with _passkeys_, which are based on the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API).
+The strongest technical defense against phishing is to authenticate users using _passkeys_, which are based on the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API).
 
-Unlike passwords or OTP codes, a user never manually enters a passkey on a site. When a web page asks the user to authenticate using Web Authentication, the browser finds applicable passkeys, and asks the user to authenticate themselves to the module on their device which manages the passkeys (for example using their fingerprint or a PIN). If this is successful, then the browser uses the passkey to sign into the site.
+A passkey is created when the user registers on the site, and is specific to the {{glossary("origin")}} for which it was originally created.
 
-A passkey is specific to the {{glossary("origin")}} for which it was originally created. So if a passkey was created for the user's account at `my-bank.example.com`, the user will not be able to use it on `my-bank.examp1e.com` — the browser just won't consider it applicable to the fake site.
+Unlike passwords or OTP codes, a user never manually enters a passkey on a site: in fact, the passkey is never transmitted to the site at all. The passkey is kept in a module called an _authenticator_, which is built into or attached to the user's device.
 
-This means that passkeys are an effective defense against phishing.
+When a web page asks the user to authenticate using Web Authentication, the browser asks the authenticator for an applicable passkey. If it can find one, the authenticator generates a token which the browser sends to the website. The website verifies the token and signs the user in.
 
-## Defense summary checklist
+Because the passkey is specific to the site's origin, if a passkey was created for the user's account at `my-bank.example.com`, the user will not be able to use it on `my-bank.examp1e.com`. The browser just won't consider it applicable to the fake site.
+
+This makes passkeys an effective defense against phishing.
+
+### Defense summary checklist
