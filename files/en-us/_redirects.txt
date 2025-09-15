@@ -12141,6 +12141,7 @@
 /en-US/docs/Web/CSS/Aural	/en-US/docs/Web/CSS/@media
 /en-US/docs/Web/CSS/Block_formatting_context	/en-US/docs/Web/CSS/CSS_display/Block_formatting_context
 /en-US/docs/Web/CSS/CSS3_Columns	/en-US/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts
+/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems	/en-US/docs/Web/API/CSSOM_view_API/Coordinate_systems
 /en-US/docs/Web/CSS/CSS_Background_and_Borders	/en-US/docs/Web/CSS/CSS_backgrounds_and_borders
 /en-US/docs/Web/CSS/CSS_Background_and_Borders/Border-image_generator	/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Border-image_generator
 /en-US/docs/Web/CSS/CSS_Background_and_Borders/Border-radius_generator	/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator

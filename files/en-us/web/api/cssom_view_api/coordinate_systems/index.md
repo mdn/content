@@ -1,9 +1,10 @@
 ---
 title: Coordinate systems
-slug: Web/CSS/CSSOM_view/Coordinate_systems
+slug: Web/API/CSSOM_view_API/Coordinate_systems
 page-type: guide
-sidebar: cssref
 ---
+
+{{DefaultAPISidebar("CSSOM view API")}}
 
 When specifying the location of a pixel in a graphics context (just like when specifying coordinate systems in [algebra](https://en.wikipedia.org/wiki/Algebra)), its position is defined relative to a fixed point in the context. This fixed point is called the [origin](<https://en.wikipedia.org/wiki/Origin_(mathematics)>). The position is specified as the number of pixels offset from the origin along each dimension of the context.
 
