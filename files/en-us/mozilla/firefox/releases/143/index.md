@@ -97,6 +97,10 @@ Firefox 143 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
   The **`text-autospace`** CSS property allows you to specify the space applied between Chinese/Japanese/Korean (CJK) and non-CJK characters. Currently these values are only parsed and there is no effect on the output. ([Firefox bug 1869577](https://bugzil.la/1869577)).
 
+- **WebGPU external textures**: `dom.webgpu.external-texture.enable`
+
+  The [`GPUExternalTexture`](/en-US/docs/Web/API/GPUExternalTexture) interface and [`GPUDevice.importExternalTexture()`](/en-US/docs/Web/API/GPUDevice/importExternalTexture) method are supported for importing external textures from video frames or elements. ([Firefox bug 1979100](https://bugzil.la/1979100)).
+
 These features are shipping in Firefox 143 but are disabled by default.
 To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
 You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
