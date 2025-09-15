@@ -34,7 +34,7 @@ Password managers can provide some degree of protection against phishing attacks
 - **Password storage**: Storing a user's passwords securely, so the user doesn't have to remember them (and can therefore use stronger passwords)
 - **Password entry**: Automatically entering the user's password for a site, when the user visits the site's login page.
 
-It's the last of these that can help against phishing. The user might not see the difference between the fake domain `my-bank-examp1e.com` and the real domain `my-bank-example.com`, but the password manager will, and as a result it will not automatically enter the real password on the fake site. With luck, this will be enough of a warning to the user that the login request is not legitimate.
+It's the last of these that can help against phishing. The user might not see the difference between the fake domain `my-bank.examp1e.com` and the real domain `my-bank.example.com`, but the password manager will, and as a result it will not automatically enter the real password on the fake site. With luck, this will be enough of a warning to the user that the login request is not legitimate.
 
 As a web developer, you can't make your users use a password manager. But you can, if you are not careful, make it impossible for password managers to integrate with your site. The article [Making password managers play ball with your login form](https://hidde.blog/making-password-managers-play-ball-with-your-login-form/) is an excellent summary of practices to follow, and practices to avoid, if you want users to be able to use password managers on your site. It's also important to test your site with password managers, both those built into browsers and popular standalone applications.
 
