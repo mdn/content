@@ -5,7 +5,7 @@ page-type: guide
 sidebar: security
 ---
 
-Phishing is a social engineering attack which a user is tricked into believing that are interacting with a site with which they have an account, when in reality they are interacting with the attacker. The attacker convinces the user to enter their credentials on the fake site, and thereby steals the user's credentials.
+Phishing is a social engineering attack in which a user is tricked into believing that they are interacting with a site with which they have an account, when in reality they are interacting with the attacker. The attacker convinces the user to enter their credentials on the fake site, and thereby steals the user's credentials.
 
 ## Overview
 
