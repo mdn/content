@@ -27,7 +27,7 @@ let setting = browser.cookies.set(
     - `domain` {{optional_inline}}
       - : A `string` representing the domain of the cookie. If omitted, the cookie becomes a host-only cookie.
     - `expirationDate` {{optional_inline}}
-      - : A `number` that represents the expiration date of the cookie as the seconds after the UNIX epoch. From Firefox 142 can include milliseconds in the fractional part. If omitted, the cookie becomes a session cookie.
+      - : A `number` that represents the expiration date of the cookie as the seconds after the UNIX epoch. Can include milliseconds in the fractional part. If omitted, the cookie becomes a session cookie.
     - `firstPartyDomain` {{optional_inline}}
       - : A `string` representing the first-party domain with which the cookie is associated. This property must be supplied if the browser has first-party isolation enabled. See [First-party isolation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#first-party_isolation).
     - `httpOnly` {{optional_inline}}
