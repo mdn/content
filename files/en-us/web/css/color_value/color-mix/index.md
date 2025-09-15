@@ -31,11 +31,11 @@ The `color-mix( <color-interpolation-method>, <color> [<percentage>], <color> [<
 - {{CSSXref("&lt;color-interpolation-method&gt;")}}
   - : Specifies what interpolation method should be used to mix the colors. It consists of the `in` keyword followed by a {{glossary("color space")}} (one of the color spaces listed in the [formal syntax](#formal_syntax)), and, optionally, a {{CSSXref("&lt;hue-interpolation-method&gt;")}}.
 
-- `<color>`
-  - : A {{CSSXref("&lt;color&gt;")}} value to mix.
+- {{CSSXref("&lt;color&gt;")}}
+  - : A color to mix; can be any valid `<color>` value.
 
-- `<percentage>` {{optional_inline}}
-  - : A {{CSSXref("&lt;percentage&gt;")}} value between `0%` and `100%`, specifying the amount of the corresponding color to mix.
+- {{CSSXref("&lt;percentage&gt;")}} {{optional_inline}}
+  - : A percentage value specifying the amount of the corresponding color to mix; can be any `<percentage>` value between `0%` and `100%`, inclusive.
 
 ### Return value
 
