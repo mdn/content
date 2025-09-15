@@ -64,7 +64,7 @@ Some methods allocate new values or objects:
 
 ```js
 const s = "string";
-const s2 = s.substr(0, 3); // s2 is a new string
+const s2 = s.substring(0, 3); // s2 is a new string
 // Since strings are immutable values,
 // JavaScript may decide to not allocate memory,
 // but just store the [0, 3] range.
