@@ -43,7 +43,7 @@ color-mix(in lch longer hue, hsl(200deg 50% 80%), coral)
 The `color-mix(<color-interpolation-method>, <color>[<percentage>], <color>[<percentage>])` accepts the following parameters:
 
 - {{CSSXref("&lt;color-interpolation-method&gt;")}}
-  - : Specifies what interpolation method should be used to mix the colors. It consists of the `in` keyword followed by a {{glossary("color space")}} defined as a: 
+  - : Specifies what interpolation method should be used to mix the colors. It consists of the `in` keyword followed by a {{glossary("color space")}} defined as a:
     - [`<rectangular-color-space>`](/en-US/docs/Web/CSS/color-interpolation-method#rectangular-color-space)
     - [`<polar-color-space>`](/en-US/docs/Web/CSS/color-interpolation-method#polar-color-space), optionally followed followed by a {{CSSXref("&lt;hue-interpolation-method&gt;")}}, which defaults to `shorter hue`, or
     - `<custom-color-space>`, which is a [`<dashed-ident>`](/en-US/docs/Web/CSS/dashed-ident#using_with_color-profile) defined in a valie {{cssxref("@color-profile")}}
