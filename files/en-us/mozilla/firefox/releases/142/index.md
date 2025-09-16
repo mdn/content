@@ -1,8 +1,8 @@
 ---
 title: Firefox 142 for developers
-short-title: Firefox 142 (Stable)
+short-title: Firefox 142
 slug: Mozilla/Firefox/Releases/142
-page-type: firefox-release-notes-active
+page-type: firefox-release-notes
 sidebar: firefox
 ---
 
