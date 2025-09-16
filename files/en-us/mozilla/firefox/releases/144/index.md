@@ -52,7 +52,10 @@ Firefox 144 is the current [Nightly version of Firefox](https://www.firefox.com/
 
 <!-- #### DOM -->
 
-<!-- #### Media, WebRTC, and Web Audio -->
+#### Media, WebRTC, and Web Audio
+
+- {{domxref("RTCDataChannel")}} instances are now [transferrable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects), and hence can be passed to [workers](/en-US/docs/Web/API/Worker) ([Firefox bug 1209163](https://bugzil.la/1209163)).
+- The [`closing` event](/en-US/docs/Web/API/RTCDataChannel/closing_event) and `onclosing()` event handler of the {{domxref("RTCDataChannel")}} interface are now supported ([Firefox bug 1611953](https://bugzil.la/1611953)).
 
 <!-- #### Removals -->
 
