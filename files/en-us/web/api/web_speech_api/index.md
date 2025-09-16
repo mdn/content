@@ -39,10 +39,6 @@ For more details on using these features, see [Using the Web Speech API](/en-US/
   - : The event object for the {{domxref("SpeechRecognition.result_event", "result")}} and {{domxref("SpeechRecognition.nomatch_event", "nomatch")}} events, and contains all the data associated with an interim or final speech recognition result.
 - {{domxref("SpeechRecognitionPhrase")}}
   - : Represents a phrase that can be passed into the speech recognition engine to be used for [speech recognition contextual biasing](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#speech_recognition_contextual_biasing).
-- {{domxref("SpeechGrammar")}} {{deprecated_inline}}
-  - : The words or patterns of words that we want the recognition service to recognize.
-- {{domxref("SpeechGrammarList")}} {{deprecated_inline}}
-  - : Represents a list of {{domxref("SpeechGrammar")}} objects.
 - {{domxref("SpeechRecognitionResult")}}
   - : Represents a single recognition match, which may contain multiple {{domxref("SpeechRecognitionAlternative")}} objects.
 - {{domxref("SpeechRecognitionResultList")}}
@@ -64,6 +60,15 @@ For more details on using these features, see [Using the Web Speech API](/en-US/
     Every `SpeechSynthesisVoice` has its own relative speech service including information about language, name and URI.
 - {{domxref("Window.speechSynthesis")}}
   - : Specified out as part of a `[NoInterfaceObject]` interface called `SpeechSynthesisGetter`, and Implemented by the `Window` object, the `speechSynthesis` property provides access to the {{domxref("SpeechSynthesis")}} controller, and therefore the entry point to speech synthesis functionality.
+
+### Deprecated interfaces
+
+The whole concept of grammar has been removed from the Web Speech API. Related features have been kept in the specification and are still recognized by supporting browsers for backwards compatibility purposes, but they have no effect on speech recognition services.
+
+- {{domxref("SpeechGrammar")}} {{deprecated_inline}}
+  - : Represents words or patterns of words for the recognition service to recognize.
+- {{domxref("SpeechGrammarList")}} {{deprecated_inline}}
+  - : Represents a list of {{domxref("SpeechGrammar")}} objects.
 
 ## Errors
 

@@ -4,15 +4,17 @@ slug: Web/API/SpeechGrammar
 page-type: web-api-interface
 status:
   - deprecated
-  - non-standard
 browser-compat: api.SpeechGrammar
 ---
 
-{{APIRef("Web Speech API")}}{{deprecated_header}}{{non-standard_header}}
+{{APIRef("Web Speech API")}}{{deprecated_header}}
 
-The **`SpeechGrammar`** interface of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) represents a set of words or patterns of words that we want the recognition service to recognize.
+The **`SpeechGrammar`** interface of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) represents a set of words or patterns of words for the recognition service to recognize.
 
-Grammar is defined using [JSpeech Grammar Format](https://www.w3.org/TR/jsgf/) (**JSGF**.) Other formats may also be supported in the future.
+Grammar is defined using [JSpeech Grammar Format](https://www.w3.org/TR/jsgf/) (**JSGF**).
+
+> [!NOTE]
+> The whole concept of grammar has been removed from the Web Speech API. Related features have been kept in the specification and are still recognized by supporting browsers for backwards compatibility purposes, but they have no effect on speech recognition services.
 
 ## Constructor
 
@@ -21,9 +23,9 @@ Grammar is defined using [JSpeech Grammar Format](https://www.w3.org/TR/jsgf/) (
 
 ## Instance properties
 
-- {{domxref("SpeechGrammar.src")}} {{deprecated_inline}} {{non-standard_inline}}
+- {{domxref("SpeechGrammar.src")}} {{deprecated_inline}}
   - : Sets and returns a string containing the grammar from within in the `SpeechGrammar` object instance.
-- {{domxref("SpeechGrammar.weight")}} {{Optional_Inline}} {{deprecated_inline}} {{non-standard_inline}}
+- {{domxref("SpeechGrammar.weight")}} {{deprecated_inline}}
   - : Sets and returns the weight of the `SpeechGrammar` object.
 
 ## Examples

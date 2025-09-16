@@ -13,15 +13,14 @@ The **`grammars`** property of the
 {{domxref("SpeechGrammar")}} objects that represent the grammars that will be understood
 by the current `SpeechRecognition`.
 
+> [!NOTE]
+> The whole concept of grammar has been removed from the Web Speech API. Related features have been kept in the specification and are still recognized by supporting browsers for backwards compatibility purposes, but they have no effect on speech recognition services.
+
 ## Value
 
-A {{domxref("SpeechGrammarList")}} containing the {{domxref("SpeechGrammar")}} objects
-that represent your grammar for your app.
+A {{domxref("SpeechGrammarList")}} containing the {{domxref("SpeechGrammar")}} objects representing the grammar for your app.
 
 ## Examples
-
-This code is excerpted from our
-[Speech color changer](https://github.com/mdn/dom-examples/blob/main/web-speech-api/speech-color-changer/script.js) example.
 
 ```js
 const grammar =
@@ -30,10 +29,6 @@ const recognition = new SpeechRecognition();
 const speechRecognitionList = new SpeechGrammarList();
 speechRecognitionList.addFromString(grammar, 1);
 recognition.grammars = speechRecognitionList;
-// recognition.continuous = false;
-recognition.lang = "en-US";
-recognition.interimResults = false;
-recognition.maxAlternatives = 1;
 
 // …
 ```
