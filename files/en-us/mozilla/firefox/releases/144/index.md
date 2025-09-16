@@ -44,6 +44,12 @@ Firefox 144 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
+### MathML
+
+#### Removals
+
+- Support for the deprecated MathML STIXGeneral font has now been removed. The setting `mathml.stixgeneral_operator_stretching.disabled` has also been removed. ([Firefox bug 1336058](https://bugzil.la/1336058)).
+
 <!-- ### Security -->
 
 <!-- #### Removals -->
