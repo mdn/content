@@ -7,8 +7,11 @@ spec-urls: https://w3c.github.io/mediacapture-main/#dom-mediatrackconstraints
 
 {{APIRef("Media Capture and Streams")}}
 
-The **`MediaTrackConstraints`** dictionary is used to describe a set of capabilities and the value or values each can take on.
-A constraints dictionary is passed into {{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}} to allow a script to establish a set of exact (required) values or ranges and/or preferred values or ranges of values for the track, and the most recently-requested set of custom constraints can be retrieved by calling {{domxref("MediaStreamTrack.getConstraints", "getConstraints()")}}.
+The **`MediaTrackConstraints`** dictionary is used to describe a set of media capabilities and the value or values each can take on.
+
+A constraints dictionary is passed into the {{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}} method of the {{domxref("MediaStreamTrack")}} interface to allow a script to establish a set of exact (required) values or ranges and/or preferred values or ranges of values for the track, and the most recently-requested set of custom constraints can be retrieved by calling {{domxref("MediaStreamTrack.getConstraints", "getConstraints()")}}.
+
+Objects of this type may also be passed to the {{domxref("MediaDevices/getUserMedia","getUserMedia()")}} and {{domxref("MediaDevices/getDisplayMedia","getDisplayMedia()")}} methods of the {{domxref("MediaDevices")}} interface in order to specify constraints on a media stream requested from hardware such as a camera or microphone, and from a screen or window capture, respectively.
 
 ## Constraints
 
@@ -157,9 +160,12 @@ For example, because {{Glossary("RTP")}} doesn't provide some of these values du
   - : A [`ConstrainULong`](#constrainulong) specifying the video width or range of widths which are acceptable and/or required.
 - `resizeMode`
   - : A [`ConstrainDOMString`](#constraindomstring) object specifying a mode or an array of modes the UA can use to derive the resolution of a video track.
-    Allowed values are `none` and `crop-and-scale`.
-    `none` means that the user agent uses the resolution provided by the camera, its driver or the OS.
-    `crop-and-scale` means that the user agent can use cropping and downscaling on the camera output in order to satisfy other constraints that affect the resolution.
+    Allowed values are:
+    - `crop-and-scale`
+      - : The user agent can use cropping and downscaling of resolution or frame rate on the raw output from the hardware/OS, in order to satisfy other constraints.
+        This constraint allows developers to get a downscaled video even if the particular format indicated by their constraints is not natively supported by the hardware.
+    - `none`
+      - : The user agent uses the resolution provided by the underlying hardware, such as a camera or its driver, or the OS.
 
 ### Instance properties of shared screen tracks
 
@@ -193,9 +199,10 @@ These constraints apply to the `video` property of the object passed into {{domx
 - [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints)
 - [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API)
 - [Using the Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
-- {{domxref("MediaDevices.getUserMedia()")}}
 - {{domxref("MediaStreamTrack.getConstraints()")}}
 - {{domxref("MediaStreamTrack.applyConstraints()")}}
+- {{domxref("MediaDevices.getUserMedia()")}}
+- {{domxref("MediaDevices.getDisplayMedia()")}}
 - {{domxref("MediaDevices.getSupportedConstraints()")}}
 - {{domxref("MediaTrackSupportedConstraints")}}
 - {{domxref("MediaStreamTrack.getSettings()")}}
