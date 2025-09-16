@@ -5,12 +5,12 @@ page-type: guide
 sidebar: cssref
 ---
 
-This tool lets you mix two colors, `color-one` and `color-two`, using the [`color-mix()`](/en-US/docs/Web/CSS/color_value/color-mix) function. The source colors are shown on the outside, and the mixed color is shown in the middle. You can change colors by clicking on them and choosing a new color using the resulting color picker. You can also change the percentage of each color included in the mix using the sliders, and the color space using the drop-down menu.
+This tool lets you mix two colors in any color space using the {{cssxref("color-mix")}} function and copy the resulting color in any CSS color format. The two input colors, `color-one` and `color-two`, are shown on the outside, and the mixed color returned by the function is shown in the middle. Click on the outer swatches to select new colors to mix. Use the sliders to change the percentages of each input color included in the mix. Use the drop-down menu to change the color space of the function's output. CSS color values for the resulting color are selectable below the color widget.
 
 ```html hidden live-sample___color-mixer
 <div id="color-mixer">
   <h3>Color mixer</h3>
-  <p>Click on 'color-one' and 'color-two' to select colors.</p>
+  <p>Click on 'color-one' and 'color-two' to change the input colors.</p>
 
   <div>color-one</div>
   <div>mixed-color</div>
@@ -21,24 +21,24 @@ This tool lets you mix two colors, `color-one` and `color-two`, using the [`colo
       id="color-one"
       type="button"
       class="color-one"
-      aria-label="toggle color picker dialog"></button>
+      aria-label="Open the color one picker dialog"></button>
     <div id="mixed-color"></div>
     <button
       id="color-two"
       type="button"
       class="color-two"
-      aria-label="toggle color picker dialog"></button>
+      aria-label="Open the color two picker dialog"></button>
   </div>
   <div>
-    <label id="percentage-one-label" for="percentage-one">50%</label>
+    <label id="percentage-one-label" for="percentage-one" aria-label="color one percentage">50%</label>
     <input id="percentage-one" type="range" name="percent1" step="0.1" />
   </div>
   <div>
-    <label id="percentage-two-label" for="percentage-two">50%</label>
+    <label id="percentage-two-label" for="percentage-two" aria-label="color two percentage">50%</label>
     <input id="percentage-two" type="range" name="percent2" step="0.1" />
   </div>
 
-  <label for="color-space">color space: </label>
+  <label for="color-space">Color space: </label>
   <select id="color-space">
     <option value="srgb">sRGB</option>
     <option value="srgb-linear">sRGB-linear</option>
@@ -53,7 +53,7 @@ This tool lets you mix two colors, `color-one` and `color-two`, using the [`colo
   </select>
 
   <label id="interpolation-method-label" for="interpolation-method">
-    interpolation method:
+    Hue interpolation method:
   </label>
   <select id="interpolation-method">
     <option value="shorter hue" selected>shorter hue</option>
@@ -92,7 +92,7 @@ This tool lets you mix two colors, `color-one` and `color-two`, using the [`colo
 <hr />
 <table id="output-colors">
   <caption>
-    Following is the output color in various color spaces:
+    The output color in various CSS color syntaxes:
   </caption>
   <tbody>
     <tr id="hex">
@@ -322,10 +322,11 @@ dialog#picker-dialog table {
 
 #color-mixer > :nth-child(13) {
   grid-area: mix-output-text;
-  margin: 1rem auto auto 1rem;
-  font-weight: bold;
-  font-size: 0.8rem;
+  margin: 1rem 0;
+  text-align: center;
   height: 2.5rem;
+  background-color: #ededed;
+  font-family: monospace;
 }
 
 input[type="range"] {
@@ -333,7 +334,6 @@ input[type="range"] {
 }
 
 label {
-  font-family: monospace;
   margin: 1rem;
 }
 
@@ -345,17 +345,17 @@ label {
 table {
   width: 100%;
 }
-td,
-th {
-  padding: 3px 15px;
+caption {
+  font-family: sans-serif;
 }
 th {
+  padding: 5px 15px;
   background-color: #ededed;
 }
 td {
   background-color: #dedede;
   font-family: monospace;
-  padding: 0;
+  padding: 5px;
 }
 
 #output-colors th {
@@ -679,7 +679,6 @@ function updateColorMix() {
   mixedColorDiv.style.setProperty("background-color", colorMixFunction);
 
   const mixedColorText = window.getComputedStyle(mixedColorDiv).backgroundColor;
-  colorMixFunction += ` = ${mixedColorText}`;
   mixedOutputText.innerText = colorMixFunction;
   displayOutputColors(mixedColorText);
 }
