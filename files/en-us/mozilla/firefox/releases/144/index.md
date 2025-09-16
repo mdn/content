@@ -62,6 +62,9 @@ Firefox 144 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 - {{domxref("RTCDataChannel")}} instances are now [transferrable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects), and hence can be passed to [workers](/en-US/docs/Web/API/Worker). ([Firefox bug 1209163](https://bugzil.la/1209163)).
 - The [`closing` event](/en-US/docs/Web/API/RTCDataChannel/closing_event) and the `onclosing()` event handler are now supported on the {{domxref("RTCDataChannel")}} interface. ([Firefox bug 1611953](https://bugzil.la/1611953)).
+- The {{domxref("MediaDevices.getUserMedia()")}} method now allows the [`resizeMode`](/en-US/docs/Web/API/MediaTrackConstraints#resizemode) constraint to be specified as a parameter option, allowing developers to crop and downscale video captured from a camera to any resolution they choose. ([Firefox bug 1286945](https://bugzil.la/1286945)).
+
+  The constraint has the allowed values `"crop-and-scale"` or `"none"`. When `"crop-and-scale"` (the default) is set, the video stream provided by the camera may be cropped, have its resolution downscaled, and/or have its frame rate reduced by dropping frames, in order to achieve the shortest [fitness distance](https://w3c.github.io/mediacapture-main/#dfn-fitness-distance) to the requested constraints. This allows the camera to provide a stream with the desired constraints even if such a stream is not natively supported by the camera. For screen and window media `"crop-and-scale"` will downscale the resolution to achieve the shortest fitness distance, but will not crop the video or reduce the frame rate. If `none` is set then the video will not be cropped, downscaled, or have its frame rate reduced.
 
 <!-- #### Removals -->
 
