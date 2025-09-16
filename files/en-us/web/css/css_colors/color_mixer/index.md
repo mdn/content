@@ -36,7 +36,7 @@ This tool lets you mix two colors in any color space using the {{cssxref("color_
       aria-label="color one percentage"
       >50%</label
     >
-    <input id="percentage-one" type="range" name="percent1" step="0.1" />
+    <input id="percentage-one" type="range" name="percent1" step="0.01" />
   </div>
   <div>
     <label
@@ -45,7 +45,7 @@ This tool lets you mix two colors in any color space using the {{cssxref("color_
       aria-label="color two percentage"
       >50%</label
     >
-    <input id="percentage-two" type="range" name="percent2" step="0.1" />
+    <input id="percentage-two" type="range" name="percent2" step="0.01" />
   </div>
 
   <label for="color-space">Color space: </label>
@@ -92,7 +92,7 @@ This tool lets you mix two colors in any color space using the {{cssxref("color_
             value="1"
             min="0"
             max="1"
-            step="0.1" />
+            step="0.01" />
         </td>
       </tr>
     </table>
@@ -498,7 +498,7 @@ function rgbaToHEXAText(color) {
 }
 
 function rgbaToHSLA(color) {
-  let { r, g, b, a: alpha } = color;
+  let { r, g, b, alpha } = color;
   // Let's have r, g, b in the range [0, 1]
   r /= 255;
   g /= 255;
@@ -552,7 +552,7 @@ function rgbaToXYZD50(color) {
   b = rgbToLinear(b / 255) * 255;
 
   const xyz = multiplyByMatrix(LRGB_XYZ_D50_MATRIX, [r, g, b]);
-  return { x: xyz[0] / 255, y: xyz[1] / 255, z: xyz[2] / 255, a: alpha };
+  return { x: xyz[0] / 255, y: xyz[1] / 255, z: xyz[2] / 255, alpha };
 }
 
 function rgbaToXYZD50Text(color) {
@@ -570,7 +570,7 @@ function rgbaToXYZD65(color) {
   b = rgbToLinear(b / 255) * 255;
 
   const xyz = multiplyByMatrix(LRGB_XYZ_D65_MATRIX, [r, g, b]);
-  return { x: xyz[0] / 255, y: xyz[1] / 255, z: xyz[2] / 255, a: alpha };
+  return { x: xyz[0] / 255, y: xyz[1] / 255, z: xyz[2] / 255, alpha };
 }
 
 function rgbaToXYZD65Text(color) {
@@ -784,7 +784,7 @@ function init() {
     currentColor.g = parseInt(text.slice(3, 5), 16);
     currentColor.b = parseInt(text.slice(5, 7), 16);
     colorTextInput.value = rgbaToHEXAText(currentColor);
-    colorOpacitySlider.value = 1.0;
+    colorOpacitySlider.value = currentColor.alpha;
   });
 
   colorOpacitySlider.addEventListener("input", (e) => {
@@ -810,7 +810,6 @@ function init() {
 
   document.querySelectorAll("#output-colors button").forEach((button) => {
     button.addEventListener("click", (e) => {
-      // get parent element
       const text = e.target.nextElementSibling.innerText;
       navigator.clipboard.writeText(text);
       e.target.innerText = "Copied!";
