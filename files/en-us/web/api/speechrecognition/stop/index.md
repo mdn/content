@@ -10,7 +10,7 @@ browser-compat: api.SpeechRecognition.stop
 
 The **`stop()`** method of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) stops the speech
 recognition service from listening to incoming audio, and attempts to return a
-{{domxref("SpeechRecognitionResult")}} using the audio captured so far.
+{{domxref("SpeechRecognitionResult")}} using the results captured so far.
 
 ## Syntax
 
