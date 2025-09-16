@@ -5,7 +5,7 @@ page-type: guide
 sidebar: cssref
 ---
 
-This tool lets you mix two colors in any color space using the {{cssxref("color-mix")}} function and copy the resulting color in any CSS color format. The two input colors, `color-one` and `color-two`, are shown on the outside, and the mixed color returned by the function is shown in the middle. Click on the outer swatches to select new colors to mix. Use the sliders to change the percentages of each input color included in the mix. Use the drop-down menu to change the color space of the function's output. CSS color values for the resulting color are selectable below the color widget.
+This tool lets you mix two colors in any color space using the {{cssxref("color_value/color-mix")}} function and copy the resulting color in any CSS color format. The two input colors, `color-one` and `color-two`, are shown on the outside, and the mixed color returned by the function is shown in the middle. Click on the outer swatches to select new colors to mix. Use the sliders to change the percentages of each input color included in the mix. Use the drop-down menu to change the color space of the function's output. CSS color values for the resulting color are selectable below the color widget.
 
 ```html hidden live-sample___color-mixer
 <div id="color-mixer">
@@ -333,9 +333,9 @@ dialog#picker-dialog table {
 #color-mixer > :nth-child(13) {
   grid-area: mix-output-text;
   margin: 1rem 0;
+  padding: 1rem 0;
   text-align: center;
-  height: 2.5rem;
-  background-color: #ededed;
+  background-color: #dfdfde;
   font-family: monospace;
 }
 
@@ -688,9 +688,8 @@ function updateColorMix() {
 
   mixedColorDiv.style.setProperty("background-color", colorMixFunction);
 
-  const mixedColorText = window.getComputedStyle(mixedColorDiv).backgroundColor;
   mixedOutputText.innerText = colorMixFunction;
-  displayOutputColors(mixedColorText);
+  displayOutputColors(window.getComputedStyle(mixedColorDiv).backgroundColor);
 }
 
 function displayOutputColors(color) {
@@ -827,7 +826,7 @@ function init() {
 init();
 ```
 
-{{EmbedLiveSample("color-mixer", "", 750, "", "", "", "clipboard-write")}}
+{{EmbedLiveSample("color-mixer", "", 800, "", "", "", "clipboard-write")}}
 
 ## See also
 
