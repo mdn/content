@@ -826,7 +826,7 @@ function init() {
 init();
 ```
 
-{{EmbedLiveSample("color-mixer", "", 800, "", "", "", "clipboard-write")}}
+{{EmbedLiveSample("color-mixer", "", 850, "", "", "", "clipboard-write")}}
 
 ## See also
 
