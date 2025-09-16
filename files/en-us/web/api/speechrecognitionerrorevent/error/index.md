@@ -13,7 +13,7 @@ The **`error`** read-only property of the
 
 ## Value
 
-A string naming the type of error. The possible error types are:
+An enumerated value representing the type of error. The possible error types are:
 
 - `no-speech`
   - : No speech was detected.
