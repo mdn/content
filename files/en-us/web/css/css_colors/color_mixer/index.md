@@ -30,11 +30,21 @@ This tool lets you mix two colors in any color space using the {{cssxref("color-
       aria-label="Open the color two picker dialog"></button>
   </div>
   <div>
-    <label id="percentage-one-label" for="percentage-one" aria-label="color one percentage">50%</label>
+    <label
+      id="percentage-one-label"
+      for="percentage-one"
+      aria-label="color one percentage"
+      >50%</label
+    >
     <input id="percentage-one" type="range" name="percent1" step="0.1" />
   </div>
   <div>
-    <label id="percentage-two-label" for="percentage-two" aria-label="color two percentage">50%</label>
+    <label
+      id="percentage-two-label"
+      for="percentage-two"
+      aria-label="color two percentage"
+      >50%</label
+    >
     <input id="percentage-two" type="range" name="percent2" step="0.1" />
   </div>
 
