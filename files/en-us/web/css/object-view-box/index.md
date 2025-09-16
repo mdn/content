@@ -101,13 +101,13 @@ The intrinsic size is the original size of the content itself; the size the elem
 
 CSS has many sizing properties. When it comes to sizing replaced elements, the [`object-fit`](/en-US/docs/Web/CSS/object-fit) property enables us to control how replaced elements are rendered in with a defined box to some extent. For example, the following 1200 x 400 image is displayed using a {{htmlelement("img")}} element that is sized to 400 x 200. The image content is positioned using `object-fit: none;` declaration.
 
-![An image demonstrating extrinsic and intrinsic image sizes; the center 200 by 400  section of a much larger 400 by 1200 image is visible in the 200 by 400 view box that is the size of the element displaying the image.](extrinsic-intrinsic_sizes.jpg)
+![An image demonstrating extrinsic and intrinsic image sizes; the center 200 by 400 section of a much larger 400 by 1200 image is visible in the 200 by 400 view box that is the size of the element displaying the image.](extrinsic-intrinsic_sizes.jpg)
 
 The `object-view-box` property is more flexible than the `object-fit` property, and it is capable of doing more things. For example, it can be used to crop, zoom, and pan images. The property sets viewable area (view box), which defines what part of the content to show and how to fit it inside the extrinsic size. The view box value contains a rectangle and its position relative to the intrinsic area of the content, but _physical size of the view box remains equal to the extrinsic size_. The view box marks the area in the content to be displayed, and then it is transformed to match the extrinsic dimensions fitting into the HTML element. In the following image, we have the same leopard picture in a 400 x 150 image element. However, this time we have used `object-view-box` property to crop the leopard's eye portion of the picture.
 
 ![The leopard image cropped using object-view-box property, with a 400px by 150px viewbox displaying an unscaled section of the image](https://mdn.github.io/shared-assets/images/diagrams/css/object-view-box/object-view-box_xywh.jpg)
 
-As the rectangle defined by the `object-view-box` property and the rectangle viewbox of the `<img>` element are the same size, i.e., 400 x 150 pixels, the aspect ratios of both are the same and the replaced element is not scaled. 
+As the rectangle defined by the `object-view-box` property and the rectangle viewbox of the `<img>` element are the same size, i.e., 400 x 150 pixels, the aspect ratios of both are the same and the replaced element is not scaled.
 
 Maintaining the same aspect ratio prevents image distortion. With `object-view-box`, we can accomplish various image operations while having different extrinsic and view box sizes, without distorting the replaced element as it scales up and down.
 
