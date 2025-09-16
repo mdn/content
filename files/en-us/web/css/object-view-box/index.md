@@ -91,7 +91,7 @@ object-view-box: unset;
 
 ## Description
 
-The `object-view-box` property enabled defining a view box within {{glossary("replaced elements")}}, enabling displaying just a section of the replaced content, with that area being at it's intrinsic size, zoomed in, or panned out, while maintaining the content's intrinsic {{glossary("aspect ratio")}} .
+The `object-view-box` property can be used to define a view box within {{glossary("replaced elements")}}, enabling the display of just a section of the replaced content. The subsection of the element displayed can be presented zoomed in, panned out, or at original size, while maintaining the content's intrinsic {{glossary("aspect ratio")}}.
 
 The [box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) and [visual formatting model](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model) determine the size of rendered elements based on content, HTML attributes, CSS applied to elements and their ancestors, and the viewport size.
 
