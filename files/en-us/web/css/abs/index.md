@@ -11,8 +11,9 @@ The **`abs()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Va
 ## Syntax
 
 ```css
-/* property: abs(expression) */
-width: abs(20% - 100px);
+/* abs( <calc-sum> ) */
+abs(20% - 100px)
+abs(var(--gradientAngle))
 ```
 
 ### Parameters
