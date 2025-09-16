@@ -8,7 +8,7 @@ sidebar: cssref
 
 The **`vertical-viewport-segments`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) detects whether the device has a specified number of viewport segments laid out vertically (top to bottom).
 
-Related to the [Viewport segments API](/en-US/docs/Web/API/Viewport_segments_API), the `vertical-viewport-segments` feature can be used to create responsive designs that work well on multi-viewport devices — devices with a display that is divided into logically separate viewport segments, such as foldable or hinged devices.
+Related to the [Viewport Segments API](/en-US/docs/Web/API/Viewport_segments_API), the `vertical-viewport-segments` feature can be used to create responsive designs that work well on multi-viewport devices — devices with a display that is divided into logically separate viewport segments, such as foldable or hinged devices.
 
 ## Syntax
 
@@ -60,7 +60,7 @@ To calculate how much height the fold takes up in between the two, we subtract t
 }
 ```
 
-See our [Viewport segment API demo](https://mdn.github.io/dom-examples/viewport-segment-api/) for a full working demo ([source code](https://github.com/mdn/dom-examples/tree/main/viewport-segment-api)). Also check out [Using the Viewport segments API](/en-US/docs/Web/API/Viewport_segments_API/Using) for a full demo explanation.
+See our [Viewport segment API demo](https://mdn.github.io/dom-examples/viewport-segment-api/) for a full working demo ([source code](https://github.com/mdn/dom-examples/tree/main/viewport-segment-api)). Also check out [Using the Viewport Segments API](/en-US/docs/Web/API/Viewport_segments_API/Using) for a full demo explanation.
 
 ## Specifications
 
@@ -73,5 +73,5 @@ See our [Viewport segment API demo](https://mdn.github.io/dom-examples/viewport-
 ## See also
 
 - {{cssxref("@media/horizontal-viewport-segments", "horizontal-viewport-segments")}} `@media` feature
-- [Viewport segments API](/en-US/docs/Web/API/Viewport_segments_API)
-- [Origin trial for Foldable APIs](https://developer.chrome.com/blog/foldable-apis-ot) on developer.chrome.com (2024)
+- [Viewport Segments API](/en-US/docs/Web/API/Viewport_segments_API)
+- [Origin trial for Foldable APIs](https://developer.chrome.com/blog/foldable-apis-ot) via developer.chrome.com (2024)
