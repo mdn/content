@@ -86,6 +86,27 @@ Because the passkey is specific to the site's origin, if a passkey was created f
 
 This makes passkeys an effective defense against phishing. Passkeys are a much newer authentication method than passwords or OTP, and the tooling surrounding them is less mature. However, this is changing, and passkeys may eventually displace passwords as the most common authentication method on the web.
 
+### Personalized security indicator
+
+Another phishing defense, which isn't often used any more, is for the website to display a secret message or image to the user on its login page.
+
+1. After the user signs up, the user is asked to choose a secret message or image to be associated with their account.
+2. When the user signs in, they first enter their username.
+3. The login page then shows the secret associated with the account.
+4. If the secret is not what the user expected, then the user should not enter their password.
+
+The idea is that the attacker doesn't know what the secret is, so can't display it on the fake login page.
+
+In a variation of this technique, the website uses a persistent cookie to decide which secret to display, instead of the username.
+
+In practice there are a few difficulties with this technique:
+
+- It relies on the user paying attention to the security indicator: that is, it relies on user education. Experience has shown that as a general principle (that is, out of a controlled context such as a securely managed corporation) user education is not very effective in preventing phishing attacks.
+- Depending on the mechanism used to decide which secret to display, it may be vulnerable to the same manipulator in the middle attack as MFA.
+- The mechanism the server uses to decide which secret to display may be vulnerable: for example, it may be easier for an attacker to discover a username than to discover a password. With a username, an attacker could determine the secret and build a convincing fake site.
+
+As a result of these weaknesses, this defense is rarely used: both MFA and passkeys are considered to be stronger defenses.
+
 ### Defense summary checklist
 
 - Consider using passkeys to authenticate users.
