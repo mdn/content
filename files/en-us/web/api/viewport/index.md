@@ -15,8 +15,6 @@ The **`Viewport`** interface of the {{domxref("Viewport Segments API", "Viewport
 
 ## Instance properties
 
-_Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
-
 - {{domxref("Viewport.segments", "segments")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns an array of {{domxref("DOMRect")}} objects representing the position and dimensions of each viewport segment within the overall display.
 
