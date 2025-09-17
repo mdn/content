@@ -66,7 +66,7 @@ To get the correct language pack installed, there are two steps to follow.
 Both of the above steps are handled using the following code snippet:
 
 ```js
-document.body.addEventListener("click", () => {
+startBtn.addEventListener("click", () => {
   // check availability of target language
   SpeechRecognition.available({ langs: ["en-US"], processLocally: true }).then(
     (result) => {

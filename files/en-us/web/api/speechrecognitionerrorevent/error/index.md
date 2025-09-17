@@ -15,28 +15,30 @@ The **`error`** read-only property of the
 
 An enumerated value representing the type of error. The possible error types are:
 
-- `no-speech`
-  - : No speech was detected.
 - `aborted`
   - : Speech input was aborted in some manner, perhaps by some user-agent-specific
     behavior like a button the user can press to cancel speech input.
 - `audio-capture`
   - : Audio capture failed.
-- `network`
-  - : Network communication required for completing the recognition failed.
-- `not-allowed`
-  - : The user agent disallowed any speech input from occurring for reasons of security,
-    privacy or user preference.
-- `service-not-allowed`
-  - : The user agent disallowed the requested speech recognition service, either because
-    the user agent doesn't support it or because of reasons of security, privacy or user
-    preference. In this case it would allow another more suitable speech recognition
-    service to be used instead.
 - `bad-grammar`
   - : There was an error in the speech recognition grammar or semantic tags, or the chosen
     grammar format or semantic tag format was unsupported.
 - `language-not-supported`
   - : The user agent does not support the language specified in the value of [`lang`](/en-US/docs/Web/API/SpeechRecognition/lang) attribute of the {{domxref("SpeechRecognition")}} object. The set of supported languages is browser-dependent, and from frontend code there is no way to programmatically determine what languages a user's browser supports for speech recognition.
+- `network`
+  - : Network communication required for completing the recognition failed.
+- `no-speech`
+  - : No speech was detected.
+- `not-allowed`
+  - : The user agent disallowed any speech input from occurring for reasons of security,
+    privacy or user preference.
+- `phrases-not-supported`
+  - : The speech recognition model does not support {{domxref("SpeechRecognition.phrases", "phrases")}} for [contextual biasing](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#speech_recognition_contextual_biasing).
+- `service-not-allowed`
+  - : The user agent disallowed the requested speech recognition service, either because
+    the user agent doesn't support it or because of reasons of security, privacy or user
+    preference. In this case it would allow another more suitable speech recognition
+    service to be used instead.
 
 ## Examples
 

@@ -33,15 +33,11 @@ const recognition = new SpeechRecognition();
 
 const diagnostic = document.querySelector(".output");
 const bg = document.querySelector("html");
+const startBtn = document.querySelector("button");
 
-document.body.onclick = () => {
+startBtn.onclick = () => {
   recognition.start();
   console.log("Ready to receive a color command.");
-};
-
-abortBtn.onclick = () => {
-  recognition.abort();
-  console.log("Speech recognition aborted.");
 };
 
 recognition.onspeechend = () => {

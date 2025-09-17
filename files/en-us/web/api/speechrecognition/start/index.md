@@ -37,15 +37,16 @@ None ({{jsxref("undefined")}}).
 
 ### Recognizing speech from a microphone
 
-In our [Speech color changer](https://github.com/mdn/dom-examples/tree/main/web-speech-api/speech-color-changer) example, we create a new `SpeechRecognition` object instance using the {{domxref("SpeechRecognition.SpeechRecognition", "SpeechRecognition()")}} constructor. Later on, we create a `click` event handler on the `<body>` element so that when it is clicked, we start the speech recognition service and await audio input from the user's microphone:
+In our [Speech color changer](https://github.com/mdn/dom-examples/tree/main/web-speech-api/speech-color-changer) example, we create a new `SpeechRecognition` object instance using the {{domxref("SpeechRecognition.SpeechRecognition", "SpeechRecognition()")}} constructor. Later on, we create a `click` event handler on a `<button>` so that when it is clicked, we start the speech recognition service and await audio input from the user's microphone:
 
 ```js
 const recognition = new SpeechRecognition();
 
 const diagnostic = document.querySelector(".output");
 const bg = document.querySelector("html");
+const startBtn = document.querySelector("button");
 
-document.body.onclick = () => {
+startBtn.onclick = () => {
   recognition.start();
   console.log("Ready to receive a color command.");
 };

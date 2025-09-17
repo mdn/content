@@ -33,8 +33,10 @@ const recognition = new SpeechRecognition();
 
 const diagnostic = document.querySelector(".output");
 const bg = document.querySelector("html");
+const startBtn = document.querySelector(".start");
+const abortBtn = document.querySelector(".abort");
 
-document.body.onclick = () => {
+startBtn.onclick = () => {
   recognition.start();
   console.log("Ready to receive a color command.");
 };
