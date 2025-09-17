@@ -31,7 +31,7 @@ sidebar:
       - /Learn_web_development/Core/Styling_basics/Debugging_CSS
       - /Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension
       - /Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper
-      - /Learn_web_development/Core/Styling_basics/Cool-looking_box
+      - /Learn_web_development/Core/Styling_basics
   - link: /Learn_web_development/Core/Text_styling
     title: CSS_text_styling
     details: closed
@@ -191,7 +191,7 @@ sidebar:
   - title: CSSOM_view
     details: closed
     children:
-      - /Web/CSS/CSSOM_view/Coordinate_systems
+      - /Web/API/CSSOM_view_API/Coordinate_systems
       - /Web/CSS/CSSOM_view/Viewport_concepts
   - title: Display
     details: closed
@@ -349,10 +349,11 @@ sidebar:
   - type: section
     title: Tools
   - children:
-      - /Web/CSS/CSS_colors/Color_picker_tool
-      - /Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator
       - /Web/CSS/CSS_backgrounds_and_borders/Border-image_generator
       - /Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator
+      - /Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator
+      - /Web/CSS/CSS_colors/Color_mixer
+      - /Web/CSS/CSS_colors/Color_picker
       - /Web/CSS/CSS_shapes/Shape_generator
 l10n:
   de:

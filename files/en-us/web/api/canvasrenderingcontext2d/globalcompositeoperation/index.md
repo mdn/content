@@ -178,22 +178,20 @@ const height = 340;
 When the page loads, this code runs to set up and run the example:
 
 ```js
-window.onload = () => {
-  // lum in sRGB
-  const lum = {
-    r: 0.33,
-    g: 0.33,
-    b: 0.33,
-  };
-  // resize canvas
-  canvas1.width = width;
-  canvas1.height = height;
-  canvas2.width = width;
-  canvas2.height = height;
-  lightMix();
-  colorSphere();
-  runComposite();
+// lum in sRGB
+const lum = {
+  r: 0.33,
+  g: 0.33,
+  b: 0.33,
 };
+// resize canvas
+canvas1.width = width;
+canvas1.height = height;
+canvas2.width = width;
+canvas2.height = height;
+lightMix();
+colorSphere();
+runComposite();
 ```
 
 And this code, `runComposite()`, handles the bulk of the work, relying on a number of utility functions to do the hard parts.

@@ -934,7 +934,7 @@ input[type="text"]:disabled {
 }
 
 label:has(+ :disabled) {
-  color: #aaa;
+  color: #aaaaaa;
 }
 
 button {

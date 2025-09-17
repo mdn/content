@@ -1,13 +1,13 @@
 ---
 title: Firefox 144 for developers
-short-title: Firefox 144 (Nightly)
+short-title: Firefox 144 (Beta)
 slug: Mozilla/Firefox/Releases/144
 page-type: firefox-release-notes-active
 sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 144 that affect developers.
-Firefox 144 is the current [Nightly version of Firefox](https://www.firefox.com/en-US/channel/desktop/#nightly) and ships on [October 14, 2025](https://whattrainisitnow.com/release/?version=144).
+Firefox 144 is the current [Beta version of Firefox](https://www.firefox.com/en-US/channel/desktop/#beta) and ships on [October 14, 2025](https://whattrainisitnow.com/release/?version=144).
 
 > [!NOTE]
 > The release notes for this Firefox version are still a work in progress.
@@ -69,6 +69,8 @@ Firefox 144 is the current [Nightly version of Firefox](https://www.firefox.com/
 <!-- #### Marionette -->
 
 ## Changes for add-on developers
+
+- Adds the ability to determine the priority of CSS injected from the [`"content_scripts"` manifest key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts), in {{WebExtAPIRef("scripting.registerContentScripts()")}} with the `cssOrigin` property on {{WebExtAPIRef("scripting.RegisteredContentScript")}}, and the `cssOrigin` property in {{WebExtAPIRef("contentScripts.register")}}. By default, the `"author"` origin takes precedence. ([Firefox bug 1679997](https://bugzil.la/1679997))
 
 <!-- ### Removals -->
 

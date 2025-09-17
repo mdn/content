@@ -5176,9 +5176,9 @@
 /en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance	/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts
 /en-US/docs/Learn/CSS/Building_blocks/Cascade_layers	/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers
 /en-US/docs/Learn/CSS/Building_blocks/Cascade_tasks	/en-US/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Cascade
-/en-US/docs/Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper	/en-US/docs/Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper
+/en-US/docs/Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper	/en-US/docs/Learn_web_development/Core/Styling_basics
 /en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS	/en-US/docs/Learn_web_development/Core/Styling_basics/Debugging_CSS
-/en-US/docs/Learn/CSS/Building_blocks/Fundamental_CSS_comprehension	/en-US/docs/Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension
+/en-US/docs/Learn/CSS/Building_blocks/Fundamental_CSS_comprehension	/en-US/docs/Learn_web_development/Core/Styling_basics
 /en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions	/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions
 /en-US/docs/Learn/CSS/Building_blocks/Images_media_form_elements	/en-US/docs/Learn_web_development/Core/Styling_basics/Images_media_forms
 /en-US/docs/Learn/CSS/Building_blocks/Images_tasks	/en-US/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Images
@@ -5253,7 +5253,7 @@
 /en-US/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance	/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts
 /en-US/docs/Learn/CSS/Introduction_to_CSS/Combinators_and_multiple_selectors	/en-US/docs/Learn_web_development/Core/Styling_basics/Combinators
 /en-US/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS	/en-US/docs/Learn_web_development/Core/Styling_basics/Debugging_CSS
-/en-US/docs/Learn/CSS/Introduction_to_CSS/Fundamental_CSS_comprehension	/en-US/docs/Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension
+/en-US/docs/Learn/CSS/Introduction_to_CSS/Fundamental_CSS_comprehension	/en-US/docs/Learn_web_development/Core/Styling_basics
 /en-US/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works	/en-US/docs/Learn_web_development/Core/Styling_basics/What_is_CSS
 /en-US/docs/Learn/CSS/Introduction_to_CSS/Pseudo-classes_and_pseudo-elements	/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements
 /en-US/docs/Learn/CSS/Introduction_to_CSS/Selectors	/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors
@@ -5270,7 +5270,7 @@
 /en-US/docs/Learn/CSS/Styling_boxes/Backgrounds	/en-US/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders
 /en-US/docs/Learn/CSS/Styling_boxes/Borders	/en-US/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders
 /en-US/docs/Learn/CSS/Styling_boxes/Box_model_recap	/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model
-/en-US/docs/Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper	/en-US/docs/Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper
+/en-US/docs/Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper	/en-US/docs/Learn_web_development/Core/Styling_basics
 /en-US/docs/Learn/CSS/Styling_boxes/Styling_tables	/en-US/docs/Learn_web_development/Core/Styling_basics/Tables
 /en-US/docs/Learn/CSS/Styling_text	/en-US/docs/Learn_web_development/Core/Text_styling
 /en-US/docs/Learn/CSS/Styling_text/Fundamentals	/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals
@@ -5801,7 +5801,9 @@
 /en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_and_inheritance	/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts
 /en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_tasks	/en-US/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Cascade
 /en-US/docs/Learn_web_development/Core/Styling_basics/Cool-looking_box	/en-US/docs/Learn_web_development/Core/Styling_basics
-/en-US/docs/Learn_web_development/Core/Styling_basics/Creating_fancy_letterheaded_paper	/en-US/docs/Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper
+/en-US/docs/Learn_web_development/Core/Styling_basics/Creating_fancy_letterheaded_paper	/en-US/docs/Learn_web_development/Core/Styling_basics
+/en-US/docs/Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper	/en-US/docs/Learn_web_development/Core/Styling_basics
+/en-US/docs/Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension	/en-US/docs/Learn_web_development/Core/Styling_basics
 /en-US/docs/Learn_web_development/Core/Styling_basics/Images_media_form_elements	/en-US/docs/Learn_web_development/Core/Styling_basics/Images_media_forms
 /en-US/docs/Learn_web_development/Core/Styling_basics/Images_tasks	/en-US/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Images
 /en-US/docs/Learn_web_development/Core/Styling_basics/Overflow_Tasks	/en-US/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Overflow
@@ -12108,6 +12110,7 @@
 /en-US/docs/Web/CSS/:nth-last-col	/en-US/docs/Web/CSS/:nth-last-of-type
 /en-US/docs/Web/CSS/:nth-last-of-type()	/en-US/docs/Web/CSS/:nth-last-of-type
 /en-US/docs/Web/CSS/:nth-of-type()	/en-US/docs/Web/CSS/:nth-of-type
+/en-US/docs/Web/CSS/:target-within	/en-US/docs/Web/CSS
 /en-US/docs/Web/CSS/@-moz-document	/en-US/docs/Web/CSS/@document
 /en-US/docs/Web/CSS/@font-face/font-variant	/en-US/docs/Web/CSS/@font-face
 /en-US/docs/Web/CSS/@media/aural	/en-US/docs/Web/CSS/@media
@@ -12138,6 +12141,7 @@
 /en-US/docs/Web/CSS/Aural	/en-US/docs/Web/CSS/@media
 /en-US/docs/Web/CSS/Block_formatting_context	/en-US/docs/Web/CSS/CSS_display/Block_formatting_context
 /en-US/docs/Web/CSS/CSS3_Columns	/en-US/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts
+/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems	/en-US/docs/Web/API/CSSOM_view_API/Coordinate_systems
 /en-US/docs/Web/CSS/CSS_Background_and_Borders	/en-US/docs/Web/CSS/CSS_backgrounds_and_borders
 /en-US/docs/Web/CSS/CSS_Background_and_Borders/Border-image_generator	/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Border-image_generator
 /en-US/docs/Web/CSS/CSS_Background_and_Borders/Border-radius_generator	/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator
@@ -12241,7 +12245,6 @@
 /en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Types	/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types
 /en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions/Using_CSS_math_functions	/en-US/docs/Web/CSS/CSS_Values_and_Units/Using_CSS_math_functions
 /en-US/docs/Web/CSS/CSS_Variables	/en-US/docs/Web/CSS/CSS_cascading_variables
-/en-US/docs/Web/CSS/CSS_Viewport	/en-US/docs/Web/CSS
 /en-US/docs/Web/CSS/CSS_animations/Tips	/en-US/docs/Web/API/Web_Animations_API/Tips
 /en-US/docs/Web/CSS/CSS_cascade/actual_value	/en-US/docs/Web/CSS/CSS_cascade/Value_processing#actual_value
 /en-US/docs/Web/CSS/CSS_cascade/computed_value	/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value
@@ -12249,6 +12252,7 @@
 /en-US/docs/Web/CSS/CSS_cascade/specified_value	/en-US/docs/Web/CSS/CSS_cascade/Value_processing#specified_value
 /en-US/docs/Web/CSS/CSS_cascade/used_value	/en-US/docs/Web/CSS/CSS_cascade/Value_processing#used_value
 /en-US/docs/Web/CSS/CSS_charsets	/en-US/docs/Web/CSS/CSS_syntax
+/en-US/docs/Web/CSS/CSS_colors/Color_picker_tool	/en-US/docs/Web/CSS/CSS_colors/Color_picker
 /en-US/docs/Web/CSS/CSS_container_queries	/en-US/docs/Web/CSS/CSS_containment/Container_queries
 /en-US/docs/Web/CSS/CSS_descriptor_definition	/en-US/docs/Web/CSS
 /en-US/docs/Web/CSS/CSS_display/flow_layout/Block_and_inline_layout_in_normal_flow	/en-US/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow
@@ -12327,7 +12331,7 @@
 /en-US/docs/Web/CSS/Tools/Border-image_generator	/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Border-image_generator
 /en-US/docs/Web/CSS/Tools/Border-radius_generator	/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator
 /en-US/docs/Web/CSS/Tools/Box-shadow_generator	/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator
-/en-US/docs/Web/CSS/Tools/ColorPicker_Tool	/en-US/docs/Web/CSS/CSS_colors/Color_picker_tool
+/en-US/docs/Web/CSS/Tools/ColorPicker_Tool	/en-US/docs/Web/CSS/CSS_colors/Color_picker
 /en-US/docs/Web/CSS/Understanding_CSS_z-index	/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index
 /en-US/docs/Web/CSS/Understanding_CSS_z-index/Adding_z-index	/en-US/docs/Web/CSS/CSS_positioned_layout/Using_z-index
 /en-US/docs/Web/CSS/Understanding_CSS_z-index/Stacking_and_float	/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_floating_elements
@@ -15034,6 +15038,7 @@
 /en-US/docs/Web/Security/Securing_your_site	/en-US/docs/Web/Security/Practical_implementation_guides
 /en-US/docs/Web/Security/Securing_your_site/Configuring_server_MIME_types	/en-US/docs/Learn_web_development/Extensions/Server-side/Configuring_server_MIME_types
 /en-US/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion	/en-US/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion
+/en-US/docs/Web/Security/Subdomain_takeovers	/en-US/docs/Web/Security/Attacks/Subdomain_takeover
 /en-US/docs/Web/Security/Types_of_attacks	/en-US/docs/Web/Security/Attacks
 /en-US/docs/Web/Text_fragments	/en-US/docs/Web/URI/Reference/Fragment/Text_fragments
 /en-US/docs/Web/Tutorials	/en-US/docs/MDN/Tutorials

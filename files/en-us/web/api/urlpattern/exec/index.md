@@ -43,7 +43,7 @@ The object has the following properties:
 
 - `inputs`
   - : An array containing the inputs passed to the `exec()` function.
-    This will either contain a passed `input` object, an an absolute `url` string, or a relative `url` and a `baseURL`.
+    This will either contain a passed `input` object, an absolute `url` string, or a relative `url` and a `baseURL`.
 
 - `protocol`, `username`, `password`, `hostname`, `port`, `pathname`, `search`, and `hash`
   - : Named properties for each URL-part.

@@ -295,8 +295,8 @@ The table below summarizes which algorithms are suitable for which cryptographic
       <td></td>
       <td>✓</td>
       <td></td>
-      <td>✓</td>
       <td></td>
+      <td>✓</td>
     </tr>
     <tr>
       <th scope="row"><a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#pbkdf2">PBKDF2</a></th>
@@ -305,8 +305,8 @@ The table below summarizes which algorithms are suitable for which cryptographic
       <td></td>
       <td>✓</td>
       <td></td>
-      <td>✓</td>
       <td></td>
+      <td>✓</td>
     </tr>
   </tbody>
 </table>

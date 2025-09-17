@@ -47,7 +47,7 @@ p {
 }
 ```
 
-When filtering is complete, every element has zero or more [declared values](#declared-value) for every CSS property. These declared values are the starting point for the [cascading](#cascading) processing stage.
+When filtering is complete, every element has zero or more [declared values](#declared_value) for every CSS property. These declared values are the starting point for the [cascading](#cascading) processing stage.
 
 ### Cascading
 
@@ -122,7 +122,7 @@ There may be many other `font-size` declarations in our stylesheets, but only de
 
 The **cascaded value** is the declared value that wins the [cascade](#cascading). There is at most one cascaded value per property per element.
 
-From our declared values, author styles win over user agent styles. Within the same origin, higher specifity styles win over lower specificity styles. In this case, the cascaded value would be `font-size: 2em`, from the author origin with specificity `0-1-1`:
+From our declared values, author styles win over user agent styles. Within the same origin, higher specificity styles win over lower specificity styles. In this case, the cascaded value would be `font-size: 2em`, from the author origin with specificity `0-1-1`:
 
 ```css
 font-size: 2em;
