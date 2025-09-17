@@ -7,9 +7,9 @@ status:
 browser-compat: api.Viewport
 ---
 
-{{APIRef("Viewport segments API")}}{{SeeCompatTable}}
+{{APIRef("Viewport Segments API")}}{{SeeCompatTable}}
 
-The **`Viewport`** interface of the {{domxref("Viewport segments API", "Viewport segments API", "", "nocode")}} represents the device's {{glossary("viewport")}}.
+The **`Viewport`** interface of the {{domxref("Viewport Segments API", "Viewport Segments API", "", "nocode")}} represents the device's {{glossary("viewport")}}.
 
 {{InheritanceDiagram}}
 
@@ -30,6 +30,8 @@ _Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
 
 ## See also
 
-- [Viewport segments API](/en-US/docs/Web/API/Viewport_segments_API)
-- [Visual viewport API](/en-US/docs/Web/API/Visual_Viewport_API)
-- [Origin trial for Foldable APIs](https://developer.chrome.com/blog/foldable-apis-ot) on developer.chrome.com (2024)
+- [Using the Viewport Segments API](/en-US/docs/Web/API/Viewport_segments_API/Using)
+- [Viewport Segments API](/en-US/docs/Web/API/Viewport_segments_API)
+- [Visual Viewport API](/en-US/docs/Web/API/Visual_Viewport_API)
+- [Device Posture API](/en-US/docs/Web/API/Device_Posture_API)
+- [Origin trial for Foldable APIs](https://developer.chrome.com/blog/foldable-apis-ot) via developer.chrome.com (2024)

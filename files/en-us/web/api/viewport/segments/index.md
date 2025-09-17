@@ -8,7 +8,7 @@ status:
 browser-compat: api.Viewport.segments
 ---
 
-{{APIRef("Viewport segments API")}}{{SeeCompatTable}}
+{{APIRef("Viewport Segments API")}}{{SeeCompatTable}}
 
 The **`segments`** read-only property of the {{domxref("Viewport")}} interface returns an array of {{domxref("DOMRect")}} objects representing the position and dimensions of each viewport segment within the overall display.
 
@@ -42,6 +42,6 @@ segments.forEach((segment) =>
 
 ## See also
 
-- [Viewport segments API](/en-US/docs/Web/API/Viewport_segments_API)
+- [Viewport Segments API](/en-US/docs/Web/API/Viewport_segments_API)
 - [Visual viewport API](/en-US/docs/Web/API/Visual_Viewport_API)
-- [Origin trial for Foldable APIs](https://developer.chrome.com/blog/foldable-apis-ot) on developer.chrome.com (2024)
+- [Origin trial for Foldable APIs](https://developer.chrome.com/blog/foldable-apis-ot) via developer.chrome.com (2024)

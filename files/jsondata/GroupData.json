@@ -1857,8 +1857,8 @@
       "properties": [],
       "events": []
     },
-    "Viewport segments API": {
-      "overview": ["Viewport segments API"],
+    "Viewport Segments API": {
+      "overview": ["Viewport Segments API"],
       "guides": ["/docs/Web/API/Viewport_segments_API/Using"],
       "interfaces": ["Viewport"],
       "methods": ["Window.viewport"],
