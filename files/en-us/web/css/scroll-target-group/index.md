@@ -435,7 +435,7 @@ ol a:focus,
 
 #### Result
 
-Try navigating by activating the scroll marker links, scrolling, and pressing the scroll buttons. You'll see that in each case, the highlight moves between the links to match the section currently being shown.
+Try navigating in each of these three ways: by activating the scroll marker links, by horizontal scrolling, or by pressing the scroll buttons on either side. You'll see that in each case, the highlight moves between the links to match the section currently being shown.
 
 {{ EmbedLiveSample("carousel", "100%", 500) }}
 
