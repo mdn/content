@@ -201,7 +201,7 @@ Our markup has a series of {{htmlelement("section")}} elements containing conten
 
 #### CSS
 
-We've hidden most of the styling for brevity. Most pertinently to this example, we've set `scroll-target-group: auto` on the `<ol>` to turn it into a scroll marker group container and trigger the browser's algorithm for calculating which `<a>` element is the `:target-current` at any moment in time (that is, which link's target is currently in view). We then style the `:target-current` pseudo-class with a {{cssxref("color")}} of red so that it is clearly visible.
+We've hidden most of the styling for brevity. Most pertinent to this example, we've set `scroll-target-group: auto` on the `<ol>` to turn it into a scroll marker group container and trigger the browser's algorithm for calculating which `<a>` element is the `:target-current` at any given time (that is, which link's target is currently in view). We then style the `:target-current` pseudo-class with a `red` {{cssxref("color")}} so that it stands out clearly.
 
 ```css hidden live-sample___basic-usage
 body {
