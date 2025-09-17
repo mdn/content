@@ -471,7 +471,7 @@ init();
 
 {{EmbedLiveSample("color-picker", "", 700, "", "", "", "clipboard-write")}}
 
-The generated color values can be used anywhere the {{cssxref("color_value", "&lt;color&gt;")}} data type is supported in CSS.
+You can use the generated color value anywhere the {{cssxref("color_value", "&lt;color&gt;")}} data type is supported in CSS.
 
 ## See also
 
