@@ -55,7 +55,7 @@ Scroll marker group containers created using `scroll-target-group` behave in a v
 
 ### Basic `scroll-target-group` usage
 
-This example provides a basic page of content with a table of contents to link to different sections.
+This example shows a page with a table of contents linking to different sections.
 
 #### HTML
 
