@@ -34,7 +34,7 @@ function finished(e) {
   logMessage(`Finished script with ID: ${e.target.id}`);
 }
 
-document.addEventListener("afterscriptexecute", finished, true);
+document.addEventListener("afterscriptexecute", finished);
 // or
 document.onafterscriptexecute = finished;
 ```

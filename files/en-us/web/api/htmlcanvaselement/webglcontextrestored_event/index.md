@@ -45,13 +45,9 @@ With the help of the {{domxref("WEBGL_lose_context")}} extension, you can simula
 const canvas = document.getElementById("canvas");
 const gl = canvas.getContext("webgl");
 
-canvas.addEventListener(
-  "webglcontextrestored",
-  (e) => {
-    console.log(e);
-  },
-  false,
-);
+canvas.addEventListener("webglcontextrestored", (e) => {
+  console.log(e);
+});
 
 gl.getExtension("WEBGL_lose_context").restoreContext();
 

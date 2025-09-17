@@ -46,7 +46,7 @@ function onEnterPip() {
   console.log("Picture-in-Picture mode activated!");
 }
 
-video.addEventListener("enterpictureinpicture", onEnterPip, false);
+video.addEventListener("enterpictureinpicture", onEnterPip);
 
 button.onclick = () => {
   video.requestPictureInPicture();

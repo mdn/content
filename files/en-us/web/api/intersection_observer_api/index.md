@@ -757,15 +757,11 @@ let increasingColor = "rgb(40 40 190 / ratio)";
 let decreasingColor = "rgb(190 40 40 / ratio)";
 
 // Set things up
-window.addEventListener(
-  "load",
-  (event) => {
-    boxElement = document.querySelector("#box");
+window.addEventListener("load", (event) => {
+  boxElement = document.querySelector("#box");
 
-    createObserver();
-  },
-  false,
-);
+  createObserver();
+});
 ```
 
 The constants and variables we set up here are:

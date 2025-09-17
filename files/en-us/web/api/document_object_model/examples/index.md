@@ -193,7 +193,7 @@ function stopEvent(event) {
 }
 
 const elem = document.getElementById("tbl1");
-elem.addEventListener("click", stopEvent, false);
+elem.addEventListener("click", stopEvent);
 
 document.getElementById("t-daddy").addEventListener("click", () => {
   console.log("t-daddy clicked");
