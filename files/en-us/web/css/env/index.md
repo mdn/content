@@ -54,7 +54,7 @@ The syntax of the fallback is similar to the fallback syntax of the {{cssxref("v
 
 A property or descriptor containing a syntactically valid `env()` function is assumed to be valid at parse time, when the browser first reads and interprets the downloaded CSS text. It is only syntax-checked at compute time, after each `env()` function has been substituted with its browser-provided value (or the fallback value if the environment variable passed as the first parameter is not a recognized environment variable name). If the value is invalid and no fallback is provided, the property or descriptor containing the `env()` function is [invalid at computed-value time](/en-US/docs/Web/CSS/CSS_syntax/Error_handling#invalid_custom_properties).
 
-When a `env()` substitution is invalid, and an invalid fallback is included, or the fallback is omitted, the declaration is not ignored. Instead, the [initial](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value) or [inherited](/en-US/docs/Web/CSS/CSS_cascade/Inheritance) value of the property is used instead. The property is set to a new value, but it may not be the expected one.
+When an `env()` substitution is invalid, and an invalid fallback is included, or the fallback is omitted, the declaration is not ignored. Instead, the [initial](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value) or [inherited](/en-US/docs/Web/CSS/CSS_cascade/Inheritance) value of the property is used. The property is set to a new value, but it may not be the expected one.
 
 ### Use cases
 
@@ -106,7 +106,7 @@ We have a {{htmlelement("main")}} section containing a fake application and a {{
 
 #### CSS
 
-By using [CSS flexible box layout](), we create a footer that is only as tall as it needs to be, while the main section containing the application fills up the rest of the viewport:
+Using [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout), we create a footer that is only as tall as it needs to be, while the main section containing the application fills up the rest of the viewport:
 
 ```css
 body {
@@ -141,7 +141,7 @@ button {
 }
 ```
 
-We set [`position: sticky`]() to stick the footer to the bottom of the viewport. We then use the {{cssxref("padding")}} shorthand to add padding to the footer. We include the value of the `safe-area-inset-bottom` environment value to an initial `1em` of bottom padding. A larger black area will display on devices that have a positive value for this variable, ensuring the buttons in the footer are never obscured.
+We set [`position: sticky`](/en-US/docs/Web/CSS/position#sticky) to stick the footer to the bottom of the viewport. We then use the {{cssxref("padding")}} shorthand to add padding to the footer. We include the value of the `safe-area-inset-bottom` environment value to an initial `1em` of bottom padding. A larger black area will display on devices that have a positive value for this variable, ensuring the buttons in the footer are never obscured.
 
 ```css
 footer {
