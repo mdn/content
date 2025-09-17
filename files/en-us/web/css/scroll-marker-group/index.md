@@ -13,7 +13,7 @@ sidebar: cssref
 The **`scroll-marker-group`** [CSS](/en-US/docs/Web/CSS) property controls whether a {{glossary("scroll container")}} has a {{cssxref("::scroll-marker-group")}} pseudo-element generated and, if so, whether it should be placed immediately `before` _or_ `after` the container's contents in the default visual and tabbing order.
 
 > [!NOTE]
-> A scroll marker group container can be created from an existing element containing a set of {{htmlelement("a")}} elements using {{cssxref("scroll-target-group")}}.
+> To create a scroll marker group container from an existing element that contains a set of {{htmlelement("a")}} elements, use the {{cssxref("scroll-target-group")}} property.
 
 ## Syntax
 
