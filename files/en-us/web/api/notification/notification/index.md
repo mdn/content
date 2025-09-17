@@ -8,11 +8,13 @@ browser-compat: api.Notification.Notification
 
 {{APIRef("Web Notifications")}}{{securecontext_header}} {{AvailableInWorkers}}
 
-The **`Notification()`** constructor creates a new
-{{domxref("Notification")}} object instance, which represents a user notification.
+The **`Notification()`** constructor creates a new {{domxref("Notification")}} object instance, which represents a user notification.
 
-> [!NOTE]
-> Trying to create a notification inside the {{domxref("ServiceWorkerGlobalScope")}} using the `Notification()` constructor will throw a `TypeError`. Use {{domxref("ServiceWorkerRegistration.showNotification()")}} instead.
+Trying to create a notification inside the {{domxref("ServiceWorkerGlobalScope")}} using the `Notification()` constructor will throw a `TypeError`. Use {{domxref("ServiceWorkerRegistration.showNotification()")}} instead.
+
+You must first get permission before being able to display notifications, using {{domxref("Notification.requestPermission()")}}. The permission may not be grantable, for example if the page is in private browsing mode.
+
+This constructor throws a {{jsxref("TypeError")}} when called in nearly all mobile browsers and this is unlikely to change, because web pages on mobile devices almost never "run in the background", which is the main use case for notifications. Instead, you need to make the web page persistent, such as installing it to the home screen or registering a service worker and using {{domxref("ServiceWorkerRegistration.showNotification()")}}. See [Chrome issue](https://crbug.com/481856) for more information.
 
 ## Syntax
 
@@ -88,15 +90,6 @@ if (Notification.permission === "granted") {
 ## Browser compatibility
 
 {{Compat}}
-
-### Chrome notes
-
-Starting in Chrome 49, notifications don't work in incognito mode.
-
-Chrome for Android will throw a {{jsxref("TypeError")}} when calling the
-`Notification` constructor. It only supports creating
-notifications from a service worker. See the
-[Chromium issue tracker](https://crbug.com/481856) for more details.
 
 ## See also
 
