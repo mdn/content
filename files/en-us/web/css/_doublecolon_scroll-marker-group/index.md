@@ -22,7 +22,7 @@ The **`::scroll-marker-group`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-
 
 ## Description
 
-A scroll container's **`::scroll-marker-group`** pseudo-element represents a **scroll marker group container**. This is a container that automatically contains any {{cssxref("::scroll-marker")}} pseudo-elements generated on itself or its descendants. This allows them to be positioned and laid out as a group, and is typically used when creating a CSS carousel to provide a scroll position indicator. The individual scroll markers can be used to navigate to their associated content items.
+A scroll container's **`::scroll-marker-group`** pseudo-element represents a **scroll marker group container**. This is a container that automatically contains any {{cssxref("::scroll-marker")}} pseudo-elements generated on itself or its descendants. This allows them to be positioned and styled as a group. This pseudo-element is typically used when creating a CSS carousel to provide a scroll position indicator. The individual scroll markers can be used to navigate to their associated content items.
 
 The scroll container must have its {{cssxref("scroll-marker-group")}} property set to a non-`none` value for the `::scroll-marker-group` pseudo-element to be generated. The {{cssxref("scroll-marker-group")}} value determines where the scroll marker group container appears in the carousel's tab order and layout box order (but not DOM structure) — `before` puts it at the start, while `after` puts it at the end.
 
