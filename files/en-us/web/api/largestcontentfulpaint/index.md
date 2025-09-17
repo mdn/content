@@ -30,7 +30,7 @@ Additional key paint moments are provided by the {{domxref("PerformancePaintTimi
 
 {{InheritanceDiagram}}
 
-For accurate measurement cross-origin render time, set the {{httpheader("Timing-Allow-Origin")}} header.
+To get an accurate measurement of render time for cross-origin resources, set the {{httpheader("Timing-Allow-Origin")}} header.
 
 Developers should use `startTime` instead of `renderTime` as the LCP value, as the `renderTime` may not be set in some browsers.
 
