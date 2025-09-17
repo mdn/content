@@ -23,7 +23,7 @@ scroll-target-group: revert-layer;
 scroll-target-group: unset;
 ```
 
-The `scroll-target-group` property is specified as one of the keyword values listed below.
+The `scroll-target-group` property is specified as one of the following keyword values:
 
 ### Values
 
