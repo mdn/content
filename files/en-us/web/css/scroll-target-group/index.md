@@ -259,7 +259,7 @@ ol {
 
 Try navigating by activating the links and by scrolling. You'll see that in each case, the red highlight moves between the links to match the section currently being shown.
 
-{{ EmbedLiveSample("basic-usage", "100%", 500) }}
+{{EmbedLiveSample("basic-usage", "100%", 500)}}
 
 ### CSS carousel with `scroll-target-group` scroll markers
 
