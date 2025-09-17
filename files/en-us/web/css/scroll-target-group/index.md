@@ -34,7 +34,7 @@ The `scroll-target-group` property is specified as one of the following keyword 
 
 ## Description
 
-Setting `scroll-target-group: auto` on a container element denotes it as a **scroll marker group container**, which groups together a set of navigation items that allow you to navigate between elements on a page (such as carousel items or article sections) and are highlighted to indicate which element is currently in view.
+Setting `scroll-target-group: auto` on an element denotes it as a **scroll marker group container**. This groups together a set of navigation items that allow users to navigate between elements on a page (such as carousel items or article sections) and highlight which element is currently in view.
 
 Any {{htmlelement("a")}} elements with fragment identifiers inside the container are automatically set as scroll markers. The anchor element whose scroll target is currently in view can be styled via the {{cssxref(":target-current")}} pseudo-class.
 
