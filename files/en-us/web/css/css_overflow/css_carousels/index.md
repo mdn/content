@@ -522,7 +522,7 @@ ul::scroll-marker-group {
 
 ### Column scroll markers
 
-The CSS for creating the scroll markers in this demo is nearly identical to the [previous demo](#creating_scroll_markers), except that the selectors are different — the scroll markers are created on the generated `::column` pseudo-elements rather than the list items (note how we are including two pseudo-elements here, to generate scroll markers on the generated columns).
+The CSS for creating the scroll markers in this demo is nearly identical to the [previous demo](#creating_scroll_markers), except that the selectors are different — the scroll markers are created on the generated `::column` pseudo-elements rather than the list items. Note how we are including two pseudo-elements here to generate scroll markers on the generated columns.
 
 ```css live-sample___second-example
 ul::column::scroll-marker {
