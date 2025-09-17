@@ -26,6 +26,16 @@ Phishing attacks are not dependent on naive or inexperienced users: decades of e
 
 One thing that makes phishing challenging for a website to defend against is that the target site is not involved at all in the attack. It's entirely dependent on the user being tricked by the attacker. In this section we will discuss some practices that can help, but the only one that is really effective is using [passkeys](web_authentication_passkeys) instead of passwords.
 
+### DNS configuration
+
+Phishing emails often forge the sender address, to make the victim think that the email really came from the target website. Three {{glossary("DNS")}} records help email servers detect these forgeries, which helps ensure that phishing emails are marked as spam in the victim's email client, or are blocked entirely.
+
+- The [Security Policy Framework (SPF)](https://www.cloudflare.com/en-ca/learning/dns/dns-records/dns-spf-record/) record lists addresses that are allowed to send an email from the domain. A receiving email server extracts the domain name from the email's `Return-Path` header, and looks up the SPF record associated with that domain.
+- The [DomainKeys Identified Mail (DKIM)](https://www.cloudflare.com/en-ca/learning/dns/dns-records/dns-dkim-record/) record enables the sender to {{glossary("digital signature", "digitally sign")}} emails. The receiving server extracts the domain name from the signature, and uses it to look up looks up the DKIM record associated with that domain. The DKIM record incldues the public key used to verify the signature. The domain name in the signature must also be aligned with the domain name in the email's `From` header (this essentially means that the domain names must match or the value in ther `From` header must be a subdomain of the domain in the signature).
+- The [Domain-based Message Authentication Reporting and Conformance (DMARC)](https://www.cloudflare.com/en-ca/learning/dns/dns-records/dns-dmarc-record/) tells the recipient how to handle SPF and DKIM failures: whether to quarantine them as spam, reject them, or allow them.
+
+You should set these DNS records for your domains, to help email servers recognize forged messages.
+
 ### Password managers
 
 Password managers can provide some degree of protection against phishing attacks. They fulfill three main functions:
@@ -109,5 +119,6 @@ As a result of these weaknesses, this defense is rarely used: both MFA and passk
 
 ### Defense summary checklist
 
+- Set `SPF`, `DKIM`, and `DMARC` DNS records for your domains.
 - Consider using passkeys to authenticate users.
 - If you use passwords, consider using MFA, and ensure that password managers can work with your site.
