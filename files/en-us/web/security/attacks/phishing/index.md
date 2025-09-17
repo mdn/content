@@ -20,7 +20,7 @@ Phishing attacks sometimes use different techniques to contact their victims, su
 
 Some phishing attacks are highly indiscriminate, sending out many messages to potential victims, in the hope that some will be tricked. In _spear-phishing_ attacks, on the other hand, attackers research specific victims, gathering personal information about them to make the lure more convincing. For example, the email may purport to come from someone the victim knows, and even include private information.
 
-Phishing attacks are not dependent on naive or inexperienced users: decades of experience has shown that even highly experienced and knowlegeable users can be vulnerable to phishing attacks, especially when they are busy, tired, or distracted.
+Phishing attacks are not dependent on naive or inexperienced users: decades of experience has shown that even highly experienced and knowledgeable users can be vulnerable to phishing attacks, especially when they are busy, tired, or distracted.
 
 ## Defenses
 
