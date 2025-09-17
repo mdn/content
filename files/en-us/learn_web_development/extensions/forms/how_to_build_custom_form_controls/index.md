@@ -1236,13 +1236,9 @@ selectList.forEach((select) => {
     });
   });
 
-  select.addEventListener(
-    "click",
-    (event) => {
-      toggleOptList(select);
-    },
-    false,
-  );
+  select.addEventListener("click", (event) => {
+    toggleOptList(select);
+  });
 
   select.addEventListener("focus", (event) => {
     activeSelect(select, selectList);
