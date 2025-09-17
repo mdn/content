@@ -6,7 +6,7 @@ browser-compat: css.properties.scroll-target-group
 sidebar: cssref
 ---
 
-The **`scroll-target-group`** [CSS](/en-US/docs/Web/CSS) property specifies whether a container element is a scroll marker group container.
+The **`scroll-target-group`** [CSS](/en-US/docs/Web/CSS) property specifies whether an element is a scroll marker group container.
 
 ## Syntax
 
