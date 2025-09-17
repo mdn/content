@@ -107,7 +107,7 @@ window.addEventListener("load", () => {
   logElement = document.querySelector(".log");
   dialButton = document.querySelector("#dial");
 
-  dialButton.addEventListener("click", connectAndDial, false);
+  dialButton.addEventListener("click", connectAndDial);
 });
 ```
 
