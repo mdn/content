@@ -148,7 +148,7 @@ li::scroll-marker:target-current {
 
 {{EmbedLiveSample("carousel-example", "100%", "280px")}}
 
-### Positioning the scroll marker group container with anchor-positioning
+### Positioning the scroll marker group container with anchor positioning
 
 This example extends the previous one, demonstrating the use of [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) to position the scroll marker group container relative to the carousel.
 
