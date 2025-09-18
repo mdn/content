@@ -55,8 +55,8 @@ This tool lets you mix two colors in any color space using the {{cssxref("color_
     <option value="hsl">HSL</option>
     <option value="hwb">HWB</option>
     <option value="lch">LCH</option>
-    <option value="oklch">OkLCh</option>
     <option value="lab">Lab</option>
+    <option value="oklch">OkLCh</option>
     <option value="oklab" selected>Oklab</option>
     <option value="xyz-d50">XYZ-D50</option>
     <option value="xyz-d65">XYZ-D65</option>
@@ -105,48 +105,114 @@ This tool lets you mix two colors in any color space using the {{cssxref("color_
     The output color in various CSS color syntaxes:
   </caption>
   <tbody>
-    <tr id="hex">
-      <th>Hexadecimal</th>
-      <td><button id="copy-hex-button">Copy</button><span></span></td>
-    </tr>
     <tr id="rgb-function">
-      <th>RGB</th>
+      <th>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/rgb"
+          target="_blank"
+          >RGB</a
+        >
+      </th>
       <td><button id="copy-rgb-button">Copy</button><span></span></td>
     </tr>
-    <tr id="color-function">
-      <th>color(srgb)</th>
-      <td><button id="copy-color-button">Copy</button><span></span></td>
+    <tr id="hex">
+      <th>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/hex-color"
+          target="_blank"
+          >HEX</a
+        >
+      </th>
+      <td><button id="copy-hex-button">Copy</button><span></span></td>
     </tr>
     <tr id="hsl-function">
-      <th>HSL</th>
+      <th>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/hsl"
+          target="_blank"
+          >HSL</a
+        >
+      </th>
       <td><button id="copy-hsl-button">Copy</button><span></span></td>
     </tr>
     <tr id="hwb-function">
-      <th>HWB</th>
+      <th>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/hwb"
+          target="_blank"
+          >HWB</a
+        >
+      </th>
       <td><button id="copy-hwb-button">Copy</button><span></span></td>
     </tr>
+    <tr id="color-function">
+      <th>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/color"
+          target="_blank"
+          >color()</a
+        >
+      </th>
+      <td><button id="copy-color-button">Copy</button><span></span></td>
+    </tr>
     <tr id="lab-function">
-      <th>Lab</th>
+      <th>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/lab"
+          target="_blank"
+          >Lab</a
+        >
+      </th>
       <td><button id="copy-lab-button">Copy</button><span></span></td>
     </tr>
-    <tr id="oklab-function">
-      <th>Oklab</th>
-      <td><button id="copy-oklab-button">Copy</button><span></span></td>
-    </tr>
     <tr id="lch-function">
-      <th>LCH</th>
+      <th>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/lch"
+          target="_blank"
+          >LCH</a
+        >
+      </th>
       <td><button id="copy-lch-button">Copy</button><span></span></td>
     </tr>
+    <tr id="oklab-function">
+      <th>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/oklab"
+          target="_blank"
+          >Oklab</a
+        >
+      </th>
+      <td><button id="copy-oklab-button">Copy</button><span></span></td>
+    </tr>
     <tr id="oklch-function">
-      <th>OkLCh</th>
+      <th>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/oklch"
+          target="_blank"
+          >OkLCh</a
+        >
+      </th>
       <td><button id="copy-oklch-button">Copy</button><span></span></td>
     </tr>
     <tr id="xyz-d50-function">
-      <th>XYZ D50</th>
+      <th>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Glossary/Color_space#xyz-d50"
+          target="_blank"
+          >XYZ D50</a
+        >
+      </th>
       <td><button id="copy-xyz-d50-button">Copy</button><span></span></td>
     </tr>
     <tr id="xyz-d65-function">
-      <th>XYZ D65</th>
+      <th>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Glossary/Color_space#xyz"
+          target="_blank"
+          >XYZ D65</a
+        >
+      </th>
       <td><button id="copy-xyz-d65-button">Copy</button><span></span></td>
     </tr>
   </tbody>
@@ -459,7 +525,7 @@ function rgbToLinear(c) {
 }
 
 function intToHex(i) {
-  return Math.floor(i).toString(16).padStart(2, "0").toUpperCase();
+  return Math.floor(i).toString(16).padStart(2, "0").toLowerCase();
 }
 
 function rgbToHEXText(c) {
@@ -825,7 +891,7 @@ function init() {
 init();
 ```
 
-{{EmbedLiveSample("color-mixer", "", 850, "", "", "", "clipboard-write")}}
+{{EmbedLiveSample("color-mixer", "", 850, "", "", "", "clipboard-write", "allow-popups")}}
 
 ## See also
 

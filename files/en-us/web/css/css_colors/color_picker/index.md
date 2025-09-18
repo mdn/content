@@ -5,15 +5,9 @@ page-type: guide
 sidebar: cssref
 ---
 
-This tool lets you pick a color in the sRGB {{glossary("color space")}} and converts it between various CSS [color formats](/en-US/docs/Web/CSS/color_value), helping you understand the syntax of the following sRGB color notations:
+This tool lets you enter a color in any format. Or you can also pick a color in the sRGB {{glossary("color space")}}. Adjustment to the alpha channel is also possible. After providing the color, the tool converts the color in various CSS [color formats](/en-US/docs/Web/CSS/color_value), helping you understand the syntax.
 
-- {{cssxref("hex-color")}}, a _hexadecimal color representation_ of an [sRGB](/en-US/docs/Glossary/RGB) color using its primary color components (red, green, blue) written as hexadecimal numbers, as well as its transparency.
-- {{CSSxRef("color_value/rgb", "rgb()")}}, which defines a given color according to its red, green, blue and alpha (transparency) components.
-- {{CSSxRef("color_value/hsl", "hsl()")}}, which defines a given color according to its hue, saturation, lightness and alpha (transparency) components.
-- {{CSSxRef("color_value/hwb", "hwb()")}}, which defines a given color according to its hue, whiteness, blackness and alpha (transparency) components.
-- {{CSSxRef("color_value/color", "color()")}}, which defines a color in the given color space.
-
-When you select a color, it gets displayed in four standard CSS color formats. Control over the alpha channel is also supported.
+Click on a copy button to easily copy the corresponding color value.
 
 ```html hidden live-sample___color-picker
 <div>
@@ -23,63 +17,126 @@ When you select a color, it gets displayed in four standard CSS color formats. C
         Current color values:
       </caption>
       <tbody>
-        <tr id="hex">
-          <th>Hexadecimal</th>
-          <td><button id="copy-hex-button">Copy</button><span></span></td>
-        </tr>
         <tr id="rgb-function">
-          <th>RGB</th>
+          <th>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/rgb"
+              target="_blank"
+              >RGB</a
+            >
+          </th>
           <td><button id="copy-rgb-button">Copy</button><span></span></td>
         </tr>
-        <tr id="color-function">
-          <th>color(srgb)</th>
-          <td><button id="copy-color-button">Copy</button><span></span></td>
+        <tr id="hex">
+          <th>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/hex-color"
+              target="_blank"
+              >HEX</a
+            >
+          </th>
+          <td><button id="copy-hex-button">Copy</button><span></span></td>
         </tr>
         <tr id="hsl-function">
-          <th>HSL</th>
+          <th>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/hsl"
+              target="_blank"
+              >HSL</a
+            >
+          </th>
           <td><button id="copy-hsl-button">Copy</button><span></span></td>
         </tr>
         <tr id="hwb-function">
-          <th>HWB</th>
+          <th>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/hwb"
+              target="_blank"
+              >HWB</a
+            >
+          </th>
           <td><button id="copy-hwb-button">Copy</button><span></span></td>
         </tr>
+        <tr id="color-function">
+          <th>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/color"
+              target="_blank"
+              >color()</a
+            >
+          </th>
+          <td><button id="copy-color-button">Copy</button><span></span></td>
+        </tr>
         <tr id="lab-function">
-          <th>Lab</th>
+          <th>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/lab"
+              target="_blank"
+              >Lab</a
+            >
+          </th>
           <td><button id="copy-lab-button">Copy</button><span></span></td>
         </tr>
-        <tr id="oklab-function">
-          <th>Oklab</th>
-          <td><button id="copy-oklab-button">Copy</button><span></span></td>
-        </tr>
         <tr id="lch-function">
-          <th>LCH</th>
+          <th>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/lch"
+              target="_blank"
+              >LCH</a
+            >
+          </th>
           <td><button id="copy-lch-button">Copy</button><span></span></td>
         </tr>
+        <tr id="oklab-function">
+          <th>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/oklab"
+              target="_blank"
+              >Oklab</a
+            >
+          </th>
+          <td><button id="copy-oklab-button">Copy</button><span></span></td>
+        </tr>
         <tr id="oklch-function">
-          <th>OkLCh</th>
+          <th>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/oklch"
+              target="_blank"
+              >OkLCh</a
+            >
+          </th>
           <td><button id="copy-oklch-button">Copy</button><span></span></td>
         </tr>
         <tr id="xyz-d50-function">
-          <th>XYZ D50</th>
+          <th>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Glossary/Color_space#xyz-d50"
+              target="_blank"
+              >XYZ D50</a
+            >
+          </th>
           <td><button id="copy-xyz-d50-button">Copy</button><span></span></td>
         </tr>
         <tr id="xyz-d65-function">
-          <th>XYZ D65</th>
+          <th>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Glossary/Color_space#xyz"
+              target="_blank"
+              >XYZ D65</a
+            >
+          </th>
           <td><button id="copy-xyz-d65-button">Copy</button><span></span></td>
         </tr>
       </tbody>
     </table>
     <p>
-      <label for="color-text">Enter color:</label>
-      <input type="text" id="color-text" />
+      <label for="color-text">Enter a color value in any format:</label><br />
+      <input type="text" id="color-text" /><input
+        type="color"
+        id="color-input" />
     </p>
     <p>
-      <label for="color-input">Select a color: </label
-      ><input type="color" id="color-input" />
-    </p>
-    <p>
-      <label for="opacity-input">Select an opacity: </label
-      ><input
+      <label for="opacity-input">Adjust the opacity: </label><br /><input
         type="range"
         id="opacity-input"
         value="1"
@@ -149,7 +206,7 @@ input[type="text"] {
   width: 300px;
 }
 input[type="range"] {
-  width: 300px;
+  width: 350px;
 }
 
 label {
@@ -222,7 +279,7 @@ function rgbToLinear(c) {
 }
 
 function intToHex(i) {
-  return Math.floor(i).toString(16).padStart(2, "0").toUpperCase();
+  return Math.floor(i).toString(16).padStart(2, "0").toLowerCase();
 }
 
 function rgbToHEXText(c) {
@@ -469,7 +526,7 @@ function init() {
 init();
 ```
 
-{{EmbedLiveSample("color-picker", "", 700, "", "", "", "clipboard-write")}}
+{{EmbedLiveSample("color-picker", "", 700, "", "", "", "clipboard-write", "allow-popups")}}
 
 You can use the generated color value anywhere the {{cssxref("color_value", "&lt;color&gt;")}} data type is supported in CSS.
 
