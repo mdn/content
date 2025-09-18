@@ -637,7 +637,7 @@ There are a few things that have immediately come to attention. First is that in
 
 After the parent class is done with modifying `this`, the derived class can do its own logic. Here we added a private field called `#alpha`, and also provided a pair of getter/setters to interact with them.
 
-A derived class inherits all methods from its parent. For example, although `ColorWithAlpha` doesn't declare a `get red()` accessor itself, you can still access `red` because this behavior is specified by the parent class:
+A derived class inherits all methods from its parent. For example, consider the get red() accessor we added to the Color in the [Accessor fields](#accessor_fields) section, even though we haven't declared one in the ColorWithAlpha, we can still access red because this behavior is specified by the parent class:
 
 ```js
 const color = new ColorWithAlpha(255, 0, 0, 0.5);
