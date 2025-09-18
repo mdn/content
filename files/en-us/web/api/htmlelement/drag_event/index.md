@@ -103,14 +103,10 @@ source.addEventListener("dragend", (event) => {
 
 /* events fired on the drop targets */
 const target = document.getElementById("drop-target");
-target.addEventListener(
-  "dragover",
-  (event) => {
-    // prevent default to allow drop
-    event.preventDefault();
-  },
-  false,
-);
+target.addEventListener("dragover", (event) => {
+  // prevent default to allow drop
+  event.preventDefault();
+});
 
 target.addEventListener("dragenter", (event) => {
   // highlight potential drop target when the draggable element enters it
