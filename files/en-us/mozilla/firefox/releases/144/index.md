@@ -48,7 +48,7 @@ Firefox 144 is the current [Nightly version of Firefox](https://www.firefox.com/
 
 <!-- #### Removals -->
 
-<!-- ### APIs -->
+### APIs
 
 <!-- #### DOM -->
 
