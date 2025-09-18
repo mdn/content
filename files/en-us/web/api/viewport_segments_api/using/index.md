@@ -42,9 +42,6 @@ Two [media query](/en-US/docs/Web/CSS/CSS_media_queries) features are available 
 
 The {{cssxref("@media/horizontal-viewport-segments")}} media feature detects whether the device has a specified number of viewport segments laid out horizontally, whereas the {{cssxref("@media/vertical-viewport-segments")}} media feature detects whether the device has a specified number of viewport segments laid out vertically.
 
-> [!NOTE]
-> Current implementations do not support more than two foldable screens.
-
 ## Viewport segment environment variables
 
 To be fit a layout precisely into the available viewport segments, the [viewport segment environment variables](/en-US/docs/Web/CSS/env#viewport-segment-width) provide access to each segments dimensions and placement inside the overall viewport. The browser provides [environment variables] enabling access to each segment's width and height and the offset positions of its top, right, bottom, and left edges:
