@@ -51,11 +51,7 @@ const paymentRequest = new PaymentRequest(
   detailsForTransaction(),
 );
 
-paymentRequest.addEventListener(
-  "paymentmethodchange",
-  handlePaymentChange,
-  false,
-);
+paymentRequest.addEventListener("paymentmethodchange", handlePaymentChange);
 
 paymentRequest
   .show()

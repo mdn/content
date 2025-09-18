@@ -38,22 +38,14 @@ A generic {{domxref("Event")}}.
 In this example, event handlers are established for the `mute` and {{domxref("MediaStreamTrack.unmute_event", "unmute")}} events in order to detect when the media is not flowing from the source for the {{domxref("MediaStreamTrack")}} referenced by `musicTrack`.
 
 ```js
-musicTrack.addEventListener(
-  "mute",
-  (event) => {
-    const widget = document.getElementById("timeline-widget");
-    widget.style.backgroundColor = "#aaaaaa";
-  },
-  false,
-);
+musicTrack.addEventListener("mute", (event) => {
+  const widget = document.getElementById("timeline-widget");
+  widget.style.backgroundColor = "#aaaaaa";
+});
 
-musicTrack.addEventListener(
-  "unmute",
-  (event) => {
-    document.getElementById("timeline-widget").style.backgroundColor = "white";
-  },
-  false,
-);
+musicTrack.addEventListener("unmute", (event) => {
+  document.getElementById("timeline-widget").style.backgroundColor = "white";
+});
 ```
 
 With these event handlers in place, when the track `musicTrack` enters its {{domxref("MediaStreamTrack.muted", "muted")}} state, the element with the ID `timeline-widget` gets its background color changed to `#aaaaaa`. When the track exits the muted state—detected by the arrival of an `unmute` event—the background color is restored to white.

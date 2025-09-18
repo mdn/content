@@ -41,13 +41,9 @@ The following is a list of all `TextEvent` events:
 You can register a listener for text input events using {{DOMxRef("EventTarget.addEventListener()")}} as follows:
 
 ```js
-element.addEventListener(
-  "textInput",
-  (event) => {
-    // …
-  },
-  false,
-);
+element.addEventListener("textInput", (event) => {
+  // …
+});
 ```
 
 ### Simple logger showing input events

@@ -46,14 +46,10 @@ In this example, a handler for the `shippingaddresschange` event is set up to va
 ```js
 const paymentRequest = new PaymentRequest(methodData, details, options);
 
-paymentRequest.addEventListener(
-  "shippingaddresschange",
-  (event) => {
-    let detailsUpdate = checkAddress(paymentRequest.shippingAddress);
-    event.updateWith(detailsUpdate);
-  },
-  false,
-);
+paymentRequest.addEventListener("shippingaddresschange", (event) => {
+  let detailsUpdate = checkAddress(paymentRequest.shippingAddress);
+  event.updateWith(detailsUpdate);
+});
 
 const checkAddress = (theAddress) => {
   let detailsUpdate = {};
