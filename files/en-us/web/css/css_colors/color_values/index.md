@@ -110,21 +110,13 @@ const output = document.querySelector("output");
 
 box.style.borderColor = colorPicker.value;
 
-colorPicker.addEventListener(
-  "input",
-  (event) => {
-    box.style.borderColor = event.target.value;
-  },
-  false,
-);
+colorPicker.addEventListener("input", (event) => {
+  box.style.borderColor = event.target.value;
+});
 
-colorPicker.addEventListener(
-  "change",
-  (event) => {
-    output.innerText = `${colorPicker.value}`;
-  },
-  false,
-);
+colorPicker.addEventListener("change", (event) => {
+  output.innerText = `${colorPicker.value}`;
+});
 ```
 
 The {{domxref("Element/input_event", "input")}} event is sent every time the value of the element changes; that is, every time the user adjusts the color in the color picker. Each time this event arrives, we set the box's border color to match the color picker's current value.

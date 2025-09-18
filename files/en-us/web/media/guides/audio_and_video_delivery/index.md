@@ -288,15 +288,11 @@ function checkKey(e) {
   }
 }
 
-myControl.addEventListener(
-  "click",
-  () => {
-    switchState();
-  },
-  false,
-);
+myControl.addEventListener("click", () => {
+  switchState();
+});
 
-window.addEventListener("keypress", checkKey, false);
+window.addEventListener("keypress", checkKey);
 ```
 
 {{EmbedLiveSample("customizing your media player", "", 200)}}
@@ -452,15 +448,11 @@ Another way to show the fallback content of a video, when none of the sources co
 const v = document.querySelector("video");
 const sources = v.querySelectorAll("source");
 const lastSource = sources[sources.length - 1];
-lastSource.addEventListener(
-  "error",
-  (ev) => {
-    const d = document.createElement("div");
-    d.innerHTML = v.innerHTML;
-    v.parentNode.replaceChild(d, v);
-  },
-  false,
-);
+lastSource.addEventListener("error", (ev) => {
+  const d = document.createElement("div");
+  d.innerHTML = v.innerHTML;
+  v.parentNode.replaceChild(d, v);
+});
 ```
 
 ## Audio/Video JavaScript libraries
