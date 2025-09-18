@@ -1662,15 +1662,26 @@
     proxy-from-env "^1.1.0"
     tar "^7.4.3"
 
+"@mdn/rari@^0.1.49":
+  version "0.1.50"
+  resolved "https://registry.yarnpkg.com/@mdn/rari/-/rari-0.1.50.tgz#12a0b5c6afb47e1fcb3e3c85c9b6df18b13090f3"
+  integrity sha512-xsa/byHY2nlybwzEEt8C+QAOpHwqVbY7+yb9AzikOyAnRGghELDTUkcf5jpuNBLfrINKpqIfiwHwL961iE6Uwg==
+  dependencies:
+    extract-zip "^2.0.1"
+    https-proxy-agent "^7.0.2"
+    json-schema-to-typescript "^15.0.0"
+    proxy-from-env "^1.1.0"
+    tar "^7.4.3"
+
 "@mdn/watify@^1.1.3":
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/@mdn/watify/-/watify-1.1.3.tgz#83b728b7bc1f354d791eeeafd6762bc0183d903d"
   integrity sha512-yV69YDzMLY3iqF66yhs8QYTAjhWqOrehOfBSp5M+bDF0RM6Qjoodceomcdypr/wClvtPsXEald0d57t+CsE9XA==
 
-"@mdn/yari@5.1.1":
-  version "5.1.1"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-5.1.1.tgz#7230a3ce3485e458762eda9efa5c2b239c54879c"
-  integrity sha512-4xR5858NrjqyWq7mrieZvupPGZBlxYd6DFzr2Xbr9d7Gj/NIjookkf86reY5iFdaSg2ElWRjmel2ERFxAQSDMQ==
+"@mdn/yari@5.1.2":
+  version "5.1.2"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-5.1.2.tgz#127cfe5f2992d75259ec0a963490485b5c5a88c5"
+  integrity sha512-ifiC751+QWb3ND37rGf0F4irmPWJicMCM7OCwBpn5XeDZ4bf3nOczgY4v9vNjvso0HABsurLLes+wU+S5UtWbA==
   dependencies:
     "@caporal/core" "^2.0.7"
     "@codemirror/lang-css" "^6.3.1"
@@ -1686,7 +1697,7 @@
     "@mdn/bcd-utils-api" "^0.0.8"
     "@mdn/browser-compat-data" "^6.0.28"
     "@mdn/minimalist" "^2.0.4"
-    "@mdn/rari" "0.1.49"
+    "@mdn/rari" "^0.1.49"
     "@mdn/watify" "^1.1.3"
     "@mozilla/glean" "5.0.5"
     "@sentry/node" "^8.55.0"
