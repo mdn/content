@@ -23,7 +23,6 @@ A string containing one of the following values:
 - `"bt2020"`
   - : Color primaries used by BT.2020 and BT.2100.
 
-
 ## Examples
 
 In the following example, `colorSpace` is a `VideoColorSpace` object returned from {{domxref("VideoFrame")}}. The value of `primaries` is printed to the console.
