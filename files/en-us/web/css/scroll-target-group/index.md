@@ -12,8 +12,8 @@ The **`scroll-target-group`** [CSS](/en-US/docs/Web/CSS) property specifies whet
 
 ```css
 /* Keyword values */
-scroll-target-group: auto;
 scroll-target-group: none;
+scroll-target-group: auto;
 
 /* Global values */
 scroll-target-group: inherit;
@@ -27,10 +27,10 @@ The `scroll-target-group` property is specified as one of the following keyword 
 
 ### Values
 
-- `auto`
-  - : The element is a scroll marker group container.
 - `none`
   - : The element is not a scroll marker group container.
+- `auto`
+  - : The element is a scroll marker group container.
 
 ## Description
 
@@ -38,10 +38,12 @@ Setting `scroll-target-group: auto` on an element denotes it as a **scroll marke
 
 Any {{htmlelement("a")}} elements with fragment identifiers inside the container are automatically set as scroll markers. The anchor element whose scroll target is currently in view can be styled via the {{cssxref(":target-current")}} pseudo-class.
 
+### Differences between `scroll-target-group` and `scroll-marker-group`
+
 Scroll marker group containers created using `scroll-target-group` behave in a very similar way to those created using the {{cssxref("scroll-marker-group")}} property, with some differences:
 
-- `scroll-marker-group` automatically creates a set of pseudo-elements to represent the group container ({{cssxref("::scroll-marker-group")}}) and the markers (one or more instances of {{cssxref("::scroll-marker")}}). These automatically have the expected navigation associations with the {{glossary("scroll container")}} they are generated on. This is quicker to set up because you don't need to create markup for the container and markers. However, creating your own markup and setting it as a scroll marker group container via `scroll-target-group` gives you more control and flexibility.
-- A group container generated with `scroll-marker-group` automatically has [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role)/[`tab`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role) semantics applied to it, meaning that it behaves like a single item in the tab order, and users can move between scroll markers with the arrow keys. The markers specified using `scroll-target-group` behave like individual links by default, but you have the flexibility of providing alternative semantics and behavior.
+- With `scroll-target-group`, you have to create your own markup to represent the scroll marker group container and scroll markers, whereas `scroll-marker-group` automatically creates a set of pseudo-elements to represent the container ({{cssxref("::scroll-marker-group")}}) and the markers (one or more instances of {{cssxref("::scroll-marker")}}). These automatically have the expected navigation associations with the {{glossary("scroll container")}} they are generated on. Using `scroll-marker-group` provides a quicker setup because you don't need to use your own markup. However, creating your own markup and setting it as a scroll marker group container via `scroll-target-group` provides more control and flexibility.
+- Links denoted as scroll markers via `scroll-target-group` have no special navigation behavior, whereas markers generated via `scroll-marker-group` automatically have [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role)/[`tab`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role) semantics applied to them, meaning they behave like a single item in the tab order, and users can move between scroll markers with the arrow keys. Again, `scroll-marker-group` provides useful default behavior, but you have the flexibility of providing alternative semantics and behavior for markers specified using `scroll-target-group`.
 
 ## Formal definition
 
