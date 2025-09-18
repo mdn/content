@@ -137,9 +137,12 @@ We will add two more lines to package.json:
 Add these lines right below the `"name"`:
 
 ```json
-"name": "npm-experiment",
-"type": "module",
-"private": true,
+{
+  "name": "npm-experiment",
+  "type": "module",
+  "private": true
+  // …
+}
 ```
 
 So this is the config file that defines your package. This is good for now, so let's move on.
@@ -155,8 +158,10 @@ npm install --save-dev vite
 Once that's done _All The Things_, take another look at your package.json file. You'll see that npm has added a new field, `devDependencies`:
 
 ```json
-"devDependencies": {
-  "vite": "^5.2.13"
+{
+  "devDependencies": {
+    "vite": "^5.2.13"
+  }
 }
 ```
 
@@ -368,17 +373,21 @@ This would run a custom script for starting our project in "development mode". I
 If you tried running this in your test project from earlier it would (likely) claim the "dev script is missing". This is because npm, Yarn (and the like) are looking for a property called `dev` in the `scripts` property of your `package.json` file. So, let's create a custom shorthand command — "dev" — in our `package.json`. If you followed the tutorial from earlier, you should have a `package.json` file inside your npm-experiment directory. Open it up, and its `scripts` member should look like this:
 
 ```json
-"scripts": {
-  "test": "echo \"Error: no test specified\" && exit 1",
-},
+{
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
 ```
 
 Update it so that it looks like this, and save the file:
 
 ```json
-"scripts": {
-  "dev": "vite"
-},
+{
+  "scripts": {
+    "dev": "vite"
+  }
+}
 ```
 
 We've added a custom `dev` command as an npm script.
@@ -391,18 +400,20 @@ npm run dev
 
 This should start Vite and start the same local development server, as we saw before.
 
-Note that the script we defined here no longer need the `npx` prefix. This is because npm (and yarn) commands are clever in that they will search for command line tools that are locally installed to the project before trying to find them through conventional methods (where your computer will normally store and allow software to be found). You can [learn more about the technical intricacies of the `run` command](https://docs.npmjs.com/cli/run-script/), although in most cases your own scripts will run just fine.
+Note that the script we defined here no longer need the `npx` prefix. This is because npm (and yarn) commands are clever in that they will search for command line tools that are locally installed to the project before trying to find them through conventional methods (where your computer will normally store and allow software to be found). You can [learn more about the technical intricacies of the `run` command](https://docs.npmjs.com/cli/commands/npm-run/), although in most cases your own scripts will run just fine.
 
 This particular one may look unnecessary — `npm run dev` is more characters to type than `npx vite`, but it is a form of _abstraction_. It allows us to add more work to the `dev` command in the future, such as setting environment variables, generating temporary files, etc., without complicating the command.
 
 You can add all kinds of things to the `scripts` property that help you do your job. For example, here's what Vite recommends in the template:
 
 ```json
-"scripts": {
-  "dev": "vite",
-  "build": "vite build",
-  "preview": "vite preview"
-},
+{
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  }
+}
 ```
 
 ## Summary

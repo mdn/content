@@ -153,17 +153,15 @@ class LabeledCheckbox extends HTMLElement {
 customElements.define("labeled-checkbox", LabeledCheckbox);
 
 // Display a warning to unsupported browsers
-document.addEventListener("DOMContentLoaded", () => {
-  if (!LabeledCheckbox.isStateSyntaxSupported()) {
-    if (!document.getElementById("state-warning")) {
-      const warning = document.createElement("div");
-      warning.id = "state-warning";
-      warning.style.color = "red";
-      warning.textContent = "This feature is not supported by your browser.";
-      document.body.insertBefore(warning, document.body.firstChild);
-    }
+if (!LabeledCheckbox.isStateSyntaxSupported()) {
+  if (!document.getElementById("state-warning")) {
+    const warning = document.createElement("div");
+    warning.id = "state-warning";
+    warning.style.color = "red";
+    warning.textContent = "This feature is not supported by your browser.";
+    document.body.insertBefore(warning, document.body.firstChild);
   }
-});
+}
 ```
 
 In the `LabeledCheckbox` class:
@@ -270,17 +268,15 @@ class LabeledCheckbox extends HTMLElement {
 
 customElements.define("labeled-checkbox", LabeledCheckbox);
 
-document.addEventListener("DOMContentLoaded", () => {
-  if (!LabeledCheckbox.isStateSyntaxSupported()) {
-    if (!document.getElementById("state-warning")) {
-      const warning = document.createElement("div");
-      warning.id = "state-warning";
-      warning.style.color = "red";
-      warning.textContent = "This feature is not supported by your browser.";
-      document.body.insertBefore(warning, document.body.firstChild);
-    }
+if (!LabeledCheckbox.isStateSyntaxSupported()) {
+  if (!document.getElementById("state-warning")) {
+    const warning = document.createElement("div");
+    warning.id = "state-warning";
+    warning.style.color = "red";
+    warning.textContent = "This feature is not supported by your browser.";
+    document.body.insertBefore(warning, document.body.firstChild);
   }
-});
+}
 ```
 
 First, we define the custom element class `QuestionBox`, which extends `HTMLElement`.
@@ -339,12 +335,13 @@ The second block follows `::part()` with `:state()`, in order to match `checkbox
 ```css
 question-box::part(checkbox):state(checked) {
   color: green;
+  outline: dashed 1px green;
 }
 ```
 
 #### Result
 
-Click either of the checkboxes to see the color change from `red` to `green` when the `checked` state toggles.
+Click either of the checkboxes to see the color change from `red` to `green` with an outline when the `checked` state toggles.
 
 {{EmbedLiveSample("Question box", "100%", 100)}}
 
@@ -440,17 +437,15 @@ class ManyStateElement extends HTMLElement {
 
 customElements.define("many-state-element", ManyStateElement);
 
-document.addEventListener("DOMContentLoaded", () => {
-  if (!LabeledCheckbox.isStateSyntaxSupported()) {
-    if (!document.getElementById("state-warning")) {
-      const warning = document.createElement("div");
-      warning.id = "state-warning";
-      warning.style.color = "red";
-      warning.textContent = "This feature is not supported by your browser.";
-      document.body.insertBefore(warning, document.body.firstChild);
-    }
+if (!LabeledCheckbox.isStateSyntaxSupported()) {
+  if (!document.getElementById("state-warning")) {
+    const warning = document.createElement("div");
+    warning.id = "state-warning";
+    warning.style.color = "red";
+    warning.textContent = "This feature is not supported by your browser.";
+    document.body.insertBefore(warning, document.body.firstChild);
   }
-});
+}
 ```
 
 #### HTML

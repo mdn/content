@@ -18,7 +18,7 @@ Welcome to MDN **Learning Web Development** (also known as **Learn**). This reso
 - Designed to take you from "beginner" to "comfortable" (not "beginner" to "expert"), giving you enough knowledge to use more advanced resources (such as [the rest of MDN](/en-US/)).
 
 > [!NOTE]
-> Last updated: December 2024 ([see changelog](/en-US/docs/Learn_web_development/Changelog)).
+> Last updated: August 2025 ([see changelog](/en-US/docs/Learn_web_development/Changelog)).
 
 ## Don't know where to get started?
 

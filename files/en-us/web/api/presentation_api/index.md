@@ -135,7 +135,7 @@ const reconnect = () => {
   }
 };
 // On navigation of the controller, reconnect automatically.
-document.addEventListener("DOMContentLoaded", reconnect);
+reconnect();
 // Or allow manual reconnection.
 reconnectBtn.onclick = reconnect;
 ```

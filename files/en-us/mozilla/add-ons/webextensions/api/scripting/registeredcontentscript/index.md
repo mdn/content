@@ -16,6 +16,8 @@ Values of this type are objects. They contain these properties:
   - : `boolean`. If specified `true`, the script is inject into all frames, even if the frame is not the top-most frame in the tab. Each frame is checked independently for URL requirements; it does not inject into child frames if the URL requirements are not met. Defaults to `false`, meaning that only the top frame is matched.
 - `css` {{optional_inline}}
   - : `array` of `string`. The list of CSS files to be injected into matching pages. These are injected in the order they appear in this array.
+- `cssOrigin` {{optional_inline}}
+  - : `string`. The origin of the CSS to inject. This affects the cascading order (priority) of the injected stylesheets. Takes the values `"author"` and `"user"`. Defaults to `"author"`.
 - `excludeMatches` {{optional_inline}}
   - : `array` of `string`. Array of pages that this content script is excluded from but would otherwise be injected into.
 - `id`

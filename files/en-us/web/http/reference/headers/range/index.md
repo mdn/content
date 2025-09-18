@@ -135,6 +135,22 @@ Content-Type: image/jpeg
 Accept-Ranges: bytes
 ```
 
+### Fetching a range from a blob URL
+
+The [`blob:`](/en-US/docs/Web/URI/Reference/Schemes/blob) URL also supports range requests by using [`fetch()`](/en-US/docs/Web/API/Window/fetch).
+
+```js
+const blob = new Blob(["Hello, world!"], { type: "text/plain" });
+const url = URL.createObjectURL(blob);
+fetch(url, {
+  headers: {
+    Range: "bytes=7-11",
+  },
+})
+  .then((response) => response.text())
+  .then((text) => console.log(text)); // "world"
+```
+
 ## Specifications
 
 {{Specifications}}

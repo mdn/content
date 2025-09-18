@@ -1,10 +1,12 @@
 ---
 title: "Test your skills: HTML images"
-short-title: Images
+short-title: "Test: Images"
 slug: Learn_web_development/Core/Structuring_content/Test_your_skills/Images
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
+
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_images", "Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "Learn_web_development/Core/Structuring_content")}}
 
 The aim of this skill test is to help you assess whether you understand [images and how to embed them in HTML](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images).
 
@@ -140,3 +142,5 @@ Your finished HTML should look like this:
 ```
 
 </details>
+
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_images", "Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "Learn_web_development/Core/Structuring_content")}}

@@ -26,28 +26,30 @@ GroupData does exactly that: for each API, it lists the interfaces, properties, 
 An entry in `GroupData.json` has the following structure:
 
 ```json
-"Name_of_the_API": {
-  "overview": ["name_of_the_overview_page"],
-  "guides": [
-    "name_of_guide_1",
-    (…)
-  ],
-  "interfaces": [
-    "name_of_interface_1",
-    (…)
-  ],
-  "methods": [
-    "name_of_additional_method_1",
-    (…)
-  ],
-  "properties": [
-    "name_of_additional_property_1",
-    (…)
-  ],
-  "events": [
-    "name_of_additional_property_1",
-    (…)
-  ]
+{
+  "Name_of_the_API": {
+    "overview": ["name_of_the_overview_page"],
+    "guides": [
+      "name_of_guide_1"
+      // …
+    ],
+    "interfaces": [
+      "name_of_interface_1"
+      // …
+    ],
+    "methods": [
+      "name_of_additional_method_1"
+      // …
+    ],
+    "properties": [
+      "name_of_additional_property_1"
+      // …
+    ],
+    "events": [
+      "name_of_additional_property_1"
+      // …
+    ]
+  }
 }
 ```
 
@@ -101,9 +103,11 @@ This inheritance data is used when building API sidebars and by the `\{{Inherita
 An entry in `InterfaceData.json` has the following structure:
 
 ```json
-"Name_of_the_interface": {
-  "inh": "Name_of_the_parent_interface",
-  "impl": []
+{
+  "Name_of_the_interface": {
+    "inh": "Name_of_the_parent_interface",
+    "impl": []
+  }
 }
 ```
 

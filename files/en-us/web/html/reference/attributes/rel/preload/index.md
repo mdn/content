@@ -179,7 +179,7 @@ Let's look at an example (see it on GitHub — [source code](https://github.com/
 
 We include `media` attributes on our `<link>` elements so that a narrow image is preloaded if the user has a narrow viewport, and a wider image is loaded if they have a wide viewport. We use {{domxref("Window.matchMedia")}} / {{domxref("MediaQueryList")}} to do this (see [Testing media queries](/en-US/docs/Web/CSS/CSS_media_queries/Testing_media_queries) for more).
 
-This makes it much more likely that the font will be available for the page render, cutting down on FOUT (flash of unstyled text).
+This same technique also applies to other resource types. For example, when used with fonts, preloading makes it more likely the font will be available at render time, reducing the chance of a flash of unstyled text (FOUT).
 
 This doesn't have to be limited to images, or even files of the same type — think big! You could perhaps preload and display a simplified SVG diagram if the user is on a narrow screen where bandwidth and CPU is potentially more limited, or preload a complex chunk of JavaScript then use it to render an interactive 3D model if the user's resources are more plentiful.
 

@@ -172,7 +172,7 @@ Here's the steps you should follow to get this working:
 
 You might be wondering why we haven't included the parentheses after the function name. This is because we don't want to call the function immediately — only after the button has been clicked. If you try changing the line to
 
-```js
+```js example-bad
 btn.addEventListener("click", displayMessage());
 ```
 

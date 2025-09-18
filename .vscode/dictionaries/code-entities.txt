@@ -62,6 +62,7 @@ associationlistitemvalue
 attributionsrc
 audiocontext
 authorid
+autospace
 backdrag
 backgroundfetchabort
 backgroundfetchclick
@@ -140,6 +141,8 @@ Crsel
 cryptomining
 csiso
 csrfmiddlewaretoken
+css.selectors.headingfunction
+css.selectors.hostfunction
 CSS_RGBCOLOR
 csslint
 cssref
@@ -381,6 +384,7 @@ longtask
 lowdelay
 lowp
 lquote
+LRGB
 ltrh
 makemigrations
 mathbb
@@ -714,6 +718,7 @@ strncpy
 SUBDOCUMENT
 sund
 sunu
+superellipse
 superspeed
 SVGMPathElement
 svgref
@@ -731,7 +736,6 @@ telu
 testingbot-api
 texlive
 texlive-fontsextra
-text-autospace
 textformatupdate
 textupdate
 TEXTUREI

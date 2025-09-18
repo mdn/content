@@ -1,8 +1,8 @@
 ---
 title: Firefox 142 for developers
-short-title: Firefox 142 (Stable)
+short-title: Firefox 142
 slug: Mozilla/Firefox/Releases/142
-page-type: firefox-release-notes-active
+page-type: firefox-release-notes
 sidebar: firefox
 ---
 
@@ -19,7 +19,9 @@ Firefox 142 was released on [August 19, 2025](https://whattrainisitnow.com/relea
 
 ### CSS
 
-No notable changes.
+- The [`&` selector](/en-US/docs/Web/CSS/Nesting_selector) inside {{cssxref("@scope")}} no longer inherits the [specificity of the scope start selector](/en-US/docs/Web/CSS/@scope#specificity_in_scope).
+  This makes `&` selectors in `@scope` consistent with [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting), avoiding unexpected specificity differences (see [CSS nesting and specificity](/en-US/docs/Web/CSS/CSS_nesting/Nesting_and_specificity)).
+  ([Firefox bug 1975531](https://bugzil.la/1975531)).
 
 ### JavaScript
 
@@ -73,6 +75,7 @@ No notable changes.
 
 - Cookies created with {{WebExtAPIRef("cookies.set()")}} in Nightly are now validated, and invalid cookies are rejected. The implementation in Nightly is to enable monitoring for any issues. The intention is to enforce validation in all channels in a future release. ([Firefox bug 1976197](https://bugzil.la/1976197))
 - Adds the {{WebExtAPIRef("browserAction.onUserSettingsChanged")}} and {{WebExtAPIRef("action.onUserSettingsChanged")}} events that listen for changes in the user-specified settings that affect an extension's action. ([Firefox bug 1828220](https://bugzil.la/1828220))
+- Adds {{WebExtAPIRef("browserSettings.verticalTabs")}}, which enables extensions to control whether the browser displays the tab bar horizontally or vertically. ([Firefox bug 1946600](https://bugzil.la/1946600))
 
 ## Experimental web features
 
