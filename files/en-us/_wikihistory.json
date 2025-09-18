@@ -10873,6 +10873,16 @@
       "Mateen"
     ]
   },
+  "Learn_web_development/Howto/Web_mechanics/File_browser_bugs": {
+    "modified": "2019-03-24T00:12:10.850Z",
+    "contributors": [
+      "chrisdavidmills",
+      "carlkibler",
+      "bledwards1",
+      "Sheppy",
+      "Aaronlev"
+    ]
+  },
   "Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work": {
     "modified": "2020-07-16T22:35:35.495Z",
     "contributors": [
@@ -70982,16 +70992,6 @@
       "anastasia",
       "hhillen",
       "SteveLee"
-    ]
-  },
-  "Web/Accessibility/ARIA/How_to/File_ARIA-related_bugs": {
-    "modified": "2019-03-24T00:12:10.850Z",
-    "contributors": [
-      "chrisdavidmills",
-      "carlkibler",
-      "bledwards1",
-      "Sheppy",
-      "Aaronlev"
     ]
   },
   "Web/Accessibility/ARIA/Reference/Roles": {
