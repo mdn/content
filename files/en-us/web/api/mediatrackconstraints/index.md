@@ -11,7 +11,7 @@ The **`MediaTrackConstraints`** dictionary is used to describe a set of media ca
 
 A constraints dictionary is passed into the {{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}} method of the {{domxref("MediaStreamTrack")}} interface to allow a script to establish a set of exact (required) values or ranges and/or preferred values or ranges of values for the track.
 
- The most recently-requested set of custom constraints can be retrieved by calling {{domxref("MediaStreamTrack.getConstraints", "getConstraints()")}}.
+The most recently-requested set of custom constraints can be retrieved by calling {{domxref("MediaStreamTrack.getConstraints", "getConstraints()")}}.
 
 Objects of this type may also be passed to:
 
@@ -165,13 +165,15 @@ For example, because {{Glossary("RTP")}} doesn't provide some of these values du
 - {{domxref("MediaTrackConstraints.width", "width")}}
   - : A [`ConstrainULong`](#constrainulong) specifying the video width or range of widths which are acceptable and/or required.
 - `resizeMode`
-  - : A [`ConstrainDOMString`](#constraindomstring) object specifying a mode or an array of modes the UA can use to derive the resolution of a video track.
+  - : A [`ConstrainDOMString`](#constraindomstring) object specifying a mode or an array of modes the UA can use to derive the resolution and frame rate of a video track.
     Allowed values are:
     - `crop-and-scale`
       - : The user agent can use cropping and downscaling of resolution or frame rate on the raw output from the hardware/OS, in order to satisfy other constraints.
         This constraint allows developers to get a downscaled video even if the particular format indicated by their constraints is not natively supported by the hardware.
     - `none`
       - : The user agent uses the resolution provided by the underlying hardware, such as a camera or its driver, or the OS.
+
+    If `resizeMode` is unspecified the browser will choose a resolution based on a [fitness distance](https://w3c.github.io/mediacapture-main/#dfn-fitness-distance) that considers the specified constraints and _both_ of the allowed values.
 
 ### Instance properties of shared screen tracks
 
