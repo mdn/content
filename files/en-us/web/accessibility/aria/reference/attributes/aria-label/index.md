@@ -84,8 +84,9 @@ Used in almost all roles **except** roles that cannot be provided an accessible 
 
 The `aria-label` attribute is **NOT** supported in:
 
-- [`code`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+
 - [`caption`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`code`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
 - [`definition`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
 - [`deletion`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
 - [`emphasis`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
@@ -96,8 +97,8 @@ The `aria-label` attribute is **NOT** supported in:
 - [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) / [`none`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/none_role)
 - [`strong`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
 - [`subscript`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
-- [`superscript`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
 - [`suggestion`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/suggestion_role)
+- [`superscript`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
 - [`term`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/term_role)
 - [`time`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
 
