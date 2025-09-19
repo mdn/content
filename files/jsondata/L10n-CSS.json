@@ -118,5 +118,17 @@
     "ru": "Псевдоэлементы",
     "zh-CN": "伪元素",
     "zh-TW": "虛擬元素"
+  },
+  "formal_syntax_copy": {
+    "de": "Formale Syntax folgt der offiziellen Spezifikation unabhängig von Browserimplementierungen.",
+    "en-US": "Formal syntax follows the official specification regardless of browser implementations.",
+    "es": "La sintaxis formal sigue la especificación oficial independientemente de las implementaciones del navegador.",
+    "fr": "La syntaxe formelle suit la spécification officielle indépendamment des implémentations du navigateur.",
+    "ja": "正式な構文は、ブラウザーの実装に関係なく、公式仕様に従います。",
+    "ko": "정식 구문은 브라우저 구현과 관계없이 공식 사양을 따릅니다.",
+    "pt-BR": "A sintaxe formal segue a especificação oficial independentemente das implementações do navegador.",
+    "ru": "Формальный синтаксис следует официальной спецификации независимо от реализаций браузеров.",
+    "zh-CN": "形式语法遵循官方规范，与浏览器实现无关。",
+    "zh-TW": "正式語法遵循官方規範，與瀏覽器實現無關。"
   }
 }
