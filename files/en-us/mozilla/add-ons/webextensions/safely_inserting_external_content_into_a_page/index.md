@@ -20,7 +20,7 @@ When working with strings, there are a couple of recommended options to safely a
 
 ### DOM APIs for node creation and safe text insertion
 
-For a lightweight and secure method of inserting strings, use native DOM APIs: Create elements with [`document.createElement`](/en-US/docs/Web/API/Document/createElement) and set only validated, non-executable attributes using [`Element.setAttribute`](/en-US/docs/Web/API/Element/setAttribute). To add text content, use the [`textContent`](/en-US/docs/Web/API/Node/textContent) property or insert a text node with [`document.createTextNode()`](/en-US/docs/Web/API/Document/createTextNode). A safe approach is to create the nodes separately and assign their content using textContent.
+For a lightweight and secure method of inserting strings, use native DOM APIs: Create elements with [`document.createElement`](/en-US/docs/Web/API/Document/createElement) and set only validated, non-executable attributes using [`Element.setAttribute`](/en-US/docs/Web/API/Element/setAttribute). To add text content, use the [`textContent`](/en-US/docs/Web/API/Node/textContent) property. A safe approach is to create the nodes separately and assign their content using `textContent`:
 
 ```js example-good
 let data = JSON.parse(responseText);
