@@ -22,11 +22,39 @@ In the following sections we'll explore some concrete examples of this attack.
 
 ### URL tampering
 
-A common type of IDOR attack involves manipulation of direct object references in the URL. The "1234" in the following URLs is the user's record in the database (primary key). If an attacker changes this number to any other number (say "123") and gains access to another user's information, your application is vulnerable to Insecure Direct Object Reference.
+A common type of IDOR attack involves manipulation of direct object references in the URL. The "1234" in the following URLs is the user's record in the database (primary key). If an attacker changes this number to any other number (say "1235") and gains access to another user's information, your application is vulnerable to Insecure Direct Object Reference.
 
 ```http
-https://example.org/employee/id/1234
-https://example.org/change_password.php?userid=1234
+# The attacker is logged in as user 1234
+https://example.org/user/id/1234
+
+# The attacker changes the id in the URL and gains access to a different user
+https://example.org/user/id/1235
+```
+
+The problem lies within the server application that doesn't verify which URL is permitted by which user:
+
+```js example-bad
+app.get("/user/id/:id", (req, res) => {
+  const user = db.users.find(req.params.id);
+  if (req.isAuthenticated) {
+    // Authentication is not enough!
+    res.render("user", { user });
+  }
+});
+```
+
+Instead, you should implement rules to authorize access to user information. For example, only render the user page if the logged-in user id matches with the requested user id. Otherwise return a HTTP {{HTTPStatus("401")}} `Unauthorized` response.
+
+```js
+app.get("/user/id/:id", (req, res) => {
+  const user = db.users.find(req.params.id);
+  if (req.isAuthenticated && req.session.userId === req.params.id) {
+    res.render("user", { user });
+  } else {
+    return res.status(401).json({ message: "Unauthorized" });
+  }
+});
 ```
 
 ### Document manipulation
@@ -41,7 +69,7 @@ For example, maybe your application doesn't provide the user's ID in the URL but
 </form>
 ```
 
-If no server-side access control is performed, the attacker can manipulate the `user_id` value in the hidden `<input>` element to a different user ID and might be able to modify the profile without authorization.
+If insufficient server-side access control is performed, the attacker can manipulate the `user_id` value in the hidden `<input>` element to a different user ID and might be able to modify the profile without authorization.
 
 ### Cookie or session data manipulation
 
@@ -74,8 +102,7 @@ Any predictable references, such as sequential numbers or any other guessable st
 
 ## Defense summary checklist
 
-- Enforce server-side access control on every request.
-- Verify that the authenticated user is authorized to access or modify the object.
+- Always verify that the authenticated user is authorized to access or modify the object.
 - Never trust identifiers from the client (URLs, form fields, cookies).
 - Avoid exposing predictable, sequential, or sensitive object identifiers (like user IDs or email addresses).
 - Prefer indirect references or opaque tokens where possible.
