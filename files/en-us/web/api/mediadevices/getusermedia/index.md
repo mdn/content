@@ -214,7 +214,7 @@ getUserMedia({
 
 The browser will try to honor the constraints, and will return a matching track if supported by the underlying hardware.
 If not supported, the browser may attempt to crop and downscale a higher resolution stream from the underlying hardware in order to match the constraint.
-This will commonly be the default behavior, but can be forced by setting the [`resizeMode`](/en-US/docs/Web/API/MediaTrackConstraints#resizemode) constraint to `crop-and-scale` (or disabled with `none`):
+This will commonly be the default behavior, but can be forced by setting the [`resizeMode`](/en-US/docs/Web/API/MediaTrackConstraints#resizemode) constraint to `crop-and-scale` (or disabled by setting it to `none`):
 
 ```js
 getUserMedia({
