@@ -68,6 +68,9 @@ You can also assign to this property a string of the form `"key=value"`, specify
 > [!NOTE]
 > The `document.cookie` property is an [accessor property](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#description) with native _setter_ and _getter_ functions, and consequently is _not_ a [data property](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#description) with a value: what you write is not the same as what you read, everything is always mediated by the JavaScript interpreter.
 
+> [!NOTE]
+> Using the synchronous `document.cookie` API can be a source of performance issues. The [Cookie Store API](/en-US/docs/Web/API/Cookie_Store_API) can be used instead, as it provides an asynchronous way to handle cookies to avoid performance issues. See the [Cookie Store API introduction](/en-US/docs/Web/API/Cookie_Store_API) for more information.
+
 ## Examples
 
 ### Example 1: Simple usage
