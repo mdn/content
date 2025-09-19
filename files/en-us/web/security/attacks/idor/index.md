@@ -11,14 +11,14 @@ This can enable an attacker to access sensitive resources or to perform other un
 
 ## Example scenarios
 
-The classic IDOR attack happens when the server only checks that the user is authenticated, but not whether they are authorized to access an object reference. The typical flow is:
+The classic IDOR attack happens when the server only checks that the user is authenticated, but not whether they are authorized to access an object reference. In a typical flow, the attacker:
 
-1. Attacker logs in as a normal user.
+1. Logs in as a normal user.
 2. Finds a URL, form field, or cookie that references a user or resource ID (e.g., 1234).
 3. Modifies the ID to another value (e.g., 1233).
-4. Gains unauthorized access to another user's data if no proper access control is in place.
+4. Gains unauthorized access to another user's data.
 
-This manipulation can happen in different places:
+In the following sections we'll explore some concrete examples of this attack.
 
 ### URL tampering
 
