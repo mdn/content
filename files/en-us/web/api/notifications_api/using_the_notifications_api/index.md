@@ -29,7 +29,7 @@ Because of abuses of push notifications in the past, web browsers and developers
 In addition, In Chrome and Firefox you cannot request notifications at all unless the site is a secure context (i.e., HTTPS), and you can no longer allow notification permissions to be requested from cross-origin {{htmlelement("iframe")}}s.
 
 > [!NOTE]
-> The examples in this article uses the {{domxref("Notification/Notification", "Notification()")}} constructor to create notifications. This is fine for desktop, but on most mobile browsers this will throw a {{jsxref("TypeError")}}. If you are targeting mobile devices, you should use {{domxref("ServiceWorkerRegistration.showNotification()")}} from a service worker instead.
+> The examples in this article uses the {{domxref("Notification/Notification", "Notification()")}} constructor to create notifications. This is fine for desktop, but on most mobile browsers this will throw a {{jsxref("TypeError")}}. If you are targeting mobile devices, you should register a service worker and use {{domxref("ServiceWorkerRegistration.showNotification()")}} instead.
 
 ### Checking current permission status
 
