@@ -35,12 +35,12 @@ For other types it might represent an import map, speculation rules, or some oth
 
 Note that if the {{domxref('HTMLScriptElement/src','src')}} property is set the content of the `text` property is ignored.
 
-### text vs textContent vs innerText
+### `text` vs `textContent` vs `innerText`
 
 The `text` and {{domxref("HTMLScriptElement.textContent", "textContent")}} properties of `HTMLScriptElement` are equivalent: both can be set with a string or a `TrustedScript` type and both return a string representing the content of the script element.
 The main difference is that {{domxref("Node.textContent", "textContent")}} is also defined on {{domxref("Node")}} and can be used with other elements to set their content with a string.
 
-{{domxref("HTMLScriptElement.innerText", "innerText")}} will generally set and execute the text in the same as the other methods, but may return a slightly different value.
+{{domxref("HTMLScriptElement.innerText", "innerText")}} will generally set and execute the text in the same way as the other methods, but may return a slightly different value.
 The reason for this is that this property is designed for getting the rendered text of a string of HTML markup.
 When setting the value the text is treated as a text node, which normalizes the string as if it were visible text (collapsing spaces and converting `\n` to line breaks).
 This does not change the execution of the text, but it does alter the text that is stored and returned.
@@ -60,7 +60,7 @@ This ensures that the input is passed through a transformation function, which h
 
 The behavior of the transformation function will depend on the specific use case that requires a user provided script.
 If possible you should lock the allowed scripts to exactly the code that you trust to run.
-If that is not possible, you might whitelist or blacklist the use of certain functions within the provided string.
+If that is not possible, you might allow or block the use of certain functions within the provided string.
 
 ## Examples
 
@@ -115,7 +115,7 @@ const trustedScript = policy.createScript(untrustedScriptOne);
 el.text = trustedScript;
 ```
 
-### text and textContent properties are equivalent
+### Comparing `text` and `textContent`
 
 In this example we'll set the value of a script element by assigning a string of code to the element's `text` property and `textContent` properties, and read the result back to show that the results are equivalent.
 
