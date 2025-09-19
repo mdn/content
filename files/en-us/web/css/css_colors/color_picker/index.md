@@ -5,7 +5,13 @@ page-type: guide
 sidebar: cssref
 ---
 
-This tool lets you enter a color in any format. Or you can also pick a color in the sRGB {{glossary("color space")}}. Adjustment to the alpha channel is also possible. After providing the color, the tool converts the color in various CSS [color formats](/en-US/docs/Web/CSS/color_value), helping you understand the syntax.
+This tool lets you enter or pick a color and copy its corresponding value in any CSS [color format](/en-US/docs/Web/CSS/color_value). You can use the generated color value anywhere the {{cssxref("color_value", "&lt;color&gt;")}} data type is supported in CSS. This tool can also help you understand the syntax of the different color notations – click any color format to learn more about it.
+
+## How to use the tool
+
+Enter a color in any format or pick one in the sRGB {{glossary("color space")}}. You can also adjust the opacity (alpha channel).
+
+Click the **Copy** button next to the corresponding color format to quickly copy its value.
 
 Click on a copy button to easily copy the corresponding color value.
 
@@ -14,7 +20,7 @@ Click on a copy button to easily copy the corresponding color value.
   <dialog open>
     <table id="output-colors">
       <caption>
-        Current color values:
+        Your color in different formats:
       </caption>
       <tbody>
         <tr id="rgb-function">
