@@ -64,55 +64,51 @@ button {
 ```
 
 ```js
-window.addEventListener(
-  "load",
-  function setupAnimation(evt) {
-    "use strict";
-    window.removeEventListener(evt.type, setupAnimation, false);
+window.addEventListener("load", function setupAnimation(evt) {
+  "use strict";
+  window.removeEventListener(evt.type, setupAnimation);
 
-    const canvas = document.querySelector("canvas");
-    const gl =
-      canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
-    if (!gl) {
-      document.querySelector("p").textContent =
-        "Failed to get WebGL context. Your browser or device may not support WebGL.";
-      return;
-    }
-    gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
+  const canvas = document.querySelector("canvas");
+  const gl =
+    canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
+  if (!gl) {
+    document.querySelector("p").textContent =
+      "Failed to get WebGL context. Your browser or device may not support WebGL.";
+    return;
+  }
+  gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
 
-    const timer = setInterval(drawAnimation, 1000);
+  const timer = setInterval(drawAnimation, 1000);
 
-    const mask = [true, true, true];
-    const redToggle = document.querySelector("#red-toggle");
-    const greenToggle = document.querySelector("#green-toggle");
-    const blueToggle = document.querySelector("#blue-toggle");
-    redToggle.addEventListener("click", setColorMask, false);
-    greenToggle.addEventListener("click", setColorMask, false);
-    blueToggle.addEventListener("click", setColorMask, false);
+  const mask = [true, true, true];
+  const redToggle = document.querySelector("#red-toggle");
+  const greenToggle = document.querySelector("#green-toggle");
+  const blueToggle = document.querySelector("#blue-toggle");
+  redToggle.addEventListener("click", setColorMask);
+  greenToggle.addEventListener("click", setColorMask);
+  blueToggle.addEventListener("click", setColorMask);
 
-    function setColorMask(evt) {
-      const index =
-        (evt.target === greenToggle && 1) ||
-        (evt.target === blueToggle && 2) ||
-        0;
-      mask[index] = !mask[index];
-      evt.target.textContent = mask[index] ? "On" : "Off";
-      gl.colorMask(mask[0], mask[1], mask[2], true);
-      drawAnimation();
-    }
+  function setColorMask(evt) {
+    const index =
+      (evt.target === greenToggle && 1) ||
+      (evt.target === blueToggle && 2) ||
+      0;
+    mask[index] = !mask[index];
+    evt.target.textContent = mask[index] ? "On" : "Off";
+    gl.colorMask(mask[0], mask[1], mask[2], true);
+    drawAnimation();
+  }
 
-    function drawAnimation() {
-      const color = getRandomColor();
-      gl.clearColor(color[0], color[1], color[2], 1.0);
-      gl.clear(gl.COLOR_BUFFER_BIT);
-    }
+  function drawAnimation() {
+    const color = getRandomColor();
+    gl.clearColor(color[0], color[1], color[2], 1.0);
+    gl.clear(gl.COLOR_BUFFER_BIT);
+  }
 
-    function getRandomColor() {
-      return [Math.random(), Math.random(), Math.random()];
-    }
-  },
-  false,
-);
+  function getRandomColor() {
+    return [Math.random(), Math.random(), Math.random()];
+  }
+});
 ```
 
 The source code of this example is also available on [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/color-masking).
