@@ -5,12 +5,11 @@ slug: Web/HTML/Reference/Elements/script/type/speculationrules
 page-type: html-attribute-value
 status:
   - experimental
-  - non-standard
 browser-compat: html.elements.script.type.speculationrules
 sidebar: htmlsidebar
 ---
 
-{{SeeCompatTable}}{{non-standard_header}}
+{{SeeCompatTable}}
 
 The **`speculationrules`** value of the [`type`](/en-US/docs/Web/HTML/Reference/Elements/script/type) attribute of the [`<script>` element](/en-US/docs/Web/HTML/Reference/Elements/script) indicates that the body of the element contains speculation rules.
 

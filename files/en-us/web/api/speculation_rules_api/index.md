@@ -4,17 +4,22 @@ slug: Web/API/Speculation_Rules_API
 page-type: web-api-overview
 status:
   - experimental
-  - non-standard
 browser-compat:
   - api.Document.prerendering
   - api.Document.prerenderingchange_event
+  - api.PerformanceNavigationTiming.activationStart
   - html.elements.script.type.speculationrules
+  - http.headers.Content-Security-Policy.script-src.inline-speculation-rules
+  - http.headers.Sec-Purpose.speculationrules
+  - http.headers.Sec-Speculation-Tags
+  - http.headers.Speculation-Rules
+  - http.headers.Supports-Loading-Mode
 spec-urls:
-  - https://wicg.github.io/nav-speculation/speculation-rules.html
+  - https://html.spec.whatwg.org/multipage/speculative-loading.html#speculative-loading
   - https://wicg.github.io/nav-speculation/prerendering.html
 ---
 
-{{SeeCompatTable}}{{DefaultAPISidebar("Speculation Rules API")}}{{non-standard_header}}
+{{SeeCompatTable}}{{DefaultAPISidebar("Speculation Rules API")}}
 
 The **Speculation Rules API** is designed to improve performance for future navigations. It targets document URLs rather than specific resource files, and so makes sense for multi-page applications (MPAs) rather than single-page applications (SPAs).
 

@@ -5,12 +5,11 @@ slug: Web/HTTP/Reference/Headers/Supports-Loading-Mode
 page-type: http-header
 status:
   - experimental
-  - non-standard
 browser-compat: http.headers.Supports-Loading-Mode
 sidebar: http
 ---
 
-{{securecontext_header}}{{SeeCompatTable}}{{non-standard_header}}
+{{securecontext_header}}{{SeeCompatTable}}
 
 The HTTP **`Supports-Loading-Mode`** {{Glossary("response header")}} allows a response to opt-in to being loaded in a novel, higher-risk context that it would otherwise fail to be loaded in.
 
