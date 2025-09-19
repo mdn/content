@@ -84,7 +84,6 @@ Used in almost all roles **except** roles that cannot be provided an accessible 
 
 The `aria-label` attribute is **NOT** supported in:
 
-
 - [`caption`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
 - [`code`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
 - [`definition`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
