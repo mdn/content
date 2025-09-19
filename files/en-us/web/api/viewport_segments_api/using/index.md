@@ -4,7 +4,7 @@ slug: Web/API/Viewport_segments_API/Using
 page-type: guide
 ---
 
-{{DefaultAPISidebar("Viewport segments API")}}
+{{DefaultAPISidebar("Viewport Segments API")}}
 
 This article explains how to use the [Viewport Segments API](/en-US/docs/Web/API/Viewport_segments_API) to create responsive designs optimized for different viewport segment sizes and arrangements.
 
@@ -80,8 +80,7 @@ In a layout, you can use these variables to set your containers to fit neatly in
   .wrapper {
     display: grid;
     grid-template: "left fold right";
-    grid-columns: env(viewport-segment-width 0 0)
-      env(viewport-segment-width 1 0);
+    grid-column: env(viewport-segment-width 0 0) env(viewport-segment-width 1 0);
   }
   .firstSection {
     grid-area: left;
@@ -97,7 +96,7 @@ In a layout, you can use these variables to set your containers to fit neatly in
     grid-template:
       "top"
       "bottom";
-    grid-rows: env(viewport-segment-height 0 1) env(viewport-segment-width 0 0);
+    grid-row: env(viewport-segment-height 0 1) env(viewport-segment-width 0 0);
   }
   .firstSection {
     grid-area: top;
@@ -114,24 +113,26 @@ We could add an empty middle "fold" cell to stop content being obscured by the f
 
 ```css
 @media (horizontal-viewport-segments: 2) {
-   .wrapper {
-     grid-template: "left fold right";
-     grid-columns:
-        env(viewport-segment-width 0 0)
-        calc(100vw - (env(viewport-segment-width 0 0) + env(viewport-segment-width 1 0))
-        env(viewport-segment-width 1 0);
-   }
+  .wrapper {
+    grid-template: "left fold right";
+    grid-column: env(viewport-segment-width 0 0)
+      calc(
+        100vw -
+          (env(viewport-segment-width 0 0) + env(viewport-segment-width 1 0))
+      )
+      env(viewport-segment-width 1 0);
+  }
 }
 
 @media (vertical-viewport-segments: 2) {
-   .wrapper {
-     grid-template:
+  .wrapper {
+    grid-template:
       "top"
       "fold"
       "bottom";
-     grid-rows: env(viewport-segment-height 0 1) 1fr env(viewport-segment-width 0 0);
-
-   }
+    grid-row: env(viewport-segment-height 0 1) 1fr
+      env(viewport-segment-width 0 0);
+  }
 }
 ```
 
@@ -153,7 +154,7 @@ segments.forEach((segment) =>
 
 ## A complete example
 
-Let's look at the Viewport Segment API features in action in a real example. You can see our example running live at [Viewport segment API demo](https://mdn.github.io/dom-examples/viewport-segment-api/) (see the full [source code](https://github.com/mdn/dom-examples/tree/main/viewport-segment-api) also). If possible, view the demo on a real foldable device. Browser developer tools that enable visually emulating the multiple segments of foldable devices generally don't include emulation of the physical segmentation.
+Let's look at the Viewport Segment API features in action in a real example. You can see our example running live at [Viewport segment API demo](https://mdn.github.io/dom-examples/viewport-segments-api/) (see the full [source code](https://github.com/mdn/dom-examples/tree/main/viewport-segments-api) also). If possible, view the demo on a real foldable device. Browser developer tools that enable visually emulating the multiple segments of foldable devices generally don't include emulation of the physical segmentation.
 
 > [!NOTE]
 > This example is adapted from [Origin trial for Foldable APIs](https://developer.chrome.com/blog/foldable-apis-ot) by Alexis Menard and Thomas Steiner, originally published on `developer.chrome.com` in 2024 under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/).

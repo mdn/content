@@ -160,7 +160,7 @@ This tool lets you mix two colors in any color space using the {{cssxref("color_
   z-index: 100;
   padding: 1rem;
   width: 70vw;
-  background: #ddd;
+  background: #dddddd;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -262,7 +262,7 @@ dialog#picker-dialog table {
   align-items: center;
   margin: 0;
   padding: 0;
-  border-radius: 10% 10% 10% 10%;
+  border-radius: 10%;
 }
 
 #color-one {
@@ -273,7 +273,7 @@ dialog#picker-dialog table {
   border: none;
   z-index: 1;
   box-shadow: -5px 5px 5px grey;
-  background-color: #ff7f50;
+  background-color: coral;
 }
 
 #mixed-color {
@@ -289,7 +289,7 @@ dialog#picker-dialog table {
   border: none;
   z-index: 1;
   box-shadow: 5px 5px 5px grey;
-  background-color: #00ffff;
+  background-color: cyan;
 }
 
 #color-mixer > :nth-child(7) {
@@ -455,7 +455,7 @@ const colorTwo = { r: 0, g: 255, b: 255, alpha: 1.0 };
 let currentColor = null;
 
 function rgbToLinear(c) {
-  return c <= 0.04045 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
+  return c <= 0.04045 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4;
 }
 
 function intToHex(i) {
@@ -500,9 +500,9 @@ function rgbaToHEXAText(color) {
 function rgbaToHSLA(color) {
   let { r, g, b, a: alpha } = color;
   // Let's have r, g, b in the range [0, 1]
-  r = r / 255;
-  g = g / 255;
-  b = b / 255;
+  r /= 255;
+  g /= 255;
+  b /= 255;
   const min = Math.min(r, g, b);
   const max = Math.max(r, g, b);
   const delta = max - min;
@@ -585,7 +585,7 @@ const D65 = [0.3457 / 0.3585, 1, 0.2958 / 0.3585];
 function xyzToLab(color) {
   let { x, y, z, alpha } = color;
   [x, y, z] = [x, y, z].map((v, i) => {
-    v = v / D65[i];
+    v /= D65[i];
     return v > 0.0088564516 ? Math.cbrt(v) : v * 903.2962962962963 + 16 / 116;
   });
   return { l: 116 * y - 16, a: 500 * (x - y), b: 200 * (y - z), alpha };
@@ -610,7 +610,7 @@ function rgbToOklab(color) {
   );
 
   const oklab = multiplyByMatrix(LMS_LAB_MATRIX, lms);
-  return { l: oklab[0], a: oklab[1], b: oklab[2], a: alpha };
+  return { l: oklab[0], a: oklab[1], b: oklab[2], alpha };
 }
 
 function toOkLabText(color) {
@@ -672,7 +672,7 @@ function updateColorMix() {
     "--color-one",
     colorOneButton.style.getPropertyValue("background-color"),
   );
-  root.style.setProperty("--percentage-one", percentageOneSlider.value + "%");
+  root.style.setProperty("--percentage-one", `${percentageOneSlider.value}%`);
   colorMixFunction += `${rgbaToHEXAText(colorOne)} ${
     percentageOneSlider.value
   }%, `;
@@ -681,7 +681,7 @@ function updateColorMix() {
     "--color-two",
     colorTwoButton.style.getPropertyValue("background-color"),
   );
-  root.style.setProperty("--percentage-two", percentageTwoSlider.value + "%");
+  root.style.setProperty("--percentage-two", `${percentageTwoSlider.value}%`);
   colorMixFunction += `${rgbaToHEXAText(colorTwo)} ${
     percentageTwoSlider.value
   }%)`;
@@ -732,12 +732,12 @@ function setColorToDialog() {
 
 function init() {
   percentageOneSlider.addEventListener("input", (e) => {
-    percentageOneLabel.innerText = e.target.value + "%";
+    percentageOneLabel.innerText = `${e.target.value}%`;
     updateColorMix();
   });
 
   percentageTwoSlider.addEventListener("input", (e) => {
-    percentageTwoLabel.innerText = e.target.value + "%";
+    percentageTwoLabel.innerText = `${e.target.value}%`;
     updateColorMix();
   });
 

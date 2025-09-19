@@ -80,7 +80,7 @@ For example, the following returns the width of the right-hand segment on a two-
 env(viewport-segment-width 1 0)
 ```
 
-See the [Viewport segment API demo](https://mdn.github.io/dom-examples/viewport-segment-api/) for a full working demo ([source code](https://github.com/mdn/dom-examples/tree/main/viewport-segment-api)). Also check out [Using the Viewport Segments API](/en-US/docs/Web/API/Viewport_segments_API/Using) for a full demo explanation.
+See the [Viewport segment API demo](https://mdn.github.io/dom-examples/viewport-segments-api/) for a full working demo ([source code](https://github.com/mdn/dom-examples/tree/main/viewport-segments-api)). Also check out [Using the Viewport Segments API](/en-US/docs/Web/API/Viewport_segments_API/Using) for a full demo explanation.
 
 ## Formal syntax
 
@@ -227,7 +227,7 @@ main {
 
 ### Viewport segments
 
-The [Viewport segment API demo](https://mdn.github.io/dom-examples/viewport-segment-api/) and [Using the Viewport Segments API](/en-US/docs/Web/API/Viewport_segments_API/Using) guide provides a demonstration and explanation of using the `env()` function with the `viewport-segments-*` environment variables.
+The [Viewport segment API demo](https://mdn.github.io/dom-examples/viewport-segments-api/) and [Using the Viewport Segments API](/en-US/docs/Web/API/Viewport_segments_API/Using) guide provides a demonstration and explanation of using the `env()` function with the `viewport-segments-*` environment variables.
 
 ## Specifications
 

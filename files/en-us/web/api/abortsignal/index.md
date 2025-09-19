@@ -56,7 +56,7 @@ The following snippet shows how we might use a signal to abort downloading a vid
 
 We first define a variable for our `AbortController`.
 
-Before each [fetch request](/en-US/docs/Web/API/Window/fetch) we create a new controller using the {{domxref("AbortController.AbortController","AbortController()")}} constructor, then grab a reference to its associated {{domxref("AbortSignal")}} object using the {{domxref("AbortController.signal")}} property.
+Before each [fetch request](/en-US/docs/Web/API/Window/fetch) we create a new controller using the {{domxref("AbortController.AbortController","AbortController()")}} constructor, then grab a reference to its associated `AbortSignal` object using the {{domxref("AbortController.signal")}} property.
 
 > [!NOTE]
 > An `AbortSignal` can only be used once. After it is aborted, any fetch call using the same signal will be immediately rejected.

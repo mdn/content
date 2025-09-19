@@ -33,7 +33,7 @@ Timing-Allow-Origin: https://developer.mozilla.org
 
 ### Use `startTime` over `renderTime`
 
-Regardless of the accuracy of the `renderTime`, developers should use {{domxref("PerformanceEntry.startTime", "startTime")}} over `renderTime` as the LCP time. This returns the value of the entry's {{domxref("LargestContentfulPaint.renderTime", "renderTime")}} if it is not `0`, and otherwise the value of this entry's {{domxref("LargestContentfulPaint.loadTime", "loadTime")}} so removes the need to check for 0 values for non-supporting browsers.
+Regardless of the accuracy of the `renderTime`, developers should use {{domxref("PerformanceEntry.startTime", "startTime")}} over `renderTime` as the LCP time. This returns the value of the entry's `renderTime` if it is not `0`, and otherwise the value of this entry's {{domxref("LargestContentfulPaint.loadTime", "loadTime")}} so removes the need to check for 0 values for non-supporting browsers.
 
 ## Examples
 
