@@ -7,7 +7,7 @@ browser-compat: css.properties.object-view-box
 
 {{CSSRef}}
 
-The **`object-view-box`** [CSS](/en-US/docs/Web/CSS) property defines a rectangle as a viewable area (view box) within a {{glossary("replaced elements", "replaced element")}}, enabling the content of an element to be zoomed or panned. It works similarly to the SVG {{SVGAttr("viewBox")}} attribute.
+The **`object-view-box`** [CSS](/en-US/docs/Web/CSS) property defines a rectangle as a viewable area (view box) within a {{glossary("replaced elements", "replaced element")}}, enabling the content of the replaced element to be zoomed or panned. It works similarly to the SVG {{SVGAttr("viewBox")}} attribute.
 
 {{InteractiveExample("CSS Demo: object-view-box")}}
 
@@ -66,7 +66,7 @@ object-view-box: none;
 /* keywords */
 object-view-box: none;
 
-/* Rectangular shape functions */
+/* <basic-shape-rect> functions */
 object-view-box: inset(20%);
 object-view-box: inset(20% 30%);
 object-view-box: inset(10px 0 25px 33px);
@@ -84,46 +84,34 @@ object-view-box: unset;
 ### Values
 
 - `none`
-  - : The default. The element does not have a view box.
+  - : The element does not have a view box. This is the default.
 
 - [`<basic-shape-rect>`](/en-US/docs/Web/CSS/basic-shape#basic-shape-rect)
   - : A {{cssxref("basic-shape/inset","inset()")}}, {{cssxref("basic-shape/xywh","xywh()")}}, or {{cssxref("basic-shape/rect","rect()")}} function specifying a view box for an element with natural dimensions (replaced elements). Resolves to `none` otherwise.
 
 ## Description
 
-The `object-view-box` property can be used to define a view box within {{glossary("replaced elements")}}, enabling the display of just a section of the replaced content. The subsection of the element displayed can be presented zoomed in, panned out, or at original size, while maintaining the content's intrinsic {{glossary("aspect ratio")}}.
+The `object-view-box` property can be used to crop or resize {{glossary("replaced elements")}}, including images and videos. It works by showing the section of the replaced element defined by the value of the property into the available space reserved for the element; the element's default {{glossary("extrinsic size")}}. The subsection of the element displayed can be presented zoomed in, panned out, or at original size, while maintaining the content's intrinsic {{glossary("aspect ratio")}}.
 
-Replaced elements have two sizes; an [extrinsic size](/en-US/docs/Glossary/Intrinsic_Size#extrinsic_sizing) and an {{glossary("intrinsic size")}}.
+The value is a `<basic-shape-rect>`, one of the four {{cssxref("basic-shape")}} functions that is limited to defining a rectangular shape. Taking as an example a {{cssxref("basic-shape/xywh","xywh()")}} function as the value:
 
-The extrinsic size is the dimension of the HTML element in which the content is rendered based on the box and visual formatting models. The [box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) and [visual formatting model](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model) determine the size of rendered elements based on content, HTML attributes, CSS applied to elements and their ancestors, and the viewport size.
+```css
+img {
+  object-view-box: xywh(410px, 0, 400px, 150px);
+}
+```
 
-The intrinsic size is the original size of the content itself; the size the element is when no styles are applied and without any layout constraints. While these don't have to be the same size, it is generally important to maintain a replaced element's intrinsic {{glossary("aspect ratio")}}.
-
-CSS has many sizing properties. When it comes to sizing replaced elements, the [`object-fit`](/en-US/docs/Web/CSS/object-fit) property enables us to control how replaced elements are rendered in with a defined box to some extent. For example, the following 1200 x 400 image is displayed using a {{htmlelement("img")}} element that is sized to 400 x 200. The image content is positioned using `object-fit: none;` declaration.
-
-![An image demonstrating extrinsic and intrinsic image sizes; the center 200 by 400 section of a much larger 400 by 1200 image is visible in the 200 by 400 view box that is the size of the element displaying the image.](extrinsic-intrinsic_sizes.jpg)
-
-The `object-view-box` property is more flexible than the `object-fit` property, and it is capable of doing more things. For example, it can be used to crop, zoom, and pan images. The property sets viewable area (view box), which defines what part of the content to show and how to fit it inside the extrinsic size. The view box value contains a rectangle and its position relative to the intrinsic area of the content, but _physical size of the view box remains equal to the extrinsic size_. The view box marks the area in the content to be displayed, and then it is transformed to match the extrinsic dimensions fitting into the HTML element. In the following image, we have the same leopard picture in a 400 x 150 image element. However, this time we have used `object-view-box` property to crop the leopard's eye portion of the picture.
+In this case, the top left corner of the section of the image that will be displayed is `410px` from the left edge and `0` from the top, as defined by x and y coordinate parameters. The size of the section of the original image that will be displayed is `400px` wide by `150px` tall; the `w` and `h` components of the function. This section of image will be displayed in the box of space that was reserved for the image itself when the page was laid out. Whether the image section displayed is it's original intrinsic size, zoomed in, or zoomed out depends on whether the extrinsic size of the image is 400px x 150px, smaller, or larger, respectively.
 
 ![The leopard image cropped using object-view-box property, with a 400px by 150px viewbox displaying an unscaled section of the image](https://mdn.github.io/shared-assets/images/diagrams/css/object-view-box/object-view-box_xywh.jpg)
 
-As the rectangle defined by the `object-view-box` property and the rectangle viewbox of the `<img>` element are the same size, i.e., 400 x 150 pixels, the aspect ratios of both are the same and the replaced element is not scaled.
+As the rectangle defined by the `object-view-box` property and the rectangle viewbox of the `<img>` element are the same size, i.e., 400 x 150 pixels, the replaced element is not scaled.
 
-Maintaining the same aspect ratio prevents image distortion. With `object-view-box`, we can accomplish various image operations while having different extrinsic and view box sizes, without distorting the replaced element as it scales up and down.
+To create a zoomed in effect, we can either increase the `w` and `h`. values, or we could decrease the extrinsic size of the element itself. As the portion of the image is stretched, it gives a zoom-in effect.
 
-### Crop and pan operations when view box size equals extrinsic size
+To create a zoomed out effect, we would make the `w` and `h` arguments smaller, or increase the size of the element. As the portion of the image is shrunk, it gives a zoom-out effect.
 
-When both sizes are the same, the view box is not transformed to match the extrinsic size. So the content resolution remains the same. We get a fixed window into the content, as shown in the last image of the previous section.
-
-If we change only the coordinates of the view box window, in `xywh()` function, and keep the size the same, we get a panning operation.
-
-### Zoom-in operation when view box size is less than extrinsic size
-
-In this case, the smaller view box is stretched to fit the extrinsic size. As the portion of the image is stretched, it gives a zoom-in effect.
-
-### Zoom-out operation when view box size is greater than extrinsic size
-
-In this case, the bigger view box is shrunk to fit extrinsic size. As the portion of the image is shrunk, it gives a zoom-out effect.
+To pan the element, we would animate the `x` and `y` coordinates moving the viewbox.
 
 ## Formal definition
 
@@ -135,13 +123,88 @@ In this case, the bigger view box is shrunk to fit extrinsic size. As the portio
 
 ## Examples
 
-### Live zoom-in using object-view-box property
+### Basic usage
 
-In this example, we display part of a large image of a leopard. Users can zoom in and out on the image, with the eye of the leopard serving as the focal point. Using the `object-view-box` property, we can do this without changing the dimensions of the HTML image element itself.
+This example demonstrates the basic usage and the effects of the `object-view-box` property.
 
 #### HTML
 
-We include an {{htmlelement("img")}} and a [`range`](Web/HTML/Reference/Elements/input/range) {{htmlelement("input")}} element, associating a {{htmlelement("label")}} with the `<input>` . The natural dimensions of the original image is `1244px` by `416px` tall, with an {{glossary("aspect ratio")}} of `3:1`.
+We have three identical {{htmlelement("img")}} elements; only their class names are different.
+
+```html
+<section>
+  <img
+    class="intrinsic"
+    src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+    alt="Section of the pride flag" />
+  <img
+    class="zoomin"
+    src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+    alt="Section of the pride flag" />
+  <img
+    class="zoomout"
+    src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+    alt="Section of the pride flag" />
+  <section></section>
+</section>
+```
+
+#### CSS
+
+We style all the images to have the same width and height, then set each class, and therefore each image, to have a different `object-view-box` value. The intrinsic size of the original image is a 220px square.
+
+We define a `306px` wide flex container with a 3px {{cssxref("gap")}}, creating 3 100px-wide flex-items.
+
+```css
+section {
+  display: flex;
+  width: 306px;
+  height: 100px;
+  gap: 3px;
+}
+section img {
+  flex: 1 0 auto;
+}
+```
+
+We set three different `object-view-box` property values. The `intrinsic` replaced element is set to display a `100px` square section of the replaced element, starting from the `100px` from the left and `120px` from the top. The `zoomin` replaced element is set to display a 50px square section of the original element, the section going from 50px to 100px from the top edge and 80px to 130px from the left edge. The `zoomout` replaced element is set to display a 180px square section of the original element.
+
+```css
+.intrinsic {
+  object-view-box: xywh(100px 120px 100px 100px);
+}
+.zoomin {
+  object-view-box: rect(50px 130px 100px 80px);
+}
+.zoomout {
+  object-view-box: xywh(30px 30px 190px 190px);
+}
+```
+
+```css hidden
+@supports not (object-view-box: none) {
+  body::before {
+    content: "Your browser does not support the 'object-view-box' property.";
+    color: black;
+    background-color: #ffcd33;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+```
+
+#### Results
+
+{{ EmbedLiveSample("Basic usage", 600, 120) }}
+
+### Live zoom-in using object-view-box property
+
+This example demonstrates how the `object-view-box` property can be used to the zoom in and out of replaced elements. The eye of the leopard, within a very large image, serves as the focal point for the zoom effect within a statically sizes HTML element.
+
+#### HTML
+
+We include an {{htmlelement("img")}} and a [`range`](Web/HTML/Reference/Elements/input/range) {{htmlelement("input")}} element with an associated {{htmlelement("label")}}. The natural dimensions, or intrinsic size, of the original leopard image is `1244px` by `416px` tall, with an {{glossary("aspect ratio")}} of `3:1`.
 
 ```html
 <img
@@ -149,13 +212,13 @@ We include an {{htmlelement("img")}} and a [`range`](Web/HTML/Reference/Elements
   alt="leopard" />
 <p>
   <label for="box-size">Zoom-in: </label>
-  <input type="range" id="box-size" min="100" max="350" value="150" />
+  <input type="range" id="box-size" min="0" max="500" value="150" />
 </p>
 ```
 
 #### CSS
 
-We define a custom property `--box-size` to adjust the view box size. Decreasing the size of the view box gives a zoom-in effect. Increasing the view box size gives a zoom-out effect. The {{cssxref("basic-shape/xywh","xywh()")}} function accepts an offset point and size of the view box as parameters. The view box's offset point, the focal point in our zoom effects, is set at `(500px, 30px)`, which corresponds to the top-left corner of the leopard's right eye.
+We define a custom property `--box-size`, which is used as both the height and width of our viewbox in the {{cssxref("basic-shape/xywh","xywh()")}} function. We set the aspect ratio of our image to 1:1, defining an equal height and width. The view box's offset point, the focal point in our zoom effects, is set at `(500px, 30px)`, which corresponds to the top-left corner of the leopard's right eye. We added a border to enable visualizing the image size even when the displayed section of image doesn't fill the viewbox.
 
 ```css hidden
 input {
@@ -175,62 +238,81 @@ input {
 ```
 
 ```css
+:root {
+  --box-size: 150px;
+}
+
 img {
   width: 350px;
   height: 350px;
 
-  --box-size: 150px;
   object-view-box: xywh(500px 30px var(--box-size) var(--box-size));
+
+  border: 2px solid red;
 }
 ```
 
-Note, in order not to distort the rendered image portion, the extrinsic (350x350 px) and view box window aspect ratios have been kept the same, that is, 1:1.
-
 #### JavaScript
 
+We add an event listener on the slider that updates the value of the `--boxSize` custom element when the user interacts with it. Because reducing the view box size increases the zoom-in effect, because smaller content is stretched to fit the HTML element's dimensions, to increase the zoom-in effect when the slider is moved to the right, the slider's value is inverted by subtracting it from 500px.
+
 ```js
-const img = document.querySelector("img");
+const root = document.querySelector("html");
 const zoom = document.getElementById("box-size");
 
 function update() {
-  img.style.setProperty("--box-size", `${500 - zoom.value}px`);
+  root.style.setProperty("--box-size", `${500 - zoom.value}px`);
 }
 
 zoom.addEventListener("input", update);
 update();
 ```
 
-Reducing the view box size increases the zoom-in effect, because smaller content is stretched to fit the HTML element's dimensions. To increase the zoom-in effect when the slider is moved to the right, the slider's value is inverted by subtracting it from 500px.
-
 #### Result
 
 {{ EmbedLiveSample("Live zoom in using object-view-box property", 500, 450) }}
 
-Move the slider to the right to increase the zoom-in effect. The slider controls only the dimensions of the view box. As we are not changing the x and y positions of the view box, the picture zooms in diagonally towards the bottom right corner.
+Move the slider to the right to increase the zoom-in effect. The slider controls only the dimensions of the view box while the origin point of the viewbox, the x and y values, remain the same. The image always remains 350px tall.
 
-### Panning using object-view-box property
+### Panning using the object-view-box property
 
-In this example, we keep the view box dimensions constant and change only the horizontal position. This gives a horizontal panning effect. Most of the code remains the same as the previous example.
+In this example, we demonstrate panning through an image using the `object-view-box` property.
 
 #### HTML
+
+The HTML includes a single image.
 
 ```html
 <img
   src="https://mdn.github.io/shared-assets/images/examples/leopard.jpg"
   alt="leopard" />
-<p>
-  <label for="position">Horizontal pan: </label>
-  <input type="range" id="position" min="0" max="900" value="450" />
-</p>
 ```
 
 #### CSS
 
-```css hidden
-input {
+We defined a size for the image, then keep the view box dimensions constant, as we animate the horizontal position, changing the position of the left side edge over five seconds.
+
+```css
+img {
   width: 350px;
+  height: 350px;
+
+  object-view-box: xywh(0 30px 400px 400px);
+
+  animation: panning 5s linear infinite alternate;
 }
 
+@keyframes panning {
+  from {
+    object-view-box: xywh(0 30px 400px 400px);
+  }
+  to {
+    object-view-box: xywh(800px 30px 400px 400px);
+  }
+}
+```
+
+```css hidden
 @supports not (object-view-box: none) {
   body::before {
     content: "Your browser does not support the 'object-view-box' property.";
@@ -243,38 +325,9 @@ input {
 }
 ```
 
-```css
-img {
-  width: 400px;
-  height: 400px;
-
-  --x-position: 0;
-  object-view-box: xywh(var(--x-position) 30px 400px 400px);
-}
-```
-
-The HTML image element determines the 400x400 px window size. The `--x-position` variable allows adjustable horizontal positioning.
-Both the element size and view box have the same dimensions, which keeps the aspect ratio the same and prevents image distortion.
-
-#### JavaScript
-
-```js
-const img = document.querySelector("img");
-const position = document.getElementById("position");
-
-function update() {
-  img.style.setProperty("--x-position", `${position.value}px`);
-}
-
-position.addEventListener("input", update);
-update();
-```
-
 #### Result
 
-{{ EmbedLiveSample("Live zoom in using object-view-box property", 500, 500) }}
-
-Move the slider to pan the picture horizontally.
+{{ EmbedLiveSample("Panning using the object-view-box property", 500, 500) }}
 
 ## Specifications
 
@@ -286,7 +339,9 @@ Move the slider to pan the picture horizontally.
 
 ## See also
 
+- [Using the CSS `object-view-box` property](/en-US/docs/Web/CSS/CSS_images/Using_object-view-box)
 - {{cssxref("object-fit")}}
 - {{cssxref("object-position")}}
 - {{cssxref("background-size")}}
 - [Understanding aspect ratio](/en-US/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)
+- [CSS images](/en-US/docs/Web/CSS/CSS_images) module
