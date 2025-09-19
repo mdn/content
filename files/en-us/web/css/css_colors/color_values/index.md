@@ -110,21 +110,13 @@ const output = document.querySelector("output");
 
 box.style.borderColor = colorPicker.value;
 
-colorPicker.addEventListener(
-  "input",
-  (event) => {
-    box.style.borderColor = event.target.value;
-  },
-  false,
-);
+colorPicker.addEventListener("input", (event) => {
+  box.style.borderColor = event.target.value;
+});
 
-colorPicker.addEventListener(
-  "change",
-  (event) => {
-    output.innerText = `${colorPicker.value}`;
-  },
-  false,
-);
+colorPicker.addEventListener("change", (event) => {
+  output.innerText = `${colorPicker.value}`;
+});
 ```
 
 The {{domxref("Element/input_event", "input")}} event is sent every time the value of the element changes; that is, every time the user adjusts the color in the color picker. Each time this event arrives, we set the box's border color to match the color picker's current value.
@@ -526,7 +518,7 @@ For example, if you wanted to show the `display-p3 0 0 1` color, which is outsid
 
 Understanding `color()` is important when it comes to relative colors, discussed next. The older sRGB color notations discussed above — `hsl()`, `hwb()`, and `rgb()`— do not express the full spectrum of visible colors, while the `color()` function supports a much wider color gamut. As a result, when using the older functions types to define relative colors, the output color returned by querying {{domxref("HTMLElement.style")}} property or the {{domxref("CSSStyleDeclaration.getPropertyValue()")}} method will be a `color(srgb ...)` value.
 
-To see an example of converting the `hsl()`, `hwb()`, and `rgb()` color functions to `color()` in the `srgb` color space, check out our [color picker tool](/en-US/docs/Web/CSS/CSS_colors/Color_picker_tool).
+To see an example of converting the `hsl()`, `hwb()`, and `rgb()` color functions to `color()` in the `srgb` color space, check out our [color picker tool](/en-US/docs/Web/CSS/CSS_colors/Color_picker).
 
 ### Relative colors
 

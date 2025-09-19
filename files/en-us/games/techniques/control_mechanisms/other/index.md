@@ -30,13 +30,9 @@ if (this.cursors.right.isDown) {
 It works out of the box. The cursors are the four directional arrow keys on the keyboard, and these have exactly the same key codes as the arrow keys on the remote. How do you know the codes for the other remote keys? You can check them by printing the responses out in the console:
 
 ```js
-window.addEventListener(
-  "keydown",
-  (event) => {
-    console.log(event.keyCode);
-  },
-  true,
-);
+window.addEventListener("keydown", (event) => {
+  console.log(event.keyCode);
+});
 ```
 
 Every key pressed on the remote will show its key code in the console. You can also check this handy cheat sheet seen below if you're working with Panasonic TVs running Firefox OS:
@@ -46,23 +42,19 @@ Every key pressed on the remote will show its key code in the console. You can a
 You can add moving between states, starting a new game, controlling the ship and blowing stuff up, pausing and restarting the game. All that is needed is checking for key presses:
 
 ```js
-window.addEventListener(
-  "keydown",
-  (event) => {
-    switch (event.keyCode) {
-      case 8: {
-        // Pause the game
-        break;
-      }
-      case 588: {
-        // Detonate bomb
-        break;
-      }
-      // …
+window.addEventListener("keydown", (event) => {
+  switch (event.keyCode) {
+    case 8: {
+      // Pause the game
+      break;
     }
-  },
-  true,
-);
+    case 588: {
+      // Detonate bomb
+      break;
+    }
+    // …
+  }
+});
 ```
 
 You can see it in action by watching [this video](https://www.youtube.com/watch?v=Bh11sP0bcTY).

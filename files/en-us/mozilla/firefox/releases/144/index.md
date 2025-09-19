@@ -1,13 +1,13 @@
 ---
 title: Firefox 144 for developers
-short-title: Firefox 144 (Nightly)
+short-title: Firefox 144 (Beta)
 slug: Mozilla/Firefox/Releases/144
 page-type: firefox-release-notes-active
 sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 144 that affect developers.
-Firefox 144 is the current [Nightly version of Firefox](https://www.firefox.com/en-US/channel/desktop/#nightly) and ships on [October 14, 2025](https://whattrainisitnow.com/release/?version=144).
+Firefox 144 is the current [Beta version of Firefox](https://www.firefox.com/en-US/channel/desktop/#beta) and ships on [October 14, 2025](https://whattrainisitnow.com/release/?version=144).
 
 > [!NOTE]
 > The release notes for this Firefox version are still a work in progress.
@@ -44,15 +44,24 @@ Firefox 144 is the current [Nightly version of Firefox](https://www.firefox.com/
 
 <!-- #### Removals -->
 
+### MathML
+
+#### Removals
+
+- Support for the deprecated MathML STIXGeneral font has now been removed. The setting `mathml.stixgeneral_operator_stretching.disabled` has also been removed. ([Firefox bug 1336058](https://bugzil.la/1336058)).
+
 <!-- ### Security -->
 
 <!-- #### Removals -->
 
-<!-- ### APIs -->
+### APIs
 
 <!-- #### DOM -->
 
-<!-- #### Media, WebRTC, and Web Audio -->
+#### Media, WebRTC, and Web Audio
+
+- {{domxref("RTCDataChannel")}} instances are now [transferrable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects), and hence can be passed to [workers](/en-US/docs/Web/API/Worker). ([Firefox bug 1209163](https://bugzil.la/1209163)).
+- The [`closing` event](/en-US/docs/Web/API/RTCDataChannel/closing_event) and the `onclosing()` event handler are now supported on the {{domxref("RTCDataChannel")}} interface. ([Firefox bug 1611953](https://bugzil.la/1611953)).
 
 <!-- #### Removals -->
 

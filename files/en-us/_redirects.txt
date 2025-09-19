@@ -12143,6 +12143,7 @@
 /en-US/docs/Web/CSS/Aural	/en-US/docs/Web/CSS/@media
 /en-US/docs/Web/CSS/Block_formatting_context	/en-US/docs/Web/CSS/CSS_display/Block_formatting_context
 /en-US/docs/Web/CSS/CSS3_Columns	/en-US/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts
+/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems	/en-US/docs/Web/API/CSSOM_view_API/Coordinate_systems
 /en-US/docs/Web/CSS/CSS_Background_and_Borders	/en-US/docs/Web/CSS/CSS_backgrounds_and_borders
 /en-US/docs/Web/CSS/CSS_Background_and_Borders/Border-image_generator	/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Border-image_generator
 /en-US/docs/Web/CSS/CSS_Background_and_Borders/Border-radius_generator	/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator
@@ -12253,6 +12254,7 @@
 /en-US/docs/Web/CSS/CSS_cascade/specified_value	/en-US/docs/Web/CSS/CSS_cascade/Value_processing#specified_value
 /en-US/docs/Web/CSS/CSS_cascade/used_value	/en-US/docs/Web/CSS/CSS_cascade/Value_processing#used_value
 /en-US/docs/Web/CSS/CSS_charsets	/en-US/docs/Web/CSS/CSS_syntax
+/en-US/docs/Web/CSS/CSS_colors/Color_picker_tool	/en-US/docs/Web/CSS/CSS_colors/Color_picker
 /en-US/docs/Web/CSS/CSS_container_queries	/en-US/docs/Web/CSS/CSS_containment/Container_queries
 /en-US/docs/Web/CSS/CSS_descriptor_definition	/en-US/docs/Web/CSS
 /en-US/docs/Web/CSS/CSS_display/flow_layout/Block_and_inline_layout_in_normal_flow	/en-US/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow
@@ -12331,7 +12333,7 @@
 /en-US/docs/Web/CSS/Tools/Border-image_generator	/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Border-image_generator
 /en-US/docs/Web/CSS/Tools/Border-radius_generator	/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator
 /en-US/docs/Web/CSS/Tools/Box-shadow_generator	/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator
-/en-US/docs/Web/CSS/Tools/ColorPicker_Tool	/en-US/docs/Web/CSS/CSS_colors/Color_picker_tool
+/en-US/docs/Web/CSS/Tools/ColorPicker_Tool	/en-US/docs/Web/CSS/CSS_colors/Color_picker
 /en-US/docs/Web/CSS/Understanding_CSS_z-index	/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index
 /en-US/docs/Web/CSS/Understanding_CSS_z-index/Adding_z-index	/en-US/docs/Web/CSS/CSS_positioned_layout/Using_z-index
 /en-US/docs/Web/CSS/Understanding_CSS_z-index/Stacking_and_float	/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_floating_elements

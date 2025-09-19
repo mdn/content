@@ -219,7 +219,7 @@ These are used as follows:
 To set things up, we run the following code when the page loads:
 
 ```js
-document.addEventListener("visibilitychange", handleVisibilityChange, false);
+document.addEventListener("visibilitychange", handleVisibilityChange);
 
 const observerOptions = {
   root: null,

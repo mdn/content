@@ -134,7 +134,88 @@ The {{HTMLElement("legend")}} element is okay to style, but it can be a bit tric
 
 Take the following example:
 
-{{EmbedGHLiveSample("learning-area/html/forms/native-form-widgets/positioned-legend.html", '100%', 400)}}
+```html hidden live-sample___positioned-legend
+<form>
+  <fieldset>
+    <legend>Choose all the vegetables you like to eat</legend>
+    <ul>
+      <li>
+        <label for="carrots">Carrots</label>
+        <input
+          type="checkbox"
+          checked
+          id="carrots"
+          name="carrots"
+          value="carrots" />
+      </li>
+      <li>
+        <label for="peas">Peas</label>
+        <input type="checkbox" id="peas" name="peas" value="peas" />
+      </li>
+      <li>
+        <label for="cabbage">Cabbage</label>
+        <input type="checkbox" id="cabbage" name="cabbage" value="cabbage" />
+      </li>
+      <li>
+        <label for="cauli">Cauliflower</label>
+        <input type="checkbox" id="cauli" name="cauli" value="cauli" />
+      </li>
+      <li>
+        <label for="broc">Broccoli</label>
+        <input type="checkbox" id="broc" name="broc" value="broc" />
+      </li>
+    </ul>
+  </fieldset>
+  <fieldset>
+    <legend>What is your favorite meal?</legend>
+    <ul>
+      <li>
+        <label for="soup">Soup</label>
+        <input type="radio" checked id="soup" name="meal" value="soup" />
+      </li>
+      <li>
+        <label for="curry">Curry</label>
+        <input type="radio" id="curry" name="meal" value="curry" />
+      </li>
+      <li>
+        <label for="pizza">Pizza</label>
+        <input type="radio" id="pizza" name="meal" value="pizza" />
+      </li>
+      <li>
+        <label for="tacos">Tacos</label>
+        <input type="radio" id="tacos" name="meal" value="tacos" />
+      </li>
+      <li>
+        <label for="bolognaise">Bolognaise</label>
+        <input type="radio" id="bolognaise" name="meal" value="bolognaise" />
+      </li>
+    </ul>
+  </fieldset>
+</form>
+```
+
+```css hidden live-sample___positioned-legend
+form {
+  width: 500px;
+  margin: 0 auto;
+}
+
+fieldset {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+legend {
+  position: absolute;
+  color: white;
+  background-color: black;
+  padding: 3px;
+  bottom: 0;
+  right: 0;
+}
+```
+
+{{EmbedLiveSample("positioned-legend", '100%', 400)}}
 
 To position the legend in this manner, we used the following CSS (other declarations removed for brevity):
 
