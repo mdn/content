@@ -92,7 +92,7 @@ filter: url("fileName.svg#invert90"); /* external SVG */
 
 ## Examples
 
-This example shows three images: the image with a `blur()` filter function applied, the image with the equivalent SVG blur function applied, and the original images for comparison:
+This example shows three images for comparison: an image with an `invert()` filter function applied, an image with the equivalent SVG function applied, and the original image:
 
 ### SVG
 
