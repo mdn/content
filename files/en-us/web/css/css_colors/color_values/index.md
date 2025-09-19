@@ -310,13 +310,13 @@ for (const color of colors) {
 
 {{EmbedLiveSample("HWB_functional_notation", 300, 200)}}
 
-### LCH and OKLCH: CIELAB and Oklab color spaces
+### LCH and OkLCh: CIELAB and Oklab color spaces
 
 While `hsl()` and `hwb()` are intuitive, they have a major drawback. With these functions, every fully-saturated hue angle (`hsl(<angle> 100% 50%)` or `hwb(<angle> 0% 0%)`) has the same lightness, but that is not how human vision or monitors work. Putting white text on fully saturated blue (`hsl(240deg 100% 50%)`) is legible, but that same text on fully saturated yellow (`hsl(60deg 100% 50%)`) will not only be illegible, but may hurt your user's eyes. In these color functions, the lightness of a color is relative to other colors, not to human perception. In reality, not all hues have the same max saturation.
 
 Wouldn't it be fantastic if you could simply change the hue channel of a color on a site without making text illegible? You can with color functions in the CIELAB and Oklab color spaces.
 
-The CIELAB and Oklab color spaces represent the entire range of colors that humans can see. CIE lab color functions include [`lch()`](/en-US/docs/Web/CSS/color_value/lch) and [`lab()`](/en-US/docs/Web/CSS/color_value/lab). Oklab color functions include [`oklch()`](/en-US/docs/Web/CSS/color_value/oklch) and [`oklab()`](/en-US/docs/Web/CSS/color_value/oklab). The primary purpose of these models is that they are uniform so that a given distance between any two points in the color space should appear equally different to a viewer. Oklab is a color space that uses the same model type as CIELAB but is built using additional numerical optimization steps, so the values are considered more accurate than CIELAB. Because of this optimization, hues are more perceptually uniform.
+The CIELAB and Oklab color spaces represent the entire range of colors that humans can see. CIE Lab color functions include [`lch()`](/en-US/docs/Web/CSS/color_value/lch) and [`lab()`](/en-US/docs/Web/CSS/color_value/lab). Oklab color functions include [`oklch()`](/en-US/docs/Web/CSS/color_value/oklch) and [`oklab()`](/en-US/docs/Web/CSS/color_value/oklab). The primary purpose of these models is that they are uniform so that a given distance between any two points in the color space should appear equally different to a viewer. Oklab is a color space that uses the same model type as CIELAB but is built using additional numerical optimization steps, so the values are considered more accurate than CIELAB. Because of this optimization, hues are more perceptually uniform.
 
 The `lch()` and `oklch()` functions use lightness (`L`), chroma (`C`), and hue (`H`), and are discussed further in this section. The [`lab()` and `oklab()`](#lab_and_oklab) functions work differently, using lightness (`L`), red/green-ness (along the `a`-axis), and yellow/blue-ness (along the `b`-axis). These axes are referred to as rectangular coordinates. The main benefit of these color functions is that the "lightness" is perceived lightness; it is the brightness of a color as perceived by the human eye rather than the lightness as compared to other colors.
 
