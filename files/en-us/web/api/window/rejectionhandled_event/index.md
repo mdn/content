@@ -48,13 +48,9 @@ In addition to the `Window` interface, the event handler property `onrejectionha
 You can use the `rejectionhandled` event to log promises that get rejected to the console, along with the reasons why they were rejected:
 
 ```js
-window.addEventListener(
-  "rejectionhandled",
-  (event) => {
-    console.log(`Promise rejected; reason: ${event.reason}`);
-  },
-  false,
-);
+window.addEventListener("rejectionhandled", (event) => {
+  console.log(`Promise rejected; reason: ${event.reason}`);
+});
 ```
 
 ## Specifications

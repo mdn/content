@@ -111,3 +111,4 @@ p:target i {
 ## See also
 
 - [Using the :target pseudo-class in selectors](/en-US/docs/Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors)
+- {{cssxref("::target-text")}} (for highlighting text fragments)

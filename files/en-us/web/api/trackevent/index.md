@@ -42,12 +42,12 @@ This example sets up a function, `handleTrackEvent()`, which is called for any `
 ```js
 const videoElem = document.querySelector("video");
 
-videoElem.videoTracks.addEventListener("addtrack", handleTrackEvent, false);
-videoElem.videoTracks.addEventListener("removetrack", handleTrackEvent, false);
-videoElem.audioTracks.addEventListener("addtrack", handleTrackEvent, false);
-videoElem.audioTracks.addEventListener("removetrack", handleTrackEvent, false);
-videoElem.textTracks.addEventListener("addtrack", handleTrackEvent, false);
-videoElem.textTracks.addEventListener("removetrack", handleTrackEvent, false);
+videoElem.videoTracks.addEventListener("addtrack", handleTrackEvent);
+videoElem.videoTracks.addEventListener("removetrack", handleTrackEvent);
+videoElem.audioTracks.addEventListener("addtrack", handleTrackEvent);
+videoElem.audioTracks.addEventListener("removetrack", handleTrackEvent);
+videoElem.textTracks.addEventListener("addtrack", handleTrackEvent);
+videoElem.textTracks.addEventListener("removetrack", handleTrackEvent);
 
 function handleTrackEvent(event) {
   let trackKind;

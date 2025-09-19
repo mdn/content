@@ -133,19 +133,15 @@ Then we add some [JavaScript](/en-US/docs/Web/JavaScript) to set up an event lis
 const form = document.querySelector("form");
 const log = document.querySelector("#log");
 
-form.addEventListener(
-  "submit",
-  (event) => {
-    const data = new FormData(form);
-    let output = "";
-    for (const entry of data) {
-      output = `${output}${entry[0]}=${entry[1]}\r`;
-    }
-    log.innerText = output;
-    event.preventDefault();
-  },
-  false,
-);
+form.addEventListener("submit", (event) => {
+  const data = new FormData(form);
+  let output = "";
+  for (const entry of data) {
+    output = `${output}${entry[0]}=${entry[1]}\r`;
+  }
+  log.innerText = output;
+  event.preventDefault();
+});
 ```
 
 Try this example out and see how there's never more than one result for the `contact` group.

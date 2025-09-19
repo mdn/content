@@ -193,7 +193,7 @@ function stopEvent(event) {
 }
 
 const elem = document.getElementById("tbl1");
-elem.addEventListener("click", stopEvent, false);
+elem.addEventListener("click", stopEvent);
 
 document.getElementById("t-daddy").addEventListener("click", () => {
   console.log("t-daddy clicked");
@@ -327,9 +327,7 @@ function showEventProperties(e) {
   document.body.appendChild(table);
 }
 
-window.onload = (event) => {
-  showEventProperties(event);
-};
+showEventProperties(event);
 ```
 
 {{EmbedLiveSample("example_7_displaying_event_object_properties", "", "300")}}

@@ -2,9 +2,13 @@
 title: corner-shape
 slug: Web/CSS/corner-shape
 page-type: css-shorthand-property
+status:
+  - experimental
 browser-compat: css.properties.corner-shape
 sidebar: cssref
 ---
+
+{{SeeCompatTable}}
 
 The **`corner-shape`** [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property specifies the shape of a box's corners, within the area specified by its {{cssxref("border-radius")}} property value.
 
@@ -254,7 +258,7 @@ div {
 }
 
 div:hover {
-  background-color: rgb(255 255 255 / 1);
+  background-color: white;
 }
 ```
 
@@ -531,7 +535,7 @@ div {
 ```
 
 ```css live-sample___corner-shape-animation
-@keyframes cornerpulse {
+@keyframes corner-pulse {
   from {
     corner-shape: square;
   }
@@ -543,7 +547,7 @@ div {
 
 html:hover div,
 div:focus {
-  animation: cornerpulse infinite alternate 2s linear;
+  animation: corner-pulse infinite alternate 2s linear;
 }
 ```
 
