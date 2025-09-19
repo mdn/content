@@ -247,7 +247,7 @@ Certain uses of the `:has()` pseudo-class can significantly impact page performa
 
 ### Avoid broad anchoring
 
-This section addresses the anchor selector (the `A` in `A:has(B)`), which should avoid broad selectors like `body`, `:root`, or `*` to prevent performance issues. Anchoring `:has()` to very general selectors can degrade performance because any DOM change within the entire subtree of a broadly selected element requires the browser to re-check the `:has()` condition.
+The anchor selector (the `A` in `A:has(B)`) should not be an element that has too many children, like `body`, `:root`, or `*`. Anchoring `:has()` to very general selectors can degrade performance because any DOM change within the entire subtree of a broadly selected element requires the browser to re-check the `:has()` condition.
 
 ```css example-bad
 /* Avoid anchoring :has() to broad elements */
@@ -279,7 +279,7 @@ Instead, anchor `:has()` to specific elements like `.container` or `.gallery` to
 
 ### Minimize subtree traversals
 
-This section focuses on the inner selector (the `B` in `A:has(B)`), which should use combinators like `>` or `+` to limit traversal. When the selector inside `:has()` is not tightly constrained, the browser might need to traverse the entire subtree of the anchor element on every DOM mutation to check if the condition still holds.
+The inner selector (the `B` in `A:has(B)`) should use combinators like `>` or `+` to limit traversal. When the selector inside `:has()` is not tightly constrained, the browser might need to traverse the entire subtree of the anchor element on every DOM mutation to check if the condition still holds.
 
 In this example, any change within `.ancestor` requires checking all descendants for `.foo`:
 
@@ -302,9 +302,7 @@ Using child or sibling combinators limits the scope of the inner selector, reduc
 }
 ```
 
-### Be mindful of ancestor traversals
-
-Certain selector patterns involving `:has()` can force the browser to traverse up the ancestor chain for every DOM mutation, looking for potential `:has()` anchors that might need updating. This happens when the structure implies a need to check ancestors of the mutated element.
+Certain inner selectors can force the browser to traverse up the ancestor chain for every DOM mutation, looking for potential anchors that might need updating. This happens when the structure implies a need to check ancestors of the mutated element.
 
 In this example, any DOM change requires checking if the changed element is the `*` (any element) that is a direct child of `.foo`, and if its parent (or further ancestors) is `.ancestor`.
 
@@ -325,7 +323,7 @@ Constraining the inner selector with specific classes or direct child combinator
 ```
 
 > [!NOTE]
-> These performance characteristics may improve as browsers optimize `:has()` implementations, but the fundamental constraints remain. The **Avoid broad anchoring** section addresses the anchor selector's scope (the `A` in `A:has(B)`), while **Minimize subtree traversals** focuses on constraining the inner selector (the `B` in `A:has(B)`) to limit traversal.
+> These performance characteristics may improve as browsers optimize `:has()` implementations, but the fundamental constraints remain: `:has()` needs to traverse a whole subtree, so you need to minimize the subtree's size. In a selector like `A:has(B)`, make sure your `A` does not have many children, and make sure your `B` is tightly constrained to avoid unnecessary traversal.
 
 ## Specifications
 
