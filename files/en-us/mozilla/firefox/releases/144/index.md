@@ -63,7 +63,9 @@ Firefox 144 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - {{domxref("RTCDataChannel")}} instances are now [transferrable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects), and hence can be passed to [workers](/en-US/docs/Web/API/Worker). ([Firefox bug 1209163](https://bugzil.la/1209163)).
 - The [`closing` event](/en-US/docs/Web/API/RTCDataChannel/closing_event) and the `onclosing()` event handler are now supported on the {{domxref("RTCDataChannel")}} interface. ([Firefox bug 1611953](https://bugzil.la/1611953)).
 
-<!-- #### Removals -->
+#### Removals
+
+- The [`afterscriptexecute` event](/en-US/docs/Web/API/Document/afterscriptexecute_event) and [`beforescriptexecute` event](/en-US/docs/Web/API/Document/beforescriptexecute_event) of the `Document` interface, and the [`afterscriptexecute` event](/en-US/docs/Web/API/Element/afterscriptexecute_event) and [`beforescriptexecute` event](/en-US/docs/Web/API/Element/beforescriptexecute_event) of the `Element` interface have been removed. ([Firefox bug 1584269](https://bugzil.la/1584269)).
 
 <!-- ### WebAssembly -->
 
