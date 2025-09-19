@@ -5,13 +5,13 @@ page-type: guide
 sidebar: cssref
 ---
 
-This tool lets you mix two colors in any color space using the {{cssxref("color_value/color-mix")}} function and copy the resulting color in any CSS color format. The two input colors, `color-one` and `color-two`, are shown on the outside, and the mixed color returned by the function is shown in the middle. Click on the outer swatches to select new colors to mix. Use the sliders to change the percentages of each input color included in the mix. Use the drop-down menu to change the color space of the function's output. CSS color values for the resulting color are selectable below the color widget.
+This tool lets you mix two colors in any color space using the {{cssxref("color_value/color-mix")}} function and copy the resulting color in any CSS color format.
+
+The two input colors, `color-one` and `color-two`, are shown on the outside, and the mixed color returned by the function is shown in the middle.Click the outer swatches to select new colors to mix. Use the sliders to change the percentages of each input color included in the mix. Use the drop-down menu to change the color space of the function's output. The resulting color's values in different formats appear in a table following the widget and can be copied. Click on the color format names in the left column to open the corresponding MDN information page.
 
 ```html hidden live-sample___color-mixer
 <div id="color-mixer">
   <h3>Color mixer</h3>
-  <p>Click on 'color-one' and 'color-two' to change the input colors.</p>
-
   <div>color-one</div>
   <div>mixed-color</div>
   <div>color-two</div>
@@ -54,10 +54,10 @@ This tool lets you mix two colors in any color space using the {{cssxref("color_
     <option value="srgb-linear">sRGB-linear</option>
     <option value="hsl">HSL</option>
     <option value="hwb">HWB</option>
-    <option value="lch">LCH</option>
     <option value="lab">Lab</option>
-    <option value="oklch">OkLCh</option>
+    <option value="lch">LCH</option>
     <option value="oklab" selected>Oklab</option>
+    <option value="oklch">OkLCh</option>
     <option value="xyz-d50">XYZ-D50</option>
     <option value="xyz-d65">XYZ-D65</option>
   </select>
@@ -102,7 +102,7 @@ This tool lets you mix two colors in any color space using the {{cssxref("color_
 <hr />
 <table id="output-colors">
   <caption>
-    The output color in various CSS color syntaxes:
+    Mixed color in different formats:
   </caption>
   <tbody>
     <tr id="rgb-function">
@@ -271,7 +271,6 @@ dialog#picker-dialog table {
   grid-template-columns: 150px 1fr 1fr 150px;
   grid-template-areas:
     "header            header           header              header"
-    "text              text             text                text"
     "color-one-label   mix-label        mix-label           color-two-label"
     "color-background  color-background color-background    color-background"
     "percent-one       percent-one      percent-two         percent-two"
@@ -286,26 +285,22 @@ dialog#picker-dialog table {
 
 #color-mixer > :nth-child(1) {
   grid-area: header;
+  margin-bottom: 1rem;
 }
 
 #color-mixer > :nth-child(2) {
-  grid-area: text;
-  margin-bottom: 2rem;
-}
-
-#color-mixer > :nth-child(3) {
   grid-area: color-one-label;
 }
 
-#color-mixer > :nth-child(4) {
+#color-mixer > :nth-child(3) {
   grid-area: mix-label;
 }
 
-#color-mixer > :nth-child(5) {
+#color-mixer > :nth-child(4) {
   grid-area: color-two-label;
 }
 
-#color-mixer > :nth-child(6) {
+#color-mixer > :nth-child(5) {
   grid-area: color-background;
   background:
     linear-gradient(
@@ -358,7 +353,7 @@ dialog#picker-dialog table {
   background-color: cyan;
 }
 
-#color-mixer > :nth-child(7) {
+#color-mixer > :nth-child(6) {
   grid-area: percent-one;
   width: 100%;
   display: flex;
@@ -370,33 +365,33 @@ dialog#picker-dialog table {
   text-align: end;
 }
 
-#color-mixer > :nth-child(8) {
+#color-mixer > :nth-child(7) {
   grid-area: percent-two;
   width: 100%;
   display: flex;
 }
 
-#color-mixer > :nth-child(9) {
+#color-mixer > :nth-child(8) {
   grid-area: color-space-label;
   margin: 0.5rem 0 0 auto;
 }
 
-#color-mixer > :nth-child(10) {
+#color-mixer > :nth-child(9) {
   grid-area: color-space;
   margin: 0.5rem auto 0 1rem;
 }
 
-#color-mixer > :nth-child(11) {
+#color-mixer > :nth-child(10) {
   grid-area: interpolation-label;
   margin: 0.5rem 0 0 auto;
 }
 
-#color-mixer > :nth-child(12) {
+#color-mixer > :nth-child(11) {
   grid-area: interpolation;
   margin: 0.5rem auto 0 1rem;
 }
 
-#color-mixer > :nth-child(13) {
+#color-mixer > :nth-child(12) {
   grid-area: mix-output-text;
   margin: 1rem 0;
   padding: 1rem 0;

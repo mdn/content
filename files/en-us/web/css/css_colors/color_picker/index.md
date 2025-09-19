@@ -11,13 +11,32 @@ This tool lets you enter or pick a color and copy its corresponding value in any
 
 Enter a color in any format or pick one in the sRGB {{glossary("color space")}}. You can also adjust the opacity (alpha channel).
 
-Click the **Copy** button next to the corresponding color format to quickly copy its value.
-
-Click on a copy button to easily copy the corresponding color value.
+Click the **Copy** button next to the corresponding color format to quickly copy its value. Click on the color format names in the left column to open the corresponding MDN information page.
 
 ```html hidden live-sample___color-picker
 <div>
   <dialog open>
+    <p>
+      <label for="color-text"
+        >Enter a color value in any format or pick a color:</label
+      >
+      <span
+        ><input type="text" id="color-text" /><input
+          type="color"
+          id="color-input"
+      /></span>
+    </p>
+    <p>
+      <label for="opacity-input">Adjust the opacity: </label
+      ><input
+        type="range"
+        id="opacity-input"
+        value="1"
+        min="0"
+        max="1"
+        step="0.01" />
+    </p>
+    <hr />
     <table id="output-colors">
       <caption>
         Your color in different formats:
@@ -135,21 +154,6 @@ Click on a copy button to easily copy the corresponding color value.
         </tr>
       </tbody>
     </table>
-    <p>
-      <label for="color-text">Enter a color value in any format:</label><br />
-      <input type="text" id="color-text" /><input
-        type="color"
-        id="color-input" />
-    </p>
-    <p>
-      <label for="opacity-input">Adjust the opacity: </label><br /><input
-        type="range"
-        id="opacity-input"
-        value="1"
-        min="0"
-        max="1"
-        step="0.01" />
-    </p>
   </dialog>
 </div>
 ```
@@ -210,6 +214,7 @@ button {
 
 input[type="text"] {
   width: 300px;
+  margin-right: 0.5rem;
 }
 input[type="range"] {
   width: 350px;
@@ -217,6 +222,12 @@ input[type="range"] {
 
 label {
   user-select: none;
+}
+
+p {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
 }
 ```
 
@@ -533,8 +544,6 @@ init();
 ```
 
 {{EmbedLiveSample("color-picker", "", 700, "", "", "", "clipboard-write", "allow-popups")}}
-
-You can use the generated color value anywhere the {{cssxref("color_value", "&lt;color&gt;")}} data type is supported in CSS.
 
 ## See also
 
