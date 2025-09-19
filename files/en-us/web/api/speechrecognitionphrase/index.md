@@ -24,7 +24,7 @@ The following code first creates an array containing the phrases to boost and th
 
 ```js
 const phraseData = [
-  { phrase: "azure", boost: 10.0 },
+  { phrase: "azure", boost: 5.0 },
   { phrase: "khaki", boost: 3.0 },
   { phrase: "tan", boost: 2.0 },
 ];

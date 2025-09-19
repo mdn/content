@@ -14,7 +14,9 @@ Speech recognition involves receiving speech through a device's microphone (or a
 
 The Web Speech API has a main controller interface for this — {{domxref("SpeechRecognition")}} — plus several related interfaces for representing results, etc.
 
-Generally, the default speech recognition system available on the device will be used for the speech recognition — most modern OSes have a speech recognition system for issuing voice commands. Think about Dictation on macOS or Cortana on Windows. On some browsers, such as Chrome, using Speech Recognition on a web page involves a server-based recognition engine. Your audio is sent to a web service for recognition processing, so it won't work offline.
+Generally, the default speech recognition system available on the device will be used for the speech recognition. Most modern OSes have a speech recognition system for issuing voice commands such as Dictation on macOS or Copilot on Windows.
+
+By default, using Speech Recognition on a web page usually involves a server-based recognition engine. Your audio is sent to a web service for recognition processing, so it won't work offline.
 
 To improve privacy and performance, it is possible to specify that you want the speech recognition performed on-device, thereby ensuring that neither audio nor transcribed speech are sent to a third-party service for processing. We specifically cover the on-device functionality in [on-device speech recognition](#on-device_speech_recognition).
 
@@ -237,7 +239,7 @@ startBtn.addEventListener("click", () => {
 The `available()` method takes an options object containing two properties:
 
 - A `langs` array containing the languages to check availability for.
-- A `processLocally` boolean specifying whether to check for availability of the language locally (`true`) or on the default (often server-based) recognition service (`false`, which is the default).
+- A `processLocally` boolean specifying whether to check for availability of the language locally (`true`) or locally _or_ on a server-based recognition service (`false`, which is the default).
 
 When run, this method returns a {{jsxref("Promise")}} that resolves with a enumerated value indicating the availability of the specified languages for recognition. In our case, we test for three conditions:
 
@@ -278,7 +280,7 @@ In our `on-device speech color changer` demo, we handle this by first creating a
 
 ```js
 const phraseData = [
-  { phrase: "azure", boost: 10.0 },
+  { phrase: "azure", boost: 5.0 },
   { phrase: "khaki", boost: 3.0 },
   { phrase: "tan", boost: 2.0 },
 ];

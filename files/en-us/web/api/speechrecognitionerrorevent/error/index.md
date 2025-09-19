@@ -20,9 +20,11 @@ An enumerated value representing the type of error. The possible error types are
     behavior like a button the user can press to cancel speech input.
 - `audio-capture`
   - : Audio capture failed.
-- `bad-grammar`
+- `bad-grammar` {{deprecated_inline}} {{non-standard_inline}}
   - : There was an error in the speech recognition grammar or semantic tags, or the chosen
     grammar format or semantic tag format was unsupported.
+    > [!NOTE]
+    > This error is no longer in the Web Speech API specification; the whole concept of grammar has been removed. Related features have been kept in the specification and are still recognized by supporting browsers for backwards compatibility purposes, but they have no effect on speech recognition services.
 - `language-not-supported`
   - : The user agent does not support the language specified in the value of [`lang`](/en-US/docs/Web/API/SpeechRecognition/lang) attribute of the {{domxref("SpeechRecognition")}} object. The set of supported languages is browser-dependent, and from frontend code there is no way to programmatically determine what languages a user's browser supports for speech recognition.
 - `network`

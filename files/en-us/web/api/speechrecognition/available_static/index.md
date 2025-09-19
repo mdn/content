@@ -8,7 +8,7 @@ browser-compat: api.SpeechRecognition.available
 
 {{APIRef("Web Speech API")}}
 
-The **`available()`** static method of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) checks whether specified languages are available for speech recognition either locally on the user's computer, or via a remote service.
+The **`available()`** static method of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) checks whether specified languages are available for speech recognition.
 
 To install a language pack for speech recognition locally, you need to use the {{domxref("SpeechRecognition.install_static", "SpeechRecognition.install()")}} method.
 
@@ -27,20 +27,28 @@ available(options)
     - `langs`
       - : An array of one or more strings containing {{glossary("BCP 47 language tag", "BCP 47 language tags")}}, each representing a language that you want to check availability of for speech recognition. Passing an empty `langs` array will not throw an error, but the return value will always resolve to `unavailable`.
     - `processLocally` {{optional_inline}}
-      - : A boolean that specifies whether you are checking availability of the specified languages for [on-device speech recognition](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#on-device_speech_recognition) (`true`) or availability of the specified languages for on-device or remote speech recognition (`false`). Defaults to `false`.
+      - : A boolean that specifies whether you are checking availability of the specified languages for [on-device speech recognition](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#on-device_speech_recognition) (`true`) or availability of the specified languages for on-device _or_ remote speech recognition (`false`). Defaults to `false`.
+        > [!NOTE]
+        > It is not possible to use `available()` to determine whether a remote service is guaranteed to support the specified languages. A value of `false` means that either an on-device _or_ remote speech recognition service supports the specified languages.
 
 ### Return value
 
-A {{domxref("Promise")}} that resolves with an emumerated value indicating the availability of the specified languages for speech recognition. Possible values are:
+A {{domxref("Promise")}} that resolves with an emumerated value indicating the availability of the specified languages for speech recognition.
+
+Possible values are:
 
 - `available`
-  - : Indicates that the specified languages are available. If `processLocally` is set to `true`, `available` means that the required language packs have been downloaded and installed on the user's computer. If `processLocally` is set to `false`, `available` means that speech recognition is availale for those languages either on-device or remotely.
+  - : Indicates that support for all the specified languages is available.
+    - If `processLocally` is set to `true`, `available` means that speech recognition is available for those languages on-device (the required language packs have been downloaded and installed on the user's computer).
+    - If `processLocally` is set to `false`, `available` means that speech recognition is available for those languages either on-device or remotely.
 - `downloadable`
   - : Indicates that support for the specified languages is available on-device, but the relevant language packs have not yet been downloaded.
 - `downloading`
   - : Indicates that support for the specified languages is available on-device, and the relevant language packs are in the process of being downloaded.
 - `unavailable`
-  - : Indicates that the specified languages are not available. If `processLocally` is set to `true`, `unavailable` means that on-device speech recognition is not available for at least one of the specified languages. If `processLocally` is set to `false`, `unavailable` means that speech recognition is not available for at least one of the specified languages either on-device or remotely.
+  - : Indicates that support for at least one of the specified languages is not available.
+    - If `processLocally` is set to `true`, `unavailable` means that on-device speech recognition is not available for at least one of the specified languages.
+    - If `processLocally` is set to `false`, `unavailable` means that speech recognition is not available for at least one of the specified languages either on-device or remotely.
 
 > [!NOTE]
 > The `downloadable` and `downloading` values are primarily relevant when `processLocally` is set to `true`. If `processLocally` is set to `false` and the user agent prefers remote processing, `available()` will always return `available` or `unavailable`.
