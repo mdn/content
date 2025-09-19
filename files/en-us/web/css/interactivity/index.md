@@ -9,7 +9,7 @@ browser-compat: css.properties.interactivity
 
 {{CSSRef}}{{seecompattable}}
 
-The **`interactivity`** [CSS](/en-US/docs/Web/CSS) property specifies whether an element and its descendant nodes are set to [`inert`](/en-US/docs/Web/HTML/Reference/Global_attributes/inert).
+The **`interactivity`** [CSS](/en-US/docs/Web/CSS) property specifies whether an element and its descendant nodes are set to be [inert](/en-US/docs/Web/HTML/Reference/Global_attributes/inert).
 
 ## Syntax
 
@@ -29,10 +29,10 @@ interactivity: unset;
 ### Values
 
 - `auto`
-  - : Selected elements are in their default state in terms of inertness. This usually means that they are interactive, but this is [not always the case](#default_inertness).
+  - : Selected elements are in their default state in terms of inertness. This usually means that they are interactive, but this is [not always the case](#default_inertness). This is the default value.
 
 - `inert`
-  - : Selected elements are inert.
+  - : Selected elements and their descendants are inert.
 
 ## Formal definition
 
@@ -44,13 +44,17 @@ interactivity: unset;
 
 ## Description
 
-The `interactivity` property can be used to set whether an element is inert. See the HTML [`inert`](/en-US/docs/Web/HTML/Reference/Global_attributes/inert) attribute reference page for a detailed description of the inert state.
+The `interactivity` property can be used to set whether an element and its descendants are inert. See the HTML [`inert`](/en-US/docs/Web/HTML/Reference/Global_attributes/inert) attribute reference page for a detailed description of the inert state.
 
 A typical use case for `interactivity: inert` is in paginated content, when you only want the currently-visible page's content and controls to be interacted with. In such cases, unexpectedly focusing on an off-screen link or button could spoil the experience.
 
-When an element is made inert (via the `interactivity` property or the `inert` HTML attribute), all of its descendants are also made inert and cannot be set to non-inert, even by setting `interactivity: inert` or `inert="false"` directly on them.
+If an element's inert state is specified both by HTML (the `inert` attribute, or an automatic browser setting) and CSS (the `interactive` property) at the same time, the HTML setting will win against the CSS setting. For example, the following HTML element will be inert:
 
-The `interactivity` property can only make interactive content inert. It cannot make content that is inert based on HTML or other factors interactive.
+```html
+<button inert>You can't press me</button>
+```
+
+Setting `interactive: auto` on it will have no effect.
 
 ### Default inertness
 
@@ -98,9 +102,9 @@ In this example we explore the effects of the `interactivity` property.
 
 #### HTML
 
-The markup features two {{htmlelement("p")}} elements, each of which contain a link. The second paragraph also has a class of `inert` set on it, and a child {{htmlelement("span")}} element with [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) set on it, so it should be editable.
+The markup features two {{htmlelement("p")}} elements, each of which contain a link. The second paragraph also has a class of `inert` set on it, and a child {{htmlelement("span")}} element with [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) set on it to make it editable.
 
-```html live-sample___inertness-effects
+```html-nolint live-sample___inertness-effects
 <p>
   This paragraph is not
   <a
@@ -110,6 +114,8 @@ The markup features two {{htmlelement("p")}} elements, each of which contain a l
   in-browser search features, and focus and click the link. There is a
   <code>click</code> event handler set on the paragraph that changes the border
   color for a second when it is clicked anywhere.
+  <span contenteditable="">This sentence has <code>contenteditable</code> set on
+  it, so it is editable</span>.
 </p>
 
 <p class="inert">
@@ -136,6 +142,10 @@ We set the `interactivity` property on the second paragraph to a value of `inert
 .inert {
   interactivity: inert;
 }
+
+[contenteditable] {
+  outline: 1px dashed lightblue;
+}
 ```
 
 ```css hidden live-sample___inertness-effects
@@ -151,7 +161,7 @@ p {
 }
 ```
 
-You shouldn't be able to edit or focus the second `<input>`.
+You shouldn't be able to edit or focus the second `<input>`. You should be able to edit the `contenteditable` text in the first paragraph, but not in the second.
 
 #### JavaScript
 
@@ -177,11 +187,11 @@ for (para of paras) {
 
 {{ EmbedLiveSample("inertness-effects", "100%", "380") }}
 
-Note how the second paragraph is inert, therefore it does not behave like the first paragraph. For example, the link cannot be clikced or focused, the text cannot be selected or searched, and `click` events do not register on it.
+Note how the second paragraph is inert; it therefore does not behave like the first paragraph. For example, the link cannot be clicked or focused, the text cannot be selected or searched, the `contenteditable` `<span>` is not editable, and `click` events do not register on it.
 
 ### Setting off-screen elements to inert using a view timeline
 
-This example shows some horizontally-scrolling paginated content, with each page snapped to using [CSS Scroll Snap](/en-US/docs/Web/CSS/CSS_scroll_snap), and the inertness controlled via a [scroll-driven animation](/en-US/docs/Web/CSS/CSS_scroll-driven_animations) that uses a view progress timeline. When a page is visible in the scroll container, it is not inert; it becomes inert when it moves out into the overflowing content.
+This example shows some horizontally-scrolling paginated content, with each page snapped to using [CSS Scroll Snap](/en-US/docs/Web/CSS/CSS_scroll_snap), and the inertness controlled via a [scroll-driven animation](/en-US/docs/Web/CSS/CSS_scroll-driven_animations) that uses a [view progress timeline](/en-US/docs/Web/CSS/view-timeline-name). When a page is visible in the {{glossary("scroll container")}}, it is not inert; it becomes inert when it moves out into the overflowing content.
 
 #### HTML
 
@@ -259,7 +269,7 @@ Each list item is given some rudimentary styling, plus the following:
 - A {{cssxref("scroll-snap-align")}} value of `center`, to cause the scroll container to snap to the center of each snap target.
 - A {{cssxref("view-timeline")}} value of `--inertChange inline`, to declare the element as the subject of a named view progress timeline, progressed through in the inline direction. This is the element that will progress the view timeline as it moves through its ancestor scroll container.
 - An {{cssxref("animation-timeline")}} value equal to the same name defined in the `view-timeline` value, which means that the named view progress timeline will be used to control the progress of animations applied to this element.
-- An {{cssxref("animation-name")}} and {{cssxref("animation-fill-mode")}} defining the animation applied to this element and its fill mode. The `animation-fill-mode: both` value is required because you want the starting animation state to apply to the element before the animation starts, and the end animation state to apply to the element after the animation finishes. Otherwise, the `interactivity: inert` value (see below) won't apply to list items when they are outside the scroll container.
+- An {{cssxref("animation-name")}} and {{cssxref("animation-fill-mode")}} defining the animation applied to this element and its fill mode. The `both` value is required because you want the starting animation state to apply to the element before the animation starts, and the end animation state to apply to the element after the animation finishes. If the animation isn't persisted, the `interactivity: inert` declaration applied via the animation won't apply to list items when they are outside the scroll container.
 
 ```css live-sample___offscreen-inert
 li {
