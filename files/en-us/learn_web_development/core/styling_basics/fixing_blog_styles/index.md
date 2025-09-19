@@ -15,7 +15,7 @@ In this challenge we give you a basic blog page example that is partially styled
 To begin, click the **Play** button in one of the code panels below to open the provided example in the MDN Playground. You'll then follow the instructions in the [Project brief](#project_brief) section to style the page appropriately.
 
 ```html live-sample___blog-start live-sample___blog-finish
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />

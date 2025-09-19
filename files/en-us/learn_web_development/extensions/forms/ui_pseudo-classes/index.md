@@ -285,7 +285,7 @@ Then we give the generated content the content "required", which is what we want
 ```
 
 ```css hidden live-sample___required-optional-generated
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+@import "https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap";
 
 body {
   font-family: "Josefin Sans", sans-serif;
@@ -452,7 +452,7 @@ You can try it below (press the **Play** button to run the example in MDN Playgr
 ```
 
 ```css hidden live-sample___valid-invalid
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+@import "https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap";
 
 body {
   font-family: "Josefin Sans", sans-serif;
@@ -633,7 +633,7 @@ This is a similar story to what we had before in the `:required` example, except
 ```
 
 ```css hidden live-sample___out-of-range
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+@import "https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap";
 
 body {
   font-family: "Josefin Sans", sans-serif;
@@ -881,7 +881,7 @@ You can see the example in action below (press the **Play** button to run the ex
 ```
 
 ```css hidden live-sample___enabled-disabled-shipping
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+@import "https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap";
 
 body {
   font-family: "Josefin Sans", sans-serif;
@@ -1044,7 +1044,7 @@ CA
 ```
 
 ```css hidden live-sample___readonly-confirmation
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+@import "https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap";
 
 body {
   font-family: "Josefin Sans", sans-serif;
@@ -1303,7 +1303,7 @@ See the live result below (press the **Play** button to run the example in MDN P
 ```
 
 ```css hidden live-sample___radios-checked-default
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+@import "https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap";
 
 body {
   font-family: "Josefin Sans", sans-serif;
@@ -1407,7 +1407,7 @@ See the live result below (press the **Play** button to run the example in MDN P
 ```
 
 ```css hidden live-sample___radios-checked-indeterminate
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+@import "https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap";
 
 body {
   font-family: "Josefin Sans", sans-serif;
