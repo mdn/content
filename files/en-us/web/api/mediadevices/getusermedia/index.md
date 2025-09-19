@@ -213,8 +213,8 @@ getUserMedia({
 ```
 
 The browser will try to honor the constraints, and will return a matching track if supported by the underlying hardware.
-If not supported, the browser may attempt to crop and downscale a higher resolution stream from the underlying hardware in order to match the constraint.
-This will commonly be the default behavior, but can be forced by setting the [`resizeMode`](/en-US/docs/Web/API/MediaTrackConstraints#resizemode) constraint to `crop-and-scale` (or disabled by setting it to `none`):
+If not supported, the browser may attempt to crop and downscale a higher resolution stream from the underlying hardware in order to match the constraint (and might also reduce the frame rate if that was constrained).
+This behavior can be forced by setting the [`resizeMode`](/en-US/docs/Web/API/MediaTrackConstraints#resizemode) constraint to `crop-and-scale` (or disabled by setting it to `none`):
 
 ```js
 getUserMedia({
@@ -223,7 +223,7 @@ getUserMedia({
 });
 ```
 
-The browser may return another resolutions if an exact match is not available and the source is not to be scaled.
+The browser may return another resolution if an exact match is not available and the source is not to be scaled.
 
 To _require_ a capability and fail if it is not available, use the keywords `min`, `max`, or `exact` (a.k.a. `min === max`).
 The following demands a minimum resolution of 1280x720:

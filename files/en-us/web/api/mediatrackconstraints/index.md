@@ -9,9 +9,15 @@ spec-urls: https://w3c.github.io/mediacapture-main/#dom-mediatrackconstraints
 
 The **`MediaTrackConstraints`** dictionary is used to describe a set of media capabilities and the value or values each can take on.
 
-A constraints dictionary is passed into the {{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}} method of the {{domxref("MediaStreamTrack")}} interface to allow a script to establish a set of exact (required) values or ranges and/or preferred values or ranges of values for the track, and the most recently-requested set of custom constraints can be retrieved by calling {{domxref("MediaStreamTrack.getConstraints", "getConstraints()")}}.
+A constraints dictionary is passed into the {{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}} method of the {{domxref("MediaStreamTrack")}} interface to allow a script to establish a set of exact (required) values or ranges and/or preferred values or ranges of values for the track.
 
-Objects of this type may also be passed to the {{domxref("MediaDevices/getUserMedia","getUserMedia()")}} and {{domxref("MediaDevices/getDisplayMedia","getDisplayMedia()")}} methods of the {{domxref("MediaDevices")}} interface in order to specify constraints on a media stream requested from hardware such as a camera or microphone, and from a screen or window capture, respectively.
+ The most recently-requested set of custom constraints can be retrieved by calling {{domxref("MediaStreamTrack.getConstraints", "getConstraints()")}}.
+
+Objects of this type may also be passed to:
+
+- The {{domxref("MediaDevices.getUserMedia()")}} method, to specify constraints on a media stream requested from hardware such as a camera or microphone.
+
+- The {{domxref("MediaDevices.getDisplayMedia()")}} method, to specify constraints on a media stream requested from a screen or window capture.
 
 ## Constraints
 
