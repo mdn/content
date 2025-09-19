@@ -337,8 +337,8 @@ ul {
 
 ul li {
   list-style-type: none;
-  background-color: #eee;
-  border: 1px solid #ddd;
+  background-color: #eeeeee;
+  border: 1px solid #dddddd;
   padding: 20px;
 
   scroll-snap-align: center;
@@ -358,7 +358,7 @@ ul::scroll-button(*) {
 
 ul::scroll-button(*):hover,
 ul::scroll-button(*):focus {
-  color: rgb(0 0 0 / 1);
+  color: black;
 }
 
 ul::scroll-button(*):active {
@@ -380,12 +380,12 @@ ul::scroll-button(right) {
 /* Position the scroll buttons */
 
 ul {
-  anchor-name: --myCarousel;
+  anchor-name: --my-carousel;
 }
 
 ul::scroll-button(*) {
   position: absolute;
-  position-anchor: --myCarousel;
+  position-anchor: --my-carousel;
 }
 
 ul::scroll-button(left) {
@@ -402,7 +402,7 @@ ul::scroll-button(right) {
 ```css live-sample___carousel
 ol {
   position: absolute;
-  position-anchor: --myCarousel;
+  position-anchor: --my-carousel;
   top: calc(anchor(bottom) - 90px);
   justify-self: anchor-center;
   display: flex;
