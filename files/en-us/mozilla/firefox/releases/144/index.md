@@ -63,7 +63,7 @@ Firefox 144 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - {{domxref("RTCDataChannel")}} instances are now [transferrable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects), and hence can be passed to [workers](/en-US/docs/Web/API/Worker). ([Firefox bug 1209163](https://bugzil.la/1209163)).
 - The [`closing` event](/en-US/docs/Web/API/RTCDataChannel/closing_event) and the `onclosing()` event handler are now supported on the {{domxref("RTCDataChannel")}} interface. ([Firefox bug 1611953](https://bugzil.la/1611953)).
 - The {{domxref("MediaDevices/getUserMedia","getUserMedia()")}} and {{domxref("MediaDevices/getDisplayMedia","getDisplayMedia()")}} methods of the {{domxref("MediaDevices")}} interface now support the [`resizeMode`](/en-US/docs/Web/API/MediaTrackConstraints#resizemode) constraint.
-  This constraint allows developers to crop and downscale video captured from a camera to any resolution they choose, and downscale (but not crop) video captured from a screen or window. ([Firefox bug 1286945](https://bugzil.la/1286945)).
+  This constraint allows developers to crop and downscale video resolution and frame rate captured from a camera to any resolution/frame rate they choose, and downscale (but not crop) video captured from a screen or window. ([Firefox bug 1286945](https://bugzil.la/1286945)).
 
 <!-- #### Removals -->
 
