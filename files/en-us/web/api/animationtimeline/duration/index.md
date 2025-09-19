@@ -10,6 +10,8 @@ browser-compat: api.AnimationTimeline.duration
 
 The **`duration`** read-only property of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)'s {{domxref("AnimationTimeline")}} interface returns the maximum value for this timeline or `null`.
 
+Note that the derived interfaces {{domxref("ViewTimeline")}} and {{domxref("ScrollTimeline")}} always return a duration of 100%, while {{domxref("DocumentTimeline")}} has no duration, and returns `null`.
+
 ## Value
 
 A number representing the timeline's duration (the maximum value for this timeline) or `null`.
