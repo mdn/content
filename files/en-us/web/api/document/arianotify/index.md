@@ -8,7 +8,7 @@ browser-compat: api.Document.ariaNotify
 
 {{ApiRef("DOM")}}
 
-The **`ariaNotify()`** method of the {{domxref("Document")}} interface specifies that a given string of text should be announced by a {{glossary("screen reader")}}, if available and activated.
+The **`ariaNotify()`** method of the {{domxref("Document")}} interface specifies that a given string of text should be announced by a {{glossary("screen reader")}} if available and activated.
 
 ## Syntax
 
@@ -22,7 +22,7 @@ ariaNotify(annoucement, options)
 - `announcement`
   - : A string specifying the text to be announced.
 - `options` {{optional_inline}}
-  - : An object containing options. Properties can include:
+  - : An options object containing the following properties:
     - `priority`
       - : An emumerated value specifying the priority of the annoucement. Possible values are:
         - `normal`
@@ -36,14 +36,14 @@ None ({{jsxref("undefined")}}).
 
 ## Description
 
-The **`ariaNotify()`** method can be used to programmatically trigger a screen reader announcement whenever desired. This method provides similar functionality to [ARIA live regions](/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions), with some advantages:
+The **`ariaNotify()`** method can be used to programmatically trigger a screen reader announcement. This method provides similar functionality to [ARIA live regions](/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions), with some advantages:
 
 - Live regions can only make announcements following changes to the DOM, whereas an `ariaNotify()` announcement can be made at any time.
-- Live region announcements involve reading out the updated content of the changed DOM node, whereas `ariaNotify()` announcements can be customized as required.
+- Live region announcements involve reading out the updated content of the changed DOM node, whereas `ariaNotify()` announcement content can be defined independently of DOM content.
 
 Developers often work around the limitations of live regions using hidden DOM nodes with live regions set on them, which have their contents updated with the content to be announced. This is inefficient and error-prone, and `ariaNotify()` provides a way to avoid such issues.
 
-Some screen readers will read out multiple `ariaNotify()` announcments in order, but this cannot be guaranteed across all screen readers and platforms; normally, only the most recent announcement is spoken. It is more reliable to combine multiple annoucements into one.
+Some screen readers will read out multiple `ariaNotify()` announcments in order, but this cannot be guaranteed across all screen readers and platforms. Normally, only the most recent announcement is spoken. It is more reliable to combine multiple annoucements into one.
 
 For example, the following calls:
 
@@ -62,7 +62,12 @@ document.ariaNotify("Hello there. The time is now 8 o'clock.");
 
 ### Announcement priorities
 
-An `ariaNotify()` announcement with `priority: normal` set is equivalent to an announcement resulting from a change to a node with `aria-live="polite"` whereas an `ariaNotify()` announcement with `priority: high` set is equivalent to an announcement resulting from a change to a node with `aria-live="assertive"`.
+An `ariaNotify()` announcement with `priority: high` set is announced before an `ariaNotify()` announcement with `priority: normal` set.
+
+`ariaNotify()` announcements are roughly equivalent to ARIA live region announcements as follows:
+
+- `ariaNotify()` `priority: high`: `aria-live="assertive"`.
+- `ariaNotify()` `priority: normal`: `aria-live="polite"`.
 
 However, `aria-live` announcements will take priority over `ariaNotify()` announcements.
 
@@ -72,7 +77,7 @@ Screen readers choose an appropriate voice with which to read `ariaNotify()` ann
 
 ### Permissions policy integration
 
-Usage of `ariaNotify()` in a document or {{htmlelement("iframe")}} can be controlled by an {{httpheader("aria-notify", "Permissions-Policy/aria-notify")}} [Permission Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy).
+Usage of `ariaNotify()` in a document or {{htmlelement("iframe")}} can be controlled by an {{httpheader("Permissions-Policy/aria-notify", "aria-notify")}} [Permission Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy).
 
 Specifically, where a defined policy blocks usage, any announcements created using `ariaNotify()` silently fail (they will not be sent).
 
@@ -121,7 +126,7 @@ This example is a shopping list that allows you to add and remove items, and kee
 
 Our HTML features a {{htmlelement("form")}} containing two {{htmlelement("input")}} elements — one `text` input to enter item names into, and one `number` input to enter prices into. Both inputs are [`required`](/en-US/docs/Web/HTML/Reference/Attributes/required), and the `number` input has a [`step`](/en-US/docs/Web/HTML/Reference/Attributes/step) value of `0.01` to stop non-price values (like large decimals) being entered.
 
-Below the form we have an [unordered list](/en-US/docs/Web/HTML/Reference/Elements/ul) to output added items into, and a {{htmlelement("p")}} element to output the total cost into.
+Below the form we have an [unordered list](/en-US/docs/Web/HTML/Reference/Elements/ul) to render added items in, and a {{htmlelement("p")}} element to display the total cost.
 
 ```html live-sample___shopping-list
 <h1><code>ariaNotify</code> demo: shopping list</h1>
@@ -215,7 +220,7 @@ function updateTotal() {
 }
 ```
 
-Next, we define a function called `addItemToList()`. Inside the function body we first create an {{htmlelement("li")}} element to store a newly-added item. We store the item name and price in [`data-*`](/en-US/docs/Web/HTML/Reference/Global_attributes/data-*) attributes on the element, and make its text content equal to a string containing the item and price. We also create a {{htmlelement("button")}} element with text of "Remove item-name", then append the list item to the unordered list, and the button to the list item.
+Next, we define a function called `addItemToList()`. Inside the function body we first create an {{htmlelement("li")}} element to store a newly-added item. We store the item name and price in [`data-*`](/en-US/docs/Web/HTML/Reference/Global_attributes/data-*) attributes on the element, and make its text content equal to a string containing the item and price. We also create a {{htmlelement("button")}} element with text of "Remove &lt;item-name>", then append the list item to the unordered list, and the button to the list item.
 
 The second major part of the function body is a `click` event listener definition on the button. When the button is clicked, we first grab a reference to the button's parent node — the list item it is inside. We then subtract the number contained in the list item's `data-price` attribute from the `total` variable, call the `updateTotal()` function to update the shown total price, then call `ariaNotify()` to announce the item that was removed, and what the new total is. Finally, we remove the list item from the DOM.
 
@@ -248,7 +253,7 @@ function addItemToList(item, price) {
 }
 ```
 
-our final code block add a `submit` event listener to the `<form>`. Inside the handler function, we first call {{("Event.preventDefault", "preventDefault()")}} on the event object to stop the form submitting. We then call `addItemToList()` to display the new item and its price in the list, add the price to the `total` variable, call the `updateTotal()` to update the displayed total, then call `ariaNotify()` to announce the item that was added, and what the new total is. Finally, we clear out the current input field values ready for the next item to be added.
+our final code block add a `submit` event listener to the `<form>`. Inside the handler function, we first call {{domxref("Event.preventDefault", "preventDefault()")}} on the event object to stop the form submitting. We then call `addItemToList()` to display the new item and its price in the list, add the price to the `total` variable, call the `updateTotal()` to update the displayed total, then call `ariaNotify()` to announce the item that was added, and what the new total is. Finally, we clear out the current input field values ready for the next item to be added.
 
 ```js live-sample___shopping-list
 form.addEventListener("submit", (e) => {
