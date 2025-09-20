@@ -128,6 +128,13 @@ sidebar:
       - /Learn_web_development/Core/CSS_layout/Test_your_skills/Responsive_design
       - /Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension
       - /Learn_web_development/Core/CSS_layout/Test_your_skills
+      - title: Additional_tutorials
+        details: closed
+        children:
+          - /Learn_web_development/Core/CSS_layout/Multiple-column_Layout
+          - /Learn_web_development/Core/CSS_layout/Practical_positioning_examples
+          - /Learn_web_development/Core/CSS_layout/Legacy_Layout_Methods
+          - /Learn_web_development/Core/CSS_layout/Supporting_Older_Browsers
   - link: /Learn_web_development/Core/Scripting
     title: Dynamic_scripting_with_JavaScript
     details: closed
@@ -394,6 +401,7 @@ l10n:
     About: About
     Resources_for_educators: Resources for educators
     Changelog: Changelog
+    Additional_tutorials: Additional tutorials
   pt-BR:
     CSS_layout: Esquemas CSS
     Asynchronous_JavaScript: Asynchronous JavaScript
