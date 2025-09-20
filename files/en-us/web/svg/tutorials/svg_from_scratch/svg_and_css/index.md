@@ -412,7 +412,24 @@ Notes about this demonstration:
 
 Change the stylesheet so that the inner petals all turn pink when the mouse pointer is over any one of them, without changing the way the outer petals work.
 
-[See a solution to this challenge.](/en-US/docs/Learn_web_development/Core/Challenges#svg_and_css)
+<details>
+<summary>Click here to show the solution</summary>
+
+Move the position of the `:hover` pseudo-class from a specific petal, to all petals:
+
+```css
+#inner-petals {
+  --segment-fill-fill-hover: pink;
+}
+
+/* Non-standard way for some older browsers */
+#inner-petals:hover .segment-fill {
+  fill: pink;
+  stroke: none;
+}
+```
+
+</details>
 
 ## Simplified structure
 
