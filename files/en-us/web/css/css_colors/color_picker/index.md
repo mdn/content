@@ -14,14 +14,14 @@ Enter a color in any format or pick one in the sRGB {{glossary("color space")}}.
 Click the **Copy** button next to the corresponding color format to quickly copy its value. You can also click a color format name to learn more about it.
 
 ```html hidden live-sample___color-picker
-<div>
+<div class="container">
   <dialog open>
     <p>
-      <label for="color-text"
-        >Enter a color value in any format or pick a color:</label
+      <label for="color-text">
+        Enter a color value in any format or pick a color:</label
       >
-      <span
-        ><input type="text" id="color-text" /><input
+      <span class="color-inputs">
+        <input type="text" id="color-text" /><input
           type="color"
           id="color-input"
       /></span>
@@ -168,20 +168,25 @@ dialog {
   margin-top: 5vh;
   width: 550px;
 }
+
 table {
   width: 100%;
 }
+
 td,
 th {
   padding: 3px 0;
 }
+
 th {
   background-color: #ededed;
 }
+
 td {
   background-color: #dedede;
   font-family: monospace;
 }
+
 body {
   background:
     linear-gradient(
@@ -203,9 +208,16 @@ body {
   padding: 0;
   margin: 0;
 }
-div {
+
+.container {
   width: 100vw;
   height: 100vh;
+}
+
+.color-inputs {
+  display: inline-flex;
+  margin-top: 0.6rem;
+  margin-bottom: 1.5rem;
 }
 
 button {
@@ -216,6 +228,7 @@ input[type="text"] {
   width: 300px;
   margin-right: 0.5rem;
 }
+
 input[type="range"] {
   width: 350px;
 }
@@ -228,6 +241,7 @@ p {
   display: flex;
   flex-flow: column;
   align-items: center;
+  margin: 0;
 }
 ```
 
