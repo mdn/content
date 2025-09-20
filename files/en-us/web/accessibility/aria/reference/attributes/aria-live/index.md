@@ -88,3 +88,4 @@ Used in **ALL** roles.
 - [`aria-relevant`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-relevant)
 - [`aria-busy`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy)
 - [`alert` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role)
+- {{domxref("Document.ariaNotify()")}}, {{domxref("Element.ariaNotify()")}}
