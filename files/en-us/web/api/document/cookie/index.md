@@ -12,7 +12,7 @@ The {{domxref("Document")}} property `cookie` lets you read and write [cookies](
 It serves as a getter and setter for the actual values of the cookies.
 
 > [!NOTE]
-> The `document.cookie` can be a source of performance issues because it is synchronous API and may block the main thread when reading cookies across processes or performing I/O operations. Developers should consider using the asynchronous [Cookie Store API](/en-US/docs/Web/API/Cookie_Store_API) to manage cookies when possible.
+> The `document.cookie` can be a source of performance issues because it is a synchronous API and block the main thread when reading cookies across processes or performing I/O operations. Developers should if possible use the asynchronous [Cookie Store API](/en-US/docs/Web/API/Cookie_Store_API) to manage cookies.
 
 ## Value
 
