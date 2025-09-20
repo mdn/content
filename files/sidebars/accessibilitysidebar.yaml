@@ -43,9 +43,6 @@ sidebar:
       - /Web/Accessibility/ARIA/Guides/Techniques
       - /Web/Accessibility/ARIA/Guides/Multipart_labels
   - type: section
-    link: /Web/Accessibility/ARIA/How_to
-  - /Web/Accessibility/ARIA/How_to/File_ARIA-related_bugs
-  - type: section
     link: /Web/Accessibility/ARIA/Reference
     title: ARIA reference
   - type: listSubPages
