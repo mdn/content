@@ -2378,6 +2378,7 @@
         "SpeechRecognitionAlternative",
         "SpeechRecognitionErrorEvent",
         "SpeechRecognitionEvent",
+        "SpeechRecognitionPhrase",
         "SpeechRecognitionResult",
         "SpeechRecognitionResultList",
         "SpeechSynthesis",
