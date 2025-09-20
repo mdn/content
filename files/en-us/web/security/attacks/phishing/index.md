@@ -24,7 +24,7 @@ Phishing attacks are not dependent on naive or inexperienced users: decades of e
 
 ## Defenses
 
-One thing that makes phishing challenging for a website to defend against is that the target site is not involved at all in the attack. It's entirely dependent on the user being tricked by the attacker. In this section we will discuss some practices that can help, but the only one that is really effective is using [passkeys](web_authentication_passkeys) instead of passwords.
+One thing that makes phishing challenging for a website to defend against is that the target site is not involved at all in the attack. It's entirely dependent on the user being tricked by the attacker. In this section we will discuss some practices that can help, but the only one that is really effective is using [passkeys](#web_authentication_passkeys) instead of passwords.
 
 ### DNS configuration
 
