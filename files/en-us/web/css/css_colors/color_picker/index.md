@@ -11,7 +11,7 @@ This tool lets you enter or pick a color and copy its corresponding value in any
 
 Enter a color in any format or pick one in the sRGB {{glossary("color space")}}. You can also adjust the opacity (alpha channel).
 
-Click the **Copy** button next to the corresponding color format to quickly copy its value. Click on the color format names in the left column to open the corresponding MDN information page.
+Click the **Copy** button next to the corresponding color format to quickly copy its value. You can also click a color format name to learn more about it.
 
 ```html hidden live-sample___color-picker
 <div>

@@ -11,7 +11,6 @@ The two input colors, `color-one` and `color-two`, are shown on the outside, and
 
 ```html hidden live-sample___color-mixer
 <div id="color-mixer">
-  <h3>Color mixer</h3>
   <div>color-one</div>
   <div>mixed-color</div>
   <div>color-two</div>
@@ -270,7 +269,6 @@ dialog#picker-dialog table {
   display: grid;
   grid-template-columns: 150px 1fr 1fr 150px;
   grid-template-areas:
-    "header            header           header              header"
     "color-one-label   mix-label        mix-label           color-two-label"
     "color-background  color-background color-background    color-background"
     "percent-one       percent-one      percent-two         percent-two"
@@ -284,23 +282,18 @@ dialog#picker-dialog table {
 }
 
 #color-mixer > :nth-child(1) {
-  grid-area: header;
-  margin-bottom: 1rem;
-}
-
-#color-mixer > :nth-child(2) {
   grid-area: color-one-label;
 }
 
-#color-mixer > :nth-child(3) {
+#color-mixer > :nth-child(2) {
   grid-area: mix-label;
 }
 
-#color-mixer > :nth-child(4) {
+#color-mixer > :nth-child(3) {
   grid-area: color-two-label;
 }
 
-#color-mixer > :nth-child(5) {
+#color-mixer > :nth-child(4) {
   grid-area: color-background;
   background:
     linear-gradient(
@@ -353,7 +346,7 @@ dialog#picker-dialog table {
   background-color: cyan;
 }
 
-#color-mixer > :nth-child(6) {
+#color-mixer > :nth-child(5) {
   grid-area: percent-one;
   width: 100%;
   display: flex;
@@ -365,33 +358,33 @@ dialog#picker-dialog table {
   text-align: end;
 }
 
-#color-mixer > :nth-child(7) {
+#color-mixer > :nth-child(6) {
   grid-area: percent-two;
   width: 100%;
   display: flex;
 }
 
-#color-mixer > :nth-child(8) {
+#color-mixer > :nth-child(7) {
   grid-area: color-space-label;
   margin: 0.5rem 0 0 auto;
 }
 
-#color-mixer > :nth-child(9) {
+#color-mixer > :nth-child(8) {
   grid-area: color-space;
   margin: 0.5rem auto 0 1rem;
 }
 
-#color-mixer > :nth-child(10) {
+#color-mixer > :nth-child(9) {
   grid-area: interpolation-label;
   margin: 0.5rem 0 0 auto;
 }
 
-#color-mixer > :nth-child(11) {
+#color-mixer > :nth-child(10) {
   grid-area: interpolation;
   margin: 0.5rem auto 0 1rem;
 }
 
-#color-mixer > :nth-child(12) {
+#color-mixer > :nth-child(11) {
   grid-area: mix-output-text;
   margin: 1rem 0;
   padding: 1rem 0;
@@ -886,7 +879,7 @@ function init() {
 init();
 ```
 
-{{EmbedLiveSample("color-mixer", "", 850, "", "", "", "clipboard-write", "allow-popups")}}
+{{EmbedLiveSample("color-mixer", "", 760, "", "", "", "clipboard-write", "allow-popups")}}
 
 ## See also
 
