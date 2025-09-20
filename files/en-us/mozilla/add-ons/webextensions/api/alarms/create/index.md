@@ -8,6 +8,9 @@ sidebar: addonsidebar
 
 Creates a new alarm for the current browser session. An alarm may fire once or multiple times. An alarm is cleared after it fires for the last time.
 
+> [!NOTE]
+> From Chrome 117, the number of active alarms is limited to 500. When this limit is reached, alarm creation fails.
+
 ## Syntax
 
 ```js-nolint
@@ -29,7 +32,7 @@ browser.alarms.create(
 - `alarmInfo` {{optional_inline}}
   - : `object`. You can use this to specify when the alarm will initially fire, either as an absolute value (`when`), or as a delay from the time the alarm is set (`delayInMinutes`). To make the alarm recur, specify `periodInMinutes`.
 
-    On Chrome, unless the extension is loaded unpackaged, alarms it creates are not allowed to fire more than once per minute. If an extension tries to set `delayInMinutes` to a value < 1, or `when` to a value < 1 minute in the future, then the alarm will fire after 1 minute. If an extension tries to set `periodInMinutes` to a value < 1, then the alarm will fire every minute.
+    In Chrome, unless the extension is loaded unpackaged, alarms do not fire more than once every 30 seconds. If an extension sets `delayInMinutes` to a value < 0.5, or `when` to a value < 0.5, the alarm fires 30 seconds after it is set. If an extension sets `periodInMinutes` to a value < 0.5, then the alarm fires every 30 seconds. Setting `delayInMinutes` or `periodInMinutes` to < 0.5 causes a warning. Alarm firings can be arbitrarily delayed. Before Chrome 120, this limit was one minute.
 
     The `alarmInfo` object may contain the following properties:
     - `when` {{optional_inline}}
