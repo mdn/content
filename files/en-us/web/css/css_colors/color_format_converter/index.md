@@ -1,6 +1,6 @@
 ---
-title: Color picker
-slug: Web/CSS/CSS_colors/Color_picker
+title: Color format converter
+slug: Web/CSS/CSS_colors/Color_format_converter
 page-type: guide
 sidebar: cssref
 ---

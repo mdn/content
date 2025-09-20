@@ -518,7 +518,7 @@ For example, if you wanted to show the `display-p3 0 0 1` color, which is outsid
 
 Understanding `color()` is important when it comes to relative colors, discussed next. The older sRGB color notations discussed above — `hsl()`, `hwb()`, and `rgb()`— do not express the full spectrum of visible colors, while the `color()` function supports a much wider color gamut. As a result, when using the older functions types to define relative colors, the output color returned by querying {{domxref("HTMLElement.style")}} property or the {{domxref("CSSStyleDeclaration.getPropertyValue()")}} method will be a `color(srgb ...)` value.
 
-To see an example of converting the `hsl()`, `hwb()`, and `rgb()` color functions to `color()` in the `srgb` color space, check out our [color picker tool](/en-US/docs/Web/CSS/CSS_colors/Color_picker).
+To see an example of converting the `rgb()`, `hsl()`, `hwb()`, and other [color formats](/en-US/docs/Web/CSS/color_value), check out our [color format converter tool](/en-US/docs/Web/CSS/CSS_colors/Color_format_converter).
 
 ### Relative colors
 
