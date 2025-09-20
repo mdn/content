@@ -4,11 +4,11 @@ short-title: addFromString()
 slug: Web/API/SpeechGrammarList/addFromString
 page-type: web-api-instance-method
 status:
-  - experimental
+  - deprecated
 browser-compat: api.SpeechGrammarList.addFromString
 ---
 
-{{APIRef("Web Speech API")}}{{ SeeCompatTable() }}
+{{APIRef("Web Speech API")}}{{deprecated_header}}
 
 The **`addFromString()`** method of the
 {{domxref("SpeechGrammarList")}} interface takes a grammar present in a specific

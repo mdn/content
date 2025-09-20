@@ -4,11 +4,11 @@ short-title: addFromURI()
 slug: Web/API/SpeechGrammarList/addFromURI
 page-type: web-api-instance-method
 status:
-  - experimental
+  - deprecated
 browser-compat: api.SpeechGrammarList.addFromURI
 ---
 
-{{APIRef("Web Speech API")}}{{ SeeCompatTable() }}
+{{APIRef("Web Speech API")}}{{deprecated_header}}
 
 The **`addFromURI()`** method of the
 {{domxref("SpeechGrammarList")}} interface takes a grammar present at a specific URI and

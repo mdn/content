@@ -4,11 +4,11 @@ short-title: SpeechGrammarList()
 slug: Web/API/SpeechGrammarList/SpeechGrammarList
 page-type: web-api-constructor
 status:
-  - experimental
+  - deprecated
 browser-compat: api.SpeechGrammarList.SpeechGrammarList
 ---
 
-{{APIRef("Web Speech API")}}{{ SeeCompatTable() }}
+{{APIRef("Web Speech API")}}{{deprecated_header}}
 
 The **`SpeechGrammarList()`** constructor creates a new
 `SpeechGrammarList` object instance.

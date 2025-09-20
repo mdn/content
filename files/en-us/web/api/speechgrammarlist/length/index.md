@@ -4,11 +4,11 @@ short-title: length
 slug: Web/API/SpeechGrammarList/length
 page-type: web-api-instance-property
 status:
-  - experimental
+  - deprecated
 browser-compat: api.SpeechGrammarList.length
 ---
 
-{{APIRef("Web Speech API")}}{{ SeeCompatTable() }}
+{{APIRef("Web Speech API")}}{{deprecated_header}}
 
 The **`length`** read-only property of the
 {{domxref("SpeechGrammarList")}} interface returns the number of
