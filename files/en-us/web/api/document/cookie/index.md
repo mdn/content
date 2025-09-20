@@ -11,6 +11,9 @@ browser-compat: api.Document.cookie
 The {{domxref("Document")}} property `cookie` lets you read and write [cookies](/en-US/docs/Web/HTTP/Guides/Cookies) associated with the document.
 It serves as a getter and setter for the actual values of the cookies.
 
+> [!NOTE]
+> The `document.cookie` can be a source of performance issues because it is synchronous API and may block the main thread when reading cookies across processes or performing I/O operations. Developers should consider using the asynchronous [Cookie Store API](/en-US/docs/Web/API/Cookie_Store_API) to manage cookies when possible.
+
 ## Value
 
 A string containing a semicolon-separated list of all cookies (i.e., `key=value` pairs).
@@ -67,9 +70,6 @@ You can also assign to this property a string of the form `"key=value"`, specify
 
 > [!NOTE]
 > The `document.cookie` property is an [accessor property](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#description) with native _setter_ and _getter_ functions, and consequently is _not_ a [data property](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#description) with a value: what you write is not the same as what you read, everything is always mediated by the JavaScript interpreter.
-
-> [!NOTE]
-> Using the synchronous `document.cookie` API can be a source of performance issues. The [Cookie Store API](/en-US/docs/Web/API/Cookie_Store_API) can be used instead, as it provides an asynchronous way to handle cookies to avoid performance issues. See the [Cookie Store API introduction](/en-US/docs/Web/API/Cookie_Store_API) for more information.
 
 ## Examples
 
