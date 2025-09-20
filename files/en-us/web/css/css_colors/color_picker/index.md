@@ -18,17 +18,16 @@ Click the **Copy** button next to the corresponding color format to quickly copy
   <dialog open>
     <p>
       <label for="color-text">
-        Enter a color value in any format or pick a color:</label
-      >
+        Enter a color value in any format or pick a color:
+      </label>
       <span class="color-inputs">
-        <input type="text" id="color-text" /><input
-          type="color"
-          id="color-input"
-      /></span>
+        <input type="text" id="color-text" />
+        <input type="color" id="color-input" />
+      </span>
     </p>
     <p>
-      <label for="opacity-input">Adjust the opacity: </label
-      ><input
+      <label for="opacity-input">Adjust the opacity: </label>
+      <input
         type="range"
         id="opacity-input"
         value="1"
@@ -46,9 +45,9 @@ Click the **Copy** button next to the corresponding color format to quickly copy
           <th>
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/rgb"
-              target="_blank"
-              >RGB</a
-            >
+              target="_blank">
+              RGB
+            </a>
           </th>
           <td><button id="copy-rgb-button">Copy</button><span></span></td>
         </tr>
@@ -56,9 +55,9 @@ Click the **Copy** button next to the corresponding color format to quickly copy
           <th>
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/CSS/hex-color"
-              target="_blank"
-              >HEX</a
-            >
+              target="_blank">
+              HEX
+            </a>
           </th>
           <td><button id="copy-hex-button">Copy</button><span></span></td>
         </tr>
@@ -66,9 +65,9 @@ Click the **Copy** button next to the corresponding color format to quickly copy
           <th>
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/hsl"
-              target="_blank"
-              >HSL</a
-            >
+              target="_blank">
+              HSL
+            </a>
           </th>
           <td><button id="copy-hsl-button">Copy</button><span></span></td>
         </tr>
@@ -76,9 +75,9 @@ Click the **Copy** button next to the corresponding color format to quickly copy
           <th>
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/hwb"
-              target="_blank"
-              >HWB</a
-            >
+              target="_blank">
+              HWB
+            </a>
           </th>
           <td><button id="copy-hwb-button">Copy</button><span></span></td>
         </tr>
@@ -86,9 +85,9 @@ Click the **Copy** button next to the corresponding color format to quickly copy
           <th>
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/color"
-              target="_blank"
-              >color()</a
-            >
+              target="_blank">
+              color()
+            </a>
           </th>
           <td><button id="copy-color-button">Copy</button><span></span></td>
         </tr>
@@ -96,9 +95,9 @@ Click the **Copy** button next to the corresponding color format to quickly copy
           <th>
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/lab"
-              target="_blank"
-              >Lab</a
-            >
+              target="_blank">
+              Lab
+            </a>
           </th>
           <td><button id="copy-lab-button">Copy</button><span></span></td>
         </tr>
@@ -106,9 +105,9 @@ Click the **Copy** button next to the corresponding color format to quickly copy
           <th>
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/lch"
-              target="_blank"
-              >LCH</a
-            >
+              target="_blank">
+              LCH
+            </a>
           </th>
           <td><button id="copy-lch-button">Copy</button><span></span></td>
         </tr>
@@ -116,9 +115,9 @@ Click the **Copy** button next to the corresponding color format to quickly copy
           <th>
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/oklab"
-              target="_blank"
-              >Oklab</a
-            >
+              target="_blank">
+              Oklab
+            </a>
           </th>
           <td><button id="copy-oklab-button">Copy</button><span></span></td>
         </tr>
@@ -126,9 +125,9 @@ Click the **Copy** button next to the corresponding color format to quickly copy
           <th>
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/oklch"
-              target="_blank"
-              >OkLCh</a
-            >
+              target="_blank">
+              OkLCh
+            </a>
           </th>
           <td><button id="copy-oklch-button">Copy</button><span></span></td>
         </tr>
@@ -136,9 +135,9 @@ Click the **Copy** button next to the corresponding color format to quickly copy
           <th>
             <a
               href="https://developer.mozilla.org/en-US/docs/Glossary/Color_space#xyz-d50"
-              target="_blank"
-              >XYZ D50</a
-            >
+              target="_blank">
+              XYZ D50
+            </a>
           </th>
           <td><button id="copy-xyz-d50-button">Copy</button><span></span></td>
         </tr>
@@ -146,9 +145,9 @@ Click the **Copy** button next to the corresponding color format to quickly copy
           <th>
             <a
               href="https://developer.mozilla.org/en-US/docs/Glossary/Color_space#xyz"
-              target="_blank"
-              >XYZ D65</a
-            >
+              target="_blank">
+              XYZ D65
+            </a>
           </th>
           <td><button id="copy-xyz-d65-button">Copy</button><span></span></td>
         </tr>

@@ -32,18 +32,18 @@ The two input colors, `color-one` and `color-two`, are shown on the outside, and
     <label
       id="percentage-one-label"
       for="percentage-one"
-      aria-label="color one percentage"
-      >50%</label
-    >
+      aria-label="color one percentage">
+      50%
+    </label>
     <input id="percentage-one" type="range" name="percent1" step="0.01" />
   </div>
   <div>
     <label
       id="percentage-two-label"
       for="percentage-two"
-      aria-label="color two percentage"
-      >50%</label
-    >
+      aria-label="color two percentage">
+      50%
+    </label>
     <input id="percentage-two" type="range" name="percent2" step="0.01" />
   </div>
 
@@ -108,9 +108,9 @@ The two input colors, `color-one` and `color-two`, are shown on the outside, and
       <th>
         <a
           href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/rgb"
-          target="_blank"
-          >RGB</a
-        >
+          target="_blank">
+          RGB
+        </a>
       </th>
       <td><button id="copy-rgb-button">Copy</button><span></span></td>
     </tr>
@@ -128,9 +128,9 @@ The two input colors, `color-one` and `color-two`, are shown on the outside, and
       <th>
         <a
           href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/hsl"
-          target="_blank"
-          >HSL</a
-        >
+          target="_blank">
+          HSL
+        </a>
       </th>
       <td><button id="copy-hsl-button">Copy</button><span></span></td>
     </tr>
@@ -138,9 +138,9 @@ The two input colors, `color-one` and `color-two`, are shown on the outside, and
       <th>
         <a
           href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/hwb"
-          target="_blank"
-          >HWB</a
-        >
+          target="_blank">
+          HWB
+        </a>
       </th>
       <td><button id="copy-hwb-button">Copy</button><span></span></td>
     </tr>
@@ -148,9 +148,9 @@ The two input colors, `color-one` and `color-two`, are shown on the outside, and
       <th>
         <a
           href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/color"
-          target="_blank"
-          >color()</a
-        >
+          target="_blank">
+          color()
+        </a>
       </th>
       <td><button id="copy-color-button">Copy</button><span></span></td>
     </tr>
@@ -158,9 +158,9 @@ The two input colors, `color-one` and `color-two`, are shown on the outside, and
       <th>
         <a
           href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/lab"
-          target="_blank"
-          >Lab</a
-        >
+          target="_blank">
+          Lab
+        </a>
       </th>
       <td><button id="copy-lab-button">Copy</button><span></span></td>
     </tr>
@@ -168,9 +168,9 @@ The two input colors, `color-one` and `color-two`, are shown on the outside, and
       <th>
         <a
           href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/lch"
-          target="_blank"
-          >LCH</a
-        >
+          target="_blank">
+          LCH
+        </a>
       </th>
       <td><button id="copy-lch-button">Copy</button><span></span></td>
     </tr>
@@ -178,9 +178,9 @@ The two input colors, `color-one` and `color-two`, are shown on the outside, and
       <th>
         <a
           href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/oklab"
-          target="_blank"
-          >Oklab</a
-        >
+          target="_blank">
+          Oklab
+        </a>
       </th>
       <td><button id="copy-oklab-button">Copy</button><span></span></td>
     </tr>
@@ -188,9 +188,9 @@ The two input colors, `color-one` and `color-two`, are shown on the outside, and
       <th>
         <a
           href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/oklch"
-          target="_blank"
-          >OkLCh</a
-        >
+          target="_blank">
+          OkLCh
+        </a>
       </th>
       <td><button id="copy-oklch-button">Copy</button><span></span></td>
     </tr>
@@ -198,9 +198,9 @@ The two input colors, `color-one` and `color-two`, are shown on the outside, and
       <th>
         <a
           href="https://developer.mozilla.org/en-US/docs/Glossary/Color_space#xyz-d50"
-          target="_blank"
-          >XYZ D50</a
-        >
+          target="_blank">
+          XYZ D50
+        </a>
       </th>
       <td><button id="copy-xyz-d50-button">Copy</button><span></span></td>
     </tr>
@@ -208,9 +208,9 @@ The two input colors, `color-one` and `color-two`, are shown on the outside, and
       <th>
         <a
           href="https://developer.mozilla.org/en-US/docs/Glossary/Color_space#xyz"
-          target="_blank"
-          >XYZ D65</a
-        >
+          target="_blank">
+          XYZ D65
+        </a>
       </th>
       <td><button id="copy-xyz-d65-button">Copy</button><span></span></td>
     </tr>
