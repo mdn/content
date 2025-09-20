@@ -54,11 +54,17 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
       - Subtitles may contain additional content, usually extra background information. For example the text at the beginning of the Star Wars films, or the date, time, and location of a scene.
 
     - `captions`
-      - Closed captions provide a transcription and possibly a translation of audio.
+      - Closed captions provide a textual description and possibly a translation of audio.
+      - It may include important visual information such as props or actions.
+        It may indicate the cue's source (e.g., character, environment).
+      - Suitable for users who are blind.
+        
+    - `descriptions`
+      - Descriptions provide a transcription and possibly a translation of audio.
       - It may include important non-verbal information such as music cues or sound effects.
         It may indicate the cue's source (e.g., music, text, character).
       - Suitable for users who are deaf or when the sound is muted.
-
+        
     - `chapters`
       - Chapter titles are intended to be used when the user is navigating the media resource.
 
