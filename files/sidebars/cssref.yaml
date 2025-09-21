@@ -349,8 +349,8 @@ sidebar:
       - /Web/CSS/CSS_backgrounds_and_borders/Border-image_generator
       - /Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator
       - /Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator
+      - /Web/CSS/CSS_colors/Color_format_converter
       - /Web/CSS/CSS_colors/Color_mixer
-      - /Web/CSS/CSS_colors/Color_picker
       - /Web/CSS/CSS_shapes/Shape_generator
 l10n:
   de:
