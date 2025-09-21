@@ -51,68 +51,50 @@ button {
 ```
 
 ```js
-window.addEventListener("load", function setupAnimation(evt) {
-  "use strict";
-  window.removeEventListener(evt.type, setupAnimation);
+// A variable to hold a timer that drives the animation.
+let timer;
 
-  // A variable to hold a timer that drives the animation.
-  let timer;
+// Click event handlers.
+const button = document.querySelector("#animation-onoff");
+const verb = document.querySelector("strong");
+const canvas = document.getElementById("canvas-view");
+function startAnimation(evt) {
+  button.removeEventListener(evt.type, startAnimation);
+  button.addEventListener("click", stopAnimation);
+  verb.textContent = "stop";
+  // Setup animation loop by redrawing every second.
+  timer = setInterval(drawAnimation, 1000);
+  // Give immediate feedback to user after clicking, by
+  // drawing one animation frame.
+  drawAnimation();
+}
+function stopAnimation(evt) {
+  button.removeEventListener(evt.type, stopAnimation);
+  button.addEventListener("click", startAnimation);
+  verb.textContent = "start";
+  // Stop animation by clearing the timer.
+  clearInterval(timer);
+}
+// Call stopAnimation() once to set up the initial event
+// handlers for canvas and button.
+stopAnimation({ type: "click" });
 
-  // Click event handlers.
-  const button = document.querySelector("#animation-onoff");
-  const verb = document.querySelector("strong");
-  function startAnimation(evt) {
-    button.removeEventListener(evt.type, startAnimation);
-    button.addEventListener("click", stopAnimation);
-    verb.textContent = "stop";
-    // Setup animation loop by redrawing every second.
-    timer = setInterval(drawAnimation, 1000);
-    // Give immediate feedback to user after clicking, by
-    // drawing one animation frame.
-    drawAnimation();
-  }
-  function stopAnimation(evt) {
-    button.removeEventListener(evt.type, stopAnimation);
-    button.addEventListener("click", startAnimation);
-    verb.textContent = "start";
-    // Stop animation by clearing the timer.
-    clearInterval(timer);
-  }
-  // Call stopAnimation() once to set up the initial event
-  // handlers for canvas and button.
-  stopAnimation({ type: "click" });
+const gl = canvas.getContext("webgl");
+gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
+function drawAnimation() {
+  // Get a random color value using a helper function.
+  const color = getRandomColor();
+  // Set the WebGLRenderingContext clear color to the
+  // random color.
+  gl.clearColor(color[0], color[1], color[2], 1.0);
+  // Clear the context with the newly set color.
+  gl.clear(gl.COLOR_BUFFER_BIT);
+}
 
-  let gl;
-  function drawAnimation() {
-    if (!gl) {
-      const canvas = document.getElementById("canvas-view");
-      gl =
-        canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
-      if (!gl) {
-        clearInterval(timer);
-        alert(
-          "Failed to get WebGL context.\n" +
-            "Your browser or device may not support WebGL.",
-        );
-        return;
-      }
-      gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
-    }
-
-    // Get a random color value using a helper function.
-    const color = getRandomColor();
-    // Set the WebGLRenderingContext clear color to the
-    // random color.
-    gl.clearColor(color[0], color[1], color[2], 1.0);
-    // Clear the context with the newly set color.
-    gl.clear(gl.COLOR_BUFFER_BIT);
-  }
-
-  // Random color helper function.
-  function getRandomColor() {
-    return [Math.random(), Math.random(), Math.random()];
-  }
-});
+// Random color helper function.
+function getRandomColor() {
+  return [Math.random(), Math.random(), Math.random()];
+}
 ```
 
 The source code of this example is also available on [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/simple-color-animation).
