@@ -5,7 +5,7 @@ page-type: guide
 sidebar: cssref
 ---
 
-This tool lets you enter or pick a color and copy its corresponding value in any CSS [color format](/en-US/docs/Web/CSS/color_value). You can use the generated color value anywhere the {{cssxref("color_value", "&lt;color&gt;")}} data type is supported in CSS. This tool can also help you understand the syntax of the different color notations – click any color format to learn more about it.
+This tool lets you enter or pick a color and copy its corresponding value in any CSS [color format](/en-US/docs/Web/CSS/color_value). You can use the generated color value anywhere the {{cssxref("color_value", "&lt;color&gt;")}} data type is supported in CSS. This tool can also help you understand the syntax of the different color notations.
 
 ## How to use the tool
 
