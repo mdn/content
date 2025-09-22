@@ -12,24 +12,24 @@ Choosing the correct color space is important for producing desired results. Giv
 
 - If the result of physically mixing two colored lights is desired, the CIE XYZ or srgb-linear color space is appropriate, because they are linear in light intensity.
 - If colors need to be evenly spaced perceptually (such as in a gradient), the Oklab color space (and the older Lab) are appropriate, because they are designed to be perceptually uniform.
-- If avoiding graying out in color mixing is desired, i.e., maximizing chroma throughout the transition, Oklch (and the older LCH) work well.
+- If avoiding graying out in color mixing is desired, i.e., maximizing chroma throughout the transition, OkLCh (and the older LCH) work well.
 - Only use sRGB if you need to match the behavior of a specific device or software that uses sRGB. The sRGB color space is neither linear-light nor perceptually uniform, and produces poorer results such as overly dark or grayish mixes.
 
 ## Syntax
 
 ```css
-/* color-mix(in <polar-color-space>, <color>, <color> <percentage>) */
+/* Polar color space */
 color-mix(in hsl, hsl(200 50 80), coral 80%)
-/* color-mix(in <polar-color-space> <hue-interpolation-method>, <color>, <color>) */
-color-mix(in lch longer hue, hsl(200deg 50% 80%), coral)
 
-/* color-mix(in <rectangular-color-space>, <color>, <color>) */
+/* Rectangular color space */
 color-mix(in srgb, plum, #123456)
-/* color-mix(in <rectangular-color-space>, <color> <percentage>, <color> <percentage> */
 color-mix(in lab, plum 60%, #123456 50%)
 
-/* color-mix(in <custom-color-space>, <color>, <color>) */
+/* Custom color space */
 color-mix(in --swop5c, red, blue)
+
+/* With hue interpolation method */
+color-mix(in lch longer hue, hsl(200deg 50% 80%), coral)
 ```
 
 ### Values

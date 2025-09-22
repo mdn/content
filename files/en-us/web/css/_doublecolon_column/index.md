@@ -36,7 +36,7 @@ While the styling that can be applied to `::column` is very limited, it may be e
 
 ### Scrolling column layout
 
-This demo creates a responsive container that snaps each "page" of content into place. It uses the {{cssxref("columns")}} property and the `::columns` pseudo-element to create content columns that span the full width of their parent {{glossary("scroll container")}}, which can be scrolled horizontally. Each column contains one or more list items, which vary in number depending on the viewport width.
+This demo creates a responsive container that snaps each "page" of content into place. It uses the {{cssxref("columns")}} property and the `::column` pseudo-element to create content columns that span the full width of their parent {{glossary("scroll container")}}, which can be scrolled horizontally. Each column contains one or more list items, which vary in number depending on the viewport width.
 
 #### HTML
 

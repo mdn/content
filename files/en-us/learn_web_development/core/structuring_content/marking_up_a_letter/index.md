@@ -92,7 +92,7 @@ Icelandic brownian shuffle
     he thought this dance inspired modern styles such as Twerking.
 Arctic robot dance
     An interesting example of historic misinformation, English explorers in
-    the 1960s believed to have discovered a new dance style characterised by
+    the 1960s believed to have discovered a new dance style characterized by
     "robotic", stilted movements, being practiced by inhabitants of Northern
     Alaska and Canada. Later on however it was discovered that they were
     just moving like this because they were really cold.
@@ -171,7 +171,7 @@ The following live example shows what the letter should look like after being ma
 Your finished HTML should look like this:
 
 ```html live-sample___finish
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />

@@ -48,23 +48,24 @@ button {
 ```
 
 ```js
-window.addEventListener("load", setupAnimation, false);
-let gl;
-let timer;
-let rainingRect;
-let scoreDisplay;
-let missesDisplay;
-function setupAnimation(evt) {
-  window.removeEventListener(evt.type, setupAnimation, false);
-  if (!(gl = getRenderingContext())) return;
-  gl.enable(gl.SCISSOR_TEST);
+const canvas = document.querySelector("canvas");
 
-  rainingRect = new Rectangle();
-  timer = setTimeout(drawAnimation, 17);
-  document
-    .querySelector("canvas")
-    .addEventListener("click", playerClick, false);
-  [scoreDisplay, missesDisplay] = document.querySelectorAll("strong");
+const gl = getRenderingContext();
+gl.enable(gl.SCISSOR_TEST);
+let rainingRect = new Rectangle();
+
+let timer = setTimeout(drawAnimation, 17);
+canvas.addEventListener("click", playerClick);
+const [scoreDisplay, missesDisplay] = document.querySelectorAll("strong");
+
+function getRenderingContext() {
+  canvas.width = canvas.clientWidth;
+  canvas.height = canvas.clientHeight;
+  const gl = canvas.getContext("webgl");
+  gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
+  gl.clearColor(0.0, 0.0, 0.0, 1.0);
+  gl.clear(gl.COLOR_BUFFER_BIT);
+  return gl;
 }
 
 let score = 0;
@@ -138,26 +139,6 @@ class Rectangle {
 
 function getRandomVector() {
   return [Math.random(), Math.random(), Math.random()];
-}
-```
-
-```js hidden
-function getRenderingContext() {
-  const canvas = document.querySelector("canvas");
-  canvas.width = canvas.clientWidth;
-  canvas.height = canvas.clientHeight;
-  const gl =
-    canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
-  if (!gl) {
-    const paragraph = document.querySelector("p");
-    paragraph.textContent =
-      "Failed. Your browser or device may not support WebGL.";
-    return null;
-  }
-  gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
-  gl.clearColor(0.0, 0.0, 0.0, 1.0);
-  gl.clear(gl.COLOR_BUFFER_BIT);
-  return gl;
 }
 ```
 

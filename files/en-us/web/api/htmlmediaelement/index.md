@@ -17,7 +17,7 @@ The {{domxref("HTMLVideoElement")}} and {{domxref("HTMLAudioElement")}} elements
 
 _This interface also inherits properties from its ancestors {{domxref("HTMLElement")}}, {{domxref("Element")}}, {{domxref("Node")}}, and {{domxref("EventTarget")}}._
 
-- {{domxref("HTMLMediaElement.audioTracks")}}
+- {{domxref("HTMLMediaElement.audioTracks")}} {{ReadOnlyInline}}
   - : An {{domxref("AudioTrackList")}} that lists the {{domxref("AudioTrack")}} objects contained in the element.
 - {{domxref("HTMLMediaElement.autoplay")}}
   - : A boolean value that reflects the [`autoplay`](/en-US/docs/Web/HTML/Reference/Elements/video#autoplay) HTML attribute, indicating whether playback should automatically begin as soon as enough media is available to do so without interruption.

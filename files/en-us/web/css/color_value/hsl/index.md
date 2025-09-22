@@ -266,12 +266,8 @@ These variants are defined using relative colors — the `--base-color` [custom 
   --base-color: orange;
 }
 
-/* As per the spec, s and l values should resolve to a number between 0-100
-   However, Chrome 121+ incorrectly resolves them to numbers between 0-1
-   hence currently using calculations like l + 0.2 instead of l + 20 */
-
 #one {
-  background-color: hsl(from var(--base-color) h s calc(l + 0.2));
+  background-color: hsl(from var(--base-color) h s calc(l + 20));
 }
 
 #two {
@@ -279,12 +275,11 @@ These variants are defined using relative colors — the `--base-color` [custom 
 }
 
 #three {
-  background-color: hsl(from var(--base-color) h s calc(l - 0.2));
+  background-color: hsl(from var(--base-color) h s calc(l - 20));
 }
 
 /* Use @supports to add in support for old syntax that requires % units to
-   be specified in lightness calculations. This is required for
-   Safari 16.4+ */
+   be specified in lightness calculations */
 @supports (color: hsl(from red h s calc(l - 20%))) {
   #one {
     background-color: hsl(from var(--base-color) h s calc(l + 20%));
@@ -406,7 +401,7 @@ div.legacyHSLA {
 - [`lch()`](/en-US/docs/Web/CSS/color_value/lch) and [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb) color functions
 - [Hue interpolation in `color-mix()`](/en-US/docs/Web/CSS/color_value/color-mix#using_hue_interpolation_in_color-mix)
 - [List of all color notations](/en-US/docs/Web/CSS/color_value)
-- [sRGB color picker and conversion tool](/en-US/docs/Web/CSS/CSS_colors/Color_picker_tool)
+- [Color format converter tool](/en-US/docs/Web/CSS/CSS_colors/Color_format_converter)
 - [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)
 - [CSS colors](/en-US/docs/Web/CSS/CSS_colors) module
 - [Color picker tool](https://apps.colorjs.io/picker/) by Lea Verou

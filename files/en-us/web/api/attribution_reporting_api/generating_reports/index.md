@@ -225,18 +225,25 @@ To declare filters:
 1. On source registration, add a `filter_data` field to the {{httpheader("Attribution-Reporting-Register-Source")}} header that defines the filter keys you will use to filter the conversions over on the trigger side. These are completely custom fields. For example, to specify only conversions on particular subdomains, and for particular products:
 
    ```json
-   "filter_data": {
-     "conversion_subdomain": ["electronics.megastore", "electronics2.megastore"],
-     "product": ["1234"]
+   {
+     "filter_data": {
+       "conversion_subdomain": [
+         "electronics.megastore",
+         "electronics2.megastore"
+       ],
+       "product": ["1234"]
+     }
    }
    ```
 
 2. On trigger registration, add a `filters` field to the {{httpheader("Attribution-Reporting-Register-Trigger")}} header. The following, for example, causes trigger interactions to match the above source registration, as they both contain the `"electronics.megastore"` `"conversion_subdomain"` field. The `"directory"` filter on the other hand is ignored when a match is attempted, because it was not included in the above source registration.
 
    ```json
-   "filters": {
-     "conversion_subdomain": ["electronics.megastore"],
-     "directory": ["/store/electronics"]
+   {
+     "filters": {
+       "conversion_subdomain": ["electronics.megastore"],
+       "directory": ["/store/electronics"]
+     }
    }
    ```
 

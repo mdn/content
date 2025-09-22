@@ -30,13 +30,13 @@ A string value that can have either of the values:
 // We create a closed shadow root, that is not accessible
 let element = document.createElement("div");
 element.attachShadow({ mode: "closed" });
-element.shadowRoot; // null as the shadow root is closed
+console.log(element.shadowRoot); // logs null as the shadow root is closed
 
 // We create an open shadow root, that is accessible
 let element2 = document.createElement("div");
 element2.attachShadow({ mode: "open" });
 console.log(`The shadow is ${element2.shadowRoot.mode}`); // logs "The shadow is open"
-element2.shadowRoot.textContent("Opened shadow"); // The shadow is open, we can access it from outside
+element2.shadowRoot.textContent = "Opened shadow"; // The shadow is open, we can access it from outside
 ```
 
 ## Specifications

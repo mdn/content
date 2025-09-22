@@ -16,6 +16,10 @@ Environment variables provide values that can be used on the page based on infor
 
 - {{cssxref("env")}}
 
+### Data types
+
+- [`<environment-variable-name>`](/en-US/docs/Web/CSS/CSS_environment_variables/Using_environment_variables#browser-defined_environment_variables)
+
 ## Guides
 
 - [Using environment variables](/en-US/docs/Web/CSS/CSS_environment_variables/Using_environment_variables)
@@ -23,9 +27,12 @@ Environment variables provide values that can be used on the page based on infor
 
 ## Related concepts
 
+- [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries) module
 - [custom properties](/en-US/docs/Web/CSS/--*)
 - {{cssxref("var")}}
 - {{domxref("VirtualKeyboard")}} interface
+- [`display_override`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/display_override) manifest field
+  [Window Controls Overlay API](/en-US/docs/Web/API/Window_Controls_Overlay_API) and {{domxref("WindowControlsOverlay"))}} interface
 
 ## Specifications
 

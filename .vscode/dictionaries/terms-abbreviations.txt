@@ -190,6 +190,7 @@ EBNF
 ECSDA
 editability
 effectful
+elytra
 Emscripting
 encrypter
 engageable
@@ -273,11 +274,13 @@ greenify
 greyscale
 gzipping
 halfwidth
+halteres
 harissa
 HDCP
 headworn
 highlightable
 HILN
+hindwings
 hissy
 hitbox
 hitmap
@@ -338,6 +341,7 @@ JXON
 KACST
 Kbit
 Kbps
+kettlebell
 keysyms
 keyterm
 keyterms
@@ -465,12 +469,14 @@ overlines
 overscript
 overscripts
 overscrolling
+overtype
 packetization
 packetizer
 packetizing
 paintable
 pantherina
 papermakers
+parasitoids
 parentless
 passwordless
 pathfinding
@@ -670,6 +676,7 @@ spinlocks
 spoofable
 spritesheet
 spritesheets
+squircle
 SSML
 ssthresh
 STIX
@@ -777,7 +784,6 @@ tileset
 timebox
 timecode
 timecodes
-timerange
 timeslice
 timeslices
 timestep

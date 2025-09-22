@@ -128,22 +128,19 @@ the wrap must occur.
 
 ### JavaScript
 
-The following code is run within a handler for the {{domxref("Window", "window")}}'s
-{{domxref("Window.load_event", "load")}} event. It uses the image's
+The following code uses the image's
 {{domxref("HTMLImageElement.currentSrc", "currentSrc")}} property to fetch and display
 the URL selected by the browser from the `srcset`.
 
 ```js
-window.addEventListener("load", () => {
-  const box = document.querySelector(".box");
-  const image = box.querySelector("img");
+const box = document.querySelector(".box");
+const image = box.querySelector("img");
 
-  const newElem = document.createElement("p");
-  newElem.textContent = "Image: ";
-  newElem.appendChild(document.createElement("code")).textContent =
-    image.currentSrc;
-  box.appendChild(newElem);
-});
+const newElem = document.createElement("p");
+newElem.textContent = "Image: ";
+newElem.appendChild(document.createElement("code")).textContent =
+  image.currentSrc;
+box.appendChild(newElem);
 ```
 
 ### Result

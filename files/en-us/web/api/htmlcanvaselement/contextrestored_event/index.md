@@ -33,14 +33,10 @@ The code fragment below detects the context restored event.
 ```js
 const canvas = document.getElementById("canvas");
 
-canvas.addEventListener(
-  "contextrestored",
-  (e) => {
-    console.log(e);
-    // call to redrawCanvas() or similar
-  },
-  false,
-);
+canvas.addEventListener("contextrestored", (e) => {
+  console.log(e);
+  // call to redrawCanvas() or similar
+});
 ```
 
 ## Specifications
