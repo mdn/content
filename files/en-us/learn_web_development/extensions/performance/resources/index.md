@@ -1,6 +1,6 @@
 ---
 title: Web performance resources
-slug: Learn_web_development/Extensions/Performance/Web_Performance_Basics
+slug: Learn_web_development/Extensions/Performance/Resources
 page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
