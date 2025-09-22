@@ -129,7 +129,7 @@ For example, `top span-left` spans the top-center and top-left grid cells.
 If only a single physical keyword is specified in the `position-area` value, the other value is implied as follows:
 
 - `left`, `right`, `top`, or `bottom`
-  - : The other value defaults to [`span-all`](#span-all_2), causing the element to span all three tiles of the grid or row it was initially placed in. For example, `left` is equivalent to `left span-all`.
+  - : The other value defaults to [`span-all`](#span-all_2), causing the element to span all three tiles of the column or row it was initially placed in. For example, `left` is equivalent to `left span-all`.
 
 - `center`, `span-left`, `span-right`, `span-top`, or `span-bottom`
   - : The other value defaults to `center`. For example, `span-left` is equivalent to `center span-left` and `center` is equivalent to `center center`.
