@@ -304,7 +304,7 @@ Using child or sibling combinators limits the scope of the inner selector, reduc
 
 Certain inner selectors can force the browser to traverse up the ancestor chain for every DOM mutation, looking for potential anchors that might need updating. This happens when the structure implies a need to check ancestors of the mutated element.
 
-In this example, any DOM change requires checking if the changed element is the `*` (any element) that is a direct child of `.foo`, and if its parent (or further ancestors) is `.ancestor`.
+In this example, any DOM change requires checking if the changed element is any element (`*`) that is a direct child of `.foo`, and if its parent (or further ancestors) is `.ancestor`.
 
 ```css example-bad
 /* Might trigger ancestor traversal */
@@ -313,7 +313,7 @@ In this example, any DOM change requires checking if the changed element is the 
 }
 ```
 
-Constraining the inner selector with specific classes or direct child combinators (e.g., `.specific-child` in the next snippet) reduces expensive ancestor traversals by limiting the browser's check to a well defined element, improving performance.
+Constraining the inner selector with specific classes or direct child combinators (e.g., `.specific-child` in the next snippet) reduces expensive ancestor traversals by limiting the browser's check to a well-defined element, improving performance.
 
 ```css example-good
 /* Constrain the inner selector to avoid ancestor traversals */
