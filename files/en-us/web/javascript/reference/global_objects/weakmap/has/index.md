@@ -10,6 +10,9 @@ sidebar: jsref
 The **`has()`** method of {{jsxref("WeakMap")}} instances returns a boolean indicating whether an
 element with the specified key exists in this `WeakMap` or not.
 
+> [!NOTE]
+> `has()` uses the [SameValue](https://tc39.es/ecma262/multipage/abstract-operations.html#sec-samevalue) implementation and compares object [reference](/en-US/docs/Glossary/Object_reference) equality.
+
 {{InteractiveExample("JavaScript Demo: WeakMap.prototype.has()")}}
 
 ```js interactive-example
