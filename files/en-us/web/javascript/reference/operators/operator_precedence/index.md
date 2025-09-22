@@ -221,11 +221,11 @@ console.log(C() || B() && A());
 Only `C()` is evaluated, despite `&&` having higher precedence. This does not mean that `||` has higher precedence in this case — it's exactly _because_ `(B() && A())` has higher precedence that causes it to be neglected as a whole. If it's re-arranged as:
 
 ```js-nolint
-console.log(A() && C() || B());
+console.log(A() && B() || C());
 // Logs:
 // called A
-// called B
-// false
+// called C
+// true
 ```
 
 Then the short-circuiting effect of `&&` would only prevent `C()` from being evaluated, but because `A() && C()` as a whole is `false`, `B()` would still be evaluated.
