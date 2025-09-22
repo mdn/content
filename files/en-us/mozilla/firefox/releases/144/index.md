@@ -56,7 +56,7 @@ Firefox 144 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ### APIs
 
-- The [`lock()`](/en-US/docs/Web/API/ScreenOrientation/lock) and [`unlock()`](https://developer.mozilla.org/en-US/docs/Web/API/ScreenOrientation/unlock) methods of the {{domxref("ScreenOrientation")}} interface are now supported for Android and for Windows tablets. ([Firefox bug 1983483](https://bugzil.la/1983483))
+- The [`lock()`](/en-US/docs/Web/API/ScreenOrientation/lock) and [`unlock()`](/en-US/docs/Web/API/ScreenOrientation/unlock) methods of the {{domxref("ScreenOrientation")}} interface are now supported for Android and for Windows tablets. ([Firefox bug 1983483](https://bugzil.la/1983483))
 
 <!-- #### DOM -->
 
