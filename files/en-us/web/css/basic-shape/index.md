@@ -86,7 +86,7 @@ The parameters common across the syntax of some basic shape functions include:
 
 ### Syntax for rectangles: `<basic-shape-rect>`
 
-The `<basic-shape-rect>` type represents the basic-shape functions limited to creating rectangles, including {{cssxref("basic-shape/inset","inset()")}}, {{cssxref("basic-shape/rect","rect()")}}, and {{cssxref("basic-shape/xywh","xywh()")}}.
+The `<basic-shape-rect>` type, a subset of the `<basic-shape>` type, represents the basic-shape functions limited to creating rectangles, including {{cssxref("basic-shape/inset","inset()")}}, {{cssxref("basic-shape/rect","rect()")}}, and {{cssxref("basic-shape/xywh","xywh()")}}.
 
 The [`polygon()`](/en-US/docs/Web/CSS/basic-shape/polygon), [`path()`](/en-US/docs/Web/CSS/basic-shape/path), and [`shape()`](/en-US/docs/Web/CSS/basic-shape/shape) functions can also be used to create rectangles, but are not limited to only four-sided, right-angled shapes.
 
