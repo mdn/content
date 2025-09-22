@@ -6,7 +6,8 @@ browser-compat: html.elements.audio
 sidebar: htmlsidebar
 ---
 
-The **`<audio>`** [HTML](/en-US/docs/Web/HTML) element is used to embed sound content in documents. It may contain one or more audio sources, represented using the `src` attribute or the {{HTMLElement("source")}} element: the browser will choose the most suitable one. It can also be the destination for streamed media, using a {{domxref("MediaStream")}}.
+The **`<audio>`** [HTML](/en-US/docs/Web/HTML) element is used to embed sound content in documents. It may contain one or more audio sources, represented using the `src` attribute or the {{HTMLElement("source")}} element: the browser will choose the most suitable one.
+It can also be the destination for streamed media, using a {{domxref("MediaStream")}}.
 
 {{InteractiveExample("HTML Demo: &lt;audio&gt;", "tabbed-standard")}}
 
@@ -24,7 +25,8 @@ figure {
 }
 ```
 
-The above example shows basic usage of the `<audio>` element. In a similar manner to the {{htmlelement("img")}} element, we include a path to the media we want to embed inside the `src` attribute; we can include other attributes to specify information such as whether we want it to autoplay and loop, whether we want to show the browser's default audio controls, etc.
+The above example shows basic usage of the `<audio>` element.
+In a similar manner to the {{htmlelement("img")}} element, we include a path to the media we want to embed inside the `src` attribute; we can include other attributes to specify information such as whether we want it to autoplay and loop, whether we want to show the browser's default audio controls, etc.
 
 The content inside the opening and closing `<audio></audio>` tags is shown as a fallback in browsers that don't support the element.
 
@@ -36,7 +38,10 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
   - : A Boolean attribute: if specified, the audio will automatically begin playback as soon as it can do so, without waiting for the entire audio file to finish downloading.
 
     > [!NOTE]
-    > Sites that automatically play audio (or videos with an audio track) can be an unpleasant experience for users, so should be avoided when possible. If you must offer autoplay functionality, you should make it opt-in (requiring a user to specifically enable it). However, this can be useful when creating media elements whose source will be set at a later time, under user control. See our [autoplay guide](/en-US/docs/Web/Media/Guides/Autoplay) for additional information about how to properly use autoplay.
+    > Sites that automatically play audio (or videos with an audio track) can be an unpleasant experience for users, so should be avoided when possible.
+    > If you must offer autoplay functionality, you should make it opt-in (requiring a user to specifically enable it).
+    > However, this can be useful when creating media elements whose source will be set at a later time, under user control.
+    > See our [autoplay guide](/en-US/docs/Web/Media/Guides/Autoplay) for additional information about how to properly use autoplay.
 
 - `controls`
   - : If this attribute is present, the browser will offer controls to allow the user to control audio playback, including volume, seeking, and pause/resume playback.
@@ -83,167 +88,48 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
 
 ## Events
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Event name</th>
-      <th scope="col">Fired when</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{domxref("ScriptProcessorNode/audioprocess_event", "audioprocess")}} {{Deprecated_Inline}}
-      </td>
-      <td>
-        The input buffer of a {{DOMxRef("ScriptProcessorNode")}} is
-        ready to be processed.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.canplay_event", 'canplay')}}
-      </td>
-      <td>
-        The browser can play the media, but estimates that not enough data has
-        been loaded to play the media up to its end without having to stop for
-        further buffering of content.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.canplaythrough_event", 'canplaythrough')}}
-      </td>
-      <td>
-        The browser estimates it can play the media up to its end without
-        stopping for content buffering.
-      </td>
-    </tr>
-    <tr>
-      <td>{{domxref("OfflineAudioContext/complete_event", "complete")}}</td>
-      <td>
-        The rendering of an {{DOMxRef("OfflineAudioContext")}} is
-        terminated.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.durationchange_event", 'durationchange')}}
-      </td>
-      <td>The <code>duration</code> attribute has been updated.</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.emptied_event", 'emptied')}}
-      </td>
-      <td>
-        The media has become empty; for example, this event is sent if the media
-        has already been loaded (or partially loaded), and the
-        {{domxref("HTMLMediaElement.load")}} method is called to
-        reload it.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.ended_event", 'ended')}}
-      </td>
-      <td>Playback has stopped because the end of the media was reached.</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.loadeddata_event", 'loadeddata')}}
-      </td>
-      <td>The first frame of the media has finished loading.</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.loadedmetadata_event", 'loadedmetadata')}}
-      </td>
-      <td>The metadata has been loaded.</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.loadstart_event", 'loadstart')}}
-      </td>
-      <td>Fired when the browser has started to load the resource.</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.pause_event", 'pause')}}
-      </td>
-      <td>Playback has been paused.</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.play_event", 'play')}}
-      </td>
-      <td>Playback has begun.</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.playing_event", 'playing')}}
-      </td>
-      <td>
-        Playback is ready to start after having been paused or delayed due to
-        lack of data.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.ratechange_event", 'ratechange')}}
-      </td>
-      <td>The playback rate has changed.</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.seeked_event", 'seeked')}}
-      </td>
-      <td>A <em>seek</em> operation completed.</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.seeking_event", 'seeking')}}
-      </td>
-      <td>A <em>seek</em> operation began.</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.stalled_event", 'stalled')}}
-      </td>
-      <td>
-        The user agent is trying to fetch media data, but data is unexpectedly
-        not forthcoming.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.suspend_event", 'suspend')}}
-      </td>
-      <td>Media data loading has been suspended.</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.timeupdate_event", 'timeupdate')}}
-      </td>
-      <td>
-        The time indicated by the <code>currentTime</code> attribute has been
-        updated.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.volumechange_event", 'volumechange')}}
-      </td>
-      <td>The volume has changed.</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.waiting_event", 'waiting')}}
-      </td>
-      <td>Playback has stopped because of a temporary lack of data</td>
-    </tr>
-  </tbody>
-</table>
+- {{domxref("ScriptProcessorNode/audioprocess_event", "audioprocess")}} {{Deprecated_Inline}}
+  - : The input buffer of a {{DOMxRef("ScriptProcessorNode")}} is ready to be processed.
+- {{domxref("HTMLMediaElement.canplay_event", 'canplay')}}
+  - : The browser can play the media, but estimates that not enough data has been loaded to play the media up to its end without having to stop for further buffering of content.
+- {{domxref("HTMLMediaElement.canplaythrough_event", 'canplaythrough')}}
+  - : The browser estimates it can play the media up to its end without stopping for content buffering.
+- {{domxref("OfflineAudioContext/complete_event", "complete")}}
+  - : The rendering of an {{DOMxRef("OfflineAudioContext")}} is terminated.
+- {{domxref("HTMLMediaElement.durationchange_event", 'durationchange')}}
+  - : The `duration` attribute has been updated.
+- {{domxref("HTMLMediaElement.emptied_event", 'emptied')}}
+  - : The media has become empty; for example, this event is sent if the media has already been loaded (or partially loaded), and the {{domxref("HTMLMediaElement.load")}} method is called to reload it.
+- {{domxref("HTMLMediaElement.ended_event", 'ended')}}
+  - : Playback has stopped because the end of the media was reached.
+- {{domxref("HTMLMediaElement.loadeddata_event", 'loadeddata')}}
+  - : The first frame of the media has finished loading.
+- {{domxref("HTMLMediaElement.loadedmetadata_event", 'loadedmetadata')}}
+  - : The metadata has been loaded.
+- {{domxref("HTMLMediaElement.loadstart_event", 'loadstart')}}
+  - : Fired when the browser has started to load the resource.
+- {{domxref("HTMLMediaElement.pause_event", 'pause')}}
+  - : Playback has been paused.
+- {{domxref("HTMLMediaElement.play_event", 'play')}}
+  - : Playback has begun.
+- {{domxref("HTMLMediaElement.playing_event", 'playing')}}
+  - : Playback is ready to start after having been paused or delayed due to lack of data.
+- {{domxref("HTMLMediaElement.ratechange_event", 'ratechange')}}
+  - : The playback rate has changed.
+- {{domxref("HTMLMediaElement.seeked_event", 'seeked')}}
+  - : A _seek_ operation completed.
+- {{domxref("HTMLMediaElement.seeking_event", 'seeking')}}
+  - : A _seek_ operation began.
+- {{domxref("HTMLMediaElement.stalled_event", 'stalled')}}
+  - : The user agent is trying to fetch media data, but data is unexpectedly not forthcoming.
+- {{domxref("HTMLMediaElement.suspend_event", 'suspend')}}
+  - : Media data loading has been suspended.
+- {{domxref("HTMLMediaElement.timeupdate_event", 'timeupdate')}}
+  - : The time indicated by the `currentTime` attribute has been updated.
+- {{domxref("HTMLMediaElement.volumechange_event", 'volumechange')}}
+  - : The volume has changed.
+- {{domxref("HTMLMediaElement.waiting_event", 'waiting')}}
+  - : Playback has stopped because of a temporary lack of data.
 
 ## Usage notes
 
