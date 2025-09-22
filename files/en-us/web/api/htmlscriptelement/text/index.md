@@ -16,7 +16,7 @@ browser-compat: api.HTMLScriptElement.text
 > See [Security considerations](#security_considerations) for more information.
 
 The **`text`** property of the {{domxref("HTMLScriptElement")}} interface represents the inline text content of the script element.
-It acts the same way as the {{domxref("Node.textContent","textContent")}} property.
+It acts the same way as the {{domxref("HTMLScriptElement.textContent","textContent")}} property.
 
 ## Value
 
@@ -35,10 +35,10 @@ Note that if the {{domxref('HTMLScriptElement/src','src')}} property is set the 
 
 ### `text` vs `textContent` vs `innerText`
 
-The `text` and {{domxref("Node.textContent", "textContent")}} properties of `HTMLScriptElement` are equivalent: both can be set with a string or a `TrustedScript` type and both return a string representing the content of the script element.
+The `text` and {{domxref("HTMLScriptElement.textContent", "textContent")}} properties of `HTMLScriptElement` are equivalent: both can be set with a string or a `TrustedScript` type and both return a string representing the content of the script element.
 The main difference is that {{domxref("Node.textContent", "textContent")}} is also defined on {{domxref("Node")}} and can be used with other elements to set their content with a string.
 
-{{domxref("HTMLElement.innerText", "innerText")}} will generally set and execute the text in the same way as the other methods, but may return a slightly different value.
+{{domxref("HTMLScriptElement.innerText", "innerText")}} will generally set and execute the text in the same way as the other methods, but may return a slightly different value.
 The reason for this is that this property is designed for getting the rendered text of a string of HTML markup.
 When setting the value the text is treated as a text node, which normalizes the string as if it were visible text (collapsing spaces and converting `\n` to line breaks).
 This does not change the execution of the text, but it does alter the text that is stored and returned.
@@ -141,5 +141,5 @@ console.log(el.textContent); // Output: "console.log(10);"
 
 ## See also
 
-- {{domxref("Node.textContent")}}
-- {{domxref("HTMLElement.innerText")}}
+- {{domxref("HTMLScriptElement.textContent")}}
+- {{domxref("HTMLScriptElement.innerText")}}
