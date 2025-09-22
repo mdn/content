@@ -9,7 +9,7 @@ browser-compat:
 sidebar: urlsidebar
 ---
 
-**Text fragments** allow linking directly to a specific portion of text in a web document, without requiring the author to annotate it with an ID, using particular syntax in the URL fragment. Supporting browsers are free to choose how to draw attention to the linked text, e.g., with a color highlight and/or scrolling to the content on the page. This is useful because it allows web content authors to deep-link to other content they don't control, without relying on the presence of IDs to make that possible. Building on top of that, it could be used to generate more effective content-sharing links for users to pass to one another.
+**Text fragments** link directly to specific text in a web page, without requiring the page author to add an ID. They use a special syntax in the URL fragment. This feature lets you create deep links to content you don't control, which may not have associated IDs. It also makes sharing links more useful by directly point others to specific words. Browsers may differ in how they draw attention to the linked text—usually, the text is scrolled into view and highlighted with color.
 
 ## Concepts and usage
 
