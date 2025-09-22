@@ -193,7 +193,7 @@ function stopEvent(event) {
 }
 
 const elem = document.getElementById("tbl1");
-elem.addEventListener("click", stopEvent, false);
+elem.addEventListener("click", stopEvent);
 
 document.getElementById("t-daddy").addEventListener("click", () => {
   console.log("t-daddy clicked");
@@ -204,7 +204,7 @@ document.getElementById("t-daddy").addEventListener("click", () => {
 
 ## Example 6: getComputedStyle
 
-This example demonstrates how the {{domxref("window.getComputedStyle")}} method can be used to get the styles of an element that are not set using the `style` attribute or with JavaScript (e.g., `elt.style.backgroundColor="rgb(173 216 230)"`). These latter types of styles can be retrieved with the more direct {{domxref("HTMLElement.style", "elt.style")}} property, whose properties are listed in the [DOM CSS Properties List](/en-US/docs/Web/CSS/Reference).
+This example demonstrates how the {{domxref("window.getComputedStyle")}} method can be used to get the styles of an element that are not set using the `style` attribute or with JavaScript (e.g., `elt.style.backgroundColor="lightblue"`). These latter types of styles can be retrieved with the more direct {{domxref("HTMLElement.style", "elt.style")}} property, whose properties are listed in the [DOM CSS Properties List](/en-US/docs/Web/CSS/Reference).
 
 `getComputedStyle()` returns a {{domxref("CSSStyleDeclaration")}} object, whose individual style properties can be referenced with this object's {{domxref("CSSStyleDeclaration.getPropertyValue()", "getPropertyValue()")}} method, as the following example document shows.
 
@@ -226,7 +226,7 @@ This example demonstrates how the {{domxref("window.getComputedStyle")}} method 
 ```css
 #d1 {
   margin-left: 10px;
-  background-color: rgb(173 216 230);
+  background-color: lightblue;
   height: 20px;
   max-width: 20px;
 }
@@ -282,14 +282,14 @@ thead {
   font-weight: bold;
 }
 td {
-  padding: 2px 10px 2px 10px;
+  padding: 2px 10px;
 }
 
 .odd {
   background-color: #efdfef;
 }
 .even {
-  background-color: #ffffff;
+  background-color: white;
 }
 ```
 
@@ -327,9 +327,7 @@ function showEventProperties(e) {
   document.body.appendChild(table);
 }
 
-window.onload = (event) => {
-  showEventProperties(event);
-};
+showEventProperties(event);
 ```
 
 {{EmbedLiveSample("example_7_displaying_event_object_properties", "", "300")}}

@@ -4,9 +4,10 @@ slug: Web/CSS/:-moz-drag-over
 page-type: css-pseudo-class
 status:
   - non-standard
+sidebar: cssref
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 The **`:-moz-drag-over`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that matches an element when a {{domxref("HTMLElement/dragover_event", "dragover")}} event is called on it.
 
@@ -41,21 +42,17 @@ For more information, see [Drag operations: Specifying drop targets](/en-US/docs
 ```js
 const target = document.getElementById("drop-target");
 /* dragenter event fired on the drop target */
-target.addEventListener(
-  "dragenter",
-  (event) => {
-    // prevent default to allow drop
-    event.preventDefault();
-  },
-  false,
-);
+target.addEventListener("dragenter", (event) => {
+  // prevent default to allow drop
+  event.preventDefault();
+});
 ```
 
 ### CSS
 
 ```css
 body {
-  font-family: arial;
+  font-family: Arial;
 }
 div {
   display: inline-block;

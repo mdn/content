@@ -3,9 +3,8 @@ title: border-bottom-width
 slug: Web/CSS/border-bottom-width
 page-type: css-property
 browser-compat: css.properties.border-bottom-width
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`border-bottom-width`** [CSS](/en-US/docs/Web/CSS) property sets the width of the bottom border of an element.
 
@@ -42,7 +41,7 @@ border-bottom-width: 0;
 ```css interactive-example
 #example-element {
   background-color: palegreen;
-  color: #000;
+  color: black;
   border: 0 solid crimson;
   padding: 0.75em;
   width: 80%;

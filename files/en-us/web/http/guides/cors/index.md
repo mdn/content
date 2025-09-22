@@ -3,9 +3,8 @@ title: Cross-Origin Resource Sharing (CORS)
 slug: Web/HTTP/Guides/CORS
 page-type: guide
 browser-compat: http.headers.Access-Control-Allow-Origin
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 **Cross-Origin Resource Sharing** ({{Glossary("CORS")}}) is an {{Glossary("HTTP")}}-header based mechanism that allows a server to indicate any {{glossary("origin", "origins")}} (domain, scheme, or port) other than its own from which a browser should permit loading resources. CORS also relies on a mechanism by which browsers make a "preflight" request to the server hosting the cross-origin resource, in order to check that the server will permit the actual request. In that preflight, the browser sends headers that indicate the HTTP method and headers that will be used in the actual request.
 
@@ -359,11 +358,14 @@ Also note that any `Set-Cookie` response header in a response would not set a co
 
 #### Third-party cookies
 
-Note that cookies set in CORS responses are subject to normal third-party cookie policies. In the example above, the page is loaded from `foo.example` but the `Cookie` header in the response is sent by `bar.other`, and would thus not be saved if the user's browser is configured to reject all third-party cookies.
+Note that cookies set in CORS responses are subject to normal third-party cookie policies. In the example above, the page is loaded from `foo.example` but the `Set-Cookie` header in the response is sent by `bar.other`, and would thus not be saved if the user's browser is configured to reject all third-party cookies.
 
-Cookie in the request may also be suppressed in normal third-party cookie policies. The enforced cookie policy may therefore nullify the capability described in this chapter, effectively preventing you from making credentialed requests whatsoever.
+Cookies set in CORS requests and responses are subject to normal third-party cookie policies.
 
-Cookie policy around the [SameSite](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) attribute would apply.
+Third-party cookie policies may prevent third party cookies being sent in requests, effectively stopping a site from making credentialed requests even if permitted by the third party server (using `Access-Control-Allow-Credentials`).
+The default policy differs between browsers, but may be set using the [SameSite](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) attribute.
+
+Even if credentialed requests are allowed, a browser may be configured to reject all third-party cookies in responses.
 
 ## The HTTP response headers
 

@@ -3,9 +3,8 @@ title: "@supports"
 slug: Web/CSS/@supports
 page-type: css-at-rule
 browser-compat: css.at-rules.supports
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`@supports`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) lets you specify CSS declarations that depend on a browser's support for CSS features.
 Using this at-rule is commonly called a _feature query_.
@@ -279,10 +278,12 @@ ul:has(> li li) {
 The following example applies the CSS style if the browser supports the `COLRv1` font technology:
 
 ```css
-@import url("https://fonts.googleapis.com/css2?family=Bungee+Spice");
+@import "https://fonts.googleapis.com/css2?family=Bungee+Spice";
 
 @supports font-tech(color-COLRv1) {
-  font-family: "Bungee Spice";
+  p {
+    font-family: "Bungee Spice", fantasy;
+  }
 }
 ```
 
@@ -305,8 +306,10 @@ The following example applies the CSS style if the browser supports the `woff2` 
 
 ```css
 @supports font-format(woff2) {
-  font-family: "Open Sans";
-  src: url("open-sans.woff2") format("woff2");
+  p {
+    font-family: "Open Sans", sans-serif;
+    src: url("open-sans.woff2") format("woff2");
+  }
 }
 ```
 

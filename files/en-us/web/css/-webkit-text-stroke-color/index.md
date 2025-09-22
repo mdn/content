@@ -3,9 +3,8 @@ title: -webkit-text-stroke-color
 slug: Web/CSS/-webkit-text-stroke-color
 page-type: css-property
 browser-compat: css.properties.-webkit-text-stroke-color
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`-webkit-text-stroke-color`** [CSS](/en-US/docs/Web/CSS) property specifies the stroke [color](/en-US/docs/Web/CSS/color_value) of characters of text. If this property is not set, the value of the {{cssxref("color")}} property is used.
 
@@ -56,7 +55,7 @@ p {
   margin: 0;
   font-size: 4em;
   -webkit-text-stroke-width: 3px;
-  -webkit-text-stroke-color: #ff0000; /* Can be changed in the live sample */
+  -webkit-text-stroke-color: red; /* Can be changed in the live sample */
 }
 ```
 

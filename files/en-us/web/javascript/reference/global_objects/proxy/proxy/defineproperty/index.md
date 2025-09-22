@@ -4,16 +4,15 @@ short-title: defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Proxy.handler.defineProperty
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`handler.defineProperty()`** method is a trap for the `[[DefineOwnProperty]]` [object internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods), which is used by operations such as {{jsxref("Object.defineProperty()")}}.
 
 {{InteractiveExample("JavaScript Demo: handler.defineProperty()", "taller")}}
 
 ```js interactive-example
-const handler1 = {
+const handler = {
   defineProperty(target, key, descriptor) {
     invariant(key, "define");
     return true;
@@ -26,10 +25,10 @@ function invariant(key, action) {
   }
 }
 
-const monster1 = {};
-const proxy1 = new Proxy(monster1, handler1);
+const monster = {};
+const proxy = new Proxy(monster, handler);
 
-console.log((proxy1._secret = "easily scared"));
+console.log((proxy._secret = "easily scared"));
 // Expected output: Error: Invalid attempt to define private "_secret" property
 ```
 

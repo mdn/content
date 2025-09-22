@@ -3,9 +3,8 @@ title: "<script>: The Script element"
 slug: Web/HTML/Reference/Elements/script
 page-type: html-element
 browser-compat: html.elements.script
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<script>`** [HTML](/en-US/docs/Web/HTML) element is used to embed executable code or data; this is typically used to embed or refer to JavaScript code. The `<script>` element can also be used with other languages, such as [WebGL](/en-US/docs/Web/API/WebGL_API)'s GLSL shader programming language and [JSON](/en-US/docs/Glossary/JSON).
 
@@ -53,8 +52,11 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) for more details.
 
 - `blocking`
-  - : This attribute explicitly indicates that certain operations should be blocked on the fetching of the script. The operations that are to be blocked must be a space-separated list of blocking tokens listed below.
+  - : This attribute explicitly indicates that certain operations should be blocked until the script has executed. The operations that are to be blocked must be a space-separated list of blocking tokens. Currently there is only one token:
     - `render`: The rendering of content on the screen is blocked.
+
+    > [!NOTE]
+    > Only `script` elements in the document's `<head>` can possibly block rendering. Scripts are not render-blocking by default; if a `script` element does not include `type="module"`, `async`, or `defer`, then it blocks _parsing_, not _rendering_. If such a `script` element is added dynamically via script, you must set `blocking = "render"` for it to block rendering.
 
 - [`crossorigin`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin)
   - : Normal `script` elements pass minimal information to the {{domxref('Window.error_event', 'window.onerror')}} for scripts which do not pass the standard {{Glossary("CORS")}} checks. To allow error logging for sites which use a separate domain for static media, use this attribute. See [CORS settings attributes](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) for a more descriptive explanation of its valid arguments.

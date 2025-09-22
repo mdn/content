@@ -2,9 +2,8 @@
 title: Introduction to CSS masking
 slug: Web/CSS/CSS_masking/Masking
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 CSS masking enables you to reveal or hide parts of an element selectively by applying one or more mask images to it. These mask images can be gradients, images, or SVG sources. Unlike [CSS clipping](/en-US/docs/Web/CSS/CSS_masking/Clipping), which either fully shows or hides areas of an element based on the shape of a single path, masking allows for nuanced transparency and blending effects based on the alpha transparency and, optionally, luminance of the mask images.
 
@@ -23,7 +22,7 @@ With alpha masks, the color of the mask is irrelevant. Only the opacity of the m
 
 Masks can be defined using CSS gradients, raster images (such as PNGs), and SVG {{svgelement("mask")}} elements. In this guide, we introduce the various mask image types as we discuss [opaqueness and transparency](#opaqueness_versus_transparency), [luminance](#alpha_transparency_versus_luminance), and [masking versus CSS clipping](#svg_mask_as_mask_source).
 
-Each mask layer consists of a {{cssxref("mask-image")}}, which is [positioned](/en-US/docs/Web/CSS/mask-position) relative to an origin box. The mask images can be [sized](/en-US/docs/Web/CSS/mask-size), [repeated](/en-US/docs/Web/CSS/mask-repeat), and [clipped](/en-US/docs/Web/CSS/mask-clip). In cases where multiple mask images are declared, the way the [mask layers are composited](/en-US/docs/Web/CSS/mask-composite), or combined, can be set. These are discussed in the [masking properties guide](/en-US/docs/Web/CSS/CSS_masking/CSS_mask_properties).
+Each mask layer consists of a {{cssxref("mask-image")}}, which is [positioned](/en-US/docs/Web/CSS/mask-position) relative to an origin box. The mask images can be [sized](/en-US/docs/Web/CSS/mask-size), [repeated](/en-US/docs/Web/CSS/mask-repeat), and [clipped](/en-US/docs/Web/CSS/mask-clip). In cases where multiple mask images are declared, the way the [mask layers are composited](/en-US/docs/Web/CSS/mask-composite), or combined, can be set. These are discussed in the [masking properties guide](/en-US/docs/Web/CSS/CSS_masking/Mask_properties).
 
 > [!NOTE]
 > All examples will be using the following image as the underlying element upon which masks will be applied:
@@ -46,8 +45,8 @@ body {
   gap: 20px;
   padding: 15px;
   background-image:
-    linear-gradient(to right, rgb(0 0 0 / 0) 50%, rgb(0 0 0 / 0.05) 50%),
-    linear-gradient(to bottom, rgb(0 0 0 / 0) 50%, rgb(0 0 0 / 0.05) 50%);
+    linear-gradient(to right, transparent 50%, rgb(0 0 0 / 0.05) 50%),
+    linear-gradient(to bottom, transparent 50%, rgb(0 0 0 / 0.05) 50%);
   background-size: 20px 20px;
 }
 div,
@@ -60,16 +59,18 @@ img {
 
 With alpha masks, the visible areas of an element are defined by the alpha-transparency of the mask applied to it. Wherever the mask is fully opaque, the element will be visible. At every pixel where the mask is fully transparent, the element too will be fully hidden. Areas of the element that are masked by a partially opaque section of a mask will be partially opaque, matching the opacity of the mask applied to it.
 
+### With gradients
+
 To demonstrate this, let's look at an example using a {{cssxref("conic-gradient")}} as the `mask-image`. CSS gradients, including conic gradients, can be used to create smooth transitions between visible and hidden areas.
 
 In this case, the top-right corner of the mask is fully opaque, the top-left quadrant is fully transparent, and the bottom half has a smooth transition between opaque and transparent.
 
 ```css live-sample___gradient1
 .applied-mask {
-  mask-image: conic-gradient(rgb(0 0 0 / 1) 90deg, rgb(0 0 0 / 0) 270deg);
+  mask-image: conic-gradient(black 90deg, transparent 270deg);
 }
 .mask-source {
-  background: conic-gradient(rgb(0 0 0 / 1) 90deg, rgb(0 0 0 / 0) 270deg);
+  background: conic-gradient(black 90deg, transparent 270deg);
 }
 ```
 
@@ -83,16 +84,16 @@ With alpha masks, the color of the mask doesn't matter, only the transparency. I
 .applied-mask {
   mask-image: repeating-linear-gradient(
     to bottom right,
-    #f00 0 20px,
-    #f005 20px 40px,
+    red 0 20px,
+    #ff000055 20px 40px,
     transparent 40px 60px
   );
 }
 .mask-source {
   background: repeating-linear-gradient(
     to bottom right,
-    #f00 0 20px,
-    #f005 20px 40px,
+    red 0 20px,
+    #ff000055 20px 40px,
     transparent 40px 60px
   );
 }
@@ -102,17 +103,19 @@ Note how the fully opaque mask areas reveal fully opaque element pixels, semi-tr
 
 {{EmbedLiveSample("gradient2", "", "250px")}}
 
+### With imported images
+
 The previous two examples used gradients as masks and background images. The mask image doesn't have to be a CSS image. It can be an external image or an SVG.
 
 In this case we use an external PNG. The image contains a colorful heart with a transparent background.
 
 ```css live-sample___image1 live-sample___luminance1
 .applied-mask {
-  mask-image: url(https://mdn.github.io/shared-assets/images/examples/colorful-heart.png);
+  mask-image: url("https://mdn.github.io/shared-assets/images/examples/colorful-heart.png");
   mask-size: 220px 220px;
 }
 .mask-source {
-  background: url(https://mdn.github.io/shared-assets/images/examples/colorful-heart.png);
+  background: url("https://mdn.github.io/shared-assets/images/examples/colorful-heart.png");
   background-size: 220px 220px;
 }
 ```
@@ -201,12 +204,12 @@ In this example, we have a white moon against a black night sky.
 
 ```css live-sample___luminance3
 .applied-mask {
-  mask-image: url(https://mdn.github.io/shared-assets/images/examples/moon.jpg);
+  mask-image: url("https://mdn.github.io/shared-assets/images/examples/moon.jpg");
   mask-mode: luminance;
   mask-size: 220px;
 }
 .mask-source {
-  background: url(https://mdn.github.io/shared-assets/images/examples/moon.jpg);
+  background: url("https://mdn.github.io/shared-assets/images/examples/moon.jpg");
   background-size: 220px;
 }
 ```
@@ -257,10 +260,10 @@ In this example, we define an SVG with a `<mask>` element, an identical {{SVGEle
 
 ```css live-sample___svg1
 .applied-mask {
-  mask-image: url(#mask-heart);
+  mask-image: url("#mask-heart");
 }
 .applied-clip {
-  clip-path: url(#clip-heart);
+  clip-path: url("#clip-heart");
 }
 ```
 
@@ -290,4 +293,6 @@ If all you need are shapes, clipping may suffice. But if you need fading, variab
 ## See also
 
 - [Introduction to CSS clipping](/en-US/docs/Web/CSS/CSS_masking/Clipping)
+- [CSS `mask` properties](/en-US/docs/Web/CSS/CSS_masking/Mask_properties)
+- [Declaring multiple masks](/en-US/docs/Web/CSS/CSS_masking/Multiple_masks)
 - [CSS masking](/en-US/docs/Web/CSS/CSS_masking) module

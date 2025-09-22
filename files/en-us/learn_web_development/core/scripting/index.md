@@ -36,7 +36,7 @@ Before starting this module, you don't need any previous JavaScript knowledge, b
 - [Arrays](/en-US/docs/Learn_web_development/Core/Scripting/Arrays)
   - : In this lesson we'll look at arrays — a neat way of storing a list of data items under a single variable name. Here we look at why this is useful, then explore how to create an array, retrieve, add, and remove items stored in an array, and more besides.
 - [Challenge: Silly story generator](/en-US/docs/Learn_web_development/Core/Scripting/Silly_story_generator) <sup>Challenge</sup>
-  - : In this challenge, you'll be tasked with taking some of the knowledge you've picked up in this module's articles and applying it to creating a fun app that generates random silly stories. Have fun!
+  - : In this challenge you are tasked with taking some of the knowledge you've picked up in this module so far and applying it to creating a fun app that generates random silly stories. Along the way, we'll test your knowledge of variables, math, strings, and arrays.
 - [Making decisions in your code — conditionals](/en-US/docs/Learn_web_development/Core/Scripting/Conditionals)
   - : In any programming language, the code needs to make decisions and carry out actions accordingly depending on different inputs. For example, in a game, if the player's number of lives is 0, then it's game over. In a weather app, if it is being looked at in the morning, show a sunrise graphic; show stars and a moon if it is nighttime. In this article, we'll explore how so-called conditional statements work in JavaScript.
 - [Looping code](/en-US/docs/Learn_web_development/Core/Scripting/Loops)
@@ -61,10 +61,14 @@ Before starting this module, you don't need any previous JavaScript knowledge, b
   - : Another very common task in modern websites and applications is making network requests to retrieve individual data items from the server to update sections of a webpage without having to load an entire new page. This seemingly small detail has had a huge impact on the performance and behavior of sites, so in this article, we'll explain the concept and look at technologies that make it possible.
 - [Working with JSON](/en-US/docs/Learn_web_development/Core/Scripting/JSON)
   - : JavaScript Object Notation (JSON) is a standard text-based format for representing structured data based on JavaScript object syntax. It is commonly used for transmitting data in web applications (e.g., sending some data from the server to the client, so it can be displayed on a web page, or vice versa). You'll come across it quite often, so in this article, we give you all you need to work with JSON using JavaScript, including parsing JSON so you can access data within it, and creating JSON.
+- [Challenge: Building a house data UI](/en-US/docs/Learn_web_development/Core/Scripting/House_data_UI) <sup>Challenge</sup>
+  - : In this challenge we are going to get you to write some JavaScript for a house search page on a property website. This will include fetching JSON data, filtering that data based on the values entered in provided form controls, and rendering that data to the UI. Along the way, we'll also test your knowledge of conditionals, loops, arrays and array methods, and more besides.
 - [JavaScript debugging and error handling](/en-US/docs/Learn_web_development/Core/Scripting/Debugging_JavaScript)
   - : In this lesson, we will return to the subject of debugging JavaScript (which we first looked at in [What went wrong?](/en-US/docs/Learn_web_development/Core/Scripting/What_went_wrong)). Here we will delve deeper into techniques for tracking down errors, but also look at how to code defensively and handle errors in your code, avoiding problems in the first place.
-- [Test your skills: JavaScript](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills)
-  - : This page lists JavaScript tests you can try so you can verify if you've understood the content in this module.
+
+## Test your skills
+
+You will find "Test your skills" articles placed between the tutorial articles to check whether you have retained the most important information before you move on. If you want to explore all of these together, you can find them listed at [Test your skills: JavaScript](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills).
 
 ## See also
 

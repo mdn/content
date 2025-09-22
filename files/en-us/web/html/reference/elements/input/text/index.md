@@ -3,9 +3,8 @@ title: <input type="text">
 slug: Web/HTML/Reference/Elements/input/text
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_text
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 {{HTMLElement("input")}} elements of type **`text`** create basic single-line text fields.
 
@@ -266,7 +265,7 @@ This renders like so:
 
 {{EmbedLiveSample('Making_input_required', 600, 100)}}
 
-If you try to submit the form with no search term entered into it, the browser will show an error message.
+If you try to submit the form with no username entered into it, the browser will show an error message.
 
 ### Input value length
 
@@ -358,7 +357,7 @@ div {
 
 p {
   font-size: 80%;
-  color: #999;
+  color: #999999;
 }
 
 input + span {

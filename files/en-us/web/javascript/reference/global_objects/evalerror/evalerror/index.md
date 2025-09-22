@@ -4,9 +4,8 @@ short-title: EvalError()
 slug: Web/JavaScript/Reference/Global_Objects/EvalError/EvalError
 page-type: javascript-constructor
 browser-compat: javascript.builtins.EvalError.EvalError
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`EvalError()`** constructor creates {{jsxref("EvalError")}} objects.
 

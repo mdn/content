@@ -536,6 +536,10 @@
       "inh": "CSSRule",
       "impl": []
     },
+    "CSSCustomMediaRule": {
+      "inh": "CSSRule",
+      "impl": []
+    },
     "CSSFontFaceDescriptors": {
       "inh": "CSSStyleDeclaration",
       "impl": []
@@ -1134,6 +1138,10 @@
     },
     "FetchEvent": {
       "inh": "ExtendableEvent",
+      "impl": []
+    },
+    "FetchLaterResult": {
+      "inh": "",
       "impl": []
     },
     "File": {
@@ -1744,6 +1752,10 @@
       "inh": "HTMLElement",
       "impl": []
     },
+    "HTMLSelectedContentElement": {
+      "inh": "HTMLElement",
+      "impl": []
+    },
     "HTMLSelectElement": {
       "inh": "HTMLElement",
       "impl": []
@@ -1850,6 +1862,10 @@
     },
     "IDBOpenDBRequest": {
       "inh": "IDBRequest",
+      "impl": []
+    },
+    "IDBRecord": {
+      "inh": "",
       "impl": []
     },
     "IDBRequest": {
@@ -2320,6 +2336,10 @@
       "inh": "EventTarget",
       "impl": []
     },
+    "NavigationPrecommitController": {
+      "inh": "",
+      "impl": []
+    },
     "NavigationPreloadManager": {
       "inh": "",
       "impl": []
@@ -2764,6 +2784,10 @@
       "inh": "",
       "impl": []
     },
+    "QuotaExceededError": {
+      "inh": "DOMException",
+      "impl": []
+    },
     "RadioNodeList": {
       "inh": "NodeList",
       "impl": []
@@ -3153,10 +3177,6 @@
       "impl": []
     },
     "SpeechRecognitionPhrase": {
-      "inh": "",
-      "impl": []
-    },
-    "SpeechRecognitionPhraseList": {
       "inh": "",
       "impl": []
     },

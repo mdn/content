@@ -3,9 +3,8 @@ title: ::before
 slug: Web/CSS/::before
 page-type: css-pseudo-element
 browser-compat: css.selectors.before
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 In CSS, **`::before`** creates a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) that is the first child of the selected element. It is often used to add cosmetic content to an element with the {{cssxref("content")}} property. It is inline by default.
 
@@ -13,7 +12,7 @@ In CSS, **`::before`** creates a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-ele
 
 ```css interactive-example
 a {
-  color: #0000ff;
+  color: blue;
   text-decoration: none;
 }
 
@@ -179,15 +178,11 @@ li.done::before {
 
 ```js
 const list = document.querySelector("ul");
-list.addEventListener(
-  "click",
-  (ev) => {
-    if (ev.target.tagName === "LI") {
-      ev.target.classList.toggle("done");
-    }
-  },
-  false,
-);
+list.addEventListener("click", (ev) => {
+  if (ev.target.tagName === "LI") {
+    ev.target.classList.toggle("done");
+  }
+});
 ```
 
 Here is the above code example running live. Note that there are no icons used, and the check-mark is actually the `::before` that has been styled in CSS. Go ahead and get some stuff done.
@@ -238,7 +233,7 @@ li[aria-current="step"]::before {
 
 ### `::before::marker` nested pseudo-elements
 
-The `::before::marker` [nested pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements#nesting_pseudo-elements) selects the list {{CSSxRef("::marker")}} of an `::after` pseudo-element that is itself a list item, that is, it has its {{CSSxRef("display")}} property set to `list-item`.
+The `::before::marker` [nested pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements#nesting_pseudo-elements) selects the list {{CSSxRef("::marker")}} of a `::before` pseudo-element that is itself a list item, that is, it has its {{CSSxRef("display")}} property set to `list-item`.
 
 In this demo, we generate extra [list items](/en-US/docs/Web/HTML/Reference/Elements/li) before and after a list navigation menu using `::before` and `::after` (setting them to `display: list-item` so they behave like list items). We then use `ul::before::marker` and `ul::after::marker` to give their list markers a different color.
 

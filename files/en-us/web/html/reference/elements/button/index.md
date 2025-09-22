@@ -3,9 +3,8 @@ title: "<button>: The Button element"
 slug: Web/HTML/Reference/Elements/button
 page-type: html-element
 browser-compat: html.elements.button
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<button>`** [HTML](/en-US/docs/Web/HTML) element is an interactive element activated by a user with a mouse, keyboard, finger, voice command, or other assistive technology. Once activated, it then performs an action, such as submitting a [form](/en-US/docs/Learn_web_development/Extensions/Forms) or opening a dialog.
 
@@ -24,15 +23,15 @@ By default, HTML buttons are presented in a style resembling the platform the {{
   padding: 0 20px;
   font-size: 1rem;
   text-align: center;
-  color: #fff;
-  text-shadow: 1px 1px 1px #000;
+  color: white;
+  text-shadow: 1px 1px 1px black;
   border-radius: 10px;
-  background-color: rgb(220 0 0);
+  background-color: tomato;
   background-image: linear-gradient(
     to top left,
     rgb(0 0 0 / 0.2),
     rgb(0 0 0 / 0.2) 30%,
-    rgb(0 0 0 / 0)
+    transparent
   );
   box-shadow:
     inset 2px 2px 3px rgb(255 255 255 / 0.6),
@@ -58,27 +57,27 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
   - : This Boolean attribute specifies that the button should have input [focus](/en-US/docs/Web/API/HTMLElement/focus) when the page loads. **Only one element in a document can have this attribute.**
 
 - `command`
-  - : Specifies the action to be performed on an element being controlled by a control `<button>`, specified via the `commandfor` attribute. The possible values are:
+  - : Specifies the action to be performed on an element being controlled by a control `<button>` specified via the `commandfor` attribute. The possible values are:
     - `"show-modal"`
-      - : The button will show a {{htmlelement("dialog")}} as modal. If the dialog is already modal, no action will be taken. This is a declarative equivalent of calling the [`.showModal()`](/en-US/docs/Web/API/HTMLDialogElement/showModal) method on the dialog element.
+      - : The button will show a {{htmlelement("dialog")}} as modal. If the dialog is already modal, no action will be taken. This is a declarative equivalent of calling the {{domxref("HTMLDialogElement.showModal()")}} method on the `<dialog>` element.
     - `"close"`
-      - : The button will close a {{htmlelement("dialog")}} element. If the dialog is already closed, no action will be taken. This is a declarative equivalent of calling the [`.close()`](/en-US/docs/Web/API/HTMLDialogElement/close) method on the dialog element.
+      - : The button will close a {{htmlelement("dialog")}} element. If the dialog is already closed, no action will be taken. This is a declarative equivalent of calling the {{domxref("HTMLDialogElement.close()")}} method on the `<dialog>` element.
     - `"request-close"`
-      - : The button will request to close a {{htmlelement("dialog")}} element. If the dialog is already closed, no action will be taken. This is a declarative equivalent of calling the [`.requestClose()`](/en-US/docs/Web/API/HTMLDialogElement/requestClose) method on the dialog element.
+      - : The button will trigger a {{domxref("HTMLDialogElement.cancel_event", "cancel")}} event on a {{htmlelement("dialog")}} element to request that the browser dismiss it, followed by a {{domxref("HTMLDialogElement.close_event", "close")}} event. This differs from the `close` command in that authors can call {{domxref("Event.preventDefault()")}} on the `cancel` event to prevent the `<dialog>` from closing. If the dialog is already closed, no action will be taken. This is a declarative equivalent of calling the {{domxref("HTMLDialogElement.requestClose()")}} method on the `<dialog>` element.
     - `"show-popover"`
-      - : The button will show a hidden popover. If you try to show an already showing popover, no action will be taken. See {{domxref("Popover API", "Popover API", "", "nocode")}} for more details. This is equivalent to [`popovertargetaction`](#popovertargetaction) with the value `"show"`. This is a declarative equivalent of calling the [`.showPopover()`](/en-US/docs/Web/API/HTMLElement/showPopover) method on the popover element.
+      - : The button will show a hidden popover. If you try to show an already showing popover, no action will be taken. See {{domxref("Popover API", "Popover API", "", "nocode")}} for more details. This is equivalent to setting a value of `show` for the [`popovertargetaction`](#popovertargetaction) attribute, and also provides a declarative equivalent to calling the {{domxref("HTMLElement.showPopover()")}} method on the popover element.
     - `"hide-popover"`
-      - : The button will hide a showing popover. If you try to hide an already hidden popover, no action will be taken. See {{domxref("Popover API", "Popover API", "", "nocode")}} for more details. This is equivalent to [`popovertargetaction`](#popovertargetaction) with the value `"hide"`. This is a declarative equivalent of calling the [`.hidePopover()`](/en-US/docs/Web/API/HTMLElement/hidePopover) method on the popover element.
+      - : The button will hide a showing popover. If you try to hide an already hidden popover, no action will be taken. See {{domxref("Popover API", "Popover API", "", "nocode")}} for more details. This is equivalent to setting a value of `hide` for the [`popovertargetaction`](#popovertargetaction) attribute, and also provides a declarative equivalent to calling the {{domxref("HTMLElement.hidePopover()")}} method on the popover element.
     - `"toggle-popover"`
-      - : The button will toggle a popover between showing and hidden. If the popover is hidden, it will be shown; if the popover is showing, it will be hidden. See {{domxref("Popover API", "Popover API", "", "nocode")}} for more details. This is equivalent to [`popovertargetaction`](#popovertargetaction) with the value `"toggle"`. This is a declarative equivalent of calling the [`.togglePopover()`](/en-US/docs/Web/API/HTMLElement/togglePopover) method on the popover element.
+      - : The button will toggle a popover between showing and hidden. If the popover is hidden, it will be shown; if the popover is showing, it will be hidden. See {{domxref("Popover API", "Popover API", "", "nocode")}} for more details. This is equivalent to setting a value of `toggle` for the [`popovertargetaction`](#popovertargetaction) attribute, and also provides a declarative equivalent to calling the {{domxref("HTMLElement.togglePopover()")}} method on the popover element.
     - Custom values
       - : This attribute can represent custom values that are prefixed with a two hyphen characters (`--`). Buttons with a custom value will dispatch the {{domxref("CommandEvent")}} on the controlled element.
 
 - `commandfor`
-  - : Turns a `<button>` element into a command button, controlling the given interactive element; takes the ID of the element to control as its value. This is a more general version of [`popovertarget`](#popovertarget).
+  - : Turns a `<button>` element into a command button, controlling a given interactive element by issuing the command specified in the button's [`command`](#command) attribute. The `commandfor` attribute takes the ID of the element to control as its value. This is a more general version of [`popovertarget`](#popovertarget).
 - [`disabled`](/en-US/docs/Web/HTML/Reference/Attributes/disabled)
   - : This Boolean attribute prevents the user from interacting with the button: it cannot be pressed or focused.
-- `form`
+- [`form`](/en-US/docs/Web/HTML/Reference/Attributes/form)
   - : The {{HTMLElement("form")}} element to associate the button with (its _form owner_). The value of this attribute must be the `id` of a `<form>` in the same document. (If this attribute is not set, the `<button>` is associated with its ancestor `<form>` element, if any.)
 
     This attribute lets you associate `<button>` elements to `<form>`s anywhere in the document, not just inside a `<form>`. It can also override an ancestor `<form>` element.
@@ -163,7 +162,7 @@ To give an icon button an accessible name, put text in the `<button>` element th
 
 ```html
 <button name="favorite">
-  <svg fill="#000000" viewBox="0 0 42 42">
+  <svg fill="black" viewBox="0 0 42 42">
     <path
       d="M21,1c1.081,0,5.141,12.315,6.201,13.126s13.461,1.053,13.791,2.137 c0.34,1.087-9.561,8.938-9.961,10.252c-0.409,1.307,
       3.202,13.769,2.331,14.442c-0.879,0.673-11.05-6.79-12.361-6.79 c-1.311,0-11.481,7.463-12.36,6.79c-0.871-0.674,2.739-13.136,

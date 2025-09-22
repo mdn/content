@@ -2,9 +2,8 @@
 title: HTTP messages
 slug: Web/HTTP/Guides/Messages
 page-type: guide
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 **HTTP messages** are the mechanism used to exchange data between a server and a client in the HTTP protocol.
 There are two types of messages: **requests** sent by the client to trigger an action on the server, and **responses**, the answer that the server sends in response to a request.
@@ -14,7 +13,7 @@ Applications such as a browser, proxy, or web server use software designed to cr
 How messages are created or transformed is controlled via APIs in browsers, configuration files for proxies or servers, or other interfaces.
 
 In HTTP protocol versions up to HTTP/2, messages are text-based, and are relatively straightforward to read and understand after you've familiarized yourself with the format.
-In HTTP/2, messages are wrapped in binary framing, which makes them slightly harder to read without certain tools.
+In HTTP/2, messages are wrapped in binary framing, which makes them slightly harder to read.
 However the underlying semantics of the protocol are the same, so you can learn the structure and meaning of HTTP messages based on the text-based format of HTTP/1.x messages, and apply this understanding to HTTP/2 and beyond.
 
 This guide uses HTTP/1.1 messages for readability, and explains the structure of HTTP messages using the HTTP/1.1 format.
@@ -186,16 +185,17 @@ Location: http://example.com/users/123
 The start-line (`HTTP/1.1 201 Created` above) is called a "status line" in responses, and has three parts:
 
 ```http
-<protocol> <status-code> <status-text>
+<protocol> <status-code> <reason-phrase>
 ```
 
 - `<protocol>`
-  - : The _HTTP version_ of the remaining message.
+  - : The _HTTP version_ of the message.
 - `<status-code>`
   - : A numeric [status code](/en-US/docs/Web/HTTP/Reference/Status) that indicates whether the request succeeded or failed.
     Common status codes are {{HTTPStatus("200")}}, {{HTTPStatus("404")}}, or {{HTTPStatus("302")}}.
-- `<status-text>`
-  - : The status text is a brief, purely informational, textual description of the status code to help a human understand the HTTP message.
+- `<reason-phrase>` {{optional_inline}}
+  - : The optional text after the status code is a brief, purely informational, text description of the status to help a human understand the outcome of a request.
+    The reason phrase is occasionally included in parentheses (e.g., "201 (Created)") to indicate that it's optional.
 
 ### Response headers
 
@@ -234,7 +234,7 @@ You can compress message bodies using `gzip` or other compression algorithms, bu
 Headers are often similar or identical in a client-server interaction, but they are repeated in successive messages on a connection.
 There are many known methods to compress repetitive text that are very efficient, which leaves a large amount of bandwidth savings unutilized.
 
-HTTP/1.x also has a problem called head-of-line (HOL) blocking, where a client has to wait for a response from the server before sending the next request.
+HTTP/1.x also has a problem called [head-of-line (HOL) blocking](/en-US/docs/Glossary/Head_of_line_blocking), where a client has to wait for a response from the server before sending the next request.
 HTTP [pipelining](/en-US/docs/Web/HTTP/Guides/Connection_management_in_HTTP_1.x#http_pipelining) tried to work around this, but poor support and complexity means it's rarely used and difficult to get right.
 Several connections need to be opened to send requests concurrently; and warm (established and busy) connections are more efficient than cold ones due to TCP slow start.
 

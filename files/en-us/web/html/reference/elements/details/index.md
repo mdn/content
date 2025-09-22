@@ -3,9 +3,8 @@ title: "<details>: The Details disclosure element"
 slug: Web/HTML/Reference/Elements/details
 page-type: html-element
 browser-compat: html.elements.details
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<details>`** [HTML](/en-US/docs/Web/HTML) element creates a disclosure widget in which information is visible only when the widget is toggled into an open state. A summary or label must be provided using the {{HTMLElement("summary")}} element.
 
@@ -22,7 +21,7 @@ A disclosure widget is typically presented onscreen using a small triangle that 
 
 ```css interactive-example
 details {
-  border: 1px solid #aaa;
+  border: 1px solid #aaaaaa;
   border-radius: 4px;
   padding: 0.5em 0.5em 0;
 }
@@ -38,7 +37,7 @@ details[open] {
 }
 
 details[open] summary {
-  border-bottom: 1px solid #aaa;
+  border-bottom: 1px solid #aaaaaa;
   margin-bottom: 0.5em;
 }
 ```
@@ -181,7 +180,7 @@ details {
 details > summary {
   padding: 2px 6px;
   width: 15em;
-  background-color: #ddd;
+  background-color: #dddddd;
   border: none;
   box-shadow: 3px 3px 4px black;
   cursor: pointer;
@@ -189,14 +188,14 @@ details > summary {
 
 details > p {
   border-radius: 0 0 10px 10px;
-  background-color: #ddd;
+  background-color: #dddddd;
   padding: 2px 6px;
   margin: 0;
   box-shadow: 3px 3px 4px black;
 }
 
 details:open > summary {
-  background-color: #ccf;
+  background-color: #ccccff;
 }
 ```
 

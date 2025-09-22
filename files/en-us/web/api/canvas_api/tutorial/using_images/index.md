@@ -117,10 +117,8 @@ You can also use frames from a video being presented by a {{HTMLElement("video")
 ```js
 function getMyVideo() {
   const canvas = document.getElementById("canvas");
-  if (canvas.getContext) {
-    const ctx = canvas.getContext("2d");
-    return document.getElementById("myVideo");
-  }
+  const ctx = canvas.getContext("2d");
+  return document.getElementById("myVideo");
 }
 ```
 
@@ -141,11 +139,7 @@ Once we have a reference to our source image object we can use the `drawImage()`
 In the following example, we will use an external image as the backdrop for a small line graph. Using backdrops can make your script considerably smaller because we can avoid the need for code to generate the background. In this example, we're only using one image, so I use the image object's `load` event handler to execute the drawing statements. The `drawImage()` method places the backdrop at the coordinate (0, 0), which is the top-left corner of the canvas.
 
 ```html hidden
-<html lang="en">
-  <body>
-    <canvas id="canvas" width="180" height="150"></canvas>
-  </body>
-</html>
+<canvas id="canvas" width="180" height="150"></canvas>
 ```
 
 ```js
@@ -186,11 +180,7 @@ In this example, we'll use an image as a wallpaper and repeat it several times o
 > Images can become blurry when scaling up or grainy if they're scaled down too much. Scaling is probably best not done if you've got some text in it which needs to remain legible.
 
 ```html hidden
-<html lang="en">
-  <body>
-    <canvas id="canvas" width="150" height="150"></canvas>
-  </body>
-</html>
+<canvas id="canvas" width="150" height="150"></canvas>
 ```
 
 ```js
@@ -324,7 +314,7 @@ And here's some CSS to make things look nice:
 
 ```css
 body {
-  background: 0 -100px repeat-x url(bg_gallery.png) #4f191a;
+  background: 0 -100px repeat-x url("bg_gallery.png") #4f191a;
   margin: 10px;
 }
 

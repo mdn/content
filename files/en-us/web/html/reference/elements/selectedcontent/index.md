@@ -4,53 +4,49 @@ slug: Web/HTML/Reference/Elements/selectedcontent
 page-type: html-element
 status:
   - experimental
-  - non-standard
 browser-compat: html.elements.selectedcontent
+sidebar: htmlsidebar
 ---
 
-{{HTMLSidebar}}{{SeeCompatTable}}{{non-standard_header}}
+{{SeeCompatTable}}
 
-The **`<selectedcontent>`** [HTML](/en-US/docs/Web/HTML) element can be used to display the content of the currently selected `<option>` inside a closed `<select>` element.
+The **`<selectedcontent>`** [HTML](/en-US/docs/Web/HTML) is used inside a {{htmlelement("select")}} element to display the contents of its currently selected {{htmlelement("option")}} within its first child {{htmlelement("button")}}. This enables you to style all parts of a `<select>` element, referred to as "[customizable selects](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select)".
 
 ## Attributes
 
-The `<selectedcontent>` element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes), but they will essentially be ignored because when used correctly as a child of a select button, the element is rendered [inert](/en-US/docs/Web/HTML/Reference/Global_attributes/inert).
-
-The select button and all its content are inert by default so that if interactive children (for example, links or buttons) are included inside it, it will still be treated like a single button for interaction purposes.
-
-No other attributes are defined on `<selectedcontent>`.
+This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 ## Description
 
-When creating a [Customizable select element](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select), you can include the `<selectedcontent>` element inside a {{htmlelement("button")}} element, which in turn needs to be the first child of the `<select>` element:
+You use the `<selectedcontent>` element as the only child of a {{htmlelement("button")}} element, which must be the first child of the {{htmlelement("select")}} element. Any {{htmlelement("option")}} element, the only other valid child of `<select>`, must come after the `<button>` and nested `<selectedcontent>` pair.
 
 ```html
 <select>
   <button>
     <selectedcontent></selectedcontent>
   </button>
-
+  <option></option>
   ...
 </select>
 ```
 
-`<selectedcontent>` contains a clone of a {{htmlelement("select")}} element's currently-selected {{htmlelement("option")}} element content, created using {{domxref("Node.cloneNode", "cloneNode()")}} under the hood.
+### How `<selectedcontent>` works behind the scenes
 
-Any subsequent `<select>` content will be included in the drop-down picker.
-
-Whenever the `<select>` element's selected `<option>` switches from one option to another, the `<selectedcontent>` element's content is removed and replaced by a new cloned copy of the DOM structure of the newly selected `<option>`, which is created using {{domxref("Node.cloneNode", "cloneNode()")}}.
-Dynamic modifications to the selected `<option>` element's content made after the `<select>` element has been created are not automatically cloned to the `<selectedcontent>` element, and must be manually updated by the developer.
+The `<selectedcontent>` element contains a clone of the content of the currently selected {{htmlelement("option")}}. The browser renders this clone using {{domxref("Node.cloneNode", "cloneNode()")}}. When the selected `<option>` changes, such as during a [`change`](/en-US/docs/Web/API/HTMLElement/change_event) event, the contents of `<selectedcontent>` are replaced with a clone of the newly selected `<option>`. Being aware of this behavior is important, especially when working with dynamic content.
 
 > [!WARNING]
-> In particular, this may cause issues with sites that use popular front-end JavaScript frameworks where {{htmlelement("option")}} elements are dynamically updated after creation, as these updates will not be cloned to the `<selectedcontent>` element.
+> Since the browser updates `<selectedcontent>` only when the selected `<option>` changes, any dynamic modifications to the content of the selected `<option>` after the `<select>` is rendered won't be cloned to `<selectedcontent>`. You'll need to update `<selectedcontent>` manually. Watch out if you're using any of the popular front-end JavaScript frameworks where `<option>` elements are updated dynamically after the initial render–the result may not match what you expect in `<selectedcontent>`.
 
-## Styling with CSS
+### `<selectedcontent>` inertness
 
-It is useful to be able to target the currently-selected `<option>` element's content as it appears inside the select button with CSS styles, without affecting the styling of the content as it appears inside the picker.
+By default, any `<button>` inside a `<select>` element is [inert](/en-US/docs/Web/HTML/Reference/Global_attributes/inert). As a result, all content inside that button—including `<selectedcontent>`—is also inert.
+This means users can't interact with or focus on content inside `<selectedcontent>`.
 
-For example, your `<option>` elements may contain icons, images, or even videos. This content might look nice inside the picker, but could cause the select button to increase in size, look untidy, and affect the surrounding layout.
+### Styling the selected option's content with CSS
 
-This could be fixed by hiding the problem content when it is contained inside `<selectedcontent>`. For example:
+You can target the content of the currently selected `<option>` element and style how it appears inside the select button. Styling the button doesn't affect the styling of the content of the `<option>` that was cloned. This lets you customize how the selected option appears in the button, separately from how it appears in the drop-down list.
+
+For example, your `<option>` elements may contain icons, images, or even videos that render nicely inside the drop-down, but could cause the select `<button>` to increase in size, look untidy, and affect the surrounding layout. By targeting the content inside `<selectedcontent>`, you can hide elements such as images in the button, without affecting how they appear in the drop-down, as shown in the following snippet:
 
 ```css
 selectedcontent img {
@@ -59,7 +55,7 @@ selectedcontent img {
 ```
 
 > [!NOTE]
-> If the `<button>` and/or `<selectedcontent>` elements are not included inside the `<select>` markup, the browser will place the selected option content inside the select button implicitly, but this targeting will not be possible.
+> If the `<button>` and/or `<selectedcontent>` elements are not included inside `<select>`, the browser creates an implicit `<button>` to display the contents of the selected `<option>`. This fallback button cannot be targeted with CSS using the `button` or `selectedcontent` type selector.
 
 ## Examples
 
@@ -116,7 +112,7 @@ You can see a full example that includes the `<selectedcontent>` element in our 
 
 ## Specifications
 
-Not currently part of a specification. See https://github.com/whatwg/html/pull/10633 for the relevant specification PR.
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -3,9 +3,8 @@ title: Global attributes
 slug: Web/HTML/Reference/Global_attributes
 page-type: landing-page
 browser-compat: html.global_attributes
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar("Global_attributes")}}
 
 **Global attributes** are attributes common to all HTML elements; they can be used on all elements, though they may have no effect on some elements.
 
@@ -64,7 +63,7 @@ In addition to the basic HTML global attributes, the following global attributes
 - [`inputmode`](/en-US/docs/Web/HTML/Reference/Global_attributes/inputmode)
   - : Provides a hint to browsers about the type of virtual keyboard configuration to use when editing this element or its contents. Used primarily on {{HTMLElement("input")}} elements, but is usable on any element while in [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) mode.
 - [`is`](/en-US/docs/Web/HTML/Reference/Global_attributes/is)
-  - : Allows you to specify that a standard HTML element should behave like a registered custom built-in element (see [Using custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements) for more details).
+  - : Allows you to specify that a standard HTML element should behave like a registered customized built-in element (see [Using custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements) for more details).
 
 > [!NOTE]
 > The `item*` attributes are part of the [WHATWG HTML Microdata feature](https://html.spec.whatwg.org/multipage/microdata.html#microdata).

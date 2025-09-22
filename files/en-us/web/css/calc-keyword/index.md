@@ -3,9 +3,8 @@ title: <calc-keyword>
 slug: Web/CSS/calc-keyword
 page-type: css-type
 browser-compat: css.types.calc-keyword
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`<calc-keyword>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents well-defined constants such as `e` and `pi`. Rather than require authors to manually type out several digits of these mathematical constants or calculate them, a few of them are provided directly by CSS for convenience.
 

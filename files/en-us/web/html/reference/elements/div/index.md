@@ -3,9 +3,8 @@ title: "<div>: The Content Division element"
 slug: Web/HTML/Reference/Elements/div
 page-type: html-element
 browser-compat: html.elements.div
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<div>`** [HTML](/en-US/docs/Web/HTML) element is the generic container for flow content. It has no effect on the content or layout until styled in some way using {{glossary("CSS")}} (e.g., styling is directly applied to it, or some kind of layout model like [Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) is applied to its parent element).
 
@@ -22,8 +21,8 @@ The **`<div>`** [HTML](/en-US/docs/Web/HTML) element is the generic container fo
 
 ```css interactive-example
 .warning {
-  border: 10px ridge #f00;
-  background-color: #ff0;
+  border: 10px ridge red;
+  background-color: yellow;
   padding: 0.5rem;
   display: flex;
   flex-direction: column;
@@ -89,10 +88,10 @@ This example creates a shadowed box by applying a style to the `<div>` using CSS
 ```css
 .shadowbox {
   width: 15em;
-  border: 1px solid #333;
-  box-shadow: 8px 8px 5px #444;
+  border: 1px solid #333333;
+  box-shadow: 8px 8px 5px #444444;
   padding: 8px 12px;
-  background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc);
+  background-image: linear-gradient(180deg, white, #dddddd 40%, #cccccc);
 }
 ```
 

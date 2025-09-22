@@ -3,9 +3,8 @@ title: "<footer>: The Footer element"
 slug: Web/HTML/Reference/Elements/footer
 page-type: html-element
 browser-compat: html.elements.footer
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<footer>`** [HTML](/en-US/docs/Web/HTML) element represents a footer for its nearest ancestor [sectioning content](/en-US/docs/Web/HTML/Guides/Content_categories#sectioning_content) or [sectioning root](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements#labeling_section_content) element. A `<footer>` typically contains information about the author of the section, copyright data or links to related documents.
 
@@ -37,7 +36,7 @@ footer {
   justify-content: center;
   padding: 5px;
   background-color: #45a1ff;
-  color: #fff;
+  color: white;
 }
 ```
 
@@ -81,7 +80,7 @@ footer {
   text-align: center;
   padding: 5px;
   background-color: #abbaba;
-  color: #000;
+  color: black;
 }
 ```
 

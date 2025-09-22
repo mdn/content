@@ -6,9 +6,8 @@ spec-urls:
   - https://drafts.csswg.org/css-values-3/
   - https://drafts.csswg.org/css-values-4/
   - https://drafts.csswg.org/css-values-5/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 Every CSS declaration consists of a property/value pair. The value can take various forms depending on the property, such as a single integer, keyword, function, or a combination of different items; some values have units, while others do not. Every property also accepts the CSS-wide values. The CSS values and units module defines the data types — values and units — that CSS properties accept. This module also defines the CSS value definition syntax, or formal grammar, used to define the set of valid values for every CSS property and function.
 
@@ -42,13 +41,15 @@ Every CSS declaration consists of a property/value pair. The value can take vari
 - {{cssxref("pow()")}}
 - {{cssxref("rem()")}}
 - {{cssxref("round()")}}
+- {{cssxref("sibling-count()")}}
+- {{cssxref("sibling-index()")}}
 - {{cssxref("sign()")}}
 - {{cssxref("sin()")}}
 - {{cssxref("sqrt()")}}
 - {{cssxref("tan()")}}
-- {{cssxref("url()")}}
+- {{cssxref("url_function", "url()")}}
 
-Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, `integrity()`, `progress()`, `random()`, `random-item()`, `referrerpolicy()`, `sibling-count()`, `sibling-index()`, `src()`, `type()`, and `toggle()`, are defined in the specifications, but not yet implemented in browsers.
+The CSS values and units module also introduces the `calc-mix()`, `crossorigin()`, `first-valid()`, `integrity()`, `progress()`, `random()`, `random-item()`, `referrerpolicy()`, `src()`, `type()`, and `toggle()` functions. Currently, no browsers support these features.
 
 ### Data types
 
@@ -65,8 +66,6 @@ Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, 
 - [`<dimension>`](/en-US/docs/Web/CSS/dimension)
 - [`<easing-function>`](/en-US/docs/Web/CSS/easing-function)
 - [`<first-valid()>`](/en-US/docs/Web/CSS)
-- [`<frequency>`](/en-US/docs/Web/CSS/frequency)
-- [`<frequency-percentage>`](/en-US/docs/Web/CSS/frequency-percentage)
 - [`<ident>`](/en-US/docs/Web/CSS/ident)
 - [`<integer>`](/en-US/docs/Web/CSS/integer)
 - [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage)
@@ -85,9 +84,11 @@ Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, 
 - [`<url-modifier>`](/en-US/docs/Web/CSS/url_function#url-modifier)
 - [`<view-timeline-name>`](/en-US/docs/Web/CSS/view-timeline-name)
 
+The CSS values and units module also introduces the [`<frequency>`](/en-US/docs/Web/CSS/frequency) and [`<frequency-percentage>`](/en-US/docs/Web/CSS/frequency-percentage) data types. Currently, no browsers support these features.
+
 #### Units
 
-- [`%` (percentage)](/en-US/docs/Web/CSS/length#cap)
+- [`%` (percentage)](/en-US/docs/Web/CSS/percentage)
 - [`cap`](/en-US/docs/Web/CSS/length#cap)
 - [`ch`](/en-US/docs/Web/CSS/length#ch)
 - [`cm`](/en-US/docs/Web/CSS/length#cm)

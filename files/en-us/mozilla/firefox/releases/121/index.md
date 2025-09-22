@@ -1,5 +1,6 @@
 ---
 title: Firefox 121 for developers
+short-title: Firefox 121
 slug: Mozilla/Firefox/Releases/121
 page-type: firefox-release-notes
 sidebar: firefox
@@ -85,7 +86,3 @@ These features are newly shipped in Firefox 121 but are disabled by default. To 
   > [!NOTE]
   > Incidentally, a change in Chrome 121 sees the `scripts` property ignored when specified with the `service_worker` property. Previously, Chrome refused to load extensions containing both properties ([Chromium bug 1418934](https://crbug.com/1418934)).
   > For more information, see [Browser support of the `background` manifest key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background#browser_support).
-
-## Older versions
-
-{{Firefox_for_developers}}

@@ -3,9 +3,8 @@ title: 429 Too Many Requests
 slug: Web/HTTP/Reference/Status/429
 page-type: http-status-code
 spec-urls: https://www.rfc-editor.org/rfc/rfc6585#section-4
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`429 Too Many Requests`** [client error response](/en-US/docs/Web/HTTP/Reference/Status#client_error_responses) status code indicates the client has sent too many requests in a given amount of time.
 This mechanism of asking the client to slow down the rate of requests is commonly called "{{glossary("rate limit", "rate limiting")}}".

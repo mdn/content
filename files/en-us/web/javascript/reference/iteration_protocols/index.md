@@ -3,9 +3,8 @@ title: Iteration protocols
 slug: Web/JavaScript/Reference/Iteration_protocols
 page-type: guide
 spec-urls: https://tc39.es/ecma262/multipage/control-abstraction-objects.html#sec-iteration
+sidebar: jssidebar
 ---
-
-{{jsSidebar("More")}}
 
 **Iteration protocols** aren't new built-ins or syntax, but _protocols_. These protocols can be implemented by any object by following some conventions.
 
@@ -78,19 +77,19 @@ const myIterator = {
 Such object is called an _iterable iterator_. Doing so allows an iterator to be consumed by the various syntaxes expecting iterables — therefore, it is seldom useful to implement the Iterator Protocol without also implementing Iterable. (In fact, almost all syntaxes and APIs expect _iterables_, not _iterators_.) The [generator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator) is an example:
 
 ```js
-const aGeneratorObject = (function* () {
+const generatorObject = (function* () {
   yield 1;
   yield 2;
   yield 3;
 })();
 
-console.log(typeof aGeneratorObject.next);
+console.log(typeof generatorObject.next);
 // "function" — it has a next method (which returns the right result), so it's an iterator
 
-console.log(typeof aGeneratorObject[Symbol.iterator]);
+console.log(typeof generatorObject[Symbol.iterator]);
 // "function" — it has an [Symbol.iterator] method (which returns the right iterator), so it's an iterable
 
-console.log(aGeneratorObject[Symbol.iterator]() === aGeneratorObject);
+console.log(generatorObject[Symbol.iterator]() === generatorObject);
 // true — its [Symbol.iterator] method returns itself (an iterator), so it's an iterable iterator
 ```
 

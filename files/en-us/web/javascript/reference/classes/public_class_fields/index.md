@@ -3,9 +3,8 @@ title: Public class fields
 slug: Web/JavaScript/Reference/Classes/Public_class_fields
 page-type: javascript-language-feature
 browser-compat: javascript.classes.public_class_fields
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Classes")}}
 
 **Public fields** are writable, enumerable, and configurable properties defined on each class instance or class constructor.
 

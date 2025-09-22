@@ -3,9 +3,8 @@ title: "<tr>: The Table Row element"
 slug: Web/HTML/Reference/Elements/tr
 page-type: html-element
 browser-compat: html.elements.tr
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<tr>`** [HTML](/en-US/docs/Web/HTML) element defines a row of cells in a table. The row's cells can then be established using a mix of {{HTMLElement("td")}} (data cell) and {{HTMLElement("th")}} (header cell) elements.
 
@@ -48,7 +47,7 @@ td {
 
 th[scope="col"] {
   background-color: #505050;
-  color: #fff;
+  color: white;
 }
 
 th[scope="row"] {
@@ -60,7 +59,7 @@ td {
 }
 
 tr:nth-of-type(even) {
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 
 table {
@@ -153,7 +152,7 @@ The CSS {{cssxref(":nth-of-type")}} pseudo-class is used to select every `odd` r
 
 ```css
 tr:nth-of-type(odd) {
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 
 tr th[scope="row"] {
@@ -229,12 +228,12 @@ The CSS is nearly unchanged from the [previous example](#basic_row_setup), excep
 
 ```css
 tr:nth-of-type(odd) {
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 
 tr th[scope="col"] {
   background-color: #505050;
-  color: #fff;
+  color: white;
 }
 
 tr th[scope="row"] {
@@ -402,7 +401,7 @@ td {
 
 th {
   background-color: #505050;
-  color: #fff;
+  color: white;
   cursor: pointer;
 }
 ```

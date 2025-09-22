@@ -3,9 +3,8 @@ title: "@font-feature-values"
 slug: Web/CSS/@font-feature-values
 page-type: css-at-rule
 browser-compat: css.at-rules.font-feature-values
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`@font-feature-values`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) lets you use a common name in the {{cssxref("font-variant-alternates")}} property for features activated differently in OpenType. This can help simplify your CSS when using multiple fonts.
 
@@ -13,7 +12,19 @@ The `@font-feature-values` at-rule may be used either at the top level of your C
 
 ## Syntax
 
-Each `@font-feature-values` block contains a list of either feature value blocks (listed below), or the {{cssxref("@font-feature-values/font-display", "font-display")}} descriptor.
+```css
+@font-feature-values Font Name {
+  font-display: swap;
+  @styleset {
+    nice-style: 12;
+  }
+  @swash {
+    fancy: 2;
+  }
+}
+```
+
+Each `@font-feature-values` block can contain a list of feature value blocks (listed below), as well as the {{cssxref("@font-feature-values/font-display", "font-display")}} descriptor.
 
 ### Feature value blocks
 

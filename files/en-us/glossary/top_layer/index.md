@@ -2,9 +2,8 @@
 title: Top layer
 slug: Glossary/Top_layer
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 The **top layer** is a specific layer that spans the entire width and height of the viewport and sits on top of all other layers displayed in a web document. It is created by the browser to contain elements that should appear on top of all other content on the page.
 

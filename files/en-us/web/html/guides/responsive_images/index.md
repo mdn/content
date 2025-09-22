@@ -3,9 +3,8 @@ title: Using responsive images in HTML
 short-title: Responsive images
 slug: Web/HTML/Guides/Responsive_images
 page-type: guide
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 In this article, we'll learn about the concept of responsive images — images that work well on devices with widely differing screen sizes, resolutions, and other such features — and look at what tools HTML provides to help implement them. This helps to improve performance across different devices.
 
@@ -83,7 +82,7 @@ So, with these attributes in place, the browser will:
 1. Look at screen size, pixel density, zoom level, screen orientation, and network speed.
 2. Work out which media condition in the `sizes` list is the first one to be true.
 3. Look at the slot size given to that media query.
-4. Load the image referenced in the `srcset` list that has the same size as the slot or, if there isn't one, the first image that is bigger than the chosen slot size.
+4. Load the image referenced in the `srcset` list that has the same size as the slot. If there isn't an exact match for the display size, the browser will choose the first image that is bigger than the chosen slot size and scale it down to fit.
 
 And that's it! At this point, if a supporting browser with a viewport width of 480px loads the page, the `(width <= 600px)` media condition will be true, and so the browser chooses the `480px` slot. The `elva-fairy-480w.jpg` will be loaded, as its inherent width (`480w`) is closest to the slot size. The 800px picture is 128KB on disk, whereas the 480px version is only 63KB — a saving of 65KB. Now, imagine if this was a page that had many pictures on it. Using this technique could save mobile users a lot of bandwidth.
 
@@ -159,9 +158,9 @@ This code allows us to display a suitable image on both wide screen and narrow s
 
 When the browser starts to load a page, it starts to download (preload) any images before the main parser has started to load and interpret the page's CSS and JavaScript. That mechanism is useful in general for reducing page load times, but it is not helpful for responsive images — hence the need to implement solutions like `srcset`. For example, you couldn't load the {{htmlelement("img")}} element, then detect the viewport width with JavaScript, and then dynamically change the source image to a smaller one if desired. By then, the original image would already have been loaded, and you would load the small image as well, which is even worse in responsive image terms.
 
-## Active learning: Implementing your own responsive images
+## Implementing your own responsive images
 
-For this active learning, we're expecting you to be brave and do it alone, mostly. We want you to implement your own suitable art-directed narrow screen/wide screenshot using `<picture>`, and a resolution switching example that uses `srcset`.
+In this exercise, we're expecting you to be brave and do it alone, mostly. We want you to implement your own suitable art-directed narrow screen/wide screenshot using `<picture>`, and a resolution switching example that uses `srcset`.
 
 1. Write some HTML to contain your code (use `not-responsive.html` as a starting point, if you like).
 2. Find a nice wide screen landscape image with some kind of detail contained in it somewhere. Create a web-sized version of it using a graphics editor, then crop it to show a smaller part that zooms in on the detail, and create a second image (about 480px wide is good for this).

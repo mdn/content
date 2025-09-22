@@ -6,9 +6,10 @@ page-type: javascript-instance-method
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.ZonedDateTime.withCalendar
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`withCalendar()`** method of {{jsxref("Temporal.ZonedDateTime")}} instances returns a new `Temporal.ZonedDateTime` object representing this date-time interpreted in the new calendar system. Because all `Temporal` objects are designed to be immutable, this method essentially functions as the setter for the date-time's {{jsxref("Temporal/ZonedDateTime/calendarId", "calendarId")}} property.
 

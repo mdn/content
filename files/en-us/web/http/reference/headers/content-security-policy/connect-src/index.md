@@ -4,9 +4,8 @@ short-title: connect-src
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/connect-src
 page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.connect-src
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
 **`connect-src`** directive restricts the URLs which can be

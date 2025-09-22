@@ -3,9 +3,8 @@ title: margin-left
 slug: Web/CSS/margin-left
 page-type: css-property
 browser-compat: css.properties.margin-left
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`margin-left`** [CSS](/en-US/docs/Web/CSS) property sets the [margin area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#margin_area) on the left side of an element. A positive value places it farther from its neighbors, while a negative value places it closer.
 
@@ -71,7 +70,7 @@ margin-left: 10px; /* An absolute length */
 margin-left: 1em; /* relative to the text size */
 margin-left: 5%; /* relative to the nearest block container's width */
 margin-left: anchor-size(self-inline);
-margin-left: calc(anchor-size(--myAnchor width, 20px) / 4);
+margin-left: calc(anchor-size(--my-anchor width, 20px) / 4);
 
 /* Keyword values */
 margin-left: auto;

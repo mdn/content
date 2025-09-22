@@ -3,9 +3,8 @@ title: column-width
 slug: Web/CSS/column-width
 page-type: css-property
 browser-compat: css.properties.column-width
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`column-width`** [CSS](/en-US/docs/Web/CSS) property sets the ideal column width in a multi-column layout. The container will have as many columns as can fit without any of them having a width less than the `column-width` value. If the width of the container is narrower than the specified value, the single column's width will be smaller than the declared column width.
 

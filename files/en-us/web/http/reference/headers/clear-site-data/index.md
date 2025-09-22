@@ -4,9 +4,10 @@ short-title: Clear-Site-Data
 slug: Web/HTTP/Reference/Headers/Clear-Site-Data
 page-type: http-header
 browser-compat: http.headers.Clear-Site-Data
+sidebar: http
 ---
 
-{{securecontext_header}}{{HTTPSidebar}}
+{{securecontext_header}}
 
 The HTTP **`Clear-Site-Data`** {{Glossary("response header")}} sends a signal to the client that it should remove all browsing data of certain types (cookies, storage, cache) associated with the requesting website.
 It allows web developers to have more control over the data stored by browsers for their origins.
@@ -58,10 +59,10 @@ Clear-Site-Data: "*"
 - `"executionContexts"` {{Experimental_Inline}}
   - : The server signals that the client should reload all browsing contexts for the origin of the response ({{domxref("Location.reload")}}).
 
-- `"prefetchCache"` {{experimental_inline}}
+- `"prefetchCache"` {{experimental_inline}} {{non-standard_inline}}
   - : Used to clear {{domxref("Speculation Rules API", "speculation rules", "", "nocode")}} prefetches that are scoped to the referrer origin.
 
-- `"prerenderCache"` {{experimental_inline}}
+- `"prerenderCache"` {{experimental_inline}} {{non-standard_inline}}
   - : Used to clear {{domxref("Speculation Rules API", "speculation rules","", "nocode")}} prerenders that are scoped to the referrer origin.
 
 - `"storage"`

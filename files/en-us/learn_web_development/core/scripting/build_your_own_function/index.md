@@ -28,7 +28,7 @@ With most of the essential theory dealt with in the previous article, this artic
   </tbody>
 </table>
 
-## Active learning: Let's build a function
+## Let's build a function
 
 The custom function we are going to build will be called `displayMessage()`. It will display a custom message box on a web page and will act as a customized replacement for a browser's built-in [`alert()`](/en-US/docs/Web/API/Window/alert) function. We've seen this before, but let's just refresh our memories. Type the following in your browser's JavaScript console, on any page you like:
 
@@ -148,18 +148,19 @@ You've now got your function definition written into your `<script>` element jus
 
 2. Now open your browser developer tools on the example page, go to the JavaScript console and type the line again there, you'll see it appear again! So this is fun — we now have a reusable function that we can call any time we like.
 
-   But we probably want it to appear in response to user and system actions. In a real application, such a message box would probably be called in response to new data being available, or an error having occurred, or the user trying to delete their profile ("are you sure about this?"), or the user adding a new contact and the operation completing successfully, etc.
+However, we probably want the message box to appear in response to user and system actions. In a real application, such a message box would probably be called in response to new data being available, or an error having occurred, or the user trying to delete their profile ("are you sure about this?"), or the user adding a new contact and the operation completing successfully, etc.
 
-   In this demo, we'll get the message box to appear when the user clicks the button.
+In this demo, we'll get the message box to appear when the user clicks the button.
+Here's the steps you should follow to get this working:
 
-3. Delete the previous line you added.
-4. Next, we'll select the button and store a reference to it in a constant. Add the following line to your code, above the function definition:
+1. Delete the previous line you added (`displayMessage();`).
+2. Select the `<button>` element and store a reference to it in a constant. Add the following line to your code, above the function definition:
 
    ```js
    const btn = document.querySelector("button");
    ```
 
-5. Finally, add the following line below the previous one:
+3. Create an event listener for button clicks that calls our function. Add the following line after the `const btn =` one:
 
    ```js
    btn.addEventListener("click", displayMessage);
@@ -167,11 +168,11 @@ You've now got your function definition written into your `<script>` element jus
 
    In a similar way to our closeBtn's click event handler, here we are calling some code in response to a button being clicked. But in this case, instead of calling an anonymous function containing some code, we are calling our `displayMessage()` function by name.
 
-6. Try saving and refreshing the page — now you should see the message box appear when you click the button.
+4. Finally, try saving and refreshing the page — now you should see the message box appear when you click the button.
 
 You might be wondering why we haven't included the parentheses after the function name. This is because we don't want to call the function immediately — only after the button has been clicked. If you try changing the line to
 
-```js
+```js example-bad
 btn.addEventListener("click", displayMessage());
 ```
 
@@ -260,17 +261,17 @@ On to the next parameter. This one is going to involve slightly more work — we
 
    ```js
    if (msgType === "warning") {
-     msg.style.backgroundImage = "url(icons/warning.png)";
+     msg.style.backgroundImage = 'url("icons/warning.png")';
      panel.style.backgroundColor = "red";
    } else if (msgType === "chat") {
-     msg.style.backgroundImage = "url(icons/chat.png)";
+     msg.style.backgroundImage = 'url("icons/chat.png")';
      panel.style.backgroundColor = "aqua";
    } else {
      msg.style.paddingLeft = "20px";
    }
    ```
 
-   Here, if the `msgType` parameter is set as `'warning'`, the warning icon is displayed and the panel's background color is set to red. If it is set to `'chat'`, the chat icon is displayed and the panel's background color is set to aqua blue. If the `msgType` parameter is not set at all (or to something different), then the `else { }` part of the code comes into play, and the paragraph is given default padding and no icon, with no background panel color set either. This provides a default state if no `msgType` parameter is provided, meaning that it is an optional parameter!
+   Here, if the `msgType` parameter is set as `"warning"`, the warning icon is displayed and the panel's background color is set to red. If it is set to `"chat"`, the chat icon is displayed and the panel's background color is set to aqua blue. If the `msgType` parameter is not set at all (or to something different), then the `else { }` part of the code comes into play, and the paragraph is given default padding and no icon, with no background panel color set either. This provides a default state if no `msgType` parameter is provided, meaning that it is an optional parameter!
 
 5. Let's test out our updated function, try updating the `displayMessage()` call from this:
 
@@ -289,10 +290,6 @@ On to the next parameter. This one is going to involve slightly more work — we
 
 > [!NOTE]
 > If you have trouble getting the example to work, feel free to check your code against the [finished version on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-stage-4.html) ([see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/functions/function-stage-4.html) also), or ask us for help.
-
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Functions](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills/Functions). These tests require skills that are covered in the next article, so you might want to read that first before trying the test.
 
 ## Summary
 

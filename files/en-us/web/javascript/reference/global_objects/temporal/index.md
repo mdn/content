@@ -5,9 +5,10 @@ page-type: javascript-namespace
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`Temporal`** object enables date and time management in various scenarios, including built-in time zone and calendar representation, wall-clock time conversions, arithmetics, formatting, and more. It is designed as a full replacement for the {{jsxref("Date")}} object.
 
@@ -376,3 +377,5 @@ The `Temporal` objects will refuse to construct an instance representing a date/
 - {{jsxref("Intl.DateTimeFormat")}}
 - {{jsxref("Intl.RelativeTimeFormat")}}
 - {{jsxref("Intl.DurationFormat")}}
+- [Temporal polyfill by proposal champions](https://www.npmjs.com/package/@js-temporal/polyfill)
+- [Temporal polyfill by FullCalendar](https://www.npmjs.com/package/temporal-polyfill)

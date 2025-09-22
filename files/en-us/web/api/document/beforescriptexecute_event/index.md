@@ -34,7 +34,7 @@ function starting(e) {
   logMessage(`Starting script with ID: ${e.target.id}`);
 }
 
-document.addEventListener("beforescriptexecute", starting, true);
+document.addEventListener("beforescriptexecute", starting);
 // or
 document.onbeforescriptexecute = starting;
 ```

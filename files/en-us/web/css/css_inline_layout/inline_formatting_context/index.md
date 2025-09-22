@@ -2,9 +2,8 @@
 title: Inline formatting context
 slug: Web/CSS/CSS_inline_layout/Inline_formatting_context
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 This guide explains the inline formatting context.
 

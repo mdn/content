@@ -6,7 +6,7 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/Object_basics","Learn_web_development/Core/Scripting/Network_requests", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Test_your_skills/Object_basics","Learn_web_development/Core/Scripting/Network_requests", "Learn_web_development/Core/Scripting")}}
 
 When writing web pages and apps, one of the most common things you'll want to do is change the document structure in some way. This is usually done by manipulating the Document Object Model (DOM) via a set of built-in browser APIs for controlling HTML and styling information. In this article we'll introduce you to **DOM scripting**.
 
@@ -39,9 +39,9 @@ Despite the limitations, Web APIs still give us access to a lot of functionality
 
 ![Important parts of web browser; the document is the web page. The window includes the entire document and also the tab. The navigator is the browser, which includes the window (which includes the document) and all other windows.](document-window-navigator.png)
 
-- The window is the browser tab that a web page is loaded into; this is represented in JavaScript by the {{domxref("Window")}} object. Using methods available on this object you can do things like return the window's size (see {{domxref("Window.innerWidth")}} and {{domxref("Window.innerHeight")}}), manipulate the document loaded into that window, store data specific to that document on the client-side (for example using a local database or other storage mechanism), attach an [event handler](/en-US/docs/Learn_web_development/Core/Scripting/Events) to the current window, and more.
-- The navigator represents the state and identity of the browser (i.e., the user-agent) as it exists on the web. In JavaScript, this is represented by the {{domxref("Navigator")}} object. You can use this object to retrieve things like the user's preferred language, a media stream from the user's webcam, etc.
-- The document (represented by the DOM in browsers) is the actual page loaded into the window, and is represented in JavaScript by the {{domxref("Document")}} object. You can use this object to return and manipulate information on the HTML and CSS that comprises the document, for example get a reference to an element in the DOM, change its text content, apply new styles to it, create new elements and add them to the current element as children, or even delete it altogether.
+- The **window** represents the browser tab that a web page is loaded into; this is represented in JavaScript by the {{domxref("Window")}} object. Using methods available on this object you can do things like return the window's size (see {{domxref("Window.innerWidth")}} and {{domxref("Window.innerHeight")}}), manipulate the document loaded into that window, store data specific to that document on the client-side (for example using a local database or other storage mechanism), attach an [event handler](/en-US/docs/Learn_web_development/Core/Scripting/Events) to the current window, and more.
+- The **navigator** represents the state and identity of the browser as it exists on the web. In JavaScript, this is represented by the {{domxref("Navigator")}} object. You can use this object to retrieve things like the user's preferred language, a media stream from the user's webcam, etc.
+- The **document** (represented by the DOM in browsers) is the actual page loaded into the window, and is represented in JavaScript by the {{domxref("Document")}} object. You can use this object to return and manipulate information on the HTML and CSS that comprises the document, for example get a reference to an element in the DOM, change its text content, apply new styles to it, create new elements and add them to the current element as children, or even delete it altogether.
 
 In this article we'll focus mostly on manipulating the document, but we'll show a few other useful bits besides.
 
@@ -65,7 +65,9 @@ We have created an example page at [dom-example.html](https://github.com/mdn/lea
     <section>
       <img
         src="dinosaur.png"
-        alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth." />
+        alt="A red Tyrannosaurus Rex: A two legged dinosaur
+        standing upright like a human, with small arms, and a
+        large head with lots of sharp teeth." />
       <p>
         Here we will add a link to the
         <a href="https://www.mozilla.org/">Mozilla homepage</a>
@@ -92,9 +94,9 @@ Nodes are also referred to by their position in the tree relative to other nodes
 - **Parent node**: A node which has another node inside it. For example, `BODY` is the parent node of `SECTION` in the above example.
 - **Sibling nodes**: Nodes that sit on the same level under the same parent node in the DOM tree. For example, `IMG` and `P` are siblings in the above example.
 
-It is useful to familiarize yourself with this terminology before working with the DOM, as a number of the code terms you'll come across make use of them. You'll also come across them in CSS (e.g., descendant selector, child selector).
+It is useful to familiarize yourself with this terminology before working with the DOM, as a number of the code terms you'll come across make use of them. You'll also come across them in CSS (for example, descendant selector, child selector).
 
-## Active learning: Basic DOM manipulation
+## Doing some basic DOM manipulation
 
 To start learning about DOM manipulation, let's begin with a practical example.
 
@@ -229,7 +231,7 @@ The first way is to add inline styles directly onto elements you want to dynamic
 > [!NOTE]
 > Notice how the JavaScript property versions of the CSS styles are written in {{Glossary("camel_case", "lower camel case")}} whereas the CSS versions are hyphenated ({{Glossary("kebab_case", "kebab-case")}}) (e.g., `backgroundColor` versus `background-color`). Make sure you don't get these mixed up, otherwise it won't work.
 
-There is another common way to dynamically manipulate styles on your document, which we'll look at now.
+There is another common way to dynamically manipulate styles on your document, which is to write the styles in a separate stylesheet, and reference those styles by adding/removing a class name.
 
 1. Delete the previous five lines you added to the JavaScript.
 2. Add the following inside your HTML {{htmlelement("head")}}:
@@ -246,10 +248,10 @@ There is another common way to dynamically manipulate styles on your document, w
    </style>
    ```
 
-3. Now we'll turn to a very useful method for general HTML manipulation — {{domxref("Element.setAttribute()")}} — this takes two arguments, the attribute you want to set on the element, and the value you want to set it to. In this case we will set a class name of highlight on our paragraph:
+3. To add this class name to your element, use the element's {{domxref("Element/classList", "classList")}}'s `add()` method:
 
    ```js
-   para.setAttribute("class", "highlight");
+   para.classList.add("highlight");
    ```
 
 4. Refresh your page, and you'll see no change — the CSS is still applied to the paragraph, but this time by giving it a class that is selected by our CSS rule, not as inline CSS styles.
@@ -263,17 +265,67 @@ In the next section we will look at a more practical use of DOM APIs.
 > [!NOTE]
 > You can find our [finished version of the dom-example.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/dom-example-manipulated.html) demo on GitHub ([see it live also](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/dom-example-manipulated.html)).
 
-## Active learning: A dynamic shopping list
+## Creating a dynamic shopping list
 
-In this challenge we want to make a simple shopping list example that allows you to dynamically add items to the list using a form input and button. When you add an item to the input and press the button:
+In this exercise we want you to build a dynamic shopping list that allows you to add items using a form input and button. When you add enter an item and press the button:
 
 - The item should appear in the list.
 - Each item should be given a button that can be pressed to delete that item off the list.
-- The input should be emptied and focused ready for you to enter another item.
+- The input should be emptied and focused, ready for you to enter another item.
 
-The finished demo will look something like this:
+The finished demo will look something like the following — try it out before you build it!
 
-![Demo layout of a shopping list. A 'my shopping list' header followed by 'Enter a new item' with an input field and 'add item' button. The list of already added items is below, each with a corresponding delete button. ](shopping-list.png)
+```html hidden live-sample___dynamic-shopping-list
+<h1>My shopping list</h1>
+
+<div>
+  <label for="item">Enter a new item:</label>
+  <input type="text" name="item" id="item" />
+  <button>Add item</button>
+</div>
+
+<ul></ul>
+```
+
+```css hidden live-sample___dynamic-shopping-list
+li {
+  margin-bottom: 10px;
+}
+
+li button {
+  font-size: 12px;
+  margin-left: 20px;
+}
+```
+
+```js hidden live-sample___dynamic-shopping-list
+const list = document.querySelector("ul");
+const input = document.querySelector("input");
+const button = document.querySelector("button");
+
+button.addEventListener("click", () => {
+  const myItem = input.value;
+  input.value = "";
+
+  const listItem = document.createElement("li");
+  const listText = document.createElement("span");
+  const listBtn = document.createElement("button");
+
+  listItem.appendChild(listText);
+  listText.textContent = myItem;
+  listItem.appendChild(listBtn);
+  listBtn.textContent = "Delete";
+  list.appendChild(listItem);
+
+  listBtn.addEventListener("click", () => {
+    list.removeChild(listItem);
+  });
+
+  input.focus();
+});
+```
+
+{{EmbedLiveSample("dynamic-shopping-list", "100%", 300)}}
 
 To complete the exercise, follow the steps below, and make sure that the list behaves as described above.
 
@@ -283,16 +335,13 @@ To complete the exercise, follow the steps below, and make sure that the list be
 4. Create a [function](/en-US/docs/Learn_web_development/Core/Scripting/Functions) that will run in response to the button being clicked.
 5. Inside the function body, start off by calling [`preventDefault()`](/en-US/docs/Web/API/Event/preventDefault). When combined with the form element, the user can now use the 'enter' key to submit list items. Prevent default keeps the form from refreshing the page in this situation.
 6. Next, continue by storing the current [value](/en-US/docs/Web/API/HTMLInputElement/value) of the input element in a variable.
-7. Next, empty the input element by setting its value to an empty string — `''`.
+7. Next, empty the input element by setting its value to an empty string — `""`.
 8. Create three new elements — a list item ({{htmlelement('li')}}), {{htmlelement('span')}}, and {{htmlelement('button')}}, and store them in variables.
 9. Append the span and the button as children of the list item.
 10. Set the text content of the span to the input element value you saved earlier, and the text content of the button to 'Delete'.
 11. Append the list item as a child of the list.
 12. Attach an event handler to the delete button so that, when clicked, it will delete the entire list item (`<li>...</li>`).
 13. Finally, use the [`focus()`](/en-US/docs/Web/API/HTMLElement/focus) method to focus the input element ready for entering the next shopping list item.
-
-> [!NOTE]
-> If you get really stuck, have a look at our [finished shopping list](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/shopping-list-finished.html) ([see it running live also](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/shopping-list-finished.html)).
 
 ## Summary
 
@@ -307,4 +356,4 @@ We have reached the end of our study of document and DOM manipulation. At this p
   - {{domxref("HTMLElement")}}, {{domxref("HTMLInputElement")}}, {{domxref("HTMLImageElement")}}, etc.
 - [DOM Scripting](https://explainers.dev/dom-scripting/), explainers.dev
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/Object_basics","Learn_web_development/Core/Scripting/Network_requests", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Test_your_skills/Object_basics","Learn_web_development/Core/Scripting/Network_requests", "Learn_web_development/Core/Scripting")}}

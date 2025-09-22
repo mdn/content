@@ -3,9 +3,8 @@ title: downloads.DownloadTime
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/DownloadTime
 page-type: webextension-api-type
 browser-compat: webextensions.api.downloads.DownloadTime
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The `DownloadTime` type of the {{WebExtAPIRef("downloads")}} API represents the time a download took to complete.
 
@@ -20,11 +19,11 @@ A `DownloadTime` can be one of three different types:
 
 - a number: this is interpreted as the number of milliseconds since the UNIX epoch.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#type-DownloadTime) API.

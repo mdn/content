@@ -5,9 +5,8 @@ slug: Web/HTTP/Reference/Headers/Sec-WebSocket-Version
 page-type: http-header
 browser-compat: http.headers.Sec-WebSocket-Version
 spec-urls: https://datatracker.ietf.org/doc/html/rfc6455#section-11.3.5
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **Sec-WebSocket-Version** {{glossary("request header", "request")}} and {{glossary("response header")}} is used in the [WebSocket](/en-US/docs/Web/API/WebSockets_API) opening [handshake](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#the_websocket_handshake) to indicate the WebSocket protocol supported by the client, and the protocol versions supported by the server if it does _not_ support the version specified in the request.
 

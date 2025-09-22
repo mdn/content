@@ -2,9 +2,8 @@
 title: Proxy Auto-Configuration (PAC) file
 slug: Web/HTTP/Guides/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file
 page-type: guide
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 A **Proxy Auto-Configuration (PAC)** file is a JavaScript function that determines whether web browser requests (HTTP, HTTPS, and FTP) go directly to the destination or are forwarded to a web proxy server. The JavaScript function contained in the PAC file defines the function:
 
@@ -499,12 +498,12 @@ If only a single value is specified (from each category: hour, minute, second), 
 #### Examples
 
 ```js-nolint
-timerange(12); // returns true from noon to 1pm
-timerange(12, 13) // returns true from noon to 1pm
-timerange(12, "GMT") // returns true from noon to 1pm, in the GMT timezone
-timerange(9, 17) // returns true from 9am to 5pm
-timerange(8, 30, 17, 0) // returns true from 8:30am to 5:00pm
-timerange(0, 0, 0, 0, 0, 30) // returns true between midnight and 30 seconds past midnight
+timeRange(12); // returns true from noon to 1pm
+timeRange(12, 13) // returns true from noon to 1pm
+timeRange(12, "GMT") // returns true from noon to 1pm, in the GMT timezone
+timeRange(9, 17) // returns true from 9am to 5pm
+timeRange(8, 30, 17, 0) // returns true from 8:30am to 5:00pm
+timeRange(0, 0, 0, 0, 0, 30) // returns true between midnight and 30 seconds past midnight
 ```
 
 ### alert()
@@ -703,7 +702,7 @@ if (shExpMatch(url, "http:*")) {
 
 Proxy auto-config was introduced into Netscape Navigator 2.0 in the late 1990s, at the same time when JavaScript was introduced. Open-sourcing Netscape eventually lead to Firefox itself.
 
-The most "original" implementation of PAC and its JavaScript libraries is, therefore, `nsProxyAutoConfig.js` found in early versions of Firefox. These utilities are found in many other open-source systems including [Chromium](https://source.chromium.org/chromium/chromium/src/+/main:services/proxy_resolver/pac_js_library.h). Firefox later integrated the file into [`ProxyAutoConfig.cpp`](https://searchfox.org/mozilla-central/source/netwerk/base/ProxyAutoConfig.cpp) as a C++ string literal. To extract it into its own file, it suffices to copy the chunk into JavaScript with a `console.log` directive to print it.
+The most "original" implementation of PAC and its JavaScript libraries is, therefore, `nsProxyAutoConfig.js` found in early versions of Firefox. These utilities are found in many other open-source systems including [Chromium](https://source.chromium.org/chromium/chromium/src/+/main:services/proxy_resolver/pac_js_library.h). Firefox later integrated the file into [`ProxyAutoConfig.cpp`](https://searchfox.org/firefox-main/source/netwerk/base/ProxyAutoConfig.cpp) as a C++ string literal. To extract it into its own file, it suffices to copy the chunk into JavaScript with a `console.log` directive to print it.
 
 Microsoft in general made its own implementation. There used to be [some problems with their libraries](https://en.wikipedia.org/wiki/Proxy_auto-config#Old_Microsoft_problems), but most are resolved by now. They have defined [some new "Ex" suffixed functions](https://learn.microsoft.com/en-us/windows/win32/winhttp/ipv6-extensions-to-navigator-auto-config-file-format) around the address handling parts to support IPv6. The feature is supported by Chromium, but not yet by Firefox ([bugzilla #558253](https://bugzil.la/558253)).
 

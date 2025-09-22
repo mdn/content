@@ -8,7 +8,7 @@ status:
 browser-compat: api.Translator.create_static
 ---
 
-{{APIRef("Translator and Language Detector APIs")}}{{securecontext_header}}{{SeeCompatTable}}
+{{APIRef("Translator and Language Detector APIs")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`create()`** static method of the {{domxref("Translator")}} interface creates a new `Translator` instance that can be used to translate text.
 

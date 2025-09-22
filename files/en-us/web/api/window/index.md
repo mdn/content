@@ -141,6 +141,8 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Returns a reference to the topmost window in the window hierarchy. This property is read only.
 - {{domxref("Window.trustedTypes")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("TrustedTypePolicyFactory")}} object associated with the global object, providing the entry point for using the {{domxref("Trusted Types API", "", "", "nocode")}}.
+- {{domxref("Window.viewport")}} {{Experimental_inline}} {{ReadOnlyInline}}
+  - : Returns a {{domxref("Viewport")}} object instance, which provides information about the current state of the device's viewport.
 - {{domxref("Window.visualViewport")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("VisualViewport")}} object which represents the visual viewport for a given window.
 - {{domxref("Window.window")}} {{ReadOnlyInline}}

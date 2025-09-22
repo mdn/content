@@ -4,9 +4,8 @@ short-title: Array()
 slug: Web/JavaScript/Reference/Global_Objects/Array/Array
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Array.Array
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Array()`** constructor creates {{jsxref("Array")}} objects.
 

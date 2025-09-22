@@ -74,7 +74,7 @@ To set your `PATH` variable on a macOS system and on most Linux systems:
 2. Paste the following into the bottom of your file (updating the path as it actually is on your machine):
 
    ```bash
-   #Add WebDriver browser drivers to PATH
+   # Add WebDriver browser drivers to PATH
    export PATH=$PATH:/Users/bob
    ```
 
@@ -602,7 +602,7 @@ Let's update our `bstack_duck_test.js` demo, to show how these features work:
    });
    ```
 
-5. Finally, update the `if ... else` block near the bottom of the code to send appropriate API calls to BrowserStack depending on whether the test passed or failed:
+5. Finally, update the `if...else` block near the bottom of the code to send appropriate API calls to BrowserStack depending on whether the test passed or failed:
 
    ```js
    if (title === "webdriver at DuckDuckGo") {

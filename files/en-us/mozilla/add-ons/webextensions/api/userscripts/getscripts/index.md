@@ -3,9 +3,8 @@ title: userScripts.getScripts()
 slug: Mozilla/Add-ons/WebExtensions/API/userScripts/getScripts
 page-type: webextension-api-function
 browser-compat: webextensions.api.userScripts.getScripts
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Returns user scripts registered by the extension.
 

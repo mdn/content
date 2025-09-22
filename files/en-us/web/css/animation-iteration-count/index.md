@@ -3,9 +3,8 @@ title: animation-iteration-count
 slug: Web/CSS/animation-iteration-count
 page-type: css-property
 browser-compat: css.properties.animation-iteration-count
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`animation-iteration-count`** [CSS](/en-US/docs/Web/CSS) property sets the number of times an animation sequence should be played before stopping.
 
@@ -35,7 +34,7 @@ animation-iteration-count: 1.5;
   align-items: center;
   background-color: #1766aa;
   border-radius: 50%;
-  border: 5px solid #333;
+  border: 5px solid #333333;
   color: white;
   display: flex;
   flex-direction: column;
@@ -71,41 +70,37 @@ animation-iteration-count: 1.5;
 ```
 
 ```js interactive-example
-"use strict";
+const el = document.getElementById("example-element");
+const status = document.getElementById("play-status");
 
-window.addEventListener("load", () => {
-  const el = document.getElementById("example-element");
-  const status = document.getElementById("play-status");
-
-  function update() {
-    status.textContent = "delaying";
-    el.className = "";
+function update() {
+  status.textContent = "delaying";
+  el.className = "";
+  window.requestAnimationFrame(() => {
     window.requestAnimationFrame(() => {
-      window.requestAnimationFrame(() => {
-        el.className = "animating";
-      });
+      el.className = "animating";
     });
-  }
-
-  el.addEventListener("animationstart", () => {
-    status.textContent = "playing";
   });
+}
 
-  el.addEventListener("animationend", () => {
-    status.textContent = "finished";
-  });
+el.addEventListener("animationstart", () => {
+  status.textContent = "playing";
+});
 
-  const observer = new MutationObserver(() => {
-    update();
-  });
+el.addEventListener("animationend", () => {
+  status.textContent = "finished";
+});
 
-  observer.observe(el, {
-    attributes: true,
-    attributeFilter: ["style"],
-  });
-
+const observer = new MutationObserver(() => {
   update();
 });
+
+observer.observe(el, {
+  attributes: true,
+  attributeFilter: ["style"],
+});
+
+update();
 ```
 
 It is often convenient to use the shorthand property {{cssxref("animation")}} to set all animation properties at once.

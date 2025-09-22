@@ -60,11 +60,11 @@ current width information is always available.
 const clockImage = document.querySelector("img");
 let output = document.querySelector(".size");
 
-const updateWidth = (event) => {
+const updateWidth = () => {
   output.innerText = clockImage.width;
 };
 
-window.addEventListener("load", updateWidth);
+updateWidth();
 window.addEventListener("resize", updateWidth);
 ```
 

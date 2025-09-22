@@ -3,9 +3,8 @@ title: browsingData
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData
 page-type: webextension-api
 browser-compat: webextensions.api.browsingData
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Enables extensions to clear the data that is accumulated while the user is browsing.
 
@@ -61,11 +60,11 @@ To use this API you must have the "browsingData" [API permission](/en-US/docs/Mo
 - {{WebExtAPIRef("browsingData.settings()")}}
   - : Gets the current value of settings in the browser's "Clear History" feature.
 
+{{WebExtExamples("h2")}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples("h2")}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData) API.

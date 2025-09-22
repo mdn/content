@@ -2,9 +2,8 @@
 title: CSS value functions
 slug: Web/CSS/CSS_Values_and_Units/CSS_Value_Functions
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 **CSS value functions** are statements that invoke special data processing or calculations to return a [CSS](/en-US/docs/Web/CSS) [value](/en-US/docs/Web/CSS/CSS_Values_and_Units) for a CSS property. CSS value functions represent more complex [data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) and they may take some input arguments to calculate the return value.
 
@@ -195,9 +194,9 @@ The {{CSSxRef("color_value","&lt;color&gt;")}} CSS [data type](/en-US/docs/Web/C
 - {{CSSxRef("color_value/oklch", "oklch()")}}
   - : Defines a given color according to its lightness, chroma, hue and alpha (transparency) components.
 - {{CSSxRef("color_value/lab", "lab()")}}
-  - : Defines a given color according to its lightness, a-axis distance and b-axis distance in the lab colorspace.
+  - : Defines a given color according to its lightness, a-axis distance and b-axis distance in the Lab colorspace.
 - {{CSSxRef("color_value/oklab", "oklab()")}}
-  - : Defines a given color according to its lightness, a-axis distance, b-axis distance in the lab colorspace and alpha (transparency).
+  - : Defines a given color according to its lightness, a-axis distance, b-axis distance in the Lab colorspace and alpha (transparency).
 - {{CSSxRef("color_value/color", "color()")}}
   - : Specifies a particular, specified colorspace rather than the implicit sRGB colorspace.
 - {{CSSxRef("color_value/color-mix", "color-mix()")}}
@@ -254,6 +253,8 @@ CSS counter functions are generally used with the {{CSSxRef("content")}} propert
 
 ## Shape functions
 
+### Basic shapes
+
 The {{CSSxRef("&lt;basic-shape&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents a graphical shape. It is used in the {{CSSxRef("clip-path")}}, {{CSSxRef("offset-path")}}, and {{CSSxRef("shape-outside")}} properties.
 
 - {{CSSxRef("basic-shape/circle","circle()")}}
@@ -272,8 +273,13 @@ The {{CSSxRef("&lt;basic-shape&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_V
   - : Accepts an SVG path string to enable a shape to be drawn.
 - {{CSSxRef("basic-shape/shape", "shape()")}}
   - : Accepts a comma-separated list of commands defining the shape to be drawn.
+
+### Other shape functions
+
 - {{CSSxRef("ray", "ray()")}}
-  - : Valid with `offset-path` only, it defines the line segment an animated element can follow.
+  - : Valid with {{cssxref("offset-path")}}; defines the line segment an animated element can follow.
+- {{CSSxRef("superellipse()")}}
+  - : Defines the curvature of an ellipse; can be used to specify a {{cssxref("corner-shape-value")}}, which is used with {{cssxref("corner-shape")}} and its [constituent](/en-US/docs/Web/CSS/corner-shape#constituent_properties) and [related](/en-US/docs/Web/CSS/corner-shape#properties_that_follow_the_corner_shape) properties.
 
 ## Reference functions
 
@@ -346,6 +352,15 @@ The anchor positioning functions are used when positioning and sizing anchor-pos
   - : Returns a length relative to the position of the edges of an anchor-positioned element's associated anchor element.
 - {{cssxref("anchor-size", "anchor-size()")}}
   - : Returns a length relative to the size of the associated anchor element.
+
+## Tree counting functions
+
+The following functions return an integer value based on the DOM tree, rather than the flat tree like most CSS values do:
+
+- {{cssxref("sibling-index", "sibling-index()")}}
+  - : Returns an integer reflecting the position of the selected element among its siblings.
+- {{cssxref("sibling-count", "sibling-count()")}}
+  - : Returns an integer reflecting the total number of siblings, including the selected element.
 
 ## See also
 

@@ -6,9 +6,10 @@ page-type: http-permissions-policy-directive
 status:
   - experimental
 browser-compat: http.headers.Permissions-Policy.microphone
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The HTTP {{HTTPHeader("Permissions-Policy")}} header `microphone` directive controls whether the current document is allowed to use audio input devices.
 

@@ -3,9 +3,8 @@ title: "<u>: The Unarticulated Annotation (Underline) element"
 slug: Web/HTML/Reference/Elements/u
 page-type: html-element
 browser-compat: html.elements.u
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<u>`** [HTML](/en-US/docs/Web/HTML) element represents a span of inline text which should be rendered in a way that indicates that it has a non-textual annotation. This is rendered by default as a single solid underline, but may be altered using CSS.
 
@@ -29,7 +28,7 @@ p {
 }
 
 u {
-  text-decoration: #f00 wavy underline;
+  text-decoration: red wavy underline;
 }
 ```
 

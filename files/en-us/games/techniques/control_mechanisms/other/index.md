@@ -2,9 +2,8 @@
 title: Unconventional controls
 slug: Games/Techniques/Control_mechanisms/Other
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 {{PreviousMenu("Games/Techniques/Control_mechanisms/Desktop_with_gamepad", "Games/Techniques/Control_mechanisms")}}
 
@@ -31,13 +30,9 @@ if (this.cursors.right.isDown) {
 It works out of the box. The cursors are the four directional arrow keys on the keyboard, and these have exactly the same key codes as the arrow keys on the remote. How do you know the codes for the other remote keys? You can check them by printing the responses out in the console:
 
 ```js
-window.addEventListener(
-  "keydown",
-  (event) => {
-    console.log(event.keyCode);
-  },
-  true,
-);
+window.addEventListener("keydown", (event) => {
+  console.log(event.keyCode);
+});
 ```
 
 Every key pressed on the remote will show its key code in the console. You can also check this handy cheat sheet seen below if you're working with Panasonic TVs running Firefox OS:
@@ -47,23 +42,19 @@ Every key pressed on the remote will show its key code in the console. You can a
 You can add moving between states, starting a new game, controlling the ship and blowing stuff up, pausing and restarting the game. All that is needed is checking for key presses:
 
 ```js
-window.addEventListener(
-  "keydown",
-  (event) => {
-    switch (event.keyCode) {
-      case 8: {
-        // Pause the game
-        break;
-      }
-      case 588: {
-        // Detonate bomb
-        break;
-      }
-      // …
+window.addEventListener("keydown", (event) => {
+  switch (event.keyCode) {
+    case 8: {
+      // Pause the game
+      break;
     }
-  },
-  true,
-);
+    case 588: {
+      // Detonate bomb
+      break;
+    }
+    // …
+  }
+});
 ```
 
 You can see it in action by watching [this video](https://www.youtube.com/watch?v=Bh11sP0bcTY).
@@ -76,7 +67,7 @@ Leap Motion is becoming more and more popular due to very good integration with 
 
 As well as being great for virtual interfaces, it can also be used for a casual 2D gaming experiences. It would be very difficult to do everything with only your hands, but it's totally doable for the simple Captain Roger's gameplay — steering the ship and shooting the bullets.
 
-To get the Leap Motion working on your computer you have to first install it by following the steps at [docs.ultraleap.com](https://docs.ultraleap.com/hand-tracking/getting-started.html#installation-guides). When everything is installed and the controller is connected to your computer we can proceed with implementing support in our [little demo](https://github.com/end3r/JavaScript-Game-Controls/). First, we add a `<script>` tag with the `url` pointing at [this file](https://js.leapmotion.com/leap-0.6.4.min.js), and add `<div id="output"></div>` just before the closing `</body>` tag for outputting diagnostic information.
+To get the Leap Motion working on your computer you have to first install it by following the steps at [docs.ultraleap.com](https://docs.ultraleap.com/hand-tracking/getting-started.html#installation-guides). When everything is installed and the controller is connected to your computer we can proceed with implementing support in our [little demo](https://github.com/end3r/JavaScript-Game-Controls/). First, we add a `<script>` tag with the `url` pointing at `https://js.leapmotion.com/leap-0.6.4.min.js`, and add `<div id="output"></div>` just before the closing `</body>` tag for outputting diagnostic information.
 
 We will need a few helper variables for our code to work — one for the purpose of calculating the degrees from radians, two for holding the horizontal and vertical amount of degrees our hand is leaning above the controller, one for the threshold of that lean, and one for the state of our hand's grab status. We next add these lines after all the event listeners for keyboard and mouse, but before the `draw` method:
 

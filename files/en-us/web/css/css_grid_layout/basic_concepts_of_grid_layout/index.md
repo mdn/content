@@ -3,9 +3,8 @@ title: Basic concepts of grid layout
 short-title: Basic concepts
 slug: Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) introduces a two-dimensional grid system to CSS. Grids can be used to lay out major page areas or small user interface elements. This guide introduces the CSS grid layout and the terminology that is part of the CSS grid layout specification. The features shown in this overview will then be explained in greater detail in the other guides in this series.
 
@@ -316,7 +315,7 @@ When creating our example grid, we specifically defined our column tracks with t
 The _explicit grid_ consists of rows and columns defined with {{cssxref("grid-template-columns")}} or {{cssxref("grid-template-rows")}}. The
 _implicit grid_ extends the defined explicit grid when content is placed outside of that grid, such as into the rows by drawing additional grid lines.
 
-If you place something outside of the defined grid—or due to the amount of content, more grid tracks are needed—then the grid creates rows and columns in the _implicit grid_. These tracks will be auto-sized by default, resulting in their size being based on the content that is inside them.
+If you place something outside of the defined grid or, due to the amount of content, more grid tracks are needed, then the grid creates rows and columns in the _implicit grid_. These implicit tracks are auto-sized by default, meaning the size of the created rows or columns is influenced by both their content and by the available free space within the grid container. The `auto` keyword allows the generated tracks to accommodate content while also sharing any remaining space.
 
 You can also define a set size for tracks created in the implicit grid with the {{cssxref("grid-auto-rows")}} and {{cssxref("grid-auto-columns")}} properties.
 
@@ -366,7 +365,7 @@ In this example, we set `grid-auto-rows: 200px`, ensuring the tracks created in 
 
 When setting up an explicit grid or defining the sizing for automatically created rows or columns we may want to give tracks a minimum size, but also ensure they expand to fit any content that is added. For example, we may want our rows to never collapse smaller than 100 pixels, but if our content stretches to 300 pixels in height, then we would like the row to stretch to that height. This is solved by the {{cssxref("minmax", "minmax()")}} function.
 
-In this example, we use `minmax()` within the `grid-auto-rows` property value. By setting `grid-auto-rows: minmax(100px, auto);`, automatically created rows will be a minimum of `100px` tall, and have a maximum of `auto`. Setting `auto` as the maximum value means the size will stretch to fit the content, sizing the row based on the cell with the tallest content.
+In this example, we use `minmax()` within the `grid-auto-rows` property value. By setting `grid-auto-rows: minmax(100px, auto);`, automatically created rows will be a minimum of `100px` tall, and have a maximum of `auto`. Setting `auto` as the maximum value allows the track to grow to accommodate its content (up to its `max-content` size) while also sharing any available free space within the grid container.
 
 ```css
 .wrapper {

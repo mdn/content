@@ -50,7 +50,7 @@ function getRandomInt(min, max) {
 
 canvas.addEventListener("pointermove", (evt) => {
   const pointSize = 10;
-  ctx.fillStyle = "#000000";
+  ctx.fillStyle = "black";
   ctx.fillRect(evt.pageX, evt.pageY, pointSize, pointSize);
   if (move_cnt === 50) {
     let r = getRandomInt(0, 255);
@@ -89,7 +89,3 @@ canvas.height = window.innerHeight;
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [Enhancing Inking on the Web](https://blogs.windows.com/msedgedev/2021/08/18/enhancing-inking-on-the-web/)

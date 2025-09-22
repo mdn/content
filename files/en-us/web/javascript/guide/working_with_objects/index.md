@@ -2,9 +2,10 @@
 title: Working with objects
 slug: Web/JavaScript/Guide/Working_with_objects
 page-type: guide
+sidebar: jssidebar
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Keyed_collections", "Web/JavaScript/Guide/Using_classes")}}
+{{PreviousNext("Web/JavaScript/Guide/Keyed_collections", "Web/JavaScript/Guide/Using_classes")}}
 
 JavaScript is designed on an object-based paradigm. An object is a collection of [properties](/en-US/docs/Glossary/Property/JavaScript), and a property is an association between a name (or _key_) and a value. A property's value can be a function, in which case the property is known as a [method](/en-US/docs/Glossary/Method).
 
@@ -156,9 +157,9 @@ const Animal = {
   },
 };
 
-// Create new animal type called animal1
-const animal1 = Object.create(Animal);
-animal1.displayType(); // Logs: Invertebrates
+// Create new animal type called `animal`
+const animal = Object.create(Animal);
+animal.displayType(); // Logs: Invertebrates
 
 // Create new animal type called fish
 const fish = Object.create(Animal);
@@ -305,7 +306,7 @@ function showProps(obj, objName) {
 }
 ```
 
-There is no native way to list inherited non-enumerable properties. However, this can be achieved with the following function:
+There is no native way to list all inherited properties including non-enumerable ones. However, this can be achieved with the following function:
 
 ```js
 function listAllProperties(myObj) {

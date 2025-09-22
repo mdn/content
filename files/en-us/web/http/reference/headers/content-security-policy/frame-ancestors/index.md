@@ -4,9 +4,8 @@ short-title: frame-ancestors
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors
 page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.frame-ancestors
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`frame-ancestors`** directive specifies valid parents that may embed a page using {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, or {{HTMLElement("embed")}}.
 
@@ -15,6 +14,9 @@ Setting this directive to `'none'` is similar to {{HTTPHeader("X-Frame-Options",
 > [!NOTE]
 > **`frame-ancestors`** allows you to specify what parent source may embed a page.
 > This differs from **`frame-src`**, which allows you to specify where iframes in a page may be loaded from.
+
+> [!NOTE]
+> The **`frame-ancestors`** directive [checks each ancestor](https://w3c.github.io/webappsec-csp/#frame-ancestors-and-frame-options). If any ancestor doesn't match, the load is cancelled. Therefore all ancestors should be allowed by the **`frame-ancestors`** directive of leaf frames when using nested frames.
 
 <table class="properties">
   <tbody>

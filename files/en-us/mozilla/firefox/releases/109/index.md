@@ -1,5 +1,6 @@
 ---
 title: Firefox 109 for developers
+short-title: Firefox 109
 slug: Mozilla/Firefox/Releases/109
 page-type: firefox-release-notes
 sidebar: firefox
@@ -15,7 +16,7 @@ This article provides information about the changes in Firefox 109 that will aff
 
 ### CSS
 
-- The [`<system-color>`](/en-US/docs/Web/CSS/system-color) CSS data type now supports the values [`Mark`](/en-US/docs/Web/CSS/system-color#mark), [`MarkText`](/en-US/docs/Web/CSS/system-color#marktext), and [`ButtonBorder`](/en-US/docs/Web/CSS/system-color#buttonborder) ([Firefox bug 1638052](https://bugzil.la/1638052)).
+- The [`<system-color>`](/en-US/docs/Web/CSS/system-color) CSS data type now supports the values `Mark`, `MarkText`, and `ButtonBorder` ([Firefox bug 1638052](https://bugzil.la/1638052)).
 
 ### JavaScript
 
@@ -72,7 +73,3 @@ No notable changes.
 - With the introduction of the [extensions button](https://support.mozilla.org/en-US/kb/extensions-button), the default value of `default_area` in the [`action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) and [`browser_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) manifest keys has changed from `"navbar"` to `"menupanel"` ([Firefox bug 1799947](https://bugzil.la/1799947)).
 - Support for {{WebExtAPIRef("omnibox.onDeleteSuggestion")}} and the `deletable` property in {{WebExtAPIRef("omnibox.SuggestResult")}}, enabling extensions to react to a user deleting an address bar search result ([Firefox bug 1799947](https://bugzil.la/1799947)).
 - Support for the <code>top</code> and <code>left</code> parameters to determine positioning of `panel` or `popup` window using {{WebExtAPIRef("windows.create()")}} ([Firefox bug 1271047](https://bugzil.la/1271047)).
-
-## Older versions
-
-{{Firefox_for_developers}}

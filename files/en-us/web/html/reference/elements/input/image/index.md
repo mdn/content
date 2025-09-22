@@ -3,9 +3,8 @@ title: <input type="image">
 slug: Web/HTML/Reference/Elements/input/image
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_image
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 {{HTMLElement("input")}} elements of type **`image`** are used to create graphical submit buttons, i.e., submit buttons that take the form of an image rather than text.
 
@@ -301,7 +300,7 @@ label {
 #image {
   object-position: right top;
   object-fit: contain;
-  background-color: #ddd;
+  background-color: #dddddd;
 }
 ```
 

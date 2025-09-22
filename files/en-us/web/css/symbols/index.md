@@ -3,9 +3,8 @@ title: symbols()
 slug: Web/CSS/symbols
 page-type: css-function
 browser-compat: css.properties.list-style-type.symbols
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`symbols()`** CSS function enables defining counter styles inline, directly as a value of properties such as {{cssxref("list-style")}}, providing a less powerful but simpler alternative to the {{cssxref("@counter-style")}} method of defining a counter style.
 

@@ -3,9 +3,8 @@ title: "<table>: The Table element"
 slug: Web/HTML/Reference/Elements/table
 page-type: html-element
 browser-compat: html.elements.table
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<table>`** [HTML](/en-US/docs/Web/HTML) element represents tabular data—that is, information presented in a two-dimensional table comprised of rows and columns of cells containing data.
 
@@ -1017,7 +1016,7 @@ td {
 th {
   position: sticky;
   top: 0;
-  background: #fff;
+  background: white;
   vertical-align: bottom;
 }
 

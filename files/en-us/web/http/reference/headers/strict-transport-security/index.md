@@ -4,9 +4,8 @@ short-title: Strict-Transport-Security
 slug: Web/HTTP/Reference/Headers/Strict-Transport-Security
 page-type: http-header
 browser-compat: http.headers.Strict-Transport-Security
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Strict-Transport-Security`** {{Glossary("response header")}} (often abbreviated as {{Glossary("HSTS")}}) informs browsers that the {{Glossary("host")}} should only be accessed using HTTPS, and that any future attempts to access it using HTTP should automatically be upgraded to HTTPS.
 Additionally, on future connections to the host, the browser will not allow the user to bypass secure connection errors, such as an invalid certificate.
@@ -144,7 +143,7 @@ While the service is hosted by Google, all browsers are using this preload list.
 However, it is not part of the HSTS specification and should not be treated as official.
 
 - Information regarding the HSTS preload list in Chrome: https://www.chromium.org/hsts/
-- Consultation of the Firefox HSTS preload list: [nsSTSPreloadList.inc](https://searchfox.org/mozilla-central/source/security/manager/ssl/nsSTSPreloadList.inc)
+- Consultation of the Firefox HSTS preload list: [nsSTSPreloadList.inc](https://searchfox.org/firefox-main/source/security/manager/ssl/nsSTSPreloadList.inc)
 
 ## Examples
 

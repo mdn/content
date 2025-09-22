@@ -1,5 +1,6 @@
 ---
 title: Firefox 63 for developers
+short-title: Firefox 63
 slug: Mozilla/Firefox/Releases/63
 page-type: firefox-release-notes
 sidebar: firefox
@@ -35,7 +36,7 @@ This article provides information about the changes in Firefox 63 that will affe
 - Re-enabled support for [webkit-prefixed pixel-density @media queries](/en-US/docs/Web/CSS/@media/-webkit-device-pixel-ratio) ([Firefox bug 1444139](https://bugzil.la/1444139)).
 - Support added for the [CSS Flexible Box Layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) (Flexbox) properties {{CSSxRef("align-self")}}, {{CSSxRef("align-content")}}, and {{CSSxRef("align-items")}} as well as the {{CSSxRef("justify-content")}} property ([Firefox bug 1472843](https://bugzil.la/1472843)).
 - Implemented the `path()` function for {{CSSxRef("offset-path")}} ([Firefox bug 1429298](https://bugzil.la/1429298)).
-- Implemented [syntax improvements from the Media Queries Level 4 specification](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#syntax_improvements_in_level_4) ([Firefox bug 1422225](https://bugzil.la/1422225)).
+- Implemented syntax improvements from the Media Queries Level 4 specification, notably [nested boolean expressions](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#creating_complex_media_queries) and the [range syntax](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#targeting_media_features) ([Firefox bug 1422225](https://bugzil.la/1422225)).
 - Renamed `offset-*` properties to {{CSSxRef("inset-block-start")}}, {{CSSxRef("inset-block-end")}}, {{CSSxRef("inset-inline-start")}}, and {{CSSxRef("inset-inline-end")}} ([Firefox bug 1464782](https://bugzil.la/1464782)).
 - Added support for the [prefers-reduced-motion](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) media feature ([Firefox bug 1365045](https://bugzil.la/1365045), [Firefox bug 1475462](https://bugzil.la/1475462)).
 - Added flow relative values (`block`, `inline`) for the {{CSSxRef("resize")}} property ([Firefox bug 1464786](https://bugzil.la/1464786)).
@@ -208,7 +209,3 @@ _No changes._
 - {{WebExtAPIRef("webRequest.SecurityInfo")}} adds two new properties, `keaGroupName`, and `signatureSchemeName`. This change was uplifted to Firefox 62 ([Firefox bug 1471959](https://bugzil.la/1471959)).
 - {{WebExtAPIRef("cookies.Cookie")}} now includes a property indicating the SameSite state of the cookie. The {{WebExtAPIRef("cookies.SameSiteStatus")}} enumeration defines SameSite state values ([Firefox bug 1351663](https://bugzil.la/1351663)).
 - Match patterns for URLs now explicitly match the "data" URL scheme ([Firefox bug 1280370](https://bugzil.la/1280370)).
-
-## Older versions
-
-{{Firefox_for_developers}}

@@ -58,12 +58,7 @@ important differences:
 
 ### Differences from innerHTML
 
-{{domxref("Element.innerHTML")}} returns HTML, as its name indicates. Sometimes people
-use `innerHTML` to retrieve or write text inside an element, but
-`textContent` has better performance because its value is not parsed as
-HTML.
-
-Moreover, using `textContent` can prevent {{glossary("Cross-site_scripting", "XSS attacks")}}.
+{{domxref("Element.innerHTML")}} gets or sets HTML, as its name indicates. We advise against using `innerHTML` to get or set text inside an element because it deals with raw HTML rather than plain text and can be susceptible to {{glossary("Cross-site_scripting", "XSS attacks")}}. Even if you are sure that the text never contains HTML syntax, it is still less semantic and slower because it needs to invoke the HTML parser.
 
 ## Examples
 
@@ -100,5 +95,3 @@ document.getElementById("divA").textContent = "This text is different!";
 
 - {{domxref("HTMLElement.innerText")}}
 - {{domxref("Element.innerHTML")}}
-- [More on differences between `innerText` and `textContent`](http://perfectionkills.com/the-poor-misunderstood-innerText/)
-  (blog post)

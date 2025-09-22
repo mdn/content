@@ -3,9 +3,8 @@ title: path()
 slug: Web/CSS/basic-shape/path
 page-type: css-function
 browser-compat: css.types.basic-shape.path
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`path()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) accepts an [SVG path](/en-US/docs/Web/SVG/Reference/Element/path) string, and is used in the [CSS shapes](/en-US/docs/Web/CSS/CSS_shapes) and [CSS motion path](/en-US/docs/Web/CSS/CSS_motion_path) modules to enable a shape to be drawn. The `path()` function is a {{cssxref("&lt;basic-shape&gt;")}} data type value. It can be used in the CSS [`offset-path`](/en-US/docs/Web/CSS/offset-path) and [`clip-path`](/en-US/docs/Web/CSS/clip-path) properties and in the SVG [`d`](/en-US/docs/Web/SVG/Reference/Attribute/d) attribute.
 
@@ -38,11 +37,11 @@ clip-path: path(
 
 ```css interactive-example
 #default-example {
-  background: #fe9;
+  background: #ffee99;
 }
 
 #example-element {
-  background: linear-gradient(to bottom right, #f52, #05f);
+  background: linear-gradient(to bottom right, #ff5522, #0055ff);
   width: 100%;
   height: 100%;
 }
@@ -151,7 +150,7 @@ svg {
   height: 100%;
 }
 
-/* This path is displayed on hover*/
+/* This path is displayed on hover */
 #svg_css_ex1:hover path {
   d: path("M20,80 L50,20 L80,80");
 }
@@ -180,6 +179,6 @@ svg {
 ## See also
 
 - {{cssxref("&lt;shape-outside&gt;")}}
-- [CSS Shapes](/en-US/docs/Web/CSS/CSS_shapes)
-- [Overview of CSS Shapes](/en-US/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
-- [SVG Path Syntax Illustrated Guide](https://css-tricks.com/svg-path-syntax-illustrated-guide/)
+- [CSS shapes](/en-US/docs/Web/CSS/CSS_shapes) module
+- [Overview of CSS shapes](/en-US/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
+- [The SVG `path` syntax: an illustrated guide](https://css-tricks.com/svg-path-syntax-illustrated-guide/) via CSS-tricks (2021)

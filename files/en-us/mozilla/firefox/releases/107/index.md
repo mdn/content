@@ -1,5 +1,6 @@
 ---
 title: Firefox 107 for developers
+short-title: Firefox 107
 slug: Mozilla/Firefox/Releases/107
 page-type: firefox-release-notes
 sidebar: firefox
@@ -20,7 +21,7 @@ No notable changes
 
 ### CSS
 
-- The [`contain-intrinsic-size`](/en-US/docs/Web/CSS/contain-intrinsic-size) shorthand CSS property can now be applied to specify the size of a UI element that is subject to [size containment](/en-US/docs/Web/CSS/CSS_containment#size_containment).
+- The [`contain-intrinsic-size`](/en-US/docs/Web/CSS/contain-intrinsic-size) shorthand CSS property can now be applied to specify the size of a UI element that is subject to [size containment](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment#size_containment).
   This allows a user agent to determine the size of an element without needing to render its child elements.
   The shorthand properties [`contain-intrinsic-width`](/en-US/docs/Web/CSS/contain-intrinsic-width) and [`contain-intrinsic-height`](/en-US/docs/Web/CSS/contain-intrinsic-height) are also supported, along with the [logical properties](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) [`contain-intrinsic-block-size`](/en-US/docs/Web/CSS/contain-intrinsic-block-size) and [`contain-intrinsic-inline-size`](/en-US/docs/Web/CSS/contain-intrinsic-inline-size).
   ([Firefox bug 1597529](https://bugzil.la/1597529)).
@@ -62,7 +63,3 @@ No notable changes
 ### Other
 
 - The `error` property returned when an error occurs in {{WebExtAPIRef("scripting.executeScript")}} now represents any value the script throws or rejects with, instead of being just an object with a message property [Firefox bug 1740608](https://bugzil.la/1740608).
-
-## Older versions
-
-{{Firefox_for_developers}}

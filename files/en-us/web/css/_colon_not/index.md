@@ -3,9 +3,8 @@ title: :not()
 slug: Web/CSS/:not
 page-type: css-pseudo-class
 browser-compat: css.selectors.not
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`:not()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents elements that do not match a list of selectors. Since it prevents specific items from being selected, it is known as the _negation pseudo-class_.
 
@@ -147,7 +146,7 @@ p:not(.foo, :invalid-pseudo-class) {
 /* Select all <p> elements without the `foo` class */
 p:not(:is(.foo, :invalid-pseudo-class)) {
   color: green;
-  border-top: dotted thin currentcolor;
+  border-top: dotted thin currentColor;
 }
 
 /* Select all <div> elements without the `foo` or the `bar` class */
@@ -158,7 +157,7 @@ div:not(.foo, .bar) {
 
 /* Select all <div> elements without the `foo` or the `bar` class */
 div:not(:is(.foo, .bar)) {
-  border-bottom: dotted thin currentcolor;
+  border-bottom: dotted thin currentColor;
 }
 ```
 

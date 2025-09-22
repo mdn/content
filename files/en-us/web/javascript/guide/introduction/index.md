@@ -2,9 +2,10 @@
 title: Introduction
 slug: Web/JavaScript/Guide/Introduction
 page-type: guide
+sidebar: jssidebar
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Grammar_and_types")}}
+{{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Grammar_and_types")}}
 
 This chapter introduces JavaScript and discusses some of its fundamental concepts.
 
@@ -71,7 +72,7 @@ The JavaScript documentation describes aspects of the language that are appropri
 
 ## Getting started with JavaScript
 
-To get started with JavaScript, all you need is a modern web browser. Recent versions of [Firefox](https://www.mozilla.org/en-CA/firefox/new/), [Chrome](https://www.google.com/chrome/index.html), [Microsoft Edge](https://www.microsoft.com/en-us/edge), and [Safari](https://www.apple.com/safari/) all support the features discussed in this guide.
+To get started with JavaScript, all you need is a modern web browser. Recent versions of [Firefox](https://www.firefox.com/en-US/), [Chrome](https://www.google.com/chrome/index.html), [Microsoft Edge](https://www.microsoft.com/en-us/edge), and [Safari](https://www.apple.com/safari/) all support the features discussed in this guide.
 
 A very useful tool for exploring JavaScript is the JavaScript Console (sometimes called the Web Console, or just the console): this is a tool which enables you to enter JavaScript and run it in the current page.
 
@@ -83,7 +84,7 @@ The exact instructions for opening the console vary from one browser to another:
 
 - [Opening the console in Firefox](https://firefox-source-docs.mozilla.org/devtools-user/web_console/#opening-the-web-console)
 - [Opening the console in Chrome](https://developer.chrome.com/docs/devtools/open)
-- [Opening the console in Microsoft Edge](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide/console/)
+- [Opening the console in Microsoft Edge](https://learn.microsoft.com/en-us/microsoft-edge/devtools/console/)
 
 ### Entering and running JavaScript
 

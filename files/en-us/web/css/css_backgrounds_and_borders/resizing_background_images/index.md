@@ -2,9 +2,8 @@
 title: Resizing background images with background-size
 slug: Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **{{cssxref("background-size")}}** [CSS](/en-US/docs/Web/CSS) property lets you resize the background image of an element, overriding the default behavior of tiling the image at its full size by specifying the width and/or height of the image. By doing so, you can scale the image upward or downward as desired.
 
@@ -22,7 +21,7 @@ Let's consider a large image, a 2982x2808 Firefox logo image. We want (for some 
 
 ```css
 .tiledBackground {
-  background-image: url(https://www.mozilla.org/media/img/logos/firefox/logo-quantum.9c5e96634f92.png);
+  background-image: url("https://www.mozilla.org/media/img/logos/firefox/logo-quantum.9c5e96634f92.png");
   background-size: 150px;
   width: 300px;
   height: 300px;
@@ -55,7 +54,7 @@ On the other end of the spectrum, you can scale an image up in the background. H
 
 ```css
 .square2 {
-  background-image: url(favicon.png);
+  background-image: url("favicon.png");
   background-size: 300px;
   width: 300px;
   height: 300px;
@@ -87,7 +86,7 @@ The `contain` value specifies that, regardless of the size of the containing box
 
 ```css
 .bgSizeContain {
-  background-image: url(https://www.mozilla.org/media/img/logos/firefox/logo-quantum.9c5e96634f92.png);
+  background-image: url("https://www.mozilla.org/media/img/logos/firefox/logo-quantum.9c5e96634f92.png");
   background-size: contain;
   width: 160px;
   height: 160px;
@@ -117,7 +116,7 @@ The `cover` value specifies that the background image should be sized so that it
 
 ```css
 .bgSizeCover {
-  background-image: url(https://www.mozilla.org/media/img/logos/firefox/logo-quantum.9c5e96634f92.png);
+  background-image: url("https://www.mozilla.org/media/img/logos/firefox/logo-quantum.9c5e96634f92.png");
   background-size: cover;
   width: 160px;
   height: 160px;

@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.MediaQueryList.media
 ---
 
-{{APIRef("CSSOM")}}
+{{APIRef("CSSOM view API")}}
 
 The **`media`** read-only property of the
 {{DOMxRef("MediaQueryList")}} interface is a string representing a
@@ -48,9 +48,9 @@ A `<span>` to receive the output.
     18px arial,
     sans-serif;
   font-weight: bold;
-  color: #88f;
+  color: #8888ff;
   padding: 0.4em;
-  border: 1px solid #dde;
+  border: 1px solid #ddddee;
 }
 ```
 

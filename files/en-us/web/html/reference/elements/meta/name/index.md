@@ -4,9 +4,8 @@ short-title: <meta> name
 slug: Web/HTML/Reference/Elements/meta/name
 page-type: html-attribute
 browser-compat: html.elements.meta.name
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`name`** attribute of the {{htmlelement("meta")}} element provides metadata in name-value pairs.
 When a `<meta>` element has a `name` attribute, a [`content`](/en-US/docs/Web/HTML/Reference/Attributes/content) attribute defines the corresponding value.

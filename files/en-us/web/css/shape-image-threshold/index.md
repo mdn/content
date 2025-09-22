@@ -3,9 +3,8 @@ title: shape-image-threshold
 slug: Web/CSS/shape-image-threshold
 page-type: css-property
 browser-compat: css.properties.shape-image-threshold
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`shape-image-threshold`** [CSS](/en-US/docs/Web/CSS) property sets the alpha channel threshold used to extract the shape using an image as the value for {{cssxref("shape-outside")}}.
 

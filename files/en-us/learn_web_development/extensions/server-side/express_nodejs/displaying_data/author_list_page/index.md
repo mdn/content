@@ -15,13 +15,13 @@ Open **/controllers/authorController.js**. Find the exported `author_list()` con
 
 ```js
 // Display list of all Authors.
-exports.author_list = asyncHandler(async (req, res, next) => {
+exports.author_list = async (req, res, next) => {
   const allAuthors = await Author.find().sort({ family_name: 1 }).exec();
   res.render("author_list", {
     title: "Author List",
     author_list: allAuthors,
   });
-});
+};
 ```
 
 The route controller function follows the same pattern as for the other list pages.
@@ -74,7 +74,7 @@ The genre list controller function needs to get a list of all `Genre` instances,
    - Sort the results by name, in ascending order.
 
 3. The template to be rendered should be named **genre_list.pug**.
-4. The template to be rendered should be passed the variables `title` ('Genre List') and `genre_list` (the list of genres returned from your `Genre.find()` callback).
+4. The template to be rendered should be passed the variables `title` ('Genre List') and `genre_list` (the list of genres returned from `Genre.find()`).
 5. The view should match the screenshot/requirements above (this should have a very similar structure/format to the Author list view, except for the fact that genres do not have dates).
 
 ## Next steps

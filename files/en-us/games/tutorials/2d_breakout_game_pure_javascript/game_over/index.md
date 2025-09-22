@@ -2,11 +2,10 @@
 title: Game over
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over
 page-type: guide
+sidebar: games
 ---
 
-{{GamesSidebar}}
-
-{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field")}}
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field")}}
 
 This is the **5th step** out of 10 of the [Gamedev Canvas tutorial](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). You can find the source code as it should look after completing this lesson at [Gamedev-Canvas-workshop/lesson5.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson05.html).
 
@@ -89,7 +88,7 @@ See how your code compares to the live sample below:
 
 ```css hidden
 canvas {
-  background: #eee;
+  background: #eeeeee;
 }
 button {
   display: block;
@@ -115,8 +114,8 @@ let leftPressed = false;
 
 let interval = 0;
 
-document.addEventListener("keydown", keyDownHandler, false);
-document.addEventListener("keyup", keyUpHandler, false);
+document.addEventListener("keydown", keyDownHandler);
+document.addEventListener("keyup", keyUpHandler);
 
 function keyDownHandler(e) {
   if (e.key === "Right" || e.key === "ArrowRight") {
@@ -199,4 +198,4 @@ runButton.addEventListener("click", () => {
 
 We're doing quite well so far and our game is starting to feel a lot more worth playing now that you can lose! But it is still missing something. Let's move on to the sixth chapter — [Build the brick field](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field) — and create some bricks for the ball to destroy.
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field")}}
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field")}}

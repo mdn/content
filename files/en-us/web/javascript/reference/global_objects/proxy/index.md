@@ -3,9 +3,8 @@ title: Proxy
 slug: Web/JavaScript/Reference/Global_Objects/Proxy
 page-type: javascript-class
 browser-compat: javascript.builtins.Proxy
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Proxy`** object enables you to create a proxy for another object, which can intercept and redefine fundamental operations for that object.
 
@@ -208,17 +207,17 @@ class Secret {
   }
 }
 
-const aSecret = new Secret("123456");
-console.log(aSecret.secret); // [REDACTED]
+const secret = new Secret("123456");
+console.log(secret.secret); // [REDACTED]
 // Looks like a no-op forwarding...
-const proxy = new Proxy(aSecret, {});
+const proxy = new Proxy(secret, {});
 console.log(proxy.secret); // TypeError: Cannot read private member #secret from an object whose class did not declare it
 ```
 
 This is because when the proxy's `get` trap is invoked, the `this` value is the `proxy` instead of the original `secret`, so `#secret` is not accessible. To fix this, use the original `secret` as `this`:
 
 ```js
-const proxy = new Proxy(aSecret, {
+const proxy = new Proxy(secret, {
   get(target, prop, receiver) {
     // By default, it looks like Reflect.get(target, prop, receiver)
     // which has a different value of `this`
@@ -238,8 +237,8 @@ class Secret {
   }
 }
 
-const aSecret = new Secret();
-const proxy = new Proxy(aSecret, {
+const secret = new Secret();
+const proxy = new Proxy(secret, {
   get(target, prop, receiver) {
     const value = target[prop];
     if (value instanceof Function) {
@@ -404,66 +403,6 @@ console.log(products.browsers);
 
 console.log(products.latestBrowser);
 //  'Edge'
-```
-
-### A complete traps list example
-
-Now in order to create a complete sample `traps` list, for didactic purposes, we will try to proxify a _non-native_ object that is particularly suited to this type of operation: the `docCookies` global object created by [a simple cookie framework](https://reference.codeproject.com/dom/document/cookie/simple_document.cookie_framework).
-
-```js
-/*
-  const docCookies = ... get the "docCookies" object here:
-  https://reference.codeproject.com/dom/document/cookie/simple_document.cookie_framework
-*/
-
-const docCookies = new Proxy(docCookies, {
-  get(target, key) {
-    return target[key] ?? target.getItem(key) ?? undefined;
-  },
-  set(target, key, value) {
-    if (key in target) {
-      return false;
-    }
-    return target.setItem(key, value);
-  },
-  deleteProperty(target, key) {
-    if (!(key in target)) {
-      return false;
-    }
-    return target.removeItem(key);
-  },
-  ownKeys(target) {
-    return target.keys();
-  },
-  has(target, key) {
-    return key in target || target.hasItem(key);
-  },
-  defineProperty(target, key, descriptor) {
-    if (descriptor && "value" in descriptor) {
-      target.setItem(key, descriptor.value);
-    }
-    return target;
-  },
-  getOwnPropertyDescriptor(target, key) {
-    const value = target.getItem(key);
-    return value
-      ? {
-          value,
-          writable: true,
-          enumerable: true,
-          configurable: false,
-        }
-      : undefined;
-  },
-});
-
-/* Cookies test */
-
-console.log((docCookies.myCookie1 = "First value"));
-console.log(docCookies.getItem("myCookie1"));
-
-docCookies.setItem("myCookie1", "Changed value");
-console.log(docCookies.myCookie1);
 ```
 
 ## Specifications

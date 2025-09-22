@@ -3,9 +3,8 @@ title: Use cross-origin images in a canvas
 short-title: Use cross-origin images
 slug: Web/HTML/How_to/CORS_enabled_image
 page-type: how-to
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 HTML provides a [`crossorigin`](/en-US/docs/Web/HTML/Reference/Elements/img#crossorigin) attribute for images that, in combination with an appropriate {{Glossary("CORS")}} header, allows images defined by the {{ HTMLElement("img") }} element that are loaded from foreign origins to be used in a {{HTMLElement("canvas")}} as if they had been loaded from the current origin.
 
@@ -68,7 +67,7 @@ function startDownload() {
 
   downloadedImg = new Image();
   downloadedImg.crossOrigin = "anonymous";
-  downloadedImg.addEventListener("load", imageReceived, false);
+  downloadedImg.addEventListener("load", imageReceived);
   downloadedImg.alt = imageDescription;
   downloadedImg.src = imageURL;
 }

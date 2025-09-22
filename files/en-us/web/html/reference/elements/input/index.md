@@ -3,9 +3,8 @@ title: "<input>: The HTML Input element"
 slug: Web/HTML/Reference/Elements/input
 page-type: html-element
 browser-compat: html.elements.input
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<input>`** [HTML](/en-US/docs/Web/HTML) element is used to create interactive controls for web-based forms in order to accept data from the user; a wide variety of types of input data and control widgets are available, depending on the device and {{Glossary("user agent")}}. The `<input>` element is one of the most powerful and complex in all of HTML due to the sheer number of combinations of input types and attributes.
 
@@ -344,42 +343,44 @@ This section provides a table listing all the attributes with a brief descriptio
 
 Attributes for the `<input>` element include the [global HTML attributes](/en-US/docs/Web/HTML/Reference/Global_attributes) and additionally:
 
-| Attribute                                     | Type(s)                                                                 | Description                                                                            |
-| --------------------------------------------- | ----------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| [`accept`](#accept)                           | `file`                                                                  | Hint for expected file type in file upload controls                                    |
-| [`alt`](#alt)                                 | `image`                                                                 | alt attribute for the image type. Required for accessibility                           |
-| [`autocapitalize`](#autocapitalize)           | all except `url`, `email`, and `password`                               | Controls automatic capitalization in inputted text.                                    |
-| [`autocomplete`](#autocomplete)               | all except `checkbox`, `radio`, and buttons                             | Hint for form autofill feature                                                         |
-| [`capture`](#capture)                         | `file`                                                                  | Media capture input method in file upload controls                                     |
-| [`checked`](#checked)                         | `checkbox`, `radio`                                                     | Whether the command or control is checked                                              |
-| [`dirname`](#dirname)                         | `hidden`, `text`, `search`, `url`, `tel`, `email`                       | Name of form field to use for sending the element's directionality in form submission  |
-| [`disabled`](#disabled)                       | all                                                                     | Whether the form control is disabled                                                   |
-| [`form`](#form)                               | all                                                                     | Associates the control with a form element                                             |
-| [`formaction`](#formaction)                   | `image`, `submit`                                                       | URL to use for form submission                                                         |
-| [`formenctype`](#formenctype)                 | `image`, `submit`                                                       | Form data set encoding type to use for form submission                                 |
-| [`formmethod`](#formmethod)                   | `image`, `submit`                                                       | HTTP method to use for form submission                                                 |
-| [`formnovalidate`](#formnovalidate)           | `image`, `submit`                                                       | Bypass form control validation for form submission                                     |
-| [`formtarget`](#formtarget)                   | `image`, `submit`                                                       | Browsing context for form submission                                                   |
-| [`height`](#height)                           | `image`                                                                 | Same as height attribute for {{htmlelement('img')}}; vertical dimension                |
-| [`list`](#list)                               | all except `hidden`, `password`, `checkbox`, `radio`, and buttons       | Value of the id attribute of the {{htmlelement('datalist')}} of autocomplete options   |
-| [`max`](#max)                                 | `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range`    | Maximum value                                                                          |
-| [`maxlength`](#maxlength)                     | `text`, `search`, `url`, `tel`, `email`, `password`                     | Maximum length (number of characters) of `value`                                       |
-| [`min`](#min)                                 | `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range`    | Minimum value                                                                          |
-| [`minlength`](#minlength)                     | `text`, `search`, `url`, `tel`, `email`, `password`                     | Minimum length (number of characters) of `value`                                       |
-| [`multiple`](#multiple)                       | `email`, `file`                                                         | Boolean. Whether to allow multiple values                                              |
-| [`name`](#name)                               | all                                                                     | Name of the form control. Submitted with the form as part of a name/value pair         |
-| [`pattern`](#pattern)                         | `text`, `search`, `url`, `tel`, `email`, `password`                     | Pattern the `value` must match to be valid                                             |
-| [`placeholder`](#placeholder)                 | `text`, `search`, `url`, `tel`, `email`, `password`, `number`           | Text that appears in the form control when it has no value set                         |
-| [`popovertarget`](#popovertarget)             | `button`                                                                | Designates an `<input type="button">` as a control for a popover element               |
-| [`popovertargetaction`](#popovertargetaction) | `button`                                                                | Specifies the action that a popover control should perform                             |
-| [`readonly`](#readonly)                       | all except `hidden`, `range`, `color`, `checkbox`, `radio`, and buttons | Boolean. The value is not editable                                                     |
-| [`required`](#required)                       | all except `hidden`, `range`, `color`, and buttons                      | Boolean. A value is required or must be checked for the form to be submittable         |
-| [`size`](#size)                               | `text`, `search`, `url`, `tel`, `email`, `password`                     | Size of the control                                                                    |
-| [`src`](#src)                                 | `image`                                                                 | Same as `src` attribute for {{htmlelement('img')}}; address of image resource          |
-| [`step`](#step)                               | `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range`    | Incremental values that are valid                                                      |
-| [`type`](#type)                               | all                                                                     | Type of form control                                                                   |
-| [`value`](#value)                             | all except `image`                                                      | The value of the control. When specified in the HTML, corresponds to the initial value |
-| [`width`](#width)                             | `image`                                                                 | Same as `width` attribute for {{htmlelement('img')}}                                   |
+| Attribute                                     | Type(s)                                                                 | Description                                                                                           |
+| --------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| [`accept`](#accept)                           | `file`                                                                  | Hint for expected file type in file upload controls                                                   |
+| [`alpha`](#alpha)                             | `color`                                                                 | Opacity of the color                                                                                  |
+| [`alt`](#alt)                                 | `image`                                                                 | alt attribute for the image type. Required for accessibility                                          |
+| [`autocapitalize`](#autocapitalize)           | all except `url`, `email`, and `password`                               | Controls automatic capitalization in inputted text.                                                   |
+| [`autocomplete`](#autocomplete)               | all except `checkbox`, `radio`, and buttons                             | Hint for form autofill feature                                                                        |
+| [`capture`](#capture)                         | `file`                                                                  | Media capture input method in file upload controls                                                    |
+| [`checked`](#checked)                         | `checkbox`, `radio`                                                     | Whether the command or control is checked                                                             |
+| [`colorspace`](#colorspace)                   | `color`                                                                 | The [color space](/en-US/docs/Glossary/Color_space) that should be used for selecting the color value |
+| [`dirname`](#dirname)                         | `hidden`, `text`, `search`, `url`, `tel`, `email`                       | Name of form field to use for sending the element's directionality in form submission                 |
+| [`disabled`](#disabled)                       | all                                                                     | Whether the form control is disabled                                                                  |
+| [`form`](#form)                               | all                                                                     | Associates the control with a form element                                                            |
+| [`formaction`](#formaction)                   | `image`, `submit`                                                       | URL to use for form submission                                                                        |
+| [`formenctype`](#formenctype)                 | `image`, `submit`                                                       | Form data set encoding type to use for form submission                                                |
+| [`formmethod`](#formmethod)                   | `image`, `submit`                                                       | HTTP method to use for form submission                                                                |
+| [`formnovalidate`](#formnovalidate)           | `image`, `submit`                                                       | Bypass form control validation for form submission                                                    |
+| [`formtarget`](#formtarget)                   | `image`, `submit`                                                       | Browsing context for form submission                                                                  |
+| [`height`](#height)                           | `image`                                                                 | Same as height attribute for {{htmlelement('img')}}; vertical dimension                               |
+| [`list`](#list)                               | all except `hidden`, `password`, `checkbox`, `radio`, and buttons       | Value of the id attribute of the {{htmlelement('datalist')}} of autocomplete options                  |
+| [`max`](#max)                                 | `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range`    | Maximum value                                                                                         |
+| [`maxlength`](#maxlength)                     | `text`, `search`, `url`, `tel`, `email`, `password`                     | Maximum length (number of characters) of `value`                                                      |
+| [`min`](#min)                                 | `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range`    | Minimum value                                                                                         |
+| [`minlength`](#minlength)                     | `text`, `search`, `url`, `tel`, `email`, `password`                     | Minimum length (number of characters) of `value`                                                      |
+| [`multiple`](#multiple)                       | `email`, `file`                                                         | Boolean. Whether to allow multiple values                                                             |
+| [`name`](#name)                               | all                                                                     | Name of the form control. Submitted with the form as part of a name/value pair                        |
+| [`pattern`](#pattern)                         | `text`, `search`, `url`, `tel`, `email`, `password`                     | Pattern the `value` must match to be valid                                                            |
+| [`placeholder`](#placeholder)                 | `text`, `search`, `url`, `tel`, `email`, `password`, `number`           | Text that appears in the form control when it has no value set                                        |
+| [`popovertarget`](#popovertarget)             | `button`                                                                | Designates an `<input type="button">` as a control for a popover element                              |
+| [`popovertargetaction`](#popovertargetaction) | `button`                                                                | Specifies the action that a popover control should perform                                            |
+| [`readonly`](#readonly)                       | all except `hidden`, `range`, `color`, `checkbox`, `radio`, and buttons | Boolean. The value is not editable                                                                    |
+| [`required`](#required)                       | all except `hidden`, `range`, `color`, and buttons                      | Boolean. A value is required or must be checked for the form to be submittable                        |
+| [`size`](#size)                               | `text`, `search`, `url`, `tel`, `email`, `password`                     | Size of the control                                                                                   |
+| [`src`](#src)                                 | `image`                                                                 | Same as `src` attribute for {{htmlelement('img')}}; address of image resource                         |
+| [`step`](#step)                               | `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range`    | Incremental values that are valid                                                                     |
+| [`type`](#type)                               | all                                                                     | Type of form control                                                                                  |
+| [`value`](#value)                             | all except `image`                                                      | The value of the control. When specified in the HTML, corresponds to the initial value                |
+| [`width`](#width)                             | `image`                                                                 | Same as `width` attribute for {{htmlelement('img')}}                                                  |
 
 A few additional non-standard attributes are listed following the descriptions of the standard attributes.
 
@@ -387,6 +388,9 @@ A few additional non-standard attributes are listed following the descriptions o
 
 - [`accept`](/en-US/docs/Web/HTML/Reference/Attributes/accept)
   - : Valid for the `file` input type only, the `accept` attribute defines which file types are selectable in a `file` upload control. See the {{HTMLElement("input/file", "file")}} input type.
+
+- `alpha` {{experimental_inline}}
+  - : Valid for the `color` input type only, the `alpha` attribute provides the end user with the ability to set the opacity of the color being selected.
 
 - `alt`
   - : Valid for the `image` button only, the `alt` attribute provides alternative text for the image, displaying the value of the attribute if the image [`src`](#src) is missing or otherwise fails to load. See the {{HTMLElement("input/image", "image")}} input type.
@@ -426,6 +430,11 @@ A few additional non-standard attributes are listed following the descriptions o
     >
     > For example, if a checkbox whose `name` is `fruit` has a `value` of `cherry`, and the checkbox is checked, the form data submitted will include `fruit=cherry`. If the checkbox isn't active, it isn't listed in the form data at all. The default `value` for checkboxes and radio buttons is `on`.
 
+- `colorspace` {{experimental_inline}}
+  - : Valid for the `color` input type only, the `colorspace` attribute specifies the [color space](/en-US/docs/Glossary/Color_space) that is used by the `type="color"` input. Possible {{Glossary("enumerated")}} values are:
+    - `"limited-srgb"`: The color is in the {{glossary("RGB", "sRGB")}} color space. This includes [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb), [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl), [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb), and {{cssxref("hex-color")}} values. The color value is limited to 8-bits per `r`, `g`, and `b` component. This is the default.
+    - `"display-p3"`: The [Display P3 color space](/en-US/docs/Glossary/Color_space#display-p3), e.g., `color(display-p3 1.84 -0.19 0.72 / 0.6)`
+
 - [`dirname`](/en-US/docs/Web/HTML/Reference/Attributes/dirname)
   - : Valid for `hidden`, `text`, `search`, `url`, `tel`, and `email` input types, the `dirname` attribute enables the submission of the directionality of the element. When included, the form control will submit with two name/value pairs: the first being the [`name`](#name) and [`value`](#value), and the second being the value of the `dirname` attribute as the name, with a value of `ltr` or `rtl` as set by the browser.
 
@@ -451,7 +460,7 @@ A few additional non-standard attributes are listed following the descriptions o
     > [!NOTE]
     > Although not required by the specification, Firefox will by default [persist the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of an `<input>` across page loads. Use the [`autocomplete`](#autocomplete) attribute to control this feature.
 
-- `form`
+- [`form`](/en-US/docs/Web/HTML/Reference/Attributes/form)
   - : A string specifying the {{HTMLElement("form")}} element with which the input is associated (that is, its **form owner**). This string's value, if present, must match the [`id`](#id) of a `<form>` element in the same document. If this attribute isn't specified, the `<input>` element is associated with the nearest containing form, if any.
 
     The `form` attribute lets you place an input anywhere in the document but have it included with a form elsewhere in the document.
@@ -591,15 +600,13 @@ A few additional non-standard attributes are listed following the descriptions o
   - : Valid for the `image` input button only, the `src` is string specifying the URL of the image file to display to represent the graphical submit button. See the {{HTMLElement("input/image", "image")}} input type.
 
 - [`step`](/en-US/docs/Web/HTML/Reference/Attributes/step)
-  - : Valid for `date`, `month`, `week`, `time`, `datetime-local`, `number`, and `range`, the [`step`](/en-US/docs/Web/HTML/Reference/Attributes/step) attribute is a number that specifies the granularity that the value must adhere to.
+  - : Valid for `date`, `month`, `week`, `time`, `datetime-local`, `number`, and `range`, the [`step`](/en-US/docs/Web/HTML/Reference/Attributes/step) attribute is a number that specifies the granularity that the value must adhere to. Only values which are a whole number of steps from the step base are valid. The step base is [`min`](/en-US/docs/Web/HTML/Reference/Attributes/min) if specified, [`value`](#value) otherwise, or `0` if neither is provided (except for `week`, which has a default step base of −259,200,000, representing the start of week `1970-W01`).
 
     If not explicitly included:
     - `step` defaults to 1 for `number` and `range`.
     - Each date/time input type has a default `step` value appropriate for the type; see the individual input pages: [`date`](/en-US/docs/Web/HTML/Reference/Elements/input/date#step), [`datetime-local`](/en-US/docs/Web/HTML/Reference/Elements/input/datetime-local#step), [`month`](/en-US/docs/Web/HTML/Reference/Elements/input/month#step), [`time`](/en-US/docs/Web/HTML/Reference/Elements/input/time#step), and [`week`](/en-US/docs/Web/HTML/Reference/Elements/input/week#step).
 
-    The value must be a positive number—integer or float—or the special value `any`, which means no stepping is implied, and any value is allowed (barring other constraints, such as [`min`](#min) and [`max`](#max)).
-
-    If `any` is not explicitly set, valid values for the `number`, date/time input types, and `range` input types are equal to the basis for stepping — the [`min`](#min) value and increments of the step value, up to the [`max`](#max) value, if specified.
+    The value must be a positive number—integer or float—or the special value `any`, which means no stepping is implied, and any value is allowed (barring other constraints, such as [`min`](/en-US/docs/Web/HTML/Reference/Attributes/min) and [`max`](/en-US/docs/Web/HTML/Reference/Attributes/max)).
 
     For example, if you have `<input type="number" min="10" step="2">`, then any even integer, `10` or greater, is valid. If omitted, `<input type="number">`, any integer is valid, but floats (like `4.2`) are not valid, because `step` defaults to `1`. For `4.2` to be valid, `step` would have had to be set to `any`, 0.1, 0.2, or the `min` value would have had to be a number ending in `.2`, such as `<input type="number" min="-5.2">`.
 
@@ -898,7 +905,7 @@ It is possible to target different types of form controls based on their [`type`
 input[type="password"] {
 }
 
-/* matches a form control whose valid values are limited to a range of values*/
+/* matches a form control whose valid values are limited to a range of values */
 input[min][max] {
 }
 
@@ -919,14 +926,6 @@ By default, the appearance of placeholder text is a translucent or light gray. T
 
 Only the subset of CSS properties that apply to the {{cssxref("::first-line")}} pseudo-element can be used in a rule using `::placeholder` in its selector.
 
-### appearance
-
-The {{cssxref("appearance")}} property enables the displaying of (almost) any element as a platform-native style based on the operating system's theme as well as the removal of any platform-native styling with the `none` value.
-
-You could make a `<div>` look like a radio button with `div {appearance: radio;}` or a radio look like a checkbox with `[type="radio"] {appearance: checkbox;}`, but don't.
-
-Setting `appearance: none` removes platform native borders, but not functionality.
-
 ### caret-color
 
 A property specific to text entry-related elements is the CSS {{cssxref("caret-color")}} property, which lets you set the color used to draw the text input caret:
@@ -946,7 +945,7 @@ input.custom {
   font:
     16px "Helvetica",
     "Arial",
-    "sans-serif";
+    sans-serif;
 }
 ```
 
@@ -1422,14 +1421,10 @@ Interactive elements such as form input should provide an area large enough that
 
 ## See also
 
-- [Form constraint validation](/en-US/docs/Web/HTML/Guides/Constraint_validation)
+- CSS {{cssxref("appearance")}} property
 - [Your first HTML form](/en-US/docs/Learn_web_development/Extensions/Forms/Your_first_form)
 - [How to structure an HTML form](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form)
 - [The native form widgets](/en-US/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls)
 - [Sending form data](/en-US/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)
-- [Form data validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)
-- [How to build custom form widgets](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
-- [HTML forms in legacy browsers](/en-US/docs/Learn_web_development/Extensions/Forms/HTML_forms_in_legacy_browsers)
+- [Form constraint validation](/en-US/docs/Web/HTML/Guides/Constraint_validation)
 - [Styling HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
-- [Advanced styling for HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)
-- [Creating vertical form controls](/en-US/docs/Web/CSS/CSS_writing_modes/Vertical_controls)

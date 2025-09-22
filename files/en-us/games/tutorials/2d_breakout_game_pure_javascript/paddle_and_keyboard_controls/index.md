@@ -2,11 +2,10 @@
 title: Paddle and keyboard controls
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls
 page-type: guide
+sidebar: games
 ---
 
-{{GamesSidebar}}
-
-{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over")}}
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over")}}
 
 This is the **4th step** out of 10 of the [Gamedev Canvas tutorial](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). You can find the source code as it should look after completing this lesson at [Gamedev-Canvas-workshop/lesson4.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson04.html).
 
@@ -53,8 +52,8 @@ let leftPressed = false;
 The default value for both is `false` because at the beginning the control buttons are not pressed. To listen for key presses, we will set up two event listeners. Add the following lines just above the `setInterval()` line at the bottom of your JavaScript:
 
 ```js
-document.addEventListener("keydown", keyDownHandler, false);
-document.addEventListener("keyup", keyUpHandler, false);
+document.addEventListener("keydown", keyDownHandler);
+document.addEventListener("keyup", keyUpHandler);
 ```
 
 When the `keydown` event is fired on any of the keys on your keyboard (when they are pressed), the `keyDownHandler()` function will be executed. The same pattern is true for the second listener: `keyup` events will fire the `keyUpHandler()` function (when the keys stop being pressed). Add these to your code now, below the `addEventListener()` lines:
@@ -124,7 +123,7 @@ See how your code compares to the live sample below:
 
 ```css hidden
 canvas {
-  background: #eee;
+  background: #eeeeee;
 }
 button {
   display: block;
@@ -145,8 +144,8 @@ let paddleX = (canvas.width - paddleWidth) / 2;
 let rightPressed = false;
 let leftPressed = false;
 
-document.addEventListener("keydown", keyDownHandler, false);
-document.addEventListener("keyup", keyUpHandler, false);
+document.addEventListener("keydown", keyDownHandler);
+document.addEventListener("keyup", keyUpHandler);
 
 function keyDownHandler(e) {
   if (e.key === "Right" || e.key === "ArrowRight") {
@@ -227,4 +226,4 @@ runButton.addEventListener("click", () => {
 
 Now we have something resembling a game. The only trouble now is that you can just continue hitting the ball with the paddle and there's no winning or losing implemented. This will all change in the fifth chapter, [Game over](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over), when we start to add in an endgame state for our game.
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over")}}
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over")}}

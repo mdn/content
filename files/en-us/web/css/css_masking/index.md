@@ -3,9 +3,8 @@ title: CSS masking
 slug: Web/CSS/CSS_masking
 page-type: css-module
 spec-urls: https://drafts.fxtf.org/css-masking/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS masking** module defines masking and clipping, two different graphical operations that are used to partially or fully hide portions of visual elements.
 
@@ -37,12 +36,12 @@ While masking provides more control and options, clipping can perform better if 
 - {{cssxref("mask-size")}}
 - {{cssxref("mask-type")}}
 - {{cssxref("mask-border")}} shorthand
-- {{cssxref("mask-border-mode")}}
 - {{cssxref("mask-border-outset")}}
 - {{cssxref("mask-border-repeat")}}
 - {{cssxref("mask-border-slice")}}
 - {{cssxref("mask-border-source")}}
 - {{cssxref("mask-border-width")}}
+- {{cssxref("mask-border-mode")}}
 
 ### Data types
 
@@ -68,6 +67,9 @@ While masking provides more control and options, clipping can perform better if 
 
 - [Declaring multiple masks](/en-US/docs/Web/CSS/CSS_masking/Multiple_masks)
   - : Introduction to mask layers and how to declare multiple mask images.
+
+- [CSS mask properties](/en-US/docs/Web/CSS/CSS_masking/Mask_properties)
+  - : An exploration of CSS masking and the `mask` shorthand component properties, with explanations and examples.
 
 ## Related concepts
 

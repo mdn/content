@@ -22,7 +22,7 @@ Once dispatched, it doesn't do anything anymore.
 > [!NOTE]
 > _Do not use this method anymore as it is deprecated._
 > Instead use specific event constructors, like {{domxref("Event.Event", "Event()")}}.
-> The page on [Creating and triggering events](/en-US/docs/Web/Events/Creating_and_triggering_events) gives more information about the way to use these.
+> The section on [Creating and dispatching events](/en-US/docs/Web/API/Document_Object_Model/Events#creating_and_dispatching_events) gives more information about the way to use these.
 
 ## Syntax
 
@@ -57,13 +57,9 @@ const event = document.createEvent("Event");
 event.initEvent("click", true, false);
 
 // Listen for the event.
-elem.addEventListener(
-  "click",
-  (e) => {
-    // e.target matches elem
-  },
-  false,
-);
+elem.addEventListener("click", (e) => {
+  // e.target matches elem
+});
 
 elem.dispatchEvent(event);
 ```

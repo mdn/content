@@ -3,9 +3,8 @@ title: radial-gradient()
 slug: Web/CSS/gradient/radial-gradient
 page-type: css-function
 browser-compat: css.types.gradient.radial-gradient
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`radial-gradient()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) creates an image consisting of a progressive transition between two or more colors that radiate from an origin. Its shape may be a circle or an ellipse. The function's result is an object of the {{cssxref("&lt;gradient&gt;")}} data type, which is a special kind of {{cssxref("&lt;image&gt;")}}.
 
@@ -20,7 +19,13 @@ background: radial-gradient(closest-side, #3f87a6, #ebf8e1, #f69d3c);
 ```
 
 ```css interactive-example-choice
-background: radial-gradient(circle at 100%, #333, #333 50%, #eee 75%, #333 75%);
+background: radial-gradient(
+  circle at 100%,
+  #333333,
+  #333333 50%,
+  #eeeeee 75%,
+  #333333 75%
+);
 ```
 
 ```css interactive-example-choice
@@ -148,8 +153,8 @@ Color-stop points are positioned on a _virtual gradient ray_ that extends horizo
 .radial-gradient {
   background-image: radial-gradient(
     farthest-corner at 40px 40px,
-    #f35 0%,
-    #43e 100%
+    #ff3355 0%,
+    #4433ee 100%
   );
 }
 ```

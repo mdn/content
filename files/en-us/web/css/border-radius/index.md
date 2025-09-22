@@ -3,9 +3,8 @@ title: border-radius
 slug: Web/CSS/border-radius
 page-type: css-shorthand-property
 browser-compat: css.properties.border-radius
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`border-radius`** [CSS](/en-US/docs/Web/CSS) property rounds the corners of an element's outer border edge. You can set a single radius to make circular corners, or two radii to make elliptical corners.
 
@@ -203,7 +202,7 @@ The `border-radius` property is specified as:
 For example:
 
 ```css
-border-radius: 1em/5em;
+border-radius: 1em / 5em;
 
 /* It is equivalent to: */
 border-top-left-radius: 1em 5em;
@@ -251,7 +250,7 @@ The styles applied to each `<pre>` element are included as the element's content
 <pre id="example-3">
   background: gold;
   border: ridge gold;
-  border-radius: 13em/3em;
+  border-radius: 13em / 3em;
 </pre>
 
 <pre id="example-4">
@@ -300,7 +299,7 @@ pre#example-2 {
 pre#example-3 {
   background: gold;
   border: ridge gold;
-  border-radius: 13em/3em;
+  border-radius: 13em / 3em;
 }
 
 pre#example-4 {
@@ -329,6 +328,60 @@ pre#example-7 {
 ```
 
 {{EmbedLiveSample("Comparing border styles", "", "900")}}
+
+### Using `corner-shape` with `border-radius`
+
+When a non-`0` `border-radius` value is applied to a box corner, you can use the {{cssxref("corner-shape")}} property (or one of its [longhands and shorthands](/en-US/docs/Web/CSS/corner-shape#corner--shape_shorthands_and_longhands)) to apply custom shapes to that corner, such as a bevel, notch, or squircle. This example demonstrates `corner-shape` usage.
+
+#### HTML
+
+The markup for this example contains a single {{htmlelement("div")}} element.
+
+```html live-sample___basic-usage
+<div></div>
+```
+
+#### CSS
+
+We give the box some basic styles, which we've hidden for brevity. We also apply a {{cssxref("box-shadow")}}, a `border-radius` of `0 20% 50px 30%`, and a `corner-shape` of `superellipse(0.5) bevel notch squircle`.
+
+```css hidden live-sample___basic-usage
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 240px;
+  margin: 20px auto;
+}
+
+div {
+  width: 100%;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(255 255 255 / 0),
+    rgb(255 255 255 / 0.5)
+  );
+}
+```
+
+```css live-sample___basic-usage
+div {
+  box-shadow: 1px 1px 3px gray;
+  border-radius: 0 20% 50px 30%;
+  corner-shape: superellipse(0.5) bevel notch squircle;
+}
+```
+
+#### Result
+
+The rendered result looks like this:
+
+{{EmbedLiveSample("basic-usage", "100%", "240")}}
+
+Note how no corner shape is applied to the top-left corner, because it has a `border-radius` of `0` set.
 
 ## Specifications
 

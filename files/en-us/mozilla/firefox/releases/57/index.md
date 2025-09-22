@@ -1,5 +1,6 @@
 ---
 title: Firefox 57 (Quantum) for developers
+short-title: Firefox 57
 slug: Mozilla/Firefox/Releases/57
 page-type: firefox-release-notes
 sidebar: firefox
@@ -28,7 +29,7 @@ _No changes._
 
 ### CSS
 
-- The `minimal-ui` and `standalone` values of the [`display-mode`](/en-US/docs/Web/CSS/@media/display-mode) media query are now supported ([Firefox bug 1369815](https://bugzil.la/1369815)). See also the [Web app manifest `display` field](/en-US/docs/Web/Progressive_web_apps/Manifest#display).
+- The `minimal-ui` and `standalone` values of the [`display-mode`](/en-US/docs/Web/CSS/@media/display-mode) media query are now supported ([Firefox bug 1369815](https://bugzil.la/1369815)). See also the [Web app manifest `display` field](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/display).
 - The `grid-row-gap` and `grid-column-gap` properties are no longer reset by the {{CSSxRef("grid")}} shorthand ([Firefox bug 1387410](https://bugzil.la/1387410)).
 - The `layout.css.clip-path-shapes.enabled` preference has been removed ([Firefox bug 1399767](https://bugzil.la/1399767)). This preference allowed disabling the {{CSSxRef("&lt;basic-shape&gt;")}} support in {{CSSxRef("clip-path")}}. This support was shipped in Firefox 54 and can no longer be disabled.
 
@@ -108,7 +109,7 @@ _No changes._
 
 ### Other
 
-- Firefox [headless mode](/en-US/docs/Mozilla/Firefox/Headless_mode) now includes a `-screenshot` flag that allows you to take website screenshots directly from the command line ([Firefox bug 1378010](https://bugzil.la/1378010)).
+- Firefox [headless mode](https://web.archive.org/web/20210604151145/https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Headless_mode) now includes a `-screenshot` flag that allows you to take website screenshots directly from the command line ([Firefox bug 1378010](https://bugzil.la/1378010)).
 
 ## Removals from the web platform
 
@@ -118,7 +119,7 @@ _No changes._
 
 ### APIs
 
-- Mozilla's proprietary [Social API](/en-US/docs/Archive/Social_API) has been completely removed ([Firefox bug 1388902](https://bugzil.la/1388902)).
+- Mozilla's proprietary [Social API](https://web.archive.org/web/20210509145412/https://developer.mozilla.org/en-US/docs/Archive/Social_API) has been completely removed ([Firefox bug 1388902](https://bugzil.la/1388902)).
 
 ### SVG
 
@@ -217,7 +218,3 @@ The following APIs have been added or extended:
 
 - [`windows`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows)
   - `allowScriptsToClose` option in [`windows.create()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/create)
-
-## Older versions
-
-{{Firefox_for_developers}}

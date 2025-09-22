@@ -4,7 +4,7 @@ slug: Web/API/WebVR_API/Using_the_WebVR_API
 page-type: guide
 ---
 
-{{DefaultAPISidebar("WebVR API")}}{{deprecated_header}}
+{{DefaultAPISidebar("WebVR API")}}
 
 > [!NOTE]
 > WebVR API is replaced by [WebXR API](/en-US/docs/Web/API/WebXR_Device_API). WebVR was never ratified as a standard, was implemented and enabled by default in very few browsers and supported a small number of devices.
@@ -20,7 +20,7 @@ To get started, you need:
   - Dedicated hardware can be costly, but it does provide a better experience. The most WebVR-compatible hardware at the moment is the HTC VIVE, and The Oculus Rift. The front page of [webvr.info](https://webvr.info/) has some further useful information about available hardware, and what browser support them.
 
 - A computer powerful enough to handle rendering/displaying of VR scenes using your dedicated VR Hardware, if required. To give you an idea of what you need, look at the relevant guide for the VR you are purchasing (e.g., [VIVE READY Computers](https://www.vive.com/us/vive-ready/)).
-- A supporting browser installed — the latest [Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/) or [Chrome](https://www.google.com/chrome/index.html) are your best options right now, on desktop or mobile.
+- A supporting browser installed — the latest [Firefox Nightly](https://www.firefox.com/en-US/channel/desktop/) or [Chrome](https://www.google.com/chrome/index.html) are your best options right now, on desktop or mobile.
 
 Once you have everything assembled, you can test to see whether your setup works with WebVR by going to our [simple A-Frame demo](https://mdn.github.io/webvr-tests/webvr/aframe-demo/), and seeing whether the scene renders and whether you can enter VR display mode by pressing the button at the bottom right.
 

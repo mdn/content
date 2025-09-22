@@ -26,6 +26,7 @@ Ansari
 Ansyari
 Apapou
 Aptana
+Araneae
 Arkanoid
 Artur
 Arun
@@ -44,10 +45,12 @@ Aziz
 Balhetan
 bartaz
 Bartek
+Belgers
 belgin
 Benbadis
 Bento4
 Berners
+Bila
 Binaryen
 Birtles
 bitsies
@@ -57,6 +60,7 @@ Blackman
 Blackmoon
 Blankers
 Bloggs
+Bobtown
 Bodmin
 Boonie
 bottosson
@@ -74,6 +78,7 @@ Bynens
 Béziers
 caitmuenster
 Camino
+Cammy
 Camtasia
 Canva
 Carakan
@@ -88,10 +93,12 @@ Chakra
 Chamakh
 Chimero
 Chloé
+Choco
 Choyce
 chrisdavidmills
 Chromecast
 Chromeo
+Chun-Li
 Cinepak
 Cipherlist.eu
 Clippy
@@ -103,6 +110,7 @@ Codepens
 coderprateek
 codingintrigue
 Codrops
+Coleoptera
 Colomb
 Conde
 Corber
@@ -130,9 +138,11 @@ Delaville
 Denicola
 DeSandro
 Desaulniers
+Descouens
 Desproges
 Devlin
 Dexie
+Didier
 Diffie
 Digga
 Digianswer
@@ -165,7 +175,11 @@ Ehsan
 Eich
 Eichenwald
 Eisenberg
+Elaina
 Elchi
+Elfie
+Elliotte
+Elly
 Emscripten
 Endtest
 Ensatina
@@ -197,12 +211,13 @@ Frida
 Galinski
 Gandi
 Gayatri
+Gaye
 Gebrselassie
 geckodriver
 Gedit
 Gerd
 Giancarlo
-Gitbash
+Giorgio
 Golightly
 Googlebot
 Gordo
@@ -212,6 +227,7 @@ Graywolf9
 Grigsby
 Grissom
 Groff
+Grosso
 GSAP
 Guildford
 Haile
@@ -220,6 +236,7 @@ hamishwillee
 Haml
 Haverbeke
 Headsight
+Hemiptera
 Heydings
 Heydon
 Hickson
@@ -239,6 +256,7 @@ Hoshi
 Hoth
 Hyperaudio
 Hönigswald
+Ibuki
 Icecast
 idb-keyval
 Igalia
@@ -250,6 +268,7 @@ Ionos
 Irena
 ITCSS
 ITEC
+Jada
 Jalkhov
 jamiedoe
 Janc
@@ -260,6 +279,8 @@ Jayla
 Jeni
 Jewett
 Jinping
+Jirat
+Jiri
 Jitsi
 Johansson
 Joomla
@@ -270,10 +291,12 @@ jpmedley
 JSCAMP
 jswebm
 Junxia
+Juri
 Júnior
 Kadlec
 Kahlo
 Kaku
+Kang
 Kaply
 Kaspersky
 Katari
@@ -319,6 +342,7 @@ Lighttpd
 Lindenberg
 Lindesay
 Liskov
+Lorc
 Loycom
 Luxon
 Léonie
@@ -355,6 +379,7 @@ Miata
 Mielczarek
 Mihajlija
 Milica
+Miloslav
 Miracast
 Miroslav
 mirunacurtean
@@ -382,6 +407,7 @@ Musicr
 Mustafa
 myshov
 Müller
+Nabors
 Naeher
 Nakamura
 Nakano
@@ -448,6 +474,7 @@ Quora
 rachelandrew
 Radev
 Radimir
+Ramesh
 Rapp
 Rauschmayer
 Realtek
@@ -455,6 +482,7 @@ Recep
 Reis
 Rekapi
 Remy
+Resian
 Resig
 Rigby
 Robison
@@ -462,13 +490,16 @@ Rocher
 Rohini
 Ronaldo
 Roselli
+Rosenburg
 Rossi
 Rossum
 Roushan
 rsvg
 Rumyra
 Ryuno
+Sagat
 Saionaro
+Sakura
 Salame
 Salva
 Sandrina
@@ -477,6 +508,7 @@ Scarlett
 Schiff
 Schirra
 Schmarsow
+Schoenmakers
 Schola
 Schwarz
 Sciurus
@@ -546,6 +578,7 @@ Tokopedia
 Tomayac
 Tonisha
 Transcribear
+Transfonter
 Transformiix
 Trekhleb
 Trint
@@ -569,6 +602,7 @@ Voikko
 Volkman
 Vorbis
 vulgaris
+Waarneming
 wabt
 Wakamai
 Waldron
@@ -610,6 +644,7 @@ Yuki
 Yura
 Zakas
 Zakirt
+Zangief
 zantroke
 zantrokeregular
 Zaptec

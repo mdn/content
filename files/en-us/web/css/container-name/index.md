@@ -3,9 +3,8 @@ title: container-name
 slug: Web/CSS/container-name
 page-type: css-property
 browser-compat: css.properties.container-name
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **container-name** [CSS](/en-US/docs/Web/CSS) property specifies a list of query container names used by the [@container](/en-US/docs/Web/CSS/@container) at-rule in a [container query](/en-US/docs/Web/CSS/CSS_containment/Container_queries).
 A container query will apply styles to elements based on the [size](/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#container_size_queries) or [scroll-state](/en-US/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries) of the nearest ancestor with a containment context.
@@ -20,10 +19,10 @@ When a containment context is given a name, it can be specifically targeted usin
 container-name: none;
 
 /* A single name */
-container-name: myLayout;
+container-name: my-layout;
 
 /* Multiple names */
-container-name: myPageLayout myComponentLibrary;
+container-name: my-page-layout my-component-library;
 
 /* Global Values */
 container-name: inherit;

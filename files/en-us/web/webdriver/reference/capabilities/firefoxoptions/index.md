@@ -6,7 +6,7 @@ sidebar: webdriver
 ---
 
 The **`moz:firefoxOptions` capability** is a namespaced set of
-capabilities specific to [Firefox](https://www.mozilla.org/en-US/firefox/new/). It is used to control the
+capabilities specific to [Firefox](https://www.firefox.com/en-US/). It is used to control the
 behavior of Firefox and can be used as a member of
 [`alwaysMatch`](/en-US/docs/Web/WebDriver/Reference/Capabilities#alwaysmatch) or as a member of one of the
 [`firstMatch`](/en-US/docs/Web/WebDriver/Reference/Capabilities#firstmatch) entries.
@@ -187,7 +187,7 @@ undefined the default is `info`. The value is treated case-insensitively.
 ### Preferences object
 
 A JSON Object with one entry per preference to set. The preference will be written to the [profile](#profile_string) before starting Firefox. A full list of available preferences is available from visiting
-"about:config" in your Firefox browser. Some of these are documented in [this source](https://searchfox.org/mozilla-central/source/modules/libpref/init/all.js) file.
+"about:config" in your Firefox browser. Some of these are documented in [this source](https://searchfox.org/firefox-main/source/modules/libpref/init/all.js) file.
 
 An example of a preference object:
 
@@ -248,9 +248,7 @@ The `moz:firefoxOptions` must be placed—as above—inside
 ```json
 {
   "capabilities": {
-    "firstMatch": [
-      {"moz:firefoxOptions": …}
-    ]
+    "firstMatch": [{ "moz:firefoxOptions": {} }]
   }
 }
 ```

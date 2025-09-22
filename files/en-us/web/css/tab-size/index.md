@@ -3,9 +3,8 @@ title: tab-size
 slug: Web/CSS/tab-size
 page-type: css-property
 browser-compat: css.properties.tab-size
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`tab-size`** [CSS](/en-US/docs/Web/CSS) property is used to customize the width of tab characters (U+0009).
 

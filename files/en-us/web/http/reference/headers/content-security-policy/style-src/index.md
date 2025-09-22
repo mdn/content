@@ -4,9 +4,8 @@ short-title: style-src
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/style-src
 page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.style-src
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`style-src`** directive specifies valid sources for stylesheets.
 
@@ -76,7 +75,7 @@ the following stylesheets are blocked and won't load:
 </style>
 
 <style>
-  @import url("https://not-example.com/styles/print.css") print;
+  @import "https://not-example.com/styles/print.css" print;
 </style>
 ```
 

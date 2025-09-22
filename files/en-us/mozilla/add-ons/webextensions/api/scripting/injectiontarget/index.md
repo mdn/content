@@ -3,9 +3,8 @@ title: scripting.InjectionTarget
 slug: Mozilla/Add-ons/WebExtensions/API/scripting/InjectionTarget
 page-type: webextension-api-type
 browser-compat: webextensions.api.scripting.InjectionTarget
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 This object contains details specifying the injection target for CSS and JavaScript. Its used in {{WebExtAPIRef("scripting.executeScript()")}}, {{WebExtAPIRef("scripting.insertCSS()")}}, and {{WebExtAPIRef("scripting.removeCSS()")}}.
 
@@ -22,11 +21,11 @@ Values of this type are objects. They contain these properties:
 - `tabId`
   - : `number`. The ID of the tab to inject into.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.scripting`](https://developer.chrome.com/docs/extensions/reference/api/scripting#type-InjectionTarget) API.

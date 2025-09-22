@@ -3,9 +3,8 @@ title: print-color-adjust
 slug: Web/CSS/print-color-adjust
 page-type: css-property
 browser-compat: css.properties.print-color-adjust
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`print-color-adjust`** [CSS](/en-US/docs/Web/CSS) property sets what, if anything, the {{Glossary("user agent")}} may do to optimize the appearance of the element on the output device.
 By default, the browser is allowed to make any adjustments to the element's appearance it determines to be necessary and prudent given the type and capabilities of the output device.
@@ -71,7 +70,7 @@ For whatever reason, this is the desired appearance in any rendering environment
 .my-box {
   background-color: black;
   background-image: linear-gradient(rgb(0 0 180 / 50%), rgb(70 140 220 / 50%));
-  color: #900;
+  color: #990000;
   width: 15rem;
   height: 6rem;
   text-align: center;

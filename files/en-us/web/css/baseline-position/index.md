@@ -3,9 +3,8 @@ title: <baseline-position>
 slug: Web/CSS/baseline-position
 page-type: css-type
 spec-urls: https://drafts.csswg.org/css-align/#typedef-baseline-position
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`<baseline-position>`** {{glossary("enumerated")}} value type represents the `baseline` keyword values and `first` and `last` modifiers, used for the {{cssxref("align-content")}}, {{cssxref("align-items")}}, {{cssxref("align-self")}}, {{cssxref("justify-items")}} and {{cssxref("justify-self")}} properties as well as the {{cssxref("place-content")}}, {{cssxref("place-items")}}, and {{cssxref("place-self")}} shorthand properties.
 

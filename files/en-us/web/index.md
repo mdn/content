@@ -1,12 +1,10 @@
 ---
 title: Web technology for developers
+short-title: Web
 slug: Web
 page-type: landing-page
+sidebar: web
 ---
-
-<section id="Quick_links">
-  {{ListSubpages("", 1, 0, 1)}}
-</section>
 
 The open Web presents incredible opportunities for developers. To take full advantage of these technologies, you need to know how to use them. Below you'll find links to our Web technology documentation.
 
@@ -39,8 +37,6 @@ The open Web presents incredible opportunities for developers. To take full adva
   - : JavaScript is the Web's native programming language.
 - [WebAssembly](/en-US/docs/WebAssembly)
   - : WebAssembly allows programs written in C, C++, Rust, Swift, C#, Go, and more to run on the Web.
-- [Events](/en-US/docs/Web/Events)
-  - : Events are what you build Web apps to react to; for example, when a Web page finishes loading, or a user selects something, presses a key, resizes a window, submits a form, or pauses a video.
 - [HTTP](/en-US/docs/Web/HTTP)
   - : HTTP is the fundamental Internet protocol for fetching documents, stylesheets, scripts, images, videos, fonts, and other resources over the Web — and for sending data back to Web servers.
 - [Media](/en-US/docs/Web/Media)
@@ -78,5 +74,5 @@ The open Web presents incredible opportunities for developers. To take full adva
   - : Documentation for the set of web-developer tools built into Chrome.
 - [Safari Web Inspector](https://webkit.org/web-inspector/)
   - : Documentation for the set of web-developer tools built into Safari.
-- [Edge DevTools](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide/landing/)
+- [Edge DevTools](https://learn.microsoft.com/en-us/microsoft-edge/devtools/landing/)
   - : Documentation for the set of web-developer tools built into Edge.

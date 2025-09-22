@@ -3,9 +3,8 @@ title: <box-edge>
 slug: Web/CSS/box-edge
 page-type: css-type
 spec-urls: https://drafts.csswg.org/css-box-4/#keywords
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`<box-edge>`** value types represent a [box edge](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) keyword, such as [`content-box`](#content-box) and [`border-box`](#border-box). The box-edge keywords are used to define different aspects of an element's box model and how elements are positioned and rendered on screen.
 
@@ -63,7 +62,7 @@ The `<box-edge>` keywords are defined as follows:
   - : Refers to the stroke bounding box in SVG. In CSS, `stroke-box` is treated as `border-box`. It is used to define the shape of the element when strokes are applied.
 
 - `view-box`
-  - : Refers to the nearest SVG viewport element's origin box. The origin box is a rectangle with the width and height of the initial SVG user coordinate system established by the {{svgattr("viewBox")}} attribute for that element. The origin box is positioned such that its top left corner is anchored at the [coordinate system](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems) origin. In CSS, `view-box` is treated as `border-box`.
+  - : Refers to the nearest SVG viewport element's origin box. The origin box is a rectangle with the width and height of the initial SVG user coordinate system established by the {{svgattr("viewBox")}} attribute for that element. The origin box is positioned such that its top left corner is anchored at the [coordinate system](/en-US/docs/Web/API/CSSOM_view_API/Coordinate_systems) origin. In CSS, `view-box` is treated as `border-box`.
     > [!NOTE]
     > When the SVG viewport is not anchored at the origin, the origin box does not correspond to the SVG viewport.
 

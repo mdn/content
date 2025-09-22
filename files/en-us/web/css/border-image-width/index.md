@@ -3,9 +3,8 @@ title: border-image-width
 slug: Web/CSS/border-image-width
 page-type: css-property
 browser-compat: css.properties.border-image-width
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`border-image-width`** [CSS](/en-US/docs/Web/CSS) property sets the width of an element's [border image](/en-US/docs/Web/CSS/border-image).
 
@@ -42,7 +41,7 @@ border-image-width: 20% 8%;
   justify-content: center;
   padding: 50px;
   background: #fff3d4;
-  color: #000;
+  color: black;
   border: 30px solid;
   border-image: url("/shared-assets/images/examples/border-diamonds.png") 30
     round;

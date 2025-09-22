@@ -8,29 +8,14 @@ browser-compat: api.Request.destination
 
 {{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
-The **`destination`** read-only
-property of the **{{domxref("Request")}}** interface returns a string
-describing the type of content being requested.
+The **`destination`** read-only property of the **{{domxref("Request")}}** interface returns a string describing the type of content being requested.
 
-The string must be one of the `audio`, `audioworklet`,
-`document`, `embed`, `fencedframe`, `font`, `frame`,
-`iframe`, `image`, `json`, `manifest`, `object`,
-`paintworklet`, `report`, `script`, `sharedworker`,
-`style`, `track`, `video`, `worker`
-or `xslt` strings, or the empty string, which is the default value.
+The string must be one of the `audio`, `audioworklet`, `document`, `embed`, `fencedframe`, `font`, `frame`, `iframe`, `image`, `json`, `manifest`, `object`, `paintworklet`, `report`, `script`, `sharedworker`, `speculationrules`, `style`, `track`, `video`, `worker` or `xslt` strings, or the empty string, which is the default value.
 
-The `destination` is used by the {{Glossary("user agent")}} to, for example,
-help determine which set of rules to follow for CORS purposes, or how to navigate any
-complicated code paths that affect how specific types of request get handled.
+The `destination` is used by the {{Glossary("user agent")}} to, for example, help determine which set of rules to follow for CORS purposes, or how to navigate any complicated code paths that affect how specific types of request get handled.
 
-These destinations vary substantially in how they operate. Some are data receptacles,
-where the received data is stored for processing later. Others are script-based, in
-which case the received data is delivered to a script by calling it and passing the data
-along. Script-based destinations include {{HTMLElement("script")}} elements, as well as
-any of the {{domxref("Worklet")}}-based destinations
-(including subclasses like {{domxref("AudioWorklet")}}), and the
-{{domxref("Worker")}}-based destinations, including {{domxref("ServiceWorker")}}
-and {{domxref("SharedWorker")}}.
+These destinations vary substantially in how they operate. Some are data receptacles, where the received data is stored for processing later. Others are script-based, in which case the received data is delivered to a script by calling it and passing the data along.
+Script-based destinations include {{HTMLElement("script")}} elements, as well as any of the {{domxref("Worklet")}}-based destinations (including subclasses like {{domxref("AudioWorklet")}}), and the {{domxref("Worker")}}-based destinations, including {{domxref("ServiceWorker")}} and {{domxref("SharedWorker")}}.
 
 ## Value
 
@@ -79,6 +64,8 @@ Possible values are:
   - : The target is a service worker.
 - `"sharedworker"`
   - : The target is a shared worker.
+- `"speculationrules"` {{experimental_inline}} {{non-standard_inline}}
+  - : The target is a [speculation rules](/en-US/docs/Web/API/Speculation_Rules_API) JSON document.
 - `"style"`
   - : The target is a style
 - `"track"`
@@ -92,9 +79,7 @@ Possible values are:
 
 ## Examples
 
-In the following snippet, we create a new request using the
-{{domxref("Request.Request", "Request()")}} constructor (for an image file in the same
-directory as the script), then save the request's destination:
+In the following snippet, we create a new request using the {{domxref("Request.Request", "Request()")}} constructor (for an image file in the same directory as the script), then save the request's destination:
 
 ```js
 const myRequest = new Request("flowers.jpg");

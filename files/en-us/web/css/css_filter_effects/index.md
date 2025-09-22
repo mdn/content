@@ -5,13 +5,12 @@ page-type: css-module
 spec-urls:
   - https://drafts.fxtf.org/filter-effects-2/
   - https://drafts.fxtf.org/filter-effects-1/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The properties in the **CSS filter effects** module let you define a way of processing an element's rendering before the element is displayed in the document. Examples of such effects include blurring and changing the intensity of the color of an element.
 
-### Filter effects in action
+## Filter effects in action
 
 Play with the various sliders to apply filter effects to the image below.
 
@@ -160,24 +159,16 @@ const controls = document.querySelectorAll("input");
 const output = document.querySelector("output");
 
 for (control of controls) {
-  control.addEventListener(
-    "change",
-    () => {
-      /* do function */
-      changeCSS();
-    },
-    false,
-  );
+  control.addEventListener("change", () => {
+    /* do function */
+    changeCSS();
+  });
 }
-document.querySelector("button").addEventListener(
-  "click",
-  () => {
-    setTimeout(() => {
-      changeCSS();
-    }, 50);
-  },
-  false,
-);
+document.querySelector("button").addEventListener("click", () => {
+  setTimeout(() => {
+    changeCSS();
+  }, 50);
+});
 
 function changeCSS() {
   let currentFilter = "filter: ";

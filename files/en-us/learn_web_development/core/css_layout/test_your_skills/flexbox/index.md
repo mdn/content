@@ -1,17 +1,17 @@
 ---
 title: "Test your skills: Flexbox"
-short-title: Flexbox
+short-title: "Test: Flexbox"
 slug: Learn_web_development/Core/CSS_layout/Test_your_skills/Flexbox
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
 
-The aim of this skill test is to assess whether you understand how [flexbox and flex items](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox) behave. Below are four sets of design problems you can solve using flexbox. Your task is to fix the problems.
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Flexbox", "Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout")}}
+
+The aim of this skill test is to help you assess whether you understand how [flexbox and flex items](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox) behave. Below are four sets of design problems you can solve using flexbox. Your task is to fix the problems.
 
 > [!NOTE]
-> Click **"Play"** in the code blocks in Tasks 1, 2, and 3 to edit the examples in the MDN Playground.
-> You can also copy the code (click the clipboard icon) and paste it into an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
-> If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
+> To get help, read our [Test your skills](/en-US/docs/Learn_web_development#test_your_skills) usage guide. You can also reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## Interactive challenge
 
@@ -19,17 +19,15 @@ First of all, we are giving you a fun, interactive flexbox challenge created by 
 
 Watch the embedded scrim, and complete all the tasks on the timeline (the little ghost icons) by following the instructions and editing the code. When you are done, you can resume watching the scrim to check how the teacher's solution matches up with yours.
 
-<scrim-inline url="https://scrimba.com/frontend-path-c0j/~03a" scrimtitle="Flexbox alignment challenges"></scrim-inline>
+<mdn-scrim-inline url="https://scrimba.com/frontend-path-c0j/~03a" scrimtitle="Flexbox alignment challenges" survey="true"></scrim-inline>
 
 ## Task 1
 
-In this task, the list items are the navigation for a site. They should be laid out as a row, with an equal amount of space between each item.
+In this task, the list items are the navigation for a site. To complete the task, use flexbox to lay out the list items as a row, with an equal amount of space between each item.
 
 Your final result should look like the image below:
 
 ![Flex items laid out as a row with space between them.](flex-task1.png)
-
-Try to update the code below to recreate the finished example:
 
 ```html live-sample___flexbox1
 <nav>
@@ -42,7 +40,7 @@ Try to update the code below to recreate the finished example:
 </nav>
 ```
 
-```css hidden live-sample___flexbox1
+```css live-sample___flexbox1
 body {
   font: 1.2em / 1.5 sans-serif;
 }
@@ -57,15 +55,14 @@ nav a:visited {
   background-color: #4d7298;
   border: 2px solid #77a6b6;
   border-radius: 0.5em;
-  color: #fff;
+  color: white;
   padding: 0.5em;
   display: inline-block;
   text-decoration: none;
 }
-```
 
-```css live-sample___flexbox1
 nav ul {
+  /* Add styles here */
 }
 ```
 
@@ -95,8 +92,6 @@ Your final result should look like the image below:
 
 **Bonus question:** Can you now make the first item twice the size of the other items?
 
-Try to update the code below to recreate the finished example:
-
 ```html live-sample___flexbox2
 <ul>
   <li>I am small</li>
@@ -109,7 +104,7 @@ Try to update the code below to recreate the finished example:
 </ul>
 ```
 
-```css hidden live-sample___flexbox2
+```css live-sample___flexbox2
 body {
   font: 1.2em / 1.5 sans-serif;
 }
@@ -124,16 +119,16 @@ li {
   background-color: #4d7298;
   border: 2px solid #77a6b6;
   border-radius: 0.5em;
-  color: #fff;
+  color: white;
   padding: 0.5em;
 }
-```
 
-```css live-sample___flexbox2
 ul {
+  /* Add styles here */
 }
 
 li {
+  /* Add styles here */
 }
 ```
 
@@ -166,11 +161,9 @@ li:first-child {
 
 ## Task 3
 
-In this task, we want you to arrange these items into rows as in the image below:
+In this task, we'd like you to arrange the list items into rows as shown in the image below:
 
 ![A set of items displayed as rows.](flex-task4.png)
-
-Try to update the code below to recreate the finished example:
 
 ```html live-sample___flexbox4
 <ul>
@@ -187,7 +180,7 @@ Try to update the code below to recreate the finished example:
 </ul>
 ```
 
-```css hidden live-sample___flexbox4
+```css live-sample___flexbox4
 body {
   font: 1.2em / 1.5 sans-serif;
 }
@@ -202,17 +195,17 @@ li {
   background-color: #4d7298;
   border: 2px solid #77a6b6;
   border-radius: 0.5em;
-  color: #fff;
+  color: white;
   padding: 0.5em;
   margin: 0.5em;
 }
-```
 
-```css live-sample___flexbox4
 ul {
+  /* Add styles here */
 }
 
 li {
+  /* Add styles here */
 }
 ```
 
@@ -236,6 +229,4 @@ li {
 
 </details>
 
-## See also
-
-- [CSS styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics)
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Flexbox", "Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout")}}

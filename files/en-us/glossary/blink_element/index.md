@@ -2,9 +2,8 @@
 title: blink element (<blink> tag)
 slug: Glossary/blink_element
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 The **`<blink>` element** (blink tag) is an obsolete HTML feature no longer supported by web browsers and no longer documented on MDN. It was used to make text content blink on and off (flash) continually.
 

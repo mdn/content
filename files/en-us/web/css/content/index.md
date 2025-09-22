@@ -3,9 +3,8 @@ title: content
 slug: Web/CSS/content
 page-type: css-property
 browser-compat: css.properties.content
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`content`** [CSS](/en-US/docs/Web/CSS) property replaces content with a generated value. It can be used to define what is rendered inside an element or pseudo-element. For elements, the `content` property specifies whether the element renders normally (`normal` or `none`) or is replaced with an image (and associated "alt" text). For pseudo-elements and margin boxes, `content` defines the content as images, text, both, or none, which determines whether the element renders at all.
 
@@ -73,7 +72,7 @@ content: no-close-quote;
 
 /* <content-list>: a list of content values. 
 Several values can be used simultaneously */
-content: "prefix" url(http://www.example.com/test.png);
+content: "prefix" url("http://www.example.com/test.png");
 content: "prefix" url("/img/test.png") "suffix" / "Alt text";
 content: open-quote counter(chapter_counter);
 
@@ -215,14 +214,14 @@ This example inserts differently colored quotation marks around quotes.
 
 ```css
 q {
-  color: #00f;
+  color: blue;
 }
 
 q::before,
 q::after {
   font-size: larger;
-  color: #f00;
-  background: #ccc;
+  color: red;
+  background: #cccccc;
 }
 
 q::before {
@@ -390,7 +389,7 @@ This example demonstrates how an element's contents can be replaced by any type 
 ```css
 div {
   border: 1px solid;
-  background-color: #ccc;
+  background-color: #cccccc;
   min-height: 100px;
   min-width: 100px;
 }

@@ -42,13 +42,9 @@ _This interface inherits properties from its parent interface, {{domxref("Event"
 ```js
 const canvas = document.getElementById("canvas");
 
-canvas.addEventListener(
-  "webglcontextcreationerror",
-  (e) => {
-    console.log(e.statusMessage || "Unknown error");
-  },
-  false,
-);
+canvas.addEventListener("webglcontextcreationerror", (e) => {
+  console.log(e.statusMessage || "Unknown error");
+});
 
 const gl = canvas.getContext("webgl");
 // logs statusMessage or "Unknown error" if unable to create WebGL context

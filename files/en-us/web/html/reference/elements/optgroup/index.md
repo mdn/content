@@ -3,9 +3,8 @@ title: "<optgroup>: The Option Group element"
 slug: Web/HTML/Reference/Elements/optgroup
 page-type: html-element
 browser-compat: html.elements.optgroup
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<optgroup>`** [HTML](/en-US/docs/Web/HTML) element creates a grouping of options within a {{HTMLElement("select")}} element.
 

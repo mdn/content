@@ -3,9 +3,8 @@ title: font-feature-settings
 slug: Web/CSS/@font-face/font-feature-settings
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.font-face.font-feature-settings
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`font-feature-settings`** CSS descriptor allows you to define the initial settings to use for the font defined by the {{cssxref("@font-face")}} at-rule. You can further use this descriptor to control typographic font features such as ligatures, small caps, and swashes, for the font defined by `@font-face`. The values for this descriptor are the same as the {{cssxref("font-feature-settings")}} property, except for the global keyword values.
 
@@ -62,11 +61,11 @@ In this example, the tag name `swsh` and a boolean value `1` are used as the val
 ```css
 @font-face {
   font-family: MonteCarlo;
-  src: url("montecarlo-regular.woff2");
+  src: url("/shared-assets/fonts/monte-carlo/monte-carlo-regular.woff2");
 }
 @font-face {
   font-family: MonteCarlo2;
-  src: url("montecarlo-regular.woff2");
+  src: url("/shared-assets/fonts/monte-carlo/monte-carlo-regular.woff2");
   font-feature-settings: "swsh" 1;
 }
 p {
@@ -74,10 +73,10 @@ p {
   margin: 0.7rem 3rem;
 }
 .swash-off {
-  font-family: MonteCarlo;
+  font-family: MonteCarlo, cursive;
 }
 .swash-on {
-  font-family: MonteCarlo2;
+  font-family: MonteCarlo2, cursive;
 }
 ```
 

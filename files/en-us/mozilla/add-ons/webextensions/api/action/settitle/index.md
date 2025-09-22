@@ -3,9 +3,8 @@ title: action.setTitle()
 slug: Mozilla/Add-ons/WebExtensions/API/action/setTitle
 page-type: webextension-api-function
 browser-compat: webextensions.api.action.setTitle
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Sets the browser action's title. The title is displayed in a tooltip over the browser action's icon. You can pass a `tabId` in or a `windowId` as an optional parameter — if you do this then the title is changed only for the specified tab or window. Tabs or windows without a specific title inherit the global title text, which defaults to the [`default_title`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) or [`name`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name) specified in the manifest.
 

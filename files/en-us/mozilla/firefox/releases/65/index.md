@@ -1,5 +1,6 @@
 ---
 title: Firefox 65 for developers
+short-title: Firefox 65
 slug: Mozilla/Firefox/Releases/65
 page-type: firefox-release-notes
 sidebar: firefox
@@ -123,7 +124,7 @@ _No changes._
 - The non-standard {{domxref("MediaStream")}} property `currentTime` has been removed ([Firefox bug 1502927](https://bugzil.la/1502927)).
 - The `dom.webcomponents.shadowdom.enabled` and `dom.webcomponents.customelements.enabled` prefs have been removed — Shadow DOM and Custom Elements can no longer be disabled in `about:config` ([Firefox bug 1503019](https://bugzil.la/1503019)).
 - The non-standard DOM `text` event — fired to notify the browser editor UI of IME composition string data and selection range — has been removed ([Firefox bug 1288640](https://bugzil.la/1288640)).
-- The {{domxref("Element/keypress_event", "keypress")}} event is no longer fired for [non-printable keys](</en-US/docs/Web/API/KeyboardEvent/keyCode#non-printable_keys_(function_keys)>) ([Firefox bug 968056](https://bugzil.la/968056)), except for the `Enter` key, and the `Shift` + `Enter` and `Ctrl` + `Enter` key combinations (these were kept for cross-browser compatibility purposes).
+- The {{domxref("Element/keypress_event", "keypress")}} event is no longer fired for [non-printable keys](/en-US/docs/Web/API/KeyboardEvent/keyCode#non-printable_keys_function_keys) ([Firefox bug 968056](https://bugzil.la/968056)), except for the `Enter` key, and the `Shift` + `Enter` and `Ctrl` + `Enter` key combinations (these were kept for cross-browser compatibility purposes).
 
 ### Security
 
@@ -183,7 +184,3 @@ _No changes._
 ## See also
 
 - Hacks release post: [Firefox 65: WebP support, Flexbox Inspector, new tooling & platform updates](https://hacks.mozilla.org/2019/01/firefox-65-webp-flexbox-inspector-new-tooling/)
-
-## Older versions
-
-{{Firefox_for_developers}}

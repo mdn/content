@@ -5,9 +5,8 @@ page-type: css-module
 spec-urls:
   - https://drafts.csswg.org/css-text/
   - https://drafts.csswg.org/css-text-4/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS text** module defines how to perform text manipulation, like line breaking, justification and alignment, white space handling, and text transformation.
 
@@ -27,6 +26,7 @@ The **CSS text** module defines how to perform text manipulation, like line brea
 - {{cssxref("text-align-last")}}
 - {{cssxref("text-indent")}}
 - {{cssxref("text-justify")}}
+- {{cssxref("text-autospace")}}
 - {{cssxref("text-spacing-trim")}} {{Experimental_Inline}}
 - {{cssxref("text-transform")}}
 - {{cssxref("text-wrap")}}

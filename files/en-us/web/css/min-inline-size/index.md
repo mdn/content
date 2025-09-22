@@ -3,9 +3,8 @@ title: min-inline-size
 slug: Web/CSS/min-inline-size
 page-type: css-property
 browser-compat: css.properties.min-inline-size
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`min-inline-size`** [CSS](/en-US/docs/Web/CSS) property defines the horizontal or vertical minimal size of an element's block, depending on its writing mode. It corresponds to either the {{cssxref("min-width")}} or the {{cssxref("min-height")}} property, depending on the value of {{cssxref("writing-mode")}}.
 
@@ -44,7 +43,7 @@ writing-mode: vertical-lr;
   background-color: #5b6dcd;
   height: 80%;
   justify-content: center;
-  color: #ffffff;
+  color: white;
 }
 ```
 

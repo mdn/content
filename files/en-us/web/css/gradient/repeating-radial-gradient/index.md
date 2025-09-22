@@ -3,9 +3,8 @@ title: repeating-radial-gradient()
 slug: Web/CSS/gradient/repeating-radial-gradient
 page-type: css-function
 browser-compat: css.types.gradient.repeating-radial-gradient
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`repeating-radial-gradient()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) creates an image consisting of repeating gradients that radiate from an origin. It is similar to {{cssxref("gradient/radial-gradient", "radial-gradient()")}} and takes the same arguments, but it repeats the color stops infinitely in all directions so as to cover its entire container, similar to {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}. The function's result is an object of the {{cssxref("&lt;gradient&gt;")}} data type, which is a special kind of {{cssxref("&lt;image&gt;")}}.
 
@@ -22,10 +21,10 @@ background: repeating-radial-gradient(closest-side, #3f87a6, #ebf8e1, #f69d3c);
 ```css interactive-example-choice
 background: repeating-radial-gradient(
   circle at 100%,
-  #333,
-  #333 10px,
-  #eee 10px,
-  #eee 20px
+  #333333,
+  #333333 10px,
+  #eeeeee 10px,
+  #eeeeee 20px
 );
 ```
 

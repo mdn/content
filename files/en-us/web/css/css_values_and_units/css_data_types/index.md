@@ -3,9 +3,8 @@ title: CSS data types
 slug: Web/CSS/CSS_Values_and_Units/CSS_data_types
 page-type: guide
 spec-urls: https://drafts.csswg.org/css-values/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 **CSS data types** define typical values (including keywords and units) accepted by CSS properties and functions. They are a special kind of [component value type](https://drafts.csswg.org/css-values/#component-types).
 
@@ -46,7 +45,7 @@ These types include keywords and identifiers as well as strings, and URLs.
 
 ## Numeric data types
 
-These data types are used to indicate quantities, indexes, and positions. The majority of these are defined in the Values and Units specification, however additional types are described in other specifications where they are specific to that specification alone — for example the `fr` unit in [CSS grid layout](https://drafts.csswg.org/css-grid-1/#fr-unit).
+These data types are used to indicate quantities, indexes, and positions. The majority of these are defined in the CSS values and units module, however additional types are described in other modules where they are specific to that specification alone — for example the `fr` unit in the [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) module.
 
 - {{cssxref("&lt;integer&gt;")}}
   - : One or more decimal units 0 through 9.
@@ -91,7 +90,7 @@ Some CSS properties can take a dimension or a percentage value. In this case the
 
 ## Color
 
-[The CSS Color Specification](https://drafts.csswg.org/css-color-4/) defines the {{cssxref("&lt;color&gt;")}} data type, and other types which relate to color in CSS.
+The [CSS color](/en-US/docs/Web/CSS/CSS_colors) module defines the {{cssxref("&lt;color&gt;")}} data type, and other types which relate to color in CSS.
 
 - {{cssxref("&lt;color&gt;")}}
   - : Specified as a keyword or a numerical color value.
@@ -102,7 +101,7 @@ Some CSS properties can take a dimension or a percentage value. In this case the
 
 ## Images
 
-[The CSS Images Specification](https://drafts.csswg.org/css-images-3/) defines the data types which deal with images, including gradients.
+The [CSS images](/en-US/docs/Web/CSS/CSS_images) module defines the data types which deal with images, including gradients.
 
 - {{cssxref("&lt;image&gt;")}}
   - : A URL reference to an image or a color gradient.
@@ -137,6 +136,15 @@ These data types are used in [CSS math function](/en-US/docs/Web/CSS/CSS_Values_
 - {{cssxref("&lt;calc-keyword&gt;")}}
   - : Defines a number of CSS keywords representing numeric constants such as `e` and `π`, that can be used in CSS math functions.
 
+## Shape data types
+
+The [CSS shapes](/en-US/docs/Web/CSS/CSS_shapes) and [CSS borders and box decorations](/en-US/docs/Web/CSS/CSS_borders_and_box_decorations) modules define shape data types:
+
+- {{cssxref("&lt;basic-shape>")}}
+  - : Describes shape functions used in the {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}, and {{cssxref("offset-path")}} properties.
+- {{cssxref("&lt;corner-shape-value>")}}
+  - : Describes the shape of a container corner. It is used by the {{cssxref("corner-shape")}} shorthand property and its [constituent properties](/en-US/docs/Web/CSS/corner-shape#constituent_properties) to specify the shape applied to affected container corners.
+
 ## Specifications
 
 {{Specifications}}
@@ -145,4 +153,4 @@ These data types are used in [CSS math function](/en-US/docs/Web/CSS/CSS_Values_
 
 - [CSS values and units](/en-US/docs/Web/CSS/CSS_Values_and_Units) module
 - [Learn: Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
-- [CSS Functional Notation](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)
+- [CSS functional notation](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)

@@ -128,15 +128,15 @@ In this example, we'll draw a background of four different colored squares. On t
 function draw() {
   const ctx = document.getElementById("canvas").getContext("2d");
   // draw background
-  ctx.fillStyle = "#FD0";
+  ctx.fillStyle = "#ffdd00";
   ctx.fillRect(0, 0, 75, 75);
-  ctx.fillStyle = "#6C0";
+  ctx.fillStyle = "#66cc00";
   ctx.fillRect(75, 0, 75, 75);
-  ctx.fillStyle = "#09F";
+  ctx.fillStyle = "#0099ff";
   ctx.fillRect(0, 75, 75, 75);
-  ctx.fillStyle = "#F30";
+  ctx.fillStyle = "#ff3300";
   ctx.fillRect(75, 75, 75, 75);
-  ctx.fillStyle = "#FFF";
+  ctx.fillStyle = "white";
 
   // set transparency value
   ctx.globalAlpha = 0.2;
@@ -250,22 +250,8 @@ draw();
 
 {{EmbedLiveSample("A_lineWidth_example", "", "160")}}
 
-Obtaining crisp lines requires understanding how paths are stroked. In the images below, the grid represents the canvas coordinate grid. The squares between grid lines are actual on-screen pixels. In the first grid image below, a rectangle from (2,1) to (5,5) is filled. The entire area between them (light red) falls on pixel boundaries, so the resulting filled rectangle will have crisp edges.
-
-![Three coordinate grids. The grid lines are actual pixels on the screen. The top left corner of each grid is labeled (0,0). In the first grid, a rectangle from (2,1) to (5,5) is filled in light-red color. In the second grid, (3,1) to (3,5) is joined with a 1-pixel thick royal blue line. The royal-blue line is centered on a grid line, extends from 2.5 to 3.5 on the x access, halfway into the pixels on either side of the graph line, with a light blue background on either side extending from 2 to 4 on the x-access. To avoid the light blue blur extension of the line in the second coordinate grid, the path in, the third coordinate grid is a royal-blue from line (3.5,1) to (3.5,5). The 1 pixel line width ends up completely and precisely filling a single pixel vertical line.](canvas-grid.png)
-
-If you consider a path from (3,1) to (3,5) with a line thickness of `1.0`, you end up with the situation in the second image. The actual area to be filled (dark blue) only extends halfway into the pixels on either side of the path. An approximation of this has to be rendered, which means that those pixels being only partially shaded, and results in the entire area (the light blue and dark blue) being filled in with a color only half as dark as the actual stroke color. This is what happens with the `1.0` width line in the previous example code.
-
-To fix this, you have to be very precise in your path creation. Knowing that a `1.0` width line will extend half a unit to either side of the path, creating the path from (3.5,1) to (3.5,5) results in the situation in the third image—the `1.0` line width ends up completely and precisely filling a single pixel vertical line.
-
 > [!NOTE]
-> Be aware that in our vertical line example, the Y position still referenced an integer grid line position—if it hadn't, we would see pixels with half coverage at the endpoints (but note also that this behavior depends on the current `lineCap` style whose default value is `butt`; you may want to compute consistent strokes with half-pixel coordinates for odd-width lines, by setting the `lineCap` style to `square`, so that the outer border of the stroke around the endpoint will be automatically extended to cover the whole pixel exactly).
->
-> Note also that only start and final endpoints of a path are affected: if a path is closed with `closePath()`, there's no start and final endpoint; instead, all endpoints in the path are connected to their attached previous and next segment using the current setting of the `lineJoin` style, whose default value is `miter`, with the effect of automatically extending the outer borders of the connected segments to their intersection point, so that the rendered stroke will exactly cover full pixels centered at each endpoint if those connected segments are horizontal and/or vertical. See the next two sections for demonstrations of these additional line styles.
-
-For even-width lines, each half ends up being an integer amount of pixels, so you want a path that is between pixels (that is, (3,1) to (3,5)), instead of down the middle of pixels.
-
-While slightly painful when initially working with scalable 2D graphics, paying attention to the pixel grid and the position of paths ensures that your drawings will look correct regardless of scaling or any other transformations involved. A 1.0-width vertical line drawn at the correct position will become a crisp 2-pixel line when scaled up by 2, and will appear at the correct position.
+> If you are wondering about the lines appearing gray near the edge instead of black, check the [Seeing blurry edges?](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes#seeing_blurry_edges) section in the previous chapter.
 
 ### A `lineCap` example
 
@@ -278,6 +264,8 @@ The `lineCap` property determines how the end points of every line are drawn. Th
 - `square`
   - : The ends of lines are squared off by adding a box with an equal width and half the height of the line's thickness.
 
+Only start and final endpoints of a path are affected: if a path is closed with `closePath()`, there's no start and final endpoint; instead, all endpoints in the path are connected to their attached previous and next segment using the current setting of the `lineJoin` style.
+
 In this example, we'll draw three lines, each with a different value for the `lineCap` property. I also added two guides to see the exact differences between the three. Each of these lines starts and ends exactly on these guides.
 
 The line on the left uses the default `butt` option. You'll notice that it's drawn completely flush with the guides. The second is set to use the `round` option. This adds a semicircle to the end that has a radius half the width of the line. The line on the right uses the `square` option. This adds a box with an equal width and half the height of the line thickness.
@@ -287,7 +275,7 @@ function draw() {
   const ctx = document.getElementById("canvas").getContext("2d");
 
   // Draw guides
-  ctx.strokeStyle = "#09f";
+  ctx.strokeStyle = "#0099ff";
   ctx.beginPath();
   ctx.moveTo(10, 10);
   ctx.lineTo(140, 10);
@@ -386,12 +374,12 @@ function draw() {
   ctx.clearRect(0, 0, 150, 150);
 
   // Draw guides
-  ctx.strokeStyle = "#09f";
+  ctx.strokeStyle = "#0099ff";
   ctx.lineWidth = 2;
   ctx.strokeRect(-5, 50, 160, 50);
 
   // Set line styles
-  ctx.strokeStyle = "#000";
+  ctx.strokeStyle = "black";
   ctx.lineWidth = 10;
 
   // check input
@@ -517,13 +505,13 @@ function draw() {
   // Create gradients
   const linGrad = ctx.createLinearGradient(0, 0, 0, 150);
   linGrad.addColorStop(0, "#00ABEB");
-  linGrad.addColorStop(0.5, "#fff");
+  linGrad.addColorStop(0.5, "white");
   linGrad.addColorStop(0.5, "#26C000");
-  linGrad.addColorStop(1, "#fff");
+  linGrad.addColorStop(1, "white");
 
   const linGrad2 = ctx.createLinearGradient(0, 50, 0, 95);
-  linGrad2.addColorStop(0.5, "#000");
-  linGrad2.addColorStop(1, "rgb(0 0 0 / 0%)");
+  linGrad2.addColorStop(0.5, "black");
+  linGrad2.addColorStop(1, "transparent");
 
   // assign gradients to fill and stroke styles
   ctx.fillStyle = linGrad;
@@ -561,22 +549,22 @@ function draw() {
   const radGrad = ctx.createRadialGradient(45, 45, 10, 52, 50, 30);
   radGrad.addColorStop(0, "#A7D30C");
   radGrad.addColorStop(0.9, "#019F62");
-  radGrad.addColorStop(1, "rgb(1 159 98 / 0%)");
+  radGrad.addColorStop(1, "transparent");
 
   const radGrad2 = ctx.createRadialGradient(105, 105, 20, 112, 120, 50);
   radGrad2.addColorStop(0, "#FF5F98");
   radGrad2.addColorStop(0.75, "#FF0188");
-  radGrad2.addColorStop(1, "rgb(255 1 136 / 0%)");
+  radGrad2.addColorStop(1, "transparent");
 
   const radGrad3 = ctx.createRadialGradient(95, 15, 15, 102, 20, 40);
   radGrad3.addColorStop(0, "#00C9FF");
   radGrad3.addColorStop(0.8, "#00B5E2");
-  radGrad3.addColorStop(1, "rgb(0 201 255 / 0%)");
+  radGrad3.addColorStop(1, "transparent");
 
   const radGrad4 = ctx.createRadialGradient(0, 150, 50, 0, 140, 90);
   radGrad4.addColorStop(0, "#F4F201");
   radGrad4.addColorStop(0.8, "#E4C700");
-  radGrad4.addColorStop(1, "rgb(228 199 0 / 0%)");
+  radGrad4.addColorStop(1, "transparent");
 
   // draw shapes
   ctx.fillStyle = radGrad4;
@@ -615,7 +603,7 @@ function draw() {
   // Create gradients
   const conicGrad1 = ctx.createConicGradient(2, 62, 75);
   conicGrad1.addColorStop(0, "#A7D30C");
-  conicGrad1.addColorStop(1, "#fff");
+  conicGrad1.addColorStop(1, "white");
 
   const conicGrad2 = ctx.createConicGradient(0, 187, 75);
   // we multiply our values by Math.PI/180 to convert degrees to radians

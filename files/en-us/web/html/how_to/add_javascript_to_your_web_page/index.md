@@ -3,9 +3,8 @@ title: Add JavaScript to your web page
 short-title: Add JavaScript
 slug: Web/HTML/How_to/Add_JavaScript_to_your_web_page
 page-type: how-to
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 Take your webpages to the next level by harnessing JavaScript. Learn in this article how to trigger JavaScript right from your HTML documents.
 
@@ -55,9 +54,7 @@ You may also add JavaScript code between `<script>` tags rather than providing a
 
 ```html
 <script>
-  window.addEventListener("load", () => {
-    console.log("This function is executed once the page is fully loaded");
-  });
+  console.log("Some code");
 </script>
 ```
 
@@ -66,6 +63,9 @@ That's convenient when you just need a small bit of JavaScript, but if you keep 
 - focus on your work
 - write self-sufficient HTML
 - write structured JavaScript applications
+
+> [!NOTE]
+> For both inline scripts and external scripts without the [`defer`](/en-US/docs/Web/HTML/Reference/Elements/script#defer) or [`async`](/en-US/docs/Web/HTML/Reference/Elements/script#async) attributes, the script is executed immediately when the browser encounters the `<script>` element while parsing the HTML. This means that the script cannot access any HTML elements that appear later in the document. To access such elements, consider moving the script to the end of the document body (just before the closing `</body>` tag), or use the `defer` attribute on external scripts.
 
 ## Use scripting accessibly
 

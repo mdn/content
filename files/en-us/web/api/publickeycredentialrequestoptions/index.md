@@ -21,7 +21,7 @@ It is used to request a {{domxref("PublicKeyCredential")}} provided by an {{glos
     - `id`
       - : An {{jsxref("ArrayBuffer")}}, {{jsxref("TypedArray")}}, or {{jsxref("DataView")}} representing the ID of the public key credential to retrieve. This value is mirrored by the {{domxref("PublicKeyCredential.rawId", "rawId")}} property of the {{domxref("PublicKeyCredential")}} object returned by a successful `get()` call.
 
-    - `transports`
+    - `transports` {{optional_inline}}
       - : An array of strings providing hints as to the methods the client could use to communicate with the relevant authenticator of the public key credential to retrieve. Possible transports are: `"ble"`, `"hybrid"`, `"internal"`, `"nfc"`, and `"usb"`.
 
         > [!NOTE]
@@ -41,7 +41,7 @@ It is used to request a {{domxref("PublicKeyCredential")}} provided by an {{glos
 
     Extensions are optional and different browsers may recognize different extensions. Processing extensions is always optional for the client: if a browser does not recognize a given extension, it will just ignore it. For information on using extensions, and which ones are supported by which browsers, see [Web Authentication extensions](/en-US/docs/Web/API/Web_Authentication_API/WebAuthn_extensions).
 
-- `hints` {{optional_inline}}
+- `hints` {{optional_inline}} {{experimental_inline}}
   - : An array of strings providing hints as to what UI the browser should provide for the user to authenticate with an existing public key credential.
 
     The strings can be any of the following:

@@ -11,11 +11,11 @@ browser-compat: api.Sanitizer
 
 The **`Sanitizer`** interface of the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) defines a configuration object that specifies what elements, attributes and comments are allowed or should be removed when inserting strings of HTML into an {{domxref("Element")}} or {{domxref("ShadowRoot")}}, or when parsing an HTML string into a {{domxref("Document")}}.
 
-A `Sanitizer` instance is effectively a wrapper around a {{domxref("SanitizerConfig")}}, and can be passed as a configuration alterative in the same [sanitization methods](/en-US/docs/Web/API/HTML_Sanitizer_API#sanitization_methods):
+A `Sanitizer` instance is effectively a wrapper around a {{domxref("SanitizerConfig")}}, and can be passed as a configuration alternative in the same [sanitization methods](/en-US/docs/Web/API/HTML_Sanitizer_API#sanitization_methods):
 
-- {{domxref("Element/setHTMLUnsafe","setHTMLUnsafe()")}} or {{domxref("Element/setHTMLUnsafe","setHTMLUnsafe()")}} on {{domxref("Element")}}.
-- {{domxref("ShadowRoot/setHTMLUnsafe","setHTMLUnsafe()")}} or {{domxref("ShadowRoot/setHTMLUnsafe","setHTMLUnsafe()")}} on {{domxref("ShadowRoot")}}.
-- [`Document.parseHTMLUnsafe()`](/en-US/docs/Web/API/Document/parseHTMLUnsafe_static) or [`Document.parseHTML()`](/en-US/docs/Web/API/Document/parseHTML_static) static methods.
+- {{domxref("Element/setHTML","setHTML()")}} or {{domxref("Element/setHTMLUnsafe","setHTMLUnsafe()")}} on {{domxref("Element")}}.
+- {{domxref("ShadowRoot/setHTML","setHTML()")}} or {{domxref("ShadowRoot/setHTMLUnsafe","setHTMLUnsafe()")}} on {{domxref("ShadowRoot")}}.
+- [`Document.parseHTML()`](/en-US/docs/Web/API/Document/parseHTML_static) or [`Document.parseHTMLUnsafe()`](/en-US/docs/Web/API/Document/parseHTMLUnsafe_static) static methods.
 
 Note that `Sanitizer` is expected to be more efficient to reuse and modify when needed.
 

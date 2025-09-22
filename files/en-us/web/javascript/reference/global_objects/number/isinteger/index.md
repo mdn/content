@@ -4,9 +4,8 @@ short-title: isInteger()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isInteger
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Number.isInteger
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Number.isInteger()`** static method determines whether the passed value is an integer.
 

@@ -3,9 +3,8 @@ title: :read-only
 slug: Web/CSS/:read-only
 page-type: css-pseudo-class
 browser-compat: css.selectors.read-only
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`:read-only`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) selects elements (such as certain {{htmlelement("input")}} types and {{htmlelement("textarea")}}) that are not editable by the user. Elements on which the HTML attribute [`readonly`](/en-US/docs/Web/HTML/Reference/Attributes/readonly) doesn't have an effect (such as [`<input type="radio">`](/en-US/docs/Web/HTML/Reference/Elements/input/radio), [`<input type="checkbox">`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox), and all other non-form elements) are also selected by the `:read-only` pseudo-class. In fact, `:read-only` matches anything that {{cssxref(":read-write")}} doesn't match, making it equivalent to `:not(:read-write)`.
 
@@ -157,7 +156,7 @@ input:hover,
 input:focus,
 textarea:hover,
 textarea:focus {
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 
 button {
@@ -171,7 +170,7 @@ input:read-only,
 textarea:read-only {
   border: 0;
   box-shadow: none;
-  background-color: #ddd;
+  background-color: #dddddd;
 }
 
 textarea:read-write {

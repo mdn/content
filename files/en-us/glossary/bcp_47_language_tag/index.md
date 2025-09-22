@@ -2,9 +2,8 @@
 title: BCP 47 language tag
 slug: Glossary/BCP_47_language_tag
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 A **BCP 47 language tag** is a string of characters that precisely specifies a human language in terms of the basic language, but also optionally the writing system and dialect. For example, `en` specifies English, but `en-GB` and `en-US` more precisely specify British English and American English, respectively.
 
@@ -40,4 +39,5 @@ The script subtag precedes the region subtag if both are present — `ru-Cyrl-BY
 ## See also
 
 - [RFC 5646: Tags for Identifying Languages](https://datatracker.ietf.org/doc/html/rfc5646): where BCP 47 language tags are specified.
+- [Choosing a Language Tag](https://www.w3.org/International/questions/qa-choosing-language-tags): W3C guide on choosing the right language tag.
 - [BCP 47 language subtag lookup](https://r12a.github.io/app-subtags/): look up subtag codes for a language.

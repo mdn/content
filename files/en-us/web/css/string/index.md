@@ -3,9 +3,8 @@ title: <string>
 slug: Web/CSS/string
 page-type: css-type
 browser-compat: css.types.string
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`<string>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents a sequence of characters. Strings are used in numerous CSS properties, such as {{CSSxRef("content")}}, {{CSSxRef("font-family")}}, and {{CSSxRef("quotes")}}.
 

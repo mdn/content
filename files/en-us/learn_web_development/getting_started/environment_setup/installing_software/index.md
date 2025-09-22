@@ -45,11 +45,11 @@ The most common browsers you'll come across are as follows:
 
 - Desktop browsers:
   - Chromium: [Google Chrome](https://www.google.com/chrome/), [Opera](https://www.opera.com/opera), [Brave](https://brave.com/download/), [Microsoft Edge](https://www.microsoft.com/en-us/edge), [Vivaldi](https://vivaldi.com/).
-  - Gecko: [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new/).
+  - Gecko: [Mozilla Firefox](https://www.firefox.com/en-US/).
   - WebKit: [Apple Safari](https://www.apple.com/safari/).
 - Mobile/alternative device browsers:
   - Chromium (Android): [Google Chrome](https://www.google.com/chrome/go-mobile/), [Opera](https://www.opera.com/opera), [Brave](https://brave.com/download/), [Microsoft Edge](https://www.microsoft.com/en-us/edge/mobile), [Samsung Internet](https://www.samsung.com/us/support/owners/app/samsung-internet), [Vivaldi](https://vivaldi.com/android/).
-  - Gecko (Android): [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/browsers/mobile/android/).
+  - Gecko (Android): [Mozilla Firefox](https://www.firefox.com/en-US/browsers/mobile/android/).
   - WebKit (iOS): [Apple Safari](https://www.apple.com/safari/).
     > [!NOTE]
     > Most of the Android browsers listed above have iOS versions, but these were historically all powered by Apple's WebKit engine under the hood due to Apple's App Store rules. At the time of writing, browsers are starting to create versions of their iOS browsers based on their own rendering engines, due to regulatory changes. See [Apple is finally allowing full versions of Chrome and Firefox to run on the iPhone](https://www.theverge.com/2024/1/25/24050478/apple-ios-17-4-browser-engines-eu).

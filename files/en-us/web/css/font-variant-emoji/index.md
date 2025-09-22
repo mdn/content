@@ -3,9 +3,8 @@ title: font-variant-emoji
 slug: Web/CSS/font-variant-emoji
 page-type: css-property
 browser-compat: css.properties.font-variant-emoji
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`font-variant-emoji`** [CSS](/en-US/docs/Web/CSS) property specifies the default presentation style for displaying emojis.
 
