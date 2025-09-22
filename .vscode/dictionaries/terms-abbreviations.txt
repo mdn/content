@@ -80,6 +80,7 @@ blocklists
 blockquotes
 bluify
 BMFF
+bolognaise
 bootup
 botmaster
 BPPmaxKb
@@ -175,6 +176,7 @@ discardable
 distros
 DLRR
 DLSR
+DMARC
 docshell
 docshells
 doctypes
@@ -792,6 +794,7 @@ TIPC
 toggletips
 toolkits
 toolsets
+TOTP
 touchpads
 touchpoint
 touchpoints
