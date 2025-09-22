@@ -71,14 +71,14 @@ For example, maybe your application doesn't provide the user's ID in the URL but
 
 If insufficient server-side access control is performed, the attacker can manipulate the `user_id` value in the hidden `<input>` element to a different user ID and might be able to modify the profile without authorization.
 
-### Cookie or session data manipulation
+### Cookie and session data manipulation
 
-Attackers might also manipulate cookies or session data to impersonate other users. You can use your browser's developer tools to modify cookie values.
+Attackers might also manipulate cookies and session data to impersonate other users. The attacker can use the browser's developer tools to modify cookie values. In bad implementations, session IDs are composed by username, user id, or other predictable information in clear text. Or they are insufficiently encoded by weak algorithms like `base64` encoding. In the following example the attacker can just change the `SESSIONID` clear text in the {{HTTPHeader("Cookie")}} header to a different user ID and it could possibly get inside the application without prior authentication.
 
-```http
+```http example-bad
 GET /sign-in HTTP/1.1
 Host: example.org
-Cookie: user_id=1234
+Cookie: SESSIONID=user1234
 ```
 
 ### File access
@@ -100,13 +100,20 @@ The most important mitigation for IDOR attacks is to implement server-side acces
 
 Any predictable references, such as sequential numbers or any other guessable strings should be avoided. Do not expose any personally identifiable information (PII), like user names or email addresses in the URL. Instead use a unique non-guessable token to represent the user. You can use more complex IDs as primary keys, like {{glossary("UUID", "UUIDs")}}, and make it harder to guess valid values. However, this only reduces the likelihood of guessing valid IDs and does not replace the need for proper access control.
 
+### Session IDs
+
+Session IDs require special security measurements and should never be predictable nor contain any direct object references like the user name or user ID. If you can, use secure mechanism in established frameworks to generate non-predictable, safe, long session IDs. The use of existing frameworks or libraries often also has the advantage that additional [secure cookie configurations](/en-US/docs/Web/Security/Practical_implementation_guides/Cookies) are integrated already as well.
+
+If you must generate session IDs yourself, do not generate session IDs from any predictable information. Instead, generate IDs that are very long and based on data from cryptographically secure pseudo-random number generators (CSPRNG). If you're combining randomness with non-random data such as timestamps and user IDs to avoid collisions, make sure to use strong and non-reversible hash algorithms.
+
 ## Defense summary checklist
 
 - Always verify that the authenticated user is authorized to access or modify the object.
-- Never trust identifiers from the client (URLs, form fields, cookies).
+- Never trust identifiers from the client (in URLs, in form fields, or in cookies).
 - Avoid exposing predictable, sequential, or sensitive object identifiers (like user IDs or email addresses).
-- Prefer indirect references or opaque tokens where possible.
+- Pay special attention to session ID security, prefer non-predictable IDs and cryptographically secure pseudo-random numbers where possible.
 
 ## See also
 
 - [OWASP: Insecure Direct Object Reference Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet.html)
+- [OWASP: Session Prediction](https://owasp.org/www-community/attacks/Session_Prediction)
