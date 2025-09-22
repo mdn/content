@@ -56,6 +56,8 @@ Firefox 144 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ### APIs
 
+- The [`lock()`](/en-US/docs/Web/API/ScreenOrientation/lock) and [`unlock()`](/en-US/docs/Web/API/ScreenOrientation/unlock) methods of the {{domxref("ScreenOrientation")}} interface are now supported for Android and for Windows tablets. ([Firefox bug 1983483](https://bugzil.la/1983483))
+
 #### DOM
 
 - The `moveBefore()` method is now supported on the {{domxref("Element.moveBefore()","Element")}}, {{domxref("DocumentFragment.moveBefore()","DocumentFragment")}} and {{domxref("Document.moveBefore()","Document")}} interfaces. This allows moving of an immediate child element of the object, before another of its child elements. Unlike with {{domxref("Node.insertBefore()")}}, moved elements retain their state. ([Firefox bug 1983688](https://bugzil.la/1983688)).
