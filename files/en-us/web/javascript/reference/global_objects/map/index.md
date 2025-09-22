@@ -353,6 +353,10 @@ These properties are defined on `Map.prototype` and shared by all `Map` instance
   - : Calls `callbackFn` once for each key-value pair present in the `Map` object, in insertion order. If a `thisArg` parameter is provided to `forEach`, it will be used as the `this` value for each callback.
 - {{jsxref("Map.prototype.get()")}}
   - : Returns the value corresponding to the key in this `Map`, or `undefined` if there is none.
+- {{jsxref("Map.prototype.getOrInsert()")}}
+  - : Returns the value corresponding to the key in this `Map`, or inserts and returns a default value if there is none.
+- {{jsxref("Map.prototype.getOrInsertComputed()")}}
+  - : Returns the value corresponding to the key in this `Map`, or inserts and returns a default value computed from a callback if there is none.
 - {{jsxref("Map.prototype.has()")}}
   - : Returns a boolean indicating whether an entry with the specified key exists in this `Map` or not.
 - {{jsxref("Map.prototype.keys()")}}

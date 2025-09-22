@@ -58,6 +58,10 @@ These properties are defined on `WeakMap.prototype` and shared by all `WeakMap` 
   - : Removes the entry specified by the key from this `WeakMap`.
 - {{jsxref("WeakMap.prototype.get()")}}
   - : Returns the value corresponding to the key in this `WeakMap`, or `undefined` if there is none.
+- {{jsxref("WeakMap.prototype.getOrInsert()")}}
+  - : Returns the value corresponding to the key in this `WeakMap`, or inserts and returns a default value if there is none.
+- {{jsxref("WeakMap.prototype.getOrInsertComputed()")}}
+  - : Returns the value corresponding to the key in this `WeakMap`, or inserts and returns a default value computed from a callback if there is none.
 - {{jsxref("WeakMap.prototype.has()")}}
   - : Returns a boolean indicating whether an entry with the specified key exists in this `WeakMap` or not.
 - {{jsxref("WeakMap.prototype.set()")}}
