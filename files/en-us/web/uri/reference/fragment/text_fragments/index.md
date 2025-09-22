@@ -28,9 +28,9 @@ The issue with linking to specific document fragments is that the author of the 
 </h2>
 ```
 
-Not all documents have such anchors, and even if they do, depending on the context, linking to a heading may be much less obvious than linking directly to the piece of text you are citing. This is where text fragments come in: it allows the link author to have full control over where in the document they want to link to, without requiring any special markup in the document itself. For example, a search engine may refer to a specific sentence in a page in its search results, and clicking the link will take you directly to that sentence.
+Not all documents have such anchors, and even if they do, linking to a heading might be much less obvious than linking directly to the specific text you are citing. This is where text fragments help: they allow the link author to have full control over what text to link to, without requiring any special markup in the target document. For example, a search engine may refer to a specific sentence in its search results, and clicking the link will take you directly to that sentence.
 
-Of course, text fragments also have the limitation that text in a document is less stable than document structure. If the linked document is updated, the fragment would not navigate to the correct point, but would stay at the top of the page. This is fine for transient links such as those in search results, but if you intend for the link to work over time, document fragments may be more reliable.
+However, text fragments also have a limitation: text in a document is less stable than document structure. If the text in the linked document is updated, the fragment no longer matches, and the browser navigates to the top of the page. This is fine for transient links such as those in search results, but if you intend for the link to work over time, document fragments may be more reliable.
 
 ## Syntax
 
