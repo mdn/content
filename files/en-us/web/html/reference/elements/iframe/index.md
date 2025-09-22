@@ -186,7 +186,21 @@ With the DOM {{domxref("HTMLIFrameElement")}} object, scripts can access the {{d
 
 From the inside of a frame, a script can get a reference to its parent window with {{domxref("window.parent")}}.
 
-Script access to a frame's content is subject to the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy). Scripts cannot access most properties in other `window` objects if the script was loaded from a different origin, including scripts inside a frame accessing the frame's parent. Cross-origin communication can be achieved using {{domxref("Window.postMessage()")}}.
+Script access to a frame's content is subject to the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy).
+Scripts cannot access most properties in other `window` objects if the script was loaded from a different origin, including scripts inside a frame accessing the frame's parent.
+Cross-origin communication can be achieved using {{domxref("Window.postMessage()")}}.
+
+### `Window.top` navigation
+
+Scripts running in a same-origin frame can access the {{domxref("Window.top")}} property and set {{domxref("Window.location","window.top.location")}} to redirect the page to a new location.
+This is referred to as a "top-navigation".
+
+A cross-origin frame is only allowed to redirect the page using `top` if the frame has {{glossary("Sticky activation")}}.
+If a top-navigation is blocked the browser may prompt for user permission to redirect, or it may simply report the error in the developer console.
+What this means is that you won't be able to load a cross-origin frame and immediately redirect to a new page — the user must first (or previously) have interacted with the frame or granted permission to redirect.
+
+A sandboxed frame will block all top-navigations unless the values [`allow-top-navigation`](#allow-top-navigation) or [`allow-top-navigation-by-user-activation`](#allow-top-navigation-by-user-activation) are set.
+Note that top-navigation permissions are inherited, so a nested frame will only be allowed to perform top-navigation if its parents are able to.
 
 ## Positioning and scaling
 
