@@ -48,8 +48,10 @@ const arrImages = [
 const objOutput = document.getElementById("output");
 let strHtml = "<ul>";
 
+let i = 0;
 for (const img of arrImages) {
   strHtml += `<li>image${i + 1}: height=${img.height}, width=${img.width}, style.height=${img.style.height}, style.width=${img.style.width}</li>`;
+  i++;
 }
 
 strHtml += "</ul>";
