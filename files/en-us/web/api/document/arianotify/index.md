@@ -43,7 +43,7 @@ The **`ariaNotify()`** method can be used to programmatically trigger a screen r
 
 Developers often work around the limitations of live regions using hidden DOM nodes with live regions set on them, which have their contents updated with the content to be announced. This is inefficient and error-prone, and `ariaNotify()` provides a way to avoid such issues.
 
-Some screen readers will read out multiple `ariaNotify()` announcments in order, but this cannot be guaranteed across all screen readers and platforms. Normally, only the most recent announcement is spoken. It is more reliable to combine multiple annoucements into one.
+Some screen readers will read out multiple `ariaNotify()` announcments in order, but this cannot be guaranteed across all screen readers and platforms. Normally, only the most recent announcement is spoken. It is more reliable to combine multiple announcements into one.
 
 For example, the following calls:
 
