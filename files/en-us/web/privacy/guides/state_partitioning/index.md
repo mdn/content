@@ -204,7 +204,7 @@ Network partitioning can be disabled with the `privacy.partition.network_state` 
 
 #### Disable Dynamic State Partitioning
 
-To disable dynamic storage partitioning for all sites you can use the `network.cookie.cookieBehavior` pref:
+To disable dynamic storage partitioning for all sites, you can use the `network.cookie.cookieBehavior` preference:
 
 | Value | Description                                        |
 | ----- | -------------------------------------------------- |
