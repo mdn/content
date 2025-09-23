@@ -32,7 +32,7 @@ The warning level allows you to be proactive and plan any tech debt, while not b
 
 The error level is an upper bound limit, where changes will have a negative and noticeable impact.
 
-In order to begin, you need to first measure the devices and connection speeds where your users are coming from (e.g., A \~$_200_ Android device over a 3G connection), using multiple [tools](/en-US/docs/Learn_web_development/Extensions/Performance/Resources). These time-based metrics will translate into file-size budgets.
+The first step is to measure the devices and connection speeds where your users are coming from (e.g., A \~$_200_ Android device over a 3G connection), using multiple [tools](/en-US/docs/Learn_web_development/Extensions/Performance/Resources). These time-based metrics will translate into file-size budgets.
 
 A default baseline to reduce bounce rate is to achieve [Time to Interactive under 5 seconds in 3G/4G, and under 2 seconds for subsequent loads](https://infrequently.org/2017/10/can-you-afford-it-real-world-web-performance-budgets/). However, based on the specific goals and content of your site, you might choose to focus on other metrics.
 

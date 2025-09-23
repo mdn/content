@@ -87,15 +87,11 @@ input[type="button"] {
 }
 ```
 
-### You might have to let go of CSS
+### Limit styling in legacy browsers
 
-One of the big issues with HTML forms in legacy browsers is styling them with CSS. By default, form control appearance is browser- and operating system-specific. For example, the [`<input type="color">`](/en-US/docs/Web/HTML/Reference/Elements/input/color) element can look different in different browsers (for example Safari, Chrome, and Firefox), and in the same browser on different operating systems. The color input type will often use a device's native color picker, but there is no guarantee of this.
+One of the big issues with HTML forms in legacy browsers is styling them with CSS. As covered elsewhere, you can declare {{cssxref('appearance', 'appearance: none;')}} to remove the default styles and build your own on top. However, legacy browsers are less likely than modern browsers to support the styling techniques covered earlier in the module. It might be better to just leave form controls unstyled in legacy browsers, if you need to support them. See the next section for advice on detecting support for specific input types.
 
-In addition, altering a CSS property value may alter some input types but not others. For example, if you declare `input { font-size: 2rem; }`, it will impact `number`, `date`, and `text`, but not `color` or `range`. If you alter a property, that may impact the appearance of the widget in unexpected ways. For example, `[value] { background-color: #cccccc; }` may have been used to target every {{HTMLElement("input")}} with a `value` attribute, but changing the background-color or border radius on a {{HTMLElement("meter")}} will lead to likely unexpected results that differ across browsers.
-
-As covered elsewhere, you can declare {{cssxref('appearance', 'appearance: none;')}} to remove the default styles and build your own on top with, but you need to make sure your new styles work in legacy browsers, if you need to support them. It might be better to just leave form controls unstyled in legacy browsers.
-
-If you must alter the default styles of your form widgets in legacy browsers, define a style guide to ensure consistency among all your form controls so user experience is not destroyed. You could also investigate some hard techniques such as [rebuilding widgets with JavaScript](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls). But in that case, do not hesitate to [charge your client for such foolishness](https://www.smashingmagazine.com/2011/11/but-the-client-wants-ie-6-support/).
+If you must alter the default styles of your form widgets in legacy browsers, define a style guide to ensure consistency among all your form controls so user experience is not destroyed. You could also investigate some hard techniques such as [rebuilding widgets with JavaScript](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls), but it might be more trouble than it's worth.
 
 ## Feature detection and polyfills
 
