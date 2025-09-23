@@ -283,7 +283,7 @@ The output is as follows:
 
 {{EmbedLiveSample("shopping-list", "100%", 500, , , , "aria-notify")}}
 
-Try activating a screen reader and then adding and removing some items. You should hear them announced by the screenreader.
+Try activating a screen reader and then adding and removing some items. You should hear them announced by the screen reader.
 
 ## Specifications
 
