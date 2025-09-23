@@ -13,8 +13,8 @@ The **`ariaNotify()`** method of the {{domxref("Element")}} interface specifies 
 ## Syntax
 
 ```js-nolint
-ariaNotify(annoucement)
-ariaNotify(annoucement, options)
+ariaNotify(announcement)
+ariaNotify(announcement, options)
 ```
 
 ### Parameters
