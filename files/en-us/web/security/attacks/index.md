@@ -19,6 +19,8 @@ This page links to pages explaining how some common attacks work, and how they c
   - : In a cross-site scripting (XSS) attack, a website accepts some input crafted by the attacker and mistakenly includes this input in the site's own pages in a way that makes the browser execute it as code. The malicious code can then do anything that the site's own front-end code could do.
 - [Manipulator in the Middle (MITM)](/en-US/docs/Web/Security/Attacks/MITM)
   - : In a Manipulator in the Middle (MITM) attack, the attacker inserts themselves between the user's browser and the server, and can see and potentially modify any of the traffic exchanged over HTTP.
+- [Phishing](/en-US/docs/Web/Security/Attacks/Phishing)
+  - : Phishing is a {{glossary("social engineering")}} attack in which the attacker steals a user's {{glossary("credential", "credentials")}} by tricking them into believing they are signing into the target site, when in reality they are interacting with a fake site controlled by the attacker.
 - [Server Side Request Forgery (SSRF)](/en-US/docs/Web/Security/Attacks/SSRF)
   - : Server‑Side Request Forgery (SSRF) is a vulnerability that allows an attacker to make HTTP (or other network) requests to arbitrary destinations. SSRF makes these requests originate from within a server itself, which typically has broader access than an external client.
 - [Subdomain takeover](/en-US/docs/Web/Security/Attacks/Subdomain_takeover)

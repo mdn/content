@@ -434,30 +434,24 @@ function updateFileList() {
     fileList.removeChild(fileList.firstChild);
   }
 
-  let curFiles = fileInput.files;
+  const curFiles = fileInput.files;
 
   if (!(curFiles.length === 0)) {
-    for (let i = 0; i < curFiles.length; i++) {
+    for (const file of curFiles) {
       const listItem = document.createElement("li");
-      listItem.textContent =
-        "File name: " +
-        curFiles[i].name +
-        "; file size " +
-        returnFileSize(curFiles[i].size) +
-        ".";
+      listItem.textContent = `File name: ${file.name}; file size: ${returnFileSize(file.size)}.`;
       fileList.appendChild(listItem);
     }
   }
 }
 
 function returnFileSize(number) {
-  if (number < 1024) {
-    return number + "bytes";
-  } else if (number >= 1024 && number < 1048576) {
-    return (number / 1024).toFixed(1) + "KB";
-  } else if (number >= 1048576) {
-    return (number / 1048576).toFixed(1) + "MB";
+  if (number < 1e3) {
+    return `${number} bytes`;
+  } else if (number >= 1e3 && number < 1e6) {
+    return `${(number / 1e3).toFixed(1)} KB`;
   }
+  return `${(number / 1e6).toFixed(1)} MB`;
 }
 ```
 
@@ -648,7 +642,7 @@ You can see the result of the above CSS styling in the live example below.
 ```
 
 ```css hidden live-sample___styled-file-picker
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+@import "https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap";
 
 body {
   font-family: "Josefin Sans", sans-serif;
@@ -666,7 +660,6 @@ input {
   display: block;
   font-family: inherit;
   font-size: 100%;
-  padding: 0;
   margin: 0;
   box-sizing: border-box;
   width: 100%;
@@ -681,20 +674,20 @@ input[type="file"] {
 }
 
 label[for="file"] {
-  box-shadow: 1px 1px 3px #ccc;
-  background: linear-gradient(to bottom, #eee, #ccc);
-  border: 1px solid rgb(169, 169, 169);
+  box-shadow: 1px 1px 3px #cccccc;
+  background: linear-gradient(to bottom, #eeeeee, #cccccc);
+  border: 1px solid darkgrey;
   border-radius: 5px;
   text-align: center;
   line-height: 1.5;
 }
 
 label[for="file"]:hover {
-  background: linear-gradient(to bottom, #fff, #ddd);
+  background: linear-gradient(to bottom, white, #dddddd);
 }
 
 label[for="file"]:active {
-  box-shadow: inset 1px 1px 3px #ccc;
+  box-shadow: inset 1px 1px 3px #cccccc;
 }
 
 button {
@@ -717,28 +710,21 @@ function updateFileList() {
   let curFiles = fileInput.files;
 
   if (!(curFiles.length === 0)) {
-    console.log("test");
-    for (let i = 0; i < curFiles.length; i++) {
+    for (const file of curFiles) {
       const listItem = document.createElement("li");
-      listItem.textContent =
-        "File name: " +
-        curFiles[i].name +
-        "; file size " +
-        returnFileSize(curFiles[i].size) +
-        ".";
+      listItem.textContent = `File name: ${file.name}; file size: ${returnFileSize(file.size)}.`;
       fileList.appendChild(listItem);
     }
   }
 }
 
 function returnFileSize(number) {
-  if (number < 1024) {
-    return number + "bytes";
-  } else if (number >= 1024 && number < 1048576) {
-    return (number / 1024).toFixed(1) + "KB";
-  } else if (number >= 1048576) {
-    return (number / 1048576).toFixed(1) + "MB";
+  if (number < 1e3) {
+    return `${number} bytes`;
+  } else if (number >= 1e3 && number < 1e6) {
+    return `${(number / 1e3).toFixed(1)} KB`;
   }
+  return `${(number / 1e6).toFixed(1)} MB`;
 }
 ```
 
