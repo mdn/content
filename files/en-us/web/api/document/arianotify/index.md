@@ -24,7 +24,7 @@ ariaNotify(annoucement, options)
 - `options` {{optional_inline}}
   - : An options object containing the following properties:
     - `priority`
-      - : An emumerated value specifying the priority of the annoucement. Possible values are:
+      - : An enumerated value specifying the priority of the announcement. Possible values are:
         - `normal`
           - : The announcement has normal priority. It will be spoken after any announcement that a screen reader is currently making.
         - `high`
