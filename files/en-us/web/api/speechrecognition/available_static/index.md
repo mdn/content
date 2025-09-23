@@ -33,25 +33,38 @@ available(options)
 
 ### Return value
 
-A {{domxref("Promise")}} that resolves with an emumerated value indicating the availability of the specified languages for speech recognition.
+A {{domxref("Promise")}} that resolves with an enumerated value indicating the availability of the specified languages for speech recognition.
 
-Possible values are:
+Possible values are as follows.
 
 - `available`
   - : Indicates that support for all the specified languages is available.
     - If `processLocally` is set to `true`, `available` means that speech recognition is available for those languages on-device (the required language packs have been downloaded and installed on the user's computer).
     - If `processLocally` is set to `false`, `available` means that speech recognition is available for those languages either on-device or remotely.
-- `downloadable`
-  - : Indicates that support for the specified languages is available on-device, but the relevant language packs have not yet been downloaded.
 - `downloading`
-  - : Indicates that support for the specified languages is available on-device, and the relevant language packs are in the process of being downloaded.
+  - : Indicates that support for the specified languages is available on-device, and the relevant language pack for at least one language is in the process of being downloaded. Only relevant when `processLocally` is `true`.
+- `downloadable`
+  - : Indicates that support for the specified languages is available on-device, but the relevant language pack for at least one language has not yet been downloaded. Only relevant when `processLocally` is `true`.
 - `unavailable`
   - : Indicates that support for at least one of the specified languages is not available.
     - If `processLocally` is set to `true`, `unavailable` means that on-device speech recognition is not available for at least one of the specified languages.
     - If `processLocally` is set to `false`, `unavailable` means that speech recognition is not available for at least one of the specified languages either on-device or remotely.
 
-> [!NOTE]
-> The `downloadable` and `downloading` values are primarily relevant when `processLocally` is set to `true`. If `processLocally` is set to `false` and the user agent prefers remote processing, `available()` will always return `available` or `unavailable`.
+#### Final return value for multiple languages with different statuses
+
+Only a single status value is returned, even if multiple languages are specified in the `langs` array. If different specified languages have different availability statuses, the final returned status will be the "furthest away" status to `available` of any of the languages, in the order shown in the following lists.
+
+If `processLocally` is `false`:
+
+- If all languages are `available`, then return `available`.
+- Otherwise, return `unavailable`.
+
+If `processLocally` is `true`:
+
+- If all languages are `available`, return `available`.
+- If at least one language is `downloading`, return `downloading`.
+- If at least one language is `downloadable`, return `downloadable`.
+- If at least one language is `unavailable`, return `unavailable`.
 
 ### Exceptions
 
