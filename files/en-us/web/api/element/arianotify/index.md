@@ -75,7 +75,7 @@ However, `aria-live` announcements will take priority over `ariaNotify()` announ
 
 ### Language selection
 
-Screen readers choose an appropriate voice with which to read `ariaNotify()` annoucements (in terms of accent, pronounciation, etc.) based on the language specified in the element's [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) attribute or, if the element does not have a specified `lang` attribute, the `lang` attribute set on its nearest ancestor. If there is no `lang` attribute specified in the HTML, the user agent's default language is used.
+Screen readers choose an appropriate voice with which to read `ariaNotify()` announcements (in terms of accent, pronunciation, etc.) based on the language specified in the element's [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) attribute or, if the element does not have a specified `lang` attribute, the `lang` attribute set on its nearest ancestor. If there is no `lang` attribute specified in the HTML, the user agent's default language is used.
 
 ### Permissions policy integration
 
