@@ -253,7 +253,7 @@ function addItemToList(item, price) {
 }
 ```
 
-our final code block add a `submit` event listener to the `<form>`. Inside the handler function, we first call {{domxref("Event.preventDefault", "preventDefault()")}} on the event object to stop the form submitting. We then call `addItemToList()` to display the new item and its price in the list, add the price to the `total` variable, call the `updateTotal()` to update the displayed total, then call `ariaNotify()` to announce the item that was added, and what the new total is. Finally, we clear out the current input field values ready for the next item to be added.
+Our final code block add a `submit` event listener to the `<form>`. Inside the handler function, we first call {{domxref("Event.preventDefault", "preventDefault()")}} on the event object to stop the form submitting. We then call `addItemToList()` to display the new item and its price in the list, add the price to the `total` variable, call the `updateTotal()` to update the displayed total, then call `ariaNotify()` to announce the item that was added, and what the new total is. Finally, we clear out the current input field values ready for the next item to be added.
 
 ```js live-sample___shopping-list
 form.addEventListener("submit", (e) => {
