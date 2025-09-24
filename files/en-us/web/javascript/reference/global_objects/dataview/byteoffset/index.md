@@ -23,7 +23,7 @@ console.log(view.byteOffset);
 
 ## Description
 
-The `byteOffset` property is an accessor property whose set accessor function is `undefined`, meaning that you can only read this property. The value is established when an `DataView` is constructed and cannot be changed.
+The `byteOffset` property is an accessor property whose set accessor function is `undefined`, meaning that you can only read this property. The value is established when the `DataView` is constructed and cannot be changed. However, the `byteOffset` becomes 0 if the underlying buffer is resized such that the viewed range is no longer valid.
 
 ## Examples
 
@@ -36,6 +36,12 @@ dataview.byteOffset; // 0 (no offset specified)
 
 const dataview2 = new DataView(buffer, 3);
 dataview2.byteOffset; // 3 (as specified when constructing the DataView)
+
+const buffer2 = new ArrayBuffer(16, { maxByteLength: 32 });
+const dataviewLengthTracking = new DataView(buffer2, 4);
+dataviewLengthTracking.byteOffset; // 4
+buffer2.resize(3);
+dataviewLengthTracking.byteOffset; // 0 (viewed range is no longer valid)
 ```
 
 ## Specifications
@@ -48,6 +54,7 @@ dataview2.byteOffset; // 3 (as specified when constructing the DataView)
 
 ## See also
 
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("DataView")}}
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("SharedArrayBuffer")}}
