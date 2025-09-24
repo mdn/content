@@ -158,13 +158,14 @@ Add a `required` attribute to your input, as shown below.
 
 ```html live-sample___the-required-attribute
 <form>
-  <label for="choose">Would you prefer a banana or cherry? (required)</label>
+  <label for="choose">Would you prefer a banana or cherry? (*)</label>
   <input id="choose" name="i-like" required />
   <button>Submit</button>
 </form>
 ```
 
-We added "(required)" to the {{htmlelement("label")}} to inform the user that the {{htmlelement("input")}} is required. Indicating to the user when form fields are required is not only good user experience, it is required by WCAG [accessibility](/en-US/docs/Learn_web_development/Core/Accessibility) guidelines.
+> [!NOTE]
+> A common practice is to put an asterisk (or some other marking) after the labels of required form controls, so they stand out to sighted users. Indicating to the user when form fields are required is not only good user experience, it is required by WCAG [accessibility](/en-US/docs/Learn_web_development/Core/Accessibility) guidelines.
 
 We include CSS styles that are applied based on whether the element is required, valid, and invalid:
 
@@ -219,7 +220,7 @@ Update your HTML to add a [`pattern`](/en-US/docs/Web/HTML/Reference/Attributes/
 
 ```html live-sample___validate-regular-expression
 <form>
-  <label for="choose">Would you prefer a banana or a cherry?</label>
+  <label for="choose">Would you prefer a banana or a cherry? (*)</label>
   <input id="choose" name="i-like" required pattern="[Bb]anana|[Cc]herry" />
   <button>Submit</button>
 </form>
@@ -278,7 +279,7 @@ Now delete the contents of the `<body>` element, and replace it with the followi
 ```html live-sample___constraining-values
 <form>
   <div>
-    <label for="choose">Would you prefer a banana or a cherry?</label>
+    <label for="choose">Would you prefer a banana or a cherry? (*)</label>
     <input
       type="text"
       id="choose"
@@ -332,27 +333,20 @@ First, some HTML:
 
 ```html
 <form>
+  <p>Please complete all required (*) fields.</p>
   <fieldset>
-    <legend>
-      Do you have a driver's license?<span aria-label="required">*</span>
-    </legend>
-    <input type="radio" required name="driver" id="r1" value="yes" /><label
-      for="r1"
-      >Yes</label
-    >
-    <input type="radio" required name="driver" id="r2" value="no" /><label
-      for="r2"
-      >No</label
-    >
+    <legend>Do you have a driver's license? (*)</legend>
+    <input type="radio" required name="driver" id="r1" value="yes" />
+    <label for="r1">Yes</label>
+    <input type="radio" required name="driver" id="r2" value="no" />
+    <label for="r2">No</label>
   </fieldset>
   <p>
     <label for="n1">How old are you?</label>
     <input type="number" min="12" max="120" step="1" id="n1" name="age" />
   </p>
   <p>
-    <label for="t1"
-      >What's your favorite fruit?<span aria-label="required">*</span></label
-    >
+    <label for="t1">What's your favorite fruit? (*)</label>
     <input
       type="text"
       id="t1"
@@ -603,7 +597,7 @@ First, the HTML. Again, feel free to build this along with us:
 <form novalidate>
   <p>
     <label for="mail">
-      <span>Please enter an email address:</span>
+      <span>Please enter an email address (*):</span>
       <input type="email" id="mail" name="mail" required minlength="8" />
       <span class="error" aria-live="polite"></span>
     </label>
@@ -735,7 +729,7 @@ Here is the live result (press the **Play** button to run the example in MDN Pla
 <form novalidate>
   <p>
     <label for="mail">
-      <span>Please enter an email address:</span>
+      <span>Please enter an email address (*):</span>
       <input type="email" id="mail" name="mail" required minlength="8" />
       <span class="error" aria-live="polite"></span>
     </label>
