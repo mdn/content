@@ -122,8 +122,8 @@ In addition to the basic HTML global attributes, the following global attributes
 
 ## List of global event handler attributes
 
-- [`onafterscriptexecute`](/en-US/docs/Web/API/Document/afterscriptexecute_event) {{deprecated_inline}} {{non-standard_inline}}
-  - : Fired when a static {{HTMLElement("script")}} element finishes executing its script
+- [`onabort`](/en-US/docs/Web/API/HTMLMediaElement/abort_event) 
+  - : Fired when the resource was not fully loaded, but not as the result of an error.
 - [`onanimationcancel`](/en-US/docs/Web/API/Element/animationcancel_event)
   - : Fired when an animation unexpectedly aborts.
 - [`onanimationend`](/en-US/docs/Web/API/Element/animationend_event)
@@ -138,12 +138,8 @@ In addition to the basic HTML global attributes, the following global attributes
   - : Fired when the value of an input element is about to be modified.
 - [`onbeforematch`](/en-US/docs/Web/API/Element/beforematch_event)
   - : Fires on an element that is in the [hidden until found](/en-US/docs/Web/HTML/Reference/Global_attributes/hidden) state, when the browser is about to reveal its content because the user has found the content through the "find in page" feature or through fragment navigation.
-- [`onbeforescriptexecute`](/en-US/docs/Web/API/Document/beforescriptexecute_event) {{deprecated_inline}} {{non-standard_inline}}
-  - : Fired when a static {{HTMLElement("script")}} is about to start executing.
 - [`onbeforetoggle`](/en-US/docs/Web/API/HTMLElement/beforetoggle_event)
   - : Fired when the element is a [popover](/en-US/docs/Web/API/Popover_API) or {{HTMLElement("dialog")}}, before it is hidden or shown.
-- [`onbeforexrselect`](/en-US/docs/Web/API/Element/beforexrselect_event) {{Experimental_Inline}}
-  - : Fired before WebXR select events ([`select`](/en-US/docs/Web/API/XRSession/select_event), [`selectstart`](/en-US/docs/Web/API/XRSession/selectstart_event), [`selectend`](/en-US/docs/Web/API/XRSession/selectend_event)) are dispatched.
 - [`onblur`](/en-US/docs/Web/API/Element/blur_event)
   - : Fired when an element has lost focus.
 - [`oncancel`](/en-US/docs/Web/API/HTMLInputElement/cancel_event)
@@ -168,12 +164,6 @@ In addition to the basic HTML global attributes, the following global attributes
   - : Fired when the dialog is closed, whether with the escape key, the `HTMLDialogElement.close()` method, or via submitting a form within the dialog with [`method="dialog"`](/en-US/docs/Web/HTML/Reference/Elements/form#method).
 - [`oncommand`](/en-US/docs/Web/API/HTMLElement/command_event)
   - : Fires on an element that is controlled via a [`button`](/en-US/docs/Web/API/HTMLButtonElement) with valid [`commandForElement`](/en-US/docs/Web/API/HTMLButtonElement/commandForElement) and [`command`](/en-US/docs/Web/API/HTMLButtonElement/command) values, whenever the button is interacted with (e.g., it is clicked).
-- [`oncompositionend`](/en-US/docs/Web/API/Element/compositionend_event)
-  - : Fired when a text composition system such as an [input method editor](/en-US/docs/Glossary/Input_method_editor) completes or cancels the current composition session.
-- [`oncompositionstart`](/en-US/docs/Web/API/Element/compositionstart_event)
-  - : Fired when a text composition system such as an [input method editor](/en-US/docs/Glossary/Input_method_editor) starts a new composition session.
-- [`oncompositionupdate`](/en-US/docs/Web/API/Element/compositionupdate_event)
-  - : Fired when a new character is received in the context of a text composition session controlled by a text composition system such as an [input method editor](/en-US/docs/Glossary/Input_method_editor).
 - [`oncontentvisibilityautostatechange`](/en-US/docs/Web/API/Element/contentvisibilityautostatechange_event)
   - : Fires on any element with [`content-visibility: auto`](/en-US/docs/Web/CSS/content-visibility) set on it when it starts or stops being [relevant to the user](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment#relevant_to_the_user) and [skipping its contents](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment#skips_its_contents).
 - [`oncontextlost`](/en-US/docs/Web/API/HTMLCanvasElement/contextlost_event)
@@ -360,6 +350,8 @@ In addition to the basic HTML global attributes, the following global attributes
   - : Fired when some text has been selected.
 - [`onselect`](/en-US/docs/Web/API/HTMLTextAreaElement/select_event)
   - : Fires when some text has been selected.
+- [`onselectionchange`](/en-US/docs/Web/API/HTMLInputElement/selectionchange_event)
+  - : Fires when the text selection in an {{HTMLElement("input")}} element has been changed.
 - [`onselectstart`](/en-US/docs/Web/API/Node/selectstart_event)
   - : Fires when the user starts a new selection in this node.
 - [`onslotchange`](/en-US/docs/Web/API/HTMLSlotElement/slotchange_event)
