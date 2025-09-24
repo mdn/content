@@ -22,7 +22,7 @@ The most common use for accessing a `VideoTrack` object is to toggle its {{domxr
 - {{domxref("VideoTrack.label", "label")}} {{ReadOnlyInline}}
   - : A string providing a human-readable label for the track. For example, a track whose `kind` is `"sign"` might have a `label` of `"A sign-language interpretation"`. This string is empty if no label is provided.
 - {{domxref("VideoTrack.language", "language")}} {{ReadOnlyInline}}
-  - : A string specifying the video track's primary language, or an empty string if unknown. The language is specified as a BCP 47 ({{RFC(5646)}}) language code, such as `"en-US"` or `"pt-BR"`.
+  - : A string specifying the video track's primary language, or an empty string if unknown. The language is specified as a {{glossary("BCP 47 language tag")}} such as `"en-US"` or `"pt-BR"`.
 - {{domxref("VideoTrack.sourceBuffer", "sourceBuffer")}} {{ReadOnlyInline}}
   - : The {{domxref("SourceBuffer")}} that created the track. Returns null if the track was not created by a {{domxref("SourceBuffer")}} or the {{domxref("SourceBuffer")}} has been removed from the {{domxref("MediaSource.sourceBuffers")}} attribute of its parent media source.
 
