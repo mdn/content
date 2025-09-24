@@ -23,19 +23,19 @@ The first step is to extract a minimal test case that reproduces the bug. It sho
 <input id="email" name="email" type="email" autocomplete="email" />
 ```
 
-You can either save this HTML code locally and open it using the `file://` protocol, or you can use an online service like [JSFiddle](https://jsfiddle.net/) or [CodePen](https://codepen.io/) to create a live demo. Now, the simplest way to test if it's a browser bug is to open the test case in [multiple browsers](/en-US/docs/Learn_web_development/Extensions/Testing/Introduction). Preferably use three browsers (Chromium-based, Firefox, and Safari), so if the other two behave the same way (and align with the docs), you can be pretty sure that the third one has a bug.
+You can either save this HTML code locally and [serve it locally](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server), or you can use an online service like [JSFiddle](https://jsfiddle.net/) or [CodePen](https://codepen.io/) to create a live demo. Now, the simplest way to test if it's a browser bug is to open the test case in [multiple browsers](/en-US/docs/Learn_web_development/Extensions/Testing/Introduction). This way, if there's a divergence, it's more likely to be a browser bug.
 
 > [!NOTE]
 > There are other practices related to isolating reproduction, like testing in a private window, disabling extensions, clearing caches, etc. You should also try those before reporting the bug.
 
-Of course, even if all three browsers behave the same way, it could still be a bug in all of them; or, two browsers may have the same bug, while the third one is correct. To be sure, you need to read the specification. Documentation may be out of date or incorrect, but the specification is the source of truth. On every MDN reference page, you can find links to the relevant specifications in the "Specifications" section. Sometimes specifications are hard to read, but try your best—if it turns out that all browsers and the spec are consistent but MDN is wrong, consider [contributing](/en-US/docs/MDN/Community/Getting_started)!
-
-Let's say you found a divergence between the browsers and the spec. This isn't necessarily a bug. Browsers may implement something that's not merged into the spec yet, or they may have not yet implemented a new part of the spec. At this point, you need to check more sources to see what the implementation story is. Here are some places to look:
+Start by trusting the documentation you read and investigating the browser(s) whose behavior doesn't conform to the docs. Not all unexpected behaviors are bugs. Browsers may implement something that's not merged into the spec yet (and not documented yet), or they may have not yet implemented a new part of the spec. At this point, you need to check more sources to see what the implementation story is. Here are some places to look:
 
 - MDN's browser compatibility table. In the "Browser compatibility" section, you may find information about which browsers support a feature and to what extent. This may indicate that a feature is not implemented in your target browser, or that it's only partially implemented (i.e., it has known bugs or limitations).
 - The specification repo. [WHATWG](https://github.com/whatwg) (who standardize DOM, HTML, fetch, and more), [CSSWG](https://github.com/w3c/csswg-drafts) (who standardize CSS), [TC39](https://github.com/tc39) (who standardize JavaScript), and most other standard bodies work publicly on GitHub, so you can check if the spec was recently changed, or if there's an open issue about the feature you're testing.
 - Community forums. The [MDN community](/en-US/docs/MDN/Community/Communication_channels) is a great place to start, or you can find other web-related forums, where you can ask about whether browsers haven't implemented something yet, or if there's a known bug.
 - The issue tracker for the browser you're testing. If you find something related, that means the bug is real, but there's nothing you need to do in the end. We'll get to that next.
+
+Of course, even if all browsers behave the same way, it could still be a bug in all of them; or, maybe only a single browser is implementing the intended behavior. Documentation may be out of date or incorrect. To be absolutely sure, you should regard the specification as the source of truth (except for the rare case of browsers implementing things ahead of the spec). On every MDN reference page, you can find links to the relevant specifications in the "Specifications" section. Sometimes specifications are hard to read, but try your best—if it turns out that all browsers and the spec are consistent but MDN is wrong, consider [contributing](/en-US/docs/MDN/Community/Getting_started)!
 
 ## Browser bug trackers
 
@@ -48,11 +48,13 @@ Each browser has its own bug tracker, where you can search for existing bugs and
 | Mozilla Firefox | [Mozilla Bugzilla](https://bugzilla.mozilla.org/)     |
 | Opera           | [Opera Bug Wizard](https://bugs.opera.com/wizard/)    |
 
-Remember to search for existing bugs before filing a new one. If you find an existing bug that matches your issue, you can add a comment with your findings (for example, if you found a workaround, or if you have more information about the bug); but don't add comments that don't really add value. If you can't find an existing bug, you can file a new one—someone would tell you if it's a duplicate. When filing a new bug, make sure to include your minimal test case, and any other information that the report form asks for, like browser version, expected and actual results, etc. Some bug trackers may also ask you to select a component or area for the bug; just do your best. Someone will re-assign it if needed.
+Search for existing bug reports before filing a new one. If you find an existing bug report that matches your issue, you can add a comment with your findings (for example, if you found a workaround, or if you have more information about the bug). However, don't add comments such as "I found this bug too", because they don't really add any value. If you can't find an existing bug, you can file a new one—someone will tell you if it's a duplicate.
+
+When filing a new bug, make sure to include your minimal test case, and any other information that the report form asks for, like browser version, expected and actual results, etc. Some bug trackers may also ask you to select a component or area for the bug; just do your best. Someone will re-assign it if needed.
 
 ## Filing bugs for assistive technologies
 
-If the bug is related to a non-browser software, such as a screen reader, you need to file the bug with the relevant software vendor. The table below lists some of the most popular assistive technologies and where to file bugs for them.
+If the bug is related to non-browser software, such as a screen reader, you need to file the bug with the relevant software vendor. The table below lists some of the most popular assistive technologies and where to file bugs for them.
 
 | Software                                                                             | Where to file                                                                          |
 | ------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------- |
