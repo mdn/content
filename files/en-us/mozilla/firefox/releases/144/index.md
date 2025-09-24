@@ -24,7 +24,18 @@ Firefox 144 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### CSS -->
+### CSS
+
+- The [CSS view transition additions](en-US/docs/Web/API/View_Transition_API#css_additions) for [SPAs (single-page applications)](/en-US/docs/Glossary/SPA) are now supported, this provides a way to style the parts of a view transition animation. ([Firefox bug 1985809](https://bugzil.la/1985809)). These include:
+  - The CSS {{CSSXRef(":active-view-transition")}} pseudo-class.
+  - The CSS {{CSSXRef("view-transition-class")}} property.
+  - The CSS {{CSSXRef("view-transition-name")}} property.
+  - The CSS {{CSSXRef("::view-transition")}} pseudo-element.
+  - The CSS {{CSSXRef("::view-transition-group()")}} pseudo-element.
+  - The CSS {{CSSXRef("::view-transition-image-pair()")}} pseudo-element.
+  - The CSS {{CSSXRef("::view-transition-new()")}} pseudo-element.
+  - The CSS {{CSSXRef("::view-transition-old()")}} pseudo-element.
+
 
 <!-- No notable changes. -->
 
@@ -69,6 +80,10 @@ Firefox 144 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - The {{domxref("MediaDevices/getUserMedia","getUserMedia()")}} and {{domxref("MediaDevices/getDisplayMedia","getDisplayMedia()")}} methods of the {{domxref("MediaDevices")}} interface now support the [`resizeMode`](/en-US/docs/Web/API/MediaTrackConstraints#resizemode) constraint.
   This constraint allows developers to request video that matches other constraints, such as resolution and frame rate, even if the requested constraints are not supported by the underlying hardware.
   The browser may then crop, downscale, or reduce the frame rate of the video captured from a camera, or downscale (but not crop) the video captured from a screen or window. ([Firefox bug 1286945](https://bugzil.la/1286945)).
+
+#### View Transition API
+
+The [View Transition API](/en-US/docs/Web/API/View_Transition_API) is now supported for [SPAs (single-page applications)](/en-US/docs/Glossary/SPA). This provides a mechanism for easily creating animated transitions between different website views. ([Firefox bug 1985809](https://bugzil.la/1985809)).
 
 <!-- #### Removals -->
 
