@@ -373,7 +373,7 @@ To get started with this example, follow these steps:
 1. Create a new directory on your hard drive called `custom-video-player`.
 2. Create a new file inside it called `index.html` and fill it with the following content:
    ```html
-   <!DOCTYPE html>
+   <!doctype html>
    <html lang="en-gb">
      <head>
        <meta charset="utf-8" />

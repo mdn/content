@@ -111,7 +111,7 @@ Let's start with a basic example: an input that allows you to choose whether you
 This example involves a text {{HTMLElement("input")}} with an associated {{htmlelement("label")}} and a submit {{htmlelement("button")}}.
 
 ```html live-sample___simple-start-file
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -533,7 +533,7 @@ form {
 ```js hidden live-sample___custom-error-message
 const email = document.getElementById("mail");
 
-email.addEventListener("input", function (event) {
+email.addEventListener("input", (event) => {
   if (email.validity.typeMismatch) {
     email.setCustomValidity("I am expecting an email address!");
   } else {
@@ -761,7 +761,7 @@ input[type="email"] {
   appearance: none;
 
   width: 100%;
-  border: 1px solid #333;
+  border: 1px solid #333333;
   margin: 0;
 
   font-family: inherit;
@@ -772,8 +772,8 @@ input[type="email"] {
 
 /* This is our style for the invalid fields */
 input:invalid {
-  border-color: #900;
-  background-color: #fdd;
+  border-color: #990000;
+  background-color: #ffdddd;
 }
 
 input:focus:invalid {
@@ -787,7 +787,7 @@ input:focus:invalid {
 
   font-size: 80%;
   color: white;
-  background-color: #900;
+  background-color: #990000;
   border-radius: 0 0 5px 5px;
 
   box-sizing: border-box;
@@ -806,7 +806,7 @@ const form = document.getElementsByTagName("form")[0];
 const email = document.getElementById("mail");
 const emailError = document.querySelector("#mail + span.error");
 
-email.addEventListener("input", function (event) {
+email.addEventListener("input", (event) => {
   // Each time the user types something, we check if the
   // form fields are valid.
 
@@ -821,7 +821,7 @@ email.addEventListener("input", function (event) {
   }
 });
 
-form.addEventListener("submit", function (event) {
+form.addEventListener("submit", (event) => {
   // if the form contains valid data, we let it submit
 
   if (!email.validity.valid) {

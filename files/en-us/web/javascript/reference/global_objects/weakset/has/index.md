@@ -7,10 +7,9 @@ browser-compat: javascript.builtins.WeakSet.has
 sidebar: jsref
 ---
 
-The **`has()`** method of {{jsxref("WeakSet")}} instances returns a boolean indicating whether an
-object exists in this `WeakSet` or not.
+The **`has()`** method of {{jsxref("WeakSet")}} instances returns a boolean indicating whether the specified value exists in this `WeakSet` or not.
 
-{{InteractiveExample("JavaScript Demo: WeakSet.Prototype.has()")}}
+{{InteractiveExample("JavaScript Demo: WeakSet.prototype.has()")}}
 
 ```js interactive-example
 const weakset = new WeakSet();
@@ -35,15 +34,15 @@ has(value)
 ### Parameters
 
 - `value`
-  - : The value to test for presence in the `WeakSet`.
+  - : The value to test for presence in the `WeakSet` object. Objects are compared by [reference](/en-US/docs/Glossary/Object_reference), not by value.
 
 ### Return value
 
-Returns `true` if an element with the specified value exists in the `WeakSet` object; otherwise `false`. Always returns `false` if `value` is not an object or a [non-registered symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry).
+Returns `true` if the specified value exists in the `WeakSet` object; otherwise `false`. Always returns `false` if `value` is not an object or a [non-registered symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry).
 
 ## Examples
 
-### Using the `has()` method
+### Using has()
 
 ```js
 const ws = new WeakSet();

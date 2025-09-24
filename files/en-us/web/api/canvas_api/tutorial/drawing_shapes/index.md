@@ -36,23 +36,17 @@ Below is the `draw()` function from the previous page, but now it is making use 
 ### Rectangular shape example
 
 ```html hidden
-<html lang="en">
-  <body>
-    <canvas id="canvas" width="150" height="150"></canvas>
-  </body>
-</html>
+<canvas id="canvas" width="150" height="150"></canvas>
 ```
 
 ```js
 function draw() {
   const canvas = document.getElementById("canvas");
-  if (canvas.getContext) {
-    const ctx = canvas.getContext("2d");
+  const ctx = canvas.getContext("2d");
 
-    ctx.fillRect(25, 25, 100, 100);
-    ctx.clearRect(45, 45, 60, 60);
-    ctx.strokeRect(50, 50, 50, 50);
-  }
+  ctx.fillRect(25, 25, 100, 100);
+  ctx.clearRect(45, 45, 60, 60);
+  ctx.strokeRect(50, 50, 50, 50);
 }
 ```
 
@@ -64,11 +58,162 @@ This example's output is shown below.
 
 {{EmbedLiveSample("Rectangular_shape_example", "", "160")}}
 
-The `fillRect()` function draws a large black square 100 pixels on each side. The `clearRect()` function then erases a 60x60 pixel square from the center, and then `strokeRect()` is called to create a rectangular outline 50x50 pixels within the cleared square.
+The `fillRect()` function draws a large black square 100 pixels on each side. The `clearRect()` function then erases a 60x60 pixel square from the center, and then `strokeRect()` is called to create a rectangular outline 50x50 pixels within the cleared square (_conceptually_ 50x50; in reality it's 52x52, as the next section will explain).
 
 In upcoming pages we'll see two alternative methods for `clearRect()`, and we'll also see how to change the color and stroke style of the rendered shapes.
 
 Unlike the path functions we'll see in the next section, all three rectangle functions draw immediately to the canvas.
+
+## Seeing blurry edges?
+
+In the rectangle example above, and in all the examples to come, you may notice that the shapes' edges may appear blurrier than the equivalent shapes drawn with SVG or CSS. This is not because the canvas API is incapable of drawing sharp edges, but rather because of the way the canvas grid maps to the actual pixels on the screen, and also, in certain cases, because of how the browser scales the canvas. If the above example is not apparent enough, let's enlarge the canvas using CSS:
+
+```html live-sample___seeing_blurry_edges live-sample___seeing_blurry_edges_2 live-sample___seeing_blurry_edges_3
+<canvas id="canvas" width="15" height="15"></canvas>
+```
+
+```css live-sample___seeing_blurry_edges live-sample___seeing_blurry_edges_2 live-sample___seeing_blurry_edges_3
+#canvas {
+  width: 300px;
+  height: 300px;
+}
+```
+
+```js live-sample___seeing_blurry_edges live-sample___seeing_blurry_edges_2
+function draw() {
+  const canvas = document.getElementById("canvas");
+  const ctx = canvas.getContext("2d");
+  ctx.strokeRect(2, 2, 10, 10);
+  ctx.fillRect(7, 7, 1, 1);
+}
+```
+
+```js hidden live-sample___seeing_blurry_edges live-sample___seeing_blurry_edges_2 live-sample___seeing_blurry_edges_3
+draw();
+```
+
+{{EmbedLiveSample("Seeing blurry edges", "", "350")}}
+
+In this example, we create our canvas really small (15x15), but then use CSS to scale it up to 300x300 pixels. As a result, each canvas pixel is now represented by a 20x20 block of screen pixels. We draw a stroked rectangle from (2,2) to (12,12) and a filled rectangle from (7,7) to (8,8). It appears _really_ blurry. This is because by default, when the browser scales raster images, it uses a smoothing algorithm to interpolate the extra pixels. This is great for photographs or canvas graphics with curly edges, but not so great for straight-edged shapes. To fix this, we can set {{cssxref("image-rendering")}} to `pixelated`:
+
+```css live-sample___seeing_blurry_edges_2 live-sample___seeing_blurry_edges_3
+#canvas {
+  image-rendering: pixelated;
+}
+```
+
+{{EmbedLiveSample("Seeing blurry edges 2", "", "350")}}
+
+Now, when the browser scales the canvas, it preserves the pixelation of the original as much as possible.
+
+> [!NOTE]
+> `image-rendering: pixelated` is not without its problems as a crisp-edge-preservation technique. When CSS pixels don't align with device pixels (if the {{domxref("Window/devicePixelRatio", "devicePixelRatio")}} is not an integer), certain pixels may be drawn larger than others, resulting in a non-uniform appearance. This is not an easy problem to solve, however, because it is impossible to fill device pixels precisely when the CSS pixels cannot accurately map to them.
+
+But now another issue becomes apparent, one that you can actually also observe in the original rectangle example: the stroked rectangle is not only 2 pixels wide instead of 1, but also appears gray rather than the default black. This is because of how the coordinates are interpreted as shape boundaries.
+
+If you look at the [grid](#the_grid) diagram above again, you can see that coordinates like `2` or `12` do not identify a pixel, but rather the edge between two pixels. In the images below, the grid represents the canvas coordinate grid. The squares between grid lines are actual on-screen pixels. In the first grid image below, a rectangle from (2,1) to (5,5) is filled. The entire area between them (light red) falls on pixel boundaries, so the resulting filled rectangle will have crisp edges.
+
+![Three coordinate grids. The grid lines are actual pixels on the screen. The top left corner of each grid is labeled (0,0). In the first grid, a rectangle from (2,1) to (5,5) is filled in light-red color. In the second grid, (3,1) to (3,5) is joined with a 1-pixel thick royal blue line. The royal-blue line is centered on a grid line, extends from 2.5 to 3.5 on the x access, halfway into the pixels on either side of the graph line, with a light blue background on either side extending from 2 to 4 on the x-access. To avoid the light blue blur extension of the line in the second coordinate grid, the path in, the third coordinate grid is a royal-blue from line (3.5,1) to (3.5,5). The 1 pixel line width ends up completely and precisely filling a single pixel vertical line.](canvas-grid.png)
+
+If you consider a path from (3,1) to (3,5) with a line thickness of `1.0`, you end up with the situation in the second image. The actual area to be filled (dark blue) only extends halfway into the pixels on either side of the path. An approximation of this has to be rendered, which means that those pixels being only partially shaded, and results in the entire area (the light blue and dark blue) being filled in with a color only half as dark as the actual stroke color. This is what happens with the `1.0` width line in the `strokeRect()` call in the rectangle example above.
+
+To fix this, you have to be very precise in your path creation. Knowing that a `1.0` width line will extend half a unit to either side of the path, creating the path from _centers_ of pixels results in the situation in the third image—the `1.0` line width ends up completely and precisely filling a single pixel vertical line.
+
+> [!NOTE]
+> Be aware that in our vertical line example, the Y position still referenced an integer grid line position—if it hadn't, we would see pixels with half coverage at the endpoints.
+
+So this is why we said earlier that the `strokeRect(50, 50, 50, 50)` call in the rectangle example was _conceptually_ 50x50, but in reality it is 52x52. The actual filled region for the outline starts at (49.5, 49.5) and ends at (100.5, 100.5), and because of the partially filled pixels, the actually filled area is from (49,49) to (101,101), which is 52x52, and the edges are 2-pixel wide. To get a solid 1-pixel wide outline that is exactly 50x50, you would need to _shrink_ the rectangle by the thickness of the outline (1px), and move it by half the thickness (0.5px):
+
+```js live-sample___seeing_blurry_edges_3
+function draw() {
+  const canvas = document.getElementById("canvas");
+  const ctx = canvas.getContext("2d");
+  ctx.strokeRect(2.5, 2.5, 9, 9);
+  ctx.fillRect(7, 7, 1, 1);
+}
+```
+
+{{EmbedLiveSample("Seeing blurry edges 3", "", "350")}}
+
+For even-width lines, each half ends up being an integer amount of pixels, so you want a path that is between pixels (that is, (3,1) to (3,5)), instead of down the middle of pixels.
+
+While slightly painful when initially working with scalable 2D graphics, paying attention to the pixel grid and the position of paths ensures that your drawings will look correct regardless of scaling or any other transformations involved. A 1.0-width vertical line drawn at the correct position will become a crisp 2-pixel line when scaled up by 2, and will appear at the correct position.
+
+This phenomenon of partially filled pixels also extends to shapes that don't align to the pixel grid. For example, consider a rotated rectangle (you'll learn about drawing it in the next section). To see what it's like with and without `image-rendering: pixelated`, we have two canvases side by side, and a third one drawn at full scale, with grid lines:
+
+```html hidden live-sample___seeing_blurry_edges_4
+<canvas id="canvas1" width="12" height="12"></canvas>
+<canvas id="canvas2" width="12" height="12"></canvas>
+<canvas id="canvas3" width="240" height="240"></canvas>
+```
+
+```css hidden live-sample___seeing_blurry_edges_4
+html,
+body {
+  width: 800px;
+  overflow-x: scroll;
+}
+
+@media (width < 500px) {
+  html,
+  body {
+    width: 300px;
+  }
+}
+
+#canvas1,
+#canvas2 {
+  width: 240px;
+  height: 240px;
+}
+#canvas2 {
+  image-rendering: pixelated;
+}
+```
+
+```js live-sample___seeing_blurry_edges_4
+function draw(canvasId) {
+  const canvas = document.getElementById(canvasId);
+  const ctx = canvas.getContext("2d");
+  ctx.beginPath();
+  ctx.moveTo(3, 2);
+  ctx.lineTo(9, 4.5);
+  ctx.lineTo(6.5, 10.5);
+  ctx.lineTo(0.5, 8);
+  ctx.closePath();
+  ctx.fill();
+}
+
+function drawFullScale() {
+  const canvas = document.getElementById("canvas3");
+  const ctx = canvas.getContext("2d");
+  ctx.beginPath();
+  ctx.moveTo(60, 40);
+  ctx.lineTo(180, 90);
+  ctx.lineTo(130, 210);
+  ctx.lineTo(10, 160);
+  ctx.closePath();
+  ctx.fill();
+  ctx.strokeStyle = "lightgray";
+  for (let i = 0; i < 16; i++) {
+    ctx.moveTo(i * 20, 0);
+    ctx.lineTo(i * 20, 300);
+    ctx.moveTo(0, i * 20);
+    ctx.lineTo(300, i * 20);
+    ctx.stroke();
+  }
+}
+```
+
+```js hidden live-sample___seeing_blurry_edges_4
+draw("canvas1");
+draw("canvas2");
+drawFullScale();
+```
+
+{{EmbedLiveSample("Seeing blurry edges 4", "", "350")}}
+
+If scaling _up_ an image makes it appear blurrier than intended, then scaling _down_ an image would make it appear _sharper_. For example, if you want a canvas to appear as 300x150 pixels on the screen, you can create it as 600x300 pixels and then use CSS to scale it down. This is especially useful on high-DPI screens (such as Apple's Retina displays) where a CSS pixel is represented by multiple screen pixels, so if you faithfully paint a 300x150 pixel canvas, it will not have the same pixel resolution as other elements on the page.
 
 ## Drawing paths
 
@@ -108,25 +253,19 @@ The third, and an optional step, is to call `closePath()`. This method tries to 
 For example, the code for drawing a triangle would look something like this:
 
 ```html hidden
-<html lang="en">
-  <body>
-    <canvas id="canvas" width="100" height="100"></canvas>
-  </body>
-</html>
+<canvas id="canvas" width="100" height="100"></canvas>
 ```
 
 ```js
 function draw() {
   const canvas = document.getElementById("canvas");
-  if (canvas.getContext) {
-    const ctx = canvas.getContext("2d");
+  const ctx = canvas.getContext("2d");
 
-    ctx.beginPath();
-    ctx.moveTo(75, 50);
-    ctx.lineTo(100, 75);
-    ctx.lineTo(100, 25);
-    ctx.fill();
-  }
+  ctx.beginPath();
+  ctx.moveTo(75, 50);
+  ctx.lineTo(100, 75);
+  ctx.lineTo(100, 25);
+  ctx.fill();
 }
 ```
 
@@ -150,29 +289,23 @@ When the canvas is initialized or `beginPath()` is called, you typically will wa
 To try this for yourself, you can use the code snippet below. Just paste it into the `draw()` function we saw earlier.
 
 ```html hidden
-<html lang="en">
-  <body>
-    <canvas id="canvas" width="150" height="150"></canvas>
-  </body>
-</html>
+<canvas id="canvas" width="150" height="150"></canvas>
 ```
 
 ```js
 function draw() {
   const canvas = document.getElementById("canvas");
-  if (canvas.getContext) {
-    const ctx = canvas.getContext("2d");
+  const ctx = canvas.getContext("2d");
 
-    ctx.beginPath();
-    ctx.arc(75, 75, 50, 0, Math.PI * 2, true); // Outer circle
-    ctx.moveTo(110, 75);
-    ctx.arc(75, 75, 35, 0, Math.PI, false); // Mouth (clockwise)
-    ctx.moveTo(65, 65);
-    ctx.arc(60, 65, 5, 0, Math.PI * 2, true); // Left eye
-    ctx.moveTo(95, 65);
-    ctx.arc(90, 65, 5, 0, Math.PI * 2, true); // Right eye
-    ctx.stroke();
-  }
+  ctx.beginPath();
+  ctx.arc(75, 75, 50, 0, Math.PI * 2, true); // Outer circle
+  ctx.moveTo(110, 75);
+  ctx.arc(75, 75, 35, 0, Math.PI, false); // Mouth (clockwise)
+  ctx.moveTo(65, 65);
+  ctx.arc(60, 65, 5, 0, Math.PI * 2, true); // Left eye
+  ctx.moveTo(95, 65);
+  ctx.arc(90, 65, 5, 0, Math.PI * 2, true); // Right eye
+  ctx.stroke();
 }
 ```
 
@@ -201,34 +334,28 @@ This method takes two arguments, `x` and `y`, which are the coordinates of the l
 The example below draws two triangles, one filled and one outlined.
 
 ```html hidden
-<html lang="en">
-  <body>
-    <canvas id="canvas" width="150" height="150"></canvas>
-  </body>
-</html>
+<canvas id="canvas" width="150" height="150"></canvas>
 ```
 
 ```js
 function draw() {
   const canvas = document.getElementById("canvas");
-  if (canvas.getContext) {
-    const ctx = canvas.getContext("2d");
+  const ctx = canvas.getContext("2d");
 
-    // Filled triangle
-    ctx.beginPath();
-    ctx.moveTo(25, 25);
-    ctx.lineTo(105, 25);
-    ctx.lineTo(25, 105);
-    ctx.fill();
+  // Filled triangle
+  ctx.beginPath();
+  ctx.moveTo(25, 25);
+  ctx.lineTo(105, 25);
+  ctx.lineTo(25, 105);
+  ctx.fill();
 
-    // Stroked triangle
-    ctx.beginPath();
-    ctx.moveTo(125, 125);
-    ctx.lineTo(125, 45);
-    ctx.lineTo(45, 125);
-    ctx.closePath();
-    ctx.stroke();
-  }
+  // Stroked triangle
+  ctx.beginPath();
+  ctx.moveTo(125, 125);
+  ctx.lineTo(125, 45);
+  ctx.lineTo(45, 125);
+  ctx.closePath();
+  ctx.stroke();
 }
 ```
 
@@ -268,36 +395,30 @@ The statement for the `clockwise` parameter results in the first and third row b
 > This example requires a slightly larger canvas than the others on this page: 150 x 200 pixels.
 
 ```html hidden
-<html lang="en">
-  <body>
-    <canvas id="canvas" width="150" height="200"></canvas>
-  </body>
-</html>
+<canvas id="canvas" width="150" height="200"></canvas>
 ```
 
 ```js
 function draw() {
   const canvas = document.getElementById("canvas");
-  if (canvas.getContext) {
-    const ctx = canvas.getContext("2d");
+  const ctx = canvas.getContext("2d");
 
-    for (let i = 0; i < 4; i++) {
-      for (let j = 0; j < 3; j++) {
-        ctx.beginPath();
-        const x = 25 + j * 50; // x coordinate
-        const y = 25 + i * 50; // y coordinate
-        const radius = 20; // Arc radius
-        const startAngle = 0; // Starting point on circle
-        const endAngle = Math.PI + (Math.PI * j) / 2; // End point on circle
-        const counterclockwise = i % 2 !== 0; // clockwise or counterclockwise
+  for (let i = 0; i < 4; i++) {
+    for (let j = 0; j < 3; j++) {
+      ctx.beginPath();
+      const x = 25 + j * 50; // x coordinate
+      const y = 25 + i * 50; // y coordinate
+      const radius = 20; // Arc radius
+      const startAngle = 0; // Starting point on circle
+      const endAngle = Math.PI + (Math.PI * j) / 2; // End point on circle
+      const counterclockwise = i % 2 !== 0; // clockwise or counterclockwise
 
-        ctx.arc(x, y, radius, startAngle, endAngle, counterclockwise);
+      ctx.arc(x, y, radius, startAngle, endAngle, counterclockwise);
 
-        if (i > 1) {
-          ctx.fill();
-        } else {
-          ctx.stroke();
-        }
+      if (i > 1) {
+        ctx.fill();
+      } else {
+        ctx.stroke();
       }
     }
   }
@@ -333,30 +454,24 @@ There's nothing very difficult in these examples. In both cases we see a success
 This example uses multiple quadratic Bézier curves to render a speech balloon.
 
 ```html hidden
-<html lang="en">
-  <body>
-    <canvas id="canvas" width="150" height="150"></canvas>
-  </body>
-</html>
+<canvas id="canvas" width="150" height="150"></canvas>
 ```
 
 ```js
 function draw() {
   const canvas = document.getElementById("canvas");
-  if (canvas.getContext) {
-    const ctx = canvas.getContext("2d");
+  const ctx = canvas.getContext("2d");
 
-    // Quadratic curves example
-    ctx.beginPath();
-    ctx.moveTo(75, 25);
-    ctx.quadraticCurveTo(25, 25, 25, 62.5);
-    ctx.quadraticCurveTo(25, 100, 50, 100);
-    ctx.quadraticCurveTo(50, 120, 30, 125);
-    ctx.quadraticCurveTo(60, 120, 65, 100);
-    ctx.quadraticCurveTo(125, 100, 125, 62.5);
-    ctx.quadraticCurveTo(125, 25, 75, 25);
-    ctx.stroke();
-  }
+  // Quadratic curves example
+  ctx.beginPath();
+  ctx.moveTo(75, 25);
+  ctx.quadraticCurveTo(25, 25, 25, 62.5);
+  ctx.quadraticCurveTo(25, 100, 50, 100);
+  ctx.quadraticCurveTo(50, 120, 30, 125);
+  ctx.quadraticCurveTo(60, 120, 65, 100);
+  ctx.quadraticCurveTo(125, 100, 125, 62.5);
+  ctx.quadraticCurveTo(125, 25, 75, 25);
+  ctx.stroke();
 }
 ```
 
@@ -371,30 +486,24 @@ draw();
 This example draws a heart using cubic Bézier curves.
 
 ```html hidden
-<html lang="en">
-  <body>
-    <canvas id="canvas" width="150" height="150"></canvas>
-  </body>
-</html>
+<canvas id="canvas" width="150" height="150"></canvas>
 ```
 
 ```js
 function draw() {
   const canvas = document.getElementById("canvas");
-  if (canvas.getContext) {
-    const ctx = canvas.getContext("2d");
+  const ctx = canvas.getContext("2d");
 
-    // Cubic curves example
-    ctx.beginPath();
-    ctx.moveTo(75, 40);
-    ctx.bezierCurveTo(75, 37, 70, 25, 50, 25);
-    ctx.bezierCurveTo(20, 25, 20, 62.5, 20, 62.5);
-    ctx.bezierCurveTo(20, 80, 40, 102, 75, 120);
-    ctx.bezierCurveTo(110, 102, 130, 80, 130, 62.5);
-    ctx.bezierCurveTo(130, 62.5, 130, 25, 100, 25);
-    ctx.bezierCurveTo(85, 25, 75, 37, 75, 40);
-    ctx.fill();
-  }
+  // Cubic curves example
+  ctx.beginPath();
+  ctx.moveTo(75, 40);
+  ctx.bezierCurveTo(75, 37, 70, 25, 50, 25);
+  ctx.bezierCurveTo(20, 25, 20, 62.5, 20, 62.5);
+  ctx.bezierCurveTo(20, 80, 40, 102, 75, 120);
+  ctx.bezierCurveTo(110, 102, 130, 80, 130, 62.5);
+  ctx.bezierCurveTo(130, 62.5, 130, 25, 100, 25);
+  ctx.bezierCurveTo(85, 25, 75, 37, 75, 40);
+  ctx.fill();
 }
 ```
 
@@ -418,80 +527,74 @@ Before this method is executed, the `moveTo()` method is automatically called wi
 So far, each example on this page has used only one type of path function per shape. However, there's no limitation to the number or types of paths you can use to create a shape. So in this final example, let's combine all of the path functions to make a set of very famous game characters.
 
 ```html hidden
-<html lang="en">
-  <body>
-    <canvas id="canvas" width="200" height="185"></canvas>
-  </body>
-</html>
+<canvas id="canvas" width="200" height="185"></canvas>
 ```
 
 ```js
 function draw() {
   const canvas = document.getElementById("canvas");
-  if (canvas.getContext) {
-    const ctx = canvas.getContext("2d");
+  const ctx = canvas.getContext("2d");
 
-    roundedRect(ctx, 12, 12, 184, 168, 15);
-    roundedRect(ctx, 19, 19, 170, 154, 9);
-    roundedRect(ctx, 53, 53, 49, 33, 10);
-    roundedRect(ctx, 53, 119, 49, 16, 6);
-    roundedRect(ctx, 135, 53, 49, 33, 10);
-    roundedRect(ctx, 135, 119, 25, 49, 10);
+  roundedRect(ctx, 12, 12, 184, 168, 15);
+  roundedRect(ctx, 19, 19, 170, 154, 9);
+  roundedRect(ctx, 53, 53, 49, 33, 10);
+  roundedRect(ctx, 53, 119, 49, 16, 6);
+  roundedRect(ctx, 135, 53, 49, 33, 10);
+  roundedRect(ctx, 135, 119, 25, 49, 10);
 
-    ctx.beginPath();
-    ctx.arc(37, 37, 13, Math.PI / 7, -Math.PI / 7, false);
-    ctx.lineTo(31, 37);
-    ctx.fill();
+  ctx.beginPath();
+  ctx.arc(37, 37, 13, Math.PI / 7, -Math.PI / 7, false);
+  ctx.lineTo(31, 37);
+  ctx.fill();
 
-    for (let i = 0; i < 8; i++) {
-      ctx.fillRect(51 + i * 16, 35, 4, 4);
-    }
-
-    for (let i = 0; i < 6; i++) {
-      ctx.fillRect(115, 51 + i * 16, 4, 4);
-    }
-
-    for (let i = 0; i < 8; i++) {
-      ctx.fillRect(51 + i * 16, 99, 4, 4);
-    }
-
-    ctx.beginPath();
-    ctx.moveTo(83, 116);
-    ctx.lineTo(83, 102);
-    ctx.bezierCurveTo(83, 94, 89, 88, 97, 88);
-    ctx.bezierCurveTo(105, 88, 111, 94, 111, 102);
-    ctx.lineTo(111, 116);
-    ctx.lineTo(106.333, 111.333);
-    ctx.lineTo(101.666, 116);
-    ctx.lineTo(97, 111.333);
-    ctx.lineTo(92.333, 116);
-    ctx.lineTo(87.666, 111.333);
-    ctx.lineTo(83, 116);
-    ctx.fill();
-
-    ctx.fillStyle = "white";
-    ctx.beginPath();
-    ctx.moveTo(91, 96);
-    ctx.bezierCurveTo(88, 96, 87, 99, 87, 101);
-    ctx.bezierCurveTo(87, 103, 88, 106, 91, 106);
-    ctx.bezierCurveTo(94, 106, 95, 103, 95, 101);
-    ctx.bezierCurveTo(95, 99, 94, 96, 91, 96);
-    ctx.moveTo(103, 96);
-    ctx.bezierCurveTo(100, 96, 99, 99, 99, 101);
-    ctx.bezierCurveTo(99, 103, 100, 106, 103, 106);
-    ctx.bezierCurveTo(106, 106, 107, 103, 107, 101);
-    ctx.bezierCurveTo(107, 99, 106, 96, 103, 96);
-    ctx.fill();
-
-    ctx.fillStyle = "black";
-    ctx.beginPath();
-    ctx.arc(101, 102, 2, 0, Math.PI * 2, true);
-    ctx.fill();
-
-    ctx.beginPath();
-    ctx.arc(89, 102, 2, 0, Math.PI * 2, true);
-    ctx.fill();
+  for (let i = 0; i < 8; i++) {
+    ctx.fillRect(51 + i * 16, 35, 4, 4);
   }
+
+  for (let i = 0; i < 6; i++) {
+    ctx.fillRect(115, 51 + i * 16, 4, 4);
+  }
+
+  for (let i = 0; i < 8; i++) {
+    ctx.fillRect(51 + i * 16, 99, 4, 4);
+  }
+
+  ctx.beginPath();
+  ctx.moveTo(83, 116);
+  ctx.lineTo(83, 102);
+  ctx.bezierCurveTo(83, 94, 89, 88, 97, 88);
+  ctx.bezierCurveTo(105, 88, 111, 94, 111, 102);
+  ctx.lineTo(111, 116);
+  ctx.lineTo(106.333, 111.333);
+  ctx.lineTo(101.666, 116);
+  ctx.lineTo(97, 111.333);
+  ctx.lineTo(92.333, 116);
+  ctx.lineTo(87.666, 111.333);
+  ctx.lineTo(83, 116);
+  ctx.fill();
+
+  ctx.fillStyle = "white";
+  ctx.beginPath();
+  ctx.moveTo(91, 96);
+  ctx.bezierCurveTo(88, 96, 87, 99, 87, 101);
+  ctx.bezierCurveTo(87, 103, 88, 106, 91, 106);
+  ctx.bezierCurveTo(94, 106, 95, 103, 95, 101);
+  ctx.bezierCurveTo(95, 99, 94, 96, 91, 96);
+  ctx.moveTo(103, 96);
+  ctx.bezierCurveTo(100, 96, 99, 99, 99, 101);
+  ctx.bezierCurveTo(99, 103, 100, 106, 103, 106);
+  ctx.bezierCurveTo(106, 106, 107, 103, 107, 101);
+  ctx.bezierCurveTo(107, 99, 106, 96, 103, 96);
+  ctx.fill();
+
+  ctx.fillStyle = "black";
+  ctx.beginPath();
+  ctx.arc(101, 102, 2, 0, Math.PI * 2, true);
+  ctx.fill();
+
+  ctx.beginPath();
+  ctx.arc(89, 102, 2, 0, Math.PI * 2, true);
+  ctx.fill();
 }
 
 // A utility function to draw a rectangle with rounded corners.
@@ -524,33 +627,27 @@ We'll take another look at `fillStyle`, in more detail, later in this tutorial. 
 To draw a shape with a hole in it, we need to draw the hole in different clock directions as we draw the outer shape. We either draw the outer shape clockwise and the inner shape anticlockwise or the outer shape anticlockwise and the inner shape clockwise.
 
 ```html hidden
-<html lang="en">
-  <body>
-    <canvas id="canvas" width="150" height="150"></canvas>
-  </body>
-</html>
+<canvas id="canvas" width="150" height="150"></canvas>
 ```
 
 ```js
 function draw() {
   const canvas = document.getElementById("canvas");
-  if (canvas.getContext) {
-    const ctx = canvas.getContext("2d");
+  const ctx = canvas.getContext("2d");
 
-    ctx.beginPath();
+  ctx.beginPath();
 
-    // Outer shape clockwise ⟳
-    ctx.moveTo(0, 0);
-    ctx.lineTo(150, 0);
-    ctx.lineTo(75, 129.9);
+  // Outer shape clockwise ⟳
+  ctx.moveTo(0, 0);
+  ctx.lineTo(150, 0);
+  ctx.lineTo(75, 129.9);
 
-    // Inner shape anticlockwise ↺
-    ctx.moveTo(75, 20);
-    ctx.lineTo(50, 60);
-    ctx.lineTo(100, 60);
+  // Inner shape anticlockwise ↺
+  ctx.moveTo(75, 20);
+  ctx.lineTo(50, 60);
+  ctx.lineTo(100, 60);
 
-    ctx.fill();
-  }
+  ctx.fill();
 }
 ```
 
@@ -588,28 +685,22 @@ The `Path2D` API also adds a way to combine paths using the `addPath` method. Th
 In this example, we are creating a rectangle and a circle. Both are stored as a `Path2D` object, so that they are available for later usage. With the new `Path2D` API, several methods got updated to optionally accept a `Path2D` object to use instead of the current path. Here, `stroke` and `fill` are used with a path argument to draw both objects onto the canvas, for example.
 
 ```html hidden
-<html lang="en">
-  <body>
-    <canvas id="canvas" width="130" height="100"></canvas>
-  </body>
-</html>
+<canvas id="canvas" width="130" height="100"></canvas>
 ```
 
 ```js
 function draw() {
   const canvas = document.getElementById("canvas");
-  if (canvas.getContext) {
-    const ctx = canvas.getContext("2d");
+  const ctx = canvas.getContext("2d");
 
-    const rectangle = new Path2D();
-    rectangle.rect(10, 10, 50, 50);
+  const rectangle = new Path2D();
+  rectangle.rect(10, 10, 50, 50);
 
-    const circle = new Path2D();
-    circle.arc(100, 35, 25, 0, 2 * Math.PI);
+  const circle = new Path2D();
+  circle.arc(100, 35, 25, 0, 2 * Math.PI);
 
-    ctx.stroke(rectangle);
-    ctx.fill(circle);
-  }
+  ctx.stroke(rectangle);
+  ctx.fill(circle);
 }
 ```
 

@@ -392,6 +392,7 @@ mathbold
 mathdbl
 mathit
 mathml
+mathml.stixgeneral_operator_stretching.disabled
 mathmlref
 mathmono
 mathrm
