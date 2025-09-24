@@ -122,7 +122,7 @@ In addition to the basic HTML global attributes, the following global attributes
 
 ## List of global event handler attributes
 
-- [`onabort`](/en-US/docs/Web/API/HTMLMediaElement/abort_event) 
+- [`onabort`](/en-US/docs/Web/API/HTMLMediaElement/abort_event)
   - : Fired when the resource was not fully loaded, but not as the result of an error.
 - [`onanimationcancel`](/en-US/docs/Web/API/Element/animationcancel_event)
   - : Fired when an animation unexpectedly aborts.
