@@ -179,4 +179,9 @@ On the upside, the web is also an awesome programming environment, for many reas
 - App updates are usually straightforward. In many cases, visitors can see new versions of an application when they reload their browser tab. You don't need to worry about getting visitors to regularly download and install software updates.
 - The web community is vibrant and helpful. As we discuss later on in our [Research and learning](/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Research_and_learning) article, there are lots of places you can go to ask for help, and great resources available to learn from.
 
+## See also
+
+- [How to file bugs with browsers](/en-US/docs/Learn_web_development/Howto/Web_mechanics/File_browser_bugs)
+  - : If something isn't working as you expect in a browser, it could be a bug in the browser. This article explains how to figure out if it is, and how to file a bug report if so.
+
 {{PreviousMenuNext("Learn_web_development/Getting_started/Web_standards/The_web_standards_model", "Learn_web_development/Getting_started/Soft_skills", "Learn_web_development/Getting_started/Web_standards")}}
