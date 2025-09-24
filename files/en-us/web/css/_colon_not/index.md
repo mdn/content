@@ -68,7 +68,7 @@ There are several unusual effects and outcomes when using `:not()` that you shou
 
 ### Using :not() with valid selectors
 
-This example shows some a few examples of using `:not()`.
+This example shows a few ways of using `:not()`.
 
 #### HTML
 
