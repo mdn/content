@@ -54,7 +54,7 @@ for (const track of tracks) {
 }
 ```
 
-The {{domxref("VideoTrack.language", "language")}} is in standard ({{RFC(5646)}}) format. For US English, this would be `"en-US"`, for example.
+The {{domxref("VideoTrack.language", "language")}} is specified as a valid {{glossary("BCP 47 language tag")}}, for example `"en-US"` for US English.
 
 ## Specifications
 

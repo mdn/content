@@ -51,7 +51,7 @@ tracks.forEach((track) => {
 });
 ```
 
-The {{domxref("AudioTrack.language", "language")}} is in standard ({{RFC(5646)}}) format. For US English, this would be `"en-US"`, for example.
+The {{domxref("AudioTrack.language", "language")}} is specified as a valid {{glossary("BCP 47 language tag")}}, for example `"en-US"` for US English.
 
 ## Example
 
