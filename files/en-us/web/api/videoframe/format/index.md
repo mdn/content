@@ -17,7 +17,7 @@ A string containing a video pixel format, one of:
 - `"I420"`
   - : Also known as _Planar YUV 4:2:0_, this format is composed of three distinct planes, one plane of luma and two planes of chroma, denoted Y, U and V, and present in this order. The U an V planes are sub-sampled horizontally and vertically by a factor of 2 compared to the Y plane. Each sample in this format is 8 bits.
 - `"I420P10"`
-  - : Also known as _Planar YUV 4:2:0_ 10-bit, this format is composed of three distinct planes: one plane of luma and two planes of chroma — denoted Y, U and V, and present in that order. The U an V planes are sub-sampled horizontally and vertically by a factor of 2 compared to the Y plane. Each sample in this format is 10 bits, encoded as a 16-bit integer in little-endian byte order.
+  - : Also known as _Planar YUV 4:2:0_ 10-bit, this format is composed of three distinct planes: one plane of luma and two planes of chroma — denoted Y, U and V, and present in that order. The U an V planes are sub-sampled horizontally and vertically by a factor of 2 compared to the Y plane. Each sample in this format is 10 bits, encoded as a 16-bit integer in little-endian byte order.
 - `"I420P12"`
   - : Also known as _Planar YUV 4:2:0_ 12-bit, this format is composed of three distinct planes: one plane of luma and two planes of chroma — denoted Y, U and V, and present in this order. The U an V planes are sub-sampled horizontally and vertically by a factor of 2 compared to the Y plane. Each sample in this format is 12 bits, encoded as a 16-bit integer in little-endian byte order.
 - `"I420A"`
