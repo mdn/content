@@ -15,7 +15,7 @@ browser UI.
 ## Value
 
 A string representing the
-language version as a {{glossary("BCP 47 language tag")}}, for example "en", "en-US", "fr", "fr-FR", "es-ES", etc.
+language version as a {{glossary("BCP 47 language tag")}}, for example `en`, `en-US`, `fr`, `fr-FR`, `es-ES`, etc.
 
 Note that in Safari on iOS prior to 10.2, the country code returned is lowercase:
 "en-us", "fr-fr" etc.
