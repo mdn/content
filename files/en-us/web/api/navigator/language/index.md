@@ -12,7 +12,7 @@ The **`language`** read-only property of the {{domxref("Navigator")}} interface 
 
 ## Value
 
-A string representing the language version in {{glossary("BCP 47 language tag")}} format. Examples of valid language tags include "en", "en-US", "fr", "fr-FR", "es-ES", etc.
+A string representing the language version in {{glossary("BCP 47 language tag")}} format. Examples of valid language tags include `en`, `en-US`, `fr`, `fr-FR`, `es-ES`, etc.
 
 Note that in Safari on iOS prior to 10.2, the country code returned is lowercase: "en-us", "fr-fr" etc.
 
