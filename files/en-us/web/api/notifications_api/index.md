@@ -50,7 +50,7 @@ The specification distinguishes two sorts of notifications, _persistent notifica
 
 #### Persistent notifications
 
-Persistent notifictions are created in a web page or a service worker, by calling {{domxref("ServiceWorkerRegistration.showNotification()")}}, and any user interaction with the notification is always handled in the service worker.
+Persistent notifications are created in a web page or a service worker, by calling {{domxref("ServiceWorkerRegistration.showNotification()")}}, and any user interaction with the notification is always handled in the service worker.
 
 The browser should display the notification in the platform's notification center, if that is available, and the notification may persist in the notification center until it is removed (for example, because the user closed it).
 
@@ -58,13 +58,15 @@ When a persistent notification is created, you can pass it an array of [`action`
 
 ```js
 const registration = await navigator.serviceWorker.ready;
-registration.showNotification("Ready for your order", {
+registration.showNotification("You have a new email", {
   actions: [
     { action: "open", title: "Open this email" },
     { action: "delete", title: "Delete this email" },
   ],
 });
 ```
+
+The actions will be presented to the user in the notification, for example as buttons they can press or options they can select.
 
 When the user clicks a persistent notification, the {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} event is fired in the service worker's global scope. If the user selected an action, it is given as the {{domxref("NotificationEvent.action", "action")}} property of the event passed into the `notificationclick` handler, and the service worker can use it to decide what to do:
 
