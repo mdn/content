@@ -122,290 +122,148 @@ In addition to the basic HTML global attributes, the following global attributes
 
 ## List of global event handler attributes
 
-- [`onabort`](/en-US/docs/Web/API/HTMLMediaElement/abort_event)
-  - : Fired when the resource was not fully loaded, but not as the result of an error.
-- [`onanimationcancel`](/en-US/docs/Web/API/Element/animationcancel_event)
-  - : Fired when an animation unexpectedly aborts.
-- [`onanimationend`](/en-US/docs/Web/API/Element/animationend_event)
-  - : Fired when an animation has completed normally.
-- [`onanimationiteration`](/en-US/docs/Web/API/Element/animationiteration_event)
-  - : Fired when an animation iteration has completed.
-- [`onanimationstart`](/en-US/docs/Web/API/Element/animationstart_event)
-  - : Fired when an animation starts.
-- [`onauxclick`](/en-US/docs/Web/API/Element/auxclick_event)
-  - : Fired when a non-primary pointing device button (e.g., any mouse button other than the left button) has been pressed and released on an element.
-- [`onbeforeinput`](/en-US/docs/Web/API/Element/beforeinput_event)
-  - : Fired when the value of an input element is about to be modified.
-- [`onbeforematch`](/en-US/docs/Web/API/Element/beforematch_event)
-  - : Fires on an element that is in the [hidden until found](/en-US/docs/Web/HTML/Reference/Global_attributes/hidden) state, when the browser is about to reveal its content because the user has found the content through the "find in page" feature or through fragment navigation.
-- [`onbeforetoggle`](/en-US/docs/Web/API/HTMLElement/beforetoggle_event)
-  - : Fired when the element is a [popover](/en-US/docs/Web/API/Popover_API) or {{HTMLElement("dialog")}}, before it is hidden or shown.
-- [`onblur`](/en-US/docs/Web/API/Element/blur_event)
-  - : Fired when an element has lost focus.
-- [`oncancel`](/en-US/docs/Web/API/HTMLInputElement/cancel_event)
-  - : Fired when the user cancels the file picker dialog via the Esc key or the cancel button and when the user re-selects the same files that were previously selected.
-- [`oncancel`](/en-US/docs/Web/API/HTMLDialogElement/cancel_event)
-  - : Fired when the dialog is requested to close, whether with the escape key, or via the `HTMLDialogElement.requestClose()` method.
-- [`oncanplay`](/en-US/docs/Web/API/HTMLMediaElement/canplay_event)
-  - : Fired when the user agent can play the media, but estimates that not enough data has been loaded to play the media up to its end without having to stop for further buffering of content.
-- [`oncanplay`](/en-US/docs/Web/API/HTMLMediaElement/canplay_event)
-  - : Fired when the user agent can play the media, but estimates that not enough data has been loaded to play the media up to its end without having to stop for further buffering of content.
-- [`oncanplaythrough`](/en-US/docs/Web/API/HTMLMediaElement/canplaythrough_event)
-  - : Fired when the user agent can play the media, and estimates that enough data has been loaded to play the media up to its end without having to stop for further buffering of content.
-- [`oncanplaythrough`](/en-US/docs/Web/API/HTMLMediaElement/canplaythrough_event)
-  - : Fired when the user agent can play the media, and estimates that enough data has been loaded to play the media up to its end without having to stop for further buffering of content.
-- [`onchange`](/en-US/docs/Web/API/HTMLElement/change_event)
-  - : Fires when the user selects an option.
-- [`onchange`](/en-US/docs/Web/API/HTMLElement/change_event)
-  - : Fired when the `value` of an {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element has been changed and committed by the user. Unlike the [`input`](/en-US/docs/Web/API/Element/input_event) event, the `change` event is not necessarily fired for each alteration to an element's `value`.
-- [`onclick`](/en-US/docs/Web/API/Element/click_event)
-  - : Fired when a pointing device button (e.g., a mouse's primary button) is pressed and released on a single element.
-- [`onclose`](/en-US/docs/Web/API/HTMLDialogElement/close_event)
-  - : Fired when the dialog is closed, whether with the escape key, the `HTMLDialogElement.close()` method, or via submitting a form within the dialog with [`method="dialog"`](/en-US/docs/Web/HTML/Reference/Elements/form#method).
-- [`oncommand`](/en-US/docs/Web/API/HTMLElement/command_event)
-  - : Fires on an element that is controlled via a [`button`](/en-US/docs/Web/API/HTMLButtonElement) with valid [`commandForElement`](/en-US/docs/Web/API/HTMLButtonElement/commandForElement) and [`command`](/en-US/docs/Web/API/HTMLButtonElement/command) values, whenever the button is interacted with (e.g., it is clicked).
-- [`oncontentvisibilityautostatechange`](/en-US/docs/Web/API/Element/contentvisibilityautostatechange_event)
-  - : Fires on any element with [`content-visibility: auto`](/en-US/docs/Web/CSS/content-visibility) set on it when it starts or stops being [relevant to the user](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment#relevant_to_the_user) and [skipping its contents](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment#skips_its_contents).
-- [`oncontextlost`](/en-US/docs/Web/API/HTMLCanvasElement/contextlost_event)
-  - : Fired if the browser detects that the `CanvasRenderingContext2D` context has been lost.
-- [`oncontextmenu`](/en-US/docs/Web/API/Element/contextmenu_event)
-  - : Fired when the user attempts to open a context menu.
-- [`oncontextrestored`](/en-US/docs/Web/API/HTMLCanvasElement/contextrestored_event)
-  - : Fired if the browser successfully restores a `CanvasRenderingContext2D` context
-- [`oncopy`](/en-US/docs/Web/API/Element/copy_event)
-  - : Fired when the user initiates a copy action through the browser's user interface.
-- [`oncuechange`](/en-US/docs/Web/API/HTMLTrackElement/cuechange_event)
-  - : Sent when the underlying [`TextTrack`](/en-US/docs/Web/API/TextTrack) has changed the currently-presented cues. This event is always sent to the `TextTrack` but is also sent to the `HTMLTrackElement` if one is associated with the track. You may also use the `oncuechange` event handler to establish a handler for this event.
-- [`oncut`](/en-US/docs/Web/API/Element/cut_event)
-  - : Fired when the user initiates a cut action through the browser's user interface.
-- [`ondblclick`](/en-US/docs/Web/API/Element/dblclick_event)
-  - : Fired when a pointing device button (e.g., a mouse's primary button) is clicked twice on a single element.
-- [`ondrag`](/en-US/docs/Web/API/HTMLElement/drag_event)
-  - : This event is fired when an element or text selection is being dragged.
-- [`ondragend`](/en-US/docs/Web/API/HTMLElement/dragend_event)
-  - : This event is fired when a drag operation is being ended (by releasing a mouse button or hitting the escape key).
-- [`ondragenter`](/en-US/docs/Web/API/HTMLElement/dragenter_event)
-  - : This event is fired when a dragged element or text selection enters a valid drop target.
-- [`ondragleave`](/en-US/docs/Web/API/HTMLElement/dragleave_event)
-  - : This event is fired when a dragged element or text selection leaves a valid drop target.
-- [`ondragover`](/en-US/docs/Web/API/HTMLElement/dragover_event)
-  - : This event is fired continuously when an element or text selection is being dragged and the mouse pointer is over a valid drop target (every 50 ms WHEN mouse is not moving ELSE much faster between 5 ms (slow movement) and 1ms (fast movement) approximately. This firing pattern is different than [`mouseover`](/en-US/docs/Web/API/Element/mouseover_event) ).
-- [`ondragstart`](/en-US/docs/Web/API/HTMLElement/dragstart_event)
-  - : This event is fired when the user starts dragging an element or text selection.
-- [`ondrop`](/en-US/docs/Web/API/HTMLElement/drop_event)
-  - : This event is fired when an element or text selection is dropped on a valid drop target.
-- [`ondurationchange`](/en-US/docs/Web/API/HTMLMediaElement/durationchange_event)
-  - : Fired when the duration property has been updated.
-- [`ondurationchange`](/en-US/docs/Web/API/HTMLMediaElement/durationchange_event)
-  - : Fired when the duration property has been updated.
-- [`onemptied`](/en-US/docs/Web/API/HTMLMediaElement/emptied_event)
-  - : Fired when the media has become empty; for example, when the media has already been loaded (or partially loaded), and the [`HTMLMediaElement.load()`](/en-US/docs/Web/API/HTMLMediaElement/load) method is called to reload it.
-- [`onemptied`](/en-US/docs/Web/API/HTMLMediaElement/emptied_event)
-  - : Fired when the media has become empty; for example, when the media has already been loaded (or partially loaded), and the [`HTMLMediaElement.load()`](/en-US/docs/Web/API/HTMLMediaElement/load) method is called to reload it.
-- [`onended`](/en-US/docs/Web/API/HTMLMediaElement/ended_event)
-  - : Fired when playback stops when end of the media (\<audio> or \<video>) is reached or because no further data is available.
-- [`onended`](/en-US/docs/Web/API/HTMLMediaElement/ended_event)
-  - : Fired when playback stops when end of the media (\<audio> or \<video>) is reached or because no further data is available.
-- [`onerror`](/en-US/docs/Web/API/HTMLMediaElement/error_event)
-  - : Fired when the resource could not be loaded due to an error.
-- [`onerror`](/en-US/docs/Web/API/HTMLMediaElement/error_event)
-  - : Fired when the resource could not be loaded due to an error.
-- [`onerror`](/en-US/docs/Web/API/SVGElement/error_event)
-  - : Fired when an SVG element does not load properly or when an error occurs during script execution.
-- [`onerror`](/en-US/docs/Web/API/HTMLElement/error_event)
-  - : Fired when a resource failed to load, or can't be used.
-- [`onfocus`](/en-US/docs/Web/API/Element/focus_event)
-  - : Fired when an element has gained focus.
-- [`onfocusin`](/en-US/docs/Web/API/Element/focusin_event)
-  - : Fired when an element has gained focus, after [`focus`](/en-US/docs/Web/API/Element/focus_event).
-- [`onfocusout`](/en-US/docs/Web/API/Element/focusout_event)
-  - : Fired when an element has lost focus, after [`blur`](/en-US/docs/Web/API/Element/blur_event).
-- [`onformdata`](/en-US/docs/Web/API/HTMLFormElement/formdata_event)
-  - : The `formdata` event fires after the entry list representing the form's data is constructed.
-- [`onfullscreenchange`](/en-US/docs/Web/API/Element/fullscreenchange_event)
-  - : Sent to an `Element` when it transitions into or out of [fullscreen](/en-US/docs/Web/API/Fullscreen_API/Guide) mode.
-- [`onfullscreenerror`](/en-US/docs/Web/API/Element/fullscreenerror_event)
-  - : Sent to an `Element` if an error occurs while attempting to switch it into or out of [fullscreen](/en-US/docs/Web/API/Fullscreen_API/Guide) mode.
-- [`ongesturechange`](/en-US/docs/Web/API/Element/gesturechange_event) {{non-standard_inline}}
-  - : Fired when digits move during a touch gesture.
-- [`ongestureend`](/en-US/docs/Web/API/Element/gestureend_event) {{non-standard_inline}}
-  - : Fired when there are no longer multiple fingers contacting the touch surface, thus ending the gesture.
-- [`ongesturestart`](/en-US/docs/Web/API/Element/gesturestart_event) {{non-standard_inline}}
-  - : Fired when multiple fingers contact the touch surface, thus starting a new gesture.
-- [`ongotpointercapture`](/en-US/docs/Web/API/Element/gotpointercapture_event)
-  - : Fired when an element captures a pointer using [`setPointerCapture()`](/en-US/docs/Web/API/Element/setPointerCapture).
-- [`oninput`](/en-US/docs/Web/API/Element/input_event)
-  - : Fires when the `value` of an {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element has been changed.
-- [`oninput`](/en-US/docs/Web/API/Element/input_event)
-  - : Fires when an element's value is changed as a direct result of a user action.
-- [`oninvalid`](/en-US/docs/Web/API/HTMLInputElement/invalid_event)
-  - : Fired when an element does not satisfy its constraints during constraint validation.
-- [`onkeydown`](/en-US/docs/Web/API/Element/keydown_event)
-  - : Fired when a key is pressed.
-- [`onkeypress`](/en-US/docs/Web/API/Element/keypress_event) {{deprecated_inline}}
-  - : Fired when a key that produces a character value is pressed down.
-- [`onkeyup`](/en-US/docs/Web/API/Element/keyup_event)
-  - : Fired when a key is released.
-- [`onload`](/en-US/docs/Web/API/SVGElement/load_event)
-  - : Fires on an `SVGElement` when it is loaded in the browser.
-- [`onload`](/en-US/docs/Web/API/HTMLElement/load_event)
-  - : Fires for elements containing a resource when the resource has successfully loaded.
-- [`onloadeddata`](/en-US/docs/Web/API/HTMLMediaElement/loadeddata_event)
-  - : Fired when the first frame of the media has finished loading.
-- [`onloadeddata`](/en-US/docs/Web/API/HTMLMediaElement/loadeddata_event)
-  - : Fired when the first frame of the media has finished loading.
-- [`onloadedmetadata`](/en-US/docs/Web/API/HTMLMediaElement/loadedmetadata_event)
-  - : Fired when the metadata has been loaded.
-- [`onloadedmetadata`](/en-US/docs/Web/API/HTMLMediaElement/loadedmetadata_event)
-  - : Fired when the metadata has been loaded.
-- [`onloadstart`](/en-US/docs/Web/API/HTMLMediaElement/loadstart_event)
-  - : Fired when the browser has started to load a resource.
-- [`onloadstart`](/en-US/docs/Web/API/HTMLMediaElement/loadstart_event)
-  - : Fired when the browser has started to load a resource.
-- [`onlostpointercapture`](/en-US/docs/Web/API/Element/lostpointercapture_event)
-  - : Fired when a [captured pointer](/en-US/docs/Web/API/Pointer_events#pointer_capture) is released.
-- [`onmousedown`](/en-US/docs/Web/API/Element/mousedown_event)
-  - : Fired when a pointing device button is pressed on an element.
-- [`onmouseenter`](/en-US/docs/Web/API/Element/mouseenter_event)
-  - : Fired when a pointing device (usually a mouse) is moved over the element that has the listener attached.
-- [`onmouseleave`](/en-US/docs/Web/API/Element/mouseleave_event)
-  - : Fired when the pointer of a pointing device (usually a mouse) is moved out of an element that has the listener attached to it.
-- [`onmousemove`](/en-US/docs/Web/API/Element/mousemove_event)
-  - : Fired when a pointing device (usually a mouse) is moved while over an element.
-- [`onmouseout`](/en-US/docs/Web/API/Element/mouseout_event)
-  - : Fired when a pointing device (usually a mouse) is moved off the element to which the listener is attached or off one of its children.
-- [`onmouseover`](/en-US/docs/Web/API/Element/mouseover_event)
-  - : Fired when a pointing device is moved onto the element to which the listener is attached or onto one of its children.
-- [`onmouseup`](/en-US/docs/Web/API/Element/mouseup_event)
-  - : Fired when a pointing device button is released on an element.
-- [`onmousewheel`](/en-US/docs/Web/API/Element/mousewheel_event) {{deprecated_inline}} {{non-standard_inline}}
-  - : Fired when a mouse wheel or similar device is operated.
-- [`onpaste`](/en-US/docs/Web/API/Element/paste_event)
-  - : Fired when the user initiates a paste action through the browser's user interface.
-- [`onpause`](/en-US/docs/Web/API/HTMLMediaElement/pause_event)
-  - : Fired when a request to pause play is handled and the activity has entered its paused state, most commonly occurring when the media's [`HTMLMediaElement.pause()`](/en-US/docs/Web/API/HTMLMediaElement/pause) method is called.
-- [`onpause`](/en-US/docs/Web/API/HTMLMediaElement/pause_event)
-  - : Fired when a request to pause play is handled and the activity has entered its paused state, most commonly occurring when the media's [`HTMLMediaElement.pause()`](/en-US/docs/Web/API/HTMLMediaElement/pause) method is called.
-- [`onplay`](/en-US/docs/Web/API/HTMLMediaElement/play_event)
-  - : Fired when the `paused` property is changed from `true` to `false`, as a result of the [`HTMLMediaElement.play()`](/en-US/docs/Web/API/HTMLMediaElement/play) method, or the `autoplay` attribute.
-- [`onplay`](/en-US/docs/Web/API/HTMLMediaElement/play_event)
-  - : Fired when the `paused` property is changed from `true` to `false`, as a result of the [`HTMLMediaElement.play()`](/en-US/docs/Web/API/HTMLMediaElement/play) method, or the `autoplay` attribute.
-- [`onplaying`](/en-US/docs/Web/API/HTMLMediaElement/playing_event)
-  - : Fired when playback is ready to start after having been paused or delayed due to lack of data.
-- [`onplaying`](/en-US/docs/Web/API/HTMLMediaElement/playing_event)
-  - : Fired when playback is ready to start after having been paused or delayed due to lack of data.
-- [`onpointercancel`](/en-US/docs/Web/API/Element/pointercancel_event)
-  - : Fired when a pointer event is canceled.
-- [`onpointerdown`](/en-US/docs/Web/API/Element/pointerdown_event)
-  - : Fired when a pointer becomes active.
-- [`onpointerenter`](/en-US/docs/Web/API/Element/pointerenter_event)
-  - : Fired when a pointer is moved into the hit test boundaries of an element or one of its descendants.
-- [`onpointerleave`](/en-US/docs/Web/API/Element/pointerleave_event)
-  - : Fired when a pointer is moved out of the hit test boundaries of an element.
-- [`onpointermove`](/en-US/docs/Web/API/Element/pointermove_event)
-  - : Fired when a pointer changes coordinates.
-- [`onpointerout`](/en-US/docs/Web/API/Element/pointerout_event)
-  - : Fired when a pointer is moved out of the hit test boundaries of an element (among other reasons).
-- [`onpointerover`](/en-US/docs/Web/API/Element/pointerover_event)
-  - : Fired when a pointer is moved into an element's hit test boundaries.
-- [`onpointerrawupdate`](/en-US/docs/Web/API/Element/pointerrawupdate_event)
-  - : Fired when a pointer changes any properties that don't fire [`pointerdown`](/en-US/docs/Web/API/Element/pointerdown_event) or [`pointerup`](/en-US/docs/Web/API/Element/pointerup_event) events.
-- [`onpointerup`](/en-US/docs/Web/API/Element/pointerup_event)
-  - : Fired when a pointer is no longer active.
-- [`onprogress`](/en-US/docs/Web/API/HTMLMediaElement/progress_event)
-  - : Fired periodically as the browser loads a resource.
-- [`onprogress`](/en-US/docs/Web/API/HTMLMediaElement/progress_event)
-  - : Fired periodically as the browser loads a resource.
-- [`onratechange`](/en-US/docs/Web/API/HTMLMediaElement/ratechange_event)
-  - : Fired when the playback rate has changed.
-- [`onratechange`](/en-US/docs/Web/API/HTMLMediaElement/ratechange_event)
-  - : Fired when the playback rate has changed.
-- [`onreset`](/en-US/docs/Web/API/HTMLFormElement/reset_event)
-  - : The `reset` event fires when a form is reset.
-- [`onresize`](/en-US/docs/Web/API/HTMLVideoElement/resize_event)
-  - : Fires when one or both of the [`videoWidth`](/en-US/docs/Web/API/HTMLVideoElement/videoWidth) and [`videoHeight`](/en-US/docs/Web/API/HTMLVideoElement/videoHeight) properties have just been updated.
-- [`onresize`](/en-US/docs/Web/API/SVGElement#events)
-  - : Fired when an SVG document is being resized.
-- [`onscroll`](/en-US/docs/Web/API/SVGElement#events)
-  - : Fired when an SVG document view is being shifted along the X and/or Y axes.
-- [`onscroll`](/en-US/docs/Web/API/Element/scroll_event)
-  - : Fired when the document view or an element has been scrolled.
-- [`onscrollend`](/en-US/docs/Web/API/Element/scrollend_event)
-  - : Fires when the document view has completed scrolling.
-- [`onscrollsnapchange`](/en-US/docs/Web/API/Element/scrollsnapchange_event) {{Experimental_Inline}}
-  - : Fired on the scroll container at the end of a scrolling operation when a new scroll snap target has been selected.
-- [`onscrollsnapchanging`](/en-US/docs/Web/API/Element/scrollsnapchanging_event) {{Experimental_Inline}}
-  - : Fired on the scroll container when the browser determines a new scroll snap target is pending, i.e., it will be selected when the current scroll gesture ends.
-- [`onsecuritypolicyviolation`](/en-US/docs/Web/API/Element/securitypolicyviolation_event)
-  - : Fired when a [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) is violated.
-- [`onseeked`](/en-US/docs/Web/API/HTMLMediaElement/seeked_event)
-  - : Fired when a seek operation completes.
-- [`onseeked`](/en-US/docs/Web/API/HTMLMediaElement/seeked_event)
-  - : Fired when a seek operation completes.
-- [`onseeking`](/en-US/docs/Web/API/HTMLMediaElement/seeking_event)
-  - : Fired when a seek operation begins.
-- [`onseeking`](/en-US/docs/Web/API/HTMLMediaElement/seeking_event)
-  - : Fired when a seek operation begins.
-- [`onselect`](/en-US/docs/Web/API/HTMLInputElement/select_event)
-  - : Fired when some text has been selected.
-- [`onselect`](/en-US/docs/Web/API/HTMLTextAreaElement/select_event)
-  - : Fires when some text has been selected.
-- [`onselectionchange`](/en-US/docs/Web/API/HTMLInputElement/selectionchange_event)
-  - : Fires when the text selection in an {{HTMLElement("input")}} element has been changed.
-- [`onselectstart`](/en-US/docs/Web/API/Node/selectstart_event)
-  - : Fires when the user starts a new selection in this node.
-- [`onslotchange`](/en-US/docs/Web/API/HTMLSlotElement/slotchange_event)
-  - : Fired on an `HTMLSlotElement` instance ({{HTMLElement("slot")}} element) when the node(s) contained in that slot change.
-- [`onstalled`](/en-US/docs/Web/API/HTMLMediaElement/stalled_event)
-  - : Fired when the user agent is trying to fetch media data, but data is unexpectedly not forthcoming.
-- [`onstalled`](/en-US/docs/Web/API/HTMLMediaElement/stalled_event)
-  - : Fired when the user agent is trying to fetch media data, but data is unexpectedly not forthcoming.
-- [`onsubmit`](/en-US/docs/Web/API/HTMLFormElement/submit_event)
-  - : The `submit` event fires when a form is submitted.
-- [`onsuspend`](/en-US/docs/Web/API/HTMLMediaElement/suspend_event)
-  - : Fired when the media data loading has been suspended.
-- [`onsuspend`](/en-US/docs/Web/API/HTMLMediaElement/suspend_event)
-  - : Fired when the media data loading has been suspended.
-- [`ontimeupdate`](/en-US/docs/Web/API/HTMLMediaElement/timeupdate_event)
-  - : Fired when the time indicated by the [`currentTime`](/en-US/docs/Web/API/HTMLMediaElement/currentTime) property has been updated.
-- [`ontimeupdate`](/en-US/docs/Web/API/HTMLMediaElement/timeupdate_event)
-  - : Fired when the time indicated by the [`currentTime`](/en-US/docs/Web/API/HTMLMediaElement/currentTime) property has been updated.
-- [`ontoggle`](/en-US/docs/Web/API/HTMLElement/toggle_event)
-  - : Fired when the element is a [popover](/en-US/docs/Web/API/Popover_API), {{HTMLElement("dialog")}}, or {{HTMLElement("details")}} element, just after it is hidden or shown.
-- [`ontouchcancel`](/en-US/docs/Web/API/Element/touchcancel_event)
-  - : Fired when one or more touch points have been disrupted in an implementation-specific manner (for example, too many touch points are created).
-- [`ontouchend`](/en-US/docs/Web/API/Element/touchend_event)
-  - : Fired when one or more touch points are removed from the touch surface.
-- [`ontouchmove`](/en-US/docs/Web/API/Element/touchmove_event)
-  - : Fired when one or more touch points are moved along the touch surface.
-- [`ontouchstart`](/en-US/docs/Web/API/Element/touchstart_event)
-  - : Fired when one or more touch points are placed on the touch surface.
-- [`ontransitioncancel`](/en-US/docs/Web/API/Element/transitioncancel_event)
-  - : An [`Event`](/en-US/docs/Web/API/Event) fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions) has been cancelled.
-- [`ontransitionend`](/en-US/docs/Web/API/Element/transitionend_event)
-  - : An [`Event`](/en-US/docs/Web/API/Event) fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions) has finished playing.
-- [`ontransitionrun`](/en-US/docs/Web/API/Element/transitionrun_event)
-  - : An [`Event`](/en-US/docs/Web/API/Event) fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions) is created (i.e., when it is added to a set of running transitions), though not necessarily started.
-- [`ontransitionstart`](/en-US/docs/Web/API/Element/transitionstart_event)
-  - : An [`Event`](/en-US/docs/Web/API/Event) fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions) has started transitioning.
-- [`onvolumechange`](/en-US/docs/Web/API/HTMLMediaElement/volumechange_event)
-  - : Fired when the volume has changed.
-- [`onvolumechange`](/en-US/docs/Web/API/HTMLMediaElement/volumechange_event)
-  - : Fired when the volume has changed.
-- [`onwaiting`](/en-US/docs/Web/API/HTMLMediaElement/waiting_event)
-  - : Fired when playback has stopped because of a temporary lack of data.
-- [`onwaiting`](/en-US/docs/Web/API/HTMLMediaElement/waiting_event)
-  - : Fired when playback has stopped because of a temporary lack of data.
-- [`onwebkitmouseforcechanged`](/en-US/docs/Web/API/Element/webkitmouseforcechanged_event) {{non-standard_inline}}
-  - : Fired each time the amount of pressure changes on the trackpad touch screen.
-- [`onwebkitmouseforcedown`](/en-US/docs/Web/API/Element/webkitmouseforcedown_event) {{non-standard_inline}}
-  - : Fired after the mousedown event as soon as sufficient pressure has been applied to qualify as a "force click".
-- [`onwebkitmouseforceup`](/en-US/docs/Web/API/Element/webkitmouseforceup_event) {{non-standard_inline}}
-  - : Fired after the [`webkitmouseforcedown`](/en-US/docs/Web/API/Element/webkitmouseforcedown_event) event as soon as the pressure has been reduced sufficiently to end the "force click".
-- [`onwebkitmouseforcewillbegin`](/en-US/docs/Web/API/Element/webkitmouseforcewillbegin_event) {{non-standard_inline}}
-  - : Fired before the [`mousedown`](/en-US/docs/Web/API/Element/mousedown_event) event.
-- [`onwheel`](/en-US/docs/Web/API/Element/wheel_event)
-  - : Fired when the user rotates a wheel button on a pointing device (typically a mouse).
+- [`onabort`](/en-US/docs/Web/API/HTMLMediaElement/abort_event): Fired when the resource was not fully loaded, but not as the result of an error.
+- [`onanimationcancel`](/en-US/docs/Web/API/Element/animationcancel_event): Fired when an animation unexpectedly aborts.
+- [`onanimationend`](/en-US/docs/Web/API/Element/animationend_event): Fired when an animation has completed normally.
+- [`onanimationiteration`](/en-US/docs/Web/API/Element/animationiteration_event): Fired when an animation iteration has completed.
+- [`onanimationstart`](/en-US/docs/Web/API/Element/animationstart_event): Fired when an animation starts.
+- [`onauxclick`](/en-US/docs/Web/API/Element/auxclick_event): Fired when a non-primary pointing device button (e.g., any mouse button other than the left button) has been pressed and released on an element.
+- [`onbeforeinput`](/en-US/docs/Web/API/Element/beforeinput_event): Fired when the value of an input element is about to be modified.
+- [`onbeforematch`](/en-US/docs/Web/API/Element/beforematch_event): Fires on an element that is in the [hidden until found](/en-US/docs/Web/HTML/Reference/Global_attributes/hidden) state, when the browser is about to reveal its content because the user has found the content through the "find in page" feature or through fragment navigation.
+- [`onbeforetoggle`](/en-US/docs/Web/API/HTMLElement/beforetoggle_event): Fired when the element is a [popover](/en-US/docs/Web/API/Popover_API) or {{HTMLElement("dialog")}}, before it is hidden or shown.
+- [`onblur`](/en-US/docs/Web/API/Element/blur_event): Fired when an element has lost focus.
+- [`oncancel`](/en-US/docs/Web/API/HTMLInputElement/cancel_event): Fired when the user cancels the file picker dialog via the Esc key or the cancel button and when the user re-selects the same files that were previously selected.
+- [`oncancel`](/en-US/docs/Web/API/HTMLDialogElement/cancel_event): Fired when the dialog is requested to close, whether with the escape key, or via the `HTMLDialogElement.requestClose()` method.
+- [`oncanplay`](/en-US/docs/Web/API/HTMLMediaElement/canplay_event): Fired when the user agent can play the media, but estimates that not enough data has been loaded to play the media up to its end without having to stop for further buffering of content.
+- [`oncanplay`](/en-US/docs/Web/API/HTMLMediaElement/canplay_event): Fired when the user agent can play the media, but estimates that not enough data has been loaded to play the media up to its end without having to stop for further buffering of content.
+- [`oncanplaythrough`](/en-US/docs/Web/API/HTMLMediaElement/canplaythrough_event): Fired when the user agent can play the media, and estimates that enough data has been loaded to play the media up to its end without having to stop for further buffering of content.
+- [`oncanplaythrough`](/en-US/docs/Web/API/HTMLMediaElement/canplaythrough_event): Fired when the user agent can play the media, and estimates that enough data has been loaded to play the media up to its end without having to stop for further buffering of content.
+- [`onchange`](/en-US/docs/Web/API/HTMLElement/change_event): Fires when the user selects an option.
+- [`onchange`](/en-US/docs/Web/API/HTMLElement/change_event): Fired when the `value` of an {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element has been changed and committed by the user. Unlike the [`input`](/en-US/docs/Web/API/Element/input_event) event, the `change` event is not necessarily fired for each alteration to an element's `value`.
+- [`onclick`](/en-US/docs/Web/API/Element/click_event): Fired when a pointing device button (e.g., a mouse's primary button) is pressed and released on a single element.
+- [`onclose`](/en-US/docs/Web/API/HTMLDialogElement/close_event): Fired when the dialog is closed, whether with the escape key, the `HTMLDialogElement.close()` method, or via submitting a form within the dialog with [`method="dialog"`](/en-US/docs/Web/HTML/Reference/Elements/form#method).
+- [`oncommand`](/en-US/docs/Web/API/HTMLElement/command_event): Fires on an element that is controlled via a [`button`](/en-US/docs/Web/API/HTMLButtonElement) with valid [`commandForElement`](/en-US/docs/Web/API/HTMLButtonElement/commandForElement) and [`command`](/en-US/docs/Web/API/HTMLButtonElement/command) values, whenever the button is interacted with (e.g., it is clicked).
+- [`oncontentvisibilityautostatechange`](/en-US/docs/Web/API/Element/contentvisibilityautostatechange_event): Fires on any element with [`content-visibility: auto`](/en-US/docs/Web/CSS/content-visibility) set on it when it starts or stops being [relevant to the user](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment#relevant_to_the_user) and [skipping its contents](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment#skips_its_contents).
+- [`oncontextlost`](/en-US/docs/Web/API/HTMLCanvasElement/contextlost_event): Fired if the browser detects that the `CanvasRenderingContext2D` context has been lost.
+- [`oncontextmenu`](/en-US/docs/Web/API/Element/contextmenu_event): Fired when the user attempts to open a context menu.
+- [`oncontextrestored`](/en-US/docs/Web/API/HTMLCanvasElement/contextrestored_event): Fired if the browser successfully restores a `CanvasRenderingContext2D` context
+- [`oncopy`](/en-US/docs/Web/API/Element/copy_event): Fired when the user initiates a copy action through the browser's user interface.
+- [`oncuechange`](/en-US/docs/Web/API/HTMLTrackElement/cuechange_event): Sent when the underlying [`TextTrack`](/en-US/docs/Web/API/TextTrack) has changed the currently-presented cues. This event is always sent to the `TextTrack` but is also sent to the `HTMLTrackElement` if one is associated with the track. You may also use the `oncuechange` event handler to establish a handler for this event.
+- [`oncut`](/en-US/docs/Web/API/Element/cut_event): Fired when the user initiates a cut action through the browser's user interface.
+- [`ondblclick`](/en-US/docs/Web/API/Element/dblclick_event): Fired when a pointing device button (e.g., a mouse's primary button) is clicked twice on a single element.
+- [`ondrag`](/en-US/docs/Web/API/HTMLElement/drag_event): This event is fired when an element or text selection is being dragged.
+- [`ondragend`](/en-US/docs/Web/API/HTMLElement/dragend_event): This event is fired when a drag operation is being ended (by releasing a mouse button or hitting the escape key).
+- [`ondragenter`](/en-US/docs/Web/API/HTMLElement/dragenter_event): This event is fired when a dragged element or text selection enters a valid drop target.
+- [`ondragleave`](/en-US/docs/Web/API/HTMLElement/dragleave_event): This event is fired when a dragged element or text selection leaves a valid drop target.
+- [`ondragover`](/en-US/docs/Web/API/HTMLElement/dragover_event): This event is fired continuously when an element or text selection is being dragged and the mouse pointer is over a valid drop target (every 50 ms WHEN mouse is not moving ELSE much faster between 5 ms (slow movement) and 1ms (fast movement) approximately. This firing pattern is different than [`mouseover`](/en-US/docs/Web/API/Element/mouseover_event) ).
+- [`ondragstart`](/en-US/docs/Web/API/HTMLElement/dragstart_event): This event is fired when the user starts dragging an element or text selection.
+- [`ondrop`](/en-US/docs/Web/API/HTMLElement/drop_event): This event is fired when an element or text selection is dropped on a valid drop target.
+- [`ondurationchange`](/en-US/docs/Web/API/HTMLMediaElement/durationchange_event): Fired when the duration property has been updated.
+- [`ondurationchange`](/en-US/docs/Web/API/HTMLMediaElement/durationchange_event): Fired when the duration property has been updated.
+- [`onemptied`](/en-US/docs/Web/API/HTMLMediaElement/emptied_event): Fired when the media has become empty; for example, when the media has already been loaded (or partially loaded), and the [`HTMLMediaElement.load()`](/en-US/docs/Web/API/HTMLMediaElement/load) method is called to reload it.
+- [`onemptied`](/en-US/docs/Web/API/HTMLMediaElement/emptied_event): Fired when the media has become empty; for example, when the media has already been loaded (or partially loaded), and the [`HTMLMediaElement.load()`](/en-US/docs/Web/API/HTMLMediaElement/load) method is called to reload it.
+- [`onended`](/en-US/docs/Web/API/HTMLMediaElement/ended_event): Fired when playback stops when end of the media (\<audio> or \<video>) is reached or because no further data is available.
+- [`onended`](/en-US/docs/Web/API/HTMLMediaElement/ended_event): Fired when playback stops when end of the media (\<audio> or \<video>) is reached or because no further data is available.
+- [`onerror`](/en-US/docs/Web/API/HTMLMediaElement/error_event): Fired when the resource could not be loaded due to an error.
+- [`onerror`](/en-US/docs/Web/API/HTMLMediaElement/error_event): Fired when the resource could not be loaded due to an error.
+- [`onerror`](/en-US/docs/Web/API/SVGElement/error_event): Fired when an SVG element does not load properly or when an error occurs during script execution.
+- [`onerror`](/en-US/docs/Web/API/HTMLElement/error_event): Fired when a resource failed to load, or can't be used.
+- [`onfocus`](/en-US/docs/Web/API/Element/focus_event): Fired when an element has gained focus.
+- [`onfocusin`](/en-US/docs/Web/API/Element/focusin_event): Fired when an element has gained focus, after [`focus`](/en-US/docs/Web/API/Element/focus_event).
+- [`onfocusout`](/en-US/docs/Web/API/Element/focusout_event): Fired when an element has lost focus, after [`blur`](/en-US/docs/Web/API/Element/blur_event).
+- [`onformdata`](/en-US/docs/Web/API/HTMLFormElement/formdata_event): The `formdata` event fires after the entry list representing the form's data is constructed.
+- [`onfullscreenchange`](/en-US/docs/Web/API/Element/fullscreenchange_event): Sent to an `Element` when it transitions into or out of [fullscreen](/en-US/docs/Web/API/Fullscreen_API/Guide) mode.
+- [`onfullscreenerror`](/en-US/docs/Web/API/Element/fullscreenerror_event): Sent to an `Element` if an error occurs while attempting to switch it into or out of [fullscreen](/en-US/docs/Web/API/Fullscreen_API/Guide) mode.
+- [`ongesturechange`](/en-US/docs/Web/API/Element/gesturechange_event) {{non-standard_inline}}: Fired when digits move during a touch gesture.
+- [`ongestureend`](/en-US/docs/Web/API/Element/gestureend_event) {{non-standard_inline}}: Fired when there are no longer multiple fingers contacting the touch surface, thus ending the gesture.
+- [`ongesturestart`](/en-US/docs/Web/API/Element/gesturestart_event) {{non-standard_inline}}: Fired when multiple fingers contact the touch surface, thus starting a new gesture.
+- [`ongotpointercapture`](/en-US/docs/Web/API/Element/gotpointercapture_event): Fired when an element captures a pointer using [`setPointerCapture()`](/en-US/docs/Web/API/Element/setPointerCapture).
+- [`oninput`](/en-US/docs/Web/API/Element/input_event): Fires when the `value` of an {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element has been changed.
+- [`oninput`](/en-US/docs/Web/API/Element/input_event): Fires when an element's value is changed as a direct result of a user action.
+- [`oninvalid`](/en-US/docs/Web/API/HTMLInputElement/invalid_event): Fired when an element does not satisfy its constraints during constraint validation.
+- [`onkeydown`](/en-US/docs/Web/API/Element/keydown_event): Fired when a key is pressed.
+- [`onkeypress`](/en-US/docs/Web/API/Element/keypress_event) {{deprecated_inline}}: Fired when a key that produces a character value is pressed down.
+- [`onkeyup`](/en-US/docs/Web/API/Element/keyup_event): Fired when a key is released.
+- [`onload`](/en-US/docs/Web/API/SVGElement/load_event): Fires on an `SVGElement` when it is loaded in the browser.
+- [`onload`](/en-US/docs/Web/API/HTMLElement/load_event): Fires for elements containing a resource when the resource has successfully loaded.
+- [`onloadeddata`](/en-US/docs/Web/API/HTMLMediaElement/loadeddata_event): Fired when the first frame of the media has finished loading.
+- [`onloadeddata`](/en-US/docs/Web/API/HTMLMediaElement/loadeddata_event): Fired when the first frame of the media has finished loading.
+- [`onloadedmetadata`](/en-US/docs/Web/API/HTMLMediaElement/loadedmetadata_event): Fired when the metadata has been loaded.
+- [`onloadedmetadata`](/en-US/docs/Web/API/HTMLMediaElement/loadedmetadata_event): Fired when the metadata has been loaded.
+- [`onloadstart`](/en-US/docs/Web/API/HTMLMediaElement/loadstart_event): Fired when the browser has started to load a resource.
+- [`onloadstart`](/en-US/docs/Web/API/HTMLMediaElement/loadstart_event): Fired when the browser has started to load a resource.
+- [`onlostpointercapture`](/en-US/docs/Web/API/Element/lostpointercapture_event): Fired when a [captured pointer](/en-US/docs/Web/API/Pointer_events#pointer_capture) is released.
+- [`onmousedown`](/en-US/docs/Web/API/Element/mousedown_event): Fired when a pointing device button is pressed on an element.
+- [`onmouseenter`](/en-US/docs/Web/API/Element/mouseenter_event): Fired when a pointing device (usually a mouse) is moved over the element that has the listener attached.
+- [`onmouseleave`](/en-US/docs/Web/API/Element/mouseleave_event): Fired when the pointer of a pointing device (usually a mouse) is moved out of an element that has the listener attached to it.
+- [`onmousemove`](/en-US/docs/Web/API/Element/mousemove_event): Fired when a pointing device (usually a mouse) is moved while over an element.
+- [`onmouseout`](/en-US/docs/Web/API/Element/mouseout_event): Fired when a pointing device (usually a mouse) is moved off the element to which the listener is attached or off one of its children.
+- [`onmouseover`](/en-US/docs/Web/API/Element/mouseover_event): Fired when a pointing device is moved onto the element to which the listener is attached or onto one of its children.
+- [`onmouseup`](/en-US/docs/Web/API/Element/mouseup_event): Fired when a pointing device button is released on an element.
+- [`onmousewheel`](/en-US/docs/Web/API/Element/mousewheel_event) {{deprecated_inline}} {{non-standard_inline}}: Fired when a mouse wheel or similar device is operated.
+- [`onpaste`](/en-US/docs/Web/API/Element/paste_event): Fired when the user initiates a paste action through the browser's user interface.
+- [`onpause`](/en-US/docs/Web/API/HTMLMediaElement/pause_event): Fired when a request to pause play is handled and the activity has entered its paused state, most commonly occurring when the media's [`HTMLMediaElement.pause()`](/en-US/docs/Web/API/HTMLMediaElement/pause) method is called.
+- [`onpause`](/en-US/docs/Web/API/HTMLMediaElement/pause_event): Fired when a request to pause play is handled and the activity has entered its paused state, most commonly occurring when the media's [`HTMLMediaElement.pause()`](/en-US/docs/Web/API/HTMLMediaElement/pause) method is called.
+- [`onplay`](/en-US/docs/Web/API/HTMLMediaElement/play_event): Fired when the `paused` property is changed from `true` to `false`, as a result of the [`HTMLMediaElement.play()`](/en-US/docs/Web/API/HTMLMediaElement/play) method, or the `autoplay` attribute.
+- [`onplay`](/en-US/docs/Web/API/HTMLMediaElement/play_event): Fired when the `paused` property is changed from `true` to `false`, as a result of the [`HTMLMediaElement.play()`](/en-US/docs/Web/API/HTMLMediaElement/play) method, or the `autoplay` attribute.
+- [`onplaying`](/en-US/docs/Web/API/HTMLMediaElement/playing_event): Fired when playback is ready to start after having been paused or delayed due to lack of data.
+- [`onplaying`](/en-US/docs/Web/API/HTMLMediaElement/playing_event): Fired when playback is ready to start after having been paused or delayed due to lack of data.
+- [`onpointercancel`](/en-US/docs/Web/API/Element/pointercancel_event): Fired when a pointer event is canceled.
+- [`onpointerdown`](/en-US/docs/Web/API/Element/pointerdown_event): Fired when a pointer becomes active.
+- [`onpointerenter`](/en-US/docs/Web/API/Element/pointerenter_event): Fired when a pointer is moved into the hit test boundaries of an element or one of its descendants.
+- [`onpointerleave`](/en-US/docs/Web/API/Element/pointerleave_event): Fired when a pointer is moved out of the hit test boundaries of an element.
+- [`onpointermove`](/en-US/docs/Web/API/Element/pointermove_event): Fired when a pointer changes coordinates.
+- [`onpointerout`](/en-US/docs/Web/API/Element/pointerout_event): Fired when a pointer is moved out of the hit test boundaries of an element (among other reasons).
+- [`onpointerover`](/en-US/docs/Web/API/Element/pointerover_event): Fired when a pointer is moved into an element's hit test boundaries.
+- [`onpointerrawupdate`](/en-US/docs/Web/API/Element/pointerrawupdate_event): Fired when a pointer changes any properties that don't fire [`pointerdown`](/en-US/docs/Web/API/Element/pointerdown_event) or [`pointerup`](/en-US/docs/Web/API/Element/pointerup_event) events.
+- [`onpointerup`](/en-US/docs/Web/API/Element/pointerup_event): Fired when a pointer is no longer active.
+- [`onprogress`](/en-US/docs/Web/API/HTMLMediaElement/progress_event): Fired periodically as the browser loads a resource.
+- [`onprogress`](/en-US/docs/Web/API/HTMLMediaElement/progress_event): Fired periodically as the browser loads a resource.
+- [`onratechange`](/en-US/docs/Web/API/HTMLMediaElement/ratechange_event): Fired when the playback rate has changed.
+- [`onratechange`](/en-US/docs/Web/API/HTMLMediaElement/ratechange_event): Fired when the playback rate has changed.
+- [`onreset`](/en-US/docs/Web/API/HTMLFormElement/reset_event): The `reset` event fires when a form is reset.
+- [`onresize`](/en-US/docs/Web/API/HTMLVideoElement/resize_event): Fires when one or both of the [`videoWidth`](/en-US/docs/Web/API/HTMLVideoElement/videoWidth) and [`videoHeight`](/en-US/docs/Web/API/HTMLVideoElement/videoHeight) properties have just been updated.
+- [`onresize`](/en-US/docs/Web/API/SVGElement#events): Fired when an SVG document is being resized.
+- [`onscroll`](/en-US/docs/Web/API/SVGElement#events): Fired when an SVG document view is being shifted along the X and/or Y axes.
+- [`onscroll`](/en-US/docs/Web/API/Element/scroll_event): Fired when the document view or an element has been scrolled.
+- [`onscrollend`](/en-US/docs/Web/API/Element/scrollend_event): Fires when the document view has completed scrolling.
+- [`onscrollsnapchange`](/en-US/docs/Web/API/Element/scrollsnapchange_event) {{Experimental_Inline}}: Fired on the scroll container at the end of a scrolling operation when a new scroll snap target has been selected.
+- [`onscrollsnapchanging`](/en-US/docs/Web/API/Element/scrollsnapchanging_event) {{Experimental_Inline}}: Fired on the scroll container when the browser determines a new scroll snap target is pending, i.e., it will be selected when the current scroll gesture ends.
+- [`onsecuritypolicyviolation`](/en-US/docs/Web/API/Element/securitypolicyviolation_event): Fired when a [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) is violated.
+- [`onseeked`](/en-US/docs/Web/API/HTMLMediaElement/seeked_event): Fired when a seek operation completes.
+- [`onseeked`](/en-US/docs/Web/API/HTMLMediaElement/seeked_event): Fired when a seek operation completes.
+- [`onseeking`](/en-US/docs/Web/API/HTMLMediaElement/seeking_event): Fired when a seek operation begins.
+- [`onseeking`](/en-US/docs/Web/API/HTMLMediaElement/seeking_event): Fired when a seek operation begins.
+- [`onselect`](/en-US/docs/Web/API/HTMLInputElement/select_event): Fired when some text has been selected.
+- [`onselect`](/en-US/docs/Web/API/HTMLTextAreaElement/select_event): Fires when some text has been selected.
+- [`onselectionchange`](/en-US/docs/Web/API/HTMLInputElement/selectionchange_event): Fires when the text selection in an {{HTMLElement("input")}} element has been changed.
+- [`onselectstart`](/en-US/docs/Web/API/Node/selectstart_event): Fires when the user starts a new selection in this node.
+- [`onslotchange`](/en-US/docs/Web/API/HTMLSlotElement/slotchange_event): Fired on an `HTMLSlotElement` instance ({{HTMLElement("slot")}} element) when the node(s) contained in that slot change.
+- [`onstalled`](/en-US/docs/Web/API/HTMLMediaElement/stalled_event): Fired when the user agent is trying to fetch media data, but data is unexpectedly not forthcoming.
+- [`onstalled`](/en-US/docs/Web/API/HTMLMediaElement/stalled_event): Fired when the user agent is trying to fetch media data, but data is unexpectedly not forthcoming.
+- [`onsubmit`](/en-US/docs/Web/API/HTMLFormElement/submit_event): The `submit` event fires when a form is submitted.
+- [`onsuspend`](/en-US/docs/Web/API/HTMLMediaElement/suspend_event): Fired when the media data loading has been suspended.
+- [`onsuspend`](/en-US/docs/Web/API/HTMLMediaElement/suspend_event): Fired when the media data loading has been suspended.
+- [`ontimeupdate`](/en-US/docs/Web/API/HTMLMediaElement/timeupdate_event): Fired when the time indicated by the [`currentTime`](/en-US/docs/Web/API/HTMLMediaElement/currentTime) property has been updated.
+- [`ontimeupdate`](/en-US/docs/Web/API/HTMLMediaElement/timeupdate_event): Fired when the time indicated by the [`currentTime`](/en-US/docs/Web/API/HTMLMediaElement/currentTime) property has been updated.
+- [`ontoggle`](/en-US/docs/Web/API/HTMLElement/toggle_event): Fired when the element is a [popover](/en-US/docs/Web/API/Popover_API), {{HTMLElement("dialog")}}, or {{HTMLElement("details")}} element, just after it is hidden or shown.
+- [`ontouchcancel`](/en-US/docs/Web/API/Element/touchcancel_event): Fired when one or more touch points have been disrupted in an implementation-specific manner (for example, too many touch points are created).
+- [`ontouchend`](/en-US/docs/Web/API/Element/touchend_event): Fired when one or more touch points are removed from the touch surface.
+- [`ontouchmove`](/en-US/docs/Web/API/Element/touchmove_event): Fired when one or more touch points are moved along the touch surface.
+- [`ontouchstart`](/en-US/docs/Web/API/Element/touchstart_event): Fired when one or more touch points are placed on the touch surface.
+- [`ontransitioncancel`](/en-US/docs/Web/API/Element/transitioncancel_event): An [`Event`](/en-US/docs/Web/API/Event) fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions) has been cancelled.
+- [`ontransitionend`](/en-US/docs/Web/API/Element/transitionend_event): An [`Event`](/en-US/docs/Web/API/Event) fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions) has finished playing.
+- [`ontransitionrun`](/en-US/docs/Web/API/Element/transitionrun_event): An [`Event`](/en-US/docs/Web/API/Event) fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions) is created (i.e., when it is added to a set of running transitions), though not necessarily started.
+- [`ontransitionstart`](/en-US/docs/Web/API/Element/transitionstart_event): An [`Event`](/en-US/docs/Web/API/Event) fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions) has started transitioning.
+- [`onvolumechange`](/en-US/docs/Web/API/HTMLMediaElement/volumechange_event): Fired when the volume has changed.
+- [`onvolumechange`](/en-US/docs/Web/API/HTMLMediaElement/volumechange_event): Fired when the volume has changed.
+- [`onwaiting`](/en-US/docs/Web/API/HTMLMediaElement/waiting_event): Fired when playback has stopped because of a temporary lack of data.
+- [`onwaiting`](/en-US/docs/Web/API/HTMLMediaElement/waiting_event): Fired when playback has stopped because of a temporary lack of data.
+- [`onwebkitmouseforcechanged`](/en-US/docs/Web/API/Element/webkitmouseforcechanged_event) {{non-standard_inline}}: Fired each time the amount of pressure changes on the trackpad touch screen.
+- [`onwebkitmouseforcedown`](/en-US/docs/Web/API/Element/webkitmouseforcedown_event) {{non-standard_inline}}: Fired after the mousedown event as soon as sufficient pressure has been applied to qualify as a "force click".
+- [`onwebkitmouseforceup`](/en-US/docs/Web/API/Element/webkitmouseforceup_event) {{non-standard_inline}}: Fired after the [`webkitmouseforcedown`](/en-US/docs/Web/API/Element/webkitmouseforcedown_event) event as soon as the pressure has been reduced sufficiently to end the "force click".
+- [`onwebkitmouseforcewillbegin`](/en-US/docs/Web/API/Element/webkitmouseforcewillbegin_event) {{non-standard_inline}}: Fired before the [`mousedown`](/en-US/docs/Web/API/Element/mousedown_event) event.
+- [`onwheel`](/en-US/docs/Web/API/Element/wheel_event): Fired when the user rotates a wheel button on a pointing device (typically a mouse).
 
 ## Specifications
 
