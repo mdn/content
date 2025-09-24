@@ -14,7 +14,7 @@ In addition to the basic HTML global attributes, the following global attributes
 
 - `xml:lang` and `xml:base` — these are inherited from the XHTML specifications and deprecated, but kept for compatibility purposes.
 - The ARIA [`role`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles) attribute and the multiple [`aria-*`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes) states and properties, used for ensuring accessibility.
-- The [event handler attributes](/en-US/docs/Web/HTML/Reference/Global_attributes#list_of_global_event_handler_attributes) listed below.
+- The [event handler attributes](#list_of_global_event_handler_attributes) listed below.
 
 ## List of global attributes
 
