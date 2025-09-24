@@ -36,7 +36,6 @@ Firefox 144 is the current [Beta version of Firefox](https://www.firefox.com/en-
   - The CSS {{CSSXRef("::view-transition-new()")}} pseudo-element.
   - The CSS {{CSSXRef("::view-transition-old()")}} pseudo-element.
 
-
 <!-- No notable changes. -->
 
 <!-- #### Removals -->
