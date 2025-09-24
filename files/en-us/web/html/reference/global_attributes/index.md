@@ -79,7 +79,7 @@ In addition to the basic HTML global attributes, the following global attributes
 - [`itemtype`](/en-US/docs/Web/HTML/Reference/Global_attributes/itemtype)
   - : Specifies the URL of the vocabulary that will be used to define `itemprop`s (item properties) in the data structure. [`itemscope`](/en-US/docs/Web/HTML/Reference/Global_attributes/itemscope) is used to set the scope of where in the data structure the vocabulary set by `itemtype` will be active.
 - [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang)
-  - : Helps define the language of an element: the language that non-editable elements are in, or the language that editable elements should be written in by the user. The attribute contains one "language tag" (made of hyphen-separated "language subtags") in the format defined in {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}. `xml:lang` has priority over it.
+  - : Helps define the language of an element: the language that non-editable elements are in, or the language that editable elements should be written in by the user. The attribute should contain a valid {{glossary("BCP 47 language tag")}}. `xml:lang` has priority over it.
 - [`nonce`](/en-US/docs/Web/HTML/Reference/Global_attributes/nonce)
   - : A cryptographic nonce ("number used once") which can be used by [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) to determine whether or not a given fetch will be allowed to proceed.
 - [`part`](/en-US/docs/Web/HTML/Reference/Global_attributes/part)

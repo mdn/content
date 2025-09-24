@@ -33,7 +33,7 @@ detect(input, options)
 A {{jsxref("Promise")}} that fulfills with an array of objects representing the detected languages. Each object contains the following properties:
 
 - `detectedLanguage`
-  - : A [BCP 47 language tag](https://en.wikipedia.org/wiki/IETF_language_tag#List_of_common_primary_language_subtags) representing the detected language.
+  - : A {{glossary("BCP 47 language tag")}} representing the detected language.
 - `confidence`
   - : A number between `0` and `1` representing the AI model's confidence that the detected language is correct.
 
