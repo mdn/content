@@ -16,14 +16,13 @@ The `focusin` event is not cancelable.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}.
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js-nolint
 addEventListener("focusin", (event) => { })
-```
 
-> [!NOTE]
-> There is no `onfocusin` event handler property for this event.
+onfocusin = (event) => { }
+```
 
 ## Event type
 
