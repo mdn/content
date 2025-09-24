@@ -9,8 +9,7 @@ browser-compat: api.ServiceWorkerRegistration.showNotification
 {{APIRef("Web Notifications")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
 The **`showNotification()`** method of the
-{{domxref("ServiceWorkerRegistration")}} interface creates a notification on an active
-service worker.
+{{domxref("ServiceWorkerRegistration")}} interface creates a [persistent notification](/en-US/docs/Web/API/Notifications_API#persistent_notifications) associated with this service worker registration. If the user clicks on this notification, the {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} event will be fired in this service worker's global scope.
 
 ## Syntax
 
@@ -34,7 +33,7 @@ showNotification(title, options)
         - `icon` {{optional_inline}}
           - : A string containing the URL of an icon to display with the action.
 
-        Appropriate responses are built using `event.action` within the {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} event.
+        If the user selects one of these actions, then the {{domxref("NotificationEvent.action", "action")}} property of the event passed to the {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} event handler will contain the selected action.
 
     - `badge` {{optional_inline}} {{experimental_inline}}
       - : A string containing the URL of the image used to represent the notification when there isn't enough space to display the notification itself; for example, the Android Notification Bar. On Android devices, the badge should accommodate devices up to 4x resolution, about 96x96px, and the image will be automatically masked.
@@ -49,7 +48,7 @@ showNotification(title, options)
     - `image` {{optional_inline}} {{experimental_inline}}
       - : A string containing the URL of an image to be displayed in the notification.
     - `lang` {{optional_inline}}
-      - : The notification's language, as specified using a string representing a language tag according to {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}. See the Sitepoint [ISO 2 letter language codes](https://www.sitepoint.com/iso-2-letter-language-codes/) page for a simple reference. The default is the empty string.
+      - : The notification's language, as specified using a {{glossary("BCP 47 language tag")}}. The default is the empty string.
     - `renotify` {{optional_inline}} {{experimental_inline}}
       - : A boolean value specifying whether the user should be notified after a new notification replaces an old one. The default is `false`, which means they won't be notified. If `true`, then `tag` also must be set.
     - `requireInteraction` {{optional_inline}} {{experimental_inline}}
@@ -83,28 +82,19 @@ A {{jsxref('Promise')}} that resolves to `undefined`.
 ```js
 navigator.serviceWorker.register("sw.js");
 
-function showNotification() {
-  Notification.requestPermission().then((result) => {
-    if (result === "granted") {
-      navigator.serviceWorker.ready.then((registration) => {
-        registration.showNotification("Vibration Sample", {
-          body: "Buzz! Buzz!",
-          icon: "../images/touch/chrome-touch-icon-192x192.png",
-          vibrate: [200, 100, 200, 100, 200, 100, 200],
-          tag: "vibration-sample",
-        });
-      });
-    }
-  });
+async function showNotification() {
+  const permission = await Notification.requestPermission();
+  if (permission === "granted") {
+    const registration = await navigator.serviceWorker.ready;
+    registration.showNotification("Vibration Sample", {
+      body: "Buzz! Buzz!",
+      icon: "../images/touch/chrome-touch-icon-192x192.png",
+      vibrate: [200, 100, 200, 100, 200, 100, 200],
+      tag: "vibration-sample",
+    });
+  }
 }
 ```
-
-To invoke the above function at an appropriate time, you could listen to the
-{{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} event.
-
-You can also retrieve details of the {{domxref("Notification")}}s that have been fired
-from the current service worker using
-{{domxref("ServiceWorkerRegistration.getNotifications()")}}.
 
 ## Specifications
 
