@@ -122,21 +122,15 @@ In addition to the basic HTML global attributes, the following global attributes
 
 ## List of global event handler attributes
 
-- [`onabort`](/en-US/docs/Web/API/HTMLMediaElement/abort_event) 
-  - : Fired when the resource was not fully loaded, but not as the result of an error.
-- [`onabort`](/en-US/docs/Web/API/HTMLMediaElement/abort_event) 
-  - : Fired when the resource was not fully loaded, but not as the result of an error.
-- [`onabort`](/en-US/docs/Web/API/SVGElement#events) 
-  - : Fired when page loading is stopped before an SVG element has been allowed to load completely.
 - [`onafterscriptexecute`](/en-US/docs/Web/API/Document/afterscriptexecute_event) {{deprecated_inline}} {{non-standard_inline}}
   - : Fired when a static {{HTMLElement("script")}} element finishes executing its script
-- [`onanimationcancel`](/en-US/docs/Web/API/Element/animationcancel_event) 
+- [`onanimationcancel`](/en-US/docs/Web/API/Element/animationcancel_event)
   - : Fired when an animation unexpectedly aborts.
 - [`onanimationend`](/en-US/docs/Web/API/Element/animationend_event)
   - : Fired when an animation has completed normally.
-- [`onanimationiteration`](/en-US/docs/Web/API/Element/animationiteration_event) 
+- [`onanimationiteration`](/en-US/docs/Web/API/Element/animationiteration_event)
   - : Fired when an animation iteration has completed.
-- [`onanimationstart`](/en-US/docs/Web/API/Element/animationstart_event) 
+- [`onanimationstart`](/en-US/docs/Web/API/Element/animationstart_event)
   - : Fired when an animation starts.
 - [`onauxclick`](/en-US/docs/Web/API/Element/auxclick_event)
   - : Fired when a non-primary pointing device button (e.g., any mouse button other than the left button) has been pressed and released on an element.
@@ -218,16 +212,10 @@ In addition to the basic HTML global attributes, the following global attributes
   - : Fired when the media has become empty; for example, when the media has already been loaded (or partially loaded), and the [`HTMLMediaElement.load()`](/en-US/docs/Web/API/HTMLMediaElement/load) method is called to reload it.
 - [`onemptied`](/en-US/docs/Web/API/HTMLMediaElement/emptied_event)
   - : Fired when the media has become empty; for example, when the media has already been loaded (or partially loaded), and the [`HTMLMediaElement.load()`](/en-US/docs/Web/API/HTMLMediaElement/load) method is called to reload it.
-- [`onencrypted`](/en-US/docs/Web/API/HTMLMediaElement/encrypted_event)
-  - : Fired when initialization data is found in the media that indicates the media is encrypted.
-- [`onencrypted`](/en-US/docs/Web/API/HTMLMediaElement/encrypted_event)
-  - : Fired when initialization data is found in the media that indicates the media is encrypted.
 - [`onended`](/en-US/docs/Web/API/HTMLMediaElement/ended_event)
   - : Fired when playback stops when end of the media (\<audio> or \<video>) is reached or because no further data is available.
 - [`onended`](/en-US/docs/Web/API/HTMLMediaElement/ended_event)
   - : Fired when playback stops when end of the media (\<audio> or \<video>) is reached or because no further data is available.
-- [`onenterpictureinpicture`](/en-US/docs/Web/API/HTMLVideoElement/enterpictureinpicture_event)
-  - : Fired when the `HTMLVideoElement` enters picture-in-picture mode successfully.
 - [`onerror`](/en-US/docs/Web/API/HTMLMediaElement/error_event)
   - : Fired when the resource could not be loaded due to an error.
 - [`onerror`](/en-US/docs/Web/API/HTMLMediaElement/error_event)
@@ -268,8 +256,6 @@ In addition to the basic HTML global attributes, the following global attributes
   - : Fired when a key that produces a character value is pressed down.
 - [`onkeyup`](/en-US/docs/Web/API/Element/keyup_event)
   - : Fired when a key is released.
-- [`onleavepictureinpicture`](/en-US/docs/Web/API/HTMLVideoElement/leavepictureinpicture_event)
-  - : Fired when the `HTMLVideoElement` leaves picture-in-picture mode successfully.
 - [`onload`](/en-US/docs/Web/API/SVGElement/load_event)
   - : Fires on an `SVGElement` when it is loaded in the browser.
 - [`onload`](/en-US/docs/Web/API/HTMLElement/load_event)
@@ -318,7 +304,7 @@ In addition to the basic HTML global attributes, the following global attributes
   - : Fired when playback is ready to start after having been paused or delayed due to lack of data.
 - [`onplaying`](/en-US/docs/Web/API/HTMLMediaElement/playing_event)
   - : Fired when playback is ready to start after having been paused or delayed due to lack of data.
-- [`onpointercancel`](/en-US/docs/Web/API/Element/pointercancel_event) 
+- [`onpointercancel`](/en-US/docs/Web/API/Element/pointercancel_event)
   - : Fired when a pointer event is canceled.
 - [`onpointerdown`](/en-US/docs/Web/API/Element/pointerdown_event)
   - : Fired when a pointer becomes active.
@@ -360,8 +346,6 @@ In addition to the basic HTML global attributes, the following global attributes
   - : Fired on the scroll container at the end of a scrolling operation when a new scroll snap target has been selected.
 - [`onscrollsnapchanging`](/en-US/docs/Web/API/Element/scrollsnapchanging_event) {{Experimental_Inline}}
   - : Fired on the scroll container when the browser determines a new scroll snap target is pending, i.e., it will be selected when the current scroll gesture ends.
-- [`onsearch`](/en-US/docs/Web/API/HTMLInputElement/search_event) {{non-standard_inline}}
-  - : Fired when a search is initiated on an {{HTMLElement("input")}} of `type="search"`.
 - [`onsecuritypolicyviolation`](/en-US/docs/Web/API/Element/securitypolicyviolation_event)
   - : Fired when a [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) is violated.
 - [`onseeked`](/en-US/docs/Web/API/HTMLMediaElement/seeked_event)
@@ -376,10 +360,6 @@ In addition to the basic HTML global attributes, the following global attributes
   - : Fired when some text has been selected.
 - [`onselect`](/en-US/docs/Web/API/HTMLTextAreaElement/select_event)
   - : Fires when some text has been selected.
-- [`onselectionchange`](/en-US/docs/Web/API/HTMLInputElement/selectionchange_event)
-  - : Fires when the text selection in an {{HTMLElement("input")}} element has been changed.
-- [`onselectionchange`](/en-US/docs/Web/API/HTMLTextAreaElement/selectionchange_event)
-  - : Fires when the text selection in a {{HTMLElement("textarea")}} element has been changed.
 - [`onselectstart`](/en-US/docs/Web/API/Node/selectstart_event)
   - : Fires when the user starts a new selection in this node.
 - [`onslotchange`](/en-US/docs/Web/API/HTMLSlotElement/slotchange_event)
@@ -416,8 +396,6 @@ In addition to the basic HTML global attributes, the following global attributes
   - : An [`Event`](/en-US/docs/Web/API/Event) fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions) is created (i.e., when it is added to a set of running transitions), though not necessarily started.
 - [`ontransitionstart`](/en-US/docs/Web/API/Element/transitionstart_event)
   - : An [`Event`](/en-US/docs/Web/API/Event) fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions) has started transitioning.
-- [`onunload`](/en-US/docs/Web/API/SVGElement#events)
-  - : Fired when the DOM implementation removes an SVG document from a window or frame.
 - [`onvolumechange`](/en-US/docs/Web/API/HTMLMediaElement/volumechange_event)
   - : Fired when the volume has changed.
 - [`onvolumechange`](/en-US/docs/Web/API/HTMLMediaElement/volumechange_event)
@@ -426,16 +404,6 @@ In addition to the basic HTML global attributes, the following global attributes
   - : Fired when playback has stopped because of a temporary lack of data.
 - [`onwaiting`](/en-US/docs/Web/API/HTMLMediaElement/waiting_event)
   - : Fired when playback has stopped because of a temporary lack of data.
-- [`onwaitingforkey`](/en-US/docs/Web/API/HTMLMediaElement/waitingforkey_event)
-  - : Fired when playback is first blocked while waiting for a key.
-- [`onwaitingforkey`](/en-US/docs/Web/API/HTMLMediaElement/waitingforkey_event)
-  - : Fired when playback is first blocked while waiting for a key.
-- [`onwebglcontextcreationerror`](/en-US/docs/Web/API/HTMLCanvasElement/webglcontextcreationerror_event)
-  - : Fired if the user agent is unable to create a `WebGLRenderingContext` or `WebGL2RenderingContext` context.
-- [`onwebglcontextlost`](/en-US/docs/Web/API/HTMLCanvasElement/webglcontextlost_event)
-  - : Fired if the user agent detects that the drawing buffer associated with a `WebGLRenderingContext` or `WebGL2RenderingContext` object has been lost.
-- [`onwebglcontextrestored`](/en-US/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event)
-  - : Fired if the user agent restores the drawing buffer for a `WebGLRenderingContext` or `WebGL2RenderingContext` object.
 - [`onwebkitmouseforcechanged`](/en-US/docs/Web/API/Element/webkitmouseforcechanged_event) {{non-standard_inline}}
   - : Fired each time the amount of pressure changes on the trackpad touch screen.
 - [`onwebkitmouseforcedown`](/en-US/docs/Web/API/Element/webkitmouseforcedown_event) {{non-standard_inline}}
