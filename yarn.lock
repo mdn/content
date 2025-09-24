@@ -480,10 +480,10 @@
     "@lezer/common" "^1.0.2"
     "@lezer/css" "^1.1.7"
 
-"@codemirror/lang-html@^6.4.9":
-  version "6.4.9"
-  resolved "https://registry.yarnpkg.com/@codemirror/lang-html/-/lang-html-6.4.9.tgz#d586f2cc9c341391ae07d1d7c545990dfa069727"
-  integrity sha512-aQv37pIMSlueybId/2PVSP6NPnmurFDVmZwzc7jszd2KAF8qd4VBbvNYPXWQq90WIARjsdVkPbw29pszmHws3Q==
+"@codemirror/lang-html@^6.4.10", "@codemirror/lang-html@^6.4.9":
+  version "6.4.10"
+  resolved "https://registry.yarnpkg.com/@codemirror/lang-html/-/lang-html-6.4.10.tgz#e9d222e147b91003cd6b4680d81fc829c9107be5"
+  integrity sha512-h/SceTVsN5r+WE+TVP2g3KDvNoSzbSrtZXCKo4vkKdbfT5t4otuVgngGdFukOO/rwRD2++pCxoh6xD4TEVMkQA==
   dependencies:
     "@codemirror/autocomplete" "^6.0.0"
     "@codemirror/lang-css" "^6.0.0"
@@ -1613,13 +1613,13 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-6.0.28.tgz#e99a2cb1693fec9255c3cf1cfe1b02fcfd0de12d"
   integrity sha512-UE4uV0VK+HfGyXCNdq3Lyy0xNJ6bJI9Y8XtVnnv7+oFda3xtV3PQJIMPHEtC+ou1qrrHdrtaLNQ9cJSj4hi94Q==
 
-"@mdn/fred@1.4.0":
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/@mdn/fred/-/fred-1.4.0.tgz#e4140f18472e8e5aec8861ee3ba36eae858c5e5e"
-  integrity sha512-OIGJyTNfwHQ2mjcOVnNqij/cF8kRDsnqCvbF9VrB41wKVEDT8FJdXpS7pQZpQEXSmh9aCNG04rEppBF+U+JbZQ==
+"@mdn/fred@1.5.0":
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/@mdn/fred/-/fred-1.5.0.tgz#83ce25838a4d56d2f2d2ba6ce71c14346b542797"
+  integrity sha512-KwJFWhUyt4Gvhw9UNqLVmbEllyPjkyvjaBOYGSOueOxa4ZYrBdoCoYs97dRUzzw2/PqfmlxuIjqua7hp/x2vfg==
   dependencies:
     "@codemirror/lang-css" "^6.3.1"
-    "@codemirror/lang-html" "^6.4.9"
+    "@codemirror/lang-html" "^6.4.10"
     "@codemirror/lang-javascript" "^6.2.3"
     "@codemirror/lang-wast" "^6.0.2"
     "@codemirror/state" "^6.5.2"
@@ -1628,9 +1628,9 @@
     "@lit-labs/ssr" "^3.3.1"
     "@lit-labs/ssr-client" "^1.1.7"
     "@lit/task" "^1.0.3"
-    "@mdn/rari" "0.1.49"
+    "@mdn/rari" "0.1.50"
     "@mdn/watify" "^1.1.3"
-    "@mozilla/glean" "^5.0.5"
+    "@mozilla/glean" "^5.0.6"
     codemirror "^6.0.1"
     compression "^1.8.1"
     concurrently "^9.2.1"
@@ -1651,18 +1651,7 @@
   resolved "https://registry.yarnpkg.com/@mdn/minimalist/-/minimalist-2.0.4.tgz#6488ab0cb65b059446dcd9bf542246b81febe241"
   integrity sha512-jocePw/fsGcBxO67D+iWQLZ0TQjwNVonaME2BFN98QIm/e1kTY1/k2s4fOqH5MMa3QYURxa098bI4sChn6s/7Q==
 
-"@mdn/rari@0.1.49":
-  version "0.1.49"
-  resolved "https://registry.yarnpkg.com/@mdn/rari/-/rari-0.1.49.tgz#abee70b8b1f0778b6d0bea0a1d3947ae796d4f56"
-  integrity sha512-7Qha/9PZXGbTImQ+8IfW+eKQnAJWgFY3d1gvuhH/ZXTiISoM9rEjOnD6JMjvBrqJzEy59y7E6gOTNIKjHuXoWg==
-  dependencies:
-    extract-zip "^2.0.1"
-    https-proxy-agent "^7.0.2"
-    json-schema-to-typescript "^15.0.0"
-    proxy-from-env "^1.1.0"
-    tar "^7.4.3"
-
-"@mdn/rari@^0.1.49":
+"@mdn/rari@0.1.50", "@mdn/rari@^0.1.49":
   version "0.1.50"
   resolved "https://registry.yarnpkg.com/@mdn/rari/-/rari-0.1.50.tgz#12a0b5c6afb47e1fcb3e3c85c9b6df18b13090f3"
   integrity sha512-xsa/byHY2nlybwzEEt8C+QAOpHwqVbY7+yb9AzikOyAnRGghELDTUkcf5jpuNBLfrINKpqIfiwHwL961iE6Uwg==
@@ -1779,10 +1768,19 @@
     web-features "^2.40.2"
     web-specs "^3.54.0"
 
-"@mozilla/glean@5.0.5", "@mozilla/glean@^5.0.5":
+"@mozilla/glean@5.0.5":
   version "5.0.5"
   resolved "https://registry.yarnpkg.com/@mozilla/glean/-/glean-5.0.5.tgz#6b319c49b3a0d421a529b986d9df9506ff353bb7"
   integrity sha512-OvimNMd4X/HzP9i5UOpYKpi+nqm8GugwIVV/XA5dgDfIkH1MniXBpUbBtn7xZdoHPg3AXpdmESkSN6f0THQPOQ==
+  dependencies:
+    fflate "^0.8.0"
+    tslib "^2.3.1"
+    uuid "^9.0.0"
+
+"@mozilla/glean@^5.0.6":
+  version "5.0.6"
+  resolved "https://registry.yarnpkg.com/@mozilla/glean/-/glean-5.0.6.tgz#436745643c4b40d58eaf4e0a8b1dee551ae2a41d"
+  integrity sha512-Oz4M+pxHmTcy82iCCmcARjEwwDCsMZCwidRhdZU0pYueEFJgDc5S+u48Y68SxEsExFAthuhzE2H4BcvwsRhYJg==
   dependencies:
     fflate "^0.8.0"
     tslib "^2.3.1"
