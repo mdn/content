@@ -11,7 +11,7 @@ sidebar: jsref
 
 {{SeeCompatTable}}
 
-The **`getOrInsertComputed()`** method of {{jsxref("Map")}} instances returns the value corresponding to the key in this `Map`, or inserts and returns a default value computed from a callback if there is none.
+The **`getOrInsertComputed()`** method of {{jsxref("Map")}} instances returns the value corresponding to the specified key in this `Map`. If the key is not present, it inserts a new entry with the key and a default value computed from a given callback, and returns the inserted value.
 
 Use this method instead of {{jsxref("Map.prototype.getOrInsert()")}} when the default value is expensive to compute, and you want to avoid computing it unless it's actually needed.
 
@@ -45,7 +45,7 @@ getOrInsertComputed(key, callback)
 
 ### Return value
 
-The value associated with the specified key in the `Map` object. If the key can't be found, `callback(key)` is inserted and returned.
+The value associated with the specified key in the `Map` object. If the key can't be found, the result of `callback(key)` is inserted and returned.
 
 ## Examples
 
@@ -74,6 +74,8 @@ map.getOrInsertComputed("bar", defaultCreator); // No log
 
 ## See also
 
+- [Polyfill of `Map.prototype.getOrInsertComputed` in `core-js`](https://github.com/zloirock/core-js#map-upsert)
+- [es-shims polyfill of `Map.prototype.getOrInsertComputed`](https://www.npmjs.com/package/map.prototype.getorinsertcomputed)
 - {{jsxref("Map")}}
 - {{jsxref("Map.prototype.get()")}}
 - {{jsxref("Map.prototype.set()")}}

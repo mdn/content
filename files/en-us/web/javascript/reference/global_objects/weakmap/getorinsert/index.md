@@ -11,7 +11,9 @@ sidebar: jsref
 
 {{SeeCompatTable}}
 
-The **`getOrInsert()`** method of {{jsxref("WeakMap")}} instances returns the value corresponding to the key in this `WeakMap`, or inserts and returns a default value if there is none.
+The **`getOrInsert()`** method of {{jsxref("WeakMap")}} instances returns the value corresponding to the specified key in this `WeakMap`. If the key is not present, it inserts a new entry with the key and a given default value, and returns the inserted value.
+
+If the computation of the default value is expensive, consider using {{jsxref("WeakMap.prototype.getOrInsertComputed()")}} instead, which takes a callback to compute the default value only if it's actually needed.
 
 {{InteractiveExample("JavaScript Demo: WeakMap.prototype.getOrInsert()")}}
 
@@ -70,6 +72,8 @@ console.log(wm.getOrInsert(obj, "another default")); // "default"
 
 ## See also
 
+- [Polyfill of `WeakMap.prototype.getOrInsert` in `core-js`](https://github.com/zloirock/core-js#map-upsert)
+- [es-shims polyfill of `WeakMap.prototype.getOrInsert`](https://www.npmjs.com/package/weakmap.prototype.getorinsert)
 - {{jsxref("WeakMap")}}
 - {{jsxref("WeakMap.prototype.get()")}}
 - {{jsxref("WeakMap.prototype.set()")}}

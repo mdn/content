@@ -11,7 +11,9 @@ sidebar: jsref
 
 {{SeeCompatTable}}
 
-The **`getOrInsert()`** method of {{jsxref("Map")}} instances returns the value corresponding to the key in this `Map`, or inserts and returns a default value if there is none.
+The **`getOrInsert()`** method of {{jsxref("Map")}} instances returns the value corresponding to the specified key in this `Map`. If the key is not present, it inserts a new entry with the key and a given default value, and returns the inserted value.
+
+If the computation of the default value is expensive, consider using {{jsxref("Map.prototype.getOrInsertComputed()")}} instead, which takes a callback to compute the default value only if it's actually needed.
 
 {{InteractiveExample("JavaScript Demo: Map.prototype.getOrInsert()")}}
 
@@ -54,7 +56,7 @@ if (map.has(key)) {
 }
 ```
 
-Alternatively, you can also see patterns like the following (which is slightly less reliable if `null` or `undefined` are valid values in your map):
+It is also similar to the following pattern (which is slightly less reliable if `null` or `undefined` are valid values in your map):
 
 ```js
 map.set(key, map.get(key) ?? defaultValue);
@@ -87,6 +89,8 @@ document.body.dataset.theme = options.get("theme");
 
 ## See also
 
+- [Polyfill of `Map.prototype.getOrInsert` in `core-js`](https://github.com/zloirock/core-js#map-upsert)
+- [es-shims polyfill of `Map.prototype.getOrInsert`](https://www.npmjs.com/package/map.prototype.getorinsert)
 - {{jsxref("Map")}}
 - {{jsxref("Map.prototype.get()")}}
 - {{jsxref("Map.prototype.set()")}}

@@ -354,9 +354,9 @@ These properties are defined on `Map.prototype` and shared by all `Map` instance
 - {{jsxref("Map.prototype.get()")}}
   - : Returns the value corresponding to the key in this `Map`, or `undefined` if there is none.
 - {{jsxref("Map.prototype.getOrInsert()")}}
-  - : Returns the value corresponding to the key in this `Map`, or inserts and returns a default value if there is none.
+  - : Returns the value corresponding to the specified key in this `Map`. If the key is not present, it inserts a new entry with the key and a given default value, and returns the inserted value.
 - {{jsxref("Map.prototype.getOrInsertComputed()")}}
-  - : Returns the value corresponding to the key in this `Map`, or inserts and returns a default value computed from a callback if there is none.
+  - : Returns the value corresponding to the specified key in this `Map`. If the key is not present, it inserts a new entry with the key and a default value computed from a given callback, and returns the inserted value.
 - {{jsxref("Map.prototype.has()")}}
   - : Returns a boolean indicating whether an entry with the specified key exists in this `Map` or not.
 - {{jsxref("Map.prototype.keys()")}}

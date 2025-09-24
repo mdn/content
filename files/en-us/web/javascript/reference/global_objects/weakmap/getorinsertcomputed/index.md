@@ -11,7 +11,7 @@ sidebar: jsref
 
 {{SeeCompatTable}}
 
-The **`getOrInsertComputed()`** method of {{jsxref("WeakMap")}} instances returns the value corresponding to the key in this `WeakMap`, or inserts and returns a default value computed from a callback if there is none.
+The **`getOrInsertComputed()`** method of {{jsxref("WeakMap")}} instances returns the value corresponding to the specified key in this `WeakMap`. If the key is not present, it inserts a new entry with the key and a default value computed from a given callback, and returns the inserted value.
 
 Use this method instead of {{jsxref("WeakMap.prototype.getOrInsert()")}} when the default value is expensive to compute, and you want to avoid computing it unless it's actually needed.
 
@@ -47,7 +47,7 @@ getOrInsertComputed(key, callback)
 
 ### Return value
 
-The value associated with the specified key in the `WeakMap` object. If the key can't be found, `callback(key)` is inserted and returned.
+The value associated with the specified key in the `WeakMap` object. If the key can't be found, the result of `callback(key)` is inserted and returned.
 
 ## Examples
 
@@ -87,6 +87,8 @@ const value2 = computeWithCache(options); // No log
 
 ## See also
 
+- [Polyfill of `WeakMap.prototype.getOrInsertComputed` in `core-js`](https://github.com/zloirock/core-js#map-upsert)
+- [es-shims polyfill of `WeakMap.prototype.getOrInsertComputed`](https://www.npmjs.com/package/weakmap.prototype.getorinsertcomputed)
 - {{jsxref("WeakMap")}}
 - {{jsxref("WeakMap.prototype.get()")}}
 - {{jsxref("WeakMap.prototype.set()")}}
