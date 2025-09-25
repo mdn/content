@@ -6,7 +6,7 @@ page-type: guide
 
 {{DefaultAPISidebar("Web Speech API")}}
 
-The Web Speech API provides two distinct areas of functionality — speech recognition, and speech synthesis (also known as text to speech, or TTS) — which open up interesting new possibilities for accessibility, and control mechanisms. This article provides an introduction to both areas, along with demos.
+The Web Speech API provides two distinct areas of functionality — speech recognition and speech synthesis (also known as text to speech, or TTS) — which open up interesting possibilities for accessibility and control. This article provides an introduction to both the areas, along with demos.
 
 ## Speech recognition
 
