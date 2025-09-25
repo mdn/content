@@ -62,7 +62,7 @@ const SpeechRecognitionEvent =
 
 #### Color list
 
-The next part of our code represents sample colors that we will print to the UI to give users an idea of what to say:
+The next part of our code defines a few sample colors that we print to the UI to give users an idea of what to say:
 
 ```js
 const colors = [
