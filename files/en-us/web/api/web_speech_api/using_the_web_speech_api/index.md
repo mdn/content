@@ -10,11 +10,11 @@ The Web Speech API provides two distinct areas of functionality — speech recog
 
 ## Speech recognition
 
-Speech recognition involves receiving speech through a device's microphone (or an audio track), which is then checked by a speech recognition service. When a word or phrase is successfully recognized, it is returned as a result (or list of results) as a text string, and further actions can be initiated as a result.
+Speech recognition involves receiving audio from a device's microphone (or from an audio track), which is then checked by a speech recognition service. When the service successfully recognizes a word or phrase, it returns a text string (or a list of strings) that you can use to initiate further actions.
 
-The Web Speech API has a main controller interface for this — {{domxref("SpeechRecognition")}} — plus several related interfaces for representing results, etc.
+The Web Speech API has a main controller interface for this — {{domxref("SpeechRecognition")}} — and several related interfaces for representing results.
 
-Generally, the default speech recognition system available on the device will be used for the speech recognition. Most modern OSes have a speech recognition system for issuing voice commands such as Dictation on macOS or Copilot on Windows.
+Generally, the speech recognition system available on the user's device is used for the speech recognition. Most modern operating systems have a speech recognition system for issuing voice commands, such as **Dictation** on macOS or **Copilot** on Windows.
 
 By default, using Speech Recognition on a web page usually involves a server-based recognition engine. Your audio is sent to a web service for recognition processing, so it won't work offline.
 
