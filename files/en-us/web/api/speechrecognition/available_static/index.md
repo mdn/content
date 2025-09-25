@@ -8,7 +8,7 @@ browser-compat: api.SpeechRecognition.available
 
 {{APIRef("Web Speech API")}}
 
-The **`available()`** static method of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) checks whether specified languages are available for speech recognition.
+The **`available()`** static method of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) checks whether the specified languages are available for speech recognition.
 
 To install a language pack for speech recognition locally, you need to use the {{domxref("SpeechRecognition.install_static", "SpeechRecognition.install()")}} method.
 

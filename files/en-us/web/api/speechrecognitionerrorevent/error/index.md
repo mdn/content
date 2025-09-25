@@ -24,7 +24,7 @@ An enumerated value representing the type of error. Possible values include:
   - : There was an error in the speech recognition grammar or semantic tags, or the chosen
     grammar format or semantic tag format was unsupported.
     > [!NOTE]
-    > This error is no longer in the Web Speech API specification; the whole concept of grammar has been removed. Related features have been kept in the specification and are still recognized by supporting browsers for backwards compatibility purposes, but they have no effect on speech recognition services.
+    > This error is no longer part of the Web Speech API specification; the concept of grammar has been removed from the Web Speech API. Related features remain in the specification and are still recognized by supporting browsers for backwards compatibility, but they have no effect on speech recognition services.
 - `language-not-supported`
   - : The user agent does not support the language specified in the [`lang`](/en-US/docs/Web/API/SpeechRecognition/lang) attribute of the {{domxref("SpeechRecognition")}} object. The set of supported languages is browser-dependent, and there is no way to programmatically determine from front-end code the languages a user's browser supports for speech recognition.
 - `network`

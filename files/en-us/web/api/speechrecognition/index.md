@@ -46,7 +46,7 @@ The concept of grammar has been removed from the Web Speech API. Related feature
 ## Static methods
 
 - {{domxref("SpeechRecognition.available_static", "SpeechRecognition.available()")}}
-  - : Checks whether specified languages are available for speech recognition.
+  - : Checks whether the specified languages are available for speech recognition.
 - {{domxref("SpeechRecognition.install_static", "SpeechRecognition.install()")}}
   - : Installs the required language packs for on-device speech recognition of the specified languages.
 
@@ -59,7 +59,7 @@ _`SpeechRecognition` also inherits methods from its parent interface, {{domxref(
 - {{domxref("SpeechRecognition.start()")}}
   - : Starts the speech recognition service to listen for incoming audio (from a microphone or an audio track) and returns the results of that recognition.
 - {{domxref("SpeechRecognition.stop()")}}
-  - : Stops the speech recognition service from listening to incoming audio and attempts to return a {{domxref("SpeechRecognitionResult")}} based on the results captured so far.
+  - : Stops the speech recognition service from listening for incoming audio and attempts to return a {{domxref("SpeechRecognitionResult")}} based on the results captured so far.
 
 ## Events
 
@@ -90,7 +90,7 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 
 ## Examples
 
-In our [Speech color changer](https://github.com/mdn/dom-examples/tree/main/web-speech-api/speech-color-changer) example, we create a new `SpeechRecognition` object instance using the {{domxref("SpeechRecognition.SpeechRecognition", "SpeechRecognition()")}} constructor.
+In our [Speech color changer](https://mdn.github.io/dom-examples/web-speech-api/speech-color-changer) example, we create a new `SpeechRecognition` object instance using the {{domxref("SpeechRecognition.SpeechRecognition", "SpeechRecognition()")}} constructor.
 
 After some other values have been defined, we then set it so that the recognition service starts when a button is clicked (see {{domxref("SpeechRecognition.start()")}}). When a result has been successfully recognized, the {{domxref("SpeechRecognition.result_event", "result")}} event fires, we extract the color that was spoken from the event object, and then set the background color of the {{htmlelement("html")}} element to that color.
 

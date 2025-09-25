@@ -22,7 +22,7 @@ To improve privacy and performance, you can specify that speech recognition be p
 
 ### Demo
 
-To demonstrate usage of Web speech recognition, we've written a demo called [Speech color changer](https://github.com/mdn/dom-examples/tree/main/web-speech-api/speech-color-changer). When the button is pressed, you can say an HTML color keyword, and the app's background color will change to that color.
+To demonstrate how to use speech recognition, we've created a sample app called [Speech color changer](https://mdn.github.io/dom-examples/web-speech-api/speech-color-changer). After you press the **Start recognition** button, say an HTML color keyword. The app's background color will change to that color.
 
 ![Screenshot of our demo app called speech color changer. It invites the user to press the button and say a color. It turns the background of the app to that color. In this case, it has turned the background color to pink.](speech-color-changer.png)
 
@@ -103,7 +103,7 @@ recognition.maxAlternatives = 1;
 
 #### Starting the speech recognition
 
-After grabbing references to the output paragraph, the `<html>` element (so we can output diagnostic messages and update the app background color later on), the instructions paragraph, and the `<button>`, we implement an `onclick` handler so that when it is pressed, the speech recognition service will start. This is achieved by calling {{domxref("SpeechRecognition.start()")}}. A `forEach()` method is also used, to output colored indicators showing what colors to try saying.
+After grabbing references to the output paragraph, the `<html>` element, the instruction paragraph, and the `<button>`, we implement an `onclick` handler. When a user presses the button, the speech recognition service starts by calling {{domxref("SpeechRecognition.start()")}}. We've also used a `forEach()` method to output colored indicators showing what colors to users can try to say.
 
 ```js
 const diagnostic = document.querySelector(".output");
