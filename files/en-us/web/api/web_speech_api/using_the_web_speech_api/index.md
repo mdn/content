@@ -16,7 +16,7 @@ The Web Speech API has a main controller interface for this — {{domxref("Speec
 
 Generally, the speech recognition system available on the user's device is used for the speech recognition. Most modern operating systems have a speech recognition system for issuing voice commands, such as **Dictation** on macOS or **Copilot** on Windows.
 
-By default, using Speech Recognition on a web page usually involves a server-based recognition engine. Your audio is sent to a web service for recognition processing, so it won't work offline.
+By default, using speech recognition on a web page usually involves a server-based recognition engine. Your audio is sent to a web service for recognition processing, so it won't work offline.
 
 To improve privacy and performance, it is possible to specify that you want the speech recognition performed on-device, thereby ensuring that neither audio nor transcribed speech are sent to a third-party service for processing. We specifically cover the on-device functionality in [on-device speech recognition](#on-device_speech_recognition).
 
