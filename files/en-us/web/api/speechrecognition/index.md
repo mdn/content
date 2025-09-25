@@ -59,7 +59,7 @@ _`SpeechRecognition` also inherits methods from its parent interface, {{domxref(
 - {{domxref("SpeechRecognition.start()")}}
   - : Starts the speech recognition service to listen for incoming audio (from a microphone or an audio track) and returns the results of that recognition.
 - {{domxref("SpeechRecognition.stop()")}}
-  - : Stops the speech recognition service from listening to incoming audio, and attempts to return a {{domxref("SpeechRecognitionResult")}} using the results captured so far.
+  - : Stops the speech recognition service from listening to incoming audio and attempts to return a {{domxref("SpeechRecognitionResult")}} based on the results captured so far.
 
 ## Events
 
