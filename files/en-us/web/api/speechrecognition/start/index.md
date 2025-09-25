@@ -20,7 +20,7 @@ start(audioTrack)
 ### Parameters
 
 - `audioTrack` {{optional_inline}}
-  - : A {{domxref("MediaStreamTrack")}} instance to perform speech recognition on. If this property is not specified, the service attempts to recognize audio input from the user's microphone instead.
+  - : A {{domxref("MediaStreamTrack")}} instance to perform speech recognition on. If not specified, the service attempts to recognize audio from the user's microphone instead.
 
 ### Return value
 
