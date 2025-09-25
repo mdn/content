@@ -192,8 +192,15 @@ When calling `tabs.remove()`:
 
 #### Content script environment
 
-- **In Firefox:** The global scope of the [content script environment](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#content_script_environment) is not strictly equal to `window` ([Firefox bug 1208775](https://bugzil.la/1208775)). More specifically, the global scope (`globalThis`) is composed of standard JavaScript features as usual, plus `window` as the prototype of the global scope. Most DOM APIs are inherited from the page through `window`, through [Xray vision](/en-US/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts#xray_vision_in_firefox) to shield the content script from modifications by the web page. A content script may encounter JavaScript objects from its global scope or Xray-wrapped versions from the web page.
+- **In Firefox:** The global scope of the [content script environment](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#content_script_environment) is not strictly equal to `window` ([Firefox bug 1208775](https://bugzil.la/1208775)). More specifically, the global scope (`globalThis`) is composed of standard JavaScript features as usual, plus `window` as the prototype of the global scope. Most DOM APIs are inherited from the page through `window`, through [Xray vision](/en-US/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts#xray_vision_in_firefox) to shield the content script from modifications by the web page. A content script may encounter JavaScript objects from its global scope or Xray-wrapped versions from the web page. 
 - **In Chrome:** The global scope is `window`, and the available DOM APIs are generally independent of the web page (other than sharing the underlying DOM). Content scripts cannot directly access JavaScript objects from the web page.
+
+#### Content script page event handlers
+
+- **In Firefox:** separate event handlers are not maintained per world. This means that the most recent content script to request `element.onclick = xxx` overwrites the page's or other extensions' event handlers.
+- **In Chrome:** separate event handlers are maintained per world, so Chrome maintains event handlers for a page and every requesting extension.
+
+See [Firefox bug 1965975](https://bugzil.la/1965975#c5) for more information.
 
 #### Executing code in a web page from content script
 
