@@ -4,7 +4,7 @@ slug: Web/API/Viewport_segments_API/Using
 page-type: guide
 ---
 
-{{DefaultAPISidebar("Viewport segments API")}}
+{{DefaultAPISidebar("Viewport Segments API")}}
 
 This article explains how to use the [Viewport Segments API](/en-US/docs/Web/API/Viewport_segments_API) to create responsive designs optimized for different viewport segment sizes and arrangements.
 
@@ -12,7 +12,7 @@ This article explains how to use the [Viewport Segments API](/en-US/docs/Web/API
 
 Foldable devices include smartphones, tablets, and laptops. Some fold inward, with the display folding into the interior of the device, and some fold outward, with the display wrapping around the device. Foldable devices come in a variety of forms: some have an actual folding screen, whereas some have separate screens with a physical hinge in the middle. They may be used in landscape orientation, with two screens side-by-side, and portrait orientation, with a top and a bottom screen.
 
-Whatever the case, foldable device displays are intended to act as different segments of the same display surface. While one person's foldable device may appear seemless and be used fully flat, similar to a single-segmented viewport, another may have an apparent seam be used at an angle that is less than a fully open, flat screen. This presents some unique challenges. You can optimize your layout for the display as a single entity, but how can you ensure that design elements fit snugly on the different segments and are not cut into two pieces? And how can you prevent content from being hidden by the physical fold/join?
+Whatever the case, foldable device displays are intended to act as different segments of the same display surface. While one person's foldable device may appear seamless and be used fully flat, similar to a single-segmented viewport, another may have an apparent seam be used at an angle that is less than a fully open, flat screen. This presents some unique challenges. You can optimize your layout for the display as a single entity, but how can you ensure that design elements fit snugly on the different segments and are not cut into two pieces? And how can you prevent content from being hidden by the physical fold/join?
 
 The viewport segments API provides features that allow you to detect (in CSS and JavaScript) whether the user's device screen has a fold or join, what size the different segments are, whether they are the same size, and what orientation they are in (side-by-side or top-to-bottom). We'll introduce you to these features in the following sections, then walk through a complete example to show them in action.
 
@@ -80,8 +80,7 @@ In a layout, you can use these variables to set your containers to fit neatly in
   .wrapper {
     display: grid;
     grid-template: "left fold right";
-    grid-columns: env(viewport-segment-width 0 0)
-      env(viewport-segment-width 1 0);
+    grid-column: env(viewport-segment-width 0 0) env(viewport-segment-width 1 0);
   }
   .firstSection {
     grid-area: left;
@@ -97,7 +96,7 @@ In a layout, you can use these variables to set your containers to fit neatly in
     grid-template:
       "top"
       "bottom";
-    grid-rows: env(viewport-segment-height 0 1) env(viewport-segment-width 0 0);
+    grid-row: env(viewport-segment-height 0 1) env(viewport-segment-width 0 0);
   }
   .firstSection {
     grid-area: top;
@@ -114,24 +113,26 @@ We could add an empty middle "fold" cell to stop content being obscured by the f
 
 ```css
 @media (horizontal-viewport-segments: 2) {
-   .wrapper {
-     grid-template: "left fold right";
-     grid-columns:
-        env(viewport-segment-width 0 0)
-        calc(100vw - (env(viewport-segment-width 0 0) + env(viewport-segment-width 1 0))
-        env(viewport-segment-width 1 0);
-   }
+  .wrapper {
+    grid-template: "left fold right";
+    grid-column: env(viewport-segment-width 0 0)
+      calc(
+        100vw -
+          (env(viewport-segment-width 0 0) + env(viewport-segment-width 1 0))
+      )
+      env(viewport-segment-width 1 0);
+  }
 }
 
 @media (vertical-viewport-segments: 2) {
-   .wrapper {
-     grid-template:
+  .wrapper {
+    grid-template:
       "top"
       "fold"
       "bottom";
-     grid-rows: env(viewport-segment-height 0 1) 1fr env(viewport-segment-width 0 0);
-
-   }
+    grid-row: env(viewport-segment-height 0 1) 1fr
+      env(viewport-segment-width 0 0);
+  }
 }
 ```
 
@@ -153,7 +154,7 @@ segments.forEach((segment) =>
 
 ## A complete example
 
-Let's look at the Viewport Segment API features in action in a real example. You can see our example running live at [Viewport segment API demo](https://mdn.github.io/dom-examples/viewport-segment-api/) (see the full [source code](https://github.com/mdn/dom-examples/tree/main/viewport-segment-api) also). If possible, view the demo on a real foldable device. Browser developer tools that enable visually emulating the multiple segments of foldable devices generally don't include emulation of the physical segmentation.
+Let's look at the Viewport Segment API features in action in a real example. You can see our example running live at [Viewport segment API demo](https://mdn.github.io/dom-examples/viewport-segments-api/) (see the full [source code](https://github.com/mdn/dom-examples/tree/main/viewport-segments-api) also). If possible, view the demo on a real foldable device. Browser developer tools that enable visually emulating the multiple segments of foldable devices generally don't include emulation of the physical segmentation.
 
 > [!NOTE]
 > This example is adapted from [Origin trial for Foldable APIs](https://developer.chrome.com/blog/foldable-apis-ot) by Alexis Menard and Thomas Steiner, originally published on `developer.chrome.com` in 2024 under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/).

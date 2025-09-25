@@ -56,12 +56,19 @@ Firefox 144 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ### APIs
 
-<!-- #### DOM -->
+- The [`lock()`](/en-US/docs/Web/API/ScreenOrientation/lock) and [`unlock()`](/en-US/docs/Web/API/ScreenOrientation/unlock) methods of the {{domxref("ScreenOrientation")}} interface are now supported for Android and for Windows tablets. ([Firefox bug 1983483](https://bugzil.la/1983483))
+
+#### DOM
+
+- The `moveBefore()` method is now supported on the {{domxref("Element.moveBefore()","Element")}}, {{domxref("DocumentFragment.moveBefore()","DocumentFragment")}} and {{domxref("Document.moveBefore()","Document")}} interfaces. This allows moving of an immediate child element of the object, before another of its child elements. Unlike with {{domxref("Node.insertBefore()")}}, moved elements retain their state. ([Firefox bug 1983688](https://bugzil.la/1983688)).
 
 #### Media, WebRTC, and Web Audio
 
 - {{domxref("RTCDataChannel")}} instances are now [transferrable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects), and hence can be passed to [workers](/en-US/docs/Web/API/Worker). ([Firefox bug 1209163](https://bugzil.la/1209163)).
 - The [`closing` event](/en-US/docs/Web/API/RTCDataChannel/closing_event) and the `onclosing()` event handler are now supported on the {{domxref("RTCDataChannel")}} interface. ([Firefox bug 1611953](https://bugzil.la/1611953)).
+- The {{domxref("MediaDevices/getUserMedia","getUserMedia()")}} and {{domxref("MediaDevices/getDisplayMedia","getDisplayMedia()")}} methods of the {{domxref("MediaDevices")}} interface now support the [`resizeMode`](/en-US/docs/Web/API/MediaTrackConstraints#resizemode) constraint.
+  This constraint allows developers to request video that matches other constraints, such as resolution and frame rate, even if the requested constraints are not supported by the underlying hardware.
+  The browser may then crop, downscale, or reduce the frame rate of the video captured from a camera, or downscale (but not crop) the video captured from a screen or window. ([Firefox bug 1286945](https://bugzil.la/1286945)).
 
 <!-- #### Removals -->
 

@@ -186,8 +186,8 @@ Take the following example:
         <input type="radio" id="tacos" name="meal" value="tacos" />
       </li>
       <li>
-        <label for="bolognaise">Bolognaise</label>
-        <input type="radio" id="bolognaise" name="meal" value="bolognaise" />
+        <label for="bolognese">Bolognese</label>
+        <input type="radio" id="bolognese" name="meal" value="bolognese" />
       </li>
     </ul>
   </fieldset>

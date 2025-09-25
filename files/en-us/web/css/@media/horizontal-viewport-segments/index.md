@@ -60,7 +60,7 @@ To calculate how much width the fold takes up in between the two, we subtract th
 }
 ```
 
-See our [Viewport segment API demo](https://mdn.github.io/dom-examples/viewport-segment-api/) for a full working demo ([source code](https://github.com/mdn/dom-examples/tree/main/viewport-segment-api)). Also check out [Using the Viewport Segments API](/en-US/docs/Web/API/Viewport_segments_API/Using) for a full demo explanation.
+See our [Viewport segment API demo](https://mdn.github.io/dom-examples/viewport-segments-api/) for a full working demo ([source code](https://github.com/mdn/dom-examples/tree/main/viewport-segments-api)). Also check out [Using the Viewport Segments API](/en-US/docs/Web/API/Viewport_segments_API/Using) for a full demo explanation.
 
 ## Specifications
 

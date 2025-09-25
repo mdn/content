@@ -14,8 +14,9 @@ If successful, the registration associates the provided script URL to a _scope_,
 A single registration is created for each unique scope.
 If `register()` is called for a scope that has an existing registration, the registration is updated with any changes to the scriptURL or options.
 If there are no changes, then the existing registration is returned.
-Note that calling `register()` with the same scope and `scriptURL` does not restart the installation process.
-You can therefore call this method unconditionally from a controlled page: you don't need to first check whether there's an active registration or service worker.
+Calling `register()` with the same scope and `scriptURL` does not restart the installation process, so it is generally safe to call this method unconditionally from a controlled page.
+However, it does send a network request for the service worker script, which may put more load on the server.
+If this is a concern, you can first check for an existing registration using {{domxref("ServiceWorkerContainer.getRegistration()")}}.
 
 A document can potentially be within the scope of several registrations with different service workers and options.
 The browser will associate the document with the matching registration that has the most specific scope.

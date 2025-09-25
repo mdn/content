@@ -44,18 +44,14 @@ This example establishes a handler for the `tonechange` event which updates an e
 This can be done using {{domxref("EventTarget.addEventListener", "addEventListener()")}}:
 
 ```js
-dtmfSender.addEventListener(
-  "tonechange",
-  (ev) => {
-    let tone = ev.tone;
-    if (tone === "") {
-      tone = "&lt;none&gt;";
-    }
+dtmfSender.addEventListener("tonechange", (ev) => {
+  let tone = ev.tone;
+  if (tone === "") {
+    tone = "&lt;none&gt;";
+  }
 
-    document.getElementById("playingTone").innerText = tone;
-  },
-  false,
-);
+  document.getElementById("playingTone").innerText = tone;
+});
 ```
 
 You can also just set the `ontonechange` event handler property directly:

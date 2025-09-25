@@ -7,7 +7,7 @@ status:
 browser-compat: api.Viewport.segments
 ---
 
-{{DefaultAPISidebar("Viewport segments API")}}{{seecompattable}}
+{{DefaultAPISidebar("Viewport Segments API")}}{{seecompattable}}
 
 The **Viewport Segments API** allows developers to access the position and dimensions of logically separate viewport segments using CSS and JavaScript. _Viewport segments_ are created when the viewport is split by one or more hardware features such as a fold or a hinge between separate displays. With the Viewport Segments API, developers can create responsive designs optimized for different viewport segment sizes and arrangements.
 
@@ -40,7 +40,7 @@ For an explanation of how the API works, see [Using the Viewport Segments API](/
 
 ## Examples
 
-You can find a complete example demonstrating usage of the above features in the [Viewport segment API demo](https://mdn.github.io/dom-examples/viewport-segment-api/).
+You can find a complete example demonstrating usage of the above features in the [Viewport segment API demo](https://mdn.github.io/dom-examples/viewport-segments-api/).
 
 If possible, you should view the demo on a foldable device. Current browser developer tools enable emulating foldable devices, but don't include emulation of the different physical segments.
 
