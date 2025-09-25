@@ -38,7 +38,7 @@ _`SpeechRecognition` also inherits properties from its parent interface, {{domxr
 
 ### Deprecated properties
 
-The whole concept of grammar has been removed from the Web Speech API. Related features have been kept in the specification and are still recognized by supporting browsers for backwards compatibility purposes, but they have no effect on speech recognition services.
+The concept of grammar has been removed from the Web Speech API. Related features remain in the specification and are still recognized by supporting browsers for backwards compatibility, but they have no effect on speech recognition services.
 
 - {{domxref("SpeechRecognition.grammars")}} {{deprecated_inline}}
   - : Returns and sets a collection of {{domxref("SpeechGrammar")}} objects that represent the grammars that will be understood by the current `SpeechRecognition`.

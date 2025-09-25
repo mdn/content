@@ -14,7 +14,7 @@ The **`SpeechGrammar`** interface of the [Web Speech API](/en-US/docs/Web/API/We
 Grammar is defined using [JSpeech Grammar Format](https://www.w3.org/TR/jsgf/) (**JSGF**).
 
 > [!NOTE]
-> The whole concept of grammar has been removed from the Web Speech API. Related features have been kept in the specification and are still recognized by supporting browsers for backwards compatibility purposes, but they have no effect on speech recognition services.
+> The concept of grammar has been removed from the Web Speech API. Related features remain in the specification and are still recognized by supporting browsers for backwards compatibility, but they have no effect on speech recognition services.
 
 ## Constructor
 

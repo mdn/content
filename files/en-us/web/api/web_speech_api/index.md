@@ -63,7 +63,7 @@ For more details on using these features, see [Using the Web Speech API](/en-US/
 
 ### Deprecated interfaces
 
-The whole concept of grammar has been removed from the Web Speech API. Related features have been kept in the specification and are still recognized by supporting browsers for backwards compatibility purposes, but they have no effect on speech recognition services.
+The concept of grammar has been removed from the Web Speech API. Related features remain in the specification and are still recognized by supporting browsers for backwards compatibility, but they have no effect on speech recognition services.
 
 - {{domxref("SpeechGrammar")}} {{deprecated_inline}}
   - : Represents words or patterns of words for the recognition service to recognize.

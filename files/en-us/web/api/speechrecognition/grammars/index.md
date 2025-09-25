@@ -14,7 +14,7 @@ The **`grammars`** property of the
 by the current `SpeechRecognition`.
 
 > [!NOTE]
-> The whole concept of grammar has been removed from the Web Speech API. Related features have been kept in the specification and are still recognized by supporting browsers for backwards compatibility purposes, but they have no effect on speech recognition services.
+> The concept of grammar has been removed from the Web Speech API. Related features remain in the specification and are still recognized by supporting browsers for backwards compatibility, but they have no effect on speech recognition services.
 
 ## Value
 
