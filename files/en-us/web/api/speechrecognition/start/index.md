@@ -8,7 +8,7 @@ browser-compat: api.SpeechRecognition.start
 
 {{APIRef("Web Speech API")}}
 
-The **`start()`** method of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) starts the speech recognition service listening to incoming audio (from a microphone or audio track) with intent to recognize it and return the results of that recognition.
+The **`start()`** method of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) starts the speech recognition service to listen for incoming audio (from a microphone or an audio track) and returns the results of that recognition.
 
 ## Syntax
 
