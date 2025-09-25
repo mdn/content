@@ -26,7 +26,7 @@ An enumerated value representing the type of error. Possible values include:
     > [!NOTE]
     > This error is no longer in the Web Speech API specification; the whole concept of grammar has been removed. Related features have been kept in the specification and are still recognized by supporting browsers for backwards compatibility purposes, but they have no effect on speech recognition services.
 - `language-not-supported`
-  - : The user agent does not support the language specified in the value of [`lang`](/en-US/docs/Web/API/SpeechRecognition/lang) attribute of the {{domxref("SpeechRecognition")}} object. The set of supported languages is browser-dependent, and from frontend code there is no way to programmatically determine what languages a user's browser supports for speech recognition.
+  - : The user agent does not support the language specified in the [`lang`](/en-US/docs/Web/API/SpeechRecognition/lang) attribute of the {{domxref("SpeechRecognition")}} object. The set of supported languages is browser-dependent, and there is no way to programmatically determine from front-end code the languages a user's browser supports for speech recognition.
 - `network`
   - : Network communication required for completing the recognition failed.
 - `no-speech`
