@@ -30,7 +30,7 @@ To run the demo, navigate to the [live demo URL](https://mdn.github.io/dom-examp
 
 ### HTML and CSS
 
-The HTML and CSS for the app is trivial. We have a title, instructions paragraph ({{htmlelement("p")}}), control {{htmlelement("button")}}, and an output paragraph into which we output diagnostic messages including the words that are recognized.
+The HTML and CSS for the app are basic. There's a title, an instruction paragraph ({{htmlelement("p")}}), a control {{htmlelement("button")}}, and an output paragraph where we display diagnostic messages, including the words that our app recognized.
 
 ```html
 <h1>Speech color changer</h1>
