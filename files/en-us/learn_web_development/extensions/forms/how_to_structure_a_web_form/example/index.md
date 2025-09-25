@@ -41,15 +41,15 @@ This the example for a basic payment form for the article [How to structure an H
       </ul>
     </fieldset>
     <p>
-      <label for="name">Name (*):</label>
+      <label for="name">Name *:</label>
       <input type="text" id="name" name="username" required />
     </p>
     <p>
-      <label for="mail"><span>Email (*):</span></label>
+      <label for="mail"><span>Email *:</span></label>
       <input type="email" id="mail" name="user-mail" required />
     </p>
     <p>
-      <label for="pwd">Password (*):</label>
+      <label for="pwd">Password *:</label>
       <input type="password" id="pwd" name="password" required />
     </p>
   </section>
@@ -66,11 +66,11 @@ This the example for a basic payment form for the article [How to structure an H
       </select>
     </p>
     <p>
-      <label for="number">Card number (*):</label>
+      <label for="number">Card number *:</label>
       <input type="tel" id="number" name="card-number" />
     </p>
     <p>
-      <label for="expiration">Expiration date (*):</label>
+      <label for="expiration">Expiration date *:</label>
       <input
         type="text"
         id="expiration"

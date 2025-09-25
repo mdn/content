@@ -135,7 +135,7 @@ Let's consider this example:
 <!--<div>
   <label for="username">Name:</label>
   <input id="username" type="text" name="username" required />
-  <label for="username">(*)</label>
+  <label for="username">*</label>
 </div>-->
 
 <!-- would be better done like this: -->
@@ -143,13 +143,13 @@ Let's consider this example:
   <label for="username">
     <span>Name:</span>
     <input id="username" type="text" name="username" required />
-    <span>(*)</span>
+    <span>*</span>
   </label>
 </div>-->
 
 <!-- But this is probably best: -->
 <div>
-  <label for="username">Name (*):</label>
+  <label for="username">Name *:</label>
   <input id="username" type="text" name="username" required />
 </div>
 ```
@@ -216,15 +216,15 @@ Let's put these ideas into practice and build a slightly more involved form — 
        </ul>
      </fieldset>
      <p>
-       <label for="name">Name (*):</label>
+       <label for="name">Name *:</label>
        <input type="text" id="name" name="username" required />
      </p>
      <p>
-       <label for="mail">Email (*):</label>
+       <label for="mail">Email *:</label>
        <input type="email" id="mail" name="user-mail" required />
      </p>
      <p>
-       <label for="pwd">Password (*):</label>
+       <label for="pwd">Password *:</label>
        <input type="password" id="pwd" name="password" required />
      </p>
    </section>
@@ -253,11 +253,11 @@ Let's put these ideas into practice and build a slightly more involved form — 
        </select>
      </p>
      <p>
-       <label for="number">Card number (*):</label>
+       <label for="number">Card number *:</label>
        <input type="tel" id="number" name="card-number" required />
      </p>
      <p>
-       <label for="expiration">Expiration date (*):</label>
+       <label for="expiration">Expiration date *:</label>
        <input
          type="text"
          id="expiration"

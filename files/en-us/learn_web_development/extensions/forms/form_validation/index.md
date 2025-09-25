@@ -158,7 +158,7 @@ Add a `required` attribute to your input, as shown below.
 
 ```html live-sample___the-required-attribute
 <form>
-  <label for="choose">Would you prefer a banana or cherry? (*)</label>
+  <label for="choose">Would you prefer a banana or cherry? *</label>
   <input id="choose" name="i-like" required />
   <button>Submit</button>
 </form>
@@ -220,7 +220,7 @@ Update your HTML to add a [`pattern`](/en-US/docs/Web/HTML/Reference/Attributes/
 
 ```html live-sample___validate-regular-expression
 <form>
-  <label for="choose">Would you prefer a banana or a cherry? (*)</label>
+  <label for="choose">Would you prefer a banana or a cherry? *</label>
   <input id="choose" name="i-like" required pattern="[Bb]anana|[Cc]herry" />
   <button>Submit</button>
 </form>
@@ -279,7 +279,7 @@ Now delete the contents of the `<body>` element, and replace it with the followi
 ```html live-sample___constraining-values
 <form>
   <div>
-    <label for="choose">Would you prefer a banana or a cherry? (*)</label>
+    <label for="choose">Would you prefer a banana or a cherry? *</label>
     <input
       type="text"
       id="choose"
@@ -335,7 +335,7 @@ First, some HTML:
 <form>
   <p>Please complete all required (*) fields.</p>
   <fieldset>
-    <legend>Do you have a driver's license? (*)</legend>
+    <legend>Do you have a driver's license? *</legend>
     <input type="radio" required name="driver" id="r1" value="yes" />
     <label for="r1">Yes</label>
     <input type="radio" required name="driver" id="r2" value="no" />
@@ -346,7 +346,7 @@ First, some HTML:
     <input type="number" min="12" max="120" step="1" id="n1" name="age" />
   </p>
   <p>
-    <label for="t1">What's your favorite fruit? (*)</label>
+    <label for="t1">What's your favorite fruit? *</label>
     <input
       type="text"
       id="t1"
@@ -597,7 +597,7 @@ First, the HTML. Again, feel free to build this along with us:
 <form novalidate>
   <p>
     <label for="mail">
-      <span>Please enter an email address (*):</span>
+      <span>Please enter an email address *:</span>
       <input type="email" id="mail" name="mail" required minlength="8" />
       <span class="error" aria-live="polite"></span>
     </label>
@@ -729,7 +729,7 @@ Here is the live result (press the **Play** button to run the example in MDN Pla
 <form novalidate>
   <p>
     <label for="mail">
-      <span>Please enter an email address (*):</span>
+      <span>Please enter an email address *:</span>
       <input type="email" id="mail" name="mail" required minlength="8" />
       <span class="error" aria-live="polite"></span>
     </label>
