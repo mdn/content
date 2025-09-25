@@ -93,7 +93,7 @@ startBtn.addEventListener("click", () => {
 });
 ```
 
-To output the recognized audio, we listen for the {{domxref("SpeechRecognition.result_event", "result")}} event. When that fires, we grab the {{domxref("SpeechRecognitionAlternative.transcript", "transcript")}} of the first {{domxref("SpeechRecognitionAlternative")}} of the first {{domxref("SpeechRecognitionResult")}} in the returned {{domxref("SpeechRecognitionEvent.results", "results")}} list. We output the transcript itself to the output `<p>`, and log its confidence rating to the console.
+To output the recognized audio, we listen for the {{domxref("SpeechRecognition.result_event", "result")}} event. When that fires, we grab the {{domxref("SpeechRecognitionAlternative.transcript", "transcript")}} of the first {{domxref("SpeechRecognitionAlternative")}} of the first {{domxref("SpeechRecognitionResult")}} in the returned {{domxref("SpeechRecognitionEvent.results", "results")}} list. We output the transcript itself to the output `<p>` and log its confidence rating to the console.
 
 ```js
 recognition.addEventListener("result", (event) => {
