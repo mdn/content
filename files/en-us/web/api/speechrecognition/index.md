@@ -86,7 +86,7 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 - [`speechend`](/en-US/docs/Web/API/SpeechRecognition/speechend_event)
   - : Fired when speech recognized by the speech recognition service has stopped being detected.
 - [`start`](/en-US/docs/Web/API/SpeechRecognition/start_event)
-  - : Fired when the speech recognition service has begun listening to incoming audio with intent to recognize it.
+  - : Fired when the speech recognition service begins listening for audio to recognize.
 
 ## Examples
 
