@@ -37,7 +37,7 @@ None ({{jsxref("undefined")}}).
 
 ### Recognizing speech from a microphone
 
-In our [Speech color changer](https://github.com/mdn/dom-examples/tree/main/web-speech-api/speech-color-changer) example, we create a new `SpeechRecognition` object instance using the {{domxref("SpeechRecognition.SpeechRecognition", "SpeechRecognition()")}} constructor. Later on, we create a `click` event handler on a `<button>` so that when it is clicked, we start the speech recognition service and await audio input from the user's microphone:
+In our [Speech color changer](https://mdn.github.io/dom-examples/web-speech-api/speech-color-changer) example, we create a new `SpeechRecognition` object instance using the {{domxref("SpeechRecognition.SpeechRecognition", "SpeechRecognition()")}} constructor. Later on, we create a `click` event handler on a `<button>` so that when it's clicked, we start the speech recognition service and await audio input from the user's microphone:
 
 ```js
 const recognition = new SpeechRecognition();
@@ -64,7 +64,7 @@ recognition.onresult = (event) => {
 
 ### Recognizing speech from an audio track
 
-This code (excerpted from our [audio track recognition demo](https://mdn.github.io/dom-examples/web-speech-api/audio-track-recognition/)) shows how to recognize speech from an audio track. To begin with, we create a new {{domxref("SpeechRecognition")}} instance and set its {{domxref("SpeechRecognition.lang", "lang")}} to `en-US`. We then then grab a reference to a {{htmlelement("button")}} element and a {{htmlelement("p")}} to output result and diagnostic information to.
+This code (excerpted from our [audio track recognition demo](https://mdn.github.io/dom-examples/web-speech-api/audio-track-recognition/)) shows how to recognize speech from an audio track. To begin with, we create a new {{domxref("SpeechRecognition")}} instance and set its {{domxref("SpeechRecognition.lang", "lang")}} to `en-US`. We then grab a reference to a {{htmlelement("button")}} element and a {{htmlelement("p")}} element to output results and diagnostic information.
 
 ```js
 const recognition = new SpeechRecognition();
