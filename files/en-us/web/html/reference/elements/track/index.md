@@ -58,7 +58,6 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
       - It may include important visual information such as props or actions.
         It may indicate the cue's source (e.g., character, environment).
       - Suitable for users who are blind.
-        
     - `descriptions`
       - Descriptions provide a transcription and possibly a translation of audio.
       - It may include important non-verbal information such as music cues or sound effects.
