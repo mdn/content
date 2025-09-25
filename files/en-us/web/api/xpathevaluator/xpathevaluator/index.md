@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.XPathEvaluator.XPathEvaluator
 ---
 
-{{APIRef('DOM XPath')}}
+{{APIRef("DOM XPath")}}
 
 The **`XPathEvaluator()`** constructor creates a new {{domxref("XPathEvaluator")}}.
 

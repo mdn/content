@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Element.beforeinput_event
 ---
 
-{{APIRef}}
+{{APIRef("DOM")}}
 
 The DOM **`beforeinput`** event fires when the value of an {{HTMLElement("input")}} or {{HTMLElement("textarea")}} element is about to be modified. But in contrast to the {{domxref("Element/input_event", "input")}} event, it does not fire on the {{HTMLElement("select")}} element. The event also applies to elements with {{domxref("HTMLElement.contentEditable", "contenteditable")}} enabled, and to any element when {{domxref("Document.designMode", "designMode")}} is turned on.
 

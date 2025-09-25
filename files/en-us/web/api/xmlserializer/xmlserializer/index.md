@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.XMLSerializer.XMLSerializer
 ---
 
-{{APIRef('XMLSerializer')}}
+{{APIRef("XMLSerializer")}}
 
 The **`XMLSerializer()`** constructor creates a new {{domxref("XMLSerializer")}}.
 
