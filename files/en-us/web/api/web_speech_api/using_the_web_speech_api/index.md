@@ -87,7 +87,7 @@ Next, we define a speech recognition instance to control the recognition in our 
 const recognition = new SpeechRecognition();
 ```
 
-We then set a few other properties of the recognition instance before we move on:
+We then set a few properties of the recognition instance:
 
 - {{domxref("SpeechRecognition.continuous")}}: Controls whether continuous results are captured (`true`), or just a single result each time recognition is started (`false`).
 - {{domxref("SpeechRecognition.lang")}}: Sets the language of the recognition. Setting this is good practice, and therefore recommended.
