@@ -13,7 +13,7 @@ The **`error`** read-only property of the
 
 ## Value
 
-An enumerated value representing the type of error. The possible error types are:
+An enumerated value representing the type of error. Possible values include:
 
 - `aborted`
   - : Speech input was aborted in some manner, perhaps by some user-agent-specific
