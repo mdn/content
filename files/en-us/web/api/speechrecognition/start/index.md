@@ -64,7 +64,7 @@ recognition.onresult = (event) => {
 
 ### Recognizing speech from an audio track
 
-This code (excerpted from our [audio track recognition demo](https://mdn.github.io/dom-examples/web-speech-api/audio-track-recognition/)) shows how to recognize speech from an audio track. To begin with, we create a new {{domxref("SpeechRecognition")}} instance and set its {{domxref("SpeechRecognition.lang", "lang")}} to `en-US`. We then then grab a reference to a {{htmlelement("button")}} element and a {{htmlelement("p")}} to output result and diagnostic information to.
+This code (excerpted from our [audio track recognition demo](https://mdn.github.io/dom-examples/web-speech-api/audio-track-recognition/)) shows how to recognize speech from an audio track. To begin with, we create a new {{domxref("SpeechRecognition")}} instance and set its {{domxref("SpeechRecognition.lang", "lang")}} to `en-US`. We then grab a reference to a {{htmlelement("button")}} element and a {{htmlelement("p")}} element to output results and diagnostic information.
 
 ```js
 const recognition = new SpeechRecognition();
