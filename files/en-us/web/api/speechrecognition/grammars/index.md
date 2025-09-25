@@ -18,7 +18,7 @@ by the current `SpeechRecognition`.
 
 ## Value
 
-A {{domxref("SpeechGrammarList")}} containing the {{domxref("SpeechGrammar")}} objects representing the grammar for your app.
+A {{domxref("SpeechGrammarList")}} containing the {{domxref("SpeechGrammar")}} objects that represent the grammars of your app.
 
 ## Examples
 
