@@ -52,7 +52,7 @@ startBtn.onclick = () => {
 };
 ```
 
-When a result has been successfully recognized, the {{domxref("SpeechRecognition.result_event", "result")}} event fires, we extract the color that was spoken from the event object by grabbing the {{domxref("SpeechRecognitionAlternative.transcript", "transcript")}} of the first {{domxref("SpeechRecognitionAlternative")}} of the first {{domxref("SpeechRecognitionResult")}} in the returned {{domxref("SpeechRecognitionEvent.results", "results")}} list. We then set the background color of the {{htmlelement("html")}} element to that color.
+When a result has been successfully recognized, the {{domxref("SpeechRecognition.result_event", "result")}} event fires. We extract the color that was spoken from the event object by grabbing the {{domxref("SpeechRecognitionAlternative.transcript", "transcript")}} of the first {{domxref("SpeechRecognitionAlternative")}} of the first {{domxref("SpeechRecognitionResult")}} in the returned {{domxref("SpeechRecognitionEvent.results", "results")}} list. We then set the background color of the {{htmlelement("html")}} element to that color.
 
 ```js
 recognition.onresult = (event) => {
