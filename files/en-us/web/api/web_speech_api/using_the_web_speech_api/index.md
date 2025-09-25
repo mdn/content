@@ -18,7 +18,7 @@ Generally, the speech recognition system available on the user's device is used 
 
 By default, using speech recognition on a web page usually involves a server-based recognition engine. Your audio is sent to a web service for recognition processing, so it won't work offline.
 
-To improve privacy and performance, it is possible to specify that you want the speech recognition performed on-device, thereby ensuring that neither audio nor transcribed speech are sent to a third-party service for processing. We specifically cover the on-device functionality in [on-device speech recognition](#on-device_speech_recognition).
+To improve privacy and performance, you can specify that speech recognition be performed on the device. This ensures that neither the audio nor the transcribed speech are sent to a third-party service for processing. We cover the on-device functionality in more detail in the [On-device speech recognition](#on-device_speech_recognition) section.
 
 ### Demo
 
