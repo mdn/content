@@ -2,9 +2,13 @@
 title: vertical-viewport-segments
 slug: Web/CSS/@media/vertical-viewport-segments
 page-type: css-media-feature
+status:
+  - experimental
 browser-compat: css.at-rules.media.vertical-viewport-segments
 sidebar: cssref
 ---
+
+{{SeeCompatTable}}
 
 The **`vertical-viewport-segments`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) detects whether the device has a specified number of viewport segments laid out vertically (top to bottom).
 
