@@ -81,7 +81,7 @@ const colors = [
 
 #### Creating a speech recognition instance
 
-The next thing to do is define a speech recognition instance to control the recognition for our application. This is done using the {{domxref("SpeechRecognition.SpeechRecognition()","SpeechRecognition()")}} constructor.
+Next, we define a speech recognition instance to control the recognition in our application. We do this by using the {{domxref("SpeechRecognition.SpeechRecognition()","SpeechRecognition()")}} constructor.
 
 ```js
 const recognition = new SpeechRecognition();
