@@ -74,7 +74,7 @@ const startBtn = document.querySelector("button");
 const diagnostic = document.querySelector(".output");
 ```
 
-Next, we add a `click` event handler to the `<button>`. When it is clicked, we create a new {{htmlelement("audio")}} element using the {{domxref("HTMLAudioElement.Audio", "Audio()")}}, loading an MP3 file into it. Once the MP3 is ready to play (determined by the {{domxref("HTMLMediaElement.canplay_event", "canplay")}} event), we capture it as a {{domxref("MediaStream")}} using the {{domxref("HTMLMediaElement.captureStream", "captureStream()")}} method, then extract the audio {{domxref("MediaStreamTrack")}} from it using {{domxref("MediaStream.getAudioTracks", "getAudioTracks()")}}.
+Next, we add a `click` event handler to the `<button>`. When it is clicked, we create a new {{htmlelement("audio")}} element using the {{domxref("HTMLAudioElement.Audio", "Audio()")}} constructor and load an MP3 file into it. Once the MP3 is ready to play (determined by the {{domxref("HTMLMediaElement.canplay_event", "canplay")}} event), we capture it as a {{domxref("MediaStream")}} using the {{domxref("HTMLMediaElement.captureStream", "captureStream()")}} method, then extract its audio {{domxref("MediaStreamTrack")}} using {{domxref("MediaStream.getAudioTracks", "getAudioTracks()")}}.
 
 We then play the audio (required for the recognition to take place), and pass the `MediaStreamTrack` into the `start()` method to start the recognition.
 
