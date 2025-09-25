@@ -90,7 +90,7 @@ const recognition = new SpeechRecognition();
 We then set a few properties of the recognition instance:
 
 - {{domxref("SpeechRecognition.continuous")}}: Controls whether results are captured continuously (`true`) or only once each time a recognition starts (`false`).
-- {{domxref("SpeechRecognition.lang")}}: Sets the language of the recognition. Setting this is good practice, and therefore recommended.
+- {{domxref("SpeechRecognition.lang")}}: Sets the language of the recognition. Setting this explicitly is the recommended best practice.
 - {{domxref("SpeechRecognition.interimResults")}}: Defines whether the speech recognition system should return interim results, or just final results. Final results are good enough for this demo.
 - {{domxref("SpeechRecognition.maxAlternatives")}}: Sets the number of alternative potential matches that should be returned per result. This can sometimes be useful, say if a result is not completely clear and you want to display a list if alternatives for the user to choose the correct one from. But it is not needed for this demo, so we are just specifying one (which is actually the default anyway.)
 
