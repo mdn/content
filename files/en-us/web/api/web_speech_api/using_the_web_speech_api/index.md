@@ -26,7 +26,7 @@ To demonstrate usage of Web speech recognition, we've written a demo called [Spe
 
 ![Screenshot of our demo app called speech color changer. It invites the user to press the button and say a color. It turns the background of the app to that color. In this case, it has turned the background color to pink.](speech-color-changer.png)
 
-To run the demo, navigate to the [live demo URL](https://mdn.github.io/dom-examples/web-speech-api/speech-color-changer/) in a supporting browser (such as Chrome).
+To run the demo, navigate to the [live demo URL](https://mdn.github.io/dom-examples/web-speech-api/speech-color-changer/) in a [supporting browser](/en-US/docs/Web/API/SpeechRecognition#browser_compatibility).
 
 ### HTML and CSS
 
