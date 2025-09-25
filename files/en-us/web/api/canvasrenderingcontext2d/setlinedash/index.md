@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.CanvasRenderingContext2D.setLineDash
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 The **`setLineDash()`** method of the Canvas 2D API's
 {{domxref("CanvasRenderingContext2D")}} interface sets the line dash pattern used when
