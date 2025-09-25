@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.Document.Document
 ---
 
-{{APIRef}}
+{{APIRef("DOM")}}
 
 The **`Document`** constructor creates a new
 {{domxref("Document")}} object that is a web page loaded in the browser and serving as

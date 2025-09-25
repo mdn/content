@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Element.focusout_event
 ---
 
-{{APIRef}}
+{{APIRef("UI Events")}}
 
 The **`focusout`** event fires when an element has lost focus, after the {{domxref("Element/blur_event", "blur")}} event. The two events differ in that `focusout` bubbles, while `blur` does not.
 

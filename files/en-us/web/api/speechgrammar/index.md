@@ -25,7 +25,7 @@ Grammar is defined using [JSpeech Grammar Format](https://www.w3.org/TR/jsgf/) (
 
 - {{domxref("SpeechGrammar.src")}} {{deprecated_inline}}
   - : Sets and returns a string containing the grammar from within in the `SpeechGrammar` object instance.
-- {{domxref("SpeechGrammar.weight")}} {{deprecated_inline}}
+- {{domxref("SpeechGrammar.weight")}} {{Optional_Inline}} {{deprecated_inline}}
   - : Sets and returns the weight of the `SpeechGrammar` object.
 
 ## Examples

@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.HTMLCanvasElement.webglcontextrestored_event
 ---
 
-{{APIRef}}
+{{APIRef("WebGL API")}}
 
 The **`webglcontextrestored`** event of the [WebGL API](/en-US/docs/Web/API/WebGL_API) is fired if the user agent restores the drawing buffer for a {{domxref("WebGLRenderingContext")}} object.
 
