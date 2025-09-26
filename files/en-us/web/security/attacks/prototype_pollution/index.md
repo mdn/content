@@ -14,7 +14,9 @@ To understand how prototypes can be polluted, the following MDN articles are use
 
 The key thing to understand is the special meaning of the [`Object.prototype.__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) property, and how adding a property to `Object.prototype` will make that property accessible on ("polluted to") every object in your application.
 
-For example, the following {{domxref("fetch()")}} call can be changed completely. By default, it is a {{HTTPMethod("GET")}} request, but because we polluted the `Object` object's prototype with two new default properties, the `fetch()` call is now transformed into a {{HTTPMethod("POST")}} request.
+Not all prototype pollution involves adding properties to `Object.prototype`, though. Other prototypes can also be polluted, like when overriding {{jsxref("Promise.prototype.then")}} which would be called for every `await` operation, and more.
+
+To see the effect of prototype pollution, we can look at the how the following {{domxref("fetch()")}} call can be changed completely. By default, it is a {{HTTPMethod("GET")}} request, but because we polluted the `Object` object's prototype with two new default properties, the `fetch()` call is now transformed into a {{HTTPMethod("POST")}} request.
 
 ```js
 Object.prototype.body = "a=1";
@@ -31,17 +33,14 @@ console.log({}.method); // "POST"
 
 ## Example scenarios
 
-In order to pollute objects, the attacker needs a way in to add arbitrary properties to prototype objects.
+In order to pollute objects, the attacker needs a way in to add arbitrary properties to prototype objects. Typically, happens in form of some payload that contains the `__proto__` property key will later get merged into another object via [spreading](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax), [`for...in` loops](/en-US/docs/Web/JavaScript/Reference/Statements/for...in), etc, turning it into an assignment operation and therefore triggering the setter.
 
 ### Pollution via URL query strings
 
-In a very common prototype pollution vulnerability, the attacker pollutes query strings in the URL. A few examples:
+In a very common prototype pollution vulnerability, the attacker pollutes query strings in the URL:
 
 ```http
-https://example.org/?__proto__[test]=polluted
-https://example.com/?__proto__.test=polluted
-https://example.com/#__proto__[test]=polluted
-https://example.com/#__proto__.test=polluted
+https://example.org/?__proto__={"test":"polluted"}
 ```
 
 See also [Client-Side Prototype Pollution](https://github.com/BlackFan/client-side-prototype-pollution) for libraries vulnerable due to {{domxref("document.location")}} parsing and the various URL payloads used.
@@ -49,10 +48,10 @@ See also [Client-Side Prototype Pollution](https://github.com/BlackFan/client-si
 If you parse the query strings into key-value pairs and treat `__proto__` like an arbitrary string, you risk that `__proto__` will later be merged into a target object like this:
 
 ```js
-targetObject.__proto__.test = "polluted";
+const result = { ...defaultValues, ...query };
 ```
 
-which you may expect to result in the following object structure for `targetObject`:
+which you may expect to result in the following object structure for `result`:
 
 ```js
 {
@@ -63,7 +62,15 @@ which you may expect to result in the following object structure for `targetObje
 }
 ```
 
-However, this is not what is happening! Instead, this adds `test` to the object's prototype, which is {{jsxref("Object.prototype")}}. Now all objects in the JavaScript runtime will inherit the `test` property and we have successfully polluted the prototype. The `test` property is likely not meaningful in this case, but other property names might become a problem for your code or for any code in your imported libraries.
+However, this is not what is happening! Instead, this adds `test` to the object's prototype, which is {{jsxref("Object.prototype")}}. Now all objects in the JavaScript runtime will inherit the `test` property and we have successfully polluted the prototype. The `test` property is likely not meaningful in this case, but other property names might become a problem for your code or for any code in your imported libraries as it could override existing properties or functions.
+
+```js
+result.test; // "polluted"
+{}.test; // "polluted"
+"".test; // "polluted"
+[].test; // "polluted"
+// ...
+```
 
 ## Defenses against prototype pollution
 
@@ -112,7 +119,7 @@ const config = deepFreeze({
 config.headers.Authorization = "hacked_token"; // fails thanks to deepFreeze
 ```
 
-The `deepFreeze` approach is not handling circular references by default, so to create true immutable objects, you may want to look into using a library like [Immer](https://immerjs.github.io/immer/).
+The `deepFreeze` approach is not handling circular references by default, so to create true immutable objects, you may want to look into using a library like [Immer](https://immerjs.github.io/immer/). You could also consider the [SES](https://github.com/endojs/endo/tree/master/packages/ses#ses) shim for [Hardened JavaScript](https://hardenedjs.org) which is a [draft proposal for ECMAScript](https://github.com/tc39/proposal-ses) to freeze every built-in object.
 
 ### JSON schema validation
 
@@ -120,13 +127,14 @@ JSON schema validators, such as [ajv](https://ajv.js.org), ensure that the JSON 
 
 ### Node.js flag `--disable-proto`
 
-If you are in a Node.js environment, you can disable `Object.prototype.__proto__` with the ``--disable-proto=MODE` option where `MODE` is either `delete` (the property is removed entirely), or `throw` (accesses to the property throws an exception with the code `ERR_PROTO_ACCESS`).
+If you are in a Node.js environment, you can disable `Object.prototype.__proto__` with the `--disable-proto=MODE` option where `MODE` is either `delete` (the property is removed entirely), or `throw` (accesses to the property throws an exception with the code `ERR_PROTO_ACCESS`).
 
 ## Defense summary checklist
 
 - Create empty objects with `Object.create(null)`.
 - Use `Map` and `Set` objects instead.
-- Freeze your objects and consider freezing built-in objects, or use a library like [Immer](https://immerjs.github.io/immer/).
+- Consider freezing your own objects, for example with a library like [Immer](https://immerjs.github.io/immer/).
+- Consider freezing built-in objects, for example by using the [SES](https://github.com/endojs/endo/tree/master/packages/ses#ses) shim.
 - Validate your object structure with a schema.
 - Use `--disable-proto` in Node.js.
 
