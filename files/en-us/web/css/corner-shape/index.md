@@ -387,7 +387,7 @@ form div:nth-of-type(2) {
 section {
   width: 100%;
   height: 180px;
-  background-color: palegoldenrod;
+  background-color: gold;
   background-image: linear-gradient(
     to bottom,
     rgb(255 255 255 / 0),
