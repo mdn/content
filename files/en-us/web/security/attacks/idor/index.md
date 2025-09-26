@@ -7,7 +7,11 @@ sidebar: security
 
 **Insecure Direct Object Reference (IDOR)** is a vulnerability that allows an attacker to exploit insufficient access control and insecure exposure of object identifiers, such as database keys or file paths.
 
-This can enable an attacker to access sensitive resources or to perform other unauthorized actions.
+Websites often want to serve different content to different users: for example, a shopping website might let each user view their purchase history. Websites can identify users by authenticating them, using a method such as a password or a passkey. Often, once a website has authenticated a user, they will set a session cookie in that user's browser: then, when the user makes a request, the server will know that the request came from this authenticated user.
+
+However, as well as checking that the request came from an authenticated user, the server must implement access control for the resources that the user requests: that is, they must check that this user is allowed to access the specific resource requested. For example, each authenticated user must only be allowed to see their own purchase history.
+
+If a server does not implement access control for resources, then an attacker who is signed into the site may be able to access the resources belonging to a different user. This is called an Insecure Direct Object Reference (IDOR) attack.
 
 ## Example scenarios
 
@@ -32,12 +36,12 @@ https://example.org/user/id/1234
 https://example.org/user/id/1235
 ```
 
-The website is vulnerable to IDOR because the server doesn't verify which URL is permitted by which user:
+For example, in the Express code below, the value given in the URL is available as `req.params.id`, and we use that value to retrieve the corresponding record in the database. We also check that the request is from an authenticated user, by (calling the `isAuthenticated` function). But critically, we don't check that the ID of the authenticated user matches the ID in the URL, and this enables one authenticated user (the attacker) to get a page for a different authenticated user (the victim).
 
 ```js example-bad
 app.get("/user/id/:id", (req, res) => {
   const user = db.users.find(req.params.id);
-  if (req.isAuthenticated) {
+  if (req.isAuthenticated()) {
     // Authentication is not enough!
     res.render("user", { user });
   }
@@ -49,7 +53,7 @@ Instead, you should implement rules to authorize access to user information. For
 ```js
 app.get("/user/id/:id", (req, res) => {
   const user = db.users.find(req.params.id);
-  if (req.isAuthenticated && req.session.userId === req.params.id) {
+  if (req.isAuthenticated() && req.session.userId === req.params.id) {
     res.render("user", { user });
   } else {
     return res.status(401).json({ message: "Unauthorized" });
@@ -69,7 +73,7 @@ For example, maybe your application doesn't provide the user's ID in the URL but
 </form>
 ```
 
-If insufficient server-side access control is performed, the attacker can manipulate the `user_id` value in the hidden `<input>` element to a different user ID and might be able to modify the profile without authorization.
+If no server-side access control is performed, the attacker can manipulate the `user_id` value in the hidden `<input>` element to a different user ID and might be able to modify the profile without authorization.
 
 ### Cookie and session data manipulation
 
@@ -94,11 +98,11 @@ https://example.org/static/pdfs/2.pdf
 
 ### Access control for each object
 
-The most important mitigation for IDOR attacks is to implement server-side access control checks for each object that users try to access. It is essential, for every request, to verify that the authenticated user has the right to access or perform actions on the targeted object. Never rely solely on client-side data (URLs, cookies, form fields) for security decisions.
+The most important mitigation for IDOR attacks is to implement server-side access control checks for each object that users try to access. Always verify that the authenticated user has the right to access or perform actions on the targeted object.
 
 ### Identifier complexity
 
-Any predictable references, such as sequential numbers or any other guessable strings should be avoided. Do not expose any personally identifiable information (PII), like user names or email addresses in the URL. Instead use a unique non-guessable token to represent the user. You can use more complex IDs as primary keys, like {{glossary("UUID", "UUIDs")}}, and make it harder to guess valid values. However, this only reduces the likelihood of guessing valid IDs and does not replace the need for proper access control.
+Ensure that identifiers for resources can't be guessed by an attacker. Do not expose any personally identifiable information (PII), like user names or email addresses in the URL. Instead use a unique non-guessable token to represent the user. You can use more complex IDs as primary keys, like {{glossary("UUID", "UUIDs")}}, and make it harder to guess valid values. However, this only reduces the likelihood of guessing valid IDs and does not replace the need for proper access control.
 
 ### Session IDs
 
@@ -109,8 +113,8 @@ If you must generate session IDs yourself, do not generate session IDs from any 
 ## Defense summary checklist
 
 - Always verify that the authenticated user is authorized to access or modify the object.
-- Never trust identifiers from the client (in URLs, in form fields, or in cookies).
 - Avoid exposing predictable, sequential, or sensitive object identifiers (like user IDs or email addresses).
+- Use more complex IDs that are harder to predict (for example, UUIDs).
 - Pay special attention to session ID security, prefer non-predictable IDs and cryptographically secure pseudo-random numbers where possible.
 
 ## See also
