@@ -413,7 +413,7 @@ Notes about this demonstration:
 Change the stylesheet so that the inner petals all turn pink when the mouse pointer is over any one of them, without changing the way the outer petals work.
 
 <details>
-<summary>Click here to show the solution</summary>
+<summary>Click here to see the solution</summary>
 
 Move the position of the `:hover` pseudo-class from a specific petal, to all petals:
 
