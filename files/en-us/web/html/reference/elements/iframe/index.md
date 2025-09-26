@@ -199,8 +199,8 @@ A cross-origin frame is only allowed to redirect the page using `top` if the fra
 If a top-navigation is blocked the browser may prompt for user permission to redirect, or it may simply report the error in the developer console.
 What this means is that you won't be able to load a cross-origin frame and immediately redirect to a new page — the user must first (or previously) have interacted with the frame or granted permission to redirect.
 
-A sandboxed frame will block all top-navigations unless the values [`allow-top-navigation`](#allow-top-navigation) or [`allow-top-navigation-by-user-activation`](#allow-top-navigation-by-user-activation) are set.
-Note that top-navigation permissions are inherited, so a nested frame will only be allowed to perform top-navigation if its parents are able to.
+A sandboxed frame blocks all top navigation unless the `sandbox` attribute values are set to [`allow-top-navigation`](#allow-top-navigation) or [`allow-top-navigation-by-user-activation`](#allow-top-navigation-by-user-activation).
+Note that top-navigation permissions are inherited, so a nested frame can perform a top navigation only if its parent frames are also allowed to.
 
 ## Positioning and scaling
 
