@@ -3,10 +3,13 @@ title: "Document: ariaNotify() method"
 short-title: ariaNotify()
 slug: Web/API/Document/ariaNotify
 page-type: web-api-instance-method
+status:
+  - experimental
+  - non-standard
 browser-compat: api.Document.ariaNotify
 ---
 
-{{ApiRef("DOM")}}
+{{ApiRef("DOM")}}{{SeeCompatTable}}{{non-standard_header}}
 
 The **`ariaNotify()`** method of the {{domxref("Document")}} interface specifies that a given string of text should be announced by a {{glossary("screen reader")}} if available and activated.
 
