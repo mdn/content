@@ -415,7 +415,7 @@ Change the stylesheet so that the inner petals all turn pink when the mouse poin
 <details>
 <summary>Click here to see the solution</summary>
 
-Move the position of the `:hover` pseudo-class from a specific petal, to all petals:
+Move the position of the `:hover` pseudo-class from a specific petal to all petals:
 
 ```css
 #inner-petals {
