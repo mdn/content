@@ -50,18 +50,11 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
   - : How the text track is meant to be used. If omitted the default kind is `subtitles`. If the attribute contains an invalid value, it will use `metadata`.
     The following keywords are allowed:
     - `subtitles`
-      - Subtitles provide translation of content that cannot be understood by the viewer. For example speech or text that is not English in an English language film.
-      - Subtitles may contain additional content, usually extra background information. For example the text at the beginning of the Star Wars films, or the date, time, and location of a scene.
+      - : Subtitles provide transcription or translation of the dialog. They are suitable for when the sound is available but not understood, such as speech or text that is not English in an English language film. Subtitles may contain additional content, usually extra background information. For example the text at the beginning of the Star Wars films, or the date, time, and location of a scene. Subtitles' information complements the audio and video. It is often embedded in the video itself, but can also be provided separately, especially for whole-film translations.
     - `captions`
-      - Closed captions provide a textual description and possibly a translation of audio.
-      - It may include important visual information such as props or actions.
-        It may indicate the cue's source (e.g., character, environment).
-      - Suitable for users who are deaf or when the sound is muted.
+      - : Closed captions provide transcription or translation of the dialog, sound effects, relevant musical cues, and other relevant audio information, such as the cue's source (e.g., character, environment). They are suitable for when sound is unavailable or not clearly audible (e.g., because it is muted, drowned-out by ambient noise, or because the user is deaf).
     - `descriptions`
-      - Descriptions provide a transcription and possibly a translation of audio.
-      - It may include important non-verbal information such as music cues or sound effects.
-        It may indicate the cue's source (e.g., music, text, character).
-      - Suitable for users who are blind.
+      - : Descriptions summarize the _video_ component of the media resource. They are intended to be synthesized as audio when the visual component is obscured, unavailable, or not usable (e.g., because the user is interacting with the application without a screen while driving, or because the user is blind).
     - `chapters`
       - Chapter titles are intended to be used when the user is navigating the media resource.
     - `metadata`
