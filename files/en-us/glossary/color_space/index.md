@@ -61,7 +61,7 @@ CIELab color functions include {{CSSXref("color_value/lab", "lab()")}} (lightnes
 > [!NOTE]
 > The hue and lightness in `lch()` and `oklch` are different from the same-named values in {{cssxref("color_value/hsl", "hsl()")}} or other sRGB color spaces.
 
-CIELab color spaces, including Lab, Lch, Oklab, and Oklch, are device-independent color spaces.
+CIELab color spaces, including Lab, LCH, Oklab, and OkLCh, are device-independent color spaces.
 
 - `lab-d50` color space
   - : Expresses color as `L` in a range from `0` to `100`, and `a` and `b` with a range from `-125` to `125`. The `a` and `b` axes are not bound by these range values, which are references in defining percentage inputs and outputs in relation to the `Display P3` color space. The whitepoint is D50.

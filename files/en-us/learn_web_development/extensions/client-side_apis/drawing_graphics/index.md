@@ -219,7 +219,7 @@ Let's start by creating our own canvas template to create future experiments in.
 2. Create a new file in the directory called `index.html` and save the following contents inside it:
 
    ```html
-   <!DOCTYPE html>
+   <!doctype html>
    <html lang="en-US">
      <head>
        <meta charset="utf-8" />
@@ -994,7 +994,7 @@ Let's look at an example of how to create something with a WebGL library. We'll 
 2. Inside it, create a new file called `index.html` and add the following content to it:
 
    ```html
-   <!DOCTYPE html>
+   <!doctype html>
    <html lang="en-US">
      <head>
        <meta charset="utf-8" />

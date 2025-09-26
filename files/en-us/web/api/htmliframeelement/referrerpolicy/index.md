@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.HTMLIFrameElement.referrerPolicy
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The
 **`HTMLIFrameElement.referrerPolicy`**

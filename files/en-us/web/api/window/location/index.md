@@ -410,7 +410,7 @@ const showBookmark = (() => {
     }
   }
 
-  window.addEventListener("scroll", _chkOwner, false);
+  window.addEventListener("scroll", _chkOwner);
 
   return (bookmark, useHash) => {
     const node = document.querySelector(bookmark);

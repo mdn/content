@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Element.mouseup_event
 ---
 
-{{APIRef}}
+{{APIRef("UI Events")}}
 
 The **`mouseup`** event is fired at an {{domxref("Element")}} when a button on a pointing device (such as a mouse or trackpad) is released while the pointer is located inside it.
 

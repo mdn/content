@@ -74,6 +74,7 @@ No notable changes.
 ## Changes for add-on developers
 
 - Cookies created with {{WebExtAPIRef("cookies.set()")}} in Nightly are now validated, and invalid cookies are rejected. The implementation in Nightly is to enable monitoring for any issues. The intention is to enforce validation in all channels in a future release. ([Firefox bug 1976197](https://bugzil.la/1976197))
+- The {{WebExtAPIRef("cookies")}} methods now accept and return milliseconds in the fractional part of `expirationDate`. ([Firefox bug 1972757](https://bugzil.la/1972757))
 - Adds the {{WebExtAPIRef("browserAction.onUserSettingsChanged")}} and {{WebExtAPIRef("action.onUserSettingsChanged")}} events that listen for changes in the user-specified settings that affect an extension's action. ([Firefox bug 1828220](https://bugzil.la/1828220))
 - Adds {{WebExtAPIRef("browserSettings.verticalTabs")}}, which enables extensions to control whether the browser displays the tab bar horizontally or vertically. ([Firefox bug 1946600](https://bugzil.la/1946600))
 

@@ -1857,6 +1857,14 @@
       "properties": [],
       "events": []
     },
+    "Viewport Segments API": {
+      "overview": ["Viewport Segments API"],
+      "guides": ["/docs/Web/API/Viewport_segments_API/Using"],
+      "interfaces": ["Viewport"],
+      "methods": ["Window.viewport"],
+      "properties": [],
+      "events": []
+    },
     "View Transition API": {
       "overview": ["View Transition API"],
       "guides": ["/docs/Web/API/View_Transition_API/Using"],

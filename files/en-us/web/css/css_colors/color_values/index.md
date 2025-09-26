@@ -110,21 +110,13 @@ const output = document.querySelector("output");
 
 box.style.borderColor = colorPicker.value;
 
-colorPicker.addEventListener(
-  "input",
-  (event) => {
-    box.style.borderColor = event.target.value;
-  },
-  false,
-);
+colorPicker.addEventListener("input", (event) => {
+  box.style.borderColor = event.target.value;
+});
 
-colorPicker.addEventListener(
-  "change",
-  (event) => {
-    output.innerText = `${colorPicker.value}`;
-  },
-  false,
-);
+colorPicker.addEventListener("change", (event) => {
+  output.innerText = `${colorPicker.value}`;
+});
 ```
 
 The {{domxref("Element/input_event", "input")}} event is sent every time the value of the element changes; that is, every time the user adjusts the color in the color picker. Each time this event arrives, we set the box's border color to match the color picker's current value.
@@ -318,13 +310,13 @@ for (const color of colors) {
 
 {{EmbedLiveSample("HWB_functional_notation", 300, 200)}}
 
-### LCH and OKLCH: CIELAB and Oklab color spaces
+### LCH and OkLCh: CIELAB and Oklab color spaces
 
 While `hsl()` and `hwb()` are intuitive, they have a major drawback. With these functions, every fully-saturated hue angle (`hsl(<angle> 100% 50%)` or `hwb(<angle> 0% 0%)`) has the same lightness, but that is not how human vision or monitors work. Putting white text on fully saturated blue (`hsl(240deg 100% 50%)`) is legible, but that same text on fully saturated yellow (`hsl(60deg 100% 50%)`) will not only be illegible, but may hurt your user's eyes. In these color functions, the lightness of a color is relative to other colors, not to human perception. In reality, not all hues have the same max saturation.
 
 Wouldn't it be fantastic if you could simply change the hue channel of a color on a site without making text illegible? You can with color functions in the CIELAB and Oklab color spaces.
 
-The CIELAB and Oklab color spaces represent the entire range of colors that humans can see. CIE lab color functions include [`lch()`](/en-US/docs/Web/CSS/color_value/lch) and [`lab()`](/en-US/docs/Web/CSS/color_value/lab). Oklab color functions include [`oklch()`](/en-US/docs/Web/CSS/color_value/oklch) and [`oklab()`](/en-US/docs/Web/CSS/color_value/oklab). The primary purpose of these models is that they are uniform so that a given distance between any two points in the color space should appear equally different to a viewer. Oklab is a color space that uses the same model type as CIELAB but is built using additional numerical optimization steps, so the values are considered more accurate than CIELAB. Because of this optimization, hues are more perceptually uniform.
+The CIELAB and Oklab color spaces represent the entire range of colors that humans can see. CIE Lab color functions include [`lch()`](/en-US/docs/Web/CSS/color_value/lch) and [`lab()`](/en-US/docs/Web/CSS/color_value/lab). Oklab color functions include [`oklch()`](/en-US/docs/Web/CSS/color_value/oklch) and [`oklab()`](/en-US/docs/Web/CSS/color_value/oklab). The primary purpose of these models is that they are uniform so that a given distance between any two points in the color space should appear equally different to a viewer. Oklab is a color space that uses the same model type as CIELAB but is built using additional numerical optimization steps, so the values are considered more accurate than CIELAB. Because of this optimization, hues are more perceptually uniform.
 
 The `lch()` and `oklch()` functions use lightness (`L`), chroma (`C`), and hue (`H`), and are discussed further in this section. The [`lab()` and `oklab()`](#lab_and_oklab) functions work differently, using lightness (`L`), red/green-ness (along the `a`-axis), and yellow/blue-ness (along the `b`-axis). These axes are referred to as rectangular coordinates. The main benefit of these color functions is that the "lightness" is perceived lightness; it is the brightness of a color as perceived by the human eye rather than the lightness as compared to other colors.
 
@@ -526,7 +518,7 @@ For example, if you wanted to show the `display-p3 0 0 1` color, which is outsid
 
 Understanding `color()` is important when it comes to relative colors, discussed next. The older sRGB color notations discussed above — `hsl()`, `hwb()`, and `rgb()`— do not express the full spectrum of visible colors, while the `color()` function supports a much wider color gamut. As a result, when using the older functions types to define relative colors, the output color returned by querying {{domxref("HTMLElement.style")}} property or the {{domxref("CSSStyleDeclaration.getPropertyValue()")}} method will be a `color(srgb ...)` value.
 
-To see an example of converting the `hsl()`, `hwb()`, and `rgb()` color functions to `color()` in the `srgb` color space, check out our [color picker tool](/en-US/docs/Web/CSS/CSS_colors/Color_picker).
+To see an example of converting the `rgb()`, `hsl()`, `hwb()`, and other [color formats](/en-US/docs/Web/CSS/color_value), check out our [color format converter tool](/en-US/docs/Web/CSS/CSS_colors/Color_format_converter).
 
 ### Relative colors
 

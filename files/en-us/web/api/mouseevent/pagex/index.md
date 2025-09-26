@@ -83,9 +83,9 @@ function updateDisplay(event) {
   pageY.innerText = event.pageY;
 }
 
-box.addEventListener("mousemove", updateDisplay, false);
-box.addEventListener("mouseenter", updateDisplay, false);
-box.addEventListener("mouseleave", updateDisplay, false);
+box.addEventListener("mousemove", updateDisplay);
+box.addEventListener("mouseenter", updateDisplay);
+box.addEventListener("mouseleave", updateDisplay);
 ```
 
 The JavaScript code uses {{domxref("EventTarget.addEventListener", "addEventListener()")}} to register the function `updateDisplay()` as the event handler for the {{domxref("Element/mousemove_event", "mousemove")}}, {{domxref("Element/mouseenter_event", "mouseenter")}}, and {{domxref("Element/mouseleave_event", "mouseleave")}} events.
