@@ -10,6 +10,8 @@ browser-compat: api.CSSStyleRule.style
 
 The read-only **`style`** property is a {{domxref("CSSStyleProperties")}} object representing the inline declaration block of a {{DOMXref("CSSStyleRule")}}.
 
+Note that properties that are not defined in the corresponding CSS declaration are set to the empty string (`""`).
+
 ## Value
 
 A {{domxref("CSSStyleProperties")}}.
@@ -22,7 +24,7 @@ A {{domxref("CSSStyleProperties")}}.
 
 ### Getting the styles for a style rule
 
-The CSS below defines the style rule for the `h1` element, which is represented in code by a {{domxref("CSSStyleRule")}} instance.
+The CSS below defines the style rule for the `h1` selector, which is represented in code by a {{domxref("CSSStyleRule")}} instance.
 The declaration block is that part of the style rule that appears within the braces and that actually provides the style definitions (for the selector, the part that comes before the braces), which is represented in code by the {{domxref("CSSStyleRule.style")}} property.
 
 ```css
