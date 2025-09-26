@@ -18,7 +18,7 @@ If a server does not implement access control for resources, then an attacker wh
 The classic IDOR attack happens when the server only checks that the user is authenticated, but not whether they are authorized to access an object reference. In a typical flow, the attacker:
 
 1. Logs in as a normal user.
-2. Finds a URL, form field, or cookie that references a user or resource ID (e.g., 1234).
+2. Finds a URL, form field, or a file that references a user or resource ID (e.g., 1234).
 3. Modifies the ID to another value (e.g., 1233).
 4. Gains unauthorized access to another user's data.
 
@@ -75,16 +75,6 @@ For example, maybe your application doesn't provide the user's ID in the URL but
 
 If no server-side access control is performed, the attacker can manipulate the `user_id` value in the hidden `<input>` element to a different user ID and might be able to modify the profile without authorization.
 
-### Cookie and session data manipulation
-
-Attackers might also manipulate cookies and session data to impersonate other users. The attacker can use the browser's developer tools to modify cookie values. In bad implementations, session IDs are composed by username, user id, or other predictable information in clear text. Or they are insufficiently encoded by weak algorithms like `base64` encoding. In the following example the attacker can just change the `SESSIONID` clear text in the {{HTTPHeader("Cookie")}} header to a different user ID and it could possibly get inside the application without prior authentication.
-
-```http example-bad
-GET /sign-in HTTP/1.1
-Host: example.org
-Cookie: SESSIONID=user1234
-```
-
 ### File access
 
 A special case of IDOR attacks is access to files or directories that aren't protected by access control. For example, if you provide a folder for PDF file uploads and the uploads get named sequentially, an attacker can guess the filenames and download them all if no access control is provided. Potentially, other files in unprotected directories, such as server configuration files, can be obtained as well which could lead to additional vulnerabilities.
@@ -104,20 +94,12 @@ The most important mitigation for IDOR attacks is to implement server-side acces
 
 Ensure that identifiers for resources can't be guessed by an attacker. Do not expose any personally identifiable information (PII), like user names or email addresses in the URL. Instead use a unique non-guessable token to represent the user. You can use more complex IDs as primary keys, like {{glossary("UUID", "UUIDs")}}, and make it harder to guess valid values. However, this only reduces the likelihood of guessing valid IDs and does not replace the need for proper access control.
 
-### Session IDs
-
-Session IDs require special security measurements and should never be predictable nor contain any direct object references like the user name or user ID. If you can, use secure mechanism in established frameworks to generate non-predictable, safe, long session IDs. The use of existing frameworks or libraries often also has the advantage that additional [secure cookie configurations](/en-US/docs/Web/Security/Practical_implementation_guides/Cookies) are integrated already as well.
-
-If you must generate session IDs yourself, do not generate session IDs from any predictable information. Instead, generate IDs that are very long and based on data from cryptographically secure pseudo-random number generators (CSPRNG). If you're combining randomness with non-random data such as timestamps and user IDs to avoid collisions, make sure to use strong and non-reversible hash algorithms.
-
 ## Defense summary checklist
 
 - Always verify that the authenticated user is authorized to access or modify the object.
 - Avoid exposing predictable, sequential, or sensitive object identifiers (like user IDs or email addresses).
 - Use more complex IDs that are harder to predict (for example, UUIDs).
-- Pay special attention to session ID security, prefer non-predictable IDs and cryptographically secure pseudo-random numbers where possible.
 
 ## See also
 
 - [OWASP: Insecure Direct Object Reference Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet.html)
-- [OWASP: Session Prediction](https://owasp.org/www-community/attacks/Session_Prediction)
