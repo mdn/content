@@ -47,14 +47,10 @@ navigator.getUserMedia({ video: true }, (stream) => {
   sender = pc.addTrack(track, stream);
 });
 
-document.getElementById("closeButton").addEventListener(
-  "click",
-  (event) => {
-    pc.removeTrack(sender);
-    pc.close();
-  },
-  false,
-);
+document.getElementById("closeButton").addEventListener("click", (event) => {
+  pc.removeTrack(sender);
+  pc.close();
+});
 ```
 
 ## Specifications

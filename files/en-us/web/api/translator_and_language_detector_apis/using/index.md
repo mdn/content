@@ -35,7 +35,7 @@ const results = await detector.detect(myTextString);
 This method returns an array of objects representing the detected potential language matches.
 Each one contains:
 
-- A string containing the [BCP 47 language tag](https://en.wikipedia.org/wiki/IETF_language_tag#List_of_common_primary_language_subtags) representing the detected language.
+- A string containing a {{glossary("BCP 47 language tag")}} representing the detected language.
 - A number between 0 and 1 representing a confidence score for that match.
 
 So for example:

@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Navigator.vendorSub
 ---
 
-{{ApiRef}}
+{{APIRef("HTML DOM")}}
 
 The value of the **`Navigator.vendorSub`** property is always
 the empty string, in any browser.
