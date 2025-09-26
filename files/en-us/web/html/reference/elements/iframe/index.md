@@ -195,9 +195,10 @@ Cross-origin communication can be achieved using {{domxref("Window.postMessage()
 Scripts running in a same-origin frame can access the {{domxref("Window.top")}} property and set {{domxref("Window.location","window.top.location")}} to redirect the top-level page to a new location.
 This behavior is referred to as "top navigation".
 
-A cross-origin frame is only allowed to redirect the page using `top` if the frame has {{glossary("Sticky activation")}}.
-If a top-navigation is blocked the browser may prompt for user permission to redirect, or it may simply report the error in the developer console.
-What this means is that you won't be able to load a cross-origin frame and immediately redirect to a new page — the user must first (or previously) have interacted with the frame or granted permission to redirect.
+A cross-origin frame is allowed to redirect the top-level page using `top` only if the frame has {{glossary("sticky activation")}}.
+If a top navigation is blocked, browsers may either prompt for user permission to redirect or report the error in the developer console (or both).
+This restriction by browsers is called a _framebusting intervention_.
+What this means is that a cross-origin frame can't immediately redirect the top-level page — the user must have previously interacted with the frame or granted permission to redirect.
 
 A sandboxed frame blocks all top navigation unless the `sandbox` attribute values are set to [`allow-top-navigation`](#allow-top-navigation) or [`allow-top-navigation-by-user-activation`](#allow-top-navigation-by-user-activation).
 Note that top-navigation permissions are inherited, so a nested frame can perform a top navigation only if its parent frames are also allowed to.
