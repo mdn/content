@@ -22,23 +22,31 @@ console.log(uint8.length);
 
 ## Description
 
-The `length` property is an accessor property whose set accessor function is `undefined`, meaning that you can only read this property. The value is established when a _TypedArray_ is constructed and cannot be changed. If the _TypedArray_ is not specifying a `byteOffset` or a `length`, the length of the referenced {{jsxref("ArrayBuffer")}} will be returned. _TypedArray_ is one of the [TypedArray objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects).
+The `length` property is an accessor property whose set accessor function is `undefined`, meaning that you can only read this property. If the typed array is [length-tracking](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#behavior_when_viewing_a_resizable_buffer), then its length depends on the length of the underlying buffer, and may change if the buffer is resized. Otherwise, the value is established when the typed array is constructed and cannot be changed. Whether length-tracking or not, the `length` becomes 0 if the underlying buffer is resized such that the viewed range is no longer valid.
 
 ## Examples
 
-### Using the `length` property
+### Using the length property
 
 ```js
 const buffer = new ArrayBuffer(8);
 
-let uint8 = new Uint8Array(buffer);
+const uint8 = new Uint8Array(buffer);
 uint8.length; // 8 (matches the length of the buffer)
 
-uint8 = new Uint8Array(buffer, 1, 5);
-uint8.length; // 5 (as specified when constructing the Uint8Array)
+const uint8newLength = new Uint8Array(buffer, 1, 5);
+uint8newLength.length; // 5 (as specified when constructing the Uint8Array)
 
-uint8 = new Uint8Array(buffer, 2);
-uint8.length; // 6 (due to the offset of the constructed Uint8Array)
+const uint8offset = new Uint8Array(buffer, 2);
+uint8offset.length; // 6 (due to the offset of the constructed Uint8Array)
+
+const buffer2 = new ArrayBuffer(16, { maxByteLength: 32 });
+const uint8lengthTracking = new Uint8Array(buffer2, 4);
+uint8lengthTracking.length; // 12 (16 - 4)
+buffer2.resize(20);
+uint8lengthTracking.length; // 16 (20 - 4)
+buffer2.resize(3);
+uint8lengthTracking.length; // 0 (viewed range is no longer valid)
 ```
 
 ## Specifications

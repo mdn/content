@@ -4,11 +4,11 @@ short-title: item()
 slug: Web/API/SpeechGrammarList/item
 page-type: web-api-instance-method
 status:
-  - experimental
+  - deprecated
 browser-compat: api.SpeechGrammarList.item
 ---
 
-{{APIRef("Web Speech API")}}{{ SeeCompatTable() }}
+{{APIRef("Web Speech API")}}{{deprecated_header}}
 
 The **`item`** getter of the {{domxref("SpeechGrammarList")}}
 interface is a standard getter — it allows individual {{domxref("SpeechGrammar")}}

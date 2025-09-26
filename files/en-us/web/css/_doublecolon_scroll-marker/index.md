@@ -26,7 +26,10 @@ A `::scroll-marker` is generated on an element when the `::scroll-marker`'s {{cs
 
 The scroll container's `::scroll-marker-group` pseudo-element automatically contains any `::scroll-marker` pseudo-elements generated on the scroll container or its descendants. This allows them to be positioned and laid out as a group and is typically used when creating a CSS carousel to create a scroll position indicator. The individual scroll markers can be used to navigate to their associated content items.
 
-Accessibility-wise, the scroll marker group and contained scroll markers are rendered with [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role)/[`tab`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role) semantics. When you <kbd>Tab</kbd> to the group, it behaves like a single item (that is, another press of the <kbd>Tab</kbd> key will move past the group to the next item), and you can move between the different scroll markers using the left and right (or up and down) cursor keys.
+> [!NOTE]
+> Alternatively, a scroll marker group container can be created from an existing element container using {{cssxref("scroll-target-group")}}; any contained {{htmlelement("a")}} elements with fragment identifiers linking to sections of the page automatically behave like scroll markers.
+
+When a scroll marker group container is created on a scroll container using the `scroll-marker-group` property, the scroll container is rendered with [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role)/[`tab`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role) semantics. You can <kbd>Tab</kbd> to it with the keyboard, then move between the different "pages" using the left and right (or up and down) cursor keys, which also changes the state of the associated scroll markers and scroll buttons as expected. The scroll markers can also be tabbed between normally, as expected.
 
 ## Examples
 
@@ -57,7 +60,7 @@ We have a basic HTML {{htmlelement("ul")}} list with several {{htmlelement("li")
 
 We convert our `<ul>` into a scroll snapping overflow container by setting the {{cssxref("display")}} to `flex`, creating a single, non-wrapping row of `<li>` elements. The {{cssxref("overflow-x")}} property is set to `auto`, meaning if the items overflow their container on the x-axis, the content will scroll horizontally. We then convert the `<ul>` into a [scroll-snap container](/en-US/docs/Glossary/Scroll_snap#scroll_snap_container), ensuring that items always snap into place when the container is scrolled with a {{cssxref("scroll-snap-type")}} value of `mandatory`.
 
-We create a scroll marker group with the `scroll-marker-group` property, placing the group after all the content.
+We create a scroll marker group container with the `scroll-marker-group` property, placing it after all the content.
 
 ```css live-sample___creating-scroll-markers live-sample___custom-numbering
 ul {
@@ -189,6 +192,7 @@ To improve user experience, we set a different color on the markers on {{cssxref
 ## See also
 
 - {{cssxref("scroll-marker-group")}}
+- {{cssxref("scroll-target-group")}}
 - {{cssxref("::scroll-button()")}}
 - {{cssxref("::scroll-marker-group")}}
 - {{cssxref(":target-current")}}

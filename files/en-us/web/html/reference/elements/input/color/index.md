@@ -97,8 +97,8 @@ As is the case with other {{HTMLElement("input")}} types, there are two events t
 Here's an example that watches changes over time to the color value:
 
 ```js
-colorPicker.addEventListener("input", updateFirst, false);
-colorPicker.addEventListener("change", watchColorPicker, false);
+colorPicker.addEventListener("input", updateFirst);
+colorPicker.addEventListener("change", watchColorPicker);
 
 function watchColorPicker(event) {
   document.querySelectorAll("p").forEach((p) => {
@@ -157,8 +157,8 @@ The following code initializes the color input:
 const defaultColor = "#0000ff";
 const colorPicker = document.querySelector("#color-picker");
 colorPicker.value = defaultColor;
-colorPicker.addEventListener("input", updateFirst, false);
-colorPicker.addEventListener("change", updateAll, false);
+colorPicker.addEventListener("input", updateFirst);
+colorPicker.addEventListener("change", updateAll);
 colorPicker.select();
 ```
 

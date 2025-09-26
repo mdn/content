@@ -18,7 +18,7 @@ To solve this challenge we are expecting you to create a simple website project,
 2. Save the following HTML listing inside a file inside your folder called `index.html` (or paste it into your online editor's HTML pane).
 
    ```html
-   <!DOCTYPE html>
+   <!doctype html>
    <html lang="en">
      <head>
        <meta charset="utf-8" />
@@ -395,7 +395,7 @@ The following screenshot shows what the splash page should look like. If you are
 Your finished HTML should look something like this:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />

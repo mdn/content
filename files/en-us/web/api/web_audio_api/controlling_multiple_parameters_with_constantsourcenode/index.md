@@ -152,7 +152,7 @@ function setup() {
   gainNode3.connect(context.destination);
 
   // All is set up. We can hook the volume control.
-  volumeControl.addEventListener("input", changeVolume, false);
+  volumeControl.addEventListener("input", changeVolume);
 }
 ```
 
@@ -169,7 +169,7 @@ Then we assign a handler for the volume slider's {{domxref("Element/input_event"
 Right after declaring the `setup()` function, we add a handler to the play checkbox's {{domxref("HTMLElement/change_event", "change")}} event (see [Toggling the oscillators on and off](#toggling_the_oscillators_on_and_off) for more on the `togglePlay()` method), and the stage is set. Let's see how the action plays out.
 
 ```js
-playButton.addEventListener("change", togglePlay, false);
+playButton.addEventListener("change", togglePlay);
 ```
 
 #### Toggling the oscillators on and off

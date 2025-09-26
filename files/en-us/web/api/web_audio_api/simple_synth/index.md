@@ -323,7 +323,7 @@ The `setup()` function is responsible for building the keyboard and preparing th
 function setup() {
   const noteFreq = createNoteTable();
 
-  volumeControl.addEventListener("change", changeVolume, false);
+  volumeControl.addEventListener("change", changeVolume);
 
   mainGainNode = audioContext.createGain();
   mainGainNode.connect(audioContext.destination);
@@ -390,10 +390,10 @@ function createKey(note, octave, freq) {
   labelElement.appendChild(document.createElement("sub")).textContent = octave;
   keyElement.appendChild(labelElement);
 
-  keyElement.addEventListener("mousedown", notePressed, false);
-  keyElement.addEventListener("mouseup", noteReleased, false);
-  keyElement.addEventListener("mouseover", notePressed, false);
-  keyElement.addEventListener("mouseleave", noteReleased, false);
+  keyElement.addEventListener("mousedown", notePressed);
+  keyElement.addEventListener("mouseup", noteReleased);
+  keyElement.addEventListener("mouseover", notePressed);
+  keyElement.addEventListener("mouseleave", noteReleased);
 
   return keyElement;
 }

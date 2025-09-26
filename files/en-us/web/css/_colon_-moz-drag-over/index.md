@@ -42,14 +42,10 @@ For more information, see [Drag operations: Specifying drop targets](/en-US/docs
 ```js
 const target = document.getElementById("drop-target");
 /* dragenter event fired on the drop target */
-target.addEventListener(
-  "dragenter",
-  (event) => {
-    // prevent default to allow drop
-    event.preventDefault();
-  },
-  false,
-);
+target.addEventListener("dragenter", (event) => {
+  // prevent default to allow drop
+  event.preventDefault();
+});
 ```
 
 ### CSS

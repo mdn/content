@@ -46,7 +46,7 @@ Transport-level errors will have one of the following values for the specified e
 
 ## Examples
 
-In this example, the {{domxref("RTCDtlsTransport.onerror", "onerror")}} event handler property is used to set the handler for the `error` event.
+In this example, the `onerror` event handler property is used to set the handler for the `error` event.
 
 ```js
 transport.onerror = (ev) => {

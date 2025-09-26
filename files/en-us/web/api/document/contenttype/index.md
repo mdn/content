@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Document.contentType
 ---
 
-{{APIRef}}
+{{APIRef("DOM")}}
 
 The **`Document.contentType`** read-only property returns the
 MIME type that the document is being rendered as. This may come from HTTP headers or
