@@ -14,6 +14,7 @@ Additionally, each multi-word property has a {{glossary("camel case")}} version 
 This allows, for example, you to access the `margin-top` CSS property using the syntax `style["margin-top"]` or `style.marginTop` (where `style` is a `CSSStyleProperties`).
 
 Properties with no defined value default to the empty string (`""`).
+For an object representing an inline style declaration (not computed styles) this will be any style that is not defined in the declaration block.
 
 `CSSStyleProperties` object instances are exposed using the following APIs:
 
