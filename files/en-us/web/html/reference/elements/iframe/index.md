@@ -190,7 +190,7 @@ Script access to a frame's content is subject to the [same-origin policy](/en-US
 Scripts cannot access most properties in other `window` objects if the script was loaded from a different origin, including scripts inside a frame accessing the frame's parent.
 Cross-origin communication can be achieved using {{domxref("Window.postMessage()")}}.
 
-### `Window.top` navigation
+### Top navigation in cross-origin frames
 
 Scripts running in a same-origin frame can access the {{domxref("Window.top")}} property and set {{domxref("Window.location","window.top.location")}} to redirect the top level page to a new location.
 This is referred to as a "top-navigation" or "framebusting".
