@@ -12,7 +12,7 @@ To understand how prototypes can be polluted, the following MDN articles are use
 - [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
 - [Working with objects](/en-US/docs/Web/JavaScript/Guide/Working_with_objects)
 
-The key thing to understand is the special meaning of the {{jsxref("Object.**proto**")}} property as well as the built-in global {{jsxref("Object.prototype")}} and how adding a property to `Object.prototype`, will make that property accessible on ("polluted to") every object in your application.
+The key thing to understand is the special meaning of the [`Object.prototype.__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) property, and how adding a property to `Object.prototype` will make that property accessible on ("polluted to") every object in your application.
 
 For example, the following {{domxref("fetch()")}} call can be changed completely. By default, it is a {{HTTPMethod("GET")}} request, but because we polluted the `Object` object's prototype with two new default properties, the `fetch()` call is now transformed into a {{HTTPMethod("POST")}} request.
 
@@ -26,7 +26,7 @@ fetch("https://example.com", {
 // Promise {status: "pending", body: "a=1", method: "POST"}
 
 // Any new object initialization is now modified to contain additional default properties
-new Object(); // {body: "a=1", method: "POST"}
+console.log({}.method); // "POST"
 ```
 
 ## Example scenarios
