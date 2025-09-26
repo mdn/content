@@ -9,11 +9,12 @@ browser-compat: api.CSSStyleProperties
 
 The **`CSSStyleProperties`** interface represents inline or computed styles available on an element or the styles associated with a CSS style rule.
 
-An object of this type has properties corresponding to all [CSS properties](/en-US/docs/Web/CSS/Properties) supported by the browser, including those with `-moz` and `-webkit` prefixes.
-Additionally, each multi-word property has a {{glossary("camel case")}} version that refers to the same value.
-This allows, for example, you to access the `margin-top` CSS property using the syntax `style["margin-top"]` or `style.marginTop` (where `style` is a `CSSStyleProperties`).
+An object of this type has attributes corresponding to all [CSS properties](/en-US/docs/Web/CSS/Properties) supported by the browser, including those with `-moz` and `-webkit` prefixes, which can be accessed using methods such as {{DOMxRef("CSSStyleProperties/getPropertyValue", "getPropertyValue()")}} and {{DOMxRef("CSSStyleProperties/setPropertyValue", "setPropertyValue()")}} inherited from the {{DOMxRef("CSSStyleProperties")}} base class.
 
-Properties with no defined value default to the empty string (`""`).
+In addition, each attribute is reflected by a property that is {{glossary("camel case", )}}-named after the attribute.
+This allows you to, for example, access the `margin-top` CSS property using the syntax `style.marginTop` (where `style` is a `CSSStyleProperties`), instead of the more cumbersome `style.getPropertyValue("margin-top")` or `style["margin-top"]`.
+
+Properties and attributes with no defined value default to the empty string (`""`).
 For an object representing an inline style declaration (not computed styles) this will be any style that is not defined in the declaration block.
 
 `CSSStyleProperties` object instances are exposed using the following APIs:
@@ -24,12 +25,12 @@ For an object representing an inline style declaration (not computed styles) thi
 
 {{InheritanceDiagram}}
 
-## Attributes
+## Instance properties
 
 _This interface also inherits properties of its parent, {{domxref("CSSStyleDeclaration")}}._
 
 - Named properties
-  - : Dashed and camel-cased attributes for all CSS properties supported by the browser.
+  - : Dashed attributes and camel-cased properties for all CSS properties supported by the browser.
 - {{DOMxRef("CSSStyleProperties.cssFloat", "CSSStyleProperties.cssFloat")}}
   - : Special alias for the {{CSSxRef("float")}} CSS property.
 
