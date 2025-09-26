@@ -145,11 +145,10 @@ We include CSS that will invert elements based on their `filter` or `svgFilter` 
         <svg id="svg" height="220" width="220" overflow="visible">
           <filter id="svgInvert">
             <feComponentTransfer>
-              <feFuncR type="table" tableValues="0.3 0"/>
-              <feFuncG type="table" tableValues="0.3 0"/>
-              <feFuncB type="table" tableValues="0.3 0"/>
+              <feFuncR type="table" tableValues="0.3 0" />
+              <feFuncG type="table" tableValues="0.3 0" />
+              <feFuncB type="table" tableValues="0.3 0" />
             </feComponentTransfer>
-          </filter>
           </filter>
           <image
             href="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"

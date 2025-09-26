@@ -18,8 +18,6 @@ browser-compat: api.HTMLScriptElement.text
 The **`text`** property of the {{domxref("HTMLScriptElement")}} interface represents the inline text content of the script element.
 It acts the same way as the {{domxref("HTMLScriptElement.textContent","textContent")}} property.
 
-It reflects the `text` attribute of the {{HTMLElement("script")}} element.
-
 ## Value
 
 Getting the property returns a string containing the element's text.
@@ -81,12 +79,12 @@ For the purpose of this example we'll allow just exactly the script that we need
 
 ```js
 const policy = trustedTypes.createPolicy("inline-script-policy", {
-  createScript: (input) => {
+  createScript(input) {
     // Here specify what scripts are safe to allow
     if (input === "const num = 10;\nconsole.log(num)") {
       return input; // allow this exact script
     }
-    throw new TypeError("Untrusted script blocked: " + input);
+    throw new TypeError(`Untrusted script blocked: ${input}`);
   },
 });
 ```
@@ -123,7 +121,7 @@ Note that in this case we're not using the policy to create trusted scripts (for
 
 ```js
 // Set the text property
-let el.text = "const num = 10;\nconsole.log(num)";
+el.text = "const num = 10;\nconsole.log(num)";
 console.log(el.text); // Output: "const num = 10;\nconsole.log(num);"
 console.log(el.textContent); // Output: "const num = 10;\nconsole.log(num);"
 

@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Element.wheel_event
 ---
 
-{{APIRef}}
+{{APIRef("UI Events")}}
 
 The **`wheel`** event fires when the user rotates a wheel button on a pointing device (typically a mouse). It is also fired for related devices that simulate wheel actions, such as trackpads and mouse balls.
 
