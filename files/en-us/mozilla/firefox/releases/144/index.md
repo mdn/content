@@ -60,7 +60,7 @@ Firefox 144 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 #### Media, WebRTC, and Web Audio
 
-- Framebusting Intervention: Cross-origin {{htmlelement("iframe")}}s require either user interaction or explicit permission in order to redirect the top level page using `window.top.location`, aligning behavior with Chrome and Safari.
+- Cross-origin {{htmlelement("iframe")}}s now require either user interaction ({{glossary("sticky activation")}}) or explicit permission to redirect the top-level page using `window.top.location`.
   See [`Window.top` navigation](/en-US/docs/Web/HTML/Reference/Elements/iframe#window.top_navigation) for more information. ([Firefox bug 1419501](https://bugzil.la/1419501)).
 - {{domxref("RTCDataChannel")}} instances are now [transferrable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects), and hence can be passed to [workers](/en-US/docs/Web/API/Worker). ([Firefox bug 1209163](https://bugzil.la/1209163)).
 - The [`closing` event](/en-US/docs/Web/API/RTCDataChannel/closing_event) and the `onclosing()` event handler are now supported on the {{domxref("RTCDataChannel")}} interface. ([Firefox bug 1611953](https://bugzil.la/1611953)).
