@@ -22,7 +22,7 @@ In the following sections we'll explore some concrete examples of this attack.
 
 ### URL tampering
 
-A common type of IDOR attack involves manipulation of direct object references in the URL. The "1234" in the following URLs is the user's record in the database (primary key). If an attacker changes this number to any other number (say "1235") and gains access to another user's information, your application is vulnerable to Insecure Direct Object Reference.
+A common type of IDOR attack involves manipulation of direct object references in the URL. The "1234" in the following URLs is an identifier for the user's record in the server's database. If an attacker changes this number to any other number (say "1235") and gains access to another user's information, your application is vulnerable to Insecure Direct Object Reference.
 
 ```http
 # The attacker is logged in as user 1234
@@ -32,7 +32,7 @@ https://example.org/user/id/1234
 https://example.org/user/id/1235
 ```
 
-The problem lies within the server application that doesn't verify which URL is permitted by which user:
+The website is vulnerable to IDOR because the server doesn't verify which URL is permitted by which user:
 
 ```js example-bad
 app.get("/user/id/:id", (req, res) => {
