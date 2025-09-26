@@ -192,8 +192,8 @@ Cross-origin communication can be achieved using {{domxref("Window.postMessage()
 
 ### Top navigation in cross-origin frames
 
-Scripts running in a same-origin frame can access the {{domxref("Window.top")}} property and set {{domxref("Window.location","window.top.location")}} to redirect the top level page to a new location.
-This is referred to as a "top-navigation" or "framebusting".
+Scripts running in a same-origin frame can access the {{domxref("Window.top")}} property and set {{domxref("Window.location","window.top.location")}} to redirect the top-level page to a new location.
+This behavior is referred to as "top navigation".
 
 A cross-origin frame is only allowed to redirect the page using `top` if the frame has {{glossary("Sticky activation")}}.
 If a top-navigation is blocked the browser may prompt for user permission to redirect, or it may simply report the error in the developer console.
