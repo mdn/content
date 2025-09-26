@@ -28,7 +28,8 @@ _Inherits methods from its ancestors {{domxref("CSSGroupingRule")}} and {{domxre
 
 ## Examples
 
-The CSS includes one style rule. This will be the first {{domxref("CSSRule")}} returned by `document.styleSheets[0].cssRules`.
+The CSS includes one style rule.
+This will be the first {{domxref("CSSRule")}} returned by `document.styleSheets[0].cssRules`.
 `myRules[0]` therefore returns a `CSSStyleRule` object representing the rule defined for `h1`.
 
 ```css
