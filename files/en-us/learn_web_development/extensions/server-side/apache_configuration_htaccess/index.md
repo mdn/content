@@ -1,5 +1,6 @@
 ---
 title: "Apache Configuration: .htaccess"
+short-title: Apache .htaccess
 slug: Learn_web_development/Extensions/Server-side/Apache_Configuration_htaccess
 page-type: guide
 sidebar: learnsidebar
