@@ -84,7 +84,13 @@ The parameters common across the syntax of some basic shape functions include:
     > [!NOTE]
     > `<fill-rule>` is not supported in {{cssxref("offset-path")}} and using it invalidates the property.
 
-### Syntax for rectangles by container insets
+### Syntax for rectangles: `<basic-shape-rect>`
+
+The `<basic-shape-rect>` type, a subset of the `<basic-shape>` type, represents the basic-shape functions limited to creating rectangles, including {{cssxref("basic-shape/inset","inset()")}}, {{cssxref("basic-shape/rect","rect()")}}, and {{cssxref("basic-shape/xywh","xywh()")}}.
+
+The [`polygon()`](/en-US/docs/Web/CSS/basic-shape/polygon), [`path()`](/en-US/docs/Web/CSS/basic-shape/path), and [`shape()`](/en-US/docs/Web/CSS/basic-shape/shape) functions can also be used to create rectangles, but are not limited to only four-sided, right-angled shapes.
+
+#### Syntax for rectangles by container insets
 
 The {{cssxref("basic-shape/inset","inset()")}} function creates an inset rectangle, with its size defined by the offset distance of each of the four sides of its container and, optionally, rounded corners.
 
@@ -96,7 +102,7 @@ When all of the first four arguments are supplied, they represent the top, right
 
 If a pair of insets for a dimension adds up to more than 100% of that dimension, both values are proportionally reduced so their sum equals 100%. For example, the value `inset(90% 10% 60% 10%)` has a top inset of `90%` and a bottom inset of `60%`. These values are reduced proportionally to `inset(60% 10% 40% 10%)`. Shapes such as this, that enclose no area and have no {{cssxref("shape-margin")}}, do not affect wrapping.
 
-### Syntax for rectangles by distance
+#### Syntax for rectangles by distance
 
 The {{cssxref("basic-shape/rect","rect()")}} function defines a rectangle using the specified distances from the top and left edges of the reference box, with optional rounded corners.
 
@@ -106,7 +112,7 @@ rect( [ <length-percentage> | auto ]{4} [ round <'border-radius'> ]? )
 
 When using the `rect()` function, you do not define the width and height of the rectangle. Instead, you specify four values to create the rectangle, with its dimensions determined by the size of the reference box and the four offset values. Each value can be either a {{cssxref("length")}}, a {{cssxref("percentage")}}, or the keyword `auto`. The `auto` keyword is interpreted as `0%` for the top and left values and as `100%` for the bottom and right values.
 
-### Syntax for rectangles with dimensions
+#### Syntax for rectangles with dimensions
 
 The {{cssxref("basic-shape/xywh","xywh()")}} function defines a rectangle located at the specified distances from the left (`x`) and top (`y`) edges of the reference box and sized by the specified width (`w`) and height (`h`) of the rectangle, in that order, with optional rounded corners.
 
