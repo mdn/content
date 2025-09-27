@@ -5,6 +5,7 @@ page-type: css-module
 spec-urls:
   - https://drafts.csswg.org/css-color/
   - https://drafts.csswg.org/css-color-5/
+  - https://drafts.csswg.org/css-color-hdr/
 sidebar: cssref
 ---
 
@@ -27,6 +28,7 @@ To see the code for this color syntax converter, [view the source on GitHub](htt
 ### Properties
 
 - {{cssxref("color")}}
+- {{cssxref("dynamic-range-limit")}}
 - {{cssxref("opacity")}}
 
 ### At-rules and descriptors
@@ -47,8 +49,9 @@ The CSS colors module also introduces the {{cssxref("@color-profile")}} at-rule,
 - [`color-mix()`](/en-US/docs/Web/CSS/color_value/color-mix)
 - [`contrast-color()`](/en-US/docs/Web/CSS/color_value/contrast-color)
 - {{CSSXref("color_value/light-dark", "light-dark()")}}
+- {{cssxref("dynamic-range-limit-mix()")}}
 
-The CSS color module also introduces the {{CSSXref("color_value/device-cmyk", "device-cmyk()")}} and `contrast-color()` functions. Currently, no browsers support these features.
+The CSS color modules also introduce the {{CSSXref("color_value/device-cmyk", "device-cmyk()")}}, `contrast-color()`, and `hdr-color()` functions. Currently, no browsers support these features.
 
 ### Data types
 
