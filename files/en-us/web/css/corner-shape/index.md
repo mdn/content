@@ -175,7 +175,7 @@ div {
 
 @supports not (corner-shape: scoop) {
   body {
-    width: 100%;
+    all: unset !important;
   }
 
   body::before {
@@ -185,6 +185,7 @@ div {
     display: block;
     width: 100%;
     text-align: center;
+    padding: 1rem 0;
   }
 
   body > * {
@@ -259,8 +260,7 @@ div {
 
 @supports not (corner-shape: scoop notch) {
   body {
-    width: 100%;
-    background: initial !important;
+    all: unset !important;
   }
 
   body::before {
@@ -270,6 +270,7 @@ div {
     display: block;
     width: 100%;
     text-align: center;
+    padding: 1rem 0;
   }
 
   body > * {
@@ -397,7 +398,7 @@ section {
 
 @supports not (corner-shape: scoop) {
   body {
-    width: 100%;
+    all: unset !important;
   }
 
   body::before {
@@ -407,6 +408,7 @@ section {
     display: block;
     width: 100%;
     text-align: center;
+    padding: 1rem 0;
   }
 
   body > * {
@@ -521,7 +523,7 @@ section {
 
 @supports not (corner-shape: superellipse(0)) {
   body {
-    width: 100%;
+    all: unset !important;
   }
 
   body::before {
@@ -531,6 +533,7 @@ section {
     display: block;
     width: 100%;
     text-align: center;
+    padding: 1rem 0;
   }
 
   body > * {
@@ -610,7 +613,7 @@ div {
 
 @supports not (corner-shape: square) {
   body {
-    width: 100%;
+    all: unset !important;
   }
 
   body::before {
@@ -620,6 +623,7 @@ div {
     display: block;
     width: 100%;
     text-align: center;
+    padding: 1rem 0;
   }
 
   body > * {
@@ -634,7 +638,8 @@ div {
     corner-shape: square;
   }
 
-  /* To make the starting point apparent, let us keep the shape the same for a small duration. */
+  /* To make the starting point apparent, let us keep
+  the shape the same for a small duration. */
   20% {
     corner-shape: square;
   }
