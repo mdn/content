@@ -10,7 +10,7 @@ browser-compat: http.headers.Permissions-Policy.aria-notify
 sidebar: http
 ---
 
-{{SeeCompatTable}}
+{{SeeCompatTable}}{{non-standard_header}}
 
 The HTTP {{HTTPHeader("Permissions-Policy")}} header `aria-notify` directive controls whether the current document is allowed to use the {{domxref("Document.ariaNotify()")}} and {{domxref("Element.ariaNotify()")}} methods to fire {{glossary("screen reader")}} announcements.
 
