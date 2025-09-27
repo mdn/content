@@ -339,4 +339,6 @@ form.addEventListener("submit", renderHouses);
 fetchHouseData();
 ```
 
+</details>
+
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Test_your_skills/JSON", "Learn_web_development/Core/Scripting/Debugging_JavaScript", "Learn_web_development/Core/Scripting")}}
