@@ -14,6 +14,7 @@ The **`CSSRule`** interface represents a single CSS rule. There are several type
 - {{DOMXRef("CSSImportRule")}}
 - {{DOMXRef("CSSMediaRule")}}
 - {{DOMXRef("CSSFontFaceRule")}}
+- {{DOMxRef("CSSFunctionDeclarations")}}
 - {{DOMXRef("CSSPageRule")}}
 - {{DOMXRef("CSSNamespaceRule")}}
 - {{DOMXRef("CSSKeyframesRule")}}
