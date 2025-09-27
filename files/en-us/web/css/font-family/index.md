@@ -137,7 +137,7 @@ font-family: "Gill Sans Extrabold", sans-serif;
     - `system-ui`
       - : Glyphs are taken from the default user interface font on a given platform. Because typographic traditions vary widely across the world, this generic is provided for typefaces that don't map cleanly into the other generics.
         > [!NOTE]
-        > The `system-ui` font family matches the operating system’s default UI font, making web apps look native. However, it is platform-dependent, may produce inconsistent or undesirable results in some languages/locales, and is not optimized for large paragraphs of text or articles. To ensure readability and optimization, use the `sans-serif` generic family instead. See the [CSS Fonts Module Level 4 spec](https://www.w3.org/TR/css-fonts-4/#system-ui-def).
+        > As the name implies, `system-ui` is intended for use with UI elements to provide a native app appearance, and not for large paragraphs of text. It may cause the displayed typeface to be undesirable for some end users—for example, the default Windows CJK font may render Latin scripts poorly, and the `lang` attribute might not affect the displayed font. Some operating systems do not allow customizing `system-ui`, while browsers generally allow customizing the `sans-serif` font family. For large paragraphs, use `sans-serif` instead.
     - `ui-serif`
       - : The default user interface serif font.
     - `ui-sans-serif`
