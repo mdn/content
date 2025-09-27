@@ -10323,6 +10323,8 @@
 /en-US/docs/Web/API/SpeechRecognitionError/message	/en-US/docs/Web/API/SpeechRecognitionErrorEvent/message
 /en-US/docs/Web/API/SpeechRecognitionEvent/SpeechRecognitionEvent.resultIndex	/en-US/docs/Web/API/SpeechRecognitionEvent/resultIndex
 /en-US/docs/Web/API/SpeechRecognitionEvent/SpeechRecognitionEvent.results	/en-US/docs/Web/API/SpeechRecognitionEvent/results
+/en-US/docs/Web/API/SpeechRecognitionEvent/emma	/en-US/docs/Web/API/SpeechRecognitionEvent
+/en-US/docs/Web/API/SpeechRecognitionEvent/interpretation	/en-US/docs/Web/API/SpeechRecognitionEvent
 /en-US/docs/Web/API/SpeechSynthesis/SpeechSynthesis.cancel	/en-US/docs/Web/API/SpeechSynthesis/cancel
 /en-US/docs/Web/API/SpeechSynthesis/onvoiceschanged	/en-US/docs/Web/API/SpeechSynthesis/voiceschanged_event
 /en-US/docs/Web/API/SpeechSynthesisUtterance/onboundary	/en-US/docs/Web/API/SpeechSynthesisUtterance/boundary_event
