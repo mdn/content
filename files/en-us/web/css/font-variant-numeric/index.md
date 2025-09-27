@@ -15,6 +15,10 @@ font-variant-numeric: normal;
 ```
 
 ```css interactive-example-choice
+font-variant-numeric: ordinal;
+```
+
+```css interactive-example-choice
 font-variant-numeric: slashed-zero;
 ```
 
@@ -24,6 +28,22 @@ font-variant-numeric: tabular-nums;
 
 ```css interactive-example-choice
 font-variant-numeric: oldstyle-nums;
+```
+
+```css interactive-example-choice
+font-variant-numeric: lining-nums;
+```
+
+```css interactive-example-choice
+font-variant-numeric: proportional-nums;
+```
+
+```css interactive-example-choice
+font-variant-numeric: diagonal-fractions;
+```
+
+```css interactive-example-choice
+font-variant-numeric: stacked-fractions;
 ```
 
 ```html interactive-example
