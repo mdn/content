@@ -78,9 +78,22 @@ font-family: ui-serif;
 font-family: ui-sans-serif;
 font-family: ui-monospace;
 font-family: ui-rounded;
-font-family: emoji;
 font-family: math;
 font-family: fangsong;
+
+/* Generic family names using the generic() function */
+font-family: generic(serif);
+font-family: generic(sans-serif);
+font-family: generic(monospace);
+font-family: generic(cursive);
+font-family: generic(fantasy);
+font-family: generic(system-ui);
+font-family: generic(ui-serif);
+font-family: generic(ui-sans-serif);
+font-family: generic(ui-monospace);
+font-family: generic(ui-rounded);
+font-family: generic(math);
+font-family: generic(fangsong);
 
 /* Global values */
 font-family: inherit;
@@ -108,7 +121,7 @@ font-family: "Gill Sans Extrabold", sans-serif;
     See also [Valid family names](#valid_family_names).
 
 - `<generic-name>`
-  - : Generic font families are a fallback mechanism, a means of preserving some of the style sheet author's intent when none of the specified fonts are available. Generic family names are keywords and must not be quoted. A generic font family should be the last item in the list of font family names. The following keywords are defined:
+  - : Generic font families are a fallback mechanism, a means of preserving some of the style sheet author's intent when none of the specified fonts are available. Generic family names can be specified as keywords (which must not be quoted) or using the `generic()` function. A generic font family should be the last item in the list of font family names. The following keywords are defined:
     - `serif`
       - : Glyphs have finishing strokes, flared or tapering ends, or have actual serifed endings.
 
@@ -148,10 +161,22 @@ font-family: "Gill Sans Extrabold", sans-serif;
       - : The default user interface font that has rounded features.
     - `math`
       - : This is for the particular stylistic concerns of representing mathematics: superscript and subscript, brackets that cross several lines, nesting expressions, and double struck glyphs with distinct meanings.
-    - `emoji`
-      - : Fonts that are specifically designed to render emoji.
     - `fangsong`
       - : A particular style of Chinese characters that are between serif-style Song and cursive-style Kai forms. This style is often used for government documents.
+
+  Generic family names can also be specified using the `generic()` function:
+  - `generic(serif)`
+  - `generic(sans-serif)`
+  - `generic(monospace)`
+  - `generic(cursive)`
+  - `generic(fantasy)`
+  - `generic(system-ui)`
+  - `generic(ui-serif)`
+  - `generic(ui-sans-serif)`
+  - `generic(ui-monospace)`
+  - `generic(ui-rounded)`
+  - `generic(math)`
+  - `generic(fangsong)`
 
 ## Formal definition
 
@@ -186,16 +211,41 @@ font-family: "Gill Sans Extrabold", sans-serif;
   font-family: fantasy;
 }
 
-.emoji {
-  font-family: emoji;
-}
-
 .math {
   font-family: math;
 }
 
 .fangsong {
   font-family: fangsong;
+}
+
+/* Using generic() function syntax */
+.generic-serif {
+  font-family: Times, "Times New Roman", Georgia, generic(serif);
+}
+
+.generic-sans-serif {
+  font-family: Verdana, Arial, Helvetica, generic(sans-serif);
+}
+
+.generic-monospace {
+  font-family: "Lucida Console", Courier, generic(monospace);
+}
+
+.generic-cursive {
+  font-family: generic(cursive);
+}
+
+.generic-fantasy {
+  font-family: generic(fantasy);
+}
+
+.generic-math {
+  font-family: generic(math);
+}
+
+.generic-fangsong {
+  font-family: generic(fangsong);
 }
 ```
 
@@ -212,9 +262,25 @@ font-family: "Gill Sans Extrabold", sans-serif;
 
 <div class="math">This is an example of a math font.</div>
 
-<div class="emoji">This is an example of an emoji font.</div>
-
 <div class="fangsong">This is an example of a fangsong font.</div>
+
+<div class="generic-serif">This is an example using generic(serif).</div>
+
+<div class="generic-sans-serif">
+  This is an example using generic(sans-serif).
+</div>
+
+<div class="generic-monospace">
+  This is an example using generic(monospace).
+</div>
+
+<div class="generic-cursive">This is an example using generic(cursive).</div>
+
+<div class="generic-fantasy">This is an example using generic(fantasy).</div>
+
+<div class="generic-math">This is an example using generic(math).</div>
+
+<div class="generic-fangsong">This is an example using generic(fangsong).</div>
 ```
 
 {{EmbedLiveSample("Some_common_font_families", 600, 220)}}
@@ -259,5 +325,6 @@ font-family:
 
 - {{cssxref("font-style")}}
 - {{cssxref("font-weight")}}
+- {{cssxref("font-variant-emoji")}}
 - SVG {{SVGAttr("font-family")}} attribute
 - [Learn: Fundamental text and font styling](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals)
