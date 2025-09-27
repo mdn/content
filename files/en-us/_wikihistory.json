@@ -41103,6 +41103,24 @@
       "Enn"
     ]
   },
+  "Web/API/HTML_Drag_and_Drop_API/Drag_data_store": {
+    "modified": "2020-06-02T06:32:13.194Z",
+    "contributors": [
+      "Tigt",
+      "SphinxKnight",
+      "chrisdavidmills",
+      "w3l",
+      "AFBarstow",
+      "idmean",
+      "Neil",
+      "teoli",
+      "Sheppy",
+      "Mgalli",
+      "DaveG",
+      "Piro",
+      "Enn"
+    ]
+  },
   "Web/API/HTML_Drag_and_Drop_API/Drag_operations": {
     "modified": "2020-01-25T13:26:01.457Z",
     "contributors": [
@@ -41152,24 +41170,6 @@
       "fscholz",
       "PushpitaPikuDey",
       "AFBarstow"
-    ]
-  },
-  "Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types": {
-    "modified": "2020-06-02T06:32:13.194Z",
-    "contributors": [
-      "Tigt",
-      "SphinxKnight",
-      "chrisdavidmills",
-      "w3l",
-      "AFBarstow",
-      "idmean",
-      "Neil",
-      "teoli",
-      "Sheppy",
-      "Mgalli",
-      "DaveG",
-      "Piro",
-      "Enn"
     ]
   },
   "Web/API/HTML_Sanitizer_API": {
