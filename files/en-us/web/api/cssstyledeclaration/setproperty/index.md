@@ -156,7 +156,7 @@ function randomColor() {
   return `rgb(${random(0, 255)} ${random(0, 255)} ${random(0, 255)})`;
 }
 
-const stylesheet = document.styleSheets[1];
+const stylesheet = document.styleSheets[2];
 const boxParaRule = [...stylesheet.cssRules].find(
   (r) => r.selectorText === ".box p",
 );
