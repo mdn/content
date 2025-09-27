@@ -70,7 +70,9 @@ Firefox 144 is the current [Beta version of Firefox](https://www.firefox.com/en-
   This constraint allows developers to request video that matches other constraints, such as resolution and frame rate, even if the requested constraints are not supported by the underlying hardware.
   The browser may then crop, downscale, or reduce the frame rate of the video captured from a camera, or downscale (but not crop) the video captured from a screen or window. ([Firefox bug 1286945](https://bugzil.la/1286945)).
 
-<!-- #### Removals -->
+#### Removals
+
+- The [`afterscriptexecute` event](/en-US/docs/Web/API/Document/afterscriptexecute_event) and [`beforescriptexecute` event](/en-US/docs/Web/API/Document/beforescriptexecute_event) of the `Document` interface, and the [`afterscriptexecute` event](/en-US/docs/Web/API/Element/afterscriptexecute_event) and [`beforescriptexecute` event](/en-US/docs/Web/API/Element/beforescriptexecute_event) of the `Element` interface have been removed. ([Firefox bug 1584269](https://bugzil.la/1584269)).
 
 <!-- ### WebAssembly -->
 
