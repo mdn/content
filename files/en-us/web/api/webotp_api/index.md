@@ -66,7 +66,7 @@ Your verification code is 123456.
   - Followed by the OTP, preceded by a pound sign (`#`).
 
 > [!NOTE]
-> The provided domain value must not include a URL schema, port, or other URL features not shown above.
+> The provided domain value must not include a URL scheme, port, or other URL features not shown above.
 
 If the `get()` method is invoked by a third-party site embedded in an {{htmlelement("iframe")}}, the SMS structure should be:
 

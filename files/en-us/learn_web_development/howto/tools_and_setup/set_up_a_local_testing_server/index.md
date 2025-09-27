@@ -40,7 +40,7 @@ Some examples won't run if you open them as local files. This can be due to a va
 
 - **They feature asynchronous requests**. Some browsers (including Chrome) will not run async requests (see [Learn: Making network requests with JavaScript](/en-US/docs/Learn_web_development/Core/Scripting/Network_requests)) if you just run the example from a local file. This is because of security restrictions (for more on web security, read [Website security](/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security)).
 - **They feature a server-side language**. Server-side languages (such as PHP or Python) require a special server to interpret the code and deliver the results.
-- **They include other files**. Browsers commonly treat requests to load resources using the `file://` schema as cross-origin requests.
+- **They include other files**. Browsers commonly treat requests to load resources using the `file://` scheme as cross-origin requests.
   So if you load a local file that includes other local files, this may trigger a {{Glossary("CORS")}} error.
 
 ## Running a simple local HTTP server
