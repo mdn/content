@@ -18,15 +18,8 @@ The WebVTT API is primarily used for displaying subtitles or captions that overl
 A text track is a container for time-aligned text data that can be played in parallel with a video or audio track to provide a translation, transcription, or overview of the content.
 A video or audio media element may define tracks of different kinds or in different languages, allowing users to display appropriate tracks based on their preferences or needs.
 
-The different kinds of text data that can be specified are listed below.
+The different kinds of text data that can be specified are `captions`, `descriptions`, `chapters`, `subtitles` or `metadata`; the [`<track>`](/en-US/docs/Web/HTML/Reference/Elements/track#kind) documentation has more information about what they mean.
 Note that browsers do not necessarily support all kinds of text tracks.
-
-- `subtitles` provide a textual translation of spoken dialog.
-  This is the default type of text track, and if used, the source language must be specified.
-- `captions` provide a transcription of spoken text, and may include information about other audio such as music or background noise.
-  They are intended for hearing impaired users.
-- `chapters` provide high level navigation information, allowing users to more easily switch to relevant content.
-- `metadata` is used for any other kinds of time-aligned information.
 
 The individual time-aligned units of text data within a track are referred to as "cues".
 Each cue has a start time, end time, and textual payload.
