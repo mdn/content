@@ -58,7 +58,7 @@ For VS Code, try out the following free extensions:
 
 ### Using Node.js
 
-The Node.js [`http-server`](https://www.npmjs.com/package/http-server) module is an easiest way to host HTML files in any directory.
+The Node.js [`http-server`](https://www.npmjs.com/package/http-server) module is an easy way to host HTML files in any directory.
 
 To use the module:
 
