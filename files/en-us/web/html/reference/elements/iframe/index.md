@@ -196,8 +196,8 @@ Scripts running in a same-origin frame can access the {{domxref("Window.top")}} 
 This behavior is referred to as "top navigation".
 
 A cross-origin frame is allowed to redirect the top-level page using `top` only if the frame has {{glossary("sticky activation")}}.
-If a top navigation is blocked, browsers may either prompt for user permission to redirect or report the error in the developer console (or both).
-This restriction by browsers is called a _framebusting intervention_.
+If top navigation is blocked, browsers may either prompt for user permission to redirect or report the error in the developer console (or both).
+This restriction by browsers is called _framebusting intervention_.
 What this means is that a cross-origin frame can't immediately redirect the top-level page — the user must have previously interacted with the frame or granted permission to redirect.
 
 A sandboxed frame blocks all top navigation unless the `sandbox` attribute values are set to [`allow-top-navigation`](#allow-top-navigation) or [`allow-top-navigation-by-user-activation`](#allow-top-navigation-by-user-activation).
