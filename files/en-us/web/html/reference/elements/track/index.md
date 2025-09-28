@@ -56,9 +56,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     - `descriptions`
       - : Descriptions summarize the _video_ component of the media resource. They are intended to be synthesized as audio when the visual component is obscured, unavailable, or not usable (e.g., because the user is interacting with the application without a screen while driving, or because the user is blind).
     - `chapters`
-      - Chapter titles are intended to be used when the user is navigating the media resource.
+      - : Chapter titles are intended to be used when the user is navigating the media resource.
     - `metadata`
-      - Tracks used by scripts. Not visible to the user.
+      - : Tracks used by scripts. Not visible to the user.
 
 - `label`
   - : A user-readable title of the text track which is used by the browser when listing available text tracks.
