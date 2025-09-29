@@ -294,7 +294,7 @@ const phraseObjects = phraseData.map(
 );
 ```
 
-After we've created our `SpeechRecognition` instance, we can then plug our contextual biasing phrases into it by setting the `phraseObjects` array as the value of the `SpeechRecognition.phrases` property:
+After creating the `SpeechRecognition` instance, we add our contextual biasing phrases by setting the `phraseObjects` array as the value of the `SpeechRecognition.phrases` property:
 
 ```js
 recognition.phrases = phraseObjects;
