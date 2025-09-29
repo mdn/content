@@ -191,7 +191,7 @@ This demo works in a very similar fashion to the online speech color changer dem
 
 ### Specifying on-device recognition
 
-To specify that you want to use the browser's own on-device processing, you need to set the {{domxref("SpeechRecognition.processLocally")}} property to `true` before starting any speech recognition (the default value is `false`):
+To specify that you want to use the browser's on-device processing, set the {{domxref("SpeechRecognition.processLocally")}} property to `true` before starting any speech recognition (the default value is `false`):
 
 ```js
 recognition.processLocally = true;
