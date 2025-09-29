@@ -188,7 +188,7 @@ const thumbBar = document.querySelector(".thumb-bar");
 const btn = document.querySelector("button");
 const overlay = document.querySelector(".overlay");
 
-// 1. Declare an array of objects containing the image file names and their alt text
+// 1. Declare an array of objects containing image file names & alt text
 
 const images = [
   { filename: "pic1.jpg", alt: "Closeup of a human eye" },
