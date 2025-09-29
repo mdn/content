@@ -140,11 +140,11 @@ recognition.onresult = (event) => {
 };
 ```
 
-The second line here is a bit complex, so let's explain it step by step:
+The second line is a bit complex, so we'll explain each part here:
 
-- The {{domxref("SpeechRecognitionEvent.results")}} property returns a {{domxref("SpeechRecognitionResultList")}} object containing {{domxref("SpeechRecognitionResult")}} objects. It has a getter so it can be accessed like an array — so the first `[0]` returns the `SpeechRecognitionResult` at position 0.
-- Each `SpeechRecognitionResult` object contains {{domxref("SpeechRecognitionAlternative")}} objects that contain individual recognized words. These also have getters so they can be accessed like arrays — the second `[0]` therefore returns the `SpeechRecognitionAlternative` at position 0.
-- We then return its `transcript` property to get a string containing the individual recognized result as a string, set the background color to that color, and report the color recognized as a diagnostic message in the UI.
+- The {{domxref("SpeechRecognitionEvent.results")}} property returns a {{domxref("SpeechRecognitionResultList")}} object containing {{domxref("SpeechRecognitionResult")}} objects. It has a getter so it can be accessed like an array — the first `[0]` returns the `SpeechRecognitionResult` at position `0`.
+- Each `SpeechRecognitionResult` object in turn contains {{domxref("SpeechRecognitionAlternative")}} objects, each representing an individual recognized word. These also have getters, so they can be accessed like arrays — the second `[0]` returns the `SpeechRecognitionAlternative` at position `0`.
+- The `transcript` property of the `SpeechRecognitionAlternative` returns a string containing the recognized text. This value is then used to set the background color to a recognized color and also report it as a diagnostic message in the UI.
 
 We also use the {{domxref("SpeechRecognition.speechend_event", "speechend")}} event to stop the speech recognition service from running (using {{domxref("SpeechRecognition.stop()")}}) once a single word has been recognized and it has finished being spoken:
 
