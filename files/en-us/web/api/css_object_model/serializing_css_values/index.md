@@ -1,5 +1,6 @@
 ---
-title: CSS Object Model - Serializing CSS values
+title: Serializing CSS values
+short-title: Serializing CSS values
 slug: Web/API/CSS_Object_Model/Serializing_CSS_values
 page-type: guide
 spec-urls:
@@ -8,30 +9,29 @@ spec-urls:
 ---
 
 {{APIRef("CSSOM")}}
-{{SeeCompatTable}}
 
-When working with CSS through JavaScript APIs, property values are **serialized** into standardized string representations. This means that even if you set a CSS property using one syntax (like `hsl()` for colors), reading it back through JavaScript might return a different, but equivalent, representation (like `rgb()`).
-
-## Overview
-
-CSS values are serialized whenever they're accessed through JavaScript APIs like {{domxref("CSSStyleDeclaration.getPropertyValue()")}} or {{domxref("Window.getComputedStyle()")}}. The serialization process follows rules defined in the [CSS Object Model (CSSOM) specification](https://drafts.csswg.org/cssom/#serialize-a-css-value).
+When working with CSS through JavaScript APIs, property values are **serialized** into standardized string representations. For example, you might set a color using `hsl(240, 100%, 50%)`, but when accessed through JavaScript, the value may be returned as the equivalent `rgb(0, 0, 255)`.
 
 ## Why does serialization happen?
 
-The CSSOM must expose CSS values as strings to JavaScript. To ensure interoperability, the specification defines canonical formats for each type of value. This conversion process is called **serialization**.
+Serialization ensures that CSS values are exposed to JavaScript in a consistent format across browsers. Without this, equivalent values could be returned in different syntaxes (for example, `#f00` vs. `rgb(255, 0, 0)`), breaking code that relies on string comparisons.
+The CSSOM specification defines canonical formats for each CSS type to guarantee predictable, interoperable behavior.
 
-For example:
+## When does serialization occur?
 
-- Shorthand properties like `margin` might be expanded into longhands
-- Invalid or unsupported values may be replaced
-- Color functions are often normalized to `rgb()` or `rgba()`
-- Relative lengths might be computed to absolute values
+Serialization happens whenever CSS values are read through JavaScript APIs, such as:
+
+- `element.style.getPropertyValue()`
+- `getComputedStyle(element).getPropertyValue()`
+- Reading `style.cssText`
+- Inspecting inline `style` attributes
+- Accessing values via `CSSStyleDeclaration` methods
 
 ## Color value serialization
 
-Colors are commonly affected by serialization. Regardless of how a color is defined in CSS (using `hsl()`, `hwb()`, color keywords, or other syntaxes), accessing it via JavaScript typically returns it in `rgb()` or `rgba()` format.
+Colors are one of the most common cases affected by serialization. Regardless of whether you define a color using `hsl()`, `hwb()`, a keyword, or a modern color space, JavaScript usually returns it in `rgb()` or `rgba()` format.
 
-### Color serialization examples
+### Example: color serialization
 
 The following examples demonstrate how different color formats are serialized when accessed through JavaScript.
 
@@ -91,57 +91,44 @@ examples.forEach((element) => {
 
 {{EmbedLiveSample("Color serialization examples", 600, 200)}}
 
+> [!NOTE]
+> When a color includes transparency, the serialized result always uses `rgba()`.
+> Example:
+>
+> ```js
+> element.style.backgroundColor = "hsla(120, 50%, 50%, 0.3)";
+> console.log(getComputedStyle(element).getPropertyValue("background-color"));
+> // "rgba(64, 159, 64, 0.3)"
+> ```
+
 Even when using modern color syntaxes like `hwb()` or `color(display-p3 0.4 0.6 0.8)`, most current browsers will serialize the value to `rgb()` or `rgba()` when accessed through JavaScript.
 
-### Transparency and rgba()
+## Length value serialization
 
-When a color includes an alpha channel (transparency), the serialized output will use `rgba()`:
+Lengths are another common case. Relative units (like `em`, `%`) are often resolved to absolute pixels when serialized through JavaScript APIs.
 
 ```js
-element.style.backgroundColor = "hsla(120, 50%, 50%, 0.3)";
-console.log(getComputedStyle(element).getPropertyValue("background-color"));
-// Output: "rgba(64, 159, 64, 0.3)"
+element.style.marginLeft = "2em";
+console.log(getComputedStyle(element).marginLeft);
+// "32px" (depending on font size)
 ```
 
-## When does serialization occur?
+This normalization allows scripts to compare or calculate lengths consistently.
 
-CSS values are serialized whenever they are accessed through JavaScript APIs, including:
+## How specifications define serialization
 
-- Reading properties with `element.style.getPropertyValue()`
-- Getting computed styles via `getComputedStyle(element).getPropertyValue()`
-- Accessing `cssText` of a style rule
-- Reading `style` attribute values
-- Using `CSSStyleDeclaration` methods
+The [`CSSOM specification`](https://drafts.csswg.org/cssom/#serialize-a-css-value) defines algorithms for serializing CSS values. The process converts the internal representation of a value into a canonical string format.
 
-## Specification behavior
+- Colors typically serialize to `rgb()` or `rgba()`.
+- Lengths resolve to pixels.
+- The keyword `transparent` serializes as `rgba(0, 0, 0, 0)`.
+- The concept of resolved values exists to preserve compatibility with legacy code that expects specific formats.
 
-The exact serialization behavior is defined in the [CSSOM specification](https://drafts.csswg.org/cssom/#serialize-a-css-value). Key aspects include:
+This ensures that, regardless of how a property was originally written (for example, `#ff0000`, `hsl(0,100%,50%)`, or `hwb(0 0% 0%)`), the value returned to JavaScript is consistent across implementations.
 
-- [Serializing color values](https://drafts.csswg.org/cssom/#serialize-a-css-component-value)
-- Different handling for _declared_, _computed_, and _resolved_ values
-- Special cases for various CSS properties and value types
+## Specifications
 
-The concept of a "resolved value" was introduced to maintain compatibility with existing web content that might depend on specific serialization formats.
-
-## Common serialization patterns
-
-| Original Value            | Typical Serialized Output  |
-| ------------------------- | -------------------------- |
-| `hsl(0, 100%, 50%)`       | `rgb(255, 0, 0)`           |
-| `#ff0000`                 | `rgb(255, 0, 0)`           |
-| `hwb(0 0% 0%)`            | `rgb(255, 0, 0)`           |
-| `color(display-p3 1 0 0)` | `rgb(255, 0, 0)`           |
-| `transparent`             | `rgba(0, 0, 0, 0)`         |
-| `currentcolor`            | Depends on inherited color |
-
-## Best practices
-
-When working with serialized CSS values:
-
-1. Don't assume the format of returned values will match the format used to set them
-2. For color comparison, consider parsing values to a common format
-3. Remember that computed values may differ from specified values
-4. Test across browsers, as serialization details can vary
+{{Specifications}}
 
 ## See also
 
