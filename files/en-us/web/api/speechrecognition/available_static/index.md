@@ -77,14 +77,14 @@ If `processLocally` is `true`:
 
 ### Checking on-device availability and installing language packs
 
-For on-device speech recognition to occur, the browser needs to have a language pack installed for the language you are trying to recognize. If you run the `start()` method after specifying `processLocally = true` and you haven't got the correct language pack installed, it will fail with a [`language-not-supported`](/en-US/docs/Web/API/SpeechRecognitionErrorEvent/error#language-not-supported) error.
+For on-device speech recognition to work, the browser must have a language pack installed for the language you want to recognize. If you run the `start()` method after specifying `processLocally = true` but the correct language pack isn't installed, the function call will fail with a [`language-not-supported`](/en-US/docs/Web/API/SpeechRecognitionErrorEvent/error#language-not-supported) error.
 
-To get the correct language pack installed, there are two steps to follow.
+To get the correct language pack installed, ensure you follow these two steps:
 
-1. You need to check whether the language pack is available on the user's computer using the `available()` method.
-2. You need to install the language pack if it isn't available using the {{domxref("SpeechRecognition.install_static", "SpeechRecognition.install()")}} method.
+1. Check whether the language pack is available on the user's computer using the `available()` method.
+2. Install the language pack if it isn't available using the {{domxref("SpeechRecognition.install_static", "SpeechRecognition.install()")}} method.
 
-Both of the above steps are handled using the following code snippet:
+These steps are handled using the following code snippet:
 
 ```js
 startBtn.addEventListener("click", () => {
@@ -114,11 +114,11 @@ startBtn.addEventListener("click", () => {
 });
 ```
 
-We run the `available()` method, specifying one language (`langs: ["en-US"]`) to check availability for, and `processLocally: true`. We test for three different possibilities of the return value:
+We first run the `available()` method, specifying one language (`langs: ["en-US"]`) to check availability for, and `processLocally: true`. We test for three different possibilities of the return value:
 
-- If the resulting value is `unavailable`, it means that the language is not available, and a suitable language pack is not available to download, so we print an appropriate message to the output.
+- If the resulting value is `unavailable`, it means that no suitable language pack is available to download. We also print an appropriate message to the output.
 - If the resulting value is `available`, it means that the language pack is available locally, so recognition can begin. In this case, we run `start()` and log a message to the console when the app is ready to receive speech.
-- If the value is something else (`downloadable` or `downloading`), we print a diagnostic message to inform the user that a language code download is commencing, then run the `install()` method to handle the download.
+- If the value is something else (`downloadable` or `downloading`), we print a diagnostic message to inform the user that a language pack download is starting, then run the `install()` method to handle the download.
 
 The `install()` method works in a similar way to the `available()` method, except that its options object only takes the `langs` array. When run, it starts downloading the `en-US` language pack and returns a {{jsxref("Promise")}} that resolves with a boolean indicating whether the specified language packs were downloaded and installed successfully (`true`) or not (`false`).
 
