@@ -147,7 +147,7 @@ The keyword values can be grouped into six value categories.
 ### Inside
 
 - {{CSSxRef("&lt;display-inside&gt;")}}
-  - : These keywords specify the element's inner display type, which defines the type of formatting context that its contents are laid out in (assuming it is a non-replaced element):
+  - : These keywords specify the element's inner display type, which defines the type of formatting context that its contents are laid out in (assuming it is a non-replaced element). When one of these keywords is used by itself as a single value, the element's outer display type defaults to `block` (with the exception of `ruby`, which defaults to `inline`).
     - `flow`
       - : The element lays out its contents using flow layout (block-and-inline layout).
 
@@ -156,7 +156,7 @@ The keyword values can be grouped into six value categories.
         Depending on the value of other properties (such as {{CSSxRef("position")}}, {{CSSxRef("float")}}, or {{CSSxRef("overflow")}}) and whether it is itself participating in a block or inline formatting context, it either establishes a new [block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context) (BFC) for its contents or integrates its contents into its parent formatting context.
 
     - `flow-root`
-      - : Depending on its display property, the element generates either a block box (with block flow-root) or an inline-level box (with inline flow-root). In both cases, it generates a block container that establishes a new [block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context), defining where the formatting root lies.
+      - : The element generates a block box that establishes a new [block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context), defining where the formatting root lies.
 
     - `table`
       - : These elements behave like HTML {{HTMLElement("table")}} elements. It defines a block-level box.
