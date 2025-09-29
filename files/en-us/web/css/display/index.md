@@ -157,7 +157,6 @@ The keyword values can be grouped into six value categories.
 
     - `flow-root`
       - : The element generates a block box that establishes a new [block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context), defining where the formatting root lies.
-
     - `table`
       - : These elements behave like HTML {{HTMLElement("table")}} elements. It defines a block-level box.
     - `flex`
