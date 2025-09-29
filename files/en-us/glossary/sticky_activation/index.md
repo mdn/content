@@ -8,7 +8,12 @@ sidebar: glossarysidebar
 **Sticky activation** (or "sticky user activation") is a window state that indicates a user has meaningfully and directly interacted with the window since page load.
 Once active, the state lasts for the duration of the session.
 
-The state is enabled following any user interaction that results in the browser generating a `mousedown` or `pointerdown` event for a mouse, a `pointerup` event for any other kind of pointer, a `touchend` event, or a `keydown` event (other than for the escape or browser shortcut keys) when the window has focus.
+The state is enabled following any user interaction, when the window has focus, that results in the browser generating one or more of the following:
+
+- A `mousedown` or `pointerdown` event for a mouse.
+- A `pointerup` event for any other kind of pointer.
+- A `touchend` event.
+- A `keydown` event, other than for the escape or browser shortcut keys.
 The window is not user activated by events that don't indicate intentional interaction with the window, such as mouse move events or `wheel` events.
 
 Sticky activation is used to control access to certain features, blocking them if the user hasn't interacted with the page.
