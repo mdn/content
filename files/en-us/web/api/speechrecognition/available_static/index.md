@@ -12,7 +12,7 @@ The **`available()`** static method of the [Web Speech API](/en-US/docs/Web/API/
 
 To install a language pack for speech recognition locally, use the {{domxref("SpeechRecognition.install_static", "SpeechRecognition.install()")}} method.
 
-Access to the `available()` method is controlled by the {{httpheader("Permissions-Policy/on-device-speech-recognition", "on-device-speech-recognition")}} {{httpheader("Permissions-Policy")}} directive. Specifically, where a defined policy blocks usage, any attempts to call the method will fail.
+Access to the `available()` method is controlled by the {{httpheader("Permissions-Policy/on-device-speech-recognition", "on-device-speech-recognition")}} {{httpheader("Permissions-Policy")}}. Specifically, where a defined policy blocks usage, any attempts to call the method will fail.
 
 ## Syntax
 
