@@ -26,7 +26,7 @@ Firefox 144 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ### CSS
 
-- The [CSS view transition additions](/en-US/docs/Web/API/View_Transition_API#css_additions) for [SPAs (single-page applications)](/en-US/docs/Glossary/SPA) are now supported, this provides a way to style the parts of a view transition animation. ([Firefox bug 1985809](https://bugzil.la/1985809)). These include:
+- [CSS features](/en-US/docs/Web/API/View_Transition_API#css_additions) for view transitions in single-page applications ([SPAs](/en-US/docs/Glossary/SPA)) are now supported. This provides a way to style the parts of a view transition animation. ([Firefox bug 1985809](https://bugzil.la/1985809)). These include:
   - The CSS {{CSSXRef(":active-view-transition")}} pseudo-class.
   - The CSS {{CSSXRef("view-transition-class")}} property.
   - The CSS {{CSSXRef("view-transition-name")}} property.
