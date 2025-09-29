@@ -164,7 +164,7 @@ recognition.onnomatch = (event) => {
 };
 ```
 
-The {{domxref("SpeechRecognition.error_event", "error")}} event handles cases where there is an actual error with the recognition — the {{domxref("SpeechRecognitionErrorEvent.error")}} property contains the actual error returned:
+The {{domxref("SpeechRecognition.error_event", "error")}} event handles cases when there is an actual error with the recognition — the {{domxref("SpeechRecognitionErrorEvent.error")}} property contains the error returned:
 
 ```js
 recognition.onerror = (event) => {
