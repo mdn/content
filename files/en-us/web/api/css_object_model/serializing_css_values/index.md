@@ -1,5 +1,5 @@
 ---
-title: CSS Object Model - Serializing CSS values
+title: Serializing CSS values
 slug: Web/API/CSS_Object_Model/Serializing_CSS_values
 page-type: guide
 spec-urls:
