@@ -10,8 +10,7 @@ browser-compat: api.Navigator.languages
 
 The **`languages`** read-only property of the {{domxref("Navigator")}} interface
 returns an array of strings representing the user's preferred
-languages. The language is described using language tags according to
-{{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}. In the returned
+languages. The language is described using a {{glossary("BCP 47 language tag")}}. In the returned
 array they are ordered by preference with the most preferred language first.
 
 The value of {{domxref("Navigator.language","navigator.language")}} is the

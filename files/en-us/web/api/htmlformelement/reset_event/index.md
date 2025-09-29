@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.HTMLFormElement.reset_event
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The **`reset`** event fires when a {{HTMLElement("form")}} is reset.
 

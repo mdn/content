@@ -70,6 +70,11 @@ sidebar:
       - /Learn_web_development/Core/Structuring_content/Forms_challenge
       - /Learn_web_development/Core/Structuring_content/Debugging_HTML
       - /Learn_web_development/Core/Structuring_content/Test_your_skills
+      - title: Additional_tutorials
+        details: closed
+        children:
+          - /Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML
+          - /Learn_web_development/Core/Structuring_content/General_embedding_technologies
   - link: /Learn_web_development/Core/Styling_basics
     title: CSS_styling_basics
     details: closed
@@ -101,6 +106,13 @@ sidebar:
       - /Learn_web_development/Core/Styling_basics/Tables
       - /Learn_web_development/Core/Styling_basics/Debugging_CSS
       - /Learn_web_development/Core/Styling_basics/Test_your_skills
+      - title: Additional_tutorials
+        details: closed
+        children:
+          - /Learn_web_development/Core/Styling_basics/Advanced_styling_effects
+          - /Learn_web_development/Core/Styling_basics/Cascade_layers
+          - /Learn_web_development/Core/Styling_basics/Handling_different_text_directions
+          - /Learn_web_development/Core/Styling_basics/Organizing
   - link: /Learn_web_development/Core/Text_styling
     title: CSS_text_styling
     details: closed
@@ -128,6 +140,13 @@ sidebar:
       - /Learn_web_development/Core/CSS_layout/Test_your_skills/Responsive_design
       - /Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension
       - /Learn_web_development/Core/CSS_layout/Test_your_skills
+      - title: Additional_tutorials
+        details: closed
+        children:
+          - /Learn_web_development/Core/CSS_layout/Multiple-column_Layout
+          - /Learn_web_development/Core/CSS_layout/Practical_positioning_examples
+          - /Learn_web_development/Core/CSS_layout/Legacy_Layout_Methods
+          - /Learn_web_development/Core/CSS_layout/Supporting_Older_Browsers
   - link: /Learn_web_development/Core/Scripting
     title: Dynamic_scripting_with_JavaScript
     details: closed
@@ -156,10 +175,10 @@ sidebar:
       - /Learn_web_development/Core/Scripting/Events
       - /Learn_web_development/Core/Scripting/Event_bubbling
       - /Learn_web_development/Core/Scripting/Test_your_skills/Events
-      - /Learn_web_development/Core/Scripting/Image_gallery
       - /Learn_web_development/Core/Scripting/Object_basics
       - /Learn_web_development/Core/Scripting/Test_your_skills/Object_basics
       - /Learn_web_development/Core/Scripting/DOM_scripting
+      - /Learn_web_development/Core/Scripting/Image_gallery
       - /Learn_web_development/Core/Scripting/Network_requests
       - /Learn_web_development/Core/Scripting/JSON
       - /Learn_web_development/Core/Scripting/Test_your_skills/JSON
@@ -394,6 +413,7 @@ l10n:
     About: About
     Resources_for_educators: Resources for educators
     Changelog: Changelog
+    Additional_tutorials: Additional tutorials
   pt-BR:
     CSS_layout: Esquemas CSS
     Asynchronous_JavaScript: Asynchronous JavaScript

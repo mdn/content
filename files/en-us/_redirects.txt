@@ -489,7 +489,7 @@
 /en-US/docs/CSS/Getting_Started	/en-US/docs/Learn_web_development/Core/Styling_basics
 /en-US/docs/CSS/Getting_Started/Boxes	/en-US/docs/Learn_web_development/Core/Styling_basics
 /en-US/docs/CSS/Getting_Started/Cascading_and_inheritance	/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts
-/en-US/docs/CSS/Getting_Started/Challenge_solutions	/en-US/docs/Learn_web_development/Core/Challenges
+/en-US/docs/CSS/Getting_Started/Challenge_solutions	/en-US/docs/Learn_web_development/Core
 /en-US/docs/CSS/Getting_Started/Content	/en-US/docs/Learn_web_development/Howto/Solve_CSS_problems/Generated_content
 /en-US/docs/CSS/Getting_Started/How_CSS_works	/en-US/docs/Learn_web_development/Core/Styling_basics/What_is_CSS
 /en-US/docs/CSS/Getting_Started/JavaScript	/en-US/docs/Learn_web_development/Core/Scripting/DOM_scripting
@@ -5768,6 +5768,7 @@
 /en-US/docs/Learn_web_development/Core/CSS_layout/Position_skills	/en-US/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Position
 /en-US/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Multicolumn	/en-US/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout
 /en-US/docs/Learn_web_development/Core/CSS_layout/rwd_skills	/en-US/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Responsive_design
+/en-US/docs/Learn_web_development/Core/Challenges	/en-US/docs/Learn_web_development/Core
 /en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Arrays	/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills/Arrays
 /en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Conditionals	/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills/Conditionals
 /en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Events	/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills/Events
@@ -12252,7 +12253,8 @@
 /en-US/docs/Web/CSS/CSS_cascade/specified_value	/en-US/docs/Web/CSS/CSS_cascade/Value_processing#specified_value
 /en-US/docs/Web/CSS/CSS_cascade/used_value	/en-US/docs/Web/CSS/CSS_cascade/Value_processing#used_value
 /en-US/docs/Web/CSS/CSS_charsets	/en-US/docs/Web/CSS/CSS_syntax
-/en-US/docs/Web/CSS/CSS_colors/Color_picker_tool	/en-US/docs/Web/CSS/CSS_colors/Color_picker
+/en-US/docs/Web/CSS/CSS_colors/Color_picker	/en-US/docs/Web/CSS/CSS_colors/Color_format_converter
+/en-US/docs/Web/CSS/CSS_colors/Color_picker_tool	/en-US/docs/Web/CSS/CSS_colors/Color_format_converter
 /en-US/docs/Web/CSS/CSS_container_queries	/en-US/docs/Web/CSS/CSS_containment/Container_queries
 /en-US/docs/Web/CSS/CSS_descriptor_definition	/en-US/docs/Web/CSS
 /en-US/docs/Web/CSS/CSS_display/flow_layout/Block_and_inline_layout_in_normal_flow	/en-US/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow
@@ -12331,7 +12333,7 @@
 /en-US/docs/Web/CSS/Tools/Border-image_generator	/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Border-image_generator
 /en-US/docs/Web/CSS/Tools/Border-radius_generator	/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator
 /en-US/docs/Web/CSS/Tools/Box-shadow_generator	/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator
-/en-US/docs/Web/CSS/Tools/ColorPicker_Tool	/en-US/docs/Web/CSS/CSS_colors/Color_picker
+/en-US/docs/Web/CSS/Tools/ColorPicker_Tool	/en-US/docs/Web/CSS/CSS_colors/Color_format_converter
 /en-US/docs/Web/CSS/Understanding_CSS_z-index	/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index
 /en-US/docs/Web/CSS/Understanding_CSS_z-index/Adding_z-index	/en-US/docs/Web/CSS/CSS_positioned_layout/Using_z-index
 /en-US/docs/Web/CSS/Understanding_CSS_z-index/Stacking_and_float	/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_floating_elements
@@ -12870,7 +12872,7 @@
 /en-US/docs/Web/Guide/CSS/Getting_started	/en-US/docs/Learn_web_development/Core/Styling_basics
 /en-US/docs/Web/Guide/CSS/Getting_started/Boxes	/en-US/docs/Learn_web_development/Core/Styling_basics
 /en-US/docs/Web/Guide/CSS/Getting_started/Cascading_and_inheritance	/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts
-/en-US/docs/Web/Guide/CSS/Getting_started/Challenge_solutions	/en-US/docs/Learn_web_development/Core/Challenges
+/en-US/docs/Web/Guide/CSS/Getting_started/Challenge_solutions	/en-US/docs/Learn_web_development/Core
 /en-US/docs/Web/Guide/CSS/Getting_started/Content	/en-US/docs/Learn_web_development/Howto/Solve_CSS_problems/Generated_content
 /en-US/docs/Web/Guide/CSS/Getting_started/How_CSS_works	/en-US/docs/Learn_web_development/Core/Styling_basics/What_is_CSS
 /en-US/docs/Web/Guide/CSS/Getting_started/JavaScript	/en-US/docs/Learn_web_development/Core/Scripting/DOM_scripting

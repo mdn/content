@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Element.animate
 ---
 
-{{APIRef('Web Animations')}}
+{{APIRef("Web Animations")}}
 
 The {{domxref("Element")}} interface's **`animate()`** method
 is a shortcut method which creates a new {{domxref("Animation")}}, applies it to the

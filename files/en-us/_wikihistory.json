@@ -6181,18 +6181,6 @@
     "modified": "2020-07-16T22:27:36.041Z",
     "contributors": ["MelchiorIm3Tal", "chrisdavidmills", "rachelandrew"]
   },
-  "Learn_web_development/Core/Challenges": {
-    "modified": "2019-08-29T20:48:33.765Z",
-    "contributors": [
-      "Sebastianz",
-      "strael1",
-      "teoli",
-      "Jeremie",
-      "Sheppy",
-      "illourr",
-      "jswisher"
-    ]
-  },
   "Learn_web_development/Core/Frameworks_libraries": {
     "modified": "2020-09-25T22:34:22.129Z",
     "contributors": ["chrisdavidmills", "CodeDotJS"]
@@ -75899,7 +75887,7 @@
       "chrisdavidmills"
     ]
   },
-  "Web/CSS/CSS_colors/Color_picker": {
+  "Web/CSS/CSS_colors/Color_format_converter": {
     "modified": "2020-10-30T22:49:32.596Z",
     "contributors": [
       "td2014",

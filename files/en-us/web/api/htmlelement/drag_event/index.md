@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.HTMLElement.drag_event
 ---
 
-{{APIRef}}
+{{APIRef("HTML Drag and Drop API")}}
 
 The `drag` event is fired every few hundred milliseconds as an element or text selection is being dragged by the user.
 

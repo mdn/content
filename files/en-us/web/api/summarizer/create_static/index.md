@@ -27,7 +27,7 @@ Summarizer.create(options)
 - `options` {{optional_inline}}
   - : An object specifying configuration options for the `Summarizer`. Possible values include:
     - `expectedInputLanguages`
-      - : An array of strings specifying the expected languages of the input text, which should be valid [BCP 47 language tags](https://en.wikipedia.org/wiki/IETF_language_tag#List_of_common_primary_language_subtags) (as specified in [RFC 5646](https://datatracker.ietf.org/doc/html/rfc5646)). Defaults to `["en"]`.
+      - : An array of strings specifying the expected languages of the input text, which should be valid {{glossary("BCP 47 language tag", "BCP 47 language tags")}}. Defaults to `["en"]`.
     - `expectedContextLanguages`
       - : An array of strings specifying the expected languages of any provided context strings (either the [`sharedContext`](#sharedcontext) passed to the `Summarizer`, or a `context` specified during a {{domxref("Summarizer.summarize", "summarize()")}} or {{domxref("Summarizer.summarizeStreaming", "summarizeStreaming()")}} call), which should be valid BCP 47 language tags. Defaults to `["en"]`.
     - `format`
