@@ -5,17 +5,24 @@ page-type: glossary-definition
 sidebar: glossarysidebar
 ---
 
-**Sticky activation** (or "sticky user activation") is a window state that indicates a user has pressed a button, moved a mouse, used a menu, or performed some other user interaction.
+**Sticky activation** (or "sticky user activation") is a window state that indicates a user has meaningfully and directly interacted with the window since page load.
+Once active, the state lasts for the duration of the session.
 
-A page is considered "user activated" if a user is currently interacting with the page or has completed a touch, pointer, or keyboard interaction since page load. With sticky user activation, if activation is set it is not reset for the duration of the session (unlike {{Glossary("Transient activation")}}).
+The state is enabled following any user interaction that results in the browser generating a `mousedown` or `pointerdown` event for a mouse, a `pointerup` event for any other kind of pointer, a `touchend` event, or a `keydown` event (other than for the escape or browser shortcut keys) when the window has focus.
+The window is not user activated by events that don't indicate intentional interaction with the window, such as mouse move events or `wheel` events.
 
-See [Features gated by user activation](/en-US/docs/Web/Security/User_activation) for examples of APIs that require _sticky activation_.
+Sticky activation is used to control access to certain features, blocking them if the user hasn't interacted with the page.
+For example, it can be used to ensure that controlled features in cross-origin frames don't run code on page load.
+See [Features gated by user activation](/en-US/docs/Web/Security/User_activation) for more information.
 
-See the {{domxref("UserActivation.hasBeenActive")}} property to programmatically access the current window's sticky activation state.
+The {{domxref("UserActivation.hasBeenActive")}} property can be used to programmatically check the current window's sticky activation state.
+
+> [!NOTE]
+> See {{Glossary("Transient activation")}} for a user activation state that expires after a timeout, and may also be "consumed" by some APIs.
 
 ## See also
 
-- [HTML Living Standard > Sticky activation](https://html.spec.whatwg.org/multipage/interaction.html#sticky-activation)
 - Related glossary terms:
   - {{Glossary("Transient activation")}}
 - {{domxref("UserActivation.hasBeenActive")}}
+- [HTML Living Standard > Sticky activation](https://html.spec.whatwg.org/multipage/interaction.html#sticky-activation)
