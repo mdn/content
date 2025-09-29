@@ -156,7 +156,7 @@ recognition.onspeechend = () => {
 
 #### Handling errors and unrecognized speech
 
-The last two handlers handle cases where the spoken term wasn't recognized, or an error occurred with the recognition. The {{domxref("SpeechRecognition.nomatch_event", "nomatch")}} event is supposed to handle the first case mentioned, although note that in most cases the recognition engine will return something, even if it is unintelligible:
+The last two handlers cover cases where the spoken term isn't recognized or an error occurs with the recognition. The {{domxref("SpeechRecognition.nomatch_event", "nomatch")}} event is supposed to handle the first case, although in most cases the recognition engine will return something, even if it is unintelligible:
 
 ```js
 recognition.onnomatch = (event) => {
