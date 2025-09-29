@@ -8,9 +8,10 @@ browser-compat: api.CSSStyleRule.style
 
 {{ APIRef("CSSOM") }}
 
-The read-only **`style`** property is a {{domxref("CSSStyleProperties")}} object representing the inline declaration block of a {{DOMXref("CSSStyleRule")}}.
+The read-only **`style`** property is a {{domxref("CSSStyleProperties")}} object represents the inline styles of a style rule ({{DOMXref("CSSStyleRule")}}).
 
-Note that properties that are not defined in the corresponding CSS declaration are set to the empty string (`""`).
+Note that properties that are present on the object for all [CSS properties](/en-US/docs/Web/CSS/Properties) supported by the browser.
+The properties that are not defined inline in the corresponding CSS declaration are set to the empty string (`""`).
 
 ## Value
 

@@ -18,7 +18,7 @@ _Inherits properties from its ancestors {{domxref("CSSGroupingRule")}} and {{dom
 - {{domxref("CSSStyleRule.selectorText")}}
   - : Returns the textual representation of the selector for this rule, e.g., `"h1, h2"`.
 - {{domxref("CSSStyleRule.style")}} {{ReadOnlyInline}}
-  - : Returns the {{domxref("CSSStyleProperties")}} object for the rule, which contains properties all supported the declaration styles.
+  - : Returns the {{domxref("CSSStyleProperties")}} object for the rule, which represents its styles.
 - {{domxref("CSSStyleRule.styleMap")}} {{ReadOnlyInline}}
   - : Returns a {{domxref('StylePropertyMap')}} object which provides access to the rule's property-value pairs.
 

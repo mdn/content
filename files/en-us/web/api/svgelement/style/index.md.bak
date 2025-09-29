@@ -1,14 +1,14 @@
 ---
-title: "HTMLElement: style property"
+title: "SVGElement: style property"
 short-title: style
-slug: Web/API/HTMLElement/style
+slug: Web/API/SVGElement/style
 page-type: web-api-instance-property
-browser-compat: api.HTMLElement.style
+browser-compat: api.SVGElement.style
 ---
 
 {{APIRef("CSSOM")}}
 
-The read-only **`style`** property of the {{domxref("HTMLElement")}} returns the _inline_ [`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style) of an element in the form of a live {{domxref("CSSStyleProperties")}} object.
+The read-only **`style`** property of the {{domxref("SVGElement")}} returns the _inline_ [`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style) of an element in the form of a live {{domxref("CSSStyleProperties")}} object.
 
 ## Value
 
@@ -27,7 +27,7 @@ The values of the inline styles set in the element's [`style`](/en-US/docs/Web/H
 > Properties that don't have a corresponding inline style are set to `""`.
 
 Shorthand CSS properties in the `style` attribute are expanded to their corresponding long-form dash-named (and camel-case-named) properties.
-For example, an element with style `style="border-top: 1px solid black"` would be represented in the returned object by properties with the names {{cssxref("border-top-color")}}/`borderTopColor`, {{cssxref("border-top-style")}}/`borderTopStyle`, and {{cssxref("border-top-width")}}/`borderTopWidth`.
+For example, an element with style `style="border-top: 1px solid black"` would be represented in the returned object by properties with the names {{cssxref("border-top-color")}}/`borderTopColor`,, {{cssxref("border-top-style")}}/`borderTopStyle`, and {{cssxref("border-top-width")}}/`borderTopWidth`.
 
 The `style` property is read-only, meaning it is not possible to assign a {{domxref("CSSStyleProperties")}} object to it.
 Nevertheless, it is possible to set an inline style by assigning a _string_ directly to the property.
@@ -47,17 +47,24 @@ The `style` property has the same priority in the CSS cascade as an inline style
 The following code snippet demonstrates how the `style` attribute is translated into dash-named properties of {{domxref("CSSStyleProperties")}} :
 
 ```html
-<div style="font-weight: bold;">
-  <div style="border-top: 1px solid blue; color: red;" id="elt">
-    An example div
-  </div>
-  <pre id="log"></pre>
-</div>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 250 250"
+  width="250"
+  height="250">
+  <circle
+    cx="100"
+    cy="100"
+    r="50"
+    id="circle"
+    style="fill: red; stroke: black; stroke-width: 2px;" />
+</svg>
+<pre id="log"></pre>
 ```
 
 ```css hidden
 #log {
-  height: 100px;
+  height: 300px;
   overflow: scroll;
   padding: 0.5rem;
   border: 1px solid black;
@@ -73,7 +80,8 @@ function log(text) {
 ```
 
 ```js
-const element = document.getElementById("elt");
+const element = document.querySelector("circle");
+const out = document.getElementById("out");
 const elementStyle = element.style;
 
 // Loop through all the element's styles using `for...in`
@@ -84,18 +92,14 @@ for (const prop in elementStyle) {
     Object.hasOwn(elementStyle, prop) &&
     !Number.isNaN(Number.parseInt(prop, 10))
   ) {
-    log(
-      `${
-        elementStyle[prop]
-      } = '${elementStyle.getPropertyValue(elementStyle[prop])}`,
-    );
+    out.textContent += `${
+      elementStyle[prop]
+    } = '${elementStyle.getPropertyValue(elementStyle[prop])}'\n`;
   }
 }
 ```
 
-{{EmbedLiveSample("Getting_style_information", "100", "180")}}
-
-Note `font-weight` is not listed as a value for `elementStyle` as it is not defined within the `style` attribute of the element itself. Rather, it is inherited from the definition on its parent. Also note that the shorthand {{cssxref("border-top")}} property, defined in the `style` attribute, is not listed directly. Rather, it is replaced by the three corresponding longhand properties ({{cssxref("border-top-color")}}, {{cssxref("border-top-style")}}, and {{cssxref("border-top-width")}}).
+{{EmbedLiveSample("Getting_style_information", "100", "130")}}
 
 ## Specifications
 
@@ -108,7 +112,6 @@ Note `font-weight` is not listed as a value for `elementStyle` as it is not defi
 ## See also
 
 - [Using dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)
-- {{domxref("SVGElement.style")}}
+- {{domxref("HTMLElement.style")}}
 - {{domxref("MathMLElement.style")}}
-- {{domxref("HTMLElement.attributeStyleMap")}}
-- HTML [`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style) attribute
+- {{domxref("SVGElement.attributeStyleMap")}}

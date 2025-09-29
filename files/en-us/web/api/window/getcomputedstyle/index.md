@@ -8,12 +8,7 @@ browser-compat: api.Window.getComputedStyle
 
 {{APIRef("CSSOM")}}
 
-The
-**`Window.getComputedStyle()`** method returns an object
-containing the values of all CSS properties of an element, after applying active
-stylesheets and resolving any basic computation those values may contain.
-
-Individual CSS property values are accessed through APIs provided by the returned {{DOMxRef("CSSStyleDeclaration")}} object, or by indexing with CSS property names. The values returned by `getComputedStyle` are [resolved values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#resolved_value).
+The **`Window.getComputedStyle()`** method returns a {{DOMxRef("CSSStyleProperties")}} object containing the [resolved values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#resolved_value) of all CSS properties of an element, after applying active stylesheets and resolving any computation those values may contain.
 
 ## Syntax
 
@@ -27,45 +22,54 @@ getComputedStyle(element, pseudoElt)
 - `element`
   - : The {{DOMxRef("Element")}} for which to get the computed style.
 - `pseudoElt` {{optional_inline}}
-  - : A string specifying the pseudo-element to match. Omitted (or `null`) for
-    real elements.
+  - : A string specifying the pseudo-element to match.
+    Omitted (or `null`) for real elements.
 
 ### Return value
 
-A _live_ {{DOMxRef("CSSStyleDeclaration")}} object, which updates automatically when the element's styles are changed.
+A _live_ {{DOMxRef("CSSStyleProperties")}} object, which updates automatically when the element's styles are changed.
 
-Note that:
+> [!NOTE]
+> Earlier versions of the specification returned a {{domxref("CSSStyleDeclaration")}} (from which {{domxref("CSSStyleProperties")}} is derived).
+> See the [browser compatibility](#browser_compatibility) table for browser support information.
 
-- The returned {{DOMxRef("CSSStyleDeclaration")}} object contains active values for CSS property _longhand_ names as well as shorthand names. For example, the returned object contains entries for {{cssxref("border-bottom-width")}} in addition to the {{cssxref("border-width")}} and {{cssxref("border")}} [shorthand property names](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties).
-- Returned values are sometimes deliberately inaccurate. To avoid the "CSS History Leak" security issue, browsers may lie about the computed styles for a visited link, returning values as if the user never visited the linked URL. See [Plugging the CSS history leak](https://blog.mozilla.org/security/2010/03/31/plugging-the-css-history-leak/) and [Privacy-related changes coming to CSS `:visited`](https://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/) for examples of how this is implemented.
-- During [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions), `getComputedStyle` returns the original property value in Firefox, but the final property value in WebKit.
-- In Firefox, properties with the value `auto` return the used value, not the value `auto`. So if you apply `top:auto` and `bottom:0` on an element with `height:30px` and a containing block of `height:100px`, Firefox's computed style for `top` returns `70px`, as 100 − 30 = 70.
-- For compatibility reasons, serialized color values are expressed as [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) colors if the alpha channel value is exactly `1`, and `rgba()` colors otherwise. In both cases, legacy syntax is used, with commas as separators (for example `rgb(255, 0, 0)`).
-
-The returned object is the same {{DOMxRef("CSSStyleDeclaration")}} type as the object returned from the element's {{DOMxRef("HTMLElement/style", "style")}} property. However, the two objects have different purposes:
-
-- The object from `getComputedStyle` is read-only, and should be used to inspect the element's style — including those set by a `<style>` element or an external stylesheet.
-- The `element.style` object should be used to **set** styles on that element, or inspect styles directly added to it from JavaScript manipulation or the global `style` attribute.
+> [!WARNING]
+> Returned values are sometimes deliberately inaccurate.
+> To avoid the "CSS History Leak" security issue, browsers may lie about the computed styles for a visited link, returning values as if the user never visited the linked URL.
+> See [Plugging the CSS history leak](https://blog.mozilla.org/security/2010/03/31/plugging-the-css-history-leak/) and [Privacy-related changes coming to CSS `:visited`](https://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/) for examples of how this is implemented.
 
 ### Exceptions
 
 - {{JSxRef("TypeError")}}
-  - : If the passed object is not an {{DOMxRef("Element")}} or the
-    `pseudoElt` is not a valid pseudo-element selector or is
-    {{CSSxRef("::part", "::part()")}} or {{CSSxRef("::slotted", "::slotted()")}}.
+  - : If the passed object is not an {{DOMxRef("Element")}} or the `pseudoElt` is not a valid pseudo-element selector or is {{CSSxRef("::part", "::part()")}} or {{CSSxRef("::slotted", "::slotted()")}}.
 
     > [!NOTE]
-    > Valid pseudo-element selector refers to syntactic
-    > validity, e.g., `::unsupported` is considered valid, even though the
-    > pseudo-element itself is not supported.
+    > Valid pseudo-element selector refers to syntactic validity, e.g., `::unsupported` is considered valid, even though the pseudo-element itself is not supported.
+
+## Description
+
+The returned object is the same {{DOMxRef("CSSStyleProperties")}} type as the object returned from the element's {{DOMxRef("HTMLElement/style", "style")}} property.
+
+However, the two objects have different purposes:
+
+- The object from `getComputedStyle()` is read-only, and should be used to inspect the element's style — including those set by a `<style>` element or an external stylesheet.
+- The `element.style` object can be used to **set** styles on that element, or inspect styles directly added to it from JavaScript manipulation or the global `style` attribute.
+
+Note that:
+
+- The returned {{DOMxRef("CSSStyleProperties")}} object contains active values for CSS property _longhand_ names as well as shorthand names.
+  For example, the returned object contains entries for {{cssxref("border-bottom-width")}} in addition to the {{cssxref("border-width")}} and {{cssxref("border")}} [shorthand property names](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties).
+- During [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions), `getComputedStyle()` returns the original property value in Firefox, but the final property value in WebKit.
+- In Firefox, properties with the value `auto` return the used value, not the value `auto`.
+  So if you apply `top:auto` and `bottom:0` on an element with `height:30px` and a containing block of `height:100px`, Firefox's computed style for `top` returns `70px`, as 100 − 30 = 70.
+- For compatibility reasons, serialized color values are expressed as [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) colors if the alpha channel value is exactly `1`, and `rgba()` colors otherwise.
+  In both cases, legacy syntax is used, with commas as separators (for example `rgb(255, 0, 0)`).
 
 ## Examples
 
 ### Retrieving computed styles
 
-In this example we style a {{HTMLElement("p")}} element, then retrieve those styles
-using `getComputedStyle()`, and print them into the text content of the
-`<p>`.
+In this example we style a {{HTMLElement("p")}} element, then retrieve those styles using `getComputedStyle()`, and print them into the text content of the `<p>`.
 
 #### HTML
 

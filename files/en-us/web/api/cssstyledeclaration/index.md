@@ -12,15 +12,18 @@ The **`CSSStyleDeclaration`** interface represents an object that is a CSS decla
 A `CSSStyleDeclaration` object can be exposed using three different APIs:
 
 - Via {{DOMxRef("HTMLElement.style")}}, which deals with the inline styles of a single element (e.g., `<div style="…">`).
-- Via the {{DOMxRef("CSSStyleSheet")}} API. For example, `document.styleSheets[0].cssRules[0].style` returns a `CSSStyleDeclaration` object on the first CSS rule in the document's first stylesheet.
+- Via the {{DOMxRef("CSSStyleSheet")}} API.
+  For example, `document.styleSheets[0].cssRules[0].style` returns a `CSSStyleDeclaration` object on the first CSS rule in the document's first stylesheet.
 - Via {{DOMxRef("Window.getComputedStyle()")}}, which exposes the `CSSStyleDeclaration` object as a **read-only** interface.
 
 ## Attributes
 
 - {{DOMxRef("CSSStyleDeclaration.cssText")}}
-  - : Textual representation of the declaration block, if and only if it is exposed via {{DOMxRef("HTMLElement.style")}}. Setting this attribute changes the inline style. If you want a text representation of a computed declaration block, you can get it with `JSON.stringify()`.
+  - : Textual representation of the declaration block, if and only if it is exposed via {{DOMxRef("HTMLElement.style")}}. Setting this attribute changes the inline style.
+    If you want a text representation of a computed declaration block, you can get it with `JSON.stringify()`.
 - {{DOMxRef("CSSStyleDeclaration.length")}} {{ReadOnlyInline}}
-  - : The number of properties. See the {{DOMxRef("CSSStyleDeclaration.item()", 'item()')}} method below.
+  - : The number of properties.
+    See the {{DOMxRef("CSSStyleDeclaration.item()", 'item()')}} method below.
 - {{DOMxRef("CSSStyleDeclaration.parentRule")}} {{ReadOnlyInline}}
   - : The containing {{DOMxRef("CSSRule")}}.
 
