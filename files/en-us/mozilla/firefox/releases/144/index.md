@@ -70,6 +70,8 @@ Firefox 144 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 - The [`lock()`](/en-US/docs/Web/API/ScreenOrientation/lock) and [`unlock()`](/en-US/docs/Web/API/ScreenOrientation/unlock) methods of the {{domxref("ScreenOrientation")}} interface are now supported for Android and for Windows tablets. ([Firefox bug 1983483](https://bugzil.la/1983483))
 
+- The [View Transition API](/en-US/docs/Web/API/View_Transition_API) is now supported for [SPAs (single-page applications)](/en-US/docs/Glossary/SPA). This provides a mechanism for easily creating animated transitions between different website views. ([Firefox bug 1985809](https://bugzil.la/1985809)).
+
 #### DOM
 
 - The `moveBefore()` method is now supported on the {{domxref("Element.moveBefore()","Element")}}, {{domxref("DocumentFragment.moveBefore()","DocumentFragment")}} and {{domxref("Document.moveBefore()","Document")}} interfaces. This allows moving of an immediate child element of the object, before another of its child elements. Unlike with {{domxref("Node.insertBefore()")}}, moved elements retain their state. ([Firefox bug 1983688](https://bugzil.la/1983688)).
@@ -83,10 +85,6 @@ Firefox 144 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - The {{domxref("MediaDevices/getUserMedia","getUserMedia()")}} and {{domxref("MediaDevices/getDisplayMedia","getDisplayMedia()")}} methods of the {{domxref("MediaDevices")}} interface now support the [`resizeMode`](/en-US/docs/Web/API/MediaTrackConstraints#resizemode) constraint.
   This constraint allows developers to request video that matches other constraints, such as resolution and frame rate, even if the requested constraints are not supported by the underlying hardware.
   The browser may then crop, downscale, or reduce the frame rate of the video captured from a camera, or downscale (but not crop) the video captured from a screen or window. ([Firefox bug 1286945](https://bugzil.la/1286945)).
-
-#### View Transition API
-
-The [View Transition API](/en-US/docs/Web/API/View_Transition_API) is now supported for [SPAs (single-page applications)](/en-US/docs/Glossary/SPA). This provides a mechanism for easily creating animated transitions between different website views. ([Firefox bug 1985809](https://bugzil.la/1985809)).
 
 <!-- #### Removals -->
 
