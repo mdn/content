@@ -179,7 +179,7 @@ Speech recognition is usually performed using an online service. This means that
 - Privacy: Many users are not comfortable with their speech being sent to a server.
 - Performance: Sending data to a server for every bit of recognition can slow down performance in more intensive applications, and your apps won't work offline.
 
-To mitigate these problems, the Web Speech API provides functionality to specify that you want your speech recognition handled on-device by the browser. There is a one-time language pack download for each language you want to recognize, but after that the functionality will be available offline.
+To mitigate these problems, the Web Speech API lets you specify that speech recognition should be handled on-device by the browser. This requires a one-time language pack download for each language you want to recognize; once installed, the functionality will be available offline.
 
 This section explains how to use on-device speech recognition.
 
