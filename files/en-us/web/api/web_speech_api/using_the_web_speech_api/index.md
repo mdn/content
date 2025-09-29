@@ -239,7 +239,7 @@ startBtn.addEventListener("click", () => {
 The `available()` method takes an options object containing two properties:
 
 - A `langs` array containing the languages to check availability for.
-- A `processLocally` boolean specifying whether to check for availability of the language locally (`true`) or locally _or_ on a server-based recognition service (`false`, which is the default).
+- A `processLocally` boolean specifying whether to check for the availability of the language only on-device (`true`) _or_ either locally or via a server-based recognition service (`false`, the default).
 
 When run, this method returns a {{jsxref("Promise")}} that resolves with a enumerated value indicating the availability of the specified languages for recognition. In our case, we test for three conditions:
 
