@@ -52,7 +52,7 @@ Possible values include:
 
 #### Final return value for multiple languages with different statuses
 
-Only a single status value is returned, even if multiple languages are specified in the `langs` array. If different specified languages have different availability statuses, the final returned status will be the "furthest away" status to `available` of any of the languages, in the order shown in the following lists.
+Only one status value is returned, even if multiple languages are specified in the `langs` array. If different specified languages have different availability statuses, the final return value is the "furthest away" status from `available` for any of the languages, in the order shown in the following lists:
 
 If `processLocally` is `false`:
 
