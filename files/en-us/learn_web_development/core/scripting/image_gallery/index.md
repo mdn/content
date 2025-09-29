@@ -48,6 +48,8 @@ const overlay = document.querySelector(".overlay");
 // 4. Wire up the Darken/Lighten button
 ```
 
+{{EmbedLiveSample("gallery-start", "100%", 700)}}
+
 ```css hidden live-sample___gallery-start live-sample___gallery-finish
 body {
   font-family: sans-serif;
