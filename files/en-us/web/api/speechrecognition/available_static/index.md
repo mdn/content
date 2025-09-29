@@ -10,7 +10,7 @@ browser-compat: api.SpeechRecognition.available
 
 The **`available()`** static method of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) checks whether the specified languages are available for speech recognition.
 
-To install a language pack for speech recognition locally, you need to use the {{domxref("SpeechRecognition.install_static", "SpeechRecognition.install()")}} method.
+To install a language pack for speech recognition locally, use the {{domxref("SpeechRecognition.install_static", "SpeechRecognition.install()")}} method.
 
 Access to the `available()` method is controlled by the {{httpheader("Permissions-Policy/on-device-speech-recognition", "on-device-speech-recognition")}} {{httpheader("Permissions-Policy")}} directive. Specifically, where a defined policy blocks usage, any attempts to call the method will fail.
 
