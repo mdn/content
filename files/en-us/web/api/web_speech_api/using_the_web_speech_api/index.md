@@ -249,7 +249,7 @@ When run, this method returns a {{jsxref("Promise")}} that resolves with an enum
 
 The `install()` method works in a similar way to the `available()` method, except that its options object only takes the `langs` array. When run, it starts downloading all the language packs for the languages indicated in `langs` and returns a {{jsxref("Promise")}} that resolves with a boolean indicating whether the specified language packs were downloaded and installed successfully (`true`) or not (`false`).
 
-In this basic demo, we just write a diagnostic message to indicate the success and failure cases; in a more substantial demo you'd probably want to disable the controls while the download process occurs, and enable them again when the promise resolves.
+For this demo, we print a diagnostic message to indicate the success and failure cases. In a more complete app, you'd probably disable the controls during the download process and enable them again after the promise resolves.
 
 ### Permissions-policy integration
 
