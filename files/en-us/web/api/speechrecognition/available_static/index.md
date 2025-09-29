@@ -25,7 +25,7 @@ available(options)
 - `options`
   - : An object specifying options for the availability check. Possible properties include:
     - `langs`
-      - : An array of one or more strings containing {{glossary("BCP 47 language tag", "BCP 47 language tags")}}, each representing a language that you want to check availability of for speech recognition. Passing an empty `langs` array will not throw an error, but the return value will always resolve to `unavailable`.
+      - : An array of one or more strings containing {{glossary("BCP 47 language tag", "BCP 47 language tags")}}, each representing a language to check for availability. Passing an empty `langs` array will not throw an error, but the return value will always resolve to `unavailable`.
     - `processLocally` {{optional_inline}}
       - : A boolean that specifies whether you are checking availability of the specified languages for [on-device speech recognition](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#on-device_speech_recognition) (`true`) or availability of the specified languages for on-device _or_ remote speech recognition (`false`). Defaults to `false`.
         > [!NOTE]
