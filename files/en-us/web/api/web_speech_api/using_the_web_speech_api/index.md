@@ -276,7 +276,7 @@ You can do this by setting an array of {{domxref("SpeechRecognitionPhrase")}} ob
 - A `phrase` property, which is a string containing the word or phrase you want boost.
 - A `boost` property, which is a floating point number between `0.0` and `10.0` (inclusive) that sets the amount of boost you want to give to that word or phrase. Higher values make the word or phrase more likely to be recognized.
 
-In our `on-device speech color changer` demo, we handle this by first creating an array containing the phrases to boost and their boost values:
+In our "On-device speech color changer" demo, we handle this by creating an array of phrases to boost and their boost values:
 
 ```js
 const phraseData = [
