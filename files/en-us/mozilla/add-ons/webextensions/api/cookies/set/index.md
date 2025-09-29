@@ -62,7 +62,7 @@ If there is more than one cookie with the same name for a URL, the cookie with t
 If the requested cookie is invalid or the call otherwise fails, the promise is rejected with an error message.
 
 > [!NOTE]
-> Before Firefox 145 , invalid cookies were created.
+> Before Firefox 145, invalid cookies were created.
 
 ## Examples
 
