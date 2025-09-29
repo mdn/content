@@ -3,9 +3,8 @@ title: <blend-mode>
 slug: Web/CSS/blend-mode
 page-type: css-type
 browser-compat: css.types.blend-mode
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`<blend-mode>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) describes how colors should appear when elements overlap. It is used in the {{cssxref("background-blend-mode")}} and {{cssxref("mix-blend-mode")}} properties.
 
@@ -25,7 +24,7 @@ The `<blend-mode>` data type is defined using a keyword value chosen from the li
 - `screen`
   - : The final color is the result of inverting the colors, multiplying them, and inverting that value.
     A black layer leads to no change, and a white layer leads to a white final layer.
-    The effect is like two images shone onto a projection screen.
+    The effect is like two images shining onto a projection screen.
 - `overlay`
   - : The final color is the result of `multiply` if the bottom color is darker, or `screen` if the bottom color is lighter.
     This blend mode is equivalent to `hard-light` but with the layers swapped.
@@ -36,11 +35,11 @@ The `<blend-mode>` data type is defined using a keyword value chosen from the li
 - `color-dodge`
   - : The final color is the result of dividing the bottom color by the inverse of the top color.
     A black foreground leads to no change. A foreground with the inverse color of the backdrop leads to a fully lit color.
-    This blend mode is similar to `screen`, but the foreground need only be as light as the inverse of the backdrop to create a fully lit color.
+    This blend mode is similar to `screen`, but the foreground only needs to be as light as the inverse of the backdrop to create a fully lit color.
 - `color-burn`
   - : The final color is the result of inverting the bottom color, dividing the value by the top color, and inverting that value.
     A white foreground leads to no change. A foreground with the inverse color of the backdrop leads to a black final image.
-    This blend mode is similar to `multiply`, but the foreground need only be as dark as the inverse of the backdrop to make the final image black.
+    This blend mode is similar to `multiply`, but the foreground only needs to be as dark as the inverse of the backdrop to make the final image black.
 - `hard-light`
   - : The final color is the result of `multiply` if the top color is darker, or `screen` if the top color is lighter.
     This blend mode is equivalent to `overlay` but with the layers swapped.
@@ -87,269 +86,207 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 
 ```css
 #div {
-  width: 300px;
-  height: 300px;
+  width: 150px;
+  height: 150px;
   background: url("br.png"), url("tr.png");
   background-blend-mode: normal;
 }
 ```
 
-{{ EmbedLiveSample('Example using "normal"', "300", "350") }}
+Set other values for `background-blend-mode`, you will get different results.
 
-### Example using "multiply"
+{{ EmbedLiveSample('Example using "normal"', "100%", "300") }}
+
+### Comparison between different values with `background-blend-mode`
 
 ```html hidden
-<div id="div"></div>
+<div class="container"></div>
 ```
 
 ```css
-#div {
-  width: 300px;
-  height: 300px;
+.container {
+  width: 720px;
+  height: 760px;
+  display: grid;
+  grid: auto-flow 190px / repeat(4, 180px);
+  border-top: 1px solid #d8d8d8;
+  border-left: 1px solid #d8d8d8;
+}
+
+.container > div {
+  border-right: 1px solid #d8d8d8;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.container div div {
+  margin-left: 15px;
+  width: 150px;
+  height: 150px;
   background: url("br.png"), url("tr.png");
-  background-blend-mode: multiply;
+}
+
+.container div p {
+  line-height: 30px;
+  margin: 0;
+  color: #a33333;
+  text-align: center;
 }
 ```
 
-{{ EmbedLiveSample('Example using "multiply"', "300", "350") }}
+```js
+const list = [
+  "normal",
+  "multiply",
+  "screen",
+  "overlay",
+  "darken",
+  "lighten",
+  "color-dodge",
+  "color-burn",
+  "hard-light",
+  "soft-light",
+  "difference",
+  "exclusion",
+  "hue",
+  "saturation",
+  "color",
+  "luminosity",
+];
 
-### Example using "screen"
+const containerElem = document.querySelector(".container");
+
+list.forEach((item) => {
+  const innerElem = document.createElement("div");
+  innerElem.style.backgroundBlendMode = item;
+
+  const textElem = document.createElement("p");
+  textElem.innerText = item;
+
+  const outerElem = document.createElement("div");
+  outerElem.appendChild(textElem);
+  outerElem.appendChild(innerElem);
+
+  containerElem.appendChild(outerElem);
+});
+```
+
+Create multiple `div` elements by traversing a list and set different `backgroundBlendMode` value for each.
+
+{{ EmbedLiveSample('Comparison between different values with `background-blend-mode`', "100%", "780") }}
+
+### Comparison between different values with `mix-blend-mode`
 
 ```html hidden
-<div id="div"></div>
+<div class="container"></div>
 ```
 
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: screen;
+```css hidden
+.container {
+  width: 640px;
+  height: 800px;
+  display: grid;
+  grid: auto-flow 160px / repeat(4, 160px);
+  border-top: 1px solid #d8d8d8;
+  border-left: 1px solid #d8d8d8;
+}
+
+.container > div {
+  border-right: 1px solid #d8d8d8;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.container > div > div {
+  position: relative;
+  margin-left: 20px;
+  width: 120px;
+  height: 120px;
+}
+
+.container div p {
+  margin: 0;
+  line-height: 30px;
+  color: #a33333;
+  text-align: center;
+}
+.circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  mix-blend-mode: screen;
+  position: absolute;
+}
+
+.circle-1 {
+  background: red;
+}
+
+.circle-2 {
+  background: lightgreen;
+  left: 40px;
+}
+
+.circle-3 {
+  background: blue;
+  left: 20px;
+  top: 40px;
+}
+
+.isolate {
+  isolation: isolate; /* Without isolation, the background color will be taken into account */
+  position: relative;
 }
 ```
 
-{{ EmbedLiveSample('Example using "screen"', "300", "350") }}
+```js hidden
+const list = [
+  "normal",
+  "multiply",
+  "screen",
+  "overlay",
+  "darken",
+  "lighten",
+  "color-dodge",
+  "color-burn",
+  "hard-light",
+  "soft-light",
+  "difference",
+  "exclusion",
+  "hue",
+  "saturation",
+  "color",
+  "luminosity",
+  "plus-darker",
+  "plus-lighter",
+];
 
-### Example using "overlay"
+const containerElem = document.querySelector(".container");
 
-```html hidden
-<div id="div"></div>
+list.forEach((item) => {
+  const innerElem = document.createElement("div");
+  innerElem.innerHTML = `
+    <div class="circle circle-1"></div>
+    <div class="circle circle-2"></div>
+    <div class="circle circle-3"></div>
+  `;
+
+  innerElem.querySelectorAll(".circle").forEach((circle) => {
+    circle.style.mixBlendMode = item;
+  });
+
+  const textElem = document.createElement("p");
+  textElem.innerText = item;
+
+  const outerElem = document.createElement("div");
+  outerElem.appendChild(textElem);
+  outerElem.appendChild(innerElem);
+
+  containerElem.appendChild(outerElem);
+});
 ```
 
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: overlay;
-}
-```
+In the following example, we create multiple `<div>` elements by traversing a list and set different `mixBlendMode` values for each.
 
-{{ EmbedLiveSample('Example using "overlay"', "300", "350") }}
-
-### Example using "darken"
-
-```html hidden
-<div id="div"></div>
-```
-
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: darken;
-}
-```
-
-{{ EmbedLiveSample('Example using "darken"', "300", "350") }}
-
-### Example using "lighten"
-
-```html hidden
-<div id="div"></div>
-```
-
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: lighten;
-}
-```
-
-{{ EmbedLiveSample('Example using "lighten"', "300", "350") }}
-
-### Example using "color-dodge"
-
-```html hidden
-<div id="div"></div>
-```
-
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: color-dodge;
-}
-```
-
-{{ EmbedLiveSample('Example using "color-dodge"', "300", "350") }}
-
-### Example using "color-burn"
-
-```html hidden
-<div id="div"></div>
-```
-
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: color-burn;
-}
-```
-
-{{ EmbedLiveSample('Example using "color-burn"', "300", "350") }}
-
-### Example using "hard-light"
-
-```html hidden
-<div id="div"></div>
-```
-
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: hard-light;
-}
-```
-
-{{ EmbedLiveSample('Example using "hard-light"', "300", "350") }}
-
-### Example using "soft-light"
-
-```html hidden
-<div id="div"></div>
-```
-
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: soft-light;
-}
-```
-
-{{ EmbedLiveSample('Example using "soft-light"', "300", "350") }}
-
-### Example using "difference"
-
-```html hidden
-<div id="div"></div>
-```
-
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: difference;
-}
-```
-
-{{ EmbedLiveSample('Example using "difference"', "300", "350") }}
-
-### Example using "exclusion"
-
-```html hidden
-<div id="div"></div>
-```
-
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: exclusion;
-}
-```
-
-{{ EmbedLiveSample('Example using "exclusion"', "300", "350") }}
-
-### Example using "hue"
-
-```html hidden
-<div id="div"></div>
-```
-
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: hue;
-}
-```
-
-{{ EmbedLiveSample('Example using "hue"', "300", "350") }}
-
-### Example using "saturation"
-
-```html hidden
-<div id="div"></div>
-```
-
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: saturation;
-}
-```
-
-{{ EmbedLiveSample('Example using "saturation"', "300", "350") }}
-
-### Example using "color"
-
-```html hidden
-<div id="div"></div>
-```
-
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: color;
-}
-```
-
-{{ EmbedLiveSample('Example using "color"', "300", "350") }}
-
-### Example using "luminosity"
-
-```html hidden
-<div id="div"></div>
-```
-
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: luminosity;
-}
-```
-
-{{ EmbedLiveSample('Example using "luminosity"', "300", "350") }}
+{{ EmbedLiveSample('Comparison between different values with `mix-blend-mode`', "100%", "820") }}
 
 ### Blend mode comparison
 
@@ -387,7 +324,7 @@ div {
   width: 300px;
   height: 300px;
   background:
-    url(https://mdn.dev/archives/media/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png)
+    url("https://mdn.dev/archives/media/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png")
       no-repeat center,
     linear-gradient(to bottom, blue, orange);
 }

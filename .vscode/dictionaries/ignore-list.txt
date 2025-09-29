@@ -33,7 +33,6 @@ apiscript
 Argh
 Asclepias
 aurl
-Awwww
 AXQB
 azuki
 baaabaac
@@ -41,14 +40,12 @@ baabac
 barfoo
 bbbc
 Beastify
-Beetlejuice
 bfalse
 bgpicker
 bigcorp
 blaa
 blaaa
 blabla
-Blahblah
 bleh
 BlYAJQFz
 bobsmith
@@ -95,7 +92,6 @@ cubetexture
 cycletracker
 data-ffo-opensans
 data-ffo-opensanslight
-davidwalsh.name
 dbar
 dbbd
 Decem
@@ -141,7 +137,6 @@ fgrt46jfgd
 filteron
 finanzierungs
 flabada
-flexy
 foobarbaz
 foobarfoo
 fooexamplefoo
@@ -166,11 +161,11 @@ Graece
 gubergren
 harborside
 hellonode
+HEXA
 HEXDIG
-hexdigit
-hiliteabeunti
 howtoplay
 HUD5767ghtyfyr4536dh45dg45dg3
+HWBA
 idbkeyrange
 IHdhcyBncmVhdCE
 innerht.ml
@@ -198,7 +193,6 @@ jícama
 kasd
 Khiresh
 kitchensink
-lambdatest
 Latine
 latinmodern-math
 learntocodewith.me
@@ -207,7 +201,6 @@ letmein
 libpkcs11testmodule
 librero
 livin
-liZhYMsy8MGgxUny6Q8NCoH9xSiviwLFfK
 Llanfair
 LLLLLLLLLLLLLLLLRRRRRRRRRRRRRRRR
 locallibrary
@@ -222,12 +215,11 @@ Markmarkimark
 mdnsidebar.yaml
 megastore
 meinheld
-montecarlo
 morethanwarm
 MYAGE
 mybooks
 myclass
-Myco
+myimage
 mynamespace
 myns
 mypassword
@@ -264,7 +256,6 @@ privat
 proinde
 public-webapps
 pwllgwyngyll
-PXHQTXP
 Quaaaack
 quandong
 quaxxor
@@ -299,6 +290,7 @@ tatsoi
 testuser
 texmf
 theguardian
+thinkin
 thisisareallylongvariablenameman
 threejs
 todomvc
@@ -312,7 +304,6 @@ Tweety
 UCCE
 ultricied
 updatebg
-UQND
 urlscheme
 userconnect
 userdisconnect
@@ -334,6 +325,7 @@ Whereami
 Whereshire
 wisi
 Wookie
+XYZD
 xyzzy
 YOUREXT
 YsAIAAAA-QG4G6kCMAMBAAAAAAAoK

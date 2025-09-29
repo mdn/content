@@ -169,7 +169,7 @@ As soon as the device has network connectivity, the `sync` event fires in the se
 // service-worker.js
 
 self.addEventListener("sync", (event) => {
-  if (event.tag == "send-message") {
+  if (event.tag === "send-message") {
     event.waitUntil(sendMessage());
   }
 });
@@ -390,11 +390,9 @@ The pattern for subscribing to push messages looks like this:
 1. As a prerequisite, the app server needs to be provisioned with a {{Glossary("Public-key_cryptography", "public/private key pair")}}, so it can sign push messages. Signing messages needs to follow the [VAPID](https://datatracker.ietf.org/doc/html/draft-thomson-webpush-vapid-02) specification.
 
 2. On the device, the app uses the {{domxref("PushManager.subscribe()")}} method to subscribe to messages from the server. The `subscribe()` method:
-
    - Takes the app server's public key as an argument: this is what the push service will use to verify the signature on messages from the app server.
 
    - Returns a `Promise` that resolves to a {{domxref("PushSubscription")}} object. This object includes:
-
      - The [endpoint](/en-US/docs/Web/API/PushSubscription/endpoint) for the push service: this is how the app server knows where to send push messages.
      - The [public encryption key](/en-US/docs/Web/API/PushSubscription/getKey) that your server will use to encrypt messages to the push service.
 

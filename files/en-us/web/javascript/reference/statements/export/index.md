@@ -3,9 +3,8 @@ title: export
 slug: Web/JavaScript/Reference/Statements/export
 page-type: javascript-statement
 browser-compat: javascript.statements.export
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Statements")}}
 
 The **`export`** declaration is used to export values from a JavaScript module. Exported values can then be imported into other programs with the {{jsxref("Statements/import", "import")}} declaration or [dynamic import](/en-US/docs/Web/JavaScript/Reference/Operators/import). The value of an imported binding is subject to change in the module that exports it — when a module updates the value of a binding that it exports, the update will be visible in its imported value.
 
@@ -70,6 +69,16 @@ export function myFunction() {
 
 After the `export` keyword, you can use `let`, `const`, and `var` declarations, as well as function or class declarations. You can also use the `export { name1, name2 }` syntax to export a list of names declared elsewhere. Note that `export {}` does not export an empty object — it's a no-op declaration that exports nothing (an empty name list).
 
+You cannot use `export` on a {{jsxref("Statements/using", "using")}} or {{jsxref("Statements/await_using", "await using")}} declaration. You can, however, export a variable that was declared elsewhere using `using` or `await using`. Doing so is still strongly discouraged, because the variable is disposed as soon as the module finishes executing, causing all importers to receive a value that's already disposed.
+
+```js-nolint example-bad
+export using resource1 = getResource(); // SyntaxError
+
+// Allowed by syntax but discouraged
+using resource2 = getResource();
+export { resource2 };
+```
+
 Export declarations are not subject to [temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz) rules. You can declare that the module exports `X` before the name `X` itself is declared.
 
 ```js
@@ -130,6 +139,7 @@ export default k;
 ```js
 // some other file
 import m from "./test"; // note that we have the freedom to use import m instead of import k, because k was default export
+
 console.log(m); // 12
 ```
 
@@ -159,6 +169,7 @@ Which is comparable to a combination of import and export, except that `function
 
 ```js
 import { default as function1, function2 } from "bar.js";
+
 export { function1, function2 };
 ```
 
@@ -185,6 +196,7 @@ export * from "./mod2.js";
 
 // -- main.js --
 import * as ns from "./barrel.js";
+
 console.log(ns.a); // undefined
 ```
 
@@ -282,6 +294,7 @@ Then, in another script, it is straightforward to import the default export:
 
 ```js
 import cube from "./cube.js";
+
 console.log(cube(3)); // 27
 ```
 

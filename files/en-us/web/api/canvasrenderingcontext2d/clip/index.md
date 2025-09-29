@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.CanvasRenderingContext2D.clip
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 The
 **`CanvasRenderingContext2D.clip()`**
@@ -42,10 +42,8 @@ clip(path, fillRule)
 ### Parameters
 
 - `fillRule`
-
   - : The algorithm by which to determine if a point is inside or outside the clipping
     region. Possible values:
-
     - `nonzero`
       - : The [non-zero winding rule](https://en.wikipedia.org/wiki/Nonzero-rule).
         Default rule.

@@ -57,8 +57,8 @@ body {
 }
 
 .btn {
-  color: #000;
-  background-color: #fff;
+  color: black;
+  background-color: white;
   border: 2px solid #cecece;
   padding: 0.35rem 1rem 0.25rem 1rem;
   font-size: 1rem;
@@ -78,8 +78,8 @@ body {
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: #000;
+  color: white;
+  background-color: black;
   width: 100%;
   padding: 0.75rem;
   font-size: 1.3rem;
@@ -92,9 +92,9 @@ body {
 }
 
 .btn-primary:focus {
-  color: #000;
+  color: black;
   outline: none;
-  border: #000 solid 2px;
+  border: black solid 2px;
   background-color: #d7ecff;
 }
 
@@ -120,7 +120,7 @@ In `app.component.css`, add the following styles:
     0 2.5rem 5rem 0 rgb(0 0 0 / 10%);
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (width >= 600px) {
   .main {
     width: 70%;
   }
@@ -136,7 +136,7 @@ label {
 .lg-text-input {
   width: 100%;
   padding: 1rem;
-  border: 2px solid #000;
+  border: 2px solid black;
   display: block;
   box-sizing: border-box;
   font-size: 1rem;

@@ -3,15 +3,16 @@ title: <number>
 slug: Web/CSS/number
 page-type: css-type
 browser-compat: css.types.number
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`<number>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents a number, being either an integer or a number with a fractional component.
+The **`<number>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents a number, being either an integer, a number with a fractional component, or a base-ten exponent in scientific notation.
 
 ## Syntax
 
-The syntax of `<number>` extends the syntax of {{CSSxRef("&lt;integer&gt;")}}. A fractional value is represented by a `.` followed by one or more decimal digits, and may be appended to an integer. There is no unit associated with numbers.
+The syntax of `<number>` extends the syntax of {{CSSxRef("&lt;integer&gt;")}}. A fractional value is represented by a `.` followed by one or more decimal digits, and may be appended to an integer. A `<number>` can also end with the letter `e` or `E` followed by an integer, which indicates a base-ten exponent in scientific notation. There is no unit associated with numbers.
+
+As with integers, the first character of the number can be immediately preceded by - or + to indicate the number's sign: whether the number is positive or negative.
 
 ## Interpolation
 
@@ -51,4 +52,6 @@ When animated, values of the `<number>` CSS data type are interpolated as real, 
 
 ## See also
 
-- {{CSSxRef("&lt;integer&gt;")}}
+- {{CSSxRef("integer")}}
+- {{CSSxRef("ratio")}}
+- [CSS values and units](/en-US/docs/Web/CSS/CSS_Values_and_Units) module

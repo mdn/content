@@ -3,11 +3,12 @@ title: ::selection
 slug: Web/CSS/::selection
 page-type: css-pseudo-element
 browser-compat: css.selectors.selection
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
 The **`::selection`** CSS [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) applies styles to the part of a document that has been highlighted by the user (such as clicking and dragging the mouse across text).
+
+The `::selection` pseudo-element follows a special inheritance model common to all highlight pseudo-elements. For more details on how this inheritance works, see the [Highlight pseudo-elements inheritance](/en-US/docs/Web/CSS/Pseudo-elements#highlight_pseudo-elements_inheritance) section.
 
 {{InteractiveExample("CSS Demo: ::selection", "tabbed-shorter")}}
 

@@ -173,12 +173,12 @@ Next, if supported connect the webcam source to the video element:
 if (navigator.mediaDevices) {
   navigator.mediaDevices
     .getUserMedia({ video: true, audio: false })
-    .then(function onSuccess(stream) {
+    .then((stream) => {
       const video = document.getElementById("webcam");
       video.autoplay = true;
       video.srcObject = stream;
     })
-    .catch(function onError() {
+    .catch(() => {
       alert(
         "There has been a problem retrieving the streams - are you running on file:/// or did you disallow access?",
       );
@@ -199,7 +199,7 @@ The main mechanism is outlined below:
 ```js
 navigator.mediaDevices
   .getUserMedia({ audio: true })
-  .then(function onSuccess(stream) {
+  .then((stream) => {
     const recorder = new MediaRecorder(stream);
 
     const data = [];
@@ -218,7 +218,7 @@ navigator.mediaDevices
       rec.stop();
     }, 5000);
   })
-  .catch(function onError(error) {
+  .catch((error) => {
     console.log(error.message);
   });
 ```
@@ -261,49 +261,43 @@ You may detect click, touch and/or keyboard events to trigger actions such as pl
 A quick example — first set up your audio and custom controls in HTML:
 
 ```html
-<audio
-  id="my-audio"
-  src="http://jPlayer.org/audio/mp3/Miaow-01-Tempered-song.mp3"></audio>
+<audio id="my-audio" src="/shared-assets/audio/guitar.mp3"></audio>
 <button id="my-control">play</button>
 ```
 
 add a bit of JavaScript to detect events to play and pause the audio:
 
 ```js
-window.onload = () => {
-  const myAudio = document.getElementById("my-audio");
-  const myControl = document.getElementById("my-control");
+const myAudio = document.getElementById("my-audio");
+const myControl = document.getElementById("my-control");
 
-  function switchState() {
-    if (myAudio.paused) {
-      myAudio.play();
-      myControl.textContent = "pause";
-    } else {
-      myAudio.pause();
-      myControl.textContent = "play";
-    }
+function switchState() {
+  if (myAudio.paused) {
+    myAudio.play();
+    myControl.textContent = "pause";
+  } else {
+    myAudio.pause();
+    myControl.textContent = "play";
   }
+}
 
-  function checkKey(e) {
-    if (e.code === "Space") {
-      // space bar
-      switchState();
-    }
+function checkKey(e) {
+  if (e.code === "Space") {
+    // space bar
+    switchState();
   }
+}
 
-  myControl.addEventListener(
-    "click",
-    () => {
-      switchState();
-    },
-    false,
-  );
+myControl.addEventListener("click", () => {
+  switchState();
+});
 
-  window.addEventListener("keypress", checkKey, false);
-};
+window.addEventListener("keypress", checkKey);
 ```
 
-You can [try this example out here](https://jsbin.com/jujeladu/2/edit). For more information, see [Creating your own custom audio player](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/Cross-browser_audio_basics#creating_your_own_custom_audio_player).
+{{EmbedLiveSample("customizing your media player", "", 200)}}
+
+For more information, see [Creating your own custom audio player](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/Cross-browser_audio_basics#creating_your_own_custom_audio_player).
 
 ## Other tips for audio/video
 
@@ -387,18 +381,17 @@ Since Firefox doesn't support MP4 and 3GP on some platforms due to their patent-
 
 ### Checking whether the browser supports the supplied formats
 
-Use the following verified sources within your audio and video elements to check support.
+Support for media formats are available on [Can I Use](https://caniuse.com/).
 
-- Audio MP3 (`type="audio/mpeg"`): [http://jPlayer.org/audio/mp3/Miaow-01-Tempered-song.mp3](https://jPlayer.org/audio/mp3/Miaow-01-Tempered-song.mp3) ([play the MP3 audio live](https://jsbin.com/gekatoge/1/edit).)
-- Audio MP4 (`type="audio/mp4"`): [http://jPlayer.org/audio/m4a/Miaow-01-Tempered-song.m4a](https://jPlayer.org/audio/m4a/Miaow-01-Tempered-song.m4a) ([play the MP4 audio live](https://jsbin.com/gekatoge/2/edit).)
-- Audio Ogg (`type="audio/ogg"`): [http://jPlayer.org/audio/ogg/Miaow-01-Tempered-song.ogg](https://jPlayer.org/audio/ogg/Miaow-01-Tempered-song.ogg) ([play the OGG audio live](https://jsbin.com/gekatoge/4/edit).)
-- Video MP4 (`type="video/mp4"`): [http://jPlayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v](https://jPlayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v) ([play the MP4 video live](https://jsbin.com/gekatoge/5/edit).)
-- Video WebM (`type="video/webm"`): [http://jPlayer.org/video/webm/Big_Buck_Bunny_Trailer.webm](https://jPlayer.org/video/webm/Big_Buck_Bunny_Trailer.webm) ([play the WebM video live](https://jsbin.com/gekatoge/6/edit).)
-- Video Ogg (`type="video/ogg"`): [http://jPlayer.org/video/ogv/Big_Buck_Bunny_Trailer.ogv](https://jPlayer.org/video/ogv/Big_Buck_Bunny_Trailer.ogv) ([play the OGG video live](https://jsbin.com/gekatoge/7/edit).)
+- [Audio MP3 (`type="audio/mpeg"`)](https://caniuse.com/mp3)
+- [Audio Ogg (`type="audio/ogg"`)](https://caniuse.com/ogg-vorbis)
+- [Video MP4 (`type="video/mp4"`)](https://caniuse.com/mpeg4)
+- [Video WebM (`type="video/webm"`)](https://caniuse.com/webm)
+- [Video Ogg (`type="video/ogg"`)](https://caniuse.com/ogv)
 
-If these don't play then the browser you are testing doesn't support the given format. Consider using a different format or using a fallback.
+You can also search for [other media formats](/en-US/docs/Web/Media/Guides/Formats/Containers).
 
-If these work but the files you are supplying don't, there are two possible issues:
+If a media format is supposed to be supported but the files you are supplying don't play, there are two possible issues:
 
 #### 1. The media server is not delivering the correct mime types with the file
 
@@ -426,7 +419,7 @@ Your files may have been encoded incorrectly — try encoding using one of the f
 - [Audacity](https://sourceforge.net/projects/audacity/) — Free Audio Editor and Recorder
 - [Miro](https://www.getmiro.com/) — Free, open-source music and video player
 - [Handbrake](https://handbrake.fr/) — Open Source Video Transcoder
-- [Firefogg](http://www.firefogg.org/) — Video and Audio encoding for Firefox
+- [Firefogg](https://www.firefogg.org/) — Video and Audio encoding for Firefox
 - [FFmpeg2](https://www.ffmpeg.org/) — Comprehensive command line encoder
 - [Vid.ly](https://m.vid.ly/) — Video player, transcoding and delivery
 - [Internet Archive](https://archive.org/) — Free transcoding and storage
@@ -455,15 +448,11 @@ Another way to show the fallback content of a video, when none of the sources co
 const v = document.querySelector("video");
 const sources = v.querySelectorAll("source");
 const lastSource = sources[sources.length - 1];
-lastSource.addEventListener(
-  "error",
-  (ev) => {
-    const d = document.createElement("div");
-    d.innerHTML = v.innerHTML;
-    v.parentNode.replaceChild(d, v);
-  },
-  false,
-);
+lastSource.addEventListener("error", (ev) => {
+  const d = document.createElement("div");
+  d.innerHTML = v.innerHTML;
+  v.parentNode.replaceChild(d, v);
+});
 ```
 
 ## Audio/Video JavaScript libraries
@@ -479,7 +468,7 @@ A number of audio and video JavaScript libraries exist. The most popular librari
 ### Video only
 
 - [flowplayer](https://flowplayer.com/): Gratis with a flowplayer logo watermark. Open source (GPL licensed.)
-- [JWPlayer](https://jwplayer.com/): Requires registration to download. Open Source Edition (Creative Commons License.)
+- [JWPlayer](https://jwpconnatix.com/): Requires registration to download. Open Source Edition (Creative Commons License.)
 - [SublimeVideo](https://www.sublimevideo.net/): Requires registration. Form based set up with domain specific link to CDN hosted library.
 - [Video.js](https://videojs.com/): Gratis and Open Source (Apache 2 Licensed.)
 
@@ -498,6 +487,8 @@ A number of audio and video JavaScript libraries exist. The most popular librari
   - : A guide to creating a basic cross browser video player using the {{ htmlelement("video") }} element.
 - [Video player styling basics](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/Video_player_styling_basics)
   - : With the cross-browser video player put in place in the previous article, this article now looks at providing some basic, responsive styling for the player.
+- [Adding captions and subtitles to HTML video](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)
+  - : This article explains how to add captions and subtitles to HTML {{ htmlelement("video") }}, using [Web_Video_Text_Tracks_Format](/en-US/docs/Web/API/WebVTT_API) and the {{ htmlelement("track") }} element.
 - [Cross-browser audio basics](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/Cross-browser_audio_basics)
   - : This article provides a basic guide to creating an HTML audio player that works cross browser, with all the associated attributes, properties and events explained, and a quick guide to custom controls created using the Media API.
 - [Media buffering, seeking, and time ranges](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/buffering_seeking_time_ranges)
@@ -518,8 +509,6 @@ A number of audio and video JavaScript libraries exist. The most popular librari
 
 ### Advanced topics
 
-- [Adding captions and subtitles to HTML video](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)
-  - : This article explains how to add captions and subtitles to HTML {{ htmlelement("video") }}, using [Web_Video_Text_Tracks_Format](/en-US/docs/Web/API/WebVTT_API) and the {{ htmlelement("track") }} element.
 - [Web Audio API cross browser support](/en-US/docs/Web/API/Web_Audio_API/Best_practices#cross_browser_legacy_support)
   - : A guide to writing cross browser Web Audio API code.
 - [Easy audio capture with the MediaRecorder API](https://hacks.mozilla.org/2014/06/easy-audio-capture-with-the-mediarecorder-api/)
@@ -533,4 +522,4 @@ A number of audio and video JavaScript libraries exist. The most popular librari
 - [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)
 - [MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API)
 - [getUserMedia](/en-US/docs/Web/API/MediaDevices/getUserMedia)
-- [Event reference: Media](/en-US/docs/Web/Events#media)
+- [Event index: Media](/en-US/docs/Web/API/Document_Object_Model/Events#media)

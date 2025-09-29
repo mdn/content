@@ -2,9 +2,8 @@
 title: Stacking context example 3
 slug: Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_3
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 ## Description
 
@@ -23,11 +22,8 @@ So a third-level menu will be stacked under the following second-level menus, be
 To better understand the situation, here is the stacking context hierarchy (the three dots "..." represent multiple repetition of the previous line):
 
 - Root stacking context
-
   - LEVEL #1
-
     - LEVEL #2 (`z-index`: 1)
-
       - LEVEL #3
       - …
       - LEVEL #3

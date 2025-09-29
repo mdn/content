@@ -1,11 +1,13 @@
 ---
-title: Accept-CH
+title: Accept-CH header
+short-title: Accept-CH
 slug: Web/HTTP/Reference/Headers/Accept-CH
 page-type: http-header
 browser-compat: http.headers.Accept-CH
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{securecontext_header}}
+{{securecontext_header}}
 
 The HTTP **`Accept-CH`** {{Glossary("response header")}} may be set by a server to specify which [client hint](/en-US/docs/Web/HTTP/Guides/Client_hints) headers should be included by the client in subsequent requests.
 To ensure client hints are sent reliably, the `Accept-CH` header should be persisted for all secure requests.

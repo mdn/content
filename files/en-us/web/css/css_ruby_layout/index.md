@@ -3,9 +3,8 @@ title: CSS ruby layout
 slug: Web/CSS/CSS_ruby_layout
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-ruby/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS ruby layout** module provides the rendering model and formatting controls related to the display of ruby annotations. Ruby annotations are a form of interlinear annotation, consisting of short runs of text alongside the base text. They are typically used in East Asian documents to indicate pronunciation or define meaning.
 
@@ -16,8 +15,7 @@ The **CSS ruby layout** module provides the rendering model and formatting contr
 - {{cssxref("ruby-align")}}
 - {{cssxref("ruby-position")}}
 
-> [!NOTE]
-> The CSS ruby layout module introduces two properties, `ruby-merge` and `ruby-overhang`, that have not yet been implemented in any browser.
+The CSS ruby layout module also introduces the `ruby-merge` and `ruby-overhang` properties. Currently, no browsers support these features.
 
 ### Display values
 

@@ -1,13 +1,15 @@
 ---
-title: "Permissions-Policy: idle-detection"
+title: "Permissions-Policy: idle-detection directive"
+short-title: idle-detection
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/idle-detection
 page-type: http-permissions-policy-directive
 status:
   - experimental
 browser-compat: http.headers.Permissions-Policy.idle-detection
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The HTTP {{HTTPHeader("Permissions-Policy")}} header `idle-detection` directive controls whether the current document is allowed to use the {{domxref("Idle Detection API", "Idle Detection API", "", "nocode")}} to detect when users are interacting with their devices, for example to report "available"/"away" status in chat applications.
 

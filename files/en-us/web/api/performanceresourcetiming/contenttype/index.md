@@ -45,9 +45,9 @@ The `buffered` option is used for accessing entries from before the observer cre
 
 ```js
 const observer = new PerformanceObserver((list) => {
-  const javascriptResources = list.getEntries().filter((entry) => {
-    return entry.contentType === "text/javascript";
-  });
+  const javascriptResources = list
+    .getEntries()
+    .filter((entry) => entry.contentType === "text/javascript");
   console.log(javascriptResources);
 });
 
@@ -57,9 +57,9 @@ observer.observe({ type: "resource", buffered: true });
 The following example uses {{domxref("Performance.getEntriesByType()")}}, which only shows `resource` performance entries present in the browser's performance timeline at the time you call the method.
 
 ```js
-const scripts = performance.getEntriesByType("resource").filter((entry) => {
-  return entry.contentType === "text/javascript";
-});
+const scripts = performance
+  .getEntriesByType("resource")
+  .filter((entry) => entry.contentType === "text/javascript");
 console.log(scripts);
 ```
 

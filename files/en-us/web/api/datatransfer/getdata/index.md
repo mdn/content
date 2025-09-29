@@ -41,12 +41,10 @@ This example shows the use of the {{domxref("DataTransfer")}} object's
 ### HTML
 
 ```html
-<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-  <span id="drag" draggable="true" ondragstart="drag(event)"
-    >drag me to the other box</span
-  >
+<div id="div1">
+  <span id="drag" draggable="true">drag me to the other box</span>
 </div>
-<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div2"></div>
 ```
 
 ### CSS
@@ -64,6 +62,16 @@ This example shows the use of the {{domxref("DataTransfer")}} object's
 ### JavaScript
 
 ```js
+const div1 = document.getElementById("div1");
+const div2 = document.getElementById("div2");
+const dragElement = document.getElementById("drag");
+
+dragElement.addEventListener("dragstart", drag);
+div1.addEventListener("dragover", allowDrop);
+div2.addEventListener("dragover", allowDrop);
+div1.addEventListener("drop", drop);
+div2.addEventListener("drop", drop);
+
 function allowDrop(allowDropEvent) {
   allowDropEvent.target.style.color = "blue";
   allowDropEvent.preventDefault();
@@ -78,7 +86,7 @@ function drop(dropEvent) {
   dropEvent.preventDefault();
   const data = dropEvent.dataTransfer.getData("text");
   dropEvent.target.appendChild(document.getElementById(data));
-  document.getElementById("drag").style.color = "black";
+  dragElement.style.color = "black";
 }
 ```
 
@@ -99,4 +107,3 @@ function drop(dropEvent) {
 - [Drag and drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
 - [Drag Operations](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
 - [Recommended Drag Types](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
-- [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)

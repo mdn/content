@@ -53,28 +53,33 @@ Next, grab pen and paper and sketch out roughly how you want your site to look. 
 > [!NOTE]
 > Even on real, complex websites, the design teams usually start out with rough sketches on paper and later on build digital mockups using a graphics editor or web technologies.
 >
-> Web teams often include both a graphic designer and a {{Glossary("UX", "user experience")}} (UX) designer. Graphic designers put together the visuals of the website. UX designers have a somewhat more abstract role in addressing how users will experience and interact with the website.
+> Web teams often include both a [graphic designer](/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Workflows_and_processes#graphic_designer) and a [user experience (UX) designer](/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Workflows_and_processes#user_experience_ux_designer). Graphic designers put together the visuals of the website. UX designers have a somewhat more abstract role in addressing how users will experience and interact with the website.
 
 At this point, it's good to start putting together the content that will eventually appear on your webpage. You should still have your paragraphs and title from earlier. Keep these close by.
 
 ## Choosing a theme color
 
-To choose a color, go to [the Color Picker](/en-US/docs/Web/CSS/CSS_colors/Color_picker_tool) and find a color you like. When you click on a color, you'll see a strange six-character code like `#660066`. That's called a _hex code_ (short for hexadecimal), and represents your color. Copy the code down somewhere safe for now.
+Let's choose a background color for your page.
 
-![Color-Picker-Tool on MDN Docs website with RGB, HSL, and HEX colors ](color-picker.png)
+1. Go to [the Color Picker](/en-US/docs/Web/CSS/CSS_colors/Color_format_converter) and find a color you like.
+2. When you pick a color, you'll see a strange six-character code like `#660066`. That's called a _hex code_ (short for hexadecimal), and represents your color. Copy the code down somewhere safe for now.
+
+![Color format converter tool on MDN Docs website](color_format_converter.jpg)
 
 ## Choosing an image
 
-To choose an image, go to [Google Images](https://www.google.com/imghp) and search for something suitable.
+Now it's time to find an image to show on your site.
 
-1. When you find the image you want, click on the image to get an enlarged view of it.
-2. Right-click the image (Ctrl + click on a Mac), choose _Save Image As…_, and choose a safe place to save your image.
+1. Go to [Google Images](https://www.google.com/imghp).
+2. Note that most images on the web, including in Google Images, are copyrighted. To reduce your likelihood of violating copyright, you can use Google's license filter. Click on the _Tools_ button, then on the resulting _Usage rights_ option that appears below. You should choose the option _Creative Commons licenses_.
 
-![Search results for a search term on Google Images](updated-google-images.png)
+   ![Filtered search results to get images of Creative Commons Licenses on Google Images](updated-google-images-licensing.png)
 
-Note that most images on the web, including in Google Images, are copyrighted. To reduce your likelihood of violating copyright, you can use Google's license filter. Click on the _Tools_ button, then on the resulting _Usage rights_ option that appears below. You should choose the option _Creative Commons licenses_.
+3. Search for a suitable image.
+4. When you find the image you want, click on the image to get an enlarged view of it.
+5. Right-click the image (<kbd>Ctrl</kbd> + click on a Mac), choose _Save Image As…_, and choose a safe place to save your image.
 
-![Filtered search results to get images of Creative Commons Licenses on Google Images](updated-google-images-licensing.png)
+   ![Search results for a search term on Google Images](updated-google-images.png)
 
 ## Choosing a font
 

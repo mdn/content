@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Element.pointerdown_event
 ---
 
-{{APIRef}}
+{{APIRef("Pointer Events")}}
 
 The `pointerdown` event is fired when a pointer becomes active. For mouse, it is fired when the device transitions from no buttons pressed to at least one button pressed. For touch, it is fired when physical contact is made with the digitizer. For pen, it is fired when the stylus makes physical contact with the digitizer.
 
@@ -95,7 +95,6 @@ para.onpointerdown = (event) => {
 ## See also
 
 - Related events
-
   - {{domxref('Element/gotpointercapture_event', 'gotpointercapture')}}
   - {{domxref('Element/lostpointercapture_event', 'lostpointercapture')}}
   - {{domxref('Element/pointerover_event', 'pointerover')}}

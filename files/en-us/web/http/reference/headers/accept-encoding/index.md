@@ -1,11 +1,11 @@
 ---
-title: Accept-Encoding
+title: Accept-Encoding header
+short-title: Accept-Encoding
 slug: Web/HTTP/Reference/Headers/Accept-Encoding
 page-type: http-header
 browser-compat: http.headers.Accept-Encoding
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Accept-Encoding`** {{glossary("request header", "request")}} and {{glossary("response header")}} indicates the content encoding (usually a compression algorithm) that the sender can understand.
 In requests, the server uses [content negotiation](/en-US/docs/Web/HTTP/Guides/Content_negotiation) to select one of the encoding proposals from the client and informs the client of that choice with the {{HTTPHeader("Content-Encoding")}} response header.

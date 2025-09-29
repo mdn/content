@@ -1,10 +1,9 @@
 ---
-title: Variable fonts guide
+title: Variable fonts
 slug: Web/CSS/CSS_fonts/Variable_fonts_guide
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 **Variable fonts** are an evolution of the OpenType font specification that enables many different variations of a typeface to be incorporated into a single file, rather than having a separate font file for every width, weight, or style. They let you access all the variations contained in a given font file via CSS and a single {{cssxref("@font-face")}} reference. This article will give you all you need to know to get you started using variable fonts.
 
@@ -402,13 +401,13 @@ In the following live example, you can adjust the slant.
 ```css hidden live-sample___slant-example
 @font-face {
   font-family: "SlantFont";
-  font-style: oblique -15 15;
+  font-style: oblique -15deg 15deg;
   src: url("https://mdn.github.io/shared-assets/fonts/font_with_slant_axis.woff2")
     format("woff2");
 }
 
 p {
-  font-family: "SlantFont";
+  font-family: "SlantFont", sans-serif;
   display: inline-block;
   margin: 1rem;
   font-size: 4rem;

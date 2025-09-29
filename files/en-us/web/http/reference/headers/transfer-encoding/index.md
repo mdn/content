@@ -1,11 +1,11 @@
 ---
-title: Transfer-Encoding
+title: Transfer-Encoding header
+short-title: Transfer-Encoding
 slug: Web/HTTP/Reference/Headers/Transfer-Encoding
 page-type: http-header
 browser-compat: http.headers.Transfer-Encoding
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Transfer-Encoding`** {{glossary("request header", "request")}} and {{glossary("response header")}} specifies the form of encoding used to transfer messages between nodes on the network.
 
@@ -13,10 +13,16 @@ The HTTP **`Transfer-Encoding`** {{glossary("request header", "request")}} and {
 Each segment of a multi-node connection can use different `Transfer-Encoding` values.
 If you want to compress data over the whole connection, use the end-to-end {{HTTPHeader("Content-Encoding")}} header instead.
 
-When present on a response to a {{HTTPMethod("HEAD")}} request that has no body, it indicates the value that would have applied to the corresponding {{HTTPMethod("GET")}} message.
+In practice this header is rarely used, and in those cases it is almost always used with `chunked`.
+
+That said, the specification indicates that when present in a message it indicates the compression used on the message in that hop, and/or whether the message has been chunked.
+For example, `Transfer-Encoding: gzip, chunked` indicates that the content has been compressed using the gzip coding and then chunked using the chunked coding while forming the message body.
+
+The header is optional in responses to a {{HTTPMethod("HEAD")}} request as these messages have no body and, therefore, no transfer encoding.
+When present it indicates the value that would have applied to the corresponding response to a {{HTTPMethod("GET")}} message, if that `GET` request did not include a preferred `Transfer-Encoding`.
 
 > [!WARNING]
-> HTTP/2 disallows all uses of the `Transfer-Encoding` header other than the HTTP/2 specific value `"trailers"`.
+> HTTP/2 disallows all uses of the `Transfer-Encoding` header.
 > HTTP/2 and later provide more efficient mechanisms for data streaming than chunked transfer.
 > Usage of the header in HTTP/2 may likely result in a specific `protocol error`.
 
@@ -99,5 +105,4 @@ Developer Network\r\n
 - {{HTTPHeader("Accept-Encoding")}}
 - {{HTTPHeader("Content-Encoding")}}
 - {{HTTPHeader("Content-Length")}}
-- Header fields that regulate the use of trailers: {{HTTPHeader("TE")}} (requests) and {{HTTPHeader("Trailer")}} (responses).
 - [Chunked transfer encoding](https://en.wikipedia.org/wiki/Chunked_transfer_encoding)

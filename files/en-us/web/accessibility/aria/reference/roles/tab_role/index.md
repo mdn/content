@@ -1,5 +1,6 @@
 ---
 title: "ARIA: tab role"
+short-title: tab
 slug: Web/Accessibility/ARIA/Reference/Roles/tab_role
 page-type: aria-role
 spec-urls:
@@ -172,16 +173,14 @@ To accomplish the first, we listen for the [`keydown`](/en-US/docs/Web/API/Eleme
 To handle changing the active `tab` and `tabpanel`, we have a function that takes in the event, gets the element that triggered the event, the triggering element's parent element, and its grandparent element. We then find all tabs with `aria-selected="true"` inside the parent element and sets it to `false`, then sets the triggering element's `aria-selected` to `true`. After that, we find all `tabpanel` elements in the grandparent element, make them all `hidden`, and finally select the element whose `id` is equal to the triggering `tab`'s `aria-controls` and removes the `hidden` attribute, making it visible.
 
 ```js
-window.addEventListener("DOMContentLoaded", () => {
-  // Works for groups of similar tablists
-  const tabLists = Array.from(document.querySelectorAll('[role="tablist"]'));
-  const tabs = Array.from(document.querySelectorAll('[role="tab"]'));
+// Works for groups of similar tablists
+const tabLists = Array.from(document.querySelectorAll('[role="tablist"]'));
+const tabs = Array.from(document.querySelectorAll('[role="tab"]'));
 
-  // Add navigation event handlers to each tab
-  tabs.forEach((tab) => {
-    tab.addEventListener("click", changeTabsMouse);
-    tab.addEventListener("keydown", changeTabsKey);
-  });
+// Add navigation event handlers to each tab
+tabs.forEach((tab) => {
+  tab.addEventListener("click", changeTabsMouse);
+  tab.addEventListener("keydown", changeTabsKey);
 });
 
 function changeTabsMouse(e) {

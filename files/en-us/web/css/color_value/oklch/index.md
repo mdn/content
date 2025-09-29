@@ -6,9 +6,8 @@ browser-compat: css.types.color.oklch
 spec-urls:
   - https://drafts.csswg.org/css-color-5/#relative-Oklch
   - https://drafts.csswg.org/css-color/#ok-lab
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`oklch()`** functional notation expresses a given color in the Oklab {{glossary("color space")}}. `oklch()` is the cylindrical form of {{CSSXref("color_value/oklab", "oklab()")}}, using the same `L` axis, but with polar Chroma (`C`) and Hue (`h`) coordinates.
 
@@ -22,9 +21,9 @@ oklch(59.69% 0.156 49.77 / .5)
 
 /* Relative values */
 oklch(from green l c h / 0.5)
-oklch(from #0000FF calc(l + 0.1) c h)
+oklch(from #123456 calc(l + 0.1) c h)
 oklch(from hsl(180 100% 50%) calc(l - 0.1) c h)
-oklch(from var(--aColor) l c h / calc(alpha - 0.1))
+oklch(from var(--color) l c h / calc(alpha - 0.1))
 ```
 
 ### Values
@@ -44,25 +43,21 @@ oklch(L C H[ / A])
 The parameters are as follows:
 
 - `L`
-
   - : A {{CSSXref("&lt;number&gt;")}} between `0` and `1`, a {{CSSXref("&lt;percentage&gt;")}} between `0%` and `100%`, or the keyword `none` (equivalent to `0%` in this case). In this case, the number `0` corresponds to `0%` (black) and the number `1` corresponds to `100%` (white). This value specifies the color's perceived lightness, or "brightness".
 
     > [!NOTE]
     > The `L` in `oklch()` is the perceived lightness, which refers to the "brightness" we visually perceive with our eyes. This is different from the `L` in `hsl()`, where it represents lightness as compared to other colors.
 
 - `C`
-
   - : A {{CSSXref("&lt;number&gt;")}}, a {{CSSXref("&lt;percentage&gt;")}}, or the keyword `none` (equivalent to `0%` in this case). This value is a measure of the color's chroma (roughly representing the "amount of color"). Its minimum useful value is `0`, while the maximum is theoretically unbounded (but in practice does not exceed `0.5`). In this case, `0%` is `0` and `100%` is the number `0.4`.
 
 - `H`
-
   - : A {{CSSXref("&lt;number&gt;")}}, an {{CSSXref("&lt;angle&gt;")}}, or the keyword `none` (equivalent to `0deg` in this case) representing the color's {{CSSXref("&lt;hue&gt;")}} angle.
 
     > [!NOTE]
     > The angles corresponding to particular hues differ across the sRGB (used by {{CSSXref("color_value/hsl", "hsl()")}} and {{CSSXref("color_value/hwb", "hwb()")}}), CIELAB (used by {{CSSXref("color_value/lch", "lch()")}}), and Oklab (used by `oklch()`) color spaces. See the [Hues in `oklch()`](#hues_in_oklch) example below and the {{CSSXref("&lt;hue&gt;")}} reference page for more details and examples.
 
 - `A` {{optional_inline}}
-
   - : An {{CSSXref("&lt;alpha-value&gt;")}} representing the alpha channel value of the color, where the number `0` corresponds to `0%` (fully transparent) and `1` corresponds to `100%` (fully opaque). Additionally, the keyword `none` can be used to explicitly specify no alpha channel. If the `A` channel value is not explicitly specified, it defaults to 100%. If included, the value is preceded by a slash (`/`).
 
 > [!NOTE]
@@ -77,28 +72,23 @@ oklch(from <color> L C H[ / A])
 The parameters are as follows:
 
 - `from <color>`
-
   - : The keyword `from` is always included when defining a relative color, followed by a {{cssxref("&lt;color&gt;")}} value representing the **origin color**: This is the original color that the relative color is based on. The origin color can be _any_ valid {{cssxref("&lt;color&gt;")}} syntax, including another relative color.
 
 - `L`
-
   - : A {{CSSXref("&lt;number&gt;")}} between `0` and `1`, a {{CSSXref("&lt;percentage&gt;")}} between `0%` and `100%`, or the keyword `none` (equivalent to `0%` in this case). This represents the lightness value of the output color. Here the number `0` corresponds to `0%` (black) and the number `1` corresponds to `100%` (white).
 
 - `C`
-
   - : A {{CSSXref("&lt;number&gt;")}}, a {{CSSXref("&lt;percentage&gt;")}}, or the keyword `none` (equivalent to `0%` in this case). This value represents the output color's chroma value (roughly representing the "amount of color"). Its minimum useful value is `0`, while its maximum is theoretically unbounded (but in practice does not exceed `0.5`). In this case, `0%` is `0` and `100%` is the number `0.4`.
 
 - `H`
-
   - : A {{CSSXref("&lt;number&gt;")}}, an {{CSSXref("&lt;angle&gt;")}}, or the keyword `none` (equivalent to `0deg` in this case) representing the output color's {{CSSXref("&lt;hue&gt;")}} angle. See a [sample of different hues](#result_3) in the [Examples](#examples) section below.
 
 - `A` {{optional_inline}}
-
   - : An {{CSSXref("&lt;alpha-value&gt;")}} representing the alpha channel value of the output color, where the number `0` corresponds to `0%` (fully transparent) and `1` corresponds to `100%` (fully opaque). Additionally, the keyword `none` can be used to explicitly specify no alpha channel. If the `A` channel value is not explicitly specified, it defaults to the alpha channel value of the origin color. If included, the value is preceded by a slash (`/`).
 
 #### Defining relative color output channel components
 
-When using relative color syntax inside an `oklch()` function, the browser converts the origin color into an equivalent Oklch color (if it is not already specified as such). The color is defined as three distinct color channel values — `l` (lightness), `c` (chroma), and `h` (hue) — plus an alpha channel value (`alpha`). These channel values are made available inside the function to be used when defining the output color channel values:
+When using relative color syntax inside an `oklch()` function, the browser converts the origin color into an equivalent OkLCh color (if it is not already specified as such). The color is defined as three distinct color channel values — `l` (lightness), `c` (chroma), and `h` (hue) — plus an alpha channel value (`alpha`). These channel values are made available inside the function to be used when defining the output color channel values:
 
 - The `l` channel value is resolved to a `<number>` between `0` and `1`, inclusive.
 - The `c` channel value is resolved to a `<number>` between `0` and `0.4`, inclusive.
@@ -325,7 +315,7 @@ div {
 
 If we had used `0` instead of `0.01` and `2%`, with the same lightness values, the colors would have all been the same shade of grey. In this example, they are almost grey.
 
-### Hues in oklch
+### Hues in OkLCh
 
 The following example shows swatches with different `H` (hue) values of the `oklch()` functional notation.
 
@@ -563,6 +553,6 @@ The output is as follows:
 - [CSS colors](/en-US/docs/Web/CSS/CSS_colors) module
 - {{CSSXref("&lt;hue&gt;")}} data type
 - {{cssxref("color_value/lch","lch()")}} and {{cssxref("color_value/oklab","oklab()")}} color functions
-- [Interactive post on OKLCH color space](https://abhisaha.com/blog/interactive-post-oklch-color-space) (2024)
+- [Interactive post on OkLCh color space](https://abhisaha.com/blog/interactive-post-oklch-color-space) (2024)
 - [OKLCH in CSS: why we moved from RGB and HSL](https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl) (2024)
 - [A perceptual color space for image processing](https://bottosson.github.io/posts/oklab/) (2020)

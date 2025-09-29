@@ -215,6 +215,8 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
   - : Inserts a set of {{domxref("Node")}} objects or strings in the children list of the `Element`'s parent, just after the `Element`.
 - {{DOMxRef("Element.animate()")}}
   - : A shortcut method to create and run an animation on an element. Returns the created Animation object instance.
+- {{DOMxRef("Element.ariaNotify()")}} {{Experimental_Inline}} {{non-standard_inline}}
+  - : Specifies that a given string of text should be announced by a screen reader.
 - {{DOMxRef("Element.append()")}}
   - : Inserts a set of {{domxref("Node")}} objects or strings after the last child of the element.
 - {{DOMxRef("Element.attachShadow()")}}
@@ -269,7 +271,7 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
   - : Inserts a given text node at a given position relative to the element it is invoked upon.
 - {{DOMxRef("Element.matches()")}}
   - : Returns a boolean value indicating whether or not the element would be selected by the specified selector string.
-- {{DOMxRef("Element.moveBefore()")}} {{Experimental_Inline}}
+- {{DOMxRef("Element.moveBefore()")}}
   - : Moves a given {{domxref("Node")}} inside the invoking node as a direct child, before a given reference node, without removing and then inserting the node.
 - {{DOMxRef("Element.prepend()")}}
   - : Inserts a set of {{domxref("Node")}} objects or strings before the first child of the element.
@@ -315,6 +317,8 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
   - : Sets the value of the attribute with the specified name and namespace, from the current node.
 - {{DOMxRef("Element.setCapture()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Sets up mouse event capture, redirecting all mouse events to this element.
+- {{DOMxRef("Element.setHTML()")}} {{SecureContext_Inline}} {{experimental_inline}}
+  - : Parses and [sanitizes](/en-US/docs/Web/API/HTML_Sanitizer_API) a string of HTML into a document fragment, which then replaces the element's original subtree in the DOM.
 - {{DOMxRef("Element.setHTMLUnsafe()")}}
   - : Parses a string of HTML into a document fragment, without sanitization, which then replaces the element's original subtree in the DOM. The HTML string may include declarative shadow roots, which would be parsed as template elements if the HTML was set using [`Element.innerHTML`](/en-US/docs/Web/API/Element/innerHTML).
 - {{DOMxRef("Element.setPointerCapture()")}}
@@ -330,7 +334,7 @@ Listen to these events using `addEventListener()` or by assigning an event liste
   - : Fired when a script has been executed.
 - {{domxref("Element/beforeinput_event", "beforeinput")}}
   - : Fired when the value of an input element is about to be modified.
-- {{domxref("Element/beforematch_event", "beforematch")}} {{Experimental_Inline}}
+- {{domxref("Element/beforematch_event", "beforematch")}}
   - : Fires on an element that is in the [_hidden until found_](/en-US/docs/Web/HTML/Reference/Global_attributes/hidden) state, when the browser is about to reveal its content because the user has found the content through the "find in page" feature or through fragment navigation.
 - {{domxref("Element/beforescriptexecute_event","beforescriptexecute")}} {{Non-standard_Inline}} {{deprecated_inline}}
   - : Fired when a script is about to be executed.
@@ -462,7 +466,7 @@ Listen to these events using `addEventListener()` or by assigning an event liste
   - : Fired when a pointer is moved out of the _hit test_ boundaries of an element (among other reasons).
 - {{domxref("Element/pointerover_event", "pointerover")}}
   - : Fired when a pointer is moved into an element's hit test boundaries.
-- {{domxref("Element/pointerrawupdate_event", "pointerrawupdate")}} {{Experimental_Inline}}
+- {{domxref("Element/pointerrawupdate_event", "pointerrawupdate")}}
   - : Fired when a pointer changes any properties that don't fire {{domxref("Element/pointerdown_event", "pointerdown")}} or {{domxref("Element/pointerup_event", "pointerup")}} events.
 - {{domxref("Element/pointerup_event", "pointerup")}}
   - : Fired when a pointer is no longer active.

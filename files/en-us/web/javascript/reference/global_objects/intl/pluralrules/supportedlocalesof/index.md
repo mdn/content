@@ -1,11 +1,11 @@
 ---
 title: Intl.PluralRules.supportedLocalesOf()
+short-title: supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/supportedLocalesOf
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Intl.PluralRules.supportedLocalesOf
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Intl.PluralRules.supportedLocalesOf()`** static method returns an array containing those of the provided locales that are supported in plural rules without having to fall back to the runtime's default locale.
 
@@ -29,7 +29,7 @@ Intl.PluralRules.supportedLocalesOf(locales, options)
 ### Parameters
 
 - `locales`
-  - : A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
+  - : A string with a {{glossary("BCP 47 language tag")}}, or an array of such strings. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
 - `options` {{optional_inline}}
   - : An object that may have the following property:
     - `localeMatcher`

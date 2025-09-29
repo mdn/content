@@ -50,7 +50,7 @@ function handleMotionEvent(event) {
   // Do something awesome.
 }
 
-window.addEventListener("devicemotion", handleMotionEvent, true);
+window.addEventListener("devicemotion", handleMotionEvent);
 ```
 
 ## Specifications
@@ -64,4 +64,3 @@ window.addEventListener("devicemotion", handleMotionEvent, true);
 ## See also
 
 - {{domxref("Window.deviceorientation_event", "deviceorientation")}}
-- [DeviceOrientation Event](https://www.w3.org/TR/orientation-event/#devicemotion)

@@ -1,10 +1,10 @@
 ---
-title: CSP errors and warnings (Content Security Policy)
+title: Content Security Policy errors and warnings
+short-title: Errors and warnings
 slug: Web/HTTP/Guides/CSP/Errors
 page-type: guide
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 When you see any of the following messages logged in the browser devtools console, it indicates that a problem related to [CSP](/en-US/docs/Web/HTTP/Guides/CSP) has occurred.
 

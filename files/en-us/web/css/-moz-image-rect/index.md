@@ -6,9 +6,10 @@ status:
   - deprecated
   - non-standard
 browser-compat: css.types.-moz-image-rect
+sidebar: cssref
 ---
 
-{{CSSRef}}{{Non-standard_Header}}{{Deprecated_Header}}
+{{Non-standard_Header}}{{Deprecated_Header}}
 
 The **`-moz-image-rect`** value for [CSS](/en-US/docs/Web/CSS) {{CSSxRef("background-image")}} lets you use a portion of a larger image as a background.
 
@@ -34,8 +35,6 @@ The **`-moz-image-rect`** value for [CSS](/en-US/docs/Web/CSS) {{CSSxRef("backgr
 ## Description
 
 This property allows you to, for example, use different parts of one larger image as backgrounds in different parts of your content.
-
-This works very similarly to the {{CSSxRef("-moz-image-region")}} property, which is used with the {{CSSxRef("list-style-image")}} property to use parts of an image as the bullets in lists. However, this can be used for any CSS background.
 
 The syntax for the rectangle is similar to the [`rect()`](/en-US/docs/Web/CSS/shape#syntax) function generating a {{CSSxRef("&lt;shape&gt;")}} CSS type. All four values are relative to the upper left corner of the image.
 
@@ -66,9 +65,11 @@ Then the four boxes defining the segments of the image are defined. Let's look a
 
 ```css
 #box1 {
-  background-image: -moz-image-rect(url(firefox.png), 0%, 50%, 50%, 0%);
+  background-image: -moz-image-rect(url("firefox.png"), 0%, 50%, 50%, 0%);
   width: 133px;
   height: 136px;
+  left: 0px;
+  top: 0px;
   position: absolute;
 }
 ```
@@ -77,9 +78,11 @@ This is the top-left corner of the image. It defines a rectangle containing the 
 
 ```css
 #box2 {
-  background-image: -moz-image-rect(url(firefox.png), 0%, 100%, 50%, 50%);
+  background-image: -moz-image-rect(url("firefox.png"), 0%, 100%, 50%, 50%);
   width: 133px;
   height: 136px;
+  left: 133px;
+  top: 0px;
   position: absolute;
 }
 ```
@@ -90,15 +93,19 @@ The other corners follow a similar pattern:
 
 ```css
 #box3 {
-  background-image: -moz-image-rect(url(firefox.png), 50%, 50%, 100%, 0%);
+  background-image: -moz-image-rect(url("firefox.png"), 50%, 50%, 100%, 0%);
   width: 133px;
   height: 136px;
+  left: 0px;
+  top: 136px;
   position: absolute;
 }
 #box4 {
-  background-image: -moz-image-rect(url(firefox.png), 50%, 100%, 100%, 50%);
+  background-image: -moz-image-rect(url("firefox.png"), 50%, 100%, 100%, 50%);
   width: 133px;
   height: 136px;
+  left: 133px;
+  top: 136px;
   position: absolute;
 }
 ```
@@ -108,17 +115,17 @@ The other corners follow a similar pattern:
 We include a container with four boxes:
 
 ```html
-<div id="container" onclick="rotate()">
-  <div id="box1" style="left:0px;top:0px;">Top left</div>
-  <div id="box2" style="left:133px;top:0px;">Top right</div>
-  <div id="box3" style="left:0px;top:136px;">Bottom left</div>
-  <div id="box4" style="left:133px;top:136px;">Bottom right</div>
+<div id="container">
+  <div id="box1">Top left</div>
+  <div id="box2">Top right</div>
+  <div id="box3">Bottom left</div>
+  <div id="box4">Bottom right</div>
 </div>
 ```
 
 This places the four segments of our image in a two-by-two box grid. These four segments are all contained within a larger {{HTMLElement("div")}} block whose primary purpose is to receive click events and dispatch them to our JavaScript code.
 
-### The JavaScript code
+### JavaScript
 
 This code handles the click event when the container receives a mouse click.
 
@@ -140,6 +147,8 @@ function rotate() {
     prevStyle = curStyle;
   }
 }
+
+document.getElementById("container").addEventListener("click", rotate);
 ```
 
 This uses {{DOMxRef("window.getComputedStyle()")}} to fetch the style of each element, shifting it to the following element. Notice that before it begins doing so it saves a copy of the last box's style since it will be overwritten by the third element's style. By copying the values of the {{CSSxRef("background-image")}} property from one element to the next with each mouse click, we achieve the desired effect.

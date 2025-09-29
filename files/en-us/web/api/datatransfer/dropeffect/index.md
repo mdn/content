@@ -59,17 +59,12 @@ This example shows the use of the `dropEffect` and
 
 ```html
 <div>
-  <p id="source" ondragstart="dragstart_handler(event);" draggable="true">
+  <p id="source" draggable="true">
     Select this element, drag it to the Drop Zone and then release the selection
     to move the element.
   </p>
 </div>
-<div
-  id="target"
-  ondrop="drop_handler(event);"
-  ondragover="dragover_handler(event);">
-  Drop Zone
-</div>
+<div id="target">Drop Zone</div>
 ```
 
 ### CSS
@@ -93,7 +88,10 @@ div {
 ### JavaScript
 
 ```js
-function dragstart_handler(ev) {
+const source = document.getElementById("source");
+const target = document.getElementById("target");
+
+source.addEventListener("dragstart", (ev) => {
   console.log(
     `dragStart: dropEffect = ${ev.dataTransfer.dropEffect} ; effectAllowed = ${ev.dataTransfer.effectAllowed}`,
   );
@@ -102,9 +100,9 @@ function dragstart_handler(ev) {
   // know which element to add to its tree
   ev.dataTransfer.setData("text", ev.target.id);
   ev.dataTransfer.effectAllowed = "move";
-}
+});
 
-function drop_handler(ev) {
+target.addEventListener("drop", (ev) => {
   console.log(
     `drop: dropEffect = ${ev.dataTransfer.dropEffect} ; effectAllowed = ${ev.dataTransfer.effectAllowed}`,
   );
@@ -113,16 +111,16 @@ function drop_handler(ev) {
   // Get the id of the target and add the moved element to the target's DOM
   const data = ev.dataTransfer.getData("text");
   ev.target.appendChild(document.getElementById(data));
-}
+});
 
-function dragover_handler(ev) {
+target.addEventListener("dragover", (ev) => {
   console.log(
     `dragOver: dropEffect = ${ev.dataTransfer.dropEffect} ; effectAllowed = ${ev.dataTransfer.effectAllowed}`,
   );
   ev.preventDefault();
   // Set the dropEffect to move
   ev.dataTransfer.dropEffect = "move";
-}
+});
 ```
 
 {{EmbedLiveSample('Example', 300, 250)}}
@@ -140,4 +138,3 @@ function dragover_handler(ev) {
 - [Drag and drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
 - [Drag Operations](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
 - [Recommended Drag Types](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
-- [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)

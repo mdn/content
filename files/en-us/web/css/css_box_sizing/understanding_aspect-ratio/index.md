@@ -3,9 +3,8 @@ title: Understanding and setting aspect ratios
 slug: Web/CSS/CSS_box_sizing/Understanding_aspect-ratio
 page-type: guide
 spec-urls: https://drafts.csswg.org/css-sizing/#aspect-ratio
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 Every element rendered to the page has a height and a width, and, therefore, an {{glossary("aspect ratio")}}, which is the ratio between the width and height. The natural dimensions of a media object, which are its size without any sizing, scaling, zooming, or borders applied, are known as its natural or {{glossary("intrinsic size")}}. An element's intrinsic size is determined by the element itself, not by applying formatting such as [box sizing](/en-US/docs/Web/CSS/CSS_box_sizing) or setting border, margin, or padding widths.
 
@@ -75,7 +74,7 @@ You will have noticed the word "preferred" in the definitions above. The `aspect
 
 When both the height and width or inline and block sizes are explicitly set, the `aspect-ratio` property value is ignored. In this case, no dimension is allowed to be automatically sized - the preferred sizes are explicitly set - so the `aspect-ratio` property has no effect. When you declare both the inline and block dimensions, those take precedence.
 
-With replaced elements, if you don't explicitly set a value (other than `auto`) to either dimension, both will default to their intrinsic size (any `aspect-ratio` value isn't applied). The `aspect-ratio` will apply to non-replaced elements that don't have a dimension explicitly set, as non-replaced elements are either [intrinsically](/en-US/docs/Glossary/Intrinsic_Size) or [extrinsically](/en-US/docs/Glossary/Intrinsic_Size#extrinsic_sizing) sized, getting their size from their content, container, [box model](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model) properties, etc.
+With replaced elements, if you don't explicitly set a value (other than `auto`) to either dimension, both will default to their intrinsic size (any `aspect-ratio` value isn't applied). The `aspect-ratio` will apply to non-replaced elements that don't have a dimension explicitly set, as non-replaced elements are either [intrinsically](/en-US/docs/Glossary/Intrinsic_Size) or [extrinsically](/en-US/docs/Glossary/Extrinsic_size) sized, getting their size from their content, container, [box model](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model) properties, etc.
 
 When an element is rendered to the page, if no CSS is applied and no HTML sizing attributes are included, the user agent will render the object at its natural size.
 
@@ -173,12 +172,12 @@ We could have created this same distorted effect using the CSS {{cssxref("aspect
 
 ```css live-sample___stretch
 img {
-  height: 100vh;
+  height: 90vh;
   aspect-ratio: 3;
 }
 ```
 
-{{EmbedLiveSample("stretch", "100", "230")}}
+{{EmbedLiveSample("stretch", "100", "270")}}
 
 We have declared a single dimension; `100vh` is the full height of the example {{htmlelement("iframe")}} viewport. For `aspect-ratio` to apply to replaced elements, only one dimension must be set. Setting both or neither doesn't work.
 
@@ -224,7 +223,7 @@ Next, we designate the container as a grid, where each item has an aspect ratio 
 
 div div {
   aspect-ratio: 5 / 2;
-  background-color: #ccc;
+  background-color: #cccccc;
 }
 ```
 
@@ -296,7 +295,7 @@ To highlight the issue with setting a non-replaced element's aspect ratio via si
 
 ```css hidden live-sample___alder
 blockquote {
-  border: 3px dotted #ccc;
+  border: 3px dotted #cccccc;
   padding: 0 3px;
   margin: 20px 0;
   font-size: 1.25rem;
@@ -353,7 +352,7 @@ blockquote {
 
 ```css hidden live-sample___words
 blockquote {
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   padding: 1px;
   margin: 20px 0;
   background-color: #ededed;
@@ -387,13 +386,14 @@ p {
 div {
   width: 200px;
   padding: 5px;
+  border: 1px solid black;
   background-color: #66ccff;
 }
 
 p {
   aspect-ratio: 1;
   text-align: center;
-  border: 10px solid #ffffff;
+  border: 10px solid white;
   background-color: #f4aab9;
 }
 ```
@@ -403,28 +403,22 @@ p {
 To make the `<div>` a circle, we can set the `height` and `width` to the same value, or set `aspect-ratio: 1` and set the `overflow` to `auto` or `hidden`. Alternatively, we can simply remove the margins on the paragraph with [`margin-block: 0`](/en-US/docs/Web/CSS/margin-block). Both these options are shown below.
 
 ```html live-sample___circle2
-<section>
-  <div><p>Hello world</p></div>
-  <div><p>Hello world</p></div>
-  <section></section>
-</section>
+<div><p>Hello world</p></div>
+<div><p>Hello world</p></div>
 ```
 
 ```css hidden live-sample___circle2
-section {
-  display: flex;
-  gap: 20px;
-}
-
 div {
   width: 200px;
   padding: 5px;
+  margin: 1rem;
+  border: 1px solid black;
   background-color: #66ccff;
 }
 
 p {
   text-align: center;
-  border: 10px solid #ffffff;
+  border: 10px solid white;
   background-color: #f4aab9;
 }
 ```
@@ -445,7 +439,7 @@ div:last-of-type p {
 }
 ```
 
-{{EmbedLiveSample("circle2", "100", "250")}}
+{{EmbedLiveSample("circle2", "100", "520")}}
 
 ## Common `aspect-ratio` use cases
 
@@ -528,11 +522,11 @@ In this example of square grid items, the grid tracks are auto-sized, taking the
 ```css hidden
 div {
   gap: 20px;
-  font-size: 1.1;
+  font-size: 1.1rem;
 }
 
 div div {
-  background-color: #ccc;
+  background-color: #cccccc;
   aspect-ratio: 1;
   counter-increment: items;
 }

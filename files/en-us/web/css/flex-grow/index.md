@@ -3,16 +3,15 @@ title: flex-grow
 slug: Web/CSS/flex-grow
 page-type: css-property
 browser-compat: css.properties.flex-grow
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`flex-grow`** [CSS](/en-US/docs/Web/CSS) property sets the flex grow factor, which specifies how much of the flex container's [**positive free space**](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis), if any, should be assigned to the flex item's [main size](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox#the_flex_model).
 
 When the flex-container's main size is larger than the combined main sizes of its flex items, this positive free space can be distributed among the flex items, with each item's growth being their growth factor value as a proportion of the sum total of all the flex items' flex grow factors.
 
 > [!NOTE]
-> It is recommended to use the {{cssxref("flex")}} shorthand with a keyword value like `auto` or `initial` instead of setting `flex-basis` on its own. The [keyword values](/en-US/docs/Web/CSS/flex#values) expand to reliable combinations of `flex-grow`, {{cssxref("flex-shrink")}}, and {{cssxref("flex-basis")}}, which help to achieve the commonly desired flex behaviors.
+> It is recommended to use the {{cssxref("flex")}} shorthand with a keyword value like `auto` or `initial` instead of setting `flex-grow` on its own. The [keyword values](/en-US/docs/Web/CSS/flex#values) expand to reliable combinations of `flex-grow`, {{cssxref("flex-shrink")}}, and {{cssxref("flex-basis")}}, which help to achieve the commonly desired flex behaviors.
 
 {{InteractiveExample("CSS Demo: flex-grow")}}
 
@@ -45,7 +44,7 @@ flex-grow: 3;
 }
 
 .default-example > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
   margin: 10px;
   flex-grow: 1;
@@ -113,12 +112,12 @@ In this example, the sum of six flex-grow factors is equal to eight, meaning eac
   <code>flex-grow: 2</code> set.
 </p>
 <div id="content">
-  <div class="small" style="background-color:red;">A</div>
-  <div class="small" style="background-color:lightblue;">B</div>
-  <div class="small" style="background-color:yellow;">C</div>
-  <div class="double" style="background-color:brown;">D</div>
-  <div class="double" style="background-color:lightgreen;">E</div>
-  <div class="small" style="background-color:brown;">F</div>
+  <div class="box1">A</div>
+  <div class="box2">B</div>
+  <div class="box3">C</div>
+  <div class="box4">D</div>
+  <div class="box5">E</div>
+  <div class="box6">F</div>
 </div>
 ```
 
@@ -133,13 +132,36 @@ div > div {
   border: 3px solid rgb(0 0 0 / 20%);
 }
 
-.small {
+.box1,
+.box2,
+.box3,
+.box6 {
   flex-grow: 1;
 }
 
-.double {
+.box4,
+.box5 {
   flex-grow: 2;
   border: 3px solid rgb(0 0 0 / 20%);
+}
+
+.box1 {
+  background-color: red;
+}
+.box2 {
+  background-color: lightblue;
+}
+.box3 {
+  background-color: yellow;
+}
+.box4 {
+  background-color: brown;
+}
+.box5 {
+  background-color: lightgreen;
+}
+.box6 {
+  background-color: brown;
 }
 ```
 

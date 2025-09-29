@@ -2,9 +2,8 @@
 title: Implementing game control mechanisms
 slug: Games/Techniques/Control_mechanisms
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 One of HTML5's main advantages as a game development platform is the ability to run on various platforms and devices. Streamlining cross device differences creates multiple challenges, not least when providing appropriate controls for different contexts. In this series of articles we will show you how you can approach building a game that can be played using touchscreen smartphones, mouse and keyboard, and also less common mechanisms such as gamepads.
 

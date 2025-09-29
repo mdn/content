@@ -3,9 +3,8 @@ title: perspective()
 slug: Web/CSS/transform-function/perspective
 page-type: css-function
 browser-compat: css.types.transform-function.perspective
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`perspective()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) defines a transformation that sets the distance between the
 user and the z=0 plane, the perspective from which the viewer would be if the 2-dimensional interface were
@@ -73,32 +72,32 @@ transform: perspective(6.5cm);
 }
 
 .front {
-  background: rgba(90, 90, 90, 0.7);
+  background: rgb(90 90 90 / 0.7);
   transform: translateZ(50px);
 }
 
 .back {
-  background: rgba(0, 210, 0, 0.7);
+  background: rgb(0 210 0 / 0.7);
   transform: rotateY(180deg) translateZ(50px);
 }
 
 .right {
-  background: rgba(210, 0, 0, 0.7);
+  background: rgb(210 0 0 / 0.7);
   transform: rotateY(90deg) translateZ(50px);
 }
 
 .left {
-  background: rgba(0, 0, 210, 0.7);
+  background: rgb(0 0 210 / 0.7);
   transform: rotateY(-90deg) translateZ(50px);
 }
 
 .top {
-  background: rgba(210, 210, 0, 0.7);
+  background: rgb(210 210 0 / 0.7);
   transform: rotateX(90deg) translateZ(50px);
 }
 
 .bottom {
-  background: rgba(210, 0, 210, 0.7);
+  background: rgb(210 0 210 / 0.7);
   transform: rotateX(-90deg) translateZ(50px);
 }
 ```
@@ -109,23 +108,6 @@ properties which are attached to the parent of a child transformed in 3-dimensio
 
 ## Syntax
 
-The perspective distance used by `perspective()` is specified by a {{cssxref("&lt;length&gt;")}} value,
-which represents the distance between the user and the z=0 plane,
-or by `none`.
-The z=0 plane is the plane where everything appears
-in a 2-dimensional view, or the screen.
-Negative values are syntax errors.
-Values smaller than `1px` (including zero) are clamped to `1px`.
-Values other than `none` cause
-elements with positive z positions to appear larger,
-and elements with negative z positions to appear smaller.
-Elements with z positions equal to or larger than the perspective value
-disappear as though they are behind the user.
-Large values of perspective represent a small transformation;
-small values of `perspective()` represent a large transformation;
-`perspective(none)` represents perspective from infinite distance
-and no transformation.
-
 ```css
 perspective(d)
 ```
@@ -133,8 +115,9 @@ perspective(d)
 ### Values
 
 - _d_
-  - : Is a {{cssxref("&lt;length&gt;")}} representing the distance from the user to the z=0 plane. If it is 0 or a
-    negative value, no perspective transform is applied.
+  - : Is a {{cssxref("&lt;length&gt;")}} representing the distance from the user to the z=0 plane. The z=0 plane is the plane where everything appears in a 2-dimensional view, or the screen. Values smaller than `1px` (including zero) are clamped to `1px`. Negative values are syntax errors.
+
+    Values other than `none` cause elements with positive z positions to appear larger, and elements with negative z positions to appear smaller. Elements with z positions equal to or larger than the perspective value disappear as though they are behind the user. Large values of perspective represent a small transformation; small values of `perspective()` represent a large transformation; `perspective(none)` represents perspective from infinite distance and no transformation.
 
 <table class="standard-table">
   <thead>

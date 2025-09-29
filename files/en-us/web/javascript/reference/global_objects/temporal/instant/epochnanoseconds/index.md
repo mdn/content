@@ -1,13 +1,15 @@
 ---
 title: Temporal.Instant.prototype.epochNanoseconds
+short-title: epochNanoseconds
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Instant/epochNanoseconds
 page-type: javascript-instance-accessor-property
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.Instant.epochNanoseconds
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`epochNanoseconds`** accessor property of {{jsxref("Temporal.Instant")}} instances returns a {{jsxref("BigInt")}} representing the number of nanoseconds elapsed since the Unix epoch (midnight at the beginning of January 1, 1970, UTC) to this instant.
 

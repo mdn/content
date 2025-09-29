@@ -9,8 +9,7 @@ browser-compat: api.URLSearchParams.sort
 {{APIRef("URL API")}} {{AvailableInWorkers}}
 
 The **`URLSearchParams.sort()`** method sorts all key/value
-pairs contained in this object in place and returns `undefined`. The sort
-order is according to unicode code points of the keys. This method uses a stable sorting
+pairs contained in this object in place and returns `undefined`. Key/value pairs are sorted by the values of the {{glossary("UTF-16", "UTF-16 code units")}} of the keys. This method uses a stable sorting
 algorithm (i.e., the relative order between key/value pairs with equal keys will be
 preserved).
 

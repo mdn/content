@@ -2,9 +2,8 @@
 title: Content Security Policy (CSP)
 slug: Web/HTTP/Guides/CSP
 page-type: guide
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 **Content Security Policy** (CSP) is a feature that helps to prevent or minimize the risk of certain types of security threats. It consists of a series of instructions from a website to a browser, which instruct the browser to place restrictions on the things that the code comprising the site is allowed to do.
 
@@ -22,7 +21,7 @@ Finally we'll describe [strategies for deploying a CSP](#testing_your_policy) an
 
 A CSP should be delivered to the browser in the {{httpheader("Content-Security-Policy")}} response header. It should be set on all responses to all requests, not just the main document.
 
-You can also specify it using the [`http-equiv`](/en-US/docs/Web/HTML/Reference/Elements/meta#http-equiv) attribute of your document's {{htmlelement("meta")}} element, and this is a useful option for some use cases, such as a client-side-rendered {{glossary("SPA", "single page app")}} which has only static resources, because you can then avoid relying on any server infrastructure. However, this option does not support all CSP features.
+You can also specify it using the [`http-equiv`](/en-US/docs/Web/HTML/Reference/Elements/meta/http-equiv) attribute of your document's {{htmlelement("meta")}} element, and this is a useful option for some use cases, such as a client-side-rendered {{glossary("SPA", "single page app")}} which has only static resources, because you can then avoid relying on any server infrastructure. However, this option does not support all CSP features.
 
 The policy is specified as a series of _directives_, separated by semi-colons. Each directive controls a different aspect of the security policy. Each directive has a name, followed by a space, followed by a value. Different directives can have different syntaxes.
 
@@ -376,7 +375,7 @@ The `strict-dynamic` keyword is provided to help with this problem. It is a keyw
 For example, consider a document like this:
 
 ```html
-<html>
+<html lang="en-US">
   <head>
     <script
       src="./main.js"
@@ -413,7 +412,7 @@ If we add `'strict-dynamic'` to the CSP, then "main.js" will be allowed to load 
 ```http
 Content-Security-Policy:
   script-src 'sha256-gEh1+8U9S1vkEuQSmmUMTZjyNSu5tIoECP4UXIEjMTk='
-  strict-dynamic
+  'strict-dynamic'
 ```
 
 The `'strict-dynamic'` keyword makes it much easier to create and maintain nonce- or hash-based CSPs, especially when a website uses third-party scripts. It does make your CSP less secure, though, because if the scripts you include create `<script>` elements based on potential sources of XSS, then the CSP will not protect them.
@@ -581,6 +580,7 @@ The server handling these requests can then store or process the incoming report
 
 ## See also
 
+- [CSP errors and warnings](/en-US/docs/Web/HTTP/Guides/CSP/Errors)
 - [Mitigate cross-site scripting with a strict Content Security Policy](https://web.dev/articles/strict-csp) on web.dev (2024)
 - [Content Security Policy: A successful mess between hardening and mitigation](https://infocondb.org/con/locomocosec/locomocosec-2019/content-security-policy-a-successful-mess-between-hardening-and-mitigation)
 - [Content Security Policy Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html) on owasp.org

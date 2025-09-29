@@ -3,9 +3,8 @@ title: mask-repeat
 slug: Web/CSS/mask-repeat
 page-type: css-property
 browser-compat: css.properties.mask-repeat
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`mask-repeat`** [CSS](/en-US/docs/Web/CSS) property sets how mask images are repeated. A mask image can be repeated along the horizontal axis, the vertical axis, both axes, or not repeated at all.
 
@@ -53,20 +52,17 @@ with the first `<repeat-style>` value being the horizontal repetition value and 
 The `<repeat-style>` values include:
 
 - `repeat`
-
   - : The image is repeated as much as needed to cover the whole mask painting area. Mask images along the edges are clipped when the size of the [mask origin box](/en-US/docs/Web/CSS/mask-origin) is not an exact multiple of the mask image's size.
 
 - `space`
+  - : The mask image is repeated as many times as possible without clipping. If the element's origin size is at least twice the size as the mask image's size in the associated dimension, the {{cssxref("mask-position")}} property is ignored and the first and last images are positioned at the edges of the mask origin container. If the mask origin box is not an exact multiple of the mask image's size, whitespace is distributed evenly between the repeated mask images.
 
-  - : The mask image is repeated as many times as possible without clipping. If the element's origin size is at least twice the size as the mask image's size in the associated dimension, the {{cssxref("mask-position")}} property is ignored and the first and last images are positioned at the edges of the mask origin container. If the the mask origin box is not an exact multiple of the mask image's size, whitespace is distributed evenly between the repeated mask images.
-  - : If the origin box size is less than twice the mask image's size in the given dimension, only one mask image can be displayed. In this case, the image is positioned as defined by the `mask-position` property, which defaults to `0% 0%`. The mask image will only be clipped if the mask image is larger than the mask origin box.
+    If the origin box size is less than twice the mask image's size in the given dimension, only one mask image can be displayed. In this case, the image is positioned as defined by the `mask-position` property, which defaults to `0% 0%`. The mask image will only be clipped if the mask image is larger than the mask origin box.
 
 - `round`
-
-  - : The mask image is repeated as many times as possible in its original dimensions. If the size of the mask origin box is not an exact multiple of the mask image's size, all mask images will be rescaled, [shrinking or stretching](#rounded-repetitions) to ensure no repetitions are clipped.
+  - : The mask image is repeated as many times as possible in its original dimensions. If the size of the mask origin box is not an exact multiple of the mask image's size, all mask images will be rescaled, [shrinking or stretching](#rounded_repetitions) to ensure no repetitions are clipped.
 
 - `no-repeat`
-
   - : The mask image is not repeated (and hence the mask painting area will not necessarily be entirely covered). The position of the non-repeated mask image is defined by the {{cssxref("mask-position")}} CSS property.
 
 #### Shorthand values
@@ -109,16 +105,14 @@ The one-value syntax is a shorthand for the full two-value syntax:
 </table>
 
 - `repeat-x`
-
   - : The equivalent of `repeat no-repeat`. The image is repeated in the horizontal direction as many times as needed to cover the width of the mask painting area. Mask images along the right or left edges, or both depending on the {{cssxref("mask-position")}} value, will be clipped if the width of the mask origin box is not an exact multiple of the mask image's width.
 
 - `repeat-y`
-
   - : The equivalent of `no-repeat repeat`. The image is repeated in the vertical direction as many times as needed to cover the height of the mask painting area. Mask images along the top or bottom edges, or both depending on the {{cssxref("mask-position")}} value, will be clipped if the height of the mask origin box is not an exact multiple of the mask image's height.
 
 ## Description
 
-The `mask-repeat` property accepts a comma-separated pair of values or one [shorthand value](#shorthand-values). In the two-value syntax, the first value represents the horizontal repetition behavior and the second value represents the vertical behavior.
+The `mask-repeat` property accepts a comma-separated pair of values or one [shorthand value](#shorthand_values). In the two-value syntax, the first value represents the horizontal repetition behavior and the second value represents the vertical behavior.
 
 ### Multiple values
 
@@ -146,7 +140,7 @@ In the case of `round`, mask images are scaled up or down to fit the mask image 
 
 The rendered dimensions of the mask is the size of the origin box divided by the number of iterations of masks in that dimension, where the iterations being an integer greater than zero. The number of iterations is: `X' = D / round(D / X)` where `D` is the width or height, and `round()` is a function that returns the nearest integer greater than zero.
 
-For example, if `mask-repeat` is set to `round` and the `mask-size` sets the mask to be `40px` wide, when the origin box is present (greater than `0px` wide) but less than `60px` wide, there will be a single iteration that is 100% of the width of that box. If the box is at least `60px` wide but less than `100px` wide, there will be two iterations that are each `50%` of the box. From 100px to 140px, three masks will fit along the horizontal axis. These "`40px`"-wide masks will only be `40px` wide if the origin box is an exact multiple of `40px`.
+For example, if `mask-repeat` is set to `round` and the `mask-size` sets the mask to be `40px` wide, when the origin box is present (greater than `0px` wide) but less than `60px` wide, there will be a single iteration that is 100% of the width of that box. If the box is at least `60px` wide but less than `100px` wide, there will be two iterations that are each `50%` of the box. From 100px to 140px, three masks will fit along the horizontal axis. These "`40px`-wide" masks will only be `40px` wide if the origin box is an exact multiple of `40px`.
 
 ## Formal definition
 
@@ -180,7 +174,7 @@ div {
   height: 250px;
   background-image: linear-gradient(red, blue);
 
-  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+  mask-image: url("/shared-assets/images/examples/mask-star.svg");
   mask-size: 100px 100px;
 
   mask-repeat: round space;
@@ -211,7 +205,7 @@ div {
   height: 250px;
   background-image: linear-gradient(red, blue);
 
-  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+  mask-image: url("/shared-assets/images/examples/mask-star.svg");
   mask-size: 100px 100px;
 
   mask-repeat: round space;
@@ -277,7 +271,7 @@ div {
   height: 180px;
   background-image: linear-gradient(red, blue);
 
-  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+  mask-image: url("/shared-assets/images/examples/mask-star.svg");
 
   mask-size: 50px 50px;
   mask-position: bottom right;
@@ -364,4 +358,9 @@ Each image is matched with a corresponding repeat style. As there are more `mask
 
 ## See also
 
-- [Clipping and Masking in CSS](https://css-tricks.com/clipping-masking-css/)
+- {{cssxref("background-repeat")}}
+- {{cssxref("mask-border-repeat")}}
+- [Introduction to CSS masking](/en-US/docs/Web/CSS/CSS_masking/Masking)
+- [CSS `mask` properties](/en-US/docs/Web/CSS/CSS_masking/Mask_properties)
+- [Declaring multiple masks](/en-US/docs/Web/CSS/CSS_masking/Multiple_masks)
+- [CSS masking](/en-US/docs/Web/CSS/CSS_masking) module

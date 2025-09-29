@@ -1,5 +1,6 @@
 ---
-title: aria-multiline
+title: "ARIA: aria-multiline attribute"
+short-title: aria-multiline
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-multiline
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-multiline
@@ -24,7 +25,6 @@ Be aware of focus and keystrokes when designing text boxes. ARIA only modifies t
 ## Values
 
 - `true`
-
   - : The text box accepts multiple lines of input.
 
 - `false`

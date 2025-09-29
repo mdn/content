@@ -146,9 +146,7 @@ function storeNewPeriod(startDate, endDate) {
 
   // Sort the array so that periods are ordered by start date, from newest
   // to oldest.
-  periods.sort((a, b) => {
-    return new Date(b.startDate) - new Date(a.startDate);
-  });
+  periods.sort((a, b) => new Date(b.startDate) - new Date(a.startDate));
 
   // Store the updated array back in the storage.
   window.localStorage.setItem(STORAGE_KEY, JSON.stringify(periods));
@@ -267,9 +265,7 @@ function checkDatesInvalid(startDate, endDate) {
 function storeNewPeriod(startDate, endDate) {
   const periods = getAllStoredPeriods();
   periods.push({ startDate, endDate });
-  periods.sort((a, b) => {
-    return new Date(b.startDate) - new Date(a.startDate);
-  });
+  periods.sort((a, b) => new Date(b.startDate) - new Date(a.startDate));
   window.localStorage.setItem(STORAGE_KEY, JSON.stringify(periods));
 }
 

@@ -3,9 +3,8 @@ title: fill
 slug: Web/CSS/fill
 page-type: css-property
 browser-compat: css.properties.fill
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`fill`** [CSS](/en-US/docs/Web/CSS) property defines how SVG text content and the interior canvas of SVG shapes are filled or painted. If present, it overrides the element's {{SVGAttr("fill")}} attribute.
 
@@ -29,12 +28,12 @@ fill: red;
 fill: hsl(120deg 75% 25% / 60%);
 
 /* <url> values */
-fill: url(#gradientElementID);
-fill: url(star.png);
+fill: url("#gradientElementID");
+fill: url("star.png");
 
 /* <url> with fallback */
-fill: url(#gradientElementID) blue;
-fill: url(star.png) none;
+fill: url("#gradientElementID") blue;
+fill: url("star.png") none;
 
 /* Global values */
 fill: inherit;
@@ -47,23 +46,18 @@ fill: unset;
 ### Values
 
 - `none`
-
   - : No `fill` is painted; the areas inside the stroke, if any, are transparent.
 
 - `context-fill`
-
   - : Uses the paint value of `fill` from a context element.
 
 - `context-stroke`
-
   - : Uses the paint value of `stroke` from a context element.
 
 - {{cssxref("color_value", "&lt;color>")}}
-
   - : The color of the fill as any valid CSS {{cssxref("color_value", "&lt;color>")}} value.
 
 - `<url>`
-
   - : A URL reference to an SVG paint server element, such as a {{SVGElement("linearGradient")}}, {{SVGElement("radialGradient")}}, or {{SVGElement("pattern")}}. The resource reference can optionally be followed by a `<color>` or `none`, which will be used as a fallback if the referenced paint server doesn't resolve.
 
 ## Formal definition
@@ -82,18 +76,18 @@ This example demonstrates how a `fill` is declared, the effect of the property, 
 
 #### HTML
 
-We have an SVG with two complex shapes defined using the SVG {{SVGElement('polygon')}} and {{SVGElement('path')}} elements. Both have the `fill` attribute set to `#000` (equivalent to the default, `black`). We add a dark grey stroke of `#666` using the SVG {{SVGAttr("stroke")}} attribute but could have used the {{CSSXRef("stroke")}} property.
+We have an SVG with two complex shapes defined using the SVG {{SVGElement('polygon')}} and {{SVGElement('path')}} elements. Both have the `fill` attribute set to the default `black`. We add a dark grey stroke of `#666666` using the SVG {{SVGAttr("stroke")}} attribute but could have used the {{CSSXRef("stroke")}} property.
 
 ```html
 <svg viewBox="0 0 220 120" xmlns="http://www.w3.org/2000/svg">
   <path
     d="M 10,5 l 90,0 -80,80 0,-60 80,80 -90,0 z"
-    stroke="#666"
-    fill="#000" />
+    stroke="#666666"
+    fill="black" />
   <polygon
     points="180,10 150,100 220,40 140,40 210,100"
-    stroke="#666"
-    fill="#000" />
+    stroke="#666666"
+    fill="black" />
 </svg>
 ```
 
@@ -165,7 +159,7 @@ svg {
 ```css
 path {
   stroke-width: 2px;
-  marker: url(#circle);
+  marker: url("#circle");
 }
 path:nth-of-type(1) {
   stroke: red;

@@ -8,10 +8,7 @@ browser-compat: api.IntersectionObserver.unobserve
 
 {{APIRef("Intersection Observer API")}}
 
-The {{domxref("IntersectionObserver")}} method
-**`unobserve()`** instructs the
-`IntersectionObserver` to stop observing the specified target
-element.
+The **`unobserve()`** method of the {{domxref("IntersectionObserver")}} interface instructs the `IntersectionObserver` to stop observing the specified target element.
 
 ## Syntax
 
@@ -22,8 +19,8 @@ unobserve(target)
 ### Parameters
 
 - `target`
-  - : The {{domxref("Element")}} to cease observing. If the specified element isn't being
-    observed, this method does nothing and no exception is thrown.
+  - : The {{domxref("Element")}} to cease observing.
+    If the specified element isn't being observed, this method does nothing and no exception is thrown.
 
 ### Return value
 

@@ -46,7 +46,7 @@ For example:
 
 If a page needs to make connections to many third-party domains, preconnecting them all can be counterproductive. The `<link rel="preconnect">` hint is best used for only the most critical connections. For the others, just use `<link rel="dns-prefetch">` to save time on the first step — the DNS lookup.
 
-You can also implement preconnect as an HTTP [Link](/en-US/docs/Web/HTTP/Reference/Headers/Link) header, for example:
+You can also implement preconnect as an HTTP [`Link`](/en-US/docs/Web/HTTP/Reference/Headers/Link) header, for example:
 
 ```http
 Link: <https://example.com>; rel="preconnect"
@@ -86,7 +86,7 @@ For example:
 
 The result is kept in a per-document in-memory cache. If you preload something your current page doesn't use as a subresource, it is generally a waste of resources, although the result may populate the HTTP cache if headers allow.
 
-You can also implement preload as an HTTP [Link](/en-US/docs/Web/HTTP/Reference/Headers/Link) header, for example:
+You can also implement preload as an HTTP [`Link`](/en-US/docs/Web/HTTP/Reference/Headers/Link) header, for example:
 
 ```http
 Link: <https://www.example.com/fonts/cicle_fina-webfont.woff2>; rel="preload"
@@ -100,7 +100,7 @@ Browser support for `<link rel="preload">`/`<link rel="modulepreload">` is wides
 
 For example:
 
-```js
+```html
 <link rel="modulepreload" href="main.js" />
 ```
 
@@ -116,7 +116,7 @@ It is a specialized version of `<link rel="preload">` for [JavaScript modules](/
 
 For example:
 
-```js
+```html
 <link rel="prefetch" href="main.js" />
 ```
 
@@ -137,7 +137,8 @@ Many browsers now implement some form of [cache partitioning](https://developer.
 
 Would not be accessible from `https://aggregator.example/`.
 
-> **Note:** `<link rel="prefetch">` is functionally equivalent to a {{domxref("Window/fetch", "fetch()")}} call with a `priority: "low"` option set on it, except that the former will generally have an even lower priority, and it will have a [`Sec-Purpose: prefetch`](/en-US/docs/Web/HTTP/Reference/Headers/Sec-Purpose) header set on the request.
+> [!NOTE]
+> `<link rel="prefetch">` is functionally equivalent to a {{domxref("Window/fetch", "fetch()")}} call with a `priority: "low"` option set on it, except that the former will generally have an even lower priority, and it will have a [`Sec-Purpose: prefetch`](/en-US/docs/Web/HTTP/Reference/Headers/Sec-Purpose) header set on the request.
 
 > [!NOTE]
 > The fetch request for a `prefetch` operation results in an HTTP Request that includes the HTTP header [`Sec-Purpose: prefetch`](/en-US/docs/Web/HTTP/Reference/Headers/Sec-Purpose). A server might use this header to change the cache timeouts for the resources, or perform other special handling.
@@ -148,7 +149,7 @@ Would not be accessible from `https://aggregator.example/`.
 ### `<link rel="prerender">` {{deprecated_inline}}{{non-standard_inline}}
 
 > [!NOTE]
-> This technology was only ever available in Chrome, and is now deprecated. You should use the [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API) instead, which supersedes this.
+> This technology was only ever available in Chrome, and is now deprecated and [no longer performs a prerender as the name suggests](https://developer.chrome.com/blog/nostate-prefetch). You should use the [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API) instead, which supersedes this.
 
 [`<link rel="prerender">`](/en-US/docs/Web/HTML/Reference/Attributes/rel/prerender) provides a hint to browsers that the user might need the target resource for the next navigation, and therefore the browser can likely improve performance by prerendering the resource. `prerender` is used for future navigations, same-site only, and as such makes sense for multi-page applications (MPAs), not single-page applications (SPAs).
 

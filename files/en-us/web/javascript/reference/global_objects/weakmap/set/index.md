@@ -1,29 +1,28 @@
 ---
 title: WeakMap.prototype.set()
+short-title: set()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/set
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.WeakMap.set
+sidebar: jsref
 ---
 
-{{JSRef}}
-
-The **`set()`** method of {{jsxref("WeakMap")}} instances adds a new element with a specified key
-and value to this `WeakMap`.
+The **`set()`** method of {{jsxref("WeakMap")}} instances adds a new entry with a specified key and value to this `WeakMap`, or updates an existing entry if the key already exists.
 
 {{InteractiveExample("JavaScript Demo: WeakMap.prototype.set()")}}
 
 ```js interactive-example
-const weakmap1 = new WeakMap();
+const weakmap = new WeakMap();
 const object1 = {};
 const object2 = {};
 
-weakmap1.set(object1, "foo");
-weakmap1.set(object2, "bar");
+weakmap.set(object1, "foo");
+weakmap.set(object2, "bar");
 
-console.log(weakmap1.get(object1));
+console.log(weakmap.get(object1));
 // Expected output: "foo"
 
-console.log(weakmap1.get(object2));
+console.log(weakmap.get(object2));
 // Expected output: "bar"
 ```
 
@@ -36,9 +35,9 @@ set(key, value)
 ### Parameters
 
 - `key`
-  - : Must be either an object or a [non-registered symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry). The key of the entry to add to the `WeakMap` object.
+  - : The key of the entry to add to or modify within the `WeakMap` object. Must be either an object or a [non-registered symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry). Object keys are compared by [reference](/en-US/docs/Glossary/Object_reference), not by value.
 - `value`
-  - : Any value representing the value of the entry to add to the `WeakMap` object.
+  - : The value of the entry to add to or modify within the `WeakMap` object. Can be any value.
 
 ### Return value
 
@@ -51,7 +50,7 @@ The `WeakMap` object.
 
 ## Examples
 
-### Using the set() method
+### Using set()
 
 ```js
 const wm = new WeakMap();
@@ -80,5 +79,6 @@ wm.set(Symbol.iterator, "qux");
 ## See also
 
 - {{jsxref("WeakMap")}}
+- {{jsxref("WeakMap.prototype.delete()")}}
 - {{jsxref("WeakMap.prototype.get()")}}
 - {{jsxref("WeakMap.prototype.has()")}}

@@ -3,12 +3,10 @@ title: "GPURenderPassEncoder: endOcclusionQuery() method"
 short-title: endOcclusionQuery()
 slug: Web/API/GPURenderPassEncoder/endOcclusionQuery
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPURenderPassEncoder.endOcclusionQuery
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`endOcclusionQuery()`** method of the
 {{domxref("GPURenderPassEncoder")}} interface ends an active occlusion query previously started with {{domxref("GPURenderPassEncoder.beginOcclusionQuery", "beginOcclusionQuery()")}}.

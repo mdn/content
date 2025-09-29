@@ -22,7 +22,6 @@ encrypt(algorithm, key, data)
 ### Parameters
 
 - `algorithm`
-
   - : An object specifying the [algorithm](#supported_algorithms) to be used and any extra parameters if required:
     - To use [RSA-OAEP](#rsa-oaep), pass an {{domxref("RsaOaepParams")}} object.
     - To use [AES-CTR](#aes-ctr), pass an {{domxref("AesCtrParams")}} object.
@@ -208,14 +207,7 @@ function encryptMessage(key) {
   let encoded = getMessageEncoding();
   // iv will be needed for decryption
   iv = window.crypto.getRandomValues(new Uint8Array(16));
-  return window.crypto.subtle.encrypt(
-    {
-      name: "AES-CBC",
-      iv: iv,
-    },
-    key,
-    encoded,
-  );
+  return window.crypto.subtle.encrypt({ name: "AES-CBC", iv }, key, encoded);
 }
 ```
 
@@ -236,11 +228,7 @@ function encryptMessage(key) {
   const encoded = getMessageEncoding();
   // iv will be needed for decryption
   const iv = window.crypto.getRandomValues(new Uint8Array(12));
-  return window.crypto.subtle.encrypt(
-    { name: "AES-GCM", iv: iv },
-    key,
-    encoded,
-  );
+  return window.crypto.subtle.encrypt({ name: "AES-GCM", iv }, key, encoded);
 }
 ```
 

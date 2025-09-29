@@ -1,11 +1,11 @@
 ---
 title: Object.setPrototypeOf()
+short-title: setPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.setPrototypeOf
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Object.setPrototypeOf()`** static method sets the prototype (i.e., the internal `[[Prototype]]` property) of a specified object to another object or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
 

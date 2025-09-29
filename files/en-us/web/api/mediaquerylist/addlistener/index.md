@@ -8,7 +8,7 @@ status:
 browser-compat: api.MediaQueryList.addListener
 ---
 
-{{APIRef("CSSOM")}}{{Deprecated_Header}}
+{{APIRef("CSSOM view API")}}{{Deprecated_Header}}
 
 The deprecated **`addListener()`** method of the
 {{DOMxRef("MediaQueryList")}} interface adds a listener to the
@@ -40,7 +40,7 @@ None ({{jsxref("undefined")}}).
 
 ```js
 const paragraph = document.querySelector("p");
-const mediaQueryList = window.matchMedia("(max-width: 600px)");
+const mediaQueryList = window.matchMedia("(width <= 600px)");
 
 function screenTest(e) {
   if (e.matches) {

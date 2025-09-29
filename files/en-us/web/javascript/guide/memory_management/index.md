@@ -2,9 +2,8 @@
 title: Memory management
 slug: Web/JavaScript/Guide/Memory_management
 page-type: guide
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Advanced")}}
 
 Low-level languages like C, have manual memory management primitives such as [`malloc()`](https://pubs.opengroup.org/onlinepubs/009695399/functions/malloc.html) and [`free()`](https://en.wikipedia.org/wiki/C_dynamic_memory_allocation#Overview_of_functions). In contrast, JavaScript automatically allocates memory when objects are created and frees it when they are not used anymore (_garbage collection_). This automaticity is a potential source of confusion: it can give developers the false impression that they don't need to worry about memory management.
 
@@ -42,13 +41,9 @@ function f(a) {
 } // allocates a function (which is a callable object)
 
 // function expressions also allocate an object
-someElement.addEventListener(
-  "click",
-  () => {
-    someElement.style.backgroundColor = "blue";
-  },
-  false,
-);
+someElement.addEventListener("click", () => {
+  someElement.style.backgroundColor = "blue";
+});
 ```
 
 #### Allocation via function calls
@@ -65,7 +60,7 @@ Some methods allocate new values or objects:
 
 ```js
 const s = "string";
-const s2 = s.substr(0, 3); // s2 is a new string
+const s2 = s.substring(0, 3); // s2 is a new string
 // Since strings are immutable values,
 // JavaScript may decide to not allocate memory,
 // but just store the [0, 3] range.
@@ -243,7 +238,8 @@ For more information on their APIs, see the [keyed collections](/en-US/docs/Web/
 
 ### WeakRefs and FinalizationRegistry
 
-> **Note:** `WeakRef` and `FinalizationRegistry` offer direct introspection into the garbage collection machinery. [Avoid using them where possible](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#avoid_where_possible) because the runtime semantics are almost completely unguaranteed.
+> [!NOTE]
+> `WeakRef` and `FinalizationRegistry` offer direct introspection into the garbage collection machinery. [Avoid using them where possible](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#avoid_where_possible) because the runtime semantics are almost completely unguaranteed.
 
 All variables with an object as value are references to that object. However, such references are _strong_ — their existence would prevent the garbage collector from marking the object as eligible for collection. A [`WeakRef`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef) is a _weak reference_ to an object that allows the object to be garbage collected, while still retaining the ability to read the object's content during its lifetime.
 

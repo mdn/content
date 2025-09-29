@@ -1,13 +1,15 @@
 ---
 title: String.prototype.fontcolor()
+short-title: fontcolor()
 slug: Web/JavaScript/Reference/Global_Objects/String/fontcolor
 page-type: javascript-instance-method
 status:
   - deprecated
 browser-compat: javascript.builtins.String.fontcolor
+sidebar: jsref
 ---
 
-{{JSRef}} {{Deprecated_Header}}
+{{Deprecated_Header}}
 
 The **`fontcolor()`** method of {{jsxref("String")}} values creates a string that embeds this string in a {{HTMLElement("font")}} element (`<font color="...">str</font>`), which causes this string to be displayed in the specified font color.
 

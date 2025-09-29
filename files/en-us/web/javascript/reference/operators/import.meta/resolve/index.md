@@ -3,9 +3,8 @@ title: import.meta.resolve()
 slug: Web/JavaScript/Reference/Operators/import.meta/resolve
 page-type: javascript-language-feature
 browser-compat: javascript.operators.import_meta.resolve
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 **`import.meta.resolve()`** is a built-in function defined on the [`import.meta`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta) object of a JavaScript module that resolves a module specifier to a URL using the current module's URL as base.
 
@@ -94,7 +93,7 @@ Some tools recognize `new URL("./lib/helper.js", import.meta.url).href` as a dep
 
 This means that `import.meta.resolve()` is not required to be implemented by all conformant JavaScript implementations. However, `import.meta.resolve()` may also be available in non-browser environments:
 
-- Deno implements [compatibility with browser behavior](https://docs.deno.com/runtime/reference/deno_namespace_apis/#import.meta).
+- Deno implements [compatibility with browser behavior](https://docs.deno.com/api/node/module/~/ImportMeta.resolve).
 - Node.js also implements [the `import.meta.resolve()` function](https://nodejs.org/docs/latest/api/esm.html#importmetaresolvespecifier), but adds an additional `parent` parameter if you use the `--experimental-import-meta-resolve` flag.
 
 ## Examples

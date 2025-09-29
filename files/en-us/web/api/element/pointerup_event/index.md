@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Element.pointerup_event
 ---
 
-{{APIRef}}
+{{APIRef("Pointer Events")}}
 
 The `pointerup` event is fired when a pointer is no longer active. Remember that it is possible to get a [`pointercancel`](/en-US/docs/Web/API/Element/pointercancel_event) event instead.
 
@@ -92,7 +92,6 @@ para.onpointerup = (event) => {
 ## See also
 
 - Related events
-
   - {{domxref('Element/gotpointercapture_event', 'gotpointercapture')}}
   - {{domxref('Element/lostpointercapture_event', 'lostpointercapture')}}
   - {{domxref('Element/pointerover_event', 'pointerover')}}

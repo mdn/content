@@ -3,9 +3,8 @@ title: HTML reference
 short-title: Reference
 slug: Web/HTML/Reference
 page-type: landing-page
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 This [HTML](/en-US/docs/Web/HTML) reference describes all **elements** and **attributes** of HTML, including **global attributes** that apply to all elements.
 

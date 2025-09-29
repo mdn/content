@@ -13,7 +13,7 @@ The read-only **`containerName`** property of the {{domxref("CSSContainerRule")}
 For example, the value of `containerName` for the {{cssxref("@container")}} below is `sidebar`:
 
 ```css
-@container sidebar (min-width: 700px) {
+@container sidebar (width >= 700px) {
   .card {
     font-size: 2em;
   }
@@ -61,7 +61,7 @@ First we define the HTML for a `card` (`<div>`) contained within a `post`.
 ```
 
 The CSS for the container element specifies the type of the container, and may also specify a name.
-The card has a default font size, which is overridden for the `@container` named `sidebar` if the minimum width is greater than 700px.
+The card has a default font size, which is overridden for the `@container` named `sidebar` if the width is greater than 700px.
 
 ```html
 <style id="example-styles">
@@ -75,7 +75,7 @@ The card has a default font size, which is overridden for the `@container` named
     font-size: 1em;
   }
 
-  @container sidebar (min-width: 700px) {
+  @container sidebar (width >= 700px) {
     .card {
       font-size: 2em;
     }

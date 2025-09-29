@@ -3,12 +3,10 @@ title: "GPUTexture: mipLevelCount property"
 short-title: mipLevelCount
 slug: Web/API/GPUTexture/mipLevelCount
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.GPUTexture.mipLevelCount
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`mipLevelCount`** read-only property of the
 {{domxref("GPUTexture")}} interface represents the number of mip levels of the `GPUTexture`.

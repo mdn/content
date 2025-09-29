@@ -3,9 +3,8 @@ title: :target
 slug: Web/CSS/:target
 page-type: css-pseudo-class
 browser-compat: css.selectors.target
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`:target`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) selects the _target element of the document_. When the document is loaded, the target element is derived using the document's [URL fragment identifier](/en-US/docs/Web/URI/Reference/Fragment#fragment).
 
@@ -112,3 +111,4 @@ p:target i {
 ## See also
 
 - [Using the :target pseudo-class in selectors](/en-US/docs/Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors)
+- {{cssxref("::target-text")}} (for highlighting text fragments)

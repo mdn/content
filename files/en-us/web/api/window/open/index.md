@@ -22,35 +22,29 @@ open(url, target, windowFeatures)
 ### Parameters
 
 - `url` {{optional_inline}}
-
   - : A string indicating the URL or path of the resource to be loaded. If an empty string (`""`) is specified or this parameter is omitted, a blank page is opened into the targeted browsing context.
 
 - `target` {{optional_inline}}
-
   - : A string, without whitespace, specifying the [name](/en-US/docs/Web/API/Window/name) of the browsing context the resource is being loaded into. If the name doesn't identify an existing context, a new context is created and given the specified name. The special [`target` keywords](/en-US/docs/Web/HTML/Reference/Elements/a#target), `_self`, `_blank` (default), `_parent`, `_top`, and `_unfencedTop` can also be used. `_unfencedTop` is only relevant to [fenced frames](/en-US/docs/Web/API/Fenced_frame_API).
 
     This name can be used as the `target` attribute of [`<a>`](/en-US/docs/Web/HTML/Reference/Elements/a#target) or [`<form>`](/en-US/docs/Web/HTML/Reference/Elements/form#target) elements.
 
 - `windowFeatures` {{optional_inline}}
-
   - : A string containing a comma-separated list of window features in the form `name=value`. Boolean values can be set to true using one of: `name`, `name=yes`, `name=true`, or `name=n` where `n` is any non-zero integer. These features include options such as the window's default size and position, whether or not to open a minimal popup window, and so forth. The following options are supported:
-
     - `attributionsrc` {{experimental_inline}}
-
       - : Indicates that you want the browser to send an {{httpheader("Attribution-Reporting-Eligible")}} header along with the `open()` call. This call must be made with [transient activation](/en-US/docs/Glossary/Transient_activation) (i.e., inside a user interaction event handle such as `click`), within five seconds of user interaction. On the server-side this is used to trigger sending an {{httpheader("Attribution-Reporting-Register-Source")}} header in the response to complete registration of an attribution source.
 
         In addition, the browser is also triggered to store the associated source data (as provided in the {{httpheader("Attribution-Reporting-Register-Source")}} response header) when the `open()` method completes.
 
         See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) for more details.
 
-        > **Note:** `open()` calls cannot be used to register an attribution trigger.
+        > [!NOTE]
+        > `open()` calls cannot be used to register an attribution trigger.
 
     - `popup`
-
       - : By default, `window.open` opens the page in a new tab. If `popup` is set to true, it requests that a minimal popup window be used. The UI features included in the popup window will be automatically decided by the browser, generally including an address bar only. If `popup` is present and set to false, a new tab is still opened.
 
         There are a few legacy features, which used to control UI features of the opened window. In modern browsers, they only have the effect of requesting a popup. If `popup` is unspecified, and `windowFeatures` contains any features (including unrecognized ones) other than `noopener`, `noreferrer`, or `attributionsrc`, the window is also opened as a popup if any of the following conditions apply:
-
         - `location` and `toolbar` are both false or absent
         - `menubar` is false or absent
         - `resizable` is false
@@ -60,23 +54,18 @@ open(url, target, windowFeatures)
         Otherwise the window is opened as a tab.
 
     - `width` or `innerWidth`
-
       - : Specifies the width of the content area, including scrollbars. The minimum required value is 100.
 
     - `height` or `innerHeight`
-
       - : Specifies the height of the content area, including scrollbars. The minimum required value is 100.
 
     - `left` or `screenX`
-
       - : Specifies the distance in pixels from the left side of the work area as defined by the user's operating system where the new window will be generated.
 
     - `top` or `screenY`
-
       - : Specifies the distance in pixels from the top side of the work area as defined by the user's operating system where the new window will be generated.
 
     - `noopener`
-
       - : If this feature is set, the new window will not have access to the originating window via [`Window.opener`](/en-US/docs/Web/API/Window/opener) and returns `null`.
 
         When `noopener` is used, non-empty target names, other than `_top`, `_self`, and `_parent`, are treated like `_blank` in terms of deciding whether to open a new browsing context.
@@ -172,14 +161,10 @@ function openRequestedTab(url, windowName) {
 }
 
 const link = document.querySelector("a[target='OpenWikipediaWindow']");
-link.addEventListener(
-  "click",
-  (event) => {
-    openRequestedTab(link.href);
-    event.preventDefault();
-  },
-  false,
-);
+link.addEventListener("click", (event) => {
+  openRequestedTab(link.href);
+  event.preventDefault();
+});
 ```
 
 The above code solves a few usability problems related to links opening popups. The purpose of the `event.preventDefault()` in the code is to cancel the default action of the link: if the event listener for `click` is executed, then there is no need to execute the default action of the link. But if JavaScript support is disabled or non-existent on the user's browser, then the event listener for `click` is ignored, and the browser loads the referenced resource in the target frame or window that has the name `"WikipediaWindowName"`. If no frame nor window has the name `"WikipediaWindowName"`, then the browser will create a new window and name it `"WikipediaWindowName"`.
@@ -238,14 +223,10 @@ const links = document.querySelectorAll(
   "a[target='SingleSecondaryWindowName']",
 );
 for (const link of links) {
-  link.addEventListener(
-    "click",
-    (event) => {
-      openRequestedSingleTab(link.href);
-      event.preventDefault();
-    },
-    false,
-  );
+  link.addEventListener("click", (event) => {
+    openRequestedSingleTab(link.href);
+    event.preventDefault();
+  });
 }
 ```
 

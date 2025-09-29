@@ -46,7 +46,7 @@ This element implements the {{domxref("SVGFESpotLightElement")}} interface.
         result="spotlight"
         specularConstant="1.5"
         specularExponent="4"
-        lighting-color="#FFF">
+        lighting-color="white">
         <feSpotLight x="600" y="600" z="400" limitingConeAngle="5.5" />
       </feSpecularLighting>
       <feComposite
@@ -66,7 +66,7 @@ This element implements the {{domxref("SVGFESpotLightElement")}} interface.
     y="10%"
     width="80%"
     height="80%"
-    style="filter:url(#spotlight);" />
+    filter="url(#spotlight)" />
 </svg>
 ```
 

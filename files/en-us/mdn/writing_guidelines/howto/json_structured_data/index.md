@@ -26,28 +26,30 @@ GroupData does exactly that: for each API, it lists the interfaces, properties, 
 An entry in `GroupData.json` has the following structure:
 
 ```json
-"Name_of_the_API": {
-  "overview": ["name_of_the_overview_page"],
-  "guides": [
-    "name_of_guide_1",
-    (…)
-  ],
-  "interfaces": [
-    "name_of_interface_1",
-    (…)
-  ],
-  "methods": [
-    "name_of_additional_method_1",
-    (…)
-  ],
-  "properties": [
-    "name_of_additional_property_1",
-    (…)
-  ],
-  "events": [
-    "name_of_additional_property_1",
-    (…)
-  ]
+{
+  "Name_of_the_API": {
+    "overview": ["name_of_the_overview_page"],
+    "guides": [
+      "name_of_guide_1"
+      // …
+    ],
+    "interfaces": [
+      "name_of_interface_1"
+      // …
+    ],
+    "methods": [
+      "name_of_additional_method_1"
+      // …
+    ],
+    "properties": [
+      "name_of_additional_property_1"
+      // …
+    ],
+    "events": [
+      "name_of_additional_property_1"
+      // …
+    ]
+  }
 }
 ```
 
@@ -72,7 +74,7 @@ An entry in `GroupData.json` has the following structure:
     > [!NOTE]
     > The properties of the interfaces listed in `"interfaces"` **must** not be listed there. They are automatically added to the sidebar if the `page-type` key for that page is `web-api-static-property` or `web-api-instance-property`.
 - `"events"`
-  - : This lists events of other interfaces that are part of the API. The values are the _title of the pages_ (that must reside under `Web/Events`)
+  - : This lists events of other interfaces that are part of the API. The values are the _title of the pages_.
     > [!NOTE]
     > The events targeting the interfaces listed in `"interfaces"` **must** not be listed there. They are automatically added to the sidebar if the `page-type` key for that page is `web-api-event`.
 
@@ -83,11 +85,9 @@ There are two other keys, `"dictionaries"` and `"callbacks"`, operating on the s
 
 ### Update process for GroupData
 
-This file should be updated in the same PR where changes affecting the sidebar happens. That way, the sidebar is always up-to-date. Reviewers shouldn't merge PRs that don't adopt it.
+This file, located at [`files/jsondata/GroupData.json`](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json), should be updated in the same PR where changes affecting the sidebar happens. That way, the sidebar is always up-to-date. Reviewers shouldn't merge PRs that don't adopt it.
 
 To test your changes, check that the sidebar in the files in your PR displays all entries correctly.
-
-The `GroupData.json` file is located [here](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json) on GitHub.
 
 ## InterfaceData: recording interface inheritance
 
@@ -103,9 +103,11 @@ This inheritance data is used when building API sidebars and by the `\{{Inherita
 An entry in `InterfaceData.json` has the following structure:
 
 ```json
-"Name_of_the_interface": {
-  "inh": "Name_of_the_parent_interface",
-  "impl": []
+{
+  "Name_of_the_interface": {
+    "inh": "Name_of_the_parent_interface",
+    "impl": []
+  }
 }
 ```
 
@@ -116,11 +118,9 @@ The value of `"Name_of_the_parent_interface"` is not a list but a single entry, 
 
 ### Update process for InterfaceData
 
-The same PR adding a new interface that inherits from another one must update this file. Reviewers shouldn't merge PRs that don't do so.
+The same PR adding a new interface that inherits from another one must update this file, located at [`files/jsondata/InterfaceData.json`](https://github.com/mdn/content/blob/main/files/jsondata/InterfaceData.json). Reviewers shouldn't merge PRs that don't do so.
 
 To test your changes, check that the sidebars of each interface you edited in your PR display inheritance correctly.
-
-The `InterfaceData.json` file is located [here](https://github.com/mdn/content/blob/main/files/jsondata/InterfaceData.json) on GitHub.
 
 ## SpecData: Specification information
 

@@ -3,17 +3,12 @@ title: ::target-text
 slug: Web/CSS/::target-text
 page-type: css-pseudo-element
 browser-compat: css.selectors.target-text
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`::target-text`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the text that has been scrolled to if the browser supports [text fragments](/en-US/docs/Web/URI/Reference/Fragment/Text_fragments). It allows authors to choose how to highlight that section of text.
 
-```css
-::target-text {
-  background-color: pink;
-}
-```
+The `::target-text` pseudo-element follows a special inheritance model common to all highlight pseudo-elements. For more details on how this inheritance works, see the [Highlight pseudo-elements inheritance](/en-US/docs/Web/CSS/Pseudo-elements#highlight_pseudo-elements_inheritance) section.
 
 ## Syntax
 
@@ -47,3 +42,4 @@ To see this CSS in action follow the link to [scroll-to-text demo](https://mdn.g
 ## See also
 
 - [Text fragments](/en-US/docs/Web/URI/Reference/Fragment/Text_fragments)
+- {{cssxref(":target")}} (for highlighting target elements)

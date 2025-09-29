@@ -3,9 +3,8 @@ title: scroll-margin
 slug: Web/CSS/scroll-margin
 page-type: css-shorthand-property
 browser-compat: css.properties.scroll-margin
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`scroll-margin`** [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) sets all of the scroll margins of an element at once, assigning values much like the [`margin`](/en-US/docs/Web/CSS/margin) property does for margins of an element.
 
@@ -57,7 +56,7 @@ scroll-margin: 2em;
 .scroller > div {
   flex: 0 0 250px;
   background-color: rebeccapurple;
-  color: #fff;
+  color: white;
   font-size: 30px;
   display: flex;
   align-items: center;
@@ -66,7 +65,7 @@ scroll-margin: 2em;
 }
 
 .scroller > div:nth-child(even) {
-  background-color: #fff;
+  background-color: white;
   color: rebeccapurple;
 }
 ```
@@ -147,7 +146,7 @@ Let's walk through the CSS. The outer container is styled like this:
   overflow-x: scroll;
   display: flex;
   box-sizing: border-box;
-  border: 1px solid #000;
+  border: 1px solid black;
   scroll-snap-type: x mandatory;
 }
 ```
@@ -160,8 +159,8 @@ The child elements are styled as follows:
 .scroller > div {
   flex: 0 0 250px;
   width: 250px;
-  background-color: #663399;
-  color: #fff;
+  background-color: rebeccapurple;
+  color: white;
   font-size: 30px;
   display: flex;
   align-items: center;
@@ -170,8 +169,8 @@ The child elements are styled as follows:
 }
 
 .scroller > div:nth-child(2n) {
-  background-color: #fff;
-  color: #663399;
+  background-color: white;
+  color: rebeccapurple;
 }
 ```
 

@@ -15,6 +15,9 @@ The options can be used to include nested shadow roots that have been set as {{d
 
 Without arguments, child nodes that are shadow roots are not serialized, and this method behaves in the same way as reading the value of {{domxref("Element.innerHTML")}}.
 
+Note that some browsers serialize the `<` and `>` characters as `&lt;` and `&gt;` when they appear in attribute values (see [Browser compatibility](#browser_compatibility)).
+This is to prevent a potential security vulnerability ([mutation XSS](https://www.securitum.com/mutation-xss-via-mathml-mutation-dompurify-2-0-17-bypass.html)) in which an attacker can craft input that bypasses a [sanitization function](/en-US/docs/Web/Security/Attacks/XSS#sanitization), enabling a cross-site scripting (XSS) attack.
+
 ## Syntax
 
 ```js-nolint
@@ -24,9 +27,7 @@ getHTML(options)
 ### Parameters
 
 - `options` {{optional_inline}}
-
   - : An options object with the following optional parameters:
-
     - `serializableShadowRoots`
       - : A boolean value that specifies whether to include [serializable](/en-US/docs/Web/API/ShadowRoot/serializable) shadow roots.
         The default value is `false`.

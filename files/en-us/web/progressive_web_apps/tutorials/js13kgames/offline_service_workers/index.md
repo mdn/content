@@ -29,8 +29,14 @@ Let's see how the js13kPWA app uses Service Workers to provide offline capabilit
 We'll start by looking at the code that registers a new Service Worker, in the app.js file:
 
 ```js
+let swRegistration = null;
+
 if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("./pwa-examples/js13kpwa/sw.js");
+  navigator.serviceWorker
+    .register("./pwa-examples/js13kpwa/sw.js")
+    .then((reg) => {
+      swRegistration = reg;
+    });
 }
 ```
 
@@ -82,8 +88,8 @@ Next, the links to images to be loaded along with the content from the data/game
 
 ```js
 const gamesImages = [];
-for (let i = 0; i < games.length; i++) {
-  gamesImages.push(`data/img/${games[i].slug}.jpg`);
+for (const game of games) {
+  gamesImages.push(`data/img/${game.slug}.jpg`);
 }
 const contentToCache = appShellFiles.concat(gamesImages);
 ```
@@ -190,16 +196,16 @@ Remember the `activate` event we skipped? It can be used to clear out the old ca
 ```js
 self.addEventListener("activate", (e) => {
   e.waitUntil(
-    caches.keys().then((keyList) => {
-      return Promise.all(
+    caches.keys().then((keyList) =>
+      Promise.all(
         keyList.map((key) => {
           if (key === cacheName) {
-            return;
+            return undefined;
           }
           return caches.delete(key);
         }),
-      );
-    }),
+      ),
+    ),
   );
 });
 ```

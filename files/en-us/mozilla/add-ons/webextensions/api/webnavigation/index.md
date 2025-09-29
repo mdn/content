@@ -3,9 +3,8 @@ title: webNavigation
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation
 page-type: webextension-api
 browser-compat: webextensions.api.webNavigation
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Add event listeners for the various stages of a navigation. A navigation consists of a frame in the browser transitioning from one URL to another, usually (but not always) in response to a user action like clicking a link or entering a URL in the location bar.
 
@@ -16,14 +15,12 @@ Each event corresponds to a particular stage in the navigation. The sequence of 
 ![Visualization of the primary flow and additional flows described below.](we-flow.png)
 
 - The primary flow is:
-
   - {{WebExtAPIRef("webNavigation.onBeforeNavigate", "onBeforeNavigate")}}
   - {{WebExtAPIRef("webNavigation.onCommitted", "onCommitted")}}
   - {{WebExtAPIRef("webNavigation.onDOMContentLoaded", "onDOMContentLoaded")}}
   - {{WebExtAPIRef("webNavigation.onCompleted", "onCompleted")}}.
 
 - Additionally:
-
   - {{WebExtAPIRef("webNavigation.onCreatedNavigationTarget", "onCreatedNavigationTarget")}} is fired before `onBeforeNavigate` if the browser needed to create a new tab or window for the navigation (for example, because the user opened a link in a new tab).
   - {{WebExtAPIRef("webNavigation.onHistoryStateUpdated", "onHistoryStateUpdated")}} is fired if a page uses the [history API](/en-US/docs/Web/API/History_API) to update the URL displayed in the browser's location bar.
   - {{WebExtAPIRef("webNavigation.onReferenceFragmentUpdated", "onReferenceFragmentUpdated")}} is fired if the [fragment identifier](/en-US/docs/Web/URI/Reference/Fragment) for a page is changed.
@@ -70,13 +67,13 @@ To use this API you need to have the "webNavigation" [permission](/en-US/docs/Mo
 - {{WebExtAPIRef("webNavigation.onTabReplaced")}}
   - : Fired when the contents of the tab is replaced by a different (usually previously pre-rendered) tab.
 - {{WebExtAPIRef("webNavigation.onHistoryStateUpdated")}}
-  - : Fired when the page used the [history API (2011)](/en-US/docs/Web/API/History_API) to update the URL displayed in the browser's location bar.
+  - : Fired when the page used the [history API](/en-US/docs/Web/API/History_API) to update the URL displayed in the browser's location bar.
+
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples("h2")}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/api/webNavigation) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.

@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Element.pointermove_event
 ---
 
-{{APIRef}}
+{{APIRef("Pointer Events")}}
 
 The `pointermove` event is fired when a pointer changes coordinates, and the pointer has not been [canceled](/en-US/docs/Web/API/Element/pointercancel_event) by a browser [touch-action](/en-US/docs/Web/CSS/touch-action). It's very similar to the {{domxref("Element/mousemove_event", "mousemove")}} event, but with more features.
 
@@ -96,7 +96,6 @@ para.onpointermove = (event) => {
 ## See also
 
 - Related events
-
   - {{domxref('Element/gotpointercapture_event', 'gotpointercapture')}}
   - {{domxref('Element/lostpointercapture_event', 'lostpointercapture')}}
   - {{domxref('Element/pointerover_event', 'pointerover')}}

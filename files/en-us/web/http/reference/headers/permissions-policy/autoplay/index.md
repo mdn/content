@@ -1,13 +1,15 @@
 ---
-title: "Permissions-Policy: autoplay"
+title: "Permissions-Policy: autoplay directive"
+short-title: autoplay
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/autoplay
 page-type: http-permissions-policy-directive
 status:
   - experimental
 browser-compat: http.headers.Permissions-Policy.autoplay
+sidebar: http
 ---
 
-{{HTTPSidebar}} {{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The HTTP {{HTTPHeader("Permissions-Policy")}} header
 `autoplay` directive controls whether the current document is allowed to

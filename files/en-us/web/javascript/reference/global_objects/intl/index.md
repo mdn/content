@@ -3,9 +3,8 @@ title: Intl
 slug: Web/JavaScript/Reference/Global_Objects/Intl
 page-type: javascript-namespace
 browser-compat: javascript.builtins.Intl
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Intl`** namespace object contains several constructors as well as functionality common to the internationalization constructors and other language sensitive functions. Collectively, they comprise the ECMAScript Internationalization API, which provides language sensitive string comparison, number formatting, date and time formatting, and more.
 
@@ -31,7 +30,7 @@ A locale identifier is a string that consists of:
 2. A script subtag with 4 letters {{optional_inline}}
 3. A region subtag with either 2 letters or 3 digits {{optional_inline}}
 4. One or more variant subtags (all of which must be unique), each with either 5–8 alphanumerals or a digit followed by 3 alphanumerals {{optional_inline}}
-5. One or more BCP 47 extension sequences {{optional_inline}}
+5. One or more {{glossary("BCP 47 language tag", "BCP 47")}} extension sequences {{optional_inline}}
 6. A private-use extension sequence {{optional_inline}}
 
 Each subtag and sequence are separated by hyphens. Locale identifiers are case-insensitive {{Glossary("ASCII")}}. However, it's conventional to use title case (the first letter is capitalized, successive letters are lower case) for script subtags, upper case for region subtags, and lower case for everything else. For example:
@@ -46,7 +45,6 @@ Subtags identifying languages, scripts, regions (including countries), and (rare
 BCP 47 extension sequences consist of a single digit or letter (other than `"x"`) and one or more two- to eight-letter or digit subtags separated by hyphens. Only one sequence is permitted for each digit or letter: `"de-a-foo-a-foo"` is invalid. BCP 47 extension subtags are defined in the [Unicode CLDR Project](https://github.com/unicode-org/cldr/tree/main/common/bcp47). Currently only two extensions have defined semantics:
 
 - The `"u"` (Unicode) extension can be used to request additional customization of `Intl` API objects. Examples:
-
   - `"de-DE-u-co-phonebk"`: Use the phonebook variant of the German sort order, which interprets umlauted vowels as corresponding character pairs: ä → ae, ö → oe, ü → ue.
   - `"th-TH-u-nu-thai"`: Use Thai digits (๐, ๑, ๒, ๓, ๔, ๕, ๖, ๗, ๘, ๙) in number formatting.
   - `"ja-JP-u-ca-japanese"`: Use the Japanese calendar in date and time formatting, so that 2013 is expressed as the year 25 of the Heisei period, or 平成 25.

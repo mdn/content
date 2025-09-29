@@ -21,9 +21,9 @@ The document's single stylesheet contains three {{cssxref("@import")}} rules. Th
 The `supportsText` property returns the import conditions associated with the at-rule.
 
 ```css
-@import url("style1.css") supports(display: flex);
-@import url("style2.css") supports(selector(p:has(a)));
-@import url("style3.css");
+@import "style1.css" supports(display: flex);
+@import "style2.css" supports(selector(p:has(a)));
+@import "style3.css";
 ```
 
 ```js

@@ -54,8 +54,8 @@ const growAlice = () => {
 };
 
 // When a user holds their mouse down or taps, call growAlice to make all the animations play.
-cake.addEventListener("mousedown", growAlice, false);
-cake.addEventListener("touchstart", growAlice, false);
+cake.addEventListener("mousedown", growAlice);
+cake.addEventListener("touchstart", growAlice);
 ```
 
 ## Specifications

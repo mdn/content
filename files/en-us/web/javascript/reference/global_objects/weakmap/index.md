@@ -3,9 +3,8 @@ title: WeakMap
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap
 page-type: javascript-class
 browser-compat: javascript.builtins.WeakMap
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 A **`WeakMap`** is a collection of key/value pairs whose keys must be objects or [non-registered symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry), with values of any arbitrary [JavaScript type](/en-US/docs/Web/JavaScript/Guide/Data_structures), and which does not create strong references to its keys. That is, an object's presence as a key in a `WeakMap` does not prevent the object from being garbage collected. Once an object used as a key has been collected, its corresponding values in any `WeakMap` become candidates for garbage collection as well — as long as they aren't strongly referred to elsewhere. The only primitive type that can be used as a `WeakMap` key is symbol — more specifically, [non-registered symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry) — because non-registered symbols are guaranteed to be unique and cannot be re-created.
 
@@ -16,6 +15,10 @@ You can learn more about `WeakMap` in the [WeakMap object](/en-US/docs/Web/JavaS
 ## Description
 
 Keys of WeakMaps must be garbage-collectable. Most {{Glossary("Primitive", "primitive data types")}} can be arbitrarily created and don't have a lifetime, so they cannot be used as keys. Objects and [non-registered symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry) can be used as keys because they are garbage-collectable.
+
+### Key equality
+
+Like regular `Map`, value equality is based on the [SameValueZero](/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#same-value-zero_equality) algorithm, which is the same as the `===` operator because `WeakMap` can only hold object and symbol keys. This means that for object keys, equality is based on object identity. They are compared by [reference](/en-US/docs/Glossary/Object_reference), not by value.
 
 ### Why WeakMap?
 
@@ -52,13 +55,17 @@ These properties are defined on `WeakMap.prototype` and shared by all `WeakMap` 
 ## Instance methods
 
 - {{jsxref("WeakMap.prototype.delete()")}}
-  - : Removes any value associated to the `key`. `WeakMap.prototype.has(key)` will return `false` afterwards.
+  - : Removes the entry specified by the key from this `WeakMap`.
 - {{jsxref("WeakMap.prototype.get()")}}
-  - : Returns the value associated to the `key`, or `undefined` if there is none.
+  - : Returns the value corresponding to the key in this `WeakMap`, or `undefined` if there is none.
+- {{jsxref("WeakMap.prototype.getOrInsert()")}} {{experimental_inline}}
+  - : Returns the value corresponding to the specified key in this `WeakMap`. If the key is not present, it inserts a new entry with the key and a given default value, and returns the inserted value.
+- {{jsxref("WeakMap.prototype.getOrInsertComputed()")}} {{experimental_inline}}
+  - : Returns the value corresponding to the specified key in this `WeakMap`. If the key is not present, it inserts a new entry with the key and a default value computed from a given callback, and returns the inserted value.
 - {{jsxref("WeakMap.prototype.has()")}}
-  - : Returns a Boolean asserting whether a value has been associated to the `key` in the `WeakMap` object or not.
+  - : Returns a boolean indicating whether an entry with the specified key exists in this `WeakMap` or not.
 - {{jsxref("WeakMap.prototype.set()")}}
-  - : Sets the `value` for the `key` in the `WeakMap` object. Returns the `WeakMap` object.
+  - : Adds a new entry with a specified key and value to this `WeakMap`, or updates an existing entry if the key already exists.
 
 ## Examples
 
@@ -69,7 +76,7 @@ const wm1 = new WeakMap();
 const wm2 = new WeakMap();
 const wm3 = new WeakMap();
 const o1 = {};
-const o2 = function () {};
+const o2 = () => {};
 const o3 = window;
 
 wm1.set(o1, 37);
@@ -168,7 +175,7 @@ thing.showPrivate();
 // 1
 ```
 
-This is roughly equivalent to the following, using [private fields](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties):
+This is roughly equivalent to the following, using [private fields](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements):
 
 ```js
 class Thing {
@@ -270,7 +277,6 @@ This only works if your function's input is an object. Moreover, even if the inp
 
 - [Polyfill of `WeakMap` in `core-js`](https://github.com/zloirock/core-js#weakmap)
 - [Keyed collections](/en-US/docs/Web/JavaScript/Guide/Keyed_collections#weakmap_object)
-- [Hiding Implementation Details with ECMAScript 6 WeakMaps](https://fitzgen.com/2014/01/13/hiding-implementation-details-with-e6-weakmaps.html) by Nick Fitzgerald (2014)
 - {{jsxref("Map")}}
 - {{jsxref("Set")}}
 - {{jsxref("WeakSet")}}

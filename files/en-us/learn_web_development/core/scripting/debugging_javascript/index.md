@@ -6,7 +6,7 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/JSON","Learn_web_development/Core/Frameworks_libraries", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/House_data_UI","Learn_web_development/Core/Frameworks_libraries", "Learn_web_development/Core/Scripting")}}
 
 In this lesson, we will return to the subject of debugging JavaScript (which we first looked at in [What went wrong?](/en-US/docs/Learn_web_development/Core/Scripting/What_went_wrong)). Here we will delve deeper into techniques for tracking down errors, but also look at how to code defensively and handle errors in your code, avoiding problems in the first place.
 
@@ -50,7 +50,7 @@ There are a number of common JavaScript problems that you will want to be mindfu
 
 - Basic syntax and logic problems (again, check out [Troubleshooting JavaScript](/en-US/docs/Learn_web_development/Core/Scripting/What_went_wrong)).
 - Making sure variables, etc. are defined in the correct scope, and you are not running into conflicts between items declared in different places (see [Function scope and conflicts](/en-US/docs/Learn_web_development/Core/Scripting/Functions#function_scope_and_conflicts)).
-- Confusion about [this](/en-US/docs/Web/JavaScript/Reference/Operators/this), in terms of what scope it applies to, and therefore if its value is what you intended. You can read [What is "this"?](/en-US/docs/Learn_web_development/Core/Scripting/Object_basics#what_is_this) for a light introduction; you should also study examples like [this one](https://github.com/mdn/learning-area/blob/7ed039d17e820c93cafaff541aa65d874dde8323/javascript/oojs/assessment/main.js#L143), which shows a typical pattern of saving a `this` scope to a separate variable, then using that variable in nested functions so you can be sure you are applying functionality to the correct `this` scope.
+- Confusion about [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this), in terms of what scope it applies to, and therefore if its value is what you intended. You can read [What is "this"?](/en-US/docs/Learn_web_development/Core/Scripting/Object_basics#what_is_this) for a light introduction; you should also study examples like [this one](https://github.com/mdn/learning-area/blob/7ed039d17e820c93cafaff541aa65d874dde8323/javascript/oojs/assessment/main.js#L143), which shows a typical pattern of saving a `this` scope to a separate variable, then using that variable in nested functions so you can be sure you are applying functionality to the correct `this` scope.
 - Incorrectly using functions inside loops that iterate with a global variable (more generally "getting the scope wrong").
 
 > [!CALLOUT]
@@ -60,7 +60,8 @@ There are a number of common JavaScript problems that you will want to be mindfu
 
 - Making sure [asynchronous operations](/en-US/docs/Learn_web_development/Extensions/Async_JS) have completed before trying to use the values they return. This usually means understanding how to use _promises_: using [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) appropriately or running the code to handle the result of an asynchronous call in the promise's {{jsxref("Promise.then()", "then()")}} handler. See [How to use promises](/en-US/docs/Learn_web_development/Extensions/Async_JS/Promises) for an introduction to this topic.
 
-> **Note:** [Buggy JavaScript Code: The 10 Most Common Mistakes JavaScript Developers Make](https://www.toptal.com/javascript/10-most-common-javascript-mistakes) has some nice discussions of these common mistakes and more.
+> [!NOTE]
+> [Buggy JavaScript Code: The 10 Most Common Mistakes JavaScript Developers Make](https://www.toptal.com/javascript/10-most-common-javascript-mistakes) has some nice discussions of these common mistakes and more.
 
 ## The Browser JavaScript console
 
@@ -177,7 +178,7 @@ The main feature of such tools is the ability to add breakpoints to code — the
 
 Let's explore using breakpoints:
 
-1. The error is being thrown at the same line as before — `for (const hero of heroes) {` — line 26 in the screenshot below. Click on this line in the center panel to add a breakpoint to it (you'll see a blue arrow appear over the top of it).
+1. The error is being thrown at the same line as before — `for (const hero of heroes) {` — line 26 in the screenshot below. Click on the line number in the center panel to add a breakpoint to it (you'll see a blue arrow appear over the top of it).
 2. Now refresh the page (<kbd>Cmd</kbd>/<kbd>Ctrl</kbd> + <kbd>R</kbd>) — the browser will pause execution of the code on that line. At this point, the right-hand side will update to show the following:
 
 ![Firefox debugger with a breakpoint](breakpoint.png)
@@ -204,8 +205,8 @@ HTML and CSS are permissive — errors and unrecognized features can often be ha
 
 Let's explore a common strategy for handling JavaScript errors in your code. The following sections are designed to be followed by making a copy of the below template file as `handling-errors.html` on your local machine, adding the code snippets in between the opening and closing `<script>` and `</script>` tags, then opening the file in a browser and looking at the output in the devtools JavaScript console.
 
-```html-nolint
-<!DOCTYPE html>
+```html
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -215,7 +216,6 @@ Let's explore a common strategy for handling JavaScript errors in your code. The
   <body>
     <script>
       // Code goes below this line
-
     </script>
   </body>
 </html>
@@ -252,7 +252,6 @@ function inchesToMeters(num) {
 4. Load the example in a browser and look at the devtools JavaScript console. You should see a value of `1.78` logged to it.
 
 5. So this works fine in isolation. But what happens if the provided data is missing or not correct? Try out these scenarios:
-
    - If you change the `height` value to `"70"` (that is, `70` expressed as a string), the example should ... still work fine. This is because the calculation on the first line of the string coerces the value into a number data type. This is OK in a simple case like this, but in more complex code the wrong data can lead to all kind of bugs, some of them subtle and hard to detect!
    - If you change `height` to a value that can't be coerced to a number, like `"70 inches"` or `["Bob", 70]`, or {{jsxref("NaN")}}, the example should return the result as `NaN`. This could cause all kind of problems, for example if you want to include the user's height somewhere in the website user interface.
    - If you remove the `height` value altogether (comment it out by adding `//` at the start of the line), the console will show an error along the lines of "Uncaught ReferenceError: height is not defined", the likes of which could bring your application grinding to a halt.
@@ -263,20 +262,20 @@ function inchesToMeters(num) {
 
    ```js
    function inchesToMeters(num) {
-     if (typeof num === "number" && !isNaN(num)) {
-       const mVal = (num * 2.54) / 100;
-       const m2dp = mVal.toFixed(2);
-       return m2dp;
-     } else {
+     if (typeof num !== "number" || Number.isNaN(num)) {
        console.log("A number was not provided. Please correct the input.");
+       return undefined;
      }
+     const mVal = (num * 2.54) / 100;
+     const m2dp = mVal.toFixed(2);
+     return m2dp;
    }
    ```
 
 7. Now if you try the first two scenarios again, you'll see our slightly more useful message returned, to give you an idea of what needs to be done to fix the problem. You could put anything in there that you like, including trying to run code to correct the value of `num`, but this is not advised — this function has one simple purpose, and you should handle correcting the value somewhere else in the system.
 
    > [!NOTE]
-   > In the `if()` statement, we first test whether the data type of `num` is `"number"` using the [`typeof`](/en-US/docs/Web/JavaScript/Reference/Operators/typeof) operator, but we also test whether {{jsxref("isNaN()", "!isNaN(num)")}} returns `false`. We have to do this to defend against the specific case of `num` being set to `NaN`, as weirdly, `typeof NaN` returns `"number"`!
+   > In the `if()` statement, we first test whether the data type of `num` is `"number"` using the [`typeof`](/en-US/docs/Web/JavaScript/Reference/Operators/typeof) operator, but we also test whether {{jsxref("Number.isNaN", "Number.isNaN(num)")}} returns `false`. We have to do this to defend against the specific case of `num` being set to `NaN`, because `typeof NaN` still returns `"number"`!
 
 8. However, if you try the third scenario again, you will still get the "Uncaught ReferenceError: height is not defined" error thrown at you. You can't fix the fact that a value is not available from inside a function that is trying to use the value.
 
@@ -324,7 +323,6 @@ Let's use `try...catch` in our code.
    ```
 
 2. Save and refresh, and you should now see two things:
-
    - The error message and call stack as before, but this time, without a label of "uncaught", or "unhandled".
    - The logged message "Insert code to handle the error".
 
@@ -366,4 +364,4 @@ So that's JavaScript debugging and error handling. Simple huh? Maybe not so simp
 
 That's it for the Dynamic scripting with JavaScript module; congratulations on reaching the end! In the next module we'll help you explore JavaScript frameworks and libraries.
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/JSON","Learn_web_development/Core/Frameworks_libraries", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/House_data_UI","Learn_web_development/Core/Frameworks_libraries", "Learn_web_development/Core/Scripting")}}

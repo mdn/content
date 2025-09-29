@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.HTMLIFrameElement.referrerPolicy
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The
 **`HTMLIFrameElement.referrerPolicy`**
@@ -42,7 +42,6 @@ resource.
     protocol security level stays the same (HTTPS→HTTPS), and send no header to a less
     secure destination (HTTPS→HTTP).
 - `unsafe-url`
-
   - : Send a full URL when performing a same-origin or cross-origin request.
 
     > [!NOTE]

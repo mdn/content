@@ -1,5 +1,6 @@
 ---
 title: "ARIA: menuitemradio role"
+short-title: menuitemradio
 slug: Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role
 page-type: aria-role
 spec-urls:
@@ -124,7 +125,7 @@ The visual appearance of the selected state is a checked radio button which we c
   width: 1em;
   height: 1em;
   padding: 0.1em;
-  border: 2px solid #333;
+  border: 2px solid #333333;
   border-radius: 50%;
   box-sizing: border-box;
   background-clip: content-box;

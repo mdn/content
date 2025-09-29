@@ -5,9 +5,10 @@ page-type: css-media-feature
 status:
   - experimental
 browser-compat: css.at-rules.media.prefers-reduced-transparency
+sidebar: cssref
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`prefers-reduced-transparency`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) is used to detect if a user has enabled a setting on their device to reduce the transparent or translucent layer effects used on the device. Switching on such a setting can help improve contrast and readability for some users.
 

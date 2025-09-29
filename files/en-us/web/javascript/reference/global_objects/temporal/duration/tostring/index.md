@@ -1,13 +1,15 @@
 ---
 title: Temporal.Duration.prototype.toString()
+short-title: toString()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Duration/toString
 page-type: javascript-instance-method
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.Duration.toString
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`toString()`** method of {{jsxref("Temporal.Duration")}} instances returns a string representing this duration in the [ISO 8601 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration#iso_8601_duration_format).
 

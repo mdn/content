@@ -2,9 +2,8 @@
 title: Work with the Cookies API
 slug: Mozilla/Add-ons/WebExtensions/Work_with_the_Cookies_API
 page-type: guide
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 With the Cookies API your extensions have access to capabilities similar to those used by websites to store and read cookies. The API's features give extensions the ability to store information on a site-by-site basis. So, as we shall see in the example, you could store details of a user's choice of background color for a site. Then, when the user revisits the site, your extension can use the API's ability to get details about cookies and read them to recover the user's choice and apply it to the website.
 
@@ -126,21 +125,19 @@ The extension's UI uses a toolbar button ({{WebExtAPIRef("browserAction")}}) imp
 
 [bgpicker.js](https://github.com/mdn/webextensions-examples/blob/main/cookie-bg-picker/popup/bgpicker.js) handles the selection of icon or entry of a color for the background in separate functions.
 
-To handle the icon buttons the script first gathers all the class names used for the buttons in the HTML file:
+To handle the icon buttons the script first gathers all the class names used for the buttons in the HTML file. It then loops through all the buttons assigning them their image and creating an `onclick` listener for each button:
 
 ```js
-let bgBtns = document.querySelectorAll(".bg-container button");
-```
+const bgBtns = document.querySelectorAll(".bg-container button");
 
-It then loops through all the buttons assigning them their image and creating an onclick listener for each button:
+for (const btn of bgBtns) {
+  const imgName = btn.getAttribute("class");
+  btn.style.backgroundImage = `url('images/${imgName}.png')`;
 
-```js
-for (let i = 0; i < bgBtns.length; i++) {
-  let imgName = bgBtns[i].getAttribute("class");
-  let bgImg = "url('images/" + imgName + ".png')";
-  bgBtns[i].style.backgroundImage = bgImg;
-
-  bgBtns[i].onclick = (e) => {
+  btn.onclick = (e) => {
+    // ...
+  };
+}
 ```
 
 When a button is clicked, its corresponding listener function gets the button class name and then the icon path which it passes to the page's content script ([updatebg.js](https://github.com/mdn/webextensions-examples/blob/main/cookie-bg-picker/content_scripts/updatebg.js)) using a message. The content script then applies the icon to the web page's background. Meanwhile, [bgpicker.js](https://github.com/mdn/webextensions-examples/blob/main/cookie-bg-picker/popup/bgpicker.js) stores the details of the icon applied to the background in a cookie:

@@ -2,9 +2,8 @@
 title: Deprecated and obsolete features
 slug: Web/JavaScript/Reference/Deprecated_and_obsolete_features
 page-type: guide
+sidebar: jssidebar
 ---
-
-{{jsSidebar("More")}}
 
 This page lists features of JavaScript that are deprecated (that is, still available but planned for removal) and obsolete (that is, no longer usable).
 
@@ -105,14 +104,14 @@ Normally, the `catch` block of a [`try...catch`](/en-US/docs/Web/JavaScript/Refe
 ```js
 var a = 2;
 try {
-  throw 42;
+  throw new Error();
 } catch (a) {
   var a = 1; // This 1 is assigned to the caught `a`, not the outer `a`.
 }
 console.log(a); // 2
 
 try {
-  throw 42;
+  throw new Error();
   // Note: identifier changed to `err` to avoid conflict with
   // the inner declaration of `a`.
 } catch (err) {

@@ -3,9 +3,8 @@ title: <percentage>
 slug: Web/CSS/percentage
 page-type: css-type
 browser-compat: css.types.percentage
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`<percentage>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents a percentage value. It is often used to define a size as relative to an element's parent object. Numerous properties can use percentages, such as {{CSSxRef("width")}}, {{CSSxRef("height")}}, {{CSSxRef("margin")}}, {{CSSxRef("padding")}}, and {{CSSxRef("font-size")}}.
 
@@ -25,31 +24,55 @@ When animated, values of the `<percentage>` data type are {{Glossary("interpolat
 ### Width and margin-left
 
 ```html
-<div style="background-color:navy;">
-  <div style="width:50%; margin-left:20%; background-color:chartreuse;">
-    Width: 50%, Left margin: 20%
-  </div>
-  <div style="width:30%; margin-left:60%; background-color:pink;">
-    Width: 30%, Left margin: 60%
-  </div>
+<div class="container">
+  <div class="box1">Width: 50%, Left margin: 20%</div>
+  <div class="box2">Width: 30%, Left margin: 60%</div>
 </div>
 ```
 
-The above HTML will output:
+```css
+.container {
+  background-color: navy;
+}
+
+.box1 {
+  width: 50%;
+  margin-left: 20%;
+  background-color: chartreuse;
+}
+
+.box2 {
+  width: 30%;
+  margin-left: 60%;
+  background-color: pink;
+}
+```
 
 {{EmbedLiveSample('Width_and_margin-left', '600', 140)}}
 
 ### Font-size
 
 ```html
-<div style="font-size:18px;">
+<div class="container">
   <p>Full-size text (18px)</p>
-  <p><span style="font-size:50%;">50% (9px)</span></p>
-  <p><span style="font-size:200%;">200% (36px)</span></p>
+  <p><span class="half">50% (9px)</span></p>
+  <p><span class="double">200% (36px)</span></p>
 </div>
 ```
 
-The above HTML will output:
+```css
+.container {
+  font-size: 18px;
+}
+
+.half {
+  font-size: 50%;
+}
+
+.double {
+  font-size: 200%;
+}
+```
 
 {{EmbedLiveSample('Font-size', 'auto', 160)}}
 

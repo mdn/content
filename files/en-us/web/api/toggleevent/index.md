@@ -11,8 +11,8 @@ The **`ToggleEvent`** interface represents an event notifying the user an Elemen
 
 This is the event object for the `HTMLElement` {{domxref("HTMLElement.beforetoggle_event", "beforetoggle")}} and {{domxref("HTMLElement.toggle_event", "toggle")}} events, which fire on some elements just before and just after they transition between showing and hidden, respectively.
 
-- `beforetoggle` fires on [popovers](/en-US/docs/Web/API/Popover_API) and {{htmlelement("dialog")}} elements
-- `toggle` fires on [popovers](/en-US/docs/Web/API/Popover_API), {{htmlelement("dialog")}} elements, and {{htmlelement("details")}} elements
+- `beforetoggle` fires on [popovers](/en-US/docs/Web/API/Popover_API) and {{htmlelement("dialog")}} elements.
+- `toggle` fires on [popovers](/en-US/docs/Web/API/Popover_API), {{htmlelement("dialog")}} elements, and {{htmlelement("details")}} elements.
 
 {{InheritanceDiagram}}
 
@@ -29,6 +29,8 @@ _This interface inherits properties from its parent, {{DOMxRef("Event")}}._
   - : A string (either `"open"` or `"closed"`), representing the state the element is transitioning to.
 - {{DOMxRef("ToggleEvent.oldState")}} {{ReadOnlyInline}}
   - : A string (either `"open"` or `"closed"`), representing the state the element is transitioning from.
+- {{DOMxRef("ToggleEvent.source")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+  - : An {{domxref("Element")}} object instance representing the HTML control that initiated the toggle.
 
 ## Examples
 

@@ -46,7 +46,7 @@ otherwise, it's drawn at 300px.
     /en-US/docs/Web/HTML/Reference/Elements/img/clock-demo-200px.png 200w,
     /en-US/docs/Web/HTML/Reference/Elements/img/clock-demo-400px.png 400w
   "
-  sizes="(max-width: 400px) 200px, 300px" />
+  sizes="(width <= 400px) 200px, 300px" />
 ```
 
 ### JavaScript
@@ -58,11 +58,11 @@ image given the width at which it's currently drawn.
 const clockImage = document.querySelector("img");
 let output = document.querySelector(".size");
 
-const updateHeight = (event) => {
+const updateHeight = () => {
   output.innerText = clockImage.height;
 };
 
-window.addEventListener("load", updateHeight);
+updateHeight();
 window.addEventListener("resize", updateHeight);
 ```
 

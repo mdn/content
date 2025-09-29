@@ -2,9 +2,8 @@
 title: Native messaging
 slug: Mozilla/Add-ons/WebExtensions/Native_messaging
 page-type: guide
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 **Native messaging** enables an extension to exchange messages with a native application, installed on the user's computer. The native messaging serves the extensions without additional accesses over the web.
 
@@ -396,7 +395,7 @@ If you haven't managed to run the application, you should see an error message g
 
 - Check that the name passed to `runtime.connectNative()` matches the name in the app manifest
 - macOS/Linux: check that name of the app manifest is `<name>.json`.
-- macOS/Linux: check the native application's manifest file location as mentioned [here](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#macos).
+- macOS/Linux: check the native application's manifest file location as mentioned [in the native manifests reference](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#macos).
 - Windows: check that the registry key is in the correct place, and that its name matches the name in the app manifest.
 - Windows: check that the path given in the registry key points to the app manifest.
 

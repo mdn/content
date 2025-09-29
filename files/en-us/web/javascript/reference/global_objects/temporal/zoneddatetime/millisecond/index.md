@@ -1,13 +1,15 @@
 ---
 title: Temporal.ZonedDateTime.prototype.millisecond
+short-title: millisecond
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/millisecond
 page-type: javascript-instance-accessor-property
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.ZonedDateTime.millisecond
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`millisecond`** accessor property of {{jsxref("Temporal.ZonedDateTime")}} instances returns a integer from 0 to 999 representing the millisecond (10<sup>-3</sup> second) component of this time.
 

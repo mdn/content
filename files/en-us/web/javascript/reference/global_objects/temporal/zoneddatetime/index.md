@@ -5,9 +5,10 @@ page-type: javascript-class
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.ZonedDateTime
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`Temporal.ZonedDateTime`** object represents a date and time with a time zone. It is fundamentally represented as a combination of an [instant](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Instant), a time zone, and a calendar system.
 
@@ -68,11 +69,11 @@ The IANA time zone database changes from time to time, usually to add new time z
 | `Asia/Ho_Chi_Minh`               | `Asia/Saigon`                   |
 | `Europe/Kyiv`                    | `Europe/Kiev`                   |
 
-Historically, these renames caused problems for programmers because the Unicode [CLDR database](https://github.com/unicode-org/cldr-json/blob/main/cldr-json/cldr-bcp47/bcp47/timezone.json) (a library used by browsers rely on to supply time zone identifiers and data) did not follow IANA's renaming for [stability reasons](https://unicode.org/reports/tr35/#Time_Zone_Identifiers). As a result, some browsers like Chrome and Safari reported CLDR's outdated identifiers, while other browsers like Firefox overrode CLDR's defaults and reported the up-to-date primary identifiers.
+Historically, these renames caused problems for programmers because the Unicode [CLDR database](https://github.com/unicode-org/cldr/blob/main/common/bcp47/timezone.xml) (a library used by browsers rely on to supply time zone identifiers and data) did not follow IANA's renaming for [stability reasons](https://unicode.org/reports/tr35/#Time_Zone_Identifiers). As a result, some browsers like Chrome and Safari reported CLDR's outdated identifiers, while other browsers like Firefox overrode CLDR's defaults and reported the up-to-date primary identifiers.
 
 With the introduction of Temporal, this behavior is now more standardized:
 
-- [CLDR data](https://github.com/unicode-org/cldr-json/blob/main/cldr-json/cldr-bcp47/bcp47/timezone.json) now includes an `"_iana"` attribute that indicates the most up-to-date identifier if the older, stable identifier has been renamed. Browsers can use this new attribute to provide up-to-date identifiers to callers.
+- [CLDR data](https://github.com/unicode-org/cldr/blob/main/common/bcp47/timezone.xml) now includes an `"_iana"` attribute that indicates the most up-to-date identifier if the older, stable identifier has been renamed. Browsers can use this new attribute to provide up-to-date identifiers to callers.
 - Time zone identifiers provided by the programmer will never be replaced with an alias. For example, if the caller provides `Asia/Calcutta` or `Asia/Kolkata` as the identifier input to {{jsxref("Temporal/ZonedDateTime/from", "Temporal.ZonedDateTime.from()")}}, then the same identifier is returned in the resulting instance's {{jsxref("Temporal/ZonedDateTime/timeZoneId", "timeZoneId")}}. Note that the letter case of outputs are normalized to match IANA, so that `ASIA/calCuTTa` as input generates a {{jsxref("Temporal/ZonedDateTime/timeZoneId", "timeZoneId")}} of `Asia/Calcutta` as output.
 - When a time zone identifier is not provided by a caller but is instead sourced from the system itself (for example, when using {{jsxref("Temporal/Now/timeZoneId", "Temporal.Now.timeZoneId()")}}), modern identifiers are returned in all browsers. For city renames, there is a two-year lag before these system-provided-identifier APIs expose the new name, thereby giving other components (like a Node server) time to update their copies of the IANA database to recognize the new name.
 
@@ -107,7 +108,7 @@ YYYY-MM-DD T HH:mm:ss.sssssssss Z/±HH:mm [time_zone_id] [u-ca=calendar_id]
 - `[time_zone_id]`
   - : Replace `time_zone_id` with the time zone identifier (named or offset) as described above. May have a _critical flag_ by prefixing the identifier with `!`: e.g., `[!America/New_York]`. This flag generally tells other systems that it cannot be ignored if they don't support it. Note that it is required for `Temporal.ZonedDateTime.from()`: omitting it causes a `RangeError`. If you want to parse ISO 8601 / RFC 3339 strings without time zone identifier annotations, use {{jsxref("Temporal/Instant/from", "Temporal.Instant.from()")}} instead.
 - `[u-ca=calendar_id]` {{optional_inline}}
-  - : Replace `calendar_id` with the calendar to use. May have a _critical flag_ by prefixing the key with `!`: e.g., `[!u-ca=iso8601]`. This flag generally tells other systems that it cannot be ignored if they don't support it. The `Temporal` parser will throw an error if the annotations contain two or more calendar annotations and one of them is critical. Defaults to `[u-ca=iso8601]`. Note that the `YYYY-MM-DD` is always interpreted as an ISO 8601 calendar date and then converted to the specified calendar.
+  - : Replace `calendar_id` with the calendar to use. See [`Intl.supportedValuesOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_calendar_types) for a list of commonly supported calendar types. Defaults to `[u-ca=iso8601]`. May have a _critical flag_ by prefixing the key with `!`: e.g., `[!u-ca=iso8601]`. This flag generally tells other systems that it cannot be ignored if they don't support it. The `Temporal` parser will throw an error if the annotations contain two or more calendar annotations and one of them is critical. Note that the `YYYY-MM-DD` is always interpreted as an ISO 8601 calendar date and then converted to the specified calendar.
 
 As an input, other annotations in the `[key=value]` format are ignored, and they must not have the critical flag.
 

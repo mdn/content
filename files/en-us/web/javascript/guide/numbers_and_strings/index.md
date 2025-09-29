@@ -2,9 +2,10 @@
 title: Numbers and strings
 slug: Web/JavaScript/Guide/Numbers_and_strings
 page-type: guide
+sidebar: jssidebar
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_and_operators", "Web/JavaScript/Guide/Representing_dates_times")}}
+{{PreviousNext("Web/JavaScript/Guide/Expressions_and_operators", "Web/JavaScript/Guide/Representing_dates_times")}}
 
 This chapter introduces the two most fundamental data types in JavaScript: numbers and strings. We will introduce their underlying representations, and functions used to work with and perform calculations on them.
 
@@ -65,9 +66,9 @@ const m = 0644; // 420
 Hexadecimal number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "X" (`0x` or `0X`). If the digits after 0x are outside the range (0123456789ABCDEF), the following {{jsxref("SyntaxError")}} is thrown: "Identifier starts immediately after numeric literal".
 
 ```js-nolint
-0xFFFFFFFFFFFFFFFFF // 295147905179352830000
-0x123456789ABCDEF   // 81985529216486900
-0XA                 // 10
+0xFFFFFFFFFFFFF // 4503599627370495
+0xabcdef123456  // 188900967593046
+0XA             // 10
 ```
 
 ### Exponentiation
@@ -81,6 +82,21 @@ Hexadecimal number syntax uses a leading zero followed by a lowercase or upperca
 1e-3   // 0.001
 1E3    // 1000
 ```
+
+### Numeric separators
+
+For all literal syntaxes shown above, an underscore (`_`) can be inserted between digits to improve readability.
+
+```js-nolint
+1_000_000_000_000
+1_050.95
+0b1010_0001_1000_0101
+0o2_2_5_6
+0xA0_B0_C0
+1_000_000_000_000_000_000_000n
+```
+
+See the [lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_literals) reference for more details about number literals.
 
 ## Number object
 

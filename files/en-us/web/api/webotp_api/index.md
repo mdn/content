@@ -2,10 +2,13 @@
 title: WebOTP API
 slug: Web/API/WebOTP_API
 page-type: web-api-overview
+status:
+  - experimental
+browser-compat: api.OTPCredential
 spec-urls: https://wicg.github.io/web-otp/
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("WebOTP API")}}
+{{DefaultAPISidebar("WebOTP API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **WebOTP API** provides a streamlined user experience for web apps to verify that a phone number belongs to a user when using it as a sign-in factor. WebOTP is an extension of the [Credential Management API](/en-US/docs/Web/API/Credential_Management_API).
 
@@ -63,7 +66,7 @@ Your verification code is 123456.
   - Followed by the OTP, preceded by a pound sign (`#`).
 
 > [!NOTE]
-> The provided domain value must not include a URL schema, port, or other URL features not shown above.
+> The provided domain value must not include a URL scheme, port, or other URL features not shown above.
 
 If the `get()` method is invoked by a third-party site embedded in an {{htmlelement("iframe")}}, the SMS structure should be:
 
@@ -114,7 +117,7 @@ Or you could specify it directly on the `<iframe>` like this:
 
 In this example, when an SMS message arrives and the user grants permission, an {{domxref("OTPCredential")}} object is returned with an OTP. This password is then prefilled into the verification form field, and the form is submitted.
 
-[Try this demo using a phone](https://web-otp.glitch.me/).
+[Try this demo using a phone](https://chrome.dev/web-otp-demo/).
 
 The form field includes an [`autocomplete`](/en-US/docs/Web/HTML/Reference/Attributes/autocomplete) attribute with the value of `one-time-code`. This is not needed for the WebOTP API to work, but it is worth including. As a result, Safari will prompt the user to autofill this field with the OTP when a correctly-formatted SMS is received, even though the WebOTP API isn't fully supported in Safari.
 
@@ -127,34 +130,32 @@ The JavaScript is as follows:
 ```js
 // Detect feature support via OTPCredential availability
 if ("OTPCredential" in window) {
-  window.addEventListener("DOMContentLoaded", (e) => {
-    const input = document.querySelector('input[autocomplete="one-time-code"]');
-    if (!input) return;
-    // Set up an AbortController to use with the OTP request
-    const ac = new AbortController();
-    const form = input.closest("form");
-    if (form) {
-      // Abort the OTP request if the user attempts to submit the form manually
-      form.addEventListener("submit", (e) => {
-        ac.abort();
-      });
-    }
-    // Request the OTP via get()
-    navigator.credentials
-      .get({
-        otp: { transport: ["sms"] },
-        signal: ac.signal,
-      })
-      .then((otp) => {
-        // When the OTP is received by the app client, enter it into the form
-        // input and submit the form automatically
-        input.value = otp.code;
-        if (form) form.submit();
-      })
-      .catch((err) => {
-        console.error(err);
-      });
-  });
+  const input = document.querySelector('input[autocomplete="one-time-code"]');
+  if (!input) return;
+  // Set up an AbortController to use with the OTP request
+  const ac = new AbortController();
+  const form = input.closest("form");
+  if (form) {
+    // Abort the OTP request if the user attempts to submit the form manually
+    form.addEventListener("submit", (e) => {
+      ac.abort();
+    });
+  }
+  // Request the OTP via get()
+  navigator.credentials
+    .get({
+      otp: { transport: ["sms"] },
+      signal: ac.signal,
+    })
+    .then((otp) => {
+      // When the OTP is received by the app client, enter it into the form
+      // input and submit the form automatically
+      input.value = otp.code;
+      if (form) form.submit();
+    })
+    .catch((err) => {
+      console.error(err);
+    });
 }
 ```
 
@@ -172,6 +173,10 @@ If the user becomes distracted or navigates somewhere else, it is good to cancel
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

@@ -35,7 +35,7 @@ _Doesn't inherit any properties._
   - : Returns the browser's {{domxref("DevicePosture")}} object, which allows developers to query the device's current posture (that is, whether the viewport is in a flat or folded state) and run code in response to posture changes.
 - {{domxref("Navigator.geolocation")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("Geolocation")}} object allowing accessing the location of the device.
-- {{domxref("Navigator.gpu")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
+- {{domxref("Navigator.gpu")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns the {{domxref("GPU")}} object for the current browsing context. The entry point for the {{domxref("WebGPU_API", "WebGPU API", "", "nocode")}}.
 - {{domxref("Navigator.hardwareConcurrency")}} {{ReadOnlyInline}}
   - : Returns the number of logical processor cores available.
@@ -109,29 +109,29 @@ _Doesn't inherit any properties._
 
 - {{domxref("Navigator.activeVRDisplays")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Returns an array containing every {{domxref("VRDisplay")}} object that is currently presenting ({{domxref("VRDisplay.isPresenting")}} is `true`).
-- {{domxref("Navigator.appCodeName")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+- {{domxref("Navigator.appCodeName")}} {{ReadOnlyInline}}
   - : Always returns `'Mozilla'`, in any browser.
-- {{domxref("Navigator.appName")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+- {{domxref("Navigator.appName")}} {{ReadOnlyInline}}
   - : Always returns `'Netscape'`, in any browser.
-- {{domxref("Navigator.appVersion")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+- {{domxref("Navigator.appVersion")}} {{ReadOnlyInline}}
   - : Returns the version of the browser as a string. Do not rely on this property to return the correct value.
 - {{domxref("Navigator.doNotTrack")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{non-standard_inline}}
   - : Reports the value of the user's do-not-track preference. When this value is "1", your website or application should not track the user.
-- {{domxref("Navigator.mimeTypes")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+- {{domxref("Navigator.mimeTypes")}} {{ReadOnlyInline}}
   - : Returns an {{domxref("MimeTypeArray")}} listing the MIME types supported by the browser.
-- {{domxref("Navigator.oscpu")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+- {{domxref("Navigator.oscpu")}} {{ReadOnlyInline}}
   - : Returns a string that represents the current operating system.
-- {{domxref("Navigator.platform")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+- {{domxref("Navigator.platform")}} {{ReadOnlyInline}}
   - : Returns a string representing the platform of the browser. Do not rely on this function to return a significant value.
-- {{domxref("Navigator.plugins")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+- {{domxref("Navigator.plugins")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("PluginArray")}} listing the plugins installed in the browser.
-- {{domxref("Navigator.product")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+- {{domxref("Navigator.product")}} {{ReadOnlyInline}}
   - : Always returns `'Gecko'`, in any browser.
-- {{domxref("Navigator.productSub")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+- {{domxref("Navigator.productSub")}} {{ReadOnlyInline}}
   - : Returns either the string `'20030107'`, or `'"20100101'`.
-- {{domxref("Navigator.vendor")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+- {{domxref("Navigator.vendor")}} {{ReadOnlyInline}}
   - : Returns either the empty string, `'Apple Computer Inc.'`, or `'Google Inc.'`.
-- {{domxref("Navigator.vendorSub")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+- {{domxref("Navigator.vendorSub")}} {{ReadOnlyInline}}
   - : Always returns the empty string.
 
 ## Instance methods
@@ -175,9 +175,9 @@ _Doesn't inherit any method._
   - : After having prompted the user for permission, returns the audio or video stream associated to a camera or microphone on the local computer.
 - {{domxref("Navigator.getVRDisplays()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Returns a promise that resolves to an array of {{domxref("VRDisplay")}} objects representing any available VR devices connected to the computer.
-- {{domxref("Navigator.javaEnabled()")}} {{Deprecated_Inline}}
+- {{domxref("Navigator.javaEnabled()")}}
   - : Always returns false.
-- {{domxref("Navigator.taintEnabled()")}} {{Deprecated_Inline}}
+- {{domxref("Navigator.taintEnabled()")}}
   - : Returns `false`. JavaScript taint/untaint functions removed in JavaScript 1.2.
 
 ## Specifications

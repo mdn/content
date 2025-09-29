@@ -2,9 +2,8 @@
 title: Using filter effects
 slug: Web/CSS/CSS_filter_effects/Using_filter_effects
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 Have you ever hovered over a black-and-white or sepia image and the full-color image came into view instantly? Have you ever encountered a background image with a small blurred-out section that makes the text on top more legible? In the past, these manipulations required image editing software, time, and additional HTTP requests.
 
@@ -35,7 +34,7 @@ The following table lists the 10 filter functions, along with their value types,
 | {{cssxref("filter-function/blur", "blur()")}}               | {{cssxref("&lt;length&gt;")}}                                      | `0`       |            | `0`                  | `blur(0)`                             |
 | {{cssxref("filter-function/brightness", "brightness()")}}   | {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} | `0`       |            | `1`                  | `brightness(1)` or `brightness(100%)` |
 | {{cssxref("filter-function/contrast", "contrast()")}}       | {{cssxref("&lt;length&gt;")}}                                      | `0`       |            | `1`                  | `contrast(1)` or `contrast(100%)`     |
-| {{cssxref("filter-function/drop-shadow", "drop-shadow()")}} | `<shadow>`                                                         |           |            | `0 0 0 currentcolor` | `drop-shadow(0 0 0 currentcolor)`     |
+| {{cssxref("filter-function/drop-shadow", "drop-shadow()")}} | `<shadow>`                                                         |           |            | `0 0 0 currentColor` | `drop-shadow(0 0 0 currentColor)`     |
 | {{cssxref("filter-function/grayscale", "grayscale()")}}     | {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} | `0`       | `100%`     | `0`                  | `grayscale(0)` or `grayscale(0%)`     |
 | {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}   | {{cssxref("&lt;angle&gt;")}}                                       |           |            | `0`                  | `hue-rotate(0deg)`                    |
 | {{cssxref("filter-function/invert", "invert()")}}           | {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} | `0`       | `100%`     | `0`                  | `invert(0)` or `invert(0%)`           |
@@ -118,7 +117,8 @@ This example applies two filters — [`hue-rotate()`](/en-US/docs/Web/CSS/filter
 
 ```css
 .container {
-  background: url(image.jpg) no-repeat left / contain goldenrod;
+  background: url("/shared-assets/images/examples/listen_to_black_women.jpg")
+    no-repeat left / contain goldenrod;
 }
 p {
   backdrop-filter: hue-rotate(240deg) blur(5px);
@@ -134,16 +134,14 @@ p {
 }
 p {
   padding: 0.5rem;
-  color: #ffffff;
+  color: white;
   font-size: 2rem;
   font-family: sans-serif;
 }
 ```
 
 ```html hidden
-<div
-  class="container"
-  style="background-image: url('https://mdn.github.io/shared-assets/images/examples/listen_to_black_women.jpg');">
+<div class="container">
   <p>
     Text on images can be illegible and inaccessible even with a drop shadow.
   </p>
@@ -169,10 +167,8 @@ img {
 
 ```css
 img {
-  filter: drop-shadow(2px 2px 0 hsl(300deg 100% 50%))
-    drop-shadow(-2px -2px 0 hsl(210deg 100% 50%))
-    drop-shadow(2px 2px 0 hsl(120deg 100% 50%))
-    drop-shadow(-2px -2px 0 hsl(30deg 100% 50%));
+  filter: drop-shadow(2px 2px 0 magenta) drop-shadow(-2px -2px 0 royalblue)
+    drop-shadow(2px 2px 0 lime) drop-shadow(-2px -2px 0 darkorange);
 }
 img + img {
   filter: none;
@@ -248,7 +244,7 @@ A single SVG can be used to define several filters, each with an `id`:
 The filter's `id` is referenced in the `url()` for both inline and external SVGs:
 
 ```css
-filter: url(#blur3);
+filter: url("#blur3");
 filter: url("https://example.com/svg/filters.svg#blur3");
 ```
 
@@ -311,7 +307,7 @@ The SVG `url()` filter value can be included as the value of the SVG [`<image>`]
   filter: blur(3.5px);
 }
 .svgFilter {
-  filter: url(#blur);
+  filter: url("#blur");
 }
 ```
 

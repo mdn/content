@@ -3,9 +3,8 @@ title: speak-as
 slug: Web/CSS/@counter-style/speak-as
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.counter-style.speak-as
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`speak-as`** descriptor specifies how a counter symbol constructed with a given {{cssxref('@counter-style')}} will be represented in the spoken form. For example, an author can specify a counter symbol to be either spoken as its numerical value or just represented with an audio cue.
 
@@ -26,9 +25,7 @@ speak-as: <counter-style-name>;
 ### Values
 
 - `auto`
-
   - : If the value of `speak-as` is specified as `auto`, then the effective value of `speak-as` will be determined based on the value of the {{cssxref("@counter-style/system", "system")}} descriptor:
-
     - If the value of `system` is `alphabetic`, the effective value of `speak-as` will be `spell-out`.
     - If `system` is `cyclic`, the effective value of `speak-as` will be `bullets`.
     - If `system` is `extends`, the value of `speak-as` will be the same as if `speak-as: auto` is specified on the extended style.

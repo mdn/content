@@ -33,7 +33,7 @@ Linear gradients change along a straight line. To insert one, you create a {{SVG
   </defs>
   <style>
     #rect1 {
-      fill: url(#Gradient1);
+      fill: url("#Gradient1");
     }
     .stop1 {
       stop-color: red;
@@ -67,11 +67,13 @@ Above is an example of a linear gradient being applied to a `<rect>` element. In
 <stop offset="100%" stop-color="yellow" stop-opacity="0.5"/>
 ```
 
-To use a gradient, you have to reference it from an object's `fill` or `stroke` attribute. This is done the same way you reference elements in CSS, using a `url`. In this case, the url is just a reference to our gradient, which has the creative ID, "Gradient1". To attach it, set the `fill` to `url(#Gradient1)`, and voilà! Our object is now multicolored. You can do the same with `stroke`.
+To use a gradient, you have to reference it from an object's `fill` or `stroke` attribute. This is done the same way you reference elements in CSS, using a `url`. In this case, the url is just a reference to our gradient, which has the creative ID, "Gradient1". To attach it, set the `fill` to `url("#Gradient1")`, and voilà! Our object is now multicolored. You can do the same with `stroke`.
 
 ```svg
 <style>
-  #rect1 { fill: url(#Gradient1); }
+  #rect1 {
+    fill: url("#Gradient1");
+  }
 </style>
 ```
 

@@ -1,21 +1,21 @@
 ---
 title: Intl.RelativeTimeFormat.supportedLocalesOf()
+short-title: supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/supportedLocalesOf
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Intl.RelativeTimeFormat.supportedLocalesOf
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Intl.RelativeTimeFormat.supportedLocalesOf()`** static method returns an array containing those of the provided locales that are supported in relative time formatting without having to fall back to the runtime's default locale.
 
 {{InteractiveExample("JavaScript Demo: Intl.RelativeTimeFormat.supportedLocalesOf()", "shorter")}}
 
 ```js interactive-example
-const locales1 = ["ban", "id-u-co-pinyin", "de-ID"];
-const options1 = { localeMatcher: "lookup" };
+const locales = ["ban", "id-u-co-pinyin", "de-ID"];
+const options = { localeMatcher: "lookup" };
 
-console.log(Intl.RelativeTimeFormat.supportedLocalesOf(locales1, options1));
+console.log(Intl.RelativeTimeFormat.supportedLocalesOf(locales, options));
 // Expected output: Array ["id-u-co-pinyin", "de-ID"]
 // (Note: the exact output may be browser-dependent)
 ```
@@ -30,7 +30,7 @@ Intl.RelativeTimeFormat.supportedLocalesOf(locales, options)
 ### Parameters
 
 - `locales`
-  - : A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
+  - : A string with a {{glossary("BCP 47 language tag")}}, or an array of such strings. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
 - `options` {{optional_inline}}
   - : An object that may have the following property:
     - `localeMatcher`

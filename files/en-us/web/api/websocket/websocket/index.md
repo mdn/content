@@ -20,13 +20,11 @@ new WebSocket(url, protocols)
 ### Parameters
 
 - `url`
-
   - : The URL of the target WebSocket server to connect to.
     The URL must use one of the following schemes: `ws`, `wss`, `http`, or `https`, and cannot include a [URL fragment](/en-US/docs/Web/URI/Reference/Fragment).
     If a relative URL is provided, it is relative to the base URL of the calling script.
 
 - `protocols` {{optional_inline}}
-
   - : A single string or an array of strings representing the [sub-protocol(s)](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#subprotocols) that the client would like to use, in order of preference.
     If it is omitted, an empty array is used by default, i.e., `[]`.
 
@@ -43,9 +41,7 @@ new WebSocket(url, protocols)
 ### Exceptions
 
 - `SyntaxError` {{domxref("DOMException")}}
-
   - : Thrown if:
-
     - parsing of [`url`](#url) fails
     - [`url`](#url) has a scheme other than `ws`, `wss`, `http`, or `https`
     - [`url`](#url) has a [fragment](/en-US/docs/Web/URI/Reference/Fragment)
@@ -55,7 +51,7 @@ new WebSocket(url, protocols)
 
 The examples below show how you might connect to a `WebSocket`.
 
-The code below shows how we can connect to a socket using an URL with the `wss` schema:
+The code below shows how we can connect to a socket using an URL with the `wss` scheme:
 
 ```js
 const wssWebSocket = new WebSocket("wss://websocket.example.org");
@@ -67,7 +63,7 @@ wssWebSocket.close();
 ```
 
 The code for connecting to an HTTPS URL is nearly the same.
-Under the hood the browser resolves this to a "WSS" connection, so the {{domxref("WebSocket.url")}} will have the schema "wss:".
+Under the hood the browser resolves this to a "WSS" connection, so the {{domxref("WebSocket.url")}} will have the scheme "wss:".
 
 ```js
 const httpsWebSocket = new WebSocket("https://websocket.example.org");

@@ -1,11 +1,11 @@
 ---
-title: Keep-Alive
+title: Keep-Alive header
+short-title: Keep-Alive
 slug: Web/HTTP/Reference/Headers/Keep-Alive
 page-type: http-header
 browser-compat: http.headers.Keep-Alive
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Keep-Alive`** {{Glossary("request header", "request")}} and {{Glossary("response header")}} allows the sender to hint how a connection may be used in terms of a timeout and a maximum amount of requests.
 

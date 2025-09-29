@@ -1,11 +1,11 @@
 ---
-title: Origin
+title: Origin header
+short-title: Origin
 slug: Web/HTTP/Reference/Headers/Origin
 page-type: http-header
 browser-compat: http.headers.Origin
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Origin`** {{Glossary("request header")}} indicates the {{glossary("origin")}} ([scheme](/en-US/docs/Web/URI/Reference/Schemes), hostname, and port) that _caused_ the request.
 For example, if a user agent needs to request resources included in a page, or fetched by scripts that it executes, then the origin of the page may be included in the request.
@@ -62,7 +62,8 @@ The `Origin` header value may be `null` in a number of cases, including (non-exh
 - Cross-origin images and media data, including that in {{HTMLElement("img")}}, {{HTMLElement("video")}} and {{HTMLElement("audio")}} elements.
 - Documents created programmatically using {{domxref("DOMImplementation.createDocument", "createDocument()")}}, generated from a `data:` URL, or that do not have a creator browsing context.
 - Redirects across origins.
-- {{HTMLElement("iframe", "iframes")}} with a sandbox attribute that doesn't contain the value `allow-same-origin`.
+- Documents served with the {{HTTPHeader("Content-Security-Policy")}} `sandbox` directive whose value doesn't include `allow-same-origin`.
+- {{HTMLElement("iframe", "iframes")}} with a sandbox attribute whose value doesn't include `allow-same-origin`.
 - Responses that are network errors.
 - {{HTTPHeader("Referrer-Policy")}} set to `no-referrer` for non-`cors` request modes (e.g., basic form posts).
 

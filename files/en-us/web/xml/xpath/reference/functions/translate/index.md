@@ -28,11 +28,27 @@ The translated string.
 
 ## Description
 
+For every character in `string`, if `abc` contains that character, it is replaced with the character at the same index in `XYZ`. If `abc` does not contain that character, it is kept as-is.
+
+- If `abc` is longer than `XYZ`, then the extra characters at the end of `abc` are mapped to the empty string (i.e., they are removed from the source string).
+- If `XYZ` contains more characters than `abc`, the extra characters are ignored.
+- If a character appears multiple times in `abc`, then the first occurrence determines the replacement character.
+
+`translate()` is a character-by-character substitution function, not a regexp or string replacement function. The `abc` and `XYZ` strings represent _character ciphers_, not substrings. This means that if you run into any of the cases above, you may be using the method incorrectly (except perhaps having a longer `abc` to remove certain characters).
+
+A substitution like this will not output `The quick red fox` as you might expect; instead the result is `The quick red fdx`.
+
+```xml example-bad
+<xsl:value-of select="translate('The quick brown fox', 'brown', 'red')" />
+```
+
+## Examples
+
+### Using `translate()` for case conversion
+
 XPath notes that the translate function is not a sufficient solution for case conversion in all languages. A future version of XPath may provide additional functions for case conversion.
 
 However, this is the closest we have at present to a function that can convert a string to uppercase or lowercase.
-
-Example
 
 ```xml
 <xsl:value-of select="translate('The quick brown fox.', 'abcdefghijklmnopqrstuvwxyz', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ')" />
@@ -44,25 +60,9 @@ Output
 THE QUICK BROWN FOX.
 ```
 
-- If `abc` is longer than `XYZ`, then every occurrence of characters in `abc` that do not have a corresponding character in `XYZ` will be removed.
-
-Example
-
-```xml
-<xsl:value-of select="translate('The quick brown fox.', 'brown', 'red')" />
-```
-
-Output
-
-```plain
-The quick red fdx.
-```
-
-- If `XYZ` contains more characters than `abc`, the extra characters are ignored.
-
 ## Specifications
 
-[XPath 1.0 4.2](https://www.w3.org/TR/1999/REC-xpath-19991116/#function-translate)
+[XPath 1.0 4.2](https://www.w3.org/TR/xpath-10/#function-translate)
 
 ## Gecko support
 

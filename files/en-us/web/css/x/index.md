@@ -3,11 +3,10 @@ title: x
 slug: Web/CSS/x
 page-type: css-property
 browser-compat: css.properties.x
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`x`** [CSS](/en-US/docs/Web/CSS) property defines the x-axis coordinate of the top left corner of the SVG {{SVGElement("rect")}} shape, {{SVGElement("image")}} image, {{SVGElement("foreignObject")}} viewport or nested {{SVGElement("svg")}} viewport relative to the nearest `<svg>` ancestor's user [coordinate system](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems). If present, it overrides the element's {{SVGAttr("x")}} attribute.
+The **`x`** [CSS](/en-US/docs/Web/CSS) property defines the x-axis coordinate of the top left corner of the SVG {{SVGElement("rect")}} shape, {{SVGElement("image")}} image, {{SVGElement("foreignObject")}} viewport or nested {{SVGElement("svg")}} viewport relative to the nearest `<svg>` ancestor's user [coordinate system](/en-US/docs/Web/API/CSSOM_view_API/Coordinate_systems). If present, it overrides the element's {{SVGAttr("x")}} attribute.
 
 > [!NOTE]
 > The `x` property only applies to {{SVGElement("rect")}}, {{SVGElement("image")}}, {{SVGElement("foreignObject")}}, and {{SVGElement("svg")}} elements nested in an {{SVGElement("svg")}}. It has no effect on the outermost `<svg>` elements itself, and does not apply to other SVG elements nor to HTML elements or pseudo-elements.
@@ -32,11 +31,9 @@ x: unset;
 The {{cssxref("length")}} and {{cssxref("percentage")}} values denote the x-axis coordinate position of the top left corner of the SVG element container.
 
 - {{cssxref("length")}}
-
   - : As an absolute or relative length, it can be expressed in any unit allowed by the CSS {{cssxref("&lt;length&gt;")}} data type.
 
 - {{cssxref("percentage")}}
-
   - : Percentages refer to the width of the SVG {{SVGAttr("viewBox")}}, if declared, otherwise, the percentage refers to the width of the current SVG viewport.
 
 ## Formal definition

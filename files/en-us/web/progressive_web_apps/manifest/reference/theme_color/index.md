@@ -26,7 +26,6 @@ It can be particularly noticeable in contexts like the task switcher or when the
 ### Values
 
 - `theme_color`
-
   - : A string that specifies a valid [color value](/en-US/docs/Web/CSS/color_value).
 
     > [!NOTE]
@@ -95,7 +94,7 @@ body {
 
 ```json
 {
-  "theme_color": "rgb(66, 133, 244)"
+  "theme_color": "rgb(66 133 244)"
 }
 ```
 
@@ -105,7 +104,7 @@ body {
 {
   "name": "My First App",
   "display": "standalone",
-  "background_color": "#ffffff",
+  "background_color": "white",
   "theme_color": "#ff4500"
 }
 ```

@@ -9,7 +9,7 @@ status:
 browser-compat: api.Element.mousewheel_event
 ---
 
-{{APIRef}}{{deprecated_header}}{{ Non-standard_header() }}
+{{APIRef("UI Events")}}{{deprecated_header}}{{Non-standard_header}}
 
 The _obsolete_ and _non-standard_ **`mousewheel`** event is fired asynchronously at an {{domxref("Element")}} to provide updates while a mouse wheel or similar device is operated. The `mousewheel` event was never part of any standard, and while it was implemented by several browsers, it was never implemented by Firefox.
 
@@ -43,7 +43,6 @@ _This interface inherits properties from its ancestors, {{DOMxRef("MouseEvent")}
 - {{DOMxRef("WheelEvent.deltaZ")}} {{ReadOnlyInline}}
   - : Returns a `double` representing the scroll amount for the z-axis.
 - {{DOMxRef("WheelEvent.deltaMode")}} {{ReadOnlyInline}}
-
   - : Returns an `unsigned long` representing the unit of the `delta*` values' scroll amount. Permitted values are:
 
     | Constant                     | Value  | Description                                                                                                                                                  |

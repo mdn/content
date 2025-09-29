@@ -3,9 +3,8 @@ title: "<dfn>: The Definition element"
 slug: Web/HTML/Reference/Elements/dfn
 page-type: html-element
 browser-compat: html.elements.dfn
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<dfn>`** [HTML](/en-US/docs/Web/HTML) element indicates a term to be defined. The `<dfn>` element should be used in a complete definition statement, where the full definition of the term can be one of the following:
 

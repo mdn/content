@@ -58,7 +58,6 @@ WebVTT files start with a header block containing the following:
 - An optional byte order mark (BOM), which is Unicode character `U+FEFF`.
 - The string `WEBVTT`.
 - An optional text header to the right of `WEBVTT`.
-
   - There must be at least one space after `WEBVTT`.
   - You could use this header to add a description to the file.
   - You may use anything in the text header except newlines or the string `-->`.
@@ -209,9 +208,7 @@ Cue settings are added to the right of cue timings. There must be one or more sp
     - `lr`
       - : The writing direction is left to right.
 - `line`
-
   - : If `vertical` is not set, `line` specifies where the text appears vertically. If `vertical` is set, `line` specifies where text appears horizontally. Its value can be:
-
     - A line number
       - : The position of the first line of the cue as it appears on the video. Positive numbers are counted from the top down and negative numbers are counted from the bottom up.
     - A percentage
@@ -225,7 +222,6 @@ Cue settings are added to the right of cue timings. There must be one or more sp
     | `line:100%` | bottom             | left          | right         |
 
 - `position`
-
   - : If `vertical` is not set, `position` specifies where the text will appear horizontally. If `vertical` is set, `position` specifies where the text will appear vertically. The value is a percentage between 0 and 100 inclusive.
 
     | Position        | `vertical` omitted | `vertical:rl` | `vertical:lr` |
@@ -234,7 +230,6 @@ Cue settings are added to the right of cue timings. There must be one or more sp
     | `position:100%` | right              | bottom        | bottom        |
 
 - `size`
-
   - : If `vertical` is not set, `size` specifies the width of the text area. If `vertical` is set, `size` specifies the height of the text area. The value is a percentage between 0 and 100 inclusive.
 
     | Size        | `vertical` omitted | `vertical:rl` | `vertical:lr` |
@@ -243,7 +238,6 @@ Cue settings are added to the right of cue timings. There must be one or more sp
     | `size:50%`  | half width         | half height   | half height   |
 
 - `align`
-
   - : Specifies the alignment of the text. Text is aligned within the space given by the size cue setting if it is set.
 
     | Align          | `vertical` omitted    | `vertical:rl`       | `vertical:lr`       |
@@ -293,7 +287,6 @@ A number of tags, such as `<b>`, can be used for marking up and styling text wit
 However, if the WebVTT file is used in a {{HTMLElement("track")}} element where the attribute [`kind`](/en-US/docs/Web/HTML/Reference/Elements/track#kind) is `chapters` then you cannot use tags.
 
 - Timestamp tag
-
   - : Timestamp tags are used to enable karaoke-style captions.
     The timestamp must be greater that the cue's start timestamp, greater than any previous timestamp in the cue payload, and less than the cue's end timestamp.
     The _active text_ is the text between the timestamp and the next timestamp or to the end of the payload if there is not another timestamp in the payload.
@@ -318,7 +311,6 @@ The following tags are the HTML tags allowed in a cue and require opening and cl
 Text marked up with these tags can be formatted in [`STYLE` blocks](#style_blocks) using the {{cssxref("::cue")}} pseudo-element.
 
 - Italics tag (`<i></i>`)
-
   - : Italicize the contained text.
 
     ```xml
@@ -326,7 +318,6 @@ Text marked up with these tags can be formatted in [`STYLE` blocks](#style_block
     ```
 
 - Bold tag (`<b></b>`)
-
   - : Bold the contained text.
 
     ```xml
@@ -334,7 +325,6 @@ Text marked up with these tags can be formatted in [`STYLE` blocks](#style_block
     ```
 
 - Underline tag (`<u></u>`)
-
   - : Underline the contained text.
 
     ```xml
@@ -342,7 +332,6 @@ Text marked up with these tags can be formatted in [`STYLE` blocks](#style_block
     ```
 
 - Class tag (`<c></c>`)
-
   - : Add a class to the contained text for selection via CSS.
 
     ```xml
@@ -350,7 +339,6 @@ Text marked up with these tags can be formatted in [`STYLE` blocks](#style_block
     ```
 
 - Ruby tag (`<ruby></ruby>`)
-
   - : Used with ruby text tags to display [ruby characters](https://en.wikipedia.org/wiki/Ruby_character) (i.e., small annotative characters above other characters).
 
     ```xml
@@ -358,7 +346,6 @@ Text marked up with these tags can be formatted in [`STYLE` blocks](#style_block
     ```
 
 - Ruby text tag (`<rt></rt>`)
-
   - : Used with ruby tags to display [ruby characters](https://en.wikipedia.org/wiki/Ruby_character) (i.e., small annotative characters above other characters).
 
     ```xml
@@ -366,7 +353,6 @@ Text marked up with these tags can be formatted in [`STYLE` blocks](#style_block
     ```
 
 - Voice tag (`<v></v>`)
-
   - : Similar to class tag, also used to style the contained text using CSS.
 
     ```xml
@@ -374,8 +360,7 @@ Text marked up with these tags can be formatted in [`STYLE` blocks](#style_block
     ```
 
 - Lang tag (`<lang></lang>`)
-
-  - : Used to highlight text that has been marked up as belonging to a particular language or language variant using the format defined in {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.
+  - : Used to highlight text that has been marked up as belonging to a particular language or language variant using the {{glossary("BCP 47 language tag")}} format.
 
     ```xml
     <lang en-GB>English text as spoken in Great Britain!</lang>
@@ -529,7 +514,7 @@ STYLE
 To select a particular tag and class you must specify both in `::cue()`:
 
 ```css
-STYLE ::cue(b.myclass) {
+::cue(b.myclass) {
   color: yellow;
 }
 ```

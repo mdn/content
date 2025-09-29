@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.HTMLElement.dragend_event
 ---
 
-{{APIRef}}
+{{APIRef("HTML Drag and Drop API")}}
 
 The `dragend` event is fired when a drag operation ends (by releasing a mouse button or hitting the escape key).
 
@@ -109,7 +109,6 @@ source.addEventListener("dragend", (event) => {
 ## See also
 
 - Other drag and drop events:
-
   - {{domxref("HTMLElement/drag_event", "drag")}}
   - {{domxref("HTMLElement/dragstart_event", "dragstart")}}
   - {{domxref("HTMLElement/dragover_event", "dragover")}}

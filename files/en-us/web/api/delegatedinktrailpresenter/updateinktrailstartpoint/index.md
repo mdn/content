@@ -65,7 +65,7 @@ The result is that a delegated ink trail is drawn ahead of the default browser r
 
 ```css
 div {
-  background-color: rgb(0 255 0 / 100%);
+  background-color: lime;
   position: fixed;
   top: 1rem;
   left: 1rem;
@@ -78,7 +78,7 @@ div {
 const ctx = canvas.getContext("2d");
 const presenter = navigator.ink.requestPresenter({ presentationArea: canvas });
 let move_cnt = 0;
-let style = { color: "rgb(0 255 0 / 100%)", diameter: 10 };
+let style = { color: "lime", diameter: 10 };
 
 function getRandomInt(min, max) {
   min = Math.ceil(min);
@@ -90,7 +90,7 @@ canvas.addEventListener("pointermove", async (evt) => {
   const pointSize = 10;
   ctx.fillStyle = style.color;
   ctx.fillRect(evt.pageX, evt.pageY, pointSize, pointSize);
-  if (move_cnt == 20) {
+  if (move_cnt === 20) {
     const r = getRandomInt(0, 255);
     const g = getRandomInt(0, 255);
     const b = getRandomInt(0, 255);
@@ -123,7 +123,3 @@ canvas.height = window.innerHeight;
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [Enhancing Inking on the Web](https://blogs.windows.com/msedgedev/2021/08/18/enhancing-inking-on-the-web/)

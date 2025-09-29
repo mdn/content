@@ -45,153 +45,24 @@ Finally, the {{htmlelement("iframe")}} element appeared (along with other ways o
 
 With the history lesson out of the way, let's move on and see how to use some of these.
 
-## Active learning: classic embedding uses
+## Playing with classic embedding uses
 
-In this article we are going to jump straight into an active learning section, to immediately give you a real idea of just what embedding technologies are useful for. The online world is very familiar with [YouTube](https://www.youtube.com/), but many people don't know about some of the sharing facilities it has available. Let's look at how YouTube allows us to embed a video in any page we like using an {{htmlelement("iframe")}}.
+In this article we are going to jump straight into an exercise, to immediately give you an idea of what embedding technologies are useful for. The online world is very familiar with [YouTube](https://www.youtube.com/), but many people don't know about some of the sharing facilities it has available.
 
-1. First, go to YouTube and find a video you like.
-2. Below the video, you'll find a _Share_ button — select this to display the sharing options.
-3. Select the _Embed_ button and you'll be given some `<iframe>` code — copy this.
-4. Insert it into the _Input_ box below, and see what the result is in the _Output_.
+1. First of all, open the [MDN Playground](/en-US/play).
+2. Now we'll look at how YouTube allows us to embed a video in any page we like using an {{htmlelement("iframe")}}.
+   1. Go to YouTube and find a video you like.
+   2. Below the video, you'll find a _Share_ button — select this to display the sharing options.
+   3. Select the _Embed_ button and you'll be given some `<iframe>` code — copy this.
+   4. Paste it into the _HTML_ pane in the Playground, and see what the result is in the output.
+3. For bonus points, you could also try embedding a [Google Map](https://www.google.com/maps/) in the Playground:
+   1. Go to Google Maps and find a map you like.
+   2. Click on the "hamburger menu" (three horizontal lines) in the top left of the UI.
+   3. Select the _Share or embed map_ option.
+   4. Select the _Embed a map_ option, which will give you some `<iframe>` code — copy it.
+   5. Paste it into the _HTML_ pane in the Playground, and see what the result is in the output.
 
-For bonus points, you could also try embedding a [Google Map](https://www.google.com/maps/) in the example:
-
-1. Go to Google Maps and find a map you like.
-2. Click on the "Hamburger Menu" (three horizontal lines) in the top left of the UI.
-3. Select the _Share or embed map_ option.
-4. Select the Embed map option, which will give you some `<iframe>` code — copy this.
-5. Insert it into the _Input_ box below, and see what the result is in the _Output_.
-
-If you make a mistake, you can always reset it using the _Reset_ button. If you get really stuck, press the _Show solution_ button to see an answer.
-
-```html hidden
-<h2>Live output</h2>
-
-<div class="output" style="min-height: 250px;"></div>
-
-<h2>Editable code</h2>
-<p class="a11y-label">
-  Press Esc to move focus away from the code area (Tab inserts a tab character).
-</p>
-
-<textarea
-  id="code"
-  class="input"
-  style="width: 95%;min-height: 100px;"></textarea>
-
-<div class="playable-buttons">
-  <input id="reset" type="button" value="Reset" />
-  <input id="solution" type="button" value="Show solution" />
-</div>
-```
-
-```css hidden
-html {
-  font-family: sans-serif;
-}
-
-h2 {
-  font-size: 16px;
-}
-
-.a11y-label {
-  margin: 0;
-  text-align: right;
-  font-size: 0.7rem;
-  width: 98%;
-}
-
-body {
-  margin: 10px;
-  background: #f5f9fa;
-}
-```
-
-```js hidden
-const textarea = document.getElementById("code");
-const reset = document.getElementById("reset");
-const solution = document.getElementById("solution");
-const output = document.querySelector(".output");
-let code = textarea.value;
-let userEntry = textarea.value;
-
-function updateCode() {
-  output.innerHTML = textarea.value;
-}
-
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  userEntry = textarea.value;
-  solutionEntry = htmlSolution;
-  solution.value = "Show solution";
-  updateCode();
-});
-
-solution.addEventListener("click", function () {
-  if (solution.value === "Show solution") {
-    textarea.value = solutionEntry;
-    solution.value = "Hide solution";
-  } else {
-    textarea.value = userEntry;
-    solution.value = "Show solution";
-  }
-  updateCode();
-});
-
-const htmlSolution =
-  '<iframe width="420" height="315" src="https://www.youtube.com/embed/QH2-TGUlwu4" frameborder="0" allowfullscreen>\n</iframe>\n\n<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37995.65748333395!2d-2.273568166412784!3d53.473310471916975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bae6c05743d3d%3A0xf82fddd1e49fc0a1!2sThe+Lowry!5e0!3m2!1sen!2suk!4v1518171785211" width="600" height="450" frameborder="0" style="border:0" allowfullscreen>\n</iframe>';
-let solutionEntry = htmlSolution;
-
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
-
-// stop tab key tabbing out of textarea and
-// make it write a tab at the caret position instead
-
-textarea.onkeydown = function (e) {
-  if (e.code === "Tab") {
-    e.preventDefault();
-    insertAtCaret("\t");
-  }
-
-  if (e.code === "Escape") {
-    textarea.blur();
-  }
-};
-
-function insertAtCaret(text) {
-  const scrollPos = textarea.scrollTop;
-  let caretPos = textarea.selectionStart;
-
-  const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(
-    textarea.selectionEnd,
-    textarea.value.length,
-  );
-  textarea.value = front + text + back;
-  caretPos += text.length;
-  textarea.selectionStart = caretPos;
-  textarea.selectionEnd = caretPos;
-  textarea.focus();
-  textarea.scrollTop = scrollPos;
-}
-
-// Update the saved userCode every time the user updates the text area code
-
-textarea.onkeyup = function () {
-  // We only want to save the state when the user code is being shown,
-  // not the solution, so that solution is not saved over the user code
-  if (solution.value === "Show solution") {
-    userEntry = textarea.value;
-  } else {
-    solutionEntry = textarea.value;
-  }
-
-  updateCode();
-};
-```
-
-{{ EmbedLiveSample('Active_learning_classic_embedding_uses', 700, 600) }}
+If you make a mistake, you can always reset it using the _Reset_ button in the Playground.
 
 ## iframes in detail
 
@@ -202,27 +73,24 @@ Say you wanted to include the MDN glossary on one of your web pages using the {{
 If you were to add the code below into one of your pages, you might be surprised to see an error message instead of the glossary page:
 
 ```html
-<head>
-  <style>
-    iframe {
-      border: none;
-    }
-  </style>
-</head>
-<body>
-  <iframe
-    src="https://developer.mozilla.org/en-US/docs/Glossary"
-    width="100%"
-    height="500"
-    allowfullscreen
-    sandbox>
-    <p>
-      <a href="/en-US/docs/Glossary">
-        Fallback link for browsers that don't support iframes
-      </a>
-    </p>
-  </iframe>
-</body>
+<iframe
+  src="https://developer.mozilla.org/en-US/docs/Glossary"
+  width="100%"
+  height="500"
+  allowfullscreen
+  sandbox>
+  <p>
+    <a href="/en-US/docs/Glossary">
+      Fallback link for browsers that don't support iframes
+    </a>
+  </p>
+</iframe>
+```
+
+```css
+iframe {
+  border: none;
+}
 ```
 
 If you have a look at your browser's console, you'll see an error message like the following:
@@ -255,7 +123,8 @@ Above we mentioned security concerns — let's go into this in a bit more detail
 
 Browser makers and Web developers have learned the hard way that iframes are a common target (official term: **attack vector**) for bad people on the Web (often termed **hackers**, or more accurately, **crackers**) to attack if they are trying to maliciously modify your webpage, or trick people into doing something they don't want to do, such as reveal sensitive information like usernames and passwords. Because of this, spec engineers and browser developers have developed various security mechanisms for making `<iframe>`s more secure, and there are also best practices to consider — we'll cover some of these below.
 
-> **Note:** [Clickjacking](/en-US/docs/Web/Security/Attacks/Clickjacking) is one kind of common iframe attack where hackers embed an invisible iframe into your document (or embed your document into their own malicious website) and use it to capture users' interactions. This is a common way to mislead users or steal sensitive data.
+> [!NOTE]
+> [Clickjacking](/en-US/docs/Web/Security/Attacks/Clickjacking) is one kind of common iframe attack where hackers embed an invisible iframe into your document (or embed your document into their own malicious website) and use it to capture users' interactions. This is a common way to mislead users or steal sensitive data.
 
 A quick example first though — try loading the previous example we showed above into your browser — you can [find it live on GitHub](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) ([see the source code](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) too.) Instead of the page you expected, you'll probably see some kind of message to the effect of "I can't open this page", and if you look at the _Console_ in the [browser developer tools](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools), you'll see a message telling you why. In Firefox, you'll get told something like _The loading of "https\://developer.mozilla.org/en-US/docs/Glossary" in a frame is denied by "X-Frame-Options" directive set to "DENY"_. This is because the developers that built MDN have included a setting on the server that serves the website pages to disallow them from being embedded inside `<iframe>`s (see [Configure CSP directives](#configure_csp_directives), below.) This makes sense — an entire MDN page doesn't really make sense to be embedded in other pages unless you want to do something like embed them on your site and claim them as your own — or attempt to steal data via [clickjacking](/en-US/docs/Web/Security/Attacks/Clickjacking), which are both really bad things to do. Plus if everybody started to do this, all the additional bandwidth would start to cost Mozilla a lot of money.
 
@@ -276,7 +145,8 @@ If the content is licensed, you must obey the license terms. For example, the co
 
 HTTPS-enabling your site requires a special security certificate to be installed. Many hosting providers offer HTTPS-enabled hosting without you needing to do any setup on your own to put a certificate in place. But if you _do_ need to set up HTTPS support for your site on your own, [Let's Encrypt](https://letsencrypt.org/) provides tools and instructions you can use for automatically creating and installing the necessary certificate — with built-in support for the most widely-used web servers, including the Apache web server, Nginx, and others. The Let's Encrypt tooling is designed to make the process as easy as possible, so there's really no good reason to avoid using it or other available means to HTTPS-enable your site.
 
-> **Note:** [GitHub pages](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages) allow content to be served via HTTPS by default.
+> [!NOTE]
+> [GitHub pages](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages) allow content to be served via HTTPS by default.
 > If you are using a different hosting provider you should check what support they provide for serving content with HTTPS.
 
 #### Always use the `sandbox` attribute

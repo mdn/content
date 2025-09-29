@@ -16,7 +16,13 @@ There are three broad categories of page types on MDN, though some page types fa
 
 ## Creating a new page
 
-To create new pages on MDN, you need to use GitHub — have a look at our [content repo](https://github.com/mdn/content) section about [adding a new document](https://github.com/mdn/content/blob/main/CONTRIBUTING.md#adding-a-new-document) for more instructions.
+Adding a new document is relatively straightforward, especially if you can start by copying an `index.md` file from a similar topic.
+There are a few things to keep in mind:
+
+- Documents are written in Markdown in an `index.md` file.
+- For example, if you're creating a new document for a HTTP header called `foo`, create a new folder at `files/en-us/web/http/reference/headers/foo` and put the Markdown file in this folder (`files/en-us/web/http/reference/headers/foo/index.md`).
+- A document's `index.md` file must start with front-matter that defines the `title`, `slug`, and, most of the time, `page-type`.
+  You might find it helpful to refer to the front-matter within a similar document's `index.md`.
 
 ## How to use the templates
 
@@ -57,6 +63,7 @@ Below are examples of the various pages you'll find on MDN along with templates 
 - [API landing pages](#api_landing_page)
 - [API reference page](#api_reference_page)
 - [API reference subpage](#api_reference_subpage)
+- [ARIA reference](#aria_reference_page)
 - [Conceptual pages](#conceptual_page)
 - [CSS feature reference](#css_feature_reference_page)
 - [CSS module landing page](#css_module_landing_page)
@@ -77,7 +84,7 @@ It does not link directly to specific methods or properties within the API's cla
 It is primarily a _navigation_ page, but also functions as an at-a-glance _reference_ page for the API.
 
 There are some instances where multiple APIs exist that are distinct, and are defined in their own specifications, but they closely related and therefore would make sense to cover with a single API landing page.
-For example, the [Generic Sensor API](https://www.w3.org/TR/generic-sensor/) cover general sensor concerns, but more specific concerns are covered in other APIs such as [Ambient Light Sensor](https://www.w3.org/TR/ambient-light/), [Motion Sensor](https://www.w3.org/TR/motion-sensors/), etc.
+For example, the [Generic Sensor API](https://w3c.github.io/sensors/) cover general sensor concerns, but more specific concerns are covered in other APIs such as [Ambient Light Sensor](https://w3c.github.io/ambient-light/), [Motion Sensor](https://w3c.github.io/motion-sensors/), etc.
 In such cases, many of the high level concepts are the same, so it makes no sense to repeat those over multiple landing pages.
 In such a case, it would make more sense in terms of repetition and findability to cover them all under a single "Web sensors" landing page.
 
@@ -213,6 +220,19 @@ It also provides examples, browser compatibility information, and other importan
 #### Templates
 
 - [HTTP header page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/HTTP_header_page_template)
+
+### ARIA reference page
+
+An **ARIA reference page** describes a [role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles) or [attribute](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes) that defines ways to make web content and web applications more accessible to people with disabilities.
+
+#### Examples
+
+- [`aria-busy` attribute](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy)
+- [`application` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/application_role)
+
+#### Templates
+
+- [ARIA page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/ARIA_Page_Template)
 
 ### Conceptual page
 

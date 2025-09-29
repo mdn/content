@@ -3,9 +3,8 @@ title: notifications.create()
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/create
 page-type: webextension-api-function
 browser-compat: webextensions.api.notifications.create
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Creates and displays a notification.
 

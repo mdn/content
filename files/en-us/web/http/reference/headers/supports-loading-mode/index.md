@@ -1,13 +1,15 @@
 ---
-title: Supports-Loading-Mode
+title: Supports-Loading-Mode header
+short-title: Supports-Loading-Mode
 slug: Web/HTTP/Reference/Headers/Supports-Loading-Mode
 page-type: http-header
 status:
   - experimental
 browser-compat: http.headers.Supports-Loading-Mode
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}
+{{securecontext_header}}{{SeeCompatTable}}
 
 The HTTP **`Supports-Loading-Mode`** {{Glossary("response header")}} allows a response to opt-in to being loaded in a novel, higher-risk context that it would otherwise fail to be loaded in.
 
@@ -42,7 +44,7 @@ The `Supports-Loading-Mode` header value is a list of one or more tokens, which 
 
 - `credentialed-prerender` {{experimental_inline}}
   - : Indicates that a destination origin opts in to loading documents via cross-origin, same-site [prerendering](/en-US/docs/Web/API/Speculation_Rules_API#using_prerendering).
-- `fenced-frame`
+- `fenced-frame` {{experimental_inline}}
   - : The response can loaded inside a [fenced frame](/en-US/docs/Web/API/Fenced_frame_API). Without this explicit opt-in, all navigations inside of a fenced frame will fail.
 
 ## Examples

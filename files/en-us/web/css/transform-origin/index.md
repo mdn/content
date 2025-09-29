@@ -3,9 +3,8 @@ title: transform-origin
 slug: Web/CSS/transform-origin
 page-type: css-property
 browser-compat: css.properties.transform-origin
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`transform-origin`** [CSS](/en-US/docs/Web/CSS) property sets the origin for an element's transformations.
 
@@ -55,7 +54,7 @@ transform-origin: bottom right 60px;
 
 @keyframes rotate3d {
   from {
-    transform: rotate3d(0);
+    transform: rotate3d(0, 0, 0, 0);
   }
 
   to {
@@ -77,7 +76,7 @@ transform-origin: bottom right 60px;
   align-items: center;
   justify-content: center;
   background: #f7ebee;
-  color: #000000;
+  color: black;
   font-size: 1.2rem;
   text-transform: uppercase;
 }
@@ -106,45 +105,41 @@ transform-origin: bottom right 60px;
 ```
 
 ```js interactive-example
-"use strict";
+function update() {
+  const selected = document.querySelector(".selected");
 
-window.addEventListener("load", () => {
-  function update() {
-    const selected = document.querySelector(".selected");
-
-    /* Restart the animation
+  /* Restart the animation
            https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Tips */
-    el.className = "";
+  el.className = "";
+  window.requestAnimationFrame(() => {
     window.requestAnimationFrame(() => {
-      window.requestAnimationFrame(() => {
-        el.className =
-          el.style.transformOrigin.split(" ")[2] === "60px"
-            ? "rotate3d"
-            : "rotate";
-      });
+      el.className =
+        el.style.transformOrigin.split(" ")[2] === "60px"
+          ? "rotate3d"
+          : "rotate";
     });
-
-    const transformOrigin = getComputedStyle(el).transformOrigin;
-    const pos = transformOrigin.split(/\s+/);
-    crosshair.style.left = `calc(${pos[0]} - 12px)`;
-    crosshair.style.top = `calc(${pos[1]} - 12px)`;
-  }
-
-  const crosshair = document.getElementById("crosshair");
-  const el = document.getElementById("example-element");
-
-  const observer = new MutationObserver(() => {
-    update();
   });
 
-  observer.observe(el, {
-    attributes: true,
-    attributeFilter: ["style"],
-  });
+  const transformOrigin = getComputedStyle(el).transformOrigin;
+  const pos = transformOrigin.split(/\s+/);
+  crosshair.style.left = `calc(${pos[0]} - 12px)`;
+  crosshair.style.top = `calc(${pos[1]} - 12px)`;
+}
 
+const crosshair = document.getElementById("crosshair");
+const el = document.getElementById("example-element");
+
+const observer = new MutationObserver(() => {
   update();
-  crosshair.style.opacity = "1";
 });
+
+observer.observe(el, {
+  attributes: true,
+  attributeFilter: ["style"],
+});
+
+update();
+crosshair.style.opacity = "1";
 ```
 
 The transform origin is the point around which a transformation is applied. For example, the transform origin of the [`rotate()`](/en-US/docs/Web/CSS/transform-function/rotate) function is the center of rotation.
@@ -213,16 +208,13 @@ If a single {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} v
 If two or more values are defined and either no value is a keyword, or the only used keyword is `center`, then the first value represents the horizontal offset and the second represents the vertical offset.
 
 - One-value syntax:
-
   - The value must be a {{cssxref("&lt;length&gt;")}}, a {{cssxref("&lt;percentage&gt;")}}, or one of the keywords `left`, `center`, `right`, `top`, and `bottom`.
 
 - Two-value syntax:
-
   - One value must be a {{cssxref("&lt;length&gt;")}}, a {{cssxref("&lt;percentage&gt;")}}, or one of the keywords `left`, `center`, and `right`.
   - The other value must be a {{cssxref("&lt;length&gt;")}}, a {{cssxref("&lt;percentage&gt;")}}, or one of the keywords `top`, `center`, and `bottom`.
 
 - Three-value syntax:
-
   - The first two values are the same as for the two-value syntax.
   - The third value must be a {{cssxref("&lt;length&gt;")}}. It always represents the Z offset.
 

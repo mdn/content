@@ -1,11 +1,11 @@
 ---
-title: Cross-Origin-Opener-Policy
+title: Cross-Origin-Opener-Policy (COOP) header
+short-title: Cross-Origin-Opener-Policy
 slug: Web/HTTP/Reference/Headers/Cross-Origin-Opener-Policy
 page-type: http-header
 browser-compat: http.headers.Cross-Origin-Opener-Policy
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Cross-Origin-Opener-Policy`** (COOP) {{glossary("response header")}} allows a website to control whether a new top-level document, opened using {{domxref("Window.open()")}} or by navigating to a new page, is opened in the same {{glossary("Browsing context","browsing context group")}} (BCG) or in a new browsing context group.
 
@@ -42,7 +42,6 @@ Cross-Origin-Opener-Policy: noopener-allow-popups
 ### Directives
 
 - `unsafe-none`
-
   - : The document permits sharing its browsing context group with any other document, and may therefore be unsafe.
     It is used to opt-out a document from using COOP for process isolation.
     This is the default value.
@@ -54,14 +53,12 @@ Cross-Origin-Opener-Policy: noopener-allow-popups
     A document with `same-origin` will always open a document with `unsafe-none` in a new BCG.
 
 - `same-origin`
-
   - : The document permits loading into BCGs that use COOP and contain only same-origin documents.
     This is used to provide [cross-origin isolation](/en-US/docs/Web/API/Window/crossOriginIsolated) for a BCG.
 
     Documents with `same-origin` will only open and be opened in the same BCG if both documents are same-origin and have the `same-origin` directive.
 
 - `same-origin-allow-popups`
-
   - : This is similar to [`same-origin`](#same-origin) directive, except that it allows the opening of documents using {{domxref("Window.open()")}} in the same BCG if they have a COOP value of `unsafe-none`.
 
     The directive is used to relax the `same-origin` restriction for integrations where a document needs the benefits of cross-origin isolation but also needs to open and retain a reference to trusted cross-origin documents.
@@ -73,7 +70,6 @@ Cross-Origin-Opener-Policy: noopener-allow-popups
     Otherwise documents with `same-origin-allow-popups` will only open and be opened in the same BCG if both documents are same-origin and have the `same-origin-allow-popups` directive.
 
 - `noopener-allow-popups`
-
   - : Documents with this directive are always opened into a new BCG, except when opened by navigating from a document that also has `noopener-allow-popups`.
     It is used to support cases where there is a need to process-isolate _same-origin_ documents.
 

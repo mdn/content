@@ -6,9 +6,8 @@ browser-compat: css.types.color.hsl
 spec-urls:
   - https://drafts.csswg.org/css-color-5/#relative-HSL
   - https://drafts.csswg.org/css-color/#the-hsl-notation
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 > [!NOTE]
 > The `hsla()` functional notation is an alias for `hsl()`. They are exactly equivalent. It is recommended to use `hsl()`.
@@ -60,7 +59,7 @@ hsl(none 75% 25%)
 
 /* Relative values */
 hsl(from green h s l / 0.5)
-hsl(from #0000FF h s calc(l + 20))
+hsl(from #123456 h s calc(l + 20))
 hsl(from rgb(200 0 0) calc(h + 30) s calc(l + 30))
 
 /* Legacy 'hsla()' alias */
@@ -71,7 +70,8 @@ hsl(120, 75%, 25%)
 hsl(120deg, 75%, 25%, 0.8)
 ```
 
-> **Note:** `hsl()`/`hsla()` can also be written in a legacy form in which all values are separated with commas, for example `hsl(120, 75%, 25%)` or `hsla(120deg, 75%, 25%, 0.8)`. The `none` value is not permitted in the comma-separated legacy syntax, the `deg` on the hue value is optional, and the `%` units are required for the saturation and lightness values.
+> [!NOTE]
+> `hsl()`/`hsla()` can also be written in a legacy form in which all values are separated with commas, for example `hsl(120, 75%, 25%)` or `hsla(120deg, 75%, 25%, 0.8)`. The `none` value is not permitted in the comma-separated legacy syntax, the `deg` on the hue value is optional, and the `%` units are required for the saturation and lightness values.
 
 ### Values
 
@@ -86,7 +86,6 @@ hsl(H S L[ / A])
 The parameters are as follows:
 
 - `H`
-
   - : A {{CSSXref("&lt;number&gt;")}}, an {{CSSXref("&lt;angle&gt;")}}, or the keyword `none` (equivalent to `0deg` in this case) representing the color's {{CSSXref("&lt;hue&gt;")}} angle.
 
     > [!NOTE]
@@ -267,12 +266,8 @@ These variants are defined using relative colors — the `--base-color` [custom 
   --base-color: orange;
 }
 
-/* As per the spec, s and l values should resolve to a number between 0-100
-   However, Chrome 121+ incorrectly resolves them to numbers between 0-1
-   hence currently using calculations like l + 0.2 instead of l + 20 */
-
 #one {
-  background-color: hsl(from var(--base-color) h s calc(l + 0.2));
+  background-color: hsl(from var(--base-color) h s calc(l + 20));
 }
 
 #two {
@@ -280,12 +275,11 @@ These variants are defined using relative colors — the `--base-color` [custom 
 }
 
 #three {
-  background-color: hsl(from var(--base-color) h s calc(l - 0.2));
+  background-color: hsl(from var(--base-color) h s calc(l - 20));
 }
 
 /* Use @supports to add in support for old syntax that requires % units to
-   be specified in lightness calculations. This is required for
-   Safari 16.4+ */
+   be specified in lightness calculations */
 @supports (color: hsl(from red h s calc(l - 20%))) {
   #one {
     background-color: hsl(from var(--base-color) h s calc(l + 20%));
@@ -407,7 +401,7 @@ div.legacyHSLA {
 - [`lch()`](/en-US/docs/Web/CSS/color_value/lch) and [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb) color functions
 - [Hue interpolation in `color-mix()`](/en-US/docs/Web/CSS/color_value/color-mix#using_hue_interpolation_in_color-mix)
 - [List of all color notations](/en-US/docs/Web/CSS/color_value)
-- [sRGB color picker and conversion tool](/en-US/docs/Web/CSS/CSS_colors/Color_picker_tool)
+- [Color format converter tool](/en-US/docs/Web/CSS/CSS_colors/Color_format_converter)
 - [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)
 - [CSS colors](/en-US/docs/Web/CSS/CSS_colors) module
 - [Color picker tool](https://apps.colorjs.io/picker/) by Lea Verou

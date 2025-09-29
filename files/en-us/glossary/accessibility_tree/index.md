@@ -2,9 +2,8 @@
 title: Accessibility tree
 slug: Glossary/Accessibility_tree
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 The **accessibility tree** contains {{Glossary("accessibility")}}-related information for most HTML elements.
 
@@ -13,7 +12,7 @@ Browsers convert markup into an internal representation called the _[DOM tree](/
 There are four properties in an accessibility tree object:
 
 - **name**
-  - : How can we refer to this thing? For instance, a link with the text "Read more" will have "Read more" as its name (find more on how names are computed in the [Accessible Name and Description Computation spec](https://www.w3.org/TR/accname-1.1/)).
+  - : How can we refer to this thing? For instance, a link with the text "Read more" will have "Read more" as its name (find more on how names are computed in the [Accessible Name and Description Computation spec](https://w3c.github.io/accname/)).
 - **description**
   - : How do we describe this thing, if we want to provide more description beyond the name? The description of a table could explain what kind of information the table contains.
 - [**role**](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles)

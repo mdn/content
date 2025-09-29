@@ -3,9 +3,8 @@ title: Optional chaining (?.)
 slug: Web/JavaScript/Reference/Operators/Optional_chaining
 page-type: javascript-operator
 browser-compat: javascript.operators.optional_chaining
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **optional chaining (`?.`)** operator accesses an object's property or calls a function. If the object accessed or function called using this operator is {{jsxref("undefined")}} or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), the expression short circuits and evaluates to {{jsxref("undefined")}} instead of throwing an error.
 
@@ -117,7 +116,8 @@ However, if there is a property with such a name which is not a function, using 
 You can also use the optional chaining operator with [bracket notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors#bracket_notation), which allows passing an expression as the property name:
 
 ```js
-const nestedProp = obj?.["prop" + "Name"];
+const propName = "x";
+const nestedProp = obj?.[propName];
 ```
 
 This is particularly useful for arrays, since array indices must be accessed with square brackets.

@@ -1,13 +1,15 @@
 ---
-title: "Permissions-Policy: camera"
+title: "Permissions-Policy: camera directive"
+short-title: camera
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/camera
 page-type: http-permissions-policy-directive
 status:
   - experimental
 browser-compat: http.headers.Permissions-Policy.camera
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The HTTP {{HTTPHeader("Permissions-Policy")}} header
 `camera` directive controls whether the current document is allowed to use

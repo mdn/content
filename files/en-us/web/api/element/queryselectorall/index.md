@@ -22,7 +22,6 @@ querySelectorAll(selectors)
 ### Parameters
 
 - `selectors`
-
   - : A string containing one or more selectors to match. This string
     must be a valid CSS selector string; if it isn't, a `SyntaxError` exception
     is thrown.
@@ -123,7 +122,8 @@ highlightedItems.forEach((userItem) => {
 });
 ```
 
-> **Note:** `NodeList` is not a genuine array, that is to say it doesn't
+> [!NOTE]
+> `NodeList` is not a genuine array, that is to say it doesn't
 > have array methods like `slice`, `some`, `map`, etc. To convert it into an array, try
 > `Array.from(nodeList)`.
 
@@ -158,7 +158,7 @@ In this example the HTML contains:
 div {
   margin: 0.5rem;
   padding: 0.5rem;
-  border: 3px #20b2aa solid;
+  border: 3px lightseagreen solid;
   border-radius: 5px;
   font-family: monospace;
 }

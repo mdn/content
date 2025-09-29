@@ -1,11 +1,11 @@
 ---
 title: RegExp.prototype.test()
+short-title: test()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/test
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.RegExp.test
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`test()`** method of {{jsxref("RegExp")}} instances executes a search with this regular expression for a match between a regular expression and a specified string. Returns `true` if there is a match; `false` otherwise.
 
@@ -21,8 +21,8 @@ of text (with capture groups).
 ```js interactive-example
 const str = "table football";
 
-const regex = new RegExp("foo*");
-const globalRegex = new RegExp("foo*", "g");
+const regex = /fo+/;
+const globalRegex = /fo+/g;
 
 console.log(regex.test(str));
 // Expected output: true

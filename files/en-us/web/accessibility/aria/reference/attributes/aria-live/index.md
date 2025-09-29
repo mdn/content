@@ -1,5 +1,6 @@
 ---
-title: aria-live
+title: "ARIA: aria-live attribute"
+short-title: aria-live
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-live
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-live
@@ -87,3 +88,4 @@ Used in **ALL** roles.
 - [`aria-relevant`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-relevant)
 - [`aria-busy`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy)
 - [`alert` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role)
+- {{domxref("Document.ariaNotify()")}}, {{domxref("Element.ariaNotify()")}}

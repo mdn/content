@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.HTMLMediaElement.loadstart_event
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The **`loadstart`** event is fired when the browser has started to load a resource.
 
@@ -100,10 +100,7 @@ loadVideo.addEventListener("click", () => {
   } else {
     loadVideo.textContent = "Reset example";
     source = document.createElement("source");
-    source.setAttribute(
-      "src",
-      "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm",
-    );
+    source.setAttribute("src", "/shared-assets/videos/flower.webm");
     source.setAttribute("type", "video/webm");
 
     video.appendChild(source);

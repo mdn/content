@@ -39,7 +39,6 @@ _This interface also inherits properties of {{domxref("XMLHttpRequestEventTarget
 - {{domxref("XMLHttpRequest.status")}} {{ReadOnlyInline}}
   - : Returns the [HTTP response status code](/en-US/docs/Web/HTTP/Reference/Status) of the request.
 - {{domxref("XMLHttpRequest.statusText")}} {{ReadOnlyInline}}
-
   - : Returns a string containing the response string returned by the HTTP server. Unlike {{domxref("XMLHttpRequest.status")}}, this includes the entire text of the response message (`"OK"`, for example).
 
     > [!NOTE]
@@ -80,30 +79,11 @@ _This interface also inherits properties of {{domxref("XMLHttpRequestEventTarget
 
 ## Events
 
-- {{domxref("XMLHttpRequest/abort_event", "abort")}}
-  - : Fired when a request has been aborted, for example because the program called {{domxref("XMLHttpRequest.abort()")}}.
-    Also available via the `onabort` event handler property.
-- {{domxref("XMLHttpRequest/error_event", "error")}}
-  - : Fired when the request encountered an error.
-    Also available via the `onerror` event handler property.
-- {{domxref("XMLHttpRequest/load_event", "load")}}
-  - : Fired when an `XMLHttpRequest` transaction completes successfully.
-    Also available via the `onload` event handler property.
-- {{domxref("XMLHttpRequest/loadend_event", "loadend")}}
-  - : Fired when a request has completed, whether successfully (after {{domxref("XMLHttpRequest/load_event", "load")}}) or unsuccessfully (after {{domxref("XMLHttpRequest/abort_event", "abort")}} or {{domxref("XMLHttpRequest/error_event", "error")}}).
-    Also available via the `onloadend` event handler property.
-- {{domxref("XMLHttpRequest/loadstart_event", "loadstart")}}
-  - : Fired when a request has started to load data.
-    Also available via the `onloadstart` event handler property.
-- {{domxref("XMLHttpRequest/progress_event", "progress")}}
-  - : Fired periodically when a request receives more data.
-    Also available via the `onprogress` event handler property.
+_This interface also inherits events of {{domxref("XMLHttpRequestEventTarget")}}._
+
 - {{domxref("XMLHttpRequest/readystatechange_event", "readystatechange")}}
   - : Fired whenever the {{domxref("XMLHttpRequest.readyState", "readyState")}} property changes.
     Also available via the `onreadystatechange` event handler property.
-- {{domxref("XMLHttpRequest/timeout_event", "timeout")}}
-  - : Fired when progress is terminated due to preset time expiring.
-    Also available via the `ontimeout` event handler property.
 
 ## Specifications
 

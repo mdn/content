@@ -3,9 +3,8 @@ title: webRequest.getSecurityInfo()
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/getSecurityInfo
 page-type: webextension-api-function
 browser-compat: webextensions.api.webRequest.getSecurityInfo
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Use this function to get detailed information about the [TLS](/en-US/docs/Glossary/TLS) connection associated with a particular request.
 
@@ -29,9 +28,7 @@ let gettingInfo = browser.webRequest.getSecurityInfo(
 - `requestId`
   - : `string`. ID of the request for which you want security info. You can get this from the `details` object that is passed into any `webRequest` event listeners.
 - `options` {{optional_inline}}
-
   - : `object`. An object that can contain any of these properties:
-
     - `certificateChain` {{optional_inline}}
       - : `boolean`. If `true`, the {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo")}} object returned will include the entire certificate chain up to and including the trust root. If `false`, it will include only the server certificate. Defaults to `false`.
     - `rawDER` {{optional_inline}}
@@ -40,10 +37,6 @@ let gettingInfo = browser.webRequest.getSecurityInfo(
 ### Return value
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) which resolves to a {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo")}} object.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -100,3 +93,7 @@ browser.webRequest.onHeadersReceived.addListener(
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

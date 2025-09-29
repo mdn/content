@@ -3,9 +3,8 @@ title: hyphenate-limit-chars
 slug: Web/CSS/hyphenate-limit-chars
 page-type: css-property
 browser-compat: css.properties.hyphenate-limit-chars
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`hyphenate-limit-chars`** [CSS](/en-US/docs/Web/CSS) property specifies the minimum word length to allow hyphenation of words as well as the minimum number of characters before and after the hyphen.
 
@@ -92,7 +91,7 @@ In this example, we have four boxes each containing the same text. For the purpo
 p {
   margin: 1rem;
   width: 120px;
-  border: 2px dashed #999;
+  border: 2px dashed #999999;
   font-size: 1.5rem;
   hyphens: auto;
 }

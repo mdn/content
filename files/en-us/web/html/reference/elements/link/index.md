@@ -3,9 +3,8 @@ title: "<link>: The External Resource Link element"
 slug: Web/HTML/Reference/Elements/link
 page-type: html-element
 browser-compat: html.elements.link
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<link>`** [HTML](/en-US/docs/Web/HTML) element specifies relationships between the current document and an external resource.
 This element is most commonly used to link to {{Glossary("CSS", "stylesheets")}}, but is also used to establish site icons (both "favicon" style icons and icons for the home screen and apps on mobile devices) among other things.
@@ -52,10 +51,7 @@ You can also provide a media type or query inside a `media` attribute; this reso
 
 ```html
 <link href="print.css" rel="stylesheet" media="print" />
-<link
-  href="mobile.css"
-  rel="stylesheet"
-  media="screen and (max-width: 600px)" />
+<link href="mobile.css" rel="stylesheet" media="screen and (width <= 600px)" />
 ```
 
 Some interesting new performance and security features have been added to the `<link>` element too. Take this example:
@@ -88,7 +84,6 @@ Other usage notes:
 This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 - `as`
-
   - : This attribute is required when [`rel="preload"`](/en-US/docs/Web/HTML/Reference/Attributes/rel/preload) has been set on the `<link>` element, optional when [`rel="modulepreload"`](/en-US/docs/Web/HTML/Reference/Attributes/rel/modulepreload) has been set, and otherwise should not be used.
     It specifies the type of content being loaded by the `<link>`, which is necessary for request matching, application of correct [content security policy](/en-US/docs/Web/HTTP/Guides/CSP), and setting of correct {{HTTPHeader("Accept")}} request header.
 
@@ -180,16 +175,16 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     </table>
 
 - `blocking`
-
-  - : This attribute explicitly indicates that certain operations should be blocked on the fetching of an external resource. It must only be used when the `rel` attribute contains `expect` or `stylesheet` keywords. The operations that are to be blocked must be a space-separated list of blocking tokens listed below.
+  - : This attribute explicitly indicates that certain operations should be blocked until specific conditions are met. It must only be used when the `rel` attribute contains the `expect` or `stylesheet` keywords. With [`rel="expect"`](/en-US/docs/Web/HTML/Reference/Attributes/rel#expect), it indicates that operations should be blocked until a specific DOM node has been parsed. With [`rel="stylesheet"`](/en-US/docs/Web/HTML/Reference/Attributes/rel#stylesheet), it indicates that operations should be blocked until an external stylesheet and its critical subresources have been fetched and applied to the document. The operations that are to be blocked must be a space-separated list of blocking tokens listed below. Currently there is only one token:
     - `render`: The rendering of content on the screen is blocked.
 
-- [`crossorigin`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin)
+    > [!NOTE]
+    > Only `link` elements in the document's `<head>` can possibly block rendering. By default, a `link` element with `rel="stylesheet"` in the `<head>` blocks rendering when the browser discovers it during parsing. If such a `link` element is added dynamically via script, you must additionally set `blocking = "render"` for it to block rendering.
 
+- [`crossorigin`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin)
   - : This [enumerated](/en-US/docs/Glossary/Enumerated) attribute indicates whether {{Glossary("CORS")}} must be used when fetching the resource.
     [CORS-enabled images](/en-US/docs/Web/HTML/How_to/CORS_enabled_image) can be reused in the {{HTMLElement("canvas")}} element without being _tainted_.
     The allowed values are:
-
     - `anonymous`
       - : A cross-origin request (i.e., with an {{HTTPHeader("Origin")}} HTTP header) is performed, but no credential is sent (i.e., no cookie, X.509 certificate, or HTTP Basic authentication).
         If the server does not give credentials to the origin site (by not setting the {{HTTPHeader("Access-Control-Allow-Origin")}} HTTP header) the resource will be tainted and its usage restricted.
@@ -201,7 +196,6 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     See [CORS settings attributes](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) for additional information.
 
 - `disabled`
-
   - : For `rel="stylesheet"` only, the `disabled` Boolean attribute indicates whether the described stylesheet should be loaded and applied to the document.
     If `disabled` is specified in the HTML when it is loaded, the stylesheet will not be loaded during page load.
     Instead, the stylesheet will be loaded on-demand, if and when the `disabled` attribute is changed to `false` or removed.
@@ -209,10 +203,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     Setting the `disabled` property in the DOM causes the stylesheet to be removed from the document's {{domxref("Document.styleSheets")}} list.
 
 - `fetchpriority`
-
   - : Provides a hint of the relative priority to use when fetching a resource of a particular type.
     Allowed values:
-
     - `high`
       - : Fetch the resource at a high priority relative to other resources of the same type.
     - `low`
@@ -229,7 +221,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 - `hreflang`
   - : This attribute indicates the language of the linked resource.
     It is purely advisory.
-    Allowed values are specified by {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.
+    Values should be valid {{glossary("BCP 47 language tag", "BCP 47 language tags")}}.
     Use this attribute only if the [`href`](/en-US/docs/Web/HTML/Reference/Elements/a#href) attribute is present.
 - `imagesizes`
   - : For `rel="preload"` and `as="image"` only, the `imagesizes` attribute has similar syntax and semantics as the [`sizes`](/en-US/docs/Web/HTML/Reference/Elements/img#sizes) attribute that indicates to preload the appropriate resource used by an `img` element with corresponding values for its `srcset` and `sizes` attributes.
@@ -241,14 +233,11 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     The attribute must only be specified when the `rel` attribute is specified to `stylesheet`, `preload`, or `modulepreload`.
     See [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity).
 - `media`
-
   - : This attribute specifies the media that the linked resource applies to. Its value must be a media type / [media query](/en-US/docs/Web/CSS/CSS_media_queries).
     This attribute is mainly useful when linking to external stylesheets — it allows the user agent to pick the best adapted one for the device it runs on.
 
 - `referrerpolicy`
-
   - : A string indicating which referrer to use when fetching the resource:
-
     - `no-referrer` means that the {{HTTPHeader("Referer")}} header will not be sent.
     - `no-referrer-when-downgrade` means that no {{HTTPHeader("Referer")}} header will be sent when navigating to an origin without TLS (HTTPS).
       This is a user agent's default behavior, if no policy is otherwise specified.
@@ -260,11 +249,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 - [`rel`](/en-US/docs/Web/HTML/Reference/Attributes/rel)
   - : This attribute names a relationship of the linked document to the current document. The attribute must be a space-separated list of [link type values](/en-US/docs/Web/HTML/Reference/Attributes/rel).
 - `sizes`
-
   - : This attribute defines the sizes of the icons for visual media contained in the resource.
     It must be present only if the [`rel`](#rel) contains a value of `icon` or a non-standard type such as Apple's `apple-touch-icon`.
     It may have the following values:
-
     - `any`, meaning that the icon can be scaled to any size as it is in a vector format, like `image/svg+xml`.
     - a white-space separated list of sizes, each in the format `<width in pixels>x<height in pixels>` or `<width in pixels>X<height in pixels>`. Each of these sizes must be contained in the resource.
 
@@ -289,7 +276,6 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 ### Obsolete attributes
 
 - `charset` {{deprecated_inline}}
-
   - : This attribute defines the character encoding of the linked resource.
     The value is a space- and/or comma-delimited list of character sets as defined in {{rfc(2045)}}.
     The default value is `iso-8859-1`.
@@ -298,7 +284,6 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     > To produce the same effect as this obsolete attribute, use the {{HTTPHeader("Content-Type")}} HTTP header on the linked resource.
 
 - `rev` {{deprecated_inline}}
-
   - : The value of this attribute shows the relationship of the current document to the linked document, as defined by the [`href`](#href) attribute.
     The attribute thus defines the reverse relationship compared to the value of the `rel` attribute.
     [Link type values](/en-US/docs/Web/HTML/Reference/Attributes/rel) for the attribute are similar to the possible values for [`rel`](#rel).
@@ -368,14 +353,11 @@ this resource will then only be loaded if the media condition is true. For examp
 ```html
 <link href="print.css" rel="stylesheet" media="print" />
 <link href="mobile.css" rel="stylesheet" media="all" />
-<link
-  href="desktop.css"
-  rel="stylesheet"
-  media="screen and (min-width: 600px)" />
+<link href="desktop.css" rel="stylesheet" media="screen and (width >= 600px)" />
 <link
   href="highres.css"
   rel="stylesheet"
-  media="screen and (min-resolution: 300dpi)" />
+  media="screen and (resolution >= 300dpi)" />
 ```
 
 ### Stylesheet load events
@@ -384,18 +366,18 @@ You can determine when a style sheet has been loaded by watching for a `load` ev
 
 ```html
 <link rel="stylesheet" href="mystylesheet.css" id="my-stylesheet" />
+```
 
-<script>
-  const stylesheet = document.getElementById("my-stylesheet");
+```js
+const stylesheet = document.getElementById("my-stylesheet");
 
-  stylesheet.onload = () => {
-    // Do something interesting; the sheet has been loaded
-  };
+stylesheet.onload = () => {
+  // Do something interesting; the sheet has been loaded
+};
 
-  stylesheet.onerror = () => {
-    console.log("An error occurred loading the stylesheet!");
-  };
-</script>
+stylesheet.onerror = () => {
+  console.log("An error occurred loading the stylesheet!");
+};
 ```
 
 > [!NOTE]
@@ -408,7 +390,7 @@ You can find a number of `<link rel="preload">` examples in [Preloading content 
 ### Blocking rendering till a resource is fetched
 
 You can include `render` token inside a `blocking` attribute;
-the rendering of the page will be blocked till the resource is fetched. For example:
+the rendering of the page will be blocked till the resource and its critical subresources are fetched and applied to the document. For example:
 
 ```html
 <link blocking="render" rel="stylesheet" href="example.css" crossorigin />

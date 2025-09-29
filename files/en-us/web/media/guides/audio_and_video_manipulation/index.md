@@ -62,15 +62,11 @@ const processor = {
     this.c1 = document.getElementById("my-canvas");
     this.ctx1 = this.c1.getContext("2d");
 
-    this.video.addEventListener(
-      "play",
-      () => {
-        this.width = this.video.width;
-        this.height = this.video.height;
-        this.timerCallback();
-      },
-      false,
-    );
+    this.video.addEventListener("play", () => {
+      this.width = this.video.width;
+      this.height = this.video.height;
+      this.timerCallback();
+    });
   },
 
   computeFrame() {
@@ -90,8 +86,6 @@ const processor = {
       frame.data[i * 4 + 2] = grey;
     }
     this.ctx1.putImageData(frame, 0, 0);
-
-    return;
   },
 };
 ```
@@ -251,7 +245,7 @@ source.connect(convolver);
 convolver.connect(context.destination);
 ```
 
-See this [CodePen](https://codepen.io/a2sheppy/pen/JjPgVYL) for an applied (but very, very silly; like, little kids will giggle kind of silly) example.
+See our [HolySpaceCow](https://mdn.github.io/webaudio-examples/holy-space-cow/) example for an applied (but very, very silly) example.
 
 ### Spatial audio
 
@@ -275,22 +269,6 @@ context.listener.setPosition(0, 0, 0);
 
 > [!NOTE]
 > You can find an [example on our GitHub repository](https://github.com/mdn/webaudio-examples/tree/main/panner-node) ([see it live](https://mdn.github.io/webaudio-examples/panner-node/) also).
-
-### JavaScript codecs
-
-It's also possible to manipulate audio at a low level using JavaScript. This can be useful should you want to create audio codecs.
-
-Libraries currently exist for the following formats:
-
-- AAC: [AAC.js](https://github.com/audiocogs/aac.js)
-- ALAC: [alac.js](https://github.com/audiocogs/alac.js)
-- FLAC: [flac.js](https://github.com/audiocogs/flac.js)
-- MP3: [mp3.js](https://github.com/audiocogs/mp3.js)
-- Opus: [Opus.js](https://github.com/audiocogs/opus.js)
-- Vorbis: [vorbis.js](https://github.com/audiocogs/vorbis.js)
-
-> [!NOTE]
-> At Audiocogs, you can [Try out a few demos](http://audiocogs.org/codecs/); Audiocogs also provides a framework, [Aurora.js](http://audiocogs.org/codecs/), which is intended to help you author your own codecs in JavaScript.
 
 ## Examples
 

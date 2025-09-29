@@ -50,7 +50,8 @@ If you use `XMLHttpRequest` to get the content of a remote XML document, the {{d
 3. Using {{domxref("XMLSerializer")}} to serialize **DOM trees to strings or to files**.
 4. {{jsxref("RegExp")}} can be used if you always know the content of the XML document beforehand. You might want to remove line breaks, if you use `RegExp` to scan with regard to line breaks. However, this method is a "last resort" since if the XML code changes slightly, the method will likely fail.
 
-> **Note:** `XMLHttpRequest` can now interpret HTML for you, using the {{domxref("XMLHttpRequest.responseXML", "responseXML")}} property. Read the article about [HTML in XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest) to learn how to do this.
+> [!NOTE]
+> `XMLHttpRequest` can now interpret HTML for you, using the {{domxref("XMLHttpRequest.responseXML", "responseXML")}} property. Read the article about [HTML in XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest) to learn how to do this.
 
 ### Processing a `responseText` property containing an HTML document
 
@@ -94,11 +95,11 @@ For more examples check out the [Sending and Receiving Binary Data](/en-US/docs/
 
 `XMLHttpRequest` provides the ability to listen to various events that can occur while the request is being processed. This includes periodic progress notifications, error notifications, and so forth.
 
-Support for DOM {{domxref("XMLHttpRequest/progress_event", "progress")}} event monitoring of `XMLHttpRequest` transfers follows the [specification for progress events](https://xhr.spec.whatwg.org/#interface-progressevent): these events implement the {{domxref("ProgressEvent")}} interface. The actual events you can monitor to determine the state of an ongoing transfer are:
+Support for DOM {{domxref("XMLHttpRequestEventTarget/progress_event", "progress")}} event monitoring of `XMLHttpRequest` transfers follows the [specification for progress events](https://xhr.spec.whatwg.org/#interface-progressevent): these events implement the {{domxref("ProgressEvent")}} interface. The actual events you can monitor to determine the state of an ongoing transfer are:
 
-- {{domxref("XMLHttpRequest/progress_event", "progress")}}
+- {{domxref("XMLHttpRequestEventTarget/progress_event", "progress")}}
   - : The amount of data that has been retrieved has changed.
-- {{domxref("XMLHttpRequest/load_event", "load")}}
+- {{domxref("XMLHttpRequestEventTarget/load_event", "load")}}
   - : The transfer is complete; all data is now in the `response`
 
 ```js

@@ -3,9 +3,8 @@ title: writing-mode
 slug: Web/CSS/writing-mode
 page-type: css-property
 browser-compat: css.properties.writing-mode
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`writing-mode`** [CSS](/en-US/docs/Web/CSS) property sets whether lines of text are laid out horizontally or vertically, as well as the direction in which blocks progress. When set for an entire document, it should be set on the root element (`html` element for HTML documents).
 
@@ -52,7 +51,7 @@ writing-mode: sideways-lr;
 }
 
 #example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
   margin: 10px;
   flex: 1;

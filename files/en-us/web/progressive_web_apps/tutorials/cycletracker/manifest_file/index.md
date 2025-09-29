@@ -63,7 +63,6 @@ Write the first few lines of your manifest file. You can use the text below, or 
 The appearance, or presentation, of a PWA's installed and offline experiences are defined in the manifest. Presentation manifest members include `start_url` and `display`, and members which can be used to [customize your app colors](/en-US/docs/Web/Progressive_web_apps/How_to/Customize_your_app_colors), including `theme_color` and `background_color`.
 
 - [`start_url`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/start_url)
-
   - : The start page when a user launches the PWA.
 
 - [`display`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/display)
@@ -86,7 +85,7 @@ Add presentation definitions to the manifest file you began creating in the prev
 
 As the example application is a single page, we can use `"/"` as the `start_url`, or omit the member altogether. For that same reason, we can display the app without the browser UI by setting the `display` to `standalone`.
 
-In [our CSS](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_and_CSS#css_content), the `background-color: #efe;` is set on the `body` element selector. We use `#eeffee` to ensure a smooth transition from placeholder appearance to app load.
+In [our CSS](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_and_CSS#css_content), the `background-color: #eeffee;` is set on the `body` element selector. We use `#eeffee` to ensure a smooth transition from placeholder appearance to app load.
 
 ```json
 {

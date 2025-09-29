@@ -3,9 +3,8 @@ title: "<slot>: The Web Component Slot element"
 slug: Web/HTML/Reference/Elements/slot
 page-type: html-element
 browser-compat: html.elements.slot
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<slot>`** [HTML](/en-US/docs/Web/HTML) element—part of the [Web Components](/en-US/docs/Web/API/Web_components) technology suite—is a placeholder inside a web component that you can fill with your own markup, which lets you create separate DOM trees and present them together.
 
@@ -113,7 +112,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
           >No corresponding role</a
         >
       </td>

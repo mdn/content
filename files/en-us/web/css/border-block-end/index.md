@@ -3,9 +3,8 @@ title: border-block-end
 slug: Web/CSS/border-block-end
 page-type: css-shorthand-property
 browser-compat: css.properties.border-block-end
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`border-block-end`** [CSS](/en-US/docs/Web/CSS) property is a [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) for setting the individual logical block-end border property values in a single place in the style sheet.
 
@@ -41,8 +40,8 @@ writing-mode: vertical-lr;
 
 ```css interactive-example
 #example-element {
-  background-color: #eee;
-  color: #8b008b;
+  background-color: #eeeeee;
+  color: darkmagenta;
   padding: 0.75em;
   width: 80%;
   height: 100px;

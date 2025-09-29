@@ -6,7 +6,7 @@ page-type: listing-page
 sidebar: webassemblysidebar
 ---
 
-This page lists guides for [WebAssembly](/en-US/docs/WebAssembly) usage on the web.
+The [WebAssembly](/en-US/docs/WebAssembly) guides cover topics such as high-level concepts, compiling from different languages, the textual representation of the Wasm binary format, and how to run WebAssembly.
 
 {{SubPagesWithSummaries}}
 

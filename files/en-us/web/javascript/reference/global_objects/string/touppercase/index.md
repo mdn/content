@@ -1,11 +1,11 @@
 ---
 title: String.prototype.toUpperCase()
+short-title: toUpperCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.toUpperCase
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`toUpperCase()`** method of {{jsxref("String")}} values returns this string converted to uppercase.
 

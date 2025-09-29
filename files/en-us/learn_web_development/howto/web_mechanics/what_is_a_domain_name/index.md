@@ -50,9 +50,7 @@ A domain name has a simple structure made of several parts (it might be one part
 Each of those parts provides specific information about the whole domain name.
 
 - {{Glossary("TLD")}} (Top-Level Domain).
-
   - : TLDs tell users the general purpose of the service behind the domain name. The most generic TLDs (`.com`, `.org`, `.net`) don't require web services to meet any particular criteria, but some TLDs enforce stricter policies so it is clearer what their purpose is. For example:
-
     - Local TLDs such as `.us`, `.fr`, or `.se` can require the service to be provided in a given language or hosted in a certain country — they are supposed to indicate a resource in a particular language or country.
     - TLDs containing `.gov` are only allowed to be used by government departments.
     - The `.edu` TLD is only for use by educational and academic institutions.
@@ -62,7 +60,6 @@ Each of those parts provides specific information about the whole domain name.
     The full list of TLDs is [maintained by ICANN](https://www.icann.org/en/contracted-parties/registry-operators/resources/list-of-top-level-domains).
 
 - Label (or component)
-
   - : The labels are what follow the TLD. A label is a case-insensitive character sequence anywhere from one to sixty-three characters in length, containing only the letters `A` through `Z`, digits `0` through `9`, and the '-' character (which may not be the first or last character in the label). `a`, `97`, and `hello-strange-person-16-how-are-you` are all examples of valid labels.
 
     The label located right before the TLD is also called a _Secondary Level Domain_ (SLD).
@@ -171,4 +168,4 @@ Okay, we talked a lot about processes and architecture. Time to move on.
 - If you want to get hands-on, it's a good time to start digging into design and explore [the anatomy of a web page](/en-US/docs/Learn_web_development/Howto/Design_and_accessibility/Common_web_layouts).
 - It's also worth noting that some aspects of building a website cost money. Please refer to [how much it costs to build a website](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost).
 - Or read more about [Domain Names](https://en.wikipedia.org/wiki/Domain_name) on Wikipedia.
-- You can also find [here](https://howdns.works/) a fun and colorful explanation of how DNS works.
+- The [How DNS works](https://howdns.works/) tutorial has a fun and colorful explanation.

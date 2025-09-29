@@ -3,9 +3,8 @@ title: mask-mode
 slug: Web/CSS/mask-mode
 page-type: css-property
 browser-compat: css.properties.mask-mode
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`mask-mode`** [CSS](/en-US/docs/Web/CSS) property is set on the element being masked. It sets whether the mask reference defined by the {{cssxref("mask-image")}} is treated as a luminance or alpha mask.
 
@@ -33,12 +32,10 @@ mask-mode: unset;
 The `mask-mode` property can take multiple comma-separated `<masking-mode>` keyword values, including:
 
 - `alpha`
-
   - : Indicates that the alpha (transparency) values of the mask image should be used.
 
 - `luminance`
-
-  - : Indicates that the [luminance (brightness)](#understanding-luminance) values of the mask image should be used.
+  - : Indicates that the [luminance (brightness)](#understanding_luminance) values of the mask image should be used.
 
 - `match-source`
   - : Indicates that the type of mask is determined by the source. This is the default property value.
@@ -99,7 +96,7 @@ Each `<div>` is provided with the same background and masking image. The only di
 ```css
 div {
   background: blue linear-gradient(red, blue);
-  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mdn.svg);
+  mask-image: url("https://mdn.github.io/shared-assets/images/examples/mdn.svg");
 }
 
 .alpha {
@@ -147,4 +144,7 @@ Because the mask source is an `<image>` and not an SVG `<mask>`, the `match-sour
 - {{cssxref("mask-type")}}
 - {{cssxref("mask-image")}}
 - {{cssxref("mask")}} shorthand
+- [Introduction to CSS masking](/en-US/docs/Web/CSS/CSS_masking/Masking)
+- [CSS `mask` properties](/en-US/docs/Web/CSS/CSS_masking/Mask_properties)
+- [Declaring multiple masks](/en-US/docs/Web/CSS/CSS_masking/Multiple_masks)
 - [CSS masking](/en-US/docs/Web/CSS/CSS_masking) module

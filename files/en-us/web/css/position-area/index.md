@@ -2,12 +2,9 @@
 title: position-area
 slug: Web/CSS/position-area
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.position-area
+sidebar: cssref
 ---
-
-{{CSSRef}}{{SeeCompatTable}}
 
 The **`position-area`** [CSS](/en-US/docs/Web/CSS) property enables an anchor-positioned element to be positioned relative to the edges of its associated anchor element by placing the positioned element on one or more tiles of an implicit 3x3 grid, where the anchoring element is the center cell.
 
@@ -63,18 +60,16 @@ position-area: unset;
 The property value is two `<position-area>` keyterms, or the keyword `none`. If only one `<position-area>` keyterm is provided, the second keyterm is implied.
 
 - [`<position-area>`](/en-US/docs/Web/CSS/position-area_value)
-
   - : Specifies the area of the position area grid on which to place selected positioned elements.
 
 - `none`
-
   - : No position area is set.
 
 ## Description
 
 The `position-area` property provides an alternative to the `anchor()` function for positioning elements relative to anchors. `position-area` works on the concept of a 3x3 grid of tiles, called the **position-area grid**, with the anchor element being the center tile:
 
-![The position-area grid, as described below](position-area.png)
+![The position-area grid, as described below](/shared-assets/images/diagrams/css/anchor-positioning/position-area.svg)
 
 The grid tiles are broken up into rows and columns:
 
@@ -120,6 +115,19 @@ If the positioned element is placed in a single top-center, bottom-center, or ce
 
 If the positioned element is placed in any other single grid square (say with `position-area: top left`) or is set to span two or more grid squares (for example using `position-area: bottom span-all`), it will align with the specified grid area but behave as if it has a {{cssxref("width")}} of `max-content` set on it. It is being sized according to its containing block size, which is the size imposed on it when it was set to `position: fixed`. It will stretch as wide as the text content, although it may also be constrained by the edge of the `<body>`.
 
+### Using `position-area` to position popovers
+
+When using `position-area` to position [popovers](/en-US/docs/Web/HTML/Reference/Global_attributes/popover), be aware that [the default styles for popovers](https://html.spec.whatwg.org/multipage/rendering.html#flow-content-3:~:text=%5Bpopover%5D%20%7B) may conflict with the position you're trying to achieve. The usual culprits are the default styles for `margin` and `inset`, so it's advisable to reset those:
+
+```css
+.my-popover {
+  margin: 0;
+  inset: auto;
+}
+```
+
+The CSS working group is [looking at ways to avoid requiring this workaround](https://github.com/w3c/csswg-drafts/issues/10258).
+
 ## Formal definition
 
 {{cssinfo}}
@@ -144,7 +152,7 @@ The HTML includes a {{htmlelement("div")}} and a {{htmlelement("p")}}. The `<p>`
 <p class="positionedElement" contenteditable="true">This can be edited.</p>
 
 <style contenteditable="true">.positionedElement {
-    position-area: CHANGEME;
+    position-area: top center;
   }
 </style>
 ```
@@ -189,7 +197,7 @@ style {
 
 {{ EmbedLiveSample("Basic example", "100%", "360") }}
 
-Try changing the amount of text in the anchor-positioned element to see how it grows. Also, try changing the invalid "CHANGEME" value of the `position-area` property to a valid value.
+Try changing the amount of text in the anchor-positioned element to see how it grows. Also, try changing the value of the `position-area` property to something else, like `center`.
 
 ### `position-area` value comparison
 
@@ -340,7 +348,7 @@ form {
 .infobox {
   color: darkblue;
   background-color: azure;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   padding: 5px 2px;
   border-radius: 5px;
   font-size: 1rem;
@@ -350,11 +358,11 @@ form {
 
 ```css
 .anchor {
-  anchor-name: --myAnchor;
+  anchor-name: --my-anchor;
 }
 
 .infobox {
-  position-anchor: --myAnchor;
+  position-anchor: --my-anchor;
   position: fixed;
   opacity: 0.8;
   position-area: top left;
@@ -435,5 +443,5 @@ Try selecting new `position-area` values from the `<select>` menu to see the eff
 - The [`anchor()`](/en-US/docs/Web/CSS/anchor) function
 - The [`<position-area>`](/en-US/docs/Web/CSS/position-area_value) value
 - [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide
-- [Handling overflow: try fallbacks and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide
+- [Fallback options and conditional hiding for overflow](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide
 - [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module

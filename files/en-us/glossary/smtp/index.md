@@ -2,9 +2,8 @@
 title: SMTP
 slug: Glossary/SMTP
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **SMTP** (Simple Mail Transfer Protocol) is a {{glossary("protocol")}} used to send a new email. Like {{glossary("POP")}} and {{glossary("NNTP")}}, it is a {{Glossary("state machine")}}-driven protocol.
 

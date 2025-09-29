@@ -3,9 +3,8 @@ title: break-after
 slug: Web/CSS/break-after
 page-type: css-property
 browser-compat: css.properties.break-after
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`break-after`** [CSS](/en-US/docs/Web/CSS) property sets how page, column, or region breaks should behave after a generated box. If there is no generated box, the property is ignored.
 
@@ -20,20 +19,18 @@ break-after: page;
 ```
 
 ```html interactive-example
-<section id="default-example">
-  <div>
-    <p>
-      The effect of this property can be noticed when the document is being
-      printed or a preview of a print is displayed.
-    </p>
-    <button id="print-btn">Show Print Preview</button>
-    <div class="box-container">
-      <div class="box">Content before the property</div>
-      <div class="box" id="example-element">Content with 'break-after'</div>
-      <div class="box">Content after the property</div>
-    </div>
+<div>
+  <p>
+    The effect of this property can be noticed when the document is being
+    printed or a preview of a print is displayed.
+  </p>
+  <button id="print-btn">Show Print Preview</button>
+  <div class="box-container">
+    <div class="box">Content before the property</div>
+    <div class="box" id="example-element">Content with 'break-after'</div>
+    <div class="box">Content after the property</div>
   </div>
-</section>
+</div>
 ```
 
 ```css interactive-example
@@ -49,36 +46,13 @@ break-after: page;
   background-color: #ffc129;
   color: black;
 }
-
-.hide-element {
-  display: none;
-}
 ```
 
 ```js interactive-example
 const btn = document.getElementById("print-btn");
-const editorContainer = document.getElementsByClassName(
-  "css-editor-container",
-)[0];
-const exampleHTMLElement = document.getElementById("default-example");
-
-const printableSection = document.createElement("div");
-printableSection.setAttribute("id", "printable-section");
-printableSection.classList.add("hide-element");
-document.body.appendChild(printableSection);
 
 btn.addEventListener("click", () => {
-  const exampleContent = exampleHTMLElement.innerHTML;
-
-  editorContainer.classList.add("hide-element");
-  printableSection.innerHTML = exampleContent;
-  printableSection.classList.remove("hide-element");
-
   window.print();
-
-  printableSection.classList.add("hide-element");
-  printableSection.innerHTML = "";
-  editorContainer.classList.remove("hide-element");
 });
 ```
 

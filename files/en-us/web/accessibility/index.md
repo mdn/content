@@ -15,6 +15,8 @@ For many people, technology makes things easier. For people with disabilities, t
 
 ## Accessibility guides
 
+The [Accessibility guides](/en-US/docs/Web/Accessibility/Guides) cover authoring principles, WCAG compliance, accessible widgets and navigation, mobile accessibility, and other key topics that will help you understand why accessibility is crucial for the web and how to improve it in your projects.
+
 - [Accessibility information for web authors](/en-US/docs/Web/Accessibility/Guides/Information_for_Web_authors)
   - : This document lists guidelines and regulations, how-to's, and tools for checking and repairing accessibility problems with websites.
 - [Personalization to help browse safely](/en-US/docs/Web/Accessibility/Guides/Browsing_safely)

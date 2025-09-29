@@ -3,12 +3,10 @@ title: "GPURenderPassEncoder: setPipeline() method"
 short-title: setPipeline()
 slug: Web/API/GPURenderPassEncoder/setPipeline
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPURenderPassEncoder.setPipeline
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`setPipeline()`** method of the
 {{domxref("GPURenderPassEncoder")}} interface sets the {{domxref("GPURenderPipeline")}} to use for subsequent render pass commands.

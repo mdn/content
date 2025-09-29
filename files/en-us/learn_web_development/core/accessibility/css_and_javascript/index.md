@@ -6,7 +6,7 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Accessibility/HTML","Learn_web_development/Core/Accessibility/WAI-ARIA_basics", "Learn_web_development/Core/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Test_your_skills/HTML","Learn_web_development/Core/Accessibility/Test_your_skills/CSS_and_JavaScript", "Learn_web_development/Core/Accessibility")}}
 
 CSS and JavaScript, when used properly, also have the potential to allow for accessible web experiences, or they can significantly harm accessibility if misused. This article outlines some CSS and JavaScript best practices that should be considered to ensure even complex content is as accessible as possible.
 
@@ -142,7 +142,7 @@ Some very simple link styling is shown below:
 
 ```css
 a {
-  color: #ff0000;
+  color: red;
 }
 
 a:hover,
@@ -153,7 +153,7 @@ a:focus {
 }
 
 a:active {
-  color: #000000;
+  color: black;
   background-color: #a60000;
 }
 ```
@@ -206,13 +206,14 @@ Another tip is to not rely on color alone for signposts/information, as this wil
 
 There are many instances where a visual design will require that not all content is shown at once. For example, in our [Tabbed info box example](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/tabbed-info-box.html) (see [source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/tabbed-info-box.html)) we have three panels of information, but we are [positioning](/en-US/docs/Learn_web_development/Core/CSS_layout/Positioning) them on top of one another and providing tabs that can be clicked to show each one (it is also keyboard accessible — you can alternatively use Tab and Enter/Return to select them).
 
-![Three tab interface with Tab 1 selected and only its contents are displayed. The contents of other tabs are hidden. If a tab is selected, then it's text-color changes from black to white and the background-color changes from orange-red to saddle brown.](tabbed-info-box.png)
+![Three tab interface with Tab 1 selected and only its contents are displayed. The contents of other tabs are hidden. If a tab is selected, then its text-color changes from black to white and the background-color changes from orange-red to saddle brown.](tabbed-info-box.png)
 
 Screen reader users don't care about any of this — they are happy with the content as long as the source order makes sense, and they can get to it all. Absolute positioning (as used in this example) is generally seen as one of the best mechanisms of hiding content for visual effect because it doesn't stop screen readers from getting to it.
 
 On the other hand, you shouldn't use {{cssxref("visibility", "visibility: hidden")}} or {{cssxref("display", "display: none")}}, because they do hide content from screen readers. Unless of course, there is a good reason why you want this content to be hidden from screen readers.
 
-> **Note:** [Invisible Content Just for Screen Reader Users](https://webaim.org/techniques/css/invisiblecontent/) has a lot more useful detail surrounding this topic.
+> [!NOTE]
+> [Invisible Content Just for Screen Reader Users](https://webaim.org/techniques/css/invisiblecontent/) has a lot more useful detail surrounding this topic.
 
 ### Accept that users can override styles
 
@@ -274,8 +275,7 @@ form.onsubmit = validate;
 
 function validate(e) {
   errorList.textContent = "";
-  for (let i = 0; i < formItems.length; i++) {
-    const testItem = formItems[i];
+  for (const testItem of formItems) {
     if (testItem.input.value === "") {
       errorField.style.left = "360px";
       createLink(testItem);
@@ -356,14 +356,10 @@ The first two lines run the functions when the mouse pointer hovers over and sto
 
 The [click](/en-US/docs/Web/API/Element/click_event) event is interesting — it sounds mouse-dependent, but most browsers will activate [onclick](/en-US/docs/Web/API/Element/click_event) event handlers after Enter/Return is pressed on a link or form element that has focus, or when such an element is tapped on a touchscreen device. This doesn't work by default however when you allow a non-default-focusable event to have focus using tabindex — in such cases you need to detect specifically when that exact key is pressed (see [Building keyboard accessibility back in](/en-US/docs/Learn_web_development/Core/Accessibility/HTML#building_keyboard_accessibility_back_in)).
 
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: CSS and JavaScript accessibility](/en-US/docs/Learn_web_development/Core/Accessibility/Test_your_skills/CSS_and_JavaScript).
-
 ## Summary
 
 We hope this article has given you a good amount of detail and understanding about the accessibility issues surrounding CSS and JavaScript use on web pages.
 
-Next up, WAI-ARIA!
+In the next article, we'll give you some tests that you can use to check how well you've understood and retained all this information.
 
-{{PreviousMenuNext("Learn_web_development/Core/Accessibility/HTML","Learn_web_development/Core/Accessibility/WAI-ARIA_basics", "Learn_web_development/Core/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Test_your_skills/HTML","Learn_web_development/Core/Accessibility/Test_your_skills/CSS_and_JavaScript", "Learn_web_development/Core/Accessibility")}}

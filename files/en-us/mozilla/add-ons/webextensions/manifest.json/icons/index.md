@@ -3,9 +3,8 @@ title: icons
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/icons
 page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.icons
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
   <tbody>

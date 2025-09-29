@@ -2,9 +2,8 @@
 title: Tools for game development
 slug: Games/Tools
 page-type: landing-page
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 On this page, you can find links to our game development tools articles, which eventually aim to cover frameworks, compilers, and debugging tools.
 
@@ -15,9 +14,7 @@ On this page, you can find links to our game development tools articles, which e
 - [Firefox Profiler](https://profiler.firefox.com/docs/#/)
   - : The Firefox Profiler lets you profile your code to help figure out where your performance issues are so that you can make your game run at top speed.
 - Toolchain for developing and debugging games
-
   - : How does this differ from normal web app debugging? What specialist tools are available? A lot of this is going to be covered by Will in [tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html), but here we should provide a kind of practical toolchain tutorial for debugging games, with links to Will's stuff:
-
     - Basic tools overview
     - [Shader editor](https://firefox-source-docs.mozilla.org/devtools-user/shader_editor/index.html)
     - Performance tools (still in production, estimated early 2014)
@@ -121,3 +118,13 @@ On this page, you can find links to our game development tools articles, which e
   - : Connect your app or site to a server to transmit data back and forth in real-time. Perfect for multiplayer gaming action, chat services, and so forth.
 - [Web Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
   - : Spawn background threads running their own JavaScript code for multicore processors.
+
+## Port native games to the Web
+
+If you are a native developer (for example writing games in C++), and you are interested in how you can port your games over to the Web, you should learn more about our [Emscripten](https://emscripten.org/index.html) tool — this is an LLVM to JavaScript compiler, which takes LLVM bytecode (e.g., generated from C/C++ using Clang, or from another language) and compiles that into [asm.js](/en-US/docs/Games/Tools/asm.js), which can be run on the Web.
+
+To get started, see:
+
+- [About Emscripten](https://emscripten.org/docs/introducing_emscripten/about_emscripten.html) for an introduction including high-level details.
+- [Download and Install](https://emscripten.org/docs/getting_started/downloads.html) for installing the toolchain.
+- [Emscripten Tutorial](https://emscripten.org/docs/getting_started/Tutorial.html) for a tutorial to teach you how to get started.

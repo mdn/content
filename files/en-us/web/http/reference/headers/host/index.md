@@ -1,11 +1,11 @@
 ---
-title: Host
+title: Host header
+short-title: Host
 slug: Web/HTTP/Reference/Headers/Host
 page-type: http-header
 browser-compat: http.headers.Host
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Host`** {{Glossary("request header")}} specifies the host and port number of the server to which the request is being sent.
 

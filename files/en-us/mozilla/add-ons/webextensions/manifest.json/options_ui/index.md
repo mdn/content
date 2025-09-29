@@ -3,9 +3,8 @@ title: options_ui
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/options_ui
 page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.options_ui
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
   <tbody>
@@ -77,7 +76,7 @@ The `options_ui` key is an object with the following contents:
           </ul>
         <div class="notecard warning">
           <p>
-            Do not set <code>browser_style</code> to true: its not support in Manifest V3 from Firefox 118. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles#manifest_v3_migration">Manifest V3 migration for <code>browser_style</code></a>.
+            Do not set <code>browser_style</code> to true: it's not supported in Manifest V3, from Firefox 118. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles#manifest_v3_migration">Manifest V3 migration for <code>browser_style</code></a>.
           </p>
         </div>
         <p>

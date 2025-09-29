@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.HTMLFormElement.submit_event
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The **`submit`** event fires when a {{HtmlElement("form")}} is submitted.
 
@@ -76,7 +76,7 @@ form.addEventListener("submit", logSubmit);
 
 ### Result
 
-{{EmbedLiveSample("Examples")}}
+{{EmbedLiveSample("Examples", "", "", "", "", "", "", "allow-forms")}}
 
 ## Specifications
 

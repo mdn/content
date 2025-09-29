@@ -1,10 +1,10 @@
 ---
 title: Firefox 101 for developers
+short-title: Firefox 101
 slug: Mozilla/Firefox/Releases/101
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 101 that will affect developers. Firefox 101 was released on May 31, 2022.
 
@@ -82,7 +82,3 @@ For more information, see the [full bug list](https://bugzilla.mozilla.org/bugli
   - The content script execution environment has changed for Manifest V3 extensions:
     - Content scripts can no longer rely on host permissions to perform cross-origin requests. Cross-origin requests from content scripts are possible with [CORS](/en-US/docs/Web/HTTP/Guides/CORS).
     - The `content` object (that offered `content.fetch`, `content.XMLHttpRequest`, and `content.WebSocket`) is removed from the content script execution environment.
-
-## Older versions
-
-{{Firefox_for_developers}}

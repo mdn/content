@@ -3,9 +3,8 @@ title: Using HTML form validation and the Constraint Validation API
 short-title: Constraint validation
 slug: Web/HTML/Guides/Constraint_validation
 page-type: guide
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The creation of web forms has always been a complex task. While marking up the form itself is easy, checking whether each field has a valid and coherent value is more difficult, and informing the user about the problem may become a headache. [HTML5](/en-US/docs/Glossary/HTML5) introduced new mechanisms for forms: it added new semantic types for the {{ HTMLElement("input") }} element and _constraint validation_ to ease the work of checking the form content on the client side. Basic, usual constraints can be checked, without the need for JavaScript, by setting new attributes; more complex constraints can be tested using the Constraint Validation API.
 
@@ -294,7 +293,7 @@ Basically, the idea is to trigger JavaScript on some form field event (like **on
 
 ### Constraint combining several fields: Postal code validation
 
-The postal code format varies from one country to another. Not only do most countries allow an optional prefix with the country code (like `D-` in Germany, `F-` in France or Switzerland), but some countries have postal codes with only a fixed number of digits; others, like the UK, have more complex structures, allowing letters at some specific positions.
+The postal code format varies from one country to another. Many countries allow an optional prefix with the country code (like `D-` in Germany, `F-` in France, and `CH-` in Switzerland). Some countries use only a fixed number of digits in postal codes, while others, like the UK, have more complex formats that allow letters at some specific positions.
 
 > [!NOTE]
 > This is not a comprehensive postal code validation library, but rather a demonstration of the key concepts.
@@ -323,6 +322,9 @@ This displays the following form:
 First, we write a function checking the constraint itself:
 
 ```js
+const countrySelect = document.getElementById("country");
+const postalCodeField = document.getElementById("postal-code");
+
 function checkPostalCode() {
   // For each country, defines the pattern that the postal code has to follow
   const constraints = {
@@ -345,10 +347,7 @@ function checkPostalCode() {
   };
 
   // Read the country id
-  const country = document.getElementById("country").value;
-
-  // Get the NPA field
-  const postalCodeField = document.getElementById("postal-code");
+  const country = countrySelect.value;
 
   // Build the constraint checker
   const constraint = new RegExp(constraints[country][0], "");
@@ -366,13 +365,11 @@ function checkPostalCode() {
 }
 ```
 
-Then we link it to the **onchange** event for the {{ HTMLElement("select") }} and the **oninput** event for the {{ HTMLElement("input") }}:
+Then we link it to the `change` event for the {{ HTMLElement("select") }} and the `input` event for the {{ HTMLElement("input") }}:
 
 ```js
-window.onload = () => {
-  document.getElementById("country").onchange = checkPostalCode;
-  document.getElementById("postal-code").oninput = checkPostalCode;
-};
+countrySelect.addEventListener("change", checkPostalCode);
+postalCodeField.addEventListener("input", checkPostalCode);
 ```
 
 ### Limiting the size of a file before its upload
@@ -393,8 +390,9 @@ This displays:
 The JavaScript reads the file selected, uses the `File.size()` method to get its size, compares it to the (hard coded) limit, and calls the Constraint API to inform the browser if there is a violation:
 
 ```js
+const fs = document.getElementById("fs");
+
 function checkFileSize() {
-  const fs = document.getElementById("fs");
   const files = fs.files;
 
   // If there is (at least) one file selected
@@ -414,9 +412,7 @@ function checkFileSize() {
 Finally, we hook the method with the correct event:
 
 ```js
-window.onload = () => {
-  document.getElementById("fs").onchange = checkFileSize;
-};
+fs.addEventListener("change", checkFileSize);
 ```
 
 ## Visual styling of constraint validation
@@ -444,7 +440,6 @@ The {{cssxref(':valid')}} and {{cssxref(':invalid')}} [pseudo-classes](/en-US/do
 The following items can help with controlling the text of a constraint violation:
 
 - The `setCustomValidity(message)` method on the following elements:
-
   - {{HTMLElement("fieldset")}}. Note: Setting a custom validity message on fieldset elements will not prevent form submission in most browsers.
   - {{HTMLElement("input")}}
   - {{HTMLElement("output")}}

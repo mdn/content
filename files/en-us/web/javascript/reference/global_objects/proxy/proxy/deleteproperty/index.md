@@ -1,22 +1,22 @@
 ---
 title: handler.deleteProperty()
+short-title: deleteProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/deleteProperty
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Proxy.handler.deleteProperty
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`handler.deleteProperty()`** method is a trap for the `[[Delete]]` [object internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods), which is used by operations such as the {{jsxref("Operators/delete", "delete")}} operator.
 
 {{InteractiveExample("JavaScript Demo: handler.deleteProperty()", "taller")}}
 
 ```js interactive-example
-const monster1 = {
+const monster = {
   texture: "scaly",
 };
 
-const handler1 = {
+const handler = {
   deleteProperty(target, prop) {
     if (prop in target) {
       delete target[prop];
@@ -26,13 +26,13 @@ const handler1 = {
   },
 };
 
-console.log(monster1.texture);
+console.log(monster.texture);
 // Expected output: "scaly"
 
-const proxy1 = new Proxy(monster1, handler1);
-delete proxy1.texture;
+const proxy = new Proxy(monster, handler);
+delete proxy.texture;
 
-console.log(monster1.texture);
+console.log(monster.texture);
 // Expected output: undefined
 ```
 

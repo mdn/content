@@ -1,13 +1,15 @@
 ---
-title: "Permissions-Policy: window-management"
+title: "Permissions-Policy: window-management directive"
+short-title: window-management
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/window-management
 page-type: http-permissions-policy-directive
 status:
   - experimental
 browser-compat: http.headers.Permissions-Policy.window-management
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The HTTP {{HTTPHeader("Permissions-Policy")}} header `window-management` directive controls whether or not the current document is allowed to use the [Window Management API](/en-US/docs/Web/API/Window_Management_API) to manage windows on multiple displays.
 

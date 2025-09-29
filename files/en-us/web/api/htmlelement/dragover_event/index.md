@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.HTMLElement.dragover_event
 ---
 
-{{APIRef}}
+{{APIRef("HTML Drag and Drop API")}}
 
 The `dragover` event is fired when an element or text selection is being dragged over a valid drop target (every few hundred milliseconds).
 
@@ -123,7 +123,6 @@ target.addEventListener("drop", (event) => {
 ## See also
 
 - Other drag and drop events:
-
   - {{domxref("HTMLElement/drag_event", "drag")}}
   - {{domxref("HTMLElement/dragstart_event", "dragstart")}}
   - {{domxref("HTMLElement/dragend_event", "dragend")}}

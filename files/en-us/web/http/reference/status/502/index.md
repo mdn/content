@@ -3,13 +3,12 @@ title: 502 Bad Gateway
 slug: Web/HTTP/Reference/Status/502
 page-type: http-status-code
 spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.502
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`502 Bad Gateway`** [server error response](/en-US/docs/Web/HTTP/Reference/Status#server_error_responses) status code indicates that a server was acting as a gateway or {{Glossary("Proxy_server", "proxy")}} and that it received an invalid response from the upstream server.
 
-This response is similar to a {{HTTPStatus("500", "500 Internal Server Error")}} response in the sense that it is a generic "catch-call" for server errors.
+This response is similar to a {{HTTPStatus("500", "500 Internal Server Error")}} response in the sense that it is a generic "catch-all" for server errors.
 The difference is that it is specific to the point in the request chain that the error has occurred.
 If the origin server sends a valid HTTP error response to the gateway, the response should be passed on to the client instead of a `502` to make the failure reason transparent.
 If the proxy or gateway did not receive any HTTP response from the origin, it instead sends a {{HTTPStatus("504", "504 Gateway Timeout")}} to the client.

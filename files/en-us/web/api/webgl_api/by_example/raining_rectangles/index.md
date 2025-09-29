@@ -47,29 +47,25 @@ button {
 }
 ```
 
-```js hidden
-;(() => {
-  "use strict";
-```
-
 ```js
-window.addEventListener("load", setupAnimation, false);
-let gl;
-let timer;
-let rainingRect;
-let scoreDisplay;
-let missesDisplay;
-function setupAnimation(evt) {
-  window.removeEventListener(evt.type, setupAnimation, false);
-  if (!(gl = getRenderingContext())) return;
-  gl.enable(gl.SCISSOR_TEST);
+const canvas = document.querySelector("canvas");
 
-  rainingRect = new Rectangle();
-  timer = setTimeout(drawAnimation, 17);
-  document
-    .querySelector("canvas")
-    .addEventListener("click", playerClick, false);
-  [scoreDisplay, missesDisplay] = document.querySelectorAll("strong");
+const gl = getRenderingContext();
+gl.enable(gl.SCISSOR_TEST);
+let rainingRect = new Rectangle();
+
+let timer = setTimeout(drawAnimation, 17);
+canvas.addEventListener("click", playerClick);
+const [scoreDisplay, missesDisplay] = document.querySelectorAll("strong");
+
+function getRenderingContext() {
+  canvas.width = canvas.clientWidth;
+  canvas.height = canvas.clientHeight;
+  const gl = canvas.getContext("webgl");
+  gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
+  gl.clearColor(0.0, 0.0, 0.0, 1.0);
+  gl.clear(gl.COLOR_BUFFER_BIT);
+  return gl;
 }
 
 let score = 0;
@@ -123,51 +119,27 @@ function playerClick(evt) {
   }
 }
 
-function Rectangle() {
-  // Keeping a reference to the new Rectangle object, rather
-  // than using the confusing this keyword.
-  const rect = this;
-  // We get three random numbers and use them for new rectangle
-  // size and position. For each we use a different number,
-  // because we want horizontal size, vertical size and
-  // position to be determined independently.
-  const randVec = getRandomVector();
-  rect.size = [5 + 120 * randVec[0], 5 + 120 * randVec[1]];
-  rect.position = [
-    randVec[2] * (gl.drawingBufferWidth - rect.size[0]),
-    gl.drawingBufferHeight,
-  ];
-  rect.velocity = 1.0 + 6.0 * Math.random();
-  rect.color = getRandomVector();
-  gl.clearColor(rect.color[0], rect.color[1], rect.color[2], 1.0);
-  function getRandomVector() {
-    return [Math.random(), Math.random(), Math.random()];
+class Rectangle {
+  constructor() {
+    // We get three random numbers and use them for new rectangle
+    // size and position. For each we use a different number,
+    // because we want horizontal size, vertical size and
+    // position to be determined independently.
+    const randVec = getRandomVector();
+    this.size = [5 + 120 * randVec[0], 5 + 120 * randVec[1]];
+    this.position = [
+      randVec[2] * (gl.drawingBufferWidth - this.size[0]),
+      gl.drawingBufferHeight,
+    ];
+    this.velocity = 1.0 + 6.0 * Math.random();
+    this.color = getRandomVector();
+    gl.clearColor(this.color[0], this.color[1], this.color[2], 1.0);
   }
 }
-```
 
-```js hidden
-function getRenderingContext() {
-  const canvas = document.querySelector("canvas");
-  canvas.width = canvas.clientWidth;
-  canvas.height = canvas.clientHeight;
-  const gl =
-    canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
-  if (!gl) {
-    const paragraph = document.querySelector("p");
-    paragraph.textContent =
-      "Failed. Your browser or device may not support WebGL.";
-    return null;
-  }
-  gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
-  gl.clearColor(0.0, 0.0, 0.0, 1.0);
-  gl.clear(gl.COLOR_BUFFER_BIT);
-  return gl;
+function getRandomVector() {
+  return [Math.random(), Math.random(), Math.random()];
 }
-```
-
-```js hidden
-})();
 ```
 
 The source code of this example is also available on [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/raining-rectangles).

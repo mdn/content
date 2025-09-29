@@ -1,10 +1,9 @@
 ---
-title: Scaling of SVG backgrounds
+title: Scaling SVG backgrounds
 slug: Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 Given the flexibility of SVG images, there's a lot to keep in mind when using them as background images with the {{ cssxref("background-image") }} property, and even more to keep in mind when scaling them using the {{ cssxref("background-size") }} property. This article describes how scaling of SVG images is handled when using these properties.
 
@@ -35,11 +34,11 @@ This SVG gradient image is both dimensionless and proportionless. It doesn't car
   <title>Corner-to-corner gradient</title>
   <defs>
     <linearGradient id="g" x1="0%" x2="100%" y1="0%" y2="100%">
-      <stop style="stop-color:pink" offset="0" />
-      <stop style="stop-color:goldenrod" offset="1" />
+      <stop stop-color="pink" offset="0" />
+      <stop stop-color="goldenrod" offset="1" />
     </linearGradient>
   </defs>
-  <rect style="fill: url(#g)" width="100%" height="100%" />
+  <rect fill="url('#g')" width="100%" height="100%" />
 </svg>
 ```
 
@@ -54,11 +53,11 @@ This image specifies a width of 100 pixels but no height or intrinsic ratio. Thi
   <title>Vertical gradient, with a fixed width</title>
   <defs>
     <linearGradient id="g" x1="0%" x2="0%" y1="0%" y2="100%">
-      <stop style="stop-color: purple;" offset="0" />
-      <stop style="stop-color: lime;" offset="1" />
+      <stop stop-color="purple" offset="0" />
+      <stop stop-color="lime" offset="1" />
     </linearGradient>
   </defs>
-  <rect style="fill: url(#g);" width="100%" height="100%" />
+  <rect fill="url('#g')" width="100%" height="100%" />
 </svg>
 ```
 
@@ -75,11 +74,11 @@ This is very much like specifying a specific width and height; since once you ha
   <title>Vertical gradient, with a fixed height and intrinsic ratio</title>
   <defs>
     <linearGradient id="g" x1="0%" x2="0%" y1="0%" y2="100%">
-      <stop style="stop-color: teal;" offset="0" />
-      <stop style="stop-color: orange;" offset="1" />
+      <stop stop-color="teal" offset="0" />
+      <stop stop-color="orange" offset="1" />
     </linearGradient>
   </defs>
-  <rect style="fill: url(#g);" width="100%" height="100%" />
+  <rect fill="url('#g')" width="100%" height="100%" />
 </svg>
 ```
 
@@ -94,11 +93,11 @@ This image doesn't specify either a width or a height; instead, it specifies an 
   <title>Intrinsic ratio</title>
   <defs>
     <linearGradient id="g" x1="0%" x2="100%" y1="0%" y2="0%">
-      <stop style="stop-color: navy;" offset="0" />
-      <stop style="stop-color: maroon;" offset="1" />
+      <stop stop-color="navy" offset="0" />
+      <stop stop-color="maroon" offset="1" />
     </linearGradient>
   </defs>
-  <rect style="fill: url(#g);" width="100%" height="100%" />
+  <rect fill="url('#g')" width="100%" height="100%" />
 </svg>
 ```
 
@@ -140,7 +139,7 @@ div {
 
 ```css live-sample___scaling1
 div {
-  background-image: url(no-dimensions-or-ratio.svg);
+  background-image: url("no-dimensions-or-ratio.svg");
   background-size: 125px 175px;
 }
 ```
@@ -166,7 +165,7 @@ div {
 
 ```css live-sample___scaling2
 div {
-  background-image: url(100px-wide-no-height-or-ratio.svg);
+  background-image: url("100px-wide-no-height-or-ratio.svg");
   background-size: 250px 150px;
 }
 ```
@@ -192,7 +191,7 @@ div {
 
 ```css live-sample___scaling3
 div {
-  background-image: url(100px-height-3x4-ratio.svg);
+  background-image: url("100px-height-3x4-ratio.svg");
   background-size: 275px 125px;
 }
 ```
@@ -218,7 +217,7 @@ div {
 
 ```css live-sample___scaling4
 div {
-  background-image: url(no-dimensions-1x1-ratio.svg);
+  background-image: url("no-dimensions-1x1-ratio.svg");
   background-size: 250px 100px;
 }
 ```
@@ -250,7 +249,7 @@ div {
 
 ```css live-sample___cc1
 div {
-  background-image: url(no-dimensions-or-ratio.svg);
+  background-image: url("no-dimensions-or-ratio.svg");
   background-size: contain;
 }
 ```
@@ -276,7 +275,7 @@ div {
 
 ```css live-sample___cc2
 div {
-  background-image: url(100px-wide-no-height-or-ratio.svg);
+  background-image: url("100px-wide-no-height-or-ratio.svg");
   background-size: contain;
 }
 ```
@@ -308,7 +307,7 @@ div {
 
 ```css live-sample___cc3
 div {
-  background-image: url(100px-height-3x4-ratio.svg);
+  background-image: url("100px-height-3x4-ratio.svg");
   background-size: contain;
 }
 ```
@@ -334,7 +333,7 @@ div {
 
 ```css live-sample___cc5
 div {
-  background-image: url(100px-height-3x4-ratio.svg);
+  background-image: url("100px-height-3x4-ratio.svg");
   background-size: cover;
 }
 ```
@@ -364,7 +363,7 @@ div {
 
 ```css live-sample___cc6
 div {
-  background-image: url(no-dimensions-1x1-ratio.svg);
+  background-image: url("no-dimensions-1x1-ratio.svg");
   background-size: contain;
 }
 ```
@@ -390,7 +389,7 @@ div {
 
 ```css live-sample___cc7
 div {
-  background-image: url(no-dimensions-1x1-ratio.svg);
+  background-image: url("no-dimensions-1x1-ratio.svg");
   background-size: cover;
 }
 ```
@@ -422,7 +421,7 @@ div {
 
 ```css live-sample___both-auto1
 div {
-  background-image: url(no-dimensions-or-ratio.svg);
+  background-image: url("no-dimensions-or-ratio.svg");
   background-size: auto auto;
 }
 ```
@@ -448,7 +447,7 @@ div {
 
 ```css live-sample___both-auto2
 div {
-  background-image: url(100px-wide-no-height-or-ratio.svg);
+  background-image: url("100px-wide-no-height-or-ratio.svg");
   background-size: auto auto;
 }
 ```
@@ -476,7 +475,7 @@ div {
 
 ```css live-sample___both-auto3
 div {
-  background-image: url(100px-height-3x4-ratio.svg);
+  background-image: url("100px-height-3x4-ratio.svg");
   background-size: auto auto;
 }
 ```
@@ -504,7 +503,7 @@ div {
 
 ```css live-sample___both-auto4
 div {
-  background-image: url(no-dimensions-1x1-ratio.svg);
+  background-image: url("no-dimensions-1x1-ratio.svg");
   background-size: auto auto;
 }
 ```
@@ -534,7 +533,7 @@ div {
 
 ```css live-sample___auto0
 div {
-  background-image: url(no-dimensions-or-ratio.svg);
+  background-image: url("no-dimensions-or-ratio.svg");
   background-size: auto 140px;
 }
 ```
@@ -562,7 +561,7 @@ div {
 
 ```css live-sample___auto1
 div {
-  background-image: url(100px-wide-no-height-or-ratio.svg);
+  background-image: url("100px-wide-no-height-or-ratio.svg");
   background-size: 200px auto;
 }
 ```
@@ -586,7 +585,7 @@ div {
 
 ```css live-sample___auto2
 div {
-  background-image: url(100px-wide-no-height-or-ratio.svg);
+  background-image: url("100px-wide-no-height-or-ratio.svg");
   background-size: auto 125px;
 }
 ```
@@ -614,7 +613,7 @@ div {
 
 ```css live-sample___auto3
 div {
-  background-image: url(100px-height-3x4-ratio.svg);
+  background-image: url("100px-height-3x4-ratio.svg");
   background-size: 150px auto;
 }
 ```
@@ -642,7 +641,7 @@ div {
 
 ```css live-sample___auto4
 div {
-  background-image: url(no-dimensions-1x1-ratio.svg);
+  background-image: url("no-dimensions-1x1-ratio.svg");
   background-size: 150px auto;
 }
 ```

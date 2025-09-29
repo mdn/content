@@ -23,11 +23,8 @@ read(formats)
 ### Parameters
 
 - `formats` {{optional_inline}}
-
   - : An optional object with the following properties:
-
     - `unsanitized` {{optional_inline}}
-
       - : An {{jsxref("Array")}} of strings containing MIME types of data formats that should not be sanitized when reading from the clipboard.
 
         Certain browsers may sanitize the clipboard data when it is read, to prevent malicious content from being pasted into the document. For example, Chrome (and other Chromium-based browsers) sanitizes HTML data by stripping `<script>` tags and other potentially dangerous content. Use the `unsanitized` array to specify a list of MIME types that should not be sanitized.
@@ -208,8 +205,7 @@ async function pasteData() {
         mimeTypeElement.innerText = `MIME type: ${mimeType}`;
         destinationDiv.appendChild(mimeTypeElement);
         if (mimeType === "image/png") {
-          const pngImage = new Image(); // Image constructor
-          pngImage.src = "image1.png";
+          const pngImage = new Image();
           pngImage.alt = "PNG image from clipboard";
           const blob = await item.getType("image/png");
           pngImage.src = URL.createObjectURL(blob);

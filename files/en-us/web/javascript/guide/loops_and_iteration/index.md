@@ -2,9 +2,9 @@
 title: Loops and iteration
 slug: Web/JavaScript/Guide/Loops_and_iteration
 page-type: guide
+sidebar: jssidebar
 ---
 
-{{jsSidebar("JavaScript Guide")}}
 {{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling", "Web/JavaScript/Guide/Functions")}}
 
 Loops offer a quick and easy way to do something repeatedly. This
@@ -354,7 +354,7 @@ checkIandJ: while (i < 4) {
     console.log(j);
     j -= 1;
     if (j % 2 === 0) {
-      continue checkJ;
+      continue;
     }
     console.log(j, "is odd.");
   }

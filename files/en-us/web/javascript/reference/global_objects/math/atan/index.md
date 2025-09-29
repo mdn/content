@@ -1,11 +1,11 @@
 ---
 title: Math.atan()
+short-title: atan()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atan
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.atan
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Math.atan()`** static method returns the inverse tangent (in radians) of a number, that is
 

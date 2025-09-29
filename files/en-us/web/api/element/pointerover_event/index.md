@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Element.pointerover_event
 ---
 
-{{APIRef}}
+{{APIRef("Pointer Events")}}
 
 The `pointerover` event is fired when a pointing device is moved into an element's hit test boundaries.
 
@@ -92,7 +92,6 @@ para.onpointerover = (event) => {
 ## See also
 
 - Related events
-
   - {{domxref('Element/gotpointercapture_event', 'gotpointercapture')}}
   - {{domxref('Element/lostpointercapture_event', 'lostpointercapture')}}
   - {{domxref('Element/pointerenter_event', 'pointerenter')}}

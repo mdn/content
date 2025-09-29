@@ -2,12 +2,10 @@
 title: CSSPositionTryDescriptors
 slug: Web/API/CSSPositionTryDescriptors
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.CSSPositionTryDescriptors
 ---
 
-{{APIRef("CSSOM")}}{{SeeCompatTable}}
+{{APIRef("CSSOM")}}
 
 The **`CSSPositionTryDescriptors`** interface defines properties that represent the list of CSS descriptors that can be set in the body of a {{cssxref("@position-try")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule).
 
@@ -26,83 +24,83 @@ _Inherits properties from its ancestor {{domxref("CSSStyleDeclaration")}}._
 
 The following property names, in snake-case (accessed using bracket notation) and camel-case (accessed using dot notation), each represent the value of a descriptor in the corresponding `@position-try` at-rule:
 
-- `align-self` or `alignSelf` {{experimental_inline}}
+- `align-self` or `alignSelf`
   - : A string representing the value of an {{cssxref("align-self")}} descriptor.
-- `block-size` or `blockSize` {{experimental_inline}}
+- `block-size` or `blockSize`
   - : A string representing the value of a {{cssxref("block-size")}} descriptor.
-- `bottom` {{experimental_inline}}
+- `bottom`
   - : A string representing the value of a {{cssxref("bottom")}} descriptor.
-- `height` {{experimental_inline}}
+- `height`
   - : A string representing the value of a {{cssxref("height")}} descriptor.
-- `inline-size` or `inlineSize` {{experimental_inline}}
+- `inline-size` or `inlineSize`
   - : A string representing the value of an {{cssxref("inline-size")}} descriptor.
-- `inset` {{experimental_inline}}
+- `inset`
   - : A string representing the value of an {{cssxref("inset")}} descriptor.
-- `position-area` or `positionArea` {{experimental_inline}}
+- `position-area` or `positionArea`
   - : A string representing the value of a {{cssxref("position-area")}} descriptor.
-- `inset-block` or `insetBlock` {{experimental_inline}}
+- `inset-block` or `insetBlock`
   - : A string representing the value of an {{cssxref("inset-block")}} descriptor.
-- `inset-block-end` or `insetBlockEnd` {{experimental_inline}}
+- `inset-block-end` or `insetBlockEnd`
   - : A string representing the value of an {{cssxref("inset-block-end")}} descriptor.
-- `inset-block-start` or `insetBlockStart` {{experimental_inline}}
+- `inset-block-start` or `insetBlockStart`
   - : A string representing the value of an {{cssxref("inset-block-start")}} descriptor.
-- `inset-inline` or `insetInline` {{experimental_inline}}
+- `inset-inline` or `insetInline`
   - : A string representing the value of an {{cssxref("inset-inline")}} descriptor.
-- `inset-inline-end` or `insetInlineEnd` {{experimental_inline}}
+- `inset-inline-end` or `insetInlineEnd`
   - : A string representing the value of an {{cssxref("inset-inline-end")}} descriptor.
-- `inset-inline-start` or `insetInlineStart` {{experimental_inline}}
+- `inset-inline-start` or `insetInlineStart`
   - : A string representing the value of an {{cssxref("inset-inline-start")}} descriptor.
-- `justify-self` or `justifySelf` {{experimental_inline}}
+- `justify-self` or `justifySelf`
   - : A string representing the value of a {{cssxref("justify-self")}} descriptor.
-- `left` {{experimental_inline}}
+- `left`
   - : A string representing the value of a {{cssxref("left")}} descriptor.
-- `margin` {{experimental_inline}}
+- `margin`
   - : A string representing the value of a {{cssxref("margin")}} descriptor.
-- `margin-block` or `marginBlock` {{experimental_inline}}
+- `margin-block` or `marginBlock`
   - : A string representing the value of a {{cssxref("margin-block")}} descriptor.
-- `margin-block-end` or `marginBlockEnd` {{experimental_inline}}
+- `margin-block-end` or `marginBlockEnd`
   - : A string representing the value of a {{cssxref("margin-block-end")}} descriptor.
-- `margin-block-start` or `marginBlockStart` {{experimental_inline}}
+- `margin-block-start` or `marginBlockStart`
   - : A string representing the value of a {{cssxref("margin-block-start")}} descriptor.
-- `margin-bottom` or `marginBottom` {{experimental_inline}}
+- `margin-bottom` or `marginBottom`
   - : A string representing the value of a {{cssxref("margin-bottom")}} descriptor.
-- `margin-inline` or `marginInline` {{experimental_inline}}
+- `margin-inline` or `marginInline`
   - : A string representing the value of a {{cssxref("margin-inline")}} descriptor.
-- `margin-inline-end` or `marginInlineEnd` {{experimental_inline}}
+- `margin-inline-end` or `marginInlineEnd`
   - : A string representing the value of a {{cssxref("margin-inline-end")}} descriptor.
-- `margin-inline-start` or `marginInlineStart` {{experimental_inline}}
+- `margin-inline-start` or `marginInlineStart`
   - : A string representing the value of a {{cssxref("margin-inline-start")}} descriptor.
-- `margin-left` or `marginLeft` {{experimental_inline}}
+- `margin-left` or `marginLeft`
   - : A string representing the value of a {{cssxref("margin-left")}} descriptor.
-- `margin-right` or `marginRight` {{experimental_inline}}
+- `margin-right` or `marginRight`
   - : A string representing the value of a {{cssxref("margin-right")}} descriptor.
-- `margin-top` or `marginTop` {{experimental_inline}}
+- `margin-top` or `marginTop`
   - : A string representing the value of a {{cssxref("margin-top")}} descriptor.
-- `max-block-size` or `maxBlockSize` {{experimental_inline}}
+- `max-block-size` or `maxBlockSize`
   - : A string representing the value of a {{cssxref("max-block-size")}} descriptor.
-- `max-height` or `maxHeight` {{experimental_inline}}
+- `max-height` or `maxHeight`
   - : A string representing the value of a {{cssxref("max-height")}} descriptor.
-- `max-inline-size` or `maxInlineSize` {{experimental_inline}}
+- `max-inline-size` or `maxInlineSize`
   - : A string representing the value of a {{cssxref("max-inline-size")}} descriptor.
-- `max-width` or `maxWidth` {{experimental_inline}}
+- `max-width` or `maxWidth`
   - : A string representing the value of a {{cssxref("max-width")}} descriptor.
-- `min-block-size` or `minBlockSize` {{experimental_inline}}
+- `min-block-size` or `minBlockSize`
   - : A string representing the value of a {{cssxref("min-block-size")}} descriptor.
-- `min-height` or `minHeight` {{experimental_inline}}
+- `min-height` or `minHeight`
   - : A string representing the value of a {{cssxref("min-height")}} descriptor.
-- `min-inline-size` or `minInlineSize` {{experimental_inline}}
+- `min-inline-size` or `minInlineSize`
   - : A string representing the value of a {{cssxref("min-inline-size")}} descriptor.
-- `min-width` or `minWidth` {{experimental_inline}}
+- `min-width` or `minWidth`
   - : A string representing the value of a {{cssxref("min-width")}} descriptor.
-- `place-self` or `placeSelf` {{experimental_inline}}
+- `place-self` or `placeSelf`
   - : A string representing the value of a {{cssxref("place-self")}} descriptor.
-- `position-anchor` or `positionAnchor` {{experimental_inline}}
+- `position-anchor` or `positionAnchor`
   - : A string representing the value of a {{cssxref("position-anchor")}} descriptor.
-- `right` {{experimental_inline}}
+- `right`
   - : A string representing the value of a {{cssxref("right")}} descriptor.
-- `top` {{experimental_inline}}
+- `top`
   - : A string representing the value of a {{cssxref("top")}} descriptor.
-- `width` {{experimental_inline}}
+- `width`
   - : A string representing the value of a {{cssxref("width")}} descriptor.
 
 ## Instance methods
@@ -117,7 +115,7 @@ The CSS includes a `@position-try` at-rule with a name of `--custom-right` and t
 @position-try --custom-right {
   position-area: right;
   width: 100px;
-  margin: 0 0 0 10px;
+  margin-left: 10px;
 }
 ```
 
