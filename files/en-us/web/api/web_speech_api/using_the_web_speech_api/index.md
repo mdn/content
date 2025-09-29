@@ -316,7 +316,7 @@ The Web Speech API has a main controller interface for this — {{domxref("Speec
 
 ### Demo
 
-To show usage of Web speech synthesis, we've provided a demo called [Speak easy synthesis](https://github.com/mdn/dom-examples/tree/main/web-speech-api/speak-easy-synthesis). This includes a set of form controls for entering text to be synthesized, and setting the pitch, rate, and voice to use when the text is uttered. After you have entered your text, you can press <kbd>Enter</kbd>/<kbd>Return</kbd> to hear it spoken.
+To demonstrate how to use web speech synthesis, we've created a sample app called [Speech synthesiser](https://github.com/mdn/dom-examples/tree/main/web-speech-api/speak-easy-synthesis). It has an input field for entering the text to be synthesized. You can adjust the rate and pitch and also select a voice from the dropdown menu to use for the spoken text. After you've entered your text, press <kbd>Enter</kbd>/<kbd>Return</kbd> or click the **Play** button to hear the text read aloud.
 
 ![UI of an app called speak easy synthesis. It has an input field in which to input text to be synthesized, slider controls to change the rate and pitch of the speech, and a drop down menu to choose between different voices.](speak-easy-synthesis.png)
 
