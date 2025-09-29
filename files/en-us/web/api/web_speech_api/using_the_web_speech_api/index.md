@@ -286,7 +286,7 @@ const phraseData = [
 ];
 ```
 
-These need to be represented as an `ObservableArray` of `SpeechRecognitionPhrase` objects. We can handle this by mapping the original array, converting each array element into a `SpeechRecognitionPhrase` object using the {{domxref("SpeechRecognitionPhrase.SpeechRecognitionPhrase", "SpeechRecognitionPhrase()")}} constructor:
+These need to be represented as an `ObservableArray` of `SpeechRecognitionPhrase` objects. We handle this by mapping the original array to convert each array element into a `SpeechRecognitionPhrase` object using the {{domxref("SpeechRecognitionPhrase.SpeechRecognitionPhrase", "SpeechRecognitionPhrase()")}} constructor:
 
 ```js
 const phraseObjects = phraseData.map(
