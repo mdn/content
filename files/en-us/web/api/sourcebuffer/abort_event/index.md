@@ -8,7 +8,7 @@ browser-compat: api.SourceBuffer.abort_event
 
 {{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}
 
-The **`abort`** event is fired when the buffer is aborted, such as when the {{domxref("SourceBuffer.abort()")}} method is called. The {{domxref("SourceBuffer.updating", "updating")}} attribute is set to `false`.
+The **`abort`** event of the {{domxref("SourceBuffer")}} interface is fired when the buffer appending is aborted, because the {{domxref("SourceBuffer.abort()")}} or {{domxref("SourceBuffer.removeSourceBuffer()")}} method is called while the {{domxref("SourceBuffer.appendBuffer()")}} algorithm is still running. The {{domxref("SourceBuffer.updating", "updating")}} property transitions from `true` to `false`. This event is fired before the {{domxref("SourceBuffer.updateend_event", "updateend")}} event.
 
 ## Syntax
 
@@ -31,43 +31,28 @@ A generic {{domxref("Event")}}.
 This example demonstrates how to abort an append operation and handle the `abort` event.
 
 ```js
-const video = document.getElementById("myVideo");
-const mediaSource = new MediaSource();
-
-video.src = URL.createObjectURL(mediaSource);
-
-mediaSource.addEventListener("sourceopen", () => {
-  const sourceBuffer = mediaSource.addSourceBuffer(
-    'video/mp4; codecs="avc1.42E01E"',
-  );
-  let fetchingData = true;
-
-  sourceBuffer.addEventListener("abort", (event) => {
-    console.log("SourceBuffer abort:", event);
-    fetchingData = false;
-    // Handle the abort event, e.g., display a message, try to re-fetch.
-  });
-
-  fetch("video-data.mp4")
-    .then((response) => response.arrayBuffer())
-    .then((data) => {
-      if (fetchingData) {
-        sourceBuffer.appendBuffer(data);
-      }
-    })
-    .catch((error) => {
-      console.error("Fetch error:", error);
-    });
-
-  // Abort the append operation after 1 second
-  setTimeout(() => {
+const sourceBuffer = source.addSourceBuffer(mimeCodec);
+sourceBuffer.addEventListener("abort", () => {
+  downloadStatus.textContent = "Canceled";
+});
+sourceBuffer.addEventListener("update", () => {
+  downloadStatus.textContent = "Done";
+});
+sourceBuffer.addEventListener("updateend", () => {
+  source.endOfStream();
+});
+cancelButton.addEventListener("click", () => {
+  if (sourceBuffer.updating) {
     sourceBuffer.abort();
-  }, 1000);
+  }
 });
-
-mediaSource.addEventListener("sourceended", () => {
-  URL.revokeObjectURL(video.src);
-});
+downloadStatus.textContent = "Downloading...";
+fetch(assetURL)
+  .then((response) => response.arrayBuffer())
+  .then((data) => {
+    downloadStatus.textContent = "Decoding...";
+    sourceBuffer.appendBuffer(data);
+  });
 ```
 
 ## Specifications

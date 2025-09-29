@@ -8,7 +8,7 @@ browser-compat: api.SourceBuffer.update_event
 
 {{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}
 
-The **`update`** event signals the successful completion of an {{domxref("SourceBuffer.appendBuffer()")}} or {{domxref("SourceBuffer.remove()")}} operation. The {{domxref("SourceBuffer.updating", "updating")}} attribute transitions from `true` to `false`. This event is fired before the {{domxref("SourceBuffer.updateend_event", "updateend")}} event.
+The **`update`** event of the {{domxref("SourceBuffer")}} interface signals the successful completion of an {{domxref("SourceBuffer.appendBuffer()")}} or {{domxref("SourceBuffer.remove()")}} operation. The {{domxref("SourceBuffer.updating", "updating")}} attribute transitions from `true` to `false`. This event is fired before the {{domxref("SourceBuffer.updateend_event", "updateend")}} event.
 
 ## Syntax
 
@@ -31,31 +31,23 @@ A generic {{domxref("Event")}}.
 This example demonstrates how to handle the `update` event after a successful `appendBuffer()` operation.
 
 ```js
-const video = document.getElementById("myVideo");
-const mediaSource = new MediaSource();
-
-video.src = URL.createObjectURL(mediaSource);
-
-mediaSource.addEventListener("sourceopen", () => {
-  const sourceBuffer = mediaSource.addSourceBuffer(
-    'video/mp4; codecs="avc1.42E01E"',
-  );
-
-  sourceBuffer.addEventListener("update", (event) => {
-    console.log("SourceBuffer update:", event);
-    // Continue with next action, e.g., append more data, change playback rate.
+const sourceBuffer = source.addSourceBuffer(mimeCodec);
+sourceBuffer.addEventListener("error", () => {
+  downloadStatus.textContent = "Error occurred during decoding";
+});
+sourceBuffer.addEventListener("update", () => {
+  downloadStatus.textContent = "Done";
+});
+sourceBuffer.addEventListener("updateend", () => {
+  source.endOfStream();
+});
+downloadStatus.textContent = "Downloading...";
+fetch(assetURL)
+  .then((response) => response.arrayBuffer())
+  .then((data) => {
+    downloadStatus.textContent = "Decoding...";
+    sourceBuffer.appendBuffer(data);
   });
-
-  fetch("video-data.mp4")
-    .then((response) => response.arrayBuffer())
-    .then((data) => {
-      sourceBuffer.appendBuffer(data);
-    });
-});
-
-mediaSource.addEventListener("sourceended", () => {
-  URL.revokeObjectURL(video.src);
-});
 ```
 
 ## Specifications

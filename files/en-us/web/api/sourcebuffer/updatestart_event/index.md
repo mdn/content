@@ -8,7 +8,7 @@ browser-compat: api.SourceBuffer.updatestart_event
 
 {{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}
 
-The **`updatestart`** event signals the begining of an {{domxref("SourceBuffer.appendBuffer()")}} or {{domxref("SourceBuffer.remove()")}} operation. The {{domxref("SourceBuffer.updating", "updating")}} attribute transitions from `false` to `true` when this event is fired.
+The **`updatestart`** event of the {{domxref("SourceBuffer")}} interface signals the beginning of an {{domxref("SourceBuffer.appendBuffer", "appendBuffer()")}} or {{domxref("SourceBuffer.remove", "remove()")}} operation. The {{domxref("SourceBuffer.updating", "updating")}} attribute transitions from `false` to `true`.
 
 ## Syntax
 
@@ -26,35 +26,15 @@ A generic {{domxref("Event")}}.
 
 ## Examples
 
-### Handling the updatestart event before appending data
-
-This example demonstrates how to handle the `updatestart` event before an `appendBuffer()` operation.
+### Listening for the updatestart event
 
 ```js
-const video = document.getElementById("myVideo");
-const mediaSource = new MediaSource();
-
-video.src = URL.createObjectURL(mediaSource);
-
-mediaSource.addEventListener("sourceopen", () => {
-  const sourceBuffer = mediaSource.addSourceBuffer(
-    'video/mp4; codecs="avc1.42E01E"',
-  );
-
-  sourceBuffer.addEventListener("updatestart", (event) => {
-    console.log("SourceBuffer updatestart:", event);
-    // Perform setup, e.g., show a loading indicator.
-  });
-
-  fetch("video-data.mp4")
-    .then((response) => response.arrayBuffer())
-    .then((data) => {
-      sourceBuffer.appendBuffer(data);
-    });
+const sourceBuffer = source.addSourceBuffer(mimeCodec);
+sourceBuffer.addEventListener("updatestart", () => {
+  downloadStatus.textContent = "Modifying buffer...";
 });
-
-mediaSource.addEventListener("sourceended", () => {
-  URL.revokeObjectURL(video.src);
+sourceBuffer.addEventListener("updateend", () => {
+  downloadStatus.textContent = "Modification complete";
 });
 ```
 

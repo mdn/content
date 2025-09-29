@@ -8,7 +8,7 @@ browser-compat: api.SourceBuffer.updateend_event
 
 {{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}
 
-The **`updateend`** event signals the (not necessarily successful) completion of an {{domxref("SourceBuffer.appendBuffer()")}} or {{domxref("SourceBuffer.remove()")}} operation. The {{domxref("SourceBuffer.updating", "updating")}} attribute transitions from `true` to `false`. This event is fired after the {{domxref("SourceBuffer.update_event", "update")}}, {{domxref("SourceBuffer.error_event", "error")}}, or {{domxref("SourceBuffer.abort_event", "abort")}} events.
+The **`updateend`** event of the {{domxref("SourceBuffer")}} interface signals the (not necessarily successful) completion of an {{domxref("SourceBuffer.appendBuffer", "appendBuffer()")}} or {{domxref("SourceBuffer.remove", "remove()")}} operation. The {{domxref("SourceBuffer.updating", "updating")}} attribute transitions from `true` to `false`. This event is fired after the {{domxref("SourceBuffer.update_event", "update")}}, {{domxref("SourceBuffer.error_event", "error")}}, or {{domxref("SourceBuffer.abort_event", "abort")}} events.
 
 ## Syntax
 
@@ -28,34 +28,29 @@ A generic {{domxref("Event")}}.
 
 ### Handling the updateend event after appending data
 
-This example demonstrates how to handle the `updateend` event after a successful `appendBuffer()` operation.
+This example demonstrates how to handle the `updateend` event. Note that we handle each completion event separately, and only use `updateend` for finalizing the stream.
 
 ```js
-const video = document.getElementById("myVideo");
-const mediaSource = new MediaSource();
-
-video.src = URL.createObjectURL(mediaSource);
-
-mediaSource.addEventListener("sourceopen", () => {
-  const sourceBuffer = mediaSource.addSourceBuffer(
-    'video/mp4; codecs="avc1.42E01E"',
-  );
-
-  sourceBuffer.addEventListener("updateend", (event) => {
-    console.log("SourceBuffer updateend:", event);
-    // Perform any cleanup or finalization steps.
+const sourceBuffer = source.addSourceBuffer(mimeCodec);
+sourceBuffer.addEventListener("abort", () => {
+  downloadStatus.textContent = "Canceled";
+});
+sourceBuffer.addEventListener("error", () => {
+  downloadStatus.textContent = "Error occurred during decoding";
+});
+sourceBuffer.addEventListener("update", () => {
+  downloadStatus.textContent = "Done";
+});
+sourceBuffer.addEventListener("updateend", () => {
+  source.endOfStream();
+});
+downloadStatus.textContent = "Downloading...";
+fetch(assetURL)
+  .then((response) => response.arrayBuffer())
+  .then((data) => {
+    downloadStatus.textContent = "Decoding...";
+    sourceBuffer.appendBuffer(data);
   });
-
-  fetch("video-data.mp4")
-    .then((response) => response.arrayBuffer())
-    .then((data) => {
-      sourceBuffer.appendBuffer(data);
-    });
-});
-
-mediaSource.addEventListener("sourceended", () => {
-  URL.revokeObjectURL(video.src);
-});
 ```
 
 ## Specifications
