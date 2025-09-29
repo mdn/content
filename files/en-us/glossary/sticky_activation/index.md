@@ -14,7 +14,7 @@ The state is enabled following any user interaction, when the window has focus, 
 - A `pointerup` event for any other kind of pointer.
 - A `touchend` event.
 - A `keydown` event, other than for the escape or browser shortcut keys.
-The window is not user activated by events that don't indicate intentional interaction with the window, such as mouse move events or `wheel` events.
+The window is not user-activated by events that don't indicate intentional interaction with the window, such as mouse move events or `wheel` events.
 
 Sticky activation is used to control access to certain features, blocking them if the user hasn't interacted with the page.
 For example, it can be used to ensure that controlled features in cross-origin frames don't run code on page load.
