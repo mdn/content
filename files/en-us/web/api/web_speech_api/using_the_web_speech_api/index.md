@@ -243,9 +243,9 @@ The `available()` method takes an options object containing two properties:
 
 When run, this method returns a {{jsxref("Promise")}} that resolves with an enumerated value indicating the availability of the specified languages. In our demo, we test for three conditions:
 
-- If the resulting value is `unavailable`, it means that the language is not available, and a suitable language pack is not available to download, so we print an appropriate message to the output.
+- If the resulting value is `unavailable`, it means that no suitable language pack is available to download. We also print an appropriate message to the output.
 - If the resulting value is `available`, it means that the language pack is available locally, so recognition can begin. In this case, we run `start()` and log a message to the console when the app is ready to receive speech.
-- If the value is something else (`downloadable` or `downloading`), we print a diagnostic message to inform the user that a language code download is commencing, then run the `install()` method to handle the download.
+- If the value is something else (`downloadable` or `downloading`), we print a diagnostic message to inform the user that a language pack download is starting, then run the `install()` method to handle the download.
 
 The `install()` method works in a similar way to the `available()` method, except that its options object only takes the `langs` array. When run, it starts downloading all the language packs for the languages indicated in `langs` and returns a {{jsxref("Promise")}} that resolves with a boolean indicating whether the specified language packs were downloaded and installed successfully (`true`) or not (`false`).
 
