@@ -7,19 +7,23 @@ browser-compat: api.CSSStyleDeclaration
 
 {{APIRef("CSSOM")}}
 
-The **`CSSStyleDeclaration`** interface represents an object that is a CSS declaration block, and exposes style information and various style-related methods and properties.
+The **`CSSStyleDeclaration`** interface is the base class for objects that represent CSS declaration blocks with different supported sets of CSS style information:
 
-A `CSSStyleDeclaration` object can be exposed using three different APIs:
+- {{domxref("CSSStyleProperties")}} — CSS styles declared in stylesheet, as returned by {{domxref("CSSStyleRule.style")}}, inline styles for an element such as and {{DOMxRef("HTMLElement/style","HTMLElement")}}, {{domxref("SVGElement/style","SVGElement")}}, and {{domxref("MathMLElement/style","MathMLElement")}}, or the computed style for an element returned by {{DOMxRef("Window.getComputedStyle()")}}.
+- {{domxref("CSSPageDescriptors")}} — Styles for CSS at-rules.
 
-- Via {{DOMxRef("HTMLElement.style")}}, which deals with the inline styles of a single element (e.g., `<div style="…">`).
-- Via the {{DOMxRef("CSSStyleSheet")}} API.
-  For example, `document.styleSheets[0].cssRules[0].style` returns a `CSSStyleDeclaration` object on the first CSS rule in the document's first stylesheet.
-- Via {{DOMxRef("Window.getComputedStyle()")}}, which exposes the `CSSStyleDeclaration` object as a **read-only** interface.
+The interface exposes style information and various style-related methods and properties.
+For example, it provides {{DOMxRef("CSSStyleDeclaration/getPropertyValue","getPropertyValue()" )}} for getting the value of a dash-named CSS property, such as `border-top`, which can't be directly accesses using dot notation because of the hyphens in its name.
+
+> [!NOTE]
+> Earlier versions of the specification used `CSSStyleDeclaration` to represent all CSS declaration blocks, and some browsers and browser versions may still do so (check the browser compatibility tables for the above APIs).
+> Generally the same website code will "work" in both old and new versions, but some of the properties returned in a `CSSStyleDeclaration` may not be relevant in a particular context.
 
 ## Attributes
 
 - {{DOMxRef("CSSStyleDeclaration.cssText")}}
-  - : Textual representation of the declaration block, if and only if it is exposed via {{DOMxRef("HTMLElement.style")}}. Setting this attribute changes the inline style.
+  - : Textual representation of the declaration block, if and only if it is exposed via {{DOMxRef("HTMLElement.style")}}.
+    Setting this attribute changes the inline style.
     If you want a text representation of a computed declaration block, you can get it with `JSON.stringify()`.
 - {{DOMxRef("CSSStyleDeclaration.length")}} {{ReadOnlyInline}}
   - : The number of properties.
