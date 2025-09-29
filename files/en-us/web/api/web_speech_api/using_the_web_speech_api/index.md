@@ -129,7 +129,7 @@ startBtn.onclick = function () {
 
 #### Receiving and handling results
 
-Once the speech recognition is started, there are many event handlers that can be used to retrieve results and other pieces of surrounding information (see the [`SpeechRecognition` events](/en-US/docs/Web/API/SpeechRecognition#events).) The most common one you'll probably use is the {{domxref("SpeechRecognition.result_event", "result")}} event, which is fired once a successful result is received:
+Once the speech recognition has started, several event handlers become available, which you can use to retrieve results and other related information (see [Events](/en-US/docs/Web/API/SpeechRecognition#events) for `SpeechRecognition`). The most common one is the {{domxref("SpeechRecognition.result_event", "result")}} event, which fires after a successful result is received:
 
 ```js
 recognition.onresult = (event) => {
