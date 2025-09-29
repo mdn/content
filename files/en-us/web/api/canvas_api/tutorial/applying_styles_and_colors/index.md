@@ -636,7 +636,7 @@ draw();
 
 The first gradient is positioned in the center of the first rectangle and moves a green color stop at the start, to a white one at the end. The angle starts at 2 radians, which is noticeable because of the beginning/end line pointing south east.
 
-The second gradient is also positioned at the center of its second rectangle. This one has multiple color stops, alternating from black to white at each quarter of the rotation. This gives us the checkered effect.
+The second gradient is also positioned at the center of the second rectangle. This one has multiple color stops, alternating from black to white at each quarter of the rotation. This gives us the checkered effect.
 
 {{EmbedLiveSample("A_createConicGradient_example", "", "160")}}
 
