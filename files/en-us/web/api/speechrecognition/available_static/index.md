@@ -27,7 +27,7 @@ available(options)
     - `langs`
       - : An array of one or more strings containing {{glossary("BCP 47 language tag", "BCP 47 language tags")}}, each representing a language to check for availability. Passing an empty `langs` array will not throw an error, but the return value will always resolve to `unavailable`.
     - `processLocally` {{optional_inline}}
-      - : A boolean that specifies whether you are checking availability of the specified languages for [on-device speech recognition](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#on-device_speech_recognition) (`true`) or availability of the specified languages for on-device _or_ remote speech recognition (`false`). Defaults to `false`.
+      - : A boolean that specifies whether to check availability of the languages only for [on-device speech recognition](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#on-device_speech_recognition) (`true`) or for on-device _or_ remote speech recognition (`false`). The default value is `false`.
         > [!NOTE]
         > It is not possible to use `available()` to determine whether a remote service is guaranteed to support the specified languages. A value of `false` means that either an on-device _or_ remote speech recognition service supports the specified languages.
 
