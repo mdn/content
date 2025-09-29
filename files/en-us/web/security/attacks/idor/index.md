@@ -7,7 +7,7 @@ sidebar: security
 
 **Insecure Direct Object Reference (IDOR)** is a vulnerability that allows an attacker to exploit insufficient access control and insecure exposure of object identifiers, such as database keys or file paths.
 
-Websites often want to serve different content to different users: for example, a shopping website might let each user view their purchase history. Websites can identify users by authenticating them, using a method such as a password or a passkey. Often, once a website has authenticated a user, they will set a session cookie in that user's browser: then, when the user makes a request, the server will know that the request came from this authenticated user.
+Websites often want to serve different content to different users: for example, a shopping website might let each user view their purchase history. Websites can identify users by {{glossary("Authentication", "authenticating")}} them, using a method such as a password or a passkey. Often, once a website has authenticated a user, they will set a session cookie in that user's browser: then, when the user makes a request, the server will know that the request came from this authenticated user.
 
 However, as well as checking that the request came from an authenticated user, the server must implement access control for the resources that the user requests: that is, they must check that this user is allowed to access the specific resource requested. For example, each authenticated user must only be allowed to see their own purchase history.
 
@@ -36,7 +36,7 @@ https://example.org/user/id/1234
 https://example.org/user/id/1235
 ```
 
-For example, in the Express code below, the value given in the URL is available as `req.params.id`, and we use that value to retrieve the corresponding record in the database. We also check that the request is from an authenticated user, by (calling the `isAuthenticated` function). But critically, we don't check that the ID of the authenticated user matches the ID in the URL, and this enables one authenticated user (the attacker) to get a page for a different authenticated user (the victim).
+For example, in the [Express](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs) code below, the value given in the URL is available as `req.params.id`, and we use that value to retrieve the corresponding record in the database. We also check that the request is from an authenticated user, by (calling the `isAuthenticated` function). But critically, we don't check that the ID of the authenticated user matches the ID in the URL, and this enables one authenticated user (the attacker) to get a page for a different authenticated user (the victim).
 
 ```js example-bad
 app.get("/user/id/:id", (req, res) => {
