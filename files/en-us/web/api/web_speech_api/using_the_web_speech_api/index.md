@@ -185,7 +185,7 @@ This section explains how to use on-device speech recognition.
 
 ### Demo
 
-To demonstrate usage of on-device speech recognition, we've written a demo called [On-device speech color changer](https://github.com/mdn/dom-examples/tree/main/web-speech-api/on-device-speech-color-changer) ([run the demo live](https://mdn.github.io/dom-examples/web-speech-api/speech-color-changer/)).
+To demonstrate on-device speech recognition, we've created a sample app called [On-device speech color changer](https://github.com/mdn/dom-examples/tree/main/web-speech-api/on-device-speech-color-changer) ([run the demo live](https://mdn.github.io/dom-examples/web-speech-api/on-device-speech-color-changer/)).
 
 This demo works in a very similar fashion to the online speech color changer demo discussed earlier, with the differences noted below.
 
