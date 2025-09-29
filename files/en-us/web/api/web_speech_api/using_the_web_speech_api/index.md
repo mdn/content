@@ -324,7 +324,7 @@ To run the demo, navigate to the [live demo URL](https://mdn.github.io/dom-examp
 
 ### HTML and CSS
 
-The HTML and CSS are again pretty trivial, containing a title, some instructions for use, and a form with some basic controls. The {{htmlelement("select")}} element is initially empty, but is populated with {{htmlelement("option")}}s via JavaScript (see later on.)
+The HTML and CSS for this app are pretty basic. There's a title, some instructions for use, and a form with some basic controls. The {{htmlelement("select")}} element is initially empty; it is populated with {{htmlelement("option")}}s via JavaScript (covered later).
 
 ```html
 <h1>Speech synthesizer</h1>
