@@ -253,9 +253,9 @@ For this demo, we print a diagnostic message to indicate the success and failure
 
 ### Permissions-policy integration
 
-Usage of the `available()` and `install()` methods is controlled by the {{httpheader("Permissions-Policy/on-device-speech-recognition", "on-device-speech-recognition")}} {{httpheader("Permissions-Policy")}} directive. Specifically, where a defined policy blocks usage, any attempts to call these methods will fail.
+The use of the `available()` and `install()` methods is controlled by the {{httpheader("Permissions-Policy/on-device-speech-recognition", "on-device-speech-recognition")}} {{httpheader("Permissions-Policy")}}. Specifically, where a defined policy blocks usage, any attempts to call these methods will fail.
 
-The default allowlist value for `on-device-speech-recognition` is `self`, so you don't need to worry about this unless you are attempting to use these features in embedded cross-origin documents, or specifically want to disable their usage.
+The default allowlist value for `on-device-speech-recognition` is `self`. This means you don't need to worry about adjusting the policy unless you're attempting to use these methods in embedded cross-origin documents or want to explicitly disable their use.
 
 ### Unprefixed Web Speech API
 
