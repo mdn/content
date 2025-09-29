@@ -30,6 +30,18 @@ Firefox 144 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 - Support for the deprecated MathML STIXGeneral font has now been removed. The setting `mathml.stixgeneral_operator_stretching.disabled` has also been removed. ([Firefox bug 1336058](https://bugzil.la/1336058)).
 
+### CSS
+
+- [CSS features](/en-US/docs/Web/API/View_Transition_API#css_additions) for view transitions in single-page applications ([SPAs](/en-US/docs/Glossary/SPA)) are now supported. This provides a way to style the parts of a view transition animation. ([Firefox bug 1985809](https://bugzil.la/1985809)). These include:
+  - {{CSSXRef(":active-view-transition")}} pseudo-class
+  - {{CSSXRef("view-transition-class")}} property
+  - {{CSSXRef("view-transition-name")}} property
+  - {{CSSXRef("::view-transition")}} pseudo-element
+  - {{CSSXRef("::view-transition-group()")}} pseudo-element
+  - {{CSSXRef("::view-transition-image-pair()")}} pseudo-element
+  - {{CSSXRef("::view-transition-new()")}} pseudo-element
+  - {{CSSXRef("::view-transition-old()")}} pseudo-element
+
 <!-- ### SVG -->
 
 <!-- #### Removals -->
@@ -57,6 +69,8 @@ Firefox 144 is the current [Beta version of Firefox](https://www.firefox.com/en-
 ### APIs
 
 - The [`lock()`](/en-US/docs/Web/API/ScreenOrientation/lock) and [`unlock()`](/en-US/docs/Web/API/ScreenOrientation/unlock) methods of the {{domxref("ScreenOrientation")}} interface are now supported for Android and for Windows tablets. ([Firefox bug 1983483](https://bugzil.la/1983483))
+
+- The [View Transition API](/en-US/docs/Web/API/View_Transition_API) is now supported for [SPAs (single-page applications)](/en-US/docs/Glossary/SPA). This provides a mechanism for easily creating animated transitions between different website views. ([Firefox bug 1985809](https://bugzil.la/1985809)).
 
 #### DOM
 
