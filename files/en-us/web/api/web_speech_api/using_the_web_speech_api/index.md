@@ -103,7 +103,7 @@ recognition.maxAlternatives = 1;
 
 #### Starting the speech recognition
 
-After grabbing references to the output paragraph, the `<html>` element, the instruction paragraph, and the `<button>`, we implement an `onclick` handler. When a user presses the button, the speech recognition service starts by calling {{domxref("SpeechRecognition.start()")}}. We've also used a `forEach()` method to output colored indicators showing what colors to users can try to say.
+After grabbing references to the output paragraph, the `<html>` element, the instruction paragraph, and the `<button>`, we implement an `onclick` handler. When a user presses the button, the speech recognition service starts by calling {{domxref("SpeechRecognition.start()")}}. We've also used a `forEach()` method to output colored indicators showing what colors users can try to say.
 
 ```js
 const diagnostic = document.querySelector(".output");
