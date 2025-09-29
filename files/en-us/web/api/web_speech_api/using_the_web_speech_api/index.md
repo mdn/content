@@ -259,9 +259,9 @@ The default allowlist value for `on-device-speech-recognition` is `self`. This m
 
 ### Unprefixed Web Speech API
 
-In the original speech color changer demo, we include lines to handle the issue that some browsers still support the Web Speech API with prefixed properties (see the [Prefixed properties](#prefixed_properties) section for more details).
+In the original speech color changer demo, we included extra lines to handle browsers that support the Web Speech API only with vendor-prefixed properties (see the [Prefixed properties](#prefixed_properties) section for more details).
 
-In the on-device version, we don't include the prefix-handling code because the new implementations that support this functionality do so without prefixes.
+In the on-device version of the demo, prefix-handling code is not needed because the implementations that support this functionality do so without prefixes.
 
 ## Speech recognition contextual biasing
 
