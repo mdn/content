@@ -263,7 +263,7 @@ In the original speech color changer demo, we included extra lines to handle bro
 
 In the on-device version of the demo, prefix-handling code is not needed because the implementations that support this functionality do so without prefixes.
 
-## Speech recognition contextual biasing
+## Contextual biasing in speech recognition
 
 There are times where a speech recognition service will fail to correctly recognize a specific word or phrase. This is most commonly the case for domain-specific terminology (for example medical or scientific terms), proper nouns, uncommon phrases, or words that are similar to other words and so may be misrecognized.
 
