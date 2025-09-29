@@ -24,6 +24,14 @@ Firefox 145 is the current [Nightly version of Firefox](https://www.firefox.com/
 
 <!-- #### Removals -->
 
+<!-- ### MathML -->
+
+<!-- #### Removals -->
+
+<!-- ### SVG -->
+
+<!-- #### Removals -->
+
 <!-- ### CSS -->
 
 <!-- No notable changes. -->
@@ -33,10 +41,6 @@ Firefox 145 is the current [Nightly version of Firefox](https://www.firefox.com/
 <!-- ### JavaScript -->
 
 <!-- No notable changes. -->
-
-<!-- #### Removals -->
-
-<!-- ### SVG -->
 
 <!-- #### Removals -->
 
