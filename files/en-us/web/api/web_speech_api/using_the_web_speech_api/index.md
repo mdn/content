@@ -320,7 +320,7 @@ To demonstrate how to use web speech synthesis, we've created a sample app calle
 
 ![UI of an app called speak easy synthesis. It has an input field in which to input text to be synthesized, slider controls to change the rate and pitch of the speech, and a drop down menu to choose between different voices.](speak-easy-synthesis.png)
 
-To run the demo, navigate to the [live demo URL](https://mdn.github.io/dom-examples/web-speech-api/speak-easy-synthesis/) in a supporting browser.
+To run the demo, navigate to the [live demo URL](https://mdn.github.io/dom-examples/web-speech-api/speak-easy-synthesis/) in a [supporting browser](/en-US/docs/Web/API/SpeechSynthesis#browser_compatibility).
 
 ### HTML and CSS
 
