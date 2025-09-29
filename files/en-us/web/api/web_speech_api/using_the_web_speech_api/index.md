@@ -241,7 +241,7 @@ The `available()` method takes an options object containing two properties:
 - A `langs` array containing the languages to check availability for.
 - A `processLocally` boolean specifying whether to check for the availability of the language only on-device (`true`) _or_ either locally or via a server-based recognition service (`false`, the default).
 
-When run, this method returns a {{jsxref("Promise")}} that resolves with a enumerated value indicating the availability of the specified languages for recognition. In our case, we test for three conditions:
+When run, this method returns a {{jsxref("Promise")}} that resolves with an enumerated value indicating the availability of the specified languages. In our demo, we test for three conditions:
 
 - If the resulting value is `unavailable`, it means that the language is not available, and a suitable language pack is not available to download, so we print an appropriate message to the output.
 - If the resulting value is `available`, it means that the language pack is available locally, so recognition can begin. In this case, we run `start()` and log a message to the console when the app is ready to receive speech.
