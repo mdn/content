@@ -176,8 +176,8 @@ recognition.onerror = (event) => {
 
 Speech recognition is usually performed using an online service. This means that an audio recording is sent to a server for processing, and the results are then returned to the browser. This has a couple of problems:
 
-- Privacy: Many users are not comfortable with their speech being sent off to s server.
-- Performance: Having to send data to a server for every bit of recognition can cause a performance hit in more intensive applications, and your apps won't work offline.
+- Privacy: Many users are not comfortable with their speech being sent to a server.
+- Performance: Sending data to a server for every bit of recognition can slow down performance in more intensive applications, and your apps won't work offline.
 
 To mitigate these problems, the Web Speech API provides functionality to specify that you want your speech recognition handled on-device by the browser. There is a one-time language pack download for each language you want to recognize, but after that the functionality will be available offline.
 
