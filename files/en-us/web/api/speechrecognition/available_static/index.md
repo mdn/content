@@ -35,7 +35,7 @@ available(options)
 
 A {{domxref("Promise")}} that resolves with an enumerated value indicating the availability of the specified languages for speech recognition.
 
-Possible values are as follows.
+Possible values include:
 
 - `available`
   - : Indicates that support for all the specified languages is available.
