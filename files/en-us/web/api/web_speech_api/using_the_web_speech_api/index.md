@@ -214,18 +214,18 @@ startBtn.addEventListener("click", () => {
   SpeechRecognition.available({ langs: ["en-US"], processLocally: true }).then(
     (result) => {
       if (result === "unavailable") {
-        diagnostic.textContent = `en-US not available to download at this time. Sorry!`;
+        diagnostic.textContent = `en-US is not available to download at this time. Sorry!`;
       } else if (result === "available") {
         recognition.start();
         console.log("Ready to receive a color command.");
       } else {
-        diagnostic.textContent = `en-US language pack downloading`;
+        diagnostic.textContent = `en-US language pack is downloading...`;
         SpeechRecognition.install({
           langs: ["en-US"],
           processLocally: true,
         }).then((result) => {
           if (result) {
-            diagnostic.textContent = `en-US language pack downloaded. Try again.`;
+            diagnostic.textContent = `en-US language pack downloaded. Start recognition again.`;
           } else {
             diagnostic.textContent = `en-US language pack failed to download. Try again later.`;
           }
