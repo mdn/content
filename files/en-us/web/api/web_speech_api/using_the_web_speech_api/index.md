@@ -146,7 +146,7 @@ The second line is a bit complex, so we'll explain each part here:
 - Each `SpeechRecognitionResult` object in turn contains {{domxref("SpeechRecognitionAlternative")}} objects, each representing an individual recognized word. These also have getters, so they can be accessed like arrays — the second `[0]` returns the `SpeechRecognitionAlternative` at position `0`.
 - The `transcript` property of the `SpeechRecognitionAlternative` returns a string containing the recognized text. This value is then used to set the background color to a recognized color and also report it as a diagnostic message in the UI.
 
-We also use the {{domxref("SpeechRecognition.speechend_event", "speechend")}} event to stop the speech recognition service from running (using {{domxref("SpeechRecognition.stop()")}}) once a single word has been recognized and it has finished being spoken:
+We also use the {{domxref("SpeechRecognition.speechend_event", "speechend")}} event to stop the speech recognition service (using {{domxref("SpeechRecognition.stop()")}}) after a single word has been recognized:
 
 ```js
 recognition.onspeechend = () => {
