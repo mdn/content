@@ -206,7 +206,7 @@ To get the correct language pack installed, ensure you follow these two steps:
 1. Check whether the language pack is available on the user's device: This is handled using the {{domxref("SpeechRecognition.available_static", "SpeechRecognition.available()")}} static method.
 2. Install the language pack if it isn't available: This is handled using the {{domxref("SpeechRecognition.install_static", "SpeechRecognition.install()")}} static method.
 
-Both of the above steps are handled using the following modified `click` event handler on the app's control `<button>`:
+These steps are handled in the following `click` event handler on the app's control `<button>`:
 
 ```js
 startBtn.addEventListener("click", () => {
