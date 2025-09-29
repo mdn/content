@@ -199,9 +199,9 @@ recognition.processLocally = true;
 
 ### Checking availability and installing language packs
 
-For on-device speech recognition to occur, the browser needs to have a language pack installed for the language you are trying to recognize. If you run the `start()` method after specifying `processLocally = true` and you haven't got the correct language pack installed, it will fail with a [`language-not-supported`](/en-US/docs/Web/API/SpeechRecognitionErrorEvent/error#language-not-supported) error.
+For on-device speech recognition to work, the browser must have a language pack installed for the language you want to recognize. If you run the `start()` method after specifying `processLocally = true` but the correct language pack isn't installed, the function call will fail with a [`language-not-supported`](/en-US/docs/Web/API/SpeechRecognitionErrorEvent/error#language-not-supported) error.
 
-To get the correct language pack installed, there are two steps to follow.
+To get the correct language pack installed, ensure you follow these two steps:
 
 1. You need to check whether the language pack is available on the user's computer. This is handled using the {{domxref("SpeechRecognition.available_static", "SpeechRecognition.available()")}} static method.
 2. You need to install the language pack if it isn't available. This is handled using the {{domxref("SpeechRecognition.install_static", "SpeechRecognition.install()")}} static method.
