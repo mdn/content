@@ -271,7 +271,7 @@ For example, during testing, we found that our [On-device speech color changer](
 
 To mitigate such problems, the Web Speech API lets you provide hints to the recognition engine to highlight phrases that are more likely to be spoken and which the engine should be biased towards. This makes those words and phrases more likely to be recognized correctly.
 
-This is done by setting an array of {{domxref("SpeechRecognitionPhrase")}} objects as the value of the {{domxref("SpeechRecognition.phrases")}} property. Each `SpeechRecognitionPhrase` object contains:
+You can do this by setting an array of {{domxref("SpeechRecognitionPhrase")}} objects as the value of the {{domxref("SpeechRecognition.phrases")}} property. Each `SpeechRecognitionPhrase` object contains:
 
 - A `phrase` property, which is a string containing a word or phrase you want boosted in terms of the engine's bias towards it.
 - A `boost` property, which is a floating pointing number between `0.0` and `10.0` (inclusive) representing the amount of boost you want to give that phrase. Higher values make the phrase more likely to be recognized.
