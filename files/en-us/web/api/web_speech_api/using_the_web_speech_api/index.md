@@ -306,7 +306,7 @@ The phrases array can be modified just like a normal JavaScript array, for examp
 recognition.phrases.push(new SpeechRecognitionPhrase("thistle", 5.0));
 ```
 
-After adding in this code, we found that the problematic color keywords were recognized more accurately than before.
+With this code, we found that the problematic color keywords were recognized more accurately than before.
 
 ## Speech synthesis
 
