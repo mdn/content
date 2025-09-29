@@ -8,7 +8,7 @@ sidebar: cssref
 
 The **`font-variant-numeric`** [CSS](/en-US/docs/Web/CSS) property controls the usage of alternate glyphs for numbers, fractions, and ordinal markers.
 
-{{InteractiveExample("CSS Demo: font-variant-numeric")}}
+{{InteractiveExample("CSS Demo: font-variant-numeric", "taller")}}
 
 ```css interactive-example-choice
 font-variant-numeric: normal;
