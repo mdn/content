@@ -8,7 +8,7 @@ status:
 browser-compat: api.CanvasRenderingContext2D.lang
 ---
 
-{{APIRef}}{{SeeCompatTable}}
+{{APIRef("Canvas API")}}{{SeeCompatTable}}
 
 The **`CanvasRenderingContext2D.lang`** property of the Canvas 2D API gets or sets the language of the canvas drawing context.
 

@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.TypedArray.every
 sidebar: jsref
 ---
 
-The **`every()`** method of {{jsxref("TypedArray")}} instances tests whether all elements in the typed array pass the test implemented by the provided function. It returns a Boolean value. This method has the same algorithm as {{jsxref("Array.prototype.every()")}}.
+The **`every()`** method of {{jsxref("TypedArray")}} instances returns `false` if it finds one element in the array that does not satisfy the provided testing function. Otherwise, it returns `true`. This method has the same algorithm as {{jsxref("Array.prototype.every()")}}.
 
 {{InteractiveExample("JavaScript Demo: TypedArray.prototype.every()")}}
 

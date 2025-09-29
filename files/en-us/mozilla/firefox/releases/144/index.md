@@ -24,17 +24,29 @@ Firefox 144 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
+### MathML
+
+#### Removals
+
+- Support for the deprecated MathML STIXGeneral font has now been removed. The setting `mathml.stixgeneral_operator_stretching.disabled` has also been removed. ([Firefox bug 1336058](https://bugzil.la/1336058)).
+
 ### CSS
 
 - [CSS features](/en-US/docs/Web/API/View_Transition_API#css_additions) for view transitions in single-page applications ([SPAs](/en-US/docs/Glossary/SPA)) are now supported. This provides a way to style the parts of a view transition animation. ([Firefox bug 1985809](https://bugzil.la/1985809)). These include:
-  - The CSS {{CSSXRef(":active-view-transition")}} pseudo-class.
-  - The CSS {{CSSXRef("view-transition-class")}} property.
-  - The CSS {{CSSXRef("view-transition-name")}} property.
-  - The CSS {{CSSXRef("::view-transition")}} pseudo-element.
-  - The CSS {{CSSXRef("::view-transition-group()")}} pseudo-element.
-  - The CSS {{CSSXRef("::view-transition-image-pair()")}} pseudo-element.
-  - The CSS {{CSSXRef("::view-transition-new()")}} pseudo-element.
-  - The CSS {{CSSXRef("::view-transition-old()")}} pseudo-element.
+  - {{CSSXRef(":active-view-transition")}} pseudo-class
+  - {{CSSXRef("view-transition-class")}} property
+  - {{CSSXRef("view-transition-name")}} property
+  - {{CSSXRef("::view-transition")}} pseudo-element
+  - {{CSSXRef("::view-transition-group()")}} pseudo-element
+  - {{CSSXRef("::view-transition-image-pair()")}} pseudo-element
+  - {{CSSXRef("::view-transition-new()")}} pseudo-element
+  - {{CSSXRef("::view-transition-old()")}} pseudo-element
+
+<!-- ### SVG -->
+
+<!-- #### Removals -->
+
+<!-- ### CSS -->
 
 <!-- No notable changes. -->
 
@@ -46,19 +58,9 @@ Firefox 144 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### SVG -->
-
-<!-- #### Removals -->
-
 <!-- ### HTTP -->
 
 <!-- #### Removals -->
-
-### MathML
-
-#### Removals
-
-- Support for the deprecated MathML STIXGeneral font has now been removed. The setting `mathml.stixgeneral_operator_stretching.disabled` has also been removed. ([Firefox bug 1336058](https://bugzil.la/1336058)).
 
 <!-- ### Security -->
 
@@ -74,6 +76,8 @@ Firefox 144 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 #### Media, WebRTC, and Web Audio
 
+- Cross-origin {{htmlelement("iframe")}}s now require either user interaction ({{glossary("sticky activation")}}) or explicit permission to redirect the top-level page using `window.top.location`.
+  See [Top navigation in cross-origin frames](/en-US/docs/Web/HTML/Reference/Elements/iframe#top_navigation_in_cross-origin_frames) for more information. ([Firefox bug 1419501](https://bugzil.la/1419501)).
 - {{domxref("RTCDataChannel")}} instances are now [transferrable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects), and hence can be passed to [workers](/en-US/docs/Web/API/Worker). ([Firefox bug 1209163](https://bugzil.la/1209163)).
 - The [`closing` event](/en-US/docs/Web/API/RTCDataChannel/closing_event) and the `onclosing()` event handler are now supported on the {{domxref("RTCDataChannel")}} interface. ([Firefox bug 1611953](https://bugzil.la/1611953)).
 - The {{domxref("MediaDevices/getUserMedia","getUserMedia()")}} and {{domxref("MediaDevices/getDisplayMedia","getDisplayMedia()")}} methods of the {{domxref("MediaDevices")}} interface now support the [`resizeMode`](/en-US/docs/Web/API/MediaTrackConstraints#resizemode) constraint.

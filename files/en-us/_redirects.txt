@@ -489,7 +489,7 @@
 /en-US/docs/CSS/Getting_Started	/en-US/docs/Learn_web_development/Core/Styling_basics
 /en-US/docs/CSS/Getting_Started/Boxes	/en-US/docs/Learn_web_development/Core/Styling_basics
 /en-US/docs/CSS/Getting_Started/Cascading_and_inheritance	/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts
-/en-US/docs/CSS/Getting_Started/Challenge_solutions	/en-US/docs/Learn_web_development/Core/Challenges
+/en-US/docs/CSS/Getting_Started/Challenge_solutions	/en-US/docs/Learn_web_development/Core
 /en-US/docs/CSS/Getting_Started/Content	/en-US/docs/Learn_web_development/Howto/Solve_CSS_problems/Generated_content
 /en-US/docs/CSS/Getting_Started/How_CSS_works	/en-US/docs/Learn_web_development/Core/Styling_basics/What_is_CSS
 /en-US/docs/CSS/Getting_Started/JavaScript	/en-US/docs/Learn_web_development/Core/Scripting/DOM_scripting
@@ -5768,6 +5768,7 @@
 /en-US/docs/Learn_web_development/Core/CSS_layout/Position_skills	/en-US/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Position
 /en-US/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Multicolumn	/en-US/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout
 /en-US/docs/Learn_web_development/Core/CSS_layout/rwd_skills	/en-US/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Responsive_design
+/en-US/docs/Learn_web_development/Core/Challenges	/en-US/docs/Learn_web_development/Core
 /en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Arrays	/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills/Arrays
 /en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Conditionals	/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills/Conditionals
 /en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Events	/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills/Events
@@ -12871,7 +12872,7 @@
 /en-US/docs/Web/Guide/CSS/Getting_started	/en-US/docs/Learn_web_development/Core/Styling_basics
 /en-US/docs/Web/Guide/CSS/Getting_started/Boxes	/en-US/docs/Learn_web_development/Core/Styling_basics
 /en-US/docs/Web/Guide/CSS/Getting_started/Cascading_and_inheritance	/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts
-/en-US/docs/Web/Guide/CSS/Getting_started/Challenge_solutions	/en-US/docs/Learn_web_development/Core/Challenges
+/en-US/docs/Web/Guide/CSS/Getting_started/Challenge_solutions	/en-US/docs/Learn_web_development/Core
 /en-US/docs/Web/Guide/CSS/Getting_started/Content	/en-US/docs/Learn_web_development/Howto/Solve_CSS_problems/Generated_content
 /en-US/docs/Web/Guide/CSS/Getting_started/How_CSS_works	/en-US/docs/Learn_web_development/Core/Styling_basics/What_is_CSS
 /en-US/docs/Web/Guide/CSS/Getting_started/JavaScript	/en-US/docs/Learn_web_development/Core/Scripting/DOM_scripting
