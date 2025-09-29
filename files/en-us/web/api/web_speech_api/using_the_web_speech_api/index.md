@@ -203,8 +203,8 @@ For on-device speech recognition to work, the browser must have a language pack 
 
 To get the correct language pack installed, ensure you follow these two steps:
 
-1. You need to check whether the language pack is available on the user's computer. This is handled using the {{domxref("SpeechRecognition.available_static", "SpeechRecognition.available()")}} static method.
-2. You need to install the language pack if it isn't available. This is handled using the {{domxref("SpeechRecognition.install_static", "SpeechRecognition.install()")}} static method.
+1. Check whether the language pack is available on the user's device: This is handled using the {{domxref("SpeechRecognition.available_static", "SpeechRecognition.available()")}} static method.
+2. Install the language pack if it isn't available: This is handled using the {{domxref("SpeechRecognition.install_static", "SpeechRecognition.install()")}} static method.
 
 Both of the above steps are handled using the following modified `click` event handler on the app's control `<button>`:
 
