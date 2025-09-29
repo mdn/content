@@ -168,7 +168,7 @@ We've stored a reference to the "Darken/Lighten" `<button>` in the `btn` constan
 
 ## Hints and tips
 
-- You don't need to edit the HTML or CSS in any way.
+- You don't need to change the HTML or CSS.
 
 ## Example
 
