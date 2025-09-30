@@ -80,3 +80,4 @@ We use the {{CSSxRef("max")}} function to return the largest (most positive) val
 ## See also
 
 - {{CSSxRef("sign")}}
+- [Using CSS typed arithmetic](/en-US/docs/Web/CSS/CSS_Values_and_Units/Using_CSS_typed_arithmetic)

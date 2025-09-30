@@ -73,3 +73,4 @@ div {
 ## See also
 
 - {{CSSxRef("abs")}}
+- [Using CSS typed arithmetic](/en-US/docs/Web/CSS/CSS_Values_and_Units/Using_CSS_typed_arithmetic)

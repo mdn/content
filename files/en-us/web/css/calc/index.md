@@ -104,9 +104,16 @@ When an {{cssxref("&lt;integer&gt;")}} is expected, the `calc()` expression can 
 - `calc()` cannot perform calculations on [intrinsic size values](/en-US/docs/Glossary/Intrinsic_Size) such as {{cssxref("auto")}} and {{cssxref("fit-content")}}. Use the {{cssxref("calc-size()")}} function instead.
 - The `*` and `/` operators do not require whitespace, but adding it for consistency is recommended.
 - It is permitted to nest `calc()` functions, in which case, the inner ones are treated as simple parentheses.
-- Current implementations require that, when using the `*` and `/` operators, one of the operands must be unitless. For `/`, the right operand must be unitless. For example `font-size: calc(1.25rem / 1.25)` is valid but `font-size: calc(1.25rem / 125%)` is invalid.
 - Math expressions involving percentages for widths and heights on table columns, table column groups, table rows, table row groups, and table cells in both auto and fixed layout tables _may_ be treated as if `auto` is specified.
 - See {{cssxref("calc-sum", "&lt;calc-sum&gt;")}} for more information on the syntax of `+` and `-` expressions.
+
+### CSS typed arithmetic
+
+Implementations historically required that, when using the `*` and `/` operators, one of the operands had to be unitless. This is still the case for `*` — calculations like `200px * 4px` don't make sense, as 800px<sup>2</sup> is meaningless in CSS.
+
+For `/`, it used to be the case that the right operand had to be unitless. However, typed arithmetic changes mean that [supporting browsers](#browser_compatibility) now enable calculations such as `100vw / 1px`, which result in unitless values. These can then be used in the values of unitless properties, or converted into a different type altogether by multiplying them by another typed value.
+
+Typed arithmetic enables interesting relationships to be created between different values on the page, and interesting new UI features to be implemented. For a full explanation and examples, see [Using CSS typed arithmetic](/en-US/docs/Web/CSS/CSS_Values_and_Units/Using_CSS_typed_arithmetic).
 
 ### Support for computing color channels in relative colors
 
