@@ -555,7 +555,7 @@ It is possible to render external images onto your canvas. These can be simple i
    - Parameters 6 and 7 define the coordinates at which you want to draw the top-left corner of the cut-out portion of the image, relative to the top-left corner of the canvas.
    - Parameters 8 and 9 define the width and height to draw the cut-out area of the image. In this case, we have specified the same dimensions as the original slice, but you could resize it by specifying different values.
 
-5. When the image is meaningfully updated, the {{glossary("accessible description")}} must also be updated.
+5. When the image is meaningfully updated, the description must also be updated.
 
    ```js live-sample___5-canvas-images
    canvas.setAttribute("aria-label", "Firefox Logo");
