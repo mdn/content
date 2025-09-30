@@ -59,6 +59,12 @@ font-variant-numeric: stacked-fractions;
       <tr>
         <td><span class="tabular">1.71</span></td>
       </tr>
+      <tr>
+        <td><span class="tabular">1st</span></td>
+      </tr>
+      <tr>
+        <td><span class="tabular">3/4</span></td>
+      </tr>
     </table>
   </div>
 </section>
