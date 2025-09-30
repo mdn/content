@@ -113,3 +113,7 @@ Firefox 144 is the current [Beta version of Firefox](https://www.firefox.com/en-
 These features are shipping in Firefox 144 but are disabled by default.
 To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
 You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+
+- **datetime-local time picker:** `dom.forms.datetime.timepicker`.
+
+  HTML datetime-local input elements ([`<input type="datetime-local">`](/en-US/docs/Web/HTML/Reference/Elements/input/datetime-local)) now includes a time picker ([Firefox bug 1726108](https://bugzil.la/1726108)).
