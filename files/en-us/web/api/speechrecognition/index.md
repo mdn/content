@@ -48,7 +48,7 @@ The concept of grammar has been removed from the Web Speech API. Related feature
 - {{domxref("SpeechRecognition.available_static", "SpeechRecognition.available()")}}
   - : Checks whether the specified languages are available for speech recognition.
 - {{domxref("SpeechRecognition.install_static", "SpeechRecognition.install()")}}
-  - : Installs the required language packs for on-device speech recognition of the specified languages.
+  - : Installs the required language packs for on-device speech recognition in the specified languages.
 
 ## Instance methods
 
