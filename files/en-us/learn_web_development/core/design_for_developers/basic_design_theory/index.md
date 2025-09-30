@@ -537,7 +537,6 @@ Let's make a few color adjustments to our design.
    - If you don't have a base color in mind and just want to choose a couple of colors from a given palette, go to [coolors.co](https://coolors.co/) and use the palette generator to create a palette you like.
 2. Copy the hex values for two complementary colors and save them somewhere safe.
 3. Use the WebAIM [Color Contrast Checker](https://webaim.org/resources/contrastchecker/) to check whether your color choices have good contrast with white. For each color:
-
    1. Keep the background color as white (`FFFFFF`).
    2. Enter your color's hex code in the foreground color input field.
    3. Click or tab out of the field to run the test.
