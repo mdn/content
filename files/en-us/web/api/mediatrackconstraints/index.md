@@ -2,7 +2,9 @@
 title: MediaTrackConstraints
 slug: Web/API/MediaTrackConstraints
 page-type: web-api-interface
-spec-urls: https://w3c.github.io/mediacapture-main/#dom-mediatrackconstraints
+spec-urls:
+  - https://w3c.github.io/mediacapture-main/#dom-mediatrackconstraints
+  - https://w3c.github.io/mediacapture-screen-share/#extensions-to-mediatrackconstraintset
 ---
 
 {{APIRef("Media Capture and Streams")}}

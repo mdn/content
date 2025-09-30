@@ -429,7 +429,9 @@
   },
   "sources_prefix": {
     "de": "Quellen: ",
-    "en-US": "Sources: "
+    "en-US": "Sources: ",
+    "zh-CN": "来源：",
+    "zh-TW": "來源："
   },
   "formal_syntax_footer": {
     "de": "Diese Syntax spiegelt den neuesten Standard gemäß { $specs } wider. Möglicherweise haben nicht alle Browser jeden Teil implementiert. Siehe <a href=\"#browser-kompatibilität\">Browserkompatibilität</a> für Informationen zur Unterstützung.",
