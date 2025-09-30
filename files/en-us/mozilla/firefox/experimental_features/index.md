@@ -60,7 +60,7 @@ HTML datetime-local input elements ([`<input type="datetime-local">`](/en-US/doc
 | Beta              | 144           | No                  |
 | Release           | 144           | No                  |
 
-- `layout.forms.reveal-password-button.enabled`
+- `dom.forms.datetime.timepicker`
   - : Set to `true` to enable.
 
 ## CSS
