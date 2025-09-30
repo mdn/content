@@ -14,7 +14,8 @@ The state is enabled following any user interaction, when the window has focus, 
 - A `pointerup` event for any other kind of pointer.
 - A `touchend` event.
 - A `keydown` event, other than for the escape or browser shortcut keys.
-The window is not user-activated by events that don't indicate intentional interaction with the window, such as mouse move events or `wheel` events.
+
+The window is not user-activated by events that aren't necessarily caused by intentional interaction with the window, such as mouse move events or `wheel` events.
 
 Sticky activation is used to control access to certain features, blocking them if the user hasn't interacted with the page.
 For example, it can be used to ensure that controlled features in cross-origin frames don't run code on page load.
@@ -22,8 +23,11 @@ See [Features gated by user activation](/en-US/docs/Web/Security/User_activation
 
 The {{domxref("UserActivation.hasBeenActive")}} property can be used to programmatically check the current window's sticky activation state.
 
-> [!NOTE]
-> See {{Glossary("Transient activation")}} for a user activation state that expires after a timeout, and may also be "consumed" by some APIs.
+## Comparison between sticky and transient activation
+
+The difference between sticky and {{Glossary("transient activation")}} is that transient activation only lasts for a short while, and may in some cases be consumed (deactivated) when a protected feature is used.
+
+While the presence of sticky activation is primarily used to prevent features automatically being available on page load, transient activation is used to ensure that features are allowed only if directly triggered by a user.
 
 ## See also
 

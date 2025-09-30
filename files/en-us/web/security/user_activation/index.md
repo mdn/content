@@ -5,9 +5,12 @@ page-type: guide
 sidebar: security
 ---
 
-To ensure applications are unable to abuse APIs that can create a bad user experience when the behavior is not desired, some APIs can only be used when the user is in an "active interaction" state, meaning the user is currently interacting with the web page, or has interacted with the page at least once. Browsers limit access to sensitive APIs like popups, fullscreen, or vibration APIs to active user interactions to prevent malicious scripts from abusing these features. This page lists web platform features available only after user activation.
+To ensure applications are unable to abuse APIs that can create a bad user experience when the behavior is not desired, some APIs can only be used when the user is in an "active interaction" state, meaning the user is currently interacting with the web page, or has interacted with the page at least once.
+Browsers limit access to sensitive APIs like popups, fullscreen, or vibration APIs to active user interactions to prevent malicious scripts from abusing these features.
+This page lists web platform features available only after user activation.
 
-A user activation either implies that the user is currently interacting with the page, or has completed an interaction since page load. Typically, this is a click on a button or some other user interaction with the UI.
+A user activation either implies that the user is currently interacting with the page, or has completed an interaction since page load.
+Typically, this is a click on a button or some other user interaction with the UI.
 
 More precisely, an _activation triggering input event_ is an event which:
 
@@ -21,9 +24,17 @@ More precisely, an _activation triggering input event_ is an event which:
 
 If an activation has been triggered, the user agent differentiates between two types of user activation window states: sticky and transient.
 
+## Comparison between transient and sticky activation
+
+The difference between transient and sticky activation is that transient activation only lasts for a short while, and may in some cases be consumed (deactivated) when a protected feature is used, while sticky activation persists until the end of the session.
+
+Gating features on transient activation ensures that they are only available if directly triggered by a user.
+Sticky activation, by contrast, is primarily used to restrict features that should not automatically trigger on page load, such as popups
+
 ## Transient activation
 
-{{Glossary("Transient activation")}} is a window state that indicates a user has recently pressed a button, moved a mouse, used a menu, or performed some other user interaction. Transient activation expires after a timeout (if not renewed by further interaction) and may also be consumed by some APIs (like {{domxref("Window.open()")}}).
+{{Glossary("Transient activation")}} is a window state that indicates a user has recently pressed a button or performed some other user interaction.
+Transient activation expires after a timeout (if not renewed by further interaction) and may also be consumed by some APIs (like {{domxref("Window.open()")}}).
 
 APIs that require transient activation (list is not exhaustive):
 
@@ -65,7 +76,8 @@ APIs that require transient activation (list is not exhaustive):
 
 ## Sticky activation
 
-{{Glossary("Sticky activation")}} is a window state that indicates a user has pressed a button, moved a mouse, used a menu, or performed some other user interaction. It is not reset after it has been set initially (unlike transient activation).
+{{Glossary("Sticky activation")}} is a window state that indicates a user has at some time in the session pressed a button, used a menu, or performed some other user interaction.
+It is not reset after it has been set initially (unlike transient activation).
 
 APIs that require sticky activation (not exhaustive):
 
@@ -73,6 +85,8 @@ APIs that require sticky activation (not exhaustive):
 - {{domxref("Navigator.vibrate()")}}
 - {{domxref("VirtualKeyboard.show()")}}
 - Autoplay of [Media and Web Audio APIs](/en-US/docs/Web/Media/Guides/Autoplay) (in particular for [`AudioContexts`](/en-US/docs/Web/API/AudioContext)).
+
+.
 
 ## UserActivation API
 
