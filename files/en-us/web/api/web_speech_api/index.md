@@ -37,7 +37,7 @@ For more details on using these features, see [Using the Web Speech API](/en-US/
 - {{domxref("SpeechRecognitionEvent")}}
   - : The event object for the {{domxref("SpeechRecognition.result_event", "result")}} and {{domxref("SpeechRecognition.nomatch_event", "nomatch")}} events, and contains all the data associated with an interim or final speech recognition result.
 - {{domxref("SpeechRecognitionPhrase")}}
-  - : Represents a phrase that can be passed into the speech recognition engine to be used for [speech recognition contextual biasing](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#speech_recognition_contextual_biasing).
+  - : Represents a phrase that can be passed into the speech recognition engine to be used for [contextual biasing](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#contextual_biasing_in_speech_recognition).
 - {{domxref("SpeechRecognitionResult")}}
   - : Represents a single recognition match, which may contain multiple {{domxref("SpeechRecognitionAlternative")}} objects.
 - {{domxref("SpeechRecognitionResultList")}}

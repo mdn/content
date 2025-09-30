@@ -14,6 +14,23 @@ The **`phrase`** read-only property of the {{domxref("SpeechRecognitionPhrase")}
 
 A string.
 
+## Examples
+
+### Basic usage
+
+The {{domxref("SpeechRecognition.phrases")}} property holds an array of `SpeechRecognitionPhrase` objects representing contextual biasing phrases. This array can be modified just like a normal JavaScript array, for example by pushing new phrases to it dynamically:
+
+```js
+recognition.phrases.push(new SpeechRecognitionPhrase("thistle", 5.0));
+```
+
+You can then access these objects and their properties like so. To return the `phrase` value of the added phrase, you could do this:
+
+```js
+// Should return "thistle"
+recognition.phrases[0].phrase;
+```
+
 ## Specifications
 
 {{Specifications}}

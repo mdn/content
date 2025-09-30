@@ -9,7 +9,7 @@ browser-compat: api.SpeechRecognition.phrases
 {{APIRef("Web Speech API")}}
 
 The **`phrases`** property of the
-{{domxref("SpeechRecognition")}} interface sets an array of {{domxref("SpeechRecognitionPhrase")}} objects to be used for [speech recognition contextual biasing](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#speech_recognition_contextual_biasing).
+{{domxref("SpeechRecognition")}} interface sets an array of {{domxref("SpeechRecognitionPhrase")}} objects to be used for [contextual biasing](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#contextual_biasing_in_speech_recognition).
 
 ## Value
 

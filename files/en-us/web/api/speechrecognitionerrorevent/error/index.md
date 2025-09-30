@@ -35,7 +35,7 @@ An enumerated value representing the type of error. Possible values include:
   - : The user agent disallowed any speech input from occurring for reasons of security,
     privacy or user preference.
 - `phrases-not-supported`
-  - : The speech recognition model does not support {{domxref("SpeechRecognition.phrases", "phrases")}} for [contextual biasing](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#speech_recognition_contextual_biasing).
+  - : The speech recognition model does not support {{domxref("SpeechRecognition.phrases", "phrases")}} for [contextual biasing](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#contextual_biasing_in_speech_recognition).
 - `service-not-allowed`
   - : The user agent disallowed the requested speech recognition service, either because
     the user agent doesn't support it or because of reasons of security, privacy or user

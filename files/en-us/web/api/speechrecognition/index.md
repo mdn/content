@@ -32,7 +32,7 @@ _`SpeechRecognition` also inherits properties from its parent interface, {{domxr
 - {{domxref("SpeechRecognition.maxAlternatives")}}
   - : Sets the maximum number of {{domxref("SpeechRecognitionAlternative")}}s provided per result. The default value is 1.
 - {{domxref("SpeechRecognition.phrases")}}
-  - : Sets an array of {{domxref("SpeechRecognitionPhrase")}} objects to be used for [speech recognition contextual biasing](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#speech_recognition_contextual_biasing).
+  - : Sets an array of {{domxref("SpeechRecognitionPhrase")}} objects to be used for [contextual biasing](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#contextual_biasing_in_speech_recognition).
 - {{domxref("SpeechRecognition.processLocally")}}
   - : Specifies whether speech recognition must be performed locally on the user's device.
 

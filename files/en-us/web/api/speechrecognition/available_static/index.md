@@ -135,5 +135,6 @@ This code is excerpted from our [on-device speech color changer](https://github.
 ## See also
 
 - [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)
+- [Using the Web Speech API](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API)
 - {{domxref("SpeechRecognition.processLocally")}}
 - {{domxref("SpeechRecognition.install_static", "SpeechRecognition.install()")}}
