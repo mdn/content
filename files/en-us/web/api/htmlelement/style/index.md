@@ -9,6 +9,7 @@ browser-compat: api.HTMLElement.style
 {{APIRef("CSSOM")}}
 
 The read-only **`style`** property of the {{domxref("HTMLElement")}} returns the _inline_ [`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style) of an element in the form of a live {{domxref("CSSStyleProperties")}} object.
+This object can be used to get and set the inline styles of an element.
 
 ## Value
 
@@ -26,8 +27,8 @@ The values of the inline styles set in the element's [`style`](/en-US/docs/Web/H
 > {{domxref("CSSStyleProperties")}} has dash-named and corresponding {{Glossary("camel_case", "camel-case")}} named properties for **all** [CSS properties](/en-US/docs/Web/CSS/Properties) supported by the browser (not just those with inline styles).
 > Properties that don't have a corresponding inline style are set to `""`.
 
-Shorthand CSS properties in the `style` attribute are expanded to their corresponding long-form dash-named (and camel-case-named) properties.
-For example, an element with style `style="border-top: 1px solid black"` would be represented in the returned object by properties with the names {{cssxref("border-top-color")}}/`borderTopColor`, {{cssxref("border-top-style")}}/`borderTopStyle`, and {{cssxref("border-top-width")}}/`borderTopWidth`.
+Shorthand CSS properties of the element are expanded to their corresponding long-form properties.
+For example, an element with style `"border-top: 1px solid black"` would be represented in the returned object by properties with the names {{cssxref("border-top")}} and `borderTop`, and the corresponding longhand properties {{cssxref("border-top-color")}} and `borderTopColor`, {{cssxref("border-top-style")}} and `borderTopStyle`, and {{cssxref("border-top-width")}} and `borderTopWidth`.
 
 The `style` property is read-only, meaning it is not possible to assign a {{domxref("CSSStyleProperties")}} object to it.
 Nevertheless, it is possible to set an inline style by assigning a _string_ directly to the property.
@@ -42,9 +43,97 @@ The `style` property has the same priority in the CSS cascade as an inline style
 
 ## Examples
 
-### Getting style information
+### Basic usage
 
-The following code snippet demonstrates how the `style` attribute is translated into dash-named properties of {{domxref("CSSStyleProperties")}} :
+This code example shows how you can read the inline styles of an element.
+In each case it reads the dash-named style properties using {{DOMxRef("CSSStyleDeclaration/getPropertyPriority", "getPropertyValue()")}} and gets the camel case properties using the dot operator.
+
+#### HTML
+
+First we define a {{htmlelement("div")}} element and nested element that define different inline styles, using both shorthand and longhand form.
+
+```html
+<div style="font-weight: bold;">
+  <div style="border-top: 1px solid blue; color: red;" id="elt">
+    An example div
+  </div>
+  <pre id="log"></pre>
+</div>
+```
+
+```css hidden
+#log {
+  height: 200px;
+  overflow: scroll;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+```
+
+#### JavaScript
+
+```js hidden
+const logElement = document.querySelector("#log");
+function log(text) {
+  logElement.innerText = `${logElement.innerText}${text}\n`;
+  logElement.scrollTop = logElement.scrollHeight;
+}
+```
+
+The following code gets the inner element, reads its style, and logs the dash-named and camel-case named CSS style properties.
+
+```js
+const element = document.getElementById("elt");
+const elementStyle = element.style;
+
+// Longhand styles
+log(`"border-top" = '${elementStyle.getPropertyValue("border-top")}'`);
+log(`"borderTop" = '${elementStyle.borderTop}'`);
+
+// Expanded longhand styles
+log(
+  `"border-top-width" = '${elementStyle.getPropertyValue("border-top-width")}'`,
+);
+log(`"borderTopWidth" = '${elementStyle.borderTopWidth}'`);
+
+log(
+  `"border-top-style" = '${elementStyle.getPropertyValue("border-top-style")}'`,
+);
+log(`"borderTopStyle" = '${elementStyle.borderTopStyle}'`);
+
+log(
+  `"border-top-color" = '${elementStyle.getPropertyValue("border-top-color")}'`,
+);
+log(`"borderTopColor" = '${elementStyle.borderTopColor}'`);
+
+// Original shorthand style
+log(`"color" = '${elementStyle.getPropertyValue("color")}'`);
+log(`"color" = '${elementStyle.color}'`);
+
+// Defined on parent
+log(`"font-weight" = '${elementStyle.getPropertyValue("font-weight")}'`);
+log(`"fontWeight" = '${elementStyle.fontWeight}'`);
+```
+
+#### Results
+
+The result is shown below.
+In each case we see that the styles read using the dash and camel-case named properties are the same.
+We also see that the {{cssxref("border-top")}} property corresponding to the element's `style` attribute is present, and that a longhand property is defined for each of its parts ({{cssxref("border-top-color")}}, {{cssxref("border-top-style")}}, and {{cssxref("border-top-width")}}).
+
+{{EmbedLiveSample("Basic usage", "100", "280")}}
+
+Note that `font-weight` is defined on the `CSSStyleProperties` (as are all other CSS properties, though we have not logged them).
+However it is not an inline stye for the nested element, so its value is set to the empty string (`""`).
+
+### Enumerating style information
+
+This example demonstrates how we can enumerate the dash-named properties of {{domxref("CSSStyleProperties")}}.
+
+#### HTML
+
+First we define a {{htmlelement("div")}} element and nested element that define different inline styles, using both shorthand and longhand form.
+This is the same HTML as in the previous example.
 
 ```html
 <div style="font-weight: bold;">
@@ -64,6 +153,8 @@ The following code snippet demonstrates how the `style` attribute is translated 
 }
 ```
 
+#### JavaScript
+
 ```js hidden
 const logElement = document.querySelector("#log");
 function log(text) {
@@ -71,6 +162,8 @@ function log(text) {
   logElement.scrollTop = logElement.scrollHeight;
 }
 ```
+
+The following code iterates the enumerable properties of the `CSSStyleProperties` and logs the result.
 
 ```js
 const element = document.getElementById("elt");
@@ -93,9 +186,12 @@ for (const prop in elementStyle) {
 }
 ```
 
-{{EmbedLiveSample("Getting_style_information", "100", "180")}}
+#### Results
 
-Note `font-weight` is not listed as a value for `elementStyle` as it is not defined within the `style` attribute of the element itself. Rather, it is inherited from the definition on its parent. Also note that the shorthand {{cssxref("border-top")}} property, defined in the `style` attribute, is not listed directly. Rather, it is replaced by the three corresponding longhand properties ({{cssxref("border-top-color")}}, {{cssxref("border-top-style")}}, and {{cssxref("border-top-width")}}).
+The result is shown below.
+Note that only the element's longhand CSS properties are enumerated values (the inline shorthand property is not enumerated).
+
+{{EmbedLiveSample("Enumerating style information", "100", "180")}}
 
 ## Specifications
 

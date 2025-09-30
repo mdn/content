@@ -9,6 +9,7 @@ browser-compat: api.SVGElement.style
 {{APIRef("CSSOM")}}
 
 The read-only **`style`** property of the {{domxref("SVGElement")}} returns the _inline_ [`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style) of an element in the form of a live {{domxref("CSSStyleProperties")}} object.
+This object can be used to get and set the inline styles of an element.
 
 ## Value
 
@@ -26,8 +27,8 @@ The values of the inline styles set in the element's [`style`](/en-US/docs/Web/H
 > {{domxref("CSSStyleProperties")}} has dash-named and corresponding {{Glossary("camel_case", "camel-case")}} named properties for **all** [CSS properties](/en-US/docs/Web/CSS/Properties) supported by the browser (not just those with inline styles).
 > Properties that don't have a corresponding inline style are set to `""`.
 
-Shorthand CSS properties in the `style` attribute are expanded to their corresponding long-form dash-named (and camel-case-named) properties.
-For example, an element with style `style="border-top: 1px solid black"` would be represented in the returned object by properties with the names {{cssxref("border-top-color")}}/`borderTopColor`, {{cssxref("border-top-style")}}/`borderTopStyle`, and {{cssxref("border-top-width")}}/`borderTopWidth`.
+Shorthand CSS properties of the element are expanded to their corresponding long-form properties.
+For example, an element with style `"border-top: 1px solid black"` would be represented in the returned object by properties with the names {{cssxref("border-top")}} and `borderTop`, and the corresponding longhand properties {{cssxref("border-top-color")}} and `borderTopColor`, {{cssxref("border-top-style")}} and `borderTopStyle`, and {{cssxref("border-top-width")}} and `borderTopWidth`.
 
 The `style` property is read-only, meaning it is not possible to assign a {{domxref("CSSStyleProperties")}} object to it.
 Nevertheless, it is possible to set an inline style by assigning a _string_ directly to the property.
@@ -42,9 +43,11 @@ The `style` property has the same priority in the CSS cascade as an inline style
 
 ## Examples
 
-### Getting style information
+### Enumerating style information
 
-The following code snippet demonstrates how the `style` attribute is translated into dash-named properties of {{domxref("CSSStyleProperties")}} :
+This example demonstrates how we can enumerate the dash-named properties of {{domxref("CSSStyleProperties")}}.
+
+#### HTML
 
 ```html
 <svg
@@ -71,6 +74,8 @@ The following code snippet demonstrates how the `style` attribute is translated 
 }
 ```
 
+#### JavaScript
+
 ```js hidden
 const logElement = document.querySelector("#log");
 function log(text) {
@@ -78,6 +83,8 @@ function log(text) {
   logElement.scrollTop = logElement.scrollHeight;
 }
 ```
+
+The following code iterates the enumerable properties of the `CSSStyleProperties` and logs the result.
 
 ```js
 const element = document.querySelector("circle");
@@ -100,7 +107,12 @@ for (const prop in elementStyle) {
 }
 ```
 
-{{EmbedLiveSample("Getting_style_information", "100", "380")}}
+#### Results
+
+The result is shown below.
+Note that only the element's longhand CSS properties are enumerated values (the inline shorthand property is not enumerated).
+
+{{EmbedLiveSample("Enumerating style information", "100", "380")}}
 
 ## Specifications
 
