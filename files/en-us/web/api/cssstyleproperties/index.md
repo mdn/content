@@ -7,7 +7,7 @@ browser-compat: api.CSSStyleProperties
 
 {{APIRef("CSSOM")}}
 
-The **`CSSStyleProperties`** interface represents inline or computed styles available on an element, or the styles associated with a CSS style rule.
+The **`CSSStyleProperties`** interface of the [CSS Object Model (CSSOM)](/en-US/docs/Web/API/CSS_Object_Model) represents inline or computed styles available on an element, or the styles associated with a CSS style rule.
 
 {{InheritanceDiagram}}
 
