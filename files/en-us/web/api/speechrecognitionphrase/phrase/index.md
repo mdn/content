@@ -8,8 +8,7 @@ browser-compat: api.SpeechRecognitionPhrase.phrase
 
 {{APIRef("Web Speech API")}}
 
-The **`phrase`** read-only property of the
-{{domxref("SpeechRecognitionResult")}} interface returns a string containing a word or phrase you want boosted in terms of the engine's [contextual bias](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#speech_recognition_contextual_biasing) towards it.
+The **`phrase`** read-only property of the {{domxref("SpeechRecognitionPhrase")}} interface returns a string containing the word or phrase you want boosted in the recognition engine's [contextual bias](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#contextual_biasing_in_speech_recognition).
 
 ## Value
 
