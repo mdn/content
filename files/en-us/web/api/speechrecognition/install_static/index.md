@@ -34,7 +34,7 @@ A {{domxref("Promise")}} that resolves with a boolean value indicating whether t
 - `true`
   - : All installation attempts succeeded for the requested languages, or the languages were already installed.
 - `false`
-  - : One or more of the requested languages are not supported, any of the language packs for supported languages failed to install, or an empty array was passed for the `langs` option.
+  - : One or more of the requested languages are not supported, a supported language pack failed to install, or an empty array was passed for the `langs` property.
 
 ### Exceptions
 
