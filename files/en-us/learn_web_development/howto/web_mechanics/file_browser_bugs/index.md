@@ -69,9 +69,9 @@ Search for existing bug reports before filing a new one. If you find an existing
 
 When filing a new bug, make sure to include your minimal test case and any other information that the report form asks for—such as browser version, expected vs. actual results, and screenshots. Some bug trackers may also ask you to select a component or category for the bug, such as rendering or networking. The browser developers use these labels to organize work. If you're unsure what to choose, take your best guess–someone will re-assign it if needed.
 
-## Filing bugs for assistive technologies
+## Filing bugs for non-browser software
 
-If the bug is related to non-browser software, such as a screen reader, you need to file the bug with the relevant software vendor. The following table lists some of the most popular assistive technologies and where to file bugs for them:
+If the bug is related to non-browser software that may integrate with the browser, you need to file the bug with the relevant software vendor. The following table lists some assistive technologies and where to file bugs for them:
 
 | Software                                                                             | Where to file                                                                          |
 | ------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------- |
