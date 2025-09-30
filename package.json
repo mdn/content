@@ -56,7 +56,7 @@
     "async": "^3.2.6",
     "caporal": "^1.4.0",
     "cli-progress": "^3.12.0",
-    "cross-env": "10.0.0",
+    "cross-env": "10.1.0",
     "env-cmd": "11.0.0",
     "fdir": "^6.4.6",
     "gray-matter": "^4.0.3",
