@@ -7,7 +7,7 @@ browser-compat: api.SpeechRecognitionPhrase
 
 {{APIRef("Web Speech API")}}
 
-The **`SpeechRecognitionPhrase`** interface of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) represents a phrase that can be passed into the speech recognition engine to be used for [speech recognition contextual biasing](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#speech_recognition_contextual_biasing).
+The **`SpeechRecognitionPhrase`** interface of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) represents a phrase that can be passed to the speech recognition engine for [contextual biasing](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#contextual_biasing_in_speech_recognition).
 
 ## Instance properties
 
