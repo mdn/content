@@ -10,7 +10,7 @@ browser-compat: api.SpeechRecognition.install
 
 The **`install()`** static method of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) installs the required language packs for [on-device speech recognition](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#on-device_speech_recognition) in the specified languages.
 
-To check existing availability of the language packs for on-device speech recognition, you can use the {{domxref("SpeechRecognition.available_static", "SpeechRecognition.available()")}} method.
+To check if the language packs are already available, use the {{domxref("SpeechRecognition.available_static", "SpeechRecognition.available()")}} method.
 
 Access to the `install()` method is controlled by the {{httpheader("Permissions-Policy/on-device-speech-recognition", "on-device-speech-recognition")}} {{httpheader("Permissions-Policy")}} directive. Specifically, where a defined policy blocks usage, any attempts to call the method will fail.
 
