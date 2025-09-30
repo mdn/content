@@ -20,7 +20,7 @@ new SpeechRecognitionEvent(type, init)
 ### Parameters
 
 - `type`
-  - : A string containing the name of the event. This will be `result` or `nomatch`, depending on the event handler the instance was created inside.
+  - : A string containing the name of the event. This will be `result` or `nomatch`, depending on the event that created the instance.
 - `init`
   - : An initialization object that contains the following properties:
     - `resultIndex` {{optional_inline}}
