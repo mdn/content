@@ -58,12 +58,15 @@ From the assistive technology user's perspective, the heading does not exist sin
 
 ### Keyboard interactions
 
-| Key               | Action                                                                                                                                                                                                           |
-| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <kbd>Tab</kbd>    | When focus is outside of the `tablist` moves focus to the active tab. If focus is on the active tab moves focus to the next element in the keyboard focus order, ideally the active tab's associated `tabpanel`. |
-| <kbd>→</kbd>      | Focuses and optionally activates the next tab in the tab list. If the current tab is the last tab in the tab list it activates the first tab.                                                                    |
-| <kbd>←</kbd>      | Focuses and optionally activates the previous tab in the tab list. If the current tab is the first tab in the tab list it activates the last tab.                                                                |
-| <kbd>Delete</kbd> | When allowed removes the currently selected tab from the tab list.                                                                                                                                               |
+| Key                               | Action                                                                                                                                                                                                           |
+| --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <kbd>Tab</kbd>                    | When focus is outside of the `tablist` moves focus to the active tab. If focus is on the active tab moves focus to the next element in the keyboard focus order, ideally the active tab's associated `tabpanel`. |
+| <kbd>→</kbd>                      | Focuses and optionally activates the next tab in the tab list. If the current tab is the last tab in the tab list it activates the first tab.                                                                    |
+| <kbd>←</kbd>                      | Focuses and optionally activates the previous tab in the tab list. If the current tab is the first tab in the tab list it activates the last tab.                                                                |
+| <kbd>Enter</kbd>/<kbd>Space</kbd> | When a tab has focus, activates the tab, causing its associated panel to be displayed.                                                                                                                           |
+| <kbd>Home</kbd>                   | Focuses and optionally activates the first tab in the tab list.                                                                                                                                                  |
+| <kbd>End</kbd>                    | Focuses and optionally activates the last tab in the tab list.                                                                                                                                                   |
+| <kbd>Delete</kbd>                 | When allowed removes the currently selected tab from the tab list.                                                                                                                                               |
 
 ### Required JavaScript features
 
@@ -74,18 +77,21 @@ From the assistive technology user's perspective, the heading does not exist sin
 
 This example combines the role `tab` with `tablist` and elements with `tabpanel` to create an interactive group of tabbed content. Here we are enclosing our group of content in a `div`, with our `tablist` having an `aria-label` which labels it for assistive technology. Each `tab` is a `button` with the attributes previously mentioned. The first `tab` has both `tabindex="0"` and `aria-selected="true"` applied. These two attributes must always be coordinated as such—so when another tab is selected, it will then have `tabindex="0"` and `aria-selected="true"` applied. All unselected tabs must have `aria-selected="false"` and `tabindex="-1"`.
 
-All of the `tabpanel` elements have `tabindex="0"` to make them tabbable, and all but the currently active one have the `hidden` attribute. The `hidden` attribute will be removed when a `tabpanel` becomes visible with JavaScript. There is some basic styling applied that restyles the buttons and changes the [`z-index`](/en-US/docs/Web/CSS/z-index) of `tab` elements to give the illusion of it connecting to the `tabpanel` for active elements, and the illusion that inactive elements are behind the active `tabpanel`.
+All of the `tabpanel` elements have `tabindex="0"` to make them tabbable, and all but the currently active one have the `hidden` attribute. The `hidden` attribute will be removed when a `tabpanel` becomes visible with JavaScript.
+
+> [!NOTE]
+> Setting `tabindex` on the tab panel is unnecessary if the first element in the tab panel is focusable (such as a link), because tabbing to the link will also start reading the panel's content. However, if there are any panels in the set whose first content element is not focusable, then all tabpanel elements in a tab set should be focusable, so that screen reader users can navigate to the panel content consistently.
 
 ```html
 <div class="tabs">
-  <div role="tablist" aria-label="Sample Tabs">
+  <div role="tablist" aria-label="Select your operating system">
     <button
       role="tab"
       aria-selected="true"
       aria-controls="panel-1"
       id="tab-1"
       tabindex="0">
-      First Tab
+      Windows
     </button>
     <button
       role="tab"
@@ -93,7 +99,7 @@ All of the `tabpanel` elements have `tabindex="0"` to make them tabbable, and al
       aria-controls="panel-2"
       id="tab-2"
       tabindex="-1">
-      Second Tab
+      macOS
     </button>
     <button
       role="tab"
@@ -101,20 +107,34 @@ All of the `tabpanel` elements have `tabindex="0"` to make them tabbable, and al
       aria-controls="panel-3"
       id="tab-3"
       tabindex="-1">
-      Third Tab
+      Linux
     </button>
   </div>
-  <div id="panel-1" role="tabpanel" tabindex="0" aria-labelledby="tab-1">
-    <p>Content for the first panel</p>
-  </div>
-  <div id="panel-2" role="tabpanel" tabindex="0" aria-labelledby="tab-2" hidden>
-    <p>Content for the second panel</p>
-  </div>
-  <div id="panel-3" role="tabpanel" tabindex="0" aria-labelledby="tab-3" hidden>
-    <p>Content for the third panel</p>
+  <div class="tab-panels">
+    <div id="panel-1" role="tabpanel" tabindex="0" aria-labelledby="tab-1">
+      <p>How to run this application on Windows</p>
+    </div>
+    <div
+      id="panel-2"
+      role="tabpanel"
+      tabindex="0"
+      aria-labelledby="tab-2"
+      hidden="hidden">
+      <p>How to run this application on macOS</p>
+    </div>
+    <div
+      id="panel-3"
+      role="tabpanel"
+      tabindex="0"
+      aria-labelledby="tab-3"
+      hidden="hidden">
+      <p>How to run this application on Linux</p>
+    </div>
   </div>
 </div>
 ```
+
+There is some basic styling applied that restyles the buttons and changes the [`z-index`](/en-US/docs/Web/CSS/z-index) of `tab` elements to give the illusion of it connecting to the `tabpanel` for active elements, and the illusion that inactive elements are behind the active `tabpanel`. You need to clearly distinguish the active tab from the inactive tabs, such as thicker borders or larger size.
 
 ```css hidden
 .tabs {
@@ -137,6 +157,7 @@ All of the `tabpanel` elements have `tabindex="0"` to make them tabbable, and al
 
 [role="tab"][aria-selected="true"] {
   z-index: 3;
+  border-top-width: 4px;
 }
 
 [role="tabpanel"] {
@@ -154,73 +175,90 @@ All of the `tabpanel` elements have `tabindex="0"` to make them tabbable, and al
 }
 ```
 
-There are two things we need to do with JavaScript: we need to change focus and tab index of our `tab` elements with the right and left arrows, and we need to change the active `tab` and `tabpanel` when we click on a `tab`.
-
-To accomplish the first, we listen for the [`keydown`](/en-US/docs/Web/API/Element/keydown_event) event on the `tablist`. If the event's [`key`](/en-US/docs/Web/API/KeyboardEvent/key) is `ArrowRight` or `ArrowLeft`, we react to the event. We start by setting the `tabindex` of the current `tab` element to -1, making it no longer tabbable. Then, if the right arrow is being pressed, we increase our tab focus counter by one. If the counter is greater than the number of `tab` elements we have, we circle back to the first tab by setting that counter to 0. If the left arrow is being pressed, we decrease our tab focus counter by one, and if it is then less than 0, we set it to the number of `tab` elements minus one (to get to the last element). Finally, we set `focus` to the `tab` element whose index is equal to the tab focus counter, and set its `tabindex` to 0 to make it tabbable.
-
-To handle changing the active `tab` and `tabpanel`, we have a function that takes in the event, gets the element that triggered the event, the triggering element's parent element, and its grandparent element. We then find all tabs with `aria-selected="true"` inside the parent element and sets it to `false`, then sets the triggering element's `aria-selected` to `true`. After that, we find all `tabpanel` elements in the grandparent element, make them all `hidden`, and finally select the element whose `id` is equal to the triggering `tab`'s `aria-controls` and removes the `hidden` attribute, making it visible.
+The user interaction is handled with JavaScript. We first get references to our `tablist`, all the `tab` elements inside it, the container of our `tabpanel` elements, and all the `tabpanel` elements inside that container. This is based on some assumptions about the structure of our HTML, so if you change the structure, you will need to change this code. If you have multiple tabbed interfaces on a page, you can wrap this code in a function and pass `tabsContainer` as an argument.
 
 ```js
-// Only handle one particular tablist; if you have multiple tab
-// lists (might even be nested), you have to apply this code for each one
-const tabList = document.querySelector('[role="tablist"]');
-const tabs = tabList.querySelectorAll(':scope > [role="tab"]');
+const tabsContainer = document.querySelector(".tabs");
+const tabList = tabsContainer.querySelector(':scope > [role="tablist"]');
+const tabs = Array.from(tabList.querySelectorAll(':scope > [role="tab"]'));
+const tabPanelsContainer = tabsContainer.querySelector(":scope > .tab-panels");
+const tabPanels = Array.from(
+  tabPanelsContainer.querySelectorAll(':scope > [role="tabpanel"]'),
+);
+```
 
-// Add a click event handler to each tab
-tabs.forEach((tab) => {
-  tab.addEventListener("click", changeTabs);
-});
+For keyboard interactions, we listen for the [`keydown`](/en-US/docs/Web/API/Element/keydown_event) event on the `tablist`. In this demo, we chose to not activate the `tab` when the user navigates with the arrow keys, but instead only move focus. If you want to display the `tab` when it receives focus, you can call the `showTab()` function (defined later) instead of just calling `focus()` on the new tab.
 
-// Enable arrow navigation between tabs in the tab list
-let tabFocus = 0;
-
+```js
 tabList.addEventListener("keydown", (e) => {
-  // Move right
-  if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
-    tabs[tabFocus].setAttribute("tabindex", -1);
-    if (e.key === "ArrowRight") {
-      tabFocus++;
-      // If we're at the end, go to the start
-      if (tabFocus >= tabs.length) {
-        tabFocus = 0;
-      }
-      // Move left
-    } else if (e.key === "ArrowLeft") {
-      tabFocus--;
-      // If we're at the start, move to the end
-      if (tabFocus < 0) {
-        tabFocus = tabs.length - 1;
-      }
-    }
+  const currentTab = e.target;
+  const currentIndex = tabs.indexOf(currentTab);
+  if (currentIndex === -1) return; // Exit if the focused element is not a tab
+  let newIndex = 0;
 
-    tabs[tabFocus].setAttribute("tabindex", 0);
-    tabs[tabFocus].focus();
+  switch (e.key) {
+    case "ArrowRight":
+      newIndex = (currentIndex + 1) % tabs.length;
+      break;
+    case "ArrowLeft":
+      newIndex = (currentIndex - 1 + tabs.length) % tabs.length;
+      break;
+    case "Home":
+      newIndex = 0;
+      break;
+    case "End":
+      newIndex = tabs.length - 1;
+      break;
+    default:
+      return; // Exit if the key is not recognized
   }
+
+  e.preventDefault();
+  e.stopPropagation();
+  tabs[newIndex].focus();
 });
+```
 
-function changeTabs(e) {
-  const targetTab = e.target;
-  const tabList = targetTab.parentNode;
-  const tabGroup = tabList.parentNode;
+The tab panel is only activated either by pressing <kbd>Enter</kbd> or <kbd>Space</kbd> while a `tab` has focus, or by clicking on a `tab`. We first define a function `showTab()` that takes in the `tab` element to be shown.
 
-  // Remove all current selected tabs
-  tabList
-    .querySelectorAll(':scope > [aria-selected="true"]')
-    .forEach((t) => t.setAttribute("aria-selected", false));
-
-  // Set this tab as selected
+```js
+function showTab(targetTab) {
+  // Unselect other tabs and set this tab as selected
+  for (const tab of tabs) {
+    if (tab === targetTab) continue;
+    tab.setAttribute("aria-selected", false);
+    tab.tabIndex = -1;
+  }
   targetTab.setAttribute("aria-selected", true);
+  targetTab.tabIndex = 0;
 
-  // Hide all tab panels
-  tabGroup
-    .querySelectorAll(':scope > [role="tabpanel"]')
-    .forEach((p) => p.setAttribute("hidden", true));
-
-  // Show the selected panel
-  tabGroup
-    .querySelector(`#${targetTab.getAttribute("aria-controls")}`)
-    .removeAttribute("hidden");
+  // Hide other tab panels and show the selected panel
+  const targetTabPanel = document.getElementById(
+    targetTab.getAttribute("aria-controls"),
+  );
+  for (const panel of tabPanels) {
+    if (panel === targetTabPanel) continue;
+    panel.hidden = true;
+  }
+  targetTabPanel.hidden = false;
 }
+```
+
+Now we can call this function either on a `click` event or on a `keydown` event.
+
+```js
+tabs.forEach((tab) => {
+  tab.addEventListener("click", (e) => {
+    showTab(e.target);
+  });
+  tab.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      e.stopPropagation();
+      showTab(e.target);
+    }
+  });
+});
 ```
 
 {{EmbedLiveSample("Example", 600, 130)}}

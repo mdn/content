@@ -61,7 +61,7 @@ Let's look at relative color syntax in action. The below CSS is used to style tw
 }
 
 #two {
-  background-color: rgb(from red 150 g b / alpha);
+  background-color: rgb(from red 200 g b / alpha);
 }
 ```
 
