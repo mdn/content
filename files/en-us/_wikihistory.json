@@ -58687,14 +58687,6 @@
     "modified": "2020-10-15T21:40:31.633Z",
     "contributors": ["Sheppy", "lucian95", "sgiles", "chrisdavidmills"]
   },
-  "Web/API/SpeechRecognitionEvent/emma": {
-    "modified": "2020-10-15T21:40:30.616Z",
-    "contributors": ["sideshowbarker", "ExE-Boss", "chrisdavidmills"]
-  },
-  "Web/API/SpeechRecognitionEvent/interpretation": {
-    "modified": "2020-10-15T21:40:31.763Z",
-    "contributors": ["sideshowbarker", "ExE-Boss", "chrisdavidmills"]
-  },
   "Web/API/SpeechRecognitionEvent/resultIndex": {
     "modified": "2020-10-15T21:40:31.951Z",
     "contributors": ["sideshowbarker", "ExE-Boss", "chrisdavidmills"]
