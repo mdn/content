@@ -25,9 +25,11 @@ You can create a new `Request` object using the {{domxref("Request.Request","Req
 - {{domxref("Request.cache")}} {{ReadOnlyInline}}
   - : Contains the cache mode of the request (e.g., `default`, `reload`, `no-cache`).
 - {{domxref("Request.credentials")}} {{ReadOnlyInline}}
-  - : Contains the credentials of the request (e.g., `omit`, `same-origin`, `include`). The default is `same-origin`.
+  - : Contains a value controlling whether credentials should be included with the request (e.g., `omit`, `same-origin`, `include`). The default is `same-origin`.
 - {{domxref("Request.destination")}} {{ReadOnlyInline}}
   - : A string describing the type of content being requested.
+- {{domxref("Request.duplex")}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : The duplex mode of the request, which determines whether the browser must send the entire request before processing the response.
 - {{domxref("Request.headers")}} {{ReadOnlyInline}}
   - : Contains the associated {{domxref("Headers")}} object of the request.
 - {{domxref("Request.integrity")}} {{ReadOnlyInline}}
@@ -115,11 +117,10 @@ You could then fetch this API request by passing the `Request` object in as a pa
 ```js
 fetch(request)
   .then((response) => {
-    if (response.status === 200) {
-      return response.json();
-    } else {
+    if (response.status !== 200) {
       throw new Error("Something went wrong on API server!");
     }
+    return response.json();
   })
   .then((response) => {
     console.debug(response);

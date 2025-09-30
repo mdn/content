@@ -2,9 +2,8 @@
 title: 2D maze game with device orientation
 slug: Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 In this tutorial we'll go through the process of building an HTML mobile game that uses the [Device Orientation](/en-US/docs/Web/API/Device_orientation_events) and [Vibration](/en-US/docs/Web/API/Vibration_API) **APIs** to enhance the gameplay and is built using the [Phaser](https://phaser.io/) framework. Basic JavaScript knowledge is recommended to get the most from this tutorial.
 
@@ -20,7 +19,7 @@ By the end of the tutorial you will have a fully functional demo game: [Cyber Or
 
 ## Starting with the project
 
-You can see [Cyber Orb source code](https://github.com/EnclaveGames/Cyber-Orb) on GitHub. The folder structure is quite straightforward: the starting point is the `index.html` file where we initialize the framework and set up an {{htmlelement("canvas")}} to render the game on.
+You can see [Cyber Orb source code](https://github.com/EnclaveGames/Cyber-Orb) on GitHub. The folder structure is quite straightforward: the starting point is the `index.html` file where we initialize the framework and set up a {{htmlelement("canvas")}} to render the game on.
 
 ![Screenshot of the GitHub repository with the Cyber Orb game code, listing the folders and the files in the main structure.](cyber-orb-github.png)
 
@@ -43,7 +42,7 @@ We will be rendering our game on Canvas, but we won't do it manually — this wi
     <style>
       body {
         margin: 0;
-        background: #333;
+        background: #333333;
       }
     </style>
     <script src="src/phaser-arcade-physics.2.2.2.min.js"></script>
@@ -307,7 +306,7 @@ That way we can check which key is pressed at the given frame and apply the defi
 Probably the most interesting part of the game is its usage of the **Device Orientation API** for control on mobile devices. Thanks to this you can play the game by tilting the device in the direction you want the ball to roll. Here's the code from the `create()` function responsible for this:
 
 ```js
-window.addEventListener("deviceorientation", this.handleOrientation, true);
+window.addEventListener("deviceorientation", this.handleOrientation);
 ```
 
 We're adding an event listener to the `"deviceorientation"` event and binding the `handleOrientation` function which looks like this:
@@ -367,8 +366,7 @@ for (let i = 0; i < this.maxLevels; i++) {
   const newLevel = this.add.group();
   newLevel.enableBody = true;
   newLevel.physicsBodyType = Phaser.Physics.ARCADE;
-  for (let e = 0; e < this.levelData[i].length; e++) {
-    const item = this.levelData[i][e];
+  for (const item of this.levelData[i]) {
     newLevel.create(item.x, item.y, `element-${item.t}`);
   }
   newLevel.setAll("body.immovable", true);

@@ -2,11 +2,10 @@
 title: Track the score and win
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win
 page-type: guide
+sidebar: games
 ---
 
-{{GamesSidebar}}
-
-{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Collision_detection", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}
 
 This is the **8th step** out of 10 of the [Gamedev Canvas tutorial](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). You can find the source code as it should look after completing this lesson at [Gamedev-Canvas-workshop/lesson8.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson08.html).
 
@@ -106,7 +105,7 @@ The latest code looks (and works) like this, in case you want to compare and con
 
 ```css hidden
 canvas {
-  background: #eee;
+  background: #eeeeee;
 }
 button {
   display: block;
@@ -144,21 +143,21 @@ for (let c = 0; c < brickColumnCount; c++) {
   }
 }
 
-document.addEventListener("keydown", keyDownHandler, false);
-document.addEventListener("keyup", keyUpHandler, false);
+document.addEventListener("keydown", keyDownHandler);
+document.addEventListener("keyup", keyUpHandler);
 
 function keyDownHandler(e) {
-  if (e.key == "Right" || e.key == "ArrowRight") {
+  if (e.key === "Right" || e.key === "ArrowRight") {
     rightPressed = true;
-  } else if (e.key == "Left" || e.key == "ArrowLeft") {
+  } else if (e.key === "Left" || e.key === "ArrowLeft") {
     leftPressed = true;
   }
 }
 
 function keyUpHandler(e) {
-  if (e.key == "Right" || e.key == "ArrowRight") {
+  if (e.key === "Right" || e.key === "ArrowRight") {
     rightPressed = false;
-  } else if (e.key == "Left" || e.key == "ArrowLeft") {
+  } else if (e.key === "Left" || e.key === "ArrowLeft") {
     leftPressed = false;
   }
 }
@@ -166,7 +165,7 @@ function collisionDetection() {
   for (let c = 0; c < brickColumnCount; c++) {
     for (let r = 0; r < brickRowCount; r++) {
       let b = bricks[c][r];
-      if (b.status == 1) {
+      if (b.status === 1) {
         if (
           x > b.x &&
           x < b.x + brickWidth &&
@@ -176,7 +175,7 @@ function collisionDetection() {
           dy = -dy;
           b.status = 0;
           score++;
-          if (score == brickRowCount * brickColumnCount) {
+          if (score === brickRowCount * brickColumnCount) {
             alert("YOU WIN, CONGRATS!");
             document.location.reload();
             clearInterval(interval); // Needed for Chrome to end game
@@ -204,7 +203,7 @@ function drawPaddle() {
 function drawBricks() {
   for (let c = 0; c < brickColumnCount; c++) {
     for (let r = 0; r < brickRowCount; r++) {
-      if (bricks[c][r].status == 1) {
+      if (bricks[c][r].status === 1) {
         const brickX = r * (brickWidth + brickPadding) + brickOffsetLeft;
         const brickY = c * (brickHeight + brickPadding) + brickOffsetTop;
         bricks[c][r].x = brickX;
@@ -221,7 +220,7 @@ function drawBricks() {
 function drawScore() {
   ctx.font = "16px Arial";
   ctx.fillStyle = "#0095DD";
-  ctx.fillText("Score: " + score, 8, 20);
+  ctx.fillText(`Score: ${score}`, 8, 20);
 }
 
 function draw() {
@@ -261,8 +260,10 @@ function startGame() {
   interval = setInterval(draw, 10);
 }
 
-document.getElementById("runButton").addEventListener("click", function () {
+const runButton = document.getElementById("runButton");
+runButton.addEventListener("click", () => {
   startGame();
+  runButton.disabled = true;
 });
 ```
 
@@ -275,4 +276,4 @@ document.getElementById("runButton").addEventListener("click", function () {
 
 The game looks pretty good at this point. In the next lesson you will broaden the game's appeal by adding [Mouse controls](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls).
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Collision_detection", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}

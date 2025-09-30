@@ -2,9 +2,8 @@
 title: Stacking context example 1
 slug: Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_1
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 ## Description
 
@@ -27,7 +26,6 @@ In this last example you can see that DIV #2 and DIV #4 are not siblings, becaus
 In terms of stacking contexts, DIV #1 and DIV #3 are assimilated into the root element, and the resulting hierarchy is the following:
 
 - Root stacking context
-
   - DIV #2 (`z-index`: 1)
   - DIV #4 (`z-index`: 2)
 

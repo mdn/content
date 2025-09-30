@@ -3,9 +3,8 @@ title: :scope
 slug: Web/CSS/:scope
 page-type: css-pseudo-class
 browser-compat: css.selectors.scope
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`:scope`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents elements that are a reference point, or scope, for selectors to match against.
 
@@ -36,21 +35,11 @@ Which element(s) `:scope` matches depends on the context in which it is used:
 
 This example shows that `:scope` is equivalent to `:root` when used at the root level of a stylesheet. In this case, the provided CSS colors the background of the `<html>` element orange.
 
-#### HTML
-
-```html
-<html></html>
-```
-
-#### CSS
-
 ```css
 :scope {
   background-color: orange;
 }
 ```
-
-#### Result
 
 {{ EmbedLiveSample("Using :scope as an alternative to :root", "100%", 50) }}
 

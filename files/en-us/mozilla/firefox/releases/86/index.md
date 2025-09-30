@@ -1,10 +1,10 @@
 ---
 title: Firefox 86 for developers
+short-title: Firefox 86
 slug: Mozilla/Firefox/Releases/86
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 86 that will affect developers. Firefox 86 was released on February 23, 2021.
 
@@ -75,7 +75,3 @@ _No changes._
 - `focused: false` is now ignored when set as an option in a [`windows.create()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/create) call ([Firefox bug 1253129](https://bugzil.la/1253129)).
 - {{WebExtAPIRef("identity.getRedirectURL")}} now supports a loopback address, see [Getting the redirect URL](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/identity#getting_the_redirect_url) for details ([Firefox bug 1614919](https://bugzil.la/1614919)).
 - The page ID is now returned as part of {{WebExtAPIRef("history.onTitleChanged")}} ([Firefox bug 1678611](https://bugzil.la/1678611)).
-
-## Older versions
-
-{{Firefox_for_developers}}

@@ -27,9 +27,7 @@ getAnimations(options)
 ### Parameters
 
 - `options` {{optional_inline}}
-
   - : An options object containing the following property:
-
     - `subtree`
       - : A boolean value which, if `true`, causes animations that target
         descendants of _Element_ to be returned as well. This includes animations

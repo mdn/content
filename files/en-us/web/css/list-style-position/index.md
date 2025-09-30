@@ -3,9 +3,8 @@ title: list-style-position
 slug: Web/CSS/list-style-position
 page-type: css-property
 browser-compat: css.properties.list-style-position
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`list-style-position`** [CSS](/en-US/docs/Web/CSS) property sets the position of the {{cssxref("::marker")}} relative to a list item.
 
@@ -116,22 +115,22 @@ It is often more convenient to use the shorthand {{cssxref("list-style")}}.
 #### HTML
 
 ```html
+<p>List 1</p>
 <ul class="inside">
-  List 1
   <li>List Item 1-1</li>
   <li>List Item 1-2</li>
   <li>List Item 1-3</li>
   <li>List Item 1-4</li>
 </ul>
+<p>List 2</p>
 <ul class="outside">
-  List 2
   <li>List Item 2-1</li>
   <li>List Item 2-2</li>
   <li>List Item 2-3</li>
   <li>List Item 2-4</li>
 </ul>
+<p>List 3</p>
 <ul class="inside-img">
-  List 3
   <li>List Item 3-1</li>
   <li>List Item 3-2</li>
   <li>List Item 3-3</li>

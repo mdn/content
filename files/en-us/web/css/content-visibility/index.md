@@ -3,9 +3,8 @@ title: content-visibility
 slug: Web/CSS/content-visibility
 page-type: css-property
 browser-compat: css.properties.content-visibility
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`content-visibility`** [CSS](/en-US/docs/Web/CSS) property controls whether or not an element renders its contents at all, along with forcing a strong set of containments, allowing user agents to potentially omit large swathes of layout and rendering work until it becomes needed. It enables the user agent to skip an element's rendering work (including layout and painting) until it is needed — which makes the initial page load much faster.
 
@@ -36,15 +35,15 @@ content-visibility: hidden;
 .container {
   width: 140px;
   height: 140px;
-  border: 3px solid rgb(64, 28, 163);
-  background-color: rgb(135, 136, 184);
+  border: 3px solid rgb(64 28 163);
+  background-color: rgb(135 136 184);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .child {
-  border: 3px solid rgb(64, 28, 163);
+  border: 3px solid rgb(64 28 163);
   background-color: wheat;
   color: black;
   width: 80%;
@@ -74,7 +73,7 @@ content-visibility: unset;
 ### Values
 
 - `visible`
-  - : No effect. The element's contents are laid out and rendered as normal.
+  - : No effect. The element's contents are laid out and rendered as normal. This is the default value.
 - `hidden`
   - : The element [skips its contents](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment#skips_its_contents). The skipped contents must not be accessible to user-agent features, such as find-in-page, tab-order navigation, etc., nor be selectable or focusable. This is similar to giving the contents `display: none`.
 - `auto`
@@ -259,24 +258,24 @@ div {
 @keyframes show {
   0% {
     content-visibility: hidden;
-    color: rgb(0 0 0 / 0%);
+    color: transparent;
   }
 
   100% {
     content-visibility: visible;
-    color: rgb(0 0 0 / 100%);
+    color: black;
   }
 }
 
 @keyframes hide {
   0% {
     content-visibility: visible;
-    color: rgb(0 0 0 / 100%);
+    color: black;
   }
 
   100% {
     content-visibility: hidden;
-    color: rgb(0 0 0 / 0%);
+    color: transparent;
   }
 }
 ```

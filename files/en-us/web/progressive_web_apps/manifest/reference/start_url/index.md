@@ -3,9 +3,8 @@ title: start_url
 slug: Web/Progressive_web_apps/Manifest/Reference/start_url
 page-type: web-manifest-member
 browser-compat: manifests.webapp.start_url
+sidebar: pwasidebar
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}
 
 The `start_url` manifest member is used to specify the URL that should be opened when a user launches your web application, such as when tapping the application's icon on their device's home screen or in an application list.
 
@@ -27,7 +26,6 @@ The `start_url` manifest member is used to specify the URL that should be opened
 ### Values
 
 - `start_url`
-
   - : A string that represents the starting URL of a web app.
     The URL can be absolute or relative.
     If the value is relative, it is resolved against the manifest file's URL.
@@ -101,7 +99,7 @@ You want users to land on the `trail-hub.html` page when they launch the app.
 You can specify this starting URL in your manifest file like so:
 
 ```json
-"start_url": "https://hiking-pro.com/trail-hub.html"
+{ "start_url": "https://hiking-pro.com/trail-hub.html" }
 ```
 
 This `start_url` value is valid because it is same-origin with the manifest URL (`https://hiking-pro.com/resources/manifest.json`).
@@ -109,7 +107,7 @@ This `start_url` value is valid because it is same-origin with the manifest URL 
 The following `start_url` is invalid because it is not the same-origin with the manifest URL:
 
 ```json example-bad
-"start_url": "https://other-domain.com/trail-hub.html"
+{ "start_url": "https://other-domain.com/trail-hub.html" }
 ```
 
 In the above case, `https://hiking-pro.com/index.html` will be used as the default starting page when users launch the app.
@@ -120,7 +118,7 @@ For your hiking app in the previous scenario, you can specify the same starting 
 This relative URL will resolve to `https://hiking-pro.com/trail-hub.html` using the manifest file's URL (`https://hiking-pro.com/resources/manifest.json`) as the base.
 
 ```json
-"start_url": "../trail-hub.html"
+{ "start_url": "../trail-hub.html" }
 ```
 
 ## Specifications

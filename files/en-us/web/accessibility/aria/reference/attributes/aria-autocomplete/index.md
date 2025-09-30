@@ -1,5 +1,6 @@
 ---
-title: aria-autocomplete
+title: "ARIA: aria-autocomplete attribute"
+short-title: aria-autocomplete
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-autocomplete
 page-type: aria-attribute
 spec-urls:
@@ -64,5 +65,5 @@ Used in roles:
 - [`aria-haspopup`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-haspopup) attribute
 - [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant) attribute
 - [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) attribute
-- [Editable Combobox With Both List and Inline Autocomplete Example](https://www.w3.org/TR/wai-aria-practices-1.2/examples/combobox/combobox-autocomplete-both.html)
+- [Editable Combobox With Both List and Inline Autocomplete Example](https://www.w3.org/WAI/ARIA/apg/patterns/combobox/examples/combobox-autocomplete-both/)
 - [Event.ariaAutoComplete](/en-US/docs/Web/API/Element/ariaAutoComplete)

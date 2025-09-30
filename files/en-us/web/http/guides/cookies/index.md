@@ -2,9 +2,8 @@
 title: Using HTTP cookies
 slug: Web/HTTP/Guides/Cookies
 page-type: guide
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 A **cookie** (also known as a web cookie or browser cookie) is a small piece of data a server sends to a user's web browser. The browser may store cookies, create new cookies, modify existing ones, and send them back to the same server with later requests. Cookies enable web applications to store limited amounts of data and remember state information; by default the HTTP protocol is [stateless](/en-US/docs/Web/HTTP/Guides/Overview#http_is_stateless_but_not_sessionless).
 
@@ -19,7 +18,7 @@ Typically, the server will use the contents of HTTP cookies to determine whether
 3. At a later time, the user moves to a different page on the same site. The browser sends the cookie containing the session ID along with the corresponding request to indicate that it still thinks the user is signed in.
 4. The server checks the session ID and, if it is still valid, sends the user a personalized version of the new page. If it is not valid, the session ID is deleted and the user is shown a generic version of the page (or perhaps shown an "access denied" message and asked to sign in again).
 
-![visual representation of the above sign-in system description](cookie-basic-example.png)
+![visual representation of the above sign-in system description](/shared-assets/images/diagrams/http/cookies/cookie-basic-example.png)
 
 Cookies are mainly used for three purposes:
 
@@ -85,12 +84,13 @@ You can specify an expiration date or time period after which the cookie should 
   Set-Cookie: id=a3fWa; Max-Age=2592000
   ```
 
-  > **Note:** `Expires` has been available for longer than `Max-Age`, however `Max-Age` is less error-prone, and takes precedence when both are set. The rationale behind this is that when you set an `Expires` date and time, they're relative to the client the cookie is being set on. If the server is set to a different time, this could cause errors.
+  > [!NOTE]
+  > `Expires` has been available for longer than `Max-Age`, however `Max-Age` is less error-prone, and takes precedence when both are set. The rationale behind this is that when you set an `Expires` date and time, they're relative to the client the cookie is being set on. If the server is set to a different time, this could cause errors.
 
 - _Session_ cookies — cookies without a `Max-Age` or `Expires` attribute – are deleted when the current session ends. The browser defines when the "current session" ends, and some browsers use _session restoring_ when restarting. This can cause session cookies to last indefinitely.
 
   > [!NOTE]
-  > If your site authenticates users, it should regenerate and resend session cookies, even ones that already exist, whenever a user authenticates. This approach helps prevent [session fixation attacks](/en-US/docs/Web/Security/Types_of_attacks#session_fixation), where a third-party can reuse a user's session.
+  > If your site authenticates users, it should regenerate and resend session cookies, even ones that already exist, whenever a user authenticates. This approach helps prevent [session fixation](https://owasp.org/www-community/attacks/Session_fixation) attacks, where a third-party can reuse a user's session.
 
 There are some techniques designed to recreate cookies after they're deleted. These are known as "zombie" cookies. These techniques violate the principles of user [privacy](#privacy_and_tracking) and control, may violate [data privacy regulations](#cookie-related_regulations), and could expose a website using them to legal liability.
 
@@ -113,7 +113,7 @@ document.cookie = "yummy_cookie=chocolate";
 document.cookie = "tasty_cookie=strawberry";
 ```
 
-You can also access existing cookies and set new values for them, provided the [`HttpOnly`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#httponly) attribute isn't set on them (i.e., in the `Set-Cookie` header that created it):
+You can also access existing cookies and set new values for them:
 
 ```js
 console.log(document.cookie);
@@ -125,7 +125,9 @@ console.log(document.cookie);
 // logs "tasty_cookie=strawberry; yummy_cookie=blueberry"
 ```
 
-Note that, for security purposes, you can't change cookie values by sending an updated `Cookie` header directly when initiating a request, i.e., via {{domxref("Window/fetch", "fetch()")}} or {{domxref("XMLHttpRequest")}}. Note that there are also good reasons why you shouldn't allow JavaScript to modify cookies — i.e., set `HttpOnly` during creation. See the [Security](#security) section for more details.
+For security purposes, you can't change cookie values by sending an updated `Cookie` header directly when initiating a request, for example, via {{domxref("Window/fetch", "fetch()")}} or {{domxref("XMLHttpRequest")}}.
+
+There are good reasons why you shouldn't allow JavaScript to modify cookies at all. You can prevent JavaScript from accessing a cookie by specifying the [`HttpOnly`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#httponly) attribute during its creation. See the [Security](#security) section for more details.
 
 ## Security
 
@@ -143,10 +145,10 @@ Set-Cookie: id=a3fWa; Expires=Thu, 21 Oct 2021 07:28:00 GMT; Secure; HttpOnly
 
 - A cookie with the `Secure` attribute is only sent to the server with an encrypted request over the HTTPS protocol. It's never sent with unsecured HTTP (except on localhost), which means {{Glossary("MitM", "man-in-the-middle")}} attackers can't access it easily. Insecure sites (with `http:` in the URL) can't set cookies with the `Secure` attribute. However, don't assume that `Secure` prevents all access to sensitive information in cookies. For example, someone with access to the client's hard disk (or JavaScript if the `HttpOnly` attribute isn't set) can read and modify the information.
 
-- A cookie with the `HttpOnly` attribute can't be accessed by JavaScript, for example using {{domxref("Document.cookie")}}; it can only be accessed when it reaches the server. Cookies that persist user sessions for example should have the `HttpOnly` attribute set — it would be really insecure to make them available to JavaScript. This precaution helps mitigate cross-site scripting ([XSS](/en-US/docs/Web/Security/Types_of_attacks#cross-site_scripting_xss)) attacks.
+- A cookie with the `HttpOnly` attribute can't be accessed by JavaScript, for example using {{domxref("Document.cookie")}}; it can only be accessed when it reaches the server. Cookies that persist user sessions for example should have the `HttpOnly` attribute set — it would be really insecure to make them available to JavaScript. This precaution helps mitigate cross-site scripting ([XSS](/en-US/docs/Web/Security/Attacks/XSS)) attacks.
 
 > [!NOTE]
-> Depending on the application, you may want to use an opaque identifier that the server looks up rather than storing sensitive information directly in cookies, or investigate alternative authentication/confidentiality mechanisms such as [JSON Web Tokens](https://jwt.io/).
+> Depending on the application, you may want to use an opaque identifier that the server looks up rather than storing sensitive information directly in cookies, or investigate alternative authentication/confidentiality mechanisms such as [JSON Web Tokens](https://www.jwt.io/).
 
 ### Define where cookies are sent
 
@@ -170,14 +172,12 @@ The `Domain` and `Path` attributes define the _scope_ of a cookie: what URLs the
   ```
 
   The `%x2F` ("/") character is considered a directory separator, and subdirectories match as well. For example, if you set `Path=/docs`, these request paths match:
-
   - `/docs`
   - `/docs/`
   - `/docs/Web/`
   - `/docs/Web/HTTP`
 
   But these request paths don't:
-
   - `/`
   - `/docsets`
   - `/fr/docs`
@@ -219,14 +219,16 @@ If no `SameSite` attribute is set, the cookie is treated as `Lax` by default.
 
 Because of the design of the cookie mechanism, a server can't confirm that a cookie was set from a secure origin or even tell _where_ a cookie was originally set.
 
-A vulnerable application on a subdomain can set a cookie with the `Domain` attribute, which gives access to that cookie on all other subdomains. This mechanism can be abused in a _session fixation_ attack. See [session fixation](/en-US/docs/Web/Security/Types_of_attacks#session_fixation) for primary mitigation methods.
+An application on a subdomain can set a cookie with the `Domain` attribute, which gives access to that cookie on all other subdomains. This mechanism can be abused in a [session fixation](https://owasp.org/www-community/attacks/Session_fixation) attack.
 
-As a [defense-in-depth measure](<https://en.wikipedia.org/wiki/Defense_in_depth_(computing)>), however, you can use _cookie prefixes_ to assert specific facts about the cookie. Two prefixes are available:
+As a [defense-in-depth measure](<https://en.wikipedia.org/wiki/Defense_in_depth_(computing)>), you can use _cookie prefixes_ to impose specific restrictions on a cookie's attributes in supporting user-agents. All cookie prefixes start with a double-underscore (`__`) and end in a dash (`-`). Four prefixes are available:
 
-- `__Host-`: If a cookie name has this prefix, it's accepted in a {{HTTPHeader("Set-Cookie")}} header only if it's also marked with the `Secure` attribute, was sent from a secure origin, does _not_ include a `Domain` attribute, and has the `Path` attribute set to `/`. In other words, the cookie is _domain-locked_.
-- `__Secure-`: If a cookie name has this prefix, it's accepted in a {{HTTPHeader("Set-Cookie")}} header only if it's marked with the `Secure` attribute and was sent from a secure origin. This is weaker than the `__Host-` prefix.
+- **`__Secure-`**: Cookies with names starting with `__Secure-` must be set with the `Secure` attribute by a secure page (HTTPS).
+- **`__Host-`**: Cookies with names starting with `__Host-` must be set with the `Secure` attribute by a secure page (HTTPS). In addition, they must not have a `Domain` attribute specified, and the `Path` attribute must be set to `/`. This guarantees that such cookies are only sent to the host that set them, and not to any other host on the domain. It also guarantees that they are set host-wide and cannot be overridden on any path on that host. This combination yields a cookie that is as close as can be to treating the origin as a security boundary.
+- **`__Http-`**: Cookies with names starting with `__Http-` must be set with the `Secure` flag by a secure page (HTTPS) and in addition must have the `HttpOnly` attribute set to prove that they were set via the `Set-Cookie` header (they can't be set or modified via JavaScript features such as {{domxref("Document.cookie")}} or the [Cookie Store API](/en-US/docs/Web/API/Cookie_Store_API)).
+- **`__Host-Http-`**: Cookies with names starting with `__Host-Http-` must be set with the `Secure` flag by a secure page (HTTPS) and must have the `HttpOnly` attribute set to prove that they were set via the `Set-Cookie` header. In addition, they also have the same restrictions as `__Host-`-prefixed cookies. This combination yields a cookie that is as close as can be to treating the origin as a security boundary while at the same time ensuring developers and server operators know that its scope is limited to HTTP requests.
 
-The browser will reject cookies with these prefixes that don't comply with their restrictions. This ensures that subdomain-created cookies with prefixes are either confined to a subdomain or ignored completely. As the application server only checks for a specific cookie name when determining if the user is authenticated or a CSRF token is correct, this effectively acts as a defense measure against session fixation.
+The browser will reject cookies with these prefixes that don't comply with their restrictions. As the application server only checks for a specific cookie name when determining if the user is authenticated or a CSRF token is correct, this effectively acts as a defense measure against [session fixation](https://owasp.org/www-community/attacks/Session_fixation).
 
 > [!NOTE]
 > On the server, the web application _must_ check for the full cookie name including the prefix. User agents _do not_ strip the prefix from the cookie before sending it in a request's {{HTTPHeader("Cookie")}} header.

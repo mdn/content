@@ -14,7 +14,7 @@ Our simple example for this guide provides a play/pause button that starts and p
 
 ![A demo featuring a play button, and toggle to turn a filter on and off, and a line graph showing the filter frequencies returned after the filter has been applied.](iir-filter-demo.png)
 
-You can check out the [full demo here on CodePen](https://codepen.io/Rumyra/pen/oPxvYB/). Also see the [source code on GitHub](https://github.com/mdn/webaudio-examples/tree/main/iirfilter-node). It includes some different coefficient values for different lowpass frequencies — you can change the value of the `filterNumber` constant to a value between 0 and 3 to check out the different available effects.
+You can check out the [full demo live](https://mdn.github.io/webaudio-examples/iirfilter-node/). Also see the [source code on GitHub](https://github.com/mdn/webaudio-examples/tree/main/iirfilter-node). It includes some different coefficient values for different lowpass frequencies — you can change the value of the `filterNumber` constant to a value between 0 and 3 to check out the different available effects.
 
 ## Browser support
 
@@ -94,16 +94,12 @@ This function is called when the play button is pressed. The play button HTML lo
 And the `click` event listener starts like so:
 
 ```js
-playButton.addEventListener(
-  "click",
-  () => {
-    if (playButton.dataset.playing === "false") {
-      srcNode = playSourceNode(audioCtx, sample);
-      // …
-    }
-  },
-  false,
-);
+playButton.addEventListener("click", () => {
+  if (playButton.dataset.playing === "false") {
+    srcNode = playSourceNode(audioCtx, sample);
+    // …
+  }
+});
 ```
 
 The toggle that turns the IIR filter on and off is set up in the similar way. First, the HTML:
@@ -121,17 +117,13 @@ The toggle that turns the IIR filter on and off is set up in the similar way. Fi
 The filter button's `click` handler then connects the `IIRFilter` up to the graph, between the source and the destination:
 
 ```js
-filterButton.addEventListener(
-  "click",
-  () => {
-    if (filterButton.dataset.filteron === "false") {
-      srcNode.disconnect(audioCtx.destination);
-      srcNode.connect(iirFilter).connect(audioCtx.destination);
-      // …
-    }
-  },
-  false,
-);
+filterButton.addEventListener("click", () => {
+  if (filterButton.dataset.filteron === "false") {
+    srcNode.disconnect(audioCtx.destination);
+    srcNode.connect(iirFilter).connect(audioCtx.destination);
+    // …
+  }
+});
 ```
 
 ### Frequency response

@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.WorkerGlobalScope.securitypolicyviolation_event
 ---
 
-{{APIRef}}{{AvailableInWorkers("worker")}}
+{{APIRef("Reporting API")}}{{AvailableInWorkers("worker")}}
 
 The **`securitypolicyviolation`** event is fired when a [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) is violated in a worker.
 
@@ -16,10 +16,10 @@ The handler can be assigned using the `onsecuritypolicyviolation` event handler 
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("securitypolicyviolation", (event) => {});
+```js-nolint
+addEventListener("securitypolicyviolation", (event) => { })
 
-onsecuritypolicyviolation = (event) => {};
+onsecuritypolicyviolation = (event) => { }
 ```
 
 ## Event type

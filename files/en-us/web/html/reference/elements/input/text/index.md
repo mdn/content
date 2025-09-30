@@ -3,9 +3,8 @@ title: <input type="text">
 slug: Web/HTML/Reference/Elements/input/text
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_text
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 {{HTMLElement("input")}} elements of type **`text`** create basic single-line text fields.
 
@@ -58,15 +57,15 @@ The values of the list attribute is the {{domxref("Element.id", "id")}} of a {{H
 
 ### `maxlength`
 
-The maximum string length (measured in UTF-16 code units) that the user can enter into the `text` input. This must be an integer value of 0 or higher. If no `maxlength` is specified, or an invalid value is specified, the `text` input has no maximum length. This value must also be greater than or equal to the value of `minlength`.
+The maximum string length (measured in {{glossary("UTF-16", "UTF-16 code units")}}) that the user can enter into the `text` input. This must be an integer value of 0 or higher. If no `maxlength` is specified, or an invalid value is specified, the `text` input has no maximum length. This value must also be greater than or equal to the value of `minlength`.
 
-The input will fail [constraint validation](/en-US/docs/Web/HTML/Guides/Constraint_validation) if the length of the text value of the field is greater than `maxlength` UTF-16 code units long. Constraint validation is only applied when the value is changed by the user.
+The input will fail [constraint validation](/en-US/docs/Web/HTML/Guides/Constraint_validation) if the length of the text value of the field is greater than `maxlength` {{glossary("UTF-16", "UTF-16 code units")}} long. Constraint validation is only applied when the value is changed by the user.
 
 ### `minlength`
 
-The minimum string length (measured in UTF-16 code units) that the user can enter into the `text` input. This must be a non-negative integer value smaller than or equal to the value specified by `maxlength`. If no `minlength` is specified, or an invalid value is specified, the `text` input has no minimum length.
+The minimum string length (measured in {{glossary("UTF-16", "UTF-16 code units")}}) that the user can enter into the `text` input. This must be a non-negative integer value smaller than or equal to the value specified by `maxlength`. If no `minlength` is specified, or an invalid value is specified, the `text` input has no minimum length.
 
-The input will fail [constraint validation](/en-US/docs/Web/HTML/Guides/Constraint_validation) if the length of the text entered into the field is fewer than `minlength` UTF-16 code units long. Constraint validation is only applied when the value is changed by the user.
+The input will fail [constraint validation](/en-US/docs/Web/HTML/Guides/Constraint_validation) if the length of the text entered into the field is fewer than `minlength` {{glossary("UTF-16", "UTF-16 code units")}} long. Constraint validation is only applied when the value is changed by the user.
 
 ### `pattern`
 
@@ -266,7 +265,7 @@ This renders like so:
 
 {{EmbedLiveSample('Making_input_required', 600, 100)}}
 
-If you try to submit the form with no search term entered into it, the browser will show an error message.
+If you try to submit the form with no username entered into it, the browser will show an error message.
 
 ### Input value length
 
@@ -358,7 +357,7 @@ div {
 
 p {
   font-size: 80%;
-  color: #999;
+  color: #999999;
 }
 
 input + span {

@@ -184,12 +184,10 @@ So now that we have the basic functionality in place, the fun can start. The fol
   padding: 0.1em 2.5em 0.2em 0.5em;
   width: 10em; /* 100px */
 
-  border: 0.2em solid #000;
+  border: 0.2em solid black;
   border-radius: 0.4em;
   box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%);
 
-  /* The first declaration is for browsers that do not support linear gradients. */
-  background: #f0f0f0;
   background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
 }
 
@@ -221,11 +219,11 @@ We don't need an extra element to design the down arrow; instead, we're using th
   width: 2em;
   padding-top: 0.1em;
 
-  border-left: 0.2em solid #000;
+  border-left: 0.2em solid black;
   border-radius: 0 0.1em 0.1em 0;
 
-  background-color: #000;
-  color: #fff;
+  background-color: black;
+  color: white;
   text-align: center;
 }
 ```
@@ -255,7 +253,7 @@ Next, let's style the list of options:
   overflow-y: auto;
   overflow-x: hidden;
 
-  border: 0.2em solid #000;
+  border: 0.2em solid black;
   border-top-width: 0.1em;
   border-radius: 0 0 0.4em 0.4em;
 
@@ -272,8 +270,8 @@ For the options, we need to add a `highlight` class to be able to identify the v
 }
 
 .select .highlight {
-  background: #000;
-  color: #ffffff;
+  background: black;
+  color: white;
 }
 ```
 
@@ -326,12 +324,11 @@ So here's the result with our three states ([check out the source code here](/en
   padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
   width: 10em; /* 100px */
 
-  border: 0.2em solid #000; /* 2px */
+  border: 0.2em solid black; /* 2px */
   border-radius: 0.4em; /* 4px */
 
   box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
 
-  background: #f0f0f0;
   background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
 }
 
@@ -360,11 +357,11 @@ So here's the result with our three states ([check out the source code here](/en
 
   text-align: center;
 
-  border-left: 0.2em solid #000;
+  border-left: 0.2em solid black;
   border-radius: 0 0.1em 0.1em 0;
 
-  background-color: #000;
-  color: #fff;
+  background-color: black;
+  color: white;
 }
 
 .select .optList {
@@ -375,7 +372,7 @@ So here's the result with our three states ([check out the source code here](/en
   padding: 0;
 
   background: #f0f0f0;
-  border: 0.2em solid #000;
+  border: 0.2em solid black;
   border-top-width: 0.1em;
   border-radius: 0 0 0.4em 0.4em;
 
@@ -394,8 +391,8 @@ So here's the result with our three states ([check out the source code here](/en
 }
 
 .select .highlight {
-  background: #000;
-  color: #ffffff;
+  background: black;
+  color: white;
 }
 ```
 
@@ -448,12 +445,11 @@ So here's the result with our three states ([check out the source code here](/en
   padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
   width: 10em; /* 100px */
 
-  border: 0.2em solid #000; /* 2px */
+  border: 0.2em solid black; /* 2px */
   border-radius: 0.4em; /* 4px */
 
   box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
 
-  background: #f0f0f0;
   background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
 }
 
@@ -482,11 +478,11 @@ So here's the result with our three states ([check out the source code here](/en
 
   text-align: center;
 
-  border-left: 0.2em solid #000;
+  border-left: 0.2em solid black;
   border-radius: 0 0.1em 0.1em 0;
 
-  background-color: #000;
-  color: #fff;
+  background-color: black;
+  color: white;
 }
 
 .select .optList {
@@ -497,7 +493,7 @@ So here's the result with our three states ([check out the source code here](/en
   padding: 0;
 
   background: #f0f0f0;
-  border: 0.2em solid #000;
+  border: 0.2em solid black;
   border-top-width: 0.1em;
   border-radius: 0 0 0.4em 0.4em;
 
@@ -516,8 +512,8 @@ So here's the result with our three states ([check out the source code here](/en
 }
 
 .select .highlight {
-  background: #000;
-  color: #ffffff;
+  background: black;
+  color: white;
 }
 ```
 
@@ -570,12 +566,11 @@ So here's the result with our three states ([check out the source code here](/en
   padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
   width: 10em; /* 100px */
 
-  border: 0.2em solid #000; /* 2px */
+  border: 0.2em solid black; /* 2px */
   border-radius: 0.4em; /* 4px */
 
   box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
 
-  background: #f0f0f0;
   background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
 }
 
@@ -604,11 +599,11 @@ So here's the result with our three states ([check out the source code here](/en
 
   text-align: center;
 
-  border-left: 0.2em solid #000;
+  border-left: 0.2em solid black;
   border-radius: 0 0.1em 0.1em 0;
 
-  background-color: #000;
-  color: #fff;
+  background-color: black;
+  color: white;
 }
 
 .select .optList {
@@ -619,7 +614,7 @@ So here's the result with our three states ([check out the source code here](/en
   padding: 0;
 
   background: #f0f0f0;
-  border: 0.2em solid #000;
+  border: 0.2em solid black;
   border-top-width: 0.1em;
   border-radius: 0 0 0.4em 0.4em;
 
@@ -638,8 +633,8 @@ So here's the result with our three states ([check out the source code here](/en
 }
 
 .select .highlight {
-  background: #000;
-  color: #fff;
+  background: black;
+  color: white;
 }
 ```
 
@@ -718,10 +713,8 @@ This CSS visually hides one of the elements, but it is still available to screen
 Now we need a JavaScript switch to determine if the script is running or not. This switch is a couple of lines: if at page load time our script is running, it will remove the `no-widget` class and add the `widget` class, thereby swapping the visibility of the {{HTMLElement("select")}} element and the custom control.
 
 ```js
-window.addEventListener("load", () => {
-  document.body.classList.remove("no-widget");
-  document.body.classList.add("widget");
-});
+document.body.classList.remove("no-widget");
+document.body.classList.add("widget");
 ```
 
 #### Without JS
@@ -830,12 +823,11 @@ Check out the [full source code](/en-US/docs/Learn_web_development/Extensions/Fo
   padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
   width: 10em; /* 100px */
 
-  border: 0.2em solid #000; /* 2px */
+  border: 0.2em solid black; /* 2px */
   border-radius: 0.4em; /* 4px */
 
   box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
 
-  background: #f0f0f0;
   background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
 }
 
@@ -864,11 +856,11 @@ Check out the [full source code](/en-US/docs/Learn_web_development/Extensions/Fo
 
   text-align: center;
 
-  border-left: 0.2em solid #000;
+  border-left: 0.2em solid black;
   border-radius: 0 0.1em 0.1em 0;
 
-  background-color: #000;
-  color: #fff;
+  background-color: black;
+  color: white;
 }
 
 .select .optList {
@@ -879,7 +871,7 @@ Check out the [full source code](/en-US/docs/Learn_web_development/Extensions/Fo
   padding: 0;
 
   background: #f0f0f0;
-  border: 0.2em solid #000;
+  border: 0.2em solid black;
   border-top-width: 0.1em;
   border-radius: 0 0 0.4em 0.4em;
 
@@ -898,18 +890,16 @@ Check out the [full source code](/en-US/docs/Learn_web_development/Extensions/Fo
 }
 
 .select .highlight {
-  background: #000;
-  color: #ffffff;
+  background: black;
+  color: white;
 }
 ```
 
 ```js hidden
-window.addEventListener("load", () => {
-  const form = document.querySelector("form");
+const form = document.querySelector("form");
 
-  form.classList.remove("no-widget");
-  form.classList.add("widget");
-});
+form.classList.remove("no-widget");
+form.classList.add("widget");
 ```
 
 {{EmbedLiveSample("With_JS",120,130)}}
@@ -1001,60 +991,57 @@ You need these to handle the various states of custom control.
 Next, we bind these functions to the appropriate events:
 
 ```js
-// We handle the event binding when the document is loaded.
-window.addEventListener("load", () => {
-  const selectList = document.querySelectorAll(".select");
+const selectList = document.querySelectorAll(".select");
 
-  // Each custom control needs to be initialized
-  selectList.forEach((select) => {
-    // as well as all its `option` elements
-    const optionList = select.querySelectorAll(".option");
+// Each custom control needs to be initialized
+selectList.forEach((select) => {
+  // as well as all its `option` elements
+  const optionList = select.querySelectorAll(".option");
 
-    // Each time a user hovers their mouse over an option, we highlight the given option
-    optionList.forEach((option) => {
-      option.addEventListener("mouseover", () => {
-        // Note: the `select` and `option` variable are closures
-        // available in the scope of our function call.
-        highlightOption(select, option);
-      });
-    });
-
-    // Each times the user clicks on or taps a custom select element
-    select.addEventListener("click", (event) => {
-      // Note: the `select` variable is a closure
+  // Each time a user hovers their mouse over an option, we highlight the given option
+  optionList.forEach((option) => {
+    option.addEventListener("mouseover", () => {
+      // Note: the `select` and `option` variable are closures
       // available in the scope of our function call.
-
-      // We toggle the visibility of the list of options
-      toggleOptList(select);
+      highlightOption(select, option);
     });
+  });
 
-    // In case the control gains focus
-    // The control gains the focus each time the user clicks on it or each time
-    // they use the tabulation key to access the control
-    select.addEventListener("focus", (event) => {
-      // Note: the `select` and `selectList` variable are closures
-      // available in the scope of our function call.
+  // Each times the user clicks on or taps a custom select element
+  select.addEventListener("click", (event) => {
+    // Note: the `select` variable is a closure
+    // available in the scope of our function call.
 
-      // We activate the control
-      activeSelect(select, selectList);
-    });
+    // We toggle the visibility of the list of options
+    toggleOptList(select);
+  });
 
-    // In case the control loses focus
-    select.addEventListener("blur", (event) => {
-      // Note: the `select` variable is a closure
-      // available in the scope of our function call.
+  // In case the control gains focus
+  // The control gains the focus each time the user clicks on it or each time
+  // they use the tabulation key to access the control
+  select.addEventListener("focus", (event) => {
+    // Note: the `select` and `selectList` variable are closures
+    // available in the scope of our function call.
 
-      // We deactivate the control
+    // We activate the control
+    activeSelect(select, selectList);
+  });
+
+  // In case the control loses focus
+  select.addEventListener("blur", (event) => {
+    // Note: the `select` variable is a closure
+    // available in the scope of our function call.
+
+    // We deactivate the control
+    deactivateSelect(select);
+  });
+
+  // Loose focus if the user hits `esc`
+  select.addEventListener("keyup", (event) => {
+    // deactivate on keyup of `esc`
+    if (event.key === "Escape") {
       deactivateSelect(select);
-    });
-
-    // Loose focus if the user hits `esc`
-    select.addEventListener("keyup", (event) => {
-      // deactivate on keyup of `esc`
-      if (event.key === "Escape") {
-        deactivateSelect(select);
-      }
-    });
+    }
   });
 });
 ```
@@ -1128,12 +1115,11 @@ Check out the [full source code](/en-US/docs/Learn_web_development/Extensions/Fo
   padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
   width: 10em; /* 100px */
 
-  border: 0.2em solid #000; /* 2px */
+  border: 0.2em solid black; /* 2px */
   border-radius: 0.4em; /* 4px */
 
   box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
 
-  background: #f0f0f0;
   background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
 }
 
@@ -1162,11 +1148,11 @@ Check out the [full source code](/en-US/docs/Learn_web_development/Extensions/Fo
 
   text-align: center;
 
-  border-left: 0.2em solid #000;
+  border-left: 0.2em solid black;
   border-radius: 0 0.1em 0.1em 0;
 
-  background-color: #000;
-  color: #fff;
+  background-color: black;
+  color: white;
 }
 
 .select .optList {
@@ -1177,7 +1163,7 @@ Check out the [full source code](/en-US/docs/Learn_web_development/Extensions/Fo
   padding: 0;
 
   background: #f0f0f0;
-  border: 0.2em solid #000;
+  border: 0.2em solid black;
   border-top-width: 0.1em;
   border-radius: 0 0 0.4em 0.4em;
 
@@ -1196,8 +1182,8 @@ Check out the [full source code](/en-US/docs/Learn_web_development/Extensions/Fo
 }
 
 .select .highlight {
-  background: #000;
-  color: #ffffff;
+  background: black;
+  color: white;
 }
 ```
 
@@ -1234,46 +1220,38 @@ function highlightOption(select, option) {
   option.classList.add("highlight");
 }
 
-window.addEventListener("load", () => {
-  const form = document.querySelector("form");
+const form = document.querySelector("form");
 
-  form.classList.remove("no-widget");
-  form.classList.add("widget");
-});
+form.classList.remove("no-widget");
+form.classList.add("widget");
 
-window.addEventListener("load", () => {
-  const selectList = document.querySelectorAll(".select");
+const selectList = document.querySelectorAll(".select");
 
-  selectList.forEach((select) => {
-    const optionList = select.querySelectorAll(".option");
+selectList.forEach((select) => {
+  const optionList = select.querySelectorAll(".option");
 
-    optionList.forEach((option) => {
-      option.addEventListener("mouseover", () => {
-        highlightOption(select, option);
-      });
+  optionList.forEach((option) => {
+    option.addEventListener("mouseover", () => {
+      highlightOption(select, option);
     });
+  });
 
-    select.addEventListener(
-      "click",
-      (event) => {
-        toggleOptList(select);
-      },
-      false,
-    );
+  select.addEventListener("click", (event) => {
+    toggleOptList(select);
+  });
 
-    select.addEventListener("focus", (event) => {
-      activeSelect(select, selectList);
-    });
+  select.addEventListener("focus", (event) => {
+    activeSelect(select, selectList);
+  });
 
-    select.addEventListener("blur", (event) => {
+  select.addEventListener("blur", (event) => {
+    deactivateSelect(select);
+  });
+
+  select.addEventListener("keyup", (event) => {
+    if (event.key === "Escape") {
       deactivateSelect(select);
-    });
-
-    select.addEventListener("keyup", (event) => {
-      if (event.key === "Escape") {
-        deactivateSelect(select);
-      }
-    });
+    }
   });
 });
 ```
@@ -1329,60 +1307,57 @@ function getIndex(select) {
 With these two functions, we can bind the native controls to the custom ones:
 
 ```js
-// We handle event binding when the document is loaded.
-window.addEventListener("load", () => {
-  const selectList = document.querySelectorAll(".select");
+const selectList = document.querySelectorAll(".select");
 
-  // Each custom control needs to be initialized
-  selectList.forEach((select) => {
-    const optionList = select.querySelectorAll(".option");
-    const selectedIndex = getIndex(select);
+// Each custom control needs to be initialized
+selectList.forEach((select) => {
+  const optionList = select.querySelectorAll(".option");
+  const selectedIndex = getIndex(select);
 
-    // We make our custom control focusable
-    select.tabIndex = 0;
+  // We make our custom control focusable
+  select.tabIndex = 0;
 
-    // We make the native control no longer focusable
-    select.previousElementSibling.tabIndex = -1;
+  // We make the native control no longer focusable
+  select.previousElementSibling.tabIndex = -1;
 
-    // We make sure that the default selected value is correctly displayed
-    updateValue(select, selectedIndex);
+  // We make sure that the default selected value is correctly displayed
+  updateValue(select, selectedIndex);
 
-    // Each time a user clicks on an option, we update the value accordingly
-    optionList.forEach((option, index) => {
-      option.addEventListener("click", (event) => {
-        updateValue(select, index);
-      });
-    });
-
-    // Each time a user uses their keyboard on a focused control, we update the value accordingly
-    select.addEventListener("keyup", (event) => {
-      let index = getIndex(select);
-      // When the user hits the Escape key, deactivate the custom control
-      if (event.key === "Escape") {
-        deactivateSelect(select);
-      }
-
-      // When the user hits the down arrow, we jump to the next option
-      if (event.key === "ArrowDown" && index < optionList.length - 1) {
-        index++;
-        // Prevent the default action of the ArrowDown key press.
-        // Without this, the page would scroll down when the ArrowDown key is pressed.
-        event.preventDefault();
-      }
-
-      // When the user hits the up arrow, we jump to the previous option
-      if (event.key === "ArrowUp" && index > 0) {
-        index--;
-        // Prevent the default action of the ArrowUp key press.
-        event.preventDefault();
-      }
-      if (event.key === "Enter" || event.key === " ") {
-        // If Enter or Space is pressed, toggle the option list
-        toggleOptList(select);
-      }
-
+  // Each time a user clicks on an option, we update the value accordingly
+  optionList.forEach((option, index) => {
+    option.addEventListener("click", (event) => {
       updateValue(select, index);
     });
+  });
+
+  // Each time a user uses their keyboard on a focused control, we update the value accordingly
+  select.addEventListener("keyup", (event) => {
+    let index = getIndex(select);
+    // When the user hits the Escape key, deactivate the custom control
+    if (event.key === "Escape") {
+      deactivateSelect(select);
+    }
+
+    // When the user hits the down arrow, we jump to the next option
+    if (event.key === "ArrowDown" && index < optionList.length - 1) {
+      index++;
+      // Prevent the default action of the ArrowDown key press.
+      // Without this, the page would scroll down when the ArrowDown key is pressed.
+      event.preventDefault();
+    }
+
+    // When the user hits the up arrow, we jump to the previous option
+    if (event.key === "ArrowUp" && index > 0) {
+      index--;
+      // Prevent the default action of the ArrowUp key press.
+      event.preventDefault();
+    }
+    if (event.key === "Enter" || event.key === " ") {
+      // If Enter or Space is pressed, toggle the option list
+      toggleOptList(select);
+    }
+
+    updateValue(select, index);
   });
 });
 ```
@@ -1458,12 +1433,11 @@ Check out the [source code here](/en-US/docs/Learn_web_development/Extensions/Fo
   padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
   width: 10em; /* 100px */
 
-  border: 0.2em solid #000; /* 2px */
+  border: 0.2em solid black; /* 2px */
   border-radius: 0.4em; /* 4px */
 
   box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
 
-  background: #f0f0f0;
   background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
 }
 
@@ -1492,11 +1466,11 @@ Check out the [source code here](/en-US/docs/Learn_web_development/Extensions/Fo
 
   text-align: center;
 
-  border-left: 0.2em solid #000;
+  border-left: 0.2em solid black;
   border-radius: 0 0.1em 0.1em 0;
 
-  background-color: #000;
-  color: #fff;
+  background-color: black;
+  color: white;
 }
 
 .select .optList {
@@ -1507,7 +1481,7 @@ Check out the [source code here](/en-US/docs/Learn_web_development/Extensions/Fo
   padding: 0;
 
   background: #f0f0f0;
-  border: 0.2em solid #000;
+  border: 0.2em solid black;
   border-top-width: 0.1em;
   border-radius: 0 0 0.4em 0.4em;
 
@@ -1526,8 +1500,8 @@ Check out the [source code here](/en-US/docs/Learn_web_development/Extensions/Fo
 }
 
 .select .highlight {
-  background: #000;
-  color: #ffffff;
+  background: black;
+  color: white;
 }
 ```
 
@@ -1580,72 +1554,66 @@ function getIndex(select) {
   return nativeWidget.selectedIndex;
 }
 
-window.addEventListener("load", () => {
-  const form = document.querySelector("form");
+const form = document.querySelector("form");
 
-  form.classList.remove("no-widget");
-  form.classList.add("widget");
-});
+form.classList.remove("no-widget");
+form.classList.add("widget");
 
-window.addEventListener("load", () => {
-  const selectList = document.querySelectorAll(".select");
+const selectList = document.querySelectorAll(".select");
 
-  selectList.forEach((select) => {
-    const optionList = select.querySelectorAll(".option");
+selectList.forEach((select) => {
+  const optionList = select.querySelectorAll(".option");
 
-    optionList.forEach((option) => {
-      option.addEventListener("mouseover", () => {
-        highlightOption(select, option);
-      });
+  optionList.forEach((option) => {
+    option.addEventListener("mouseover", () => {
+      highlightOption(select, option);
     });
+  });
 
-    select.addEventListener("click", (event) => {
-      toggleOptList(select);
-    });
+  select.addEventListener("click", (event) => {
+    toggleOptList(select);
+  });
 
-    select.addEventListener("focus", (event) => {
-      activeSelect(select, selectList);
-    });
+  select.addEventListener("focus", (event) => {
+    activeSelect(select, selectList);
+  });
 
-    select.addEventListener("blur", (event) => {
-      deactivateSelect(select);
-    });
+  select.addEventListener("blur", (event) => {
+    deactivateSelect(select);
   });
 });
 
-window.addEventListener("load", () => {
-  const selectList = document.querySelectorAll(".select");
+const selectList = document.querySelectorAll(".select");
 
-  selectList.forEach((select) => {
-    const optionList = select.querySelectorAll(".option");
-    const selectedIndex = getIndex(select);
+selectList.forEach((select) => {
+  const optionList = select.querySelectorAll(".option");
+  const selectedIndex = getIndex(select);
 
-    select.tabIndex = 0;
-    select.previousElementSibling.tabIndex = -1;
+  select.tabIndex = 0;
+  select.previousElementSibling.tabIndex = -1;
 
-    updateValue(select, selectedIndex);
+  updateValue(select, selectedIndex);
 
-    optionList.forEach((option, index) => {
-      option.addEventListener("click", (event) => {
-        updateValue(select, index);
-      });
-    });
-
-    select.addEventListener("keyup", (event) => {
-      let index = getIndex(select);
-
-      if (event.key === "Escape") {
-        deactivateSelect(select);
-      }
-      if (event.key === "ArrowDown" && index < optionList.length - 1) {
-        index++;
-      }
-      if (event.key === "ArrowUp" && index > 0) {
-        index--;
-      }
-
+  optionList.forEach((option, index) => {
+    option.addEventListener("click", (event) => {
       updateValue(select, index);
     });
+  });
+
+  select.addEventListener("keyup", (event) => {
+    let index = getIndex(select);
+
+    if (event.key === "Escape") {
+      deactivateSelect(select);
+    }
+    if (event.key === "ArrowDown" && index < optionList.length - 1) {
+      index++;
+    }
+    if (event.key === "ArrowUp" && index > 0) {
+      index--;
+    }
+
+    updateValue(select, index);
   });
 });
 ```
@@ -1658,7 +1626,7 @@ But wait a second, are we really done?
 
 We have built something that works and though we're far from a fully-featured select box, it works nicely. But what we've done is nothing more than fiddle with the DOM. It has no real semantics, and even though it looks like a select box, from the browser's point of view it isn't one, so assistive technologies won't be able to understand it's a select box. In short, this pretty new select box isn't accessible!
 
-Fortunately, there is a solution and it's called [ARIA](/en-US/docs/Web/Accessibility/ARIA). ARIA stands for "Accessible Rich Internet Application", and it's [a W3C specification](https://www.w3.org/TR/wai-aria/) specifically designed for what we are doing here: making web applications and custom controls accessible. It's basically a set of attributes that extend HTML so that we can better describe roles, states, and properties as though the element we've just devised was the native element it tries to pass for. Using these attributes can be done by editing the HTML markup. We also update the ARIA attributes via JavaScript as the user updates their selected value.
+Fortunately, there is a solution and it's called [ARIA](/en-US/docs/Web/Accessibility/ARIA). ARIA stands for "Accessible Rich Internet Application", and it's [a W3C specification](https://w3c.github.io/aria/) specifically designed for what we are doing here: making web applications and custom controls accessible. It's basically a set of attributes that extend HTML so that we can better describe roles, states, and properties as though the element we've just devised was the native element it tries to pass for. Using these attributes can be done by editing the HTML markup. We also update the ARIA attributes via JavaScript as the user updates their selected value.
 
 ### The `role` attribute
 
@@ -1715,7 +1683,7 @@ function updateValue(select, index) {
 
 It might have seemed simpler to let a screen reader focus on the off-screen select and ignore our stylized one, but this is not an accessible solution. Screen readers are not limited to blind people; people with low vision and even perfect vision use them as well. For this reason, you can not have the screen reader focus on an off-screen element.
 
-Below is the final result of all these changes (you'll get a better feel for this by trying it with an assistive technology such as [NVDA](https://www.nvaccess.org/) or [VoiceOver](https://www.apple.com/accessibility/vision/)).
+Below is the final result of all these changes (you'll get a better feel for this by trying it with an assistive technology such as [NVDA](https://www.nvaccess.org/) or [VoiceOver](https://www.apple.com/accessibility/features/?vision)).
 
 #### Live example
 
@@ -1784,12 +1752,11 @@ Check out the [full source code here](/en-US/docs/Learn_web_development/Extensio
   padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
   width: 10em; /* 100px */
 
-  border: 0.2em solid #000; /* 2px */
+  border: 0.2em solid black; /* 2px */
   border-radius: 0.4em; /* 4px */
 
   box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
 
-  background: #f0f0f0;
   background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
 }
 
@@ -1818,11 +1785,11 @@ Check out the [full source code here](/en-US/docs/Learn_web_development/Extensio
 
   text-align: center;
 
-  border-left: 0.2em solid #000;
+  border-left: 0.2em solid black;
   border-radius: 0 0.1em 0.1em 0;
 
-  background-color: #000;
-  color: #fff;
+  background-color: black;
+  color: white;
 }
 
 .select .optList {
@@ -1833,7 +1800,7 @@ Check out the [full source code here](/en-US/docs/Learn_web_development/Extensio
   padding: 0;
 
   background: #f0f0f0;
-  border: 0.2em solid #000;
+  border: 0.2em solid black;
   border-top-width: 0.1em;
   border-radius: 0 0 0.4em 0.4em;
 
@@ -1852,8 +1819,8 @@ Check out the [full source code here](/en-US/docs/Learn_web_development/Extensio
 }
 
 .select .highlight {
-  background: #000;
-  color: #ffffff;
+  background: black;
+  color: white;
 }
 ```
 
@@ -1912,62 +1879,58 @@ function getIndex(select) {
   return nativeWidget.selectedIndex;
 }
 
-window.addEventListener("load", () => {
-  const form = document.querySelector("form");
+const form = document.querySelector("form");
 
-  form.classList.remove("no-widget");
-  form.classList.add("widget");
-});
+form.classList.remove("no-widget");
+form.classList.add("widget");
 
-window.addEventListener("load", () => {
-  const selectList = document.querySelectorAll(".select");
+const selectList = document.querySelectorAll(".select");
 
-  selectList.forEach((select) => {
-    const optionList = select.querySelectorAll(".option");
-    const selectedIndex = getIndex(select);
+selectList.forEach((select) => {
+  const optionList = select.querySelectorAll(".option");
+  const selectedIndex = getIndex(select);
 
-    select.tabIndex = 0;
-    select.previousElementSibling.tabIndex = -1;
+  select.tabIndex = 0;
+  select.previousElementSibling.tabIndex = -1;
 
-    updateValue(select, selectedIndex);
+  updateValue(select, selectedIndex);
 
-    optionList.forEach((option, index) => {
-      option.addEventListener("mouseover", () => {
-        highlightOption(select, option);
-      });
-
-      option.addEventListener("click", (event) => {
-        updateValue(select, index);
-      });
+  optionList.forEach((option, index) => {
+    option.addEventListener("mouseover", () => {
+      highlightOption(select, option);
     });
 
-    select.addEventListener("click", (event) => {
-      toggleOptList(select);
-    });
-
-    select.addEventListener("focus", (event) => {
-      activeSelect(select, selectList);
-    });
-
-    select.addEventListener("blur", (event) => {
-      deactivateSelect(select);
-    });
-
-    select.addEventListener("keyup", (event) => {
-      let index = getIndex(select);
-
-      if (event.key === "Escape") {
-        deactivateSelect(select);
-      }
-      if (event.key === "ArrowDown" && index < optionList.length - 1) {
-        index++;
-      }
-      if (event.key === "ArrowUp" && index > 0) {
-        index--;
-      }
-
+    option.addEventListener("click", (event) => {
       updateValue(select, index);
     });
+  });
+
+  select.addEventListener("click", (event) => {
+    toggleOptList(select);
+  });
+
+  select.addEventListener("focus", (event) => {
+    activeSelect(select, selectList);
+  });
+
+  select.addEventListener("blur", (event) => {
+    deactivateSelect(select);
+  });
+
+  select.addEventListener("keyup", (event) => {
+    let index = getIndex(select);
+
+    if (event.key === "Escape") {
+      deactivateSelect(select);
+    }
+    if (event.key === "ArrowDown" && index < optionList.length - 1) {
+      index++;
+    }
+    if (event.key === "ArrowUp" && index > 0) {
+      index--;
+    }
+
+    updateValue(select, index);
   });
 });
 ```
@@ -2041,7 +2004,7 @@ We'll do a little styling of the radio button list (not the legend/fieldset) to 
 .styledSelect label {
   margin: 0;
   line-height: 2;
-  padding: 0 0 0 4px;
+  padding-left: 4px;
 }
 .styledSelect:not(:focus-within) input:not(:checked) + label {
   height: 0;
@@ -2049,7 +2012,7 @@ We'll do a little styling of the radio button list (not the legend/fieldset) to 
   overflow: hidden;
 }
 .styledSelect:not(:focus-within) input:checked + label {
-  border: 0.2em solid #000;
+  border: 0.2em solid black;
   border-radius: 0.4em;
   box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%);
 }
@@ -2062,13 +2025,13 @@ We'll do a little styling of the radio button list (not the legend/fieldset) to 
   margin: 0 -4px 0 4px;
 }
 .styledSelect:focus-within {
-  border: 0.2em solid #000;
+  border: 0.2em solid black;
   border-radius: 0.4em;
   box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%);
 }
 .styledSelect:focus-within input:checked + label {
-  background-color: #333;
-  color: #fff;
+  background-color: #333333;
+  color: white;
   width: 100%;
 }
 ```

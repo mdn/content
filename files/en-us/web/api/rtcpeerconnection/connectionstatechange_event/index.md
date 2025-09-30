@@ -17,10 +17,10 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("connectionstatechange", (event) => {});
+```js-nolint
+addEventListener("connectionstatechange", (event) => { })
 
-onconnectionstatechange = (event) => {};
+onconnectionstatechange = (event) => { }
 ```
 
 ## Event type
@@ -33,33 +33,29 @@ For an {{domxref("RTCPeerConnection")}} named `peerConnection`, this example use
 It calls an app-defined function called `setOnlineStatus()` to update a status display.
 
 ```js
-peerConnection.addEventListener(
-  "connectionstatechange",
-  (event) => {
-    switch (peerConnection.connectionState) {
-      case "new":
-      case "connecting":
-        setOnlineStatus("Connecting…");
-        break;
-      case "connected":
-        setOnlineStatus("Online");
-        break;
-      case "disconnected":
-        setOnlineStatus("Disconnecting…");
-        break;
-      case "closed":
-        setOnlineStatus("Offline");
-        break;
-      case "failed":
-        setOnlineStatus("Error");
-        break;
-      default:
-        setOnlineStatus("Unknown");
-        break;
-    }
-  },
-  false,
-);
+peerConnection.addEventListener("connectionstatechange", (event) => {
+  switch (peerConnection.connectionState) {
+    case "new":
+    case "connecting":
+      setOnlineStatus("Connecting…");
+      break;
+    case "connected":
+      setOnlineStatus("Online");
+      break;
+    case "disconnected":
+      setOnlineStatus("Disconnecting…");
+      break;
+    case "closed":
+      setOnlineStatus("Offline");
+      break;
+    case "failed":
+      setOnlineStatus("Error");
+      break;
+    default:
+      setOnlineStatus("Unknown");
+      break;
+  }
+});
 ```
 
 You can also create a handler for the `connectionstatechange` event using the `RTCPeerConnection.onconnectionstatechange` property:

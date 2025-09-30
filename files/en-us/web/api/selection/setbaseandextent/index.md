@@ -23,7 +23,6 @@ setBaseAndExtent(anchorNode, anchorOffset, focusNode, focusOffset)
 - `anchorNode`
   - : The node at the start of the selection.
 - `anchorOffset`
-
   - : The number of child nodes from the start of the anchor node that should be excluded from the selection.
     So for example, if the value is 0 the whole node is included.
     If the value is 1, the whole node minus the first child node is included.
@@ -34,7 +33,6 @@ setBaseAndExtent(anchorNode, anchorOffset, focusNode, focusOffset)
 - `focusNode`
   - : The node at the end of the selection.
 - `focusOffset`
-
   - : The number of child nodes from the start of the focus node that should be included in the selection.
     So for example, if the value is 0 the whole node is excluded.
     If the value is 1, the first child node is included. And so on.
@@ -92,7 +90,7 @@ We also have a button that when pressed invokes a function that runs the `setBas
 ```
 
 > [!NOTE]
-> There is intentionally no [whitespace](/en-US/docs/Web/API/Document_Object_Model/Whitespace) between the `<p class="one">` and `<p class="two">` start tags and the `<span>` start tags which follow them — to avoid the presence of text nodes that would affect the number of child nodes expected. (Even though those text nodes would be whitespace-only, they would still be additional child nodes; find out more from the [`Node.firstChild` example](/en-US/docs/Web/API/Node/firstChild#example)).
+> There is intentionally no [whitespace](/en-US/docs/Web/CSS/CSS_text/Whitespace#working_with_whitespace_in_the_dom) between the `<p class="one">` and `<p class="two">` start tags and the `<span>` start tags which follow them — to avoid the presence of text nodes that would affect the number of child nodes expected. (Even though those text nodes would be whitespace-only, they would still be additional child nodes; find out more from the [`Node.firstChild` example](/en-US/docs/Web/API/Node/firstChild#example)).
 
 The JavaScript looks like so:
 

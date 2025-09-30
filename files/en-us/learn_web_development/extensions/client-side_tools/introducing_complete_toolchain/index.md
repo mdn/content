@@ -195,10 +195,12 @@ npx prettier --write ./index.html
 You can also replace `./index.html` with any other file or folder to format them. For example, `.` will format everything in the current directory. In case you may forget the syntax, you can add it as a custom script in your package.json too:
 
 ```json
-"scripts": {
-  // ...
-  "format": "prettier --write ."
-},
+{
+  "scripts": {
+    // …
+    "format": "prettier --write ."
+  }
+}
 ```
 
 Now you can run the following to format the directory:
@@ -231,7 +233,8 @@ ESLint is installed via npm, so as per discussions in Chapter 2, you have the ch
 npm install --save-dev eslint@8 @eslint/js globals
 ```
 
-> **Note:** `eslint@8` installs the version 8 of ESLint, while the latest is v9. This is because `eslint-plugin-react`, which we will use later, [does not support v9 yet](https://github.com/jsx-eslint/eslint-plugin-react/issues/3699).
+> [!NOTE]
+> `eslint@8` installs the version 8 of ESLint, while the latest is v9. This is because `eslint-plugin-react`, which we will use later, [does not support v9 yet](https://github.com/jsx-eslint/eslint-plugin-react/issues/3699).
 
 The `@eslint/js` package provides predefined ESLint configuration, while the `globals` package provides a list of known global names in each environment. We will use them later in the configuration. Out of the box, ESLint is going to complain that it can't find the configuration file if you run it with `npx eslint`:
 

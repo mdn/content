@@ -16,6 +16,7 @@ Use the event name in methods like {{domxref("EventTarget.addEventListener", "ad
 
 ```js-nolint
 addEventListener("messageerror", (event) => { })
+
 onmessageerror = (event) => { }
 ```
 
@@ -41,6 +42,8 @@ _In addition to the properties listed below, properties from the parent interfac
   - : An array of {{domxref("MessagePort")}} objects representing the ports associated with the channel the message is being sent through (where appropriate, e.g., in channel messaging or when sending a message to a shared worker).
 
 ## Examples
+
+### Listening for messageerror events
 
 This code uses {{domxref("EventTarget.addEventListener", "addEventListener()")}} to listen for messages and errors:
 
@@ -69,6 +72,28 @@ channel.onmessageerror = (event) => {
   console.log(event);
 };
 ```
+
+### Attempting to share memory
+
+A common cause of `messageerror` events is attempting to send a {{jsxref("SharedArrayBuffer")}} object, or a buffer view backed by one, across [agent clusters](/en-US/docs/Web/JavaScript/Reference/Execution_model#agent_clusters_and_memory_sharing). The following code demonstrates this.
+
+Page A runs the following code:
+
+```js
+const channel = new BroadcastChannel("hello");
+channel.postMessage({ data: new SharedArrayBuffer(1024) });
+```
+
+Page B runs the following code:
+
+```js
+const channel = new BroadcastChannel("hello");
+channel.addEventListener("messageerror", (event) => {
+  console.error("Message error");
+});
+```
+
+Then page B will receive a `messageerror` event when it tries to deserialize the message sent from page A.
 
 ## Specifications
 

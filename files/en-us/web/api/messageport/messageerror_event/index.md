@@ -16,10 +16,10 @@ This event is not cancellable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("messageerror", (event) => {});
+```js-nolint
+addEventListener("messageerror", (event) => { })
 
-onmessageerror = (event) => {};
+onmessageerror = (event) => { }
 ```
 
 ## Event type
@@ -45,57 +45,36 @@ _This interface also inherits properties from its parent, {{domxref("Event")}}._
 
 ## Examples
 
-Suppose a script creates a [`MessageChannel`](/en-US/docs/Web/API/MessageChannel) and sends one of the ports to a different browsing context, such as another [`<iframe>`](/en-US/docs/Web/HTML/Reference/Elements/iframe), using code like this:
+### Attempting to share memory
+
+A common cause of `messageerror` events is attempting to send a {{jsxref("SharedArrayBuffer")}} object, or a buffer view backed by one, across [agent clusters](/en-US/docs/Web/JavaScript/Reference/Execution_model#agent_clusters_and_memory_sharing). For example, a window is not in the same agent cluster as a shared worker it created, so suppose the page runs the following code:
 
 ```js
-const channel = new MessageChannel();
-const myPort = channel.port1;
-const targetFrame = window.top.frames[1];
-const targetOrigin = "https://example.org";
-
-const messageControl = document.querySelector("#message");
-const channelMessageButton = document.querySelector("#channel-message");
-
-channelMessageButton.addEventListener("click", () => {
-  myPort.postMessage(messageControl.value);
+const worker = new SharedWorker("worker.js");
+worker.port.start();
+worker.port.addEventListener("message", (event) => {
+  worker.port.postMessage(new SharedArrayBuffer(1024));
 });
-
-targetFrame.postMessage("init", targetOrigin, [channel.port2]);
 ```
 
-The target can receive the port and start listening for messages and message errors on it using code like this:
+And `worker.js` contains the following code:
 
 ```js
-window.addEventListener("message", (event) => {
-  const myPort = event.ports[0];
-
-  myPort.addEventListener("message", (event) => {
-    received.textContent = event.data;
+self.addEventListener("connect", (event) => {
+  console.log("Hello");
+  const port = event.ports[0];
+  port.start();
+  port.postMessage("Port connected");
+  port.addEventListener("messageerror", (event) => {
+    console.log("Message error");
   });
-
-  myPort.addEventListener("messageerror", (event) => {
-    console.error(event.data);
-  });
-
-  myPort.start();
 });
 ```
 
-Note that the listener must call [`MessagePort.start()`](/en-US/docs/Web/API/MessagePort/start) before any messages will be delivered to this port. This is only needed when using the [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) method: if the receiver uses `onmessage` instead, `start()` is called implicitly:
+Then the shared worker will receive a `messageerror` event when it tries to deserialize the message sent from the window.
 
-```js
-window.addEventListener("message", (event) => {
-  const myPort = event.ports[0];
-
-  myPort.onmessage = (event) => {
-    received.textContent = event.data;
-  };
-
-  myPort.onmessageerror = (event) => {
-    console.error(event.data);
-  };
-});
-```
+> [!NOTE]
+> You can use browser devtools to debug your SharedWorker, by entering a URL in your browser address bar to access the devtools workers inspector; for example, in Chrome, the URL `chrome://inspect/#workers`, and in Firefox, the URL `about:debugging#workers`.
 
 ## Specifications
 

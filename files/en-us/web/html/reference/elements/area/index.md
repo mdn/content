@@ -3,9 +3,8 @@ title: "<area>: The Image Map Area element"
 slug: Web/HTML/Reference/Elements/area
 page-type: html-element
 browser-compat: html.elements.area
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<area>`** [HTML](/en-US/docs/Web/HTML) element defines an area inside an image map that has predefined clickable areas. An _image map_ allows geometric areas on an image to be associated with {{Glossary("Hyperlink", "hypertext links")}}.
 
@@ -65,10 +64,8 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
     The text should be phrased so that it presents the user with the same kind of choice as the image would offer when displayed without the alternative text.
     This attribute is required only if the [`href`](#href) attribute is used.
 - `coords`
-
   - : The `coords` attribute details the coordinates of the [`shape`](#shape) attribute in size, shape, and placement of an `<area>`.
     This attribute must not be used if `shape` is set to `default`.
-
     - `rect`: the value is `x1,y1,x2,y2`.
       The value specifies the coordinates of the top-left and bottom-right corner of the rectangle.
       For example, in `<area shape="rect" coords="0,0,253,27" href="#" target="_blank" alt="Mozilla">` the coordinates are `0,0` and `253,27`, indicating the top-left and bottom-right corners of the rectangle, respectively.
@@ -77,7 +74,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
     - `poly`: the value is `x1,y1,x2,y2,..,xn,yn`. Value specifies the coordinates of the edges of the polygon.
       If the first and last coordinate pairs are not the same, the browser will add the last coordinate pair to close the polygon
 
-    The values are numbers of CSS pixels.
+    The values are numbers of CSS pixels. Our [shape generator](/en-US/docs/Web/CSS/CSS_shapes/Shape_generator) can help you generate the `coords` syntax by selecting points on an image you upload.
 
 - `download`
   - : This attribute, if present, indicates that the linked resource is intended to be downloaded rather than displayed in the browser.
@@ -90,9 +87,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
   - : Contains a space-separated list of URLs to which, when the hyperlink is followed, {{HTTPMethod("POST")}} requests with the body `PING` will be sent by the browser (in the background).
     Typically used for tracking.
 - `referrerpolicy`
-
   - : A string indicating which referrer to use when fetching the resource:
-
     - `no-referrer`: The {{HTTPHeader("Referer")}} header will not be sent.
     - `no-referrer-when-downgrade`: The {{HTTPHeader("Referer")}} header will not be sent to {{Glossary("origin")}}s without {{Glossary("TLS")}} ({{Glossary("HTTPS")}}).
     - `origin`: The sent referrer will be limited to the origin of the referring page: its [scheme](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL), {{Glossary("host")}}, and {{Glossary("port")}}.
@@ -111,10 +106,8 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
 - `shape`
   - : The shape of the associated hot spot. The specifications for HTML defines the values `rect`, which defines a rectangular region; `circle`, which defines a circular region; `poly`, which defines a polygon; and `default`, which indicates the entire region beyond any defined shapes.
 - `target`
-
   - : A keyword or author-defined name of the {{Glossary("browsing context")}} to display the linked resource.
     The following keywords have special meanings:
-
     - `_self` (default): Show the resource in the current browsing context.
     - `_blank`: Show the resource in a new, unnamed browsing context.
     - `_parent`: Show the resource in the parent browsing context of the current one, if the current page is inside a frame.
@@ -128,6 +121,8 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
     > Setting `target="_blank"` on `<area>` elements implicitly provides the same `rel` behavior as setting [`rel="noopener"`](/en-US/docs/Web/HTML/Reference/Attributes/rel/noopener) which does not set `window.opener`. See [browser compatibility](#browser_compatibility) for support status.
 
 ## Examples
+
+### Image with clickable areas
 
 ```html
 <map name="primary">
@@ -148,9 +143,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
   alt="350 x 150 pic" />
 ```
 
-### Result
-
-{{ EmbedLiveSample('Examples', 360, 160) }}
+{{ EmbedLiveSample('Image with clickable areas', 360, 160) }}
 
 ## Technical summary
 

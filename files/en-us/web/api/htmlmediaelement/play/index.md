@@ -77,22 +77,53 @@ article [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Guid
 
 ## Examples
 
-This example demonstrates how to confirm that playback has begun and how to gracefully
-handle blocked automatic playback:
+### Confirming playback and handling states
 
-```js
+This example demonstrates how to confirm that playback has begun and how to gracefully
+handle blocked automatic playback.
+
+When this example is executed, it begins by collecting references to the {{HTMLElement("video")}} element as well as the {{HTMLElement("button")}} used to toggle playback on and off.
+It then sets up an event handler for the {{domxref("Element/click_event", "click")}} event on the toggle button and attempts to automatically begin playback by calling the [`async`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) `playVideo()` function.
+
+A helper function `toggleButton()` lets us define what should happen in the code when we pass it a boolean value representing the playing state (e.g., `toggleButton(true)`)
+If playback is successful, the button text and its [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) changes to "Pause".
+If playback fails, the button and `aria-label` shows "Play".
+This ensures that the `playButton` matches the playback state by watching for the resolution or rejection of the {{jsxref("Promise")}} returned by `play()`:
+
+```html live-sample___handling-states
+<div class="video-box">
+  <video
+    id="video"
+    width="480"
+    loop
+    src="/shared-assets/videos/flower.mp4"></video>
+  <button type="button" id="play-button" aria-label="Play"></button>
+</div>
+```
+
+```js live-sample___handling-states
 let videoElem = document.getElementById("video");
 let playButton = document.getElementById("play-button");
 
-playButton.addEventListener("click", handlePlayButton, false);
+playButton.addEventListener("click", handlePlayButton);
 playVideo();
+
+function toggleButton(playing) {
+  if (playing) {
+    playButton.textContent = "Pause";
+    playButton.setAttribute("aria-label", "Pause");
+  } else {
+    playButton.textContent = "Play";
+    playButton.setAttribute("aria-label", "Play");
+  }
+}
 
 async function playVideo() {
   try {
     await videoElem.play();
-    playButton.classList.add("playing");
+    toggleButton(true);
   } catch (err) {
-    playButton.classList.remove("playing");
+    toggleButton(false);
   }
 }
 
@@ -101,27 +132,33 @@ function handlePlayButton() {
     playVideo();
   } else {
     videoElem.pause();
-    playButton.classList.remove("playing");
+    toggleButton(false);
   }
 }
 ```
 
-In this example, playback of video is toggled off and on by the
-[`async`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
-`playVideo()` function. It tries to play the video, and if successful sets
-the class name of the `playButton` element to `"playing"`. If
-playback fails to start, the `playButton` element's class is cleared,
-restoring its default appearance. This ensures that the play button matches the actual
-state of playback by watching for the resolution or rejection of the
-{{jsxref("Promise")}} returned by `play()`.
+```css hidden live-sample___handling-states
+.video-box {
+  position: relative;
+}
 
-When this example is executed, it begins by collecting references to the
-{{HTMLElement("video")}} element as well as the {{HTMLElement("button")}} used to toggle
-playback on and off. It then sets up an event handler for the {{domxref("Element/click_event", "click")}} event
-on the play toggle button and attempts to automatically begin playback by calling
-`playVideo()`.
+#video {
+  border: 2px solid black;
+}
 
-You can [try out or remix this example in real time on Glitch](https://media-play-promise.glitch.me/).
+#play-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 8px 12px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+```
+
+{{embedlivesample("handling-states", , "300")}}
 
 ## Specifications
 

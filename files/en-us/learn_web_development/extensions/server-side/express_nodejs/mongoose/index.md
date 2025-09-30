@@ -127,22 +127,22 @@ The code in the asynchronous function then executes until either another `await`
 
 You can see how this works in the example below.
 `myFunction()` is an asynchronous function that is called within a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block.
-When `myFunction()` is run, code execution is paused at `methodThatReturnsPromise()` until the promise resolves, at which point the code continues to `aFunctionThatReturnsPromise()` and waits again.
+When `myFunction()` is run, code execution is paused at `methodThatReturnsPromise()` until the promise resolves, at which point the code continues to `functionThatReturnsPromise()` and waits again.
 The code in the `catch` block runs if an error is thrown in the asynchronous function, and this will happen if the promise returned by either of the methods is rejected.
 
 ```js
 async function myFunction() {
-  // ...
+  // …
   await someObject.methodThatReturnsPromise();
-  // ...
-  await aFunctionThatReturnsPromise();
-  // ...
+  // …
+  await functionThatReturnsPromise();
+  // …
 }
 
 try {
-  // ...
+  // …
   myFunction();
-  // ...
+  // …
 } catch (e) {
   // error handling code
 }
@@ -163,12 +163,12 @@ You would call the `myFunction()` in a `try...catch` block to catch any errors.
 
 ```js
 async function myFunction() {
-  // ...
+  // …
   const [resultFunction1, resultFunction2] = await Promise.all([
     functionThatReturnsPromise1(),
     functionThatReturnsPromise2(),
   ]);
-  // ...
+  // …
   await anotherFunctionThatReturnsPromise(resultFunction1);
 }
 ```
@@ -309,7 +309,6 @@ The code also shows both ways of declaring a field:
 
 - Field _name_ and _type_ as a key-value pair (i.e., as done with fields `name`, `binary` and `living`).
 - Field _name_ followed by an object defining the `type`, and any other _options_ for the field. Options include things like:
-
   - default values.
   - built-in validators (e.g., max/min values) and custom validation functions.
   - Whether the field is required
@@ -326,7 +325,6 @@ The built-in validators include:
 - All [SchemaTypes](https://mongoosejs.com/docs/schematypes.html) have the built-in [required](https://mongoosejs.com/docs/api.html#schematype_SchemaType-required) validator. This is used to specify whether the field must be supplied in order to save a document.
 - [Numbers](https://mongoosejs.com/docs/api/schemanumber.html) have [min](<https://mongoosejs.com/docs/api/schemanumber.html#SchemaNumber.prototype.min()>) and [max](<https://mongoosejs.com/docs/api/schemanumber.html#SchemaNumber.prototype.max()>) validators.
 - [Strings](https://mongoosejs.com/docs/api/schemastring.html) have:
-
   - [enum](<https://mongoosejs.com/docs/api/schemastring.html#SchemaString.prototype.enum()>): specifies the set of allowed values for the field.
   - [match](<https://mongoosejs.com/docs/api/schemastring.html#SchemaString.prototype.match()>): specifies a regular expression that the string must match.
   - [maxLength](<https://mongoosejs.com/docs/api/schemastring.html#SchemaString.prototype.maxlength()>) and [minLength](<https://mongoosejs.com/docs/api/schemastring.html#SchemaString.prototype.minlength()>) for the string.
@@ -601,7 +599,6 @@ After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) sc
 
 3. Scroll down the page to see the different options you can choose.
    ![Choose a cloud provider when using MongoDB Atlas.](mongodb_atlas_-_createsharedcluster.jpg)
-
    - You can change the name of your Cluster under _Cluster Name_.
      We are keeping it as `Cluster0` for this tutorial.
    - Deselect the _Preload sample dataset_ checkbox, as we'll import our own sample data later on
@@ -611,7 +608,6 @@ After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) sc
 
 4. This will open the _Security Quickstart_ section.
    ![Set up the Access Rules on the Security Quickstart screen on MongoDB Atlas.](mongodb_atlas_-_securityquickstart.jpg)
-
    - Enter a username and password for your application to use to access the database (above we have created a new login "cooluser").
      Remember to copy and store the credentials safely as we will need them later on.
      Click the **Create User** button.
@@ -640,14 +636,12 @@ After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) sc
 8. This will open the _Create Database_ screen.
 
    ![Details during database creation on MongoDB Atlas.](mongodb_atlas_-_databasedetails.jpg)
-
    - Enter the name for the new database as `local_library`.
    - Enter the name of the collection as `Collection0`.
    - Click the **Create** button to create the database.
 
 9. You will return to the _Collections_ screen with your database created.
    ![Database creation confirmation on MongoDB Atlas.](mongodb_atlas_-_databasecreated.jpg)
-
    - Click the _Overview_ tab to return to the cluster overview.
 
 10. From the Cluster0 _Overview_ screen click the **Connect** button.
@@ -657,7 +651,6 @@ After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) sc
 11. This will open the _Connect to Cluster0_ screen.
 
     ![Choose the Short SRV connection when setting up a connection on MongoDB Atlas.](mongodb_atlas_-_connectforshortsrv.jpg)
-
     - Select your database user.
     - Select the _Drivers_ category, then the _Driver_ **Node.js** and _Version_ as shown.
     - **DO NOT** install the driver as suggested.
@@ -681,22 +674,33 @@ npm install mongoose
 
 ## Connect to MongoDB
 
-Open **/app.js** (in the root of your project) and copy the following text below where you declare the _Express application object_ (after the line `const app = express();`).
+Open **bin/www** (from the root of your project) and copy the following text below where you set the port (after the line `app.set("port", port);`).
 Replace the database URL string ('_insert_your_database_url_here_') with the location URL representing your own database (i.e., using the information from _MongoDB Atlas_).
 
 ```js
 // Set up mongoose connection
 const mongoose = require("mongoose");
+
 mongoose.set("strictQuery", false);
 const mongoDB = "insert_your_database_url_here";
 
-main().catch((err) => console.log(err));
-async function main() {
+async function connectMongoose() {
   await mongoose.connect(mongoDB);
+}
+
+try {
+  connectMongoose();
+} catch (err) {
+  console.error("Failed to connect to MongoDB:", err);
+  process.exit(1);
 }
 ```
 
 As discussed in the [Mongoose primer](#connecting_to_mongodb) above, this code creates the default connection to the database and reports any errors to the console.
+
+> [!NOTE]
+> We could have put the database connection code in our **app.js** code.
+> Putting it in the application entry point decouples the application and database, which makes it easier to use a different database for running test code.
 
 Note that hard-coding database credentials in source code as shown above is not recommended.
 We do it here because it shows the core connection code, and because during development there is no significant risk that leaking these details will expose or corrupt sensitive information.
@@ -708,7 +712,7 @@ We will define a separate module for each model, as [discussed above](#one_schem
 Start by creating a folder for our models in the project root (**/models**) and then create separate files for each of the models:
 
 ```plain
-/express-locallibrary-tutorial  // the project root
+/express-locallibrary-tutorial  # the project root
   /models
     author.js
     book.js

@@ -3,9 +3,8 @@ title: sidebarAction.setTitle()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/setTitle
 page-type: webextension-api-function
 browser-compat: webextensions.api.sidebarAction.setTitle
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Sets the sidebar's title. The title is displayed anywhere the browser lists available sidebars. For example, Firefox will show it in the "View > Sidebar" menu. It's also shown at the top of the sidebar when the sidebar is open.
 
@@ -30,17 +29,13 @@ browser.sidebarAction.setTitle(
 ### Parameters
 
 - `details`
-
   - : `object`. An object with the following properties:
-
     - `title`
-
       - : `string` or `null`. The sidebar's new title.
 
         If `title` is an empty string, the used title will be the extension name, but {{WebExtAPIRef("sidebarAction.getTitle")}} will still provide the empty string.
 
         If `title` is `null`, then a previously set title will be removed, so that:
-
         - If `tabId` is specified, and the tab has a tab-specific title set, then the tab will inherit the title from the window it belongs to.
         - If `windowId` is specified, and the window has a window-specific title set, then the window will inherit the global title.
         - Otherwise, the global title will be reset to the manifest title.
@@ -54,10 +49,6 @@ browser.sidebarAction.setTitle(
 
 - If `windowId` and `tabId` are both supplied, the function fails and the title is not set.
 - If `windowId` and `tabId` are both omitted, the global title is set.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -74,6 +65,10 @@ browser.browserAction.onClicked.addListener(setTitleForTab);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Opera's [`chrome.sidebarAction`](https://help.opera.com/en/extensions/sidebar-action-api/) API.

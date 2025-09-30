@@ -1,27 +1,27 @@
 ---
 title: WeakMap.prototype.get()
+short-title: get()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/get
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.WeakMap.get
+sidebar: jsref
 ---
 
-{{JSRef}}
-
-The **`get()`** method of {{jsxref("WeakMap")}} instances returns a specified element from this `WeakMap`.
+The **`get()`** method of {{jsxref("WeakMap")}} instances returns the value corresponding to the key in this `WeakMap`, or `undefined` if there is none. Object values are returned as the same reference that was originally stored, not as a copy, so mutations to the returned object will be reflected anywhere that reference is held, including inside the `WeakMap`.
 
 {{InteractiveExample("JavaScript Demo: WeakMap.prototype.get()")}}
 
 ```js interactive-example
-const weakmap1 = new WeakMap();
+const weakmap = new WeakMap();
 const object1 = {};
 const object2 = {};
 
-weakmap1.set(object1, 42);
+weakmap.set(object1, 42);
 
-console.log(weakmap1.get(object1));
+console.log(weakmap.get(object1));
 // Expected output: 42
 
-console.log(weakmap1.get(object2));
+console.log(weakmap.get(object2));
 // Expected output: undefined
 ```
 
@@ -34,17 +34,15 @@ get(key)
 ### Parameters
 
 - `key`
-  - : The key of the element to return from the `WeakMap` object.
+  - : The key of the value to return from the `WeakMap` object. Object keys are compared by [reference](/en-US/docs/Glossary/Object_reference), not by value.
 
 ### Return value
 
-The element associated with the specified key in the `WeakMap` object. If
-the key can't be found, {{jsxref("undefined")}} is returned. Always returns
-`undefined` if `key` is not an object or a [non-registered symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry).
+The value associated with the specified key in the `WeakMap` object. If the key can't be found, {{jsxref("undefined")}} is returned. Always returns `undefined` if `key` is not an object or a [non-registered symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry).
 
 ## Examples
 
-### Using the get() method
+### Using get()
 
 ```js
 const wm = new WeakMap();
@@ -65,5 +63,6 @@ wm.get("baz"); // Returns undefined.
 ## See also
 
 - {{jsxref("WeakMap")}}
+- {{jsxref("WeakMap.prototype.delete()")}}
 - {{jsxref("WeakMap.prototype.set()")}}
 - {{jsxref("WeakMap.prototype.has()")}}

@@ -3,9 +3,8 @@ title: browsingData.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/remove
 page-type: webextension-api-function
 browser-compat: webextensions.api.browsingData.remove
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Removes the specified browsing data.
 

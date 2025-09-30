@@ -6,7 +6,7 @@ sidebar: webdriver
 ---
 
 The **`moz:firefoxOptions` capability** is a namespaced set of
-capabilities specific to [Firefox](https://www.mozilla.org/en-US/firefox/new/). It is used to control the
+capabilities specific to [Firefox](https://www.firefox.com/en-US/). It is used to control the
 behavior of Firefox and can be used as a member of
 [`alwaysMatch`](/en-US/docs/Web/WebDriver/Reference/Capabilities#alwaysmatch) or as a member of one of the
 [`firstMatch`](/en-US/docs/Web/WebDriver/Reference/Capabilities#firstmatch) entries.
@@ -108,7 +108,7 @@ Profiles are created in the systems temporary folder. This is also where the enc
 `profile` is provided. By default geckodriver will create a new profile in this location.
 
 The effective profile in use by the WebDriver session is returned to the user in the `moz:profile`
-capability in the [new session response](/en-US/docs/Web/WebDriver/Commands/NewSession).
+capability in the [new session response](/en-US/docs/Web/WebDriver/Reference/Commands/NewSession).
 
 To have geckodriver pick up an existing profile on the filesystem, please set the `args` field to
 `{"args": ["-profile", "/path/to/your/profile"]}`. Note that if you use a remote client targeting a server
@@ -187,7 +187,7 @@ undefined the default is `info`. The value is treated case-insensitively.
 ### Preferences object
 
 A JSON Object with one entry per preference to set. The preference will be written to the [profile](#profile_string) before starting Firefox. A full list of available preferences is available from visiting
-"about:config" in your Firefox browser. Some of these are documented in [this source](https://searchfox.org/mozilla-central/source/modules/libpref/init/all.js) file.
+"about:config" in your Firefox browser. Some of these are documented in [this source](https://searchfox.org/firefox-main/source/modules/libpref/init/all.js) file.
 
 An example of a preference object:
 
@@ -248,9 +248,7 @@ The `moz:firefoxOptions` must be placed—as above—inside
 ```json
 {
   "capabilities": {
-    "firstMatch": [
-      {"moz:firefoxOptions": …}
-    ]
+    "firstMatch": [{ "moz:firefoxOptions": {} }]
   }
 }
 ```
@@ -284,4 +282,4 @@ This runs the GeckoView example application as installed on the first Android em
 - [Chrome-specific WebDriver capabilities](https://developer.chrome.com/docs/chromedriver/capabilities)
   (`goog:chromeOptions)`
 - [List of WebDriver capabilities](/en-US/docs/Web/WebDriver/Reference/Capabilities)
-- [New Session](/en-US/docs/Web/WebDriver/Commands/NewSession) command
+- [New Session](/en-US/docs/Web/WebDriver/Reference/Commands/NewSession) command

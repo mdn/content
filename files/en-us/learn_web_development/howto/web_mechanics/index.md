@@ -2,7 +2,7 @@
 title: Web mechanics
 slug: Learn_web_development/Howto/Web_mechanics
 page-type: landing-page
-sidebar: learnsidebar
+sidebar: learn-how-to
 ---
 
 This section covers questions relating to general knowledge of the web ecosystem and how it works.

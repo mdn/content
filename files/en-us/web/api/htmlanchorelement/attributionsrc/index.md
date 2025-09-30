@@ -16,7 +16,8 @@ The browser stores the source data associated with the navigation-based attribut
 
 See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) for more details.
 
-> **Note:** `<a>` elements cannot be used as attribution triggers, only sources.
+> [!NOTE]
+> `<a>` elements cannot be used as attribution triggers, only sources.
 
 ## Value
 

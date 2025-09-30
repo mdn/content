@@ -3,9 +3,8 @@ title: counter-increment
 slug: Web/CSS/counter-increment
 page-type: css-property
 browser-compat: css.properties.counter-increment
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`counter-increment`** [CSS](/en-US/docs/Web/CSS) property can be used to increase or decrease the value of the named [CSS counters](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) by the specified values, or to prevent all counters or an individual counter's value from being changed.
 

@@ -5,9 +5,10 @@ page-type: css-property
 status:
   - experimental
 browser-compat: css.properties.interpolate-size
+sidebar: cssref
 ---
 
-{{CSSRef}}{{seecompattable}}
+{{seecompattable}}
 
 The **`interpolate-size`** [CSS](/en-US/docs/Web/CSS) property allows you to enable [animations](/en-US/docs/Web/CSS/CSS_animations) and [transitions](/en-US/docs/Web/CSS/CSS_transitions) between a [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) value and an [intrinsic size](/en-US/docs/Glossary/Intrinsic_Size) value such as `auto`, [`fit-content`](/en-US/docs/Web/CSS/fit-content), or [`max-content`](/en-US/docs/Web/CSS/max-content).
 
@@ -117,7 +118,7 @@ section {
   font-family: Arial, Helvetica, sans-serif;
   width: 175px;
   border-radius: 5px;
-  background: #eee;
+  background: #eeeeee;
   box-shadow:
     inset 1px 1px 4px rgb(255 255 255 / 0.5),
     inset -1px -1px 4px rgb(0 0 0 / 0.5);
@@ -125,7 +126,7 @@ section {
 
 header {
   padding: 0.7rem;
-  border-bottom: 2px solid #ccc;
+  border-bottom: 2px solid #cccccc;
 }
 
 main {

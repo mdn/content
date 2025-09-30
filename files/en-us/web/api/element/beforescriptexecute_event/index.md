@@ -9,7 +9,7 @@ status:
 browser-compat: api.Element.beforescriptexecute_event
 ---
 
-{{APIRef}}{{Non-standard_header}}{{deprecated_header}}
+{{APIRef("DOM")}}{{Non-standard_header}}{{deprecated_header}}
 
 > [!WARNING]
 > This event was a proposal in an early version of the specification. Do not rely on it.
@@ -22,10 +22,10 @@ It is a proprietary event specific to Gecko (Firefox).
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("NameOfTheEvent", (event) => {});
+```js-nolint
+addEventListener("beforescriptexecute", (event) => { })
 
-onNameOfTheEvent = (event) => {};
+onbeforescriptexecute = (event) => { }
 ```
 
 ## Event type

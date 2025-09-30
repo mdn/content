@@ -1,10 +1,10 @@
 ---
 title: Firefox 114 for developers
+short-title: Firefox 114
 slug: Mozilla/Firefox/Releases/114
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 114 that affect developers. Firefox 114 was released on June 06, 2023.
 
@@ -70,7 +70,3 @@ No notable changes.
 ### Removals
 
 - Support for [`browser_style`](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles) in the manifest keys [`action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action), [`options_ui`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui), [`page_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action), and [`sidebar_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) is deprecated for Manifest V3 extensions ([Firefox bug 1827910](https://bugzil.la/1827910)). See [Manifest v3 migration](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles#manifest_v3_migration) for information about transitioning from `browser_style` in Manifest V3 extensions.
-
-## Older versions
-
-{{Firefox_for_developers}}

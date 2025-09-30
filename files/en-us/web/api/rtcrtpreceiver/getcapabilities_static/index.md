@@ -32,7 +32,6 @@ If the browser doesn't have any support for the given media `kind`, the returned
 The returned object has the following properties:
 
 - `codecs`
-
   - : An array of objects, each describing the basic capabilities of a single [media codec](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs) supported by the {{domxref("RTCRtpReceiver")}}.
 
     > [!NOTE]
@@ -40,7 +39,6 @@ The returned object has the following properties:
     > These are described below in the section [The codecs array](#the_codecs_array).
 
     Each codec object has the following properties:
-
     - `channels` {{optional_inline}}
       - : A positive integer value indicating the maximum number of channels supported by the codec; for example, a codec that supports only mono sound would have a value of 1; stereo codecs would have a 2, etc.
     - `clockRate`
@@ -56,10 +54,8 @@ The returned object has the following properties:
         If there is no parameters field, this property is left out.
 
 - `headerExtensions`
-
   - : An array of objects, each providing the URI of a [header extension](https://datatracker.ietf.org/doc/html/rfc3550#section-5.3.1) supported for the current `kind` of media.
     Each object has the following property:
-
     - `uri`
       - : A string, specifying the URI of a header extension.
         The URI is formatted as described in {{RFC(5285)}}.
@@ -98,7 +94,7 @@ There are three special entries that should always be present, representing unde
     One possible value is `video/ulpfec` (a generic error connection model).
     There may also be multiple FEC entries if more than one form is supported.
 - RTX (Retransmission)
-  - : This component is responsible for retransmission of data; it's media type should be `video/rtx`.
+  - : This component is responsible for retransmission of data; its media type should be `video/rtx`.
     There will only be one entry for RTX, and it will not have an [`sdpFmtpLine`](#sdpfmtpline) property.
 
 These entries should be ignored if only codecs related to the media are of interest.

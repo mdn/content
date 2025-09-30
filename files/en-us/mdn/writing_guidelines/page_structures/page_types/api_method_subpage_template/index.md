@@ -5,7 +5,8 @@ page-type: mdn-writing-guide
 sidebar: mdnsidebar
 ---
 
-> **Note:** _Remove this whole explanatory note before publishing._
+> [!NOTE]
+> _Remove this whole explanatory note before publishing._
 >
 > ---
 >
@@ -32,7 +33,6 @@ sidebar: mdnsidebar
 >     Format as `"NameOfTheParentInterface: NameOfTheMethod() method"`.
 >     For example, the [count()](/en-US/docs/Web/API/IDBIndex/count) method of the [IDBIndex](/en-US/docs/Web/API/IDBIndex) interface has a _title_ of `IDBIndex: count() method`.
 > - **slug**
->
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`.
 >     This will be formatted like `Web/API/NameOfTheParentInterface/NameOfTheMethod`.
 >
@@ -45,7 +45,6 @@ sidebar: mdnsidebar
 > - **status**
 >   - : Flags describing the status of this feature. An array which may contain one or more of the following: `experimental`, `deprecated`, `non-standard`. This key should not be set manually: it is set automatically based on values in the browser compatibility data for the feature. See ["How feature statuses are added or updated"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated).
 > - **browser-compat**
->
 >   - : Replace the placeholder value `path.to.feature.NameOfTheMethod` with the query string for the method in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).
 >     The toolchain automatically uses the key to populate the compatibility and specification sections (replacing the `\{{Compat}}` and `\{{Specifications}}` macros).
 >
@@ -77,7 +76,6 @@ sidebar: mdnsidebar
 >   For example, every page in the [WebVR API](/en-US/docs/Web/API/WebVR_API) has the same sidebar, which points to the other pages in the API.
 >   To generate the correct sidebar for your API, you need to add a `GroupData` entry to our GitHub repo, and include the entry's name inside the macro call in place of _GroupDataName_.
 >   See our [API reference sidebars](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars) guide for information on how to do this.
-> - Remember to remove the `\{{MDNSidebar}}` macro when you copy this page.
 >
 > Do not provide status header macros manually. Refer to the section ["How feature statuses are added or updated"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated) to add these statuses to the page.
 >

@@ -1,14 +1,16 @@
 ---
 title: Function.prototype.arguments
+short-title: arguments
 slug: Web/JavaScript/Reference/Global_Objects/Function/arguments
 page-type: javascript-instance-accessor-property
 status:
   - deprecated
   - non-standard
 browser-compat: javascript.builtins.Function.arguments
+sidebar: jsref
 ---
 
-{{JSRef}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{Deprecated_Header}}{{Non-standard_Header}}
 
 > [!NOTE]
 > The `arguments` property of {{jsxref("Function")}} objects is deprecated. The recommended way to access the `arguments` object is to refer to the variable {{jsxref("Functions/arguments", "arguments")}} available within functions.

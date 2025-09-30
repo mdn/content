@@ -1,25 +1,24 @@
 ---
 title: Map.prototype.has()
+short-title: has()
 slug: Web/JavaScript/Reference/Global_Objects/Map/has
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Map.has
+sidebar: jsref
 ---
 
-{{JSRef}}
-
-The **`has()`** method of {{jsxref("Map")}} instances returns a boolean indicating whether an element with the
-specified key exists in this map or not.
+The **`has()`** method of {{jsxref("WeakMap")}} instances returns a boolean indicating whether an entry with the specified key exists in this `WeakMap` or not.
 
 {{InteractiveExample("JavaScript Demo: Map.prototype.has()")}}
 
 ```js interactive-example
-const map1 = new Map();
-map1.set("bar", "foo");
+const map = new Map();
+map.set("bar", "foo");
 
-console.log(map1.has("bar"));
+console.log(map.has("bar"));
 // Expected output: true
 
-console.log(map1.has("baz"));
+console.log(map.has("baz"));
 // Expected output: false
 ```
 
@@ -32,12 +31,11 @@ has(key)
 ### Parameters
 
 - `key`
-  - : The key of the element to test for presence in the `Map` object.
+  - : The key of the entry to test for presence in the `Map` object. Object keys are compared by [reference](/en-US/docs/Glossary/Object_reference), not by value.
 
 ### Return value
 
-`true` if an element with the specified key exists in the `Map` object;
-otherwise `false`.
+Returns `true` if an entry with the specified key exists in the `Map` object; otherwise `false`.
 
 ## Examples
 
@@ -62,5 +60,6 @@ console.log(myMap.has("baz")); // false
 ## See also
 
 - {{jsxref("Map")}}
-- {{jsxref("Map.prototype.set()")}}
+- {{jsxref("Map.prototype.delete()")}}
 - {{jsxref("Map.prototype.get()")}}
+- {{jsxref("Map.prototype.set()")}}

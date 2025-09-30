@@ -3,9 +3,8 @@ title: scaleZ()
 slug: Web/CSS/transform-function/scaleZ
 page-type: css-function
 browser-compat: css.types.transform-function.scaleZ
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`scaleZ()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) defines a transformation that resizes an element along the
 z-axis. Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
@@ -68,32 +67,32 @@ transform: scaleZ(-1.4);
 }
 
 .front {
-  background: rgba(90, 90, 90, 0.7);
+  background: rgb(90 90 90 / 0.7);
   transform: translateZ(50px);
 }
 
 .back {
-  background: rgba(0, 210, 0, 0.7);
+  background: rgb(0 210 0 / 0.7);
   transform: rotateY(180deg) translateZ(50px);
 }
 
 .right {
-  background: rgba(210, 0, 0, 0.7);
+  background: rgb(210 0 0 / 0.7);
   transform: rotateY(90deg) translateZ(50px);
 }
 
 .left {
-  background: rgba(0, 0, 210, 0.7);
+  background: rgb(0 0 210 / 0.7);
   transform: rotateY(-90deg) translateZ(50px);
 }
 
 .top {
-  background: rgba(210, 210, 0, 0.7);
+  background: rgb(210 210 0 / 0.7);
   transform: rotateX(90deg) translateZ(50px);
 }
 
 .bottom {
-  background: rgba(210, 0, 210, 0.7);
+  background: rgb(210 0 210 / 0.7);
   transform: rotateX(-90deg) translateZ(50px);
 }
 ```
@@ -107,7 +106,8 @@ In the above interactive examples, [`perspective: 550px;`](/en-US/docs/Web/CSS/p
 create a 3D space) and [`transform-style: preserve-3d;`](/en-US/docs/Web/CSS/transform-style)
 (so the children, the 6 sides of the cube, are also positioned in the 3D space), have been set on the cube.
 
-> **Note:** `scaleZ(sz)` is equivalent to
+> [!NOTE]
+> `scaleZ(sz)` is equivalent to
 > `scale3d(1, 1, sz)`.
 
 ## Syntax

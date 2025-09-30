@@ -1,10 +1,10 @@
 ---
 title: Firefox 97 for developers
+short-title: Firefox 97
 slug: Mozilla/Firefox/Releases/97
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 97 that affect developers. Firefox 97 was released on February 8, 2022.
 
@@ -68,7 +68,3 @@ No notable changes
 
 - `cookieStoreId` in {{WebExtAPIRef("tabs.query")}} supports an array of strings. This enables queries to match tabs against more than one cookie store ID ([Firefox bug 1730931](https://bugzil.la/1730931)).
 - `cookieStoreId` added to {{WebExtAPIRef("contentScripts.register")}}. This enables extensions to register container-specific content scripts ([Firefox bug 1470651](https://bugzil.la/1470651)).
-
-## Older versions
-
-{{Firefox_for_developers}}

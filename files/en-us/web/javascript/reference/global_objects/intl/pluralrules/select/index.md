@@ -1,11 +1,11 @@
 ---
 title: Intl.PluralRules.prototype.select()
+short-title: select()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/select
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.PluralRules.select
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`select()`** method of {{jsxref("Intl.PluralRules")}} instances returns a string indicating which plural rule to use for locale-aware formatting of a number.
 

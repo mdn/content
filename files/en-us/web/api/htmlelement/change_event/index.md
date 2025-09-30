@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.HTMLElement.change_event
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The `change` event is fired for {{HTMLElement("input")}}, {{HTMLElement("select")}}, and {{HTMLElement("textarea")}} elements when the user modifies the element's value. Unlike the {{domxref("Element/input_event", "input")}} event, the `change` event is not necessarily fired for each alteration to an element's `value`.
 
@@ -23,10 +23,10 @@ The HTML specification lists [the `<input>` types that should fire the `change` 
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("change", (event) => {});
+```js-nolint
+addEventListener("change", (event) => { })
 
-onchange = (event) => {};
+onchange = (event) => { }
 ```
 
 ## Event type

@@ -3,9 +3,8 @@ title: background_color
 slug: Web/Progressive_web_apps/Manifest/Reference/background_color
 page-type: web-manifest-member
 browser-compat: manifests.webapp.background_color
+sidebar: pwasidebar
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}
 
 The `background_color` manifest member is used to specify an initial background color for your web application.
 This color appears in the application window before your application's stylesheets have loaded.
@@ -26,7 +25,6 @@ This color appears in the application window before your application's styleshee
 ### Values
 
 - `background_color`
-
   - : A string that specifies a valid [color value](/en-US/docs/Web/CSS/color_value).
 
 ## Description
@@ -55,7 +53,7 @@ Imagine you're building a weather app, and the background color in your app's st
 
 ```css
 body {
-  background-color: #87ceeb;
+  background-color: skyblue;
 }
 ```
 
@@ -65,7 +63,7 @@ To ensure your users see a consistent background color from launch to full load 
 {
   "name": "WeatherPro",
   "display": "standalone",
-  "background_color": "#87ceeb",
+  "background_color": "skyblue",
   "theme_color": "#4682b4",
   "icons": [
     {

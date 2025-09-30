@@ -6,7 +6,7 @@ page-type: guide
 
 {{DefaultAPISidebar("FedCM API")}}
 
-This article details all the steps an identity provider (IdP) needs to take to integrate with the Federated Credential Management (FedCM) API.
+This article details all the steps an {{glossary("Identity provider", "identity provider")}} (IdP) needs to take to integrate with the Federated Credential Management (FedCM) API.
 
 ## IdP integration steps
 
@@ -18,9 +18,9 @@ To integrate with FedCM, an IdP needs to do the following:
 
 ## Provide a well-known file
 
-There is a potential privacy issue whereby an [IdP is able to discern whether a user visited an RP without explicit consent](https://github.com/w3c-fedid/FedCM/issues/230). This has tracking implications, so an IdP is required to provide a well-known file to verify its identity and mitigate this issue.
+There is a potential privacy issue whereby an [IdP is able to discern whether a user visited a relying party (RP) without explicit consent](https://github.com/w3c-fedid/FedCM/issues/230). This has tracking implications, so an IdP is required to provide a well-known file to verify its identity and mitigate this issue.
 
-The well-known file is requested via an uncredentialed [`GET`](/en-US/docs/Web/HTTP/Reference/Methods/GET) request, which doesn't follow redirects. This effectively prevents the IdP from learning who made the request and which RP is attempting to connect.
+The well-known file is requested via an uncredentialed [`GET`](/en-US/docs/Web/HTTP/Reference/Methods/GET) request, which doesn't follow redirects. This effectively prevents the IdP from learning who made the request and which {{glossary("Relying party", "RP")}} is attempting to connect.
 
 The well-known file must be served from the [eTLD+1](https://web.dev/articles/same-site-same-origin#site) of the IdP at `/.well-known/web-identity`. For example, if the IdP endpoints are served under `https://accounts.idp.example/`, they must serve a well-known file at `https://idp.example/.well-known/web-identity`. The well-known file's content should have the following JSON structure:
 
@@ -47,7 +47,10 @@ The config file (hosted at `https://accounts.idp.example/config.json` in our exa
 ```json
 {
   "accounts_endpoint": "/accounts.php",
+  "account_label": "developer",
+  "supports_use_other_account": true,
   "client_metadata_endpoint": "/client_metadata.php",
+  "disconnect_endpoint": "/disconnect.php",
   "id_assertion_endpoint": "/assertion.php",
   "login_url": "/login",
   "branding": {
@@ -67,14 +70,22 @@ The properties are as follows:
 
 - `accounts_endpoint`
   - : The URL for the accounts list endpoint, which returns a list of accounts that the user is currently signed in to on the IdP. The browser uses these to create a list of sign-in choices to show to the user in the browser-provided FedCM UI.
+- `account_label` {{optional_inline}}
+  - : A string that, if included, specifies an identifier for a subset of accounts that should be returned when this IdP is used for federated authentication. When a `get()` request is made, only accounts matching this string in their `label_hints` parameters will be returned from the [accounts endpoint](#the_accounts_list_endpoint).
+- `supports_use_other_account` {{optional_inline}}
+  - : A boolean that defaults to `false`; if set to `true`, it means that users can sign in with an account different from the one they're currently logged in with (if the IdP supports multiple accounts). This only applies to `get()` calls that specify [active mode](/en-US/docs/Web/API/IdentityCredentialRequestOptions#active).
+    > [!NOTE]
+    > In the browser sign-in UI, this will likely manifest as some kind of "Choose other account" button.
 - `client_metadata_endpoint` {{optional_inline}}
   - : The URL for the client metadata endpoint, which provides URLs pointing to the RP's metadata and terms of service pages, to be used in the FedCM UI.
+- `disconnect_endpoint` {{optional_inline}}
+  - : The URL for the disconnect endpoint, which is used by the RP to disconnect from the IdP, via the {{domxref("IdentityCredential.disconnect_static", "IdentityCredential.disconnect()")}} method.
 - `id_assertion_endpoint`
   - : The URL for the ID assertion endpoint, which when sent valid user credentials should respond with a validation token that the RP can use to validate the authentication.
 - `login_url`
   - : The login page URL for the user to sign into the IdP.
 - `branding` {{optional_inline}}
-  - : Contains branding information that will be used in the browser-supplied FedCM UI to customize its appearance as desired by the IdP.
+  - : Contains branding information that will be used in the browser-supplied FedCM UI to customize its appearance as desired by the IdP. The provided icon size must be greater than or equal to `25` (`25px`) in passive mode and greater than or equal to `40` (`40px`) in active mode (see [Active versus passive mode](/en-US/docs/Web/API/FedCM_API/RP_sign-in#active_versus_passive_mode) for more details).
 
 The following table summarizes the different requests made by the FedCM API:
 
@@ -83,6 +94,7 @@ The following table summarizes the different requests made by the FedCM API:
 | `well-known`/`config.json` | `GET`  | No                          | No                                |
 | `accounts_endpoint`        | `GET`  | Yes                         | No                                |
 | `client_metadata_endpoint` | `GET`  | No                          | Yes                               |
+| `disconnect_endpoint`      | `POST` | Yes                         | Yes                               |
 | `id_assertion_endpoint`    | `POST` | Yes                         | Yes                               |
 
 > [!NOTE]
@@ -111,41 +123,55 @@ The response to a successful request returns a list of all the IdP accounts that
 {
   "accounts": [
     {
-      "id": "john_doe",
-      "given_name": "John",
-      "name": "John Doe",
-      "email": "john_doe@idp.example",
+      "id": "elaina_maduro",
+      "given_name": "Elaina",
+      "name": "Elaina Maduro",
+      "email": "elaina_maduro@idp.example",
+      "tel": "+491234567890",
+      "username": "elaina420",
       "picture": "https://idp.example/profile/123",
       "approved_clients": ["123", "456", "789"],
-      "login_hints": ["john_doe", "john_doe@idp.example"]
+      "domain_hints": ["rp1.example.com", "rp3.example.com"],
+      "label_hints": ["developer", "admin"],
+      "login_hints": ["elaina_maduro", "elaina_maduro@idp.example"]
     },
     {
-      "id": "johnny",
-      "given_name": "Johnny",
-      "name": "Johnny",
-      "email": "johnny@idp.example",
+      "id": "elly",
+      "given_name": "Elly",
+      "username": "elly123",
+      "email": "Elly@idp.example",
       "picture": "https://idp.example/profile/456",
       "approved_clients": ["abc", "def", "ghi"],
-      "login_hints": ["johnny", "johnny@idp.example"]
+      "domain_hints": ["rp1.example.com", "rp2.example.com"],
+      "label_hints": ["developer", "test"],
+      "login_hints": ["elly", "elly@idp.example"]
     }
   ]
 }
 ```
 
-This includes the following information:
+This includes the following information where `name`, `email`, `username`, and `tel` are optional but at least one of them must be present and nonempty.
 
 - `id`
   - : The unique ID of the user.
-- `name`
+- `name` {{optional_inline}}
   - : The family name of the user.
-- `email`
+- `email` {{optional_inline}}
   - : The email address of the user.
+- `tel` {{optional_inline}}
+  - : The telephone number of the user. Can be in any format.
+- `username` {{optional_inline}}
+  - : The username of the user.
 - `given_name` {{optional_inline}}
   - : The given name of the user.
 - `picture` {{optional_inline}}
   - : The URL of the user's avatar image.
 - `approved_clients` {{optional_inline}}
   - : An array of RP clients that the user has registered with.
+- `domain_hints` {{optional_inline}}
+  - : An array of domains the account is associated with. The RP can make a `get()` call that includes a [`domainHint`](/en-US/docs/Web/API/IdentityCredentialRequestOptions#domainhint) property to filter the returned accounts by domain.
+- `label_hints` {{optional_inline}}
+  - : An array of strings specifying labels that define account types that the account is identified with. If the config file specifies an [`account_label`](#account_label), only accounts that contain that label in their `label_hints` will be returned from the accounts list endpoint.
 - `login_hints` {{optional_inline}}
   - : An array of strings representing the account. These strings are used to filter the list of account options that the browser offers for the user to sign-in. This occurs when the `loginHint` property is provided within [`identity.providers`](/en-US/docs/Web/API/IdentityCredentialRequestOptions#providers) in a related `get()` call. Any account with a string in its `login_hints` array that matches the provided `loginHint` is included.
 
@@ -174,6 +200,46 @@ The response to a successful request includes URLs pointing to the RP's metadata
   "terms_of_service_url": "https://rp.example/terms_of_service.html"
 }
 ```
+
+### The disconnect endpoint
+
+By invoking {{domxref("IdentityCredential.disconnect_static", "IdentityCredential.disconnect()")}}, the browser sends a cross-origin {{httpmethod("POST")}} request with cookies and a {{httpheader("Content-Type")}} of `application/x-www-form-urlencoded` to the disconnect endpoint with the following information:
+
+- `account_hint`
+  - : A string specifying an account hint that the IdP uses the identify the account to disconnect.
+- `client_id`
+  - : A string specifying the RP's client identifier.
+
+For example:
+
+```http
+POST /disconnect HTTP/1.1
+Host: idp.example
+Origin: rp.example
+Content-Type: application/x-www-form-urlencoded
+Cookie: 0x123
+Sec-Fetch-Dest: webidentity
+
+account_hint=account456&client_id=rp123
+```
+
+Upon receiving the request, the IdP server should:
+
+1. Respond to the request with [CORS (Cross-Origin Resource Sharing)](/en-US/docs/Web/HTTP/Guides/CORS).
+2. Verify that the request contains a {{httpheader("Sec-Fetch-Dest")}} HTTP header with a directive of `webidentity`.
+3. Match the {{httpheader("Origin")}} header against the RP origin determined by the `client_id`. Reject the promise if they don't match.
+4. Find the account that matches the `account_hint`.
+5. Disconnect the user account from the list of RP's connected accounts.
+6. Respond with the identified user's `account_id` in JSON format:
+
+   ```json
+   {
+     "account_id": "account456"
+   }
+   ```
+
+> [!NOTE]
+> If the IdP wishes to disconnect all accounts associated with the RP, it can pass a string that does not match any `account_id`, for example `"account_id": "*"`.
 
 ### The ID assertion endpoint
 
@@ -246,12 +312,12 @@ The error response fields are as follows:
 - `code` {{optional_inline}}
   - : A string. This can be either a known error from the [OAuth 2.0 specified error list](https://datatracker.ietf.org/doc/html/rfc6749#section-4.1.2.1) or an arbitrary string.
 - `url` {{optional_inline}}
-  - : A URL. This should be a web page containing human-readable information about the error to display to users, such as how to fix the error or contact customer. The URL must be same-site with the IdP's config URL.
+  - : A URL. This should be a web page containing human-readable information about the error to display to users, such as how to fix the error or contact customer service. The URL must be same-site with the IdP's config URL.
 
 This information can be used in a couple of different ways:
 
 - The browser can display a custom UI to the user informing them of what went wrong (see the [Chrome documentation](https://privacysandbox.google.com/blog/fedcm-chrome-120-updates#error-api) for an example). Bear in mind that if the request failed because the IdP server is unavailable, it obviously can't return any information. In such cases, the browser will report this via a generic message.
-- The associated RP {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} call used to attempt sign-in will reject its promise with an `IdentityCredentialError`, which contains the error information. An RP can catch this error and then follow up the browser's custom UI with some information to help the user succeed in a future sign-in attempt.
+- The associated RP {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} call used to attempt sign-in will reject its promise with an {{domxref("IdentityCredentialError")}}, which contains the error information. An RP can catch this error and then follow up the browser's custom UI with some information to help the user succeed in a future sign-in attempt.
 
 ## Update login status using the Login Status API
 
@@ -289,17 +355,17 @@ The IdP should update its login status when a user signs into or out of the IdP.
 
 When an [RP attempts federated sign-in](/en-US/docs/Web/API/FedCM_API/RP_sign-in), the login status is checked:
 
-- If the login status is `"logged-in"`, a request is made to the IdP's [accounts list endpoint](#the_accounts_list_endpoint) and available accounts for sign-in are displayed to the user in the browser-provided FedCM dialog.
-- If the login status is `"logged-out"`, the promise returned by the FedCM `get()` request rejects without making a request to the accounts list endpoint. In such a case it is up to the developer to handle the flow, for example by prompting the user to go and sign in to a suitable IdP.
-- If the login status is `"unknown"`, a request is made to the IdP's accounts list endpoint and the login status is updated depending on the response:
+- If an IdP's login status is `"logged-in"`, a request is made to the [accounts list endpoint](#the_accounts_list_endpoint) and available accounts for sign-in are displayed to the user in the browser-provided FedCM dialog.
+- If all IdPs' login statuses are `"logged-out"`, the promise returned by the FedCM `get()` request rejects without making a request to the accounts list endpoint. In such a case, it is up to the developer to handle the flow, for example by prompting the user to go and sign in to a suitable IdP.
+- If an IdP's login status is `"unknown"`, a request is made to the accounts list endpoint and the login status is updated depending on the response:
   - If the endpoint returns a list of available accounts for sign-in, update the status to `"logged-in"` and display the sign-in options to the user in the browser-provided FedCM dialog.
-  - If the endpoint returns no accounts, update the status to `"logged-out"`; the promise returned by the FedCM `get()` request then rejects.
+  - If the endpoint returns no accounts, update the status to `"logged-out"`; the promise returned by the FedCM `get()` request will reject if no other `logged-in` IdPs are available.
 
 ### What if the browser and the IdP login status become out of sync?
 
-Despite the Login Status API informing the browser of the IdP's login status, it is possible for the browser and IdP to become out of sync. For example, the IdP sessions might expire, meaning that all user accounts end up signed out but the login status is still set to `"logged-in"` (the application was not able to set the login status to `"logged-out"`). In such a case, when federated sign-in is attempted, a request will be made to the IdP's accounts list endpoint but no available accounts will be returned because the session is no longer available.
+Despite the Login Status API informing the browser of IdP login status, it is possible for the browser and an IdP to become out of sync. For example, the IdP sessions might expire, meaning that all user accounts end up signed out but the login status is still set to `"logged-in"` (the application was not able to set the login status to `"logged-out"`). In such a case, when federated sign-in is attempted, a request will be made to the IdP's accounts list endpoint but no available accounts will be returned because the session is no longer available.
 
-When this occurs, the browser can dynamically let a user sign into the IdP by opening the IdP's sign-in page in a dialog (the sign-in URL is found in the IdP's [config file](#provide_a_config_file_and_endpoints) `login_url` ). The exact nature of this flow is up to the browser; for example, [Chrome handles it like this](https://privacysandbox.google.com/blog/fedcm-chrome-120-updates#what_if_the_user_session_expires_let_the_user_sign_in_through_a_dynamic_login_flow).
+When this occurs, the browser can dynamically let a user sign into an IdP by opening the IdP's sign-in page in a dialog (the sign-in URL is found in the IdP's [config file](#provide_a_config_file_and_endpoints) `login_url`). The exact nature of this flow is up to the browser; for example, [Chrome handles it like this](https://privacysandbox.google.com/blog/fedcm-chrome-120-updates#what_if_the_user_session_expires_let_the_user_sign_in_through_a_dynamic_login_flow).
 
 Once the user is signed in to the IdP, the IdP should:
 

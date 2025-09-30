@@ -3,12 +3,10 @@ title: "WorkerNavigator: gpu property"
 short-title: gpu
 slug: Web/API/WorkerNavigator/gpu
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.WorkerNavigator.gpu
 ---
 
-{{APIRef("Web Workers API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers("worker")}}
+{{APIRef("Web Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers("worker")}}
 
 The **`gpu`** read-only property of the {{domxref("WorkerNavigator")}} interface returns the {{domxref("GPU")}} object for the current worker context, which is the entry point for the {{domxref("WebGPU_API", "WebGPU API", "", "nocode")}}.
 
@@ -32,7 +30,7 @@ async function init() {
 
   const device = await adapter.requestDevice();
 
-  // ...
+  // …
 }
 ```
 

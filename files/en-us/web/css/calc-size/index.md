@@ -5,9 +5,10 @@ page-type: css-function
 status:
   - experimental
 browser-compat: css.types.calc-size
+sidebar: cssref
 ---
 
-{{CSSRef}}{{seecompattable}}
+{{seecompattable}}
 
 The **`calc-size()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) allows you to perform calculations on [intrinsic size](/en-US/docs/Glossary/Intrinsic_Size) values such as `auto`, [`fit-content`](/en-US/docs/Web/CSS/fit-content), and [`max-content`](/en-US/docs/Web/CSS/max-content); this is not supported by the regular {{cssxref("calc()")}} function.
 
@@ -41,11 +42,9 @@ calc-size(<calc-size-basis>, <calc-sum>)
 The parameters are:
 
 - `<calc-size-basis>`
-
   - : The value (most commonly an intrinsic size) that you want to perform a calculation on.
 
 - [`<calc-sum>`](/en-US/docs/Web/CSS/calc-sum)
-
   - : An expression that defines the calculation to be performed on the `<calc-size-basis>`.
 
 ### Return value
@@ -279,7 +278,7 @@ section {
   font-family: Arial, Helvetica, sans-serif;
   width: 175px;
   border-radius: 5px;
-  background: #eee;
+  background: #eeeeee;
   box-shadow:
     inset 1px 1px 4px rgb(255 255 255 / 0.5),
     inset -1px -1px 4px rgb(0 0 0 / 0.5);
@@ -287,7 +286,7 @@ section {
 
 header {
   padding: 10px;
-  border-bottom: 2px solid #ccc;
+  border-bottom: 2px solid #cccccc;
 }
 
 main {
@@ -381,8 +380,8 @@ body {
 section {
   margin-top: 20px;
   font-family: Arial, Helvetica, sans-serif;
-  background: #eee;
-  border: 2px solid #ccc;
+  background: #eeeeee;
+  border: 2px solid #cccccc;
   padding: 0 20px;
   position: relative;
 }
@@ -507,8 +506,8 @@ form {
   margin-top: 20px;
   padding: 20px;
   font-family: Arial, Helvetica, sans-serif;
-  background: #eee;
-  border: 2px solid #ccc;
+  background: #eeeeee;
+  border: 2px solid #cccccc;
 }
 
 div {

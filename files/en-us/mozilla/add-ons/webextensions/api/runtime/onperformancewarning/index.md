@@ -3,9 +3,8 @@ title: runtime.onPerformanceWarning
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onPerformanceWarning
 page-type: webextension-api-event
 browser-compat: webextensions.api.runtime.onPerformanceWarning
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 This event fires when a runtime performance issue is detected for the extension. Observe this event to be notified of runtime performance problems with your extension.
 
@@ -31,13 +30,9 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed this argument:
-
     - `details`
-
       - : `object`. An object with the following properties:
-
         - `category`
           - : {{WebExtAPIRef("runtime.OnPerformanceWarningCategory")}}. The category of the warning.
         - `severity`

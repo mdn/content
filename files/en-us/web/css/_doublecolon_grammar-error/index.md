@@ -3,11 +3,12 @@ title: ::grammar-error
 slug: Web/CSS/::grammar-error
 page-type: css-pseudo-element
 browser-compat: css.selectors.grammar-error
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
 The **`::grammar-error`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents a text segment which the {{glossary("user agent")}} has flagged as grammatically incorrect.
+
+The `::grammar-error` pseudo-element follows a special inheritance model common to all highlight pseudo-elements. For more details on how this inheritance works, see the [Highlight pseudo-elements inheritance](/en-US/docs/Web/CSS/Pseudo-elements#highlight_pseudo-elements_inheritance) section.
 
 ## Allowable properties
 

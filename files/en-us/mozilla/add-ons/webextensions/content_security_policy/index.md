@@ -2,9 +2,8 @@
 title: Content Security Policy
 slug: Mozilla/Add-ons/WebExtensions/Content_Security_Policy
 page-type: guide
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Extensions developed with WebExtension APIs have a Content Security Policy (CSP) applied to them by default. This restricts the sources from which they can load code such as [\<script>](/en-US/docs/Web/HTML/Reference/Elements/script) and disallows potentially unsafe practices such as using [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval). This article briefly explains what a CSP is, what the default policy is and what it means for an extension, and how an extension can change the default CSP.
 

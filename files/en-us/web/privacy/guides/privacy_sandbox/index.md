@@ -7,6 +7,10 @@ sidebar: privacy
 
 Google's **privacy sandbox** project is a series of proposals to satisfy cross-site use cases without requiring third-party cookies or other tracking mechanisms, preparing for a future web in which third-party cookies have been removed. Themes include identity and tracking protection, more privacy-respecting ad solutions, preventing covert tracking, and safely sharing data across browsing contexts.
 
+> [!WARNING]
+> Some of these features are currently opposed by one or more browser vendors.
+> See specific API entry points for more details.
+
 ## Privacy sandbox features
 
 - [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API)

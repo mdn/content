@@ -3,9 +3,8 @@ title: Class selectors
 slug: Web/CSS/Class_selectors
 page-type: css-selector
 browser-compat: css.selectors.class
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The [CSS](/en-US/docs/Web/CSS) **class selector** matches elements based on the contents of their [`class`](/en-US/docs/Web/HTML/Reference/Global_attributes/class) attribute.
 
@@ -72,16 +71,16 @@ that contain characters which must be escaped in CSS -->
 
 ```css
 .red {
-  color: #f33;
+  color: #ff3333;
 }
 
 .yellow-bg {
-  background: #ffa;
+  background: #ffffaa;
 }
 
 .fancy {
   font-weight: bold;
-  text-shadow: 4px 4px 3px #77f;
+  text-shadow: 4px 4px 3px #7777ff;
 }
 ```
 

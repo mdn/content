@@ -117,7 +117,7 @@ const api = {
 const image = await loadImage("./image.jpg");
 const p = api.create_buffer(image.width, image.height);
 Module.HEAP8.set(image.data, p);
-// ... call encoder ...
+// … call encoder …
 api.destroy_buffer(p);
 ```
 
@@ -171,7 +171,8 @@ const result = new Uint8Array(resultView);
 api.free_result(resultPointer);
 ```
 
-> **Note:** `new Uint8Array(someBuffer)` will create a new view onto the same memory chunk, while `new Uint8Array(someTypedArray)` will copy the data.
+> [!NOTE]
+> `new Uint8Array(someBuffer)` will create a new view onto the same memory chunk, while `new Uint8Array(someTypedArray)` will copy the data.
 
 Depending on the size of your image, you might run into an error where Wasm can't grow the memory enough to accommodate both the input and the output image:
 

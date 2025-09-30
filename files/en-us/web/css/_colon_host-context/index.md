@@ -2,10 +2,13 @@
 title: :host-context()
 slug: Web/CSS/:host-context
 page-type: css-pseudo-class
+status:
+  - deprecated
 browser-compat: css.selectors.host-context
+sidebar: cssref
 ---
 
-{{CSSRef}}
+{{deprecated_header}}
 
 The **`:host-context()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) allows you to style elements within a [shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) differently based on the selector of the shadow host (the element that has the shadow root) and its DOM ancestors.
 
@@ -78,11 +81,11 @@ function init() {
 /* Changes paragraph text color from black to white when
    a .dark-theme class is applied to the document body */
 p {
-  color: #000;
+  color: black;
 }
 
 :host-context(body.dark-theme) p {
-  color: #fff;
+  color: white;
 }
 ```
 
@@ -122,12 +125,12 @@ shadowRoot.appendChild(span);
 style.textContent =
   "span:hover { text-decoration: underline; }" +
   ":host-context(h1) { font-style: italic; }" +
-  ':host-context(h1):after { content: " - no links in headers!" }' +
+  ':host-context(h1)::after { content: " - no links in headers!" }' +
   ":host(.footer) { color : red; }" +
   ":host { background: rgb(0 0 0 / 10%); padding: 2px 5px; }";
 ```
 
-The `:host-context(h1) { font-style: italic; }` and `:host-context(h1):after { content: " - no links in headers!" }` rules style the instance of the `<context-span>` element (the shadow host in this instance) inside the `<h1>`. We've used it to make it clear that the custom element shouldn't appear inside the `<h1>` in our design.
+The `:host-context(h1) { font-style: italic; }` and `:host-context(h1)::after { content: " - no links in headers!" }` rules style the instance of the `<context-span>` element (the shadow host in this instance) inside the `<h1>`. We've used it to make it clear that the custom element shouldn't appear inside the `<h1>` in our design.
 
 ## Specifications
 

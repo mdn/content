@@ -1,11 +1,11 @@
 ---
-title: Expires
+title: Expires header
+short-title: Expires
 slug: Web/HTTP/Reference/Headers/Expires
 page-type: http-header
 browser-compat: http.headers.Expires
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Expires`** {{Glossary("response header")}} contains the date/time after which the response is considered expired in the context of [HTTP caching](/en-US/docs/Web/HTTP/Guides/Caching).
 

@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.HTMLDialogElement.cancel_event
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The **`cancel`** event fires on a {{HTMLElement("dialog")}} element when the user instructs the browser that they wish to dismiss the current open dialog. The browser fires this event when the user presses the <kbd>Esc</kbd> key.
 
@@ -18,10 +18,10 @@ When a `<dialog>` is dismissed with the <kbd>Esc</kbd> key, both the `cancel` an
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("cancel", (event) => {});
+```js-nolint
+addEventListener("cancel", (event) => { })
 
-oncancel = (event) => {};
+oncancel = (event) => { }
 ```
 
 ## Event type

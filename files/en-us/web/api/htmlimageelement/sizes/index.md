@@ -24,7 +24,9 @@ A string containing a comma-separated list of source size descriptors
 followed by an optional fallback size. Each source size descriptor is
 comprised of a media condition, then at least one whitespace character, then the
 source size value to use for the image when the media condition
-evaluates to `true`. For more information about the syntax of the `sizes` attribute, see [`<img>`](/en-US/docs/Web/HTML/Reference/Elements/img#sizes).
+evaluates to `true`.
+You can use the value `auto` to replace the whole list of sizes or the first entry in the list.
+For more information about the syntax of the `sizes` attribute, see [`<img>`](/en-US/docs/Web/HTML/Reference/Elements/img#sizes).
 
 ## Examples
 
@@ -60,9 +62,9 @@ and 50em.
       new-york-skyline-4by3.jpg 1961w,
       new-york-skyline-tall.jpg 1060w
     "
-    sizes="((min-width: 50em) and (max-width: 60em)) 50em,
-              ((min-width: 30em) and (max-width: 50em)) 30em,
-              (max-width: 30em) 20em"
+    sizes="(50em <= width <= 60em) 50em,
+              (30em <= width < 50em) 30em,
+              (width < 30em) 20em"
     alt="The New York City skyline on a beautiful day, with the One World Trade Center building in the middle." />
   <p>
     Then there's even more amazing stuff to say down here. Can you believe it? I
@@ -95,8 +97,8 @@ article {
 article img {
   display: block;
   max-width: 100%;
-  border: 1px solid #888;
-  box-shadow: 0 0.5em 0.3em #888;
+  border: 1px solid #888888;
+  box-shadow: 0 0.5em 0.3em #888888;
   margin-bottom: 1.25em;
 }
 ```

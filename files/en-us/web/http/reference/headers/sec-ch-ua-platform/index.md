@@ -1,13 +1,15 @@
 ---
-title: Sec-CH-UA-Platform
+title: Sec-CH-UA-Platform header
+short-title: Sec-CH-UA-Platform
 slug: Web/HTTP/Reference/Headers/Sec-CH-UA-Platform
 page-type: http-header
 status:
   - experimental
 browser-compat: http.headers.Sec-CH-UA-Platform
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{SeeCompatTable}}{{SecureContext_Header}}
 
 The HTTP **`Sec-CH-UA-Platform`** {{Glossary("request header")}} is a [user agent client hint](/en-US/docs/Web/HTTP/Guides/Client_hints#user_agent_client_hints) which provides the platform or operating system on which the user agent is running.
 For example: "Windows" or "Android".

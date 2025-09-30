@@ -198,42 +198,39 @@ This works by calling {{domxref("MediaStream.getTracks()")}}, using {{jsxref("Ar
 Now let's look at the most intricate piece of code in this example: our event handler for clicks on the start button:
 
 ```js
-startButton.addEventListener(
-  "click",
-  () => {
-    navigator.mediaDevices
-      .getUserMedia({
-        video: true,
-        audio: true,
-      })
-      .then((stream) => {
-        preview.srcObject = stream;
-        downloadButton.href = stream;
-        preview.captureStream =
-          preview.captureStream || preview.mozCaptureStream;
-        return new Promise((resolve) => (preview.onplaying = resolve));
-      })
-      .then(() => startRecording(preview.captureStream(), recordingTimeMS))
-      .then((recordedChunks) => {
-        let recordedBlob = new Blob(recordedChunks, { type: "video/webm" });
-        recording.src = URL.createObjectURL(recordedBlob);
-        downloadButton.href = recording.src;
-        downloadButton.download = "RecordedVideo.webm";
-
-        log(
-          `Successfully recorded ${recordedBlob.size} bytes of ${recordedBlob.type} media.`,
-        );
-      })
-      .catch((error) => {
-        if (error.name === "NotFoundError") {
-          log("Camera or microphone not found. Can't record.");
-        } else {
-          log(error);
-        }
+startButton.addEventListener("click", () => {
+  navigator.mediaDevices
+    .getUserMedia({
+      video: true,
+      audio: true,
+    })
+    .then((stream) => {
+      preview.srcObject = stream;
+      downloadButton.href = stream;
+      preview.captureStream = preview.captureStream || preview.mozCaptureStream;
+      return new Promise((resolve) => {
+        preview.onplaying = resolve;
       });
-  },
-  false,
-);
+    })
+    .then(() => startRecording(preview.captureStream(), recordingTimeMS))
+    .then((recordedChunks) => {
+      let recordedBlob = new Blob(recordedChunks, { type: "video/webm" });
+      recording.src = URL.createObjectURL(recordedBlob);
+      downloadButton.href = recording.src;
+      downloadButton.download = "RecordedVideo.webm";
+
+      log(
+        `Successfully recorded ${recordedBlob.size} bytes of ${recordedBlob.type} media.`,
+      );
+    })
+    .catch((error) => {
+      if (error.name === "NotFoundError") {
+        log("Camera or microphone not found. Can't record.");
+      } else {
+        log(error);
+      }
+    });
+});
 ```
 
 When a {{domxref("Element/click_event", "click")}} event occurs, here's what happens:
@@ -253,13 +250,9 @@ When a {{domxref("Element/click_event", "click")}} event occurs, here's what hap
 The last bit of code adds a handler for the {{domxref("Element/click_event", "click")}} event on the stop button using {{domxref("EventTarget.addEventListener", "addEventListener()")}}:
 
 ```js
-stopButton.addEventListener(
-  "click",
-  () => {
-    stop(preview.srcObject);
-  },
-  false,
-);
+stopButton.addEventListener("click", () => {
+  stop(preview.srcObject);
+});
 ```
 
 This calls the [`stop()`](#stopping_the_input_stream) function we covered earlier.
@@ -270,7 +263,7 @@ When put all together with the rest of the HTML and the CSS not shown above, it 
 
 {{EmbedLiveSample('Example_of_recording_a_media_element', '600', '440', , , , 'camera;microphone')}}
 
-You can {{LiveSampleLink("Example_of_recording_a_media_element", "view the full demo here")}}, and use your browsers developer tools to inspect the page and look at all the code, including the parts hidden above because they aren't critical to the explanation of how the APIs are being used.
+You can also open this example in the playground using the "Play" button, which allows you to look at the combined code, including the parts hidden above because they aren't critical to the explanation of how the APIs are being used.
 
 ## See also
 

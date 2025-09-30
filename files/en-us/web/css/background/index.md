@@ -3,9 +3,8 @@ title: background
 slug: Web/CSS/background
 page-type: css-shorthand-property
 browser-compat: css.properties.background
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`background`** [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets all background style properties at once, such as color, image, origin and size, or repeat method. Component properties not set in the `background` shorthand property value declaration are set to their default values.
 
@@ -32,7 +31,7 @@ background: left 5% / 15% 60% repeat-x
 background:
   center / contain no-repeat
     url("/shared-assets/images/examples/firefox-logo.svg"),
-  #eee 35% url("/shared-assets/images/examples/lizard.png");
+  #eeeeee 35% url("/shared-assets/images/examples/lizard.png");
 ```
 
 ```html interactive-example
@@ -90,7 +89,6 @@ The `background` property is specified as one or more background layers, separat
 The syntax of each layer is as follows:
 
 - Each layer may include zero or one occurrences of any of the following values:
-
   - `<attachment>`
   - `<bg-image>`
   - `<bg-position>`
@@ -165,7 +163,7 @@ Browsers do not provide any special information on background images to assistiv
 }
 
 .top-banner {
-  background: url("star-solid.gif") #99f repeat-y fixed;
+  background: url("star-solid.gif") #9999ff repeat-y fixed;
 }
 ```
 

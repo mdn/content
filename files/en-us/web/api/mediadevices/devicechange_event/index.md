@@ -16,10 +16,10 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("devicechange", (event) => {});
+```js-nolint
+addEventListener("devicechange", (event) => { })
 
-ondevicechange = (event) => {};
+ondevicechange = (event) => { }
 ```
 
 ## Event type
@@ -112,34 +112,30 @@ function log(msg) {
   logElement.innerText += `${msg}\n`;
 }
 
-startButton.addEventListener(
-  "click",
-  () => {
-    const constraints = {
-      video: {
-        width: 160,
-        height: 120,
-        frameRate: 30,
-      },
-      audio: {
-        sampleRate: 44100,
-        sampleSize: 16,
-        volume: 0.25,
-      },
-    };
+startButton.addEventListener("click", () => {
+  const constraints = {
+    video: {
+      width: 160,
+      height: 120,
+      frameRate: 30,
+    },
+    audio: {
+      sampleRate: 44100,
+      sampleSize: 16,
+      volume: 0.25,
+    },
+  };
 
-    navigator.mediaDevices
-      .getUserMedia(constraints)
-      .then((stream) => {
-        videoElement.srcObject = stream;
-        updateDeviceList();
-      })
-      .catch((err) => {
-        log(`${err.name}: ${err.message}`);
-      });
-  },
-  false,
-);
+  navigator.mediaDevices
+    .getUserMedia(constraints)
+    .then((stream) => {
+      videoElement.srcObject = stream;
+      updateDeviceList();
+    })
+    .catch((err) => {
+      log(`${err.name}: ${err.message}`);
+    });
+});
 ```
 
 We set up global variables that contain references to the {{HTMLElement("ul")}}

@@ -33,7 +33,7 @@ new WebAssembly.Instance(module, importObject)
     There must be one matching property for each declared import of `module` or
     else a [`WebAssembly.LinkError`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/LinkError) is thrown.
 
-#### Exceptions
+### Exceptions
 
 - If either of the parameters are not of the correct type or structure, a
   {{jsxref("TypeError")}} is thrown.

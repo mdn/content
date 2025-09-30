@@ -3,9 +3,8 @@ title: url()
 slug: Web/CSS/url_function
 page-type: css-function
 browser-compat: css.types.url
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`url()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) is used to include a file. The parameter is an absolute URL, a relative URL, a blob URL, or a data URL. The **`url()`** function can be passed as a parameter of another CSS function, like the {{cssxref("attr")}} function. Depending on the property for which it is a value, the resource sought can be an image, font, or a stylesheet. The `url()` functional notation is the value for the `<url>` data type.
 
@@ -13,6 +12,14 @@ The **`url()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Va
 > There is a difference between a {{Glossary("URI")}} and a {{Glossary("URL")}}. A URI identifies a resource. A URL is a type of URI, and describes the _location_ of a resource. A URI can be either a URL or a name ({{Glossary("URN")}}) of a resource.
 >
 > In CSS Level 1, the `url()` functional notation described only true URLs. In CSS Level 2, the definition of `url()` was extended to describe any URI, whether a URL or a URN. Confusingly, this meant that `url()` could be used to create a `<uri>` CSS data type. This change was not only awkward but, debatably, unnecessary, since URNs are almost never used in actual CSS. To alleviate the confusion, CSS Level 3 returned to the narrower, initial definition. Now, `url()` denotes only true `<url>`s.
+
+Relative URLs, if used, are relative to the URL of the stylesheet (not to the URL of the web page).
+
+The **`url()`** function can be included as a value for
+{{cssxref('background')}}, {{cssxref('background-image')}}, {{cssxref('border')}}, {{cssxref('border-image')}}, {{cssxref('border-image-source')}}, {{cssxref('content')}}, {{cssxref('cursor')}}, {{cssxref('filter')}}, {{cssxref('list-style')}}, {{cssxref('list-style-image')}}, {{cssxref('mask')}}, {{cssxref('mask-image')}}, {{cssxref('offset-path')}}, {{cssxref('clip-path')}},
+[src](/en-US/docs/Web/CSS/@font-face/src) as part of a [`@font-face`](/en-US/docs/Web/CSS/@font-face) block, and [@counter-style/`symbol`](/en-US/docs/Web/CSS/@counter-style/symbols)
+
+## Syntax
 
 ```css
 /* Basic usage */
@@ -42,7 +49,7 @@ border-image: url("/media/diamonds.png") 30 fill / 30px / 30px space;
 
 /* As a parameter in another CSS function */
 background-image: cross-fade(20% url(first.png), url(second.png));
-mask-image: image(url(mask.png), skyblue, linear-gradient(rgb(0 0 0 / 100%), transparent));
+mask-image: image(url(mask.png), skyblue, linear-gradient(black, transparent));
 
 /* as part of a non-shorthand multiple value */
 content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
@@ -53,34 +60,12 @@ content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
 @namespace url(http://www.w3.org/1999/xhtml);
 ```
 
-Relative URLs, if used, are relative to the URL of the stylesheet (not to the URL of the web page).
-
-The **`url()`** function can be included as a value for
-{{cssxref('background')}}, {{cssxref('background-image')}}, {{cssxref('border')}}, {{cssxref('border-image')}}, {{cssxref('border-image-source')}}, {{cssxref('content')}}, {{cssxref('cursor')}}, {{cssxref('filter')}}, {{cssxref('list-style')}}, {{cssxref('list-style-image')}}, {{cssxref('mask')}}, {{cssxref('mask-image')}}, {{cssxref('offset-path')}}, {{cssxref('clip-path')}},
-[src](/en-US/docs/Web/CSS/@font-face/src) as part of a [`@font-face`](/en-US/docs/Web/CSS/@font-face) block, and [@counter-style/`symbol`](/en-US/docs/Web/CSS/@counter-style/symbols)
-
-## Syntax
-
 ### Values
 
 - `<string>`
+  - : A string specifying a URL, which is a relative or absolute address, or pointer, to the web resource to be included, or a data URL. You can also use a hash URL to reference the ID of an [SVG shape](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes) or an [SVG filter](/en-US/docs/Web/SVG/Reference/Element/filter).
 
-  - : A string that may specify a URL or the ID of an SVG shape.
-
-    - url
-
-      - : A URL, which is a relative or absolute address, or pointer, to the web resource to be included, or a data URL, optionally in single or double quotes. Quotes are required if the URL includes parentheses, whitespace, or quotes, unless these characters are escaped, or if the address includes control characters above 0x7e. Double quotes cannot occur inside double quotes and single quotes cannot occur inside single quotes unless escaped. The following are all valid and equivalent:
-
-        ```css
-        <css_property>: url("https://example.com/image.png")
-        <css_property>: url('https://example.com/image.png')
-        <css_property>: url(https://example.com/image.png)
-        ```
-
-        If you choose to write the URL without quotes, use a backslash (`\`) before any parentheses, whitespace characters, single quotes (`'`) and double quotes (`"`) that are part of the URL.
-
-    - path
-      - : References the ID of an [SVG shape](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes) or an [SVG filter](/en-US/docs/Web/SVG/Reference/Element/filter).
+    The quotes are generally optional—they are required if the URL includes parentheses, whitespace, or quotes (unless these characters are escaped), or if the address includes control characters above 0x7e. Normal string syntax rules apply: double quotes cannot occur inside double quotes and single quotes cannot occur inside single quotes unless escaped.
 
 - `<url-modifier>`
   - : In the future, the `url()` function may support specifying a modifier, an identifier or a functional notation, which alters the meaning of the URL string. This is not supported and not fully defined in the specification.
@@ -96,7 +81,7 @@ The **`url()`** function can be included as a value for
 ```css
 body {
   background: url("https://mdn.github.io/shared-assets/images/examples/leopard.jpg")
-    #00d no-repeat fixed;
+    #0000dd no-repeat fixed;
 }
 ```
 
@@ -174,11 +159,11 @@ When a URL is used as a path for a filter, the URL must be one of the following:
 
 ```css
 .blur {
-  filter: url(my-file.svg#svg-blur); /* the URL of an SVG file used as a filter */
+  filter: url("my-file.svg#svg-blur"); /* the URL of an SVG file used as a filter */
 }
 
 .inline-blur {
-  filter: url(#svg-blur); /* the ID of an SVG that is embedded in the HTML page */
+  filter: url("#svg-blur"); /* the ID of an SVG that is embedded in the HTML page */
 }
 ```
 

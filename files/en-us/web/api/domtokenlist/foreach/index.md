@@ -22,9 +22,7 @@ forEach(callback, thisArg)
 ### Parameters
 
 - `callback`
-
   - : The function to execute for each element, eventually taking three arguments:
-
     - `currentValue`
       - : The current element being processed in the array.
     - `currentIndex`

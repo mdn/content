@@ -3,9 +3,8 @@ title: :indeterminate
 slug: Web/CSS/:indeterminate
 page-type: css-pseudo-class
 browser-compat: css.selectors.indeterminate
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`:indeterminate`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any form element whose state is indeterminate, such as checkboxes that have been set to an [`indeterminate`](/en-US/docs/Web/API/HTMLInputElement/indeterminate) state with JavaScript, radio buttons which are members of a group in which all radio buttons are unchecked, and {{HTMLElement("progress")}} elements with no `value` attribute.
 
@@ -87,8 +86,8 @@ fieldset:not(:first-of-type) > div:not(:last-child) {
 ```js
 const inputs = document.getElementsByTagName("input");
 
-for (let i = 0; i < inputs.length; i++) {
-  inputs[i].indeterminate = true;
+for (const input of inputs) {
+  input.indeterminate = true;
 }
 ```
 

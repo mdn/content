@@ -2,9 +2,8 @@
 title: Denial of Service (DoS)
 slug: Glossary/Denial_of_Service
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **Denial of Service** (DoS) is a category of network attack that consumes available {{Glossary("server")}} resources, typically by flooding the server with requests. The server is then sluggish or unavailable for legitimate users.
 

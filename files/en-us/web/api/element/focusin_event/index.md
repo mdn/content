@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Element.focusin_event
 ---
 
-{{APIRef}}
+{{APIRef("UI Events")}}
 
 The **`focusin`** event fires when an element has received focus, after the {{domxref("Element/focus_event", "focus")}} event. The two events differ in that `focusin` bubbles, while `focus` does not.
 
@@ -16,10 +16,12 @@ The `focusin` event is not cancelable.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}.
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("focusin", (event) => {});
+```js-nolint
+addEventListener("focusin", (event) => { })
+
+onfocusin = (event) => { }
 ```
 
 ## Event type

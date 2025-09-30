@@ -1,13 +1,15 @@
 ---
-title: Network Error Logging
+title: Network Error Logging (NEL)
+short-title: Network Error Logging
 slug: Web/HTTP/Guides/Network_Error_Logging
 page-type: guide
 status:
   - experimental
 browser-compat: http.headers.NEL
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 Network Error Logging is a mechanism that can be configured via the {{HTTPHeader("NEL")}} HTTP _[response header](/en-US/docs/Glossary/Response_header)_. This experimental header allows websites and applications to opt-in to receive reports about failed (and, if desired, successful) network fetches from supporting browsers.
 

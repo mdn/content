@@ -39,7 +39,7 @@ A typical font face definition using a URL source might be as shown below.
 Note that the `url()` function is required for URL font sources.
 
 ```js
-const font = new FontFace("my-font", "url(my-font.woff)", {
+const font = new FontFace("my-font", 'url("my-font.woff")', {
   style: "italic",
   weight: "400",
   stretch: "condensed",
@@ -61,7 +61,7 @@ The code below shows a font face being added to the document.
 
 ```js
 // Define a FontFace
-const font = new FontFace("my-font", "url(my-font.woff)", {
+const font = new FontFace("my-font", 'url("my-font.woff")', {
   style: "italic",
   weight: "400",
   stretch: "condensed",
@@ -80,7 +80,7 @@ The code below shows how to define a font face, add it to the document fonts, an
 
 ```js
 // Define a FontFace
-const font = new FontFace("my-font", "url(my-font.woff)");
+const font = new FontFace("my-font", 'url("my-font.woff")');
 
 // Add to the document.fonts (FontFaceSet)
 document.fonts.add(font);
@@ -140,7 +140,7 @@ We then log the font status, which should be `unloaded`.
 ```js
 const bitterFontFace = new FontFace(
   "FontFamily Bitter",
-  "url(https://fonts.gstatic.com/s/bitter/v7/HEpP8tJXlWaYHimsnXgfCOvvDin1pK8aKteLpeZ5c0A.woff2)",
+  'url("https://fonts.gstatic.com/s/bitter/v7/HEpP8tJXlWaYHimsnXgfCOvvDin1pK8aKteLpeZ5c0A.woff2")',
 );
 document.fonts.add(bitterFontFace);
 log.textContent += `Bitter font: ${bitterFontFace.status}\n`; // > Bitter font: unloaded
@@ -199,7 +199,7 @@ const ctx = canvas.getContext("2d");
 
 const oxygenFontFace = new FontFace(
   "FontFamily Oxygen",
-  "url(https://fonts.gstatic.com/s/oxygen/v5/qBSyz106i5ud7wkBU-FrPevvDin1pK8aKteLpeZ5c0A.woff2)",
+  'url("https://fonts.gstatic.com/s/oxygen/v5/qBSyz106i5ud7wkBU-FrPevvDin1pK8aKteLpeZ5c0A.woff2")',
 );
 document.fonts.add(oxygenFontFace);
 log.textContent += `Oxygen status: ${oxygenFontFace.status}\n`;
@@ -249,7 +249,7 @@ Unlike the other mechanisms this returns when all fonts defined in the document 
 When the promise resolves we iterate the values in the document's font faces.
 
 ```js
-document.fonts.ready.then(function () {
+document.fonts.ready.then(() => {
   log.textContent += `\nFontFaces in document: ${document.fonts.size}.\n`;
 
   for (const fontFace of document.fonts.values()) {

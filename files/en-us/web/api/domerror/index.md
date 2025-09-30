@@ -39,7 +39,6 @@ The **`DOMError`** interface describes an error object that contains an error na
 | `NetworkError`               | A network error occurred.                                                                |
 | `AbortError`                 | The operation was aborted.                                                               |
 | `URLMismatchError`           | The given URL does not match another URL.                                                |
-| `QuotaExceededError`         | The quota has been exceeded.                                                             |
 | `TimeoutError`               | The operation timed out.                                                                 |
 | `InvalidNodeTypeError`       | The node is incorrect or has an incorrect ancestor for this operation.                   |
 | `DataCloneError`             | The object can not be cloned.                                                            |

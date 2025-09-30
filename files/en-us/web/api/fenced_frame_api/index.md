@@ -9,13 +9,17 @@ browser-compat: html.elements.fencedframe
 
 {{SeeCompatTable}}{{DefaultAPISidebar("Fenced Frame API")}}
 
+> [!WARNING]
+> This feature is currently opposed by one browser vendor.
+> See the [Standards positions](#standards_positions) section below for details.
+
 The **Fenced Frame API** provides functionality for controlling content embedded in {{htmlelement("fencedframe")}} elements.
 
 ## Concepts and usage
 
 One major source of [privacy](/en-US/docs/Web/Privacy) and [security](/en-US/docs/Web/Security) problems on the web is content embedded in {{htmlelement("iframe")}} elements. Historically `<iframe>`s have been used to set third-party cookies, which can be used to share information and track users across sites. In addition, content embedded in an `<iframe>` can communicate with its embedding document (for example, using {{domxref("Window.postMessage()")}}).
 
-The embedding document can also use scripting to read various forms of information from the `<iframe>` — for example you can potentially get significant tracking/fingerprinting data from reading the embedded URL from the `src` property, especially if it contains [URL parameters](/en-US/docs/Web/URI#query). The `<iframe>` can also access the embedding context's DOM, and vice versa.
+The embedding document can also use scripting to read various forms of information from the `<iframe>` — for example you can potentially get significant tracking/fingerprinting data from reading the embedded URL from the `src` property, especially if it contains [URL parameters](/en-US/docs/Web/URI/Reference/Query). The `<iframe>` can also access the embedding context's DOM, and vice versa.
 
 Most modern browsers are working on mechanisms to partition storage so that cookie data can no longer be used for tracking (for example see [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies) or [Firefox State Partitioning](/en-US/docs/Web/Privacy/Guides/State_Partitioning)).
 
@@ -49,7 +53,7 @@ The following example gets a `FencedFrameConfig` from a Protected Audience API's
 
 ```js
 const frameConfig = await navigator.runAdAuction({
-  // ...auction configuration
+  // … auction configuration
   resolveToConfig: true,
 });
 
@@ -57,14 +61,15 @@ const frame = document.createElement("fencedframe");
 frame.config = frameConfig;
 ```
 
-`resolveToConfig: true` must be passed in to the `runAdAuction()` call to obtain a `FencedFrameConfig` object. If `resolveToConfig` is set to `false`, the resulting {{jsxref("Promise")}} will resolve to an opaque [URN](/en-US/docs/Web/URI#urns) (for example `urn:uuid:c36973b5-e5d9-de59-e4c4-364f137b3c7a`) that can only be used in an `<iframe>`.
+`resolveToConfig: true` must be passed in to the `runAdAuction()` call to obtain a `FencedFrameConfig` object. If `resolveToConfig` is set to `false`, the resulting {{jsxref("Promise")}} will resolve to an opaque [URN](/en-US/docs/Web/URI/Reference/Schemes/urn) (for example `urn:uuid:c36973b5-e5d9-de59-e4c4-364f137b3c7a`) that can only be used in an `<iframe>`.
 
 Either way, the browser stores a URL containing the target location of the content to embed — mapped to the opaque URN, or the `FencedFrameConfig`'s internal `url` property. The URL value cannot be read by JavaScript running in the embedding context.
 
 > [!NOTE]
 > Support is provided for opaque URNs in `<iframe>`s to ease migration of existing implementations over to [privacy sandbox](https://privacysandbox.google.com/) APIs. This support is intended to be temporary and will be removed in the future as adoption grows.
 
-> **Note:** `FencedFrameConfig` has a {{domxref("FencedFrameConfig.setSharedStorageContext", "setSharedStorageContext()")}} method that is used to pass in data from the embedding document to the `<fencedframe>`'s shared storage. It could for example be accessed in a {{domxref("Worklet")}} via the `<fencedframe>` and used to generate a report. See the [Shared Storage API](https://privacysandbox.google.com/private-advertising/shared-storage) for more details.
+> [!NOTE]
+> `FencedFrameConfig` has a {{domxref("FencedFrameConfig.setSharedStorageContext", "setSharedStorageContext()")}} method that is used to pass in data from the embedding document to the `<fencedframe>`'s shared storage. It could for example be accessed in a {{domxref("Worklet")}} via the `<fencedframe>` and used to generate a report. See the [Shared Storage API](https://privacysandbox.google.com/private-advertising/shared-storage) for more details.
 
 ### Accessing fenced frame functionality on the `Fence` object
 
@@ -141,6 +146,13 @@ The following demos all make use of `<fencedframe>`s:
 ## Specifications
 
 {{Specifications}}
+
+### Standards positions
+
+One browser vendor [opposes](/en-US/docs/Glossary/Web_standards#opposing_standards) this specification.
+Known standards positions are as follows:
+
+- Mozilla (Firefox): [Negative](https://github.com/mozilla/standards-positions/issues/781)
 
 ## Browser compatibility
 

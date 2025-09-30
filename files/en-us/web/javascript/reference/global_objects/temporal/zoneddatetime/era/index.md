@@ -1,13 +1,15 @@
 ---
 title: Temporal.ZonedDateTime.prototype.era
+short-title: era
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/era
 page-type: javascript-instance-accessor-property
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.ZonedDateTime.era
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`era`** accessor property of {{jsxref("Temporal.ZonedDateTime")}} instances returns a calendar-specific lowercase string representing the era of this date, or `undefined` if the calendar does not use eras (e.g., ISO 8601). `era` and `eraYear` together uniquely identify a year in a calendar, in the same way that `year` does. It is [calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars)-dependent.
 

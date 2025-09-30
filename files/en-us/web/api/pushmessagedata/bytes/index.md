@@ -35,7 +35,7 @@ See [`TypedArray`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArra
 
 ```js
 self.addEventListener("push", (event) => {
-  const buffer = event.data.Uint8Array();
+  const buffer = event.data.bytes();
 
   // do something with your typed array
 });

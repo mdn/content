@@ -1,12 +1,12 @@
 ---
-title: Progressive web app structure
+title: "js13kGames: Progressive web app structure"
+short-title: PWA structure
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/App_structure
 page-type: guide
+sidebar: pwasidebar
 ---
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames", "Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers", "Web/Progressive_web_apps/Tutorials/js13kGames")}}
-
-{{PWASidebar}}
 
 In this article, we will analyze the [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) application, why it is built that way, and what benefits it brings.
 
@@ -97,15 +97,15 @@ const template = `<article>
   </ul>
 </article>`;
 let content = "";
-for (let i = 0; i < games.length; i++) {
-  let entry = template
+for (const game of games) {
+  const entry = template
     .replace(/POS/g, i + 1)
-    .replace(/SLUG/g, games[i].slug)
-    .replace(/NAME/g, games[i].name)
-    .replace(/AUTHOR/g, games[i].author)
-    .replace(/WEBSITE/g, games[i].website)
-    .replace(/GITHUB/g, games[i].github);
-  entry = entry.replace("<a href='http:///'></a>", "-");
+    .replace(/SLUG/g, game.slug)
+    .replace(/NAME/g, game.name)
+    .replace(/AUTHOR/g, game.author)
+    .replace(/WEBSITE/g, game.website)
+    .replace(/GITHUB/g, game.github)
+    .replace("<a href='http:///'></a>", "-");
   content += entry;
 }
 document.getElementById("content").innerHTML = content;
@@ -114,8 +114,14 @@ document.getElementById("content").innerHTML = content;
 Next, it registers a service worker:
 
 ```js
+let swRegistration = null;
+
 if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("/pwa-examples/js13kpwa/sw.js");
+  navigator.serviceWorker
+    .register("/pwa-examples/js13kpwa/sw.js")
+    .then((reg) => {
+      swRegistration = reg;
+    });
 }
 ```
 
@@ -136,6 +142,7 @@ The last block creates notifications that display a randomly-selected item from 
 
 ```js
 function randomNotification() {
+  if (!swRegistration) return;
   const randomItem = Math.floor(Math.random() * games.length);
   const notifTitle = games[randomItem].name;
   const notifBody = `Created by ${games[randomItem].author}.`;
@@ -144,7 +151,7 @@ function randomNotification() {
     body: notifBody,
     icon: notifImg,
   };
-  new Notification(notifTitle, options);
+  swRegistration.showNotification(notifTitle, options);
   setTimeout(randomNotification, 30000);
 }
 ```
@@ -182,8 +189,8 @@ const appShellFiles = [
   "/pwa-examples/js13kpwa/icons/icon-512.png",
 ];
 const gamesImages = [];
-for (let i = 0; i < games.length; i++) {
-  gamesImages.push(`data/img/${games[i].slug}.jpg`);
+for (const game of games) {
+  gamesImages.push(`data/img/${game.slug}.jpg`);
 }
 const contentToCache = appShellFiles.concat(gamesImages);
 ```
@@ -244,7 +251,7 @@ const games = [
     website: "github.com/Platane",
     github: "github.com/Platane/js13k-2017",
   },
-  // ...
+  // …
   {
     slug: "emma-3d",
     name: "Emma-3D",

@@ -6,9 +6,8 @@ browser-compat: css.types.color.lab
 spec-urls:
   - https://drafts.csswg.org/css-color-5/#relative-Lab
   - https://drafts.csswg.org/css-color/#lab-colors
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`lab()`** functional notation expresses a given color in the CIE L\*a\*b\* {{glossary("color space")}}.
 
@@ -24,7 +23,7 @@ lab(52.2345% 40.1645 59.9971 / .5);
 
 /* Relative values */
 lab(from green l a b / 0.5)
-lab(from #0000FF calc(l + 10) a b)
+lab(from #123456 calc(l + 10) a b)
 lab(from hsl(180 100% 50%) calc(l - 10) a b)
 ```
 
@@ -72,7 +71,7 @@ The parameters are as follows:
   - : An {{CSSXref("&lt;alpha-value&gt;")}} representing the alpha channel value of the output color, where the number `0` corresponds to `0%` (fully transparent) and `1` corresponds to `100%` (fully opaque). Additionally, the keyword `none` can be used to explicitly specify no alpha channel. If the `A` channel value is not explicitly specified, it defaults to the alpha channel value of the origin color. If included, the value is preceded by a slash (`/`).
 
 > [!NOTE]
-> Usually when percentage values have a numeric equivalent in CSS, `100%` is equal to the number `1`. This is not always the case for LAB's lightness and `a` and `b` axes, as mentioned above. With `L`, the range is from 0 to 100, with `100%` equal to `100`. The `a` and `b` values support both negative and positive values, with `100%` being equal to `125` and `-100%` being equal to `-125`.
+> Usually when percentage values have a numeric equivalent in CSS, `100%` is equal to the number `1`. This is not always the case for Lab's lightness and `a` and `b` axes, as mentioned above. With `L`, the range is from 0 to 100, with `100%` equal to `100`. The `a` and `b` values support both negative and positive values, with `100%` being equal to `125` and `-100%` being equal to `-125`.
 
 #### Defining relative color output channel components
 

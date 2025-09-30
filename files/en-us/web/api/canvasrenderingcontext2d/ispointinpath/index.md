@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.CanvasRenderingContext2D.isPointInPath
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 The
 **`CanvasRenderingContext2D.isPointInPath()`**
@@ -31,10 +31,8 @@ isPointInPath(path, x, y, fillRule)
   - : The y-axis coordinate of the point to check, unaffected by the current
     transformation of the context.
 - `fillRule`
-
   - : The algorithm by which to determine if a point is inside or outside the path.
     Possible values:
-
     - `nonzero`
       - : The [non-zero winding rule](https://en.wikipedia.org/wiki/Nonzero-rule).
         Default rule.

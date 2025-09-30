@@ -1,10 +1,10 @@
 ---
 title: Firefox 65 for developers
+short-title: Firefox 65
 slug: Mozilla/Firefox/Releases/65
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 65 that will affect developers. Firefox 65 was released on January 29, 2019.
 
@@ -33,7 +33,6 @@ This article provides information about the changes in Firefox 65 that will affe
 - The {{cssxref("image-rendering")}} property's `crisp-edges` value has now been unprefixed ([Firefox bug 1496617](https://bugzil.la/1496617)).
 - A {{cssxref("scrollbar-color")}} value of `auto` now resolves to `auto`, rather than two colors ([Firefox bug 1501418](https://bugzil.la/1501418)).
 - The `break-*` properties have been implemented, and the legacy `page-break-*` properties have been aliased to them ([Firefox bug 775618](https://bugzil.la/775618)):
-
   - {{cssxref("break-before")}} is now an alias for {{cssxref("page-break-before")}}.
   - {{cssxref("break-after")}} is now an alias for {{cssxref("page-break-after")}}.
   - {{cssxref("break-inside")}} is now an alias for {{cssxref("page-break-inside")}}.
@@ -41,13 +40,11 @@ This article provides information about the changes in Firefox 65 that will affe
 - The {{cssxref("overflow-wrap")}} property's `anywhere` value has been implemented ([Firefox bug 1505786](https://bugzil.la/1505786)).
 - The new step position keywords `jump-start`, `jump-end`, `jump-none`, and `jump-both` — usable inside the [`steps()` timing function](/en-US/docs/Web/CSS/easing-function/steps) — have been implemented ([Firefox bug 1496619](https://bugzil.la/1496619)). This also coincides with the removal of the `frames()` timing function, which was the previous way of implementing such functionality, now deprecated.
 - Some new {{cssxref("appearance", "-webkit-appearance")}} values have been added, for compatibility with other browsers. In particular:
-
   - `meter`, which is now used as the default value for {{htmlelement("meter")}} elements in UA stylesheets. The existing value `meterbar` is now an alias for `meter` ([Firefox bug 1501483](https://bugzil.la/1501483)).
   - `progress-bar`, which is now used as the default value for {{htmlelement("progress")}} elements in UA stylesheets. The existing value `progressbar` is now an alias for `progress-bar` ([Firefox bug 1501506](https://bugzil.la/1501506)).
   - `textarea`, which is now used as the default value for {{htmlelement("textarea")}} elements in UA stylesheets. The existing value `textfield-multiline` is now an alias for `textarea` ([Firefox bug 1507905](https://bugzil.la/1507905)).
 
 - The behavior of {{cssxref("user-select")}} has been changed to make it align more with other browsers ([Firefox bug 1506547](https://bugzil.la/1506547)). Specifically:
-
   - `user-select: all` set on an element no longer overrides other values of `user-select` set on children of that element. So for example in the following snippet:
 
     ```html
@@ -127,7 +124,7 @@ _No changes._
 - The non-standard {{domxref("MediaStream")}} property `currentTime` has been removed ([Firefox bug 1502927](https://bugzil.la/1502927)).
 - The `dom.webcomponents.shadowdom.enabled` and `dom.webcomponents.customelements.enabled` prefs have been removed — Shadow DOM and Custom Elements can no longer be disabled in `about:config` ([Firefox bug 1503019](https://bugzil.la/1503019)).
 - The non-standard DOM `text` event — fired to notify the browser editor UI of IME composition string data and selection range — has been removed ([Firefox bug 1288640](https://bugzil.la/1288640)).
-- The {{domxref("Element/keypress_event", "keypress")}} event is no longer fired for [non-printable keys](</en-US/docs/Web/API/KeyboardEvent/keyCode#non-printable_keys_(function_keys)>) ([Firefox bug 968056](https://bugzil.la/968056)), except for the `Enter` key, and the `Shift` + `Enter` and `Ctrl` + `Enter` key combinations (these were kept for cross-browser compatibility purposes).
+- The {{domxref("Element/keypress_event", "keypress")}} event is no longer fired for [non-printable keys](/en-US/docs/Web/API/KeyboardEvent/keyCode#non-printable_keys_function_keys) ([Firefox bug 968056](https://bugzil.la/968056)), except for the `Enter` key, and the `Shift` + `Enter` and `Ctrl` + `Enter` key combinations (these were kept for cross-browser compatibility purposes).
 
 ### Security
 
@@ -159,7 +156,6 @@ _No changes._
 ### Other
 
 - Support for [WebP](/en-US/docs/Glossary/WebP) images has been added ([Firefox bug 1294490](https://bugzil.la/1294490)).
-
   - In addition, to facilitate cross-browser compatibility in certain situations the WebP MIMEType (`image/webp`) has been added to the standard HTTP Request {{httpheader("Accept")}} header for HTML files ([Firefox bug 1507691](https://bugzil.la/1507691)).
 
 - The AV1 codec is now supported by default on Windows ([Firefox bug 1452146](https://bugzil.la/1452146)).
@@ -171,7 +167,6 @@ _No changes._
 #### Tabs
 
 - The {{WebExtAPIRef("tabs", "tabs API", "", "1")}} has been enhanced to support tab successors — a tab can have a successor assigned to it, which is the ID of the tab that will be active once it is closed ([Firefox bug 1500479](https://bugzil.la/1500479), also see [this blog post](https://qiita.com/piroor/items/ea7e727735631c45a366) for more information). In particular:
-
   - The {{WebExtAPIRef("tabs.Tab")}} type now has a `successorId` property, which can be used to store/retrieve the ID of the tab's successor.
   - The {{WebExtAPIRef("tabs.onActivated")}} event listener's callback has a new parameter available, `previousTabId`, which contains the ID of the previous activated tab, if it is still open.
   - The {{WebExtAPIRef("tabs.update()")}} function's `updateProperties` object has a new optional property available on it, `successorTabId`, so can be used to update it.
@@ -189,7 +184,3 @@ _No changes._
 ## See also
 
 - Hacks release post: [Firefox 65: WebP support, Flexbox Inspector, new tooling & platform updates](https://hacks.mozilla.org/2019/01/firefox-65-webp-flexbox-inspector-new-tooling/)
-
-## Older versions
-
-{{Firefox_for_developers}}

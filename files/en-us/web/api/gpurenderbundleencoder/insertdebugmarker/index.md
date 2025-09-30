@@ -3,12 +3,10 @@ title: "GPURenderBundleEncoder: insertDebugMarker() method"
 short-title: insertDebugMarker()
 slug: Web/API/GPURenderBundleEncoder/insertDebugMarker
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPURenderBundleEncoder.insertDebugMarker
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`insertDebugMarker()`** method of the
 {{domxref("GPURenderBundleEncoder")}} interface marks a specific point in a series of encoded render bundle pass commands with a label.
@@ -36,11 +34,11 @@ None ({{jsxref("Undefined")}}).
 ## Examples
 
 ```js
-// ...
+// …
 
 bundleEncoder.insertDebugMarker("my_marker");
 
-// ...
+// …
 ```
 
 ## Specifications

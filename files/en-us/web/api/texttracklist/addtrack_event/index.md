@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.TextTrackList.addtrack_event
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The **`addtrack`** event is fired when a track is added to a [`TextTrackList`](/en-US/docs/Web/API/TextTrackList).
 
@@ -14,10 +14,10 @@ The **`addtrack`** event is fired when a track is added to a [`TextTrackList`](/
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("addtrack", (event) => {});
+```js-nolint
+addEventListener("addtrack", (event) => { })
 
-onaddtrack = (event) => {};
+onaddtrack = (event) => { }
 ```
 
 ## Event type

@@ -3,9 +3,8 @@ title: translateX()
 slug: Web/CSS/transform-function/translateX
 page-type: css-function
 browser-compat: css.types.transform-function.translateX
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`translateX()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) repositions an element horizontally on the 2D plane. Its
 result is a {{cssxref("&lt;transform-function&gt;")}} data type.
@@ -54,7 +53,8 @@ transform: translateX(3ch);
 }
 ```
 
-> **Note:** `translateX(tx)` is equivalent to
+> [!NOTE]
+> `translateX(tx)` is equivalent to
 > `translate(tx, 0)` or
 > `translate3d(tx, 0, 0)`.
 

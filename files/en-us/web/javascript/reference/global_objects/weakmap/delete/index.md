@@ -1,26 +1,26 @@
 ---
 title: WeakMap.prototype.delete()
+short-title: delete()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/delete
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.WeakMap.delete
+sidebar: jsref
 ---
 
-{{JSRef}}
-
-The **`delete()`** method of {{jsxref("WeakMap")}} instances removes the specified element from this `WeakMap`.
+The **`delete()`** method of {{jsxref("WeakMap")}} instances removes the entry specified by the key from this `WeakMap`.
 
 {{InteractiveExample("JavaScript Demo: WeakMap.prototype.delete()")}}
 
 ```js interactive-example
-const weakmap1 = new WeakMap();
-const object1 = {};
+const weakmap = new WeakMap();
+const object = {};
 
-weakmap1.set(object1, 42);
+weakmap.set(object, 42);
 
-console.log(weakmap1.delete(object1));
+console.log(weakmap.delete(object));
 // Expected output: true
 
-console.log(weakmap1.has(object1));
+console.log(weakmap.has(object));
 // Expected output: false
 ```
 
@@ -33,15 +33,15 @@ weakMapInstance.delete(key)
 ### Parameters
 
 - `key`
-  - : The key of the element to remove from the `WeakMap` object.
+  - : The key of the entry to remove from the `WeakMap` object. Object keys are compared by [reference](/en-US/docs/Glossary/Object_reference), not by value.
 
 ### Return value
 
-`true` if an element in the `WeakMap` object has been removed successfully. `false` if the key is not found in the `WeakMap`. Always returns `false` if `key` is not an object or a [non-registered symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry).
+`true` if an entry in the `WeakMap` object has been removed successfully. `false` if the key is not found in the `WeakMap`. Always returns `false` if `key` is not an object or a [non-registered symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry).
 
 ## Examples
 
-### Using the delete() method
+### Using delete()
 
 ```js
 const wm = new WeakMap();
@@ -63,3 +63,6 @@ wm.has(window); // Returns false. The window object is no longer in the WeakMap.
 ## See also
 
 - {{jsxref("WeakMap")}}
+- {{jsxref("WeakMap.prototype.get()")}}
+- {{jsxref("WeakMap.prototype.set()")}}
+- {{jsxref("WeakMap.prototype.has()")}}

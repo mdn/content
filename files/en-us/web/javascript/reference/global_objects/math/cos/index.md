@@ -1,11 +1,11 @@
 ---
 title: Math.cos()
+short-title: cos()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cos
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.cos
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Math.cos()`** static method returns the cosine of a number in radians.
 

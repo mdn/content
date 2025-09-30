@@ -5,7 +5,8 @@ page-type: mdn-writing-guide
 sidebar: mdnsidebar
 ---
 
-> **Note:** _Remove this whole explanatory note before publishing_
+> [!NOTE]
+> _Remove this whole explanatory note before publishing_
 >
 > ---
 >
@@ -64,7 +65,6 @@ sidebar: mdnsidebar
 >   For example, every page in the [WebVR API](/en-US/docs/Web/API/WebVR_API) has the same sidebar, which points to the other pages in the API.
 >   To generate the correct sidebar for your API, you need to add a `GroupData` entry to our GitHub repo, and include the entry's name inside the macro call in place of _GroupDataName_.
 >   See our [API reference sidebars](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars) guide for information on how to do this.
-> - Remember to remove the `\{{MDNSidebar}}` macro when you copy this page.
 >
 > Do not provide status header macros manually. Refer to the section ["How feature statuses are added or updated"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated) to add these statuses to the page.
 >
@@ -107,7 +107,14 @@ Don't go into a lot of detail in this section, and don't include code examples.
 If there are a lot of concepts to explain around this API, you should explain them in a separate "Fundamentals" or "Concepts" article (e.g., [Fundamentals of WebXR](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals)).
 For a practical usage guide with code examples, you should include a "Usage…" article in your API docs (e.g., [Using the WebVR API](/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API)).
 
-To help improve content discoverability and {{Glossary("SEO")}}, keep the following tips in mind:
+## Guides
+
+Include a list of guide pages under this landing page. Each DT should link to the guide page. This section is optional; if there's only a single "Using" guide, along with a few other conceptual guides, you may find it more convenient to link to them as a paragraph at the end of the "Concepts and usage" section instead. This section may be more helpful if there are so many guides that prose becomes hard to scan.
+
+- Using the ... API
+  - : Intro paragraph of this guide page
+- Guide 2
+  - : Intro paragraph of this guide page
 
 ## Interfaces
 

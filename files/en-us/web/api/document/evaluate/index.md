@@ -33,7 +33,6 @@ evaluate(xpathExpression, contextNode, namespaceResolver, resultType, result)
     so that they can be matched with the document.
     The value `null` is common for HTML documents or when no namespace prefixes are used.
 - `resultType`
-
   - : An integer that corresponds to the type of result `XPathResult` to return.
     The following values are possible:
     - `ANY_TYPE` (`0`)
@@ -172,4 +171,3 @@ function getElementByIdWrapper(xmlDoc, id) {
 
 - {{domxref("Document.createExpression()")}}
 - {{domxref("XPathResult")}}
-- [Check for browser support](https://codepen.io/johan/full/DJoqaX)

@@ -47,7 +47,7 @@ d.setAttributeNS(
 ## Notes
 
 `setAttributeNS` is the only method for namespaced attributes which expects
-the fully qualified name, i.e., `"namespace:localname"`.
+the fully qualified name, i.e., `"namespace:local-name"`.
 
 ## Specifications
 

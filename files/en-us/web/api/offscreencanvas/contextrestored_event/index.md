@@ -16,10 +16,10 @@ You can redraw, re-retrieve resources, and reinitialize the state of your contex
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("contextrestored", (event) => {});
+```js-nolint
+addEventListener("contextrestored", (event) => { })
 
-oncontextrestored = (event) => {};
+oncontextrestored = (event) => { }
 ```
 
 ## Event type
@@ -34,14 +34,10 @@ The code fragment below detects the context restored event.
 const canvas = new OffscreenCanvas(256, 256);
 const gl = offscreen.getContext("2d");
 
-canvas.addEventListener(
-  "contextrestored",
-  (e) => {
-    console.log(e);
-    // call to redrawCanvas() or similar
-  },
-  false,
-);
+canvas.addEventListener("contextrestored", (e) => {
+  console.log(e);
+  // call to redrawCanvas() or similar
+});
 ```
 
 ## Specifications

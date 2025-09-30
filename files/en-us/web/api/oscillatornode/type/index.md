@@ -32,6 +32,8 @@ available values are:
     method to provide the data representing the waveform. Doing so automatically sets the
     `type` to `custom`.
 
+Also see [different oscillator node types](/en-US/docs/Web/API/OscillatorNode#different_oscillator_node_types) for a visualization of the different waveform shapes.
+
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}

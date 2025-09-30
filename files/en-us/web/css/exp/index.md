@@ -3,11 +3,10 @@ title: exp()
 slug: Web/CSS/exp
 page-type: css-function
 browser-compat: css.types.exp
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`exp()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) is an exponential function that takes an number as an argument and returns the mathematical constant `e` raised to the power of the given number.
+The **`exp()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) is an exponential function that takes a number as an argument and returns the mathematical constant `e` raised to the power of the given number.
 
 The mathematical constant [`e`](<https://en.wikipedia.org/wiki/E_(mathematical_constant)>) is the base of natural logarithms, and is approximately `2.718281828459045`.
 
@@ -17,9 +16,9 @@ The `exp(number)` function contains a calculation which returns the same value a
 
 ```css
 /* A <number> value */
-width: calc(100px * exp(-1)); /* 100px * 0.367879441171442 = 36px */
+width: calc(100px * exp(-1)); /* 100px * 0.367879441171442 = 36.8px */
 width: calc(100px * exp(0)); /* 100px * 1 = 100px */
-width: calc(100px * exp(1)); /* 100px * 2.718281828459045 = 217px */
+width: calc(100px * exp(1)); /* 100px * 2.718281828459045 = 271.8px */
 ```
 
 ### Parameters

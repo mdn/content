@@ -47,7 +47,7 @@ In this example, we access the angle in degrees between the spot light axis (i.e
     cx="100"
     cy="100"
     r="50"
-    style="fill:lightblue;"
+    fill="lightblue"
     filter="url(#specularLightingFilter)" />
 </svg>
 ```

@@ -1,11 +1,11 @@
 ---
-title: Referrer-Policy
+title: Referrer-Policy header
+short-title: Referrer-Policy
 slug: Web/HTTP/Reference/Headers/Referrer-Policy
 page-type: http-header
 browser-compat: http.headers.Referrer-Policy
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Referrer-Policy`** {{Glossary("response header")}} controls how much [referrer information](/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns) (sent with the {{HTTPHeader("Referer")}} header) should be included with requests.
 Aside from the HTTP header, you can [set this policy in HTML](#integration_with_html).
@@ -49,20 +49,18 @@ Referrer-Policy: unsafe-url
   - : Send only the {{glossary("origin")}} in the {{HTTPHeader("Referer")}} header.
     For example, a document at `https://example.com/page.html` will send the referrer `https://example.com/`.
 - `origin-when-cross-origin`
-  - : When performing a {{glossary("Same-origin_policy", "same-origin")}} request to the same protocol level (HTTP→HTTP, HTTPS→HTTPS), send the {{glossary("origin")}}, path, and query string. Send only the origin for cross origin requests and requests to less secure destinations (HTTPS→HTTP).
+  - : When performing a {{glossary("Same-origin_policy", "same-origin")}} request, send the {{glossary("origin")}}, path, and query string. Send only the origin for cross origin requests and requests to less secure destinations (HTTPS→HTTP).
 - `same-origin`
   - : Send the {{glossary("origin")}}, path, and query string for {{glossary("Same-origin_policy", "same-origin")}} requests. Don't send the {{HTTPHeader("Referer")}} header for cross-origin requests.
 - `strict-origin`
   - : Send only the origin when the protocol security level stays the same (HTTPS→HTTPS). Don't send the {{HTTPHeader("Referer")}} header to less secure destinations (HTTPS→HTTP).
 - `strict-origin-when-cross-origin` (default)
-
   - : Send the origin, path, and query string when performing a same-origin request. For cross-origin requests send the origin (only) when the protocol security level stays same (HTTPS→HTTPS). Don't send the {{HTTPHeader("Referer")}} header to less secure destinations (HTTPS→HTTP).
 
     > [!NOTE]
     > This is the default policy if no policy is specified, or if the provided value is invalid (see spec revision [November 2020](https://github.com/whatwg/fetch/pull/1066)). Previously the default was `no-referrer-when-downgrade`.
 
 - `unsafe-url`
-
   - : Send the origin, path, and query string when performing any request, regardless of security.
 
     > [!WARNING]
@@ -70,7 +68,7 @@ Referrer-Policy: unsafe-url
 
 ## Integration with HTML
 
-You can also set referrer policies inside HTML. For example, you can set the referrer policy for the entire document with a {{HTMLElement("meta")}} element with a [name](/en-US/docs/Web/HTML/Reference/Elements/meta#name) of `referrer`:
+You can also set referrer policies inside HTML. For example, you can set the referrer policy for the entire document with a {{HTMLElement("meta")}} element with a [name](/en-US/docs/Web/HTML/Reference/Elements/meta/name) of `referrer`:
 
 ```html
 <meta name="referrer" content="origin" />

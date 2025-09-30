@@ -282,29 +282,29 @@ class Server {
                     mask = (bytes[1] & 0b10000000) != 0; // must be true, "All messages from the client to the server have this bit set"
                 int opcode = bytes[0] & 0b00001111; // expecting 1 - text message
                 ulong offset = 2,
-                      msglen = bytes[1] & (ulong)0b01111111;
+                      msgLen = bytes[1] & (ulong)0b01111111;
 
-                if (msglen == 126) {
+                if (msgLen == 126) {
                     // bytes are reversed because websocket will print them in Big-Endian, whereas
                     // BitConverter will want them arranged in little-endian on windows
-                    msglen = BitConverter.ToUInt16(new byte[] { bytes[3], bytes[2] }, 0);
+                    msgLen = BitConverter.ToUInt16(new byte[] { bytes[3], bytes[2] }, 0);
                     offset = 4;
-                } else if (msglen == 127) {
+                } else if (msgLen == 127) {
                     // To test the below code, we need to manually buffer larger messages — since the NIC's autobuffering
                     // may be too latency-friendly for this code to run (that is, we may have only some of the bytes in this
                     // websocket frame available through client.Available).
-                    msglen = BitConverter.ToUInt64(new byte[] { bytes[9], bytes[8], bytes[7], bytes[6], bytes[5], bytes[4], bytes[3], bytes[2] },0);
+                    msgLen = BitConverter.ToUInt64(new byte[] { bytes[9], bytes[8], bytes[7], bytes[6], bytes[5], bytes[4], bytes[3], bytes[2] },0);
                     offset = 10;
                 }
 
-                if (msglen == 0) {
-                    Console.WriteLine("msglen == 0");
+                if (msgLen == 0) {
+                    Console.WriteLine("msgLen == 0");
                 } else if (mask) {
-                    byte[] decoded = new byte[msglen];
+                    byte[] decoded = new byte[msgLen];
                     byte[] masks = new byte[4] { bytes[offset], bytes[offset + 1], bytes[offset + 2], bytes[offset + 3] };
                     offset += 4;
 
-                    for (ulong i = 0; i < msglen; ++i)
+                    for (ulong i = 0; i < msgLen; ++i)
                         decoded[i] = (byte)(bytes[offset + i] ^ masks[i % 4]);
 
                     string text = Encoding.UTF8.GetString(decoded);
@@ -324,74 +324,84 @@ class Server {
 ```html
 <!doctype html>
 <html lang="en">
-  <style>
-    textarea {
-      vertical-align: bottom;
-    }
-    #output {
-      overflow: auto;
-    }
-    #output > p {
-      overflow-wrap: break-word;
-    }
-    #output span {
-      color: blue;
-    }
-    #output span.error {
-      color: red;
-    }
-  </style>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="client.js" defer></script>
+  </head>
   <body>
     <h2>WebSocket Test</h2>
     <textarea cols="60" rows="6"></textarea>
     <button>send</button>
     <div id="output"></div>
   </body>
-  <script>
-    // http://www.websocket.org/echo.html
-    const button = document.querySelector("button");
-    const output = document.querySelector("#output");
-    const textarea = document.querySelector("textarea");
-    const wsUri = "ws://127.0.0.1/";
-    const websocket = new WebSocket(wsUri);
-
-    button.addEventListener("click", onClickButton);
-
-    websocket.onopen = (e) => {
-      writeToScreen("CONNECTED");
-      doSend("WebSocket rocks");
-    };
-
-    websocket.onclose = (e) => {
-      writeToScreen("DISCONNECTED");
-    };
-
-    websocket.onmessage = (e) => {
-      writeToScreen(`<span>RESPONSE: ${e.data}</span>`);
-    };
-
-    websocket.onerror = (e) => {
-      writeToScreen(`<span class="error">ERROR:</span> ${e.data}`);
-    };
-
-    function doSend(message) {
-      writeToScreen(`SENT: ${message}`);
-      websocket.send(message);
-    }
-
-    function writeToScreen(message) {
-      output.insertAdjacentHTML("afterbegin", `<p>${message}</p>`);
-    }
-
-    function onClickButton() {
-      const text = textarea.value;
-
-      text && doSend(text);
-      textarea.value = "";
-      textarea.focus();
-    }
-  </script>
 </html>
+```
+
+### styles.css
+
+```css
+textarea {
+  vertical-align: bottom;
+}
+#output {
+  overflow: auto;
+}
+#output > p {
+  overflow-wrap: break-word;
+}
+#output span {
+  color: blue;
+}
+#output span.error {
+  color: red;
+}
+```
+
+### client.js
+
+```js
+// http://www.websocket.org/echo.html
+const button = document.querySelector("button");
+const output = document.querySelector("#output");
+const textarea = document.querySelector("textarea");
+const wsUri = "ws://127.0.0.1/";
+const websocket = new WebSocket(wsUri);
+
+button.addEventListener("click", onClickButton);
+
+websocket.onopen = (e) => {
+  writeToScreen("CONNECTED");
+  doSend("WebSocket rocks");
+};
+
+websocket.onclose = (e) => {
+  writeToScreen("DISCONNECTED");
+};
+
+websocket.onmessage = (e) => {
+  writeToScreen(`<span>RESPONSE: ${e.data}</span>`);
+};
+
+websocket.onerror = (e) => {
+  writeToScreen(`<span class="error">ERROR:</span> ${e.data}`);
+};
+
+function doSend(message) {
+  writeToScreen(`SENT: ${message}`);
+  websocket.send(message);
+}
+
+function writeToScreen(message) {
+  output.insertAdjacentHTML("afterbegin", `<p>${message}</p>`);
+}
+
+function onClickButton() {
+  const text = textarea.value;
+
+  text && doSend(text);
+  textarea.value = "";
+  textarea.focus();
+}
 ```
 
 ## Related

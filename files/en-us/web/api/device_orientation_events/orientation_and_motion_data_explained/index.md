@@ -4,7 +4,7 @@ slug: Web/API/Device_orientation_events/Orientation_and_motion_data_explained
 page-type: guide
 ---
 
-{{DefaultAPISidebar("Device Orientation Events")}}{{securecontext_header}}
+{{DefaultAPISidebar("Device Orientation Events")}}
 
 When using orientation and motion events, it's important to understand what the values you're given by the browser mean. This article provides details about the coordinate systems at play and how you use them.
 

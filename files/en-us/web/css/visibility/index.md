@@ -3,9 +3,8 @@ title: visibility
 slug: Web/CSS/visibility
 page-type: css-property
 browser-compat: css.properties.visibility
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`visibility`** [CSS](/en-US/docs/Web/CSS) property shows or hides an element without changing the layout of a document. The property can also hide rows or columns in a {{HTMLElement("table")}}.
 
@@ -43,14 +42,14 @@ visibility: collapse;
 }
 
 .example-container > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
   margin: 10px;
   flex: 1;
 }
 
 #example-element {
-  background-color: rgba(255, 0, 200, 0.2);
+  background-color: rgb(255 0 200 / 0.2);
   border: 3px solid rebeccapurple;
 }
 ```
@@ -82,9 +81,7 @@ The `visibility` property is specified as one of the keyword values listed below
 - `hidden`
   - : The element box is invisible (not drawn), but still affects layout as normal. Descendants of the element will be visible if they have `visibility` set to `visible`. The element cannot receive focus (such as when navigating through [tab indexes](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex)).
 - `collapse`
-
   - : The `collapse` keyword has different effects for different elements:
-
     - For {{HTMLElement("table")}} rows, columns, column groups, and row groups, the row(s) or column(s) are hidden and the space they would have occupied is removed (as if `{{Cssxref("display")}}: none` were applied to the column/row of the table). However, the size of other rows and columns is still calculated as though the cells in the collapsed row(s) or column(s) are present. This value allows for the fast removal of a row or column from a table without forcing the recalculation of widths and heights for the entire table.
     - Collapsed flex items and ruby annotations are hidden, and the space they would have occupied is removed.
     - For other elements, `collapse` is treated the same as `hidden`.

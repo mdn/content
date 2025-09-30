@@ -54,19 +54,28 @@ _The `Highlight` interface doesn't inherit any methods_.
 
 ## Examples
 
-The following example demonstrates how to create ranges, instantiate a new `Highlight` object for them, and register it to be styled on the page:
+The following example demonstrates how specific parts of a block of text can be highlighted.
+
+```html-nolint
+<p class="foo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
+  sapiente non eum facere? Nam rem hic culpa, ipsa rerum ab itaque consectetur
+  molestiae dolores vitae! Quo ex explicabo tempore? Tenetur.</p>
+```
+
+This JavaScript code creates [ranges](/en-US/docs/Web/API/Range), instantiates a new `Highlight` object for them, and [registers it](/en-US/docs/Web/API/HighlightRegistry/set) to be styled on the page:
 
 ```js
-const parentNode = document.getElementById("foo");
+const parentNode = document.querySelector(".foo");
+const textNode = parentNode.firstChild;
 
 // Create a couple of ranges.
 const range1 = new Range();
-range1.setStart(parentNode, 10);
-range1.setEnd(parentNode, 20);
+range1.setStart(textNode, 6);
+range1.setEnd(textNode, 21);
 
 const range2 = new Range();
-range2.setStart(parentNode, 40);
-range2.setEnd(parentNode, 60);
+range2.setStart(textNode, 57);
+range2.setEnd(textNode, 71);
 
 // Create a custom highlight for these ranges.
 const highlight = new Highlight(range1, range2);
@@ -83,6 +92,10 @@ The following CSS code snippet demonstrates how to style the registered custom h
 }
 ```
 
+### Result
+
+{{EmbedLiveSample("example", "100%", '100')}}
+
 ## Specifications
 
 {{Specifications}}
@@ -94,4 +107,5 @@ The following CSS code snippet demonstrates how to style the registered custom h
 ## See also
 
 - {{domxref("css_custom_highlight_api", "The CSS Custom Highlight API", "", "nocode")}}
+- [CSS custom highlight API](/en-US/docs/Web/CSS/CSS_custom_highlight_API) module
 - [CSS Custom Highlight API: The Future of Highlighting Text Ranges on the Web](https://css-tricks.com/css-custom-highlight-api-early-look/)

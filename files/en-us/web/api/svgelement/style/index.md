@@ -39,8 +39,6 @@ The following code snippet demonstrates how the `style` attribute is translated 
 
 ```html
 <svg
-  width="50"
-  height="50"
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 250 250"
   width="250"
@@ -66,7 +64,7 @@ for (const prop in elementStyle) {
   // We also ensure that the property is a numeric index (indicating an inline style)
   if (
     Object.hasOwn(elementStyle, prop) &&
-    !Number.isNaN(Number.parseInt(prop))
+    !Number.isNaN(Number.parseInt(prop, 10))
   ) {
     out.textContent += `${
       elementStyle[prop]

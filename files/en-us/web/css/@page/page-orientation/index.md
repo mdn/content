@@ -3,15 +3,15 @@ title: page-orientation
 slug: Web/CSS/@page/page-orientation
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.page.page-orientation
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`page-orientation`** [CSS](/en-US/docs/Web/CSS) descriptor for the {{cssxref("@page")}} at-rule controls the rotation of a printed page. It handles the flow of content across pages when the orientation of a page is changed. This behavior differs from the [`size`](/en-US/docs/Web/CSS/@page/size) descriptor in that a user can define the direction in which to rotate the page.
 
 This descriptor helps with the layout and orientation of printed documents, especially when documents are printed double-sided. A user can specify how the pages will be rotated when printed. This is particularly useful to lay out content such as tables, which may be wider than the rest of the content, in a different orientation.
 
-> **Note:** [Margin boxes](/en-US/docs/Web/CSS/@page#margin_at-rules) and other positional elements have no special interaction with this descriptor. Margins are laid out as normal in the unrotated page, then rotated along with everything else.
+> [!NOTE]
+> [Margin boxes](/en-US/docs/Web/CSS/@page#margin_at-rules) and other positional elements have no special interaction with this descriptor. Margins are laid out as normal in the unrotated page, then rotated along with everything else.
 
 ## Syntax
 

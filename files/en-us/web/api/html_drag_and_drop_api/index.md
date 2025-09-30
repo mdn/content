@@ -47,21 +47,17 @@ This section is a summary of the basic steps to add drag-and-drop functionality 
 Making an element _draggable_ requires adding the [`draggable`](/en-US/docs/Web/HTML/Reference/Global_attributes/draggable) attribute and the {{domxref("HTMLElement.dragstart_event","dragstart")}} event handler, as shown in the following code sample:
 
 ```html
-<script>
-  function dragstartHandler(ev) {
-    // Add the target element's id to the data transfer object
-    ev.dataTransfer.setData("text/plain", ev.target.id);
-  }
-
-  window.addEventListener("DOMContentLoaded", () => {
-    // Get the element by id
-    const element = document.getElementById("p1");
-    // Add the ondragstart event listener
-    element.addEventListener("dragstart", dragstartHandler);
-  });
-</script>
-
 <p id="p1" draggable="true">This element is draggable.</p>
+```
+
+```js
+// Get the element by id
+const element = document.getElementById("p1");
+// Add the ondragstart event listener
+element.addEventListener("dragstart", (ev) => {
+  // Add the target element's id to the data transfer object
+  ev.dataTransfer.setData("text/plain", ev.target.id);
+});
 ```
 
 For more information, see:
@@ -137,25 +133,25 @@ For more details, see:
 
 By default, the browser prevents anything from happening when dropping something onto most HTML elements. To change that behavior so that an element becomes a _drop zone_ or is _droppable_, the element must listen to both {{domxref("HTMLElement.dragover_event","dragover")}} and {{domxref("HTMLElement.drop_event","drop")}} events.
 
-The following example shows how to use those attributes, and includes basic event handlers for each attribute.
+The following example shows how to use those events.
 
 ```html
-<script>
-  function dragoverHandler(ev) {
-    ev.preventDefault();
-    ev.dataTransfer.dropEffect = "move";
-  }
-  function dropHandler(ev) {
-    ev.preventDefault();
-    // Get the id of the target and add the moved element to the target's DOM
-    const data = ev.dataTransfer.getData("text/plain");
-    ev.target.appendChild(document.getElementById(data));
-  }
-</script>
+<p id="target">Drop Zone</p>
+```
 
-<p id="target" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)">
-  Drop Zone
-</p>
+```js
+const target = document.getElementById("target");
+
+target.addEventListener("dragover", (ev) => {
+  ev.preventDefault();
+  ev.dataTransfer.dropEffect = "move";
+});
+target.addEventListener("drop", (ev) => {
+  ev.preventDefault();
+  // Get the id of the target and add the moved element to the target's DOM
+  const data = ev.dataTransfer.getData("text/plain");
+  ev.target.appendChild(document.getElementById(data));
+});
 ```
 
 Note that each handler calls {{domxref("Event.preventDefault","preventDefault()")}} to prevent additional event processing for this event (such as [touch events](/en-US/docs/Web/API/Touch_events) or [pointer events](/en-US/docs/Web/API/Pointer_events)).
@@ -173,33 +169,29 @@ Typically, an application uses the {{domxref("DataTransfer.getData","getData()")
 The following example shows a drop handler getting the source element's `id` from the drag data, and then using the `id` to move the source element to the drop element:
 
 ```html
-<script>
-  function dragstartHandler(ev) {
-    // Add the target element's id to the data transfer object
-    ev.dataTransfer.setData("application/my-app", ev.target.id);
-    ev.dataTransfer.effectAllowed = "move";
-  }
-  function dragoverHandler(ev) {
-    ev.preventDefault();
-    ev.dataTransfer.dropEffect = "move";
-  }
-  function dropHandler(ev) {
-    ev.preventDefault();
-    // Get the id of the target and add the moved element to the target's DOM
-    const data = ev.dataTransfer.getData("application/my-app");
-    ev.target.appendChild(document.getElementById(data));
-  }
-</script>
+<p id="p1" draggable="true">This element is draggable.</p>
+<div id="target">Drop Zone</div>
+```
 
-<p id="p1" draggable="true" ondragstart="dragstartHandler(event)">
-  This element is draggable.
-</p>
-<div
-  id="target"
-  ondrop="dropHandler(event)"
-  ondragover="dragoverHandler(event)">
-  Drop Zone
-</div>
+```js
+const source = document.getElementById("p1");
+const target = document.getElementById("target");
+
+source.addEventListener("dragstart", (ev) => {
+  // Add the target element's id to the data transfer object
+  ev.dataTransfer.setData("application/my-app", ev.target.id);
+  ev.dataTransfer.effectAllowed = "move";
+});
+target.addEventListener("dragover", (ev) => {
+  ev.preventDefault();
+  ev.dataTransfer.dropEffect = "move";
+});
+target.addEventListener("drop", (ev) => {
+  ev.preventDefault();
+  // Get the id of the target and add the moved element to the target's DOM
+  const data = ev.dataTransfer.getData("application/my-app");
+  ev.target.appendChild(document.getElementById(data));
+});
 ```
 
 For more information, see:
@@ -236,9 +228,8 @@ A key difference between the {{domxref("DataTransfer")}} and {{domxref("DataTran
 
 - [Copying and moving elements with the `DataTransfer` interface](https://mdn.github.io/dom-examples/drag-and-drop/copy-move-DataTransfer.html)
 - [Copying and moving elements with the `DataTransferListItem` interface](https://mdn.github.io/dom-examples/drag-and-drop/copy-move-DataTransferItemList.html)
-- Dragging and dropping files (Firefox only): <https://jsfiddle.net/9C2EF/>
-- Dragging and dropping files (All browsers): [https://jsbin.com/hiqasek/](https://jsbin.com/hiqasek/edit?html,js,output)
-- A parking project using the Drag and Drop API: <https://park.glitch.me/> (You can edit [here](https://glitch.com/edit/#!/park))
+
+Reference pages for each interface also have individual examples.
 
 ## Specifications
 

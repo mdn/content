@@ -197,7 +197,7 @@ In this case we just log the old and new state.
 ```js
 dialog.addEventListener("beforetoggle", (event) => {
   log(
-    `beforetoggle event: oldstate: ${event.oldState}, newState: ${event.newState}`,
+    `beforetoggle event: oldState: ${event.oldState}, newState: ${event.newState}`,
   );
 
   // Call event.preventDefault() to prevent a dialog opening

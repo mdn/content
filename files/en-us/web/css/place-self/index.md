@@ -3,9 +3,8 @@ title: place-self
 slug: Web/CSS/place-self
 page-type: css-shorthand-property
 browser-compat: css.properties.place-self
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`place-self`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) allows you to align an individual item in both the block and inline directions at once (i.e., the {{cssxref("align-self")}} and {{cssxref("justify-self")}} properties). This property applies to block-level boxes, absolutely-positioned boxes, and grid items. If the second value is not present, the first value is also used for it.
 
@@ -48,7 +47,7 @@ place-self: end center;
 }
 
 .example-container > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
 }
 ```
@@ -94,9 +93,7 @@ place-self: unset;
 - `auto`
   - : Computes to the parent's {{cssxref("align-items")}} value.
 - `normal`
-
   - : The effect of this keyword is dependent of the layout mode we are in:
-
     - In absolutely-positioned layouts, the keyword behaves like `start` on _replaced_ absolutely-positioned boxes, and as `stretch` on _all other_ absolutely-positioned boxes.
     - In static position of absolutely-positioned layouts, the keyword behaves as `stretch`.
     - For flex items, the keyword behaves as `stretch`.

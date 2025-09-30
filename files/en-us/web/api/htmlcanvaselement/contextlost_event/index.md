@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.HTMLCanvasElement.contextlost_event
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 The **`contextlost`** event of the [Canvas API](/en-US/docs/Web/API/Canvas_API) is fired if the user agent detects that the backing storage associated with a [`CanvasRenderingContext2D`](/en-US/docs/Web/API/CanvasRenderingContext2D) context is lost.
 Contexts can be lost for several reasons like driver crashes or the application runs out of memory, etc.
@@ -18,10 +18,10 @@ User code can prevent the context from being restored by calling [`Event.prevent
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("contextlost", (event) => {});
+```js-nolint
+addEventListener("contextlost", (event) => { })
 
-oncontextlost = (event) => {};
+oncontextlost = (event) => { }
 ```
 
 ## Event type

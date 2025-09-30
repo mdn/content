@@ -3,9 +3,8 @@ title: attr()
 slug: Web/CSS/attr
 page-type: css-function
 browser-compat: css.types.attr
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 > [!NOTE]
 > The `attr()` function can be used with any CSS property, but support for properties other than {{CSSxRef("content")}} is experimental.
@@ -70,47 +69,48 @@ The parameters are:
 - `<attr-name>`
   - : The attribute name whose value should be retrieved from the selected HTML element(s).
 - `<attr-type>`
-
   - : Specifies how the attribute value is parsed into a CSS value. This can be the `raw-string` keyword, a `type()` function, or a CSS dimension unit (specified using an `<attr-unit>` identifier). When omitted, it defaults to `raw-string`.
+    - `raw-string`
+      - : The `raw-string` keyword causes the attribute's literal value to be treated as the value of a CSS string, with no CSS parsing performed (including CSS escapes, whitespace removal, comments, etc). The `<fallback-value>` is only used if the attribute is omitted; specifying an empty value doesn't trigger the fallback.
 
-    - The `raw-string` keyword causes the attribute's literal value to be treated as the value of a CSS string, with no CSS parsing performed (including CSS escapes, whitespace removal, comments, etc). The `<fallback-value>` is only used if the attribute is omitted; specifying an empty value doesn't trigger the fallback.
+        ```css
+        attr(data-name raw-string, "stranger")
+        ```
 
-      ```css
-      attr(data-name raw-string, "stranger")
-      ```
+        > [!NOTE]
+        > This keyword was originally named and supported in Chromium browsers as `string`. Both keywords will be supported briefly, for backwards compatibility purposes.
 
-      > [!NOTE]
-      > This keyword was originally named and supported in Chromium browsers as `string`. Both keywords will be supported briefly, for backwards compatibility purposes.
+    - `type()`
+      - : The `type()` function takes a `<syntax>` as its argument that specifies what [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) to parse the value into. The `<syntax>` can be {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;color&gt;")}}, {{CSSxRef("&lt;custom-ident&gt;")}}, {{CSSxRef("&lt;image&gt;")}}, {{CSSxRef("&lt;integer&gt;")}}, {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;length-percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;resolution&gt;")}}, {{CSSxRef("&lt;string&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;transform-function&gt;")}}, or a combination thereof.
 
-    - The `type()` function takes a `<syntax>` as its argument that specifies what [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) to parse the value into. The `<syntax>` can be {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;color&gt;")}}, {{CSSxRef("&lt;custom-ident&gt;")}}, {{CSSxRef("&lt;image&gt;")}}, {{CSSxRef("&lt;integer&gt;")}}, {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;length-percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;resolution&gt;")}}, {{CSSxRef("&lt;string&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;transform-function&gt;")}}, or a combination thereof.
+        ```css
+        attr(id type(<custom-ident>), none)
+        attr(data-count type(<number>), 0)
+        ```
 
-      ```css
-      attr(id type(<custom-ident>), none)
-      attr(data-count type(<number>), 0)
-      ```
+        To accept multiple types, list all allowed `<syntax>`es in the `type()` function, separated by a `|`.
 
-      To accept multiple types, list all allowed `<syntax>`es in the `type()` function, separated by a `|`.
+        ```css
+        attr(data-size type(<length> | <percentage>), 0px)
+        ```
 
-      ```css
-      attr(data-size type(<length> | <percentage>), 0px)
-      ```
+        > [!NOTE]
+        > For [security reasons](#limitations_and_security) {{CSSxRef("url_value", "&lt;url&gt;")}} is not allowed as a `<syntax>`.
 
-      > [!NOTE]
-      > For [security reasons](#limitations_and_security) {{CSSxRef("url_value", "&lt;url&gt;")}} is not allowed as a `<syntax>`.
+        To accept any data type, use `*` as the type. This still triggers CSS parsing but with no requirements placed on it beyond that it parses validly and substitutes the result of that parsing directly as tokens, rather than as a `<string>` value.
 
-      To accept any data type, use `*` as the type. This still triggers CSS parsing but with no requirements placed on it beyond that it parses validly and substitutes the result of that parsing directly as tokens, rather than as a `<string>` value.
+        ```css
+        attr(data-content type(*))
+        ```
 
-      ```css
-      attr(data-content type(*))
-      ```
+    - `<attr-unit>`
+      - : The `<attr-unit>` identifier specifies the unit a numeric value should have (if any). It can be the `%` character (percentage) or a [CSS distance unit](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#distance_units) such as `px`, `rem`, `deg`, `s`, etc.
 
-    - The `<attr-unit>` identifier specifies the unit a numeric value should have (if any). It can be the `%` character (percentage) or a [CSS distance unit](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#distance_units) such as `px`, `rem`, `deg`, `s`, etc.
-
-      ```css
-      attr(data-size rem)
-      attr(data-width px, inherit)
-      attr(data-rotation deg)
-      ```
+        ```css
+        attr(data-size rem)
+        attr(data-width px, inherit)
+        attr(data-rotation deg)
+        ```
 
 - `<fallback-value>`
   - : The value to be used if the specified attribute is missing or contains an invalid value.
@@ -132,11 +132,12 @@ The `attr()` function can reference attributes that were never intended by the p
 ```html
 <!-- This won't work! -->
 <span data-icon="https://example.org/icons/question-mark.svg">help</span>
-<style>
-  span[data-icon] {
-    background-image: url(attr(data-icon));
-  }
-</style>
+```
+
+```css
+span[data-icon] {
+  background-image: url(attr(data-icon));
+}
 ```
 
 Values that use `attr()` get marked as _`attr()`-tainted_. Using an `attr()`-tainted value as or in a `<url>` makes a declaration become ["invalid at computed value time" or IACVT for short](https://www.bram.us/2024/02/26/css-what-is-iacvt/).
@@ -438,8 +439,8 @@ The cards are laid out in a flex container:
 @layer warning {
   .warning {
     padding: 1em;
-    border: 1px solid #ccc;
-    background: rgba(255 255 205 / 0.8);
+    border: 1px solid #cccccc;
+    background: rgb(255 255 205 / 0.8);
     text-align: center;
     order: -1;
     margin: 1em;

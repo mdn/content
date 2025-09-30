@@ -6,7 +6,7 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/DOM_scripting","Learn_web_development/Core/Scripting/JSON", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Image_gallery","Learn_web_development/Core/Scripting/JSON", "Learn_web_development/Core/Scripting")}}
 
 Another very common task in modern websites and applications is making network requests to retrieve individual data items from the server to update sections of a webpage without having to load an entire new page. This seemingly small detail has had a huge impact on the performance and behavior of sites, so in this article, we'll explain the concept and look at technologies that make it possible: in particular, the [Fetch API](/en-US/docs/Web/API/Fetch_API).
 
@@ -57,7 +57,9 @@ To speed things up even further, some sites also store assets and data on the us
 
 ## The Fetch API
 
-Let's walk through a couple of examples of the Fetch API.
+In this section we'll walk through a couple of examples of the Fetch API.
+
+The examples below are of a certain level of complexity, and show how to use the Fetch API in some real world contexts. If you have never used fetch before, you might want to start by working through Scrimba's [First fetch](https://scrimba.com/frontend-path-c0j/~0lu?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> interactive tutorial, which provides a very simple intro walkthrough.
 
 ### Fetching text content
 
@@ -241,8 +243,8 @@ There are five stages to this:
 
 1. Create a new `XMLHttpRequest` object.
 2. Call its [`open()`](/en-US/docs/Web/API/XMLHttpRequest/open) method to initialize it.
-3. Add an event listener to its [`load`](/en-US/docs/Web/API/XMLHttpRequest/load_event) event, which fires when the response has completed successfully. In the listener we call `initialize()` with the data.
-4. Add an event listener to its [`error`](/en-US/docs/Web/API/XMLHttpRequest/error_event) event, which fires when the request encounters an error
+3. Add an event listener to its [`load`](/en-US/docs/Web/API/XMLHttpRequestEventTarget/load_event) event, which fires when the response has completed successfully. In the listener we call `initialize()` with the data.
+4. Add an event listener to its [`error`](/en-US/docs/Web/API/XMLHttpRequestEventTarget/error_event) event, which fires when the request encounters an error
 5. Send the request.
 
 We also have to wrap the whole thing in the [try...catch](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block, to handle any errors thrown by `open()` or `send()`.
@@ -263,4 +265,4 @@ There are however a lot of different subjects discussed in this article, which h
 - [An overview of HTTP](/en-US/docs/Web/HTTP/Guides/Overview)
 - [Server-side website programming](/en-US/docs/Learn_web_development/Extensions/Server-side)
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/DOM_scripting","Learn_web_development/Core/Scripting/JSON", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Image_gallery","Learn_web_development/Core/Scripting/JSON", "Learn_web_development/Core/Scripting")}}

@@ -8,7 +8,7 @@ status:
 browser-compat: api.HTMLInputElement.search_event
 ---
 
-{{APIRef}}{{non-standard_header}}
+{{APIRef("HTML DOM")}}{{non-standard_header}}
 
 The **`search`** event is fired when a search is initiated using an {{HTMLElement("input")}} element of `type="search"`.
 
@@ -22,10 +22,10 @@ This event is not cancelable.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("search", (event) => {});
+```js-nolint
+addEventListener("search", (event) => { })
 
-onsearch = (event) => {};
+onsearch = (event) => { }
 ```
 
 ## Event type

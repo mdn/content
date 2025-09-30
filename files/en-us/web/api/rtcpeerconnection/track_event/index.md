@@ -18,10 +18,10 @@ This event is not cancellable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("track", (event) => {});
+```js-nolint
+addEventListener("track", (event) => { })
 
-ontrack = (event) => {};
+ontrack = (event) => { }
 ```
 
 ## Event type
@@ -58,14 +58,10 @@ pc = new RTCPeerConnection({
   ],
 });
 
-pc.addEventListener(
-  "track",
-  (e) => {
-    videoElement.srcObject = e.streams[0];
-    hangupButton.disabled = false;
-  },
-  false,
-);
+pc.addEventListener("track", (e) => {
+  videoElement.srcObject = e.streams[0];
+  hangupButton.disabled = false;
+});
 ```
 
 The event handler assigns the new track's first stream to an existing {{HTMLElement("video")}} element, identified using the variable `videoElement`.

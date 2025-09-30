@@ -20,7 +20,6 @@ enable(cap)
 ### Parameters
 
 - `cap`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying which WebGL capability to enable. Possible
     values:
 

@@ -2,9 +2,8 @@
 title: Share objects with page scripts
 slug: Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts
 page-type: guide
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 > [!NOTE]
 > The techniques described in this section are only available in Firefox, and only from Firefox 49 onwards.
@@ -251,10 +250,8 @@ Reflect.defineProperty(
   ev.wrappedJSObject,
   "propC",
   {
-    get: exportFunction(() => {
-      // getters must be exported like regular functions
-      return "propC";
-    }, window),
+    // getters must be exported like regular functions
+    get: exportFunction(() => "propC", window),
   },
 );
 

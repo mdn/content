@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Element.compositionend_event
 ---
 
-{{APIRef}}
+{{APIRef("UI Events")}}
 
 The **`compositionend`** event is fired when a text composition system such as an {{glossary("input method editor")}} completes or cancels the current composition session.
 
@@ -16,10 +16,10 @@ For example, this event could be fired after a user finishes entering a Chinese 
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("compositionend", (event) => {});
+```js-nolint
+addEventListener("compositionend", (event) => { })
 
-oncompositionend = (event) => {};
+oncompositionend = (event) => { }
 ```
 
 ## Event type

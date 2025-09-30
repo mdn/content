@@ -1,11 +1,11 @@
 ---
-title: "CSP: style-src-elem"
+title: "Content-Security-Policy: style-src-elem directive"
+short-title: style-src-elem
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/style-src-elem
 page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.style-src-elem
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`style-src-elem`** directive specifies valid sources for stylesheet {{HTMLElement("style")}} elements and {{HTMLElement("link")}} elements with `rel="stylesheet"`.
 
@@ -45,7 +45,6 @@ This directive may have one of the following values:
 - `'none'`
   - : No resources of this type may be loaded. The single quotes are mandatory.
 - `<source-expression-list>`
-
   - : A space-separated list of _source expression_ values. Resources of this type may be loaded if they match any of the given source expressions. For this directive, the same source expression values are applicable as for [`style-src`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/style-src), with the exception of [`'unsafe-hashes'`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#unsafe-hashes).
 
 `style-src-elem` can be used in conjunction with {{CSP("style-src")}}:
@@ -77,7 +76,7 @@ Content-Security-Policy: style-src-elem https://example.com/
 </style>
 
 <style>
-  @import url("https://not-example.com/styles/print.css") print;
+  @import "https://not-example.com/styles/print.css" print;
 </style>
 ```
 

@@ -1,13 +1,15 @@
 ---
-title: No-Vary-Search
+title: No-Vary-Search header
+short-title: No-Vary-Search
 slug: Web/HTTP/Reference/Headers/No-Vary-Search
 page-type: http-header
 status:
   - experimental
 browser-compat: http.headers.No-Vary-Search
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The HTTP **`No-Vary-Search`** {{Glossary("response header")}} specifies a set of rules that define how a URL's query parameters will affect cache matching.
 These rules dictate whether the same URL with different URL parameters should be saved as separate browser cache entries.

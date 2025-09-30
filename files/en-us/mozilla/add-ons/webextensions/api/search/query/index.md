@@ -3,9 +3,8 @@ title: search.query()
 slug: Mozilla/Add-ons/WebExtensions/API/search/query
 page-type: webextension-api-function
 browser-compat: webextensions.api.search.query
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Perform a search using the browser's default search engine.
 
@@ -24,9 +23,7 @@ browser.search.query(
 ### Parameters
 
 - `queryInfo`
-
   - : `object`. An object with the following properties:
-
     - `disposition` {{optional_inline}}
       - : `string`. The location where the search results are displayed. Valid values are `CURRENT_TAB`, `NEW_TAB`, and `NEW_WINDOW`. Defaults to `CURRENT_TAB`. Cannot be specified with `tabId`.
     - `tabId` {{optional_inline}}

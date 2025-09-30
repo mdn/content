@@ -1,11 +1,11 @@
 ---
 title: SharedArrayBuffer.prototype.maxByteLength
+short-title: maxByteLength
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/maxByteLength
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.SharedArrayBuffer.maxByteLength
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`maxByteLength`** accessor property of {{jsxref("SharedArrayBuffer")}} instances returns the maximum length (in bytes) that this `SharedArrayBuffer` can be grown to.
 

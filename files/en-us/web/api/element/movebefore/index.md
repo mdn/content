@@ -177,7 +177,7 @@ The HTML features an {{htmlelement("article")}} element containing two {{htmlele
   <section id="section2"></section>
 </article>
 <div id="controls">
-  <button id="movebefore">move with <code>moveBefore()</code></button>
+  <button id="move-before">move with <code>moveBefore()</code></button>
   <button id="insertbefore">move with <code>insertBefore()</code></button>
   <button id="prepend">move with <code>prepend()</code></button>
 </div>
@@ -230,11 +230,11 @@ In our script, we attach `click` event listeners to each `<button>` via {{domxre
 const section1 = document.getElementById("section1");
 const section2 = document.getElementById("section2");
 const mover = document.getElementById("mover");
-const movebeforeBtn = document.getElementById("movebefore");
+const moveBeforeBtn = document.getElementById("move-before");
 const insertbeforeBtn = document.getElementById("insertbefore");
 const prependBtn = document.getElementById("prepend");
 
-movebeforeBtn.addEventListener("click", () => {
+moveBeforeBtn.addEventListener("click", () => {
   if (mover.parentElement === section1) {
     section2.moveBefore(mover, null);
   } else {

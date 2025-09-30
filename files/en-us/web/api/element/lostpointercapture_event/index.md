@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Element.lostpointercapture_event
 ---
 
-{{APIRef}}
+{{APIRef("Pointer Events")}}
 
 The **`lostpointercapture`** event is fired when a [captured pointer](/en-US/docs/Web/API/Pointer_events#pointer_capture) is released.
 
@@ -14,10 +14,10 @@ The **`lostpointercapture`** event is fired when a [captured pointer](/en-US/doc
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("lostpointercapture", (event) => {});
+```js-nolint
+addEventListener("lostpointercapture", (event) => { })
 
-onlostpointercapture = (event) => {};
+onlostpointercapture = (event) => { }
 ```
 
 ## Event type
@@ -98,7 +98,6 @@ para.addEventListener("pointerdown", (event) => {
 ## See also
 
 - Related events
-
   - {{domxref('Element/gotpointercapture_event', 'gotpointercapture')}}
   - {{domxref('Element/pointerover_event', 'pointerover')}}
   - {{domxref('Element/pointerenter_event', 'pointerenter')}}

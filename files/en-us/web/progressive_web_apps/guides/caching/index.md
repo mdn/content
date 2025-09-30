@@ -2,9 +2,8 @@
 title: Caching
 slug: Web/Progressive_web_apps/Guides/Caching
 page-type: guide
+sidebar: pwasidebar
 ---
-
-{{PWASidebar}}
 
 When a user opens and interacts with a website, all the resources that the website needs, including the HTML, JavaScript, CSS, images, fonts, as well as any data explicitly requested by the app, are retrieved by making HTTP(S) requests. One of the most fundamental features of a PWA is the ability to explicitly cache some of the app's resources on the device, meaning that they can be retrieved without needing to send a request to the network.
 
@@ -116,6 +115,7 @@ async function cacheFirst(request) {
 }
 
 self.addEventListener("fetch", (event) => {
+  const url = new URL(event.request.url);
   if (precachedResources.includes(url.pathname)) {
     event.respondWith(cacheFirst(event.request));
   }

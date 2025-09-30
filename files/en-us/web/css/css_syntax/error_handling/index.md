@@ -1,10 +1,10 @@
 ---
 title: CSS error handling
+short-title: Error handling
 slug: Web/CSS/CSS_syntax/Error_handling
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 When an error exists in CSS, such as an invalid value or a missing semicolon, instead of [throwing an error like in JavaScript](/en-US/docs/Web/JavaScript/Reference/Errors), the browser (or other user agent) will gracefully recover. Browsers don't provide CSS-related alerts or otherwise indicate errors have occurred in styles. They just discard invalid content and parse subsequent valid styles. This is a feature of CSS, not a bug.
 
@@ -30,7 +30,7 @@ The type and amount of CSS that a browser ignores due to an error depends on the
 - For [errors in at-rules](#at-rule_errors), whether a single line or the entire at-rule is ignored (fails) depends on the at-rule and the type of error.
 - If the [error is an invalid selector](#errors_in_selector_lists), the entire declaration block is ignored.
 - An [error due to a missing semi-colon](#errors_within_css_declaration_blocks) between property declarations causes an invalid value, in which case, multiple property-value declarations are ignored.
-- If the [error is a property name or value](#errors_within_css_declaration_blocks), such as an unrecognized property name or invalid data type, the property-value declaration is ignored.
+- If the [error is a property name or value](#errors_within_css_declaration_blocks), such as an unrecognized property name or invalid data type, the property-value declaration is ignored. During the [filtering stage](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#filtering), such syntactically invalid declarations are eliminated.
 - If the [error is due to a missing end-bracket](#errors_with_auto-closed_endings), the extent of what is ignored depends on the browser's ability to parse the error as nested CSS.
 
 After parsing each declaration, style rule, at-rule, and so on, the browser checks the parsed content against its expected [grammar](#grammar_check) for that construct. If the content does not match the expected grammar for that construct, the browser considers it invalid and ignores it.
@@ -43,7 +43,7 @@ Statement at-rules, such as {{cssxref("@import")}} and {{cssxref("@namespace")}}
 
 ```css
 @import "assets/fonts.css" layer(fonts);
-@namespace svg url(http://www.w3.org/2000/svg);
+@namespace svg url("http://www.w3.org/2000/svg");
 ```
 
 If the parser encounters a curly brace (`{`) before a semi-colon is encountered, the at-rule is parsed as a block at-rule. [Block at-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rule#block_at-rules) like {{cssxref("@font-face")}} and {{cssxref("@keyframes")}}, contain a block of declarations surrounded by curly braces (`{}`). The opening curly brace informs the browser where the at-rule prelude ends and the at-rule's body starts. The parser looks forward, seeking matching blocks (content surrounded by `()`, `{}`, or `[]`) until it finds a closing curly brace (`}`) that isn't matched by any other curly braces: this closes the body of the at-rule.
@@ -78,13 +78,13 @@ When it comes to CSS properties and values within a declaration block, if either
 
 This example contains an error. The parser ignores the error (and the comments), seeks forward until it encounters a semi-colon, then restarts parsing:
 
-```css-nolint bad
+```css-nolint example-bad
 p {
-/* Invalid syntax due to  missing semi-colon */
+  /* Invalid syntax due to missing semi-colon */
   border-color: red
   background-color: green;
 
-/* Valid syntax but likely a logic error */
+  /* Valid syntax but likely a logic error */
   border-width: 100vh;
 }
 ```

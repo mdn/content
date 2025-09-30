@@ -40,37 +40,39 @@ Be aware, however, that the maximum buffer size for `"long-animation-frame"` ent
 
 Performance timeline entries returned with a type of `"long-animation-frame"` are represented by {{domxref("PerformanceLongAnimationFrameTiming")}} objects. This object has a {{domxref("PerformanceLongAnimationFrameTiming.scripts", "scripts")}} property containing an array of {{domxref("PerformanceScriptTiming")}} objects, each one of which contains information about a script that contributed to the long animation frame.
 
-The following is a JSON representation of a complete `"long-animation-frame"` performance entry example, containing a single script:
+The following is a complete `"long-animation-frame"` performance entry example, containing a single script:
 
-```json
-{
-  "blockingDuration": 0,
-  "duration": 60,
-  "entryType": "long-animation-frame",
-  "firstUIEventTimestamp": 11801.099999999627,
-  "name": "long-animation-frame",
-  "renderStart": 11858.800000000745,
-  "scripts": [
+```js
+({
+  blockingDuration: 0,
+  duration: 60,
+  entryType: "long-animation-frame",
+  firstUIEventTimestamp: 11801.099999999627,
+  name: "long-animation-frame",
+  renderStart: 11858.800000000745,
+  scripts: [
     {
-      "duration": 45,
-      "entryType": "script",
-      "executionStart": 11803.199999999255,
-      "forcedStyleAndLayoutDuration": 0,
-      "invoker": "DOMWindow.onclick",
-      "invokerType": "event-listener",
-      "name": "script",
-      "pauseDuration": 0,
-      "sourceURL": "https://web.dev/js/index-ffde4443.js",
-      "sourceFunctionName": "myClickHandler",
-      "sourceCharPosition": 17796,
-      "startTime": 11803.199999999255,
-      "window": [Window object],
-      "windowAttribution": "self"
-    }
+      duration: 45,
+      entryType: "script",
+      executionStart: 11803.199999999255,
+      forcedStyleAndLayoutDuration: 0,
+      invoker: "DOMWindow.onclick",
+      invokerType: "event-listener",
+      name: "script",
+      pauseDuration: 0,
+      sourceURL: "https://web.dev/js/index-ffde4443.js",
+      sourceFunctionName: "myClickHandler",
+      sourceCharPosition: 17796,
+      startTime: 11803.199999999255,
+      window: {
+        // …Window object…
+      },
+      windowAttribution: "self",
+    },
   ],
-  "startTime": 11802.400000000373,
-  "styleAndLayoutStart": 11858.800000000745
-}
+  startTime: 11802.400000000373,
+  styleAndLayoutStart: 11858.800000000745,
+});
 ```
 
 Beyond the standard data returned by a {{domxref("PerformanceEntry")}} entry, this contains the following noteworthy items:
@@ -78,15 +80,13 @@ Beyond the standard data returned by a {{domxref("PerformanceEntry")}} entry, th
 - {{domxref("PerformanceLongAnimationFrameTiming.blockingDuration", "blockingDuration")}}
   - : A {{domxref("DOMHighResTimeStamp")}} indicating the total time in milliseconds for which the main thread was blocked from responding to high priority tasks, such as user input. This is calculated by taking all the [long tasks](/en-US/docs/Web/API/PerformanceLongTaskTiming#description) within the LoAF that have a `duration` of more than `50ms`, subtracting `50ms` from each, adding the rendering time to the longest task time, and summing the results.
 - {{domxref("PerformanceLongAnimationFrameTiming.firstUIEventTimestamp", "firstUIEventTimestamp")}}
-  - : A {{domxref("DOMHighResTimeStamp")}} indicating the time of the first UI event — such as a mouse or keyboard event — to be queued during the current animation frame.
+  - : A {{domxref("DOMHighResTimeStamp")}} indicating the time of the first UI event — such as a mouse or keyboard event — to be processed during the current animation frame. Note this timestamp can be before the start of this animation frame if there was a delay between the event happening and it being processed.
 - {{domxref("PerformanceLongAnimationFrameTiming.renderStart", "renderStart")}}
   - : A {{domxref("DOMHighResTimeStamp")}} indicating the start time of the rendering cycle, which includes {{domxref("Window.requestAnimationFrame()")}} callbacks, style and layout calculation, {{domxref("ResizeObserver")}} callbacks, and {{domxref("IntersectionObserver")}} callbacks.
 - {{domxref("PerformanceLongAnimationFrameTiming.styleAndLayoutStart", "styleAndLayoutStart")}}
   - : A {{domxref("DOMHighResTimeStamp")}} indicating the beginning of the time period spent in style and layout calculations for the current animation frame.
 - {{domxref("PerformanceScriptTiming")}} properties:
-
   - : Properties providing information on the script(s) that contributed to the LoAF:
-
     - {{domxref("PerformanceScriptTiming.executionStart", "script.executionStart")}}
       - : A {{domxref("DOMHighResTimeStamp")}} indicating the time when the script compilation finished and execution started.
     - {{domxref("PerformanceScriptTiming.forcedStyleAndLayoutDuration", "script.forcedStyleAndLayoutDuration")}}
@@ -96,7 +96,6 @@ Beyond the standard data returned by a {{domxref("PerformanceEntry")}} entry, th
     - {{domxref("PerformanceScriptTiming.pauseDuration", "script.pauseDuration")}}
       - : A {{domxref("DOMHighResTimeStamp")}} indicating the total time, in milliseconds, spent by the script on "pausing" synchronous operations (for example, {{domxref("Window.alert()")}} calls or synchronous {{domxref("XMLHttpRequest")}}s).
     - {{domxref("PerformanceScriptTiming.sourceCharPosition", "script.sourceCharPosition")}}, {{domxref("PerformanceScriptTiming.sourceFunctionName", "script.sourceFunctionName")}}, and {{domxref("PerformanceScriptTiming.sourceURL", "script.sourceURL")}}
-
       - : Values representing the script character position, function name, and script URL, respectively. It is important to note that the reported function name will be the "entry point" of the script (i.e., the top level of the stack), and not any specific slow sub-function.
 
         For example, if an event handler calls a top-level function, which in turn calls a slow sub-function, the `source*` fields will report the top-level function's name and location, not the slow sub-function. This is because of performance reasons — a full stack trace is costly.

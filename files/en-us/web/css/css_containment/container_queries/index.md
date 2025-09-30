@@ -1,10 +1,10 @@
 ---
 title: CSS container queries
+short-title: Container queries
 slug: Web/CSS/CSS_containment/Container_queries
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 Container queries enable you to apply styles to an element based on certain attributes of its container:
 
@@ -20,7 +20,7 @@ This article provides an introduction to using container queries, specifically f
 
 ## Using container size queries
 
-Container queries test elements based on their container type. To use container size queries, you need to declare a **containment context** on an element so that the browser knows you might want to query the dimensions of this container later.
+While container queries apply styles based on the container type, container size queries apply styles specifically based on the container's dimensions. To use container size queries, you need to declare a **containment context** on an element so that the browser knows you might want to query the dimensions of this container later.
 To do this, use the {{cssxref("container-type")}} property with a value of `size`, `inline-size`, or `normal`.
 
 These values have the following effects:
@@ -64,7 +64,7 @@ Specifically, this query will apply a larger font size for the card title if the
 }
 
 /* If the container is larger than 700px */
-@container (min-width: 700px) {
+@container (width > 700px) {
   .card h2 {
     font-size: 2em;
   }
@@ -92,7 +92,7 @@ The following example creates a containment context with the name `sidebar`:
 You can then target this containment context using the `@container` at-rule:
 
 ```css
-@container sidebar (min-width: 700px) {
+@container sidebar (width > 700px) {
   .card {
     font-size: 2em;
   }
@@ -133,7 +133,7 @@ The container query length units are:
 The following example uses the `cqi` unit to set the font size of a heading based on the inline size of the container:
 
 ```css
-@container (min-width: 700px) {
+@container (width > 700px) {
   .card h2 {
     font-size: max(1.5em, 1.23em + 2cqi);
   }
@@ -157,7 +157,7 @@ The following example uses a {{cssxref("grid-template-columns")}} declaration to
 If you want to use a single-column layout for devices with a smaller viewport, you can use a media query to change the grid template:
 
 ```css
-@media (max-width: 700px) {
+@media (width <= 700px) {
   .card {
     grid-template-columns: 1fr;
   }

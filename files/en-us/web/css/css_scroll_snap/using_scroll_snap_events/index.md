@@ -2,9 +2,8 @@
 title: Using scroll snap events
 slug: Web/CSS/CSS_scroll_snap/Using_scroll_snap_events
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) module defines two **scroll snap events**: {{domxref("Element/scrollsnapchanging_event", "scrollsnapchanging")}} and {{domxref("Element/scrollsnapchange_event", "scrollsnapchange")}}. These enable running JavaScript in response to the browser determining that new [scroll snap targets](/en-US/docs/Web/CSS/CSS_scroll_snap/Basic_concepts) are pending and selected, respectively.
 
@@ -147,7 +146,7 @@ h2 {
 section {
   font-family: Arial, Helvetica, sans-serif;
   border-radius: 5px;
-  background: #eee;
+  background: #eeeeee;
   box-shadow:
     inset 1px 1px 4px rgb(255 255 255 / 0.5),
     inset -1px -1px 4px rgb(0 0 0 / 0.5);
@@ -186,7 +185,7 @@ The style changes mentioned above will be applied through classes applied to the
 
 ```css
 .pending {
-  background-color: #ccc;
+  background-color: #cccccc;
 }
 
 .select-section {
@@ -286,7 +285,7 @@ body {
 section {
   font-family: Arial, Helvetica, sans-serif;
   border-radius: 5px;
-  background: #eee;
+  background: #eeeeee;
   box-shadow:
     inset 1px 1px 4px rgb(255 255 255 / 0.5),
     inset -1px -1px 4px rgb(0 0 0 / 0.5);
@@ -343,12 +342,12 @@ The {{cssxref("@keyframes")}} animate from a gray background and black (default)
 }
 
 .pending {
-  background-color: #ccc;
+  background-color: #cccccc;
 }
 
 @keyframes select {
   from {
-    background: #eee;
+    background: #eeeeee;
     color: black;
   }
 
@@ -366,13 +365,13 @@ The {{cssxref("@keyframes")}} animate from a gray background and black (default)
   }
 
   80% {
-    background: #eee;
+    background: #eeeeee;
     color: black;
     opacity: 0.1;
   }
 
   100% {
-    background: #eee;
+    background: #eeeeee;
     color: black;
     opacity: 1;
   }

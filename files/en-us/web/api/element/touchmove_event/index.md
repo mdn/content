@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Element.touchmove_event
 ---
 
-{{APIRef}}
+{{APIRef("Touch Events")}}
 
 The `touchmove` event is fired when one or more touch points are moved along the touch surface.
 
@@ -14,10 +14,10 @@ The `touchmove` event is fired when one or more touch points are moved along the
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("touchmove", (event) => {});
+```js-nolint
+addEventListener("touchmove", (event) => { })
 
-ontouchmove = (event) => {};
+ontouchmove = (event) => { }
 ```
 
 ## Event type

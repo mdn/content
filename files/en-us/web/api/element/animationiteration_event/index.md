@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Element.animationiteration_event
 ---
 
-{{APIRef}}
+{{APIRef("Web Animations")}}
 
 The **`animationiteration`** event is fired when an iteration of a [CSS Animation](/en-US/docs/Web/CSS/CSS_animations) ends, and another one begins. This event does not occur at the same time as the {{domxref("Element/animationend_event", "animationend")}} event, and therefore does not occur for animations with an `animation-iteration-count` of one.
 
@@ -14,10 +14,10 @@ The **`animationiteration`** event is fired when an iteration of a [CSS Animatio
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("animationiteration", (event) => {});
+```js-nolint
+addEventListener("animationiteration", (event) => { })
 
-onanimationiteration = (event) => {};
+onanimationiteration = (event) => { }
 ```
 
 ## Event type

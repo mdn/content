@@ -3,13 +3,12 @@ title: <gradient>
 slug: Web/CSS/gradient
 page-type: css-type
 browser-compat: css.types.gradient
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`<gradient>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) is a special type of {{cssxref("&lt;image&gt;")}} that consists of a progressive transition between two or more colors.
 
-{{InteractiveExample("CSS Demo: &amp;lt;gradient&amp;gt;")}}
+{{InteractiveExample("CSS Demo: &lt;gradient&gt;")}}
 
 ```css interactive-example-choice
 background: linear-gradient(#f69d3c, #3f87a6);
@@ -124,7 +123,7 @@ div {
 
 ```css
 .radial-gradient {
-  background: radial-gradient(red, yellow, rgb(30 144 255));
+  background: radial-gradient(red, yellow, dodgerblue);
 }
 ```
 

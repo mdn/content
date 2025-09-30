@@ -88,19 +88,16 @@ and then adds it to the tree for the document:
 
 ```html
 <html lang="en">
-  <head>
+  <head> </head>
+  <body>
     <script>
-      // run this function when the document is loaded
-      window.onload = () => {
-        // create a couple of elements in an otherwise empty HTML page
-        const heading = document.createElement("h1");
-        const headingText = document.createTextNode("Big Head!");
-        heading.appendChild(headingText);
-        document.body.appendChild(heading);
-      };
+      // create a couple of elements in an otherwise empty HTML page
+      const heading = document.createElement("h1");
+      const headingText = document.createTextNode("Big Head!");
+      heading.appendChild(headingText);
+      document.body.appendChild(heading);
     </script>
-  </head>
-  <body></body>
+  </body>
 </html>
 ```
 
@@ -216,9 +213,9 @@ When you get a reference to a `table` object, as in the following example, you r
 ```js
 const table = document.getElementById("table");
 const tableAttrs = table.attributes; // Node/Element interface
-for (let i = 0; i < tableAttrs.length; i++) {
+for (const attr of tableAttrs) {
   // HTMLTableElement interface: border attribute
-  if (tableAttrs[i].nodeName.toLowerCase() === "border") {
+  if (attr.nodeName.toLowerCase() === "border") {
     table.border = "1";
   }
 }

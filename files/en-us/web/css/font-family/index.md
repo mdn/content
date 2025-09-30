@@ -3,9 +3,8 @@ title: font-family
 slug: Web/CSS/font-family
 page-type: css-property
 browser-compat: css.properties.font-family
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`font-family`** [CSS](/en-US/docs/Web/CSS) property specifies a prioritized list of one or more font family names and/or generic family names for the selected element.
 
@@ -102,7 +101,6 @@ font-family: "Gill Sans Extrabold", sans-serif;
 ### Values
 
 - `<family-name>`
-
   - : The name of a font family. This must be either a single {{cssxref("string")}} value or a space-separated sequence of {{cssxref("custom-ident")}} values. String values must be quoted but may contain any Unicode character. Custom identifiers are not quoted, but certain characters must be escaped.
 
     It is good practice to quote font family names that contain white space, digits, or punctuation characters other than hyphens.
@@ -110,41 +108,36 @@ font-family: "Gill Sans Extrabold", sans-serif;
     See also [Valid family names](#valid_family_names).
 
 - `<generic-name>`
-
   - : Generic font families are a fallback mechanism, a means of preserving some of the style sheet author's intent when none of the specified fonts are available. Generic family names are keywords and must not be quoted. A generic font family should be the last item in the list of font family names. The following keywords are defined:
-
     - `serif`
-
       - : Glyphs have finishing strokes, flared or tapering ends, or have actual serifed endings.
 
         For example: Lucida Bright, Lucida Fax, Palatino, Palatino Linotype, Palladio, URW Palladio, serif.
 
     - `sans-serif`
-
       - : Glyphs have stroke endings that are plain.
 
         For example: Open Sans, Fira Sans, Lucida Sans, Lucida Sans Unicode, Trebuchet MS, Liberation Sans, Nimbus Sans L, sans-serif.
 
     - `monospace`
-
       - : All glyphs have the same fixed width.
 
         For example: Fira Mono, DejaVu Sans Mono, Menlo, Consolas, Liberation Mono, Monaco, Lucida Console, monospace.
 
     - `cursive`
-
       - : Glyphs in cursive fonts generally have either joining strokes or other cursive characteristics beyond those of italic typefaces. The glyphs are partially or completely connected, and the result looks more like handwritten pen or brush writing than printed letter work.
 
         For example: Brush Script MT, Brush Script Std, Lucida Calligraphy, Lucida Handwriting, Apple Chancery, cursive.
 
     - `fantasy`
-
       - : Fantasy fonts are primarily decorative fonts that contain playful representations of characters.
 
         For example: Papyrus, Herculanum, Party LET, Curlz MT, Harrington, fantasy.
 
     - `system-ui`
       - : Glyphs are taken from the default user interface font on a given platform. Because typographic traditions vary widely across the world, this generic is provided for typefaces that don't map cleanly into the other generics.
+        > [!NOTE]
+        > As the name implies, `system-ui` is intended to make UI elements look like native apps, and not for typesetting large paragraphs of text. It may cause the displayed typeface to be undesirable for some users—for example, the default Windows CJK font may render Latin scripts poorly, and the `lang` attribute may not affect the displayed font. Some operating systems do not allow customizing `system-ui`, while browsers generally allow customizing the `sans-serif` font family. For large paragraphs, use `sans-serif` or some other non-UI font family instead.
     - `ui-serif`
       - : The default user interface serif font.
     - `ui-sans-serif`

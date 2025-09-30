@@ -71,10 +71,9 @@ We've already seen the {{htmlelement("title")}} element in action — this can b
 - The {{htmlelement("Heading_Elements", "h1")}} element appears on the page when loaded in the browser — generally this should be used once per page, to mark up the title of your page content (the story title, or news headline, or whatever is appropriate to your usage.)
 - The {{htmlelement("title")}} element is metadata that represents the title of the overall HTML document (not the document's content.)
 
-### Active learning: Inspecting an example
+### Inspecting an example
 
-1. To start off this active learning, we'd like you to go to our GitHub repo and download a copy of our [title-example.html page](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/title-example.html). To do this, either
-
+1. In this exercise, we'd like you to start off by going to our GitHub repo and downloading a copy of our [title-example.html page](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/title-example.html). To do this, either
    1. Copy and paste the code out of the page and into a new text file in your code editor, then save it in a sensible place.
    2. Press the "Raw" button on the GitHub page, which causes the raw code to appear (possibly in a new browser tab). Next, choose your browser's _Save Page As…_ menu and choose a sensible place to save the file.
 
@@ -115,7 +114,7 @@ If you set your character encoding to `ISO-8859-1`, for example (the character s
 > [!NOTE]
 > Some browsers (like Chrome) automatically fix incorrect encodings, so depending on what browser you use, you may not see this problem. You should still set an encoding of `utf-8` on your page anyway to avoid any potential problems in other browsers.
 
-### Active learning: Experiment with character encoding
+### Experimenting with character encoding
 
 To try this out, revisit the simple HTML template you obtained in the previous section on `<title>` (the [title-example.html page](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/title-example.html)), try changing the meta charset value to `ISO-8859-1`, and add the Japanese to your page. This is the code we used:
 
@@ -145,9 +144,9 @@ Specifying an author is beneficial in many ways: it is useful to be able to unde
 
 Specifying a description that includes keywords relating to the content of your page is useful as it has the potential to make your page appear higher in relevant searches performed in search engines (such activities are termed [Search Engine Optimization](/en-US/docs/Glossary/SEO), or {{glossary("SEO")}}.)
 
-### Active learning: The description's use in search engines
+### Exploring the description's use in search engines
 
-The description is also used on search engine result pages. Let's go through an exercise to explore this
+The description is also used on search engine result pages. Let's go through an exercise to explore this:
 
 1. Go to the [front page of The Mozilla Developer Network](/en-US/).
 2. View the page's source (right-click on the page, choose _View Page Source_ from the context menu.)
@@ -270,9 +269,9 @@ Just about all websites you'll use in the modern day will employ {{glossary("CSS
   > [!NOTE]
   > The `<script>` element may look like a {{glossary("void element")}}, but it's not, and so needs a closing tag. Instead of pointing to an external script file, you can also choose to put your script inside the `<script>` element.
 
-### Active learning: applying CSS and JavaScript to a page
+### Your turn: Applying CSS and JavaScript to a page
 
-1. To start this active learning, grab a copy of our [meta-example.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/meta-example.html), [script.js](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/script.js) and [style.css](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/style.css) files, and save them on your local computer in the same directory. Make sure they are saved with the correct names and file extensions.
+1. To start this exercise, grab a copy of our [meta-example.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/meta-example.html), [script.js](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/script.js) and [style.css](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/style.css) files, and save them on your local computer in the same directory. Make sure they are saved with the correct names and file extensions.
 2. Open the HTML file in both your browser, and your text editor.
 3. By following the information given above, add {{htmlelement("link")}} and {{htmlelement("script")}} elements to your HTML, so that your CSS and JavaScript are applied to your HTML.
 

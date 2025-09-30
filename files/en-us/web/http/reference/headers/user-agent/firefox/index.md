@@ -1,10 +1,10 @@
 ---
 title: Firefox user agent string reference
+short-title: Firefox UA string
 slug: Web/HTTP/Reference/Headers/User-Agent/Firefox
 page-type: guide
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 This document describes the user agent string used in Firefox 4 and later and applications based on Gecko 2.0 and later. For a breakdown of changes to the string in Gecko 2.0, see [Final User Agent string for Firefox 4](https://hacks.mozilla.org/2010/09/final-user-agent-string-for-firefox-4/) (blog post). See also this document on [user agent sniffing](/en-US/docs/Web/HTTP/Guides/Browser_detection_using_the_user_agent) and this [Hacks blog post](https://hacks.mozilla.org/2013/09/user-agent-detection-history-and-checklist/).
 
@@ -28,10 +28,10 @@ The UA string of Firefox itself is broken down into four components:
 
 For other products based on Gecko, the string can take one of two forms, where the tokens have the same meaning except those noted below:
 
-`Mozilla/5.0 (platform; rv:gecko-version) Gecko/gecko-trail appname/appversion`
-`Mozilla/5.0 (platform; rv:gecko-version) Gecko/gecko-trail Firefox/firefox-version appname/appversion`
+`Mozilla/5.0 (platform; rv:gecko-version) Gecko/gecko-trail app-name/app-version`
+`Mozilla/5.0 (platform; rv:gecko-version) Gecko/gecko-trail Firefox/firefox-version app-name/app-version`
 
-- `appname/appversion` indicates the application name and version. For instance, this could be `Camino/2.1.1`, or `SeaMonkey/2.7.1`.
+- `app-name/app-version` indicates the application name and version. For instance, this could be `Camino/2.1.1`, or `SeaMonkey/2.7.1`.
 - `Firefox/firefox-version` is an optional compatibility token that some Gecko-based browsers may choose to incorporate, to achieve maximum compatibility with websites that expect Firefox. `firefox-version` will generally represent the equivalent Firefox release corresponding to the given Gecko version. Some Gecko-based browsers may not opt into using this token; for this reason, sniffers should be looking for Gecko — not Firefox!
 
 ## Mobile and Tablet indicators
@@ -55,10 +55,14 @@ The preferred way to target content to a device form factor is to use CSS Media 
 
 Windows user agents have the following variations, where _x.y_ is the Windows NT version (for instance, Windows NT 6.1).
 
-| Windows version                  | Gecko user agent string                                                           |
-| -------------------------------- | --------------------------------------------------------------------------------- |
-| Windows NT on x86 or aarch64 CPU | Mozilla/5.0 (Windows NT _x_._y_; rv:10.0) Gecko/20100101 Firefox/10.0             |
-| Windows NT on x64 CPU            | Mozilla/5.0 (Windows NT _x_._y_; Win64; x64; rv:10.0) Gecko/20100101 Firefox/10.0 |
+| Windows version       | Gecko user agent string                                                           |
+| --------------------- | --------------------------------------------------------------------------------- |
+| Windows NT on x86 CPU | Mozilla/5.0 (Windows NT _x_._y_; rv:10.0) Gecko/20100101 Firefox/10.0             |
+| Windows NT on x64 CPU | Mozilla/5.0 (Windows NT _x_._y_; Win64; x64; rv:10.0) Gecko/20100101 Firefox/10.0 |
+
+> [!NOTE]
+> An aarch64 CPU is reported as x86_64 on Windows 11, and x86 on Windows 10 (since it doesn't support x64 emulation).
+> See [Bugzilla #1763310](https://bugzil.la/1763310).
 
 ## macOS
 
@@ -77,6 +81,9 @@ Linux is a more diverse platform. Your distribution of Linux might include an ex
 | --------------------------- | -------------------------------------------------------------------- |
 | Linux desktop on i686 CPU   | Mozilla/5.0 (X11; Linux i686; rv:10.0) Gecko/20100101 Firefox/10.0   |
 | Linux desktop on x86_64 CPU | Mozilla/5.0 (X11; Linux x86_64; rv:10.0) Gecko/20100101 Firefox/10.0 |
+
+> [!NOTE]
+> In Firefox 127.0 and later, 32-bit x86 will now be reported as x86_64 in Firefox's User-Agent string, {{domxref("navigator.platform")}}, and {{domxref("navigator.oscpu")}} (see [Firefox 127.0 Release Notes](https://www.firefox.com/en-US/firefox/127.0/releasenotes/)).
 
 ## Firefox for Android
 

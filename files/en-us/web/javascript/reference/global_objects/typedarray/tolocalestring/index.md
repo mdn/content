@@ -1,11 +1,11 @@
 ---
 title: TypedArray.prototype.toLocaleString()
+short-title: toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/toLocaleString
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.toLocaleString
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`toLocaleString()`** method of {{jsxref("TypedArray")}} instances returns a string representing the elements of the typed array. The elements are converted to strings using their `toLocaleString` methods and these strings are separated by a locale-specific string (such as a comma ","). This method has the same algorithm as {{jsxref("Array.prototype.toLocaleString()")}}.
 
@@ -37,7 +37,7 @@ toLocaleString(locales, options)
 ### Parameters
 
 - `locales` {{optional_inline}}
-  - : A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
+  - : A string with a {{glossary("BCP 47 language tag")}}, or an array of such strings. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
 - `options` {{optional_inline}}
   - : An object with configuration properties. See {{jsxref("Number.prototype.toLocaleString()")}}.
 

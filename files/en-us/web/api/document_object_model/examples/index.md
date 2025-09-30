@@ -13,153 +13,121 @@ This chapter provides some longer examples of web and XML development using the 
 The following example shows the use of the `height` and `width` properties alongside images of varying dimensions:
 
 ```html
-<!doctype html>
-<html lang="en">
-  <head>
-    <title>width/height example</title>
-    <script>
-      function init() {
-        const arrImages = new Array(3);
+<p>
+  Image 1: no height, width, or style
+  <img id="image1" src="https://www.mozilla.org/images/mozilla-banner.gif" />
+</p>
 
-        arrImages[0] = document.getElementById("image1");
-        arrImages[1] = document.getElementById("image2");
-        arrImages[2] = document.getElementById("image3");
+<p>
+  Image 2: height="50", width="500", but no style
+  <img
+    id="image2"
+    src="https://www.mozilla.org/images/mozilla-banner.gif"
+    height="50"
+    width="500" />
+</p>
 
-        const objOutput = document.getElementById("output");
-        let strHtml = "<ul>";
+<p>
+  Image 3: no height, width, but style="height: 50px; width: 500px;"
+  <img
+    id="image3"
+    src="https://www.mozilla.org/images/mozilla-banner.gif"
+    style="height: 50px; width: 500px;" />
+</p>
 
-        for (let i = 0; i < arrImages.length; i++) {
-          strHtml +=
-            "<li>image" +
-            (i + 1) +
-            ": height=" +
-            arrImages[i].height +
-            ", width=" +
-            arrImages[i].width +
-            ", style.height=" +
-            arrImages[i].style.height +
-            ", style.width=" +
-            arrImages[i].style.width +
-            "</li>";
-        }
-
-        strHtml += "</ul>";
-
-        objOutput.innerHTML = strHtml;
-      }
-    </script>
-  </head>
-  <body onload="init();">
-    <p>
-      Image 1: no height, width, or style
-      <img
-        id="image1"
-        src="https://www.mozilla.org/images/mozilla-banner.gif" />
-    </p>
-
-    <p>
-      Image 2: height="50", width="500", but no style
-      <img
-        id="image2"
-        src="https://www.mozilla.org/images/mozilla-banner.gif"
-        height="50"
-        width="500" />
-    </p>
-
-    <p>
-      Image 3: no height, width, but style="height: 50px; width: 500px;"
-      <img
-        id="image3"
-        src="https://www.mozilla.org/images/mozilla-banner.gif"
-        style="height: 50px; width: 500px;" />
-    </p>
-
-    <div id="output"></div>
-  </body>
-</html>
+<div id="output"></div>
 ```
 
-## Example 2: Image Attributes
+```js
+const arrImages = [
+  document.getElementById("image1"),
+  document.getElementById("image2"),
+  document.getElementById("image3"),
+];
+
+const objOutput = document.getElementById("output");
+let strHtml = "<ul>";
+
+for (let i = 0; i < arrImages.length; i++) {
+  const img = arrImages[i];
+  strHtml += `<li>image${i + 1}: height=${img.height}, width=${img.width}, style.height=${img.style.height}, style.width=${img.style.width}</li>`;
+}
+
+strHtml += "</ul>";
+
+objOutput.innerHTML = strHtml;
+```
+
+{{EmbedLiveSample("example_1_height_and_width", "", "300")}}
+
+## Example 2: border styles
 
 ```html
-<!doctype html>
-<html lang="en">
-  <head>
-    <title>Modifying an image border</title>
+<div id="box"></div>
 
-    <script>
-      function setBorderWidth(width) {
-        document.getElementById("img1").style.borderWidth = width + "px";
-      }
-    </script>
-  </head>
-
-  <body>
-    <p>
-      <img
-        id="img1"
-        src="image1.gif"
-        style="border: 5px solid green;"
-        width="100"
-        height="100"
-        alt="border test" />
-    </p>
-
-    <form name="FormName">
-      <input
-        type="button"
-        value="Make border 20px-wide"
-        onclick="setBorderWidth(20);" />
-      <input
-        type="button"
-        value="Make border 5px-wide"
-        onclick="setBorderWidth(5);" />
-    </form>
-  </body>
-</html>
+<form name="FormName">
+  <button id="btn1">Make border 20px-wide</button>
+  <button id="btn2">Make border 5px-wide</button>
+</form>
 ```
+
+```css
+#box {
+  border: 5px solid green;
+  width: 100px;
+  height: 100px;
+}
+```
+
+```js
+function setBorderWidth(width) {
+  document.getElementById("box").style.borderWidth = `${width}px`;
+}
+
+document.getElementById("btn1").addEventListener("click", () => {
+  setBorderWidth(20);
+});
+document.getElementById("btn2").addEventListener("click", () => {
+  setBorderWidth(5);
+});
+```
+
+{{EmbedLiveSample("example_2_border_styles", "", "200")}}
 
 ## Example 3: Manipulating Styles
 
 In this simple example, some basic style properties of an HTML paragraph element are accessed using the style object on the element and that object's CSS style properties, which can be retrieved and set from the DOM. In this case, you are manipulating the individual styles directly. In the next example (see Example 4), you can use stylesheets and their rules to change styles for whole documents.
 
 ```html
-<!doctype html>
-<html lang="en">
-  <head>
-    <title>Changing color and font-size example</title>
-
-    <script>
-      function changeText() {
-        const p = document.getElementById("pid");
-
-        p.style.color = "blue";
-        p.style.fontSize = "18pt";
-      }
-    </script>
-  </head>
-  <body>
-    <p id="pid" onclick="window.location.href = 'http://www.cnn.com/';">
-      linker
-    </p>
-
-    <form>
-      <p><input value="rec" type="button" onclick="changeText();" /></p>
-    </form>
-  </body>
-</html>
+<p id="pid">Some text</p>
+<form>
+  <p><button type="button">Change text</button></p>
+</form>
 ```
+
+```js
+function changeText() {
+  const p = document.getElementById("pid");
+
+  p.style.color = "blue";
+  p.style.fontSize = "18pt";
+}
+
+document.querySelector("button").addEventListener("click", () => {
+  changeText();
+});
+```
+
+{{EmbedLiveSample("example_3_manipulating_styles", "", "200")}}
 
 ## Example 4: Using Stylesheets
 
 The {{domxref("document.styleSheets", "styleSheets")}} property on the {{domxref("document")}} object returns a list of the stylesheets that have been loaded on that document. You can access these stylesheets and their rules individually using the stylesheet, style, and {{domxref("CSSRule")}} objects, as demonstrated in this example, which prints out all of the style rule selectors to the console.
 
 ```js
-const ss = document.styleSheets;
-
-for (let i = 0; i < ss.length; i++) {
-  for (let j = 0; j < ss[i].cssRules.length; j++) {
-    console.log(`${ss[i].cssRules[j].selectorText}\n`);
+for (const styleSheet of document.styleSheets) {
+  for (const rule of styleSheet.cssRules) {
+    console.log(`${rule.selectorText}\n`);
   }
 }
 ```
@@ -195,114 +163,105 @@ This example demonstrates how events fire and are handled in the DOM in a very s
 However, stopEvent also calls an event object method, {{domxref("event.stopPropagation")}}, which keeps the event from bubbling any further up into the DOM. Note that the table itself has an {{domxref("Element.click_event","onclick")}} event handler that ought to display a message when the table is clicked. But the stopEvent method has stopped propagation, and so after the data in the table is updated, the event phase is effectively ended, and an alert box is displayed to confirm this.
 
 ```html
-<!doctype html>
-<html lang="en">
-  <head>
-    <title>Event Propagation</title>
-
-    <style>
-      #t-daddy {
-        border: 1px solid red;
-      }
-      #c1 {
-        background-color: pink;
-      }
-    </style>
-
-    <script>
-      function stopEvent(event) {
-        const c2 = document.getElementById("c2");
-        c2.textContent = "hello";
-
-        // this ought to keep t-daddy from getting the click.
-        event.stopPropagation();
-        alert("event propagation halted.");
-      }
-
-      function load() {
-        const elem = document.getElementById("tbl1");
-        elem.addEventListener("click", stopEvent, false);
-      }
-    </script>
-  </head>
-
-  <body onload="load();">
-    <table id="t-daddy" onclick="alert('hi');">
-      <tr id="tbl1">
-        <td id="c1">one</td>
-      </tr>
-      <tr>
-        <td id="c2">two</td>
-      </tr>
-    </table>
-  </body>
-</html>
+<table id="t-daddy">
+  <tr id="tbl1">
+    <td id="c1">one</td>
+  </tr>
+  <tr>
+    <td id="c2">two</td>
+  </tr>
+</table>
 ```
+
+```css
+#t-daddy {
+  border: 1px solid red;
+}
+
+#c1 {
+  background-color: pink;
+}
+```
+
+```js
+function stopEvent(event) {
+  const c2 = document.getElementById("c2");
+  c2.textContent = "hello";
+
+  // this ought to keep t-daddy from getting the click.
+  event.stopPropagation();
+  console.log("event propagation halted.");
+}
+
+const elem = document.getElementById("tbl1");
+elem.addEventListener("click", stopEvent);
+
+document.getElementById("t-daddy").addEventListener("click", () => {
+  console.log("t-daddy clicked");
+});
+```
+
+{{EmbedLiveSample("example_5_event_propagation", "", "300")}}
 
 ## Example 6: getComputedStyle
 
-This example demonstrates how the {{domxref("window.getComputedStyle")}} method can be used to get the styles of an element that are not set using the `style` attribute or with JavaScript (e.g., `elt.style.backgroundColor="rgb(173 216 230)"`). These latter types of styles can be retrieved with the more direct {{domxref("HTMLElement.style", "elt.style")}} property, whose properties are listed in the [DOM CSS Properties List](/en-US/docs/Web/CSS/Reference).
+This example demonstrates how the {{domxref("window.getComputedStyle")}} method can be used to get the styles of an element that are not set using the `style` attribute or with JavaScript (e.g., `elt.style.backgroundColor="lightblue"`). These latter types of styles can be retrieved with the more direct {{domxref("HTMLElement.style", "elt.style")}} property, whose properties are listed in the [DOM CSS Properties List](/en-US/docs/Web/CSS/Reference).
 
 `getComputedStyle()` returns a {{domxref("CSSStyleDeclaration")}} object, whose individual style properties can be referenced with this object's {{domxref("CSSStyleDeclaration.getPropertyValue()", "getPropertyValue()")}} method, as the following example document shows.
 
 ```html
-<!doctype html>
-<html lang="en">
-  <head>
-    <title>getComputedStyle example</title>
+<div id="d1">&nbsp;</div>
 
-    <script>
-      function cStyles() {
-        const RefDiv = document.getElementById("d1");
-        const txtHeight = document.getElementById("t1");
-        const h_style = document.defaultView
-          .getComputedStyle(RefDiv, null)
-          .getPropertyValue("height");
-
-        txtHeight.value = h_style;
-
-        const txtWidth = document.getElementById("t2");
-        const w_style = document.defaultView
-          .getComputedStyle(RefDiv, null)
-          .getPropertyValue("width");
-
-        txtWidth.value = w_style;
-
-        const txtBackgroundColor = document.getElementById("t3");
-        const b_style = document.defaultView
-          .getComputedStyle(RefDiv, null)
-          .getPropertyValue("background-color");
-
-        txtBackgroundColor.value = b_style;
-      }
-    </script>
-
-    <style>
-      #d1 {
-        margin-left: 10px;
-        background-color: rgb(173 216 230);
-        height: 20px;
-        max-width: 20px;
-      }
-    </style>
-  </head>
-
-  <body>
-    <div id="d1">&nbsp;</div>
-
-    <form action="">
-      <p>
-        <button type="button" onclick="cStyles();">getComputedStyle</button>
-        height<input id="t1" type="text" value="1" /> max-width<input
-          id="t2"
-          type="text"
-          value="2" />
-        bg-color<input id="t3" type="text" value="3" />
-      </p>
-    </form>
-  </body>
-</html>
+<form action="">
+  <p>
+    <button type="button">getComputedStyle</button>
+    height<input id="t1" type="text" value="1" /> max-width<input
+      id="t2"
+      type="text"
+      value="2" />
+    bg-color<input id="t3" type="text" value="3" />
+  </p>
+</form>
 ```
+
+```css
+#d1 {
+  margin-left: 10px;
+  background-color: lightblue;
+  height: 20px;
+  max-width: 20px;
+}
+```
+
+```js
+function cStyles() {
+  const refDiv = document.getElementById("d1");
+  const txtHeight = document.getElementById("t1");
+  const hStyle = document.defaultView
+    .getComputedStyle(refDiv, null)
+    .getPropertyValue("height");
+
+  txtHeight.value = hStyle;
+
+  const txtWidth = document.getElementById("t2");
+  const wStyle = document.defaultView
+    .getComputedStyle(refDiv, null)
+    .getPropertyValue("width");
+
+  txtWidth.value = wStyle;
+
+  const txtBackgroundColor = document.getElementById("t3");
+  const bStyle = document.defaultView
+    .getComputedStyle(refDiv, null)
+    .getPropertyValue("background-color");
+
+  txtBackgroundColor.value = bStyle;
+}
+
+document.querySelector("button").addEventListener("click", cStyles);
+```
+
+{{EmbedLiveSample("example_6_getComputedStyle", "", "300")}}
 
 ## Example 7: Displaying Event Object Properties
 
@@ -313,76 +272,66 @@ The properties of event objects differs greatly between browsers, the [WHATWG DO
 Put the following code into a blank text file and load it into a variety of browsers, you'll be surprised at the different number and names of properties. You might also like to add some elements in the page and call this function from different event handlers.
 
 ```html
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Show Event properties</title>
-
-    <style>
-      table {
-        border-collapse: collapse;
-      }
-      thead {
-        font-weight: bold;
-      }
-      td {
-        padding: 2px 10px 2px 10px;
-      }
-
-      .odd {
-        background-color: #efdfef;
-      }
-      .even {
-        background-color: #ffffff;
-      }
-    </style>
-
-    <script>
-      function showEventProperties(e) {
-        function addCell(row, text) {
-          const cell = row.insertCell(-1);
-          cell.appendChild(document.createTextNode(text));
-        }
-
-        const event = e || window.event;
-        document.getElementById("eventType").textContent = event.type;
-
-        const table = document.createElement("table");
-        const thead = table.createTHead();
-        let row = thead.insertRow(-1);
-        const labelList = ["#", "Property", "Value"];
-        const len = labelList.length;
-
-        for (let i = 0; i < len; i++) {
-          addCell(row, labelList[i]);
-        }
-
-        const tbody = document.createElement("tbody");
-        table.appendChild(tbody);
-
-        for (const p in event) {
-          row = tbody.insertRow(-1);
-          row.className = row.rowIndex % 2 ? "odd" : "even";
-          addCell(row, row.rowIndex);
-          addCell(row, p);
-          addCell(row, event[p]);
-        }
-
-        document.body.appendChild(table);
-      }
-
-      window.onload = (event) => {
-        showEventProperties(event);
-      };
-    </script>
-  </head>
-
-  <body>
-    <h1>Properties of the DOM <span id="eventType"></span> Event Object</h1>
-  </body>
-</html>
+<h1>Properties of the DOM <span id="eventType"></span> Event Object</h1>
 ```
+
+```css
+table {
+  border-collapse: collapse;
+}
+thead {
+  font-weight: bold;
+}
+td {
+  padding: 2px 10px;
+}
+
+.odd {
+  background-color: #efdfef;
+}
+.even {
+  background-color: white;
+}
+```
+
+```js
+function showEventProperties(e) {
+  function addCell(row, text) {
+    const cell = row.insertCell(-1);
+    cell.appendChild(document.createTextNode(text));
+  }
+
+  const event = e || window.event;
+  document.getElementById("eventType").textContent = event.type;
+
+  const table = document.createElement("table");
+  const thead = table.createTHead();
+  let row = thead.insertRow(-1);
+  const labelList = ["#", "Property", "Value"];
+  const len = labelList.length;
+
+  for (let i = 0; i < len; i++) {
+    addCell(row, labelList[i]);
+  }
+
+  const tbody = document.createElement("tbody");
+  table.appendChild(tbody);
+
+  for (const p in event) {
+    row = tbody.insertRow(-1);
+    row.className = row.rowIndex % 2 ? "odd" : "even";
+    addCell(row, row.rowIndex);
+    addCell(row, p);
+    addCell(row, event[p]);
+  }
+
+  document.body.appendChild(table);
+}
+
+showEventProperties(event);
+```
+
+{{EmbedLiveSample("example_7_displaying_event_object_properties", "", "300")}}
 
 ## Example 8: Using the DOM Table Interface
 
@@ -397,20 +346,22 @@ To add a row and some cells to an existing table:
     <td>Row 0 Cell 1</td>
   </tr>
 </table>
-
-<script>
-  const table = document.getElementById("table0");
-  const row = table.insertRow(-1);
-  let cell;
-  let text;
-
-  for (let i = 0; i < 2; i++) {
-    cell = row.insertCell(-1);
-    text = "Row " + row.rowIndex + " Cell " + i;
-    cell.appendChild(document.createTextNode(text));
-  }
-</script>
 ```
+
+```js
+const table = document.getElementById("table0");
+const row = table.insertRow(-1);
+let cell;
+let text;
+
+for (let i = 0; i < 2; i++) {
+  cell = row.insertCell(-1);
+  text = `Row ${row.rowIndex} Cell ${i}`;
+  cell.appendChild(document.createTextNode(text));
+}
+```
+
+{{EmbedLiveSample("example_8_using_the_dom_table_interface", "", "300")}}
 
 ### Notes
 

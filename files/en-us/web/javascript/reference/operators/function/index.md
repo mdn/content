@@ -3,9 +3,8 @@ title: function expression
 slug: Web/JavaScript/Reference/Operators/function
 page-type: javascript-operator
 browser-compat: javascript.operators.function
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **`function`** keyword can be used to define a function inside an expression.
 
@@ -154,9 +153,8 @@ const value = (() => {
   const randomValue = Math.random();
   if (randomValue > 0.5) {
     return "heads";
-  } else {
-    return "tails";
   }
+  return "tails";
 })();
 ```
 

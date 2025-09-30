@@ -30,7 +30,7 @@ Luminance must be established before the contrast may be. When speaking of color
 
 ### Terminology
 
-Terminology can be confusing because different terms often describe the same thing. "Luminance" and "Saturation" are particularly important to get right. For example, "saturation" is known as "chroma" in some circles. In others, "chroma" and "saturation" are two different concepts. The "L" in the HSL color space is sometimes referred to as "luminosity," and other times as "lightness." Even something seemingly simple, like naming common colors, can be open to debate. For example, the color "crimson red" may be described in hex values as `#990000` by some and `#DC143C` by others. For this document, we'll use terminology as it is defined in the W3C, in the [CSS Color Module Level 4](https://www.w3.org/TR/css-color-4/)
+Terminology can be confusing because different terms often describe the same thing. "Luminance" and "Saturation" are particularly important to get right. For example, "saturation" is known as "chroma" in some circles. In others, "chroma" and "saturation" are two different concepts. The "L" in the HSL color space is sometimes referred to as "luminosity," and other times as "lightness." Even something seemingly simple, like naming common colors, can be open to debate. For example, the color "crimson red" may be described in hex values as `#990000` by some and `#DC143C` by others. For this document, we'll use terminology as it is defined on the CSS [`<named-color>`](/en-US/docs/Web/CSS/named-color) page.
 
 When working with color, it's important to know which "color space" you are working in, as different color spaces map to different measurement systems.
 
@@ -40,7 +40,7 @@ Currently, the {{glossary("RGB", "RGB color space")}} predominates as the space 
 
 ## The sRGB color space
 
-Color has many ways of being defined, as is apparent in the [`<color>` data type](/en-US/docs/Web/CSS/color_value), including RGB, RGB decimal, RGB percent, HSL, HWB, LCH, LAB, and CMYK, among others.
+Color has many ways of being defined, as is apparent in the [`<color>` data type](/en-US/docs/Web/CSS/color_value), including RGB, RGB decimal, RGB percent, HSL, HWB, LCH, Lab, and CMYK, among others.
 
 For digital concerns, much of the technology has historically resided in the RGB color space. The RGB color model is extended to include "alpha" — RGBA — to allow specification of the opacity of a color. Other methods for measuring color involve measurements using other color spaces and are supported in modern displays and browsers. Still, color measurements in the RGB color space predominate, including in video production.
 
@@ -82,7 +82,7 @@ color: hsl(300deg 100% 50% / 100%);
 color: hwb(300deg 0% 0%);
 color: hwb(300 0% 0% / 1);
 
-/* by LAB representation of the sRGB value*/
+/* by Lab representation of the sRGB value */
 color: lab(60 93.56 -60.5);
 color: lab(60 93.56 -60.5 / 1);
 
@@ -130,7 +130,7 @@ Where accessibility is concerned, however, standards and guidelines are currentl
 
 ### Querying color values
 
-The {{domxref('Window.getComputedStyle()')}} method returns values using the RGB Decimal Reference scale or via `color(srgb...)`. For example, calling `Window.getComputedStyle()` on a `<div>` with `background-color: #ff0000` set on it returns the computed background color as `rgb(255 0 0)` — the RGB Decimal reference. However, when [using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors) (for example `background-color: rgb(from blue 255 0 0)`), calling `Window.getComputedStyle()` returns the computed background color as `color(srgb 1 0 0)`. Being tied to computer hardware, `Window.getComputedStyle()` measures color in terms of RGB, not how the human eye perceives color.
+The {{domxref('Window.getComputedStyle()')}} method returns values using the RGB Decimal Reference scale or via `color(srgb...)`. For example, calling `Window.getComputedStyle()` on a `<div>` with `background-color: red` set on it returns the computed background color as `rgb(255, 0, 0)` — the RGB Decimal reference. However, when [using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors) (for example `background-color: rgb(from blue 255 0 0)`), calling `Window.getComputedStyle()` returns the computed background color as `color(srgb 1 0 0)`. Being tied to computer hardware, `Window.getComputedStyle()` measures color in terms of RGB, not how the human eye perceives color.
 
 ### Red / green color blindness
 
@@ -172,13 +172,13 @@ This statement is of course accurate, but may be confusing when used in referenc
 
 So, where do these numbers of 0 to 255 come from? Historically, graphics engines stored the color channels as a single byte, which means a range of integers between 0 and 255.
 
-The luminances of the primary colors are different. Yellow has a greater luminance than blue, for example. This was done by way of design, _to achieve white alignment of the monitor_, according to the NASA document, "[Luminance Contrast in Color Graphics](https://colorusage.arc.nasa.gov/design_lum_1.php)"
+The luminances of the primary colors are different. Yellow has a greater luminance than blue, for example. This was done by way of design, _to achieve white alignment of the monitor_, according to the NASA document, "[Luminance Contrast in Color Graphics](https://web.archive.org/web/20250216024807/https://colorusage.arc.nasa.gov/design_lum_1.php)"
 
 A color contrast ratio is meaningless without its luminance component, and once luminance is established, the color contrast ratio can be established.
 
-Where human perception is concerned, a difference in luminance matters more than a color difference. This is important, as luminance contrast enables the development of content that even those with color blindness can see. With this understanding, luminance may be manipulated so that colors that are difficult to see because of their low luminance could be made more legible by placing these colors against another with contrasting luminance. An interesting study by NASA on the color blue, for example, noted that this color, which has low luminance, can be made legible if _care was taken to achieve adequate luminance contrast_ (From the article, [Designing with blue](https://colorusage.arc.nasa.gov/blue_2.php))
+Where human perception is concerned, a difference in luminance matters more than a color difference. This is important, as luminance contrast enables the development of content that even those with color blindness can see. With this understanding, luminance may be manipulated so that colors that are difficult to see because of their low luminance could be made more legible by placing these colors against another with contrasting luminance. An interesting study by NASA on the color blue, for example, noted that this color, which has low luminance, can be made legible if _care was taken to achieve adequate luminance contrast_ (From the article, [Designing with blue](https://web.archive.org/web/20250216024807/https://colorusage.arc.nasa.gov/blue_2.php))
 
-Calculations for relative luminance are not casual ones. Luckily, there are [online luminance and contrast checkers](https://www.siegemedia.com/contrast-ratio) available, and even instructions on how to [calculate relative luminance](https://www.w3.org/TR/WCAG21/#dfn-relative-luminance).
+Calculations for relative luminance are not casual ones. Luckily, there are [online luminance and contrast checkers](https://www.siegemedia.com/contrast-ratio) available, and even instructions on how to [calculate relative luminance](https://w3c.github.io/wcag/guidelines/22/#dfn-relative-luminance).
 
 ## Perceiving color
 
@@ -236,7 +236,7 @@ Saturation is not brightness. Brightness refers to how much white or black is mi
 
 ### Saturation and luminance
 
-There is a loss of saturation at the extremes of luminance and the extremes of black and white. In NASA's [effect of luminance on saturation](https://colorusage.arc.nasa.gov/design_lum_1.php), they point out that there is a loss of saturation at low luminances, and also, "…the loss of saturation at high luminances–the colors converge on white."
+There is a loss of saturation at the extremes of luminance and the extremes of black and white. In NASA's [effect of luminance on saturation](https://web.archive.org/web/20250216024807/https://colorusage.arc.nasa.gov/design_lum_1.php), they point out that there is a loss of saturation at low luminances, and also, "…the loss of saturation at high luminances–the colors converge on white."
 
 ## Color combinations
 

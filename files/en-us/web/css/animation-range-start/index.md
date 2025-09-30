@@ -2,18 +2,16 @@
 title: animation-range-start
 slug: Web/CSS/animation-range-start
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.animation-range-start
+sidebar: cssref
 ---
-
-{{CSSRef}}{{SeeCompatTable}}
 
 The **`animation-range-start`** [CSS](/en-US/docs/Web/CSS) property is used to set the start of an animation's attachment range along its timeline, i.e., where along the timeline an animation will start.
 
 The `animation-range-start` and {{cssxref("animation-range-end")}} properties can also be set using the [`animation-range`](/en-US/docs/Web/CSS/animation-range) shorthand property.
 
-> **Note:** `animation-range-start` is included in the {{cssxref("animation")}} shorthand as a reset-only value. This means that including `animation` resets a previously-declared `animation-range-start` value to `normal`, but a specific value cannot be set via `animation`. When creating [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations), you need to declare `animation-range-start` after declaring any `animation` shorthand for it to take effect.
+> [!NOTE]
+> `animation-range-start` is included in the {{cssxref("animation")}} shorthand as a reset-only value. This means that including `animation` resets a previously-declared `animation-range-start` value to `normal`, but a specific value cannot be set via `animation`. When creating [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations), you need to declare `animation-range-start` after declaring any `animation` shorthand for it to take effect.
 
 ## Syntax
 
@@ -48,8 +46,8 @@ Also check out the [View Timeline Ranges Visualizer](https://scroll-driven-anima
 
 ### Creating a named view progress timeline with range start
 
-A view progress timeline named `--subjectReveal` is defined using the `view-timeline` property on a subject element with a `class` of `animation`.
-This is then set as the timeline for the same element using `animation-timeline: --subjectReveal;`. The result is that the subject element animates as it moves upwards through the document as it is scrolled.
+A view progress timeline named `--subject-reveal` is defined using the `view-timeline` property on a subject element with a `class` of `animation`.
+This is then set as the timeline for the same element using `animation-timeline: --subject-reveal;`. The result is that the subject element animates as it moves upwards through the document as it is scrolled.
 
 An `animation-range-start` declaration is also set to make the animation begin later than expected.
 
@@ -131,8 +129,8 @@ Last, an animation is specified on the element that animates its opacity and sca
 
 ```css
 .animation {
-  view-timeline: --subjectReveal block;
-  animation-timeline: --subjectReveal;
+  view-timeline: --subject-reveal block;
+  animation-timeline: --subject-reveal;
 
   animation-name: appear;
   animation-range-start: entry 25%;

@@ -1,10 +1,10 @@
 ---
 title: Firefox 57 (Quantum) for developers
+short-title: Firefox 57
 slug: Mozilla/Firefox/Releases/57
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 57 (a.k.a. Firefox Quantum) that will affect developers. Firefox 57 was released on November 14, 2017.
 
@@ -29,7 +29,7 @@ _No changes._
 
 ### CSS
 
-- The `minimal-ui` and `standalone` values of the [`display-mode`](/en-US/docs/Web/CSS/@media/display-mode) media query are now supported ([Firefox bug 1369815](https://bugzil.la/1369815)). See also the [Web app manifest `display` field](/en-US/docs/Web/Progressive_web_apps/Manifest#display).
+- The `minimal-ui` and `standalone` values of the [`display-mode`](/en-US/docs/Web/CSS/@media/display-mode) media query are now supported ([Firefox bug 1369815](https://bugzil.la/1369815)). See also the [Web app manifest `display` field](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/display).
 - The `grid-row-gap` and `grid-column-gap` properties are no longer reset by the {{CSSxRef("grid")}} shorthand ([Firefox bug 1387410](https://bugzil.la/1387410)).
 - The `layout.css.clip-path-shapes.enabled` preference has been removed ([Firefox bug 1399767](https://bugzil.la/1399767)). This preference allowed disabling the {{CSSxRef("&lt;basic-shape&gt;")}} support in {{CSSxRef("clip-path")}}. This support was shipped in Firefox 54 and can no longer be disabled.
 
@@ -91,7 +91,7 @@ _No changes._
 - Support for messages of arbitrary size (up to 1GiB, although 256kiB is more interoperable) is now supported on {{DOMxRef("RTCDataChannel")}} through use of the end-of-record (EOR) flag on SCTP messages. See [Understanding message size limits](/en-US/docs/Web/API/WebRTC_API/Using_data_channels#understanding_message_size_limits) for more information ([Firefox bug 979417](https://bugzil.la/979417)).
 
   > [!NOTE]
-  > Because Firefox doesn't yet support the SCTP ndata protocol that provides the ability to interleave SCTP messages from multiple sources, sending large data objects can cause significant delays on all other SCTP traffic. See [Firefox bug 1381145](https://bugzil.la/1381145) to track progress on implementing and deploying ndata support in Firefox.
+  > Because Firefox doesn't yet support the SCTP Stream Schedulers and User Message Interleaving protocol that provides the ability to interleave SCTP messages from multiple sources, sending large data objects can cause significant delays on all other SCTP traffic. See [Firefox bug 1381145](https://bugzil.la/1381145) to track progress on implementing and deploying stream schedulers support in Firefox.
 
 - The {{DOMxRef("RTCDataChannel.send()")}} method can now throw a `TypeError` exception if the size of the message you're trying to send is not compatible with the receiving {{Glossary("user agent")}} (this is implemented as part of [Firefox bug 979417](https://bugzil.la/979417)).
 - The [MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API) has been updated so that {{domxref("MediaRecorder/error_event", "error")}} events sent to report problems that occur while recording are now of type {{DOMxRef("MediaRecorderErrorEvent")}} rather than being generic events.
@@ -109,7 +109,7 @@ _No changes._
 
 ### Other
 
-- Firefox [headless mode](/en-US/docs/Mozilla/Firefox/Headless_mode) now includes a `-screenshot` flag that allows you to take website screenshots directly from the command line ([Firefox bug 1378010](https://bugzil.la/1378010)).
+- Firefox [headless mode](https://web.archive.org/web/20210604151145/https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Headless_mode) now includes a `-screenshot` flag that allows you to take website screenshots directly from the command line ([Firefox bug 1378010](https://bugzil.la/1378010)).
 
 ## Removals from the web platform
 
@@ -119,7 +119,7 @@ _No changes._
 
 ### APIs
 
-- Mozilla's proprietary [Social API](/en-US/docs/Archive/Social_API) has been completely removed ([Firefox bug 1388902](https://bugzil.la/1388902)).
+- Mozilla's proprietary [Social API](https://web.archive.org/web/20210509145412/https://developer.mozilla.org/en-US/docs/Archive/Social_API) has been completely removed ([Firefox bug 1388902](https://bugzil.la/1388902)).
 
 ### SVG
 
@@ -135,69 +135,55 @@ _No changes._
 The following APIs have been added or extended:
 
 - [`bookmarks`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks)
-
   - support for separators through [`bookmarks.BookmarkTreeNodeType`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNodeType)
 
 - [`browser_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action)
-
   - `theme_icons` property for light/dark theme icons
 
 - [`browserAction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction)
-
   - [`browserAction.openPopup()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/openPopup)
 
 - [`browserSettings`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings)
-
   - [`allowPopupsForUserEvents`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/allowPopupsForUserEvents)
   - [`homepageOverride`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/homepageOverride)
   - [`imageAnimationBehavior`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/imageAnimationBehavior)
   - [`newTabPageOverride`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/newTabPageOverride)
 
 - [`browsingData`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browsingData)
-
   - [`browsingData.removeLocalStorage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browsingData/removeLocalStorage)
 
 - [`clipboard`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/clipboard)
-
   - [`setImageData()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/clipboard/setImageData)
 
 - [`contextualIdentities`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities)
-
   - [`onCreated`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities/onCreated)
   - [`onRemoved`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities/onRemoved)
   - [`onUpdated`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities/onUpdated)
   - `colorCode` and `iconUrl` in [`contextualIdentities.ContextualIdentity`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities/ContextualIdentity)
 
 - [`devtools.panels`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels)
-
   - [`devtools.panels.ElementsPanel.createSidebarPane()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/createSidebarPane)
 
 - [`downloads`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/downloads)
-
   - `incognito` option in [`downloads.download()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/downloads/download)
   - `estimatedEndTime` property in [`downloads.DownloadItem`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/downloads/DownloadItem)
 
 - [`find`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/find)
-
   - [`find()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/find/find)
   - [`highlightResults()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/find/highlightResults)
   - [`removeHighlighting()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/find/removeHighlighting)
 
 - [`pageAction.openPopup()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/openPopup)
 - [`privacy`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy/websites)
-
   - [`websites.trackingProtectionMode`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy/websites)
 
 - [`proxy`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy)
-
   - `FindProxyForURL()` can now return an object
 
 - [`runtime`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime)
-
   - [`runtime.openOptionsPage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage) support on Android
 
 - [`sessions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sessions)
-
   - [`setTabValue()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sessions/setTabValue)
   - [`getTabValue()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sessions/getTabValue)
   - [`removeTabValue()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sessions/removeTabValue)
@@ -206,40 +192,29 @@ The following APIs have been added or extended:
   - [`removeWindowValue()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sessions/removeWindowValue)
 
 - [`sidebarAction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction)
-
   - [`sidebarAction.open()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction/open)
 
 - [`storage`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage)
-
   - [`storage.managed`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/managed)
 
 - [`tabs`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs)
-
   - `loadReplace` option in [`tabs.update()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/update)
   - `discarded` property in [`tabs.Tab`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab), [`tabs.onUpdated`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/onUpdated), and [`tabs.query()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query)
   - [`tabs.create()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/create) can open "view-source:" URLs
   - `openerTabId` property in [`tabs.Tab`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab), [`tabs.create()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/create), [`tabs.query()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query), and [`tabs.update()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/update)
 
 - [`theme`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme)
-
   - `colors.toolbar`
   - `colors.toolbar_field`
   - `colors.toolbar_field_text`
   - `colors.toolbar_text`
 
 - [`theme`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/theme)
-
   - `windowId` option to [`theme.update()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/theme/update)
 
 - [`webRequest`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest)
-
   - [`filterResponseData()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/filterResponseData)
   - `proxyInfo` property in [`webRequest`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest) events
 
 - [`windows`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows)
-
   - `allowScriptsToClose` option in [`windows.create()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/create)
-
-## Older versions
-
-{{Firefox_for_developers}}

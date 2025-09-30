@@ -32,12 +32,10 @@ A JSON object with the following properties, which have been set to the correspo
   - : A string describing the network connectivity information for the candidate.
     Additional information can be found in {{domxref("RTCIceCandidate.candidate")}}.
 - `sdpMid` {{optional_inline}}
-
   - : A string containing the identification tag of the media stream with which the candidate is associated, or `null` if there is no associated media stream.
     Additional information can be found in {{domxref("RTCIceCandidate.sdpMid")}}.
 
 - `sdpMLineIndex` {{optional_inline}}
-
   - : A number property containing the zero-based index of the m-line with which the candidate is associated, within the [SDP](/en-US/docs/Web/API/WebRTC_API/Protocols#sdp) of the media description, or `null` if no such associated exists.
     Additional information can be found in {{domxref("RTCIceCandidate.sdpMLineIndex")}}.
 

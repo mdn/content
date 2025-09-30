@@ -8,7 +8,7 @@ status:
 browser-compat: api.MediaQueryList.removeListener
 ---
 
-{{APIRef("CSSOM")}}{{Deprecated_Header}}
+{{APIRef("CSSOM view API")}}{{Deprecated_Header}}
 
 The **`removeListener()`** method of the
 {{DOMxRef("MediaQueryList")}} interface removes a listener from the
@@ -39,7 +39,7 @@ None ({{jsxref("undefined")}}).
 
 ```js
 const paragraph = document.querySelector("p");
-const mediaQueryList = window.matchMedia("(max-width: 600px)");
+const mediaQueryList = window.matchMedia("(width <= 600px)");
 
 function screenTest(e) {
   if (e.matches) {

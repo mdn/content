@@ -5,9 +5,10 @@ page-type: web-manifest-member
 status:
   - experimental
 browser-compat: manifests.webapp.launch_handler
+sidebar: pwasidebar
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The `launch_handler` member defines values that control the launch of a web application. Currently it can only contain a single value, `client_mode`, which specifies the context in which the app should be loaded when launched. For example, in an existing web app client containing an instance of the app, or in a new web app client. This leaves scope for more `launch_handler` values to be defined in the future.
 
@@ -16,7 +17,6 @@ The `launch_handler` member defines values that control the launch of a web appl
 `launch_handler` objects may contain the following values:
 
 - `client_mode` {{experimental_inline}}
-
   - : A string, or comma-separated array of strings, which specifies the context in which the app should be loaded when launched. If an array of strings is provided, the first valid value is used.
     Possible values are:</p>
     - `auto`
@@ -31,12 +31,18 @@ The `launch_handler` member defines values that control the launch of a web appl
 ## Examples
 
 ```json
-"launch_handler": {
+{
+  "launch_handler": {
     "client_mode": "focus-existing"
+  }
 }
+```
 
-"launch_handler": {
+```json
+{
+  "launch_handler": {
     "client_mode": ["focus-existing", "auto"]
+  }
 }
 ```
 
@@ -52,4 +58,4 @@ The `launch_handler` member defines values that control the launch of a web appl
 
 - [Launch Handler API: Control how your app is launched](https://developer.chrome.com/docs/web-platform/launch-handler/)
 - {{domxref("Window.launchQueue")}}
-- [Musicr 2.0](https://launch-handler.glitch.me/) demo app
+- [Musicr 2.0](https://mdn.github.io/dom-examples/launch-handler/) demo app

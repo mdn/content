@@ -3,9 +3,8 @@ title: brightness()
 slug: Web/CSS/filter-function/brightness
 page-type: css-function
 browser-compat: css.types.filter-function.brightness
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`brightness()`** [CSS](/en-US/docs/Web/CSS) {{cssxref("&lt;filter-function&gt;")}} applies a linear multiplier value on an element or an input image, making the image appear brighter or darker.
 
@@ -57,7 +56,7 @@ brightness(0%)
 brightness(0.4) /* Brightness of input is reduced to 40%, so input is 60% darker */
 brightness(40%)
 
-brightens()     /* Brightness of input is not changed */
+brightness()     /* Brightness of input is not changed */
 brightness(1)
 brightness(100%)
 
@@ -79,11 +78,11 @@ This example shows how to apply the `brightness()` filter to a paragraph via the
 
 ```css
 .container {
-  background: url(image.jpg) no-repeat right / contain #d4d5b2;
+  background: url("be_fierce.jpg") no-repeat right / contain #d4d5b2;
 }
 p {
   backdrop-filter: brightness(150%);
-  text-shadow: 2px 2px #ffffff;
+  text-shadow: 2px 2px white;
 }
 ```
 
@@ -94,14 +93,14 @@ p {
 }
 p {
   padding: 0.5rem;
-  color: #000000;
+  color: black;
   font-size: 2rem;
   font-family: sans-serif;
 }
 ```
 
 ```html hidden
-<div class="container" style="background-image: url(be_fierce.jpg);">
+<div class="container">
   <p>
     Text on images can be illegible and inaccessible even with a drop shadow.
   </p>
@@ -112,7 +111,7 @@ p {
 
 {{EmbedLiveSample('Applying_brightness_using_the_backdrop_filter_property', '100%', '280')}}
 
-In this example, the colors in the area behind the `<p>` element shift linearly. If the `backdrop-filter` property was set to `brightness(0%)`, the `<div>` area with the `<p>` element would have been black and hidden the image behind. At `brightness(100%)`, the `<div>` area color would be the same as the input `#d4d5b2`, and the image behind would be completely transparent. With the brightness set to `150%` as in this example, the colors in the image behind are getting hidden by the brightness of the `<div>` element.`
+In this example, the colors in the area behind the `<p>` element shift linearly. If the `backdrop-filter` property was set to `brightness(0%)`, the `<div>` area with the `<p>` element would have been black and hidden the image behind. At `brightness(100%)`, the `<div>` area color would be the same as the input `#d4d5b2`, and the image behind would be completely transparent. With the brightness set to `150%` as in this example, the colors in the image behind are getting hidden by the brightness of the `<div>` element.
 
 ### Applying brightness using the filter property
 
@@ -159,16 +158,7 @@ In this example, to create a filter that darkens the content on which it is appl
 
 Given the following:
 
-```css hidden
-.filter {
-  filter: brightness(0.75);
-}
-svg {
-  position: absolute;
-}
-```
-
-```html
+```html live-sample___svg_filter
 <svg role="none">
   <filter id="darken25" color-interpolation-filters="sRGB">
     <feComponentTransfer>
@@ -184,13 +174,13 @@ The following declarations produce similar effects:
 
 ```css
 filter: brightness(75%);
-filter: url(#darken25); /* with embedded SVG */
-filter: url(folder/fileName.svg#darken25); /* external svg filter definition */
+filter: url("#darken25"); /* with embedded SVG */
+filter: url("folder/fileName.svg#darken25"); /* external svg filter definition */
 ```
 
 In the images below, the first one has a `brightness()` filter function applied, the second one has a similar SVG brightness function applied, and the third is the original image for comparison.
 
-```html hidden
+```html hidden live-sample___svg_filter
 <table cellpadding="5">
   <thead>
     <tr>
@@ -203,13 +193,13 @@ In the images below, the first one has a `brightness()` filter function applied,
     <tr>
       <td>
         <img
-          class="filter"
+          class="css-filter"
           src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
           alt="darkened pride flag" />
       </td>
       <td>
         <img
-          style="filter: url(#darken25)"
+          class="svg-filter"
           src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
           alt="darkened pride flag" />
       </td>
@@ -223,7 +213,19 @@ In the images below, the first one has a `brightness()` filter function applied,
 </table>
 ```
 
-{{EmbedLiveSample('blur','100%','280')}}
+```css hidden live-sample___svg_filter
+.css-filter {
+  filter: brightness(0.75);
+}
+.svg-filter {
+  filter: url("#darken25");
+}
+svg:not(:root) {
+  display: none;
+}
+```
+
+{{EmbedLiveSample('svg_filter','100%','280')}}
 
 ## Specifications
 

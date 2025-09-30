@@ -3,9 +3,8 @@ title: font-family
 slug: Web/CSS/@font-palette-values/font-family
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.font-palette-values.font-family
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The [@font-palette-values](/en-US/docs/Web/CSS/@font-palette-values) [descriptor](/en-US/docs/Glossary/CSS_Descriptor) **`font-family`** is used to specify which font-family palette values are to be applied to. This need to match exactly the values used when setting the CSS [font-family](/en-US/docs/Web/CSS/font-family).
 
@@ -49,16 +48,16 @@ In this example, when the `font-family` descriptor is used in the [@font-palette
 #### CSS
 
 ```css
-@import url(https://fonts.googleapis.com/css2?family=Bungee+Spice);
+@import "https://fonts.googleapis.com/css2?family=Bungee+Spice";
 @font-palette-values --bungee-extra-spicy {
   font-family: "Bungee Spice";
   override-colors:
-    0 DarkRed,
-    1 Red;
+    0 darkred,
+    1 red;
 }
 
 h2 {
-  font-family: "Bungee Spice";
+  font-family: "Bungee Spice", fantasy;
 }
 
 h2.extra-spicy {
@@ -91,11 +90,11 @@ h2 {
 }
 
 h1 {
-  font-family: "Bungee Spice";
+  font-family: "Bungee Spice", fantasy;
 }
 
 h2 {
-  font-family: Bixa;
+  font-family: Bixa, fantasy;
 }
 ```
 

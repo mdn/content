@@ -9,7 +9,7 @@ browser-compat: api.Node
 
 The {{Glossary("DOM")}} **`Node`** interface is an abstract base
 class upon which many other DOM API objects are based, thus letting those object types
-to be used similarly and often interchangeably. As an abstract class, there is
+be used similarly and often interchangeably. As an abstract class, there is
 no such thing as a plain `Node` object. All objects that implement
 `Node` functionality are based on one of its subclasses. Most notable are
 {{domxref("Document")}}, {{domxref("Element")}}, and {{domxref("DocumentFragment")}}.
@@ -60,7 +60,6 @@ _In addition to the properties below, `Node` inherits properties from its parent
     node will have the `'#text'` string, or a {{DOMxRef("Document")}} node will
     have the `'#document'` string.
 - {{DOMxRef("Node.nodeType")}} {{ReadOnlyInline}}
-
   - : Returns an `unsigned short` representing the type of the node. Possible
     values are:
 
@@ -83,7 +82,7 @@ _In addition to the properties below, `Node` inherits properties from its parent
     a document, returns `null`.
 - {{DOMxRef("Node.parentNode")}} {{ReadOnlyInline}}
   - : Returns a `Node` that is the parent of this node. If there is no such
-    node, like if this node is the top of the tree or if doesn't participate in a tree,
+    node — for example, if this node is the top of the tree, or if it doesn't participate in a tree —
     this property returns `null`.
 - {{DOMxRef("Node.parentElement")}} {{ReadOnlyInline}}
   - : Returns an {{DOMxRef("Element")}} that is the parent of this node. If the node has

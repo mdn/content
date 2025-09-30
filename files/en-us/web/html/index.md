@@ -3,9 +3,8 @@ title: "HTML: HyperText Markup Language"
 short-title: HTML
 slug: Web/HTML
 page-type: landing-page
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 **HTML** (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content. Other technologies besides HTML are generally used to describe a web page's appearance/presentation ([CSS](/en-US/docs/Web/CSS)) or functionality/behavior ([JavaScript](/en-US/docs/Web/JavaScript)).
 
@@ -25,6 +24,8 @@ The articles below can help you learn more about HTML.
   - : Our [Learn web development](/en-US/docs/Learn_web_development) section's HTML module teaches all the HTML fundamentals from the ground up.
 
 ## Guides
+
+The [HTML guides](/en-US/docs/Web/HTML/Guides) help you build with HTML on the web, covering topics such as forms, CORS, content preloading, and responsive images.
 
 - [HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms)
   - : Forms are a very important part of the Web — these provide much of the functionality you need for interacting with websites, e.g., registering and logging in, sending feedback, buying products, and more. This module gets you started with creating the client-side/front-end parts of forms.

@@ -1,10 +1,10 @@
 ---
 title: Firefox 45 for developers
+short-title: Firefox 45
 slug: Mozilla/Firefox/Releases/45
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 To test the latest developer features of Firefox, install Firefox Developer Edition Firefox 45 was released on March 8, 2016. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
@@ -31,7 +31,6 @@ Highlights:
 
 - {{cssxref("word-spacing")}} now allows percentage values ([Firefox bug 1038663](https://bugzil.la/1038663)).
 - Our implementation of CSS Grids has been improved and is no more considered experimental; it is now activated by default in nightly and developer edition, but not for beta and release ([Firefox bug 1000592](https://bugzil.la/1000592)):
-
   - Gutters, that is the `grid-column-gap`, `grid-row-gap`, and `grid-gap` properties are now supported ([Firefox bug 1176792](https://bugzil.la/1176792)).
   - The implied minimum size of grid Items, that is the special {{cssxref("min-width")}} and {{cssxref("min-height")}} `auto` behavior has been implemented ([Firefox bug 1176775](https://bugzil.la/1176775)).
   - {{cssxref("align-self")}} and {{cssxref("justify-self")}} are now supported on grid layouts ([Firefox bug 1151213](https://bugzil.la/1151213)).
@@ -44,7 +43,6 @@ Highlights:
 - The `inline-start` and `inline-end` values have been added to {{cssxref("float")}} and {{cssxref("clear")}} ([Firefox bug 1122918](https://bugzil.la/1122918)). They are enabled by default on Nightly and Aurora (Dev edition), as well as on Firefox OS; to activate it on a release or beta version, you need to flip the `layout.css.float-logical-values.enabled` to `true`.
 - The {{cssxref("text-emphasis")}}, {{cssxref("text-emphasis-style")}}, {{cssxref("text-emphasis-color")}}, and {{cssxref("text-emphasis-position")}} have been implemented; they are disabled by default (set `layout.css.text-emphasis.enabled` to true to activate them ([Firefox bug 1040668](https://bugzil.la/1040668)).
 - Several `-webkit` prefixed properties and values have been added for web compatibility, behind the preference `layout.css.prefixes.webkit`, defaulting to `false`:
-
   - Added `-webkit-backface-visibility`, `-webkit-perspective` and `-webkit-perspective-origin` for web compatibility, behind the preference `layout.css.prefixes.webkit`, defaulting to `false` ([Firefox bug 1179444](https://bugzil.la/1179444)).
 
 ### JavaScript
@@ -140,12 +138,8 @@ _No change._
 
 ### Search plugins
 
-Starting in Firefox 45, search plugins located in the user's profile's `searchplugins` directory are no longer automatically loaded on startup. Instead, a list of user-installed plugins is maintained and only those plugins are loaded. In effect, this means that the only ways to install new search plugins are for the user to do so in the Firefox UX (via [OpenSearch discovery](/en-US/docs/Mozilla/Add-ons/Creating_OpenSearch_plugins_for_Firefox), for instance) or for an add-on to install it. Also, when a new search plugin is installed, more information is recorded about where it came from, for future use by profile debugging and cleaning tools.
+Starting in Firefox 45, search plugins located in the user's profile's `searchplugins` directory are no longer automatically loaded on startup. Instead, a list of user-installed plugins is maintained and only those plugins are loaded. In effect, this means that the only ways to install new search plugins are for the user to do so in the Firefox UX (via [OpenSearch discovery](/en-US/docs/Web/XML/Guides/OpenSearch), for instance) or for an add-on to install it. Also, when a new search plugin is installed, more information is recorded about where it came from, for future use by profile debugging and cleaning tools.
 
 ### Other
 
 - WebIDL constructors could be called without the [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator in chrome context. Now such code will raise a [`TypeError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError) as in Web content since Firefox 30. For example, `var req = XMLHttpRequest();` needs to be `var req = new XMLHttpRequest();`.
-
-## Older versions
-
-{{Firefox_for_developers}}

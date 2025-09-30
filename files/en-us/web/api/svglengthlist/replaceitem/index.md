@@ -29,9 +29,9 @@ The {{domxref("SVGLength")}} that was added the list.
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `NoModificationAllowedError`
+- `NoModificationAllowedError` {{domxref("DOMException")}}
   - : Thrown when the list is read-only.
-- {{domxref("DOMException")}} `IndexSizeError`
+- `IndexSizeError` {{domxref("DOMException")}}
   - : Thrown when the index is out of bounds for the list.
 
 ## Examples

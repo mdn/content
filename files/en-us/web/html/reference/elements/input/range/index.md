@@ -3,9 +3,8 @@ title: <input type="range">
 slug: Web/HTML/Reference/Elements/input/range
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_range
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 {{HTMLElement("input")}} elements of type **`range`** let the user specify a numeric value which must be no less than a given value, and no more than another given value. The precise value, however, is not considered important. This is typically represented using a slider or dial control rather than a text entry box like the {{HTMLElement('input/number', 'number')}} input type.
 
@@ -49,18 +48,9 @@ input {
 
 If the user's browser doesn't support type `range`, it will fall back and treat it as a `{{HTMLElement('input/text', 'text')}}` input.
 
-### Validation
+## Value
 
-There is no pattern validation available; however, the following forms of automatic validation are performed:
-
-- If the [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) is set to something which can't be converted into a valid floating-point number, validation fails because the input is suffering from a bad input.
-- The value won't be less than [`min`](/en-US/docs/Web/HTML/Reference/Elements/input#min). The default is 0.
-- The value won't be greater than [`max`](/en-US/docs/Web/HTML/Reference/Elements/input#max). The default is 100.
-- The value will be a multiple of [`step`](/en-US/docs/Web/HTML/Reference/Elements/input#step). The default is 1.
-
-### Value
-
-The [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) attribute contains a string which contains a string representation of the selected number. The value is never an empty string (`""`). The default value is halfway between the specified minimum and maximum—unless the maximum is actually less than the minimum, in which case the default is set to the value of the `min` attribute. The algorithm for determining the default value is:
+The value of an `<input type="range">` element is set using the [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) attribute which accepts a string representing the selected number. The value is never an empty string (`""`). The default value is halfway between the specified minimum and maximum—unless the maximum is actually less than the minimum, in which case the default is set to the value of the `min` attribute. The algorithm for determining the default value is:
 
 ```js
 defaultValue =
@@ -70,6 +60,15 @@ defaultValue =
 ```
 
 If an attempt is made to set the value lower than the minimum, it is set to the minimum. Similarly, an attempt to set the value higher than the maximum results in it being set to the maximum.
+
+### Validation
+
+There is no pattern validation available; however, the following forms of automatic validation are performed:
+
+- If the [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) is set to something which can't be converted into a valid floating-point number, validation fails because the input is suffering from a bad input.
+- The value won't be less than [`min`](/en-US/docs/Web/HTML/Reference/Elements/input#min). The default is 0.
+- The value won't be greater than [`max`](/en-US/docs/Web/HTML/Reference/Elements/input#max). The default is 100.
+- The value will be a multiple of [`step`](/en-US/docs/Web/HTML/Reference/Elements/input#step). The default is 1.
 
 ## Additional attributes
 
@@ -101,14 +100,14 @@ This value must be less than or equal to the value of the [`max`](/en-US/docs/We
 
 ### step
 
-The `step` attribute is a number that specifies the granularity that the value must adhere to. Only values that match the specified stepping interval ([`min`](#min) if specified, [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) otherwise, or an appropriate default value if neither of those is provided) are valid.
+The `step` attribute is a number that specifies the granularity that the value must adhere to, or the special value `any`, which is described below. Only values which are a whole number of steps from the step base are valid. The step base is [`min`](#min) if specified, [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) otherwise, or `0` if neither is provided.
 
-The `step` attribute can also be set to the `any` string value. This `step` value means that no stepping interval is implied and any value is allowed in the specified range (barring other constraints, such as [`min`](#min) and [`max`](#max)). See the [Setting step to the `any` value](#setting_step_to_any) example for how this works in supported browsers.
+The default stepping value for `step` inputs is `1`, allowing only integers to be entered—_unless_ the stepping base is not an integer.
+
+A string value of `any` means that no stepping is implied, and any value is allowed (barring other constraints, such as [`min`](#min) and [`max`](#max)). See the [Setting step to the `any` value](#setting_step_to_any) example for how this works in supported browsers.
 
 > [!NOTE]
 > When the value entered by a user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round off the value to the nearest valid value, preferring to round numbers up when there are two equally close options.
-
-The default stepping value for `range` inputs is 1, allowing only integers to be entered, _unless_ the stepping base is not an integer; for example, if you set `min` to -10 and `value` to 1.5, then a `step` of 1 will allow only values such as 1.5, 2.5, 3.5,… in the positive direction and -0.5, -1.5, -2.5,… in the negative direction. See the [HTML `step` attribute](/en-US/docs/Web/HTML/Reference/Attributes/step).
 
 ## Non-standard attributes
 

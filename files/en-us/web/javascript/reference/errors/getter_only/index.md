@@ -2,11 +2,10 @@
 title: 'TypeError: setting getter-only property "x"'
 slug: Web/JavaScript/Reference/Errors/Getter_only
 page-type: javascript-error
+sidebar: jssidebar
 ---
 
-{{jsSidebar("Errors")}}
-
-The JavaScript [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)-only exception "setting getter-only property" occurs when there is an attempt to set a new value to a property for which only a [getter](/en-US/docs/Web/JavaScript/Reference/Functions/get) is specified, or when setting a [private property](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) that similarly only has a getter defined.
+The JavaScript [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)-only exception "setting getter-only property" occurs when there is an attempt to set a new value to a property for which only a [getter](/en-US/docs/Web/JavaScript/Reference/Functions/get) is specified, or when setting a [private accessor property](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements) that similarly only has a getter defined.
 
 ## Message
 
@@ -26,7 +25,7 @@ TypeError: Trying to access an undefined private setter (Safari)
 
 There is an attempt to set a new value to a property for which only a [getter](/en-US/docs/Web/JavaScript/Reference/Functions/get) is specified.
 While this will be silently ignored in non-strict mode, it will throw a
-{{jsxref("TypeError")}} in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode). Classes are always in strict mode, so assigning to a getter-only private property always throws this error.
+{{jsxref("TypeError")}} in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode). Classes are always in strict mode, so assigning to a getter-only private element always throws this error.
 
 ## Examples
 

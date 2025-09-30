@@ -1,15 +1,13 @@
 ---
 title: Array.prototype.every()
+short-title: every()
 slug: Web/JavaScript/Reference/Global_Objects/Array/every
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.every
+sidebar: jsref
 ---
 
-{{JSRef}}
-
-The **`every()`** method of {{jsxref("Array")}} instances tests whether
-all elements in the array pass the test implemented by the provided function. It
-returns a Boolean value.
+The **`every()`** method of {{jsxref("Array")}} instances returns `false` if it finds one element in the array that does not satisfy the provided testing function. Otherwise, it returns `true`.
 
 {{InteractiveExample("JavaScript Demo: Array.prototype.every()", "shorter")}}
 

@@ -3,9 +3,8 @@ title: scale3d()
 slug: Web/CSS/transform-function/scale3d
 page-type: css-function
 browser-compat: css.types.transform-function.scale3d
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`scale3d()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) defines a transformation that resizes an element in 3D space.
 Because the amount of scaling is defined by a vector [sx, sy, sz], it can resize different dimensions at different scales. Its
@@ -69,32 +68,32 @@ transform: scale3d(-1.4, 0.4, 0.7);
 }
 
 .front {
-  background: rgba(90, 90, 90, 0.7);
+  background: rgb(90 90 90 / 0.7);
   transform: translateZ(50px);
 }
 
 .back {
-  background: rgba(0, 210, 0, 0.7);
+  background: rgb(0 210 0 / 0.7);
   transform: rotateY(180deg) translateZ(50px);
 }
 
 .right {
-  background: rgba(210, 0, 0, 0.7);
+  background: rgb(210 0 0 / 0.7);
   transform: rotateY(90deg) translateZ(50px);
 }
 
 .left {
-  background: rgba(0, 0, 210, 0.7);
+  background: rgb(0 0 210 / 0.7);
   transform: rotateY(-90deg) translateZ(50px);
 }
 
 .top {
-  background: rgba(210, 210, 0, 0.7);
+  background: rgb(210 210 0 / 0.7);
   transform: rotateX(90deg) translateZ(50px);
 }
 
 .bottom {
-  background: rgba(210, 0, 210, 0.7);
+  background: rgb(210 0 210 / 0.7);
   transform: rotateX(-90deg) translateZ(50px);
 }
 ```
@@ -104,13 +103,10 @@ is done in each direction. If all three coordinates are equal, the scaling is un
 {{glossary("aspect ratio")}} of the element is preserved (this is a [homothetic transformation](https://en.wikipedia.org/wiki/Homothetic_transformation)).
 
 When a coordinate value is outside the \[-1, 1] range, the element grows along that dimension; when inside, it
-shrinks. If it is negative, the result a [point reflection](https://en.wikipedia.org/wiki/Point_reflection)
+shrinks. If it is negative, the result is a [point reflection](https://en.wikipedia.org/wiki/Point_reflection)
 in that dimension. A value of 1 has no effect.
 
 ## Syntax
-
-The `scale3d()` function is specified with three values, which represent the amount of scaling to be
-applied in each direction.
 
 ```css
 scale3d(sx, sy, sz)

@@ -5,7 +5,7 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/Events","Learn_web_development/Core/Scripting/Image_gallery", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Events","Learn_web_development/Core/Scripting/Test_your_skills/Events", "Learn_web_development/Core/Scripting")}}
 
 We've seen that a web page is composed of _elements_ — headings, paragraphs of text, images, buttons, and so on — and that you can listen for events that happen to these elements. For example, you could add a listener to a button, and it will run when the user clicks the button.
 
@@ -133,9 +133,7 @@ The HTML looks like this:
 
 <div class="hidden">
   <video>
-    <source
-      src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
-      type="video/webm" />
+    <source src="/shared-assets/videos/flower.webm" type="video/webm" />
     <p>
       Your browser doesn't support HTML video. Here is a
       <a href="rabbit320.mp4">link to the video</a> instead.
@@ -156,7 +154,7 @@ We're using CSS to hide elements with the `"hidden"` class set.
 div {
   width: 100%;
   height: 100%;
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 
 .hidden {
@@ -228,9 +226,7 @@ All we're doing here is calling `stopPropagation()` on the event object in the h
 
 <div class="hidden">
   <video>
-    <source
-      src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
-      type="video/webm" />
+    <source src="/shared-assets/videos/flower.webm" type="video/webm" />
     <p>
       Your browser doesn't support HTML video. Here is a
       <a href="rabbit320.mp4">link to the video</a> instead.
@@ -243,7 +239,7 @@ All we're doing here is calling `stopPropagation()` on the event object in the h
 div {
   width: 100%;
   height: 100%;
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 
 .hidden {
@@ -412,29 +408,21 @@ Note that when we click the button, `target` is the button element every time, w
 
 {{embedlivesample("target and currentTarget")}}
 
-The `target` property is commonly used in event delegation, as in our [Event delegation](#event_delegation) example above.
-
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? To verify you've retained this information before you move on — see [Test your skills: Events](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills/Events).
+The `target` property is commonly used in event delegation, as seen in our [Event delegation](#event_delegation) example above.
 
 ## Summary
 
-You should now know all you need to know about web events at this early stage.
-As mentioned, events are not really part of the core JavaScript — they are defined in browser Web APIs.
+You should now know all you need to know about web events at this early stage. As mentioned, events are not really part of the core JavaScript language — they are defined in browser Web APIs.
 
-Also, it is important to understand that the different contexts in which JavaScript is used have different event models — from Web APIs to other areas such as browser WebExtensions and Node.js (server-side JavaScript).
-We are not expecting you to understand all of these areas now, but it certainly helps to understand the basics of events as you forge ahead with learning web development.
-
-Next up, you'll find a challenge that will test your understanding of the last few topics.
+In the next article, we'll give you some tests that you can use to check how well you've understood and retained all the information we've given you on events.
 
 ## See also
 
 - [domevents.dev](https://domevents.dev/)
   - : A useful interactive playground app that enables learning about the behavior of the DOM Event system through exploration.
-- [Event reference](/en-US/docs/Web/Events)
-  - : The main MDN event reference.
+- [DOM events](/en-US/docs/Web/API/Document_Object_Model/Events)
+  - : A comprehensive guide for understanding and handling events.
 - [Event order](https://www.quirksmode.org/js/events_order.html)
   - : An excellently detailed discussion of capturing and bubbling by Peter-Paul Koch.
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/Events","Learn_web_development/Core/Scripting/Image_gallery", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Events","Learn_web_development/Core/Scripting/Test_your_skills/Events", "Learn_web_development/Core/Scripting")}}

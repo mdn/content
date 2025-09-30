@@ -1,5 +1,6 @@
 ---
-title: aria-labelledby
+title: "ARIA: aria-labelledby attribute"
+short-title: aria-labelledby
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-labelledby
@@ -89,14 +90,23 @@ Fortunately, the HTML {{HTMLElement('input')}} with `type="checkbox"` works with
 - ID reference list
   - : Space separated list of one or more ID values referencing the elements that label the current element.
 
+## Associated interfaces
+
+- {{domxref("Element.ariaLabelledByElements")}}
+  - : The `ariaLabelledByElements` property is part of each element's interface.
+    Its value is an array of subclasses of {{domxref("Element")}} that reflect the `id` references in the `aria-labelledby` attribute ([with some caveats](/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references)).
+- {{domxref("ElementInternals.ariaLabelledByElements")}}
+  - : The `ariaLabelledByElements` property is part of each custom element's interface.
+    Its value is an array of subclasses of {{domxref("Element")}} that reflect the `id` references in the `aria-labelledby` attribute ([with some caveats](/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references)).
+
 ## Associated roles
 
 Used in almost all roles **except** roles that can not be provided an accessible name by the author.
 
 The `aria-labelledby` attribute is **NOT** supported in:
 
-- [`code`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
 - [`caption`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`code`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
 - [`deletion`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
 - [`emphasis`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
 - [`generic`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role)
@@ -106,8 +116,8 @@ The `aria-labelledby` attribute is **NOT** supported in:
 - [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) / [`none`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/none_role)
 - [`strong`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
 - [`subscript`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
-- [`superscript`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
 - [`suggestion`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/suggestion_role)
+- [`superscript`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
 - [`term`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/term_role)
 - [`time`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
 

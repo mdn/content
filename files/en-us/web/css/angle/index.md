@@ -3,13 +3,12 @@ title: <angle>
 slug: Web/CSS/angle
 page-type: css-type
 browser-compat: css.types.angle
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`<angle>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents an angle value expressed in degrees, gradians, radians, or turns. It is used, for example, in {{cssxref("&lt;gradient&gt;")}}s and in some {{cssxref("transform")}} functions.
 
-{{InteractiveExample("CSS Demo: &amp;lt;angle&amp;gt;")}}
+{{InteractiveExample("CSS Demo: &lt;angle&gt;")}}
 
 ```css interactive-example-choice
 transform: rotate(45deg);

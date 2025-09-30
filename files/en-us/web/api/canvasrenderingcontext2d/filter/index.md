@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.CanvasRenderingContext2D.filter
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 The
 **`CanvasRenderingContext2D.filter`**
@@ -37,11 +37,9 @@ of the following filter functions in a string.
     value of `0%` will create a drawing that is completely black. A value of
     `100%` leaves the drawing unchanged.
 - [`drop-shadow()`](/en-US/docs/Web/CSS/filter-function/drop-shadow)
-
   - : Applies a drop shadow effect to the drawing. A drop shadow is effectively a blurred,
     offset version of the drawing's alpha mask drawn in a particular color, composited
     below the drawing. This function takes up to five arguments:
-
     - `<offset-x>`
       - : See {{cssxref("&lt;length&gt;")}} for possible
         units. Specifies the horizontal distance of the shadow.
@@ -121,11 +119,17 @@ photo of a rhino.
 
 ```html
 <canvas id="canvas" width="400" height="150"></canvas>
-<div style="display:none;">
+<div class="hidden">
   <img
     id="source"
     src="https://mdn.github.io/shared-assets/images/examples/rhino.jpg" />
 </div>
+```
+
+```css hidden
+.hidden {
+  display: none;
+}
 ```
 
 #### JavaScript
@@ -140,7 +144,7 @@ image.addEventListener("load", (e) => {
   ctx.drawImage(image, 0, 0, image.width * 0.6, image.height * 0.6);
 
   // Draw image with filter
-  ctx.filter = "contrast(1.4) sepia(1) drop-shadow(-9px 9px 3px #e81)";
+  ctx.filter = "contrast(1.4) sepia(1) drop-shadow(-9px 9px 3px #ee8811)";
   ctx.drawImage(image, 400, 0, -image.width * 0.6, image.height * 0.6);
 });
 ```

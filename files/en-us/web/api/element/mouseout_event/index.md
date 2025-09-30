@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Element.mouseout_event
 ---
 
-{{APIRef}}
+{{APIRef("UI Events")}}
 
 The **`mouseout`** event is fired at an {{domxref("Element")}} when a pointing device (usually a mouse) is used to move the cursor so that it is no longer contained within the element or one of its children.
 
@@ -18,10 +18,10 @@ If the target element has child elements, `mouseout` and `mouseover` events fire
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("mouseout", (event) => {});
+```js-nolint
+addEventListener("mouseout", (event) => { })
 
-onmouseout = (event) => {};
+onmouseout = (event) => { }
 ```
 
 ## Event type
@@ -41,9 +41,9 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 - {{domxref("MouseEvent.buttons")}} {{ReadOnlyInline}}
   - : The buttons being pressed (if any) when the mouse event was fired.
 - {{domxref("MouseEvent.clientX")}} {{ReadOnlyInline}}
-  - : The X coordinate of the mouse pointer in [viewport coordinates](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems#viewport).
+  - : The X coordinate of the mouse pointer in [viewport coordinates](/en-US/docs/Web/API/CSSOM_view_API/Coordinate_systems#viewport).
 - {{domxref("MouseEvent.clientY")}} {{ReadOnlyInline}}
-  - : The Y coordinate of the mouse pointer in [viewport coordinates](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems#viewport).
+  - : The Y coordinate of the mouse pointer in [viewport coordinates](/en-US/docs/Web/API/CSSOM_view_API/Coordinate_systems#viewport).
 - {{domxref("MouseEvent.ctrlKey")}} {{ReadOnlyInline}}
   - : Returns `true` if the <kbd>control</kbd> key was down when the mouse event was fired.
 - {{domxref("MouseEvent.layerX")}} {{Non-standard_inline}} {{ReadOnlyInline}}
@@ -67,9 +67,9 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 - {{domxref("MouseEvent.relatedTarget")}} {{ReadOnlyInline}}
   - : The secondary target for the event, if there is one.
 - {{domxref("MouseEvent.screenX")}} {{ReadOnlyInline}}
-  - : The X coordinate of the mouse pointer in [screen coordinates](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems#screen).
+  - : The X coordinate of the mouse pointer in [screen coordinates](/en-US/docs/Web/API/CSSOM_view_API/Coordinate_systems#screen).
 - {{domxref("MouseEvent.screenY")}} {{ReadOnlyInline}}
-  - : The Y coordinate of the mouse pointer in [screen coordinates](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems#screen).
+  - : The Y coordinate of the mouse pointer in [screen coordinates](/en-US/docs/Web/API/CSSOM_view_API/Coordinate_systems#screen).
 - {{domxref("MouseEvent.shiftKey")}} {{ReadOnlyInline}}
   - : Returns `true` if the <kbd>shift</kbd> key was down when the mouse event was fired.
 - {{domxref("MouseEvent.mozInputSource")}} {{non-standard_inline()}} {{ReadOnlyInline}}
@@ -109,34 +109,26 @@ const test = document.getElementById("test");
 
 // Briefly make the list purple when the mouse moves off the
 // <ul> element
-test.addEventListener(
-  "mouseleave",
-  (event) => {
-    // highlight the mouseleave target
-    event.target.style.color = "purple";
+test.addEventListener("mouseleave", (event) => {
+  // highlight the mouseleave target
+  event.target.style.color = "purple";
 
-    // reset the color after a short delay
-    setTimeout(() => {
-      event.target.style.color = "";
-    }, 1000);
-  },
-  false,
-);
+  // reset the color after a short delay
+  setTimeout(() => {
+    event.target.style.color = "";
+  }, 1000);
+});
 
 // Briefly make an <li> orange when the mouse moves off of it
-test.addEventListener(
-  "mouseout",
-  (event) => {
-    // highlight the mouseout target
-    event.target.style.color = "orange";
+test.addEventListener("mouseout", (event) => {
+  // highlight the mouseout target
+  event.target.style.color = "orange";
 
-    // reset the color after a short delay
-    setTimeout(() => {
-      event.target.style.color = "";
-    }, 500);
-  },
-  false,
-);
+  // reset the color after a short delay
+  setTimeout(() => {
+    event.target.style.color = "";
+  }, 500);
+});
 ```
 
 #### Result

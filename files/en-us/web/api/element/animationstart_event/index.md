@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Element.animationstart_event
 ---
 
-{{APIRef}}
+{{APIRef("Web Animations")}}
 
 The **`animationstart`** event is fired when a [CSS Animation](/en-US/docs/Web/CSS/CSS_animations) has started. If there is an {{cssxref("animation-delay")}}, this event will fire once the delay period has expired. A negative delay will cause the event to fire with an {{domxref("AnimationEvent/elapsedTime", "elapsedTime")}} equal to the absolute value of the delay (and, correspondingly, the animation will begin playing at that time index into the sequence).
 
@@ -14,10 +14,10 @@ The **`animationstart`** event is fired when a [CSS Animation](/en-US/docs/Web/C
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("animationstart", (event) => {});
+```js-nolint
+addEventListener("animationstart", (event) => { })
 
-onanimationstart = (event) => {};
+onanimationstart = (event) => { }
 ```
 
 ## Event type

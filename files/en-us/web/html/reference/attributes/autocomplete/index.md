@@ -8,9 +8,8 @@ browser-compat:
   - html.elements.input.autocomplete
   - html.elements.select.autocomplete
   - html.elements.textarea.autocomplete
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The HTML `autocomplete` attribute lets web developers specify what if any permission the {{Glossary("user agent")}} has to provide automated assistance in filling out form field values, as well as guidance to the browser as to the type of information expected in the field.
 
@@ -47,7 +46,7 @@ The `autocomplete` attribute provides a hint to the user agent specifying how to
 <input autocomplete="section-user1 billing postal-code" />
 ```
 
-If an {{HTMLElement("input")}}, {{HTMLElement("select")}} or {{HTMLElement("textarea")}} element has no `autocomplete` attribute, the browser will use the [`autocomplete` attribute of the element's **owning form**](/en-US/docs/Web/HTML/Reference/Elements/form#autocomplete). The owning form is either the {{HTMLElement("form")}} matching the `id` specified by the [`form`](/en-US/docs/Web/HTML/Reference/Elements/input#form) attribute of the element (if present) or, more commonly, the `<form>` the element is nested in.
+If an {{HTMLElement("input")}}, {{HTMLElement("select")}} or {{HTMLElement("textarea")}} element has no `autocomplete` attribute, the browser will use the [`autocomplete` attribute of the element's **owning form**](/en-US/docs/Web/HTML/Reference/Elements/form#autocomplete). The owning form is either the {{HTMLElement("form")}} matching the `id` specified by the [`form`](/en-US/docs/Web/HTML/Reference/Attributes/form) attribute of the element (if present) or, more commonly, the `<form>` the element is nested in.
 
 > [!NOTE]
 > In order to provide autocompletion, user-agents might require `<input>`/`<select>`/`<textarea>` elements to:
@@ -69,23 +68,20 @@ The source of the suggested values is generally up to the browser; typically val
 > [!NOTE]
 > The `autocomplete` attribute also controls whether Firefox will — unlike other browsers — [persist the dynamic disabled state and (if applicable) dynamic checkedness](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of an `<input>` element, `<textarea>` element, or entire `<form>` across page loads. The persistence feature is enabled by default. Setting the value of the `autocomplete` attribute to `off` disables this feature. This works even when the `autocomplete` attribute would normally not apply by virtue of its `type`. See [Firefox bug 654072](https://bugzil.la/654072).
 
-## Values
+## Value
 
 The attribute value is either the keyword `off` or `on`, or a space-separated `<token-list>` that describes the meaning of the autocompletion value.
 
 - `off`
-
   - : The browser is not permitted to automatically enter or select a value for this field. It is possible that the document or application provides its own autocomplete feature, or that security concerns require that the field's value not be automatically entered.
 
     > [!NOTE]
     > In most modern browsers, setting `autocomplete` to `"off"` will not prevent a password manager from asking the user if they would like to save username and password information, or from automatically filling in those values in a site's login form. See [Managing autofill for login fields](/en-US/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion#managing_autofill_for_login_fields).
 
 - `on`
-
   - : The browser is allowed to automatically complete the input. No guidance is provided as to the type of data expected in the field, so the browser may use its own judgement.
 
 - `<token-list>`
-
   - : An ordered set of [space-separated tokens](#token_list_tokens) consisting of autofill detail tokens preceded by optional sectioning and either billing or shipping grouping tokens. Phone numbers, email addresses, and messaging protocol tokens are preceded by a token identifying the type of recipient.
 
 See the [WHATWG Standard](https://html.spec.whatwg.org/multipage/forms.html#autofill) for more detailed information.
@@ -139,7 +135,6 @@ The tokens that identify the type of recipient include:
 The token or group of tokens for telephone numbers or a number's component parts, phone extensions, email addresses, or instant messaging protocols.
 
 - `tel`
-
   - : A full telephone number, including the country code. If you need to break the phone number up into its components, you can use these values for those fields:
     - `tel-country-code`
       - : The country code, such as "1" for the United States, Canada, and other areas in North America and parts of the Caribbean.
@@ -162,9 +157,7 @@ The token or group of tokens for telephone numbers or a number's component parts
 When the form field is not a phone number, email address, or instant messaging protocol, the space-separated list of tokens is not preceded by a contact type:
 
 - `name`
-
   - : The field expects the value to be a person's full name. Using `name` rather than breaking the name down into its components is generally preferred because it avoids dealing with the wide diversity of human names and how they are structured; however, you can use the following `autocomplete` values if you do need to break the name down into its components:
-
     - `honorific-prefix`
       - : The prefix or title, such as "Mrs.", "Mr.", "Miss", "Ms.", "Dr.", or "Mlle.".
     - `given-name`
@@ -208,7 +201,6 @@ When the form field is not a phone number, email address, or instant messaging p
 - `country-name`
   - : A country or territory name.
 - `postal-code`
-
   - : A postal code (in the United States, this is the ZIP code).
 
 - `cc-name`
@@ -236,7 +228,7 @@ When the form field is not a phone number, email address, or instant messaging p
 - `transaction-amount`
   - : The amount, given in the currency specified by `transaction-currency`, of the transaction, for a payment form.
 - `language`
-  - : A preferred language, given as a valid [BCP 47 language tag](https://en.wikipedia.org/wiki/IETF_language_tag).
+  - : A preferred language, given as a valid {{glossary("BCP 47 language tag")}}.
 - `bday`
   - : A birth date, as a full date.
     - `bday-day`
