@@ -170,8 +170,8 @@ There is some basic styling applied that restyles the buttons and changes the [`
 }
 
 [role="tabpanel"]:focus {
-  border-color: #356FB3;
-  outline: 1px solid #356FB3;
+  border-color: #356fb3;
+  outline: 1px solid #356fb3;
 }
 ```
 
