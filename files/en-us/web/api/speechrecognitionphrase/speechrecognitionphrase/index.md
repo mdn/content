@@ -10,7 +10,7 @@ browser-compat: api.SpeechRecognitionPhrase.SpeechRecognitionPhrase
 
 The **`SpeechRecognitionPhrase()`** constructor creates a new {{domxref("SpeechRecognitionPhrase")}} object.
 
-An array of `SpeechRecognitionPhrase` objects is passed into the speech recognition engine via the {{domxref("SpeechRecognition.phrases")}} property for [speech recognition contextual biasing](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#speech_recognition_contextual_biasing).
+An array of `SpeechRecognitionPhrase` objects is passed into the speech recognition engine via the {{domxref("SpeechRecognition.phrases")}} property for [contextual biasing](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#contextual_biasing_in_speech_recognition).
 
 ## Syntax
 
