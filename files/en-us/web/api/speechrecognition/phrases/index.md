@@ -3,10 +3,12 @@ title: "SpeechRecognition: phrases property"
 short-title: phrases
 slug: Web/API/SpeechRecognition/phrases
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.SpeechRecognition.phrases
 ---
 
-{{APIRef("Web Speech API")}}
+{{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
 The **`phrases`** property of the
 {{domxref("SpeechRecognition")}} interface sets an array of {{domxref("SpeechRecognitionPhrase")}} objects to be used for [contextual biasing](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#contextual_biasing_in_speech_recognition).

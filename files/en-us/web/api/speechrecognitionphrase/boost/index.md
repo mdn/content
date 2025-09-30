@@ -3,10 +3,12 @@ title: "SpeechRecognitionPhrase: boost property"
 short-title: boost
 slug: Web/API/SpeechRecognitionPhrase/boost
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.SpeechRecognitionPhrase.boost
 ---
 
-{{APIRef("Web Speech API")}}
+{{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
 The **`boost`** read-only property of the
 {{domxref("SpeechRecognitionPhrase")}} interface returns a floating point number representing the weight you want to give the corresponding {{domxref("SpeechRecognitionPhrase.phrase", "phrase")}}.
