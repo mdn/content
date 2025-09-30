@@ -29,7 +29,7 @@ install(options)
 
 ### Return value
 
-A {{domxref("Promise")}} that resolves with a boolean value indicating whether installation was successful. The conditions that result in each return value are as follows:
+A {{domxref("Promise")}} that resolves with a boolean value indicating whether the language pack was installed successfully. The conditions that result in each return value are as follows:
 
 - `true`
   - : All installation attempts succeeded for the requested languages, or the languages were already installed.
