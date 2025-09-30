@@ -20,7 +20,7 @@ The **`SpeechRecognitionPhrase`** interface of the [Web Speech API](/en-US/docs/
 
 ### Basic usage
 
-The following code first creates an array containing the phrases to boost and their {{domxref("SpeechRecognitionPhrase.boost", "boost")}} values. We convert this data to an `ObservableArray` of `SpeechRecognitionPhrase` objects by mapping the original array to {{domxref("SpeechRecognitionPhrase.SpeechRecognitionPhrase", "SpeechRecognitionPhrase()")}} constructor calls:
+The following code first creates an array containing the phrases to boost and their {{domxref("SpeechRecognitionPhrase.boost", "boost")}} values. We convert this data into an `ObservableArray` of `SpeechRecognitionPhrase` objects by mapping the original array elements to {{domxref("SpeechRecognitionPhrase.SpeechRecognitionPhrase", "SpeechRecognitionPhrase()")}} constructor calls:
 
 ```js
 const phraseData = [
