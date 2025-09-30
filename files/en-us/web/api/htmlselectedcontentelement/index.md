@@ -23,7 +23,7 @@ _This interface has no methods, but inherits methods from: {{DOMxRef("HTMLElemen
 
 ## Specifications
 
-Not currently part of a specification. See https://github.com/whatwg/html/pull/10633 for the relevant specification PR.
+{{Specifications}}
 
 ## Browser compatibility
 
