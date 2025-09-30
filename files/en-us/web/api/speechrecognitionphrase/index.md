@@ -12,9 +12,9 @@ The **`SpeechRecognitionPhrase`** interface of the [Web Speech API](/en-US/docs/
 ## Instance properties
 
 - {{domxref("SpeechRecognitionPhrase.boost")}} {{ReadOnlyInline}}
-  - : A floating pointing number representing the amount of boost you want to give the corresponding `phrase`.
+  - : A floating point number representing the amount of boost you want to apply to the corresponding `phrase`.
 - {{domxref("SpeechRecognitionPhrase.phrase")}} {{ReadOnlyInline}}
-  - : A string containing a word or phrase you want boosted in terms of the engine's bias towards it.
+  - : A string containing the word or phrase you want boosted in the recognition engine's bias.
 
 ## Examples
 
