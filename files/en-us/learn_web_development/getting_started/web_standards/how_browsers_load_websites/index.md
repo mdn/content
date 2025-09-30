@@ -182,6 +182,6 @@ On the upside, the web is also an awesome programming environment, for many reas
 ## See also
 
 - [When and how to file bugs with browsers](/en-US/docs/Learn_web_development/Howto/Web_mechanics/File_browser_bugs)
-  - : If something isn't working as you expect in a browser, it could be a bug in the browser. This article explains how to figure out if it is, and how to file a bug report if so.
+  - : If something isn't working as expected in a browser, it could be a browser bug. This article explains how to figure out if it is, and how to file a bug report if so.
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Web_standards/The_web_standards_model", "Learn_web_development/Getting_started/Soft_skills", "Learn_web_development/Getting_started/Web_standards")}}

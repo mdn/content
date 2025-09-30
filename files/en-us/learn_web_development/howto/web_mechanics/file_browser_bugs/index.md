@@ -5,7 +5,7 @@ page-type: learn-faq
 sidebar: learn-how-to
 ---
 
-Browsers are software, and like any software, they can have bugs. Sometimes, you may find that the website you're developing doesn't behave the way you expect, or the way documentation, such as MDN or the specifications, indicates. This could indicate either a bug in your code, a bug in the documentation (let's hope not!), or a bug in the browser you're using to test your website. In this article, we'll discuss how to figure out which it is, and how to file a bug if it turns out to be a problem in the browser.
+Browsers are software, and like any software, they can have bugs. Sometimes, you may find that the website you're developing doesn't behave as expected, or as indicated by documentation, such as MDN or the specifications. This could indicate either a bug in your code, a bug in the documentation (let's hope not!), or a bug in the browser you're using to test your website. In this article, we'll discuss how to figure out which it is and how to file a bug if it turns out to be a problem in the browser.
 
 ## Whose bug is it?
 
@@ -41,7 +41,7 @@ The simplest way to test whether the problem is a browser bug is to open your te
 
 ### Checking implementation status
 
-Start by trusting the documentation and investigating the browser(s) whose behavior doesn't match it. Not all unexpected behaviors are bugs. Sometimes browsers may implement a feature or behavior that's not yet been merged into the specification, which, as a result, is less likely to be documented. Another possibility is that a feature is described in the specification but not yet implemented in any browser, which means it may also not be documented.
+Start by trusting the documentation and investigating the browser(s) whose behavior doesn't match it. Not all unexpected behaviors are bugs. Sometimes browsers may implement a feature or behavior that's not yet been merged into the specification, which, as a result, is less likely to be documented. Another possibility is that a feature is described in the specification but not yet implemented in any browser, which also means it may not be documented.
 
 At this point, you should check more sources to determine the implementation story. Here are some places to look:
 
