@@ -63,10 +63,6 @@ dBOpenRequest.onsuccess = (event) => {
   // open a read/write db transaction, ready for adding the data
   const transaction = db.transaction(["toDoList"], "readwrite");
 
-  transaction.addEventListener("error", () => {
-    console.log(`Error adding new item: ${newItem.taskTitle}`);
-  });
-
   const objectStore = transaction.objectStore("toDoList");
   const newItem = {
     taskTitle: "my task",
@@ -76,6 +72,10 @@ dBOpenRequest.onsuccess = (event) => {
     month: "January",
     year: 2020,
   };
+
+  transaction.addEventListener("error", () => {
+    console.log(`Error adding new item: ${newItem.taskTitle}`);
+  });
 
   const objectStoreRequest = objectStore.add(newItem);
 };

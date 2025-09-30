@@ -634,7 +634,7 @@ div {
 
 ```css live-sample___corner-shape-animation
 @keyframes corner-pulse {
-  from {
+  0% {
     corner-shape: square;
   }
 
@@ -644,7 +644,7 @@ div {
     corner-shape: square;
   }
 
-  to {
+  100% {
     corner-shape: notch;
   }
 }

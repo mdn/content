@@ -92,6 +92,9 @@ div {
 ```
 
 ```js
+let scale = 1;
+const el = document.querySelector("div");
+
 function zoom(event) {
   event.preventDefault();
 
@@ -104,8 +107,6 @@ function zoom(event) {
   el.style.transform = `scale(${scale})`;
 }
 
-let scale = 1;
-const el = document.querySelector("div");
 el.onwheel = zoom;
 ```
 

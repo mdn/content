@@ -90,7 +90,7 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 
 ## Examples
 
-In our [Speech color changer](https://mdn.github.io/dom-examples/web-speech-api/speech-color-changer) example, we create a new `SpeechRecognition` object instance using the {{domxref("SpeechRecognition.SpeechRecognition", "SpeechRecognition()")}} constructor.
+In our [Speech color changer](https://mdn.github.io/dom-examples/web-speech-api/speech-color-changer/) example, we create a new `SpeechRecognition` object instance using the {{domxref("SpeechRecognition.SpeechRecognition", "SpeechRecognition()")}} constructor.
 
 After some other values have been defined, we then set it so that the recognition service starts when a button is clicked (see {{domxref("SpeechRecognition.start()")}}). When a result has been successfully recognized, the {{domxref("SpeechRecognition.result_event", "result")}} event fires, we extract the color that was spoken from the event object, and then set the background color of the {{htmlelement("html")}} element to that color.
 

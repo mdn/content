@@ -22,7 +22,7 @@ To improve privacy and performance, you can specify that speech recognition be p
 
 ### Demo
 
-To demonstrate how to use speech recognition, we've created a sample app called [Speech color changer](https://mdn.github.io/dom-examples/web-speech-api/speech-color-changer). After you press the **Start recognition** button, say an HTML color keyword. The app's background color will change to that color.
+To demonstrate how to use speech recognition, we've created a sample app called [Speech color changer](https://mdn.github.io/dom-examples/web-speech-api/speech-color-changer/). After you press the **Start recognition** button, say an HTML color keyword. The app's background color will change to that color.
 
 ![Screenshot of our demo app called speech color changer. It invites the user to press the button and say a color. It turns the background of the app to that color. In this case, it has turned the background color to pink.](speech-color-changer.png)
 
@@ -111,17 +111,12 @@ const bg = document.querySelector("html");
 const hints = document.querySelector(".hints");
 const startBtn = document.querySelector("button");
 
-let colorHTML = "";
-colors.forEach(function (v, i, a) {
-  console.log(v, i);
-  colorHTML += '<span style="background-color:' + v + ';"> ' + v + " </span>";
-});
-hints.innerHTML =
-  "Press the button then say a color to change the background color of the app. Try " +
-  colorHTML +
-  ".";
+const colorHTML = colors
+  .map((v) => `<span style="background-color:${v};">${v}</span>`)
+  .join("");
+hints.innerHTML = `Press the button then say a color to change the background color of the app. Try ${colorHTML}.`;
 
-startBtn.onclick = function () {
+startBtn.onclick = () => {
   recognition.start();
   console.log("Ready to receive a color command.");
 };
