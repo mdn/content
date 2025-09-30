@@ -24,7 +24,7 @@ new SpeechRecognitionErrorEvent(type, init)
 - `init`
   - : An initialization object that contains the following properties:
     - `error`
-      - : A enumerated value representing the type of error. See the [possible `error` values](/en-US/docs/Web/API/SpeechRecognitionErrorEvent/error#value).
+      - : An enumerated value representing the type of error. See the [possible `error` values](/en-US/docs/Web/API/SpeechRecognitionErrorEvent/error#value).
     - `message` {{optional_inline}}
       - : A string containing more details about the error that was raised. Note that the spec does not define the exact wording of these messages — this is up to the implementors to decide upon.
 
