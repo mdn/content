@@ -33,7 +33,7 @@ const phraseObjects = phraseData.map(
 );
 ```
 
-After creating a {{domxref("SpeechRecognition")}} instance, we can then plug our contextual biasing phrases into it by setting the `phraseObjects` array as the value of the `SpeechRecognition.phrases` property:
+After creating a {{domxref("SpeechRecognition")}} instance, we then plug our contextual biasing phrases into it by setting the `phraseObjects` array as the value of the `SpeechRecognition.phrases` property:
 
 ```js
 const recognition = new SpeechRecognition();
