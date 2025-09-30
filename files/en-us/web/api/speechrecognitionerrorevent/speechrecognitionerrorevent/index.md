@@ -26,7 +26,7 @@ new SpeechRecognitionErrorEvent(type, init)
     - `error`
       - : An enumerated value representing the type of error. See the [possible `error` values](/en-US/docs/Web/API/SpeechRecognitionErrorEvent/error#value).
     - `message` {{optional_inline}}
-      - : A string containing more details about the error that was raised. Note that the spec does not define the exact wording of these messages — this is up to the implementors to decide upon.
+      - : A string containing more details about the error that was raised. Note that the specification does not define the exact wording of these messages — implementers must define their own wording.
 
 ## Examples
 
