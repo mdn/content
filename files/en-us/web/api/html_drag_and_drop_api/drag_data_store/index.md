@@ -8,7 +8,7 @@ page-type: guide
 
 The {{domxref("DragEvent")}} interface has a {{domxref("DragEvent.dataTransfer","dataTransfer")}} property, which is a {{domxref("DataTransfer")}} object. {{domxref("DataTransfer")}} objects represent the main context of the drag operation, and it stays consistent across the firing of different events. It includes the [drag data](/en-US/docs/Web/API/HTML_Drag_and_Drop_API#drag_data_store), [drag image](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#setting_the_drag_feedback_image), [drop effect](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#drop_effects), etc. This article focuses on the _data store_ part of the `dataTransfer`.
 
-## DataTransfer, DataTransferItem, and DataTransferItemList
+## Structure of the drag data store
 
 Fundamentally, the drag data store is a list of items, represented as a {{domxref("DataTransferItemList")}} of {{domxref("DataTransferItem")}} objects. Each item can be one of two [kinds](/en-US/docs/Web/API/DataTransferItem/kind):
 
@@ -23,9 +23,11 @@ The HTML Drag and Drop API went through multiple iterations, resulting in two co
 
 - {{domxref("DataTransfer.types", "types")}}: contains the `type` properties of the _text items_ in the list, plus the value `"files"` if there are any _file items_.
 - {{domxref("DataTransfer.setData", "setData()")}}, {{domxref("DataTransfer.getData", "getData()")}}, {{domxref("DataTransfer.clearData", "clearData()")}}: provide access to the _text items_ in the list using the "type-to-payload mapping" model.
-- {{domxref("DataTransfer.files", "files")}}: provides access to the _file items_ in the list
+- {{domxref("DataTransfer.files", "files")}}: provides access to the _file items_ in the list as a {{domxref("FileList")}}.
 
-You may see that the types of the _file items_ are not directly exposed. They are still accessible, but only via the {{domxref("Blob.type", "type")}} property of each {{domxref("File")}} object in the `files` list, so if you can't read the files, then you can't know their types either (see [reading the drag data store](#reading_the_drag_data_store) for when the store is readable). It is now recommended to just use the `items` property because it provides a more flexible and consistent interface.
+You may see that the types of the _file items_ are not directly exposed. They are still accessible, but only via the {{domxref("Blob.type", "type")}} property of each {{domxref("File")}} object in the `files` list, so if you can't read the files, then you can't know their types either (see [reading the drag data store](#reading_the_drag_data_store) for when the store is readable).
+
+To get the files and their types, we recommend using the `items` property because it provides a more flexible and consistent interface. For text items, you should also prefer using the `items` property for consistency, although the `getData()` method is more convenient for accessing or removing a specific type.
 
 Another key difference between the {{domxref("DataTransfer")}} and {{domxref("DataTransferItem")}} interfaces is that the former uses the synchronous {{domxref("DataTransfer.getData","getData()")}} method to access the text payload, but the latter instead uses the asynchronous {{domxref("DataTransferItem.getAsString","getAsString()")}} method.
 
@@ -173,21 +175,28 @@ async function dropHandler(ev) {
 
 The spec only defines the behavior for a few data types, but browsers sometimes have native support for more types. In general, types are intended as a _protocol_ just like MIME types, and you can use any type as long as the receiving end (another webpage, another part of the same webpage, or even somewhere outside the browser) understands it. This section describes some common conventions and browsers' default behaviors.
 
+Note that the scenarios below refer to the _intention_ and not the _behavior_. For example, when we say "dragging a link", the user may not be dragging an actual `<a>` element; they may be dragging a container that contains one or more links, but the intention is to transfer the link(s) as data, so the data store you prepare can be the same as if the user were dragging an actual link.
+
 ### Dragging text
 
-For dragging text, use the `text/plain` type. The second data parameter should be the dragged string. For example:
+For dragging text, use the `text/plain` type, with the dragged string as the value. For example:
 
 ```js
 event.dataTransfer.items.add("This is text to drag", "text/plain");
 ```
 
-It is recommended to always add data of the `text/plain` type as a fallback for applications or drop targets that do not support other types, unless there is no logical text alternative. Always add this `text/plain` type last, as it is the least specific and shouldn't be preferred.
+You should always add data of the `text/plain` type as a fallback for applications or drop targets that do not support other types, unless there is no logical text alternative. Always add this `text/plain` type last, as it is the least specific and shouldn't be preferred.
 
-The `text/plain` type receives the following special treatments in the browser:
+In `getData()`, `setData()`, and `clearData()`, the `Text` type (case-insensitive) is treated as `text/plain`.
 
-- In `getData()`, `setData()`, and `clearData()`, the `Text` type (case-insensitive) is treated as `text/plain`.
-- When a selection is dragged, the first data item is a `text/plain` item containing the selected text.
-- When dragging over and dropping onto an editable text field, such as a {{HTMLElement("textarea")}} or [`<input type="text">`](/en-US/docs/Web/HTML/Reference/Elements/input/text), the `text/plain` item gets copied into the field by default (without any event handling).
+By default, when a selection is dragged, the following data items are created:
+
+- `text/plain`: containing the selected text. Firefox and Safari sorts this item after `text/html`, although the spec requires it to be first.
+- `text/html`: containing the full HTML source of the selected elements (with all styles inlined).
+
+The spec also requires another item of type `application/microdata+json`, containing the [microdata](/en-US/docs/Web/HTML/Guides/Microdata) extracted from the element(s) in the dragged selection. No browser implements this item.
+
+When dropping onto an editable text field, such as a {{HTMLElement("textarea")}} or [`<input type="text">`](/en-US/docs/Web/HTML/Reference/Elements/input/text), the `text/plain` item gets copied into the field by default (without any event handling).
 
 ### Dragging links
 
@@ -215,19 +224,16 @@ http://www.example.com
 
 When retrieving a dropped link, ensure you handle when multiple links are dragged, including any comments.
 
-The `text/uri-list` type receives the following special treatments in the browser:
+In `getData()`, `setData()`, and `clearData()`, the `URL` type (case-insensitive) is treated as `text/uri-list`. For `getData()`, the result only contains the first URL in the list.
 
-- In `getData()`, `setData()`, and `clearData()`, the `URL` type (case-insensitive) is treated as `text/uri-list`. For `getData()`, the result only contains the first URL in the list.
-- When an {{HTMLElement("a")}} element, an {{HTMLElement("img")}} element, or a selection that partially or fully contains such elements is dragged, an item of type `text/uri-list` is created containing all such elements' `href` or `src` attributes, if this list is non-empty.
+By default, when an {{HTMLElement("a")}} element is dragged, the following data items are created:
 
-Firefox supports the non-standard `text/x-moz-url` type. If it appears, it should appear before the `text/uri-list` type. It holds the URLs of links followed by their titles, separated by a linebreak. For example:
-
-```plain
-https://www.mozilla.org
-Mozilla
-http://www.example.com
-Example
-```
+- `text/x-moz-url` (Firefox-only): containing both the `href` attribute and the link text, separated by a line break.
+- `text/x-moz-url-data` (Firefox-only): containing just the `href`.
+- `text/x-moz-url-desc` (Firefox-only): containing just the link text.
+- `text/uri-list`: containing the `href` attribute.
+- `text/html` (Chrome and Firefox only): containing the full HTML source of the `<a>` element (with all styles inlined).
+- `text/plain`: also containing the `href` attribute. Chrome sorts this item before `text/uri-list`.
 
 ### Dragging images
 
@@ -240,13 +246,22 @@ event.dataTransfer.items.add(imageURL, "text/uri-list");
 event.dataTransfer.items.add(imageURL, "text/plain");
 ```
 
-Firefox supports the non-standard `application/x-moz-file` type if the image is located on disk. This allows the drop target to potentially access the actual file on the user's system, if it's privileged (such as extension code).
+By default, when an {{HTMLElement("img")}} element is dragged, the following data items are created:
+
+- `text/x-moz-url` (Firefox-only): containing both the `src` attribute and the alt text (or the `src` again if the alt is empty), separated by a line break.
+- `text/x-moz-url-data` (Firefox-only): containing just the `src` attribute.
+- `text/x-moz-url-desc` (Firefox-only): containing just the alt text (or the `src` if the alt is empty).
+- `text/uri-list`: containing the `src` attribute.
+- `text/html`: containing the full HTML source of the `<img>` element (with all styles inlined).
+- `text/plain` (Firefox-only): containing the `src` attribute.
+
+Safari also creates a file item containing the image data, with the appropriate MIME type such as `image/png`.
 
 ### Dragging elements
 
-When the dragged item is an arbitrary element with `draggable="true"`, what data to set depends on what you intend to transfer. By default, browsers create one item of type `application/microdata+json`, containing the [microdata](/en-US/docs/Web/HTML/Guides/Microdata) extracted from the dragged element(s) (multiple elements can be dragged in the case of dragging a selection). When the dragged item is a selection, the browser may also create a `text/html` item containing the full HTML source of the selected elements (with all styles inlined), although this behavior may vary between browsers.
+When the dragged item is an arbitrary element with `draggable="true"`, what data to set depends on what you intend to transfer.
 
-The standard way to transfer the element is to use the `text/html` type containing serialized HTML source code, which the receiving end can then parse and insert. For example, it would be suitable to set its data to the value of the {{domxref("Element/outerHTML","outerHTML")}} property of an element. `text/xml` can be used too, but ensure that the data is well-formed XML.
+A common way to transfer the element is to use the `text/html` type containing serialized HTML source code, which the receiving end can then parse and insert. For example, it would be suitable to set its data to the value of the {{domxref("Element/outerHTML","outerHTML")}} property of an element. `text/xml` can be used too, but ensure that the data is well-formed XML.
 
 You may also include a plain text representation of the HTML or XML data using the `text/plain` type. The data should be just the text without any of the source tags or attributes. For instance:
 
@@ -260,6 +275,8 @@ You can also use other types that you invent for custom purposes. Strive to alwa
 ### Dragging files from an operating system file explorer
 
 When the dragged item is a file, an item of kind `file` is added to the drag data. The `type` is set to the MIME type of the file (as provided by the operating system), or `application/octet-stream` if the type is unknown. Currently, dragged files can only originate outside of the browser, such as from a file explorer.
+
+Firefox also adds a non-standard text item of type `application/x-moz-file` containing the full path of the file on the user's file system. Unless within privileged code (such as an extension), its value is the empty string.
 
 ### Dragging files to an operating system file explorer
 

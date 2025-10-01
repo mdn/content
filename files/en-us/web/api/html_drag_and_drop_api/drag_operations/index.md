@@ -130,7 +130,9 @@ draggableElement.addEventListener("drag", (event) => {
 });
 ```
 
-However, you usually only want the drop target to accept drops in certain situations (for example, only if a link is being dragged). To do this, check a condition and only cancel the event when the condition is met. For example, you can check if the dragged data contains links:
+### Conditional drop targets
+
+You usually only want the drop target to accept drops in certain situations (for example, only if a link is being dragged). To do this, check a condition and only cancel the event when the condition is met. For example, you can check if the dragged data contains links:
 
 ```js
 dropElement.addEventListener("dragover", (event) => {
@@ -326,7 +328,7 @@ target.addEventListener("drop", (event) => {
 
 In the example here, once the data has been retrieved, we insert the string as the textual content of the target. This has the effect of inserting the dragged text where it was dropped, assuming that the drop target is an area of text such as a `p` or `div` element.
 
-An empty string will be returned if data of that type does not exist. (Naturally, though, you would likely know that the right type of data was available, as it was previously checked during a {{domxref("HTMLElement/dragover_event", "dragover")}} event.)
+The `getData()` method returns an empty string if the data store does not contain data of the specified type. If you implemented [conditional drop targets](#conditional_drop_targets), this situation should not occur, because the drop target should only accept drops when the desired data is present.
 
 You can retrieve other types of data as well. If the data is a link, it should have the type [`text/uri-list`](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#dragging_links). You could then insert a link into the content.
 

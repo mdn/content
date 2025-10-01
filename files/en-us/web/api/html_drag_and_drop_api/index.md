@@ -79,9 +79,9 @@ For more information, see the [Drag operations guide](/en-US/docs/Web/API/HTML_D
 
 ### Drag data store
 
-It is not possible to transfer JavaScript objects directly to other webpages, and surely not to external applications, so to transfer data in and out of the webpage, the data must be serialized to a string (or as a {{domxref("File")}}). In Drag & Drop, this string is encapsulated in a {{domxref("DataTransferItem")}} object, which also defines a particular `type`—typically a MIME type such as `text/html`—that defines how the string should be interpreted.
+You can't transfer JavaScript objects directly to arbitrary webpages, and surely not to external applications, so to transfer data in and out of the webpage, the data must be serialized to a string (or as a {{domxref("File")}}). In drag and drop, this string is encapsulated in a {{domxref("DataTransferItem")}} object, which also defines a particular `type`—typically a MIME type such as `text/html`—that defines how the string should be interpreted.
 
-Each drag & drop operation has an associated _drag data store_, which is a {{domxref("DataTransfer")}} object accessible via the {{domxref("DragEvent")}}'s {{domxref("DragEvent.dataTransfer","dataTransfer")}} property. For the default-draggable items such as images, links, and selections, the drag data is already defined by the browser; for custom draggable elements defined using the `draggable` attribute, you must define the drag data yourself. The only time to make any modifications to the data store is within the {{domxref("HTMLElement/dragstart_event", "dragstart")}} handler—for the `dataTransfer` of any other drag event, the data store is unmodifiable.
+Each drag and drop operation has an associated _drag data store_, which is a {{domxref("DataTransfer")}} object accessible via the {{domxref("DragEvent")}}'s {{domxref("DragEvent.dataTransfer","dataTransfer")}} property. For the default-draggable items such as images, links, and selections, the drag data is already defined by the browser; for custom draggable elements defined using the `draggable` attribute, you must define the drag data yourself. The only time to make any modifications to the data store is within the {{domxref("HTMLElement/dragstart_event", "dragstart")}} handler—for the `dataTransfer` of any other drag event, the data store is unmodifiable.
 
 The {{domxref("DataTransfer.setData", "setData()")}} method can be used to add an item to the drag data, as shown in the following example.
 
@@ -106,8 +106,8 @@ For more information, read [Working with the drag data store](/en-US/docs/Web/AP
 
 ### Drop target
 
-A _drop target_ is an element on which a user can drop a dragged item. By default, most elements are not drop targets, and if you release the drag, a "fly-black" animation displays, indicating that the drag & drop failed. Any element can become a drop target by canceling the {{domxref("HTMLElement.dragover_event","dragover")}} event that fires on it with `preventDefault()`.
-	
+A _drop target_ is an element on which a user can drop a dragged item. By default, most elements are not drop targets, and if you release the drag, a "fly-black" animation displays, indicating that the drag and drop failed. Any element can become a drop target by canceling the {{domxref("HTMLElement.dragover_event","dragover")}} event that fires on it with `preventDefault()`.
+
 The {{domxref("HTMLElement/drop_event", "drop")}} event only fires on drop targets, and it is the only time you can read the drag data store.
 
 The following example shows a minimal valid drop target, and also combines the code from the previous examples.
@@ -148,9 +148,13 @@ For more information, see [Specifying drop targets](/en-US/docs/Web/API/HTML_Dra
 ## Interfaces
 
 - {{domxref("DragEvent")}}
+  - : The event object passed to drag event handlers.
 - {{domxref("DataTransfer")}}
+  - : Holds any data transferred between contexts, consisting of text items and file items. Initially designed for drag and drop, it is now also used in other contexts such as [Clipboard API](/en-US/docs/Web/API/Clipboard_API).
 - {{domxref("DataTransferItem")}}
+  - : Represents one item in the drag data store, which can be a text item or a file item.
 - {{domxref("DataTransferItemList")}}
+  - : Represents the list of {{domxref("DataTransferItem")}} objects in the drag data store.
 
 ## Examples
 

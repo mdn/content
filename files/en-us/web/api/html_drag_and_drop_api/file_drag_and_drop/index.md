@@ -6,7 +6,7 @@ page-type: guide
 
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
 
-As mentioned on [the landing page](/en-US/docs/Web/API/HTML_Drag_and_Drop_API#concepts_and_usage), the Drag and Drop API simultaneously models three use cases: dragging elements within a page, dragging data out of a page, and dragging data into a page. This tutorial demonstrates the third use case: dragging data into a page. We will be implementing a basic drop zone that allows the user to drop image files from the user's operation system file explorer and displays them on the page. For users who can't or don't want to use drag & drop, we also provide the alternative functionality of file selection via an `<input>` element.
+As mentioned on [the landing page](/en-US/docs/Web/API/HTML_Drag_and_Drop_API#concepts_and_usage), the Drag and Drop API simultaneously models three use cases: dragging elements within a page, dragging data out of a page, and dragging data into a page. This tutorial demonstrates the third use case: dragging data into a page. We will be implementing a basic drop zone that allows the user to drop image files from the user's operation system file explorer and displays them on the page. For users who can't or don't want to use drag and drop, we also provide the alternative functionality of file selection via an `<input>` element.
 
 ## Basic page layout
 
