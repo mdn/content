@@ -161,6 +161,12 @@ font-family: "Gill Sans Extrabold", sans-serif;
       - : This is for the particular stylistic concerns of representing mathematics: superscript and subscript, brackets that cross several lines, nesting expressions, and double struck glyphs with distinct meanings.
     - `fangsong`
       - : A particular style of Chinese characters that are between serif-style Song and cursive-style Kai forms. This style is often used for government documents.
+    - `kai`
+      - : A calligraphic style of Chinese characters with notable handwriting features. This style is commonly used in official documents and textbooks, particularly in Taiwan where most official documents are set in Kai.
+    - `khmer-mul`
+      - : The âksâr mul style in the Khmer script, often used for decorative purposes such as headings or titles. This style is characterized by its intricate and ornamental design.
+    - `nastaliq`
+      - : The standard way of writing Urdu and Kashmiri, and often a preferred style for Persian and other language texts, especially in literary genres such as poetry. Features include a sloping baseline for joined letters and complex shaping and positioning for base letters and diacritics.
 
   Generic family names can also be specified using the `generic()` function:
   - `generic(serif)`
@@ -175,6 +181,9 @@ font-family: "Gill Sans Extrabold", sans-serif;
   - `generic(ui-rounded)`
   - `generic(math)`
   - `generic(fangsong)`
+  - `generic(kai)`
+  - `generic(khmer-mul)`
+  - `generic(nastaliq)`
 
 ## Formal definition
 
@@ -245,6 +254,18 @@ font-family: "Gill Sans Extrabold", sans-serif;
 .generic-fangsong {
   font-family: generic(fangsong);
 }
+
+.generic-kai {
+  font-family: generic(kai);
+}
+
+.generic-khmer-mul {
+  font-family: generic(khmer-mul);
+}
+
+.generic-nastaliq {
+  font-family: generic(nastaliq);
+}
 ```
 
 ```html hidden
@@ -279,6 +300,14 @@ font-family: "Gill Sans Extrabold", sans-serif;
 <div class="generic-math">This is an example using generic(math).</div>
 
 <div class="generic-fangsong">This is an example using generic(fangsong).</div>
+
+<div class="generic-kai">This is an example using generic(kai).</div>
+
+<div class="generic-khmer-mul">
+  This is an example using generic(khmer-mul).
+</div>
+
+<div class="generic-nastaliq">This is an example using generic(nastaliq).</div>
 ```
 
 {{EmbedLiveSample("Some_common_font_families", 600, 220)}}
