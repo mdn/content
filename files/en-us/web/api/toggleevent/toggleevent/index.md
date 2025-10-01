@@ -26,12 +26,25 @@ new ToggleEvent(type, init)
       - : A string representing the state the element is transitioning to. Possible values are `"open"` and `"closed"`.
     - `oldState`
       - : A string representing the state the element is transitioning from. Possible values are `"open"` and `"closed"`.
+    - `source` {{optional_inline}}
+      - : An {{domxref("Element")}} object instance representing the HTML popover control element that initiated the toggle. Defaults to `null`.
 
 ## Examples
 
-A developer would not use this constructor manually. A new `ToggleEvent` object is constructed when a handler is invoked as a result of a relevant event firing.
+A developer would not typically use this constructor manually. A new `ToggleEvent` object is constructed when a handler is invoked as a result of a relevant event firing.
 
-For example:
+However, you can create a `ToggleEvent` manually if needed:
+
+```js
+const sourceElement = document.getElementById("myButton");
+const toggleEvent = new ToggleEvent("toggle", {
+  newState: "open",
+  oldState: "closed",
+  source: sourceElement,
+});
+```
+
+For example, when listening for toggle events on a popover:
 
 ```js
 const popover = document.getElementById("mypopover");
@@ -41,6 +54,9 @@ const popover = document.getElementById("mypopover");
 popover.addEventListener("beforetoggle", (event) => {
   if (event.newState === "open") {
     console.log("Popover is being shown");
+    if (event.source) {
+      console.log("Initiated by:", event.source);
+    }
   } else {
     console.log("Popover is being hidden");
   }
