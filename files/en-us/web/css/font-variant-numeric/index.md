@@ -8,30 +8,10 @@ sidebar: cssref
 
 The **`font-variant-numeric`** [CSS](/en-US/docs/Web/CSS) property controls the usage of alternate glyphs for numbers, fractions, and ordinal markers.
 
-{{InteractiveExample("CSS Demo: font-variant-numeric", "taller")}}
+{{InteractiveExample("CSS Demo: font-variant-numeric")}}
 
 ```css interactive-example-choice
 font-variant-numeric: normal;
-```
-
-```css interactive-example-choice
-font-variant-numeric: ordinal;
-```
-
-```css interactive-example-choice
-font-variant-numeric: diagonal-fractions;
-```
-
-```css interactive-example-choice
-font-variant-numeric: lining-nums;
-```
-
-```css interactive-example-choice
-font-variant-numeric: oldstyle-nums;
-```
-
-```css interactive-example-choice
-font-variant-numeric: proportional-nums;
 ```
 
 ```css interactive-example-choice
@@ -39,11 +19,11 @@ font-variant-numeric: slashed-zero;
 ```
 
 ```css interactive-example-choice
-font-variant-numeric: stacked-fractions;
+font-variant-numeric: tabular-nums;
 ```
 
 ```css interactive-example-choice
-font-variant-numeric: tabular-nums;
+font-variant-numeric: oldstyle-nums;
 ```
 
 ```html interactive-example
