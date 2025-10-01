@@ -27,7 +27,7 @@ async function resolveDirectory(file) {
     file.endsWith("index.md") &&
     !file.includes("/conflicting/") &&
     !file.includes("/orphaned/") &&
-    !file.includes("/scripts/filecheck/fixtures/") &&
+    !file.includes("scripts/filecheck/fixtures/") &&
     !file.includes("tests/front-matter_test_files")
   ) {
     return [file];
