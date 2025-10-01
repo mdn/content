@@ -106,7 +106,9 @@ For more information, read [Working with the drag data store](/en-US/docs/Web/AP
 
 ### Drop target
 
-By default, elements on a webpage do not accept drops, and if you release the drag, a "fly-black" animation displays indicating that the drag & drop failed. To prevent this, you must make the region of dropping a valid _drop target_. The {{domxref("HTMLElement/drop_event", "drop")}} event only fires on drop targets, and it is the only time you can read the drag data store. Some elements are drop targets by default under certain circumstances, but all elements can elect themselves to become one by cancelling the {{domxref("HTMLElement.dragover_event","dragover")}} event with `preventDefault()`.
+A _drop target_ is an element on which a user can drop a dragged item. By default, most elements are not drop targets, and if you release the drag, a "fly-black" animation displays, indicating that the drag & drop failed. Any element can become a drop target by canceling the {{domxref("HTMLElement.dragover_event","dragover")}} event that fires on it with `preventDefault()`.
+	
+The {{domxref("HTMLElement/drop_event", "drop")}} event only fires on drop targets, and it is the only time you can read the drag data store.
 
 The following example shows a minimal valid drop target, and also combines the code from the previous examples.
 
