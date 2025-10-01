@@ -9,7 +9,7 @@ Browsers are software, and like any software, they can have bugs. Sometimes, you
 
 ## Whose bug is it?
 
-Before filing a browser bug, you should confirm that it's actually a bug in the browser. The problem could come from one of four places: your code, the documentation, the browser, or the specification. It's important to rule out the other possibilities before reporting a bug to the browser. Generally, specifications are the most credible source of all; browsers and documentation both follow specifications, but can still have mistakes. As for your code...well, the quality depends on you.
+Before filing a browser bug, you should confirm that it's actually a bug in the browser. The problem could come from one of four places: your code, the documentation, the browser, or the specification. It's important to rule out the other possibilities before reporting a bug to the browser. Generally, specifications are the most credible source of all; browsers and documentation both follow specifications, but can still have mistakes. As for your code...well, it's always good to re-check for typos and logic errors before assuming it's a browser bug.
 
 ### Creating a test case
 
