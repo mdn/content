@@ -27,7 +27,7 @@ new ToggleEvent(type, init)
     - `oldState`
       - : A string representing the state the element is transitioning from. Possible values are `"open"` and `"closed"`.
     - `source` {{optional_inline}}
-      - : An {{domxref("Element")}} object instance representing the HTML popover control element that initiated the toggle. Defaults to `null`.
+      - : An {{domxref("Element")}} representing the HTML popover control element that initiated the toggle. Defaults to `null`.
 
 ## Examples
 
