@@ -24,7 +24,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 > The [`itemprop`](/en-US/docs/Web/HTML/Reference/Global_attributes/itemprop) attribute must not be set on a `<meta>` element that includes a [`name`](/en-US/docs/Web/HTML/Reference/Elements/meta/name), [`http-equiv`](/en-US/docs/Web/HTML/Reference/Elements/meta/http-equiv), or [`charset`](#charset) attribute.
 
 - `charset`
-  - : This attribute declares the document's character encoding. If the attribute is present, its value must be an ASCII case-insensitive match for the string `"utf-8"`, because UTF-8 is the only valid encoding for HTML5 documents. `<meta>` elements which declare a character encoding must be located entirely within the first 1024 bytes of the document.
+  - : This attribute declares the document's [character encoding](https://html.spec.whatwg.org/multipage/semantics.html#charset). `<meta>` elements which declare a character encoding must be located entirely within the first 1024 bytes of the document.
 - [`content`](/en-US/docs/Web/HTML/Reference/Attributes/content)
   - : This attribute contains the value for the [`http-equiv`](/en-US/docs/Web/HTML/Reference/Elements/meta/http-equiv) or [`name`](/en-US/docs/Web/HTML/Reference/Elements/meta/name) attribute, depending on which is used.
 - [`http-equiv`](/en-US/docs/Web/HTML/Reference/Elements/meta/http-equiv)
