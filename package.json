@@ -38,9 +38,8 @@
     "lint:typos-words-only": "cspell --no-progress --gitignore --words-only --unique --config .vscode/cspell.json \"**/*.md\"",
     "lint:yml": "prettier -c \"**/*.yml\"",
     "start": "yarn -s info:fred && yarn up-to-date-check && env-cmd --silent cross-env CONTENT_ROOT=files NODE_ENV=production FRED_PLAYGROUND_LOCAL=true FRED_PLAYGROUND_PORT=5043 FRED_PORT=5042 FRED_WRITER_MODE=true fred-server",
-    "up-to-date-check": "node scripts/up-to-date-check.js",
-    "jest": "cross-env NODE_OPTIONS=--experimental-vm-modules jest",
-    "test:front-matter-linter": "yarn jest tests"
+    "test": "node --test",
+    "up-to-date-check": "node scripts/up-to-date-check.js"
   },
   "dependencies": {
     "@apideck/better-ajv-errors": "^0.3.6",
@@ -70,7 +69,6 @@
     "imagemin-pngquant": "^10.0.0",
     "imagemin-svgo": "^11.0.1",
     "is-svg": "^6.1.0",
-    "jest": "^30.2.0",
     "lefthook": "^1.13.6",
     "markdownlint-cli2": "0.18.1",
     "markdownlint-rule-search-replace": "1.2.0",
