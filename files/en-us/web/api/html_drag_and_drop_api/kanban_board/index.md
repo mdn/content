@@ -112,7 +112,7 @@ Now, when a task is dragged over a column, you may see a [cursor effect](/en-US/
 
 ## Moving elements
 
-Now we implement the core functionality: the ability to move tasks between columns. It consists of two steps: add the dragged element to the target column and remove it from the source column. To do this we need to know three things when the drop happened: what the dragged element is, what the source column is, and where to insert it in the target column.
+Now we implement the core functionality: the ability to move tasks between columns. It consists of two steps: add the dragged element to the target column and remove it from the source column.
 
 We track the dragged element and the source column this way: on `dragstart`, we mark the dragged task with an `id`. Then on `drop`, we can use this ID to identify the task and remove it from the source column. Finally we remember to remove the ID on `dragend` so we don't create duplicate IDs on a later drag.
 
