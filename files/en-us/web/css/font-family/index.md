@@ -162,20 +162,6 @@ font-family: "Gill Sans Extrabold", sans-serif;
     - `fangsong`
       - : A particular style of Chinese characters that are between serif-style Song and cursive-style Kai forms. This style is often used for government documents.
 
-  Generic family names can also be specified using the `generic()` function:
-  - `generic(serif)`
-  - `generic(sans-serif)`
-  - `generic(monospace)`
-  - `generic(cursive)`
-  - `generic(fantasy)`
-  - `generic(system-ui)`
-  - `generic(ui-serif)`
-  - `generic(ui-sans-serif)`
-  - `generic(ui-monospace)`
-  - `generic(ui-rounded)`
-  - `generic(math)`
-  - `generic(fangsong)`
-
 ## Formal definition
 
 {{cssinfo}}
@@ -216,35 +202,6 @@ font-family: "Gill Sans Extrabold", sans-serif;
 .fangsong {
   font-family: fangsong;
 }
-
-/* Using generic() function syntax */
-.generic-serif {
-  font-family: Times, "Times New Roman", Georgia, generic(serif);
-}
-
-.generic-sans-serif {
-  font-family: Verdana, Arial, Helvetica, generic(sans-serif);
-}
-
-.generic-monospace {
-  font-family: "Lucida Console", Courier, generic(monospace);
-}
-
-.generic-cursive {
-  font-family: generic(cursive);
-}
-
-.generic-fantasy {
-  font-family: generic(fantasy);
-}
-
-.generic-math {
-  font-family: generic(math);
-}
-
-.generic-fangsong {
-  font-family: generic(fangsong);
-}
 ```
 
 ```html hidden
@@ -261,24 +218,6 @@ font-family: "Gill Sans Extrabold", sans-serif;
 <div class="math">This is an example of a math font.</div>
 
 <div class="fangsong">This is an example of a fangsong font.</div>
-
-<div class="generic-serif">This is an example using generic(serif).</div>
-
-<div class="generic-sans-serif">
-  This is an example using generic(sans-serif).
-</div>
-
-<div class="generic-monospace">
-  This is an example using generic(monospace).
-</div>
-
-<div class="generic-cursive">This is an example using generic(cursive).</div>
-
-<div class="generic-fantasy">This is an example using generic(fantasy).</div>
-
-<div class="generic-math">This is an example using generic(math).</div>
-
-<div class="generic-fangsong">This is an example using generic(fangsong).</div>
 ```
 
 {{EmbedLiveSample("Some_common_font_families", 600, 220)}}
