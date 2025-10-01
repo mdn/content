@@ -81,20 +81,6 @@ font-family: ui-rounded;
 font-family: math;
 font-family: fangsong;
 
-/* Generic family names using the generic() function */
-font-family: generic(serif);
-font-family: generic(sans-serif);
-font-family: generic(monospace);
-font-family: generic(cursive);
-font-family: generic(fantasy);
-font-family: generic(system-ui);
-font-family: generic(ui-serif);
-font-family: generic(ui-sans-serif);
-font-family: generic(ui-monospace);
-font-family: generic(ui-rounded);
-font-family: generic(math);
-font-family: generic(fangsong);
-
 /* Global values */
 font-family: inherit;
 font-family: initial;
@@ -121,7 +107,7 @@ font-family: "Gill Sans Extrabold", sans-serif;
     See also [Valid family names](#valid_family_names).
 
 - `<generic-name>`
-  - : Generic font families are a fallback mechanism, a means of preserving some of the style sheet author's intent when none of the specified fonts are available. Generic family names can be specified as keywords (which must not be quoted) or using the `generic()` function. A generic font family should be the last item in the list of font family names. The following keywords are defined:
+  - : Generic font families are a fallback mechanism, a means of preserving some of the style sheet author's intent when none of the specified fonts are available. Generic family names are keywords and must not be quoted. A generic font family should be the last item in the list of font family names. The following keywords are defined:
     - `serif`
       - : Glyphs have finishing strokes, flared or tapering ends, or have actual serifed endings.
 
