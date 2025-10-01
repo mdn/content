@@ -95,6 +95,8 @@ function randomRGB() {
   return `rgb(${random(0, 255)} ${random(0, 255)} ${random(0, 255)})`;
 }
 
+const balls = [];
+
 class Ball {
   constructor(x, y, velX, velY, color, size) {
     this.x = x;
@@ -147,8 +149,6 @@ class Ball {
     }
   }
 }
-
-const balls = [];
 
 while (balls.length < 25) {
   const size = random(10, 20);

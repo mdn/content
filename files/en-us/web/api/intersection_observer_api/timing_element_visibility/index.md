@@ -232,6 +232,15 @@ const adObserver = new IntersectionObserver(
 );
 const refreshIntervalID = setInterval(handleRefreshInterval, 1000);
 
+const loremIpsum =
+  "<p>Lorem ipsum dolor sit amet, consectetur adipiscing" +
+  " elit. Cras at sem diam. Vestibulum venenatis massa in tincidunt" +
+  " egestas. Morbi eu lorem vel est sodales auctor hendrerit placerat" +
+  " risus. Etiam rutrum faucibus sem, vitae mattis ipsum ullamcorper" +
+  " eu. Donec nec imperdiet nibh, nec vehicula libero. Phasellus vel" +
+  " malesuada nulla. Aliquam sed magna aliquam, vestibulum nisi at," +
+  " cursus nunc.</p>";
+
 buildContents();
 ```
 
@@ -240,6 +249,8 @@ First, we set up an event listener for the {{domxref("document.visibilitychange_
 Next we set up the options for the {{domxref("IntersectionObserver")}} which will monitor target elements (ads, in our case) for intersection changes relative to the document. The options are configured to watch for intersections with the document's viewport (by setting `root` to `null`). We have no margins to extend or contract the intersection root's rectangle; we want to match the boundaries of the document's viewport exactly for intersection purposes. And the `threshold` is set to an array containing the values 0.0 and 0.75; this will cause our callback to execute whenever a targeted element becomes completely obscured or first starts to become unobscured (intersection ratio 0.0) or passes through 75% visible in either direction (intersection ratio 0.75).
 
 The observer, `adObserver`, is created by calling `IntersectionObserver`'s constructor, passing in the callback function, `intersectionCallback`, and our options.
+
+The variable `loremIpsum` contains the text we'll use for the body of all of our articles. Obviously in the real world, you'd have some code to pull articles from a database or the like, but this does the job for our purposes. Every article uses the same text; you could of course change that easily enough.
 
 We then call a function `buildContents()`, which we'll define later to actually generate and insert into the document the articles and ads we want to present.
 
@@ -397,15 +408,6 @@ This code finds the ad's timer using its ID, `"timer"`, and computes the number 
 The `buildContents()` function is called by the [startup code](#setting_up) to select and insert into the document the articles and ads to be presented:
 
 ```js
-const loremIpsum =
-  "<p>Lorem ipsum dolor sit amet, consectetur adipiscing" +
-  " elit. Cras at sem diam. Vestibulum venenatis massa in tincidunt" +
-  " egestas. Morbi eu lorem vel est sodales auctor hendrerit placerat" +
-  " risus. Etiam rutrum faucibus sem, vitae mattis ipsum ullamcorper" +
-  " eu. Donec nec imperdiet nibh, nec vehicula libero. Phasellus vel" +
-  " malesuada nulla. Aliquam sed magna aliquam, vestibulum nisi at," +
-  " cursus nunc.</p>";
-
 function buildContents() {
   for (let i = 0; i < 5; i++) {
     contentBox.appendChild(createArticle(loremIpsum));
@@ -416,8 +418,6 @@ function buildContents() {
   }
 }
 ```
-
-The variable `loremIpsum` contains the text we'll use for the body of all of our articles. Obviously in the real world, you'd have some code to pull articles from a database or the like, but this does the job for our purposes. Every article uses the same text; you could of course change that easily enough.
 
 `buildContents()` creates a page with five articles. Following every odd-numbered article, an ad is "loaded" and inserted into the page. Articles are inserted into the content box (that is, the {{HTMLElement("main")}} element that contains all the site content) after being created using a method called `createArticle()`, which we'll look at next.
 

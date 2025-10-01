@@ -79,9 +79,8 @@ h1 {
 }
 
 button {
-  border: 0;
   background: rgb(150 150 150 / 0.6);
-  border: 1px solid #999;
+  border: 1px solid #999999;
   position: absolute;
   cursor: pointer;
   top: 2px;
