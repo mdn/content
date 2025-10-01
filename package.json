@@ -40,7 +40,6 @@
     "lint:yml": "prettier -c \"**/*.yml\"",
     "start": "yarn -s info:fred && yarn up-to-date-check && env-cmd --silent cross-env CONTENT_ROOT=files NODE_ENV=production FRED_PLAYGROUND_LOCAL=true FRED_PLAYGROUND_PORT=5043 FRED_PORT=5042 FRED_WRITER_MODE=true fred-server",
     "start:fred": "yarn -s info:deprecated && yarn -s info:fred && yarn up-to-date-check && env-cmd --silent cross-env CONTENT_ROOT=files NODE_ENV=production FRED_PLAYGROUND_LOCAL=true FRED_WRITER_MODE=true fred-server",
-    "start:legacy": "yarn -s info:deprecated && yarn up-to-date-check && env-cmd --silent cross-env CONTENT_ROOT=files REACT_APP_DISABLE_AUTH=true BUILD_OUT_ROOT=build rari-server",
     "up-to-date-check": "node scripts/up-to-date-check.js",
     "jest": "cross-env NODE_OPTIONS=--experimental-vm-modules jest",
     "test:front-matter-linter": "yarn jest tests"
