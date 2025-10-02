@@ -190,24 +190,17 @@ In this example, only a copy or link operation is allowed, but a move operation 
 
 The values of `effectAllowed` are combinations of `dropEffect`:
 
-- `none`
-  - : No operation is permitted
-- `copy`
-  - : `copy` only
-- `move`
-  - : `move` only
-- `link`
-  - : `link` only
-- `copyMove`
-  - : `copy` or `move` only
-- `copyLink`
-  - : `copy` or `link` only
-- `linkMove`
-  - : `link` or `move` only
-- `all`
-  - : `copy`, `move`, or `link`
-- `uninitialized`
-  - : The default value when the effect has not been set; generally equivalent to `all`, except the default `dropEffect` may not always be `copy`.
+| Value           | Description                                                                                                                                  |
+| --------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| `none`          | No operation is permitted                                                                                                                    |
+| `copy`          | `copy` only                                                                                                                                  |
+| `move`          | `move` only                                                                                                                                  |
+| `link`          | `link` only                                                                                                                                  |
+| `copyMove`      | `copy` or `move` only                                                                                                                        |
+| `copyLink`      | `copy` or `link` only                                                                                                                        |
+| `linkMove`      | `link` or `move` only                                                                                                                        |
+| `all`           | `copy`, `move`, or `link`                                                                                                                    |
+| `uninitialized` | The default value when the effect has not been set; generally equivalent to `all`, except the default `dropEffect` may not always be `copy`. |
 
 By default, the `dropEffect` is initialized based on `effectAllowed`, in the order of `copy`, `link`, `move`, selecting the first one that is allowed. The unselected but allowed effects may also be selected as default if appropriate; for example, on Windows, holding the <kbd>Alt</kbd> key causes `link` to be used in priority. If `effectAllowed` is `uninitialized` and the dragged element is an `<a>` link, the default `dropEffect` is `link`; if `effectAllowed` is `uninitialized` and the dragged element is a selection from an editable text field, the default `dropEffect` is `move`.
 
