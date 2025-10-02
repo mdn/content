@@ -200,7 +200,7 @@ When calling `tabs.remove()`:
 - **In Firefox:** separate event handlers are not maintained per world. This means that the most recent content script to request `element.onclick = xxx` overwrites the page's or other extensions' event handlers.
 - **In Chrome:** separate event handlers are maintained per world, so Chrome maintains event handlers for a page and every requesting extension.
 
-See [Firefox bug 1965975](https://bugzil.la/1965975#c5) for more information.
+To work around this inconsistency, use {{domxref("EventTarget.addEventListener", "addEventListener()")}} to register event listeners. See [Firefox bug 1965975](https://bugzil.la/1965975#c5) for more information.
 
 #### Executing code in a web page from content script
 
