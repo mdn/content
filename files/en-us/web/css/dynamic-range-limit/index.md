@@ -101,7 +101,7 @@ In the markup, we embed an HDR image using an {{htmlelement("img")}} element. We
 ```html
 <img
   src="gioia-pixel-ultrahdr.jpg"
-  alt="A subway station, with while strip lights lighting the platform and ad posters in the background"
+  alt="A subway station, with white strip lights lighting the platform and ad posters in the background"
   tabindex="0" />
 ```
 
