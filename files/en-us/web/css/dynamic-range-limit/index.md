@@ -72,7 +72,9 @@ The dynamic range between the lightest color and the darkest color is calculated
 
 Traditional web content uses **Standard Dynamic Range (SDR)**, where the brightest color is equivalent to the CSS color `white` (`#ffffff` in hexadecimal). The brightness in High Dynamic Range (HDR) content, on the other hand, can go beyond the standard white. In HDR terminology, the standard CSS `white` is also called the HDR reference white.
 
-The peak luminance at which content can be displayed varies depending on both the content itself, the available display hardware, and user preferences. The amount by which the peak luminance of white can exceed HDR reference white is termed the **HDR headroom** and is typically expressed in photographic stops. SDR content always has an HDR headroom of `0`, because its brightest white _is_ the HDR reference white. Older monitors may also have an HDR headroom of `0` because they are not able to display brighter colors. Newer monitors may have an HDR headroom of greater than `0`, and therefore will be able to display the brighter colors available in HDR content.
+The peak luminance at which content can be displayed depends on the content, the available display hardware, and user preferences. The amount by which the peak luminance of white can exceed HDR reference white is termed **HDR headroom** and is typically expressed in photographic stops.
+
+SDR content always has an HDR headroom of `0` because its brightest white _is_ the HDR reference white. Older monitors may also have an HDR headroom of `0` because they are not able to display brighter colors. Newer monitors may have an HDR headroom greater than `0`, allowing them to display the brighter colors available in HDR content.
 
 On newer monitors displaying HDR content, the brightness can become jarring to the viewer. This is especially apparent in apps where a mixture of HDR and SDR content is displayed, leading to inconsistency in the brightness.
 
