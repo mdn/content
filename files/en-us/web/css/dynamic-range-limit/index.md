@@ -118,7 +118,7 @@ img {
 }
 ```
 
-On hover and focus, we change the value of the `<img>` element's `dynamic-range-limit` to `no-limit` so that it will display as brightly as the browser and display setup allows.
+On hover or focus, we change the value of the `<img>` element's `dynamic-range-limit` to `no-limit` so that it will display as brightly as the browser and display setup allow.
 
 ```css
 img:hover,
