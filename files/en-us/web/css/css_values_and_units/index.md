@@ -205,7 +205,7 @@ The CSS values and units module also introduces the [`<frequency>`](/en-US/docs/
   - : The formal grammar used to define the set of valid values for CSS properties and functions.
 
 - [Using CSS typed arithmetic](/en-US/docs/Web/CSS/CSS_Values_and_Units/Using_CSS_typed_arithmetic)
-  - : An explanation of CSS typed arithmetic behavioral updates and the kind of features enabled by them.
+  - : An explanation of CSS typed arithmetic behavior, updates to that behavior, and the kinds of features enabled by it.
 
 - [Learn: Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
   - : A look at some of the most frequently used value types, what they are, and how they work.

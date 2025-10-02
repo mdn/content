@@ -111,9 +111,9 @@ When an {{cssxref("&lt;integer&gt;")}} is expected, the `calc()` expression can 
 
 Implementations historically required that, when using the `*` and `/` operators, one of the operands had to be unitless. This is still the case for `*` — calculations like `200px * 4px` don't make sense, as 800px<sup>2</sup> is meaningless in CSS.
 
-For `/`, it used to be the case that the right operand had to be unitless. However, typed arithmetic changes mean that [supporting browsers](#browser_compatibility) now enable calculations such as `100vw / 1px`, which result in unitless values. These can then be used in the values of unitless properties, or converted into a different type altogether by multiplying them by another typed value.
+For `/`, it used to be the case that the right operand had to be unitless. However, typed arithmetic behavioral changes mean that [supporting browsers](#browser_compatibility) now support calculations such as `100vw / 1px`, which result in unitless values. These can then be used in the values of unitless properties, or converted into a different type altogether by multiplying them by another typed value.
 
-Typed arithmetic enables interesting relationships to be created between different values on the page, and interesting new UI features to be implemented. For a full explanation and examples, see [Using CSS typed arithmetic](/en-US/docs/Web/CSS/CSS_Values_and_Units/Using_CSS_typed_arithmetic).
+Such calculations enable interesting relationships to be created between different values on the page, and interesting new UI features to be implemented. For a full explanation and examples, see [Using CSS typed arithmetic](/en-US/docs/Web/CSS/CSS_Values_and_Units/Using_CSS_typed_arithmetic).
 
 ### Support for computing color channels in relative colors
 

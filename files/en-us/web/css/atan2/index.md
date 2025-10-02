@@ -113,3 +113,4 @@ div.box-5 {
 - {{CSSxRef("asin")}}
 - {{CSSxRef("acos")}}
 - {{CSSxRef("atan")}}
+- [Using CSS typed arithmetic](/en-US/docs/Web/CSS/CSS_Values_and_Units/Using_CSS_typed_arithmetic): Explains how the unitless values achieved via the [`tan(atan2())` hack](https://dev.to/janeori/css-type-casting-to-numeric-tanatan2-scalars-582j) can now be achieved via simple division.

@@ -6,13 +6,13 @@ page-type: guide
 sidebar: cssref
 ---
 
-**CSS typed arithmetic** refers to updates to the [CSS values and units](/en-US/docs/Web/CSS/CSS_Values_and_Units) module — and subsequent browser behavior — around mathematical operations permitted on CSS values of varying data types. These updates mean that you can now use functions such as {{cssxref("calc()")}} and {{cssxref("abs()")}} to divide a value with one unit by a value with a different unit of the same overall type, resulting in unitless quotients. These quotients can then be used in the values of unitless properties, or converted into a different type altogether by multiplying them by another typed value.
+**CSS typed arithmetic** refers generally to permitted calculations performed with typed CSS values via functions such as {{cssxref("calc()")}}. The term is also used to refer specifically to updates to the [CSS values and units](/en-US/docs/Web/CSS/CSS_Values_and_Units) module — and subsequent browser behavior — around these calculations. These updates mean that you can divide a value with one unit by a value with a different unit of the same overall type, resulting in unitless quotients. These quotients can then be used in the values of unitless properties, or converted into a different type altogether by multiplying them by another typed value.
 
-Typed arithmetic enables interesting relationships to be created between different values on the page, and interesting new UI features to be implemented in [supporting browsers](/en-US/docs/Web/CSS/calc#browser_compatibility).
+This updated typed arithmetic behavior enables interesting relationships to be created between different values on a page, and interesting new UI features to be rendered in [supporting browsers](/en-US/docs/Web/CSS/calc#browser_compatibility).
 
-This article explores what the updates are in more detail, and presents some examples that rely on typed arithmetic to work.
+This article explores what the updates are in more detail, and presents some examples that make use of them.
 
-## Traditional CSS arithmetic type rules
+## CSS typed arithmetic rules
 
 When performing calculations on values in CSS, there are some rules around compatibility of values with different data types.
 
@@ -54,7 +54,7 @@ If you try to multiply two values with units — even the same units — normal 
 calc(200px * 4px)
 ```
 
-800px<sup>2</sup> is meaningless in CSS.
+However, the previous function call is invalid: <code>800px<sup>2</sup></code> is meaningless in CSS.
 
 ## Division
 
@@ -71,7 +71,9 @@ However, you can't divide a unitless value by a value with a unit — that doesn
 calc(1000 / 2px) /* ?!? */
 ```
 
-In addition — **and this is where it gets interesting** — It used to be the case that you couldn't divide one value with a unit by another, even different units of the same overall type. However, **this is now possible**, and represents the change in behavior that typed arithmetic enables. When two values with units of the same type are fed into a divison operation, the units cancel each other out, and you are left with a unitless value. Behind the scenes, the two value's computed values are divided by one another.
+In addition — **and this is where it gets interesting** — It used to be the case that you couldn't divide one value with a unit by another, even different units of the same overall type. However, the specification updates mentioned earlier mean **this is now possible**.
+
+When two values with units of the same type are fed into a divison operation, the units cancel each other out, and you are left with a unitless value. Behind the scenes, the two value's computed values are divided by one another.
 
 As a result, the same calculation can have very different results depending on the context it is used in and the units of the divisor.
 
@@ -81,7 +83,7 @@ Take the following example:
 calc(100vw / 1px)
 ```
 
-`100vw` is equal to `100%` of the width of the viewport. If the viewport is currently set to `1000px` wide, the above calculation will return the unitless value `1000`. However, if the viewport is `500px` wide, the above calculation will return the unitless value `500`.
+`100vw` is equal to `100%` of the width of the viewport. If the viewport is currently `1000px` wide, the above calculation will return the unitless value `1000`. However, if the viewport is `500px` wide, the above calculation will return the unitless value `500`.
 
 If we replace the `1px` divisor by `1em`, we get very different results:
 
@@ -89,9 +91,9 @@ If we replace the `1px` divisor by `1em`, we get very different results:
 calc(100vw / 1em)
 ```
 
-If the viewport is set to `1000px` wide, and `1em` is equal to the browser default of `16px` at the point of calculation, the previous calculation will return `1000 / 16` = `62.5`.
+If the viewport is set to `1000px` wide, and `1em` is equal to the browser default of `16px` at the point of calculation, the previous calculation will return `1000px / 16px` = `62.5`.
 
-## Why is typed arithmetic useful?
+## Why is the behavioral update useful?
 
 The above behavioral change doesn't sound very significant at first, but it enables all kinds of useful associations between different values, resulting in an interesting set of responsive UI features.
 
@@ -118,7 +120,7 @@ Let's walk through some examples to show how this technique can be useful.
 
 ## Basic example: responsive background opacity
 
-Our [Responsive background opacity](https://mdn.github.io/dom-examples/css-typed-arithmetic/responsive-background-opacity) example ([see source code](https://github.com/mdn/dom-examples/tree/main/css-typed-arithmetic/responsive-background-opacity)) shows how to vary the opacity of a background image as the viewport width is changed. Having the background image fade out as the screen gets narrower means the image is less likely to affect the readability of the text content as it starts to overlap it.
+Our [Responsive background opacity](https://mdn.github.io/dom-examples/css-typed-arithmetic/responsive-background-opacity) example ([see source code](https://github.com/mdn/dom-examples/tree/main/css-typed-arithmetic/responsive-background-opacity)) shows how to vary the opacity of a background image as the viewport width is changed. Having the background image fade out as the screen gets narrower means the image is less likely to affect the readability of the text content as they start to overlap.
 
 ### HTML
 
@@ -138,7 +140,7 @@ The HTML contains some basic text content wrapped in a {{htmlelement("div")}} el
 
 ### CSS
 
-In the CSS, we start by defining a [CSS custom property](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) called `--width-percentage` on the {{cssxref(":root")}} element, which contains the result of the calculation `100vw / 2000px`. The aim here is to represent the viewport width as a percentage value that we can later use as an alpha channel value. When the viewport is `2000px` wide, the calculation will return `1`, which is equivalent to `100%` alpha. Anything less than a `2000px` viewport width will result in a smaller value.
+In the CSS, we start by defining a [CSS custom property](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) called `--width-percentage` on the {{cssxref(":root")}} element, which contains the result of the calculation `100vw / 2000px`. The aim here is to represent the viewport width as a percentage that we can later use as an alpha channel value. When the viewport is `2000px` wide, the calculation will return `1`, which is equivalent to `100%` alpha. Anything less than a `2000px` viewport width will result in a smaller value.
 
 ```css
 :root {
@@ -199,10 +201,10 @@ We start off our CSS in a similar way to the previous demo, creating a unitless 
 
 Now on to the styling of the paragraph itself. We first give it some basic styles (a {{cssxref("border")}} and {{cssxref("text-align")}} of `center`), then set two values based on the `--viewport-in-pixels` property we created earlier:
 
-1. We set the {{cssxref("font-size")}} of the paragraph to an `em` value equal to `--viewport-in-pixels` divided by `200`. The result of that is multplied by `1em` to convert it into ems.
+1. We set the {{cssxref("font-size")}} of the paragraph to a value equal to `--viewport-in-pixels` divided by `200`, multplied by `1em` to convert it into `em`s.
 2. We set the {{cssxref("background-color")}} of the paragraph to equal an [`lch()`](/en-US/docs/Web/CSS/color_value/lch) color. The lightness and chroma components are constant values (`75%` and `50%`, respectively) whereas the hue component is set to `--viewport-in-pixels` divided by `10`, plus `100`. We then multiply the result of that by `1deg` to specify the value in degrees.
    > [!NOTE]
-   > This last step is not strictly necessary (`lch()` also accepts unitless hue values), but we think a degree value is more intuitive, plus we wanted to show another example of how the unitless value can be cast into a different data type.
+   > This last step is not strictly necessary, as `lch()` also accepts unitless hue values. However, we think a degree value is more intuitive, plus we wanted to show another example of how the unitless value can be cast into a different data type.
 
 ```css
 p {
@@ -274,23 +276,23 @@ We then create a custom property called `--width-percentage` that contains the r
 .story-circle {
   width: 1px;
   height: 1px;
-  --width-percentage: calc(100cqw / 1600px);
+  --width-percentage: calc((100cqw / 1200px) - 0.33333);
 }
 ```
 
 We are using the container query width rather than the viewport width to control the rotation because we want to set a maximum bound for it, which is controlled by the `<body>` `max-width`. If the rotation value becomes greater than a full circle, the last paragraph starts to overlap the first one, which spoils the effect.
 
-Since the `max-width` is `1600px`, you might have expected the calculation to be `100cqw / 1600px)`. This would work, but we've instead gone for `(100cqw / 1200px) - 0.33333` (the `0.33333` comes from `1600px/1200px - 1`) — this still causes the maximum rotation to occur at `1600px` `<body>` width, but the fan now has a smaller minimum rotation, which gives a better effect at narrow viewport widths.
+Since the `max-width` is `1600px`, you might have expected the calculation to be `100cqw / 1600px)`. This would work, but we've instead gone for `(100cqw / 1200px) - 0.33333` (the `0.33333` comes from `1600px/1200px - 1`). This still causes the maximum rotation to occur at a `<body>` width of `1600px`, but the fan now has a smaller minimum rotation, which gives a better effect at narrow viewport widths.
 
 The final style rule selects the paragraphs themselves. Most of this styling is rudimentary. It is worth pointing out that we have set {{cssxref("position")}} to `absolute` to cause all of the paragraphs to sit on top of one another, and we've set a {{cssxref("transform-origin")}} value of `center left` to cause paragraphs to rotate around the center of their left edge, so they will all fan out from a center point over their containing `<div>`.
 
-Now onto the interesting bit — we define a custom property called `--angle` that contains the rotation angle of the paragraph. This is equal to:
+Now onto the interesting bit — we define a custom property called `--angle` that contains the unitless rotation angle of the paragraph, before then setting the {{cssxref("rotate")}} property to that value multiplied by `1deg` to convert it to a degree value. The `--angle` custom property is equal to:
 
-- The paragraph's {{cssxref("sibling-index()")}} - `1`. This causes the first paragraph to have a rotation angle of `0`, as we want it to be horizontal.
+- The paragraph's {{cssxref("sibling-index()")}} - `1` (which causes the first paragraph to have a rotation angle of `0`, as we want it to be horizontal)
 - multiplied by
-- `360` divided by the paragraph's {{cssxref("sibling-count()")}}. This means that all the paragraphs will be equally spaced around the circle, and the design will still work if paragraphs are added or removed.
+- `360` divided by the paragraph's {{cssxref("sibling-count()")}} (which causes all the paragraphs to be equally spaced around the circle, meaning the design will still work if paragraphs are added or removed)
 - multiplied by
-- our `--width-percentage` custom property. This causes the rotation of the paragraphs around the circle to vary as the viewport width is changed. Remember that this property has a maximum value of `1`, which will be achieved when the `<body>` element hits its `max-width` of `1600px`.
+- our `--width-percentage` custom property (this causes the rotation of the paragraphs around the circle to vary as the viewport width is changed). Remember that this property has a maximum value of `1`, which will be achieved when the `<body>` element hits its `max-width` of `1600px`.
 
 ```css
 p {
