@@ -6,7 +6,7 @@ browser-compat: css.properties.dynamic-range-limit
 sidebar: cssref
 ---
 
-The **`dynamic-range-limit`** [CSS](/en-US/docs/Web/CSS) property allows the maximum **luminance** of **High Dynamic Range** (HDR) content to be limited.
+The **`dynamic-range-limit`** [CSS](/en-US/docs/Web/CSS) property specifies the maximum luminance allowed for High Dynamic Range (HDR) content.
 
 ## Syntax
 
