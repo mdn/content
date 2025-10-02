@@ -20,7 +20,7 @@ dynamic-range-limit-mix(no-limit 10%, constrained 20%);
 dynamic-range-limit-mix(no-limit 30%, constrained 30%, standard 30%);
 dynamic-range-limit-mix(
     no-limit 20%,
-    dynamic-range-limit-mix(standard 25%, constrained 75%) 20%,
+    dynamic-range-limit-mix(standard 25%, constrained 75%) 20%
 )
 ```
 
