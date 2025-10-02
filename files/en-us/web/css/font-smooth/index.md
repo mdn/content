@@ -107,4 +107,4 @@ Not part of any standard.
 - [Please Stop "Fixing" Font Smoothing](https://usabilitypost.com/2012/11/05/stop-fixing-font-smoothing/) by Dmitry Fadeyev (2012)
 - [Laissez-faire font smoothing and anti-aliasing](https://www.zachleat.com/web/font-smooth/) by Zach Leatherman (2017)
 - [Improve text rendering (A Modern CSS Reset)](https://www.joshwcomeau.com/css/custom-css-reset/#five-improve-text-rendering-6) by Josh W. Comeau (2021)
-- [What’s the deal with WebKit Font Smoothing?](https://dbushell.com/2024/11/05/webkit-font-smoothing/) by David Bushell (2024)
+- [What's the deal with WebKit Font Smoothing?](https://dbushell.com/2024/11/05/webkit-font-smoothing/) by David Bushell (2024)
