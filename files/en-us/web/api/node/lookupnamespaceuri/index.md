@@ -21,7 +21,7 @@ lookupNamespaceURI(prefix)
 ### Parameters
 
 - `prefix`
-  - : The prefix to look for.
+  - : The prefix to look for. The empty string is equivalent to `null`, meaning the default namespace.
     > [!NOTE]
     > This parameter is not optional, but can be set to `null`.
 
@@ -36,6 +36,9 @@ A string containing the namespace URI corresponding to the prefix.
 - If the prefix is not found, the return value is `null`.
 
 ## Example
+
+> [!NOTE]
+> This example runs in an HTML document, where it's not possible to customize the XML namespaces. Firefox sets all elements' namespace URI to `null`, while Chrome and Safari appropriately set HTML, SVG, and MathML elements' default namespace URIs. If you want to conduct more meaningful tests, you can open a standalone [SVG](/en-US/docs/Web/SVG) document and execute scripts in its context.
 
 ```html
 <div class="hidden">

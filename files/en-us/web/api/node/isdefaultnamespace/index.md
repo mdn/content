@@ -20,7 +20,7 @@ isDefaultNamespace(namespaceURI)
 ### Parameters
 
 - `namespaceURI`
-  - : A string representing the namespace against which the element will be checked.
+  - : A string representing the namespace against which the element will be checked. The empty string is equivalent to `null`.
     > [!NOTE]
     > `namespaceURI` is not an optional parameter, but can be `null`.
 
@@ -29,6 +29,9 @@ isDefaultNamespace(namespaceURI)
 A boolean value that holds the return value `true` or `false`, indicating if the parameter is the default namespace, or not. It is equivalent to `node.lookupNamespaceURI(null) === namespaceURI`.
 
 ## Example
+
+> [!NOTE]
+> This example runs in an HTML document, where it's not possible to customize the XML namespaces. Firefox sets all elements' namespace URI to `null`, while Chrome and Safari appropriately set HTML, SVG, and MathML elements' default namespace URIs. If you want to conduct more meaningful tests, you can open a standalone [SVG](/en-US/docs/Web/SVG) document and execute scripts in its context.
 
 ```html
 <div class="hidden">
