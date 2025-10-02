@@ -31,7 +31,7 @@ dynamic-range-limit-mix(
 
 ### Return value
 
-A custom maximum luminance limit, expressed as a number of photographic stops above **HDR reference white**. For privacy reasons, the actual calculated result is not exposed.
+A custom maximum luminance limit, expressed as a number of photographic stops higher than the HDR reference white. For privacy reasons, the actual calculated result is not exposed.
 
 ## Description
 
