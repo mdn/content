@@ -110,7 +110,7 @@ Firefox 144 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 #### Marionette
 
-- Reverted the [`Scroll Into View` WebDriver algorithm](https://w3c.github.io/webdriver/#dfn-scrolls-into-view) as used by several WebDriver classic commands in Marionette to always use the `instant` scroll behavior. This undoes the change introduced in Firefox 97, which had switched the behavior to `auto`. The reversion addresses potential race conditions when scrolling elements that use `smooth` behavior ([Firefox bug 1986238](https://bugzilla.mozilla.org/show_bug.cgi?id=1986238)).
+- Reverted the [`Scroll Into View` WebDriver algorithm](https://w3c.github.io/webdriver/#dfn-scrolls-into-view) as used by several WebDriver classic commands in Marionette to always use the `instant` scroll behavior. This undoes the change introduced in Firefox 97, which had switched the behavior to `auto`. The reversion addresses potential race conditions when scrolling elements that use `smooth` behavior ([Firefox bug 1986238](https://bugzil.la/1986238)).
 
 ## Changes for add-on developers
 
