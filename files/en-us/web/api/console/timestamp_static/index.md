@@ -25,6 +25,9 @@ console.timeStamp(label)
 - `label` {{Optional_Inline}}
   - : Label for the timestamp.
 
+> [!NOTE]
+> Chrome has extended this `console.timeStamp()` method to allow additional, optional parameters to be provided as part of its extensibility API that surfaces these in performances traces. See the [Chrome's extensibility API documentation](https://developer.chrome.com/docs/devtools/performance/extension#inject_your_data_with_consoletimestamp) for more information.
+
 ### Return value
 
 None ({{jsxref("undefined")}}).
@@ -41,3 +44,4 @@ None ({{jsxref("undefined")}}).
 - {{domxref("performance/mark", "performance.mark()")}}
 - {{domxref("performance/measure", "performance.measure()")}}
 - [Adding markers with the console API](https://web.archive.org/web/20211207010020/https://firefox-source-docs.mozilla.org/devtools-user/performance/waterfall/index.html#adding-markers-with-the-console-api)
+- [Chrome DevTools extensibility API](https://developer.chrome.com/docs/devtools/performance/extension#inject_your_data_with_consoletimestamp)

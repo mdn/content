@@ -80,6 +80,10 @@ performance.mark("login-button-pressed", {
 });
 ```
 
+### Chrome DevTools Extensibility API
+
+Chrome DevTools uses `performance.mark()` and in particular a structured `detail` property as part of its extensibility API that surfaces these in custom tracks in performance traces. See the [Chrome's extensibility API documentation](https://developer.chrome.com/docs/devtools/performance/extension#inject_your_data_with_consoletimestamp) for more information and examples.
+
 ### Reserved names
 
 Note in order to maintain backwards compatibility, names that are part of the deprecated {{domxref("PerformanceTiming")}} interface can't be used. The following example throws:
