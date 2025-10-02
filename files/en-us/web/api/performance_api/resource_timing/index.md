@@ -30,8 +30,10 @@ An application can get timestamps for the various stages used to load a resource
 9. {{domxref('PerformanceResourceTiming.secureConnectionStart','secureConnectionStart')}}: If the resource is loaded via a secure connection, timestamp immediately before the browser starts the handshake process to secure the current connection.
 10. {{domxref('PerformanceResourceTiming.connectEnd','connectEnd')}}: timestamp immediately after the browser finishes establishing the connection to the server to retrieve the resource.
 11. {{domxref('PerformanceResourceTiming.requestStart','requestStart')}}: timestamp of the time immediately before the browser starts requesting the resource from the server, cache, or local resource.
-12. {{domxref('PerformanceResourceTiming.responseStart','responseStart')}}: timestamp immediately after the browser receives the first byte of the response from the server, cache, or local resource.
-13. {{domxref('PerformanceResourceTiming.responseEnd','responseEnd')}}: timestamp immediately after the browser receives the last byte of the resource or immediately before the transport connection is closed, whichever comes first.
+12. {{domxref('PerformanceResourceTiming.firstInterimResponseStart','firstInterimResponseStart')}}: timestamp immediately after the browser receives the first byte of the first [interim (or informational) response](/en-US/docs/Web/HTTP/Reference/Status#informational_responses) (for example [103 Early Hints](/en-US/docs/Web/HTTP/Reference/Status/103)).
+13. {{domxref('PerformanceResourceTiming.responseStart','responseStart')}}: timestamp immediately after the browser receives the first byte of the response from the server, cache, or local resource. Which may be an interim response.
+14. {{domxref('PerformanceResourceTiming.finalResponseHeadersStart','finalResponseHeadersStart')}}: timestamp immediately after the browser receives the first byte of the document response from the server, cache, or local resource, after any interim response.
+15. {{domxref('PerformanceResourceTiming.responseEnd','responseEnd')}}: timestamp immediately after the browser receives the last byte of the resource or immediately before the transport connection is closed, whichever comes first.
 
 ## Resource size
 
@@ -50,7 +52,9 @@ The information the `PerformanceResourceTiming` entries provide are often used f
 - Measuring TCP handshake time (`connectEnd` - `connectStart`)
 - Measuring DNS lookup time (`domainLookupEnd` - `domainLookupStart`)
 - Measuring redirection time (`redirectEnd` - `redirectStart`)
+- Measuring interim request time (`firstInterimResponseStart` - `finalResponseHeadersStart`)
 - Measuring request time (`responseStart` - `requestStart`)
+- Measuring document request time (`finalResponseHeadersStart` - `requestStart`)
 - Measuring TLS negotiation time (`requestStart` - `secureConnectionStart`)
 - Measuring time to fetch (without redirects) (`responseEnd` - `fetchStart`)
 - Measuring ServiceWorker processing time (`fetchStart` - `workerStart`)
