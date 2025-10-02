@@ -35,7 +35,7 @@ A custom maximum luminance limit, expressed as a number of photographic stops hi
 
 ## Description
 
-The {{cssxref("dynamic-range-limit")}} property was introduced to allow developers to control the brightness of **High Dynamic Range** (HDR) content. The `dynamic-range-limit-mix()` function can be provided as a value of `dynamic-range-limit`, and enables developers to create custom brightness limits by mixing together percentages of the `dynamic-range-limit` keyword values.
+The {{cssxref("dynamic-range-limit")}} property allows you to control the brightness of High Dynamic Range (HDR) content. The `dynamic-range-limit-mix()` function can be provided as a value of `dynamic-range-limit`, and enables you to create custom brightness limits by mixing together percentages of the `dynamic-range-limit` keyword values.
 
 ### Calculating the percentages
 
