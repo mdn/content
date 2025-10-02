@@ -106,7 +106,7 @@ Firefox 144 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 - Fixed a bug where the locale override set via `emulation.setLocaleOverride` was sometimes incorrectly shared between different browsing contexts within the same process ([Firefox bug 1980211](https://bugzil.la/1980211)).
 
-- Enhanced the `browsingContext.navigate` command to avoid `NS_BINDING_ABORTED` errors caused by redirects or interruptions occurring after the navigation was already committed ([Firefox bug 1914407](https://bugzilla.mozilla.org/show_bug.cgi?id=1914407)).
+- Enhanced the `browsingContext.navigate` command to avoid `NS_BINDING_ABORTED` errors caused by redirects or interruptions occurring after the navigation was already committed ([Firefox bug 1914407](https://bugzil.la/1914407)).
 
 #### Marionette
 
