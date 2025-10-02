@@ -12,7 +12,7 @@ This challenge will test your knowledge of the layout features we've covered so 
 
 ## Starting point
 
-We are going to get you to solve this challenge on your local development environment; ideally, you'll want to view the example in a full browser window to make sure the layout features are working as expected.
+We are going to get you to solve this challenge in your local development environment; ideally, you'll want to view the example in a full browser window to make sure the layout features are working as expected.
 
 1. Create a new folder on your computer called `layout-challenge`.
 2. Inside the folder, create an `index.html` file and paste the following content into it:
