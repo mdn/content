@@ -53,7 +53,7 @@
 /en-US/docs/ARIA/ARIA_Techniques/Using_the_toolbar_role	/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/toolbar_role
 /en-US/docs/ARIA/Accessible_Rich_Internet_Applications	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/ARIA/Basic_form_hints	/en-US/docs/Web/Accessibility/ARIA
-/en-US/docs/ARIA/How_to_file_ARIA-related_bugs	/en-US/docs/Web/Accessibility/ARIA/How_to/File_ARIA-related_bugs
+/en-US/docs/ARIA/How_to_file_ARIA-related_bugs	/en-US/docs/Learn_web_development/Howto/Web_mechanics/File_browser_bugs
 /en-US/docs/ARIA/Live_Regions	/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions
 /en-US/docs/ARIA/examples	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/ARIA/widgets	/en-US/docs/Web/Accessibility/ARIA
@@ -100,7 +100,7 @@
 /en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_toolbar_role	/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/toolbar_role
 /en-US/docs/Accessibility/ARIA/ARIA_Test_Cases	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Accessibility/ARIA/Basic_form_hints	/en-US/docs/Web/Accessibility/ARIA
-/en-US/docs/Accessibility/ARIA/How_to_file_ARIA-related_bugs	/en-US/docs/Web/Accessibility/ARIA/How_to/File_ARIA-related_bugs
+/en-US/docs/Accessibility/ARIA/How_to_file_ARIA-related_bugs	/en-US/docs/Learn_web_development/Howto/Web_mechanics/File_browser_bugs
 /en-US/docs/Accessibility/ARIA/Web_applications_and_ARIA_FAQ	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Accessibility/ARIA/examples	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Accessibility/ARIA/forms	/en-US/docs/Web/Accessibility/ARIA
@@ -11620,7 +11620,8 @@
 /en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow	/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow
 /en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext	/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext
 /en-US/docs/Web/Accessibility/ARIA/Basic_form_hints	/en-US/docs/Web/Accessibility/ARIA
-/en-US/docs/Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs	/en-US/docs/Web/Accessibility/ARIA/How_to/File_ARIA-related_bugs
+/en-US/docs/Web/Accessibility/ARIA/How_to/File_ARIA-related_bugs	/en-US/docs/Learn_web_development/Howto/Web_mechanics/File_browser_bugs
+/en-US/docs/Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs	/en-US/docs/Learn_web_development/Howto/Web_mechanics/File_browser_bugs
 /en-US/docs/Web/Accessibility/ARIA/Multipart_labels	/en-US/docs/Web/Accessibility/ARIA/Guides/Multipart_labels
 /en-US/docs/Web/Accessibility/ARIA/Roles	/en-US/docs/Web/Accessibility/ARIA/Reference/Roles
 /en-US/docs/Web/Accessibility/ARIA/Roles/ARIA:_tabpanel_role	/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tabpanel_role
