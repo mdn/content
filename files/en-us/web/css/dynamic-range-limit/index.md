@@ -76,7 +76,7 @@ The peak luminance at which content can be displayed depends on the content, the
 
 SDR content always has an HDR headroom of `0` because its brightest white _is_ the HDR reference white. Older monitors may also have an HDR headroom of `0` because they are not able to display brighter colors. Newer monitors may have an HDR headroom greater than `0`, allowing them to display the brighter colors available in HDR content.
 
-On newer monitors displaying HDR content, the brightness can become jarring to the viewer. This is especially apparent in apps where a mixture of HDR and SDR content is displayed, leading to inconsistency in the brightness.
+The brightness of HDR content can be jarring to the viewer. This is especially apparent in apps where a mixture of HDR and SDR content is displayed, leading to inconsistency in the brightness.
 
 The `dynamic-range-limit` property was introduced to allow developers to control this brightness For example, you might want to constrain the maximum brightness of all content in a photo or video gallery to HDR reference white (this is what the `standard` keyword does) or a brightness only slightly above HDR reference white (using the `constrained` keyword or a custom limited created using {{cssxref("dynamic-range-limit-mix()")}}). When the user views just one HDR image on its own, or maybe if they select a preference to enable it, you could then set the image's `dynamic-range-limit` to `no-limit`.
 
