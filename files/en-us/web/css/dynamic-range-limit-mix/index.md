@@ -90,7 +90,7 @@ Adding these up to get the raw percentages gives us:
 dynamic-range-limit-mix(standard 5%, constrained 20%, no-limit 25%)
 ```
 
-The above percentages add up to `50%`, so need to be doubled to get the final percentages. The computed value is therefore:
+The above percentages add up to `50%`, so they need to be doubled to get the final percentages. The computed value is therefore:
 
 ```css
 dynamic-range-limit-mix(standard 10%, constrained 40%, no-limit 50%)
