@@ -119,7 +119,7 @@ img {
 ```
 
 > [!NOTE]
-> You can see the `dynamic-range-limit` property in action in our [dynamic-range-limit property demo](#), which includes an HDR image that can be hovered and focused to transition the `dynamic-range-limit` value. [View the example live](#) in a display capable of displaying HDR colors, and try it out.
+> You can see the `dynamic-range-limit` property in action in our [dynamic-range-limit property demo](https://github.com/mdn/dom-examples/tree/main/dynamic-range-limit), which includes an HDR image that can be hovered and focused to transition the `dynamic-range-limit` value. [View the example live](https://mdn.github.io/dom-examples/dynamic-range-limit/) in a display capable of displaying HDR colors, and try it out.
 
 ## Specifications
 

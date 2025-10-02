@@ -27,18 +27,18 @@ dynamic-range-limit: revert-layer;
 dynamic-range-limit: unset;
 ```
 
-The `dynamic-range-limit` property is specified as one of the following keyword values or a {{cssxref("dynamic-range-limit-mix()")}} function call:
-
 ### Values
 
-- Keyword values include:
+The `dynamic-range-limit` property is specified as one of the following keyword values or a {{cssxref("dynamic-range-limit-mix()")}} function call.
+
+- Keyword values
   - : The following keyword values can be specified:
     - `standard`
       - : The highest luminance that can be displayed in selected content is that of **HDR reference white**, which is the CSS color `white`.
     - `no-limit`
       - : The highest luminance that can be displayed in selected content is much greater than that of HDR reference white. The precise level is not defined in the specification.
     - `constrained`
-      - : The highest luminance that can be displayed in selected content is somewhat greater than that of HDR reference white, such that a mix of SDR and HDR content can be comfortably viewed together. Again, the precise level is not defined.
+      - : The highest luminance that can be displayed in selected content is somewhat greater than that of HDR reference white, such that a mix of Standard Dynamic Range (SDR) and HDR content can be comfortably viewed together. The precise level is not defined.
 - {{cssxref("dynamic-range-limit-mix()")}}
   - : Specifies the maximum luminance as a custom value that is a combination of the different keyword values proportionate to the provided percentages. It takes two or more pairs, each consisting of a `dynamic-range-limit` keyword (or a nested `dynamic-range-limit-mix()` function) and a percentage.
 
@@ -46,35 +46,15 @@ The `dynamic-range-limit` property is specified as one of the following keyword 
 
 Dynamic range is the difference in luminance (brightness) between the lightest and darkest parts of content. Dynamic range is measured in photographic stops, where an increase of one stop represents a doubling of the luminance.
 
-The dynamic range between the lightest color and the darkest color is calculated using the following formula:
-
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mrow>
-    <msub>
-      <mo>log</mo>
-      <mn>2</mn>
-    </msub>
-    <mo>(</mo>
-    <mi>high&#x2011;luminance</mi>
-    <mo>)</mo>
-  </mrow>
-  <mo>&#x2212;</mo>
-  <mrow>
-    <msub>
-      <mo>log</mo>
-      <mn>2</mn>
-    </msub>
-    <mo>(</mo>
-    <mi>low&#x2011;luminance</mi>
-    <mo>)</mo>
-  </mrow>
-</math>
+### SDR, HDR, and headroom
 
 Traditional web content uses **Standard Dynamic Range (SDR)**, where the brightest color is equivalent to the CSS color `white` (`#ffffff` in hexadecimal). The brightness in High Dynamic Range (HDR) content, on the other hand, can go beyond the standard white. In HDR terminology, the standard CSS `white` is also called the HDR reference white.
 
 The peak luminance at which content can be displayed depends on the content, the available display hardware, and user preferences. The amount by which the peak luminance of white can exceed HDR reference white is termed **HDR headroom** and is typically expressed in photographic stops.
 
 SDR content always has an HDR headroom of `0` because its brightest white _is_ the HDR reference white. Older monitors may also have an HDR headroom of `0` because they are not able to display brighter colors. Newer monitors may have an HDR headroom greater than `0`, allowing them to display the brighter colors available in HDR content.
+
+### The use-case for `dynamic-range-limit`
 
 The brightness of HDR content can be jarring to the viewer. This is especially apparent in apps where a mixture of HDR and SDR content is displayed, leading to inconsistency in the brightness.
 
@@ -92,7 +72,7 @@ The `dynamic-range-limit` property allows you to control the brightness of HDR c
 
 ### Basic `dynamic-range-limit` usage
 
-In our [dynamic-range-limit property demo](#), we include an HDR image that can be hovered and focused to transition the `dynamic-range-limit` value. [View the example live](#) in a display capable of displaying HDR colors, and try it out. The code is explained below.
+In our [dynamic-range-limit property demo](https://github.com/mdn/dom-examples/tree/main/dynamic-range-limit), we include an HDR image that can be hovered and focused to transition the `dynamic-range-limit` value. [View the example live](https://mdn.github.io/dom-examples/dynamic-range-limit/) in a display capable of displaying HDR colors, and try it out. The code is explained below.
 
 #### HTML
 
