@@ -66,7 +66,7 @@ dynamic-range-limit-mix(constrained 40%, standard 30%, constrained 30%);
 dynamic-range-limit-mix(no-limit 10%, constrained 30%, no-limit 10%);
 ```
 
-If any single specified percentage is less than `0%` or greater than `100%`, the `dynamic-range-limit-mix()` — and therefore the associated `dynamic-range-limit` property value — is invalid. If a keyword is used more than once and the cumulative percentage is more than `100%`, the value is valid, and the proportion rules described above come into play.
+If a specified percentage is less than `0%` or greater than `100%`, the `dynamic-range-limit-mix()` function — and therefore the associated `dynamic-range-limit` property value — is invalid. If a keyword is used more than once and the cumulative percentage is more than `100%`, the value is valid, and the proportion rules described above come into play.
 
 ### Nested `dynamic-range-limit-mix()` functions
 
