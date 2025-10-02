@@ -92,13 +92,25 @@ Firefox 144 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### WebDriver conformance (WebDriver BiDi, Marionette) -->
+### WebDriver conformance (WebDriver BiDi, Marionette)
 
-<!-- #### General -->
+#### WebDriver BiDi
 
-<!-- #### WebDriver BiDi -->
+- Implemented the new `browsingContext.downloadWillBegin` event, which is emitted when a new download is initiated, either by clicking a link with the `download` attribute, or in response to a network request with a `Content-Disposition` header indicating a file attachment ([Firefox bug 1874365](https://bugzilla.mozilla.org/show_bug.cgi?id=1874365)).
 
-<!-- #### Marionette -->
+- Implemented the new `emulation.setScreenOrientationOverride` command, which allows clients to emulate different screen orientations. This command is not limited to mobile devices, but also works for desktop applications ([Firefox bug 1974167](https://bugzilla.mozilla.org/show_bug.cgi?id=1974167)).
+
+- Implemented the new `emulation.setTimezoneOverride` command, which allows clients to simulate a specific timezone setting ([Firefox bug 1978027](https://bugzilla.mozilla.org/show_bug.cgi?id=1978027)).
+
+- Enhanced the `emulation.setLocaleOverride` command to also apply the specified settings to sandboxes previously created via WebDriver BiDi ([Firefox bug 1983807](https://bugzilla.mozilla.org/show_bug.cgi?id=1983807)).
+
+- Fixed a bug where the locale override set via `emulation.setLocaleOverride` was sometimes incorrectly shared between different browsing contexts within the same process ([Firefox bug 1980211](https://bugzilla.mozilla.org/show_bug.cgi?id=1980211)).
+
+- Enhanced the `browsingContext.navigate` command to avoid `NS_BINDING_ABORTED` errors caused by redirects or interruptions occurring after the navigation was already committed ([Firefox bug 1914407](https://bugzilla.mozilla.org/show_bug.cgi?id=1914407)).
+
+#### Marionette
+
+- Reverted the [`Scroll Into View` WebDriver algorithm](https://w3c.github.io/webdriver/#dfn-scrolls-into-view) as used by several WebDriver classic commands in Marionette to always use the `instant` scroll behavior. This undoes the change introduced in Firefox 97, which had switched the behavior to `auto`. The reversion addresses potential race conditions when scrolling elements that use `smooth` behavior ([Firefox bug 1986238](https://bugzilla.mozilla.org/show_bug.cgi?id=1986238)).
 
 ## Changes for add-on developers
 
