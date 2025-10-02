@@ -56,7 +56,7 @@ dynamic-range-limit-mix(no-limit 20%, constrained 30%);
 dynamic-range-limit-mix(no-limit 40%, constrained 80%, standard 80%);
 ```
 
-If a keyword is used more than once, the percentages for that keyword are added together to get the total percentage:
+If a `dynamic-range-limit` keyword value is used more than once, the percentages for that keyword value are added together to get the total percentage:
 
 ```css
 /* constrained 70%, standard 30% */
