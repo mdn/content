@@ -27,7 +27,7 @@ dynamic-range-limit-mix(
 ### Parameters
 
 - {{cssxref("dynamic-range-limit")}} {{cssxref("&lt;percentage>")}}
-  - : A pair consisting of a `dynamic-range-limit` value (which can be another `dynamic-range-limit-mix()` function) and a `<percentage>` between `0%` and `100%` (inclusive) that specifies the proportion of the custom luminance limit made up by this `dynamic-range-limit` value. The `dynamic-range-limit-mix()` function can take two or more of these pairs as parameters.
+  - : A pair consisting of a `dynamic-range-limit` value (which can be another `dynamic-range-limit-mix()` function) and a `<percentage>` between `0%` and `100%` (inclusive). The `<percentage>` specifies the proportion of a `dynamic-range-limit` keyword value in the custom limit. The `dynamic-range-limit-mix()` function can take two or more of these pairs as parameters.
 
 ### Return value
 
