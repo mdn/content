@@ -40,7 +40,7 @@ The `dynamic-range-limit` property is specified as one of the following keyword 
     - `constrained`
       - : The highest luminance that can be displayed in selected content is somewhat greater than that of HDR reference white, such that a mix of SDR and HDR content can be comfortably viewed together. Again, the precise level is not defined.
 - {{cssxref("dynamic-range-limit-mix()")}}
-  - : Takes two or more pairs, each consisting of a `dynamic-range-limit` keyword (or a nested `dynamic-range-limit-mix()` function) and a percentage, and creates a custom maximum luminance limit that is a mix of the different keywords proportionate to the provided percentages.
+  - : Specifies the maximum luminance as a custom value that is a combination of the different keyword values proportionate to the provided percentages. It takes two or more pairs, each consisting of a `dynamic-range-limit` keyword (or a nested `dynamic-range-limit-mix()` function) and a percentage.
 
 ## Description
 
