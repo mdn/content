@@ -102,7 +102,7 @@ Firefox 144 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 - Implemented the new `emulation.setTimezoneOverride` command, which allows clients to simulate a specific timezone setting ([Firefox bug 1978027](https://bugzil.la/1978027)).
 
-- Enhanced the `emulation.setLocaleOverride` command to also apply the specified settings to sandboxes previously created via WebDriver BiDi ([Firefox bug 1983807](https://bugzilla.mozilla.org/show_bug.cgi?id=1983807)).
+- Enhanced the `emulation.setLocaleOverride` command to also apply the specified settings to sandboxes previously created via WebDriver BiDi ([Firefox bug 1983807](https://bugzil.la/1983807)).
 
 - Fixed a bug where the locale override set via `emulation.setLocaleOverride` was sometimes incorrectly shared between different browsing contexts within the same process ([Firefox bug 1980211](https://bugzilla.mozilla.org/show_bug.cgi?id=1980211)).
 
