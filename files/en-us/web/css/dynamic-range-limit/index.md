@@ -44,7 +44,7 @@ The `dynamic-range-limit` property is specified as one of the following keyword 
 
 ## Description
 
-**Dynamic range** is the difference in luminance (the **light intensity** measured in candelas per square meter (cd/m²), or simply put, the **brightness**) between the lightest and the darkest colors in a set of content. Dynamic range is measured in photographic stops. An increase of one stop represents a doubling of luminance.
+Dynamic range is the difference in luminance (brightness) between the lightest and darkest parts of content. Dynamic range is measured in photographic stops, where an increase of one stop represents a doubling of the luminance.
 
 The dynamic range between the lightest color and the darkest color is calculated using the following formula:
 
