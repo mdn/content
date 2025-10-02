@@ -100,7 +100,7 @@ Firefox 144 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 - Implemented the new `emulation.setScreenOrientationOverride` command, which allows clients to emulate different screen orientations. This command is not limited to mobile devices, but also works for desktop applications ([Firefox bug 1974167](https://bugzil.la/1974167)).
 
-- Implemented the new `emulation.setTimezoneOverride` command, which allows clients to simulate a specific timezone setting ([Firefox bug 1978027](https://bugzilla.mozilla.org/show_bug.cgi?id=1978027)).
+- Implemented the new `emulation.setTimezoneOverride` command, which allows clients to simulate a specific timezone setting ([Firefox bug 1978027](https://bugzil.la/1978027)).
 
 - Enhanced the `emulation.setLocaleOverride` command to also apply the specified settings to sandboxes previously created via WebDriver BiDi ([Firefox bug 1983807](https://bugzilla.mozilla.org/show_bug.cgi?id=1983807)).
 
