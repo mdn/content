@@ -31,7 +31,7 @@ The `dynamic-range-limit` property is specified as one of the following keyword 
 
 ### Values
 
-- Keyword values:
+- Keyword values include:
   - : The following keyword values can be specified:
     - `standard`
       - : The highest luminance that can be displayed in selected content is that of **HDR reference white**, which is the CSS color `white`.
