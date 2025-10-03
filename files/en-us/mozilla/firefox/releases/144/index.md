@@ -71,6 +71,7 @@ Firefox 144 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - The [`lock()`](/en-US/docs/Web/API/ScreenOrientation/lock) and [`unlock()`](/en-US/docs/Web/API/ScreenOrientation/unlock) methods of the {{domxref("ScreenOrientation")}} interface are now supported for Android and for Windows tablets. ([Firefox bug 1983483](https://bugzil.la/1983483))
 
 - The [View Transition API](/en-US/docs/Web/API/View_Transition_API) is now supported for [SPAs (single-page applications)](/en-US/docs/Glossary/SPA). This provides a mechanism for easily creating animated transitions between different website views. ([Firefox bug 1985809](https://bugzil.la/1985809)).
+- The {{domxref("CSSStyleProperties")}} interface of the [CSS Object Model (CSSOM)](/en-US/docs/Web/API/CSS_Object_Model) is now implemented (this was renamed from a non-standard interface `CSS2Properties`). The new interface is present but not yet used. ([Firefox bug 1919582](https://bugzil.la/1919582)).
 
 #### DOM
 
