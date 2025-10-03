@@ -2,13 +2,11 @@
 title: "@position-try"
 slug: Web/CSS/@position-try
 page-type: css-at-rule
-status:
-  - experimental
 browser-compat: css.at-rules.position-try
 sidebar: cssref
 ---
 
-{{SeeCompatTable}}
+
 
 The **`@position-try`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) is used to define a custom position try fallback option, which can be used to define positioning and alignment for anchor-positioned elements. One or more sets of position try fallback options can be applied to the anchored element via the {{cssxref("position-try-fallbacks")}} property or {{cssxref("position-try")}} shorthand. When the positioned element is moved to a position where it starts to overflow its containing block or the viewport, the browser will select the first position try fallback option it finds that places the positioned element fully back on-screen.
 
