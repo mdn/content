@@ -63,19 +63,17 @@ offset-path: path("M0,0 L60,70 L-60,30z");
 ```
 
 ```js interactive-example
-window.addEventListener("load", () => {
-  const example = document.getElementById("example-element");
-  const button = document.getElementById("playback");
+const example = document.getElementById("example-element");
+const button = document.getElementById("playback");
 
-  button.addEventListener("click", () => {
-    if (example.classList.contains("running")) {
-      example.classList.remove("running");
-      button.textContent = "Play";
-    } else {
-      example.classList.add("running");
-      button.textContent = "Pause";
-    }
-  });
+button.addEventListener("click", () => {
+  if (example.classList.contains("running")) {
+    example.classList.remove("running");
+    button.textContent = "Play";
+  } else {
+    example.classList.add("running");
+    button.textContent = "Pause";
+  }
 });
 ```
 
@@ -91,7 +89,7 @@ offset-path: ray(contain 150deg at center center);
 offset-path: ray(45deg);
 
 /* URL */
-offset-path: url(#myCircle);
+offset-path: url("#my-circle");
 
 /* Basic shape */
 offset-path: circle(50% at 25% 25%);
@@ -348,7 +346,7 @@ The SVG rectangle that defines the path shape is shown here only to visually dem
   height: 50px;
   border-radius: 50%;
   background-color: green;
-  offset-path: url(#svgRect);
+  offset-path: url("#svgRect");
   offset-anchor: auto;
   animation: move 5s linear infinite;
 }

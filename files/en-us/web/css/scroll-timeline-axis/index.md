@@ -49,7 +49,7 @@ Allowed values for `scroll-timeline-axis` are:
 
 ### Defining the axis of the scroll progress timeline
 
-In this example, a scroll progress timeline named `--myScroller` is defined using the `scroll-timeline-name` property on the <code>:root</code> element ({{htmlelement("html")}}). This timeline is then applied to the animation on the element with the `animation` class using `animation-timeline: --myScroller`.
+In this example, a scroll progress timeline named `--my-scroller` is defined using the `scroll-timeline-name` property on the <code>:root</code> element ({{htmlelement("html")}}). This timeline is then applied to the animation on the element with the `animation` class using `animation-timeline: --my-scroller`.
 
 To demonstrate the effect of `scroll-timeline-axis`, a horizontal (non-default) scrollbar is used in this example to drive the animation.
 
@@ -66,16 +66,16 @@ The HTML for the example is shown below.
 
 #### CSS
 
-The CSS for the container sets the <code>:root</code> as the source of a scroll progress timeline named `--myScroller` using the `scroll-timeline-name` property.
+The CSS for the container sets the <code>:root</code> as the source of a scroll progress timeline named `--my-scroller` using the `scroll-timeline-name` property.
 The scroll axis is set using `scroll-timeline-axis: x;` (Chromium) and `scroll-timeline-axis: horizontal;` (Firefox) — this causes the _horizontal scrollbar_ position to determine the animation timeline.
 
 The width of the `.content` element is set to a large value to make it overflow the `:root` element.
 
-Also worth noting is that the `.animation` element has the timeline applied to it using `animation-timeline: --myScroller;`, and it also has an `animation-duration` applied to it so that the example will work in Firefox.
+Also worth noting is that the `.animation` element has the timeline applied to it using `animation-timeline: --my-scroller;`, and it also has an `animation-duration` applied to it so that the example will work in Firefox.
 
 ```css
 :root {
-  scroll-timeline-name: --myScroller;
+  scroll-timeline-name: --my-scroller;
 
   /* Chromium supports the new x/y syntax */
   scroll-timeline-axis: x;
@@ -105,7 +105,7 @@ body {
 
 .animation {
   animation: rotate-appear;
-  animation-timeline: --myScroller;
+  animation-timeline: --my-scroller;
   animation-duration: 1ms; /* Firefox requires this to apply the animation */
 }
 

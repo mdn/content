@@ -35,7 +35,7 @@ animation-delay: -2s;
   color: white;
   margin: auto;
   margin-left: 0;
-  border: 5px solid #333;
+  border: 5px solid #333333;
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -72,41 +72,37 @@ animation-delay: -2s;
 ```
 
 ```js interactive-example
-"use strict";
+const el = document.getElementById("example-element");
+const status = document.getElementById("play-status");
 
-window.addEventListener("load", () => {
-  const el = document.getElementById("example-element");
-  const status = document.getElementById("play-status");
-
-  function update() {
-    status.textContent = "delaying";
-    el.className = "";
+function update() {
+  status.textContent = "delaying";
+  el.className = "";
+  window.requestAnimationFrame(() => {
     window.requestAnimationFrame(() => {
-      window.requestAnimationFrame(() => {
-        el.className = "animating";
-      });
+      el.className = "animating";
     });
-  }
-
-  el.addEventListener("animationstart", () => {
-    status.textContent = "playing";
   });
+}
 
-  el.addEventListener("animationend", () => {
-    status.textContent = "finished";
-  });
+el.addEventListener("animationstart", () => {
+  status.textContent = "playing";
+});
 
-  const observer = new MutationObserver(() => {
-    update();
-  });
+el.addEventListener("animationend", () => {
+  status.textContent = "finished";
+});
 
-  observer.observe(el, {
-    attributes: true,
-    attributeFilter: ["style"],
-  });
-
+const observer = new MutationObserver(() => {
   update();
 });
+
+observer.observe(el, {
+  attributes: true,
+  attributeFilter: ["style"],
+});
+
+update();
 ```
 
 It is often convenient to use the shorthand property {{cssxref("animation")}} to set all animation properties at once.

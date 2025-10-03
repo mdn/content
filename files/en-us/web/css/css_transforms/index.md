@@ -517,7 +517,7 @@ legend {
 button {
   font-size: 18px;
   border-radius: 50%;
-  border: #ccc solid 1px;
+  border: #cccccc solid 1px;
   padding: 0;
   width: 26px;
   height: 26px;
@@ -590,7 +590,7 @@ allTransformFieldset
     });
   });
 
-const resetInput = (inputEl) => {
+function resetInput(inputEl) {
   if (!inputEl) {
     console.warn(`inputEl \`${inputEl}\` is falsy!`);
     console.trace();
@@ -603,9 +603,9 @@ const resetInput = (inputEl) => {
   } else {
     inputEl.value = defaultValue || "0";
   }
-};
+}
 
-const updateOutputs = () => {
+function updateOutputs() {
   translateXOutput.value = `${translateXRange.value}px`;
   translateYOutput.value = `${translateYRange.value}px`;
   translateZOutput.value = `${translateZRange.value}px`;
@@ -625,9 +625,9 @@ const updateOutputs = () => {
 
   perspectiveOriginXOutput.value = `${perspectiveOriginXRange.value}%`;
   perspectiveOriginYOutput.value = `${perspectiveOriginYRange.value}%`;
-};
+}
 
-const updateTransform = () => {
+function updateTransform() {
   updateOutputs();
 
   cube.style.transform = `translate3d(${translateXRange.value}px,
@@ -648,7 +648,7 @@ const updateTransform = () => {
 
   perspectiveDot.style.top = `${perspectiveOriginYRange.value}%`;
   perspectiveDot.style.left = `${perspectiveOriginXRange.value}%`;
-};
+}
 updateTransform();
 ```
 
@@ -712,7 +712,7 @@ The cube in the above example is comprised of six `<div>` elements, all of which
 
 - [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
   - : Step-by-step tutorial about how to transform elements styled with CSS.
-- [Coordinate systems](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems)
+- [Coordinate systems](/en-US/docs/Web/API/CSSOM_view_API/Coordinate_systems)
   - : Describes the way pixel locations are defined in the CSS object model.
 - [Performance fundamentals: Use CSS transforms](/en-US/docs/Web/Performance/Guides/Fundamentals#use_css_transforms)
   - : An overview of web performance fundamentals, including how CSS transforms can improve performance.

@@ -297,7 +297,7 @@ document.querySelector("#run").addEventListener("click", run);
 }
 th,
 td {
-  padding: 0 10px 0 10px;
+  padding: 0 10px;
   text-align: center;
   border: 1px solid;
 }

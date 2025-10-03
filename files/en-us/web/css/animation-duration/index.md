@@ -38,7 +38,7 @@ animation-duration: 0s;
   animation-timing-function: ease-in;
   background-color: #1766aa;
   border-radius: 50%;
-  border: 5px solid #333;
+  border: 5px solid #333333;
   color: white;
   height: 150px;
   margin: auto;
@@ -69,21 +69,17 @@ animation-duration: 0s;
 ```
 
 ```js interactive-example
-"use strict";
+const el = document.getElementById("example-element");
+const button = document.getElementById("play-pause");
 
-window.addEventListener("load", () => {
-  const el = document.getElementById("example-element");
-  const button = document.getElementById("play-pause");
-
-  button.addEventListener("click", () => {
-    if (el.classList.contains("running")) {
-      el.classList.remove("running");
-      button.textContent = "Play";
-    } else {
-      el.classList.add("running");
-      button.textContent = "Pause";
-    }
-  });
+button.addEventListener("click", () => {
+  if (el.classList.contains("running")) {
+    el.classList.remove("running");
+    button.textContent = "Play";
+  } else {
+    el.classList.add("running");
+    button.textContent = "Pause";
+  }
 });
 ```
 

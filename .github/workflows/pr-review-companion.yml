@@ -33,7 +33,7 @@ jobs:
     if: github.event.workflow_run.conclusion == 'success'
     steps:
       - name: "Download artifact"
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           pattern: build
           path: build
@@ -52,7 +52,7 @@ jobs:
 
       - name: Authenticate with GCP
         if: steps.check.outputs.HAS_ARTIFACT
-        uses: google-github-actions/auth@v2
+        uses: google-github-actions/auth@v3
         with:
           token_format: access_token
           service_account: deploy-mdn-review-content@${{ secrets.GCP_PROJECT_NAME }}.iam.gserviceaccount.com
@@ -60,11 +60,11 @@ jobs:
 
       - name: Setup gcloud
         if: steps.check.outputs.HAS_ARTIFACT
-        uses: google-github-actions/setup-gcloud@v2
+        uses: google-github-actions/setup-gcloud@v3
 
       - name: Upload to GCS
         if: steps.check.outputs.HAS_ARTIFACT
-        uses: google-github-actions/upload-cloud-storage@v2
+        uses: google-github-actions/upload-cloud-storage@v3
         with:
           path: "build"
           destination: "${{ vars.GCP_BUCKET_NAME }}/${{ steps.check.outputs.PREFIX }}"
@@ -76,7 +76,7 @@ jobs:
           process_gcloudignore: false
 
       - name: Checkout (mdn/content)
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         if: steps.check.outputs.HAS_ARTIFACT
         with:
           path: content

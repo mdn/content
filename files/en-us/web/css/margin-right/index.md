@@ -68,7 +68,7 @@ margin-right: 20px; /* An absolute length */
 margin-right: 1em; /* relative to the text size */
 margin-right: 5%; /* relative to the nearest block container's width */
 margin-right: anchor-size(self-block);
-margin-right: calc(anchor-size(--myAnchor height, 20px) / 4);
+margin-right: calc(anchor-size(--my-anchor height, 20px) / 4);
 
 /* Keyword values */
 margin-right: auto;

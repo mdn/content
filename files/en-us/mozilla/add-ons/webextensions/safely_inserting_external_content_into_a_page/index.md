@@ -18,9 +18,9 @@ This article examines how to work safely with remote data and add it to a DOM.
 
 When working with strings, there are a couple of recommended options to safely add them to a page: the standard DOM node creation methods or jQuery.
 
-### DOM node creation methods
+### DOM APIs for node creation and safe text insertion
 
-A lightweight approach to inserting strings into a page is to use the native DOM manipulation methods: [`document.createElement`](/en-US/docs/Web/API/Document/createElement), [`Element.setAttribute`](/en-US/docs/Web/API/Element/setAttribute), and [`Node.textContent`](/en-US/docs/Web/API/Node/textContent). The safe approach is to create the nodes separately and assign their content using textContent:
+For a lightweight and secure method of inserting strings, use native DOM APIs: Create elements with [`document.createElement`](/en-US/docs/Web/API/Document/createElement) and set only validated, non-executable attributes using [`Element.setAttribute`](/en-US/docs/Web/API/Element/setAttribute). To add text content, use the [`textContent`](/en-US/docs/Web/API/Node/textContent) property. A safe approach is to create the nodes separately and assign their content using `textContent`:
 
 ```js example-good
 let data = JSON.parse(responseText);

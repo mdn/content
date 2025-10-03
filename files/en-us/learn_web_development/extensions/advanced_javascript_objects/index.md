@@ -31,6 +31,10 @@ Before starting this module, You should really have learnt the fundamentals of [
 - [Adding features to our bouncing balls demo](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bouncing_balls_features) <sup>Challenge</sup>
   - : In this challenge, you are expected to use the bouncing balls demo from the previous article as a starting point, and add some new and interesting features to it.
 
+## Test your skills
+
+You will find "Test your skills" articles placed between the tutorial articles to check whether you have retained the most important information before you move on. If you want to explore all of these together, you can find them listed at [Test your skills: Advanced JavaScript objects](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills).
+
 ## See also
 
 - [Learn JavaScript](https://learnjavascript.online/)

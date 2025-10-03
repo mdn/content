@@ -176,9 +176,9 @@ function log(text) {
 The code is similar to the previous example, except that we check a particular returned capability, and we use `try...catch` to catch the case where `getClientCapabilities()` is not supported.
 
 ```js
-checkisUserVerifyingPlatformAuthenticatorAvailable();
+checkIsUserVerifyingPlatformAuthenticatorAvailable();
 
-async function checkisUserVerifyingPlatformAuthenticatorAvailable() {
+async function checkIsUserVerifyingPlatformAuthenticatorAvailable() {
   try {
     const capabilities = await PublicKeyCredential.getClientCapabilities();
 

@@ -6,7 +6,7 @@ browser-compat: css.properties.offset
 sidebar: cssref
 ---
 
-The **`offset`** CSS [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) sets all the properties required for animating an element along a defined path. The offset properties together help to define an _offset transform_, a [transform](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms) that aligns a point in an element ([offset-anchor](/en-US/docs/Web/CSS/offset-anchor)) to an _offset position_ ([offset-position](/en-US/docs/Web/CSS/offset-position)) on a path ([offset-path](/en-US/docs/Web/CSS/offset-path)) at various points along the path ([offset-distance](/en-US/docs/Web/CSS/offset-distance)) and optionally rotates the element ([offset-rotate](/en-US/docs/Web/CSS/offset-rotate)) to follow the direction of the path.
+The **`offset`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) sets all the properties required for animating an element along a defined path. The offset properties together help to define an _offset transform_, a [transform](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms) that aligns a point in an element ([offset-anchor](/en-US/docs/Web/CSS/offset-anchor)) to an _offset position_ ([offset-position](/en-US/docs/Web/CSS/offset-position)) on a path ([offset-path](/en-US/docs/Web/CSS/offset-path)) at various points along the path ([offset-distance](/en-US/docs/Web/CSS/offset-distance)) and optionally rotates the element ([offset-rotate](/en-US/docs/Web/CSS/offset-rotate)) to follow the direction of the path.
 
 > [!NOTE]
 > Early versions of the spec called this property `motion`.
@@ -72,19 +72,17 @@ offset: path(
 ```
 
 ```js interactive-example
-window.addEventListener("load", () => {
-  const example = document.getElementById("example-element");
-  const button = document.getElementById("playback");
+const example = document.getElementById("example-element");
+const button = document.getElementById("playback");
 
-  button.addEventListener("click", () => {
-    if (example.classList.contains("running")) {
-      example.classList.remove("running");
-      button.textContent = "Play";
-    } else {
-      example.classList.add("running");
-      button.textContent = "Pause";
-    }
-  });
+button.addEventListener("click", () => {
+  if (example.classList.contains("running")) {
+    example.classList.remove("running");
+    button.textContent = "Play";
+  } else {
+    example.classList.add("running");
+    button.textContent = "Pause";
+  }
 });
 ```
 
@@ -109,18 +107,18 @@ offset: none;
 /* Offset path */
 offset: ray(45deg closest-side);
 offset: path("M 100 100 L 300 100 L 200 300 z");
-offset: url(arc.svg);
+offset: url("arc.svg");
 
 /* Offset path with distance and/or rotation */
-offset: url(circle.svg) 100px;
-offset: url(circle.svg) 40%;
-offset: url(circle.svg) 30deg;
-offset: url(circle.svg) 50px 20deg;
+offset: url("circle.svg") 100px;
+offset: url("circle.svg") 40%;
+offset: url("circle.svg") 30deg;
+offset: url("circle.svg") 50px 20deg;
 
 /* Including offset anchor */
 offset: ray(45deg closest-side) / 40px 20px;
-offset: url(arc.svg) 2cm / 0.5cm 3cm;
-offset: url(arc.svg) 30deg / 50px 100px;
+offset: url("arc.svg") 2cm / 0.5cm 3cm;
+offset: url("arc.svg") 30deg / 50px 100px;
 
 /* Global values */
 offset: inherit;

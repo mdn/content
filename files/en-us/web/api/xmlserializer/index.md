@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.XMLSerializer
 ---
 
-{{APIRef("XMLSerializer")}}
+{{APIRef("HTML DOM")}}
 
 The `XMLSerializer` interface provides the {{domxref("XMLSerializer.serializeToString", "serializeToString()")}} method to construct an XML string representing a {{Glossary("DOM")}} tree.
 

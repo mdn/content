@@ -138,7 +138,7 @@ The JavaScript ecosystem had made multiple Promise implementations long before i
 To interoperate with the existing Promise implementations, the language allows using thenables in place of promises. For example, [`Promise.resolve`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve) will not only resolve promises, but also trace thenables.
 
 ```js
-const aThenable = {
+const thenable = {
   then(onFulfilled, onRejected) {
     onFulfilled({
       // The thenable is fulfilled with another thenable
@@ -149,7 +149,7 @@ const aThenable = {
   },
 };
 
-Promise.resolve(aThenable); // A promise fulfilled with 42
+Promise.resolve(thenable); // A promise fulfilled with 42
 ```
 
 ### Promise concurrency
@@ -493,15 +493,11 @@ If we change this so that the `<iframe>` in the document is listening to post me
 <!-- x.html -->
 <!doctype html>
 <script>
-  window.addEventListener(
-    "message",
-    (event) => {
-      document.querySelector("#text").textContent = "hello";
-      // this code will only run in browsers that track the incumbent settings object
-      console.log(event);
-    },
-    false,
-  );
+  window.addEventListener("message", (event) => {
+    document.querySelector("#text").textContent = "hello";
+    // this code will only run in browsers that track the incumbent settings object
+    console.log(event);
+  });
 </script>
 ```
 

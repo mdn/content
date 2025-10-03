@@ -59,7 +59,7 @@ scroll-snap-align: center;
   flex: 0 0 66%;
   width: 250px;
   background-color: rebeccapurple;
-  color: #fff;
+  color: white;
   font-size: 30px;
   display: flex;
   align-items: center;
@@ -67,7 +67,7 @@ scroll-snap-align: center;
 }
 
 #example-parent > div:nth-child(even) {
-  background-color: #fff;
+  background-color: white;
   color: rebeccapurple;
 }
 ```

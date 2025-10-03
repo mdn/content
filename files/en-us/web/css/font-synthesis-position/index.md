@@ -72,7 +72,7 @@ This example shows turning off synthesis of the superscript and subscript typefa
 #### CSS
 
 ```css
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import "https://fonts.googleapis.com/css2?family=Montserrat&display=swap";
 
 * {
   font-family: "Montserrat", sans-serif;

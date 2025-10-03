@@ -93,7 +93,7 @@ svg {
 
 #star3 path {
   fill: none;
-  stroke: #000;
+  stroke: black;
   stroke-width: 1;
 }
 ```
@@ -155,10 +155,10 @@ We use the {{cssxref("clip-path")}} property to set the different `<clipPath>` e
 
 ```css
 div:first-of-type {
-  clip-path: url(#star1);
+  clip-path: url("#star1");
 }
 div:last-of-type {
-  clip-path: url(#star2);
+  clip-path: url("#star2");
 }
 ```
 
@@ -183,7 +183,7 @@ In this SVG image, we have two rectangles that are clipped, once with each clipp
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50">
-  <g stroke="#123" fill="#BCD">
+  <g stroke="#112233" fill="#bbccdd">
     <!-- basic rectangle and clipping path visualization follow -->
     <rect x="10" y="10" width="30" height="30" />
     <path
@@ -229,7 +229,7 @@ This example uses the same SVG as the previous example, with the change that the
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50">
-  <g stroke="#123" fill="#BCD">
+  <g stroke="#112233" fill="#bbccdd">
     <!-- basic rectangle and clipping path visualization follow -->
     <rect x="10" y="10" width="30" height="30" />
     <path

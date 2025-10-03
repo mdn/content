@@ -35,7 +35,7 @@ transition-property: none;
 ```css interactive-example
 #example-element {
   background-color: #e4f0f5;
-  color: #000;
+  color: black;
   padding: 1rem;
   border-radius: 0.5rem;
   font: 1em monospace;
@@ -44,8 +44,8 @@ transition-property: none;
 }
 
 #default-example:hover > #example-element {
-  background-color: #909;
-  color: #fff;
+  background-color: #990099;
+  color: white;
   margin-right: 40%;
 }
 ```
@@ -119,7 +119,7 @@ html {
 button {
   font-size: 1.4rem;
   padding: 10px 20px;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   border-radius: 10px;
   outline: none;
 }
@@ -129,12 +129,12 @@ button {
 .target {
   transition-property: background-color;
   transition-duration: 1s;
-  background-color: #ccc;
+  background-color: #cccccc;
 }
 
 .target:hover,
 .target:focus {
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 ```
 

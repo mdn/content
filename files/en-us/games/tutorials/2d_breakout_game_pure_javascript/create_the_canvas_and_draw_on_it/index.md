@@ -27,7 +27,7 @@ The HTML document structure is quite minimal, as the game will be rendered entir
         margin: 0;
       }
       canvas {
-        background: #eee;
+        background: #eeeeee;
         display: block;
         margin: 0 auto;
       }
@@ -61,7 +61,7 @@ Let's see an example piece of code that prints a red square on the canvas. Add t
 ```js
 ctx.beginPath();
 ctx.rect(20, 40, 50, 50);
-ctx.fillStyle = "#FF0000";
+ctx.fillStyle = "red";
 ctx.fill();
 ctx.closePath();
 ```
@@ -109,7 +109,7 @@ Here's the full source code of the first lesson, running live:
 
 ```css
 canvas {
-  background: #eee;
+  background: #eeeeee;
 }
 ```
 
@@ -119,7 +119,7 @@ const ctx = canvas.getContext("2d");
 
 ctx.beginPath();
 ctx.rect(20, 40, 50, 50);
-ctx.fillStyle = "#FF0000";
+ctx.fillStyle = "red";
 ctx.fill();
 ctx.closePath();
 
@@ -143,6 +143,6 @@ ctx.closePath();
 
 ## Next steps
 
-Now we've set up the basic HTML and learned a bit about canvas, lets continue to the second chapter and work out how to [Move the ball in our game](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball).
+Now we've set up the basic HTML and learned a bit about canvas, let's continue to the second chapter and work out how to [Move the ball in our game](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball).
 
 {{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball")}}

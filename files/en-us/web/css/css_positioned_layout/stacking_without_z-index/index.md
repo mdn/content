@@ -56,24 +56,24 @@ div {
 .static {
   position: static;
   height: 80px;
-  background-color: #ffc;
-  border-color: #996;
+  background-color: #ffffcc;
+  border-color: #999966;
 }
 
 .absolute {
   position: absolute;
   width: 150px;
   height: 350px;
-  background-color: #fdd;
-  border-color: #900;
+  background-color: #ffdddd;
+  border-color: #990000;
   opacity: 0.7;
 }
 
 .relative {
   position: relative;
   height: 80px;
-  background-color: #cfc;
-  border-color: #696;
+  background-color: #ccffcc;
+  border-color: #669966;
   opacity: 0.7;
 }
 
@@ -84,13 +84,13 @@ div {
 
 #rel1 {
   top: 30px;
-  margin: 0px 50px 0px 50px;
+  margin: 0px 50px;
 }
 
 #rel2 {
   top: 15px;
   left: 20px;
-  margin: 0px 50px 0px 50px;
+  margin: 0px 50px;
 }
 
 #abs2 {
@@ -99,8 +99,8 @@ div {
 }
 
 #sta1 {
-  background-color: #ffc;
-  margin: 0px 50px 0px 50px;
+  background-color: #ffffcc;
+  margin: 0px 50px;
 }
 ```
 

@@ -8,7 +8,7 @@ sidebar: cssref
 
 The **`<basic-shape>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents a shape used in the {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}, and {{cssxref("offset-path")}} properties.
 
-{{InteractiveExample("CSS Demo: &amp;lt;basic-shape&amp;gt;")}}
+{{InteractiveExample("CSS Demo: &lt;basic-shape&gt;")}}
 
 ```css interactive-example-choice
 clip-path: inset(22% 12% 15px 35px);
@@ -49,11 +49,11 @@ clip-path: path("M 50,245 A 160,160 0,0,1 360,120 z");
 
 ```css interactive-example
 #default-example {
-  background: #fe9;
+  background: #ffee99;
 }
 
 #example-element {
-  background: linear-gradient(to bottom right, #f52, #05f);
+  background: linear-gradient(to bottom right, #ff5522, #0055ff);
   width: 100%;
   height: 100%;
 }

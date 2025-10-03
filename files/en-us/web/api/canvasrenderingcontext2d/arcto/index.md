@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.CanvasRenderingContext2D.arcTo
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 The **`CanvasRenderingContext2D.arcTo()`** method of the Canvas 2D API adds a circular arc to the current sub-path, using the given control points and radius.
 The arc is automatically connected to the path's latest point with a straight line if necessary, for example if the starting point and control points are in a line.
@@ -255,11 +255,11 @@ label {
   margin: 10px;
 }
 .input {
-  color: #00f;
+  color: blue;
   text-decoration: underline;
 }
 #canvas {
-  border: 1px solid #000;
+  border: 1px solid black;
 }
 ```
 
@@ -729,8 +729,8 @@ function moveActivePointAndUpdate(pointCursor) {
 
 function drawCanvas() {
   const rPoint = 4;
-  const colorConstruction = "#080";
-  const colorDraggable = "#00F";
+  const colorConstruction = "green";
+  const colorDraggable = "blue";
   const [P0, P1, P2] = state.controlPoints;
 
   ctx.font = "italic 14pt sans-serif";
@@ -765,7 +765,7 @@ function drawCanvas() {
     ctx.arc(state.C.x, state.C.y, state.radius, 0, 2 * Math.PI);
     ctx.stroke();
 
-    ctx.fillStyle = "#000";
+    ctx.fillStyle = "black";
     ctx.fillText("C", state.C.x, state.C.y - 15);
     ctx.fillText("T\u2081", state.T1.x, state.T1.y - 15);
     ctx.fillText("T\u2082", state.T2.x, state.T2.y - 15);
@@ -792,7 +792,7 @@ function drawCanvas() {
     ctx.fillStyle = colorDraggable;
     ctx.fill();
   });
-  ctx.fillStyle = "#000";
+  ctx.fillStyle = "black";
   ctx.fillText("P\u2080", P0.x, P0.y - 15);
   ctx.fillText("P\u2081", P1.x, P1.y - 15);
   ctx.fillText("P\u2082", P2.x, P2.y - 15);
@@ -803,7 +803,7 @@ function drawCanvas() {
   ctx.moveTo(P0.x, P0.y);
   ctx.setLineDash([]);
   ctx.arcTo(P1.x, P1.y, P2.x, P2.y, state.radius);
-  ctx.strokeStyle = "#000";
+  ctx.strokeStyle = "black";
   ctx.stroke();
 } /* end of function drawCanvas */
 

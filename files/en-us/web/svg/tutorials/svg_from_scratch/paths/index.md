@@ -738,7 +738,7 @@ body {
   position: fixed;
   width: 100%;
   height: 100%;
-  background: #eee;
+  background: #eeeeee;
 }
 
 .ui {
@@ -759,7 +759,7 @@ body {
 }
 
 svg {
-  background: #ddd;
+  background: #dddddd;
 }
 ```
 

@@ -78,7 +78,7 @@ svg {
   height: 100%;
 }
 
-/* This path is displayed on hover*/
+/* This path is displayed on hover */
 #svg_css_ex1:hover path {
   d: path(
     "M10,30 A20,20 0,0,1 50,30 A20,20 0,0,1 90,30 Q90,60 50,90 Q10,60 10,30 z M5,5 L90,90"
@@ -898,15 +898,15 @@ _Elliptical arc curves_ are curves defined as a portion of an ellipse. It is som
           </li>
           <li>
             <code><var>large-arc-flag</var></code> and
-            <code><var>sweep-flag</var></code> allows to chose which arc must be
+            <code><var>sweep-flag</var></code> allows to choose which arc must be
             drawn as 4 possible arcs can be drawn out of the other parameters.
             <ul>
               <li>
-                <code><var>large-arc-flag</var></code> allows to chose one of
+                <code><var>large-arc-flag</var></code> allows to choose one of
                 the large arc (<code>1</code>) or small arc (<code>0</code>),
               </li>
               <li>
-                <code><var>sweep-flag</var></code> allows to chose one of the
+                <code><var>sweep-flag</var></code> allows to choose one of the
                 clockwise turning arc (<code>1</code>) or counterclockwise
                 turning arc (<code>0</code>)
               </li>
@@ -948,7 +948,7 @@ _Elliptical arc curves_ are curves defined as a portion of an ellipse. It is som
           </li>
           <li>
             <code><var>large-arc-flag</var></code> and
-            <code><var>sweep-flag</var></code> allows to chose which arc must be
+            <code><var>sweep-flag</var></code> allows to choose which arc must be
             drawn as 4 possible arcs can be drawn out of the other parameters.
             <ul>
               <li>

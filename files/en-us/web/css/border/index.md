@@ -40,8 +40,8 @@ border: 4mm ridge rgb(211 220 50 / 0.6);
 
 ```css interactive-example
 #example-element {
-  background-color: #eee;
-  color: #8b008b;
+  background-color: #eeeeee;
+  color: darkmagenta;
   padding: 0.75em;
   width: 80%;
   height: 100px;
@@ -66,7 +66,7 @@ border: solid;
 border: 2px dotted;
 
 /* style | color */
-border: outset #f33;
+border: outset #ff3333;
 
 /* width | style | color */
 border: medium dashed green;
@@ -91,7 +91,7 @@ The `border` property may be specified using one, two, or three of the values li
 - {{cssxref("&lt;line-style&gt;")}}
   - : Sets the style of the border. Defaults to `none` if absent. See {{Cssxref("border-style")}}.
 - {{cssxref("&lt;color&gt;")}}
-  - : Sets the color of the border. Defaults to `currentcolor` if absent. See {{Cssxref("border-color")}}.
+  - : Sets the color of the border. Defaults to `currentColor` if absent. See {{Cssxref("border-color")}}.
 
 ## Description
 

@@ -111,7 +111,7 @@ This JavaScript code defines and applies a function to handle click events on sw
 
 ```js
 document.querySelectorAll(".switch").forEach((theSwitch) => {
-  theSwitch.addEventListener("click", handleClickEvent, false);
+  theSwitch.addEventListener("click", handleClickEvent);
 });
 
 function handleClickEvent(evt) {
@@ -153,13 +153,13 @@ button.switch span {
 
 [role="switch"][aria-checked="false"] :first-child,
 [role="switch"][aria-checked="true"] :last-child {
-  background: #262;
-  color: #eef;
+  background: #226622;
+  color: #eeeeff;
 }
 
 [role="switch"][aria-checked="false"] :last-child,
 [role="switch"][aria-checked="true"] :first-child {
-  color: #bbd;
+  color: #bbbbdd;
 }
 
 label.switch {

@@ -353,6 +353,23 @@
         "Window: resize"
       ]
     },
+    "CSSOM view API": {
+      "overview": ["CSSOM view API"],
+      "guides": [
+        "/docs/Web/API/CSSOM_view_API/Coordinate_systems",
+        "/docs/Web/CSS/CSSOM_view/Viewport_concepts"
+      ],
+      "interfaces": [
+        "CaretPosition",
+        "MediaQueryList",
+        "MediaQueryListEvent",
+        "Screen",
+        "VisualViewport"
+      ],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
     "Device Memory API": {
       "overview": ["Device Memory API"],
       "guides": [],
@@ -410,7 +427,6 @@
         "/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces",
         "/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors",
         "/docs/Web/API/Document_Object_Model/Events",
-        "/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM",
         "/docs/Web/API/Document_Object_Model/Examples"
       ],
       "interfaces": [
@@ -444,6 +460,7 @@
         "NodeIterator",
         "NodeList",
         "ProcessingInstruction",
+        "QuotaExceededError",
         "Range",
         "StaticRange",
         "Text",
@@ -516,6 +533,7 @@
       ],
       "interfaces": [
         "IdentityCredential",
+        "IdentityCredentialError",
         "IdentityCredentialRequestOptions",
         "IdentityProvider",
         "NavigatorLogin"
@@ -578,7 +596,7 @@
       "properties": [
         "File.webkitRelativePath",
         "HTMLInputElement.webkitdirectory",
-        "HTMLinputElement.webkitEntries"
+        "HTMLInputElement.webkitEntries"
       ],
       "events": []
     },
@@ -875,9 +893,10 @@
     "HTML Drag and Drop API": {
       "overview": ["HTML Drag and Drop API"],
       "guides": [
-        "/docs/Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop",
         "/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations",
-        "/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types"
+        "/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store",
+        "/docs/Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop",
+        "/docs/Web/API/HTML_Drag_and_Drop_API/Kanban_board"
       ],
       "interfaces": [
         "DataTransfer",
@@ -1839,6 +1858,14 @@
       "properties": [],
       "events": []
     },
+    "Viewport Segments API": {
+      "overview": ["Viewport Segments API"],
+      "guides": ["/docs/Web/API/Viewport_segments_API/Using"],
+      "interfaces": ["Viewport"],
+      "methods": ["Window.viewport"],
+      "properties": [],
+      "events": []
+    },
     "View Transition API": {
       "overview": ["View Transition API"],
       "guides": ["/docs/Web/API/View_Transition_API/Using"],
@@ -1855,13 +1882,6 @@
         "HTMLElement.virtualKeyboardPolicy",
         "Navigator.virtualKeyboard"
       ],
-      "events": []
-    },
-    "Visual Viewport": {
-      "overview": ["Visual Viewport API"],
-      "interfaces": ["VisualViewport"],
-      "methods": [],
-      "properties": ["Window.visualViewport"],
       "events": []
     },
     "Web Animations": {
@@ -2359,6 +2379,7 @@
         "SpeechRecognitionAlternative",
         "SpeechRecognitionErrorEvent",
         "SpeechRecognitionEvent",
+        "SpeechRecognitionPhrase",
         "SpeechRecognitionResult",
         "SpeechRecognitionResultList",
         "SpeechSynthesis",

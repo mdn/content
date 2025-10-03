@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Element.cut_event
 ---
 
-{{APIRef}}
+{{APIRef("Clipboard API")}}
 
 The **`cut`** event of the [Clipboard API](/en-US/docs/Web/API/Clipboard_API) is fired when the user has initiated a "cut" action through the browser's user interface.
 

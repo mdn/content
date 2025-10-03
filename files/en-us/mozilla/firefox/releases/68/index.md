@@ -66,7 +66,7 @@ This article provides information about the changes in Firefox 68 that will affe
 
 - The {{CSSxRef("line-clamp", "-webkit-line-clamp")}} property has been implemented for compatibility with other browsers ([Firefox bug 866102](https://bugzil.la/866102)).
 - Support has been added for the {{CSSxRef("::marker")}} pseudo-element ([Firefox bug 205202](https://bugzil.la/205202)) and animation for `::marker` pseudos ([Firefox bug 1538618](https://bugzil.la/1538618))
-- We changed {{CSSxRef("color_value#currentcolor_keyword", "currentcolor")}} to be a computed value (except for the {{cssxref("color")}} property) ([Firefox bug 760345](https://bugzil.la/760345)).
+- We changed {{CSSxRef("color_value#currentcolor_keyword", "currentColor")}} to be a computed value (except for the {{cssxref("color")}} property) ([Firefox bug 760345](https://bugzil.la/760345)).
 - Support has been fixed for the `ch` length unit so it now matches the spec (fallback for no '0' glyph, vertical metrics) ([Firefox bug 282126](https://bugzil.la/282126))
 - The {{CSSxRef("counter-set")}} property has been implemented. ([Firefox bug 1518201](https://bugzil.la/1518201)).
 - We now implement list numbering using a built-in "list-item" counter; this fixes list numbering bugs ([Firefox bug 288704](https://bugzil.la/288704)).

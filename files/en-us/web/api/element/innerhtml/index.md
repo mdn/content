@@ -8,231 +8,127 @@ browser-compat: api.Element.innerHTML
 
 {{APIRef("DOM")}}
 
-The **`innerHTML`** property of the {{domxref("Element")}} interface gets or sets the HTML or XML markup contained within the element.
+> [!WARNING]
+> This property parses its input as HTML, writing the result into the DOM.
+> APIs like this are known as [injection sinks](/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage), and are potentially a vector for [cross-site-scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks, if the input originally came from an attacker.
+>
+> You can mitigate this risk by always assigning `TrustedHTML` objects instead of strings and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types).
+> See [Security considerations](#security_considerations) for more information.
 
-More precisely, `innerHTML` gets a serialization of the nested child DOM elements within the element, or sets HTML or XML that should be parsed to replace the DOM tree within the element.
+The **`innerHTML`** property of the {{domxref("Element")}} interface gets or sets the HTML or XML markup contained within the element, omitting any {{glossary("shadow tree", "shadow roots")}} in both cases.
 
 To insert the HTML into the document rather than replace the contents of an element, use the method {{domxref("Element.insertAdjacentHTML", "insertAdjacentHTML()")}}.
 
-The serialization of the DOM tree read from the property does not include {{glossary("shadow tree", "shadow roots")}} — if you want to get a HTML string that includes shadow roots, you must instead use the {{domxref("Element.getHTML()")}} or {{domxref("ShadowRoot.getHTML()")}} methods.
-Similarly, when setting element content using `innerHTML`, the HTML string is parsed into DOM elements that do not contain shadow roots.
-
-So for example [`<template>`](/en-US/docs/Web/HTML/Reference/Elements/template) is parsed into as {{domxref("HTMLTemplateElement")}}, whether or not the [`shadowrootmode`](/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootmode) attribute is specified
-In order to set an element's contents from an HTML string that includes declarative shadow roots, you must use either {{domxref("Element.setHTMLUnsafe()")}} or {{domxref("ShadowRoot.setHTMLUnsafe()")}}.
-
-Note that some browsers serialize the `<` and `>` characters as `&lt;` and `&gt;` when they appear in attribute values (see [Browser compatibility](#browser_compatibility)).
-This is to prevent a potential security vulnerability ([mutation XSS](https://www.securitum.com/mutation-xss-via-mathml-mutation-dompurify-2-0-17-bypass.html)) in which an attacker can craft input that bypasses a [sanitization function](/en-US/docs/Web/Security/Attacks/XSS#sanitization), enabling a cross-site scripting (XSS) attack.
-
 ## Value
 
-A string containing the HTML serialization of the element's descendants.
-Setting the value of `innerHTML` removes all of the element's descendants and replaces them with nodes constructed by parsing the HTML given in the string _htmlString_.
+Getting the property returns a string containing the HTML serialization of the element's descendants.
 
+Setting the property accepts either a {{domxref("TrustedHTML")}} object or a string. It parses this value as HTML and replaces all the element's descendants with the result.
 When set to the `null` value, that `null` value is converted to the empty string (`""`), so `elt.innerHTML = null` is equivalent to `elt.innerHTML = ""`.
 
 ### Exceptions
 
 - `SyntaxError` {{domxref("DOMException")}}
   - : Thrown if an attempt was made to set the value of `innerHTML` using a string which is not properly-formed HTML.
+- `TypeError`
+  - : Thrown if the property is set to a string when [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) are [enforced by a CSP](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) and no default policy is defined.
 - `NoModificationAllowedError` {{domxref("DOMException")}}
   - : Thrown if an attempt was made to insert the HTML into a node whose parent is a {{domxref("Document")}}.
 
-## Usage notes
+## Description
 
-### Reading the HTML contents of an element
+`innerHTML` gets a serialization of the nested child DOM elements within the element, or sets HTML or XML that should be parsed to replace the DOM tree within the element.
 
-Reading `innerHTML` causes the user agent to serialize the HTML or XML fragment comprised of the element's descendants.
-The resulting string is returned.
+Note that some browsers serialize the `<` and `>` characters as `&lt;` and `&gt;` when they appear in attribute values (see [Browser compatibility](#browser_compatibility)).
+This is to prevent a potential security vulnerability ([mutation XSS](https://www.securitum.com/mutation-xss-via-mathml-mutation-dompurify-2-0-17-bypass.html)) in which an attacker can craft input that bypasses a [sanitization function](/en-US/docs/Web/Security/Attacks/XSS#sanitization), enabling a cross-site scripting (XSS) attack.
 
-```js
-const contents = myElement.innerHTML;
-```
+### Shadow DOM considerations
 
-This lets you look at the HTML markup of the element's content nodes.
+The serialization of the DOM tree read from the property does not include {{glossary("shadow tree", "shadow roots")}} — if you want to get a HTML string that includes shadow roots, you must instead use the {{domxref("Element.getHTML()")}} or {{domxref("ShadowRoot.getHTML()")}} methods.
 
-> [!NOTE]
-> The returned HTML or XML fragment is generated based on the current contents of the element, so the markup and formatting of the returned fragment is likely not to match the original page markup.
-
-### Replacing the contents of an element
-
-Setting the value of `innerHTML` lets you easily replace the existing contents of an element with new content.
-
-> [!WARNING]
-> This is a [security risk](#security_considerations) if the string to be inserted might contain potentially malicious content.
-> When inserting user-supplied data you should always consider using a sanitizer library, in order to sanitize the content before it is inserted.
-
-For example, you can erase the entire contents of a document by clearing the contents of the document's {{domxref("Document.body", "body")}} attribute:
-
-```js
-document.body.textContent = "";
-```
-
-This example fetches the document's current HTML markup and replaces the `"<"` characters with the {{glossary("character reference")}} `"&lt;"`, thereby essentially converting the HTML into raw text.
-This is then wrapped in a {{HTMLElement("pre")}} element.
-Then the value of `innerHTML` is changed to this new string.
-As a result, the document contents are replaced with a display of the page's entire source code.
-
-```js
-document.documentElement.innerHTML = `<pre>${document.documentElement.innerHTML.replace(
-  /</g,
-  "&lt;",
-)}</pre>`;
-```
-
-#### Operational details
-
-What exactly happens when you set value of `innerHTML`?
-Doing so causes the user agent to follow these steps:
-
-1. The specified value is parsed as HTML or XML (based on the document type), resulting in a {{domxref("DocumentFragment")}} object representing the new set of DOM nodes for the new elements.
-2. If the element whose contents are being replaced is a {{HTMLElement("template")}} element, then the `<template>` element's {{domxref("HTMLTemplateElement.content", "content")}} attribute is replaced with the new `DocumentFragment` created in step 1.
-3. For all other elements, the element's contents are replaced with the nodes in the new `DocumentFragment`.
-
-### Appending HTML to an element
-
-Setting the value of `innerHTML` lets you append new contents to the existing one of an element.
-
-For example, we can append a new list item (`<li>`) to the existing list (`<ul>`):
-
-#### HTML
-
-```html
-<ul id="list">
-  <li><a href="#">Item 1</a></li>
-  <li><a href="#">Item 2</a></li>
-  <li><a href="#">Item 3</a></li>
-</ul>
-```
-
-#### JavaScript
-
-```js
-const list = document.getElementById("list");
-
-list.innerHTML += `<li><a href="#">Item ${list.children.length + 1}</a></li>`;
-```
-
-Please note that using `innerHTML` to append HTML elements (e.g., `el.innerHTML += "<a href='…'>link</a>"`) will result in the removal of any previously set event listeners.
-That is, after you append any HTML element that way you won't be able to listen to the previously set event listeners.
+Similarly, when setting element content using `innerHTML`, the HTML string is parsed into DOM elements that do not contain shadow roots.
+So for example [`<template>`](/en-US/docs/Web/HTML/Reference/Elements/template) is parsed into as {{domxref("HTMLTemplateElement")}}, whether or not the [`shadowrootmode`](/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootmode) attribute is specified.
+In order to set an element's contents from an HTML string that includes declarative shadow roots, you must instead use {{domxref("Element.setHTMLUnsafe()")}} or {{domxref("ShadowRoot.setHTMLUnsafe()")}}.
 
 ### Security considerations
 
-It is not uncommon to see `innerHTML` used to insert text into a web page.
-There is potential for this to become an attack vector on a site, creating a potential security risk.
-
-```js
-let name = "John";
-// assuming 'el' is an HTML DOM element
-el.innerHTML = name; // harmless in this case
-
-// …
-
-name = "<script>alert('I am John in an annoying alert!')</script>";
-el.innerHTML = name; // harmless in this case
-```
-
-Although this may look like a [cross-site scripting](https://en.wikipedia.org/wiki/Cross-site_scripting) attack, the result is harmless. A {{HTMLElement("script")}} tag inserted with `innerHTML` will not execute.
-
-However, there are ways to execute JavaScript without using {{HTMLElement("script")}} elements, so there is still a security risk whenever you use `innerHTML` to set strings over which you have no control.
-For example:
+The `innerHTML` property is probably the most common vector for [Cross-site-scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks, where potentially unsafe strings provided by a user are injected into the DOM without first being sanitized.
+While the property does prevent {{HTMLElement("script")}} elements from executing when they are injected, it is susceptible to many other ways that attackers can craft HTML to run malicious JavaScript.
+For example, the following example would execute the code in the `error` event handler, because the {{htmlelement("img")}} `src` value is not a valid image URL:
 
 ```js
 const name = "<img src='x' onerror='alert(1)'>";
 el.innerHTML = name; // shows the alert
 ```
 
-For that reason, it is recommended that instead of `innerHTML` you use:
+You can mitigate these issues by always assigning {{domxref("TrustedHTML")}} objects instead of strings, and [enforcing trusted type](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) using the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) CSP directive.
+This ensures that the input is passed through a transformation function, which has the chance to [sanitize](/en-US/docs/Web/Security/Attacks/XSS#sanitization) the input to remove potentially dangerous markup before it is injected.
 
-- {{domxref("Node.textContent")}} when inserting plain text, as this inserts it as raw text rather than parsing it as HTML.
-
-> [!WARNING]
-> If your project is one that will undergo any form of security review, using `innerHTML` most likely will result in your code being rejected.
-> For example, [if you use `innerHTML`](https://wiki.mozilla.org/Add-ons/Reviewers/Guide/Reviewing#Step_2:_Automatic_validation) in a [browser extension](/en-US/docs/Mozilla/Add-ons/WebExtensions) and submit
-> the extension to [addons.mozilla.org](https://addons.mozilla.org/), it may be rejected in the review process.
-> Please see [Safely inserting external content into a page](/en-US/docs/Mozilla/Add-ons/WebExtensions/Safely_inserting_external_content_into_a_page) for alternative methods.
+> [!NOTE]
+> {{domxref("Node.textContent")}} should be used when you know that the user provided content should be plain text.
+> This prevents it being parsed as HTML.
 
 ## Examples
 
-This example uses `innerHTML` to create a mechanism for logging messages into a box on a web page.
+### Reading the HTML contents of an element
 
-### JavaScript
+Reading `innerHTML` causes the user agent to serialize the element's descendants.
 
-```js
-function log(msg) {
-  const logElem = document.querySelector(".log");
-
-  const time = new Date();
-  const timeStr = time.toLocaleTimeString();
-  logElem.innerHTML += `${timeStr}: ${msg}<br/>`;
-}
-
-log("Logging mouse events inside this container…");
-```
-
-The `log()` function creates the log output by getting the current time from a {{jsxref("Date")}} object using {{jsxref("Date.toLocaleTimeString", "toLocaleTimeString()")}}, and building a string with the timestamp and the message text.
-Then the message is appended to the box with the class `"log"`.
-
-We add a second method that logs information about {{domxref("MouseEvent")}} based events (such as {{domxref("Element/mousedown_event", "mousedown")}}, {{domxref("Element/click_event", "click")}}, and {{domxref("Element/mouseenter_event", "mouseenter")}}):
-
-```js
-function logEvent(event) {
-  const msg = `Event <strong>${event.type}</strong> at <em>${event.clientX}, ${event.clientY}</em>`;
-  log(msg);
-}
-```
-
-Then we use this as the event handler for a number of mouse events on the box that contains our log:
-
-```js
-const boxElem = document.querySelector(".box");
-
-boxElem.addEventListener("mousedown", logEvent);
-boxElem.addEventListener("mouseup", logEvent);
-boxElem.addEventListener("click", logEvent);
-boxElem.addEventListener("mouseenter", logEvent);
-boxElem.addEventListener("mouseleave", logEvent);
-```
-
-### HTML
-
-The HTML is quite simple for our example.
+Given the following HTML:
 
 ```html
-<div class="box">
-  <div><strong>Log:</strong></div>
-  <div class="log"></div>
+<div id="example">
+  <p>My name is Joe</p>
 </div>
 ```
 
-The {{HTMLElement("div")}} with the class `"box"` is just a container for layout purposes, presenting the contents with a box around it.
-The `<div>` whose class is `"log"` is the container for the log text itself.
+You can get and log the markup for the contents of the outer {{htmlelement("div")}} as shown:
 
-### CSS
-
-The following CSS styles our example content.
-
-```css
-.box {
-  width: 600px;
-  height: 300px;
-  border: 1px solid black;
-  padding: 2px 4px;
-  overflow-y: scroll;
-  overflow-x: auto;
-}
-
-.log {
-  margin-top: 8px;
-  font-family: monospace;
-}
+```js
+const myElement = document.querySelector("#example");
+const contents = myElement.innerHTML;
+console.log(contents); // "\n  <p>My name is Joe</p>\n"
 ```
 
-### Result
+### Replacing the contents of an element
 
-The resulting content looks like this.
-You can see output into the log by moving the mouse in and out of the box, clicking in it, and so forth.
+In this example we'll replace an element's DOM by assigning HTML to the element's `innerHTML` property.
+To mitigate the risk of XSS, we'll first create a `TrustedHTML` object from the string containing the HTML, and then assign that object to `innerHTML`.
 
-{{EmbedLiveSample("Examples", 640, 350)}}
+Trusted types are not yet supported on all browsers, so first we define the [trusted types tinyfill](/en-US/docs/Web/API/Trusted_Types_API#trusted_types_tinyfill).
+This acts as a transparent replacement for the trusted types JavaScript API:
+
+```js
+if (typeof trustedTypes === "undefined")
+  trustedTypes = { createPolicy: (n, rules) => rules };
+```
+
+Next we create a {{domxref("TrustedTypePolicy")}} that defines a {{domxref("TrustedTypePolicy/createHTML", "createHTML()")}} for transforming an input string into {{domxref("TrustedHTML")}} instances.
+Commonly implementations of `createHTML()` use a library such as [DOMPurify](https://github.com/cure53/DOMPurify) to sanitize the input as shown below:
+
+```js
+const policy = trustedTypes.createPolicy("my-policy", {
+  createHTML: (input) => DOMPurify.sanitize(input),
+});
+```
+
+Then we use this `policy` object to create a `TrustedHTML` object from the potentially unsafe input string, and assign the result to the element:
+
+```js
+// The potentially malicious string
+const untrustedString = "<p>I might be XSS</p><img src='x' onerror='alert(1)'>";
+
+// Create a TrustedHTML instance using the policy
+const trustedHTML = policy.createHTML(untrustedString);
+
+// Inject the TrustedHTML (which contains a trusted string)
+const element = document.querySelector("#container");
+element.innerHTML = trustedHTML;
+```
+
+> [!WARNING]
+> While you can directly assign a string to `innerHTML` this is a [security risk](#security_considerations) if the string to be inserted might contain potentially malicious content.
+> You should use `TrustedHTML` to ensure that the content is sanitized before it is inserted, and you should set a CSP header to [enforce trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types).
 
 ## Specifications
 
@@ -253,3 +149,4 @@ You can see output into the log by moving the mouse in and out of the box, click
 - {{domxref("ShadowRoot.getHTML()")}}
 - {{domxref("Element.setHTMLUnsafe()")}}
 - {{domxref("ShadowRoot.setHTMLUnsafe()")}}
+- [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API)

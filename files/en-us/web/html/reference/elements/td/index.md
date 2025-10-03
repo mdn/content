@@ -47,7 +47,7 @@ td {
 
 th[scope="col"] {
   background-color: #505050;
-  color: #fff;
+  color: white;
 }
 
 th[scope="row"] {
@@ -59,7 +59,7 @@ td {
 }
 
 tr:nth-of-type(even) {
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 
 table {
@@ -183,7 +183,7 @@ th {
 }
 
 tr:nth-of-type(odd) td {
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 
 tr th[scope="row"] {
@@ -254,7 +254,7 @@ The {{cssxref(":first-of-type")}} and {{cssxref(":last-of-type")}} pseudo-classe
 tr:first-of-type td:last-of-type {
   width: 60px;
   background-color: #505050;
-  color: #fff;
+  color: white;
   font-weight: bold;
   text-align: center;
 }
@@ -266,7 +266,7 @@ th {
 }
 
 tr:nth-of-type(odd) td {
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 
 tr th[scope="row"] {

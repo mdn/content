@@ -40,7 +40,7 @@ Currently, the {{glossary("RGB", "RGB color space")}} predominates as the space 
 
 ## The sRGB color space
 
-Color has many ways of being defined, as is apparent in the [`<color>` data type](/en-US/docs/Web/CSS/color_value), including RGB, RGB decimal, RGB percent, HSL, HWB, LCH, LAB, and CMYK, among others.
+Color has many ways of being defined, as is apparent in the [`<color>` data type](/en-US/docs/Web/CSS/color_value), including RGB, RGB decimal, RGB percent, HSL, HWB, LCH, Lab, and CMYK, among others.
 
 For digital concerns, much of the technology has historically resided in the RGB color space. The RGB color model is extended to include "alpha" — RGBA — to allow specification of the opacity of a color. Other methods for measuring color involve measurements using other color spaces and are supported in modern displays and browsers. Still, color measurements in the RGB color space predominate, including in video production.
 
@@ -82,7 +82,7 @@ color: hsl(300deg 100% 50% / 100%);
 color: hwb(300deg 0% 0%);
 color: hwb(300 0% 0% / 1);
 
-/* by LAB representation of the sRGB value*/
+/* by Lab representation of the sRGB value */
 color: lab(60 93.56 -60.5);
 color: lab(60 93.56 -60.5 / 1);
 
@@ -130,7 +130,7 @@ Where accessibility is concerned, however, standards and guidelines are currentl
 
 ### Querying color values
 
-The {{domxref('Window.getComputedStyle()')}} method returns values using the RGB Decimal Reference scale or via `color(srgb...)`. For example, calling `Window.getComputedStyle()` on a `<div>` with `background-color: #ff0000` set on it returns the computed background color as `rgb(255 0 0)` — the RGB Decimal reference. However, when [using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors) (for example `background-color: rgb(from blue 255 0 0)`), calling `Window.getComputedStyle()` returns the computed background color as `color(srgb 1 0 0)`. Being tied to computer hardware, `Window.getComputedStyle()` measures color in terms of RGB, not how the human eye perceives color.
+The {{domxref('Window.getComputedStyle()')}} method returns values using the RGB Decimal Reference scale or via `color(srgb...)`. For example, calling `Window.getComputedStyle()` on a `<div>` with `background-color: red` set on it returns the computed background color as `rgb(255, 0, 0)` — the RGB Decimal reference. However, when [using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors) (for example `background-color: rgb(from blue 255 0 0)`), calling `Window.getComputedStyle()` returns the computed background color as `color(srgb 1 0 0)`. Being tied to computer hardware, `Window.getComputedStyle()` measures color in terms of RGB, not how the human eye perceives color.
 
 ### Red / green color blindness
 

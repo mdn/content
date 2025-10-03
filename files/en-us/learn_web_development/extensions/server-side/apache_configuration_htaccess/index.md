@@ -317,7 +317,7 @@ These directives will rewrite `www.example.com` to `example.com`.
 
 You should not duplicate content in multiple origins (with and without www). This can cause SEO problems (duplicate content), and therefore, you should choose one of the alternatives and redirect the other one. You should also use [Canonical URLs](https://www.semrush.com/blog/canonical-url-guide/) to indicate which URL should search engines crawl (if they support the feature).
 
-Set `%{ENV:PROTO}` variable, to allow rewrites to redirect with the appropriate schema automatically (`http` or `https`).
+Set `%{ENV:PROTO}` variable, to allow rewrites to redirect with the appropriate scheme automatically (`http` or `https`).
 
 The rule assumes by default that both HTTP and HTTPS environments are available for redirection.
 
@@ -340,7 +340,7 @@ These rules will insert `www.` at the beginning of a URL. It's important to note
 
 This can cause SEO problems (duplicate content), and therefore, you should choose one of the alternatives and redirect the other one. For search engines that support them, you should use [Canonical URLs](https://www.semrush.com/blog/canonical-url-guide/) to indicate which URL should search engines crawl.
 
-Set the `%{ENV:PROTO}` variable, to allow rewrites to redirect with the appropriate schema automatically (`http` or `https`).
+Set the `%{ENV:PROTO}` variable, to allow rewrites to redirect with the appropriate scheme automatically (`http` or `https`).
 
 The rule assumes by default that both HTTP and HTTPS environments are available for redirection. If your TLS certificate cannot handle one of the domains used during redirection, you should turn the condition on.
 

@@ -1,10 +1,12 @@
 ---
 title: "Test your skills: Backgrounds and borders"
-short-title: Backgrounds and borders
+short-title: "Test: Backgrounds and borders"
 slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Backgrounds_and_borders
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
+
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Backgrounds_and_borders", "Learn_web_development/Core/Styling_basics/Size_decorate_content_panel", "Learn_web_development/Core/Styling_basics")}}
 
 The aim of this skill test is to help you assess whether you understand [backgrounds and borders of boxes in CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders).
 
@@ -67,15 +69,15 @@ You should use `border`, `border-radius`, `background-image`, and `background-si
 
 ```css
 .box {
-  border: 5px solid #000;
+  border: 5px solid black;
   border-radius: 10px;
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/balloons.jpg);
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/balloons.jpg");
   background-size: cover;
 }
 
 h2 {
   background-color: rgb(0 0 0 / 50%);
-  color: #fff;
+  color: white;
 }
 ```
 
@@ -148,11 +150,13 @@ h2 {
   padding: 0 40px;
   text-align: center;
   background:
-    url(https://mdn.github.io/shared-assets/images/examples/star.png) no-repeat
-      left center,
-    url(https://mdn.github.io/shared-assets/images/examples/star.png) repeat-y
+    url("https://mdn.github.io/shared-assets/images/examples/star.png")
+      no-repeat left center,
+    url("https://mdn.github.io/shared-assets/images/examples/star.png") repeat-y
       right center;
 }
 ```
 
 </details>
+
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Backgrounds_and_borders", "Learn_web_development/Core/Styling_basics/Size_decorate_content_panel", "Learn_web_development/Core/Styling_basics")}}

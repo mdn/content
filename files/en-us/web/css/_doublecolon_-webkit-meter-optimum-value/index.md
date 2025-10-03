@@ -10,7 +10,7 @@ sidebar: cssref
 
 {{Non-standard_header}}
 
-The **`::-webkit-meter-optimum-value`** CSS [pseudo-element](/en-US/docs/Glossary/Pseudo-element) styles the {{htmlelement("meter")}} element when its value is inside the low-high range, or when the value is equivalent to the optimum value.
+The **`::-webkit-meter-optimum-value`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Glossary/Pseudo-element) styles the {{htmlelement("meter")}} element when its value is inside the low-high range, or when the value is equivalent to the optimum value.
 
 Green is the default color.
 
@@ -54,7 +54,13 @@ body {
 }
 
 #styled::-webkit-meter-optimum-value {
-  background: linear-gradient(to bottom, #7f7, #090 45%, #090 55%, #7f7);
+  background: linear-gradient(
+    to bottom,
+    #77ff77,
+    #009900 45%,
+    #009900 55%,
+    #77ff77
+  );
   height: 100%;
   box-sizing: border-box;
 }

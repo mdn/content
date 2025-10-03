@@ -65,7 +65,7 @@ p {
 
 @media (inverted-colors: none) {
   p {
-    background: #eee;
+    background: #eeeeee;
     color: red;
   }
 }

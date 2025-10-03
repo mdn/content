@@ -1048,6 +1048,10 @@
       "inh": "",
       "impl": []
     },
+    "Exception": {
+      "inh": "",
+      "impl": []
+    },
     "EXT_blend_minmax": {
       "inh": "",
       "impl": []
@@ -2336,6 +2340,10 @@
       "inh": "EventTarget",
       "impl": []
     },
+    "NavigationPrecommitController": {
+      "inh": "",
+      "impl": []
+    },
     "NavigationPreloadManager": {
       "inh": "",
       "impl": []
@@ -3360,10 +3368,6 @@
       "inh": "SVGElement",
       "impl": []
     },
-    "SVGDiscardElement": {
-      "inh": "SVGAnimationElement",
-      "impl": []
-    },
     "SVGElement": {
       "inh": "Element",
       "impl": []
@@ -3665,6 +3669,10 @@
       "impl": []
     },
     "Table": {
+      "inh": "",
+      "impl": []
+    },
+    "Tag": {
       "inh": "",
       "impl": []
     },
@@ -4286,6 +4294,14 @@
     },
     "XRAnchorSet": {
       "inh": "",
+      "impl": []
+    },
+    "XRBody": {
+      "inh": "",
+      "impl": []
+    },
+    "XRBodySpace": {
+      "inh": "XRSpace",
       "impl": []
     },
     "XRBoundedReferenceSpace": {

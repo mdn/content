@@ -46,8 +46,8 @@ Allowed values for `scroll-timeline-name` are:
 
 ### Creating a named scroll progress timeline animation
 
-In this example, a scroll timeline named `--squareTimeline` is defined using the `scroll-timeline-name` property on the element with the ID `container`.
-This is then applied to the animation on the `#square` element using `animation-timeline: --squareTimeline`.
+In this example, a scroll timeline named `--square-timeline` is defined using the `scroll-timeline-name` property on the element with the ID `container`.
+This is then applied to the animation on the `#square` element using `animation-timeline: --square-timeline`.
 
 #### HTML
 
@@ -62,7 +62,7 @@ The HTML for the example is shown below.
 
 #### CSS
 
-The CSS for the container sets it as the source of a scroll timeline named `--squareTimeline` using the `scroll-timeline-name` property. No [scrollbar axis](/en-US/docs/Web/CSS/scroll-timeline-axis) is defined here because the vertical axis will be used by default.
+The CSS for the container sets it as the source of a scroll timeline named `--square-timeline` using the `scroll-timeline-name` property. No [scrollbar axis](/en-US/docs/Web/CSS/scroll-timeline-axis) is defined here because the vertical axis will be used by default.
 
 The height of the container is set to `300px`, and the container is also set to create a vertical scrollbar if it overflows (the CSS `height` rule on the `stretcher` element below does make the content overflow its container).
 
@@ -70,12 +70,12 @@ The height of the container is set to `300px`, and the container is also set to 
 #container {
   height: 300px;
   overflow-y: scroll;
-  scroll-timeline-name: --squareTimeline;
+  scroll-timeline-name: --square-timeline;
   position: relative;
 }
 ```
 
-The CSS below defines a square that rotates according to the timeline provided by the `animation-timeline` property, which is set to the `--squareTimeline` timeline named above.
+The CSS below defines a square that rotates according to the timeline provided by the `animation-timeline` property, which is set to the `--square-timeline` timeline named above.
 
 ```css
 #square {
@@ -85,7 +85,7 @@ The CSS below defines a square that rotates according to the timeline provided b
   margin-top: 100px;
   animation-name: rotateAnimation;
   animation-duration: 1ms; /* Firefox requires this to apply the animation */
-  animation-timeline: --squareTimeline;
+  animation-timeline: --square-timeline;
   position: absolute;
   bottom: 0;
 }

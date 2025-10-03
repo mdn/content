@@ -10,7 +10,7 @@ sidebar: cssref
 
 {{non-standard_header}}
 
-The **`::-webkit-slider-thumb`** CSS [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the "thumb" that the user can move within the "groove" of an {{HTMLElement("input")}} of `type="range"` to alter its numerical value.
+The **`::-webkit-slider-thumb`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the "thumb" that the user can move within the "groove" of an {{HTMLElement("input")}} of `type="range"` to alter its numerical value.
 
 ## Syntax
 

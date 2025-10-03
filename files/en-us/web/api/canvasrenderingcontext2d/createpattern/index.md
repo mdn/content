@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.CanvasRenderingContext2D.createPattern
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 The **`CanvasRenderingContext2D.createPattern()`** method of the Canvas 2D API creates a pattern using the specified image and repetition.
 This method returns a {{domxref("CanvasPattern")}}.
@@ -102,7 +102,7 @@ patternCanvas.width = 50;
 patternCanvas.height = 50;
 
 // Give the pattern a background color and draw an arc
-patternContext.fillStyle = "#fec";
+patternContext.fillStyle = "#ffeecc";
 patternContext.fillRect(0, 0, patternCanvas.width, patternCanvas.height);
 patternContext.arc(0, 0, 50, 0, 0.5 * Math.PI);
 patternContext.stroke();

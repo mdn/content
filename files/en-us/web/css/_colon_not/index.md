@@ -68,7 +68,7 @@ There are several unusual effects and outcomes when using `:not()` that you shou
 
 ### Using :not() with valid selectors
 
-This example shows some a few examples of using `:not()`.
+This example shows a few ways of using `:not()`.
 
 #### HTML
 
@@ -146,7 +146,7 @@ p:not(.foo, :invalid-pseudo-class) {
 /* Select all <p> elements without the `foo` class */
 p:not(:is(.foo, :invalid-pseudo-class)) {
   color: green;
-  border-top: dotted thin currentcolor;
+  border-top: dotted thin currentColor;
 }
 
 /* Select all <div> elements without the `foo` or the `bar` class */
@@ -157,7 +157,7 @@ div:not(.foo, .bar) {
 
 /* Select all <div> elements without the `foo` or the `bar` class */
 div:not(:is(.foo, .bar)) {
-  border-bottom: dotted thin currentcolor;
+  border-bottom: dotted thin currentColor;
 }
 ```
 

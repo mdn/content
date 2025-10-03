@@ -60,9 +60,9 @@ svg {
       y1="0"
       x2="200"
       y2="0">
-      <stop offset="0" stop-color="#ff0000" />
-      <stop offset="0.5" stop-color="#00ff00" />
-      <stop offset="1" stop-color="#0000ff" />
+      <stop offset="0" stop-color="red" />
+      <stop offset="0.5" stop-color="lime" />
+      <stop offset="1" stop-color="blue" />
     </linearGradient>
   </defs>
 

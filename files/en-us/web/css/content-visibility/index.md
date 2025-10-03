@@ -258,24 +258,24 @@ div {
 @keyframes show {
   0% {
     content-visibility: hidden;
-    color: rgb(0 0 0 / 0%);
+    color: transparent;
   }
 
   100% {
     content-visibility: visible;
-    color: rgb(0 0 0 / 100%);
+    color: black;
   }
 }
 
 @keyframes hide {
   0% {
     content-visibility: visible;
-    color: rgb(0 0 0 / 100%);
+    color: black;
   }
 
   100% {
     content-visibility: hidden;
-    color: rgb(0 0 0 / 0%);
+    color: transparent;
   }
 }
 ```
