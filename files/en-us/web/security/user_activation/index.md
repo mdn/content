@@ -86,8 +86,6 @@ APIs that require sticky activation (not exhaustive):
 - {{domxref("VirtualKeyboard.show()")}}
 - Autoplay of [Media and Web Audio APIs](/en-US/docs/Web/Media/Guides/Autoplay) (in particular for [`AudioContexts`](/en-US/docs/Web/API/AudioContext)).
 
-.
-
 ## UserActivation API
 
 To programmatically determine if a window has either sticky or transient user activation, the {{domxref("UserActivation")}} API provides two properties which are available using {{domxref("navigator.userActivation")}}:

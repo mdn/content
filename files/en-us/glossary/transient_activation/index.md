@@ -24,14 +24,9 @@ See [Features gated by user activation](/en-US/docs/Web/Security/User_activation
 
 The {{domxref("UserActivation.isActive")}} property can be used to programmatically check the current window's transient activation state.
 
-## Comparison between transient and sticky activation
-
-The difference between transient and {{Glossary("sticky activation")}} is that sticky activation persists from the first meaningful interaction until the end of the session.
-
-While the presence of transient activation is used to ensure that features are only allowed if directly triggered by a user, sticky activation is primarily used to prevent features automatically being triggered on page load.
-
 ## See also
 
+- [Comparison between transient and sticky activation](/en-US/docs/Web/Security/User_activation#comparison_between_transient_and_sticky_activation) in _Features gated by user activation_
 - Related glossary terms:
   - {{Glossary("Sticky activation")}}
 - {{domxref("UserActivation.isActive")}}
