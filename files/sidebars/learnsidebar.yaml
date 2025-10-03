@@ -342,7 +342,7 @@ sidebar:
       - /Learn_web_development/Extensions/Performance/HTML
       - /Learn_web_development/Extensions/Performance/CSS
       - /Learn_web_development/Extensions/Performance/business_case_for_performance
-      - /Learn_web_development/Extensions/Performance/Resources
+      - /Learn_web_development/Extensions/Performance/Best_practices
   - link: /Learn_web_development/Extensions/Testing
     title: Testing
     details: closed

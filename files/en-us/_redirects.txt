@@ -5596,7 +5596,7 @@
 /en-US/docs/Learn/Performance/Perceived_performance	/en-US/docs/Learn_web_development/Extensions/Performance/Perceived_performance
 /en-US/docs/Learn/Performance/Populating_the_page:_how_browsers_work	/en-US/docs/Web/Performance/Guides/How_browsers_work
 /en-US/docs/Learn/Performance/Understanding_latency	/en-US/docs/Web/Performance/Guides/Understanding_latency
-/en-US/docs/Learn/Performance/Web_Performance_Basics	/en-US/docs/Learn_web_development/Extensions/Performance/Resources
+/en-US/docs/Learn/Performance/Web_Performance_Basics	/en-US/docs/Learn_web_development/Extensions/Performance/Best_practices
 /en-US/docs/Learn/Performance/Web_performance_overview	/en-US/docs/Learn_web_development/Extensions/Performance/What_is_web_performance
 /en-US/docs/Learn/Performance/What_is_web_performance	/en-US/docs/Learn_web_development/Extensions/Performance/What_is_web_performance
 /en-US/docs/Learn/Performance/business_case_for_performance	/en-US/docs/Learn_web_development/Extensions/Performance/business_case_for_performance
@@ -5841,7 +5841,8 @@
 /en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_HTML5_controls	/en-US/docs/Learn_web_development/Extensions/Forms
 /en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Other_controls	/en-US/docs/Learn_web_development/Extensions/Forms
 /en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Styling_basics	/en-US/docs/Learn_web_development/Extensions/Forms
-/en-US/docs/Learn_web_development/Extensions/Performance/Web_Performance_Basics	/en-US/docs/Learn_web_development/Extensions/Performance/Resources
+/en-US/docs/Learn_web_development/Extensions/Performance/Resources	/en-US/docs/Learn_web_development/Extensions/Performance/Best_practices
+/en-US/docs/Learn_web_development/Extensions/Performance/Web_Performance_Basics	/en-US/docs/Learn_web_development/Extensions/Performance/Best_practices
 /en-US/docs/Learn_web_development/Extensions/Security_privacy	/en-US/docs/Web/Security
 /en-US/docs/Learn_web_development/Extensions/Transform_animate	/en-US/docs/Learn_web_development/Extensions
 /en-US/docs/Learn_web_development/Getting_started/Basic_setup	/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software

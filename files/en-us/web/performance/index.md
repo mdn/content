@@ -76,7 +76,7 @@ The MDN [Web Performance Learning Area](/en-US/docs/Learn_web_development/Extens
   - : CSS may be a less important optimization focus for improved performance, but there are some CSS features that impact performance more than others. In this article we look at some CSS properties that impact performance and suggested ways of handling styles to ensure performance is not negatively impacted.
 - [The business case for web performance](/en-US/docs/Learn_web_development/Extensions/Performance/business_case_for_performance)
   - : There are many things a developer can do to improve performance, but how fast is fast enough? How can you convince powers that be of the importance of these efforts? Once optimized, how can you ensure bloat doesn't come back? In this article we look at convincing management, developing a performance culture and performance budget, and introduce ways to ensure regressions don't sneak into your code base.
-- [Web performance resources](/en-US/docs/Learn_web_development/Extensions/Performance/Resources)
+- [Web performance resources](/en-US/docs/Learn_web_development/Extensions/Performance/Best_practices)
   - : This article covers several topics at a basic level and provides links to deeper dives to improve performance for each topic. In addition to front-end topics such as HTML, CSS, JavaScript, and media files, it also covers APIs, developer tools, best practices, and bad practices relating to web performance.
 
 ## Performance APIs

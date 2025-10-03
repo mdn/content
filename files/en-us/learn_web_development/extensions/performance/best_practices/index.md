@@ -1,6 +1,7 @@
 ---
-title: Web performance resources
-slug: Learn_web_development/Extensions/Performance/Resources
+title: Web Performance best practices & tips
+short-title: Best practices & tips
+slug: Learn_web_development/Extensions/Performance/Best_practices
 page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
