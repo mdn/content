@@ -31,16 +31,16 @@ dynamic-range-limit: unset;
 
 The `dynamic-range-limit` property is specified as one of the following keyword values or a {{cssxref("dynamic-range-limit-mix()")}} function call.
 
-- Keyword values
-  - : The following keyword values can be specified:
-    - `standard`
-      - : The highest luminance that can be displayed in selected content is that of **HDR reference white**, which is the CSS color `white`.
-    - `no-limit`
-      - : The highest luminance that can be displayed in selected content is much greater than that of HDR reference white. The precise level is not defined in the specification.
-    - `constrained`
-      - : The highest luminance that can be displayed in selected content is somewhat greater than that of HDR reference white, such that a mix of Standard Dynamic Range (SDR) and HDR content can be comfortably viewed together. The precise level is not defined.
-- {{cssxref("dynamic-range-limit-mix()")}}
-  - : Specifies the maximum luminance as a custom value that is a combination of the different keyword values proportionate to the provided percentages. It takes two or more pairs, each consisting of a `dynamic-range-limit` keyword (or a nested `dynamic-range-limit-mix()` function) and a percentage.
+The following keyword values can be specified:
+
+- `standard`
+  - : Specifies the maximum luminance as **HDR reference white**, which is the CSS color `white`.
+- `no-limit`
+  - : Specifies the maximum luminance as much greater than that of HDR reference white. The precise level is not specified.
+- `constrained`
+  - : Specifies the maximum luminance as somewhat greater than that of HDR reference white, such that a mix of Standard Dynamic Range (SDR) and HDR content can be comfortably viewed together. The precise level is not specified.
+
+The {{cssxref("dynamic-range-limit-mix()")}} function specifies the maximum luminance as a custom value that is a combination of the different keyword values proportionate to the provided percentages. It takes two or more pairs, each consisting of a `dynamic-range-limit` keyword (or a nested `dynamic-range-limit-mix()` function) and a percentage.
 
 ## Description
 
@@ -87,7 +87,7 @@ In the markup, we embed an HDR image using an {{htmlelement("img")}} element. We
 
 #### CSS
 
-We give our `<img>` element some rudimentary styles, then set its `dynamic-range-limit` property to `standard`, which means it won't be displayed any brighter than HDR reference white. We also set a {{cssxref("transition")}} property so that the `<img>` element's `dynamic-range-limit` value will transition over 0.6 seconds when its state changes.
+We give our `<img>` element some rudimentary styles, then set its `dynamic-range-limit` property to `standard`, which means it won't be displayed any brighter than HDR reference white. We also set a {{cssxref("transition")}} property so that the `<img>` element's `dynamic-range-limit` value will transition over `0.6` seconds when its state changes.
 
 ```css
 img {

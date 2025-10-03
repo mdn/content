@@ -81,8 +81,8 @@ dynamic-range-limit-mix(
 ```
 
 - The first line gives us `no-limit 10%`.
-- The second line gives us `standard 5%` (`25%` of `20%`) and `constrained 15%` (`75%` of `20%`).
-- The third line gives us `constrained 5%` (10/40 of `20%` which equals `25%` of `20%`) and `no-limit 15%` (30/40 of `20%` which equals `75%` of `20%`).
+- Since `25%` and `75%` add up to `100%`, the second line gives us `standard 5%` (`25%` of `20%`) and `constrained 15%` (`75%` of `20%`).
+- In the third line, because `10%` and `30%` add up to only `40%`, not `100%`, we normalize both as proportions of `40%`: 10/40=`25%` and 30/40=`75%`. This gives us `constrained 5%` (`25%` of `20%`) and `no-limit 15%` (`75%` of `20%`).
 
 Adding these up to get the raw percentages gives us:
 
@@ -118,8 +118,7 @@ img {
 }
 ```
 
-> [!NOTE]
-> You can see the `dynamic-range-limit` property in action in our [dynamic-range-limit property demo](https://github.com/mdn/dom-examples/tree/main/dynamic-range-limit), which includes an HDR image that can be hovered and focused to transition the `dynamic-range-limit` value. [View the example live](https://mdn.github.io/dom-examples/dynamic-range-limit/) in a display capable of displaying HDR colors, and try it out.
+You can see the `dynamic-range-limit` property in action in our [dynamic-range-limit property demo](https://github.com/mdn/dom-examples/tree/main/dynamic-range-limit), which includes an HDR image that can be hovered and focused to transition the `dynamic-range-limit` value. [View the example live](https://mdn.github.io/dom-examples/dynamic-range-limit/) in a display capable of displaying HDR colors, and try it out.
 
 ## Specifications
 
