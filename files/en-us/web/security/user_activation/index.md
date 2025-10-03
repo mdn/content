@@ -10,7 +10,7 @@ Browsers limit access to sensitive APIs like popups, fullscreen, or vibration AP
 This page lists web platform features available only after user activation.
 
 A user activation either implies that the user is currently interacting with the page, or has completed an interaction since page load.
-Typically, this is a click on a button or some other user interaction with the UI.
+Typically, this is a click on a button or some other interaction with the UI.
 
 More precisely, an _activation triggering input event_ is an event which:
 
