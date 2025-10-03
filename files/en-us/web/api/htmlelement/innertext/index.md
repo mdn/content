@@ -8,6 +8,13 @@ browser-compat: api.HTMLElement.innerText
 
 {{APIRef("HTML DOM")}}
 
+> [!WARNING]
+> This property represents the text content of a script element, which may be executable depending on the script type.
+> APIs like this are known as [injection sinks](/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage), and are potentially a vector for [cross-site-scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks.
+>
+> You can mitigate this risk by always assigning {{domxref("TrustedScript")}} objects instead of strings and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types).
+> See [Security considerations](#security_considerations) for more information.
+
 The **`innerText`** property of the {{domxref("HTMLElement")}} interface represents the rendered text content of a node and its descendants.
 
 As a getter, it approximates the text the user would get if they highlighted the contents of the element with the cursor and then copied it to the clipboard.
@@ -24,8 +31,7 @@ A string representing the rendered text content of an element.
 If the element itself is not [being rendered](https://html.spec.whatwg.org/multipage/rendering.html#being-rendered) (for example, is detached from the document or is hidden from view), the returned value is the same as the {{domxref("Node.textContent")}} property.
 
 > [!WARNING]
-> Setting `innerText` on a node removes _all_ of the node's children
-> and replaces them with a single text node with the given string value.
+> Setting `innerText` on a node removes _all_ of the node's children and replaces them with a single text node with the given string value.
 
 ## Examples
 
@@ -53,9 +59,9 @@ Note how `innerText` is aware of things like {{htmlElement("br")}} elements, and
   <span style="display:none">HIDDEN TEXT</span>
 </p>
 <h3>Result of textContent:</h3>
-<textarea id="textContentOutput" rows="6" cols="30" readonly>…</textarea>
+<textarea id="textContentOutput" rows="18" cols="40" readonly>…</textarea>
 <h3>Result of innerText:</h3>
-<textarea id="innerTextOutput" rows="6" cols="30" readonly>…</textarea>
+<textarea id="innerTextOutput" rows="6" cols="40" readonly>…</textarea>
 ```
 
 ### JavaScript
@@ -71,7 +77,7 @@ innerTextOutput.value = source.innerText;
 
 ### Result
 
-{{EmbedLiveSample("Examples", 700, 450)}}
+{{EmbedLiveSample("Examples", 700, 650)}}
 
 ## Specifications
 
@@ -83,5 +89,6 @@ innerTextOutput.value = source.innerText;
 
 ## See also
 
+- {{domxref("HTMLScriptElement.innerText")}}
 - {{domxref("HTMLElement.outerText")}}
 - {{domxref("Element.innerHTML")}}
