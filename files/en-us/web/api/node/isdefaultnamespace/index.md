@@ -31,13 +31,16 @@ A boolean value that holds the return value `true` or `false`, indicating if the
 ## Example
 
 > [!NOTE]
-> This example runs in an HTML document, where it's not possible to customize the XML namespaces. Firefox sets all elements' namespace URI to `null`, while Chrome and Safari appropriately set HTML, SVG, and MathML elements' default namespace URIs. If you want to conduct more meaningful tests, you can open a standalone [SVG](/en-US/docs/Web/SVG) document and execute scripts in its context.
+> This example runs in an HTML document, where `xmlns:` attributes are ignored (except `xmlns:xlink`). Firefox sets all elements' namespace URI to `null`, while Chrome and Safari appropriately set HTML, SVG, and MathML elements' default namespace URIs. If you want to conduct more meaningful tests, you can open a standalone [SVG](/en-US/docs/Web/SVG) document and execute scripts in its context.
 
 ```html
 <div class="hidden">
   <div>Test HTML element</div>
   <svg>
     <text>Test SVG element</text>
+  </svg>
+  <svg xmlns:xlink="http://www.w3.org/1999/xlink" id="with-xlink">
+    <text>Test SVG element with xlink</text>
   </svg>
   <math>Test MathML element</math>
 </div>
@@ -48,6 +51,7 @@ A boolean value that holds the return value `true` or `false`, indicating if the
       <th><code>namespaceURI</code></th>
       <th><code>&lt;div&gt;</code></th>
       <th><code>&lt;svg&gt;</code></th>
+      <th><code>&lt;svg xmlns:xlink&gt;</code></th>
       <th><code>&lt;math&gt;</code></th>
     </tr>
   </thead>
@@ -64,6 +68,7 @@ A boolean value that holds the return value `true` or `false`, indicating if the
 ```js
 const htmlElt = document.querySelector("div");
 const svgElt = document.querySelector("svg");
+const svgEltXLink = document.querySelector("#with-xlink");
 const mathElt = document.querySelector("math");
 
 const tbody = document.querySelector("tbody");
@@ -73,6 +78,7 @@ for (const uri of [
   "http://www.w3.org/XML/1998/namespace",
   "http://www.w3.org/1999/xhtml",
   "http://www.w3.org/2000/svg",
+  "http://www.w3.org/1999/xlink",
   "http://www.w3.org/1998/Math/MathML",
   "",
   null,
@@ -81,7 +87,7 @@ for (const uri of [
   tbody.appendChild(row);
   row.appendChild(document.createElement("td")).textContent =
     JSON.stringify(uri);
-  for (const el of [htmlElt, svgElt, mathElt]) {
+  for (const el of [htmlElt, svgElt, svgEltXLink, mathElt]) {
     console.log(el, uri, el.isDefaultNamespace(uri));
     row.appendChild(document.createElement("td")).textContent = String(
       el.isDefaultNamespace(uri),
