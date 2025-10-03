@@ -115,7 +115,7 @@ Firefox 144 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ## Changes for add-on developers
 
-- Adds the ability to determine the priority of CSS injected from the [`"content_scripts"` manifest key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts), in {{WebExtAPIRef("scripting.registerContentScripts()")}} with the `cssOrigin` property on {{WebExtAPIRef("scripting.RegisteredContentScript")}}, and the `cssOrigin` property in {{WebExtAPIRef("contentScripts.register")}}. By default, the `"author"` origin takes precedence. ([Firefox bug 1679997](https://bugzil.la/1679997))
+- Adds the ability to specify the style origin for CSS injections from [`"content_scripts"` manifest key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts), in {{WebExtAPIRef("scripting.registerContentScripts()")}} with the `cssOrigin` property on {{WebExtAPIRef("scripting.RegisteredContentScript")}}, and the `cssOrigin` property in {{WebExtAPIRef("contentScripts.register")}}. The style origin can be `"user"`, to add the CSS as a user stylesheet, or `"author"`, to add it as an author stylesheet. Default, to the `"author"` origin. These properties are case-insensitive. In addition, the value of the [`origin`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/scripting/insertCSS#origin) property of {{WebExtAPIRef("scripting.insertCSS()")}} is now case insensitive. ([Firefox bug 1679997](https://bugzil.la/1679997))
 
 <!-- ### Removals -->
 
