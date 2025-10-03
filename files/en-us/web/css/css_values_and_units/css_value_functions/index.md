@@ -207,6 +207,8 @@ The {{CSSxRef("color_value","&lt;color&gt;")}} CSS [data type](/en-US/docs/Web/C
   - : Defines CMYK colors in a device-dependent way.
 - {{CSSXref("color_value/light-dark", "light-dark()")}}
   - : Returns one of two provided colors based on the current color scheme.
+- {{cssxref("dynamic-range-limit-mix()")}}
+  - : Creates a custom maximum luminance limit that is a mix of different {{cssxref("dynamic-range-limit")}} keywords in specified percentages.
 
 ## Image functions
 
