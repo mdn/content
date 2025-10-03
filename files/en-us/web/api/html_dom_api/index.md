@@ -65,7 +65,7 @@ Each level defines a key aspect of the utility of the element. From `Node`, the 
 
 There are elements that share commonalities and thus have an additional intermediary type. For example, the {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements both present audiovisual media. The corresponding types, {{domxref("HTMLAudioElement")}} and {{domxref("HTMLVideoElement")}}, are both based upon the common type {{domxref("HTMLMediaElement")}}, which in turn is based upon {{domxref("HTMLElement")}} and so forth. `HTMLMediaElement` defines the methods and properties held in common between audio and video elements.
 
-These element-specific interfaces make up the majority of the HTML DOM API, and are the focus of this article. To learn more about the actual structure of the {{DOMxRef("Document_Object_Model", "DOM", "", "1")}}, see {{DOMxRef("Document_Object_Model/Introduction", "Introduction to the DOM", "", "1")}}.
+These element-specific interfaces make up the majority of the HTML DOM API, and are the focus of this article. The [DOM](/en-US/docs/Web/API/Document_Object_Model) article provides a general introduction to the DOM and its concepts.
 
 ## HTML DOM target audience
 

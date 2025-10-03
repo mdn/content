@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.XSLTProcessor.transformToDocument
 ---
 
-{{APIRef("XSLT")}}
+{{APIRef("DOM")}}
 
 The `transformToDocument()` method of the {{domxref("XSLTProcessor")}} interface transforms the provided {{DOMxRef("Node")}} source to a {{domxref("Document")}} using the XSLT stylesheet associated with `XSLTProcessor`.
 

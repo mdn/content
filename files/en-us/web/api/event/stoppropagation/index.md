@@ -32,7 +32,7 @@ None.
 
 ## Examples
 
-See [Event Propagation](/en-US/docs/Web/API/Document_Object_Model/Examples#example_5_event_propagation).
+See [Event Propagation](/en-US/docs/Web/API/Document_Object_Model#event_propagation).
 Also see the example at {{domxref("Event.stopImmediatePropagation", "stopImmediatePropagation()")}}
 
 ## Specifications
