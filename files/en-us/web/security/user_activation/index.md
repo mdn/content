@@ -15,7 +15,7 @@ Typically, this is a click on a button or some other interaction with the UI.
 More precisely, an _activation triggering input event_ is an event which:
 
 - has the [`isTrusted`](/en-US/docs/Web/API/Event/isTrusted) attribute set to `true`, and
-- is an event of the following types:
+- is one of the following types:
   - [`keydown`](/en-US/docs/Web/API/Element/keydown_event) (except for the <kbd>Esc</kbd> key nor a shortcut key reserved by the user agent)
   - [`mousedown`](/en-US/docs/Web/API/Element/mousedown_event)
   - [`pointerdown`](/en-US/docs/Web/API/Element/pointerdown_event) (if `pointerType` is "mouse")
