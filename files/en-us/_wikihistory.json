@@ -6181,18 +6181,6 @@
     "modified": "2020-07-16T22:27:36.041Z",
     "contributors": ["MelchiorIm3Tal", "chrisdavidmills", "rachelandrew"]
   },
-  "Learn_web_development/Core/Challenges": {
-    "modified": "2019-08-29T20:48:33.765Z",
-    "contributors": [
-      "Sebastianz",
-      "strael1",
-      "teoli",
-      "Jeremie",
-      "Sheppy",
-      "illourr",
-      "jswisher"
-    ]
-  },
   "Learn_web_development/Core/Frameworks_libraries": {
     "modified": "2020-09-25T22:34:22.129Z",
     "contributors": ["chrisdavidmills", "CodeDotJS"]
@@ -7676,10 +7664,6 @@
       "mbrasseau",
       "rachelandrew"
     ]
-  },
-  "Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper": {
-    "modified": "2020-07-16T22:28:23.858Z",
-    "contributors": ["chrisdavidmills", "jswisher", "maurodibert"]
   },
   "Learn_web_development/Core/Styling_basics/Getting_started": {
     "modified": "2020-07-16T22:27:48.937Z",
@@ -10875,6 +10859,16 @@
       "jaikathuria",
       "jgathogo",
       "Mateen"
+    ]
+  },
+  "Learn_web_development/Howto/Web_mechanics/File_browser_bugs": {
+    "modified": "2019-03-24T00:12:10.850Z",
+    "contributors": [
+      "chrisdavidmills",
+      "carlkibler",
+      "bledwards1",
+      "Sheppy",
+      "Aaronlev"
     ]
   },
   "Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work": {
@@ -22025,6 +22019,10 @@
   "Web/API/CSSNumericValue/type": {
     "modified": "2020-10-15T22:19:19.805Z",
     "contributors": ["jpmedley"]
+  },
+  "Web/API/CSSOM_view_API/Coordinate_systems": {
+    "modified": "2020-04-27T22:32:23.815Z",
+    "contributors": ["chrisn", "mfluehr", "JohannesCleve", "Sheppy"]
   },
   "Web/API/CSSPageRule": {
     "modified": "2020-10-15T21:21:03.183Z",
@@ -41115,6 +41113,24 @@
       "Enn"
     ]
   },
+  "Web/API/HTML_Drag_and_Drop_API/Drag_data_store": {
+    "modified": "2020-06-02T06:32:13.194Z",
+    "contributors": [
+      "Tigt",
+      "SphinxKnight",
+      "chrisdavidmills",
+      "w3l",
+      "AFBarstow",
+      "idmean",
+      "Neil",
+      "teoli",
+      "Sheppy",
+      "Mgalli",
+      "DaveG",
+      "Piro",
+      "Enn"
+    ]
+  },
   "Web/API/HTML_Drag_and_Drop_API/Drag_operations": {
     "modified": "2020-01-25T13:26:01.457Z",
     "contributors": [
@@ -41164,24 +41180,6 @@
       "fscholz",
       "PushpitaPikuDey",
       "AFBarstow"
-    ]
-  },
-  "Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types": {
-    "modified": "2020-06-02T06:32:13.194Z",
-    "contributors": [
-      "Tigt",
-      "SphinxKnight",
-      "chrisdavidmills",
-      "w3l",
-      "AFBarstow",
-      "idmean",
-      "Neil",
-      "teoli",
-      "Sheppy",
-      "Mgalli",
-      "DaveG",
-      "Piro",
-      "Enn"
     ]
   },
   "Web/API/HTML_Sanitizer_API": {
@@ -58699,14 +58697,6 @@
     "modified": "2020-10-15T21:40:31.633Z",
     "contributors": ["Sheppy", "lucian95", "sgiles", "chrisdavidmills"]
   },
-  "Web/API/SpeechRecognitionEvent/emma": {
-    "modified": "2020-10-15T21:40:30.616Z",
-    "contributors": ["sideshowbarker", "ExE-Boss", "chrisdavidmills"]
-  },
-  "Web/API/SpeechRecognitionEvent/interpretation": {
-    "modified": "2020-10-15T21:40:31.763Z",
-    "contributors": ["sideshowbarker", "ExE-Boss", "chrisdavidmills"]
-  },
   "Web/API/SpeechRecognitionEvent/resultIndex": {
     "modified": "2020-10-15T21:40:31.951Z",
     "contributors": ["sideshowbarker", "ExE-Boss", "chrisdavidmills"]
@@ -70984,16 +70974,6 @@
       "SteveLee"
     ]
   },
-  "Web/Accessibility/ARIA/How_to/File_ARIA-related_bugs": {
-    "modified": "2019-03-24T00:12:10.850Z",
-    "contributors": [
-      "chrisdavidmills",
-      "carlkibler",
-      "bledwards1",
-      "Sheppy",
-      "Aaronlev"
-    ]
-  },
   "Web/Accessibility/ARIA/Reference/Roles": {
     "modified": "2020-04-01T14:49:41.249Z",
     "contributors": [
@@ -75310,10 +75290,6 @@
       "teoli"
     ]
   },
-  "Web/CSS/CSSOM_view/Coordinate_systems": {
-    "modified": "2020-04-27T22:32:23.815Z",
-    "contributors": ["chrisn", "mfluehr", "JohannesCleve", "Sheppy"]
-  },
   "Web/CSS/CSSOM_view/Viewport_concepts": {
     "modified": "2020-11-20T07:41:38.029Z",
     "contributors": [
@@ -75903,7 +75879,7 @@
       "chrisdavidmills"
     ]
   },
-  "Web/CSS/CSS_colors/Color_picker_tool": {
+  "Web/CSS/CSS_colors/Color_format_converter": {
     "modified": "2020-10-30T22:49:32.596Z",
     "contributors": [
       "td2014",
@@ -124525,6 +124501,10 @@
       "SpencerG"
     ]
   },
+  "Web/Security/Attacks/Subdomain_takeover": {
+    "modified": "2020-08-25T23:27:57.222Z",
+    "contributors": ["jswisher"]
+  },
   "Web/Security/Certificate_Transparency": {
     "modified": "2020-11-12T17:20:50.893Z",
     "contributors": ["secdev-01", "Felicia.Ann.Kelley", "lol768"]
@@ -124789,10 +124769,6 @@
       "erikadoyle",
       "Annevk"
     ]
-  },
-  "Web/Security/Subdomain_takeovers": {
-    "modified": "2020-08-25T23:27:57.222Z",
-    "contributors": ["jswisher"]
   },
   "Web/Security/Subresource_Integrity": {
     "modified": "2020-10-15T21:38:19.213Z",

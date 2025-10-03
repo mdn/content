@@ -6,7 +6,7 @@ browser-compat: css.at-rules.font-face.src
 sidebar: cssref
 ---
 
-The **`src`** CSS descriptor for the {{cssxref("@font-face")}} at-rule specifies the resource containing font data. It is required for the `@font-face` rule to be valid.
+The **`src`** [CSS](/en-US/docs/Web/CSS) descriptor for the {{cssxref("@font-face")}} at-rule specifies the resource containing font data. It is required for the `@font-face` rule to be valid.
 
 ## Syntax
 

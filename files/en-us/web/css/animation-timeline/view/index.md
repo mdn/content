@@ -165,13 +165,13 @@ To aid the understanding of the result, extra elements `subject-container`, `top
 
 .top {
   top: 0;
-  height: 244px;
+  height: 50%;
   align-items: end;
 }
 
 .bottom {
-  top: 432px;
-  height: 48px;
+  bottom: 0;
+  height: 10%;
 }
 ```
 

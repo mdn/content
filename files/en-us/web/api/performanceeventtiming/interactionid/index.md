@@ -3,12 +3,10 @@ title: "PerformanceEventTiming: interactionId property"
 short-title: interactionId
 slug: Web/API/PerformanceEventTiming/interactionId
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.PerformanceEventTiming.interactionId
 ---
 
-{{APIRef("Performance API")}}{{SeeCompatTable}}
+{{APIRef("Performance API")}}
 
 The read-only **`interactionId`** property returns an ID that uniquely identifies a user interaction which triggered a series of associated events.
 

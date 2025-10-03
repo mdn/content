@@ -29,8 +29,8 @@ Defining the relationship is done in a different way depending on the type of ap
 - An Android app does this via the [Digital Asset Links system](https://developers.google.com/digital-asset-links/v1/getting-started).
 - A Windows UWP app does this via [URI Handlers](https://learn.microsoft.com/en-us/windows/apps/develop/launch/web-to-app-linking).
 - A PWA does this via:
-  - A self-defining entry inside its own `related_applications` manifest member in the case of a PWA checking if it is installed on the underlying platform.
-  - An `assetlinks.json` file in its [`/.well-known/`](https://datatracker.ietf.org/doc/html/rfc5785) directory in the case of an app outside the scope of the PWA checking whether it is installed.
+  - A self-defining entry inside its own `related_applications` manifest member, specifying the `platform` and `id` properties, in the case of a PWA checking in the same scope if it is installed on the underlying platform.
+  - An `assetlinks.json` file in its [`/.well-known/`](https://datatracker.ietf.org/doc/html/rfc5785) directory in the case of an app outside the scope of the PWA checking whether it is installed on Android.
 
 See [Is your app installed? getInstalledRelatedApps() will tell you!](https://developer.chrome.com/docs/capabilities/get-installed-related-apps) for more details on how to handle each one of these cases.
 

@@ -133,6 +133,12 @@ function buildDeleteButtonEl(id) {
 
 The interesting part to note is that every time we update the state, we need to manually call `renderTodoList` so our state gets synced to the screen. The code that will render our items on the page might read something like this:
 
+```js hidden
+const todoFormEl = document.querySelector("#todo-form");
+const todoInputEl = document.querySelector("#todo-input");
+const todoListEl = document.querySelector("#todo-list");
+```
+
 ```js
 function renderTodoList() {
   const frag = document.createDocumentFragment();
@@ -216,10 +222,6 @@ label + input[type="text"] {
 ```
 
 ```js hidden
-const todoFormEl = document.querySelector("#todo-form");
-const todoInputEl = document.querySelector("#todo-input");
-const todoListEl = document.querySelector("#todo-list");
-
 function generateUniqueId(prefix = "prefix") {
   return `${prefix}-${Math.floor(Math.random() * Date.now())}`;
 }

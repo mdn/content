@@ -6,7 +6,7 @@ browser-compat: css.at-rules.font-face.font-family
 sidebar: cssref
 ---
 
-The **`font-family`** CSS descriptor sets the font family for a font specified in an {{cssxref("@font-face")}} at-rule.
+The **`font-family`** [CSS](/en-US/docs/Web/CSS) descriptor sets the font family for a font specified in an {{cssxref("@font-face")}} at-rule.
 
 The value is used for name matching against a particular `@font-face` when styling elements using the [`font-family`](/en-US/docs/Web/CSS/font-family) property.
 Any name may be used, and this overrides any name specified in the underlying font data.

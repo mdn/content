@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.HTMLElement.error_event
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The `error` event is fired on an element when a resource failed to load, or can't be used. For example, if a script has an execution error or an image can't be found or is invalid.
 
