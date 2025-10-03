@@ -213,7 +213,7 @@ The following screenshot shows an example of what the finished layout for the de
 ![Finished layout task website. The elements are laid out neatly. There is a website title, above a black nav bar containing 5 equally spaced links. Below the nav bar, there are two sections. On the left there is a blog post: A blog post title followed by the post content. The blog content wraps around a photo that is flush left. On the right side there is a 'photography' title about a group of images laid out in a two-image wide grid.](layout-task-complete.png)
 
 <details>
-<summary>Click here to show the solution</summary>
+<summary>Click here to show a potential solution</summary>
 
 The finished CSS looks like so:
 
