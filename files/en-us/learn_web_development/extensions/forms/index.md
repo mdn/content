@@ -63,9 +63,9 @@ The following articles aren't included in the learning pathway, but they'll prov
 - [Sending forms through JavaScript](/en-US/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript)
   - : This article looks at ways to use a form to assemble an HTTP request and send it via custom JavaScript, rather than standard form submission. It also looks at why you'd want to do this, and the implications of doing so. (See also [Using FormData objects](/en-US/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects).)
 - [HTML forms in legacy browsers](/en-US/docs/Learn_web_development/Extensions/Forms/HTML_forms_in_legacy_browsers)
-  - : In this article, we provide some tips and tricks to help ease the pain if and when you need to support legacy browsers with your HTML forms.
+  - : This article provides tips and tricks to help ease the pain if, and when, you need to support legacy browsers with your HTML forms.
 - [User input methods and controls](/en-US/docs/Learn_web_development/Extensions/Forms/User_input_methods)
-  - : In this article, we take a look at the different ways users interact with forms and other web content and provide recommendations for managing user input, real-world examples, and links to further information.
+  - : This article shows the different ways that users interact with forms and other web content, and provides recommendations for managing user input, real-world examples, and links to further information.
 
 ## See also
 
