@@ -52,7 +52,7 @@ Respectively, these are:
 - Progress end
   - : The upper progress bound.
 
-The parameters can be mathematical expressions or simple values. The values (or sum results) can be any {{cssxref("&lt;number>")}}, {{cssxref("&lt;dimension>")}}, or {{cssxref("&lt;percentage>")}} value. They must all be of the same type, or else the function is invalid.
+The parameters can be mathematical expressions or simple values. The values (or sum results) can be any {{cssxref("&lt;number>")}}, {{cssxref("&lt;dimension>")}}, or {{cssxref("&lt;percentage>")}} value. They can be of different units, but they must all be of the same type, or else the function is invalid.
 
 ### Return value
 
@@ -120,6 +120,10 @@ background-color: rgb(
     255 / 0.5
 );
 ```
+
+### Creating unitless values
+
+The `progress()` function outputs unitless values, therefore it can be used for the purpose of removing units from values in the same manner as the [`tan(atan2())` hack](https://dev.to/janeori/css-type-casting-to-numeric-tanatan2-scalars-582j). Note however that, due to the updates in behavior around [CSS typed arithmetic](/en-US/docs/Web/CSS/CSS_Values_and_Units/Using_CSS_typed_arithmetic), this can also be achieved via simple division.
 
 ## Formal syntax
 
