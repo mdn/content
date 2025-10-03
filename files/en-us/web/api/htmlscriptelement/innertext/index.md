@@ -1,9 +1,9 @@
 ---
-title: "HTMLScriptElement: text property"
-short-title: text
-slug: Web/API/HTMLScriptElement/text
+title: "HTMLScriptElement: innerText property"
+short-title: innerText
+slug: Web/API/HTMLScriptElement/innerText
 page-type: web-api-instance-property
-browser-compat: api.HTMLScriptElement.text
+browser-compat: api.HTMLScriptElement.innerText
 ---
 
 {{APIRef("HTML DOM")}}
@@ -15,42 +15,49 @@ browser-compat: api.HTMLScriptElement.text
 > You can mitigate this risk by always assigning {{domxref("TrustedScript")}} objects instead of strings and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types).
 > See [Security considerations](#security_considerations) for more information.
 
-The **`text`** property of the {{domxref("HTMLScriptElement")}} interface represents the inline text content of the script element.
-It acts the same way as the {{domxref("HTMLScriptElement.textContent","textContent")}} property.
+The **`innerText`** property of the {{domxref("HTMLScriptElement")}} interface represents the text content inside the {{HTMLElement("script")}} element as though it were rendered text.
+
+The rendered string is [slightly different](#text_vs_textcontent_vs_innertext) to the raw string returned by {{domxref("HTMLScriptElement.text", "text")}} and {{domxref("HTMLScriptElement.textContent", "textContent")}} but the differences should not change script execution.
+
+The `innerText` property is also defined on {{domxref("HTMLElement.innerText","HTMLElement")}} and can hence be used with other elements.
+When used with other elements it does not expect or enforce the assignment of a {{domxref("TrustedScript")}}.
 
 ## Value
 
-Getting the property returns a string containing the element's text.
+Getting the property returns a string representing the rendered text content of an element.
+If the element is not [being rendered](https://html.spec.whatwg.org/multipage/rendering.html#being-rendered) (for example, is detached from the document or is hidden from view), the returned value is the same as the {{domxref("HTMLScriptElement.textContent","textContent")}} property.
 
 Setting the property accepts either a {{domxref("TrustedScript")}} object or a string.
 
 ## Description
 
-The **`text`** property of the {{domxref("HTMLScriptElement")}} interface represents the text content inside the {{HTMLElement("script")}} element.
+The **`innerText`** property of the {{domxref("HTMLScriptElement")}} interface represents the text content inside the {{HTMLElement("script")}} element as though it were rendered text.
+
+When the property is set, the input is normalized the same way as any other element's `innerText` — whitespace is collapsed and `\n` is converted into line breaks.
+This produces the textual representation a user would obtain if a `<script>` element had visible rendering and they were to select its contents and copy them to the clipboard.
 
 For an executable script {{domxref('HTMLScriptElement/type','type')}}, such as a module or classic script, this text is inline executable code.
 For other types it might represent an import map, speculation rules, or some other kind of data block.
 
-Note that if the {{domxref('HTMLScriptElement/src','src')}} property is set the content of the `text` property is ignored.
+Note that if the {{domxref('HTMLScriptElement/src','src')}} property is set the content of the `innerText` property is ignored.
 
 ### `text` vs `textContent` vs `innerText`
 
-The `text` and {{domxref("HTMLScriptElement.textContent", "textContent")}} properties of `HTMLScriptElement` are equivalent: both can be set with a string or a `TrustedScript` type and both return a string representing the content of the script element.
+The {{domxref("HTMLScriptElement.text", "text")}} and {{domxref("HTMLScriptElement.textContent", "textContent")}} properties of `HTMLScriptElement` are equivalent: both can be set with a `TrustedScript` object or string, and both return a string representing the content of the script element exactly as it was written to the element.
 The main difference is that `textContent` is also defined on {{domxref("Node.textContent", "Node")}} and can be used with other elements to set their content with a string.
 
 {{domxref("HTMLScriptElement.innerText", "innerText")}} will generally set and execute the text in the same way as the other methods, but may return a slightly different value.
-The reason for this is that this property is designed for getting the rendered text of a string of HTML markup.
-When setting the value the text is treated as a text node, which normalizes the string as if it were visible text (collapsing spaces and converting `\n` to line breaks).
+The reason for this is that `innerText` is normalized when it is saved, collapsing spaces and converting `\n` to line breaks.
 This does not change the execution of the text, but it does alter the text that is stored and returned.
 
 ### Security considerations
 
-The `text` property is a possible vector for [Cross-site-scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks, where potentially unsafe strings provided by a user are executed.
+The `innerText` property is a possible vector for [Cross-site-scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks, where potentially unsafe strings provided by a user are executed.
 For example, the following example assumes the `scriptElement` is an executable `<script>` element, and that `untrustedCode` was provided by a user:
 
 ```js
 const untrustedCode = "alert('Potentially evil code!');";
-scriptElement.text = untrustedCode; // shows the alert
+scriptElement.innerText = untrustedCode; // shows the alert
 ```
 
 You can mitigate these issues by always assigning {{domxref("TrustedScript")}} objects instead of strings, and [enforcing trusted type](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) using the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) CSP directive.
@@ -64,7 +71,7 @@ If that is not possible, you might allow or block the use of certain functions w
 
 ### Using TrustedScript
 
-To mitigate the risk of XSS, we should always assign `TrustedScript` instances to the `text` property.
+To mitigate the risk of XSS, we should always assign `TrustedScript` instances to the `innerText` property.
 
 Trusted types are not yet supported on all browsers, so first we define the [trusted types tinyfill](/en-US/docs/Web/API/Trusted_Types_API#trusted_types_tinyfill).
 This acts as a transparent replacement for the trusted types JavaScript API:
@@ -110,26 +117,42 @@ const untrustedScriptOne = "const num = 10;\nconsole.log(num)";
 const trustedScript = policy.createScript(untrustedScriptOne);
 
 // Inject the TrustedScript (which contains a trusted string)
-el.text = trustedScript;
+el.innerText = trustedScript;
 ```
 
-### Comparing `text` and `textContent`
+### Comparing `innerText` to `textContent`
 
-In this example we'll set the value of a script element by assigning a string of code to the element's `text` property and `textContent` properties, and read the result back to show that the results are equivalent.
+This example compares `innerText` with {{domxref("HTMLScriptElement.textContent")}}.
+The result should be that `innerText` squashes any whitespace.
 
-Note that in this case we're not using the policy to create trusted scripts (for brevity we'll assume that the provided strings are trusted).
+#### HTML
+
+```html
+<h3>Source element:</h3>
+<script id="source">
+const num = 10;       console.log(num);
+const x = 5;
+</script>
+<h3>Result of textContent:</h3>
+<textarea id="textContentOutput" rows="6" cols="40" readonly>…</textarea>
+<h3>Result of innerText:</h3>
+<textarea id="innerTextOutput" rows="6" cols="40" readonly>…</textarea>
+```
+
+#### JavaScript
 
 ```js
-// Set the text property
-el.text = "const num = 10;\nconsole.log(num)";
-console.log(el.text); // Output: "const num = 10;\nconsole.log(num);"
-console.log(el.textContent); // Output: "const num = 10;\nconsole.log(num);"
+const source = document.getElementById("source");
+const textContentOutput = document.getElementById("textContentOutput");
+const innerTextOutput = document.getElementById("innerTextOutput");
 
-// Set the textContent property
-el.textContent = "console.log(10);";
-console.log(el.text); // Output: "console.log(10);"
-console.log(el.textContent); // Output: "console.log(10);"
+textContentOutput.value = source.textContent;
+innerTextOutput.value = source.innerText;
 ```
+
+#### Result
+
+{{EmbedLiveSample("Examples", 700, 450)}}
 
 ## Specifications
 
@@ -141,5 +164,4 @@ console.log(el.textContent); // Output: "console.log(10);"
 
 ## See also
 
-- {{domxref("HTMLScriptElement.textContent")}}
-- {{domxref("HTMLScriptElement.innerText")}}
+- {{domxref("HTMLElement.innerText")}}

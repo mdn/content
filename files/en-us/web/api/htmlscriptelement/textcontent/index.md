@@ -20,7 +20,6 @@ It acts the same way as the {{domxref("HTMLScriptElement.text","text")}} propert
 
 The `textContent` property is also defined on {{domxref("Node.textContent","Node")}} and can hence be used with other elements.
 When used with other elements it does not expect or enforce the assignment of a {{domxref("TrustedScript")}}.
-It is also different in that a {{domxref("HTMLScriptElement")}} is not expected to contain other elements, and will parse input as plain text rather than as HTML markup.
 
 ## Value
 
@@ -39,12 +38,12 @@ Note that if the {{domxref('HTMLScriptElement/src','src')}} property is set the 
 
 ### `text` vs `textContent` vs `innerText`
 
-The `text` and {{domxref("HTMLScriptElement.textContent", "textContent")}} properties of `HTMLScriptElement` are equivalent: both can be set with a string or a `TrustedScript` type and both return a string representing the content of the script element.
-The main difference is that {{domxref("Node.textContent", "textContent")}} is also defined on {{domxref("Node")}} and can be used with other elements to set their content with a string.
+The `text` and {{domxref("HTMLScriptElement.textContent", "textContent")}} properties of `HTMLScriptElement` are equivalent: both can be set with a `TrustedScript`object or string, and both return a string representing the content of the script element exactly as it was written to the element.
+The main difference is that `textContent` is also defined on {{domxref("Node.textContent", "Node")}}, and can be used with other elements to set their content with a string.
 
 {{domxref("HTMLScriptElement.innerText", "innerText")}} will generally set and execute the text in the same way as the other methods, but may return a slightly different value.
-The reason for this is that this property is designed for getting the rendered text of a string of HTML markup.
-When setting the value the text is treated as a text node, which normalizes the string as if it were visible text (collapsing spaces and converting `\n` to line breaks).
+The reason for this is that `innerText` is designed for getting the rendered text of a string of HTML markup.
+When setting the value the text is treated as a text node, which normalizes the string as though the `<script>` element could contain visible text (collapsing spaces and converting `\n` to line breaks).
 This does not change the execution of the text, but it does alter the text that is stored and returned.
 
 ### Security considerations
@@ -66,7 +65,56 @@ If that is not possible, you might allow or block the use of certain functions w
 
 ## Examples
 
-See [Examples](/en-US/docs/Web/API/HTMLScriptElement/text) in {{domxref("HTMLScriptElement")}} (the behaviour is the same).
+### Using TrustedScript
+
+To mitigate the risk of XSS, we should always assign `TrustedScript` instances to the `textContent` property.
+
+Trusted types are not yet supported on all browsers, so first we define the [trusted types tinyfill](/en-US/docs/Web/API/Trusted_Types_API#trusted_types_tinyfill).
+This acts as a transparent replacement for the trusted types JavaScript API:
+
+```js
+if (typeof trustedTypes === "undefined")
+  trustedTypes = { createPolicy: (n, rules) => rules };
+```
+
+Next we create a {{domxref("TrustedTypePolicy")}} that defines a {{domxref("TrustedTypePolicy/createScript", "createScript()")}} method for transforming input strings into {{domxref("TrustedScript")}} instances.
+For the purpose of this example we'll allow just exactly the script that we need.
+
+```js
+const policy = trustedTypes.createPolicy("inline-script-policy", {
+  createScript(input) {
+    // Here specify what scripts are safe to allow
+    if (input === "const num = 10;\nconsole.log(num)") {
+      return input; // allow this exact script
+    }
+    throw new TypeError(`Untrusted script blocked: ${input}`);
+  },
+});
+```
+
+Next we'll create the script element to which we will assign the value and get a handle to the element.
+
+```html
+<script id="el" type="text/javascript"></script>
+```
+
+```js
+// Get the script element we're injecting the code into
+const el = document.getElementById("el");
+```
+
+Then we use the `policy` object to create a `trustedScript` object from the potentially unsafe input string, and assign the result to the element:
+
+```js
+// The potentially malicious string
+const untrustedScriptOne = "const num = 10;\nconsole.log(num)";
+
+// Create a TrustedScript instance using the policy
+const trustedScript = policy.createScript(untrustedScriptOne);
+
+// Inject the TrustedScript (which contains a trusted string)
+el.textContent = trustedScript;
+```
 
 ## Specifications
 
