@@ -28,12 +28,12 @@ Before starting this module, you should be familiar with [HTML](/en-US/docs/Lear
   - : [Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox) is a one-dimensional layout method for laying out items in rows or columns. Items flex to fill additional space and shrink to fit into smaller spaces. This article explains all the fundamentals.
 - [CSS grid layout](/en-US/docs/Learn_web_development/Core/CSS_layout/Grids)
   - : CSS grid layout is a two-dimensional layout system for the web. It lets you organize content into rows and columns and offers many features to simplify the creation of complex layouts. This article will explain all you need to know to get started with grid layout.
+- [Fundamental layout comprehension](/en-US/docs/Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension) <sup>Challenge</sup>
+  - : This challenge will test your knowledge of the layout features we've covered so far in the module, namely flexbox, floats, grid, and positioning. By the end you will have developed a webpage layout using a variety of techniques.
 - [Responsive design](/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)
   - : As more diverse screen sizes have appeared on web-enabled devices, the concept of responsive web design (RWD) has appeared: a set of practices that allows web pages to alter their layout and appearance to suit different screen widths, resolutions, etc. It is an idea that changed the way we design for a multi-device web, and in this article we'll help you understand the main techniques you need to know to master it.
 - [Media query fundamentals](/en-US/docs/Learn_web_development/Core/CSS_layout/Media_queries)
   - : The **CSS Media Query** gives you a way to apply CSS only when the browser and device environment matches rules that you specify. Media queries are a key part of responsive web design because they allow you to create different layouts depending on the size of the viewport. In this lesson, you will learn about the syntax used in media queries then use them in an interactive example showing how a simple design might be made responsive.
-- [Fundamental layout comprehension](/en-US/docs/Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension) <sup>Challenge</sup>
-  - : A challenge to test your knowledge of different layout methods by laying out a webpage.
 
 ## Test your skills
 
