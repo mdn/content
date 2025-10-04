@@ -24,6 +24,7 @@ The properties of this interface allow you to calculate certain resource timing 
 - Measuring redirection time (`redirectEnd` - `redirectStart`)
 - Measuring interim request time (`firstInterimResponseStart` - `finalResponseHeadersStart`)
 - Measuring request time (`responseStart` - `requestStart`)
+- Measuring document request time (`finalResponseHeadersStart` - `requestStart`)
 - Measuring TLS negotiation time (`requestStart` - `secureConnectionStart`)
 - Measuring time to fetch (without redirects) (`responseEnd` - `fetchStart`)
 - Measuring ServiceWorker processing time (`fetchStart` - `workerStart`)
