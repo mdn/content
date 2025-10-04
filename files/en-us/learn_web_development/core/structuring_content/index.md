@@ -16,7 +16,7 @@ Before starting this module, you don't need any previous HTML knowledge, but you
 
 > [!NOTE]
 > If you are working on a computer, tablet, or another device where you can't create files, you can try running the code in an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
-
+1
 ## Tutorials and challenges
 
 - [Basic HTML syntax](/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax)
