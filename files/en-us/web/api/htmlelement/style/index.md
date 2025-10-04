@@ -69,6 +69,66 @@ for (const prop in elementStyle) {
 
 Note `font-weight` is not listed as a value for `elementStyle` as it is not defined within the `style` attribute of the element itself. Rather, it is inherited from the definition on its parent. Also note that the shorthand {{cssxref("border-top")}} property, defined in the `style` attribute, is not listed directly. Rather, it is replaced by the three corresponding longhand properties ({{cssxref("border-top-color")}}, {{cssxref("border-top-style")}}, and {{cssxref("border-top-width")}}).
 
+### Updating border style
+
+```html
+<div id="box"></div>
+
+<form name="FormName">
+  <button id="btn1">Make border 20px-wide</button>
+  <button id="btn2">Make border 5px-wide</button>
+</form>
+```
+
+```css
+#box {
+  border: 5px solid green;
+  width: 100px;
+  height: 100px;
+}
+```
+
+```js
+function setBorderWidth(width) {
+  document.getElementById("box").style.borderWidth = `${width}px`;
+}
+
+document.getElementById("btn1").addEventListener("click", () => {
+  setBorderWidth(20);
+});
+document.getElementById("btn2").addEventListener("click", () => {
+  setBorderWidth(5);
+});
+```
+
+{{EmbedLiveSample("Updating border style", "", "200")}}
+
+### Manipulating styles
+
+In this example, some basic style properties of an HTML paragraph element are accessed using the style object on the element and that object's CSS style properties, which can be retrieved and set from the DOM. In this case, you are manipulating the individual styles directly. You can also use {{domxref("document.styleSheets", "styleSheets")}} and their rules to change styles for whole documents.
+
+```html
+<p id="pid">Some text</p>
+<form>
+  <p><button type="button">Change text</button></p>
+</form>
+```
+
+```js
+function changeText() {
+  const p = document.getElementById("pid");
+
+  p.style.color = "blue";
+  p.style.fontSize = "18pt";
+}
+
+document.querySelector("button").addEventListener("click", () => {
+  changeText();
+});
+```
+
+{{EmbedLiveSample("Manipulating styles", "", "200")}}
+
 ## Specifications
 
 {{Specifications}}

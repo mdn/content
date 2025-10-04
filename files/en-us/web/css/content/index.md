@@ -144,7 +144,7 @@ The keywords and data types mentioned above are described in more detail below:
 
 ## Accessibility
 
-CSS-generated content is not included in the [DOM](/en-US/docs/Web/API/Document_Object_Model/Introduction). Because of this, it will not be represented in the [accessibility tree](/en-US/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#accessibility_apis) and certain assistive technology/browser combinations will not announce it. If the content conveys information that is critical to understanding the page's purpose, it is better to include it in the main document.
+CSS-generated content is not included in the [DOM](/en-US/docs/Web/API/Document_Object_Model). Because of this, it will not be represented in the [accessibility tree](/en-US/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#accessibility_apis) and certain assistive technology/browser combinations will not announce it. If the content conveys information that is critical to understanding the page's purpose, it is better to include it in the main document.
 
 If inserted content is not decorative, check that the information is provided to assistive technologies and is also available when CSS is turned off.
 

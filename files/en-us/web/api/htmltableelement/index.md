@@ -73,6 +73,36 @@ _Inherits methods from its parent, {{DOMxRef("HTMLElement")}}_.
 - {{DOMxRef("HTMLTableElement.deleteRow()")}}
   - : Removes the row corresponding to the `index` given in parameter. If the `index` value is `-1` the last row is removed; if it is smaller than `-1` or greater than the amount of rows in the collection, a {{DOMxRef("DOMException")}} with the value `IndexSizeError` is raised.
 
+## Examples
+
+### Using the DOM Table Interface
+
+The `HTMLTableElement` interface provides some convenience methods for creating and manipulating tables. Two frequently used methods are {{domxref("HTMLTableElement.insertRow")}} and {{domxref("HTMLTableRowElement.insertCell")}}.
+
+To add a row and some cells to an existing table:
+
+```html
+<table id="table0">
+  <tr>
+    <td>Row 0 Cell 0</td>
+    <td>Row 0 Cell 1</td>
+  </tr>
+</table>
+```
+
+```js
+const table = document.getElementById("table0");
+const row = table.insertRow(-1);
+
+for (let i = 0; i < 2; i++) {
+  const cell = row.insertCell(-1);
+  const text = `Row ${row.rowIndex} Cell ${i}`;
+  cell.appendChild(document.createTextNode(text));
+}
+```
+
+{{EmbedLiveSample("using_the_dom_table_interface", "", "300")}}
+
 ## Specifications
 
 {{Specifications}}
