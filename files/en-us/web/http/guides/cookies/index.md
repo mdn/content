@@ -92,6 +92,12 @@ You can specify an expiration date or time period after which the cookie should 
   > [!NOTE]
   > If your site authenticates users, it should regenerate and resend session cookies, even ones that already exist, whenever a user authenticates. This approach helps prevent [session fixation](https://owasp.org/www-community/attacks/Session_fixation) attacks, where a third-party can reuse a user's session.
 
+To immediately remove a cookie, set the cookie again with the same name, path, and domain (if specified), and set its `Expires` attribute to a date in the past or its `Max-Age` attribute to `0` or negative. This instructs the browser to delete the cookie right away. For example:
+
+```http
+Set-Cookie: id=a3fWa; Max-Age=0
+```
+
 There are some techniques designed to recreate cookies after they're deleted. These are known as "zombie" cookies. These techniques violate the principles of user [privacy](#privacy_and_tracking) and control, may violate [data privacy regulations](#cookie-related_regulations), and could expose a website using them to legal liability.
 
 ### Updating cookie values
