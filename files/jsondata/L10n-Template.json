@@ -432,5 +432,17 @@
     "en-US": "Sources: ",
     "zh-CN": "来源：",
     "zh-TW": "來源："
+  },
+  "formal_syntax_footer": {
+    "de": "Diese Syntax spiegelt den neuesten Standard gemäß { $specs } wider. Möglicherweise haben nicht alle Browser jeden Teil implementiert. Siehe <a href=\"#browser-kompatibilität\">Browserkompatibilität</a> für Informationen zur Unterstützung.",
+    "en-US": "This syntax reflects the latest standard as per { $specs }. Not all browsers may have implemented every part. See <a href=\"#browser_compatibility\">Browser compatibility</a> for support information.",
+    "es": "Esta sintaxis refleja el estándar más reciente según { $specs }. Es posible que no todos los navegadores hayan implementado todas las partes. Consulte <a href=\"#compatibilidad_con_navegadores\">Compatibilidad del navegador</a> para obtener información de soporte.",
+    "fr": "Cette syntaxe reflète le dernier standard selon { $specs }. Tous les navigateurs n'ont peut-être pas implémenté toutes les parties. Voir la <a href=\"#compatibilité_des_navigateurs\">Compatibilité des navigateurs</a> pour plus d'informations sur la prise en charge.",
+    "ja": "この構文は { $specs } による最新の標準を反映しています。すべてのブラウザーがすべての部分を実装しているわけではありません。サポート情報については<a href=\"#ブラウザーの互換性\">ブラウザーの互換性</a>を参照してください。",
+    "ko": "이 구문은 { $specs }에 따른 최신 표준을 반영합니다. 모든 브라우저가 모든 부분을 구현한 것은 아닙니다. 지원 정보는 <a href=\"#브라우저_호환성\">브라우저 호환성</a>을 참조하세요.",
+    "pt-BR": "Esta sintaxe reflete o padrão mais recente conforme { $specs }. Nem todos os navegadores podem ter implementado todas as partes. Consulte <a href=\"#compatibilidade_com_navegadores\">Compatibilidade do navegador</a> para informações de suporte.",
+    "ru": "Данный синтаксис отражает последний стандарт согласно { $specs }. Не все браузеры могли реализовать каждую часть. См. <a href=\"#совместимость_с_браузерами\">Совместимость с браузерами</a> для информации о поддержке.",
+    "zh-CN": "此语法反映了根据 { $specs } 的最新标准。并非所有浏览器都实现了每个部分。有关支持信息，请参阅<a href=\"#浏览器兼容性\">浏览器兼容性</a>。",
+    "zh-TW": "此語法反映了根據 { $specs } 的最新標準。並非所有瀏覽器都實現了每個部分。有關支援資訊，請參閱<a href=\"#瀏覽器相容性\">瀏覽器相容性</a>。"
   }
 }
