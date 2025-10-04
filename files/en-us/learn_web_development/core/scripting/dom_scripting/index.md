@@ -278,11 +278,11 @@ The finished demo will look something like the following — try it out before y
 ```html hidden live-sample___dynamic-shopping-list
 <h1>My shopping list</h1>
 
-<div>
+<form>
   <label for="item">Enter a new item:</label>
   <input type="text" name="item" id="item" />
   <button>Add item</button>
-</div>
+</form>
 
 <ul></ul>
 ```
@@ -303,7 +303,9 @@ const list = document.querySelector("ul");
 const input = document.querySelector("input");
 const button = document.querySelector("button");
 
-button.addEventListener("click", () => {
+button.addEventListener("click", (event) => {
+  event.preventDefault();
+
   const myItem = input.value;
   input.value = "";
 
@@ -329,17 +331,18 @@ button.addEventListener("click", () => {
 
 To complete the exercise, follow the steps below, and make sure that the list behaves as described above.
 
-1. To start with, download a copy of our [shopping-list.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/shopping-list.html) starting file and make a copy of it somewhere. You'll see that it has some minimal CSS, a div with a label, input, and button, and an empty list and {{htmlelement("script")}} element. You'll be making all your additions inside the script.
+1. To start with, download a copy of our [shopping-list.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/shopping-list.html) starting file and make a copy of it somewhere. You'll see that it has some minimal CSS, a form with a label, input, and button, and an empty list and {{htmlelement("script")}} element. You'll be making all your additions inside the script.
 2. Create three variables that hold references to the list ({{htmlelement("ul")}}), {{htmlelement("input")}}, and {{htmlelement("button")}} elements.
 3. Create a [function](/en-US/docs/Learn_web_development/Core/Scripting/Functions) that will run in response to the button being clicked.
-4. Inside the function body, start off by storing the current [value](/en-US/docs/Web/API/HTMLInputElement/value) of the input element in a variable.
-5. Next, empty the input element by setting its value to an empty string — `""`.
-6. Create three new elements — a list item ({{htmlelement('li')}}), {{htmlelement('span')}}, and {{htmlelement('button')}}, and store them in variables.
-7. Append the span and the button as children of the list item.
-8. Set the text content of the span to the input element value you saved earlier, and the text content of the button to 'Delete'.
-9. Append the list item as a child of the list.
-10. Attach an event handler to the delete button so that, when clicked, it will delete the entire list item (`<li>...</li>`).
-11. Finally, use the [`focus()`](/en-US/docs/Web/API/HTMLElement/focus) method to focus the input element ready for entering the next shopping list item.
+4. Inside the function body, start off by calling [`preventDefault()`](/en-US/docs/Web/API/Event/preventDefault). When wrapped in the form element, the input will trigger the form to submit when the user presses the <kbd>Enter</kbd> key. This will keep the form from refreshing the page and will add a new item to the list.
+5. Continue by storing the current [value](/en-US/docs/Web/API/HTMLInputElement/value) of the input element in a variable.
+6. Next, empty the input element by setting its value to an empty string — `""`.
+7. Create three new elements — a list item ({{htmlelement('li')}}), {{htmlelement('span')}}, and {{htmlelement('button')}}, and store them in variables.
+8. Append the span and the button as children of the list item.
+9. Set the text content of the span to the input element value you saved earlier, and the text content of the button to 'Delete'.
+10. Append the list item as a child of the list.
+11. Attach an event handler to the delete button so that, when clicked, it will delete the entire list item (`<li>...</li>`).
+12. Finally, use the [`focus()`](/en-US/docs/Web/API/HTMLElement/focus) method to focus the input element, ready for entering the next shopping list item.
 
 ## Summary
 
