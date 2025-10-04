@@ -25,6 +25,8 @@ permissions:
   pull-requests: write
   # Authenticate with GCP.
   id-token: write
+  # Report commit status.
+  statuses: write
 
 jobs:
   review:
@@ -34,6 +36,9 @@ jobs:
     env:
       PR_NUMBER: ${{ github.event.workflow_run.pull_requests[0].number }}
       PREFIX: pr${{ github.event.workflow_run.pull_requests[0].number }}
+      STATUS_PATH: repos/${{ github.repository }}/statuses/${{ github.event.workflow_run.pull_requests[0].head.sha }}
+      STATUS_CONTEXT: pr-review-companion
+      STATUS_TARGET: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
     steps:
       - name: Download artifact
         uses: actions/download-artifact@v5
@@ -48,6 +53,17 @@ jobs:
         id: check
         if: hashFiles('build/') != ''
         run: echo "HAS_ARTIFACT=true" >> "$GITHUB_OUTPUT"
+
+      - name: Mark status as pending
+        if: steps.check.outputs.HAS_ARTIFACT
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh api "$STATUS_PATH" \
+            -f state=pending \
+            -f context="$STATUS_CONTEXT" \
+            -f description='Review deployment pending' \
+            -f target_url="$STATUS_TARGET"
 
       - name: Authenticate with GCP
         if: steps.check.outputs.HAS_ARTIFACT
@@ -112,3 +128,25 @@ jobs:
             --pr-number="$PR_NUMBER" \
             --diff-file=$BUILD_OUT_ROOT/DIFF \
             $BUILD_OUT_ROOT
+
+      - name: Mark status as success
+        if: steps.check.outputs.HAS_ARTIFACT && success()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh api "$STATUS_PATH" \
+            -f state=success \
+            -f context="$STATUS_CONTEXT" \
+            -f description='Review deployment succeeded' \
+            -f target_url="$STATUS_TARGET"
+
+      - name: Mark status as failure
+        if: steps.check.outputs.HAS_ARTIFACT && failure()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh api "$STATUS_PATH" \
+            -f state=failure \
+            -f context="$STATUS_CONTEXT" \
+            -f description='Review deployment failed' \
+            -f target_url="$STATUS_TARGET"
