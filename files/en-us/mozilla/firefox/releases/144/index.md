@@ -52,7 +52,11 @@ Firefox 144 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### JavaScript -->
+### JavaScript
+
+- The {{jsxref("Map.prototype.getOrInsert()")}}, {{jsxref("Map.prototype.getOrInsertComputed()")}}, {{jsxref("WeakMap.prototype.getOrInsert()")}}, and {{jsxref("WeakMap.prototype.getOrInsertComputed()")}} instance methods are now supported.
+  All the methods return the value corresponding to a specified key if the key is present.
+  If the key is not present, `getOrInsert()` inserts and returns an element for the key and a given default value, while `getOrInsertComputed()` inserts and returns a value computed in a supplied callback function. ([Firefox bug 1979917](https://bugzil.la/1979917)).
 
 <!-- No notable changes. -->
 
