@@ -134,7 +134,7 @@ We include a {{htmlelement("nav")}} container and several children {{htmlelement
 
 #### CSS
 
-We make it visually appear as a numbered list by displaying the sibling-index before each {{htmlelement("div")}} element using the {{CSSxRef("::before")}} pseudo-element, setting the {{CSSxRef("content")}} to be the integer returned by the `sibling-index()` function.
+We make it visually appear as a numbered list by displaying the list index in ::before. Since content expects a string, we set a CSS counter to the numeric `sibling-index()` function and output it with `counter()` function.
 
 ```css
 div {
@@ -144,7 +144,8 @@ div {
 }
 
 div::before {
-  content: var(--list-index);
+  counter-set: ordered var(--list-index);
+  content: counter(ordered);
 }
 ```
 
