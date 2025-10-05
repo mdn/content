@@ -34,17 +34,39 @@ To tell these situations apart, you either call
 getAll()
 getAll(query)
 getAll(query, count)
+getAll(options)
 ```
 
 ### Parameters
 
+The `getAll()` method can take separate parameters or a single options object containing the parameters as properties.
+
+The separate parameters can include:
+
 - `query` {{optional_inline}}
-  - : A key or {{domxref("IDBKeyRange")}} to be queried. If nothing is passed, this will
+  - : A key or {{domxref("IDBKeyRange")}} to be queried. If this value is not specified, this will
     default to a key range that selects all the records in this object store.
 - `count` {{optional_inline}}
   - : Specifies the number of values to return if more than one is found. If it is lower
     than `0` or greater than `2^32 - 1` a
     {{jsxref("TypeError")}} exception will be thrown.
+
+If an object parameter is specified, its properties can include:
+
+- `query` {{optional_inline}}
+  - : See the earlier [`query`](#query) definition.
+- `count` {{optional_inline}}
+  - : See the earlier [`count`](#count) definition.
+- `direction` {{optional_inline}}
+  - : An enumerated value specifying the direction in which the objects are traversed, which in turn defines the order in which they are returned. Possible values are:
+    - `next`
+      - : The objects are traversed from the beginning, in increasing key order. This is the default value.
+    - `nextunique`
+      - : The objects are traversed from the beginning, in increasing key order. In cases where keys are duplicated across multiple objects, only the first encountered object with each key is retrieved.
+    - `prev`
+      - : The objects are traversed from the end, in decreasing key order.
+    - `prevunique`
+      - : The objects are traversed from the end, in decreasing key order. In cases where keys are duplicated across multiple objects, only the first encountered object with each key is retrieved.
 
 ### Return value
 

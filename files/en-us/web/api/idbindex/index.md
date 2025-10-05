@@ -37,19 +37,21 @@ You can grab a set of keys within a range. To learn more, see {{domxref("IDBKeyR
 Inherits from: [EventTarget](/en-US/docs/Web/API/EventTarget)
 
 - {{domxref("IDBIndex.count()")}}
-  - : Returns an {{domxref("IDBRequest")}} object, and in a separate thread, returns the number of records within a key range.
+  - : Returns an {{domxref("IDBRequest")}} object and, in a separate thread, returns the number of records within a key range.
 - {{domxref("IDBIndex.get()")}}
-  - : Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, finds either the value in the referenced object store that corresponds to the given key or the first corresponding value, if `key` is an {{domxref("IDBKeyRange")}}.
+  - : Returns an {{domxref("IDBRequest")}} object and, in a separate thread, finds either the value in the referenced object store that corresponds to the given key or the first corresponding value, if `key` is an {{domxref("IDBKeyRange")}}.
 - {{domxref("IDBIndex.getKey()")}}
-  - : Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, finds either the given key or the primary key, if `key` is an {{domxref("IDBKeyRange")}}.
+  - : Returns an {{domxref("IDBRequest")}} object and, in a separate thread, finds either the given key or the primary key, if `key` is an {{domxref("IDBKeyRange")}}.
 - {{domxref("IDBIndex.getAll()")}}
-  - : Returns an {{domxref("IDBRequest")}} object, in a separate thread, finds all matching values in the referenced object store that correspond to the given key or are in range, if `key` is an {{domxref("IDBKeyRange")}}.
+  - : Returns an {{domxref("IDBRequest")}} object and, in a separate thread, finds all matching values in the referenced object store that correspond to the given key or are in range, if `key` is an {{domxref("IDBKeyRange")}}.
 - {{domxref("IDBIndex.getAllKeys()")}}
-  - : Returns an {{domxref("IDBRequest")}} object, in a separate thread, finds all matching keys in the referenced object store that correspond to the given key or are in range, if `key` is an {{domxref("IDBKeyRange")}}.
+  - : Returns an {{domxref("IDBRequest")}} object and, in a separate thread, finds all matching keys in the referenced object store that correspond to the given key or are in range, if `key` is an {{domxref("IDBKeyRange")}}.
+- {{domxref("IDBIndex.getAllRecords()")}}
+  - : Returns an {{domxref("IDBRequest")}} object and, in a separate thread, finds all matching records in the referenced object store (including index key, primary key, and value) that correspond to the given key or are in range, if `key` is an {{domxref("IDBKeyRange")}}.
 - {{domxref("IDBIndex.openCursor()")}}
-  - : Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a [cursor](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#cursor) over the specified key range.
+  - : Returns an {{domxref("IDBRequest")}} object and, in a separate thread, creates a [cursor](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#cursor) over the specified key range.
 - {{domxref("IDBIndex.openKeyCursor()")}}
-  - : Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a cursor over the specified key range, as arranged by this index.
+  - : Returns an {{domxref("IDBRequest")}} object and, in a separate thread, creates a cursor over the specified key range, as arranged by this index.
 
 ## Example
 
