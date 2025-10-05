@@ -238,7 +238,7 @@ log("Main program exiting");
 
 {{EmbedLiveSample("Timeout_and_microtask_example", 640, 100)}}
 
-Note that the output logged from the main program body appears first, followed by the output from the microtask, followed by the timeout's callback. That's because when the task that's handling the execution of the main program exits, the microtask queue gets processed before the task queue on which the timeout callback is located. To help keep this straight, remember that that tasks and microtasks are kept on separate queues, and that microtasks run first.
+Note that the output logged from the main program body appears first, followed by the output from the microtask, followed by the timeout's callback. That's because when the task that's handling the execution of the main program exits, the microtask queue gets processed before the task queue on which the timeout callback is located. To help keep this straight, remember that tasks and microtasks are kept on separate queues, and that microtasks run first.
 
 ### Microtask from a function
 
