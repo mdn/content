@@ -267,6 +267,13 @@ sidebar:
       - /Learn_web_development/Extensions/Forms/UI_pseudo-classes
       - /Learn_web_development/Extensions/Forms/Form_validation
       - /Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data
+      - title: Additional_tutorials
+        details: closed
+        children:
+          - /Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls
+          - /Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript
+          - /Learn_web_development/Extensions/Forms/HTML_forms_in_legacy_browsers
+          - /Learn_web_development/Extensions/Forms/User_input_methods
   - link: /Learn_web_development/Extensions/Client-side_tools
     title: Understanding_client-side_tools
     details: closed
@@ -317,6 +324,12 @@ sidebar:
           - /Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data
           - /Learn_web_development/Extensions/Server-side/Express_Nodejs/forms
           - /Learn_web_development/Extensions/Server-side/Express_Nodejs/deployment
+      - title: Additional_tutorials
+        details: closed
+        children:
+          - /Learn_web_development/Extensions/Server-side/Apache_Configuration_htaccess
+          - /Learn_web_development/Extensions/Server-side/Configuring_server_MIME_types
+          - /Learn_web_development/Extensions/Server-side/Node_server_without_framework
   - link: /Learn_web_development/Extensions/Performance
     title: Web_performance
     details: closed
@@ -331,6 +344,7 @@ sidebar:
       - /Learn_web_development/Extensions/Performance/HTML
       - /Learn_web_development/Extensions/Performance/CSS
       - /Learn_web_development/Extensions/Performance/business_case_for_performance
+      - /Learn_web_development/Extensions/Performance/Best_practices
   - link: /Learn_web_development/Extensions/Testing
     title: Testing
     details: closed
