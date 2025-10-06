@@ -80,7 +80,7 @@ We are going to get you to solve this challenge in your local development enviro
 
            <p>
              Celery quandong swiss chard chicory earthnut pea potato. Salsify
-             taro catsear garlic gram celery bitterleaf wattle seed collard
+             taro garlic gram celery wattle seed collard
              greens nori. Grape wattle seed kombu beetroot horseradish carrot
              squash brussels sprout chard.
            </p>
