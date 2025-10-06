@@ -20,7 +20,8 @@ this is unnecessary since browsers will ignore any constraints they're unfamilia
 
 ## Value
 
-A string or a [`ConstrainBooleanOrDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#constrainbooleanofdomstring) object.
+A boolean, a string, or a [`ConstrainBooleanOrDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#constrainbooleanofdomstring) object.
+
 
 If the browser supports specific echo cancellation types, the value can be set as one of the following strings:
 
