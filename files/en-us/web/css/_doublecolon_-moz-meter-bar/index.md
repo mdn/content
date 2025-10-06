@@ -15,6 +15,9 @@ The **`::-moz-meter-bar`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/do
 ## Syntax
 
 ```css
+meter {
+  appearance: none;
+}
 ::-moz-meter-bar {
   /* ... */
 }
@@ -39,6 +42,10 @@ meter {
   height: 20px;
   width: 200px;
   vertical-align: -0.4rem;
+}
+
+.styled {
+  appearance: none;
 }
 
 .styled::-moz-meter-bar {
