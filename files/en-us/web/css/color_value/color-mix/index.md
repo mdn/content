@@ -56,7 +56,8 @@ Choosing the correct color space is important for producing desired results. Giv
 
 ### Color interpolation method
 
-The {{CSSXref("&lt;color-interpolation-method&gt;")}} specifies what interpolation method should be used to mix the colors. It consists of the `in` keyword and the color space the colors should be mixed in. Depending on the color space used, you can optionally direct the hue to be mixed along a longer or shorter path.
+The {{CSSXref("&lt;color-interpolation-method&gt;")}} specifies what interpolation method should be used to mix the colors. It consists of the `in` keyword and the color space the colors should be mixed in. 
+The color space must be one of the available color spaces listed in the [formal syntax](#formal_syntax). Depending on the color space used, you can optionally direct the hue to be mixed along a longer or shorter path.
 
 The [`<rectangular-color-space>`](/en-US/docs/Web/CSS/color-interpolation-method#rectangular-color-space) category includes [`srgb`](/en-US/docs/Glossary/Color_space#srgb), [`srgb-linear`](/en-US/docs/Glossary/Color_space#srgb-linear), [`display-p3`](/en-US/docs/Glossary/Color_space#display-p3), [`a98-rgb`](/en-US/docs/Glossary/Color_space#a98-rgb), [`prophoto-rgb`](/en-US/docs/Glossary/Color_space#prophoto-rgb), [`rec2020`](/en-US/docs/Glossary/Color_space#rec2020), [`lab`](/en-US/docs/Glossary/Color_space#cielab_color_spaces), [`oklab`](/en-US/docs/Glossary/Color_space#oklab), [`xyz`](/en-US/docs/Glossary/Color_space#xyz_color_spaces), [`xyz-d50`](/en-US/docs/Glossary/Color_space#xyz), and [`xyz-d65`](/en-US/docs/Glossary/Color_space#xyz-d50).
 
