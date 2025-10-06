@@ -283,7 +283,7 @@ The content provided for this example is the same as the content from the previo
 
 This is because we've provided you with a mobile layout to begin with. Note how the navigation menu is accessed by pressing the "hamburger menu" icon, and can be dismissed by clicking a menu item or pressing the <kbd>Esc</kbd> key. This functionality is handled using JavaScript, and only works when the viewport is less than `800px` wide so that it doesn't interfere with the wider-screen layouts you'll be implementing.
 
-Specifically, we want you to implement two layouts, the first one kicking in above `800px`, and the second one kicking in above `1300px`. We'll also get you to fix a couple of issues with the existing code, and implement other features besides.
+Specifically, we want you to implement two layouts: the first one triggers when the width is more than `800px`, and the second triggers at above `1300px`. We'll also get you to fix a couple of issues with the existing code and implement some additional features.
 
 ### Fixing a couple of display issues
 
