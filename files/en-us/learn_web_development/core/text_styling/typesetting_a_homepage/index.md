@@ -172,7 +172,7 @@ You'll solve this challenge on your local development environment; ideally, you'
 
 ## Project brief
 
-You've been provided with some HTML for the homepage of an imaginary community college, plus some CSS that lays out the content into three columns and provides some other rudimentary styling. You need to add rules to the bottom of the CSS file to solve the challenges described in the below sections.
+You've been provided with some HTML for the homepage of an imaginary community college, plus some CSS that lays out the content into three columns and provides some other rudimentary styling. You need to add rules to the bottom of the CSS file to solve the challenges described in the following sections.
 
 ### Apply some fonts to the page
 
