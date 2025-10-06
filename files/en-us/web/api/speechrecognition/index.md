@@ -31,23 +31,23 @@ _`SpeechRecognition` also inherits properties from its parent interface, {{domxr
   - : Controls whether interim results should be returned (`true`) or not (`false`.) Interim results are results that are not yet final (e.g., the {{domxref("SpeechRecognitionResult.isFinal")}} property is `false`.)
 - {{domxref("SpeechRecognition.maxAlternatives")}}
   - : Sets the maximum number of {{domxref("SpeechRecognitionAlternative")}}s provided per result. The default value is 1.
-- {{domxref("SpeechRecognition.phrases")}}
+- {{domxref("SpeechRecognition.phrases")}} {{experimental_inline}}
   - : Sets an array of {{domxref("SpeechRecognitionPhrase")}} objects to be used for [contextual biasing](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#contextual_biasing_in_speech_recognition).
-- {{domxref("SpeechRecognition.processLocally")}}
+- {{domxref("SpeechRecognition.processLocally")}} {{experimental_inline}}
   - : Specifies whether speech recognition must be performed locally on the user's device.
 
 ### Deprecated properties
 
 The concept of grammar has been removed from the Web Speech API. Related features remain in the specification and are still recognized by supporting browsers for backwards compatibility, but they have no effect on speech recognition services.
 
-- {{domxref("SpeechRecognition.grammars")}} {{deprecated_inline}}
+- {{domxref("SpeechRecognition.grammars")}}
   - : Returns and sets a collection of {{domxref("SpeechGrammar")}} objects that represent the grammars understood by the current `SpeechRecognition`.
 
 ## Static methods
 
-- {{domxref("SpeechRecognition.available_static", "SpeechRecognition.available()")}}
+- {{domxref("SpeechRecognition.available_static", "SpeechRecognition.available()")}} {{experimental_inline}}
   - : Checks whether the specified languages are available for speech recognition.
-- {{domxref("SpeechRecognition.install_static", "SpeechRecognition.install()")}}
+- {{domxref("SpeechRecognition.install_static", "SpeechRecognition.install()")}} {{experimental_inline}}
   - : Installs the required language packs for on-device speech recognition in the specified languages.
 
 ## Instance methods
@@ -90,7 +90,7 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 
 ## Examples
 
-In our [Speech color changer](https://mdn.github.io/dom-examples/web-speech-api/speech-color-changer) example, we create a new `SpeechRecognition` object instance using the {{domxref("SpeechRecognition.SpeechRecognition", "SpeechRecognition()")}} constructor.
+In our [Speech color changer](https://mdn.github.io/dom-examples/web-speech-api/speech-color-changer/) example, we create a new `SpeechRecognition` object instance using the {{domxref("SpeechRecognition.SpeechRecognition", "SpeechRecognition()")}} constructor.
 
 After some other values have been defined, we then set it so that the recognition service starts when a button is clicked (see {{domxref("SpeechRecognition.start()")}}). When a result has been successfully recognized, the {{domxref("SpeechRecognition.result_event", "result")}} event fires, we extract the color that was spoken from the event object, and then set the background color of the {{htmlelement("html")}} element to that color.
 

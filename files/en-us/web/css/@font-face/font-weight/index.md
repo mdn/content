@@ -6,7 +6,7 @@ browser-compat: css.at-rules.font-face.font-weight
 sidebar: cssref
 ---
 
-The **`font-weight`** CSS {{cssxref("@font-face")}} descriptor enables authors to specify a single font weight, or a range of font weights, for the font specified in a {{cssxref("@font-face")}} at-rule. This is then used by the browser to select the appropriate font when a CSS rule sets a desired [font weight](/en-US/docs/Web/CSS/font-weight).
+The **`font-weight`** [CSS](/en-US/docs/Web/CSS) {{cssxref("@font-face")}} descriptor enables authors to specify a single font weight, or a range of font weights, for the font specified in a {{cssxref("@font-face")}} at-rule. This is then used by the browser to select the appropriate font when a CSS rule sets a desired [font weight](/en-US/docs/Web/CSS/font-weight).
 
 Typically, a developer will want to use fonts from a single font family in a range of different weights. With traditional, or _static_ fonts, a single font file contains characters from a font family in a specific weight and style: for example, "Helvetica bold italic". To enable displaying light, regular, bold, or extra-bold fonts when the `font-weight` property calls a specific weight, you can define multiple {{cssxref("@font-face")}} at-rules for the same family (all with the same {{cssxref("@font-face/font-family", "font-family")}} descriptor value), one for each weight or range of weights.
 

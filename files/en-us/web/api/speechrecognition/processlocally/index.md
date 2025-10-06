@@ -3,10 +3,12 @@ title: "SpeechRecognition: processLocally property"
 short-title: processLocally
 slug: Web/API/SpeechRecognition/processLocally
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.SpeechRecognition.processLocally
 ---
 
-{{APIRef("Web Speech API")}}
+{{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
 The **`processLocally`** property of the
 {{domxref("SpeechRecognition")}} interface specifies whether speech recognition must be performed locally on the user's device.

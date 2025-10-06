@@ -1613,10 +1613,10 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-6.0.28.tgz#e99a2cb1693fec9255c3cf1cfe1b02fcfd0de12d"
   integrity sha512-UE4uV0VK+HfGyXCNdq3Lyy0xNJ6bJI9Y8XtVnnv7+oFda3xtV3PQJIMPHEtC+ou1qrrHdrtaLNQ9cJSj4hi94Q==
 
-"@mdn/fred@1.5.0":
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/@mdn/fred/-/fred-1.5.0.tgz#83ce25838a4d56d2f2d2ba6ce71c14346b542797"
-  integrity sha512-KwJFWhUyt4Gvhw9UNqLVmbEllyPjkyvjaBOYGSOueOxa4ZYrBdoCoYs97dRUzzw2/PqfmlxuIjqua7hp/x2vfg==
+"@mdn/fred@1.6.0":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@mdn/fred/-/fred-1.6.0.tgz#4206ab86929c0f6313125f150e783e4ba7e05ec9"
+  integrity sha512-2+WG3PMWqC0OoHMF4/wpNBK8BCr7mkp6Ap12TWyrCVWFY7o+glTf12aNzwgevcshCa8oM2d36WasqNCPckDHfw==
   dependencies:
     "@codemirror/lang-css" "^6.3.1"
     "@codemirror/lang-html" "^6.4.10"
@@ -1628,7 +1628,7 @@
     "@lit-labs/ssr" "^3.3.1"
     "@lit-labs/ssr-client" "^1.1.7"
     "@lit/task" "^1.0.3"
-    "@mdn/rari" "0.1.50"
+    "@mdn/rari" "0.1.51"
     "@mdn/watify" "^1.1.3"
     "@mozilla/glean" "^5.0.6"
     codemirror "^6.0.1"
@@ -1645,16 +1645,17 @@
     open-editor "^5.1.0"
     prism-svelte "^0.5.0"
     prismjs "^1.29.0"
+    source-map-support "^0.5.21"
 
 "@mdn/minimalist@^2.0.4":
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/@mdn/minimalist/-/minimalist-2.0.4.tgz#6488ab0cb65b059446dcd9bf542246b81febe241"
   integrity sha512-jocePw/fsGcBxO67D+iWQLZ0TQjwNVonaME2BFN98QIm/e1kTY1/k2s4fOqH5MMa3QYURxa098bI4sChn6s/7Q==
 
-"@mdn/rari@0.1.50", "@mdn/rari@^0.1.49":
-  version "0.1.50"
-  resolved "https://registry.yarnpkg.com/@mdn/rari/-/rari-0.1.50.tgz#12a0b5c6afb47e1fcb3e3c85c9b6df18b13090f3"
-  integrity sha512-xsa/byHY2nlybwzEEt8C+QAOpHwqVbY7+yb9AzikOyAnRGghELDTUkcf5jpuNBLfrINKpqIfiwHwL961iE6Uwg==
+"@mdn/rari@0.1.51", "@mdn/rari@^0.1.49":
+  version "0.1.51"
+  resolved "https://registry.yarnpkg.com/@mdn/rari/-/rari-0.1.51.tgz#7e0ccc7085fa538804f44784ae609e6e47bf59bc"
+  integrity sha512-QB/1fWrARDt2UJe8OOBuBCxuEhr3JxKcsPbBiffjEsB821lj5RNyScH6AEIy8zHu9jcHyLdGx689cT/o91iIdw==
   dependencies:
     extract-zip "^2.0.1"
     https-proxy-agent "^7.0.2"

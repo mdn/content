@@ -490,6 +490,25 @@ index.openKeyCursor().onsuccess = (event) => {
 };
 ```
 
+The index can also be created on multiple properties, allowing to look up records using a combination of values, such as finding a person by both their name and email. To create a compound index, pass an array of property names as the key path when calling `createIndex`. You can then query the index by passing an array of values in the same order.
+
+First, make sure you created the index in `request.onupgradeneeded`:
+
+```js
+const index = objectStore.createIndex("name_email", ["name", "email"]);
+```
+
+Then later you can query the index like this:
+
+```js
+const index = objectStore.index("name_email");
+
+index.get(["Donna", "donna@home.org"]).onsuccess = (event) => {
+  console.log(event.target.result);
+  // {ssn: '555-55-5555', name: 'Donna', age: 32, email: 'donna@home.org'}
+};
+```
+
 ### Specifying the range and direction of cursors
 
 If you would like to limit the range of values you see in a cursor, you can use an `IDBKeyRange` object and pass it as the first argument to `openCursor()` or `openKeyCursor()`. You can make a key range that only allows a single key, or one that has a lower or upper bound, or one that has both a lower and upper bound. The bound may be "closed" (i.e., the key range includes the given value(s)) or "open" (i.e., the key range does not include the given value(s)). Here's how it works:
