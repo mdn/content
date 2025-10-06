@@ -214,7 +214,7 @@ Style your navigation menu so that it harmonizes with the page. We'll leave this
 
 ## Hints and tips
 
-- You don't need to edit the HTML in any way for this exercise, unless required to apply the fonts to the page.
+- You don't need to edit the HTML for this exercise, unless required to apply the fonts to the page.
 
 ## Example
 
