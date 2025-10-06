@@ -84,7 +84,7 @@ The [ARIA reference](/en-US/docs/Web/Accessibility/ARIA/Reference) is a comprehe
 
 ## Guides
 
-The [ARIA guides](/en-US/docs/Web/Accessibility/ARIA/Guides) and [How-to pages](/en-US/docs/Web/Accessibility/ARIA/How_to) are resources that help you improve the accessibility of web page features such as tables, forms, and keyboard-navigation.
+The [ARIA guides](/en-US/docs/Web/Accessibility/ARIA/Guides) are resources that help you improve the accessibility of web page features such as tables, forms, and keyboard-navigation.
 
 ## Standardization efforts
 

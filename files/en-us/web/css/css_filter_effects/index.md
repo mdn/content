@@ -159,24 +159,16 @@ const controls = document.querySelectorAll("input");
 const output = document.querySelector("output");
 
 for (control of controls) {
-  control.addEventListener(
-    "change",
-    () => {
-      /* do function */
-      changeCSS();
-    },
-    false,
-  );
+  control.addEventListener("change", () => {
+    /* do function */
+    changeCSS();
+  });
 }
-document.querySelector("button").addEventListener(
-  "click",
-  () => {
-    setTimeout(() => {
-      changeCSS();
-    }, 50);
-  },
-  false,
-);
+document.querySelector("button").addEventListener("click", () => {
+  setTimeout(() => {
+    changeCSS();
+  }, 50);
+});
 
 function changeCSS() {
   let currentFilter = "filter: ";

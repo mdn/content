@@ -48,14 +48,10 @@ When working with an {{domxref("AudioContext")}}, if you create the audio contex
 
 ```js
 const button = document.querySelector("button");
-button.addEventListener(
-  "click",
-  () => {
-    const audioCtx = new AudioContext();
-    // Do something with the audio context
-  },
-  false,
-);
+button.addEventListener("click", () => {
+  const audioCtx = new AudioContext();
+  // Do something with the audio context
+});
 ```
 
 If however, you create the context outside of a user gesture, its state will be set to `suspended` and it will need to be started after user interaction. We can use the same click event example here, test for the state of the context and start it, if it is suspended, using the [`resume()`](/en-US/docs/Web/API/AudioContext/resume) method.
@@ -64,16 +60,12 @@ If however, you create the context outside of a user gesture, its state will be 
 const audioCtx = new AudioContext();
 const button = document.querySelector("button");
 
-button.addEventListener(
-  "click",
-  () => {
-    // check if context is in suspended state (autoplay policy)
-    if (audioCtx.state === "suspended") {
-      audioCtx.resume();
-    }
-  },
-  false,
-);
+button.addEventListener("click", () => {
+  // check if context is in suspended state (autoplay policy)
+  if (audioCtx.state === "suspended") {
+    audioCtx.resume();
+  }
+});
 ```
 
 You might instead be working with an {{domxref("OfflineAudioContext")}}, in which case you can resume the suspended audio context with the [`startRendering()`](/en-US/docs/Web/API/OfflineAudioContext/startRendering) method.

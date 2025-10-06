@@ -176,5 +176,6 @@ Try focusing the first two elements to see what the custom caret animation looks
 
 ## See also
 
-- {{cssxref("caret-color")}}
+- {{cssxref("caret-color")}}, {{cssxref("caret-shape")}}
+- {{cssxref("caret")}} shorthand
 - [CSS basic user interface](/en-US/docs/Web/CSS/CSS_basic_user_interface) module

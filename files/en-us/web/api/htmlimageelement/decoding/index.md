@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.HTMLImageElement.decoding
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The **`decoding`** property of the {{domxref("HTMLImageElement")}} interface provides a hint to the browser as to how it should decode the image. More specifically, whether it should wait for the image to be decoded before presenting other content updates or not.
 

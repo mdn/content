@@ -6,7 +6,7 @@ browser-compat: css.at-rules.font-face.size-adjust
 sidebar: cssref
 ---
 
-The **`size-adjust`** CSS descriptor for the {{cssxref("@font-face")}} at-rule defines a multiplier for glyph outlines and metrics associated with this font. This makes it easier to harmonize the designs of various fonts when rendered at the same font size.
+The **`size-adjust`** [CSS](/en-US/docs/Web/CSS) descriptor for the {{cssxref("@font-face")}} at-rule defines a multiplier for glyph outlines and metrics associated with this font. This makes it easier to harmonize the designs of various fonts when rendered at the same font size.
 
 The `size-adjust` descriptor behaves in a similar fashion to the {{cssxref("font-size-adjust")}} property. It calculates an adjustment per font by matching ex heights.
 

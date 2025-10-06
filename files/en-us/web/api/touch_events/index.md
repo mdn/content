@@ -66,20 +66,14 @@ Log:
 
 ### Setting up the event handlers
 
-When the page loads, the `startup()` function shown below will be called.
-This sets up all the event listeners for our {{HTMLElement("canvas")}} element so we can handle the touch events as they occur.
+The code sets up all the event listeners for our {{HTMLElement("canvas")}} element so we can handle the touch events as they occur.
 
 ```js
-function startup() {
-  const el = document.getElementById("canvas");
-  el.addEventListener("touchstart", handleStart);
-  el.addEventListener("touchend", handleEnd);
-  el.addEventListener("touchcancel", handleCancel);
-  el.addEventListener("touchmove", handleMove);
-  log("Initialized.");
-}
-
-document.addEventListener("DOMContentLoaded", startup);
+const el = document.getElementById("canvas");
+el.addEventListener("touchstart", handleStart);
+el.addEventListener("touchend", handleEnd);
+el.addEventListener("touchcancel", handleCancel);
+el.addEventListener("touchmove", handleMove);
 ```
 
 #### Tracking new touches

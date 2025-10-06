@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.HTMLElement.load_event
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The **`load`** event fires for elements containing a resource when the resource has successfully loaded. Currently, the list of supported HTML elements are: {{HTMLElement("body")}}, {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{HTMLElement("link")}}, {{HTMLElement("object")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}}, and {{HTMLElement("track")}}.
 

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.CanvasRenderingContext2D.createPattern
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 The **`CanvasRenderingContext2D.createPattern()`** method of the Canvas 2D API creates a pattern using the specified image and repetition.
 This method returns a {{domxref("CanvasPattern")}}.

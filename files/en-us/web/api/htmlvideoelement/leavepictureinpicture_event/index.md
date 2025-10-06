@@ -46,7 +46,7 @@ function onExitPip() {
   console.log("Picture-in-Picture mode deactivated!");
 }
 
-video.addEventListener("leavepictureinpicture", onExitPip, false);
+video.addEventListener("leavepictureinpicture", onExitPip);
 
 button.onclick = () => {
   if (document.pictureInPictureElement) {

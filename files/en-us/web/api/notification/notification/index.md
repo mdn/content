@@ -8,11 +8,13 @@ browser-compat: api.Notification.Notification
 
 {{APIRef("Web Notifications")}}{{securecontext_header}} {{AvailableInWorkers}}
 
-The **`Notification()`** constructor creates a new
-{{domxref("Notification")}} object instance, which represents a user notification.
+The **`Notification()`** constructor creates a new {{domxref("Notification")}} object instance, which represents a user notification.
 
-> [!NOTE]
-> Trying to create a notification inside the {{domxref("ServiceWorkerGlobalScope")}} using the `Notification()` constructor will throw a `TypeError`. Use {{domxref("ServiceWorkerRegistration.showNotification()")}} instead.
+Trying to create a notification inside the {{domxref("ServiceWorkerGlobalScope")}} using the `Notification()` constructor will throw a `TypeError`. Use {{domxref("ServiceWorkerRegistration.showNotification()")}} instead.
+
+You must first get permission before being able to display notifications, using {{domxref("Notification.requestPermission()")}}. The permission may not be grantable, for example if the page is in private browsing mode.
+
+This constructor throws a {{jsxref("TypeError")}} when called in nearly all mobile browsers and this is unlikely to change, because web pages on mobile devices almost never "run in the background", which is the main use case for notifications. Instead, you need to register a service worker and use {{domxref("ServiceWorkerRegistration.showNotification()")}}. See [Chrome issue](https://crbug.com/481856) for more information.
 
 ## Syntax
 
@@ -42,7 +44,7 @@ new Notification(title, options)
     - `image` {{optional_inline}}
       - : A string containing the URL of an image to be displayed in the notification.
     - `lang` {{optional_inline}}
-      - : The notification's language, as specified using a string representing a language tag according to {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}. See the Sitepoint [ISO 2 letter language codes](https://www.sitepoint.com/iso-2-letter-language-codes/) page for a simple reference. The default is the empty string.
+      - : The notification's language, as specified using a string representing a {{glossary("BCP 47 language tag")}}. The default is the empty string.
     - `renotify` {{optional_inline}}
       - : A boolean value specifying whether the user should be notified after a new notification replaces an old one. The default is `false`, which means they won't be notified. If `true`, then `tag` also must be set.
     - `requireInteraction` {{optional_inline}}
@@ -88,15 +90,6 @@ if (Notification.permission === "granted") {
 ## Browser compatibility
 
 {{Compat}}
-
-### Chrome notes
-
-Starting in Chrome 49, notifications don't work in incognito mode.
-
-Chrome for Android will throw a {{jsxref("TypeError")}} when calling the
-`Notification` constructor. It only supports creating
-notifications from a service worker. See the
-[Chromium issue tracker](https://crbug.com/481856) for more details.
 
 ## See also
 

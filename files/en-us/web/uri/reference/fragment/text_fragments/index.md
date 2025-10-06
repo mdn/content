@@ -9,7 +9,7 @@ browser-compat:
 sidebar: urlsidebar
 ---
 
-**Text fragments** allow linking directly to a specific portion of text in a web document, without requiring the author to annotate it with an ID, using particular syntax in the URL fragment. Supporting browsers are free to choose how to draw attention to the linked text, e.g., with a color highlight and/or scrolling to the content on the page. This is useful because it allows web content authors to deep-link to other content they don't control, without relying on the presence of IDs to make that possible. Building on top of that, it could be used to generate more effective content-sharing links for users to pass to one another.
+**Text fragments** link directly to specific text in a web page, without requiring the page author to add an ID. They use a special syntax in the URL fragment. This feature lets you create deep links to content that you don't control and may not have IDs associated. It also makes sharing links more useful by directly pointing others to specific words. Browsers may differ in how they draw attention to the linked text—usually, the text is scrolled into view and highlighted with color.
 
 ## Concepts and usage
 
@@ -28,9 +28,9 @@ The issue with linking to specific document fragments is that the author of the 
 </h2>
 ```
 
-If the ID is changed or removed, the document fragment is ignored, and the link just links through to the top of the page. This is reasonable in terms of graceful degradation, but it would arguably be better if the author of the link had full control over where they link to, without needing to rely on the page author.
+Not all documents have such anchors, and even if they do, linking to a heading might be much less obvious than linking directly to the specific text you are citing. This is where text fragments help: they allow the link author to have full control over what text to link to, without requiring any special markup in the target document. For example, a search engine may refer to a specific sentence in its search results, and clicking the link will take you directly to that sentence.
 
-**Text fragments** make this a reality — they allow link authors to specify text content to link to, rather than document fragments, in a flexible manner.
+However, text fragments also have a limitation: text in a document is less stable than document structure. If the text in the linked document is updated, the fragment no longer matches, and the browser navigates to the top of the page. This is fine for transient links such as those in search results, but if you intend for the link to work over time, document fragments may be more reliable.
 
 ## Syntax
 

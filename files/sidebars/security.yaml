@@ -10,7 +10,6 @@ sidebar:
   - /Web/Security/Mixed_content
   - /Web/Security/Same-origin_policy
   - /Web/Security/Certificate_Transparency
-  - /Web/Security/Subdomain_takeovers
   - /Web/Security/Subresource_Integrity
   - /Web/Security/User_activation
   - /Web/Security/IFrame_credentialless

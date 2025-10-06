@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Element.animationend_event
 ---
 
-{{APIRef}}
+{{APIRef("Web Animations")}}
 
 The **`animationend`** event is fired when a [CSS Animation](/en-US/docs/Web/CSS/CSS_animations) has completed. If the animation aborts before reaching completion, such as if the element is removed from the DOM or the animation is removed from the element, the `animationend` event is not fired.
 
