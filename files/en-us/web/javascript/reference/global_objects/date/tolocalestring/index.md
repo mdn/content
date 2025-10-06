@@ -158,7 +158,9 @@ console.log(date.toLocaleString("en-US", { hour12: false }));
 
 ### Controlling single-digit vs double-digit day or month
 
-Use `numeric` for single digits and `2-digit` for leading zeros. The output may still follows the locale’s style. For example, `en-GB` often pads even with `numeric`.
+Use `numeric` for single digits and `2-digit` for leading zeros.
+The output may still follow the locale’s style.
+For example, `en-GB` often pads even with `numeric`.
 
 ```js
 const date = new Date(Date.UTC(2012, 1, 2, 3, 0, 0));
@@ -174,6 +176,7 @@ const options = {
 };
 console.log(date.toLocaleString("en-US", options));
 // Example output: "2/2/2012, 3:00 AM"
+// The exact date and time may shift depending on your local time zone.
 
 // Double-digit day and month
 options.month = "2-digit";
@@ -182,7 +185,7 @@ options.hour = "2-digit";
 options.minute = "2-digit";
 console.log(date.toLocaleString("en-US", options));
 // Example output: "02/02/2012, 03:00 AM"
-// The exact date may shift depending on your local time zone.
+// The exact date and time may shift depending on your local time zone.
 ```
 
 ## Specifications
