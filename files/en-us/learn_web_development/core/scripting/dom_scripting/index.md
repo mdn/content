@@ -332,7 +332,7 @@ button.addEventListener("click", (event) => {
 
 To complete the exercise, follow the steps below, and make sure that the list behaves as described above.
 
-1. To start with, download a copy of our [shopping-list.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/shopping-list.html) starting file and make a copy of it somewhere. You'll see that it has some minimal CSS, a form with a label, input, and button, and an empty list and {{htmlelement("script")}} element. You'll be making all your additions inside the script.
+1. To begin, download a copy of our [shopping-list.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/shopping-list.html) starting file and make a copy of it somewhere. You'll see that it has some minimal CSS, a form with a label, input, and button, an empty list, and a {{htmlelement("script")}} element. You'll be making all your additions inside the script.
 2. Create three variables that hold references to the list ({{htmlelement("ul")}}), {{htmlelement("input")}}, and {{htmlelement("button")}} elements.
 3. Create a [function](/en-US/docs/Learn_web_development/Core/Scripting/Functions) that will run in response to the button being clicked.
 4. Inside the function body, start off by calling [`preventDefault()`](/en-US/docs/Web/API/Event/preventDefault). When wrapped in the form element, the input will trigger the form to submit when the user presses the <kbd>Enter</kbd> key. This will keep the form from refreshing the page and will add a new item to the list.
