@@ -1,20 +1,20 @@
 ---
-title: Prototype pollution
+title: JavaScript prototype pollution
 slug: Web/Security/Attacks/Prototype_pollution
 page-type: guide
 sidebar: security
 ---
 
-**JavaScript prototype pollution** is a vulnerability where an attacker can add or modify properties on an object's prototype. This means malicious values can unexpectedly appear on every object in your application, often leading to logic errors or additional attacks like [cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS).
+**Prototype pollution** is a vulnerability where an attacker can add or modify properties on an object's prototype. This means malicious values can unexpectedly appear on every object in your application, often leading to logic errors or additional attacks like [cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS).
 
-To understand how prototypes can be polluted, the following MDN articles are useful resources to get an understanding of how JavaScript prototypes work:
+To understand how JavaScript prototypes work, read the following MDN articles:
 
 - [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
 - [Working with objects](/en-US/docs/Web/JavaScript/Guide/Working_with_objects)
 
-The key thing to understand is the special meaning of the [`Object.prototype.__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) property, and how adding a property to `Object.prototype` will make that property accessible on ("polluted to") every object in your application.
+A key attack vector is the special [`Object.prototype.__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) property, and how adding a property to `Object.prototype` will make that property accessible on ("polluted to") every object in your application.
 
-Not all prototype pollution involves adding properties to `Object.prototype`, though. Other prototypes can also be polluted, like when overriding {{jsxref("Promise.prototype.then")}} which would be called for every `await` operation, and more.
+Not all prototype pollution involves adding properties to `Object.prototype`, though. Other prototypes can also be polluted, like overriding {{jsxref("Promise.prototype.then")}}, which would be called for every `await` operation, and more.
 
 To see the effect of prototype pollution, we can look at the how the following {{domxref("fetch()")}} call can be changed completely. By default, it is a {{HTTPMethod("GET")}} request, but because we polluted the `Object` object's prototype with two new default properties, the `fetch()` call is now transformed into a {{HTTPMethod("POST")}} request.
 
@@ -33,7 +33,7 @@ console.log({}.method); // "POST"
 
 ## Example scenarios
 
-In order to pollute objects, the attacker needs a way in to add arbitrary properties to prototype objects. Typically, happens in form of some payload that contains the `__proto__` property key will later get merged into another object via [spreading](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax), [`for...in` loops](/en-US/docs/Web/JavaScript/Reference/Statements/for...in), etc, turning it into an assignment operation and therefore triggering the setter.
+In order to pollute objects, the attacker needs a way to add arbitrary properties to prototype objects. This may happen as a consequence of [XSS](/en-US/docs/Web/Security/Attacks/XSS), in which the attacker gains direct access to the page's JavaScript execution environment. However, this can also happen without code injection, such as by constructing a payload that contains the `__proto__` property key will later get merged into another object via [spreading](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax), [`for...in` loops](/en-US/docs/Web/JavaScript/Reference/Statements/for...in), etc., turning it into an assignment operation and therefore triggering the setter.
 
 ### Pollution via URL query strings
 
