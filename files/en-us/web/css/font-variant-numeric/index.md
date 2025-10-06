@@ -72,16 +72,16 @@ font-variant-numeric: stacked-fractions;
 
 ```css interactive-example
 @font-face {
-  font-family: "Fira Sans";
+  font-family: "Source Sans Pro";
   src:
-    local("FiraSans-Regular"),
-    url("/shared-assets/fonts/FiraSans-Regular.woff2") format("woff2");
+    local("SourceSansPro-Regular"),
+    url("/shared-assets/fonts/SourceSansPro-Regular.otf") format("otf");
   font-weight: normal;
   font-style: normal;
 }
 
 section {
-  font-family: "Fira Sans", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   margin-top: 10px;
   font-size: 1.5em;
 }
