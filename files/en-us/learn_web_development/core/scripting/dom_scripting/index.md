@@ -337,10 +337,10 @@ To complete the exercise, follow the steps below, and make sure that the list be
 3. Create a [function](/en-US/docs/Learn_web_development/Core/Scripting/Functions) that will run in response to the button being clicked.
 4. Inside the function body, start by calling [`preventDefault()`](/en-US/docs/Web/API/Event/preventDefault). Since the input is wrapped in a form element, pressing the <kbd>Enter</kbd> key will trigger the form to submit. The call to `preventDefault()` will prevent the form from refreshing the page so a new item can be added to the list instead.
 5. Continue by storing the current [value](/en-US/docs/Web/API/HTMLInputElement/value) of the input in a variable.
-6. Next, empty the input element by setting its value to an empty string — `""`.
-7. Create three new elements — a list item ({{htmlelement('li')}}), {{htmlelement('span')}}, and {{htmlelement('button')}}, and store them in variables.
-8. Append the span and the button as children of the list item.
-9. Set the text content of the span to the input element value you saved earlier, and the text content of the button to 'Delete'.
+6. Next, clear the input element by setting its value to an empty string (`""`).
+7. Create three new elements — a list item ({{htmlelement('li')}}), a {{htmlelement('span')}}, and a {{htmlelement('button')}} — and store them in variables.
+8. Append the span and button as children of the list item.
+9. Set the text content of the span to the input value you saved earlier, and set the text content of the button to `Delete`.
 10. Append the list item as a child of the list.
 11. Attach an event handler to the delete button so that, when clicked, it will delete the entire list item (`<li>...</li>`).
 12. Finally, use the [`focus()`](/en-US/docs/Web/API/HTMLElement/focus) method to focus the input element, ready for entering the next shopping list item.
