@@ -341,9 +341,9 @@ To complete the exercise, follow the steps below, and make sure that the list be
 7. Create three new elements — a list item ({{htmlelement('li')}}), a {{htmlelement('span')}}, and a {{htmlelement('button')}} — and store them in variables.
 8. Append the span and button as children of the list item.
 9. Set the text content of the span to the input value you saved earlier, and set the text content of the button to `Delete`.
-10. Append the list item as a child of the list.
-11. Attach an event handler to the delete button so that, when clicked, it will delete the entire list item (`<li>...</li>`).
-12. Finally, use the [`focus()`](/en-US/docs/Web/API/HTMLElement/focus) method to focus the input element, ready for entering the next shopping list item.
+10. Append the list item to the list.
+11. Attach an event handler to the **Delete** button so that, when clicked, it removes the entire list item (`<li>...</li>`).
+12. Finally, use the [`focus()`](/en-US/docs/Web/API/HTMLElement/focus) method to focus the input element, so it's ready for entering the next shopping list item.
 
 ## Summary
 
