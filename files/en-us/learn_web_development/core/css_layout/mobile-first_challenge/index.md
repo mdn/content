@@ -7,8 +7,7 @@ sidebar: learnsidebar
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Test_your_skills/Responsive_design", "Learn_web_development/Core/Scripting", "Learn_web_development/Core/CSS_layout")}}
-
-This challenge rounds off the [CSS layout](/en-US/docs/Learn_web_development/Core/CSS_layout) module by asking you to take an existing layout and add media queries to it to apply different layouts at a couple of different breakpoints. Along the way you'll also be tested on other responsive layout features such as CSS grid, flexbox, and responsive images.
+This challenge rounds off the [CSS layout](/en-US/docs/Learn_web_development/Core/CSS_layout) module by asking you to update an existing mobile layout so that it also works well on desktop browsers. Along the way, you'll also be tested on responsive layout features such as media queries, CSS grid, flexbox, and responsive images.
 
 ## Starting point
 
