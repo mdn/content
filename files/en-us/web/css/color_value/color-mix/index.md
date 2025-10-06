@@ -45,6 +45,10 @@ A `<color>`; the result of mixing the colors, in the given `<color-space>`, in t
 
 The `color-mix()` function enables mixing two {{cssxref("&lt;color&gt;")}} values of any type, in a specific ratio, in a given colorspace, using either a shorter or longer hue interpolation method. Browsers support a plethora of color spaces; the `color-mix()` function enables a wide range of colors to be mixed, not limited to the sRGB color space.
 
+{{EmbedGHLiveSample("css-examples/tools/color-mixer/", '100%', 400)}}
+
+The `color-mix()` function mixes two colors. This demonstration allows you to select two colors, `color-one` and `color-two`, and mix them, optionally setting each color's percentage, the color space in which the colors are mixed, and the interpolation methoed. The source colors shown on the outside, and the mixed color is shown in the middle. You can change colors by clicking on them and choosing a new color using the resulting color picker. Change the percentage values of each color using the sliders. Change the color space via the drop-down menu.
+
 ### Choosing a color space
 
 Choosing the correct color space is important for producing desired results. Given the same colors to mix, different color spaces may be more appropriate depending on the interpolation use case.
@@ -75,12 +79,6 @@ The two color percentages (we'll refer to them as `p1` and `p2`) are normalized 
 - If `p1 = p2 = 0%`, the function is invalid.
 - If `p1 + p2 ≠ 100%`, then `p1' = p1 / (p1 + p2)` and `p2' = p2 / (p1 + p2)`, where `p1'` and `p2'` are the normalization results.
   - If `p1 + p2 < 100%`, then an alpha multiplier of `p1 + p2` is applied to the resulting color. This is similar to mixing in [`transparent`](/en-US/docs/Web/CSS/named-color#transparent), with percentage `pt = 100% - p1 - p2`.
-
-### Color mixer
-
-The following live demo mixes two colors, `color-one` and `color-two`, using the `color-mix()` function. The source colors are shown on the outside, and the mixed color is shown in the middle. You can change colors by clicking on them and choosing a new color using the resulting color picker. You can also change the percentage of each color included in the mix using the sliders, and the color space using the drop-down menu.
-
-{{EmbedGHLiveSample("css-examples/tools/color-mixer/", '100%', 400)}}
 
 ## Formal syntax
 
