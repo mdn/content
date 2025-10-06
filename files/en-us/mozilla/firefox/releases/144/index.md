@@ -65,7 +65,7 @@ Firefox 144 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 #### Removals
 
-- The [`afterscriptexecute` event](/en-US/docs/Web/API/Document/afterscriptexecute_event) and [`beforescriptexecute` event](/en-US/docs/Web/API/Document/beforescriptexecute_event) of the `Document` interface, and the [`afterscriptexecute` event](/en-US/docs/Web/API/Element/afterscriptexecute_event) and [`beforescriptexecute` event](/en-US/docs/Web/API/Element/beforescriptexecute_event) of the `Element` interface have been removed. ([Firefox bug 1584269](https://bugzil.la/1584269)).
+- The following deprecated and non-standard events have been removed: [`afterscriptexecute` event](/en-US/docs/Web/API/Document/afterscriptexecute_event) and [`beforescriptexecute` event](/en-US/docs/Web/API/Document/beforescriptexecute_event) of the `Document` interface, and the [`afterscriptexecute` event](/en-US/docs/Web/API/Element/afterscriptexecute_event) and [`beforescriptexecute` event](/en-US/docs/Web/API/Element/beforescriptexecute_event) of the `Element` interface. ([Firefox bug 1584269](https://bugzil.la/1584269)).
 
 <!-- ### WebAssembly -->
 
