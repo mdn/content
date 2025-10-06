@@ -1,5 +1,6 @@
 ---
 title: Properly configuring server MIME types
+short-title: Server MIME type config
 slug: Learn_web_development/Extensions/Server-side/Configuring_server_MIME_types
 page-type: guide
 sidebar: learnsidebar
