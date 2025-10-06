@@ -179,7 +179,7 @@ You've been provided with some HTML for the homepage of an imaginary community c
 1. Choose heading and body fonts to apply to the page:
    - Because this is a college, the fonts should give the site a fairly serious, trustworthy feel. A serif site-wide font for the general body text coupled with a heavy/slab font for the headings would work.
    - It is your choice whether you want to use an online font service like Google Fonts to access the fonts, or download font files locally to your project. Whatever you choose, make your fonts available to your page. If you choose to use local font files, use a suitable service to generate bulletproof `@font-face` code for them.
-3. Apply your body font to the whole page, and your heading font to your headings.
+2. Apply your body font to the whole page, and your heading font to your headings.
 
 ### General text styling
 
@@ -218,9 +218,13 @@ Style your navigation menu so that it harmonizes with the page. We'll leave this
 
 ## Example
 
-The following screenshot shows an example of what the finished design could look like:
+The following screenshot show what the page looks like to begin with:
 
-![A screenshot of the finished challenge design. The top heading reads 'St Huxley's Community College'. There is a red line separating the banner header from the content. The main content has three columns, two containing text, and a vertical navigation bar in the third column.](example.png)
+![A screenshot of the starting state of the page. The top heading reads 'St Huxley's Community College' and the footer provides a copyright notice. There are red lines separating the header and footer from the content. The main content has three columns, one containing body text and two containing lists of links. The text is rendered with browser default styles](example-start.png)
+
+The following screenshot, on the other hand, shows an example of what the finished design could look like:
+
+![A screenshot of the finished challenge design. The top heading reads 'St Huxley's Community College'. There is a red line separating the header from the content. The main content has three columns, one containing body text, one containing a list of links, and a vertical navigation bar in the third column. The text is rendered with some suitable styles](example-finished.png)
 
 <details>
 <summary>Click here to show a possible solution</summary>
