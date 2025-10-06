@@ -8,7 +8,7 @@ sidebar: learnsidebar
 
 {{PreviousMenuNext("Learn_web_development/Core/Text_styling/Web_fonts", "Learn_web_development/Core/CSS_layout", "Learn_web_development/Core/Text_styling")}}
 
-In this challenge, we'll test your understanding of the text styling techniques we've covered throughout this module by getting you to typeset a community school's homepage. You might just have some fun along the way.
+In this challenge, we'll test your understanding of the text styling techniques we've covered throughout this module — by getting you to typeset a community school's homepage. You might just have some fun along the way.
 
 ## Starting point
 
