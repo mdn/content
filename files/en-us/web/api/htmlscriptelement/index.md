@@ -51,7 +51,6 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLScriptElement.text")}}
   - : A property that represents the inline text content of the {{HTMLElement("script")}} element.
     The property accepts either a {{domxref("TrustedScript")}} object or a string.
-    It returns a string that joins the contents of all {{domxref("Text")}} nodes inside the {{HTMLElement("script")}} element (ignoring other nodes like comments) in tree order.
     It acts the same way as the [textContent](#textcontent) property.
 - {{domxref("HTMLScriptElement.textContent")}}
   - : A property that represents the inline text content of the {{HTMLElement("script")}} element.
