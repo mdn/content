@@ -78,6 +78,13 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Elements/input/color#alpha">alpha</a></code>
+      </td>
+      <td>{{ HTMLElement("input") }}</td>
+      <td>Allow the user to select a color's opacity on a <code>type="color"</code> input.</td>
+    </tr>
+    <tr>
+      <td>
         <code><a href="/en-US/docs/Web/HTML/Reference/Attributes/alt">alt</a></code>
       </td>
       <td>
@@ -256,6 +263,13 @@ Elements in HTML have **attributes**; these are additional values that configure
           </p>
         </div>
       </td>
+    </tr>
+    <tr>
+      <td>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Elements/input/color#colorspace">colorspace</a></code>
+      </td>
+      <td>{{ HTMLElement("input") }}</td>
+      <td>Defines the <a href="/en-US/docs/Glossary/Color_space">color space</a> that is used by a <code>type="color"</code> input.</td>
     </tr>
     <tr>
       <td>

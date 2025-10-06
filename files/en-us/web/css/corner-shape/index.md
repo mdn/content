@@ -2,9 +2,13 @@
 title: corner-shape
 slug: Web/CSS/corner-shape
 page-type: css-shorthand-property
+status:
+  - experimental
 browser-compat: css.properties.corner-shape
 sidebar: cssref
 ---
+
+{{SeeCompatTable}}
 
 The **`corner-shape`** [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property specifies the shape of a box's corners, within the area specified by its {{cssxref("border-radius")}} property value.
 
@@ -168,6 +172,26 @@ div {
     rgb(255 255 255 / 0.5)
   );
 }
+
+@supports not (corner-shape: scoop) {
+  body {
+    all: unset !important;
+  }
+
+  body::before {
+    content: "Your browser does not support the 'corner-shape' property.";
+    color: black;
+    background-color: #ffcd33;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  body > * {
+    display: none;
+  }
+}
 ```
 
 ```css live-sample___basic-corner-shape
@@ -233,6 +257,26 @@ div {
   width: 240px;
   height: 180px;
 }
+
+@supports not (corner-shape: scoop notch) {
+  body {
+    all: unset !important;
+  }
+
+  body::before {
+    content: "Your browser does not support the 'corner-shape' property.";
+    color: black;
+    background-color: #ffcd33;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  body > * {
+    display: none;
+  }
+}
 ```
 
 ```css live-sample___styles-following-corner-shape
@@ -254,7 +298,7 @@ div {
 }
 
 div:hover {
-  background-color: rgb(255 255 255 / 1);
+  background-color: white;
 }
 ```
 
@@ -344,12 +388,32 @@ form div:nth-of-type(2) {
 section {
   width: 100%;
   height: 180px;
-  background-color: palegoldenrod;
+  background-color: gold;
   background-image: linear-gradient(
     to bottom,
     rgb(255 255 255 / 0),
     rgb(255 255 255 / 0.5)
   );
+}
+
+@supports not (corner-shape: scoop) {
+  body {
+    all: unset !important;
+  }
+
+  body::before {
+    content: "Your browser does not support the 'corner-shape' property.";
+    color: black;
+    background-color: #ffcd33;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  body > * {
+    display: none;
+  }
 }
 ```
 
@@ -456,6 +520,26 @@ section {
     rgb(255 255 255 / 0.5)
   );
 }
+
+@supports not (corner-shape: superellipse(0)) {
+  body {
+    all: unset !important;
+  }
+
+  body::before {
+    content: "Your browser does not support the 'corner-shape' property.";
+    color: black;
+    background-color: #ffcd33;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  body > * {
+    display: none;
+  }
+}
 ```
 
 ```css live-sample___superellipse-slider
@@ -498,10 +582,8 @@ In this example, we demonstrate how the `corner-shape` property can be animated.
 
 #### HTML
 
-The markup for this example contains a single `<div>`, with [`tabindex="0"`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) applied so it can be focused.
-
 ```html live-sample___corner-shape-animation
-<div tabindex="0"></div>
+<div></div>
 ```
 
 #### CSS
@@ -528,22 +610,47 @@ div {
   corner-shape: square;
   outline: none;
 }
+
+@supports not (corner-shape: square) {
+  body {
+    all: unset !important;
+  }
+
+  body::before {
+    content: "Your browser does not support the 'corner-shape' property.";
+    color: black;
+    background-color: #ffcd33;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  body > * {
+    display: none;
+  }
+}
 ```
 
 ```css live-sample___corner-shape-animation
-@keyframes cornerpulse {
-  from {
+@keyframes corner-pulse {
+  0% {
     corner-shape: square;
   }
 
-  to {
+  /* To make the starting point apparent, let us keep
+  the shape the same for a small duration. */
+  20% {
+    corner-shape: square;
+  }
+
+  100% {
     corner-shape: notch;
   }
 }
 
-html:hover div,
-div:focus {
-  animation: cornerpulse infinite alternate 2s linear;
+div {
+  animation: corner-pulse infinite alternate 4s linear;
 }
 ```
 
@@ -552,8 +659,6 @@ div:focus {
 The rendered result looks like this:
 
 {{EmbedLiveSample("corner-shape-animation", "100%", "270")}}
-
-Hover or focus the shape to see the animation.
 
 ## Specifications
 

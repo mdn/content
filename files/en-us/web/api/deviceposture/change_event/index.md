@@ -8,7 +8,7 @@ status:
 browser-compat: api.DevicePosture.change_event
 ---
 
-{{APIRef}}{{SeeCompatTable}}
+{{APIRef("Device Posture API")}}{{SeeCompatTable}}
 
 The **`change`** event of the {{domxref("DevicePosture")}} interface fires when the device's posture changes, for example when a foldable device goes from `folded` to `continuous` posture.
 

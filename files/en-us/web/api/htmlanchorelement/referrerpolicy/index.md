@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.HTMLAnchorElement.referrerPolicy
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The
 **`HTMLAnchorElement.referrerPolicy`**

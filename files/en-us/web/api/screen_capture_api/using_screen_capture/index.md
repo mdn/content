@@ -193,21 +193,13 @@ const displayMediaOptions = {
 };
 
 // Set event listeners for the start and stop buttons
-startElem.addEventListener(
-  "click",
-  (evt) => {
-    startCapture();
-  },
-  false,
-);
+startElem.addEventListener("click", (evt) => {
+  startCapture();
+});
 
-stopElem.addEventListener(
-  "click",
-  (evt) => {
-    stopCapture();
-  },
-  false,
-);
+stopElem.addEventListener("click", (evt) => {
+  stopCapture();
+});
 ```
 
 ##### Logging content

@@ -215,78 +215,72 @@ function getIndex(select) {
 // Event binding //
 // ------------- //
 
-window.addEventListener("load", () => {
-  const form = document.querySelector("form");
+const form = document.querySelector("form");
 
-  form.classList.remove("no-widget");
-  form.classList.add("widget");
-});
+form.classList.remove("no-widget");
+form.classList.add("widget");
 
-window.addEventListener("load", () => {
-  const selectList = document.querySelectorAll(".select");
+const selectList = document.querySelectorAll(".select");
 
-  selectList.forEach((select) => {
-    const optionList = select.querySelectorAll(".option");
+selectList.forEach((select) => {
+  const optionList = select.querySelectorAll(".option");
 
-    optionList.forEach((option) => {
-      option.addEventListener("mouseover", () => {
-        highlightOption(select, option);
-      });
+  optionList.forEach((option) => {
+    option.addEventListener("mouseover", () => {
+      highlightOption(select, option);
     });
+  });
 
-    select.addEventListener("click", (event) => {
-      toggleOptList(select);
-    });
+  select.addEventListener("click", (event) => {
+    toggleOptList(select);
+  });
 
-    select.addEventListener("focus", (event) => {
-      activeSelect(select, selectList);
-    });
+  select.addEventListener("focus", (event) => {
+    activeSelect(select, selectList);
+  });
 
-    select.addEventListener("blur", (event) => {
-      deactivateSelect(select);
-    });
+  select.addEventListener("blur", (event) => {
+    deactivateSelect(select);
   });
 });
 
-window.addEventListener("load", () => {
-  const selectList = document.querySelectorAll(".select");
+const selectList = document.querySelectorAll(".select");
 
-  selectList.forEach((select) => {
-    const optionList = select.querySelectorAll(".option");
-    const selectedIndex = getIndex(select);
+selectList.forEach((select) => {
+  const optionList = select.querySelectorAll(".option");
+  const selectedIndex = getIndex(select);
 
-    select.tabIndex = 0;
-    select.previousElementSibling.tabIndex = -1;
+  select.tabIndex = 0;
+  select.previousElementSibling.tabIndex = -1;
 
-    updateValue(select, selectedIndex);
+  updateValue(select, selectedIndex);
 
-    optionList.forEach((option, index) => {
-      option.addEventListener("click", (event) => {
-        updateValue(select, index);
-      });
-    });
-
-    select.addEventListener("keyup", (event) => {
-      let index = getIndex(select);
-
-      if (event.key === "Escape") {
-        deactivateSelect(select);
-      }
-      if (event.key === "ArrowDown" && index < optionList.length - 1) {
-        index++;
-        event.preventDefault();
-      }
-      if (event.key === "ArrowUp" && index > 0) {
-        index--;
-        event.preventDefault();
-      }
-
-      if (event.key === "Enter" || event.key === " ") {
-        toggleOptList(select);
-      }
-
+  optionList.forEach((option, index) => {
+    option.addEventListener("click", (event) => {
       updateValue(select, index);
     });
+  });
+
+  select.addEventListener("keyup", (event) => {
+    let index = getIndex(select);
+
+    if (event.key === "Escape") {
+      deactivateSelect(select);
+    }
+    if (event.key === "ArrowDown" && index < optionList.length - 1) {
+      index++;
+      event.preventDefault();
+    }
+    if (event.key === "ArrowUp" && index > 0) {
+      index--;
+      event.preventDefault();
+    }
+
+    if (event.key === "Enter" || event.key === " ") {
+      toggleOptList(select);
+    }
+
+    updateValue(select, index);
   });
 });
 ```

@@ -21,7 +21,7 @@ It is used to request a {{domxref("PublicKeyCredential")}} provided by an {{glos
     - `id`
       - : An {{jsxref("ArrayBuffer")}}, {{jsxref("TypedArray")}}, or {{jsxref("DataView")}} representing the ID of the public key credential to retrieve. This value is mirrored by the {{domxref("PublicKeyCredential.rawId", "rawId")}} property of the {{domxref("PublicKeyCredential")}} object returned by a successful `get()` call.
 
-    - `transports`
+    - `transports` {{optional_inline}}
       - : An array of strings providing hints as to the methods the client could use to communicate with the relevant authenticator of the public key credential to retrieve. Possible transports are: `"ble"`, `"hybrid"`, `"internal"`, `"nfc"`, and `"usb"`.
 
         > [!NOTE]

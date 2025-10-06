@@ -3,12 +3,10 @@ title: "Element: moveBefore() method"
 short-title: moveBefore()
 slug: Web/API/Element/moveBefore
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.Element.moveBefore
 ---
 
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{APIRef("DOM")}}
 
 The **`moveBefore()`** method of the {{domxref("Element")}} interface moves a given {{domxref("Node")}} inside the invoking node as a direct child, before a given reference node.
 

@@ -246,9 +246,7 @@ const display = document.querySelector("#display");
 const container = document.querySelector("section");
 const displayStyle = document.querySelector("#displayStyle");
 const alignStyle = document.querySelector("#align");
-document.addEventListener("load", () => {
-  updatePage();
-});
+
 alignContent.addEventListener("change", () => {
   updatePage();
 });
@@ -263,6 +261,7 @@ function updatePage() {
   alignStyle.innerText = alVal;
   displayStyle.innerText = dVal;
 }
+updatePage();
 ```
 
 #### Result

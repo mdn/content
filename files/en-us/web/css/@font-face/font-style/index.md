@@ -6,7 +6,7 @@ browser-compat: css.at-rules.font-face.font-style
 sidebar: cssref
 ---
 
-The **`font-style`** CSS descriptor allows authors to specify font styles for the fonts specified in the {{cssxref("@font-face")}} at-rule.
+The **`font-style`** [CSS](/en-US/docs/Web/CSS) descriptor allows authors to specify font styles for the fonts specified in the {{cssxref("@font-face")}} at-rule.
 
 For a particular font family, authors can download various font faces that correspond to the different styles of the same font family and then use the `font-style` descriptor to explicitly specify the font face's style. The values for this CSS descriptor are the same as that of the corresponding {{cssxref("font-style")}} property.
 

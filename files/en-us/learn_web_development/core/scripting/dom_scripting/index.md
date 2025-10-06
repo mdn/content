@@ -6,7 +6,7 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/Test_your_skills/Object_basics","Learn_web_development/Core/Scripting/Network_requests", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Test_your_skills/Object_basics","Learn_web_development/Core/Scripting/Image_gallery", "Learn_web_development/Core/Scripting")}}
 
 When writing web pages and apps, one of the most common things you'll want to do is change the document structure in some way. This is usually done by manipulating the Document Object Model (DOM) via a set of built-in browser APIs for controlling HTML and styling information. In this article we'll introduce you to **DOM scripting**.
 
@@ -267,7 +267,7 @@ In the next section we will look at a more practical use of DOM APIs.
 
 ## Creating a dynamic shopping list
 
-In this exercise we want you to build a dynamic shopping list that allows you to add items using a form input and button. When you add enter an item and press the button:
+In this exercise we want you to build a dynamic shopping list that allows you to add items using a form input and button. When you add an item and press the button:
 
 - The item should appear in the list.
 - Each item should be given a button that can be pressed to delete that item off the list.
@@ -354,4 +354,4 @@ We have reached the end of our study of document and DOM manipulation. At this p
   - {{domxref("HTMLElement")}}, {{domxref("HTMLInputElement")}}, {{domxref("HTMLImageElement")}}, etc.
 - [DOM Scripting](https://explainers.dev/dom-scripting/), explainers.dev
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/Test_your_skills/Object_basics","Learn_web_development/Core/Scripting/Network_requests", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Test_your_skills/Object_basics","Learn_web_development/Core/Scripting/Image_gallery", "Learn_web_development/Core/Scripting")}}

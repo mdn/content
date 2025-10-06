@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.AudioTrackList.addtrack_event
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The `addtrack` event is fired when a track is added to an [`AudioTrackList`](/en-US/docs/Web/API/AudioTrackList).
 

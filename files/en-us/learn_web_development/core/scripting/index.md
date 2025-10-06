@@ -8,7 +8,7 @@ sidebar: learnsidebar
 
 {{NextMenu("Learn_web_development/Core/Scripting/What_is_JavaScript", "Learn_web_development/Core")}}
 
-JavaScript is a huge topic, with so many different features, styles, and techniques to learn, and so many APIs and tools built on top of it. This module focuses mostly on the essentials of the core language, plus some key surrounding topics — learning these topics will give you a solid basis to work from.
+JavaScript is a huge topic, with so many different features, styles, and techniques to learn, and so many APIs and tools built on top of it. This module focuses on the essentials of the core language, plus some key surrounding topics — learning these topics will give you a solid basis to work from.
 
 ## Prerequisites
 
@@ -61,6 +61,8 @@ Before starting this module, you don't need any previous JavaScript knowledge, b
   - : Another very common task in modern websites and applications is making network requests to retrieve individual data items from the server to update sections of a webpage without having to load an entire new page. This seemingly small detail has had a huge impact on the performance and behavior of sites, so in this article, we'll explain the concept and look at technologies that make it possible.
 - [Working with JSON](/en-US/docs/Learn_web_development/Core/Scripting/JSON)
   - : JavaScript Object Notation (JSON) is a standard text-based format for representing structured data based on JavaScript object syntax. It is commonly used for transmitting data in web applications (e.g., sending some data from the server to the client, so it can be displayed on a web page, or vice versa). You'll come across it quite often, so in this article, we give you all you need to work with JSON using JavaScript, including parsing JSON so you can access data within it, and creating JSON.
+- [Challenge: Building a house data UI](/en-US/docs/Learn_web_development/Core/Scripting/House_data_UI) <sup>Challenge</sup>
+  - : In this challenge we are going to get you to write some JavaScript for a house search page on a property website. This will include fetching JSON data, filtering that data based on the values entered in provided form controls, and rendering that data to the UI. Along the way, we'll also test your knowledge of conditionals, loops, arrays and array methods, and more besides.
 - [JavaScript debugging and error handling](/en-US/docs/Learn_web_development/Core/Scripting/Debugging_JavaScript)
   - : In this lesson, we will return to the subject of debugging JavaScript (which we first looked at in [What went wrong?](/en-US/docs/Learn_web_development/Core/Scripting/What_went_wrong)). Here we will delve deeper into techniques for tracking down errors, but also look at how to code defensively and handle errors in your code, avoiding problems in the first place.
 

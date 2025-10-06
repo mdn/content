@@ -65,18 +65,14 @@ When the {{domxref("HTMLElement/change_event", "change")}} event occurs, a list 
 ### JavaScript
 
 ```js
-document.getElementById("file-picker").addEventListener(
-  "change",
-  (event) => {
-    let output = document.getElementById("listing");
-    for (const file of event.target.files) {
-      let item = document.createElement("li");
-      item.textContent = file.webkitRelativePath;
-      output.appendChild(item);
-    }
-  },
-  false,
-);
+document.getElementById("file-picker").addEventListener("change", (event) => {
+  let output = document.getElementById("listing");
+  for (const file of event.target.files) {
+    let item = document.createElement("li");
+    item.textContent = file.webkitRelativePath;
+    output.appendChild(item);
+  }
+});
 ```
 
 ### Result
