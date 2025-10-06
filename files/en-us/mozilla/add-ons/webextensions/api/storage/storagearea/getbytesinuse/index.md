@@ -15,6 +15,8 @@ Gets the amount of storage space, in bytes, used by one or more items stored in 
 > - {{WebExtAPIRef("storage.session")}} from Firefox 131.
 > - {{WebExtAPIRef("storage.local")}} and {{WebExtAPIRef("storage.managed")}} from Firefox 144.
 
+> [!NOTE]
+> `storage.managed.getBytesInUse()` always returns 0, at least in Chrome and Firefox.
 This is an asynchronous method that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntax
