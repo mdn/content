@@ -351,7 +351,7 @@ The following screenshot shows what the finished widescreen layout should look l
 ![Finished rwd task website widescreen layout. A logo at the top, followed by three columns, vertical nav menu on the left, text content in the center, and a photo gallery on the right.](rwd-task-widescreen.png)
 
 <details>
-<summary>Click here to show the solution</summary>
+<summary>Click here to show a possible solution</summary>
 
 To cause the layouts to display properly in mobile browsers, you need to add a viewport `<meta>` tag inside the `<head>` of the HTML document:
 
