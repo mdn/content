@@ -23,7 +23,7 @@ this is unnecessary since browsers will ignore any constraints they're unfamilia
 A boolean, a string, or a [`ConstrainBooleanOrDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#constrainbooleanofdomstring) object.
 
 
-If the browser supports specific echo cancellation types, the value can be set as one of the following strings:
+If the browser supports specific echo cancellation types, the value can be set as one of the following:
 
 - `"all"`
   - : All user system-generated audio captured by the user's microphone is removed. This is useful for example in situations where you want to avoid capturing privacy-sensitive audio such as screen reader output and system notifications.
