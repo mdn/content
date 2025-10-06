@@ -159,7 +159,7 @@ console.log(date.toLocaleString("en-US", { hour12: false }));
 ### Controlling single-digit vs double-digit day or month
 
 Use `numeric` for single digits and `2-digit` for leading zeros.
-The output may still follow the locale’s style.
+The output may still follow the locale's style.
 For example, `en-GB` often pads even with `numeric`.
 
 ```js
