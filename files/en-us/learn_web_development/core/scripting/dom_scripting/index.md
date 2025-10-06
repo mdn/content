@@ -271,7 +271,8 @@ In this exercise, we want you to build a dynamic shopping list that allows you t
 
 - The item should appear in the list.
 - Each item should be given a button that can be pressed to delete that item off the list.
-- The input should be emptied and focused, ready for you to enter another item.
+- Each item should have a button next to it that removes the item from the list when clicked.
+- The input fields should be cleared and focused, ready for the next item entry.
 
 The finished demo will look something like the following — try it out before you build it!
 
