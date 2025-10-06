@@ -174,7 +174,7 @@ You'll solve this challenge on your local development environment; ideally, you'
 
 You've been provided with some HTML for the homepage of an imaginary community college, plus some CSS that lays out the content into three columns and provides some other rudimentary styling. You need to add rules to the bottom of the CSS file to solve the challenges described in the following sections.
 
-### Apply some fonts to the page
+### Apply fonts to the page
 
 1. Choose heading and body fonts to apply to the page:
    - Because this is a college, the fonts should give the site a fairly serious, trustworthy feel. A serif site-wide font for the general body text coupled with a heavy/slab font for the headings would work.
