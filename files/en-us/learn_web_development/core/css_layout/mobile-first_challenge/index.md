@@ -274,6 +274,7 @@ We are going to get you to solve this challenge in your local development enviro
    - [`square5.jpg`](https://mdn.github.io/shared-assets/images/examples/learn/balloons/square5.jpg)
    - [`square6.jpg`](https://mdn.github.io/shared-assets/images/examples/learn/balloons/square6.jpg)
 6. Save your files and load `index.html` in a browser, ready to test. The starting point of the page should look something like this when viewed in a narrow viewport:
+
    ![Starting point of the mobile-first task. A single column layout with a logo at the top and a hamburger menu icon, followed by a top-level heading, followed by text content with a floated image.](rwd-task-start.png)
 
 ## Project brief
