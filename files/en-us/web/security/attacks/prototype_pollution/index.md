@@ -117,7 +117,7 @@ const config = deepFreeze({
 config.headers.Authorization = "hacked_token"; // fails thanks to deepFreeze
 ```
 
-The `deepFreeze` approach is not handling circular references by default, so to create true immutable objects, you may want to look into using a library like [Immer](https://immerjs.github.io/immer/). You could also consider the [SES](https://github.com/endojs/endo/tree/master/packages/ses#ses) shim for [Hardened JavaScript](https://hardenedjs.org) which is a [draft proposal for ECMAScript](https://github.com/tc39/proposal-ses) to freeze every built-in object.
+The `deepFreeze` approach is not handling circular references by default, so to create true immutable objects, you may want to look into using a library like [Immer](https://immerjs.github.io/immer/). You could also consider the [SES](https://github.com/endojs/endo/tree/master/packages/ses#ses) shim for [Hardened JavaScript](https://hardenedjs.org) to freeze every built-in object.
 
 ### JSON schema validation
 
