@@ -77,6 +77,8 @@ Firefox 144 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - The [View Transition API](/en-US/docs/Web/API/View_Transition_API) is now supported for [SPAs (single-page applications)](/en-US/docs/Glossary/SPA). This provides a mechanism for easily creating animated transitions between different website views. ([Firefox bug 1985809](https://bugzil.la/1985809)).
 - The {{domxref("CSSStyleProperties")}} interface of the [CSS Object Model (CSSOM)](/en-US/docs/Web/API/CSS_Object_Model) is now implemented (this was renamed from a non-standard interface `CSS2Properties`). The new interface is present but not yet used. ([Firefox bug 1919582](https://bugzil.la/1919582)).
 
+- The {{domxref("PerformanceEventTiming.interactionId", "interactionId")}} property of the {{domxref("PerformanceEventTiming")}} interface is a unique identifier that associates related events belonging to a single user interaction. This can be used to calculate the {{glossary("Interaction to next paint")}} metric, which helps analyze responsiveness to user interaction over the lifetime of a page. ([Firefox bug 1956809](https://bugzil.la/1956809)).
+
 #### DOM
 
 - The `moveBefore()` method is now supported on the {{domxref("Element.moveBefore()","Element")}}, {{domxref("DocumentFragment.moveBefore()","DocumentFragment")}} and {{domxref("Document.moveBefore()","Document")}} interfaces. This allows moving of an immediate child element of the object, before another of its child elements. Unlike with {{domxref("Node.insertBefore()")}}, moved elements retain their state. ([Firefox bug 1983688](https://bugzil.la/1983688)).
