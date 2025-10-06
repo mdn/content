@@ -62,7 +62,6 @@ The [`<rectangular-color-space>`](/en-US/docs/Web/CSS/color-interpolation-method
 
 The`<polar-color-space>` category includes [`hsl`](/en-US/docs/Web/CSS/color_value/hsl), [`hwb`](/en-US/docs/Web/CSS/color_value/hwb), [`lch`](/en-US/docs/Web/CSS/color_value/lch), and [`oklch`](/en-US/docs/Web/CSS/color_value/oklch). With these you can optionally follow the color space name with a {{CSSXref("&lt;hue-interpolation-method&gt;")}}. This value defaults to `shorter hue`, but can also be set to `longer hue`, `increasing hue`, or `decreasing hue`.
 
-The [CSS colors](/en-US/docs/Web/CSS/CSS_colors) module defines a {{cssxref("@color-profile")}} [at-rule]() for creating custom color profiles and color spaces. This is not yet supported in any browser. If and when supported, the custom color space will be declared as `in` followed by the [`<dashed-ident>`](/en-US/docs/Web/CSS/dashed-ident#using_with_color-profile) name of a valid custom color profile. Currently, the color space must be one of the available color spaces listed in the [formal syntax](#formal_syntax).
 
 ### Color percentages
 
