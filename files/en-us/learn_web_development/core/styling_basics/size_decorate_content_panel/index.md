@@ -6,9 +6,9 @@ page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Test_your_skills/Backgrounds_and_borders", "Learn_web_development/Core/Styling_basics/Overflow", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Test_your_skills/Overflow", "Learn_web_development/Core/Styling_basics/Images_media_forms", "Learn_web_development/Core/Styling_basics")}}
 
-In this challenge you are provided with a lightly-styled page structure that renders a content panel containing text and images, with a heading at the top and a button bar at the bottom. We want you to follow the instructions to size and decorate it, producing an interesting layout as a result. Along the way, we'll test your knowledge of CSS values and units, sizing, and background and borders.
+In this challenge you are provided with a lightly-styled page structure that renders a content panel containing text and images, with a heading at the top and a button bar at the bottom. We want you to follow the instructions to size and decorate it, producing an interesting layout as a result. Along the way, we'll test your knowledge of CSS values and units, sizing, overflow, and backgrounds and borders.
 
 ## Starting point
 
@@ -137,7 +137,6 @@ We are going to get you to solve this challenge on your local development enviro
    }
 
    .content {
-     overflow: auto;
    }
 
    .controls {
@@ -179,9 +178,13 @@ Follow the steps below to complete the project, sizing the content pane appropri
 
 1. Apply a color gradient to the `pane` `<section>` that changes smoothly from `#9fb4c7` at the top to `#7f7caf` at the bottom.
 2. Give the images a `1px solid` border and the `content` `<div>` a `2px solid` border. Give the borders a color of `#28587b`.
-3. Give the `content` `<div>` a background color of `#eeeeff`, and a background image of `https://mdn.github.io/shared-assets/images/examples/big-star.png`. The background image should not repeat, and should be placed `10px` from the top of the container and `20px` from the right.
+3. Give the `content` `<div>` a background color of `#eeeeff`, and a background image of `https://mdn.github.io/shared-assets/images/examples/big-star.png`. The background image should not repeat, should be sized at `40px` by `40px`, and should be placed `5px` from the top of the container and `15px` from the right.
 4. Give the buttons a text color of `white` and a background color of `rgb(40 88 123 / 0.8)`. On hover or focus, the buttons should change to have a fully opaque version of the same background color.
 5. Set a `10px` border radius on the `content` `<div>` and the buttons.
+
+### Overflow
+
+At this point, you should still notice a problem with the UI — the content contained in the `content` `<div>` overflows its container, and the whole page scrolls to allow you to access it all. We want the `content` `<div>` to scroll instead. How can you achieve this?
 
 ## Hints and tips
 
@@ -336,9 +339,9 @@ h1,
 }
 
 .content {
-  /* Set background color and image on the content div */
+  /* Set background color and image on the content div, and size the image */
   background: url("https://mdn.github.io/shared-assets/images/examples/big-star.png")
-    no-repeat top 10px right 20px #eeeeff;
+    no-repeat top 5px right 15px / 40px #eef;
   /* Set vertical padding of 0 on both sides and horizontal padding
   of 20px on both sides */
   padding: 0 20px;
@@ -347,6 +350,7 @@ h1,
   height: calc(100% - 200px);
   /* Set border on the content div */
   border: 2px solid #28587b;
+  /* Stop the content from overflowing its container; make it scroll instead */
   overflow: auto;
 }
 
@@ -389,4 +393,4 @@ button {
 
 </details>
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Test_your_skills/Backgrounds_and_borders", "Learn_web_development/Core/Styling_basics/Overflow", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Test_your_skills/Overflow", "Learn_web_development/Core/Styling_basics/Images_media_forms", "Learn_web_development/Core/Styling_basics")}}
