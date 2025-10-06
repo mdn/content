@@ -287,7 +287,7 @@ Specifically, we want you to implement two layouts: the first one triggers when 
 
 ### Fixing a couple of display issues
 
-First of all, you'll need to solve a couple of problems to get the website working correctly.
+First of all, you'll need to solve a couple of problems that we've left in the starting template.
 
 1. At the moment, your layouts won't display properly in mobile browsers. Add a tag to the `<head>` of your `<html>` document to fix this.
 2. With the browser window set to a narrow width, look at the bottom of the page — you'll see that the photo gallery is not displaying properly because the images are breaking out of their containers. Add a declaration to your CSS file to fix this.
