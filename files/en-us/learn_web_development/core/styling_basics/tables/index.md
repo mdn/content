@@ -38,7 +38,7 @@ Styling an HTML table isn't the most glamorous job in the world, but sometimes w
 
 Let's start by looking at a typical HTML table. Well, I say typical — most HTML table examples are about shoes, or the weather, or employees; we decided to make things more interesting by making it about famous punk bands from the UK. The markup looks like so:
 
-```html live-sample___unstyled live-sample___styled
+```html live-sample___unstyled live-sample___punk-style live-sample___best-practice-style
 <table>
   <caption>
     A summary of the UK's most famous punk bands
@@ -112,11 +112,11 @@ Let's start by looking at a typical HTML table. Well, I say typical — most HTM
 
 The table is nicely marked up, easily stylable, and accessible, thanks to features such as [`scope`](/en-US/docs/Web/HTML/Reference/Elements/th#scope), {{htmlelement("caption")}}, {{htmlelement("thead")}}, {{htmlelement("tbody")}}, etc. Unfortunately, it doesn't look that great. With only the default browser styling it looks cramped, hard to read, and a little boring:
 
-{{embedlivesample("unstyled")}}
+{{embedlivesample("unstyled", "", "200")}}
 
 We need to use some CSS to fix this up. You can style a table in any way you want using CSS. For example, we created this rather "punk" looking design:
 
-```css hidden live-sample___styled
+```css hidden live-sample___punk-style
 /* font import */
 @import "https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap";
 
@@ -222,7 +222,7 @@ caption {
 }
 ```
 
-{{embedlivesample("styled", "", "500")}}
+{{embedlivesample("punk-style", "", "500")}}
 
 However, this design is rather garish. In this article, we'll get you to mark it up using some best practices for table design — as outlined in [Web Typography: designing tables to be read not looked at](https://alistapart.com/article/web-typography-tables/).
 
@@ -257,9 +257,8 @@ The first thing we need to do to our table is sort out the spacing — default t
 ```css
 table {
   table-layout: fixed;
-  width: 80%;
-  min-width: 1000px;
-  margin: 0 auto;
+  width: 90%;
+  margin: 10px auto;
   border-collapse: collapse;
 }
 
@@ -337,9 +336,8 @@ Next, update your existing `table` rule to the following:
 ```css
 table {
   table-layout: fixed;
-  width: 80%;
-  min-width: 1000px;
-  margin: 0 auto;
+  width: 90%;
+  margin: 10px auto;
   border-collapse: collapse;
   border-top: 1px solid #999999;
   border-bottom: 1px solid #999999;
@@ -376,6 +374,68 @@ caption {
 ```
 
 There is nothing remarkable here, except for the {{cssxref("caption-side")}} property, which has been given a value of `bottom`. This causes the caption to be positioned on the bottom of the table.
+
+## Finished table
+
+Your finished table design should look like so:
+
+```css hidden live-sample___best-practice-style
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+table {
+  table-layout: fixed;
+  width: 90%;
+  margin: 10px auto;
+  border-collapse: collapse;
+  border-top: 1px solid #999999;
+  border-bottom: 1px solid #999999;
+}
+
+th,
+td {
+  vertical-align: top;
+  padding: 0.6em;
+}
+
+tr :nth-child(2),
+tr :nth-child(3) {
+  text-align: right;
+  width: 15%;
+}
+
+tr :nth-child(1),
+tr :nth-child(4) {
+  text-align: left;
+  width: 35%;
+}
+
+tfoot tr :nth-child(1) {
+  text-align: right;
+}
+
+tfoot tr :nth-child(2) {
+  text-align: left;
+}
+
+tfoot {
+  border-top: 1px solid #999999;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #eeeeee;
+}
+
+caption {
+  padding: 1em;
+  font-style: italic;
+  caption-side: bottom;
+  letter-spacing: 1px;
+}
+```
+
+{{embedlivesample("best-practice-style", "", "520")}}
 
 ## Table styling quick tips
 
