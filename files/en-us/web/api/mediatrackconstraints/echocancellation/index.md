@@ -25,7 +25,7 @@ A boolean, a string, or a [`ConstrainBooleanOrDOMString`](/en-US/docs/Web/API/Me
 
 If the browser supports specific echo cancellation types, the value can be set as one of the following strings:
 
-- `all`
+- `"all"`
   - : All user system-generated audio captured by the user's microphone is removed. This is useful for example in situations where you want to avoid capturing privacy-sensitive audio such as screen reader output and system notifications.
 - `remote-only`
   - : Only user system-generated audio captured by the user's microphone from remote sources (as represented by {{domxref("MediaStreamtrack")}}s sourced from an {{domxref("RTCPeerConnection")}}) is removed. This is useful when you want to remove echo from communication with remote peers but still share local audio, such as in the case of a music lesson where the teacher wants to hear their student(s) playing along to an audio track but still communicate clearly with them.
