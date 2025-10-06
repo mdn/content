@@ -176,8 +176,9 @@ You've been provided with some HTML for the homepage of an imaginary community c
 
 ### Apply some fonts to the page
 
-1. Choose a couple of fonts to apply to the page. Because this is a college, the fonts should give the site a fairly serious, trustworthy feel. A serif site-wide font for the general body text coupled with a heavy/slab font for the headings would work.
-2. It is your choice whether you want to use an online font service like Google Fonts to access the fonts, or download font files locally to your project. Whatever you choose, make your fonts available to your page. If you choose to use local font files, use a suitable service to generate bulletproof `@font-face` code for them.
+1. Choose heading and body fonts to apply to the page:
+   - Because this is a college, the fonts should give the site a fairly serious, trustworthy feel. A serif site-wide font for the general body text coupled with a heavy/slab font for the headings would work.
+   - It is your choice whether you want to use an online font service like Google Fonts to access the fonts, or download font files locally to your project. Whatever you choose, make your fonts available to your page. If you choose to use local font files, use a suitable service to generate bulletproof `@font-face` code for them.
 3. Apply your body font to the whole page, and your heading font to your headings.
 
 ### General text styling
