@@ -6,7 +6,7 @@ browser-compat: html.elements.figcaption
 sidebar: htmlsidebar
 ---
 
-The **`<figcaption>`** [HTML](/en-US/docs/Web/HTML) element represents a caption or legend describing the rest of the contents of its parent {{HTMLElement("figure")}} element, providing the `<figure>` an {{glossary("accessible description")}}.
+The **`<figcaption>`** [HTML](/en-US/docs/Web/HTML) element represents a caption or legend describing the rest of the contents of its parent {{HTMLElement("figure")}} element, providing the `<figure>` an {{glossary("accessible name")}}.
 
 {{InteractiveExample("HTML Demo: &lt;figcaption&gt;", "tabbed-shorter")}}
 

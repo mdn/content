@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Scheduler.yield
 ---
 
-{{APIRef('Prioritized Task Scheduling API')}}{{AvailableInWorkers}}
+{{APIRef("Prioritized Task Scheduling API")}}{{AvailableInWorkers}}
 
 The **`yield()`** method of the {{domxref('Scheduler')}} interface is used for yielding to the [main thread](/en-US/docs/Glossary/Main_thread) during a task and continuing execution later, with the continuation scheduled as a prioritized task (see the [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API) for more information). This allows long-running work to be broken up so the browser stays responsive.
 

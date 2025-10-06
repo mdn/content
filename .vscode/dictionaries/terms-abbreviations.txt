@@ -175,6 +175,7 @@ discardable
 distros
 DLRR
 DLSR
+DMARC
 docshell
 docshells
 doctypes
@@ -241,6 +242,7 @@ foveation
 fragmentainer
 fragmentainers
 framebuffers
+framebusting
 frontmost
 Fullband
 fullscreened
@@ -792,6 +794,7 @@ TIPC
 toggletips
 toolkits
 toolsets
+TOTP
 touchpads
 touchpoint
 touchpoints

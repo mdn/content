@@ -3,12 +3,10 @@ title: "Document: moveBefore() method"
 short-title: moveBefore()
 slug: Web/API/Document/moveBefore
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.Document.moveBefore
 ---
 
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{APIRef("DOM")}}
 
 The **`moveBefore()`** method of the {{domxref("Document")}} interface moves a given {{domxref("Node")}} inside the `Document` DOM node as a direct child, before a given reference node.
 

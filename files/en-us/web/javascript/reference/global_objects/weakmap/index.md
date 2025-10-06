@@ -16,6 +16,10 @@ You can learn more about `WeakMap` in the [WeakMap object](/en-US/docs/Web/JavaS
 
 Keys of WeakMaps must be garbage-collectable. Most {{Glossary("Primitive", "primitive data types")}} can be arbitrarily created and don't have a lifetime, so they cannot be used as keys. Objects and [non-registered symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry) can be used as keys because they are garbage-collectable.
 
+### Key equality
+
+Like regular `Map`, value equality is based on the [SameValueZero](/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#same-value-zero_equality) algorithm, which is the same as the `===` operator because `WeakMap` can only hold object and symbol keys. This means that for object keys, equality is based on object identity. They are compared by [reference](/en-US/docs/Glossary/Object_reference), not by value.
+
 ### Why WeakMap?
 
 A map API _could_ be implemented in JavaScript with two arrays (one for keys, one for values) shared by the four API methods. Setting elements on this map would involve pushing a key and value onto the end of each of those arrays simultaneously. As a result, the indices of the key and value would correspond to both arrays. Getting values from the map would involve iterating through all keys to find a match, then using the index of this match to retrieve the corresponding value from the array of values.
@@ -51,13 +55,17 @@ These properties are defined on `WeakMap.prototype` and shared by all `WeakMap` 
 ## Instance methods
 
 - {{jsxref("WeakMap.prototype.delete()")}}
-  - : Removes any value associated to the `key`. `WeakMap.prototype.has(key)` will return `false` afterwards.
+  - : Removes the entry specified by the key from this `WeakMap`.
 - {{jsxref("WeakMap.prototype.get()")}}
-  - : Returns the value associated to the `key`, or `undefined` if there is none.
+  - : Returns the value corresponding to the key in this `WeakMap`, or `undefined` if there is none.
+- {{jsxref("WeakMap.prototype.getOrInsert()")}} {{experimental_inline}}
+  - : Returns the value corresponding to the specified key in this `WeakMap`. If the key is not present, it inserts a new entry with the key and a given default value, and returns the inserted value.
+- {{jsxref("WeakMap.prototype.getOrInsertComputed()")}} {{experimental_inline}}
+  - : Returns the value corresponding to the specified key in this `WeakMap`. If the key is not present, it inserts a new entry with the key and a default value computed from a given callback, and returns the inserted value.
 - {{jsxref("WeakMap.prototype.has()")}}
-  - : Returns a Boolean asserting whether a value has been associated to the `key` in the `WeakMap` object or not.
+  - : Returns a boolean indicating whether an entry with the specified key exists in this `WeakMap` or not.
 - {{jsxref("WeakMap.prototype.set()")}}
-  - : Sets the `value` for the `key` in the `WeakMap` object. Returns the `WeakMap` object.
+  - : Adds a new entry with a specified key and value to this `WeakMap`, or updates an existing entry if the key already exists.
 
 ## Examples
 

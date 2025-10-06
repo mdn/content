@@ -14,14 +14,16 @@ After CSS 2.1, the scope of the specification increased significantly and the pr
 
 ## Beginner's tutorials
 
+Our [learn web development core modules](/en-US/docs/Learn_web_development/Core) contain modern, up-to-date tutorials covering CSS fundamentals.
+
 - [Your first website: Styling the content](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Styling_the_content)
   - : This article provides a brief tour of what CSS is and how to use it, aimed at people who are completely new to web development.
 - [CSS styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics)
-  - : Our [Learn web development](/en-US/docs/Learn_web_development) section's CSS basics module teaches CSS fundamentals from the ground up.
+  - : This module provides all the CSS fundamentals you'll need to start learning the technology effectively, including syntax, features, and techniques.
 - [CSS text styling](/en-US/docs/Learn_web_development/Core/Text_styling)
-  - : Here we look at fundamentals including setting font, boldness, italics, line and letter spacing, drop shadows, and other text features. We round off the module by looking at applying custom fonts to your page, and styling lists and links.
+  - : Here we look at CSS text fundamentals including setting font, boldness, italics, line and letter spacing, and drop shadows. We round off the module by looking at applying custom fonts to your page, and styling lists and links.
 - [CSS layout](/en-US/docs/Learn_web_development/Core/CSS_layout)
-  - : Now it's time to look at how to correctly lay out your boxes in relation to one another, and the browser viewport. This module looks at floats, positioning, other modern layout tools, and building responsive designs that will adapt to different devices, screen sizes, and resolutions.
+  - : This module looks at floats, positioning, other modern layout tools, and building responsive designs that will adapt to different devices, screen sizes, and resolutions.
 
 ## Reference
 

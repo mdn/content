@@ -120,12 +120,15 @@ This table details all the properties you can include.
       <td><code>String</code></td>
       <td>
         <p>
-          The origin of the CSS to inject. This affects the cascading order
-          (priority) of the injected stylesheets. This string takes these values:
+          The style origin for the CSS injection:
           <ul>
-            <li><code>"user"</code></li>
-            <li><code>"author"</code> (default)</li>
+            <li><code>"user"</code>, to add as a user stylesheet.</li>
+            <li><code>"author"</code>, to add as an author stylesheet.</li>
           </ul>
+          Defaults to <code>"author"</code>.
+        </p>
+        <p>
+          This property is case incentive insensitive in Firefox and Safari.
         </p>
       </td>
     </tr>

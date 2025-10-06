@@ -2,7 +2,10 @@
 title: <input type="color">
 slug: Web/HTML/Reference/Elements/input/color
 page-type: html-attribute-value
-browser-compat: html.elements.input.type_color
+browser-compat:
+  - html.elements.input.type_color
+  - html.elements.input.alpha
+  - html.elements.input.colorspace
 sidebar: htmlsidebar
 ---
 
@@ -61,7 +64,7 @@ In addition to the [global attribute](/en-US/docs/Web/HTML/Reference/Global_attr
 
 - `colorspace` {{experimental_inline}}
   - : Defines the {{glossary("color space")}} for the color and hints at the desired user interface for the color picker widget. Possible {{Glossary("enumerated")}} values are:
-    - `"limited-srgb"`: The color is in the {{glossary("RGB". "sRGB")}} color space. This includes [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb), [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl), [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb), and {{cssxref("hex-color")}} values. The color value is limited to 8-bits per `r`, `g`, and `b` component. This is the default.
+    - `"limited-srgb"`: The color is in the {{glossary("RGB", "sRGB")}} color space. This includes [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb), [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl), [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb), and {{cssxref("hex-color")}} values. The color value is limited to 8-bits per `r`, `g`, and `b` component. This is the default.
     - `"display-p3"`: The [Display P3 color space](/en-US/docs/Glossary/Color_space#display-p3), e.g., `color(display-p3 1.84 -0.19 0.72 / 0.6)`
 
 ## Using color inputs
@@ -94,8 +97,8 @@ As is the case with other {{HTMLElement("input")}} types, there are two events t
 Here's an example that watches changes over time to the color value:
 
 ```js
-colorPicker.addEventListener("input", updateFirst, false);
-colorPicker.addEventListener("change", watchColorPicker, false);
+colorPicker.addEventListener("input", updateFirst);
+colorPicker.addEventListener("change", watchColorPicker);
 
 function watchColorPicker(event) {
   document.querySelectorAll("p").forEach((p) => {
@@ -154,8 +157,8 @@ The following code initializes the color input:
 const defaultColor = "#0000ff";
 const colorPicker = document.querySelector("#color-picker");
 colorPicker.value = defaultColor;
-colorPicker.addEventListener("input", updateFirst, false);
-colorPicker.addEventListener("change", updateAll, false);
+colorPicker.addEventListener("input", updateFirst);
+colorPicker.addEventListener("change", updateAll);
 colorPicker.select();
 ```
 
@@ -251,3 +254,8 @@ The final result looks like this:
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref('HTMLInputElement.alpha')}}
+- {{domxref('HTMLInputElement.colorspace')}}

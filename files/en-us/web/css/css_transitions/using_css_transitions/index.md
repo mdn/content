@@ -306,14 +306,10 @@ Transitions are a great tool to make things look much smoother without having to
 ```js live-sample___js-transitions
 // Make the ball move to a certain position:
 const f = document.getElementById("foo");
-document.addEventListener(
-  "click",
-  (ev) => {
-    f.style.transform = `translateY(${ev.clientY - 25}px)`;
-    f.style.transform += `translateX(${ev.clientX - 25}px)`;
-  },
-  false,
-);
+document.addEventListener("click", (ev) => {
+  f.style.transform = `translateY(${ev.clientY - 25}px)`;
+  f.style.transform += `translateX(${ev.clientX - 25}px)`;
+});
 ```
 
 With CSS, you can smooth the styles applied through JavaScript. Add a transition to the element and any change will happen smoothly:
@@ -374,14 +370,14 @@ You can use the {{domxref("Element/transitionend_event", "transitionend")}} even
 As usual, you can use the {{domxref("EventTarget.addEventListener", "addEventListener()")}} method to monitor for this event:
 
 ```js
-el.addEventListener("transitionend", updateTransition, true);
+el.addEventListener("transitionend", updateTransition);
 ```
 
 You detect the beginning of a transition using {{domxref("Element/transitionrun_event", "transitionrun")}} (fires before any delay) and {{domxref("Element/transitionstart_event", "transitionstart")}} (fires after any delay), in the same kind of fashion:
 
 ```js
-el.addEventListener("transitionrun", signalStart, true);
-el.addEventListener("transitionstart", signalStart, true);
+el.addEventListener("transitionrun", signalStart);
+el.addEventListener("transitionstart", signalStart);
 ```
 
 > [!NOTE]

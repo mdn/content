@@ -52,15 +52,15 @@ _Inherits methods from its parent interface, {{domxref("EventTarget")}}._
 ## Events
 
 - {{domxref("SourceBuffer.abort_event", "abort")}}
-  - : Fired whenever {{domxref("SourceBuffer.appendBuffer()")}} is ended by a call to {{domxref("SourceBuffer.abort()")}}. {{domxref("SourceBuffer.updating")}} changes from `true` to `false`.
+  - : Fired when the buffer appending is aborted, because the {{domxref("SourceBuffer.abort()")}} or {{domxref("MediaSource.removeSourceBuffer()")}} method is called while the {{domxref("SourceBuffer.appendBuffer()")}} algorithm is still running. {{domxref("SourceBuffer.updating")}} changes from `true` to `false`.
 - {{domxref("SourceBuffer.error_event", "error")}}
-  - : Fired whenever an error occurs during {{domxref("SourceBuffer.appendBuffer()")}}. {{domxref("SourceBuffer.updating")}} changes from `true` to `false`.
+  - : Fired when an error occurs during the processing of an {{domxref("SourceBuffer.appendBuffer", "appendBuffer()")}} operation. {{domxref("SourceBuffer.updating")}} changes from `true` to `false`.
 - {{domxref("SourceBuffer.update_event", "update")}}
-  - : Fired whenever {{domxref("SourceBuffer.appendBuffer()")}} or {{domxref("SourceBuffer.remove()")}} completes. {{domxref("SourceBuffer.updating")}} changes from `true` to `false`. This event is fired before `updateend`.
+  - : Fired whenever {{domxref("SourceBuffer.appendBuffer()")}} or {{domxref("SourceBuffer.remove()")}} completes. {{domxref("SourceBuffer.updating")}} changes from `true` to `false`.
 - {{domxref("SourceBuffer.updateend_event", "updateend")}}
-  - : Fired after {{domxref("SourceBuffer.appendBuffer()")}} or {{domxref("SourceBuffer.remove()")}} ends. This event is fired after `update`.
+  - : Fired after the (not necessarily successful) completion of an {{domxref("SourceBuffer.appendBuffer", "appendBuffer()")}} or {{domxref("SourceBuffer.remove", "remove()")}} operation. This event is fired after the `update`, `error`, or `abort` events.
 - {{domxref("SourceBuffer.updatestart_event", "updatestart")}}
-  - : Fired whenever the value of {{domxref("SourceBuffer.updating")}} changes from `false` to `true`.
+  - : Fired when an {{domxref("SourceBuffer.appendBuffer", "appendBuffer()")}} or {{domxref("SourceBuffer.remove", "remove()")}} operation begins. {{domxref("SourceBuffer.updating", "updating")}} changes from `false` to `true`.
 
 ## Examples
 

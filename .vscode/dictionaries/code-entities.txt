@@ -384,6 +384,7 @@ longtask
 lowdelay
 lowp
 lquote
+LRGB
 ltrh
 makemigrations
 mathbb
@@ -391,6 +392,7 @@ mathbold
 mathdbl
 mathit
 mathml
+mathml.stixgeneral_operator_stretching.disabled
 mathmlref
 mathmono
 mathrm

@@ -46,29 +46,25 @@ In this example, a handler for the `shippingaddresschange` event is set up to va
 ```js
 const paymentRequest = new PaymentRequest(methodData, details, options);
 
-paymentRequest.addEventListener(
-  "shippingaddresschange",
-  (event) => {
-    let detailsUpdate = checkAddress(paymentRequest.shippingAddress);
-    event.updateWith(detailsUpdate);
-  },
-  false,
-);
+paymentRequest.addEventListener("shippingaddresschange", (event) => {
+  const detailsUpdate = checkAddress(paymentRequest.shippingAddress);
+  event.updateWith(detailsUpdate);
+});
 
-const checkAddress = (theAddress) => {
-  let detailsUpdate = {};
+function checkAddress(theAddress) {
+  const detailsUpdate = {};
 
   // Check the address, return an object with any changes or errors.
 
   return detailsUpdate;
-};
+}
 ```
 
 You can also establish a handler for `shippingaddresschange` using the `onshippingaddresschange` event handler property:
 
 ```js
 paymentRequest.onshippingaddresschange = (event) => {
-  let detailsUpdate = checkAddress(paymentRequest.shippingAddress);
+  const detailsUpdate = checkAddress(paymentRequest.shippingAddress);
   event.updateWith(detailsUpdate);
 };
 ```

@@ -6,7 +6,7 @@ browser-compat: css.types.global_keywords.revert
 sidebar: cssref
 ---
 
-The **`revert`** CSS keyword reverts the cascaded value of the property from its current value to the value the property would have had if no changes had been made by the current **{{Glossary("style origin")}}** to the current element. Thus, it resets the property either to user agent set value, to user set value, to its inherited value (if it is inheritable), or to initial value. It can be applied to any CSS property, including the CSS shorthand property {{cssxref("all")}}.
+The **`revert`** [CSS](/en-US/docs/Web/CSS) keyword reverts the cascaded value of the property from its current value to the value the property would have had if no changes had been made by the current **{{Glossary("style origin")}}** to the current element. Thus, it resets the property either to user agent set value, to user set value, to its inherited value (if it is inheritable), or to initial value. It can be applied to any CSS property, including the CSS shorthand property {{cssxref("all")}}.
 
 This keyword removes from the cascade all of the styles that have been overridden until the style being rolled back to is reached.
 

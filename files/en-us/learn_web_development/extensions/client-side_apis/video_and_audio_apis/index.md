@@ -271,6 +271,9 @@ rwd.addEventListener("click", mediaBackward);
 fwd.addEventListener("click", mediaForward);
 media.addEventListener("timeupdate", setTime);
 
+let intervalFwd;
+let intervalRwd;
+
 function playPauseMedia() {
   rwd.classList.remove("active");
   fwd.classList.remove("active");
@@ -294,9 +297,6 @@ function stopMedia() {
   clearInterval(intervalFwd);
   play.setAttribute("data-icon", "P");
 }
-
-let intervalFwd;
-let intervalRwd;
 
 function mediaBackward() {
   clearInterval(intervalFwd);
@@ -373,7 +373,7 @@ To get started with this example, follow these steps:
 1. Create a new directory on your hard drive called `custom-video-player`.
 2. Create a new file inside it called `index.html` and fill it with the following content:
    ```html
-   <!DOCTYPE html>
+   <!doctype html>
    <html lang="en-gb">
      <head>
        <meta charset="utf-8" />

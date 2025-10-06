@@ -94,16 +94,12 @@ This function is called when the play button is pressed. The play button HTML lo
 And the `click` event listener starts like so:
 
 ```js
-playButton.addEventListener(
-  "click",
-  () => {
-    if (playButton.dataset.playing === "false") {
-      srcNode = playSourceNode(audioCtx, sample);
-      // …
-    }
-  },
-  false,
-);
+playButton.addEventListener("click", () => {
+  if (playButton.dataset.playing === "false") {
+    srcNode = playSourceNode(audioCtx, sample);
+    // …
+  }
+});
 ```
 
 The toggle that turns the IIR filter on and off is set up in the similar way. First, the HTML:
@@ -121,17 +117,13 @@ The toggle that turns the IIR filter on and off is set up in the similar way. Fi
 The filter button's `click` handler then connects the `IIRFilter` up to the graph, between the source and the destination:
 
 ```js
-filterButton.addEventListener(
-  "click",
-  () => {
-    if (filterButton.dataset.filteron === "false") {
-      srcNode.disconnect(audioCtx.destination);
-      srcNode.connect(iirFilter).connect(audioCtx.destination);
-      // …
-    }
-  },
-  false,
-);
+filterButton.addEventListener("click", () => {
+  if (filterButton.dataset.filteron === "false") {
+    srcNode.disconnect(audioCtx.destination);
+    srcNode.connect(iirFilter).connect(audioCtx.destination);
+    // …
+  }
+});
 ```
 
 ### Frequency response

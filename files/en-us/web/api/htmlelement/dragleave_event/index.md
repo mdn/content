@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.HTMLElement.dragleave_event
 ---
 
-{{APIRef}}
+{{APIRef("HTML Drag and Drop API")}}
 
 The `dragleave` event is fired when a dragged element or text selection leaves a valid drop target.
 

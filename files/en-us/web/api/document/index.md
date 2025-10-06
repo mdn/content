@@ -83,7 +83,7 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
   - : Returns an {{DOMxRef("HTMLCollection")}} of the available plugins.
 - {{DOMxRef("Document.pointerLockElement")}} {{ReadOnlyInline}}
   - : Returns the element set as the target for mouse events while the pointer is locked. `null` if lock is pending, pointer is unlocked, or if the target is in another document.
-- {{DOMxRef("Document.prerendering")}} {{ReadOnlyInline}} {{experimental_inline}} {{non-standard_inline}}
+- {{DOMxRef("Document.prerendering")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : Returns a boolean that indicates whether the document is currently in the process of prerendering, as initiated via the [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API).
 - {{DOMxRef("Document.scripts")}} {{ReadOnlyInline}}
   - : Returns an {{DOMxRef("HTMLCollection")}} of the {{HTMLElement("script")}} elements in the document.
@@ -182,6 +182,8 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
   - : Adopt node from an external document.
 - {{DOMxRef("Document.append()")}}
   - : Inserts a set of {{domxref("Node")}} objects or strings after the last child of the document.
+- {{DOMxRef("Document.ariaNotify()")}} {{Experimental_Inline}} {{non-standard_inline}}
+  - : Specifies that a given string of text should be announced by a screen reader.
 - {{DOMxRef("Document.browsingTopics()")}} {{Experimental_Inline}} {{non-standard_inline}}
   - : Returns a promise that fulfills with an array of objects representing the top topics for the user, one from each of the last three epochs. By default, the method also causes the browser to record the current page visit as observed by the caller, so the page's hostname can later be used in topics calculation. See the [Topics API](/en-US/docs/Web/API/Topics_API) for more details.
 - `Document.captureEvents()` {{Deprecated_Inline}}
@@ -252,7 +254,7 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
   - : New name for {{DOMxRef("Document.hasStorageAccess()")}}.
 - {{DOMxRef("Document.importNode()")}}
   - : Returns a clone of a node from an external document.
-- {{DOMxRef("Document.moveBefore()")}} {{Experimental_Inline}}
+- {{DOMxRef("Document.moveBefore()")}}
   - : Moves a given {{domxref("Node")}} inside the `Document` DOM node as a direct child, before a given reference node, without removing and then inserting the node.
 - {{DOMxRef("Document.mozSetImageElement()")}} {{Non-standard_Inline}}
   - : Allows you to change the element being used as the background image for a specified element ID.

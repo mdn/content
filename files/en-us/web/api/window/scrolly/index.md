@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Window.scrollY
 ---
 
-{{APIRef("CSSOM View")}}
+{{APIRef("CSSOM view API")}}
 
 The read-only **`scrollY`** property of the {{domxref("Window")}} interface returns the number of pixels by which the document is currently scrolled vertically. This value is subpixel precise in modern browsers, meaning that it isn't necessarily a whole number. You can get the number of pixels the document is scrolled horizontally from the {{domxref("Window.scrollX", "scrollX")}} property.
 

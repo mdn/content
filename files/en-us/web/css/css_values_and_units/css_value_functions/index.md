@@ -194,9 +194,9 @@ The {{CSSxRef("color_value","&lt;color&gt;")}} CSS [data type](/en-US/docs/Web/C
 - {{CSSxRef("color_value/oklch", "oklch()")}}
   - : Defines a given color according to its lightness, chroma, hue and alpha (transparency) components.
 - {{CSSxRef("color_value/lab", "lab()")}}
-  - : Defines a given color according to its lightness, a-axis distance and b-axis distance in the lab colorspace.
+  - : Defines a given color according to its lightness, a-axis distance and b-axis distance in the Lab colorspace.
 - {{CSSxRef("color_value/oklab", "oklab()")}}
-  - : Defines a given color according to its lightness, a-axis distance, b-axis distance in the lab colorspace and alpha (transparency).
+  - : Defines a given color according to its lightness, a-axis distance, b-axis distance in the Lab colorspace and alpha (transparency).
 - {{CSSxRef("color_value/color", "color()")}}
   - : Specifies a particular, specified colorspace rather than the implicit sRGB colorspace.
 - {{CSSxRef("color_value/color-mix", "color-mix()")}}
@@ -207,6 +207,8 @@ The {{CSSxRef("color_value","&lt;color&gt;")}} CSS [data type](/en-US/docs/Web/C
   - : Defines CMYK colors in a device-dependent way.
 - {{CSSXref("color_value/light-dark", "light-dark()")}}
   - : Returns one of two provided colors based on the current color scheme.
+- {{cssxref("dynamic-range-limit-mix()")}}
+  - : Creates a custom maximum luminance limit that is a mix of different {{cssxref("dynamic-range-limit")}} keywords in specified percentages.
 
 ## Image functions
 

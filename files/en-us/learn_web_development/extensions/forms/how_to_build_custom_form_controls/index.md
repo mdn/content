@@ -1,5 +1,6 @@
 ---
 title: How to build custom form controls
+short-title: Custom form controls
 slug: Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls
 page-type: learn-module-chapter
 sidebar: learnsidebar
@@ -1236,13 +1237,9 @@ selectList.forEach((select) => {
     });
   });
 
-  select.addEventListener(
-    "click",
-    (event) => {
-      toggleOptList(select);
-    },
-    false,
-  );
+  select.addEventListener("click", (event) => {
+    toggleOptList(select);
+  });
 
   select.addEventListener("focus", (event) => {
     activeSelect(select, selectList);
