@@ -37,13 +37,11 @@ In order to pollute objects, the attacker needs a way to add arbitrary propertie
 
 ### Pollution via URL query strings
 
-In a very common prototype pollution vulnerability, the attacker pollutes query strings in the URL:
+In a [very common prototype pollution vulnerability](https://github.com/BlackFan/client-side-prototype-pollution), the attacker pollutes query strings in the URL:
 
 ```http
 https://example.org/?__proto__={"test":"polluted"}
 ```
-
-See also [Client-Side Prototype Pollution](https://github.com/BlackFan/client-side-prototype-pollution) for libraries vulnerable due to {{domxref("document.location")}} parsing and the various URL payloads used.
 
 If you parse the query strings into key-value pairs and treat `__proto__` like an arbitrary string, you risk that `__proto__` will later be merged into a target object like this:
 
