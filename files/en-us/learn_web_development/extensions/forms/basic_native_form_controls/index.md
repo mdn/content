@@ -285,7 +285,7 @@ If the image button is used to submit the form, this control doesn't submit its 
 So for example when you click on the image at coordinate (123, 456) and it submits via the `get` method, you'll see the values appended to the URL as follows:
 
 ```url
-http://foo.com?pos.x=123&pos.y=456
+http://example.com?pos.x=123&pos.y=456
 ```
 
 This is a very convenient way to build a "hot map". How these values are sent and retrieved is detailed in the [Sending form data](/en-US/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data) article.

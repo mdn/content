@@ -28,7 +28,7 @@ delete(request, options)
     The available options are:
     - `ignoreSearch`
       - : A boolean value that specifies whether the matching process should ignore the query string in the URL.
-        If set to `true`, the `?value=bar` part of `http://foo.com/?value=bar` would be ignored when performing a match.
+        If set to `true`, the `?value=bar` part of `https://example.com/?value=bar` would be ignored when performing a match.
         It defaults to `false`.
     - `ignoreMethod`
       - : A boolean value that, when set to
