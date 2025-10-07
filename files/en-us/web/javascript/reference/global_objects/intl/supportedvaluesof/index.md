@@ -76,7 +76,7 @@ Below are all values that are commonly supported by browsers for the `calendar` 
 | `islamic-tbla`     | Hijri calendar, tabular/rule-based with leap year rule II (leap years 2,5,7,10,13,16,18,21,24,26,29 in the 30-year cycle (1-based numbering)) and Thursday/astronomical epoch (July 15, 622 Julian / 0622-07-18 ISO)                                                                                                                                             |
 | `islamic-civil`    | Hijri calendar, tabular/rule-based with leap year rule II (leap years 2,5,7,10,13,16,18,21,24,26,29 in the 30-year cycle (1-based numbering)) and Friday/civil epoch (July 16, 622 Julian / 0622-07-19 ISO)                                                                                                                                                      |
 | `iso8601`          | ISO calendar (variant of the Gregorian calendar with week rules and formatting parameters made region-independent)                                                                                                                                                                                                                                               |
-| `japanese`         | Japanese Imperial calendar (this calendar adds an era for each new emperor, so the output year and era for a future date may not match the input year and era when your code runs on a future engine version)                                                                                                                                                    |
+| `japanese`         | Japanese Imperial calendar (this calendar adds an era for each new emperor, so the output year and era for a future date may not match the input year and era when your code runs on a future engine version. **Note:** As of October 2025, dates prior to 1868-10-23 ISO don't work correctly in browsers due to a CLDR bug.)                                   |
 | `persian`          | Persian calendar                                                                                                                                                                                                                                                                                                                                                 |
 | `roc`              | Republic of China calendar                                                                                                                                                                                                                                                                                                                                       |
 
@@ -92,6 +92,7 @@ References:
 - [CLDR Calendar type keys](https://github.com/unicode-org/cldr/blob/main/common/bcp47/calendar.xml)
 - [UTS 35, Dates](https://unicode.org/reports/tr35/tr35-dates.html)
 - [Islamic calendar types](https://cldr.unicode.org/development/development-process/design-proposals/islamic-calendar-types) (CLDR design proposal)
+- [CLDR bug: Start date for the Meiji era is wrong for the Japanese Calendar](https://unicode-org.atlassian.net/browse/CLDR-11375)
 
 #### Supported collation types
 
