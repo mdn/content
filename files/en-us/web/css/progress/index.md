@@ -52,8 +52,6 @@ Respectively, these are:
 - Progress end
   - : The upper progress bound.
 
-The parameters can be mathematical expressions or simple values. The values (or sum results) can be any {{cssxref("&lt;number>")}}, {{cssxref("&lt;dimension>")}}, or {{cssxref("&lt;percentage>")}} value. They can be of different units, but they must all be of the same type, or else the function is invalid.
-
 ### Return value
 
 A {{cssxref("&lt;number>")}} representing the position of the progress value relative to the other two values. This is calculated as follows:
@@ -62,7 +60,7 @@ A {{cssxref("&lt;number>")}} representing the position of the progress value rel
 (progress - progress start) / (progress end - progress start)
 ```
 
-If the progress value is inbetween the progress start and progress end values, the return value will between 0 and 1, representing a percentage. If the progress value is smaller than the progress start value, or larger than the progress end value, the function is still valid, but the return value is clamped to `0` or `1`, respectively.
+If the progress value is in between the progress start and progress end values, the return value will between `0` and `1`, representing a percentage. If the progress value is smaller than the progress start value, or larger than the progress end value, the function is still valid, but the return value is clamped to `0` or `1`, respectively.
 
 ## Description
 
@@ -76,13 +74,46 @@ opacity: progress(5, 0, 10);
 
 In this case, the computed value of {{cssxref("opacity")}} would be `0.5`, as 5 is mid-way between `0` and `10`.
 
-However, because `progress()` only ever returns a unitless value between `0` and `1`, it is common to combine it with another math function such as {{cssxref("calc()")}} to output the value and units you want. The following example calculates a container {{cssxref("width")}} as a percentage between a minimum width of `320px` and a maximum width of `1200px`. The `calc()` function is used to multiply the `progress()` return value by `100` and set it to having percentage units.
+### Permitted unit types
 
-```css
-width: calc(progress(var(--container-width), 320px, 1200px) * 100%);
+The parameters of a `progress()` function can be mathematical expressions or simple values. The values (or expression results) can be any {{cssxref("&lt;number>")}}, {{cssxref("&lt;dimension>")}}, or {{cssxref("&lt;percentage>")}} value. They can have different units, but they must all be of the same type, or else the function is invalid.
+
+The example we saw previously is valid — all of its parameters are unitless `<number>` values:
+
+```css example-good
+progress(5, 0, 10)
 ```
 
-You can also use [CSS custom properties](/en-US/docs/Web/CSS/--*) inside `progress()` functions — this makes sense, as you'll often want to set the same values in multiple places, and/or base them on custom properties set via JavaScript. The next example is an update of the previous one, in which we've used custom properties for the progress, progress start, and progress end values. You could also use the `var(--custom-minwidth)` and `var(--custom-maxwidth)` custom properties as the values of the parent container's {{cssxref("min-width")}} and {{cssxref("max-width")}}.
+The next example is also valid — all of its parameters have {{cssxref("&lt;length>")}} units. Behind the scenes, the computed values are used for the calculation. Provided the {{cssxref("font-size")}} is `16px` at the point of calculation, `3em` will resolve to `48px`, which is `48%` of the way between `0px` and `100px`, so the return value will be `0.48`.
+
+```css example-good
+progress(3em, 0px, 100px)
+```
+
+The final couple of examples in this section is not valid, however. The types do not match, so the resulting calculations do not make sense.
+
+```css example-bad
+progress(3s, 0px, 100px)
+progress(3em, 0, 100)
+```
+
+### Creating unitless values
+
+The `progress()` function outputs unitless values, therefore it can be used for the purpose of removing units from values in the same manner as the [`tan(atan2())` hack](https://dev.to/janeori/css-type-casting-to-numeric-tanatan2-scalars-582j). Note however that, due to the updates in behavior around [CSS typed arithmetic](/en-US/docs/Web/CSS/CSS_Values_and_Units/Using_CSS_typed_arithmetic), this can also be achieved via simple division.
+
+### Combining `progress()` with other functions and custom properties
+
+Because `progress()` only ever returns a unitless value between `0` and `1`, it is common to combine it with another math function such as {{cssxref("calc()")}} to output the value and units you want. You can also use [CSS custom properties](/en-US/docs/Web/CSS/--*) inside `progress()` functions — this makes sense, as you'll often want to set the same values in multiple places, and/or base them on custom properties set via JavaScript.
+
+The following example calculates what percentage the viewport width is between a minimum width of `320px` and a maximum width of `1200px`. The `calc()` function is used to multiply the `progress()` return value by `600px` to convert it into a pixel value that will half of the viewport width's progress value between `320px` and `1200px`.
+
+```css
+width: calc(progress(100vw, 320px, 1200px) * 600px);
+```
+
+For example, if the viewport width is `700px`, the progress value will be calculated as `((700 - 320) / (1200 - 320))` = `0.431818`. The width will then be calculated as `0.431818 * 600px`, which equals `259.1px`.
+
+The next example is an update of the previous one, in which we've used custom properties for the progress, progress start, and progress end values.
 
 ```css
 width: calc(
@@ -91,7 +122,7 @@ width: calc(
       var(--custom-minwidth),
       var(--custom-maxwidth)
     ) *
-    100%
+    var(--custom-maxwidth)
 );
 ```
 
@@ -120,10 +151,6 @@ background-color: rgb(
     255 / 0.5
 );
 ```
-
-### Creating unitless values
-
-The `progress()` function outputs unitless values, therefore it can be used for the purpose of removing units from values in the same manner as the [`tan(atan2())` hack](https://dev.to/janeori/css-type-casting-to-numeric-tanatan2-scalars-582j). Note however that, due to the updates in behavior around [CSS typed arithmetic](/en-US/docs/Web/CSS/CSS_Values_and_Units/Using_CSS_typed_arithmetic), this can also be achieved via simple division.
 
 ## Formal syntax
 
@@ -205,13 +232,13 @@ The width of the `<div>` is `75%` of the `<section>` width, as the `min-width` i
 
 This example shows off some more involved uses of the `progress()` function, resulting in some fun effects as the browser window is resized.
 
-This example works much better when rendered full-size in a desktop browser tab. Therefore, we have not rendered it in an embedded live sample in this page. Instead, you can find it running live at [CSS `progress` function demo](https://mdn.github.io/dom-examples/css-progress/) (also see the [source code](https://github.com/mdn/dom-examples/tree/main/css-progress)).
+This example works much better when rendered full-size in a desktop browser tab. Therefore, we have not rendered it in an embedded live sample in this page. Instead, you can find it running live at [CSS `progress()` function demo](https://mdn.github.io/dom-examples/css-progress/) (also see the [source code](https://github.com/mdn/dom-examples/tree/main/css-progress)).
 
 Open the live example in a separate tab, and try increasing and decreasing the browser window width to see the effect. Keep this open so you can refer back to it as you read the explanation below.
 
 #### HTML
 
-Our HTML features an {{htmlelement("article")}} element that contains the rest of our content, and two {{htmlelement("section")}} elements — one to hang a background image off, and the other one to contain our content. The `content` `<section>` also contains a `progress` `<div>` representing a width progress bar, the same as the one in our previous demo. We have omitted the rest of the content for brevity.
+Our HTML features an {{htmlelement("article")}} element that contains the rest of our content, and two {{htmlelement("section")}} elements — one to hang a background image off, and the other one to contain our content. The `<section class="content">` also contains a `<div class="progress">` representing a width progress bar, the same as the one in our previous demo. We have omitted the rest of the content for brevity.
 
 ```html
 <article>
