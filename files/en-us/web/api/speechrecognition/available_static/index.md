@@ -3,7 +3,7 @@ title: "SpeechRecognition: available() static method"
 short-title: available()
 slug: Web/API/SpeechRecognition/available_static
 page-type: web-api-static-method
-browser-compat: api.SpeechRecognition.available
+browser-compat: api.SpeechRecognition.available_static
 ---
 
 {{APIRef("Web Speech API")}}

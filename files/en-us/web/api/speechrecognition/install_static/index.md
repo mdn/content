@@ -3,7 +3,7 @@ title: "SpeechRecognition: install() static method"
 short-title: install()
 slug: Web/API/SpeechRecognition/install_static
 page-type: web-api-static-method
-browser-compat: api.SpeechRecognition.install
+browser-compat: api.SpeechRecognition.install_static
 ---
 
 {{APIRef("Web Speech API")}}
