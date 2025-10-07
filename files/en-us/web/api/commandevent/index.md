@@ -54,7 +54,7 @@ popover.addEventListener("command", (event) => {
 
 ### Using custom values for commands
 
-In this example three buttons have been created with [`commands` with custom values](/en-US/docs/Web/HTML/Reference/Elements/button#custom_values). An 
+In this example three buttons have been created with [`commands` with custom values](/en-US/docs/Web/HTML/Reference/Elements/button#custom_values).
 
 ```html
 <div class="controls">
