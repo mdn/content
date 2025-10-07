@@ -3,10 +3,12 @@ title: "SpeechRecognition: available() static method"
 short-title: available()
 slug: Web/API/SpeechRecognition/available_static
 page-type: web-api-static-method
+status:
+  - experimental
 browser-compat: api.SpeechRecognition.available_static
 ---
 
-{{APIRef("Web Speech API")}}
+{{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
 The **`available()`** static method of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) checks whether the specified languages are available for speech recognition.
 
