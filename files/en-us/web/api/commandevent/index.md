@@ -63,7 +63,10 @@ In this example three buttons have been created with [`commands` with custom val
   <button commandfor="the-image" command="--rotate-right">Rotate Right</button>
 </div>
 
-<img id="the-image" src="/shared-assets/images/examples/dino.svg" alt="dinosaur head rotated 0 degrees" />
+<img
+  id="the-image"
+  src="/shared-assets/images/examples/dino.svg"
+  alt="dinosaur head rotated 0 degrees" />
 ```
 
 ```css hidden
@@ -81,18 +84,18 @@ An event listener is attached using the `command` event which then runs some cod
 const image = document.getElementById("the-image");
 
 image.addEventListener("command", (event) => {
-  let rotate = parseInt(event.target.style.rotate || '0');
+  let rotate = parseInt(event.target.style.rotate || "0");
   if (event.command == "--reset") {
-    rotate = 0
-    event.target.style.rotate = `${rotate}deg`; 
+    rotate = 0;
+    event.target.style.rotate = `${rotate}deg`;
   } else if (event.command === "--rotate-left") {
-    rotate === -270 ? rotate = 0 : rotate = rotate - 90;
+    rotate === -270 ? (rotate = 0) : (rotate = rotate - 90);
     event.target.style.rotate = `${rotate}deg`;
   } else if (event.command === "--rotate-right") {
-    rotate === 270 ? rotate = 0 : rotate = rotate + 90;
+    rotate === 270 ? (rotate = 0) : (rotate = rotate + 90);
     event.target.style.rotate = `${rotate}deg`;
   }
-  event.target.alt = `dinosaur head rotated ${rotate} degrees`
+  event.target.alt = `dinosaur head rotated ${rotate} degrees`;
 });
 ```
 
