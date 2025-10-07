@@ -89,7 +89,7 @@ image.addEventListener("command", (event) => {
     rotate = 0;
     event.target.style.rotate = `${rotate}deg`;
   } else if (event.command === "--rotate-left") {
-    rotate === -270 ? rotate = 0 : rotate = rotate - 90;
+    rotate === -270 ? (rotate = 0) : (rotate = rotate - 90);
     event.target.style.rotate = `${rotate}deg`;
   } else if (event.command === "--rotate-right") {
     rotate === 270 ? rotate = 0 : rotate = rotate + 90;
