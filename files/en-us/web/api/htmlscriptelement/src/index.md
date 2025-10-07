@@ -8,15 +8,102 @@ browser-compat: api.HTMLScriptElement.src
 
 {{APIRef("HTML DOM")}}
 
+> [!WARNING]
+> This property represents the URI of an external script loaded into the script element, which may be executable depending on the script {{domxref("HTMLScriptElement/type","type")}}.
+> APIs like this are known as [injection sinks](/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage), and are potentially a vector for [cross-site-scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) and other types of [website attacks](/en-US/docs/Web/Security/Attacks).
+>
+> You can mitigate this risk by having a [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) that restricts the locations from which scripts can be loaded, and by always assigning {{domxref("TrustedScriptURL")}} objects instead of strings and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types).
+> See [Security considerations](#security_considerations) for more information.
+
 The **`src`** property of the {{domxref("HTMLScriptElement")}} interface is a string representing the URL of an external script; this can be used as an alternative to embedding a script directly within a document.
 
-It reflects the `src` attribute of the {{HTMLElement("script")}} element.
+It reflects the [`src`](/en-US/docs/Web/HTML/Reference/Elements/script#src) attribute of the {{HTMLElement("script")}} element.
 
 ## Value
 
-A string.
+Getting the property returns a string containing the element's script URI.
+
+Setting the property accepts either a {{domxref("TrustedScriptURL")}} object or a string.
+
+### Exceptions
+
+- `TypeError`
+  - : Thrown if the property is set with a string when [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) are [enforced by a CSP](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) and no default policy is defined.
+    This is also thrown if the fetched URL cannot be successfully parsed as its indicated type, such as a module or importmap.
+
+## Description
+
+The **`src`** property represents the URL of an external script.
+If set, scripts provided via the text properties {{domxref("HTMLScriptElement.text","text")}}, {{domxref("HTMLScriptElement.textContent","textContent")}}, or {{domxref("HTMLScriptElement.textContent","innerText")}}, are ignored.
+
+### Security considerations
+
+The `src` property is used to load and run external scripts.
+The fetched script is run in the context of the current page, and can hence do anything that your own website code can do (even if the URL is not same-origin with your site).
+If the input is provided by a user, this is a possible vector for [Cross-site-scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks.
+Even if the resource is trusted by your website, it may still be compromised in a supply chain attack.
+
+A website should control what scripts that are allowed to run using a [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) with the [`script-src`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src) directive (or a fallback defined in [`default-src`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/default-src)).
+This can restrict scripts to those from the current origin, or a specific set of origins, or even particular files.
+To mitigate against supply chain attacks you can even restrict files to those that have a specific hash or nonce: the browser won't load a file that does not match the condition even if it is sent by a compromised server.
+
+It is extremely risky to accept and execute arbitrary URLs from untrusted origins.
+If you find a situation where this is necessary, you should always assign {{domxref("TrustedScriptURL")}} objects instead of strings, and [enforce trusted type](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) using the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) CSP directive.
+This ensures that the input is passed through a transformation function, which has the chance to [sanitize](/en-US/docs/Web/Security/Attacks/XSS#sanitization) or reject the URL before it is injected.
+
+The behavior of the transformation function will depend on the specific use case that requires a user provided script.
 
 ## Examples
+
+### Using TrustedScriptURL
+
+To mitigate the risk of XSS, we should always assign `TrustedScriptURL` instances to the `src` property.
+
+Trusted types are not yet supported on all browsers, so first we define the [trusted types tinyfill](/en-US/docs/Web/API/Trusted_Types_API#trusted_types_tinyfill).
+This acts as a transparent replacement for the trusted types JavaScript API:
+
+```js
+if (typeof trustedTypes === "undefined")
+  trustedTypes = { createPolicy: (n, rules) => rules };
+```
+
+Next we create a {{domxref("TrustedTypePolicy")}} that defines a {{domxref("TrustedTypePolicy/createScriptURL", "createScriptURL()")}} method for transforming input strings into {{domxref("TrustedScriptURL")}} instances.
+For the purpose of this example we'll just log the script URL:
+
+```js
+const policy = trustedTypes.createPolicy("script-url-policy", {
+  createScriptURL(input) {
+    console.log(`Log TT script-url-policy: ${input}`);
+    return input; // allow the script
+  },
+});
+```
+
+Next we'll create the script element to which we will assign the value and get a handle to the element.
+
+```html
+<script id="el" type="text/javascript"></script>
+```
+
+```js
+// Get the script element we're injecting the code into
+const el = document.getElementById("el");
+```
+
+Then we use the `policy` object to create a `trustedScript` object from the potentially unsafe input string, and assign the result to the element:
+
+```js
+// The potentially malicious string
+const untrustedScript = "https://evil.example.com/naughty.js";
+
+// Create a TrustedScriptURL instance using the policy
+const trustedScriptURL = policy.createScriptURL(untrustedScript);
+
+// Inject the TrustedScriptURL (which contains a trusted URL)
+el.src = trustedScriptURL;
+```
+
+## Reading the `src` element
 
 Assume the code is running on a website whose URL is `https://example.com`.
 
