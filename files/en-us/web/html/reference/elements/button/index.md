@@ -224,11 +224,63 @@ Whether clicking on a `<button>` or {{HTMLElement("input")}} button types causes
 
 ## Examples
 
+### Basic example
+
 ```html
 <button name="button">Press me</button>
 ```
 
-{{ EmbedLiveSample('Example', 200, 64) }}
+{{ EmbedLiveSample('basic_example', 200, 64) }}
+
+### Command request-close
+
+This example uses the `request-close` value for the command attribute to check if a dialog is [`cancelable`](/en-US/docs/Web/API/Event/cancelable) when clicking a close button. When clicking the close button inside the dialog it checks to see if the radio button is set to yes, if not the dialog will not close.
+
+```html
+<button commandfor="mydialog" command="show-modal">Open Dialog</button>
+<dialog id="mydialog">
+  <div class="wrapper">
+    <form>
+      <legend>Would you like to be able to close this dialog:</legend>
+      <div>
+        <input type="radio" id="no" name="close" value="no" checked />
+        <label for="no">No</label>
+      </div>
+      <div>
+        <input type="radio" id="yes" name="close" value="yes" />
+        <label for="yes">Yes</label>
+      </div>
+    </form>
+    <button commandfor="mydialog" command="request-close">Request to Close</button>
+    <p class="warning" hidden>You have not selected yes so can not close this dialog.</p>
+  </div>
+</dialog>
+```
+
+```css hidden
+.warning {
+  color: tomato;
+}
+```
+
+```js
+const dialog = document.querySelector("dialog");
+const radio = document.querySelector("form").elements["close"];
+const warning = document.querySelector(".warning");
+
+dialog.addEventListener("cancel", (e) => {
+  if (!e.cancelable) return;
+  if (radio.value === "no") {
+    warning.hidden = false;
+    e.preventDefault()
+  } else {
+    warning.hidden = true;
+    return;
+  }
+})
+```
+
+{{ EmbedLiveSample('command_request-close', 200) }}
 
 ## Technical summary
 

@@ -52,27 +52,51 @@ popover.addEventListener("command", (event) => {
 });
 ```
 
-### Custom example
+### Using custom values for commands
+
+In this example three buttons have been created with [`commands` with custom values](/en-US/docs/Web/HTML/Reference/Elements/button#custom_values). An 
 
 ```html
-<button commandfor="the-image" command="--rotate-left">Rotate Left</button>
+<div class="controls">
+  <button commandfor="the-image" command="--rotate-left">Rotate Left</button>
+  <button commandfor="the-image" command="--reset">Reset</button>
+  <button commandfor="the-image" command="--rotate-right">Rotate Right</button>
+</div>
 
-<button commandfor="the-image" command="--rotate-right">Rotate Right</button>
-
-<img id="the-image" src="photo.jpg" alt="[add appropriate alt text here]" />
+<img id="the-image" src="/shared-assets/images/examples/dino.svg" alt="dinosaur head rotated 0 degrees" />
 ```
+
+```css hidden
+.controls {
+  margin-block-end: 20px;
+}
+```
+
+An event listener is attached using the `command` event which then runs some code based upon which custom value the button has assigned to it.
+
+> [!NOTE]
+> As the example is updating an image the `alt` text is also being updated.
 
 ```js
 const image = document.getElementById("the-image");
 
 image.addEventListener("command", (event) => {
-  if (event.command === "--rotate-left") {
-    event.target.style.rotate = "-90deg";
+  let rotate = parseInt(event.target.style.rotate || '0');
+  if (event.command == "--reset") {
+    rotate = 0
+    event.target.style.rotate = `${rotate}deg`; 
+  } else if (event.command === "--rotate-left") {
+    rotate === -270 ? rotate = 0 : rotate = rotate - 90;
+    event.target.style.rotate = `${rotate}deg`;
   } else if (event.command === "--rotate-right") {
-    event.target.style.rotate = "90deg";
+    rotate === 270 ? rotate = 0 : rotate = rotate + 90;
+    event.target.style.rotate = `${rotate}deg`;
   }
+  event.target.alt = `dinosaur head rotated ${rotate} degrees`
 });
 ```
+
+{{EmbedLiveSample('using_custom_values_for_commands', '100%', "220")}}
 
 ## Specifications
 
