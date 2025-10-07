@@ -199,6 +199,9 @@ Try scrolling so the anchor nears the edges:
 - If you move the anchor near the top of the viewport, you will see the positioned element flip to the bottom-left of the anchor to avoid overflowing.
 - If you move the anchor near the left of the viewport, you will see the positioned element flip to the top-right of the anchor to avoid overflowing.
 
+> [!NOTE]
+> The positioned element will not return to its original position if the anchor is moved back. As long as the fallback position is still valid (not overflowing), the positioned element will remain in the fallback position.
+
 However, if you move the anchor towards the top-left corner of the viewport, you'll notice a problem — as the positioned element starts to overflow in the block and inline direction, it flips back to its default top-left position and overflows in both directions, which is not what we want.
 
 This is because we only gave the browser position options of `flip-block` _or_ `flip-inline`. We didn't give it the option of trying both at the same time. The next example will show you how to fix this issue.
