@@ -32,10 +32,8 @@ jobs:
   review:
     environment: review
     runs-on: ubuntu-latest
-    if: github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.pull_requests[0].number
+    if: github.event.workflow_run.conclusion == 'success'
     env:
-      PR_NUMBER: ${{ github.event.workflow_run.pull_requests[0].number }}
-      PREFIX: pr${{ github.event.workflow_run.pull_requests[0].number }}
       STATUS_PATH: repos/${{ github.repository }}/statuses/${{ github.event.workflow_run.pull_requests[0].head.sha }}
       STATUS_CONTEXT: pr-review-companion
       STATUS_TARGET: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
@@ -52,10 +50,14 @@ jobs:
       - name: Check for artifacts
         id: check
         if: hashFiles('build/') != ''
-        run: echo "HAS_ARTIFACT=true" >> "$GITHUB_OUTPUT"
+        run: |
+          echo "HAS_ARTIFACT=true" >> "$GITHUB_OUTPUT"
+          PR_NUMBER=`cat build/NR | tr -dc '0-9'`
+          echo "PR_NUMBER=$PR_NUMBER" >> "$GITHUB_OUTPUT"
+          echo "PREFIX=pr$PR_NUMBER" >> "$GITHUB_OUTPUT"
 
       - name: Mark status as pending
-        if: steps.check.outputs.HAS_ARTIFACT
+        if: steps.check.outputs.HAS_ARTIFACT && github.event.workflow_run.pull_requests[0].number
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -82,7 +84,7 @@ jobs:
         uses: google-github-actions/upload-cloud-storage@v3
         with:
           path: "build"
-          destination: "${{ vars.GCP_BUCKET_NAME }}/${{ env.PREFIX }}"
+          destination: "${{ vars.GCP_BUCKET_NAME }}/${{ steps.check.outputs.PREFIX }}"
           resumable: false
           headers: |-
             cache-control: no-store
@@ -114,6 +116,8 @@ jobs:
         if: steps.check.outputs.HAS_ARTIFACT
         env:
           BUILD_OUT_ROOT: ${{ github.workspace }}/build
+          PREFIX: ${{ steps.check.outputs.PREFIX }}
+          PR_NUMBER: ${{ steps.check.outputs.PR_NUMBER }}
         working-directory: content
         run: |
           echo "Pull request:"
@@ -130,7 +134,7 @@ jobs:
             $BUILD_OUT_ROOT
 
       - name: Mark status as success
-        if: steps.check.outputs.HAS_ARTIFACT && success()
+        if: steps.check.outputs.HAS_ARTIFACT && success() && github.event.workflow_run.pull_requests[0].number
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -141,7 +145,7 @@ jobs:
             -f target_url="$STATUS_TARGET"
 
       - name: Mark status as failure
-        if: steps.check.outputs.HAS_ARTIFACT && failure()
+        if: steps.check.outputs.HAS_ARTIFACT && failure() && github.event.workflow_run.pull_requests[0].number
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
