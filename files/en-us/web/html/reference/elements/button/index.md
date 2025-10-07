@@ -251,8 +251,12 @@ This example uses the `request-close` value for the command attribute to check i
         <label for="yes">Yes</label>
       </div>
     </form>
-    <button commandfor="mydialog" command="request-close">Request to Close</button>
-    <p class="warning" hidden>You have not selected yes so can not close this dialog.</p>
+    <button commandfor="mydialog" command="request-close">
+      Request to Close
+    </button>
+    <p class="warning" hidden>
+      You have not selected yes so can not close this dialog.
+    </p>
   </div>
 </dialog>
 ```
