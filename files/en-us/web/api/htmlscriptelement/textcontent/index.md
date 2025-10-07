@@ -24,6 +24,11 @@ Getting the property returns a string containing the script's text.
 
 Setting the property accepts either a {{domxref("TrustedScript")}} object or a string.
 
+### Exceptions
+
+- `TypeError`
+  - : Thrown if the property is set to a string when [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) are [enforced by a CSP](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) and no default policy is defined.
+
 ## Description
 
 The **`textContent`** property of the {{domxref("HTMLScriptElement")}} interface represents the text content inside the {{HTMLElement("script")}} element.
