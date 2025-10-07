@@ -6,9 +6,9 @@ page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Test_your_skills/Backgrounds_and_borders", "Learn_web_development/Core/Styling_basics/Overflow", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Test_your_skills/Overflow", "Learn_web_development/Core/Styling_basics/Images_media_forms", "Learn_web_development/Core/Styling_basics")}}
 
-In this challenge you are provided with a lightly-styled page structure that renders a content panel containing text and images, with a heading at the top and a button bar at the bottom. We want you to follow the instructions to size and decorate it, producing an interesting layout as a result. Along the way, we'll test your knowledge of CSS values and units, sizing, and background and borders.
+In this challenge you are provided with a lightly-styled page structure that renders a content panel containing text and images, with a heading at the top and a button bar at the bottom. We want you to follow the instructions to size and decorate it, producing an interesting layout as a result. Along the way, we'll test your knowledge of CSS values and units, sizing, overflow, and backgrounds and borders.
 
 ## Starting point
 
@@ -17,7 +17,7 @@ We are going to get you to solve this challenge on your local development enviro
 1. Create a new folder on your computer called `size-decorate-content-panel`.
 2. Inside the folder, create an `index.html` file and paste the following content into it:
 
-   ```html-nolint
+   ```html-nolint live-sample___content-pane-start live-sample___content-pane-finish
    <!doctype html>
    <html lang="en">
      <head>
@@ -88,7 +88,7 @@ We are going to get you to solve this challenge on your local development enviro
 
 3. Inside the folder, create a `style.css` file and paste the following content into it:
 
-   ```css
+   ```css live-sample___content-pane-start
    /* Type and text */
 
    * {
@@ -137,7 +137,6 @@ We are going to get you to solve this challenge on your local development enviro
    }
 
    .content {
-     overflow: auto;
    }
 
    .controls {
@@ -179,9 +178,13 @@ Follow the steps below to complete the project, sizing the content pane appropri
 
 1. Apply a color gradient to the `pane` `<section>` that changes smoothly from `#9fb4c7` at the top to `#7f7caf` at the bottom.
 2. Give the images a `1px solid` border and the `content` `<div>` a `2px solid` border. Give the borders a color of `#28587b`.
-3. Give the `content` `<div>` a background color of `#eeeeff`, and a background image of `https://mdn.github.io/shared-assets/images/examples/big-star.png`. The background image should not repeat, and should be placed `10px` from the top of the container and `20px` from the right.
+3. Give the `content` `<div>` a background color of `#eeeeff`, and a background image of `https://mdn.github.io/shared-assets/images/examples/big-star.png`. The background image should not repeat, should be sized at `40px` by `40px`, and should be placed `5px` from the top of the container and `15px` from the right.
 4. Give the buttons a text color of `white` and a background color of `rgb(40 88 123 / 0.8)`. On hover or focus, the buttons should change to have a fully opaque version of the same background color.
 5. Set a `10px` border radius on the `content` `<div>` and the buttons.
+
+### Overflow
+
+At this point, you should still notice a problem with the UI — the content contained in the `content` `<div>` overflows its container, and the whole page scrolls to allow you to access it all. We want the `content` `<div>` to scroll instead. How can you achieve this?
 
 ## Hints and tips
 
@@ -190,72 +193,18 @@ Follow the steps below to complete the project, sizing the content pane appropri
 
 ## Example
 
+The starting state of the project will render like this:
+
+{{EmbedLiveSample("content-pane-start", "100%", 500)}}
+
 The finished project should look like this (we've rendered this at `90%` width, not `60%`, so it looks better in the narrow output pane):
 
 {{EmbedLiveSample("content-pane-finish", "100%", 500)}}
 
 <details>
-<summary>Click here to show the solution</summary>
+<summary>Click here to show a possible solution</summary>
 
 The finished CSS looks like so:
-
-```html hidden live-sample___content-pane-finish
-<section class="pane">
-  <h1>Content pane</h1>
-  <div class="content">
-    <h2>Some exciting content</h2>
-
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Proin tortor purus
-      <a href="#">platea sit eu id</a> nisi litora libero. Neque vulputate
-      consequat ac amet augue blandit maximus aliquet congue. Pharetra
-      vestibulum posuere ornare <a href="#">faucibus fusce dictumst</a> orci
-      aenean eu facilisis ut volutpat commodo senectus purus himenaeos fames
-      primis convallis nisi.
-    </p>
-    <img
-      src="https://mdn.github.io/shared-assets/images/examples/leopard.jpg"
-      alt="Closeup of a large wild cat's eyes and nose" />
-    <p>
-      Phasellus fermentum malesuada phasellus netus dictum aenean placerat
-      egestas amet.
-      <a href="#">Ornare taciti semper dolor tristique</a> morbi. Sem leo
-      tincidunt aliquet semper eu lectus scelerisque quis. Sagittis vivamus
-      mollis nisi mollis enim fermentum laoreet.
-    </p>
-
-    <h2>More exciting content</h2>
-
-    <p>
-      Curabitur semper venenatis lectus viverra ex dictumst nulla maximus.
-      Primis iaculis elementum conubia feugiat venenatis dolor augue ac blandit
-      nullam ac <a href="#">phasellus turpis</a> feugiat mollis. Duis lectus
-      porta mattis imperdiet vivamus augue litora lectus arcu. Justo torquent
-      pharetra volutpat ad blandit bibendum
-      <a href="#">accumsan nec elit cras</a> luctus primis ipsum gravida class
-      congue.
-    </p>
-    <img
-      src="https://mdn.github.io/shared-assets/images/examples/balloons-landscape.jpg"
-      alt="Three colorful hot air balloons floating across a blue, nearly cloudless sky" />
-    <p>
-      Vehicula etiam elementum finibus enim duis feugiat commodo adipiscing
-      tortor <a href="#">tempor elit</a>. Et mollis consectetur habitant turpis
-      tortor consectetur adipiscing vulputate dolor lectus iaculis convallis
-      adipiscing. Nam hendrerit
-      <a href="#">dignissim condimentum ullamcorper diam</a> morbi eget
-      consectetur odio in sagittis.
-    </p>
-  </div>
-  <div class="controls">
-    <button>One</button>
-    <button>Two</button>
-    <button>Three</button>
-    <button>Four</button>
-  </div>
-</section>
-```
 
 ```css live-sample___content-pane-finish
 /* Type and text */
@@ -336,9 +285,9 @@ h1,
 }
 
 .content {
-  /* Set background color and image on the content div */
+  /* Set background color and image on the content div, and size the image */
   background: url("https://mdn.github.io/shared-assets/images/examples/big-star.png")
-    no-repeat top 10px right 20px #eeeeff;
+    no-repeat top 5px right 15px / 40px #eef;
   /* Set vertical padding of 0 on both sides and horizontal padding
   of 20px on both sides */
   padding: 0 20px;
@@ -347,6 +296,7 @@ h1,
   height: calc(100% - 200px);
   /* Set border on the content div */
   border: 2px solid #28587b;
+  /* Stop the content from overflowing its container; make it scroll instead */
   overflow: auto;
 }
 
@@ -389,4 +339,4 @@ button {
 
 </details>
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Test_your_skills/Backgrounds_and_borders", "Learn_web_development/Core/Styling_basics/Overflow", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Test_your_skills/Overflow", "Learn_web_development/Core/Styling_basics/Images_media_forms", "Learn_web_development/Core/Styling_basics")}}

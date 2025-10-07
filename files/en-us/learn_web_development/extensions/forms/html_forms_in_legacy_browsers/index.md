@@ -1,5 +1,6 @@
 ---
 title: HTML forms in legacy browsers
+short-title: Forms in legacy browsers
 slug: Learn_web_development/Extensions/Forms/HTML_forms_in_legacy_browsers
 page-type: guide
 sidebar: learnsidebar
@@ -86,17 +87,15 @@ input[type="button"] {
 }
 ```
 
-### Let go of CSS
+### Limit styling in legacy browsers
 
-One of the big issues with HTML Forms is styling form widgets with CSS. Form controls appearance is browser and operating system specific. For example, the input of color type looks different in Safari, Chrome and Firefox browser, but the color picker widget is the same in all browsers on a device as it opens up the operating system's native color picker.
+One of the big issues with HTML forms in legacy browsers is styling them with CSS. As covered elsewhere, you can declare {{cssxref('appearance', 'appearance: none;')}} to remove the default styles and build your own on top. However, legacy browsers are less likely than modern browsers to support the styling techniques covered earlier in the module. It might be better to just leave form controls unstyled in legacy browsers, if you need to support them. See the next section for advice on detecting support for specific input types.
 
-It's generally a good idea to not alter the default appearance of form control because altering one CSS property value may alter some input types but not others. For example, if you declare `input { font-size: 2rem; }`, it will impact `number`, `date`, and `text`, but not `color` or `range`. If you alter a property, that may impact the appearance of the widget in unexpected ways. For example, `[value] { background-color: #cccccc; }` may have been used to target every {{HTMLElement("input")}} with a `value` attribute, but changing the background-color or border radius on a {{HTMLElement("meter")}} will lead to likely unexpected results that differ across browsers. You can declare {{cssxref('appearance', 'appearance: none;')}} to remove the browser styles, but that generally defeats the purpose: as you lose all styling, removing the default look and feel your visitors are used to.
-
-To summarize, when it comes to styling form control widgets, the side effects of styling them with CSS can be unpredictable. So don't. Even if it's still possible to do a few adjustments on text elements (such as sizing or font color), there are always side effects. The best approach remains to not style HTML Form widgets at all. But you can still apply styles to all the surrounding items. And, if you must alter the default styles of your form widgets, define a style guide to ensure consistency among all your form controls so user experience is not destroyed. You can also investigate some hard techniques such as [rebuilding widgets with JavaScript](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls). But in that case, do not hesitate to [charge your client for such foolishness](https://www.smashingmagazine.com/2011/11/but-the-client-wants-ie-6-support/).
+If you must alter the default styles of your form widgets in legacy browsers, define a style guide to ensure consistency among all your form controls so user experience is not destroyed. You could also investigate some hard techniques such as [rebuilding widgets with JavaScript](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls), but it might be more trouble than it's worth.
 
 ## Feature detection and polyfills
 
-CSS and JavaScript are awesome technologies, but it's important to ensure you don't break legacy browsers. Before using features that aren't fully supported in the browsers your targeting, you should feature detect:
+CSS and JavaScript are awesome technologies, but it's important to ensure you don't break legacy browsers. Before using features that aren't fully supported in the browsers your targeting, you should feature detect.
 
 ### CSS feature detection
 
@@ -113,6 +112,34 @@ Before styling a replaced form control widget, you can check to see if the brows
 
 The {{cssxref('appearance')}} property can be used to display an element using platform-native styling, or, as is done with the value of `none`, remove default platform-native based styling.
 
+### JavaScript form input detection
+
+You can use JavaScript to detect whether a particular input type is supported. This is based on the fact we mentioned before — that every input type falls back to `<input type="text">` in non-supporting browsers.
+
+1. Define a test function. The first line of the function body should create a test `<input>` element:
+
+   ```js
+   function testDatetimeLocalSupport() {
+     const testInput = document.createElement("input");
+   ```
+
+2. Next, set its `type` attribute to the type you want to test:
+
+   ```js-nolint
+     testInput.setAttribute("type", "datetime-local");
+   ```
+
+3. Now test the `type` attribute value. In browsers that don't support that input type, the last line will have no effect and the `type` will be returned as `text`. In the below line we are inverting the return value using the negation operator (`!`) because if the `type` isn't `text`, then the type is supported, so we want to return `true`:
+
+   ```js
+     return testInput.type !== "text";
+   }
+   ```
+
+The above example shows the basic idea behind such tests. Instead of reinventing the wheel, however, you should use a feature detection library such as [Modernizr](https://modernizr.com/) to handle such tests.
+
+Based on the results of that test, you could then for example choose to use JavaScript to build a custom replacement for the non-supported type, or not apply a stylesheet that styles the non-supported type because you want to provide simple default styles to legacy browsers.
+
 ### Unobtrusive JavaScript
 
 One of the biggest problems is the availability of APIs. For that reason, it's considered best practice to work with "unobtrusive" JavaScript. It's a development pattern that defines two requirements:
@@ -120,7 +147,7 @@ One of the biggest problems is the availability of APIs. For that reason, it's c
 - A strict separation between structure and behaviors.
 - If the code breaks, the content and the basic functionalities must remain accessible and usable.
 
-[The principles of unobtrusive JavaScript](https://www.w3.org/wiki/The_principles_of_unobtrusive_JavaScript) (originally written by Peter-Paul Koch for Dev.Opera.com) describes these ideas very well.
+[The principles of unobtrusive JavaScript](https://www.w3.org/wiki/The_principles_of_unobtrusive_JavaScript) (originally written by Peter-Paul Koch for dev.opera.com) describes these ideas very well.
 
 ### Pay attention to performance
 
