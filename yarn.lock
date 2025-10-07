@@ -480,10 +480,10 @@
     "@lezer/common" "^1.0.2"
     "@lezer/css" "^1.1.7"
 
-"@codemirror/lang-html@^6.4.10", "@codemirror/lang-html@^6.4.9":
-  version "6.4.10"
-  resolved "https://registry.yarnpkg.com/@codemirror/lang-html/-/lang-html-6.4.10.tgz#e9d222e147b91003cd6b4680d81fc829c9107be5"
-  integrity sha512-h/SceTVsN5r+WE+TVP2g3KDvNoSzbSrtZXCKo4vkKdbfT5t4otuVgngGdFukOO/rwRD2++pCxoh6xD4TEVMkQA==
+"@codemirror/lang-html@^6.4.11", "@codemirror/lang-html@^6.4.9":
+  version "6.4.11"
+  resolved "https://registry.yarnpkg.com/@codemirror/lang-html/-/lang-html-6.4.11.tgz#c46ba46ae642fd567cf05c4129005d2913ac248d"
+  integrity sha512-9NsXp7Nwp891pQchI7gPdTwBuSuT3K65NGTHWHNJ55HjYcHLllr0rbIZNdOzas9ztc1EUVBlHou85FFZS4BNnw==
   dependencies:
     "@codemirror/autocomplete" "^6.0.0"
     "@codemirror/lang-css" "^6.0.0"
@@ -493,7 +493,7 @@
     "@codemirror/view" "^6.17.0"
     "@lezer/common" "^1.0.0"
     "@lezer/css" "^1.1.0"
-    "@lezer/html" "^1.3.0"
+    "@lezer/html" "^1.3.12"
 
 "@codemirror/lang-javascript@^6.0.0", "@codemirror/lang-javascript@^6.2.3", "@codemirror/lang-javascript@^6.2.4":
   version "6.2.4"
@@ -1516,10 +1516,10 @@
   dependencies:
     "@lezer/common" "^1.0.0"
 
-"@lezer/html@^1.3.0":
-  version "1.3.10"
-  resolved "https://registry.yarnpkg.com/@lezer/html/-/html-1.3.10.tgz#1be9a029a6fe835c823b20a98a449a630416b2af"
-  integrity sha512-dqpT8nISx/p9Do3AchvYGV3qYc4/rKr3IBZxlHmpIKam56P47RSHkSF5f13Vu9hebS1jM0HmtJIwLbWz1VIY6w==
+"@lezer/html@^1.3.12":
+  version "1.3.12"
+  resolved "https://registry.yarnpkg.com/@lezer/html/-/html-1.3.12.tgz#a438e2d04f4c863d49cad27efe714cde8cf3ff1b"
+  integrity sha512-RJ7eRWdaJe3bsiiLLHjCFT1JMk8m1YP9kaUbvu2rMLEoOnke9mcTVDyfOslsln0LtujdWespjJ39w6zo+RsQYw==
   dependencies:
     "@lezer/common" "^1.2.0"
     "@lezer/highlight" "^1.0.0"
@@ -1613,13 +1613,13 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-6.0.28.tgz#e99a2cb1693fec9255c3cf1cfe1b02fcfd0de12d"
   integrity sha512-UE4uV0VK+HfGyXCNdq3Lyy0xNJ6bJI9Y8XtVnnv7+oFda3xtV3PQJIMPHEtC+ou1qrrHdrtaLNQ9cJSj4hi94Q==
 
-"@mdn/fred@1.6.0":
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/@mdn/fred/-/fred-1.6.0.tgz#4206ab86929c0f6313125f150e783e4ba7e05ec9"
-  integrity sha512-2+WG3PMWqC0OoHMF4/wpNBK8BCr7mkp6Ap12TWyrCVWFY7o+glTf12aNzwgevcshCa8oM2d36WasqNCPckDHfw==
+"@mdn/fred@1.6.1":
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/@mdn/fred/-/fred-1.6.1.tgz#b3ac8c69169cf6ab8baace224cfb68ca701e14f7"
+  integrity sha512-mtEiUnhwQpdgSqdKMkMSMV8ROYNn2TBHTGOMRQAajfAIYrS18d93dJvtIncdjQsekGKWd+ePkpGfW0Zvayh1qA==
   dependencies:
     "@codemirror/lang-css" "^6.3.1"
-    "@codemirror/lang-html" "^6.4.10"
+    "@codemirror/lang-html" "^6.4.11"
     "@codemirror/lang-javascript" "^6.2.3"
     "@codemirror/lang-wast" "^6.0.2"
     "@codemirror/state" "^6.5.2"
