@@ -48,7 +48,10 @@ In this example three buttons have been created with [`commands` with custom val
   <button commandfor="the-image" command="--rotate-right">Rotate Right</button>
 </div>
 
-<img id="the-image" src="/shared-assets/images/examples/dino.svg" alt="dinosaur head rotated 0 degrees" />
+<img
+  id="the-image"
+  src="/shared-assets/images/examples/dino.svg"
+  alt="dinosaur head rotated 0 degrees" />
 ```
 
 ```css hidden
