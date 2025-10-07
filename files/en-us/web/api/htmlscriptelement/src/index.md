@@ -29,6 +29,8 @@ Setting the property accepts either a {{domxref("TrustedScriptURL")}} object or 
 
 - `TypeError`
   - : Thrown if the property is set with a string when [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) are [enforced by a CSP](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) and no default policy is defined.
+    This is also thrown if the fetched URL cannot be successfully parsed as its indicated type, such as a module or importmap.
+  
 
 ## Description
 
