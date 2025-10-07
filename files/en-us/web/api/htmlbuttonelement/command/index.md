@@ -80,7 +80,7 @@ image.addEventListener("command", (event) => {
     rotate === 270 ? (rotate = 0) : (rotate = rotate + 90);
     event.target.style.rotate = `${rotate}deg`;
   }
-  event.target.alt = `dinosaur head rotated ${rotate} degrees`
+  event.target.alt = `dinosaur head rotated ${rotate} degrees`;
 });
 ```
 
