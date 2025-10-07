@@ -230,7 +230,7 @@ However, this design is rather garish. In this article, we'll get you to mark it
 
 Let's work through styling our table example together.
 
-1. To start with, make a local copy of the [sample markup](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/styling-tables/punk-bands-unstyled.html) and save it in a working directory somewhere on your local computer.
+1. To start with, make a local copy of the sample markup [shown earlier](/en-US/docs/Learn_web_development/Core/Styling_basics/Tables#a_typical_html_table) and save it in a working directory somewhere on your local computer.
 2. Next, create a new file called `style.css` and save it in the same directory as your other files.
 3. Link the CSS to the HTML by placing the following line of HTML inside your {{htmlelement("head")}}:
 
@@ -272,7 +272,7 @@ The most important parts to note are as follows:
 
 - A {{cssxref("table-layout")}} value of `fixed` is generally a good idea to set on your table, as it makes the table behave a bit more predictably by default. Normally, table columns tend to be sized according to how much content they contain, which produces some strange results. With `table-layout: fixed`, you can size your columns according to the width of their headings, and then deal with their content as appropriate. Chris Coyier discusses this technique in more detail in [Fixed Table Layouts](https://css-tricks.com/fixing-tables-long-strings/).
 
-- We've coupled the fixed layout with a {{cssxref("width")}} of `80%`, a {{cssxref("min-width")}} of `1000px`, and a {{cssxref("margin")}} of `0 auto`. These settings mean that the table will mostly fill a wider viewport and be centered horizontally, while on narrow viewports the table will stay at a legible width and extend off the screen. Mobile users, for example, can then scroll to read the whole table. This is preferable to having the table stretch the width of a narrow screen and be cramped and unreadable.
+- We've coupled the fixed layout with a {{cssxref("width")}} of `90%` and a {{cssxref("margin")}} of `10px auto`. These settings mean that the table will mostly fill the viewport and be centered horizontally.
 
 - A {{cssxref("border-collapse")}} value of `collapse` is standard best practice for any table styling effort. By default, when you set borders on table elements, they will all have spacing between them, as the below image illustrates: ![a 2 by 2 table with default spacing between the borders showing no border collapse](no-border-collapse.png) This doesn't look very nice (although it might be the look you want, who knows?). With `border-collapse: collapse;` set, the borders collapse down into one, which looks much better: ![a 2 by 2 table with border-collapse property set to collapse showing borders collapse into one](border-collapse.png)
 - We've set some {{cssxref("padding")}} on the {{htmlelement("th")}} and {{htmlelement("td")}} elements — this gives the data items some space to breathe, making the table look a lot more legible.
