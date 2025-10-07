@@ -38,6 +38,11 @@ jobs:
       STATUS_CONTEXT: pr-review-companion
       STATUS_TARGET: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
     steps:
+      - name: Show workflow_run payload
+        env:
+          PAYLOAD: ${{ toJson(github.event.workflow_run) }}
+        run: echo "$PAYLOAD" | jq .
+
       - name: Download artifact
         uses: actions/download-artifact@v5
         with:
