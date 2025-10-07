@@ -84,7 +84,7 @@ An event listener is attached using the `command` event which then runs some cod
 const image = document.getElementById("the-image");
 
 image.addEventListener("command", (event) => {
-  let rotate = parseInt(event.target.style.rotate || '0');
+  let rotate = parseInt(event.target.style.rotate || "0");
   if (event.command == "--reset") {
     rotate = 0
     event.target.style.rotate = `${rotate}deg`; 
