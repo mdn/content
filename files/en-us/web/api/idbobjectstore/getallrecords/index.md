@@ -33,11 +33,11 @@ An optional object, the properties of which can include:
     - `next`
       - : The records are traversed from the beginning, in increasing key order. This is the default value.
     - `nextunique`
-      - : The records are traversed from the beginning, in increasing key order. In cases where keys are duplicated across multiple records, only the first encountered record with each key is retrieved.
+      - : The records are traversed from the beginning, in increasing key order. This will yield the same records as `next`, because duplicate keys are not allowed in `IDBObjectStore`s.
     - `prev`
       - : The records are traversed from the end, in decreasing key order.
     - `prevunique`
-      - : The records are traversed from the end, in decreasing key order. In cases where keys are duplicated across multiple records, only the first encountered record with each key is retrieved.
+      - : The records are traversed from the end, in decreasing key order. This will yield the same records as `prev`, because duplicate keys are not allowed in `IDBObjectStore`s.
 
 ### Return value
 
@@ -47,18 +47,17 @@ If the operation is successful, the value of the request's {{domxref("IDBRequest
 
 Each object contains the following properties:
 
+- `key`
+  - : A value representing the record's key.
 - `primaryKey`
-  - : A string representing the primary key associated with the record.
+  - : The record's key; identical to the `key` property.
 - `value`
-  - : A value representing the record's value. The value can be of any type, and its type will match whatever type was originally stored in the database.
+  - : A value representing the record's value.
 
 ### Exceptions
 
 This method may raise a {{domxref("DOMException")}} of the following types:
 
-- `DataError` {{domxref("DOMException")}}
-  - : Thrown if:
-    - The specified [`query`](#query) parameter is invalid, has an invalid type, or doesn't exist in the index.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref("IDBObjectStore")}} has been deleted or removed.
 - `TransactionInactiveError` {{domxref("DOMException")}}

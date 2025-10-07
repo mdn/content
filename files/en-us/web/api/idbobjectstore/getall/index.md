@@ -58,15 +58,15 @@ If an object parameter is specified, its properties can include:
 - `count` {{optional_inline}}
   - : See the earlier [`count`](#count) definition.
 - `direction` {{optional_inline}}
-  - : An enumerated value specifying the direction in which the objects are traversed, which in turn defines the order in which they are returned. Possible values are:
+  - : An enumerated value specifying the direction in which the objects are traversed. Possible values are:
     - `next`
       - : The objects are traversed from the beginning, in increasing key order. This is the default value.
     - `nextunique`
-      - : The objects are traversed from the beginning, in increasing key order. In cases where keys are duplicated across multiple objects, only the first encountered object with each key is retrieved.
+      - : The objects are traversed from the beginning, in increasing key order. This will yield the same objects as `next`, because duplicate keys are not allowed in `IDBObjectStore`s.
     - `prev`
       - : The objects are traversed from the end, in decreasing key order.
     - `prevunique`
-      - : The objects are traversed from the end, in decreasing key order. In cases where keys are duplicated across multiple objects, only the first encountered object with each key is retrieved.
+      - : The objects are traversed from the end, in decreasing key order. This will yield the same objects as `prev`, because duplicate keys are not allowed in `IDBObjectStore`s.
 
 ### Return value
 
