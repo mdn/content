@@ -20,48 +20,48 @@ To learn more about how constraints work, see [Capabilities, constraints, and se
 Some combination—but not necessarily all—of the following properties will exist on the object.
 
 - {{domxref("MediaTrackSupportedConstraints.autoGainControl", "autoGainControl")}}
-  - : A Boolean whose value is `true` if the [`autoGainControl`](/en-US/docs/Web/API/MediaTrackConstraints/autoGainControl) constraint is supported in the current environment.
+  - : A Boolean that is `true` if the [`autoGainControl`](/en-US/docs/Web/API/MediaTrackConstraints/autoGainControl) constraint is supported in the current environment.
 - {{domxref("MediaTrackSupportedConstraints.width", "width")}}
-  - : A Boolean value whose value is `true` if the [`width`](/en-US/docs/Web/API/MediaTrackConstraints/width) constraint is supported in the current environment.
+  - : A Boolean that is `true` if the [`width`](/en-US/docs/Web/API/MediaTrackConstraints/width) constraint is supported in the current environment.
 - {{domxref("MediaTrackSupportedConstraints.height", "height")}}
-  - : A Boolean value whose value is `true` if the [`height`](/en-US/docs/Web/API/MediaTrackConstraints/height) constraint is supported in the current environment.
+  - : A Boolean that is `true` if the [`height`](/en-US/docs/Web/API/MediaTrackConstraints/height) constraint is supported in the current environment.
 - {{domxref("MediaTrackSupportedConstraints.aspectRatio", "aspectRatio")}}
-  - : A Boolean value whose value is `true` if the [`aspectRatio`](/en-US/docs/Web/API/MediaTrackConstraints/aspectRatio) constraint is supported in the current environment.
+  - : A Boolean that is `true` if the [`aspectRatio`](/en-US/docs/Web/API/MediaTrackConstraints/aspectRatio) constraint is supported in the current environment.
 - {{domxref("MediaTrackSupportedConstraints.frameRate", "frameRate")}}
-  - : A Boolean value whose value is `true` if the [`frameRate`](/en-US/docs/Web/API/MediaTrackConstraints/frameRate) constraint is supported in the current environment.
+  - : A Boolean that is `true` if the [`frameRate`](/en-US/docs/Web/API/MediaTrackConstraints/frameRate) constraint is supported in the current environment.
 - {{domxref("MediaTrackSupportedConstraints.facingMode", "facingMode")}}
-  - : A Boolean value whose value is `true` if the [`facingMode`](/en-US/docs/Web/API/MediaTrackConstraints/facingMode) constraint is supported in the current environment.
+  - : A Boolean that is `true` if the [`facingMode`](/en-US/docs/Web/API/MediaTrackConstraints/facingMode) constraint is supported in the current environment.
 - {{domxref("MediaTrackSupportedConstraints.resizeMode", "resizeMode")}}
-  - : A Boolean value whose value is `true` if the [`resizeMode`](/en-US/docs/Web/API/MediaTrackConstraints/resizeMode) constraint is supported in the current environment.
+  - : A Boolean that is `true` if the [`resizeMode`](/en-US/docs/Web/API/MediaTrackConstraints/resizeMode) constraint is supported in the current environment.
 - {{domxref("MediaTrackSupportedConstraints.volume", "volume")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : A Boolean value whose value is `true` if the [`volume`](/en-US/docs/Web/API/MediaTrackConstraints/volume) constraint is supported in the current environment.
+  - : A Boolean that is `true` if the [`volume`](/en-US/docs/Web/API/MediaTrackConstraints/volume) constraint is supported in the current environment.
 - {{domxref("MediaTrackSupportedConstraints.sampleRate", "sampleRate")}}
-  - : A Boolean value whose value is `true` if the [`sampleRate`](/en-US/docs/Web/API/MediaTrackConstraints/sampleRate) constraint is supported in the current environment.
+  - : A Boolean that is `true` if the [`sampleRate`](/en-US/docs/Web/API/MediaTrackConstraints/sampleRate) constraint is supported in the current environment.
 - {{domxref("MediaTrackSupportedConstraints.sampleSize", "sampleSize")}}
-  - : A Boolean value whose value is `true` if the [`sampleSize`](/en-US/docs/Web/API/MediaTrackConstraints/sampleSize) constraint is supported in the current environment.
+  - : A Boolean that is `true` if the [`sampleSize`](/en-US/docs/Web/API/MediaTrackConstraints/sampleSize) constraint is supported in the current environment.
 - {{domxref("MediaTrackSupportedConstraints.echoCancellation", "echoCancellation")}}
-  - : A Boolean value whose value is `true` if the [`echoCancellation`](/en-US/docs/Web/API/MediaTrackConstraints/echoCancellation) constraint is supported in the current environment.
+  - : A Boolean that is `true` if the [`echoCancellation`](/en-US/docs/Web/API/MediaTrackConstraints/echoCancellation) constraint is supported in the current environment.
 - {{domxref("MediaTrackSupportedConstraints.latency", "latency")}}
-  - : A Boolean value whose value is `true` if the [`latency`](/en-US/docs/Web/API/MediaTrackConstraints/latency) constraint is supported in the current environment.
+  - : A Boolean that is `true` if the [`latency`](/en-US/docs/Web/API/MediaTrackConstraints/latency) constraint is supported in the current environment.
 - {{domxref("MediaTrackSupportedConstraints.noiseSuppression", "noiseSuppression")}}
-  - : A Boolean whose value is `true` if the [`noiseSuppression`](/en-US/docs/Web/API/MediaTrackConstraints/noiseSuppression) constraint is supported in the current environment.
+  - : A Boolean that is `true` if the [`noiseSuppression`](/en-US/docs/Web/API/MediaTrackConstraints/noiseSuppression) constraint is supported in the current environment.
 - {{domxref("MediaTrackSupportedConstraints.suppressLocalAudioPlayback", "suppressLocalAudioPlayback")}}
-  - : A Boolean whose value is `true` if the [`suppressLocalAudioPlayback`](/en-US/docs/Web/API/MediaTrackConstraints/suppressLocalAudioPlayback) constraint is supported in the current environment.
+  - : A Boolean that is `true` if the [`suppressLocalAudioPlayback`](/en-US/docs/Web/API/MediaTrackConstraints/suppressLocalAudioPlayback) constraint is supported in the current environment.
 - {{domxref("MediaTrackSupportedConstraints.channelCount", "channelCount")}}
-  - : A Boolean value whose value is `true` if the [`channelCount`](/en-US/docs/Web/API/MediaTrackConstraints/channelCount) constraint is supported in the current environment.
+  - : A Boolean that is `true` if the [`channelCount`](/en-US/docs/Web/API/MediaTrackConstraints/channelCount) constraint is supported in the current environment.
 - {{domxref("MediaTrackSupportedConstraints.deviceId", "deviceId")}}
-  - : A Boolean value whose value is `true` if the [`deviceId`](/en-US/docs/Web/API/MediaTrackConstraints/deviceId) constraint is supported in the current environment.
+  - : A Boolean that is `true` if the [`deviceId`](/en-US/docs/Web/API/MediaTrackConstraints/deviceId) constraint is supported in the current environment.
 - {{domxref("MediaTrackSupportedConstraints.groupId", "groupId")}}
-  - : A Boolean value whose value is `true` if the [`groupId`](/en-US/docs/Web/API/MediaTrackConstraints/groupId) constraint is supported in the current environment.
+  - : A Boolean that is `true` if the [`groupId`](/en-US/docs/Web/API/MediaTrackConstraints/groupId) constraint is supported in the current environment.
 
 ### Instance properties specific to shared screen tracks
 
 For tracks containing video sources from the user's screen contents, the following additional properties are may be included in addition to those available for video tracks.
 
 - {{domxref("MediaTrackSupportedConstraints.displaySurface", "displaySurface")}}
-  - : A Boolean value which is `true` if the {{domxref("MediaTrackConstraints.displaySurface", "displaySurface")}} constraint is supported in the current environment.
+  - : A Boolean that is `true` if the {{domxref("MediaTrackConstraints.displaySurface", "displaySurface")}} constraint is supported in the current environment.
 - {{domxref("MediaTrackSupportedConstraints.logicalSurface", "logicalSurface")}}
-  - : A Boolean value which is `true` if the {{domxref("MediaTrackConstraints.logicalSurface", "logicalSurface")}} constraint is supported in the current environment.
+  - : A Boolean that is `true` if the {{domxref("MediaTrackConstraints.logicalSurface", "logicalSurface")}} constraint is supported in the current environment.
 
 ## Specifications
 
