@@ -95,7 +95,7 @@ cases:
           an attacker to override the object's prototype, which can lead to
           <a href="https://github.com/eslint-community/eslint-plugin-security/blob/main/docs/the-dangers-of-square-bracket-notation.md">
             object injection attacks
-          </a>. Like the accidental keys issue, this can also be mitigated by using
+          </a> or <a href="/en-US/docs/Web/Security/Attacks/Prototype_pollution">prototype pollution attacks</a>. Like the accidental keys issue, this can also be mitigated by using
           a <code>null</code>-prototype object.
         </p>
       </td>
