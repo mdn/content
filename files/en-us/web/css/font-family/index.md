@@ -78,7 +78,6 @@ font-family: ui-serif;
 font-family: ui-sans-serif;
 font-family: ui-monospace;
 font-family: ui-rounded;
-font-family: emoji;
 font-family: math;
 font-family: fangsong;
 
@@ -148,8 +147,6 @@ font-family: "Gill Sans Extrabold", sans-serif;
       - : The default user interface font that has rounded features.
     - `math`
       - : This is for the particular stylistic concerns of representing mathematics: superscript and subscript, brackets that cross several lines, nesting expressions, and double struck glyphs with distinct meanings.
-    - `emoji`
-      - : Fonts that are specifically designed to render emoji.
     - `fangsong`
       - : A particular style of Chinese characters that are between serif-style Song and cursive-style Kai forms. This style is often used for government documents.
 
@@ -186,10 +183,6 @@ font-family: "Gill Sans Extrabold", sans-serif;
   font-family: fantasy;
 }
 
-.emoji {
-  font-family: emoji;
-}
-
 .math {
   font-family: math;
 }
@@ -211,8 +204,6 @@ font-family: "Gill Sans Extrabold", sans-serif;
 <div class="fantasy">This is an example of a fantasy font.</div>
 
 <div class="math">This is an example of a math font.</div>
-
-<div class="emoji">This is an example of an emoji font.</div>
 
 <div class="fangsong">This is an example of a fangsong font.</div>
 ```
@@ -259,5 +250,6 @@ font-family:
 
 - {{cssxref("font-style")}}
 - {{cssxref("font-weight")}}
+- {{cssxref("font-variant-emoji")}}
 - SVG {{SVGAttr("font-family")}} attribute
 - [Learn: Fundamental text and font styling](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals)

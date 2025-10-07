@@ -36,10 +36,10 @@ For example:
 
 ```js
 recognition.addEventListener("result", (event) => {
-  var color = event.results[0][0].transcript;
-  diagnostic.textContent = "Result received: " + color + ".";
+  const color = event.results[0][0].transcript;
+  diagnostic.textContent = `Result received: ${color}.`;
   bg.style.backgroundColor = color;
-  console.log("Confidence: " + event.results[0][0].confidence);
+  console.log(`Confidence: ${event.results[0][0].confidence}`);
 });
 ```
 

@@ -6,7 +6,7 @@ browser-compat: css.at-rules.font-face.font-feature-settings
 sidebar: cssref
 ---
 
-The **`font-feature-settings`** CSS descriptor allows you to define the initial settings to use for the font defined by the {{cssxref("@font-face")}} at-rule. You can further use this descriptor to control typographic font features such as ligatures, small caps, and swashes, for the font defined by `@font-face`. The values for this descriptor are the same as the {{cssxref("font-feature-settings")}} property, except for the global keyword values.
+The **`font-feature-settings`** [CSS](/en-US/docs/Web/CSS) descriptor allows you to define the initial settings to use for the font defined by the {{cssxref("@font-face")}} at-rule. You can further use this descriptor to control typographic font features such as ligatures, small caps, and swashes, for the font defined by `@font-face`. The values for this descriptor are the same as the {{cssxref("font-feature-settings")}} property, except for the global keyword values.
 
 Since this descriptor sets feature values on the font object in the `@font-face` at-rule and not on an entire element, only some glyphs in an element may be rendered using this descriptor.
 

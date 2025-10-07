@@ -271,6 +271,9 @@ rwd.addEventListener("click", mediaBackward);
 fwd.addEventListener("click", mediaForward);
 media.addEventListener("timeupdate", setTime);
 
+let intervalFwd;
+let intervalRwd;
+
 function playPauseMedia() {
   rwd.classList.remove("active");
   fwd.classList.remove("active");
@@ -294,9 +297,6 @@ function stopMedia() {
   clearInterval(intervalFwd);
   play.setAttribute("data-icon", "P");
 }
-
-let intervalFwd;
-let intervalRwd;
 
 function mediaBackward() {
   clearInterval(intervalFwd);

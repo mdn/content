@@ -311,7 +311,7 @@ If you make it through the interview process and get offered the job, then well 
 
 ## Try, try, and try again
 
-If you have applied for lots of jobs and not gotten anything yet, try not to become disheartened. Keep trying, keep passionate about the web, and keep talking to new people and learning new things.
+If you have applied for lots of jobs and not gotten anything yet, try not to become disheartened. Keep trying, stay passionate about the web, and keep talking to new people and learning new things.
 
 If you got to the interview stage but got rejected, ask the recruiter for some feedback on why you weren't chosen, and use it to improve future applications.
 

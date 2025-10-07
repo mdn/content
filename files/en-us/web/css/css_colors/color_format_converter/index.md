@@ -305,7 +305,7 @@ function multiplyByMatrix(matrix, tuple) {
 }
 
 function rgbToLinear(c) {
-  return c <= 0.04045 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
+  return c <= 0.04045 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4;
 }
 
 function intToHex(i) {
@@ -328,9 +328,9 @@ function rgbaToHEXAText(color) {
 function rgbaToHSLA(color) {
   let { r, g, b, alpha } = color;
   // Let's have r, g, b in the range [0, 1]
-  r = r / 255;
-  g = g / 255;
-  b = b / 255;
+  r /= 255;
+  g /= 255;
+  b /= 255;
   const min = Math.min(r, g, b);
   const max = Math.max(r, g, b);
   const delta = max - min;
@@ -413,7 +413,7 @@ const D65 = [0.3457 / 0.3585, 1, 0.2958 / 0.3585];
 function xyzToLab(color) {
   let { x, y, z, alpha } = color;
   [x, y, z] = [x, y, z].map((v, i) => {
-    v = v / D65[i];
+    v /= D65[i];
     return v > 0.0088564516 ? Math.cbrt(v) : v * 903.2962962962963 + 16 / 116;
   });
   return { l: 116 * y - 16, a: 500 * (x - y), b: 200 * (y - z), alpha };

@@ -19,7 +19,7 @@ start(audioTrack)
 
 ### Parameters
 
-- `audioTrack` {{optional_inline}}
+- `audioTrack` {{optional_inline}} {{experimental_inline}}
   - : A {{domxref("MediaStreamTrack")}} instance to perform speech recognition on. If not specified, the service attempts to recognize audio from the user's microphone instead.
 
 ### Return value
@@ -37,7 +37,7 @@ None ({{jsxref("undefined")}}).
 
 ### Recognizing speech from a microphone
 
-In our [Speech color changer](https://mdn.github.io/dom-examples/web-speech-api/speech-color-changer) example, we create a new `SpeechRecognition` object instance using the {{domxref("SpeechRecognition.SpeechRecognition", "SpeechRecognition()")}} constructor. Later on, we create a `click` event handler on a `<button>` so that when it's clicked, we start the speech recognition service and await audio input from the user's microphone:
+In our [Speech color changer](https://mdn.github.io/dom-examples/web-speech-api/speech-color-changer/) example, we create a new `SpeechRecognition` object instance using the {{domxref("SpeechRecognition.SpeechRecognition", "SpeechRecognition()")}} constructor. Later on, we create a `click` event handler on a `<button>` so that when it's clicked, we start the speech recognition service and await audio input from the user's microphone:
 
 ```js
 const recognition = new SpeechRecognition();
@@ -98,8 +98,8 @@ To output the recognized audio, we listen for the {{domxref("SpeechRecognition.r
 ```js
 recognition.addEventListener("result", (event) => {
   const speech = event.results[0][0].transcript;
-  diagnostic.textContent = "Speech recognized: " + speech + ".";
-  console.log("Confidence: " + event.results[0][0].confidence);
+  diagnostic.textContent = `Speech recognized: ${speech}.`;
+  console.log(`Confidence: ${event.results[0][0].confidence}`);
 });
 ```
 

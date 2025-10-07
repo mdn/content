@@ -44,6 +44,10 @@ Its value may either be set to a Boolean (`true` or `false`) or an object contai
   - : A Boolean specifying an ideal value for the property.
     If possible, this value will be used, but if it's not possible, the user agent will use the closest possible match.
 
+### ConstrainBooleanOrDOMString
+
+The `ConstrainBooleanOrDOMString` constraint type is used to specify a constraint for a property whose value is a Boolean or string value. It can take values as specified in the [`ConstrainBoolean`](#constrainboolean) and [`ConstrainDOMString`](#constraindomstring) sections.
+
 ### ConstrainDouble
 
 The `ConstrainDouble` constraint type is used to specify a constraint for a property whose value is a double-precision floating-point number.
@@ -110,7 +114,7 @@ For example, because {{Glossary("RTP")}} doesn't provide some of these values du
 - {{domxref("MediaTrackConstraints.channelCount", "channelCount")}}
   - : A [`ConstrainULong`](#constrainulong) specifying the channel count or range of channel counts which are acceptable and/or required.
 - {{domxref("MediaTrackConstraints.echoCancellation", "echoCancellation")}}
-  - : A [`ConstrainBoolean`](#constrainboolean) object specifying whether or not echo cancellation is preferred and/or required.
+  - : A [`ConstrainBooleanOrDOMString`](#constrainbooleanordomstring) object specifying whether or not echo cancellation is preferred and/or required, and if supported, what type.
 - {{domxref("MediaTrackConstraints.latency", "latency")}}
   - : A [`ConstrainDouble`](#constraindouble) specifying the latency or range of latencies which are acceptable and/or required.
 - {{domxref("MediaTrackConstraints.noiseSuppression", "noiseSuppression")}}
