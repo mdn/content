@@ -145,6 +145,9 @@ jobs:
           echo "Disk usage size of the build"
           du -sh $BUILD_OUT_ROOT
 
+          # Save the PR number into the build
+          echo ${{ github.event.number }} > ${BUILD_OUT_ROOT}/NR
+
           # Download the raw diff blob and store that inside the build
           # directory.
           # The purpose of this is for the PR Review Companion to later
