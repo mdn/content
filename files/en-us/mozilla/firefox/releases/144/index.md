@@ -18,7 +18,9 @@ Firefox 144 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- ### Developer Tools -->
 
-<!-- ### HTML -->
+### HTML
+
+The [`command`](/en-US/docs/Web/HTML/Reference/Elements/button#command) and [`commandfor`](/en-US/docs/Web/HTML/Reference/Elements/button#commandfor) attributes for {{htmlelement("button")}} are now supported. These attributes allow the user to associate a command to a button for another element, these commands can be pre-defined value such as `close` or a [custom value](/en-US/docs/Web/HTML/Reference/Elements/button#custom_values) defined by the user. ([Firefox bug 1983523](https://bugzil.la/1983523)).
 
 <!-- No notable changes. -->
 
