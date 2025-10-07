@@ -46,8 +46,8 @@ The main web app (for example, `https://example.com`) needs to include the origi
 {
   "scope_extensions": [
     { "type": "origin", "origin": "https://example.jp" },
-    { "type": "origin", "origin": "https://my-example.com" },
-    { "type": "origin", "origin": "https://my-partner-site.com" },
+    { "type": "origin", "origin": "https://my.example.com" },
+    { "type": "origin", "origin": "https://my-partner-site.example" },
     { "type": "origin", "origin": "https://example.slack.com" }
   ]
 }

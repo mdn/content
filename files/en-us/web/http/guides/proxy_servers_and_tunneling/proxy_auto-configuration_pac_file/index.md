@@ -584,7 +584,7 @@ function FindProxyForURL(url, host) {
   if (isResolvable(host)) {
     return "DIRECT";
   }
-  return "PROXY proxy.mydomain.com:8080";
+  return "PROXY proxy.mydomain.example:8080";
 }
 ```
 
@@ -594,12 +594,12 @@ The above requires consulting the DNS every time; it can be grouped intelligentl
 function FindProxyForURL(url, host) {
   if (
     isPlainHostName(host) ||
-    dnsDomainIs(host, ".mydomain.com") ||
+    dnsDomainIs(host, ".mydomain.example") ||
     isResolvable(host)
   ) {
     return "DIRECT";
   }
-  return "PROXY proxy.mydomain.com:8080";
+  return "PROXY proxy.mydomain.example:8080";
 }
 ```
 
@@ -614,7 +614,7 @@ function FindProxyForURL(url, host) {
   if (isInNet(host, "192.0.2.172", "255.255.0.0")) {
     return "DIRECT";
   }
-  return "PROXY proxy.mydomain.com:8080";
+  return "PROXY proxy.mydomain.example:8080";
 }
 ```
 
@@ -624,12 +624,12 @@ Again, use of the DNS server in the above can be minimized by adding redundant r
 function FindProxyForURL(url, host) {
   if (
     isPlainHostName(host) ||
-    dnsDomainIs(host, ".mydomain.com") ||
+    dnsDomainIs(host, ".mydomain.example") ||
     isInNet(host, "192.0.2.0", "255.255.0.0")
   ) {
     return "DIRECT";
   }
-  return "PROXY proxy.mydomain.com:8080";
+  return "PROXY proxy.mydomain.example:8080";
 }
 ```
 
@@ -650,14 +650,14 @@ All local accesses are desired to be direct. All proxy servers run on the port 8
 
 ```js
 function FindProxyForURL(url, host) {
-  if (isPlainHostName(host) || dnsDomainIs(host, ".mydomain.com")) {
+  if (isPlainHostName(host) || dnsDomainIs(host, ".mydomain.example")) {
     return "DIRECT";
   } else if (shExpMatch(host, "*.com")) {
-    return "PROXY proxy1.mydomain.com:8080; PROXY proxy4.mydomain.com:8080";
+    return "PROXY proxy1.mydomain.example:8080; PROXY proxy4.mydomain.example:8080";
   } else if (shExpMatch(host, "*.edu")) {
-    return "PROXY proxy2.mydomain.com:8080; PROXY proxy4.mydomain.com:8080";
+    return "PROXY proxy2.mydomain.example:8080; PROXY proxy4.mydomain.example:8080";
   }
-  return "PROXY proxy3.mydomain.com:8080; PROXY proxy4.mydomain.com:8080";
+  return "PROXY proxy3.mydomain.example:8080; PROXY proxy4.mydomain.example:8080";
 }
 ```
 
@@ -670,13 +670,13 @@ Most of the standard JavaScript functionality is available for use in the `FindP
 ```js
 function FindProxyForURL(url, host) {
   if (url.startsWith("http:")) {
-    return "PROXY http-proxy.mydomain.com:8080";
+    return "PROXY http-proxy.mydomain.example:8080";
   } else if (url.startsWith("ftp:")) {
-    return "PROXY ftp-proxy.mydomain.com:8080";
+    return "PROXY ftp-proxy.mydomain.example:8080";
   } else if (url.startsWith("gopher:")) {
-    return "PROXY gopher-proxy.mydomain.com:8080";
+    return "PROXY gopher-proxy.mydomain.example:8080";
   } else if (url.startsWith("https:") || url.startsWith("snews:")) {
-    return "PROXY security-proxy.mydomain.com:8080";
+    return "PROXY security-proxy.mydomain.example:8080";
   }
   return "DIRECT";
 }
@@ -689,7 +689,7 @@ For example:
 
 ```js
 if (shExpMatch(url, "http:*")) {
-  return "PROXY http-proxy.mydomain.com:8080";
+  return "PROXY http-proxy.mydomain.example:8080";
 }
 ```
 

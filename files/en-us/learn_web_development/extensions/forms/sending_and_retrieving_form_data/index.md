@@ -93,7 +93,7 @@ The [`GET` method](/en-US/docs/Web/HTTP/Reference/Methods/GET) is the method use
 Consider the following form:
 
 ```html
-<form action="http://www.foo.com" method="GET">
+<form action="https://example.com/greet" method="GET">
   <div>
     <label for="say">What greeting do you want to say?</label>
     <input name="say" id="say" value="Hi" />
@@ -108,7 +108,7 @@ Consider the following form:
 </form>
 ```
 
-Since the `GET` method has been used, you'll see the URL `www.foo.com/?say=Hi&to=Mom` appear in the browser address bar when you submit the form.
+Since the `GET` method has been used, you'll see the URL `https://example.com/greet?say=Hi&to=Mom` appear in the browser address bar when you submit the form.
 
 ![The changed url with query parameters after submitting the form with GET method with a "server not found" browser error page](url-parameters.png)
 
@@ -121,7 +121,7 @@ The HTTP request looks like this:
 
 ```http
 GET /?say=Hi&to=Mom HTTP/2.0
-Host: foo.com
+Host: example.com
 ```
 
 > [!NOTE]
@@ -137,7 +137,7 @@ The [`POST` method](/en-US/docs/Web/HTTP/Reference/Methods/POST) is a little dif
 Let's look at an example — this is the same form we looked at in the `GET` section above, but with the [`method`](/en-US/docs/Web/HTML/Reference/Elements/form#method) attribute set to `POST`.
 
 ```html
-<form action="http://www.foo.com" method="POST">
+<form action="https://example.com/greet" method="POST">
   <div>
     <label for="say">What greeting do you want to say?</label>
     <input name="say" id="say" value="Hi" />
@@ -156,7 +156,7 @@ When the form is submitted using the `POST` method, you get no data appended to 
 
 ```http
 POST / HTTP/2.0
-Host: foo.com
+Host: example.com
 Content-Type: application/x-www-form-urlencoded
 Content-Length: 13
 
@@ -178,7 +178,7 @@ HTTP requests are never displayed to the user (if you want to see them, you need
 1. Open the developer tools.
 2. Select "Network"
 3. Select "All"
-4. Select "foo.com" in the "Name" tab
+4. Select "example.com" in the "Name" tab
 5. Select "Request" (Firefox) or "Payload" (Chrome/Edge)
 
 You can then get the form data, as shown in the image below.
@@ -292,7 +292,10 @@ If you want to send files, you need to take three extra steps:
 For example:
 
 ```html
-<form method="post" action="https://www.foo.com" enctype="multipart/form-data">
+<form
+  method="post"
+  action="https://example.com/upload"
+  enctype="multipart/form-data">
   <div>
     <label for="file">Choose a file</label>
     <input type="file" id="file" name="myFile" />
