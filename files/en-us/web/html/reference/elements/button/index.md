@@ -276,7 +276,7 @@ dialog.addEventListener("cancel", (e) => {
   if (!e.cancelable) return;
   if (radio.value === "no") {
     warning.hidden = false;
-    e.preventDefault()
+    e.preventDefault();
   } else {
     warning.hidden = true;
     return;
