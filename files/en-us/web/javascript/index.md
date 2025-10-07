@@ -24,14 +24,14 @@ For more information about JavaScript specifications and related technologies, s
 
 ## Beginner's tutorials
 
-Learn how to program in JavaScript from the ground up with our beginner's tutorials.
+Our [learn web development core modules](/en-US/docs/Learn_web_development/Core) contain modern, up-to-date tutorials covering JavaScript fundamentals.
 
 - [Your first website: Adding interactivity](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity)
   - : This article provides a brief tour of what JavaScript is and how to use it, aimed at people who are completely new to web development.
 - [Dynamic scripting with JavaScript](/en-US/docs/Learn_web_development/Core/Scripting)
-  - : Our [Learn web development](/en-US/docs/Learn_web_development) section's JavaScript module teaches all the JavaScript fundamentals from the ground up.
+  - : This module focuses on the essentials of the core JavaScript language, plus some key surrounding topics — learning these topics will give you a solid basis to work from.
 - [JavaScript frameworks and libraries](/en-US/docs/Learn_web_development/Core/Frameworks_libraries)
-  - : JavaScript frameworks are an essential part of modern front-end web development, providing developers with tried and tested tools for building scalable, interactive web applications. Many modern companies use frameworks as a standard part of their tooling, so many front-end development jobs now require framework experience. In this set of articles, we aim to give you a comfortable starting point to help you begin learning frameworks.
+  - : JavaScript frameworks are an essential part of modern front-end web development, providing developers with tried and tested tools for building scalable, interactive web applications. Many modern companies use frameworks as a standard part of their tooling, so many front-end development jobs now require framework experience. This set of articles provides a comfortable starting point to help you begin learning frameworks.
 
 ## JavaScript guides
 

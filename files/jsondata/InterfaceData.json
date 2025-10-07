@@ -4488,6 +4488,10 @@
       "inh": "",
       "impl": []
     },
+    "XRVisibilityMaskChangeEvent": {
+      "inh": "Event",
+      "impl": []
+    },
     "XRWebGLBinding": {
       "inh": "",
       "impl": []

@@ -8,11 +8,16 @@ browser-compat: api.PerformanceEventTiming.interactionId
 
 {{APIRef("Performance API")}}
 
-The read-only **`interactionId`** property returns an ID that uniquely identifies a user interaction which triggered a series of associated events.
+The read-only **`interactionId`** property or the {{domxref("PerformanceEventTiming")}} interface returns an ID that uniquely identifies a user interaction which triggered a series of associated events.
+
+## Value
+
+A number. For event types where an interaction ID is not calculated the value is 0.
 
 ## Description
 
-When a user interacts with a web page, a user interaction (for example a click) usually triggers a sequence of events, such as `pointerdown`, `pointerup`, and `click` events. To measure the latency of this series of events, the events share the same `interactionId`.
+When a user interacts with a web page, a user interaction (for example a click) usually triggers a sequence of events, such as `pointerdown`, `pointerup`, and `click` events.
+To measure the latency of this series of events, the events share the same `interactionId`.
 
 An `interactionId` is only computed for the following event types belonging to a user interaction. It is `0` otherwise.
 
@@ -21,15 +26,14 @@ An `interactionId` is only computed for the following event types belonging to a
 | {{domxref("Element/pointerdown_event", "pointerdown")}}, {{domxref("Element/pointerup_event", "pointerup")}}, {{domxref("Element/click_event", "click")}} | click / tap / drag |
 | {{domxref("Element/keydown_event", "keydown")}}, {{domxref("Element/keyup_event", "keyup")}}                                                              | key press          |
 
-## Value
-
-A number.
+The `interactionId` is also needed to calculate the {{glossary("Interaction to next paint")}} metric, which helps analyze responsiveness to user interaction over the lifetime of a page.
 
 ## Examples
 
 ### Using interactionId
 
-The following example collects event duration for all events corresponding to an interaction. The `eventLatencies` map can then be used to find events with maximum duration for a user interaction, for example.
+The following example collects event duration for all events corresponding to an interaction.
+The `eventLatencies` map can then be used to find events with maximum duration for a user interaction, for example.
 
 ```js
 // The key is the interaction ID.
