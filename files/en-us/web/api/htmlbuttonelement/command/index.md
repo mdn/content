@@ -71,8 +71,8 @@ const image = document.getElementById("the-image");
 image.addEventListener("command", (event) => {
   let rotate = parseInt(event.target.style.rotate || "0");
   if (event.command == "--reset") {
-    rotate = 0
-    event.target.style.rotate = `${rotate}deg`; 
+    rotate = 0;
+    event.target.style.rotate = `${rotate}deg`;
   } else if (event.command === "--rotate-left") {
     rotate === -270 ? rotate = 0 : rotate = rotate - 90;
     event.target.style.rotate = `${rotate}deg`;
