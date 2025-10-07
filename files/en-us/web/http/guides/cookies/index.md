@@ -98,7 +98,7 @@ To immediately remove a cookie, set the cookie again with the same name, path, a
 Set-Cookie: id=a3fWa; Max-Age=0
 ```
 
-It is also possible to clear all cookies associated with a registrable domain using the {{httpheader("Clear-Site-Data")}} response header.
+You can also clear all cookies associated with a registrable domain using the {{httpheader("Clear-Site-Data")}} response header.
 For example, the following header sent from `https://foo.example.com/` would clear all cookies sent by `example.com` and all of its subdomains, such as `all.bar.example.com`.
 
 ```http
