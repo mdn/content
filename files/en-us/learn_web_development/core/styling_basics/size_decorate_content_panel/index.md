@@ -17,7 +17,7 @@ We are going to get you to solve this challenge on your local development enviro
 1. Create a new folder on your computer called `size-decorate-content-panel`.
 2. Inside the folder, create an `index.html` file and paste the following content into it:
 
-   ```html-nolint
+   ```html-nolint live-sample___content-pane-start live-sample___content-pane-finish
    <!doctype html>
    <html lang="en">
      <head>
@@ -88,7 +88,7 @@ We are going to get you to solve this challenge on your local development enviro
 
 3. Inside the folder, create a `style.css` file and paste the following content into it:
 
-   ```css
+   ```css live-sample___content-pane-start
    /* Type and text */
 
    * {
@@ -193,72 +193,18 @@ At this point, you should still notice a problem with the UI — the content con
 
 ## Example
 
+The starting state of the project will render like this:
+
+{{EmbedLiveSample("content-pane-start", "100%", 500)}}
+
 The finished project should look like this (we've rendered this at `90%` width, not `60%`, so it looks better in the narrow output pane):
 
 {{EmbedLiveSample("content-pane-finish", "100%", 500)}}
 
 <details>
-<summary>Click here to show the solution</summary>
+<summary>Click here to show a possible solution</summary>
 
 The finished CSS looks like so:
-
-```html hidden live-sample___content-pane-finish
-<section class="pane">
-  <h1>Content pane</h1>
-  <div class="content">
-    <h2>Some exciting content</h2>
-
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Proin tortor purus
-      <a href="#">platea sit eu id</a> nisi litora libero. Neque vulputate
-      consequat ac amet augue blandit maximus aliquet congue. Pharetra
-      vestibulum posuere ornare <a href="#">faucibus fusce dictumst</a> orci
-      aenean eu facilisis ut volutpat commodo senectus purus himenaeos fames
-      primis convallis nisi.
-    </p>
-    <img
-      src="https://mdn.github.io/shared-assets/images/examples/leopard.jpg"
-      alt="Closeup of a large wild cat's eyes and nose" />
-    <p>
-      Phasellus fermentum malesuada phasellus netus dictum aenean placerat
-      egestas amet.
-      <a href="#">Ornare taciti semper dolor tristique</a> morbi. Sem leo
-      tincidunt aliquet semper eu lectus scelerisque quis. Sagittis vivamus
-      mollis nisi mollis enim fermentum laoreet.
-    </p>
-
-    <h2>More exciting content</h2>
-
-    <p>
-      Curabitur semper venenatis lectus viverra ex dictumst nulla maximus.
-      Primis iaculis elementum conubia feugiat venenatis dolor augue ac blandit
-      nullam ac <a href="#">phasellus turpis</a> feugiat mollis. Duis lectus
-      porta mattis imperdiet vivamus augue litora lectus arcu. Justo torquent
-      pharetra volutpat ad blandit bibendum
-      <a href="#">accumsan nec elit cras</a> luctus primis ipsum gravida class
-      congue.
-    </p>
-    <img
-      src="https://mdn.github.io/shared-assets/images/examples/balloons-landscape.jpg"
-      alt="Three colorful hot air balloons floating across a blue, nearly cloudless sky" />
-    <p>
-      Vehicula etiam elementum finibus enim duis feugiat commodo adipiscing
-      tortor <a href="#">tempor elit</a>. Et mollis consectetur habitant turpis
-      tortor consectetur adipiscing vulputate dolor lectus iaculis convallis
-      adipiscing. Nam hendrerit
-      <a href="#">dignissim condimentum ullamcorper diam</a> morbi eget
-      consectetur odio in sagittis.
-    </p>
-  </div>
-  <div class="controls">
-    <button>One</button>
-    <button>Two</button>
-    <button>Three</button>
-    <button>Four</button>
-  </div>
-</section>
-```
 
 ```css live-sample___content-pane-finish
 /* Type and text */
