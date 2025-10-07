@@ -32,6 +32,9 @@ None ({{jsxref("undefined")}}).
 This example shows how to use `cancelVideoFrameCallback()` to cancel a previously-registered video frame callback.
 
 ```js
+// Initial registration of the callback to run on the first frame
+let videoCallbackId = video.requestVideoFrameCallback(updateCanvas);
+
 const updateCanvas = (now, metadata) => {
   // Do something with the frame
 
@@ -42,9 +45,6 @@ const updateCanvas = (now, metadata) => {
   // so you can cancel the callback successfully
   videoCallbackId = video.requestVideoFrameCallback(updateCanvas);
 };
-
-// Initial registration of the callback to run on the first frame
-let videoCallbackId = video.requestVideoFrameCallback(updateCanvas);
 
 // …
 

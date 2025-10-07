@@ -590,7 +590,7 @@ allTransformFieldset
     });
   });
 
-const resetInput = (inputEl) => {
+function resetInput(inputEl) {
   if (!inputEl) {
     console.warn(`inputEl \`${inputEl}\` is falsy!`);
     console.trace();
@@ -603,9 +603,9 @@ const resetInput = (inputEl) => {
   } else {
     inputEl.value = defaultValue || "0";
   }
-};
+}
 
-const updateOutputs = () => {
+function updateOutputs() {
   translateXOutput.value = `${translateXRange.value}px`;
   translateYOutput.value = `${translateYRange.value}px`;
   translateZOutput.value = `${translateZRange.value}px`;
@@ -625,9 +625,9 @@ const updateOutputs = () => {
 
   perspectiveOriginXOutput.value = `${perspectiveOriginXRange.value}%`;
   perspectiveOriginYOutput.value = `${perspectiveOriginYRange.value}%`;
-};
+}
 
-const updateTransform = () => {
+function updateTransform() {
   updateOutputs();
 
   cube.style.transform = `translate3d(${translateXRange.value}px,
@@ -648,7 +648,7 @@ const updateTransform = () => {
 
   perspectiveDot.style.top = `${perspectiveOriginYRange.value}%`;
   perspectiveDot.style.left = `${perspectiveOriginXRange.value}%`;
-};
+}
 updateTransform();
 ```
 

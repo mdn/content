@@ -5,11 +5,10 @@ slug: Web/API/PerformanceNavigationTiming/activationStart
 page-type: web-api-instance-property
 status:
   - experimental
-  - non-standard
 browser-compat: api.PerformanceNavigationTiming.activationStart
 ---
 
-{{APIRef("Performance API")}}{{SeeCompatTable}}{{non-standard_header}}
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
 The **`activationStart`** read-only property represents the time between when a document starts prerendering and when it is activated.
 

@@ -24,6 +24,14 @@ Firefox 145 is the current [Nightly version of Firefox](https://www.firefox.com/
 
 <!-- #### Removals -->
 
+<!-- ### MathML -->
+
+<!-- #### Removals -->
+
+<!-- ### SVG -->
+
+<!-- #### Removals -->
+
 <!-- ### CSS -->
 
 <!-- No notable changes. -->
@@ -33,10 +41,6 @@ Firefox 145 is the current [Nightly version of Firefox](https://www.firefox.com/
 <!-- ### JavaScript -->
 
 <!-- No notable changes. -->
-
-<!-- #### Removals -->
-
-<!-- ### SVG -->
 
 <!-- #### Removals -->
 
@@ -69,6 +73,8 @@ Firefox 145 is the current [Nightly version of Firefox](https://www.firefox.com/
 <!-- #### Marionette -->
 
 ## Changes for add-on developers
+
+- Cookies created with {{WebExtAPIRef("cookies.set()")}} are now validated, and invalid cookies are rejected. This change was implemented in Nightly only from Firefox 142. ([Firefox bug 1976509](https://bugzil.la/1976509))
 
 <!-- ### Removals -->
 
