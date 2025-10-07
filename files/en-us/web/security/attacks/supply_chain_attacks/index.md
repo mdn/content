@@ -54,15 +54,76 @@ See the OpenSSF's [Source Code Management Platform Configuration Best Practices]
 
 Third-party dependencies include not only libraries and frameworks that your code uses, but all third-party tools involved in the development process, including editors, IDEs, source control systems, package managers, and build tools.
 
-To mitigate problems with third-party dependencies, we'll discuss two practices:
+To mitigate problems with third-party dependencies, we'll discuss four practices:
 
-1. Keeping an inventory of dependencies, and using it to monitor them for vulnerabilities.
-2. Defining and following a process for adding new dependencies.
-3. Using Subresource Integrity for external scripts.
+1. Evaluating new dependencies
+2. Updating existing dependencies
+3. Maintaining a _Software Bill of Materials_ (SBOM)
+4. Using Subresource Integrity for external scripts
 
-### Keeping an inventory
+### Evaluating new dependencies
 
-To be able to manage dependencies it's obviously essential to know what they are. An inventory of software dependencies is called a _Software Bill of Materials_ (SBOM).
+Before adding a new dependency, you should assess how much of a security risk it represents. You need to be confident that the dependency is actively maintained, that it has a record of fixing issues and a process for reporting and responding to security vulnerabilities.
+
+You should consider whether the risk of adding the dependency outweighs the cost of implementing the feature yourself.
+
+The [Concise Guide for Evaluating Open Source Software](https://best.openssf.org/Concise-Guide-for-Evaluating-Open-Source-Software), published by the [OpenSSF](https://openssf.org/), lists questions you should ask before adding a new dependency.
+
+### Updating dependencies
+
+Once you have added a dependency to your project, the dependency's supplier will typically release new versions with new features, bug fixes, and security fixes. You will usually want to take advantage of these updates, by implementing a mechanism to keep the dependency up to date. Tools such as GitHub's [dependabot](https://docs.github.com/en/code-security/getting-started/dependabot-quickstart-guide) can help with this, by detecting new versions of dependencies and automatically opening pull requests to update your project.
+
+However, updating dependencies too eagerly comes with its own risks. For example, suppose you add a dependency on a trustworthy third-party package. An attacker then gets control of the package developer's account, and publishes a malicious update. If you immediately accept the update, your project is compromised.
+
+#### Using a lock file
+
+The first step towards securing dependency updates is to use a _lock file_ for dependencies, commit it to source control, and use it when building your project.
+
+Package managers like [npm](https://www.npmjs.com/) and [Yarn](https://yarnpkg.com/) let you provide a file such as [package.json](https://docs.npmjs.com/cli/v10/configuring-npm/package-json?v=true) that lists your project's dependencies. You can then run a command that installs the given dependencies so the project can use them.
+
+However, the dependency list doesn't determine the exact version of each package: if the package supplier releases a new version, then it may be automatically included in your project when it is built. If the new version of the dependency is malicious, it may be included in your project automatically, without you even being aware of it.
+
+For example, suppose your package.json includes a dependency named "example-dependency":
+
+```json
+{
+  "name": "example-project",
+  "version": "1.0.0",
+  "dependencies": {
+    "example-dependency": "^1.0.2"
+  }
+}
+```
+
+Suppose your project's build process automatically runs when your suppliers release new versions. The build process starts the build by calling `npm install`. This will fetch the latest version of "example-dependency", subject to the version range `"^1.0.2"`.
+
+At version `1.0.2`, which is the point you added it to the project, "example-dependency" is a useful, benign package. Then an attacker takes over the account belonging to the developer of "example-dependency", and publishes a malicious `1.0.3` version. Your build process runs, installs the malicious package, and you are compromised.
+
+All this has happened without any changes to your project's direct artifacts, or any opportunity for you to review the update and see if it looks suspicious.
+
+The solution to this is to use a lock file when building your project. A lock file is automatically generated whenever a project's dependencies are installed, and it lists the exact versions of the direct and indirect dependencies used in a project.
+
+That is, if _package.json_ tells you that your project is using "example-project", then _package.lock_ will tell you exactly which version of "example-project" to use, and what the versions of its dependencies are.
+
+Your project's lock file should be checked into source control. When building your project you should use the lock file to control which versions of your dependencies are installed: in npm you do this by using [`npm ci`](https://docs.npmjs.com/cli/v10/commands/npm-ci) instead of `npm install`.
+
+> [!NOTE]
+> Fixing the versions of your dependencies in this way is sometimes called "version pinning".
+
+This means that to update dependencies, your build system has to make a pull request to update the lock file, and this gives you the chance to review the update and ensure you want to accept it.
+
+#### Reviewing updates
+
+When reviewing an update to a dependency, consider whether it's an update you want to accept:
+
+- Read the changelog for the release, to understand what it claims to be offering (and whether you need to accept it at all, at this point).
+- See if it introduces any additional dependencies.
+- If possible, review the source code updates, and see if any of them are inexplicable or don't match up with the changelog.
+- Consider waiting a little while before updating: often, supply chain attacks are quickly discovered by security researchers, and it is better for you if an update is found to be malicious before you have accepted it.
+
+### Maintaining a Software Bill of Materials
+
+To get a deeper insight into your dependencies, you can maintain a detailed inventory of them. This is called a _Software Bill of Materials_ (SBOM).
 
 Any inventory is better than none: however, using a standard format for representing an SBOM means you can:
 
@@ -104,12 +165,6 @@ An SBOM enables you to implement several defenses against supply chain attacks, 
 - **Integrity verification**: if the SBOM contains hashes for dependencies, it's possible to verify that the source of the component you're depending on has not been modified from its original released form.
 - **Supplier risk management**: by capturing information about the supplier of your dependencies, an SBOM can help you understand when you are depending on components or services from suppliers that are no longer considered reliable.
 
-### Evaluating new dependencies
-
-Before adding any new dependencies, you should assess how much of a security risk they represent. You need to be confident that the dependency is actively maintained, that it has a record of fixing issues and a process for reporting and responding to security vulnerabilities.
-
-The [Concise Guide for Evaluating Open Source Software](https://best.openssf.org/Concise-Guide-for-Evaluating-Open-Source-Software), published by the [OpenSSF](https://openssf.org/), lists questions you should ask before adding a new dependency.
-
 ### Using Subresource Integrity
 
 Many websites include externally hosted scripts: most notably, but not exclusively, scripts that are served from a {{glossary("CDN", "Content Delivery Network (CDN)")}}:
@@ -139,12 +194,12 @@ See [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity) for 
 ## Defense summary checklist
 
 - Require {{glossary("multi-factor authentication")}} for team members and minimize permissions granted.
-- Assess tools involved in your build, test, and deployment processes
-- Ensure pull requests go through review and pass {{glossary("continuous integration")}} checks
-- Keep an inventory (SBOM) of dependencies
-- Define a process for managing, updating, monitoring dependencies
-- Use Subresource Integrity for externally referenced scripts and stylesheets
-- Lock dependency versions (`package-lock.json`)
+- Assess tools involved in your build, test, and deployment processes.
+- Ensure pull requests go through review and pass {{glossary("continuous integration")}} checks.
+- Minimize your dependencies, and follow a process for evaluating new dependencies.
+- Use a lock file to control updates to your dependencies, and follow a process for accepting updates.
+- Maintain an SBOM and use it to check for vulnerabilities.
+- Use Subresource Integrity for externally referenced scripts and stylesheets.
 
 ## See also
 
