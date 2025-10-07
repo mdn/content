@@ -281,7 +281,7 @@ dialog.addEventListener("cancel", (e) => {
     warning.hidden = true;
     return;
   }
-})
+});
 ```
 
 {{ EmbedLiveSample('command_request-close', 200) }}
