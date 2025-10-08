@@ -365,7 +365,7 @@ If you go to VoiceOver's landmarks menu (accessed using VoiceOver key + U and th
 
 However, we could do better here. The search form is a really important landmark that people will want to find, but it is not listed in the landmarks menu or treated like a notable landmark beyond the actual input being called out as a search input (`<input type="search">`).
 
-We could improve it by the use of the ARIA `role="search"`, but using the {{htmlelement("search")}} element implicitly gives that role to the form.
+To mark the form as a landmark, you can either give it ARIA `role="search"`, or wrap it with the {{htmlelement("search")}} element. It is generally better to use HTML semantics where possible and only use ARIA where there is no HTML equivalent.
 
 ```html live-sample___aria-website-roles
 <header>
