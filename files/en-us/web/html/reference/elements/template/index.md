@@ -55,7 +55,7 @@ There are two main ways to use the `<template>` element.
 
 By default, the element's content is not rendered.
 The corresponding {{domxref("HTMLTemplateElement")}} interface includes a standard {{domxref("HTMLTemplateElement.content", "content")}} property (without an equivalent content/markup attribute). This `content` property is read-only and holds a {{domxref("DocumentFragment")}} that contains the DOM subtree represented by the template.
-This fragment can be cloned via the {{domxref("Node.cloneNode", "cloneNode")}} method and inserted into the DOM.
+This fragment can be cloned via either the {{domxref("Document.importNode()", "importNode")}} or the {{domxref("Node.cloneNode", "cloneNode")}} method and inserted into the DOM.
 
 Be careful when using the `content` property because the returned `DocumentFragment` can exhibit unexpected behavior.
 For more details, see the [Avoiding DocumentFragment pitfalls](#avoiding_documentfragment_pitfalls) section below.
@@ -109,7 +109,7 @@ if ("content" in document.createElement("template")) {
   const template = document.querySelector("#productrow");
 
   // Clone the new row and insert it into the table
-  const clone = template.content.cloneNode(true);
+  const clone = document.importNode(template.content, true);
   let td = clone.querySelectorAll("td");
   td[0].textContent = "1235646565";
   td[1].textContent = "Stuff";
@@ -117,7 +117,7 @@ if ("content" in document.createElement("template")) {
   tbody.appendChild(clone);
 
   // Clone the new row and insert it into the table
-  const clone2 = template.content.cloneNode(true);
+  const clone2 = document.importNode(template.content, true);
   td = clone2.querySelectorAll("td");
   td[0].textContent = "0384928528";
   td[1].textContent = "Acme Kidney Beans 2";
@@ -280,11 +280,11 @@ function clickHandler(event) {
   event.target.append(" — Clicked this div");
 }
 
-const firstClone = template.content.cloneNode(true);
+const firstClone = document.importNode(template.content, true);
 firstClone.addEventListener("click", clickHandler);
 container.appendChild(firstClone);
 
-const secondClone = template.content.cloneNode(true);
+const secondClone = document.importNode(template.content, true);
 secondClone.children[0].addEventListener("click", clickHandler);
 container.appendChild(secondClone);
 ```
