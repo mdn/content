@@ -7,11 +7,6 @@ sidebar: security
 
 **Prototype pollution** is a vulnerability where an attacker can add or modify properties on an object's prototype. This means malicious values can unexpectedly appear on objects in your application, often leading to logic errors or additional attacks like [cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS).
 
-To understand how JavaScript prototypes work, read the following MDN articles:
-
-- [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
-- [Working with objects](/en-US/docs/Web/JavaScript/Guide/Working_with_objects)
-
 ## Prototypes in JavaScript
 
 JavaScript implements {{glossary("inheritance")}} using _prototypes_. Each object has a reference to a prototype, which is itself an object, and which itself has a prototype, and so on, until we get to the fundamental prototype, which is called `Object.prototype`, whose own prototype is `null`.
@@ -21,16 +16,16 @@ If you try to access a property or call a method on an object, and that property
 That's why you can do this:
 
 ```js
-const myArray = new Array(1,2,3);
+const myArray = new Array(1, 2, 3);
 // prototype chain:
 // myArray -> Array -> Object -> null
 
-myArray.length 
+myArray.length;
 // 3
 // length is defined on the prototype of `myArray`, which is `Array.prototype`
 
 myArray.toString();
-// "1,2,3" 
+// "1,2,3"
 // toString() is defined on the prototype of `Array.prototype`,
 // which is `Object.prototype`
 ```
@@ -38,10 +33,10 @@ myArray.toString();
 Unlike many other languages, JavaScript allows you to add inherited properties and methods at runtime by modifying an object's prototypes:
 
 ```js
-const myArray = new Array(1,2,3); 
+const myArray = new Array(1, 2, 3);
 
 // modify the Object prototype at runtime
-Object.prototype.extra = "new property!" 
+Object.prototype.extra = "new property!";
 
 myArray.extra;
 // "new property!"
@@ -52,13 +47,13 @@ In a prototype pollution attack, the attacker is able to change the object's pro
 > [!NOTE]
 > To learn much more about prototypes, see:
 >
+> - [Object prototypes](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes)
 > - [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
 > - [Working with objects](/en-US/docs/Web/JavaScript/Guide/Working_with_objects)
 
+A key attack vector is [`Object.prototype.__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) property and the [prototype setter syntax in object initializers](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#prototype_setter). These `__proto__` properties are often used for this attack, but you can also reach the prototype via `yourObject.constructor.prototype`.
 
-A key attack vector is the special [`Object.prototype.__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) property, and how adding a property to `Object.prototype` will make that property accessible on ("polluted to") every object in your application. The `__proto__` property is often used, but you can also reach `Object.prototype` via `yourObject.constructor.prototype`.
-
-Not all prototype pollution involves adding properties to `Object.prototype`, though. Other prototypes can also be polluted, like overriding {{jsxref("Promise.prototype.then")}}, which would be called for every `await` operation, and more.
+A common pollution target is `Object.prototype` as it will make properties accessible on ("polluted to") every object in your application. However, not all prototype pollution involves adding properties to `Object.prototype`. Other prototypes can also be polluted, like overriding {{jsxref("Promise.prototype.then")}}, which would be called for every `await` operation, and more.
 
 ## Example scenarios
 
