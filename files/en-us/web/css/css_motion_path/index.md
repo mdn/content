@@ -8,6 +8,10 @@ sidebar: cssref
 
 The **CSS motion path** module allows authors to animate any graphical object along a custom path.
 
+The [CSS transforms](/en-US/docs/Web/CSS/CSS_transforms) module provides features that enable boxes to be repositioned, rotated, scaled, and skewed relative to its laid out position, without disrupting the layout of any other elements on the page. These transforms can be animated and transitioned, but only in relatively simple ways.
+
+The features of the CSS motion path module provide offset transforms: transforms which align a point on an element to a offset distance along an offset path, optionally rotating the transformed element to follow the path direction. This module provides for powerful transform possibilities, such as positioning using polar coordinates rather than limiting transformation to the standard rectangular {{cssxref("transform")}} function coordinates, or animating an element along a defined path, making it possible to define complex 2d spatial transitions by leveraging [CSS shape functions](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#shape_functions).
+
 For example, when you want to animate an element moving along a path, you can define a specific path of any shape you want with the {{cssxref("offset-path")}} property. You can then animate it along that path by animating {{cssxref("offset-distance")}} property, and even rotate it at any point with the {{cssxref("offset-rotate")}} property.
 
 ## Motion paths in action
@@ -71,10 +75,11 @@ In this example, we used [CSS masking](/en-US/docs/Web/CSS/CSS_masking) and [CSS
 
 ## Related concepts
 
-- [`<coord-box>`](/en-US/docs/Web/CSS/offset-path#coord-box)
-- {{cssxref("url")}} function
-- {{cssxref("radial-gradient")}} function
-- {{cssxref("position_value", "&lt;position&gt;")}}
+[CSS transforms](/en-US/docs/Web/CSS/CSS_transforms) module
+
+- {{cssxref("transform")}}
+- {{cssxref("transform-origin")}}
+- {{cssxref("translate")}}
 
 [CSS masking](/en-US/docs/Web/CSS/CSS_masking) module
 
@@ -102,6 +107,18 @@ In this example, we used [CSS masking](/en-US/docs/Web/CSS/CSS_masking) and [CSS
 
 - [`<easing-function>`](/en-US/docs/Web/CSS/easing-function)
 
+[CSS positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout) module
+
+- {{cssxref("position_value", "&lt;position&gt;")}}
+
+[CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module
+
+- [`<coord-box>`](/en-US/docs/Web/CSS/offset-path#coord-box)
+
+[CSS images](/en-US/docs/Web/CSS/CSS_images) module
+
+- {{cssxref("radial-gradient")}} function
+
 ## Specifications
 
 {{Specifications}}
@@ -110,4 +127,3 @@ In this example, we used [CSS masking](/en-US/docs/Web/CSS/CSS_masking) and [CSS
 
 - [`prefers-reduced-motion`](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) media query
 - {{cssxref("will-change")}} CSS property
-- [CSS shape functions](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#shape_functions)
