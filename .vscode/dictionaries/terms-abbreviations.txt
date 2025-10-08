@@ -175,6 +175,7 @@ discardable
 distros
 DLRR
 DLSR
+DMARC
 docshell
 docshells
 doctypes
@@ -241,6 +242,7 @@ foveation
 fragmentainer
 fragmentainers
 framebuffers
+framebusting
 frontmost
 Fullband
 fullscreened
@@ -302,6 +304,7 @@ ICANN
 ICNS
 iconset
 idents
+IDOR
 IERS
 IMSC
 Indo-Pacific
@@ -469,6 +472,7 @@ overlines
 overscript
 overscripts
 overscrolling
+overtype
 packetization
 packetizer
 packetizing
@@ -675,6 +679,7 @@ spinlocks
 spoofable
 spritesheet
 spritesheets
+squircle
 SSML
 ssthresh
 STIX
@@ -782,7 +787,6 @@ tileset
 timebox
 timecode
 timecodes
-timerange
 timeslice
 timeslices
 timestep
@@ -791,6 +795,7 @@ TIPC
 toggletips
 toolkits
 toolsets
+TOTP
 touchpads
 touchpoint
 touchpoints

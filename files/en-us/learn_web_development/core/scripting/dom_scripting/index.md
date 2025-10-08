@@ -6,7 +6,7 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/Test_your_skills/Object_basics","Learn_web_development/Core/Scripting/Network_requests", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Test_your_skills/Object_basics","Learn_web_development/Core/Scripting/Image_gallery", "Learn_web_development/Core/Scripting")}}
 
 When writing web pages and apps, one of the most common things you'll want to do is change the document structure in some way. This is usually done by manipulating the Document Object Model (DOM) via a set of built-in browser APIs for controlling HTML and styling information. In this article we'll introduce you to **DOM scripting**.
 
@@ -231,7 +231,7 @@ The first way is to add inline styles directly onto elements you want to dynamic
 > [!NOTE]
 > Notice how the JavaScript property versions of the CSS styles are written in {{Glossary("camel_case", "lower camel case")}} whereas the CSS versions are hyphenated ({{Glossary("kebab_case", "kebab-case")}}) (e.g., `backgroundColor` versus `background-color`). Make sure you don't get these mixed up, otherwise it won't work.
 
-There is another common way to dynamically manipulate styles on your document, which we'll look at now.
+There is another common way to dynamically manipulate styles on your document, which is to write the styles in a separate stylesheet, and reference those styles by adding/removing a class name.
 
 1. Delete the previous five lines you added to the JavaScript.
 2. Add the following inside your HTML {{htmlelement("head")}}:
@@ -248,10 +248,10 @@ There is another common way to dynamically manipulate styles on your document, w
    </style>
    ```
 
-3. Now we'll turn to a very useful method for general HTML manipulation — {{domxref("Element.setAttribute()")}} — this takes two arguments, the attribute you want to set on the element, and the value you want to set it to. In this case we will set a class name of highlight on our paragraph:
+3. To add this class name to your element, use the element's {{domxref("Element/classList", "classList")}}'s `add()` method:
 
    ```js
-   para.setAttribute("class", "highlight");
+   para.classList.add("highlight");
    ```
 
 4. Refresh your page, and you'll see no change — the CSS is still applied to the paragraph, but this time by giving it a class that is selected by our CSS rule, not as inline CSS styles.
@@ -267,22 +267,23 @@ In the next section we will look at a more practical use of DOM APIs.
 
 ## Creating a dynamic shopping list
 
-In this exercise we want you to build a dynamic shopping list that allows you to add items using a form input and button. When you add enter an item and press the button:
+In this exercise, we want you to build a dynamic shopping list that allows you to add items using a form input and a button. After you type an item in the input field and click the button or press the <kbd>Enter</kbd> key, the following should happen:
 
 - The item should appear in the list.
 - Each item should be given a button that can be pressed to delete that item off the list.
-- The input should be emptied and focused, ready for you to enter another item.
+- Each item should have a button next to it that removes the item from the list when clicked.
+- The input fields should be cleared and focused, ready for the next item entry.
 
 The finished demo will look something like the following — try it out before you build it!
 
 ```html hidden live-sample___dynamic-shopping-list
 <h1>My shopping list</h1>
 
-<div>
+<form>
   <label for="item">Enter a new item:</label>
   <input type="text" name="item" id="item" />
   <button>Add item</button>
-</div>
+</form>
 
 <ul></ul>
 ```
@@ -303,7 +304,9 @@ const list = document.querySelector("ul");
 const input = document.querySelector("input");
 const button = document.querySelector("button");
 
-button.addEventListener("click", () => {
+button.addEventListener("click", (event) => {
+  event.preventDefault();
+
   const myItem = input.value;
   input.value = "";
 
@@ -329,17 +332,18 @@ button.addEventListener("click", () => {
 
 To complete the exercise, follow the steps below, and make sure that the list behaves as described above.
 
-1. To start with, download a copy of our [shopping-list.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/shopping-list.html) starting file and make a copy of it somewhere. You'll see that it has some minimal CSS, a div with a label, input, and button, and an empty list and {{htmlelement("script")}} element. You'll be making all your additions inside the script.
+1. To begin, download a copy of our [shopping-list.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/shopping-list.html) starting file and make a copy of it somewhere. You'll see that it has some minimal CSS, a form with a label, input, and button, an empty list, and a {{htmlelement("script")}} element. You'll be making all your additions inside the script.
 2. Create three variables that hold references to the list ({{htmlelement("ul")}}), {{htmlelement("input")}}, and {{htmlelement("button")}} elements.
 3. Create a [function](/en-US/docs/Learn_web_development/Core/Scripting/Functions) that will run in response to the button being clicked.
-4. Inside the function body, start off by storing the current [value](/en-US/docs/Web/API/HTMLInputElement/value) of the input element in a variable.
-5. Next, empty the input element by setting its value to an empty string — `""`.
-6. Create three new elements — a list item ({{htmlelement('li')}}), {{htmlelement('span')}}, and {{htmlelement('button')}}, and store them in variables.
-7. Append the span and the button as children of the list item.
-8. Set the text content of the span to the input element value you saved earlier, and the text content of the button to 'Delete'.
-9. Append the list item as a child of the list.
-10. Attach an event handler to the delete button so that, when clicked, it will delete the entire list item (`<li>...</li>`).
-11. Finally, use the [`focus()`](/en-US/docs/Web/API/HTMLElement/focus) method to focus the input element ready for entering the next shopping list item.
+4. Inside the function body, start by calling [`preventDefault()`](/en-US/docs/Web/API/Event/preventDefault). Since the input is wrapped in a form element, pressing the <kbd>Enter</kbd> key will trigger the form to submit. The call to `preventDefault()` will prevent the form from refreshing the page so a new item can be added to the list instead.
+5. Continue by storing the current [value](/en-US/docs/Web/API/HTMLInputElement/value) of the input in a variable.
+6. Next, clear the input element by setting its value to an empty string (`""`).
+7. Create three new elements — a list item ({{htmlelement('li')}}), a {{htmlelement('span')}}, and a {{htmlelement('button')}} — and store them in variables.
+8. Append the span and button as children of the list item.
+9. Set the text content of the span to the input value you saved earlier, and set the text content of the button to `Delete`.
+10. Append the list item to the list.
+11. Attach an event handler to the **Delete** button so that, when clicked, it removes the entire list item (`<li>...</li>`).
+12. Finally, use the [`focus()`](/en-US/docs/Web/API/HTMLElement/focus) method to focus the input element, so it's ready for entering the next shopping list item.
 
 ## Summary
 
@@ -354,4 +358,4 @@ We have reached the end of our study of document and DOM manipulation. At this p
   - {{domxref("HTMLElement")}}, {{domxref("HTMLInputElement")}}, {{domxref("HTMLImageElement")}}, etc.
 - [DOM Scripting](https://explainers.dev/dom-scripting/), explainers.dev
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/Test_your_skills/Object_basics","Learn_web_development/Core/Scripting/Network_requests", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Test_your_skills/Object_basics","Learn_web_development/Core/Scripting/Image_gallery", "Learn_web_development/Core/Scripting")}}

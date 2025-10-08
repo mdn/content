@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Element.mouseover_event
 ---
 
-{{APIRef}}
+{{APIRef("UI Events")}}
 
 The **`mouseover`** event is fired at an {{domxref("Element")}} when a pointing device (such as a mouse or trackpad) is used to move the cursor onto the element or one of its child elements.
 
@@ -39,9 +39,9 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 - {{domxref("MouseEvent.buttons")}} {{ReadOnlyInline}}
   - : The buttons being pressed (if any) when the mouse event was fired.
 - {{domxref("MouseEvent.clientX")}} {{ReadOnlyInline}}
-  - : The X coordinate of the mouse pointer in [viewport coordinates](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems#viewport).
+  - : The X coordinate of the mouse pointer in [viewport coordinates](/en-US/docs/Web/API/CSSOM_view_API/Coordinate_systems#viewport).
 - {{domxref("MouseEvent.clientY")}} {{ReadOnlyInline}}
-  - : The Y coordinate of the mouse pointer in [viewport coordinates](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems#viewport).
+  - : The Y coordinate of the mouse pointer in [viewport coordinates](/en-US/docs/Web/API/CSSOM_view_API/Coordinate_systems#viewport).
 - {{domxref("MouseEvent.ctrlKey")}} {{ReadOnlyInline}}
   - : Returns `true` if the <kbd>control</kbd> key was down when the mouse event was fired.
 - {{domxref("MouseEvent.layerX")}} {{Non-standard_inline}} {{ReadOnlyInline}}
@@ -65,9 +65,9 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 - {{domxref("MouseEvent.relatedTarget")}} {{ReadOnlyInline}}
   - : The secondary target for the event, if there is one.
 - {{domxref("MouseEvent.screenX")}} {{ReadOnlyInline}}
-  - : The X coordinate of the mouse pointer in [screen coordinates](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems#screen).
+  - : The X coordinate of the mouse pointer in [screen coordinates](/en-US/docs/Web/API/CSSOM_view_API/Coordinate_systems#screen).
 - {{domxref("MouseEvent.screenY")}} {{ReadOnlyInline}}
-  - : The Y coordinate of the mouse pointer in [screen coordinates](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems#screen).
+  - : The Y coordinate of the mouse pointer in [screen coordinates](/en-US/docs/Web/API/CSSOM_view_API/Coordinate_systems#screen).
 - {{domxref("MouseEvent.shiftKey")}} {{ReadOnlyInline}}
   - : Returns `true` if the <kbd>shift</kbd> key was down when the mouse event was fired.
 - {{domxref("MouseEvent.mozInputSource")}} {{non-standard_inline()}} {{ReadOnlyInline}}
@@ -101,35 +101,27 @@ const test = document.getElementById("test");
 
 // This handler will be executed only once when the cursor
 // moves over the unordered list
-test.addEventListener(
-  "mouseenter",
-  (event) => {
-    // highlight the mouseenter target
-    event.target.style.color = "purple";
+test.addEventListener("mouseenter", (event) => {
+  // highlight the mouseenter target
+  event.target.style.color = "purple";
 
-    // reset the color after a short delay
-    setTimeout(() => {
-      event.target.style.color = "";
-    }, 500);
-  },
-  false,
-);
+  // reset the color after a short delay
+  setTimeout(() => {
+    event.target.style.color = "";
+  }, 500);
+});
 
 // This handler will be executed every time the cursor
 // is moved over a different list item
-test.addEventListener(
-  "mouseover",
-  (event) => {
-    // highlight the mouseover target
-    event.target.style.color = "orange";
+test.addEventListener("mouseover", (event) => {
+  // highlight the mouseover target
+  event.target.style.color = "orange";
 
-    // reset the color after a short delay
-    setTimeout(() => {
-      event.target.style.color = "";
-    }, 500);
-  },
-  false,
-);
+  // reset the color after a short delay
+  setTimeout(() => {
+    event.target.style.color = "";
+  }, 500);
+});
 ```
 
 ### Result

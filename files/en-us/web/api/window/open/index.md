@@ -161,14 +161,10 @@ function openRequestedTab(url, windowName) {
 }
 
 const link = document.querySelector("a[target='OpenWikipediaWindow']");
-link.addEventListener(
-  "click",
-  (event) => {
-    openRequestedTab(link.href);
-    event.preventDefault();
-  },
-  false,
-);
+link.addEventListener("click", (event) => {
+  openRequestedTab(link.href);
+  event.preventDefault();
+});
 ```
 
 The above code solves a few usability problems related to links opening popups. The purpose of the `event.preventDefault()` in the code is to cancel the default action of the link: if the event listener for `click` is executed, then there is no need to execute the default action of the link. But if JavaScript support is disabled or non-existent on the user's browser, then the event listener for `click` is ignored, and the browser loads the referenced resource in the target frame or window that has the name `"WikipediaWindowName"`. If no frame nor window has the name `"WikipediaWindowName"`, then the browser will create a new window and name it `"WikipediaWindowName"`.
@@ -227,14 +223,10 @@ const links = document.querySelectorAll(
   "a[target='SingleSecondaryWindowName']",
 );
 for (const link of links) {
-  link.addEventListener(
-    "click",
-    (event) => {
-      openRequestedSingleTab(link.href);
-      event.preventDefault();
-    },
-    false,
-  );
+  link.addEventListener("click", (event) => {
+    openRequestedSingleTab(link.href);
+    event.preventDefault();
+  });
 }
 ```
 

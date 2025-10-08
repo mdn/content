@@ -5,11 +5,10 @@ page-type: web-api-overview
 status:
   - experimental
 browser-compat:
-  - api.Document.prerendering
-  - api.Document.prerenderingchange_event
   - html.elements.script.type.speculationrules
+  - http.headers.Speculation-Rules
 spec-urls:
-  - https://wicg.github.io/nav-speculation/speculation-rules.html
+  - https://html.spec.whatwg.org/multipage/speculative-loading.html#speculative-loading
   - https://wicg.github.io/nav-speculation/prerendering.html
 ---
 

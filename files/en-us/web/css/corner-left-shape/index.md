@@ -2,9 +2,13 @@
 title: corner-left-shape
 slug: Web/CSS/corner-left-shape
 page-type: css-property
+status:
+  - experimental
 browser-compat: css.properties.corner-left-shape
 sidebar: cssref
 ---
+
+{{SeeCompatTable}}
 
 The **`corner-left-shape`** [CSS](/en-US/docs/Web/CSS) property specifies the shape of both the corners on a box's left-hand edge, within their {{cssxref("border-radius")}} area.
 

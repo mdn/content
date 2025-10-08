@@ -288,15 +288,11 @@ function checkKey(e) {
   }
 }
 
-myControl.addEventListener(
-  "click",
-  () => {
-    switchState();
-  },
-  false,
-);
+myControl.addEventListener("click", () => {
+  switchState();
+});
 
-window.addEventListener("keypress", checkKey, false);
+window.addEventListener("keypress", checkKey);
 ```
 
 {{EmbedLiveSample("customizing your media player", "", 200)}}
@@ -452,15 +448,11 @@ Another way to show the fallback content of a video, when none of the sources co
 const v = document.querySelector("video");
 const sources = v.querySelectorAll("source");
 const lastSource = sources[sources.length - 1];
-lastSource.addEventListener(
-  "error",
-  (ev) => {
-    const d = document.createElement("div");
-    d.innerHTML = v.innerHTML;
-    v.parentNode.replaceChild(d, v);
-  },
-  false,
-);
+lastSource.addEventListener("error", (ev) => {
+  const d = document.createElement("div");
+  d.innerHTML = v.innerHTML;
+  v.parentNode.replaceChild(d, v);
+});
 ```
 
 ## Audio/Video JavaScript libraries
@@ -478,7 +470,7 @@ A number of audio and video JavaScript libraries exist. The most popular librari
 - [flowplayer](https://flowplayer.com/): Gratis with a flowplayer logo watermark. Open source (GPL licensed.)
 - [JWPlayer](https://jwpconnatix.com/): Requires registration to download. Open Source Edition (Creative Commons License.)
 - [SublimeVideo](https://www.sublimevideo.net/): Requires registration. Form based set up with domain specific link to CDN hosted library.
-- [Video.js](https://videojs.com/): Gratis and Open Source (Apache 2 Licensed.)
+- [Video.js](https://videojs.org/): Gratis and Open Source (Apache 2 Licensed.)
 
 ### Audio and Video
 

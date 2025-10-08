@@ -49,6 +49,20 @@ HTML password input elements ([`<input type="password">`](/en-US/docs/Web/HTML/R
 - `layout.forms.reveal-password-button.enabled`
   - : Set to `true` to enable.
 
+### Time picker for datetime-local input field
+
+HTML datetime-local input elements ([`<input type="datetime-local">`](/en-US/docs/Web/HTML/Reference/Elements/input/datetime-local)) now includes a time picker ([Firefox bug 1726108](https://bugzil.la/1726108)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 144           | No                  |
+| Developer Edition | 144           | No                  |
+| Beta              | 144           | No                  |
+| Release           | 144           | No                  |
+
+- `dom.forms.datetime.timepicker`
+  - : Set to `true` to enable.
+
 ## CSS
 
 ### Hex boxes to display stray control characters
@@ -294,34 +308,6 @@ The `::file-selector-button` pseudo-element is not yet marked as an element-base
 | Beta              | 138           | No                  |
 | Release           | 138           | No                  |
 
-### `:active-view-transition` pseudo-class
-
-The CSS {{CSSXRef(":active-view-transition")}} pseudo-class enables you to style content while a [view transition](/en-US/docs/Web/API/View_Transition_API) is taking place in a single-page app (SPA). ([Firefox bug 1956140](https://bugzil.la/1956140)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 141           | Yes                 |
-| Developer Edition | 141           | No                  |
-| Beta              | 141           | No                  |
-| Release           | 141           | No                  |
-
-- `dom.viewTransitions.enabled`
-  - : Set to `true` to enable.
-
-### `match-element` value for `view-transition-name` property
-
-The {{CSSXRef("view-transition-name", "match-element", "#match-element")}} value of the CSS {{CSSXRef("view-transition-name")}} property [automatically](/en-US/docs/Web/CSS/view-transition-name#specifying_view-transition-name_values_automatically) assigns a unique internal `view-transition-name` to each selected element, rather than having to name them individually. ([Firefox bug 1956141](https://bugzil.la/1956141)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 142           | Yes                 |
-| Developer Edition | 142           | No                  |
-| Beta              | 142           | No                  |
-| Release           | 142           | No                  |
-
-- `dom.viewTransitions.enabled`
-  - : Set to `true` to enable.
-
 ### `anchor-size()` function
 
 The CSS {{CSSXRef("anchor-size")}} function enables setting anchor-positioned element's size, position, and margins relative to the dimensions of anchor elements. ([Firefox bug 1972610](https://bugzil.la/1972610)).
@@ -459,20 +445,6 @@ The non-standard events [`beforescriptexecute`](/en-US/docs/Web/API/Document/bef
 | Release           | 139           | Yes                 |
 
 - `dom.events.script_execute.enable`
-  - : Set to `true` to enable.
-
-### PerformanceEventTiming.interactionId
-
-{{domxref("PerformanceEventTiming.interactionId")}} can be used to measure latency timing for events triggered by a particular user interaction. ([Firefox bug 1934683](https://bugzil.la/1934683)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 138           | No                  |
-| Developer Edition | 138           | No                  |
-| Beta              | 138           | No                  |
-| Release           | 138           | No                  |
-
-- `dom.performance.event_timing.enable_interactionid`
   - : Set to `true` to enable.
 
 ### Notification actions and maxActions properties
@@ -714,20 +686,6 @@ Notifications have the [`requireInteraction`](/en-US/docs/Web/API/Notification/r
 | Release           | 117             | Windows only        |
 
 - `dom.webnotifications.requireinteraction.enabled`
-  - : Set to `true` to enable.
-
-### View Transition API
-
-The [View Transition API](/en-US/docs/Web/API/View_Transition_API) provides a mechanism for easily creating animated transitions between different website views. This is especially useful for [SPAs (single-page applications)](/en-US/docs/Glossary/SPA). ([Firefox bug 1950759](https://bugzil.la/1950759)).
-
-| Release channel   | Version changed | Enabled by default? |
-| ----------------- | --------------- | ------------------- |
-| Nightly           | 139             | Yes                 |
-| Developer Edition | 139             | No                  |
-| Beta              | 139             | No                  |
-| Release           | 139             | No                  |
-
-- `dom.viewTransitions.enabled`
   - : Set to `true` to enable.
 
 ## Security and privacy

@@ -6,7 +6,7 @@ browser-compat: css.properties.grid-column
 sidebar: cssref
 ---
 
-The **`grid-column`** CSS [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) specifies a grid item's size and location within a {{glossary("grid column")}} by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the inline-start and inline-end edge of its {{glossary("grid areas", "grid area")}}.
+The **`grid-column`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) specifies a grid item's size and location within a {{glossary("grid column")}} by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the inline-start and inline-end edge of its {{glossary("grid areas", "grid area")}}.
 
 {{InteractiveExample("CSS Demo: grid-column")}}
 

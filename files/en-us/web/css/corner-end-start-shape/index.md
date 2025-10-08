@@ -2,9 +2,13 @@
 title: corner-end-start-shape
 slug: Web/CSS/corner-end-start-shape
 page-type: css-property
+status:
+  - experimental
 browser-compat: css.properties.corner-end-start-shape
 sidebar: cssref
 ---
+
+{{SeeCompatTable}}
 
 The **`corner-end-start-shape`** [CSS](/en-US/docs/Web/CSS) property specifies the shape of a box's block-end and inline-start corner, within its {{cssxref("border-radius")}} area.
 

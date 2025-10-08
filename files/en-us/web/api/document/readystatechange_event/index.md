@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Document.readystatechange_event
 ---
 
-{{APIRef}}
+{{APIRef("DOM")}}
 
 The **`readystatechange`** event is fired when the {{domxref("Document.readyState", "readyState")}} attribute of a document has changed.
 

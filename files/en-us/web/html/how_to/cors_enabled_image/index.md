@@ -67,7 +67,7 @@ function startDownload() {
 
   downloadedImg = new Image();
   downloadedImg.crossOrigin = "anonymous";
-  downloadedImg.addEventListener("load", imageReceived, false);
+  downloadedImg.addEventListener("load", imageReceived);
   downloadedImg.alt = imageDescription;
   downloadedImg.src = imageURL;
 }
