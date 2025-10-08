@@ -36,7 +36,7 @@ If the value is `false`, no restriction will be attempted on any system audio or
 
 ```js
 let isCapturingTabSystemAudioRestricted = displayStream
-  .getVideoTracks()[0]
+  .getAudioTracks()[0]
   .getSettings().restrictOwnAudio;
 ```
 
