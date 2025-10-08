@@ -125,7 +125,12 @@ When reviewing an update to a dependency, consider whether it's an update you wa
 
 To get a deeper insight into your dependencies, you can maintain a detailed inventory of them. This is called a _Software Bill of Materials_ (SBOM).
 
-Any inventory is better than none: however, using a standard format for representing an SBOM means you can:
+A lockfile is really a kind of SBOM: however, the term "SBOM" usually refers to a separate standard format for representing dependencies. These standards are usually both broader and deeper than a lockfile. That is:
+
+- They can capture dependencies, such as web services, that are not represented in a lockfile.
+- They can capture additional information about each dependency, that is not represented in a lockfile.
+
+Using a standard format for representing an SBOM also means you can:
 
 - Share your SBOM with third parties
 - Integrate tools that can understand your SBOM for purposes such as regulatory compliance or vulnerability monitoring.
@@ -155,7 +160,7 @@ The SBOM also lists vulnerabilities that have been identified in the product's d
 
 #### Creating an SBOM
 
-You can generate an SBOM for a product using a tool such as [cdxgen](https://cyclonedx.github.io/cdxgen/#/). An SBOM is usually generated as part of the build process, although it is possible to generate one at other stages of the software lifecycle.
+You can generate an SBOM for a product using a separate tool such as [cdxgen](https://cyclonedx.github.io/cdxgen/#/) or a command such as [`npm sbom`](https://docs.npmjs.com/cli/v11/commands/npm-sbom). An SBOM is usually generated as part of the build process, although it is possible to generate one at other stages of the software lifecycle.
 
 #### Using an SBOM
 
