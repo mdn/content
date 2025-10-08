@@ -20,7 +20,9 @@ For example, when you want to animate an element moving along a path, you can de
 
 ```css hidden
 #motion-demo {
-  offset-path: path("M20,70 A40,40,0,0,1,100,70 A40,40,0,0,1,180,70 Q180,130,100,190 Q20,130,20,70 Z");
+  offset-path: path(
+    "M20,70 A40,40,0,0,1,100,70 A40,40,0,0,1,180,70 Q180,130,100,190 Q20,130,20,70 Z"
+  );
   animation: move 3000ms infinite linear;
   width: 10px;
   height: 10px;
@@ -69,14 +71,36 @@ In this example, we used [CSS masking](/en-US/docs/Web/CSS/CSS_masking) and [CSS
 
 ## Related concepts
 
-- [CSS shape functions](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#shape_functions)
-- {{cssxref("basic-shape")}} data type
 - [`<coord-box>`](/en-US/docs/Web/CSS/offset-path#coord-box)
 - {{cssxref("url")}} function
 - {{cssxref("radial-gradient")}} function
-- [`<easing-function>`](/en-US/docs/Web/CSS/easing-function) data type
-- [CSS shapes](/en-US/docs/Web/CSS/CSS_shapes) module
 - {{cssxref("position_value", "&lt;position&gt;")}}
+
+[CSS masking](/en-US/docs/Web/CSS/CSS_masking) module
+
+- {{cssxref("clip-path")}}
+- {{cssxref("clip-rule")}}
+
+[CSS shapes](/en-US/docs/Web/CSS/CSS_shapes) module
+
+- {{cssxref("&lt;basic-shape&gt;")}}
+- {{cssxref("basic-shape/circle","circle()")}}
+- {{cssxref("basic-shape/ellipse","ellipse()")}}
+- {{cssxref("basic-shape/inset","inset()")}}
+- {{cssxref("basic-shape/path","path()")}}
+- {{cssxref("basic-shape/polygon","polygon()")}}
+- {{cssxref("basic-shape/rect","rect()")}}
+- {{cssxref("basic-shape/shape","shape()")}}
+- {{cssxref("basic-shape/xywh","xywh()")}}
+
+[CSS animations](/en-US/docs/Web/CSS/CSS_animations) module
+
+- {{cssxref("animation")}} shorthand
+- {{cssxref("@keyframes")}}
+
+[CSS easing functions](/en-US/docs/Web/CSS/CSS_easing_functions) module
+
+- [`<easing-function>`](/en-US/docs/Web/CSS/easing-function)
 
 ## Specifications
 
@@ -85,4 +109,5 @@ In this example, we used [CSS masking](/en-US/docs/Web/CSS/CSS_masking) and [CSS
 ## See also
 
 - [`prefers-reduced-motion`](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) media query
-- {{cssxref("will-change")}} CSS propertyproperty
+- {{cssxref("will-change")}} CSS property
+- [CSS shape functions](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#shape_functions)
