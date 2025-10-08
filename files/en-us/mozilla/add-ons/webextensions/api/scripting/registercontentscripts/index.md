@@ -13,7 +13,6 @@ Registers one or more content scripts.
 
 To call this API, you must have the `"scripting"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). To run the injected script, the extension must have permission for the page's URL, either explicitly as a [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) or using the [activeTab permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission).
 
-
 ## Syntax
 
 ```js-nolint
