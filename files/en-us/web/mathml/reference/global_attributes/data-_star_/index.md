@@ -25,7 +25,7 @@ You can use this attribute with any MathML element.
 <math>
   <msup data-formula="euler" data-value="-1">
     <mi>e</mi>
-    <mi>iπ</mi>
+    <mrow><mi>i</mi> <mi>π</mi></mrow>
   </msup>
   <mo>+</mo>
   <mn>1</mn>
