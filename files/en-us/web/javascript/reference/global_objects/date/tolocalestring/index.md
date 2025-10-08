@@ -45,7 +45,7 @@ In implementations that support the [`Intl.DateTimeFormat` API](/en-US/docs/Web/
     In implementations without `Intl.DateTimeFormat` support, this parameter is ignored and the host's locale is usually used.
 
 - `options` {{optional_inline}}
-  - : An object adjusting the output format. Corresponds to the [`options`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#options) parameter of the `Intl.DateTimeFormat()` constructor. If `weekday`, `year`, `month`, `day`, `dayPeriod`, `hour`, `minute`, `second`, and `fractionalSecondDigits` are all undefined, then `year`, `month`, `day`, `hour`, `minute`, `second` will be set to `"numeric"`.
+  - : An object adjusting the output format. Corresponds to the [`options`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#options) parameter of the `Intl.DateTimeFormat()` constructor. If `weekday`, `year`, `month`, `day`, `dayPeriod`, `hour`, `minute`, `second`, and `fractionalSecondDigits` are all undefined, then `year`, `month`, `day`, `hour`, `minute`, `second` will be set to `"numeric"`. To show leading zeros, use `"2-digit"` for the relevant field.
 
     In implementations without `Intl.DateTimeFormat` support, this parameter is ignored.
 
@@ -64,13 +64,11 @@ In implementations with `Intl.DateTimeFormat`, this is equivalent to `new Intl.D
 
 ### Using toLocaleString()
 
-Basic use of this method without specifying a `locale` returns a formatted string in the default locale and with default options.
+Basic use of this method – without specifying `locale` or `options` – depends on the implementation and returns a string formatted based on the default locale and time zone, and with default options.
 
 ```js
 const date = new Date(Date.UTC(2012, 11, 12, 3, 0, 0));
 
-// toLocaleString() without arguments depends on the
-// implementation, the default locale, and the default time zone
 console.log(date.toLocaleString());
 // "12/11/2012, 7:00:00 PM" if run in en-US locale with time zone America/Los_Angeles
 ```
@@ -94,36 +92,36 @@ function toLocaleStringSupportsLocales() {
 This example shows some of the variations in localized date and time formats. In order to get the format of the language used in the user interface of your application, make sure to specify that language (and possibly some fallback languages) using the `locales` argument:
 
 ```js
-const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+const date = new Date(Date.UTC(2012, 1, 2, 3, 0, 0));
 
 // Formats below assume the local time zone of the locale;
 // America/Los_Angeles for the US
 
 // US English uses month-day-year order and 12-hour time with AM/PM
 console.log(date.toLocaleString("en-US"));
-// "12/19/2012, 7:00:00 PM"
+// "2/1/2012, 7:00:00 PM" (UTC-8 is the previous day)
 
 // British English uses day-month-year order and 24-hour time without AM/PM
 console.log(date.toLocaleString("en-GB"));
-// "20/12/2012 03:00:00"
+// "02/02/2012, 03:00:00" (UTC+0 or UTC+1 depending on time of the year)
 
 // Korean uses year-month-day order and 12-hour time with AM/PM
 console.log(date.toLocaleString("ko-KR"));
-// "2012. 12. 20. 오후 12:00:00"
+// "2012. 2. 2. 오후 12:00:00"
 
 // Arabic in most Arabic-speaking countries uses Eastern Arabic numerals
 console.log(date.toLocaleString("ar-EG"));
-// "٢٠‏/١٢‏/٢٠١٢ ٥:٠٠:٠٠ ص"
+// "٢‏/٢‏/٢٠١٢ ٥:٠٠:٠٠ ص"
 
 // For Japanese, applications may want to use the Japanese calendar,
 // where 2012 was the year 24 of the Heisei era
 console.log(date.toLocaleString("ja-JP-u-ca-japanese"));
-// "24/12/20 12:00:00"
+// "H24/2/2 12:00:00"
 
 // When requesting a language that may not be supported, such as
 // Balinese, include a fallback language (in this case, Indonesian)
 console.log(date.toLocaleString(["ban", "id"]));
-// "20/12/2012 11.00.00"
+// "2/2/2012 11.00.00"
 ```
 
 ### Using options
@@ -156,37 +154,8 @@ console.log(date.toLocaleString("en-US", { hour12: false }));
 // The exact date and time may shift depending on your local time zone.
 ```
 
-### Controlling single-digit vs double-digit day or month
-
-Use `numeric` for single digits and `2-digit` for leading zeros.
-The output may still follow the locale's style.
-For example, `en-GB` often pads even with `numeric`.
-
-```js
-const date = new Date(Date.UTC(2012, 1, 2, 3, 0, 0));
-
-// Single-digit day and month
-const options = {
-  timeZone: "UTC",
-  year: "numeric",
-  month: "numeric",
-  day: "numeric",
-  hour: "numeric",
-  minute: "numeric",
-};
-console.log(date.toLocaleString("en-US", options));
-// Example output: "2/2/2012, 3:00 AM"
-// The exact date and time may shift depending on your local time zone.
-
-// Double-digit day and month
-options.month = "2-digit";
-options.day = "2-digit";
-options.hour = "2-digit";
-options.minute = "2-digit";
-console.log(date.toLocaleString("en-US", options));
-// Example output: "02/02/2012, 03:00 AM"
-// The exact date and time may shift depending on your local time zone.
-```
+To force a fixed-width day or month, use [`2-digit`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#2-digit) for the respective option.
+The output may still follow the locale's style (for example, `en-GB` often pads even with `numeric`.)
 
 ## Specifications
 
