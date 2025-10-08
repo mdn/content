@@ -12,7 +12,49 @@ To understand how JavaScript prototypes work, read the following MDN articles:
 - [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
 - [Working with objects](/en-US/docs/Web/JavaScript/Guide/Working_with_objects)
 
-In a nutshell, every object in JavaScript has a `prototype` property which is an object itself and that prototype has its own prototype, too. This is called the JavaScript prototype chain. The chain ends when we reach an object that has `null` for its own prototype. The power of the prototype chain is that it allows an object to inherit properties and methods from its parent. However, a bad practice that JavaScript allows, is that the prototypes of objects can be changed during runtime which makes it possible to install properties at unintended places with malicious values. This even includes the built-in default objects, like the {{jsxref("Object")}} object, which is likely in the prototype chain of the majority of objects in your codebase and therefore makes this attack especially dangerous.
+## Prototypes in JavaScript
+
+JavaScript implements {{glossary("inheritance")}} using _prototypes_. Each object has a reference to a prototype, which is itself an object, and which itself has a prototype, and so on, until we get to the fundamental prototype, which is called `Object.prototype`, whose own prototype is `null`.
+
+If you try to access a property or call a method on an object, and that property or method isn't defined on the object, then the JavaScript runtime looks in the object's prototype for the property or method, and then in the object's prototype's prototype, and so on, until it finds the method or property, or reaches an object whose prototype is `null`.
+
+That's why you can do this:
+
+```js
+const myArray = new Array(1,2,3);
+// prototype chain:
+// myArray -> Array -> Object -> null
+
+myArray.length 
+// 3
+// length is defined on the prototype of `myArray`, which is `Array.prototype`
+
+myArray.toString();
+// "1,2,3" 
+// toString() is defined on the prototype of `Array.prototype`,
+// which is `Object.prototype`
+```
+
+Unlike many other languages, JavaScript allows you to add inherited properties and methods at runtime by modifying an object's prototypes:
+
+```js
+const myArray = new Array(1,2,3); 
+
+// modify the Object prototype at runtime
+Object.prototype.extra = "new property!" 
+
+myArray.extra;
+// "new property!"
+```
+
+In a prototype pollution attack, the attacker is able to change the object's prototype to make the object behave in unexpected or dangerous ways.
+
+> [!NOTE]
+> To learn much more about prototypes, see:
+>
+> - [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
+> - [Working with objects](/en-US/docs/Web/JavaScript/Guide/Working_with_objects)
+
 
 A key attack vector is the special [`Object.prototype.__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) property, and how adding a property to `Object.prototype` will make that property accessible on ("polluted to") every object in your application. The `__proto__` property is often used, but you can also reach `Object.prototype` via `yourObject.constructor.prototype`.
 
