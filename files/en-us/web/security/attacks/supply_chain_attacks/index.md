@@ -75,9 +75,9 @@ Once you have added a dependency to your project, the dependency's supplier will
 
 However, updating dependencies too eagerly comes with its own risks. For example, suppose you add a dependency on a trustworthy third-party package. An attacker then gets control of the package developer's account, and publishes a malicious update. If you immediately accept the update, your project is compromised.
 
-#### Using a lock file
+#### Using a lockfile
 
-The first step towards securing dependency updates is to use a _lock file_ for dependencies, commit it to source control, and use it when building your project.
+The first step towards securing dependency updates is to use a _lockfile_ for dependencies, commit it to source control, and use it when building your project.
 
 Package managers like [npm](https://www.npmjs.com/) and [Yarn](https://yarnpkg.com/) let you provide a file such as [package.json](https://docs.npmjs.com/cli/v10/configuring-npm/package-json?v=true) that lists your project's dependencies. You can then run a command that installs the given dependencies so the project can use them.
 
@@ -101,16 +101,16 @@ At version `1.0.2`, which is the point you added it to the project, "example-dep
 
 All this has happened without any changes to your project's direct artifacts, or any opportunity for you to review the update and see if it looks suspicious.
 
-The solution to this is to use a lock file when building your project. A lock file is automatically generated whenever a project's dependencies are installed, and it lists the exact versions of the direct and indirect dependencies used in a project.
+The solution to this is to use a lockfile when building your project. A lockfile is automatically generated whenever a project's dependencies are installed, and it lists the exact versions of the direct and indirect dependencies used in a project.
 
 That is, if _package.json_ tells you that your project is using "example-project", then _package.lock_ will tell you exactly which version of "example-project" to use, and what the versions of its dependencies are.
 
-Your project's lock file should be checked into source control. When building your project you should use the lock file to control which versions of your dependencies are installed: in npm you do this by using [`npm ci`](https://docs.npmjs.com/cli/v10/commands/npm-ci) instead of `npm install`.
+Your project's lockfile should be checked into source control. When building your project you should use the lockfile to control which versions of your dependencies are installed: in npm you do this by using [`npm ci`](https://docs.npmjs.com/cli/v10/commands/npm-ci) instead of `npm install`.
 
 > [!NOTE]
 > Fixing the versions of your dependencies in this way is sometimes called "version pinning".
 
-This means that to update dependencies, your build system has to make a pull request to update the lock file, and this gives you the chance to review the update and ensure you want to accept it.
+This means that to update dependencies, your build system has to make a pull request to update the lockfile, and this gives you the chance to review the update and ensure you want to accept it.
 
 #### Reviewing updates
 
@@ -197,10 +197,44 @@ See [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity) for 
 - Assess tools involved in your build, test, and deployment processes.
 - Ensure pull requests go through review and pass {{glossary("continuous integration")}} checks.
 - Minimize your dependencies, and follow a process for evaluating new dependencies.
-- Use a lock file to control updates to your dependencies, and follow a process for accepting updates.
+- Use a lockfile to control updates to your dependencies, and follow a process for accepting updates.
 - Maintain an SBOM and use it to check for vulnerabilities.
 - Use Subresource Integrity for externally referenced scripts and stylesheets.
 
 ## See also
 
 - [Software Supply Chain Security](https://cheatsheetseries.owasp.org/cheatsheets/Software_Supply_Chain_Security_Cheat_Sheet.html) at [owasp.org](https://owasp.org/)
+
+JavaScript implements {{glossary("inheritance")}} using _prototypes_. Each object has a prototype, which it itself an object, and which itself has a prototype, and so on, until we get to the fundamental prototype, which is called `Object.prototype`, whose own prototype is `null`.
+
+If you try to access a property or call a method on an object, and that property or method isn't defined on the object, then the JavaScript runtime looks in the object's prototype for the property or method, and then in the object's prototype's prototype, and so on, until it finds the method of property or reaches an object whose prototype is `null`.
+
+That's why you can do this:
+
+```js
+const myArray = new Array(1, 2, 3);
+// prototype chain:
+// myArray -> Array -> Object -> null
+
+myArray.length;
+// 3
+// length is defined on the prototype of `myArray`, which is `Array.prototype`
+
+myArray.toString();
+// "1,2,3"
+// toString() is defined on the prototype of `Array.prototype`, which is `Object`
+```
+
+Unlike many other languages, JavaScript allows you to add inherited properties and methods at runtime by modifying an object's prototypes:
+
+```js
+const myArray = new Array(1, 2, 3);
+
+// modify the Object prototype at runtime
+Object.prototype.extra = "new property!";
+
+myArray.extra;
+// "new property!"
+```
+
+In a prototype pollution attack, the attacker is able to change the object's prototype to make the object behave in unexpected or dangerous ways.
