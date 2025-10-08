@@ -12291,14 +12291,6 @@
 /en-US/docs/Web/CSS/CSS_ruby	/en-US/docs/Web/CSS/CSS_ruby_layout
 /en-US/docs/Web/CSS/CSS_special_properties	/en-US/docs/Web/CSS
 /en-US/docs/Web/CSS/CSS_transform_functions	/en-US/docs/Web/CSS/transform
-/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions1	/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions
-/en-US/docs/Web/CSS/CSS_values_and_units1	/en-US/docs/Web/CSS/CSS_values_and_units
-/en-US/docs/Web/CSS/CSS_values_and_units1/CSS_Value_Functions	/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions
-/en-US/docs/Web/CSS/CSS_values_and_units1/CSS_data_types	/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types
-/en-US/docs/Web/CSS/CSS_values_and_units1/Numeric_data_types	/en-US/docs/Web/CSS/CSS_values_and_units/Numeric_data_types
-/en-US/docs/Web/CSS/CSS_values_and_units1/Textual_data_types	/en-US/docs/Web/CSS/CSS_values_and_units/Textual_data_types
-/en-US/docs/Web/CSS/CSS_values_and_units1/Using_CSS_math_functions	/en-US/docs/Web/CSS/CSS_values_and_units/Using_CSS_math_functions
-/en-US/docs/Web/CSS/CSS_values_and_units1/Value_definition_syntax	/en-US/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax
 /en-US/docs/Web/CSS/CSS_values_serialization	/en-US/docs/Web/CSS
 /en-US/docs/Web/CSS/CSS_values_syntax	/en-US/docs/Web/CSS
 /en-US/docs/Web/CSS/Cascade	/en-US/docs/Web/CSS/CSS_cascade/Cascade
