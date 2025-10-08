@@ -45,61 +45,62 @@ We are going to get you to solve this challenge in your local development enviro
            <h1>An Exciting Blog Post</h1>
            <img src="images/square6.jpg" alt="placeholder" class="feature" />
            <p>
-             Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi
-             welsh onion daikon amaranth tatsoi tomatillo melon azuki bean
-             garlic.
+             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis non
+             justo at erat egestas porttitor vel nec tortor. Mauris in molestie
+             ipsum. Vivamus diam elit, ornare ornare nisi vitae, ullamcorper
+             pharetra ligula. In vel lacus quis nulla sollicitudin pellentesque.
            </p>
 
            <p>
-             Turnip greens yarrow ricebean rutabaga endive cauliflower sea
-             lettuce kohlrabi amaranth water spinach avocado daikon napa
-             asparagus winter purslane kale. Celery potato scallion desert
-             raisin horseradish spinach carrot soko. Lotus root water spinach
-             fennel kombu maize bamboo shoot green bean swiss chard seakale
-             pumpkin onion chickpea gram corn pea. Brussels sprout coriander
-             water chestnut gourd swiss chard wakame kohlrabi beetroot carrot
-             watercress. Corn amaranth salsify bunya nuts nori azuki bean
-             chickweed potato bell pepper artichoke.
+             Nunc vitae eleifend odio, eget tincidunt sem. Cras et varius justo.
+             Nulla sollicitudin quis urna vitae efficitur. Pellentesque
+             hendrerit molestie arcu sit amet lacinia. Vivamus vulputate sed
+             purus at eleifend. Phasellus malesuada sem vel libero hendrerit,
+             sed finibus massa porta. Vestibulum luctus scelerisque libero, sit
+             amet sagittis eros sollicitudin ac. Class aptent taciti sociosqu ad
+             litora torquent per conubia nostra, per inceptos himenaeos.
            </p>
 
            <p>
-             Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot
-             courgette tatsoi pea sprouts fava bean collard greens dandelion
-             okra wakame tomato. Dandelion cucumber earthnut pea peanut soko
-             zucchini.
+             Phasellus tincidunt eros iaculis, feugiat mi at, eleifend mauris.
+             Quisque porttitor lacus eu massa condimentum, eu tincidunt nisl
+             consequat. Nunc egestas lacus dolor, id scelerisque ante tincidunt
+             ac. In risus massa, sodales ac enim eu, iaculis eleifend lorem.
            </p>
 
            <p>
-             Nori grape silver beet broccoli kombu beet greens fava bean potato
-             quandong celery. Bunya nuts black-eyed pea prairie turnip leek
-             lentil turnip greens parsnip. Sea lettuce lettuce water chestnut
-             eggplant winter purslane fennel azuki bean earthnut pea sierra
-             leone bologi leek soko chicory celtuce parsley jícama salsify.
+             Maecenas euismod condimentum enim, non rhoncus neque tempor ut.
+             Vestibulum eget nisi ornare, vehicula felis id, aliquet nibh. Donec
+             in mauris in diam aliquam commodo nec ac nunc. Aliquam nisl risus,
+             eleifend a iaculis id, tempor vel tortor. Nam ullamcorper dictum
+             tellus id rhoncus. Sed quis nulla in mi aliquam euismod nec eu
+             metus.
            </p>
 
            <p>
-             Celery quandong swiss chard chicory earthnut pea potato. Salsify
-             taro catsear garlic gram celery bitterleaf wattle seed collard
-             greens nori. Grape wattle seed kombu beetroot horseradish carrot
-             squash brussels sprout chard.
+             Nam orci nulla, convallis aliquet ante ut, lobortis hendrerit
+             risus. Nulla malesuada porta turpis in consequat. Duis suscipit
+             nulla a mauris pellentesque vehicula. Fusce euismod, mi malesuada
+             venenatis vestibulum, metus erat faucibus dui, vel rutrum turpis
+             nibh ut diam.
            </p>
 
            <p>
-             Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi
-             welsh onion daikon amaranth tatsoi tomatillo melon azuki bean
-             garlic.
+             Nam ornare et mauris eget tincidunt. Nam ornare et mauris eget
+             tincidunt. Donec et ipsum a orci elementum commodo et ut ex.
+             Vivamus porttitor sem in purus maximus, eu imperdiet felis
+             lobortis.
            </p>
 
            <p>
-             Turnip greens yarrow ricebean rutabaga endive cauliflower sea
-             lettuce kohlrabi amaranth water spinach avocado daikon napa
-             asparagus winter purslane kale. Celery potato scallion desert
-             raisin horseradish spinach carrot soko. Lotus root water spinach
-             fennel kombu maize bamboo shoot green bean swiss chard seakale
-             pumpkin onion chickpea gram corn pea. Brussels sprout coriander
-             water chestnut gourd swiss chard wakame kohlrabi beetroot carrot
-             watercress. Corn amaranth salsify bunya nuts nori azuki bean
-             chickweed potato bell pepper artichoke.
+             Pellentesque ullamcorper dolor ut ullamcorper convallis. Duis a
+             orci aliquet, pretium neque ut, auctor purus. Proin viverra
+             tincidunt nisi id fringilla. Maecenas interdum risus in ultricies
+             finibus. Vestibulum volutpat tincidunt libero, a feugiat leo
+             suscipit in. Sed eget lacus rutrum, semper ligula a, vestibulum
+             ipsum. Mauris in odio fringilla, accumsan eros blandit, mattis
+             odio. Ut viverra mollis augue, vitae ullamcorper velit hendrerit
+             eu. Curabitur mi lacus, condimentum in auctor sed, ornare sed leo.
            </p>
          </article>
 
@@ -126,8 +127,8 @@ We are going to get you to solve this challenge in your local development enviro
    }
 
    body {
-     background-color: #fff;
-     color: #333;
+     background-color: white;
+     color: #333333;
      margin: 0;
      font: 1.2em / 1.6 sans-serif;
    }
@@ -151,7 +152,7 @@ We are going to get you to solve this challenge in your local development enviro
    }
 
    nav {
-     background-color: #000;
+     background-color: black;
      padding: 0.5em;
    }
 
@@ -162,7 +163,7 @@ We are going to get you to solve this challenge in your local development enviro
    }
 
    nav a {
-     color: #fff;
+     color: white;
      text-decoration: none;
      padding: 0.5em 1em;
    }
@@ -223,8 +224,8 @@ The finished CSS looks like so:
 }
 
 body {
-  background-color: #fff;
-  color: #333;
+  background-color: white;
+  color: #333333;
   margin: 0;
   font: 1.2em / 1.6 sans-serif;
 }
@@ -252,7 +253,7 @@ img {
 }
 
 nav {
-  background-color: #000;
+  background-color: black;
   padding: 0.5em;
   /* 2. Make navigation bar stick to top of viewport */
   top: 0;
@@ -270,7 +271,7 @@ nav ul {
 }
 
 nav a {
-  color: #fff;
+  color: white;
   text-decoration: none;
   padding: 0.5em 1em;
 }
