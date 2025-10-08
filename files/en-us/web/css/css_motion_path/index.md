@@ -103,21 +103,9 @@ In this example, we used [CSS masking](/en-US/docs/Web/CSS/CSS_masking) and [CSS
 - {{cssxref("animation")}} shorthand
 - {{cssxref("@keyframes")}}
 
-[CSS easing functions](/en-US/docs/Web/CSS/CSS_easing_functions) module
-
-- [`<easing-function>`](/en-US/docs/Web/CSS/easing-function)
-
-[CSS positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout) module
-
-- {{cssxref("position_value", "&lt;position&gt;")}}
-
 [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module
 
 - [`<coord-box>`](/en-US/docs/Web/CSS/offset-path#coord-box)
-
-[CSS images](/en-US/docs/Web/CSS/CSS_images) module
-
-- {{cssxref("radial-gradient")}} function
 
 ## Specifications
 
@@ -125,5 +113,8 @@ In this example, we used [CSS masking](/en-US/docs/Web/CSS/CSS_masking) and [CSS
 
 ## See also
 
+- {{cssxref("position_value", "&lt;position&gt;")}}
+- [`<easing-function>`](/en-US/docs/Web/CSS/easing-function)
+- {{cssxref("radial-gradient")}} function
 - [`prefers-reduced-motion`](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) media query
 - {{cssxref("will-change")}} CSS property
