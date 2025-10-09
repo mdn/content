@@ -90,15 +90,15 @@ Any configuration objects, like `fetch()`'s {{domxref("RequestInit")}} object in
 
 In order to pollute objects, the attacker needs a way to add arbitrary properties to prototype objects. This may happen as a consequence of [XSS](/en-US/docs/Web/Security/Attacks/XSS), in which the attacker gains direct access to the page's JavaScript execution environment. However, this can also happen without code injection, such as by constructing a payload that contains the `__proto__` property key will later get merged into another object via [spreading](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax), [`for...in` loops](/en-US/docs/Web/JavaScript/Reference/Statements/for...in), etc., turning it into an assignment operation and therefore triggering the setter.
 
-In a [very common prototype pollution vulnerability](https://github.com/BlackFan/client-side-prototype-pollution), the attacker pollutes query strings in the URL, or alternatively pollution could happen via JSON input, because {{jsxref("JSON.parse()")}} also includes strings like `__proto__`.
+In a [very common prototype pollution vulnerability](https://github.com/BlackFan/client-side-prototype-pollution), the attacker pollutes query strings in the URL. Alternatively, pollution could happen via JSON input, because {{jsxref("JSON.parse()")}} also includes strings like `__proto__`.
 
 ## Defenses against prototype pollution
 
-There are a few options to mitigating prototype pollution vulnerabilities. This section presents them.
+There are a few options to mitigating prototype pollution vulnerabilities. Generally, the more you can avoid prototype modifications and the more you can lock the object's prototypes, the better your protection against prototype pollution will be. This following section presents some strategies which you can use depending on your situation.
 
 ### Create JavaScript objects without a prototype
 
-The {{jsxref("Object.create()", "Object.create(null)")}} function allows you to create a new empty object without a prototype. For your most sensitive objects, you could prevent prototype pollution attacks this way. However, note that creating objects without a prototype is not the default, so whenever instantiating an object, you need to remember to use {{jsxref("Object.create()", "Object.create(null)")}}.
+If you need to work with an object (for example, because an API like `fetch()` requires you to use an object), consider creating an object without a prototype. The {{jsxref("Object.create()", "Object.create(null)")}} function let's you do this. Note that creating objects without a prototype is not the default, so whenever instantiating an object, you need to remember to use {{jsxref("Object.create()", "Object.create(null)")}} instead of the regular object initializer (`const myObj = { }`).
 
 ```js
 let obj = Object.create(null);
@@ -107,9 +107,39 @@ obj.constructor; // undefined
 obj["__proto__"]["a"] = 1; // TypeError: Cannot set properties of undefined
 ```
 
-### Freezing the prototype
+### Avoid lookups on the prototype
 
-The static method {{jsxref("Object.freeze()")}} prevents extensions and makes existing properties non-writable and non-configurable. Freezing an object is the highest integrity level that JavaScript provides. Alternatively, {{jsxref("Object.seal()")}} is available, which allows existing properties changed, as long as they are writable, or {{jsxref("Object.preventExtensions()")}} which prevents new properties from being added to an object.
+In code where you access the object's properties, make sure you know that the property exists on the object itself. You can make use of the {{jsxref("Object.hasOwn()")}} check when you are accessing or traversing keys on objects.
+
+```js
+Object.hasOwn(options, "method");
+```
+
+When iterating, the [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loop traverses the prototype. If possible replace such loops with [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) and {{jsxref("Object.keys()")}} to only visit own keys.
+
+```js
+// Looks up the prototype
+for (const key in payload) {
+  doSomething(payload[key]);
+}
+
+// Only visits own keys
+for (const key of Object.keys(payload)) {
+  doSomething(payload[key]);
+}
+```
+
+In functions, explicitly set default parameters instead of leaving them undefined. This way, the default parameter values can be used instead of a potential lookup on the prototype chain.
+
+```js
+function fetchMyResource(options = { method: "GET" }) {
+  fetch("https://example.com", options);
+}
+```
+
+### Freeze the prototype
+
+If you work with third party or built-in objects, consider using the static method {{jsxref("Object.freeze()")}} which prevents extensions and makes existing properties non-writable and non-configurable. Freezing an object is the highest integrity level that JavaScript provides. Alternatively, {{jsxref("Object.seal()")}} is available, which allows existing properties changed, as long as they are writable, or {{jsxref("Object.preventExtensions()")}} which prevents new properties from being added to an object.
 
 You can also freeze the prototype of the built-in base {{jsxref("Object")}}. However, note that in your code or in the code of your dependencies you may want to add to the built-in {{jsxref("Object")}} prototype or other built-in objects (for example, to provide a {{glossary("Polyfill")}} implementation). Given assignment on frozen objects fails silently, it may be difficult to debug.
 
@@ -139,7 +169,7 @@ The `deepFreeze` approach is not handling circular references by default, so to 
 
 ### Use `Map` and `Set` instead
 
-Instead of using JavaScript objects, use {{jsxref("Map")}} or {{jsxref("Set")}} objects. These are more modern data structures not vulnerable to prototype pollution issues. See the `Map` documentation for a [comparison between Maps and Objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map#objects_vs._maps). The {{jsxref("Map.prototype.get()")}} method will always only return the property that have been set directly on the `Map`.
+Evaluate if instead of using JavaScript objects, a {{jsxref("Map")}} or {{jsxref("Set")}} object could be used. These are more modern data structures not vulnerable to prototype pollution issues. See the `Map` documentation for a [comparison between Maps and Objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map#objects_vs._maps). The {{jsxref("Map.prototype.get()")}} method will always only return the property that have been set directly on the `Map`.
 
 ```js
 // Assume Object got polluted somehow
@@ -152,22 +182,41 @@ config.admin; // true
 config.get("admin"); // false
 ```
 
-### JSON schema validation
+### Validate keys with JSON schema validation
 
-JSON schema validators, such as [ajv](https://ajv.js.org), ensure that the JSON data structure contains the appropriate properties with the appropriate types. To mitigate the prototype pollution attack, reject unneeded properties by setting `additionalProperties` to `false` in the schema.
+If you work with more complex and potentially unfrozen objects with a prototype, consider using JSON schema validators, such as [ajv](https://ajv.js.org), to ensure that the JSON data structure contains the appropriate properties with the appropriate types. To mitigate the prototype pollution attack, reject unneeded properties by setting `additionalProperties` to `false` in the schema.
+
+You should avoid dynamic property modification (of the form `obj[key] = value`) unless you are able to validate the `key` values. If you are in this situation, you could rule out `__proto__`, `constructor`, `prototype` as keys in your validation.
 
 ### Node.js flag `--disable-proto`
 
 If you are in a Node.js environment, you can disable `Object.prototype.__proto__` with the `--disable-proto=MODE` option where `MODE` is either `delete` (the property is removed entirely), or `throw` (accesses to the property throws an exception with the code `ERR_PROTO_ACCESS`).
 
+This doesn't protect you from prototype pollution generally, but it does remove one entry point to it. Use `delete Object.prototype.__proto__` in non-Node environments for the same effect.
+
 ## Defense summary checklist
 
-- Create your own objects with `Object.create(null)`.
-- Consider freezing your own objects, for example with a library like [Immer](https://immerjs.github.io/immer/).
-- Consider freezing built-in objects, for example by using the [SES](https://github.com/endojs/endo/tree/master/packages/ses#ses) shim.
-- Use `Map` and `Set` objects instead.
-- Validate your object structure with a schema.
+For objects you create and fully control:
+
+- Evaluate if an object is needed or if a {{jsxref("Map")}} or {{jsxref("Set")}} would be the better choice.
+- If you are forced to create an object, use `Object.create(null)`, especially for sensitive objects like `FetchInit` or `SanitizerConfig`.
+- If you can't create an object with `Object.create(null)`, consider freezing your object, or making it immutable using a library like [Immer](https://immerjs.github.io/immer/).
+- If you need to create complex and unfrozen objects with a prototype, consider validating your object structure with a JSON schema validator and reject unneeded properties by setting `additionalProperties` to `false`.
+
+For code that accesses or traverses objects:
+
+- Use the {{jsxref("Object.hasOwn()")}} check.
+- Prefer [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) and {{jsxref("Object.keys()")}} over [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loops.
+- In functions, explicitly set default parameters for objects.
+
+For built-in and third party objects:
+
+- Consider freezing built-in and third party objects, for example by using the [SES](https://github.com/endojs/endo/tree/master/packages/ses#ses) shim.
+
+Runtime defenses:
+
 - Use `--disable-proto` in Node.js to disable `Object.prototype.__proto__`.
+- Use `delete Object.prototype.__proto__` in non-Node environments.
 
 ## See also
 
