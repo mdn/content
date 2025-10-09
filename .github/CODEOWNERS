@@ -36,28 +36,25 @@
 /files/en-us/web/mathml/ @mdn/content-mathml
 
 # Templates and sidebars (rari)
-/files/jsondata/L10n-Template.json @mdn/core-dev
+/files/jsondata/L10n-Template.json @mdn/engineering
 
 # ============================= CONTROL FILES ============================= #
 # The CODEOWNERS file must end with these matches: Any pull request changing
 # one or more of these files should be escalated to the owners specified here.
 
 # mdn/content GitHub configuration
-/.github/ @mdn/core-dev
+/.github/ @mdn/engineering
 # Issue templates in .github
 /.github/ISSUE_TEMPLATE/ff-project-issue.md @mdn/core-yari-content
 
 # Root directory
-/* @mdn/core-dev
+/* @mdn/engineering
 # Markdown files in root directory
 /*.md @mdn/core-yari-content
 # Filecheck
-/scripts/filecheck @mdn/core-dev
+/scripts @mdn/engineering
 
 # These are @mdn-bot because the auto-merge GHA workflow uses the PAT of this account.
 # If another reviewer is specified, update the PAT token or auto-merge will cease to be automatic.
 /package.json @mdn-bot
 /yarn.lock @mdn-bot
-
-/.github/workflows/ @mdn/engineering
-/.github/CODEOWNERS @mdn/core-yari-content @mdn/engineering
