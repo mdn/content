@@ -1,7 +1,7 @@
 ---
 title: Using CSS typed arithmetic
 short-title: Using typed arithmetic
-slug: Web/CSS/CSS_Values_and_Units/Using_CSS_typed_arithmetic
+slug: Web/CSS/CSS_values_and_units/Using_CSS_typed_arithmetic
 page-type: guide
 sidebar: cssref
 ---
