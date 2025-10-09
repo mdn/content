@@ -53,7 +53,7 @@
 /en-US/docs/ARIA/ARIA_Techniques/Using_the_toolbar_role	/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/toolbar_role
 /en-US/docs/ARIA/Accessible_Rich_Internet_Applications	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/ARIA/Basic_form_hints	/en-US/docs/Web/Accessibility/ARIA
-/en-US/docs/ARIA/How_to_file_ARIA-related_bugs	/en-US/docs/Web/Accessibility/ARIA/How_to/File_ARIA-related_bugs
+/en-US/docs/ARIA/How_to_file_ARIA-related_bugs	/en-US/docs/Learn_web_development/Howto/Web_mechanics/File_browser_bugs
 /en-US/docs/ARIA/Live_Regions	/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions
 /en-US/docs/ARIA/examples	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/ARIA/widgets	/en-US/docs/Web/Accessibility/ARIA
@@ -100,7 +100,7 @@
 /en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_toolbar_role	/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/toolbar_role
 /en-US/docs/Accessibility/ARIA/ARIA_Test_Cases	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Accessibility/ARIA/Basic_form_hints	/en-US/docs/Web/Accessibility/ARIA
-/en-US/docs/Accessibility/ARIA/How_to_file_ARIA-related_bugs	/en-US/docs/Web/Accessibility/ARIA/How_to/File_ARIA-related_bugs
+/en-US/docs/Accessibility/ARIA/How_to_file_ARIA-related_bugs	/en-US/docs/Learn_web_development/Howto/Web_mechanics/File_browser_bugs
 /en-US/docs/Accessibility/ARIA/Web_applications_and_ARIA_FAQ	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Accessibility/ARIA/examples	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Accessibility/ARIA/forms	/en-US/docs/Web/Accessibility/ARIA
@@ -3374,7 +3374,7 @@
 /en-US/docs/DragDrop/DataTransfer	/en-US/docs/Web/API/DataTransfer
 /en-US/docs/DragDrop/Drag_Operations	/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations
 /en-US/docs/DragDrop/Drag_and_Drop	/en-US/docs/Web/API/HTML_Drag_and_Drop_API
-/en-US/docs/DragDrop/Recommended_Drag_Types	/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types
+/en-US/docs/DragDrop/Recommended_Drag_Types	/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store
 /en-US/docs/Drawing_Graphics_with_Canvas	/en-US/docs/Web/API/Canvas_API/Tutorial
 /en-US/docs/Drawing_text_using_a_canvas	/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text
 /en-US/docs/ECMA-262	/en-US/docs/Web/JavaScript/Reference/JavaScript_technologies_overview
@@ -5596,7 +5596,7 @@
 /en-US/docs/Learn/Performance/Perceived_performance	/en-US/docs/Learn_web_development/Extensions/Performance/Perceived_performance
 /en-US/docs/Learn/Performance/Populating_the_page:_how_browsers_work	/en-US/docs/Web/Performance/Guides/How_browsers_work
 /en-US/docs/Learn/Performance/Understanding_latency	/en-US/docs/Web/Performance/Guides/Understanding_latency
-/en-US/docs/Learn/Performance/Web_Performance_Basics	/en-US/docs/Learn_web_development/Extensions/Performance/Web_Performance_Basics
+/en-US/docs/Learn/Performance/Web_Performance_Basics	/en-US/docs/Learn_web_development/Extensions/Performance/Best_practices
 /en-US/docs/Learn/Performance/Web_performance_overview	/en-US/docs/Learn_web_development/Extensions/Performance/What_is_web_performance
 /en-US/docs/Learn/Performance/What_is_web_performance	/en-US/docs/Learn_web_development/Extensions/Performance/What_is_web_performance
 /en-US/docs/Learn/Performance/business_case_for_performance	/en-US/docs/Learn_web_development/Extensions/Performance/business_case_for_performance
@@ -5842,6 +5842,8 @@
 /en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_HTML5_controls	/en-US/docs/Learn_web_development/Extensions/Forms
 /en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Other_controls	/en-US/docs/Learn_web_development/Extensions/Forms
 /en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Styling_basics	/en-US/docs/Learn_web_development/Extensions/Forms
+/en-US/docs/Learn_web_development/Extensions/Performance/Resources	/en-US/docs/Learn_web_development/Extensions/Performance/Best_practices
+/en-US/docs/Learn_web_development/Extensions/Performance/Web_Performance_Basics	/en-US/docs/Learn_web_development/Extensions/Performance/Best_practices
 /en-US/docs/Learn_web_development/Extensions/Security_privacy	/en-US/docs/Web/Security
 /en-US/docs/Learn_web_development/Extensions/Transform_animate	/en-US/docs/Learn_web_development/Extensions
 /en-US/docs/Learn_web_development/Getting_started/Basic_setup	/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software
@@ -9119,6 +9121,7 @@
 /en-US/docs/Web/API/HTMLVideoElement/onleavepictureinpicture	/en-US/docs/Web/API/HTMLVideoElement/leavepictureinpicture_event
 /en-US/docs/Web/API/HTMLVideoElement/requestPictureInPicture()	/en-US/docs/Web/API/HTMLVideoElement/requestPictureInPicture
 /en-US/docs/Web/API/HTML_DOM	/en-US/docs/Web/API/HTML_DOM_API
+/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types	/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store
 /en-US/docs/Web/API/HashChangeEvent/HashChangeEvent.oldURL	/en-US/docs/Web/API/HashChangeEvent/oldURL
 /en-US/docs/Web/API/Headers/getAll	/en-US/docs/Web/API/Headers/get
 /en-US/docs/Web/API/History.length	/en-US/docs/Web/API/History/length
@@ -11619,7 +11622,8 @@
 /en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow	/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow
 /en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext	/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext
 /en-US/docs/Web/Accessibility/ARIA/Basic_form_hints	/en-US/docs/Web/Accessibility/ARIA
-/en-US/docs/Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs	/en-US/docs/Web/Accessibility/ARIA/How_to/File_ARIA-related_bugs
+/en-US/docs/Web/Accessibility/ARIA/How_to/File_ARIA-related_bugs	/en-US/docs/Learn_web_development/Howto/Web_mechanics/File_browser_bugs
+/en-US/docs/Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs	/en-US/docs/Learn_web_development/Howto/Web_mechanics/File_browser_bugs
 /en-US/docs/Web/Accessibility/ARIA/Multipart_labels	/en-US/docs/Web/Accessibility/ARIA/Guides/Multipart_labels
 /en-US/docs/Web/Accessibility/ARIA/Roles	/en-US/docs/Web/Accessibility/ARIA/Reference/Roles
 /en-US/docs/Web/Accessibility/ARIA/Roles/ARIA:_tabpanel_role	/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tabpanel_role
@@ -12991,7 +12995,7 @@
 /en-US/docs/Web/Guide/HTML/Inline_event_handler	/en-US/docs/Learn_web_development/Core/Scripting/Events#Inline_event_handlers_—_don't_use_these
 /en-US/docs/Web/Guide/HTML/Introduction	/en-US/docs/Learn_web_development/Core/Structuring_content
 /en-US/docs/Web/Guide/HTML/Obsolete_things_to_avoid	/en-US/docs/Learn_web_development/Core/Structuring_content
-/en-US/docs/Web/Guide/HTML/Recommended_Drag_Types	/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types
+/en-US/docs/Web/Guide/HTML/Recommended_Drag_Types	/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store
 /en-US/docs/Web/Guide/HTML/The_Importance_of_Correct_HTML_Commenting	/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#HTML_comments
 /en-US/docs/Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages	/en-US/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages
 /en-US/docs/Web/Guide/HTML/Using_HTML5_audio_and_video	/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio

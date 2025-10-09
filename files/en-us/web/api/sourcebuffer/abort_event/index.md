@@ -8,7 +8,7 @@ browser-compat: api.SourceBuffer.abort_event
 
 {{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}
 
-The **`abort`** event of the {{domxref("SourceBuffer")}} interface is fired when the buffer appending is aborted, because the {{domxref("SourceBuffer.abort()")}} or {{domxref("SourceBuffer.removeSourceBuffer()")}} method is called while the {{domxref("SourceBuffer.appendBuffer()")}} algorithm is still running. The {{domxref("SourceBuffer.updating", "updating")}} property transitions from `true` to `false`. This event is fired before the {{domxref("SourceBuffer.updateend_event", "updateend")}} event.
+The **`abort`** event of the {{domxref("SourceBuffer")}} interface is fired when the buffer appending is aborted, because the {{domxref("SourceBuffer.abort()")}} or {{domxref("SourceBuffer.remove()")}} method is called while the {{domxref("SourceBuffer.appendBuffer()")}} algorithm is still running. The {{domxref("SourceBuffer.updating", "updating")}} property transitions from `true` to `false`. This event is fired before the {{domxref("SourceBuffer.updateend_event", "updateend")}} event.
 
 ## Syntax
 

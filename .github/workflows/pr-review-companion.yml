@@ -25,14 +25,20 @@ permissions:
   pull-requests: write
   # Authenticate with GCP.
   id-token: write
+  # Report commit status.
+  statuses: write
 
 jobs:
   review:
     environment: review
     runs-on: ubuntu-latest
     if: github.event.workflow_run.conclusion == 'success'
+    env:
+      STATUS_PATH: repos/${{ github.repository }}/statuses/${{ github.event.workflow_run.pull_requests[0].head.sha }}
+      STATUS_CONTEXT: pr-review-companion
+      STATUS_TARGET: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
     steps:
-      - name: "Download artifact"
+      - name: Download artifact
         uses: actions/download-artifact@v5
         with:
           pattern: build
@@ -50,9 +56,20 @@ jobs:
           echo "PR_NUMBER=$PR_NUMBER" >> "$GITHUB_OUTPUT"
           echo "PREFIX=pr$PR_NUMBER" >> "$GITHUB_OUTPUT"
 
+      - name: Mark status as pending
+        if: steps.check.outputs.HAS_ARTIFACT && github.event.workflow_run.pull_requests[0].number
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh api "$STATUS_PATH" \
+            -f state=pending \
+            -f context="$STATUS_CONTEXT" \
+            -f description='Review deployment pending' \
+            -f target_url="$STATUS_TARGET"
+
       - name: Authenticate with GCP
         if: steps.check.outputs.HAS_ARTIFACT
-        uses: google-github-actions/auth@v2
+        uses: google-github-actions/auth@v3
         with:
           token_format: access_token
           service_account: deploy-mdn-review-content@${{ secrets.GCP_PROJECT_NAME }}.iam.gserviceaccount.com
@@ -115,3 +132,25 @@ jobs:
             --pr-number="$PR_NUMBER" \
             --diff-file=$BUILD_OUT_ROOT/DIFF \
             $BUILD_OUT_ROOT
+
+      - name: Mark status as success
+        if: steps.check.outputs.HAS_ARTIFACT && success() && github.event.workflow_run.pull_requests[0].number
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh api "$STATUS_PATH" \
+            -f state=success \
+            -f context="$STATUS_CONTEXT" \
+            -f description='Review deployment succeeded' \
+            -f target_url="$STATUS_TARGET"
+
+      - name: Mark status as failure
+        if: steps.check.outputs.HAS_ARTIFACT && failure() && github.event.workflow_run.pull_requests[0].number
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh api "$STATUS_PATH" \
+            -f state=failure \
+            -f context="$STATUS_CONTEXT" \
+            -f description='Review deployment failed' \
+            -f target_url="$STATUS_TARGET"

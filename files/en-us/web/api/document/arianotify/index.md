@@ -46,7 +46,7 @@ The **`ariaNotify()`** method can be used to programmatically trigger a screen r
 
 Developers often work around the limitations of live regions using hidden DOM nodes with live regions set on them, which have their contents updated with the content to be announced. This is inefficient and error-prone, and `ariaNotify()` provides a way to avoid such issues.
 
-Some screen readers will read out multiple `ariaNotify()` announcments in order, but this cannot be guaranteed across all screen readers and platforms. Normally, only the most recent announcement is spoken. It is more reliable to combine multiple announcements into one.
+Some screen readers will read out multiple `ariaNotify()` announcements in order, but this cannot be guaranteed across all screen readers and platforms. Normally, only the most recent announcement is spoken. It is more reliable to combine multiple announcements into one.
 
 For example, the following calls:
 
@@ -76,7 +76,7 @@ However, `aria-live` announcements will take priority over `ariaNotify()` announ
 
 ### Language selection
 
-Screen readers choose an appropriate voice with which to read `ariaNotify()` announcements (in terms of accent, pronounciation, etc.) based on the language specified in the {{htmlelement("html")}} element's [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) attribute, or the user agent's default language if no `lang` attribute is set.
+Screen readers choose an appropriate voice with which to read `ariaNotify()` announcements (in terms of accent, pronunciation, etc.) based on the language specified in the {{htmlelement("html")}} element's [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) attribute, or the user agent's default language if no `lang` attribute is set.
 
 ### Permissions policy integration
 

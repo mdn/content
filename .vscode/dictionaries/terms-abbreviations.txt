@@ -242,6 +242,7 @@ foveation
 fragmentainer
 fragmentainers
 framebuffers
+framebusting
 frontmost
 Fullband
 fullscreened
@@ -303,6 +304,7 @@ ICANN
 ICNS
 iconset
 idents
+IDOR
 IERS
 IMSC
 Indo-Pacific
