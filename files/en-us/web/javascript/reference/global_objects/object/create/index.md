@@ -9,6 +9,10 @@ sidebar: jsref
 
 The **`Object.create()`** static method creates a new object, using an existing object as the prototype of the newly created object.
 
+> [!NOTE]
+> By convention, capitalised names are often used for objects that represent prototypes, and lowercase names for regular instances.
+> 
+
 {{InteractiveExample("JavaScript Demo: Object.create()", "taller")}}
 
 ```js interactive-example
