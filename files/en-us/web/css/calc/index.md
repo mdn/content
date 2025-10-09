@@ -113,7 +113,7 @@ Implementations historically required that, when using the `*` and `/` operators
 
 For `/`, it used to be the case that the right operand had to be unitless. However, typed arithmetic behavioral changes mean that [supporting browsers](#browser_compatibility) now support calculations such as `100vw / 1px`, which result in unitless values. These can then be used in the values of unitless properties, or converted into a different type altogether by multiplying them by another typed value.
 
-Such calculations enable interesting relationships to be created between different values on the page, and interesting new UI features to be implemented. For a full explanation and examples, see [Using CSS typed arithmetic](/en-US/docs/Web/CSS/CSS_Values_and_Units/Using_CSS_typed_arithmetic).
+For a full explanation of typed arithmetic in CSS, along with examples, see [Using CSS typed arithmetic](/en-US/docs/Web/CSS/CSS_Values_and_Units/Using_CSS_typed_arithmetic).
 
 ### Support for computing color channels in relative colors
 
