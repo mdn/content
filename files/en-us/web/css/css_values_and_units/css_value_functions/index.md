@@ -114,6 +114,8 @@ Each of the pages below contains detailed information about a math function's sy
   - : Calculates a rounded number based on a rounding strategy.
 - {{CSSxRef("mod", "mod()")}}
   - : Calculates a modulus (with the same sign as the divisor) when dividing one number by another.
+- {{CSSxRef("progress", "progress()")}}
+  - : Calculates the position of a value between two other values — a start value and an end value. The result is expressed as a number between 0 and 1 representing the progress between the start and end values.
 - {{CSSxRef("rem", "rem()")}}
   - : Calculates a remainder (with the same sign as the dividend) when dividing one number by another.
 

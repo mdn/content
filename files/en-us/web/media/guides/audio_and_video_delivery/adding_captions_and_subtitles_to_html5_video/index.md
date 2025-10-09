@@ -81,7 +81,7 @@ In addition to adding the `<track>` elements, we have also added a new button to
   <button id="play-pause" type="button" data-state="play">Play/Pause</button>
   <button id="stop" type="button" data-state="stop">Stop</button>
   <div class="progress">
-    <progress id="progress" value="0" min="0">
+    <progress id="progress" value="0">
       <span id="progress-bar"></span>
     </progress>
   </div>

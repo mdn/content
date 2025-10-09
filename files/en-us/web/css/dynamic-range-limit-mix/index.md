@@ -82,7 +82,7 @@ dynamic-range-limit-mix(
 
 - The first line gives us `no-limit 10%`.
 - Since `25%` and `75%` add up to `100%`, the second line gives us `standard 5%` (`25%` of `20%`) and `constrained 15%` (`75%` of `20%`).
-- In the third line, because `10%` and `30%` add up to only `40%`, not `100%`, we normalize both as proportions of `40%`: 10/40=`25%` and 30/40=`75%`. This gives us `constrained 5%` (`25%` of `20%`) and `no-limit 15%` (`75%` of `20%`).
+- In the third line, because `10%` and `30%` add up to only `40%`, not `100%`, we normalize both as proportions of `40%`: 10/40 = `25%` and 30/40 = `75%`. This gives us `constrained 5%` (`25%` of `20%`) and `no-limit 15%` (`75%` of `20%`).
 
 Adding these up to get the raw percentages gives us:
 
