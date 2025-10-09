@@ -69,7 +69,7 @@ getDisplayMedia(options)
         - `include`: Hints that the browser should include the system audio in the list of choices.
         - `exclude`: Hints that system audio should be excluded from the choices shown.
     - `windowAudio` {{Experimental_Inline}} {{optional_inline}}
-      - : An enumerated value that hints to the browser what audio sharing option the user should be presented with alongside `window` sharing options. Possible values are:
+      - : An enumerated value that hints to the browser what audio sharing option the user should be presented with alongside window sharing options. Possible values are:
         - `exclude`: Hints that audio should not be shareable when a window sharing option is chosen.
         - `window`: Hints that when a window sharing option is chosen, only audio originating from that window should be shared.
         - `system`: Hints that when a window sharing option is chosen, all system audio should be shared.
