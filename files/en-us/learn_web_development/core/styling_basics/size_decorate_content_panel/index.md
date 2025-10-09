@@ -287,7 +287,7 @@ h1,
 .content {
   /* Set background color and image on the content div, and size the image */
   background: url("https://mdn.github.io/shared-assets/images/examples/big-star.png")
-    no-repeat top 5px right 15px / 40px #eef;
+    no-repeat top 5px right 15px / 40px #eeeeff;
   /* Set vertical padding of 0 on both sides and horizontal padding
   of 20px on both sides */
   padding: 0 20px;

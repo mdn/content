@@ -154,11 +154,11 @@ You'll solve this challenge on your local development environment; ideally, you'
    /* header and footer */
 
    header {
-     border-bottom: 5px solid #a66;
+     border-bottom: 5px solid #aa6666;
    }
 
    footer {
-     border-top: 5px solid #a66;
+     border-top: 5px solid #aa6666;
    }
 
    footer p {
@@ -234,7 +234,7 @@ Our finished CSS looks like so:
 ```css
 /* 1. Apply fonts to page */
 
-@import url("https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import "https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap";
 
 /* General setup */
 
@@ -261,11 +261,11 @@ main {
 /* Header and footer */
 
 header {
-  border-bottom: 5px solid #a66;
+  border-bottom: 5px solid #aa6666;
 }
 
 footer {
-  border-top: 5px solid #a66;
+  border-top: 5px solid #aa6666;
 }
 
 footer p {
@@ -319,13 +319,13 @@ a[href*="http"] {
 
 a:link,
 a:visited {
-  color: #a66;
+  color: #aa6666;
 }
 
 a:focus,
 a:hover {
   text-decoration: none;
-  color: #733;
+  color: #773333;
 }
 
 /* 4. List styling */
@@ -365,13 +365,13 @@ nav li a {
   letter-spacing: 1px;
   font-size: 1.3rem;
   font-weight: bold;
-  border: 1px solid #a66;
+  border: 1px solid #aa6666;
 }
 
 nav li a:focus,
 nav li a:hover {
   color: white;
-  background: #a66;
+  background: #aa6666;
 }
 
 nav li a:active {

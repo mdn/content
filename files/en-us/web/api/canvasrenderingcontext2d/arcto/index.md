@@ -1005,6 +1005,7 @@ const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 const controlOut = document.getElementById("radius-output");
 const control = document.getElementById("radius");
+let radius = control.value; // match with init control value
 control.oninput = () => {
   controlOut.textContent = radius = control.value;
 };
@@ -1012,7 +1013,6 @@ control.oninput = () => {
 const p1 = { x: 100, y: 100 };
 const p2 = { x: 150, y: 50 };
 const p3 = { x: 200, y: 100 };
-let radius = control.value; // match with init control value
 
 function labelPoint(p, offset, i = 0) {
   const { x, y } = offset;
