@@ -10,9 +10,10 @@ sidebar: cssref
 
 These quotients can then be used as a {{cssxref("number")}} in the values of unitless properties, or converted into any numeric data type (such as a {{cssxref("length")}},  {{cssxref("percentage")}}, or  {{cssxref("angle")}}) by multiplying them by a numeric typed value.
 
-This updated typed arithmetic behavior enables interesting relationships to be created between different values on a page, and interesting new UI features to be rendered in [supporting browsers](/en-US/docs/Web/CSS/calc#browser_compatibility).
+This typed arithmetic behavior enables relationships to be created between different values on a page. This article explores typed arithmetic and presents several examples that make use of it.
 
-This article explores what the updates are in more detail, and presents some examples that make use of them.
+>[!NOTE]
+> Originally, the [CSS values and units](/en-US/docs/Web/CSS/CSS_Values_and_Units) module limited the arguments multiplication and division operations could take to make dividing by zero detectable at parse time and avoid issues such as squared units. Typed arithmetic relaxes some of those restrictions in [supporting browsers](/en-US/docs/Web/CSS/calc#browser_compatibility).
 
 ## CSS typed arithmetic rules
 
