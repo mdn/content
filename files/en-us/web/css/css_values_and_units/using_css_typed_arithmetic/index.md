@@ -32,7 +32,7 @@ calc(40deg + 2rad)
 calc(420deg - 1turn)
 ```
 
-However, the following do not. The results of such mixed-type calculations are meaningless:
+However, the following are invalid. The results of such mixed-type calculations would be meaningless:
 
 ```css example-bad
 calc(200px + 100ms)
