@@ -109,7 +109,7 @@ When an {{cssxref("&lt;integer&gt;")}} is expected, the `calc()` expression can 
 
 ### CSS typed arithmetic
 
-Implementations historically required that, when using the `*` and `/` operators, one of the operands had to be unitless. This is still the case for `*` — calculations like `200px * 4px` don't make sense, as 800px<sup>2</sup> is meaningless in CSS.
+When using `calc()` to multiply values, using the `*` operator, only one value can contain a unit. Calculations like `200px * 4px` are not supported as 800px<sup>2</sup> is meaningless in CSS.
 
 For `/`, it used to be the case that the right operand had to be unitless. However, typed arithmetic behavioral changes mean that [supporting browsers](#browser_compatibility) now support calculations such as `100vw / 1px`, which result in unitless values. These can then be used in the values of unitless properties, or converted into a different type altogether by multiplying them by another typed value.
 
