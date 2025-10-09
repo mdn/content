@@ -11,7 +11,7 @@ sidebar: learnsidebar
 The final challenge of our [styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics) module features a mockup of a "Home color search app" UI, the idea being to let users input a color and retrieve a range of variations along with sample color scheme ideas. Your task is to style the provided form, table, and button controls, and make sure the images display as expected.
 
 > [!NOTE]
-> This example uses AI-generated images.
+> The tinted images used in this challenge have been adapted from the original available on Flickr: [Chic Living Room](https://flickr.com/photos/145464578@N08/28362250492/), published by [Houseology Interiors](https://flickr.com/photos/145464578@N08/) under [CC BY-NC 2.0](https://creativecommons.org/licenses/by-nc/2.0/deed.en).
 
 ## Starting point
 
@@ -60,7 +60,7 @@ To begin, click the **Play** button in one of the code panels below to open the 
         <td>pink, pale, light</td>
         <td>
           <img
-            src="images/living-room-pink.png"
+            src="https://mdn.github.io/shared-assets/images/examples/learn/home-color-schemes/living-room-pink.png"
             alt="Image of living room in a pink color scheme" />
         </td>
       </tr>
@@ -70,7 +70,7 @@ To begin, click the **Play** button in one of the code panels below to open the 
         <td>pink, pale, bright</td>
         <td>
           <img
-            src="images/living-room-baker-miller-pink.png"
+            src="https://mdn.github.io/shared-assets/images/examples/learn/home-color-schemes/living-room-baker-miller-pink.png"
             alt="Image of living room in a Baker-Miller pink color scheme" />
         </td>
       </tr>
@@ -80,7 +80,7 @@ To begin, click the **Play** button in one of the code panels below to open the 
         <td>pink, bright, vivid</td>
         <td>
           <img
-            src="images/living-room-hotpink.png"
+            src="https://mdn.github.io/shared-assets/images/examples/learn/home-color-schemes/living-room-hotpink.png"
             alt="Image of living room in a hotpink color scheme" />
         </td>
       </tr>
@@ -90,7 +90,7 @@ To begin, click the **Play** button in one of the code panels below to open the 
         <td>pink, medium, bright</td>
         <td>
           <img
-            src="images/living-room-fuchsia.png"
+            src="https://mdn.github.io/shared-assets/images/examples/learn/home-color-schemes/living-room-fuchsia.png"
             alt="Image of living room in a fuchsia color scheme" />
         </td>
       </tr>
