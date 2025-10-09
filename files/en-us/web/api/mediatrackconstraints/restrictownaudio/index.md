@@ -28,7 +28,7 @@ If the value is `true`, the user agent will attempt to remove audio originating 
 > [!NOTE]
 > If the captured display surface doesn't include system audio, this setting will have no effect.
 
-If the value is given as `ideal`, that field's boolean value indicates an ideal setting for the `restrictOwnAudio` feature; if it can't be met, then the request will result in an error.
+If the value is given as `exact`, that field's boolean value indicates an exact requirement for the `restrictOwnAudio` feature; if it can't be met, then the request will result in an error.
 
 If the value is `false`, no restriction will be attempted on any system audio originating from the capturing tab.
 
