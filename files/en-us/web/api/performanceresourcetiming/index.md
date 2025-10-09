@@ -115,28 +115,7 @@ Additionally, this interface exposes the following properties containing more in
 
 ## Examples
 
-### Logging resource timing information
-
-Example using a {{domxref("PerformanceObserver")}}, which notifies of new `resource` performance entries as they are recorded in the browser's performance timeline. Use the `buffered` option to access entries from before the observer creation.
-
-```js
-const observer = new PerformanceObserver((list) => {
-  list.getEntries().forEach((entry) => {
-    console.log(entry);
-  });
-});
-
-observer.observe({ type: "resource", buffered: true });
-```
-
-Example using {{domxref("Performance.getEntriesByType()")}}, which only shows `resource` performance entries present in the browser's performance timeline at the time you call this method:
-
-```js
-const resources = performance.getEntriesByType("resource");
-resources.forEach((entry) => {
-  console.log(entry);
-});
-```
+For examples, see the [examples section of Resource Timing](/en-US/docs/Web/API/Performance_API/Resource_timing#examples).
 
 ## Security requirements
 
@@ -144,11 +123,17 @@ resources.forEach((entry) => {
 
 Many of the resource timing properties are restricted to return `0` or an empty string when the resource is a cross-origin request. To expose cross-origin timing information, the {{HTTPHeader("Timing-Allow-Origin")}} HTTP response header needs to be set.
 
+The properties which are returned as `0` by default when loading a resource from an origin other than the one of the web page itself: `redirectStart`, `redirectEnd`, `domainLookupStart`, `domainLookupEnd`, `connectStart`, `connectEnd`, `secureConnectionStart`, `requestStart`, and `responseStart`.
+
 For example, to allow `https://developer.mozilla.org` to see resource timing information, the cross-origin resource should send:
 
 ```http
 Timing-Allow-Origin: https://developer.mozilla.org
 ```
+
+## Managing resource buffer sizes
+
+By default only 250 resource timing entries are buffered. For more information see the [resource buffer sizes section of Resource Timing](/en-US/docs/Web/API/Performance_API/Resource_timing#managing_resource_buffer_sizes).
 
 ## Specifications
 

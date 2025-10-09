@@ -12,28 +12,16 @@ Every resource on a document will be represented by a {{domxref("PerformanceReso
 
 For each `PerformanceResourceTiming` entry, a _resource loading timeline_ will be recorded, with {{domxref("DOMHighResTimeStamp","high-resolution timestamps", "", 1)}} for network events such as redirect start and end times, DNS lookup start and end times, request start, response start and end times, and so on. Besides the timestamps, other properties that provide information about the resource are included as well, such the size of the fetched resource, or the type of resource that initiated the fetch.
 
+[Typical resource timing metrics](/en-US/docs/Web/API/PerformanceResourceTiming#typical_resource_timing_metrics) this API is used for are detailed in the {{domxref("PerformanceResourceTiming")}}.
+
 ## Resource loading timestamps
 
 ![Timestamp diagram listing timestamps in the order in which they are recorded for the fetching of a resource](https://mdn.github.io/shared-assets/images/diagrams/api/performance/timestamp-diagram.svg)
 Figure 1. Resource loading timestamps ([source](https://w3c.github.io/resource-timing/#attribute-descriptions)).
 
-An application can get timestamps for the various stages used to load a resource. The timestamps this API provides are:
+An application can get timestamps for the various stages used to load a resource. For example the {{domxref('PerformanceEntry.startTime','startTime')}}, DNS timestamps, connection set up times and then various resource download times.
 
-1. {{domxref("PerformanceEntry.startTime","startTime")}}: timestamp immediately before the resource loading process begins.
-2. {{domxref("PerformanceResourceTiming.redirectStart","redirectStart")}}: timestamp of the fetch which initiates the redirect.
-3. {{domxref("PerformanceResourceTiming.redirectEnd","redirectEnd")}}: timestamp immediately after receiving the last byte of the response to the last redirect.
-4. {{domxref('PerformanceResourceTiming.workerStart','workerStart')}}: timestamp immediately before starting the Service Worker thread.
-5. {{domxref("PerformanceResourceTiming.fetchStart","fetchStart")}}: timestamp immediately before the browser starts to fetch the resource.
-6. {{domxref("PerformanceResourceTiming.domainLookupStart","domainLookupStart")}}: timestamp immediately before the browser starts the domain name lookup for the resource.
-7. {{domxref("PerformanceResourceTiming.domainLookupEnd","domainLookupEnd")}}: timestamp immediately after the browser finishes the domain name lookup for the resource.
-8. {{domxref('PerformanceResourceTiming.connectStart','connectStart')}}: timestamp immediately before the user agent starts establishing the connection to the server to retrieve the resource.
-9. {{domxref('PerformanceResourceTiming.secureConnectionStart','secureConnectionStart')}}: If the resource is loaded via a secure connection, timestamp immediately before the browser starts the handshake process to secure the current connection.
-10. {{domxref('PerformanceResourceTiming.connectEnd','connectEnd')}}: timestamp immediately after the browser finishes establishing the connection to the server to retrieve the resource.
-11. {{domxref('PerformanceResourceTiming.requestStart','requestStart')}}: timestamp of the time immediately before the browser starts requesting the resource from the server, cache, or local resource.
-12. {{domxref('PerformanceResourceTiming.firstInterimResponseStart','firstInterimResponseStart')}}: timestamp immediately after the browser receives the first byte of the first [interim (or informational) response](/en-US/docs/Web/HTTP/Reference/Status#informational_responses) (for example [103 Early Hints](/en-US/docs/Web/HTTP/Reference/Status/103)).
-13. {{domxref('PerformanceResourceTiming.responseStart','responseStart')}}: timestamp immediately after the browser receives the first byte of the response from the server, cache, or local resource. This may be an interim response.
-14. {{domxref('PerformanceResourceTiming.finalResponseHeadersStart','finalResponseHeadersStart')}}: timestamp immediately after the browser receives the first byte of the document response from the server, cache, or local resource, after any interim response.
-15. {{domxref('PerformanceResourceTiming.responseEnd','responseEnd')}}: timestamp immediately after the browser receives the last byte of the resource or immediately before the transport connection is closed, whichever comes first.
+The [timestamps](/en-US/docs/Web/API/PerformanceResourceTiming#timestamps) this API provides are detailed in the {{domxref("PerformanceResourceTiming")}}.
 
 ## Resource size
 
@@ -45,50 +33,44 @@ The {{domxref('PerformanceResourceTiming.encodedBodySize','encodedBodySize')}} p
 
 The {{domxref("PerformanceResourceTiming")}} interface provides [additional resources information](/en-US/docs/Web/API/PerformanceResourceTiming#additional_resource_information). Consult the reference docs for the full list of properties.
 
-## Typical resource timing metrics
+## Examples
 
-The information the `PerformanceResourceTiming` entries provide are often used for calculations like the following:
+### Logging resource timing information
 
-- Measuring TCP handshake time (`connectEnd` - `connectStart`)
-- Measuring DNS lookup time (`domainLookupEnd` - `domainLookupStart`)
-- Measuring redirection time (`redirectEnd` - `redirectStart`)
-- Measuring interim request time (`firstInterimResponseStart` - `finalResponseHeadersStart`)
-- Measuring request time (`responseStart` - `requestStart`)
-- Measuring document request time (`finalResponseHeadersStart` - `requestStart`)
-- Measuring TLS negotiation time (`requestStart` - `secureConnectionStart`)
-- Measuring time to fetch (without redirects) (`responseEnd` - `fetchStart`)
-- Measuring ServiceWorker processing time (`fetchStart` - `workerStart`)
-- Checking if content was compressed (`decodedBodySize` should not be `encodedBodySize`)
-- Checking if local caches were hit (`transferSize` should be `0`)
-- Checking if modern and fast protocols are used (`nextHopProtocol` should be HTTP/2 or HTTP/3)
-- Checking if the correct resources are render-blocking (`renderBlockingStatus`)
-
-The {{domxref("PerformanceResourceTiming")}} reference pages contain example code for measuring all of these metrics. Typically, the code for measuring these metrics looks like this:
+Example using a {{domxref("PerformanceObserver")}}, which notifies of new `resource` performance entries as they are recorded in the browser's performance timeline. Use the `buffered` option to access entries from before the observer creation.
 
 ```js
 const observer = new PerformanceObserver((list) => {
   list.getEntries().forEach((entry) => {
-    const request = entry.responseStart - entry.requestStart;
-    if (request > 0) {
-      console.log(`${entry.name}: Request time: ${request}ms`);
-    }
+    console.log(entry);
   });
 });
 
 observer.observe({ type: "resource", buffered: true });
 ```
 
-## Cross-origin timing information
+Example using {{domxref("Performance.getEntriesByType()")}}, which only shows `resource` performance entries present in the browser's performance timeline at the time you call this method:
 
-When {{Glossary("CORS")}} is in effect, many of the timing properties' values are returned as zero unless the server's access policy permits these values to be shared. This requires the server providing the resource to send the {{httpheader("Timing-Allow-Origin")}} HTTP response header with a value specifying the origin or origins which are allowed to get the restricted timestamp values.
+```js
+const resources = performance.getEntriesByType("resource");
+resources.forEach((entry) => {
+  console.log(entry);
+});
+```
 
-The properties which are returned as 0 by default when loading a resource from an origin other than the one of the web page itself: `redirectStart`, `redirectEnd`, `domainLookupStart`, `domainLookupEnd`, `connectStart`, `connectEnd`, `secureConnectionStart`, `requestStart`, and `responseStart`.
+## Security requirements
+
+### Cross-origin timing information
+
+Many of the resource timing properties are restricted to return `0` or an empty string when the resource is a cross-origin request. To expose cross-origin timing information, the {{HTTPHeader("Timing-Allow-Origin")}} HTTP response header needs to be set.
 
 For example, to allow `https://developer.mozilla.org` to see resource timing information, the cross-origin resource should send:
 
 ```http
 Timing-Allow-Origin: https://developer.mozilla.org
 ```
+
+For more information on the fields affected, see the [relevant section of PerformanceResourceTiming](/en-US/docs/Web/API/PerformanceResourceTiming#cross-origin_timing_information).
 
 ## Managing resource buffer sizes
 
