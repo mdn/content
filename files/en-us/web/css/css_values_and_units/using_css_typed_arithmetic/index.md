@@ -6,7 +6,9 @@ page-type: guide
 sidebar: cssref
 ---
 
-**CSS typed arithmetic** refers generally to permitted calculations performed with typed CSS values via functions such as {{cssxref("calc()")}}. The term is also used to refer specifically to updates to the [CSS values and units](/en-US/docs/Web/CSS/CSS_Values_and_Units) module — and subsequent browser behavior — around these calculations. These updates mean that you can divide a value with one unit by a value with a different unit of the same overall type, resulting in unitless quotients. These quotients can then be used in the values of unitless properties, or converted into a different type altogether by multiplying them by another typed value.
+**CSS typed arithmetic** refers to permitted calculations performed with typed CSS values via functions such as {{cssxref("calc()")}}, and specifically, to the behavior defined in the [CSS values and units](/en-US/docs/Web/CSS/CSS_values_and_units) module. CSS typed arithmetic enables dividing a value with one unit by a value with a different unit of the same data type, resulting in unitless quotients.
+
+These quotients can then be used as a {{cssxref("number")}} in the values of unitless properties, or converted into any numeric data type (such as a {{cssxref("length")}},  {{cssxref("percentage")}}, or  {{cssxref("angle")}}) by multiplying them by a numeric typed value.
 
 This updated typed arithmetic behavior enables interesting relationships to be created between different values on a page, and interesting new UI features to be rendered in [supporting browsers](/en-US/docs/Web/CSS/calc#browser_compatibility).
 
