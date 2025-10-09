@@ -154,13 +154,9 @@ jobs:
           # be able to use this raw diff file for the benefit of analyzing.
           wget https://github.com/${{ github.repository }}/compare/${BASE_SHA}...${HEAD_SHA}.diff -O ${BUILD_OUT_ROOT}/DIFF
 
-      - name: Merge static assets with built documents
+      - name: Show final disk usage size of build
         if: steps.check.outputs.HAS_MD_FILES == 'true'
-        run: |
-          # Exclude the .map files, as they're used for debugging JS and CSS.
-          rsync -a --exclude "*.map" node_modules/@mdn/yari/client/build/ $BUILD_OUT_ROOT
-          # Show the final disk usage size of the build.
-          du -sh $BUILD_OUT_ROOT
+        run: du -sh $BUILD_OUT_ROOT
 
       - uses: actions/upload-artifact@v4
         if: steps.check.outputs.HAS_MD_FILES == 'true'
