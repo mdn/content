@@ -173,8 +173,8 @@ The HTML contains a single {{htmlelement("section")}} element with some text con
 
 In the CSS, we start by specifying a `@function` called `--combine-strings`. This has a parameter called `--strings`, the data type of which is specified as one or more space-separated `<string>` values. It returns the string values with a space and a heart emoji appended onto the end.
 
-```css live-sample___basic-data-type
-@function --combine-strings(--strings type(<string> +)) {
+```css-nolint live-sample___basic-data-type
+@function --combine-strings(--strings type(<string>+)) {
   result: var(--strings) " ❤️";
 }
 ```
