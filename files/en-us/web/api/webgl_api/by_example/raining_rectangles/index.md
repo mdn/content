@@ -48,6 +48,26 @@ button {
 ```
 
 ```js
+const canvas = document.querySelector("canvas");
+const [scoreDisplay, missesDisplay] = document.querySelectorAll("strong");
+
+function getRenderingContext() {
+  canvas.width = canvas.clientWidth;
+  canvas.height = canvas.clientHeight;
+  const gl = canvas.getContext("webgl");
+  gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
+  gl.clearColor(0.0, 0.0, 0.0, 1.0);
+  gl.clear(gl.COLOR_BUFFER_BIT);
+  return gl;
+}
+
+const gl = getRenderingContext();
+gl.enable(gl.SCISSOR_TEST);
+
+function getRandomVector() {
+  return [Math.random(), Math.random(), Math.random()];
+}
+
 class Rectangle {
   constructor() {
     // We get three random numbers and use them for new rectangle
@@ -66,28 +86,11 @@ class Rectangle {
   }
 }
 
-const canvas = document.querySelector("canvas");
-
-const gl = getRenderingContext();
-gl.enable(gl.SCISSOR_TEST);
 let rainingRect = new Rectangle();
-
-let timer = setTimeout(drawAnimation, 17);
-canvas.addEventListener("click", playerClick);
-const [scoreDisplay, missesDisplay] = document.querySelectorAll("strong");
-
-function getRenderingContext() {
-  canvas.width = canvas.clientWidth;
-  canvas.height = canvas.clientHeight;
-  const gl = canvas.getContext("webgl");
-  gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
-  gl.clearColor(0.0, 0.0, 0.0, 1.0);
-  gl.clear(gl.COLOR_BUFFER_BIT);
-  return gl;
-}
 
 let score = 0;
 let misses = 0;
+let timer = null;
 function drawAnimation() {
   gl.scissor(
     rainingRect.position[0],
@@ -137,9 +140,8 @@ function playerClick(evt) {
   }
 }
 
-function getRandomVector() {
-  return [Math.random(), Math.random(), Math.random()];
-}
+timer = setTimeout(drawAnimation, 17);
+canvas.addEventListener("click", playerClick);
 ```
 
 The source code of this example is also available on [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/raining-rectangles).
