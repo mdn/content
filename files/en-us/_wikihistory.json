@@ -8781,6 +8781,17 @@
       "malchata"
     ]
   },
+  "Learn_web_development/Extensions/Performance/Best_practices": {
+    "modified": "2020-07-16T22:40:42.703Z",
+    "contributors": [
+      "Sheppy",
+      "estelle",
+      "jdmerriman",
+      "verde79",
+      "PickensC",
+      "santoshjoseph99"
+    ]
+  },
   "Learn_web_development/Extensions/Performance/CSS": {
     "modified": "2020-11-11T15:16:18.377Z",
     "contributors": ["chrisdavidmills", "estelle"]
@@ -8819,17 +8830,6 @@
   "Learn_web_development/Extensions/Performance/Perceived_performance": {
     "modified": "2020-07-16T22:40:43.307Z",
     "contributors": ["wilsotobianco", "estelle", "mhilko", "ottoetc"]
-  },
-  "Learn_web_development/Extensions/Performance/Web_Performance_Basics": {
-    "modified": "2020-07-16T22:40:42.703Z",
-    "contributors": [
-      "Sheppy",
-      "estelle",
-      "jdmerriman",
-      "verde79",
-      "PickensC",
-      "santoshjoseph99"
-    ]
   },
   "Learn_web_development/Extensions/Performance/What_is_web_performance": {
     "modified": "2020-07-16T22:40:40.542Z",
@@ -10859,6 +10859,16 @@
       "jaikathuria",
       "jgathogo",
       "Mateen"
+    ]
+  },
+  "Learn_web_development/Howto/Web_mechanics/File_browser_bugs": {
+    "modified": "2019-03-24T00:12:10.850Z",
+    "contributors": [
+      "chrisdavidmills",
+      "carlkibler",
+      "bledwards1",
+      "Sheppy",
+      "Aaronlev"
     ]
   },
   "Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work": {
@@ -70962,16 +70972,6 @@
       "anastasia",
       "hhillen",
       "SteveLee"
-    ]
-  },
-  "Web/Accessibility/ARIA/How_to/File_ARIA-related_bugs": {
-    "modified": "2019-03-24T00:12:10.850Z",
-    "contributors": [
-      "chrisdavidmills",
-      "carlkibler",
-      "bledwards1",
-      "Sheppy",
-      "Aaronlev"
     ]
   },
   "Web/Accessibility/ARIA/Reference/Roles": {

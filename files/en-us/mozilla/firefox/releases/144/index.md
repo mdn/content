@@ -52,7 +52,11 @@ Firefox 144 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### JavaScript -->
+### JavaScript
+
+- The {{jsxref("Map.prototype.getOrInsert()")}}, {{jsxref("Map.prototype.getOrInsertComputed()")}}, {{jsxref("WeakMap.prototype.getOrInsert()")}}, and {{jsxref("WeakMap.prototype.getOrInsertComputed()")}} instance methods are now supported.
+  All the methods return the value corresponding to a specified key if the key is present.
+  If the key is not present, `getOrInsert()` inserts and returns an element for the key and a given default value, while `getOrInsertComputed()` inserts and returns a value computed in a supplied callback function. ([Firefox bug 1979917](https://bugzil.la/1979917)).
 
 <!-- No notable changes. -->
 
@@ -71,6 +75,9 @@ Firefox 144 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - The [`lock()`](/en-US/docs/Web/API/ScreenOrientation/lock) and [`unlock()`](/en-US/docs/Web/API/ScreenOrientation/unlock) methods of the {{domxref("ScreenOrientation")}} interface are now supported for Android and for Windows tablets. ([Firefox bug 1983483](https://bugzil.la/1983483))
 
 - The [View Transition API](/en-US/docs/Web/API/View_Transition_API) is now supported for [SPAs (single-page applications)](/en-US/docs/Glossary/SPA). This provides a mechanism for easily creating animated transitions between different website views. ([Firefox bug 1985809](https://bugzil.la/1985809)).
+- The {{domxref("CSSStyleProperties")}} interface of the [CSS Object Model (CSSOM)](/en-US/docs/Web/API/CSS_Object_Model) is now implemented (this was renamed from a non-standard interface `CSS2Properties`). The new interface is present but not yet used. ([Firefox bug 1919582](https://bugzil.la/1919582)).
+
+- The {{domxref("PerformanceEventTiming.interactionId", "interactionId")}} property of the {{domxref("PerformanceEventTiming")}} interface is a unique identifier that associates related events belonging to a single user interaction. This can be used to calculate the {{glossary("Interaction to next paint")}} metric, which helps analyze responsiveness to user interaction over the lifetime of a page. ([Firefox bug 1956809](https://bugzil.la/1956809)).
 
 #### DOM
 
@@ -86,7 +93,9 @@ Firefox 144 is the current [Beta version of Firefox](https://www.firefox.com/en-
   This constraint allows developers to request video that matches other constraints, such as resolution and frame rate, even if the requested constraints are not supported by the underlying hardware.
   The browser may then crop, downscale, or reduce the frame rate of the video captured from a camera, or downscale (but not crop) the video captured from a screen or window. ([Firefox bug 1286945](https://bugzil.la/1286945)).
 
-<!-- #### Removals -->
+#### Removals
+
+- The following deprecated and non-standard events have been removed: [`afterscriptexecute` event](/en-US/docs/Web/API/Document/afterscriptexecute_event) and [`beforescriptexecute` event](/en-US/docs/Web/API/Document/beforescriptexecute_event) of the `Document` interface, and the [`afterscriptexecute` event](/en-US/docs/Web/API/Element/afterscriptexecute_event) and [`beforescriptexecute` event](/en-US/docs/Web/API/Element/beforescriptexecute_event) of the `Element` interface. ([Firefox bug 1584269](https://bugzil.la/1584269)).
 
 <!-- ### WebAssembly -->
 
@@ -114,7 +123,8 @@ Firefox 144 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ## Changes for add-on developers
 
-- Adds the ability to determine the priority of CSS injected from the [`"content_scripts"` manifest key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts), in {{WebExtAPIRef("scripting.registerContentScripts()")}} with the `cssOrigin` property on {{WebExtAPIRef("scripting.RegisteredContentScript")}}, and the `cssOrigin` property in {{WebExtAPIRef("contentScripts.register")}}. By default, the `"author"` origin takes precedence. ([Firefox bug 1679997](https://bugzil.la/1679997))
+- Adds the ability to specify the style origin for CSS injections from [`"content_scripts"` manifest key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts), in {{WebExtAPIRef("scripting.registerContentScripts()")}} with the `cssOrigin` property on {{WebExtAPIRef("scripting.RegisteredContentScript")}}, and the `cssOrigin` property in {{WebExtAPIRef("contentScripts.register")}}. The style origin can be `"user"`, to add the CSS as a user stylesheet, or `"author"`, to add it as an author stylesheet. Default, to the `"author"` origin. These properties are case-insensitive. In addition, the value of the [`origin`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/scripting/insertCSS#origin) property of {{WebExtAPIRef("scripting.insertCSS()")}} is now case insensitive. ([Firefox bug 1679997](https://bugzil.la/1679997))
+- Adds support for {{WebExtAPIRef("storage.StorageArea.getBytesInUse()","getBytesInUse()")}} to {{WebExtAPIRef("storage.local")}} and {{WebExtAPIRef("storage.managed")}}. ([Firefox bug 1385832](https://bugzil.la/1385832))
 
 <!-- ### Removals -->
 

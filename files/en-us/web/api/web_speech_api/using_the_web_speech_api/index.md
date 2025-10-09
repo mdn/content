@@ -260,9 +260,9 @@ In the on-device version of the demo, prefix-handling code is not needed because
 
 ## Contextual biasing in speech recognition
 
-There will be times when a speech recognition service will fail to correctly recognize a specific word or phrase. This most often happens with domain-specific terms (such as medical or scientific vocabulary), proper nouns, uncommon phrases, or words that sound similar to other words and so may be misrecognized.
+There will be times when a speech recognition service will fail to correctly recognize a specific word or phrase. This most often happens with domain-specific terms (such as medical or scientific vocabulary), proper nouns, uncommon phrases, or words that sound similar to other words and so may be misidentified.
 
-For example, during testing, we found that our [On-device speech color changer](https://mdn.github.io/dom-examples/web-speech-api/speech-color-changer/) had trouble recognizing the color `azure` — it kept returning results like "as you". Other colors that were frequently misrecognized included `khaki` ("car key"), `tan`, and `thistle` ("this all").
+For example, during testing, we found that our [On-device speech color changer](https://mdn.github.io/dom-examples/web-speech-api/speech-color-changer/) had trouble recognizing the color `azure` — it kept returning results like "as you". Other colors that were frequently misidentified included `khaki` ("car key"), `tan`, and `thistle` ("this all").
 
 To mitigate such problems, the Web Speech API lets you provide hints to the recognition engine to highlight phrases that are more likely to be spoken and which the engine should be biased towards. This makes those words and phrases more likely to be recognized correctly.
 
@@ -311,7 +311,7 @@ The Web Speech API has a main controller interface for this — {{domxref("Speec
 
 ### Demo
 
-To demonstrate how to use web speech synthesis, we've created a sample app called [Speech synthesiser](https://github.com/mdn/dom-examples/tree/main/web-speech-api/speak-easy-synthesis). It has an input field for entering the text to be synthesized. You can adjust the rate and pitch and also select a voice from the dropdown menu to use for the spoken text. After you've entered your text, press <kbd>Enter</kbd>/<kbd>Return</kbd> or click the **Play** button to hear the text read aloud.
+To demonstrate how to use web speech synthesis, we've created a sample app called [Speech synthesizer](https://github.com/mdn/dom-examples/tree/main/web-speech-api/speak-easy-synthesis). It has an input field for entering the text to be synthesized. You can adjust the rate and pitch and also select a voice from the dropdown menu to use for the spoken text. After you've entered your text, press <kbd>Enter</kbd>/<kbd>Return</kbd> or click the **Play** button to hear the text read aloud.
 
 ![UI of an app called speak easy synthesis. It has an input field in which to input text to be synthesized, slider controls to change the rate and pitch of the speech, and a drop down menu to choose between different voices.](speak-easy-synthesis.png)
 
