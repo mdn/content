@@ -58,3 +58,6 @@
 # If another reviewer is specified, update the PAT token or auto-merge will cease to be automatic.
 /package.json @mdn-bot
 /yarn.lock @mdn-bot
+
+/.github/workflows/ @mdn/engineering
+/.github/CODEOWNERS @mdn/core-yari-content @mdn/engineering
