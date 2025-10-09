@@ -16,30 +16,36 @@ If you try to access a property or call a method on an object, and that property
 That's why you can do this:
 
 ```js
-const myArray = new Array(1, 2, 3);
+const mySet = new Set([1, 2, 3]);
 // prototype chain:
-// myArray -> Array -> Object -> null
+// mySet -> Set -> Object -> null
 
-myArray.length;
+mySet.size;
 // 3
-// length is defined on the prototype of `myArray`, which is `Array.prototype`
+// size is defined on the prototype of `mySet`, which is `Set.prototype`
 
-myArray.toString();
-// "1,2,3"
-// toString() is defined on the prototype of `Array.prototype`,
-// which is `Object.prototype`
+mySet.propertyIsEnumerable("size");
+// false
+// propertyIsEnumerable() is defined on the prototype
+// of `Set.prototype`, which is `Object.prototype`
 ```
 
 Unlike many other languages, JavaScript allows you to add inherited properties and methods at runtime by modifying an object's prototypes:
 
 ```js
-const myArray = new Array(1, 2, 3);
+const mySet = new Set([1, 2, 3]);
 
 // modify the Object prototype at runtime
-Object.prototype.extra = "new property!";
+Object.prototype.extra = "new property from the Object prototype!";
 
-myArray.extra;
-// "new property!"
+// modify the Set prototype at runtime
+Set.prototype.other = "new property from the Set prototype!";
+
+mySet.extra;
+// "new property from the Object prototype!"
+
+mySet.other;
+// "new property from the Set prototype!"
 ```
 
 In a prototype pollution attack, the attacker is able to change the object's prototype to make the object behave in unexpected or dangerous ways.
