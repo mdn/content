@@ -64,43 +64,6 @@ Prototype pollution involves two phases:
 1. **Pollution**: The attacker is able to add or modify properties on an object's prototype.
 2. **Exploitation**: Original application code accesses the polluted properties, leading to unexpected behavior.
 
-### Exploitation targets
-
-To see the effect of prototype pollution, we can look at the how the following {{domxref("fetch()")}} call can be changed completely. By default, it is a {{HTTPMethod("GET")}} request, but because we polluted the `Object` object's prototype with two new default properties, the `fetch()` call is now transformed into a {{HTTPMethod("POST")}} request, which could lead to unintended side-affects on the server-side.
-
-```js
-// Attacker indirectly causes the following pollution
-Object.prototype.body = "a=1";
-Object.prototype.method = "POST";
-
-fetch("https://example.com", {
-  mode: "cors",
-});
-// Promise {status: "pending", body: "a=1", method: "POST"}
-
-// Any new object initialization is now modified to contain additional default properties
-console.log({}.method); // "POST"
-```
-
-Another dangerous pollution attack target is the {{domxref("HTMLIframeElement.srcdoc")}} property which specifies the content of an {{HTMLElement("iframe")}} element. By overriding its value, it could potentially be possible to execute arbitrary code.
-
-```js
-Object.prototype.srcdoc = "<script>alert(1)<\/script>";
-```
-
-Configuration objects, like `fetch()`'s {{domxref("RequestInit")}} object in the code example above, or the instantiation of `<iframes>`, or configuration of sanitizers ({{domxref("SanitizerConfig")}} objects), are some of the most sensitive objects and are often targets of prototype pollution attacks. Data objects can also be polluted:
-
-```js
-function accessDashboard(user) {
-  if (!user.isAdmin) {
-    return new Response("Access denied", { status: 403 });
-  }
-  // show admin page
-}
-```
-
-If `Object.prototype.isAdmin` is set to `true`, then all users will be treated as admins, leading to a complete bypass of the access control.
-
 ### Pollution sources
 
 In order to pollute objects, the attacker needs a way to add arbitrary properties to prototype objects. This may happen as a consequence of [XSS](/en-US/docs/Web/Security/Attacks/XSS), in which the attacker gains direct access to the page's JavaScript execution environment. However, attackers with this level of access can do damage much more directly, so prototype pollution is usually discussed as a _data-only_ attack, where the attacker constructs a payload that is processed by the application code, leading to pollution.
@@ -153,28 +116,75 @@ const merged = { ...optionsDefaults, ...options };
 console.log(merged.test); // "value"
 ```
 
+### Exploitation targets
+
+To see the effect of prototype pollution, we can look at the how the following {{domxref("fetch()")}} call can be changed completely. By default, it is a {{HTTPMethod("GET")}} request, but because we polluted the `Object` object's prototype with two new default properties, the `fetch()` call is now transformed into a {{HTTPMethod("POST")}} request, which could lead to unintended side-affects on the server-side.
+
+```js
+// Attacker indirectly causes the following pollution
+Object.prototype.body = "a=1";
+Object.prototype.method = "POST";
+
+fetch("https://example.com", {
+  mode: "cors",
+});
+// Promise {status: "pending", body: "a=1", method: "POST"}
+
+// Any new object initialization is now modified to contain additional default properties
+console.log({}.method); // "POST"
+```
+
+Another dangerous pollution attack target is the {{domxref("HTMLIframeElement.srcdoc")}} property which specifies the content of an {{HTMLElement("iframe")}} element. By overriding its value, it could potentially be possible to execute arbitrary code.
+
+```js
+Object.prototype.srcdoc = "<script>alert(1)<\/script>";
+```
+
+Configuration objects, like `fetch()`'s {{domxref("RequestInit")}} object in the code example above, or the instantiation of `<iframes>`, or configuration of sanitizers ({{domxref("SanitizerConfig")}} objects), are some of the most sensitive objects and are often targets of prototype pollution attacks. Data objects can also be polluted:
+
+```js
+function accessDashboard(user) {
+  if (!user.isAdmin) {
+    return new Response("Access denied", { status: 403 });
+  }
+  // show admin page
+}
+```
+
+If `Object.prototype.isAdmin` is set to `true`, then all users will be treated as admins, leading to a complete bypass of the access control.
+
 ## Defenses against prototype pollution
 
 Defenses against prototype pollution go along two lines: avoiding prototype modifications, and avoiding accessing potentially polluted properties. Generally, the more you can avoid prototype modifications and the more you can lock the object's prototypes, the better your protection against prototype pollution will be. This following section presents some strategies which you can use depending on your situation.
 
-### Create JavaScript objects without a prototype
+### Validate user input
 
-If you need to pass an object as options (for example, because an API like `fetch()` requires you to use an object), consider creating an [object without a prototype](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects), which avoids reading potentially polluted properties. The {{jsxref("Object.create()", "Object.create(null)")}} function let's you do this, as well as the `{ __proto__: null }` syntax. Note that creating objects without a prototype is not the default, so whenever instantiating an object, you need to remember to explicitly create a null-prototype object instead of the regular object initializer (`const myObj = { }`).
+Always validate user input with validators, such as [ajv](https://ajv.js.org) and [Zod](https://zod.dev/), to ensure that the input data structure contains the appropriate properties with the appropriate types. To mitigate the prototype pollution attack, reject unneeded properties by setting `additionalProperties` to `false` in the schema. Using a schema also allows setting default values for missing properties, which avoids prototype lookups.
+
+You should avoid dynamic property modification (of the form `obj[key] = value`) unless you are able to validate the `key` values. If you are in this situation, you could rule out `__proto__`, `constructor`, `prototype` as keys in your validation.
+
+### Node.js flag `--disable-proto`
+
+If you are in a Node.js environment, you can disable `Object.prototype.__proto__` with the `--disable-proto=MODE` option where `MODE` is either `delete` (the property is removed entirely), or `throw` (accesses to the property throws an exception with the code `ERR_PROTO_ACCESS`). Use `delete Object.prototype.__proto__` in non-Node environments for the same effect.
+
+This doesn't protect you from prototype pollution generally (because `constructor.prototype` is still available), but it does remove one entry point to it.
+
+### Lock down built-in objects
+
+High-sensitivity environments may implement a defense known as _realm lockdown_ which prevents any modifications to built-in objects. One example is the [SES](https://github.com/endojs/endo/tree/master/packages/ses#ses) shim for [Hardened JavaScript](https://hardenedjs.org). This is implemented based on the {{jsxref("Object.freeze()")}} function, which prevents extensions and makes existing properties non-writable and non-configurable. Freezing an object is the highest integrity level that JavaScript provides. Alternatively, {{jsxref("Object.seal()")}} allows existing properties changed, as long as they are writable, while {{jsxref("Object.preventExtensions()")}} prevents new properties from being added to an object.
 
 ```js
-Object.prototype.method = "POST";
-
-// Still sends a GET request, because the object has no prototype
-fetch("https://example.com", {
-  __proto__: null,
-  mode: "cors",
-});
+Object.freeze(Object.prototype);
+const obj = {};
+const key1 = "__proto__";
+const key2 = "a";
+obj[key1][key2] = 1; // fails silently in non-strict mode
+obj.a; // undefined
 ```
 
-> [!NOTE]
-> The `{ __proto__: null }` [prototype setter](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#prototype_setter) syntax in object initializers is fully secure, unlike the `obj.__proto__` accessor property.
+However, note that legitimate prototype modifications may happen, usually to provide a {{glossary("Polyfill")}} implementation. In [non-strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), attempts to modify a frozen object fail silently, while in strict mode, they throw a `TypeError`. To allow polyfills, the polyfill code needs to run before the freeze.
 
-This approach also avoids pollution because the `__proto__` and `constructor` properties are not present on the object, so dynamic property modification cannot reach the prototype.
+Another caveat with {{jsxref("Object.freeze()")}} is that it doesn't provide a deep freeze by default. If you want true immutability, you need to recursively freeze every property ([example](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze#deep_freezing)). Use a library like SES so you don't miss any built-in objects.
 
 ### Avoid lookups on the prototype
 
@@ -230,26 +240,38 @@ function doDangerousAction(options = { enableDangerousAction: false }) {
 }
 ```
 
-### Lock down built-in objects
+### Create JavaScript objects with null prototype
 
-High-sensitivity environments may implement a defense known as _realm lockdown_ which prevents any modifications to built-in objects. One example is the [SES](https://github.com/endojs/endo/tree/master/packages/ses#ses) shim for [Hardened JavaScript](https://hardenedjs.org). This is implemented based on the {{jsxref("Object.freeze()")}} function, which prevents extensions and makes existing properties non-writable and non-configurable. Freezing an object is the highest integrity level that JavaScript provides. Alternatively, {{jsxref("Object.seal()")}} allows existing properties changed, as long as they are writable, while {{jsxref("Object.preventExtensions()")}} prevents new properties from being added to an object.
+[Null-prototype objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects) simultaneously avoid prototype pollution (because the `__proto__` and `constructor` properties are not present on the object) and avoid lookups on the prototype. They are created either with the {{jsxref("Object.create()", "Object.create(null)")}} function, or with the `{ __proto__: null }` syntax in object initializers.
+
+> [!NOTE]
+> The `{ __proto__: null }` [prototype setter](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#prototype_setter) syntax in object initializers is fully secure, unlike the `obj.__proto__` accessor property.
+
+If you need to pass an object as options (for example, because an API like `fetch()` requires you to use an object), create a null-prototype object. Note that creating objects without a prototype is not the default, so whenever instantiating an object, you need to remember to explicitly create a null-prototype object instead of the regular object initializer (`const myObj = { }`).
 
 ```js
-Object.freeze(Object.prototype);
-const obj = {};
-const key1 = "__proto__";
-const key2 = "a";
-obj[key1][key2] = 1; // fails silently in non-strict mode
-obj.a; // undefined
+Object.prototype.method = "POST";
+
+// Still sends a GET request, because the object has no prototype
+fetch("https://example.com", {
+  __proto__: null,
+  mode: "cors",
+});
 ```
 
-However, note that legitimate prototype modifications may happen, usually to provide a {{glossary("Polyfill")}} implementation. In [non-strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), attempts to modify a frozen object fail silently, while in strict mode, they throw a `TypeError`. To allow polyfills, the polyfill code needs to run before the freeze.
+If you are creating an object that will be modified later (e.g., via `obj[key] = value`), create it as a null-prototype object:
 
-Another caveat with {{jsxref("Object.freeze()")}} is that it doesn't provide a deep freeze by default. If you want true immutability, you need to recursively freeze every property ([example](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze#deep_freezing)). Use a library like SES so you don't miss any built-in objects.
+```js
+const result = { __proto__: null };
+const key1 = "__proto__";
+const key2 = "a";
+result[key1] ??= {};
+result[key1][key2] = 1; // modifies result, not Object.prototype
+```
 
 ### Use `Map` and `Set` instead
 
-When JavaScript objects are used as ad-hoc key-value pairs, consider using a {{jsxref("Map")}} or {{jsxref("Set")}} object instead. These are more modern data structures that are not vulnerable to prototype pollution issues. See the `Map` documentation for a [comparison between Maps and Objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map#objects_vs._maps). The {{jsxref("Map.prototype.get()")}} method will always only return entries within the `Map`.
+When JavaScript objects are used as ad-hoc key-value pairs, consider using a {{jsxref("Map")}} or {{jsxref("Set")}} object instead. They also avoid object prototype pollution by avoiding prototype lookups or property modification. See the `Map` documentation for a [comparison between Maps and Objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map#objects_vs._maps). The {{jsxref("Map.prototype.get()")}} method will always only return entries within the `Map`.
 
 ```js
 // Assume Object got polluted somehow
@@ -261,18 +283,6 @@ config.set("admin", false);
 config.admin; // true
 config.get("admin"); // false
 ```
-
-### Validate user input
-
-Always validate user input with validators, such as [ajv](https://ajv.js.org) and [Zod](https://zod.dev/), to ensure that the input data structure contains the appropriate properties with the appropriate types. To mitigate the prototype pollution attack, reject unneeded properties by setting `additionalProperties` to `false` in the schema. Using a schema also allows setting default values for missing properties, which avoids prototype lookups.
-
-You should avoid dynamic property modification (of the form `obj[key] = value`) unless you are able to validate the `key` values. If you are in this situation, you could rule out `__proto__`, `constructor`, `prototype` as keys in your validation.
-
-### Node.js flag `--disable-proto`
-
-If you are in a Node.js environment, you can disable `Object.prototype.__proto__` with the `--disable-proto=MODE` option where `MODE` is either `delete` (the property is removed entirely), or `throw` (accesses to the property throws an exception with the code `ERR_PROTO_ACCESS`). Use `delete Object.prototype.__proto__` in non-Node environments for the same effect.
-
-This doesn't protect you from prototype pollution generally (because `constructor.prototype` is still available), but it does remove one entry point to it.
 
 ## Defense summary checklist
 
