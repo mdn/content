@@ -41,7 +41,7 @@ calc(50% + 90deg)
 
 ## Multiplication
 
-When multiplying values in CSS, one of the values must always be a unitless {{cssxref("&lt;number>")}} value. This is because you want a product that is a greater amount of the same unit, for example:
+When multiplying values in CSS, only one of the values can have a unit. All other values must be unitless {{cssxref("number")}} values. This is because you want a product that is a greater or lesser amount of the same unit, and do not want to create squared units, which no CSS properties accept. 
 
 ```css example-good
 calc(200px * 4) /* 800px */
