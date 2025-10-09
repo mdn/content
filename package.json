@@ -58,7 +58,7 @@
     "yaml": "^2.8.1"
   },
   "devDependencies": {
-    "cheerio": "1.0.0-rc.12",
+    "cheerio": "1.1.2",
     "cspell": "9.2.1",
     "cspell-group-by-file-reporter": "^1.0.1",
     "file-type": "^21.0.0",
