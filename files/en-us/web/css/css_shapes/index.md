@@ -133,5 +133,4 @@ The CSS shapes module also introduces the `shape-inside` and `shape-padding` pro
 - [CSS Shapes 101](https://alistapart.com/article/css-shapes-101/) via alistapart.com (2014)
 - [Creating non-rectangular layouts with CSS Shapes](https://www.sarasoueidan.com/blog/css-shapes/) via sarasoueidan.com (2013)
 - [How to use CSS Shapes in your web design](https://webdesign.tutsplus.com/how-to-use-css-shapes-in-your-web-design--cms-27498t) via tutsplus.com (2016)
-- [How to get started with CSS Shapes](https://webdesignerdepot.com/how-to-get-started-with-css-shapes/) via webdesignerdepot.com (2015)
 - [Edit CSS shapes with the shape path editor](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_shapes/index.html) via mozilla.org (2018) ([Video](https://www.youtube.com/watch?v=u9bDe3Bw0sA))
