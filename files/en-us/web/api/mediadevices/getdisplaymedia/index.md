@@ -41,7 +41,7 @@ getDisplayMedia(options)
         This option is intended to protect companies from leakage of private information through employee error when using video conferencing apps.
         Possible values are:
         - `include`: Hints that the browser should include screen options.
-        - `exclude`: Hints that screne options should be excluded.
+        - `exclude`: Hints that screen options should be excluded.
 
         > [!NOTE]
         > You cannot set `monitorTypeSurfaces: "exclude"` at the same time as [`displaySurface: "monitor"`](/en-US/docs/Web/API/MediaTrackConstraints/displaySurface) as the two settings are contradictory.
