@@ -12,7 +12,7 @@ These quotients can then be used as a {{cssxref("number")}} in the values of uni
 
 This typed arithmetic behavior enables relationships to be created between different values on a page. This article explores typed arithmetic and presents several examples that make use of it.
 
->[!NOTE]
+> [!NOTE]
 > Originally, the [CSS values and units](/en-US/docs/Web/CSS/CSS_Values_and_Units) module limited the arguments multiplication and division operations could take to make dividing by zero detectable at parse time and avoid issues such as squared units. Typed arithmetic relaxes some of those restrictions in [supporting browsers](/en-US/docs/Web/CSS/calc#browser_compatibility).
 
 ## CSS typed arithmetic rules
