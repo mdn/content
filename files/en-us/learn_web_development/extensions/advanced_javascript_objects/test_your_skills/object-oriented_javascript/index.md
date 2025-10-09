@@ -1,10 +1,12 @@
 ---
 title: "Test your skills: Object-oriented JavaScript"
-short-title: Object-oriented JavaScript
+short-title: "Test: Object-oriented JavaScript"
 slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills/Object-oriented_JavaScript
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
+
+{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 The aim of this skill test is to help you assess whether you've understood our [Classes in JavaScript](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript) article.
 
@@ -132,3 +134,5 @@ square.calcArea();
 ```
 
 </details>
+
+{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}

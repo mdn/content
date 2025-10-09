@@ -243,23 +243,21 @@ The JavaScript media API allows you to create your own custom player. Let's take
 Next, we attach some functionality to the player using JavaScript:
 
 ```js
-window.onload = () => {
-  const audio = document.getElementById("my-audio");
-  const play = document.getElementById("play");
-  const pause = document.getElementById("pause");
+const audio = document.getElementById("my-audio");
+const play = document.getElementById("play");
+const pause = document.getElementById("pause");
 
-  // associate functions with the 'onclick' events
-  play.onclick = playAudio;
-  pause.onclick = pauseAudio;
+// associate functions with the 'onclick' events
+play.onclick = playAudio;
+pause.onclick = pauseAudio;
 
-  function playAudio() {
-    audio.play();
-  }
+function playAudio() {
+  audio.play();
+}
 
-  function pauseAudio() {
-    audio.pause();
-  }
-};
+function pauseAudio() {
+  audio.pause();
+}
 ```
 
 ## Media loading events

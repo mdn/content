@@ -314,9 +314,11 @@ v16.17.1
 Open **package.json**, and add this information as an **engines > node** as shown (using the version number for your system).
 
 ```json
+{
   "engines": {
     "node": ">=22.0.0"
-  },
+  }
+}
 ```
 
 The hosting service might not support the specific indicated version of node, but this change should ensure that it attempts to use a version with the same major version number, or a more recent version.

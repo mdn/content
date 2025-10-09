@@ -380,9 +380,10 @@ The output is as follows:
 
 ## See also
 
+- {{CSSXref("color")}} property
 - [The `<color>` data type](/en-US/docs/Web/CSS/color_value) for a list of all color notations
 - [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)
-- [sRGB color picker and conversion tool](/en-US/docs/Web/CSS/CSS_colors/Color_picker_tool)
+- [Color_format_converter tool](/en-US/docs/Web/CSS/CSS_colors/Color_format_converter)
 - [CSS colors](/en-US/docs/Web/CSS/CSS_colors) module
 - [`color-gamut`](/en-US/docs/Web/CSS/@media/color-gamut) media feature
 - [Wide Gamut Color in CSS with Display-p3](https://webkit.org/blog/10042/wide-gamut-color-in-css-with-display-p3/)

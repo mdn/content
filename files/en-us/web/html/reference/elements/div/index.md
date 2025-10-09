@@ -88,10 +88,10 @@ This example creates a shadowed box by applying a style to the `<div>` using CSS
 ```css
 .shadowbox {
   width: 15em;
-  border: 1px solid #333;
-  box-shadow: 8px 8px 5px #444;
+  border: 1px solid #333333;
+  box-shadow: 8px 8px 5px #444444;
   padding: 8px 12px;
-  background-image: linear-gradient(180deg, white, #ddd 40%, #ccc);
+  background-image: linear-gradient(180deg, white, #dddddd 40%, #cccccc);
 }
 ```
 

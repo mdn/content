@@ -1,10 +1,12 @@
 ---
 title: "Test your skills: Forms and buttons"
-short-title: Forms and buttons
+short-title: "Test: Forms and buttons"
 slug: Learn_web_development/Core/Structuring_content/Test_your_skills/Forms_and_buttons
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
+
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_forms", "Learn_web_development/Core/Structuring_content/Forms_challenge", "Learn_web_development/Core/Structuring_content")}}
 
 The aim of this skill test is to help you assess whether you understand how [HTML forms and buttons](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_forms) work.
 
@@ -26,7 +28,7 @@ To complete the task:
 ```css hidden live-sample___forms-buttons-1 live-sample___forms-buttons-2 live-sample___forms-buttons-3 live-sample___forms-buttons-4 live-sample___forms-buttons-5 live-sample___forms-buttons-6
 body {
   background-color: white;
-  color: #333;
+  color: #333333;
   font:
     1em / 1.4 Helvetica Neue,
     Helvetica,
@@ -451,3 +453,5 @@ Your finished HTML should look something like this:
 ```
 
 </details>
+
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_forms", "Learn_web_development/Core/Structuring_content/Forms_challenge", "Learn_web_development/Core/Structuring_content")}}

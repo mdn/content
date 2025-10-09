@@ -92,9 +92,85 @@ input {
 }
 ```
 
-The following live example shows you what they look like in your system — default on the left, and with the above CSS applied on the right ([find it here also](https://mdn.github.io/learning-area/html/forms/styling-examples/appearance-tester.html) if you want to test it on other systems).
+The following live example shows you what they look like in your system — default on the left, and with the above CSS applied on the right.
 
-{{EmbedGHLiveSample("learning-area/html/forms/styling-examples/appearance-tester.html", '100%', 400)}}
+```html hidden live-sample___appearance-tester
+<div>
+  <form>
+    <div>
+      <label for="search1">search: </label>
+      <input id="search1" name="search1" type="search" />
+    </div>
+    <div>
+      <label for="text1">text: </label>
+      <input id="text1" name="text1" type="text" />
+    </div>
+    <div>
+      <label for="date1">date: </label>
+      <input id="date1" name="date1" type="datetime-local" />
+    </div>
+    <div>
+      <label for="radio1">radio: </label>
+      <input id="radio1" name="radio1" type="radio" />
+    </div>
+    <div>
+      <label for="checkbox1">checkbox: </label>
+      <input id="checkbox1" name="checkbox1" type="checkbox" />
+    </div>
+    <div><input type="submit" value="submit" /></div>
+    <div><input type="button" value="button" /></div>
+  </form>
+</div>
+<div class="appearance">
+  <form>
+    <div>
+      <label for="search2">search: </label>
+      <input id="search2" name="search2" type="search" />
+    </div>
+    <div>
+      <label for="text2">text: </label>
+      <input id="text2" name="text2" type="text" />
+    </div>
+    <div>
+      <label for="date2">date: </label>
+      <input id="date2" name="date2" type="datetime-local" />
+    </div>
+    <div>
+      <label for="radio2">radio: </label>
+      <input id="radio2" name="radio2" type="radio" />
+    </div>
+    <div>
+      <label for="checkbox2">checkbox: </label>
+      <input id="checkbox2" name="checkbox2" type="checkbox" />
+    </div>
+    <div><input type="submit" value="submit" /></div>
+    <div><input type="button" value="button" /></div>
+  </form>
+</div>
+```
+
+```css hidden live-sample___appearance-tester
+body {
+  margin: 20px auto;
+  max-width: 800px;
+  justify-content: space-around;
+}
+
+body,
+form > div {
+  display: flex;
+}
+
+form > div {
+  margin-bottom: 20px;
+}
+
+.appearance input {
+  appearance: none;
+}
+```
+
+{{EmbedLiveSample("appearance-tester", '100%', 350)}}
 
 In most cases, the effect is to remove the stylized border, which makes CSS styling a bit easier, but isn't essential. In a couple of cases, such as radio buttons and checkboxes, it becomes way more useful. We'll look at those now.
 
@@ -110,48 +186,15 @@ input[type="search"]:not(:focus, :active)::-webkit-search-cancel-button {
 }
 ```
 
-### Styling checkboxes and radio buttons
+### Styling checkboxes and radio buttons using `appearance`
 
-Styling a checkbox or a radio button is tricky by default. The sizes of checkboxes and radio buttons are not meant to be changed with their default designs, and browsers react very differently when you try.
+Styling a checkbox or a radio button is tricky by default. The sizes of checkbox and radio button default styles are not meant to be changed, and browsers react very differently when you try. Some increase the size of the control, and some keep the control the same size and add extra space around it.
 
-For example, consider this simple test case:
+A much better approach is to remove the default appearance of checkboxes and radio buttons altogether with {{cssxref("appearance", "appearance: none;")}}, and then add your own styles to their various states.
 
-```html
-<label
-  ><span><input type="checkbox" name="q5" value="true" /></span> True</label
->
-<label
-  ><span><input type="checkbox" name="q5" value="false" /></span> False</label
->
-```
+Let's take this example HTML:
 
-```css
-span {
-  display: inline-block;
-  background: red;
-}
-
-input[type="checkbox"] {
-  width: 100px;
-  height: 100px;
-}
-```
-
-Different browsers handle the checkbox and span differently, often ugly ways:
-
-| Browser                             | Rendering                                                                                              |
-| ----------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| Firefox 71 (macOS)                  | ![Rounded corners and 1px light grey border](firefox-mac-checkbox.png)                                 |
-| Firefox 57 (Windows 10)             | ![Rectangular corners with 1px medium grey border](firefox-windows-checkbox.png)                       |
-| Chrome 77 (macOS), Safari 13, Opera | ![Rounded corner with 1px medium grey border](chrome-mac-checkbox.png)                                 |
-| Chrome 63 (Windows 10)              | ![Rectangular borders with slightly greyish background instead of white.](chrome-windows-checkbox.png) |
-| Edge 16 (Windows 10)                | ![Rectangular borders with slightly greyish background instead of white.](edge-checkbox.png)           |
-
-#### Using appearance: none on radios/checkboxes
-
-As we showed before, you can remove the default appearance of a checkbox or radio button altogether with {{cssxref("appearance", "appearance: none;")}}. Let's take this example HTML:
-
-```html
+```html live-sample___checkboxes-styled
 <form>
   <fieldset>
     <legend>Fruit preferences</legend>
@@ -178,17 +221,17 @@ As we showed before, you can remove the default appearance of a checkbox or radi
 </form>
 ```
 
-Now, let's style these with a custom checkbox design. Let's start by unstyling the original check boxes:
+Let's style these with a custom checkbox design. We'll start by removing the original check box styles:
 
-```css
+```css live-sample___checkboxes-styled
 input[type="checkbox"] {
   appearance: none;
 }
 ```
 
-We can use the {{cssxref(":checked")}} and {{cssxref(":disabled")}} pseudo-classes to change the appearance of our custom checkbox as its state changes:
+We can then use the {{cssxref(":checked")}} and {{cssxref(":disabled")}} pseudo-classes to change the appearance of our custom checkboxes as their state changes:
 
-```css
+```css live-sample___checkboxes-styled
 input[type="checkbox"] {
   position: relative;
   width: 1em;
@@ -216,7 +259,7 @@ input[type="checkbox"]:checked::before {
 
 input[type="checkbox"]:disabled {
   border-color: black;
-  background: #ddd;
+  background: #dddddd;
   color: gray;
 }
 ```
@@ -228,14 +271,12 @@ You'll find out more about such pseudo-classes and more in the [next article](/e
 
 You can see the live result:
 
-{{EmbedGHLiveSample("learning-area/html/forms/styling-examples/checkboxes-styled.html", '100%', 200)}}
+{{EmbedLiveSample("checkboxes-styled", '100%', 200)}}
 
 We've also created a couple of other examples to give you more ideas:
 
 - [Styled radio buttons](https://mdn.github.io/learning-area/html/forms/styling-examples/radios-styled.html): Custom radio button styling.
 - [Toggle switch example](https://mdn.github.io/learning-area/html/forms/toggle-switch-example/): A checkbox styled to look like a toggle switch.
-
-If you view these checkboxes in a browser that doesn't support {{cssxref("appearance")}}, your custom design will be lost, but they will still look like checkboxes and be usable.
 
 ## What can be done about the "ugly" elements?
 
@@ -247,11 +288,77 @@ If you are prepared to live with some differences in look and feel, you can use 
 
 Take the following example, which shows a number of the "ugly" form features in action:
 
-{{EmbedGHLiveSample("learning-area/html/forms/styling-examples/ugly-controls.html", '100%', 750)}}
+```html hidden live-sample___ugly-styling
+<form>
+  <div>
+    <label for="select">Select box:</label>
+    <div class="select-wrapper">
+      <select id="select" name="select">
+        <option>Banana</option>
+        <option>Cherry</option>
+        <option>Lemon</option>
+      </select>
+    </div>
+  </div>
+  <div>
+    <label for="myFruit">"Favorite fruit?" datalist:</label>
+    <input type="text" name="myFruit" id="myFruit" list="mySuggestion" />
+    <datalist id="mySuggestion">
+      <option>Apple</option>
+      <option>Banana</option>
+      <option>Blackberry</option>
+      <option>Blueberry</option>
+      <option>Lemon</option>
+      <option>Lychee</option>
+      <option>Peach</option>
+      <option>Pear</option>
+    </datalist>
+  </div>
+  <div>
+    <label for="date1">Datetime local: </label>
+    <input id="date1" name="date1" type="datetime-local" />
+  </div>
+  <div>
+    <label for="range">Range: </label>
+    <input id="range" name="range" type="range" />
+  </div>
+  <div>
+    <label for="color">Color: </label>
+    <input id="color" name="color" type="color" />
+  </div>
+  <div>
+    <label for="file">File picker: </label>
+    <input id="file" name="file" type="file" multiple />
+    <ul id="file-list"></ul>
+  </div>
+  <div>
+    <label for="progress">Progress: </label>
+    <progress max="100" value="75" id="progress">75/100</progress>
+  </div>
+  <div>
+    <label for="meter">Meter: </label>
+    <meter
+      id="meter"
+      min="0"
+      max="100"
+      value="75"
+      low="33"
+      high="66"
+      optimum="50">
+      75
+    </meter>
+  </div>
+  <div><button>Submit?</button></div>
+</form>
+```
+
+{{EmbedLiveSample("ugly-styling", '100%', 750)}}
+
+You can also press the **Play** button to run the example in MDN Playground and edit the source code.
 
 This example has the following CSS applied to it:
 
-```css
+```css live-sample___ugly-styling
 body {
   font-family: "Josefin Sans", sans-serif;
   margin: 20px auto;
@@ -300,7 +407,7 @@ input[type="text"],
 input[type="datetime-local"],
 input[type="color"],
 select {
-  box-shadow: inset 1px 1px 3px #ccc;
+  box-shadow: inset 1px 1px 3px #cccccc;
   border-radius: 5px;
 }
 
@@ -314,14 +421,45 @@ button {
 }
 ```
 
-> [!NOTE]
-> If you want to test these examples across several browsers simultaneously, you can [find it live here](https://mdn.github.io/learning-area/html/forms/styling-examples/ugly-controls.html) (also [see here for the source code](https://github.com/mdn/learning-area/blob/main/html/forms/styling-examples/ugly-controls.html)).
->
-> Also bear in mind that we've added some JavaScript to the page that lists the files selected by the file picker, below the control itself. This is a simplified version of the example found on the [`<input type="file">`](/en-US/docs/Web/HTML/Reference/Elements/input/file#examples) reference page.
+We've added some JavaScript to the page that lists the files selected by the file picker, below the control itself. This is a simplified version of the example found on the [`<input type="file">`](/en-US/docs/Web/HTML/Reference/Elements/input/file#examples) reference page:
 
-As you can see, we've done fairly well at getting these to look uniform across modern browsers.
+```js live-sample___ugly-styling
+const fileInput = document.querySelector("#file");
+const fileList = document.querySelector("#file-list");
 
-We've applied some global normalizing CSS to all the controls and their labels, to get them to size in the same way, adopt their parent font, etc., as mentioned in the previous article:
+fileInput.addEventListener("change", updateFileList);
+
+function updateFileList() {
+  while (fileList.firstChild) {
+    fileList.removeChild(fileList.firstChild);
+  }
+
+  const curFiles = fileInput.files;
+
+  if (!(curFiles.length === 0)) {
+    for (const file of curFiles) {
+      const listItem = document.createElement("li");
+      listItem.textContent = `File name: ${file.name}; file size: ${returnFileSize(file.size)}.`;
+      fileList.appendChild(listItem);
+    }
+  }
+}
+
+function returnFileSize(number) {
+  if (number < 1e3) {
+    return `${number} bytes`;
+  } else if (number >= 1e3 && number < 1e6) {
+    return `${(number / 1e3).toFixed(1)} KB`;
+  }
+  return `${(number / 1e6).toFixed(1)} MB`;
+}
+```
+
+### "Global" styles
+
+In the previous example, we've done fairly well at getting our ugly controls to look uniform across modern browsers.
+
+We applied some global normalizing CSS to all the controls and their labels, to get them to size in the same way, adopt their parent font, etc., as mentioned in the previous article:
 
 ```css
 button,
@@ -348,7 +486,7 @@ input[type="text"],
 input[type="datetime-local"],
 input[type="color"],
 select {
-  box-shadow: inset 1px 1px 3px #ccc;
+  box-shadow: inset 1px 1px 3px #cccccc;
   border-radius: 5px;
 }
 ```
@@ -473,8 +611,8 @@ And then style the label to act like a button, which, when pressed, will open th
 
 ```css
 label[for="file"] {
-  box-shadow: 1px 1px 3px #ccc;
-  background: linear-gradient(to bottom, #eee, #ccc);
+  box-shadow: 1px 1px 3px #cccccc;
+  background: linear-gradient(to bottom, #eeeeee, #cccccc);
   border: 1px solid darkgrey;
   border-radius: 5px;
   text-align: center;
@@ -482,17 +620,117 @@ label[for="file"] {
 }
 
 label[for="file"]:hover {
-  background: linear-gradient(to bottom, white, #ddd);
+  background: linear-gradient(to bottom, white, #dddddd);
 }
 
 label[for="file"]:active {
-  box-shadow: inset 1px 1px 3px #ccc;
+  box-shadow: inset 1px 1px 3px #cccccc;
 }
 ```
 
-You can see the result of the above CSS styling in the live example below (see also [styled-file-picker.html](https://mdn.github.io/learning-area/html/forms/styling-examples/styled-file-picker.html) live, and the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/styling-examples/styled-file-picker.html)).
+You can see the result of the above CSS styling in the live example below.
 
-{{EmbedGHLiveSample("learning-area/html/forms/styling-examples/styled-file-picker.html", '100%', 200)}}
+```html hidden live-sample___styled-file-picker
+<form>
+  <div>
+    <label for="file">Choose a file to upload</label>
+    <input id="file" name="file" type="file" multiple />
+    <ul id="file-list"></ul>
+  </div>
+  <div><button>Submit?</button></div>
+</form>
+```
+
+```css hidden live-sample___styled-file-picker
+@import "https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap";
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  margin: 20px auto;
+  max-width: 400px;
+}
+
+form > div {
+  margin-bottom: 20px;
+}
+
+button,
+label,
+input {
+  display: block;
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px;
+  height: 30px;
+}
+
+input[type="file"] {
+  height: 0;
+  padding: 0;
+  opacity: 0;
+}
+
+label[for="file"] {
+  box-shadow: 1px 1px 3px #cccccc;
+  background: linear-gradient(to bottom, #eeeeee, #cccccc);
+  border: 1px solid darkgrey;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+label[for="file"]:hover {
+  background: linear-gradient(to bottom, white, #dddddd);
+}
+
+label[for="file"]:active {
+  box-shadow: inset 1px 1px 3px #cccccc;
+}
+
+button {
+  width: 60%;
+  margin: 0 auto;
+}
+```
+
+```js hidden live-sample___styled-file-picker
+const fileInput = document.querySelector("#file");
+const fileList = document.querySelector("#file-list");
+
+fileInput.addEventListener("change", updateFileList);
+
+function updateFileList() {
+  while (fileList.firstChild) {
+    fileList.removeChild(fileList.firstChild);
+  }
+
+  let curFiles = fileInput.files;
+
+  if (!(curFiles.length === 0)) {
+    for (const file of curFiles) {
+      const listItem = document.createElement("li");
+      listItem.textContent = `File name: ${file.name}; file size: ${returnFileSize(file.size)}.`;
+      fileList.appendChild(listItem);
+    }
+  }
+}
+
+function returnFileSize(number) {
+  if (number < 1e3) {
+    return `${number} bytes`;
+  } else if (number >= 1e3 && number < 1e6) {
+    return `${(number / 1e3).toFixed(1)} KB`;
+  }
+  return `${(number / 1e6).toFixed(1)} MB`;
+}
+```
+
+{{EmbedLiveSample("styled-file-picker", '100%', 200)}}
+
+You can also press the **Play** button to run the example in MDN Playground and edit the source code.
 
 ### Meters and progress bars
 

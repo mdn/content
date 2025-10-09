@@ -89,13 +89,9 @@ The JavaScript code adds code to the time input to watch for the {{domxref("Elem
 const startTime = document.getElementById("startTime");
 const valueSpan = document.getElementById("value");
 
-startTime.addEventListener(
-  "input",
-  () => {
-    valueSpan.innerText = startTime.value;
-  },
-  false,
-);
+startTime.addEventListener("input", () => {
+  valueSpan.innerText = startTime.value;
+});
 ```
 
 {{EmbedLiveSample("Time_value_format", 600, 80)}}

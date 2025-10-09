@@ -131,9 +131,9 @@ p.abc {
 ```css
 .content-box {
   padding: 0.3em;
-  background: #ff7;
+  background: #ffff77;
   column-count: 3;
-  column-rule: inset 2px #33f;
+  column-rule: inset 2px #3333ff;
 }
 ```
 

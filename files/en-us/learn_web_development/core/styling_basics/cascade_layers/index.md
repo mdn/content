@@ -181,7 +181,7 @@ In the example below, we've used four `@layer` block at-rules and one `@layer` s
 
 /* unlayered styles */
 body {
-  color: #333;
+  color: #333333;
 }
 
 /* creates the first layer: `layout` */
@@ -227,7 +227,7 @@ Anonymous layers are created by assigning styles to a layer without naming the l
 
 The `@layer` at-rule creates a layer, named or not, or appends styles to a layer if the named layer already exists. We called the first anonymous layer `<anonymous(01)>` and the second `<anonymous(02)>`, this is just so we can explain them. These are actually unnamed layers. There is no way to reference them or add additional styles to them.
 
-All styles declared outside of a layer are joined together in an implicit layer. In the example code above, the first declaration set the `color: #333` property on `body`. This was declared outside of any layer. Normal unlayered declarations take precedence over normal layered declarations even if the unlayered styles have a lower specificity and come first in the order of appearance. This explains why even though the unlayered CSS was declared first in the code block, the implicit layer containing these unlayered styles takes precedence as if it was the last declared layer.
+All styles declared outside of a layer are joined together in an implicit layer. In the example code above, the first declaration set the `color: #333333` property on `body`. This was declared outside of any layer. Normal unlayered declarations take precedence over normal layered declarations even if the unlayered styles have a lower specificity and come first in the order of appearance. This explains why even though the unlayered CSS was declared first in the code block, the implicit layer containing these unlayered styles takes precedence as if it was the last declared layer.
 
 In the line `@layer theme, layout, utilities;`, in which a series of layers were declared, only the `theme` and `utilities` layers were created; `layout` was already created in the first line. Note that this declaration does not change the order of already created layers. There is currently no way to re-order layers once declared.
 
@@ -540,10 +540,6 @@ Here's a summary of the properties that are used and why each declaration is app
 - `border`: Because within a layer non-nested styles have precedence over normal nested styles, `red` color wins.
 - `color`: With important styles, layered styles take precedence over unlayered styles, with important styles in earlier declared layers having precedence over later declared layers. In this example, the order of nested layer creation is `components.narrow`, then `components.wide`, so important styles in `components.narrow` have precedence over important styles in `components.wide`, meaning `purple` color wins.
 - `border-radius`: The property has been set only in the nested layers so by declaration order `20%` radius wins.
-
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: The Cascade, Task 2](/en-US/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Cascade#task_2).
 
 ## Summary
 

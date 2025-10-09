@@ -384,7 +384,7 @@ p {
   min-width: 195px;
   min-height: 99px;
   margin-right: 10px;
-  background-color: #eee; /* Placeholder background */
+  background-color: #eeeeee; /* Placeholder background */
 }
 
 #log {
@@ -751,21 +751,12 @@ First, we need to prepare some variables and install the observer.
 ```js
 const numSteps = 20.0;
 
-let boxElement;
+const boxElement = document.querySelector("#box");
 let prevRatio = 0.0;
 let increasingColor = "rgb(40 40 190 / ratio)";
 let decreasingColor = "rgb(190 40 40 / ratio)";
 
-// Set things up
-window.addEventListener(
-  "load",
-  (event) => {
-    boxElement = document.querySelector("#box");
-
-    createObserver();
-  },
-  false,
-);
+createObserver();
 ```
 
 The constants and variables we set up here are:
@@ -779,7 +770,7 @@ The constants and variables we set up here are:
 - `decreasingColor`
   - : Similarly, this is a string defining a color we'll apply when the visibility ratio is decreasing.
 
-We call {{domxref("EventTarget.addEventListener", "Window.addEventListener()")}} to start listening for the {{domxref("Window/load_event", "load")}} event; once the page has finished loading, we get a reference to the element with the ID `"box"` using {{domxref("Document.querySelector", "querySelector()")}}, then call the `createObserver()` method we'll create in a moment to handle building and installing the intersection observer.
+We get a reference to the element with the ID `"box"` using {{domxref("Document.querySelector", "querySelector()")}}, then call the `createObserver()` method we'll create in a moment to handle building and installing the intersection observer.
 
 #### Creating the intersection observer
 
@@ -787,15 +778,13 @@ The `createObserver()` method is called once page load is complete to handle act
 
 ```js
 function createObserver() {
-  let observer;
-
-  let options = {
+  const options = {
     root: null,
     rootMargin: "0px",
     threshold: buildThresholdList(),
   };
 
-  observer = new IntersectionObserver(handleIntersect, options);
+  const observer = new IntersectionObserver(handleIntersect, options);
   observer.observe(boxElement);
 }
 ```
@@ -814,11 +803,11 @@ The `buildThresholdList()` function, which builds the list of thresholds, looks 
 
 ```js
 function buildThresholdList() {
-  let thresholds = [];
-  let numSteps = 20;
+  const thresholds = [];
+  const numSteps = 20;
 
   for (let i = 1.0; i <= numSteps; i++) {
-    let ratio = i / numSteps;
+    const ratio = i / numSteps;
     thresholds.push(ratio);
   }
 

@@ -78,6 +78,8 @@ When an extension updates, user scripts are cleared. To restore scripts, add cod
   - : Unregisters user scripts registered by the extension.
 - {{WebExtAPIRef("userScripts.update()")}}
   - : Updates user scripts registered by the extension.
+- {{WebExtAPIRef("userScripts.execute()")}}
+  - : Injects a user script into a target context.
 
 {{WebExtExamples("h2")}}
 

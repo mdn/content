@@ -66,7 +66,7 @@ So for example:
   <style>
     p {
       color: white;
-      background-color: #666;
+      background-color: #666666;
       padding: 5px;
     }
   </style>
@@ -129,7 +129,7 @@ The `name` and `slot` attributes both default to the empty string, so elements w
   <style>
     p {
       color: white;
-      background-color: #666;
+      background-color: #666666;
       padding: 5px;
     }
   </style>
@@ -192,7 +192,7 @@ First of all, we use the {{HTMLElement("slot")}} element within a {{HTMLElement(
     }
     h4 span {
       background: #217ac0;
-      padding: 2px 6px 2px 6px;
+      padding: 2px 6px;
     }
     h4 span {
       border: 1px solid #cee9f9;

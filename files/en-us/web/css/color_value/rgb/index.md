@@ -210,7 +210,7 @@ body {
 
 ```css
 body {
-  background: repeating-linear-gradient(-45deg, #eee 0 2px, white 2px 6px);
+  background: repeating-linear-gradient(-45deg, #eeeeee 0 2px, white 2px 6px);
   padding: 10px;
 }
 
@@ -343,6 +343,6 @@ div.comma-separated {
 ## See also
 
 - The {{CSSXref("&lt;color&gt;")}} data type for a list of all color notations
-- [sRGB color picker and conversion tool](/en-US/docs/Web/CSS/CSS_colors/Color_picker_tool)
+- [Color format converter tool](/en-US/docs/Web/CSS/CSS_colors/Color_format_converter)
 - [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)
 - [CSS colors](/en-US/docs/Web/CSS/CSS_colors) module

@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.XRPose.linearVelocity
 ---
 
-{{APIRef}}{{SecureContext_Header}}
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
 The `linearVelocity` read-only property of the
 {{DOMxRef("XRPose")}} interface is a {{DOMxRef("DOMPointReadOnly")}} describing

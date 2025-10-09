@@ -6,7 +6,7 @@ browser-compat: css.at-rules.font-face.font-variation-settings
 sidebar: cssref
 ---
 
-The **`font-variation-settings`** CSS descriptor allows authors to specify low-level OpenType or TrueType font variations in the {{cssxref("@font-face")}} at-rule. The values for this descriptor are the same as the {{cssxref("font-variation-settings")}} property, except for the global keyword values.
+The **`font-variation-settings`** [CSS](/en-US/docs/Web/CSS) descriptor allows authors to specify low-level OpenType or TrueType font variations in the {{cssxref("@font-face")}} at-rule. The values for this descriptor are the same as the {{cssxref("font-variation-settings")}} property, except for the global keyword values.
 
 Since this descriptor sets variation values on the font object in the `@font-face` at-rule and not on an entire element, only some glyphs in an element may be rendered using this descriptor.
 

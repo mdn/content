@@ -105,7 +105,7 @@ The latest code looks (and works) like this, in case you want to compare and con
 
 ```css hidden
 canvas {
-  background: #eee;
+  background: #eeeeee;
 }
 button {
   display: block;
@@ -143,8 +143,8 @@ for (let c = 0; c < brickColumnCount; c++) {
   }
 }
 
-document.addEventListener("keydown", keyDownHandler, false);
-document.addEventListener("keyup", keyUpHandler, false);
+document.addEventListener("keydown", keyDownHandler);
+document.addEventListener("keyup", keyUpHandler);
 
 function keyDownHandler(e) {
   if (e.key === "Right" || e.key === "ArrowRight") {

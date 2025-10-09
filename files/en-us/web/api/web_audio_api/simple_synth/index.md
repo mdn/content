@@ -129,7 +129,7 @@ On the right side of the settings bar, we place a label and a {{HTMLElement("sel
 }
 
 .key:hover {
-  background-color: #eef;
+  background-color: #eeeeff;
 }
 
 .key:active,
@@ -140,7 +140,7 @@ On the right side of the settings bar, we place a label and a {{HTMLElement("sel
 
 .octave {
   display: inline-block;
-  padding: 0 6px 0 0;
+  padding-right: 6px;
 }
 
 .settingsBar {
@@ -323,7 +323,7 @@ The `setup()` function is responsible for building the keyboard and preparing th
 function setup() {
   const noteFreq = createNoteTable();
 
-  volumeControl.addEventListener("change", changeVolume, false);
+  volumeControl.addEventListener("change", changeVolume);
 
   mainGainNode = audioContext.createGain();
   mainGainNode.connect(audioContext.destination);
@@ -390,10 +390,10 @@ function createKey(note, octave, freq) {
   labelElement.appendChild(document.createElement("sub")).textContent = octave;
   keyElement.appendChild(labelElement);
 
-  keyElement.addEventListener("mousedown", notePressed, false);
-  keyElement.addEventListener("mouseup", noteReleased, false);
-  keyElement.addEventListener("mouseover", notePressed, false);
-  keyElement.addEventListener("mouseleave", noteReleased, false);
+  keyElement.addEventListener("mousedown", notePressed);
+  keyElement.addEventListener("mouseup", noteReleased);
+  keyElement.addEventListener("mouseover", notePressed);
+  keyElement.addEventListener("mouseleave", noteReleased);
 
   return keyElement;
 }

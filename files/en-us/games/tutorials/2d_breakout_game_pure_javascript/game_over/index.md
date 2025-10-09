@@ -88,7 +88,7 @@ See how your code compares to the live sample below:
 
 ```css hidden
 canvas {
-  background: #eee;
+  background: #eeeeee;
 }
 button {
   display: block;
@@ -114,8 +114,8 @@ let leftPressed = false;
 
 let interval = 0;
 
-document.addEventListener("keydown", keyDownHandler, false);
-document.addEventListener("keyup", keyUpHandler, false);
+document.addEventListener("keydown", keyDownHandler);
+document.addEventListener("keyup", keyUpHandler);
 
 function keyDownHandler(e) {
   if (e.key === "Right" || e.key === "ArrowRight") {

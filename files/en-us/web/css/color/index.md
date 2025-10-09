@@ -189,5 +189,6 @@ p {
 - The {{cssxref("&lt;color&gt;")}} data type
 - Other color-related properties: {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, {{cssxref("column-rule-color")}}, and {{cssxref("print-color-adjust")}}
 - SVG {{SVGAttr("color")}} attribute
+- {{CSSXref("color_value/color")}} function
 - [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color)
 - [WCAG: color contrast](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)

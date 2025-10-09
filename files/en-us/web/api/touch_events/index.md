@@ -60,26 +60,20 @@ Log:
   height: 200px;
   width: 600px;
   overflow: scroll;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
 }
 ```
 
 ### Setting up the event handlers
 
-When the page loads, the `startup()` function shown below will be called.
-This sets up all the event listeners for our {{HTMLElement("canvas")}} element so we can handle the touch events as they occur.
+The code sets up all the event listeners for our {{HTMLElement("canvas")}} element so we can handle the touch events as they occur.
 
 ```js
-function startup() {
-  const el = document.getElementById("canvas");
-  el.addEventListener("touchstart", handleStart);
-  el.addEventListener("touchend", handleEnd);
-  el.addEventListener("touchcancel", handleCancel);
-  el.addEventListener("touchmove", handleMove);
-  log("Initialized.");
-}
-
-document.addEventListener("DOMContentLoaded", startup);
+const el = document.getElementById("canvas");
+el.addEventListener("touchstart", handleStart);
+el.addEventListener("touchend", handleEnd);
+el.addEventListener("touchcancel", handleCancel);
+el.addEventListener("touchmove", handleMove);
 ```
 
 #### Tracking new touches
@@ -235,7 +229,7 @@ function colorForTouch(touch) {
 ```
 
 The result from this function is a string that can be used when calling {{HTMLElement("canvas")}} functions to set drawing colors.
-For example, for a {{domxref("Touch.identifier")}} value of 10, the resulting string is "#a31".
+For example, for a {{domxref("Touch.identifier")}} value of 10, the resulting string is "#aa3311".
 
 #### Copying a touch object
 

@@ -16,7 +16,7 @@ The game itself is actually finished, so let's work on polishing it up. We have 
 Listening for mouse movement is even easier than listening for key presses: all we need is the listener for the {{domxref("Element/mousemove_event", "mousemove")}} event. Add the following line in the same place as the other event listeners, just below the `keyup event`:
 
 ```js
-document.addEventListener("mousemove", mouseMoveHandler, false);
+document.addEventListener("mousemove", mouseMoveHandler);
 ```
 
 ## Anchoring the paddle movement to the mouse movement
@@ -47,7 +47,7 @@ This is the latest state of the code to compare against:
 
 ```css hidden
 canvas {
-  background: #eee;
+  background: #eeeeee;
 }
 button {
   display: block;
@@ -91,9 +91,9 @@ for (let c = 0; c < brickColumnCount; c++) {
   }
 }
 
-document.addEventListener("keydown", keyDownHandler, false);
-document.addEventListener("keyup", keyUpHandler, false);
-document.addEventListener("mousemove", mouseMoveHandler, false);
+document.addEventListener("keydown", keyDownHandler);
+document.addEventListener("keyup", keyUpHandler);
+document.addEventListener("mousemove", mouseMoveHandler);
 
 function keyDownHandler(e) {
   if (e.key === "Right" || e.key === "ArrowRight") {

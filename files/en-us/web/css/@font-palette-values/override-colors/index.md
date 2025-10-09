@@ -6,7 +6,7 @@ browser-compat: css.at-rules.font-palette-values.override-colors
 sidebar: cssref
 ---
 
-The **`override-colors`** CSS [descriptor](/en-US/docs/Glossary/CSS_Descriptor) is used to override colors in the chosen [base-palette](/en-US/docs/Web/CSS/@font-palette-values/base-palette) for a color font.
+The **`override-colors`** [CSS](/en-US/docs/Web/CSS) [descriptor](/en-US/docs/Glossary/CSS_Descriptor) is used to override colors in the chosen [base-palette](/en-US/docs/Web/CSS/@font-palette-values/base-palette) for a color font.
 
 ## Syntax
 
@@ -18,7 +18,7 @@ override-colors: <index of color> <color>;
 override-colors: 0 red;
 
 /* using hex-color */
-override-colors: 0 #f00;
+override-colors: 0 #ff0000;
 
 /* using rgb */
 override-colors: 0 rgb(255 0 0);

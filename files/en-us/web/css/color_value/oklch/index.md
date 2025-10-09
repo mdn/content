@@ -23,7 +23,7 @@ oklch(59.69% 0.156 49.77 / .5)
 oklch(from green l c h / 0.5)
 oklch(from #123456 calc(l + 0.1) c h)
 oklch(from hsl(180 100% 50%) calc(l - 0.1) c h)
-oklch(from var(--aColor) l c h / calc(alpha - 0.1))
+oklch(from var(--color) l c h / calc(alpha - 0.1))
 ```
 
 ### Values
@@ -88,7 +88,7 @@ The parameters are as follows:
 
 #### Defining relative color output channel components
 
-When using relative color syntax inside an `oklch()` function, the browser converts the origin color into an equivalent Oklch color (if it is not already specified as such). The color is defined as three distinct color channel values — `l` (lightness), `c` (chroma), and `h` (hue) — plus an alpha channel value (`alpha`). These channel values are made available inside the function to be used when defining the output color channel values:
+When using relative color syntax inside an `oklch()` function, the browser converts the origin color into an equivalent OkLCh color (if it is not already specified as such). The color is defined as three distinct color channel values — `l` (lightness), `c` (chroma), and `h` (hue) — plus an alpha channel value (`alpha`). These channel values are made available inside the function to be used when defining the output color channel values:
 
 - The `l` channel value is resolved to a `<number>` between `0` and `1`, inclusive.
 - The `c` channel value is resolved to a `<number>` between `0` and `0.4`, inclusive.
@@ -315,7 +315,7 @@ div {
 
 If we had used `0` instead of `0.01` and `2%`, with the same lightness values, the colors would have all been the same shade of grey. In this example, they are almost grey.
 
-### Hues in oklch
+### Hues in OkLCh
 
 The following example shows swatches with different `H` (hue) values of the `oklch()` functional notation.
 
@@ -553,6 +553,6 @@ The output is as follows:
 - [CSS colors](/en-US/docs/Web/CSS/CSS_colors) module
 - {{CSSXref("&lt;hue&gt;")}} data type
 - {{cssxref("color_value/lch","lch()")}} and {{cssxref("color_value/oklab","oklab()")}} color functions
-- [Interactive post on OKLCH color space](https://abhisaha.com/blog/interactive-post-oklch-color-space) (2024)
+- [Interactive post on OkLCh color space](https://abhisaha.com/blog/interactive-post-oklch-color-space) (2024)
 - [OKLCH in CSS: why we moved from RGB and HSL](https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl) (2024)
 - [A perceptual color space for image processing](https://bottosson.github.io/posts/oklab/) (2020)

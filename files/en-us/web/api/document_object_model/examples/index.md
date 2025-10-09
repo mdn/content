@@ -48,7 +48,8 @@ const arrImages = [
 const objOutput = document.getElementById("output");
 let strHtml = "<ul>";
 
-for (const img of arrImages) {
+for (let i = 0; i < arrImages.length; i++) {
+  const img = arrImages[i];
   strHtml += `<li>image${i + 1}: height=${img.height}, width=${img.width}, style.height=${img.style.height}, style.width=${img.style.width}</li>`;
 }
 
@@ -193,7 +194,7 @@ function stopEvent(event) {
 }
 
 const elem = document.getElementById("tbl1");
-elem.addEventListener("click", stopEvent, false);
+elem.addEventListener("click", stopEvent);
 
 document.getElementById("t-daddy").addEventListener("click", () => {
   console.log("t-daddy clicked");
@@ -282,7 +283,7 @@ thead {
   font-weight: bold;
 }
 td {
-  padding: 2px 10px 2px 10px;
+  padding: 2px 10px;
 }
 
 .odd {
@@ -327,9 +328,7 @@ function showEventProperties(e) {
   document.body.appendChild(table);
 }
 
-window.onload = (event) => {
-  showEventProperties(event);
-};
+showEventProperties(event);
 ```
 
 {{EmbedLiveSample("example_7_displaying_event_object_properties", "", "300")}}

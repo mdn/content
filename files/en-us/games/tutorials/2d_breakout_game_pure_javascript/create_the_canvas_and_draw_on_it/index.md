@@ -27,7 +27,7 @@ The HTML document structure is quite minimal, as the game will be rendered entir
         margin: 0;
       }
       canvas {
-        background: #eee;
+        background: #eeeeee;
         display: block;
         margin: 0 auto;
       }
@@ -109,7 +109,7 @@ Here's the full source code of the first lesson, running live:
 
 ```css
 canvas {
-  background: #eee;
+  background: #eeeeee;
 }
 ```
 
@@ -143,6 +143,6 @@ ctx.closePath();
 
 ## Next steps
 
-Now we've set up the basic HTML and learned a bit about canvas, lets continue to the second chapter and work out how to [Move the ball in our game](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball).
+Now we've set up the basic HTML and learned a bit about canvas, let's continue to the second chapter and work out how to [Move the ball in our game](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball).
 
 {{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball")}}

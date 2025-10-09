@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.CanvasRenderingContext2D
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 The **`CanvasRenderingContext2D`** interface, part of the [Canvas API](/en-US/docs/Web/API/Canvas_API), provides the 2D rendering context for the drawing surface of a {{HTMLElement("canvas")}} element.
 It is used for drawing shapes, text, images, and other objects.
@@ -138,9 +138,9 @@ The following properties control how text is laid out.
 Fill styling is used for colors and styles inside shapes and stroke styling is used for the lines around shapes.
 
 - {{domxref("CanvasRenderingContext2D.fillStyle")}}
-  - : Color or style to use inside shapes. Default `#000` (black).
+  - : Color or style to use inside shapes. Default is `black`.
 - {{domxref("CanvasRenderingContext2D.strokeStyle")}}
-  - : Color or style to use for the lines around shapes. Default `#000` (black).
+  - : Color or style to use for the lines around shapes. Default is `black`.
 
 ### Gradients and patterns
 

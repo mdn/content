@@ -1,10 +1,12 @@
 ---
 title: "Test your skills: Images and form elements"
-short-title: Images and forms
+short-title: "Test: Images and forms"
 slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Images
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
+
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Images_media_forms", "Learn_web_development/Core/Styling_basics/Tables", "Learn_web_development/Core/Styling_basics")}}
 
 The aim of this skill test is to assess whether you understand how special elements like [images, media and form elements are treated in CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Images_media_forms).
 
@@ -171,7 +173,7 @@ To complete the task:
 
 body {
   background-color: white;
-  color: #333;
+  color: #333333;
   font:
     1em / 1.4 Helvetica Neue,
     Helvetica,
@@ -234,7 +236,7 @@ select,
 button {
   display: block;
   padding: 5px 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   border-radius: 3px;
 }
 
@@ -246,13 +248,15 @@ button {
   margin: 0 auto;
   padding: 5px 20px;
   line-height: 1.5;
-  background: #eee;
+  background: #eeeeee;
 }
 
 button:hover,
 button:focus {
-  background: #ddd;
+  background: #dddddd;
 }
 ```
 
 </details>
+
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Images_media_forms", "Learn_web_development/Core/Styling_basics/Tables", "Learn_web_development/Core/Styling_basics")}}

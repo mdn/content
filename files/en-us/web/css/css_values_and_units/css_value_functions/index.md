@@ -114,6 +114,8 @@ Each of the pages below contains detailed information about a math function's sy
   - : Calculates a rounded number based on a rounding strategy.
 - {{CSSxRef("mod", "mod()")}}
   - : Calculates a modulus (with the same sign as the divisor) when dividing one number by another.
+- {{CSSxRef("progress", "progress()")}}
+  - : Calculates the position of a value between two other values — a start value and an end value. The result is expressed as a number between 0 and 1 representing the progress between the start and end values.
 - {{CSSxRef("rem", "rem()")}}
   - : Calculates a remainder (with the same sign as the dividend) when dividing one number by another.
 
@@ -194,9 +196,9 @@ The {{CSSxRef("color_value","&lt;color&gt;")}} CSS [data type](/en-US/docs/Web/C
 - {{CSSxRef("color_value/oklch", "oklch()")}}
   - : Defines a given color according to its lightness, chroma, hue and alpha (transparency) components.
 - {{CSSxRef("color_value/lab", "lab()")}}
-  - : Defines a given color according to its lightness, a-axis distance and b-axis distance in the lab colorspace.
+  - : Defines a given color according to its lightness, a-axis distance and b-axis distance in the Lab colorspace.
 - {{CSSxRef("color_value/oklab", "oklab()")}}
-  - : Defines a given color according to its lightness, a-axis distance, b-axis distance in the lab colorspace and alpha (transparency).
+  - : Defines a given color according to its lightness, a-axis distance, b-axis distance in the Lab colorspace and alpha (transparency).
 - {{CSSxRef("color_value/color", "color()")}}
   - : Specifies a particular, specified colorspace rather than the implicit sRGB colorspace.
 - {{CSSxRef("color_value/color-mix", "color-mix()")}}
@@ -207,6 +209,8 @@ The {{CSSxRef("color_value","&lt;color&gt;")}} CSS [data type](/en-US/docs/Web/C
   - : Defines CMYK colors in a device-dependent way.
 - {{CSSXref("color_value/light-dark", "light-dark()")}}
   - : Returns one of two provided colors based on the current color scheme.
+- {{cssxref("dynamic-range-limit-mix()")}}
+  - : Creates a custom maximum luminance limit that is a mix of different {{cssxref("dynamic-range-limit")}} keywords in specified percentages.
 
 ## Image functions
 
@@ -253,6 +257,8 @@ CSS counter functions are generally used with the {{CSSxRef("content")}} propert
 
 ## Shape functions
 
+### Basic shapes
+
 The {{CSSxRef("&lt;basic-shape&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents a graphical shape. It is used in the {{CSSxRef("clip-path")}}, {{CSSxRef("offset-path")}}, and {{CSSxRef("shape-outside")}} properties.
 
 - {{CSSxRef("basic-shape/circle","circle()")}}
@@ -271,8 +277,13 @@ The {{CSSxRef("&lt;basic-shape&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_V
   - : Accepts an SVG path string to enable a shape to be drawn.
 - {{CSSxRef("basic-shape/shape", "shape()")}}
   - : Accepts a comma-separated list of commands defining the shape to be drawn.
+
+### Other shape functions
+
 - {{CSSxRef("ray", "ray()")}}
-  - : Valid with `offset-path` only, it defines the line segment an animated element can follow.
+  - : Valid with {{cssxref("offset-path")}}; defines the line segment an animated element can follow.
+- {{CSSxRef("superellipse()")}}
+  - : Defines the curvature of an ellipse; can be used to specify a {{cssxref("corner-shape-value")}}, which is used with {{cssxref("corner-shape")}} and its [constituent](/en-US/docs/Web/CSS/corner-shape#constituent_properties) and [related](/en-US/docs/Web/CSS/corner-shape#properties_that_follow_the_corner_shape) properties.
 
 ## Reference functions
 

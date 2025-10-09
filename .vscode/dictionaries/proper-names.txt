@@ -26,6 +26,7 @@ Ansari
 Ansyari
 Apapou
 Aptana
+Araneae
 Arkanoid
 Artur
 Arun
@@ -44,6 +45,7 @@ Aziz
 Balhetan
 bartaz
 Bartek
+Belgers
 belgin
 Benbadis
 Bento4
@@ -58,6 +60,7 @@ Blackman
 Blackmoon
 Blankers
 Bloggs
+Bobtown
 Bodmin
 Boonie
 bottosson
@@ -107,6 +110,7 @@ Codepens
 coderprateek
 codingintrigue
 Codrops
+Coleoptera
 Colomb
 Conde
 Corber
@@ -134,9 +138,11 @@ Delaville
 Denicola
 DeSandro
 Desaulniers
+Descouens
 Desproges
 Devlin
 Dexie
+Didier
 Diffie
 Digga
 Digianswer
@@ -205,13 +211,13 @@ Frida
 Galinski
 Gandi
 Gayatri
+Gaye
 Gebrselassie
 geckodriver
 Gedit
 Gerd
 Giancarlo
 Giorgio
-Gitbash
 Golightly
 Googlebot
 Gordo
@@ -230,6 +236,7 @@ hamishwillee
 Haml
 Haverbeke
 Headsight
+Hemiptera
 Heydings
 Heydon
 Hickson
@@ -335,6 +342,7 @@ Lighttpd
 Lindenberg
 Lindesay
 Liskov
+Lorc
 Loycom
 Luxon
 Léonie
@@ -364,6 +372,7 @@ McLellan
 McNally
 McVerry
 Megalosaurus
+Menard
 Mercure
 Merkle
 mfuji
@@ -399,6 +408,7 @@ Musicr
 Mustafa
 myshov
 Müller
+Nabors
 Naeher
 Nakamura
 Nakano
@@ -465,6 +475,7 @@ Quora
 rachelandrew
 Radev
 Radimir
+Ramesh
 Rapp
 Rauschmayer
 Realtek
@@ -498,6 +509,7 @@ Scarlett
 Schiff
 Schirra
 Schmarsow
+Schoenmakers
 Schola
 Schwarz
 Sciurus
@@ -591,6 +603,7 @@ Voikko
 Volkman
 Vorbis
 vulgaris
+Waarneming
 wabt
 Wakamai
 Waldron
@@ -614,6 +627,7 @@ wisedog
 Wolenetz
 Wrox
 XAMPP
+Xandar
 Xavi
 Xiluodu
 Xiowan

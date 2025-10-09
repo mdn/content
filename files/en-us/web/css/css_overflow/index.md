@@ -112,43 +112,43 @@ pre {
 }
 
 .hidden {
-  overflow: hidden hidden;
+  overflow: hidden;
 }
 .hidden::before {
   content: "hidden: ";
 }
 
 .clip {
-  overflow: clip clip;
+  overflow: clip;
 }
 .clip::before {
   content: "clip: ";
 }
 
 .scroll {
-  overflow: scroll scroll;
+  overflow: scroll;
 }
 .scroll::before {
   content: "scroll: ";
 }
 
 .auto {
-  overflow: auto auto;
+  overflow: auto;
 }
 .auto::before {
   content: "auto: ";
 }
 
 .overlay {
-  overflow: clip clip;
-  overflow: overlay overlay;
+  overflow: clip;
+  overflow: overlay;
 }
 .overlay::before {
   content: "overlay (or clip if not supported): ";
 }
 
 .visible {
-  overflow: visible visible;
+  overflow: visible;
 }
 .visible::before {
   content: "visible: ";
@@ -227,6 +227,7 @@ A link is included in the content box above to demonstrate the effects of keyboa
 - {{CSSxRef("overflow-y")}}
 - {{CSSxRef("scroll-behavior")}}
 - {{cssxref("scroll-marker-group")}}
+- {{cssxref("scroll-target-group")}}
 - {{CSSxRef("scrollbar-gutter")}}
 - {{CSSxRef("text-overflow")}}
 

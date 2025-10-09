@@ -294,7 +294,7 @@ Let's create some partial drop-shadow effects. The {{cssxref("box-shadow")}} pro
 ```css
 .fancy {
   position: relative;
-  background-color: #ffc;
+  background-color: #ffffcc;
   padding: 2rem;
   text-align: center;
   max-width: 200px;

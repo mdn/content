@@ -175,6 +175,7 @@ discardable
 distros
 DLRR
 DLSR
+DMARC
 docshell
 docshells
 doctypes
@@ -190,6 +191,7 @@ EBNF
 ECSDA
 editability
 effectful
+elytra
 Emscripting
 encrypter
 engageable
@@ -240,6 +242,7 @@ foveation
 fragmentainer
 fragmentainers
 framebuffers
+framebusting
 frontmost
 Fullband
 fullscreened
@@ -273,11 +276,13 @@ greenify
 greyscale
 gzipping
 halfwidth
+halteres
 harissa
 HDCP
 headworn
 highlightable
 HILN
+hindwings
 hissy
 hitbox
 hitmap
@@ -299,6 +304,7 @@ ICANN
 ICNS
 iconset
 idents
+IDOR
 IERS
 IMSC
 Indo-Pacific
@@ -338,6 +344,7 @@ JXON
 KACST
 Kbit
 Kbps
+kettlebell
 keysyms
 keyterm
 keyterms
@@ -465,12 +472,14 @@ overlines
 overscript
 overscripts
 overscrolling
+overtype
 packetization
 packetizer
 packetizing
 paintable
 pantherina
 papermakers
+parasitoids
 parentless
 passwordless
 pathfinding
@@ -545,7 +554,6 @@ QPACK
 QTFF
 qtrs
 quantizer
-quarternion
 querysets
 quicklinks
 quickmenu
@@ -583,6 +591,7 @@ resends
 resizability
 respecified
 restartless
+Resveratrol
 retarget
 retargeted
 retargetings
@@ -670,6 +679,7 @@ spinlocks
 spoofable
 spritesheet
 spritesheets
+squircle
 SSML
 ssthresh
 STIX
@@ -683,6 +693,7 @@ stringifiers
 stringifying
 stringly
 strobing
+stylability
 styracosaurus
 subarticle
 subarticles
@@ -776,7 +787,6 @@ tileset
 timebox
 timecode
 timecodes
-timerange
 timeslice
 timeslices
 timestep
@@ -785,6 +795,7 @@ TIPC
 toggletips
 toolkits
 toolsets
+TOTP
 touchpads
 touchpoint
 touchpoints

@@ -1,10 +1,12 @@
 ---
-title: "Test your skills: Grid"
-short-title: Grid
+title: "Test your skills: CSS grids"
+short-title: "Test: CSS grid"
 slug: Learn_web_development/Core/CSS_layout/Test_your_skills/Grid
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
+
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension", "Learn_web_development/Core/CSS_layout")}}
 
 The aim of this skill test is to help you assess whether you understand how a [grid and grid items](/en-US/docs/Learn_web_development/Core/CSS_layout/Grids) behave. You will be working through several small tasks that use different elements of the material you have just covered.
 
@@ -305,7 +307,7 @@ body {
 }
 
 .tags > * {
-  background-color: #999;
+  background-color: #999999;
   color: white;
   padding: 0.2em 0.8em;
   border-radius: 0.2em;
@@ -347,3 +349,5 @@ You may try to use flexbox on the container and restrict the cards with percenta
 ```
 
 </details>
+
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension", "Learn_web_development/Core/CSS_layout")}}

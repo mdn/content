@@ -105,7 +105,7 @@ Let's again check the finished code for this part against what you've got, and h
 
 ```css hidden
 canvas {
-  background: #eee;
+  background: #eeeeee;
 }
 button {
   display: block;

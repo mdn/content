@@ -2,7 +2,9 @@
 title: "@scope"
 slug: Web/CSS/@scope
 page-type: css-at-rule
-browser-compat: css.at-rules.scope
+browser-compat:
+  - css.at-rules.scope
+  - css.selectors.nesting.at-scope
 sidebar: cssref
 ---
 
@@ -115,9 +117,9 @@ Or you could include your `@scope` block inline inside a `<style>` element, whic
 > [!NOTE]
 > It is important to understand that, while `@scope` allows you to isolate the application of selectors to specific DOM subtrees, it does not completely isolate the applied styles to within those subtrees. This is most noticeable with inheritance — properties that are inherited by children (for example {{cssxref("color")}} or {{cssxref("font-family")}}) will still be inherited, beyond any set scope limit.
 
-### The `:scope` pseudo-class
+### `:scope` pseudo-class within `@scope` blocks
 
-In the context of a `@scope` block, the {{cssxref(":scope")}} pseudo-class represents the scope root — it provides an easy way to apply styles to the scope root itself, from inside the scope:
+In the context of an `@scope` block, the {{cssxref(":scope")}} pseudo-class provides a convenient way to directly apply styles to the scope root, like so:
 
 ```css
 @scope (.feature) {
@@ -129,27 +131,9 @@ In the context of a `@scope` block, the {{cssxref(":scope")}} pseudo-class repre
 }
 ```
 
-In fact, `:scope` is implicitly prepended to all scoped style rules. If you want, you can explicitly prepend `:scope` or prepend the [nesting](/en-US/docs/Web/CSS/CSS_nesting) selector (`&`) to get the same effect if you find these representations easier to understand.
+Here's some considerations for `:scope` within `@scope` blocks:
 
-The three rules in the following block are all equivalent in what they select:
-
-```css
-@scope (.feature) {
-  img {
-    /* … */
-  }
-
-  :scope img {
-    /* … */
-  }
-
-  & img {
-    /* … */
-  }
-}
-```
-
-### Notes on scoped selector usage
+- `:scope` adds class-level specificity (see [Specificity in @scope](#specificity_in_scope) for details).
 
 - A scope limit can use `:scope` to specify a specific relationship requirement between the scope limit and root. For example:
 
@@ -184,7 +168,15 @@ The three rules in the following block are all equivalent in what they select:
 
 ### Specificity in `@scope`
 
-Including a ruleset inside a `@scope` block does not affect the specificity of its selector, regardless of the selectors used inside the scope root and limit. For example:
+Inside an `@scope` rule, both bare selectors and the [`&`](/en-US/docs/Web/CSS/Nesting_selector) nesting selector behave as if `:where(:scope)` were prepended to the selector.
+Because {{cssxref(":where", ":where()")}} has zero [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity), bare selectors and `&` add zero weight. The specificity weight is determined by the rest of the selector.
+For example, the specificity of the `& img` selector is equivalent to the specificity of `:where(:scope) img` (0-0-1).
+
+> [!WARNING]
+> The specificity of `&` inside `@scope` blocks is handled differently according to the browser engine and release version.
+> Check [Browser compatibility](#browser_compatibility) for details.
+
+In both cases in the following code block, the only specificity comes from `img`:
 
 ```css
 @scope (.article-body) {
@@ -192,45 +184,21 @@ Including a ruleset inside a `@scope` block does not affect the specificity of i
   img {
     /* … */
   }
-}
-```
 
-However, if you decide to explicitly prepend the `:scope` pseudo-class to your scoped selectors, you'll need to factor it in when calculating their specificity. `:scope`, like all regular pseudo-classes, has a specificity of 0-1-0. For example:
-
-```css
-@scope (.article-body) {
-  /* :scope img has a specificity of 0-1-0 + 0-0-1 = 0-1-1 */
-  :scope img {
-    /* … */
-  }
-}
-```
-
-When using the `&` selector inside a `@scope` block, `&` represents the scope root selector; it is internally calculated as that selector wrapped inside an {{cssxref(":is", ":is()")}} pseudo-class function. So for example, in:
-
-```css
-@scope (figure, #primary) {
+  /* & img also has a specificity of 0-0-1 */
   & img {
     /* … */
   }
 }
 ```
 
-`& img` is equivalent to `:is(figure, #primary) img`. Since `:is()` takes the specificity of its most specific argument (`#primary`, in this case), the specificity of the scoped `& img` selector is therefore 1-0-0 + 0-0-1 = 1-0-1.
-
-### The difference between `:scope` and `&` inside `@scope`
-
-`:scope` represents the matched scope root, whereas `&` represents the selector used to match the scope root. Because of this, it is possible to chain `&` multiple times. However, you can only use `:scope` once — you can't match a scope root inside a scope root.
+By contrast, using `:scope` explicitly selects the scope root and adds class-level specificity (0-1-0), since `:scope` is a [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes).
+In the following code block, `:scope img` has a specificity of 0-1-1:
 
 ```css
-@scope (.feature) {
-  /* Selects a .feature inside the matched root .feature */
-  & & {
-    /* … */
-  }
-
-  /* Doesn't work */
-  :scope :scope {
+@scope (.article-body) {
+  /* :scope img has a specificity of 0-1-0 + 0-0-1 = 0-1-1 */
+  :scope img {
     /* … */
   }
 }
@@ -258,11 +226,11 @@ If you wrote the theme CSS like so, you'd run into trouble:
 
 ```css
 .light-theme {
-  background: #ccc;
+  background: #cccccc;
 }
 
 .dark-theme {
-  background: #333;
+  background: #333333;
 }
 
 .light-theme p {
@@ -281,7 +249,7 @@ To fix this, you can use `@scope` as follows:
 ```css
 @scope (.light-theme) {
   :scope {
-    background: #ccc;
+    background: #cccccc;
   }
   p {
     color: black;
@@ -290,7 +258,7 @@ To fix this, you can use `@scope` as follows:
 
 @scope (.dark-theme) {
   :scope {
-    background: #333;
+    background: #333333;
   }
   p {
     color: white;
@@ -370,7 +338,7 @@ div {
 
 The above code renders like this:
 
-{{ EmbedLiveSample("Basic style inside scope roots", "100%", "150") }}
+{{EmbedLiveSample("Basic style inside scope roots", "100%", "150")}}
 
 ### Scope roots and scope limits
 
@@ -481,7 +449,7 @@ In our CSS, we have two `@scope` blocks:
 
 In the rendered code, note how all of the `<img>` elements are styled with the thick border and golden background, except for the one inside the `<figure>` element (labeled "My infographic").
 
-{{ EmbedLiveSample("Scope roots and scope limits", "100%", "400") }}
+{{EmbedLiveSample("Scope roots and scope limits", "100%", "400")}}
 
 ## Specifications
 
@@ -495,4 +463,6 @@ In the rendered code, note how all of the `<img>` elements are styled with the t
 
 - {{CSSxRef(":scope")}}
 - {{DOMxRef("CSSScopeRule")}}
+- [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
+- [Defining the `&` selector in a `@scope` rule](https://css.oddbird.net/scope/parent-selector/) on css.oddbird.net (2025)
 - [Limit the reach of your selectors with the CSS `@scope` at-rule](https://developer.chrome.com/docs/css-ui/at-scope) on developer.chrome.com (2023)

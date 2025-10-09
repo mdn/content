@@ -138,19 +138,6 @@ Here are some popular editors:
       <td>Yes</td>
     </tr>
     <tr>
-      <td><a href="https://espressoapp.com/">Espresso</a></td>
-      <td>Closed source</td>
-      <td>$99</td>
-      <td>Mac</td>
-      <td>
-        <a href="mailto:hello@espressoapp.com">Email</a>
-      </td>
-      <td>
-        <a href="https://help.espressoapp.com/">Online Manual</a>
-      </td>
-      <td>Yes</td>
-    </tr>
-    <tr>
       <td><a href="https://wiki.gnome.org/Apps/Gedit">Gedit</a></td>
       <td>GPL</td>
       <td>Free</td>
@@ -333,9 +320,9 @@ Here are some popular editors:
   </tbody>
 </table>
 
-## Active Learning
+## Installing and using a text editor
 
-In this active learning section, we would like you to try using and/or installing a text editor of your choice. Your computer may already be installed with one of the editors suggested above (e.g., Gedit if you use GNOME desktop, Kate if you use KDE etc.), if not then you should try installing one or more text editors of your choosing.
+We would like you to try using and/or installing a text editor of your choice. Your computer may already be installed with one of the editors suggested above (e.g., Gedit if you use GNOME desktop, Kate if you use KDE etc.), if not then you should try installing one or more text editors of your choosing.
 
 Try digging through the settings of your editor and read the manual or documentation to see what its capabilities are. In particular (if possible in your editor), try to:
 

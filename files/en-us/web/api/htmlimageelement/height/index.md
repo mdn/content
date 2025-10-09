@@ -58,11 +58,11 @@ image given the width at which it's currently drawn.
 const clockImage = document.querySelector("img");
 let output = document.querySelector(".size");
 
-const updateHeight = (event) => {
+const updateHeight = () => {
   output.innerText = clockImage.height;
 };
 
-window.addEventListener("load", updateHeight);
+updateHeight();
 window.addEventListener("resize", updateHeight);
 ```
 

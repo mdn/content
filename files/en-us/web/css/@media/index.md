@@ -122,6 +122,8 @@ Media feature expressions test for their presence, value, or range of values, an
   - : Does the device use a grid or bitmap screen?
 - {{cssxref("@media/height", "height")}}
   - : Height of the viewport.
+- {{cssxref("@media/horizontal-viewport-segments", "horizontal-viewport-segments")}}
+  - : Detects whether the device has a specified number of viewport segments laid out horizontally.
 - {{cssxref("@media/hover", "hover")}}
   - : Does the primary input mechanism allow the user to hover over elements?
 - {{cssxref("@media/inverted-colors", "inverted-colors")}}
@@ -161,6 +163,8 @@ Media feature expressions test for their presence, value, or range of values, an
   - : Detects the shape of the device to distinguish rectangular and round displays.
 - {{cssxref("@media/update", "update")}}
   - : How frequently the output device can modify the appearance of content.
+- {{cssxref("@media/vertical-viewport-segments", "vertical-viewport-segments")}}
+  - : Detects whether the device has a specified number of viewport segments laid out vertically. Added in Media Queries Level 5.
 - {{cssxref("@media/video-dynamic-range", "video-dynamic-range")}}
   - : Combination of brightness, contrast ratio, and color depth that are supported by the video plane of user agent and the output device. Added in Media Queries Level 5.
 - {{cssxref("@media/width", "width")}}

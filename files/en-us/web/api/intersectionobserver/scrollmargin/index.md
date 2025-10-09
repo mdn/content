@@ -15,7 +15,7 @@ This lets you, for example, adjust the bounds of the scroll container so that th
 
 Note that if the root element is also a scrollable container, then the `scrollMargin` and {{domxref("IntersectionObserver/rootMargin","rootMargin")}} are combined to determine the effective bounding rectangle used for calculating intersections with the target.
 
-For more information see [The intersection root and root margin](/en-US/docs/Web/API/Intersection_Observer_API#the_intersection_root_and_scroll_margin) in the API overview.
+For more information see [The intersection root and scroll margin](/en-US/docs/Web/API/Intersection_Observer_API#the_intersection_root_and_scroll_margin) in the API overview.
 
 ## Value
 
@@ -132,7 +132,7 @@ p {
   min-width: 195px;
   min-height: 99px;
   margin-right: 10px;
-  background-color: #eee; /* Placeholder background */
+  background-color: #eeeeee; /* Placeholder background */
 }
 
 .controls {
