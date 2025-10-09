@@ -393,7 +393,7 @@ We position the `content` `<section>` absolutely so it sits over the top of the 
 
 ## See also
 
-- [CSS values and units module](/en-US/docs/Web/CSS/CSS_values_and_units)
+- [CSS values and units module](/en-US/docs/Web/CSS/CSS_Values_and_Units)
 - [Container style queries](/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#container_style_queries)
 - [Media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - [Feature queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)
