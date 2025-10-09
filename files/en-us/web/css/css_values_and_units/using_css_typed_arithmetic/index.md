@@ -18,7 +18,7 @@ When performing calculations on values in CSS, there are some rules around compa
 
 ### Addition and subtraction
 
-When adding or subtracting values, their units must be the same, or different units within the same overall data type. The following examples all produce valid results:
+When adding or subtracting values, all the values must be within the same overall data type. The following examples all produce valid results:
 
 ```css example-good
 /* <length-percentage> units */
