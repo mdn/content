@@ -27,7 +27,7 @@ The different parts of the `@function` syntax are as follows:
     - `--param-name`
       - : A [CSS custom property](/en-US/docs/Web/CSS/--*) name to identify the parameter, a [`<dashed-ident>`](/en-US/docs/Web/CSS/dashed-ident) that starts with `--` and is followed by a valid, user-defined identifier. It is case-sensitive. Function parameters can be considered custom properties that are locally scoped to the function body.
     - `<css-type>` {{optional_inline}}
-      - : A CSS data type or a {{cssxref("type()")}} function that defines the accepted data type(s) for the parameter. If this is not specified, any data type will be valid for the parameter (the same as specifying `type(*)`), although bear in mind that it may still be incompatible with the logic in the `<declaration-rule-list>` and produce an invalid result.
+      - : A CSS data type or a {{cssxref("type()")}} function that defines the accepted data type(s) for the parameter. If this is not specified, any data type will be valid for the parameter (the same as specifying `type(*)`).
     - `<default-value>` {{optional_inline}}
       - : A CSS value specifying the default value to assign to the parameter if it is not specified when the function is called. This value must be valid according to the `<css-type>` if specified. The default value is separated from the other parts of the parameter definition with a colon (`:`).
 - `[returns <css-type>]?` {{optional_inline}}
@@ -107,7 +107,7 @@ section {
 }
 ```
 
-then the value will be invalid, and the declaration will be ignored.
+then the value will become invalid at computed-value time and the `background-color` will end up being set to `transparent`.
 
 You can specify multiple accepted data types using a {{cssxref("type()")}} function and some OR logic, for example:
 

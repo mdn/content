@@ -105,7 +105,7 @@ Let's modify our previous function to provide data types:
 
 The data type of each parameter is specified after the parameter name, and the data type of the `result` is specified just before the opening curly brace, preceded by the `returns` keyword. The {{cssxref("type()")}} function is used to specify a data type.
 
-Note that in cases where you are only specifying a single data type, you can omit the `type()` syntax and just write the type, as a kind of shorthand:
+Note that in cases where you are only specifying a single data type, you can omit the `type()` syntax and just write the type as a shorthand:
 
 ```css
 @function --transparent(--color <color>, --alpha <number>) returns <color> {
@@ -122,7 +122,7 @@ section {
 }
 ```
 
-then the value will be invalid, and the declaration will be ignored.
+then the value will become invalid at computed-value time and the `background-color` will end up being set to `transparent`.
 
 ### Specifying multiple permitted types
 
