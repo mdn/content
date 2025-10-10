@@ -86,7 +86,7 @@ Take the following example:
 calc(100vw / 1px)
 ```
 
-`100vw` is equal to `100%` of the width of the viewport. If the viewport is currently `1000px` wide, the above calculation will return the unitless value `1000`. However, if the viewport is `500px` wide, the above calculation will return the unitless value `500`.
+The `100vw` is equal to `100%` of the width of the viewport. If the viewport is currently `1000px` wide, the calculation will return the unitless value `1000`. However, if the viewport is `500px` wide, the calculation will return the unitless value `500`.
 
 If we replace the `1px` divisor by `1em`, we get very different results:
 
