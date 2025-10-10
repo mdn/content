@@ -524,7 +524,7 @@ p {
   width: 200px;
 }
 span {
-  margin: 20px 40px;
+  margin: 20px 30px;
   padding: 10px 20px;
   width: 80px;
   height: 150px;
