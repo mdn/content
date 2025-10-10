@@ -68,7 +68,7 @@ calc(1000px / 2) /* 500px */
 calc(360deg / 4) /* 90deg */
 ```
 
-However, you can't divide a unitless value by a value with a unit — that doesn't make sense:
+However, you can't divide a unitless value by a value with a unit as that doesn't make sense:
 
 ```css example-bad
 calc(1000 / 2px) /* ?!? */
