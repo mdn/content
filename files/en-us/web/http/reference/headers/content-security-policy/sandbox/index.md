@@ -57,7 +57,7 @@ where `<value>` can optionally be one of the following values:
   - : Allows embedders to have control over whether an iframe can start a [presentation session](/en-US/docs/Web/API/PresentationRequest).
 - `allow-same-origin`
   - : Allows a sandboxed resource to retain its {{Glossary("origin")}}.
-    A sandboxed resource is otherwise treated as being from an opaque origin, which ensures that it will always fail {{Glossary("same-origin policy")}} checks, and hence cannot access [`localstorage` and `document.cookie`](/en-US/docs/Web/Security/Same-origin_policy#cross-origin_data_storage_access) and some JavaScript APIs.
+    A sandboxed resource is otherwise treated as being from an [opaque origin](/en-US/docs/Glossary/Origin#opaque_origin), which ensures that it will always fail {{Glossary("same-origin policy")}} checks, and hence cannot access [`localstorage` and `document.cookie`](/en-US/docs/Web/Security/Same-origin_policy#cross-origin_data_storage_access) and some JavaScript APIs.
     The {{httpheader("Origin")}} of sandboxed resources without the `allow-same-origin` keyword is `null`.
 - `allow-scripts`
   - : Allows the page to run scripts (but not create pop-up windows). If this keyword is not used, this operation is not allowed.
