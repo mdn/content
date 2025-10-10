@@ -291,11 +291,9 @@ The final style rule selects the paragraphs themselves. Most of this styling is 
 
 Now onto the interesting bit — we define a custom property called `--angle` that contains the unitless rotation angle of the paragraph, before setting the {{cssxref("rotate")}} property to the resulting value. We multiply the resulting number by `1deg` to convert it to a degree value. The `--angle` custom property is the product of three values:
 
-- The paragraph's {{cssxref("sibling-index()")}} - `1` (which causes the first paragraph to have a rotation angle of `0`, as we want it to be horizontal)
-- multiplied by
-- `360` divided by the paragraph's {{cssxref("sibling-count()")}} (which causes all the paragraphs to be equally spaced around the circle, meaning the design will still work if paragraphs are added or removed)
-- multiplied by
-- our `--width-percentage` custom property (this causes the rotation of the paragraphs around the circle to vary as the viewport width is changed). Remember that this property has a maximum value of `1`, which will be achieved when the `<body>` element hits its `max-width` of `1600px`.
+1. The paragraph's {{cssxref("sibling-index()")}} - `1`, which causes the first paragraph to have a rotation angle of `0`, as we want it to be horizontal.
+2. `360` divided by the paragraph's {{cssxref("sibling-count()")}}, which causes all the paragraphs to be equally spaced around the circle, meaning the design will still work if the number of paragraphs changes.
+3. our `--width-percentage` custom property, which causes the rotation of the paragraphs around the circle to vary as the viewport width changes. Remember that this property has a maximum value of `1`, which will be achieved when the `<body>` element hits its `max-width` of `1600px`.
 
 ```css
 p {
