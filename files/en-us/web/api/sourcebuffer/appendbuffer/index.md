@@ -32,7 +32,7 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Throws if one of the following cases occurs:
+  - : Thrown in one of the following cases:
     - The `SourceBuffer` object's `updating` attribute is `true`. You must wait for any previous append, update, or remove operations to complete (indicated by the `updateend` event) before calling `appendBuffer()` again.
     - The `SourceBuffer` has been removed from the `sourceBuffers` attribute of the parent media source.
     - The `HTMLMediaElement`'s `error` attribute is not `null`.
