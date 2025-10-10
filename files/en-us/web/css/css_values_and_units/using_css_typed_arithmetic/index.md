@@ -76,7 +76,7 @@ calc(1000 / 2px) /* ?!? */
 
 In addition — **and this is where it gets interesting** — It used to be the case that you couldn't divide one value with a unit by another, even different units of the same overall type. However, the specification updates mentioned earlier mean **this is now possible**.
 
-When two values with units of the same type are fed into a divison operation, the units cancel each other out, and you are left with a unitless value. Behind the scenes, the two value's computed values are divided by one another.
+When a value of any numeric data type is divided by a value of the same type, the units cancel each other out, and you are left with a unitless value. Behind the scenes, the two values are computed before being divided by one another.
 
 As a result, the same calculation can have very different results depending on the context it is used in and the units of the divisor.
 
