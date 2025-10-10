@@ -113,3 +113,4 @@ div.box-5 {
 - {{CSSxRef("asin")}}
 - {{CSSxRef("acos")}}
 - {{CSSxRef("atan")}}
+- [Using CSS typed arithmetic](/en-US/docs/Web/CSS/CSS_Values_and_Units/Using_CSS_typed_arithmetic)

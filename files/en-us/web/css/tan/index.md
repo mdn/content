@@ -107,3 +107,4 @@ body {
 - {{CSSxRef("acos")}}
 - {{CSSxRef("atan")}}
 - {{CSSxRef("atan2")}}
+- [Using CSS typed arithmetic](/en-US/docs/Web/CSS/CSS_Values_and_Units/Using_CSS_typed_arithmetic)
