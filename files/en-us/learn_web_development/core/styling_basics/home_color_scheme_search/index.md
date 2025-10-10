@@ -206,7 +206,7 @@ Specifically:
 3. Give the table header cells and normal cells `0.6em` of padding, and make their content vertically aligned to the top of the cells.
 4. Give the table header cells a bottom border that is `1px` thick, solid, and colored `#999999`.
 5. Give all of the table rows a width of `20%`, except for the fourth row, which should have a width of `40%`.
-6. Inside the table body, there are four rows. The second cell inside each of these rows has an `rgb()` color as its content. Give each one of these cells the same background color as the color it contains.
+6. Inside the table body, there are four rows. The second cell inside each of these rows contains text for an `rgb()` color. Give each one of these cells a background color that corresponds to its text.
 7. Create zebra stripes: Give each odd-numbered row a background color of `#eeeeee`, inside the table body only.
 8. Give the caption padding of `1em`, an italic font style, and letter spacing of `1px`.
 
