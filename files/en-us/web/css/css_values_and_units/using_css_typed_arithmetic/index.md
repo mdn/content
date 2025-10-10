@@ -164,7 +164,7 @@ We then set a fixed {{cssxref("width")}} and some {{cssxref("padding")}} on the 
 Finally, we set multiple backgrounds on the {{htmlelement("body")}} element. We'll go through these in reverse order:
 
 1. The last and therefore bottom-most {{cssxref("background")}} value is a non-repeating background image located near the top-right corner.
-2. The top background is a white semi-transparent overlay created using a {{cssxref("linear-gradient()")}} function with both color stops set to the same color. The color's alpha channel value is calculated as `1` minus the `--width-percentage` custom property we set earlier: As the viewport width gets narrower, `--width-percentage` will get smaller, therefore the white gradient will become more opaque. This has the effect of reducing the opacity of the background image.
+2. The top background is a white semi-transparent overlay created using a {{cssxref("linear-gradient()")}} function with both color stops set to the same color. The color's alpha channel value is calculated as `1` minus the `--width-percentage` custom property we set earlier: As the viewport width gets narrower, `--width-percentage` will get smaller, therefore the white gradient will become more opaque, reducing the opacity of the background image.
 
 ```css
 body {
