@@ -119,7 +119,7 @@ rotate: calc(var(--viewport-width-in-pixels) * 1deg);
 font-size: calc(var(--viewport-width-in-pixels) * 1rem / 200);
 ```
 
-Let's walk through some examples to show how this technique can be useful.
+Let's walk through some examples to show how CSS typed arithmetic can be useful.
 
 ## Basic example: responsive background opacity
 
