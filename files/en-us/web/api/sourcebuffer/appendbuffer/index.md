@@ -31,13 +31,13 @@ None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-- `QuotaExceededError` {{domxref("DOMException")}}
-  - : The buffer is full, and no more data can be appended. This might occur if the `SourceBuffer` has reached a browser-defined limit on the amount of buffered data.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Throws if one of the following cases occurs:
     - The `SourceBuffer` object's `updating` attribute is `true`. You must wait for any previous append, update, or remove operations to complete (indicated by the `updateend` event) before calling `appendBuffer()` again.
     - The `SourceBuffer` has been removed from the `sourceBuffers` attribute of the parent media source.
     - The `HTMLMediaElement`'s `error` attribute is not `null`.
+- {{domxref("QuotaExceededError")}}
+  - : The buffer is full, and no more data can be appended. This might occur if the `SourceBuffer` has reached a browser-defined limit on the amount of buffered data.
 
 Additionally, errors can occur after the `updatestart` event has been fired and the `appendBuffer()` method has returned: for example, because the buffer contained bytes that were incorrectly formatted. In this situation the `error` event will be fired on this `SourceBuffer` instance.
 
@@ -52,21 +52,18 @@ const mediaSource = new MediaSource();
 const video = document.querySelector("video");
 video.src = URL.createObjectURL(mediaSource);
 
-mediaSource.addEventListener("sourceopen", () => {
+mediaSource.addEventListener("sourceopen", async () => {
   const sourceBuffer = mediaSource.addSourceBuffer(
     'video/mp4; codecs="avc1.42E01E, mp4a.40.2"',
   );
 
-  fetch("/my-video-segment.mp4")
-    .then((response) => response.arrayBuffer())
-    .then((buffer) => {
-      sourceBuffer.appendBuffer(buffer);
-      sourceBuffer.addEventListener("updateend", () => {
-        if (mediaSource.readyState === "open") {
-          mediaSource.endOfStream();
-        }
-      });
-    });
+  const buffer = await fetch("/my-video-segment.mp4").then((res) => res.arrayBuffer());
+  sourceBuffer.appendBuffer(buffer);
+  sourceBuffer.addEventListener("updateend", () => {
+    if (mediaSource.readyState === "open") {
+      mediaSource.endOfStream();
+    }
+  });
 });
 ```
 
@@ -86,11 +83,11 @@ sourceBuffer.addEventListener("error", (e) => {
 try {
   sourceBuffer.appendBuffer(data);
 } catch (e) {
-  if (e instanceof InvalidStateError) {
+  if (e.name === "InvalidStateError") {
     console.error(
       "InvalidStateError: The SourceBuffer is in an invalid state.",
     );
-  } else if (e instanceof QuotaExceededError) {
+  } else if (e.name === "QuotaExceededError") {
     console.error("QuotaExceededError: The buffer is full.");
   } else {
     console.error("An unexpected error occurred:", e);
