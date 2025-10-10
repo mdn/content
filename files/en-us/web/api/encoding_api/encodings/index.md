@@ -366,13 +366,12 @@ The following table lists all encoding labels that user agents must support, alo
         <a href="https://en.wikipedia.org/wiki/Extended_Unix_Code#EUC-KR">euc-kr</a>
       </td>
     </tr>
-    <tr>
-      <td><code>"csiso2022kr"</code>, <code>"iso-2022-kr"</code></td>
-      <td>
-        <a href="https://en.wikipedia.org/wiki/ISO/IEC_2022#ISO-2022-KR">iso-2022-kr</a>
-      </td>
-    </tr>
     
+    <tr>
+      <td><code>"utf-16be"</code></td>
+      <td>
+        <a href="https://en.wikipedia.org/wiki/UTF-16#Byte_order_encoding_schemes">utf-16be</a>
+      </td>
     </tr>
     <tr>
       <td><code>"utf-16"</code>, <code>"utf-16le"</code></td>
