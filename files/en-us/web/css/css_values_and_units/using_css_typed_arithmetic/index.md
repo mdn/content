@@ -222,7 +222,7 @@ p {
 
 ## An animated story circle
 
-Our final example — [Animated story circle](https://mdn.github.io/dom-examples/css-typed-arithmetic/animated-story-circle) example ([see source code](https://github.com/mdn/dom-examples/tree/main/css-typed-arithmetic/animated-story-circle)) is a little bit more complicated than the others, and serves to demonstrate the kind of fun effects you can start to create with the new CSS typed arithmetic rules. In this case, we have laid out the different paragraphs of a body of text in a circle, emanating from the center. What's more, the circle of paragraphs closes up into a fan shape when the viewport is made narrower, and opens up again when it is made wider.
+The [animated story circle](https://mdn.github.io/dom-examples/css-typed-arithmetic/animated-story-circle) example ([see source code](https://github.com/mdn/dom-examples/tree/main/css-typed-arithmetic/animated-story-circle)) demonstrates a more complex effect created by leveraging CSS typed arithmetic rules. In this case, the different paragraphs of a body of text are laid out in a circle emanating from a center point. What's more, the circle of paragraphs closes up into a fan shape when the viewport is made narrower, and opens up again when it is made wider.
 
 ### HTML
 
