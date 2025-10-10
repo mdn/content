@@ -57,7 +57,9 @@ mediaSource.addEventListener("sourceopen", async () => {
     'video/mp4; codecs="avc1.42E01E, mp4a.40.2"',
   );
 
-  const buffer = await fetch("/my-video-segment.mp4").then((res) => res.arrayBuffer());
+  const buffer = await fetch("/my-video-segment.mp4").then((res) =>
+    res.arrayBuffer(),
+  );
   sourceBuffer.appendBuffer(buffer);
   sourceBuffer.addEventListener("updateend", () => {
     if (mediaSource.readyState === "open") {
