@@ -124,7 +124,7 @@ The following table lists all encoding labels that user agents must support, alo
         <code>"logical"</code>
       </td>
       <td>
-        <a href="https://en.wikipedia.org/wiki/ISO-8859-8-I">iso-8859-8i</a>
+        <a href="https://en.wikipedia.org/wiki/ISO-8859-8-I">iso-8859-8-i</a>
       </td>
     </tr>
     <tr>
@@ -319,12 +319,7 @@ The following table lists all encoding labels that user agents must support, alo
         <a href="https://en.wikipedia.org/wiki/GB_18030">gb18030</a>
       </td>
     </tr>
-    <tr>
-      <td><code>"hz-gb-2312"</code></td>
-      <td>
-        <a href="https://en.wikipedia.org/wiki/HZ_(character_encoding)">hz-gb-2312</a>
-      </td>
-    </tr>
+    
     <tr>
       <td>
         <code>"big5"</code>, <code>"big5-hkscs"</code>, <code>"cn-big5"</code>,
@@ -352,7 +347,7 @@ The following table lists all encoding labels that user agents must support, alo
     <tr>
       <td>
         <code>"csshiftjis"</code>, <code>"ms_kanji"</code>,
-        <code>"shift-jis"</code>, <code>"shift_jis"</code>, <code>"sjis"</code>,
+        <code>"shift_jis"</code>, <code>"shift_jis"</code>, <code>"sjis"</code>,
         <code>"windows-31j"</code>, <code>"x-sjis"</code>
       </td>
       <td>
@@ -377,11 +372,7 @@ The following table lists all encoding labels that user agents must support, alo
         <a href="https://en.wikipedia.org/wiki/ISO/IEC_2022#ISO-2022-KR">iso-2022-kr</a>
       </td>
     </tr>
-    <tr>
-      <td><code>"utf-16be"</code></td>
-      <td>
-        <a href="https://en.wikipedia.org/wiki/UTF-16#Byte_order_encoding_schemes">utf-16be</a>
-      </td>
+    
     </tr>
     <tr>
       <td><code>"utf-16"</code>, <code>"utf-16le"</code></td>
