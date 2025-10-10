@@ -123,7 +123,7 @@ Let's walk through some examples to show how CSS typed arithmetic can be useful.
 
 ## Basic example: responsive background opacity
 
-Our [Responsive background opacity](https://mdn.github.io/dom-examples/css-typed-arithmetic/responsive-background-opacity) example ([see source code](https://github.com/mdn/dom-examples/tree/main/css-typed-arithmetic/responsive-background-opacity)) shows how to vary the opacity of a background image as the viewport width is changed. Having the background image fade out as the screen gets narrower means the image is less likely to affect the readability of the text content as they start to overlap.
+The [responsive background opacity](https://mdn.github.io/dom-examples/css-typed-arithmetic/responsive-background-opacity) example ([see source code](https://github.com/mdn/dom-examples/tree/main/css-typed-arithmetic/responsive-background-opacity)) shows how to vary the opacity of a background image as the viewport width is changed. Having the background image fade out as the screen gets narrower means the image is less likely to affect the readability of the text content as they start to overlap.
 
 ### HTML
 
