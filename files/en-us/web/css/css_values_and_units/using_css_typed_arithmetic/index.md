@@ -289,7 +289,7 @@ Since the `max-width` is `1600px`, you might have expected the calculation to be
 
 The final style rule selects the paragraphs themselves. Most of this styling is rudimentary. It is worth pointing out that we have set {{cssxref("position")}} to `absolute` to cause all of the paragraphs to sit on top of one another, and we've set a {{cssxref("transform-origin")}} value of `center left` to cause paragraphs to rotate around the center of their left edge, so they will all fan out from a center point over their containing `<div>`.
 
-Now onto the interesting bit — we define a custom property called `--angle` that contains the unitless rotation angle of the paragraph, before then setting the {{cssxref("rotate")}} property to that value multiplied by `1deg` to convert it to a degree value. The `--angle` custom property is equal to:
+Now onto the interesting bit — we define a custom property called `--angle` that contains the unitless rotation angle of the paragraph, before setting the {{cssxref("rotate")}} property to the resulting value. We multiply the resulting number by `1deg` to convert it to a degree value. The `--angle` custom property is the product of three values:
 
 - The paragraph's {{cssxref("sibling-index()")}} - `1` (which causes the first paragraph to have a rotation angle of `0`, as we want it to be horizontal)
 - multiplied by
