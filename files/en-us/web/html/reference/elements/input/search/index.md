@@ -198,7 +198,7 @@ Let's have a look at an example:
 
 ```html
 <search>
-  <form role="search">
+  <form>
     <div>
       <input
         type="search"
