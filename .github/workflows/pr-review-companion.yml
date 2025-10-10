@@ -97,6 +97,7 @@ jobs:
         if: steps.check.outputs.HAS_ARTIFACT
         with:
           path: content
+          persist-credentials: false
 
       - name: Setup (mdn/content)
         uses: actions/setup-node@v4

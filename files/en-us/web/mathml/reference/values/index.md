@@ -9,7 +9,7 @@ sidebar: mathmlref
 
 ## MathML-specific types
 
-In addition to [CSS data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types), some MathML attributes accept the following types:
+In addition to [CSS data types](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types), some MathML attributes accept the following types:
 
 - `<unsigned-integer>`: An [`<integer>`](/en-US/docs/Web/CSS/integer), whose first character is neither U+002D HYPHEN-MINUS character (-) nor U+002B PLUS SIGN (+); for example `1234`.
 - `<boolean>`: A string `true` or `false` representing a boolean value.
