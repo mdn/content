@@ -283,7 +283,7 @@ We then create a custom property called `--width-percentage` that contains the r
 }
 ```
 
-We are using the container query width rather than the viewport width to control the rotation because we want to set a maximum bound for it, which is controlled by the `<body>` `max-width`. If the rotation value becomes greater than a full circle, the last paragraph starts to overlap the first one, which spoils the effect.
+We are using the container query width rather than the viewport width to control the rotation because we want to set a maximum bound for the container, which is controlled by the `<body>` `max-width`. If the rotation value becomes greater than a full circle, the last paragraph will start to overlap the first one, which spoils the effect.
 
 Since the `max-width` is `1600px`, you might have expected the calculation to be `100cqw / 1600px)`. This would work, but we've instead gone for `(100cqw / 1200px) - 0.33333` (the `0.33333` comes from `1600px/1200px - 1`). This still causes the maximum rotation to occur at a `<body>` width of `1600px`, but the fan now has a smaller minimum rotation, which gives a better effect at narrow viewport widths.
 
