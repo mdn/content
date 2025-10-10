@@ -197,7 +197,7 @@ Give the `<button>` elements:
 
 ### Style the table
 
-You should now add some best practice stylinf to the table, as learned earlier in the module, plus a few extras.
+You should now add some best practice styling to the table, as learned earlier in the module, plus a few extras.
 
 Specifically:
 
