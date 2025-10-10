@@ -41,9 +41,9 @@ When a {{HTMLElement('form')}} is a search form, use the `search` role instead o
 
 ### Prefer HTML
 
-Using the {{HTMLElement('form')}} element in conjunction with a declaration of `role="search"` will provide the largest amount of support. Alternatively, you can wrap the `<form>` element with the {{HTMLElement('search')}} element. There aren't many reasons to prefer one over the other, other than that `role="search"` may be fewer characters while `<search>` uses native HTML semantics.
+Using the {{HTMLElement('search')}} element will automatically communicate a section has a role of `search`. If at all possible, prefer using it instead.
 
-However, if you are adding `role="search"` to generic containers like `<div>`, consider using `<search>` instead, just like `role="navigation"` should be replaced with `<nav>`.
+If your search input is already contained within a {{HTMLElement("form")}}, then wrapping the form in another `<search>` element may be too much markup. In this case, using `role="search"` on the form itself is also acceptable.
 
 ### Labeling landmarks
 
