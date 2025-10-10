@@ -103,7 +103,7 @@ Now, if the attacker calls this API with the URL `https://example.com/api?studen
 
 Many libraries that do [custom parsing of the URL query strings](https://github.com/BlackFan/client-side-prototype-pollution) are particularly vulnerable, because they allow specifying deep object structures via the query string, and then use dynamic property modification to build the object, such as `?__proto__[test]=test` or `?__proto__.test=test`. Libraries in general are more vulnerable than application code, because they cannot allowlist valid keys, and they often need to use dynamic property modification to be generic.
 
-Note that in [JSON](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON), the `__proto__` property is just a normal property name, so parsing JSON payloads like `{"__proto__": {"test": "value"}}` just creates an object with a property called `__proto__`, and is not immediately problematic. However, if later in the code, the object is merged into another object via [spreading](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax), [`for...in` loops](/en-US/docs/Web/JavaScript/Reference/Statements/for...in), etc., then the implicit property assignment operation will triggering the setter. Usually, this does not actually modify `Object.prototype` because there's only one level of spreading, but it does change the prototype of the target object.
+Note that in [JSON](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON), the `__proto__` property is just a normal property name, so parsing JSON payloads like `{"__proto__": {"test": "value"}}` just creates an object with a property called `__proto__`, and is not immediately problematic. However, if later in the code, the object is merged into another object via [spreading](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax), [`for...in` loops](/en-US/docs/Web/JavaScript/Reference/Statements/for...in), etc., then the implicit property assignment operation will trigger the setter. Usually, this does not actually modify `Object.prototype` because there's only one level of spreading, but it does change the prototype of the target object.
 
 ```js
 // Just an object with a property called `__proto__`
@@ -118,7 +118,7 @@ console.log(merged.test); // "value"
 
 ### Exploitation targets
 
-To see the effect of prototype pollution, we can look at the how the following {{domxref("fetch()")}} call can be changed completely. By default, it is a {{HTTPMethod("GET")}} request, but because we polluted the `Object` object's prototype with two new default properties, the `fetch()` call is now transformed into a {{HTTPMethod("POST")}} request, which could lead to unintended side-affects on the server-side.
+To see the effect of prototype pollution, we can look at the how the following {{domxref("fetch()")}} call can be changed completely. By default, it is a {{HTTPMethod("GET")}} request, but because we polluted the `Object` object's prototype with two new default properties, the `fetch()` call is now transformed into a {{HTTPMethod("POST")}} request, which could lead to unintended side effects on the server-side.
 
 ```js
 // Attacker indirectly causes the following pollution
