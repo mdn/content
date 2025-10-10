@@ -353,6 +353,8 @@ tr :nth-of-type(4) {
   width: 40%;
 }
 
+/* Provide background colors for the "Raw color" cells */
+
 tr:nth-of-type(1) td:nth-of-type(2) {
   background-color: rgb(255 192 203);
 }
