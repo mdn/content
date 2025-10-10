@@ -194,7 +194,7 @@ The markup for this example contains a paragraph of text:
 
 ### CSS
 
-We start off our CSS in a similar way to the previous demo, creating a unitless value based on the viewport width. This time, we calculate it by dividing `100vw` by `1px` and store it in a custom property called `--viewport-in-pixels`. This gives us a value that is the current viewport width in pixels, but with no unit.
+We start off our CSS in a similar way to the previous demo, creating a unitless value based on the viewport width. This time, we calculate it by dividing `100vw` by `1px` and store the resulting number in a custom property called `--viewport-in-pixels`. The value represents the current viewport width in pixels, without any units.
 
 ```css
 :root {
