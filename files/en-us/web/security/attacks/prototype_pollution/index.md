@@ -48,7 +48,7 @@ mySet.other;
 // "new property from the Set prototype!"
 ```
 
-In a prototype pollution attack, the attacker is able to change the object's prototype to make the object behave in unexpected or dangerous ways.
+In a prototype pollution attack, the attacker changes a built-in prototype such as `Object.prototype`, causing all derived objects to have an extra property, including objects that the attacker doesn't have direct access to.
 
 > [!NOTE]
 > To learn much more about prototypes, see:
@@ -68,13 +68,13 @@ Prototype pollution involves two phases:
 
 In order to pollute objects, the attacker needs a way to add arbitrary properties to prototype objects. This may happen as a consequence of [XSS](/en-US/docs/Web/Security/Attacks/XSS), in which the attacker gains direct access to the page's JavaScript execution environment. However, attackers with this level of access can do damage much more directly, so prototype pollution is usually discussed as a _data-only_ attack, where the attacker constructs a payload that is processed by the application code, leading to pollution.
 
-A key attack vector is [`Object.prototype.__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) property, which allows accessing the prototype object of an arbitrary object. You can also reach the prototype via `yourObject.constructor.prototype`. The key code pattern that is a pollution source is dynamic property modification of the following kind:
+A key attack vector is the [`__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) property, which allows accessing the prototype object of an arbitrary object. You can also reach the prototype via `yourObject.constructor.prototype`. The key code pattern that is a pollution source is dynamic property modification of the following kind:
 
 ```js
 obj[key1][key2] = value;
 ```
 
-In this case, if `obj` is an ordinary object, `key1` is `"__proto__"`, and `key2` is some property name such as `"test"`, then the code adds a property called `test` to `Object.prototype`, which is the prototype of all ordinary objects. Even if the [`"__proto__"` setter is disabled](#node.js_flag_--disable-proto), the `constructor.prototype` access pattern can still be used to reach the prototype, which is also `Object.prototype` for ordinary objects:
+In this case, if `obj` is an ordinary object, `key1` is `"__proto__"`, and `key2` is some property name such as `"test"`, then the code adds a property called `test` to `Object.prototype`, which is the prototype of all ordinary objects. Even if the [`"__proto__"` setter is disabled](#node.js_flag_--disable-proto), the `.constructor.prototype` access pattern can still be used to reach the prototype, which is also `Object.prototype` for ordinary objects:
 
 ```js
 obj[key1][key2][key3] = value;
@@ -82,28 +82,30 @@ obj[key1][key2][key3] = value;
 
 ...where `key1` is `"constructor"`, `key2` is `"prototype"`, and `key3` is some property name such as `"test"`.
 
-To put this line into more context, `key1`, `key2`, and `key3` may be attacker-controlled values. For example, imagine an API endpoint that takes a list of student names, and a list of fields to query for each student, and returns an object mapping each student name to their fields:
+To put this line into more context, `key1`, `key2`, and `key3` may be attacker-controlled values. For example, imagine an API endpoint that takes a list of user names, and a list of fields to query for each user, and returns an object mapping each user name to their fields:
 
 ```js
-function getGrades(request) {
-  const grades = {};
-  const studentNames = new URL(request.url).searchParams.getAll("students");
+function getUsers(request) {
+  const result = {};
+  const userNames = new URL(request.url).searchParams.getAll("names");
   const fields = new URL(request.url).searchParams.getAll("fields");
-  for (const name of studentNames) {
-    const student = database.lookup(name);
+  for (const name of userNames) {
+    const userInfo = database.lookup(name);
+    result[name] ??= {};
     for (const field of fields) {
-      grades[name][field] = student[field];
+      // Pollution source
+      result[name][field] = userInfo[field];
     }
   }
-  return grades;
+  return result;
 }
 ```
 
-Now, if the attacker calls this API with the URL `https://example.com/api?students=__proto__&fields=age`, the code will add a property called `age` to `Object.prototype`, with the value being whatever the `age` property of the `__proto__` student is. It may be `undefined`, but if the attacker can add a student called `__proto__` to the database (e.g., via a separate API call), they can control the value of the `age` property.
+Now, if the attacker calls this API with the URL `https://example.com/api?names=__proto__&fields=age`, the code will add a property called `age` to `Object.prototype`, with the value being whatever the `age` property of the `__proto__` user is. It may be `undefined`, but if the attacker can add a user called `__proto__` to the database (e.g., via a separate API call), they can control the value of the `age` property.
 
 Many libraries that do [custom parsing of the URL query strings](https://github.com/BlackFan/client-side-prototype-pollution) are particularly vulnerable, because they allow specifying deep object structures via the query string, and then use dynamic property modification to build the object, such as `?__proto__[test]=test` or `?__proto__.test=test`. Libraries in general are more vulnerable than application code, because they cannot allowlist valid keys, and they often need to use dynamic property modification to be generic.
 
-Note that in [JSON](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON), the `__proto__` property is just a normal property name, so parsing JSON payloads like `{"__proto__": {"test": "value"}}` just creates an object with a property called `__proto__`, and is not immediately problematic. However, if later in the code, the object is merged into another object via [spreading](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax), [`for...in` loops](/en-US/docs/Web/JavaScript/Reference/Statements/for...in), etc., then the implicit property assignment operation will trigger the setter. Usually, this does not actually modify `Object.prototype` because there's only one level of spreading, but it does change the prototype of the target object.
+Note that in [JSON](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON), the `__proto__` property is just a normal property name, so parsing JSON payloads like `{"__proto__": {"test": "value"}}` just creates an object with a property called `__proto__`, and is not immediately problematic. However, if later in the code, the object is merged into another object via [spreading](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax), [`for...in` loops](/en-US/docs/Web/JavaScript/Reference/Statements/for...in), etc., then the implicit property assignment operation will trigger the setter. Usually, this does not actually modify `Object.prototype` because there's only one level of dynamic property access, but it does change the prototype of the target object.
 
 ```js
 // Just an object with a property called `__proto__`
@@ -118,7 +120,7 @@ console.log(merged.test); // "value"
 
 ### Exploitation targets
 
-To see the effect of prototype pollution, we can look at the how the following {{domxref("fetch()")}} call can be changed completely. By default, it is a {{HTTPMethod("GET")}} request, but because we polluted the `Object` object's prototype with two new default properties, the `fetch()` call is now transformed into a {{HTTPMethod("POST")}} request, which could lead to unintended side effects on the server-side.
+To see the effect of prototype pollution, we can look at the how the following {{domxref("fetch()")}} call can be changed completely. By default, it is a {{HTTPMethod("GET")}} request, but because we polluted the `Object.prototype` object with two new default properties, the `fetch()` call is now transformed into a {{HTTPMethod("POST")}} request, which could lead to unintended side effects on the server-side.
 
 ```js
 // Attacker indirectly causes the following pollution
@@ -151,11 +153,11 @@ function accessDashboard(user) {
 }
 ```
 
-If `Object.prototype.isAdmin` is set to `true`, then all users will be treated as admins, leading to a complete bypass of the access control.
+If `Object.prototype.isAdmin` is set to `true`, and the `isAdmin` property is absent for non-admins instead of being set explicitly to `false`, then all users will be treated as admins, leading to a complete bypass of the access control.
 
 ## Defenses against prototype pollution
 
-Defenses against prototype pollution go along two lines: avoiding prototype modifications, and avoiding accessing potentially polluted properties. Generally, the more you can avoid prototype modifications and the more you can lock the object's prototypes, the better your protection against prototype pollution will be. This following section presents some strategies which you can use depending on your situation.
+Defenses against prototype pollution go along two lines: avoiding code that may turn into prototype modifications, and avoiding accessing potentially polluted properties. This following section presents some strategies which you can use depending on your situation.
 
 ### Validate user input
 
@@ -167,7 +169,7 @@ You should avoid dynamic property modification (of the form `obj[key] = value`) 
 
 If you are in a Node.js environment, you can disable `Object.prototype.__proto__` with the `--disable-proto=MODE` option where `MODE` is either `delete` (the property is removed entirely), or `throw` (accesses to the property throws an exception with the code `ERR_PROTO_ACCESS`). Use `delete Object.prototype.__proto__` in non-Node environments for the same effect.
 
-This doesn't protect you from prototype pollution generally (because `constructor.prototype` is still available), but it does remove one entry point to it.
+This doesn't protect you from prototype pollution entirely (because `constructor.prototype` is still available), but it does remove one such entry point.
 
 ### Lock down built-in objects
 
@@ -184,11 +186,11 @@ obj.a; // undefined
 
 However, note that legitimate prototype modifications may happen, usually to provide a {{glossary("Polyfill")}} implementation. In [non-strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), attempts to modify a frozen object fail silently, while in strict mode, they throw a `TypeError`. To allow polyfills, the polyfill code needs to run before the freeze.
 
-Another caveat with {{jsxref("Object.freeze()")}} is that it doesn't provide a deep freeze by default. If you want true immutability, you need to recursively freeze every property ([example](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze#deep_freezing)). Use a library like SES so you don't miss any built-in objects.
+Another caveat with {{jsxref("Object.freeze()")}} is that it doesn't provide a deep freeze by default. If you want true immutability, you need to recursively freeze every property ([example](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze#deep_freezing)). A library like SES is preferable because it does a "walk" over all built-in objects, avoiding forgetting to freeze any object.
 
 ### Avoid lookups on the prototype
 
-In code where you access the object's properties, make sure you know that the property exists on the object itself. You can make use of the {{jsxref("Object.hasOwn()")}} check when you are accessing or traversing keys on objects.
+In code where you access the object's properties, make sure you know that the property exists on the object itself. You can perform an {{jsxref("Object.hasOwn()")}} check when you are accessing or traversing keys on objects.
 
 Instead of:
 
@@ -247,7 +249,7 @@ function doDangerousAction(options = { enableDangerousAction: false }) {
 > [!NOTE]
 > The `{ __proto__: null }` [prototype setter](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#prototype_setter) syntax in object initializers is fully secure, unlike the `obj.__proto__` accessor property.
 
-If you need to pass an object as options (for example, because an API like `fetch()` requires you to use an object), create a null-prototype object. Note that creating objects without a prototype is not the default, so whenever instantiating an object, you need to remember to explicitly create a null-prototype object instead of the regular object initializer (`const myObj = { }`).
+If you need to pass an object as options (for example, because an API like `fetch()` requires you to use an object), create a null-prototype object. Note that creating objects without a prototype is not the default, so whenever instantiating an object, you need to remember to explicitly create a null-prototype object instead of the regular object initializer (`const myObj = {}`).
 
 ```js
 Object.prototype.method = "POST";
@@ -271,7 +273,7 @@ result[key1][key2] = 1; // modifies result, not Object.prototype
 
 ### Use `Map` and `Set` instead
 
-When JavaScript objects are used as ad-hoc key-value pairs, consider using a {{jsxref("Map")}} or {{jsxref("Set")}} object instead. They also avoid object prototype pollution by avoiding prototype lookups or property modification. See the `Map` documentation for a [comparison between Maps and Objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map#objects_vs._maps). The {{jsxref("Map.prototype.get()")}} method will always only return entries within the `Map`.
+When JavaScript objects are used as ad-hoc key-value pairs, consider using a {{jsxref("Map")}} or {{jsxref("Set")}} object instead. They also avoid object prototype pollution by avoiding object property modification or lookup. See the `Map` documentation for a [comparison between Maps and Objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map#objects_vs._maps). The {{jsxref("Map.prototype.get()")}} method always only returns entries within the `Map`.
 
 ```js
 // Assume Object got polluted somehow
@@ -295,7 +297,7 @@ When creating objects:
 When accepting user input, either via URL query strings, JSON payloads, or function parameters:
 
 - Always validate user input with a schema validator. Reject unrecognized properties and set default values for missing properties.
-- Function that receive objects as parameters should either make sure all expected keys are defined on the object itself, or first check if the key exists on the object itself (e.g., via {{jsxref("Object.hasOwn()")}}) before accessing it.
+- Functions that receive objects as parameters should either make sure all expected keys are defined on the object itself (by setting default values), or first check if the key exists on the object itself (e.g., via {{jsxref("Object.hasOwn()")}}) before accessing it.
 - Prefer [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) and {{jsxref("Object.keys()")}} over [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loops.
 
 For built-in and third party objects:
