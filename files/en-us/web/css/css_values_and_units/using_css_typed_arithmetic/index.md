@@ -57,7 +57,7 @@ If you try to multiply two values with units — even the same units — normal 
 calc(200px * 4px)
 ```
 
-However, the previous function call is invalid: <code>800px<sup>2</sup></code> is meaningless in CSS.
+In this case, the function is invalid as <code>800px<sup>2</sup></code> is meaningless in CSS.
 
 ## Division
 
