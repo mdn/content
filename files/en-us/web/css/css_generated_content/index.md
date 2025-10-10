@@ -151,7 +151,7 @@ The CSS generated content module introduces six yet-to-be implemented CSS functi
   - {{cssxref("::scroll-marker")}} pseudo-element
   - {{cssxref(":target-current")}} pseudo-class
 
-- [CSS values and units](/en-US/docs/Web/CSS/CSS_Values_and_Units) module
+- [CSS values and units](/en-US/docs/Web/CSS/CSS_values_and_units) module
   - {{cssxref("attr", "attr()")}} function
   - {{cssxref("string")}} data type
   - {{cssxref("image")}} data type
