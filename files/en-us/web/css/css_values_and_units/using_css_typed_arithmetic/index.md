@@ -74,8 +74,6 @@ However, you can't divide a unitless value by a value with a unit as that doesn'
 calc(1000 / 2px) /* ?!? */
 ```
 
-In addition — **and this is where it gets interesting** — It used to be the case that you couldn't divide one value with a unit by another, even different units of the same overall type. However, the specification updates mentioned earlier mean **this is now possible**.
-
 When a value of any numeric data type is divided by a value of the same type, the units cancel each other out, and you are left with a unitless value. Behind the scenes, the two values are computed before being divided by one another.
 
 As a result, the same calculation can have very different results depending on the context it is used in and the units of the divisor.
@@ -96,26 +94,35 @@ calc(100vw / 1em)
 
 If the viewport is `1000px` wide, and `1em` is equal to the browser default of `16px` at the point of calculation, the previous calculation will return `1000px / 16px` = `62.5`.
 
+It used to be the case that you couldn't divide one typed value by another, even if the two values have units of the same type. However, the specification was updated to permit this; check for [browser compatibility](/en-US/docs/Web/CSS/calc#browser_compatibility).
+
 ## Why is the behavioral update useful?
 
-The above behavioral change doesn't sound very significant at first, but it enables all kinds of useful associations between different values, resulting in an interesting set of responsive UI features.
+Being able to divide one typed value by another of the same type may not sound very significant at first, but it enables useful associations between different values that can be used to create responsive UI features.
 
-The key to all of this is being able to represent values in a unitless form via divisions like this one (which is already achievable in a limited manner via the [`tan(atan2())` hack](https://dev.to/janeori/css-type-casting-to-numeric-tanatan2-scalars-582j)):
+The key to all of this is being able to represent values in a unitless form via divisions like this one:
 
 ```css
 --viewport-width-in-pixels: calc(100vw / 1px);
 ```
 
-You can then dynamically vary other property values based on this value, regardless of what units they have. For example:
+The result is a {{cssxref("number")}} representing the viewport width in pixels as a unitless value. This can be used anywhere a number is valid, including other `calc()` functions. You can dynamically vary other property values based on this value, regardless of what units they have.
+
+For example, the unitless value can be immediately transferred to {{cssxref("opacity")}}:
 
 ```css
-/* Unitless value can be immediately transferred to opacity */
 opacity: calc(var(--viewport-width-in-pixels) / 1000 - 0.5);
+```
 
-/* Multiply by 1deg to create an <angle> value */
+You can multiply it by a value such as `1deg` to create an {{cssxref("&lt;angle>")}} value:
+
+```css
 rotate: calc(var(--viewport-width-in-pixels) * 1deg);
+```
 
-/* Multiply by 1rem to create a <length> value */
+You can multiply it by a value such as `1rem` to create a {{cssxref("&lt;length>")}} value:
+
+```css
 font-size: calc(var(--viewport-width-in-pixels) * 1rem / 200);
 ```
 
@@ -151,6 +158,9 @@ We start by defining a [CSS custom property](/en-US/docs/Web/CSS/CSS_cascading_v
 }
 ```
 
+> [!NOTE]
+> Any alpha value greater than `1` is treated as `1`, therefore we don't need to clamp the maximum value.
+
 We then set a fixed {{cssxref("width")}} and some {{cssxref("padding")}} on the wrapper `<div>`, and center it horizontally using {{cssxref("margin")}}.
 
 ```css
@@ -177,6 +187,10 @@ body {
       no-repeat top 50px right 50px;
 }
 ```
+
+### Result
+
+To see the result, [view our responsive background opacity example live](https://mdn.github.io/dom-examples/css-typed-arithmetic/responsive-background-opacity) ([see source code](https://github.com/mdn/dom-examples/tree/main/css-typed-arithmetic/responsive-background-opacity)). Try altering the viewport width to see how the background opacity varies as a result.
 
 ## Varying values of different types based on a single value
 
@@ -220,6 +234,10 @@ p {
 }
 ```
 
+### Result
+
+To see the result, [view our different type variations example live](https://mdn.github.io/dom-examples/css-typed-arithmetic/different-type-variations) ([see source code](https://github.com/mdn/dom-examples/tree/main/css-typed-arithmetic/different-type-variations)). Try altering the viewport width to see how the paragraph font size and background color both vary as a result.
+
 ## An animated story circle
 
 The [animated story circle](https://mdn.github.io/dom-examples/css-typed-arithmetic/animated-story-circle) example ([see source code](https://github.com/mdn/dom-examples/tree/main/css-typed-arithmetic/animated-story-circle)) demonstrates a more complex effect created by leveraging CSS typed arithmetic rules. In this case, the different paragraphs of a body of text are laid out in a circle emanating from a center point. What's more, the circle of paragraphs closes up into a fan shape when the viewport is made narrower, and opens up again when it is made wider.
@@ -256,7 +274,7 @@ Next, we set several properties on the {{htmlelement("body")}} element:
 
 - We start by setting a `height` of `inherit`, meaning the `<body>` will inherit the `:root` element's `100%` height and therefore span the full height of the viewport.
 - Next, we horizontally center the `<body>` using {{cssxref("margin")}}, and give it a {{cssxref("max-width")}}. As you'll see later on, this upper bound is important for controlling the maximum rotation of the fan/circle shape.
-- We center the child element of the `<body>` (the `<div>` with `class="story-circle"`) horizontally and vertically inside it using [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout).
+- We center the `<div>` with `class="story-circle"` horizontally and vertically inside the `<body>` using [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout).
 - We use the {{cssxref("container-type")}} property to declare the `<body>` as an inline [size query container](/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#container_size_queries). This is important because we want to vary the shape rotation based on the `<body>` width, and not the viewport width as we did in previous examples. Setting it as a size query container allows us to reference its size in calculations.
 
 ```css
@@ -271,7 +289,7 @@ body {
 }
 ```
 
-We now come to styling the `story-circle` `<div>`. We give it a `width` and `height` of `1px`, meaning it acts as a reference point for the paragraphs to be positioned around in the center of the screen (we don't even need to set positioning on it, as it is fine for the paragraphs to be positioned relative to the `<body>`).
+We now come to styling the `story-circle` `<div>`. We set its `width` and `height` to `1px`: it will act as a reference point with its child paragraphs positioned in a circle around it. (We don't even need to set positioning on it, as it is fine for the paragraphs to be positioned relative to the `<body>`).
 
 We then create a custom property called `--width-percentage` that contains the result of `100cqw` (100% of the width of the element's parent query container, which is the `<body>` element) divided by `1200px`, minus `0.33333`. This is the key value that wll control the amount the circle rotates by as the viewport width is changed.
 
@@ -312,6 +330,10 @@ p {
   rotate: calc(var(--angle) * 1deg);
 }
 ```
+
+### Result
+
+To see the result, [view our animated story circle example live](https://mdn.github.io/dom-examples/css-typed-arithmetic/animated-story-circle) ([see source code](https://github.com/mdn/dom-examples/tree/main/css-typed-arithmetic/animated-story-circle)). Try increasing and decreasing the viewport width to see how the paragraph fan shape unfolds into a circle and back again.
 
 ## See also
 
