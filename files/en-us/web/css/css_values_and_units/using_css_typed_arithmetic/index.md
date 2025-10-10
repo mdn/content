@@ -143,7 +143,7 @@ The HTML contains some basic text content wrapped in a {{htmlelement("div")}} el
 
 ### CSS
 
-In the CSS, we start by defining a [CSS custom property](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) called `--width-percentage` on the {{cssxref(":root")}} element, which contains the result of the calculation `100vw / 2000px`. The aim here is to represent the viewport width as a percentage that we can later use as an alpha channel value. When the viewport is `2000px` wide, the calculation will return `1`, which is equivalent to `100%` alpha. Anything less than a `2000px` viewport width will result in a smaller value.
+We start by defining a [CSS custom property](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) called `--width-percentage` on the {{cssxref(":root")}} element, which contains the result of the calculation `100vw / 2000px`. This value represents the viewport width as a percentage of `2000px` that we will later use as an alpha channel value. When the viewport is `2000px` wide, the calculation will return `1`, which is equivalent to `100%` alpha. Anything less than a `2000px` viewport width will result in a smaller value.
 
 ```css
 :root {
