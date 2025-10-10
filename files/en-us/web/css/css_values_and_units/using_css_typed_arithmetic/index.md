@@ -180,7 +180,7 @@ body {
 
 ## Varying values of different types based on a single value
 
-Our [Different type variations](https://mdn.github.io/dom-examples/css-typed-arithmetic/different-type-variations) example ([see source code](https://github.com/mdn/dom-examples/tree/main/css-typed-arithmetic/different-type-variations)) works in a very similar way to the previous example, except that in this case we demonstrate that you can use a single variable value in the definition of multiple other values with completely different data types.
+The [different type variations](https://mdn.github.io/dom-examples/css-typed-arithmetic/different-type-variations) example ([see source code](https://github.com/mdn/dom-examples/tree/main/css-typed-arithmetic/different-type-variations)) works in a very similar way to the previous example, except that in this case, we demonstrate the use of a single variable value in the definition of multiple other values with different data types.
 
 Specifically, we set a paragraph's background color _and_ font size based on the viewport width.
 
