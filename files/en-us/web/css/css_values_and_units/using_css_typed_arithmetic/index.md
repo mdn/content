@@ -94,7 +94,7 @@ If we replace the `1px` divisor by `1em`, we get very different results:
 calc(100vw / 1em)
 ```
 
-If the viewport is set to `1000px` wide, and `1em` is equal to the browser default of `16px` at the point of calculation, the previous calculation will return `1000px / 16px` = `62.5`.
+If the viewport is `1000px` wide, and `1em` is equal to the browser default of `16px` at the point of calculation, the previous calculation will return `1000px / 16px` = `62.5`.
 
 ## Why is the behavioral update useful?
 
