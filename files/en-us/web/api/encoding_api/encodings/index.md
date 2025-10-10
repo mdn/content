@@ -319,7 +319,6 @@ The following table lists all encoding labels that user agents must support, alo
         <a href="https://en.wikipedia.org/wiki/GB_18030">gb18030</a>
       </td>
     </tr>
-    
     <tr>
       <td>
         <code>"big5"</code>, <code>"big5-hkscs"</code>, <code>"cn-big5"</code>,
@@ -347,11 +346,11 @@ The following table lists all encoding labels that user agents must support, alo
     <tr>
       <td>
         <code>"csshiftjis"</code>, <code>"ms_kanji"</code>,
-        <code>"shift_jis"</code>, <code>"shift_jis"</code>, <code>"sjis"</code>,
+        <code>"shift-jis"</code>, <code>"shift_jis"</code>, <code>"sjis"</code>,
         <code>"windows-31j"</code>, <code>"x-sjis"</code>
       </td>
       <td>
-        <a href="https://en.wikipedia.org/wiki/Shift_JIS">shift-jis</a>
+        <a href="https://en.wikipedia.org/wiki/Shift_JIS">shift_jis</a>
       </td>
     </tr>
     <tr>
@@ -366,7 +365,6 @@ The following table lists all encoding labels that user agents must support, alo
         <a href="https://en.wikipedia.org/wiki/Extended_Unix_Code#EUC-KR">euc-kr</a>
       </td>
     </tr>
-    
     <tr>
       <td><code>"utf-16be"</code></td>
       <td>
@@ -382,10 +380,6 @@ The following table lists all encoding labels that user agents must support, alo
     <tr>
       <td><code>"x-user-defined"</code></td>
       <td><code>"x-user-defined"</code></td>
-    </tr>
-    <tr>
-      <td><code>"iso-2022-cn"</code>, <code>"iso-2022-cn-ext"</code></td>
-      <td><code>"replacement"</code></td>
     </tr>
   </tbody>
 </table>
