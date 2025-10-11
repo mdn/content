@@ -6,7 +6,7 @@ spec-urls: https://drafts.csswg.org/css-values/#dashed-idents
 sidebar: cssref
 ---
 
-The **`<dashed-ident>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) denotes an arbitrary string used as an {{glossary("identifier")}}.
+The **`<dashed-ident>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types) denotes an arbitrary string used as an {{glossary("identifier")}}.
 
 ## Syntax
 

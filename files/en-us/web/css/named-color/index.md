@@ -6,7 +6,7 @@ browser-compat: css.types.color.named-color
 sidebar: cssref
 ---
 
-The **`<named-color>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) is the name of a color, such as `red`, `blue`, `black`, or `lightseagreen`. Syntactically, a `<named-color>` is an [`<ident>`](/en-US/docs/Web/CSS/ident).
+The **`<named-color>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types) is the name of a color, such as `red`, `blue`, `black`, or `lightseagreen`. Syntactically, a `<named-color>` is an [`<ident>`](/en-US/docs/Web/CSS/ident).
 
 A `<named-color>` value can be used anywhere a [`<color>`](/en-US/docs/Web/CSS/color_value) can be used.
 

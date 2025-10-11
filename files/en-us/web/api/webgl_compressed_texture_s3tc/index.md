@@ -65,7 +65,7 @@ gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
 
 ## See also
 
-- [S3 Texture Compression – OpenGL wiki](https://www.khronos.org/opengl/wiki/S3_Texture_Compression)
+- [S3 Texture Compression – OpenGL wiki](https://wikis.khronos.org/opengl/S3_Texture_Compression)
 - {{domxref("WebGLRenderingContext.getExtension()")}}
 - {{domxref("WebGLRenderingContext.compressedTexImage2D()")}}
 - {{domxref("WebGLRenderingContext.compressedTexSubImage2D()")}}

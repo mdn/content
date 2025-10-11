@@ -10,7 +10,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`<corner-shape-value>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) describes the shape of a container corner. It is used by the {{cssxref("corner-shape")}} shorthand property and its [constituent properties](/en-US/docs/Web/CSS/corner-shape#constituent_properties) to specify the shape to apply to affected container corners.
+The **`<corner-shape-value>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types) describes the shape of a container corner. It is used by the {{cssxref("corner-shape")}} shorthand property and its [constituent properties](/en-US/docs/Web/CSS/corner-shape#constituent_properties) to specify the shape to apply to affected container corners.
 
 ## Syntax
 
