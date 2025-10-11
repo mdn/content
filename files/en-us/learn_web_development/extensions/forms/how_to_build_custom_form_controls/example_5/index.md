@@ -77,7 +77,7 @@ This is the last example that explain [how to build custom form widgets](/en-US/
 
 .select {
   font-size: 0.625em; /* 10px */
-  font-family: Verdana, Arial, sans-serif;
+  font-family: "Verdana", "Arial", sans-serif;
 
   box-sizing: border-box;
 

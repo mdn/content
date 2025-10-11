@@ -112,7 +112,7 @@ The CSS used for the text styling and spacing is as follows:
 /* General styles */
 
 html {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   font-size: 10px;
 }
 
