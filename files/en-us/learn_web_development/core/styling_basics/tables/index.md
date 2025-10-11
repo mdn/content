@@ -230,7 +230,7 @@ However, this design is rather garish. In this article, we'll get you to mark it
 
 Let's work through styling our table example together.
 
-1. To start with, make a local copy of the sample markup [shown earlier](/en-US/docs/Learn_web_development/Core/Styling_basics/Tables#a_typical_html_table) and save it in a working directory somewhere on your local computer.
+1. To start with, make a local copy of the sample markup [shown earlier](#a_typical_html_table) and save it in a working directory somewhere on your local computer.
 2. Next, create a new file called `style.css` and save it in the same directory as your other files.
 3. Link the CSS to the HTML by placing the following line of HTML inside your {{htmlelement("head")}}:
 

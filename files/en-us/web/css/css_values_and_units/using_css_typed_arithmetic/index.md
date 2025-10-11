@@ -13,7 +13,7 @@ These quotients can then be used as a {{cssxref("number")}} in the values of uni
 This typed arithmetic behavior enables relationships to be created between different values on a page. This article explores typed arithmetic and presents several examples that make use of it.
 
 > [!NOTE]
-> Originally, the [CSS values and units](/en-US/docs/Web/CSS/CSS_Values_and_Units) module limited the arguments multiplication and division operations could take to make dividing by zero detectable at parse time and avoid issues such as squared units. Typed arithmetic relaxes some of those restrictions in [supporting browsers](/en-US/docs/Web/CSS/calc#browser_compatibility).
+> Originally, the [CSS values and units](/en-US/docs/Web/CSS/CSS_values_and_units) module limited the arguments multiplication and division operations could take to make dividing by zero detectable at parse time and avoid issues such as squared units. Typed arithmetic relaxes some of those restrictions in [supporting browsers](/en-US/docs/Web/CSS/calc#browser_compatibility).
 
 ## CSS typed arithmetic rules
 
@@ -130,7 +130,7 @@ Let's walk through some examples to show how CSS typed arithmetic can be useful.
 
 ## Basic example: responsive background opacity
 
-The [responsive background opacity](https://mdn.github.io/dom-examples/css-typed-arithmetic/responsive-background-opacity) example ([see source code](https://github.com/mdn/dom-examples/tree/main/css-typed-arithmetic/responsive-background-opacity)) shows how to vary the opacity of a background image as the viewport width is changed. Having the background image fade out as the screen gets narrower means the image is less likely to affect the readability of the text content as they start to overlap.
+The [responsive background opacity](https://mdn.github.io/dom-examples/css-typed-arithmetic/responsive-background-opacity/) example ([see source code](https://github.com/mdn/dom-examples/tree/main/css-typed-arithmetic/responsive-background-opacity)) shows how to vary the opacity of a background image as the viewport width is changed. Having the background image fade out as the screen gets narrower means the image is less likely to affect the readability of the text content as they start to overlap.
 
 ### HTML
 
@@ -190,11 +190,11 @@ body {
 
 ### Result
 
-To see the result, [view our responsive background opacity example live](https://mdn.github.io/dom-examples/css-typed-arithmetic/responsive-background-opacity) ([see source code](https://github.com/mdn/dom-examples/tree/main/css-typed-arithmetic/responsive-background-opacity)). Try altering the viewport width to see how the background opacity varies as a result.
+To see the result, [view our responsive background opacity example live](https://mdn.github.io/dom-examples/css-typed-arithmetic/responsive-background-opacity/) ([see source code](https://github.com/mdn/dom-examples/tree/main/css-typed-arithmetic/responsive-background-opacity)). Try altering the viewport width to see how the background opacity varies as a result.
 
 ## Varying values of different types based on a single value
 
-The [different type variations](https://mdn.github.io/dom-examples/css-typed-arithmetic/different-type-variations) example ([see source code](https://github.com/mdn/dom-examples/tree/main/css-typed-arithmetic/different-type-variations)) works in a very similar way to the previous example, except that in this case, we demonstrate the use of a single variable value in the definition of multiple other values with different data types.
+The [different type variations](https://mdn.github.io/dom-examples/css-typed-arithmetic/different-type-variations/) example ([see source code](https://github.com/mdn/dom-examples/tree/main/css-typed-arithmetic/different-type-variations)) works in a very similar way to the previous example, except that in this case, we demonstrate the use of a single variable value in the definition of multiple other values with different data types.
 
 Specifically, we set a paragraph's background color _and_ font size based on the viewport width.
 
@@ -236,11 +236,11 @@ p {
 
 ### Result
 
-To see the result, [view our different type variations example live](https://mdn.github.io/dom-examples/css-typed-arithmetic/different-type-variations) ([see source code](https://github.com/mdn/dom-examples/tree/main/css-typed-arithmetic/different-type-variations)). Try altering the viewport width to see how the paragraph font size and background color both vary as a result.
+To see the result, [view our different type variations example live](https://mdn.github.io/dom-examples/css-typed-arithmetic/different-type-variations/) ([see source code](https://github.com/mdn/dom-examples/tree/main/css-typed-arithmetic/different-type-variations)). Try altering the viewport width to see how the paragraph font size and background color both vary as a result.
 
 ## An animated story circle
 
-The [animated story circle](https://mdn.github.io/dom-examples/css-typed-arithmetic/animated-story-circle) example ([see source code](https://github.com/mdn/dom-examples/tree/main/css-typed-arithmetic/animated-story-circle)) demonstrates a more complex effect created by leveraging CSS typed arithmetic rules. In this case, the different paragraphs of a body of text are laid out in a circle emanating from a center point. What's more, the circle of paragraphs closes up into a fan shape when the viewport is made narrower, and opens up again when it is made wider.
+The [animated story circle](https://mdn.github.io/dom-examples/css-typed-arithmetic/animated-story-circle/) example ([see source code](https://github.com/mdn/dom-examples/tree/main/css-typed-arithmetic/animated-story-circle)) demonstrates a more complex effect created by leveraging CSS typed arithmetic rules. In this case, the different paragraphs of a body of text are laid out in a circle emanating from a center point. What's more, the circle of paragraphs closes up into a fan shape when the viewport is made narrower, and opens up again when it is made wider.
 
 ### HTML
 
@@ -333,10 +333,10 @@ p {
 
 ### Result
 
-To see the result, [view our animated story circle example live](https://mdn.github.io/dom-examples/css-typed-arithmetic/animated-story-circle) ([see source code](https://github.com/mdn/dom-examples/tree/main/css-typed-arithmetic/animated-story-circle)). Try increasing and decreasing the viewport width to see how the paragraph fan shape unfolds into a circle and back again.
+To see the result, [view our animated story circle example live](https://mdn.github.io/dom-examples/css-typed-arithmetic/animated-story-circle/) ([see source code](https://github.com/mdn/dom-examples/tree/main/css-typed-arithmetic/animated-story-circle)). Try increasing and decreasing the viewport width to see how the paragraph fan shape unfolds into a circle and back again.
 
 ## See also
 
 - {{cssxref("calc()")}}, {{cssxref("abs()")}}
-- [CSS values and units](/en-US/docs/Web/CSS/CSS_Values_and_Units) module
+- [CSS values and units](/en-US/docs/Web/CSS/CSS_values_and_units) module
 - [CSS Typed Arithmetic](https://css-tricks.com/css-typed-arithmetic/) on css-tricks.com (2025)
