@@ -9,7 +9,7 @@ sidebar: cssref
 > [!NOTE]
 > The `attr()` function can be used with any CSS property, but support for properties other than {{CSSxRef("content")}} is experimental.
 
-The **`attr()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) is used to retrieve the value of an attribute of the selected element and use it in a property value, similar to how the {{cssxref("var", "var()")}} function substitutes a custom property value. It can also be used with [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements), in which case the attribute's value on the pseudo-element's originating element is returned.
+The **`attr()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) is used to retrieve the value of an attribute of the selected element and use it in a property value, similar to how the {{cssxref("var", "var()")}} function substitutes a custom property value. It can also be used with [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements), in which case the attribute's value on the pseudo-element's originating element is returned.
 
 {{InteractiveExample("CSS Demo: attr()", "tabbed-shorter")}}
 
@@ -81,7 +81,7 @@ The parameters are:
         > This keyword was originally named and supported in Chromium browsers as `string`. Both keywords will be supported briefly, for backwards compatibility purposes.
 
     - `type()`
-      - : The `type()` function takes a `<syntax>` as its argument that specifies what [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) to parse the value into. The `<syntax>` can be {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;color&gt;")}}, {{CSSxRef("&lt;custom-ident&gt;")}}, {{CSSxRef("&lt;image&gt;")}}, {{CSSxRef("&lt;integer&gt;")}}, {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;length-percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;resolution&gt;")}}, {{CSSxRef("&lt;string&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;transform-function&gt;")}}, or a combination thereof.
+      - : The `type()` function takes a `<syntax>` as its argument that specifies what [data type](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types) to parse the value into. The `<syntax>` can be {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;color&gt;")}}, {{CSSxRef("&lt;custom-ident&gt;")}}, {{CSSxRef("&lt;image&gt;")}}, {{CSSxRef("&lt;integer&gt;")}}, {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;length-percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;resolution&gt;")}}, {{CSSxRef("&lt;string&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;transform-function&gt;")}}, or a combination thereof.
 
         ```css
         attr(id type(<custom-ident>), none)
@@ -104,7 +104,7 @@ The parameters are:
         ```
 
     - `<attr-unit>`
-      - : The `<attr-unit>` identifier specifies the unit a numeric value should have (if any). It can be the `%` character (percentage) or a [CSS distance unit](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#distance_units) such as `px`, `rem`, `deg`, `s`, etc.
+      - : The `<attr-unit>` identifier specifies the unit a numeric value should have (if any). It can be the `%` character (percentage) or a [CSS distance unit](/en-US/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#distance_units) such as `px`, `rem`, `deg`, `s`, etc.
 
         ```css
         attr(data-size rem)

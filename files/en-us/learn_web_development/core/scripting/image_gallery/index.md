@@ -79,9 +79,8 @@ h1 {
 }
 
 button {
-  border: 0;
   background: rgb(150 150 150 / 0.6);
-  border: 1px solid #999;
+  border: 1px solid #999999;
   position: absolute;
   cursor: pointer;
   top: 2px;
@@ -127,7 +126,7 @@ The images you need to embed in the example and their required `alt` text are as
 - [`pic1.jpg`](https://mdn.github.io/shared-assets/images/examples/learn/gallery/pic1.jpg): "Closeup of a human eye".
 - [`pic2.jpg`](https://mdn.github.io/shared-assets/images/examples/learn/gallery/pic2.jpg): "Rock that looks like a wave".
 - [`pic3.jpg`](https://mdn.github.io/shared-assets/images/examples/learn/gallery/pic3.jpg): "Purple and white pansies".
-- [`pic4.jpg`](https://mdn.github.io/shared-assets/images/examples/learn/gallery/pic4.jpg): "Section of wall from a pharoah's tomb".
+- [`pic4.jpg`](https://mdn.github.io/shared-assets/images/examples/learn/gallery/pic4.jpg): "Section of wall from a pharaoh's tomb".
 - [`pic5.jpg`](https://mdn.github.io/shared-assets/images/examples/learn/gallery/pic5.jpg): "Large moth on a leaf".
 
 ### Create a data object
@@ -217,9 +216,9 @@ for (const image of images) {
   newImage.tabIndex = "0";
   // 2f. Append the image as a child of the thumbBar
   thumbBar.appendChild(newImage);
-  // 2g. Update the display to show the image fullsize when a thumb is clicked
+  // 2g. Update the display to show the image full size when a thumb is clicked
   newImage.addEventListener("click", updateDisplayedImage);
-  // 2h. Update the display to show the image fullsize when the "Enter" key
+  // 2h. Update the display to show the image full size when the "Enter" key
   // is pressed after it has been focused
   newImage.addEventListener("keydown", (e) => {
     if (e.code === "Enter") {

@@ -6,7 +6,7 @@ spec-urls: https://drafts.csswg.org/css-fonts/#generic-font-families
 sidebar: cssref
 ---
 
-The **`<generic-family>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents the keyword values for generic font families used in the {{cssxref("font")}} shorthand and {{cssxref("font-family")}} longhand properties. The `<generic-family>` represents one or more locally-installed fonts belonging to that category of fonts.
+The **`<generic-family>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types) represents the keyword values for generic font families used in the {{cssxref("font")}} shorthand and {{cssxref("font-family")}} longhand properties. The `<generic-family>` represents one or more locally-installed fonts belonging to that category of fonts.
 
 ## Syntax
 
@@ -49,15 +49,12 @@ The `<generic-family>` {{glossary("enumerated")}} type is specified using one of
 - `math`
   - : Fonts for displaying mathematical expressions, for example superscript and subscript, brackets that cross several lines, nesting expressions, and double-struck glyphs with distinct meanings.
 
-- `emoji`
-  - : Fonts that are specifically designed to render emoji.
-
 - `fangsong`
   - : A particular style of Chinese characters that are between serif-style Song and cursive-style Kai forms. This style is often used for government documents.
 
 ## Formal syntax
 
-{{CSSSyntaxRaw(`<generic-family> = serif | sans-serif | monospace | cursive | fantasy | system-ui | ui-serif | ui-sans-serif | ui-monospace | ui-rounded | emoji | math | fangsong`)}}
+{{CSSSyntaxRaw(`<generic-family> = serif | sans-serif | monospace | cursive | fantasy | system-ui | ui-serif | ui-sans-serif | ui-monospace | ui-rounded | math | fangsong`)}}
 
 ## Examples
 

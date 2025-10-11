@@ -8,7 +8,7 @@ sidebar: learnsidebar
 
 {{NextMenu("Learn_web_development/Core/Scripting/What_is_JavaScript", "Learn_web_development/Core")}}
 
-JavaScript is a huge topic, with so many different features, styles, and techniques to learn, and so many APIs and tools built on top of it. This module focuses mostly on the essentials of the core language, plus some key surrounding topics — learning these topics will give you a solid basis to work from.
+JavaScript is a huge topic, with so many different features, styles, and techniques to learn, and so many APIs and tools built on top of it. This module focuses on the essentials of the core language, plus some key surrounding topics — learning these topics will give you a solid basis to work from.
 
 ## Prerequisites
 

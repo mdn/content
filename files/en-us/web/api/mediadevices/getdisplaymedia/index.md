@@ -24,7 +24,7 @@ getDisplayMedia(options)
 ### Parameters
 
 - `options` {{optional_inline}}
-  - : An optional object specifying requirements for the returned {{domxref("MediaStream")}}.
+  - : An object specifying requirements for the returned {{domxref("MediaStream")}}.
     The options for `getDisplayMedia()` work in the same as the [constraints](/en-US/docs/Web/API/MediaDevices/getUserMedia#parameters) for the {{domxref("MediaDevices.getUserMedia()")}} method, although in that case only `audio` and `video` can be specified.
     The list of possible option properties for `getDisplayMedia()` is as follows:
     - `video` {{optional_inline}}
@@ -39,32 +39,43 @@ getDisplayMedia(options)
     - `monitorTypeSurfaces` {{Experimental_Inline}} {{optional_inline}}
       - : An enumerated value specifying whether the browser should offer entire screens in the screen capture options presented to the user alongside tab and window options.
         This option is intended to protect companies from leakage of private information through employee error when using video conferencing apps.
-        Possible values are `include`, which hints that the browser should include screen options, and `exclude`, which hints that they should be excluded.
-        A default value is not mandated by the spec; see the [Browser compatibility](#browser_compatibility) section for browser-specific defaults.
+        Possible values are:
+        - `include`: Hints that the browser should include screen options.
+        - `exclude`: Hints that screen options should be excluded.
 
         > [!NOTE]
         > You cannot set `monitorTypeSurfaces: "exclude"` at the same time as [`displaySurface: "monitor"`](/en-US/docs/Web/API/MediaTrackConstraints/displaySurface) as the two settings are contradictory.
         > Trying to do so will result in the `getDisplayMedia()` call failing with a `TypeError`.
 
     - `preferCurrentTab` {{non-standard_inline}} {{Experimental_Inline}} {{optional_inline}}
-      - : A boolean; a value of `true` instructs the browser to offer the current tab as the most prominent capture source, i.e., as a separate "This Tab" option in the "Choose what to share" options presented to the user.
+      - : A boolean; a value of `true` instructs the browser to offer the current tab as the most prominent capture source, that is, as a separate "This Tab" option in the "Choose what to share" options presented to the user.
         This is useful as many app types generally just want to share the current tab.
         For example, a slide deck app might want to let the user stream the current tab containing the presentation to a virtual conference.
-        A default value is not mandated by the spec; see the [Browser compatibility](#browser_compatibility) section for browser-specific defaults.
     - `selfBrowserSurface` {{Experimental_Inline}} {{optional_inline}}
       - : An enumerated value specifying whether the browser should allow the user to select the current tab for capture.
         This helps to avoid the "infinite hall of mirrors" effect experienced when a video conferencing app inadvertently shares its own display.
-        Possible values are `include`, which hints that the browser should include the current tab in the choices offered for capture, and `exclude`, which hints that it should be excluded.
-        A default value is not mandated by the spec; see the [Browser compatibility](#browser_compatibility) section for browser-specific defaults.
+        Possible values are:
+        - `include`: Hints that the browser should include the current tab in the choices offered for capture.
+        - `exclude`: Hints that the current tab should be excluded from the choices.
     - `surfaceSwitching` {{Experimental_Inline}} {{optional_inline}}
       - : An enumerated value specifying whether the browser should display a control to allow the user to dynamically switch the shared tab during screen-sharing.
-        This is much more convenient than having to go through the whole sharing process again each time a user wants to switch the shared tab.
-        Possible values are `include`, which hints that the browser should include the control, and `exclude`, which hints that it should not be shown.
-        A default value is not mandated by the spec; see the [Browser compatibility](#browser_compatibility) section for browser-specific defaults.
+        This is more convenient than having to go through the whole sharing process again each time a user wants to switch the shared tab.
+        Possible values are:
+        - `include`: Hints that the browser should include the control.
+        - `exclude`: Hints that the control should not be shown.
     - `systemAudio` {{Experimental_Inline}} {{optional_inline}}
       - : An enumerated value specifying whether the browser should include the system audio among the possible audio sources offered to the user.
-        Possible values are `include`, which hints that the browser should include the system audio in the list of choices, and `exclude`, which hints that it should be excluded.
-        A default value is not mandated by the spec; see the [Browser compatibility](#browser_compatibility) section for browser-specific defaults.
+        Possible values are:
+        - `include`: Hints that the browser should include the system audio in the list of choices.
+        - `exclude`: Hints that system audio should be excluded from the choices shown.
+    - `windowAudio` {{Experimental_Inline}} {{optional_inline}}
+      - : An enumerated value that hints to the browser what audio sharing option the user should be presented with alongside window sharing options. Possible values are:
+        - `exclude`: Hints that audio should not be shareable when a window sharing option is chosen.
+        - `window`: Hints that when a window sharing option is chosen, only audio originating from that window should be shared.
+        - `system`: Hints that when a window sharing option is chosen, all system audio should be shared.
+
+> [!NOTE]
+> For most of these options, a default value is not mandated by the spec. For standalone options, where a default is not mentioned, see the [Browser compatibility](#browser_compatibility) section for browser-specific defaults.
 
 > [!NOTE]
 > See the article [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints) for a lot more detail on how these options work.

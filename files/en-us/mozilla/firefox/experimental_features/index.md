@@ -49,6 +49,20 @@ HTML password input elements ([`<input type="password">`](/en-US/docs/Web/HTML/R
 - `layout.forms.reveal-password-button.enabled`
   - : Set to `true` to enable.
 
+### Time picker for datetime-local input field
+
+HTML datetime-local input elements ([`<input type="datetime-local">`](/en-US/docs/Web/HTML/Reference/Elements/input/datetime-local)) now includes a time picker ([Firefox bug 1726108](https://bugzil.la/1726108)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 144           | No                  |
+| Developer Edition | 144           | No                  |
+| Beta              | 144           | No                  |
+| Release           | 144           | No                  |
+
+- `dom.forms.datetime.timepicker`
+  - : Set to `true` to enable.
+
 ## CSS
 
 ### Hex boxes to display stray control characters
@@ -431,20 +445,6 @@ The non-standard events [`beforescriptexecute`](/en-US/docs/Web/API/Document/bef
 | Release           | 139           | Yes                 |
 
 - `dom.events.script_execute.enable`
-  - : Set to `true` to enable.
-
-### PerformanceEventTiming.interactionId
-
-{{domxref("PerformanceEventTiming.interactionId")}} can be used to measure latency timing for events triggered by a particular user interaction. ([Firefox bug 1934683](https://bugzil.la/1934683)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 138           | No                  |
-| Developer Edition | 138           | No                  |
-| Beta              | 138           | No                  |
-| Release           | 138           | No                  |
-
-- `dom.performance.event_timing.enable_interactionid`
   - : Set to `true` to enable.
 
 ### Notification actions and maxActions properties
