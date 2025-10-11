@@ -6,7 +6,7 @@ browser-compat: css.types.calc
 sidebar: cssref
 ---
 
-The **`calc()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) lets you perform calculations when specifying CSS property values. It can be used with {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;frequency&gt;")}}, {{cssxref("&lt;angle&gt;")}}, {{cssxref("&lt;time&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, {{cssxref("&lt;number&gt;")}}, {{cssxref("&lt;integer&gt;")}}, and {{cssxref("color_value", "&lt;color-function&gt;")}} values.
+The **`calc()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) lets you perform calculations when specifying CSS property values. It can be used with {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;frequency&gt;")}}, {{cssxref("&lt;angle&gt;")}}, {{cssxref("&lt;time&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, {{cssxref("&lt;number&gt;")}}, {{cssxref("&lt;integer&gt;")}}, and {{cssxref("color_value", "&lt;color-function&gt;")}} values.
 
 {{InteractiveExample("CSS Demo: calc()")}}
 
@@ -104,9 +104,18 @@ When an {{cssxref("&lt;integer&gt;")}} is expected, the `calc()` expression can 
 - `calc()` cannot perform calculations on [intrinsic size values](/en-US/docs/Glossary/Intrinsic_Size) such as {{cssxref("auto")}} and {{cssxref("fit-content")}}. Use the {{cssxref("calc-size()")}} function instead.
 - The `*` and `/` operators do not require whitespace, but adding it for consistency is recommended.
 - It is permitted to nest `calc()` functions, in which case, the inner ones are treated as simple parentheses.
-- Current implementations require that, when using the `*` and `/` operators, one of the operands must be unitless. For `/`, the right operand must be unitless. For example `font-size: calc(1.25rem / 1.25)` is valid but `font-size: calc(1.25rem / 125%)` is invalid.
 - Math expressions involving percentages for widths and heights on table columns, table column groups, table rows, table row groups, and table cells in both auto and fixed layout tables _may_ be treated as if `auto` is specified.
 - See {{cssxref("calc-sum", "&lt;calc-sum&gt;")}} for more information on the syntax of `+` and `-` expressions.
+
+### CSS typed arithmetic
+
+When using `calc()` to multiply values, using the `*` operator, only one value can contain a unit. Calculations like `200px * 4px` are not supported as 800px<sup>2</sup> is meaningless in CSS.
+
+Inversely, `200px / 4px` resolves to `50`, which does make sense in CSS. Therefore, when using the `calc()` function to divide numbers, using the `/` operator, [supporting browsers](#browser_compatibility) allow units on both sides of the operand, provided they are of the same data type. For example, `100vw / 1px` is valid and results in a unitless value.
+
+The quotient can then be used in the values of properties or functions that accept a {{cssxref("number")}} as a value or parameter, or converted into a different data type by multiplying it by a typed value.
+
+For a full explanation of typed arithmetic in CSS, along with examples, see [Using CSS typed arithmetic](/en-US/docs/Web/CSS/CSS_Values_and_Units/Using_CSS_typed_arithmetic).
 
 ### Support for computing color channels in relative colors
 
@@ -262,5 +271,5 @@ For another example of using the `calc()` function to derive relative colors, se
 
 - {{CSSxRef("&lt;calc-sum&gt;")}}
 - {{CSSxRef("&lt;calc-keyword&gt;")}}
-- [CSS functions](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)
+- [CSS functions](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)
 - [A Complete Guide to calc() in CSS](https://css-tricks.com/a-complete-guide-to-calc-in-css/) (CSS-Tricks)

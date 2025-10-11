@@ -7,7 +7,7 @@ spec-urls: https://drafts.csswg.org/css-values-4/#ratio-value
 sidebar: cssref
 ---
 
-The **`<ratio>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) describes the proportional relationship between two values. It mostly represents the aspect ratio, which relates width to height. For example, the `<ratio>` is used as a value for the `aspect-ratio` media feature in {{cssxref("@media")}} media queries, the `aspect-ratio` size feature in {{cssxref("@container")}} container queries, and as a value for the CSS {{cssxref("aspect-ratio")}} property.
+The **`<ratio>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types) describes the proportional relationship between two values. It mostly represents the aspect ratio, which relates width to height. For example, the `<ratio>` is used as a value for the `aspect-ratio` media feature in {{cssxref("@media")}} media queries, the `aspect-ratio` size feature in {{cssxref("@container")}} container queries, and as a value for the CSS {{cssxref("aspect-ratio")}} property.
 
 ## Syntax
 
@@ -78,4 +78,4 @@ Two ratios are compared using the quotients' numeric values. For example, 16/16 
 - [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries) module
 - [CSS containment](/en-US/docs/Web/CSS/CSS_containment) module
 - [CSS box sizing](/en-US/docs/Web/CSS/CSS_box_sizing) module
-- [CSS values and units](/en-US/docs/Web/CSS/CSS_Values_and_Units) module
+- [CSS values and units](/en-US/docs/Web/CSS/CSS_values_and_units) module

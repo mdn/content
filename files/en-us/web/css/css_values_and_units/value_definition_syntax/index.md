@@ -1,6 +1,6 @@
 ---
 title: Value definition syntax
-slug: Web/CSS/CSS_Values_and_Units/Value_definition_syntax
+slug: Web/CSS/CSS_values_and_units/Value_definition_syntax
 page-type: guide
 spec-urls: https://drafts.csswg.org/css-values/#value-defs
 sidebar: cssref

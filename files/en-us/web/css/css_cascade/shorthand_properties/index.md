@@ -255,4 +255,4 @@ See [Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/H
 - [CSS cascading and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module
 - [Visual formatting models](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model)
 - [Initial](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value), [computed](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value), [used](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#used_value), and [actual](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#actual_value) values
-- [Value definition syntax](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+- [Value definition syntax](/en-US/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)

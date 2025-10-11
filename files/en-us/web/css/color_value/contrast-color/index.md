@@ -10,7 +10,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`contrast-color()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) takes a {{cssxref("color_value","color")}} value and returns a contrasting color. The function commonly ensures [the WCAG AA minimum contrast](https://w3c.github.io/wcag/guidelines/22/#contrast-minimum). The browsers may use different and better algorithms.
+The **`contrast-color()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) takes a {{cssxref("color_value","color")}} value and returns a contrasting color. The function commonly ensures [the WCAG AA minimum contrast](https://w3c.github.io/wcag/guidelines/22/#contrast-minimum). The browsers may use different and better algorithms.
 
 `contrast-color()` makes it easy, for example, to specify a text color and automatically generate a contrasting background color, or vice versa. It avoids the need to maintain background-text color pairs.
 

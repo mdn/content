@@ -6,7 +6,7 @@ browser-compat: css.types.easing-function.linear-function
 sidebar: cssref
 ---
 
-The **`linear()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) creates a transition curve that progresses uniformly between points.
+The **`linear()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) creates a transition curve that progresses uniformly between points.
 As an [`<easing-function>`](/en-US/docs/Web/CSS/easing-function), it creates transitions where the {{Glossary("interpolation")}} occurs at a constant rate from beginning to end.
 
 ## Syntax
