@@ -45,7 +45,7 @@ div {
   line-height: 100px;
   font-size: 40px;
   text-align: center;
-  font-family: arial, helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 #div1 {

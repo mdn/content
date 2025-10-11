@@ -93,7 +93,7 @@ div::before {
   font-size: min(6vh, 2rem);
   justify-content: center;
   display: flex;
-  font-family: comic-sans, papyrus, sans-serif;
+  font-family: "Comic Sans", "Papyrus", sans-serif;
 }
 ```
 
