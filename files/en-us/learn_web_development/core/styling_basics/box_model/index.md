@@ -506,7 +506,7 @@ body {
 
 All of the above fully applies to block boxes. Some of the properties can apply to inline boxes too, such as those created by a `<span>` element.
 
-In the example below, we have a `<span>` inside a paragraph. We have applied a `width`, `height`, `margin`, `border`, and `padding` to it. You can see that the width, height, and vertical margins do not affect the `<span>`. The vertical padding and border alter the size of the inline box but don't affect the position of the surrounding content. Instead, the vertical padding and border overlap other words in the paragraph. Only the horizontal padding, margins, and borders affect the position of the text surrounding the `<span>`.
+In the example below, we have a `<span>` inside a paragraph. We have applied a `width`, `height`, `margin`, `border`, and `padding` to it. You can see that the width, height, and top and bottom margins do not affect the `<span>`. The top and bottom padding and borders alter the size of the inline box but don't affect the position of the surrounding content. Instead, the top and bottom padding and borders overlap other words in the paragraph. Only the left and right padding, margins, and borders affect the position of the text surrounding the `<span>`.
 
 ```html live-sample___inline-box-model
 <p>
