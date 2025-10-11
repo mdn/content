@@ -10,7 +10,13 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`sibling-index()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) returns an integer representing the position of the current element in the DOM tree relative to all its sibling elements. The returned value is the index number of the contextual child's position among all the sibling elements within a parent element, with the first child returning `1` and the last child, returning {{domxref("Element.children")}}.length.
+The **`sibling-index()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) returns an integer representing the position of the current element in the DOM tree relative to all its sibling elements. The returned value is the index number of the contextual child's position among all the sibling elements within a parent element, with the first child returning `1` and the last child, returning the `length` of {{domxref("Element.children")}}.
+
+> [!NOTE]
+> Like the {{CSSxRef(":nth-child()")}} pseudo-class, `sibling-index()` starts from 1, not 0.
+
+> [!NOTE]
+> The {{CSSxRef("counter()")}} function provides a similar result but it returns a `<string>` (which is more suitable for [generated content](/en-US/docs/Web/CSS/CSS_generated_content), while `sibling-count()` returns an `<integer>` (which can be used for calculations).
 
 {{InteractiveExample("CSS Demo: sibling-index()")}}
 
@@ -68,9 +74,6 @@ The **`sibling-index()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/
 }
 ```
 
-> [!NOTE]
-> Like the {{CSSxRef(":nth-child()")}} pseudo-class, `sibling-index()` starts from 1, not 0.
-
 ## Syntax
 
 ```css-nolint
@@ -114,44 +117,6 @@ li {
 #### Results
 
 {{EmbedLiveSample("Dynamic list width", "300", "100")}}
-
-### Ordered list
-
-This example demonstrates how to create an ordered list using `sibling-index()`, without using the {{htmlelement("ol")}} element. Always use the most semantic element for the context; this example is included to demonstrate what can be done with CSS when you don't have the ability to change the HTML.
-
-#### HTML
-
-We include a {{htmlelement("nav")}} container and several children {{htmlelement("div")}} elements.
-
-```html
-<nav aria-label="Ordered list">
-  <div>One</div>
-  <div>Two</div>
-  <div>Three</div>
-  <div>Four</div>
-</nav>
-```
-
-#### CSS
-
-We make it visually appear as a numbered list by displaying the list index in ::before. Since content expects a string, we set a CSS counter to the numeric `sibling-index()` function and output it with `counter()` function.
-
-```css
-div {
-  --list-index: sibling-index();
-  display: flex;
-  gap: 1ch;
-}
-
-div::before {
-  counter-set: ordered var(--list-index);
-  content: counter(ordered);
-}
-```
-
-#### Results
-
-{{EmbedLiveSample("Ordered List", "300", "100")}}
 
 ### Sequential animations
 
@@ -215,3 +180,4 @@ li {
 ## See also
 
 - {{CSSxRef("sibling-count", "sibling-count()")}}
+- {{CSSxRef("counter", "counter()")}}
