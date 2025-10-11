@@ -16,7 +16,7 @@ The **`sibling-index()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/
 > Like the {{CSSxRef(":nth-child()")}} pseudo-class, `sibling-index()` starts from 1, not 0.
 
 > [!NOTE]
-> The {{CSSxRef("counter()")}} function provides a similar result but it returns a `<string>` (which is more suitable for [generated content](/en-US/docs/Web/CSS/CSS_generated_content), while `sibling-count()` returns an `<integer>` (which can be used for calculations).
+> The {{CSSxRef("counter()")}} function provides a similar result but it returns a `<string>` (which is more suitable for [generated content](/en-US/docs/Web/CSS/CSS_generated_content), while `sibling-index()` returns an `<integer>` (which can be used for calculations).
 
 {{InteractiveExample("CSS Demo: sibling-index()")}}
 
