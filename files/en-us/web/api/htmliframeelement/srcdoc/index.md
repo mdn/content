@@ -49,7 +49,7 @@ The `srcdoc` property allows absolutely any HTML markup to run in a frame by def
 If the frame is not sandboxed using the Content Security Property (CSP) [`sandbox` directive](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/sandbox) (or is sandboxed but includes the [`allow-same-origin`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/sandbox#allow-same-origin) value) then it will be same-origin with the parent.
 This means that the frame will have complete access to the parent DOM and resources, and visa versa.
 
-This is a very significant vector for [Cross-site-scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks if potentially unsafe strings provided by a user are injected into a frame without first being sanitized.
+This is a significant vector for [Cross-site-scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks if potentially unsafe strings provided by a user are injected into a frame without first being sanitized.
 Consider the following code where a string of HTML from a user might be passed into a frame that is then added to the document.
 
 ```js
