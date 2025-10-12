@@ -33,7 +33,7 @@ Setting the property accepts either a {{domxref("TrustedScript")}} object or a s
 
 The **`textContent`** property of the {{domxref("HTMLScriptElement")}} interface represents the text content inside the {{HTMLElement("script")}} element.
 
-For an executable script {{domxref('HTMLScriptElement/type','type')}}, such as a module or classic script, this text is inline executable code.
+For an executable script (that is, a script whose {{domxref('HTMLScriptElement/type','type')}} indicates that it is a module or classic script), this text is inline executable code.
 For other types it might represent an import map, speculation rules, or some other kind of data block.
 
 Note that if the {{domxref('HTMLScriptElement/src','src')}} property is set the content of the `textContent` property is ignored.
@@ -51,7 +51,7 @@ const untrustedCode = "alert('Potentially evil code!');";
 scriptElement.textContent = untrustedCode; // shows the alert
 ```
 
-You can mitigate these issues by always assigning {{domxref("TrustedScript")}} objects instead of strings, and [enforcing trusted type](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) using the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) CSP directive.
+You can mitigate these issues by always assigning {{domxref("TrustedScript")}} objects instead of strings, and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) using the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) CSP directive.
 This ensures that the input is passed through a transformation function, which has the chance to [sanitize](/en-US/docs/Web/Security/Attacks/XSS#sanitization) or reject the text before it is injected.
 
 The behavior of the transformation function will depend on the specific use case that requires a user provided script.
