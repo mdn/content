@@ -120,21 +120,39 @@ Note that in this case we're not using the policy to create trusted scripts (for
 ```js
 // Set the textContent property
 el.textContent = "console.log(10);";
-console.log(`textContent: ${el.textContent}`); // "textContent: console.log(10);"
-console.log(`text: ${el.text}`); // "text: console.log(10);"
-console.log(`innerText: ${el.innerText}`); // "innerText: console.log(10);"
+
+console.log(`textContent: ${el.textContent}`);
+// "textContent: console.log(10);"
+
+console.log(`text: ${el.text}`);
+// "text: console.log(10);"
+
+console.log(`innerText: ${el.innerText}`);
+// "innerText: console.log(10);"
 
 // Set the text property
 el.text = "const num = 10;\nconsole.log(num)";
-console.log(`textContent: ${el.textContent}`); // textContent: const num = 10; console.log(num)"
-console.log(`text: ${el.text}`); // "text: const num = 10; console.log(num)"
-console.log(`innerText: ${el.innerText}`); // "innerText: const num = 10; console.log(num)"
+
+console.log(`textContent: ${el.textContent}`);
+// textContent: const num = 10; console.log(num)"
+
+console.log(`text: ${el.text}`);
+// "text: const num = 10; console.log(num)"
+
+console.log(`innerText: ${el.innerText}`);
+// "innerText: const num = 10; console.log(num)"
 
 // Set the innerText property
 el.innerText = "const num = 10;alert('Help')";
-console.log(`textContent: ${el.textContent}`); // textContent: const num = 10;alert('Help')"
-console.log(`text: ${el.text}`); // "text: const num = 10;alert('Help')"
-console.log(`innerText: ${el.innerText}`); // "innerText: const num = 10;alert('Help')"
+
+console.log(`textContent: ${el.textContent}`);
+// textContent: const num = 10;alert('Help')"
+
+console.log(`text: ${el.text}`);
+// "text: const num = 10;alert('Help')"
+
+console.log(`innerText: ${el.innerText}`);
+// "innerText: const num = 10;alert('Help')"
 ```
 
 ## Specifications
