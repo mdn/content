@@ -126,7 +126,7 @@ const frameDoc = frame.srcdoc;
 ```
 
 > [!WARNING]
-> While you can directly assign a string to `srcdoc` this is a [security risk](#security_considerations) if the string to be inserted might contain potentially malicious content.
+> While you can directly assign a string to `srcdoc`, this is a [security risk](#security_considerations) if the string to be inserted might contain potentially malicious content.
 > You should use `TrustedHTML` to ensure that the content is sanitized before it is inserted, and you should set a CSP header to [enforce trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types).
 
 ## Specifications
