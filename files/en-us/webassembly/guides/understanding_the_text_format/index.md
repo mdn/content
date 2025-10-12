@@ -291,7 +291,7 @@ The examples above show how to work with numbers in assembly code, adding them t
 
 For working with strings and other more complex data types we use `memory`, which can be created in either the WebAssembly or JavaScript, and shared between environments (more recent versions of WebAssembly can also use [Reference types](#reference_types)).
 
-In WebAssembly, `memory` is just a large contiguous, mutable array of raw bytes, that can grow over time (see [linear memory](https://webassembly.github.io/spec/core/intro/overview.html?highlight=linear+memory) in the specification). WebAssembly contains [memory instructions](/en-US/docs/WebAssembly/Reference/Memory) like [`i32.load`](/en-US/docs/WebAssembly/Reference/Memory/Load) and [`i32.store`](/en-US/docs/WebAssembly/Reference/Memory/Store) for reading and writing bytes between the stack and any location in a memory.
+In WebAssembly, `memory` is just a large contiguous, mutable array of raw bytes that can grow over time (see [linear memory](https://webassembly.github.io/spec/core/intro/overview.html?highlight=linear+memory) in the specification). WebAssembly contains [memory instructions](/en-US/docs/WebAssembly/Reference/Memory) like [`i32.load`](/en-US/docs/WebAssembly/Reference/Memory/Load) and [`i32.store`](/en-US/docs/WebAssembly/Reference/Memory/Store) for reading and writing bytes between the stack and any location in a memory.
 
 From JavaScript's point of view, it's as though memory is all inside one big growable {{jsxref("ArrayBuffer")}}.
 JavaScript can create WebAssembly linear memory instances via the [`WebAssembly.Memory()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Memory) interface and export them to a memory instance, or access a memory instance created within the WebAssembly code and exported. JavaScript `Memory` instances have a [`buffer`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Memory/buffer) getter, which returns an `ArrayBuffer` that points at the whole linear memory.
@@ -443,6 +443,9 @@ To show how this works in more detail, we'll extend the previous example to writ
 The code below shows how we first import two memory instances, using the same approach as in the previous example.
 To show how you can create memory within the WebAssembly module, we've created a third memory instance named `$mem2` in the module and _exported_ it.
 
+> [!NOTE]
+> If you’re using [wabt](https://github.com/WebAssembly/wabt) (e.g. `wat2wasm`), you may need to pass `--enable-multi-memory` because multi-memory support is still optional.
+
 ```wat
 (module
   ;; ...
@@ -458,7 +461,7 @@ To show how you can create memory within the WebAssembly module, we've created a
 )
 ```
 
-The three memory instances are automatically assigned an instance based on their order of creation.
+The three memory instances are automatically assigned a memory index based on their order of creation.
 The code below shows how we can specify this index (e.g., `(memory 1)`) in the `data` instruction to choose the memory we want to write a string to (you can use the same approach for all other memory instructions, such as `load` and `grow`).
 Here we write a string that indicates each memory type.
 
@@ -514,13 +517,13 @@ The complete module is shown below:
     ;; Log memory index 1, offset 0
     i32.const 1  ;; memory index 1
     i32.const 0  ;; memory offset 0
-    i32.const 20  ;; string length 20
+    i32.const 20  ;; string length 20 - overruns the length of the data for illustration
     call $logMemory
 
     ;; Log memory index 2, offset 0
     i32.const 2  ;; memory index 2
     i32.const 0  ;; memory offset 0
-    i32.const 12  ;; string length 13
+    i32.const 13  ;; string length 13
     call $logMemory
   )
 
@@ -759,7 +762,7 @@ These work as follows:
 > (call_indirect (type $void_to_i32) (i32.const 0))
 > ```
 
-After converting to assembly, we then use `shared0.wasm` and `shared1.wasm` in JavaScript via the following code:
+After converting to a WebAssembly binary (Wasm), we then use `shared0.wasm` and `shared1.wasm` in JavaScript via the following code:
 
 ```js
 const importObj = {
