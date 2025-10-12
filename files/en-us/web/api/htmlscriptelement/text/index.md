@@ -44,7 +44,7 @@ See [security considerations](/en-US/docs/Web/API/HTMLScriptElement/textContent#
 
 ## Examples
 
-See the [Examples](/en-US/docs/Web/API/HTMLScriptElement/textContent#examples) in {{domxref("HTMLScriptElement.textContent")}}.
+See the [examples](/en-US/docs/Web/API/HTMLScriptElement/textContent#examples) in {{domxref("HTMLScriptElement.textContent")}}.
 
 ## Specifications
 
