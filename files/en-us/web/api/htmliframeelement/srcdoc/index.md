@@ -60,7 +60,7 @@ document.body.appendChild(iframe);
 ```
 
 If the frame is not expected to need access to your parent document, you can significantly mitigate the risk by using a CSP sandbox without the `allow-same-origin` value.
-The frame will then be treated as a cross-origin resource, and and attacks will be significantly restricted.
+The frame will then be treated as a cross-origin resource, and attacks will be significantly restricted.
 You can also use a more general CSP to restrict the locations from which scripts and other resources are allowed to be fetched.
 
 You can further reduce the risk by always assigning {{domxref("TrustedHTML")}} objects instead of strings, and [enforcing trusted type](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) using the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) CSP directive.
