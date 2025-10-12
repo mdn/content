@@ -59,7 +59,7 @@ iframe.srcdoc = untrustedStringFromUser;
 document.body.appendChild(iframe);
 ```
 
-If the frame is not expected to need access to your parent document, you can significantly mitigate the risk by using a CSP sandbox without the `allow-same-origin` value.
+If the frame is not expected to need access to your parent document, you can mitigate the risk by using a CSP sandbox without the `allow-same-origin` value.
 The frame will then be treated as a cross-origin resource, and attacks will be significantly restricted.
 You can also use a more general CSP to restrict the locations from which scripts and other resources are allowed to be fetched.
 
