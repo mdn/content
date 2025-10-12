@@ -33,7 +33,7 @@ Setting the property accepts either a {{domxref("TrustedScript")}} object or a s
 
 The **`text`** property of the {{domxref("HTMLScriptElement")}} interface represents the text content inside the {{HTMLElement("script")}} element.
 
-For an executable script {{domxref('HTMLScriptElement/type','type')}}, such as a module or classic script, this text is inline executable code.
+For an executable script (that is, a script whose {{domxref('HTMLScriptElement/type','type')}} indicates that it is a module or classic script), this text is inline executable code.
 For other types it might represent an import map, speculation rules, or some other kind of data block.
 
 Note that if the {{domxref('HTMLScriptElement/src','src')}} property is set the content of the `text` property is ignored.
