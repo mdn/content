@@ -160,7 +160,7 @@ const id = setInterval(untrustedCode, 1000);
 
 Websites with a [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) will prevent such code running by default; if you need to use the method with `code` then you will first need to allow the [`unsafe-eval`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#unsafe-eval) in your CSP [`script-src`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src).
 
-If you must allow the scripts to run you can mitigate these issues by always assigning {{domxref("TrustedScript")}} objects instead of strings, and [enforcing trusted type](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) using the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) CSP directive.
+If you must allow the scripts to run you can mitigate these issues by always assigning {{domxref("TrustedScript")}} objects instead of strings, and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) using the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) CSP directive.
 This ensures that the input is passed through a transformation function, which has the chance to [sanitize](/en-US/docs/Web/Security/Attacks/XSS#sanitization) or reject the text before it is injected.
 
 The behavior of the transformation function will depend on the specific use case that requires a user provided script.
