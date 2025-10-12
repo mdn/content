@@ -444,7 +444,7 @@ The code below shows how we first import two memory instances, using the same ap
 To show how you can create memory within the WebAssembly module, we've created a third memory instance named `$mem2` in the module and _exported_ it.
 
 > [!NOTE]
-> If you’re using [wabt](https://github.com/WebAssembly/wabt) (e.g. `wat2wasm`), you may need to pass `--enable-multi-memory` because multi-memory support is still optional.
+> If you're using [wabt](https://github.com/WebAssembly/wabt) (e.g., `wat2wasm`), you may need to pass `--enable-multi-memory` because multi-memory support is still optional.
 
 ```wat
 (module
