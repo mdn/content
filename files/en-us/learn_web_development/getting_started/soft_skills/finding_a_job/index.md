@@ -190,7 +190,7 @@ Before you start applying for a job, there are some useful steps you can take to
 - Do some other research on the company — read their websites/blogs, find out about their history and what their goals are. Spend some time using their products and becoming familiar with how they work — for example, install their software and use it to build a demo app, or write a website that uses their APIs to do something.
   > [!NOTE]
   > For bonus points, try to identify a problem they are currently trying to solve or a bug in their product, and suggest a fix for it along with a demo or code snippets.
-- Customize your CV/résumé to suit this particular job. Look at the job description and amplify your most relevant skills and work experience, while minimizing or even removing items that seem less relevant. Also, highlight the demos/examples most relevant to this job on your portfolio in some way. You could, for example, put such code at the top of your portfolio.
+- Customize your CV/résumé to suit this particular job. Look at the job description and amplify your most relevant skills and work experience, while minimizing or even removing items that seem less relevant. Also, make sure the demos/examples most relevant to this job are highlighted on your portfolio in some way. You could, for example, put such code at the top of your portfolio. 
 
 ### Applying for the job
 
