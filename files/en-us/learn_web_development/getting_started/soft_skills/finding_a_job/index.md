@@ -138,7 +138,7 @@ This should include:
 - A list of websites, apps, and other relevant products that you've worked on. For each one, include a title, thumbnail image, and a description of the project and what you did on it. If you want to say quite a lot about the projects, create a separate page about each one! Include a list of the technologies used to build the project and a link to the source code if you are able to (not all source is open).
 - Links to the source code and live demos of your own personal projects and experiments. Each project should include a description of what it does and the technologies used to build it.
 - Links to blog posts, writing samples, conference talks, and any other assets you think might help show off your skills.
-- A list of contributions you've made to open source projects, stating what the contribution was, how it improved the project, and what technologies were involved. You should include links to the actual changes you made (e.g. source code, published documentation), and a link to the changelog (for example, the GitHub pull request) that proves you did the work.
+- A list of contributions you've made to open source projects, stating what the contribution was, how it improved the project, and what technologies were involved. You should include links to the actual changes you made (e.g., source code, published documentation), and a link to the changelog (for example, the GitHub pull request) that proves you did the work.
 
 Keep your portfolio as highlights of your best work. You want it to be easy to access and look through. Include only a few significant items in each section; otherwise the hiring manager will get bored and move on. A nice clean design will help with the experience, but a complex design might reduce legibility.
 
@@ -237,7 +237,7 @@ There are some general things you should do to prepare for _any_ interview:
 - Do some [preparation for coding interviews](#coding_interviews).
 - Build a collection of anecdotes to use for [experience-based interview questions](#experience-based_questions).
 - Think about what your strengths and weaknesses are, and be realistic with your answers. You will seem more plausible if you don't present yourself as perfect in every way when interviewers invariably ask you about your biggest strengths and weaknesses.
-- Do some research into what the typical salary ranges and other benefits (such as health insurance or bonuses) are for the kind of job you are going for (e.g. level, geographical region). This will be useful when [deciding whether to accept a job offer](#accepting_the_offer).
+- Do some research into what the typical salary ranges and other benefits (such as health insurance or bonuses) are for the kind of job you are going for (e.g., level, geographical region). This will be useful when [deciding whether to accept a job offer](#accepting_the_offer).
 
 You should also do some preparation specific to each company you apply to:
 
@@ -247,11 +247,11 @@ You should also do some preparation specific to each company you apply to:
   - Research who their main competitors are.
   - Become familiar with their products and how they work — for example, install their software and use it to build a demo app, or write a website that uses their APIs to do something. It will impress your interviewers if you can demonstrate some good insights around their situation and how you think it could be improved. Interviewers will often ask some specific questions to test your knowledge of the company and industry it exists in.
 - Related to the above point, think of some questions you would ask the interviewers about the company and their roles. Interviewers always ask if you have any questions for them at the end of the interview, and it reflects well on you and makes you sound thoughtful and inquisitive if you come out with questions more meaningful than "what did you have for breakfast today?"
-- If you have contacts at the company (e.g. from your community networks), reach out to them and ask about the job. What do they think about it? Is there anything specific you should focus on? Is there anything you should say or not say? It might also help during the interview to mention that you know "Bob from the e-commerce team" (or whatever).
+- If you have contacts at the company (e.g., from your community networks), reach out to them and ask about the job. What do they think about it? Is there anything specific you should focus on? Is there anything you should say or not say? It might also help during the interview to mention that you know "Bob from the e-commerce team" (or whatever).
 
 ### Initial screening
 
-Once the company have looked at your application and decided you sound like a "potential", they will probably start off by inviting you to an initial phone interview, just with the recruiter or hiring manager. This is usually a short interview to assess "culture fit" (i.e. if you're going to get on well with them), make sure they don't pick up on any immediate red flags that suggest you won't be a good employee, and tell you about what to expect from the rest of the interview process.
+Once the company have looked at your application and decided you sound like a "potential", they will probably start off by inviting you to an initial phone interview, just with the recruiter or hiring manager. This is usually a short interview to assess "culture fit" (i.e., if you're going to get on well with them), make sure they don't pick up on any immediate red flags that suggest you won't be a good employee, and tell you about what to expect from the rest of the interview process.
 
 At this stage, you should be friendly and talkative. But don't talk too much; act naturally, and see where the interviewer steers the conversation. Make sure to let them know what days and times will be suitable for you to attend further interviews. Try to be as flexible as you can, and be prepared to move your schedule around to accommodate them.
 
@@ -262,7 +262,7 @@ Don't be complacent however — you don't know for definite what questions they 
 Usually, the bulk of the interview process consists of one or more main interviews. These can vary greatly between different companies in both function and frequency.
 
 - You might have one main interview, but you are more likely to have multiple interviews that test you on different aspects of the job (for example, the actual coding work, teamwork, working processes, documentation/communication, conflict resolution).
-- They may be with a single interviewer, or multiple interviewers asking you questions about different aspects (i.e. a panel interview).
+- They may be with a single interviewer, or multiple interviewers asking you questions about different aspects (i.e., a panel interview).
 - Some interviews may be high-level or more exploratory (for example, "describe the process you'd use to deliver x", or "what do you think the main problems are with this solution?") and some may be lower level and more intensive (for example "write a JavaScript program that solves this problem").
 
 #### Experience-based questions
@@ -282,7 +282,7 @@ Some interviews will be coding interviews, designed to test your ability at solv
 - "Write a JavaScript function that takes inputs x and y, and returns z."
 - "A colleague has written the following React component, but it has some bugs. Can you identify what's wrong with it and rewrite it to fix the problems?"
 - "Look at the following code, and describe to me what it is doing."
-- "Write an algorithm that generates the first $n$ entries in the Fibonacci sequence, where $n$ is a positive number."
+- "Write an algorithm that generates the first `n` entries in the Fibonacci sequence, where `n` is a positive number."
 
 Often employers are looking at how you approach the problem rather than the end result — how you commented your code, how you dealt with error handling, and what you might have done if you'd had more time.
 
