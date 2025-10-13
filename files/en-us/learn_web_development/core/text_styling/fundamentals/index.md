@@ -91,11 +91,11 @@ To set a different font for your text, you use the {{cssxref("font-family")}} pr
 
 ```css
 p {
-  font-family: Arial;
+  font-family: "Arial";
 }
 ```
 
-This would make all paragraphs on a page adopt the arial font, which is found on any computer.
+This would make all paragraphs on a page adopt the Arial font, which is found on any computer.
 
 > [!NOTE]
 > Scrimba's [Web-safe fonts](https://scrimba.com/learn-html-and-css-c0p/~01r?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> scrim provides an interactive guide to why fonts are important, web-safe fonts, and how to specify fonts in CSS — along with a challenge to test your knowledge.
@@ -272,7 +272,7 @@ Since you can't guarantee the availability of the fonts you want to use on your 
 
 ```css
 p {
-  font-family: "Trebuchet MS", Verdana, sans-serif;
+  font-family: "Trebuchet MS", "Verdana", sans-serif;
 }
 ```
 
@@ -293,7 +293,7 @@ Let's add to our previous example, giving the paragraphs a sans-serif font:
 ```css live-sample___2fonts live-sample___3font-style live-sample___4shadows live-sample___5text-align live-sample___6line-height live-sample___7letter-word-spacing
 p {
   color: red;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 ```
 
@@ -372,7 +372,7 @@ h1 + p {
 p {
   font-size: 1.5rem;
   color: red;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 ```
 
@@ -514,8 +514,8 @@ A full example would look like this:
 
 ```css
 font:
-  italic normal bold normal 3em/1.5 Helvetica,
-  Arial,
+  italic normal bold normal 3em/1.5 "Helvetica",
+  "Arial",
   sans-serif;
 ```
 

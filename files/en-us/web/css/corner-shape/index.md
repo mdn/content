@@ -156,7 +156,7 @@ We give the box a fixed {{cssxref("height")}}, a {{cssxref("box-shadow")}}, a `b
 
 ```css hidden live-sample___basic-corner-shape
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   width: 240px;
   margin: 20px auto;
 }
@@ -245,7 +245,7 @@ html {
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   height: inherit;
   margin: 0;
   display: flex;
@@ -361,7 +361,7 @@ We apply a {{cssxref("box-shadow")}} to the `<section>`. We also give the `<sect
 
 ```css hidden live-sample___corner-shape-select
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 body {
@@ -490,7 +490,7 @@ We apply a {{cssxref("box-shadow")}} to the `<section>` element. Additional basi
 
 ```css hidden live-sample___superellipse-slider
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 body {

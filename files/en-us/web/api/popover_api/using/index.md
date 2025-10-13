@@ -498,7 +498,7 @@ The two popover properties we want to transition are [`opacity`](/en-US/docs/Web
 
 ```css
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 /* Transition for the popover itself */
@@ -605,7 +605,7 @@ We have defined keyframes that specify the desired entry and exit animations, an
 
 ```css
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 [popover] {

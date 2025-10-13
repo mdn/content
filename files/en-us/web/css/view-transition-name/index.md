@@ -256,7 +256,7 @@ We use [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) to lay out the `<l
 }
 
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   height: 100%;
 }
 

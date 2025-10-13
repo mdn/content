@@ -119,10 +119,10 @@ The next example is an update of the previous one, in which we've used custom pr
 width: calc(
   progress(
       var(--container-width),
-      var(--custom-minwidth),
-      var(--custom-maxwidth)
+      var(--custom-min-width),
+      var(--custom-max-width)
     ) *
-    var(--custom-maxwidth)
+    var(--custom-max-width)
 );
 ```
 
@@ -136,16 +136,16 @@ background-color: rgb(
       255 *
         progress(
           var(--container-width),
-          var(--custom-minwidth),
-          var(--custom-maxwidth)
+          var(--custom-min-width),
+          var(--custom-max-width)
         )
     )
     calc(
       255 *
         progress(
           var(--container-width),
-          var(--custom-minwidth),
-          var(--custom-maxwidth)
+          var(--custom-min-width),
+          var(--custom-max-width)
         )
     )
     255 / 0.5
@@ -190,12 +190,12 @@ section {
 
 ```css live-sample___basic
 section {
-  --custom-minwidth: 300px;
-  --custom-maxwidth: 700px;
+  --custom-min-width: 300px;
+  --custom-max-width: 700px;
   --custom-width: 600px;
 
-  min-width: var(--custom-minwidth);
-  max-width: var(--custom-maxwidth);
+  min-width: var(--custom-min-width);
+  max-width: var(--custom-max-width);
   width: var(--custom-width);
 
   background-color: cyan;
@@ -212,8 +212,8 @@ Now onto our `<div>` — we first give it a `height` and a dark `background-colo
   width: calc(
     progress(
         var(--custom-width),
-        var(--custom-minwidth),
-        var(--custom-maxwidth)
+        var(--custom-min-width),
+        var(--custom-max-width)
       ) *
       100%
   );
@@ -286,13 +286,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  --custom-minwidth: 320px;
-  --custom-maxwidth: 1200px;
+  --custom-min-width: 320px;
+  --custom-max-width: 1200px;
 }
 
 article {
-  min-width: var(--custom-minwidth);
-  max-width: var(--custom-maxwidth);
+  min-width: var(--custom-min-width);
+  max-width: var(--custom-max-width);
   position: relative;
   width: 70%;
   height: 600px;
@@ -309,8 +309,8 @@ We also give it a `height` and {{cssxref("background-color")}}, then absolutely 
   width: calc(
     progress(
         var(--container-width),
-        var(--custom-minwidth),
-        var(--custom-maxwidth)
+        var(--custom-min-width),
+        var(--custom-max-width)
       ) *
       100%
   );
@@ -328,12 +328,12 @@ Next, we'll look at our `background` `<section>`. We absolutely position it rela
 .background {
   position: absolute;
   inset: 0;
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/wide-background.jpg);
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/wide-background.jpg");
   background-position-x: calc(
     progress(
         var(--container-width),
-        var(--custom-minwidth),
-        var(--custom-maxwidth)
+        var(--custom-min-width),
+        var(--custom-max-width)
       ) *
       100%
   );
@@ -355,16 +355,16 @@ We position the `content` `<section>` absolutely so it sits over the top of the 
         255 *
           progress(
             var(--container-width),
-            var(--custom-minwidth),
-            var(--custom-maxwidth)
+            var(--custom-min-width),
+            var(--custom-max-width)
           )
       )
       calc(
         255 *
           progress(
             var(--container-width),
-            var(--custom-minwidth),
-            var(--custom-maxwidth)
+            var(--custom-min-width),
+            var(--custom-max-width)
           )
       )
       255 / 0.5
@@ -373,8 +373,8 @@ We position the `content` `<section>` absolutely so it sits over the top of the 
     (
         progress(
             var(--container-width),
-            var(--custom-minwidth),
-            var(--custom-maxwidth)
+            var(--custom-min-width),
+            var(--custom-max-width)
           ) /
           2
       ) +
