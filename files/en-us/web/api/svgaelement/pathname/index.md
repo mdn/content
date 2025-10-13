@@ -8,7 +8,7 @@ browser-compat: api.SVGAElement.pathname
 
 {{APIRef("SVG")}}
 
-The **`pathname`** property of the {{domxref("SVGAElement")}} returns a string containing an initial `/` followed by the path of the URL, not including the query string or fragment.
+The **`pathname`** property of the {{domxref("SVGAElement")}} interface returns a string containing an initial `/` followed by the path of the URL, not including the query string or fragment.
 
 This property can be set, to change the URL's pathname.
 
