@@ -8,7 +8,7 @@ browser-compat: api.SVGAElement.download
 
 {{APIRef("SVG")}}
 
-The **`download`** property of the {{domxref("SVGAElement")}} returns a string indicating that the browser should treat the linked URL as a download.
+The **`download`** property of the {{domxref("SVGAElement")}} interface returns a string indicating that the browser should treat the linked URL as a download.
 
 This property can be set, to change the URL's `download` value. It reflects the value of the [`download`](/en-US/docs/Web/HTML/Reference/Elements/a#download) attribute.
 
