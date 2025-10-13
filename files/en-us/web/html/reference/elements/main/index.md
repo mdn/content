@@ -29,7 +29,7 @@ The **`<main>`** [HTML](/en-US/docs/Web/HTML) element represents the dominant co
 ```css interactive-example
 header {
   font:
-    bold 7vw Arial,
+    bold 7vw "Arial",
     sans-serif;
 }
 ```

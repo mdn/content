@@ -314,7 +314,7 @@ body {
   background-color: whitesmoke;
   color: #4d4d4d;
   font:
-    1.6rem/1.25 Arial,
+    1.6rem/1.25 "Arial",
     sans-serif;
   margin: 0 auto;
   max-width: 68rem;

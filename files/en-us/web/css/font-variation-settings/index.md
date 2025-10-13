@@ -179,7 +179,7 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground.
 p {
   font:
     1.2em "Amstelvar VF",
-    Georgia,
+    "Georgia",
     serif;
   font-size: 4rem;
   margin: 1rem;
@@ -264,7 +264,7 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground.
 p {
   font:
     1.2em "Roboto VF",
-    Helvetica,
+    "Helvetica",
     sans-serif;
   font-size: 4rem;
   margin: 1rem;

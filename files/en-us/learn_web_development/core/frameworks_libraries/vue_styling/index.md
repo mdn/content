@@ -123,8 +123,8 @@ body {
   margin: 0 auto;
   font:
     1.6rem/1.25 "Helvetica Neue",
-    Helvetica,
-    Arial,
+    "Helvetica",
+    "Arial",
     sans-serif;
   background-color: whitesmoke;
   color: #4d4d4d;
