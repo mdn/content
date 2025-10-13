@@ -49,19 +49,22 @@ For an object representing an inline style declaration (not computed styles) thi
 
 ### Basic usage
 
+This example demonstrates how to get and set local and computed element styles using both camel case and dash-named properties.
+
 #### HTML
 
-The HTML defines a {{htmlelement("div")}} with a number of styles set, nested within another that sets the `font-weight`.
-There are also buttons to get the inline styles and computed styles for the element (and hidden code for a reset button and logging).
+The HTML defines a {{htmlelement("div")}} with a number of styles set, nested within another that sets the `font-weight` as `bold`.
 
 ```html
 <div style="font-weight: bold;">
-  <div style="border-top: 1px solid blue; color: red;" id="elt">
-    An example div
+  <div style="border-top: 3px solid blue; color: red;margin:5px;" id="elt">
+    Div content.
+    <br />
+    Inner: "border-top: 3px solid blue; color: red;margin:5px;".
+    <br />
+    Outer: "font-weight: bold;"
   </div>
 </div>
-<button id="inline_style" type="button">Inline Style</button>
-<button id="computed_style" type="button">Computed Style</button>
 ```
 
 ```html hidden
@@ -70,7 +73,7 @@ There are also buttons to get the inline styles and computed styles for the elem
 
 ```css hidden
 #log {
-  height: 160px;
+  height: 140px;
   overflow: scroll;
   padding: 0.5rem;
   border: 1px solid black;
@@ -87,40 +90,69 @@ function log(text) {
 }
 ```
 
-The code below shows how you can get a particular property of the `CSSStyleProperties` using the dot notation: in this case the `borderTop` shorthand property.
+First get the local and computed style for the element with the ID of `"elt"`.
 
 ```js
 const element = document.querySelector("#elt");
 const elementStyle = element.style;
-const borderTop = elementStyle.borderTop;
-log(`"borderTop" = '${borderTop}'`);
+const computedStyle = window.getComputedStyle(element);
 ```
 
-We could also use the {{DOMxRef("CSSStyleDeclaration/getPropertyPriority", "getPropertyValue()")}} method or bracket notation, but the dot notation is the simplest approach.
-Below we show this for each of the longhand properties that correspond to `border-top`:
+Then we get the `borderTop` shorthand property of the `CSSStyleProperties` using the dot notation for both local and computed styles.
+Using the dot notation with a camel case property is the easiest way to access any property.
 
 ```js
-// Get the
-log(
-  `"border-top-width" = '${elementStyle.getPropertyValue("border-top-width")}'`,
-);
-log(`"border-top-color" = '${elementStyle["border-top-color"]}'`);
-log(`"borderTopStyle" = '${elementStyle.borderTopStyle}'`);
+// Get style using dot notation
+const elem_borderTop = elementStyle.borderTop;
+const comp_borderTop = computedStyle.borderTop;
+
+log('Format: Style = "Element" / "Computed"');
+log(`"borderTop" = "${elem_borderTop}" / "${comp_borderTop}"'`);
 ```
 
-Finally we show how you can set the inline style property of an element by setting `borderTopColor` to green.
-We demonstrate the effect on the shorthand property by logging the `borderTop` value.
+We can also get the same property using the {{DOMxRef("CSSStyleDeclaration/getPropertyPriority", "getPropertyValue()")}} method or bracket notation.
 
 ```js
-log("\nChange color to green and log borderTop");
-elementStyle.borderTopColor = "green";
-log(`"borderTop" = '${elementStyle.borderTop}'`);
+// Get style using dashed-name property value
+const elem_border_top = elementStyle.getPropertyValue("border-top");
+const comp_border_top = computedStyle.getPropertyValue("border-top");
+log(`"border-top" = "${elem_border_top}" / "${elem_border_top}"'`);
+```
+
+The following code gets each of the longhand properties that correspond to the shorthand property `border-top`, using the dot notation for simplicity.
+
+```js
+// Get shorthand properties using dot notation
+const elem_borderTopWidth = elementStyle.borderTopWidth;
+const comp_borderTopWidth = computedStyle.borderTopWidth;
+log(`"borderTopWidth" = "${elem_borderTopWidth}" / "${comp_borderTopWidth}"'`);
+
+const elem_borderTopColor = elementStyle.borderTopColor;
+const comp_borderTopColor = computedStyle.borderTopColor;
+log(`"borderTopColor" = "${elem_borderTopColor}" / "${comp_borderTopColor}"'`);
+
+const elem_borderTopStyle = elementStyle.borderTopStyle;
+const comp_borderTopStyle = computedStyle.borderTopStyle;
+log(`"borderTopStyle" = "${elem_borderTopStyle}" / "${comp_borderTopStyle}"'`);
+
+const elem_fontWeight = elementStyle.fontWeight;
+const comp_fontWeight = computedStyle.fontWeight;
+log(`"fontWeight" = "${elem_fontWeight}" / "${comp_fontWeight}"'`);
+```
+
+Lastly we demonstrate how you can use the dot notation to set a property value.
+In the following results section you will note that the bottom border of the element is a solid green line.
+
+```js
+// Set the bottom border style using dot notation
+elementStyle.borderBottom = "5px solid green";
 ```
 
 #### Results
 
 The results are shown below.
-Note how changing the longhand property is reflected in the corresponding shorthand property.
+Note how the values from the corresponding camel case (`borderTop`) and dash-named (`border-top`) properties are the same.
+The local and computed values for the longhand properties are often the same too, except that computed properties use `rgb()` syntax for colors and additionally include styles set on the parent `<div>`, such as the `font-weight`.
 
 {{EmbedLiveSample("Basic usage", "100", "250")}}
 
@@ -190,7 +222,9 @@ function getPopulatedProperties(elementStyles) {
       !Number.isNaN(Number.parseInt(prop, 10))
     ) {
       log(
-        `${elementStyles[prop]} = '${elementStyles.getPropertyValue(elementStyles[prop])}'`,
+        `${elementStyles[prop]} = '${elementStyles.getPropertyValue(
+          elementStyles[prop]
+        )}'`
       );
     }
   }
