@@ -37,7 +37,7 @@ For screen reader users, adding landmark roles effectively creates 'skip links' 
 
 ## Best practices
 
-Do not use `role="landmark"`. Do use HTML and subclass landmark roles. It is also good practice to include the role redundantly with the associated semantic element. It is not as good practice to use non-semantic elements, such as {{HTMLElement('div')}}, adding semantics with landmark roles. But do include one or the other or both. Otherwise, your content is no longer as navigable for screen reader users.
+Do not use `role="landmark"`; rather, use subclass landmark roles as appropriate, or semantic HTML if possible. Although no longer necessary, it is considered good practice to redundantly include the subclass landmark roles with the associated semantic element for legacy browsers. This is preferable to using landmark roles on non-semantic elements, such as {{HTMLElement('div')}}, but do use at least one of `role` or semantic elements for creating landmarks. Otherwise, your content will be less navigable for screen reader users.
 
 ## Specifications
 
