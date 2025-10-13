@@ -123,7 +123,7 @@ Also worth noting is that the subject element has an `animation-duration` applie
 }
 
 p {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 p {

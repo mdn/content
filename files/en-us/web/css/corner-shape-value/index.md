@@ -89,7 +89,7 @@ The `corner-shape` property defines the shape of the box's corners while the reg
 
 ```css hidden live-sample___value-comparison
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 body {
