@@ -35,7 +35,6 @@ parseFromString(input, mimeType)
   - : A string that specifies whether the XML parser or the HTML parser is used to parse the string.
 
     Allowed values are:
-
     - `text/html`
     - `text/xml`
     - `application/xml`
