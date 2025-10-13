@@ -247,7 +247,7 @@ You should also do some preparation specific to each company you apply to:
   - Research who their main competitors are.
   - Become familiar with their products and how they work — for example, install their software and use it to build a demo app, or write a website that uses their APIs to do something. It will impress your interviewers if you can demonstrate some good insights around their situation and how you think it could be improved. Interviewers will often ask some specific questions to test your knowledge of the company and industry it exists in.
 - Related to the above point, think of some questions you would ask the interviewers about the company and their roles. Interviewers always ask if you have any questions for them at the end of the interview, and it reflects well on you and makes you sound thoughtful and inquisitive if you come out with questions more meaningful than "what did you have for breakfast today?"
-- If you have contacts at the company (e.g. from your community networks), reach out to them and ask about the job. What do they think about it? Is there anything specific you should focus on? Is there anything I should say or not say? It might also help during the interview to mention that you know "Bob from the e-commerce team" (or whatever).
+- If you have contacts at the company (e.g. from your community networks), reach out to them and ask about the job. What do they think about it? Is there anything specific you should focus on? Is there anything you should say or not say? It might also help during the interview to mention that you know "Bob from the e-commerce team" (or whatever).
 
 ### Initial screening
 
