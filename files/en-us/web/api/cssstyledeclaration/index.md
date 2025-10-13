@@ -13,7 +13,7 @@ The **`CSSStyleDeclaration`** interface is the base class for objects that repre
 - {{domxref("CSSPageDescriptors")}} — Styles for CSS at-rules.
 
 The interface exposes style information and various style-related methods and properties.
-For example, it provides {{DOMxRef("CSSStyleDeclaration/getPropertyValue","getPropertyValue()" )}} for getting the value of a dash-named CSS property, such as `border-top`, which can't be directly accesses using dot notation because of the hyphens in its name.
+For example, it provides {{DOMxRef("CSSStyleDeclaration/getPropertyValue","getPropertyValue()" )}} for getting the value of a dash-named CSS property, such as `border-top`, which can't be directly accessed using dot notation because of the hyphens in its name.
 
 > [!NOTE]
 > Earlier versions of the specification used `CSSStyleDeclaration` to represent all CSS declaration blocks, and some browsers and browser versions may still do so (check the browser compatibility tables for the above APIs).

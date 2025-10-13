@@ -120,7 +120,7 @@ log(`"borderTop" = '${elementStyle.borderTop}'`);
 #### Results
 
 The results are shown below.
-Note how changing the longhande property is reflected in the corresponding shorthand property.
+Note how changing the longhand property is reflected in the corresponding shorthand property.
 
 {{EmbedLiveSample("Basic usage", "100", "250")}}
 
