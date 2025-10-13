@@ -11,7 +11,7 @@ Some operations are restricted to same-origin content, and this restriction can 
 
 ## Opaque origin
 
-An opaque origin is a special type of "internal" origin that obscures the true origin of a resource (opaque origins are always serialized as `null`), and ensures that it never matches as same-origin with other resources — including those from other opaque origins.
+An opaque origin is a special type of browser-internal value that obscures the true origin of a resource (opaque origins are always serialized as `null`). They are used by the browser to ensure resource isolation as they are never considered equal to any other origin — including other opaque origins.
 
 Opaque origins are applied in cases where the true origin of a resource is sensitive, cannot be safely used for security checks, or does not exist.
 A resource with an opaque origin will have its {{httpheader("Origin")}} HTTP header in requests set to [`null`](/en-US/docs/Web/HTTP/Reference/Headers/Origin#null).
