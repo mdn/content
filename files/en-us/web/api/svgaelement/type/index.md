@@ -8,7 +8,7 @@ browser-compat: api.SVGAElement.type
 
 {{APIRef("SVG")}}
 
-The **`type`** property of the {{domxref("SVGAElement")}} returns a string indicating the MIME type of the linked resource.
+The **`type`** property of the {{domxref("SVGAElement")}} interface returns a string indicating the MIME type of the linked resource.
 
 This property can be set, to change the URL's `type` value. It reflects the value of the [`type`](/en-US/docs/Web/HTML/Reference/Elements/a#type) attribute.
 
