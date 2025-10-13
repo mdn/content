@@ -38,12 +38,12 @@ The `descent-override` property can help when overriding the metrics of a fallba
 
 ```css
 @font-face {
-  font-family: web-font;
+  font-family: "web-font";
   src: url("https://example.com/font.woff");
 }
 
 @font-face {
-  font-family: local-font;
+  font-family: "local-font";
   src: local("Local Font");
   descent-override: 125%;
 }

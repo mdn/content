@@ -80,12 +80,12 @@ In the CSS, we import a color font from Google Fonts, and define two custom `fon
 @import "https://fonts.googleapis.com/css2?family=Nabla&display=swap";
 
 @font-palette-values --blue-nabla {
-  font-family: Nabla;
+  font-family: "Nabla";
   base-palette: 2; /* this is Nabla's blue palette */
 }
 
 @font-palette-values --yellow-nabla {
-  font-family: Nabla;
+  font-family: "Nabla";
   base-palette: 7; /* this is Nabla's yellow palette */
 }
 
