@@ -320,7 +320,7 @@ button:disabled {
 table img {
   width: 100%;
   height: 150px;
-  /* 5. Get images displaying at intrinsic aspect ratio, from bottom */
+  /* 5. Fixes the image display */
   object-fit: cover;
   object-position: bottom;
 }
