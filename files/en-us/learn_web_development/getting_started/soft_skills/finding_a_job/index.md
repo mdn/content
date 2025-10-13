@@ -255,7 +255,7 @@ Once the company have looked at your application and decided you sound like a "p
 
 At this stage, you should be friendly and talkative. But don't talk too much; act naturally, and see where the interviewer steers the conversation. Make sure to let them know what days and times will be suitable for you to attend further interviews. Try to be as flexible as you can, and be prepared to move your schedule around to accommodate them.
 
-Don't be complacent however — you don't know for definite what questions they will throw at you at this early stage, and you should treat this stage just as seriously as all the others.
+Don't be complacent, however — you don't know for definite what questions they will throw at you at this early stage. You should treat the initial screening just as seriously as all the other stages.
 
 ### The main interview
 
