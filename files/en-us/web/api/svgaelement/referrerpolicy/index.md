@@ -8,7 +8,7 @@ browser-compat: api.SVGAElement.referrerpolicy
 
 {{APIRef("SVG")}}
 
-The **`referrerpolicy`** property of the {{domxref("SVGAElement")}} returns a string specifying which [referrer](/en-US/docs/Web/HTTP/Reference/Headers/Referer) to send when fetching the [URL](/en-US/docs/Glossary/URL)..
+The **`referrerpolicy`** property of the {{domxref("SVGAElement")}} interface returns a string specifying which [referrer](/en-US/docs/Web/HTTP/Reference/Headers/Referer) to send when fetching the [URL](/en-US/docs/Glossary/URL)..
 
 This property can be set, to change the URL's `referrerpolicy` value. It reflects the value of the [`referrerpolicy`](/en-US/docs/Web/HTML/Reference/Elements/a#referrerpolicy) attribute.
 
