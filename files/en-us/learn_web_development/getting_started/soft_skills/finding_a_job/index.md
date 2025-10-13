@@ -144,7 +144,7 @@ Keep your portfolio as highlights of your best work. You want it to be easy to a
 
 In terms of how to actually publish your portfolio:
 
-- You should [publish your work](/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Collaboration_and_teamwork#publish_your_work) in publicly viewable places, such as a GitHub organization for source code, and a blogging platform such as [Medium](https://medium.com/) (or your own website) for blog posts.
+- You should [publish your work](/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Collaboration_and_teamwork#publish_your_work) in publicly viewable places, such as a GitHub organization for source code, and a blogging platform such as medium (or your own website) for blog posts.
 - For source code that is demos or snippets rather than full websites, publish live versions of the code, so that people can easily check out the live result. See [Publishing your website](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website) for tips on how to do this.
 - In terms of the actual portfolio landing page, you could create a GitHub repo and provide your list of links in a `README.md` file, but this doesn't look particularly great. Much better would be to create a dedicated website to contain your portfolio, with a dedicated [domain name](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name). If you are not great at design work, ask a colleague or friend for some help, perhaps in exchange for doing some coding work for them.
 
