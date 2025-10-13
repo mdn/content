@@ -8,7 +8,7 @@ browser-compat: api.SVGAElement.port
 
 {{APIRef("SVG")}}
 
-The **`port`** property of the {{domxref("SVGAElement")}} returns a string representing the port component, if any, of the referenced URL.
+The **`port`** property of the {{domxref("SVGAElement")}} interface returns a string representing the port component, if any, of the referenced URL.
 
 This property can be set, to change the URL's port.
 
