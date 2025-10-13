@@ -46,7 +46,7 @@ If you are reading this site, you are probably interested in some kind of web de
   - Web designer: Use HTML, CSS, and graphics packages to design user interfaces.
   - JS developer: Implement functionality using JavaScript and frameworks.
   - Developer relations or sales engineer: Talk to customers, get them excited about technology, help them solve problems and develop solutions.
-  - Technical writer: Write documentation to explain how technology works and how to use it.
+  - Technical writer: Write documentation to explain how the technology works and how to use it.
   - More of an all-round developer.
   - Something else?
 - Kind of employer: Do you want to work for:
