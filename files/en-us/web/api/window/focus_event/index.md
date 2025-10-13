@@ -61,6 +61,8 @@ This example changes the appearance of a document when it loses focus. It uses {
 #### JavaScript
 
 ```js
+const log = document.getElementById("log");
+
 function pause() {
   document.body.classList.add("paused");
   log.textContent = "FOCUS LOST!";
@@ -71,8 +73,6 @@ function play() {
   log.textContent =
     "This document has focus. Click outside the document to lose focus.";
 }
-
-const log = document.getElementById("log");
 
 window.addEventListener("blur", pause);
 window.addEventListener("focus", play);

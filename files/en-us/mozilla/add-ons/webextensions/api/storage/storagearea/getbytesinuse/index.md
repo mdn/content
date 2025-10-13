@@ -9,14 +9,14 @@ sidebar: addonsidebar
 Gets the amount of storage space, in bytes, used by one or more items stored in the storage area.
 
 > [!NOTE]
-> In Firefox this method:
+> In Firefox, this method is supported in:
 >
-> - is supported in {{WebExtAPIRef("storage.sync")}}.
-> - is supported in {{WebExtAPIRef("storage.session")}} from Firefox 131.
-> - isn't supported in {{WebExtAPIRef("storage.local")}}, see [Firefox bug 1385832](https://bugzil.la/1385832).
-> - isn't provided in {{WebExtAPIRef("storage.managed")}}.
+> - {{WebExtAPIRef("storage.sync")}}.
+> - {{WebExtAPIRef("storage.session")}} from Firefox 131.
+> - {{WebExtAPIRef("storage.local")}} and {{WebExtAPIRef("storage.managed")}} from Firefox 144.
 
-This is an asynchronous method that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+> [!NOTE]
+> `storage.managed.getBytesInUse()` always returns 0, at least in Chrome and Firefox.
 
 ## Syntax
 

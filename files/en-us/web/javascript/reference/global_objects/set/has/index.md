@@ -7,8 +7,7 @@ browser-compat: javascript.builtins.Set.has
 sidebar: jsref
 ---
 
-The **`has()`** method of {{jsxref("Set")}} instances returns a boolean indicating whether an
-element with the specified value exists in this set or not.
+The **`has()`** method of {{jsxref("Set")}} instances returns a boolean indicating whether the specified value exists in this `Set` or not.
 
 {{InteractiveExample("JavaScript Demo: Set.prototype.has()")}}
 
@@ -38,11 +37,11 @@ has(value)
 
 ### Return value
 
-Returns `true` if an element with the specified value exists in the `Set` object; otherwise `false`.
+Returns `true` if the specified value exists in the `Set` object; otherwise `false`.
 
 ## Examples
 
-### Using the has() method
+### Using has()
 
 ```js
 const mySet = new Set();

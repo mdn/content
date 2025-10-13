@@ -319,7 +319,7 @@ img.onload = () => {
   draw(img);
 };
 
-const draw = (image) => {
+function draw(image) {
   const canvas = document.getElementById("canvas");
   const ctx = canvas.getContext("2d");
   ctx.drawImage(image, 0, 0);
@@ -350,7 +350,7 @@ const draw = (image) => {
     zoom(smoothCtx, x, y);
     zoom(pixelatedCtx, x, y);
   });
-};
+}
 ```
 
 {{embedlivesample("zooming_and_anti-aliasing", , 300)}}

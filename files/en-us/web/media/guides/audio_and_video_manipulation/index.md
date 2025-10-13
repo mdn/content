@@ -62,15 +62,11 @@ const processor = {
     this.c1 = document.getElementById("my-canvas");
     this.ctx1 = this.c1.getContext("2d");
 
-    this.video.addEventListener(
-      "play",
-      () => {
-        this.width = this.video.width;
-        this.height = this.video.height;
-        this.timerCallback();
-      },
-      false,
-    );
+    this.video.addEventListener("play", () => {
+      this.width = this.video.width;
+      this.height = this.video.height;
+      this.timerCallback();
+    });
   },
 
   computeFrame() {

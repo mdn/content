@@ -46,7 +46,7 @@ This example shows grouping selectors in a single line using a comma-separated l
 
 ```css-nolint
 h1, h2, h3, h4, h5, h6 {
-  font-family: Helvetica, Arial;
+  font-family: "Helvetica", "Arial";
 }
 ```
 

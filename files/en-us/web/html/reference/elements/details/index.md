@@ -172,7 +172,7 @@ Now let's apply some CSS to customize the appearance of the disclosure box.
 details {
   font:
     16px "Open Sans",
-    Calibri,
+    "Calibri",
     sans-serif;
   width: 620px;
 }

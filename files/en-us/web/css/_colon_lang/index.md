@@ -42,7 +42,7 @@ The **`:lang()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/
 ### Parameters
 
 - `<language-code>`
-  - : A comma separated list of one or more {{cssxref("&lt;string&gt;")}}s that target an element with a language value according to [BCP 47](https://www.rfc-editor.org/info/bcp47) language codes.
+  - : A comma-separated list of one or more {{cssxref("&lt;string&gt;")}}s that target elements based on the {{glossary("BCP 47 language tag", "BCP 47 language tags")}} set in their [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) attributes.
     Matching by language range is case-insensitive.
 
 ## Description
@@ -146,4 +146,4 @@ p {
 - The {{cssxref(":dir")}} pseudo-class that matches by directionality of text
 - HTML [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) attribute
 - HTML [`translate`](/en-US/docs/Web/HTML/Reference/Global_attributes/translate) attribute
-- {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}
+- {{glossary("BCP 47 language tag")}}

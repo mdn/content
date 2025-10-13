@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Document.embeds
 ---
 
-{{ApiRef}}
+{{APIRef("DOM")}}
 
 The **`embeds`** read-only property of the
 {{domxref("Document")}} interface returns a list of the embedded

@@ -8,7 +8,7 @@ browser-compat: api.Animation.cancel
 
 {{ APIRef("Web Animations") }}
 
-The Web Animations API's **`cancel()`** method of the {{domxref("Animation")}} interface clears all {{domxref("KeyframeEffect")}}s caused by this animation and aborts its playback.
+The [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)'s **`cancel()`** method of the {{domxref("Animation")}} interface clears all {{domxref("KeyframeEffect")}}s caused by this animation and aborts its playback.
 
 > [!NOTE]
 > When an animation is cancelled, its {{domxref("Animation.startTime", "startTime")}} and {{domxref("Animation.currentTime", "currentTime")}} are set to `null`.

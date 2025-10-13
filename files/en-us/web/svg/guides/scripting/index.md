@@ -29,7 +29,7 @@ function myRect(x, y, w, h, message) {
   this.rect.setAttributeNS(null, "height", h);
   document.documentElement.appendChild(this.rect);
 
-  this.rect.addEventListener("click", this, false);
+  this.rect.addEventListener("click", this);
 
   this.handleEvent = (evt) => {
     switch (evt.type) {

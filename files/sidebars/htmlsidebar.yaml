@@ -3,19 +3,11 @@
 sidebar:
   - type: section
     link: /Web/HTML
-  - type: section
+  - type: listSubPages
+    path: /Web/HTML/Guides
     link: /Web/HTML/Guides
     title: Guides
-  - /Web/HTML/Guides/Content_categories
-  - /Web/HTML/Guides/Comments
-  - /Web/HTML/Guides/Date_and_time_formats
-  - /Web/HTML/Guides/Constraint_validation
-  - /Web/HTML/Guides/Viewport_meta_element
-  - /Web/HTML/Guides/Responsive_images
-  - /Web/HTML/Guides/Microdata
-  - /Web/HTML/Guides/Microformats
-  - /Web/HTML/Guides/Quirks_mode_and_standards_mode
-  - /Web/HTML/Guides/Cheatsheet
+    details: closed
   - type: section
     link: /Web/HTML/How_to
   - /Web/HTML/How_to/Define_terms_with_HTML

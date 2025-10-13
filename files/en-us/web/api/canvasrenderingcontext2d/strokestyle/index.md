@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.CanvasRenderingContext2D.strokeStyle
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 The **`CanvasRenderingContext2D.strokeStyle`** property of the
 Canvas 2D API specifies the color, gradient, or pattern to use for the strokes

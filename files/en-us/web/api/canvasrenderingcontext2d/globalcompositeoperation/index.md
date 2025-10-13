@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.CanvasRenderingContext2D.globalCompositeOperation
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 The
 **`CanvasRenderingContext2D.globalCompositeOperation`**
@@ -171,13 +171,7 @@ const gcoText = [
 ].reverse();
 const width = 320;
 const height = 340;
-```
 
-#### Main program
-
-When the page loads, this code runs to set up and run the example:
-
-```js
 // lum in sRGB
 const lum = {
   r: 0.33,
@@ -189,17 +183,16 @@ canvas1.width = width;
 canvas1.height = height;
 canvas2.width = width;
 canvas2.height = height;
-lightMix();
-colorSphere();
-runComposite();
 ```
 
-And this code, `runComposite()`, handles the bulk of the work, relying on a number of utility functions to do the hard parts.
+#### Main program
+
+This code, `runComposite()`, handles the bulk of the work, relying on a number of utility functions to do the hard parts.
 
 ```js
-function createCanvas() {
+function createCanvas(op) {
   const canvas = document.createElement("canvas");
-  canvas.style.background = `url(${JSON.stringify(op_8x8.data)})`;
+  canvas.style.background = `url(${JSON.stringify(op.data)})`;
   canvas.style.border = "1px solid black";
   canvas.style.margin = "5px";
   canvas.width = width / 2;
@@ -207,7 +200,7 @@ function createCanvas() {
   return canvas;
 }
 
-function runComposite() {
+function runComposite(op) {
   const dl = document.createElement("dl");
   document.body.appendChild(dl);
   while (gco.length) {
@@ -220,9 +213,9 @@ function runComposite() {
     p.textContent = gcoText.pop();
     dd.appendChild(p);
 
-    const canvasToDrawOn = createCanvas();
-    const canvasToDrawFrom = createCanvas();
-    const canvasToDrawResult = createCanvas();
+    const canvasToDrawOn = createCanvas(op);
+    const canvasToDrawFrom = createCanvas(op);
+    const canvasToDrawResult = createCanvas(op);
 
     let ctx = canvasToDrawResult.getContext("2d");
     ctx.clearRect(0, 0, width, height);
@@ -274,7 +267,7 @@ function runComposite() {
 The program relies on a number of utility functions.
 
 ```js
-const lightMix = () => {
+function lightMix() {
   const ctx = canvas2.getContext("2d");
   ctx.save();
   ctx.globalCompositeOperation = "lighter";
@@ -295,11 +288,11 @@ const lightMix = () => {
   ctx.fillStyle = "red";
   ctx.fillRect(0, 0, 30, 30);
   ctx.fill();
-};
+}
 ```
 
 ```js
-const colorSphere = (element) => {
+function colorSphere() {
   const ctx = canvas1.getContext("2d");
   const width = 360;
   const halfWidth = width / 2;
@@ -333,7 +326,7 @@ const colorSphere = (element) => {
   ctx.fillRect(15, 15, 30, 30);
   ctx.fill();
   return ctx.canvas;
-};
+}
 ```
 
 ```js
@@ -391,7 +384,7 @@ Color.HSV_RGB = (o) => {
   return { R, G, B };
 };
 
-const createInterlace = (size, color1, color2) => {
+function createInterlace(size, color1, color2) {
   const proto = document.createElement("canvas").getContext("2d");
   proto.canvas.width = size * 2;
   proto.canvas.height = size * 2;
@@ -406,9 +399,19 @@ const createInterlace = (size, color1, color2) => {
   const pattern = proto.createPattern(proto.canvas, "repeat");
   pattern.data = proto.canvas.toDataURL();
   return pattern;
-};
+}
 
 const op_8x8 = createInterlace(8, "white", "#eeeeee");
+```
+
+#### Start running
+
+Finally, we call the functions to set everything in motion.
+
+```js
+lightMix();
+colorSphere();
+runComposite(op_8x8);
 ```
 
 #### Result

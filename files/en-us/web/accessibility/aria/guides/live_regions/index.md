@@ -259,3 +259,4 @@ Breakdown of ARIA live properties:
 ## See also
 
 - [ARIA roles](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles)
+- {{domxref("Document.ariaNotify()")}}, {{domxref("Element.ariaNotify()")}}

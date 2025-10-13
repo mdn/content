@@ -6,7 +6,7 @@ browser-compat: css.selectors.only-child
 sidebar: cssref
 ---
 
-The **`:only-child`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element without any siblings. This is the same as `:first-child:last-child` or `:nth-child(1):nth-last-child(1)`, but with a lower specificity.
+The **`:only-child`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element without any siblings. This is the same as `:first-child:last-child` or `:nth-child(1):nth-last-child(1)`, but with a lower specificity.
 
 {{InteractiveExample("CSS Demo: :only-child", "tabbed-shorter")}}
 

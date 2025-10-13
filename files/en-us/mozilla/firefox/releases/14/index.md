@@ -72,4 +72,4 @@ _No change._
 
 ### Spellchecking
 
-- Dictionary names are now parsed as full [BCP 47](https://www.rfc-editor.org/info/bcp47) language tags ([bug 730209](https://bugzil.la/730209), [bug 741842](https://bugzil.la/741842)). Developers are encouraged to not hard-code the name of their language in their dictionary names.
+- Dictionary names are now parsed as full {{glossary("BCP 47 language tag","BCP 47 language tags")}} ([bug 730209](https://bugzil.la/730209), [bug 741842](https://bugzil.la/741842)). Developers are encouraged to not hard-code the name of their language in their dictionary names.

@@ -493,15 +493,11 @@ If we change this so that the `<iframe>` in the document is listening to post me
 <!-- x.html -->
 <!doctype html>
 <script>
-  window.addEventListener(
-    "message",
-    (event) => {
-      document.querySelector("#text").textContent = "hello";
-      // this code will only run in browsers that track the incumbent settings object
-      console.log(event);
-    },
-    false,
-  );
+  window.addEventListener("message", (event) => {
+    document.querySelector("#text").textContent = "hello";
+    // this code will only run in browsers that track the incumbent settings object
+    console.log(event);
+  });
 </script>
 ```
 

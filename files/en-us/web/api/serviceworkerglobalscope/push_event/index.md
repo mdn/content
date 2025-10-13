@@ -40,22 +40,18 @@ _Inherits properties from its parent, {{domxref("ExtendableEvent")}}. Additional
 This example sets up a handler for `push` events that takes {{Glossary("JSON")}} data, parses it, and dispatches the message for handling based on information contained within the message.
 
 ```js
-self.addEventListener(
-  "push",
-  (event) => {
-    let message = event.data.json();
+self.addEventListener("push", (event) => {
+  let message = event.data.json();
 
-    switch (message.type) {
-      case "init":
-        doInit();
-        break;
-      case "shutdown":
-        doShutdown();
-        break;
-    }
-  },
-  false,
-);
+  switch (message.type) {
+    case "init":
+      doInit();
+      break;
+    case "shutdown":
+      doShutdown();
+      break;
+  }
+});
 ```
 
 ## Specifications

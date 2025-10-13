@@ -20,7 +20,7 @@ The second event is the {{domxref("DeviceMotionEvent")}}, which is sent when a c
 All you need to do in order to begin receiving orientation change is to listen to the {{domxref("Window.deviceorientation_event", "deviceorientation")}} event:
 
 ```js
-window.addEventListener("deviceorientation", handleOrientation, true);
+window.addEventListener("deviceorientation", handleOrientation);
 ```
 
 After registering your event listener (in this case, a JavaScript function called `handleOrientation()`), your listener function periodically gets called with updated orientation data.
@@ -142,7 +142,7 @@ window.addEventListener("deviceorientation", handleOrientation);
 Motion events are handled the same way as the orientation events except that they have their own event's name: {{domxref("Window.devicemotion_event", "devicemotion")}}
 
 ```js
-window.addEventListener("devicemotion", handleMotion, true);
+window.addEventListener("devicemotion", handleMotion);
 ```
 
 What's really changed are the information provided within the {{domxref("DeviceMotionEvent")}} object passed as a parameter of the event listener (`handleMotion()` in our example).

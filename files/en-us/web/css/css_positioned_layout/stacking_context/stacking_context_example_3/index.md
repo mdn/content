@@ -83,7 +83,7 @@ This problem can be avoided by removing overlapping between different level menu
 
 ```css hidden
 div {
-  font: 12px Arial;
+  font: 12px "Arial";
   font-weight: bold;
   padding-left: 5px;
 }

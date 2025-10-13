@@ -40,7 +40,7 @@ new Intl.SomeObject(locales, options)
 ```
 
 - `locales` {{optional_inline}}
-  - : A string with a BCP 47 language tag or an {{jsxref("Intl.Locale")}} instance, or an array of such locale identifiers. The runtime's default locale is used when `undefined` is passed or when none of the specified locale identifiers is supported. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
+  - : A string with a {{glossary("BCP 47 language tag")}} or an {{jsxref("Intl.Locale")}} instance, or an array of such locale identifiers. The runtime's default locale is used when `undefined` is passed or when none of the specified locale identifiers is supported. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
 - `options` {{optional_inline}}
   - : An object containing properties that customize specific aspects of the operation, which is key to understanding how to use each `Intl` object.
 
@@ -48,7 +48,7 @@ new Intl.SomeObject(locales, options)
 
 Locales underlie all behaviors of `Intl`. A _locale_ is a set of conventions, represented in the `Intl` API by the {{jsxref("Intl.Locale")}} object. All `Intl` constructors that accept language tags also accept `Intl.Locale` objects.
 
-Each locale is primarily defined by four things: a {{jsxref("Intl/Locale/language", "language")}}, a {{jsxref("Intl/Locale/script", "script")}}, a {{jsxref("Intl/Locale/region", "region")}}, and sometimes some {{jsxref("Intl/Locale/variants", "variants")}}. When connected together by `-` in that order, they form a [BCP 47 language tag](https://datatracker.ietf.org/doc/html/rfc5646).
+Each locale is primarily defined by four things: a {{jsxref("Intl/Locale/language", "language")}}, a {{jsxref("Intl/Locale/script", "script")}}, a {{jsxref("Intl/Locale/region", "region")}}, and sometimes some {{jsxref("Intl/Locale/variants", "variants")}}. When connected together by `-` in that order, they form a {{glossary("BCP 47 language tag")}}.
 
 - The language is the most important part of the locale and is mandatory. When given a single language, like `en` or `fr`, there are algorithms to infer the rest of the information (see {{jsxref("Intl/Locale/maximize", "Intl.Locale.prototype.maximize()")}}).
 - However, you often want to specify the region as well, because conventions can differ drastically between regions that speak the same language. For example, the date format in the US is MM/DD/YYYY, whereas in the UK it is DD/MM/YYYY, so specifying `en-US` or `en-GB` is important.
@@ -700,7 +700,7 @@ console.log(supportedCal);
 // ['buddhist', 'chinese', 'coptic', 'dangi', ...]
 ```
 
-But often, these identifiers are not user-friendly. For example, you may want to show the calendars in the user's language, or unabbreviate them. The {{jsxref("Intl.DisplayNames")}} object is useful for this. It's like a formatter, but it's not template-based. Instead, it is a direct mapping from language-agnostic identifiers to localized names. It supports formatting languages, regions, scripts (the three subfields of a BCP 47 tag), currency, calendar, and date-time fields.
+But often, these identifiers are not user-friendly. For example, you may want to show the calendars in the user's language, or unabbreviate them. The {{jsxref("Intl.DisplayNames")}} object is useful for this. It's like a formatter, but it's not template-based. Instead, it is a direct mapping from language-agnostic identifiers to localized names. It supports formatting languages, regions, scripts (the three subfields of a BCP 47 language tag), currency, calendar, and date-time fields.
 
 Try the demo below:
 

@@ -93,8 +93,8 @@ body {
   max-width: 900px;
   margin: 0 auto;
   font:
-    0.9em/1.2 Arial,
-    Helvetica,
+    0.9em/1.2 "Helvetica",
+    "Arial",
     sans-serif;
 }
 
@@ -219,8 +219,8 @@ body {
   max-width: 900px;
   margin: 0 auto;
   font:
-    0.9em/1.2 Arial,
-    Helvetica,
+    0.9em/1.2 "Helvetica",
+    "Arial",
     sans-serif;
 }
 
@@ -289,8 +289,8 @@ body {
   max-width: 900px;
   margin: 0 auto;
   font:
-    0.9em/1.2 Arial,
-    Helvetica,
+    0.9em/1.2 "Helvetica",
+    "Arial",
     sans-serif;
 }
 
@@ -391,8 +391,8 @@ body {
   max-width: 900px;
   margin: 0 auto;
   font:
-    0.9em/1.2 Arial,
-    Helvetica,
+    0.9em/1.2 "Helvetica",
+    "Arial",
     sans-serif;
 }
 
@@ -463,8 +463,8 @@ body {
   max-width: 900px;
   margin: 0 auto;
   font:
-    0.9em/1.2 Arial,
-    Helvetica,
+    0.9em/1.2 "Helvetica",
+    "Arial",
     sans-serif;
 }
 

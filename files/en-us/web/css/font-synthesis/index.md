@@ -55,7 +55,7 @@ font-synthesis: position;
 
 ```css interactive-example
 @font-face {
-  font-family: Oxygen;
+  font-family: "Oxygen";
   font-style: normal;
   font-weight: 400;
   src: url("https://fonts.gstatic.com/s/oxygen/v14/2sDfZG1Wl4LcnbuKjk0m.woff2")
@@ -110,7 +110,7 @@ font-synthesis: position;
 
 .english {
   font-size: 1.2em;
-  font-family: Oxygen, sans-serif;
+  font-family: "Oxygen", sans-serif;
 }
 
 .chinese {

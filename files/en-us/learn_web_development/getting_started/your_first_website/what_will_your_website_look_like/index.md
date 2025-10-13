@@ -61,10 +61,10 @@ At this point, it's good to start putting together the content that will eventua
 
 Let's choose a background color for your page.
 
-1. Go to [the Color Picker](/en-US/docs/Web/CSS/CSS_colors/Color_picker_tool) and find a color you like.
-2. When you click on a color, you'll see a strange six-character code like `#660066`. That's called a _hex code_ (short for hexadecimal), and represents your color. Copy the code down somewhere safe for now.
+1. Go to [the Color Picker](/en-US/docs/Web/CSS/CSS_colors/Color_format_converter) and find a color you like.
+2. When you pick a color, you'll see a strange six-character code like `#660066`. That's called a _hex code_ (short for hexadecimal), and represents your color. Copy the code down somewhere safe for now.
 
-![Color-Picker-Tool on MDN Docs website with RGB, HSL, and HEX colors ](color-picker.png)
+![Color format converter tool on MDN Docs website](color_format_converter.jpg)
 
 ## Choosing an image
 

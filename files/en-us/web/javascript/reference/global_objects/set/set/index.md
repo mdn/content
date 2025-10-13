@@ -37,11 +37,7 @@ new Set(iterable)
 ### Parameters
 
 - `iterable` {{optional_inline}}
-  - : If an [iterable object](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) is passed, all of its elements will be added to the new
-    `Set`.
-
-    If you don't specify this parameter, or its value is `null`, the new
-    `Set` is empty.
+  - : If an [iterable object](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) (such as an array) is passed, all of its elements will be added to the new `Set`. If you don't specify this parameter, or its value is `null` or `undefined`, the new `Set` is empty.
 
 ### Return value
 

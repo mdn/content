@@ -171,7 +171,7 @@ The following live example shows what the letter should look like after being ma
 Your finished HTML should look like this:
 
 ```html live-sample___finish
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />

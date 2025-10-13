@@ -56,7 +56,7 @@ You can use this attribute with the following SVG elements:
 </table>
 
 - `<language-tags>`
-  - : The value is a set of comma-separated tokens, each of which must be a language tag, as defined in {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.
+  - : The value is a set of comma-separated tokens, each of which must be a valid {{glossary("BCP 47 language tag")}}.
 
 `systemLanguage` is often used in conjunction with the {{SVGElement("switch")}} element. If the attribute is used in other situations, then it represents a simple switch on the given element whether to render the element or not.
 

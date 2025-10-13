@@ -38,7 +38,7 @@ class RegExp {
 Because of this polymorphic implementation, `[Symbol.species]` of derived subclasses would also return the constructor itself by default.
 
 ```js
-class SubRegExp extends SubRegExp {}
+class SubRegExp extends RegExp {}
 SubRegExp[Symbol.species] === SubRegExp; // true
 ```
 

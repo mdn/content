@@ -837,13 +837,9 @@ Events can be created with the [`Event`](/en-US/docs/Web/API/Event) constructor 
 const event = new Event("build");
 
 // Listen for the event.
-elem.addEventListener(
-  "build",
-  (e) => {
-    /* … */
-  },
-  false,
-);
+elem.addEventListener("build", (e) => {
+  /* … */
+});
 
 // Dispatch the event.
 elem.dispatchEvent(event);

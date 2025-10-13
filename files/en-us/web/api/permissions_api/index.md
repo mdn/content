@@ -52,7 +52,7 @@ Not all APIs' permission statuses can be queried using the Permissions API.
 A non-exhaustive list of permission-aware APIs includes:
 
 - [Background Synchronization API](/en-US/docs/Web/API/Background_Synchronization_API): `background-sync` (should always be granted)
-- [Clipboard_API](/en-US/docs/Web/API/Clipboard_API#security_considerations): `clipboard-read`, `clipboard-write`
+- [Clipboard API](/en-US/docs/Web/API/Clipboard_API#security_considerations): `clipboard-read`, `clipboard-write`
 - [Compute Pressure API](/en-US/docs/Web/API/Compute_Pressure_API): `compute-pressure`
 - [Geolocation API](/en-US/docs/Web/API/Geolocation_API#security_considerations): `geolocation`
 - [Local Font Access API](/en-US/docs/Web/API/Local_Font_Access_API): `local-fonts`

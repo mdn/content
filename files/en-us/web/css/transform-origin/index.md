@@ -105,6 +105,9 @@ transform-origin: bottom right 60px;
 ```
 
 ```js interactive-example
+const crosshair = document.getElementById("crosshair");
+const el = document.getElementById("example-element");
+
 function update() {
   const selected = document.querySelector(".selected");
 
@@ -125,9 +128,6 @@ function update() {
   crosshair.style.left = `calc(${pos[0]} - 12px)`;
   crosshair.style.top = `calc(${pos[1]} - 12px)`;
 }
-
-const crosshair = document.getElementById("crosshair");
-const el = document.getElementById("example-element");
 
 const observer = new MutationObserver(() => {
   update();

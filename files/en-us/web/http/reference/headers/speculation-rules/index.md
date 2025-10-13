@@ -5,12 +5,11 @@ slug: Web/HTTP/Reference/Headers/Speculation-Rules
 page-type: http-header
 status:
   - experimental
-  - non-standard
 browser-compat: http.headers.Speculation-Rules
 sidebar: http
 ---
 
-{{SeeCompatTable}}{{non-standard_header}}
+{{SeeCompatTable}}
 
 The HTTP **`Speculation-Rules`** {{Glossary("response header")}} provides one or more URLs pointing to text resources containing speculation rule JSON definitions. When the response is an HTML document, these rules will be added to the document's speculation rule set. See the [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API) for more information.
 

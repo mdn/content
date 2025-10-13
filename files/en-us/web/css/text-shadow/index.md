@@ -49,7 +49,7 @@ text-shadow:
 ```css interactive-example
 p {
   font:
-    1.5em Georgia,
+    1.5em "Georgia",
     serif;
 }
 ```
@@ -135,7 +135,7 @@ This property applies to both {{cssxref("::first-line")}} and {{cssxref("::first
     0 0 0.2em blue;
   color: white;
   font:
-    1.5em Georgia,
+    1.5em "Georgia",
     serif;
 }
 ```

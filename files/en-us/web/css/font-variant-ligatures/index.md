@@ -167,7 +167,7 @@ The `font-variant-ligatures` property is specified as `normal`, `none`, or one o
 
 ```css
 p {
-  font-family: Lora, serif;
+  font-family: "Lora", serif;
 }
 .normal {
   font-variant-ligatures: normal;

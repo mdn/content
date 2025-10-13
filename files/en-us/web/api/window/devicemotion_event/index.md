@@ -50,7 +50,7 @@ function handleMotionEvent(event) {
   // Do something awesome.
 }
 
-window.addEventListener("devicemotion", handleMotionEvent, true);
+window.addEventListener("devicemotion", handleMotionEvent);
 ```
 
 ## Specifications

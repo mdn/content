@@ -99,7 +99,7 @@ In this example, we'll set up a media query and watch it to see when the device 
 ```css
 body {
   font:
-    22px arial,
+    22px "Arial",
     sans-serif;
 }
 

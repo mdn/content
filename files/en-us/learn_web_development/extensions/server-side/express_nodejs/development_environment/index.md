@@ -299,8 +299,10 @@ npm install eslint --save-dev
 The following entry would then be added to your application's **package.json**:
 
 ```json
-"devDependencies": {
-  "eslint": "^9.30.1"
+{
+  "devDependencies": {
+    "eslint": "^9.30.1"
+  }
 }
 ```
 
@@ -317,10 +319,12 @@ In addition to defining and fetching dependencies you can also define _named_ sc
 For example, to define a script to run the _eslint_ development dependency that we specified in the previous section we might add the following script block to our **package.json** file (assuming that our application source is in a folder `/src/js`):
 
 ```json
-"scripts": {
-  // …
-  "lint": "eslint src/js"
-  // …
+{
+  "scripts": {
+    // …
+    "lint": "eslint src/js"
+    // …
+  }
 }
 ```
 

@@ -425,7 +425,7 @@ We have included {{cssxref("padding")}} and {{cssxref("background-color")}} on t
 
 ```css
 html {
-  font-family: helvetica, arial, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   letter-spacing: 1px;
   padding-top: 10px;
 }

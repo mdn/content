@@ -58,14 +58,10 @@ pc = new RTCPeerConnection({
   ],
 });
 
-pc.addEventListener(
-  "track",
-  (e) => {
-    videoElement.srcObject = e.streams[0];
-    hangupButton.disabled = false;
-  },
-  false,
-);
+pc.addEventListener("track", (e) => {
+  videoElement.srcObject = e.streams[0];
+  hangupButton.disabled = false;
+});
 ```
 
 The event handler assigns the new track's first stream to an existing {{HTMLElement("video")}} element, identified using the variable `videoElement`.

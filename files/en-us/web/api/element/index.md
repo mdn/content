@@ -215,6 +215,8 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
   - : Inserts a set of {{domxref("Node")}} objects or strings in the children list of the `Element`'s parent, just after the `Element`.
 - {{DOMxRef("Element.animate()")}}
   - : A shortcut method to create and run an animation on an element. Returns the created Animation object instance.
+- {{DOMxRef("Element.ariaNotify()")}} {{Experimental_Inline}} {{non-standard_inline}}
+  - : Specifies that a given string of text should be announced by a screen reader.
 - {{DOMxRef("Element.append()")}}
   - : Inserts a set of {{domxref("Node")}} objects or strings after the last child of the element.
 - {{DOMxRef("Element.attachShadow()")}}
@@ -269,7 +271,7 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
   - : Inserts a given text node at a given position relative to the element it is invoked upon.
 - {{DOMxRef("Element.matches()")}}
   - : Returns a boolean value indicating whether or not the element would be selected by the specified selector string.
-- {{DOMxRef("Element.moveBefore()")}} {{Experimental_Inline}}
+- {{DOMxRef("Element.moveBefore()")}}
   - : Moves a given {{domxref("Node")}} inside the invoking node as a direct child, before a given reference node, without removing and then inserting the node.
 - {{DOMxRef("Element.prepend()")}}
   - : Inserts a set of {{domxref("Node")}} objects or strings before the first child of the element.

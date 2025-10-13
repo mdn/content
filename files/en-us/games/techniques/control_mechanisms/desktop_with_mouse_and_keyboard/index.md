@@ -19,8 +19,8 @@ It's also easier to test control-independent features like gameplay on desktop i
 Let's think about implementing pure JavaScript keyboard/mouse controls in the game first, to see how it would work. First, we'd need an event listener to listen for the pressed keys:
 
 ```js
-document.addEventListener("keydown", keyDownHandler, false);
-document.addEventListener("keyup", keyUpHandler, false);
+document.addEventListener("keydown", keyDownHandler);
+document.addEventListener("keyup", keyUpHandler);
 ```
 
 Whenever any key is pressed down, we're executing the `keyDownHandler` function, and when press finishes we're executing the `keyUpHandler` function, so we know when it's no longer pressed. To do that, we'll hold the information on whether the keys we are interested in are pressed or not:

@@ -481,7 +481,7 @@ When the browser encounters an invalid `var()` substitution, then the [initial](
 This example is just like the last one, except we use a custom property.
 
 The browser substitutes the value of `--text-color` in place of `var(--text-color)`, but `16px` is not a valid property value for {{cssxref("color")}}.
-After substitution, the property doesn't make sense., so the browser handles this situation in two steps:
+After substitution, the property doesn't make sense, so the browser handles this situation in two steps:
 
 1. Check if the property {{cssxref("color")}} is inheritable. It is, but this `<p>` doesn't have any parent with the `color` property set. So we move on to the next step.
 2. Set the value to its **default initial value**, which is black.

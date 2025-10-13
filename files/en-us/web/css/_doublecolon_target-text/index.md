@@ -42,3 +42,4 @@ To see this CSS in action follow the link to [scroll-to-text demo](https://mdn.g
 ## See also
 
 - [Text fragments](/en-US/docs/Web/URI/Reference/Fragment/Text_fragments)
+- {{cssxref(":target")}} (for highlighting target elements)

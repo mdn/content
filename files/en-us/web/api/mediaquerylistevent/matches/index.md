@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.MediaQueryListEvent.matches
 ---
 
-{{APIRef("CSSOM")}}
+{{APIRef("CSSOM view API")}}
 
 The **`matches`** read-only property of the
 {{DOMxRef("MediaQueryListEvent")}} interface is a boolean value that is

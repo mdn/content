@@ -23,7 +23,6 @@ The {{glossary("viewport")}} initial containing block for continuous media has t
 - {{domxref("Window.Viewport")}}
 - {{domxref("Viewport")}}
   - {{domxref("Viewport.segments")}}
-- {{domxref("Viewport Segments")}}
 
 ### Glossary terms and definitions
 
@@ -46,10 +45,10 @@ The {{glossary("viewport")}} initial containing block for continuous media has t
 
 - [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries) module
   - {{cssxref("@media")}}
-  - {{cssxref("media/horizontal-viewport-segments", "horizontal-viewport-segments")}} descriptor
-  - {{cssxref("media/vertical-viewport-segments", "vertical-viewport-segments")}} descriptor
+  - {{cssxref("@media/horizontal-viewport-segments", "horizontal-viewport-segments")}} descriptor
+  - {{cssxref("@media/vertical-viewport-segments", "vertical-viewport-segments")}} descriptor
 
-- [CSS enviroment variables](/en-US/docs/Web/CSS/CSS_environment_variables)
+- [CSS environment variables](/en-US/docs/Web/CSS/CSS_environment_variables)
   - {{cssxref("env()")}}
   - [`<environment-variable-name>`](/en-US/docs/Web/CSS/CSS_environment_variables/Using_environment_variables#browser-defined_environment_variables)
 

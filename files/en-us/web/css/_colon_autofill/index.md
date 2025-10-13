@@ -6,7 +6,7 @@ browser-compat: css.selectors.autofill
 sidebar: cssref
 ---
 
-The **`:autofill`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches when an {{HTMLElement("input")}} element has its value autofilled by the browser. The class stops matching if the user edits the field.
+The **`:autofill`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches when an {{HTMLElement("input")}} element has its value autofilled by the browser. The class stops matching if the user edits the field.
 
 {{InteractiveExample("CSS Demo: :autofill", "tabbed-shorter")}}
 

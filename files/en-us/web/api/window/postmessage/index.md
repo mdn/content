@@ -54,15 +54,11 @@ None ({{jsxref("undefined")}}).
 A `window` can listen for dispatched messages by executing the following JavaScript:
 
 ```js
-window.addEventListener(
-  "message",
-  (event) => {
-    if (event.origin !== "http://example.org:8080") return;
+window.addEventListener("message", (event) => {
+  if (event.origin !== "http://example.org:8080") return;
 
-    // …
-  },
-  false,
-);
+  // …
+});
 ```
 
 The properties of the dispatched message are:
@@ -129,18 +125,14 @@ popup.postMessage(
 // the window hasn't changed its location.
 popup.postMessage("hello there!", "http://example.com");
 
-window.addEventListener(
-  "message",
-  (event) => {
-    // Do we trust the sender of this message? (might be
-    // different from what we originally opened, for example).
-    if (event.origin !== "http://example.com") return;
+window.addEventListener("message", (event) => {
+  // Do we trust the sender of this message? (might be
+  // different from what we originally opened, for example).
+  if (event.origin !== "http://example.com") return;
 
-    // event.source is popup
-    // event.data is "hi there yourself! the secret response is: rheeeeet!"
-  },
-  false,
-);
+  // event.source is popup
+  // event.data is "hi there yourself! the secret response is: rheeeeet!"
+});
 ```
 
 ```js

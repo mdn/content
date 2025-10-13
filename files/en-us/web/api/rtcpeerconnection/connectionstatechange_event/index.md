@@ -33,33 +33,29 @@ For an {{domxref("RTCPeerConnection")}} named `peerConnection`, this example use
 It calls an app-defined function called `setOnlineStatus()` to update a status display.
 
 ```js
-peerConnection.addEventListener(
-  "connectionstatechange",
-  (event) => {
-    switch (peerConnection.connectionState) {
-      case "new":
-      case "connecting":
-        setOnlineStatus("Connecting…");
-        break;
-      case "connected":
-        setOnlineStatus("Online");
-        break;
-      case "disconnected":
-        setOnlineStatus("Disconnecting…");
-        break;
-      case "closed":
-        setOnlineStatus("Offline");
-        break;
-      case "failed":
-        setOnlineStatus("Error");
-        break;
-      default:
-        setOnlineStatus("Unknown");
-        break;
-    }
-  },
-  false,
-);
+peerConnection.addEventListener("connectionstatechange", (event) => {
+  switch (peerConnection.connectionState) {
+    case "new":
+    case "connecting":
+      setOnlineStatus("Connecting…");
+      break;
+    case "connected":
+      setOnlineStatus("Online");
+      break;
+    case "disconnected":
+      setOnlineStatus("Disconnecting…");
+      break;
+    case "closed":
+      setOnlineStatus("Offline");
+      break;
+    case "failed":
+      setOnlineStatus("Error");
+      break;
+    default:
+      setOnlineStatus("Unknown");
+      break;
+  }
+});
 ```
 
 You can also create a handler for the `connectionstatechange` event using the `RTCPeerConnection.onconnectionstatechange` property:

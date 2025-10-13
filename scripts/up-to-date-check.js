@@ -1,15 +1,15 @@
-import yariPackageJson from "@mdn/yari/package.json" with { type: "json" };
+import fredPackageJson from "@mdn/fred/package.json" with { type: "json" };
 import thisPackageJson from "../package.json" with { type: "json" };
 
-const availableYariVersion = thisPackageJson.dependencies["@mdn/yari"];
-const installedYariVersion = yariPackageJson.version;
+const availableFredVersion = thisPackageJson.dependencies["@mdn/fred"];
+const installedFredVersion = fredPackageJson.version;
 
-if (installedYariVersion < availableYariVersion) {
+if (installedFredVersion < availableFredVersion) {
   console.log(
-    `The installed version of Yari (${installedYariVersion}) is older than ` +
-      `the version referenced in package.json (${availableYariVersion}). ` +
+    `The installed version of Fred (${installedFredVersion}) is older than ` +
+      `the version referenced in package.json (${availableFredVersion}). ` +
       `Please make sure your main git branch is up-to-date with ` +
       `https://github.com/mdn/content/, then run yarn install to ` +
-      `install the latest Yari.`,
+      `install the latest Fred.`,
   );
 }

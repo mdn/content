@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.CanvasRenderingContext2D.strokeText
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 The {{domxref("CanvasRenderingContext2D")}} method
 **`strokeText()`**, part of the Canvas 2D API, strokes — that

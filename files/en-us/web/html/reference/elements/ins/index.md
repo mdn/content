@@ -53,7 +53,7 @@ ins::before {
 
 p {
   margin: 0 1.8rem;
-  font-family: Georgia, serif;
+  font-family: "Georgia", serif;
   font-size: 1rem;
 }
 ```

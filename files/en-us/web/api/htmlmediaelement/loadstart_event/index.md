@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.HTMLMediaElement.loadstart_event
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The **`loadstart`** event is fired when the browser has started to load a resource.
 

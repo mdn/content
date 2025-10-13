@@ -18,7 +18,7 @@ To solve this challenge we are expecting you to create a simple website project,
 2. Save the following HTML listing inside a file inside your folder called `index.html` (or paste it into your online editor's HTML pane).
 
    ```html
-   <!DOCTYPE html>
+   <!doctype html>
    <html lang="en">
      <head>
        <meta charset="utf-8" />
@@ -107,7 +107,7 @@ To solve this challenge we are expecting you to create a simple website project,
              image number 29046158 at Waarneming.nl, a source of nature
              observations in the Netherlands.This tag does not indicate the
              copyright status of the attached work. A normal copyright tag is
-             still required. See Commons:Licensing for more information., This
+             still required. See Commons:Licensing for more information. This
              site now requires authentication, however, the same image and
              copyright information is also available via
              <a href="https://world.observation.org/foto/view/29046158"
@@ -178,7 +178,7 @@ To solve this challenge we are expecting you to create a simple website project,
              image number 5105758 at Waarneming.nl, a source of nature
              observations in the Netherlands.This tag does not indicate the
              copyright status of the attached work. A normal copyright tag is
-             still required. See Commons:Licensing for more information., CC BY
+             still required. See Commons:Licensing for more information. CC BY
              3.0,
              <a href="https://commons.wikimedia.org/w/index.php?curid=27659589"
                >https://commons.wikimedia.org/w/index.php?curid=27659589</a
@@ -395,7 +395,7 @@ The following screenshot shows what the splash page should look like. If you are
 Your finished HTML should look something like this:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -508,7 +508,7 @@ Your finished HTML should look something like this:
           image number 29046158 at Waarneming.nl, a source of nature
           observations in the Netherlands.This tag does not indicate the
           copyright status of the attached work. A normal copyright tag is still
-          required. See Commons:Licensing for more information., This site now
+          required. See Commons:Licensing for more information. This site now
           requires authentication, however, the same image and copyright
           information is also available via
           <a href="https://world.observation.org/foto/view/29046158"
@@ -591,11 +591,11 @@ Your finished HTML should look something like this:
 
         <p class="copyright">
           Image created by user Dick Belgers at Waarneming.nl, a source of
-          nature observations in the Netherlands. - This image is uploaded as
+          nature observations in the Netherlands. This image is uploaded as
           image number 5105758 at Waarneming.nl, a source of nature observations
-          in the Netherlands.This tag does not indicate the copyright status of
+          in the Netherlands. This tag does not indicate the copyright status of
           the attached work. A normal copyright tag is still required. See
-          Commons:Licensing for more information., CC BY 3.0,
+          Commons:Licensing for more information. CC BY 3.0,
           <a href="https://commons.wikimedia.org/w/index.php?curid=27659589"
             >https://commons.wikimedia.org/w/index.php?curid=27659589</a
           >.

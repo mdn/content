@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Element.wheel_event
 ---
 
-{{APIRef}}
+{{APIRef("UI Events")}}
 
 The **`wheel`** event fires when the user rotates a wheel button on a pointing device (typically a mouse). It is also fired for related devices that simulate wheel actions, such as trackpads and mouse balls.
 
@@ -92,6 +92,9 @@ div {
 ```
 
 ```js
+let scale = 1;
+const el = document.querySelector("div");
+
 function zoom(event) {
   event.preventDefault();
 
@@ -104,8 +107,6 @@ function zoom(event) {
   el.style.transform = `scale(${scale})`;
 }
 
-let scale = 1;
-const el = document.querySelector("div");
 el.onwheel = zoom;
 ```
 

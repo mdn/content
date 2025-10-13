@@ -26,13 +26,9 @@ For hardware and platforms that do not report tilt or angle, the value is `0`.
 ## Example
 
 ```js
-someElement.addEventListener(
-  "pointerdown",
-  (event) => {
-    process_angles(event.altitudeAngle, event.azimuthAngle);
-  },
-  false,
-);
+someElement.addEventListener("pointerdown", (event) => {
+  process_angles(event.altitudeAngle, event.azimuthAngle);
+});
 ```
 
 ## Specifications

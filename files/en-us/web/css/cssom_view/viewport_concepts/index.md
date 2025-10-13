@@ -100,13 +100,13 @@ For a page containing iframes, objects, or external SVG, both the containing pag
 
 The layout viewport and visual viewport described above are not the only viewports you will encounter. Any sub-viewport that is fully or partially displayed within the layout viewport is considered a visual viewport.
 
-We generally think of [`width`](/en-US/docs/Web/CSS/@media/width) and [`height`](/en-US/docs/Web/CSS/@media/height) media queries as being relative to the width and height of the browser window. They are actually relative to the viewport, which is the window in the main document but is the intrinsic size of the element's parent in a nested browsing context like objects, iframes and SVG. In CSS, we also have [length units based on the viewport size](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#viewport_units). A `vh` unit is 1% of the layout viewport's height. Similarly, the `vw` unit is 1% of the layout viewport's width.
+We generally think of [`width`](/en-US/docs/Web/CSS/@media/width) and [`height`](/en-US/docs/Web/CSS/@media/height) media queries as being relative to the width and height of the browser window. They are actually relative to the viewport, which is the window in the main document but is the intrinsic size of the element's parent in a nested browsing context like objects, iframes and SVG. In CSS, we also have [length units based on the viewport size](/en-US/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#viewport_units). A `vh` unit is 1% of the layout viewport's height. Similarly, the `vw` unit is 1% of the layout viewport's width.
 
 #### `<iframe>`
 
 Inside an {{htmlelement("iframe")}}, the visual viewport is the size of the inner width and height of the iframe, rather than the parent document. You can set any height and width on an iframe, but the whole document may not be visible.
 
-If you use [viewport length units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#viewport_units) in your CSS within the iframe document, `1vh` will be 1% of the height of the iframe, and `1vw` will be 1% of the width of the document.
+If you use [viewport length units](/en-US/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#viewport_units) in your CSS within the iframe document, `1vh` will be 1% of the height of the iframe, and `1vw` will be 1% of the width of the document.
 
 ```css
 iframe {
@@ -138,7 +138,7 @@ In an [SVG](/en-US/docs/Web/SVG) document, the viewport is the visible area of t
 
 In this example, the viewport has an {{glossary("aspect ratio")}} of 3:4 and is, by default, 400 by 300 units, with a unit generally being a CSS pixel.
 
-SVG also has an internal [coordinate system](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems) defined via the [viewBox](/en-US/docs/Web/SVG/Reference/Attribute/viewBox) attribute, which is not related to this viewport discussion.
+SVG also has an internal [coordinate system](/en-US/docs/Web/API/CSSOM_view_API/Coordinate_systems) defined via the [viewBox](/en-US/docs/Web/SVG/Reference/Attribute/viewBox) attribute, which is not related to this viewport discussion.
 
 If you include an SVG file in your HTML, the viewport of the SVG is the initial containing block, or the width and height of the SVG container. Using the {{CSSxRef("@media")}} query in your SVG's CSS is relative to that container, not the browser.
 
@@ -168,7 +168,9 @@ The `width` property controls the size of the viewport. It should preferably be 
 
 ## See also
 
-- {{HTMLElement("meta")}} and [`<meta name="viewport">`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/viewport)
+- [CSSOM view](/en-US/docs/Web/CSS/CSSOM_view) module
+- [Visual Viewport API](/en-US/docs/Web/API/Visual_Viewport_API)
+- {{HTMLElement("meta")}}, specifically `<meta name="viewport">`
 - [Using the viewport meta tag to control layout on mobile browsers](/en-US/docs/Web/HTML/Guides/Viewport_meta_element)
 - [Visual Viewport API](/en-US/docs/Web/API/Visual_Viewport_API)
 - [CSS viewport](/en-US/docs/Web/CSS/CSS_viewport) module

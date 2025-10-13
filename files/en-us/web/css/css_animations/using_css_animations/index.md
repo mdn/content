@@ -331,9 +331,9 @@ We'll use JavaScript code to listen for all three possible animation events. Thi
 
 ```js
 const element = document.getElementById("watch-me");
-element.addEventListener("animationstart", listener, false);
-element.addEventListener("animationend", listener, false);
-element.addEventListener("animationiteration", listener, false);
+element.addEventListener("animationstart", listener);
+element.addEventListener("animationend", listener);
+element.addEventListener("animationiteration", listener);
 
 element.className = "slide-in";
 ```

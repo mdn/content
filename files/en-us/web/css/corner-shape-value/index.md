@@ -2,11 +2,15 @@
 title: <corner-shape-value>
 slug: Web/CSS/corner-shape-value
 page-type: css-type
+status:
+  - experimental
 browser-compat: css.types.corner-shape-value
 sidebar: cssref
 ---
 
-The **`<corner-shape-value>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) describes the shape of a container corner. It is used by the {{cssxref("corner-shape")}} shorthand property and its [constituent properties](/en-US/docs/Web/CSS/corner-shape#constituent_properties) to specify the shape to apply to affected container corners.
+{{SeeCompatTable}}
+
+The **`<corner-shape-value>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types) describes the shape of a container corner. It is used by the {{cssxref("corner-shape")}} shorthand property and its [constituent properties](/en-US/docs/Web/CSS/corner-shape#constituent_properties) to specify the shape to apply to affected container corners.
 
 ## Syntax
 
@@ -85,7 +89,7 @@ The `corner-shape` property defines the shape of the box's corners while the reg
 
 ```css hidden live-sample___value-comparison
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 body {

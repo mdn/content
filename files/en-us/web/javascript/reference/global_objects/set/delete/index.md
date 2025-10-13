@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Set.delete
 sidebar: jsref
 ---
 
-The **`delete()`** method of {{jsxref("Set")}} instances removes a specified value from this set, if it is in the set.
+The **`delete()`** method of {{jsxref("Set")}} instances removes the specified value from this set, if it is in the set.
 
 {{InteractiveExample("JavaScript Demo: Set.prototype.delete()")}}
 
@@ -35,16 +35,15 @@ setInstance.delete(value)
 ### Parameters
 
 - `value`
-  - : The value to remove from `Set`.
+  - : The value to remove from the `Set` object. Objects are compared by [reference](/en-US/docs/Glossary/Object_reference), not by value.
 
 ### Return value
 
-Returns `true` if `value` was already in
-`Set`; otherwise `false`.
+`true` if a value in the `Set` object has been removed successfully. `false` if the value is not found in the `Set`.
 
 ## Examples
 
-### Using the delete() method
+### Using delete()
 
 ```js
 const mySet = new Set();
@@ -86,4 +85,6 @@ setObj.forEach((point) => {
 ## See also
 
 - {{jsxref("Set")}}
+- {{jsxref("Set.prototype.add()")}}
 - {{jsxref("Set.prototype.clear()")}}
+- {{jsxref("Set.prototype.has()")}}

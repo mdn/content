@@ -98,7 +98,7 @@ export default {
 </script>
 <style scoped>
 .edit-label {
-  font-family: Arial, sans-serif;
+  font-family: "Arial", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #0b0c0c;

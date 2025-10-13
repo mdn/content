@@ -37,15 +37,11 @@ let dc = pc.createDataChannel("SendFile");
 let source = null;
 dc.bufferedAmountLowThreshold = 65536;
 
-pc.addEventListener(
-  "bufferedamountlow",
-  (ev) => {
-    if (source.position <= source.length) {
-      dc.send(source.readFile(65536));
-    }
-  },
-  false,
-);
+pc.addEventListener("bufferedamountlow", (ev) => {
+  if (source.position <= source.length) {
+    dc.send(source.readFile(65536));
+  }
+});
 ```
 
 After creating the `RTCPeerConnection`, this calls {{domxref("RTCPeerConnection.createDataChannel()")}} to create the data channel. Then a listener is created for `bufferedamountlow` to refill the incoming data buffer any time its contents fall below 65536 bytes.

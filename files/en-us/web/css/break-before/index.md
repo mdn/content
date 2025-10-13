@@ -220,7 +220,7 @@ By default, the subheadings and paragraphs were laid out rather messily because 
 
 ```css
 html {
-  font-family: helvetica, arial, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 h1 {

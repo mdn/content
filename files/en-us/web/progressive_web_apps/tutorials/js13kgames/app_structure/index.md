@@ -114,8 +114,14 @@ document.getElementById("content").innerHTML = content;
 Next, it registers a service worker:
 
 ```js
+let swRegistration = null;
+
 if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("/pwa-examples/js13kpwa/sw.js");
+  navigator.serviceWorker
+    .register("/pwa-examples/js13kpwa/sw.js")
+    .then((reg) => {
+      swRegistration = reg;
+    });
 }
 ```
 
@@ -136,6 +142,7 @@ The last block creates notifications that display a randomly-selected item from 
 
 ```js
 function randomNotification() {
+  if (!swRegistration) return;
   const randomItem = Math.floor(Math.random() * games.length);
   const notifTitle = games[randomItem].name;
   const notifBody = `Created by ${games[randomItem].author}.`;
@@ -144,7 +151,7 @@ function randomNotification() {
     body: notifBody,
     icon: notifImg,
   };
-  new Notification(notifTitle, options);
+  swRegistration.showNotification(notifTitle, options);
   setTimeout(randomNotification, 30000);
 }
 ```

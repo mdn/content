@@ -2,9 +2,13 @@
 title: corner-block-end-shape
 slug: Web/CSS/corner-block-end-shape
 page-type: css-property
+status:
+  - experimental
 browser-compat: css.properties.corner-block-end-shape
 sidebar: cssref
 ---
+
+{{SeeCompatTable}}
 
 The **`corner-block-end-shape`** [CSS](/en-US/docs/Web/CSS) property specifies the shape of both the corners on a box's block-end edge, within their {{cssxref("border-radius")}} area.
 
@@ -75,7 +79,7 @@ We give the box some basic styles, which we've hidden for brevity. We also apply
 
 ```css hidden live-sample___basic-usage
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   width: 240px;
   margin: 20px auto;
 }

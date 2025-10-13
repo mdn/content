@@ -10,7 +10,6 @@ system:
           - .*
           - scripts/**
           - tests/**
-          - jest.config.json
           - front-matter-config.json
 
 Content:Accessibility:

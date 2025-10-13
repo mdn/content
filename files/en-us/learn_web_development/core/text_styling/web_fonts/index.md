@@ -41,7 +41,7 @@ As we looked at in [Fundamental text and font styling](/en-US/docs/Learn_web_dev
 
 ```css
 p {
-  font-family: Helvetica, "Trebuchet MS", Verdana, sans-serif;
+  font-family: "Helvetica", "Trebuchet MS", "Verdana", sans-serif;
 }
 ```
 

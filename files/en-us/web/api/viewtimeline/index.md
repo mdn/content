@@ -107,7 +107,7 @@ The CSS for the example looks like this:
 p,
 h1,
 div {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 h1 {

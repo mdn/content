@@ -6,7 +6,7 @@ browser-compat: css.properties.list-style
 sidebar: cssref
 ---
 
-The **`list-style`** CSS [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) allows you to set all the list style properties at once.
+The **`list-style`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) allows you to set all the list style properties at once.
 
 {{InteractiveExample("CSS Demo: list-style")}}
 

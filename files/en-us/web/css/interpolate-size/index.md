@@ -115,7 +115,7 @@ The HTML contains a single {{htmlelement("section")}} element with [`tabindex="0
 }
 
 section {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   width: 175px;
   border-radius: 5px;
   background: #eeeeee;

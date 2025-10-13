@@ -17,7 +17,7 @@ The **`copysign`** instructions, are used to copy just the sign bit from one num
     f32.const 10
     f32.const -2
 
-    f32.copysign ;; copy just the sing bit from second to the first number
+    f32.copysign ;; copy just the sign bit from second to the first number
     call $log ;; log the result
   )
   (start $main)

@@ -257,9 +257,9 @@ In the input version of the file, you may have noticed that we put an empty {{ht
 4. Add the following property to `package.json`:
 
    ```json
-   "browserslist": [
-     "last 5 versions"
-   ]
+   {
+     "browserslist": ["last 5 versions"]
+   }
    ```
 
 5. Change the default task to:

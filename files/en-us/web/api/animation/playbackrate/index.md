@@ -30,8 +30,8 @@ const shrinkAlice = () => {
 };
 
 // On tap or click, Alice will shrink.
-bottle.addEventListener("mousedown", shrinkAlice, false);
-bottle.addEventListener("touchstart", shrinkAlice, false);
+bottle.addEventListener("mousedown", shrinkAlice);
+bottle.addEventListener("touchstart", shrinkAlice);
 ```
 
 Contrariwise, clicking on the cake causes her to "grow," playing `aliceChange` forwards again:
@@ -43,8 +43,8 @@ const growAlice = () => {
 };
 
 // On tap or click, Alice will grow.
-cake.addEventListener("mousedown", growAlice, false);
-cake.addEventListener("touchstart", growAlice, false);
+cake.addEventListener("mousedown", growAlice);
+cake.addEventListener("touchstart", growAlice);
 ```
 
 In another example, the [Red Queen's Race Game](/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API#other_useful_methods), Alice and the Red Queen are constantly slowing down:

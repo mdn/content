@@ -29,7 +29,7 @@ text-decoration-skip-ink: none;
 ```css interactive-example
 p {
   font:
-    1.9em Georgia,
+    1.9em "Georgia",
     serif;
   text-decoration: underline;
 }

@@ -49,13 +49,6 @@ button {
 
 ```js
 const canvas = document.querySelector("canvas");
-
-const gl = getRenderingContext();
-gl.enable(gl.SCISSOR_TEST);
-let rainingRect = new Rectangle();
-
-let timer = setTimeout(drawAnimation, 17);
-canvas.addEventListener("click", playerClick);
 const [scoreDisplay, missesDisplay] = document.querySelectorAll("strong");
 
 function getRenderingContext() {
@@ -68,8 +61,36 @@ function getRenderingContext() {
   return gl;
 }
 
+const gl = getRenderingContext();
+gl.enable(gl.SCISSOR_TEST);
+
+function getRandomVector() {
+  return [Math.random(), Math.random(), Math.random()];
+}
+
+class Rectangle {
+  constructor() {
+    // We get three random numbers and use them for new rectangle
+    // size and position. For each we use a different number,
+    // because we want horizontal size, vertical size and
+    // position to be determined independently.
+    const randVec = getRandomVector();
+    this.size = [5 + 120 * randVec[0], 5 + 120 * randVec[1]];
+    this.position = [
+      randVec[2] * (gl.drawingBufferWidth - this.size[0]),
+      gl.drawingBufferHeight,
+    ];
+    this.velocity = 1.0 + 6.0 * Math.random();
+    this.color = getRandomVector();
+    gl.clearColor(this.color[0], this.color[1], this.color[2], 1.0);
+  }
+}
+
+let rainingRect = new Rectangle();
+
 let score = 0;
 let misses = 0;
+let timer = null;
 function drawAnimation() {
   gl.scissor(
     rainingRect.position[0],
@@ -119,27 +140,8 @@ function playerClick(evt) {
   }
 }
 
-class Rectangle {
-  constructor() {
-    // We get three random numbers and use them for new rectangle
-    // size and position. For each we use a different number,
-    // because we want horizontal size, vertical size and
-    // position to be determined independently.
-    const randVec = getRandomVector();
-    this.size = [5 + 120 * randVec[0], 5 + 120 * randVec[1]];
-    this.position = [
-      randVec[2] * (gl.drawingBufferWidth - this.size[0]),
-      gl.drawingBufferHeight,
-    ];
-    this.velocity = 1.0 + 6.0 * Math.random();
-    this.color = getRandomVector();
-    gl.clearColor(this.color[0], this.color[1], this.color[2], 1.0);
-  }
-}
-
-function getRandomVector() {
-  return [Math.random(), Math.random(), Math.random()];
-}
+timer = setTimeout(drawAnimation, 17);
+canvas.addEventListener("click", playerClick);
 ```
 
 The source code of this example is also available on [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/raining-rectangles).

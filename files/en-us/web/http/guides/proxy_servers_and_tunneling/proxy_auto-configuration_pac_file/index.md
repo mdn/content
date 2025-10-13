@@ -498,12 +498,12 @@ If only a single value is specified (from each category: hour, minute, second), 
 #### Examples
 
 ```js-nolint
-timerange(12); // returns true from noon to 1pm
-timerange(12, 13) // returns true from noon to 1pm
-timerange(12, "GMT") // returns true from noon to 1pm, in the GMT timezone
-timerange(9, 17) // returns true from 9am to 5pm
-timerange(8, 30, 17, 0) // returns true from 8:30am to 5:00pm
-timerange(0, 0, 0, 0, 0, 30) // returns true between midnight and 30 seconds past midnight
+timeRange(12); // returns true from noon to 1pm
+timeRange(12, 13) // returns true from noon to 1pm
+timeRange(12, "GMT") // returns true from noon to 1pm, in the GMT timezone
+timeRange(9, 17) // returns true from 9am to 5pm
+timeRange(8, 30, 17, 0) // returns true from 8:30am to 5:00pm
+timeRange(0, 0, 0, 0, 0, 30) // returns true between midnight and 30 seconds past midnight
 ```
 
 ### alert()

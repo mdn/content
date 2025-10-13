@@ -112,7 +112,7 @@ For instance, suppose we want to add buttons to a page to adjust the text size. 
 
 ```css
 body {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   font-size: 12px;
 }
 

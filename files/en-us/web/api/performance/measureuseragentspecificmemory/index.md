@@ -58,31 +58,31 @@ An example return value looks like this:
       "attribution": [
         {
           "url": "https://example.com",
-          "scope": "Window",
-        },
+          "scope": "Window"
+        }
       ],
-      "types": ["DOM", "JS"],
+      "types": ["DOM", "JS"]
     },
     {
       "bytes": 0,
       "attribution": [],
-      "types": [],
+      "types": []
     },
     {
       "bytes": 500000,
       "attribution": [
         {
-          "url": "https://example.com/iframe.html"
+          "url": "https://example.com/iframe.html",
           "container": {
             "id": "example-id",
-            "src": "redirect.html?target=iframe.html",
+            "src": "redirect.html?target=iframe.html"
           },
-          "scope": "Window",
+          "scope": "Window"
         }
       ],
-      "types": ["JS", "DOM"],
-    },
-  ],
+      "types": ["JS", "DOM"]
+    }
+  ]
 }
 ```
 

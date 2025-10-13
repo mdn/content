@@ -6,7 +6,7 @@ browser-compat: css.types.color
 sidebar: cssref
 ---
 
-The **`<color>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents a color.
+The **`<color>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types) represents a color.
 A `<color>` may also include an [alpha-channel](https://en.wikipedia.org/wiki/Alpha_compositing) _transparency value_, indicating how the color should [composite](https://drafts.fxtf.org/compositing-1/#simplealphacompositing) with its background.
 
 > [!NOTE]
@@ -35,7 +35,7 @@ hsl(150 30% 60% / 80%)
 hwb(12 50% 0%)
 hwb(194 0% 0% / 0.5)
 
-/* LAB (Lightness, A-axis, B-axis) */
+/* Lab (Lightness, A-axis, B-axis) */
 lab(50% 40 59.5)
 lab(50% 40 59.5 / 0.5)
 
@@ -47,7 +47,7 @@ lch(52.2% 72.2 50 / 0.5)
 oklab(59% 0.1 0.1)
 oklab(59% 0.1 0.1 / 0.5)
 
-/* Oklch (Lightness, Chroma, Hue) */
+/* OkLCh (Lightness, Chroma, Hue) */
 oklch(60% 0.15 50)
 oklch(60% 0.15 50 / 0.5)
 
@@ -162,7 +162,7 @@ For example:
 - `X` (`0.2`) in `color(xyz 0.2 0.1 0.6)` is analogous to `R` (`50%`) in `rgb(50% 70% 30%)`.
 - `H` (`0deg`) in `hsl(0deg 100% 80%)` is analogous to `H` (`140`) in `oklch(80% 0.1 140)`.
 
-Using Oklch as the interpolation color space and the two colors below as an example:
+Using OkLCh as the interpolation color space and the two colors below as an example:
 
 ```css
 lch(80% 30 none)

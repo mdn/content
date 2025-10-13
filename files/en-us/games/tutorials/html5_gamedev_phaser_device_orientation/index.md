@@ -306,7 +306,7 @@ That way we can check which key is pressed at the given frame and apply the defi
 Probably the most interesting part of the game is its usage of the **Device Orientation API** for control on mobile devices. Thanks to this you can play the game by tilting the device in the direction you want the ball to roll. Here's the code from the `create()` function responsible for this:
 
 ```js
-window.addEventListener("deviceorientation", this.handleOrientation, true);
+window.addEventListener("deviceorientation", this.handleOrientation);
 ```
 
 We're adding an event listener to the `"deviceorientation"` event and binding the `handleOrientation` function which looks like this:

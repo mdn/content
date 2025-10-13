@@ -76,7 +76,7 @@ A simple `<span>` to receive the output.
 ```css hidden
 .mq-value {
   font:
-    18px arial,
+    18px "Arial",
     sans-serif;
   font-weight: bold;
   color: #8888ff;

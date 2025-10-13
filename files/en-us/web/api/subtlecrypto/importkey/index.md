@@ -195,7 +195,7 @@ A JSON Web Key looks something like this (this is an EC private key):
   "kty": "EC",
   "x": "SzrRXmyI8VWFJg1dPUNbFcc9jZvjZEfH7ulKI1UkXAltd7RGWrcfFxqyGPcwu6AQ",
   "y": "hHUag3OvDzEr0uUQND4PXHQTXP5IDGdYhJhL-WLKjnGjQAw0rNGy5V29-aV-yseW"
-};
+}
 ```
 
 ## Examples

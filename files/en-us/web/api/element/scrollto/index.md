@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Element.scrollTo
 ---
 
-{{APIRef}}
+{{APIRef("CSSOM view API")}}
 
 The **`scrollTo()`** method of the {{domxref("Element")}}
 interface scrolls to a particular set of coordinates inside a given element.

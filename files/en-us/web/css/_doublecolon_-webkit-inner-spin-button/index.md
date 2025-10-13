@@ -10,7 +10,7 @@ sidebar: cssref
 
 {{Non-standard_header}}
 
-The **`::-webkit-inner-spin-button`** CSS pseudo-element is used to style the inner part of the spinner button of number picker input elements.
+The **`::-webkit-inner-spin-button`** [CSS](/en-US/docs/Web/CSS) pseudo-element is used to style the inner part of the spinner button of number picker input elements.
 
 ## Syntax
 

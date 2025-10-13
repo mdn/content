@@ -168,7 +168,7 @@ By default, it is possible for you to get a break between the image and its capt
 
 ```css
 html {
-  font-family: helvetica, arial, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 body {

@@ -1,6 +1,6 @@
 ---
 title: HTML cheatsheet for syntax and common tasks
-short-title: HTML cheatsheet
+short-title: Cheatsheet
 slug: Web/HTML/Guides/Cheatsheet
 page-type: guide
 sidebar: htmlsidebar

@@ -55,14 +55,10 @@ const v = document.getElementById("myVideo");
 const p = document.getElementById("pbr");
 const c = document.getElementById("currentPbr");
 
-p.addEventListener(
-  "input",
-  () => {
-    c.textContent = p.value;
-    v.playbackRate = p.value;
-  },
-  false,
-);
+p.addEventListener("input", () => {
+  c.textContent = p.value;
+  v.playbackRate = p.value;
+});
 ```
 
 Finally, we listen for the `input` event firing on the {{ htmlelement("input") }} element, allowing us to react to the playback rate control being changed.

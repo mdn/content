@@ -1,5 +1,6 @@
 ---
 title: User input methods and controls
+short-title: UI methods & controls
 slug: Learn_web_development/Extensions/Forms/User_input_methods
 page-type: guide
 sidebar: learnsidebar
@@ -34,8 +35,8 @@ Most users will use a keyboard to enter data into your form controls. Some will 
 If you want to add additional keyboard support, such as validating a form control when a specific key is hit, you can use event listeners to capture and react to keyboard events. For example, if you want to add controls when any key gets pressed, you need to add an event listener on the window object:
 
 ```js
-window.addEventListener("keydown", handleKeyDown, true);
-window.addEventListener("keyup", handleKeyUp, true);
+window.addEventListener("keydown", handleKeyDown);
+window.addEventListener("keyup", handleKeyUp);
 ```
 
 `handleKeyDown` and `handleKeyUp` are functions defining the control logic to be executed when the `keydown` and `keyup` events are fired.
@@ -56,10 +57,10 @@ To provide additional support for touchscreen devices, it's a good practice to t
 If you want to use touch events, you need to add event listeners and specify handler functions, which will be called when the event gets fired:
 
 ```js
-element.addEventListener("touchstart", handleStart, false);
-element.addEventListener("touchcancel", handleCancel, false);
-element.addEventListener("touchend", handleEnd, false);
-element.addEventListener("touchmove", handleMove, false);
+element.addEventListener("touchstart", handleStart);
+element.addEventListener("touchcancel", handleCancel);
+element.addEventListener("touchend", handleEnd);
+element.addEventListener("touchmove", handleMove);
 ```
 
 where `element` is the DOM element you want to register the touch events on.

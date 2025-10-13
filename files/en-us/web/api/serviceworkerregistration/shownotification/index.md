@@ -49,7 +49,7 @@ showNotification(title, options)
     - `image` {{optional_inline}} {{experimental_inline}}
       - : A string containing the URL of an image to be displayed in the notification.
     - `lang` {{optional_inline}}
-      - : The notification's language, as specified using a string representing a language tag according to {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}. See the Sitepoint [ISO 2 letter language codes](https://www.sitepoint.com/iso-2-letter-language-codes/) page for a simple reference. The default is the empty string.
+      - : The notification's language, as specified using a string representing a {{glossary("BCP 47 language tag")}}. The default is the empty string.
     - `renotify` {{optional_inline}} {{experimental_inline}}
       - : A boolean value specifying whether the user should be notified after a new notification replaces an old one. The default is `false`, which means they won't be notified. If `true`, then `tag` also must be set.
     - `requireInteraction` {{optional_inline}} {{experimental_inline}}

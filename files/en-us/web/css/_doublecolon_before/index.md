@@ -178,15 +178,11 @@ li.done::before {
 
 ```js
 const list = document.querySelector("ul");
-list.addEventListener(
-  "click",
-  (ev) => {
-    if (ev.target.tagName === "LI") {
-      ev.target.classList.toggle("done");
-    }
-  },
-  false,
-);
+list.addEventListener("click", (ev) => {
+  if (ev.target.tagName === "LI") {
+    ev.target.classList.toggle("done");
+  }
+});
 ```
 
 Here is the above code example running live. Note that there are no icons used, and the check-mark is actually the `::before` that has been styled in CSS. Go ahead and get some stuff done.
@@ -256,7 +252,7 @@ In this demo, we generate extra [list items](/en-US/docs/Web/HTML/Reference/Elem
 ```css
 ul {
   font-size: 1.5rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 ul::before,

@@ -134,7 +134,7 @@ function initializeAttributes() {
   gl.vertexAttribPointer(0, 1, gl.FLOAT, false, 0, 0);
 }
 
-window.addEventListener("beforeunload", cleanup, true);
+window.addEventListener("beforeunload", cleanup);
 function cleanup() {
   gl.useProgram(null);
   if (buffer) {

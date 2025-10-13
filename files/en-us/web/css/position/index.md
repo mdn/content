@@ -433,8 +433,8 @@ dt {
   border-top: 1px solid #717d85;
   color: white;
   font:
-    bold 18px/21px Helvetica,
-    Arial,
+    bold 18px/21px "Helvetica",
+    "Arial",
     sans-serif;
   margin: 0;
   padding: 2px 0 0 12px;
@@ -445,8 +445,8 @@ dt {
 
 dd {
   font:
-    bold 20px/45px Helvetica,
-    Arial,
+    bold 20px/45px "Helvetica",
+    "Arial",
     sans-serif;
   margin: 0;
   padding-left: 12px;
@@ -498,7 +498,7 @@ div {
   overflow: scroll;
   scrollbar-width: thin;
   font-size: 16px;
-  font-family: Verdana;
+  font-family: "Verdana";
   border: 1px solid;
 }
 

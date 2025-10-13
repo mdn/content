@@ -451,8 +451,8 @@ body {
   width: 90%;
   margin: 2em auto;
   font:
-    1em/1.3 Arial,
-    Helvetica,
+    1em/1.3 "Helvetica",
+    "Arial",
     sans-serif;
 }
 

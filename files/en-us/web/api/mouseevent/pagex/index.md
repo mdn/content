@@ -18,7 +18,7 @@ Originally, this property was defined as a `long` integer. The [CSSOM View Modul
 `double` float. See the [Browser compatibility](#browser_compatibility) section for
 details.
 
-See [Coordinate systems](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems#page) for additional information about coordinates specified in this fashion.
+See [Coordinate systems](/en-US/docs/Web/API/CSSOM_view_API/Coordinate_systems#page) for additional information about coordinates specified in this fashion.
 
 ## Value
 
@@ -83,9 +83,9 @@ function updateDisplay(event) {
   pageY.innerText = event.pageY;
 }
 
-box.addEventListener("mousemove", updateDisplay, false);
-box.addEventListener("mouseenter", updateDisplay, false);
-box.addEventListener("mouseleave", updateDisplay, false);
+box.addEventListener("mousemove", updateDisplay);
+box.addEventListener("mouseenter", updateDisplay);
+box.addEventListener("mouseleave", updateDisplay);
 ```
 
 The JavaScript code uses {{domxref("EventTarget.addEventListener", "addEventListener()")}} to register the function `updateDisplay()` as the event handler for the {{domxref("Element/mousemove_event", "mousemove")}}, {{domxref("Element/mouseenter_event", "mouseenter")}}, and {{domxref("Element/mouseleave_event", "mouseleave")}} events.
@@ -101,7 +101,7 @@ Try this out here:
 
 ### More examples
 
-You can also see an example that demonstrates [how to access the mouse position](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems#example) information in every available coordinate system.
+You can also see an example that demonstrates [how to access the mouse position](/en-US/docs/Web/API/CSSOM_view_API/Coordinate_systems#example) information in every available coordinate system.
 
 ## Specifications
 
@@ -116,4 +116,4 @@ Prior to being added to the CSSOM View specification, `pageX` and `pageY` were a
 ## See also
 
 - {{domxref("MouseEvent.pageY")}}
-- [Coordinate systems](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems)
+- [Coordinate systems](/en-US/docs/Web/API/CSSOM_view_API/Coordinate_systems)

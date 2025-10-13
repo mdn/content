@@ -32,7 +32,7 @@ The warning level allows you to be proactive and plan any tech debt, while not b
 
 The error level is an upper bound limit, where changes will have a negative and noticeable impact.
 
-In order to begin, you need to first measure the devices and connection speeds where your users are coming from (e.g., A \~$_200_ Android device over a 3G connection), using multiple [tools](/en-US/docs/Learn_web_development/Extensions/Performance/Web_Performance_Basics). These time-based metrics will translate into file-size budgets.
+The first step is to measure the devices and connection speeds where your users are coming from (e.g., A \~$_200_ Android device over a 3G connection), using multiple [tools](/en-US/docs/Learn_web_development/Extensions/Performance/Best_practices). These time-based metrics will translate into file-size budgets.
 
 A default baseline to reduce bounce rate is to achieve [Time to Interactive under 5 seconds in 3G/4G, and under 2 seconds for subsequent loads](https://infrequently.org/2017/10/can-you-afford-it-real-world-web-performance-budgets/). However, based on the specific goals and content of your site, you might choose to focus on other metrics.
 
@@ -45,7 +45,7 @@ The ultimate value of a Performance Budget is to correlate the impact of Perform
 During development, there are a few tools to run checks against new or modified assets:
 
 - A module bundler (e.g., [webpack](https://webpack.js.org/)), has [performance features](https://webpack.js.org/configuration/performance/) that will notify you when assets exceed specified limits.
-- [Bundlesize](https://github.com/siddharthkp/bundlesize), allows you to define and run file size checks in your continuous integration (CI) pipeline.
+- [Bundlesize](https://github.com/siddharthkp/bundlesize), allows you to define and run file size checks in your {{glossary("continuous integration")}} (CI) pipeline.
 
 File size checks are the first line of defense against regressions but translating size back into time metrics can be difficult since development environments could be missing 3rd party scripts, and optimizations commonly provided by a [CDN](/en-US/docs/Glossary/CDN).
 

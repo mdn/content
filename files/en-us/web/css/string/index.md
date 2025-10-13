@@ -6,7 +6,7 @@ browser-compat: css.types.string
 sidebar: cssref
 ---
 
-The **`<string>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents a sequence of characters. Strings are used in numerous CSS properties, such as {{CSSxRef("content")}}, {{CSSxRef("font-family")}}, and {{CSSxRef("quotes")}}.
+The **`<string>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types) represents a sequence of characters. Strings are used in numerous CSS properties, such as {{CSSxRef("content")}}, {{CSSxRef("font-family")}}, and {{CSSxRef("quotes")}}.
 
 ## Syntax
 
@@ -58,6 +58,6 @@ awesome string"
 
 ## See also
 
-- [CSS values and units](/en-US/docs/Web/CSS/CSS_Values_and_Units) module
-- [CSS basic data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)
+- [CSS values and units](/en-US/docs/Web/CSS/CSS_values_and_units) module
+- [CSS basic data types](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types)
 - [Introduction to CSS: Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

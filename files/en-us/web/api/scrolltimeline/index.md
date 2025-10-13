@@ -67,7 +67,7 @@ The CSS for the example looks like this:
 }
 
 .output {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   position: fixed;
   top: 5px;
   right: 5px;

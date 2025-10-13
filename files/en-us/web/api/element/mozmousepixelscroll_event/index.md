@@ -9,7 +9,7 @@ status:
 browser-compat: api.Element.MozMousePixelScroll_event
 ---
 
-{{APIRef}}{{deprecated_header}}{{ Non-standard_header() }}
+{{APIRef("UI Events")}}{{deprecated_header}}{{Non-standard_header}}
 
 The Firefox-only, _non-standard_, and _obsolete_ **`MozMousePixelScroll`** event is fired at an {{domxref("Element")}} asynchronously when a mouse wheel or similar device is operated. It's represented by the {{ domxref("MouseScrollEvent") }} interface.
 

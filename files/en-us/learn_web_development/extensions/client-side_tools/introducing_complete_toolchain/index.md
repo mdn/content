@@ -195,10 +195,12 @@ npx prettier --write ./index.html
 You can also replace `./index.html` with any other file or folder to format them. For example, `.` will format everything in the current directory. In case you may forget the syntax, you can add it as a custom script in your package.json too:
 
 ```json
-"scripts": {
-  // …
-  "format": "prettier --write ."
-},
+{
+  "scripts": {
+    // …
+    "format": "prettier --write ."
+  }
+}
 ```
 
 Now you can run the following to format the directory:

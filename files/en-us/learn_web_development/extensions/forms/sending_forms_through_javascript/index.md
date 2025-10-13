@@ -1,5 +1,6 @@
 ---
 title: Sending forms through JavaScript
+short-title: JS form submission
 slug: Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript
 page-type: learn-module-chapter
 sidebar: learnsidebar

@@ -34,14 +34,10 @@ The code fragment below detects the context restored event.
 const canvas = new OffscreenCanvas(256, 256);
 const gl = offscreen.getContext("2d");
 
-canvas.addEventListener(
-  "contextrestored",
-  (e) => {
-    console.log(e);
-    // call to redrawCanvas() or similar
-  },
-  false,
-);
+canvas.addEventListener("contextrestored", (e) => {
+  console.log(e);
+  // call to redrawCanvas() or similar
+});
 ```
 
 ## Specifications

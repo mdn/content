@@ -2,9 +2,13 @@
 title: corner-inline-end-shape
 slug: Web/CSS/corner-inline-end-shape
 page-type: css-property
+status:
+  - experimental
 browser-compat: css.properties.corner-inline-end-shape
 sidebar: cssref
 ---
+
+{{SeeCompatTable}}
 
 The **`corner-inline-end-shape`** [CSS](/en-US/docs/Web/CSS) property specifies the shape of both the corners on a box's inline-end edge, within their {{cssxref("border-radius")}} area.
 
@@ -75,7 +79,7 @@ We give the box some basic styles, which we've hidden for brevity. We also apply
 
 ```css hidden live-sample___basic-usage
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   width: 240px;
   margin: 20px auto;
 }

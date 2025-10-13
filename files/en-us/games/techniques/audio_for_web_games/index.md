@@ -96,26 +96,18 @@ const buttons = document.getElementsByTagName("button");
 let stopTime = 0;
 
 for (const button of buttons) {
-  button.addEventListener(
-    "click",
-    () => {
-      myAudio.currentTime = button.dataset.start;
-      stopTime = Number(button.dataset.stop);
-      myAudio.play();
-    },
-    false,
-  );
+  button.addEventListener("click", () => {
+    myAudio.currentTime = button.dataset.start;
+    stopTime = Number(button.dataset.stop);
+    myAudio.play();
+  });
 }
 
-myAudio.addEventListener(
-  "timeupdate",
-  () => {
-    if (myAudio.currentTime > stopTime) {
-      myAudio.pause();
-    }
-  },
-  false,
-);
+myAudio.addEventListener("timeupdate", () => {
+  if (myAudio.currentTime > stopTime) {
+    myAudio.pause();
+  }
+});
 ```
 
 {{EmbedLiveSample("audio-sprite", "", 200)}}

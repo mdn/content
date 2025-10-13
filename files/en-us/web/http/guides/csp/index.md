@@ -412,7 +412,7 @@ If we add `'strict-dynamic'` to the CSP, then "main.js" will be allowed to load 
 ```http
 Content-Security-Policy:
   script-src 'sha256-gEh1+8U9S1vkEuQSmmUMTZjyNSu5tIoECP4UXIEjMTk='
-  strict-dynamic
+  'strict-dynamic'
 ```
 
 The `'strict-dynamic'` keyword makes it much easier to create and maintain nonce- or hash-based CSPs, especially when a website uses third-party scripts. It does make your CSP less secure, though, because if the scripts you include create `<script>` elements based on potential sources of XSS, then the CSP will not protect them.

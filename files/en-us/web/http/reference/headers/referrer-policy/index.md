@@ -49,7 +49,7 @@ Referrer-Policy: unsafe-url
   - : Send only the {{glossary("origin")}} in the {{HTTPHeader("Referer")}} header.
     For example, a document at `https://example.com/page.html` will send the referrer `https://example.com/`.
 - `origin-when-cross-origin`
-  - : When performing a {{glossary("Same-origin_policy", "same-origin")}} request to the same protocol level (HTTP→HTTP, HTTPS→HTTPS), send the {{glossary("origin")}}, path, and query string. Send only the origin for cross origin requests and requests to less secure destinations (HTTPS→HTTP).
+  - : When performing a {{glossary("Same-origin_policy", "same-origin")}} request, send the {{glossary("origin")}}, path, and query string. Send only the origin for cross origin requests and requests to less secure destinations (HTTPS→HTTP).
 - `same-origin`
   - : Send the {{glossary("origin")}}, path, and query string for {{glossary("Same-origin_policy", "same-origin")}} requests. Don't send the {{HTTPHeader("Referer")}} header for cross-origin requests.
 - `strict-origin`

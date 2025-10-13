@@ -50,10 +50,10 @@ Register an event handler for each touch event type.
 
 ```js
 // Register touch event handlers
-someElement.addEventListener("touchstart", process_touchstart, false);
-someElement.addEventListener("touchmove", process_touchmove, false);
-someElement.addEventListener("touchcancel", process_touchcancel, false);
-someElement.addEventListener("touchend", process_touchend, false);
+someElement.addEventListener("touchstart", process_touchstart);
+someElement.addEventListener("touchmove", process_touchmove);
+someElement.addEventListener("touchcancel", process_touchcancel);
+someElement.addEventListener("touchend", process_touchend);
 ```
 
 Process an event in an event handler, implementing the application's gesture semantics.
@@ -83,17 +83,13 @@ Access the attributes of a touch point.
 
 ```js
 // Create touchstart handler
-someElement.addEventListener(
-  "touchstart",
-  (ev) => {
-    // Iterate through the touch points that were activated
-    // for this element and process each event 'target'
-    for (const touch of ev.targetTouches) {
-      process_target(touch.target);
-    }
-  },
-  false,
-);
+someElement.addEventListener("touchstart", (ev) => {
+  // Iterate through the touch points that were activated
+  // for this element and process each event 'target'
+  for (const touch of ev.targetTouches) {
+    process_target(touch.target);
+  }
+});
 ```
 
 Prevent the browser from processing _emulated mouse events_.

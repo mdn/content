@@ -36,9 +36,7 @@ text-autospace: unset;
 - `normal`
   - : Creates the default behavior to automatically apply spacing between CJK and non-CJK characters and around punctuation. This value has the same effect as applying both [`ideograph-alpha`](#ideograph-alpha) and [`ideograph-numeric`](#ideograph-numeric).
 - `<autospace>`
-  - : Provides more control over spacing behaviors. It accepts:
-    - the keyword `no-autospace`, or
-    - a combination of one or more of `ideograph-alpha`, `ideograph-numeric`, and `punctuation`, optionally followed by `insert` or `replace`.
+  - : Provides more control over spacing behaviors. It accepts the keyword `no-autospace`, or a combination of one or more of `ideograph-alpha`, `ideograph-numeric`, and `punctuation`, optionally followed by `insert` or `replace`.
     - `no-autospace`
       - : Disables automatic spacing between CJK and non-CJK characters.
     - `ideograph-alpha`
@@ -175,5 +173,5 @@ chose.addEventListener("change", (e) => {
 ## See also
 
 - {{cssxref('text-spacing-trim')}}
-- [`ic`](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#local_font-relative_lengths) and [`ric`](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#root_font-relative_lengths) units
+- [`ic`](/en-US/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#local_font-relative_lengths) and [`ric`](/en-US/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#root_font-relative_lengths) units
 - [CSS Text](/en-US/docs/Web/CSS/CSS_text) module

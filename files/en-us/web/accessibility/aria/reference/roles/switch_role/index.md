@@ -111,7 +111,7 @@ This JavaScript code defines and applies a function to handle click events on sw
 
 ```js
 document.querySelectorAll(".switch").forEach((theSwitch) => {
-  theSwitch.addEventListener("click", handleClickEvent, false);
+  theSwitch.addEventListener("click", handleClickEvent);
 });
 
 function handleClickEvent(evt) {

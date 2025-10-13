@@ -8,7 +8,7 @@ status:
 browser-compat: api.Document.domain
 ---
 
-{{ApiRef}} {{Deprecated_Header}}
+{{APIRef("DOM")}}{{Deprecated_Header}}
 
 The **`domain`** property of the {{domxref("Document")}}
 interface gets/sets the domain portion of the {{glossary("origin")}} of the current

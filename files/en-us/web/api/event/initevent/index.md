@@ -57,13 +57,9 @@ const event = document.createEvent("Event");
 event.initEvent("click", true, false);
 
 // Listen for the event.
-elem.addEventListener(
-  "click",
-  (e) => {
-    // e.target matches elem
-  },
-  false,
-);
+elem.addEventListener("click", (e) => {
+  // e.target matches elem
+});
 
 elem.dispatchEvent(event);
 ```

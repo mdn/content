@@ -248,9 +248,7 @@ The `moz:firefoxOptions` must be placed—as above—inside
 ```json
 {
   "capabilities": {
-    "firstMatch": [
-      {"moz:firefoxOptions": …}
-    ]
+    "firstMatch": [{ "moz:firefoxOptions": {} }]
   }
 }
 ```

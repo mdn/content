@@ -35,12 +35,12 @@ font-optical-sizing: none;
 ```css interactive-example
 @font-face {
   src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.ttf");
-  font-family: Amstelvar;
+  font-family: "Amstelvar";
   font-style: normal;
 }
 
 #example-element {
-  font-family: Amstelvar, serif;
+  font-family: "Amstelvar", serif;
   text-align: left;
 }
 
@@ -113,7 +113,7 @@ When optical sizing is used, small text sizes are often rendered with thicker st
 
 p {
   font-size: 36px;
-  font-family: Amstelvar, serif;
+  font-family: "Amstelvar", serif;
 }
 
 .no-optical-sizing {

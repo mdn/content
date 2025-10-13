@@ -6,7 +6,7 @@ browser-compat: css.selectors.highlight
 sidebar: cssref
 ---
 
-The **`::highlight()`** CSS [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) applies styles to a custom highlight.
+The **`::highlight()`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) applies styles to a custom highlight.
 
 A custom highlight is a collection of {{domxref("Range")}} objects and is registered on a webpage using the {{domxref("HighlightRegistry")}}.
 

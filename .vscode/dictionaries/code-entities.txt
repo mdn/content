@@ -62,6 +62,7 @@ associationlistitemvalue
 attributionsrc
 audiocontext
 authorid
+autospace
 backdrag
 backgroundfetchabort
 backgroundfetchclick
@@ -383,6 +384,7 @@ longtask
 lowdelay
 lowp
 lquote
+LRGB
 ltrh
 makemigrations
 mathbb
@@ -390,6 +392,7 @@ mathbold
 mathdbl
 mathit
 mathml
+mathml.stixgeneral_operator_stretching.disabled
 mathmlref
 mathmono
 mathrm
@@ -734,7 +737,6 @@ telu
 testingbot-api
 texlive
 texlive-fontsextra
-text-autospace
 textformatupdate
 textupdate
 TEXTUREI

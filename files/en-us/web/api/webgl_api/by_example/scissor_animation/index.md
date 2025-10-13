@@ -81,16 +81,16 @@ function getRenderingContext() {
 }
 
 function startAnimation(evt) {
-  button.removeEventListener(evt.type, startAnimation, false);
-  button.addEventListener("click", stopAnimation, false);
+  button.removeEventListener(evt.type, startAnimation);
+  button.addEventListener("click", stopAnimation);
   document.querySelector("strong").textContent = "stop";
   timer = setInterval(drawAnimation, 17);
   drawAnimation();
 }
 
 function stopAnimation(evt) {
-  button.removeEventListener(evt.type, stopAnimation, false);
-  button.addEventListener("click", startAnimation, false);
+  button.removeEventListener(evt.type, stopAnimation);
+  button.addEventListener("click", startAnimation);
   document.querySelector("strong").textContent = "start";
   clearInterval(timer);
 }

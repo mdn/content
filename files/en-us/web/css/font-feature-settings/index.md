@@ -165,7 +165,7 @@ td.tabular {
 
 /* enable stylistic set 7 */
 .fancy-style {
-  font-family: Gabriola, cursive;
+  font-family: "Gabriola", cursive;
   font-feature-settings: "ss07";
 }
 ```

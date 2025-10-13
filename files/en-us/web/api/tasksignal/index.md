@@ -13,7 +13,7 @@ An object of this type is created, and associated with, a {{domxref('TaskControl
 The initial priority of the signal may be set by specifying it as an argument to the {{domxref("TaskController.TaskController", "TaskController()")}} constructor (by default it is `"user-visible"`).
 The priority can be changed by calling {{domxref("TaskController.setPriority()")}} on the controller.
 
-The signal may be passed as the `options.signal` argument in {{domxref("Scheduler.postTask()")}}, after which it's associated controller can be used to abort the task.
+The signal may be passed as the `options.signal` argument in {{domxref("Scheduler.postTask()")}}, after which its associated controller can be used to abort the task.
 If the [task priority is mutable](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#mutable_and_immutable_task_priority), the controller can also be used to change the task's priority.
 Abortable tasks that do not need the priority to change may instead specify an {{domxref("AbortSignal")}} as the `options.signal` argument.
 

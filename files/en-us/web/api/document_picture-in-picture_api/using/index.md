@@ -57,7 +57,7 @@ if ("documentPictureInPicture" in window) {
 
   const togglePipButton = document.createElement("button");
   togglePipButton.textContent = "Toggle Picture-in-Picture";
-  togglePipButton.addEventListener("click", togglePictureInPicture, false);
+  togglePipButton.addEventListener("click", togglePictureInPicture);
 
   document.getElementById("control-bar").appendChild(togglePipButton);
 }

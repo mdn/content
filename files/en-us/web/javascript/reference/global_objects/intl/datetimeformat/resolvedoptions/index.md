@@ -40,7 +40,7 @@ None.
 A new object with properties reflecting the options computed during the initialization of this `DateTimeFormat` object. The object has the following properties, in the order they are listed:
 
 - `locale`
-  - : The BCP 47 language tag for the locale actually used, determined by the [locale negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation) process. Only the `ca`, `hc`, and `nu` Unicode extension keys, if requested, may be included in the output.
+  - : The {{glossary("BCP 47 language tag")}} for the locale actually used, determined by the [locale negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation) process. Only the `ca`, `hc`, and `nu` Unicode extension keys, if requested, may be included in the output.
 - `calendar`
   - : The value provided for this property in the `options` argument, or using the Unicode extension key `"ca"`, with default filled in as needed. It is a supported [calendar type](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_calendar_types) for this locale. The default is locale dependent.
 - `numberingSystem`

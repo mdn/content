@@ -238,7 +238,7 @@ The `.back-to-top` link is given a {{cssxref("position")}} value of `fixed`, pla
 }
 
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   height: 100%;
 }
 
@@ -487,7 +487,7 @@ The `<section>` elements are designated as snap targets by setting a non-`none` 
 
 ```css live-sample___snapped
 section {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   width: 150px;
   height: 150px;
   margin: 50px auto;
@@ -758,7 +758,7 @@ Each `<header>` has a {{cssxref("position")}} value of `sticky` and a {{cssxref(
 }
 
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   height: 100%;
 }
 

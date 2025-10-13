@@ -138,19 +138,6 @@ Here are some popular editors:
       <td>Yes</td>
     </tr>
     <tr>
-      <td><a href="https://espressoapp.com/">Espresso</a></td>
-      <td>Closed source</td>
-      <td>$99</td>
-      <td>Mac</td>
-      <td>
-        <a href="mailto:hello@espressoapp.com">Email</a>
-      </td>
-      <td>
-        <a href="https://help.espressoapp.com/">Online Manual</a>
-      </td>
-      <td>Yes</td>
-    </tr>
-    <tr>
       <td><a href="https://wiki.gnome.org/Apps/Gedit">Gedit</a></td>
       <td>GPL</td>
       <td>Free</td>

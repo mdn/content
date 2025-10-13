@@ -23,7 +23,7 @@ A {{domxref("DOMStringMap")}}.
   <math>
     <msup id="equation" data-value="-1" data-equation="euler">
       <mi>e</mi>
-      <mi>iπ</mi>
+      <mrow><mi>i</mi> <mi>π</mi></mrow>
     </msup>
     <mo>+</mo>
     <mn>1</mn>

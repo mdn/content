@@ -149,7 +149,7 @@ The second, third, and fourth grid items are then given different values of `pla
 
 ```css
 html {
-  font-family: helvetica, arial, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   letter-spacing: 1px;
 }
 

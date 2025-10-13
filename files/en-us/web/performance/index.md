@@ -56,22 +56,28 @@ The [Performance guides](/en-US/docs/Web/Performance/Guides) are resources that 
 
 The MDN [Web Performance Learning Area](/en-US/docs/Learn_web_development/Extensions/Performance) contains modern, up-to-date tutorials covering Performance essentials. Start here if you are a newcomer to performance:
 
-- [Web performance: brief overview](/en-US/docs/Learn_web_development/Extensions/Performance/What_is_web_performance)
-  - : Overview of the web performance learning path. Start your journey here.
+- [The "why" of web performance](/en-US/docs/Learn_web_development/Extensions/Performance/why_web_performance)
+  - : This article discusses why web performance is important for accessibility, user experience and your business goals.
 - [What is web performance?](/en-US/docs/Learn_web_development/Extensions/Performance/What_is_web_performance)
-  - : This article starts the module off with a good look at what performance actually is — this includes the tools, metrics, APIs, networks, and groups of people we need to consider when thinking about performance, and how we can make performance part of our web development workflow.
+  - : You know web performance is important, but what factors affect web performance and how is it measured? This article introduces the components of performance, from web page loading and rendering, including how your content makes it into your users' browser to be viewed, to what groups of people we need to consider when thinking about performance.
 - [How do users perceive performance?](/en-US/docs/Learn_web_development/Extensions/Performance/Perceived_performance)
   - : More important than how fast your website is in milliseconds, is how fast your users perceive your site to be. These perceptions are impacted by actual page load time, idling, responsiveness to user interaction, and the smoothness of scrolling and other animations. In this article, we discuss the various loading metrics, animation, and responsiveness metrics, along with best practices to improve user perception, if not the actual timings.
-- [Web performance basics](/en-US/docs/Learn_web_development/Extensions/Performance/Web_Performance_Basics)
-  - : In addition to the front end components of HTML, CSS, JavaScript, and media files, there are features that can make applications slower and features that can make applications subjectively and objectively faster. There are many APIs, developer tools, best practices, and bad practices relating to web performance. Here we'll introduce many of these features ad the basic level and provide links to deeper dives to improve performance for each topic.
-- [HTML performance features](/en-US/docs/Learn_web_development/Extensions/Performance/HTML)
-  - : Some attributes and the source order of your markup can impact the performance of your website. By minimizing the number of DOM nodes, making sure the best order and attributes are used for including content such as styles, scripts, media, and third-party scripts, you can drastically improve the user experience. This article looks in detail at how HTML can be used to ensure maximum performance.
-- [Multimedia: images and video](/en-US/docs/Learn_web_development/Extensions/Performance/Multimedia)
-  - : The lowest hanging fruit of web performance is often media optimization. Serving different media files based on each user agent's capability, size, and pixel density is possible. Additional tips like removing audio tracks from background videos can improve performance even further. In this article we discuss the impact video, audio, and image content has on performance, and the methods to ensure that impact is as minimal as possible.
-- [CSS performance features](/en-US/docs/Learn_web_development/Extensions/Performance/CSS)
-  - : CSS may be a less important optimization focus for improved performance, but there are some CSS features that impact performance more than others. In this article we look at some CSS properties that impact performance and suggested ways of handling styles to ensure performance is not negatively impacted.
-- [JavaScript performance best practices](/en-US/docs/Learn_web_development/Extensions/Performance/JavaScript)
+- [Measuring performance](/en-US/docs/Learn_web_development/Extensions/Performance/Measuring_performance)
+  - : Now that you understand a few performance metrics, we take a deeper dive into performance tools, metrics, and APIs and how we can make performance part of the web development workflow.
+- [Multimedia: images](/en-US/docs/Learn_web_development/Extensions/Performance/Multimedia)
+  - : The lowest hanging fruit of web performance is often media optimization. Serving different media files based on each user agent's capability, size, and pixel density is possible. In this article we discuss the impact images have on performance, and the methods to reduce the number of bytes sent per image.
+- [Multimedia: video](/en-US/docs/Learn_web_development/Extensions/Performance/video)
+  - : The lowest hanging fruit of web performance is often media optimization. In this article we discuss the impact video content has on performance, and cover tips like removing audio tracks from background videos can improve performance.
+- [JavaScript performance optimization](/en-US/docs/Learn_web_development/Extensions/Performance/JavaScript)
   - : JavaScript, when used properly, can allow for interactive and immersive web experiences — or it can significantly harm download time, render time, in-app performance, battery life, and user experience. This article outlines some JavaScript best practices that should be considered to ensure even complex content is as performant as possible.
+- [HTML performance optimization](/en-US/docs/Learn_web_development/Extensions/Performance/HTML)
+  - : Some attributes and the source order of your markup can impact the performance or your website. By minimizing the number of DOM nodes, making sure the best order and attributes are used for including content such as styles, scripts, media, and third-party scripts, you can drastically improve the user experience. This article looks in detail at how HTML can be used to ensure maximum performance.
+- [CSS performance optimization](/en-US/docs/Learn_web_development/Extensions/Performance/CSS)
+  - : CSS may be a less important optimization focus for improved performance, but there are some CSS features that impact performance more than others. In this article we look at some CSS properties that impact performance and suggested ways of handling styles to ensure performance is not negatively impacted.
+- [The business case for web performance](/en-US/docs/Learn_web_development/Extensions/Performance/business_case_for_performance)
+  - : There are many things a developer can do to improve performance, but how fast is fast enough? How can you convince powers that be of the importance of these efforts? Once optimized, how can you ensure bloat doesn't come back? In this article we look at convincing management, developing a performance culture and performance budget, and introduce ways to ensure regressions don't sneak into your code base.
+- [Web Performance best practices & tips](/en-US/docs/Learn_web_development/Extensions/Performance/Best_practices)
+  - : This article covers several topics at a basic level and provides links to deeper dives to improve performance for each topic. In addition to front-end topics such as HTML, CSS, JavaScript, and media files, it also covers APIs, developer tools, best practices, and bad practices relating to web performance.
 
 ## Performance APIs
 

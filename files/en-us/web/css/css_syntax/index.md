@@ -8,7 +8,7 @@ sidebar: cssref
 
 The **CSS syntax** module describes, in general terms, the structure and syntax of cascading stylesheets, or CSS. It defines CSS as the language for describing the rendering of structured documents (such as HTML and XML), on the web and elsewhere.
 
-This module doesn't define any properties, [data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types), [functions](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions), or [at-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rule). Rather, it elaborates on how all of these features should be defined and how user agents should parse CSS.
+This module doesn't define any properties, [data types](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types), [functions](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions), or [at-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rule). Rather, it elaborates on how all of these features should be defined and how user agents should parse CSS.
 
 ## At-rules
 
@@ -26,7 +26,7 @@ This module doesn't define any properties, [data types](/en-US/docs/Web/CSS/CSS_
 - [CSS comments](/en-US/docs/Web/CSS/CSS_syntax/Comments)
 - [CSS declaration](/en-US/docs/Web/API/CSS_Object_Model/CSS_Declaration)
 - [CSS declaration block](/en-US/docs/Web/API/CSS_Object_Model/CSS_Declaration_Block)
-- [CSS function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)
+- [CSS function](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)
 - [invalid](/en-US/docs/Web/CSS/CSS_syntax/Error_handling)
 - [style rule](/en-US/docs/Web/API/CSSStyleRule)
 
@@ -42,7 +42,7 @@ This module doesn't define any properties, [data types](/en-US/docs/Web/CSS/CSS_
 - [Introduction to CSS syntax: declarations, rulesets, and statements](/en-US/docs/Web/CSS/CSS_syntax/Syntax)
   - : Explains the overall CSS syntax and how declarations, declaration blocks, rulesets, and statements form the style rules.
 
-- [Value definition syntax](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+- [Value definition syntax](/en-US/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
   - : Explains the formal grammar for defining valid values for CSS properties and functions, along with semantic constraints. A guide for understanding CSS component value types, combinators, and multipliers.
 
 - [CSS error handling](/en-US/docs/Web/CSS/CSS_syntax/Error_handling)
@@ -99,4 +99,4 @@ This module doesn't define any properties, [data types](/en-US/docs/Web/CSS/CSS_
 
 - [CSS at-rule functions](/en-US/docs/Web/CSS/CSS_syntax/At-rule_functions)
 - [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module
-- [CSS values and units](/en-US/docs/Web/CSS/CSS_Values_and_Units) module
+- [CSS values and units](/en-US/docs/Web/CSS/CSS_values_and_units) module

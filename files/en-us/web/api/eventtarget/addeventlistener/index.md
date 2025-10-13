@@ -198,8 +198,8 @@ class Something {
   constructor(element) {
     // bind causes a fixed `this` context to be assigned to `onclick2`
     this.onclick2 = this.onclick2.bind(this);
-    element.addEventListener("click", this.onclick1, false);
-    element.addEventListener("click", this.onclick2, false); // Trick
+    element.addEventListener("click", this.onclick1);
+    element.addEventListener("click", this.onclick2); // Trick
   }
   onclick1(event) {
     console.log(this.name); // undefined, as `this` is the element
@@ -220,8 +220,8 @@ class Something {
   name = "Something Good";
   constructor(element) {
     // Note that the listeners in this case are `this`, not this.handleEvent
-    element.addEventListener("click", this, false);
-    element.addEventListener("dblclick", this, false);
+    element.addEventListener("click", this);
+    element.addEventListener("dblclick", this);
   }
   handleEvent(event) {
     console.log(this.name); // 'Something Good', as this is bound to newly created object
@@ -301,13 +301,9 @@ const elems = document.getElementsByTagName("*");
 
 // Case 1
 for (const elem of elems) {
-  elem.addEventListener(
-    "click",
-    (e) => {
-      // Do something
-    },
-    false,
-  );
+  elem.addEventListener("click", (e) => {
+    // Do something
+  });
 }
 
 // Case 2
@@ -316,7 +312,7 @@ function processEvent(e) {
 }
 
 for (const elem of elems) {
-  elem.addEventListener("click", processEvent, false);
+  elem.addEventListener("click", processEvent);
 }
 ```
 
@@ -380,7 +376,7 @@ function modifyText() {
 
 // Add event listener to table
 const el = document.getElementById("outside");
-el.addEventListener("click", modifyText, false);
+el.addEventListener("click", modifyText);
 ```
 
 In this code, `modifyText()` is a listener for `click` events
@@ -463,13 +459,9 @@ function modifyText(newText) {
 
 // Function to add event listener to table
 const el = document.getElementById("outside");
-el.addEventListener(
-  "click",
-  function () {
-    modifyText("four");
-  },
-  false,
-);
+el.addEventListener("click", function () {
+  modifyText("four");
+});
 ```
 
 Notice that the listener is an anonymous function that encapsulates code that is then,
@@ -509,13 +501,9 @@ function modifyText(newText) {
 
 // Add event listener to table with an arrow function
 const el = document.getElementById("outside");
-el.addEventListener(
-  "click",
-  () => {
-    modifyText("four");
-  },
-  false,
-);
+el.addEventListener("click", () => {
+  modifyText("four");
+});
 ```
 
 #### Result
@@ -767,6 +755,8 @@ The code adds a listener to the container's {{domxref("Element/wheel_event", "wh
 
 ```js
 const passive = document.querySelector("#passive");
+const container = document.querySelector("#container");
+
 passive.addEventListener("change", (event) => {
   container.removeEventListener("wheel", wheelHandler);
   container.addEventListener("wheel", wheelHandler, {
@@ -775,7 +765,6 @@ passive.addEventListener("change", (event) => {
   });
 });
 
-const container = document.querySelector("#container");
 container.addEventListener("wheel", wheelHandler, {
   passive: true,
   once: true,

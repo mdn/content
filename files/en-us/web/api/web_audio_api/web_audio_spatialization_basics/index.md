@@ -480,27 +480,19 @@ Wiring up our control buttons is comparatively simple — now we can listen for 
 // for each of our controls, move the boombox and change the position values
 moveControls.forEach((el) => {
   let moving;
-  el.addEventListener(
-    "mousedown",
-    () => {
-      const direction = this.dataset.control;
-      if (moving && moving.frameId) {
-        cancelAnimationFrame(moving.frameId);
-      }
-      moving = moveBoombox(direction);
-    },
-    false,
-  );
+  el.addEventListener("mousedown", () => {
+    const direction = this.dataset.control;
+    if (moving && moving.frameId) {
+      cancelAnimationFrame(moving.frameId);
+    }
+    moving = moveBoombox(direction);
+  });
 
-  window.addEventListener(
-    "mouseup",
-    () => {
-      if (moving && moving.frameId) {
-        cancelAnimationFrame(moving.frameId);
-      }
-    },
-    false,
-  );
+  window.addEventListener("mouseup", () => {
+    if (moving && moving.frameId) {
+      cancelAnimationFrame(moving.frameId);
+    }
+  });
 });
 ```
 
@@ -538,25 +530,21 @@ Let's create a play button, that when clicked will play or pause the audio depen
 // Select our play button
 const playButton = document.querySelector("button");
 
-playButton.addEventListener(
-  "click",
-  () => {
-    // Check if context is in suspended state (autoplay policy)
-    if (audioContext.state === "suspended") {
-      audioContext.resume();
-    }
+playButton.addEventListener("click", () => {
+  // Check if context is in suspended state (autoplay policy)
+  if (audioContext.state === "suspended") {
+    audioContext.resume();
+  }
 
-    // Play or pause track depending on state
-    if (playButton.dataset.playing === "false") {
-      audioElement.play();
-      playButton.dataset.playing = "true";
-    } else if (playButton.dataset.playing === "true") {
-      audioElement.pause();
-      playButton.dataset.playing = "false";
-    }
-  },
-  false,
-);
+  // Play or pause track depending on state
+  if (playButton.dataset.playing === "false") {
+    audioElement.play();
+    playButton.dataset.playing = "true";
+  } else if (playButton.dataset.playing === "true") {
+    audioElement.pause();
+    playButton.dataset.playing = "false";
+  }
+});
 ```
 
 For a more in depth look at playing/controlling audio and audio graphs check out [Using The Web Audio API.](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

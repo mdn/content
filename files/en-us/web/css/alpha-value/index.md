@@ -6,7 +6,7 @@ spec-urls: https://drafts.csswg.org/css-color/#typedef-color-alpha-value
 sidebar: cssref
 ---
 
-The **`<alpha-value>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents a value that can be either a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}}, specifying the **{{Glossary("alpha", "alpha channel")}}** or **transparency** of a color.
+The **`<alpha-value>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types) represents a value that can be either a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}}, specifying the **{{Glossary("alpha", "alpha channel")}}** or **transparency** of a color.
 
 ## Syntax
 
@@ -53,6 +53,6 @@ shape-image-threshold: 0.7;
 ## See also
 
 - [Learn: Fundamental text and font styling](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals)
-- [CSS data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)
+- [CSS data types](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types)
 - [CSS Color](/en-US/docs/Web/CSS/CSS_colors)
 - [`<color>`](/en-US/docs/Web/CSS/color_value)

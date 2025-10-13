@@ -3,38 +3,39 @@ title: SpeechGrammarList
 slug: Web/API/SpeechGrammarList
 page-type: web-api-interface
 status:
-  - experimental
+  - deprecated
 browser-compat: api.SpeechGrammarList
 ---
 
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}{{deprecated_header}}
 
 The **`SpeechGrammarList`** interface of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) represents a list of {{domxref("SpeechGrammar")}} objects containing words or patterns of words that we want the recognition service to recognize.
 
-Grammar is defined using [JSpeech Grammar Format](https://www.w3.org/TR/jsgf/) (**JSGF**.) Other formats may also be supported in the future.
+Grammar is defined using [JSpeech Grammar Format](https://www.w3.org/TR/jsgf/) (**JSGF**).
+
+> [!NOTE]
+> The concept of grammar has been removed from the Web Speech API. Related features remain in the specification and are still recognized by supporting browsers for backwards compatibility, but they have no effect on speech recognition services.
 
 ## Constructor
 
-- {{domxref("SpeechGrammarList.SpeechGrammarList", "SpeechGrammarList()")}} {{Experimental_Inline}}
+- {{domxref("SpeechGrammarList.SpeechGrammarList", "SpeechGrammarList()")}} {{deprecated_inline}}
   - : Creates a new `SpeechGrammarList` object.
 
 ## Instance properties
 
-- {{domxref("SpeechGrammarList.length")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("SpeechGrammarList.length")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : Returns the number of {{domxref("SpeechGrammar")}} objects contained in the `SpeechGrammarList`.
 
 ## Instance methods
 
-- {{domxref("SpeechGrammarList.item()")}} {{Experimental_Inline}}
+- {{domxref("SpeechGrammarList.item()")}} {{deprecated_inline}}
   - : Standard getter — allows individual {{domxref("SpeechGrammar")}} objects to be retrieved from the `SpeechGrammarList` using array syntax.
-- {{domxref("SpeechGrammarList.addFromURI()")}} {{Experimental_Inline}}
+- {{domxref("SpeechGrammarList.addFromURI()")}} {{deprecated_inline}}
   - : Takes a grammar present at a specific URI and adds it to the `SpeechGrammarList` as a new {{domxref("SpeechGrammar")}} object.
-- {{domxref("SpeechGrammarList.addFromString()")}} {{Experimental_Inline}}
+- {{domxref("SpeechGrammarList.addFromString()")}} {{deprecated_inline}}
   - : Adds a grammar in a string to the `SpeechGrammarList` as a new {{domxref("SpeechGrammar")}} object.
 
 ## Examples
-
-In our simple [Speech color changer](https://github.com/mdn/dom-examples/tree/main/web-speech-api/speech-color-changer) example, we create a new `SpeechRecognition` object instance using the {{domxref("SpeechRecognition.SpeechRecognition", "SpeechRecognition()")}} constructor, create a new `SpeechGrammarList`, add our grammar string to it using the {{domxref("SpeechGrammarList.addFromString")}} method, and set it to be the grammar that will be recognized by the `SpeechRecognition` instance using the {{domxref("SpeechRecognition.grammars")}} property.
 
 ```js
 const grammar =

@@ -451,7 +451,7 @@ const elements = document.getElementsByTagName("*");
 // Add bluify as a click listener so when the
 // element is clicked on, it turns blue
 for (const element of elements) {
-  element.addEventListener("click", bluify, false);
+  element.addEventListener("click", bluify);
 }
 ```
 

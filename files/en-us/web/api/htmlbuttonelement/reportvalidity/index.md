@@ -95,16 +95,16 @@ exampleButton.addEventListener("click", (e) => {
   output.innerHTML = `validation message: ${exampleButton.validationMessage} <br/> custom error: ${exampleButton.validationMessage}`;
 });
 
-const breakOrFixButton = () => {
+function breakOrFixButton() {
   const state = toggleButton();
   if (state === "error") {
     exampleButton.setCustomValidity("This is a custom error message");
   } else {
     exampleButton.setCustomValidity("");
   }
-};
+}
 
-const toggleButton = () => {
+function toggleButton() {
   if (exampleButton.value === "error") {
     exampleButton.value = "fixed";
     exampleButton.innerHTML = "No error";
@@ -113,7 +113,7 @@ const toggleButton = () => {
     exampleButton.innerHTML = "Custom error";
   }
   return exampleButton.value;
-};
+}
 ```
 
 #### Results

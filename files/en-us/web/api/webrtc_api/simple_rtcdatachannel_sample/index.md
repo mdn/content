@@ -87,9 +87,9 @@ function startup() {
 
   // Set event listeners for user interface widgets
 
-  connectButton.addEventListener("click", connectPeers, false);
-  disconnectButton.addEventListener("click", disconnectPeers, false);
-  sendButton.addEventListener("click", sendMessage, false);
+  connectButton.addEventListener("click", connectPeers);
+  disconnectButton.addEventListener("click", disconnectPeers);
+  sendButton.addEventListener("click", sendMessage);
 }
 ```
 

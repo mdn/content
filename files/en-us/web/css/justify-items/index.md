@@ -182,7 +182,7 @@ If you hover or tab onto the grid container however, it is given a `justify-item
 
 ```css
 html {
-  font-family: helvetica, arial, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   letter-spacing: 1px;
 }
 

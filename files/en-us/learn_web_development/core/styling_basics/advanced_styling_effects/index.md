@@ -431,7 +431,7 @@ You can see this in action in the live sample below:
 
 ```css hidden live-sample___webkit-background-clip
 body {
-  font-family: impact, sans-serif;
+  font-family: "impact", sans-serif;
 }
 
 h2 {

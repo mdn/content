@@ -241,9 +241,7 @@ blockquote::after {
   position: absolute;
   height: 3rem;
   font:
-    6rem/100% Georgia,
-    "Times New Roman",
-    Times,
+    6rem/100% "Georgia",
     serif;
 }
 

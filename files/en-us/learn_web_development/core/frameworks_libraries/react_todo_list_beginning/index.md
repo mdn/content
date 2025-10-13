@@ -314,7 +314,7 @@ body {
   background-color: whitesmoke;
   color: #4d4d4d;
   font:
-    1.6rem/1.25 Arial,
+    1.6rem/1.25 "Arial",
     sans-serif;
   margin: 0 auto;
   max-width: 68rem;
@@ -487,7 +487,7 @@ body {
   box-sizing: border-box;
   clear: left;
   display: block;
-  font-family: Arial, sans-serif;
+  font-family: "Arial", sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.25;

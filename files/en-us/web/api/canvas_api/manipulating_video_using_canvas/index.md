@@ -82,15 +82,11 @@ processor.doLoad = function doLoad() {
   this.c2 = document.getElementById("c2");
   this.ctx2 = this.c2.getContext("2d");
 
-  video.addEventListener(
-    "play",
-    () => {
-      this.width = video.videoWidth / 2;
-      this.height = video.videoHeight / 2;
-      this.timerCallback();
-    },
-    false,
-  );
+  video.addEventListener("play", () => {
+    this.width = video.videoWidth / 2;
+    this.height = video.videoHeight / 2;
+    this.timerCallback();
+  });
 };
 ```
 

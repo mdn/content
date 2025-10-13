@@ -6,15 +6,6 @@ sidebar:
     title: JavaScript
   - type: section
     title: Tutorials
-  - title: Beginners
-    details: closed
-    children:
-      - link: /Learn_web_development/Getting_started/Your_first_website/Adding_interactivity
-        title: Adding_interactivity
-      - link: /Learn_web_development/Core/Scripting
-        title: Dynamic_scripting_with_JavaScript
-      - link: /Learn_web_development/Core/Frameworks_libraries
-        title: JavaScript_frameworks_and_libraries
   - link: /Web/JavaScript/Guide
     title: Guide
     details: closed
@@ -60,12 +51,6 @@ sidebar:
   - title: Intermediate
     details: closed
     children:
-      - link: /Learn_web_development/Extensions/Advanced_JavaScript_objects
-        title: Advanced JavaScript objects
-      - link: /Learn_web_development/Extensions/Async_JS
-        title: Asynchronous_JavaScript
-      - link: /Learn_web_development/Extensions/Client-side_APIs
-        title: Client-side_web_APIs
       - link: /Web/JavaScript/Guide/Language_overview
         title: Language_overview
       - link: /Web/JavaScript/Guide/Data_structures
@@ -173,13 +158,7 @@ l10n:
     Guide_Internationalization: Internationalisierung
     Guide_Meta: Metaprogrammierung
     Guide_Modules: JavaScript-Module
-    Beginners: Tutorials für Anfänger
-    Adding_interactivity: "Ihre erste Webseite: Interaktivität hinzufügen"
-    Dynamic_scripting_with_JavaScript: Dynamisches Scripting mit JavaScript
-    JavaScript_frameworks_and_libraries: JavaScript-Frameworks und -Bibliotheken
     Intermediate: Mittelstufe
-    Asynchronous_JavaScript: Asynchrones JavaScript
-    Client-side_web_APIs: Clientseitige Web-APIs
     Language_overview: Sprachübersicht
     Data_structures: JavaScript-Datenstrukturen
     Equality: Gleichheitsvergleiche und Gleichheit
@@ -227,13 +206,7 @@ l10n:
     Guide_Internationalization: Internationalization
     Guide_Meta: Meta programming
     Guide_Modules: JavaScript modules
-    Beginners: Beginner's tutorials
-    Adding_interactivity: "Your first website: Adding interactivity"
-    Dynamic_scripting_with_JavaScript: Dynamic scripting with JavaScript
-    JavaScript_frameworks_and_libraries: JavaScript frameworks and libraries
     Intermediate: Intermediate
-    Asynchronous_JavaScript: Asynchronous JavaScript
-    Client-side_web_APIs: Client-side web APIs
     Language_overview: Language overview
     Data_structures: JavaScript data structures
     Equality: Equality comparisons and sameness
@@ -377,13 +350,7 @@ l10n:
     Guide_Internationalization: 国际化
     Guide_Meta: 元编程
     Guide_Modules: JavaScript 模块
-    Beginners: 初学者教程
-    Adding_interactivity: 你的第一个网站：添加交互
-    Dynamic_scripting_with_JavaScript: 使用 JavaScript 添加脚本交互
-    JavaScript_frameworks_and_libraries: JavaScript 框架和库
     Intermediate: 中级
-    Asynchronous_JavaScript: 异步 JavaScript
-    Client-side_web_APIs: 客户端 web API
     Language_overview: 语言概述
     Data_structures: JavaScript 数据结构
     Equality: 如何正确判断相等性

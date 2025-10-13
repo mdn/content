@@ -59,8 +59,7 @@ The Clipboard API extends the following APIs, adding the listed features.
 
 The Clipboard API allows users to programmatically read and write text and other kinds of data to and from the system clipboard in [secure contexts](/en-US/docs/Web/Security/Secure_Contexts).
 
-The specification requires that a user has recently interacted with the page in order to read from the clipboard ([transient user activation](/en-US/docs/Web/Security/User_activation) is required).
-If the read operation is caused by user interaction with a browser or OS "paste element" (such as a context menu), the browser is expected to prompt the user for acknowledgement.
+When reading from the clipboard, the specification requires that a user has recently interacted with the page ([transient user activation](/en-US/docs/Web/Security/User_activation)) and that the call is made as a result of the user interacting with a browser or OS "paste element" (such as choosing "Paste" on a native context menu). In practice, browsers often allow read operations that do not satisfy these requirements, while placing other requirements instead (such as a permission or per-operation prompt).
 For writing to the clipboard the specification expects that the page has been granted the [Permissions API](/en-US/docs/Web/API/Permissions_API) `clipboard-write` permission, and the browser may also require [transient user activation](/en-US/docs/Web/Security/User_activation).
 Browsers may place additional restrictions over use of the methods to access the clipboard.
 
@@ -69,16 +68,15 @@ The differences are captured in the [Browser compatibility](#browser_compatibili
 
 Chromium browsers:
 
-- Reading requires the [Permissions API](/en-US/docs/Web/API/Permissions_API) `clipboard-read` permission be granted.
-  Transient activation is not required.
+- If a read isn't allowed by the spec and the document has focus, it triggers a request to use permission `clipboard-read`, and succeeds if the permission is granted (either because the user accepted the prompt, or because the permission was granted already).
 - Writing requires either the `clipboard-write` permission or transient activation.
   If the permission is granted, it persists, and further transient activation is not required.
 - The HTTP [Permissions-Policy](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy) permissions `clipboard-read` and `clipboard-write` must be allowed for {{HTMLElement("iframe")}} elements that access the clipboard.
-- No persistent paste-prompt is displayed when a read operation is caused by a browser or OS "paste element".
 
 Firefox & Safari:
 
-- Reading and writing require transient activation.
+- If a read isn't allowed by the spec but transient user activation is still met, it triggers a user prompt in the form of an ephemeral context menu with a single "Paste" option (which becomes enabled after 1 second) and succeeds if the user chooses the option.
+- Writing requires transient activation.
 - The paste-prompt is suppressed if reading same-origin clipboard content, but not cross-origin content.
 - The `clipboard-read` and `clipboard-write` permissions are not supported (and not planned to be supported) by Firefox or Safari.
 

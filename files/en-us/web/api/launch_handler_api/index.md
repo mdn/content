@@ -16,8 +16,10 @@ The **Launch Handler API** allows developers to control how a [progressive web a
 You can specify launch behavior for your app by adding the [`launch_handler`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/launch_handler) field to your web app manifest file. This has one sub-field, `client_mode`, which contains a string value specifying how the app should be launched and navigated to. For example:
 
 ```json
-"launch_handler": {
+{
+  "launch_handler": {
     "client_mode": "focus-existing"
+  }
 }
 ```
 

@@ -6,44 +6,21 @@ page-type: guide
 
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
 
-The following describes the steps that occur during a drag and drop operation.
+Central to the Drag and Drop API are the various [drag events](/en-US/docs/Web/API/HTML_Drag_and_Drop_API#drag_events) that fire in a specific order and are expected to be handled in a specific way. This document describes the steps that occur during a drag and drop operation, and what the application is supposed to do within each handler.
 
-The drag operations described in this document use the {{domxref("DataTransfer")}} interface. This document does _not_ use the {{domxref("DataTransferItem")}} interface nor the {{domxref("DataTransferItemList")}} interface.
+At a high level, here are the possible steps in a drag and drop operation:
 
-## The draggable attribute
+- The user [starts the drag](#starting_a_drag) on a source node; the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event is fired on the source node. Within this event, the source node prepares the context for the drag operation, including the drag data, feedback image, and allowed drop effects.
+- The user [drags the item around](#dragging_over_elements_and_specifying_drop_targets): every time a new element is entered, the {{domxref("HTMLElement/dragenter_event", "dragenter")}} event is fired on that element, and the {{domxref("HTMLElement/dragleave_event", "dragleave")}} event is fired on the previous element. Every few hundred milliseconds, a {{domxref("HTMLElement/dragover_event", "dragover")}} event is fired on the element the drag is currently inside, and the {{domxref("HTMLElement/drag_event", "drag")}} event is fired on the source node.
+- The drag enters a valid drop target: the drop target cancels its `dragover` event to indicate that it is a valid drop target. Some form of [drop feedback](#drop_feedback) indicates the expected drop effect to the user.
+- The user [performs the drop](#performing_a_drop): the {{domxref("HTMLElement/drop_event", "drop")}} event is fired on the drop target. Within this event, the target node reads the drag data.
+- The [drag operation ends](#finishing_the_drag): the {{domxref("HTMLElement/dragend_event", "dragend")}} event is fired on the source node. This event is fired regardless of whether the drop was successful or not.
 
-In a web page, there are certain cases where a default drag behavior is used. These include text selections, images, and links. When an image or link is dragged, the URL of the image or link is set as the drag data, and a drag begins. For other elements, they must be part of a selection for a default drag to occur. To see this in effect, select an area of a webpage, and then click and hold the mouse and drag the selection. An OS-specific rendering of the selection will appear and follow the mouse pointer as the drag occurs. However, this behavior is only the default drag behavior, if no listeners adjust the data to be dragged.
+## Starting a drag
 
-In HTML, apart from the default behavior for images, links, and selections, no other elements are draggable by default.
+The drag starts on a [draggable item](/en-US/docs/Web/API/HTML_Drag_and_Drop_API#draggable_items), which can be a selection, a draggable element (including links, images, and any element with `draggable="true"`), a file from the operating system's file explorer, etc. First, the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event is fired on the _source node_, which is the draggable element or, for selections, the text node that the drag started on. If this event is cancelled, then the drag operation is aborted. Otherwise, the {{domxref("Element/pointercancel_event", "pointercancel")}} event is also fired on the source node.
 
-To make other HTML elements draggable, three things must be done:
-
-1. Set the [`draggable`](/en-US/docs/Web/HTML/Reference/Global_attributes/draggable) attribute to `"true"` on the element that you wish to make draggable.
-2. Add a listener for the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event.
-3. [Set the drag data](/en-US/docs/Web/API/DataTransfer/setData) in the above listener.
-
-Here is an example which allows a section of content to be dragged.
-
-```html
-<p draggable="true">This text <strong>may</strong> be dragged.</p>
-```
-
-```js
-const draggableElement = document.querySelector('p[draggable="true"]');
-
-draggableElement.addEventListener("dragstart", (event) =>
-  event.dataTransfer.setData("text/plain", "This text may be dragged"),
-);
-```
-
-The [`draggable`](/en-US/docs/Web/HTML/Reference/Global_attributes/draggable) attribute is set to `"true"`, so this element becomes draggable. If this attribute were omitted or set to `"false"`, the element would not be dragged, and instead the text would be selected.
-
-The [`draggable`](/en-US/docs/Web/HTML/Reference/Global_attributes/draggable) attribute may be used on any element, including images and links. However, for these last two, the default value is `true`, so you would only use the [`draggable`](/en-US/docs/Web/HTML/Reference/Global_attributes/draggable) attribute with a value of `false` to disable dragging of these elements.
-
-> [!NOTE]
-> When an element is made draggable, text or other elements within it can no longer be selected in the normal way by clicking and dragging with the mouse. Instead, the user must hold down the <kbd>Alt</kbd> key to select text with the mouse, or use the keyboard.
-
-## Starting a drag operation
+The `dragstart` event is the only time you can modify the {{domxref("DragEvent.dataTransfer", "dataTransfer")}}. For a custom draggable element, you almost always want to modify the drag data, which is covered in detail in [Modifying the drag data store](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#modifying_the_drag_data_store). There are two other things you can change: the [feedback image](#setting_the_drag_feedback_image) and the [allowed drop effects](#drop_effects).
 
 In this example, we add a listener for the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event by using the `addEventListener()` method.
 
@@ -53,76 +30,37 @@ In this example, we add a listener for the {{domxref("HTMLElement/dragstart_even
 
 ```js
 const draggableElement = document.querySelector('p[draggable="true"]');
-draggableElement.addEventListener("dragstart", (event) =>
-  event.dataTransfer.setData("text/plain", "This text may be dragged"),
-);
+draggableElement.addEventListener("dragstart", (event) => {
+  event.dataTransfer.setData("text/plain", "This text may be dragged");
+});
 ```
 
-When a user begins to drag, the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event is fired.
-
-In this example the {{domxref("HTMLElement/dragstart_event", "dragstart")}} listener is added to the draggable element itself. However, you could listen to a higher ancestor as drag events bubble up as most other events do.
-
-Within the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event, you can specify the **drag data**, the **feedback image**, and the **drag effects**, all of which are described below. However, only the **drag data** is required. (The default image and drag effects are suitable in most situations.)
-
-## Drag data
-
-All {{domxref("DragEvent")}} objects have a property called {{domxref("DragEvent.dataTransfer","dataTransfer")}} which holds the drag data (`dataTransfer` is a {{domxref("DataTransfer")}} object).
-
-When a drag occurs, data must be associated with the drag which identifies _what_ is being dragged. For example, when dragging the selected text within a textbox, the data associated with the _drag data item_ is the text itself. Similarly, when dragging a link on a web page, the drag data item is the link's URL.
-
-The {{domxref("DataTransfer")}} contains two pieces of information, the **type** (or format) of the data, and the data's **value**. The format is a type string (such as [`text/plain`](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#dragging_text) for text data), and the value is a string of text. When the drag begins, you add data by providing a type and the data. During the drag, in an event listener for the {{domxref("HTMLElement/dragenter_event", "dragenter")}} and {{domxref("HTMLElement/dragover_event", "dragover")}} events, you use the data types of the data being dragged to check whether a drop is allowed. For instance, a drop target that accepts links would check for the type [`text/uri-list`](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#dragging_links). During a drop event, a listener would retrieve the data being dragged and insert it at the drop location.
-
-The {{domxref("DataTransfer")}}'s {{domxref("DataTransfer.types","types")}} property returns a list of MIME-type like strings, such as [`text/plain`](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#dragging_text) or [`image/jpeg`](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#dragging_images). You can also create your own types. The most commonly used types are listed in the article [Recommended Drag Types](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types).
-
-A drag may include data items of several different types. This allows data to be provided in more specific types, often custom types, yet still provide fallback data for drop targets that do not support more specific types. It is usually the case that the least specific type will be normal text data using the type [`text/plain`](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#dragging_text).
-
-To set a drag data item within the {{domxref("DragEvent.dataTransfer","dataTransfer")}}, use the {{domxref("DataTransfer.setData","setData()")}} method. It takes two arguments: the type of data and the data value. For example:
+You could also listen to a higher ancestor as drag events bubble up as most other events do. For this reason, it is common to also check the event's target, so that dragging a selection contained within this element does not trigger the `setData` (although selecting text within the element is hard, it is not impossible):
 
 ```js
-event.dataTransfer.setData("text/plain", "Text to drag");
+draggableElement.addEventListener("dragstart", (event) => {
+  if (event.target === draggableElement) {
+    event.dataTransfer.setData("text/plain", "This text may be dragged");
+  }
+});
 ```
 
-In this case, the data value is "Text to drag" and is of the format [`text/plain`](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#dragging_text).
+### Setting the drag feedback image
 
-You can provide data in multiple formats. To do this, call the {{domxref("DataTransfer.setData","setData()")}} method multiple times with different formats. You should call it with formats in order from most specific to least specific.
-
-```js
-const dt = event.dataTransfer;
-dt.setData("application/x.bookmark", bookmarkString);
-dt.setData("text/uri-list", "https://www.mozilla.org");
-dt.setData("text/plain", "https://www.mozilla.org");
-```
-
-Here, data is added in three different types. The first type, `application/x.bookmark`, is a custom type. Other applications won't support this type, but you can use a custom type for drags between areas of the same site or application.
-
-By providing data in other types as well, we can also support drags to other applications in less specific forms. The `application/x.bookmark` type can provide data with more details for use within the application whereas the other types can include just a single URL or text version.
-
-Note that both the [`text/uri-list`](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#dragging_links) and [`text/plain`](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#dragging_text) contain the same data in this example. This will often be true, but doesn't need to be the case.
-
-If you attempt to add data twice with the same format, the new data will replace the old data, but in the same position within the list of types as the old data.
-
-You can clear the data using the {{domxref("DataTransfer.clearData","clearData()")}} method, which takes one argument: the type of the data to remove.
+When a drag occurs, a translucent image is generated from the source node, and follows the user's pointer during the drag. This image is created automatically, so you do not need to create it yourself. However, you can use {{domxref("DataTransfer.setDragImage","setDragImage()")}} to specify a custom drag feedback image.
 
 ```js
-event.dataTransfer.clearData("text/uri-list");
-```
-
-The `type` argument to the {{domxref("DataTransfer.clearData","clearData()")}} method is optional. If the `type` is not specified, the data associated with all types is removed. If the drag contains no drag data items, or all of the items have been subsequently cleared, then no drag will occur.
-
-## Setting the drag feedback image
-
-When a drag occurs, a translucent image is generated from the drag target (the element the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event is fired at), and follows the user's pointer during the drag. This image is created automatically, so you do not need to create it yourself. However, you can use {{domxref("DataTransfer.setDragImage","setDragImage()")}} to specify a custom drag feedback image.
-
-```js
-event.dataTransfer.setDragImage(image, xOffset, yOffset);
+draggableElement.addEventListener("dragstart", (event) => {
+  event.dataTransfer.setDragImage(image, xOffset, yOffset);
+});
 ```
 
 Three arguments are necessary. The first is a reference to an image. This reference will typically be to an `<img>` element, but it can also be to a `<canvas>` or any other element. The feedback image will be generated from whatever the image looks like on screen, although for images, they will be drawn at their original size. The second and third arguments to the {{domxref("DataTransfer.setDragImage","setDragImage()")}} method are offsets where the image should appear relative to the mouse pointer.
 
-It is also possible to use images and canvases that are not in a document. This technique is useful when drawing custom drag images using the canvas element, as in the following example:
+You can also use images and canvases that are not in a document. This technique is useful when drawing custom drag images using the canvas element, as in the following example:
 
 ```js
-function dragWithCustomImage(event) {
+draggableElement.addEventListener("dragstart", (event) => {
   const canvas = document.createElement("canvas");
   canvas.width = canvas.height = 50;
 
@@ -134,70 +72,20 @@ function dragWithCustomImage(event) {
   ctx.lineTo(50, 0);
   ctx.stroke();
 
-  const dt = event.dataTransfer;
-  dt.setData("text/plain", "Data to Drag");
-  dt.setDragImage(canvas, 25, 25);
-}
+  event.dataTransfer.setDragImage(canvas, 25, 25);
+});
 ```
 
 In this example, we make one canvas the drag image. As the canvas is 50×50 pixels, we use offsets of half of this (`25`) so that the image appears centered on the mouse pointer.
 
-## Drag effects
+## Dragging over elements and specifying drop targets
 
-When dragging, there are several operations that may be performed. The `copy` operation is used to indicate that the data being dragged will be copied from its present location to the drop location. The `move` operation is used to indicate that the data being dragged will be moved, and the `link` operation is used to indicate that some form of relationship or connection will be created between the source and drop locations.
+For the entire course of the drag operation, all device input events (such as mouse or keyboard) are suppressed. The dragged data can be moved over various elements in the document, or even elements in other documents. Whenever a new element is entered, a {{domxref("HTMLElement/dragenter_event", "dragenter")}} event is fired on that element, and a {{domxref("HTMLElement/dragleave_event", "dragleave")}} event is fired on the previous element.
 
-You can specify which of the three operations are allowed for a drag source by setting the {{domxref("DataTransfer.effectAllowed","effectAllowed")}} property within a {{domxref("HTMLElement/dragstart_event", "dragstart")}} event listener.
+> [!NOTE]
+> `dragleave` always fires _after_ `dragenter`, so conceptually, in between these two events, the target has entered a new element but has not exited the previous one yet.
 
-```js
-event.dataTransfer.effectAllowed = "copy";
-```
-
-In this example, only a **copy** is allowed.
-
-You can combine the values in various ways:
-
-- `none`
-  - : no operation is permitted
-- `copy`
-  - : `copy` only
-- `move`
-  - : `move` only
-- `link`
-  - : `link` only
-- `copyMove`
-  - : `copy` or `move` only
-- `copyLink`
-  - : `copy` or `link` only
-- `linkMove`
-  - : `link` or `move` only
-- `all`
-  - : `copy`, `move`, or `link`
-- `uninitialized`
-  - : the default value when the effect has not been set, equivalent to `all`
-
-Note that these values must be used exactly as listed above. For example, setting the {{domxref("DataTransfer.effectAllowed","effectAllowed")}} property to `copyMove` allows a copy or move operation but prevents the user from performing a link operation. If you don't change the {{domxref("DataTransfer.effectAllowed","effectAllowed")}} property, then any operation is allowed, just like with the `all` value. So you don't need to adjust this property unless you want to exclude specific types.
-
-During a drag operation, a listener for the {{domxref("HTMLElement/dragenter_event", "dragenter")}} or {{domxref("HTMLElement/dragover_event", "dragover")}} events can check the {{domxref("DataTransfer.effectAllowed","effectAllowed")}} property to see which operations are permitted. A related property, {{domxref("DataTransfer.dropEffect","dropEffect")}}, should be set within one of these events to specify which single operation should be performed. Valid values for {{domxref("DataTransfer.dropEffect","dropEffect")}} are `none`, `copy`, `move`, or `link`. The combination values are not used for this property.
-
-With the {{domxref("HTMLElement/dragenter_event", "dragenter")}} and {{domxref("HTMLElement/dragover_event", "dragover")}} event, the {{domxref("DataTransfer.dropEffect","dropEffect")}} property is initialized to the effect that the user is requesting. The user can modify the desired effect by pressing modifier keys. Although the exact keys used vary by platform, typically the <kbd>Shift</kbd> and <kbd>Control</kbd> keys would be used to switch between copying, moving, and linking. The mouse pointer will change to indicate which operation is desired. For instance, for a `copy`, the cursor might appear with a plus sign next to it.
-
-You can modify the {{domxref("DataTransfer.dropEffect","dropEffect")}} property during the {{domxref("HTMLElement/dragenter_event", "dragenter")}} or {{domxref("HTMLElement/dragover_event", "dragover")}} events, if for example, a particular drop target only supports certain operations. You can modify the {{domxref("DataTransfer.dropEffect","dropEffect")}} property to override the user effect, and enforce a specific drop operation to occur. Note that this effect must be one listed within the {{domxref("DataTransfer.effectAllowed","effectAllowed")}} property. Otherwise, it will be set to an alternate value that is allowed.
-
-```js
-event.dataTransfer.dropEffect = "copy";
-```
-
-In this example, copy is the effect that is performed.
-
-You can use the value `none` to indicate that no drop is allowed at this location, although it is preferred not to cancel the event in this case.
-
-Within the {{domxref("HTMLElement/drop_event", "drop")}} and {{domxref("HTMLElement/dragend_event", "dragend")}} events, you can check the {{domxref("DataTransfer.dropEffect","dropEffect")}} property to determine which effect was ultimately chosen. If the chosen effect were `move`, then the original data should be removed from the source of the drag within the {{domxref("HTMLElement/dragend_event", "dragend")}} event.
-
-## Specifying drop targets
-
-A listener for the {{domxref("HTMLElement/dragenter_event", "dragenter")}} and {{domxref("HTMLElement/dragover_event", "dragover")}} events are used to indicate valid drop targets, that is, places where dragged items may be dropped. Most areas of a web page or application are not valid places to drop data. Thus, the default handling of these events is not to allow a drop.
-
-If you want to allow a drop, you must prevent the default behavior by cancelling both the `dragenter` and `dragover` events. You can do this by calling their {{domxref("Event.preventDefault","preventDefault()")}} methods:
+Every few hundred milliseconds, two events fire: a {{domxref("HTMLElement/drag_event", "drag")}} event at the source node, and a {{domxref("HTMLElement/dragover_event", "dragover")}} event at the element the drag is currently inside. Most areas of a web page or application are not valid places to drop data, so elements by default ignore any drop that happened on it. The element can elect itself to be a valid drop target by cancelling the `dragover` event. If the element is an editable text field, such as a {{HTMLElement("textarea")}} or [`<input type="text">`](/en-US/docs/Web/HTML/Reference/Elements/input/text), and the data store contains one `text/plain` item, then the element is a valid drop target by default without cancelling `dragover`.
 
 ```html
 <div id="drop-target">You can drag and then drop a draggable item here</div>
@@ -206,124 +94,274 @@ If you want to allow a drop, you must prevent the default behavior by cancelling
 ```js
 const dropElement = document.getElementById("drop-target");
 
-dropElement.addEventListener("dragenter", (event) => {
-  event.preventDefault();
-});
-
 dropElement.addEventListener("dragover", (event) => {
   event.preventDefault();
 });
 ```
 
-Calling the {{domxref("Event.preventDefault","preventDefault()")}} method during both the {{domxref("HTMLElement/dragenter_event", "dragenter")}} and {{domxref("HTMLElement/dragover_event", "dragover")}} event will indicate that a drop is allowed at that location. However, you will commonly wish to call the {{domxref("Event.preventDefault","preventDefault()")}} method only in certain situations (for example, only if a link is being dragged).
+> [!NOTE]
+> The spec requires the `dragenter` event to be cancelled too for a drop target, otherwise the `dragover` or `dragleave` events won't even start firing on this element; in practice no browser implements this, and the "current element" changes every time a new element is entered.
 
-To do this, call a function which checks a condition and only cancels the event when the condition is met. If the condition is not met, don't cancel the event, and a drop will not occur there if the user releases the mouse button.
+> [!NOTE]
+> The spec requires that cancelling the `drag` event [aborts](#a_failed_drop) the drag; in practice no browser implements this. See example below:
+>
+> {{EmbedLiveSample("cancel_drag", "", 100)}}
 
-It is most common to accept or reject a drop based on the type of drag data in the data transfer — for instance, allowing images, or links, or both. To do this, you can check the {{domxref("DataTransfer.types","types")}} property of the event's {{domxref("DragEvent.dataTransfer","dataTransfer")}} (property). The {{domxref("DataTransfer.types","types")}} property returns an array of the string types that were added when the drag began, in the order from most significant to least significant.
+```html hidden live-sample___cancel_drag
+<p draggable="true" id="draggable">Drag me for 1 second!</p>
+<p id="output"></p>
+```
+
+```js hidden live-sample___cancel_drag
+const draggableElement = document.getElementById("draggable");
+const output = document.getElementById("output");
+let time = null;
+draggableElement.addEventListener("dragstart", (event) => {
+  time = Date.now();
+  output.textContent = "";
+});
+draggableElement.addEventListener("drag", (event) => {
+  if (time !== null && Date.now() - time > 1000) {
+    event.preventDefault();
+    output.textContent =
+      "Drag operation cancelled; if you are still dragging the node, then your browser does not support cancelling the drag programmatically.";
+    time = null;
+  }
+});
+```
+
+### Conditional drop targets
+
+You usually only want the drop target to accept drops in certain situations (for example, only if a link is being dragged). To do this, check a condition and only cancel the event when the condition is met. For example, you can check if the dragged data contains links:
 
 ```js
-function doDragOver(event) {
+dropElement.addEventListener("dragover", (event) => {
   const isLink = event.dataTransfer.types.includes("text/uri-list");
   if (isLink) {
     event.preventDefault();
   }
-}
+});
 ```
 
-In this example, we use the `includes` method to check if the type [`text/uri-list`](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#dragging_links) is present in the list of types. If it is, we will cancel the event so that a drop may be allowed. If the drag data does not contain a link, the event will not be cancelled, and a drop cannot occur at that location.
-
-You may also wish to set either the {{domxref("DataTransfer.effectAllowed","effectAllowed")}}, {{domxref("DataTransfer.dropEffect","dropEffect")}} property, or both at the same time, if you wish to be more specific about the type of operation that will performed. Naturally, changing either property will have no effect if you do not cancel the event as well.
+In this example, we use the `includes` method to check if the type [`text/uri-list`](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#dragging_links) is present in the list of types. If it is, we will cancel the event so that a drop may be allowed. If the drag data does not contain a link, the event will not be cancelled, and a drop cannot occur at that location.
 
 ## Drop feedback
 
-There are several ways in which you can indicate to the user that a drop is allowed at a certain location. The mouse pointer will update as necessary depending on the value of the {{domxref("DataTransfer.dropEffect","dropEffect")}} property.
+Now the user is dragging into a valid drop target. There are several ways in which you can indicate to the user that a drop is allowed at this location, and what might happen if the drop happens. Usually, the mouse pointer will update as necessary depending on the value of the {{domxref("DataTransfer.dropEffect", "dropEffect")}} property. Although the exact appearance depends on the user's platform, typically a plus sign icon will appear for a `copy` for example, and a "cannot drop here" icon will appear when a drop is not allowed. This mouse pointer feedback is sufficient in many cases.
 
-Although the exact appearance depends on the user's platform, typically a plus sign icon will appear for a `copy` for example, and a 'cannot drop here' icon will appear when a drop is not allowed. This mouse pointer feedback is sufficient in many cases.
+### Drop effects
 
-For more complex visual effects, you can perform other operations during the {{domxref("HTMLElement/dragenter_event", "dragenter")}} event. For example, by inserting an element at the location where the drop will occur. This might be an insertion marker, or an element that represents the dragged element in its new location. To do this, you could create an [`<img>`](/en-US/docs/Web/HTML/Reference/Elements/img) element and insert it into the document during the {{domxref("HTMLElement/dragenter_event", "dragenter")}} event.
+When dropping, there are several operations that may be performed:
 
-The {{domxref("HTMLElement/dragover_event", "dragover")}} event will fire at the element the mouse is pointing at. Naturally, you may need to move the insertion marker around a {{domxref("HTMLElement/dragover_event", "dragover")}} event as well. You can use the event's {{domxref("MouseEvent.clientX","clientX")}} and {{domxref("MouseEvent.clientY","clientY")}} properties as with other mouse events to determine the location of the mouse pointer.
+- `copy`
+  - : The data will be simultaneously present at the source and target locations after dropping.
+- `move`
+  - : The data will only be present at the target location, and will be removed from the source location.
+- `link`
+  - : Some form of linking will be created between the source and drop locations; there is only one instance of the data at the source location.
+- `none`
+  - : Nothing happens; the drop failed.
+
+With the {{domxref("HTMLElement/dragenter_event", "dragenter")}} and {{domxref("HTMLElement/dragover_event", "dragover")}} events, the {{domxref("DataTransfer.dropEffect","dropEffect")}} property is initialized to the effect that the user is requesting. The user can modify the desired effect by pressing modifier keys. Although the exact keys used vary by platform, typically the <kbd>Shift</kbd> and <kbd>Control</kbd> keys would be used to switch between copying, moving, and linking. The mouse pointer will change to indicate which operation is desired. For instance, for a `copy`, the cursor might appear with a plus sign next to it.
+
+You can modify the {{domxref("DataTransfer.dropEffect","dropEffect")}} property during the {{domxref("HTMLElement/dragenter_event", "dragenter")}} or {{domxref("HTMLElement/dragover_event", "dragover")}} events, if for example, a particular drop target only supports certain operations. You can modify the {{domxref("DataTransfer.dropEffect","dropEffect")}} property to override the user effect, and enforce a specific drop operation to occur.
+
+```js
+target.addEventListener("dragover", (event) => {
+  event.dataTransfer.dropEffect = "move";
+});
+```
+
+In this example, move is the effect that is performed.
+
+You can use the value `none` to indicate that no drop is allowed at this location. You should usually do this if the element is only temporarily not accepting drops; if it's not intended to be a drop target, you should just not cancel the event.
+
+Note that setting `dropEffect` only indicates the desired effect _at this particular instant_; a later `dragover` dispatch may change it. To persist the choice, you must set it in every `dragover` event. Also, this effect is only _informational_, and what effects ends up being implemented depends on both the source and the target nodes (for example, if the source node cannot be modified, then even if a "move" effect is requested, it may not be possible).
+
+For both user gestures and programmatically setting `dropEffect`, by default, all three drop effects are available. The draggable element can restrict itself to only allow certain effects by setting the {{domxref("DataTransfer.effectAllowed","effectAllowed")}} property within a {{domxref("HTMLElement/dragstart_event", "dragstart")}} event listener.
+
+```js
+draggableElement.addEventListener("dragstart", (event) => {
+  event.dataTransfer.effectAllowed = "copyLink";
+});
+```
+
+In this example, only a copy or link operation is allowed, but a move operation is not possible to be selected either via script or via user gestures.
+
+The values of `effectAllowed` are combinations of `dropEffect`:
+
+| Value           | Description                                                                                                                                  |
+| --------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| `none`          | No operation is permitted                                                                                                                    |
+| `copy`          | `copy` only                                                                                                                                  |
+| `move`          | `move` only                                                                                                                                  |
+| `link`          | `link` only                                                                                                                                  |
+| `copyMove`      | `copy` or `move` only                                                                                                                        |
+| `copyLink`      | `copy` or `link` only                                                                                                                        |
+| `linkMove`      | `link` or `move` only                                                                                                                        |
+| `all`           | `copy`, `move`, or `link`                                                                                                                    |
+| `uninitialized` | The default value when the effect has not been set; generally equivalent to `all`, except the default `dropEffect` may not always be `copy`. |
+
+By default, the `dropEffect` is initialized based on `effectAllowed`, in the order of `copy`, `link`, `move`, selecting the first one that is allowed. The unselected but allowed effects may also be selected as default if appropriate; for example, on Windows, holding the <kbd>Alt</kbd> key causes `link` to be used in priority. If `effectAllowed` is `uninitialized` and the dragged element is an `<a>` link, the default `dropEffect` is `link`; if `effectAllowed` is `uninitialized` and the dragged element is a selection from an editable text field, the default `dropEffect` is `move`.
+
+```html hidden live-sample___drop_effects
+<div class="sources-container">
+  These are the sources with different <code>allowedEffect</code>
+  <div id="sources"></div>
+</div>
+<div class="targets-container">
+  These are the targets with different <code>dropEffect</code>
+  <div id="targets"></div>
+</div>
+```
+
+```css hidden live-sample___drop_effects
+.sources-container,
+.targets-container {
+  width: calc(100% - 2rem);
+  border: 2px dashed gray;
+  padding: 0.5rem;
+  margin: 1rem 0;
+}
+
+#sources,
+#targets {
+  display: grid;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+#sources {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+#targets {
+  grid-template-columns: 1fr 1fr;
+}
+
+#sources div,
+#targets div {
+  border: 2px solid black;
+  flex: 1 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#sources div {
+  height: 50px;
+}
+
+#targets div {
+  height: 75px;
+}
+```
+
+```js hidden live-sample___drop_effects
+for (const allowedEffect of [
+  "none",
+  "copy",
+  "move",
+  "link",
+  "copyMove",
+  "copyLink",
+  "linkMove",
+  "all",
+  "uninitialized",
+]) {
+  const div = document.createElement("div");
+  div.textContent = allowedEffect;
+  div.draggable = true;
+  div.addEventListener("dragstart", (event) => {
+    event.dataTransfer.effectAllowed = allowedEffect;
+  });
+  document.getElementById("sources").appendChild(div);
+}
+
+for (const dropEffect of ["none", "copy", "move", "link"]) {
+  const div = document.createElement("div");
+  div.textContent = dropEffect;
+  div.addEventListener("dragover", (event) => {
+    event.preventDefault();
+    event.dataTransfer.dropEffect = dropEffect;
+  });
+  document.getElementById("targets").appendChild(div);
+}
+```
+
+{{EmbedLiveSample("drop_effects", "", 500)}}
+
+### Custom drop feedback
+
+For more complex visual effects, you can perform other operations during the {{domxref("HTMLElement/dragenter_event", "dragenter")}} event, for example, by inserting an element at the location where the drop will occur. This might be an insertion marker or an element that represents the dragged element in its new location. To do this, you could create an [`<img>`](/en-US/docs/Web/HTML/Reference/Elements/img) element and insert it into the document during the {{domxref("HTMLElement/dragenter_event", "dragenter")}} event.
+
+The {{domxref("HTMLElement/dragover_event", "dragover")}} event will fire at the element the mouse is pointing at. Naturally, you may need to move the insertion marker around inside the {{domxref("HTMLElement/dragover_event", "dragover")}} event handler as well. You can use the event's {{domxref("MouseEvent.clientX","clientX")}} and {{domxref("MouseEvent.clientY","clientY")}} properties as with other mouse events to determine the location of the mouse pointer.
 
 Finally, the {{domxref("HTMLElement/dragleave_event", "dragleave")}} event will fire at an element when the drag leaves the element. This is the time when you should remove any insertion markers or highlighting. You do not need to cancel this event. The {{domxref("HTMLElement/dragleave_event", "dragleave")}} event will always fire, even if the drag is cancelled, so you can always ensure that any insertion point cleanup can be done during this event.
+
+For a practical example of using these events, see our [Kanban board example](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Kanban_board#inserting_at_a_particular_location).
 
 ## Performing a drop
 
 When the user releases the mouse, the drag and drop operation ends.
 
-If the mouse is released over an element that is a valid drop target, that is, one that cancelled the last {{domxref("HTMLElement/dragenter_event", "dragenter")}} or {{domxref("HTMLElement/dragover_event", "dragover")}} event, then the drop will be successful, and a {{domxref("HTMLElement/drop_event", "drop")}} event will fire at the target. Otherwise, the drag operation is cancelled, and no {{domxref("HTMLElement/drop_event", "drop")}} event is fired.
+In order for the drop to be _potentially successful_, the drop must happen over a valid [drop target](#dragging_over_elements_and_specifying_drop_targets), and the `dropEffect` must not be `none` at the time of mouse release. Otherwise, the drop operation is considered [failed](#a_failed_drop).
 
-During the {{domxref("HTMLElement/drop_event", "drop")}} event, you should retrieve that data that was dropped from the event and insert it at the drop location. You can use the {{domxref("DataTransfer.dropEffect","dropEffect")}} property to determine which drag operation was desired.
+If the drop is potentially successful, a {{domxref("HTMLElement/drop_event", "drop")}} event is fired on the drop target. You need to cancel this event using `preventDefault()` in order for the drop to be considered actually successful. Otherwise, the drop is also considered successful if the drop was dropping text (the data contains a `text/plain` item) into an editable text field. In this case, the text is inserted into the field (either at the cursor position or at the end, depending on platform conventions) and, if the `dropEffect` is `move` while the source is a selection within an editable region, the source is removed. Otherwise, for all other drag data and drop targets, the drop is considered failed.
 
-As with all drag-related events, the event's {{domxref("DataTransfer","dataTransfer")}} property will hold the data that is being dragged. The {{domxref("DataTransfer.getData","getData()")}} method may be used to retrieve the data again.
+During the {{domxref("HTMLElement/drop_event", "drop")}} event, you should retrieve the desired data from the drag data store using {{domxref("DataTransfer.getData()")}}, and insert it at the drop location. You can use the {{domxref("DataTransfer.dropEffect","dropEffect")}} property to determine which drag operation was desired. The `drop` event is the only time when you can read the drag data store, other than `dragstart`.
 
 ```js
-function onDrop(event) {
-  const data = event.dataTransfer.getData("text/plain");
-  event.target.textContent = data;
+target.addEventListener("drop", (event) => {
   event.preventDefault();
-}
+  const data = event.dataTransfer.getData("text/plain");
+  target.textContent = data;
+});
 ```
-
-The {{domxref("DataTransfer.getData","getData()")}} method takes one argument, the type of data to retrieve. It will return the string value that was set when {{domxref("DataTransfer.setData","setData()")}} was called at the beginning of the drag operation. An empty string will be returned if data of that type does not exist. (Naturally, though, you would likely know that the right type of data was available, as it was previously checked during a {{domxref("HTMLElement/dragover_event", "dragover")}} event.)
 
 In the example here, once the data has been retrieved, we insert the string as the textual content of the target. This has the effect of inserting the dragged text where it was dropped, assuming that the drop target is an area of text such as a `p` or `div` element.
 
-In a web page, you should call the {{domxref("Event.preventDefault","preventDefault()")}} method of the event if you have accepted the drop, so that the browser's default handling is not triggered by the dropped data as well. For example, when a link is dragged to a web page, Firefox will open the link. By cancelling the event, this behavior will be prevented.
+The `getData()` method returns an empty string if the data store does not contain data of the specified type. If you implemented [conditional drop targets](#conditional_drop_targets), this situation should not occur, because the drop target should only accept drops when the desired data is present.
 
-You can retrieve other types of data as well. If the data is a link, it should have the type [`text/uri-list`](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#dragging_links). You could then insert a link into the content.
+You can retrieve other types of data as well. If the data is a link, it should have the type [`text/uri-list`](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#dragging_links). You could then insert a link into the content.
 
 ```js
-function doDrop(event) {
-  const lines = event.dataTransfer.getData("text/uri-list").split("\n");
+target.addEventListener("drop", (event) => {
+  event.preventDefault();
+  const lines = event.dataTransfer.getData("text/uri-list").split("\r\n");
   lines
     .filter((line) => !line.startsWith("#"))
     .forEach((line) => {
       const link = document.createElement("a");
       link.href = line;
       link.textContent = line;
-      event.target.appendChild(link);
+      target.appendChild(link);
     });
-  event.preventDefault();
-}
+});
 ```
 
-This example inserts a link from the dragged data. As the name implies, the [`text/uri-list`](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#dragging_links) type actually may contain a list of URLs, each on a separate line. The above code uses [`split`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split) to break the string into lines, then iterates over the list of lines, and inserts each as a link into the document. (Note also that links starting with a number sign (`#`) are skipped, as these are comments.)
+For more information about how to read drag data, see [Working with the drag data store](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#reading_the_drag_data_store).
 
-For simple cases, you can use the special type `URL` just to retrieve the first valid URL in the list. For example:
+It is also the source and the target elements' responsibility to collaborate to implement the `dropEffect`—the source listens for the `dragend` event and the target listens for the `drop` event. For example, if the `dropEffect` is `move`, then one of these elements must remove the dragged item from its old location (usually the source element itself, because the target element doesn't necessarily know or have control over the source).
 
-```js
-const link = event.dataTransfer.getData("URL");
-```
+<!-- TODO: default action of dropping files/links into browsers -->
 
-This eliminates the need to check for comments or iterate through lines yourself. However, it is limited to only the first URL in the list.
+## A failed drop
 
-The `URL` type is a special type. It is used only as a shorthand, and it does not appear within the list of types specified in the {{domxref("DataTransfer.types","types")}} property.
+The drag-and-drop operation is considered failed if one of the following is true:
 
-Sometimes you may support some different formats, and you want to retrieve the data that is most specific that is supported. In the following example, three formats are supported by a drop target.
+1. The user pressed the <kbd>Escape</kbd> key
+2. The drop happened outside of a valid [drop target](#dragging_over_elements_and_specifying_drop_targets)
+3. The drop effect was `none` at the time of mouse release
+4. The `drop` event was not cancelled and the drop was not dropping text (containing a `text/plain` data) into an editable text field (see [performing a drop](#performing_a_drop))
 
-The following example returns the data associated with the best-supported format:
+For cases 1 and 3, if the abortion happens while hovering over a valid drop target, the drop target receives a {{domxref("HTMLElement/dragleave_event", "dragleave")}} event, as if the drop no longer happens over it, so that it can clean up any [drop feedback](#custom_drop_feedback). In all cases, the `dropEffect` is set to `none` for subsequent events.
 
-```js
-function doDrop(event) {
-  const supportedTypes = [
-    "application/x-moz-file",
-    "text/uri-list",
-    "text/plain",
-  ];
-  const types = event.dataTransfer.types.filter((type) =>
-    supportedTypes.includes(type),
-  );
-  if (types.length) {
-    const data = event.dataTransfer.getData(types[0]);
-    // Use this type of data…
-  }
-  event.preventDefault();
-}
-```
+Afterwards, a {{domxref("HTMLElement/dragend_event", "dragend")}} event is fired at the source node. The browser may display an animation of the dragged selection going back to the source of the drag-and-drop operation.
 
-## Finishing a drag
+## Finishing the drag
 
-Once the drag is complete, a {{domxref("HTMLElement/dragend_event", "dragend")}} event is fired at the source of the drag (the same element that received the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event). This event will fire if the drag was successful or if it was cancelled. However, you can use the {{domxref("DataTransfer.dropEffect","dropEffect")}} property to determine which drop operation occurred.
+Once the drag is complete, a {{domxref("HTMLElement/dragend_event", "dragend")}} event is fired at the source of the drag (the same element that received the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event). This event will fire regardless of whether the drag succeeded.
 
 If the {{domxref("DataTransfer.dropEffect","dropEffect")}} property has the value `none` during a {{domxref("HTMLElement/dragend_event", "dragend")}}, then the drag was cancelled. Otherwise, the effect specifies which operation was performed. The source can use this information after a `move` operation to remove the dragged item from the old location.
 
@@ -334,5 +372,4 @@ After the {{domxref("HTMLElement/dragend_event", "dragend")}} event has finished
 ## See also
 
 - [HTML Drag and Drop API (Overview)](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
-- [Recommended Drag Types](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
-- [HTML Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)
+- [Working with the drag data store](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)

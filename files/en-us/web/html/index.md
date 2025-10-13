@@ -18,10 +18,12 @@ The articles below can help you learn more about HTML.
 
 ## Beginner's tutorials
 
+Our [learn web development core modules](/en-US/docs/Learn_web_development/Core) contain modern, up-to-date tutorials covering HTML fundamentals.
+
 - [Your first website: Creating the content](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content)
   - : This article provides a brief tour of what HTML is and how to use it, aimed at people who are completely new to web development.
 - [Structuring content with HTML](/en-US/docs/Learn_web_development/Core/Structuring_content)
-  - : Our [Learn web development](/en-US/docs/Learn_web_development) section's HTML module teaches all the HTML fundamentals from the ground up.
+  - : This module covers the basics of the HTML language, before looking at key areas such as document structure, links, lists, images, forms, and more.
 
 ## Guides
 

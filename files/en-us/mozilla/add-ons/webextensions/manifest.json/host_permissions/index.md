@@ -38,7 +38,7 @@ Use the `host_permissions` key to request access for the APIs in your extension 
 
 ### Requested permissions and user prompts
 
-Users can [grant or revoke host permissions](https://support.mozilla.org/en-US/kb/extensions-button#w_website-permissions) on an ad hoc basis. Therefore., most browsers treat `host_permissions` as optional.
+Users can [grant or revoke host permissions](https://support.mozilla.org/en-US/kb/extensions-button#w_website-permissions) on an ad hoc basis. Therefore, most browsers treat `host_permissions` as optional.
 
 On installation, when you request permissions using this key:
 

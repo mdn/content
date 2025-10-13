@@ -68,7 +68,7 @@ The promise may be rejected with the following exceptions:
   - : Thrown if the user agent does not support locking the screen orientation of the specific orientation.
 
 - `AbortError` {{domxref("DOMException")}}
-  - : Thrown if there is any other `lock()` method invoking.
+  - : Thrown if there is any other `lock()` method invoking or if {{domxref("ScreenOrientation/unlock","unlock()")}} is called while the lock promise is pending.
 
 ## Examples
 

@@ -35,7 +35,7 @@ const para = document.querySelector("p");
 const ifr = document.querySelector("iframe");
 const otherWindow = ifr.contentWindow;
 
-ifr.addEventListener("load", iframeLoaded, false);
+ifr.addEventListener("load", iframeLoaded);
 
 function iframeLoaded() {
   otherWindow.postMessage("Hello from the main page!", "*", [channel.port2]);

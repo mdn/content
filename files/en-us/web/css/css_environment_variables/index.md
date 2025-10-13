@@ -27,9 +27,12 @@ Environment variables provide values that can be used on the page based on infor
 
 ## Related concepts
 
+- [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries) module
 - [custom properties](/en-US/docs/Web/CSS/--*)
 - {{cssxref("var")}}
 - {{domxref("VirtualKeyboard")}} interface
+- [`display_override`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/display_override) manifest field
+  [Window Controls Overlay API](/en-US/docs/Web/API/Window_Controls_Overlay_API) and {{domxref("WindowControlsOverlay"))}} interface
 
 ## Specifications
 
@@ -37,6 +40,6 @@ Environment variables provide values that can be used on the page based on infor
 
 ## See also
 
-- [CSS value functions](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) guide
+- [CSS value functions](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) guide
 - [CSS properties and values API](/en-US/docs/Web/CSS/CSS_properties_and_values_API) module
 - [CSS custom properties for cascading variables](/en-US/docs/Web/CSS/CSS_cascading_variables) module

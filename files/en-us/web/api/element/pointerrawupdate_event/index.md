@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Element.pointerrawupdate_event
 ---
 
-{{APIRef}}{{secureContext_header}}
+{{APIRef("Pointer Events")}}{{secureContext_header}}
 
 The **`pointerrawupdate`** event is fired when a pointer changes any properties that don't fire {{domxref('Element/pointerdown_event', 'pointerdown')}} or {{domxref('Element/pointerup_event', 'pointerup')}} events.
 See {{domxref('Element/pointermove_event', 'pointermove')}} for a list of these properties.

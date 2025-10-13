@@ -25,7 +25,7 @@ The value of this attribute indicates the type of data represented by the script
     The `charset` and `defer` attributes have no effect.
     For information on using `module`, see our [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules) guide.
     Unlike classic scripts, module scripts require the use of the CORS protocol for cross-origin fetching.
-- [`speculationrules`](/en-US/docs/Web/HTML/Reference/Elements/script/type/speculationrules) {{experimental_inline}} {{non-standard_inline}}
+- [`speculationrules`](/en-US/docs/Web/HTML/Reference/Elements/script/type/speculationrules) {{experimental_inline}}
   - : This value indicates that the body of the element contains speculation rules.
     Speculation rules take the form of a JSON object that determine what resources should be prefetched or prerendered by the browser. This is part of the {{domxref("Speculation Rules API", "", "", "nocode")}}.
 - **Any other value**

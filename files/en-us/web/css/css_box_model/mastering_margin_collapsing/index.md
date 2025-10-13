@@ -90,6 +90,6 @@ p {
     - [Computed values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value)
     - [Used values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#used_value)
     - [Actual values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#actual_value)
-  - [Value definition syntax](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+  - [Value definition syntax](/en-US/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
   - [Shorthand properties](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties)
   - {{glossary("Replaced elements")}}

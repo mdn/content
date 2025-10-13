@@ -63,8 +63,8 @@ function onMouseUp(e) {
 
 const textarea1 = document.getElementById("ta-example-one");
 const textarea2 = document.getElementById("ta-example-two");
-textarea1.addEventListener("mouseup", onMouseUp, false);
-textarea2.addEventListener("mouseup", onMouseUp, false);
+textarea1.addEventListener("mouseup", onMouseUp);
+textarea2.addEventListener("mouseup", onMouseUp);
 ```
 
 ### Result

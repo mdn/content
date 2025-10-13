@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Element.animate
 ---
 
-{{APIRef('Web Animations')}}
+{{APIRef("Web Animations")}}
 
 The {{domxref("Element")}} interface's **`animate()`** method
 is a shortcut method which creates a new {{domxref("Animation")}}, applies it to the
@@ -135,16 +135,47 @@ document.getElementById("tunnel").animate(
 
 ### Implicit to/from keyframes
 
-In newer browser versions, you are able to set a beginning or end state for an
-animation only (i.e., a single keyframe), and the browser will infer the other end of the
-animation if it is able to. For example, consider [this simple animation](https://mdn.github.io/dom-examples/web-animations-api/implicit-keyframes.html) — the Keyframe object looks like so:
+The browser can infer the start or end state of an animation by using the current state. By default, if a single keyframe is provided, it's treated as the end state, and the start state is inferred from the element's current computed style. However, you can specify the `offset` to indicate where the provided keyframe should be placed in the animation timeline.
 
-```js
-let rotate360 = [{ transform: "rotate(360deg)" }];
+```html hidden
+<div>
+  <img
+    id="logo"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    alt="Firefox logo" />
+</div>
+<button id="run">Animate - use current as start</button>
+<button id="run2">Animate - use current as end</button>
+<button id="run3">Animate - use current as both ends</button>
 ```
 
-We have only specified the end state of the animation, and the beginning state is
-implied.
+```css hidden
+div {
+  width: 100%;
+}
+
+#logo {
+  width: 200px;
+  height: 200px;
+}
+```
+
+```js
+const logo = document.getElementById("logo");
+document.getElementById("run").addEventListener("click", () => {
+  logo.animate({ transform: "translateX(300px)" }, 1000);
+});
+document.getElementById("run2").addEventListener("click", () => {
+  logo.animate({ transform: "translateX(300px)", offset: 0 }, 1000);
+});
+document.getElementById("run3").addEventListener("click", () => {
+  logo.animate({ transform: "translateX(300px)", offset: 0.5 }, 1000);
+});
+```
+
+We specified a single frame in the timeline, and the start and/or end states can be filled in to create a complete animation.
+
+{{EmbedLiveSample("Implicit to/from keyframes", "", 300)}}
 
 ### timeline, rangeStart, and rangeEnd
 

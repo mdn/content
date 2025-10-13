@@ -63,15 +63,11 @@ exportFunction(changeMyName, window, {
 // less-privileged scope: for example, a page script
 const user = { name: "Jim" };
 const test = document.getElementById("test");
-test.addEventListener(
-  "click",
-  () => {
-    console.log(user.name); // "Jim"
-    window.changeMyName(user);
-    console.log(user.name); // "Bill"
-  },
-  false,
-);
+test.addEventListener("click", () => {
+  console.log(user.name); // "Jim"
+  window.changeMyName(user);
+  console.log(user.name); // "Bill"
+});
 ```
 
 This behavior is subject to the normal rules of Xrays. For example, an expando property added to a DOM node isn't visible in the original object.
@@ -99,13 +95,9 @@ const user = {
   },
 };
 const test = document.getElementById("test");
-test.addEventListener(
-  "click",
-  () => {
-    window.logUser(user);
-  },
-  false,
-);
+test.addEventListener("click", () => {
+  window.logUser(user);
+});
 ```
 
 See [Xray vision](https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html) in the Firefox Source Tree documentation for more information.
@@ -130,13 +122,9 @@ function getUser() {
   return "Bill";
 }
 const test = document.getElementById("test");
-test.addEventListener(
-  "click",
-  () => {
-    window.logUser(getUser);
-  },
-  false,
-);
+test.addEventListener("click", () => {
+  window.logUser(getUser);
+});
 ```
 
 ### Cross-origin checking

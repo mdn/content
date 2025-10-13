@@ -161,9 +161,11 @@ Graece
 gubergren
 harborside
 hellonode
+HEXA
 HEXDIG
 howtoplay
 HUD5767ghtyfyr4536dh45dg45dg3
+HWBA
 idbkeyrange
 IHdhcyBncmVhdCE
 innerht.ml
@@ -323,6 +325,7 @@ Whereami
 Whereshire
 wisi
 Wookie
+XYZD
 xyzzy
 YOUREXT
 YsAIAAAA-QG4G6kCMAMBAAAAAAAoK

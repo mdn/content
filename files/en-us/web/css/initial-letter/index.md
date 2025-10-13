@@ -6,7 +6,7 @@ browser-compat: css.properties.initial-letter
 sidebar: cssref
 ---
 
-The `initial-letter` CSS property sets the size and sink for dropped, raised, and sunken initial letters. This property applies to {{cssxref("::first-letter")}} pseudo-elements and inline-level first children of block containers.
+The **`initial-letter`** [CSS](/en-US/docs/Web/CSS) property sets the size and sink for dropped, raised, and sunken initial letters. This property applies to {{cssxref("::first-letter")}} pseudo-elements and inline-level first children of block containers.
 
 ## Syntax
 

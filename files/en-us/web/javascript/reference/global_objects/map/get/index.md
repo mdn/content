@@ -7,10 +7,7 @@ browser-compat: javascript.builtins.Map.get
 sidebar: jsref
 ---
 
-The **`get()`** method of {{jsxref("Map")}} instances returns a specified element from this map. If the
-value that is associated to the provided key is an object, then you will get a
-reference to that object and any change made to that object will effectively
-modify it inside the `Map` object.
+The **`get()`** method of {{jsxref("Map")}} instances returns the value corresponding to the key in this `Map`, or `undefined` if there is none. Object values are returned as the same reference that was originally stored, not as a copy, so mutations to the returned object will be reflected anywhere that reference is held, including inside the `Map`.
 
 {{InteractiveExample("JavaScript Demo: Map.prototype.get()")}}
 
@@ -34,12 +31,11 @@ get(key)
 ### Parameters
 
 - `key`
-  - : The key of the element to return from the `Map` object.
+  - : The key of the value to return from the `Map` object. Object keys are compared by [reference](/en-US/docs/Glossary/Object_reference), not by value.
 
 ### Return value
 
-The element associated with the specified key, or
-{{jsxref("undefined")}} if the key can't be found in the `Map` object.
+The value associated with the specified key in the `Map` object. If the key can't be found, {{jsxref("undefined")}} is returned.
 
 ## Examples
 
@@ -66,8 +62,6 @@ console.log(arr); // ["foo"]
 console.log(myMap.get("bar")); // ["foo"]
 ```
 
-Note that the map holding a reference to the original object effectively means the object cannot be garbage-collected, which may lead to unexpected memory issues. If you want the object stored in the map to have the same lifespan as the original one, consider using a {{jsxref("WeakMap")}}.
-
 ## Specifications
 
 {{Specifications}}
@@ -79,5 +73,6 @@ Note that the map holding a reference to the original object effectively means t
 ## See also
 
 - {{jsxref("Map")}}
+- {{jsxref("Map.prototype.delete()")}}
 - {{jsxref("Map.prototype.set()")}}
 - {{jsxref("Map.prototype.has()")}}

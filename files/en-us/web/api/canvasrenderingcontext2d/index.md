@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.CanvasRenderingContext2D
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 The **`CanvasRenderingContext2D`** interface, part of the [Canvas API](/en-US/docs/Web/API/Canvas_API), provides the 2D rendering context for the drawing surface of a {{HTMLElement("canvas")}} element.
 It is used for drawing shapes, text, images, and other objects.

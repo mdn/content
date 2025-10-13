@@ -197,12 +197,12 @@ span {
 }
 
 @keyframes vintage-caret {
-  from,
+  0%,
   50% {
     caret-color: #00ad00;
   }
   75%,
-  to {
+  100% {
     caret-color: transparent;
   }
 }
