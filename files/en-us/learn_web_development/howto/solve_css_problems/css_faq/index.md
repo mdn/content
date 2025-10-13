@@ -177,7 +177,7 @@ Using shorthand properties for defining style rules is good because it uses a ve
 ```css
 #stockTicker {
   font-size: 12px;
-  font-family: Verdana;
+  font-family: "Verdana";
   font-weight: bold;
 }
 .stockSymbol {
