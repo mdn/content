@@ -223,8 +223,8 @@ function getPopulatedProperties(elementStyles) {
     ) {
       log(
         `${elementStyles[prop]} = '${elementStyles.getPropertyValue(
-          elementStyles[prop]
-        )}'`
+          elementStyles[prop],
+        )}'`,
       );
     }
   }
