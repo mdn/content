@@ -8,7 +8,7 @@ browser-compat: api.SVGAElement.search
 
 {{APIRef("SVG")}}
 
-The **`search`** property of the {{domxref("SVGAElement")}} returns a string representing the URL's query string, if any, including the leading question mark (`?`).
+The **`search`** property of the {{domxref("SVGAElement")}} interface returns a string representing the URL's query string, if any, including the leading question mark (`?`).
 
 This property can be set, to change the URL's query component.
 
