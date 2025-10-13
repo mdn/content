@@ -62,7 +62,7 @@ If you are reading this site, you are probably interested in some kind of web de
   - Music industry.
   - etc.
 - Work location: Do you want to work
-  - From home full time.
+  - From home full-time.
   - In an office.
   - In some kind of hybrid setup.
   - In the same location all the time, or move around between different areas or countries?
@@ -134,7 +134,7 @@ Once you've got some relevant experience worth talking about, the next step is t
 
 This should include:
 
-- A nicely-presented landing page to summarize everything.
+- A nicely presented landing page to summarize everything.
 - A list of websites, apps, and other relevant products that you've worked on. For each one, include a title, thumbnail image, and a description of the project and what you did on it. If you want to say quite a lot about the projects, create a separate page about each one! Include a list of the technologies used to build the project and a link to the source code if you are able to (not all source is open).
 - Links to the source code and live demos of your own personal projects and experiments. Each project should include a description of what it does and the technologies used to build it.
 - Links to blog posts, writing samples, conference talks, and any other assets you think might help show off your skills.
@@ -144,7 +144,7 @@ Keep your portfolio as highlights of your best work. You want it to be easy to a
 
 In terms of how to actually publish your portfolio:
 
-- You should [publish your work](/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Collaboration_and_teamwork#publish_your_work) in publicly-viewable places, such as a GitHub organization for source code, and a blogging platform such as medium (or your own website) for blog posts.
+- You should [publish your work](/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Collaboration_and_teamwork#publish_your_work) in publicly viewable places, such as a GitHub organization for source code, and a blogging platform such as medium (or your own website) for blog posts.
 - For source code that is demos or snippets rather than full websites, publish live versions of the code, so that people can easily check out the live result. See [Publishing your website](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website) for tips on how to do this.
 - In terms of the actual portfolio landing page, you could create a GitHub repo and provide your list of links in a `README.md` file, but this doesn't look particularly great. Much better would be to create a dedicated website to contain your portfolio, with a dedicated [domain name](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name). If you are not great at design work, ask a colleague or friend for some help, perhaps in exchange for doing some coding work for them.
 
@@ -198,7 +198,7 @@ When you apply for the job, make sure you follow the process exactly as they wan
 
 Above all:
 
-- Make sure your application is professional and well-written, and doesn't include any typos. If it is poorly-written, you are unlikely to succeed. Check it over using a tool like Grammarly.
+- Make sure your application is professional and well-written, and doesn't include any typos. If it is poorly written, you are unlikely to succeed. Check it over using a tool like Grammarly.
 - Don't be late applying — make sure you submit your application by the deadline date!
 
 Not all job applications require the same things; you'll probably have to:
@@ -263,7 +263,7 @@ Usually, the bulk of the interview process is one or more main interviews. These
 
 - You might have one main interview, but you are more likely to have multiple interviews that test you on different aspects of the job (for example, the actual coding work, teamwork, working processes, documentation/communication, conflict resolution).
 - They may be with a single interviewer, or multiple interviewers asking you questions about different aspects (aka a panel interview).
-- Some interviews may be high level or more exploratory (for example, "describe the process you'd use to deliver x", or "what do you think the main problems are with this solution?") and some may be lower level and more intensive (for example "write a JavaScript program that solves this problem").
+- Some interviews may be high-level or more exploratory (for example, "describe the process you'd use to deliver x", or "what do you think the main problems are with this solution?") and some may be lower level and more intensive (for example "write a JavaScript program that solves this problem").
 
 #### Experience-based questions
 
