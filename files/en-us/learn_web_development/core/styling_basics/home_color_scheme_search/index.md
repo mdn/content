@@ -278,7 +278,7 @@ label {
   flex: 1;
 }
 
-/* 1. Reset button and input elements */
+/* Solution: Add a form reset */
 
 button,
 input {
@@ -290,13 +290,13 @@ input {
 
 input {
   flex: 3;
-  /* 2. Give inputs border, padding, and border-radius */
+  /* Solution: Style the form inputs */
   border: 2px solid #999999;
   padding: 10px;
   border-radius: 5px;
 }
 
-/* 3. Style buttons */
+/* Solution: Style the buttons */
 
 button {
   background-color: black;
@@ -320,12 +320,12 @@ button:disabled {
 table img {
   width: 100%;
   height: 150px;
-  /* 5. Fixes the image display */
+  /* Solution: Fixing the image display */
   object-fit: cover;
   object-position: bottom;
 }
 
-/* 4. Style table */
+/* Solution: Style the table */
 
 table {
   table-layout: fixed;
@@ -353,7 +353,7 @@ tr :nth-of-type(4) {
   width: 40%;
 }
 
-/* Provide background colors for the "Raw color" cells */
+/* Solution: Provide background colors for the "Raw color" cells */
 
 tr:nth-of-type(1) td:nth-of-type(2) {
   background-color: rgb(255 192 203);
