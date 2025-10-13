@@ -282,7 +282,7 @@ Some interviews will be coding interviews, designed to test your ability at solv
 - "Write a JavaScript function that takes inputs x and y, and returns z."
 - "A colleague has written the following React component, but it has some bugs. Can you identify what's wrong with it and rewrite it to fix the problems?"
 - "Look at the following code, and describe to me what it is doing."
-- "Write an algorithm that generates the first n entries in the fibonacci sequence."
+- "Write an algorithm that generates the first $n$ entries in the Fibonacci sequence, where $n$ is a positive number."
 
 Often employers are looking at how you approach the problem rather than the end result — how you commented your code, how you dealt with error handling, and what you might have done if you'd had more time.
 
