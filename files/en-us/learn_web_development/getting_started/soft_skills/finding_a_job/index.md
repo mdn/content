@@ -75,7 +75,7 @@ To get a job, you have to learn how to **sell yourself**, which means making you
 
 ### Develop qualities for that employers look for
 
-As a general point, you should be aware of the attributes that hiring managers look for in a candidate and prepare accordingly. Obviously, you'll need technical skills and other abilities that help you to directly do the task at hand. However, companies also look for "soft skills" that indirectly help you do the job, and also make their employees lives easier and happier while they are at work. We already touched on some of these in our [Collaboration and teamwork](/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Collaboration_and_teamwork) article.
+As a general point, you should be aware of the attributes that hiring managers look for in a candidate and prepare accordingly. Obviously, you'll need technical skills and other abilities that help you to directly do the task at hand. However, companies also look for "soft skills" that indirectly help you do the job; they also make their employees' lives easier and happier while they are at work. We already touched on some of these in our [Collaboration and teamwork](/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Collaboration_and_teamwork) article.
 
 To summarize, hiring managers will look for:
 
@@ -119,7 +119,7 @@ Here are some general tips for CV/résumé writing:
 
 ### Get some experience
 
-When you start searching for jobs, you will find yourself in a vicious circle — _you need experience to get a job, but you also need to get a job to get experience._ Don't despair — there are other ways to get experience. Here are some ideas:
+When you start searching for jobs, you will find yourself in a vicious circle — _you need experience to get a job, but you also need to get a job to get experience._ Don't despair, though — there are other ways to get experience. Here are some ideas:
 
 - Contact local business, charities, churches, schools, etc., to see if they want a website or help updating their existing website. If you are just starting out, you could offer to do it for free, just to get the experience.
 - Following on from the previous item, move on to doing some small bits of freelance work once you feel that you are experienced enough to start charging for your work. You could ask around at local businesses or find work through dedicated services such as [UpWork](https://www.upwork.com/).
@@ -140,17 +140,17 @@ This should include:
 - Links to blog posts, writing samples, conference talks, and any other assets you think might help show off your skills.
 - A list of contributions you've made to open source projects, stating what the contribution was, how it improved the project, and what technologies were involved. You should include links to the actual changes you made (e.g. source code, published documentation), and a link to the changelog (for example, the GitHub pull request) that proves you did the work.
 
-Keep your portfolio as highlights of your best work. You want it to be easy to access and look through. Include a few significant items in each section, rather than hundreds of items, otherwise the hiring manager will get bored and move on. A nice clean design will help with the experience, but a complex design might reduce legibility.
+Keep your portfolio as highlights of your best work. You want it to be easy to access and look through. Include only a few significant items in each section; otherwise the hiring manager will get bored and move on. A nice clean design will help with the experience, but a complex design might reduce legibility.
 
 In terms of how to actually publish your portfolio:
 
 - You should [publish your work](/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Collaboration_and_teamwork#publish_your_work) in publicly viewable places, such as a GitHub organization for source code, and a blogging platform such as [Medium](https://medium.com/) (or your own website) for blog posts.
-- For source code that is demos or snippets rather than full websites, publish live versions of the code, so that people can easily check out the live result. See [Publishing your website](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website) for tips on how to do this.
-- In terms of the actual portfolio landing page, you could create a GitHub repo and provide your list of links in a `README.md` file, but this doesn't look particularly great. Much better would be to create a dedicated website to contain your portfolio, with a dedicated [domain name](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name). If you are not great at design work, ask a colleague or friend for some help, perhaps in exchange for doing some coding work for them.
+- For source code that consists of just demos or snippets (rather than full websites, for example), publish live versions of the code, so that people can easily check out the live result. See [Publishing your website](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website) for tips on how to do this.
+- In terms of the actual portfolio landing page, you could create a GitHub repo and provide your list of links in a `README.md` file. But this doesn't look particularly great. It would be much better to create a dedicated website to contain your portfolio, with a dedicated [domain name](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name). If you are not great at design work, ask a colleague or friend for some help, perhaps in exchange for doing some coding work for them.
 
 ### Create a LinkedIn profile
 
-[LinkedIn](https://www.linkedin.com/) is one of the most popular sites in the world for people to find jobs and for employers to find employees. It is a great place to host an online account of your work experience and skills, which is similar to your CV/résumé, but also different.
+[LinkedIn](https://www.linkedin.com/) is one of the most popular sites in the world for people to find jobs and for employers to find employees. It is a great place to host an online account of your work experience and skills; it's similar to your CV/résumé.
 
 LinkedIn has many useful advantages that allow your profile to work well alongside your CV/résumé. You can:
 
@@ -190,7 +190,7 @@ Before you start applying for a job, there are some useful steps you can take to
 - Do some other research on the company — read their websites/blogs, find out about their history and what their goals are. Spend some time using their products and becoming familiar with how they work — for example, install their software and use it to build a demo app, or write a website that uses their APIs to do something.
   > [!NOTE]
   > For bonus points, try to identify a problem they are currently trying to solve or a bug in their product, and suggest a fix for it along with a demo or code snippets.
-- Customize your CV/résumé to suit this particular job. Look at the job description and make sure to amplify your most relevant skills and work experience, while minimizing or even removing items that don't seem relevant. Also make sure the demos/examples most relevant to this job are highlighted on your portfolio in some way, for example put at the top of the list.
+- Customize your CV/résumé to suit this particular job. Look at the job description and make sure to amplify your most relevant skills and work experience, while minimizing or even removing items that seem less relevant. Also make sure the demos/examples most relevant to this job are highlighted on your portfolio in some way; for example, you could put such code at the top of the list, in a manner of speaking.
 
 ### Applying for the job
 
@@ -203,7 +203,7 @@ Above all:
 
 Not all job applications require the same things; you'll probably have to:
 
-- Fill out some details on an online form. Make sure you type out your answers locally (for example, in VSCode) or in an online document (for example, a Google Docs file) before entering them into the form fields, in case something (for example, a browser crash) causes you to lose your work. This can save you hours of frustration, and text is also easier to review and get feedback on if you put it somewhere else first.
+- Fill out some details on an online form. Make sure you type out your answers locally (for example, in VSCode) or in an online document (for example, a Google Docs file) before entering them into the form fields, in case something (for example, a browser crash) causes you to lose your work. This can save you hours of frustration; text is also easier to review and get feedback on if you put it somewhere else first.
 - Upload your CV/résumé.
 - Write and upload a covering letter. There are many guides to writing effective covering letters elsewhere online, but in general, such a letter should provide a description of why you:
   - Want to work for the company.
@@ -217,9 +217,9 @@ A key point is that your job search should be a constant process where you do a 
 
 You should follow up with any promising leads you meet, for example on community networks or LinkedIn. Also, keep an inventory of the people you meet and the companies you apply to, along with contact details and descriptions of each. Periodically follow up with companies you'd like to work for to see what jobs they have available. If you get rejected for one job, they might have something else more suitable for you, either now or in the future.
 
-If you haven't gotten a response from a company after applying for one of their jobs, wait a little while and then follow-up with their recruiter to see if they have any feedback for you, or any other jobs coming up. Even if a company you want to work for doesn't have any suitable full-time jobs advertised at the moment, contact them any way and see if they are looking for someone with your skill set. It might lead to some useful experience, such as a freelance contract.
+If you haven't gotten a response from a company after applying for one of their jobs, wait a little while and then follow-up with their recruiter to see if they have any feedback for you, or if they have any other jobs coming up. Even if a company you want to work for doesn't have any suitable full-time jobs advertised at the moment, contact them anyway and see if they are looking for someone with your skill set. It might lead to something that will net you useful experience, such as a freelance contract.
 
-Keep looking for more jobs via your chosen job sites or community networks, and chat to people about what is available. New opportunities will come up all the time.
+Keep looking for more jobs via your chosen job sites or community networks. Chat to people about what is available. New opportunities will come up all the time.
 
 If you are struggling to find anything permanent that you really want, there might be some intermediate steps to take:
 
@@ -253,13 +253,13 @@ There is also some preparation to do specific to each company you apply to:
 
 Once the company have looked at your application and decided you sound like a "potential", they will probably start off by inviting you to an initial phone interview, just with the recruiter or hiring manager. This is usually a short interview to assess "culture fit" (i.e. if you're going to get on well with them), make sure they don't pick up any immediate red flags that suggest you won't be a good employee, and tell you about what to expect from the rest of the interview process.
 
-At this stage, you should be friendly and talkative, but don't talk too much, act naturally, and see where the interviewer steers the conversation. Make sure to let them know what days and times will be suitable for you to attend further interviews. Try to be as flexible as you can, and be prepared to move your schedule around to accommodate them.
+At this stage, you should be friendly and talkative. But don't talk too much; act naturally, and see where the interviewer steers the conversation. Make sure to let them know what days and times will be suitable for you to attend further interviews. Try to be as flexible as you can, and be prepared to move your schedule around to accommodate them.
 
-Don't be complacent however — you don't know for definite what questions they will throw at you at this early stage, and you should treat it just as seriously as all the other stages.
+Don't be complacent however — you don't know for definite what questions they will throw at you at this early stage, and you should treat this stage just as seriously as all the others.
 
 ### The main interview
 
-Usually, the bulk of the interview process is one or more main interviews. These can vary greatly between different companies in function and frequency.
+Usually, the bulk of the interview process consists of one or more main interviews. These can vary greatly between different companies in both function and frequency.
 
 - You might have one main interview, but you are more likely to have multiple interviews that test you on different aspects of the job (for example, the actual coding work, teamwork, working processes, documentation/communication, conflict resolution).
 - They may be with a single interviewer, or multiple interviewers asking you questions about different aspects (i.e. a panel interview).
@@ -311,7 +311,7 @@ If you make it through the interview process and get offered the job, then well 
 
 ## Try, try, and try again
 
-If you have applied for lots of jobs and not gotten anything yet, try not to become disheartened. Keep trying, stay passionate about the web, and keep talking to new people and learning new things.
+If you have applied for lots of jobs and not gotten anything yet, try not to become disheartened. Keep trying, stay passionate about the web, keep talking to new people, and keep learning new things.
 
 If you got to the interview stage but got rejected, ask the recruiter for some feedback on why you weren't chosen, and use it to improve future applications.
 
