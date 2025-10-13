@@ -163,7 +163,7 @@ dialog {
   border-radius: 5px;
   box-shadow: 3px 3px 10px rgb(0 0 0 / 0.2);
   background-color: white;
-  font-family: segue, arial, helvetica, sans-serif;
+  font-family: "Segue", "Helvetica", "Arial", sans-serif;
   margin-top: 5vh;
   width: 550px;
 }

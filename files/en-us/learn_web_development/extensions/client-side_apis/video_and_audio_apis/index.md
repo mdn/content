@@ -173,7 +173,7 @@ button,
 }
 
 button::before {
-  font-family: HeydingsControlsRegular;
+  font-family: "HeydingsControlsRegular";
   font-size: 20px;
   position: relative;
   content: attr(data-icon);
@@ -471,7 +471,7 @@ To get started with this example, follow these steps:
    }
 
    button::before {
-     font-family: HeydingsControlsRegular;
+     font-family: "HeydingsControlsRegular";
      font-size: 20px;
      position: relative;
      content: attr(data-icon);
@@ -609,7 +609,7 @@ Next, let's look at our button icons:
 }
 
 button::before {
-  font-family: HeydingsControlsRegular;
+  font-family: "HeydingsControlsRegular";
   font-size: 20px;
   position: relative;
   content: attr(data-icon);

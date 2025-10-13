@@ -313,7 +313,7 @@ a {
 
 a[href*="http"] {
   padding-right: 16px;
-  background: url(external-link-52.png) no-repeat right center;
+  background: url("external-link-52.png") no-repeat right center;
   background-size: 14px 14px;
 }
 
