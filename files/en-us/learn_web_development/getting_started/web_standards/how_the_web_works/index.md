@@ -93,16 +93,16 @@ Let's look up the MDN IP address now, and prove that it points to the same place
 
 ## Packets explained
 
-Earlier we used the term "packets" to describe the format in which the data is transferred between the client and server. What do we mean here?
+Earlier, we used the term "packets" to describe the format in which the data is transferred between the client and server. What do we mean here?
 
-Basically, when data is sent across the web, it is sent in several small chunks called packets. Each packet contains:
+When data is sent across the web, it is sent in several small chunks called packets. Each packet contains:
 
-- The **header**, which includes details such as the server and client IP address, the packet number and total number of packets in the transmission, and details of the protocols used in the transmission.
-- The **payload**, which contains the actual data sent in the packet.
+- A **header**, which includes details such as the server and client IP address, the packet number, the total number of packets in the transmission, and details of the protocols used in the transmission.
+- A **payload**, which contains the actual data sent in the packet.
 
 There are multiple reasons why data is sent in small packets, but most significantly:
 
-- They are sometimes dropped or corrupted and, when this happens, it's quicker and easier for the client to request the missing packets rather than an entire file.
+- They are sometimes dropped or corrupted, and when this happens, it's quicker and easier for the client to request the missing packets rather than an entire file.
 - The packets can be routed along different paths, making the transmission as efficient as possible and reducing the possibility of slowing down the network, especially when many users are requesting the same resource simultaneously. The packets may arrive out of sequence, but the client can use the information in the packet headers to make sure they are assembled in the correct order.
 - It is harder to steal user data when transmitted in packets, as each packet contains minimal data and is transmitted separately.
 
