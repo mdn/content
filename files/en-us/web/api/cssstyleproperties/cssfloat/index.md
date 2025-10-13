@@ -8,7 +8,7 @@ browser-compat: api.CSSStyleProperties.cssFloat
 
 {{APIRef("CSSOM")}}
 
-The **`cssFloat`** property of the {{domxref("CSSStyleProperties")}} interface returns CSS `float` property.
+The **`cssFloat`** property of the {{domxref("CSSStyleProperties")}} interface returns the CSS {{cssxref("float")}} property.
 
 This is the result of invoking {{DOMxRef("CSSStyleDeclaration.getPropertyValue()","getPropertyValue()")}} on the object with `float` as an argument.
 
