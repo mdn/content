@@ -233,7 +233,7 @@ If the recruiter and hiring manager like your application, they will invite you 
 There are some general things you should do to prepare for _any_ interview:
 
 - Make sure you have a tidy, quiet place for conducting the interview in. You want to make sure that you are not distracted by noise and commotion during the interview, and you want to make sure that your surroundings look tidy during the interview. If you are having a video call with the interviewer(s) and your space is a complete mess, it won't give them a good impression.
-- Think about what you are going to wear when you attend your interviews. Most developer jobs don't require you to wear a suit (check the job ad to see if it has anything about a dress code), but you should choose something fairly neutral and smart-_ish_. Don't wear a T-shirt with an offensive slogan on it, and don't turn up in your pyjamas.
+- Think about what you are going to wear when you attend your interview. Most developer jobs don't require you to wear a suit (check the job ad to see if it mentions a dress code), but you should choose something fairly neutral and smart-_ish_. Don't wear a T-shirt with an offensive slogan on it, and don't turn up in your pajamas.
 - Do some [preparation for coding interviews](#coding_interviews).
 - Build a collection of anecdotes to use for [experience-based interview questions](#experience-based_questions).
 - Think about what your strengths and weaknesses are, and be realistic with your answers. You will seem more plausible if you don't present yourself as perfect in every way when interviewers invariably ask you about your biggest strengths and weaknesses.
