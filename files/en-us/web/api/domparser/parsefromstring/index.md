@@ -162,7 +162,7 @@ console.log(doc3.body.firstChild.textContent);
 // "Beware of the leopard"
 ```
 
-Note that `application/xml` and `image/svg+xml` MIME types above are functionally identical — the latter does not include any SVG-specific parsing rules.
+Note that the `application/xml` and `image/svg+xml` MIME types above are functionally identical — the latter does not include any SVG-specific parsing rules.
 
 ### Error handling
 
