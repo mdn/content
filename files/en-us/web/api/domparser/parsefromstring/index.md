@@ -15,7 +15,7 @@ browser-compat: api.DOMParser.parseFromString
 > You can mitigate this risk by always passing `TrustedHTML` objects instead of strings and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types).
 > See [Security considerations](#security_considerations) for more information.
 
-The **`parseFromString()`** method of the {{domxref("DOMParser")}} interface parses an input containing either HTML or XML, returning an {{domxref("HTMLDocument")}} or an {{domxref("XMLDocument")}}.
+The **`parseFromString()`** method of the {{domxref("DOMParser")}} interface parses an input containing either HTML or XML, returning a {{domxref("Document")}} with the type given in the {{domxref("Document/contentType","contentType")}} property.
 
 > [!NOTE]
 > The [`Document.parseHTMLUnsafe()`](/en-US/docs/Web/API/Document/parseHTMLUnsafe_static) static method provides an ergonomic alternative for parsing HTML markup into a {{domxref("Document")}}.
@@ -45,10 +45,11 @@ parseFromString(input, mimeType)
 
 ### Return value
 
-A {{domxref("HTMLDocument")}} or an {{domxref("XMLDocument")}}, depending on the `mimeType` argument.
+A {{domxref("Document")}} with {{domxref("Document/contentType","contentType")}} matching the given `mimeType`.
 
 > ![NOTE]
-> You can treat the returned object as a {{domxref("Document")}} with the {{domxref("Document/contentType","contentType")}} matching the `mimeType`.
+> The browser may actually return an {{domxref("HTMLDocument")}} or {{domxref("XMLDocument")}} object.
+> These derive from {{domxref("Document")}} and add no attributes: they are essentially equivalent.
 
 ### Exceptions
 
