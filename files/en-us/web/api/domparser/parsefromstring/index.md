@@ -85,7 +85,7 @@ Using `TrustedHTML` makes it possible to audit and check that sanitization code 
 You should not need to pass a sanitizer to the method when using `TrustedHTML`.
 
 Note that even if you sanitize the input of elements and attributes that can execute code, you still need to be careful when taking any user input.
-For example, you page might use data in an XML to fetch files that it then executes.
+For example, your page might use data in an XML document to fetch files that it then executes.
 
 ## Examples
 
