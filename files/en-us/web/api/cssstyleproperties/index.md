@@ -177,7 +177,7 @@ reload.addEventListener("click", () => {
 
 #### JavaScript
 
-The code first defines the function we're going to use to enumerate the properties of our element `elt`.
+The code first defines the function we're going to use to enumerate the properties of our element with the `elt` ID.
 This uses {{domxref("CSSStyleDeclaration.getPropertyValue()")}} to get the value of each dash-named property owned by the object that has a numeric index.
 
 ```js
