@@ -8,7 +8,7 @@ browser-compat: api.SVGAElement.hostname
 
 {{APIRef("SVG")}}
 
-The **`hostname`** property of the {{domxref("SVGAElement")}} returns a string representing the hostname in the referenced URL.
+The **`hostname`** property of the {{domxref("SVGAElement")}} interface returns a string representing the hostname in the referenced URL.
 
 This property can be set, to change the URL's hostname.
 
