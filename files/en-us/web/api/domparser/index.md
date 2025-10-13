@@ -26,7 +26,7 @@ Note that {{domxref("XMLHttpRequest")}} can parse XML and HTML directly from a U
 ## Instance methods
 
 - {{domxref("DOMParser.parseFromString()")}}
-  - : Parses an input {{domxref("TrustedHTML")}} instance or string as HTML or XML and returns an {{domxref("Document")}}.
+  - : Parses an input {{domxref("TrustedHTML")}} instance or string as HTML or XML and returns a {{domxref("Document")}}.
 
 ## Examples
 
