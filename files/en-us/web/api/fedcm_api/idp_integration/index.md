@@ -167,7 +167,9 @@ This includes the following information where `name`, `email`, `username`, and `
 - `picture` {{optional_inline}}
   - : The URL of the user's avatar image.
 - `approved_clients` {{optional_inline}}
-  - : An array of RP clients that the user has registered with.
+  - : An array of RP clients that the user has registered with. When an RP user tries to sign in with an IdP account, that IdP's `approved_clients` array is checked. If the RP's `clientId` is found in the array, no disclosure text is displayed to them. In addition, [auto-reauthentication](/en-US/docs/Web/API/FedCM_API/RP_sign-in#auto-reauthentication) won't work unless the RP `clientId` is present in the `approved_clients` array.
+    > [!NOTE]
+    > The disclosure text is the information shown to the user (which can include the terms of service and privacy policy links, if provided) if they are signed in to the IdP but don't have an account specifically with the current RP. In such a case, they'd need to choose "Continue as..." to continue with their IdP identity and then create a corresponding account on the RP.
 - `domain_hints` {{optional_inline}}
   - : An array of domains the account is associated with. The RP can make a `get()` call that includes a [`domainHint`](/en-US/docs/Web/API/IdentityCredentialRequestOptions#domainhint) property to filter the returned accounts by domain.
 - `label_hints` {{optional_inline}}
@@ -274,7 +276,9 @@ The request payload contains the following params:
 - `nonce` {{optional_inline}}
   - : The request nonce, provided by the RP.
 - `disclosure_text_shown`
-  - : A string of `"true"` or `"false"` indicating whether the disclosure text was shown or not. The disclosure text is the information shown to the user (which can include the terms of service and privacy policy links, if provided) if the user is signed in to the IdP but doesn't have an account specifically on the current RP (in which case they'd need to choose to "Continue as..." their IdP identity and then create a corresponding account on the RP).
+  - : A string of `"true"` or `"false"` indicating whether the disclosure text was shown or not. The disclosure text is not shown if:
+    - The RP's `clientId` was found inside the [`approved_clients`](#approved_clients) array contained in the JSON returned from the [accounts list endpoint](#the_accounts_list_endpoint).
+    - The browser has observed a sign-up by the same user in the recent past in the absence of `approved_clients`.
 - `is_auto_selected`
   - : A string of `"true"` or `"false"` indicating whether the authentication validation request has been issued as a result of [auto-reauthentication](/en-US/docs/Web/API/FedCM_API/RP_sign-in#auto-reauthentication), i.e., without user mediation. This can occur when the {{domxref("CredentialsContainer.get", "get()")}} call is issued with a [`mediation`](/en-US/docs/Web/API/CredentialsContainer/get#mediation) option value of `"optional"` or `"silent"`. It is useful for the IdP to know whether auto reauthentication occurred for performance evaluation and in case higher security is desired. For example, the IdP could return an error code telling the RP that it requires explicit user mediation (`mediation="required"`).
 

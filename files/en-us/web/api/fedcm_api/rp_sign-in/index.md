@@ -163,9 +163,10 @@ With these `mediation` options, auto-reauthentication will occur under the follo
 - FedCM is available to use. For example, the user has not disabled FedCM either globally or in the RP's settings.
 - The user has only used one account to sign into the RP website on this browser via FedCM. If accounts exist for multiple IdPs, the user won't be automatically re-authenticated.
 - The user is signed into the IdP with that account.
+- The RP's `clientId` was found inside the [`approved_clients`](/en-US/docs/Web/API/FedCM_API/IDP_integration#approved_clients) array contained in the JSON returned from the [accounts list endpoint](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_accounts_list_endpoint).
 - Auto-reauthentication didn't happen within the last 10 minutes. This restriction is put into place to stop users being auto-reauthenticated immediately after they sign out — which would make for a pretty confusing user experience.
 - The RP hasn't called {{domxref("CredentialsContainer.preventSilentAccess", "preventSilentAccess()")}} after the previous sign in. This can be used by an RP to explicitly disable auto-reauthentication if desired.
-- The UI mode is [passive]().
+- The UI mode is [passive](#active_versus_passive_mode).
 
 When these conditions are met, an attempt to automatically reauthenticate the user starts as soon as the `get()` is invoked. If auto-reauthentication is successful, the user will log into the RP site again, without being shown a confirmation prompt, using the same IdP account and validated token as they did before.
 
