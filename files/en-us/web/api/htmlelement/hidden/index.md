@@ -53,8 +53,8 @@ The content is styled using the CSS below.
 .panel {
   font:
     16px "Open Sans",
-    Helvetica,
-    Arial,
+    "Helvetica",
+    "Arial",
     sans-serif;
   border: 1px solid #2222dd;
   padding: 12px;
@@ -65,8 +65,8 @@ The content is styled using the CSS below.
 .button {
   font:
     22px "Open Sans",
-    Helvetica,
-    Arial,
+    "Helvetica",
+    "Arial",
     sans-serif;
   padding: 5px 36px;
 }
