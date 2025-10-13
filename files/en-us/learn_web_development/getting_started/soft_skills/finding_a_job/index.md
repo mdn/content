@@ -217,7 +217,7 @@ A key point is that your job search should be a constant process where you do a 
 
 You should follow up with any promising leads you meet, for example on community networks or LinkedIn. Also, keep an inventory of the people you meet and the companies you apply to, along with contact details and descriptions of each. Periodically follow up with companies you'd like to work for to see what jobs they have available. If you get rejected for one job, they might have something else more suitable for you, either now or in the future.
 
-If you haven't gotten a response from a company after applying for one of their jobs, wait a little while and then follow-up with their recruiter to see if they have any feedback for you, or if they have any other jobs coming up. Even if a company you want to work for doesn't have any suitable full-time jobs advertised at the moment, contact them anyway and see if they are looking for someone with your skill set. It might lead to something that will net you useful experience, such as a freelance contract.
+If you haven't gotten a response from a company after applying for one of their jobs, wait a little while and then follow-up with their recruiter to see if they have any feedback for you, or if they have any other jobs coming up. Even if a company you want to work for doesn't have any suitable full-time jobs advertised at the moment, contact them anyway and see if they are looking for someone with your skill set. They may give you some useful experience, perhaps in the form of a volunteer position or freelance contract.
 
 Keep looking for more jobs via your chosen job sites or community networks. Chat to people about what is available. New opportunities will come up all the time.
 
