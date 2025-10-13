@@ -45,7 +45,7 @@ parseFromString(input, mimeType)
 
 A {{domxref("Document")}} with {{domxref("Document/contentType","contentType")}} matching the given `mimeType`.
 
-> ![NOTE]
+> [!NOTE]
 > The browser may actually return an {{domxref("HTMLDocument")}} or {{domxref("XMLDocument")}} object.
 > These derive from {{domxref("Document")}} and add no attributes: they are essentially equivalent.
 
