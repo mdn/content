@@ -332,6 +332,7 @@
         "CSSRuleList",
         "CSSStyleDeclaration",
         "CSSStartingStyleRule",
+        "CSSStyleProperties",
         "CSSStyleRule",
         "CSSStyleSheet",
         "CSSSupportsRule",
