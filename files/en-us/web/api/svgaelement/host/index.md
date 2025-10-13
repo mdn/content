@@ -8,7 +8,7 @@ browser-compat: api.SVGAElement.host
 
 {{APIRef("SVG")}}
 
-The **`host`** property of the {{domxref("SVGAElement")}} returns a string representing the hostname and port (if it's not the default port) in the referenced URL.
+The **`host`** property of the {{domxref("SVGAElement")}} interface returns a string representing the hostname and port (if it's not the default port) in the referenced URL.
 
 This property can be set, to change the URL's host and port.
 
