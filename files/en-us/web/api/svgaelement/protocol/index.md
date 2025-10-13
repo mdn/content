@@ -8,7 +8,7 @@ browser-compat: api.SVGAElement.protocol
 
 {{APIRef("SVG")}}
 
-The **`protocol`** property of the {{domxref("SVGAElement")}} returns a string representing the protocol component, including trailing colon (`:`), of the referenced URL.
+The **`protocol`** property of the {{domxref("SVGAElement")}} interface returns a string representing the protocol component, including trailing colon (`:`), of the referenced URL.
 
 This property can be set, to change the URL's protocol.
 
