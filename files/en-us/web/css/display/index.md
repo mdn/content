@@ -146,7 +146,7 @@ The keyword values can be grouped into six value categories.
 ### Inside
 
 - {{CSSxRef("&lt;display-inside&gt;")}}
-  - : These keywords specify the element's inner display type, which defines the type of formatting context that its contents are laid out in (assuming it is a non-replaced element):
+  - : These keywords specify the element's inner display type, which defines the type of formatting context that its contents are laid out in (assuming it is a non-replaced element). When one of these keywords is used by itself as a single value, the element's outer display type defaults to `block` (with the exception of `ruby`, which defaults to `inline`).
     - `flow`
       - : The element lays out its contents using flow layout (block-and-inline layout).
 
