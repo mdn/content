@@ -140,7 +140,7 @@ This should include:
 - Links to blog posts, writing samples, conference talks, and any other assets you think might help show off your skills.
 - A list of contributions you've made to open source projects, stating what the contribution was, how it improved the project, and what technologies were involved. You should include links to the actual changes you made (e.g., source code, published documentation), and a link to the changelog (for example, the GitHub pull request) that proves you did the work.
 
-Keep your portfolio as highlights of your best work. You want it to be easy to access and look through. Include only a few significant items in each section; otherwise the hiring manager will get bored and move on. A nice clean design will help with the experience, but a complex design might reduce legibility.
+Your portfolio should contain highlights of your best work. You want it to be easy to access and look through. Include only a few significant items in each section; otherwise, the hiring manager will get bored and move on. A nice, clean design will help with the experience, whereas a complex design might reduce legibility.
 
 In terms of how to actually publish your portfolio:
 
