@@ -113,7 +113,7 @@ The list is given a fixed {{cssxref("height")}} and a {{cssxref("width")}} of `1
 
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 ```
 

@@ -23,7 +23,7 @@ The **block dimension** is perpendicular to the flow of text within a line, i.e.
 
 The **inline dimension** is parallel to the flow of text within a line, i.e., the horizontal dimension in horizontal writing modes, and the vertical dimension in vertical writing modes. For standard English text, it is the horizontal dimension.
 
-CSS was initially designed with only physical coordinates. The logical properties and values module defines flow–relative equivalents for many [values](/en-US/docs/Web/CSS/CSS_Values_and_Units) and [properties](/en-US/docs/Glossary/Property/CSS). Properties that once only accepted physical values (`top`, `bottom`, `left`, `right`) now also accept flow-relative logical values (`block-start`, `block-end`, `inline-start`, `inline-end`).
+CSS was initially designed with only physical coordinates. The logical properties and values module defines flow–relative equivalents for many [values](/en-US/docs/Web/CSS/CSS_values_and_units) and [properties](/en-US/docs/Glossary/Property/CSS). Properties that once only accepted physical values (`top`, `bottom`, `left`, `right`) now also accept flow-relative logical values (`block-start`, `block-end`, `inline-start`, `inline-end`).
 
 ## Reference
 

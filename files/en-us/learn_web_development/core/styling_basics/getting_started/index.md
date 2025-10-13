@@ -523,8 +523,8 @@ CSS comments begin with `/*` and end with `*/`. In the example below, comments m
 /* ---------------------------- */
 body {
   font:
-    1em/150% Helvetica,
-    Arial,
+    1em/150% "Helvetica",
+    "Arial",
     sans-serif;
   padding: 1em;
   margin: 0 auto;
@@ -605,7 +605,7 @@ h1 {
 The next example shows the same CSS in a more compressed format, with all extra white space removed. Although the two examples work the same, the one below is more difficult to read.
 
 ```css-nolint
-body{font:1em/150% Helvetica,Arial,sans-serif;padding:1em;margin:0 auto;max-width:33em;}
+body{font:1em/150% "Helvetica","Arial",sans-serif;padding:1em;margin:0 auto;max-width:33em;}
 @media(width>=70em){body{font-size:130%;}}
 h1{font-size:1.5em;}
 ```

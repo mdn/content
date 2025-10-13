@@ -454,7 +454,7 @@ body {
   max-width: 68rem;
   margin: 0 auto;
   font:
-    1.6rem/1.25 Arial,
+    1.6rem/1.25 "Arial",
     sans-serif;
   background-color: whitesmoke;
   color: #4d4d4d;
@@ -630,7 +630,7 @@ body {
 /* CHECKBOX STYLES */
 .c-cb {
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: "Arial", sans-serif;
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
   font-size: 1.6rem;

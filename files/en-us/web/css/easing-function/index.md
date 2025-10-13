@@ -6,7 +6,7 @@ browser-compat: css.types.easing-function
 sidebar: cssref
 ---
 
-The **`<easing-function>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents a mathematical function that describes the rate at which a value changes.
+The **`<easing-function>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types) represents a mathematical function that describes the rate at which a value changes.
 
 This transition between two values may be applied in different situations. It may be used to describe how fast values change during animations. This lets you vary the animation's speed over the course of its duration. You can specify an easing function for CSS [transition](/en-US/docs/Web/CSS/transition-timing-function) and [animation](/en-US/docs/Web/CSS/animation-timing-function) properties.
 

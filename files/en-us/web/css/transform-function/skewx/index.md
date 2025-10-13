@@ -6,7 +6,7 @@ browser-compat: css.types.transform-function.skewX
 sidebar: cssref
 ---
 
-The **`skewX()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) defines a transformation that skews an element in the
+The **`skewX()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) defines a transformation that skews an element in the
 horizontal direction on the 2D plane. Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
 {{InteractiveExample("CSS Demo: skewX()")}}
