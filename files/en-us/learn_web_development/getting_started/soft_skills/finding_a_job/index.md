@@ -295,7 +295,7 @@ Some companies will set homework for an interview candidate to do, as an alterna
 While this is a reasonable way to test candidates if done right, many people dislike the practice of setting homework questions:
 
 - Sometimes they can feel a little too much like "real work", almost like the employer is asking you to do work for free.
-- They can be poorly scoped, or expect an unreasonable time commitment. A specific scope that time-boxes the project to four hours and will handle follow-up questions in an separate interview is reasonable, but an expectation to spend an entire weekend on a project is not, especially for people who have families and busy lives.
+- They can be poorly scoped or expect an unreasonable time commitment. A specific scope that time-boxes the project to four hours and will handle follow-up questions in an separate interview is reasonable, but an expectation to spend an entire weekend on a project is not, especially for people who have families and busy lives.
 - Their effectiveness is often disputed, as they are hard to evaluate conclusively.
 
 If you are asked to do a homework challenge, make sure the scope and timing of the work are clearly defined, to mitigate the risk of going in the wrong direction and wasting your time.
