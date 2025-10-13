@@ -70,7 +70,7 @@ For the other allowed values (`text/xml`, `application/xml`, `application/xhtml+
 This is useful if you want to import XML files, validate their structure, and extract data.
 If the input doesn't represent well-formed XML, the returned document will contain a `<parsererror>` node describing the nature of the parsing error.
 
-Disallowed `mimeType` values cause a [`TypeError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError) is thrown.
+Disallowed `mimeType` values cause a [`TypeError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError) to be thrown.
 
 ### Security considerations
 
