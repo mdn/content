@@ -56,7 +56,7 @@ However because it is "live", if you update the element styles using another API
 
 The distinction that the object contains [resolved values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#resolved_value) is important.
 For most properties, in particular those that depend on layout such as `display`, `font-size`, or `line-height`, the resolved value is the computed value.
-For properties that do depend on layout, the used value may differ slightly from the computed value, and this is what is returned as the resolved value.
+For properties that depend on layout, the used value may differ slightly from the computed value, and this is what is returned as the resolved value.
 For an animating property value, it will be the computed value at the current point in the animation.
 
 The returned object has dash-named and corresponding {{Glossary("camel_case", "camel-case")}} named properties for **all** [CSS properties](/en-US/docs/Web/CSS/Properties) supported by the browser, including both [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) and longhand properties.
