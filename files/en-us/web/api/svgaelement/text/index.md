@@ -8,7 +8,7 @@ browser-compat: api.SVGAElement.text
 
 {{APIRef("SVG")}}
 
-The **`text`** property of the {{domxref("SVGAElement")}} returns a string that is a synonym for the {{domxref("Node.textContent")}} property.
+The **`text`** property of the {{domxref("SVGAElement")}} interface returns a string that is a synonym for the {{domxref("Node.textContent")}} property.
 
 ## Value
 
