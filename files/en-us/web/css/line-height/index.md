@@ -130,8 +130,8 @@ div {
 /* font shorthand */
 div {
   font:
-    10pt/1.2 Georgia,
-    "Bitstream Charter",
+    10pt/1.2 "Bitstream Charter",
+    "Georgia",
     serif;
 }
 ```

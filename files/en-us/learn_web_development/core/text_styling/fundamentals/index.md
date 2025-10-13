@@ -514,8 +514,8 @@ A full example would look like this:
 
 ```css
 font:
-  italic normal bold normal 3em/1.5 Helvetica,
-  Arial,
+  italic normal bold normal 3em/1.5 "Helvetica",
+  "Arial",
   sans-serif;
 ```
 

@@ -328,7 +328,7 @@ Next, we'll look at our `background` `<section>`. We absolutely position it rela
 .background {
   position: absolute;
   inset: 0;
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/wide-background.jpg);
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/wide-background.jpg");
   background-position-x: calc(
     progress(
         var(--container-width),

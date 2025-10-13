@@ -454,7 +454,7 @@ body {
   max-width: 68rem;
   margin: 0 auto;
   font:
-    1.6rem/1.25 Arial,
+    1.6rem/1.25 "Arial",
     sans-serif;
   background-color: whitesmoke;
   color: #4d4d4d;
