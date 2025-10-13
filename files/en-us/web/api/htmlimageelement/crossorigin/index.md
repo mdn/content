@@ -85,7 +85,8 @@ loadImage("clock-demo-400px.png");
 ```css
 body {
   font:
-    1.125rem/1.5 Helvetica,
+    1.125rem/1.5 "Helvetica",
+    "Arial",
     sans-serif;
 }
 

@@ -218,7 +218,7 @@ We start off our CSS in a similar way to the previous demo, creating a unitless 
 
 Now on to the styling of the paragraph itself. We first give it some basic styles (a {{cssxref("border")}} and {{cssxref("text-align")}} of `center`), then set two values based on the `--viewport-in-pixels` property created earlier:
 
-1. We set the {{cssxref("font-size")}} of the paragraph to a value equal to `--viewport-in-pixels` divided by `200`, multplied by `1em` to convert the numeric quotient into `em`s.
+1. We set the {{cssxref("font-size")}} of the paragraph to a value equal to `--viewport-in-pixels` divided by `200`, multiplied by `1em` to convert the numeric quotient into `em`s.
 2. We set the {{cssxref("background-color")}} of the paragraph to an [`lch()`](/en-US/docs/Web/CSS/color_value/lch) color value. The lightness and chroma components are constant values (`75%` and `50%`, respectively), whereas the hue component is set to `--viewport-in-pixels` divided by `10`, plus `100`. We then multiply the result of that by `1deg` to ensure the value is an {{cssxref("angle")}}.
    > [!NOTE]
    > This last step is not strictly necessary, as `lch()` also accepts unitless hue values. However, a degree value may be more intuitive, and we wanted to show another example of how the unitless value can be converted into a different data type.
