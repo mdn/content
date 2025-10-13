@@ -28,7 +28,7 @@ _This interface also inherits properties from its parent, {{domxref("SVGGraphics
 - {{domxref("SVGAElement.hreflang")}}
   - : A string indicating the language of the linked resource.
 - {{domxref("SVGAElement.origin")}} {{ReadOnlyInline}}
-  - : Returns a string containing the origin of the URL, that is its scheme, its domain and its port.
+  - : Returns a string containing the origin of the URL — that is, its scheme, its domain and its port.
 - {{domxref("SVGAElement.pathname")}}
   - : A string containing an initial `/` followed by the path of the URL, not including the query string or fragment.
 - {{domxref("SVGAElement.password")}}
