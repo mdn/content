@@ -8,7 +8,7 @@ browser-compat: api.SVGAElement.password
 
 {{APIRef("SVG")}}
 
-The **`password`** property of the {{domxref("SVGAElement")}} returns a string containing the password specified before the domain name.
+The **`password`** property of the {{domxref("SVGAElement")}} interface returns a string containing the password specified before the domain name.
 
 This property can be set, to change the URL's password.
 
