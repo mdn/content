@@ -253,13 +253,13 @@ We set the `font-weight` descriptor range to `300 700`, clamping the variable fo
 
 ```css
 @font-face {
-  font-family: LeagueMono;
+  font-family: "LeagueMono";
   src: url("https://mdn.github.io/shared-assets/fonts/LeagueMono-VF.ttf");
   font-weight: 300 700;
 }
 
 p {
-  font-family: LeagueMono, serif;
+  font-family: "LeagueMono", serif;
   font-size: 1.5rem;
 }
 

@@ -117,12 +117,12 @@ Similarly, the cap-height to font size ratio in Verdana is `0.73` and that in Ti
 
 ```css
 .times {
-  font-family: Times, serif;
+  font-family: "Times", serif;
   font-size: 14px;
 }
 
 .verdana {
-  font-family: Verdana, sans-serif;
+  font-family: "Verdana", sans-serif;
   font-size: 14px;
 }
 
@@ -189,7 +189,7 @@ div {
 }
 
 p {
-  font-family: Futura, sans-serif;
+  font-family: "Futura", sans-serif;
   font-size: 50px;
 }
 

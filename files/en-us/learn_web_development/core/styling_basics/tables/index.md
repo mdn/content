@@ -155,7 +155,7 @@ td {
 
 /* typography */
 html {
-  font-family: "helvetica neue", helvetica, arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
 thead th,
@@ -246,7 +246,7 @@ This is a minor point, and not strictly relevant to styling tables, but we thoug
 
 ```css
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 ```
 
@@ -381,7 +381,7 @@ Your finished table design should look like so:
 
 ```css hidden live-sample___best-practice-style
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 table {

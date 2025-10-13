@@ -139,7 +139,7 @@ body {
   background-color: darkblue;
 }
 p {
-  font-family: Arial;
+  font-family: "Arial";
   font-size: 10pt;
   margin-left: 0.125in;
 }
