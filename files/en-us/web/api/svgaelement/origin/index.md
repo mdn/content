@@ -8,7 +8,7 @@ browser-compat: api.SVGAElement.origin
 
 {{APIRef("SVG")}}
 
-The **`origin`** readonly property of the {{domxref("SVGAElement")}} returns a string containing the origin of the URL, that is its scheme, its domain and its port.
+The **`origin`** readonly property of the {{domxref("SVGAElement")}} interface returns a string containing the origin of the URL — that is, its scheme, its domain and its port.
 
 ## Value
 
