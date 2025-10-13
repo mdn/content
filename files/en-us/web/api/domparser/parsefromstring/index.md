@@ -30,7 +30,7 @@ parseFromString(input, mimeType)
 
 - `input`
   - : A {{domxref("TrustedHTML")}} or string instance defining HTML to be parsed.
-    The markup must contain either an {{Glossary("HTML")}}, {{Glossary("xml")}}, {{Glossary("XHTML")}}, or {{Glossary("svg")}} document.
+    The markup must contain either an {{Glossary("HTML")}}, {{Glossary("XML")}}, {{Glossary("XHTML")}}, or {{Glossary("svg")}} document.
 - `mimeType`
   - : A string that specifies whether the XML parser or the HTML parser is used to parse the string.
 
