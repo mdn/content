@@ -10,7 +10,7 @@ browser-compat: api.CSSStyleDeclaration
 The **`CSSStyleDeclaration`** interface is the base class for objects that represent CSS declaration blocks with different supported sets of CSS style information:
 
 - {{domxref("CSSStyleProperties")}} — CSS styles declared in stylesheet ({{domxref("CSSStyleRule.style")}}), inline styles for an element such as {{DOMxRef("HTMLElement/style","HTMLElement")}}, {{domxref("SVGElement/style","SVGElement")}}, and {{domxref("MathMLElement/style","MathMLElement")}}, or the computed style for an element returned by {{DOMxRef("Window.getComputedStyle()")}}.
-- {{domxref("CSSPageDescriptors")}} — Styles for CSS at-rules.
+- {{domxref("CSSPageDescriptors")}} — Styles for CSS [at-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rule).
 
 The interface exposes style information and various style-related methods and properties.
 For example, it provides {{DOMxRef("CSSStyleDeclaration/getPropertyValue","getPropertyValue()" )}} for getting the value of a dash-named CSS property, such as `border-top`, which can't be directly accessed using dot notation because of the hyphens in its name.
