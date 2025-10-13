@@ -236,10 +236,10 @@ There are some general things you should do to prepare for _any_ interview:
 - Think about what you are going to wear when you attend your interviews. Most developer jobs don't require you to wear a suit (check the job ad to see if it has anything about a dress code), but you should choose something fairly neutral and smart-_ish_. Don't wear a T-shirt with an offensive slogan on it, and don't turn up in your pyjamas.
 - Do some [preparation for coding interviews](#coding_interviews).
 - Build a collection of anecdotes to use for [experience-based interview questions](#experience-based_questions).
-- Think about what your strengths and weaknesses are, and be realistic with your answers. You will seem more plausible if you don't present yourself as perfect in every way, and interviewers will commonly ask you about your biggest strength and weakness.
+- Think about what your strengths and weaknesses are, and be realistic with your answers. You will seem more plausible if you don't present yourself as perfect in every way when interviewers invariably ask you about your biggest strengths and weaknesses.
 - Do some research into what the typical salary ranges and other benefits (such as health insurance or bonuses) are for the kind of job you are going for (e.g. level, geographical region). This will be useful when [deciding whether to accept a job offer](#accepting_the_offer).
 
-There is also some preparation to do specific to each company you apply to:
+You should also do some preparation specific to each company you apply to:
 
 - As we mentioned earlier, you should do some research into the company's history, goals, and products.
   - Read about the company from a high level, and familiarize yourself with their recent news. One good reason to do this is to see if they have done anything that would raise red flags and make you reconsider working there.
@@ -251,7 +251,7 @@ There is also some preparation to do specific to each company you apply to:
 
 ### Initial screening
 
-Once the company have looked at your application and decided you sound like a "potential", they will probably start off by inviting you to an initial phone interview, just with the recruiter or hiring manager. This is usually a short interview to assess "culture fit" (i.e. if you're going to get on well with them), make sure they don't pick up any immediate red flags that suggest you won't be a good employee, and tell you about what to expect from the rest of the interview process.
+Once the company have looked at your application and decided you sound like a "potential", they will probably start off by inviting you to an initial phone interview, just with the recruiter or hiring manager. This is usually a short interview to assess "culture fit" (i.e. if you're going to get on well with them), make sure they don't pick up on any immediate red flags that suggest you won't be a good employee, and tell you about what to expect from the rest of the interview process.
 
 At this stage, you should be friendly and talkative. But don't talk too much; act naturally, and see where the interviewer steers the conversation. Make sure to let them know what days and times will be suitable for you to attend further interviews. Try to be as flexible as you can, and be prepared to move your schedule around to accommodate them.
 
