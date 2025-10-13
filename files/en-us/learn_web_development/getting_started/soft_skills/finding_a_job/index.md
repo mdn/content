@@ -90,7 +90,7 @@ Think about whether these statements describe you or not. This could be a useful
 
 ### Create a CV/résumé
 
-You should create a CV/résumé, which communicates your worth to an employer. There are lots of guides on the web on how to write one, but in brief, they should generally contain the following:
+You should create a CV/résumé, which communicates your worth to an employer. There are lots of guides on the web that will teach you how to write one, but in brief, they should generally contain the following:
 
 - Your contact details: Include your name, postal address, phone number, email, and any maybe one more contact method that is important to you and suitable for professional communication. A [LinkedIn profile](#create_a_linkedin_profile) is recommended.
 - A summary/personal statement, which describes you in a single sentence. This can be really hard to write — it needs to sound confident but not arrogant, positive but realistic. A good strategy here is to keep it really short and focus on some facts, what you believe in, and what kind of level you are at. For example, a good personal statement for a junior web developer might read some something like this: "Bob Smith is a web developer with 2 years' experience and a great passion for semantics, accessibility, and inclusive design".
