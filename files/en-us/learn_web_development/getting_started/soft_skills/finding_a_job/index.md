@@ -298,11 +298,11 @@ While this is a reasonable way to test candidates if done right, many people dis
 - They can be poorly scoped or expect an unreasonable time commitment. A specific scope that time-boxes the project to four hours and will handle follow-up questions in an separate interview is reasonable, but an expectation to spend an entire weekend on a project is not, especially for people who have families and busy lives.
 - Their effectiveness is often disputed, as they are hard to evaluate conclusively.
 
-If you are asked to do a homework challenge, make sure the scope and timing of the work are clearly defined, to mitigate the risk of going in the wrong direction and wasting your time.
+If you are asked to do a homework challenge, make sure the scope and timing of the work are clearly defined in order to mitigate the risk of going in the wrong direction and wasting your time.
 
 ### Accepting the offer
 
-If you make it through the interview process and get offered the job, then well done! It is tempting to immediately accept the offer, but there are a few things to bear in mind before you do:
+If you make it through the interview process and get offered the job, then well done! Though it may be tempting to immediately accept the offer, there are a few things to bear in mind before you do:
 
 - Make sure the salary you are being offered is reasonable compared to the typical market rate for similar jobs. If it is significantly less, you might want to negotiate.
 - Check that leaving your current job (or other activity) is compatible with starting the new job. For example, check how much notice your current employer wants you to work, and make sure this works for the new job.
