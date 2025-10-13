@@ -56,7 +56,7 @@ If a box has a display type of `inline`, then:
 - The box will not break onto a new line.
 - The {{cssxref("width")}}, {{cssxref("height")}}, and top and bottom margins will have no effect.
 - **Top and bottom** padding and borders will change the size of the box without affecting the position of surrounding content, which can cause overlapping.
-- **Left and right** padding, margins, and borders of the box will affect the position of surrounding inline boxes.
+- **Left and right** padding, margins, and borders will affect the position of surrounding inline content.
 
 Some HTML elements, such as `<a>`, `<span>`, `<em>` and `<strong>` use `inline` as their outer display type by default.
 
