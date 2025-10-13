@@ -67,7 +67,7 @@ If you are reading this site, you are probably interested in some kind of web de
   - In some kind of hybrid setup.
   - In the same location all the time, or move around between different areas or countries?
 
-If you are not sure of the answers to these questions, that's OK. Ask your peers, friends, teachers, or mentor what they are interested in, to get some inspiration, and look around the industry to see what's available. Realistically, many of you will probably start by seeing an interesting job ad or company, then working out how it fits in to the above categories and how to "sell yourself" to that company.
+If you are not sure of the answers to these questions, that's okay. Ask your peers, friends, teachers, or mentor what they are interested in, to get some inspiration, and look around the industry to see what's available. Realistically, many of you will probably start by seeing an interesting job ad or company, then working out how it fits in to the above categories and how to "sell yourself" to that company.
 
 ## Sell yourself
 
@@ -98,7 +98,7 @@ You should create a CV/résumé, which communicates your worth to an employer. T
   - A date range specifying when you worked there — for example 06/2023–10/2024, or 06/2023–present if you still work there.
   - Company and job title.
   - A short paragraph or bulleted list describing what you did in that job/internship/etc. Don't describe _everything_, just what you think are useful experiences for selling yourself.
-- An education summary, which lists the different qualifications you have, the school you did them at, and the grade you achieved. Include degrees and other higher education, certificates and achievements that are directly relevant to your field (for example, a web development certification or summer school), and perhaps also regular school qualifications that employers often look for (such as English, other languages, and Math).
+- An education summary, which lists the different qualifications you have, the school you attained them at, and the grade you achieved. Include degrees and other higher education, certificates and achievements that are directly relevant to your field (for example, a web development certification or summer school), and perhaps also regular school qualifications that employers often look for (such as English, other languages, and Math).
 - A section containing supporting information, such as:
   - Links to your [portfolio](#create_a_portfolio).
   - Descriptions of any other relevant experience that doesn't fit into the above sections.
@@ -183,7 +183,7 @@ The ["Decide what kind of job you want" criteria](#decide_what_kind_of_job_you_w
 
 Before you start applying for a job, there are some useful steps you can take to prepare:
 
-- Check the job description to make sure it is suitable for you to apply for. For example, you don't want to waste your time applying for a job that specifies working from an office in California full-time if you live in the UK and don't want to relocate. And you won't have the experience to do a senior web developer job if you have only been learning JavaScript for 3 months.
+- Check the job description to make sure it is suitable for you to apply for. For example, you don't want to waste your time applying for a job that entails working from an office in California full-time if you live in the UK and don't want to relocate. And you won't have the experience to do a senior web developer job if you have only been learning JavaScript for 3 months.
   > [!NOTE]
   > If you are not sure if you should apply for a job, or want to know if that company has any more suitable jobs available, find the recruiter's contact details and ask them. They may be a useful contact in the future, if not now.
 - Try to find some contacts that already work at the company, for example in your community network, or on LinkedIn, and start a conversation with them. Ask them what it is like working for the company, if there is anything specific you need to do the job, and if they have any other jobs coming up in the near future that might be more suitable. Avoid contacting too many people that work at the same company, but instead choose one or two people you think are the closest to the role you're applying for.
@@ -203,7 +203,7 @@ Above all:
 
 Not all job applications require the same things; you'll probably have to:
 
-- Fill out some details on an online form. Make sure you type out your answers locally (for example, in VSCode) or in an online document (for example, a Google Docs file) before entering them into the form fields, in case something (for example, a browser crash) causes you to lose your work. This can save hours of frustration, and text is also easier to review and get feedback on if you put it somewhere else first.
+- Fill out some details on an online form. Make sure you type out your answers locally (for example, in VSCode) or in an online document (for example, a Google Docs file) before entering them into the form fields, in case something (for example, a browser crash) causes you to lose your work. This can save you hours of frustration, and text is also easier to review and get feedback on if you put it somewhere else first.
 - Upload your CV/résumé.
 - Write and upload a covering letter. There are many guides to writing effective covering letters elsewhere online, but in general, such a letter should provide a description of why you:
   - Want to work for the company.
@@ -217,7 +217,7 @@ A key point is that your job search should be a constant process where you do a 
 
 You should follow up with any promising leads you meet, for example on community networks or LinkedIn. Also, keep an inventory of the people you meet and the companies you apply to, along with contact details and descriptions of each. Periodically follow up with companies you'd like to work for to see what jobs they have available. If you get rejected for one job, they might have something else more suitable for you, either now or in the future.
 
-If you haven't had a response from a company after applying for one of their jobs, wait a little while and then followup with their recruiter to see if they have any feedback for you, or any other jobs coming up. Even if a company you want to work for doesn't have any suitable full-time jobs advertised at the moment, contact them any way and see if they are looking for someone with your skill set. It might lead to some useful experience, such as a freelance contract.
+If you haven't gotten a response from a company after applying for one of their jobs, wait a little while and then follow-up with their recruiter to see if they have any feedback for you, or any other jobs coming up. Even if a company you want to work for doesn't have any suitable full-time jobs advertised at the moment, contact them any way and see if they are looking for someone with your skill set. It might lead to some useful experience, such as a freelance contract.
 
 Keep looking for more jobs via your chosen job sites or community networks, and chat to people about what is available. New opportunities will come up all the time.
 
@@ -232,8 +232,8 @@ If the recruiter and hiring manager like your application, they will invite you 
 
 There are some general things you should do to prepare for _any_ interview:
 
-- Make sure you have a tidy, quiet place for conducting the interviews in. You want to make sure that you are not distracted by noise and commotion during the interview, and you want to make sure that your surroundings look tidy during the interview. If you are having a video call with the interviewer(s) and your space is a complete mess, it won't give them a good impression.
-- Think about what you are going to wear when you do your interviews. Most developer jobs don't require you to wear a suit (check the job ad to see if it has anything about a dress code), but you should choose something fairly neutral and smart-_ish_. Don't wear a t-shirt with an offensive slogan on it, and don't turn up in your pyjamas.
+- Make sure you have a tidy, quiet place for conducting the interview in. You want to make sure that you are not distracted by noise and commotion during the interview, and you want to make sure that your surroundings look tidy during the interview. If you are having a video call with the interviewer(s) and your space is a complete mess, it won't give them a good impression.
+- Think about what you are going to wear when you attend your interviews. Most developer jobs don't require you to wear a suit (check the job ad to see if it has anything about a dress code), but you should choose something fairly neutral and smart-_ish_. Don't wear a T-shirt with an offensive slogan on it, and don't turn up in your pyjamas.
 - Do some [preparation for coding interviews](#coding_interviews).
 - Build a collection of anecdotes to use for [experience-based interview questions](#experience-based_questions).
 - Think about what your strengths and weaknesses are, and be realistic with your answers. You will seem more plausible if you don't present yourself as perfect in every way, and interviewers will commonly ask you about your biggest strength and weakness.
@@ -246,7 +246,7 @@ There is also some preparation to do specific to each company you apply to:
   - Find out about the company's market position and what _their_ strengths and weaknesses are.
   - Research who their main competitors are.
   - Become familiar with their products and how they work — for example, install their software and use it to build a demo app, or write a website that uses their APIs to do something. It will impress your interviewers if you can demonstrate some good insights around their situation and how you think it could be improved. Interviewers will often ask some specific questions to test your knowledge of the company and industry it exists in.
-- Related to the above point, think of some questions you would ask the interviewers about the company and their roles. Interviewers always ask if you have any questions for them at the end of the interview, and it reflects well on you and makes you sound thoughtful and inquisitive if you come out with some questions more meaningful than "what did you have for breakfast today?"
+- Related to the above point, think of some questions you would ask the interviewers about the company and their roles. Interviewers always ask if you have any questions for them at the end of the interview, and it reflects well on you and makes you sound thoughtful and inquisitive if you come out with questions more meaningful than "what did you have for breakfast today?"
 - If you have contacts at the company (e.g. from your community networks), reach out to them and ask about the job. What do they think about it, is there anything specific you should focus on, say, or not say? It might also help, during the interview, to mention that you know "Bob from the e-commerce team" (or whatever).
 
 ### Initial screening
@@ -306,7 +306,7 @@ If you make it through the interview process and get offered the job, then well 
 
 - Make sure the salary you are being offered is reasonable compared to the typical market rate for similar jobs. If it is significantly less, you might want to negotiate.
 - Check that leaving your current job (or other activity) is compatible with starting the new job. For example, check how much notice your current employer wants you to work, and make sure this works for the new job.
-- You should also let the employer know about preexisting commitments you have outside work, such as a booked vacation. Respectable employers will work around such commitments, and agree a start date that suits you.
+- You should also let the employer know about preexisting commitments you have outside work, such as a booked vacation. Respectable employers will work around such commitments and agree upon a start date that suits you.
 - If you need to move house/relocate to take the new job, make sure that you've got everything in place for the move to work out. Starting a new job is stressful enough without the added stress of house moving difficulties.
 
 ## Try, try, and try again
