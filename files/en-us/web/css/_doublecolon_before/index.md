@@ -252,7 +252,7 @@ In this demo, we generate extra [list items](/en-US/docs/Web/HTML/Reference/Elem
 ```css
 ul {
   font-size: 1.5rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 ul::before,

@@ -41,7 +41,7 @@ line-height: 32px;
 
 ```css interactive-example
 #example-element {
-  font-family: Georgia, sans-serif;
+  font-family: "Georgia", serif;
   max-width: 200px;
 }
 ```

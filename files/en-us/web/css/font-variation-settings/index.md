@@ -38,13 +38,13 @@ font-variation-settings: "wdth" 75;
 ```css interactive-example
 @font-face {
   src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.ttf");
-  font-family: Amstelvar;
+  font-family: "Amstelvar";
   font-style: normal;
 }
 
 p {
   font-size: 1.5rem;
-  font-family: Amstelvar, serif;
+  font-family: "Amstelvar", serif;
 }
 ```
 

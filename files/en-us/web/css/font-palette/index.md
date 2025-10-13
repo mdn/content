@@ -79,12 +79,12 @@ In the CSS, we import a [color font](https://www.colorfonts.wtf/) called [Nabla]
 @import "https://fonts.googleapis.com/css2?family=Nabla&display=swap";
 
 @font-palette-values --blue-nabla {
-  font-family: Nabla;
+  font-family: "Nabla";
   base-palette: 2; /* this is Nabla's blue palette */
 }
 
 @font-palette-values --grey-nabla {
-  font-family: Nabla;
+  font-family: "Nabla";
   base-palette: 3; /* this is Nabla's grey palette */
 }
 
