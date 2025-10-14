@@ -21,7 +21,7 @@ Common cases where opaque origins are used include:
 
 - A document within an iframe that has the [sandbox](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/sandbox) attribute set, and does not include the `allow-same-origin` flag.
 - `file:` URLs are usually treated as opaque origins so that files on they file system cannot read each other.
-- Documents created programatically using APIs like https://developer.mozilla.org/en-US/docs/Web/API/ {{domxref("DOMImplementation.createDocument()")}}.
+- Documents created programatically using APIs like https://developer.mozilla.org/en-US/docs/Web/API {{domxref("DOMImplementation.createDocument()")}}.
 
 ## Examples
 
