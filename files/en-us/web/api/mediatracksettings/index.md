@@ -37,7 +37,7 @@ Some or all of the following will be included in the object, either because it's
 - {{domxref("MediaTrackSettings.noiseSuppression", "noiseSuppression")}}
   - : A Boolean which indicates the current value of the {{domxref("MediaTrackConstraints.noiseSuppression", "noiseSuppression")}} property, which is `true` if noise suppression is enabled and is `false` otherwise.
 - {{domxref("MediaTrackSettings.restrictOwnAudio", "restrictOwnAudio")}}
-  - : A Boolean which indicates the current value of the {{domxref("MediaTrackConstraints.restrictOwnAudio", "restrictOwnAudio")}} property, which is `true` if the browser will attempt to filter out system audio originating from the capturing tab from screen capture and `false` otherwise.
+  - : A Boolean indicating the current value of the {{domxref("MediaTrackConstraints.restrictOwnAudio", "restrictOwnAudio")}} property: `true` if the browser will attempt to filter out system audio originating from the capturing tab during screen capture, and `false` otherwise.
 - {{domxref("MediaTrackSettings.sampleRate", "sampleRate")}}
   - : A long integer value indicating the current value of the {{domxref("MediaTrackConstraints.sampleRate", "sampleRate")}} property, specifying the sample rate in samples per second of the audio data. Standard CD-quality audio, for example, has a sample rate of 41,000 samples per second.
 - {{domxref("MediaTrackSettings.sampleSize", "sampleSize")}}
