@@ -48,7 +48,7 @@ This element implements the {{domxref("SVGFEMorphologyElement")}} interface.
 
 ```css
 text {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   font-size: 3em;
 }
 
@@ -87,7 +87,7 @@ text {
 ```css
 p {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   font-size: 3em;
 }
 

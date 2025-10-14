@@ -116,27 +116,17 @@ The {{cssxref('appearance')}} property can be used to display an element using p
 
 You can use JavaScript to detect whether a particular input type is supported. This is based on the fact we mentioned before — that every input type falls back to `<input type="text">` in non-supporting browsers.
 
-1. Define a test function. The first line of the function body should create a test `<input>` element:
+Define a test function. The first line of the function body should create a test `<input>` element. Next, set its `type` attribute to the type you want to test. Finally, test the `type` attribute value. In browsers that don't support that input type, the last line will have no effect and the `type` will be returned as `text`. In the below line we are inverting the return value using the negation operator (`!`) because if the `type` isn't `text`, then the type is supported, so we want to return `true`. The complete function looks like this:
 
-   ```js
-   function testDatetimeLocalSupport() {
-     const testInput = document.createElement("input");
-   ```
+```js
+function testDatetimeLocalSupport() {
+  const testInput = document.createElement("input");
+  testInput.setAttribute("type", "datetime-local");
+  return testInput.type !== "text";
+}
+```
 
-2. Next, set its `type` attribute to the type you want to test:
-
-   ```js-nolint
-     testInput.setAttribute("type", "datetime-local");
-   ```
-
-3. Now test the `type` attribute value. In browsers that don't support that input type, the last line will have no effect and the `type` will be returned as `text`. In the below line we are inverting the return value using the negation operator (`!`) because if the `type` isn't `text`, then the type is supported, so we want to return `true`:
-
-   ```js
-     return testInput.type !== "text";
-   }
-   ```
-
-The above example shows the basic idea behind such tests. Instead of reinventing the wheel, however, you should use a feature detection library such as [Modernizr](https://modernizr.com/) to handle such tests.
+The above example shows the basic idea behind such tests. Instead of reinventing the wheel, however, you should use a feature detection library to handle such tests.
 
 Based on the results of that test, you could then for example choose to use JavaScript to build a custom replacement for the non-supported type, or not apply a stylesheet that styles the non-supported type because you want to provide simple default styles to legacy browsers.
 

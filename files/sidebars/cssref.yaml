@@ -51,13 +51,13 @@ sidebar:
     path: /Web/CSS
     tags: css-function
     depth: 2
-    link: /Web/CSS/CSS_Values_and_Units/CSS_Value_Functions
+    link: /Web/CSS/CSS_values_and_units/CSS_value_functions
     title: Functions
     details: closed
   - type: listSubPages
     path: /Web/CSS
     tags: css-type
-    link: /Web/CSS/CSS_Values_and_Units/CSS_data_types
+    link: /Web/CSS/CSS_values_and_units/CSS_data_types
     title: Types
     details: closed
   - type: section
@@ -280,10 +280,10 @@ sidebar:
   - title: Values and units
     details: closed
     children:
-      - /Web/CSS/CSS_Values_and_Units/Value_definition_syntax
-      - /Web/CSS/CSS_Values_and_Units/Numeric_data_types
-      - /Web/CSS/CSS_Values_and_Units/Textual_data_types
-      - /Web/CSS/CSS_Values_and_Units/Using_CSS_math_functions
+      - /Web/CSS/CSS_values_and_units/Value_definition_syntax
+      - /Web/CSS/CSS_values_and_units/Numeric_data_types
+      - /Web/CSS/CSS_values_and_units/Textual_data_types
+      - /Web/CSS/CSS_values_and_units/Using_CSS_math_functions
   - type: section
     link: /Web/CSS/Layout_cookbook
   - children:

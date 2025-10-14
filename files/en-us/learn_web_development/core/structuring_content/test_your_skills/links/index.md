@@ -46,9 +46,9 @@ body {
   background-color: white;
   color: #333333;
   font:
-    1em / 1.4 Helvetica Neue,
-    Helvetica,
-    Arial,
+    1em / 1.4 "Helvetica Neue",
+    "Helvetica",
+    "Arial",
     sans-serif;
   padding: 1em;
   margin: 0;
@@ -126,9 +126,9 @@ body {
   background-color: white;
   color: #333333;
   font:
-    1em / 1.4 Helvetica Neue,
-    Helvetica,
-    Arial,
+    1em / 1.4 "Helvetica Neue",
+    "Helvetica",
+    "Arial",
     sans-serif;
   padding: 1em;
   margin: 0;
@@ -213,9 +213,9 @@ body {
   background-color: white;
   color: #333333;
   font:
-    1em / 1.4 Helvetica Neue,
-    Helvetica,
-    Arial,
+    1em / 1.4 "Helvetica Neue",
+    "Helvetica",
+    "Arial",
     sans-serif;
   padding: 1em;
   margin: 0;

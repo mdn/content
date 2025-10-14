@@ -65,7 +65,7 @@ We give the box some basic styles, which we've hidden for brevity. We also apply
 
 ```css hidden live-sample___basic-usage
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   width: 240px;
   margin: 20px auto;
 }

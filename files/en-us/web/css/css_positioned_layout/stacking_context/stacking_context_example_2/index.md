@@ -60,7 +60,7 @@ To better understand the situation, this is the stacking context hierarchy:
 
 ```css
 div {
-  font: 12px Arial;
+  font: 12px "Arial";
 }
 
 span.bold {

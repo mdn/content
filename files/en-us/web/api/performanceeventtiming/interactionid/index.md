@@ -8,7 +8,7 @@ browser-compat: api.PerformanceEventTiming.interactionId
 
 {{APIRef("Performance API")}}
 
-The read-only **`interactionId`** property or the {{domxref("PerformanceEventTiming")}} interface returns an ID that uniquely identifies a user interaction which triggered a series of associated events.
+The read-only **`interactionId`** property of the {{domxref("PerformanceEventTiming")}} interface returns an ID that uniquely identifies a user interaction which triggered a series of associated events.
 
 ## Value
 

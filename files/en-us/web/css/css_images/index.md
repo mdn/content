@@ -68,4 +68,4 @@ The CSS images module also defines the {{CSSxRef("image/image", "image()")}} fun
 - [CSS filter effects](/en-US/docs/Web/CSS/CSS_filter_effects) module
 - [CSS compositing and blending](/en-US/docs/Web/CSS/CSS_compositing_and_blending) module
 - [CSS colors](/en-US/docs/Web/CSS/CSS_colors) module
-- [CSS values and units](/en-US/docs/Web/CSS/CSS_Values_and_Units) module
+- [CSS values and units](/en-US/docs/Web/CSS/CSS_values_and_units) module

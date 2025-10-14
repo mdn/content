@@ -308,7 +308,7 @@ If you followed all the instructions in this article, you should have a page tha
 
 ![A Mozilla logo, centered, and a header and paragraphs. It now looks nicely styled, with a blue background for the whole page and orange background for the centered main content strip.](website-screenshot-final.png)
 
-You can [view our version here](https://mdn.github.io/beginner-html-site-styled/). If you get stuck, you can always compare your work with our [finished example code on GitHub](https://github.com/mdn/beginner-html-site-styled/blob/gh-pages/styles/style.css).
+You can [view our version here](https://mdn.github.io/beginner-html-site-styled/). If you get stuck, you can always compare your work with our [finished example code on GitHub](https://github.com/mdn/beginner-html-site-styled/blob/main/styles/style.css).
 
 In this article, we've only scratched the surface of CSS. You'll learn a lot more in our [CSS styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics) Core module later in the course.
 
