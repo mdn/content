@@ -150,7 +150,7 @@ console.log(doc2.contentType); // "image/svg+xml"
 
 const htmlString = "<strong>Beware of the leopard</strong>";
 const doc3 = parser.parseFromString(htmlString, "text/html");
-console.log(doc\32.contentType); // "text/html"
+console.log(doc3.contentType); // "text/html"
 
 console.log(doc1.documentElement.textContent);
 // "Beware of the tiger"

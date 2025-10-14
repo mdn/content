@@ -26,7 +26,7 @@ A {{domxref("CSSStyleProperties")}}.
 ### Getting the styles for a style rule
 
 The CSS below defines the style rule for the `h1` selector, which is represented in code by a {{domxref("CSSStyleRule")}} instance.
-The declaration block is that part of the style rule that appears within the braces and that actually provides the style definitions (for the selector, the part that comes before the braces), which is represented in code by the {{domxref("CSSStyleRule.style")}} property.
+The declaration block is that part of the style rule that appears within the braces and that actually provides the style definitions (for the selector, the part that comes before the braces), which is represented in code by the `style` property.
 
 ```css
 h1 {

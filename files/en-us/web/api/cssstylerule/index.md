@@ -30,7 +30,7 @@ _Inherits methods from its ancestors {{domxref("CSSGroupingRule")}} and {{domxre
 
 ### Getting a style rule
 
-The CSS below defines the style rule for the `h1` selector, which is represented in code by a {{domxref("CSSStyleRule")}} instance.
+The CSS below defines the style rule for the `h1` selector, which is represented in code by a `CSSStyleRule` instance.
 
 ```css
 h1 {

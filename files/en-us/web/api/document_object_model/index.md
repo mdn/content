@@ -34,7 +34,7 @@ alert(paragraphs[0].nodeName);
 All of the properties, methods, and events available for manipulating and creating web pages are organized into objects. For example, the `document` object that represents the document itself, any `table` objects that implement the {{domxref("HTMLTableElement")}} DOM interface for accessing HTML tables, and so forth, are all objects.
 
 The DOM is built using multiple APIs that work together.
-The core [DOM](/en-US/docs/Web/API/Document_Object_Model) defines the entities
+The core DOM defines the entities
 describing any document and the objects within it.
 This is expanded upon as needed by other APIs that add new features and capabilities to the DOM.
 For example, the [HTML DOM API](/en-US/docs/Web/API/HTML_DOM_API) adds support for representing HTML documents to the core DOM,
