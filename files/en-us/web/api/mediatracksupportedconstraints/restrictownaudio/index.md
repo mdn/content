@@ -14,7 +14,7 @@ You can access the supported constraints dictionary by calling {{domxref("MediaD
 
 ## Value
 
-This property is present in the dictionary (and its value is always `true`) if the user agent supports the `restrictOwnAudio` constraint. If the property isn't present, this property is missing from the supported constraints dictionary, and you'll get {{jsxref("undefined")}} if you try to look at its value.
+This property is present in the dictionary (and its value is always `true`) if the user agent supports the `restrictOwnAudio` constraint. If the property isn't present, this property is missing from the supported constraints dictionary, and you'll get {{jsxref("undefined")}} if you try to access its value.
 
 ## Examples
 
