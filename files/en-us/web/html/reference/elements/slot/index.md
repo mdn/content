@@ -21,7 +21,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 <template id="element-details-template">
   <style>
     details {
-      font-family: "Open Sans Light", Helvetica, Arial, sans-serif;
+      font-family: "Open Sans Light", "Helvetica", "Arial", sans-serif;
     }
     .name {
       font-weight: bold;

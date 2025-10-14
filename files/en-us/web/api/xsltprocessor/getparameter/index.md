@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.XSLTProcessor.getParameter
 ---
 
-{{APIRef("XSLT")}}
+{{APIRef("DOM")}}
 
 The `getParameter()` method of the {{domxref("XSLTProcessor")}} interface returns the value of a parameter (`<xsl:param>`) from the stylesheet imported in the processor.
 

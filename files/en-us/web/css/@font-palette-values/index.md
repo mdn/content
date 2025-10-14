@@ -12,7 +12,7 @@ The **`@font-palette-values`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/
 
 ```css
 @font-palette-values --identifier {
-  font-family: Bixa;
+  font-family: "Bixa";
 }
 .my-class {
   font-palette: --identifier;

@@ -342,8 +342,8 @@ html {
 
 body {
   font:
-    1.2em Helvetica,
-    Arial,
+    1.2em "Helvetica",
+    "Arial",
     sans-serif;
   margin: 20px;
   padding: 0;

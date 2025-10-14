@@ -93,7 +93,9 @@ If an error occurs while trying to load or render the image, and an `onerror` ev
 - The specified image's metadata is corrupted in such a way that it's impossible to retrieve its dimensions, and no dimensions were specified in the `<img>` element's attributes.
 - The specified image is in a format not supported by the {{Glossary("user agent")}}.
 
-## Example
+## Examples
+
+### Creating and inserting an image element
 
 ```js
 const img1 = new Image(); // Image constructor
@@ -109,6 +111,58 @@ document.body.appendChild(img2);
 // using first image in the document
 alert(document.images[0].src);
 ```
+
+### Getting width and height
+
+The following example shows the use of the `height` and `width` properties alongside images of varying dimensions:
+
+```html
+<p>
+  Image 1: no height, width, or style
+  <img id="image1" src="https://www.mozilla.org/images/mozilla-banner.gif" />
+</p>
+
+<p>
+  Image 2: height="50", width="500", but no style
+  <img
+    id="image2"
+    src="https://www.mozilla.org/images/mozilla-banner.gif"
+    height="50"
+    width="500" />
+</p>
+
+<p>
+  Image 3: no height, width, but style="height: 50px; width: 500px;"
+  <img
+    id="image3"
+    src="https://www.mozilla.org/images/mozilla-banner.gif"
+    style="height: 50px; width: 500px;" />
+</p>
+
+<div id="output"></div>
+```
+
+```js
+const arrImages = [
+  document.getElementById("image1"),
+  document.getElementById("image2"),
+  document.getElementById("image3"),
+];
+
+const objOutput = document.getElementById("output");
+let strHtml = "<ul>";
+
+for (let i = 0; i < arrImages.length; i++) {
+  const img = arrImages[i];
+  strHtml += `<li>image${i + 1}: height=${img.height}, width=${img.width}, style.height=${img.style.height}, style.width=${img.style.width}</li>`;
+}
+
+strHtml += "</ul>";
+
+objOutput.innerHTML = strHtml;
+```
+
+{{EmbedLiveSample("getting width and height", "", "300")}}
 
 ## Specifications
 
