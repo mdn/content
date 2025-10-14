@@ -75,7 +75,7 @@ font-variant-numeric: stacked-fractions;
   font-family: "Source Sans Pro";
   src:
     local("SourceSansPro-Regular"),
-    url("/shared-assets/fonts/SourceSansPro-Regular.otf") format("otf");
+    url("/shared-assets/fonts/SourceSansPro-Regular.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
