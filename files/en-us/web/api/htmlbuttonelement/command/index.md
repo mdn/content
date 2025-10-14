@@ -39,7 +39,8 @@ toggleBtn.command = "show-popover";
 
 ### Using custom values for commands
 
-In this example three buttons have been created with [`commands` with custom values](/en-US/docs/Web/HTML/Reference/Elements/button#custom_values).
+In this example, three buttons have been created using [custom values](/en-US/docs/Web/HTML/Reference/Elements/button#custom_values) for `command`.
+Each button targets the same image using the `commandfor` attribute.
 
 ```html
 <div class="controls">
