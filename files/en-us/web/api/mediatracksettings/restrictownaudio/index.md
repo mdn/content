@@ -25,7 +25,9 @@ If the value is `true`, the user agent will attempt to remove audio originating 
 
 ## Examples
 
-The below function sets up a constraints object specifying the options for a call to {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}. It adds the `restrictOwnAudio` constraint (requesting that system audio originating from the capturing tab is filtered out of the screen capture) only if it is known to be supported by the browser. Capture is then started by calling `getDisplayMedia()` and attaching the returned stream to the {{htmlelement("video")}} element referenced by the variable `videoElem`.
+The following function sets up a constraints object that specifies the options for a call to {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}.
+It adds the `restrictOwnAudio` constraint (requesting that system audio originating from the capturing tab be filtered out of the screen capture) only if it is known to be supported by the browser.
+Capture then starts by calling `getDisplayMedia()` and attaching the returned stream to the {{htmlelement("video")}} element referenced by the variable `videoElem`.
 
 ```js
 async function capture() {
