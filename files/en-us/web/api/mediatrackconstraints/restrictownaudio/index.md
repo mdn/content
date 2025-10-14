@@ -10,7 +10,7 @@ browser-compat: api.MediaStreamTrack.applyConstraints.restrictOwnAudio_constrain
 
 {{APIRef("Media Capture and Streams")}}{{SeeCompatTable}}
 
-The {{domxref("MediaTrackConstraints")}} dictionary's **`restrictOwnAudio`** property is a [`ConstrainBoolean`](/en-US/docs/Web/API/MediaTrackConstraints#constrainboolean) describing the requested or mandatory constraints placed upon the value of the {{domxref("MediaTrackSettings.restrictOwnAudio","restrictOwnAudio")}} constrainable property.
+The {{domxref("MediaTrackConstraints")}} dictionary's **`restrictOwnAudio`** property is a [`ConstrainBoolean`](/en-US/docs/Web/API/MediaTrackConstraints#constrainboolean) that specifies the requested or mandatory constraints placed on the value of the {{domxref("MediaTrackSettings.restrictOwnAudio","restrictOwnAudio")}} constrainable property.
 
 This property controls whether system audio originating from the capturing tab is filtered out of screen capture, allowing for cleaner screen recordings in some cases. For example, if the capturing web page itself is playing embedded audio or video, the resulting audio would be included in the capture. This could lead to an undesirable echo or interfere with the intended audio sources from other tabs or applications, so removing it from the capture is desirable.
 
