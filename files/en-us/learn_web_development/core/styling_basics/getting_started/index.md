@@ -583,8 +583,8 @@ In the example below, each declaration (and rule start/end) has its own line. Th
 ```css
 body {
   font:
-    1em/150% Helvetica,
-    Arial,
+    1em/150% "Helvetica",
+    "Arial",
     sans-serif;
   padding: 1em;
   margin: 0 auto;
