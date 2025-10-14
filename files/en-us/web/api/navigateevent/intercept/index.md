@@ -25,9 +25,9 @@ intercept(options)
 - `options` {{optional_inline}}
   - : An options object containing the following properties:
     - `handler` {{optional_inline}}
-      - : A callback function that defines what the navigation handling behavior should be; it returns a promise. This function will run after the {{domxref("Navigation.navigate_event", "navigate")}} event has fired and the {{domxref("Navigation.currentEntry", "currentEntry")}} property has been updated.
+      - : A callback function that defines what the navigation handling behavior should be; it returns a promise. This function will run after the {{domxref("Navigation.currentEntry", "currentEntry")}} property has been updated.
     - `precommitHandler` {{optional_inline}}
-      - : A callback function that defines any behavior that should occur just before the navigation has finished; it accepts a controller object as an argument and returns a promise. This function will run after the {{domxref("Navigation.navigate_event", "navigate")}} event has fired but before the {{domxref("Navigation.currentEntry", "currentEntry")}} property has been updated.
+      - : A callback function that defines any behavior that should occur just before the navigation has finished; it accepts a controller object as an argument and returns a promise. This function will run before the {{domxref("Navigation.currentEntry", "currentEntry")}} property has been updated.
     - `focusReset` {{optional_inline}}
       - : Defines the navigation's focus behavior. This may take one of the following values:
         - `after-transition`
@@ -53,15 +53,19 @@ None (`undefined`).
   - : Thrown if:
     - The event was dispatched by a {{domxref("EventTarget.dispatchEvent", "dispatchEvent()")}} call, rather than the user agent.
     - The navigation cannot be intercepted ({{domxref("NavigateEvent.canIntercept")}} is `false`).
-    - A `precommitHandler()` callback was called on a non-cancelable event ({{domxref("Event.cancelable")}} is `false`).
+    - A `precommitHandler()` callback was provided on a non-cancelable event ({{domxref("Event.cancelable")}} is `false`).
 
 ## Description
 
-The `intercept()` method is used to implement custom navigation behavior when a link is clicked in an application. It does this via a couple of different callbacks.
+The `intercept()` method is used to implement custom SPA navigation behavior when a navigation occurs, for example when a link is clicked, a form is submitted, or a programmatic navigation is initiated (using {{domxref("History.pushState()")}}, {{domxref("Window.location")}}, etc.).
+
+It does this via a couple of different callbacks, `handler()` and `precommitHandler()`.
 
 ### Handling immediate navigations with `handler()`
 
-The `handler()` callback is generally used to handle resource fetching and updating the UI to show the content for the new page, which will typically look like this, at a basic level:
+The `handler()` callback is run in response to a committed navigation. It will run after the {{domxref("Navigation.currentEntry", "currentEntry")}} property has been updated, meaning that a new URL is shown in the browser UI and the history is updated with a new entry.
+
+A typical example looks like this, enabling specific content to be rendered and loaded in response to a certain navigation:
 
 ```js
 navigation.addEventListener("navigate", (event) => {
@@ -81,13 +85,13 @@ navigation.addEventListener("navigate", (event) => {
 });
 ```
 
-`handler()` will run after the {{domxref("Navigation.navigate_event", "navigate")}} event has fired and the {{domxref("Navigation.currentEntry", "currentEntry")}} property has been updated, meaning that it should be used to implemnent navigation behavior where the navigation is committed to. The new URL is shown in the browser, and history is updated, and the user should be shown something new.
+`handler()` should be used to implement navigation behavior where the navigation is committed to: the user should be shown something new.
 
 ### Handling precommit actions with `precommitHandler()`
 
-However, depending on the URL, you might not always want to commit the navigation immediately. For example, if the user navigates to a restricted page and the user is not signed in, you may want to redirect the browser to a sign-in page. This kind of scenario can be dealt with using the `precommitHandler()` callback, which will run after the {{domxref("Navigation.navigate_event", "navigate")}} event has fired but before the {{domxref("Navigation.currentEntry", "currentEntry")}} property has been updated.
+However, you might also wish to modify or cancel in-flight navigation, or to perform work while the navigation is ongoing and before it is committed. This kind of scenario can be dealt with using the `precommitHandler()` callback, which runs before the {{domxref("Navigation.currentEntry", "currentEntry")}} property has been updated and the browser UI shows the new location.
 
-For example:
+For example, if the user navigates to a restricted page and is not signed in, you may want to redirect the browser to a sign-in page. This might be handled like so:
 
 ```js
 navigation.addEventListener("navigate", (event) => {
@@ -111,7 +115,7 @@ This pattern is simpler than the alternative of canceling the original navigatio
 The `precommitHandler()` callback takes a `controller` object as an argument, which contains a `redirect()` method. The `redirect()` method takes two parameters — a string representing the URL to redirect to, and an options object containing two parameters:
 
 - `state` {{optional_inline}}
-  - : Contains any state information you want to pass along with the navigation, for example for logging or tracking purposes.
+  - : Contains any state information you want to pass along with the navigation, for example, for logging or tracking purposes. The state for the navigation can subsequently be retrieved via {{domxref("NavigationHistoryEntry.getState()")}}.
 - `history` {{optional_inline}}
   - : An enumerated value that specifies how this redirect should be added to the navigation history. It can take one of the following values:
     - `auto`
@@ -121,7 +125,7 @@ The `precommitHandler()` callback takes a `controller` object as an argument, wh
     - `replace`
       - : Replaces the {{domxref("Navigation.currentEntry")}} with the `NavigationHistoryEntry`.
 
-`precommitHandler()` generally handles any modifications to the navigation behavior that are required before the navigation actually occurs as a result of the destination URL, cancelling or redirecting it somewhere else as required. Because `precommitHandler()` can be used to cancel navigations, they can only be run when the event's {{domxref("Event.cancelable")}} property is `true`. Calling `intercept()` with a `precommitHandler()` on a non-cancelable event results in a `SecurityError` being thrown.
+`precommitHandler()` generally handles any modifications to the navigation behavior that are required before the destination URL is actually displayed in the browser, cancelling or redirecting it somewhere else as required. Because `precommitHandler()` can be used to cancel navigations, they can only be run when the event's {{domxref("Event.cancelable")}} property is `true`. Calling `intercept()` with a `precommitHandler()` on a non-cancelable event results in a `SecurityError` being thrown.
 
 ### Responding to navigation success or failure
 
@@ -133,9 +137,16 @@ There is also a `finished` property on the return value of navigation methods (s
 
 Both `precommitHandler()` and `handler()` callbacks can be included inside the same `intercept()` call.
 
-- When the `precommitHandler()` promise fulfills, the browser moves on to run any `handler()` callback present. If `precommitHandler()` rejects, `navigateerror` fires, the `committed` and `finished` promises reject, and the navigation is cancelled.
-- Once the `precommitHandler()` promise fulfills and the navigation is committed, and a new {{domxref("NavigationHistoryEntry")}} is created for the navigation, its `committed` promise fulfills.
-- When the `handler()` promise fulfills and the `navigatesuccess` event fires, the navigation `finished` promise fulfills as well, to indicate the navigation is finished. If `handler()` rejects, `navigateerror` fires, the `finished` promise rejects, and the navigation is cancelled.
+1. First, the `precommitHandler()` handler runs.
+   - When the `precommitHandler()` promise fulfills, the navigation commits.
+   - If the `precommitHandler()` rejects, `navigateerror` fires, the `committed` and `finished` promises reject, and the navigation is cancelled.
+
+2. When the navigation commits, a new {{domxref("NavigationHistoryEntry")}} is created for the navigation, and its `committed` promise fulfills.
+3. Next, the `handler()` promise runs.
+   - When the `handler()` promise fulfills and the `navigatesuccess` event fires, the navigation `finished` promise fulfills as well, to indicate the navigation is finished.
+   - If `handler()` rejects, `navigateerror` fires, the `finished` promise rejects, and the navigation is cancelled.
+
+Note that the above process is upheld even across multiple `intercept()` called on the same `NavigateEvent`. All `precommitHandler()` callbacks are called first, and when all of them resolve, the navigation commits and all the `handler()` callbacks are called.
 
 ### Controlling focus behavior
 
