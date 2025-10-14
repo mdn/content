@@ -49,7 +49,7 @@ window.outerHeight; /* 900 */
 
 There are several DOM properties that can help you query viewport size, and other similar lengths:
 
-- The document element's {{DOMxRef("Element.clientWidth")}} is the inner width of a document in [CSS pixels](/en-US/docs/Web/HTML/Guides/Viewport_meta_element#screen_density), including padding (but not borders, margins, or vertical scrollbars, if present). **This is the viewport width**.
+- The document element's {{DOMxRef("Element.clientWidth")}} is the inner width of a document in [CSS pixels](/en-US/docs/Web/HTML/Reference/Elements/meta/name/viewport#screen_density), including padding (but not borders, margins, or vertical scrollbars, if present). **This is the viewport width**.
 - The {{DOMxRef("Window.innerWidth")}} is the width, in CSS pixels, of the browser window viewport including, if rendered, the vertical scrollbar.
 - The {{DOMxRef("Window.outerWidth")}} is the width of the outside of the browser window including all the window {{glossary("chrome")}}.
 
@@ -170,8 +170,7 @@ The `width` property controls the size of the viewport. It should preferably be 
 
 - [CSSOM view](/en-US/docs/Web/CSS/CSSOM_view) module
 - [Visual Viewport API](/en-US/docs/Web/API/Visual_Viewport_API)
-- {{HTMLElement("meta")}}, specifically `<meta name="viewport">`
-- [Using the viewport meta tag to control layout on mobile browsers](/en-US/docs/Web/HTML/Guides/Viewport_meta_element)
+- {{HTMLElement("meta")}}, specifically [`<meta name="viewport">`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/viewport)
 - [Visual Viewport API](/en-US/docs/Web/API/Visual_Viewport_API)
 - [CSS viewport](/en-US/docs/Web/CSS/CSS_viewport) module
 - [CSSOM view](/en-US/docs/Web/CSS/CSSOM_view) module
