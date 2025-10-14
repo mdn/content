@@ -39,7 +39,7 @@ result.textContent = supported ? "Supported!" : "Not supported!";
 
 ### Result
 
-{{ EmbedLiveSample('Examples', 600, 80) }}
+{{EmbedLiveSample('Examples', 600, 80)}}
 
 ## Specifications
 
