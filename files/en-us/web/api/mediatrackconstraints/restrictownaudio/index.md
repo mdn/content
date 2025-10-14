@@ -23,7 +23,7 @@ this is rarely necessary since browsers typically ignore any constraints they do
 
 A [`ConstrainBoolean`](/en-US/docs/Web/API/MediaTrackConstraints#constrainboolean) value.
 
-If the value is `true`, the user agent will attempt to remove audio originating from the captured audio produced by the tab that called {{domxref("MediaDevices.getDisplayMedia()")}} to initiate screen capture. If removal via processing fails, the user agent may exclude all audio originating from the capturing tab.
+If the value is `true`, the user agent will attempt to remove any audio originating from the tab that called {{domxref("MediaDevices.getDisplayMedia()")}} to initiate screen capture. If removal of audio via processing fails, the user agent may exclude all audio originating from the capturing tab.
 
 > [!NOTE]
 > If the captured display surface doesn't include system audio, this setting will have no effect.
