@@ -50,7 +50,7 @@ You can override the browser's default font—if the browser permits you to do s
 
 ```css
 tt {
-  font-family: "Lucida Console", "Menlo", "Monaco", "Courier", monospace;
+  font-family: "Lucida Console", "Menlo", "Monaco", "Courier New", monospace;
 }
 ```
 

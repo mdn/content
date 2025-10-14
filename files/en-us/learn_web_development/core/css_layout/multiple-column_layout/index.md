@@ -53,8 +53,8 @@ body {
   max-width: 900px;
   margin: 2em auto;
   font:
-    0.9em/1.2 Arial,
-    Helvetica,
+    0.9em/1.2 "Helvetica",
+    "Arial",
     sans-serif;
 }
 ```
@@ -108,8 +108,8 @@ body {
   max-width: 900px;
   margin: 2em auto;
   font:
-    0.9em/1.2 Arial,
-    Helvetica,
+    0.9em/1.2 "Helvetica",
+    "Arial",
     sans-serif;
 }
 ```
@@ -172,8 +172,8 @@ body {
   max-width: 900px;
   margin: 2em auto;
   font:
-    0.9em/1.2 Arial,
-    Helvetica,
+    0.9em/1.2 "Helvetica",
+    "Arial",
     sans-serif;
 }
 ```
@@ -224,8 +224,8 @@ body {
   max-width: 900px;
   margin: 2em auto;
   font:
-    0.9em/1.2 Arial,
-    Helvetica,
+    0.9em/1.2 "Helvetica",
+    "Arial",
     sans-serif;
 }
 .container {
@@ -290,8 +290,8 @@ body {
   max-width: 900px;
   margin: 2em auto;
   font:
-    0.9em/1.2 Arial,
-    Helvetica,
+    0.9em/1.2 "Helvetica",
+    "Arial",
     sans-serif;
 }
 ```
@@ -414,8 +414,8 @@ body {
   max-width: 900px;
   margin: 2em auto;
   font:
-    0.9em/1.2 Arial,
-    Helvetica,
+    0.9em/1.2 "Helvetica",
+    "Arial",
     sans-serif;
 }
 ```

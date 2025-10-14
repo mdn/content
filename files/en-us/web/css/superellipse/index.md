@@ -10,7 +10,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`superellipse()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) defines the curvature of an ellipse, and is used to specify [corner shapes](/en-US/docs/Web/CSS/corner-shape) either directly, or via {{cssxref("&lt;corner-shape-value>")}} keywords.
+The **`superellipse()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) defines the curvature of an ellipse, and is used to specify [corner shapes](/en-US/docs/Web/CSS/corner-shape) either directly, or via {{cssxref("&lt;corner-shape-value>")}} keywords.
 
 ## Syntax
 
@@ -161,7 +161,7 @@ In this example, two [`<input type="range">`](/en-US/docs/Web/HTML/Reference/Ele
 
 ```css hidden live-sample___value-comparison
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 body {

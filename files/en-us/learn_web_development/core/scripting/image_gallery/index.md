@@ -126,7 +126,7 @@ The images you need to embed in the example and their required `alt` text are as
 - [`pic1.jpg`](https://mdn.github.io/shared-assets/images/examples/learn/gallery/pic1.jpg): "Closeup of a human eye".
 - [`pic2.jpg`](https://mdn.github.io/shared-assets/images/examples/learn/gallery/pic2.jpg): "Rock that looks like a wave".
 - [`pic3.jpg`](https://mdn.github.io/shared-assets/images/examples/learn/gallery/pic3.jpg): "Purple and white pansies".
-- [`pic4.jpg`](https://mdn.github.io/shared-assets/images/examples/learn/gallery/pic4.jpg): "Section of wall from a pharoah's tomb".
+- [`pic4.jpg`](https://mdn.github.io/shared-assets/images/examples/learn/gallery/pic4.jpg): "Section of wall from a pharaoh's tomb".
 - [`pic5.jpg`](https://mdn.github.io/shared-assets/images/examples/learn/gallery/pic5.jpg): "Large moth on a leaf".
 
 ### Create a data object
@@ -195,7 +195,7 @@ const images = [
   { filename: "pic1.jpg", alt: "Closeup of a human eye" },
   { filename: "pic2.jpg", alt: "Rock that looks like a wave" },
   { filename: "pic3.jpg", alt: "Purple and white pansies" },
-  { filename: "pic4.jpg", alt: "Section of wall from a pharoah's tomb" },
+  { filename: "pic4.jpg", alt: "Section of wall from a pharaoh's tomb" },
   { filename: "pic5.jpg", alt: "Large moth on a leaf" },
 ];
 
@@ -216,9 +216,9 @@ for (const image of images) {
   newImage.tabIndex = "0";
   // 2f. Append the image as a child of the thumbBar
   thumbBar.appendChild(newImage);
-  // 2g. Update the display to show the image fullsize when a thumb is clicked
+  // 2g. Update the display to show the image full size when a thumb is clicked
   newImage.addEventListener("click", updateDisplayedImage);
-  // 2h. Update the display to show the image fullsize when the "Enter" key
+  // 2h. Update the display to show the image full size when the "Enter" key
   // is pressed after it has been focused
   newImage.addEventListener("keydown", (e) => {
     if (e.code === "Enter") {

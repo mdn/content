@@ -169,7 +169,7 @@ The example below shows how to define two font faces with the same font family. 
 ```css
 /* Defining a regular font face */
 @font-face {
-  font-family: MainText;
+  font-family: "MainText";
   src:
     local("Futura-Medium"),
     url("FuturaMedium.woff") format("woff"),
@@ -178,7 +178,7 @@ The example below shows how to define two font faces with the same font family. 
 
 /* Defining a different bold font face for the same family */
 @font-face {
-  font-family: MainText;
+  font-family: "MainText";
   src:
     local("Gill Sans Bold") /* full font name */,
     local("GillSans-Bold") /* postscript name */,
@@ -190,7 +190,7 @@ The example below shows how to define two font faces with the same font family. 
 
 /* Using the regular font face */
 p {
-  font-family: MainText, sans-serif;
+  font-family: "MainText", sans-serif;
 }
 
 /* Font-family is inherited, but bold fonts are used */

@@ -244,7 +244,7 @@ The second half of our markup includes a {{htmlelement("p")}} element to display
 }
 
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 body {
