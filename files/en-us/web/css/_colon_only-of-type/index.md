@@ -6,7 +6,7 @@ browser-compat: css.selectors.only-of-type
 sidebar: cssref
 ---
 
-The **`:only-of-type`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element that has no siblings of the same type (tag name).
+The **`:only-of-type`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element that has no siblings of the same type (tag name).
 
 {{InteractiveExample("CSS Demo: :only-of-type", "tabbed-shorter")}}
 

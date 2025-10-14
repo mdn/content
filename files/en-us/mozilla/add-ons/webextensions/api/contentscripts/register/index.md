@@ -10,7 +10,8 @@ Use this function to register one or more content scripts.
 
 It accepts one parameter, which is an object with similar properties to the objects given in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) manifest key (but note that `content_scripts` is an array of objects, while the argument to `register()` is one object).
 
-This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+The extension must have the appropriate [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for the patterns in `contentScriptOptions`, or the
+API call is rejected.
 
 ## Syntax
 
@@ -35,7 +36,7 @@ let registering = browser.contentScripts.register(
     - `css` {{optional_inline}}
       - : An array of objects. Each object has either a property named `file`, which is a URL starting at the extension's manifest.json and pointing to a CSS file to register, or a property named `code`, which is some CSS code to register.
     - `cssOrigin` {{optional_inline}}
-      - : `string`. The origin of the CSS to inject. This affects the cascading order (priority) of the injected stylesheets. Takes the values `"author"` and `"user"`. Defaults to `"author"`.
+      - : `string`. The style origin for the injection, either `"user"`, to add the CSS as a user stylesheet, or `"author"`, to add it as an author stylesheet. Defaults to `"author"`. This property is case insensitive.
     - `excludeGlobs` {{optional_inline}}
       - : Same as [`exclude_globs` in the `content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts#exclude_globs) key.
     - `excludeMatches` {{optional_inline}}

@@ -462,7 +462,7 @@ A number of audio and video JavaScript libraries exist. The most popular librari
 ### Audio only
 
 - [SoundManager](https://www.schillmania.com/projects/soundmanager2/)
-- [AmplitudeJS](https://521dimensions.com/open-source/amplitudejs)
+- [AmplitudeJS](https://serversideup.net/open-source/amplitudejs/)
 - [HowlerJS](https://howlerjs.com/)
 
 ### Video only
@@ -470,7 +470,7 @@ A number of audio and video JavaScript libraries exist. The most popular librari
 - [flowplayer](https://flowplayer.com/): Gratis with a flowplayer logo watermark. Open source (GPL licensed.)
 - [JWPlayer](https://jwpconnatix.com/): Requires registration to download. Open Source Edition (Creative Commons License.)
 - [SublimeVideo](https://www.sublimevideo.net/): Requires registration. Form based set up with domain specific link to CDN hosted library.
-- [Video.js](https://videojs.com/): Gratis and Open Source (Apache 2 Licensed.)
+- [Video.js](https://videojs.org/): Gratis and Open Source (Apache 2 Licensed.)
 
 ### Audio and Video
 

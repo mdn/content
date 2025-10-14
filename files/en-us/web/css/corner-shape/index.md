@@ -156,7 +156,7 @@ We give the box a fixed {{cssxref("height")}}, a {{cssxref("box-shadow")}}, a `b
 
 ```css hidden live-sample___basic-corner-shape
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   width: 240px;
   margin: 20px auto;
 }
@@ -171,6 +171,26 @@ div {
     rgb(255 255 255 / 0),
     rgb(255 255 255 / 0.5)
   );
+}
+
+@supports not (corner-shape: scoop) {
+  body {
+    all: unset !important;
+  }
+
+  body::before {
+    content: "Your browser does not support the 'corner-shape' property.";
+    color: black;
+    background-color: #ffcd33;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  body > * {
+    display: none;
+  }
 }
 ```
 
@@ -225,7 +245,7 @@ html {
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   height: inherit;
   margin: 0;
   display: flex;
@@ -236,6 +256,26 @@ body {
 div {
   width: 240px;
   height: 180px;
+}
+
+@supports not (corner-shape: scoop notch) {
+  body {
+    all: unset !important;
+  }
+
+  body::before {
+    content: "Your browser does not support the 'corner-shape' property.";
+    color: black;
+    background-color: #ffcd33;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  body > * {
+    display: none;
+  }
 }
 ```
 
@@ -321,7 +361,7 @@ We apply a {{cssxref("box-shadow")}} to the `<section>`. We also give the `<sect
 
 ```css hidden live-sample___corner-shape-select
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 body {
@@ -348,12 +388,32 @@ form div:nth-of-type(2) {
 section {
   width: 100%;
   height: 180px;
-  background-color: palegoldenrod;
+  background-color: gold;
   background-image: linear-gradient(
     to bottom,
     rgb(255 255 255 / 0),
     rgb(255 255 255 / 0.5)
   );
+}
+
+@supports not (corner-shape: scoop) {
+  body {
+    all: unset !important;
+  }
+
+  body::before {
+    content: "Your browser does not support the 'corner-shape' property.";
+    color: black;
+    background-color: #ffcd33;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  body > * {
+    display: none;
+  }
 }
 ```
 
@@ -430,7 +490,7 @@ We apply a {{cssxref("box-shadow")}} to the `<section>` element. Additional basi
 
 ```css hidden live-sample___superellipse-slider
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 body {
@@ -459,6 +519,26 @@ section {
     rgb(255 255 255 / 0),
     rgb(255 255 255 / 0.5)
   );
+}
+
+@supports not (corner-shape: superellipse(0)) {
+  body {
+    all: unset !important;
+  }
+
+  body::before {
+    content: "Your browser does not support the 'corner-shape' property.";
+    color: black;
+    background-color: #ffcd33;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  body > * {
+    display: none;
+  }
 }
 ```
 
@@ -502,10 +582,8 @@ In this example, we demonstrate how the `corner-shape` property can be animated.
 
 #### HTML
 
-The markup for this example contains a single `<div>`, with [`tabindex="0"`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) applied so it can be focused.
-
 ```html live-sample___corner-shape-animation
-<div tabindex="0"></div>
+<div></div>
 ```
 
 #### CSS
@@ -532,22 +610,47 @@ div {
   corner-shape: square;
   outline: none;
 }
+
+@supports not (corner-shape: square) {
+  body {
+    all: unset !important;
+  }
+
+  body::before {
+    content: "Your browser does not support the 'corner-shape' property.";
+    color: black;
+    background-color: #ffcd33;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  body > * {
+    display: none;
+  }
+}
 ```
 
 ```css live-sample___corner-shape-animation
 @keyframes corner-pulse {
-  from {
+  0% {
     corner-shape: square;
   }
 
-  to {
+  /* To make the starting point apparent, let us keep
+  the shape the same for a small duration. */
+  20% {
+    corner-shape: square;
+  }
+
+  100% {
     corner-shape: notch;
   }
 }
 
-html:hover div,
-div:focus {
-  animation: corner-pulse infinite alternate 2s linear;
+div {
+  animation: corner-pulse infinite alternate 4s linear;
 }
 ```
 
@@ -556,8 +659,6 @@ div:focus {
 The rendered result looks like this:
 
 {{EmbedLiveSample("corner-shape-animation", "100%", "270")}}
-
-Hover or focus the shape to see the animation.
 
 ## Specifications
 

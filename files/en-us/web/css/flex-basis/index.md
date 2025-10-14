@@ -130,7 +130,7 @@ The `flex-basis` property is specified as either the keyword `content` or a `<'w
 
 ```css
 .container {
-  font-family: arial, sans-serif;
+  font-family: "Arial", sans-serif;
   margin: 0;
   padding: 0;
   list-style-type: none;

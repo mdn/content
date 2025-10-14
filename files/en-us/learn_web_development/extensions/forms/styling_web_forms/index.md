@@ -157,12 +157,16 @@ Take the following example:
         <input type="checkbox" id="cabbage" name="cabbage" value="cabbage" />
       </li>
       <li>
-        <label for="cauli">Cauliflower</label>
-        <input type="checkbox" id="cauli" name="cauli" value="cauli" />
+        <label for="cauliflower">Cauliflower</label>
+        <input
+          type="checkbox"
+          id="cauliflower"
+          name="cauliflower"
+          value="cauliflower" />
       </li>
       <li>
-        <label for="broc">Broccoli</label>
-        <input type="checkbox" id="broc" name="broc" value="broc" />
+        <label for="broccoli">Broccoli</label>
+        <input type="checkbox" id="broccoli" name="broccoli" value="broccoli" />
       </li>
     </ul>
   </fieldset>

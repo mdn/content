@@ -6,7 +6,7 @@ browser-compat: css.properties.font
 sidebar: cssref
 ---
 
-The **`font`** CSS [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) sets all the different properties of an element's font. Alternatively, it sets an element's font to a system font.
+The **`font`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) sets all the different properties of an element's font. Alternatively, it sets an element's font to a system font.
 
 {{InteractiveExample("CSS Demo: font")}}
 
@@ -412,7 +412,7 @@ p {
 ```css hidden
 body,
 input {
-  font: 14px Arial;
+  font: 14px "Arial";
   overflow: hidden;
 }
 

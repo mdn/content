@@ -44,7 +44,7 @@ The markup for the custom controls now looks as follows:
   <button id="play-pause" type="button" data-state="play">Play/Pause</button>
   <button id="stop" type="button" data-state="stop">Stop</button>
   <div class="progress">
-    <progress id="progress" value="0" min="0">
+    <progress id="progress" value="0">
       <span id="progress-bar"></span>
     </progress>
   </div>
@@ -76,8 +76,8 @@ The resultant video player style used here is rather basic — this is intention
 :root {
   color: #333333;
   font-family:
-    "Lucida Grande", "Lucida Sans Unicode", "DejaVu Sans", "Lucida", "Arial",
-    "Helvetica", sans-serif;
+    "Lucida Grande", "Lucida Sans Unicode", "DejaVu Sans", "Lucida",
+    "Helvetica", "Arial", sans-serif;
 }
 a {
   color: #0095dd;

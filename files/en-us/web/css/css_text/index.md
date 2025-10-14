@@ -37,7 +37,7 @@ The **CSS text** module defines how to perform text manipulation, like line brea
 - {{cssxref("word-break")}}
 - {{cssxref("word-spacing")}}
 
-The specification also defines the `hyphenate-limit-last`, `hyphenate-limit-lines`, `hyphenate-limit-zone`, `line-padding`, `text-align-all`, `text-autospace`, `text-group-align`, `text-spacing`, `white-space-trim`, `word-space-transform`, `wrap-after`, `wrap-before`, and `wrap-inside` properties, which are not yet supported by any browser.
+The specification also defines the `hyphenate-limit-last`, `hyphenate-limit-lines`, `hyphenate-limit-zone`, `line-padding`, `text-align-all`, `text-group-align`, `text-spacing`, `white-space-trim`, `word-space-transform`, `wrap-after`, `wrap-before`, and `wrap-inside` properties, which are not yet supported by any browser.
 
 ### Guides
 

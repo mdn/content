@@ -6,7 +6,7 @@ browser-compat: html.elements.caption
 sidebar: htmlsidebar
 ---
 
-The **`<caption>`** [HTML](/en-US/docs/Web/HTML) element specifies the caption (or title) of a table, providing the table an {{glossary("accessible description")}}.
+The **`<caption>`** [HTML](/en-US/docs/Web/HTML) element specifies the caption (or title) of a table, providing the table an {{glossary("accessible name")}} or {{glossary("accessible description")}}.
 
 {{InteractiveExample("HTML Demo: &lt;caption&gt;", "tabbed-taller")}}
 
@@ -77,7 +77,7 @@ tr:nth-child(odd) td {
 
 .heman {
   font:
-    1.4rem molot,
+    1.4rem "molot",
     sans-serif;
   text-shadow:
     1px 1px 1px white,
@@ -86,7 +86,7 @@ tr:nth-child(odd) td {
 
 .skeletor {
   font:
-    1.7rem rapscallion,
+    1.7rem "rapscallion",
     fantasy;
   letter-spacing: 3px;
   text-shadow:

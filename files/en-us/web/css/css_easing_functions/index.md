@@ -34,7 +34,7 @@ Alternatively, you may want an animation to move forward in distinct steps, to c
 
 ## Guides
 
-- [CSS value functions: easing functions](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#easing_functions)
+- [CSS value functions: easing functions](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#easing_functions)
   - : The CSS statements that invoke special data processing or calculations to return a CSS value for a CSS property.
 
 ## Related concepts
@@ -53,5 +53,5 @@ Alternatively, you may want an animation to move forward in distinct steps, to c
 
 ## See also
 
-- [CSS value functions](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)
+- [CSS value functions](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)
 - {{cssxref("will-change")}} CSS property

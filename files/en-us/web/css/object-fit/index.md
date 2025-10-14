@@ -131,9 +131,7 @@ The `object-fit` property is specified as a single keyword chosen from the list 
 
 ```css
 h2 {
-  font-family:
-    Courier New,
-    monospace;
+  font-family: "Courier New", monospace;
   font-size: 1em;
   margin: 1em 0 0.3em;
 }
