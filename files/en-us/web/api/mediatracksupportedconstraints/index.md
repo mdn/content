@@ -58,7 +58,7 @@ Some combination—but not necessarily all—of the following properties will ex
 
 ### Instance properties specific to shared screen tracks
 
-For tracks containing video sources from the user's screen contents, the following additional properties may be included in addition to those available for video tracks.
+For tracks containing video sources from the user's screen, the following additional properties may be included, in addition to those available for video tracks:
 
 - {{domxref("MediaTrackSupportedConstraints.displaySurface", "displaySurface")}}
   - : A Boolean that is `true` if the {{domxref("MediaTrackConstraints.displaySurface", "displaySurface")}} constraint is supported in the current environment.
