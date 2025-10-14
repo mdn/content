@@ -240,7 +240,7 @@ You can make this button interactive using JavaScript or attributes such as `com
 This example uses the `request-close` value for the command attribute to check if a dialog is [`cancelable`](/en-US/docs/Web/API/Event/cancelable) when clicking a close button. When clicking the close button inside the dialog it checks to see if the radio button is set to yes, if not the dialog will not close.
 
 ```html
-<button commandfor="mydialog" command="show-modal">Open Dialog</button>
+<button type="button" commandfor="mydialog" command="show-modal">Open Dialog</button>
 <dialog id="mydialog">
   <div class="wrapper">
     <form>
