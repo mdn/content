@@ -264,9 +264,7 @@ If **Yes** is selected, the dialog closes; if **No** is selected, the dialog sta
     <button commandfor="mydialog" command="request-close">
       Request to Close
     </button>
-    <p class="warning" hidden>
-      You must choose "Yes" to close this dialog.
-    </p>
+    <p class="warning" hidden>You must choose "Yes" to close this dialog.</p>
   </div>
 </dialog>
 ```
