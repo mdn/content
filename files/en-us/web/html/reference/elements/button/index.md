@@ -235,7 +235,7 @@ You can make this button interactive using JavaScript or attributes such as `com
 
 {{ EmbedLiveSample('creating_a_basic_button', 200, 64) }}
 
-### Command request-close
+### Using the `request-close` value for the `command` attribute
 
 This example uses the `request-close` value for the command attribute to check if a dialog is [`cancelable`](/en-US/docs/Web/API/Event/cancelable) when clicking a close button. When clicking the close button inside the dialog it checks to see if the radio button is set to yes, if not the dialog will not close.
 
