@@ -194,16 +194,16 @@ Before you start applying for a job, there are some useful steps you can take to
 
 ### Applying for the job
 
-When you apply for the job, make sure you follow the process exactly as they want you to. Each job advert will have instructions on how to apply. If the job ad was more of a conversation with a network contact, ask them exactly how to apply.
+When you apply for the job, follow the process exactly as instructed. Each job advert will have instructions on how to apply. If the job ad was more of a conversation with a network contact, ask them exactly how to apply.
 
 Above all:
 
 - Make sure your application is professional and well-written, and doesn't include any typos. If it is poorly written, you are unlikely to succeed. Check it over using a tool like Grammarly.
-- Don't be late applying — make sure you submit your application by the deadline date!
+- Don't be late applying — you must submit your application by the deadline date!
 
 Not all job applications require the same things; you'll probably have to:
 
-- Fill out some details on an online form. Make sure you type out your answers locally (for example, in VSCode) or in an online document (for example, a Google Docs file) before entering them into the form fields, in case something (for example, a browser crash) causes you to lose your work. This can save you hours of frustration; text is also easier to review and get feedback on if you put it somewhere else first.
+- Fill out some details on an online form. Type out your answers locally (for example, in VSCode) or in an online document (for example, a Google Docs file) before entering them into the form fields, in case something (for example, a browser crash) causes you to lose your work. This can save you hours of frustration; text is also easier to review and get feedback on if you put it somewhere else first.
 - Upload your CV/résumé.
 - Write and upload a covering letter. There are many guides to writing effective covering letters elsewhere online, but in general, such a letter should provide a description of why you:
   - Want to work for the company.
@@ -215,7 +215,7 @@ Not all job applications require the same things; you'll probably have to:
 
 A key point is that your job search should be a constant process where you do a little bit each day, and constantly keep working towards your goal. Don't just fire off a whole load of applications and then sit around waiting for a response.
 
-You should follow up with any promising leads you meet, for example on community networks or LinkedIn. Also, keep an inventory of the people you meet and the companies you apply to, along with contact details and descriptions of each. Periodically follow up with companies you'd like to work for to see what jobs they have available. If you get rejected for one job, they might have something else more suitable for you, either now or in the future.
+You should follow up with any promising leads you meet, for example, on community networks or LinkedIn. Also, keep an inventory of the people you meet and the companies you apply to, along with contact details and descriptions of each. Periodically follow up with companies you'd like to work for to see what jobs they have available. If you get rejected for one job, they might have something else more suitable for you, either now or in the future.
 
 If you haven't gotten a response from a company after applying for one of their jobs, wait a little while and then follow-up with their recruiter to see if they have any feedback for you, or if they have any other jobs coming up. Even if a company you want to work for doesn't have any suitable full-time jobs advertised at the moment, contact them anyway and see if they are looking for someone with your skill set. They may give you some useful experience, perhaps in the form of a volunteer position or freelance contract.
 
@@ -232,7 +232,7 @@ If the recruiter and hiring manager like your application, they will invite you 
 
 There are some general things you should do to prepare for _any_ interview:
 
-- Make sure you have a tidy, quiet place for conducting the interview. Make sure that you are not distracted by noise and commotion, and that your surroundings look tidy during the interview. If you are having a video call with the interviewer(s) and your space is a complete mess, it won't give them a good impression.
+- Find a tidy, quiet place to conduct the interview. Make sure that you are not distracted by noise and commotion, and that your surroundings are tidy during the interview. If you are having a video call with the interviewer(s) and your space is a complete mess, it won't give them a good impression.
 - Think about what you are going to wear when you attend your interview. Most developer jobs don't require you to wear a suit (check the job ad to see if it mentions a dress code), but you should choose something fairly neutral and smart-_ish_. Don't wear a T-shirt with an offensive slogan on it, and don't turn up in your pajamas.
 - Do some [preparation for coding interviews](#coding_interviews).
 - Build a collection of anecdotes to use for [experience-based interview questions](#experience-based_questions).
@@ -242,10 +242,10 @@ There are some general things you should do to prepare for _any_ interview:
 You should also do some preparation specific to each company you apply to:
 
 - As we mentioned earlier, you should do some research into the company's history, goals, and products.
-  - Read about the company from a high level, and familiarize yourself with their recent news. One good reason to do this is to see if they have done anything that would raise red flags and make you reconsider working there.
+  - Read about the company from a high level, and familiarize yourself with its recent news. One good reason to do this is to see if they have done anything that would raise red flags and make you reconsider working there.
   - Find out about the company's market position and what _their_ strengths and weaknesses are.
   - Research who their main competitors are.
-  - Become familiar with their products and how they work — for example, install their software and use it to build a demo app, or write a website that uses their APIs to do something. It will impress your interviewers if you can demonstrate some good insights around their situation and how you think it could be improved. Interviewers will often ask some specific questions to test your knowledge of the company and industry it exists in.
+  - Become familiar with their products and how they work — for example, install their software and use it to build a demo app, or write a website that uses their APIs to do something. It will impress your interviewers if you can demonstrate some good insights around their situation and how you think it could be improved. Interviewers will often ask some specific questions to test your knowledge of the company and the industry it exists in.
 - Related to the above point, think of some questions you would ask the interviewers about the company and their roles. Interviewers always ask if you have any questions for them at the end of the interview, and it reflects well on you and makes you sound thoughtful and inquisitive if you come out with questions more meaningful than "what did you have for breakfast today?"
 - If you have contacts at the company (e.g., from your community networks), reach out to them and ask about the job. What do they think about it? Is there anything specific you should focus on? Is there anything you should say or not say? It might also help during the interview to mention that you know "Bob from the e-commerce team" (or whatever).
 
@@ -262,8 +262,8 @@ Don't be complacent, however — you don't know for definite what questions they
 Usually, the bulk of the interview process consists of one or more main interviews. These can vary greatly between different companies in both function and frequency.
 
 - You might have one main interview, but you are more likely to have multiple interviews that test you on different aspects of the job (for example, the actual coding work, teamwork, working processes, documentation/communication, conflict resolution).
-- They may be with a single interviewer, or multiple interviewers asking you questions about different aspects (i.e., a panel interview).
-- Some interviews may be high-level or more exploratory (for example, "describe the process you'd use to deliver x", or "what do you think the main problems are with this solution?") and some may be lower level and more intensive (for example "write a JavaScript program that solves this problem").
+- They may be with a single interviewer or multiple interviewers asking you questions about different aspects (i.e., a panel interview).
+- Some interviews may be high-level or more exploratory (for example, "describe the process you'd use to deliver x", or "what do you think the main problems are with this solution?") and some may be lower level and more intensive (for example, "write a JavaScript program that solves this problem").
 
 #### Experience-based questions
 
@@ -298,7 +298,7 @@ While this is a reasonable way to test candidates if done right, many people dis
 - They can be poorly scoped or expect an unreasonable time commitment. A specific scope that time-boxes the project to four hours and will handle follow-up questions in an separate interview is reasonable, but an expectation to spend an entire weekend on a project is not, especially for people who have families and busy lives.
 - Their effectiveness is often disputed, as they are hard to evaluate conclusively.
 
-If you are asked to do a homework challenge, make sure the scope and timing of the work are clearly defined in order to mitigate the risk of going in the wrong direction and wasting your time.
+If you are asked to do a homework challenge, make sure the scope and timing of the work are clearly defined to mitigate the risk of going in the wrong direction and wasting your time.
 
 ### Accepting the offer
 
