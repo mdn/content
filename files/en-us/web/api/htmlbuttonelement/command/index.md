@@ -63,9 +63,6 @@ Each button targets the same image using the `commandfor` attribute.
 
 An event listener is attached using the [`command` event](/en-US/docs/Web/API/CommandEvent) which then runs some code based upon which custom value the button has assigned to it.
 
-> [!NOTE]
-> As the example is updating an image the `alt` text is also being updated.
-
 ```js
 const image = document.getElementById("the-image");
 
