@@ -27,7 +27,7 @@ Each CSS value type has an associated serialization format defined by the CSS sp
 
 - Keywords (like `auto`, `block`, `none`) serialize to all lowercase.
 - [`<color>`](/en-US/docs/Web/CSS/color_value):
-  - For sRGB colors: `rgb(R, G, B)` or `rgba(R, G, B, A)`, where all arguments are numbers, and the `rgb` form is selected if the alpha is exactly `1`. The keyword `transparent` serializes as `rgba(0, 0, 0, 0)`.
+  - For sRGB colors: Unless declared using `color()`, serialized as `rgb(R, G, B)` or `rgba(R, G, B, A)`, where all arguments are numbers, and the `rgb` form is selected if the alpha is exactly `1`. The keyword `transparent` serializes as `rgba(0, 0, 0, 0)`.
   - For `lab()`, `lch()`, `oklab()`, `oklch()`, and `color()` colors: the function form is preserved, with numeric arguments.
 - [`<length>`](/en-US/docs/Web/CSS/length): resolved to `px`.
 - [`<angle>`](/en-US/docs/Web/CSS/angle): resolved to `deg`.
