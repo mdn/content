@@ -224,11 +224,85 @@ Whether clicking on a `<button>` or {{HTMLElement("input")}} button types causes
 
 ## Examples
 
+### Creating a basic button
+
+This example creates a clickable button.
+The `type="button"` attribute ensures the button has no default behavior.
+You can make this button interactive using JavaScript or attributes such as `command` and `commandfor`.
+
 ```html
-<button name="button">Press me</button>
+<button type="button" name="button">I'm a button</button>
 ```
 
-{{ EmbedLiveSample('Example', 200, 64) }}
+{{ EmbedLiveSample('creating_a_basic_button', 200, 64) }}
+
+### Using the `request-close` value for the `command` attribute
+
+The dialog in this example has two radio buttons that control whether or not the dialog can be closed.
+Select **Yes** or **No**, and then click **Request to Close** to try to close the dialog.
+If **Yes** is selected, the dialog closes; if **No** is selected, the dialog stays open and shows a message instead.
+
+```html
+<button type="button" commandfor="mydialog" command="show-modal">
+  Open Dialog
+</button>
+<dialog id="mydialog">
+  <div class="wrapper">
+    <form>
+      <fieldset>
+        <legend>Allow this dialog to close when requested?</legend>
+        <div>
+          <input type="radio" id="no" name="close" value="no" checked />
+          <label for="no">No</label>
+        </div>
+        <div>
+          <input type="radio" id="yes" name="close" value="yes" />
+          <label for="yes">Yes</label>
+        </div>
+      </fieldset>
+    </form>
+    <button commandfor="mydialog" command="request-close">
+      Request to Close
+    </button>
+    <p class="warning" hidden>You must choose "Yes" to close this dialog.</p>
+  </div>
+</dialog>
+```
+
+```css hidden
+.warning {
+  color: tomato;
+}
+```
+
+```js
+const dialog = document.querySelector("dialog");
+const radio = document.querySelector("form").elements["close"];
+const warning = document.querySelector(".warning");
+
+dialog.addEventListener("cancel", (e) => {
+  if (!e.cancelable) return;
+  if (radio.value === "no") {
+    warning.hidden = false;
+    e.preventDefault();
+  } else {
+    warning.hidden = true;
+    return;
+  }
+});
+```
+
+{{ EmbedLiveSample('using_the_request-close_value_for_the_command_attribute', 100, 200) }}
+
+The **Open Dialog** button opens the `<dialog>` element using `command="show-modal"`.
+
+The **Request to Close** button has `command="request-close"`, which targets the `<dialog>` element using the `commandfor="mydialog"` attribute. When it's clicked, it asks the `<dialog>` if it can be closed (unlike the `command="close"` attribute, which would close the `<dialog>` immediately).
+This checks if the `<dialog>` is [`cancelable`](/en-US/docs/Web/API/Event/cancelable) using a `cancel` event.
+
+When the event is `cancelable`, the value of the radio buttons is checked:
+
+- If set to `yes`, the dialog is closed.
+- If set to `no`, the `hidden` attribute is turned off on the warning and the [`preventDefault()`](/en-US/docs/Web/API/Event/preventDefault) method is called, which prevents the default `<dialog>` closing behavior.
 
 ## Technical summary
 
