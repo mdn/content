@@ -19,9 +19,9 @@ A `<meta name="viewport">` element has the following additional attributes:
   - : The `content` attribute must be defined, and its value sets various viewport-related behaviors.
     Its value is a comma-separated list of one or more key-value pairs specified as `key=value`. The following keys are defined:
     - `width`
-      - : Controls the (minimum) pixel width of the viewport (see [viewport width and screen width](#viewport_width_and_screen_width)). It can be set to a positive whole number of pixels between 1 and 10000 like `width=600` or to the special value `device-width`, which is the physical size of the device screen in CSS pixels. This value establishes the value of the [`vw`](/en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport) unit.
+      - : Controls the (minimum) pixel width of the viewport (see [viewport width and screen width](#viewport_width_and_screen_width)). It can be set to a positive whole number of pixels between 1 and 10000 (like `width=600`) or to the special value `device-width`, which is the physical size of the device screen in CSS pixels. This value establishes the value of the [`vw`](/en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport) unit.
     - `height`
-      - : Controls the (minimum) pixel height of the viewport (see [viewport width and screen width](#viewport_width_and_screen_width)). It can be set to a positive whole number of pixels between 1 and 10000 like `height=400` or to the special value `device-height`, which is the physical size of the device screen in CSS pixels. This value establishes the value of the [`vh`](/en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport) unit.
+      - : Controls the (minimum) pixel height of the viewport (see [viewport width and screen width](#viewport_width_and_screen_width)). It can be set to a positive whole number of pixels between 1 and 10000 (like `height=400`) or to the special value `device-height`, which is the physical size of the device screen in CSS pixels. This value establishes the value of the [`vh`](/en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport) unit.
     - `initial-scale`
       - : Defines the ratio between the device width (`device-width` in portrait mode or `device-height` in landscape mode) and the viewport size.
         It can be a number between `0.0` and `10.0`.
