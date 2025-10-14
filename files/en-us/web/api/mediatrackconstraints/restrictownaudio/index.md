@@ -16,7 +16,7 @@ This property controls whether system audio originating from the capturing tab i
 
 If needed, you can determine whether or not this constraint is supported by checking
 the value of {{domxref("MediaTrackSupportedConstraints.restrictOwnAudio")}}, as returned
-by {{domxref("MediaDevices.getSupportedConstraints()")}}. However, 
+by {{domxref("MediaDevices.getSupportedConstraints()")}}. However,
 this is rarely necessary since browsers typically ignore any constraints they don't recognize.
 
 ## Value
