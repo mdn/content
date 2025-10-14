@@ -160,7 +160,7 @@ table img {
 }
 ```
 
-{{embedlivesample("app-start", "100%", 500)}}
+{{embedlivesample("app-start", "100%", 650)}}
 
 ## Project brief
 
@@ -227,7 +227,7 @@ We'd like you to style the images so that:
 
 The finished project should look like this:
 
-{{EmbedLiveSample("app-finish", "100%", 500)}}
+{{EmbedLiveSample("app-finish", "100%", 700)}}
 
 <details>
 <summary>Click here to show the solution</summary>
