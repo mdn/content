@@ -226,9 +226,12 @@ Whether clicking on a `<button>` or {{HTMLElement("input")}} button types causes
 
 ### Creating a basic button
 
+This example creates a clickable button.
+The `type="button"` attribute ensures the button has no default behavior.
+You can make this button interactive using JavaScript or attributes such as `command` and `commandfor`.
+
 ```html
-<button name="button">Press me</button>
-```
+<button type="button" name="button">I'm a button</button>
 
 {{ EmbedLiveSample('creating_a_basic_button', 200, 64) }}
 
