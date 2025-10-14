@@ -25,7 +25,7 @@ Various operating systems provide a preference for reducing transparency, and us
 They may also rely on less explicit signals on platforms which don't offer a specific setting.
 
 - In Windows 10/11: Settings > Personalization > Colors > Transparency effects.
-- In macOS: System Preferences > Accessibility > Display > Reduce transparency.
+- In macOS: System Settings > Accessibility > Display > Reduce transparency.
 - In iOS: Settings > Accessibility > Display & Text Size > Reduce Transparency.
 
 ## Examples
