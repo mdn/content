@@ -47,15 +47,15 @@ The `color-mix()` function enables mixing two {{cssxref("&lt;color&gt;")}} value
 
 {{EmbedGHLiveSample("css-examples/tools/color-mixer/", '100%', 400)}}
 
-The `color-mix()` function mixes two colors. This demonstration allows you to select two colors, `color-one` and `color-two`, and mix them, optionally setting each color's percentage, the color space in which the colors are mixed, and the interpolation methoed. The source colors shown on the outside, and the mixed color is shown in the middle. You can change colors by clicking on them and choosing a new color using the resulting color picker. Change the percentage values of each color using the sliders. Change the color space via the drop-down menu.
+This demo allows you to select two colors, `color-one` and `color-two`, and mix them, optionally setting each color's percentage, the color space in which the colors are mixed, and the interpolation method. The source colors are shown on the outside, and the mixed color is shown in the middle. You can change colors by clicking on them and choosing a new color using the resulting color picker. Change the percentage values of each color using the sliders. Change the color space via the drop-down menu.
 
 ### Choosing a color space
 
 Choosing the correct color space is important for producing desired results. Given the same colors to mix, different color spaces may be more appropriate depending on the interpolation use case.
 
 - If the result of physically mixing two colored lights is desired, the CIE XYZ or srgb-linear color space is appropriate, because they are linear in light intensity.
-- If colors need to be evenly spaced perceptually (such as in a gradient), the Oklab color space (and the older Lab) are appropriate, because they are designed to be perceptually uniform.
-- If avoiding graying out in color mixing is desired, i.e., maximizing chroma throughout the transition, Oklch (and the older LCH) works well.
+- If colors need to be evenly spaced perceptually (such as in a gradient), the Oklab (and older Lab) color spaces are appropriate, because they are designed to be perceptually uniform.
+- If avoiding graying out in color mixing is desired, i.e., maximizing chroma throughout the transition, the Oklch (and older LCH) color spaces work well.
 - Only use sRGB if you need to match the behavior of a specific device or software that uses sRGB. The sRGB color space is neither linear-light nor perceptually uniform, and produces poorer results such as overly dark or grayish mixes.
 
 ### Color interpolation method
@@ -69,7 +69,7 @@ The`<polar-color-space>` category includes [`hsl`](/en-US/docs/Web/CSS/color_val
 
 ### Color percentages
 
-Each of the two colors can be declared with a `<percentage>` value between `0%` and `100%`, which specifies the amount of the corresponding color to mix. The percentages are normalized if the total value of the declared percentages does not equal 100%.
+Each of the two colors can be declared with a `<percentage>` value between `0%` and `100%`, which specifies the amount of the corresponding color to mix. The percentages are normalized if the total value of the declared percentages does not equal `100%`.
 
 The two color percentages (we'll refer to them as `p1` and `p2`) are normalized as follows:
 
