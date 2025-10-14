@@ -121,3 +121,15 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
   The CSS `text-decoration-trim` property is supported but currently disabled by default.
   It allows you to specify {{cssxref("text-decoration")}} start and end offsets to shorten, lengthen, or shift the position of text decorations with respect to the text ([Firefox bug 1979915](https://bugzil.la/1979915)).
+
+- **Trusted Types API** for scripts (Early Beta): `dom.security.trusted_types.enabled`
+
+  The [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API) is now fully implemented. ([Firefox bug 1976656](https://bugzil.la/1976656)).
+
+  The changes include:
+  - Addition of new interfaces {{domxref("TrustedTypePolicyFactory")}}, {{domxref("TrustedTypePolicy")}}, {{domxref("TrustedHTML")}}, {{domxref("TrustedScript")}}, {{domxref("TrustedScriptURL")}}, and the `trustedTypes` property on {{domxref("Window/trustedTypes", "Window")}} and {{domxref("WorkerGlobalScope/trustedTypes", "WorkerGlobalScope")}}
+  - Updates to [injection sink](/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage) APIs, such as {{domxref("Element.innerHTML")}} and {{domxref("Document.write()", "document.write()")}}, to allow the `TrustedHTML`, `TrustedScript`, `TrustedScriptURL` to be passed as well as strings.
+  - Support for the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) directive of the {{HTTPHeader("Content-Security-Policy")}} HTTP header.
+    This can be used to enforce that trusted types used instead of strings (or use a default policy).
+  - Support for the [`trusted-types`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/trusted-types) directive of the {{HTTPHeader("Content-Security-Policy")}} HTTP header.
+    This can be used to restrict the allowed names of trusted type policies defined in the page.
