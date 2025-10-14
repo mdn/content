@@ -243,7 +243,9 @@ Select **Yes** or **No**, and then click **Request to Close** to try to close th
 If **Yes** is selected, the dialog closes; if **No** is selected, the dialog stays open and shows a message instead.
 
 ```html
-<button type="button" commandfor="mydialog" command="show-modal">Open Dialog</button>
+<button type="button" commandfor="mydialog" command="show-modal">
+  Open Dialog
+</button>
 <dialog id="mydialog">
   <div class="wrapper">
     <form>
