@@ -1,6 +1,6 @@
 ---
 title: Textual data types
-slug: Web/CSS/CSS_Values_and_Units/Textual_data_types
+slug: Web/CSS/CSS_values_and_units/Textual_data_types
 page-type: guide
 sidebar: cssref
 ---
@@ -91,8 +91,8 @@ The parameter for `url()` can be either quoted or unquoted. If unquoted, it is p
 
 ## See also
 
-- [Numeric data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types)
-- [CSS data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)
-- [CSS values and units](/en-US/docs/Web/CSS/CSS_Values_and_Units) module
+- [Numeric data types](/en-US/docs/Web/CSS/CSS_values_and_units/Numeric_data_types)
+- [CSS data types](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types)
+- [CSS values and units](/en-US/docs/Web/CSS/CSS_values_and_units) module
 - [Learn: Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
 - [CSS cascade and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module

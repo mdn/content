@@ -26,4 +26,6 @@ This page links to pages explaining how some common attacks work, and how they c
 - [Server Side Request Forgery (SSRF)](/en-US/docs/Web/Security/Attacks/SSRF)
   - : Server‑Side Request Forgery (SSRF) is a vulnerability that allows an attacker to make HTTP (or other network) requests to arbitrary destinations. SSRF makes these requests originate from within a server itself, which typically has broader access than an external client.
 - [Subdomain takeover](/en-US/docs/Web/Security/Attacks/Subdomain_takeover)
-  - : In a Subdomain takeover attack, the attacker gains control over a subdomain of a target domain.
+  - : In a subdomain takeover attack, the attacker gains control over a subdomain of a target domain.
+- [Supply chain attacks](/en-US/docs/Web/Security/Attacks/Supply_chain_attacks)
+  - : In a supply chain attack, the attacker compromises part of the site's supply chain, such as any third-party dependencies that it uses.

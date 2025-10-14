@@ -129,8 +129,8 @@ We are going to get you to solve this challenge in your local development enviro
    }
 
    body {
-     background-color: #fff;
-     color: #333;
+     background-color: white;
+     color: #333333;
      margin: 0;
      font: 1.2em / 1.6 sans-serif;
      padding: 0 20px 20px 20px;
@@ -170,7 +170,7 @@ We are going to get you to solve this challenge in your local development enviro
    nav {
      position: fixed;
      inset: 10%;
-     background-color: #fff;
+     background-color: white;
      display: none;
    }
 
@@ -196,8 +196,8 @@ We are going to get you to solve this challenge in your local development enviro
      font-size: 150%;
      width: 100%;
      height: 100%;
-     background-color: #000;
-     color: #fff;
+     background-color: black;
+     color: white;
      text-decoration: none;
    }
 
@@ -369,8 +369,8 @@ The finished CSS should look something like this:
 }
 
 body {
-  background-color: #fff;
-  color: #333;
+  background-color: white;
+  color: #333333;
   margin: 0;
   font: 1.2em / 1.6 sans-serif;
   padding: 0 20px 20px 20px;
@@ -412,7 +412,7 @@ button:focus {
 nav {
   position: fixed;
   inset: 10%;
-  background-color: #fff;
+  background-color: white;
   display: none;
 }
 
@@ -438,8 +438,8 @@ nav a {
   font-size: 150%;
   width: 100%;
   height: 100%;
-  background-color: #000;
-  color: #fff;
+  background-color: black;
+  color: white;
   text-decoration: none;
 }
 
