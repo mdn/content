@@ -244,15 +244,17 @@ This example uses the `request-close` value for the command attribute to check i
 <dialog id="mydialog">
   <div class="wrapper">
     <form>
-      <legend>Would you like to be able to close this dialog:</legend>
-      <div>
-        <input type="radio" id="no" name="close" value="no" checked />
-        <label for="no">No</label>
-      </div>
-      <div>
-        <input type="radio" id="yes" name="close" value="yes" />
-        <label for="yes">Yes</label>
-      </div>
+      <fieldset>
+        <legend>Would you like to be able to close this dialog:</legend>
+        <div>
+          <input type="radio" id="no" name="close" value="no" checked />
+          <label for="no">No</label>
+        </div>
+        <div>
+          <input type="radio" id="yes" name="close" value="yes" />
+          <label for="yes">Yes</label>
+        </div>
+      </fieldset>
     </form>
     <button commandfor="mydialog" command="request-close">
       Request to Close
