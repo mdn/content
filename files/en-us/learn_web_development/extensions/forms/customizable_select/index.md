@@ -235,7 +235,7 @@ option {
 > [!NOTE]
 > Customizable `<select>` element `<option>`s have `display: flex` set on them by default, but it is included in our stylesheet anyway to clarify what is going on.
 
-Next, a combination of the {{cssxref(":first-of-type")}}, {{cssxref(":last-of-type")}}, and {{cssxref(":not()")}} pseudo-classes is used to set an appropriate {{cssxref("border-radius")}} on the top and bottom `<option>` elements, and remove the {{cssxref("border-bottom")}} from all `<option>` elements except the last one so the borders don't look messy and doubled-up. We also set the same `border-radius` on the outer `::picker(select)` container so that we don't end up with an ugly square white box around the options if we decide to set a different background-color on the page.
+Next, a combination of the {{cssxref(":first-of-type")}}, {{cssxref(":last-of-type")}}, and {{cssxref(":not()")}} pseudo-classes is used to set an appropriate {{cssxref("border-radius")}} on the top and bottom `<option>` elements, and remove the {{cssxref("border-bottom")}} from all `<option>` elements — except the last one so the borders don't look messy and doubled-up. We also set the same `border-radius` on the outer `::picker(select)` container so that we don't end up with an ugly square white box around the options if we decide to set a different background-color on the page.
 
 ```css live-sample___third-render live-sample___fourth-render live-sample___full-render
 option:first-of-type {
