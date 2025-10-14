@@ -30,7 +30,7 @@ If the value is `true`, the user agent will attempt to remove any audio originat
 
 If the value is given as `exact`, that field's boolean value indicates an exact requirement for the `restrictOwnAudio` feature; if it can't be met, then the request will result in an error.
 
-If the value is `false`, no restriction will be attempted on any system audio originating from the capturing tab.
+If the value is `false`, the user agent will not attempt to restrict any system audio originating from the capturing tab.
 
 ## Examples
 
