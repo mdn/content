@@ -287,7 +287,7 @@ dialog.addEventListener("cancel", (e) => {
 });
 ```
 
-{{ EmbedLiveSample('command_request-close', 200) }}
+{{ EmbedLiveSample('using_the_request-close_value_for_the_command_attribute', 200) }}
 
 ## Technical summary
 
