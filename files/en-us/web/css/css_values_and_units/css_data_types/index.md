@@ -48,11 +48,11 @@ These types include keywords and identifiers as well as strings, and URLs.
 These data types are used to indicate quantities, indexes, and positions. The majority of these are defined in the CSS values and units module, however additional types are described in other modules where they are specific to that specification alone — for example the `fr` unit in the [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) module.
 
 - {{cssxref("&lt;integer&gt;")}}
-  - : One or more decimal units 0 through 9, optionally preceded by - or +.
+  - : One or more decimal units 0 through 9, optionally preceded by `-` or `+`.
 - {{cssxref("&lt;number&gt;")}}
   - : Real numbers which may also have a fractional component, for example `1` or `1.34`.
 - {{cssxref("&lt;dimension&gt;")}}
-  - : A number with a unit attached to it, including distances ({{cssxref("&lt;length&gt;")}}), durations ({{cssxref("&lt;time&gt;")}}), frequencies ({{cssxref("&lt;frequency&gt;")}}), resolutions ({{cssxref("&lt;resolution&gt;")}}), and other quantities; for example `90deg`, `50ms` or `15em`.
+  - : A number with a unit attached to it, for example `90deg`, `50ms`, or `15em`. This type includes distances ({{cssxref("&lt;length&gt;")}}), durations ({{cssxref("&lt;time&gt;")}}), frequencies ({{cssxref("&lt;frequency&gt;")}}), resolutions ({{cssxref("&lt;resolution&gt;")}}), and other quantities.
 - {{cssxref("&lt;percentage&gt;")}}
   - : A number with a percentage sign attached to it, for example `10%`.
 - {{cssxref("&lt;ratio&gt;")}}
