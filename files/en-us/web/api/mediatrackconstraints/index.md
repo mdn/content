@@ -205,7 +205,7 @@ These constraints apply to the `video` property of the object passed into {{domx
 
 - {{domxref("MediaTrackConstraints.restrictOwnAudio", "restrictOwnAudio")}} {{Experimental_Inline}}
   - : A [`ConstrainBoolean`](#constrainboolean) value that specifies the requested or mandatory constraints placed on the value of the {{domxref("MediaTrackSettings.restrictOwnAudio","restrictOwnAudio")}} constrainable property.
-    This property controls whether system audio originating from the capturing tab is filtered out of the screen capture.
+    This property controls whether the system audio originating from the capturing tab is filtered out of the screen capture.
 
 ## Specifications
 
