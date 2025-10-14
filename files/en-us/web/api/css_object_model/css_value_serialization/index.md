@@ -9,7 +9,7 @@ spec-urls:
 
 {{APIRef("CSSOM")}}
 
-When working with CSS through JavaScript APIs, property values are **serialized** into standardized string representations. For example, you might set a color using the `hsl(240 100% 50%)` syntax, but when accessed through JavaScript, the value may be returned in the equivalent `"rgb(0, 0, 255)"` syntax.
+When working with CSS through JavaScript APIs, property values are **serialized** into standardized string representations based on the value's [data type](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types). For example, you might set a color using the `hsl(240 100% 50%)` syntax, but when accessed through JavaScript, the value may be returned in the equivalent `"rgb(0, 0, 255)"` syntax.
 
 ## When and how values are serialized
 
