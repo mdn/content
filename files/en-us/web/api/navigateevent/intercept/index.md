@@ -144,9 +144,9 @@ Both `precommitHandler()` and `handler()` callbacks can be included inside the s
 2. When the navigation commits, a new {{domxref("NavigationHistoryEntry")}} is created for the navigation, and its `committed` promise fulfills.
 3. Next, the `handler()` promise runs.
    - When the `handler()` promise fulfills and the `navigatesuccess` event fires, the navigation `finished` promise fulfills as well, to indicate the navigation is finished.
-   - If `handler()` rejects, `navigateerror` fires, the `finished` promise rejects, and the navigation is cancelled.
+   - If `handler()` rejects, `navigateerror` fires, the `finished` promise rejects, and the navigation is canceled.
 
-Note that the above process is upheld even across multiple `intercept()` called on the same `NavigateEvent`. All `precommitHandler()` callbacks are called first, and when all of them resolve, the navigation commits and all the `handler()` callbacks are called.
+Note that the above process is upheld even across multiple `intercept()` calls on the same `NavigateEvent`. All `precommitHandler()` callbacks are called first, and when all of them resolve, the navigation commits, and all the `handler()` callbacks are called.
 
 ### Controlling focus behavior
 
