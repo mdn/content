@@ -64,6 +64,9 @@ Firefox 145 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ### APIs
 
+- The `style` property on {{domxref("HTMLElement.style", "HTMLElement")}}, {{domxref("MathMLElement.style", "MathMLElement")}}, {{domxref("SVGElement.style", "SVGElement")}}, and {{domxref("CSSStyleRule.style", "CSSStyleRule")}} , and the {{domxref("Window.getComputedStyle()")}} method all now return a {{domxref("CSSStyleProperties")}} instance. This replaces {{domxref("CSSStyleDeclaration")}} following an update to the relevant specification.
+  ([Firefox bug 1989925](https://bugzil.la/1989925))
+
 <!-- #### DOM -->
 
 #### Media, WebRTC, and Web Audio
