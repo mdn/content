@@ -120,20 +120,21 @@ console.log(merged.test); // "value"
 
 ### Exploitation targets
 
-To see the effect of prototype pollution, we can look at the how the following {{domxref("fetch()")}} call can be changed completely. By default, it is a {{HTTPMethod("GET")}} request, but because we polluted the `Object.prototype` object with two new default properties, the `fetch()` call is now transformed into a {{HTTPMethod("POST")}} request, which could lead to unintended side effects on the server-side.
+To see the effect of prototype pollution, we can look at the how the following {{domxref("fetch()")}} call can be changed completely. By default, it is a {{HTTPMethod("GET")}} request with no content to send to the server, but because we polluted the `Object.prototype` object with two new default properties, the `fetch()` call is now transformed into a {{HTTPMethod("POST")}} request and the request body now contains instructions for the server, for example to transfer an arbitrary amount of money to an arbitrary address:
 
 ```js
 // Attacker indirectly causes the following pollution
-Object.prototype.body = "a=1";
+Object.prototype.body = "action=transfer&amount=1337&to=1337-1337-1337-1337";
 Object.prototype.method = "POST";
 
 fetch("https://example.com", {
   mode: "cors",
 });
-// Promise {status: "pending", body: "a=1", method: "POST"}
+// Promise {status: "pending", body: "action=transfer&amount=1337&to=1337-1337-1337-1337", method: "POST"}
 
 // Any new object initialization is now modified to contain additional default properties
 console.log({}.method); // "POST"
+console.log({}.body); // "action=transfer&amount=1337&to=1337-1337-1337-1337"
 ```
 
 Another dangerous pollution attack target is the {{domxref("HTMLIframeElement.srcdoc")}} property which specifies the content of an {{HTMLElement("iframe")}} element. By overriding its value, it could potentially be possible to execute arbitrary code.
@@ -312,3 +313,5 @@ Runtime defenses:
 ## See also
 
 - [OWASP: Prototype pollution prevention cheat sheet](https://cheatsheetseries.owasp.org/cheatsheets/Prototype_Pollution_Prevention_Cheat_Sheet.html#other-resources)
+- [Client-side prototype pollution](https://github.com/BlackFan/client-side-prototype-pollution)
+- [Server-side prototype pollution](https://github.com/KTH-LangSec/server-side-prototype-pollution)
