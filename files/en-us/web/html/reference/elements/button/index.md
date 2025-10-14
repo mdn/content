@@ -246,7 +246,7 @@ If **Yes** is selected, the dialog closes; if **No** is selected, the dialog sta
 <dialog id="mydialog">
   <div class="wrapper">
     <form>
-      <legend>Would you like to be able to close this dialog:</legend>
+      <legend>Allow this dialog to close when requested?</legend>
       <div>
         <input type="radio" id="no" name="close" value="no" checked />
         <label for="no">No</label>
