@@ -35,7 +35,7 @@ Some or all of the following will be included in the object, either because it's
 - {{domxref("MediaTrackSettings.latency", "latency")}}
   - : A double-precision floating point value indicating the current value of the {{domxref("MediaTrackConstraints.latency", "latency")}} property, specifying the audio latency, in seconds. Latency is the amount of time which elapses between the start of processing the audio and the data being available to the next stop in the audio utilization process. This value is a target value; actual latency may vary to some extent for various reasons.
 - {{domxref("MediaTrackSettings.noiseSuppression", "noiseSuppression")}}
-  - : A Boolean which indicates the current value of the {{domxref("MediaTrackConstraints.noiseSuppression", "noiseSuppression")}} property, which is `true` if noise suppression is enabled and is `false` otherwise.
+  - : A Boolean indicating the current value of the {{domxref("MediaTrackConstraints.noiseSuppression", "noiseSuppression")}} property: `true` if noise suppression is enabled, and is `false` otherwise.
 - {{domxref("MediaTrackSettings.restrictOwnAudio", "restrictOwnAudio")}}
   - : A Boolean indicating the current value of the {{domxref("MediaTrackConstraints.restrictOwnAudio", "restrictOwnAudio")}} property: `true` if the browser will attempt to filter out system audio originating from the capturing tab during screen capture, and `false` otherwise.
 - {{domxref("MediaTrackSettings.sampleRate", "sampleRate")}}
