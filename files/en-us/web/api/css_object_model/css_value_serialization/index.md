@@ -13,7 +13,7 @@ When working with CSS through JavaScript APIs, property values are **serialized*
 
 ## When and how values are serialized
 
-Serialization ensures that CSS values are exposed to JavaScript in a consistent format across browsers. Without this, equivalent values could be returned in different syntaxes (for example, `#f00` vs. `rgb(255, 0, 0)`), breaking code that relies on string comparisons.
+Serialization ensures that CSS values are exposed to JavaScript in a consistent format across browsers. Without this, equivalent values could be returned in different syntaxes (for example, `#f00` vs. `rgb(255, 0, 0)`, or `1em` vs. `16px`), breaking code that relies on string comparisons.
 
 Serialization happens whenever CSS values are read as strings through JavaScript APIs, such as:
 
