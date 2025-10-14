@@ -260,7 +260,7 @@ If **Yes** is selected, the dialog closes; if **No** is selected, the dialog sta
       Request to Close
     </button>
     <p class="warning" hidden>
-      You have not selected yes so can not close this dialog.
+      You must choose "Yes" to close this dialog.
     </p>
   </div>
 </dialog>
