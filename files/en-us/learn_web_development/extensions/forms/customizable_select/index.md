@@ -235,7 +235,7 @@ option {
 > [!NOTE]
 > Customizable `<select>` element `<option>`s have `display: flex` set on them by default, but it is included in our stylesheet anyway to clarify what is going on.
 
-Next, a combination of the {{cssxref(":first-of-type")}}, {{cssxref(":last-of-type")}}, and {{cssxref(":not()")}} pseudo-classes is used to set an appropriate {{cssxref("border-radius")}} on the top and bottom corners of the picker, and remove the {{cssxref("border-bottom")}} from all `<option>` elements except the last one so the borders don't look messy and doubled-up:
+Next, a combination of the {{cssxref(":first-of-type")}}, {{cssxref(":last-of-type")}}, and {{cssxref(":not()")}} pseudo-classes is used to set an appropriate {{cssxref("border-radius")}} on the top and bottom `<option>` elements, and remove the {{cssxref("border-bottom")}} from all `<option>` elements — except the last one so the borders don't look messy and doubled-up. We also set the same `border-radius` on the outer `::picker(select)` container so that we don't end up with an ugly square white box around the options if we decide to set a different background-color on the page.
 
 ```css live-sample___third-render live-sample___fourth-render live-sample___full-render
 option:first-of-type {
@@ -246,12 +246,16 @@ option:last-of-type {
   border-radius: 0 0 8px 8px;
 }
 
+::picker(select) {
+  border-radius: 8px;
+}
+
 option:not(option:last-of-type) {
   border-bottom: none;
 }
 ```
 
-Next a different `background` color is set on the odd-numbered `<option>` elements using {{cssxref(":nth-of-type()", ":nth-of-type(odd)")}} to implement zebra-striping, and a different `background` color is set on the `<option>` elements on focus and hover, to provide a useful visual highlight during selection:
+Next, a different `background` color is set on the odd-numbered `<option>` elements using {{cssxref(":nth-of-type()", ":nth-of-type(odd)")}} to implement zebra-striping, and a different `background` color is set on the `<option>` elements on focus and hover, to provide a useful visual highlight during selection:
 
 ```css live-sample___third-render live-sample___fourth-render live-sample___full-render
 option:nth-of-type(odd) {
