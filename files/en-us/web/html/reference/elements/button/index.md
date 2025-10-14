@@ -232,6 +232,7 @@ You can make this button interactive using JavaScript or attributes such as `com
 
 ```html
 <button type="button" name="button">I'm a button</button>
+```
 
 {{ EmbedLiveSample('creating_a_basic_button', 200, 64) }}
 
@@ -291,7 +292,7 @@ dialog.addEventListener("cancel", (e) => {
 });
 ```
 
-{{ EmbedLiveSample('using_the_request-close_value_for_the_command_attribute', 200) }}
+{{ EmbedLiveSample('using_the_request-close_value_for_the_command_attribute', 100, 200) }}
 
 ## Technical summary
 
