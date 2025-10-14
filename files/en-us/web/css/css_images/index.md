@@ -5,6 +5,7 @@ page-type: css-module
 spec-urls:
   - https://drafts.csswg.org/css-images/
   - https://drafts.csswg.org/css-images-4/
+  - https://drafts.csswg.org/css-images-5/
 sidebar: cssref
 ---
 
@@ -18,6 +19,7 @@ The **CSS images** module defines the types of images that can be used (the {{CS
 - {{CSSxRef("image-rendering")}}
 - {{CSSxRef("object-fit")}}
 - {{CSSxRef("object-position")}}
+- {{cssxref("object-view-box")}}
 
 The CSS images module also defines the {{CSSxRef("image-resolution")}} property. Currently, no browsers support this feature.
 
@@ -54,10 +56,14 @@ The CSS images module also defines the {{CSSxRef("image/image", "image()")}} fun
 - [Understanding aspect ratios](/en-US/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)
   - : Learn about the `aspect-ratio` property, discuss aspect ratios for replaced and non-replaced elements, and examine some common aspect ratio use cases.
 
+- [Using the CSS `object-view-box` property](/en-US/docs/Web/CSS/CSS_images/Using_object-view-box)
+  - : Learn the CSS `object-view-box` property, including how to zoom in, zoom out, and pan across images.
+
 ## Related concepts
 
 - {{cssxref("url_value", "&lt;url&gt;")}}
 - {{cssxref("url_function", "url()")}}
+- [`<basic-shape-rect>`](/en-US/docs/Web/CSS/basic-shape#basic-shape-rect)
 
 ## Specifications
 
