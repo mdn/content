@@ -300,6 +300,7 @@ The **Request to Close** button has `command="request-close"`, which targets the
 This checks if the `<dialog>` is [`cancelable`](/en-US/docs/Web/API/Event/cancelable) using a `cancel` event.
 
 When the event is `cancelable`, the value of the radio buttons is checked:
+
 - If set to `yes`, the dialog is closed.
 - If set to `no`, the `hidden` attribute is turned off on the warning and the [`preventDefault()`](/en-US/docs/Web/API/Event/preventDefault) method is called, which prevents the default `<dialog>` closing behavior.
 
