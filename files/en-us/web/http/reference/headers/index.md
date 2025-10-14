@@ -481,16 +481,16 @@ See the [Topics API](/en-US/docs/Web/API/Topics_API) documentation for more info
 ### Other
 
 - {{HTTPHeader("Accept-Signature")}} {{experimental_inline}}
-  - : A client can send the [`Accept-Signature`](https://wicg.github.io/webpackage/draft-yasskin-http-origin-signed-responses.html#name-the-accept-signature-header) header field to indicate intention to take advantage of any available signatures and to indicate what kinds of signatures it supports.
+  - : A client can send the [`Accept-Signature`](https://www.rfc-editor.org/rfc/rfc9421.html#name-the-accept-signature-field) request header field to indicate intention to take advantage of any available signatures and to indicate which parts of the request should be signed over.
 - {{HTTPHeader("Early-Data")}} {{experimental_inline}}
   - : Indicates that the request has been conveyed in TLS early data.
 - {{HTTPHeader("Set-Login")}} {{experimental_inline}}
   - : Response header sent by a federated identity provider (IdP) to set its login status, meaning whether any users are logged into the IdP on the current browser or not.
     This is stored by the browser and used by the [FedCM API](/en-US/docs/Web/API/FedCM_API).
 - {{HTTPHeader("Signature")}} {{experimental_inline}}
-  - : The [`Signature`](https://wicg.github.io/webpackage/draft-yasskin-http-origin-signed-responses.html#name-the-signature-header) header field conveys a list of signatures for an exchange, each one accompanied by information about how to determine the authority of and refresh that signature.
+  - : The [`Signature`](https://www.rfc-editor.org/rfc/rfc9421.html#name-the-signature-http-field) header field conveys a list of signatures for an exchange, each one accompanied by information about how to determine the authority of and refresh that signature.
 - {{HTTPHeader("Signed-Headers")}} {{experimental_inline}}
-  - : The [`Signed-Headers`](https://wicg.github.io/webpackage/draft-yasskin-http-origin-signed-responses.html#name-the-signed-headers-header) header field identifies an ordered list of response header fields to include in a signature.
+  - : The [`Signature-Input`](https://www.rfc-editor.org/rfc/rfc9421.html#name-the-signature-input-http-fi) response header field identifies the components of a request that were signed over and any signature metadata parameters for each signature in the [`Signature`] header field.
 - {{HTTPHeader("Speculation-Rules")}} {{experimental_inline}}
   - : Provides a list of URLs pointing to text resources containing [speculation rule](/en-US/docs/Web/API/Speculation_Rules_API) JSON definitions. When the response is an HTML document, these rules will be added to the document's speculation rule set.
 - {{HTTPHeader("Sec-Speculation-Tags")}} {{experimental_inline}}
