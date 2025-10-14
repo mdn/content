@@ -224,13 +224,13 @@ Whether clicking on a `<button>` or {{HTMLElement("input")}} button types causes
 
 ## Examples
 
-### Basic example
+### Creating a basic button
 
 ```html
 <button name="button">Press me</button>
 ```
 
-{{ EmbedLiveSample('basic_example', 200, 64) }}
+{{ EmbedLiveSample('creating_a_basic_button', 200, 64) }}
 
 ### Command request-close
 
