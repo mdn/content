@@ -294,7 +294,7 @@ dialog.addEventListener("cancel", (e) => {
 
 {{ EmbedLiveSample('using_the_request-close_value_for_the_command_attribute', 100, 200) }}
 
-The **Open Dialog** `<button>` opens the `<dialog>` element using `command="show-modal"`.
+The **Open Dialog** button opens the `<dialog>` element using `command="show-modal"`.
 
 The **Request to Close** `<button>` has `command="request-close"` which targets the `<dialog>` element using the `commandfor="mydialog"` attribute. When it's clicked, it asks the `<dialog>` if it can be closed (unlike the `command="close"` attribute, which would close the `<dialog>` immediately).
 
