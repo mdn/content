@@ -16,7 +16,7 @@ For example, if the capturing web page itself is playing embedded audio or video
 
 ## Value
 
-The value of `restrictOwnAudio` is a boolean — `true` enables capturing tab system audio restriction, and `false` disables it.
+A boolean value, where `true` enables the capturing tab's system audio restriction and `false` disables it.
 
 If the value is `true`, the user agent will attempt to remove audio originating from the captured audio produced by the tab that called {{domxref("MediaDevices.getDisplayMedia()")}} to initiate screen capture. If removal via processing fails, the user agent may exclude all audio originating from the capturing tab.
 
