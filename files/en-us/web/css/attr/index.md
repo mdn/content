@@ -27,7 +27,7 @@ blockquote::after {
 
 ```html interactive-example
 <blockquote cite="https://mozilla.org/en-US/about/">
-  Mozilla makes browsers, apps, code and tools that put people before profit.
+  Mozilla makes browsers, apps, code, and tools that put people before profit.
 </blockquote>
 
 <blockquote cite="https://web.dev/about/">
@@ -78,7 +78,7 @@ The parameters are:
         ```
 
         > [!NOTE]
-        > This keyword was originally named and supported in Chromium browsers as `string`. Both keywords will be supported briefly, for backwards compatibility purposes.
+        > This keyword was originally named and supported in Chromium browsers as `string`. Both keywords will be supported briefly, for backward compatibility purposes.
 
     - {{cssxref("type()")}}
       - : The `type()` function takes a `<syntax>` as its argument that specifies what data type to parse the value into.
@@ -109,7 +109,7 @@ If no `<fallback-value>` is set, the return value will default to an empty strin
 
 ### Limitations and security
 
-The `attr()` function can reference attributes that were never intended by the page author to be used for styling and might contain sensitive information (for example, a security token used by scripts on the page). In general, this is fine, but it can become a security threat when used in URLs. Therefore, you can't use `attr()` to dynamically construct URLs.
+The `attr()` function can reference attributes that were never intended for styling use and might contain sensitive information (for example, a security token used by scripts on the page). In general, this is fine, but it can become a security threat when used in URLs. Therefore, you can't use `attr()` to dynamically construct URLs.
 
 ```html
 <!-- This won't work! -->
@@ -166,13 +166,13 @@ A second edge case is the following:
 
 Browsers without support for modern syntax display the text `"foo"`. In browsers with modern `attr()` support there is no output.
 
-This is because `attr()` — similar to custom properties that use the `var()` function — get substituted at [computed value time](https://www.bram.us/2024/02/26/css-what-is-iacvt/#custom-properties). With the modern behavior, `--x` first tries to read the `data-attr` attribute from the `#parent` element, which results in an empty string because there is no such attribute on `#parent`. That empty string then gets inherited by the `#child` element, resulting in a `content: ;` declaration being set.
+This is because `attr()` — similar to custom properties that use the `var()` function — gets substituted at [computed value time](https://www.bram.us/2024/02/26/css-what-is-iacvt/#custom-properties). With the modern behavior, `--x` first tries to read the `data-attr` attribute from the `#parent` element, which results in an empty string because there is no such attribute on `#parent`. That empty string then gets inherited by the `#child` element, resulting in a `content: ;` declaration being set.
 
 To prevent this sort of situation, don't pass inherited `attr()` values onto children unless you explicitly want to.
 
 ### Feature detection
 
-You can feature detect support for modern `attr()` syntax using the {{CSSxRef("@supports")}} at-rule. In the test, try to assign advanced `attr()` to a (non-custom) CSS property.
+You can feature detect support for modern `attr()` syntax using the {{CSSxRef("@supports")}} at-rule. In the test, try to assign an advanced `attr()` to a (non-custom) CSS property.
 
 For example:
 
@@ -357,7 +357,7 @@ The HTML contains four cards with different `id` attributes and a "Shuffle cards
 ```html hidden
 <div class="warning">
   <p>
-    You browser does not support advanced <code>attr()</code>. As a result, this
+    Your browser does not support advanced <code>attr()</code>. As a result, this
     demo won’t do anything.
   </p>
 </div>
@@ -448,7 +448,7 @@ On each card, the `attr()` function gets the `id` attribute and parses it into a
 
 #### JavaScript
 
-When the `<button>` is pressed the cards are shuffled. This is done by randomizing the order of an array containing references to all the cards and then updating the {{CSSxRef("order")}} property of each card to its new array index position.
+When the `<button>` is pressed, the cards are shuffled. This is done by randomizing the order of an array containing references to all the cards and then updating the {{CSSxRef("order")}} property of each card to its new array index position.
 
 To animate each card to its new position, [View Transitions](/en-US/docs/Web/API/View_Transition_API/Using) are used. This is done by wrapping the `order` update in a call to [`document.startViewTransition`](/en-US/docs/Web/API/Document/startViewTransition).
 
