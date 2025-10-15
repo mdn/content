@@ -6,7 +6,7 @@ browser-compat: css.types.transform-function.translate3d
 sidebar: cssref
 ---
 
-The **`translate3d()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) repositions an element in 3D space. Its result is a
+The **`translate3d()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) repositions an element in 3D space. Its result is a
 {{cssxref("&lt;transform-function&gt;")}} data type.
 
 {{InteractiveExample("CSS Demo: translate3d()")}}

@@ -101,7 +101,7 @@ The HTML contains a {{htmlelement("div")}} element declared as a popover using t
 
 ```css hidden
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 [popover] {

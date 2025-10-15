@@ -154,4 +154,3 @@ The `content="3;url=https://www.mozilla.org"` attribute will redirect page to `h
 
 - [Standard metadata names](/en-US/docs/Web/HTML/Reference/Elements/meta/name)
 - [Learn: `<meta>`](/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#metadata_the_meta_element)
-- [The viewport meta tag](/en-US/docs/Web/HTML/Guides/Viewport_meta_element)

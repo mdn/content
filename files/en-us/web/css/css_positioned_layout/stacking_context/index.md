@@ -113,7 +113,7 @@ Every container element has an {{cssxref("opacity")}} of less than `1` and a {{c
 html {
   padding: 20px;
   font:
-    12px/20px Arial,
+    12px/20px "Arial",
     sans-serif;
 }
 h1 {

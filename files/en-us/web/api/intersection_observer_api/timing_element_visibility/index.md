@@ -55,7 +55,7 @@ We provide styles for the {{HTMLElement("body")}} and {{HTMLElement("main")}} el
 
 ```css
 body {
-  font-family: "Open Sans", "Arial", "Helvetica", sans-serif;
+  font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
   background-color: aliceblue;
 }
 

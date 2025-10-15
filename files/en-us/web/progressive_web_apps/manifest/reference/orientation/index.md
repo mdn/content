@@ -205,7 +205,7 @@ The example below illustrates how a web app's layout might appear when a mobile 
 
 .label {
   margin-top: 10px;
-  font-family: Arial, sans-serif;
+  font-family: "Arial", sans-serif;
   font-size: 15px;
 }
 ```

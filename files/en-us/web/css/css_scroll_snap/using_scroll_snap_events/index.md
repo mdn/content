@@ -144,7 +144,7 @@ h2 {
 }
 
 section {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   border-radius: 5px;
   background: #eeeeee;
   box-shadow:
@@ -283,7 +283,7 @@ body {
 }
 
 section {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   border-radius: 5px;
   background: #eeeeee;
   box-shadow:

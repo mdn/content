@@ -88,9 +88,9 @@ article {
   padding: 1.5em;
   font:
     16px "Open Sans",
-    Verdana,
-    Arial,
-    Helvetica,
+    "Verdana",
+    "Helvetica",
+    "Arial",
     sans-serif;
 }
 
