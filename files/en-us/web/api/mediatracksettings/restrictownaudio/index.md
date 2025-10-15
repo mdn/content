@@ -12,13 +12,13 @@ browser-compat: api.MediaStreamTrack.applyConstraints.restrictOwnAudio_constrain
 
 The {{domxref("MediaTrackSettings")}} dictionary's **`restrictOwnAudio`** property controls whether system audio originating from the capturing tab is filtered out of screen capture, allowing for cleaner screen recordings in some cases.
 
-For example, if the capturing web page itself is playing embedded audio or video, the resulting audio would be included in the capture. This could lead to an undesirable echo or interfere with the intended audio sources from other tabs or applications, so removing it from the capture is desirable.
+For example, if the capturing web page itself is playing embedded audio or video, that audio would be included in the capture. Since this could lead to an undesirable echo or interfere with the intended audio sources from other tabs or applications, removing it from the capture is desirable.
 
 ## Value
 
 A boolean value, where `true` enables the capturing tab's system audio restriction and `false` disables it.
 
-If the value is `true`, the user agent will attempt to remove audio originating from the captured audio produced by the tab that called {{domxref("MediaDevices.getDisplayMedia()")}} to initiate screen capture. If removal via processing fails, the user agent may exclude all audio originating from the capturing tab.
+If the value is `true`, the user agent will attempt to remove any audio originating from the captured audio produced by the tab that called {{domxref("MediaDevices.getDisplayMedia()")}} to initiate screen capture. If removal of audio via processing fails, the user agent may exclude all audio originating from the capturing tab.
 
 > [!NOTE]
 > If the captured display surface doesn't include system audio, this setting will have no effect.

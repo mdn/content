@@ -8,7 +8,7 @@ browser-compat: api.MediaStreamTrack.applyConstraints.restrictOwnAudio_constrain
 
 {{APIRef("Media Capture and Streams")}}
 
-The {{domxref("MediaTrackSupportedConstraints")}} dictionary's **`restrictOwnAudio`** property is a read-only Boolean value which is present (and set to `true`) in the object returned by {{domxref("MediaDevices.getSupportedConstraints()")}} if and only if the {{Glossary("user agent")}} supports the `restrictOwnAudio` constraint. If the constraint isn't supported, it's not included in the list, so this value will never be `false`.
+The {{domxref("MediaTrackSupportedConstraints")}} dictionary's **`restrictOwnAudio`** property is a read-only boolean value which is present (and set to `true`) in the object returned by {{domxref("MediaDevices.getSupportedConstraints()")}} if and only if the {{Glossary("user agent")}} supports the `restrictOwnAudio` constraint. If the constraint isn't supported, it's not included in the list, so this value will never be `false`.
 
 You can access the supported constraints dictionary by calling {{domxref("MediaDevices.getSupportedConstraints()", "navigator.mediaDevices.getSupportedConstraints()")}}.
 
