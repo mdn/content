@@ -24,7 +24,7 @@ The [CSS logical properties and values module](/en-US/docs/Web/CSS/CSS_logical_p
 
 ### Inline base and block flow directions
 
-The _inline base direction_ is the primary direction in which content is ordered on a line and defines the "start" and "end" of a line are. The {{cssxref("direction")}} property specifies the inline base direction of a box and, together with the The {{cssxref("unicode-bidi")}} property and the inherent directionality of any text content, determines the ordering of inline-level content within a line.
+The _inline base direction_ is the primary direction in which content is ordered on a line and defines the "start" and "end" of a line. The {{cssxref("direction")}} property specifies the inline base direction of a box and, together with the {{cssxref("unicode-bidi")}} property and the inherent directionality of any text content, determines the ordering of inline-level content within a line.
 
 The _block flow direction_ is the direction in which block-level boxes stack and the direction in which line boxes stack within a block container. The {{cssxref("writing-mode")}} property determines the block flow direction.
 
@@ -32,7 +32,7 @@ The _block flow direction_ is the direction in which block-level boxes stack and
 
 Different writing systems have different writing modes. A horizontal writing mode is one with horizontal lines of text, i.e., a downward or upward block flow. A vertical writing mode is one with vertical lines of text, i.e., a leftward or rightward block flow.
 
-Latin- and Slavic-based systems are typically written using a left-to-right inline direction with a top-to-bottom block flow direction. Some Latin-based languages include English, Spanish, Romanian, and Portuguese. Some Slavic-based languages include Ukrainian, Polish, and Czech.
+Latin- and Slavic-based systems are typically written using a left-to-right inline direction with a top-to-bottom block flow direction. Latin-based languages include English, Spanish, Romanian, and Portuguese. Slavic-based languages include Ukrainian, Polish, and Czech.
 
 ```html
 <p lang="en-US" dir="auto">This is written in English</p>
@@ -47,21 +47,21 @@ Arabic-based systems are typically written using a right-to-left inline directio
 <p lang="ku-CRB" dir="auto">ئەمە بە کوردی نووسراوە</p>
 ```
 
-Han-based systems are commonly written using a left-to-right inline direction with a top-to-bottom block flow direction, or a top-to-bottom inline direction with a right-to-left block flow direction. Traditionally, Chinese, Vietnamese, Korean, and Japanese are written vertically in columns, going from top-top-bottom, with a right to left block direction, but online will often be rendered horizontally, going from left-to-right.
+Han-based systems are commonly written using a left-to-right inline direction with a top-to-bottom block flow direction, or a top-to-bottom inline direction with a right-to-left block flow direction. Traditionally, Chinese, Vietnamese, Korean, and Japanese are written vertically in columns, going from top to bottom, with a right-to-left block direction, but will often be rendered horizontally online, going from left to right.
 
 ```html
 <p lang="jp-JP" dir="auto">これはベトナム語で書かれています</p>
 ```
 
-Mongolian-based systems are typically written vertically, top to bottom, in columns that flow left to right; a top-to-bottom inline direction with a left-to-right block flow direction. This is different from Chinese, Japanese and Korean, whose vertical text columns are read right to left. It derives from the fact that this script descended from a script (Old Uyghur) that was written right to left.
+Mongolian-based systems are typically written vertically, top to bottom, in columns that flow left to right; a top-to-bottom inline direction with a left-to-right block flow direction. This is different from Chinese, Japanese, and Korean, whose vertical text columns are read right to left. It derives from the fact that this script descended from a script (Old Uyghur) that was written right to left.
 
 ```html
 <p lang="mn-MONG" dir="auto">Үүнийг монгол хэлээр бичжээ</p>
 ```
 
-To render the writing modes correctly, we make use of the global HTML [`dir`](/en-US/docs/Web/HTML/Reference/Global_attributes/dir) attribute. Because browsers can turn off CSS styling, it is recommended to use the `dir` attribute and {{htmlelement("bdo")}} element to ensure correct bidirectional layout in the absence of a style sheet, rather than the CSS {{cssxref("direction")}} property.
+To render the writing modes correctly, we use the global HTML [`dir`](/en-US/docs/Web/HTML/Reference/Global_attributes/dir) attribute. Because browsers can turn off CSS styling, it is recommended to use the `dir` attribute and {{htmlelement("bdo")}} element to ensure correct bidirectional layout in the absence of a style sheet, rather than the CSS {{cssxref("direction")}} property.
 
-For vertical languages, we made use of the {{cssxref("writing-mode")}} and {{cssxref("text-orientation")}} properties:
+For vertical languages, we use the {{cssxref("writing-mode")}} and {{cssxref("text-orientation")}} properties:
 
 ```css
 [lang|="jp"] {
@@ -85,7 +85,7 @@ For vertical languages, we made use of the {{cssxref("writing-mode")}} and {{css
 
 ## Mixing writing modes
 
-While these different languages have different writing mode, sites that are predominantly of one type of writing mode may contain content from a different language or writing mode. For example, articles in an Arabic, right-to-left language news site, may include Latin-style numbers, which are left to right. Many magazines and newspapers mix different writing modes on the same page. This guide, which demonstrates different writing modes, does too.
+While these different languages have different writing modes, sites that predominantly use one type of writing mode may contain content from a different language or writing mode. For example, articles in an Arabic, right-to-left language news site, may include Latin-style numbers, which are left to right. Many magazines and newspapers mix different writing modes on the same page. This guide, which demonstrates different writing modes, does too.
 
 The typographic mode determines whether to use typographic conventions specific to vertical flow for vertical scripts (vertical typographic mode) or to use the typographic conventions of horizontal writing modes (horizontal typographic mode). This concept distinguishes vertical typesetting from rotated horizontal typesetting.
 
