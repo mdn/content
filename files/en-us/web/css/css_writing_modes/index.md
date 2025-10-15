@@ -14,10 +14,6 @@ A _writing mode_ in CSS is determined by the {{cssxref("writing-mode")}}, {{cssx
 
 Some horizontal languages are left-to-right, including Latin and Indic scripts. Other horizontal languages are written right-to-left, including Hebrew or Arabic scripts. Sometimes text needs to be bidirectional, such as when when mixing left-to-right and right-to-left scripts. Some languages have vertical orientations, notably some Asian scripts.
 
-The inline base direction is the primary direction in which content is ordered on a line and defines the "start" and "end" of a line are. The direction property specifies the inline base direction of a box and, together with the unicode-bidi property and the inherent directionality of any text content, determines the ordering of inline-level content within a line.
-
-The block flow direction is the direction in which block-level boxes stack and the direction in which line boxes stack within a block container. The writing-mode property determines the block flow direction.
-
 The CSS writing module addresses the orientations of all writing modes. Other modules, such as the [CSS ruby layout](/en-US/docs/Web/CSS/) module, provide rendering models and formatting controls related to the display text annotations.
 
 ## Reference

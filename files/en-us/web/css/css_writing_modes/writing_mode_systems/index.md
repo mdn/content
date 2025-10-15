@@ -22,6 +22,12 @@ Blocks are only displayed from the top to the bottom of the page if you are usin
 
 The [CSS logical properties and values module](/en-US/docs/Web/CSS/CSS_logical_properties_and_values#properties) defines {{glossary("flow relative values", "flow-relative mappings")}} for many of the {{glossary("physical properties")}} and values in CSS, which is helpful in understanding the [basic concepts of logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values).
 
+### Inline base and block flow directions
+
+The _inline base direction_ is the primary direction in which content is ordered on a line and defines the "start" and "end" of a line are. The {{cssxref("direction")}} property specifies the inline base direction of a box and, together with the The {{cssxref("unicode-bidi")}} property and the inherent directionality of any text content, determines the ordering of inline-level content within a line.
+
+The _block flow direction_ is the direction in which block-level boxes stack and the direction in which line boxes stack within a block container. The {{cssxref("writing-mode")}} property determines the block flow direction.
+
 ## Writing system modes
 
 Different writing systems have different writing modes. A horizontal writing mode is one with horizontal lines of text, i.e., a downward or upward block flow. A vertical writing mode is one with vertical lines of text, i.e., a leftward or rightward block flow.
