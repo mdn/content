@@ -122,7 +122,7 @@ section {
 }
 ```
 
-then the value will become invalid at computed-value time and the `background-color` will end up being set to `transparent`.
+then the value will become invalid at computed-value time (since `50%` is not a `<number>` but a `<percentage>`) and the `background-color` will end up being set to `transparent`.
 
 ### Specifying multiple permitted types
 
