@@ -12,6 +12,9 @@ sidebar: cssref
 
 The **`::-moz-meter-bar`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Glossary/Pseudo-element) represents the meter gauge in a {{HTMLElement("meter")}} element. It is used for selecting and applying styles to the gauge inside a meter element.
 
+> [!NOTE]
+> By default, the `<meter>` element uses native styling. To apply your own styles, first set `appearance: none` on the `<meter>` element, and then style using `::-moz-meter-bar`.
+
 ## Syntax
 
 ```css
