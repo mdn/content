@@ -1,5 +1,5 @@
 ---
-title: Firefox 107 for developers
+title: Firefox 107 release notes for developers
 short-title: Firefox 107
 slug: Mozilla/Firefox/Releases/107
 page-type: firefox-release-notes

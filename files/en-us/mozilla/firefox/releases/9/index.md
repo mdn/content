@@ -1,5 +1,5 @@
 ---
-title: Firefox 9 for developers
+title: Firefox 9 release notes for developers
 short-title: Firefox 9
 slug: Mozilla/Firefox/Releases/9
 page-type: firefox-release-notes

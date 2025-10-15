@@ -1,5 +1,5 @@
 ---
-title: Firefox 68 for developers
+title: Firefox 68 release notes for developers
 short-title: Firefox 68
 slug: Mozilla/Firefox/Releases/68
 page-type: firefox-release-notes

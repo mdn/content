@@ -1,5 +1,5 @@
 ---
-title: Firefox 121 for developers
+title: Firefox 121 release notes for developers
 short-title: Firefox 121
 slug: Mozilla/Firefox/Releases/121
 page-type: firefox-release-notes

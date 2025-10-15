@@ -1,5 +1,5 @@
 ---
-title: Firefox 53 for developers
+title: Firefox 53 release notes for developers
 short-title: Firefox 53
 slug: Mozilla/Firefox/Releases/53
 page-type: firefox-release-notes

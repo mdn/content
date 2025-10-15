@@ -1,5 +1,5 @@
 ---
-title: Firefox 135 for developers
+title: Firefox 135 release notes for developers
 short-title: Firefox 135
 slug: Mozilla/Firefox/Releases/135
 page-type: firefox-release-notes

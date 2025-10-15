@@ -1,5 +1,5 @@
 ---
-title: Firefox 111 for developers
+title: Firefox 111 release notes for developers
 short-title: Firefox 111
 slug: Mozilla/Firefox/Releases/111
 page-type: firefox-release-notes

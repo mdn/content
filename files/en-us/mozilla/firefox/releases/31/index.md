@@ -1,5 +1,5 @@
 ---
-title: Firefox 31 for developers
+title: Firefox 31 release notes for developers
 short-title: Firefox 31
 slug: Mozilla/Firefox/Releases/31
 page-type: firefox-release-notes
