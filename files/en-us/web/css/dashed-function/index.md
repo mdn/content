@@ -12,13 +12,13 @@ The **`<dashed-function>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/W
 
 A `<dashed-function>` value consists of the [`--function-name`](/en-US/docs/Web/CSS/@function#--function-name), followed by parentheses containing the function's arguments (for example, `--my-function(30px, 3)`).
 
-You can include `<dashed-function>` values in place of regular CSS property values, in cases where you want to dynamically calculate the values based on function logic rather than providing static values.
+You can include `<dashed-function>` values in place of regular CSS property values or property value components, in cases where you want to dynamically calculate the values based on function logic rather than providing static values.
 
 In cases where you want to [pass comma-containing values as arguments](/en-US/docs/Web/CSS/@function#passing_comma-containing_values_as_arguments), you can do so by wrapping them in curly braces (`{ }`).
 
 ## Examples
 
-For more complete example walkthroughs, see our [Using CSS custom functions](/en-US/docs/Web/CSS/CSS_custom_functions_and_mixins/Using_custom_functions) guide.
+For more examples, see our [Using CSS custom functions](/en-US/docs/Web/CSS/CSS_custom_functions_and_mixins/Using_custom_functions) guide.
 
 ### Basic `<dashed-function>` usage
 

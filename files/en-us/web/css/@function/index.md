@@ -54,7 +54,7 @@ A typical CSS function looks like this:
 }
 ```
 
-The function has a name of `--transparent` and takes two custom properties as parameters: `--color` and `--alpha`, which can be used locally inside the function body. The body contains a single line, which is a `result` descriptor that defines the value returned by the function. The value of the `result` descriptor uses [CSS relative color syntax](/en-US/docs/Web/CSS/CSS_colors/Relative_colors) to convert the input `--color` value into an [`oklch()`](/en-US/docs/Web/CSS/color_value/oklch) color with the alpha channel value specified in the input `--alpha` value.
+The function has a name of `--transparent` and takes two custom properties as parameters, `--color` and `--alpha`, which can be used locally inside the function body. The body contains a single line, which is a `result` descriptor that defines the value returned by the function. The value of the `result` descriptor uses [CSS relative color syntax](/en-US/docs/Web/CSS/CSS_colors/Relative_colors) to convert the input `--color` value into an [`oklch()`](/en-US/docs/Web/CSS/color_value/oklch) color with the alpha channel value specified in the input `--alpha` value.
 
 You can then call this function anywhere you want to produce a semi-transparent version of an existing color, for example:
 
@@ -65,28 +65,10 @@ section {
 }
 ```
 
-The function is called by using {{cssxref("&lt;dashed-function>")}} syntax, which is the function name with parentheses on the end, and the desired argument values specified inside.
+The function is called by using {{cssxref("&lt;dashed-function>")}} syntax, which is the function name with parentheses on the end. The desired argument values are specified inside the parentheses.
 
 > [!NOTE]
 > If multiple CSS functions are given the same name, the function in the stronger cascade {{cssxref("@layer")}} wins. If all of them are in the same layer, the function defined last in the source order wins.
-
-### Passing comma-containing values as arguments
-
-In the next example, the `--max-plus-x()` function expects to be passed a comma-separated list of lengths and a single length as arguments. It uses the CSS {{cssxref("max()")}} function to determine which of the list of lengths is the largest, adds it to the single length, then returns the result.
-
-```css
-@function --max-plus-x(--list <length>#, --x <length>) {
-  result: calc(max(var(--list)) + var(--x));
-}
-```
-
-Because the first argument needs to be a comma-separated list, you can include it when calling the function by wrapping the value in curly braces:
-
-```css
-div {
-  width: --max-plus-x({1px, 7px, 2px}, 3px); /* 10px */
-}
-```
 
 ### Specifying data types
 
@@ -107,7 +89,7 @@ section {
 }
 ```
 
-then the value will become invalid at computed-value time and the `background-color` will end up being set to `transparent`.
+then the value will become invalid at computed-value time (because the specified `--alpha` argument is a `<percentage>` and not a `<number>` as expected) and the `background-color` will end up being set to `transparent`.
 
 You can specify multiple accepted data types using a {{cssxref("type()")}} function with the `|` symbol as a separator, for example:
 
@@ -118,7 +100,7 @@ You can specify multiple accepted data types using a {{cssxref("type()")}} funct
 }
 ```
 
-With this adjustment, the `--transparent(var(--base-color), 50%)` value will now be valid.
+With this adjustment, the `--transparent(var(--base-color), 50%)` function call is now valid.
 
 ### Specifying default values
 
@@ -141,6 +123,24 @@ section {
 
 > [!NOTE]
 > If an invalid value is passed in as a function argument and a default value is specified in that parameter definition, the invalid value will be ignored, and the default value will be used instead.
+
+### Passing comma-containing values as arguments
+
+In the next example, the `--max-plus-x()` function expects to be passed a comma-separated list of lengths and a single length as arguments. It uses the CSS {{cssxref("max()")}} function to determine which of the list of lengths is the largest, adds it to the single length, then returns the result.
+
+```css
+@function --max-plus-x(--list <length>#, --x <length>) {
+  result: calc(max(var(--list)) + var(--x));
+}
+```
+
+Because the first argument needs to be a comma-separated list, it could be misinterpreted as three separate arguments. To get around this problem, you can wrap the value in curly braces when passing it into the function call:
+
+```css
+div {
+  width: --max-plus-x({1px, 7px, 2px}, 3px); /* 10px */
+}
+```
 
 ### Including custom properties inside functions
 
@@ -228,7 +228,7 @@ You can include multiple `result` descriptors to express different results for d
 >
 > There are no early returns in CSS functions like there are in JavaScript functions. In the above function, if the media query was written first before the single `result` line, the `result` would always be `var(--wide)` because it would override `var(--narrow)` in cases where the media query test returns true.
 
-We could rewrite the function to use an `if()` function instead:
+We could rewrite the CSS custom function to use an `if()` function instead:
 
 ```css
 @function --narrow-wide(--narrow, --wide) {
@@ -242,7 +242,7 @@ We could rewrite the function to use an `if()` function instead:
 
 ## Examples
 
-For more complete example walkthroughs, see our [Using CSS custom functions](/en-US/docs/Web/CSS/CSS_custom_functions_and_mixins/Using_custom_functions) guide.
+For more examples, see our [Using CSS custom functions](/en-US/docs/Web/CSS/CSS_custom_functions_and_mixins/Using_custom_functions) guide.
 
 ### Basic `@function` usage
 
@@ -266,7 +266,7 @@ In our styles, we first define the CSS custom function. The function is called `
 }
 ```
 
-Next, we define a `--base-spacing` custom property with a value of `10px`. We assign that property to be the value of our {{cssxref("border-radius")}}, but then double it for our {{cssxref("padding")}} value using our `--double()` custom function.
+Next, we define a `--base-spacing` custom property with a value of `10px`. We assign that property to the {{cssxref("border-radius")}} value, but then double it for the {{cssxref("padding")}} value using the `--double()` custom function.
 
 ```css hidden live-sample___basic-example
 html,
