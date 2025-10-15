@@ -250,17 +250,15 @@ This example shows a basic function that doubles the value passed into it.
 
 #### HTML
 
-The markup features a {{htmlelement("div")}} element with a {{htmlelement("p")}} inside it containing some text content.
+The markup features a {{htmlelement("p")}} element containing some text content:
 
 ```html live-sample___basic-example
-<div>
-  <p>Some content</p>
-</div>
+<p>Some content</p>
 ```
 
 #### CSS
 
-In our styles we first define the CSS custom function. The function is called `--double`, and accepts a single parameter of any type, which we've called `--value`. Inside the function body, we include a `result` descriptor that uses the {{cssxref("calc()")}} function to double the passed argument:
+In our styles, we first define the CSS custom function. The function is called `--double`, and accepts a single parameter of any type, which we've called `--value`. Inside the function body, we include a `result` descriptor that uses the {{cssxref("calc()")}} function to double the passed argument:
 
 ```css live-sample___basic-example
 @function --double(--value) {
@@ -271,31 +269,25 @@ In our styles we first define the CSS custom function. The function is called `-
 Next, we define a `--base-spacing` custom property with a value of `10px`. We assign that property to be the value of our {{cssxref("border-radius")}}, but then double it for our {{cssxref("padding")}} value using our `--double()` custom function.
 
 ```css hidden live-sample___basic-example
-html {
-  font-family: system-ui;
+html, body {
   height: 100%;
 }
 
 body {
   margin: 0;
-  height: inherit;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-p {
-  margin: 0;
+  display: grid;
+  place-items: center;
+  font-family: system-ui;
 }
 ```
 
 ```css live-sample___basic-example
-div {
+p {
   --base-spacing: 10px;
   border-radius: var(--base-spacing);
   padding: --double(var(--base-spacing));
   width: 50%;
-  background-color: magenta;
+  background-color: wheat;
 }
 ```
 
