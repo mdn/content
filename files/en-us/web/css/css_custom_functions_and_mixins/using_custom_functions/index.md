@@ -258,9 +258,9 @@ Our [gradient-function](https://mdn.github.io/dom-examples/css-custom-functions/
 ```css
 @function --shippo-pattern(--size <length>, --tint <color>) {
   result:
-    radial-gradient(closest-side, transparent 98%, rgba(0 0 0 / 0.3) 99%) 0 0 /
+    radial-gradient(closest-side, transparent 98%, rgb(0 0 0 / 0.3) 99%) 0 0 /
       var(--size) var(--size),
-    radial-gradient(closest-side, transparent 98%, rgba(0 0 0 / 0.3) 99%)
+    radial-gradient(closest-side, transparent 98%, rgb(0 0 0 / 0.3) 99%)
       calc(var(--size) / 2) calc(var(--size) / 2) / var(--size) var(--size)
       var(--tint);
 }
