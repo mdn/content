@@ -43,5 +43,5 @@ Solo will instantly create a beautiful website so you can grow your business. Co
 
 ## Mozilla.ai
 
-[Mozilla.ai](http://Mozilla.ai/?utm_source=www.developer.mozilla.org&utm_medium=referral&utm_campaign=products) is creating the infrastructure and products to build intelligent systems that align with your goals. We believe the next generation of AI solutions should be trustworthy, transparent, and controllable.
-[**Learn more**](http://mozilla.ai/?utm_source=www.developer.mozilla.org&utm_medium=referral&utm_campaign=products)
+[Mozilla.ai](https://www.mozilla.ai/?utm_source=www.developer.mozilla.org&utm_medium=referral&utm_campaign=products) is creating the infrastructure and products to build intelligent systems that align with your goals. We believe the next generation of AI solutions should be trustworthy, transparent, and controllable.
+[**Learn more**](https://www.mozilla.ai/?utm_source=www.developer.mozilla.org&utm_medium=referral&utm_campaign=products)
