@@ -26,17 +26,15 @@ This example shows a basic function that returns a semi-transparent version of t
 
 #### HTML
 
-The markup features a {{htmlelement("section")}} element with a {{htmlelement("p")}} inside it containing some text content.
+The markup features a {{htmlelement("p")}} containing some text content:
 
 ```html live-sample___basic-example
-<section>
-  <p>Some content</p>
-</section>
+<p>Some content</p>
 ```
 
 #### CSS
 
-In our styles we first define the CSS custom function. The function is called `--transparent`, and accepts two parameters — a color and a numeric alpha channel value. Inside the function body, we use [relative color syntax](/en-US/docs/Web/CSS/CSS_colors/Relative_colors) to transform the passed color into an [`oklch()`](/en-US/docs/Web/CSS/color_value/oklch) color with an alpha channel equal to the passed alpha value; this becomes the function's `result`:
+In our styles, we first define the CSS custom function. The function is called `--transparent` and accepts two parameters: a color and a numeric alpha channel value. Inside the function body, we use [relative color syntax](/en-US/docs/Web/CSS/CSS_colors/Relative_colors) to transform the passed color into an [`oklch()`](/en-US/docs/Web/CSS/color_value/oklch) color with an alpha channel equal to the passed alpha value; this becomes the function's `result`:
 
 ```css live-sample___basic-example
 @function --transparent(--color <color>, --alpha <number>) {
@@ -44,39 +42,35 @@ In our styles we first define the CSS custom function. The function is called `-
 }
 ```
 
-Next, we define a `--base-color` custom property with a value of `#faa6ff`. We assign that property to be the value of the `<section>` element's {{cssxref("border")}} color, and then set its {{cssxref("background-color")}} value to equal a transparent version of the same color. This is done by setting the value to equal the `<dashed-function>` syntax, specifying the `--transparent()` function and passing it arguments of `var(--base-color)` and `0.8`.
+Next, we define a `--base-color` custom property with a value of `#faa6ff` on the `:root` element. We assign that property to be the value of the `<p>` element's {{cssxref("border")}} color, and then set its {{cssxref("background-color")}} value to equal a transparent version of the same color. This is done by setting the value to equal the `<dashed-function>` syntax, specifying the `--transparent()` function and passing it arguments of `var(--base-color)` and `0.8`.
 
 ```css hidden live-sample___basic-example
-html {
-  font-family: system-ui;
+html, body {
   height: 100%;
 }
 
 body {
   margin: 0;
-  height: inherit;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-items: center;
+  font-family: system-ui;
   background-image: repeating-linear-gradient(
     -45deg,
     transparent 0 20px,
     lightgrey 20px 40px
   );
 }
-
-p {
-  margin: 0;
-}
 ```
 
 ```css live-sample___basic-example
-section {
+:root {
+  --base-color: #faa6ff;
+}
+
+p {
   width: 50%;
   padding: 30px;
   border-radius: 20px;
-
-  --base-color: #faa6ff;
   border: 3px solid var(--base-color);
   background-color: --transparent(var(--base-color), 0.8);
 }
