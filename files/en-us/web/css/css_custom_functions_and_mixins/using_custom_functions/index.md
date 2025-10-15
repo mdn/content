@@ -5,9 +5,9 @@ page-type: guide
 sidebar: cssref
 ---
 
-CSS custom functions enable you to create reusable blocks of CSS code that can accept arguments, contain complex logic (defined using features such as CSS {{cssxref("if()")}} functions and {{cssxref("@media")}} at-rules), and return values based on that logic. They work in a similar manner to [CSS custom properties](/en-US/docs/Web/CSS/--*), but provide a lot more flexibility.
+CSS custom functions enable you to create reusable blocks of CSS code that can accept arguments, contain complex logic (defined using features such as CSS {{cssxref("if()")}} functions and {{cssxref("@media")}} at-rules), and return values based on that logic. They work similarly to [CSS custom properties](/en-US/docs/Web/CSS/--*), but provide more flexibility.
 
-In this article we'll show you how to use them, and present some real-world examples.
+In this article, we'll show you how to use them and present some real-world examples.
 
 ## Function basics
 
@@ -24,13 +24,13 @@ After the `@function` syntax, we define a name for the function: `--half-opacity
 > [!NOTE]
 > If multiple CSS functions are given the same name, the function in the stronger cascade {{cssxref("@layer")}} wins. If all of them are in the same layer, the function defined last in the source order wins.
 
-Inside the curly braces is the function **body**, which is where the function logic is defined. This can contain multiple declarations including custom properties (which will be locally scoped to the function body), at-rules such as {{cssxref("@media")}}, and the [`result`](/en-US/docs/Web/CSS/@function#result_2) descriptor. The value of the `result` descriptor is evaluated to determine the value returned by the function.
+Inside the curly braces is the function **body**, which is where the function logic is defined. This can contain multiple declarations, including custom properties (which will be locally scoped to the function body), at-rules such as {{cssxref("@media")}}, and the [`result`](/en-US/docs/Web/CSS/@function#result_2) descriptor. The value of the `result` descriptor is evaluated to determine the value returned by the function.
 
 Here, we are setting `result` to the value `0.5`: the `--half-opacity()` function will always return `0.5`.
 
 ### Why "result" and not "return"?
 
-The `result` descriptor sounds similar in functionality to the JavaScript function [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return) statement. However, `return` is not used in CSS functions. This is because CSS functions do not return a value as soon as a `result` declaration is reached, as is the case with the JavaScript `return` statement.
+The `result` descriptor sounds similar in functionality to the JavaScript function [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return) statement. However, `return` is not used in CSS functions. This is because, unlike JavaScript `return` statements, CSS functions do not return a value as soon as a `result` declaration is reached.
 
 The body of a CSS function is evaluated from start to finish. If there are multiple `result` declarations included in the body, the last one in the source order overrides the earlier ones.
 
@@ -46,7 +46,7 @@ h2 {
 
 Since this function always returns the value `0.5`, the previous declaration is the equivalent of `opacity: 0.5`. This isn't very useful. You might as well just use a custom property, or the literal value `0.5`.
 
-Let's move on and look at how we can make full use of CSS functions.
+Let's move on to look at how we can use CSS functions.
 
 ## Feature detecting CSS functions
 
@@ -73,7 +73,7 @@ You can then define a "feature not supported" banner, and set its {{cssxref("dis
 }
 ```
 
-In browsers that support custom functions, `display` will be set to `none`, and the support banner will be hidden. In non-supporting browsers, the `display: --supports()` declaration will be invalid and therefore ignored, so the banner will be displayed.
+In browsers that support custom functions, `display` will be set to `none`, and the support banner will be hidden. In non-supporting browsers, the `display: --supports()` declaration will be invalid and therefore ignored; therefore, the banner will be displayed.
 
 ## Specifying function parameters
 
@@ -173,7 +173,7 @@ section {
 
 You can see the `--transparent()` function in action in our [color-adjust-functions](https://mdn.github.io/dom-examples/css-custom-functions/color-adjust-functions/) example (see the [source code](https://github.com/mdn/dom-examples/tree/main/css-custom-functions/color-adjust-functions)).
 
-This example also includes functions called `--lighter()` and `--darker()` that work in a similar way to `--transparent()`, but return lighter and darker variants of a color, respectively:
+This example also includes functions called `--lighter()` and `--darker()` that work similarly to `--transparent()`, but return lighter and darker variants of a color, respectively:
 
 ```css
 @function --transparent(--color <color>, --alpha <number>: 0.8) returns <color> {
@@ -222,7 +222,7 @@ The `--narrow-wide()` function accepts two parameters, `--narrow` and `--wide`. 
 }
 ```
 
-This function can be used to provide responsive value options in multiple different contexts:
+This function can be used to provide responsive value options in multiple contexts:
 
 ```css
 body {
