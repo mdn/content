@@ -72,7 +72,6 @@ The CSS writing module addresses the orientations of all writing modes. Other mo
 - {{glossary("Flow relative values")}}
 - {{glossary("Inset properties")}}
 - {{glossary("Logical properties")}}
-
 - {{glossary("Physical properties")}}
 
 [CSS display](/en-US/docs/Web/CSS/CSS_display) module
@@ -97,7 +96,6 @@ The CSS writing module addresses the orientations of all writing modes. Other mo
 - {{htmlelement("bdo")}}
 - {{htmlelement("blockquote")}}
 - {{htmlelement("q")}}
-
 - {{htmlelement("ruby")}}
 - {{htmlelement("sub")}}
 - {{htmlelement("sup")}}

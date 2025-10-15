@@ -7,16 +7,21 @@ sidebar: cssref
 
 CSS supports different content directionalities, or **writing modes**, including right-to-left, left-to-right, and top-to-bottom. The guide provides a brief overview of writing mode systems and their directionalities.
 
-## Block direction versus inline direction
+## Block and inline
 
 Before looking into the directionality of various writing systems, it's important to understand the terms "block" and "inline".
 
-Everything on a web page is either an **inline** or **block** box.
+### Dimensions and directions
+
+Everything on a web page is either an **inline** or **block** box. The _inline dimension_ is the dimension along which a line of text runs in the writing mode in use. The inline dimension is perpendicular to _block dimension_, the dimension in which blocks — such as paragraphs — display one after the other.
+
+In an English document, with the text running horizontally left-to-right, or an Arabic document with the text running horizontally right-to-left, the inline dimension is horizontal, while the _inline direction_ is left-to-right and right-to-left, respectively. In both cases, the block dimension is vertical, with the _block direction_ being top-to-bottom. In vertical writing mode, such as Japanese, the inline dimension is vertical, as lines in that writing mode run vertically, while the block dimension is horizontal.
+
 The block and inline directions are determined by the writing mode of the document. They are not based on physical directions like left and right and top and bottom.
 
-The _outer display_ type of boxes in a [normal flowing layout](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model#normal_flow) determine how the box behaves alongside other elements on the page. Inline boxes are the boxes that wrap each line of text. Block boxes will extend in the inline direction to fill the space available in its container if {{cssxref("inline-size")}} is not specified.
+### Inline and block boxes
 
-The _inline dimension_ is the dimension along which a line of text runs in the writing mode in use. The inline dimension is perpendicular to _block dimension_, the direction in which blocks — such as paragraphs — display one after the other. In an English document with the text running horizontally left-to-right, or an Arabic document with the text running horizontally right-to-left, the inline dimension is horizontal and the block dimension is vertical. In vertical writing mode, such as Japanese, the inline dimension vertical, as lines in that writing mode run vertically, while the block dimension is horizontal.
+The _outer display_ type of boxes in a [normal flowing layout](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model#normal_flow) determine how the box behaves alongside other elements on the page. Inline boxes are the boxes that wrap each line of text. Block boxes will extend in the inline direction to fill the space available in its container if {{cssxref("inline-size")}} is not specified.
 
 Blocks are only displayed from the top to the bottom of the page if you are using a writing mode that displays text horizontally, such as English.
 
@@ -53,7 +58,7 @@ Han-based systems are commonly written using a left-to-right inline direction wi
 <p lang="jp-JP" dir="auto">これはベトナム語で書かれています</p>
 ```
 
-Mongolian-based systems are typically written vertically, top to bottom, in columns that flow left to right; a top-to-bottom inline direction with a left-to-right block flow direction. This is different from Chinese, Japanese, and Korean, whose vertical text columns are read right to left. It derives from the fact that this script descended from a script (Old Uyghur) that was written right to left.
+Mongolian-based systems are typically written vertically, top to bottom, in columns that flow left to right; a top-to-bottom inline direction with a left-to-right block flow direction. This is different from Chinese, Japanese, and Korean, whose vertical text columns are read right to left. It derives from the fact that this script descended from Old Uyghur, which was written right to left.
 
 ```html
 <p lang="mn-MONG" dir="auto">Үүнийг монгол хэлээр бичжээ</p>
