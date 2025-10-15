@@ -60,6 +60,12 @@ One practical use of CSS functions with no parameters is in feature detection. I
 
 You can then define a "feature not supported" banner, and set its {{cssxref("display")}} property to `--supports()`:
 
+```html
+<p class="support">
+  ⚠️ Your browser doesn't currently support CSS custom functions.
+</p>
+```
+
 ```css
 .support {
   /* ... */
