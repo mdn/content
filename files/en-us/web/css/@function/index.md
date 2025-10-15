@@ -242,7 +242,7 @@ We could rewrite the function to use an `if()` function instead:
 
 ## Examples
 
-For more complete example walkthroughs, see our [Using CSS custom functions](/en-US/docs/Web/CSS/CSS_custom_functions_and_mixins/Using_custom_functions) guide
+For more complete example walkthroughs, see our [Using CSS custom functions](/en-US/docs/Web/CSS/CSS_custom_functions_and_mixins/Using_custom_functions) guide.
 
 ### Basic `@function` usage
 
