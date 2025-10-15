@@ -442,7 +442,7 @@
     "ko": "이 구문은 { $specs }에 따른 최신 표준을 반영합니다. 모든 브라우저가 모든 부분을 구현한 것은 아닙니다. 지원 정보는 <a href=\"#브라우저_호환성\">브라우저 호환성</a>을 참조하세요.",
     "pt-BR": "Esta sintaxe reflete o padrão mais recente conforme { $specs }. Nem todos os navegadores podem ter implementado todas as partes. Consulte <a href=\"#compatibilidade_com_navegadores\">Compatibilidade do navegador</a> para informações de suporte.",
     "ru": "Данный синтаксис отражает последний стандарт согласно { $specs }. Не все браузеры могли реализовать каждую часть. См. <a href=\"#совместимость_с_браузерами\">Совместимость с браузерами</a> для информации о поддержке.",
-    "zh-CN": "此语法反映了根据 { $specs } 的最新标准。并非所有浏览器都实现了每个部分。有关支持信息，请参阅<a href=\"#浏览器兼容性\">浏览器兼容性</a>。",
-    "zh-TW": "此語法反映了根據 { $specs } 的最新標準。並非所有瀏覽器都實現了每個部分。有關支援資訊，請參閱<a href=\"#瀏覽器相容性\">瀏覽器相容性</a>。"
+    "zh-CN": "此语法反映了基于 { $specs } 的最新标准。并非所有浏览器都已实现全部内容。有关支持信息，请参阅<a href=\"#浏览器兼容性\">浏览器兼容性</a>。",
+    "zh-TW": "此語法反映了基於 { $specs } 的最新標準。並非所有瀏覽器都已實現全部內容。有關支援資訊，請參閱<a href=\"#瀏覽器相容性\">瀏覽器相容性</a>。"
   }
 }
