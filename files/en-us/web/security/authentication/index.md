@@ -5,9 +5,18 @@ page-type: guide
 sidebar: security
 ---
 
-In the context of web security, authentication is the act of identifying specific users of your website, generally in order to give them access to some information that's not generally available, or to enable them to perform actions that are not available to everyone.
+Authentication is the process of verifying that an entity — such as a user of a website — is who they claim to be. You'll most likely need to think about authentication if you want users to sign into your website.
 
-Authentication is one of the most common targets for attackers: providing privileged access to specific users almost always creates an incentive for an attacker to gain that access. In these pages we'll provide some guidance for web developers who need to implement authentication systems. We'll highlight the most common threats and discuss the best practices you can follow in order to address them.
+If users can log into your website, there are typically things logged-in users can do, or data they can access, that you don't want to make generally available. For example, logged-in users might be able to:
+
+- Make use of a service they have paid for
+- Spend money
+- Access private personal or corporate information
+- Interact socially with others in the persona associated with the account
+
+All these abilities, and more, make user account access an important target for attackers. If an attacker is able to sign into your site by pretending to be a legitimate user, the attacker could access and exploit, for example, the user's private data, financial credentials, or confidental corporate secrets. They could also impersonate the user on your site, causing reputational and potentially financial damage.
+
+In this set of guides we'll looks at the main techniques available for authenticating users on the web, and good practices for them.
 
 ## Authentication methods
 
