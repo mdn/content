@@ -98,7 +98,7 @@ You can combine `<syntax-type>` values using the following tokens:
 - `#`
   - : A comma-separated list of values is expected.
 
-In addition, the `|` token can be used to create loical OR conditions for the expected syntax, combining both `<ident>` and `<syntax-type>` values.
+In addition, the `|` token can be used as a separator when specifying multiple values or combining `<ident>` and `<syntax-type>` values for the expected syntax.
 
 ### Return value
 
