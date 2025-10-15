@@ -237,7 +237,7 @@ The {{httpheader("Cross-Origin-Opener-Policy")}} response header determines whet
 
 If your server sends this header and sets it to any value except the default of `"unsafe-none"`, then if a document from a different origin tries to open your page using `window.open()`, your page will be loaded into a different browsing context group. Among other things, this means that the opener will not get a reference to the `window` object for your page, and will therefore not be able to use it in a frame counting attack.
 
-### Defense summary checklist
+## Defense summary checklist
 
 As we've seen, cross-site leaks include a range of attacks targeting different parts of the web platform: a single defense doesn't work against any of them. Indeed, some leaks, such as the one that exploits CSP to leak redirects, don't have any defenses yet.
 

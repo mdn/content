@@ -173,7 +173,7 @@ Another problem with the `SameSite` attribute is that it protects you from reque
 
 See [Bypassing SameSite cookie restrictions](https://portswigger.net/web-security/csrf/bypassing-samesite-restrictions) for more details on the limitations of `SameSite`.
 
-### Defense summary checklist
+## Defense summary checklist
 
 We can summarize the defenses above as follows:
 
