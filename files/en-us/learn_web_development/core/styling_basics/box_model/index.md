@@ -54,9 +54,9 @@ Some HTML elements, such as `<h1>` and `<p>`, use `block` as their outer display
 If a box has a display type of `inline`, then:
 
 - The box will not break onto a new line.
-- The {{cssxref("width")}} and {{cssxref("height")}} properties will not apply.
-- Top and bottom padding, margins, and borders will apply but will not cause other inline boxes to move away from the box.
-- Left and right padding, margins, and borders will apply and will cause other inline boxes to move away from the box.
+- The {{cssxref("width")}}, {{cssxref("height")}}, and top and bottom margins will have no effect.
+- **Top and bottom** padding and borders will change the size of the box without affecting the position of surrounding content, which can cause overlapping.
+- **Left and right** padding, margins, and borders will affect the position of surrounding inline content.
 
 Some HTML elements, such as `<a>`, `<span>`, `<em>` and `<strong>` use `inline` as their outer display type by default.
 
@@ -506,7 +506,7 @@ body {
 
 All of the above fully applies to block boxes. Some of the properties can apply to inline boxes too, such as those created by a `<span>` element.
 
-In the example below, we have a `<span>` inside a paragraph. We have applied a `width`, `height`, `margin`, `border`, and `padding` to it. You can see that the width and height are ignored. The top and bottom margin, padding, and border are respected but don't change the relationship of other content to our inline box. The padding and border overlap other words in the paragraph. The left and right padding, margins, and borders move other content away from the box.
+In the example below, we have a `<span>` inside a paragraph. We have applied a `width`, `height`, `margin`, `border`, and `padding` to it. You can see that the width, height, and top and bottom margins do not affect the `<span>`. The top and bottom padding and borders alter the size of the inline box but don't affect the position of the surrounding content. Instead, the top and bottom padding and borders overlap other words in the paragraph. Only the left and right padding, margins, and borders affect the position of the text surrounding the `<span>`.
 
 ```html live-sample___inline-box-model
 <p>
@@ -524,12 +524,13 @@ p {
   width: 200px;
 }
 span {
-  margin: 20px;
-  padding: 20px;
+  margin: 20px 30px;
+  padding: 10px 20px;
   width: 80px;
   height: 150px;
   background-color: lightblue;
-  border: 2px solid blue;
+  border: solid blue;
+  border-width: 7px 1px;
 }
 ```
 

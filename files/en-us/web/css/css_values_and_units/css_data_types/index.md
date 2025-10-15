@@ -48,13 +48,13 @@ These types include keywords and identifiers as well as strings, and URLs.
 These data types are used to indicate quantities, indexes, and positions. The majority of these are defined in the CSS values and units module, however additional types are described in other modules where they are specific to that specification alone — for example the `fr` unit in the [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) module.
 
 - {{cssxref("&lt;integer&gt;")}}
-  - : One or more decimal units 0 through 9.
+  - : One or more decimal units 0 through 9, optionally preceded by `-` or `+`.
 - {{cssxref("&lt;number&gt;")}}
-  - : Real numbers which may also have a fractional component, for example 1 or 1.34.
+  - : Real numbers which may also have a fractional component, for example `1` or `1.34`.
 - {{cssxref("&lt;dimension&gt;")}}
-  - : A number with a unit attached to it, for example 23px or 15em.
+  - : A number with a unit attached to it, for example `90deg`, `50ms`, or `15em`. This type includes distances ({{cssxref("&lt;length&gt;")}}), durations ({{cssxref("&lt;time&gt;")}}), frequencies ({{cssxref("&lt;frequency&gt;")}}), resolutions ({{cssxref("&lt;resolution&gt;")}}), and other quantities.
 - {{cssxref("&lt;percentage&gt;")}}
-  - : A number with a percentage sign attached to it, for example 10%.
+  - : A number with a percentage sign attached to it, for example `10%`.
 - {{cssxref("&lt;ratio&gt;")}}
   - : A ratio, written with the syntax `<number> / <number>`.
 - {{cssxref("&lt;flex&gt;")}}
@@ -62,7 +62,7 @@ These data types are used to indicate quantities, indexes, and positions. The ma
 
 ## Quantities
 
-These types are used to specify distance and other quantities.
+These {{cssxref("&lt;dimension&gt;")}} types are used to specify distance and other quantities.
 
 - {{cssxref("&lt;length&gt;")}}
   - : Lengths are a `<dimension>` and refer to distances.
@@ -77,7 +77,7 @@ These types are used to specify distance and other quantities.
 
 ## Combinations of types
 
-Some CSS properties can take a dimension or a percentage value. In this case the percentage value will be resolved to a quantity that matches the allowable dimension. Properties which can accept a percentage in addition to a dimension will use one of the types listed below.
+Some CSS properties can take a {{cssxref("&lt;dimension&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} value. In this case the percentage value will be resolved to a quantity that matches the allowable dimension. Properties which can accept a percentage in addition to a dimension will use one of the types listed below.
 
 - {{cssxref("&lt;length-percentage&gt;")}}
   - : A type that can accept a length or a percentage as a value.

@@ -87,7 +87,7 @@ In this example:
     <style type="text/css">
       body,
       p {
-        font-family: Verdana, sans-serif;
+        font-family: "Verdana", sans-serif;
         font-size: 12px;
       }
     </style>

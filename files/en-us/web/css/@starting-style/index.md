@@ -227,7 +227,7 @@ In this example, we want to animate two properties, {{cssxref("opacity")}} and {
 
 ```css
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 [popover]:popover-open {

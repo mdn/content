@@ -342,8 +342,8 @@ html {
 
 body {
   font:
-    1.2em Helvetica,
-    Arial,
+    1.2em "Helvetica",
+    "Arial",
     sans-serif;
   margin: 20px;
   padding: 0;
@@ -481,7 +481,7 @@ By setting `width=device-width` you are overriding a mobile device's default, li
 
 **So you should _always_ include the viewport meta tag in the head of your documents.**
 
-There are a number of other options you can put inside the `content` attribute of the viewport meta tag — see [Using the viewport meta tag to control layout on mobile browsers](/en-US/docs/Web/HTML/Guides/Viewport_meta_element) for more details.
+There are a number of other options you can put inside the `content` attribute of the viewport meta tag — see the [`<meta name="viewport">`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/viewport) reference for more details.
 
 ## Summary
 

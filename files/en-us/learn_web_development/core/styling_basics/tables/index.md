@@ -5,7 +5,7 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Test_your_skills/Images", "Learn_web_development/Core/Styling_basics/Debugging_CSS", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Test_your_skills/Images", "Learn_web_development/Core/Styling_basics/Home_color_scheme_search", "Learn_web_development/Core/Styling_basics")}}
 
 Styling an HTML table isn't the most glamorous job in the world, but sometimes we all have to do it. This article explains how to make HTML tables look good, with some specific table styling techniques highlighted.
 
@@ -155,7 +155,7 @@ td {
 
 /* typography */
 html {
-  font-family: "helvetica neue", helvetica, arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
 thead th,
@@ -230,7 +230,7 @@ However, this design is rather garish. In this article, we'll get you to mark it
 
 Let's work through styling our table example together.
 
-1. To start with, make a local copy of the sample markup [shown earlier](/en-US/docs/Learn_web_development/Core/Styling_basics/Tables#a_typical_html_table) and save it in a working directory somewhere on your local computer.
+1. To start with, make a local copy of the sample markup [shown earlier](#a_typical_html_table) and save it in a working directory somewhere on your local computer.
 2. Next, create a new file called `style.css` and save it in the same directory as your other files.
 3. Link the CSS to the HTML by placing the following line of HTML inside your {{htmlelement("head")}}:
 
@@ -246,7 +246,7 @@ This is a minor point, and not strictly relevant to styling tables, but we thoug
 
 ```css
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 ```
 
@@ -381,7 +381,7 @@ Your finished table design should look like so:
 
 ```css hidden live-sample___best-practice-style
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 table {
@@ -452,4 +452,4 @@ Before moving on, we thought we'd provide you with a quick list of the most usef
 
 With styling tables now behind us, we need something else to occupy our time. The next article explores debugging CSS — how to solve problems such as layouts not looking like they should, or properties not applying when you think they should. This includes information on using browser DevTools to find solutions to your problems.
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Test_your_skills/Images", "Learn_web_development/Core/Styling_basics/Debugging_CSS", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Test_your_skills/Images", "Learn_web_development/Core/Styling_basics/Home_color_scheme_search", "Learn_web_development/Core/Styling_basics")}}

@@ -8,25 +8,25 @@ browser-compat: api.CSSStyleRule.style
 
 {{ APIRef("CSSOM") }}
 
-The read-only **`style`** property is the {{ domxref("CSSStyleDeclaration") }} interface for the declaration block of the {{ DOMXref("CSSStyleRule") }}.
+The read-only **`style`** property is a {{domxref("CSSStyleProperties")}} object that represents the inline styles of a style rule ({{DOMXref("CSSStyleRule")}}).
+
+Note that properties that are present on the object for all [CSS properties](/en-US/docs/Web/CSS/Properties) supported by the browser.
+The properties that are not defined inline in the corresponding CSS declaration are set to the empty string (`""`).
 
 ## Value
 
-A {{domxref("CSSStyleDeclaration")}} object, with the following properties:
+A {{domxref("CSSStyleProperties")}}.
 
-- computed flag
-  - : Unset.
-- declarations
-  - : The declared declarations in the rule, in the order they were specified, shorthand properties expanded to longhands.
-- parent CSS rule
-  - : The context object, which is an alias for [`this`](https://heycam.github.io/webidl/#this).
-- owner node
-  - : Null.
+> [!NOTE]
+> Earlier versions of the specification returned a {{domxref("CSSStyleDeclaration")}}, which is now the base class of {{domxref("CSSStyleProperties")}}.
+> See the [browser compatibility](#browser_compatibility) table for browser support information.
 
 ## Examples
 
-The CSS includes one style rule. This will be the first {{domxref("CSSRule")}} returned by `document.styleSheets[0].cssRules`.
-`myRules[0].style` therefore returns a {{domxref("CSSStyleDeclaration")}} object representing the declarations defined for `h1`.
+### Getting the styles for a style rule
+
+The CSS below defines the style rule for the `h1` selector, which is represented in code by a {{domxref("CSSStyleRule")}} instance.
+The declaration block is that part of the style rule that appears within the braces and that actually provides the style definitions (for the selector, the part that comes before the braces), which is represented in code by the `style` property.
 
 ```css
 h1 {
@@ -34,13 +34,13 @@ h1 {
 }
 ```
 
-```js
-let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0].style); // a CSSStyleDeclaration representing the declarations on the h1.
-```
+Assuming the above style rule is the first rule in the document, it will be the first {{domxref("CSSRule")}} returned by `document.styleSheets[0].cssRules`.
+`myRules[0].style` returns a {{domxref("CSSStyleProperties")}} object representing the declarations defined for `h1`.
 
-> [!NOTE]
-> The declaration block is that part of the style rule that appears within the braces and that actually provides the style definitions (for the selector, the part that comes before the braces).
+```js
+const myRules = document.styleSheets[0].cssRules;
+console.log(myRules[0].style); // a CSSStyleProperties representing the declarations on the h1.
+```
 
 ## Specifications
 

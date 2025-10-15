@@ -10,7 +10,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`contrast-color()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) takes a {{cssxref("color_value","color")}} value and returns a [guaranteed](https://w3c.github.io/wcag/guidelines/22/#contrast-minimum) contrasting color.
+The **`contrast-color()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) takes a {{cssxref("color_value","color")}} value and returns a contrasting color. The function commonly ensures [the WCAG AA minimum contrast](https://w3c.github.io/wcag/guidelines/22/#contrast-minimum). The browsers may use different and better algorithms.
 
 `contrast-color()` makes it easy, for example, to specify a text color and automatically generate a contrasting background color, or vice versa. It avoids the need to maintain background-text color pairs.
 
@@ -35,7 +35,7 @@ A {{cssxref("named-color")}} of either `white` or `black`.
 The `contrast-color()` function returns a value of `white` or `black`, depending on which value has the greatest contrast with the input color. If both `white` and `black` have the same contrast with the input color, `white` is returned.
 
 > [!WARNING]
-> There is no guarantee that the values returned using the `contrast-color()` function will produce an accessible result. Mid-tone background colors generally don't provide enough contrast. It is recommended therefore to use light or dark colors with the `contrast-color()` function.
+> WCAG AA (4.5:1) contrast is not capable of producing clearly readable text in all cases. Mid-tone background colors generally don't provide enough contrast with either black or white foreground. For example, `contrast-color()` on a royal bluish (`#2277d3`) background produces black text, which is not readable for small text. It is recommended, therefore, to use light or dark colors with the `contrast-color()` function.
 
 ## Examples
 
