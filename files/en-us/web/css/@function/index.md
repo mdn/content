@@ -269,7 +269,8 @@ In our styles, we first define the CSS custom function. The function is called `
 Next, we define a `--base-spacing` custom property with a value of `10px`. We assign that property to be the value of our {{cssxref("border-radius")}}, but then double it for our {{cssxref("padding")}} value using our `--double()` custom function.
 
 ```css hidden live-sample___basic-example
-html, body {
+html,
+body {
   height: 100%;
 }
 
