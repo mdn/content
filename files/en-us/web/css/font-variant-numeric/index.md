@@ -42,9 +42,7 @@ font-variant-numeric: proportional-nums;
 font-variant-numeric: diagonal-fractions;
 ```
 
-```css interactive-example-choice
-font-variant-numeric: stacked-fractions;
-```
+<!-- Source Sans Pro doesn't support stacked-fractions -->
 
 ```html interactive-example
 <section id="default-example">
