@@ -18,7 +18,7 @@ In cases where you want to [pass comma-containing values as arguments](/en-US/do
 
 ## Examples
 
-For more complete example walkthroughs, see our [Using CSS custom functions](/en-US/docs/Web/CSS/CSS_custom_functions_and_mixins/Using_custom_functions) guide
+For more complete example walkthroughs, see our [Using CSS custom functions](/en-US/docs/Web/CSS/CSS_custom_functions_and_mixins/Using_custom_functions) guide.
 
 ### Basic `<dashed-function>` usage
 
