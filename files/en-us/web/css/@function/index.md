@@ -134,7 +134,7 @@ In the next example, the `--max-plus-x()` function expects to be passed a comma-
 }
 ```
 
-Because the first argument needs to be a comma-separated list, it could be misinterpreted as three separate arguments. To get around this problem, you can wrap the value in curly braces when passing it into the function call:
+The first argument needs to be a comma-separated list, which could be misinterpreted as three separate arguments. To get around this problem, you can wrap the value in curly braces when passing it into the function call:
 
 ```css
 div {
@@ -162,7 +162,7 @@ This kind of usage allows you to write easier, more expressive syntax for animat
 animation: --anim-1s(bounce, 2);
 ```
 
-It is also worth noting that you can call one custom function from inside another one. In such cases, a custom function can access local variables and function parameters from functions higher up in the call stack. Here, the outer function's parameter and local custom property will be available inside the scope of the inner function:
+It is also worth noting that you can call one custom function from inside another. In such cases, a custom function can access local variables and function parameters from functions higher up in the call stack. Here, the outer function's parameter and local custom property will be available inside the scope of the inner function:
 
 ```css
 @function --outer(--outer-arg) {
@@ -179,7 +179,7 @@ div {
 }
 ```
 
-In addition, custom properties defined on the same element the custom function is being called on will be available to it:
+In addition, custom properties defined on the same element where the custom function is being called will be available to it:
 
 ```css
 @function --double-z() returns <number> {
@@ -192,7 +192,7 @@ div {
 }
 ```
 
-If a custom property of the same name is defined in multiple places, function parameters override custom properties defined on the same element, and local custom properties defined inside the function body override both. In the following example, the `--add-a-b-c()` function uses the `--a` property from the `div` rule's custom property, the `--b` property from the function parameter, and the `--c` local custom property.
+When a custom property of the same name is defined in multiple places, function parameters override custom properties defined on the same element, and local custom properties defined inside the function body override both. In the following example, the `--add-a-b-c()` function uses the `--a` property from the `div` rule's custom property, the `--b` property from the function parameter, and the `--c` local custom property.
 
 ```css
 @function --add-a-b-c(--b, --c) {
@@ -210,7 +210,7 @@ div {
 
 ### Including complex logic
 
-You can include more complex logic in functions using constructs such as {{cssxref("@media")}} at-rules and {{cssxref("if()")}} functions. For example, the next function takes two arguments, one for a narrow-screen layout, and one for a wide-screen layout. It returns the latter by default, but returns the former when the viewport width is less than `700px` wide, as detected using a media query.
+You can include more complex logic in functions using constructs such as {{cssxref("@media")}} at-rules and {{cssxref("if()")}} functions. For example, the next function takes two arguments, one for a narrow-screen layout and one for a wide-screen layout. It returns the latter by default, but returns the former when the viewport width is less than `700px` wide, as detected using a media query.
 
 ```css
 @function --narrow-wide(--narrow, --wide) {
@@ -224,9 +224,9 @@ You can include more complex logic in functions using constructs such as {{cssxr
 You can include multiple `result` descriptors to express different results for different logic outcomes.
 
 > [!NOTE]
-> CSS functions behave in same way as the rest of CSS in regard to conflict resolution — last in source order wins. Therefore, in the above function, the `result` is `var(--wide)` unless the media query test returns true, in which case it is overriden by `var(--narrow)`.
+> CSS functions behave in the same way as the rest of CSS regarding conflict resolution — last in source order wins. Therefore, in the above function, the `result` is `var(--wide)` unless the media query test returns true, in which case it is overridden by `var(--narrow)`.
 >
-> There are no early returns in CSS functions like there are in JavaScript functions. In the above function, if the media query was written first before the single `result` line, the `result` would always be `var(--wide)` because it would override `var(--narrow)` in cases where the media query test returns true.
+> There are no early returns in CSS functions like there are in JavaScript functions. In the above function, if the media query was written first, before the single `result` line, the `result` would always be `var(--wide)` because it would override `var(--narrow)` in cases where the media query test returns true.
 
 We could rewrite the CSS custom function to use an `if()` function instead:
 
