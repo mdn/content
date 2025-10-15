@@ -109,7 +109,7 @@ section {
 
 then the value will become invalid at computed-value time and the `background-color` will end up being set to `transparent`.
 
-You can specify multiple accepted data types using a {{cssxref("type()")}} function and some OR logic, for example:
+You can specify multiple accepted data types using a {{cssxref("type()")}} function with the `|` symbol as a separator, for example:
 
 ```css
 @function --transparent(--color <color>, --alpha type(<number> | <percentage>))
