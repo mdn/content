@@ -8,7 +8,7 @@ sidebar: cssref
 
 {{seecompattable}}
 
-The **`type()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) allows you to specify a particular data type. It is used by the following CSS features:
+The **`type()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) allows you to specify a particular data type, and is used by the following CSS features:
 
 - The {{cssxref("attr()")}} function, to specify the data type that an attribute value should be parsed into.
 - The {{cssxref("@function")}} at-rule, to specify the permitted data types for [CSS custom function](/en-US/docs/Web/CSS/CSS_custom_functions_and_mixins/Using_custom_functions) parameters and results.
@@ -116,7 +116,7 @@ background-color: attr(data-background type(<color>), red);
 
 You could also specify an exact keyword requirement (for example, `type(blue)`), but this would be overly limiting.
 
-Specifying `type(*)` permits any valid CSS value. This is called the universal syntax, and it cannot be multiplied or combined with other syntax components.
+Specifying `type(*)` permits any valid CSS value. This is the universal syntax, which cannot be multiplied or combined with other syntax components.
 
 ### Specifying multiple permitted types
 
@@ -179,7 +179,7 @@ In the CSS, we start by specifying a `@function` called `--combine-strings`. Thi
 }
 ```
 
-We then specify some basic styles for the `<section>` element, then use the `--combine-strings()` function to specify the value of its {{cssxref("content")}} property, including two space-separated strings as the argument.
+We then specify some basic styles for the `<section>` element and use the `--combine-strings()` function to specify the value of its {{cssxref("content")}} property, including two space-separated strings as the argument.
 
 ```css live-sample___basic-data-type
 section {
