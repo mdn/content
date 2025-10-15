@@ -9,7 +9,7 @@ browser-compat: api.CSSFunctionDeclarations
 
 The **`CSSFunctionDeclarations`** interface of the [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model) represents a consecutive run of CSS declarations included within a {{cssxref("@function")}} body.
 
-This can include [CSS custom properties](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties), and the value of the `results` descriptor inside the `@function` body, but it doesn't include blocks such as {{cssxref("@media")}} at-rules that may be included. Such a block included in the middle of a set of declarations would cause the body contents to be broken up into separate `CSSFunctionDeclarations` objects, as seen in our [Multiple `CSSFunctionDeclarations`](#multiple_cssfunctiondeclarations) demo.
+This can include [CSS custom properties](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties), and the value of the `results` descriptor inside the `@function` body, but it doesn't include blocks such as {{cssxref("@media")}} at-rules that may be included. Such a block, included in the middle of a set of declarations, would cause the body contents to be broken up into separate `CSSFunctionDeclarations` objects, as seen in our [Multiple `CSSFunctionDeclarations`](#multiple_cssfunctiondeclarations) demo.
 
 {{InheritanceDiagram}}
 
@@ -44,7 +44,7 @@ We've also included a local [custom property](/en-US/docs/Web/CSS/CSS_cascading_
 
 Our script starts by getting a reference to the stylesheet attached to our document using {{domxref("Document.styleSheets")}}, then getting a reference to the only rule in the stylesheet, the `CSSFunctionRule` — via {{domxref("CSSStylesheet.cssRules")}}.
 
-We then access the `CSSFunctionDeclarations` object representing the only continuous run of declarations inside the function using {{domxref("CSSGroupingRule.cssRules", "cssRules[0]")}}, access its descriptors information using {{domxref("CSSFunctionDeclarations.style")}}, and then access the descriptor length and style information. All of this information is logged to the console.
+We then access the `CSSFunctionDeclarations` object representing the only continuous run of declarations inside the function using {{domxref("CSSGroupingRule.cssRules", "cssRules[0]")}}, access its descriptor's information using {{domxref("CSSFunctionDeclarations.style")}}, and then access the descriptor length and style information. All of this information is logged to the console.
 
 ```js live-sample___cssfunctiondeclarations-basics
 // Get a CSSFunctionRule
@@ -60,7 +60,7 @@ console.log(cssFunc.cssRules[0].style.result);
 
 Most notably:
 
-- The `length` property is equal to `2`, as there are two parts to the descriptors text (`--someVar: 100;` and `result: oklch(from var(--color) calc(l + var(--lightness-adjust)) c h);`).
+- The `length` property is equal to `2`, as there are two parts to the descriptor's text (`--someVar: 100;` and `result: oklch(from var(--color) calc(l + var(--lightness-adjust)) c h);`).
 - The `result` property is equal to the `@function` body's `result` descriptor, which is `oklch(from var(--color) calc(l + var(--lightness-adjust)) c h)`.
 
 ### Multiple `CSSFunctionDeclarations`
