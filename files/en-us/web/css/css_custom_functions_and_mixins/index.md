@@ -10,9 +10,9 @@ The **CSS custom functions and mixins** module allows developers to create reusa
 
 CSS custom functions are defined in {{cssxref("@function")}} at-rules and called using {{cssxref("&lt;dashed-function>")}} syntax, which looks very similar to [CSS custom property](/en-US/docs/Web/CSS/--*) syntax except that it includes parentheses at the end containing arguments (for example, `--my-function(30px, 3)`). CSS custom functions can be called within any property value, and will return a value based on the arguments passed into the function and the logic inside it.
 
-CSS mixins are defined in `@mixin` at-rules, and applied using `@apply` at-rules nested inside rulesets. CSS mixins define a set of properties, which can be reused inside multiple rulesets, as well as being customized with arguments and logic.
+CSS mixins are defined in `@mixin` at-rules and applied using `@apply` at-rules nested inside rulesets. CSS mixins define a set of properties that can be reused inside multiple rulesets and customized with arguments and logic.
 
-CSS custom functions and mixins can be assigned optional data types for their arguments and return values, to strictly control the values passed into them and returned from them.
+CSS custom functions and mixins can be assigned optional data types for their arguments and return values, to restrict the values passed into them and returned from them.
 
 > [!NOTE]
 > Currently, only CSS custom functions have browser support. CSS mixins are not currently supported in any browser.
