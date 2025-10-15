@@ -147,7 +147,7 @@ The `+` and `#` tokens can be appended to a `<syntax-type>` to specify that you 
 - A `<color>+` parameter expects a space-separated list of `<color>` values, for example `red blue #a60000 rgb(234 45 100)`.
 - A `<length>#` parameter expects a comma-separated lists of `<length>` values, for example `30px, 1em, 15vw`.
 
-You can combine OR logic with these tokens. For example, `<color># | <integer>#` would expect a comma-separated list of `<color>` values or a comma-separated list of `<integer>` values.
+You can combine multiple tokens using `|` as a separator. For example, `<color># | <integer>#` would expect a comma-separated list of `<color>` values or a comma-separated list of `<integer>` values.
 
 ## Formal syntax
 
