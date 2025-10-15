@@ -120,7 +120,7 @@ Specifying `type(*)` permits any valid CSS value. This is called the universal s
 
 ### Specifying multiple permitted types
 
-You can use the `|` token to create OR logic and specify a range of permitted data types, keywords, or a combination of both. For example:
+You can use the `|` token as a separator when specifying a range of permitted data types, keywords, or a combination of both. For example:
 
 - `type(<length> | <percentage>)`
 - `type(red | green)`
