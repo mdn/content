@@ -192,10 +192,11 @@ This example also includes functions called `--lighter()` and `--darker()` that 
 A library of functions like these can become very useful for defining color schemes based on a single color:
 
 ```css
-section {
-  /* ... */
-
+:root {
   --base-color: #faa6ff;
+}
+
+section {
   background-color: --transparent(var(--base-color));
   border: 3px solid --lighter(var(--base-color), 0.1);
   color: --darker(var(--base-color), 0.55);
