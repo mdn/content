@@ -26,6 +26,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version-file: "mdn-content/.nvmrc"
+          package-manager-cache: false
 
       - name: Checkout webref
         uses: actions/checkout@v5
