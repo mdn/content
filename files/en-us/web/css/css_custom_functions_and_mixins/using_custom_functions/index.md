@@ -126,7 +126,7 @@ then the value will become invalid at computed-value time (since `50%` is not a 
 
 ### Specifying multiple permitted types
 
-You can specify multiple accepted data types using the `|` to provide OR logic, for example:
+You can specify multiple accepted data types using the `|` symbol as a separator, for example:
 
 ```css
 @function --transparent(--color <color>, --alpha type(<number> | <percentage>))
