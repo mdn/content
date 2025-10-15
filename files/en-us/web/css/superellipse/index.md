@@ -161,7 +161,7 @@ In this example, two [`<input type="range">`](/en-US/docs/Web/HTML/Reference/Ele
 
 ```css hidden live-sample___value-comparison
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 body {

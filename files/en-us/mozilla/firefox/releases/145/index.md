@@ -1,13 +1,13 @@
 ---
 title: Firefox 145 for developers
-short-title: Firefox 145 (Nightly)
+short-title: Firefox 145 (Beta)
 slug: Mozilla/Firefox/Releases/145
 page-type: firefox-release-notes-active
 sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 145 that affect developers.
-Firefox 145 is the current [Nightly version of Firefox](https://www.firefox.com/en-US/channel/desktop/#nightly) and ships on [November 11, 2025](https://whattrainisitnow.com/release/?version=145).
+Firefox 145 is the current [Beta version of Firefox](https://www.firefox.com/en-US/channel/desktop/#beta) and ships on [November 11, 2025](https://whattrainisitnow.com/release/?version=145).
 
 > [!NOTE]
 > The release notes for this Firefox version are still a work in progress.

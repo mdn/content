@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.XSLTProcessor
 ---
 
-{{APIRef("XSLT")}}
+{{APIRef("DOM")}}
 
 An **`XSLTProcessor`** applies an [XSLT](/en-US/docs/Web/XML/XSLT) stylesheet transformation to an XML document to
 produce a new XML document as output. It has methods to load the XSLT stylesheet, to

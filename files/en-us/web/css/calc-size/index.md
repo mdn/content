@@ -203,7 +203,7 @@ The HTML contains a single {{htmlelement("section")}} element that contains some
 }
 
 section {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   border: 1px solid black;
 }
 
@@ -275,7 +275,7 @@ The HTML contains a single {{htmlelement("section")}} element with [`tabindex="0
 }
 
 section {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   width: 175px;
   border-radius: 5px;
   background: #eeeeee;
@@ -379,7 +379,7 @@ body {
 
 section {
   margin-top: 20px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   background: #eeeeee;
   border: 2px solid #cccccc;
   padding: 0 20px;
@@ -505,7 +505,7 @@ body {
 form {
   margin-top: 20px;
   padding: 20px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   background: #eeeeee;
   border: 2px solid #cccccc;
 }

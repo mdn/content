@@ -165,8 +165,8 @@ table {
   border: 1px solid black;
   font:
     16px "Open Sans",
-    Helvetica,
-    Arial,
+    "Helvetica",
+    "Arial",
     sans-serif;
   border-spacing: 0;
   border-collapse: collapse;
@@ -254,8 +254,8 @@ table {
   border: 1px solid black;
   font:
     16px "Open Sans",
-    Helvetica,
-    Arial,
+    "Helvetica",
+    "Arial",
     sans-serif;
   border-spacing: 0;
   border-collapse: collapse;

@@ -489,7 +489,7 @@ In our CSS, we give the `<body>` element a {{cssxref("max-width")}} of `700px` a
 }
 
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 p {
