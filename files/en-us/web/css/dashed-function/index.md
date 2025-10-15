@@ -45,7 +45,8 @@ In our styles, we first define the CSS custom function. The function is called `
 Next, we define a `--base-color` custom property with a value of `#faa6ff` on the `:root` element. We assign that property to be the value of the `<p>` element's {{cssxref("border")}} color, and then set its {{cssxref("background-color")}} value to equal a transparent version of the same color. This is done by setting the value to equal the `<dashed-function>` syntax, specifying the `--transparent()` function and passing it arguments of `var(--base-color)` and `0.8`.
 
 ```css hidden live-sample___basic-example
-html, body {
+html,
+body {
   height: 100%;
 }
 
