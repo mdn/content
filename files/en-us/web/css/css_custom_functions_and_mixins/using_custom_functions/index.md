@@ -280,6 +280,6 @@ With this function defined, we can now create variants of this background value 
 
 - [CSS custom properties](/en-US/docs/Web/CSS/--*)
 - [CSS custom functions and mixins](/en-US/docs/Web/CSS/CSS_custom_functions_and_mixins) module
-- [Custom CSS Functions in the Browser](https://www.oddbird.net/2025/04/11/custom-functions/) via oddbird.net (2025)
-- [CSS @function + CSS if()](https://www.bram.us/2025/02/18/css-at-function-and-css-if/) via bram.us (2025)
-- [5 Useful CSS functions using the new @function rule](https://una.im/5-css-functions/) via una.im (2025)
+- [Custom CSS Functions in the Browser](https://www.oddbird.net/2025/04/11/custom-functions/) by Miriam Suzanne (2025)
+- [CSS @function + CSS if()](https://www.bram.us/2025/02/18/css-at-function-and-css-if/) by Bramus (2025)
+- [5 Useful CSS functions using the new @function rule](https://una.im/5-css-functions/) by Una Kravets (2025)
