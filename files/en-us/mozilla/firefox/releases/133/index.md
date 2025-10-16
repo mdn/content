@@ -1,5 +1,5 @@
 ---
-title: Firefox 133 for developers
+title: Firefox 133 release notes for developers
 short-title: Firefox 133
 slug: Mozilla/Firefox/Releases/133
 page-type: firefox-release-notes

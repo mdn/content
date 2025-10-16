@@ -1,5 +1,5 @@
 ---
-title: Firefox 77 for developers
+title: Firefox 77 release notes for developers
 short-title: Firefox 77
 slug: Mozilla/Firefox/Releases/77
 page-type: firefox-release-notes

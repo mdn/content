@@ -23,9 +23,10 @@ jobs:
           persist-credentials: false
 
       - name: Setup node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version-file: "mdn-content/.nvmrc"
+          package-manager-cache: false
 
       - name: Checkout webref
         uses: actions/checkout@v5

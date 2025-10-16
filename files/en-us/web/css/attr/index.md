@@ -27,7 +27,7 @@ blockquote::after {
 
 ```html interactive-example
 <blockquote cite="https://mozilla.org/en-US/about/">
-  Mozilla makes browsers, apps, code and tools that put people before profit.
+  Mozilla makes browsers, apps, code, and tools that put people before profit.
 </blockquote>
 
 <blockquote cite="https://web.dev/about/">
@@ -69,7 +69,7 @@ The parameters are:
 - `<attr-name>`
   - : The attribute name whose value should be retrieved from the selected HTML element(s).
 - `<attr-type>`
-  - : Specifies how the attribute value is parsed into a CSS value. This can be the `raw-string` keyword, a `type()` function, or a CSS dimension unit (specified using an `<attr-unit>` identifier). When omitted, it defaults to `raw-string`.
+  - : Specifies how the attribute value is parsed into a CSS value. This can be the `raw-string` keyword, a {{cssxref("type()")}} function, or a CSS dimension unit (specified using an `<attr-unit>` identifier). When omitted, it defaults to `raw-string`.
     - `raw-string`
       - : The `raw-string` keyword causes the attribute's literal value to be treated as the value of a CSS string, with no CSS parsing performed (including CSS escapes, whitespace removal, comments, etc). The `<fallback-value>` is only used if the attribute is omitted; specifying an empty value doesn't trigger the fallback.
 
@@ -78,30 +78,12 @@ The parameters are:
         ```
 
         > [!NOTE]
-        > This keyword was originally named and supported in Chromium browsers as `string`. Both keywords will be supported briefly, for backwards compatibility purposes.
+        > This keyword was originally named and supported in Chromium browsers as `string`. Both keywords will be supported briefly, for backward compatibility purposes.
 
-    - `type()`
-      - : The `type()` function takes a `<syntax>` as its argument that specifies what [data type](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types) to parse the value into. The `<syntax>` can be {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;color&gt;")}}, {{CSSxRef("&lt;custom-ident&gt;")}}, {{CSSxRef("&lt;image&gt;")}}, {{CSSxRef("&lt;integer&gt;")}}, {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;length-percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;resolution&gt;")}}, {{CSSxRef("&lt;string&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;transform-function&gt;")}}, or a combination thereof.
-
-        ```css
-        attr(id type(<custom-ident>), none)
-        attr(data-count type(<number>), 0)
-        ```
-
-        To accept multiple types, list all allowed `<syntax>`es in the `type()` function, separated by a `|`.
-
-        ```css
-        attr(data-size type(<length> | <percentage>), 0px)
-        ```
-
+    - {{cssxref("type()")}}
+      - : The `type()` function takes a `<syntax>` as its argument that specifies what data type to parse the value into.
         > [!NOTE]
-        > For [security reasons](#limitations_and_security) {{CSSxRef("url_value", "&lt;url&gt;")}} is not allowed as a `<syntax>`.
-
-        To accept any data type, use `*` as the type. This still triggers CSS parsing but with no requirements placed on it beyond that it parses validly and substitutes the result of that parsing directly as tokens, rather than as a `<string>` value.
-
-        ```css
-        attr(data-content type(*))
-        ```
+        > For [security reasons](#limitations_and_security) {{CSSxRef("url_value", "&lt;url&gt;")}} is not allowed as an `attr()` data type.
 
     - `<attr-unit>`
       - : The `<attr-unit>` identifier specifies the unit a numeric value should have (if any). It can be the `%` character (percentage) or a [CSS distance unit](/en-US/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#distance_units) such as `px`, `rem`, `deg`, `s`, etc.
@@ -127,7 +109,7 @@ If no `<fallback-value>` is set, the return value will default to an empty strin
 
 ### Limitations and security
 
-The `attr()` function can reference attributes that were never intended by the page author to be used for styling and might contain sensitive information (for example, a security token used by scripts on the page). In general, this is fine, but it can become a security threat when used in URLs. Therefore, you can't use `attr()` to dynamically construct URLs.
+The `attr()` function can reference attributes that were never intended for styling use and might contain sensitive information (for example, a security token used by scripts on the page). In general, this is fine, but it can become a security threat when used in URLs. Therefore, you can't use `attr()` to dynamically construct URLs.
 
 ```html
 <!-- This won't work! -->
@@ -184,13 +166,13 @@ A second edge case is the following:
 
 Browsers without support for modern syntax display the text `"foo"`. In browsers with modern `attr()` support there is no output.
 
-This is because `attr()` — similar to custom properties that use the `var()` function — get substituted at [computed value time](https://www.bram.us/2024/02/26/css-what-is-iacvt/#custom-properties). With the modern behavior, `--x` first tries to read the `data-attr` attribute from the `#parent` element, which results in an empty string because there is no such attribute on `#parent`. That empty string then gets inherited by the `#child` element, resulting in a `content: ;` declaration being set.
+This is because `attr()` — similar to custom properties that use the `var()` function — gets substituted at [computed value time](https://www.bram.us/2024/02/26/css-what-is-iacvt/#custom-properties). With the modern behavior, `--x` first tries to read the `data-attr` attribute from the `#parent` element, which results in an empty string because there is no such attribute on `#parent`. That empty string then gets inherited by the `#child` element, resulting in a `content: ;` declaration being set.
 
 To prevent this sort of situation, don't pass inherited `attr()` values onto children unless you explicitly want to.
 
 ### Feature detection
 
-You can feature detect support for modern `attr()` syntax using the {{CSSxRef("@supports")}} at-rule. In the test, try to assign advanced `attr()` to a (non-custom) CSS property.
+You can feature detect support for modern `attr()` syntax using the {{CSSxRef("@supports")}} at-rule. In the test, try to assign an advanced `attr()` to a (non-custom) CSS property.
 
 For example:
 
@@ -375,8 +357,8 @@ The HTML contains four cards with different `id` attributes and a "Shuffle cards
 ```html hidden
 <div class="warning">
   <p>
-    You browser does not support advanced <code>attr()</code>. As a result, this
-    demo won’t do anything.
+    Your browser does not support advanced <code>attr()</code>. As a result,
+    this demo won’t do anything.
   </p>
 </div>
 ```
@@ -466,7 +448,7 @@ On each card, the `attr()` function gets the `id` attribute and parses it into a
 
 #### JavaScript
 
-When the `<button>` is pressed the cards are shuffled. This is done by randomizing the order of an array containing references to all the cards and then updating the {{CSSxRef("order")}} property of each card to its new array index position.
+When the `<button>` is pressed, the cards are shuffled. This is done by randomizing the order of an array containing references to all the cards and then updating the {{CSSxRef("order")}} property of each card to its new array index position.
 
 To animate each card to its new position, [View Transitions](/en-US/docs/Web/API/View_Transition_API/Using) are used. This is done by wrapping the `order` update in a call to [`document.startViewTransition`](/en-US/docs/Web/API/Document/startViewTransition).
 

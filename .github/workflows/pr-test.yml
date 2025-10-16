@@ -80,7 +80,7 @@ jobs:
 
       - name: Setup Node.js environment
         if: steps.check.outputs.HAS_FILES == 'true'
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version-file: ".nvmrc"
           cache: yarn

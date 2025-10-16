@@ -23,7 +23,7 @@ jobs:
           persist-credentials: false
 
       - name: Setup Node.js environment
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version-file: ".nvmrc"
           cache: yarn
@@ -45,7 +45,7 @@ jobs:
           persist-credentials: false
 
       - name: Setup Node.js environment
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version-file: ".nvmrc"
           cache: yarn
@@ -87,7 +87,7 @@ jobs:
           persist-credentials: false
 
       - name: Setup Node.js environment
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version-file: ".nvmrc"
           cache: yarn
@@ -109,7 +109,7 @@ jobs:
           persist-credentials: false
 
       - name: Setup Node.js environment
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version-file: ".nvmrc"
           cache: yarn
@@ -135,7 +135,7 @@ jobs:
           persist-credentials: false
 
       - name: Setup Node.js environment
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version-file: ".nvmrc"
           cache: yarn
