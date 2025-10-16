@@ -154,7 +154,6 @@ console.log(date.toLocaleString("en-US", { hour12: false }));
 // The exact date and time may shift depending on your local time zone.
 ```
 
-
 ## Specifications
 
 {{Specifications}}
