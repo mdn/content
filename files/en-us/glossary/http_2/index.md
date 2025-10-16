@@ -22,6 +22,6 @@ As a result, all existing applications can be delivered over the protocol withou
 - [HTTP](/en-US/docs/Web/HTTP) on MDN
 - Related glossary terms:
   - {{glossary("HTTP")}}
-  - {{glossary("Latency")}}, {{glossary("head of line blocking", "head-of-line blocking")}}
+  - {{glossary("Latency")}}, {{glossary("head of line blocking", "Head-of-line blocking")}}
 - {{RFC("7540", "Server Push", "8.2")}}
 - [HTTP/2](https://en.wikipedia.org/wiki/HTTP/2) on Wikipedia
