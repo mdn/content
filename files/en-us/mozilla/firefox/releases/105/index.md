@@ -1,5 +1,5 @@
 ---
-title: Firefox 105 for developers
+title: Firefox 105 release notes for developers
 short-title: Firefox 105
 slug: Mozilla/Firefox/Releases/105
 page-type: firefox-release-notes

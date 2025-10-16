@@ -314,7 +314,7 @@ This behavior helps avoid repetition in your CSS. A common practice is to define
 h2 {
   font-size: 2em;
   color: black;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: "Georgia", serif;
 }
 
 .small {

@@ -1,5 +1,5 @@
 ---
-title: Firefox 125 for developers
+title: Firefox 125 release notes for developers
 short-title: Firefox 125
 slug: Mozilla/Firefox/Releases/125
 page-type: firefox-release-notes

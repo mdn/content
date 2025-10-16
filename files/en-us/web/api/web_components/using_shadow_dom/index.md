@@ -12,7 +12,7 @@ This article covers the basics of using the shadow DOM.
 
 ## High-level view
 
-This article assumes you are already familiar with the concept of the [DOM (Document Object Model)](/en-US/docs/Web/API/Document_Object_Model/Introduction) — a tree-like structure of connected nodes that represents the different elements and strings of text appearing in a markup document (usually an HTML document in the case of web documents). As an example, consider the following HTML fragment:
+This article assumes you are already familiar with the concept of the [DOM (Document Object Model)](/en-US/docs/Web/API/Document_Object_Model) — a tree-like structure of connected nodes that represents the different elements and strings of text appearing in a markup document (usually an HTML document in the case of web documents). As an example, consider the following HTML fragment:
 
 ```html
 <html lang="en-US">

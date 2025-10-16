@@ -1,5 +1,5 @@
 ---
-title: Firefox 127 for developers
+title: Firefox 127 release notes for developers
 short-title: Firefox 127
 slug: Mozilla/Firefox/Releases/127
 page-type: firefox-release-notes

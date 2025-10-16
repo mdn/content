@@ -1,5 +1,5 @@
 ---
-title: Firefox 66 for developers
+title: Firefox 66 release notes for developers
 short-title: Firefox 66
 slug: Mozilla/Firefox/Releases/66
 page-type: firefox-release-notes

@@ -52,7 +52,7 @@ target.addEventListener("dragenter", (event) => {
 
 ```css
 body {
-  font-family: Arial;
+  font-family: "Arial";
 }
 div {
   display: inline-block;

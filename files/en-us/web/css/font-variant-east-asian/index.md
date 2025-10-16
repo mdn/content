@@ -39,7 +39,7 @@ font-variant-east-asian: proportional-width;
 ```css interactive-example
 section {
   font-family:
-    "YuGothic Medium", YuGothic, "Yu Gothic Medium", "Yu Gothic", sans-serif;
+    "YuGothic Medium", "YuGothic", "Yu Gothic Medium", "Yu Gothic", sans-serif;
   margin-top: 10px;
   font-size: 1.5em;
 }

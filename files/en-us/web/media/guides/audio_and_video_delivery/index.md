@@ -244,7 +244,7 @@ New formats and protocols are being rolled out to facilitate adaptive streaming.
 The main formats used for adaptive streaming are [HLS](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/Live_streaming_web_audio_and_video#hls) and [MPEG-DASH](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/Live_streaming_web_audio_and_video#mpeg-dash). MSE has been designed with DASH in mind. MSE defines byte streams according to [ISOBMFF](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/isobmff-byte-stream-format.html) and [M2TS](https://en.wikipedia.org/wiki/M2ts) (both supported in DASH, the latter supported in HLS). Generally speaking, if you are interested in standards, are looking for flexibility, or wish to support most modern browsers, you are probably better off with DASH.
 
 > [!NOTE]
-> Currently Safari does not support DASH although dash.js will work on newer versions of Safari scheduled for release with OSX Yosemite.
+> Currently Safari does not support DASH although dash.js will work on newer versions of Safari scheduled for release with OS X Yosemite.
 
 DASH also provides a number of profiles including onDemand profiles that require no preprocessing and splitting up of media files. There are also a number of cloud based services that will convert your media to both HLS and DASH.
 
@@ -462,7 +462,7 @@ A number of audio and video JavaScript libraries exist. The most popular librari
 ### Audio only
 
 - [SoundManager](https://www.schillmania.com/projects/soundmanager2/)
-- [AmplitudeJS](https://521dimensions.com/open-source/amplitudejs)
+- [AmplitudeJS](https://serversideup.net/open-source/amplitudejs/)
 - [HowlerJS](https://howlerjs.com/)
 
 ### Video only

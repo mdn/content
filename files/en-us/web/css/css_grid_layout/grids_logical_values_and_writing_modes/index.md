@@ -452,8 +452,8 @@ In addition to displaying documents using the correct writing mode for the langu
   grid-gap: 20px;
   grid-template-columns: 1fr auto;
   font:
-    1em Helvetica,
-    Arial,
+    1em "Helvetica",
+    "Arial",
     sans-serif;
 }
 nav {

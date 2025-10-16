@@ -81,7 +81,7 @@ The unordered list is made to fill the full width of the viewport with a width {
 
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 h1 {
@@ -394,7 +394,7 @@ This example uses [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_lay
 
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 h1 {

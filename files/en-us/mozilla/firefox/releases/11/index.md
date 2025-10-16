@@ -1,5 +1,5 @@
 ---
-title: Firefox 11 for developers
+title: Firefox 11 release notes for developers
 short-title: Firefox 11
 slug: Mozilla/Firefox/Releases/11
 page-type: firefox-release-notes
