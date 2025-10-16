@@ -378,4 +378,7 @@ padding-left: 1.5em;
 
 ## Testing your extension
 
-See the Extension Workshop article [Testing Localizations](http://extensionworkshop.com/documentation/develop/test-localizations/) for information on the tools and process for testing in Firefox.
+For information on the tools and process for testing your localizations, see:
+
+- Firefox: [Testing Localizations](https://extensionworkshop.com/documentation/develop/test-localizations/) in Extension Workshop
+- Chrome: [Set your browser's locale](https://developer.chrome.com/docs/extensions/reference/api/i18n#how-to-set-browsers-locale)
