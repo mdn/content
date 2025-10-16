@@ -92,14 +92,32 @@ The anchor and infobox are now associated, but for the moment you'll have to tru
 
 ### Implicit anchor association
 
-In some cases, an implicit anchor reference will be made between two elements, due to the semantic nature of their relationship. For example, when using the [Popover API](/en-US/docs/Web/API/Popover_API) to associate a popover with a control, an implicit anchor reference is made between the two. This can occur when:
+In some cases, an implicit anchor reference will be made between two elements, due to the semantic nature of their relationship:
 
-- Declaratively associating a popover with a control using the [`popovertarget`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertarget) and [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) attributes.
-- Programmatically associating a popover action such as {{domxref("HTMLElement.showPopover", "showPopover()")}} with a control using the `source` option.
+- When using the [Popover API](/en-US/docs/Web/API/Popover_API) to associate a popover with a control, an implicit anchor reference is made between the two. This can occur when:
+  - Declaratively associating a popover with a control using the [`popovertarget`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertarget) and [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) attributes or the [`commandfor`](/en-US/docs/Web/HTML/Reference/Elements/button#commandfor) and `id` attributes.
+  - Programmatically associating a popover action such as {{domxref("HTMLElement.showPopover", "showPopover()")}} with a control using the `source` option.
 - A {{htmlelement("select")}} element and its dropdown picker are opted into [customizable select element](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select) functionality via the {{cssxref("appearance")}} property `base-select` value. In this case, an implicit popover-invoker relationship is created between the two, which also means they'll have an implicit anchor reference.
 
 > [!NOTE]
 > The methods above associate an anchor with an element, but they are not yet tethered. To tether them together, the positioned element needs to be positioned relative to its anchor, which is done with CSS.
+
+### Removing an anchor association
+
+If you wish to remove an explicit anchor association previously made between an anchor element and a positioned element, you can do one of the following:
+
+1. Set the anchor's `anchor-name` property value to `none`, or to a different `<dashed-ident>`, if you want a different element to be anchored to it.
+2. Set the `position-anchor` property of the positioned element to an anchor name that doesn't exist in the current document, such as `--not-an-anchor-name`.
+
+However, in the case of implicit anchor associations, you'll need to use the second method — the first method doesn't work. This is because the association is controlled internally, and you can't remove the `anchor-name` via CSS.
+
+For example, to stop a customizable `<select>` element's picker from being anchored to the `<select>` element itself, you could use the following rule:
+
+```css
+::picker(select) {
+  position-anchor: --not-an-anchor-name;
+}
+```
 
 ## Positioning elements relative to their anchor
 
