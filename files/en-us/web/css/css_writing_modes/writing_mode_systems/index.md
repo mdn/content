@@ -9,7 +9,7 @@ CSS supports different content directionalities, or **writing modes**, including
 
 ## Block and inline
 
-Before looking into the directionality of various writing systems, it's important to understand the terms "block" and "inline".  The term **inline** refers to the how characters and words flow within a line. The term **block** refers to how lines, or blocks of content, stack up. A document's block and inline directions are determined by the document's writing mode. They are not based on physical directions such as left, right, top, and bottom.
+Before looking into the directionality of various writing systems, it's important to understand the terms "block" and "inline". The term **inline** refers to the how characters and words flow within a line. The term **block** refers to how lines, or blocks of content, stack up. A document's block and inline directions are determined by the document's writing mode. They are not based on physical directions such as left, right, top, and bottom.
 
 ### Dimensions and directions
 
