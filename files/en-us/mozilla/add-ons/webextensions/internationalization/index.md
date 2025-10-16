@@ -378,4 +378,4 @@ padding-left: 1.5em;
 
 ## Testing your extension
 
-See the Extension Workshop article [Testing Localizations](http://extensionwaaaorkshop.com/documentation/develop/test-localizations/) for information on the tools and process for testing in Firefox.
+See the Extension Workshop article [Testing Localizations](http://extensionworkshop.com/documentation/develop/test-localizations/) for information on the tools and process for testing in Firefox.
