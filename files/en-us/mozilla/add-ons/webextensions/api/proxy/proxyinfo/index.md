@@ -17,6 +17,7 @@ Values of this type are objects. They contain the following properties:
     - `"direct"`: don't proxy the request. If this value is given, all other properties of this object are ignored. However, this setting doesn't override any [proxy set by the user](https://support.mozilla.org/en-US/kb/connection-settings-firefox). Use {{WebExtAPIRef("proxy.settings")}} to check whether a manual proxy is being used and, if necessary, monitor those settings for changes using [`BrowserSetting.onChange`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/onChange).
     - `"http"`: HTTP proxy (or SSL CONNECT for HTTPS)
     - `"https"`: HTTP proxying over TLS connection to proxy
+    - `"masque"`: MASQUE (Multiplexed Application Substrate over QUIC Encryption) proxy
     - `"socks"`: SOCKS v5 proxy
     - `"socks4"`: SOCKS v4 proxy
 
@@ -24,10 +25,12 @@ Values of this type are objects. They contain the following properties:
   - : `string`. The hostname of the proxy server. Mandatory unless `type` is `"direct"`.
 - `port`
   - : `number`. The port number of the proxy server. Mandatory unless `type` is `"direct"`.
-- `username`
-  - : `string`. Username for the proxy service. This is usable with "socks". For HTTP proxy authorizations, use [`webRequest.onAuthRequired`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/onAuthRequired).
-- `password`
-  - : `string`. Password for the proxy service. This is usable with "socks". For HTTP proxy authorizations, use [`webRequest.onAuthRequired`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/onAuthRequired).
+- `pathTemplate`
+  - : `string`. The path template. Must be set when the proxy type is `"masque"`, otherwise it's ignored.
+- `username`  {{optional_inline}}
+  - : `string`. Username for the proxy service. This is usable with "socks". For HTTP proxy authorizations, use [`webRequest.onAuthRequired`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/onAuthRequired). Must not be set when proxy is `"masque"`.
+- `password` {{optional_inline}}
+  - : `string`. Password for the proxy service. This is usable with "socks". For HTTP proxy authorizations, use [`webRequest.onAuthRequired`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/onAuthRequired). Must not be set when proxy is `"masque"`.
 - `proxyDNS`
   - : `boolean`. If true, the proxy server is used to resolve certain DNS queries (only usable with `"socks4"` and `"socks"`). Defaults to `false`.
 - `failoverTimeout`
