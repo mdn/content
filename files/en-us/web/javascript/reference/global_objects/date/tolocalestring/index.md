@@ -45,7 +45,7 @@ In implementations that support the [`Intl.DateTimeFormat` API](/en-US/docs/Web/
     In implementations without `Intl.DateTimeFormat` support, this parameter is ignored and the host's locale is usually used.
 
 - `options` {{optional_inline}}
-  - : An object adjusting the output format. Corresponds to the [`options`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#options) parameter of the `Intl.DateTimeFormat()` constructor. If `weekday`, `year`, `month`, `day`, `dayPeriod`, `hour`, `minute`, `second`, and `fractionalSecondDigits` are all undefined, then `year`, `month`, `day`, `hour`, `minute`, `second` will be set to `"numeric"`. To show leading zeros, use `"2-digit"` for the relevant field.
+  - : An object adjusting the output format. Corresponds to the [`options`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#options) parameter of the `Intl.DateTimeFormat()` constructor. If `weekday`, `year`, `month`, `day`, `dayPeriod`, `hour`, `minute`, `second`, and `fractionalSecondDigits` are all undefined, then `year`, `month`, `day`, `hour`, `minute`, `second` will be set to `"numeric"`.
 
     In implementations without `Intl.DateTimeFormat` support, this parameter is ignored.
 
