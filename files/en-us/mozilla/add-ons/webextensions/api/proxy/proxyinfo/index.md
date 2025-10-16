@@ -27,7 +27,7 @@ Values of this type are objects. They contain the following properties:
   - : `number`. The port number of the proxy server. Mandatory unless `type` is `"direct"`.
 - `pathTemplate`
   - : `string`. The path template. Must be set when the proxy type is `"masque"`, otherwise it's ignored.
-- `username`  {{optional_inline}}
+- `username` {{optional_inline}}
   - : `string`. Username for the proxy service. This is usable with "socks". For HTTP proxy authorizations, use [`webRequest.onAuthRequired`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/onAuthRequired). Must not be set when proxy is `"masque"`.
 - `password` {{optional_inline}}
   - : `string`. Password for the proxy service. This is usable with "socks". For HTTP proxy authorizations, use [`webRequest.onAuthRequired`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/onAuthRequired). Must not be set when proxy is `"masque"`.
