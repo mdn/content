@@ -44,11 +44,11 @@ The following example creates a `WebAssembly.Table` instance with an initial siz
 
 This example uses the following reference files:
 
-1. `table2.html`: an HTML page with JavaScript that creates and manipulates a `WebAssembly.Table` ([source code](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/table2.html))
-2. `table2.wat`: a WebAssembly text format module that is converted to a binary format and imported by the JavaScript code in `table2.html` ([source code](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/table2.wat))
+1. `table2.html`: An HTML page with JavaScript that creates and manipulates a `WebAssembly.Table` ([source code](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/table2.html))
+2. `table2.wat`: A WebAssembly text format module that is converted to a binary format and imported by the JavaScript code in `table2.html` ([source code](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/table2.wat))
 
 > [!NOTE]
-> a precompiled WebAssembly binary [table2.wasm](https://github.com/mdn/webassembly-examples/raw/refs/heads/main/js-api-examples/table2.wasm) is available for download.
+> A precompiled WebAssembly binary [table2.wasm](https://github.com/mdn/webassembly-examples/raw/refs/heads/main/js-api-examples/table2.wasm) is available for download.
 
 In `table2.html`, we create a `WebAssembly.Table`:
 
