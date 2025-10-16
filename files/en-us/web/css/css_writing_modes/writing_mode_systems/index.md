@@ -9,15 +9,13 @@ CSS supports different content directionalities, or **writing modes**, including
 
 ## Block and inline
 
-Before looking into the directionality of various writing systems, it's important to understand the terms "block" and "inline".
+Before looking into the directionality of various writing systems, it's important to understand the terms "block" and "inline".  The term **inline** refers to the how characters and words flow within a line. The term **block** refers to how lines, or blocks of content, stack up. A document's block and inline directions are determined by the document's writing mode. They are not based on physical directions such as left, right, top, and bottom.
 
 ### Dimensions and directions
 
 Everything on a web page is laid out in either the **inline** or **block** dimension. The _inline dimension_ is the dimension along which a line of text runs in the current writing mode. The inline dimension is perpendicular to _block dimension_, the dimension in which blocks — such as paragraphs — display one after the other.
 
 In an English document, with the text running horizontally left-to-right, or an Arabic document with the text running horizontally right-to-left, the inline dimension is horizontal, while the _inline direction_ is left-to-right and right-to-left, respectively. In both cases, the block dimension is vertical, with the _block direction_ being top-to-bottom. In vertical writing mode, such as Japanese, the inline dimension is vertical, as lines in that writing mode run vertically, while the block dimension is horizontal.
-
-The block and inline directions are determined by the document's writing mode. They are not based on physical directions such as left, right, top, and bottom.
 
 ### Inline and block boxes
 
