@@ -8,7 +8,7 @@ browser-compat: api.Document.activeViewTransition
 
 {{APIRef("DOM")}}
 
-The **`activeViewTransition`** read-only property of the {{domxref("Document")}} interface returns a {{domxref("ViewTransition")}} instance representing the [view transition](/en-US/docs/Web/API/View_Transition_API) currently active on the page.
+The **`activeViewTransition`** read-only property of the {{domxref("Document")}} interface returns a {{domxref("ViewTransition")}} instance representing the [view transition](/en-US/docs/Web/API/View_Transition_API) currently active on the document.
 
 The current {{domxref("ViewTransition")}} can be accessed in other ways:
 
