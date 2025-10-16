@@ -444,7 +444,7 @@ math {
 
 {{ EmbedLiveSample('Large_operator_and_limits', 700, 200, "", "") }}
 
-As expected, the formula is no longer centered and the rendering is modified to minimized the height. Focusing on the summation symbol, one can notice that the sigma is drawn smaller and that the scripts of the `<munderover>` element are now attached as a subscript and a superscript! This is due to two properties of the "∑" operator:
+As expected, the formula is no longer centered and the rendering is modified to minimize the height. Focusing on the summation symbol, one can notice that the sigma is drawn smaller and that the scripts of the `<munderover>` element are now attached as a subscript and a superscript! This is due to two properties of the "∑" operator:
 
 - _largeop_: The operator is drawn with a bigger glyph if the `<math>` tag has a `display="block"` attribute.
 - _movablelimits_: The underscripts and overscripts attached to the operator are respectively rendered as subscripts and superscripts if the `<math>` tag does not have the `display="block"` attribute.
