@@ -111,7 +111,6 @@ But wait! Remember the last article, where we said that by calling a callback in
 
 It is, of course. But the elegant feature of promises is that `then()` itself returns a new promise that is fulfilled with the return value of the callback function. This means that we can (and certainly should) rewrite the above code like this:
 
-
 ```js
 const fetchPromise = fetch(
   "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
@@ -189,13 +188,12 @@ A promise can be in one of three states:
 - **fulfilled**: The operation completed successfully. This is when the promise's `.then()` handler is called.
 - **rejected**: The operation failed. This is when the promise's `.catch()` handler is called.
 
-We also use a few other terms to describe a promise’s state:
+We also use a few other terms to describe a promise's state:
 
 - **settled**: The promise is no longer pending; it has either been fulfilled or rejected.
-- **resolved**: The promise is settled, or it has been “locked in” to follow the state of another promise. This is a more advanced concept that appears when one promise depends on another.
+- **resolved**: The promise is settled, or it has been "locked in" to follow the state of another promise. This is a more advanced concept that appears when one promise depends on another.
 
 You may also encounter the term **completed**, which is used informally. It generally means the same as **settled**.
-
 
 ## Combining multiple promises
 
