@@ -22,7 +22,9 @@ createPipelineLayout(descriptor)
 - `descriptor`
   - : An object containing the following properties:
     - `bindGroupLayouts`
-      - : An array of {{domxref("GPUBindGroupLayout")}} objects (which are in turn created via calls to {{domxref("GPUDevice.createBindGroupLayout()")}}). Each one corresponds to a [`@group`](https://gpuweb.github.io/gpuweb/wgsl/#attribute-binding) attribute in the shader code contained in the {{domxref("GPUShaderModule")}} used in a related pipeline.
+      - : An array of values representing the bind group layouts for a pipeline. Each value can be:
+        - A {{domxref("GPUBindGroupLayout")}} object, created via a call to {{domxref("GPUDevice.createBindGroupLayout()")}}. Each object corresponds to a [`@group`](https://gpuweb.github.io/gpuweb/wgsl/#attribute-binding) attribute in the shader code contained in the {{domxref("GPUShaderModule")}} used in a related pipeline.
+        - `null`, which represents an empty bind group layout. `null` values are ignored when creating a pipeline layout.
     - `label` {{optional_inline}}
       - : A string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
 
@@ -77,6 +79,21 @@ const pipelineLayout = device.createPipelineLayout({
 });
 
 // …
+```
+
+### Specifying an empty bind group layout
+
+In this snippet, we create three bind group layouts, with bind group layout 1 representing fragment data and bind group layout 2 representing vertex data. If we want to create a pipeline that uses only bind group layouts 0 and 2, we can pass `null` for bind group layout 1 and then render without a fragment shader.
+
+```js
+const bgl0 = myDevice.createBindGroupLayout({ entries: myGlobalEntries });
+const bgl1 = myDevice.createBindGroupLayout({ entries: myFragmentEntries });
+const bgl2 = myDevice.createBindGroupLayout({ entries: myVertexEntries });
+
+// pipeline layout can be used to render without a fragment shader
+const myPipelineLayout = myDevice.createPipelineLayout({
+  bindGroupLayouts: [bgl0, null, bgl2],
+});
 ```
 
 ## Specifications
