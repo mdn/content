@@ -154,8 +154,6 @@ console.log(date.toLocaleString("en-US", { hour12: false }));
 // The exact date and time may shift depending on your local time zone.
 ```
 
-To force a fixed-width day or month, use [`2-digit`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#2-digit) for the respective option.
-The output may still follow the locale's style (for example, `en-GB` often adds leading zeros even with `numeric`).
 
 ## Specifications
 
