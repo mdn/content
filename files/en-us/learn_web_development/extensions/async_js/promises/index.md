@@ -180,8 +180,6 @@ Try running this version: you should see the error logged by our `catch()` handl
 
 ## Promise terminology
 
-## Promise terminology
-
 Promises come with some quite specific terminology that it's worth getting clear about.
 
 A promise can be in one of three states:
