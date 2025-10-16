@@ -246,7 +246,9 @@ img {
 .grid {
   margin: 0 auto;
   max-width: 980px;
-  /* 4. Display <article> and <aside> as two flexible columns */
+  /* Solution: Display <article> and <aside> as two flexible
+  columns, with <article> three times the width of <aside>,
+  and a 20px gap */
   display: grid;
   grid-template-columns: 3fr 1fr;
   gap: 20px;
@@ -255,7 +257,8 @@ img {
 nav {
   background-color: black;
   padding: 0.5em;
-  /* 2. Make navigation bar stick to top of viewport */
+  /* Solution: Make navigation bar scroll with content normally but
+  then stick to top of viewport */
   top: 0;
   position: sticky;
 }
@@ -264,8 +267,8 @@ nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
-  /* 1. Lay out navigation items in a row with space
-     in between and at the ends  */
+  /* Solution: Display the navigation items in a row with equal space
+  in between and less space at the ends  */
   display: flex;
   justify-content: space-around;
 }
@@ -280,7 +283,8 @@ nav a {
   list-style: none;
   margin: 0;
   padding: 0;
-  /* 5. Display photos in two-column grid */
+  /* Solution: Display photos in two-column grid with equal columns
+  and a 5px gap */
   display: grid;
   gap: 5px;
   grid-template-columns: 1fr 1fr;
@@ -288,7 +292,8 @@ nav a {
 
 .feature {
   width: 200px;
-  /* 3. Wrap text around feature image to the right and bottom */
+  /* Solution: Wrap text around the "feature" image to the right and bottom,
+  with suitable space between image and text */
   float: left;
   margin: 8px 30px 20px 0;
 }
