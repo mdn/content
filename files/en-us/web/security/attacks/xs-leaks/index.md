@@ -239,7 +239,7 @@ If your server sends this header and sets it to any value except the default of 
 
 ## Defense summary checklist
 
-As we've seen, cross-site leaks include a range of attacks targeting different parts of the web platform: a single defense doesn't work against any of them. Indeed, some leaks, such as the one that exploits CSP to leak redirects, don't have any defenses yet.
+Cross-site leaks include a range of attacks targeting different parts of the web platform. A single defense doesn't work against any of them and some leaks, such as the one that exploits CSP to leak redirects, don't have any defenses yet.
 
 In this guide we've outlined a few defenses that help to isolate your site from potential attackers, and we recommend implementing all of them:
 

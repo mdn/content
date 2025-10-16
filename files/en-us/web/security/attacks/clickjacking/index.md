@@ -65,11 +65,7 @@ As an additional partial mitigation, sites should set the [`SameSite`](/en-US/do
 
 ## Defense summary checklist
 
-As a primary defense:
-
 - Set the [`frame-ancestors`](/en-US/docs/Web/HTTP/Guides/CSP#clickjacking_protection) CSP directive and the {{httpheader("X-Frame-Options")}} HTTP response header, in order to prevent other sites from embedding your site as an `<iframe>`, or to strictly control which sites can embed it.
-
-As a defense in depth:
 
 - Set the [`SameSite`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) cookie attribute for session cookies to `Lax` or `Strict`.
 

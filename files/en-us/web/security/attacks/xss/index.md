@@ -312,8 +312,6 @@ The recommended approach to mitigating XSS with a CSP is a [strict CSP](/en-US/d
 
 ## Defense summary checklist
 
-We can summarize the defenses above as follows:
-
 - When interpolating input into a page, either in the browser or in the server, use a templating engine that performs output encoding.
 - Be aware of the context in which you are interpolating input, and ensure that the appropriate output encoding will be performed in that context.
 - If you need to include input as HTML, sanitize it using a reputable library. If you're doing this in the browser, use the trusted types framework to ensure that input is being processed by your sanitization function.

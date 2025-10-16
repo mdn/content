@@ -175,8 +175,6 @@ See [Bypassing SameSite cookie restrictions](https://portswigger.net/web-securit
 
 ## Defense summary checklist
 
-We can summarize the defenses above as follows:
-
 - Understand where in your website you are implementing state-changing requests that use session cookies to check which user issued the request.
 - Implement at least one of the primary defenses described in this document:
   - If you are using `<form>` elements to issue these requests, ensure you are using a web framework with support for CSRF tokens, and use it.
