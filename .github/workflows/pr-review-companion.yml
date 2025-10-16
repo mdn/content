@@ -100,7 +100,7 @@ jobs:
           persist-credentials: false
 
       - name: Setup (mdn/content)
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         if: steps.check.outputs.HAS_ARTIFACT
         with:
           node-version-file: "content/.nvmrc"
