@@ -7,7 +7,7 @@ sidebar: glossarysidebar
 
 **HTTP/2** is a major revision of the [HTTP network protocol](/en-US/docs/Web/HTTP).
 
-The primary goals for HTTP/2 are to reduce {{glossary("latency")}} and {{glossary("head of line blocking", "head-of-line blocking")}} by enabling full request and response multiplexing and support for request prioritization, minimize protocol overhead via efficient compression of HTTP header fields (HPACK).
+The primary goals for HTTP/2 are to reduce {{glossary("latency")}} and {{glossary("head of line blocking", "head-of-line blocking")}}, by enabling full request and response multiplexing and support for request prioritization, and to minimize protocol overhead via efficient compression of HTTP header fields (HPACK).
 
 HTTP/2 also introduced a mechanism called Server Push, which allowed a server to send resources to a client in anticipation that the client would need them very soon.
 Server Push proved tricky to implement in practice, and has been removed from most major browser engines.
