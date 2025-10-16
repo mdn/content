@@ -180,21 +180,22 @@ Try running this version: you should see the error logged by our `catch()` handl
 
 ## Promise terminology
 
+## Promise terminology
+
 Promises come with some quite specific terminology that it's worth getting clear about.
 
-First, a promise can be in one of three states:
+A promise can be in one of three states:
 
-- **pending**: the promise has been created, and the asynchronous function it's associated with has not succeeded or failed yet. This is the state your promise is in when it's returned from a call to `fetch()`, and the request is still being made.
-- **fulfilled**: the asynchronous function has succeeded. When a promise is fulfilled, its `then()` handler is called.
-- **rejected**: the asynchronous function has failed. When a promise is rejected, its `catch()` handler is called.
+- **pending**: The initial state. The operation has not completed yet.
+- **fulfilled**: The operation completed successfully. This is when the promise's `.then()` handler is called.
+- **rejected**: The operation failed. This is when the promise's `.catch()` handler is called.
 
-Note that what "succeeded" or "failed" means here is up to the API in question. For example, `fetch()` rejects the returned promise if (among other reasons) a network error prevented the request being sent, but fulfills the promise if the server sent a response, even if the response was an error like [404 Not Found](/en-US/docs/Web/HTTP/Reference/Status/404).
+We also use a few other terms to describe a promise's state:
 
-Sometimes, we use the term **settled** to cover both **fulfilled** and **rejected**.
+- **settled**: The promise is no longer pending; it has either been fulfilled or rejected.
+- **resolved**: The promise is settled, or it has been "locked in" to follow the state of another promise. This is a more advanced concept that appears when one promise depends on another.
 
-A promise is **resolved** if it is settled, or if it has been "locked in" to follow the state of another promise.
-
-The article [Let's talk about how to talk about promises](https://thenewtoys.dev/blog/2021/02/08/lets-talk-about-how-to-talk-about-promises/) gives a great explanation of the details of this terminology.
+You may also encounter the term **completed**, which is used informally. It generally means the same as **settled**.
 
 ## Combining multiple promises
 
