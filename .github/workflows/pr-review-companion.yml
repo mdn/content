@@ -104,6 +104,7 @@ jobs:
         if: steps.check.outputs.HAS_ARTIFACT
         with:
           node-version-file: "content/.nvmrc"
+          package-manager-cache: false
 
       - name: Install (mdn/content)
         if: steps.check.outputs.HAS_ARTIFACT
