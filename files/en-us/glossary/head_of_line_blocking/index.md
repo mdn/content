@@ -15,7 +15,7 @@ Network conditions such as congestion, packet loss (and the resulting TCP retran
 
 {{glossary("HTTP 2", "HTTP/2")}} reduces application-level HOL blocking by introducing request and response _multiplexing_.
 With this feature multiple requests and responses can be interleaved over a single TCP connection using independently numbered streams, and stream prioritization helps the server decide which streams to send first.
-Packet loss at the transport layer can still cause HOL blocking across streams because HTTP/2 runs over TCP  — a lost TCP segment can stall all streams carried on that connection until the lost data is retransmitted.
+Packet loss at the transport layer can still cause HOL blocking across streams because HTTP/2 runs over TCP — a lost TCP segment can stall all streams carried on that connection until the lost data is retransmitted.
 
 {{glossary("HTTP 3", "HTTP/3")}} eliminates the transport-layer head-of-line blocking by using {{glossary("QUIC")}} over {{glossary("UDP")}} and thus HOL problem on HTTP no longer exists.
 QUIC provides multiple independent streams with per-stream loss recovery, so packet loss affects only the stream where it occurs rather than the entire connection. This removes the TCP-level HOL problem.
