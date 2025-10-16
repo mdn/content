@@ -1,5 +1,5 @@
 ---
-title: Firefox 108 for developers
+title: Firefox 108 release notes for developers
 short-title: Firefox 108
 slug: Mozilla/Firefox/Releases/108
 page-type: firefox-release-notes

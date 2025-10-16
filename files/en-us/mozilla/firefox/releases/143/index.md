@@ -1,5 +1,5 @@
 ---
-title: Firefox 143 for developers
+title: Firefox 143 release notes for developers
 short-title: Firefox 143
 slug: Mozilla/Firefox/Releases/143
 page-type: firefox-release-notes

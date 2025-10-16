@@ -1,5 +1,5 @@
 ---
-title: Firefox 100 for developers
+title: Firefox 100 release notes for developers
 short-title: Firefox 100
 slug: Mozilla/Firefox/Releases/100
 page-type: firefox-release-notes

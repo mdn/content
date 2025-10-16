@@ -1,5 +1,5 @@
 ---
-title: Firefox 119 for developers
+title: Firefox 119 release notes for developers
 short-title: Firefox 119
 slug: Mozilla/Firefox/Releases/119
 page-type: firefox-release-notes

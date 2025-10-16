@@ -1,5 +1,5 @@
 ---
-title: Firefox 61 for developers
+title: Firefox 61 release notes for developers
 short-title: Firefox 61
 slug: Mozilla/Firefox/Releases/61
 page-type: firefox-release-notes

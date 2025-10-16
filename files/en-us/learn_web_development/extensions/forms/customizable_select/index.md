@@ -390,6 +390,9 @@ In our demo, the position of the picker is set relative to its anchor by using t
 
 This results in the top edge of the picker always being positioned 1 pixel down from the bottom edge of the select button, and the left edge of the picker always being positioned `10%` of the select button's width across from its left edge.
 
+> [!NOTE]
+> If you want to remove the implicit anchor reference to stop the picker from being anchored to the `<select>` element, you can do so by setting the `position-anchor` property of the picker to an anchor name that doesn't exist in the current document, such as `--not-an-anchor-name`. See also [removing an anchor association](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#removing_an_anchor_association).
+
 ## Final result
 
 After the last two sections, the final updated state of our `<select>` is rendered like this:

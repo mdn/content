@@ -1,5 +1,5 @@
 ---
-title: Firefox 145 for developers
+title: Firefox 145 release notes for developers (Beta)
 short-title: Firefox 145 (Beta)
 slug: Mozilla/Firefox/Releases/145
 page-type: firefox-release-notes-active
