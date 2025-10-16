@@ -1,5 +1,5 @@
 ---
-title: Firefox 47 for developers
+title: Firefox 47 release notes for developers
 short-title: Firefox 47
 slug: Mozilla/Firefox/Releases/47
 page-type: firefox-release-notes

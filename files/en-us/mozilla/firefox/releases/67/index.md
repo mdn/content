@@ -1,5 +1,5 @@
 ---
-title: Firefox 67 for developers
+title: Firefox 67 release notes for developers
 short-title: Firefox 67
 slug: Mozilla/Firefox/Releases/67
 page-type: firefox-release-notes

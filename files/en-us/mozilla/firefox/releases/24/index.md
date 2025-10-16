@@ -1,5 +1,5 @@
 ---
-title: Firefox 24 for developers
+title: Firefox 24 release notes for developers
 short-title: Firefox 24
 slug: Mozilla/Firefox/Releases/24
 page-type: firefox-release-notes

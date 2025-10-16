@@ -1,5 +1,5 @@
 ---
-title: Firefox 128 for developers
+title: Firefox 128 release notes for developers
 short-title: Firefox 128
 slug: Mozilla/Firefox/Releases/128
 page-type: firefox-release-notes

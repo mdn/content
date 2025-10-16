@@ -1,5 +1,5 @@
 ---
-title: Firefox 146 for developers
+title: Firefox 146 release notes for developers (Nightly)
 short-title: Firefox 146 (Nightly)
 slug: Mozilla/Firefox/Releases/146
 page-type: firefox-release-notes-active

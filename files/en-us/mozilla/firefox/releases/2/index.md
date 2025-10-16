@@ -1,5 +1,5 @@
 ---
-title: Firefox 2 for developers
+title: Firefox 2 release notes for developers
 short-title: Firefox 2
 slug: Mozilla/Firefox/Releases/2
 page-type: firefox-release-notes
