@@ -13,8 +13,6 @@ QUIC was designed to provide quicker setup and lower {{glossary("latency")}} for
 
 - HTTP/2 is a multiplexed protocol, allowing multiple simultaneous HTTP transactions. However, the transactions are multiplexed over a single TCP connection, meaning that packet loss and subsequent retransmissions at the TCP layer can block all transactions. QUIC avoids this by running over UDP and implementing packet loss detection and retransmission separately for each stream, meaning that packet loss only blocks the particular stream whose packets were lost.
 
-In addition, QUIC help to resolve the {{glossary("HTTP 2", "HTTP/2")}} transport-layer {{glossary("head of line blocking", "head-of-line blocking")}} problem in HTTP/3, since it now runs over UDP instead of TCP, and thus HOL problem on HTTP no longer exists.
-
 ## See also
 
 - Related glossary terms
