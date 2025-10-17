@@ -9,19 +9,19 @@ CSS supports different content directionalities, or **writing modes**, including
 
 ## Block and inline
 
-Before looking into the directionality of various writing systems, it's important to understand the terms "block" and "inline". The term **inline** refers to the how characters and words flow within a line. The term **block** refers to how lines, or blocks of content, stack up. A document's block and inline directions are determined by the document's writing mode. They are not based on physical directions such as left, right, top, and bottom.
+Before examining the directionality of various writing systems, it's important to understand the terms "block" and "inline". The term **inline** refers to how characters and words flow within a line. The term **block** refers to how lines, or blocks of content, stack up next to one another. The document's writing mode determines a document's block and inline directions. They are not based on physical directions such as left, right, top, and bottom.
 
 ### Dimensions and directions
 
-Everything on a web page is laid out in either the **inline** or **block** dimension. The _inline dimension_ is the dimension along which a line of text runs in the current writing mode. The inline dimension is perpendicular to _block dimension_, the dimension in which blocks — such as paragraphs — display one after the other.
+Everything on a web page is laid out in either the **inline** or **block** dimension. The _inline dimension_ is the dimension along which a line of text runs in the current writing mode, whereas the _block dimension_ is the dimension in which blocks — such as paragraphs — display one after the other. The inline dimension is perpendicular to the block dimension.
 
-In an English document, with the text running horizontally left-to-right, or an Arabic document with the text running horizontally right-to-left, the inline dimension is horizontal, while the _inline direction_ is left-to-right and right-to-left, respectively. In both cases, the block dimension is vertical, with the _block direction_ being top-to-bottom. In vertical writing mode, such as Japanese, the inline dimension is vertical, as lines in that writing mode run vertically, while the block dimension is horizontal.
+In an English document, with the text running horizontally left-to-right, or an Arabic document with the text running horizontally right-to-left, the inline dimension is horizontal, while the _inline direction_ is left-to-right and right-to-left, respectively. In both cases, the block dimension is vertical, with the _block direction_ being top-to-bottom. In a vertical writing mode such as Japanese, the inline dimension is vertical, as lines in that writing mode run vertically, while the block dimension is horizontal.
 
 ### Inline and block boxes
 
-The _outer display_ type of boxes in a [normal flowing layout](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model#normal_flow) determine how the box behaves alongside other elements on the page. Inline boxes are the boxes that wrap each line of text and are laid out along the inline dimension.
+The _outer display_ type of boxes in a [normal flowing layout](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model#normal_flow) determines how the box behaves alongside other elements on the page. _Inline boxes_ wrap each line of text and are laid out along the inline dimension.
 
-Block boxes represent containers on the page that can contain other block and inline elements. They are laid out along the block dimension and will extend in the inline dimension to fill the space available in their container if {{cssxref("inline-size")}} is not specified. Block boxes are only displayed from the top to the bottom of the page if you are using a writing mode that displays text horizontally, such as English.
+_Block boxes_ represent containers on the page that can contain other block and inline elements. They are laid out along the block dimension and will extend in the inline dimension to fill all the space available in their container (provided a specific size is not set in the inline dimension using a property such as {{cssxref("inline-size")}}). Block boxes are only displayed from the top to the bottom of the page if you are using a writing mode that displays text horizontally, such as English.
 
 The [CSS logical properties and values module](/en-US/docs/Web/CSS/CSS_logical_properties_and_values#properties) defines {{glossary("flow relative values", "flow-relative mappings")}} for many of the {{glossary("physical properties")}} and values in CSS, which is helpful in understanding the [basic concepts of logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values).
 
@@ -29,7 +29,7 @@ The [CSS logical properties and values module](/en-US/docs/Web/CSS/CSS_logical_p
 
 The _inline base direction_ is the primary direction in which content is ordered on a line and defines the "start" and "end" of a line. The {{cssxref("direction")}} property specifies the inline base direction of a box and, together with the {{cssxref("unicode-bidi")}} property and the inherent directionality of any text content, determines the ordering of inline-level content within a line.
 
-The _block flow direction_ is the direction in which block-level boxes stack and the direction in which line boxes stack within a block container. The {{cssxref("writing-mode")}} property determines the block flow direction.
+The _block flow direction_ is the direction in which block-level and line boxes stack within a block container. The {{cssxref("writing-mode")}} property determines the block flow direction.
 
 ## Writing system modes
 
@@ -56,7 +56,7 @@ Han-based systems are commonly written using a left-to-right inline direction wi
 <p lang="jp-JP" dir="auto">これはベトナム語で書かれています</p>
 ```
 
-Mongolian-based systems are typically written vertically, top to bottom, in columns that flow left to right; a top-to-bottom inline direction with a left-to-right block flow direction. This is different from Chinese, Japanese, and Korean, whose vertical text columns are read right to left. It derives from the fact that Mongolian script descended from Old Uyghur, which was written right to left.
+Mongolian-based systems are typically written vertically, top to bottom, in columns that flow left to right; a top-to-bottom inline direction with a left-to-right block flow direction. This differs from Chinese, Japanese, and Korean, whose vertical text columns are read right to left. It derives from the fact that Mongolian script descended from Old Uyghur, which was written right to left.
 
 ```html
 <p lang="mn-MONG" dir="auto">Үүнийг монгол хэлээр бичжээ</p>
