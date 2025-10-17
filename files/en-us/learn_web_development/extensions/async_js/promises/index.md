@@ -184,16 +184,16 @@ Promises come with some quite specific terminology that it's worth getting clear
 
 First, a promise can be in one of three states:
 
-* **pending**: The initial state. The operation has not yet completed (succeeded or failed).
-* **fulfilled**: The operation succeeded. This is when the promise's `.then()` handler is called.
-* **rejected**: The operation failed. This is when the promise's `.catch()` handler is called.
+- **pending**: The initial state. The operation has not yet completed (succeeded or failed).
+- **fulfilled**: The operation succeeded. This is when the promise's `.then()` handler is called.
+- **rejected**: The operation failed. This is when the promise's `.catch()` handler is called.
 
 Note that what "succeeded" or "failed" means here is up to the API in question. For example, `fetch()` rejects the returned promise if (among other reasons) a network error prevented the request being sent, but fulfills the promise if the server sent a response, even if the response was an error like [404 Not Found](/en-US/docs/Web/HTTP/Reference/Status/404).
 
 We also use a few other terms to describe a promise's state:
 
-* **completed**: The promise is no longer pending; it has either been fulfilled or rejected.
-* **resolved**: The promise is completed, or it has been "locked in" to follow the state of another promise. This is a more advanced concept, relevant when one promise depends on another.
+- **completed**: The promise is no longer pending; it has either been fulfilled or rejected.
+- **resolved**: The promise is completed, or it has been "locked in" to follow the state of another promise. This is a more advanced concept, relevant when one promise depends on another.
 
 The article [Let's talk about how to talk about promises](https://thenewtoys.dev/blog/2021/02/08/lets-talk-about-how-to-talk-about-promises/) gives a great explanation of the details of this terminology.
 
