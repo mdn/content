@@ -59,7 +59,7 @@ style.cssPropertyName = "value";
 
 In this example we have three buttons, which can be pressed to dynamically alter our box paragraph's border, background color, and text color to random values (see the live example at the end of this section).
 
-The MDN [live sample](/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples) infrastructure combines all the CSS blocks in the example into a single inline style with the id `css-output`, so we first use {{domxref("Document.querySelector()")}} to find that sheet.
+The MDN [live sample](/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples) infrastructure combines all the CSS blocks in the example into a single inline style with the id `css-output`, so we first use {{domxref("document.getElementById()")}} to find that sheet.
 
 We then loop through the different rules contained inside the stylesheet in the array found at [`stylesheet.cssRules`](/en-US/docs/Web/API/CSSStyleSheet/cssRules).
 For each rule we check whether its [`CSSStyleRule.selectorText`](/en-US/docs/Web/API/CSSStyleRule/selectorText) is equal to the selector `.box p`, which is the one we want.
@@ -150,7 +150,7 @@ function randomColor() {
 }
 
 // Find the inline stylesheet generated for MDN live samples
-const stylesheet = document.querySelector("style#css-output").sheet;
+const stylesheet = document.getElementById("css-output").sheet;
 
 const boxParaRule = [...stylesheet.cssRules].find(
   (r) => r.selectorText === ".box p",
