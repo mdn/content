@@ -86,12 +86,12 @@ const pipelineLayout = device.createPipelineLayout({
 In this snippet, we create three bind group layouts, with bind group layout 1 representing fragment data and bind group layout 2 representing vertex data. If we want to create a pipeline that uses only bind group layouts 0 and 2, we can pass `null` for bind group layout 1 and then render without a fragment shader.
 
 ```js
-const bgl0 = myDevice.createBindGroupLayout({ entries: myGlobalEntries });
-const bgl1 = myDevice.createBindGroupLayout({ entries: myFragmentEntries });
-const bgl2 = myDevice.createBindGroupLayout({ entries: myVertexEntries });
+const bgl0 = device.createBindGroupLayout({ entries: myGlobalEntries });
+const bgl1 = device.createBindGroupLayout({ entries: myFragmentEntries });
+const bgl2 = device.createBindGroupLayout({ entries: myVertexEntries });
 
 // pipeline layout can be used to render without a fragment shader
-const myPipelineLayout = myDevice.createPipelineLayout({
+const pipelineLayout = device.createPipelineLayout({
   bindGroupLayouts: [bgl0, null, bgl2],
 });
 ```
