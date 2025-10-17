@@ -18,7 +18,7 @@ The **`autofocus`** global SVG attribute defines a focusable element to be focus
     <tr>
       <th scope="row">Value</th>
       <td>
-        <code>[boolean attribute](/en-US/docs/Glossary/Boolean/HTML)</code>
+        <code><a href="/en-US/docs/Glossary/Boolean/HTML">boolean attribute</a></code>
       </td>
     </tr>
     <tr>
