@@ -51,6 +51,10 @@ You rarely work with plain `Node` objects—instead, all objects in the DOM impl
 </html>
 ```
 
+It produces the following DOM tree:
+
+![The DOM tree of the previous HTML document](/shared-assets/images/diagrams/api/dom/tree-structure.svg)
+
 The root of this DOM tree is a {{domxref("Document")}} node, which represents the entire document. This node is exposed globally as the {{domxref("Window/document", "document")}} variable. This node has two important child nodes:
 
 - An optional {{domxref("DocumentType")}} node representing the {{glossary("doctype")}} declaration. In our case, there is one. This node is also accessible via the {{domxref("Document/doctype", "doctype")}} property of the `Document` node.
