@@ -34,7 +34,7 @@ All nodes in the DOM are represented by objects that implement the {{domxref("No
 - The {{domxref("Node/contains", "contains()")}} method returns `true` if a given node is a descendant of the node.
 - The {{domxref("Node/compareDocumentPosition", "compareDocumentPosition()")}} method compares two nodes by tree order. The [Comparing nodes](#comparing_nodes) section discusses this method in more detail.
 
-But you rarely work with plain `Node` objects—instead, all objects in the DOM implement one of the interfaces that inherit from `Node`, which represent additional semantics in the document. The node types restrict what data they contain, and what children types are valid. We consider how the following HTML document is represented in the DOM:
+You rarely work with plain `Node` objects—instead, all objects in the DOM implement one of the interfaces that inherit from `Node`, which represent additional semantics in the document. The node types restrict what data they contain, and what children types are valid. Consider how the following HTML document is represented in the DOM:
 
 ```html
 <!doctype html>
@@ -102,7 +102,7 @@ The `Document` does define some metadata about the document, coming from the env
 - The {{domxref("Document/URL", "URL")}} and {{domxref("Document/documentURI", "documentURI")}} properties return the document's URL.
 - The {{domxref("Document/characterSet", "characterSet")}} property returns the character encoding used by the document, such as `"UTF-8"`.
 - The {{domxref("Document/compatMode", "compatMode")}} property returns the rendering mode of the document, either `"CSS1Compat"` (standards mode) or `"BackCompat"` (quirks mode).
-- The {{domxref("Document/contentType", "contentType")}} property returns the MIME type of the document, such as `"text/html"` for HTML documents.
+- The {{domxref("Document/contentType", "contentType")}} property returns the [media type](/en-US/docs/Web/HTTP/Guides/MIME_types) of the document, such as `"text/html"` for HTML documents.
 
 ### DocumentType
 
@@ -205,7 +205,7 @@ Because `Element` nodes form the backbone of the document structure, you can spe
 
 There are three important methods that compare nodes: {{domxref("Node/isEqualNode", "isEqualNode()")}}, {{domxref("Node/isSameNode", "isSameNode()")}}, {{domxref("Node/compareDocumentPosition", "compareDocumentPosition()")}}.
 
-The `isSameNode()` method is legacy. Now, it just behaves like the [strict equality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) (`===`), returning `true` if and only if the two nodes are the same object.
+The `isSameNode()` method is legacy. Now, it behaves like the [strict equality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) (`===`), returning `true` if and only if the two nodes are the same object.
 
 The `isEqualNode()` method compares two nodes structurally. Two nodes are considered equal if they have the same type, the same data, and their child nodes are also equal at each index. In the [Data of each node](#data_of_each_node) section, we already defined the data relevant for each node type:
 
