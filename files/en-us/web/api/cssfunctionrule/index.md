@@ -46,12 +46,11 @@ Our CSS defines a custom function using the {{cssxref("@function")}} at-rule. Th
 
 #### JavaScript
 
-Our script starts by getting a reference to the stylesheet attached to our document using {{domxref("Document.styleSheets")}}, then getting a reference to the only rule in the stylesheet, the `CSSFunctionRule` — via {{domxref("CSSStylesheet.cssRules")}}. We then log each of the `CSSFunctionRule` members to the console.
+Our script starts by getting a reference to the stylesheet attached to our document using {{domxref("HTMLStyleElement.sheet")}}, then getting a reference to the only rule in the stylesheet, the `CSSFunctionRule` — via {{domxref("CSSStylesheet.cssRules")}}. We then log each of the `CSSFunctionRule` members to the console.
 
 ```js live-sample___cssfunctionrule-basics
 // Get a CSSFunctionRule
-const sheet = document.styleSheets[0];
-const cssFunc = sheet.cssRules[0];
+const cssFunc = document.getElementById("css-output").sheet.cssRules[0];
 
 // Accessing CSSFunctionRule members
 console.log(cssFunc.name);

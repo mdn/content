@@ -96,7 +96,7 @@ This allows us to see how the properties map in the Web API object.
 
 First we check if `CSSPageDescriptors` is defined on the global window object, and if not we log that the interface is not supported.
 
-If `CSSPageDescriptors` is supported, we get the document stylesheet at index `1`, and then gets the `cssRules` defined in that stylesheet.
+If `CSSPageDescriptors` is supported, we get the target stylesheet, and then gets the `cssRules` defined in that stylesheet.
 We need to get this stylesheet because the example is embedded in a separate frame with its own sheet (index `0` is the CSS for this page).
 
 We then iterate through the rules defined for the live example and match any that are of type `CSSPageRule`, as these correspond to `@page` rules.
@@ -107,7 +107,7 @@ if (typeof window.CSSPageDescriptors === "undefined") {
   log("CSSPageDescriptors is not supported on this browser.");
 } else {
   // Get stylesheets for example and then get its cssRules
-  const myRules = document.styleSheets[1].cssRules;
+  const myRules = document.getElementById("css-output").sheet.cssRules;
   for (const rule of myRules) {
     if (rule instanceof CSSPageRule) {
       log(`${rule.style}`);
