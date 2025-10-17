@@ -29,7 +29,7 @@ createBuffer(descriptor)
         Note that it is valid to set `mappedAtCreation: true` so you can set the buffer's initial data, even if the `GPUBufferUsage.MAP_READ` or `GPUBufferUsage.MAP_WRITE` usage flags are not set.
 
     - `size`
-      - : A number representing the size of the buffer, in bytes. If `mappedAtCreation` is set to `true`, this should be a multiple of `4`.
+      - : A number representing the size of the buffer, in bytes. If `mappedAtCreation` is set to `true`, this must be a multiple of `4`.
     - `usage`
       - : The {{glossary("Bitwise flags", "bitwise flags")}} representing the allowed usages for the `GPUBuffer`. The possible values are in the [`GPUBuffer.usage` value table](/en-US/docs/Web/API/GPUBuffer/usage#value).
 
