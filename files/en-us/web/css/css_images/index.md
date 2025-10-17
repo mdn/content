@@ -63,7 +63,7 @@ The CSS images module also defines the {{CSSxRef("image/image", "image()")}} fun
 
 - {{cssxref("url_value", "&lt;url&gt;")}}
 - {{cssxref("url_function", "url()")}}
-- [`<basic-shape-rect>`](/en-US/docs/Web/CSS/basic-shape#basic-shape-rect)
+- [`<basic-shape-rect>`](/en-US/docs/Web/CSS/basic-shape#syntax_for_rectangles_basic-shape-rect)
 
 ## Specifications
 

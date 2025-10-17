@@ -39,7 +39,7 @@ This example demonstrates using the `object-view-box` property to zoom a section
 
 ### HTML
 
-We include an {{htmlelement("img")}} element and a [`range`](Web/HTML/Reference/Elements/input/range) {{htmlelement("input")}} element, with an associated {{htmlelement("label")}}. The natural dimensions, or intrinsic size, of the original leopard image are `1244px` wide by `416px` tall, with an {{glossary("aspect ratio")}} of `3:1`.
+We include an {{htmlelement("img")}} element and a [`range`](/en-US/docs/Web/HTML/Reference/Elements/input/range) {{htmlelement("input")}} element, with an associated {{htmlelement("label")}}. The natural dimensions, or intrinsic size, of the original leopard image are `1244px` wide by `416px` tall, with an {{glossary("aspect ratio")}} of `3:1`.
 
 ```html
 <img
@@ -128,8 +128,8 @@ We can create a panning effect by changing the coordinates of the view box windo
 <p>
   <label for="position">Left offset: </label>
   <input type="range" id="position" min="0" max="900" value="450" />
-  <output>
 </p>
+<output></output>
 ```
 
 ```css hidden
