@@ -103,7 +103,7 @@ All this has happened without any changes to your project's direct artifacts, or
 
 The solution to this is to use a lockfile when building your project. A lockfile is automatically generated whenever a project's dependencies are installed, and it lists the exact versions of the direct and indirect dependencies used in a project.
 
-That is, if _package.json_ tells you that your project is using "example-project", then _package.lock_ will tell you exactly which version of "example-project" to use, and what the versions of its dependencies are.
+That is, if _package.json_ tells you that your project is using "example-dependency", then _package.lock_ will tell you exactly which version of "example-dependency" to use, and what the versions of its dependencies are.
 
 Your project's lockfile should be checked into source control. When building your project you should use the lockfile to control which versions of your dependencies are installed: in npm you do this by using [`npm ci`](https://docs.npmjs.com/cli/commands/npm-ci/) instead of `npm install`.
 
