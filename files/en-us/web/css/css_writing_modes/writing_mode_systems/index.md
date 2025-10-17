@@ -56,7 +56,7 @@ Han-based systems are commonly written using a left-to-right inline direction wi
 <p lang="jp-JP" dir="auto">これはベトナム語で書かれています</p>
 ```
 
-Mongolian-based systems are typically written vertically, top to bottom, in columns that flow left to right; a top-to-bottom inline direction with a left-to-right block flow direction. This differs from Chinese, Japanese, and Korean, whose vertical text columns are read right to left. It derives from the fact that Mongolian script descended from Old Uyghur, which was written right to left.
+Mongolian-based systems are typically written vertically, top to bottom, in columns that flow left to right; a top-to-bottom inline direction with a left-to-right block flow direction. This differs from Chinese, Japanese, and Korean, whose vertical text columns are read right to left. It derives from the fact that Mongolian script descended from Old Uyghur, which was written left-to-right.
 
 ```html
 <p lang="mn-MONG" dir="auto">Үүнийг монгол хэлээр бичжээ</p>
