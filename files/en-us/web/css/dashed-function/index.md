@@ -6,7 +6,7 @@ browser-compat: css.types.dashed-function
 sidebar: cssref
 ---
 
-The **`<dashed-function>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents the syntax used to call [CSS custom functions](/en-US/docs/Web/CSS/CSS_custom_functions_and_mixins/Using_custom_functions), which are defined using the {{cssxref("@function")}} at-rule.
+The **`<dashed-function>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types) represents the syntax used to call [CSS custom functions](/en-US/docs/Web/CSS/CSS_custom_functions_and_mixins/Using_custom_functions), which are defined using the {{cssxref("@function")}} at-rule.
 
 ## Syntax
 
