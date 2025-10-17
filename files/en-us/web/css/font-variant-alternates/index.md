@@ -91,7 +91,7 @@ We can then use that name inside `font-variant-alternates` to switch on swashes 
 
 ```css
 @font-face {
-  font-family: MonteCarlo;
+  font-family: "MonteCarlo";
   src: url("/shared-assets/fonts/monte-carlo/monte-carlo-regular.woff2");
 }
 

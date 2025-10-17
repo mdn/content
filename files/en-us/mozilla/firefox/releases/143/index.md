@@ -1,8 +1,8 @@
 ---
-title: Firefox 143 for developers
-short-title: Firefox 143 (Stable)
+title: Firefox 143 release notes for developers
+short-title: Firefox 143
 slug: Mozilla/Firefox/Releases/143
-page-type: firefox-release-notes-active
+page-type: firefox-release-notes
 sidebar: firefox
 ---
 

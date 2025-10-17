@@ -9,4 +9,4 @@ sidebar: glossarysidebar
 
 ## See also
 
-- [CIA](https://en.wikipedia.org/wiki/Information_security#Key_concepts) on Wikipedia
+- [CIA](https://en.wikipedia.org/wiki/Information_security#CIA_triad) on Wikipedia

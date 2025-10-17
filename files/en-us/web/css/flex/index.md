@@ -259,7 +259,7 @@ body * {
   padding: 1rem;
   user-select: none;
   box-sizing: border-box;
-  font-family: Consolas, Arial, sans-serif;
+  font-family: "Consolas", "Arial", sans-serif;
 }
 ```
 

@@ -1,5 +1,6 @@
 ---
 title: User input methods and controls
+short-title: UI methods & controls
 slug: Learn_web_development/Extensions/Forms/User_input_methods
 page-type: guide
 sidebar: learnsidebar

@@ -21,7 +21,7 @@ A great deal of web content can be made accessible just by making sure the corre
       <td>
         <ul>
           <li>Use semantic HTML, aka "The right element for the right job", because the browser provides so many built-in accessibility hooks.</li>
-          <li>Accessible best practices such as alt text, good link best, form labels, and table row and column headings and scoping.</li>
+          <li>Accessible best practices such as alt text, good link text, form labels, and table row and column headings and scoping.</li>
           <li>Using simple plain language, steering clear of slang and abbreviations where possible, and providing definitions where it is not possible.</li>
           <li>The concept and practice of keyboard accessibility.</li>
           <li>The importance of source order.</li>

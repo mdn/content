@@ -68,7 +68,7 @@ The `overlay` property is only present in the list of transitioned properties. A
 
 ```css
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 [popover]:popover-open {

@@ -126,7 +126,7 @@ The CSS media queries level 5 module also introduces the `environment-blending`,
 - HTML
   - `sizes` attribute for [`<img>`](/en-US/docs/Web/HTML/Reference/Elements/img#sizes), [`<link>`](/en-US/docs/Web/HTML/Reference/Elements/link#sizes), and [`<source>`](/en-US/docs/Web/HTML/Reference/Elements/source#sizes) for {{HTMLElement("picture")}}
   - `media` attribute for [`<link>`](/en-US/docs/Web/HTML/Reference/Elements/link#media), [`<source>`](/en-US/docs/Web/HTML/Reference/Elements/source#media), and [`<style>`](/en-US/docs/Web/HTML/Reference/Elements/style#media) [HTML](/en-US/docs/Web/HTML)
-  - [Viewport `<meta>` tag](/en-US/docs/Web/HTML/Guides/Viewport_meta_element)
+  - [`<meta name="viewport">`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/viewport)
 - SVG [`media`](/en-US/docs/Web/SVG/Reference/Attribute/media) attribute
 
 ## Specifications

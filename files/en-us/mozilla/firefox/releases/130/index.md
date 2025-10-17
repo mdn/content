@@ -1,5 +1,5 @@
 ---
-title: Firefox 130 for developers
+title: Firefox 130 release notes for developers
 short-title: Firefox 130
 slug: Mozilla/Firefox/Releases/130
 page-type: firefox-release-notes
