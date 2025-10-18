@@ -290,36 +290,44 @@ Below is a list of all of the attributes available in SVG along with links to re
 
 ## SVG attributes by category
 
-### Generic attributes
+### Core attributes
 
-- Core attributes
-  - {{SVGAttr("id")}}
-  - {{SVGAttr("class")}}
-  - {{SVGAttr("style")}}
-  - {{SVGAttr("lang")}}
-  - {{SVGAttr("tabindex")}}
-  - {{SVGAttr("xml:lang")}}
-  - {{SVGAttr("xml:space")}}
+The core attributes are global attributes:
 
-- Conditional processing attributes
-  - {{SVGAttr("requiredExtensions")}}
-  - {{SVGAttr("requiredFeatures")}}
-  - {{SVGAttr("systemLanguage")}}
+- {{SVGAttr("id")}}
+- {{SVGAttr("class")}}
+- {{SVGAttr("style")}}
+- {{SVGAttr("lang")}}
+- {{SVGAttr("tabindex")}}
+- {{SVGAttr("xml:lang")}}
+- {{SVGAttr("xml:space")}}
+
+### Conditional processing attributes
+
+The conditional processing attributes control whether or not the element on which it appears is processed
+
+- {{SVGAttr("requiredExtensions")}}
+- {{SVGAttr("requiredFeatures")}}
+- {{SVGAttr("systemLanguage")}}
 
 ### XLink attributes
+
+The XLink attributes can reference resources.
 
 - {{SVGAttr("xlink:href")}}{{deprecated_inline}}
 - {{SVGAttr("xlink:type")}}
 - {{SVGAttr("xlink:role")}}
 - {{SVGAttr("xlink:arcrole")}}
-- {{SVGAttr("xlink:title")}}
+- {{SVGAttr("xlink:title")}}{{deprecated_inline}}
 - {{SVGAttr("xlink:show")}}
 - {{SVGAttr("xlink:actuate")}}
 
 ### Presentation attributes
 
+All SVG presentation attributes can be used as CSS properties.
+
 > [!NOTE]
-> All SVG presentation attributes can be used as CSS properties.
+> Whether these attributes are presentation attributes, depends on the element on which they are set. For example, `x` is a {{svgelem("circle")}} presentation attribute, but the `x` on {{svgelem("tspan")}} is not; it's the coordinate of the starting point of the text baseline, or the x coordinate of each individual glyph if a list of values is provided.
 
 - {{SVGAttr("alignment-baseline")}}
 - {{SVGAttr("baseline-shift")}}
@@ -393,7 +401,7 @@ Below is a list of all of the attributes available in SVG along with links to re
 
 ### Filters attributes
 
-- Filter primitive attributes
+- Filter primitive attributes (presentation attributes)
   - : {{SVGAttr("height")}}, {{SVGAttr("result")}}, {{SVGAttr("width")}}, {{SVGAttr("x")}}, {{SVGAttr("y")}}
 - Transfer function attributes
   - : {{SVGAttr("type")}}, {{SVGAttr("tableValues")}}, {{SVGAttr("slope")}}, {{SVGAttr("intercept")}}, {{SVGAttr("amplitude")}}, {{SVGAttr("exponent")}}, {{SVGAttr("offset")}}
@@ -413,73 +421,80 @@ Below is a list of all of the attributes available in SVG along with links to re
 
 ### Event attributes
 
-- **`onabort`**
-- **`onactivate`**
-- **`onbegin`**
-- **`oncancel`**
-- **`oncanplay`**
-- **`oncanplaythrough`**
-- **`onchange`**
-- **`onclick`**
-- **`onclose`**
-- **`oncuechange`**
-- **`ondblclick`**
-- **`ondrag`**
-- **`ondragend`**
-- **`ondragenter`**
-- **`ondragleave`**
-- **`ondragover`**
-- **`ondragstart`**
-- **`ondrop`**
-- **`ondurationchange`**
-- **`onemptied`**
-- **`onend`**
-- **`onended`**
-- **`onerror`**
-- **`onerror`**
-- **`onfocus`**
-- **`onfocusin`**
-- **`onfocusout`**
-- **`oninput`**
-- **`oninvalid`**
-- **`onkeydown`**
-- **`onkeypress`**
-- **`onkeyup`**
-- **`onload`**
-- **`onloadeddata`**
-- **`onloadedmetadata`**
-- **`onloadstart`**
-- **`onmousedown`**
-- **`onmouseenter`**
-- **`onmouseleave`**
-- **`onmousemove`**
-- **`onmouseout`**
-- **`onmouseover`**
-- **`onmouseup`**
-- **`onmousewheel`**
-- **`onpause`**
-- **`onplay`**
-- **`onplaying`**
-- **`onprogress`**
-- **`onratechange`**
-- **`onrepeat`**
-- **`onreset`**
-- **`onresize`**
-- **`onresize`**
-- **`onscroll`**
-- **`onscroll`**
-- **`onseeked`**
-- **`onseeking`**
-- **`onselect`**
-- **`onshow`**
-- **`onstalled`**
-- **`onsubmit`**
-- **`onsuspend`**
-- **`ontimeupdate`**
-- **`ontoggle`**
-- **`onunload`**
-- **`onvolumechange`**
-- **`onwaiting`**
+ The event handler content attributes, prefixed with the `on` are supported by all {{domxref("Document")}} and {{domxref("Window")}} objects, as event handler event types:
+
+- {{domxref("HTMLMediaElement/abort_event", "onabort")}}
+- {{domxref("Element/auxclick_event", "auxclick")}}
+- {{domxref("Element/beforeinput_event", "onbeforeinput")}}
+- {{domxref("Element/beforematch_event", "onbeforematch")}}
+- {{domxref("HTMLElement/beforetoggle_event", "onbeforetoggle")}}
+- {{domxref("Element/blur_event", "onblur")}}
+- {{domxref("Element/cancel_event", "oncancel")}}
+- {{domxref("HTMLMediaElement/canplay_event", "oncanplay")}}
+- {{domxref("HTMLMediaElement/canplaythrough_event", "oncanplaythrough")}}
+- {{domxref("HTMLElement/change_event", "onchange")}}
+- {{domxref("Element/click_event", "onclick")}}
+- {{domxref("HTMLDialogElement/close_event", "onclose")}}
+- {{domxref("HTMLElement/command_event", "oncommand")}}
+- {{domxref("HTMLCanvasElement/contextlost_event", "oncontextlost")}}
+- {{domxref("Element/contextmenu_event", "oncontextmenu")}}
+- {{domxref("HTMLCanvasElement/contextrestored_event", "oncontextrestored")}}
+- {{domxref("Element/copy_event", "oncopy")}}
+- {{domxref("HTMLTrackElement/cuechange_event", "oncuechange")}}
+- {{domxref("Element/cut_event", "oncut")}}
+- {{domxref("Element/dblclick_event", "ondblclick")}}
+- {{domxref("HTMLElement/drag_event", "ondrag")}}
+- {{domxref("HTMLElement/dragend_event", "ondragend")}}
+- {{domxref("HTMLElement/dragenter_event", "ondragenter")}}
+- {{domxref("HTMLElement/dragleave_event", "ondragleave")}}
+- {{domxref("HTMLElement/dragover_event", "ondragover")}}
+- {{domxref("HTMLElement/dragstart_event", "ondragstart")}}
+- {{domxref("HTMLElement/drop_event", "ondrop")}}
+- {{domxref("Window/error_event", "onerror")}}
+- {{domxref("HTMLMediaElement/durationchange_event", "ondurationchange")}}
+- {{domxref("HTMLMediaElement/emptied_event", "onemptied")}}
+- {{domxref("HTMLMediaElement/ended_event", "onended")}}
+- {{domxref("Element/focus_event", "onfocus")}}
+- {{domxref("HTMLFormElement/formdata_event", "onformdata")}}
+- {{domxref("Element/input_event", "oninput")}}
+- {{domxref("HTMLInputElement/invalid_event", "oninvalid")}}
+- {{domxref("Element/keydown_event", "onkeydown")}}
+- {{domxref("Element/keypress_event", "onkeypress")}}
+- {{domxref("Element/keyup_event", "onkeyup")}}
+- {{domxref("SVGElement/load_event", "onload")}}
+- {{domxref("HTMLMediaElement/loadeddata_event", "onloadeddata")}}
+- {{domxref("HTMLMediaElement/loadedmetadata_event", "onloadedmetadata")}}
+- {{domxref("HTMLMediaElement/loadstart_event", "onloadstart")}}
+- {{domxref("Element/mousedown_event", "onmousedown")}}
+- {{domxref("Element/mouseenter_event", "onmouseenter")}}
+- {{domxref("Element/mouseleave_event", "onmouseleave")}}
+- {{domxref("Element/mousemove_event", "onmousemove")}}
+- {{domxref("Element/mouseout_event", "onmouseout")}}
+- {{domxref("Element/mouseover_event", "onmouseover")}}
+- {{domxref("Element/mouseup_event", "onmouseup")}}
+- {{domxref("Element/paste_event", "onpaste")}}
+- {{domxref("HTMLMediaElement/pause_event", "onpause")}}
+- {{domxref("HTMLMediaElement/play_event", "onplay")}}
+- {{domxref("HTMLMediaElement/playing_event", "onplaying")}}
+- {{domxref("HTMLMediaElement/progress_event", "onprogress")}}
+- {{domxref("HTMLMediaElement/ratechange_event", "onratechange")}}
+- {{domxref("HTMLFormElement/reset_event", "onreset")}}
+- {{domxref("HTMLVideoElement/resize_event", "onresize")}}
+- {{domxref("Element/scroll_event", "onscroll")}}
+- {{domxref("Element/scrollend_event", "onscrollend")}}
+- {{domxref("Element/securitypolicyviolation_event", "onsecuritypolicyviolation")}}
+- {{domxref("HTMLMediaElement/seeked_event", "onseeked")}}
+- {{domxref("HTMLMediaElement/seeking_event", "onseeking")}}
+- {{domxref("Element/select_event", "onselect")}}
+- {{domxref("HTMLSlotElement/slotchange_event", "onslotchange")}}
+- {{domxref("HTMLMediaElement/stalled_event", "onstalled")}}
+- {{domxref("HTMLFormElement/submit_event", "onsubmit")}}
+- {{domxref("HTMLMediaElement/suspend_event", "onsuspend")}}
+- {{domxref("HTMLMediaElement/timeupdate_event", "ontimeupdate")}}
+- {{domxref("HTMLElement/toggle_event", "ontoggle")}}
+- {{domxref("HTMLMediaElement/volumechange_event", "onvolumechange")}}
+- {{domxref("HTMLMediaElement/waiting_event", "onwaiting")}}
+- {{domxref("Element/wheel_event", "onwheel")}}
 
 ## See also
 
