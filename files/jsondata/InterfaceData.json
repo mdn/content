@@ -3084,6 +3084,14 @@
       "inh": "EventTarget",
       "impl": []
     },
+    "SFrameDecrypterStream": {
+      "inh": "EventTarget",
+      "impl": []
+    },
+    "SFrameEncrypterStream": {
+      "inh": "EventTarget",
+      "impl": []
+    },
     "SFrameTransform": {
       "inh": "EventTarget",
       "impl": []
