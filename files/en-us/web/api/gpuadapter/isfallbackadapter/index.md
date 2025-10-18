@@ -14,6 +14,8 @@ browser-compat: api.GPUAdapter.isFallbackAdapter
 The **`isFallbackAdapter`** read-only property of the
 {{domxref("GPUAdapter")}} interface returns `true` if the adapter is a [fallback adapter](/en-US/docs/Web/API/GPU/requestAdapter#fallback_adapters), and `false` if not.
 
+This property has been removed from the web platform: use {{domxref("GPUAdapterInfo.isFallbackAdapter")}} instead.
+
 ## Value
 
 A boolean.
@@ -31,8 +33,8 @@ async function init() {
     throw Error("Couldn't request WebGPU adapter.");
   }
 
-  const fallback = adapter.isFallbackAdapter;
-  console.log(fallback);
+  const isFallback = adapter.isFallbackAdapter;
+  console.log(isFallback);
 
   // …
 }
