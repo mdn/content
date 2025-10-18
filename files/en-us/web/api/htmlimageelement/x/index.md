@@ -8,49 +8,25 @@ browser-compat: api.HTMLImageElement.x
 
 {{APIRef("HTML DOM")}}
 
-The read-only {{domxref("HTMLImageElement")}} property
-**`x`** indicates the x-coordinate of the
-{{HTMLElement("img")}} element's left border edge relative to the root element's
-origin.
+The read-only **`x`** property of the {{domxref("HTMLImageElement")}} interface indicates the x-coordinate of the {{HTMLElement("img")}} element's left border edge relative to the root element's origin.
 
-The `x` and {{domxref("HTMLImageElement.y", "y")}} properties are only valid
-for an image if its {{cssxref("display")}} property has the computed value
-`table-column` or `table-column-group`. In other words: it has
-either of those values set explicitly on it, or it has inherited it from a containing
-element, or by being located within a column described by either {{HTMLElement("col")}}
-or {{HTMLElement("colgroup")}}.
+The `x` and {{domxref("HTMLImageElement.y", "y")}} properties are only valid for an image if its {{cssxref("display")}} property has the computed value `table-column` or `table-column-group`. In other words: it has either of those values set explicitly on it, or it has inherited it from a containing element, or by being located within a column described by either {{HTMLElement("col")}} or {{HTMLElement("colgroup")}}.
 
 ## Value
 
-An integer value indicating the distance in pixels from the left edge of the element's
-nearest root element and the left edge of the {{HTMLElement("img")}} element's border
-box. The nearest root element is the outermost {{HTMLElement("html")}} element that
-contains the image. If the image is in an {{HTMLElement("iframe")}}, its `x`
-is relative to that frame.
+An integer value indicating the distance in pixels from the left edge of the element's nearest root element and the left edge of the {{HTMLElement("img")}} element's border box. The nearest root element is the outermost {{HTMLElement("html")}} element that contains the image. If the image is in an {{HTMLElement("iframe")}}, its `x` is relative to that frame.
 
-In the diagram below, the left border edge is the left edge of the blue padding area.
-So the value returned by `x` would be the distance from that point to the
-left edge of the content area.
+In the diagram below, the left border edge is the left edge of the blue padding area. So the value returned by `x` would be the distance from that point to the left edge of the content area.
 
 ![Diagram showing the relationships between the various boxes associated with an element](boxmodel-3.png)
 
-> [!NOTE]
-> The `x` property is only valid if the computed
-> value of the image's {{cssxref("display")}} property is either
-> `table-column` or `table-column-group`; in other words, either
-> of those are set directly on the {{HTMLElement("img")}} or they're inherited from a
-> containing element or by being located within a column described by either
-> {{HTMLElement("col")}} or {{HTMLElement("colgroup")}}.
-
 ## Example
 
-The example below demonstrates the use of the `HTMLImageElement` properties
-`x` and {{domxref("HTMLImageElement.y", "y")}}.
+The example below demonstrates the use of the `HTMLImageElement` properties `x` and {{domxref("HTMLImageElement.y", "y")}}.
 
 ### HTML
 
-In this example, we see a table showing information about users of a website,
-including their user ID, their full name, and their avatar image.
+In this example, we see a table showing information about users of a website, including their user ID, their full name, and their avatar image.
 
 ```html
 <table id="userinfo">
@@ -76,8 +52,7 @@ including their user ID, their full name, and their avatar image.
 
 ### JavaScript
 
-The JavaScript code that fetches the image from the table and looks up its
-`x` and `y` values is below.
+The JavaScript code that fetches the image from the table and looks up its `x` and `y` values is below.
 
 ```js
 const logBox = document.querySelector("pre");
@@ -94,19 +69,11 @@ log(`Image's global X: ${image.x}`);
 log(`Image's global Y: ${image.y}`);
 ```
 
-This uses the {{HTMLElement("table")}}'s {{domxref("HTMLTableElement.rows", "rows")}}
-property to get a list of the rows in the table, from which it looks up row 1 (which,
-being a zero-based index, means the second row from the top). Then it looks at that
-{{HTMLElement("tr")}} (table row) element's {{domxref("HTMLTableRowElement.cells", "cells")}}
-property to get a list of the cells in that row. The third cell is taken from
-that row (once again, specifying 2 as the zero-based offset).
+This uses the {{HTMLElement("table")}}'s {{domxref("HTMLTableElement.rows", "rows")}} property to get a list of the rows in the table, from which it looks up row 1 (which, being a zero-based index, means the second row from the top). Then it looks at that {{HTMLElement("tr")}} (table row) element's {{domxref("HTMLTableRowElement.cells", "cells")}} property to get a list of the cells in that row. The third cell is taken from that row (once again, specifying 2 as the zero-based offset).
 
-From there, we can get the `<img>` element itself from the cell by
-calling {{domxref("Element.querySelector", "querySelector()")}} on the
-{{domxref("HTMLTableCellElement")}} representing that cell.
+From there, we can get the `<img>` element itself from the cell by calling {{domxref("Element.querySelector", "querySelector()")}} on the {{domxref("HTMLTableCellElement")}} representing that cell.
 
-Finally, we can look up and display the values of the `HTMLImageElement`'s
-`x` and `y` properties.
+Finally, we can look up and display the values of the `HTMLImageElement`'s `x` and `y` properties.
 
 ### CSS
 
@@ -147,3 +114,10 @@ The resulting table looks like this:
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{cssxref("display")}}
+- {{HTMLElement("col")}}
+- {{HTMLElement("colgroup")}}
+- {{domxref("HTMLImageElement.y")}}
