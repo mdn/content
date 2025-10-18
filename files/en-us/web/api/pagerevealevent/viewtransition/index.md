@@ -10,6 +10,9 @@ browser-compat: api.PageRevealEvent.viewTransition
 
 The **`viewTransition`** read-only property of the {{domxref("PageRevealEvent")}} interface contains a {{domxref("ViewTransition")}} object representing the active view transition for the cross-document navigation.
 
+> [!NOTE]
+> The active view transition can also be accessed via the {{domxref("Document.activeViewTransition")}} property.
+
 ## Value
 
 A {{domxref("ViewTransition")}} object, or `null` if no view transition is active when the event is fired.
