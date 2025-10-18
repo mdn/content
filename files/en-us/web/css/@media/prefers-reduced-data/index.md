@@ -54,7 +54,7 @@ In this example the `montserrat-regular.woff2` font file will neither be preload
   @font-face {
     font-family: "Montserrat";
     font-style: normal;
-    font-weight: 400;
+    font-weight: normal;
     font-display: swap;
     /* latin */
     src:

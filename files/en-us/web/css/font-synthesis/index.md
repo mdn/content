@@ -57,7 +57,7 @@ font-synthesis: position;
 @font-face {
   font-family: "Oxygen";
   font-style: normal;
-  font-weight: 400;
+  font-weight: normal;
   src: url("https://fonts.gstatic.com/s/oxygen/v14/2sDfZG1Wl4LcnbuKjk0m.woff2")
     format("woff2");
 }
@@ -66,7 +66,7 @@ font-synthesis: position;
 @font-face {
   font-family: "Ma Shan Zheng";
   font-style: normal;
-  font-weight: 400;
+  font-weight: normal;
   font-display: swap;
   src: url("https://fonts.gstatic.com/s/mashanzheng/v10/NaPecZTRCLxvwo41b4gvzkXaRMGEFoZJFdX0wQ5Xo5Hr21L9zCcRFhbSe5Nk0pIMuUkHEA.108.woff2")
     format("woff2");
@@ -75,7 +75,7 @@ font-synthesis: position;
 @font-face {
   font-family: "Ma Shan Zheng";
   font-style: normal;
-  font-weight: 400;
+  font-weight: normal;
   font-display: swap;
   src: url("https://fonts.gstatic.com/s/mashanzheng/v10/NaPecZTRCLxvwo41b4gvzkXaRMGEFoZJFdX0wQ5Xo5Hr21L9zCcRFhbSe5Nk0pIMuUkHEA.110.woff2")
     format("woff2");
@@ -84,7 +84,7 @@ font-synthesis: position;
 @font-face {
   font-family: "Ma Shan Zheng";
   font-style: normal;
-  font-weight: 400;
+  font-weight: normal;
   font-display: swap;
   src: url("https://fonts.gstatic.com/s/mashanzheng/v10/NaPecZTRCLxvwo41b4gvzkXaRMGEFoZJFdX0wQ5Xo5Hr21L9zCcRFhbSe5Nk0pIMuUkHEA.117.woff2")
     format("woff2");
@@ -93,7 +93,7 @@ font-synthesis: position;
 @font-face {
   font-family: "Ma Shan Zheng";
   font-style: normal;
-  font-weight: 400;
+  font-weight: normal;
   font-display: swap;
   src: url("https://fonts.gstatic.com/s/mashanzheng/v10/NaPecZTRCLxvwo41b4gvzkXaRMGEFoZJFdX0wQ5Xo5Hr21L9zCcRFhbSe5Nk0pIMuUkHEA.118.woff2")
     format("woff2");
@@ -102,7 +102,7 @@ font-synthesis: position;
 @font-face {
   font-family: "Ma Shan Zheng";
   font-style: normal;
-  font-weight: 400;
+  font-weight: normal;
   font-display: swap;
   src: url("https://fonts.gstatic.com/s/mashanzheng/v10/NaPecZTRCLxvwo41b4gvzkXaRMGEFoZJFdX0wQ5Xo5Hr21L9zCcRFhbSe5Nk0pIMuUkHEA.119.woff2")
     format("woff2");
