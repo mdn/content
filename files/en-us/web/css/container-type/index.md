@@ -12,7 +12,9 @@ An element can be established as a query container using the **`container-type`*
 - [Scroll-state](/en-US/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries): Enable selectively applying CSS rules to a container's children based on a scroll-state condition such as whether the container is a scroll container that is partially scrolled or whether the container is a [snap target](/en-US/docs/Glossary/Scroll_snap#snap_target) that is going to be snapped to its scroll snap container.
 
 > [!NOTE]
-> When using the `container-type` and {{cssxref("container-name")}} properties, the `style` and `layout` values of the {{cssxref("contain")}} property are automatically applied.
+> Previously, setting `container-type` automatically applied both `contain: style` and `contain: layout`.
+>
+> In recent browser versions (starting with Chromium 129 and Firefox 133), `container-type` **no longer** applies `contain: layout` automatically. Only `contain: style` is applied. This change prevents unintended side effects, such as the creation of unexpected stacking contexts.
 
 ## Syntax
 
@@ -40,7 +42,7 @@ The `container-type` property can take a single value from the list below, or tw
 
 - `inline-size`
   - : Establishes a query container for dimensional queries on the [inline axis](/en-US/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values#block_and_inline_dimensions) of the container.
-    Applies layout, style, and inline-size containment to the element.
+    Applies style, and inline-size containment to the element.
 
     Inline size containment is applied to the element. The inline size of the element can be [computed in isolation](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment#size_containment), ignoring the child elements (see [Using CSS containment](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment)).
 
@@ -52,7 +54,7 @@ The `container-type` property can take a single value from the list below, or tw
 
 - `size`
   - : Establishes a query container for container size queries in both the [inline and block](/en-US/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values#block_and_inline_dimensions) dimensions.
-    Applies layout containment, style containment, and size containment to the container.
+    Applies style containment, and size containment to the container.
 
     Size containment is applied to the element in both the inline and block directions. The size of the element can be computed in isolation, ignoring the child elements.
 
