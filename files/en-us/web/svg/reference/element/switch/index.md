@@ -19,15 +19,21 @@ Other direct children will be bypassed and therefore not rendered. If a child el
 
 ## Attributes
 
-This element only includes global attributes.
+In addition to the aria, core, event, and presentation attributes, the `<switch>` element supports the conditional processing attributes:
+
+- {{SVGAttr("requiredExtensions")}}
+  - :
+
+- {{SVGAttr("systemLanguage")}}
+  - : A comma-separated list of supported {{glossary("BCP 47 language tag", "language tags")}}.
 
 ## DOM Interface
 
 This element implements the {{domxref("SVGSwitchElement")}} interface.
 
-## SVG \<switch> example
+## Example
 
-This example demonstrates showing different text content depending on the browser's language settings. The `switch` element will display the first of its child elements whose `systemLanguage` attribute matches the user's language, or the fallback element with no `systemLanguage` attribute if none of them match.
+This example demonstrates showing different text content depending on the browser's language settings. The `<switch>` element will display the first of its child elements whose - {{SVGAttr("systemLanguage")}} attribute matches the user's language, or the fallback element with no `systemLanguage` attribute if none of them match.
 
 ### HTML
 

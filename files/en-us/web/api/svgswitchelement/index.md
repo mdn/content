@@ -26,3 +26,11 @@ _This interface doesn't implement any specific methods, but inherits methods fro
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{SVGAttr("tabindex")}} attribute
+- {{SVGAttr("systemlanguage")}} attribute
+- {{SVGAttr("requiredextensions")}} attribute
+- {{domxref("SVGGraphicsElement")}} interface
+- {{domxref("SVGAnimationElement")}} interface
