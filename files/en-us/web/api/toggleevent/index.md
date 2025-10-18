@@ -29,7 +29,7 @@ _This interface inherits properties from its parent, {{DOMxRef("Event")}}._
   - : A string (either `"open"` or `"closed"`), representing the state the element is transitioning to.
 - {{DOMxRef("ToggleEvent.oldState")}} {{ReadOnlyInline}}
   - : A string (either `"open"` or `"closed"`), representing the state the element is transitioning from.
-- {{DOMxRef("ToggleEvent.source")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{DOMxRef("ToggleEvent.source")}} {{ReadOnlyInline}}
   - : An {{domxref("Element")}} object instance representing the HTML control that initiated the toggle.
 
 ## Examples

@@ -2,6 +2,8 @@
 title: type()
 slug: Web/CSS/type
 page-type: css-function
+status:
+  - experimental
 browser-compat: css.types.type
 sidebar: cssref
 ---
