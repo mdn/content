@@ -201,6 +201,44 @@ Either way, the injection sink gets sanitized data, and because we could enforce
 - {{domxref("TrustedTypePolicyFactory")}}
   - : Creates policies and verifies that Trusted Type object instances were created via one of the policies.
 
+### Extensions to other interfaces
+
+The following sections list injection sinks that are expected to accept trusted types as well as strings.
+
+#### TrustedHTML
+
+- {{domxref("Document.parseHTMLUnsafe_static()")}}
+- {{domxref("Document.write()")}}
+- {{domxref("DOMParser.parseFromString()")}}
+- {{domxref("Element.innerHTML")}}
+- {{domxref("Element.insertAdjacentHTML")}}
+- {{domxref("Element.outerHTML")}}
+- {{domxref("Element.setHTMLUnsafe()")}}
+- {{domxref("HTMLIFrameElement.srcdoc")}}
+- {{domxref("Range.createContextualFragment()")}}
+- {{domxref("ShadowRoot.innerHTML")}}
+- {{domxref("ShadowRoot.setHTMLUnsafe()")}}
+
+#### TrustedScript
+
+- {{domxref("HTMLScriptElement.innerText")}}
+- {{domxref("HTMLScriptElement.textContent")}}
+- {{domxref("HTMLScriptElement.text")}}
+- {{domxref("window.setTimeout()")}}
+- {{domxref("window.setInterval()")}}
+
+#### TrustedScriptURL
+
+- {{domxref("HTMLScriptElement.src")}}
+- {{domxref("SvgAnimatedString.baseVal")}}
+
+## Extensions to HTTP
+
+- {{CSP("require-trusted-types-for")}}
+  - : Enforces that [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) are passed to DOM XSS [injection sinks](/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage).
+- {{CSP("trusted-types")}}
+  - : Used to specify an allowlist of [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) policy names.
+
 ## Examples
 
 In the below example we create a policy that will create {{domxref("TrustedHTML")}} objects using {{domxref("TrustedTypePolicyFactory.createPolicy()")}}. We can then use {{domxref("TrustedTypePolicy.createHTML()")}} to create a sanitized HTML string to be inserted into the document.
