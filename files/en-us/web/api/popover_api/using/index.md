@@ -306,6 +306,9 @@ The sub-menu popovers work fine as they are, opening when the toolbar buttons ar
 <div id="tooltip-3" class="tooltip" popover="hint">Tooltip C</div>
 ```
 
+> [!NOTE]
+> In the demo [source code](https://github.com/mdn/dom-examples/tree/main/popover-api/popover-hint), the tooltips are nested inside the popover control buttons. This is because it provides a better fallback in browsers that don't support CSS anchor positioning — the `hint` popovers appear next to their associated control buttons rather than somewhere else entirely.
+
 To control the showing/hiding, we need to use JavaScript. First of all, we grab references to the `hint` popovers and the control buttons in two separate {{domxref("NodeList")}}s using {{domxref("Document.querySelectorAll()")}}:
 
 ```js
