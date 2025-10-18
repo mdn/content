@@ -37,7 +37,7 @@ The declarative rules are defined by four fields:
 > - the action does not change the request.
 > - the redirect URL is invalid (e.g., the value of {{WebExtAPIRef("declarativeNetRequest.redirect","redirect.regexSubstitution")}} is not a valid URL).
 
-This is an example rule that blocks all script requests originating from `"foo.com"` to any URL with `"abc"` as a substring:
+This is an example rule that blocks all script requests originating from `"example.com"` to any URL with `"abc"` as a substring:
 
 ```json
 {
@@ -46,7 +46,7 @@ This is an example rule that blocks all script requests originating from `"foo.c
   "action": { "type": "block" },
   "condition": {
     "urlFilter": "abc",
-    "initiatorDomains": ["foo.com"],
+    "initiatorDomains": ["example.com"],
     "resourceTypes": ["script"]
   }
 }

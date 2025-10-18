@@ -91,7 +91,7 @@ navigator.credentials
 
 ### Creating a credential in a cross-origin iframe
 
-SPC allows a credential to be created in a cross-origin iframe (e.g., if `merchant.com` embeds an iframe from `bank.com`).
+SPC allows a credential to be created in a cross-origin iframe (e.g., if `merchant.example` embeds an iframe from `bank.example`).
 
 In this flow, as part of a transaction, the Relying Party (e.g., a bank) authenticates the account holder through some mechanism other than SPC (e.g., by using a one-time passcode or some other mechanism). The Relying Party then offers the user the option of registering an SPC credential to streamline future transactions. The user registers an SPC credential with the Relying Party.
 In order for these steps to happen in the merchant context (that is, without a redirect), the cross-origin iframe must have the [`payment`](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/payment) permission policy set.
@@ -125,9 +125,9 @@ const request = new PaymentRequest(
         ),
         instrument: {
           displayName: "Fancy Card ****1234",
-          icon: "https://fancybank.com/card-art.png",
+          icon: "https://fancybank.example/card-art.png",
         },
-        payeeOrigin: "https://merchant.com",
+        payeeOrigin: "https://merchant.example",
         timeout: 60000, // 1 minute
       },
     },
