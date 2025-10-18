@@ -29464,6 +29464,47 @@
       "Dria"
     ]
   },
+  "Web/API/Document_Object_Model/Building_and_updating_the_DOM_tree": {
+    "modified": "2020-08-22T02:28:27.619Z",
+    "contributors": [
+      "mfuji09",
+      "irenesmith",
+      "Zearin_Galaurum",
+      "ExE-Boss",
+      "dijonkitchen",
+      "epan5",
+      "jwhitlock",
+      "vinay97",
+      "teoli",
+      "marcio",
+      "rogerhc",
+      "kscarfone",
+      "Ichimonji10",
+      "jvns",
+      "trevorh",
+      "Sheppy",
+      "ethertank",
+      "TelaSocial",
+      "Nickolay",
+      "Jmtroncos",
+      "Huttarl",
+      "Koder",
+      "Mgjbot",
+      "Carrie zhxj",
+      "Waldo",
+      "Ranga.tech",
+      "Planche",
+      "Sebuls",
+      "Dria",
+      "Sandesh",
+      "NickolayBot",
+      "Burnt1ce85",
+      "Pslim",
+      "Jakul",
+      "Rvveelen",
+      "Ruby"
+    ]
+  },
   "Web/API/Document_Object_Model/Events": {
     "modified": "2020-08-02T16:56:22.810Z",
     "contributors": [
@@ -29525,7 +29566,7 @@
       "Pomax"
     ]
   },
-  "Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors": {
+  "Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree": {
     "modified": "2020-12-06T22:57:45.352Z",
     "contributors": [
       "jordan-git",
@@ -29541,47 +29582,6 @@
       "Philip Chee",
       "mcsi",
       "asadotzler"
-    ]
-  },
-  "Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces": {
-    "modified": "2020-08-22T02:28:27.619Z",
-    "contributors": [
-      "mfuji09",
-      "irenesmith",
-      "Zearin_Galaurum",
-      "ExE-Boss",
-      "dijonkitchen",
-      "epan5",
-      "jwhitlock",
-      "vinay97",
-      "teoli",
-      "marcio",
-      "rogerhc",
-      "kscarfone",
-      "Ichimonji10",
-      "jvns",
-      "trevorh",
-      "Sheppy",
-      "ethertank",
-      "TelaSocial",
-      "Nickolay",
-      "Jmtroncos",
-      "Huttarl",
-      "Koder",
-      "Mgjbot",
-      "Carrie zhxj",
-      "Waldo",
-      "Ranga.tech",
-      "Planche",
-      "Sebuls",
-      "Dria",
-      "Sandesh",
-      "NickolayBot",
-      "Burnt1ce85",
-      "Pslim",
-      "Jakul",
-      "Rvveelen",
-      "Ruby"
     ]
   },
   "Web/API/DragEvent": {
