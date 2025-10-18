@@ -421,7 +421,7 @@ All SVG presentation attributes can be used as CSS properties.
 
 ### Event attributes
 
- The event handler content attributes, prefixed with the `on` are supported by all {{domxref("Document")}} and {{domxref("Window")}} objects, as event handler event types:
+The event handler content attributes, prefixed with the `on` are supported by all {{domxref("Document")}} and {{domxref("Window")}} objects, as event handler event types:
 
 - {{domxref("HTMLMediaElement/abort_event", "onabort")}}
 - {{domxref("Element/auxclick_event", "auxclick")}}
