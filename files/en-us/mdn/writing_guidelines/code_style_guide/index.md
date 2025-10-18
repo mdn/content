@@ -36,6 +36,11 @@ Some more general guidelines include:
 - Don't use deprecated features for brevity (such as presentation elements like {{HTMLElement("big")}} or {{domxref("Document.write", "document.write()")}}); do it correctly.
 - In the case of API demos, if you are using multiple APIs together, point out which APIs are included and which features come from where.
 
+### Browser support
+
+When creating code examples for a technology that's not yet available in all major browsers, consider using [feature detection](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection) to fall back to a simpler behavior or inform the user that their browser is not yet supported.
+Do not specify supported browsers and their versions in code comments or prose, as this information quickly becomes outdated.
+
 ## MDN code style and formatting
 
 Opinions on correct indentation, whitespace, and line lengths have always been controversial. Discussions on these topics are a distraction from creating and maintaining content.
