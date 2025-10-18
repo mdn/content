@@ -378,10 +378,7 @@ padding-left: 1.5em;
 
 ## Testing your extension
 
-To test your extension's localization, you use [Firefox](https://www.firefox.com/en-US/) or [Firefox Beta](https://www.firefox.com/en-US/channel/desktop/), the Firefox builds in which you can install language packs.
+For information on the tools and process for testing your localizations, see:
 
-Then, for each locale supported in the extension you want to test, follow the instructions to [Use Firefox in another language](https://support.mozilla.org/en-US/kb/use-firefox-another-language) to switch the Firefox UI language. (If you know your way around Settings, under Language, use Set Alternatives.)
-
-When Firefox is running in your test language, from `about:debugging`, [install the extension temporarily](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/) or reload it if already installed. After installing or reloading your extension, if you've set up your extension correctly, you see the extension listed with its icon, name, and description in the chosen language. You can also see the localized extension details in `about:addons`. Now, exercise the extension's features to ensure the translations are in place.
-
-If you'd like to try this process out, you can use the [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n) extension. Set up Firefox to display one of the languages supported in this example (German, Dutch, or Japanese). Load the extension and go to a website. Click a link to see the translated version of the notification reporting the link's URL.
+- Firefox: [Testing Localizations](https://extensionworkshop.com/documentation/develop/test-localizations/) in Extension Workshop
+- Chrome: [Set your browser's locale](https://developer.chrome.com/docs/extensions/reference/api/i18n#how-to-set-browsers-locale)
