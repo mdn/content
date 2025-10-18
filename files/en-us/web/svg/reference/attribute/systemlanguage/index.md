@@ -6,7 +6,7 @@ browser-compat: svg.global_attributes.systemLanguage
 sidebar: svgref
 ---
 
-The **`systemLanguage`** attribute represents a list of supported language tags. This list is matched against the language defined in the user preferences.
+The **`systemLanguage`** SVG [conditional processing attribute](/en-US/docs/Web/SVG/Reference/Attribute#conditional_processing_attributes) represents a list of supported language tags. This list is matched against the language defined in the user preferences.
 
 You can use this attribute with the following SVG elements:
 
@@ -87,3 +87,9 @@ However, just because multiple languages are present within the object on which 
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- SVG {{SVGAttr("systemLanguage")}} attribute
+- {{domxref("SVGGraphicsElement")}} interface
+- {{domxref("SVGAnimationElement")}} interface
