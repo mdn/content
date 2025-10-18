@@ -6,7 +6,7 @@ browser-compat: svg.elements.animate.requiredExtensions
 sidebar: svgref
 ---
 
-The **`requiredExtensions`** conditional processing attribute is a list of space-separated URL values each referencing a language extension.
+The **`requiredExtensions`** SVG [conditional processing attribute](/en-US/docs/Web/SVG/Reference/Attribute#conditional_processing_attributes) is a list of space-separated URL values each referencing a language extension.
 
 You can use this attribute with the following SVG elements:
 
