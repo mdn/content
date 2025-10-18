@@ -50,7 +50,7 @@ _Inherits properties from its parent, {{DOMxRef("Event")}}._
 _Inherits methods from its parent, {{DOMxRef("Event")}}._
 
 - {{domxref("NavigateEvent.intercept", "intercept()")}} {{Experimental_Inline}}
-  - : Intercepts this navigation, turning it into a same-document navigation to the {{domxref("NavigationDestination.url", "destination")}} URL. It can accept a handler function that defines what the navigation handling behavior should be, plus `focusReset` and `scroll` options to control behavior as desired.
+  - : Intercepts this navigation, turning it into a same-document navigation to the {{domxref("NavigationDestination.url", "destination")}} URL. It can accept handler functions that define what the navigation handling behavior should be, plus `focusReset` and `scroll` options to enable or disable the browser's default focus and scrolling behavior as desired.
 - {{domxref("NavigateEvent.scroll", "scroll()")}} {{Experimental_Inline}}
   - : Can be called to manually trigger the browser-driven scrolling behavior that occurs in response to the navigation, if you want it to happen before the navigation handling has completed.
 
