@@ -170,7 +170,7 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground:
   font-family: "Source Sans Pro";
   src: url("https://mdn.github.io/shared-assets/fonts/SourceSansPro-Regular.otf")
     format("opentype");
-  font-weight: 400;
+  font-weight: normal;
   font-style: normal;
 }
 
