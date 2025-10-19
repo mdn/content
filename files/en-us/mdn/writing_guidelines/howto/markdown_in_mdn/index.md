@@ -20,7 +20,7 @@ The GFM specification defines two basic types of links:
 - [inline links](https://github.github.com/gfm/#inline-link), in which the destination is given immediately after the link text.
 - [reference links](https://github.github.com/gfm/#reference-link), in which the destination is defined elsewhere in the document.
 
-On MDN we prefer to use inline links because they are easier to read and maintain without loosing context. This is the preferable way to write links on MDN:
+On MDN we prefer to use inline links because they are easier to read and maintain without loosing context. This is the preferred way to write links on MDN:
 
 ```md
 [Macarons](https://en.wikipedia.org/wiki/Macaron) are delicious but tricky to make.
