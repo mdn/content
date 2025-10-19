@@ -292,7 +292,7 @@ Below is a list of all of the attributes available in SVG along with links to re
 
 ### Core attributes
 
-The core attributes are global attributes:
+The core attributes are global attributes.
 
 - {{SVGAttr("id")}}
 - {{SVGAttr("class")}}
@@ -304,7 +304,7 @@ The core attributes are global attributes:
 
 ### Conditional processing attributes
 
-The conditional processing attributes control whether or not the element on which it appears is processed
+The conditional processing attributes control whether or not the element on which it appears is processed.
 
 - {{SVGAttr("requiredExtensions")}}
 - {{SVGAttr("requiredFeatures")}}
@@ -314,11 +314,11 @@ The conditional processing attributes control whether or not the element on whic
 
 The XLink attributes can reference resources.
 
-- {{SVGAttr("xlink:href")}}{{deprecated_inline}}
+- {{SVGAttr("xlink:href")}} {{deprecated_inline}}
 - {{SVGAttr("xlink:type")}}
 - {{SVGAttr("xlink:role")}}
 - {{SVGAttr("xlink:arcrole")}}
-- {{SVGAttr("xlink:title")}}{{deprecated_inline}}
+- {{SVGAttr("xlink:title")}} {{deprecated_inline}}
 - {{SVGAttr("xlink:show")}}
 - {{SVGAttr("xlink:actuate")}}
 
@@ -327,7 +327,7 @@ The XLink attributes can reference resources.
 All SVG presentation attributes can be used as CSS properties.
 
 > [!NOTE]
-> Whether these attributes are presentation attributes, depends on the element on which they are set. For example, `x` is a {{svgelem("circle")}} presentation attribute, but the `x` on {{svgelem("tspan")}} is not; it's the coordinate of the starting point of the text baseline, or the x coordinate of each individual glyph if a list of values is provided.
+> Whether these attributes are presentation attributes depends on the element on which they are set. For example, `x` is a presentation attribute for {{svgelem("circle")}}, but not for {{svgelem("tspan")}}; it's the coordinate of the starting point of the text baseline, or the x coordinate of each individual glyph if a list of values is provided.
 
 - {{SVGAttr("alignment-baseline")}}
 - {{SVGAttr("baseline-shift")}}
