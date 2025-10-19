@@ -205,7 +205,7 @@ Web frameworks typically provide functions to store passwords securely, which in
 
 If the website is intending to use email in the password reset flow, then the server must also check that the email address belongs to the user signing up. To do this, the server typically generates a random token and sets it as a parameter to a verification URL:
 
-```
+```plain
 https://example.org/verify?<random-token>
 ```
 
