@@ -12,9 +12,6 @@ The **`srcset`** property of the {{domxref("HTMLImageElement")}} interface ident
 
 The `srcset` property, along with the {{domxref("HTMLImageElement.sizes", "sizes")}} property, are a crucial component in designing responsive websites, as they can be used together to make pages that use appropriate images for the rendering situation.
 
-> [!NOTE]
-> If the [`srcset`](/en-US/docs/Web/HTML/Reference/Elements/img#srcset) attribute uses width descriptors, the `sizes` attribute must also be present, or the `srcset` itself will be ignored.
-
 ## Value
 
 A string. For more information about the syntax of the `srcset` attribute, see the HTML [`<img>`](/en-US/docs/Web/HTML/Reference/Elements/img#srcset) reference.
