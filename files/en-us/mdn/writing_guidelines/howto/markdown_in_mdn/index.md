@@ -26,13 +26,14 @@ On MDN we prefer to use inline links because they are easier to read and maintai
 [Macarons](https://en.wikipedia.org/wiki/Macaron) are delicious but tricky to make.
 ```
 
-In certain situations, however, reference links are more appropriate for their compactness. For example, they are particularly useful in tables:
+In certain situations, however, reference links are more appropriate for their compactness.
+For example, shrinking wide tables can make them easier to review and edit.
 
 ```md
-| Name                 | Features                          |
-| -------------------- | --------------------------------- |
-| [Macarons][macarons] | are delicious but tricky to make. |
-| [Biscotti][biscotti] | are crisp and easier to make.     |
+| Name                 | Features                                                                                         |
+| -------------------- | ------------------------------------------------------------------------------------------------ |
+| [Macarons][macarons] | Delicious but tricky to make. Add more class to a tea party than almost any other confectionary. |
+| [Biscotti][biscotti] | Crisp and easier to make.                                                                        |
 
 [macarons]: https://en.wikipedia.org/wiki/Macaron
 [biscotti]: https://en.wikipedia.org/wiki/Biscotti
