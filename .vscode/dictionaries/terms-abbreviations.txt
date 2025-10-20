@@ -63,6 +63,7 @@ Bignums
 bikeshedding
 bilevel
 bioinformatics
+biscotti
 bitfield
 bitmapped
 bitness
@@ -369,6 +370,7 @@ linkify
 livemark
 livemarks
 livestreamed
+lockdown
 lofi
 logpoints
 longhands
@@ -890,6 +892,7 @@ untriaged
 unzoomed
 uppercasing
 userbase
+Uyghur
 VDOM
 Velociraptor
 versor
