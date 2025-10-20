@@ -425,9 +425,10 @@
     "DOM": {
       "overview": ["Document Object Model"],
       "guides": [
+        "/docs/Web/API/Document_Object_Model/Anatomy_of_the_DOM",
         "/docs/Web/API/Document_Object_Model/Reflected_attributes",
-        "/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces",
-        "/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors",
+        "/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree",
+        "/docs/Web/API/Document_Object_Model/Building_and_updating_the_DOM_tree",
         "/docs/Web/API/Document_Object_Model/Events"
       ],
       "interfaces": [
