@@ -6,17 +6,14 @@ browser-compat: webextensions.api.browsingData.RemovalOptions
 sidebar: addonsidebar
 ---
 
-The **`browsingData.RemovalOptions`** type contains options to control certain aspects of browsing data removal.
+The **`browsingData.RemovalOptions`** type contains options to control browsing data removal.
 
 ## Type
 
-Values of this type are objects. They contain the following properties:
+Values of this type are objects. They contain these properties:
 
 - `cookieStoreId` {{optional_inline}}
   - : `string`. This property only applies to cookies and indexedDB items. The removal is limited to items belonging to a specific [cookie store](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies/CookieStore) as specified by the ID. See [Work with contextual identities](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities) for more information.
-
-    > [!NOTE]
-    > On Firefox Nightly removal of localStorage items by `cookieStoreId` is also supported.
 
 - `excludeOrigin` {{optional_inline}}
   - : `array` of `string`. List of origins to exclude from the removal process. Can't be used together with `origins`. Only supported for cookies, storage, and cache. Cookies are excluded for the entire registrable domain.

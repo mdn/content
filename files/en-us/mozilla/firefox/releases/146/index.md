@@ -74,6 +74,8 @@ Firefox 146 is the current [Nightly version of Firefox](https://www.firefox.com/
 
 ## Changes for add-on developers
 
+- {{WebExtAPIRef("browsingData.removeLocalStorage")}} and {{WebExtAPIRef("browsingData.remove")}} (when `localStorage` is set in {{WebExtAPIRef("browsingData.DataTypeSet")}}) now delete objects from session storage. This provides parity with the Firefox browser **Clear cookies and site data** options, and the Chrome API. ([Firefox bug 1886894](https://bugzil.la/1886894))
+
 <!-- ### Removals -->
 
 <!-- ### Other -->

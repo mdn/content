@@ -8,16 +8,16 @@ sidebar: addonsidebar
 
 The **`browsingData.DataTypeSet`** type describes a set of data types.
 
-It contains a number of boolean properties. The name of each property is the name of a particular type of browsing data: "downloads", "history" and so on. All properties are optional.
+It contains a number of boolean properties. The name of each property is the name of a particular type of browsing data: "downloads", "history", and so on. All properties are optional.
 
 This type is used:
 
-- in {{WebExtAPIRef("browsingData.remove()")}} to describe which data types to remove
-- in {{WebExtAPIRef("browsingData.settings()")}} to describe which data types are currently selected in the browser's "Clear History" feature.
+- in {{WebExtAPIRef("browsingData.remove()")}} to describe which data types to remove.
+- in {{WebExtAPIRef("browsingData.settings()")}} to describe which data types are selected in the browser's "Clear History" feature.
 
 ## Type
 
-Values of this type are objects. They contain the following properties:
+Values of this type are objects. They contain these properties:
 
 - `cache` {{optional_inline}}
   - : `boolean`. The browser's cache.
@@ -28,15 +28,15 @@ Values of this type are objects. They contain the following properties:
 - `fileSystems` {{optional_inline}}
   - : `boolean`. Website's file systems.
 - `formData` {{optional_inline}}
-  - : `boolean`. Saved form data, for autocomplete.
+  - : `boolean`. Saved form data for autocomplete.
 - `history` {{optional_inline}}
   - : `boolean`. The user's browsing history.
 - `indexedDB` {{optional_inline}}
   - : `boolean`. IndexedDB data.
 - `localStorage` {{optional_inline}}
-  - : `boolean`. Local storage data.
+  - : `boolean`. Local and session storage data.
 - `passwords` {{optional_inline}}
-  - : `boolean`. Saved passwords, for autocomplete.
+  - : `boolean`. Saved passwords for autocomplete.
 - `pluginData` {{optional_inline}}
   - : `boolean`. Stored data associated with plugins.
 - `serverBoundCertificates` {{optional_inline}}

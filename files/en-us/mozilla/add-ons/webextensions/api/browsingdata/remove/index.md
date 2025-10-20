@@ -12,8 +12,6 @@ The browsing data to be removed is specified in the `dataTypes` option, which is
 
 You can use the `removalOptions` option, which is a {{WebExtAPIRef("browsingData.RemovalOptions")}} object, to control how far back in time to remove data and whether to remove data only from normal web pages or to remove data from hosted apps and extensions as well.
 
-This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
-
 ## Syntax
 
 ```js-nolint
@@ -26,13 +24,13 @@ let removing = browser.browsingData.remove(
 ### Parameters
 
 - `removalOptions`
-  - : `object`. A {{WebExtAPIRef("browsingData.RemovalOptions")}} object, which may be used to control how far back in time to remove data, and whether to remove data from hosted web apps and extensions, or just normal web pages.
+  - : `object`. A {{WebExtAPIRef("browsingData.RemovalOptions")}} object, which can be used to control how far back in time to remove data, and whether to remove data from hosted web apps and extensions, or just normal web pages.
 - `dataTypes`
-  - : `object`. A {{WebExtAPIRef("browsingData.DataTypeSet")}} object, describing the types of data to remove (e.g., history, downloads, …).
+  - : `object`. A {{WebExtAPIRef("browsingData.DataTypeSet")}} object, describing the types of data to remove (e.g., history, downloads, etc.).
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when the removal has finished. If any error occurs, the promise will be rejected with an error message.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled with no arguments when the removal finishes. If an error occurs, the promise is rejected with an error message.
 
 ## Examples
 

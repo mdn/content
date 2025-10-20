@@ -6,14 +6,12 @@ browser-compat: webextensions.api.browsingData.removeLocalStorage
 sidebar: addonsidebar
 ---
 
-Clears any [local storage](/en-US/docs/Web/API/Window/localStorage) created by websites.
+Clears any [local storage](/en-US/docs/Web/API/Window/localStorage) created by websites and [session storage](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/session) created by extensions.
 
 You can use the `removalOptions` parameter, which is a {{WebExtAPIRef("browsingData.RemovalOptions")}} object, to:
 
-- clear only local storage objects created after a given time
-- control whether to clear only local storage objects created by normal web pages or to clear objects created by hosted apps and extensions as well.
-
-This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+- clear only local and session storage objects created after a given time.
+- control whether to clear only local storage objects created by normal web pages or to clear objects (including objects in session storage) created by hosted apps and extensions as well.
 
 ## Syntax
 
@@ -26,7 +24,7 @@ let removing = browser.browsingData.removeLocalStorage(
 ### Parameters
 
 - `removalOptions`
-  - : `object`. A {{WebExtAPIRef("browsingData.RemovalOptions")}} object, which may be used to clear only local storage objects created by normal web pages or to clear objects created by hosted apps and extensions as well.
+  - : `object`. A {{WebExtAPIRef("browsingData.RemovalOptions")}} object, which may be used to clear local and session storage objects created by normal web pages or to clear objects created by hosted apps and extensions.
 
 ### Return value
 
