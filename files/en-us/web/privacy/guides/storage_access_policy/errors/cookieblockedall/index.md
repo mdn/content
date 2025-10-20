@@ -19,12 +19,12 @@ CookieBlockedAll=Request to access cookies or storage on "X" was blocked because
 
 The permission can be changed or removed by:
 
-- Going to _Preferences > Privacy & Security > Enhanced Tracking Protection_
+- Going to _Settings > Privacy & Security > Enhanced Tracking Protection_.
 - In the _Custom_ Content Blocking section, selecting a value other than _All Cookies_ for the _Cookies_ item
 
 If the resource that is being blocked doesn't need authentication, you can fix the warning message by adding a `crossorigin="anonymous"` attribute to your element.
 
 ## See also
 
-- [Enhanced Tracking Protection in Firefox for desktop](https://support.mozilla.org/en-US/kb/content-blocking) on [support.mozilla.org](https://support.mozilla.org/)
+- [Enhanced Tracking Protection in Firefox for desktop](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-deskto) on [support.mozilla.org](https://support.mozilla.org/)
 - [The `crossorigin` attribute](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin)
