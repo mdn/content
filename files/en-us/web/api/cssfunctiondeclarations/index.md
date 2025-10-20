@@ -2,10 +2,12 @@
 title: CSSFunctionDeclarations
 slug: Web/API/CSSFunctionDeclarations
 page-type: web-api-interface
+status:
+  - experimental
 browser-compat: api.CSSFunctionDeclarations
 ---
 
-{{ APIRef("CSSOM") }}
+{{ APIRef("CSSOM") }}{{SeeCompatTable}}
 
 The **`CSSFunctionDeclarations`** interface of the [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model) represents a consecutive run of CSS declarations included within a {{cssxref("@function")}} body.
 
@@ -17,7 +19,7 @@ This can include [CSS custom properties](/en-US/docs/Web/CSS/CSS_cascading_varia
 
 _This interface also inherits properties from {{domxref("CSSRule")}}._
 
-- {{domxref("CSSFunctionDeclarations.style")}} {{ReadOnlyInline}}
+- {{domxref("CSSFunctionDeclarations.style")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : Returns a {{domxref("CSSFunctionDescriptors")}} object representing the descriptors available in a {{cssxref("@function")}} body.
 
 ## Examples
