@@ -6,9 +6,8 @@ spec-urls:
   - https://drafts.csswg.org/mediaqueries-3/
   - https://drafts.csswg.org/mediaqueries/
   - https://drafts.csswg.org/mediaqueries-5/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS media queries** module enables testing and querying of viewport values and browser or device features, to conditionally apply CSS styles based on the current user environment. Media queries are used in the CSS `@media` rule and other contexts and languages such as HTML and JavaScript.
 
@@ -43,6 +42,7 @@ When designing reusable HTML components, you may also use [container queries](/e
 - {{cssxref("@media/forced-colors", "forced-colors")}}
 - {{cssxref("@media/grid", "grid")}}
 - {{cssxref("@media/height", "height")}}
+- {{cssxref("@media/horizontal-viewport-segments", "horizontal-viewport-segments")}}
 - {{cssxref("@media/hover", "hover")}}
 - {{cssxref("@media/inverted-colors", "inverted-colors")}}
 - {{cssxref("@media/monochrome", "monochrome")}}
@@ -59,11 +59,11 @@ When designing reusable HTML components, you may also use [container queries](/e
 - {{cssxref("@media/scan", "scan")}}
 - {{cssxref("@media/scripting", "scripting")}}
 - {{cssxref("@media/update", "update")}}
+- {{cssxref("@media/vertical-viewport-segments", "vertical-viewport-segments")}}
 - {{cssxref("@media/video-dynamic-range", "video-dynamic-range")}}
 - {{cssxref("@media/width", "width")}}
 
-> [!NOTE]
-> CSS media queries level 5 introduces five `@media` descriptors that have not been implemented: `environment-blending`, `horizontal-viewport-segments`, `nav-controls`, `vertical-viewport-segments`, and `video-color-gamut`.
+The CSS media queries level 5 module also introduces the `environment-blending`, `nav-controls`, and `video-color-gamut` `@media` descriptors. Currently, no browsers support these features.
 
 > [!NOTE]
 > CSS media queries level 4 deprecated three `@media` descriptors: {{cssxref("@media/device-aspect-ratio", "device-aspect-ratio")}}, {{cssxref("@media/device-height", "device-height")}}, and {{cssxref("@media/device-width", "device-width")}}.
@@ -109,6 +109,8 @@ When designing reusable HTML components, you may also use [container queries](/e
 - [CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules) module
   - {{cssxref("@supports")}} at-rule
   - [Using feature queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)
+- [CSS environment variables](/en-US/docs/Web/CSS/CSS_environment_variables)
+  - {{cssxref("env()")}} function
 - [CSS paged media](/en-US/docs/Web/CSS/CSS_paged_media) module
   - {{cssxref("@page")}} at-rule
 - [CSS object model](/en-US/docs/Web/API/CSS_Object_Model) module
@@ -124,7 +126,7 @@ When designing reusable HTML components, you may also use [container queries](/e
 - HTML
   - `sizes` attribute for [`<img>`](/en-US/docs/Web/HTML/Reference/Elements/img#sizes), [`<link>`](/en-US/docs/Web/HTML/Reference/Elements/link#sizes), and [`<source>`](/en-US/docs/Web/HTML/Reference/Elements/source#sizes) for {{HTMLElement("picture")}}
   - `media` attribute for [`<link>`](/en-US/docs/Web/HTML/Reference/Elements/link#media), [`<source>`](/en-US/docs/Web/HTML/Reference/Elements/source#media), and [`<style>`](/en-US/docs/Web/HTML/Reference/Elements/style#media) [HTML](/en-US/docs/Web/HTML)
-  - [Viewport `<meta>` tag](/en-US/docs/Web/HTML/Guides/Viewport_meta_element)
+  - [`<meta name="viewport">`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/viewport)
 - SVG [`media`](/en-US/docs/Web/SVG/Reference/Attribute/media) attribute
 
 ## Specifications

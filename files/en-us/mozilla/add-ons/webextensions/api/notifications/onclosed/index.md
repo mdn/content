@@ -3,9 +3,8 @@ title: notifications.onClosed
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/onClosed
 page-type: webextension-api-event
 browser-compat: webextensions.api.notifications.onClosed
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when a notification is closed, either by the system or by the user.
 
@@ -37,10 +36,6 @@ Events have three functions:
     - `byUser`
       - : `boolean`. `true` if the notification was closed by the user, or `false` if it was closed by the system. This argument is not supported in Firefox.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 In this simple example we add a listener to the `notifications.onClosed` event to listen for system notifications being closed. When this occurs, we log an appropriate message to the console.
@@ -52,6 +47,10 @@ browser.notifications.onClosed.addListener((notificationId) => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/api/notifications) API.

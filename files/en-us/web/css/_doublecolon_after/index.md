@@ -3,9 +3,8 @@ title: ::after
 slug: Web/CSS/::after
 page-type: css-pseudo-element
 browser-compat: css.selectors.after
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 In CSS, **`::after`** creates a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) that is the last child of the selected element. It is often used to add cosmetic content to an element with the {{CSSxRef("content")}} property. It is inline by default.
 
@@ -162,7 +161,7 @@ We can also support keyboard users with this technique, by adding a `tabindex` o
 span[data-description] {
   position: relative;
   text-decoration: underline;
-  color: #00f;
+  color: blue;
   cursor: help;
 }
 
@@ -177,7 +176,7 @@ span[data-description]:focus::after {
   border-radius: 10px;
   background-color: #ffffcc;
   padding: 12px;
-  color: #000000;
+  color: black;
   font-size: 14px;
   z-index: 1;
 }
@@ -208,7 +207,7 @@ In this demo, we generate extra list items before and after a list navigation me
 ```css
 ul {
   font-size: 1.5rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 ul::before,

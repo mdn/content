@@ -1,5 +1,6 @@
 ---
-title: Firefox 72 for Developers
+title: Firefox 72 release notes for developers
+short-title: Firefox 72
 slug: Mozilla/Firefox/Releases/72
 page-type: firefox-release-notes
 sidebar: firefox
@@ -127,7 +128,3 @@ _No changes._
 ## See also
 
 - Hacks release post: [Firefox 72 — our first song of 2020](https://hacks.mozilla.org/2020/01/firefox-72-our-first-song-of-2020/)
-
-## Older versions
-
-{{Firefox_for_developers}}

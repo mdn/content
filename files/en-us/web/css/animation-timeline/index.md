@@ -3,9 +3,8 @@ title: animation-timeline
 slug: Web/CSS/animation-timeline
 page-type: css-property
 browser-compat: css.properties.animation-timeline
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`animation-timeline`** [CSS](/en-US/docs/Web/CSS) property specifies the timeline that is used to control the progress of a CSS animation.
 
@@ -43,8 +42,8 @@ animation-timeline: view();
 animation-timeline: view(axis inset);
 
 /* Multiple animations */
-animation-timeline: --progressBarTimeline, --carouselTimeline;
-animation-timeline: none, --slidingTimeline;
+animation-timeline: --progress-bar-timeline, --carousel-timeline;
+animation-timeline: none, --sliding-timeline;
 
 /* Global values */
 animation-timeline: inherit;
@@ -92,8 +91,8 @@ animation-timeline: unset;
 
 ### Setting a named scroll progress timeline
 
-A scroll progress timeline named `--squareTimeline` is defined using the `scroll-timeline-name` property on an element with an `id` of `container`.
-This is then set as the timeline for the animation on the `#square` element using `animation-timeline: --squareTimeline`.
+A scroll progress timeline named `--square-timeline` is defined using the `scroll-timeline-name` property on an element with an `id` of `container`.
+This is then set as the timeline for the animation on the `#square` element using `animation-timeline: --square-timeline`.
 
 #### HTML
 
@@ -108,7 +107,7 @@ The HTML for the example is shown below.
 
 #### CSS
 
-The CSS for the container sets it as the source of a scroll progress timeline named `--squareTimeline` using the `scroll-timeline-name` property (we could explicitly set which scrollbar axis to use with {{cssxref("scroll-timeline-axis")}}, but there is only a block direction scrollbar here, and it will be used by default).
+The CSS for the container sets it as the source of a scroll progress timeline named `--square-timeline` using the `scroll-timeline-name` property (we could explicitly set which scrollbar axis to use with {{cssxref("scroll-timeline-axis")}}, but there is only a block direction scrollbar here, and it will be used by default).
 
 The height of the container is set to 300px and we also set the container to create a vertical scrollbar if it overflows (below we will use CSS on the "stretcher" element to ensure that it does overflow).
 
@@ -116,12 +115,12 @@ The height of the container is set to 300px and we also set the container to cre
 #container {
   height: 300px;
   overflow-y: scroll;
-  scroll-timeline-name: --squareTimeline;
+  scroll-timeline-name: --square-timeline;
   position: relative;
 }
 ```
 
-The CSS below defines a square that rotates in alternate directions according to the timeline provided by the `animation-timeline` property, which is set to the `--squareTimeline` timeline named above.
+The CSS below defines a square that rotates in alternate directions according to the timeline provided by the `animation-timeline` property, which is set to the `--square-timeline` timeline named above.
 
 ```css
 #square {
@@ -132,7 +131,7 @@ The CSS below defines a square that rotates in alternate directions according to
   animation-name: rotateAnimation;
   animation-duration: 1ms; /* Firefox requires this to apply the animation */
   animation-direction: alternate;
-  animation-timeline: --squareTimeline;
+  animation-timeline: --square-timeline;
 
   position: absolute;
   bottom: 0;
@@ -236,8 +235,8 @@ Scroll to see the square element being animated.
 
 ### Setting a named view progress timeline
 
-A view progress timeline named `--subjectReveal` is defined using the `view-timeline-name` property on a subject element with a `class` of `animation`.
-This is then set as the timeline for the same element using `animation-timeline: --subjectReveal;`. The result is that the subject element animates as it moves upwards through the document as it is scrolled.
+A view progress timeline named `--subject-reveal` is defined using the `view-timeline-name` property on a subject element with a `class` of `animation`.
+This is then set as the timeline for the same element using `animation-timeline: --subject-reveal;`. The result is that the subject element animates as it moves upwards through the document as it is scrolled.
 
 #### HTML
 
@@ -298,7 +297,7 @@ The `subject` element and its containing `content` element are styled minimally,
 
 p,
 h1 {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 h1 {
@@ -317,8 +316,8 @@ Lastly, an animation is specified on the element that animates its opacity and s
 
 ```css
 .animation {
-  view-timeline-name: --subjectReveal;
-  animation-timeline: --subjectReveal;
+  view-timeline-name: --subject-reveal;
+  animation-timeline: --subject-reveal;
 
   animation-name: appear;
   animation-fill-mode: both;
@@ -407,7 +406,7 @@ The `subject` element and its containing `content` element are styled minimally,
 
 p,
 h1 {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 h1 {

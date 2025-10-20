@@ -1,11 +1,10 @@
 ---
 title: Numeric data types
-slug: Web/CSS/CSS_Values_and_Units/Numeric_data_types
+slug: Web/CSS/CSS_values_and_units/Numeric_data_types
 page-type: guide
 spec-urls: https://drafts.csswg.org/css-values/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 Every CSS declaration consists of a property/value pair. The value can include various data types depending on the property, such as a single number, keyword, function, or a combination of different types; some values have units, while others do not. Numeric data types include {{cssxref("&lt;integer&gt;")}}, {{cssxref("&lt;number&gt;")}}, {{cssxref("&lt;dimension&gt;")}}, and {{cssxref("&lt;percentage&gt;")}} values. This guide is an overview of numeric data types. Refer to the page for each value type for more detailed information.
 
@@ -212,14 +211,15 @@ The {{cssxref("&lt;position&gt;")}} type defines 2D positioning of an object ins
 - {{cssxref("max", "max()")}}
 - {{cssxref("minmax", "minmax()")}}
 - {{cssxref("clamp", "clamp()")}}
-- {{cssxref("toggle", "toggle()")}}
 - {{cssxref("attr", "attr()")}}
 
-[Functional notation](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) is a type of value that can represent more complex types or invoke special processing by CSS. The syntax starts with the name of the function immediately followed by a left parenthesis `(` followed by the argument(s) to the notation followed by a right parenthesis `)`. Functions can take multiple arguments, which are formatted similarly to a CSS property value.
+[Functional notation](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) is a type of value that can represent more complex types or invoke special processing by CSS. The syntax starts with the name of the function immediately followed by a left parenthesis `(` followed by the argument(s) to the notation followed by a right parenthesis `)`. Functions can take multiple arguments, which are formatted similarly to a CSS property value.
 
 White space is allowed, but optional inside the parentheses. (But see notes regarding whitespace within pages for `min()`, `max()`, `minmax()`, and `clamp()` functions.)
 
 Some legacy functional notations, such as legacy syntax for `rgb()`, `rgba()`, `hsl()`, and `hsla()`, used commas, but commas are generally only used to separate items in a list. If a comma is used to separate arguments, white space is optional before and after the comma.
+
+The spec also defines the `toggle()` function. It has not been implemented anywhere yet.
 
 ## Specifications
 
@@ -227,7 +227,7 @@ Some legacy functional notations, such as legacy syntax for `rgb()`, `rgba()`, `
 
 ## See also
 
-- [Textual data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/Textual_data_types)
-- [CSS data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)
-- [CSS values and units](/en-US/docs/Web/CSS/CSS_Values_and_Units) module
+- [Textual data types](/en-US/docs/Web/CSS/CSS_values_and_units/Textual_data_types)
+- [CSS data types](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types)
+- [CSS values and units](/en-US/docs/Web/CSS/CSS_values_and_units) module
 - [Learn: Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

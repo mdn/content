@@ -3,9 +3,8 @@ title: border-image
 slug: Web/CSS/border-image
 page-type: css-shorthand-property
 browser-compat: css.properties.border-image
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`border-image`** [CSS](/en-US/docs/Web/CSS) property draws an image around a given element. It replaces the element's regular [border](/en-US/docs/Web/CSS/border).
 
@@ -49,7 +48,7 @@ border-image: repeating-linear-gradient(30deg, #4d9f0c, #9198e5, #4d9f0c 20px)
   justify-content: center;
   padding: 50px;
   background: #fff3d4;
-  color: #000;
+  color: black;
   border: 30px solid;
   border-image: url("/shared-assets/images/examples/border-diamonds.png") 30
     round;
@@ -149,7 +148,7 @@ To match the size of a single diamond, we will use a value of 81 divided by 3, o
 ```css
 #bitmap {
   width: 200px;
-  background-color: #ffa;
+  background-color: #ffffaa;
   border: 36px solid orange;
   margin: 30px;
   padding: 10px;
@@ -179,7 +178,8 @@ To match the size of a single diamond, we will use a value of 81 divided by 3, o
 #gradient {
   width: 200px;
   border: 30px solid;
-  border-image: repeating-linear-gradient(45deg, #f33, #3bf, #f33 30px) 60;
+  border-image: repeating-linear-gradient(45deg, #ff3333, #33bbff, #ff3333 30px)
+    60;
   padding: 20px;
 }
 ```

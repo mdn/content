@@ -3,11 +3,10 @@ title: round()
 slug: Web/CSS/round
 page-type: css-function
 browser-compat: css.types.round
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`round()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) returns a rounded number based on a selected rounding strategy.
+The **`round()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) returns a rounded number based on a selected rounding strategy.
 
 Authors should use a [custom CSS property](/en-US/docs/Web/CSS/--*) (e.g., `--my-property`) for the rounding value, interval, or both; using the `round()` function is redundant if these have known values.
 

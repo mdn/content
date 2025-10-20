@@ -103,7 +103,7 @@ Once you've identified a list of technologies you will be using that are not uni
 
 Some problems can be solved by just taking advantage of the natural way in which HTML/CSS work.
 
-Unrecognized HTML elements are treated by the browser as anonymous inline elements (effectively inline elements with no semantic value, similar to {{htmlelement("span")}} elements). You can still refer to them by their names, and style them with CSS, for example — you just need to make sure they are behaving as you want them to. Style them just as you would any other element, including setting the `display` property to something other than `inline` if needed.
+Unrecognized HTML elements are treated by the browser as anonymous inline elements (effectively inline elements with no semantic value, similar to {{htmlelement("span")}} elements). You can still refer to them by their names, and style them with CSS, for example — you just need to make sure they behave as you want them to. Style them just as you would any other element, including setting the `display` property to something other than `inline` if needed.
 
 More complex elements like HTML [`<video>`](/en-US/docs/Web/HTML/Reference/Elements/video), [`<audio>`](/en-US/docs/Web/HTML/Reference/Elements/audio), [`<picture>`](/en-US/docs/Web/HTML/Reference/Elements/picture), [`<object>`](/en-US/docs/Web/HTML/Reference/Elements/object), and [`<canvas>`](/en-US/docs/Web/HTML/Reference/Elements/canvas) (and other features besides) have natural mechanisms for fallbacks to be added in case the resources linked to are not supported. You can add fallback content in between the opening and closing tags, and non-supporting browsers will effectively ignore the outer element and run the nested content.
 
@@ -130,7 +130,7 @@ Another example is form elements. When new [`<input>`](/en-US/docs/Web/HTML/Refe
 
 The following example shows date and time inputs:
 
-```html
+```html live-sample___form-test
 <form>
   <div>
     <label for="date">Enter a date:</label>
@@ -143,12 +143,35 @@ The following example shows date and time inputs:
 </form>
 ```
 
+```css hidden live-sample___form-test
+div {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+input {
+  flex: 2;
+}
+
+label {
+  flex: 1;
+  text-align: right;
+}
+
+body {
+  width: 400px;
+  margin: 0 auto;
+}
+```
+
 The output of this code is as follows:
 
-{{EmbedGHLiveSample("learning-area/tools-testing/cross-browser-testing/html-css/forms-test", '100%', 150)}}
+{{EmbedLiveSample("form-test", '100%', 100)}}
 
-> [!NOTE]
-> You can also see this running live as [forms-test.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/forms-test.html) on GitHub (see the [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/html-css/forms-test.html) also).
+You can press the **Play** button to open the example in MDN Playground and edit the source code.
 
 If you view the example, you'll see the UI features in action as you try to input data. On devices with dynamic keyboards, type-specific keypads will be displayed. On a non-supporting browser, the inputs will just default to normal text inputs, meaning the user can still enter the correct information.
 
@@ -158,32 +181,79 @@ CSS is arguably better at fallbacks than HTML. If a browser encounters a declara
 
 Let's look at an example — a simple box styled with CSS, which has some styling provided by various CSS features:
 
-![A red pill button with rounded corners, inset shadow, and drop shadow](blingy-button.png)
+```html hidden live-sample___blingy-button
+<button>Press me</button>
+```
 
-> [!NOTE]
-> You can also see this example running live on GitHub as [button-with-fallback.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/button-with-fallback.html) (also see the [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/html-css/button-with-fallback.html)).
-
-The button has a number of declarations that style, but the two we are most interested in are as follows:
-
-```css
-button {
-  /* … */
-
-  background-color: #ff0000;
-  background-color: rgb(255 0 0 / 100%);
-  box-shadow:
-    inset 1px 1px 3px rgb(255 255 255 / 40%),
-    inset -1px -1px 3px rgb(0 0 0 / 40%);
+```css hidden live-sample___blingy-button
+html {
+  font-family: sans-serif;
+  height: 100%;
 }
 
-button:hover {
+button {
+  width: 150px;
+  margin: auto;
+  line-height: 2;
+  font-size: 1.1rem;
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  border-radius: 20px / 15px;
+  border: none;
+  cursor: pointer;
+
+  background-color: red;
+  background-color: rgb(255 0 0 / 90%);
+  box-shadow:
+    inset 3px 3px 3px rgb(255 255 255 / 40%),
+    inset -3px -3px 3px rgb(0 0 0 / 40%);
+}
+
+button:hover,
+button:focus {
   background-color: rgb(255 0 0 / 50%);
 }
 
 button:active {
   box-shadow:
-    inset 1px 1px 3px rgb(0 0 0 / 40%),
-    inset -1px -1px 3px rgb(255 255 255 / 40%);
+    inset 3px 3px 3px rgb(0 0 0 / 40%),
+    inset -3px -3px 3px rgb(255 255 255 / 40%);
+}
+
+body {
+  height: inherit;
+  display: flex;
+  align-items: center;
+}
+```
+
+{{EmbedLiveSample("blingy-button", "100%", 60)}}
+
+You can press the **Play** button to open the example in the MDN Playground and play with the source code.
+
+The button has a number of declarations applied to it, but the ones we are most interested in are as follows:
+
+```css
+button {
+  /* … */
+
+  background-color: red;
+  background-color: rgb(255 0 0 / 90%);
+  box-shadow:
+    inset 3px 3px 3px rgb(255 255 255 / 40%),
+    inset -3px -3px 3px rgb(0 0 0 / 40%);
+}
+
+button:hover,
+button:focus {
+  background-color: rgb(255 0 0 / 50%);
+}
+
+button:active {
+  box-shadow:
+    inset 3px 3px 3px rgb(0 0 0 / 40%),
+    inset -3px -3px 3px rgb(255 255 255 / 40%);
 }
 ```
 
@@ -191,7 +261,7 @@ Here we are providing an [RGB](/en-US/docs/Web/CSS/color_value/rgb) {{cssxref("b
 
 ![Hard to see pill button with white text on an almost white background](unreadable-button.png)
 
-To sort this out, we have added a second `background-color` declaration, which just specifies a hex color — this is supported way back in really old browsers, and acts as a fallback if the modern shiny features don't work. What happens is a browser visiting this page first applies the first `background-color` value; when it gets to the second `background-color` declaration, it will override the initial value with this value if it supports RGB colors. If not, it will just ignore the entire declaration and move on.
+To sort this out, we have added a second `background-color` declaration, which just specifies the `red` color keyword — this is supported way back in really old browsers, and acts as a fallback if the modern shiny features don't work. What happens is a browser visiting this page first applies the first `background-color` value; when it gets to the second `background-color` declaration, it will override the initial value with this value if it supports RGB colors. If not, it will just ignore the entire declaration and move on.
 
 > [!NOTE]
 > The same is true for other CSS features like [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries), [`@font-face`](/en-US/docs/Web/CSS/@font-face) and [`@supports`](/en-US/docs/Web/CSS/@supports) blocks — if they are not supported, the browser just ignores them.
@@ -230,8 +300,8 @@ If using a prefix, make sure it is needed; that the property is one of the few r
 
 ```css
 .masked {
-  -webkit-mask-image: url(MDN.svg);
-  mask-image: url(MDN.svg);
+  -webkit-mask-image: url("MDN.svg");
+  mask-image: url("MDN.svg");
   -webkit-mask-size: 50%;
   mask-size: 50%;
 }
@@ -260,7 +330,7 @@ If you do need to include modern features, test for feature support using [`@sup
 
 ### Responsive design problems
 
-Responsive design is the practice of creating web layouts that change to suit different device form factors — for example, different screen widths, orientations (portrait or landscape), or resolutions. A desktop layout for example will look terrible when viewed on a mobile device, so you need to provide a suitable mobile layout using [media queries](/en-US/docs/Web/CSS/CSS_media_queries), and make sure it is applied correctly using [viewport](/en-US/docs/Web/HTML/Guides/Viewport_meta_element). You can find a detailed account of such practices in [our responsive design tutorial](/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design).
+Responsive design is the practice of creating web layouts that change to suit different device form factors — for example, different screen widths, orientations (portrait or landscape), or resolutions. A desktop layout for example will look terrible when viewed on a mobile device, so you need to provide a suitable mobile layout using [media queries](/en-US/docs/Web/CSS/CSS_media_queries), and make sure it is applied correctly using [viewport](/en-US/docs/Web/HTML/Reference/Elements/meta/name/viewport). You can find a detailed account of such practices in [our responsive design tutorial](/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design).
 
 Resolution is a big issue too — for example, mobile devices are less likely to need big heavy images than desktop computers, and are more likely to have slower internet connections and possibly even expensive data plans that make wasted bandwidth more of a problem. In addition, different devices can have a range of different resolutions, meaning that smaller images could appear pixelated. There are a number of techniques that allow you to work around such problems, from [media queries](/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design#media_queries) to more complex [responsive image techniques](/en-US/docs/Web/HTML/Guides/Responsive_images#resolution_switching_different_sizes), including {{HTMLElement('picture')}} and the {{HTMLElement('img')}} element's [`srcset`](/en-US/docs/Web/HTML/Reference/Elements/img#srcset) and [`sizes`](/en-US/docs/Web/HTML/Reference/Elements/img#sizes) attributes.
 

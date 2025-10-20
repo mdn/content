@@ -3,9 +3,8 @@ title: border-left-style
 slug: Web/CSS/border-left-style
 page-type: css-property
 browser-compat: css.properties.border-left-style
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`border-left-style`** [CSS](/en-US/docs/Web/CSS) property sets the line style of an element's left {{cssxref("border")}}.
 
@@ -45,8 +44,8 @@ border-left-style: inset;
 
 ```css interactive-example
 #example-element {
-  background-color: #eee;
-  color: #000;
+  background-color: #eeeeee;
+  color: black;
   border: 0.75em solid;
   padding: 0.75em;
   width: 80%;
@@ -54,7 +53,7 @@ border-left-style: inset;
 }
 
 body {
-  background-color: #fff;
+  background-color: white;
 }
 ```
 

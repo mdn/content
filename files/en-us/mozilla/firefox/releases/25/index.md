@@ -1,5 +1,6 @@
 ---
-title: Firefox 25 for developers
+title: Firefox 25 release notes for developers
+short-title: Firefox 25
 slug: Mozilla/Firefox/Releases/25
 page-type: firefox-release-notes
 sidebar: firefox
@@ -64,7 +65,3 @@ _No change._
 ### SVG
 
 _No change._
-
-### Older versions
-
-{{Firefox_for_developers}}

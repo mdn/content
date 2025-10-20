@@ -129,17 +129,17 @@ data:hover::after {
 {{InteractiveExample("JavaScript Demo: Set.prototype[Symbol.iterator]()")}}
 
 ```js interactive-example
-const set1 = new Set();
+const set = new Set();
 
-set1.add(42);
-set1.add("forty two");
+set.add(42);
+set.add("forty two");
 
-const iterator1 = set1[Symbol.iterator]();
+const iterator = set[Symbol.iterator]();
 
-console.log(iterator1.next().value);
+console.log(iterator.next().value);
 // Expected output: 42
 
-console.log(iterator1.next().value);
+console.log(iterator.next().value);
 // Expected output: "forty two"
 ```
 
@@ -182,7 +182,7 @@ filter: drop-shadow(16px 16px 20px red) invert(75%);
 
 ```css interactive-example
 .example-container {
-  background-color: #fff;
+  background-color: white;
   width: 260px;
   height: 260px;
   display: flex;
@@ -366,24 +366,29 @@ if (5 < 30 && 55 > 20 && 5 < 20 && 55 > 10) {
 ```js
 Crafty.init(200, 200);
 
-var dim1 = {x: 5, y: 5, w: 50, h: 50}
-var dim2 = {x: 20, y: 10, w: 60, h: 40}
+var dim1 = { x: 5, y: 5, w: 50, h: 50 };
+var dim2 = { x: 20, y: 10, w: 60, h: 40 };
 
 var rect1 = Crafty.e("2D, Canvas, Color").attr(dim1).color("red");
 
-var rect2 = Crafty.e("2D, Canvas, Color, Keyboard, Fourway").fourway(2).attr(dim2).color("blue");
+var rect2 = Crafty.e("2D, Canvas, Color, Keyboard, Fourway")
+  .fourway(2)
+  .attr(dim2)
+  .color("blue");
 
 rect2.bind("EnterFrame", function () {
-if (rect1.x > rect2.x + rect2.w &#x26;&#x26;
-rect1.x + rect1.w > rect2.x &#x26;&#x26;
-rect1.y > rect2.y + rect2.h &#x26;&#x26;
-rect1.h + rect1.y > rect2.y) {
-// collision detected!
-this.color("green");
-} else {
-// no collision
-this.color("blue");
-}
+  if (
+    rect1.x > rect2.x + rect2.w &&
+    rect1.x + rect1.w > rect2.x &&
+    rect1.y > rect2.y + rect2.h &&
+    rect1.h + rect1.y > rect2.y
+  ) {
+    // collision detected!
+    this.color("green");
+  } else {
+    // no collision
+    this.color("blue");
+  }
 });
 ```
 

@@ -4,21 +4,20 @@ short-title: exec()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/exec
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.RegExp.exec
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`exec()`** method of {{jsxref("RegExp")}} instances executes a search with this regular expression for a match in a specified string and returns a result array, or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
 
 {{InteractiveExample("JavaScript Demo: RegExp.prototype.exec()")}}
 
 ```js interactive-example
-const regex1 = /fo+/g;
-const str1 = "table football, foosball";
-let array1;
+const regex = /fo+/g;
+const str = "table football, foosball";
+let array;
 
-while ((array1 = regex1.exec(str1)) !== null) {
-  console.log(`Found ${array1[0]}. Next starts at ${regex1.lastIndex}.`);
+while ((array = regex.exec(str)) !== null) {
+  console.log(`Found ${array[0]}. Next starts at ${regex.lastIndex}.`);
   // Expected output: "Found foo. Next starts at 9."
   // Expected output: "Found foo. Next starts at 19."
 }

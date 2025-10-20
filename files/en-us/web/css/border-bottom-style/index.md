@@ -3,9 +3,8 @@ title: border-bottom-style
 slug: Web/CSS/border-bottom-style
 page-type: css-property
 browser-compat: css.properties.border-bottom-style
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`border-bottom-style`** [CSS](/en-US/docs/Web/CSS) property sets the line style of an element's bottom {{cssxref("border")}}.
 
@@ -45,8 +44,8 @@ border-bottom-style: inset;
 
 ```css interactive-example
 #example-element {
-  background-color: #eee;
-  color: #000;
+  background-color: #eeeeee;
+  color: black;
   border: 0.75em solid;
   padding: 0.75em;
   width: 80%;
@@ -54,7 +53,7 @@ border-bottom-style: inset;
 }
 
 body {
-  background-color: #fff;
+  background-color: white;
 }
 ```
 

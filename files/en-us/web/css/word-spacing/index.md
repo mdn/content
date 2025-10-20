@@ -3,9 +3,8 @@ title: word-spacing
 slug: Web/CSS/word-spacing
 page-type: css-property
 browser-compat: css.properties.word-spacing
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`word-spacing`** [CSS](/en-US/docs/Web/CSS) property sets the length of space between words and between tags.
 
@@ -40,13 +39,13 @@ word-spacing: -0.4ch;
 ```css interactive-example
 @font-face {
   src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.ttf");
-  font-family: Amstelvar;
+  font-family: "Amstelvar";
   font-style: normal;
 }
 
 section {
   font-size: 1.2em;
-  font-family: Amstelvar, serif;
+  font-family: "Amstelvar", serif;
 }
 ```
 

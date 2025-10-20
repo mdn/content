@@ -3,11 +3,10 @@ title: circle()
 slug: Web/CSS/basic-shape/circle
 page-type: css-function
 browser-compat: css.types.basic-shape.circle
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`circle()`** CSS [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) defines a circle using a radius and a position. It is one of the {{cssxref("&lt;basic-shape&gt;")}} data types.
+The **`circle()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) defines a circle using a radius and a position. It is one of the {{cssxref("&lt;basic-shape&gt;")}} data types.
 
 {{InteractiveExample("CSS Demo: circle()")}}
 
@@ -39,11 +38,11 @@ clip-path: circle(farthest-side);
 
 ```css interactive-example
 #default-example {
-  background: #fe9;
+  background: #ffee99;
 }
 
 #example-element {
-  background: linear-gradient(to bottom right, #f52, #05f);
+  background: linear-gradient(to bottom right, #ff5522, #0055ff);
   width: 100%;
   height: 100%;
 }

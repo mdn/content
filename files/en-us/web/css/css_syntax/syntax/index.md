@@ -3,9 +3,8 @@ title: "Introduction to CSS syntax: declarations, rulesets, and statements"
 short-title: Introduction
 slug: Web/CSS/CSS_syntax/Syntax
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The basic goal of the Cascading Stylesheet ([CSS](/en-US/docs/Web/CSS)) language is to allow a browser engine to paint elements of the page with specific features, like colors, positioning, or decorations. The _CSS syntax_ reflects this goal and its basic building blocks are:
 
@@ -82,7 +81,7 @@ There is another group of statements – the **nested statements**. These are st
 - [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
 - [Inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance)
 - [Cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade)
-- [Value definition syntax](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+- [Value definition syntax](/en-US/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
 - Values
   - [Initial values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value)
   - [Computed values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value)

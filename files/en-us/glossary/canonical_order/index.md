@@ -2,9 +2,8 @@
 title: Canonical order
 slug: Glossary/Canonical_order
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 In CSS, **canonical order** is used to refer to the order in which separate values need to be specified (or {{Glossary("parse", "parsed")}}) or are to be {{Glossary("serialization", "serialized")}} as part of a CSS property value. It is defined by the formal {{Glossary("syntax")}} of the property and normally refers to the order in which longhand values should be specified as part of a single shorthand value.
 
@@ -23,5 +22,5 @@ Furthermore, its syntax defines, that if a value for the {{cssxref("background-s
 
 ## See also
 
-- [CSS value definition syntax](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+- [CSS value definition syntax](/en-US/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
 - [What does "canonical order" mean with respect to CSS properties?](https://stackoverflow.com/questions/28963536/what-does-canonical-order-mean-with-respect-to-css-properties) on Stack Overflow provides useful further discussion.

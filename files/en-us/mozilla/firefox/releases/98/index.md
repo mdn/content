@@ -1,5 +1,6 @@
 ---
-title: Firefox 98 for developers
+title: Firefox 98 release notes for developers
+short-title: Firefox 98
 slug: Mozilla/Firefox/Releases/98
 page-type: firefox-release-notes
 sidebar: firefox
@@ -46,7 +47,3 @@ No notable changes
 
 - Web extensions using {{WebExtAPIRef("webRequest")}} were started early during Firefox startup. This has changed to only trigger early start-up for extensions using {{WebExtAPIRef("webRequest")}} blocking calls. Non-blocking calls no longer cause the early startup of an extension. ([Firefox bug 1749871](https://bugzil.la/1749871))
 - `cookieStoreId` added to {{WebExtAPIRef("userScripts.register")}}. This enables extensions to register container-specific user scripts ([Firefox bug 1738567](https://bugzil.la/1738567)).
-
-## Older versions
-
-{{Firefox_for_developers}}

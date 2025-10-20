@@ -1,5 +1,6 @@
 ---
-title: Firefox 56 for developers
+title: Firefox 56 release notes for developers
+short-title: Firefox 56
 slug: Mozilla/Firefox/Releases/56
 page-type: firefox-release-notes
 sidebar: firefox
@@ -122,7 +123,3 @@ _No changes._
 - [tabs.Tab.lastAccessed](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab)
 - [theme.reset()](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/theme/reset)
 - [windows.create()](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/create) and [windows.update()](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/update) now support prefacing window title
-
-## Older versions
-
-{{Firefox_for_developers}}

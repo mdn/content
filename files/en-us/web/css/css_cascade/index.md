@@ -6,9 +6,8 @@ spec-urls:
   - https://drafts.csswg.org/css-cascade/
   - https://drafts.csswg.org/css-cascade-5/
   - https://drafts.csswg.org/css-cascade-6/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS cascading and inheritance** module defines the rules for assigning values to properties by way of cascading and inheritance. This module specifies the rules for finding the specified value for all properties on all elements.
 
@@ -83,7 +82,7 @@ The opposite also occurs. Sometimes there are no declarations defining the value
 - [Element-attached styles](/en-US/docs/Web/HTML/Reference/Global_attributes/style)
 - [Inline styles and the cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade#inline_styles)
 - [Conditional rules for @imports](/en-US/docs/Web/CSS/@import#importing_css_rules_conditional_on_media_queries)
-- [Value definition syntax](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+- [Value definition syntax](/en-US/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
 
 ## Specifications
 

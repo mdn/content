@@ -3,9 +3,8 @@ title: margin-inline-start
 slug: Web/CSS/margin-inline-start
 page-type: css-property
 browser-compat: css.properties.margin-inline-start
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`margin-inline-start`** [CSS](/en-US/docs/Web/CSS) property defines the logical inline start margin of an element, which maps to a physical margin depending on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, or {{cssxref("margin-left")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
 
@@ -69,7 +68,7 @@ margin-inline-start: 10px; /* An absolute length */
 margin-inline-start: 1em; /* relative to the text size */
 margin-inline-start: 5%; /* relative to the nearest block container's width */
 margin-inline-start: anchor-size(block);
-margin-inline-start: calc(anchor-size(--myAnchor width, 30px) / 4);
+margin-inline-start: calc(anchor-size(--my-anchor width, 30px) / 4);
 
 /* Keyword values */
 margin-inline-start: auto;

@@ -1,5 +1,6 @@
 ---
-title: Firefox 18 for developers
+title: Firefox 18 release notes for developers
+short-title: Firefox 18
 slug: Mozilla/Firefox/Releases/18
 page-type: firefox-release-notes
 sidebar: firefox
@@ -26,7 +27,7 @@ Firefox 18 was released on January 8, 2013. This article lists key changes that 
 
 - `navigator.mozPay` has been landed. ([Firefox bug 767818](https://bugzil.la/767818))
 - `window.devicePixelRatio` has been landed. ([Firefox bug 564815](https://bugzil.la/564815))
-- The macOS X backend for `window.navigator.battery` has been implemented. ([Firefox bug 696045](https://bugzil.la/696045))
+- The OS X backend for `window.navigator.battery` has been implemented. ([Firefox bug 696045](https://bugzil.la/696045))
 - `MozBlobBuilder` is removed. Developers need to use {{domxref("Blob")}} constructor for creating a `Blob` object. ([Firefox bug 744907](https://bugzil.la/744907))
 - The {{domxref("document.visibilitychange_event", "visibilitychange")}} event and the [Page Visibility API](/en-US/docs/Web/API/Page_Visibility_API) has been unprefixed ([Firefox bug 812086](https://bugzil.la/812086)).
 - {{domxref("TextDecoder")}} and {{domxref("TextEncoder")}} have been added. Note that the implementation and spec of these evolved and have been changed in Firefox 19 ([Firefox bug 764234](https://bugzil.la/764234)).
@@ -85,7 +86,3 @@ The following interfaces have been removed.
 - [Firefox 18 Beta Release Notes](https://website-archive.mozilla.org/www.mozilla.org/firefox_releasenotes/en-us/firefox/18.0beta/releasenotes/)
 - [Aurora 18: HiDPI & Touch Events](https://hacks.mozilla.org/2012/10/aurora-18-hidpi-touch-events/) (Mozilla Hacks)
 - [Add-on Compatibility for Firefox 18](https://blog.mozilla.org/addons/2012/12/28/compatibility-for-firefox-18/) (Add-ons Blog)
-
-### Older versions
-
-{{Firefox_for_developers}}

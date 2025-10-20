@@ -1,5 +1,6 @@
 ---
-title: Firefox 9 for developers
+title: Firefox 9 release notes for developers
+short-title: Firefox 9
 slug: Mozilla/Firefox/Releases/9
 page-type: firefox-release-notes
 sidebar: firefox
@@ -42,7 +43,7 @@ _No change._
 - DOM Level 3 [composition events](/en-US/docs/Web/API/CompositionEvent) are now supported.
 - The {{ domxref("Document.scripts") }} attribute has been implemented; this returns an {{ domxref("HTMLCollection") }} of all the {{ HTMLElement("script") }} elements on the document.
 - The {{ domxref("Document.queryCommandSupported()") }} method has been implemented.
-- The set of events that can be listened for on {{ HTMLElement("body") }} elements has been revised to match the latest draft of the HTML5 specification. The list of events in the [DOM event reference](/en-US/docs/Web/Events) reflects which events can be listened for on {{ HTMLElement("body") }}.
+- The set of events that can be listened for on {{ HTMLElement("body") }} elements has been revised to match the latest draft of the HTML5 specification. The list of events in the [DOM events](/en-US/docs/Web/API/Document_Object_Model/Events#event_index) guide reflects which events can be listened for on {{ HTMLElement("body") }}.
 - The `readystatechange` event is now fired only on the {{ domxref("Document") }}, as intended.
 - Event handlers are now implemented as standard IDL interfaces. For most cases, this won't affect content, but there are exceptions.
 - A new response type, `"moz-json"`, has been added to `XMLHttpRequest`, letting `XMLHttpRequest` automatically parse [JSON](/en-US/docs/Glossary/JSON) strings for you; when you request this type, a returned JSON string is parsed, so that the value of the `response` property is the resulting JavaScript object.
@@ -136,7 +137,3 @@ The IDL parser no longer includes support for the never fully-implemented notion
 
 - The spell checker no longer has an arbitrary 130-character word-length limit on the length of words it will attempt to spell check. This limit was previously in place to prevent crashes that were occurring in the spell checker, but the underlying bugs have since been fixed.
 - You can now register components to add features to the {{ domxref("window.navigator") }} object by using the "JavaScript-navigator-property" category.
-
-## See also
-
-{{Firefox_for_developers}}

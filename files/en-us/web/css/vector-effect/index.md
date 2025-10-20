@@ -3,9 +3,8 @@ title: vector-effect
 slug: Web/CSS/vector-effect
 page-type: css-property
 browser-compat: css.properties.vector-effect
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`vector-effect`** [CSS](/en-US/docs/Web/CSS) property suppresses specific [transformation effects](/en-US/docs/Web/SVG/Reference/Attribute/transform) in SVG, thus permitting effects like a road on a map staying the same width no matter how the map is zoomed, or allowing a diagram key to retain its position and size regardless of other transforms. It can only be used with SVG elements that accept the {{SVGAttr("vector-effect")}} attribute. When used, the CSS value overrides any values of the element's `vector-effect` attribute.
 
@@ -51,7 +50,7 @@ Here, we start with a 200x100 SVG image that contains two rectangles inside a gr
     transform-origin="100 50"
     stroke-width="3"
     stroke="orange"
-    fill="#DEF8">
+    fill="#ddeeff88">
     <rect x=" 60" y="20" width="30" height="60" />
     <rect x="110" y="20" width="30" height="60" class="thinned" />
   </g>
@@ -84,7 +83,7 @@ In this case, we start with a similar SVG image to the one used in the previous 
     transform-origin="100 50"
     stroke-width="3"
     stroke="orange"
-    fill="#DEF8">
+    fill="#ddeeff88">
     <rect
       x=" 60"
       y="20"

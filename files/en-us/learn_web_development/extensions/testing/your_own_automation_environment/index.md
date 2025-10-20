@@ -74,7 +74,7 @@ To set your `PATH` variable on a macOS system and on most Linux systems:
 2. Paste the following into the bottom of your file (updating the path as it actually is on your machine):
 
    ```bash
-   #Add WebDriver browser drivers to PATH
+   # Add WebDriver browser drivers to PATH
    export PATH=$PATH:/Users/bob
    ```
 
@@ -795,7 +795,7 @@ So this is pretty cool. We have tested this locally, but you could set this up o
 
 ## Integrating Selenium with CI tools
 
-As another point, it is also possible to integrate Selenium and related tools like LambdaTest, and Sauce Labs with continuous integration (CI) tools — this is useful, as it means you can run your tests via a CI tool, and only commit new changes to your code repository if the tests pass.
+As another point, it is also possible to integrate Selenium and related tools like LambdaTest, and Sauce Labs with {{glossary("continuous integration")}} (CI) tools — this is useful, as it means you can run your tests via a CI tool, and only commit new changes to your code repository if the tests pass.
 
 It is out of scope to look at this area in detail in this article, but we'd suggest getting started with Travis CI — this is probably the easiest CI tool to get started with and has good integration with web tools like GitHub and Node.
 

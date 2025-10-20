@@ -3,21 +3,20 @@ title: StorageArea.getBytesInUse()
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/getBytesInUse
 page-type: webextension-api-function
 browser-compat: webextensions.api.storage.StorageArea.getBytesInUse
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Gets the amount of storage space, in bytes, used by one or more items stored in the storage area.
 
 > [!NOTE]
-> In Firefox this method:
+> In Firefox, this method is supported in:
 >
-> - is supported in {{WebExtAPIRef("storage.sync")}}.
-> - is supported in {{WebExtAPIRef("storage.session")}} from Firefox 131.
-> - isn't supported in {{WebExtAPIRef("storage.local")}}, see [Firefox bug 1385832](https://bugzil.la/1385832).
-> - isn't provided in {{WebExtAPIRef("storage.managed")}}.
+> - {{WebExtAPIRef("storage.sync")}}.
+> - {{WebExtAPIRef("storage.session")}} from Firefox 131.
+> - {{WebExtAPIRef("storage.local")}} and {{WebExtAPIRef("storage.managed")}} from Firefox 144.
 
-This is an asynchronous method that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+> [!NOTE]
+> `storage.managed.getBytesInUse()` always returns 0, at least in Chrome and Firefox.
 
 ## Syntax
 
@@ -40,11 +39,11 @@ In Firefox, `<storageType>` can't be {{WebExtAPIRef("storage.local")}}, because 
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled with an integer, `bytesUsed`, representing the storage space used by the objects specified in `keys`. If the operation fails, the promise is rejected with an error message.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.

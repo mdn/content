@@ -37,12 +37,12 @@ The WebAuthn client capability strings are:
   - : The client supports usage of the [hybrid](/en-US/docs/Web/API/AuthenticatorAttestationResponse/getTransports#hybrid) transport.
     This means that the client can use authenticators that rely on Bluetooth, NFC, or USB.
 - `"passkeyPlatformAuthenticator"`
-  - : The client allows usage of a passkey authenticator that supports multi-factor authentication mechanisms such as a PIN or biometric check.
+  - : The client allows usage of a passkey authenticator that supports {{glossary("multi-factor authentication")}} mechanisms such as a PIN or biometric check.
     The authenticator can be part of the same platform (device) as the client, or connected via a hybrid transport such as Bluetooth or USB.
     The credentials are stored on the authenticator.
     See [Passkeys developer guide for relying parties](https://developers.google.com/identity/passkeys/developer-guides).
 - `userVerifyingPlatformAuthenticator`
-  - : The client has a platform authenticator (part of the same device) that supports multi-factor authentication mechanisms, such as a PIN or biometric check.
+  - : The client has a platform authenticator (part of the same device) that supports {{glossary("multi-factor authentication")}} mechanisms, such as a PIN or biometric check.
     The credentials may be stored on either the RP or the authenticator.
 - `relatedOrigins`
   - : The client supports [Related Origin Requests](https://web.dev/articles/webauthn-related-origin-requests).
@@ -176,9 +176,9 @@ function log(text) {
 The code is similar to the previous example, except that we check a particular returned capability, and we use `try...catch` to catch the case where `getClientCapabilities()` is not supported.
 
 ```js
-checkisUserVerifyingPlatformAuthenticatorAvailable();
+checkIsUserVerifyingPlatformAuthenticatorAvailable();
 
-async function checkisUserVerifyingPlatformAuthenticatorAvailable() {
+async function checkIsUserVerifyingPlatformAuthenticatorAvailable() {
   try {
     const capabilities = await PublicKeyCredential.getClientCapabilities();
 

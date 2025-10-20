@@ -1,5 +1,6 @@
 ---
-title: Firefox 35 for developers
+title: Firefox 35 release notes for developers
+short-title: Firefox 35
 slug: Mozilla/Firefox/Releases/35
 page-type: firefox-release-notes
 sidebar: firefox
@@ -109,7 +110,3 @@ _No change._
 [GitHub commits made between Firefox 34 and Firefox 35](https://github.com/mozilla/addon-sdk/compare/firefox34...firefox35). This will not include any uplifts made after this release entered Aurora.
 
 [Bugs fixed between Firefox 34 and Firefox 35](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&chfieldto=2014-10-13&chfield=resolution&query_format=advanced&chfieldfrom=2014-09-02&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&product=Add-on%20SDK&list_id=11562840). This will not include any uplifts made after this release entered Aurora.
-
-## Older versions
-
-{{Firefox_for_developers}}

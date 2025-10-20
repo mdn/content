@@ -1,5 +1,6 @@
 ---
-title: Firefox 21 for developers
+title: Firefox 21 release notes for developers
+short-title: Firefox 21
 slug: Mozilla/Firefox/Releases/21
 page-type: firefox-release-notes
 sidebar: firefox
@@ -11,7 +12,7 @@ Firefox 21 was released on May 14, 2013. This article lists key changes that are
 
 ### HTML
 
-- The [`scoped`](/en-US/docs/Web/HTML/Reference/Elements/style#scoped) attribute has been added to the {{HTMLElement("style")}} element. It allows to include styles that are isolated from the rest of the document. Such styles can be selected using the {{cssxref(":scope")}} CSS pseudo-element introduced in Firefox 20. ([Firefox bug 508725](https://bugzil.la/508725)).
+- The `scoped` attribute has been added to the {{HTMLElement("style")}} element. It allows to include styles that are isolated from the rest of the document. Such styles can be selected using the {{cssxref(":scope")}} CSS pseudo-element introduced in Firefox 20. ([Firefox bug 508725](https://bugzil.la/508725)).
 - The new HTML {{HTMLElement("main")}} element has been implemented ([Firefox bug 820508](https://bugzil.la/820508)).
 
 ### JavaScript
@@ -102,7 +103,3 @@ Firefox 21 was released on May 14, 2013. This article lists key changes that are
 
 - [Firefox 21 Release Notes](https://website-archive.mozilla.org/www.mozilla.org/firefox_releasenotes/en-us/firefox/21.0/releasenotes/)
 - [Add-on Compatibility for Firefox 21](https://blog.mozilla.org/addons/2013/04/26/compatibility-for-firefox-21/)
-
-### Older versions
-
-{{Firefox_for_developers}}

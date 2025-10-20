@@ -3,9 +3,8 @@ title: Applying color to HTML elements using CSS
 short-title: Applying color to HTML elements
 slug: Web/CSS/CSS_colors/Applying_color
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 With [CSS](/en-US/docs/Web/CSS), there are lots of ways to add color to your [HTML](/en-US/docs/Web/HTML) [elements](/en-US/docs/Web/HTML/Reference/Elements) to create the look you want. This guide is a primer introducing how CSS can be used to apply colors to HTML elements. This guide includes [lists of the CSS properties that set color in their values](#properties_that_can_have_color) and how to use colors both [in stylesheets](#specifying_colors_as_values_in_stylesheets) and [in other ways](#other_ways_to_use_color).
 
@@ -34,7 +33,7 @@ Whenever an element is rendered, these properties are used to determine the colo
   - : Configures a shadow effect to apply to text. Among the options for the shadow is the shadow's base color (which is then blurred and blended with the background based on the other parameters). See [Text drop shadows](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals#text_drop_shadows) to learn more.
 
 - {{cssxref("text-decoration-color")}}
-  - : The default text decorations (such as underlines, strikethroughs, etc.) color is [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword). This keyword represents the current value of the `color` property. However, you can override that value and use a different color for them with the `text-decoration-color` property.
+  - : The default text decorations (such as underlines, strikethroughs, etc.) color is [`currentColor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword). This keyword represents the current value of the `color` property. However, you can override that value and use a different color for them with the `text-decoration-color` property.
 
 - {{cssxref("text-emphasis-color")}}
   - : The color to use when rendering emphasis symbols adjacent to each character in the text. This is used primarily when drawing text for East Asian languages.
@@ -153,7 +152,7 @@ The `.boxLeft` class, used to style the box on the left, sets up the color of th
 .boxRight {
   background-color: hwb(270deg 63% 13%);
   outline: 4px dashed #6e1478;
-  color: hsl(0deg 100% 100%);
+  color: hsl(0deg 95% 95%);
   text-decoration-line: underline;
   text-decoration-style: wavy;
   text-decoration-color: #8f8;
@@ -169,7 +168,7 @@ Finally, the `.boxRight` class sets several styles on the box that's drawn to th
 
 - The `background-color` is set using {{CSSXref("color_value/hwb", "hwb()")}} functional notation — `hwb(270deg 63% 13%)`. This is a medium purple color.
 - The box's `outline` is used to specify that the box should be enclosed in a four-pixel thick dashed line whose color is a somewhat deeper purple using the six-digit {{cssxref("hex-color")}} `#6e1478`.
-- The foreground (text) color is specified by setting the {{cssxref("color")}} property using {{CSSXref("color_value/hsl", "hsl()")}} functional notation — `hsl(0deg 100% 100%)`. This is one of many ways to specify the color white.
+- The foreground (text) color is specified by setting the {{cssxref("color")}} property using {{CSSXref("color_value/hsl", "hsl()")}} functional notation — `hsl(0deg 95% 95%)`. This is a very light pinkish color.
 - We add a green wavy line under the text with the {{cssxref("text-decoration")}} shorthand, along with the longhand component for browser compatibility. We used the 3-digit {{cssxref("hex-color")}} `#8f8`, which is the equivalent of `#88ff88`.
 - Finally, a bit of a shadow is added to the text using {{cssxref("text-shadow")}}. Its `color` parameter is set to `black`, a {{cssxref("named-color")}} value.
 

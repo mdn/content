@@ -2,9 +2,8 @@
 title: Flow layout and overflow
 slug: Web/CSS/CSS_display/Flow_layout_and_overflow
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 When there is more content than can fit into a container, an overflow situation occurs. Understanding how overflow behaves is important in dealing with any element with a constrained size in CSS. This guide explains how overflow works when working with normal flow.
 The HTML is the same in each example, so it's visible in the first section, and hidden in others for brevity.

@@ -3,11 +3,10 @@ title: <frequency>
 slug: Web/CSS/frequency
 page-type: css-type
 spec-urls: https://drafts.csswg.org/css-values/#frequency-value
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`<frequency>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents a frequency dimension, such as the pitch of a speaking voice. It is not currently used in any CSS properties.
+The **`<frequency>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types) represents a frequency dimension, such as the pitch of a speaking voice. It is not currently used in any CSS properties.
 
 ## Syntax
 
@@ -49,9 +48,9 @@ Invalid frequency values:
 
 ## Browser compatibility
 
-No browser currently supports this feature.
+Currently, no browsers support this feature.
 
 ## See also
 
 - {{cssxref("&lt;frequency-percentage&gt;")}}
-- [CSS values and units](/en-US/docs/Web/CSS/CSS_Values_and_Units) module
+- [CSS values and units](/en-US/docs/Web/CSS/CSS_values_and_units) module

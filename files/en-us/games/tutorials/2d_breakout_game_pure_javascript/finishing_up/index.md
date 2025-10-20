@@ -2,11 +2,10 @@
 title: Finishing up
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up
 page-type: guide
+sidebar: games
 ---
 
-{{GamesSidebar}}
-
-{{Previous("Games/Workflows/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}
+{{Previous("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}
 
 This is the **10th and final step** of the [Gamedev Canvas tutorial](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). You can find the source code as it should look after completing this lesson at [Gamedev-Canvas-workshop/lesson10.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson10.html).
 
@@ -104,7 +103,7 @@ That's all — the final version of the game is ready and set to go!
 
 ```css hidden
 canvas {
-  background: #eee;
+  background: #eeeeee;
 }
 button {
   display: block;
@@ -148,9 +147,9 @@ for (let c = 0; c < brickColumnCount; c++) {
   }
 }
 
-document.addEventListener("keydown", keyDownHandler, false);
-document.addEventListener("keyup", keyUpHandler, false);
-document.addEventListener("mousemove", mouseMoveHandler, false);
+document.addEventListener("keydown", keyDownHandler);
+document.addEventListener("keyup", keyUpHandler);
+document.addEventListener("mousemove", mouseMoveHandler);
 
 function keyDownHandler(e) {
   if (e.key === "Right" || e.key === "ArrowRight") {
@@ -301,4 +300,4 @@ You've finished all the lessons - congratulations! By this point, you should now
 
 You could also go back to [this tutorial series' index page](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Have fun coding!
 
-{{Previous("Games/Workflows/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}
+{{Previous("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}

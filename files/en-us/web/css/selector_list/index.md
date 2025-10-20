@@ -3,9 +3,8 @@ title: Selector list
 slug: Web/CSS/Selector_list
 page-type: css-combinator
 browser-compat: css.selectors.list
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The CSS **selector list** (`,`) selects all the matching nodes. A selector list is a comma-separated list of selectors.
 
@@ -47,7 +46,7 @@ This example shows grouping selectors in a single line using a comma-separated l
 
 ```css-nolint
 h1, h2, h3, h4, h5, h6 {
-  font-family: Helvetica, Arial;
+  font-family: "Helvetica", "Arial";
 }
 ```
 

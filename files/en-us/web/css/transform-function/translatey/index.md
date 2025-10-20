@@ -3,11 +3,10 @@ title: translateY()
 slug: Web/CSS/transform-function/translateY
 page-type: css-function
 browser-compat: css.types.transform-function.translateY
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`translateY()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) repositions an element vertically on the 2D plane. Its result
+The **`translateY()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) repositions an element vertically on the 2D plane. Its result
 is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
 {{InteractiveExample("CSS Demo: translateY()")}}

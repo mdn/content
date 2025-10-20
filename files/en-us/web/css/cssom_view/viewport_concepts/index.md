@@ -2,21 +2,32 @@
 title: Viewport concepts
 slug: Web/CSS/CSSOM_view/Viewport_concepts
 page-type: guide
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-This article explains the concept of the {{glossary("viewport")}} — what it is, its impact in terms of CSS, SVG, and mobile devices — and differentiates between the {{glossary("visual viewport")}} and the {{glossary("layout viewport")}}.
+This article explains the concept of the {{glossary("viewport")}} — what it is and its impact in terms of CSS, SVG, and mobile devices. This article defines the initial viewport and actual viewport, and differentiates between the {{glossary("visual viewport")}} and the {{glossary("layout viewport")}}.
 
 ## What is a viewport?
 
-A viewport represents the area in computer graphics being currently viewed. In web browser terms, it is generally the same as the browser window, excluding the UI, menu bar, etc. That is the part of the document you are viewing.
+A **viewport** is a user agent feature used to establish the initial containing block for continuous media.
+
+The generic _viewport_ term generally refers to the area in computer graphics being currently viewed. In web browser terms, that is generally the same as the browser window, excluding the UI, menu bar, etc. That is the part of the document you are viewing.
+
+As a document loads, the viewport goes through two stages:
+
+- **Initial viewport**
+  - : The _initial viewport_ refers to the window or viewing area of the UA before user agent styles, HTML {{htmlelement("meta")}} tags, or CSS styles have overridden its size. The initial viewport size is based on the size of the window or viewing area, and not the content. The size of a full-screen user agent's initial viewport will differ between orientations and devices, but will always be the same for the same device in the same orientation.
+
+- **Actual viewport**
+  - : The _actual viewport_ is the viewport you get after processing the [viewport `<meta>` tag](/en-US/docs/Web/HTML/Reference/Elements/meta/name/viewport). Content designed for large viewports may exhibit a variety of bugs when viewed in smaller viewports, including unintended wrapping, clipped content, and incorrectly sized {{glossary("scroll container", "scroll containers")}}. The viewport meta tag provides hints about the initial size of the viewport. The actual viewport is the size defined by its [`content`](/en-US/docs/Web/HTML/Reference/Elements/meta#content) attribute. If this tag is omitted, some mobile browsers render content using a fixed initial containing block width, typically `980px`. They set the width of the actual viewport to this value, then scale the content down to fit it, making the CSS pixel size smaller than an actual pixel.
 
 Documents, like this article, may be very long. Your viewport is everything that is currently visible; notably, the "what is a viewport" section, and perhaps some of the navigation menu. The size of the viewport depends on the size of the screen, whether the browser is in fullscreen mode or not, and whether or not the browser is zoomed in. Content outside the viewport, such as the _See Also_ section in this document, is likely to not be visible onscreen until scrolled into view.
 
 - On larger monitors where applications aren't necessarily full screen, the viewport is the size of the browser window.
 - On most mobile devices and when the browser is in fullscreen mode, the viewport is the entire screen.
 - In fullscreen mode, the viewport is the device screen, the window is the browser window, which can be as big as the viewport or smaller, and the document is the website, which can be much taller or wider than the viewport.
+
+For [paged media](/en-US/docs/Web/CSS/CSS_paged_media), the initial containing block is based on the page area. The page area can be set through {{cssxref("@page")}} rules.
 
 To recap, the viewport is basically the part of the document that is currently visible.
 
@@ -38,7 +49,7 @@ window.outerHeight; /* 900 */
 
 There are several DOM properties that can help you query viewport size, and other similar lengths:
 
-- The document element's {{DOMxRef("Element.clientWidth")}} is the inner width of a document in [CSS pixels](/en-US/docs/Web/HTML/Guides/Viewport_meta_element#screen_density), including padding (but not borders, margins, or vertical scrollbars, if present). **This is the viewport width**.
+- The document element's {{DOMxRef("Element.clientWidth")}} is the inner width of a document in [CSS pixels](/en-US/docs/Web/HTML/Reference/Elements/meta/name/viewport#screen_density), including padding (but not borders, margins, or vertical scrollbars, if present). **This is the viewport width**.
 - The {{DOMxRef("Window.innerWidth")}} is the width, in CSS pixels, of the browser window viewport including, if rendered, the vertical scrollbar.
 - The {{DOMxRef("Window.outerWidth")}} is the width of the outside of the browser window including all the window {{glossary("chrome")}}.
 
@@ -89,13 +100,13 @@ For a page containing iframes, objects, or external SVG, both the containing pag
 
 The layout viewport and visual viewport described above are not the only viewports you will encounter. Any sub-viewport that is fully or partially displayed within the layout viewport is considered a visual viewport.
 
-We generally think of [`width`](/en-US/docs/Web/CSS/@media/width) and [`height`](/en-US/docs/Web/CSS/@media/height) media queries as being relative to the width and height of the browser window. They are actually relative to the viewport, which is the window in the main document but is the intrinsic size of the element's parent in a nested browsing context like objects, iframes and SVG. In CSS, we also have [length units based on the viewport size](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#viewport_units). A `vh` unit is 1% of the layout viewport's height. Similarly, the `vw` unit is 1% of the layout viewport's width.
+We generally think of [`width`](/en-US/docs/Web/CSS/@media/width) and [`height`](/en-US/docs/Web/CSS/@media/height) media queries as being relative to the width and height of the browser window. They are actually relative to the viewport, which is the window in the main document but is the intrinsic size of the element's parent in a nested browsing context like objects, iframes and SVG. In CSS, we also have [length units based on the viewport size](/en-US/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#viewport_units). A `vh` unit is 1% of the layout viewport's height. Similarly, the `vw` unit is 1% of the layout viewport's width.
 
 #### `<iframe>`
 
 Inside an {{htmlelement("iframe")}}, the visual viewport is the size of the inner width and height of the iframe, rather than the parent document. You can set any height and width on an iframe, but the whole document may not be visible.
 
-If you use [viewport length units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#viewport_units) in your CSS within the iframe document, `1vh` will be 1% of the height of the iframe, and `1vw` will be 1% of the width of the document.
+If you use [viewport length units](/en-US/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#viewport_units) in your CSS within the iframe document, `1vh` will be 1% of the height of the iframe, and `1vw` will be 1% of the width of the document.
 
 ```css
 iframe {
@@ -127,7 +138,7 @@ In an [SVG](/en-US/docs/Web/SVG) document, the viewport is the visible area of t
 
 In this example, the viewport has an {{glossary("aspect ratio")}} of 3:4 and is, by default, 400 by 300 units, with a unit generally being a CSS pixel.
 
-SVG also has an internal [coordinate system](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems) defined via the [viewBox](/en-US/docs/Web/SVG/Reference/Attribute/viewBox) attribute, which is not related to this viewport discussion.
+SVG also has an internal [coordinate system](/en-US/docs/Web/API/CSSOM_view_API/Coordinate_systems) defined via the [viewBox](/en-US/docs/Web/SVG/Reference/Attribute/viewBox) attribute, which is not related to this viewport discussion.
 
 If you include an SVG file in your HTML, the viewport of the SVG is the initial containing block, or the width and height of the SVG container. Using the {{CSSxRef("@media")}} query in your SVG's CSS is relative to that container, not the browser.
 
@@ -143,6 +154,8 @@ Generally, when you write the above media query, the styles are applied if the v
 
 The [Visual Viewport API](/en-US/docs/Web/API/Visual_Viewport_API) provides a mechanism for querying and modifying the properties of the visual viewport.
 
+The [Viewport API](/en-US/docs/Web/API/Viewport_API) provides a mechanism for querying and modifying the properties of the visual viewport.
+
 ## Mobile viewports
 
 Mobile devices come in all shapes and sizes, with screens of differing {{glossary("device pixel")}} ratios. The mobile browser's viewport is the area of the window in which web content can be seen, which is not necessarily the same size as the rendered page. Mobile browsers render pages in a virtual window or viewport, generally at 980px, which is usually wider than the screen, and then shrink the rendered result down so it can all be seen at once. Users can then pan and zoom to see different areas of the page. For example, if a mobile screen has a width of 320px, a website might be rendered with a virtual viewport of 980px, and then it will be shrunk down to fit into the 320px space, which, depending on the design, is illegible for many if not everyone. To tell a mobile browser to use the viewport width instead of the default 980px as the width of the screen, developers can include a viewport meta tag, like the following:
@@ -157,5 +170,7 @@ The `width` property controls the size of the viewport. It should preferably be 
 
 - [CSSOM view](/en-US/docs/Web/CSS/CSSOM_view) module
 - [Visual Viewport API](/en-US/docs/Web/API/Visual_Viewport_API)
-- {{HTMLElement("meta")}}, specifically `<meta name="viewport">`
-- [Using the viewport meta tag to control layout on mobile browsers](/en-US/docs/Web/HTML/Guides/Viewport_meta_element)
+- {{HTMLElement("meta")}}, specifically [`<meta name="viewport">`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/viewport)
+- [Visual Viewport API](/en-US/docs/Web/API/Visual_Viewport_API)
+- [CSS viewport](/en-US/docs/Web/CSS/CSS_viewport) module
+- [CSSOM view](/en-US/docs/Web/CSS/CSSOM_view) module

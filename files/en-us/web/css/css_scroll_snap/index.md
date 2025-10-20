@@ -5,9 +5,8 @@ page-type: css-module
 spec-urls:
   - https://drafts.csswg.org/css-scroll-snap/
   - https://drafts.csswg.org/css-scroll-snap-2/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS scroll snap** module provides properties that let you control the panning and scrolling behavior by defining snap positions. Content can be snapped into position as the user scrolls overflowing content within a {{Glossary("scroll container")}}, providing paging and scroll positioning.
 
@@ -25,7 +24,10 @@ const blockDirection = document.getElementById("block");
 const stop = document.getElementById("stop");
 const snap = document.getElementById("snap");
 const all = document.querySelector("article");
-const rules = document.styleSheets[0].cssRules;
+const rules = document.getElementById("css-output").sheet.cssRules;
+
+setSST();
+setSSA();
 
 inlineDirection.addEventListener("change", () => {
   setSSA();
@@ -35,10 +37,6 @@ blockDirection.addEventListener("change", () => {
 });
 stop.addEventListener("change", () => {
   setSST();
-});
-window.addEventListener("load", () => {
-  setSST();
-  setSSA();
 });
 snap.addEventListener("change", () => {
   all.classList.toggle("snapDisabled");

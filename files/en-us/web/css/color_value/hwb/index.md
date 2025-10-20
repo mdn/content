@@ -6,9 +6,8 @@ browser-compat: css.types.color.hwb
 spec-urls:
   - https://drafts.csswg.org/css-color-5/#relative-HWB
   - https://drafts.csswg.org/css-color/#the-hwb-notation
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`hwb()`** functional notation expresses a color in the {{glossary("RGB", "sRGB")}} {{glossary("color space")}} according to its hue, whiteness, and blackness. An optional alpha component represents the color's transparency.
 
@@ -53,7 +52,7 @@ hwb(194 0% 0% / .5)
 
 /* Relative values */
 hwb(from green h w b / 0.5)
-hwb(from #0000FF h calc(w + 30) b)
+hwb(from #123456 h calc(w + 30) b)
 hwb(from lch(40% 70 240deg) h w calc(b - 30))
 ```
 
@@ -276,7 +275,7 @@ The output is as follows:
 ## See also
 
 - {{CSSXref("&lt;color&gt;")}}: For a list of all color notations
-- [Color picker and conversion tool](/en-US/docs/Web/CSS/CSS_colors/Color_picker_tool)
+- [Color format converter tool](/en-US/docs/Web/CSS/CSS_colors/Color_format_converter)
 - [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)
 - [CSS colors](/en-US/docs/Web/CSS/CSS_colors) module
 - {{CSSXref("&lt;hue&gt;")}}: the data type representing a hue angle of a color

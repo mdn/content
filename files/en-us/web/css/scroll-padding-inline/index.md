@@ -3,9 +3,8 @@ title: scroll-padding-inline
 slug: Web/CSS/scroll-padding-inline
 page-type: css-shorthand-property
 browser-compat: css.properties.scroll-padding-inline
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The `scroll-padding-inline` [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) sets the scroll padding of an element in the inline dimension.
 
@@ -60,7 +59,7 @@ scroll-padding-inline: 2em;
   flex: 0 0 250px;
   width: 250px;
   background-color: rebeccapurple;
-  color: #fff;
+  color: white;
   font-size: 30px;
   display: flex;
   align-items: center;
@@ -69,7 +68,7 @@ scroll-padding-inline: 2em;
 }
 
 .scroller > div:nth-child(even) {
-  background-color: #fff;
+  background-color: white;
   color: rebeccapurple;
 }
 ```

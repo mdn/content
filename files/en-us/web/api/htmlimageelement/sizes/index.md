@@ -88,17 +88,17 @@ article {
   padding: 1.5em;
   font:
     16px "Open Sans",
-    Verdana,
-    Arial,
-    Helvetica,
+    "Verdana",
+    "Helvetica",
+    "Arial",
     sans-serif;
 }
 
 article img {
   display: block;
   max-width: 100%;
-  border: 1px solid #888;
-  box-shadow: 0 0.5em 0.3em #888;
+  border: 1px solid #888888;
+  box-shadow: 0 0.5em 0.3em #888888;
   margin-bottom: 1.25em;
 }
 ```

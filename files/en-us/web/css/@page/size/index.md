@@ -3,9 +3,8 @@ title: size
 slug: Web/CSS/@page/size
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.page.size
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`size`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) descriptor, used with the {{cssxref("@page")}} at-rule, defines the size and orientation of the box which is used to represent a page. Most of the time, this size corresponds to the target size of the printed page if applicable.
 

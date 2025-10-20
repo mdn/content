@@ -4,25 +4,24 @@ short-title: resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/resolvedOptions
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.DateTimeFormat.resolvedOptions
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`resolvedOptions()`** method of {{jsxref("Intl.DateTimeFormat")}} instances returns a new object with properties reflecting the options computed during initialization of this `DateTimeFormat` object.
 
 {{InteractiveExample("JavaScript Demo: Intl.DateTimeFormat.prototype.resolvedOptions()")}}
 
 ```js interactive-example
-const region1 = new Intl.DateTimeFormat("zh-CN", { timeZone: "UTC" });
-const options1 = region1.resolvedOptions();
+const region = new Intl.DateTimeFormat("zh-CN", { timeZone: "UTC" });
+const options = region.resolvedOptions();
 
-console.log(options1.locale);
+console.log(options.locale);
 // Expected output: "zh-CN"
 
-console.log(options1.calendar);
+console.log(options.calendar);
 // Expected output: "gregory"
 
-console.log(options1.numberingSystem);
+console.log(options.numberingSystem);
 // Expected output: "latn"
 ```
 
@@ -41,7 +40,7 @@ None.
 A new object with properties reflecting the options computed during the initialization of this `DateTimeFormat` object. The object has the following properties, in the order they are listed:
 
 - `locale`
-  - : The BCP 47 language tag for the locale actually used, determined by the [locale negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation) process. Only the `ca`, `hc`, and `nu` Unicode extension keys, if requested, may be included in the output.
+  - : The {{glossary("BCP 47 language tag")}} for the locale actually used, determined by the [locale negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation) process. Only the `ca`, `hc`, and `nu` Unicode extension keys, if requested, may be included in the output.
 - `calendar`
   - : The value provided for this property in the `options` argument, or using the Unicode extension key `"ca"`, with default filled in as needed. It is a supported [calendar type](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_calendar_types) for this locale. The default is locale dependent.
 - `numberingSystem`

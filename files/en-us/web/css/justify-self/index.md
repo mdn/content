@@ -3,9 +3,8 @@ title: justify-self
 slug: Web/CSS/justify-self
 page-type: css-property
 browser-compat: css.properties.justify-self
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The [CSS](/en-US/docs/Web/CSS) **`justify-self`** property sets the way a box is justified inside its alignment container along the appropriate axis.
 
@@ -179,7 +178,7 @@ The second, third, and fourth grid items are then given different values of `jus
 
 ```css
 html {
-  font-family: helvetica, arial, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   letter-spacing: 1px;
 }
 

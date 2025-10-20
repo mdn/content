@@ -3,11 +3,10 @@ title: <text-edge>
 slug: Web/CSS/text-edge
 page-type: css-type
 browser-compat: css.types.text-edge
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`<text-edge>`** {{glossary("enumerated")}} [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) defines keywords that specify font metrics representing specific regions on a font's block-start edge and block-end edge. Each keyword specifies a position of a font's over and/or under edge.
+The **`<text-edge>`** {{glossary("enumerated")}} [data type](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types) defines keywords that specify font metrics representing specific regions on a font's block-start edge and block-end edge. Each keyword specifies a position of a font's over and/or under edge.
 
 The `<text-edge>` values are used in the {{cssxref("text-box-edge")}} property to specify an amount of space to trim from the block-start and block-end edge of a text element's block container.
 

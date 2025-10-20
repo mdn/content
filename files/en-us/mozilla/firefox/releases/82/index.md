@@ -1,5 +1,6 @@
 ---
-title: Firefox 82 for developers
+title: Firefox 82 release notes for developers
+short-title: Firefox 82
 slug: Mozilla/Firefox/Releases/82
 page-type: firefox-release-notes
 sidebar: firefox
@@ -58,7 +59,3 @@ This article provides information about the changes in Firefox 82 that will affe
 
 - The [`tabs.captureTab()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/captureTab) and [`tabs.captureVisibleTab()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/captureVisibleTab) methods now capture an area of the relevant tab's content specified by the `rect` property of the provided [`options`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/extensionTypes/ImageDetails) object, or the visible area of the tab if this property is not provided ([Firefox bug 1636508](https://bugzil.la/1636508)). Previously the `rect` property was not available, and these methods always captured the visible area of the relevant tab.
 - Read-only access to `cookieStoreId` no longer requires the `"cookies"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) ([Firefox bug 1662329](https://bugzil.la/1662329)).
-
-## Older versions
-
-{{Firefox_for_developers}}

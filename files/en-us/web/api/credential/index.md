@@ -24,9 +24,10 @@ The **`Credential`** interface of the [Credential Management API](/en-US/docs/We
 - {{domxref("Credential.type")}} {{ReadOnlyInline}}
   - : Returns a string containing the credential's type. Valid values are `password`, `federated`, `public-key`, `identity` and `otp`. (For {{domxref("PasswordCredential")}}, {{domxref("FederatedCredential")}}, {{domxref("PublicKeyCredential")}}, {{domxref("IdentityCredential")}} and {{domxref("OTPCredential")}})
 
-## Instance methods
+## Static methods
 
-None.
+- {{domxref("Credential.isConditionalMediationAvailable_static", "Credential.isConditionalMediationAvailable()")}} {{experimental_inline}}
+  - : Returns a {{jsxref("Promise")}} which always resolves to `false`. Subclasses may override this value.
 
 ## Examples
 

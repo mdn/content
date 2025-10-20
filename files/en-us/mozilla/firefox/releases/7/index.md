@@ -1,5 +1,6 @@
 ---
-title: Firefox 7 for developers
+title: Firefox 7 release notes for developers
+short-title: Firefox 7
 slug: Mozilla/Firefox/Releases/7
 page-type: firefox-release-notes
 sidebar: firefox
@@ -187,7 +188,3 @@ The following interfaces were removed as part of the removal of the ActiveX embe
 
 - The structure of the library window (`places.xul`) [has been cleaned up](https://bugzil.la/588027). This [may break extensions](https://bugzil.la/677417) and themes.
 - The look of the print preview window [has been modernized](https://bugzil.la/663028) and theme authors are encouraged to style it using the CSS pseudo-elements `::-moz-page`, `::-moz-page-sequence` and `::-moz-scrolled-page-sequence`.
-
-## See also
-
-{{Firefox_for_developers}}

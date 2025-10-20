@@ -31,12 +31,18 @@ The `launch_handler` member defines values that control the launch of a web appl
 ## Examples
 
 ```json
-"launch_handler": {
+{
+  "launch_handler": {
     "client_mode": "focus-existing"
+  }
 }
+```
 
-"launch_handler": {
+```json
+{
+  "launch_handler": {
     "client_mode": ["focus-existing", "auto"]
+  }
 }
 ```
 

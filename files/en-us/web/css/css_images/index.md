@@ -5,9 +5,9 @@ page-type: css-module
 spec-urls:
   - https://drafts.csswg.org/css-images/
   - https://drafts.csswg.org/css-images-4/
+  - https://drafts.csswg.org/css-images-5/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS images** module defines the types of images that can be used (the {{CSSxRef("&lt;image&gt;")}} type, containing URLs, gradients and other types of images), how to resize them and how they, and other replaced content, interact with the different layout models.
 
@@ -17,9 +17,11 @@ The **CSS images** module defines the types of images that can be used (the {{CS
 
 - {{CSSxRef("image-orientation")}}
 - {{CSSxRef("image-rendering")}}
-- {{CSSxRef("image-resolution")}}
 - {{CSSxRef("object-fit")}}
 - {{CSSxRef("object-position")}}
+- {{cssxref("object-view-box")}}
+
+The CSS images module also defines the {{CSSxRef("image-resolution")}} property. Currently, no browsers support this feature.
 
 ### Functions
 
@@ -33,7 +35,7 @@ The **CSS images** module defines the types of images that can be used (the {{CS
 - {{CSSxRef("element", "element()")}}
 - {{CSSxRef("image/image-set", "image-set()")}}
 
-The specification also defines the {{CSSxRef("image/image", "image()")}} function, which is not yet supported by any browser.
+The CSS images module also defines the {{CSSxRef("image/image", "image()")}} function. Currently, no browsers support this feature.
 
 ### Data types
 
@@ -54,10 +56,14 @@ The specification also defines the {{CSSxRef("image/image", "image()")}} functio
 - [Understanding aspect ratios](/en-US/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)
   - : Learn about the `aspect-ratio` property, discuss aspect ratios for replaced and non-replaced elements, and examine some common aspect ratio use cases.
 
+- [Using the CSS `object-view-box` property](/en-US/docs/Web/CSS/CSS_images/Using_object-view-box)
+  - : Learn the CSS `object-view-box` property, including how to zoom in, zoom out, and pan across images.
+
 ## Related concepts
 
 - {{cssxref("url_value", "&lt;url&gt;")}}
 - {{cssxref("url_function", "url()")}}
+- [`<basic-shape-rect>`](/en-US/docs/Web/CSS/basic-shape#syntax_for_rectangles_basic-shape-rect)
 
 ## Specifications
 
@@ -68,4 +74,4 @@ The specification also defines the {{CSSxRef("image/image", "image()")}} functio
 - [CSS filter effects](/en-US/docs/Web/CSS/CSS_filter_effects) module
 - [CSS compositing and blending](/en-US/docs/Web/CSS/CSS_compositing_and_blending) module
 - [CSS colors](/en-US/docs/Web/CSS/CSS_colors) module
-- [CSS values and units](/en-US/docs/Web/CSS/CSS_Values_and_Units) module
+- [CSS values and units](/en-US/docs/Web/CSS/CSS_values_and_units) module

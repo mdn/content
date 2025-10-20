@@ -8,7 +8,7 @@ status:
 browser-compat: api.Summarizer.outputLanguage
 ---
 
-{{APIRef("Summarizer API")}}{{SeeCompatTable}}
+{{APIRef("Summarizer API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`outputLanguage`** read-only property of the {{domxref("Summarizer")}} interface returns the language the summary should be generated in.
 
@@ -16,7 +16,7 @@ The **`outputLanguage`** read-only property of the {{domxref("Summarizer")}} int
 
 A string specifying the language the summary should be generated in.
 
-The string should be a valid [BCP 47 language tag](https://en.wikipedia.org/wiki/IETF_language_tag#List_of_common_primary_language_subtags) (as specified in [RFC 5646](https://datatracker.ietf.org/doc/html/rfc5646)).
+The string should be a valid {{glossary("BCP 47 language tag")}}.
 
 ## Examples
 

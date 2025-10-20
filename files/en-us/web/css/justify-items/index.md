@@ -3,9 +3,8 @@ title: justify-items
 slug: Web/CSS/justify-items
 page-type: css-property
 browser-compat: css.properties.justify-items
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The [CSS](/en-US/docs/Web/CSS) **`justify-items`** property defines the default {{CSSxRef("justify-self")}} for all items of the box, giving them all a default way of justifying each box along the appropriate axis.
 
@@ -183,7 +182,7 @@ If you hover or tab onto the grid container however, it is given a `justify-item
 
 ```css
 html {
-  font-family: helvetica, arial, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   letter-spacing: 1px;
 }
 

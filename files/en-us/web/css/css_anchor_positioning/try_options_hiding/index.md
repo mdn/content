@@ -3,9 +3,8 @@ title: Fallback options and conditional hiding for overflow
 short-title: Handling overflow
 slug: Web/CSS/CSS_anchor_positioning/Try_options_hiding
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 When using [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning), an important consideration is ensuring that anchor-positioned elements always appear in a convenient place for the user to interact with them, if at all possible, regardless of where the anchor is positioned. For example, when you scroll the page, anchors and their associated positioned elements will move toward the edge of the viewport. When a positioned element starts to overflow the viewport, you will want to change its position to put it back on the screen again, for example on the opposite side of the anchor.
 
@@ -72,7 +71,7 @@ For illustrative purposes, we absolutely position the anchor so that it appears 
 }
 
 .anchor {
-  anchor-name: --myAnchor;
+  anchor-name: --my-anchor;
   position: absolute;
   top: 100px;
   left: 45%;
@@ -85,7 +84,7 @@ The anchor-positioned element is given fixed positioning and tethered to the anc
 .infobox {
   color: darkblue;
   background-color: azure;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   padding: 10px;
   border-radius: 10px;
   font-size: 1rem;
@@ -95,7 +94,7 @@ The anchor-positioned element is given fixed positioning and tethered to the anc
 ```css
 .infobox {
   position: fixed;
-  position-anchor: --myAnchor;
+  position-anchor: --my-anchor;
   position-area: top left;
   position-try-fallbacks: flip-block, flip-inline;
 }
@@ -149,7 +148,7 @@ body {
 }
 
 .anchor {
-  anchor-name: --myAnchor;
+  anchor-name: --my-anchor;
   position: absolute;
   top: 100px;
   left: 45%;
@@ -158,7 +157,7 @@ body {
 .infobox {
   color: darkblue;
   background-color: azure;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   padding: 10px;
   border-radius: 10px;
   font-size: 1rem;
@@ -168,7 +167,7 @@ body {
 ```css-nolint
 .infobox {
   position: fixed;
-  position-anchor: --myAnchor;
+  position-anchor: --my-anchor;
   position-area: top left;
   position-try-fallbacks:
     flip-block,
@@ -215,7 +214,7 @@ body {
 }
 
 .anchor {
-  anchor-name: --myAnchor;
+  anchor-name: --my-anchor;
   position: absolute;
   top: 100px;
   left: 45%;
@@ -224,7 +223,7 @@ body {
 .infobox {
   color: darkblue;
   background-color: azure;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   padding: 10px;
   border-radius: 10px;
   font-size: 1rem;
@@ -234,7 +233,7 @@ body {
 ```css-nolint
 .infobox {
   position: fixed;
-  position-anchor: --myAnchor;
+  position-anchor: --my-anchor;
   position-area: top left;
   position-try-fallbacks:
     top, top right, right,
@@ -303,7 +302,7 @@ body {
 }
 
 .anchor {
-  anchor-name: --myAnchor;
+  anchor-name: --my-anchor;
   position: absolute;
   top: 100px;
   left: 45%;
@@ -312,7 +311,7 @@ body {
 .infobox {
   color: darkblue;
   background-color: azure;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   padding: 10px;
   border-radius: 10px;
   font-size: 1rem;
@@ -323,18 +322,18 @@ body {
 @position-try --custom-left {
   position-area: left;
   width: 100px;
-  margin: 0 10px 0 0;
+  margin-right: 10px;
 }
 
 @position-try --custom-bottom {
   position-area: bottom;
-  margin: 10px 0 0 0;
+  margin-top: 10px;
 }
 
 @position-try --custom-right {
   position-area: right;
   width: 100px;
-  margin: 0 0 0 10px;
+  margin-left: 10px;
 }
 
 @position-try --custom-bottom-right {
@@ -345,16 +344,15 @@ body {
 
 Once our custom try fallback options are created, we can include them in the position list by referencing their names:
 
-```css-nolint
+```css
 .infobox {
   position: fixed;
-  position-anchor: --myAnchor;
+  position-anchor: --my-anchor;
   position-area: top;
   width: 200px;
-  margin: 0 0 10px 0;
+  margin-bottom: 10px;
   position-try-fallbacks:
-    --custom-left, --custom-bottom,
-    --custom-right, --custom-bottom-right;
+    --custom-left, --custom-bottom, --custom-right, --custom-bottom-right;
 }
 ```
 
@@ -432,7 +430,7 @@ We include a custom try fallback option — `--custom-bottom` — which position
 }
 
 .anchor {
-  anchor-name: --myAnchor;
+  anchor-name: --my-anchor;
   position: absolute;
   top: 100px;
   left: 45%;
@@ -441,7 +439,7 @@ We include a custom try fallback option — `--custom-bottom` — which position
 .infobox {
   color: darkblue;
   background-color: azure;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   padding: 10px;
   border-radius: 10px;
   font-size: 1rem;
@@ -468,7 +466,7 @@ We initially position the infobox at the top of the anchor, and then give it our
 ```css
 .infobox {
   position: fixed;
-  position-anchor: --myAnchor;
+  position-anchor: --my-anchor;
   bottom: anchor(top);
   margin-bottom: 10px;
   justify-self: anchor-center;
@@ -558,7 +556,7 @@ This example uses the same HTML and CSS as in the previous examples, with the in
 }
 
 .anchor {
-  anchor-name: --myAnchor;
+  anchor-name: --my-anchor;
 }
 
 body {
@@ -571,7 +569,7 @@ body {
 .infobox {
   color: darkblue;
   background-color: azure;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   padding: 10px;
   border-radius: 10px;
   font-size: 1rem;
@@ -581,7 +579,7 @@ body {
 ```css
 .infobox {
   position: fixed;
-  position-anchor: --myAnchor;
+  position-anchor: --my-anchor;
   margin-bottom: 5px;
   position-area: top span-all;
   position-visibility: no-overflow;

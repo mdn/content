@@ -3,9 +3,8 @@ title: Inheritance
 slug: Web/CSS/CSS_cascade/Inheritance
 page-type: guide
 spec-urls: https://drafts.csswg.org/css-cascade-5/#css-inheritance
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 In CSS, **inheritance** controls what happens when no value is specified for a property on an element.
 
@@ -110,5 +109,5 @@ We can see here another border around the word "emphasized text".
 - [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax) module
 - [At-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rule)
 - [Initial](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value), [computed](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value), [used](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#used_value), and [actual](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#actual_value) values
-- [Value definition syntax](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+- [Value definition syntax](/en-US/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
 - [CSS nesting module](/en-US/docs/Web/CSS/CSS_nesting)

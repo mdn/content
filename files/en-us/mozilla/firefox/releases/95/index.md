@@ -1,5 +1,6 @@
 ---
-title: Firefox 95 for developers
+title: Firefox 95 release notes for developers
+short-title: Firefox 95
 slug: Mozilla/Firefox/Releases/95
 page-type: firefox-release-notes
 sidebar: firefox
@@ -44,7 +45,3 @@ No notable changes
 - Added `globalPrivacyControl` in {{WebExtAPIRef("privacy.network")}} to provide visibility into whether the user has enabled Global Privacy Control inside the browser. ([Firefox bug 1670058](https://bugzil.la/1670058)).
 
 - Added the `"webRequestFilterResponse.serviceWorkerScript"` [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions). This permission provides access to {{WebExtAPIRef("webRequest.filterResponseData")}} for requests originated for service worker scripts. This permission can be provided as an optional permission. See {{WebExtAPIRef("webRequest.filterResponseData")}} for more information on using these permissions ([Firefox bug 1636629](https://bugzil.la/1636629)).
-
-## Older versions
-
-{{Firefox_for_developers}}

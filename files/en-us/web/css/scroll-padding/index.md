@@ -3,9 +3,8 @@ title: scroll-padding
 slug: Web/CSS/scroll-padding
 page-type: css-shorthand-property
 browser-compat: css.properties.scroll-padding
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`scroll-padding`** [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) sets scroll padding on all sides of an element at once, much like the {{cssxref("padding")}} property does for padding on an element.
 
@@ -57,7 +56,7 @@ scroll-padding: 2em;
 .scroller > div {
   flex: 0 0 250px;
   background-color: rebeccapurple;
-  color: #fff;
+  color: white;
   font-size: 30px;
   display: flex;
   align-items: center;
@@ -66,7 +65,7 @@ scroll-padding: 2em;
 }
 
 .scroller > div:nth-child(even) {
-  background-color: #fff;
+  background-color: white;
   color: rebeccapurple;
 }
 ```

@@ -2,9 +2,8 @@
 title: Variable fonts
 slug: Web/CSS/CSS_fonts/Variable_fonts_guide
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 **Variable fonts** are an evolution of the OpenType font specification that enables many different variations of a typeface to be incorporated into a single file, rather than having a separate font file for every width, weight, or style. They let you access all the variations contained in a given font file via CSS and a single {{cssxref("@font-face")}} reference. This article will give you all you need to know to get you started using variable fonts.
 
@@ -111,7 +110,7 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground.
 p {
   font:
     1.2em "Amstelvar VF",
-    Georgia,
+    "Georgia",
     serif;
   font-size: 4rem;
   margin: 1rem;
@@ -208,7 +207,7 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground.
 p {
   font:
     1.2em "Amstelvar VF",
-    Georgia,
+    "Georgia",
     serif;
   font-size: 4rem;
   margin: 1rem;
@@ -307,8 +306,8 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground.
 p {
   font:
     1.2em "Jost VF",
-    Helvetica,
-    Arial,
+    "Helvetica",
+    "Arial",
     sans-serif;
   font-size: 4rem;
   margin: 1rem;
@@ -509,7 +508,7 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground.
 p {
   font:
     1.2em "Amstelvar VF",
-    Georgia,
+    "Georgia",
     serif;
   font-size: 4rem;
   margin: 1rem;
@@ -605,7 +604,7 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground.
 p {
   font:
     1.2em "Amstelvar VF",
-    Georgia,
+    "Georgia",
     serif;
   font-size: 64px;
   margin: 1rem;
@@ -778,7 +777,7 @@ The following example pages show two different ways to structure your CSS. The f
 body {
   font:
     1.2em "Amstelvar VF",
-    Georgia,
+    "Georgia",
     serif;
   margin: 20px;
   padding: 0;

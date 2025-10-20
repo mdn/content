@@ -1,11 +1,10 @@
 ---
 title: Value definition syntax
-slug: Web/CSS/CSS_Values_and_Units/Value_definition_syntax
+slug: Web/CSS/CSS_values_and_units/Value_definition_syntax
 page-type: guide
 spec-urls: https://drafts.csswg.org/css-values/#value-defs
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 **CSS value definition syntax**, a formal grammar, is used to define the set of valid values for a CSS property or function. In addition to this syntax, the set of valid values can be further restricted by semantic constraints (for example, for a number to be strictly positive).
 

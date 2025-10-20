@@ -3,11 +3,10 @@ title: ascent-override
 slug: Web/CSS/@font-face/ascent-override
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.font-face.ascent-override
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`ascent-override`** CSS descriptor for the {{cssxref("@font-face")}} at-rule defines the ascent metric for the font. The ascent metric is the height above the baseline that CSS uses to lay out line boxes in an inline formatting context.
+The **`ascent-override`** [CSS](/en-US/docs/Web/CSS) descriptor for the {{cssxref("@font-face")}} at-rule defines the ascent metric for the font. The ascent metric is the height above the baseline that CSS uses to lay out line boxes in an inline formatting context.
 
 ## Syntax
 
@@ -39,13 +38,13 @@ The `ascent-override` property can help when overriding the metrics of a fallbac
 
 ```css
 @font-face {
-  font-family: web-font;
+  font-family: "web-font";
   src: url("https://example.com/font.woff");
 }
 
 @font-face {
-  font-family: local-font;
-  src: local(Local Font);
+  font-family: "local-font";
+  src: local("Local Font");
   ascent-override: 125%;
 }
 ```

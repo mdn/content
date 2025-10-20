@@ -4,9 +4,8 @@ short-title: and()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/and
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Atomics.and
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Atomics.and()`** static
 method computes a bitwise AND with a given value at a given position in the array, and

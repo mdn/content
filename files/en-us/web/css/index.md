@@ -3,9 +3,8 @@ title: "CSS: Cascading Style Sheets"
 short-title: CSS
 slug: Web/CSS
 page-type: landing-page
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 **Cascading Style Sheets** (**CSS**) is a [stylesheet](/en-US/docs/Web/API/StyleSheet) language used to describe the presentation of a document written in [HTML](/en-US/docs/Web/HTML) or [XML](/en-US/docs/Web/XML/Guides/XML_introduction) (including XML dialects such as [SVG](/en-US/docs/Web/SVG), [MathML](/en-US/docs/Web/MathML) or {{Glossary("XHTML")}}). CSS describes how elements should be rendered on screen, on paper, in speech, or on other media.
 
@@ -15,14 +14,16 @@ After CSS 2.1, the scope of the specification increased significantly and the pr
 
 ## Beginner's tutorials
 
+Our [learn web development core modules](/en-US/docs/Learn_web_development/Core) contain modern, up-to-date tutorials covering CSS fundamentals.
+
 - [Your first website: Styling the content](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Styling_the_content)
   - : This article provides a brief tour of what CSS is and how to use it, aimed at people who are completely new to web development.
 - [CSS styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics)
-  - : Our [Learn web development](/en-US/docs/Learn_web_development) section's CSS basics module teaches CSS fundamentals from the ground up.
+  - : This module provides all the CSS fundamentals you'll need to start learning the technology effectively, including syntax, features, and techniques.
 - [CSS text styling](/en-US/docs/Learn_web_development/Core/Text_styling)
-  - : Here we look at fundamentals including setting font, boldness, italics, line and letter spacing, drop shadows, and other text features. We round off the module by looking at applying custom fonts to your page, and styling lists and links.
+  - : Here we look at CSS text fundamentals including setting font, boldness, italics, line and letter spacing, and drop shadows. We round off the module by looking at applying custom fonts to your page, and styling lists and links.
 - [CSS layout](/en-US/docs/Learn_web_development/Core/CSS_layout)
-  - : Now it's time to look at how to correctly lay out your boxes in relation to one another, and the browser viewport. This module looks at floats, positioning, other modern layout tools, and building responsive designs that will adapt to different devices, screen sizes, and resolutions.
+  - : This module looks at floats, positioning, other modern layout tools, and building responsive designs that will adapt to different devices, screen sizes, and resolutions.
 
 ## Reference
 
@@ -32,7 +33,7 @@ The [CSS reference](/en-US/docs/Web/CSS/Reference) is an exhaustive reference fo
 - [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity), [inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance), and [the cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade)
 - [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors), including [pseudo-elements](/en-US/docs/Web/CSS/CSS_pseudo-elements), [nesting](/en-US/docs/Web/CSS/CSS_nesting), [scoping](/en-US/docs/Web/CSS/CSS_scoping) and [shadow parts](/en-US/docs/Web/CSS/CSS_shadow_parts)
 - [CSS at-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rule), including [media](/en-US/docs/Web/CSS/CSS_media_queries) and [container](/en-US/docs/Web/CSS/CSS_containment) queries
-- [CSS values and units](/en-US/docs/Web/CSS/CSS_Values_and_Units) module, including [numeric data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types), [textual data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/Textual_data_types) and [functional notations](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)
+- [CSS values and units](/en-US/docs/Web/CSS/CSS_values_and_units) module, including [numeric data types](/en-US/docs/Web/CSS/CSS_values_and_units/Numeric_data_types), [textual data types](/en-US/docs/Web/CSS/CSS_values_and_units/Textual_data_types) and [functional notations](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)
 - [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) and [margin collapse](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
 - The [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block)
 - [Stacking](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context) and [block-formatting](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context) contexts

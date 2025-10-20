@@ -3,9 +3,8 @@ title: :state()
 slug: Web/CSS/:state
 page-type: css-pseudo-class
 browser-compat: css.selectors.state
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`:state()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches [custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements) that have the specified custom state.
 
@@ -89,6 +88,7 @@ question-box::part(checkbox) {
 
 question-box::part(checkbox):state(checked) {
   color: green;
+  outline: dashed 1px green;
 }
 ```
 

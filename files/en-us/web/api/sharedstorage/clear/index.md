@@ -39,7 +39,7 @@ A {{jsxref("Promise")}} that fulfills with `undefined`.
 ## Examples
 
 ```js
-window.sharedStorage.clear().then(console.log("Shared storage cleared"));
+window.sharedStorage.clear().then(() => console.log("Shared storage cleared"));
 ```
 
 ## Specifications

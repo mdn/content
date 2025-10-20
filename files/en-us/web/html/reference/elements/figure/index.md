@@ -3,9 +3,8 @@ title: "<figure>: The Figure with Optional Caption element"
 slug: Web/HTML/Reference/Elements/figure
 page-type: html-element
 browser-compat: html.elements.figure
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<figure>`** [HTML](/en-US/docs/Web/HTML) element represents self-contained content, potentially with an optional caption, which is specified using the {{HTMLElement("figcaption")}} element. The figure, its caption, and its contents are referenced as a single unit.
 
@@ -22,7 +21,7 @@ The **`<figure>`** [HTML](/en-US/docs/Web/HTML) element represents self-containe
 
 ```css interactive-example
 figure {
-  border: thin #c0c0c0 solid;
+  border: thin silver solid;
   display: flex;
   flex-flow: column;
   padding: 5px;
@@ -36,8 +35,8 @@ img {
 }
 
 figcaption {
-  background-color: #222;
-  color: #fff;
+  background-color: #222222;
+  color: white;
   font: italic smaller sans-serif;
   padding: 3px;
   text-align: center;

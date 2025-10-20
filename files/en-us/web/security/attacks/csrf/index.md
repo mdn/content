@@ -173,9 +173,7 @@ Another problem with the `SameSite` attribute is that it protects you from reque
 
 See [Bypassing SameSite cookie restrictions](https://portswigger.net/web-security/csrf/bypassing-samesite-restrictions) for more details on the limitations of `SameSite`.
 
-### Defense summary checklist
-
-We can summarize the defenses above as follows:
+## Defense summary checklist
 
 - Understand where in your website you are implementing state-changing requests that use session cookies to check which user issued the request.
 - Implement at least one of the primary defenses described in this document:

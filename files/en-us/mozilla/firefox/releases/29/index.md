@@ -1,5 +1,6 @@
 ---
-title: Firefox 29 for developers
+title: Firefox 29 release notes for developers
+short-title: Firefox 29
 slug: Mozilla/Firefox/Releases/29
 page-type: firefox-release-notes
 sidebar: firefox
@@ -98,7 +99,3 @@ _No change._
 
 - Major Firefox theme changes affect most extensions that interact with the Firefox user interface.
 - `nsISecurityCheckedComponent` has been removed ([Firefox bug 794943](https://bugzil.la/794943)). Most consumers can remove `nsISecurityCheckedComponent` from their interface definition and they will continue to work.
-
-### Older versions
-
-{{Firefox_for_developers}}

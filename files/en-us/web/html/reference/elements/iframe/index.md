@@ -3,9 +3,8 @@ title: "<iframe>: The Inline Frame element"
 slug: Web/HTML/Reference/Elements/iframe
 page-type: html-element
 browser-compat: html.elements.iframe
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<iframe>`** [HTML](/en-US/docs/Web/HTML) element represents a nested {{Glossary("browsing context")}}, embedding another HTML page into the current one.
 
@@ -187,7 +186,22 @@ With the DOM {{domxref("HTMLIFrameElement")}} object, scripts can access the {{d
 
 From the inside of a frame, a script can get a reference to its parent window with {{domxref("window.parent")}}.
 
-Script access to a frame's content is subject to the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy). Scripts cannot access most properties in other `window` objects if the script was loaded from a different origin, including scripts inside a frame accessing the frame's parent. Cross-origin communication can be achieved using {{domxref("Window.postMessage()")}}.
+Script access to a frame's content is subject to the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy).
+Scripts cannot access most properties in other `window` objects if the script was loaded from a different origin, including scripts inside a frame accessing the frame's parent.
+Cross-origin communication can be achieved using {{domxref("Window.postMessage()")}}.
+
+### Top navigation in cross-origin frames
+
+Scripts running in a same-origin frame can access the {{domxref("Window.top")}} property and set {{domxref("Window.location","window.top.location")}} to redirect the top-level page to a new location.
+This behavior is referred to as "top navigation".
+
+A cross-origin frame is allowed to redirect the top-level page using `top` only if the frame has {{glossary("sticky activation")}}.
+If top navigation is blocked, browsers may either prompt for user permission to redirect or report the error in the developer console (or both).
+This restriction by browsers is called _framebusting intervention_.
+What this means is that a cross-origin frame can't immediately redirect the top-level page — the user must have previously interacted with the frame or granted permission to redirect.
+
+A sandboxed frame blocks all top navigation unless the `sandbox` attribute values are set to [`allow-top-navigation`](#allow-top-navigation) or [`allow-top-navigation-by-user-activation`](#allow-top-navigation-by-user-activation).
+Note that top-navigation permissions are inherited, so a nested frame can perform a top navigation only if its parent frames are also allowed to.
 
 ## Positioning and scaling
 

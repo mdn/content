@@ -3,9 +3,8 @@ title: Map
 slug: Web/JavaScript/Reference/Global_Objects/Map
 page-type: javascript-class
 browser-compat: javascript.builtins.Map
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Map`** object holds key-value pairs and remembers the original insertion order of the keys.
 Any value (both objects and {{Glossary("Primitive", "primitive values")}}) may be used as either a key or a value.
@@ -13,26 +12,26 @@ Any value (both objects and {{Glossary("Primitive", "primitive values")}}) may b
 {{InteractiveExample("JavaScript Demo: Map", "taller")}}
 
 ```js interactive-example
-const map1 = new Map();
+const map = new Map();
 
-map1.set("a", 1);
-map1.set("b", 2);
-map1.set("c", 3);
+map.set("a", 1);
+map.set("b", 2);
+map.set("c", 3);
 
-console.log(map1.get("a"));
+console.log(map.get("a"));
 // Expected output: 1
 
-map1.set("a", 97);
+map.set("a", 97);
 
-console.log(map1.get("a"));
+console.log(map.get("a"));
 // Expected output: 97
 
-console.log(map1.size);
+console.log(map.size);
 // Expected output: 3
 
-map1.delete("b");
+map.delete("b");
 
-console.log(map1.size);
+console.log(map.size);
 // Expected output: 2
 ```
 
@@ -44,7 +43,7 @@ The specification requires maps to be implemented "that, on average, provide acc
 
 ### Key equality
 
-Value equality is based on the [SameValueZero](/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#same-value-zero_equality) algorithm. (It used to use [SameValue](/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#same-value_equality_using_object.is), which treated `0` and `-0` as different. Check [browser compatibility](#browser_compatibility).) This means {{jsxref("NaN")}} is considered the same as `NaN` (even though `NaN !== NaN`) and all other values are considered equal according to the semantics of the `===` operator.
+Value equality is based on the [SameValueZero](/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#same-value-zero_equality) algorithm. (It used to use [SameValue](/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#same-value_equality_using_object.is), which treated `0` and `-0` as different. Check [browser compatibility](#browser_compatibility).) This means {{jsxref("NaN")}} is considered the same as `NaN` (even though `NaN !== NaN`) and all other values are considered equal according to the semantics of the `===` operator. Also, for object keys, equality is based on object identity. They are compared by reference, not by value. See [Using the Map object](#using_the_map_object) for examples.
 
 ### Objects vs. Maps
 
@@ -96,7 +95,7 @@ cases:
           an attacker to override the object's prototype, which can lead to
           <a href="https://github.com/eslint-community/eslint-plugin-security/blob/main/docs/the-dangers-of-square-bracket-notation.md">
             object injection attacks
-          </a>. Like the accidental keys issue, this can also be mitigated by using
+          </a> or <a href="/en-US/docs/Web/Security/Attacks/Prototype_pollution">prototype pollution attacks</a>. Like the accidental keys issue, this can also be mitigated by using
           a <code>null</code>-prototype object.
         </p>
       </td>
@@ -347,21 +346,23 @@ These properties are defined on `Map.prototype` and shared by all `Map` instance
 - {{jsxref("Map.prototype.clear()")}}
   - : Removes all key-value pairs from the `Map` object.
 - {{jsxref("Map.prototype.delete()")}}
-  - : Returns `true` if an element in the `Map` object existed and has been
-    removed, or `false` if the element does not exist. `map.has(key)`
-    will return `false` afterwards.
+  - : Removes the entry specified by the key from this `Map`.
 - {{jsxref("Map.prototype.entries()")}}
   - : Returns a new Iterator object that contains a two-member array of `[key, value]` for each element in the `Map` object in insertion order.
 - {{jsxref("Map.prototype.forEach()")}}
   - : Calls `callbackFn` once for each key-value pair present in the `Map` object, in insertion order. If a `thisArg` parameter is provided to `forEach`, it will be used as the `this` value for each callback.
 - {{jsxref("Map.prototype.get()")}}
-  - : Returns the value associated to the passed key, or `undefined` if there is none.
+  - : Returns the value corresponding to the key in this `Map`, or `undefined` if there is none.
+- {{jsxref("Map.prototype.getOrInsert()")}} {{experimental_inline}}
+  - : Returns the value corresponding to the specified key in this `Map`. If the key is not present, it inserts a new entry with the key and a given default value, and returns the inserted value.
+- {{jsxref("Map.prototype.getOrInsertComputed()")}} {{experimental_inline}}
+  - : Returns the value corresponding to the specified key in this `Map`. If the key is not present, it inserts a new entry with the key and a default value computed from a given callback, and returns the inserted value.
 - {{jsxref("Map.prototype.has()")}}
-  - : Returns a boolean indicating whether a value has been associated with the passed key in the `Map` object or not.
+  - : Returns a boolean indicating whether an entry with the specified key exists in this `Map` or not.
 - {{jsxref("Map.prototype.keys()")}}
   - : Returns a new Iterator object that contains the keys for each element in the `Map` object in insertion order.
 - {{jsxref("Map.prototype.set()")}}
-  - : Sets the value for the passed key in the `Map` object. Returns the `Map` object.
+  - : Adds a new entry with a specified key and value to this `Map`, or updates an existing entry if the key already exists.
 - {{jsxref("Map.prototype.values()")}}
   - : Returns a new Iterator object that contains the values for each element in the `Map` object in insertion order.
 - [`Map.prototype[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator)

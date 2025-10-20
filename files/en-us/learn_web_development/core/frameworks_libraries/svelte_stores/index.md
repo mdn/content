@@ -149,19 +149,19 @@ Let's now create our `Alert` component and see how we can read values from the s
      align-items: center;
      border-radius: 0.2rem;
      background-color: #565656;
-     color: #fff;
-     font-weight: 700;
+     color: white;
+     font-weight: bold;
      padding: 0.5rem 1.4rem;
      font-size: 1.5rem;
      z-index: 100;
      opacity: 95%;
    }
    div p {
-     color: #fff;
+     color: white;
    }
    div svg {
      height: 1.6rem;
-     fill: currentcolor;
+     fill: currentColor;
      width: 1.4rem;
      margin-right: 0.5rem;
    }

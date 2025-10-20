@@ -3,9 +3,8 @@ title: "<meta>: The metadata element"
 slug: Web/HTML/Reference/Elements/meta
 page-type: html-element
 browser-compat: html.elements.meta
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<meta>`** [HTML](/en-US/docs/Web/HTML) element represents {{Glossary("Metadata","metadata")}} that cannot be represented by other meta-related elements, such as {{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}}, or {{HTMLElement("title")}}.
 
@@ -155,4 +154,3 @@ The `content="3;url=https://www.mozilla.org"` attribute will redirect page to `h
 
 - [Standard metadata names](/en-US/docs/Web/HTML/Reference/Elements/meta/name)
 - [Learn: `<meta>`](/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#metadata_the_meta_element)
-- [The viewport meta tag](/en-US/docs/Web/HTML/Guides/Viewport_meta_element)

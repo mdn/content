@@ -40,18 +40,14 @@ _Also inherits properties from its parent interface, {{DOMxRef("Event")}}._
 This example adds to the {{domxref("RTCDataChannel")}} `dc` a handler for the `open` event that adjusts the user interface to indicate that a chat window is ready to be used after a connection has been established. It enables the message input box and send button as well as enabling the disconnect button and disabling the connect button. Finally, the message input box is focused so the user can immediately begin to type.
 
 ```js
-dc.addEventListener(
-  "open",
-  (ev) => {
-    messageInputBox.disabled = false;
-    sendMessageButton.disabled = false;
-    disconnectButton.disabled = false;
-    connectButton.disabled = true;
+dc.addEventListener("open", (ev) => {
+  messageInputBox.disabled = false;
+  sendMessageButton.disabled = false;
+  disconnectButton.disabled = false;
+  connectButton.disabled = true;
 
-    messageInputBox.focus();
-  },
-  false,
-);
+  messageInputBox.focus();
+});
 ```
 
 This can also be done by directly setting the value of the channel's `onopen` event handler property.

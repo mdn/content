@@ -3,15 +3,14 @@ title: CSS generated content
 slug: Web/CSS/CSS_generated_content
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-content/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS generated content** module defines how an element's content can be replaced and content can be added to a document with CSS.
 
 Generated content can be used for content replacement, in which case the content of a DOM node is replaced with a CSS `<image>`. The CSS generated content also enables generating language-specific quotes, creating custom list item numbers and bullets, and visually adding content by generating content on select pseudo-elements as anonymous replaced elements.
 
-### Generated content in action
+## Generated content in action
 
 ```html hidden live-sample___generated_content
 <div></div>
@@ -94,7 +93,7 @@ div::before {
   font-size: min(6vh, 2rem);
   justify-content: center;
   display: flex;
-  font-family: comic-sans, papyrus, sans-serif;
+  font-family: "Comic Sans", "Papyrus", sans-serif;
 }
 ```
 
@@ -111,8 +110,7 @@ Click "Play" in the example above to see or edit the code in the MDN Playground.
 - {{cssxref("content")}}
 - {{cssxref("quotes")}}
 
-> [!NOTE]
-> The CSS generated content module introduces four at-risk properties that have not been implemented: `string-set`, `bookmark-label`, `bookmark-level`, and `bookmark-state`.
+The CSS generated content module also introduces four at-risk properties: `string-set`, `bookmark-label`, `bookmark-level`, and `bookmark-state`. Currently, no browsers support these features.
 
 ### Functions
 
@@ -153,7 +151,7 @@ The CSS generated content module introduces six yet-to-be implemented CSS functi
   - {{cssxref("::scroll-marker")}} pseudo-element
   - {{cssxref(":target-current")}} pseudo-class
 
-- [CSS values and units](/en-US/docs/Web/CSS/CSS_Values_and_Units) module
+- [CSS values and units](/en-US/docs/Web/CSS/CSS_values_and_units) module
   - {{cssxref("attr", "attr()")}} function
   - {{cssxref("string")}} data type
   - {{cssxref("image")}} data type

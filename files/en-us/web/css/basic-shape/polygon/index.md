@@ -3,11 +3,10 @@ title: polygon()
 slug: Web/CSS/basic-shape/polygon
 page-type: css-function
 browser-compat: css.types.basic-shape.polygon
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`polygon()`** [CSS](/en-US/docs/Web/CSS) function is one of the {{cssxref("&lt;basic-shape&gt;")}} [data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types). It's used to draw a [polygon](https://en.wikipedia.org/wiki/Polygon) by providing one or more pairs of coordinates, each of which represents a vertex of the shape.
+The **`polygon()`** [CSS](/en-US/docs/Web/CSS) function is one of the {{cssxref("&lt;basic-shape&gt;")}} [data types](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types). It's used to draw a [polygon](https://en.wikipedia.org/wiki/Polygon) by providing one or more pairs of coordinates, each of which represents a vertex of the shape.
 
 {{InteractiveExample("CSS Demo: polygon()")}}
 
@@ -35,11 +34,11 @@ clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 
 ```css interactive-example
 #default-example {
-  background: #fe9;
+  background: #ffee99;
 }
 
 #example-element {
-  background: linear-gradient(to bottom right, #f52, #05f);
+  background: linear-gradient(to bottom right, #ff5522, #0055ff);
   width: 100%;
   height: 100%;
 }

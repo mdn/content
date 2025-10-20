@@ -3,15 +3,12 @@ title: cookies.set()
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/set
 page-type: webextension-api-function
 browser-compat: webextensions.api.cookies.set
+sidebar: addonsidebar
 ---
 
-{{AddonSidebar}}
-
-The **`set()`** method of the {{WebExtAPIRef("cookies")}} API sets a cookie containing the specified cookie data. This method is equivalent to issuing an HTTP `Set-Cookie` header during a request to a given URL.
+Sets a cookie. This method is equivalent to issuing an HTTP `Set-Cookie` header during a request to a URL.
 
 To use this method, an extension must have the `"cookies"` permission and relevant host permissions. See [`cookie` permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#permissions) for more details.
-
-This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntax
 
@@ -28,7 +25,7 @@ let setting = browser.cookies.set(
     - `domain` {{optional_inline}}
       - : A `string` representing the domain of the cookie. If omitted, the cookie becomes a host-only cookie.
     - `expirationDate` {{optional_inline}}
-      - : A `number` that represents the expiration date of the cookie as the number of seconds since the UNIX epoch. If omitted, the cookie becomes a session cookie.
+      - : A `number` that represents the expiration date of the cookie as the seconds after the UNIX epoch. Can include milliseconds in the fractional part. If omitted, the cookie becomes a session cookie.
     - `firstPartyDomain` {{optional_inline}}
       - : A `string` representing the first-party domain with which the cookie is associated. This property must be supplied if the browser has first-party isolation enabled. See [First-party isolation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#first-party_isolation).
     - `httpOnly` {{optional_inline}}
@@ -55,14 +52,17 @@ let setting = browser.cookies.set(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled with a {{WebExtAPIRef('cookies.Cookie')}} object containing details about the cookie that's been set.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) fulfilled with a {{WebExtAPIRef('cookies.Cookie')}} object containing details about the set cookie.
 
 If there is more than one cookie with the same name for a URL, the cookie with the longest path is returned. For cookies with the same path length, the cookie with the earliest creation time is returned.
 
 > [!NOTE]
 > Before Firefox 133, when there was more than one cookie with the same name, Firefox returned the cookie with the earliest creation time.
 
-If the call fails, the promise is rejected with an error message.
+If the requested cookie is invalid or the call otherwise fails, the promise is rejected with an error message.
+
+> [!NOTE]
+> Before Firefox 145, invalid cookies were created.
 
 ## Examples
 

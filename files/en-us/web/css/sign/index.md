@@ -3,11 +3,10 @@ title: sign()
 slug: Web/CSS/sign
 page-type: css-function
 browser-compat: css.types.sign
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`sign()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) contains one calculation, and returns `-1` if the numeric value of the argument is negative, `+1` if the numeric value of the argument is positive, `0⁺` if the numeric value of the argument is 0⁺, and `0⁻` if the numeric value of the argument is 0⁻.
+The **`sign()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) contains one calculation, and returns `-1` if the numeric value of the argument is negative, `+1` if the numeric value of the argument is positive, `0⁺` if the numeric value of the argument is 0⁺, and `0⁻` if the numeric value of the argument is 0⁻.
 
 > [!NOTE]
 > While {{CSSxRef("abs")}} returns the absolute value of the argument, `sign()` returns the sign of the argument.
@@ -74,3 +73,4 @@ div {
 ## See also
 
 - {{CSSxRef("abs")}}
+- [Using CSS typed arithmetic](/en-US/docs/Web/CSS/CSS_values_and_units/Using_CSS_typed_arithmetic)

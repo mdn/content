@@ -5,9 +5,10 @@ page-type: css-property
 status:
   - deprecated
 browser-compat: css.properties.font-stretch
+sidebar: cssref
 ---
 
-{{CSSRef}}{{deprecated_header}}
+{{deprecated_header}}
 
 > [!NOTE]
 > The `font-stretch` property [has now been renamed to `font-width`](https://drafts.csswg.org/css-fonts/#font-stretch-desc) in the specifications. The name `font-stretch` has been kept as an alias for the `font-width` property.
@@ -56,15 +57,15 @@ font-stretch: 150%;
 ```css interactive-example
 @font-face {
   src: url("/shared-assets/fonts/LeagueMono-VF.ttf") format("truetype");
-  font-family: League;
+  font-family: "League";
   font-style: normal;
-  font-weight: 400;
+  font-weight: normal;
   font-stretch: 50% 200%; /* Required by Chrome - allow 50% to 200% */
 }
 
 section {
   font-size: 1.2em;
-  font-family: League, sans-serif;
+  font-family: "League", sans-serif;
 }
 ```
 
@@ -158,7 +159,7 @@ td {
 
 #inconsolata td {
   font:
-    90px Inconsolata,
+    90px "Inconsolata",
     sans-serif;
 }
 #anek-malayalam td {

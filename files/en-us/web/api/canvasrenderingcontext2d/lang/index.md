@@ -8,7 +8,7 @@ status:
 browser-compat: api.CanvasRenderingContext2D.lang
 ---
 
-{{APIRef}}{{SeeCompatTable}}
+{{APIRef("Canvas API")}}{{SeeCompatTable}}
 
 The **`CanvasRenderingContext2D.lang`** property of the Canvas 2D API gets or sets the language of the canvas drawing context.
 
@@ -25,8 +25,6 @@ The default value is `inherit`.
 ## Description
 
 Sometimes, you need to set a language for a canvas rendering context so that it knows how to render language-dependent features: for example, some fonts have certain characters rendered differently in different languages. An on-screen canvas context (`CanvasRenderingContext2D`) is always associated with a particular `<canvas>` element, so whenever you render content using it, it can derive the language from the value of the `<canvas>` element's `lang` attribute.
-
-Sometimes, it is necessary to set a language for a canvas rendering context so that it knows how to render language-dependent features such as some fonts. An on-screen canvas context (`CanvasRenderingContext2D`) is always associated with a particular `<canvas>` element, so whenever you render content using it, it can derive the language from the value of the `<canvas>` element's `lang` attribute.
 
 However, an off-screen canvas context ({{domxref("OffscreenCanvasRenderingContext2D")}}) renders its content before it is associated with a `<canvas>` element, so it can't derive a rendering language from the `lang` attribute of the `<canvas>` element. The `lang` property addresses this issue, allowing you to set a language directly on a canvas rendering context, whether you are using an on-screen or off-screen canvas.
 
@@ -91,7 +89,7 @@ const selectElem = document.querySelector("select");
 const latoMediumFontFace = new FontFace(
   // Lato-Medium is a font with language specific ligatures
   "Lato-Medium",
-  "url(https://mdn.github.io/shared-assets/fonts/Lato-Medium.ttf)",
+  'url("https://mdn.github.io/shared-assets/fonts/Lato-Medium.ttf")',
 );
 
 latoMediumFontFace.load().then((font) => {
@@ -168,7 +166,7 @@ const selectElem = document.querySelector("select");
 const latoMediumFontFace = new FontFace(
   // Lato-Medium is a font with language specific ligatures.
   "Lato-Medium",
-  "url(https://mdn.github.io/shared-assets/fonts/Lato-Medium.ttf)",
+  'url("https://mdn.github.io/shared-assets/fonts/Lato-Medium.ttf")',
 );
 
 latoMediumFontFace.load().then((font) => {

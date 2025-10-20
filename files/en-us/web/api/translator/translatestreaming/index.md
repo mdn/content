@@ -8,7 +8,7 @@ status:
 browser-compat: api.Translator.translateStreaming
 ---
 
-{{APIRef("Translator and Language Detector APIs")}}{{SeeCompatTable}}
+{{APIRef("Translator and Language Detector APIs")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`translateStreaming()`** method of the {{domxref("Translator")}} interface generates a translation as a {{domxref("ReadableStream")}}.
 
@@ -36,7 +36,7 @@ A {{domxref("ReadableStream")}} containing the generated translation.
 
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the current {{domxref("Document")}} is not active.
-- `QuotaExceededError` {{domxref("DOMException")}}
+- {{domxref("QuotaExceededError")}}
   - : Thrown if the translation operation exceeds the available {{domxref("Translator.inputQuota", "inputQuota")}}.
 
 ## Examples

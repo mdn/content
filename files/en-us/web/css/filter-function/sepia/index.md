@@ -3,11 +3,10 @@ title: sepia()
 slug: Web/CSS/filter-function/sepia
 page-type: css-function
 browser-compat: css.types.filter-function.sepia
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`sepia()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) converts the input image to sepia, giving it a warmer, more yellow/brown appearance. Its result is a {{cssxref("&lt;filter-function&gt;")}}.
+The **`sepia()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) converts the input image to sepia, giving it a warmer, more yellow/brown appearance. Its result is a {{cssxref("&lt;filter-function&gt;")}}.
 
 {{InteractiveExample("CSS Demo: sepia()")}}
 

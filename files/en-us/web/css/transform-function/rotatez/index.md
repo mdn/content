@@ -3,11 +3,10 @@ title: rotateZ()
 slug: Web/CSS/transform-function/rotateZ
 page-type: css-function
 browser-compat: css.types.transform-function.rotateZ
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`rotateZ()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) defines a transformation that rotates an element around the
+The **`rotateZ()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) defines a transformation that rotates an element around the
 z-axis without deforming it. Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
 {{InteractiveExample("CSS Demo: rotateZ()")}}

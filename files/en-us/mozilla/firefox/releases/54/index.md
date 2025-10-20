@@ -1,5 +1,6 @@
 ---
-title: Firefox 54 for developers
+title: Firefox 54 release notes for developers
+short-title: Firefox 54
 slug: Mozilla/Firefox/Releases/54
 page-type: firefox-release-notes
 sidebar: firefox
@@ -86,7 +87,3 @@ Firefox 54 was released on June 13, 2017. This article lists key changes that ar
 ### HTTP
 
 - HTTP/1 Pipelining support has been removed in Firefox 54. Maintaining it as we make the move into a new world full of HTTP/2 and other substantial, standardized improvements to networking performance is not worthwhile given pipelining's compatibility and performance issues. The `network.http.pipelining` preference (as well as the other preferences that start with "network.http.pipelining") is now ignored. See [Firefox bug 1340655](https://bugzil.la/1340655) for further information.
-
-## Older versions
-
-{{Firefox_for_developers}}

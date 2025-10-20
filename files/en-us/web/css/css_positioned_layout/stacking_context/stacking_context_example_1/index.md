@@ -2,9 +2,8 @@
 title: Stacking context example 1
 slug: Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_1
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 ## Description
 
@@ -61,7 +60,7 @@ In terms of stacking contexts, DIV #1 and DIV #3 are assimilated into the root e
 
 ```css
 .bold {
-  font-family: Arial;
+  font-family: "Arial";
   font-size: 12px;
   font-weight: bold;
 }

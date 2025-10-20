@@ -1,5 +1,6 @@
 ---
-title: Firefox 33 for developers
+title: Firefox 33 release notes for developers
+short-title: Firefox 33
 slug: Mozilla/Firefox/Releases/33
 page-type: firefox-release-notes
 sidebar: firefox
@@ -113,7 +114,3 @@ _No change._
 [GitHub commits made between Firefox 32 and Firefox 33](https://github.com/mozilla/addon-sdk/compare/firefox32...firefox33). This will not include any uplifts made after this release entered Aurora.
 
 [Bugs fixed between Firefox 32 and Firefox 33](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&chfieldto=2014-07-21&chfield=resolution&query_format=advanced&chfieldfrom=2014-06-09&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&product=Add-on%20SDK&list_id=10493962). This will not include any uplifts made after this release entered Aurora.
-
-### Older versions
-
-{{Firefox_for_developers}}

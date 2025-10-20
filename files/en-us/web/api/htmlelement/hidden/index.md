@@ -53,10 +53,10 @@ The content is styled using the CSS below.
 .panel {
   font:
     16px "Open Sans",
-    Helvetica,
-    Arial,
+    "Helvetica",
+    "Arial",
     sans-serif;
-  border: 1px solid #22d;
+  border: 1px solid #2222dd;
   padding: 12px;
   width: 500px;
   text-align: center;
@@ -65,8 +65,8 @@ The content is styled using the CSS below.
 .button {
   font:
     22px "Open Sans",
-    Helvetica,
-    Arial,
+    "Helvetica",
+    "Arial",
     sans-serif;
   padding: 5px 36px;
 }
@@ -82,14 +82,10 @@ h1 {
 The JavaScript adds an event listener to the "OK" button, which hides the "welcome" panel and shows the "awesome" panel:
 
 ```js
-document.getElementById("okButton").addEventListener(
-  "click",
-  () => {
-    document.getElementById("welcome").hidden = true;
-    document.getElementById("awesome").hidden = false;
-  },
-  false,
-);
+document.getElementById("okButton").addEventListener("click", () => {
+  document.getElementById("welcome").hidden = true;
+  document.getElementById("awesome").hidden = false;
+});
 ```
 
 ### Result

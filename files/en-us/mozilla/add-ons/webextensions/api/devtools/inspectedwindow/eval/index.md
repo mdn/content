@@ -3,9 +3,8 @@ title: devtools.inspectedWindow.eval()
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/eval
 page-type: webextension-api-function
 browser-compat: webextensions.api.devtools.inspectedWindow.eval
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Executes JavaScript in the window that the devtools are attached to.
 
@@ -71,10 +70,6 @@ If an error occurred, element 0 will be `undefined`, and element 1 will contain 
 - other errors (for example, an expression that evaluates to an object that can't be represented as JSON). In this case, element 1 will contain:
   - a boolean property `isError`, set to `true`
   - a string property `code` containing an error code.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -158,6 +153,10 @@ inspectButton.addEventListener("click", () => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.devtools`](https://developer.chrome.com/docs/extensions/how-to/devtools/extend-devtools) API.

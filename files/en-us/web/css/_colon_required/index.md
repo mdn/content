@@ -3,9 +3,8 @@ title: :required
 slug: Web/CSS/:required
 page-type: css-pseudo-class
 browser-compat: css.selectors.required
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`:required`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element that has the [`required`](/en-US/docs/Web/HTML/Reference/Elements/input#required) attribute set on it.
 
@@ -103,7 +102,7 @@ label {
 }
 
 input:required {
-  border-color: #800000;
+  border-color: maroon;
   border-width: 3px;
 }
 

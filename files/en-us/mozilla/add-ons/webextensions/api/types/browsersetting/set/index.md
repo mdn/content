@@ -2,9 +2,9 @@
 title: set()
 slug: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/set
 page-type: webextension-api-function
+browser-compat: webextensions.api.types.BrowserSetting.set
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Use `BrowserSetting.set()` to change the browser setting to a new value.
 
@@ -43,10 +43,6 @@ let setting = setting.set(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a `boolean`: `true` if the setting was modified, `false` otherwise (for example, because the extension did not control the setting).
 
-## Browser compatibility
-
-See {{WebExtAPIRef("types.BrowserSetting")}}.
-
 ## Example
 
 Modify the `hyperlinkAuditingEnabled` setting (this requires the "privacy" permission):
@@ -69,6 +65,10 @@ browser.browserAction.onClicked.addListener(() => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.types`](https://developer.chrome.com/docs/extensions/reference/api/types) API.

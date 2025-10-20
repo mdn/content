@@ -3,9 +3,8 @@ title: stroke-linejoin
 slug: Web/CSS/stroke-linejoin
 page-type: css-property
 browser-compat: css.properties.stroke-linejoin
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`stroke-linejoin`** [CSS](/en-US/docs/Web/CSS) property defines the shape to be used at the corners of an [SVG](/en-US/docs/Web/SVG) element's stroked paths. If present, it overrides the element's {{SVGAttr("stroke-linejoin")}} attribute.
 

@@ -3,9 +3,8 @@ title: transition-duration
 slug: Web/CSS/transition-duration
 page-type: css-property
 browser-compat: css.properties.transition-duration
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`transition-duration`** [CSS](/en-US/docs/Web/CSS) property sets the length of time a transition animation should take to complete. By default, the value is `0s`, meaning that no animation will occur.
 
@@ -40,7 +39,7 @@ transition-property: margin-right, color;
 ```css interactive-example
 #example-element {
   background-color: #e4f0f5;
-  color: #000;
+  color: black;
   padding: 1rem;
   border-radius: 0.5rem;
   font: 1em monospace;
@@ -49,8 +48,8 @@ transition-property: margin-right, color;
 }
 
 #default-example:hover > #example-element {
-  background-color: #909;
-  color: #fff;
+  background-color: #990099;
+  color: white;
   margin-right: 40%;
 }
 ```

@@ -5,11 +5,12 @@ page-type: css-pseudo-class
 status:
   - non-standard
 browser-compat: css.selectors.-moz-submit-invalid
+sidebar: cssref
 ---
 
-{{CSSRef}}{{Non-standard_Header}}
+{{Non-standard_Header}}
 
-The **`:-moz-submit-invalid`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that represents any submit {{HTMLElement("button")}} on forms whose contents aren't valid based on their [validation constraints](/en-US/docs/Web/HTML/Guides/Constraint_validation).
+The **`:-moz-submit-invalid`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that represents any submit {{HTMLElement("button")}} on forms whose contents aren't valid based on their [validation constraints](/en-US/docs/Web/HTML/Guides/Constraint_validation).
 
 By default, no style is applied. You can use this pseudo-class to customize the appearance of the submit button when there are invalid form fields.
 

@@ -3,9 +3,8 @@ title: AsyncIterator
 slug: Web/JavaScript/Reference/Global_Objects/AsyncIterator
 page-type: javascript-class
 browser-compat: javascript.builtins.AsyncIterator
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 An **`AsyncIterator`** object is an object that conforms to the [async iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols) by providing a `next()` method that returns a promise fulfilling to an iterator result object. The `AsyncIterator.prototype` object is a hidden global object that all built-in async iterators inherit from. It provides an [`[Symbol.asyncIterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncIterator/Symbol.asyncIterator) method that returns the async iterator object itself, making the async iterator also [async iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols).
 
@@ -28,6 +27,8 @@ Each of these async iterators have a distinct prototype object, which defines th
 
 ## Instance methods
 
+- [`AsyncIterator.prototype[Symbol.asyncDispose]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncIterator/Symbol.asyncDispose)
+  - : Calls and awaits the `return()` method of `this`, if it exists. This implements the _async disposable protocol_ and allows it to be disposed when used with {{jsxref("Statements/await_using", "await using")}}.
 - [`AsyncIterator.prototype[Symbol.asyncIterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncIterator/Symbol.asyncIterator)
   - : Returns the async iterator object itself. This allows async iterator objects to also be async iterable.
 

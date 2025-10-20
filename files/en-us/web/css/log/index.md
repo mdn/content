@@ -3,11 +3,10 @@ title: log()
 slug: Web/CSS/log
 page-type: css-function
 browser-compat: css.types.log
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`log()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) is an exponential function that returns the logarithm of a number.
+The **`log()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) is an exponential function that returns the logarithm of a number.
 
 [Logarithm](https://en.wikipedia.org/wiki/Logarithm) is the inverse of exponentiation. It is the number that a fixed base has to be raised to in order to yield the number passed as the first parameter.
 

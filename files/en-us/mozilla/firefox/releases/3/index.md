@@ -1,5 +1,6 @@
 ---
-title: Firefox 3 for developers
+title: Firefox 3 release notes for developers
+short-title: Firefox 3
 slug: Mozilla/Firefox/Releases/3
 page-type: firefox-release-notes
 sidebar: firefox
@@ -29,11 +30,11 @@ If you're a developer trying to get a handle on all the new features in Firefox 
   - : The new HTML 5 `activeElement` and `hasFocus` attributes are supported.
 - Offline resources in Firefox
   - : Firefox now lets web applications request that resources be cached to allow the application to be used while offline.
-- [CSS improvements in Firefox 3](/en-US/docs/CSS_improvements_in_Firefox_3)
+- [CSS improvements in Firefox 3](https://web.archive.org/web/20210224062716/https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/releases/3/CSS_improvements)
   - : Firefox 3 features a number of improvements in its CSS support.
 - [DOM improvements in Firefox 3](/en-US/docs/Mozilla/Firefox/Releases/3/DOM_improvements)
   - : Firefox 3 offers a number of new features in Firefox 3's DOM implementation, including support for several Internet Explorer extensions to the DOM.
-- [JavaScript 1.8 support](/en-US/docs/New_in_JavaScript_1.8)
+- [JavaScript 1.8 support](https://web.archive.org/web/20210224081539/https://developer.mozilla.org/en-US/docs/Archive/Web/JavaScript/New_in_JavaScript/1.8)
   - : Firefox 3 offers JavaScript 1.8.
 - [EXSLT support](/en-US/docs/Web/XML/EXSLT)
   - : Firefox 3 provides support for a substantial subset of the [EXSLT](/en-US/docs/Web/XML/EXSLT) extensions to [XSLT](/en-US/docs/Web/XML/XSLT).
@@ -48,52 +49,52 @@ If you're a developer trying to get a handle on all the new features in Firefox 
 
 - [Updating extensions for Firefox 3](/en-US/docs/Mozilla/Firefox/Releases/3/Updating_extensions)
   - : Provides a guide to the things you'll need to do to update your extension to work with Firefox 3.
-- [XUL improvements in Firefox 3](/en-US/docs/XUL_improvements_in_Firefox_3)
+- [XUL improvements in Firefox 3](/en-US/docs/Mozilla/Firefox/Releases/3/XUL_improvements_in_Firefox_3)
   - : Firefox 3 offers a number of new XUL elements, including new sliding scales, the date and time pickers, and spin buttons.
-- [Templates in Firefox 3](/en-US/docs/Templates_in_Firefox_3)
+- [Templates in Firefox 3](/en-US/docs/Mozilla/Firefox/Releases/3/Templates)
   - : Templates have been significantly improved in Firefox 3. The key improvement allows the use of custom query processors to allow data sources other than RDF to be used.
-- [Securing updates](/en-US/docs/Extension_Versioning,_Update_and_Compatibility#securing_updates)
+- [Securing updates](https://web.archive.org/web/20201031093738/https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Extension_Versioning,_Update_and_Compatibility#securing_updates)
   - : In order to provide a more secure add-on upgrade path for users, add-ons are now required to provide a secure method for obtaining updates before they can be installed. Add-ons hosted at [AMO](https://addons.mozilla.org/) automatically provide this. Any add-ons installed that do not provide a secure update method when the user upgrades to Firefox 3 will be automatically disabled. Firefox will however continue to check for updates to the extension over the insecure path and attempt to install any update offered (installation will fail if the update also fails to provide a secure update method).
-- [Places migration guide](/en-US/docs/Places_Developer_Guide)
+- [Places migration guide](https://web.archive.org/web/20200621121524/https://developer.mozilla.org/en-US/docs/Mozilla/Tech/Places/Places_Developer_Guide)
   - : An article about how to update an existing extension to use the Places API.
-- [Download Manager improvements in Firefox 3](/en-US/docs/Download_Manager_improvements_in_Firefox_3)
+- [Download Manager improvements in Firefox 3](https://web.archive.org/web/20191009203342/https://developer.mozilla.org/en-US/docs/Archive/Mozilla/Download_Manager_improvements_in_Firefox_3)
   - : The Firefox 3 Download Manager features new and improved APIs, including support for multiple progress listeners.
 - Using nsILoginManager
   - : The Password Manager has been replaced by the new Login Manager.
-- [Embedding XBL bindings](/en-US/docs/XBL/XBL_1.0_Reference/Elements#binding)
+- [Embedding XBL bindings](https://web.archive.org/web/20190710111835/https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Elements#binding)
   - : You can now use the `data:` URL scheme from chrome code to embed XBL bindings directly instead of having them in separate XML files.
-- [Localizing extension descriptions](/en-US/docs/Localizing_extension_descriptions)
+- [Localizing extension descriptions](https://web.archive.org/web/20210126131244/https://developer.mozilla.org/en-US/docs/Mozilla/Localization/Localizing_extension_descriptions)
   - : Firefox 3 offers a new method for localizing add-on metadata. This lets the localized details be available as soon as the add-on has been downloaded, as well as when the add-on is disabled.
-- [Localization and Plurals](/en-US/docs/Localization_and_Plurals)
+- [Localization and Plurals](https://web.archive.org/web/20210619213040/https://developer.mozilla.org/en-US/docs/Mozilla/Localization/Localization_and_Plurals)
   - : Firefox 3 adds the new PluralForm module, which provides tools to aid in correctly pluralizing words in multiple localizations.
-- [Theme changes in Firefox 3](/en-US/docs/Theme_changes_in_Firefox_3)
+- [Theme changes in Firefox 3](https://web.archive.org/web/20210518052656/https://developer.mozilla.org/en-US/docs/Archive/Themes/Theme_changes_in_Firefox_3)
   - : Notes and information of use to people who want to create themes for Firefox 3.
 
 #### New components and functionality
 
-- [FUEL Library](/en-US/docs/Toolkit_API/FUEL)
+- [FUEL Library](https://web.archive.org/web/20210516092241/https://developer.mozilla.org/en-US/docs/Mozilla/Tech/Toolkit_API/FUEL)
   - : FUEL is about making it easier for extension developers to be productive, by minimizing some of the XPCOM formality and adding some "modern" JavaScript ideas.
-- [Places](/en-US/docs/Places)
-  - : The history and bookmarks APIs have been completely replaced by the new [Places](/en-US/docs/Places) API.
-- [Idle service](/en-US/docs/nsIIdleService)
+- [Places](https://web.archive.org/web/20210620103113/https://developer.mozilla.org/en-US/docs/Mozilla/Tech/Places)
+  - : The history and bookmarks APIs have been completely replaced by the new Places API.
+- [Idle service](https://web.archive.org/web/20210511041145/https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIIdleService)
   - : Firefox 3 offers the new `nsIIdleService` interface, which lets extensions determine how long it's been since the user last pressed a key or moved their mouse.
-- [ZIP writer](/en-US/docs/nsIZipWriter)
+- [ZIP writer](https://web.archive.org/web/20210619003034/https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIZipWriter)
   - : The new `nsIZipWriter` interface lets extensions create ZIP archives.
 - [Full page zoom](/en-US/docs/Mozilla/Firefox/Releases/3/Full_page_zoom)
   - : Firefox 3 improves the user experience by offering full page zoom in addition to text-only zoom.
-- [Interfacing with the XPCOM cycle collector](/en-US/docs/Interfacing_with_the_XPCOM_cycle_collector)
+- [Interfacing with the XPCOM cycle collector](https://web.archive.org/web/20210620195127/https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Interfacing_with_the_XPCOM_cycle_collector)
   - : XPCOM code can now take advantage of the cycle collector, which helps ensure that unused memory gets released instead of leaking.
-- [The Thread Manager](/en-US/docs/The_Thread_Manager)
+- [The Thread Manager](https://web.archive.org/web/20210419232321/https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/The_Thread_Manager)
   - : Firefox 3 provides the new `nsIThreadManager` interface, along with new interfaces for threads and thread events, which provides a convenient way to create and manage threads in your code.
-- [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules)
+- [JavaScript modules](https://web.archive.org/web/20210531090101/https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules)
   - : Firefox 3 now offers a new shared code module mechanism that lets you easily create modules in JavaScript that can be loaded by extensions and applications for use, much like shared libraries.
-- [The `nsIJSON` interface](/en-US/docs/nsIJSON)
+- [The `nsIJSON` interface](https://web.archive.org/web/20210514110540/https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIJSON)
   - : Firefox 3 offers the new `nsIJSON` interface, which offers high-performance encoding and decoding of [JSON](/en-US/docs/Glossary/JSON) strings.
 - The `nsIParentalControlsService` interface
   - : Firefox 3 now supports the Microsoft Windows Vista parental controls feature, and allows code to interact with it.
-- [Using content preferences](/en-US/docs/Using_content_preferences)
+- [Using content preferences](https://web.archive.org/web/20210314182749/https://developer.mozilla.org/en-US/docs/Archive/Misc_top_level/Using_content_preferences)
   - : Firefox 3 includes a new service for getting and setting arbitrary site-specific preferences that extensions as well as core code can use to keep track of their users' preferences for individual sites.
-- [Plug-in Monitoring](/en-US/docs/Monitoring_plugins)
+- [Plug-in Monitoring](https://web.archive.org/web/20160617124200/https://developer.mozilla.org/en-US/Add-ons/Plugins/Monitoring_plugins)
   - : A new component of the plugin system is now available to measure how long it takes plugins (e.g., Macromedia Flash) to execute their calls.
 
 #### Fixed bugs
@@ -146,7 +147,3 @@ If you're a developer trying to get a handle on all the new features in Firefox 
 - **Reliability.** Firefox 3 now stores bookmarks, history, cookies, and preferences in a transactionally secure database format. This means your data is protected against loss even if your system crashes.
 - **Speed.** Firefox 3 has gotten a performance boost by completely replacing the part of the software that handles drawing to your screen, as well as to how page layout work is handled.
 - **Memory use reduced.** Firefox 3 is more memory efficient than ever, with over 300 memory "leak" bugs fixed and new features to help automatically locate and dispose of leaked memory blocks.
-
-## See also
-
-{{Firefox_for_developers}}

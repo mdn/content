@@ -55,7 +55,7 @@ The server computer could be located on your premises and connected to the Inter
 This sort of remotely accessible computing/networking hardware is referred to as _Infrastructure as a Service (IaaS)_. Many IaaS vendors provide options to preinstall a particular operating system, onto which you must install the other components of your production environment. Other vendors allow you to select more fully-featured environments, perhaps including a complete Node setup.
 
 > [!NOTE]
-> Pre-built environments can make setting up your website easier because they reduce the configuration, but the available options may limit you to an unfamiliar server (or other components) and may be based on an older version of the OS. Often it is better to install components yourself so that you get the ones that you want, and when you need to upgrade parts of the system, you have some idea of where to start!
+> Pre-built environments can make setting up your website easier because they reduce the required configuration, but the available options may limit you to an unfamiliar server (or other components) and may be based on an older version of the OS. Often it is better to install components yourself so that you get the ones that you want, and when you need to upgrade parts of the system, you have some idea of where to start!
 
 Other hosting providers support Express as part of a _Platform as a Service_ (_PaaS_) offering. When using this sort of hosting you don't need to worry about most of your production environment (servers, load balancers, etc.) as the host platform takes care of those for you. That makes deployment quite straightforward because you just need to concentrate on your web application and not any other server infrastructure.
 
@@ -107,16 +107,16 @@ In the following subsections, we outline the most important changes that you sho
 
 ### Database configuration
 
-So far in this tutorial, we've used a single development database, for which the address and credentials are hard-coded into **app.js**.
+So far in this tutorial, we've used a single development database, for which the address and credentials were [hard-coded into **bin/www**](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose#connect_to_mongodb).
 Since the development database doesn't contain any information that we mind being exposed or corrupted, there is no particular risk in leaking these details.
-However if you're working with real data, in particular personal user information, then protecting your database credentials is very important.
+However if you're working with real data, in particular personal user information, then it is very important to protect your database credentials.
 
 For this reason we want to use a different database for production than we use for development, and also keep the production database credentials separate from the source code so that they can be properly protected.
 
 If your hosting provider supports setting environment variables through a web interface (as many do), one way to do this is to have the server get the database URL from an environment variable.
 Below we modify the LocalLibrary website to get the database URI from an OS environment variable, if it has been defined, and otherwise use the development database URL.
 
-Open **app.js** and find the line that sets the MongoDB connection variable.
+Open **bin.www** and find the line that sets the MongoDB connection variable.
 It will look something like this:
 
 ```js
@@ -127,19 +127,9 @@ const mongoDB =
 Replace the line with the following code that uses `process.env.MONGODB_URI` to get the connection string from an environment variable named `MONGODB_URI` if has been set (use your own database URL instead of the placeholder below).
 
 ```js
-// Set up mongoose connection
-const mongoose = require("mongoose");
-
-mongoose.set("strictQuery", false);
-
 const dev_db_url =
   "mongodb+srv://your_user_name:your_password@cluster0.cojoign.mongodb.net/local_library?retryWrites=true&w=majority";
 const mongoDB = process.env.MONGODB_URI || dev_db_url;
-
-main().catch((err) => console.log(err));
-async function main() {
-  await mongoose.connect(mongoDB);
-}
 ```
 
 > [!NOTE]
@@ -166,7 +156,7 @@ The debug variable is declared with the name 'author', and the prefix "author" w
 const debug = require("debug")("author");
 
 // Display Author update form on GET.
-exports.author_update_get = asyncHandler(async (req, res, next) => {
+exports.author_update_get = async (req, res, next) => {
   const author = await Author.findById(req.params.id).exec();
   if (author === null) {
     // No results.
@@ -177,7 +167,7 @@ exports.author_update_get = asyncHandler(async (req, res, next) => {
   }
 
   res.render("author_form", { title: "Update Author", author });
-});
+};
 ```
 
 You can then enable a particular set of logs by specifying them as a comma-separated list in the `DEBUG` environment variable.
@@ -256,7 +246,7 @@ const app = express();
 app.use(
   helmet.contentSecurityPolicy({
     directives: {
-      "script-src": ["'self'", "code.jquery.com", "cdn.jsdelivr.net"],
+      "script-src": ["'self'", "cdn.jsdelivr.net"],
     },
   }),
 );
@@ -265,7 +255,7 @@ app.use(
 ```
 
 We normally might have just inserted `app.use(helmet());` to add the _subset_ of the security-related headers that make sense for most sites.
-However in the [LocalLibrary base template](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template) we include some bootstrap and jQuery scripts.
+However in the [LocalLibrary base template](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template) we include some bootstrap scripts.
 These violate the helmet's _default_ [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP), which does not allow loading of cross-site scripts.
 To allow these scripts to be loaded we modify the helmet configuration so that it sets CSP directives to allow script loading from the indicated domains.
 For your own server you can add/disable specific headers as needed by following the [instructions for using helmet here](https://www.npmjs.com/package/helmet).
@@ -324,9 +314,11 @@ v16.17.1
 Open **package.json**, and add this information as an **engines > node** as shown (using the version number for your system).
 
 ```json
+{
   "engines": {
-    "node": ">=16.17.1"
-  },
+    "node": ">=22.0.0"
+  }
+}
 ```
 
 The hosting service might not support the specific indicated version of node, but this change should ensure that it attempts to use a version with the same major version number, or a more recent version.

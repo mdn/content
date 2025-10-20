@@ -1,5 +1,6 @@
 ---
-title: Firefox 112 for developers
+title: Firefox 112 release notes for developers
+short-title: Firefox 112
 slug: Mozilla/Firefox/Releases/112
 page-type: firefox-release-notes
 sidebar: firefox
@@ -55,7 +56,3 @@ No notable changes.
 
 - The properties `usedDelegatedCredentials`, `usedEch`, `usedOcsp`, and `usedPrivateDns` have been added to {{WebExtAPIRef("webRequest.SecurityInfo")}}. These properties provide information about the security of the connection used for a web request ([Firefox bug 1804460](https://bugzil.la/1804460)).
 - The property `"type"` is supported in the [`"background"` manifest key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background). Setting this key to `"module"` loads background scripts specified with `"scripts"` as ES modules, avoiding the need to switch to background pages to use ES modules ([Firefox bug 1811443](https://bugzil.la/1811443)).
-
-## Older versions
-
-{{Firefox_for_developers}}

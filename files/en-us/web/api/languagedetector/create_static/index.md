@@ -8,7 +8,7 @@ status:
 browser-compat: api.LanguageDetector.create_static
 ---
 
-{{APIRef("Translator and Language Detector APIs")}}{{securecontext_header}}{{SeeCompatTable}}
+{{APIRef("Translator and Language Detector APIs")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`create()`** static method of the {{domxref("LanguageDetector")}} interface creates a new `LanguageDetector` instance to detect languages.
 
@@ -26,7 +26,7 @@ LanguageDetector.create(options)
 - `options`
   - : An object specifying configuration options for the `LanguageDetector`. Possible values include:
     - `expectedInputLanguages`
-      - : An array of strings specifying the expected languages of the input text, which helps improve the accuracy of the language detection. These should be valid [BCP 47 language tags](https://en.wikipedia.org/wiki/IETF_language_tag#List_of_common_primary_language_subtags) (as specified in [RFC 5646](https://datatracker.ietf.org/doc/html/rfc5646)). Defaults to `["en"]`.
+      - : An array of strings specifying the expected languages of the input text, which helps improve the accuracy of the language detection. These should be valid {{glossary("BCP 47 language tag", "BCP 47 language tags")}}. Defaults to `["en"]`.
     - `monitor` {{optional_inline}}
       - : A callback function with a {{domxref("CreateMonitor")}} argument that enables monitoring download progress of the AI model.
     - `signal` {{optional_inline}}

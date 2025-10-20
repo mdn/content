@@ -3,9 +3,8 @@ title: tabs.query()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/query
 page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.query
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Gets all tabs that have the specified properties, or all tabs if no properties are specified.
 

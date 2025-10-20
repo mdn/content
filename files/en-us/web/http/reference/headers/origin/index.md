@@ -34,7 +34,7 @@ Origin: <scheme>://<hostname>:<port>
 ## Directives
 
 - `null`
-  - : The origin is "privacy sensitive", or is an _opaque origin_ as defined by the HTML specification (specific cases are listed in the [description](#description) section).
+  - : The origin is "privacy sensitive", or is an [opaque origin](/en-US/docs/Glossary/Origin#opaque_origin) (specific cases are listed in the [description](#description) section).
 - `<scheme>`
   - : The protocol that is used.
     Usually, it is the HTTP protocol or its secured version, HTTPS.
@@ -62,7 +62,8 @@ The `Origin` header value may be `null` in a number of cases, including (non-exh
 - Cross-origin images and media data, including that in {{HTMLElement("img")}}, {{HTMLElement("video")}} and {{HTMLElement("audio")}} elements.
 - Documents created programmatically using {{domxref("DOMImplementation.createDocument", "createDocument()")}}, generated from a `data:` URL, or that do not have a creator browsing context.
 - Redirects across origins.
-- {{HTMLElement("iframe", "iframes")}} with a sandbox attribute that doesn't contain the value `allow-same-origin`.
+- Documents served with the {{HTTPHeader("Content-Security-Policy")}} `sandbox` directive whose value doesn't include `allow-same-origin`.
+- {{HTMLElement("iframe", "iframes")}} with a sandbox attribute whose value doesn't include `allow-same-origin`.
 - Responses that are network errors.
 - {{HTTPHeader("Referrer-Policy")}} set to `no-referrer` for non-`cors` request modes (e.g., basic form posts).
 

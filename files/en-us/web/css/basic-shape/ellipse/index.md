@@ -3,11 +3,10 @@ title: ellipse()
 slug: Web/CSS/basic-shape/ellipse
 page-type: css-function
 browser-compat: css.types.basic-shape.ellipse
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`ellipse()`** [CSS](/en-US/docs/Web/CSS) function is one of the {{cssxref("&lt;basic-shape&gt;")}} [data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types).
+The **`ellipse()`** [CSS](/en-US/docs/Web/CSS) function is one of the {{cssxref("&lt;basic-shape&gt;")}} [data types](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types).
 
 {{InteractiveExample("CSS Demo: ellipse()")}}
 
@@ -35,11 +34,11 @@ clip-path: ellipse(closest-side farthest-side);
 
 ```css interactive-example
 #default-example {
-  background: #fe9;
+  background: #ffee99;
 }
 
 #example-element {
-  background: linear-gradient(to bottom right, #f52, #05f);
+  background: linear-gradient(to bottom right, #ff5522, #0055ff);
   width: 100%;
   height: 100%;
 }

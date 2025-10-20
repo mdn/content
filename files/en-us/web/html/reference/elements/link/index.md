@@ -3,9 +3,8 @@ title: "<link>: The External Resource Link element"
 slug: Web/HTML/Reference/Elements/link
 page-type: html-element
 browser-compat: html.elements.link
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<link>`** [HTML](/en-US/docs/Web/HTML) element specifies relationships between the current document and an external resource.
 This element is most commonly used to link to {{Glossary("CSS", "stylesheets")}}, but is also used to establish site icons (both "favicon" style icons and icons for the home screen and apps on mobile devices) among other things.
@@ -176,8 +175,11 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     </table>
 
 - `blocking`
-  - : This attribute explicitly indicates that certain operations should be blocked on the fetching of an external resource. It must only be used when the `rel` attribute contains `expect` or `stylesheet` keywords. The operations that are to be blocked must be a space-separated list of blocking tokens listed below.
+  - : This attribute explicitly indicates that certain operations should be blocked until specific conditions are met. It must only be used when the `rel` attribute contains the `expect` or `stylesheet` keywords. With [`rel="expect"`](/en-US/docs/Web/HTML/Reference/Attributes/rel#expect), it indicates that operations should be blocked until a specific DOM node has been parsed. With [`rel="stylesheet"`](/en-US/docs/Web/HTML/Reference/Attributes/rel#stylesheet), it indicates that operations should be blocked until an external stylesheet and its critical subresources have been fetched and applied to the document. The operations that are to be blocked must be a space-separated list of blocking tokens listed below. Currently there is only one token:
     - `render`: The rendering of content on the screen is blocked.
+
+    > [!NOTE]
+    > Only `link` elements in the document's `<head>` can possibly block rendering. By default, a `link` element with `rel="stylesheet"` in the `<head>` blocks rendering when the browser discovers it during parsing. If such a `link` element is added dynamically via script, you must additionally set `blocking = "render"` for it to block rendering.
 
 - [`crossorigin`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin)
   - : This [enumerated](/en-US/docs/Glossary/Enumerated) attribute indicates whether {{Glossary("CORS")}} must be used when fetching the resource.
@@ -219,7 +221,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 - `hreflang`
   - : This attribute indicates the language of the linked resource.
     It is purely advisory.
-    Allowed values are specified by {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.
+    Values should be valid {{glossary("BCP 47 language tag", "BCP 47 language tags")}}.
     Use this attribute only if the [`href`](/en-US/docs/Web/HTML/Reference/Elements/a#href) attribute is present.
 - `imagesizes`
   - : For `rel="preload"` and `as="image"` only, the `imagesizes` attribute has similar syntax and semantics as the [`sizes`](/en-US/docs/Web/HTML/Reference/Elements/img#sizes) attribute that indicates to preload the appropriate resource used by an `img` element with corresponding values for its `srcset` and `sizes` attributes.
@@ -388,7 +390,7 @@ You can find a number of `<link rel="preload">` examples in [Preloading content 
 ### Blocking rendering till a resource is fetched
 
 You can include `render` token inside a `blocking` attribute;
-the rendering of the page will be blocked till the resource is fetched. For example:
+the rendering of the page will be blocked till the resource and its critical subresources are fetched and applied to the document. For example:
 
 ```html
 <link blocking="render" rel="stylesheet" href="example.css" crossorigin />

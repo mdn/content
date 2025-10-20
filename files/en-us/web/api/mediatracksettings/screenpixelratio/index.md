@@ -3,10 +3,12 @@ title: "MediaTrackSettings: screenPixelRatio property"
 short-title: screenPixelRatio
 slug: Web/API/MediaTrackSettings/screenPixelRatio
 page-type: web-api-instance-property
-spec-urls: https://w3c.github.io/mediacapture-screen-share/#dom-mediatracksettings-screenpixelratio
+status:
+  - experimental
+browser-compat: api.MediaStreamTrack.getSettings.return_object_property_screenPixelRatio
 ---
 
-{{APIRef("Media Capture and Streams")}}
+{{APIRef("Media Capture and Streams")}}{{SeeCompatTable}}
 
 The {{domxref("MediaTrackSettings")}} dictionary's **`screenPixelRatio`** property is a number representing the ratio of the physical size of a pixel on the captured display surface (displayed at its physical resolution) to the logical size of a CSS pixel on the capturing screen (displayed at its logical resolution). It cannot be used as a constraint or capability.
 
@@ -39,7 +41,7 @@ For example:
 
 ### Basic `screenPixelRatio` usage
 
-In this example, the application defines a constant `RESOLUTION_LIMIT`, which represents the scaling factor beyond which which the sending application should send video at the logical resolution rather than the physical resolution.
+In this example, the application defines a constant `RESOLUTION_LIMIT`, which represents the scaling factor beyond which the sending application should send video at the logical resolution rather than the physical resolution.
 
 When `screenPixelRatio` exceeds this limit, the application uses the `screenPixelRatio` value to calculate the logical resolution from the physical resolution, and then constrains the captured {{domxref("MediaStreamTrack")}} to the logical resolution.
 
@@ -70,6 +72,10 @@ async function startCapture() {
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

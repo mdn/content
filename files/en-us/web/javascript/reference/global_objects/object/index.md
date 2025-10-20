@@ -3,9 +3,8 @@ title: Object
 slug: Web/JavaScript/Reference/Global_Objects/Object
 page-type: javascript-class
 browser-compat: javascript.builtins.Object
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Object`** type represents one of [JavaScript's data types](/en-US/docs/Web/JavaScript/Guide/Data_structures). It is used to store various keyed collections and more complex entities. Objects can be created using the {{jsxref("Object/Object", "Object()")}} constructor or the [object initializer / literal syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer).
 
@@ -13,7 +12,7 @@ The **`Object`** type represents one of [JavaScript's data types](/en-US/docs/We
 
 Nearly all [objects](/en-US/docs/Web/JavaScript/Guide/Data_structures#objects) in JavaScript are instances of `Object`; a typical object inherits properties (including methods) from `Object.prototype`, although these properties may be shadowed (a.k.a. overridden). The only objects that don't inherit from `Object.prototype` are those with [`null` prototype](#null-prototype_objects), or descended from other `null` prototype objects.
 
-Changes to the `Object.prototype` object are seen by **all** objects through prototype chaining, unless the properties and methods subject to those changes are overridden further along the prototype chain. This provides a very powerful although potentially dangerous mechanism to override or extend object behavior. To make it more secure, `Object.prototype` is the only object in the core JavaScript language that has [immutable prototype](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf#description) — the prototype of `Object.prototype` is always `null` and not changeable.
+Changes to the `Object.prototype` object are seen by **all** objects through prototype chaining, unless the properties and methods subject to those changes are overridden further along the prototype chain. This provides a very powerful although [potentially dangerous mechanism](/en-US/docs/Web/Security/Attacks/Prototype_pollution) to override or extend object behavior. To make it more secure, `Object.prototype` is the only object in the core JavaScript language that has [immutable prototype](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf#description) — the prototype of `Object.prototype` is always `null` and not changeable.
 
 ### Object prototype properties
 
@@ -127,7 +126,7 @@ getAge("toString"); // undefined
 
 In such case, the addition of any method should be done cautiously, as they can be confused with the other key-value pairs stored as data.
 
-Making your object not inherit from `Object.prototype` also prevents prototype pollution attacks. If a malicious script adds a property to `Object.prototype`, it will be accessible on every object in your program, except objects that have null prototype.
+Making your object not inherit from `Object.prototype` also prevents [prototype pollution attacks](/en-US/docs/Web/Security/Attacks/Prototype_pollution). If a malicious script adds a property to `Object.prototype`, it will be accessible on every object in your program, except objects that have null prototype.
 
 ```js
 const user = {};
@@ -326,3 +325,4 @@ You can read more about prototypes in [Inheritance and the prototype chain](/en-
 ## See also
 
 - [Object initializer](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)
+- [Prototype pollution attack](/en-US/docs/Web/Security/Attacks/Prototype_pollution)

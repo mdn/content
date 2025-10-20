@@ -7,7 +7,7 @@ status:
 browser-compat: api.Translator
 ---
 
-{{APIRef("Translator and Language Detector APIs")}}{{SeeCompatTable}}
+{{APIRef("Translator and Language Detector APIs")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`Translator`** interface of the {{domxref("Translator and Language Detector APIs", "Translator and Language Detector APIs", "", "nocode")}} contains all the associated translation functionality, including checking AI model availability, creating a new `Translator` instance, using it to create a translation, and more.
 

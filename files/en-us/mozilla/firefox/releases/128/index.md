@@ -1,5 +1,6 @@
 ---
-title: Firefox 128 for developers
+title: Firefox 128 release notes for developers
+short-title: Firefox 128
 slug: Mozilla/Firefox/Releases/128
 page-type: firefox-release-notes
 sidebar: firefox
@@ -111,7 +112,3 @@ These features are newly shipped in Firefox 128 but are disabled by default. To 
 - **Privacy Preserving Attribution API (PPA):** `dom.origin-trials.private-attribution.state`.
 
   [PPA API](https://support.mozilla.org/en-US/kb/privacy-preserving-attribution) provides an alternative to user tracking for ad attribution using the new `navigator.privateAttribution` object with `saveImpression()` and `measureConversion()` methods. Read more about PPA [in the original explainer](https://github.com/mozilla/explainers/tree/main/archive/ppa-experiment) and the [proposed spec](https://w3c.github.io/ppa/). This experiment can be enabled for websites via [origin trial](https://wiki.mozilla.org/Origin_Trials) or in the browser by setting the preference to `1`. ([Firefox bug 1900929](https://bugzil.la/1900929)).
-
-## Older versions
-
-{{Firefox_for_developers}}

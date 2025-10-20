@@ -1,5 +1,6 @@
 ---
-title: Firefox 91 for developers
+title: Firefox 91 release notes for developers
+short-title: Firefox 91
 slug: Mozilla/Firefox/Releases/91
 page-type: firefox-release-notes
 sidebar: firefox
@@ -43,7 +44,7 @@ No changes
 - The [Visual Viewport API](/en-US/docs/Web/API/Visual_Viewport_API) is now enabled by default on Firefox desktop releases (it has been enabled on Firefox for Android since version 68).
   The API provides access to information describing the position of the {{Glossary("visual viewport")}} relative to the document, as well as to the window's content area.
   It also provides events that allow changes to the viewport to be monitored. ([Firefox bug 1551302](https://bugzil.la/1551302)).
-- The [Gamepad API](/en-US/docs/Web/API/Gamepad_API) is now protected by {{httpheader('Feature-Policy/gamepad','Feature-Policy: gamepad')}}.
+- The [Gamepad API](/en-US/docs/Web/API/Gamepad_API) is now protected by `Feature-Policy: gamepad`.
   If disallowed by the [Permission Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy), calls to {{domxref('Navigator.getGamepads()')}} will throw a `SecurityError` {{domxref('DOMException')}},
   and the {{domxref("Window.gamepadconnected_event", "gamepadconnected")}} and {{domxref("Window.gamepaddisconnected_event", "gamepaddisconnected")}} events will not fire.
   The default `allowlist` is `*`; this default will be updated to `self` in a future release, in order to match the specification. ([Firefox bug 1704005](https://bugzil.la/1704005)).
@@ -54,7 +55,3 @@ No changes
 
 - Fixed a bug, which caused the commands `WebDriver:AcceptAlert` and `WebDriver:DismissAlert` to hang for user prompts as opened in a popup window ([Firefox bug 1721982](https://bugzil.la/1721982)).
 - Fixed an inappropriate handling of the `webSocketUrl` capability, which would return `true` if `webSocketUrl` was not supported ([Firefox bug 1713775](https://bugzil.la/1713775)).
-
-## Older versions
-
-{{Firefox_for_developers}}

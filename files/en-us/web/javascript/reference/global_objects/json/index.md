@@ -3,9 +3,8 @@ title: JSON
 slug: Web/JavaScript/Reference/Global_Objects/JSON
 page-type: javascript-namespace
 browser-compat: javascript.builtins.JSON
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`JSON`** namespace object contains static methods for parsing values from and converting values to [JavaScript Object Notation](https://json.org/) ({{Glossary("JSON")}}).
 

@@ -6,9 +6,10 @@ page-type: javascript-constructor
 status:
   - non-standard
 browser-compat: javascript.builtins.InternalError.InternalError
+sidebar: jsref
 ---
 
-{{JSRef}}{{Non-standard_Header}}
+{{Non-standard_Header}}
 
 The **`InternalError()`** constructor creates {{jsxref("InternalError")}} objects.
 

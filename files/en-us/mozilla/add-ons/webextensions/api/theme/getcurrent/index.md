@@ -3,9 +3,8 @@ title: theme.getCurrent()
 slug: Mozilla/Add-ons/WebExtensions/API/theme/getCurrent
 page-type: webextension-api-function
 browser-compat: webextensions.api.theme.getCurrent
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Gets the current theme as a {{WebExtAPIRef("theme.Theme", "Theme")}} object.
 

@@ -2,9 +2,8 @@
 title: Shorthand properties
 slug: Web/CSS/CSS_cascade/Shorthand_properties
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 **_Shorthand properties_** are CSS properties that let you set the values of multiple other CSS properties simultaneously. Using a shorthand property, you can write more concise (and often more readable) style sheets, saving time and energy.
 
@@ -21,7 +20,7 @@ A value which is not specified is set to its initial value. That means that it *
 ```css
 p {
   background-color: red;
-  background: url(images/bg.gif) no-repeat left top;
+  background: url("images/bg.gif") no-repeat left top;
 }
 ```
 
@@ -67,8 +66,8 @@ Similarly, shorthands handling properties related to corners of a box, like {{cs
 Consider a background with the following properties
 
 ```css
-background-color: #000;
-background-image: url(images/bg.gif);
+background-color: black;
+background-image: url("images/bg.gif");
 background-repeat: no-repeat;
 background-position: left top;
 ```
@@ -76,7 +75,7 @@ background-position: left top;
 These four declarations can be shortened to just one:
 
 ```css
-background: #000 url(images/bg.gif) no-repeat left top;
+background: black url("images/bg.gif") no-repeat left top;
 ```
 
 (The shorthand form is actually the equivalent of the longhand properties above plus `background-attachment: scroll` and, in CSS3, some additional properties.)
@@ -92,14 +91,14 @@ font-style: italic;
 font-weight: bold;
 font-size: 0.8em;
 line-height: 1.2;
-font-family: Arial, sans-serif;
+font-family: "Arial", sans-serif;
 ```
 
 These 5 statements can be shortened to the following:
 
 ```css
 font:
-  italic bold 0.8em/1.2 Arial,
+  italic bold 0.8em/1.2 "Arial",
   sans-serif;
 ```
 
@@ -112,13 +111,13 @@ With borders, the width, color, and style can be simplified into one declaration
 ```css
 border-width: 1px;
 border-style: solid;
-border-color: #000;
+border-color: black;
 ```
 
 It can be simplified as:
 
 ```css
-border: 1px solid #000;
+border: 1px solid black;
 ```
 
 ## Margin and padding properties
@@ -256,4 +255,4 @@ See [Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/H
 - [CSS cascading and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module
 - [Visual formatting models](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model)
 - [Initial](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value), [computed](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value), [used](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#used_value), and [actual](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#actual_value) values
-- [Value definition syntax](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+- [Value definition syntax](/en-US/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)

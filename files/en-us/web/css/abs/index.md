@@ -3,32 +3,32 @@ title: abs()
 slug: Web/CSS/abs
 page-type: css-function
 browser-compat: css.types.abs
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`abs()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) returns the absolute value of the argument, as the same type as the input.
+The **`abs()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) returns the absolute value of the argument, as the same type as the input.
 
 ## Syntax
 
 ```css
-/* property: abs(expression) */
-width: abs(20% - 100px);
+/* abs( <calc-sum> ) */
+abs(20% - 100px)
+abs(var(--gradientAngle))
 ```
 
 ### Parameters
 
-The `abs(x)` function accepts only one value as its parameter.
+The `abs()` function accepts one parameter.
 
-- `x`
-  - : A calculation which resolves to a number.
+- `<calc-sum>`
+  - : An expression or calculation that resolves to a {{cssxref("number")}}, a {{cssxref("dimension")}}, a {{cssxref("percentage")}} or a {{cssxref("calc-keyword")}}.
 
 ### Return value
 
-The absolute value of `x`.
+The absolute value of `<calc-sum>`.
 
-- if `x`'s numeric value is positive or `0⁺`, return `x`.
-- Otherwise, returns `-1 * x`.
+- If `<calc-sum>`'s numeric value is positive or `0⁺`, the function returns `<calc-sum>`.
+- Otherwise, it returns `-1 * <calc-sum>`.
 
 ## Formal syntax
 
@@ -59,7 +59,7 @@ div {
 
 ### Backwards compatible fallback
 
-In older browsers that lack the support for CSS `abs()` function, you can use the CSS {{CSSxRef("max")}} function to achieve the same result, as shown below:
+In browsers that lack support for CSS `abs()` function, you can use the CSS {{CSSxRef("max")}} function to achieve the same result:
 
 ```css
 p {

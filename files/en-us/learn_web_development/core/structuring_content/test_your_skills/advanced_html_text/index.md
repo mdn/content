@@ -1,30 +1,32 @@
 ---
 title: "Test your skills: Advanced HTML text"
-short-title: Advanced HTML text
+short-title: "Test: Advanced HTML text"
 slug: Learn_web_development/Core/Structuring_content/Test_your_skills/Advanced_HTML_text
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
 
-The aim of this skill test is to assess whether you understand how to use [lesser-known HTML elements to mark up advanced semantic features](/en-US/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features).
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content/Marking_up_a_letter", "Learn_web_development/Core/Structuring_content")}}
+
+The aim of this skill test is to help you assess whether you understand how to use [lesser-known HTML elements to mark up advanced semantic features](/en-US/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features).
 
 > [!NOTE]
-> You can try solutions in the MDN Playground or in an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
->
-> If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
+> To get help, read our [Test your skills](/en-US/docs/Learn_web_development#test_your_skills) usage guide. You can also reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## Task 1
 
-In this task, we want you to add some semantics to the provided HTML as follows:
+In this task, we want you to add some semantics to the provided HTML.
 
-- Turn the second paragraph into a block-level quote, and semantically indicate that the quote is taken from [Accessibility](/en-US/docs/Learn_web_development/Core/Accessibility).
-- Semantically mark up "HTML" and "CSS" as acronyms, providing expansions as tooltips.
-- Use subscript and superscript to provide correct semantics for the chemical formulae and dates, and make them display correctly.
-- Semantically associate machine-readable dates with the dates in the text.
+To complete this task:
 
-To get started, you can click **"Play"** in the code block below to edit the example in the MDN Playground, or [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/tasks/advanced-text/advanced-text2-download.html) and work locally in your own editor.
+1. Turn the second paragraph into a block-level quote, and semantically indicate that the quote is taken from [Accessibility](/en-US/docs/Learn_web_development/Core/Accessibility).
+2. Semantically mark up "HTML" and "CSS" as acronyms, providing expansions as tooltips.
+3. Use subscript and superscript to provide correct semantics for the chemical formulae and dates, and make them display correctly.
+4. Semantically associate machine-readable dates with the dates in the text.
 
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution at the bottom of the section.
+The finished example should look like this:
+
+{{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/advanced-text/advanced-text2-finished.html", '100%', 300)}}
 
 ```html live-sample___advanced-text
 <h1>Advanced text semantics</h1>
@@ -47,12 +49,12 @@ If you make a mistake, you can clear your work using the _Reset_ button in the M
 
 ```css hidden live-sample___advanced-text
 body {
-  background-color: #fff;
-  color: #333;
+  background-color: white;
+  color: #333333;
   font:
-    1em / 1.4 Helvetica Neue,
-    Helvetica,
-    Arial,
+    1em / 1.4 "Helvetica Neue",
+    "Helvetica",
+    "Arial",
     sans-serif;
   padding: 1em;
   margin: 0;
@@ -75,10 +77,6 @@ time {
 ```
 
 {{ EmbedLiveSample('advanced-text', "100%", 260) }}
-
-The finished example should look like this:
-
-{{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/advanced-text/advanced-text2-finished.html", '100%', 300)}}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -117,3 +115,5 @@ Your finished HTML should look like this:
 ```
 
 </details>
+
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content/Marking_up_a_letter", "Learn_web_development/Core/Structuring_content")}}

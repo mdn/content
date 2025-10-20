@@ -4,9 +4,8 @@ short-title: freeze()
 slug: Web/JavaScript/Reference/Global_Objects/Object/freeze
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.freeze
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Object.freeze()`** static method _freezes_ an object. Freezing an object [prevents extensions](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions) and makes existing properties non-writable and non-configurable. A frozen object can no longer be changed: new properties cannot be added, existing properties cannot be removed, their enumerability, configurability, writability, or value cannot be changed, and the object's prototype cannot be re-assigned. `freeze()` returns the same object that was passed in.
 
@@ -167,9 +166,9 @@ const obj1 = {
 };
 
 Object.freeze(obj1);
-obj1.internal.a = "aValue";
+obj1.internal.a = "value";
 
-obj1.internal.a; // 'aValue'
+obj1.internal.a; // 'value'
 ```
 
 To be a constant object, the entire reference graph (direct and indirect references to
@@ -207,7 +206,7 @@ console.log(employee.address.city); // "Noida"
 
 To make an object immutable, recursively freeze each non-primitive property (deep freeze). Use the pattern on a case-by-case basis based on your design when you know the object contains no [cycles](<https://en.wikipedia.org/wiki/Cycle_(graph_theory)>) in the reference graph, otherwise an endless loop will be triggered. For example, functions created with the [`function`](/en-US/docs/Web/JavaScript/Reference/Statements/function) syntax have a [`prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) property with a `constructor` property that points to the function itself, so they have cycles by default. Other functions, such as [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), can still be frozen.
 
-An enhancement to `deepFreeze()` would be to store the objects it has already visited, so you can suppress calling `deepFreeze()` recursively when an object is in the process of being made immutable. For one example, see [using `WeakSet` to detect circular references](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet#use_case_detecting_circular_references). You still run a risk of freezing an object that shouldn't be frozen, such as [`window`](/en-US/docs/Web/API/Window).
+An enhancement to `deepFreeze()` would be to store the objects it has already visited, so you can suppress calling `deepFreeze()` recursively when an object is in the process of being made immutable. For one example, see [using `WeakSet` to detect circular references](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet#detecting_circular_references). You still run a risk of freezing an object that shouldn't be frozen, such as [`window`](/en-US/docs/Web/API/Window).
 
 ```js
 function deepFreeze(object) {

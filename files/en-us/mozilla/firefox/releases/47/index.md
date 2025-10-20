@@ -1,11 +1,12 @@
 ---
-title: Firefox 47 for developers
+title: Firefox 47 release notes for developers
+short-title: Firefox 47
 slug: Mozilla/Firefox/Releases/47
 page-type: firefox-release-notes
 sidebar: firefox
 ---
 
-[To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/) Firefox 47 was released on June 6, 2016. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
+[To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.firefox.com/en-US/channel/desktop/developer/) Firefox 47 was released on June 6, 2016. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
 ## Changes for Web developers
 
@@ -70,7 +71,7 @@ _No change._
 
 - The {{domxref("Request.Request", "Request()")}} constructor can now accept a referrer option in its init object ([Firefox bug 1251448](https://bugzil.la/1251448)).
 - The {{domxref("Request.referrerPolicy")}} property is now supported ([Firefox bug 1251872](https://bugzil.la/1251872)).
-- [Service workers](/en-US/docs/Web/API/Service_Worker_API) and [Push](/en-US/docs/Web/API/Push_API) have been disabled in the [Firefox 45 Extended Support Release](https://www.mozilla.org/en-US/firefox/enterprise/) (ESR) ([Firefox bug 1232029](https://bugzil.la/1232029)).
+- [Service workers](/en-US/docs/Web/API/Service_Worker_API) and [Push](/en-US/docs/Web/API/Push_API) have been disabled in the [Firefox 45 Extended Support Release](https://www.firefox.com/en-US/browsers/enterprise/) (ESR) ([Firefox bug 1232029](https://bugzil.la/1232029)).
 
 #### WebRTC
 
@@ -133,7 +134,3 @@ _No change._
 ### Other
 
 _No change._
-
-## Older versions
-
-{{Firefox_for_developers}}

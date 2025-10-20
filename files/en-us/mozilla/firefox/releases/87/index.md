@@ -1,5 +1,6 @@
 ---
-title: Firefox 87 for developers
+title: Firefox 87 release notes for developers
+short-title: Firefox 87
 slug: Mozilla/Firefox/Releases/87
 page-type: firefox-release-notes
 sidebar: firefox
@@ -80,7 +81,3 @@ _No changes._
 
 - [nativeMessaging](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging) is now an [optional permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) ([Firefox bug 1630415](https://bugzil.la/1630415)).
 - Added support for querying and setting color management related features with {{WebExtAPIRef("browserSettings.colorManagement")}} ([Firefox bug 1719688](https://bugzil.la/1719688)) and ([Firefox bug 1714428](https://bugzil.la/1714428)).
-
-## Older versions
-
-{{Firefox_for_developers}}

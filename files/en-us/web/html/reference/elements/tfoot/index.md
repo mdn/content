@@ -3,9 +3,8 @@ title: "<tfoot>: The Table Foot element"
 slug: Web/HTML/Reference/Elements/tfoot
 page-type: html-element
 browser-compat: html.elements.tfoot
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<tfoot>`** [HTML](/en-US/docs/Web/HTML) element encapsulates a set of table rows ({{HTMLElement("tr")}} elements), indicating that they comprise the foot of a table with information about the table's columns. This is usually a summary of the columns, e.g., a sum of the given numbers in a column.
 
@@ -45,7 +44,7 @@ The **`<tfoot>`** [HTML](/en-US/docs/Web/HTML) element encapsulates a set of tab
 thead,
 tfoot {
   background-color: #2c5e77;
-  color: #fff;
+  color: white;
 }
 
 tbody {
@@ -166,7 +165,7 @@ Some basic CSS is used to style and highlight the table foot so that the foot ce
 tfoot {
   border-top: 3px dotted rgb(160 160 160);
   background-color: #2c5e77;
-  color: #fff;
+  color: white;
 }
 
 tfoot th {
@@ -180,7 +179,7 @@ tfoot td {
 thead {
   border-bottom: 2px solid rgb(160 160 160);
   background-color: #2c5e77;
-  color: #fff;
+  color: white;
 }
 
 tbody {

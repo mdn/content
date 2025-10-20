@@ -3,9 +3,8 @@ title: BigInt
 slug: Web/JavaScript/Reference/Global_Objects/BigInt
 page-type: javascript-class
 browser-compat: javascript.builtins.BigInt
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 **`BigInt`** values represent integer values which are [too high](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER) or [too low](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER) to be represented by the `number` {{Glossary("Primitive", "primitive")}}.
 

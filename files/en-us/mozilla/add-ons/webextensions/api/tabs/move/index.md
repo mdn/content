@@ -3,9 +3,8 @@ title: tabs.move()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/move
 page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.move
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Moves one or more tabs to a new position in the same window or to a different window.
 

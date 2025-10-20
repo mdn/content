@@ -3,11 +3,10 @@ title: scaleX()
 slug: Web/CSS/transform-function/scaleX
 page-type: css-function
 browser-compat: css.types.transform-function.scaleX
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`scaleX()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) defines a transformation that resizes an element along the
+The **`scaleX()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) defines a transformation that resizes an element along the
 x-axis (horizontally). Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
 {{InteractiveExample("CSS Demo: scaleX()")}}

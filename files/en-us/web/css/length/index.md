@@ -3,11 +3,10 @@ title: <length>
 slug: Web/CSS/length
 page-type: css-type
 browser-compat: css.types.length
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`<length>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents a distance value. Lengths can be used in numerous CSS properties, such as {{Cssxref("width")}}, {{Cssxref("height")}}, {{Cssxref("margin")}}, {{Cssxref("padding")}}, {{Cssxref("border-width")}}, {{Cssxref("font-size")}}, and {{Cssxref("text-shadow")}}.
+The **`<length>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types) represents a distance value. Lengths can be used in numerous CSS properties, such as {{Cssxref("width")}}, {{Cssxref("height")}}, {{Cssxref("margin")}}, {{Cssxref("padding")}}, {{Cssxref("border-width")}}, {{Cssxref("font-size")}}, and {{Cssxref("text-shadow")}}.
 
 > [!NOTE]
 > Although {{cssxref("&lt;percentage&gt;")}} values are usable in some of the same properties that accept `<length>` values, they are not themselves `<length>` values. See {{cssxref("&lt;length-percentage&gt;")}}.
@@ -231,13 +230,13 @@ html {
 .outer {
   width: 100%;
   height: 50px;
-  background-color: #eee;
+  background-color: #eeeeee;
   position: relative;
 }
 
 .inner {
   height: 50px;
-  background-color: #999;
+  background-color: #999999;
   box-shadow:
     inset 3px 3px 5px rgb(255 255 255 / 50%),
     inset -3px -3px 5px rgb(0 0 0 / 50%);
@@ -314,5 +313,5 @@ inputElem.addEventListener("change", () => {
 ## See also
 
 - [Learn: Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
-- [CSS values & units](/en-US/docs/Web/CSS/CSS_Values_and_Units) module
+- [CSS values & units](/en-US/docs/Web/CSS/CSS_values_and_units) module
 - [Box Model](/en-US/docs/Web/CSS/CSS_box_model)

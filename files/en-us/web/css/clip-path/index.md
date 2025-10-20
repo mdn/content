@@ -3,9 +3,8 @@ title: clip-path
 slug: Web/CSS/clip-path
 page-type: css-property
 browser-compat: css.properties.clip-path
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`clip-path`** [CSS](/en-US/docs/Web/CSS) property creates a clipping region that sets what part of an element should be shown. Parts that are inside the region are shown, while those outside are hidden.
 
@@ -79,7 +78,7 @@ section {
 clip-path: none;
 
 /* <clip-source> values */
-clip-path: url(resources.svg#c1);
+clip-path: url("resources.svg#c1");
 
 /* <geometry-box> values */
 clip-path: margin-box;
@@ -309,11 +308,11 @@ We then set the `id` of the `<clipPath>` as the `<clip-source>`. We center the t
 
 ```css
 .window {
-  clip-path: url(#window);
+  clip-path: url("#window");
 }
 
 .cross {
-  clip-path: url(#cross);
+  clip-path: url("#cross");
   align-content: center;
 }
 ```
@@ -369,7 +368,7 @@ The initial rendering includes the star as the `clip-path` source.
 ```css
 #clipped {
   margin-bottom: 20px;
-  clip-path: url(#star);
+  clip-path: url("#star");
 }
 ```
 

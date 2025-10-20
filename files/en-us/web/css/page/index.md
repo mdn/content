@@ -3,9 +3,8 @@ title: page
 slug: Web/CSS/page
 page-type: css-property
 browser-compat: css.properties.page
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`page`** [CSS](/en-US/docs/Web/CSS) property is used to specify the named page, a specific type of page defined by the {{cssxref("@page")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule).
 
@@ -198,7 +197,7 @@ The `break-after: page;` is used to split them up, which splits each chapter int
   }
   section {
     font-size: 2rem;
-    font-family: Roboto, sans-serif;
+    font-family: "Roboto", sans-serif;
   }
   .chapter {
     border: tomato 2px solid;
@@ -206,22 +205,22 @@ The `break-after: page;` is used to split them up, which splits each chapter int
   [data-print="grouped"] > #toc,
   [data-print="paged"] > #toc {
     page: toc;
-    font-family: Courier;
+    font-family: "Courier New";
   }
   [data-print="grouped"] > #foreword,
   [data-print="paged"] > #foreword {
     page: foreword;
-    font-family: Courier;
+    font-family: "Courier New";
   }
   [data-print="grouped"] > #introduction,
   [data-print="paged"] > #introduction {
     page: introduction;
-    font-family: Courier;
+    font-family: "Courier New";
   }
   [data-print="grouped"] > #conclusion,
   [data-print="paged"] > #conclusion {
     page: conclusion;
-    font-family: Courier;
+    font-family: "Courier New";
   }
   [data-print="grouped"] > .chapter,
   [data-print="paged"] > .chapter {

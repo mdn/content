@@ -60,21 +60,14 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
   - : Defines the cookie name and its value.
     A cookie definition begins with a name-value pair.
 
-    A `<cookie-name>` can contain any US-ASCII characters except for: control characters ({{Glossary("ASCII")}} characters 0 up to 31 and ASCII character 127) or separator characters (space, tab and the characters: `( ) < > @ , ; : \ " / [ ] ? = { }`)
+    A `<cookie-name>` can contain any US-ASCII characters except for control characters ({{Glossary("ASCII")}} characters 0 up to 31 and ASCII character 127) or separator characters (space, tab and the characters: `( ) < > @ , ; : \ " / [ ] ? = { }`)
 
     A `<cookie-value>` can optionally be wrapped in double quotes and include any US-ASCII character excluding control characters (ASCII characters 0 up to 31 and ASCII character 127), {{glossary("Whitespace")}}, double quotes, commas, semicolons, and backslashes.
 
-    **Encoding**: Many implementations perform {{Glossary("Percent-encoding", "percent-encoding")}} on cookie values.
-    However, this is not required by the RFC specification.
-    The percent-encoding does help to satisfy the requirements of the characters allowed for `<cookie-value>`.
+    **Encoding**: Many implementations perform {{Glossary("Percent-encoding", "percent-encoding")}} on cookie values. However, this is not required by the RFC specification. The percent-encoding does help to satisfy the requirements of the characters allowed for `<cookie-value>`.
 
     > [!NOTE]
-    > Some `<cookie-name>` have a specific semantic:
-    >
-    > **`__Secure-` prefix**: Cookies with names starting with `__Secure-` (dash is part of the prefix) must be set with the `secure` flag from a secure page (HTTPS).
-    >
-    > **`__Host-` prefix**: Cookies with names starting with `__Host-` are sent only to the host subdomain or domain that set them, and not to any other host.
-    > They must be set with the `secure` flag, must be from a secure page (HTTPS), must not have a domain specified, and the path must be `/`.
+    > Some cookie names contain prefixes that impose specific restrictions on the cookie's attributes in supporting user-agents. See [Cookie prefixes](#cookie_prefixes) for more information.
 
 - `Domain=<domain-value>` {{optional_inline}}
   - : Defines the host to which the cookie will be sent.
@@ -119,6 +112,8 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 - `Path=<path-value>` {{optional_inline}}
   - : Indicates the path that _must_ exist in the requested URL for the browser to send the `Cookie` header.
 
+    If omitted, this attribute defaults to the path component of the request URL. For example, if a cookie is set by a request to `https://example.com/docs/Web/HTTP/index.html`, the default path would be `/docs/Web/HTTP/`.
+
     The forward slash (`/`) character is interpreted as a directory separator, and subdirectories are matched as well. For example, for `Path=/docs`,
     - the request paths `/docs`, `/docs/`, `/docs/Web/`, and `/docs/Web/HTTP` will all match.
     - the request paths `/`, `/docsets`, `/fr/docs` will not match.
@@ -160,6 +155,18 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
     > Cookies with this attribute can still be read/modified either with access to the client's hard disk or from JavaScript if the `HttpOnly` cookie attribute is not set.
     >
     > Insecure sites (`http:`) cannot set cookies with the `Secure` attribute. The `https:` requirements are ignored when the `Secure` attribute is set by localhost.
+
+## Cookie prefixes
+
+Some cookie names contain prefixes that impose specific restrictions on the cookie's attributes in supporting user-agents. All cookie prefixes start with a double-underscore (`__`) and end in a dash (`-`). The following prefixes are defined:
+
+- **`__Secure-`**: Cookies with names starting with `__Secure-` must be set with the `Secure` attribute by a secure page (HTTPS).
+- **`__Host-`**: Cookies with names starting with `__Host-` must be set with the `Secure` attribute by a secure page (HTTPS). In addition, they must not have a `Domain` attribute specified, and the `Path` attribute must be set to `/`. This guarantees that such cookies are only sent to the host that set them, and not to any other host on the domain. It also guarantees that they are set host-wide and cannot be overridden on any path on that host. This combination yields a cookie that is as close as can be to treating the origin as a security boundary.
+- **`__Http-`**: Cookies with names starting with `__Http-` must be set with the `Secure` flag by a secure page (HTTPS) and in addition must have the `HttpOnly` attribute set to prove that they were set via the `Set-Cookie` header (they can't be set or modified via JavaScript features such as `Document.cookie` or the [Cookie Store API](/en-US/docs/Web/API/Cookie_Store_API)).
+- **`__Host-Http-`**: Cookies with names starting with `__Host-Http-` must be set with the `Secure` flag by a secure page (HTTPS) and must have the `HttpOnly` attribute set to prove that they were set via the `Set-Cookie` header. In addition, they also have the same restrictions as `__Host-`-prefixed cookies. This combination yields a cookie that is as close as can be to treating the origin as a security boundary while at the same time ensuring developers and server operators know that its scope is limited to HTTP requests.
+
+> [!WARNING]
+> You cannot count on these additional assurances on browsers that don't support cookie prefixes; in such cases, prefixed cookies will always be accepted.
 
 ## Examples
 
@@ -203,12 +210,11 @@ Set-Cookie: sessionId=e8bb43229de9; Domain=foo.example.com
 
 ### Cookie prefixes
 
-Cookie names prefixed with `__Secure-` or `__Host-` can be used only if they are set with the `secure` attribute from a secure (HTTPS) origin.
+Cookie names prefixed with `__Secure-` or `__Host-` can be used only if they are set with the `Secure` attribute from a secure (HTTPS) origin.
 
-In addition, cookies with the `__Host-` prefix must have a path of `/` (meaning any path at the host) and must not have a `Domain` attribute.
+Cookie names prefixed with `__Http-` or `__Host-Http-` can be used only if they are set with the `Secure` attribute from a secure (HTTPS) origin and in addition must have the `HttpOnly` attribute set to prove that they were set via the `Set-Cookie` header and not on the client-side via JavaScript.
 
-> [!WARNING]
-> For clients that don't implement cookie prefixes, you cannot count on these additional assurances, and prefixed cookies will always be accepted.
+In addition, cookies with the `__Host-` or `__Host-Http-` prefix must have a path of `/` (meaning any path at the host) and must not have a `Domain` attribute.
 
 ```http
 // Both accepted when from a secure origin (HTTPS)
@@ -223,6 +229,10 @@ Set-Cookie: __Host-id=1; Secure
 
 // Rejected due to setting a Domain
 Set-Cookie: __Host-id=1; Secure; Path=/; Domain=example.com
+
+// Only settable via Set-Cookie
+Set-Cookie: __Http-ID=123; Secure; Domain=example.com
+Set-Cookie: __Host-Http-ID=123; Secure; Path=/
 ```
 
 ### Partitioned cookie
@@ -232,7 +242,7 @@ Set-Cookie: __Host-example=34d8g; SameSite=None; Secure; Path=/; Partitioned;
 ```
 
 > [!NOTE]
-> Partitioned cookies must be set with `Secure`. In addition, it is recommended to use the `__Host` prefix when setting partitioned cookies to make them bound to the hostname and not the registrable domain.
+> Partitioned cookies must be set with `Secure`. In addition, it is recommended to use a `__Host` or `__Host-Http-` prefix when setting partitioned cookies to make them bound to the hostname and not the registrable domain.
 
 ## Specifications
 

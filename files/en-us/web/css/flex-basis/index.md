@@ -3,9 +3,8 @@ title: flex-basis
 slug: Web/CSS/flex-basis
 page-type: css-property
 browser-compat: css.properties.flex-basis
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`flex-basis`** [CSS](/en-US/docs/Web/CSS) property sets the initial main size of a {{glossary("flex item")}}. It sets the size of the content box unless otherwise set with {{Cssxref("box-sizing")}}.
 
@@ -87,6 +86,9 @@ The `flex-basis` property is specified as either the keyword `content` or a `<'w
 
 ### Values
 
+- `content`
+  - : Indicates automatic sizing, based on the flex item's content.
+
 - `<'width'>`
   - : Any of the following units:
     - {{cssxref("&lt;length&gt;")}} sets an absolute value.
@@ -95,9 +97,6 @@ The `flex-basis` property is specified as either the keyword `content` or a `<'w
     - {{cssxref("max-content")}} sets the intrinsic preferred width.
     - {{cssxref("min-content")}} sets the intrinsic minimum width.
     - {{cssxref("fit-content")}} sets the maximum possible size of a containing block's content area, bounded by the `min-content` and `max-content` values, and calculated based on the content of the current element.
-
-- `content`
-  - : Indicates automatic sizing, based on the flex item's content.
 
 ## Formal definition
 
@@ -131,7 +130,7 @@ The `flex-basis` property is specified as either the keyword `content` or a `<'w
 
 ```css
 .container {
-  font-family: arial, sans-serif;
+  font-family: "Arial", sans-serif;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -157,7 +156,7 @@ The `flex-basis` property is specified as either the keyword `content` or a `<'w
   top: 100%;
   margin-top: 10px;
   width: 100%;
-  color: #333;
+  color: #333333;
   font-size: 12px;
 }
 

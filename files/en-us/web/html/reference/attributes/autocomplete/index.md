@@ -8,9 +8,8 @@ browser-compat:
   - html.elements.input.autocomplete
   - html.elements.select.autocomplete
   - html.elements.textarea.autocomplete
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The HTML `autocomplete` attribute lets web developers specify what if any permission the {{Glossary("user agent")}} has to provide automated assistance in filling out form field values, as well as guidance to the browser as to the type of information expected in the field.
 
@@ -47,7 +46,7 @@ The `autocomplete` attribute provides a hint to the user agent specifying how to
 <input autocomplete="section-user1 billing postal-code" />
 ```
 
-If an {{HTMLElement("input")}}, {{HTMLElement("select")}} or {{HTMLElement("textarea")}} element has no `autocomplete` attribute, the browser will use the [`autocomplete` attribute of the element's **owning form**](/en-US/docs/Web/HTML/Reference/Elements/form#autocomplete). The owning form is either the {{HTMLElement("form")}} matching the `id` specified by the [`form`](/en-US/docs/Web/HTML/Reference/Elements/input#form) attribute of the element (if present) or, more commonly, the `<form>` the element is nested in.
+If an {{HTMLElement("input")}}, {{HTMLElement("select")}} or {{HTMLElement("textarea")}} element has no `autocomplete` attribute, the browser will use the [`autocomplete` attribute of the element's **owning form**](/en-US/docs/Web/HTML/Reference/Elements/form#autocomplete). The owning form is either the {{HTMLElement("form")}} matching the `id` specified by the [`form`](/en-US/docs/Web/HTML/Reference/Attributes/form) attribute of the element (if present) or, more commonly, the `<form>` the element is nested in.
 
 > [!NOTE]
 > In order to provide autocompletion, user-agents might require `<input>`/`<select>`/`<textarea>` elements to:
@@ -229,7 +228,7 @@ When the form field is not a phone number, email address, or instant messaging p
 - `transaction-amount`
   - : The amount, given in the currency specified by `transaction-currency`, of the transaction, for a payment form.
 - `language`
-  - : A preferred language, given as a valid [BCP 47 language tag](https://en.wikipedia.org/wiki/IETF_language_tag).
+  - : A preferred language, given as a valid {{glossary("BCP 47 language tag")}}.
 - `bday`
   - : A birth date, as a full date.
     - `bday-day`

@@ -3,9 +3,8 @@ title: "<table>: The Table element"
 slug: Web/HTML/Reference/Elements/table
 page-type: html-element
 browser-compat: html.elements.table
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<table>`** [HTML](/en-US/docs/Web/HTML) element represents tabular data—that is, information presented in a two-dimensional table comprised of rows and columns of cells containing data.
 
@@ -460,7 +459,7 @@ It's a common and advisable practice to provide a summary for the table's conten
 
 #### HTML
 
-A table summary is added by using a table [caption](#captions) ({{HTMLElement("caption")}} element) as the first child element of the `<table>`. The caption provides the {{glossary("accessible description")}} for the table.
+A table summary is added by using a table [caption](#captions) ({{HTMLElement("caption")}} element) as the first child element of the `<table>`. The caption provides the {{glossary("accessible name")}} or {{glossary("accessible description")}} for the table.
 
 Lastly, a table foot section ({{HTMLElement("tfoot")}} element) is added below the body, with a row that summarizes the "Balance" column by displaying a sum. The elements and attributes introduced earlier are applied.
 
@@ -590,8 +589,8 @@ table {
   border: 2px solid rgb(140 140 140);
   font:
     16px "Open Sans",
-    Helvetica,
-    Arial,
+    "Helvetica",
+    "Arial",
     sans-serif;
 }
 
@@ -684,8 +683,8 @@ table {
   border: 2px solid rgb(140 140 140);
   font:
     16px "Open Sans",
-    Helvetica,
-    Arial,
+    "Helvetica",
+    "Arial",
     sans-serif;
 }
 
@@ -1017,7 +1016,7 @@ td {
 th {
   position: sticky;
   top: 0;
-  background: #fff;
+  background: white;
   vertical-align: bottom;
 }
 

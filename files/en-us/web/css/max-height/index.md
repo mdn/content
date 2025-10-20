@@ -3,9 +3,8 @@ title: max-height
 slug: Web/CSS/max-height
 page-type: css-property
 browser-compat: css.properties.max-height
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`max-height`** [CSS](/en-US/docs/Web/CSS) property sets the maximum height of an element. It prevents the [used value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#used_value) of the {{cssxref("height")}} property from becoming larger than the value specified for `max-height`.
 
@@ -42,7 +41,7 @@ max-height: 10px;
   flex-direction: column;
   background-color: #5b6dcd;
   justify-content: center;
-  color: #ffffff;
+  color: white;
 }
 ```
 
@@ -54,7 +53,7 @@ max-height: 10px;
 /* <length> value */
 max-height: 3.5em;
 max-height: anchor-size(height);
-max-height: calc(anchor-size(--myAnchor self-block, 250px) + 2em);
+max-height: calc(anchor-size(--my-anchor self-block, 250px) + 2em);
 
 /* <percentage> value */
 max-height: 75%;
@@ -83,13 +82,13 @@ max-height: unset;
   - : Defines the `max-height` as a percentage of the containing block's height.
 - `none`
   - : No limit on the size of the box.
-- `max-content`
+- {{cssxref("max-content")}}
   - : The intrinsic preferred `max-height`.
-- `min-content`
+- {{cssxref("min-content")}}
   - : The intrinsic minimum `max-height`.
-- `fit-content`
+- {{cssxref("fit-content")}}
   - : Use the available space, but not more than [max-content](/en-US/docs/Web/CSS/max-content), i.e., `min(max-content, max(min-content, stretch))`.
-- `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
+- [`fit-content(<length-percentage>)`](/en-US/docs/Web/CSS/fit-content_function)
   - : Uses the `fit-content` formula with the available space replaced by the specified argument, i.e., `min(max-content, max(min-content, argument))`.
 - `stretch`
   - : Limits the maximum height of the element's [margin box](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model#parts_of_a_box) to the height of its [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block#identifying_the_containing_block). It attempts to make the margin box fill the available space in the containing block, so in a way behaving similar to `100%` but applying the resulting size to the margin box rather than the box determined by [box-sizing](/en-US/docs/Web/CSS/box-sizing).

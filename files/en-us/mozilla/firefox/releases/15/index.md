@@ -1,5 +1,6 @@
 ---
-title: Firefox 15 for developers
+title: Firefox 15 release notes for developers
+short-title: Firefox 15
 slug: Mozilla/Firefox/Releases/15
 page-type: firefox-release-notes
 sidebar: firefox
@@ -89,10 +90,6 @@ Firefox 15 shipped on August 28, 2012. This article lists key changes that are u
 
 #### Removed interfaces
 
-The following interfaces have been removed.
+The following interfaces have been removed:
 
 - `nsIGlobalHistory`
-
-## See also
-
-{{Firefox_for_developers}}

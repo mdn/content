@@ -3,9 +3,8 @@ title: stroke-opacity
 slug: Web/CSS/stroke-opacity
 page-type: css-property
 browser-compat: css.properties.stroke-opacity
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`stroke-opacity`** [CSS](/en-US/docs/Web/CSS) property defines the opacity of an [SVG](/en-US/docs/Web/SVG) shape's stroke. The effect is identical to that of {{CSSxref('opacity')}}, except it is applied only to the stroke, not to the entire element. If present, it overrides the element's {{SVGAttr("stroke-opacity")}} attribute.
 

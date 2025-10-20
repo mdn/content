@@ -1,11 +1,12 @@
 ---
-title: Firefox 40 for developers
+title: Firefox 40 release notes for developers
+short-title: Firefox 40
 slug: Mozilla/Firefox/Releases/40
 page-type: firefox-release-notes
 sidebar: firefox
 ---
 
-[To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/) Firefox 40 was released on August 11, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
+[To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.firefox.com/en-US/channel/desktop/developer/) Firefox 40 was released on August 11, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
 ## Changes for Web developers
 
@@ -161,7 +162,3 @@ _No change._
 
 - Places Keywords API has been deprecated and will be removed soon ([Firefox bug 1140395](https://bugzil.la/1140395)).
 - The automated testing system now supports skipping individual test functions. See [running conditional tests](https://firefox-source-docs.mozilla.org/testing/xpcshell/index.html#conditionally-running-a-test) in XPCShell testing.
-
-## Older versions
-
-{{Firefox_for_developers}}

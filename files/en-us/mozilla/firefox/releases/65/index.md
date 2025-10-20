@@ -1,5 +1,6 @@
 ---
-title: Firefox 65 for developers
+title: Firefox 65 release notes for developers
+short-title: Firefox 65
 slug: Mozilla/Firefox/Releases/65
 page-type: firefox-release-notes
 sidebar: firefox
@@ -183,7 +184,3 @@ _No changes._
 ## See also
 
 - Hacks release post: [Firefox 65: WebP support, Flexbox Inspector, new tooling & platform updates](https://hacks.mozilla.org/2019/01/firefox-65-webp-flexbox-inspector-new-tooling/)
-
-## Older versions
-
-{{Firefox_for_developers}}

@@ -3,9 +3,8 @@ title: transition-behavior
 slug: Web/CSS/transition-behavior
 page-type: css-property
 browser-compat: css.properties.transition-behavior
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`transition-behavior`** [CSS](/en-US/docs/Web/CSS) property specifies whether transitions will be started for properties whose animation behavior is [discrete](/en-US/docs/Web/CSS/CSS_animated_properties#discrete).
 
@@ -102,7 +101,7 @@ The HTML contains a {{htmlelement("div")}} element declared as a popover using t
 
 ```css hidden
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 [popover] {

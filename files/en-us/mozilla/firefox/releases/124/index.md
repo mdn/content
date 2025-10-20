@@ -1,5 +1,6 @@
 ---
-title: Firefox 124 for developers
+title: Firefox 124 release notes for developers
+short-title: Firefox 124
 slug: Mozilla/Firefox/Releases/124
 page-type: firefox-release-notes
 sidebar: firefox
@@ -76,7 +77,3 @@ These features are newly shipped in Firefox 124 but are disabled by default. To 
   The maximum allowed size of the buffer is specified using the `options.maxByteLength` parameter to the [`ArrayBuffer()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/ArrayBuffer#maxbytelength).
   The {{jsxref("ArrayBuffer.prototype.resizable")}} and {{jsxref("ArrayBuffer.prototype.maxByteLength")}} properties indicate whether the buffer can be resized, and its maximum allowed size, respectively.
   ([Firefox bug 1842773](https://bugzil.la/1842773).)
-
-## Older versions
-
-{{Firefox_for_developers}}

@@ -3,9 +3,8 @@ title: host_permissions
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions
 page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.host_permissions
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
   <tbody>
@@ -39,7 +38,7 @@ Use the `host_permissions` key to request access for the APIs in your extension 
 
 ### Requested permissions and user prompts
 
-Users can [grant or revoke host permissions](https://support.mozilla.org/en-US/kb/extensions-button#w_website-permissions) on an ad hoc basis. Therefore., most browsers treat `host_permissions` as optional.
+Users can [grant or revoke host permissions](https://support.mozilla.org/en-US/kb/extensions-button#w_website-permissions) on an ad hoc basis. Therefore, most browsers treat `host_permissions` as optional.
 
 On installation, when you request permissions using this key:
 

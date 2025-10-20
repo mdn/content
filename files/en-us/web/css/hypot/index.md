@@ -3,13 +3,12 @@ title: hypot()
 slug: Web/CSS/hypot
 page-type: css-function
 browser-compat: css.types.hypot
+sidebar: cssref
 ---
 
-{{CSSRef}}
+The **`hypot()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) is an exponential function that returns the [square root](https://en.wikipedia.org/wiki/Square_root) of the sum of squares of its parameters.
 
-The **`hypot()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) is an exponential function that returns the [square root](https://en.wikipedia.org/wiki/Square_root) of the sum of squares of its parameters.
-
-While {{CSSxRef("pow")}} and {{CSSxRef("sqrt")}} only work on unitless numbers, `hypot()` accepts values with units, but they all must have the same [type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types).
+While {{CSSxRef("pow")}} and {{CSSxRef("sqrt")}} only work on unitless numbers, `hypot()` accepts values with units, but they all must have the same [type](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types).
 
 ## Syntax
 

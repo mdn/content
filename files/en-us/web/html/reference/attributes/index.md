@@ -3,9 +3,8 @@ title: HTML attribute reference
 short-title: Attributes
 slug: Web/HTML/Reference/Attributes
 page-type: landing-page
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar("Attributes")}}
 
 Elements in HTML have **attributes**; these are additional values that configure the elements or adjust their behavior in various ways to meet the criteria the users want.
 
@@ -76,6 +75,13 @@ Elements in HTML have **attributes**; these are additional values that configure
       </td>
       <td>{{ HTMLElement("iframe") }}</td>
       <td>Specifies a feature-policy for the iframe.</td>
+    </tr>
+    <tr>
+      <td>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Elements/input/color#alpha">alpha</a></code>
+      </td>
+      <td>{{ HTMLElement("input") }}</td>
+      <td>Allow the user to select a color's opacity on a <code>type="color"</code> input.</td>
     </tr>
     <tr>
       <td>
@@ -257,6 +263,13 @@ Elements in HTML have **attributes**; these are additional values that configure
           </p>
         </div>
       </td>
+    </tr>
+    <tr>
+      <td>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Elements/input/color#colorspace">colorspace</a></code>
+      </td>
+      <td>{{ HTMLElement("input") }}</td>
+      <td>Defines the <a href="/en-US/docs/Glossary/Color_space">color space</a> that is used by a <code>type="color"</code> input.</td>
     </tr>
     <tr>
       <td>
@@ -505,11 +518,8 @@ Elements in HTML have **attributes**; these are additional values that configure
         {{ HTMLElement("button") }},
         {{ HTMLElement("fieldset") }},
         {{ HTMLElement("input") }},
-        {{ HTMLElement("label") }},
-        {{ HTMLElement("meter") }},
         {{ HTMLElement("object") }},
         {{ HTMLElement("output") }},
-        {{ HTMLElement("progress") }},
         {{ HTMLElement("select") }},
         {{ HTMLElement("textarea") }}
       </td>
@@ -700,17 +710,6 @@ Elements in HTML have **attributes**; these are additional values that configure
           <a href="/en-US/docs/Web/Security/Subresource_Integrity">Subresource Integrity</a>
           value that allows browsers to verify what they fetch.
         </p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/en-US/docs/Web/HTML/Reference/Elements/img#intrinsicsize"><code>intrinsicsize</code></a>
-        {{deprecated_inline}}
-      </td>
-      <td>{{ HTMLElement("img") }}</td>
-      <td>
-        This attribute tells the browser to ignore the actual intrinsic size of
-        the image and pretend it's the size specified in the attribute.
       </td>
     </tr>
     <tr>
@@ -1123,14 +1122,6 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Reference/Elements/style#scoped">scoped</a></code>
-        {{non-standard_inline}} {{deprecated_inline}}
-      </td>
-      <td>{{ HTMLElement("style") }}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
         <code><a href="/en-US/docs/Web/HTML/Reference/Elements/option#selected">selected</a></code>
       </td>
       <td>{{ HTMLElement("option") }}</td>
@@ -1430,7 +1421,7 @@ To be clear, the values `"true"` and `"false"` are not allowed on boolean attrib
 > [!WARNING]
 > The use of event handler content attributes is discouraged. The mix of HTML and JavaScript often produces unmaintainable code, and the execution of event handler attributes may also be blocked by content security policies.
 
-In addition to the attributes listed in the table above, global [event handlers](/en-US/docs/Web/Events/Event_handlers#using_onevent_properties) — such as [`onclick`](/en-US/docs/Web/API/Element/click_event) — can also be specified as [content attributes](#content_versus_idl_attributes) on all elements.
+In addition to the attributes listed in the table above, global [event handlers](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) — such as [`onclick`](/en-US/docs/Web/API/Element/click_event) — can also be specified as [content attributes](#content_versus_idl_attributes) on all elements.
 
 All event handler attributes accept a string. The string will be used to synthesize a [JavaScript function](/en-US/docs/Web/JavaScript/Reference/Functions) like `function name(/*args*/) {body}`, where `name` is the attribute's name, and `body` is the attribute's value. The handler receives the same parameters as its JavaScript event handler counterpart — most handlers receive only one `event` parameter, while `onerror` receives five: `event`, `source`, `lineno`, `colno`, `error`. This means you can, in general, use the `event` variable within the attribute.
 

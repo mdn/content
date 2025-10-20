@@ -1,5 +1,6 @@
 ---
-title: Firefox 81 for developers
+title: Firefox 81 release notes for developers
+short-title: Firefox 81
 slug: Mozilla/Firefox/Releases/81
 page-type: firefox-release-notes
 sidebar: firefox
@@ -67,7 +68,3 @@ _No changes._
 
 - [`tabs.saveAsPDF()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/saveAsPDF) is now supported on macOS ([Firefox bug 1653354](https://bugzil.la/1653354)).
 - The behavior of [`webNavigation.getFrame()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webNavigation/getFrame) and [`webNavigation.getAllFrames()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webNavigation/getAllFrames) has changed. Moving forward, when a tab is discarded the promise will fulfill with a `null` value ([Firefox bug 1654842](https://bugzil.la/1654842)).
-
-## Older versions
-
-{{Firefox_for_developers}}

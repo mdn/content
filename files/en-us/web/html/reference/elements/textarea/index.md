@@ -3,9 +3,8 @@ title: "<textarea>: The Textarea element"
 slug: Web/HTML/Reference/Elements/textarea
 page-type: html-element
 browser-compat: html.elements.textarea
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<textarea>`** [HTML](/en-US/docs/Web/HTML) element represents a multi-line plain-text editing control, useful when you want to allow users to enter a sizeable amount of free-form text, for example a comment on a review or feedback form.
 
@@ -31,8 +30,8 @@ textarea {
   max-width: 100%;
   line-height: 1.5;
   border-radius: 5px;
-  border: 1px solid #ccc;
-  box-shadow: 1px 1px 1px #999;
+  border: 1px solid #cccccc;
+  box-shadow: 1px 1px 1px #999999;
 }
 
 label {
@@ -84,7 +83,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     For more information, see the [`dirname` attribute](/en-US/docs/Web/HTML/Reference/Attributes/dirname).
 - [`disabled`](/en-US/docs/Web/HTML/Reference/Attributes/disabled)
   - : This Boolean attribute indicates that the user cannot interact with the control. If this attribute is not specified, the control inherits its setting from the containing element, for example {{ HTMLElement("fieldset") }}; if there is no containing element when the `disabled` attribute is set, the control is enabled.
-- `form`
+- [`form`](/en-US/docs/Web/HTML/Reference/Attributes/form)
   - : The form element that the `<textarea>` element is associated with (its "form owner"). The value of the attribute must be the `id` of a form element in the same document. If this attribute is not specified, the `<textarea>` element must be a descendant of a form element. This attribute enables you to place `<textarea>` elements anywhere within a document, not just as descendants of form elements.
 - [`maxlength`](/en-US/docs/Web/HTML/Reference/Attributes/maxlength)
   - : The maximum string length (measured in {{glossary("UTF-16", "UTF-16 code units")}}) that the user can enter. If this value isn't specified, the user can enter an unlimited number of characters.

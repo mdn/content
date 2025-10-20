@@ -3,9 +3,8 @@ title: font-size-adjust
 slug: Web/CSS/font-size-adjust
 page-type: css-property
 browser-compat: css.properties.font-size-adjust
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`font-size-adjust`** [CSS](/en-US/docs/Web/CSS) property provides a way to modify the size of lowercase letters relative to the size of uppercase letters, which defines the overall {{cssxref("font-size")}}. This property is useful for situations where font fallback can occur.
 
@@ -118,12 +117,12 @@ Similarly, the cap-height to font size ratio in Verdana is `0.73` and that in Ti
 
 ```css
 .times {
-  font-family: Times, serif;
+  font-family: "Times", serif;
   font-size: 14px;
 }
 
 .verdana {
-  font-family: Verdana, sans-serif;
+  font-family: "Verdana", sans-serif;
   font-size: 14px;
 }
 
@@ -190,7 +189,7 @@ div {
 }
 
 p {
-  font-family: Futura, sans-serif;
+  font-family: "Futura", sans-serif;
   font-size: 50px;
 }
 

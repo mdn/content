@@ -3,9 +3,8 @@ title: "@media"
 slug: Web/CSS/@media
 page-type: css-at-rule
 browser-compat: css.at-rules.media
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`@media`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) can be used to apply part of a style sheet based on the result of one or more [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries). With it, you specify a media query and a block of CSS to apply to the document if and only if the media query matches the device on which the content is being used.
 
@@ -84,7 +83,7 @@ Except when using the `only` logical operator, the media type is optional and th
   - : Intended primarily for screens.
 
 > [!NOTE]
-> CSS2.1 and [Media Queries 3](https://drafts.csswg.org/mediaqueries-3/#background) defined several additional media types (`tty`, `tv`, `projection`, `handheld`, `braille`, `embossed`, and {{cssxref("@media/aural", "aural")}}), but they were deprecated in [Media Queries 4](https://drafts.csswg.org/mediaqueries/#media-types) and shouldn't be used.
+> CSS2.1 and [Media Queries 3](https://drafts.csswg.org/mediaqueries-3/#background) defined several additional media types (`tty`, `tv`, `projection`, `handheld`, `braille`, `embossed`, and `aural`, but they were deprecated in [Media Queries 4](https://drafts.csswg.org/mediaqueries/#media-types) and shouldn't be used.
 
 ### Media features
 
@@ -123,6 +122,8 @@ Media feature expressions test for their presence, value, or range of values, an
   - : Does the device use a grid or bitmap screen?
 - {{cssxref("@media/height", "height")}}
   - : Height of the viewport.
+- {{cssxref("@media/horizontal-viewport-segments", "horizontal-viewport-segments")}}
+  - : Detects whether the device has a specified number of viewport segments laid out horizontally.
 - {{cssxref("@media/hover", "hover")}}
   - : Does the primary input mechanism allow the user to hover over elements?
 - {{cssxref("@media/inverted-colors", "inverted-colors")}}
@@ -162,6 +163,8 @@ Media feature expressions test for their presence, value, or range of values, an
   - : Detects the shape of the device to distinguish rectangular and round displays.
 - {{cssxref("@media/update", "update")}}
   - : How frequently the output device can modify the appearance of content.
+- {{cssxref("@media/vertical-viewport-segments", "vertical-viewport-segments")}}
+  - : Detects whether the device has a specified number of viewport segments laid out vertically. Added in Media Queries Level 5.
 - {{cssxref("@media/video-dynamic-range", "video-dynamic-range")}}
   - : Combination of brightness, contrast ratio, and color depth that are supported by the video plane of user agent and the output device. Added in Media Queries Level 5.
 - {{cssxref("@media/width", "width")}}
@@ -219,9 +222,9 @@ They include {{HTTPHeader("Sec-CH-Prefers-Color-Scheme")}} and {{HTTPHeader("Sec
 
 ## Accessibility
 
-To best accommodate people who adjust a site's text size, use [`em`](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types)s when you need a {{cssxref("&lt;length&gt;")}} for your [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries).
+To best accommodate people who adjust a site's text size, use [`em`](/en-US/docs/Web/CSS/CSS_values_and_units/Numeric_data_types)s when you need a {{cssxref("&lt;length&gt;")}} for your [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries).
 
-Both [`em`](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types) and [`px`](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types) are valid units, but [`em`](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types) works better if the user changes the browser text size.
+Both [`em`](/en-US/docs/Web/CSS/CSS_values_and_units/Numeric_data_types) and [`px`](/en-US/docs/Web/CSS/CSS_values_and_units/Numeric_data_types) are valid units, but [`em`](/en-US/docs/Web/CSS/CSS_values_and_units/Numeric_data_types) works better if the user changes the browser text size.
 
 Also consider media queries or [HTTP user agent client hints](/en-US/docs/Web/HTTP/Guides/Client_hints#user_agent_client_hints) to improve the user's experience.
 For example, the media query [`prefers-reduced-motion`](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) or the equivalent HTTP header {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}) can be used to minimize the amount of animation or motion used based on user preferences.

@@ -4,9 +4,8 @@ short-title: lastIndexOf()
 slug: Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.lastIndexOf
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`lastIndexOf()`** method of {{jsxref("String")}} values searches this string and returns the index of the last occurrence of the specified substring. It takes an optional starting position and returns the last occurrence of the specified substring at an index less than or equal to the specified number.
 
@@ -18,7 +17,7 @@ const paragraph = "I think Ruth's dog is cuter than your dog!";
 const searchTerm = "dog";
 
 console.log(
-  `Index of the last ${searchTerm} is ${paragraph.lastIndexOf(searchTerm)}`,
+  `Index of the last "${searchTerm}" is ${paragraph.lastIndexOf(searchTerm)}`,
 );
 // Expected output: "Index of the last "dog" is 38"
 ```

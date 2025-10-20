@@ -5,9 +5,10 @@ page-type: css-property
 status:
   - experimental
 browser-compat: css.properties.text-spacing-trim
+sidebar: cssref
 ---
 
-{{CSSRef}}{{seecompattable}}
+{{seecompattable}}
 
 The **`text-spacing-trim`** [CSS](/en-US/docs/Web/CSS) property controls the internal spacing set on Chinese/Japanese/Korean (CJK) punctuation characters between adjacent characters (kerning) and at the start or end of text lines.
 
@@ -172,5 +173,6 @@ p {
 
 ## See also
 
-- [`ic`](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#local_font-relative_lengths) and [`ric`](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#root_font-relative_lengths) units
-- [CSS Text](/en-US/docs/Web/CSS/CSS_text) module
+- {{CSSXref("text-autospace")}}
+- [`ic`](/en-US/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#local_font-relative_lengths) and [`ric`](/en-US/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#root_font-relative_lengths) units
+- [CSS text](/en-US/docs/Web/CSS/CSS_text) module

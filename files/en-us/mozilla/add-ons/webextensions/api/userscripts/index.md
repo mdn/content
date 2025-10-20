@@ -3,9 +3,8 @@ title: userScripts
 slug: Mozilla/Add-ons/WebExtensions/API/userScripts
 page-type: webextension-api
 browser-compat: webextensions.api.userScripts
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Use this API to register user scripts, third-party scripts designed to manipulate webpages or provide new features. Registering a user script instructs the browser to attach the script to pages that match the URL patterns specified during registration.
 
@@ -79,6 +78,8 @@ When an extension updates, user scripts are cleared. To restore scripts, add cod
   - : Unregisters user scripts registered by the extension.
 - {{WebExtAPIRef("userScripts.update()")}}
   - : Updates user scripts registered by the extension.
+- {{WebExtAPIRef("userScripts.execute()")}}
+  - : Injects a user script into a target context.
 
 {{WebExtExamples("h2")}}
 

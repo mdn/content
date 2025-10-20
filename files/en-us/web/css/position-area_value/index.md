@@ -3,11 +3,10 @@ title: <position-area>
 slug: Web/CSS/position-area_value
 page-type: css-type
 browser-compat: css.properties.position-area
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`<position-area>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) defines the cell or spanned cells of a **position-area grid**, a 3x3 grid whose center cell is an anchor element.
+The **`<position-area>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types) defines the cell or spanned cells of a **position-area grid**, a 3x3 grid whose center cell is an anchor element.
 
 The `<position-area>` keyword values can be set as the value of the {{cssxref("position-area")}} property to place an anchor-positioned element in a specific location relative to its associated anchor element.
 
@@ -130,7 +129,7 @@ For example, `top span-left` spans the top-center and top-left grid cells.
 If only a single physical keyword is specified in the `position-area` value, the other value is implied as follows:
 
 - `left`, `right`, `top`, or `bottom`
-  - : The other value defaults to [`span-all`](#span-all_2), causing the element to span all three tiles of the grid or row it was initially placed in. For example, `left` is equivalent to `left span-all`.
+  - : The other value defaults to [`span-all`](#span-all_2), causing the element to span all three tiles of the column or row it was initially placed in. For example, `left` is equivalent to `left span-all`.
 
 - `center`, `span-left`, `span-right`, `span-top`, or `span-bottom`
   - : The other value defaults to `center`. For example, `span-left` is equivalent to `center span-left` and `center` is equivalent to `center center`.

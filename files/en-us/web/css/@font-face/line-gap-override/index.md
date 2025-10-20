@@ -3,11 +3,10 @@ title: line-gap-override
 slug: Web/CSS/@font-face/line-gap-override
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.font-face.line-gap-override
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`line-gap-override`** CSS descriptor for the {{cssxref("@font-face")}} at-rule defines the line-gap metric for the font. The line-gap metric is the font recommended line-gap or external leading.
+The **`line-gap-override`** [CSS](/en-US/docs/Web/CSS) descriptor for the {{cssxref("@font-face")}} at-rule defines the line-gap metric for the font. The line-gap metric is the font recommended line-gap or external leading.
 
 ## Syntax
 
@@ -39,13 +38,13 @@ The `line-gap-override` property can help when overriding the metrics of a fallb
 
 ```css
 @font-face {
-  font-family: web-font;
+  font-family: "web-font";
   src: url("https://example.com/font.woff");
 }
 
 @font-face {
-  font-family: local-font;
-  src: local(Local Font);
+  font-family: "local-font";
+  src: local("Local Font");
   line-gap-override: 125%;
 }
 ```

@@ -3,9 +3,8 @@ title: table-layout
 slug: Web/CSS/table-layout
 page-type: css-property
 browser-compat: css.properties.table-layout
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`table-layout`** [CSS](/en-US/docs/Web/CSS) property sets the algorithm used to lay out {{htmlelement("table")}} cells, rows, and columns.
 
@@ -60,12 +59,12 @@ width: 100%;
 
 ```css interactive-example
 table {
-  border: 1px solid #139;
+  border: 1px solid #113399;
 }
 
 th,
 td {
-  border: 2px solid #a19;
+  border: 2px solid #aa1199;
   padding: 0.25rem 0.5rem;
 }
 ```

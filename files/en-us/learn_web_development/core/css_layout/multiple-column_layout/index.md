@@ -53,8 +53,8 @@ body {
   max-width: 900px;
   margin: 2em auto;
   font:
-    0.9em/1.2 Arial,
-    Helvetica,
+    0.9em/1.2 "Helvetica",
+    "Arial",
     sans-serif;
 }
 ```
@@ -108,8 +108,8 @@ body {
   max-width: 900px;
   margin: 2em auto;
   font:
-    0.9em/1.2 Arial,
-    Helvetica,
+    0.9em/1.2 "Helvetica",
+    "Arial",
     sans-serif;
 }
 ```
@@ -172,8 +172,8 @@ body {
   max-width: 900px;
   margin: 2em auto;
   font:
-    0.9em/1.2 Arial,
-    Helvetica,
+    0.9em/1.2 "Helvetica",
+    "Arial",
     sans-serif;
 }
 ```
@@ -224,8 +224,8 @@ body {
   max-width: 900px;
   margin: 2em auto;
   font:
-    0.9em/1.2 Arial,
-    Helvetica,
+    0.9em/1.2 "Helvetica",
+    "Arial",
     sans-serif;
 }
 .container {
@@ -290,8 +290,8 @@ body {
   max-width: 900px;
   margin: 2em auto;
   font:
-    0.9em/1.2 Arial,
-    Helvetica,
+    0.9em/1.2 "Helvetica",
+    "Arial",
     sans-serif;
 }
 ```
@@ -386,7 +386,7 @@ body {
   background-color: rgb(207 232 220);
   border: 2px solid rgb(79 185 227);
   padding: 10px;
-  margin: 0 0 1em 0;
+  margin-bottom: 1em;
 }
 ```
 
@@ -402,7 +402,7 @@ To control this behavior, we can use properties from the [CSS Fragmentation](/en
   background-color: rgb(207 232 220);
   border: 2px solid rgb(79 185 227);
   padding: 10px;
-  margin: 0 0 1em 0;
+  margin-bottom: 1em;
 }
 ```
 
@@ -414,8 +414,8 @@ body {
   max-width: 900px;
   margin: 2em auto;
   font:
-    0.9em/1.2 Arial,
-    Helvetica,
+    0.9em/1.2 "Helvetica",
+    "Arial",
     sans-serif;
 }
 ```

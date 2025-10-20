@@ -1,5 +1,6 @@
 ---
-title: Firefox 77 for developers
+title: Firefox 77 release notes for developers
+short-title: Firefox 77
 slug: Mozilla/Firefox/Releases/77
 page-type: firefox-release-notes
 sidebar: firefox
@@ -72,7 +73,3 @@ This article provides information about the changes in Firefox 77 that will affe
 
 - Use of the `unlimitedStorage` permission no longer results in a prompt during extension installation or update. See [Requesting the right permissions](https://extensionworkshop.com/documentation/develop/request-the-right-permissions/) for more information. ([Firefox bug 1630413](https://bugzil.la/1630413))
 - Changes related to [`SameSite` cookies](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) mean that when setting [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) to bypass tracking protection for extension pages hosts must be specified as a full domain or with wildcards. However, for Content scripts tracking protection can only be bypassed for hosts specified with a full domain.
-
-## Older versions
-
-{{Firefox_for_developers}}

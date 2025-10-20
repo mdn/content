@@ -1,5 +1,6 @@
 ---
-title: Firefox 39 for developers
+title: Firefox 39 release notes for developers
+short-title: Firefox 39
 slug: Mozilla/Firefox/Releases/39
 page-type: firefox-release-notes
 sidebar: firefox
@@ -91,7 +92,3 @@ _No change._
 ## Changes for add-on and Mozilla developers
 
 _No change._
-
-## Older versions
-
-{{Firefox_for_developers}}

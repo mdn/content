@@ -3,16 +3,15 @@ title: font-family
 slug: Web/CSS/font-family
 page-type: css-property
 browser-compat: css.properties.font-family
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`font-family`** [CSS](/en-US/docs/Web/CSS) property specifies a prioritized list of one or more font family names and/or generic family names for the selected element.
 
 {{InteractiveExample("CSS Demo: font-family")}}
 
 ```css interactive-example-choice
-font-family: Georgia, serif;
+font-family: "Georgia", serif;
 ```
 
 ```css interactive-example-choice
@@ -79,7 +78,6 @@ font-family: ui-serif;
 font-family: ui-sans-serif;
 font-family: ui-monospace;
 font-family: ui-rounded;
-font-family: emoji;
 font-family: math;
 font-family: fangsong;
 
@@ -137,6 +135,8 @@ font-family: "Gill Sans Extrabold", sans-serif;
 
     - `system-ui`
       - : Glyphs are taken from the default user interface font on a given platform. Because typographic traditions vary widely across the world, this generic is provided for typefaces that don't map cleanly into the other generics.
+        > [!NOTE]
+        > As the name implies, `system-ui` is intended to make UI elements look like native apps, and not for typesetting large paragraphs of text. It may cause the displayed typeface to be undesirable for some users—for example, the default Windows CJK font may render Latin scripts poorly, and the `lang` attribute may not affect the displayed font. Some operating systems do not allow customizing `system-ui`, while browsers generally allow customizing the `sans-serif` font family. For large paragraphs, use `sans-serif` or some other non-UI font family instead.
     - `ui-serif`
       - : The default user interface serif font.
     - `ui-sans-serif`
@@ -147,8 +147,6 @@ font-family: "Gill Sans Extrabold", sans-serif;
       - : The default user interface font that has rounded features.
     - `math`
       - : This is for the particular stylistic concerns of representing mathematics: superscript and subscript, brackets that cross several lines, nesting expressions, and double struck glyphs with distinct meanings.
-    - `emoji`
-      - : Fonts that are specifically designed to render emoji.
     - `fangsong`
       - : A particular style of Chinese characters that are between serif-style Song and cursive-style Kai forms. This style is often used for government documents.
 
@@ -166,15 +164,15 @@ font-family: "Gill Sans Extrabold", sans-serif;
 
 ```css
 .serif {
-  font-family: Times, "Times New Roman", Georgia, serif;
+  font-family: "Times", "Times New Roman", "Georgia", serif;
 }
 
 .sansserif {
-  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-family: "Verdana", "Helvetica", "Arial", sans-serif;
 }
 
 .monospace {
-  font-family: "Lucida Console", Courier, monospace;
+  font-family: "Lucida Console", "Courier New", monospace;
 }
 
 .cursive {
@@ -183,10 +181,6 @@ font-family: "Gill Sans Extrabold", sans-serif;
 
 .fantasy {
   font-family: fantasy;
-}
-
-.emoji {
-  font-family: emoji;
 }
 
 .math {
@@ -210,8 +204,6 @@ font-family: "Gill Sans Extrabold", sans-serif;
 <div class="fantasy">This is an example of a fantasy font.</div>
 
 <div class="math">This is an example of a math font.</div>
-
-<div class="emoji">This is an example of an emoji font.</div>
 
 <div class="fangsong">This is an example of a fangsong font.</div>
 ```
@@ -258,5 +250,6 @@ font-family:
 
 - {{cssxref("font-style")}}
 - {{cssxref("font-weight")}}
+- {{cssxref("font-variant-emoji")}}
 - SVG {{SVGAttr("font-family")}} attribute
 - [Learn: Fundamental text and font styling](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals)

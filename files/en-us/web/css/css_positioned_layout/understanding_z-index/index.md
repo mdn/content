@@ -2,9 +2,8 @@
 title: Understanding z-index
 slug: Web/CSS/CSS_positioned_layout/Understanding_z-index
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 In the most basic cases, when text, images, and other elements are arranged on the page without overlapping, [HTML](/en-US/docs/Web/HTML) pages can be considered two-dimensional. In such cases, there is a single rendering flow, and all elements are aware of the space taken by others. CSS isn't that simple — CSS positioning, transformation, containment, and other features can cause elements to overlap. In this guide, we introduce the {{cssxref("z-index")}} property, which lets you place elements in front or behind other elements in the same [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context).
 
@@ -46,7 +45,7 @@ div {
   line-height: 100px;
   font-size: 40px;
   text-align: center;
-  font-family: arial, helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 #div1 {

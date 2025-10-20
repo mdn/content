@@ -3,9 +3,8 @@ title: resize
 slug: Web/CSS/resize
 page-type: css-property
 browser-compat: css.properties.resize
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`resize`** [CSS](/en-US/docs/Web/CSS) property sets whether an element is resizable, and if so, in which directions.
 
@@ -35,13 +34,13 @@ resize: none;
 
 ```css interactive-example
 #example-element {
-  background: linear-gradient(135deg, #0ff 0%, #0ff 94%, #fff 95%);
+  background: linear-gradient(135deg, cyan 0%, cyan 94%, white 95%);
   border: 3px solid #c5c5c5;
   overflow: auto;
   width: 250px;
   height: 250px;
   font-weight: bold;
-  color: #000;
+  color: black;
   display: flex;
   align-items: center;
   justify-content: center;

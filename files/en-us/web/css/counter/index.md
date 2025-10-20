@@ -3,11 +3,10 @@ title: counter()
 slug: Web/CSS/counter
 page-type: css-function
 browser-compat: css.types.counter
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`counter()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) returns a string representing the current value of the named counter, if there is one.
+The **`counter()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) returns a string representing the current value of the named counter, if there is one.
 
 The `counter()` function is generally used within [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) through the {{cssxref("content")}} property but, theoretically, it can be used wherever a [`<string>`](/en-US/docs/Web/CSS/string) value is supported.
 

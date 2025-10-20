@@ -8,7 +8,7 @@ status:
 browser-compat: api.LanguageDetector.detect
 ---
 
-{{APIRef("Translator and Language Detector APIs")}}{{SeeCompatTable}}
+{{APIRef("Translator and Language Detector APIs")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`detect()`** method of the {{domxref("LanguageDetector")}} interface detects the closest matching language or languages that a given text string is most likely to be written in.
 
@@ -33,7 +33,7 @@ detect(input, options)
 A {{jsxref("Promise")}} that fulfills with an array of objects representing the detected languages. Each object contains the following properties:
 
 - `detectedLanguage`
-  - : A [BCP 47 language tag](https://en.wikipedia.org/wiki/IETF_language_tag#List_of_common_primary_language_subtags) representing the detected language.
+  - : A {{glossary("BCP 47 language tag")}} representing the detected language.
 - `confidence`
   - : A number between `0` and `1` representing the AI model's confidence that the detected language is correct.
 
@@ -45,7 +45,7 @@ The last array element returned will always have a `detectedLanguage` value of `
 
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the current {{domxref("Document")}} is not active.
-- `QuotaExceededError` {{domxref("DOMException")}}
+- {{domxref("QuotaExceededError")}}
   - : Thrown if the language detection operation exceeds the available {{domxref("LanguageDetector.inputQuota", "inputQuota")}}.
 
 ## Examples

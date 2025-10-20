@@ -3,9 +3,8 @@ title: Using CSS animations
 short-title: Using animations
 slug: Web/CSS/CSS_animations/Using_CSS_animations
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 **CSS animations** make it possible to animate transitions from one CSS style configuration to another. Animations consist of two components: a style describing the CSS animation and a set of keyframes that indicate the start and end states of the animation's style, as well as possible intermediate waypoints.
 
@@ -332,9 +331,9 @@ We'll use JavaScript code to listen for all three possible animation events. Thi
 
 ```js
 const element = document.getElementById("watch-me");
-element.addEventListener("animationstart", listener, false);
-element.addEventListener("animationend", listener, false);
-element.addEventListener("animationiteration", listener, false);
+element.addEventListener("animationstart", listener);
+element.addEventListener("animationend", listener);
+element.addEventListener("animationiteration", listener);
 
 element.className = "slide-in";
 ```

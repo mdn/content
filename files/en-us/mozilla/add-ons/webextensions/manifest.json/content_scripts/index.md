@@ -3,9 +3,8 @@ title: content_scripts
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
 page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.content_scripts
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
   <tbody>
@@ -41,11 +40,11 @@ Instructs the browser to load [content scripts](/en-US/docs/Mozilla/Add-ons/WebE
 
 This key is an array. Each item is an object which:
 
-- **must** contain a key named **`matches`**, which specifies the URL patterns to be matched for the scripts to be loaded;
-- **may** contain keys named **`js`** and **`css`**, which list scripts and stylesheets to be loaded into matching pages; and
+- **must** contain a property named **`matches`**, which specifies the URL patterns to be matched for the scripts to be loaded;
+- **may** contain properties named **`js`** and **`css`**, which list scripts and stylesheets to be loaded into matching pages; and
 - **may** contain a number of other properties that control aspects of how and when content scripts are loaded.
 
-This table details all the keys you can include.
+This table details all the properties you can include.
 
 <table class="fullwidth-table standard-table">
   <thead>
@@ -111,6 +110,26 @@ This table details all the keys you can include.
             injected into.
           </p>
         </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a id="css_origin"><code>css_origin</code></a>
+        <br />{{optional_inline}}
+      </td>
+      <td><code>String</code></td>
+      <td>
+        <p>
+          The style origin for the CSS injection:
+          <ul>
+            <li><code>"user"</code>, to add as a user stylesheet.</li>
+            <li><code>"author"</code>, to add as an author stylesheet.</li>
+          </ul>
+          Defaults to <code>"author"</code>.
+        </p>
+        <p>
+          This property is case incentive insensitive in Firefox and Safari.
+        </p>
       </td>
     </tr>
     <tr>
@@ -311,7 +330,7 @@ This table details all the keys you can include.
 Registered objects in `content_scripts` are injected into matching web pages at the time specified by `run_at` (first `document_start`, then `document_end`, and finally `document_idle`):
 
 - In the order specified in the `content_scripts` array, for each object with a matching `run_at` value, then:
-  - CSS is applied in the order specified in its `css` array.
+  - CSS is applied in the order specified in its `css` array. By default CSS from the `"author"` origin is given priority unless `css_origin` is set to `"user"`.
   - JavaScript code is executed in the order specified in its `js` array.
 
 For example, in this key specification:

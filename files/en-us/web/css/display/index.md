@@ -3,9 +3,8 @@ title: display
 slug: Web/CSS/display
 page-type: css-property
 browser-compat: css.properties.display
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`display`** [CSS](/en-US/docs/Web/CSS) property sets whether an element is treated as a [block or inline box](/en-US/docs/Web/CSS/CSS_display/Flow_layout) and the layout used for its children, such as [flow layout](/en-US/docs/Web/CSS/CSS_display/Flow_layout), [grid](/en-US/docs/Web/CSS/CSS_grid_layout) or [flex](/en-US/docs/Web/CSS/CSS_flexible_box_layout).
 
@@ -58,7 +57,7 @@ display: grid;
 }
 
 code {
-  background: #8888;
+  background: #88888888;
 }
 
 #example-element {
@@ -147,7 +146,7 @@ The keyword values can be grouped into six value categories.
 ### Inside
 
 - {{CSSxRef("&lt;display-inside&gt;")}}
-  - : These keywords specify the element's inner display type, which defines the type of formatting context that its contents are laid out in (assuming it is a non-replaced element):
+  - : These keywords specify the element's inner display type, which defines the type of formatting context that its contents are laid out in (assuming it is a non-replaced element). When one of these keywords is used by itself as a single value, the element's outer display type defaults to `block` (with the exception of `ruby`, which defaults to `inline`).
     - `flow`
       - : The element lays out its contents using flow layout (block-and-inline layout).
 
@@ -426,7 +425,7 @@ We have included {{cssxref("padding")}} and {{cssxref("background-color")}} on t
 
 ```css
 html {
-  font-family: helvetica, arial, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   letter-spacing: 1px;
   padding-top: 10px;
 }

@@ -4,9 +4,8 @@ short-title: findLastIndex()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findLastIndex
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.findLastIndex
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`findLastIndex()`** method of {{jsxref("Array")}} instances iterates the array in reverse order and returns the index of the first element that satisfies the provided testing function.
 If no elements satisfy the testing function, -1 is returned.
@@ -16,11 +15,11 @@ See also the {{jsxref("Array/findLast", "findLast()")}} method, which returns th
 {{InteractiveExample("JavaScript Demo: Array.prototype.findLastIndex()", "shorter")}}
 
 ```js interactive-example
-const array1 = [5, 12, 50, 130, 44];
+const array = [5, 12, 50, 130, 44];
 
 const isLargeNumber = (element) => element > 45;
 
-console.log(array1.findLastIndex(isLargeNumber));
+console.log(array.findLastIndex(isLargeNumber));
 // Expected output: 3
 // Index of element with value: 130
 ```

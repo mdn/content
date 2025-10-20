@@ -1,5 +1,6 @@
 ---
-title: Firefox 19 for developers
+title: Firefox 19 release notes for developers
+short-title: Firefox 19
 slug: Mozilla/Firefox/Releases/19
 page-type: firefox-release-notes
 sidebar: firefox
@@ -60,7 +61,3 @@ Support for XForms has been [**removed**](https://www.philipp-wagner.com/blog/20
 
 - [Firefox 19 Beta Release Notes](https://website-archive.mozilla.org/www.mozilla.org/firefox_releasenotes/en-us/firefox/19.0beta/releasenotes/)
 - [Add-on Compatibility for Firefox 19](https://blog.mozilla.org/addons/2013/02/07/compatibility-for-firefox-19/)
-
-### Older versions
-
-{{Firefox_for_developers}}

@@ -3,9 +3,8 @@ title: identity.launchWebAuthFlow
 slug: Mozilla/Add-ons/WebExtensions/API/identity/launchWebAuthFlow
 page-type: webextension-api-function
 browser-compat: webextensions.api.identity.launchWebAuthFlow
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Performs the first part of an [OAuth2](https://oauth.net/2/) flow, including user authentication and client authorization.
 
@@ -58,10 +57,6 @@ let authorizing = browser.identity.launchWebAuthFlow(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). If the extension is authorized successfully, this will be fulfilled with a string containing the redirect URL. The URL will include a parameter that either is an access token or can be exchanged for an access token, using the documented flow for the particular service provider.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This function authorizes an extension to access a user's Google data, according to the documentation at <https://developers.google.com/identity/protocols/oauth2/javascript-implicit-flow>. Validation of the returned access token isn't shown here:
@@ -94,6 +89,10 @@ function getAccessToken() {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`identity`](https://developer.chrome.com/docs/extensions/reference/api/identity) API.

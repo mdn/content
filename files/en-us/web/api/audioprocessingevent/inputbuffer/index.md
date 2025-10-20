@@ -8,7 +8,7 @@ status:
 browser-compat: api.AudioProcessingEvent.inputBuffer
 ---
 
-{{APIRef}}{{Deprecated_header}}
+{{APIRef("Web Audio API")}}{{Deprecated_header}}
 
 The **`inputBuffer`** read-only property of the {{domxref("AudioProcessingEvent")}} interface represents the input buffer of an audio processing event.
 

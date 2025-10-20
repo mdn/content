@@ -3,11 +3,10 @@ title: :has()
 slug: Web/CSS/:has
 page-type: css-pseudo-class
 browser-compat: css.selectors.has
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The functional **`:has()`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element if any of the [relative selectors](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#relative_selector) that are passed as an argument match at least one element when anchored against this element. This pseudo-class presents a way of selecting a parent element or a previous sibling element with respect to a reference element by taking a [relative selector list](/en-US/docs/Web/CSS/Selector_list#relative_selector_list) as an argument.
+The functional **`:has()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element if any of the [relative selectors](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#relative_selector) that are passed as an argument match at least one element when anchored against this element. This pseudo-class presents a way of selecting a parent element or a previous sibling element with respect to a reference element by taking a [relative selector list](/en-US/docs/Web/CSS/Selector_list#relative_selector_list) as an argument.
 
 ```css
 /* Selects an h1 heading with a
@@ -35,6 +34,30 @@ The `:has()` pseudo-class cannot be nested within another `:has()`.
 Pseudo-elements are also not valid selectors within `:has()` and pseudo-elements are not valid anchors for `:has()`. This is because many pseudo-elements exist conditionally based on the styling of their ancestors and allowing these to be queried by `:has()` can introduce cyclic querying.
 
 ## Examples
+
+### Selecting a parent element
+
+You may be looking for a "parent [combinator](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#combinators)", which allows you to go up the DOM tree and select the parent of a specific element. The `:has()` pseudo-class does that by using `parent:has(child)` (for any parent) or `parent:has(> child)` (for direct parent). This example shows how to style a `<section>` element when it contains a child with the `featured` class.
+
+```html
+<section>
+  <article class="featured">Featured content</article>
+  <article>Regular content</article>
+</section>
+<section>
+  <article>Regular content</article>
+</section>
+```
+
+```css
+section:has(.featured) {
+  border: 2px solid blue;
+}
+```
+
+### Result
+
+{{EmbedLiveSample('Selecting a parent element', , 200)}}
 
 ### With the sibling combinator
 
@@ -217,6 +240,90 @@ The analogous construct in CSS would be `.abc:has(+ .xyz)`: it selects the eleme
 ### Negative lookahead (?!pattern)
 
 Similarly, for the negative lookahead case, in the regular expression `abc(?!xyz)`, the string `abc` is matched only if it is _not_ followed by `xyz`. The analogous CSS construct `.abc:has(+ :not(.xyz))` doesn't select the element `.abc` if the next element is `.xyz`.
+
+## Performance considerations
+
+Certain uses of the `:has()` pseudo-class can significantly impact page performance, particularly during dynamic updates (DOM mutations). Browser engines must re-evaluate `:has()` selectors when the DOM changes, and complex or poorly constrained selectors can lead to expensive computations.
+
+### Avoid broad anchoring
+
+The anchor selector (the `A` in `A:has(B)`) should not be an element that has too many children, like `body`, `:root`, or `*`. Anchoring `:has()` to very general selectors can degrade performance because any DOM change within the entire subtree of a broadly selected element requires the browser to re-check the `:has()` condition.
+
+```css example-bad
+/* Avoid anchoring :has() to broad elements */
+body:has(.sidebar) {
+  /* styles */
+}
+:root:has(.content) {
+  /* styles */
+}
+*:has(.item) {
+  /* styles */
+}
+```
+
+Instead, anchor `:has()` to specific elements like `.container` or `.gallery` to reduce the scope and improve performance.
+
+```css example-good
+/* Use specific containers to limit scope */
+.container:has(.sidebar-expanded) {
+  /* styles */
+}
+.content-wrapper:has(> article[data-priority="high"]) {
+  /* styles */
+}
+.gallery:has(> img[data-loaded="false"]) {
+  /* styles */
+}
+```
+
+### Minimize subtree traversals
+
+The inner selector (the `B` in `A:has(B)`) should use combinators like `>` or `+` to limit traversal. When the selector inside `:has()` is not tightly constrained, the browser might need to traverse the entire subtree of the anchor element on every DOM mutation to check if the condition still holds.
+
+In this example, any change within `.ancestor` requires checking all descendants for `.foo`:
+
+```css example-bad
+/* May trigger full subtree traversal */
+.ancestor:has(.foo) {
+  /* styles */
+}
+```
+
+Using child or sibling combinators limits the scope of the inner selector, reducing the performance cost of DOM mutations. In this example, the browser only needs to check direct children or a specific sibling's descendants:
+
+```css example-good
+/* More constrained - limits traversal */
+.ancestor:has(> .foo) {
+  /* direct child */
+}
+.ancestor:has(+ .sibling .foo) {
+  /* descendant of adjacent sibling */
+}
+```
+
+Certain inner selectors can force the browser to traverse up the ancestor chain for every DOM mutation, looking for potential anchors that might need updating. This happens when the structure implies a need to check ancestors of the mutated element.
+
+In this example, any DOM change requires checking if the changed element is any element (`*`) that is a direct child of `.foo`, and if its parent (or further ancestors) is `.ancestor`.
+
+```css example-bad
+/* Might trigger ancestor traversal */
+.ancestor:has(.foo > *) {
+  /* styles */
+}
+```
+
+Constraining the inner selector with specific classes or direct child combinators (e.g., `.specific-child` in the next snippet) reduces expensive ancestor traversals by limiting the browser's check to a well-defined element, improving performance.
+
+```css example-good
+/* Constrain the inner selector to avoid ancestor traversals */
+.ancestor:has(.foo > .specific-child) {
+  /* styles */
+}
+```
+
+> [!NOTE]
+> These performance characteristics may improve as browsers optimize `:has()` implementations, but the fundamental constraints remain: `:has()` needs to traverse a whole subtree, so you need to minimize the subtree's size. In a selector like `A:has(B)`, make sure your `A` does not have too many children, and make sure your `B` is tightly constrained to avoid unnecessary traversal.
 
 ## Specifications
 

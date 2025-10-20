@@ -3,9 +3,8 @@ title: font-variant-ligatures
 slug: Web/CSS/font-variant-ligatures
 page-type: css-property
 browser-compat: css.properties.font-variant-ligatures
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`font-variant-ligatures`** [CSS](/en-US/docs/Web/CSS) property controls which {{Glossary("ligature", "ligatures")}} and {{Glossary("contextual forms")}} are used in the textual content of the elements it applies to. This leads to more harmonized forms in the resulting text.
 
@@ -168,7 +167,7 @@ The `font-variant-ligatures` property is specified as `normal`, `none`, or one o
 
 ```css
 p {
-  font-family: Lora, serif;
+  font-family: "Lora", serif;
 }
 .normal {
   font-variant-ligatures: normal;

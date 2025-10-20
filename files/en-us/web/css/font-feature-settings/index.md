@@ -3,9 +3,8 @@ title: font-feature-settings
 slug: Web/CSS/font-feature-settings
 page-type: css-property
 browser-compat: css.properties.font-feature-settings
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`font-feature-settings`** [CSS](/en-US/docs/Web/CSS) property controls advanced typographic features in OpenType fonts.
 
@@ -166,7 +165,7 @@ td.tabular {
 
 /* enable stylistic set 7 */
 .fancy-style {
-  font-family: Gabriola, cursive;
+  font-family: "Gabriola", cursive;
   font-feature-settings: "ss07";
 }
 ```

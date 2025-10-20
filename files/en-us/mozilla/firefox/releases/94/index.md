@@ -1,5 +1,6 @@
 ---
-title: Firefox 94 for developers
+title: Firefox 94 release notes for developers
+short-title: Firefox 94
 slug: Mozilla/Firefox/Releases/94
 page-type: firefox-release-notes
 sidebar: firefox
@@ -44,7 +45,3 @@ No notable changes
 
 - Support for `partitionKey`, the first-party URL of a cookie when it's in storage that is partitioned by top-level site, is added to {{WebExtAPIRef('cookies.get')}}, {{WebExtAPIRef('cookies.getAll')}}, {{WebExtAPIRef('cookies.set')}}, {{WebExtAPIRef('cookies.remove')}}, and {{WebExtAPIRef('cookies.cookie')}}. ([Firefox bug 1669716](https://bugzil.la/1669716))
 - When a context menu is activated, {{WebExtAPIRef('menus.OnClickData','menus.OnClickData.srcUrl')}} returns the raw value of the `src` attribute of the clicked element, instead of the current URL (after redirects). ([Firefox bug 1659155](https://bugzil.la/1659155))
-
-## Older versions
-
-{{Firefox_for_developers}}

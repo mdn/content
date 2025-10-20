@@ -3,9 +3,8 @@ title: runtime.onConnect
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onConnect
 page-type: webextension-api-event
 browser-compat: webextensions.api.runtime.onConnect
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when a connection is made with either an extension process or a content script.
 
@@ -34,10 +33,6 @@ Events have three functions:
   - : The function called when this event occurs. The function is passed this argument:
     - `port`
       - : A {{WebExtAPIRef('runtime.Port')}} object connecting the current script to the other context it is connecting to.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -95,6 +90,10 @@ browser.browserAction.onClicked.addListener(() => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.

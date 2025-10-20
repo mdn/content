@@ -3,9 +3,8 @@ title: <meta name="robots">
 short-title: robots
 slug: Web/HTML/Reference/Elements/meta/name/robots
 page-type: html-attribute-value
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`robots`** value for the [`name`](/en-US/docs/Web/HTML/Reference/Elements/meta/name) attribute of the {{htmlelement("meta")}} element (often called a "robots tag") defines the crawl and indexing behavior that web {{glossary("Crawler", "crawlers")}} should use with the page.
 If specified, you define instructions for crawlers in the [`content`](/en-US/docs/Web/HTML/Reference/Elements/meta#content) attribute of the `<meta>` element as a comma-separated list of one or more rules.

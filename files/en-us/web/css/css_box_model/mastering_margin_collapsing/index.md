@@ -2,9 +2,8 @@
 title: Mastering margin collapsing
 slug: Web/CSS/CSS_box_model/Mastering_margin_collapsing
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The [top](/en-US/docs/Web/CSS/margin-top) and [bottom](/en-US/docs/Web/CSS/margin-bottom) margins of blocks are sometimes combined (collapsed) into a single margin whose size is the largest of the individual margins (or just one of them, if they are equal), a behavior known as **margin collapsing**. Note that the margins of [floating](/en-US/docs/Web/CSS/float) and [absolutely positioned](/en-US/docs/Web/CSS/position#types_of_positioning) elements never collapse.
 
@@ -13,7 +12,12 @@ Margin collapsing occurs in three basic cases:
 - Adjacent siblings
   - : The margins of adjacent siblings are collapsed (except when the latter sibling needs to be [cleared](/en-US/docs/Web/CSS/clear) past floats).
 - No content separating parent and descendants
-  - : If there is no border, padding, inline part, [block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context) created, or _[clearance](/en-US/docs/Web/CSS/clear)_ to separate the {{cssxref("margin-top")}} of a block from the {{cssxref("margin-top")}} of one or more of its descendant blocks; or no border, padding, inline content, {{cssxref("height")}}, or {{cssxref("min-height")}} to separate the {{cssxref("margin-bottom")}} of a block from the {{cssxref("margin-bottom")}} of one or more of its descendant blocks, then those margins collapse. The collapsed margin ends up outside the parent.
+  - : The vertical margins between a parent block and its descendants can collapse. This happens when there is no separating content between them. Specifically, this occurs in two main cases:
+    - The {{cssxref("margin-top")}} of a parent collapses with the {{cssxref("margin-top")}} of its first in-flow descendant unless the parent has a {{cssxref("border-top")}} , {{cssxref("padding-top")}} , contains any inline content (such as text), or has _[clearance](/en-US/docs/Web/CSS/clear)_ applied.
+    - The {{cssxref("margin-bottom")}} of a parent collapses with the {{cssxref("margin-bottom")}} of its last in-flow descendant unless the parent has a defined {{cssxref("height")}} or {{cssxref("min-height")}}, a {{cssxref("border-bottom")}}, or {{cssxref("padding-bottom")}}.
+
+    In both cases, creating a new [block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context) on the parent will also prevent its margins from collapsing with its children.
+
 - Empty blocks
   - : If there is no border, padding, inline content, {{cssxref("height")}}, or {{cssxref("min-height")}} to separate a block's {{cssxref("margin-top")}} from its {{cssxref("margin-bottom")}}, then its top and bottom margins collapse.
 
@@ -86,6 +90,6 @@ p {
     - [Computed values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value)
     - [Used values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#used_value)
     - [Actual values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#actual_value)
-  - [Value definition syntax](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+  - [Value definition syntax](/en-US/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
   - [Shorthand properties](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties)
   - {{glossary("Replaced elements")}}

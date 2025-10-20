@@ -4,9 +4,8 @@ short-title: <meta> http-equiv
 slug: Web/HTML/Reference/Elements/meta/http-equiv
 page-type: html-attribute
 browser-compat: html.elements.meta.http-equiv
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`http-equiv`** attribute of the {{htmlelement("meta")}} element allows you to provide processing instructions for the browser as if the response that returned the document included certain HTTP headers.
 The metadata is _document-level metadata_ that applies to the whole page.

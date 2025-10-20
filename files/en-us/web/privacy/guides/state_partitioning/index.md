@@ -129,19 +129,13 @@ These heuristics are intended to allow some third-party integrations that are co
 > Storage access heuristics are a transitional feature meant to prevent website breakage.
 > They should not be relied upon for current and future web development.
 
-#### Opener Heuristics
+#### Opener Heuristic
 
-- When a partitioned third-party opens a pop-up window that has [opener access](/en-US/docs/Web/API/Window/opener) to the originating document, the third-party is granted storage access to its embedder for 30 days.
-- When a first-party `a.example` opens a third-party pop-up `b.example`, `b.example` is granted third-party storage access to `a.example` for 30 days.
+When a partitioned third-party opens a pop-up window that has [opener access](/en-US/docs/Web/API/Window/opener) to the originating document and the user interacts with that popup, the third-party is granted storage access to its embedder for 30 days.
 
-> [!NOTE]
-> For third-parties which abuse these heuristic for tracking purposes, we may require user interaction with the popup before storage access is granted.
+#### Navigation Heuristic
 
-#### Redirect Heuristics
-
-- If a site `b.example` redirects to `a.example`, then `b.example` receives storage access to its embedder `a.example` if both `a.example` and `b.example` have been visited and interacted with within the last 10 minutes.
-  This storage access will be granted for 15 minutes.
-- If a tracker `tracker.example` (as classified by the Enhanced Tracking Protection) redirects to a non-tracker `a.example` and `tracker.example` received user interaction as a first-party within the last 45 days, `tracker.example` is granted storage access to `a.example` for 15 minutes.
+Let's say a site hosted at `a.example` navigates a user to `b.example` in the same window, the user interacts with `b.example`, then the user is quickly navigated back to `a.example`. In such a case, `b.example` is granted storage access as a third-party on `a.example` for 30 days.
 
 ## Storage Access API
 
@@ -195,8 +189,8 @@ Features disabled by the pref include:
 
 The following preferences can be used to disable individual storage access heuristics via the [config editor](https://support.mozilla.org/en-US/kb/about-config-editor-firefox):
 
-- Enable / disable the [redirect heuristics](#redirect_heuristics): `privacy.restrict3rdpartystorage.heuristic.recently_visited`, `privacy.restrict3rdpartystorage.heuristic.redirect`
-- Enable / disable the [window open heuristics](#opener_heuristics): `privacy.restrict3rdpartystorage.heuristic.window_open`, `privacy.restrict3rdpartystorage.heuristic.opened_window_after_interaction`
+- Enable / disable the [navigation heuristic](#navigation_heuristic): `privacy.restrict3rdpartystorage.heuristic.navigation`
+- Enable / disable the [opener heuristic](#opener_heuristic): `privacy.restrict3rdpartystorage.heuristic.opened_window_after_interaction`
 
 #### Disable Network Partitioning
 
@@ -204,13 +198,15 @@ Network partitioning can be disabled with the `privacy.partition.network_state` 
 
 #### Disable Dynamic State Partitioning
 
-To disable dynamic storage partitioning for all sites you can use the `network.cookie.cookieBehavior` pref:
+To disable dynamic storage partitioning for all sites, you can use the `network.cookie.cookieBehavior` preference:
 
-| Value | Description                                                |
-| ----- | ---------------------------------------------------------- |
-| 5     | Reject (known) trackers and partition third-party storage. |
-| 4     | Only reject trackers (Storage partitioning disabled).      |
-| 0     | Allow all                                                  |
+| Value | Description                                        |
+| ----- | -------------------------------------------------- |
+| 5     | Partition third-party storage.                     |
+| 4     | Reject trackers (Storage partitioning disabled).   |
+| 0     | Allow all storage (Storage partitioning disabled). |
+
+Other values of this preference may disable third-party storage entirely.
 
 #### Exempt specific origins from partitioning
 

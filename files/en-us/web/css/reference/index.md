@@ -2,11 +2,10 @@
 title: CSS reference
 slug: Web/CSS/Reference
 page-type: landing-page
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-Use this **CSS reference** to browse an [alphabetical index](#index) of all of the standard [CSS](/en-US/docs/Web/CSS) properties, [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes), [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements), [data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types), [functional notations](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) and [at-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rule). You can also browse [key CSS concepts](#concepts) and a list of [selectors organized by type](#selectors). Also included is a brief [DOM-CSS / CSSOM reference](#dom-css_cssom).
+Use this **CSS reference** to browse an [alphabetical index](#index) of all of the standard [CSS](/en-US/docs/Web/CSS) properties, [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes), [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements), [data types](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types), [functional notations](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) and [at-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rule). You can also browse [key CSS concepts](#concepts) and a list of [selectors organized by type](#selectors). Also included is a brief [DOM-CSS / CSSOM reference](#dom-css_cssom).
 
 ## Basic rule syntax
 
@@ -117,9 +116,9 @@ Combinators are selectors that establish a relationship between two or more simp
 - [Inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance)
 - [Shorthand properties](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties)
 - [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
-- [Value definition syntax](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
-- [CSS values and units](/en-US/docs/Web/CSS/CSS_Values_and_Units)
-- [CSS functional notations](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)
+- [Value definition syntax](/en-US/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
+- [CSS values and units](/en-US/docs/Web/CSS/CSS_values_and_units)
+- [CSS functional notations](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)
 
 ### Values
 

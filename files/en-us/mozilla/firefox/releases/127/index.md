@@ -1,5 +1,6 @@
 ---
-title: Firefox 127 for developers
+title: Firefox 127 release notes for developers
+short-title: Firefox 127
 slug: Mozilla/Firefox/Releases/127
 page-type: firefox-release-notes
 sidebar: firefox
@@ -88,7 +89,3 @@ These features are newly shipped in Firefox 127 but are disabled by default. To 
 - **JavaScript `Float16Array` typed array**: `javascript.options.experimental.float16array`.
 
   {{jsxref("Float16Array")}} typed arrays are now supported, along with {{jsxref("DataView.prototype.getFloat16()")}} and {{jsxref("DataView.prototype.setFloat16()")}} for reading and setting `Float16Array` values from a {{jsxref("DataView")}}, and the {{jsxref("Math.f16round()")}} static method that can be used to round numbers to 16 bits. The new type is useful for sharing data with a GPU, in particular for use cases where it makes sense to trade off precision for memory consumption. ([Firefox bug 1833647](https://bugzil.la/1833647).)
-
-## Older versions
-
-{{Firefox_for_developers}}

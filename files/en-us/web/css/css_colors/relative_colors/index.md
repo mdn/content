@@ -2,9 +2,8 @@
 title: Using relative colors
 slug: Web/CSS/CSS_colors/Relative_colors
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The [CSS colors module](/en-US/docs/Web/CSS/CSS_colors) defines **relative color syntax**, which allows a CSS {{cssxref("&lt;color&gt;")}} value to be defined relative to another color. This is a powerful feature that enables easy creation of complements to existing colors — such as lighter, darker, saturated, semi-transparent, or inverted variants — enabling more effective color palette creation.
 
@@ -62,7 +61,7 @@ Let's look at relative color syntax in action. The below CSS is used to style tw
 }
 
 #two {
-  background-color: rgb(from red 150 g b / alpha);
+  background-color: rgb(from red 200 g b / alpha);
 }
 ```
 
@@ -245,7 +244,7 @@ The output is as follows:
 
 ## Using math functions
 
-You can use CSS [math functions](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#math_functions) such as {{cssxref("calc")}} to calculate values for the output color channels. Let's look at an example.
+You can use CSS [math functions](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#math_functions) such as {{cssxref("calc")}} to calculate values for the output color channels. Let's look at an example.
 
 The below CSS is used to style three {{htmlelement("div")}} elements with different background colors. The middle one is given an unmodified `--base-color`, while the left and right ones are given lightened and darkened variants of that `--base-color`. These variants are defined using relative colors — the `--base-color` is passed into an `lch()` function, and the output color has its lightness channel modified to achieve the desired effect via a `calc()` function. The lightened color has 20% added to the lightness channel, and the darkened color has 20% subtracted from it.
 
@@ -490,7 +489,7 @@ fieldset {
 
 #container {
   /* Default value */
-  --base-color: #ff0000;
+  --base-color: red;
 
   display: flex;
   width: 100vw;

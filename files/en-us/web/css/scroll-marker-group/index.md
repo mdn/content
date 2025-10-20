@@ -5,11 +5,15 @@ page-type: css-property
 status:
   - experimental
 browser-compat: css.properties.scroll-marker-group
+sidebar: cssref
 ---
 
-{{CSSRef}}{{seecompattable}}
+{{seecompattable}}
 
-The **`scroll-marker-group`** [CSS](/en-US/docs/Web/CSS) property controls whether a {{glossary("scroll container")}} has a {{cssxref("::scroll-marker-group")}} pseudo-element generated and, if so, whether it should be placed immediately `before` _or_ `after` the container's contents in the default visual and tabbing order.
+The **`scroll-marker-group`** [CSS](/en-US/docs/Web/CSS) property controls whether a {{glossary("scroll container")}} element has a {{cssxref("::scroll-marker-group")}} pseudo-element generated. If present, the property also specifies whether the scroll marker group should be placed `before` _or_ `after` the contents of the scroll group container in the default visual and tab order.
+
+> [!NOTE]
+> To create a scroll marker group container from an existing element that contains a set of {{htmlelement("a")}} elements, use the {{cssxref("scroll-target-group")}} property. Read about the [differences in behavior](/en-US/docs/Web/CSS/scroll-target-group#differences_between_scroll-target-group_and_scroll-marker-group) between the two.
 
 ## Syntax
 
@@ -39,7 +43,7 @@ scroll-marker-group: unset;
   - : No `::scroll-marker-group` pseudo-element will be generated on the element. This is the default value.
 
 > [!NOTE]
-> It is a best practice to match the visual rendering position of the scroll marker group with the tab order. When positioning the marker group at the start of the content with styles applied to {{cssxref("::scroll-marker-group")}}, put it at the beginning of the tab order using `before`. When positioning the group at the end of the content, put it at the end of the tab order using `after`.
+> As an accessibility best practice, match the visual rendering position of the scroll marker group container with the tab order. When positioning the marker group at the start of the content with styles applied to {{cssxref("::scroll-marker-group")}}, put it at the beginning of the tab order using `before`. When positioning the group at the end of the content, put it at the end of the tab order using `after`.
 
 ## Formal definition
 
@@ -87,7 +91,7 @@ We have a basic HTML {{htmlelement("ul")}} list with several {{htmlelement("li")
 
 We convert our `<ul>` into a carousel by setting the {{cssxref("display")}} to `flex`, creating a single, non-wrapping row of `<li>` elements. The {{cssxref("overflow-x")}} property is set to `auto`, meaning if the items overflow their container on the x-axis, the content will scroll horizontally. We then convert the `<ul>` into a [scroll-snap container](/en-US/docs/Glossary/Scroll_snap#scroll_snap_container), ensuring that items always snap into place when the container is scrolled with a {{cssxref("scroll-snap-type")}} value of `mandatory`.
 
-We create a scroll marker group with the `scroll-marker-group` property, placing the group after all the content.
+We create a scroll marker group container with the `scroll-marker-group` property, placing the group after all the content.
 
 ```css
 ul {
@@ -108,7 +112,7 @@ Next, we style the `<li>` elements, using the {{cssxref("flex")}} property to ma
 ```css
 li {
   list-style-type: none;
-  background-color: #eee;
+  background-color: #eeeeee;
   flex: 0 0 33%;
   scroll-snap-align: start;
   text-align: center;
@@ -166,7 +170,7 @@ label {
 
 {{EmbedLiveSample("Examples", '', '300')}}
 
-Note the placement of the scroll marker group. Check out how the keyboard tabbing order is different for `before` versus `after`, and note how the group disappears when the value is set to `none`.
+Note the placement of the scroll marker group container. Check out how the keyboard tabbing order is different for `before` versus `after`, and note how the group disappears when the value is set to `none`.
 
 ## Specifications
 
@@ -178,6 +182,7 @@ Note the placement of the scroll marker group. Check out how the keyboard tabbin
 
 ## See also
 
+- {{cssxref("scroll-target-group")}}
 - {{cssxref("::scroll-button()")}}
 - {{cssxref("::scroll-marker-group")}}
 - {{cssxref("::scroll-marker")}}

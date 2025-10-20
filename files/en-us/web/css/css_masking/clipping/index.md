@@ -2,9 +2,8 @@
 title: Introduction to CSS clipping
 slug: Web/CSS/CSS_masking/Clipping
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 CSS clipping enables you to define visible portions of an element while hiding other parts, effectively "clipping" its content within a specific shape or area. With clipping, elements aren't limited to being rendered as rectangles and can be designed in visually engaging ways. This guide explores the {{cssxref("clip-path")}} property along with some examples.
 
@@ -36,7 +35,7 @@ With the `clip-path` property, you can make complex shapes by clipping an elemen
 
 ### Values of the `clip-path` property
 
-To visually clip an element, the `clip-path` property is set to either a [`<geometry-box>`](/en-US/docs/Web/CSS/clip-path#geometry-box), a {{cssxref("url_value", "url")}} to a {{svgElement("clipPath")}} clip source, or a {{cssxref("basic-shape")}} created with [shape function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#shape_functions).
+To visually clip an element, the `clip-path` property is set to either a [`<geometry-box>`](/en-US/docs/Web/CSS/clip-path#geometry-box), a {{cssxref("url_value", "url")}} to a {{svgElement("clipPath")}} clip source, or a {{cssxref("basic-shape")}} created with [shape function](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#shape_functions).
 
 ### Geometry boxes
 
@@ -422,7 +421,7 @@ The `id` of the `<clipPath>` is the parameter of the {{cssxref("url_function", "
   width: 200px;
   height: 200px;
   background: linear-gradient(rebeccapurple, magenta) blue;
-  clip-path: url(#heart);
+  clip-path: url("#heart");
 }
 ```
 

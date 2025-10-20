@@ -1,5 +1,6 @@
 ---
-title: Firefox 92 for developers
+title: Firefox 92 release notes for developers
+short-title: Firefox 92
 slug: Mozilla/Firefox/Releases/92
 page-type: firefox-release-notes
 sidebar: firefox
@@ -56,7 +57,3 @@ No changes
 ## Changes for add-on developers
 
 - Support for `cookieStoreId` is added to {{WebExtAPIRef('downloads.download')}}, {{WebExtAPIRef('downloads.DownloadQuery')}}, and {{WebExtAPIRef('downloads.DownloadItem')}}. The addition to the types {{WebExtAPIRef('downloads.DownloadQuery')}} and {{WebExtAPIRef('downloads.DownloadItem')}} provides support in {{WebExtAPIRef('downloads.search')}} and {{WebExtAPIRef('downloads.erase')}}. Web extensions can now associate downloads with specific cookie stores, such as container tabs ([contextual identities](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)). ([Firefox bug 1669566](https://bugzil.la/1669566))
-
-## Older versions
-
-{{Firefox_for_developers}}

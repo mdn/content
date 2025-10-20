@@ -3,9 +3,8 @@ title: page-orientation
 slug: Web/CSS/@page/page-orientation
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.page.page-orientation
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`page-orientation`** [CSS](/en-US/docs/Web/CSS) descriptor for the {{cssxref("@page")}} at-rule controls the rotation of a printed page. It handles the flow of content across pages when the orientation of a page is changed. This behavior differs from the [`size`](/en-US/docs/Web/CSS/@page/size) descriptor in that a user can define the direction in which to rotate the page.
 
@@ -90,7 +89,7 @@ p {
     display: none;
   }
   section {
-    font-family: Roboto, sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 1.5rem;
   }
 }

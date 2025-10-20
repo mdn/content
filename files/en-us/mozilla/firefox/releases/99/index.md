@@ -1,5 +1,6 @@
 ---
-title: Firefox 99 for developers
+title: Firefox 99 release notes for developers
+short-title: Firefox 99
 slug: Mozilla/Firefox/Releases/99
 page-type: firefox-release-notes
 sidebar: firefox
@@ -43,6 +44,4 @@ No notable changes.
 
 ## Changes for add-on developers
 
-## Older versions
-
-{{Firefox_for_developers}}
+No notable changes.

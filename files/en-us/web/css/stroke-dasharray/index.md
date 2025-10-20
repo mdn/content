@@ -3,9 +3,8 @@ title: stroke-dasharray
 slug: Web/CSS/stroke-dasharray
 page-type: css-property
 browser-compat: css.properties.stroke-dasharray
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`stroke-dasharray`** [CSS](/en-US/docs/Web/CSS) property defines a pattern of dashes and gaps used in the painting of the [SVG](/en-US/docs/Web/SVG) shape's stroke. If present, it overrides the element's {{SVGAttr("stroke-dasharray")}} attribute.
 

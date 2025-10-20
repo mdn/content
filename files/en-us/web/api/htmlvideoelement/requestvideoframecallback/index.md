@@ -80,52 +80,48 @@ You can compare the `now` callback parameter and the `expectedDisplayTime` metad
 This example shows how to use `requestVideoFrameCallback()` to draw the frames of a video onto a {{htmlelement("canvas")}} element at exactly the same frame rate as the video. It also logs the frame metadata to the screen for debugging purposes.
 
 ```js
-const startDrawing = () => {
-  const button = document.querySelector("button");
-  const video = document.querySelector("video");
-  const canvas = document.querySelector("canvas");
-  const ctx = canvas.getContext("2d");
-  const fpsInfo = document.querySelector("#fps-info");
-  const metadataInfo = document.querySelector("#metadata-info");
+const button = document.querySelector("button");
+const video = document.querySelector("video");
+const canvas = document.querySelector("canvas");
+const ctx = canvas.getContext("2d");
+const fpsInfo = document.querySelector("#fps-info");
+const metadataInfo = document.querySelector("#metadata-info");
 
-  button.addEventListener("click", () =>
-    video.paused ? video.play() : video.pause(),
-  );
+button.addEventListener("click", () =>
+  video.paused ? video.play() : video.pause(),
+);
 
-  video.addEventListener("play", () => {
-    if (!("requestVideoFrameCallback" in HTMLVideoElement.prototype)) {
-      console.error(
-        "Your browser does not support the `Video.requestVideoFrameCallback()` API.",
-      );
-    }
-  });
+video.addEventListener("play", () => {
+  if (!("requestVideoFrameCallback" in HTMLVideoElement.prototype)) {
+    console.error(
+      "Your browser does not support the `Video.requestVideoFrameCallback()` API.",
+    );
+  }
+});
 
-  let width = canvas.width;
-  let height = canvas.height;
+let width = canvas.width;
+let height = canvas.height;
 
-  let paintCount = 0;
-  let startTime = 0.0;
+let paintCount = 0;
+let startTime = 0.0;
 
-  const updateCanvas = (now, metadata) => {
-    if (startTime === 0.0) {
-      startTime = now;
-    }
+const updateCanvas = (now, metadata) => {
+  if (startTime === 0.0) {
+    startTime = now;
+  }
 
-    ctx.drawImage(video, 0, 0, width, height);
+  ctx.drawImage(video, 0, 0, width, height);
 
-    const elapsed = (now - startTime) / 1000.0;
-    const fps = (++paintCount / elapsed).toFixed(3);
-    fpsInfo.innerText = !isFinite(fps) ? 0 : fps;
-    metadataInfo.innerText = JSON.stringify(metadata, null, 2);
+  const elapsed = (now - startTime) / 1000.0;
+  const fps = (++paintCount / elapsed).toFixed(3);
+  fpsInfo.innerText = !isFinite(fps) ? 0 : fps;
+  metadataInfo.innerText = JSON.stringify(metadata, null, 2);
 
-    video.requestVideoFrameCallback(updateCanvas);
-  };
-
-  video.src = "https://mdn.github.io/shared-assets/videos/flower.mp4";
   video.requestVideoFrameCallback(updateCanvas);
 };
 
-window.addEventListener("load", startDrawing);
+video.src = "https://mdn.github.io/shared-assets/videos/flower.mp4";
+video.requestVideoFrameCallback(updateCanvas);
 ```
 
 ```css
@@ -137,16 +133,17 @@ canvas {
 
 ```html
 <p>
-  Start <button type="button">⏯</button> playing the video. Pause the video to read the metadata.
-  Drawing video frames on the canvas is synced with the actual video framerate.
+  Start <button type="button">⏯</button> playing the video. Pause the video to
+  read the metadata. Drawing video frames on the canvas is synced with the
+  actual video framerate.
 </p>
 <video controls playsinline></video>
 <canvas width="960" height="540"></canvas>
 <p><span id="fps-info">0</span>fps</p>
-<p><pre id="metadata-info"></pre></p>
+<pre id="metadata-info"></pre>
 ```
 
-{{embedlivesample("", , "540")}}
+{{embedlivesample("drawing_video_frames_on_a_canvas", , "540")}}
 
 ## Specifications
 

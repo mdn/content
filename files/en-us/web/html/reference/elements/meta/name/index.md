@@ -4,9 +4,8 @@ short-title: <meta> name
 slug: Web/HTML/Reference/Elements/meta/name
 page-type: html-attribute
 browser-compat: html.elements.meta.name
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`name`** attribute of the {{htmlelement("meta")}} element provides metadata in name-value pairs.
 When a `<meta>` element has a `name` attribute, a [`content`](/en-US/docs/Web/HTML/Reference/Attributes/content) attribute defines the corresponding value.
@@ -89,5 +88,4 @@ Some of the names included are used quite commonly in practice, notably the foll
 
 ## See also
 
-- [Viewport `<meta>` tag](/en-US/docs/Web/HTML/Guides/Viewport_meta_element)
 - [Metadata: the `<meta>` element](/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#metadata_the_meta_element)

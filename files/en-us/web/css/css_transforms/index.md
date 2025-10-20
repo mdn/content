@@ -5,9 +5,8 @@ page-type: css-module
 spec-urls:
   - https://drafts.csswg.org/css-transforms/
   - https://drafts.csswg.org/css-transforms-2/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS transforms** module defines how elements styled with CSS can be transformed in two-dimensional or three-dimensional space.
 
@@ -359,8 +358,8 @@ Use the sliders in the example below to modify the translation, rotation, scale,
   margin-bottom: 4px;
   accent-color: blue; /* or any color */
   font-family:
-    Inter, "system-ui", "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
-    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    "Inter", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
 #allTransformFieldset > legend {
@@ -518,7 +517,7 @@ legend {
 button {
   font-size: 18px;
   border-radius: 50%;
-  border: #ccc solid 1px;
+  border: #cccccc solid 1px;
   padding: 0;
   width: 26px;
   height: 26px;
@@ -591,7 +590,7 @@ allTransformFieldset
     });
   });
 
-const resetInput = (inputEl) => {
+function resetInput(inputEl) {
   if (!inputEl) {
     console.warn(`inputEl \`${inputEl}\` is falsy!`);
     console.trace();
@@ -604,9 +603,9 @@ const resetInput = (inputEl) => {
   } else {
     inputEl.value = defaultValue || "0";
   }
-};
+}
 
-const updateOutputs = () => {
+function updateOutputs() {
   translateXOutput.value = `${translateXRange.value}px`;
   translateYOutput.value = `${translateYRange.value}px`;
   translateZOutput.value = `${translateZRange.value}px`;
@@ -626,9 +625,9 @@ const updateOutputs = () => {
 
   perspectiveOriginXOutput.value = `${perspectiveOriginXRange.value}%`;
   perspectiveOriginYOutput.value = `${perspectiveOriginYRange.value}%`;
-};
+}
 
-const updateTransform = () => {
+function updateTransform() {
   updateOutputs();
 
   cube.style.transform = `translate3d(${translateXRange.value}px,
@@ -649,7 +648,7 @@ const updateTransform = () => {
 
   perspectiveDot.style.top = `${perspectiveOriginYRange.value}%`;
   perspectiveDot.style.left = `${perspectiveOriginXRange.value}%`;
-};
+}
 updateTransform();
 ```
 
@@ -713,7 +712,7 @@ The cube in the above example is comprised of six `<div>` elements, all of which
 
 - [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
   - : Step-by-step tutorial about how to transform elements styled with CSS.
-- [Coordinate systems](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems)
+- [Coordinate systems](/en-US/docs/Web/API/CSSOM_view_API/Coordinate_systems)
   - : Describes the way pixel locations are defined in the CSS object model.
 - [Performance fundamentals: Use CSS transforms](/en-US/docs/Web/Performance/Guides/Fundamentals#use_css_transforms)
   - : An overview of web performance fundamentals, including how CSS transforms can improve performance.

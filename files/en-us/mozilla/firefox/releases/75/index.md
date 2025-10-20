@@ -1,5 +1,6 @@
 ---
-title: Firefox 75 for developers
+title: Firefox 75 release notes for developers
+short-title: Firefox 75
 slug: Mozilla/Firefox/Releases/75
 page-type: firefox-release-notes
 sidebar: firefox
@@ -105,7 +106,3 @@ _No changes._
 ### Manifest changes
 
 - The "privacy" permission is now optional. ([Firefox bug 1618399](https://bugzil.la/1618399))
-
-## Older versions
-
-{{Firefox_for_developers}}

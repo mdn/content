@@ -8,7 +8,7 @@ browser-compat: api.RTCDataChannel.bufferedamountlow_event
 
 {{APIRef("WebRTC")}}
 
-A **`bufferedamountlow`** event is sent to an {{domxref("RTCDataChannel")}} when the number of bytes currently in the outbound data transfer buffer falls below the threshold specified in {{domxref("RTCDataChannel.bufferedAmountLowThreshold", "bufferedAmountLowThreshold")}}. `bufferedamountlow` events aren't sent if `bufferedAmountLowThreshold` is 0.
+A **`bufferedamountlow`** event is sent to an {{domxref("RTCDataChannel")}} when the number of bytes currently in the outbound data transfer buffer ({{domxref("RTCDataChannel.bufferedAmount", "bufferedAmount")}}) falls from above to below or equal the threshold specified in {{domxref("RTCDataChannel.bufferedAmountLowThreshold", "bufferedAmountLowThreshold")}}.
 
 This event is not cancelable and does not bubble.
 
@@ -33,18 +33,15 @@ This example sets up a handler for `bufferedamountlow` to request more data any 
 ```js
 let pc = new RTCPeerConnection();
 let dc = pc.createDataChannel("SendFile");
-// source data object
-let source = (dc.bufferedAmountLowThreshold = 65536);
+// Replace with your own source object, such as a file handle
+let source = null;
+dc.bufferedAmountLowThreshold = 65536;
 
-pc.addEventListener(
-  "bufferedamountlow",
-  (ev) => {
-    if (source.position <= source.length) {
-      dc.send(source.readFile(65536));
-    }
-  },
-  false,
-);
+pc.addEventListener("bufferedamountlow", (ev) => {
+  if (source.position <= source.length) {
+    dc.send(source.readFile(65536));
+  }
+});
 ```
 
 After creating the `RTCPeerConnection`, this calls {{domxref("RTCPeerConnection.createDataChannel()")}} to create the data channel. Then a listener is created for `bufferedamountlow` to refill the incoming data buffer any time its contents fall below 65536 bytes.

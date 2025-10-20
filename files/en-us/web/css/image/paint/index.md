@@ -3,11 +3,10 @@ title: paint()
 slug: Web/CSS/image/paint
 page-type: css-function
 browser-compat: css.types.image.paint
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`paint()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) defines an {{cssxref("&lt;image&gt;")}} value generated with a PaintWorklet.
+The **`paint()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) defines an {{cssxref("&lt;image&gt;")}} value generated with a PaintWorklet.
 
 ## Syntax
 
@@ -56,7 +55,7 @@ CSS.paintWorklet.addModule(
 );
 ```
 
-In the CSS, we define the `background-image` as a `paint()` type with the worklet name, `boxbg`, along with any variables (ex. `--boxColor` and `--widthSubtractor`) the worklet will use:
+In the CSS, we define the `background-image` as a `paint()` type with the worklet name, `boxbg`, along with any variables (ex. `--box-color` and `--width-subtractor`) the worklet will use:
 
 ```css live-sample___example-boxbg
 body {
@@ -64,17 +63,17 @@ body {
 }
 li {
   background-image: paint(boxbg);
-  --boxColor: hsl(55 90% 60%);
+  --box-color: hsl(55 90% 60%);
 }
 
 li:nth-of-type(3n) {
-  --boxColor: hsl(155 90% 60%);
-  --widthSubtractor: 20;
+  --box-color: hsl(155 90% 60%);
+  --width-subtractor: 20;
 }
 
 li:nth-of-type(3n + 1) {
-  --boxColor: hsl(255 90% 60%);
-  --widthSubtractor: 40;
+  --box-color: hsl(255 90% 60%);
+  --width-subtractor: 40;
 }
 ```
 
@@ -112,18 +111,18 @@ body {
 }
 
 li {
-  --boxColor: hsl(55 90% 60% / 100%);
-  background-image: paint(hollowHighlights, stroke, 2px);
+  --box-color: hsl(55 90% 60% / 100%);
+  background-image: paint(hollow-highlights, stroke, 2px);
 }
 
 li:nth-of-type(3n) {
-  --boxColor: hsl(155 90% 60% / 100%);
-  background-image: paint(hollowHighlights, filled, 3px);
+  --box-color: hsl(155 90% 60% / 100%);
+  background-image: paint(hollow-highlights, filled, 3px);
 }
 
 li:nth-of-type(3n + 1) {
-  --boxColor: hsl(255 90% 60% / 100%);
-  background-image: paint(hollowHighlights, stroke, 1px);
+  --box-color: hsl(255 90% 60% / 100%);
+  background-image: paint(hollow-highlights, stroke, 1px);
 }
 ```
 

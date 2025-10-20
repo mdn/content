@@ -1,5 +1,6 @@
 ---
-title: Firefox 64 for developers
+title: Firefox 64 release notes for developers
+short-title: Firefox 64
 slug: Mozilla/Firefox/Releases/64
 page-type: firefox-release-notes
 sidebar: firefox
@@ -154,7 +155,3 @@ _No changes._
 ## See also
 
 - Hacks release post: [Firefox 64 Released](https://hacks.mozilla.org/2018/12/firefox-64-released/)
-
-## Older versions
-
-{{Firefox_for_developers}}

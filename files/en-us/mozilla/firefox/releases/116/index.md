@@ -1,5 +1,6 @@
 ---
-title: Firefox 116 for developers
+title: Firefox 116 release notes for developers
+short-title: Firefox 116
 slug: Mozilla/Firefox/Releases/116
 page-type: firefox-release-notes
 sidebar: firefox
@@ -81,7 +82,3 @@ This article provides information about the changes in Firefox 116 that affect d
 - Fixed an issue in the Inspector where CSS custom properties set on the Custom Element Root were not displayed ([Firefox bug 1836755](https://bugzil.la/1836755)).
 - Show if request was resolved with DNS over HTTPS in Network Monitor ([Firefox bug 1810195](https://bugzil.la/1810195)).
 - Removed `Proxy-Authorization` header in Network Monitor ([Firefox bug 1816115](https://bugzil.la/1816115)).
-
-## Older versions
-
-{{Firefox_for_developers}}

@@ -3,11 +3,10 @@ title: base-palette
 slug: Web/CSS/@font-palette-values/base-palette
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.font-palette-values.base-palette
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`base-palette`** CSS [descriptor](/en-US/docs/Glossary/CSS_Descriptor) is used to specify the name or index of a pre-defined palette to be used for creating a new palette. If the specified `base-palette` does not exist, then the palette defined at index 0 will be used.
+The **`base-palette`** [CSS](/en-US/docs/Web/CSS) [descriptor](/en-US/docs/Glossary/CSS_Descriptor) is used to specify the name or index of a pre-defined palette to be used for creating a new palette. If the specified `base-palette` does not exist, then the palette defined at index 0 will be used.
 
 ## Syntax
 

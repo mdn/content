@@ -8,7 +8,7 @@ status:
 browser-compat: api.Translator.create_static
 ---
 
-{{APIRef("Translator and Language Detector APIs")}}{{securecontext_header}}{{SeeCompatTable}}
+{{APIRef("Translator and Language Detector APIs")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`create()`** static method of the {{domxref("Translator")}} interface creates a new `Translator` instance that can be used to translate text.
 
@@ -26,7 +26,7 @@ Translator.create(options)
 - `options`
   - : An object specifying configuration options for the `Translator`. Possible values include:
     - `sourceLanguage`
-      - : A string specifying the expected language of the input text to be translated, which should be a valid [BCP 47 language tag](https://en.wikipedia.org/wiki/IETF_language_tag#List_of_common_primary_language_subtags) (as specified in [RFC 5646](https://datatracker.ietf.org/doc/html/rfc5646)).
+      - : A string specifying the expected language of the input text to be translated, which should be a valid {{glossary("BCP 47 language tag")}}.
     - `targetLanguage`
       - : A string specifying the language that the input text will be translated into, which should be valid BCP 47 language tag.
     - `monitor` {{optional_inline}}

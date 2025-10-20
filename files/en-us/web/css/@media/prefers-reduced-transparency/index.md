@@ -5,9 +5,10 @@ page-type: css-media-feature
 status:
   - experimental
 browser-compat: css.at-rules.media.prefers-reduced-transparency
+sidebar: cssref
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`prefers-reduced-transparency`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) is used to detect if a user has enabled a setting on their device to reduce the transparent or translucent layer effects used on the device. Switching on such a setting can help improve contrast and readability for some users.
 
@@ -24,7 +25,7 @@ Various operating systems provide a preference for reducing transparency, and us
 They may also rely on less explicit signals on platforms which don't offer a specific setting.
 
 - In Windows 10/11: Settings > Personalization > Colors > Transparency effects.
-- In macOS: System Preferences > Accessibility > Display > Reduce transparency.
+- In macOS: System Settings > Accessibility > Display > Reduce transparency.
 - In iOS: Settings > Accessibility > Display & Text Size > Reduce Transparency.
 
 ## Examples

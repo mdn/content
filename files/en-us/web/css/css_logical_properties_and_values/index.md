@@ -3,9 +3,8 @@ title: CSS logical properties and values
 slug: Web/CSS/CSS_logical_properties_and_values
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-logical/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS logical properties and values** module defines logical properties and values that can control layout through logical rather than physical direction and dimension mappings. Logical properties define direction‐relative equivalents to their corresponding physical properties.
 
@@ -24,7 +23,7 @@ The **block dimension** is perpendicular to the flow of text within a line, i.e.
 
 The **inline dimension** is parallel to the flow of text within a line, i.e., the horizontal dimension in horizontal writing modes, and the vertical dimension in vertical writing modes. For standard English text, it is the horizontal dimension.
 
-CSS was initially designed with only physical coordinates. The logical properties and values module defines flow–relative equivalents for many [values](/en-US/docs/Web/CSS/CSS_Values_and_Units) and [properties](/en-US/docs/Glossary/Property/CSS). Properties that once only accepted physical values (`top`, `bottom`, `left`, `right`) now also accept flow-relative logical values (`block-start`, `block-end`, `inline-start`, `inline-end`).
+CSS was initially designed with only physical coordinates. The logical properties and values module defines flow–relative equivalents for many [values](/en-US/docs/Web/CSS/CSS_values_and_units) and [properties](/en-US/docs/Glossary/Property/CSS). Properties that once only accepted physical values (`top`, `bottom`, `left`, `right`) now also accept flow-relative logical values (`block-start`, `block-end`, `inline-start`, `inline-end`).
 
 ## Reference
 

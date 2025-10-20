@@ -3,9 +3,8 @@ title: view-timeline-inset
 slug: Web/CSS/view-timeline-inset
 page-type: css-property
 browser-compat: css.properties.view-timeline-inset
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`view-timeline-inset`** [CSS](/en-US/docs/Web/CSS) property is used to specify one or two values representing an adjustment to the position of the scrollport (see {{glossary("Scroll container")}} for more details) in which the subject element of a _named view progress timeline_ animation is deemed to be visible. Put another way, this allows you to specify start and/or end inset (or outset) values that offset the position of the timeline.
 
@@ -56,8 +55,8 @@ If two values are provided, the first value represents the start inset/outset in
 
 ### Creating a named view progress timeline with inset
 
-A view progress timeline named `--subjectReveal` is defined using the `view-timeline` property on a subject element with a `class` of `animation`.
-This is then set as the timeline for the same element using `animation-timeline: --subjectReveal;`. The result is that the subject element animates as it moves upwards through the document as it is scrolled.
+A view progress timeline named `--subject-reveal` is defined using the `view-timeline` property on a subject element with a `class` of `animation`.
+This is then set as the timeline for the same element using `animation-timeline: --subject-reveal;`. The result is that the subject element animates as it moves upwards through the document as it is scrolled.
 
 A `view-timeline-inset` declaration is also set to make the animation begin later than expected, and finish earlier.
 
@@ -120,7 +119,7 @@ The `subject` element and its containing `content` element are styled minimally,
 
 p,
 h1 {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 h1 {
@@ -139,9 +138,9 @@ Last, an animation is specified on the element that animates its opacity and sca
 
 ```css
 .animation {
-  view-timeline: --subjectReveal block;
+  view-timeline: --subject-reveal block;
   view-timeline-inset: 70% -100px;
-  animation-timeline: --subjectReveal;
+  animation-timeline: --subject-reveal;
 
   animation-name: appear;
   animation-fill-mode: both;

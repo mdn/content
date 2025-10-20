@@ -48,16 +48,16 @@ This element implements the {{domxref("SVGFEMorphologyElement")}} interface.
 
 ```css
 text {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   font-size: 3em;
 }
 
 #thin {
-  filter: url(#erode);
+  filter: url("#erode");
 }
 
 #thick {
-  filter: url(#dilate);
+  filter: url("#dilate");
 }
 ```
 
@@ -87,16 +87,16 @@ text {
 ```css
 p {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   font-size: 3em;
 }
 
 #thin {
-  filter: url(#erode);
+  filter: url("#erode");
 }
 
 #thick {
-  filter: url(#dilate);
+  filter: url("#dilate");
 }
 ```
 

@@ -3,11 +3,10 @@ title: font-style
 slug: Web/CSS/@font-face/font-style
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.font-face.font-style
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`font-style`** CSS descriptor allows authors to specify font styles for the fonts specified in the {{cssxref("@font-face")}} at-rule.
+The **`font-style`** [CSS](/en-US/docs/Web/CSS) descriptor allows authors to specify font styles for the fonts specified in the {{cssxref("@font-face")}} at-rule.
 
 For a particular font family, authors can download various font faces that correspond to the different styles of the same font family and then use the `font-style` descriptor to explicitly specify the font face's style. The values for this CSS descriptor are the same as that of the corresponding {{cssxref("font-style")}} property.
 
@@ -50,7 +49,7 @@ As an example, consider the garamond font family, in its normal form, we get the
 
 ```css
 @font-face {
-  font-family: garamond;
+  font-family: "garamond";
   src: url("garamond.ttf");
 }
 ```
@@ -65,7 +64,7 @@ On the other hand, if a true italicized version of the font family exists, we ca
 
 ```css
 @font-face {
-  font-family: garamond;
+  font-family: "garamond";
   src: url("garamond-italic.ttf");
   font-style: italic;
 }

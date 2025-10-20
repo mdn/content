@@ -1,5 +1,6 @@
 ---
-title: Firefox 61 for developers
+title: Firefox 61 release notes for developers
+short-title: Firefox 61
 slug: Mozilla/Firefox/Releases/61
 page-type: firefox-release-notes
 sidebar: firefox
@@ -170,7 +171,3 @@ _No changes._
 - In [`sidebarAction.getPanel()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction/getPanel), [`sidebarAction.getTitle()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction/getTitle), [`sidebarAction.setPanel()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction/setPanel), [`sidebarAction.setTitle()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction/setTitle), and [`sidebarAction.setIcon()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction/setIcon), you can now specify a `windowId` so that the features will be set/got only for a specific window ([Firefox bug 1390464](https://bugzil.la/1390464)).
 - [`tabs.hide()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/hide) and [`tabs.show()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/show) are now enabled by default ([Firefox bug 1455040](https://bugzil.la/1455040)).
   - The first time an extension hides a tab, the browser will tell the user that the tab is being hidden, show them how they can access the hidden tab, and give them the option of disabling the extension instead ([Firefox bug 1438363](https://bugzil.la/1438363)).
-
-## Older versions
-
-{{Firefox_for_developers}}

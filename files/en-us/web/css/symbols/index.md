@@ -3,11 +3,10 @@ title: symbols()
 slug: Web/CSS/symbols
 page-type: css-function
 browser-compat: css.properties.list-style-type.symbols
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`symbols()`** CSS function enables defining counter styles inline, directly as a value of properties such as {{cssxref("list-style")}}, providing a less powerful but simpler alternative to the {{cssxref("@counter-style")}} method of defining a counter style.
+The **`symbols()`** [CSS](/en-US/docs/Web/CSS) function enables defining counter styles inline, directly as a value of properties such as {{cssxref("list-style")}}, providing a less powerful but simpler alternative to the {{cssxref("@counter-style")}} method of defining a counter style.
 
 Unlike {{cssxref("@counter-style")}}, which defines a reusable counter style, `symbols()` is _anonymous_ (i.e., it can only be used once). This function accepts strings and images as values. In comparison, the {{cssxref("@counter-style")}}'s [`symbols`](/en-US/docs/Web/CSS/@counter-style/symbols) descriptor also accepts identifiers.
 

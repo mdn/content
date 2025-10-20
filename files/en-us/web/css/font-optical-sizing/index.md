@@ -3,9 +3,8 @@ title: font-optical-sizing
 slug: Web/CSS/font-optical-sizing
 page-type: css-property
 browser-compat: css.properties.font-optical-sizing
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`font-optical-sizing`** [CSS](/en-US/docs/Web/CSS) property sets whether text rendering is optimized for viewing at different sizes.
 
@@ -36,12 +35,12 @@ font-optical-sizing: none;
 ```css interactive-example
 @font-face {
   src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.ttf");
-  font-family: Amstelvar;
+  font-family: "Amstelvar";
   font-style: normal;
 }
 
 #example-element {
-  font-family: Amstelvar, serif;
+  font-family: "Amstelvar", serif;
   text-align: left;
 }
 
@@ -114,7 +113,7 @@ When optical sizing is used, small text sizes are often rendered with thicker st
 
 p {
   font-size: 36px;
-  font-family: Amstelvar, serif;
+  font-family: "Amstelvar", serif;
 }
 
 .no-optical-sizing {

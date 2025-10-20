@@ -1,5 +1,6 @@
 ---
-title: Firefox 93 for developers
+title: Firefox 93 release notes for developers
+short-title: Firefox 93
 slug: Mozilla/Firefox/Releases/93
 page-type: firefox-release-notes
 sidebar: firefox
@@ -64,7 +65,3 @@ This article provides information about the changes in Firefox 93 that will affe
   This format has excellent compression and no patent restrictions (it was developed by the [Alliance for Open Media](https://aomedia.org/)).
   Firefox can display still images, with colorspace support for both full and limited range colors, and image transforms for mirroring and rotation.
   The preference [image.avif.compliance_strictness](/en-US/docs/Mozilla/Firefox/Experimental_features#avif_compliance_strictness) can be used to adjust the compliance strictness with the specification. Animated images are not supported.
-
-## Older versions
-
-{{Firefox_for_developers}}

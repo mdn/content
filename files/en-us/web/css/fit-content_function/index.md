@@ -5,11 +5,10 @@ page-type: css-function
 browser-compat:
   - css.properties.grid-template-columns.fit-content
   - css.properties.width.fit-content_function
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`fit-content()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) clamps a given size to an available size according to the formula `min(maximum size, max(minimum size, argument))`.
+The **`fit-content()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) clamps a given size to an available size according to the formula `min(maximum size, max(minimum size, argument))`.
 
 {{InteractiveExample("CSS Demo: fit-content()")}}
 

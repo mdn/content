@@ -4,9 +4,8 @@ short-title: findLast()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findLast
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.findLast
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`findLast()`** method of {{jsxref("Array")}} instances iterates the array in reverse order and returns the value of the first element that satisfies the provided testing function.
 If no elements satisfy the testing function, {{jsxref("undefined")}} is returned.
@@ -24,9 +23,9 @@ If you need to find:
 {{InteractiveExample("JavaScript Demo: Array.prototype.findLast()", "shorter")}}
 
 ```js interactive-example
-const array1 = [5, 12, 50, 130, 44];
+const array = [5, 12, 50, 130, 44];
 
-const found = array1.findLast((element) => element > 45);
+const found = array.findLast((element) => element > 45);
 
 console.log(found);
 // Expected output: 130

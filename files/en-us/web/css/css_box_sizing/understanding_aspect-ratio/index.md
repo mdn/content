@@ -3,9 +3,8 @@ title: Understanding and setting aspect ratios
 slug: Web/CSS/CSS_box_sizing/Understanding_aspect-ratio
 page-type: guide
 spec-urls: https://drafts.csswg.org/css-sizing/#aspect-ratio
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 Every element rendered to the page has a height and a width, and, therefore, an {{glossary("aspect ratio")}}, which is the ratio between the width and height. The natural dimensions of a media object, which are its size without any sizing, scaling, zooming, or borders applied, are known as its natural or {{glossary("intrinsic size")}}. An element's intrinsic size is determined by the element itself, not by applying formatting such as [box sizing](/en-US/docs/Web/CSS/CSS_box_sizing) or setting border, margin, or padding widths.
 
@@ -75,7 +74,7 @@ You will have noticed the word "preferred" in the definitions above. The `aspect
 
 When both the height and width or inline and block sizes are explicitly set, the `aspect-ratio` property value is ignored. In this case, no dimension is allowed to be automatically sized - the preferred sizes are explicitly set - so the `aspect-ratio` property has no effect. When you declare both the inline and block dimensions, those take precedence.
 
-With replaced elements, if you don't explicitly set a value (other than `auto`) to either dimension, both will default to their intrinsic size (any `aspect-ratio` value isn't applied). The `aspect-ratio` will apply to non-replaced elements that don't have a dimension explicitly set, as non-replaced elements are either [intrinsically](/en-US/docs/Glossary/Intrinsic_Size) or [extrinsically](/en-US/docs/Glossary/Intrinsic_Size#extrinsic_sizing) sized, getting their size from their content, container, [box model](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model) properties, etc.
+With replaced elements, if you don't explicitly set a value (other than `auto`) to either dimension, both will default to their intrinsic size (any `aspect-ratio` value isn't applied). The `aspect-ratio` will apply to non-replaced elements that don't have a dimension explicitly set, as non-replaced elements are either [intrinsically](/en-US/docs/Glossary/Intrinsic_Size) or [extrinsically](/en-US/docs/Glossary/Extrinsic_size) sized, getting their size from their content, container, [box model](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model) properties, etc.
 
 When an element is rendered to the page, if no CSS is applied and no HTML sizing attributes are included, the user agent will render the object at its natural size.
 
@@ -224,7 +223,7 @@ Next, we designate the container as a grid, where each item has an aspect ratio 
 
 div div {
   aspect-ratio: 5 / 2;
-  background-color: #ccc;
+  background-color: #cccccc;
 }
 ```
 
@@ -296,7 +295,7 @@ To highlight the issue with setting a non-replaced element's aspect ratio via si
 
 ```css hidden live-sample___alder
 blockquote {
-  border: 3px dotted #ccc;
+  border: 3px dotted #cccccc;
   padding: 0 3px;
   margin: 20px 0;
   font-size: 1.25rem;
@@ -353,7 +352,7 @@ blockquote {
 
 ```css hidden live-sample___words
 blockquote {
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   padding: 1px;
   margin: 20px 0;
   background-color: #ededed;
@@ -394,7 +393,7 @@ div {
 p {
   aspect-ratio: 1;
   text-align: center;
-  border: 10px solid #ffffff;
+  border: 10px solid white;
   background-color: #f4aab9;
 }
 ```
@@ -419,7 +418,7 @@ div {
 
 p {
   text-align: center;
-  border: 10px solid #ffffff;
+  border: 10px solid white;
   background-color: #f4aab9;
 }
 ```
@@ -527,7 +526,7 @@ div {
 }
 
 div div {
-  background-color: #ccc;
+  background-color: #cccccc;
   aspect-ratio: 1;
   counter-increment: items;
 }

@@ -111,17 +111,6 @@ Here are some popular editors:
       <td><a href="https://extensions.panic.com/">Yes</a></td>
     </tr>
     <tr>
-      <td><a href="https://www.codelobster.com">CodeLobster</a></td>
-      <td>Closed source</td>
-      <td>Free</td>
-      <td>Windows, Mac, Linux</td>
-      <td>
-        <a href="https://www.codelobster.com/forum/index.php" rel="external">Forum</a >, <a href="mailto:support@codelobster.com">Email</a>
-      </td>
-      <td><a href="https://www.codelobsteride.com/help/">Online Manual</a></td>
-      <td>Yes</td>
-    </tr>
-    <tr>
       <td>
         <a href="https://www.gnu.org/software/emacs/" rel="external">Emacs</a>
       </td>
@@ -145,19 +134,6 @@ Here are some popular editors:
           href="https://www.gnu.org/software/emacs/manual/html_node/emacs/index.html"
           >Online Manual</a
         >
-      </td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <td><a href="https://espressoapp.com/">Espresso</a></td>
-      <td>Closed source</td>
-      <td>$99</td>
-      <td>Mac</td>
-      <td>
-        <a href="mailto:hello@espressoapp.com">Email</a>
-      </td>
-      <td>
-        <a href="https://help.espressoapp.com/">Online Manual</a>
       </td>
       <td>Yes</td>
     </tr>
@@ -344,9 +320,9 @@ Here are some popular editors:
   </tbody>
 </table>
 
-## Active Learning
+## Installing and using a text editor
 
-In this active learning section, we would like you to try using and/or installing a text editor of your choice. Your computer may already be installed with one of the editors suggested above (e.g., Gedit if you use GNOME desktop, Kate if you use KDE etc.), if not then you should try installing one or more text editors of your choosing.
+We would like you to try using and/or installing a text editor of your choice. Your computer may already be installed with one of the editors suggested above (e.g., Gedit if you use GNOME desktop, Kate if you use KDE etc.), if not then you should try installing one or more text editors of your choosing.
 
 Try digging through the settings of your editor and read the manual or documentation to see what its capabilities are. In particular (if possible in your editor), try to:
 

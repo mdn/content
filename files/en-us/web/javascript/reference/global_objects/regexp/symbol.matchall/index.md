@@ -4,9 +4,8 @@ short-title: "[Symbol.matchAll]()"
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.RegExp.@@matchAll
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`[Symbol.matchAll]()`** method of {{jsxref("RegExp")}} instances specifies how [`String.prototype.matchAll`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll) should behave.
 

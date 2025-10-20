@@ -5,9 +5,8 @@ page-type: css-module
 spec-urls:
   - https://drafts.csswg.org/css-text/
   - https://drafts.csswg.org/css-text-4/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS text** module defines how to perform text manipulation, like line breaking, justification and alignment, white space handling, and text transformation.
 
@@ -27,6 +26,7 @@ The **CSS text** module defines how to perform text manipulation, like line brea
 - {{cssxref("text-align-last")}}
 - {{cssxref("text-indent")}}
 - {{cssxref("text-justify")}}
+- {{cssxref("text-autospace")}}
 - {{cssxref("text-spacing-trim")}} {{Experimental_Inline}}
 - {{cssxref("text-transform")}}
 - {{cssxref("text-wrap")}}
@@ -37,7 +37,7 @@ The **CSS text** module defines how to perform text manipulation, like line brea
 - {{cssxref("word-break")}}
 - {{cssxref("word-spacing")}}
 
-The specification also defines the `hyphenate-limit-last`, `hyphenate-limit-lines`, `hyphenate-limit-zone`, `line-padding`, `text-align-all`, `text-autospace`, `text-group-align`, `text-spacing`, `white-space-trim`, `word-space-transform`, `wrap-after`, `wrap-before`, and `wrap-inside` properties, which are not yet supported by any browser.
+The specification also defines the `hyphenate-limit-last`, `hyphenate-limit-lines`, `hyphenate-limit-zone`, `line-padding`, `text-align-all`, `text-group-align`, `text-spacing`, `white-space-trim`, `word-space-transform`, `wrap-after`, `wrap-before`, and `wrap-inside` properties, which are not yet supported by any browser.
 
 ### Guides
 

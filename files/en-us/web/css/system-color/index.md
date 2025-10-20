@@ -3,11 +3,10 @@ title: <system-color>
 slug: Web/CSS/system-color
 page-type: css-type
 browser-compat: css.types.color.system-color
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`<system-color>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) usually reflects the default color choices used for the different parts of a web page.
+The **`<system-color>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types) usually reflects the default color choices used for the different parts of a web page.
 
 However, user agents can provide an accessibility feature called _forced colors mode_, in which colors are restricted into a user- and user agent-defined palette, overriding the author's choice of colors in certain properties. In forced colors mode, `<system-color>` exposes the chosen colors, so that the rest of the page can integrate with them. An example of forced colors mode is [high contrast mode on Windows](https://blogs.windows.com/msedgedev/2020/09/17/styling-for-windows-high-contrast-with-new-standards-for-forced-colors/).
 

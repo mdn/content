@@ -6,7 +6,7 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Handling_conflicts", "Learn_web_development/Core/Styling_basics/Sizing", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Fixing_blog_styles", "Learn_web_development/Core/Styling_basics/Test_your_skills/Values", "Learn_web_development/Core/Styling_basics")}}
 
 CSS rules contain [declarations](/en-US/docs/Web/CSS/CSS_syntax/Syntax#css_declarations), which in turn are composed of properties and values.
 Each property used in CSS has a **value type** that describes what kind of values it is allowed to have.
@@ -144,6 +144,10 @@ The following are all **absolute** length units — they are not relative to any
 | `px` | Pixels              | 1px = 1/96th of 1in      |
 
 Most of these units are more useful when used for print, rather than screen output. For example, we don't typically use `cm` (centimeters) on screen. The only value that you will commonly use is `px` (pixels).
+
+Note that `1px` doesn't necessarily equal one physical device pixel. On HD displays, it may span multiple physical pixels.
+Similarly, `1cm` in CSS often doesn't correspond to one hundredth of [SI](https://en.wikipedia.org/wiki/International_System_of_Units) meter. On a large TV screen, it typically is longer than that.
+The lengths are perceptual: `16px` looks roughly the same on a phone, laptop, or TV screen at typical viewing distance.
 
 #### Relative length units
 
@@ -354,7 +358,7 @@ In the below example, try changing the value of `opacity` to various decimal val
 
 ```css live-sample___opacity
 .wrapper {
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/balloons.jpg);
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/balloons.jpg");
   background-repeat: no-repeat;
   background-position: bottom left;
   padding: 20px;
@@ -517,7 +521,7 @@ Try changing the alpha channel values to see how it affects the color output.
 
 ```css live-sample___color-rgba
 .wrapper {
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/balloons.jpg);
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/balloons.jpg");
   padding: 40px 20px;
 }
 
@@ -619,7 +623,7 @@ Just like with `rgb()` you can pass an alpha parameter to `hsl()` to specify opa
 
 ```css live-sample___color-hsla
 .wrapper {
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/balloons.jpg);
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/balloons.jpg");
   padding: 40px 20px;
 }
 
@@ -666,7 +670,7 @@ In the example below, we are using an image and a gradient as values for the CSS
 }
 
 .image {
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/big-star.png);
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/big-star.png");
 }
 
 .gradient {
@@ -703,7 +707,7 @@ Try playing around with these values to see how you can push the image around.
 .box {
   height: 200px;
   width: 400px;
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/big-star.png);
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/big-star.png");
   background-repeat: no-repeat;
   background-position: right 60px;
   margin: 20px auto;
@@ -746,11 +750,11 @@ In programming, a function is a piece of code that does a specific task.
 Functions are useful because you can write code once then reuse it many times instead of writing the same logic over and over.
 Most programming languages not only support functions but also come with convenient built-in functions for common tasks so you don't have to write them yourself from scratch.
 
-CSS also has [functions](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions), which work in a similar way to functions in other languages.
+CSS also has [functions](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions), which work in a similar way to functions in other languages.
 In fact, we've already seen CSS functions in the [Color](#color) section above, such as [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) and [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl).
 
 Aside from applying colors, you can use functions in CSS to do a lot of other things.
-For example, [Transform functions](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#transform_functions) are a common way to move, rotate, and scale elements on a page.
+For example, [Transform functions](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#transform_functions) are a common way to move, rotate, and scale elements on a page.
 You might see [`translate()`](/en-US/docs/Web/CSS/transform-function/translate) for moving something horizontally or vertically, [`rotate()`](/en-US/docs/Web/CSS/transform-function/rotate) to rotate something, or [`scale()`](/en-US/docs/Web/CSS/transform-function/scale) to make something bigger or smaller.
 
 ### Math functions
@@ -759,7 +763,7 @@ When you are creating styles for a project, you will probably start off with num
 If you want to have these values change based on other values, you will need to do some math.
 You could calculate the percentage of a value or add a number to another number, then update your CSS with the result.
 
-CSS has support for [Math functions](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#math_functions), which allow us to perform calculations in CSS instead of relying on static values or doing the math in JavaScript.
+CSS has support for [Math functions](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#math_functions), which allow us to perform calculations in CSS instead of relying on static values or doing the math in JavaScript.
 One of the most common math functions is [`calc()`](/en-US/docs/Web/CSS/calc), which lets you do operations like addition, subtraction, multiplication, and division.
 
 For example, let's say we want to set the width of an element to be `20%` of its parent container plus `100px`.
@@ -788,20 +792,16 @@ The `20%` is based on the width of the parent container (`.wrapper`) and if that
 
 {{EmbedLiveSample("calc")}}
 
-There are many other math functions that you can use in CSS, such as [`min()`](/en-US/docs/Web/CSS/min), [`max()`](/en-US/docs/Web/CSS/max), and [`clamp()`](/en-US/docs/Web/CSS/clamp); respectively these let you pick the smallest, largest, or middle value from a set of values. Explore our [CSS value functions](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) reference page to check out all the available CSS functions.
+There are many other math functions that you can use in CSS, such as [`min()`](/en-US/docs/Web/CSS/min), [`max()`](/en-US/docs/Web/CSS/max), and [`clamp()`](/en-US/docs/Web/CSS/clamp); respectively these let you pick the smallest, largest, or middle value from a set of values. Explore our [CSS value functions](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) reference page to check out all the available CSS functions.
 
 Knowing about CSS functions is useful so you recognize them when you see them. You should start experimenting with them in your projects — they will help you avoid writing custom or repetitive code to achieve results that you can get with regular CSS.
 
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Values).
-
 ## Summary
 
-This has been a quick run-through of the most common types of values and units you might encounter. You can have a look at all of the different types on the [CSS Values and units](/en-US/docs/Web/CSS/CSS_Values_and_Units) module page — you will encounter many of these in use as you work through these lessons.
+This has been a quick run-through of the most common types of values and units you might encounter. You can have a look at all of the different types on the [CSS Values and units](/en-US/docs/Web/CSS/CSS_values_and_units) module page — you will encounter many of these in use as you work through these lessons.
 
 The key thing to remember is that each property has a defined list of allowed value types, and each value type has a definition explaining what the values are. You can then look up the specifics here on MDN. For example, understanding that [`<image>`](/en-US/docs/Web/CSS/image) also allows you to create a color gradient is useful but perhaps non-obvious knowledge to have!
 
-In the next article, we'll take a look at how items are sized in CSS.
+In the next article, we'll give you some tests that you can use to check how well you've understood and retained the information we've provided on values and units.
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Handling_conflicts", "Learn_web_development/Core/Styling_basics/Sizing", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Fixing_blog_styles", "Learn_web_development/Core/Styling_basics/Test_your_skills/Values", "Learn_web_development/Core/Styling_basics")}}

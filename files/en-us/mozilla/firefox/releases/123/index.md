@@ -1,5 +1,6 @@
 ---
-title: Firefox 123 for developers
+title: Firefox 123 release notes for developers
+short-title: Firefox 123
 slug: Mozilla/Firefox/Releases/123
 page-type: firefox-release-notes
 sidebar: firefox
@@ -81,7 +82,3 @@ These features are newly shipped in Firefox 123 but are disabled by default. To 
   The video interfaces of the [Web Codecs API](/en-US/docs/Web/API/WebCodecs_API) are supported on Linux desktop on Nightly.
   These include: [`VideoEncoder`](/en-US/docs/Web/API/VideoEncoder), [`VideoDecoder`](/en-US/docs/Web/API/VideoDecoder), [`EncodedVideoChunk`](/en-US/docs/Web/API/EncodedVideoChunk), [`VideoFrame`](/en-US/docs/Web/API/VideoFrame), [`VideoColorSpace`](/en-US/docs/Web/API/VideoColorSpace).
   ([Firefox bug 1874445](https://bugzil.la/1874445)).
-
-## Older versions
-
-{{Firefox_for_developers}}

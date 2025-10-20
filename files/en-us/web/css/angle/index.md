@@ -3,13 +3,12 @@ title: <angle>
 slug: Web/CSS/angle
 page-type: css-type
 browser-compat: css.types.angle
+sidebar: cssref
 ---
 
-{{CSSRef}}
+The **`<angle>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types) represents an angle value expressed in degrees, gradians, radians, or turns. It is used, for example, in {{cssxref("&lt;gradient&gt;")}}s and in some {{cssxref("transform")}} functions.
 
-The **`<angle>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents an angle value expressed in degrees, gradians, radians, or turns. It is used, for example, in {{cssxref("&lt;gradient&gt;")}}s and in some {{cssxref("transform")}} functions.
-
-{{InteractiveExample("CSS Demo: &amp;lt;angle&amp;gt;")}}
+{{InteractiveExample("CSS Demo: &lt;angle&gt;")}}
 
 ```css interactive-example-choice
 transform: rotate(45deg);
@@ -118,7 +117,7 @@ Optionally, it may be preceded by a single `+` or `-` sign. Positive numbers rep
 
 ## See also
 
-- [CSS data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)
+- [CSS data types](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types)
 - The [`<gradient>`](/en-US/docs/Web/CSS/gradient) type
 - CSS rotation transforms: [`rotate()`](/en-US/docs/Web/CSS/transform-function/rotate), [`rotate3d()`](/en-US/docs/Web/CSS/transform-function/rotate3d), [`rotateX()`](/en-US/docs/Web/CSS/transform-function/rotateX), [`rotateY()`](/en-US/docs/Web/CSS/transform-function/rotateY), and [`rotateZ()`](/en-US/docs/Web/CSS/transform-function/rotateZ)
 - [CSS transforms](/en-US/docs/Web/CSS/CSS_transforms)

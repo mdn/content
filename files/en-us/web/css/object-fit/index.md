@@ -3,9 +3,8 @@ title: object-fit
 slug: Web/CSS/object-fit
 page-type: css-property
 browser-compat: css.properties.object-fit
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`object-fit`** [CSS](/en-US/docs/Web/CSS) property sets how the content of a {{ glossary("replaced elements", "replaced element")}}, such as an {{HTMLElement("img")}} or {{HTMLElement("video")}}, should be resized to fit its container.
 
@@ -49,7 +48,7 @@ object-fit: scale-down;
 #example-element {
   height: 100%;
   width: 100%;
-  border: 2px dotted #888;
+  border: 2px dotted #888888;
 }
 ```
 
@@ -132,9 +131,7 @@ The `object-fit` property is specified as a single keyword chosen from the list 
 
 ```css
 h2 {
-  font-family:
-    Courier New,
-    monospace;
+  font-family: "Courier New", monospace;
   font-size: 1em;
   margin: 1em 0 0.3em;
 }
@@ -142,7 +139,7 @@ h2 {
 img {
   width: 150px;
   height: 100px;
-  border: 1px solid #000;
+  border: 1px solid black;
   margin: 10px 0;
 }
 

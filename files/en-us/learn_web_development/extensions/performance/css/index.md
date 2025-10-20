@@ -252,9 +252,9 @@ Applied to the `@font-face` at-rule, the [`font-display`](/en-US/docs/Web/CSS/@f
 
 ```css
 @font-face {
-  font-family: someFont;
-  src: url(/path/to/fonts/someFont.woff) format("woff");
-  font-weight: 400;
+  font-family: "someFont";
+  src: url("/path/to/fonts/someFont.woff") format("woff");
+  font-weight: normal;
   font-style: normal;
   font-display: fallback;
 }
@@ -282,6 +282,10 @@ article {
   contain-intrinsic-size: 1000px;
 }
 ```
+
+## Optimizing `:has()` selectors
+
+The {{cssxref(":has", ":has()")}} pseudo-class enables powerful selection capabilities but requires careful use to avoid performance bottlenecks. For detailed guidance on writing efficient `:has()` selectors, see [Performance considerations in the `:has()` reference documentation](/en-US/docs/Web/CSS/:has#performance_considerations).
 
 ## See also
 

@@ -1,5 +1,6 @@
 ---
-title: Firefox 125 for developers
+title: Firefox 125 release notes for developers
+short-title: Firefox 125
 slug: Mozilla/Firefox/Releases/125
 page-type: firefox-release-notes
 sidebar: firefox
@@ -116,7 +117,3 @@ These features are shipping in Firefox 125 but only in developer releases or beh
 
   > [!NOTE]
   > The preference for this feature works in reverse: it's set to `false` in the Nightly build, which removes the UA styling for headings nested in sectioning elements. It's set to `true` in all other channels, which retains the existing UA styling for the nested headings.
-
-## Older versions
-
-{{Firefox_for_developers}}

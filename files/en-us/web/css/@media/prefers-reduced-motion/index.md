@@ -3,9 +3,8 @@ title: prefers-reduced-motion
 slug: Web/CSS/@media/prefers-reduced-motion
 page-type: css-media-feature
 browser-compat: css.at-rules.media.prefers-reduced-motion
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 > [!WARNING]
 > An embedded example at the bottom of this page has a scaling movement that may be problematic for some readers. Readers with vestibular motion disorders may wish to enable the reduce motion feature on their device before viewing the animation.
@@ -32,7 +31,7 @@ For Firefox, the `reduce` request is honoured if:
 - In Plasma/KDE: System Settings > Workspace Behavior -> General Behavior > "Animation speed" is set all the way to right to "Instant".
 - In Windows 10: Settings > Ease of Access > Display > Show animations in Windows.
 - In Windows 11: Settings > Accessibility > Visual Effects > Animation Effects
-- In macOS: System Preferences > Accessibility > Display > Reduce motion.
+- In macOS: System Settings > Accessibility > Display > Reduce motion.
 - In iOS: Settings > Accessibility > Motion.
 - In Android 9+: Settings > Accessibility > Remove animations.
 - In Firefox `about:config`: Add a number preference called `ui.prefersReducedMotion` and set its value to either `0` for full animation or to `1` to indicate a preference for reduced motion. Changes to this preference take effect immediately.
@@ -69,7 +68,7 @@ This example uses a scaling animation for the purpose of demonstrating `prefers-
 
 ```css hidden
 .animation {
-  color: #fff;
+  color: white;
   font: 1.2em sans-serif;
   width: 10em;
   padding: 1em;

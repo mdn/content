@@ -497,14 +497,14 @@ padding-left: 5px;
 This one line:
 
 ```css
-background: red url(bg-graphic.png) 10px 10px repeat-x fixed;
+background: red url("bg-graphic.png") 10px 10px repeat-x fixed;
 ```
 
 is equivalent to these five lines:
 
 ```css
 background-color: red;
-background-image: url(bg-graphic.png);
+background-image: url("bg-graphic.png");
 background-position: 10px 10px;
 background-repeat: repeat-x;
 background-attachment: fixed;
@@ -523,8 +523,8 @@ CSS comments begin with `/*` and end with `*/`. In the example below, comments m
 /* ---------------------------- */
 body {
   font:
-    1em/150% Helvetica,
-    Arial,
+    1em/150% "Helvetica",
+    "Arial",
     sans-serif;
   padding: 1em;
   margin: 0 auto;
@@ -563,9 +563,9 @@ div p + p {
 "Commenting out" code is also useful for temporarily disabling sections of code for testing. In the example below, the rules for `.special` are disabled by "commenting out" the code.
 
 ```css
-/*.special {
+/* .special {
   color: red;
-}*/
+} */
 
 p {
   color: blue;
@@ -583,8 +583,8 @@ In the example below, each declaration (and rule start/end) has its own line. Th
 ```css
 body {
   font:
-    1em/150% Helvetica,
-    Arial,
+    1em/150% "Helvetica",
+    "Arial",
     sans-serif;
   padding: 1em;
   margin: 0 auto;
@@ -605,7 +605,7 @@ h1 {
 The next example shows the same CSS in a more compressed format, with all extra white space removed. Although the two examples work the same, the one below is more difficult to read.
 
 ```css-nolint
-body{font:1em/150% Helvetica,Arial,sans-serif;padding:1em;margin:0 auto;max-width:33em;}
+body{font:1em/150% "Helvetica","Arial",sans-serif;padding:1em;margin:0 auto;max-width:33em;}
 @media(width>=70em){body{font-size:130%;}}
 h1{font-size:1.5em;}
 ```

@@ -3,9 +3,8 @@ title: line-height
 slug: Web/CSS/line-height
 page-type: css-property
 browser-compat: css.properties.line-height
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`line-height`** [CSS](/en-US/docs/Web/CSS) property sets the height of a line box in horizontal [writing modes](/en-US/docs/Web/CSS/writing-mode#vertical-rl). In vertical writing modes, it sets the width of a line box. It's commonly used to set the distance between lines of text. On block-level elements in horizontal writing modes, it specifies the preferred height of line boxes within the element, and on non-[replaced](/en-US/docs/Glossary/Replaced_elements) inline elements, it specifies the height that is used to calculate line box height.
 
@@ -42,7 +41,7 @@ line-height: 32px;
 
 ```css interactive-example
 #example-element {
-  font-family: Georgia, sans-serif;
+  font-family: "Georgia", serif;
   max-width: 200px;
 }
 ```
@@ -131,8 +130,8 @@ div {
 /* font shorthand */
 div {
   font:
-    10pt/1.2 Georgia,
-    "Bitstream Charter",
+    10pt/1.2 "Bitstream Charter",
+    "Georgia",
     serif;
 }
 ```

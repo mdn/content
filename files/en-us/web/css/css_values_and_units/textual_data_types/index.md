@@ -1,10 +1,9 @@
 ---
 title: Textual data types
-slug: Web/CSS/CSS_Values_and_Units/Textual_data_types
+slug: Web/CSS/CSS_values_and_units/Textual_data_types
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 Every CSS declaration consists of a property/value pair. The value can include various data types depending on the property, such as a single keyword, integer, function, or a combination of different types; some values have units, while others do not. This guide provides an overview of the textual data types. Refer to the page for each value type for more detailed information.
 
@@ -92,8 +91,8 @@ The parameter for `url()` can be either quoted or unquoted. If unquoted, it is p
 
 ## See also
 
-- [Numeric data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types)
-- [CSS data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)
-- [CSS values and units](/en-US/docs/Web/CSS/CSS_Values_and_Units) module
+- [Numeric data types](/en-US/docs/Web/CSS/CSS_values_and_units/Numeric_data_types)
+- [CSS data types](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types)
+- [CSS values and units](/en-US/docs/Web/CSS/CSS_values_and_units) module
 - [Learn: Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
 - [CSS cascade and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module

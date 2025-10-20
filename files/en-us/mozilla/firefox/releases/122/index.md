@@ -1,5 +1,6 @@
 ---
-title: Firefox 122 for developers
+title: Firefox 122 release notes for developers
+short-title: Firefox 122
 slug: Mozilla/Firefox/Releases/122
 page-type: firefox-release-notes
 sidebar: firefox
@@ -93,7 +94,3 @@ These features are newly shipped in Firefox 122 but are disabled by default. To 
 - **`Intl.Segmenter`:** enabled by default only in Firefox Nightly.
 
   The {{jsxref("Intl.Segmenter")}} object allows accurate locale-sensitive text segmentation of a string. For example, to split a text into words in a language that doesn't use spaces to separate them: `Intl.Segmenter("ja-JP", { granularity: "word" })`. ([Firefox bug 1423593](https://bugzil.la/1423593))
-
-## Older versions
-
-{{Firefox_for_developers}}

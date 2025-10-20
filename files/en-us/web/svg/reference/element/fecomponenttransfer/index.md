@@ -38,12 +38,12 @@ This element implements the {{domxref("SVGFEComponentTransferElement")}} interfa
       y1="0"
       x2="100%"
       y2="0">
-      <stop offset="0" stop-color="#ff0000"></stop>
-      <stop offset="0.2" stop-color="#ffff00"></stop>
-      <stop offset="0.4" stop-color="#00ff00"></stop>
-      <stop offset="0.6" stop-color="#00ffff"></stop>
-      <stop offset="0.8" stop-color="#0000ff"></stop>
-      <stop offset="1" stop-color="#800080"></stop>
+      <stop offset="0" stop-color="red"></stop>
+      <stop offset="0.2" stop-color="yellow"></stop>
+      <stop offset="0.4" stop-color="lime"></stop>
+      <stop offset="0.6" stop-color="cyan"></stop>
+      <stop offset="0.8" stop-color="blue"></stop>
+      <stop offset="1" stop-color="purple"></stop>
     </linearGradient>
     <filter id="identity" x="0" y="0" width="100%" height="100%">
       <feComponentTransfer>
@@ -103,7 +103,7 @@ This element implements the {{domxref("SVGFEComponentTransferElement")}} interfa
 
 ```css
 rect {
-  fill: url(#rainbow);
+  fill: url("#rainbow");
 }
 ```
 

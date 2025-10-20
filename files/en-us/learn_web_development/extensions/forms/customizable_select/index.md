@@ -8,7 +8,10 @@ sidebar: learnsidebar
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Forms/Advanced_form_styling", "Learn_web_development/Extensions/Forms/UI_pseudo-classes", "Learn_web_development/Extensions/Forms")}}
 
-This article explains how to use dedicated, modern HTML and CSS features together to create fully-customized {{htmlelement("select")}} elements. This includes having full control over styling the select button, drop-down picker, arrow icon, current selection checkmark, and each individual {{htmlelement("option")}} element.
+This article explains how to create fully-customized {{htmlelement("select")}} elements using experimental browser features. This includes having full control over styling the select button, drop-down picker, arrow icon, current selection checkmark, and each individual {{htmlelement("option")}} element.
+
+> [!WARNING]
+> The CSS and HTML features demonstrated in this article currently have limited browser support; check the browser compatibility tables on the individual feature reference pages for more details. Some JavaScript frameworks block these features; in others, they cause hydration failures when Server-Side Rendering (SSR) is enabled.
 
 ## Background
 
@@ -128,7 +131,7 @@ select,
 }
 
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 body {
@@ -167,15 +170,15 @@ You are now free to style this in any way you want. To begin with, the `<select>
 
 ```css live-sample___second-render live-sample___third-render live-sample___fourth-render live-sample___full-render
 select {
-  border: 2px solid #ddd;
-  background: #eee;
+  border: 2px solid #dddddd;
+  background: #eeeeee;
   padding: 10px;
   transition: 0.4s;
 }
 
 select:hover,
 select:focus {
-  background: #ddd;
+  background: #dddddd;
 }
 ```
 
@@ -185,7 +188,7 @@ To style the icon inside the select button — the arrow that points down when t
 
 ```css live-sample___second-render live-sample___third-render live-sample___fourth-render live-sample___full-render
 select::picker-icon {
-  color: #999;
+  color: #999999;
   transition: 0.4s rotate;
 }
 ```
@@ -222,8 +225,8 @@ option {
   justify-content: flex-start;
   gap: 20px;
 
-  border: 2px solid #ddd;
-  background: #eee;
+  border: 2px solid #dddddd;
+  background: #eeeeee;
   padding: 10px;
   transition: 0.4s;
 }
@@ -232,7 +235,7 @@ option {
 > [!NOTE]
 > Customizable `<select>` element `<option>`s have `display: flex` set on them by default, but it is included in our stylesheet anyway to clarify what is going on.
 
-Next, a combination of the {{cssxref(":first-of-type")}}, {{cssxref(":last-of-type")}}, and {{cssxref(":not()")}} pseudo-classes is used to set an appropriate {{cssxref("border-radius")}} on the top and bottom corners of the picker, and remove the {{cssxref("border-bottom")}} from all `<option>` elements except the last one so the borders don't look messy and doubled-up:
+Next, a combination of the {{cssxref(":first-of-type")}}, {{cssxref(":last-of-type")}}, and {{cssxref(":not()")}} pseudo-classes is used to set an appropriate {{cssxref("border-radius")}} on the top and bottom `<option>` elements, and remove the {{cssxref("border-bottom")}} from all `<option>` elements — except the last one so the borders don't look messy and doubled-up. We also set the same `border-radius` on the outer `::picker(select)` container so that we don't end up with an ugly square white box around the options if we decide to set a different background-color on the page.
 
 ```css live-sample___third-render live-sample___fourth-render live-sample___full-render
 option:first-of-type {
@@ -243,16 +246,20 @@ option:last-of-type {
   border-radius: 0 0 8px 8px;
 }
 
+::picker(select) {
+  border-radius: 8px;
+}
+
 option:not(option:last-of-type) {
   border-bottom: none;
 }
 ```
 
-Next a different `background` color is set on the odd-numbered `<option>` elements using {{cssxref(":nth-of-type()", ":nth-of-type(odd)")}} to implement zebra-striping, and a different `background` color is set on the `<option>` elements on focus and hover, to provide a useful visual highlight during selection:
+Next, a different `background` color is set on the odd-numbered `<option>` elements using {{cssxref(":nth-of-type()", ":nth-of-type(odd)")}} to implement zebra-striping, and a different `background` color is set on the `<option>` elements on focus and hover, to provide a useful visual highlight during selection:
 
 ```css live-sample___third-render live-sample___fourth-render live-sample___full-render
 option:nth-of-type(odd) {
-  background: #fff;
+  background: white;
 }
 
 option:hover,
@@ -382,6 +389,9 @@ In our demo, the position of the picker is set relative to its anchor by using t
 ```
 
 This results in the top edge of the picker always being positioned 1 pixel down from the bottom edge of the select button, and the left edge of the picker always being positioned `10%` of the select button's width across from its left edge.
+
+> [!NOTE]
+> If you want to remove the implicit anchor reference to stop the picker from being anchored to the `<select>` element, you can do so by setting the `position-anchor` property of the picker to an anchor name that doesn't exist in the current document, such as `--not-an-anchor-name`. See also [removing an anchor association](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#removing_an_anchor_association).
 
 ## Final result
 

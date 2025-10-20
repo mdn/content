@@ -3,9 +3,8 @@ title: :scope
 slug: Web/CSS/:scope
 page-type: css-pseudo-class
 browser-compat: css.selectors.scope
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`:scope`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents elements that are a reference point, or scope, for selectors to match against.
 

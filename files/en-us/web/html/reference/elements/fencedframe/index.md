@@ -5,9 +5,10 @@ page-type: html-element
 status:
   - experimental
 browser-compat: html.elements.fencedframe
+sidebar: htmlsidebar
 ---
 
-{{HTMLSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`<fencedframe>`** [HTML](/en-US/docs/Web/HTML) element represents a nested {{Glossary("browsing context")}}, embedding another HTML page into the current one. `<fencedframe>`s are very similar to {{htmlelement("iframe")}} elements in form and function, except that:
 

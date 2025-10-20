@@ -2,8 +2,6 @@
 title: Using the Popover API
 slug: Web/API/Popover_API/Using
 page-type: guide
-status:
-  - experimental
 ---
 
 {{DefaultAPISidebar("Popover API")}}
@@ -48,6 +46,20 @@ You can see how the previous code snippet renders in our [Basic declarative popo
 > If the `popovertargetaction` attribute is omitted, `"toggle"` is the default action that will be performed by a control button.
 
 When a popover is shown, it has `display: none` removed from it and it is put into the {{glossary("top layer")}} so it will sit on top of all other page content.
+
+### `command` and `commandfor`
+
+The [`commandfor`](/en-US/docs/Web/HTML/Reference/Elements/button#commandfor) and [`command`](/en-US/docs/Web/HTML/Reference/Elements/button#command) attributes provide very similar functionality to `popovertarget` and `popovertargetaction`, but with a more general design aimed at providing other functionality beyond popover commands, including custom commands.
+
+The previous code snippet could be rewritten like this:
+
+```html live-sample___command-commandfor
+<button commandfor="mypopover" command="show-popover">Show popover</button>
+<button commandfor="mypopover" command="hide-popover">Hide popover</button>
+<div id="mypopover" popover>Popover content</div>
+```
+
+{{EmbedLiveSample("command-commandfor", "100%", "100")}}
 
 ## auto state, and "light dismiss"
 
@@ -94,6 +106,30 @@ In this state:
 - Multiple independent popovers can be shown simultaneously.
 
 You can see this behavior in action in our [Multiple manual popovers example](https://mdn.github.io/dom-examples/popover-api/multiple-manual/) ([source](https://github.com/mdn/dom-examples/tree/main/popover-api/multiple-manual)).
+
+## The `beforetoggle` and `toggle` events
+
+You can respond to a popover being shown or hidden using the [`beforetoggle`](/en-US/docs/Web/API/HTMLElement/beforetoggle_event) and [`toggle`](/en-US/docs/Web/API/HTMLElement/toggle_event) events:
+
+- `beforetoggle` is fired just before a popover is shown or hidden. This can be used for example to prevent the popover being shown or hidden (using {{domxref("Event.preventDefault()")}}), to add animation classes to a popover to animate it, or to cleanup the state of a popover after it has been used.
+- `toggle` is fired just after a popover is shown or hidden. This is generally used to run other code in response to a popover toggle state changing.
+
+Both of these events have a {{domxref("ToggleEvent")}} event object. This event has the following features in addition to those inherited from the default {{domxref("Event")}} object:
+
+- The {{domxref("ToggleEvent.oldState", "oldState")}} and {{domxref("ToggleEvent.newState", "newState")}} properties indicate which state the popover has just transitioned from and to, allowing you to respond specifically to a popover opening or closing.
+- The {{domxref("ToggleEvent.source", "source")}} property contains a reference to the HTML popover control element that initiated the toggle, allowing you to run different code in response to the toggle event depending on which control initiated it.
+
+Typical usage might look something like this:
+
+```js
+const popover = document.getElementById("mypopover");
+
+popover.addEventListener("toggle", (e) => {
+  console.log(e.newState);
+});
+```
+
+See the previous reference links for more information and examples.
 
 ## Showing popovers via JavaScript
 
@@ -270,6 +306,9 @@ The sub-menu popovers work fine as they are, opening when the toolbar buttons ar
 <div id="tooltip-3" class="tooltip" popover="hint">Tooltip C</div>
 ```
 
+> [!NOTE]
+> In the demo [source code](https://github.com/mdn/dom-examples/tree/main/popover-api/popover-hint), the tooltips are nested inside the popover control buttons. This is because it provides a better fallback in browsers that don't support CSS anchor positioning — the `hint` popovers appear next to their associated control buttons rather than somewhere else entirely.
+
 To control the showing/hiding, we need to use JavaScript. First of all, we grab references to the `hint` popovers and the control buttons in two separate {{domxref("NodeList")}}s using {{domxref("Document.querySelectorAll()")}}:
 
 ```js
@@ -398,6 +437,8 @@ For example, you could use a combination of {{cssxref("anchor()")}} function val
 
 ```css
 .my-popover {
+  margin: 0;
+  inset: auto;
   bottom: calc(anchor(top) + 20px);
   justify-self: anchor-center;
 }
@@ -407,14 +448,21 @@ Or you could use a {{cssxref("position-area")}} property:
 
 ```css
 .my-popover {
+  margin: 0;
+  inset: auto;
   position-area: top;
 }
 ```
+
+When using {{cssxref("position-area")}} or {{cssxref("anchor()")}} to position popovers, be aware that [the default styles for popovers](https://html.spec.whatwg.org/multipage/rendering.html#flow-content-3:~:text=%5Bpopover%5D%20%7B) may conflict with the position you're trying to achieve. The usual culprits are the default styles for `margin` and `inset`, so it's advisable to reset those, as in the examples above. The CSS working group is [looking at ways to avoid requiring this workaround](https://github.com/w3c/csswg-drafts/issues/10258).
 
 See [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#positioning_elements_relative_to_their_anchor) for more details on associating anchor and positioned elements, and positioning elements relative to their anchor.
 
 > [!NOTE]
 > For an example that uses this implicit association, see our [popover hint demo](https://mdn.github.io/dom-examples/popover-api/popover-hint/) ([source](https://github.com/mdn/dom-examples/tree/main/popover-api/popover-hint)). If you check out the CSS code, you'll see that no explicit anchor associations are made using the {{cssxref("anchor-name")}} and {{cssxref("position-anchor")}} properties.
+
+> [!NOTE]
+> If you want to remove the implicit anchor reference to stop the popover from being anchored to its invoker, you can do so by setting the `position-anchor` property of the popover to an anchor name that doesn't exist in the current document, such as `--not-an-anchor-name`. See also [removing an anchor association](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#removing_an_anchor_association).
 
 ## Animating popovers
 
@@ -456,7 +504,7 @@ The two popover properties we want to transition are [`opacity`](/en-US/docs/Web
 
 ```css
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 /* Transition for the popover itself */
@@ -495,7 +543,7 @@ to take effect, as the specificity is the same */
 /* Transition for the popover's backdrop */
 
 [popover]::backdrop {
-  background-color: rgb(0 0 0 / 0%);
+  background-color: transparent;
   transition:
     display 0.7s allow-discrete,
     overlay 0.7s allow-discrete,
@@ -513,7 +561,7 @@ so this starting-style rule cannot be nested */
 
 @starting-style {
   [popover]:popover-open::backdrop {
-    background-color: rgb(0 0 0 / 0%);
+    background-color: transparent;
   }
 }
 ```
@@ -563,7 +611,7 @@ We have defined keyframes that specify the desired entry and exit animations, an
 
 ```css
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 [popover] {
@@ -614,7 +662,7 @@ html {
 
 @keyframes backdrop-fade-in {
   0% {
-    background-color: rgb(0 0 0 / 0%);
+    background-color: transparent;
   }
 
   100% {
