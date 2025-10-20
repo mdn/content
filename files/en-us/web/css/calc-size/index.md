@@ -209,7 +209,7 @@ section {
 
 h2 {
   margin: 0;
-  font-weight: 400;
+  font-weight: normal;
   font-size: 1.1rem;
   text-align: center;
   letter-spacing: 1px;
@@ -295,7 +295,7 @@ main {
 
 h2 {
   margin: 0;
-  font-weight: 400;
+  font-weight: normal;
   font-size: 1.1rem;
   text-align: center;
   letter-spacing: 1px;

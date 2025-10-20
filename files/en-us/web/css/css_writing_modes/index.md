@@ -14,7 +14,7 @@ A _writing mode_ in CSS is determined by the {{cssxref("writing-mode")}}, {{cssx
 
 Some horizontal languages are left-to-right, including Latin and Indic scripts. Other horizontal languages are written right-to-left, including Hebrew and Arabic scripts. Sometimes text needs to be bidirectional, such as when mixing left-to-right and right-to-left scripts. Some languages can be written with a vertical orientation, for example, Chinese, Japanese, and Korean (CJK) scripts.
 
-The CSS writing module addresses the orientations of all writing modes. Other modules, such as the [CSS ruby layout](/en-US/docs/Web/CSS/) module, provide rendering models and formatting controls related to the display text annotations.
+The CSS writing module addresses the orientations of all writing modes. Other modules, such as the [CSS ruby layout](/en-US/docs/Web/CSS) module, provide rendering models and formatting controls related to the display text annotations.
 
 ## Reference
 

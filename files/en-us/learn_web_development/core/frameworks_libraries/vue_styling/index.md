@@ -349,7 +349,7 @@ Next, copy the following CSS into the newly created `<style>` element:
   font-family: "Arial", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-weight: 400;
+  font-weight: normal;
   font-size: 1rem;
   line-height: 1.25;
   color: #0b0c0c;
@@ -360,7 +360,7 @@ Next, copy the following CSS into the newly created `<style>` element:
   font-family: "Arial", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-weight: 400;
+  font-weight: normal;
   font-size: 1rem;
   line-height: 1.25;
   box-sizing: border-box;
@@ -380,7 +380,7 @@ Next, copy the following CSS into the newly created `<style>` element:
 .custom-checkbox {
   font-family: "Arial", sans-serif;
   -webkit-font-smoothing: antialiased;
-  font-weight: 400;
+  font-weight: normal;
   font-size: 1.6rem;
   line-height: 1.25;
   display: block;
