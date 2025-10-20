@@ -72,10 +72,10 @@ In order for data to get back and forth, we need the following things:
 
 When you type a web address (which is technically part of a [URL](#components_of_a_url)) into your browser address bar, the following steps occur:
 
-1. The browser goes to the DNS server and finds the real address of the server that the website lives on (you look up the address of the shop).
-2. The browser sends an HTTP request message to the server, asking it to send a copy of the website to the client (you go to the shop and order your goods). This message, and all other data sent between the client and the server, is sent across your internet connection using TCP/IP.
-3. If the server approves the client's request, the server sends the client a "200 OK" message, which means "Of course you can look at that website! Here it is", and then starts sending the website's files to the browser as a series of small chunks called [packets](#packets_explained) (the shop gives you your goods, and you bring them back to your house).
-4. The browser assembles the small chunks into a complete web page and displays it to you (you get the goods home — new shiny stuff, awesome!).
+1. The browser goes to the DNS server and finds the real address of the server that the website lives on.
+2. The browser sends an HTTP request message to the server, asking it to send a copy of the website to the client. This message, and all other data sent between the client and the server, is sent across your internet connection using TCP/IP.
+3. If the server approves the client's request, the server sends the client a "200 OK" message, which means "Of course you can look at that website! Here it is", and then starts sending the website's files to the browser as a series of small chunks called [packets](#packets_explained).
+4. The browser assembles the small chunks into a complete web page and displays it to you.
 
 ## DNS explained
 
@@ -95,7 +95,7 @@ Let's look up the MDN IP address now, and prove that it points to the same place
 
 Earlier, we used the term "packets" to describe the format in which the data is transferred between the client and server. What do we mean here?
 
-When data is sent across the web, it is sent in several small chunks called packets. Each packet contains:
+When data is sent across the web, it is sent in multiple small chunks called packets. Each packet contains:
 
 - A **header**, which includes details such as the server and client IP address, the packet number, the total number of packets in the transmission, and details of the protocols used in the transmission.
 - A **payload**, which contains the actual data sent in the packet.
@@ -103,8 +103,7 @@ When data is sent across the web, it is sent in several small chunks called pack
 There are multiple reasons why data is sent in small packets, but most significantly:
 
 - They are sometimes dropped or corrupted, and when this happens, it's quicker and easier for the client to request the missing packets rather than an entire file.
-- The packets can be routed along different paths, making the transmission as efficient as possible and reducing the possibility of slowing down the network, especially when many users are requesting the same resource simultaneously. The packets may arrive out of sequence, but the client can use the information in the packet headers to make sure they are assembled in the correct order.
-- It is harder to steal user data when transmitted in packets, as each packet contains minimal data and is transmitted separately.
+- The packets can be routed along different paths, making the transmission as efficient as possible and reducing the possibility of slowing down the network — especially when many users are requesting the same resource simultaneously. The packets may arrive out of sequence, but the client can use the information in the packet headers to make sure they are assembled in the correct order.
 
 ## HTTP basics
 
