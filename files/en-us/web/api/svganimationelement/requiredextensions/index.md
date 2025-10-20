@@ -24,6 +24,5 @@ An {{domxref("SVGStringList")}} object.
 
 ## See also
 
-- HTML [`requiredExtensions`](/en-US/docs/Web/HTML/Reference/Global_attributes/requiredExtensions) attribute
 - SVG {{SVGAttr("requiredExtensions")}} attribute
 - SVG {{SVGAttr("systemLanguage")}} attribute

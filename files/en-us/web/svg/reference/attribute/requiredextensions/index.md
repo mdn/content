@@ -71,5 +71,6 @@ You can use this attribute with the following SVG elements:
 
 - {{SVGAttr("tabindex")}} attribute
 - {{SVGAttr("systemLanguage")}} attribute
+- {{svgattr("requiredFeatures")}} {{deprecated_inline}}
 - {{domxref("SVGGraphicsElement")}} interface
 - {{domxref("SVGAnimationElement")}} interface
