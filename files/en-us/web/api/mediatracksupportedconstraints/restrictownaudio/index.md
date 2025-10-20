@@ -3,10 +3,12 @@ title: "MediaTrackSupportedConstraints: restrictOwnAudio property"
 short-title: restrictOwnAudio
 slug: Web/API/MediaTrackSupportedConstraints/restrictOwnAudio
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.MediaStreamTrack.applyConstraints.restrictOwnAudio_constraint
 ---
 
-{{APIRef("Media Capture and Streams")}}
+{{APIRef("Media Capture and Streams")}}{{SeeCompatTable}}
 
 The {{domxref("MediaTrackSupportedConstraints")}} dictionary's **`restrictOwnAudio`** property is a read-only boolean value which is present (and set to `true`) in the object returned by {{domxref("MediaDevices.getSupportedConstraints()")}} if and only if the {{Glossary("user agent")}} supports the `restrictOwnAudio` constraint. If the constraint isn't supported, it's not included in the list, so this value will never be `false`.
 

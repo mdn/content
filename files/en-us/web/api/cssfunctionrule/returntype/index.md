@@ -3,10 +3,12 @@ title: "CSSFunctionRule: returnType property"
 short-title: returnType
 slug: Web/API/CSSFunctionRule/returnType
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.CSSFunctionRule.returnType
 ---
 
-{{ APIRef("CSSOM") }}
+{{ APIRef("CSSOM") }}{{SeeCompatTable}}
 
 The **`returnType`** property of the {{domxref("CSSFunctionRule")}} interface returns a string representing the custom function's return type.
 
