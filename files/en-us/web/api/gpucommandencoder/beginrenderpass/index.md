@@ -72,11 +72,11 @@ Color attachment objects can have the following properties:
 - `resolveTarget` {{optional_inline}}
   - : An object representing the texture subresource that will receive the resolved output for this color attachment if `view` is multisampled. This can be one of the following:
     - {{domxref("GPUTextureView")}}
-    - {{domxref("GPUTexture")}}: Can be used in place of a `GPUTextureView`, provided a default view is desired. When used in this context, `GPUTexture` is equivalent to a `GPUTextureView` object created using a {{domxref("GPUTexture.createView()")}} call with no `descriptor` object specified.
+    - {{domxref("GPUTexture")}}: Can be used in place of a `GPUTextureView`, provided a default view is desired. When used in this context, `GPUTexture` is equivalent to a `GPUTextureView` object created using a {{domxref("GPUTexture.createView()")}} call with no argument specified.
 - `view`
   - : An object representing the texture subresource that will be output to for this color attachment. This can be one of the following:
     - {{domxref("GPUTextureView")}}
-    - {{domxref("GPUTexture")}}: Can be used in place of a `GPUTextureView`, provided a default view is desired. When used in this context, `GPUTexture` is equivalent to a `GPUTextureView` object created using a {{domxref("GPUTexture.createView()")}} call with no `descriptor` object specified.
+    - {{domxref("GPUTexture")}}: Can be used in place of a `GPUTextureView`, provided a default view is desired. When used in this context, `GPUTexture` is equivalent to a `GPUTextureView` object created using a {{domxref("GPUTexture.createView()")}} call with no argument specified.
 
     > [!NOTE]
     > Each color or depth/stencil attachment must be a unique texture subresource, and texture subresources used as attachments cannot be used inside the render pass.
@@ -126,7 +126,7 @@ The `depthStencilAttachment` object can have the following properties:
 - `view`
   - : An object representing the texture subresource that will be output to and read from for this depth/stencil attachment. This can be one of the following:
     - {{domxref("GPUTextureView")}}
-    - {{domxref("GPUTexture")}}: Can be used in place of a `GPUTextureView`, provided a default view is desired. When used in this context, `GPUTexture` is equivalent to a `GPUTextureView` object created using a {{domxref("GPUTexture.createView()")}} call with no `descriptor` object specified.
+    - {{domxref("GPUTexture")}}: Can be used in place of a `GPUTextureView`, provided a default view is desired. When used in this context, `GPUTexture` is equivalent to a `GPUTextureView` object created using a {{domxref("GPUTexture.createView()")}} call with no argument specified.
 
 ### Return value
 
