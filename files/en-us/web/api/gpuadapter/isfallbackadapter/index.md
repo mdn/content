@@ -14,7 +14,7 @@ browser-compat: api.GPUAdapter.isFallbackAdapter
 The **`isFallbackAdapter`** read-only property of the
 {{domxref("GPUAdapter")}} interface returns `true` if the adapter is a [fallback adapter](/en-US/docs/Web/API/GPU/requestAdapter#fallback_adapters), and `false` if not.
 
-This property has been removed from the web platform: use {{domxref("GPUAdapterInfo.isFallbackAdapter")}} instead.
+This property has been removed from the web platform. Use {{domxref("GPUAdapterInfo.isFallbackAdapter")}} instead.
 
 ## Value
 
