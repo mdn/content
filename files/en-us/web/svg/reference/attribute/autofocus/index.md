@@ -9,7 +9,7 @@ sidebar: svgref
 The **`autofocus`** global SVG attribute defines a focusable element to be focused after it's connected to a document. The attribute has no effect if the element is not already focusable.
 
 > [!NOTE]
-> The `autofocus` attribute has an HTML counterpart: [`autofocus`](/en-US/docs/Web/HTML/Reference/Global_attributes/autofocus)
+> The `autofocus` attribute has an HTML counterpart: [`autofocus`](/en-US/docs/Web/HTML/Reference/Global_attributes/autofocus).
 
 ## Usage notes
 
@@ -51,5 +51,5 @@ Use careful consideration for accessibility when applying the `autofocus` attrib
 ## See also
 
 - SVG {{SVGAttr("tabindex")}} attribute
-- HTML [`autofocus`](/en-US/docs/Web/HTML/Reference/Global_attributes/autofocus) property
-- {{domxref("SVGElement/autofocus")}} property
+- HTML [`autofocus`](/en-US/docs/Web/HTML/Reference/Global_attributes/autofocus) attribute
+- {{domxref("SVGElement.autofocus")}}
