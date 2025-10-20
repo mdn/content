@@ -422,80 +422,70 @@ All SVG presentation attributes can be used as CSS properties.
 
 ### Event attributes
 
-Event handler attributes are discouraged. While the attributes listed below apply to all HTML and SVG elements, they are not useful on all elements. For example, the `oncuechange` attribute is accepted by all elements and attaches an event listener for `cuechange`, but only {{htmlelement("track")}} elements will ever receive a `cuechange` event fired by the browser. For other elements, you can only use {{domxref("EventTarget.dispatchEvent()")}} to manually dispatch one. [Some attributes](/en-US/docs/Web/HTML/Reference/Elements/body#event_attributes) can be specified on {{HTMLElement("svg")}}, but they would instead listen to events on `window`.
-
-- {{domxref("HTMLMediaElement/abort_event", "onabort")}}
-- {{domxref("Element/auxclick_event", "auxclick")}}
-- {{domxref("Element/beforeinput_event", "onbeforeinput")}}
-- {{domxref("Element/beforematch_event", "onbeforematch")}}
-- {{domxref("HTMLElement/beforetoggle_event", "onbeforetoggle")}}
-- {{domxref("Element/blur_event", "onblur")}}
-- {{domxref("Element/cancel_event", "oncancel")}}
-- {{domxref("HTMLMediaElement/canplay_event", "oncanplay")}}
-- {{domxref("HTMLMediaElement/canplaythrough_event", "oncanplaythrough")}}
-- {{domxref("HTMLElement/change_event", "onchange")}}
-- {{domxref("Element/click_event", "onclick")}}
-- {{domxref("HTMLDialogElement/close_event", "onclose")}}
-- {{domxref("HTMLElement/command_event", "oncommand")}}
-- {{domxref("HTMLCanvasElement/contextlost_event", "oncontextlost")}}
-- {{domxref("Element/contextmenu_event", "oncontextmenu")}}
-- {{domxref("HTMLCanvasElement/contextrestored_event", "oncontextrestored")}}
-- {{domxref("Element/copy_event", "oncopy")}}
-- {{domxref("HTMLTrackElement/cuechange_event", "oncuechange")}}
-- {{domxref("Element/cut_event", "oncut")}}
-- {{domxref("Element/dblclick_event", "ondblclick")}}
-- {{domxref("HTMLElement/drag_event", "ondrag")}}
-- {{domxref("HTMLElement/dragend_event", "ondragend")}}
-- {{domxref("HTMLElement/dragenter_event", "ondragenter")}}
-- {{domxref("HTMLElement/dragleave_event", "ondragleave")}}
-- {{domxref("HTMLElement/dragover_event", "ondragover")}}
-- {{domxref("HTMLElement/dragstart_event", "ondragstart")}}
-- {{domxref("HTMLElement/drop_event", "ondrop")}}
-- {{domxref("Window/error_event", "onerror")}}
-- {{domxref("HTMLMediaElement/durationchange_event", "ondurationchange")}}
-- {{domxref("HTMLMediaElement/emptied_event", "onemptied")}}
-- {{domxref("HTMLMediaElement/ended_event", "onended")}}
-- {{domxref("Element/focus_event", "onfocus")}}
-- {{domxref("HTMLFormElement/formdata_event", "onformdata")}}
-- {{domxref("Element/input_event", "oninput")}}
-- {{domxref("HTMLInputElement/invalid_event", "oninvalid")}}
-- {{domxref("Element/keydown_event", "onkeydown")}}
-- {{domxref("Element/keypress_event", "onkeypress")}}
-- {{domxref("Element/keyup_event", "onkeyup")}}
-- {{domxref("SVGElement/load_event", "onload")}}
-- {{domxref("HTMLMediaElement/loadeddata_event", "onloadeddata")}}
-- {{domxref("HTMLMediaElement/loadedmetadata_event", "onloadedmetadata")}}
-- {{domxref("HTMLMediaElement/loadstart_event", "onloadstart")}}
-- {{domxref("Element/mousedown_event", "onmousedown")}}
-- {{domxref("Element/mouseenter_event", "onmouseenter")}}
-- {{domxref("Element/mouseleave_event", "onmouseleave")}}
-- {{domxref("Element/mousemove_event", "onmousemove")}}
-- {{domxref("Element/mouseout_event", "onmouseout")}}
-- {{domxref("Element/mouseover_event", "onmouseover")}}
-- {{domxref("Element/mouseup_event", "onmouseup")}}
-- {{domxref("Element/paste_event", "onpaste")}}
-- {{domxref("HTMLMediaElement/pause_event", "onpause")}}
-- {{domxref("HTMLMediaElement/play_event", "onplay")}}
-- {{domxref("HTMLMediaElement/playing_event", "onplaying")}}
-- {{domxref("HTMLMediaElement/progress_event", "onprogress")}}
-- {{domxref("HTMLMediaElement/ratechange_event", "onratechange")}}
-- {{domxref("HTMLFormElement/reset_event", "onreset")}}
-- {{domxref("HTMLVideoElement/resize_event", "onresize")}}
-- {{domxref("Element/scroll_event", "onscroll")}}
-- {{domxref("Element/scrollend_event", "onscrollend")}}
-- {{domxref("Element/securitypolicyviolation_event", "onsecuritypolicyviolation")}}
-- {{domxref("HTMLMediaElement/seeked_event", "onseeked")}}
-- {{domxref("HTMLMediaElement/seeking_event", "onseeking")}}
-- {{domxref("Element/select_event", "onselect")}}
-- {{domxref("HTMLSlotElement/slotchange_event", "onslotchange")}}
-- {{domxref("HTMLMediaElement/stalled_event", "onstalled")}}
-- {{domxref("HTMLFormElement/submit_event", "onsubmit")}}
-- {{domxref("HTMLMediaElement/suspend_event", "onsuspend")}}
-- {{domxref("HTMLMediaElement/timeupdate_event", "ontimeupdate")}}
-- {{domxref("HTMLElement/toggle_event", "ontoggle")}}
-- {{domxref("HTMLMediaElement/volumechange_event", "onvolumechange")}}
-- {{domxref("HTMLMediaElement/waiting_event", "onwaiting")}}
-- {{domxref("Element/wheel_event", "onwheel")}}
+- **`onabort`**
+- **`onactivate`**
+- **`onbegin`**
+- **`oncancel`**
+- **`oncanplay`**
+- **`oncanplaythrough`**
+- **`onchange`**
+- **`onclick`**
+- **`onclose`**
+- **`oncuechange`**
+- **`ondblclick`**
+- **`ondrag`**
+- **`ondragend`**
+- **`ondragenter`**
+- **`ondragleave`**
+- **`ondragover`**
+- **`ondragstart`**
+- **`ondrop`**
+- **`ondurationchange`**
+- **`onemptied`**
+- **`onend`**
+- **`onended`**
+- **`onerror`**
+- **`onfocus`**
+- **`onfocusin`**
+- **`onfocusout`**
+- **`oninput`**
+- **`oninvalid`**
+- **`onkeydown`**
+- **`onkeypress`**
+- **`onkeyup`**
+- **`onload`**
+- **`onloadeddata`**
+- **`onloadedmetadata`**
+- **`onloadstart`**
+- **`onmousedown`**
+- **`onmouseenter`**
+- **`onmouseleave`**
+- **`onmousemove`**
+- **`onmouseout`**
+- **`onmouseover`**
+- **`onmouseup`**
+- **`onmousewheel`**
+- **`onpause`**
+- **`onplay`**
+- **`onplaying`**
+- **`onprogress`**
+- **`onratechange`**
+- **`onrepeat`**
+- **`onreset`**
+- **`onresize`**
+- **`onscroll`**
+- **`onseeked`**
+- **`onseeking`**
+- **`onselect`**
+- **`onshow`**
+- **`onstalled`**
+- **`onsubmit`**
+- **`onsuspend`**
+- **`ontimeupdate`**
+- **`ontoggle`**
+- **`onunload`**
+- **`onvolumechange`**
+- **`onwaiting`**
 
 ## See also
 
