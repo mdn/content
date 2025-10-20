@@ -31,5 +31,3 @@ _This interface doesn't implement any specific methods, but inherits methods fro
 
 - SVG {{SVGAttr("systemLanguage")}} attribute
 - SVG {{SVGAttr("requiredExtensions")}} attribute
-- {{domxref("SVGGraphicsElement")}}
-- {{domxref("SVGAnimationElement")}}
