@@ -295,6 +295,7 @@ Below is a list of all of the attributes available in SVG along with links to re
 
 The core attributes are global attributes.
 
+- {{SVGAttr("autofocus")}}
 - {{SVGAttr("id")}}
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
