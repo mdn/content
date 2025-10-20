@@ -58,7 +58,7 @@ not exist it is created.
 const fileName = "fileToGetName";
 
 // assuming we have a directory handle: 'currentDirHandle'
-const fileHandle = currentDirHandle.getFileHandle(fileName, { create: true });
+const fileHandle = await currentDirHandle.getFileHandle(fileName, { create: true });
 ```
 
 ## Specifications
