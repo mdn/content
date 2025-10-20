@@ -19,7 +19,7 @@ CookieBlockedForeign=Request to access cookies or storage on "X" was blocked bec
 
 The permission can be changed or removed by either:
 
-- Going to _Preferences > Privacy & Security > Enhanced Tracking Protection_ and either
+- Going to _Settings > Privacy & Security > Enhanced Tracking Protection_ and either
   - adding an exception with the _Manage Exceptions_… button.
   - choosing the _Custom_ Content Blocking and unchecking the _Tracker_ checkbox.
 

@@ -19,7 +19,7 @@ CookieBlockedByPermission=Request to access cookies or storage on "X" was blocke
 
 The permission can be changed or removed by:
 
-- Going to _Preferences > Privacy & Security > Cookies and Site Data_.
+- Going to _Settings > Privacy & Security > Cookies and Site Data_.
 - Clicking on the _Manage exceptions_ button and updating the listed exceptions.
 
 ## See also
