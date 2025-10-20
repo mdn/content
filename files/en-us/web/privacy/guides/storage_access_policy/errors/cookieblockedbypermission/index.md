@@ -19,9 +19,9 @@ CookieBlockedByPermission=Request to access cookies or storage on "X" was blocke
 
 The permission can be changed or removed by:
 
-- Going to _Preferences > Content Blocking > Cookies and Site Data_
-- Clicking on the _Manage Permissions_ button and updating the listed exceptions
+- Going to _Preferences > Privacy & Security > Cookies and Site Data_
+- Clicking on the _Manage exceptions_ button and updating the listed exceptions
 
 ## See also
 
-- [Content blocking](https://support.mozilla.org/en-US/kb/content-blocking) on [support.mozilla.org](https://support.mozilla.org/)
+- [Enhanced Tracking Protection in Firefox for desktop](https://support.mozilla.org/en-US/kb/content-blocking) on [support.mozilla.org](https://support.mozilla.org/)
