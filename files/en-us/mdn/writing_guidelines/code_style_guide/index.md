@@ -38,7 +38,7 @@ Some more general guidelines include:
 
 ### Browser support
 
-When creating code examples for a technology that's not yet available in all major browsers, consider using [feature detection](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection) to fall back to a simpler behavior or inform the user that their browser is not yet supported.
+When creating code examples for a technology that's not yet available in all major browsers, consider using [feature detection](/en-US/docs/Learn_web_development/Extensions/Testing/Feature_detection) to fall back to a simpler behavior or inform the user that their browser is not yet supported.
 Do not specify supported browsers and their versions in code comments or prose, as this information quickly becomes outdated.
 
 ## MDN code style and formatting
