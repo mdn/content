@@ -26,4 +26,3 @@ An {{domxref("SVGStringList")}} object.
 
 - SVG {{SVGAttr("requiredExtensions")}} attribute
 - SVG {{SVGAttr("systemLanguage")}} attribute
-- {{domxref("SVGAnimationElement.requiredExtensions")}}
