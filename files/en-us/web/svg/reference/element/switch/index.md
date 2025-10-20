@@ -64,3 +64,7 @@ This example demonstrates showing different text content depending on the browse
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{svgattr("requiredFeatures")}} {{deprecated_inline}}
