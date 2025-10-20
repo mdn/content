@@ -20,7 +20,7 @@ Finally, we'll discuss how even with the best practices, [password-based authent
 In a password authentication system, when the user registers:
 
 1. The user supplies a new username and password, for example by entering it in a {{htmlelement("form")}} element in the website.
-2. The web page sends the username and password to the server, for example by submitting the form in a {{httpmethod("POST")}} request.
+2. The web page sends the username and password to a server, for example, by submitting the form data in a {{httpmethod("POST")}} request.
 3. The server creates a new record for this user in its database. The key is the username and the password is stored under it.
 
 ![Registration using a password.](password-basic-register.svg)
@@ -38,7 +38,7 @@ When the user signs in:
 Looking at this overview, we can see some of the ways an attacker can impersonate the user.
 
 - **Guessing**
-  - : An attacker could try many different possible passwords for a user. Attackers typically use password lists which contain many of the most common passwords.
+  - : An attacker could try many different possible passwords for a user. Attackers typically use password lists that contain many of the most common passwords.
 
 - **Credential stuffing**
   - : An attacker could buy a collection of username/password pairs from a previous data breach on a different site, and then try them on the target site in the hope that a user has used the same password for both sites.
@@ -50,7 +50,7 @@ Looking at this overview, we can see some of the ways an attacker can impersonat
   - : An attacker could break into the server and retrieve the database of stored records.
 
 - **Phishing**
-  - : An attacker could trick the user into handing their password to the attacker. For example, an attacker might create a page that looks just like the target site's login page, and send the target user an email containing a link to the fake page, asking them to sign in.
+  - : An attacker could trick the user into handing their password to the attacker. For example, an attacker might create a page that looks just like the target site's login page, and send the target user an email containing a link to the fake page, asking them to sign in to check an order status or receive a message.
 
 ### Defenses
 
@@ -82,7 +82,7 @@ In each section, we'll highlight practices that help to minimize the threat pose
 
 In registration, a new user supplies a new username and password. The site is very likely to ask for an email address as well, and may choose to use the email address as the username.
 
-The site should ask for this information using an HTML {{htmlelement("form")}} element.
+The site should ask for this information using an HTML {{htmlelement("form")}}.
 
 ### Form design
 
@@ -104,7 +104,7 @@ Following the practices below helps password managers recognize forms they need 
   - `"username"` for username
   - `"new-password"` for creating a new password, in registration or password reset forms
   - `"current-password"` for entering an existing password, in login or password reset forms
-- Forms should use hidden fields for information that the user does not have to enter, but that can provide a hint to password managers. For example, the user may not have to enter the username in a change password from, but the username can help a password manager know which password to enter.
+- Forms should use hidden fields for information that the user does not have to enter, but that can provide a hint to password managers. For example, the user may not have to enter the username in a change password form, but the username can help a password manager know which password to enter.
 
 For more information, see:
 
@@ -112,7 +112,7 @@ For more information, see:
 - [Making password managers play ball with your login form](https://hidde.blog/making-password-managers-play-ball-with-your-login-form/)
 - [Create Amazing Password Forms](https://www.chromium.org/developers/design-documents/create-amazing-password-forms/)
 
-The registration form typically asks for the user to enter the password twice.
+The registration form typically asks the user to enter the password twice.
 
 ### Form submission
 
@@ -213,7 +213,7 @@ The server then sends an email to the address the user gave. The email asks the 
 
 ## Login
 
-To sign in, the user enters their username and password using an HTML `<form>` element dedicated to sign-in.
+To sign in, the user enters their username and password using an HTML `<form>` dedicated to sign-in.
 
 Just like the registration form, the login form should be designed to work with (and be tested to work with) password managers. To do this, the form should follow the practices previously described in [Form design](#form_design).
 
@@ -226,13 +226,13 @@ When the server receives the `POST` request, the server:
 
 If the comparison succeeds, the server signs the user in and returns success.
 
-If the record was not found or the comparison fails, the server must return the same error message in both cases. Otherwise clients can determine whether an account exists, and can use this to execute further attacks.
+If the record was not found or the comparison fails, the server must return the same error message in both cases. Otherwise, attackers can determine whether an account exists and can use this information to execute further attacks.
 
 ## Password reset
 
 The password reset flow enables a user to reset the password, when they have forgotten or lost it. This usually relies on the user having supplied (and then verified) their email address when they registered.
 
-When the user asks to reset their password, the website asks the user to enter their email address. The website may ask the user to solve a CAPTCHA at this point, to make it harder for a malicious third party to spam a legitimate user.
+When the user asks to reset their password, the website asks the user to enter their email address. The website may ask the user to solve a CAPTCHA at this point, to make it harder for a malicious third party to spam a legitimate user with multiple password reset requests.
 
 The website back end then checks whether it has a record for this email address. _Whether or not it does have a record_, the website gives the same message to the user: that it has sent an email to the address given, with further instructions. Providing the same message in both cases prevents an attacker from finding out whether a given email address is associated with an account: this information could be used in further attacks (such as targeted [phishing](/en-US/docs/Web/Security/Attacks/Phishing), or _spearphishing_, attacks).
 
@@ -243,7 +243,7 @@ The website back end then checks whether it has a record for this email address.
   - Sets the token value as a URL parameter to the reset URL, like: `https://example.org/reset?<reset-token>`.
   - Sends an email to the address the user gave, containing the link and asking the user to click it.
 
-When the user clicks the link, the reset page extracts the URL parameter and looks for a matching stored reset token. If a reset token is found and has not expired, the website allows the user to enter a new password: this follows similar rules to the [registration](#registration) form, to enable the new password to be recognized by a password manager.
+When the user clicks the link, the reset page extracts the URL parameter and looks for a matching stored reset token. If a reset token is found and has not expired, the website allows the user to enter a new password. This flow follows similar rules to the [registration](#registration) form, to enable the new password to be recognized by a password manager.
 
 Finally, the website emails the user confirmation that their password has been changed.
 
