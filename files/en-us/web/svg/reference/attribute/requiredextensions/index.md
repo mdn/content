@@ -2,11 +2,13 @@
 title: requiredExtensions
 slug: Web/SVG/Reference/Attribute/requiredExtensions
 page-type: svg-attribute
-browser-compat: svg.elements.animate.requiredExtensions
+browser-compat: svg.global_attributes.requiredExtensions
 sidebar: svgref
 ---
 
-The **`requiredExtensions`** SVG [conditional processing attribute](/en-US/docs/Web/SVG/Reference/Attribute#conditional_processing_attributes) is a list of space-separated URL values each referencing a language extension.
+The **`requiredExtensions`** SVG [conditional processing attribute](/en-US/docs/Web/SVG/Reference/Attribute#conditional_processing_attributes) is a list of space-separated URL values each referencing a language extension. Language extensions are extended capabilities that go beyond those defined by standard browser specifications.
+
+The value is a space-separated list of URL references identifying the required extensions. If all of the named extensions in the list are supported by the user agent, the attribute resolves to true. If attribute is present, but has no value or the value is an empty string, or if any of the extensions are not supported by the browser, the attribute resolves to false, and the browser will skip the element, along with all its descendants, not rendering it.
 
 You can use this attribute with the following SVG elements:
 
@@ -56,13 +58,6 @@ You can use this attribute with the following SVG elements:
     </tr>
   </tbody>
 </table>
-
-
-## Accessibility concerns
-
-Automatically focusing an SVG can confuse visually-impaired people using screen-reading technology and people with cognitive impairments. When requiredExtensions is assigned, screen-readers "teleport" their user to the focusable element without warning them beforehand.
-
-Use careful consideration for accessibility when applying the `requiredExtensions` attribute. Automatically focusing on an element can cause the page to scroll on load. The focus can also cause dynamic keyboards to display on some touch devices. While a screen reader will announce the {{glossary("accessible name")}} of the element receiving focus, the screen reader will not announce anything before the element that may provide more context, and the sighted user on a small device will equally miss the context created by the preceding content.
 
 ## Specifications
 
