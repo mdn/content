@@ -19,7 +19,6 @@ Other direct children will be bypassed and therefore not rendered. If a child el
 
 ## Attributes
 
-In addition to the aria, core, event, and presentation attributes, the `<switch>` element supports the conditional processing attributes:
 
 - {{SVGAttr("requiredExtensions")}}
   - :

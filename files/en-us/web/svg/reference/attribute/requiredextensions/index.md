@@ -43,7 +43,7 @@ You can use this attribute with the following SVG elements:
     <tr>
       <th scope="row">Value</th>
       <td>
-        space-separated <code><a href="">&lt;url&gt;</a> values</code>
+        space-separated <code><a href="/en-US/docs/Web/SVG/Guides/Content_type#list-of-ts">&lt;list-of-urls&gt;</a> values</code>
       </td>
     </tr>
     <tr>
@@ -57,7 +57,6 @@ You can use this attribute with the following SVG elements:
   </tbody>
 </table>
 
-For a description of the values, please refer to the [HTML `requiredExtensions`](/en-US/docs/Web/HTML/Reference/Global_attributes/requiredExtensions) attribute.
 
 ## Accessibility concerns
 
