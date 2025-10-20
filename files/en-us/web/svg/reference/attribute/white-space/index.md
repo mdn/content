@@ -6,7 +6,7 @@ browser-compat: svg.global_attributes.white-space
 sidebar: svgref
 ---
 
-The **`white-space`** SVG attribute specifies how {{Glossary("whitespace", "white space")}} within text should be handled; whether and how white space inside the element is collapsed and whether lines may wrap at unforced soft wrap opportunities.
+The **`white-space`** SVG attribute specifies how {{Glossary("whitespace", "white space")}} within text should be handled. This includes whether and how white space inside the element is collapsed and whether lines may wrap at unforced soft wrap opportunities.
 
 > [!NOTE]
 > As a presentation attribute, `white-space` also has a CSS property counterpart: {{cssxref("white-space")}}. When both are specified, the CSS property takes priority.
