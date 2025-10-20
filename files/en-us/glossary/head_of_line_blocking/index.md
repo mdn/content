@@ -8,9 +8,11 @@ sidebar: glossarysidebar
 
 In computer networking, **head-of-line blocking** (_HOL blocking_) refers to a performance bottleneck that occurs when a queue of {{glossary("packet", "packets")}} is held up by the first packet in the queue, even though other packets in the queue could be processed.
 
-In HTTP/1.1, requests on a single {{glossary("TCP")}} connection are usually sent sequentially;
-HTTP/1.1 also defines an optional feature called _HTTP pipelining_ that allows multiple requests to be sent without waiting for earlier responses.
-Even with pipelining, however, responses must be sent in the same order the server received the requests, so the connection remains first-in, first-out and HOL blocking can still occur.
+In HTTP/1.1, requests on a single {{glossary("TCP")}} connection are usually sent sequentially.
+Since there's usually a limitation on the number of TCP connections for each client to a server, doing a new request over one of these connections has to wait for the previous request on the same connection to be completed before the client can make a new request, which cause HOL blocking problems.
+
+HTTP/1.1 defines an optional feature called _HTTP pipelining_ that allows multiple requests to be sent without waiting for earlier responses, which try to work around this.
+However the responses still must be sent in the same order the server received the requests, so the connection remains first-in, first-out and HOL blocking can still occur.
 Network conditions such as congestion, packet loss (and the resulting TCP retransmissions), or {{glossary("TCP slow start")}} can also delay transmission and cause later responses to be blocked by earlier ones.
 
 {{glossary("HTTP 2", "HTTP/2")}} reduces application-level HOL blocking by introducing request and response _multiplexing_.
