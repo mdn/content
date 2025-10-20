@@ -29,8 +29,7 @@ _This interface doesn't implement any specific methods, but inherits methods fro
 
 ## See also
 
-- {{SVGAttr("tabindex")}}
-- {{SVGAttr("systemLanguage")}}
-- {{SVGAttr("requiredExtensions")}}
+- SVG {{SVGAttr("systemLanguage")}} attribute
+- SVG {{SVGAttr("requiredExtensions")}} attribute
 - {{domxref("SVGGraphicsElement")}}
 - {{domxref("SVGAnimationElement")}}
