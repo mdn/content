@@ -31,9 +31,9 @@ In addition to the aria, core, event, and presentation attributes, the `<switch>
 
 This element implements the {{domxref("SVGSwitchElement")}} interface.
 
-## Example
+## Examples
 
-This example demonstrates showing different text content depending on the browser's language settings. The `<switch>` element will display the first of its child elements whose - {{SVGAttr("systemLanguage")}} attribute matches the user's language, or the fallback element with no `systemLanguage` attribute if none of them match.
+This example demonstrates showing different text content depending on the browser's language settings. The `<switch>` element will display the first of its child elements whose {{SVGAttr("systemLanguage")}} attribute matches the user's language, or the fallback element with no `systemLanguage` attribute if none of them match.
 
 ### HTML
 
