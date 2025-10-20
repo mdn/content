@@ -57,7 +57,7 @@ None (`undefined`).
 
 ## Description
 
-The `intercept()` method is used to implement custom SPA navigation behavior when a navigation occurs, for example when a link is clicked, a form is submitted, or a programmatic navigation is initiated (using {{domxref("History.pushState()")}}, {{domxref("Window.location")}}, etc.).
+The `intercept()` method is used to implement same-document (SPA) navigation behavior when a navigation occurs, for example when a link is clicked, a form is submitted, or a programmatic navigation is initiated (using {{domxref("History.pushState()")}}, {{domxref("Window.location")}}, etc.).
 
 It does this via a couple of different callbacks, `handler()` and `precommitHandler()`.
 
@@ -119,11 +119,16 @@ The `precommitHandler()` callback takes a `controller` object as an argument, wh
 - `history` {{optional_inline}}
   - : An enumerated value that specifies how this redirect should be added to the navigation history. It can take one of the following values:
     - `auto`
-      - : The default value, which lets the browser decide how to handle it. Usually the value used is `push`, but it will become `replace` if the redirect points to the same URL as the pre-navigation URL.
+      - : The default value, which lets the browser decide how to handle it:
+        - If the original navigation occurred as a result of a {{domxref("Navigation.navigate()")}} call, the value will be whatever was specified in the `navigate()` call's [`history`](/en-US/docs/Web/API/Navigation/navigate#history) option.
+        - Otherwise, the value used is usually `push`, but it will become `replace` if the redirect points to the same URL as the pre-navigation URL.
     - `push`
       - : Adds a new {{domxref("NavigationHistoryEntry")}} to the navigation history, and clears any available forward navigation (that is, if the user previously navigated to other locations, then used the back button to return back through the history before then initiating the navigation that caused the redirect).
     - `replace`
       - : Replaces the {{domxref("Navigation.currentEntry")}} with the `NavigationHistoryEntry`.
+
+> [!NOTE]
+> The `redirect()` method can can convert the history behavior between `auto`, `push`, and `replace`, but it cannot turn a `traverse` navigation into a `push`/`replace` navigation and vice versa.
 
 `precommitHandler()` generally handles any modifications to the navigation behavior that are required before the destination URL is actually displayed in the browser, cancelling or redirecting it somewhere else as required. Because `precommitHandler()` can be used to cancel navigations, they can only be run when the event's {{domxref("Event.cancelable")}} property is `true`. Calling `intercept()` with a `precommitHandler()` on a non-cancelable event results in a `SecurityError` being thrown.
 
