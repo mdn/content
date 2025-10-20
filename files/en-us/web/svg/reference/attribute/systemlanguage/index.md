@@ -90,6 +90,6 @@ However, just because multiple languages are present within the object on which 
 
 ## See also
 
-- SVG {{SVGAttr("systemLanguage")}} attribute
+- {{SVGAttr("systemLanguage")}}
 - {{domxref("SVGGraphicsElement")}} interface
 - {{domxref("SVGAnimationElement")}} interface
