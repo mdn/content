@@ -236,6 +236,7 @@ Below is a list of all of the attributes available in SVG along with links to re
 - {{SVGAttr("targetY")}}
 - {{SVGAttr("text-anchor")}}
 - {{SVGAttr("text-decoration")}}
+- {{SVGAttr("text-overflow")}}
 - {{SVGAttr("text-rendering")}}
 - {{SVGAttr("textLength")}}
 - {{SVGAttr("to")}}
@@ -257,6 +258,7 @@ Below is a list of all of the attributes available in SVG along with links to re
 
 ### W
 
+- {{SVGAttr("white-space")}}
 - {{SVGAttr("width")}}
 - {{SVGAttr("word-spacing")}}
 - {{SVGAttr("writing-mode")}}
@@ -389,6 +391,7 @@ All SVG presentation attributes can be used as CSS properties.
 - {{SVGAttr("stroke-width")}}
 - {{SVGAttr("text-anchor")}}
 - {{SVGAttr("text-decoration")}}
+- {{SVGAttr("text-overflow")}}
 - {{SVGAttr("text-rendering")}}
 - {{SVGAttr("transform")}}
 - {{SVGAttr("transform-origin")}}
@@ -396,6 +399,7 @@ All SVG presentation attributes can be used as CSS properties.
 - {{SVGAttr("vector-effect")}}
 - {{SVGAttr("visibility")}}
 - {{SVGAttr("width")}}
+- {{SVGAttr("white-space")}}
 - {{SVGAttr("word-spacing")}}
 - {{SVGAttr("writing-mode")}}
 - {{SVGAttr("x")}}
