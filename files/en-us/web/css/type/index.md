@@ -2,13 +2,15 @@
 title: type()
 slug: Web/CSS/type
 page-type: css-function
+status:
+  - experimental
 browser-compat: css.types.type
 sidebar: cssref
 ---
 
 {{seecompattable}}
 
-The **`type()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) allows you to specify a particular data type, and is used by the following CSS features:
+The **`type()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) allows you to specify a particular data type, and is used by the following CSS features:
 
 - The {{cssxref("attr()")}} function, to specify the data type that an attribute value should be parsed into.
 - The {{cssxref("@function")}} at-rule, to specify the permitted data types for [CSS custom function](/en-US/docs/Web/CSS/CSS_custom_functions_and_mixins/Using_custom_functions) parameters and results.
@@ -166,7 +168,7 @@ This example defines a CSS custom function that combines multiple strings.
 The HTML contains a single {{htmlelement("section")}} element with some text content.
 
 ```html live-sample___basic-data-type
-<section>What you goin' ta say?</section>
+<section>What you gonna say?</section>
 ```
 
 #### CSS

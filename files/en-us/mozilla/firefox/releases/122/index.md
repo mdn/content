@@ -1,5 +1,5 @@
 ---
-title: Firefox 122 for developers
+title: Firefox 122 release notes for developers
 short-title: Firefox 122
 slug: Mozilla/Firefox/Releases/122
 page-type: firefox-release-notes

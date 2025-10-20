@@ -1,5 +1,5 @@
 ---
-title: Firefox 82 for developers
+title: Firefox 82 release notes for developers
 short-title: Firefox 82
 slug: Mozilla/Firefox/Releases/82
 page-type: firefox-release-notes

@@ -287,7 +287,6 @@ dialog.addEventListener("cancel", (e) => {
     e.preventDefault();
   } else {
     warning.hidden = true;
-    return;
   }
 });
 ```

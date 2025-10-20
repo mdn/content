@@ -1,5 +1,5 @@
 ---
-title: Firefox 79 for developers
+title: Firefox 79 release notes for developers
 short-title: Firefox 79
 slug: Mozilla/Firefox/Releases/79
 page-type: firefox-release-notes

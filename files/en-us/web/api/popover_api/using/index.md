@@ -306,6 +306,9 @@ The sub-menu popovers work fine as they are, opening when the toolbar buttons ar
 <div id="tooltip-3" class="tooltip" popover="hint">Tooltip C</div>
 ```
 
+> [!NOTE]
+> In the demo [source code](https://github.com/mdn/dom-examples/tree/main/popover-api/popover-hint), the tooltips are nested inside the popover control buttons. This is because it provides a better fallback in browsers that don't support CSS anchor positioning — the `hint` popovers appear next to their associated control buttons rather than somewhere else entirely.
+
 To control the showing/hiding, we need to use JavaScript. First of all, we grab references to the `hint` popovers and the control buttons in two separate {{domxref("NodeList")}}s using {{domxref("Document.querySelectorAll()")}}:
 
 ```js
@@ -457,6 +460,9 @@ See [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Us
 
 > [!NOTE]
 > For an example that uses this implicit association, see our [popover hint demo](https://mdn.github.io/dom-examples/popover-api/popover-hint/) ([source](https://github.com/mdn/dom-examples/tree/main/popover-api/popover-hint)). If you check out the CSS code, you'll see that no explicit anchor associations are made using the {{cssxref("anchor-name")}} and {{cssxref("position-anchor")}} properties.
+
+> [!NOTE]
+> If you want to remove the implicit anchor reference to stop the popover from being anchored to its invoker, you can do so by setting the `position-anchor` property of the popover to an anchor name that doesn't exist in the current document, such as `--not-an-anchor-name`. See also [removing an anchor association](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#removing_an_anchor_association).
 
 ## Animating popovers
 

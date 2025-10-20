@@ -20,6 +20,7 @@ Below is a list of all of the attributes available in SVG along with links to re
 - {{SVGAttr("amplitude")}}
 - {{SVGAttr("attributeName")}}
 - {{SVGAttr("attributeType")}}
+- {{SVGAttr("autofocus")}}
 - {{SVGAttr("azimuth")}}
 
 ### B
@@ -298,6 +299,7 @@ Below is a list of all of the attributes available in SVG along with links to re
   - {{SVGAttr("style")}}
   - {{SVGAttr("lang")}}
   - {{SVGAttr("tabindex")}}
+  - {{SVGAttr("autofocus")}}
   - {{SVGAttr("xml:lang")}}
   - {{SVGAttr("xml:space")}}
 

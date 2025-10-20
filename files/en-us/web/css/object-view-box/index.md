@@ -47,7 +47,7 @@ object-view-box: none;
 #example-element {
   height: 100%;
   width: 100%;
-  border: 2px dotted #888;
+  border: 2px dotted #888888;
 }
 
 @supports not (object-view-box: none) {
@@ -88,7 +88,7 @@ object-view-box: unset;
 - `none`
   - : The element does not have a view box. This is the default.
 
-- [`<basic-shape-rect>`](/en-US/docs/Web/CSS/basic-shape#basic-shape-rect)
+- [`<basic-shape-rect>`](/en-US/docs/Web/CSS/basic-shape#syntax_for_rectangles_basic-shape-rect)
   - : A {{cssxref("basic-shape/inset","inset()")}}, {{cssxref("basic-shape/xywh","xywh()")}}, or {{cssxref("basic-shape/rect","rect()")}} function specifying a view box for an element with natural dimensions (replaced elements). Resolves to `none` otherwise.
 
 ## Description
@@ -219,7 +219,7 @@ This example demonstrates using the `object-view-box` property to zoom a section
 
 #### HTML
 
-We include an {{htmlelement("img")}} element and a [`range`](Web/HTML/Reference/Elements/input/range) {{htmlelement("input")}} element, with an associated {{htmlelement("label")}}. The natural dimensions, or intrinsic size, of the original leopard image are `1244px` wide by `416px` tall, with an {{glossary("aspect ratio")}} of `3:1`.
+We include an {{htmlelement("img")}} element and a [`range`](/en-US/docs/Web/HTML/Reference/Elements/input/range) {{htmlelement("input")}} element, with an associated {{htmlelement("label")}}. The natural dimensions, or intrinsic size, of the original leopard image are `1244px` wide by `416px` tall, with an {{glossary("aspect ratio")}} of `3:1`.
 
 ```html
 <img

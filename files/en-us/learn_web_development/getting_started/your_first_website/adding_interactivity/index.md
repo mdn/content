@@ -92,7 +92,7 @@ Try clicking the list items a few times and note how the "done" styles are toggl
 To start you off with writing some JavaScript, we'll walk you through adding a _Hello world!_ example to your sample website. ([_Hello world!_](https://en.wikipedia.org/wiki/%22Hello,_World!%22_program) is the standard introductory programming example.)
 
 > [!WARNING]
-> If you haven't been following along with the rest of our course, [download this example code](https://github.com/mdn/beginner-html-site-styled/archive/refs/heads/main.zip) and use it as a starting point.
+> If you haven't been following along with the rest of our course, [download this example code](https://codeload.github.com/mdn/beginner-html-site-styled/zip/refs/heads/main) and use it as a starting point.
 
 1. Inside your `first-website` folder or the example folder you have just downloaded, create a new folder named `scripts`.
 2. Within the `scripts` folder, create a new text document called `main.js`, and save it.

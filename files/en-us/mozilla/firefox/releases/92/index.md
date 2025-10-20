@@ -1,5 +1,5 @@
 ---
-title: Firefox 92 for developers
+title: Firefox 92 release notes for developers
 short-title: Firefox 92
 slug: Mozilla/Firefox/Releases/92
 page-type: firefox-release-notes

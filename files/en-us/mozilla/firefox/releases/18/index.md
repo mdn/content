@@ -1,5 +1,5 @@
 ---
-title: Firefox 18 for developers
+title: Firefox 18 release notes for developers
 short-title: Firefox 18
 slug: Mozilla/Firefox/Releases/18
 page-type: firefox-release-notes

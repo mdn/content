@@ -1,5 +1,5 @@
 ---
-title: Firefox 110 for developers
+title: Firefox 110 release notes for developers
 short-title: Firefox 110
 slug: Mozilla/Firefox/Releases/110
 page-type: firefox-release-notes

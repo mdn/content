@@ -1,5 +1,5 @@
 ---
-title: Firefox 65 for developers
+title: Firefox 65 release notes for developers
 short-title: Firefox 65
 slug: Mozilla/Firefox/Releases/65
 page-type: firefox-release-notes
