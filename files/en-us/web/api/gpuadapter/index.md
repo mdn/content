@@ -25,7 +25,7 @@ A `GPUAdapter` object is requested using the {{domxref("GPU.requestAdapter()")}}
 ### Deprecated properties
 
 - {{domxref("GPUAdapter.isFallbackAdapter", "isFallbackAdapter")}} {{ReadOnlyInline}} {{deprecated_inline}} {{non-standard_inline}}
-  - : A boolean value. Returns `true` if the adapter is a [fallback adapter](/en-US/docs/Web/API/GPU/requestAdapter#fallback_adapters), and `false` if not. This property has been removed from the web platform: use {{domxref("GPUAdapterInfo.isFallbackAdapter")}} instead.
+  - : A boolean value. Returns `true` if the adapter is a [fallback adapter](/en-US/docs/Web/API/GPU/requestAdapter#fallback_adapters), and `false` if not. This property has been removed from the web platform. Use {{domxref("GPUAdapterInfo.isFallbackAdapter")}} instead.
 
 ## Instance methods
 
