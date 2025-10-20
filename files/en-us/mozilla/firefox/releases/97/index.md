@@ -1,5 +1,5 @@
 ---
-title: Firefox 97 for developers
+title: Firefox 97 release notes for developers
 short-title: Firefox 97
 slug: Mozilla/Firefox/Releases/97
 page-type: firefox-release-notes

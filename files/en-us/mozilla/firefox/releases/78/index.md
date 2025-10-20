@@ -1,5 +1,5 @@
 ---
-title: Firefox 78 for developers
+title: Firefox 78 release notes for developers
 short-title: Firefox 78
 slug: Mozilla/Firefox/Releases/78
 page-type: firefox-release-notes

@@ -297,7 +297,7 @@ The `subject` element and its containing `content` element are styled minimally,
 
 p,
 h1 {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 h1 {
@@ -406,7 +406,7 @@ The `subject` element and its containing `content` element are styled minimally,
 
 p,
 h1 {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 h1 {

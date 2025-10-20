@@ -145,7 +145,8 @@ document.addEventListener("keydown", (event) => {
 
 ```css hidden
 body {
-  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+  font-family:
+    "Benton Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   margin: 2em;
 }
 

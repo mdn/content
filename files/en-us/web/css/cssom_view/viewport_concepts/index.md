@@ -49,7 +49,7 @@ window.outerHeight; /* 900 */
 
 There are several DOM properties that can help you query viewport size, and other similar lengths:
 
-- The document element's {{DOMxRef("Element.clientWidth")}} is the inner width of a document in [CSS pixels](/en-US/docs/Web/HTML/Guides/Viewport_meta_element#screen_density), including padding (but not borders, margins, or vertical scrollbars, if present). **This is the viewport width**.
+- The document element's {{DOMxRef("Element.clientWidth")}} is the inner width of a document in [CSS pixels](/en-US/docs/Web/HTML/Reference/Elements/meta/name/viewport#screen_density), including padding (but not borders, margins, or vertical scrollbars, if present). **This is the viewport width**.
 - The {{DOMxRef("Window.innerWidth")}} is the width, in CSS pixels, of the browser window viewport including, if rendered, the vertical scrollbar.
 - The {{DOMxRef("Window.outerWidth")}} is the width of the outside of the browser window including all the window {{glossary("chrome")}}.
 
@@ -100,13 +100,13 @@ For a page containing iframes, objects, or external SVG, both the containing pag
 
 The layout viewport and visual viewport described above are not the only viewports you will encounter. Any sub-viewport that is fully or partially displayed within the layout viewport is considered a visual viewport.
 
-We generally think of [`width`](/en-US/docs/Web/CSS/@media/width) and [`height`](/en-US/docs/Web/CSS/@media/height) media queries as being relative to the width and height of the browser window. They are actually relative to the viewport, which is the window in the main document but is the intrinsic size of the element's parent in a nested browsing context like objects, iframes and SVG. In CSS, we also have [length units based on the viewport size](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#viewport_units). A `vh` unit is 1% of the layout viewport's height. Similarly, the `vw` unit is 1% of the layout viewport's width.
+We generally think of [`width`](/en-US/docs/Web/CSS/@media/width) and [`height`](/en-US/docs/Web/CSS/@media/height) media queries as being relative to the width and height of the browser window. They are actually relative to the viewport, which is the window in the main document but is the intrinsic size of the element's parent in a nested browsing context like objects, iframes and SVG. In CSS, we also have [length units based on the viewport size](/en-US/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#viewport_units). A `vh` unit is 1% of the layout viewport's height. Similarly, the `vw` unit is 1% of the layout viewport's width.
 
 #### `<iframe>`
 
 Inside an {{htmlelement("iframe")}}, the visual viewport is the size of the inner width and height of the iframe, rather than the parent document. You can set any height and width on an iframe, but the whole document may not be visible.
 
-If you use [viewport length units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#viewport_units) in your CSS within the iframe document, `1vh` will be 1% of the height of the iframe, and `1vw` will be 1% of the width of the document.
+If you use [viewport length units](/en-US/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#viewport_units) in your CSS within the iframe document, `1vh` will be 1% of the height of the iframe, and `1vw` will be 1% of the width of the document.
 
 ```css
 iframe {
@@ -170,8 +170,7 @@ The `width` property controls the size of the viewport. It should preferably be 
 
 - [CSSOM view](/en-US/docs/Web/CSS/CSSOM_view) module
 - [Visual Viewport API](/en-US/docs/Web/API/Visual_Viewport_API)
-- {{HTMLElement("meta")}}, specifically `<meta name="viewport">`
-- [Using the viewport meta tag to control layout on mobile browsers](/en-US/docs/Web/HTML/Guides/Viewport_meta_element)
+- {{HTMLElement("meta")}}, specifically [`<meta name="viewport">`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/viewport)
 - [Visual Viewport API](/en-US/docs/Web/API/Visual_Viewport_API)
 - [CSS viewport](/en-US/docs/Web/CSS/CSS_viewport) module
 - [CSSOM view](/en-US/docs/Web/CSS/CSSOM_view) module

@@ -65,6 +65,7 @@ Bodmin
 Boonie
 bottosson
 Boulton
+Bramus
 Brians
 Browserleaks
 Browsershots
@@ -89,6 +90,7 @@ carolinensis
 Cassini
 Caterina
 caugner
+cdxgen
 Chakra
 Chamakh
 Chimero
@@ -254,6 +256,7 @@ Holzman
 Honigswald
 Hoshi
 Hoth
+Houseology
 Hyperaudio
 Hönigswald
 Ibuki
@@ -321,6 +324,7 @@ Kobabe
 Koen
 Kokoro
 Konva
+Kravets
 Kyouko
 Kütük
 Laravel

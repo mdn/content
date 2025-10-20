@@ -44,13 +44,13 @@ All HTML input types are useable in all browsers, even ancient ones, because the
     <tr>
       <td>
         <img
-          alt="Screen shot of the color input on Chrome for Mac OSX"
+          alt="Screen shot of the color input on Chrome for macOS"
           src="color-fallback-chrome.png"
         />
       </td>
       <td>
         <img
-          alt="Screen shot of the color input on Firefox for Mac OSX"
+          alt="Screen shot of the color input on Firefox for macOS"
           src="color-fallback-firefox.png"
         />
       </td>
