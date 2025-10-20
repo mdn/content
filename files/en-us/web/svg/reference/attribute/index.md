@@ -317,12 +317,12 @@ The conditional processing attributes control whether or not the element on whic
 The XLink attributes can reference resources.
 
 - {{SVGAttr("xlink:href")}} {{deprecated_inline}}
-- {{SVGAttr("xlink:type")}}
-- {{SVGAttr("xlink:role")}}
-- {{SVGAttr("xlink:arcrole")}}
+- {{SVGAttr("xlink:type")}} {{deprecated_inline}}
+- {{SVGAttr("xlink:role")}} {{deprecated_inline}}
+- {{SVGAttr("xlink:arcrole")}} {{deprecated_inline}}
 - {{SVGAttr("xlink:title")}} {{deprecated_inline}}
-- {{SVGAttr("xlink:show")}}
-- {{SVGAttr("xlink:actuate")}}
+- {{SVGAttr("xlink:show")}} {{deprecated_inline}}
+- {{SVGAttr("xlink:actuate")}} {{deprecated_inline}}
 
 ### Presentation attributes
 
