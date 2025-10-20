@@ -31,6 +31,7 @@ createBindGroup(descriptor)
             - {{domxref("GPUBuffer")}}: Can be used directly rather than being wrapped in a `GPUBufferBinding`, provided the default [`offset`](#offset) and [`size`](#size) values are being used.
             - {{domxref("GPUExternalTexture")}}
             - {{domxref("GPUTextureView")}}: Can be used in place of a `GPUExternalTexture` provided it is compatible (a 2D format with a single subresource, that is, [`dimension: "2d"`](/en-US/docs/Web/API/GPUTexture/createView#dimension)).
+            - {{domxref("GPUTexture")}}: Can be used in place of a `GPUTextureView`, provided a default view is desired. When used in this context, `GPUTexture` is equivalent to a `GPUTextureView` object created using a {{domxref("GPUTexture.createView()")}} call with no `descriptor` object specified.
             - {{domxref("GPUSampler")}}
     - `label` {{optional_inline}}
       - : A string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
