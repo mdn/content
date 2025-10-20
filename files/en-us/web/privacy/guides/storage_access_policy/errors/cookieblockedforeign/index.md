@@ -17,11 +17,10 @@ CookieBlockedForeign=Request to access cookies or storage on "X" was blocked bec
 
 ## What can be done
 
-The permission can be changed or removed by either:
+The permission can be changed or removed by:
 
 - Going to _Settings > Privacy & Security > Enhanced Tracking Protection_ and either
-  - adding an exception with the _Manage Exceptions_… button.
-  - choosing the _Custom_ Content Blocking and unchecking the _Tracker_ checkbox.
+- Adding an exception with the _Manage Exceptions_… button.
 
 If the resource that is being blocked doesn't need authentication, you can fix the warning message by adding a `crossorigin="anonymous"` attribute to the relevant element.
 
