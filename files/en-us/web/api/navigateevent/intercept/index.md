@@ -27,7 +27,7 @@ intercept(options)
     - `handler` {{optional_inline}}
       - : A callback function that defines what the navigation handling behavior should be; it returns a promise. This function will run after the {{domxref("Navigation.currentEntry", "currentEntry")}} property has been updated.
     - `precommitHandler` {{optional_inline}}
-      - : A callback function that defines any behavior that should occur just before the navigation has finished; it accepts a controller object as an argument and returns a promise. This function will run before the {{domxref("Navigation.currentEntry", "currentEntry")}} property has been updated.
+      - : A callback function that defines any behavior that should occur just before the navigation has committed; it accepts a controller object as an argument and returns a promise. This function will run before the {{domxref("Navigation.currentEntry", "currentEntry")}} property has been updated.
     - `focusReset` {{optional_inline}}
       - : Defines the navigation's focus behavior. This may take one of the following values:
         - `after-transition`
