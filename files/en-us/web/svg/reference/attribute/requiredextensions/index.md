@@ -69,8 +69,8 @@ You can use this attribute with the following SVG elements:
 
 ## See also
 
-- {{SVGAttr("tabindex")}} attribute
-- {{SVGAttr("systemLanguage")}} attribute
+- {{SVGAttr("tabindex")}}
+- {{SVGAttr("systemLanguage")}}
 - {{svgattr("requiredFeatures")}} {{deprecated_inline}}
 - {{domxref("SVGGraphicsElement")}} interface
 - {{domxref("SVGAnimationElement")}} interface
