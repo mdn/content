@@ -19,9 +19,8 @@ Other direct children will be bypassed and therefore not rendered. If a child el
 
 ## Attributes
 
-
 - {{SVGAttr("requiredExtensions")}}
-  - :
+  - : A space-separated list of URL values referencing the language extensions the user agent must support for the element to be rendered.
 
 - {{SVGAttr("systemLanguage")}}
   - : A comma-separated list of supported {{glossary("BCP 47 language tag", "language tags")}}.
@@ -49,7 +48,7 @@ This example demonstrates showing different text content depending on the browse
     <text systemLanguage="fr">Bonjour!</text>
     <text systemLanguage="ja">こんにちは</text>
     <text systemLanguage="ru">Привет!</text>
-    <text>☺</text>
+    <text requiredExtensions="http://example.org/lang/ext/emoji">☺</text>
   </switch>
 </svg>
 ```
