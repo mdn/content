@@ -71,7 +71,7 @@ p {
 ```
 
 ```js live-sample___silly-story-start
-// Complete variable definitions and random functio
+// Complete variable definitions and random functions
 
 const customName = document.getElementById("custom-name");
 const generateBtn = document.querySelector(".generate");
