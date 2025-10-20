@@ -741,24 +741,6 @@ Note that supported policies can be set through the [`allow`](/en-US/docs/Web/HT
 
 ## HTTP
 
-### Integrity policy for script resources
-
-The {{httpheader("Integrity-Policy")}} and {{httpheader("Integrity-Policy-Report-Only")}} HTTP headers are now supported for script resources. These allow websites to either enforce [subresource integrity guarantees](/en-US/docs/Web/Security/Subresource_Integrity) for scripts or only report violations of the policy, respectively.
-Note that Firefox ignores reporting endpoints, and logs violations to the developer console.
-When `Integrity-Policy` is used, the browser blocks the loading of scripts that either lack the [`integrity`](/en-US/docs/Web/HTML/Reference/Elements/script#integrity) attribute or have an integrity hash that doesn't match the script resource on the server.
-The browser will also stop requests in [`no-cors` mode](/en-US/docs/Web/API/Request/mode#no-cors) from ever being made, such as those from a {{htmlelement("script")}} element without the [`crossorigin`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) attribute.
-([Firefox bug 1976656](https://bugzil.la/1976656)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 142           | Yes                 |
-| Developer Edition | 142           | No                  |
-| Beta              | 142           | No                  |
-| Release           | 142           | No                  |
-
-- `security.integrity_policy.enabled`
-  - : Set to `true` to enable.
-
 ### Integrity policy for stylesheet resources
 
 The {{httpheader("Integrity-Policy")}} and {{httpheader("Integrity-Policy-Report-Only")}} HTTP headers are now supported for style resources. These allow websites to either enforce [subresource integrity guarantees](/en-US/docs/Web/Security/Subresource_Integrity) for styles or only report violations of the policy, respectively.
