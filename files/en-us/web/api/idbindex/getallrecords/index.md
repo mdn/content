@@ -63,7 +63,7 @@ This method may raise a {{domxref("DOMException")}} of the following types:
 - `TransactionInactiveError` {{domxref("DOMException")}}
   - : Thrown if this {{domxref("IDBIndex")}}'s transaction is inactive.
 - {{jsxref("TypeError")}} {{domxref("DOMException")}}
-  - : Thrown if the [`count`](#count) parameter is not between `0` and `2^32 - 1` included.
+  - : Thrown if the [`count`](#count) parameter is not between `0` and `2^32 - 1`, inclusive.
 
 ## Examples
 

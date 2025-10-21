@@ -74,9 +74,8 @@ This method may raise a {{domxref("DOMException")}} of the following types:
   - : Thrown if this {{domxref("IDBIndex")}}'s transaction is inactive.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref("IDBIndex")}} has been deleted or removed.
-
-A {{jsxref("TypeError")}} exception is thrown if the `count` parameter is
-not between `0` and `2^32 - 1` included.
+- {{jsxref("TypeError")}} {{domxref("DOMException")}}
+  - : Thrown if the [`count`](#count) parameter is not between `0` and `2^32 - 1`, inclusive.
 
 ## Examples
 
