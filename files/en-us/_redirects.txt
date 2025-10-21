@@ -1363,7 +1363,7 @@
 /en-US/docs/DOM/Input.setSelectionRange	/en-US/docs/Web/API/HTMLInputElement/setSelectionRange
 /en-US/docs/DOM/KeyboardEvent	/en-US/docs/Web/API/KeyboardEvent
 /en-US/docs/DOM/LinkStyle	/en-US/docs/Web/API/HTMLLinkElement
-/en-US/docs/DOM/Locating_DOM_elements_using_selectors	/en-US/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors
+/en-US/docs/DOM/Locating_DOM_elements_using_selectors	/en-US/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree
 /en-US/docs/DOM/Manipulating_the_browser_history	/en-US/docs/Web/API/History_API
 /en-US/docs/DOM/Manipulating_the_browser_history/Example	/en-US/docs/Web/API/History_API/Working_with_the_History_API
 /en-US/docs/DOM/MediaQueryList	/en-US/docs/Web/API/MediaQueryList
@@ -2824,7 +2824,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/Input.select	/en-US/docs/Web/API/HTMLInputElement/select
 /en-US/docs/Document_Object_Model_(DOM)/Input.setSelectionRange	/en-US/docs/Web/API/HTMLInputElement/setSelectionRange
 /en-US/docs/Document_Object_Model_(DOM)/KeyboardEvent	/en-US/docs/Web/API/KeyboardEvent
-/en-US/docs/Document_Object_Model_(DOM)/Locating_DOM_elements_using_selectors	/en-US/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors
+/en-US/docs/Document_Object_Model_(DOM)/Locating_DOM_elements_using_selectors	/en-US/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree
 /en-US/docs/Document_Object_Model_(DOM)/MediaQueryList	/en-US/docs/Web/API/MediaQueryList
 /en-US/docs/Document_Object_Model_(DOM)/MediaQueryListListener	/en-US/docs/Web/API/MediaQueryList
 /en-US/docs/Document_Object_Model_(DOM)/NamedNodeMap	/en-US/docs/Web/API/NamedNodeMap
@@ -7775,7 +7775,7 @@
 /en-US/docs/Transforming_XML_with_XSLT:The_Netscape_XSLT_XPath_Reference:Elements:xsl:decimal-format	/en-US/docs/Web/XML/XSLT/Reference/Element/decimal-format
 /en-US/docs/Transforming_XML_with_XSLT:The_Netscape_XSLT_XPath_Reference:Elements:xsl:element	/en-US/docs/Web/XML/XSLT/Reference/Element/element
 /en-US/docs/Transforming_XML_with_XSLT:The_Netscape_XSLT_XPath_Reference:Functions	/en-US/docs/Web/XML/XPath/Reference/Functions
-/en-US/docs/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces	/en-US/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
+/en-US/docs/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces	/en-US/docs/Web/API/Document_Object_Model/Building_and_updating_the_DOM_tree
 /en-US/docs/URI	/en-US/docs/Glossary/URI
 /en-US/docs/URI/www and non-www URLs	/en-US/docs/Web/URI/Guides/Choosing_between_www_and_non-www_URLs
 /en-US/docs/URI/www_vs_non-www_URLs	/en-US/docs/Web/URI/Guides/Choosing_between_www_and_non-www_URLs
@@ -8533,8 +8533,10 @@
 /en-US/docs/Web/API/Document_Object_Model/Examples	/en-US/docs/Web/API/Document_Object_Model
 /en-US/docs/Web/API/Document_Object_Model/How_to_create_a_DOM_tree	/en-US/docs/Web/API/Document_Object_Model
 /en-US/docs/Web/API/Document_Object_Model/Introduction	/en-US/docs/Web/API/Document_Object_Model
+/en-US/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors	/en-US/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree
 /en-US/docs/Web/API/Document_Object_Model/Preface	/en-US/docs/Web/API/Document_Object_Model
 /en-US/docs/Web/API/Document_Object_Model/Transforming_with_XSLT	/en-US/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT
+/en-US/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces	/en-US/docs/Web/API/Document_Object_Model/Building_and_updating_the_DOM_tree
 /en-US/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model	/en-US/docs/Web/API/Document_Object_Model
 /en-US/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model/Example	/en-US/docs/Web/API/Document_Object_Model
 /en-US/docs/Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core	/en-US/docs/Web/API/Document_Object_Model
@@ -12843,7 +12845,7 @@
 /en-US/docs/Web/Guide/API/DOM/Events/Touch_events	/en-US/docs/Web/API/Touch_events
 /en-US/docs/Web/Guide/API/DOM/Events/Touch_events_(Mozilla_experimental)	/en-US/docs/Web/API/Touch_events
 /en-US/docs/Web/Guide/API/DOM/Events/Using_device_orientation_with_3D_transforms	/en-US/docs/Web/API/Device_orientation_events/Using_device_orientation_with_3D_transforms
-/en-US/docs/Web/Guide/API/DOM/Locating_DOM_elements_using_selectors	/en-US/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors
+/en-US/docs/Web/Guide/API/DOM/Locating_DOM_elements_using_selectors	/en-US/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree
 /en-US/docs/Web/Guide/API/DOM/Manipulating_the_browser_history	/en-US/docs/Web/API/History_API
 /en-US/docs/Web/Guide/API/DOM/Manipulating_the_browser_history/Example	/en-US/docs/Web/API/History_API/Working_with_the_History_API
 /en-US/docs/Web/Guide/API/DOM/Storage	/en-US/docs/Web/API/Web_Storage_API
@@ -12924,7 +12926,7 @@
 /en-US/docs/Web/Guide/DOM/Events/Touch_events	/en-US/docs/Web/API/Touch_events
 /en-US/docs/Web/Guide/DOM/Events/Touch_events_(Mozilla_experimental)	/en-US/docs/Web/API/Touch_events
 /en-US/docs/Web/Guide/DOM/Events/Using_device_orientation_with_3D_transforms	/en-US/docs/Web/API/Device_orientation_events/Using_device_orientation_with_3D_transforms
-/en-US/docs/Web/Guide/DOM/Locating_DOM_elements_using_selectors	/en-US/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors
+/en-US/docs/Web/Guide/DOM/Locating_DOM_elements_using_selectors	/en-US/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree
 /en-US/docs/Web/Guide/DOM/Manipulating_the_browser_history	/en-US/docs/Web/API/History_API
 /en-US/docs/Web/Guide/DOM/Manipulating_the_browser_history/Example	/en-US/docs/Web/API/History_API/Working_with_the_History_API
 /en-US/docs/Web/Guide/DOM/Storage	/en-US/docs/Web/API/Web_Storage_API

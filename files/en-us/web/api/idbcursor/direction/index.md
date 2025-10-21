@@ -20,15 +20,15 @@ A string indicating the direction in which the cursor is traversing the data.
 Possible values are:
 
 - `next`
-  - : This direction causes the cursor to be opened at the start of the source.
+  - : The cursor is opened at the start of the source.
 - `nextunique`
-  - : This direction causes the cursor to be opened at the start of the source.
-    For every key with duplicate values, only the first-visited record (closest to the start) is yielded.
+  - : The cursor is opened at the start of the source.
+    For every key with duplicate values, only the record closest to the start is yielded.
 - `prev`
-  - : This direction causes the cursor to be opened at the end of the source.
+  - : The cursor is opened at the end of the source.
 - `prevunique`
-  - : This direction causes the cursor to be opened at the end of the source.
-    For every key with duplicate values, only the first-visited record (closest to the end) is yielded.
+  - : The cursor is opened at the end of the source.
+    For every key with duplicate values, only the record closest to the start is yielded.
 
 ## Examples
 
