@@ -57,7 +57,7 @@ The two main ways to create an observable are as follows:
 - {{domxref("Observable.map", "map()")}} {{Experimental_Inline}}
   - : Maps each value passed through the observable stream to a new structure.
 - {{domxref("Observable.switchMap", "switchMap()")}} {{Experimental_Inline}}
-  - : ?
+  - : Executes a synchronous action whenever a source emits and, if the previous execution has not completed, cancels it.
 - {{domxref("Observable.take", "take()")}} {{Experimental_Inline}}
   - : Specifies a maximum number of values that can be passed through the resulting observable, after which the stream is completed and no more data is sent.
 - {{domxref("Observable.takeUntil", "takeUntil()")}} {{Experimental_Inline}}
