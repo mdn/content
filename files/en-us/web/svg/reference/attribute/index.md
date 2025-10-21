@@ -430,7 +430,7 @@ All SVG presentation attributes can be used as CSS properties.
 Event handler attributes are discouraged. While the attributes listed below apply to all HTML and SVG elements, they are not useful on all elements. For example, the `oncuechange` attribute is accepted by all elements and attaches an event listener for `cuechange`, but only {{htmlelement("track")}} elements will ever receive a `cuechange` event fired by the browser. For other elements, you can only use {{domxref("EventTarget.dispatchEvent()")}} to manually dispatch one.
 
 - {{domxref("HTMLMediaElement/abort_event", "onabort")}}
-- {{domxref("Element/auxclick_event", "onautofocus")}}
+- {{domxref("Element/autofocus_event", "onautofocus")}}
 - {{domxref("Element/auxclick_event", "onauxclick")}}
 - {{domxref("Element/beforeinput_event", "onbeforeinput")}}
 - {{domxref("Element/beforematch_event", "onbeforematch")}}
