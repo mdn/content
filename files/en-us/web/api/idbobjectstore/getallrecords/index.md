@@ -43,7 +43,7 @@ An optional object whose properties can include:
 
 An {{domxref("IDBRequest")}} object on which subsequent events related to this operation are fired.
 
-If the operation is successful, the value of the request's {{domxref("IDBRequest.result", "result")}} property is an {{jsxref("Array")}} of objects representing all the records matching the given query, up to the value of `count`, if `count` was supplied.
+If the operation is successful, the value of the request's {{domxref("IDBRequest.result", "result")}} property is an {{jsxref("Array", "array")}} of objects representing all records that match the given query, up to the number specified by `count` (if provided).
 
 Each object contains the following properties:
 
