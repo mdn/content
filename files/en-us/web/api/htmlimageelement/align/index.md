@@ -22,15 +22,15 @@ A string. For the permitted values, see the HTML [`<img>`](/en-US/docs/Web/HTML/
 
 ### Setting the align attribute
 
-```js
+```js example-bad
 const img = new Image();
 img.src = "example.png";
 img.align = "top";
 ```
 
-Instead of doing this, consider:
+Instead of using the deprecated `align` property, consider setting the CSS `vertical-align` property instead:
 
-```js
+```js example-good
 const img = new Image();
 img.src = "example.png";
 img.style.verticalAlign = "top";
