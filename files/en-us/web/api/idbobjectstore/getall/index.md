@@ -41,7 +41,7 @@ getAll(options)
 
 The `getAll()` method can take separate parameters or a single options object containing the parameters as properties.
 
-The separate parameters can include:
+The parameters can include:
 
 - `query` {{optional_inline}}
   - : A key or {{domxref("IDBKeyRange")}} to be queried. If this value is not specified, this will
