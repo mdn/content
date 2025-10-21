@@ -22,7 +22,7 @@ getAllRecords(options)
 
 ### Parameters
 
-An optional object, the properties of which can include:
+An optional object whose properties can include:
 
 - `query` {{optional_inline}}
   - : A key or an {{domxref("IDBKeyRange")}} identifying the records to retrieve. If this value is `null` or not specified, the browser will use an unbound key range.
