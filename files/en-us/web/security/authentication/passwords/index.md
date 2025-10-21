@@ -30,6 +30,7 @@ When the user signs in:
 1. The user supplies the username and password.
 2. The web page sends the username and password to the server.
 3. The server retrieves the stored password for the user, and compares the stored password with the one it just received.
+4. If the passwords match, the user is signed in.
 
 ![Signing in using a password.](password-basic-signin.svg)
 
