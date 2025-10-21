@@ -38,7 +38,7 @@ getAllKeys(options)
 
 The `getAllKeys()` method can take separate parameters or a single options object containing the parameters as properties.
 
-The separate parameters can include:
+The parameters can include:
 
 - `query` {{optional_inline}}
   - : A value that is or resolves to an {{domxref("IDBKeyRange")}}. If this value is not specified, this will
