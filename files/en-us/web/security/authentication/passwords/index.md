@@ -17,7 +17,9 @@ Finally, we'll discuss how even with the best practices, [password-based authent
 
 ## Overview
 
-In a password authentication system, when the user registers:
+To provide password-based authentication, a website implements two main flows: _registration_ and _signing in_.
+
+When the user registers:
 
 1. The user supplies a new username and password, for example by entering it in a {{htmlelement("form")}} element in the website.
 2. The web page sends the username and password to a server, for example, by submitting the form data in a {{httpmethod("POST")}} request.
