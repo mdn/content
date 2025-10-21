@@ -26,8 +26,3 @@ _This interface doesn't implement any specific methods, but inherits methods fro
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- SVG {{SVGAttr("systemLanguage")}} attribute
-- SVG {{SVGAttr("requiredExtensions")}} attribute

@@ -8,7 +8,7 @@ sidebar: svgref
 
 The **`requiredExtensions`** SVG [conditional processing attribute](/en-US/docs/Web/SVG/Reference/Attribute#conditional_processing_attributes) is a list of space-separated URL values each referencing a language extension. Language extensions are extended capabilities that go beyond those defined by standard browser specifications.
 
-The value is a space-separated list of URL references identifying the required extensions. If all of the named extensions in the list are supported by the user agent, the attribute resolves to true. If attribute is present, but has no value or the value is an empty string, or if any of the extensions are not supported by the browser, the attribute resolves to false, and the browser will skip the element, along with all its descendants, not rendering it.
+The value is a space-separated list of URL references identifying the required extensions. If all of the named extensions in the list are supported by the user agent, the element is rendered as usual. If attribute is present but the value is an empty string, or if any of the extensions are not supported by the browser, the browser will skip the element, along with all its descendants, not rendering it.
 
 You can use this attribute with the following SVG elements:
 
@@ -45,7 +45,7 @@ You can use this attribute with the following SVG elements:
     <tr>
       <th scope="row">Value</th>
       <td>
-        space-separated <code><a href="/en-US/docs/Web/SVG/Guides/Content_type#list-of-ts">&lt;list-of-urls&gt;</a> values</code>
+        <a href="/en-US/docs/Web/SVG/Guides/Content_type#list-of-ts"><code>&lt;list-of-IRIs&gt;</code></a>
       </td>
     </tr>
     <tr>
@@ -71,6 +71,4 @@ You can use this attribute with the following SVG elements:
 
 - {{SVGAttr("tabindex")}}
 - {{SVGAttr("systemLanguage")}}
-- {{svgattr("requiredFeatures")}} {{deprecated_inline}}
-- {{domxref("SVGGraphicsElement")}} interface
-- {{domxref("SVGAnimationElement")}} interface
+- {{SVGAttr("requiredFeatures")}}
