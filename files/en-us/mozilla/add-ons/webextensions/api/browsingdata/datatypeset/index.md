@@ -34,7 +34,7 @@ Values of this type are objects. They contain these properties:
 - `indexedDB` {{optional_inline}}
   - : `boolean`. IndexedDB data.
 - `localStorage` {{optional_inline}}
-  - : `boolean`. Local and session storage data.
+  - : `boolean`. Local storage ([`localStorage`](/en-US/docs/Web/API/Window/localStorage)) and session storage ([`sessionStorage`](/en-US/docs/Web/API/Window/sessionStorage)) data.
 - `passwords` {{optional_inline}}
   - : `boolean`. Saved passwords for autocomplete.
 - `pluginData` {{optional_inline}}
