@@ -26,8 +26,8 @@ The markup is a container with elements inside for a header, footer, main conten
   max-width: 1024px;
   margin: 0 auto;
   font:
-    1.2em Helvetica,
-    arial,
+    1.2em "Helvetica",
+    "Arial",
     sans-serif;
 }
 
@@ -165,8 +165,8 @@ CSS frameworks and grid systems commonly use 12- or 16-column flexible grids. We
   max-width: 1024px;
   margin: 0 auto;
   font:
-    1.2em Helvetica,
-    arial,
+    1.2em "Helvetica",
+    "Arial",
     sans-serif;
 }
 .wrapper > * {
@@ -242,8 +242,8 @@ To see how this layout method works in practice, we can create the same layout w
   max-width: 1024px;
   margin: 0 auto;
   font:
-    1.2em Helvetica,
-    arial,
+    1.2em "Helvetica",
+    "Arial",
     sans-serif;
 }
 
@@ -439,8 +439,8 @@ img {
 }
 body {
   font:
-    1.2em Helvetica,
-    arial,
+    1.2em "Helvetica",
+    "Arial",
     sans-serif;
 }
 a:link,
@@ -549,8 +549,8 @@ img {
 }
 body {
   font:
-    1.2em Helvetica,
-    arial,
+    1.2em "Helvetica",
+    "Arial",
     sans-serif;
 }
 a:link,

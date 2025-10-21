@@ -24,7 +24,7 @@ const blockDirection = document.getElementById("block");
 const stop = document.getElementById("stop");
 const snap = document.getElementById("snap");
 const all = document.querySelector("article");
-const rules = document.styleSheets[0].cssRules;
+const rules = document.getElementById("css-output").sheet.cssRules;
 
 setSST();
 setSSA();

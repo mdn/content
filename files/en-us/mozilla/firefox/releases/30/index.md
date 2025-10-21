@@ -1,5 +1,5 @@
 ---
-title: Firefox 30 for developers
+title: Firefox 30 release notes for developers
 short-title: Firefox 30
 slug: Mozilla/Firefox/Releases/30
 page-type: firefox-release-notes

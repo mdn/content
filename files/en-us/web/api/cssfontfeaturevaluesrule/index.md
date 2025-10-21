@@ -61,7 +61,7 @@ In this example, we declare two {{cssxref("@font-feature-values")}} one for the 
 
 ```js
 const log = document.getElementById("log");
-const rules = document.styleSheets[document.styleSheets.length - 1].cssRules;
+const rules = document.getElementById("css-output").sheet.cssRules;
 
 const fontOne = rules[0]; // A CSSFontFeatureValuesRule
 log.textContent = `The 1st '@font-feature-values' family: "${fontOne.fontFamily}".\n`;

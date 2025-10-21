@@ -1,5 +1,5 @@
 ---
-title: Firefox 101 for developers
+title: Firefox 101 release notes for developers
 short-title: Firefox 101
 slug: Mozilla/Firefox/Releases/101
 page-type: firefox-release-notes

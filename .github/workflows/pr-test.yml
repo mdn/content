@@ -30,6 +30,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
 
       - name: Get changed files
         id: check
@@ -78,7 +80,7 @@ jobs:
 
       - name: Setup Node.js environment
         if: steps.check.outputs.HAS_FILES == 'true'
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version-file: ".nvmrc"
           cache: yarn
@@ -145,19 +147,18 @@ jobs:
           echo "Disk usage size of the build"
           du -sh $BUILD_OUT_ROOT
 
+          # Save the PR number into the build
+          echo ${{ github.event.number }} > ${BUILD_OUT_ROOT}/NR
+
           # Download the raw diff blob and store that inside the build
           # directory.
           # The purpose of this is for the PR Review Companion to later
           # be able to use this raw diff file for the benefit of analyzing.
           wget https://github.com/${{ github.repository }}/compare/${BASE_SHA}...${HEAD_SHA}.diff -O ${BUILD_OUT_ROOT}/DIFF
 
-      - name: Merge static assets with built documents
+      - name: Show final disk usage size of build
         if: steps.check.outputs.HAS_MD_FILES == 'true'
-        run: |
-          # Exclude the .map files, as they're used for debugging JS and CSS.
-          rsync -a --exclude "*.map" node_modules/@mdn/yari/client/build/ $BUILD_OUT_ROOT
-          # Show the final disk usage size of the build.
-          du -sh $BUILD_OUT_ROOT
+        run: du -sh $BUILD_OUT_ROOT
 
       - uses: actions/upload-artifact@v4
         if: steps.check.outputs.HAS_MD_FILES == 'true'

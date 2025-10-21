@@ -319,9 +319,9 @@ body {
   background-color: white;
   color: #333333;
   font:
-    1.2em / 1.5 Helvetica Neue,
-    Helvetica,
-    Arial,
+    1.2em / 1.5 "Helvetica Neue",
+    "Helvetica",
+    "Arial",
     sans-serif;
   padding: 0;
   margin: 0;

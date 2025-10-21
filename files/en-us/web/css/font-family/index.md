@@ -11,7 +11,7 @@ The **`font-family`** [CSS](/en-US/docs/Web/CSS) property specifies a prioritize
 {{InteractiveExample("CSS Demo: font-family")}}
 
 ```css interactive-example-choice
-font-family: Georgia, serif;
+font-family: "Georgia", serif;
 ```
 
 ```css interactive-example-choice
@@ -164,15 +164,15 @@ font-family: "Gill Sans Extrabold", sans-serif;
 
 ```css
 .serif {
-  font-family: Times, "Times New Roman", Georgia, serif;
+  font-family: "Times", "Times New Roman", "Georgia", serif;
 }
 
 .sansserif {
-  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-family: "Verdana", "Helvetica", "Arial", sans-serif;
 }
 
 .monospace {
-  font-family: "Lucida Console", Courier, monospace;
+  font-family: "Lucida Console", "Courier New", monospace;
 }
 
 .cursive {

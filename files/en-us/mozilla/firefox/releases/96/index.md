@@ -1,5 +1,5 @@
 ---
-title: Firefox 96 for developers
+title: Firefox 96 release notes for developers
 short-title: Firefox 96
 slug: Mozilla/Firefox/Releases/96
 page-type: firefox-release-notes

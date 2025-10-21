@@ -1,5 +1,5 @@
 ---
-title: Firefox 8 for developers
+title: Firefox 8 release notes for developers
 short-title: Firefox 8
 slug: Mozilla/Firefox/Releases/8
 page-type: firefox-release-notes

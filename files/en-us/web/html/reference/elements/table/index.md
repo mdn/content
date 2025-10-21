@@ -589,8 +589,8 @@ table {
   border: 2px solid rgb(140 140 140);
   font:
     16px "Open Sans",
-    Helvetica,
-    Arial,
+    "Helvetica",
+    "Arial",
     sans-serif;
 }
 
@@ -683,8 +683,8 @@ table {
   border: 2px solid rgb(140 140 140);
   font:
     16px "Open Sans",
-    Helvetica,
-    Arial,
+    "Helvetica",
+    "Arial",
     sans-serif;
 }
 

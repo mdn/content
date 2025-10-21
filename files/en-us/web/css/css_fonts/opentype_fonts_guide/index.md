@@ -72,7 +72,7 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground:
 ```css hidden live-sample___font-kerning-example
 @font-face {
   font-family: "Plex Serif";
-  font-weight: 400;
+  font-weight: normal;
   font-style: normal;
   font-stretch: normal;
   src:
@@ -336,7 +336,7 @@ While more common in script typefaces, in the below example they are used to cre
 ```css hidden live-sample___font-variant-ligatures-example
 @font-face {
   font-family: "Playfair Display";
-  font-weight: 400;
+  font-weight: normal;
   font-style: normal;
   font-stretch: normal;
   src:
@@ -442,7 +442,7 @@ Position variants are used to enable typographic superscript and subscript glyph
 ```css hidden live-sample___font-variant-position-example
 @font-face {
   font-family: "Playfair Display";
-  font-weight: 400;
+  font-weight: normal;
   font-style: normal;
   font-stretch: normal;
   src:
@@ -560,7 +560,7 @@ One of the more common use cases for OpenType features is proper small caps. The
 ```css hidden live-sample___font-variant-caps-example
 @font-face {
   font-family: "Playfair Display";
-  font-weight: 400;
+  font-weight: normal;
   font-style: normal;
   font-stretch: normal;
   src:
@@ -694,7 +694,7 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground:
 ```css hidden live-sample___font-variant-numeric-example
 @font-face {
   font-family: "Source Serif";
-  font-weight: 400;
+  font-weight: normal;
   font-style: normal;
   font-stretch: normal;
   src:
@@ -809,7 +809,7 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground:
 ```css hidden live-sample___font-variant-numeric-frac-example
 @font-face {
   font-family: "Source Serif";
-  font-weight: 400;
+  font-weight: normal;
   font-style: normal;
   font-stretch: normal;
   src:
@@ -1028,7 +1028,7 @@ The {{Cssxref("font-variant")}} property is the shorthand syntax for defining al
 ```css hidden live-sample___font-variant-example
 @font-face {
   font-family: "Playfair Display";
-  font-weight: 400;
+  font-weight: normal;
   font-style: normal;
   font-stretch: normal;
   src:

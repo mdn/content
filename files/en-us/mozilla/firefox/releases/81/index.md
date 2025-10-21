@@ -1,5 +1,5 @@
 ---
-title: Firefox 81 for developers
+title: Firefox 81 release notes for developers
 short-title: Firefox 81
 slug: Mozilla/Firefox/Releases/81
 page-type: firefox-release-notes

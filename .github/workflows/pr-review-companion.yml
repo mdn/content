@@ -25,15 +25,18 @@ permissions:
   pull-requests: write
   # Authenticate with GCP.
   id-token: write
+  # Report commit status.
+  statuses: write
 
 jobs:
   review:
     environment: review
     runs-on: ubuntu-latest
-    if: github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.pull_requests[0].number
+    if: github.event.workflow_run.conclusion == 'success'
     env:
-      PR_NUMBER: ${{ github.event.workflow_run.pull_requests[0].number }}
-      PREFIX: pr${{ github.event.workflow_run.pull_requests[0].number }}
+      STATUS_PATH: repos/${{ github.repository }}/statuses/${{ github.event.workflow_run.pull_requests[0].head.sha }}
+      STATUS_CONTEXT: pr-review-companion
+      STATUS_TARGET: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
     steps:
       - name: Download artifact
         uses: actions/download-artifact@v5
@@ -47,7 +50,22 @@ jobs:
       - name: Check for artifacts
         id: check
         if: hashFiles('build/') != ''
-        run: echo "HAS_ARTIFACT=true" >> "$GITHUB_OUTPUT"
+        run: |
+          echo "HAS_ARTIFACT=true" >> "$GITHUB_OUTPUT"
+          PR_NUMBER=`cat build/NR | tr -dc '0-9'`
+          echo "PR_NUMBER=$PR_NUMBER" >> "$GITHUB_OUTPUT"
+          echo "PREFIX=pr$PR_NUMBER" >> "$GITHUB_OUTPUT"
+
+      - name: Mark status as pending
+        if: steps.check.outputs.HAS_ARTIFACT && github.event.workflow_run.pull_requests[0].number
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh api "$STATUS_PATH" \
+            -f state=pending \
+            -f context="$STATUS_CONTEXT" \
+            -f description='Review deployment pending' \
+            -f target_url="$STATUS_TARGET"
 
       - name: Authenticate with GCP
         if: steps.check.outputs.HAS_ARTIFACT
@@ -66,7 +84,7 @@ jobs:
         uses: google-github-actions/upload-cloud-storage@v3
         with:
           path: "build"
-          destination: "${{ vars.GCP_BUCKET_NAME }}/${{ env.PREFIX }}"
+          destination: "${{ vars.GCP_BUCKET_NAME }}/${{ steps.check.outputs.PREFIX }}"
           resumable: false
           headers: |-
             cache-control: no-store
@@ -79,12 +97,14 @@ jobs:
         if: steps.check.outputs.HAS_ARTIFACT
         with:
           path: content
+          persist-credentials: false
 
       - name: Setup (mdn/content)
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         if: steps.check.outputs.HAS_ARTIFACT
         with:
           node-version-file: "content/.nvmrc"
+          package-manager-cache: false
 
       - name: Install (mdn/content)
         if: steps.check.outputs.HAS_ARTIFACT
@@ -98,6 +118,8 @@ jobs:
         if: steps.check.outputs.HAS_ARTIFACT
         env:
           BUILD_OUT_ROOT: ${{ github.workspace }}/build
+          PREFIX: ${{ steps.check.outputs.PREFIX }}
+          PR_NUMBER: ${{ steps.check.outputs.PR_NUMBER }}
         working-directory: content
         run: |
           echo "Pull request:"
@@ -112,3 +134,25 @@ jobs:
             --pr-number="$PR_NUMBER" \
             --diff-file=$BUILD_OUT_ROOT/DIFF \
             $BUILD_OUT_ROOT
+
+      - name: Mark status as success
+        if: steps.check.outputs.HAS_ARTIFACT && success() && github.event.workflow_run.pull_requests[0].number
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh api "$STATUS_PATH" \
+            -f state=success \
+            -f context="$STATUS_CONTEXT" \
+            -f description='Review deployment succeeded' \
+            -f target_url="$STATUS_TARGET"
+
+      - name: Mark status as failure
+        if: steps.check.outputs.HAS_ARTIFACT && failure() && github.event.workflow_run.pull_requests[0].number
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh api "$STATUS_PATH" \
+            -f state=failure \
+            -f context="$STATUS_CONTEXT" \
+            -f description='Review deployment failed' \
+            -f target_url="$STATUS_TARGET"

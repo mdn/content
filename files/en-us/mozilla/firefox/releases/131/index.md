@@ -1,5 +1,5 @@
 ---
-title: Firefox 131 for developers
+title: Firefox 131 release notes for developers
 short-title: Firefox 131
 slug: Mozilla/Firefox/Releases/131
 page-type: firefox-release-notes

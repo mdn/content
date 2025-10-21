@@ -65,7 +65,7 @@ In the CSS we are in effect defining a completely separate {{cssxref("@font-face
 
 div {
   font-size: 4em;
-  font-family: Ampersand, Helvetica, sans-serif;
+  font-family: "Ampersand", "Helvetica", sans-serif;
 }
 ```
 

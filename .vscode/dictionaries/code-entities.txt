@@ -802,6 +802,7 @@ veryverythickmathspace
 veryverythinmathspace
 vfprintf
 videooutput
+viewbox
 viewsource.css
 VIRTUALENVWRAPPER
 virtualkeyboardpolicy

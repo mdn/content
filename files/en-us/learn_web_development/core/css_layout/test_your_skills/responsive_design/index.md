@@ -6,7 +6,7 @@ page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Media_queries", "Learn_web_development/Core/Scripting", "Learn_web_development/Core/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Media_queries", "Learn_web_development/Core/CSS_layout/Mobile-first_challenge", "Learn_web_development/Core/CSS_layout")}}
 
 The aim of this skill test is to help you assess whether you understand [how to use media queries](/en-US/docs/Learn_web_development/Core/CSS_layout/Media_queries) and get you working with responsive web design with a practical task. Everything you need to know to complete this task is covered in the layout lessons in the [CSS layout module](/en-US/docs/Learn_web_development/Core/CSS_layout).
 
@@ -29,4 +29,4 @@ Your task is to create a desktop version of this layout which displays when ther
 
 There are a number of ways that you could create the desktop layout — enjoy experimenting. You could also add a second breakpoint, perhaps creating a layout that would work well on a tablet in portrait mode.
 
-{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Media_queries", "Learn_web_development/Core/Scripting", "Learn_web_development/Core/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Media_queries", "Learn_web_development/Core/CSS_layout/Mobile-first_challenge", "Learn_web_development/Core/CSS_layout")}}
