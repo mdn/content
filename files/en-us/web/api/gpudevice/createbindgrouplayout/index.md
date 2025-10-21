@@ -83,7 +83,7 @@ The resource layout object can be one of the following (see also {{domxref("GPUD
       The `"read-only"` and `"read-write"` values can only be used if the [`"readonly_and_readwrite_storage_textures"`](/en-US/docs/Web/API/WGSLLanguageFeatures#readonly_and_readwrite_storage_textures) WGSL language extension is present in {{domxref("WGSLLanguageFeatures")}}. If this is not the case, a {{domxref("GPUValidationError")}} is generated.
 
   - `format`
-    - : An enumerated value specifying the required format of texture views bound to this binding. See the specification's [Texture Formats](https://gpuweb.github.io/gpuweb/#enumdef-gputextureformat) section for all the available `format` values. Also see [Tier 1 and Tier 2 texture formats](/en-US/docs/Web/API/GPUDevice/createTexture#tier_1_and_tier_2_texture_formats) for information on the Tier 1 and Tier 2 format sets.
+    - : An enumerated value specifying the required format of texture views bound to this binding. See the specification's [Texture Formats](https://gpuweb.github.io/gpuweb/#enumdef-gputextureformat) section for all the available `format` values. For additional information, see [Tier 1 and Tier 2 texture formats](/en-US/docs/Web/API/GPUDevice/createTexture#tier_1_and_tier_2_texture_formats).
   - `viewDimension` {{optional_inline}}
     - : An enumerated value specifying the required dimension for texture views bound to this binding. Possible values are:
       - `"1d"`: The texture is viewed as a one-dimensional image.
