@@ -1,6 +1,6 @@
 ---
-title: Locating DOM elements using selectors
-slug: Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors
+title: Selection and traversal on the DOM tree
+slug: Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree
 page-type: guide
 ---
 

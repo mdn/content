@@ -2,10 +2,12 @@
 title: CSSFunctionDeclarations
 slug: Web/API/CSSFunctionDeclarations
 page-type: web-api-interface
+status:
+  - experimental
 browser-compat: api.CSSFunctionDeclarations
 ---
 
-{{ APIRef("CSSOM") }}
+{{ APIRef("CSSOM") }}{{SeeCompatTable}}
 
 The **`CSSFunctionDeclarations`** interface of the [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model) represents a consecutive run of CSS declarations included within a {{cssxref("@function")}} body.
 
@@ -17,7 +19,7 @@ This can include [CSS custom properties](/en-US/docs/Web/CSS/CSS_cascading_varia
 
 _This interface also inherits properties from {{domxref("CSSRule")}}._
 
-- {{domxref("CSSFunctionDeclarations.style")}} {{ReadOnlyInline}}
+- {{domxref("CSSFunctionDeclarations.style")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : Returns a {{domxref("CSSFunctionDescriptors")}} object representing the descriptors available in a {{cssxref("@function")}} body.
 
 ## Examples
@@ -42,14 +44,13 @@ We've also included a local [custom property](/en-US/docs/Web/CSS/CSS_cascading_
 
 #### JavaScript
 
-Our script starts by getting a reference to the stylesheet attached to our document using {{domxref("Document.styleSheets")}}, then getting a reference to the only rule in the stylesheet, the `CSSFunctionRule` — via {{domxref("CSSStylesheet.cssRules")}}.
+Our script starts by getting a reference to the stylesheet attached to our document using {{domxref("HTMLStyleElement.sheet")}}, then getting a reference to the only rule in the stylesheet, the `CSSFunctionRule` — via {{domxref("CSSStylesheet.cssRules")}}.
 
 We then access the `CSSFunctionDeclarations` object representing the only continuous run of declarations inside the function using {{domxref("CSSGroupingRule.cssRules", "cssRules[0]")}}, access its descriptor's information using {{domxref("CSSFunctionDeclarations.style")}}, and then access the descriptor length and style information. All of this information is logged to the console.
 
 ```js live-sample___cssfunctiondeclarations-basics
 // Get a CSSFunctionRule
-const sheet = document.styleSheets[0];
-const cssFunc = sheet.cssRules[0];
+const cssFunc = document.getElementById("css-output").sheet.cssRules[0];
 
 // Accessing CSSFunctionDeclarations and CSSFunctionDescriptors
 console.log(cssFunc.cssRules[0]); // CSSFunctionDeclarations
@@ -84,7 +85,7 @@ Our CSS shows a `@function` example taken from the specification, `--bar()`, whi
 
 #### JavaScript
 
-Our script starts by getting a reference to the stylesheet attached to our document via {{domxref("Document.styleSheets")}}, then getting a reference to the only rule in the stylesheet, the `CSSFunctionRule` — via {{domxref("CSSStylesheet.cssRules")}}.
+Our script starts by getting a reference to the stylesheet attached to our document via {{domxref("HTMLStyleElement.sheet")}}, then getting a reference to the only rule in the stylesheet, the `CSSFunctionRule` — via {{domxref("CSSStylesheet.cssRules")}}.
 
 We then access the {{domxref("CSSGroupingRule.cssRules")}}, logging its value to the console. This returns a {{domxref("CSSRuleList")}} object containing three objects:
 
@@ -94,8 +95,7 @@ We then access the {{domxref("CSSGroupingRule.cssRules")}}, logging its value to
 
 ```js live-sample___multiple-cssfunctiondeclarations
 // Get a CSSFunctionRule
-const sheet = document.styleSheets[0];
-const cssFunc = sheet.cssRules[0];
+const cssFunc = document.getElementById("css-output").sheet.cssRules[0];
 
 // Accessing both CSSFunctionDeclarations
 console.log(cssFunc.cssRules);

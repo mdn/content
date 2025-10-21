@@ -107,8 +107,6 @@ const output = document.getElementById("output");
 
 let houses;
 
-// Create fetchHouseData() function here
-
 function initializeForm() {
 
 }
@@ -228,6 +226,8 @@ const output = document.getElementById("output");
 
 let houses;
 
+// Solution: Fetching the data
+
 function fetchHouseData() {
   fetch("https://mdn.github.io/shared-assets/misc/houses.json")
     .then((response) => {
@@ -242,6 +242,8 @@ function fetchHouseData() {
       initializeForm();
     });
 }
+
+// Solution: Completing the initializeForm() function
 
 function initializeForm() {
   // Create options for all the different street names
@@ -277,6 +279,8 @@ function initializeForm() {
     j++;
   }
 }
+
+// Solution: Completing the renderHouses() function
 
 function renderHouses(e) {
   // Stop the form submitting

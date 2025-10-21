@@ -20,7 +20,7 @@ The intrinsic size is the actual size of the content itself; the size the elemen
 
 CSS has many sizing properties. When it comes to sizing replaced elements, the [`object-fit`](/en-US/docs/Web/CSS/object-fit) property enables us to control, to some extent, how replaced elements are rendered within a defined box. For example, in the following screenshot, a 1200 x 400 image is displayed using an {{htmlelement("img")}} element. The `<img>` element is sized to 400 x 200. The image content is positioned using `object-fit: none;` declaration.
 
-![An image demonstrating extrinsic and intrinsic image sizes; the center 400 by 200 section of a much larger 1200 by 400 image is visible in the 400 by 200 view box that is the size of the element displaying the image.](extrinsic-intrinsic_sizes.jpg)
+![An image demonstrating extrinsic and intrinsic image sizes; the center 400 by 200 section of a much larger 1200 by 400 image is visible in the 400 by 200 view box that is the size of the element displaying the image.](https://mdn.github.io/shared-assets/images/diagrams/css/object-view-box/extrinsic-intrinsic_sizes.jpg)
 The `object-view-box` property is more flexible than the `object-fit` property, and it is capable of doing more things. For example, it can be used to crop, zoom, and pan images. The property sets the viewable area (viewbox), which defines what part of the content to show and how to fit it inside the extrinsic size. The viewbox value contains a rectangle and its position relative to the intrinsic area of the content, but the _physical size of the view box remains equal to the extrinsic size_. The viewbox marks the area in the content to be displayed, and then the content area is transformed to match the extrinsic dimensions fitting into the HTML element.
 
 In the following image, we have the same leopard picture in a 400 x 150 image element. However, this time we have used `object-view-box` property to crop the portion of the picture showing the leopard's eyes.
@@ -39,7 +39,7 @@ This example demonstrates using the `object-view-box` property to zoom a section
 
 ### HTML
 
-We include an {{htmlelement("img")}} element and a [`range`](Web/HTML/Reference/Elements/input/range) {{htmlelement("input")}} element, with an associated {{htmlelement("label")}}. The natural dimensions, or intrinsic size, of the original leopard image are `1244px` wide by `416px` tall, with an {{glossary("aspect ratio")}} of `3:1`.
+We include an {{htmlelement("img")}} element and a [`range`](/en-US/docs/Web/HTML/Reference/Elements/input/range) {{htmlelement("input")}} element, with an associated {{htmlelement("label")}}. The natural dimensions, or intrinsic size, of the original leopard image are `1244px` wide by `416px` tall, with an {{glossary("aspect ratio")}} of `3:1`.
 
 ```html
 <img
@@ -128,8 +128,8 @@ We can create a panning effect by changing the coordinates of the view box windo
 <p>
   <label for="position">Left offset: </label>
   <input type="range" id="position" min="0" max="900" value="450" />
-  <output>
 </p>
+<output></output>
 ```
 
 ```css hidden

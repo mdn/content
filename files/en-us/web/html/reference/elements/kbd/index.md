@@ -28,7 +28,7 @@ kbd {
   color: #333333;
   display: inline-block;
   font-size: 0.85em;
-  font-weight: 700;
+  font-weight: bold;
   line-height: 1;
   padding: 2px 4px;
   white-space: nowrap;

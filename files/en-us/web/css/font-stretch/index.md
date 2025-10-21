@@ -59,7 +59,7 @@ font-stretch: 150%;
   src: url("/shared-assets/fonts/LeagueMono-VF.ttf") format("truetype");
   font-family: "League";
   font-style: normal;
-  font-weight: 400;
+  font-weight: normal;
   font-stretch: 50% 200%; /* Required by Chrome - allow 50% to 200% */
 }
 
