@@ -27,7 +27,7 @@ An optional object whose properties can include:
 - `query` {{optional_inline}}
   - : A key or an {{domxref("IDBKeyRange")}} identifying the records to retrieve. If this value is `null` or not specified, the browser will use an unbound key range.
 - `count` {{optional_inline}}
-  - : The number of records to return. If this value exceeds the number of records in the query, the browser will only retrieve the queried records. If it is lower than `0` or greater than `2^32 - 1` a {{jsxref("TypeError")}} exception will be thrown.
+  - : The number of records to return. If this value exceeds the number of records in the query, the browser will retrieve only the queried records. If the value is less than `0` or greater than `2^32 - 1`, a {{jsxref("TypeError")}} exception will be thrown.
 - `direction` {{optional_inline}}
   - : An enumerated value specifying the direction in which the records are traversed, which in turn defines the order in which they are returned. Possible values are:
     - `next`
