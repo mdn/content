@@ -9,7 +9,7 @@ browser-compat: api.IDBObjectStore.getAllRecords
 {{ APIRef("IndexedDB") }}
 
 The **`getAllRecords()`** method of the {{domxref("IDBObjectStore")}}
-interface retrieves all records (including primary key and value) that are inside the object store.
+interface retrieves all records (including primary keys and values) from the object store.
 
 `getAllRecords()` effectively combines the functionality of {{domxref("IDBObjectStore.getAllKeys", "getAllKeys()")}} and {{domxref("IDBObjectStore.getAll", "getAll()")}} by enumerating both primary keys and values at the same time. This combined operation enables certain data retrieval patterns to be significantly faster than alternatives such as iteration with cursors.
 
@@ -22,7 +22,7 @@ getAllRecords(options)
 
 ### Parameters
 
-An optional object whose properties can include:
+An options object whose properties can include:
 
 - `query` {{optional_inline}}
   - : A key or an {{domxref("IDBKeyRange")}} identifying the records to retrieve. If this value is `null` or not specified, the browser will use an unbound key range.
@@ -80,8 +80,6 @@ const myRecords = (objectStore.getAllRecords({
 });
 ```
 
-See the [Faster IndexedDB reads with getAllRecords()](https://microsoftedge.github.io/Demos/idb-getallrecords/) example for an idea of how `getAllRecords()` is used.
-
 ## Specifications
 
 {{Specifications}}
@@ -99,3 +97,4 @@ See the [Faster IndexedDB reads with getAllRecords()](https://microsoftedge.gith
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
+- [Faster IndexedDB reads with getAllRecords() example](https://microsoftedge.github.io/Demos/idb-getallrecords/) from Microsoft, 2025

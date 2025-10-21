@@ -9,9 +9,9 @@ browser-compat: api.IDBIndex.getAllRecords
 {{ APIRef("IndexedDB") }}
 
 The **`getAllRecords()`** method of the {{domxref("IDBIndex")}}
-interface retrieves all records (including index key, primary key, and value) that are inside the index.
+interface retrieves all records (including index keys, primary keys, and values) from the index.
 
-`getAllRecords()` effectively combines {{domxref("IDBIndex.getAllKeys", "getAllKeys()")}} and {{domxref("IDBIndex.getAll", "getAll()")}} by enumerating both primary keys and values at the same time. This functionality enables certain data retrieval patterns to be significantly faster when compared to alternatives such as iteration with cursors.
+`getAllRecords()` effectively combines the functionality of {{domxref("IDBIndex.getAllKeys", "getAllKeys()")}} and {{domxref("IDBIndex.getAll", "getAll()")}} by enumerating both primary keys and values at the same time. This combined operation enables certain data retrieval patterns to be significantly faster than alternatives such as iteration with cursors.
 
 ## Syntax
 
@@ -22,12 +22,12 @@ getAllRecords(options)
 
 ### Parameters
 
-An optional object, the properties of which can include:
+An options object whose properties can include:
 
 - `query` {{optional_inline}}
   - : A key or an {{domxref("IDBKeyRange")}} identifying the records to retrieve. If this value is `null` or not specified, the browser will use an unbound key range.
 - `count` {{optional_inline}}
-  - : The number of records to return. If this value exceeds the number of records in the query, the browser will only retrieve the queried records. If it is lower than `0` or greater than `2^32 - 1` a {{jsxref("TypeError")}} exception will be thrown.
+  - : The number of records to return. If this value exceeds the number of records in the query, the browser will retrieve only the queried records. If the value is less than `0` or greater than `2^32 - 1`, a {{jsxref("TypeError")}} exception will be thrown.
 - `direction` {{optional_inline}}
   - : An enumerated value specifying the direction in which the records are traversed. Possible values are:
     - `next`
@@ -43,7 +43,7 @@ An optional object, the properties of which can include:
 
 An {{domxref("IDBRequest")}} object on which subsequent events related to this operation are fired.
 
-If the operation is successful, the value of the request's {{domxref("IDBRequest.result", "result")}} property is an {{jsxref("Array")}} of objects representing all the records matching the given query, up to the value of `count`, if `count` was supplied.
+If the operation is successful, the value of the request's {{domxref("IDBRequest.result", "result")}} property is an {{jsxref("Array", "array")}} of objects representing all the records that match the given query, up to the number specified by `count` (if provided).
 
 Each object contains the following properties:
 
@@ -81,8 +81,6 @@ const myRecords = (myIndex.getAllRecords({
 });
 ```
 
-See the [Faster IndexedDB reads with getAllRecords()](https://microsoftedge.github.io/Demos/idb-getallrecords/) example for an idea of how `getAllRecords()` is used.
-
 ## Specifications
 
 {{Specifications}}
@@ -100,3 +98,4 @@ See the [Faster IndexedDB reads with getAllRecords()](https://microsoftedge.gith
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
+- [Faster IndexedDB reads with getAllRecords() example](https://microsoftedge.github.io/Demos/idb-getallrecords/) from Microsoft, 2025
