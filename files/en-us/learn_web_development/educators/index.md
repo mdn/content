@@ -20,7 +20,7 @@ Our [Core modules](/en-US/docs/Learn_web_development/Core) include fundamental w
 However, you may have additional topic requirements for your course, in which case you could:
 
 - Consider including some of the learning objectives from our [Getting started modules](/en-US/docs/Learn_web_development/Getting_started), such as soft skills like teamwork, research, and job interview techniques, and gaining familiarity with a typical web development toolset.
-- Extend the technology coverage in the Core modules with some [Extensions](/en-US/docs/Learn_web_development/Extensions). We will aim to publish more extensions as time goes on. You could consider writing your own extensions and contributing them to the curriculum so others can benefit.
+- Extend the technology coverage in the Core modules with some [Extensions](/en-US/docs/Learn_web_development/Extensions). We will aim to publish more extensions as time goes on. You could consider writing your own extensions and using them alongside our material.
 
 ## Using an effective learning pathway
 
