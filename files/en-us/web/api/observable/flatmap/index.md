@@ -22,9 +22,9 @@ flatMap(mapper)
 
 - `mapper`
   - : A callback function that transforms each value passed through the observable into a new value before mapping it to the rest of the stream. The callback is passed two arguments:
-    - `value` {{optional_inline}}
+    - `value`
       - : The current value being mapped.
-    - `index` {{optional_inline}}
+    - `index`
       - : A number representing the value's position in the stream. The first position has a value of `0`, in the same manner as an array.
 
 ### Return value

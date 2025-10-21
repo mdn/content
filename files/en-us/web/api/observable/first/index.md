@@ -10,7 +10,7 @@ browser-compat: api.Observable.first
 
 {{APIRef("Observable API")}}{{SeeCompatTable}}
 
-The **`first()`** method of the {{domxref("Observable")}} interface returns the first value passed through the observable stream.
+The **`first()`** method of the {{domxref("Observable")}} interface returns a promise that fulfills with the first value passed through the observable stream.
 
 ## Syntax
 

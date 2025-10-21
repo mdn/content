@@ -10,7 +10,7 @@ browser-compat: api.Observable.toArray
 
 {{APIRef("Observable API")}}{{SeeCompatTable}}
 
-The **`toArray()`** method of the {{domxref("Observable")}} interface returns an array containing every value passed through the observable stream.
+The **`toArray()`** method of the {{domxref("Observable")}} interface returns a promise that fulfills with an array containing every value passed through the observable stream.
 
 ## Syntax
 

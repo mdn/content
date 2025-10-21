@@ -10,7 +10,7 @@ browser-compat: api.Observable.last
 
 {{APIRef("Observable API")}}{{SeeCompatTable}}
 
-The **`last()`** method of the {{domxref("Observable")}} interface returns the last value passed through the observable stream.
+The **`last()`** method of the {{domxref("Observable")}} interface returns a promise that fulfills with the last value passed through the observable stream.
 
 ## Syntax
 

@@ -10,7 +10,7 @@ browser-compat: api.Observable.find
 
 {{APIRef("Observable API")}}{{SeeCompatTable}}
 
-The **`find()`** method of the {{domxref("Observable")}} interface returns the first value passed through the observable stream that passes a specified test, or {{jsxref("undefined")}} if no values pass.
+The **`find()`** method of the {{domxref("Observable")}} interface returns a promise that fulfills with the first value passed through the observable stream that passes a specified test, or {{jsxref("undefined")}} if no values pass.
 
 ## Syntax
 
@@ -23,9 +23,9 @@ find(predicate, options)
 
 - `predicate`
   - : A callback function that contains a test. Each value passed through the observable stream is evaluated to see if it passes the test. The callback is passed two arguments:
-    - `value` {{optional_inline}}
+    - `value`
       - : The current value being tested.
-    - `index` {{optional_inline}}
+    - `index`
       - : A number representing the value's position in the stream. The first position has a value of `0`, in the same manner as an array.
 - `options` {{optional_inline}}
   - : An options object containing the following properties:

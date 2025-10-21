@@ -10,7 +10,7 @@ browser-compat: api.Observable.every
 
 {{APIRef("Observable API")}}{{SeeCompatTable}}
 
-The **`every()`** method of the {{domxref("Observable")}} interface returns a boolean indicating whether every value passed through the observable stream passed a specified test.
+The **`every()`** method of the {{domxref("Observable")}} interface returns a promise that fulfills with a boolean indicating whether every value passed through the observable stream passed a specified test.
 
 ## Syntax
 
@@ -23,9 +23,9 @@ every(predicate, options)
 
 - `predicate`
   - : A callback function that contains a test. Each value passed through the observable stream is evaluated to see if it passes the test. The callback is passed two arguments:
-    - `value` {{optional_inline}}
+    - `value`
       - : The current value being tested.
-    - `index` {{optional_inline}}
+    - `index`
       - : A number representing the value's position in the stream. The first position has a value of `0`, in the same manner as an array.
 - `options` {{optional_inline}}
   - : An options object containing the following properties:

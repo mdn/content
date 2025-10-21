@@ -23,8 +23,6 @@ takeUntil(value)
 - `value`
   - : A value representing the event that, when fired for the first time, will cause the observable stream to be unsubscribed from. This is usually another observable, although it can take other values such as {{jsxref("Promise")}}s and [iterables](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols).
 
-EDITORIAL: The observable case makes sense, but I don't understand what using a promise or iterable would look like, or what the use cases would be.
-
 ### Return value
 
 An {{domxref("Observable")}}.

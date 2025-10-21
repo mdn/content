@@ -10,7 +10,7 @@ browser-compat: api.Observable.reduce
 
 {{APIRef("Observable API")}}{{SeeCompatTable}}
 
-The **`reduce()`** method of the {{domxref("Observable")}} interface returns an accumulated value calculated by running a reducer function on every value passed through the observable stream.
+The **`reduce()`** method of the {{domxref("Observable")}} interface returns a promise that fulfills with an accumulated value calculated by running a reducer function on every value passed through the observable stream.
 
 ## Syntax
 
@@ -29,7 +29,7 @@ reduce(reducer, initialValue, options)
       - : On each iteration, the value of the `accumulator` is the return value of the previous reducer function's iteration, except for the first iteration, in which case it is the `initialValue`. If no `initialValue` is set, the `accumulator` equals the first value passed through the stream.
     - `value`
       - : The current value.
-    - `index` {{optional_inline}}
+    - `index`
       - : The value's position in the stream. The first position has a value of `0`, in the same manner as an array.
 - `initialValue` {{optional_inline}}
   - : Sets an initial value for the `accumulator`.

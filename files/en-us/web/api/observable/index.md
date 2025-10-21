@@ -66,21 +66,21 @@ The two main ways to create an observable are as follows:
 ### Promise-returning instance methods
 
 - {{domxref("Observable.every", "every()")}} {{Experimental_Inline}}
-  - : Returns a boolean indicating whether every value passed through the observable stream passed a specified test.
+  - : Returns a promise that fulfills with a boolean indicating whether every value passed through the observable stream passed a specified test.
 - {{domxref("Observable.find", "find()")}} {{Experimental_Inline}}
-  - : Returns the first value passed through the observable stream that passes a specified test, or {{jsxref("undefined")}} if no values pass.
+  - : Returns a promise that fulfills with the first value passed through the observable stream that passes a specified test, or {{jsxref("undefined")}} if no values pass.
 - {{domxref("Observable.first", "first()")}} {{Experimental_Inline}}
-  - : Returns the first value passed through the observable stream.
+  - : Returns a promise that fulfills with the first value passed through the observable stream.
 - {{domxref("Observable.forEach", "forEach()")}} {{Experimental_Inline}}
-  - : Performs a specified operation on every value passed through the observable stream.
+  - : Returns a promise that fulfills with `undefined` after performing a specified operation on every value passed through the observable stream.
 - {{domxref("Observable.last", "last()")}} {{Experimental_Inline}}
-  - : Returns the last value passed through the observable stream.
+  - : Returns a promise that fulfills with the last value passed through the observable stream.
 - {{domxref("Observable.reduce", "reduce()")}} {{Experimental_Inline}}
-  - : Returns an accumulated value calculated by running a reducer function on every value passed through the observable stream.
+  - : Returns a promise that fulfills with an accumulated value calculated by running a reducer function on every value passed through the observable stream.
 - {{domxref("Observable.some", "some()")}} {{Experimental_Inline}}
-  - : Returns a boolean indicating whether any value passed through the observable stream passed a specified test.
+  - : Returns a promise that fulfills with a boolean indicating whether any value passed through the observable stream passed a specified test.
 - {{domxref("Observable.toArray", "toArray()")}} {{Experimental_Inline}}
-  - : Returns an array containing every value passed through the observable stream.
+  - : Returns a promise that fulfills with an array containing every value passed through the observable stream.
 
 ## Examples
 

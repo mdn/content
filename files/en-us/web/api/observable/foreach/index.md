@@ -10,7 +10,7 @@ browser-compat: api.Observable.forEach
 
 {{APIRef("Observable API")}}{{SeeCompatTable}}
 
-The **`forEach()`** method of the {{domxref("Observable")}} interface performs a specified operation on every value passed through the observable stream.
+The **`forEach()`** method of the {{domxref("Observable")}} interface returns a promise that fulfills with `undefined` after performing a specified operation on every value passed through the observable stream.
 
 ## Syntax
 
@@ -25,7 +25,7 @@ forEach(callback, options)
   - : A callback function that run on every value that passes through the stream. The callback takes two parameters:
     - `value`
       - : The current value.
-    - `index` {{optional_inline}}
+    - `index`
       - : A number representing the value's position in the stream. The first position has a value of `0`, in the same manner as an array.
 - `options` {{optional_inline}}
   - : An options object containing the following properties:
