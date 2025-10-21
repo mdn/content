@@ -24,18 +24,18 @@ When set to the `null` value, that `null` value is converted to the empty string
 
 ### Setting the border attribute
 
-```js
+```js example-bad
 const img = new Image();
 img.src = "example.png";
 img.border = "1";
 ```
 
-Instead of doing this, consider:
+Instead of using the deprecated `border` property, consider setting the CSS `border` property instead:
 
-```js
+```js example-good
 const img = new Image();
 img.src = "example.png";
-img.style.borderWidth = "1px";
+img.style.border = "1px solid black";
 ```
 
 ## Specifications
