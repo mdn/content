@@ -124,7 +124,7 @@ function handleEnd(event) {
   event.preventDefault();
 
   for (const changedTouch of event.changedTouches) {
-    const touch = touches.get(changedTouch.identifier);
+    const touch = ongoingTouches.get(changedTouch.identifier);
     if (!touch) {
       console.error(`End: Could not find touch ${changedTouch.identifier}`);
       continue;
@@ -207,6 +207,16 @@ This iterates over the changed touches as well, but it looks in our cached touch
 This lets us get the coordinates of the previous position of each touch and use the appropriate context methods to draw a line segment joining the two positions together.
 
 After drawing the line, we call [`Map.set()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/set) to replace the previous information about the touchpoint with the current information in the `touches` map.
+
+#### Clearing button
+
+Finally, add clearing functionality.
+
+```js
+document.getElementById("clear").addEventListener("click", () => {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+});
+```
 
 ### Result
 
