@@ -156,7 +156,7 @@ If any errors occur the server responds with an error message. Otherwise the ser
 
 #### Hashing passwords
 
-Websites must not store passwords in plaintext form. Instead, when the user registers with a new password (or changes their password), the password is hashed and the hash is stored. When the user presents their password on login, the site:
+Websites must not store passwords in {{glossary("plaintext")}} form. Instead, when the user registers with a new password (or changes their password), the password is hashed and the hash is stored. When the user presents their password on login, the site:
 
 - retrieves the hash from the database
 - hashes the password provided by the user
