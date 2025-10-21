@@ -112,7 +112,7 @@ This section describes the WebGPU Tier1 and Tier2 texture formats.
 
 ### Tier 1
 
-The Tier 1 set of texture formats is designed to allow developers to port existing content to the web without needing to rewrite it to use WebGPU's lower capabilities. To use this set, the `texture-formats-tier1` feature needs to be enabled (see {{domxref("GPUSupportedFeatures")}}).
+The Tier 1 set of texture formats is designed to allow developers to port existing content to the web without needing to rewrite it to use WebGPU's lower-level capabilities. To use this set, enable the `texture-formats-tier1` feature (see {{domxref("GPUSupportedFeatures")}}).
 
 The feature enables:
 
