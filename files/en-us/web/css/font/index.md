@@ -91,7 +91,7 @@ This property is a shorthand for the following CSS properties:
 /* font-size font-family */
 font: 1.2em "Fira Sans", sans-serif;
 
-/* font-size/line height font-family */
+/* font-size/line-height font-family */
 font: 1.2em/2 "Fira Sans", sans-serif;
 
 /* font-style font-weight font-size font-family */

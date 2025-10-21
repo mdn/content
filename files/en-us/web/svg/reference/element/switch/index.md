@@ -19,17 +19,19 @@ Other direct children will be bypassed and therefore not rendered. If a child el
 
 ## Attributes
 
-This element only includes global attributes.
+- {{SVGAttr("requiredExtensions")}}
+  - : A space-separated list of URL values referencing the language extensions the user agent must support for the element to be rendered.
+
+- {{SVGAttr("systemLanguage")}}
+  - : A comma-separated list of supported {{glossary("BCP 47 language tag", "language tags")}}.
 
 ## DOM Interface
 
 This element implements the {{domxref("SVGSwitchElement")}} interface.
 
-## SVG \<switch> example
+## Examples
 
-This example demonstrates showing different text content depending on the browser's language settings. The `switch` element will display the first of its child elements whose `systemLanguage` attribute matches the user's language, or the fallback element with no `systemLanguage` attribute if none of them match.
-
-### HTML
+This example demonstrates showing different text content depending on the browser's language settings. The `<switch>` element will display the first of its child elements whose {{SVGAttr("systemLanguage")}} attribute matches the user's language, or the fallback element with no `systemLanguage` attribute if none of them match.
 
 ```html
 <svg viewBox="0 -20 100 50">
@@ -44,14 +46,12 @@ This example demonstrates showing different text content depending on the browse
     <text systemLanguage="fr">Bonjour!</text>
     <text systemLanguage="ja">こんにちは</text>
     <text systemLanguage="ru">Привет!</text>
-    <text>☺</text>
+    <text requiredExtensions="http://example.org/lang/ext/emoji">☺</text>
   </switch>
 </svg>
 ```
 
-### Result
-
-{{ EmbedLiveSample('SVG_switch_example') }}
+{{ EmbedLiveSample('examples') }}
 
 ## Specifications
 
@@ -60,3 +60,7 @@ This example demonstrates showing different text content depending on the browse
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{SVGAttr("requiredFeatures")}}
