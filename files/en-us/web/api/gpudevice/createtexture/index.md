@@ -114,7 +114,7 @@ This section describes the WebGPU Tier1 and Tier2 texture formats.
 
 The Tier 1 set of texture formats is designed to allow developers to port existing content to the web without needing to rewrite it to use WebGPU's lower-level capabilities. To use this set, enable the `texture-formats-tier1` feature (see {{domxref("GPUSupportedFeatures")}}).
 
-The feature enables:
+Enabling this feature allows:
 
 - Using the following [`formats`](#format) with [`usages`](#usage) of `RENDER_ATTACHMENT` (including blendable and multisampling capabilities) and `STORAGE_BINDING` (with `read-only` and `write-only` [`access`](/en-US/docs/Web/API/GPUDevice/createBindGroupLayout#access)):
   - `r16unorm`
@@ -123,11 +123,11 @@ The feature enables:
   - `rg16snorm`
   - `rgba16unorm`
   - `rgba16snorm`
-- Using the following [`formats`](#format) with a [`usage`](#usage) of `RENDER_ATTACHMENT` (including blendable and multisampling capabilities):
+- Using the following [`formats`](#format) with the `RENDER_ATTACHMENT` [`usage`](#usage) (including blendable and multisampling capabilities):
   - `r8snorm`
   - `rg8snorm`
   - `rgba8snorm`
-- Using the following [`formats`](#format) with a [`usage`](#usage) of `STORAGE_BINDING` (with `read-only` and `write-only` [`access`](/en-US/docs/Web/API/GPUDevice/createBindGroupLayout#access)):
+- Using the following [`formats`](#format) with the `STORAGE_BINDING` [`usage`](#usage) (with `read-only` and `write-only` [`access`](/en-US/docs/Web/API/GPUDevice/createBindGroupLayout#access)):
   - `r8unorm`
   - `r8snorm`
   - `r8uint`
@@ -151,13 +151,13 @@ The feature enables:
   - `rgba16unorm`
 
 > [!NOTE]
-> Enabling the `texture-formats-tier1` feature automatically enables the `rg11b10ufloat-renderable` feature, which allows `RENDER_ATTACHMENT` [`usage`](/en-US/docs/Web/API/GPUDevice/createTexture#usage) of `rg11b10ufloat`-[`format`](/en-US/docs/Web/API/GPUDevice/createTexture#format) {{domxref("GPUTexture")}}s, as well as their blending and multisampling.
+> Enabling the `texture-formats-tier1` feature automatically enables the `rg11b10ufloat-renderable` feature, which allows the `rg11b10ufloat` texture to be used with the `RENDER_ATTACHMENT` usage, including blending and multisampling.
 
 ### Tier2
 
 The Tier 2 set of texture formats supports storage texture formats that don't have support in "core" WebGPU, and are required for advanced usage. To use this set, enable the `texture-formats-tier2` feature (see {{domxref("GPUSupportedFeatures")}}).
 
-Enabling this feature allows using the following [`format`](#format) values with the [`usage`](#usage) of `STORAGE_BINDING` (with `read-write` [`access`](/en-US/docs/Web/API/GPUDevice/createBindGroupLayout#access)):
+Enabling this feature allows using the following [`formats`](#format) with the `STORAGE_BINDING` [`usage`](#usage) (with `read-write` [`access`](/en-US/docs/Web/API/GPUDevice/createBindGroupLayout#access)):
 
 - `r8unorm`
 - `r8uint`
