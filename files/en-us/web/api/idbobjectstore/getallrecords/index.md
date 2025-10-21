@@ -11,7 +11,7 @@ browser-compat: api.IDBObjectStore.getAllRecords
 The **`getAllRecords()`** method of the {{domxref("IDBObjectStore")}}
 interface retrieves all records (including primary key and value) that are inside the object store.
 
-`getAllRecords()` effectively combines {{domxref("IDBObjectStore.getAllKeys", "getAllKeys()")}} and {{domxref("IDBObjectStore.getAll", "getAll()")}} by enumerating both primary keys and values at the same time. This functionality enables certain data retrieval patterns to be significantly faster when compared to alternatives such as iteration with cursors.
+`getAllRecords()` effectively combines the functionality of {{domxref("IDBObjectStore.getAllKeys", "getAllKeys()")}} and {{domxref("IDBObjectStore.getAll", "getAll()")}} by enumerating both primary keys and values at the same time. This combined operation enables certain data retrieval patterns to be significantly faster than alternatives such as iteration with cursors.
 
 ## Syntax
 
