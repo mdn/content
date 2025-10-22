@@ -74,7 +74,9 @@ In this example we have two {{htmlelement("input")}} elements. The second one ha
     This is interactive:
     <input type="text" name="one" value="editable" />
   </label>
-<p>
+</p>
+
+<p></p>
 <p>
   <label>
     This is not interactive:
