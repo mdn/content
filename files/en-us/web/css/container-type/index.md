@@ -11,9 +11,6 @@ An element can be established as a query container using the **`container-type`*
 - [Size](/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries): Enable selectively applying CSS rules to a container's children based on a general size or inline size condition such as a maximum or minimum dimension, aspect ratio, or orientation.
 - [Scroll-state](/en-US/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries): Enable selectively applying CSS rules to a container's children based on a scroll-state condition such as whether the container is a scroll container that is partially scrolled or whether the container is a [snap target](/en-US/docs/Glossary/Scroll_snap#snap_target) that is going to be snapped to its scroll snap container.
 
-> [!NOTE]
-> When using the `container-type` and {{cssxref("container-name")}} properties, the `style` and `size` values of the {{cssxref("contain")}} property are automatically applied. In older browser versions, `contain: layout` was also applied, which created separate stacking contexts. See [browser compatibility](#browser_compatibility) for more details.
-
 ## Syntax
 
 ```css
@@ -40,9 +37,7 @@ The `container-type` property can take a single value from the list below, or tw
 
 - `inline-size`
   - : Establishes a query container for dimensional queries on the [inline axis](/en-US/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values#block_and_inline_dimensions) of the container.
-    Applies style, and inline-size containment to the element.
-
-    Inline size containment is applied to the element. The inline size of the element can be [computed in isolation](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment#size_containment), ignoring the child elements (see [Using CSS containment](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment)).
+    Applies [style](/en-US/docs/Web/CSS/contain#style) and [inline-size](/en-US/docs/Web/CSS/contain#inline-size) containment to the element. The inline size of the element can be [computed in isolation](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment#size_containment), ignoring the child elements (see [Using CSS containment](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment)).
 
 - `normal`
   - : Default value. The element is not a query container for any container size queries, but remains a query container for [container style queries](/en-US/docs/Web/CSS/@container#container_style_queries).
@@ -52,9 +47,7 @@ The `container-type` property can take a single value from the list below, or tw
 
 - `size`
   - : Establishes a query container for container size queries in both the [inline and block](/en-US/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values#block_and_inline_dimensions) dimensions.
-    Applies style containment, and size containment to the container.
-
-    Size containment is applied to the element in both the inline and block directions. The size of the element can be computed in isolation, ignoring the child elements.
+    Applies [style](/en-US/docs/Web/CSS/contain#style) and [size](/en-US/docs/Web/CSS/contain#size) containment to the element. Size containment is applied to the element in both the inline and block directions. The size of the element can be computed in isolation, ignoring the child elements.
 
 ## Formal definition
 
