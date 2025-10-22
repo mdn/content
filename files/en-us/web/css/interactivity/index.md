@@ -229,7 +229,7 @@ The HTML consists of a top-level [heading](/en-US/docs/Web/HTML/Reference/Elemen
 
 #### CSS
 
-A {{cssxref("width")}} of `100vw` is set on the unordered list to make it as wide as the viewport, plus a fixed {{cssxref("height")}}, some {{cssxref("padding")}}, and an {{cssxref("overflow-x")}} value of `scroll` so overflowing content will scroll. Its child list items are laid out horizontally with {{cssxref("display", "display: flex")}}, and given a {{cssxref("scroll-snap-type")}} value of `x mandatory` to make it into a [scroll snap container](/en-US/docs/Glossary/Scroll_snap#scroll_snap_container). The `x` keyword causes the container's [snap targets](/en-US/docs/Glossary/Scroll_snap#snap_target) to be snapped to horizontally, whereas the `mandatory` keyword means that the container will always snap to a snap target at the end of a scrolling action.
+A {{cssxref("width")}} of `100vw` is set on the unordered list to make it as wide as the viewport. We add a fixed {{cssxref("height")}}, some {{cssxref("padding")}}, and an {{cssxref("overflow-x")}} value of `scroll` so overflowing content will scroll. Its child list items are laid out horizontally with {{cssxref("display", "display: flex")}}. This flex container is given a {{cssxref("scroll-snap-type")}} value of `x mandatory` to make it into a [scroll snap container](/en-US/docs/Glossary/Scroll_snap#scroll_snap_container). The `x` keyword causes the container's [snap targets](/en-US/docs/Glossary/Scroll_snap#snap_target) to be snapped horizontally. The `mandatory` keyword means that the container will always snap to a snap target at the end of a scrolling action.
 
 ```css hidden live-sample___offscreen-inert
 * {
