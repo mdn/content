@@ -283,7 +283,7 @@ The parts that have been implemented include [`CSSPositionTryRule`](/en-US/docs/
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 131           | No                  |
+| Nightly           | 145           | Yes                 |
 | Developer Edition | 131           | No                  |
 | Beta              | 131           | No                  |
 | Release           | 131           | No                  |
@@ -314,7 +314,7 @@ The CSS {{CSSXRef("anchor-size")}} function enables setting anchor-positioned el
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 142           | No                  |
+| Nightly           | 145           | Yes                 |
 | Developer Edition | 142           | No                  |
 | Beta              | 142           | No                  |
 | Release           | 142           | No                  |
