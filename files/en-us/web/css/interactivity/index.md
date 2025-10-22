@@ -168,7 +168,6 @@ p {
 }
 ```
 
-You shouldn't be able to edit or focus the second `<input>`. You should be able to edit the `contenteditable` text in the first paragraph, but not in the second.
 
 #### JavaScript
 
