@@ -248,7 +248,7 @@ Let's get you to put these new elements into action.
 
    table {
      border-collapse: collapse;
-     border: 2px solid rgb(200, 200, 200);
+     border: 2px solid rgb(200 200 200);
      letter-spacing: 1px;
      font-size: 0.8rem;
    }
