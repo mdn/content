@@ -139,7 +139,7 @@ The markup features two {{htmlelement("p")}} elements, each of which contain a l
 
 #### CSS
 
-We set the `interactivity` property on the second paragraph to a value of `inert`, making it inert.
+We set the `interactivity` property on the second paragraph to a value of `inert`, making it inert. This means that you should be able to edit the `contenteditable` text in the first paragraph, but not in the second, and you shouldn't be able to search for text, select text, or interact with the link within the second paragraph. 
 
 ```css live-sample___inertness-effects
 .inert {
