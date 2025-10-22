@@ -265,7 +265,7 @@ ul {
 
 Each list item has the following styles applied:
 
-- A {{cssxref("flex")}} value of `0 0 98vw`, to force each item to be as big as the scroll container minus the {{cssxref("gap")}} set on the list (see the previous rule). In effect, this centers each page inside the scroll container.
+- A {{cssxref("flex")}} value of `0 0 98vw`, forcing each item to be as big as the scroll container minus the {{cssxref("gap")}} set on the list (see the `gap` declaration in the `ul` rule shown earlier). This also has the effect of centering each page inside the scroll container.
 - A {{cssxref("scroll-snap-align")}} value of `center`, to cause the scroll container to snap to the center of each snap target.
 - A {{cssxref("view-timeline")}} value of `--inertChange inline`, to declare the element as the subject of a named view progress timeline, progressed through in the inline direction. This is the element that will progress the view timeline as it moves through its ancestor scroll container.
 - An {{cssxref("animation-timeline")}} value equal to the same name defined in the `view-timeline` value, which means that the named view progress timeline will be used to control the progress of animations applied to this element.
