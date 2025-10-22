@@ -87,6 +87,7 @@ In this example we have two {{htmlelement("input")}} elements. The second one ha
 ```css live-sample___basic-interactivity
 .inert {
   interactivity: inert;
+  background-color: lightpink;
 }
 ```
 
