@@ -83,11 +83,6 @@ In this example we have two {{htmlelement("input")}} elements. The second one ha
 </p>
 ```
 
-```css hidden live-sample___basic-interactivity
-input:first-child {
-  margin-bottom: 20px;
-}
-```
 
 ```css live-sample___basic-interactivity
 .inert {
