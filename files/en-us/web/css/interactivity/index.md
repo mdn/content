@@ -60,7 +60,10 @@ Setting `interactive: auto` on it will have no effect.
 
 ### Default inertness
 
-Most elements are interactive by default, but this is not always the case. For example, while a modal {{htmlelement("dialog")}} is being displayed, the rest of the page is set to an inert state automatically, regardless of the value of this property.
+Most elements are interactive by default, but this is not always the case:
+
+- An element's ancestor may be set to an inert state, via the `interactive` property or the `inert` attribute.
+- While a modal {{htmlelement("dialog")}} is displayed, the rest of the page is set to an inert state automatically.
 
 ## Examples
 
@@ -71,7 +74,7 @@ In this example we have two {{htmlelement("input")}} elements. The second one ha
 ```html live-sample___basic-interactivity
 <p>
   <label>
-    This is interactive:
+    This input is interactive:
     <input type="text" name="one" value="editable" />
   </label>
 </p>
@@ -79,7 +82,7 @@ In this example we have two {{htmlelement("input")}} elements. The second one ha
 <p></p>
 <p>
   <label>
-    This is not interactive:
+    This input is not interactive:
     <input type="text" name="two" value="Not editable" class="inert" />
   </label>
 </p>
@@ -148,6 +151,7 @@ We set the `interactivity` property on the second paragraph to a value of `inert
 [contenteditable] {
   outline: 1px dashed lightblue;
 }
+
 .borderChanged {
   border-color: orange;
 }
@@ -256,7 +260,7 @@ button {
 }
 ```
 
-```css
+```css live-sample___offscreen-inert
 ul {
   width: 100vw;
   height: 250px;
@@ -320,7 +324,7 @@ Scroll the unordered list horizontally to see the pagination effect — each pag
 
 ## Accessibility concerns
 
-Use careful consideration for accessibility when applying the `inert` attribute. By default, there is no visual way to tell whether or not an element or its subtree is inert. As a web developer, it is your responsibility to clearly indicate the content parts that are active and those that are inert.
+Consider accessibility carefully when making elements inert. By default, there is no visual way to tell whether or not an element or its subtree is inert. As a web developer, it is your responsibility to clearly indicate the content parts that are active and those that are inert.
 
 While providing visual and non-visual cues about content inertness, also remember that the visual viewport may contain only sections of content. Users may be zoomed in to a small section of content, or users may not be able to view the content at all. Inert sections not being obviously inert can lead to frustration and bad user experience.
 
