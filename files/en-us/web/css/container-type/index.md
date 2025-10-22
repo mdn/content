@@ -12,9 +12,7 @@ An element can be established as a query container using the **`container-type`*
 - [Scroll-state](/en-US/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries): Enable selectively applying CSS rules to a container's children based on a scroll-state condition such as whether the container is a scroll container that is partially scrolled or whether the container is a [snap target](/en-US/docs/Glossary/Scroll_snap#snap_target) that is going to be snapped to its scroll snap container.
 
 > [!NOTE]
-> Previously, setting `container-type` automatically applied both `contain: style` and `contain: layout`.
->
-> In recent browser versions (starting with Chromium 129 and Firefox 133), `container-type` **no longer** applies `contain: layout` automatically. Only `contain: style` is applied. This change prevents unintended side effects, such as the creation of unexpected stacking contexts.
+> When using the `container-type` and {{cssxref("container-name")}} properties, the `style` and `size` values of the {{cssxref("contain")}} property are automatically applied. In older browser versions, `contain: layout` was also applied, which created separate stacking contexts. See [browser compatibility](#browser_compatibility) for more details.
 
 ## Syntax
 
