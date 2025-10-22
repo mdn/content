@@ -166,7 +166,7 @@ You shouldn't be able to edit or focus the second `<input>`. You should be able 
 
 #### JavaScript
 
-In our script, we set a `click` event handler function on both paragraphs so that when they are clicked, their border color should change from `black` to `orange` and then back to `black` again after two seconds.
+We set an event handler on each paragraph that toggles a class name when clicked, adding the classname then removing the class after two seconds.
 
 ```js live-sample___inertness-effects
 const paras = document.querySelectorAll("p");
