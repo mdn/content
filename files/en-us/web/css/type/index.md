@@ -2,6 +2,8 @@
 title: type()
 slug: Web/CSS/type
 page-type: css-function
+status:
+  - experimental
 browser-compat: css.types.type
 sidebar: cssref
 ---
@@ -166,7 +168,7 @@ This example defines a CSS custom function that combines multiple strings.
 The HTML contains a single {{htmlelement("section")}} element with some text content.
 
 ```html live-sample___basic-data-type
-<section>What you goin' ta say?</section>
+<section>What you gonna say?</section>
 ```
 
 #### CSS

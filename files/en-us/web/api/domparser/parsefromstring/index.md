@@ -63,7 +63,7 @@ This `Document` contains a complete in-memory DOM that is separate from the main
 
 If the `mimeType` is `text/html` the input is parsed as HTML and {{htmlelement("script")}} elements are marked as non-executable, events are not fired, and event handlers aren't called to run inline scripts.
 While the document can download resources specified in {{htmlelement("iframe")}} and {{htmlelement("img")}} elements, it is essentially inert.
-This is ueful because you can parse HTML inputs that include {{glossary("Shadow tree","declarative shadow roots")}}, and perform operations on the document without affecting the visible page.
+This is useful because you can parse HTML inputs that include {{glossary("Shadow tree","declarative shadow roots")}}, and perform operations on the document without affecting the visible page.
 For example, you can use this to sanitize the input tree, and inject parts of the input into the visible DOM when needed.
 
 For the other allowed values (`text/xml`, `application/xml`, `application/xhtml+xml`, and `image/svg+xml`) the input is parsed as XML.
@@ -76,7 +76,7 @@ Disallowed `mimeType` values cause a [`TypeError`](/en-US/docs/Web/JavaScript/Re
 
 This method parses its input into a separate in-memory DOM, disabling any {{htmlelement("script")}} elements and stopping event handlers from running.
 While the returned document is effectively inert, event handlers and scripts in its DOM will be able to run if they are inserted into the visible DOM.
-The method is therefore a possible vector for [Cross-site-scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks, where potentially unsafe input is first parsed into a `Document` without being sanitizied, and then injected into the visible/active DOM where code is able to run.
+The method is therefore a possible vector for [Cross-site-scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks, where potentially unsafe input is first parsed into a `Document` without being sanitized, and then injected into the visible/active DOM where code is able to run.
 
 You should mitigate this risk by always passing {{domxref("TrustedHTML")}} objects instead of strings, and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) using the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) CSP directive.
 This ensures that the input is passed through a transformation function, which has the chance to [sanitize](/en-US/docs/Web/Security/Attacks/XSS#sanitization) the input to remove potentially dangerous markup (such as {{htmlelement("script")}} elements and event handler attributes), before it is injected.

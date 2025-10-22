@@ -34,6 +34,23 @@ Use careful consideration for accessibility when applying the `inert` attribute.
 
 While providing visual and non-visual cues about content inertness, also remember that the visual viewport may contain only sections of content. Users may be zoomed in to a small section of content, or users may not be able to view the content at all. Inert sections not being obviously inert can lead to frustration and bad user experience.
 
+## Examples
+
+In this example, the second {{htmlelement("div")}} and all of its descendants are made inert via the `inert` attribute:
+
+```html
+<div>
+  <label for="button1">Button 1</label>
+  <button id="button1">I am not inert</button>
+</div>
+<div inert>
+  <label for="button2">Button 2</label>
+  <button id="button2">I am inert</button>
+</div>
+```
+
+{{ EmbedLiveSample('Examples', 560, 200) }}
+
 ## Specifications
 
 {{Specifications}}
@@ -45,6 +62,5 @@ While providing visual and non-visual cues about content inertness, also remembe
 ## See also
 
 - HTML {{HTMLElement("dialog")}} element
-- {{domxref("HTMLElement.inert")}} HTML DOM property
+- {{domxref("HTMLElement.inert")}} DOM property
 - CSS {{cssxref("interactivity")}} property
-- [Introducing inert](https://web.dev/articles/inert) on web.dev (2024)

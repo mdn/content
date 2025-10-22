@@ -2,10 +2,12 @@
 title: CSSFunctionRule
 slug: Web/API/CSSFunctionRule
 page-type: web-api-interface
+status:
+  - experimental
 browser-compat: api.CSSFunctionRule
 ---
 
-{{ APIRef("CSSOM") }}
+{{ APIRef("CSSOM") }}{{SeeCompatTable}}
 
 The **`CSSFunctionRule`** interface of the [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model) represents CSS {{cssxref("@function")}} (custom function) [at-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rule).
 
@@ -15,16 +17,16 @@ The **`CSSFunctionRule`** interface of the [CSS Object Model](/en-US/docs/Web/AP
 
 _This interface also inherits properties from {{domxref("CSSGroupingRule")}}._
 
-- {{domxref("CSSFunctionRule.name")}} {{ReadOnlyInline}}
+- {{domxref("CSSFunctionRule.name")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : Returns a string representing the custom function's name.
-- {{domxref("CSSFunctionRule.returnType")}} {{ReadOnlyInline}}
+- {{domxref("CSSFunctionRule.returnType")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : Returns a string representing the custom function's return type.
 
 ## Instance methods
 
 _This interface also inherits methods from {{domxref("CSSGroupingRule")}}._
 
-- {{domxref("CSSFunctionRule.getParameters()")}}
+- {{domxref("CSSFunctionRule.getParameters()")}} {{experimental_inline}}
   - : Returns an array of objects representing the custom function's parameters.
 
 ## Examples
@@ -46,12 +48,11 @@ Our CSS defines a custom function using the {{cssxref("@function")}} at-rule. Th
 
 #### JavaScript
 
-Our script starts by getting a reference to the stylesheet attached to our document using {{domxref("Document.styleSheets")}}, then getting a reference to the only rule in the stylesheet, the `CSSFunctionRule` — via {{domxref("CSSStylesheet.cssRules")}}. We then log each of the `CSSFunctionRule` members to the console.
+Our script starts by getting a reference to the stylesheet attached to our document using {{domxref("HTMLStyleElement.sheet")}}, then getting a reference to the only rule in the stylesheet, the `CSSFunctionRule` — via {{domxref("CSSStylesheet.cssRules")}}. We then log each of the `CSSFunctionRule` members to the console.
 
 ```js live-sample___cssfunctionrule-basics
 // Get a CSSFunctionRule
-const sheet = document.styleSheets[0];
-const cssFunc = sheet.cssRules[0];
+const cssFunc = document.getElementById("css-output").sheet.cssRules[0];
 
 // Accessing CSSFunctionRule members
 console.log(cssFunc.name);
