@@ -267,7 +267,7 @@ Each list item has the following styles applied:
 
 - A {{cssxref("flex")}} value of `0 0 98vw`, forcing each item to be as big as the scroll container minus the {{cssxref("gap")}} set on the list (see the `gap` declaration in the `ul` rule shown earlier). This also has the effect of centering each page inside the scroll container.
 - A {{cssxref("scroll-snap-align")}} value of `center`, to cause the scroll container to snap to the center of each snap target.
-- A {{cssxref("view-timeline")}} value of `--inertChange inline`, to declare the element as the subject of a named view progress timeline, progressed through in the inline direction. This is the element that will progress the view timeline as it moves through its ancestor scroll container.
+- A {{cssxref("view-timeline")}} value of `--inertChange inline`, to declare the element as the subject of the `--inertChange` view progress timeline, and set that timeline to progress in the inline direction as it moves through its ancestor scroll container.
 - An {{cssxref("animation-timeline")}} value equal to the same name defined in the `view-timeline` value, which means that the named view progress timeline will be used to control the progress of animations applied to this element.
 - An {{cssxref("animation-name")}} and {{cssxref("animation-fill-mode")}} defining the animation applied to this element and its fill mode. The `both` value is required because you want the starting animation state to apply to the element before the animation starts, and the end animation state to apply to the element after the animation finishes. If the animation isn't persisted, the `interactivity: inert` declaration applied via the animation won't apply to list items when they are outside the scroll container.
 
