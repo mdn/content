@@ -176,9 +176,9 @@ const paras = document.querySelectorAll("p");
 
 function tempBorderChange(e) {
   const targetPara = e.currentTarget;
-  targetPara.style.borderColor = "orange";
+  targetPara.classList.add("borderChanged");
   setTimeout(() => {
-    targetPara.style.borderColor = "black";
+    targetPara.classList.remove("borderChanged");
   }, 2000);
 }
 
