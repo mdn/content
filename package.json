@@ -59,7 +59,7 @@
   },
   "devDependencies": {
     "cheerio": "1.1.2",
-    "cspell": "9.2.1",
+    "cspell": "9.2.2",
     "cspell-group-by-file-reporter": "^1.0.1",
     "file-type": "^21.0.0",
     "fs-extra": "^11.3.2",
