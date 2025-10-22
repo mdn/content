@@ -260,7 +260,7 @@ Let's get you to put these new elements into action.
    }
 
    th {
-     background-color: rgb(235, 235, 235);
+     background-color: rgb(235 235 235);
    }
 
    td {
