@@ -12,7 +12,7 @@ Every resource on a document will be represented by a {{domxref("PerformanceReso
 
 For each `PerformanceResourceTiming` entry, a _resource loading timeline_ will be recorded, with {{domxref("DOMHighResTimeStamp","high-resolution timestamps", "", 1)}} for network events such as redirect start and end times, DNS lookup start and end times, request start, response start and end times, and so on. Besides the timestamps, other properties that provide information about the resource are included as well, such the size of the fetched resource, or the type of resource that initiated the fetch.
 
-See [Typical resource timing metrics](/en-US/docs/Web/API/PerformanceResourceTiming#typical_resource_timing_metrics) in the reference page for the {{domxref("PerformanceResourceTiming")}} interface
+See [Typical resource timing metrics](/en-US/docs/Web/API/PerformanceResourceTiming#typical_resource_timing_metrics) in the reference page for the {{domxref("PerformanceResourceTiming")}} interface.
 
 ## Resource loading timestamps
 
