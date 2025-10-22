@@ -148,7 +148,7 @@ We set the `interactivity` property on the second paragraph to a value of `inert
   outline: 1px dashed lightblue;
 }
 .borderChanged {
-   border-color: orange;
+  border-color: orange;
 }
 ```
 
