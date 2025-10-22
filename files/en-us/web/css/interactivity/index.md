@@ -263,7 +263,7 @@ ul {
 }
 ```
 
-Each list item is given some rudimentary styling, plus the following:
+Each list item has the following styles applied:
 
 - A {{cssxref("flex")}} value of `0 0 98vw`, to force each item to be as big as the scroll container minus the {{cssxref("gap")}} set on the list (see the previous rule). In effect, this centers each page inside the scroll container.
 - A {{cssxref("scroll-snap-align")}} value of `center`, to cause the scroll container to snap to the center of each snap target.
