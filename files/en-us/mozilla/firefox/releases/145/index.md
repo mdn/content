@@ -32,7 +32,11 @@ Firefox 145 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### CSS -->
+### CSS
+
+- Firefox now supports the legacy [`-webkit-fill-available` keyword](Web/CSS/WebKit_Extensions) as a value for the CSS {{cssxref("width")}} and {{cssxref("height")}} properties, to improve rendering of content on the web that uses this keyword.
+  This keyword is an alias for the recently-standardized [`stretch` keyword](/en-US/docs/Web/CSS/width#stretch) which isn't supported in Firefox yet.
+  ([Firefox bug 1988938](https://bugzil.la/1988938), [Firefox bug 1789477](https://bugzil.la/1789477)).
 
 <!-- No notable changes. -->
 
