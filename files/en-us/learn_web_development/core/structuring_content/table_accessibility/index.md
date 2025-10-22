@@ -255,7 +255,7 @@ Let's get you to put these new elements into action.
 
    td,
    th {
-     border: 1px solid rgb(190,190 190);
+     border: 1px solid rgb(190 190 190);
      padding: 10px 20px;
    }
 
