@@ -147,6 +147,9 @@ We set the `interactivity` property on the second paragraph to a value of `inert
 [contenteditable] {
   outline: 1px dashed lightblue;
 }
+.borderChanged {
+   border-color: orange;
+}
 ```
 
 ```css hidden live-sample___inertness-effects
