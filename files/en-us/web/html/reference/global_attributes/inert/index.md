@@ -31,7 +31,7 @@ While providing visual and non-visual cues about content inertness, also remembe
 
 ## Examples
 
-In this example, the second {{htmlelement("div")}} and all of its descendants are made inert via the `inert` attribute: 
+In this example, the second {{htmlelement("div")}} and all of its descendants are made inert via the `inert` attribute:
 
 ```html
 <div>
