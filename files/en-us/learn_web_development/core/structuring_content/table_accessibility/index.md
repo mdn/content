@@ -268,7 +268,7 @@ Let's get you to put these new elements into action.
    }
 
    tr:nth-child(even) td {
-     background-color: rgb(250, 250, 250);
+     background-color: rgb(250 250 250);
    }
 
    tr:nth-child(odd) td {
