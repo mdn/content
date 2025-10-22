@@ -55,7 +55,7 @@ Modify timeline scope:
 
 - {{cssxref("timeline-scope")}}
 
-### At-rules
+### At-rules and descriptors
 
 CSS scroll-driven animations adds the ability to include `<timeline-range-name>`s in {{cssxref("@keyframes")}} blocks, to place keyframes at specific positions inside named timeline ranges.
 
