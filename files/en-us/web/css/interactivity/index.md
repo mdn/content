@@ -195,7 +195,7 @@ Note how the second paragraph is inert; it therefore does not behave like the fi
 
 ### Setting off-screen elements to inert using a view timeline
 
-This example shows some horizontally-scrolling paginated content, with each page snapped to using [CSS Scroll Snap](/en-US/docs/Web/CSS/CSS_scroll_snap), and the inertness controlled via a [scroll-driven animation](/en-US/docs/Web/CSS/CSS_scroll-driven_animations) that uses a [view progress timeline](/en-US/docs/Web/CSS/view-timeline-name). When a page is visible in the {{glossary("scroll container")}}, it is not inert; it becomes inert when it moves out into the overflowing content.
+This example shows horizontally-scrolling paginated content, with each page snapped to using [CSS Scroll Snap](/en-US/docs/Web/CSS/CSS_scroll_snap), and the inertness controlled via a [scroll-driven animation](/en-US/docs/Web/CSS/CSS_scroll-driven_animations) that uses a [view progress timeline](/en-US/docs/Web/CSS/view-timeline-name). Content displayed in the {{glossary("scroll container")}} is interactive; it becomes inert when it moves out into the overflowing content.
 
 #### HTML
 
