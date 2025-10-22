@@ -54,7 +54,7 @@ that's why you rarely want to use the String constructor at all.
 
 ### Using String() to stringify a symbol
 
-`String()` is the only case where a symbol can be converted to a string without throwing, because it's very explicit.
+`String()` is the only case where a symbol can be converted to a string without throwing a TypeError, because it's very explicit.
 
 ```js example-bad
 const sym = Symbol("example");
