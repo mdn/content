@@ -69,15 +69,18 @@ Most elements are interactive by default, but this is not always the case. For e
 In this example we have two {{htmlelement("input")}} elements. The second one has `interactivity: inert` set on it via a class, and therefore is not focusable or editable in supporting browsers.
 
 ```html live-sample___basic-interactivity
-<label>
-  This is interactive:
-  <input type="text" name="one" value="editable" />
-</label>
-<br />
-<label>
-  This is not interactive:
-  <input type="text" name="two" value="Not editable" class="inert" />
-</label>
+<p>
+  <label>
+    This is interactive:
+    <input type="text" name="one" value="editable" />
+  </label>
+<p>
+<p>
+  <label>
+    This is not interactive:
+    <input type="text" name="two" value="Not editable" class="inert" />
+  </label>
+</p>
 ```
 
 ```css hidden live-sample___basic-interactivity
