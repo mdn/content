@@ -313,7 +313,7 @@ See the {{cssxref("animation-range")}} reference page for an explanation of the 
 
 #### Result
 
-Scroll the unordered list horizontally to see the pagination effect — each page snaps into view. Try tabbing between the links and the buttons; you'll find that only the ones on-screen can be tabbed to.
+Scroll the unordered list horizontally to see the pagination effect — each page snaps into view. Try tabbing between the links and the buttons; you'll find that only the ones on-screen are interactive and can be tabbed to.
 
 {{ EmbedLiveSample("offscreen-inert", "100%", "320") }}
 
