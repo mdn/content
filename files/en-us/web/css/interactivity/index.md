@@ -46,7 +46,7 @@ interactivity: unset;
 
 The `interactivity` property can be used to set whether an element and its descendants are inert. See the HTML [`inert`](/en-US/docs/Web/HTML/Reference/Global_attributes/inert) attribute reference page for a detailed description of the inert state.
 
-A typical use case for `interactivity: inert` is in paginated content, when you only want the currently-visible page's content and controls to be interacted with. In such cases, unexpectedly focusing on an off-screen link or button could spoil the experience.
+A typical use case for `interactivity: inert` is in paginated content, like carousels, when you only want the currently-visible page's content and controls to be interacted with. In such cases, unexpectedly focusing on an off-screen link or button could spoil the experience.
 
 If an element's inert state is specified both by HTML (the `inert` attribute, or an automatic browser setting) and CSS (the `interactive` property) at the same time, the HTML setting will win against the CSS setting. For example, the following HTML element will be inert:
 
