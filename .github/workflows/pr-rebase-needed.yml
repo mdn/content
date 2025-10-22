@@ -8,6 +8,8 @@ on:
 permissions:
   # Label pull requests.
   pull-requests: write
+  contents: read
+  issues: write
 
 concurrency:
   group: pr-rebase-needed-${{ github.event.pull_request.number || github.ref_name }}
