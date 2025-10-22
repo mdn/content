@@ -18,7 +18,7 @@ For scroll containers that are [snapped](/en-US/docs/Glossary/Scroll_snap) to an
 
 - {{cssxref("overflow-anchor")}}
 
-## Glossary and definitions
+## Glossary terms
 
 - {{glossary("Scroll container")}}
 - {{glossary("Scroll snap")}}

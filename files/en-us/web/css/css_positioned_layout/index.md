@@ -36,7 +36,7 @@ Like all CSS modules, this module impacts and is impacted by other modules. This
 
 - {{cssxref("::backdrop")}}
 
-### Glossary and terms
+### Glossary terms and definitions
 
 - [Block direction](/en-US/docs/Glossary/Flow_relative_values#block_direction)
 - [Containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block)

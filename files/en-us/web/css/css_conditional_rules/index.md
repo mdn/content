@@ -29,7 +29,7 @@ There are plans to further extend possible queries by adding the generalized con
 - {{cssxref("container-name")}}
 - {{cssxref("container-type")}}
 
-### At-rules
+### At-rules and descriptors
 
 - {{cssxref("@container")}}
 - {{cssxref("@media")}}
