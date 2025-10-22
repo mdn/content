@@ -85,7 +85,6 @@ In this example we have two {{htmlelement("input")}} elements. The second one ha
 </p>
 ```
 
-
 ```css live-sample___basic-interactivity
 .inert {
   interactivity: inert;
