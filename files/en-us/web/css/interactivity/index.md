@@ -195,7 +195,7 @@ This example shows some horizontally-scrolling paginated content, with each page
 
 #### HTML
 
-The HTML consists of a [top-level heading](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) and an [unordered list](/en-US/docs/Web/HTML/Reference/Elements/ul). Each [list item](/en-US/docs/Web/HTML/Reference/Elements/li) inside the list contains the content for a separate page.
+The HTML consists of a top-level [heading](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) and an [unordered list](/en-US/docs/Web/HTML/Reference/Elements/ul) with four [list items](/en-US/docs/Web/HTML/Reference/Elements/li), each containing the content for a separate page.
 
 ```html live-sample___offscreen-inert
 <h1>Pagination interactivity demo</h1>
