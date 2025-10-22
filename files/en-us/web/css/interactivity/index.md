@@ -168,7 +168,6 @@ p {
 }
 ```
 
-
 #### JavaScript
 
 We set an event handler on each paragraph that toggles a class name when clicked, adding the classname then removing the class after two seconds.
