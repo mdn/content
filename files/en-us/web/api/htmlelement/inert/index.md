@@ -58,4 +58,3 @@ A Boolean which is `true` if the element is inert; otherwise, the value is `fals
 - {{domxref("HTMLInputElement.disabled", "disabled")}}
 - {{HTMLElement("dialog")}}
 - CSS {{cssxref("interactivity")}} property
-- [Introducing inert](https://web.dev/articles/inert) on web.dev (2024)
