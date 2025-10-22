@@ -118,7 +118,7 @@ video.currentTime = 10; // Seek to 10 seconds into the video
 video.pause(); // Pause the video to freeze the frame
 ```
 
-Now the {{domxref("HTMLVideoElement")}} is at the 10 second mark, and you can draw the current frame to your canvas.
+Now the {{domxref("HTMLVideoElement")}} is at the 10 second mark, and you can draw the current frame to your canvas. To make sure that the frame is available when you call `drawImage()`, call `drawImage()` within [`requestVideoFrameCallback()`](/en-US/docs/Web/API/HTMLVideoElement/requestVideoFrameCallback#drawing_video_frames_on_a_canvas).
 
 ## Drawing images
 
