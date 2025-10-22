@@ -200,7 +200,7 @@ Websites should use standard algorithms to hash passwords. These algorithms supp
 
 #### Using web frameworks
 
-Password storage and verification functions are difficult to implement securely, so websites should use functions provided by a reputable framework, rather than trying to implement their own. For example, [Django](https://docs.djangoproject.com/en/5.0/topics/auth/passwords/) uses PBKDF2 by default but enables you to use a different algorithm if you choose.
+Password storage and verification functions are difficult to implement securely, so you should use functions provided by a reputable framework, rather than trying to implement your own. For example, [Django](https://docs.djangoproject.com/en/5.0/topics/auth/passwords/) uses PBKDF2 by default but enables you to use a different algorithm if you choose.
 
 ### Email verification
 
