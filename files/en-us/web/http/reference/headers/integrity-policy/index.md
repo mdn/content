@@ -7,8 +7,6 @@ browser-compat: http.headers.Integrity-Policy
 sidebar: http
 ---
 
-
-
 The HTTP **`Integrity-Policy`** response header allows website administrators to ensure that all resources the user agent loads (of a certain type) have [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity) guarantees.
 
 When set the user agent will block requests on specified [request destinations](#blocked-destinations) that omit integrity metadata, and will also block requests in [no-cors](/en-US/docs/Web/API/Request/mode#no-cors) mode from ever being made.
