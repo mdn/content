@@ -272,7 +272,7 @@ Let's get you to put these new elements into action.
    }
 
    tr:nth-child(odd) td {
-     background-color: rgb(245, 245, 245);
+     background-color: rgb(245 245 245);
    }
 
    caption {
