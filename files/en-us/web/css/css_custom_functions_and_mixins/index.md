@@ -19,25 +19,20 @@ CSS custom functions and mixins can be assigned optional data types for their ar
 
 ## Reference
 
-### At-rules
+### At-rules and descriptors
 
 - {{cssxref("@function")}}
+  - {{cssxref("@function#result", "result")}}
 
 The CSS custom functions and mixins module also introduces the `@mixin`, `@apply`, `@contents`, and `@env` at-rules. Currently, no browsers support these features.
 
-### Descriptors
-
-- {{cssxref("@function#result", "result")}}
-
 ### Data types and values
 
-- {{cssxref("&lt;dashed-function>")}} data type
+- {{cssxref("dashed-function")}}
 
 ### Functions
 
-- [`type()`](/en-US/docs/Web/CSS/type)
-
-The CSS custom functions and mixins module also introduces scoped {{cssxref("env()")}} variables. Currently, no browsers support this feature.
+- {{cssxref("type")}}
 
 ### Interfaces
 

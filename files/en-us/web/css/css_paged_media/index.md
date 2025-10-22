@@ -18,7 +18,7 @@ The process of paginating content into generated pages and controlling breaks in
 
 - {{cssxref("page")}}
 
-### At-rules
+### At-rules and descriptors
 
 - {{cssxref("@page")}}
   - {{cssxref("@page/page-orientation", "page-orientation")}} descriptor
