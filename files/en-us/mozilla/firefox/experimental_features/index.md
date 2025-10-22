@@ -291,6 +291,20 @@ The parts that have been implemented include [`CSSPositionTryRule`](/en-US/docs/
 - `layout.css.anchor-positioning.enabled`
   - : Set to `true` to enable.
 
+#### `anchor-size()` function
+
+The CSS {{CSSXRef("anchor-size")}} function enables setting anchor-positioned element's size, position, and margins relative to the dimensions of anchor elements. ([Firefox bug 1972610](https://bugzil.la/1972610)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 145           | Yes                 |
+| Developer Edition | 142           | No                  |
+| Beta              | 142           | No                  |
+| Release           | 142           | No                  |
+
+- `layout.css.anchor-positioning.enabled`
+  - : Set to `true` to enable.
+
 ### Allow pseudo-elements after element-backed pseudo-elements
 
 Work has started on allowing [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) such as {{cssxref("::first-letter")}} and {{cssxref("::before")}} to be appended to [element-backed pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements#element-backed_pseudo-elements) such as {{cssxref("::details-content")}} and {{cssxref("::file-selector-button")}}.
@@ -307,20 +321,6 @@ The `::file-selector-button` pseudo-element is not yet marked as an element-base
 | Developer Edition | 138           | No                  |
 | Beta              | 138           | No                  |
 | Release           | 138           | No                  |
-
-### `anchor-size()` function
-
-The CSS {{CSSXRef("anchor-size")}} function enables setting anchor-positioned element's size, position, and margins relative to the dimensions of anchor elements. ([Firefox bug 1972610](https://bugzil.la/1972610)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 145           | Yes                 |
-| Developer Edition | 142           | No                  |
-| Beta              | 142           | No                  |
-| Release           | 142           | No                  |
-
-- `layout.css.anchor-positioning.enabled`
-  - : Set to `true` to enable.
 
 ### `:heading` and `:heading()` pseudo-classes
 
