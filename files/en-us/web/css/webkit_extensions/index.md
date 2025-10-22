@@ -136,6 +136,12 @@ For each of the properties below, use the standard equivalents.
 - `-webkit-padding-end`: Use {{CSSxRef("padding-inline-end")}}.
 - `-webkit-padding-start`: Use {{CSSxRef("padding-inline-start")}}.
 
+## -webkit-prefixed property values
+
+- `-webkit-fill-available`
+  - : Used with sizing properties like {{CSSxRef("width")}} and {{CSSxRef("height")}}, to allow elements to take up all available space within their parent container.
+    The flexbox `stretch` value (see {{CSSxRef("align-items")}} and {{CSSxRef("justify-items")}}) provides a standard replacement.
+
 ## Pseudo-classes
 
 > [!NOTE]
