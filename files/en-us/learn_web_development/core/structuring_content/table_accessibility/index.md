@@ -239,7 +239,7 @@ Let's get you to put these new elements into action.
    </table>
    ```
 
-2. Next, create a CSS file called `minimal-table.css` in the directory as your HTML file and fill it with the following content:
+2. Next, create a CSS file called `minimal-table.css` in the same directory as your HTML file and fill it with the following content:
 
    ```css live-sample___finished-table-structure
    html {
