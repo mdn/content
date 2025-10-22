@@ -12,7 +12,7 @@ Every resource on a document will be represented by a {{domxref("PerformanceReso
 
 For each `PerformanceResourceTiming` entry, a _resource loading timeline_ will be recorded, with {{domxref("DOMHighResTimeStamp","high-resolution timestamps", "", 1)}} for network events such as redirect start and end times, DNS lookup start and end times, request start, response start and end times, and so on. Besides the timestamps, other properties that provide information about the resource are included as well, such the size of the fetched resource, or the type of resource that initiated the fetch.
 
-[Typical resource timing metrics](/en-US/docs/Web/API/PerformanceResourceTiming#typical_resource_timing_metrics) this API is used for are detailed in the {{domxref("PerformanceResourceTiming")}}.
+See [Typical resource timing metrics](/en-US/docs/Web/API/PerformanceResourceTiming#typical_resource_timing_metrics) in the reference page for the {{domxref("PerformanceResourceTiming")}} interface
 
 ## Resource loading timestamps
 
@@ -21,7 +21,7 @@ Figure 1. Resource loading timestamps ([source](https://w3c.github.io/resource-t
 
 An application can get timestamps for the various stages used to load a resource. For example the {{domxref('PerformanceEntry.startTime','startTime')}}, DNS timestamps, connection set up times and then various resource download times.
 
-The [timestamps](/en-US/docs/Web/API/PerformanceResourceTiming#timestamps) this API provides are detailed in the {{domxref("PerformanceResourceTiming")}}.
+See [timestamps](/en-US/docs/Web/API/PerformanceResourceTiming#timestamps) in the reference page for the {{domxref("PerformanceResourceTiming")}} interface.
 
 ## Resource size
 
@@ -32,45 +32,6 @@ The {{domxref('PerformanceResourceTiming.encodedBodySize','encodedBodySize')}} p
 ## Other properties
 
 The {{domxref("PerformanceResourceTiming")}} interface provides [additional resources information](/en-US/docs/Web/API/PerformanceResourceTiming#additional_resource_information). Consult the reference docs for the full list of properties.
-
-## Examples
-
-### Logging resource timing information
-
-Example using a {{domxref("PerformanceObserver")}}, which notifies of new `resource` performance entries as they are recorded in the browser's performance timeline. Use the `buffered` option to access entries from before the observer creation.
-
-```js
-const observer = new PerformanceObserver((list) => {
-  list.getEntries().forEach((entry) => {
-    console.log(entry);
-  });
-});
-
-observer.observe({ type: "resource", buffered: true });
-```
-
-Example using {{domxref("Performance.getEntriesByType()")}}, which only shows `resource` performance entries present in the browser's performance timeline at the time you call this method:
-
-```js
-const resources = performance.getEntriesByType("resource");
-resources.forEach((entry) => {
-  console.log(entry);
-});
-```
-
-## Security requirements
-
-### Cross-origin timing information
-
-Many of the resource timing properties are restricted to return `0` or an empty string when the resource is a cross-origin request. To expose cross-origin timing information, the {{HTTPHeader("Timing-Allow-Origin")}} HTTP response header needs to be set.
-
-For example, to allow `https://developer.mozilla.org` to see resource timing information, the cross-origin resource should send:
-
-```http
-Timing-Allow-Origin: https://developer.mozilla.org
-```
-
-For more information on the fields affected, see the [relevant section of PerformanceResourceTiming](/en-US/docs/Web/API/PerformanceResourceTiming#cross-origin_timing_information).
 
 ## Managing resource buffer sizes
 
@@ -87,6 +48,12 @@ performance.setResourceTimingBufferSize(500);
 ```
 
 For more information, see also [Managing buffer sizes](/en-US/docs/Web/API/Performance_API/Performance_data#managing_buffer_sizes).
+
+## Cross-origin timing information
+
+Many of the resource timing properties are restricted to return `0` or an empty string when the resource is a cross-origin request. To expose cross-origin timing information, the {{HTTPHeader("Timing-Allow-Origin")}} HTTP response header needs to be set.
+
+For more information on the fields affected, see [Cross-origin timing information](/en-US/docs/Web/API/PerformanceResourceTiming#cross-origin_timing_information) in the reference page for the {{domxref("PerformanceResourceTiming")}} interface.
 
 ## See also
 

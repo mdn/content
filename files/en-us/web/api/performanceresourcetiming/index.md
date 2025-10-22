@@ -33,6 +33,22 @@ The properties of this interface allow you to calculate certain resource timing 
 - Checking if modern and fast protocols are used (`nextHopProtocol` should be HTTP/2 or HTTP/3)
 - Checking if the correct resources are render-blocking (`renderBlockingStatus`)
 
+### Managing resource buffer sizes
+
+By default only 250 resource timing entries are buffered. For more information see the [resource buffer sizes](/en-US/docs/Web/API/Performance_API/Resource_timing#managing_resource_buffer_sizes) of the Resource Timing guide.
+
+### Cross-origin timing information
+
+Many of the resource timing properties are restricted to return `0` or an empty string when the resource is a cross-origin request. To expose cross-origin timing information, the {{HTTPHeader("Timing-Allow-Origin")}} HTTP response header needs to be set.
+
+The properties which are returned as `0` by default when loading a resource from an origin other than the one of the web page itself: `redirectStart`, `redirectEnd`, `domainLookupStart`, `domainLookupEnd`, `connectStart`, `connectEnd`, `secureConnectionStart`, `requestStart`, and `responseStart`.
+
+For example, to allow `https://developer.mozilla.org` to see resource timing information, the cross-origin resource should send:
+
+```http
+Timing-Allow-Origin: https://developer.mozilla.org
+```
+
 ## Instance properties
 
 ### Inherited from `PerformanceEntry`
@@ -115,25 +131,28 @@ Additionally, this interface exposes the following properties containing more in
 
 ## Examples
 
-For examples, see the [examples section of Resource Timing](/en-US/docs/Web/API/Performance_API/Resource_timing#examples).
+### Logging resource timing information
 
-## Security requirements
+Example using a {{domxref("PerformanceObserver")}}, which notifies of new `resource` performance entries as they are recorded in the browser's performance timeline. Use the `buffered` option to access entries from before the observer creation.
 
-### Cross-origin timing information
+```js
+const observer = new PerformanceObserver((list) => {
+  list.getEntries().forEach((entry) => {
+    console.log(entry);
+  });
+});
 
-Many of the resource timing properties are restricted to return `0` or an empty string when the resource is a cross-origin request. To expose cross-origin timing information, the {{HTTPHeader("Timing-Allow-Origin")}} HTTP response header needs to be set.
-
-The properties which are returned as `0` by default when loading a resource from an origin other than the one of the web page itself: `redirectStart`, `redirectEnd`, `domainLookupStart`, `domainLookupEnd`, `connectStart`, `connectEnd`, `secureConnectionStart`, `requestStart`, and `responseStart`.
-
-For example, to allow `https://developer.mozilla.org` to see resource timing information, the cross-origin resource should send:
-
-```http
-Timing-Allow-Origin: https://developer.mozilla.org
+observer.observe({ type: "resource", buffered: true });
 ```
 
-## Managing resource buffer sizes
+Example using {{domxref("Performance.getEntriesByType()")}}, which only shows `resource` performance entries present in the browser's performance timeline at the time you call this method:
 
-By default only 250 resource timing entries are buffered. For more information see the [resource buffer sizes section of Resource Timing](/en-US/docs/Web/API/Performance_API/Resource_timing#managing_resource_buffer_sizes).
+```js
+const resources = performance.getEntriesByType("resource");
+resources.forEach((entry) => {
+  console.log(entry);
+});
+```
 
 ## Specifications
 
