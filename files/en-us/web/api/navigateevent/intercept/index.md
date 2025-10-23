@@ -115,7 +115,7 @@ This pattern is simpler than the alternative of canceling the original navigatio
 The `precommitHandler()` callback takes a `controller` object as an argument, which contains a `redirect()` method. The `redirect()` method takes two parameters — a string representing the URL to redirect to, and an options object containing two parameters:
 
 - `state` {{optional_inline}}
-  - : Contains any state information you want to pass along with the navigation, for example, for logging or tracking purposes. The state for the navigation can subsequently be retrieved via {{domxref("NavigationHistoryEntry.getState()")}}.
+  - : Contains any state information you want to pass along with the navigation; for example, for logging or tracking purposes. The state for the navigation can subsequently be retrieved via {{domxref("NavigationHistoryEntry.getState()")}}.
 - `history` {{optional_inline}}
   - : An enumerated value that specifies how this redirect should be added to the navigation history. It can take one of the following values:
     - `auto`
