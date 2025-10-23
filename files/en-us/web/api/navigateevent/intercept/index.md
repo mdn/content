@@ -53,7 +53,7 @@ None (`undefined`).
   - : Thrown if:
     - The event was dispatched by a {{domxref("EventTarget.dispatchEvent", "dispatchEvent()")}} call, rather than the user agent.
     - The navigation cannot be intercepted ({{domxref("NavigateEvent.canIntercept")}} is `false`).
-    - A `precommitHandler()` callback was provided on a non-cancelable event ({{domxref("Event.cancelable")}} is `false`).
+    - A `precommitHandler()` callback is provided on a non-cancelable event ({{domxref("Event.cancelable")}} is `false`).
 
 ## Description
 
