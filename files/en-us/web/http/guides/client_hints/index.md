@@ -186,4 +186,5 @@ For many responsive design needs, [media queries](/en-US/docs/Web/CSS/CSS_media_
 - [`Vary` HTTP Header](/en-US/docs/Web/HTTP/Reference/Headers/Vary)
 - [Client Hints Infrastructure](https://wicg.github.io/client-hints-infrastructure/)
 - [User Agent Client Hints API](/en-US/docs/Web/API/User-Agent_Client_Hints_API)
-- [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints) (developer.chrome.com)
+- [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints) on developer.chrome.com (2020)
+- [Migrate to User-Agent Client Hints](https://web.dev/articles/migrate-to-ua-ch) on web.dev (2021)
