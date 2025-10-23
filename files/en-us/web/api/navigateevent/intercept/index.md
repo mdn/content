@@ -182,7 +182,7 @@ navigation.addEventListener("navigate", (event) => {
 After an `intercept()` navigation occurs, the following scrolling behavior occurs:
 
 - For `push` and `replace` navigations (see {{domxref("Navigation.navigate()")}}), the browser will attempt to scroll to the fragment given by `event.destination.url`. If there is no fragment available, it will reset the scroll position to the top of the page.
-- For {{domxref("Navigation.traverseTo", "traverse")}} and {{domxref("Navigation.reload", "reload")}} navigations, the browser behaves similarly to the previous bullet description, but delays its scroll restoration logic until the `intercept()` promise fulfills. It will perform no scroll restoration if the promise rejects. If the user has scrolled during the transition then no scroll restoration will be performed.
+- For {{domxref("Navigation.traverseTo", "traverse")}} and {{domxref("Navigation.reload", "reload")}} navigations, the browser behaves similarly to the description in the previous item above in this list, but delays its scroll restoration logic until the `intercept()` promise fulfills. It will perform no scroll restoration if the promise rejects. If the user has scrolled during the transition then no scroll restoration will be performed.
 
 If you want to turn this behavior off, you can do so by setting the `scroll` option to `manual`.
 
