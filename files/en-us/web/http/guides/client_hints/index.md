@@ -13,7 +13,22 @@ The set of "hint" headers are listed in the topic [HTTP Headers](/en-US/docs/Web
 
 ## Overview
 
-A server must announce that it supports client hints, using the {{HTTPHeader("Accept-CH")}} header to specify the hints that it is interested in receiving.
+When the browser first makes a request to load a webpage, it will send a {{httpheader("User-Agent")}} header and a default set of `Sec-CH-UA-*` headers along with the initial request. An Android device, for example, might send the following:
+
+```http
+User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Mobile Safari/537.36
+Sec-CH-UA: "Chrome"; v="143"
+Sec-CH-UA-Platform: "Android"
+Sec-CH-UA-Mobile: ?1
+```
+
+These `CH-UA` headers provide the following information:
+
+- {{httpheader("Sec-CH-UA")}}: The major browser version.
+- {{httpheader("Sec-CH-UA-Platform")}}: The platform.
+- {{httpheader("Sec-CH-UA-Mobile")}}: A boolean that indicates whether the browser is on a mobile device (`?1`) or not (`?0`).
+
+In response, the server can announce that it supports client hints and specify the hints that it is interested in receiving using the {{HTTPHeader("Accept-CH")}} header.
 When a client that supports client hints receives the `Accept-CH` header it can choose to append some or all of the listed client hint headers in its subsequent requests.
 
 For example, following `Accept-CH` in a response below, the client could append {{HTTPHeader("Width")}}, {{HTTPHeader("Downlink")}} and {{HTTPHeader("Sec-CH-UA")}} headers to all subsequent requests.
@@ -140,6 +155,30 @@ Headers include: {{HTTPHeader("Device-Memory")}}, {{HTTPHeader("Width")}}, {{HTT
 
 Network client hints allow a server to vary responses based on the user's choice, network bandwidth, and latency.
 Headers include: {{HTTPHeader("Save-Data")}}, {{HTTPHeader("Downlink")}}, {{HTTPHeader("ECT")}}, {{HTTPHeader("RTT")}}.
+
+## Using client hints for responsive design
+
+It's possible to use client hints for responsive design, for example to detect whether a mobile device or tablet is rendering your site.
+
+An Android phone would send the following default client hints:
+
+```http
+Sec-CH-UA: "Chrome"; v="143"
+Sec-CH-UA-Platform: "Android"
+Sec-CH-UA-Mobile: ?1
+```
+
+An Android tablet on the other hand would send the following:
+
+```http
+Sec-CH-UA: "Chrome"; v="143"
+Sec-CH-UA-Platform: "Android"
+Sec-CH-UA-Mobile: ?0
+```
+
+The {{httpheader("Sec-CH-UA-Mobile")}} header can be used to determine whether the device is a mobile device or not. For hardware-specific use cases, the device model name can be requested via the high-entropy {{httpheader("Sec-CH-UA-Model")}} hint.
+
+For many responsive design needs, [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) would be more convenient and flexible. However, there may be cases where you don't have control over the individual stylesheets of a site, and need to vary the stylesheet served based on the device signature.
 
 ## See also
 
