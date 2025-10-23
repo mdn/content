@@ -57,7 +57,7 @@ None (`undefined`).
 
 ## Description
 
-The `intercept()` method is used to implement same-document (SPA) navigation behavior when a navigation occurs, for example when a link is clicked, a form is submitted, or a programmatic navigation is initiated (using {{domxref("History.pushState()")}}, {{domxref("Window.location")}}, etc.).
+The `intercept()` method is used to implement same-document (SPA) navigation behavior when a navigation occurs; for example, when a link is clicked, a form is submitted, or a programmatic navigation is initiated (using {{domxref("History.pushState()")}}, {{domxref("Window.location")}}, etc.).
 
 It does this via a couple of different callbacks, `handler()` and `precommitHandler()`.
 
