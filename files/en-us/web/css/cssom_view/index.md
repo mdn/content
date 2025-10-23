@@ -27,7 +27,7 @@ The **CSSOM view** module lets you manipulate the visual view of a document, inc
 - {{domxref("MediaQueryList")}} events
   - {{domxref("MediaQueryList/change_event", "change")}}
 
-### Glossary
+### Glossary terms
 
 - {{glossary("Viewport")}}
 - {{glossary("Layout viewport")}}
@@ -49,7 +49,7 @@ For the JavaScript API defined by this module, see the [CSSOM view API](/en-US/d
 - {{cssxref("zoom")}}
 - {{htmlelement("meta")}}
 
-### Glossary terms and definitions
+### Glossary terms
 
 - {{glossary("CSSOM", "CSS object model (CSSOM)")}}
 - {{glossary("CSS pixel")}}
