@@ -130,7 +130,7 @@ The `precommitHandler()` callback takes a `controller` object as an argument, wh
 > [!NOTE]
 > The `redirect()` method can can convert the history behavior between `auto`, `push`, and `replace`, but it cannot turn a `traverse` navigation into a `push`/`replace` navigation and vice versa.
 
-`precommitHandler()` generally handles any modifications to the navigation behavior that are required before the destination URL is actually displayed in the browser, cancelling or redirecting it somewhere else as required. Because `precommitHandler()` can be used to cancel navigations, they can only be run when the event's {{domxref("Event.cancelable")}} property is `true`. Calling `intercept()` with a `precommitHandler()` on a non-cancelable event results in a `SecurityError` being thrown.
+`precommitHandler()` generally handles any modifications to the navigation behavior that are required before the destination URL is actually displayed in the browser, cancelling or redirecting it somewhere else as required. Because `precommitHandler()` can be used to cancel navigations, it will only work as expected when the event's {{domxref("Event.cancelable")}} property is `true`. Calling `intercept()` with a `precommitHandler()` on a non-cancelable event results in a `SecurityError` being thrown.
 
 ### Responding to navigation success or failure
 
