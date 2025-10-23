@@ -45,7 +45,7 @@ An object with the following properties:
 - `receiveTime`
   - : A {{domxref("DOMHighResTimeStamp")}} indicating the timestamp of the last received packet of an incoming frame (from an {{domxref("RTCRtpReceiver")}}) used to produce this media frame, relative to {{domxref("Performance.timeOrigin")}}.
 - `rtpTimestamp`
-  - : A positive integer that that reflects the sampling instant of the first octet in the RTP data packet (see {{rfc("3550")}}).
+  - : A positive integer that reflects the sampling instant of the first octet in the RTP data packet (see {{rfc("3550")}}).
 - `sequenceNumber`
   - : The sequence number of an incoming audio frame (not used for outgoing frames) that can be used for reconstructing the original send-order of frames.
     This is number between 0 and 32767.
