@@ -13,12 +13,10 @@ browser-compat: api.PerformanceMeasure
 
 ## Instance properties
 
-This interface defines:
-
 - {{domxref("PerformanceMeasure.detail")}}
   - : Contains arbitrary metadata about the measure.
 
-In addition, it extends the following {{domxref("PerformanceEntry")}} properties by qualifying/constraining the properties as follows:
+This interface extends the following {{domxref("PerformanceEntry")}} properties by qualifying/constraining the properties as follows:
 
 - {{domxref("PerformanceEntry.entryType")}}
   - : Returns `"measure"`.

@@ -39,6 +39,8 @@ To only provide an `endMark`, you need to provide an empty `measureOptions` obje
   - : An object that may contain measure options.
     - `detail` {{optional_inline}}
       - : Arbitrary metadata to be included in the measure. Defaults to `null`. Must be [structured-cloneable](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
+        Some browsers have use a structured `devtools` object within the `detail` object as part of its Extensibility API that surfaces these in custom tracks in performance traces. See the [Chrome's Extensibility API documentation](https://developer.chrome.com/docs/devtools/performance/extension#inject_your_data_with_the_user_timings_api) for more information.
+
     - `start` {{optional_inline}}
       - : Timestamp ({{domxref("DOMHighResTimeStamp")}}) to be used as the start time, or string that names a {{domxref("PerformanceMark")}} to use for the start time.
 
@@ -46,6 +48,7 @@ To only provide an `endMark`, you need to provide an empty `measureOptions` obje
 
     - `duration` {{optional_inline}}
       - : Duration (in milliseconds) between the start and end mark times. If omitted, this defaults to {{domxref("performance.now()")}}; the time that has elapsed since the context was created. If provided, you must also specify either `start` or `end` but not both.
+
     - `end` {{optional_inline}}
       - : Timestamp ({{domxref("DOMHighResTimeStamp")}}) to be used as the end time, or string that names a {{domxref("PerformanceMark")}} to use for the end time.
 
@@ -53,6 +56,7 @@ To only provide an `endMark`, you need to provide an empty `measureOptions` obje
 
 - `startMark` {{optional_inline}}
   - : A string naming a {{domxref("PerformanceMark")}} in the performance timeline. The {{domxref("PerformanceEntry.startTime")}} property of this mark will be used for calculating the measure.
+
 - `endMark` {{optional_inline}}
   - : A string naming a {{domxref("PerformanceMark")}} in the performance timeline. The {{domxref("PerformanceEntry.startTime")}} property of this mark will be used for calculating the measure.
     If you want to pass this argument, you must also pass either `startMark` or an empty `measureOptions` object.
@@ -140,9 +144,38 @@ performance.measure("login-click", {
 });
 ```
 
-### Chrome DevTools Extensibility API
+### DevTools Extensibility API
 
-Chrome DevTools uses `performance.mark()` and in particular a structured `detail` property as part of its extensibility API that surfaces these in custom tracks in performance traces. See the [Chrome's extensibility API documentation](https://developer.chrome.com/docs/devtools/performance/extension#inject_your_data_with_consoletimestamp) for more information and examples.
+For browsers that support the [Extensibility API](https://developer.chrome.com/docs/devtools/performance/extension) you can use the `detail` parameter to provide more details in a `devtools` object that will be used to display this in performance profiles:
+
+```js
+// Mark used to represent the start of the image processing task
+// The start time is defaulted to now
+const imageProcessinTimeStart = performance.now();
+
+// ... later in your code
+
+// Track entry representing the completion of image processing
+// with additional details and a tooltip
+// The start time is a marker from earlier
+// The end time is defaulted to now
+performance.measure("Image Processing Complete", {
+  start: imageProcessinTimeStart,
+  detail: {
+    devtools: {
+      dataType: "track-entry",
+      track: "Image Processing Tasks",
+      trackGroup: "My Tracks", // Group related tracks together
+      color: "tertiary-dark",
+      properties: [
+        ["Filter Type", "Gaussian Blur"],
+        ["Resize Dimensions", "500x300"],
+      ],
+      tooltipText: "Image processed successfully",
+    },
+  },
+});
+```
 
 ## Specifications
 
