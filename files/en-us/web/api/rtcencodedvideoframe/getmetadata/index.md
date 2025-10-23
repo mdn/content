@@ -48,7 +48,7 @@ An object with the following properties:
 - `receiveTime`
   - : A {{domxref("DOMHighResTimeStamp")}} indicating the timestamp of the last received packet of an incoming frame (from an {{domxref("RTCRtpReceiver")}}) used to produce this media frame, relative to {{domxref("Performance.timeOrigin")}}.
 - `rtpTimestamp`
-  - : A positive integer that that reflects the sampling instant of the first octet in the RTP data packet (see {{rfc("3550")}}).
+  - : A positive integer that reflects the sampling instant of the first octet in the RTP data packet (see {{rfc("3550")}}).
 - `spatialIndex`
   - : A positive integer indicating the spatial index of the frame.
     Some codecs allow generation of layers of frames with different layers of resolutions.

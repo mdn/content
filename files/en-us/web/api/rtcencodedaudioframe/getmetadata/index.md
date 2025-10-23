@@ -52,7 +52,7 @@ An object with the following properties:
     Note that while numbers are allocated sequentially when sent, they will overflow at 32767 and restart back at 0.
     Therefore to compare two frame sequence numbers, in order to determine whether one is assumed to be after another, you must use [serial number arithmetic](https://en.wikipedia.org/wiki/Serial_number_arithmetic). <!-- [RFC1982] -->
 - `synchronizationSource`
-  - : A positive integer value indicating synchronization source ("ssrc") of the stream of RTP packets that are described by this frame.
+  - : A positive integer value indicating the synchronization source ("ssrc") of the stream of RTP packets that are described by this frame.
     A source might be something like a microphone, or a mixer application that combines multiple sources.
     All packets from the same source share the same time source and sequence space, and so can be ordered relative to each other.
     Note that two frames with the same value refer to the same source.

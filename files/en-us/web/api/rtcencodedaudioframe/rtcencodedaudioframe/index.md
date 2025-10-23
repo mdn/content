@@ -28,7 +28,7 @@ new RTCEncodedAudioFrame(originalFrame, options);
   - : This is an object with the following property:
     - `metadata` {{optional_inline}}
       - : An object setting the frame metadata.
-        This is object has the same properties as the object returned by {{DOMxRef("RTCEncodedAudioFrame.getMetadata()")}}.
+        This is an object with the same properties as the object returned by {{DOMxRef("RTCEncodedAudioFrame.getMetadata()")}}.
 
 ### Exceptions
 
@@ -55,7 +55,7 @@ const newFrame = new RTCEncodedAudioFrame(frame, {
 });
 ```
 
-This kind of modification might be useful if you need to create multiple outgoing frames from a single incoming frame, for example in order to relay media to another peer on the network.
+This kind of modification might be useful if you need to create multiple outgoing frames from a single incoming frame; for example, in order to relay media to another peer on the network.
 Generally you will not need to modify the metadata for a frame.
 
 ## Specifications
