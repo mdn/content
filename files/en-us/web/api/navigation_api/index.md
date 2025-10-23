@@ -29,7 +29,7 @@ The `navigation` interface has several associated events, the most notable being
 The `NavigationEvent` object also provides two methods:
 
 - {{domxref("NavigateEvent.intercept", "intercept()")}} allows you to specify custom behavior for navigations, and can take the following as arguments:
-  - Callback handler functions allowing you to specify what happens both _when_ the navigation is committed and _just before_ the navigation is committed. For example, it could be used to load relevant new content into the UI based on the path of the URL navigated to, or redirect the browser to a sign-in page if the URL points to a restricted page and the user is not signed in.
+  - Callback handler functions allowing you to specify what happens both _when_ the navigation is committed and _just before_ the navigation is committed. For example, you could load relevant new content into the UI based on the path of the URL navigated to, or redirect the browser to a sign-in page if the URL points to a restricted page and the user is not signed in.
   - Properties that allow you to enable or disable the browser's default focus and scrolling behavior after the navigation occurs.
 - {{domxref("NavigateEvent.scroll", "scroll()")}} allows you to manually initiate the browser's scroll behavior (e.g., to a fragment identifier in the URL), if it makes sense for your code, rather than waiting for the browser to handle it automatically.
 
