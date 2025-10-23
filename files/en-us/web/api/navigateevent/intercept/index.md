@@ -147,6 +147,7 @@ Both `precommitHandler()` and `handler()` callbacks can be included inside the s
    - If the `precommitHandler()` rejects, `navigateerror` fires, the `committed` and `finished` promises reject, and the navigation is cancelled.
 
 2. When the navigation commits, a new {{domxref("NavigationHistoryEntry")}} is created for the navigation, and its `committed` promise fulfills.
+
 3. Next, the `handler()` promise runs.
    - When the `handler()` promise fulfills and the `navigatesuccess` event fires, the navigation `finished` promise fulfills as well, to indicate the navigation is finished.
    - If `handler()` rejects, `navigateerror` fires, the `finished` promise rejects, and the navigation is canceled.
