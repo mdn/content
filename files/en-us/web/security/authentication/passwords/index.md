@@ -60,7 +60,7 @@ Looking at this overview, we can see some of the ways an attacker can impersonat
 - **Supporting password managers**
   - : A password manager is an application that enables users to store passwords, so users don't have to remember them. Password managers may also autofill passwords in login forms, and generate strong passwords for users. Password managers are often implemented as browser extensions, and browsers also provide their own built-in password managers.
 
-    Password managers help reduce the threat of [guessing](#guessing) and [credential stuffing](#credential_stuffing) attacks, by making it much easier for users to have strong passwords and reducing the degree of password reuse. They also help counter [phishing](/en-US/docs/Web/Security/Attacks/Phishing#password_managers), because they will not autofill login details in the "lookalike" web pages used in phishing attacks, and this helps the user realise that the site is not legitimate.
+    Password managers help reduce the threat of [guessing](#guessing) and [credential stuffing](#credential_stuffing) attacks, by making it much easier for users to have strong passwords and reducing the degree of password reuse. They also help counter [phishing](/en-US/docs/Web/Security/Attacks/Phishing#password_managers), because they will not autofill login details in the "lookalike" web pages used in phishing attacks, and this helps the user realize that the site is not legitimate.
 
     In our guidelines for the [registration](#registration) and [login](#login) flows, we outline how to ensure password managers will be able to work with your site.
 
@@ -166,7 +166,7 @@ A hash is a _one-way function_, meaning that it's not possible to derive the ori
 
 This means that if an attacker gets access to the database, they will typically try to extract passwords by hashing lists of common passwords and comparing the results with the entries in the database. For this reason the hash functions chosen for password storage are intentionally slow and difficult to optimize.
 
-Hash functions that are designed for hashing passwords typically allow you to configure the amount of work involved to create the hash, so they can be made slower or faster depending on the expected capabilites of the attacker.
+Hash functions that are designed for hashing passwords typically allow you to configure the amount of work involved to create the hash, so they can be made slower or faster depending on the expected capabilities of the attacker.
 
 #### Precomputed hash tables
 
