@@ -18,7 +18,7 @@ _This interface doesn't inherit any property._
 - {{domxref("TreeWalker.root")}} {{ReadOnlyInline}}
   - : Returns the root {{domxref("Node")}} as specified when the `TreeWalker` was created.
 - {{domxref("TreeWalker.whatToShow")}} {{ReadOnlyInline}}
-  - : Returns an `unsigned long` being a bitmask made of constants describing the types of {{domxref("Node")}} that must be presented. Non-matching nodes are skipped, but their children may be included, if relevant.
+  - : Returns an `unsigned long` which is a bitmask made of constants describing the types of {{domxref("Node")}} that must be presented. Non-matching nodes are skipped, but their children may be included, if relevant.
 - {{domxref("TreeWalker.filter")}} {{ReadOnlyInline}}
   - : Returns the `NodeFilter` associated with this `TreeWalker` used to select the relevant nodes.
 - {{domxref("TreeWalker.currentNode")}}
