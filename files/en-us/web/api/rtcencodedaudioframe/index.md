@@ -12,6 +12,11 @@ The **`RTCEncodedAudioFrame`** of the [WebRTC API](/en-US/docs/Web/API/WebRTC_AP
 The interface provides methods and properties to get metadata about the frame, allowing its format and order in the sequence of frames to be determined.
 The `data` property gives access to the encoded frame data as a buffer, which might be encrypted, or otherwise modified by a transform.
 
+## Constructor
+
+- {{domxref("RTCEncodedAudioFrame.RTCEncodedAudioFrame()","RTCEncodedAudioFrame()")}}
+  - : Copy constructor. Creates a new and independent `RTCEncodedAudioFrame` object from a frame, optionally overwriting some of the copied metadata.
+
 ## Instance properties
 
 - {{domxref("RTCEncodedAudioFrame.timestamp")}} {{ReadOnlyInline}} {{deprecated_inline}} {{non-standard_inline}}
@@ -25,6 +30,8 @@ The `data` property gives access to the encoded frame data as a buffer, which mi
   - : Returns the metadata associated with the frame.
 
 ## Examples
+
+### Transforming an encoded audio frame
 
 This code snippet shows a handler for the `rtctransform` event in a {{domxref("Worker")}} that implements a {{domxref("TransformStream")}}, and pipes encoded frames through it from the `event.transformer.readable` to `event.transformer.writable` (`event.transformer` is a {{domxref("RTCRtpScriptTransformer")}}, the worker-side counterpart of {{domxref("RTCRtpScriptTransform")}}).
 
