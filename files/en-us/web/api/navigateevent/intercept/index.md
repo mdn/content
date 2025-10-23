@@ -156,7 +156,7 @@ Note that the above process is upheld even across multiple `intercept()` calls o
 
 ### Controlling focus behavior
 
-By default, after a navigation handled using `intercept()` has occurred, the document focus will reset to the first element in the DOM with an [`autofocus`](/en-US/docs/Web/HTML/Reference/Global_attributes/autofocus) attribute set, or the {{htmlelement("body")}} element, if no `autofocus` attribute is set. If you want to override this behavior, to manually implement a more accessible focus position on navigation (for example, the new top-level heading), you can do so by setting the `focusReset` option to `manual`.
+By default, after a navigation handled using `intercept()` has occurred, the document focus will reset to the first element in the DOM with an [`autofocus`](/en-US/docs/Web/HTML/Reference/Global_attributes/autofocus) attribute set, or otherwise to the {{htmlelement("body")}} element, if no `autofocus` attribute is set. If you want to override this behavior, to manually implement a more accessible focus position on navigation (for example, the new top-level heading), you can do so by setting the `focusReset` option to `manual`.
 
 ```js
 navigation.addEventListener("navigate", (event) => {
