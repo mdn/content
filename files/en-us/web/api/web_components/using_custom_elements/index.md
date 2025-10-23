@@ -72,7 +72,9 @@ Here's a minimal custom element that logs these lifecycle events:
 ```js
 // Create a class for the element
 class MyCustomElement extends HTMLElement {
-  static observedAttributes = ["color", "size"];
+  static get observedAttributes () {
+    return ["color", "size"];
+  }
 
   constructor() {
     // Always call super first in constructor
@@ -188,7 +190,7 @@ For example, this autonomous element will observe a `size` attribute, and log th
 ```js
 // Create a class for the element
 class MyCustomElement extends HTMLElement {
-  static observedAttributes = ["size"];
+  static get observedAttributes () { return ["size"] };
 
   constructor() {
     super();
