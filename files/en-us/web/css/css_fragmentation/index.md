@@ -23,7 +23,7 @@ When content is physically printed or displayed as a print preview, there are pa
 - {{cssxref("orphans")}}
 - {{cssxref("widows")}}
 
-### Glossary terms and definitions
+### Glossary terms
 
 - {{glossary("Fragmentainer")}}
 

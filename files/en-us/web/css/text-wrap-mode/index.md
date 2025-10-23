@@ -100,7 +100,7 @@ The default setting is to wrap the content so the `text-wrap-mode` property is n
 
 ```css
 .box {
-  font-family: Arial, sans-serif;
+  font-family: "Arial", sans-serif;
   font-weight: bold;
   font-size: 64px;
   box-sizing: border-box;
@@ -129,7 +129,7 @@ In this example the content will **not** flow over to the next line so that it f
 
 ```css
 .box {
-  font-family: Arial, sans-serif;
+  font-family: "Arial", sans-serif;
   font-weight: bold;
   font-size: 64px;
   box-sizing: border-box;

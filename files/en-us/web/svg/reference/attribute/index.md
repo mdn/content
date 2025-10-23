@@ -20,6 +20,7 @@ Below is a list of all of the attributes available in SVG along with links to re
 - {{SVGAttr("amplitude")}}
 - {{SVGAttr("attributeName")}}
 - {{SVGAttr("attributeType")}}
+- {{SVGAttr("autofocus")}}
 - {{SVGAttr("azimuth")}}
 
 ### B
@@ -235,6 +236,7 @@ Below is a list of all of the attributes available in SVG along with links to re
 - {{SVGAttr("targetY")}}
 - {{SVGAttr("text-anchor")}}
 - {{SVGAttr("text-decoration")}}
+- {{SVGAttr("text-overflow")}}
 - {{SVGAttr("text-rendering")}}
 - {{SVGAttr("textLength")}}
 - {{SVGAttr("to")}}
@@ -256,6 +258,7 @@ Below is a list of all of the attributes available in SVG along with links to re
 
 ### W
 
+- {{SVGAttr("white-space")}}
 - {{SVGAttr("width")}}
 - {{SVGAttr("word-spacing")}}
 - {{SVGAttr("writing-mode")}}
@@ -290,36 +293,45 @@ Below is a list of all of the attributes available in SVG along with links to re
 
 ## SVG attributes by category
 
-### Generic attributes
+### Core attributes
 
-- Core attributes
-  - {{SVGAttr("id")}}
-  - {{SVGAttr("class")}}
-  - {{SVGAttr("style")}}
-  - {{SVGAttr("lang")}}
-  - {{SVGAttr("tabindex")}}
-  - {{SVGAttr("xml:lang")}}
-  - {{SVGAttr("xml:space")}}
+The core attributes are global attributes.
 
-- Conditional processing attributes
-  - {{SVGAttr("requiredExtensions")}}
-  - {{SVGAttr("requiredFeatures")}}
-  - {{SVGAttr("systemLanguage")}}
+- {{SVGAttr("autofocus")}}
+- {{SVGAttr("id")}}
+- {{SVGAttr("class")}}
+- {{SVGAttr("style")}}
+- {{SVGAttr("lang")}}
+- {{SVGAttr("tabindex")}}
+- {{SVGAttr("xml:lang")}}
+- {{SVGAttr("xml:space")}}
+
+### Conditional processing attributes
+
+The conditional processing attributes control whether or not the element on which it appears is processed.
+
+- {{SVGAttr("requiredExtensions")}}
+- {{SVGAttr("requiredFeatures")}}
+- {{SVGAttr("systemLanguage")}}
 
 ### XLink attributes
 
-- {{SVGAttr("xlink:href")}}{{deprecated_inline}}
-- {{SVGAttr("xlink:type")}}
-- {{SVGAttr("xlink:role")}}
-- {{SVGAttr("xlink:arcrole")}}
-- {{SVGAttr("xlink:title")}}
-- {{SVGAttr("xlink:show")}}
-- {{SVGAttr("xlink:actuate")}}
+The XLink attributes can reference resources.
+
+- {{SVGAttr("xlink:href")}} {{deprecated_inline}}
+- {{SVGAttr("xlink:type")}} {{deprecated_inline}}
+- {{SVGAttr("xlink:role")}} {{deprecated_inline}}
+- {{SVGAttr("xlink:arcrole")}} {{deprecated_inline}}
+- {{SVGAttr("xlink:title")}} {{deprecated_inline}}
+- {{SVGAttr("xlink:show")}} {{deprecated_inline}}
+- {{SVGAttr("xlink:actuate")}} {{deprecated_inline}}
 
 ### Presentation attributes
 
+All SVG presentation attributes can be used as CSS properties.
+
 > [!NOTE]
-> All SVG presentation attributes can be used as CSS properties.
+> Whether these attributes are presentation attributes depends on the element on which they are set. For example, `x` is a presentation attribute for {{svgelem("circle")}}, but not for {{svgelem("tspan")}}; it's the coordinate of the starting point of the text baseline, or the x coordinate of each individual glyph if a list of values is provided.
 
 - {{SVGAttr("alignment-baseline")}}
 - {{SVGAttr("baseline-shift")}}
@@ -379,6 +391,7 @@ Below is a list of all of the attributes available in SVG along with links to re
 - {{SVGAttr("stroke-width")}}
 - {{SVGAttr("text-anchor")}}
 - {{SVGAttr("text-decoration")}}
+- {{SVGAttr("text-overflow")}}
 - {{SVGAttr("text-rendering")}}
 - {{SVGAttr("transform")}}
 - {{SVGAttr("transform-origin")}}
@@ -386,6 +399,7 @@ Below is a list of all of the attributes available in SVG along with links to re
 - {{SVGAttr("vector-effect")}}
 - {{SVGAttr("visibility")}}
 - {{SVGAttr("width")}}
+- {{SVGAttr("white-space")}}
 - {{SVGAttr("word-spacing")}}
 - {{SVGAttr("writing-mode")}}
 - {{SVGAttr("x")}}
@@ -393,7 +407,7 @@ Below is a list of all of the attributes available in SVG along with links to re
 
 ### Filters attributes
 
-- Filter primitive attributes
+- Filter primitive attributes (presentation attributes)
   - : {{SVGAttr("height")}}, {{SVGAttr("result")}}, {{SVGAttr("width")}}, {{SVGAttr("x")}}, {{SVGAttr("y")}}
 - Transfer function attributes
   - : {{SVGAttr("type")}}, {{SVGAttr("tableValues")}}, {{SVGAttr("slope")}}, {{SVGAttr("intercept")}}, {{SVGAttr("amplitude")}}, {{SVGAttr("exponent")}}, {{SVGAttr("offset")}}
@@ -436,7 +450,6 @@ Below is a list of all of the attributes available in SVG along with links to re
 - **`onend`**
 - **`onended`**
 - **`onerror`**
-- **`onerror`**
 - **`onfocus`**
 - **`onfocusin`**
 - **`onfocusout`**
@@ -465,8 +478,6 @@ Below is a list of all of the attributes available in SVG along with links to re
 - **`onrepeat`**
 - **`onreset`**
 - **`onresize`**
-- **`onresize`**
-- **`onscroll`**
 - **`onscroll`**
 - **`onseeked`**
 - **`onseeking`**

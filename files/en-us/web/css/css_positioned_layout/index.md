@@ -36,7 +36,7 @@ Like all CSS modules, this module impacts and is impacted by other modules. This
 
 - {{cssxref("::backdrop")}}
 
-### Glossary and terms
+### Glossary terms and definitions
 
 - [Block direction](/en-US/docs/Glossary/Flow_relative_values#block_direction)
 - [Containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block)
@@ -105,7 +105,7 @@ Like all CSS modules, this module impacts and is impacted by other modules. This
   - {{cssxref("ruby-position")}}
   - {{cssxref("text-emphasis-position")}}
   - {{cssxref("text-underline-position")}}
-- Position-related [data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)
+- Position-related [data types](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types)
   - {{cssxref("baseline-position")}}
   - {{cssxref("content-position")}}
   - {{cssxref("overflow-position")}}

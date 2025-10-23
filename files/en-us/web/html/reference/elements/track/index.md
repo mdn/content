@@ -22,6 +22,7 @@ The tracks are formatted in [WebVTT format](/en-US/docs/Web/API/WebVTT_API) (`.v
     default
     kind="captions"
     srclang="en"
+    label="English"
     src="/shared-assets/misc/friday.vtt" />
   Download the
   <a href="/shared-assets/videos/friday.mp4">MP4</a>

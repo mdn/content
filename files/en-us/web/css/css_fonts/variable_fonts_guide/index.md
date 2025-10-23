@@ -110,7 +110,7 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground.
 p {
   font:
     1.2em "Amstelvar VF",
-    Georgia,
+    "Georgia",
     serif;
   font-size: 4rem;
   margin: 1rem;
@@ -207,7 +207,7 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground.
 p {
   font:
     1.2em "Amstelvar VF",
-    Georgia,
+    "Georgia",
     serif;
   font-size: 4rem;
   margin: 1rem;
@@ -306,8 +306,8 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground.
 p {
   font:
     1.2em "Jost VF",
-    Helvetica,
-    Arial,
+    "Helvetica",
+    "Arial",
     sans-serif;
   font-size: 4rem;
   margin: 1rem;
@@ -508,7 +508,7 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground.
 p {
   font:
     1.2em "Amstelvar VF",
-    Georgia,
+    "Georgia",
     serif;
   font-size: 4rem;
   margin: 1rem;
@@ -604,7 +604,7 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground.
 p {
   font:
     1.2em "Amstelvar VF",
-    Georgia,
+    "Georgia",
     serif;
   font-size: 64px;
   margin: 1rem;
@@ -777,7 +777,7 @@ The following example pages show two different ways to structure your CSS. The f
 body {
   font:
     1.2em "Amstelvar VF",
-    Georgia,
+    "Georgia",
     serif;
   margin: 20px;
   padding: 0;

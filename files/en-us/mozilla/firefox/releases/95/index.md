@@ -1,5 +1,5 @@
 ---
-title: Firefox 95 for developers
+title: Firefox 95 release notes for developers
 short-title: Firefox 95
 slug: Mozilla/Firefox/Releases/95
 page-type: firefox-release-notes

@@ -1,5 +1,5 @@
 ---
-title: Firefox 20 for developers
+title: Firefox 20 release notes for developers
 short-title: Firefox 20
 slug: Mozilla/Firefox/Releases/20
 page-type: firefox-release-notes

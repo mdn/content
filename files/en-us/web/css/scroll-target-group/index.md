@@ -307,7 +307,7 @@ We complete the code by setting some styles on the `:target-current`, `a:hover`,
 
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 h1 {

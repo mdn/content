@@ -8,10 +8,14 @@ sidebar: cssref
 
 The **`font-variant-numeric`** [CSS](/en-US/docs/Web/CSS) property controls the usage of alternate glyphs for numbers, fractions, and ordinal markers.
 
-{{InteractiveExample("CSS Demo: font-variant-numeric")}}
+{{InteractiveExample("CSS Demo: font-variant-numeric", "taller")}}
 
 ```css interactive-example-choice
 font-variant-numeric: normal;
+```
+
+```css interactive-example-choice
+font-variant-numeric: ordinal;
 ```
 
 ```css interactive-example-choice
@@ -26,6 +30,20 @@ font-variant-numeric: tabular-nums;
 font-variant-numeric: oldstyle-nums;
 ```
 
+```css interactive-example-choice
+font-variant-numeric: lining-nums;
+```
+
+```css interactive-example-choice
+font-variant-numeric: proportional-nums;
+```
+
+```css interactive-example-choice
+font-variant-numeric: diagonal-fractions;
+```
+
+<!-- Source Sans Pro doesn't support stacked-fractions -->
+
 ```html interactive-example
 <section id="default-example">
   <div id="example-element">
@@ -39,6 +57,12 @@ font-variant-numeric: oldstyle-nums;
       <tr>
         <td><span class="tabular">1.71</span></td>
       </tr>
+      <tr>
+        <td><span class="tabular">1st</span></td>
+      </tr>
+      <tr>
+        <td><span class="tabular">3/4</span></td>
+      </tr>
     </table>
   </div>
 </section>
@@ -46,16 +70,16 @@ font-variant-numeric: oldstyle-nums;
 
 ```css interactive-example
 @font-face {
-  font-family: "Fira Sans";
+  font-family: "Source Sans Pro";
   src:
-    local("FiraSans-Regular"),
-    url("/shared-assets/fonts/FiraSans-Regular.woff2") format("woff2");
+    local("SourceSansPro-Regular"),
+    url("/shared-assets/fonts/SourceSansPro-Regular.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
 section {
-  font-family: "Fira Sans", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   margin-top: 10px;
   font-size: 1.5em;
 }
@@ -146,7 +170,7 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground:
   font-family: "Source Sans Pro";
   src: url("https://mdn.github.io/shared-assets/fonts/SourceSansPro-Regular.otf")
     format("opentype");
-  font-weight: 400;
+  font-weight: normal;
   font-style: normal;
 }
 

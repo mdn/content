@@ -3084,6 +3084,14 @@
       "inh": "EventTarget",
       "impl": []
     },
+    "SFrameDecrypterStream": {
+      "inh": "EventTarget",
+      "impl": []
+    },
+    "SFrameEncrypterStream": {
+      "inh": "EventTarget",
+      "impl": []
+    },
     "SFrameTransform": {
       "inh": "EventTarget",
       "impl": []
@@ -4486,6 +4494,10 @@
     },
     "XRViewport": {
       "inh": "",
+      "impl": []
+    },
+    "XRVisibilityMaskChangeEvent": {
+      "inh": "Event",
       "impl": []
     },
     "XRWebGLBinding": {

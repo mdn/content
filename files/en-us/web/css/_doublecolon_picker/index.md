@@ -70,6 +70,9 @@ A further side-effect of the implicit invoker/popover relationship mentioned abo
     block-start span-inline-start;
   ```
 
+> [!NOTE]
+> If you want to remove the implicit anchor reference to stop the picker from being anchored to the `<select>` element, you can do so by setting the `position-anchor` property of the picker to an anchor name that doesn't exist in the current document, such as `--not-an-anchor-name`. See also [removing an anchor association](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#removing_an_anchor_association).
+
 ## Examples
 
 ### Basic custom select usage

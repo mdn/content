@@ -20,7 +20,7 @@ Note that the CSS here is nested within an SVG {{SVGElement("style")}} element, 
   <style>
     text {
       /* Specify the system or custom font to use */
-      font-family: "Courier New", sans-serif;
+      font-family: "Courier New", monospace;
 
       /* Add other styling */
       font-size: 24px;

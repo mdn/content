@@ -215,7 +215,7 @@ And if you pass something that is not a number, it will complain about it:
 
 ![Type checking in VS Code - the ms variable has been given a non-numeric value](06-vscode-type-checking-in-components.png)
 
-The application template has a `check` script configured that runs `svelte-check` against your code. This package allows you to detect errors and warnings normally displayed by a code editor from the command line, which makes it pretty useful for running it in a continuous integration (CI) pipeline. Just run `npm run check` to check for unused CSS, and return A11y hints and TypeScript compile errors.
+The application template has a `check` script configured that runs `svelte-check` against your code. This package allows you to detect errors and warnings normally displayed by a code editor from the command line, which makes it pretty useful for running it in a {{glossary("continuous integration")}} (CI) pipeline. Just run `npm run check` to check for unused CSS, and return A11y hints and TypeScript compile errors.
 
 In this case, if you run `npm run check` (either in the VS Code console or terminal) you will get the following error:
 

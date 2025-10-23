@@ -115,7 +115,7 @@ The HTML contains a single {{htmlelement("section")}} element with [`tabindex="0
 }
 
 section {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   width: 175px;
   border-radius: 5px;
   background: #eeeeee;
@@ -135,7 +135,7 @@ main {
 
 h2 {
   margin: 0;
-  font-weight: 400;
+  font-weight: normal;
   font-size: 1.1rem;
   text-align: center;
   letter-spacing: 1px;

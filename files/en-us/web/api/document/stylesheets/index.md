@@ -19,14 +19,52 @@ The returned list is ordered as follows:
 
 ## Examples
 
+### Retrieving a specific stylesheet by its title
+
 ```js
-function getStyleSheet(unique_title) {
+function getStyleSheet(uniqueTitle) {
   for (const sheet of document.styleSheets) {
-    if (sheet.title === unique_title) {
+    if (sheet.title === uniqueTitle) {
       return sheet;
     }
   }
 }
+```
+
+### Accessing rules in the stylesheet
+
+You can access these stylesheets and their rules individually using the stylesheet, style, and {{domxref("CSSRule")}} objects, as demonstrated in this example, which prints out all of the style rule selectors to the console.
+
+```js
+for (const styleSheet of document.styleSheets) {
+  for (const rule of styleSheet.cssRules) {
+    console.log(`${rule.selectorText}\n`);
+  }
+}
+```
+
+For a document with a single stylesheet in which the following three rules are defined:
+
+```css
+body {
+  background-color: darkblue;
+}
+p {
+  font-family: "Arial";
+  font-size: 10pt;
+  margin-left: 0.125in;
+}
+#lumpy {
+  display: none;
+}
+```
+
+This script outputs the following:
+
+```plain
+BODY
+P
+#LUMPY
 ```
 
 ## Specifications

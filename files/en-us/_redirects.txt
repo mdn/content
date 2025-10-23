@@ -53,7 +53,7 @@
 /en-US/docs/ARIA/ARIA_Techniques/Using_the_toolbar_role	/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/toolbar_role
 /en-US/docs/ARIA/Accessible_Rich_Internet_Applications	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/ARIA/Basic_form_hints	/en-US/docs/Web/Accessibility/ARIA
-/en-US/docs/ARIA/How_to_file_ARIA-related_bugs	/en-US/docs/Web/Accessibility/ARIA/How_to/File_ARIA-related_bugs
+/en-US/docs/ARIA/How_to_file_ARIA-related_bugs	/en-US/docs/Learn_web_development/Howto/Web_mechanics/File_browser_bugs
 /en-US/docs/ARIA/Live_Regions	/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions
 /en-US/docs/ARIA/examples	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/ARIA/widgets	/en-US/docs/Web/Accessibility/ARIA
@@ -100,7 +100,7 @@
 /en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_toolbar_role	/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/toolbar_role
 /en-US/docs/Accessibility/ARIA/ARIA_Test_Cases	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Accessibility/ARIA/Basic_form_hints	/en-US/docs/Web/Accessibility/ARIA
-/en-US/docs/Accessibility/ARIA/How_to_file_ARIA-related_bugs	/en-US/docs/Web/Accessibility/ARIA/How_to/File_ARIA-related_bugs
+/en-US/docs/Accessibility/ARIA/How_to_file_ARIA-related_bugs	/en-US/docs/Learn_web_development/Howto/Web_mechanics/File_browser_bugs
 /en-US/docs/Accessibility/ARIA/Web_applications_and_ARIA_FAQ	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Accessibility/ARIA/examples	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Accessibility/ARIA/forms	/en-US/docs/Web/Accessibility/ARIA
@@ -564,7 +564,7 @@
 /en-US/docs/CSS/Using_CSS_variables	/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties
 /en-US/docs/CSS/Using_media_queries_from_code	/en-US/docs/Web/CSS/CSS_media_queries/Testing_media_queries
 /en-US/docs/CSS/Using_the_CSS_multi-column_layout	/en-US/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts
-/en-US/docs/CSS/Value_definition_syntax	/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax
+/en-US/docs/CSS/Value_definition_syntax	/en-US/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax
 /en-US/docs/CSS/Visual_formatting_model	/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model
 /en-US/docs/CSS/actual_value	/en-US/docs/Web/CSS/CSS_cascade/Value_processing#actual_value
 /en-US/docs/CSS/align-content	/en-US/docs/Web/CSS/align-content
@@ -1192,8 +1192,8 @@
 /en-US/docs/DOM/DOMTokenList	/en-US/docs/Web/API/DOMTokenList
 /en-US/docs/DOM/DOM_Mutation_Observers	/en-US/docs/Web/API/MutationObserver
 /en-US/docs/DOM/DOM_Reference	/en-US/docs/Web/API/Document_Object_Model
-/en-US/docs/DOM/DOM_Reference/Examples	/en-US/docs/Web/API/Document_Object_Model/Examples
-/en-US/docs/DOM/DOM_Reference/Introduction	/en-US/docs/Web/API/Document_Object_Model/Introduction
+/en-US/docs/DOM/DOM_Reference/Examples	/en-US/docs/Web/API/Document_Object_Model
+/en-US/docs/DOM/DOM_Reference/Introduction	/en-US/docs/Web/API/Document_Object_Model
 /en-US/docs/DOM/DOM_Reference/Preface	/en-US/docs/Web/API/Document_Object_Model
 /en-US/docs/DOM/DOM_Reference/document	/en-US/docs/Web/API/Document
 /en-US/docs/DOM/DOM_Reference/document.evaluate	/en-US/docs/Web/API/Document/evaluate
@@ -1363,7 +1363,7 @@
 /en-US/docs/DOM/Input.setSelectionRange	/en-US/docs/Web/API/HTMLInputElement/setSelectionRange
 /en-US/docs/DOM/KeyboardEvent	/en-US/docs/Web/API/KeyboardEvent
 /en-US/docs/DOM/LinkStyle	/en-US/docs/Web/API/HTMLLinkElement
-/en-US/docs/DOM/Locating_DOM_elements_using_selectors	/en-US/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors
+/en-US/docs/DOM/Locating_DOM_elements_using_selectors	/en-US/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree
 /en-US/docs/DOM/Manipulating_the_browser_history	/en-US/docs/Web/API/History_API
 /en-US/docs/DOM/Manipulating_the_browser_history/Example	/en-US/docs/Web/API/History_API/Working_with_the_History_API
 /en-US/docs/DOM/MediaQueryList	/en-US/docs/Web/API/MediaQueryList
@@ -2824,7 +2824,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/Input.select	/en-US/docs/Web/API/HTMLInputElement/select
 /en-US/docs/Document_Object_Model_(DOM)/Input.setSelectionRange	/en-US/docs/Web/API/HTMLInputElement/setSelectionRange
 /en-US/docs/Document_Object_Model_(DOM)/KeyboardEvent	/en-US/docs/Web/API/KeyboardEvent
-/en-US/docs/Document_Object_Model_(DOM)/Locating_DOM_elements_using_selectors	/en-US/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors
+/en-US/docs/Document_Object_Model_(DOM)/Locating_DOM_elements_using_selectors	/en-US/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree
 /en-US/docs/Document_Object_Model_(DOM)/MediaQueryList	/en-US/docs/Web/API/MediaQueryList
 /en-US/docs/Document_Object_Model_(DOM)/MediaQueryListListener	/en-US/docs/Web/API/MediaQueryList
 /en-US/docs/Document_Object_Model_(DOM)/NamedNodeMap	/en-US/docs/Web/API/NamedNodeMap
@@ -3986,7 +3986,7 @@
 /en-US/docs/HTTP_access_control	/en-US/docs/Web/HTTP/Guides/CORS
 /en-US/docs/How_to_Turn_Off_Form_Autocompletion	/en-US/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion
 /en-US/docs/How_to_check_the_security_state_of_an_XMLHTTPRequest_over_SSL	/en-US/docs/Web/API/XMLHttpRequest
-/en-US/docs/How_to_create_a_DOM_tree	/en-US/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
+/en-US/docs/How_to_create_a_DOM_tree	/en-US/docs/Web/API/Document_Object_Model
 /en-US/docs/How_to_start_contributions_to_Mozilla	/en-US/docs/MDN/Community/Getting_started
 /en-US/docs/ICC_color_correction_in_Firefox	/en-US/docs/Mozilla/Firefox/Releases/3.5/ICC_color_correction_in_Firefox
 /en-US/docs/IMAP	/en-US/docs/Glossary/IMAP
@@ -5295,8 +5295,8 @@
 /en-US/docs/Learn/Common_questions/Design_and_accessibility/What_is_accessibility	/en-US/docs/Learn_web_development/Howto/Design_and_accessibility/What_is_accessibility
 /en-US/docs/Learn/Common_questions/Design_for_all_types_of_users	/en-US/docs/Learn_web_development/Howto/Design_and_accessibility/Design_for_all_types_of_users
 /en-US/docs/Learn/Common_questions/HTML_features_for_accessibility	/en-US/docs/Learn_web_development/Howto/Design_and_accessibility/HTML_features_for_accessibility
-/en-US/docs/Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine	/en-US/docs/Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine
-/en-US/docs/Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine﻿	/en-US/docs/Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine
+/en-US/docs/Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine	https://cloud.google.com/appengine/docs/
+/en-US/docs/Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine﻿	https://cloud.google.com/appengine/docs/
 /en-US/docs/Learn/Common_questions/How_does_the_Internet_work	/en-US/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work
 /en-US/docs/Learn/Common_questions/How_much_does_it_cost	/en-US/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost
 /en-US/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines	/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web
@@ -5305,7 +5305,7 @@
 /en-US/docs/Learn/Common_questions/Tools_and_setup	/en-US/docs/Learn_web_development/Howto/Tools_and_setup
 /en-US/docs/Learn/Common_questions/Tools_and_setup/Available_text_editors	/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Available_text_editors
 /en-US/docs/Learn/Common_questions/Tools_and_setup/Checking_that_your_web_site_is_working_properly	/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Checking_that_your_web_site_is_working_properly
-/en-US/docs/Learn/Common_questions/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine	/en-US/docs/Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine
+/en-US/docs/Learn/Common_questions/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine	https://cloud.google.com/appengine/docs/
 /en-US/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost	/en-US/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost
 /en-US/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server	/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server
 /en-US/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages	/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages
@@ -5596,7 +5596,7 @@
 /en-US/docs/Learn/Performance/Perceived_performance	/en-US/docs/Learn_web_development/Extensions/Performance/Perceived_performance
 /en-US/docs/Learn/Performance/Populating_the_page:_how_browsers_work	/en-US/docs/Web/Performance/Guides/How_browsers_work
 /en-US/docs/Learn/Performance/Understanding_latency	/en-US/docs/Web/Performance/Guides/Understanding_latency
-/en-US/docs/Learn/Performance/Web_Performance_Basics	/en-US/docs/Learn_web_development/Extensions/Performance/Web_Performance_Basics
+/en-US/docs/Learn/Performance/Web_Performance_Basics	/en-US/docs/Learn_web_development/Extensions/Performance/Best_practices
 /en-US/docs/Learn/Performance/Web_performance_overview	/en-US/docs/Learn_web_development/Extensions/Performance/What_is_web_performance
 /en-US/docs/Learn/Performance/What_is_web_performance	/en-US/docs/Learn_web_development/Extensions/Performance/What_is_web_performance
 /en-US/docs/Learn/Performance/business_case_for_performance	/en-US/docs/Learn_web_development/Extensions/Performance/business_case_for_performance
@@ -5842,6 +5842,8 @@
 /en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_HTML5_controls	/en-US/docs/Learn_web_development/Extensions/Forms
 /en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Other_controls	/en-US/docs/Learn_web_development/Extensions/Forms
 /en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Styling_basics	/en-US/docs/Learn_web_development/Extensions/Forms
+/en-US/docs/Learn_web_development/Extensions/Performance/Resources	/en-US/docs/Learn_web_development/Extensions/Performance/Best_practices
+/en-US/docs/Learn_web_development/Extensions/Performance/Web_Performance_Basics	/en-US/docs/Learn_web_development/Extensions/Performance/Best_practices
 /en-US/docs/Learn_web_development/Extensions/Security_privacy	/en-US/docs/Web/Security
 /en-US/docs/Learn_web_development/Extensions/Transform_animate	/en-US/docs/Learn_web_development/Extensions
 /en-US/docs/Learn_web_development/Getting_started/Basic_setup	/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software
@@ -5858,6 +5860,7 @@
 /en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Define_terms_with_HTML	/en-US/docs/Web/HTML/How_to/Define_terms_with_HTML
 /en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_JavaScript_within_a_webpage	/en-US/docs/Web/HTML/How_to/Add_JavaScript_to_your_web_page
 /en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes	/en-US/docs/Web/HTML/How_to/Use_data_attributes
+/en-US/docs/Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine	https://cloud.google.com/appengine/docs/
 /en-US/docs/Liberty!_Equality!_Validity!	/en-US/docs/Learn_web_development/Core/Structuring_content/Debugging_HTML
 /en-US/docs/Link_prefetching_FAQ	/en-US/docs/Glossary/Prefetch
 /en-US/docs/Localization	/en-US/docs/Glossary/Localization
@@ -7772,7 +7775,7 @@
 /en-US/docs/Transforming_XML_with_XSLT:The_Netscape_XSLT_XPath_Reference:Elements:xsl:decimal-format	/en-US/docs/Web/XML/XSLT/Reference/Element/decimal-format
 /en-US/docs/Transforming_XML_with_XSLT:The_Netscape_XSLT_XPath_Reference:Elements:xsl:element	/en-US/docs/Web/XML/XSLT/Reference/Element/element
 /en-US/docs/Transforming_XML_with_XSLT:The_Netscape_XSLT_XPath_Reference:Functions	/en-US/docs/Web/XML/XPath/Reference/Functions
-/en-US/docs/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces	/en-US/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
+/en-US/docs/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces	/en-US/docs/Web/API/Document_Object_Model/Building_and_updating_the_DOM_tree
 /en-US/docs/URI	/en-US/docs/Glossary/URI
 /en-US/docs/URI/www and non-www URLs	/en-US/docs/Web/URI/Guides/Choosing_between_www_and_non-www_URLs
 /en-US/docs/URI/www_vs_non-www_URLs	/en-US/docs/Web/URI/Guides/Choosing_between_www_and_non-www_URLs
@@ -7839,9 +7842,9 @@
 /en-US/docs/Using_the_:target_selector	/en-US/docs/Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors
 /en-US/docs/Using_the_Mozilla_JavaScript_interface_to_XPath	/en-US/docs/Web/XML/XPath/Guides/Introduction_to_using_XPath_in_JavaScript
 /en-US/docs/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations	/en-US/docs/Web/API/XSLTProcessor
-/en-US/docs/Using_the_W3C_DOM_Level_1_Core	/en-US/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
-/en-US/docs/Using_the_W3C_DOM_Level_1_Core/Example	/en-US/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
-/en-US/docs/Using_the_W3C_DOM_Level_1_Core:Example	/en-US/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
+/en-US/docs/Using_the_W3C_DOM_Level_1_Core	/en-US/docs/Web/API/Document_Object_Model
+/en-US/docs/Using_the_W3C_DOM_Level_1_Core/Example	/en-US/docs/Web/API/Document_Object_Model
+/en-US/docs/Using_the_W3C_DOM_Level_1_Core:Example	/en-US/docs/Web/API/Document_Object_Model
 /en-US/docs/Using_the_Web_Console	https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html
 /en-US/docs/Using_the_Web_Console/Helpers	https://firefox-source-docs.mozilla.org/devtools-user/web_console/helpers/index.html
 /en-US/docs/Using_the_Web_Console/WebConsoleHelp	https://firefox-source-docs.mozilla.org/devtools-user/web_console/helpers/index.html
@@ -8527,12 +8530,17 @@
 /en-US/docs/Web/API/DocumentTouch.createTouchList	/en-US/docs/Web/API/Document/createTouchList
 /en-US/docs/Web/API/DocumentTouch/createTouch	/en-US/docs/Web/API/Document/createTouch
 /en-US/docs/Web/API/DocumentTouch/createTouchList	/en-US/docs/Web/API/Document/createTouchList
-/en-US/docs/Web/API/Document_Object_Model/How_to_create_a_DOM_tree	/en-US/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
+/en-US/docs/Web/API/Document_Object_Model/Examples	/en-US/docs/Web/API/Document_Object_Model
+/en-US/docs/Web/API/Document_Object_Model/How_to_create_a_DOM_tree	/en-US/docs/Web/API/Document_Object_Model
+/en-US/docs/Web/API/Document_Object_Model/Introduction	/en-US/docs/Web/API/Document_Object_Model
+/en-US/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors	/en-US/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree
 /en-US/docs/Web/API/Document_Object_Model/Preface	/en-US/docs/Web/API/Document_Object_Model
 /en-US/docs/Web/API/Document_Object_Model/Transforming_with_XSLT	/en-US/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT
-/en-US/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model/Example	/en-US/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
-/en-US/docs/Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core	/en-US/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
-/en-US/docs/Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core/Example	/en-US/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
+/en-US/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces	/en-US/docs/Web/API/Document_Object_Model/Building_and_updating_the_DOM_tree
+/en-US/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model	/en-US/docs/Web/API/Document_Object_Model
+/en-US/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model/Example	/en-US/docs/Web/API/Document_Object_Model
+/en-US/docs/Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core	/en-US/docs/Web/API/Document_Object_Model
+/en-US/docs/Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core/Example	/en-US/docs/Web/API/Document_Object_Model
 /en-US/docs/Web/API/Document_Object_Model/Whitespace	/en-US/docs/Web/CSS/CSS_text/Whitespace
 /en-US/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM	/en-US/docs/Web/CSS/CSS_text/Whitespace
 /en-US/docs/Web/API/DoubleRange	/en-US/docs/Web/API/MediaTrackConstraints
@@ -11620,7 +11628,8 @@
 /en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow	/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow
 /en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext	/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext
 /en-US/docs/Web/Accessibility/ARIA/Basic_form_hints	/en-US/docs/Web/Accessibility/ARIA
-/en-US/docs/Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs	/en-US/docs/Web/Accessibility/ARIA/How_to/File_ARIA-related_bugs
+/en-US/docs/Web/Accessibility/ARIA/How_to/File_ARIA-related_bugs	/en-US/docs/Learn_web_development/Howto/Web_mechanics/File_browser_bugs
+/en-US/docs/Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs	/en-US/docs/Learn_web_development/Howto/Web_mechanics/File_browser_bugs
 /en-US/docs/Web/Accessibility/ARIA/Multipart_labels	/en-US/docs/Web/Accessibility/ARIA/Guides/Multipart_labels
 /en-US/docs/Web/Accessibility/ARIA/Roles	/en-US/docs/Web/Accessibility/ARIA/Reference/Roles
 /en-US/docs/Web/Accessibility/ARIA/Roles/ARIA:_tabpanel_role	/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tabpanel_role
@@ -12178,9 +12187,9 @@
 /en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_flexbox_to_lay_out_web_applications	/en-US/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox
 /en-US/docs/Web/CSS/CSS_Flow_Layout/Formatting_Contexts_Explained	/en-US/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts
 /en-US/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts	/en-US/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts
-/en-US/docs/Web/CSS/CSS_Functionals	/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions
-/en-US/docs/Web/CSS/CSS_Functions	/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions
-/en-US/docs/Web/CSS/CSS_Functions/Using_CSS_math_functions	/en-US/docs/Web/CSS/CSS_Values_and_Units/Using_CSS_math_functions
+/en-US/docs/Web/CSS/CSS_Functionals	/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions
+/en-US/docs/Web/CSS/CSS_Functions	/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions
+/en-US/docs/Web/CSS/CSS_Functions/Using_CSS_math_functions	/en-US/docs/Web/CSS/CSS_values_and_units/Using_CSS_math_functions
 /en-US/docs/Web/CSS/CSS_Grid	/en-US/docs/Web/CSS/CSS_grid_layout
 /en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout	/en-US/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout
 /en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout	/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout
@@ -12242,12 +12251,12 @@
 /en-US/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes	/en-US/docs/Web/CSS/CSS_shapes/Overview_of_shapes
 /en-US/docs/Web/CSS/CSS_Shapes/Shapes_From_Box_Values	/en-US/docs/Web/CSS/CSS_shapes/From_box_values
 /en-US/docs/Web/CSS/CSS_Text/Wrapping_text	/en-US/docs/Web/CSS/CSS_text/Wrapping_breaking_text
-/en-US/docs/Web/CSS/CSS_Types	/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types
+/en-US/docs/Web/CSS/CSS_Types	/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types
 /en-US/docs/Web/CSS/CSS_Types/display-inside	/en-US/docs/Web/CSS/display-inside
 /en-US/docs/Web/CSS/CSS_Types/display-outside	/en-US/docs/Web/CSS/display-outside
 /en-US/docs/Web/CSS/CSS_User_Interface	/en-US/docs/Web/CSS/CSS_basic_user_interface
-/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Types	/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types
-/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions/Using_CSS_math_functions	/en-US/docs/Web/CSS/CSS_Values_and_Units/Using_CSS_math_functions
+/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Types	/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types
+/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions/Using_CSS_math_functions	/en-US/docs/Web/CSS/CSS_values_and_units/Using_CSS_math_functions
 /en-US/docs/Web/CSS/CSS_Variables	/en-US/docs/Web/CSS/CSS_cascading_variables
 /en-US/docs/Web/CSS/CSS_animations/Tips	/en-US/docs/Web/API/Web_Animations_API/Tips
 /en-US/docs/Web/CSS/CSS_cascade/actual_value	/en-US/docs/Web/CSS/CSS_cascade/Value_processing#actual_value
@@ -12351,7 +12360,7 @@
 /en-US/docs/Web/CSS/Using_CSS_variables	/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties
 /en-US/docs/Web/CSS/Using_media_queries_from_code	/en-US/docs/Web/CSS/CSS_media_queries/Testing_media_queries
 /en-US/docs/Web/CSS/Using_the_CSS_multi-column_layout	/en-US/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts
-/en-US/docs/Web/CSS/Value_definition_syntax	/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax
+/en-US/docs/Web/CSS/Value_definition_syntax	/en-US/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax
 /en-US/docs/Web/CSS/Viewport_concepts	/en-US/docs/Web/CSS/CSSOM_view/Viewport_concepts
 /en-US/docs/Web/CSS/Visual_formatting_model	/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model
 /en-US/docs/Web/CSS/_image	/en-US/docs/Web/CSS/image/image
@@ -12836,7 +12845,7 @@
 /en-US/docs/Web/Guide/API/DOM/Events/Touch_events	/en-US/docs/Web/API/Touch_events
 /en-US/docs/Web/Guide/API/DOM/Events/Touch_events_(Mozilla_experimental)	/en-US/docs/Web/API/Touch_events
 /en-US/docs/Web/Guide/API/DOM/Events/Using_device_orientation_with_3D_transforms	/en-US/docs/Web/API/Device_orientation_events/Using_device_orientation_with_3D_transforms
-/en-US/docs/Web/Guide/API/DOM/Locating_DOM_elements_using_selectors	/en-US/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors
+/en-US/docs/Web/Guide/API/DOM/Locating_DOM_elements_using_selectors	/en-US/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree
 /en-US/docs/Web/Guide/API/DOM/Manipulating_the_browser_history	/en-US/docs/Web/API/History_API
 /en-US/docs/Web/Guide/API/DOM/Manipulating_the_browser_history/Example	/en-US/docs/Web/API/History_API/Working_with_the_History_API
 /en-US/docs/Web/Guide/API/DOM/Storage	/en-US/docs/Web/API/Web_Storage_API
@@ -12917,7 +12926,7 @@
 /en-US/docs/Web/Guide/DOM/Events/Touch_events	/en-US/docs/Web/API/Touch_events
 /en-US/docs/Web/Guide/DOM/Events/Touch_events_(Mozilla_experimental)	/en-US/docs/Web/API/Touch_events
 /en-US/docs/Web/Guide/DOM/Events/Using_device_orientation_with_3D_transforms	/en-US/docs/Web/API/Device_orientation_events/Using_device_orientation_with_3D_transforms
-/en-US/docs/Web/Guide/DOM/Locating_DOM_elements_using_selectors	/en-US/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors
+/en-US/docs/Web/Guide/DOM/Locating_DOM_elements_using_selectors	/en-US/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree
 /en-US/docs/Web/Guide/DOM/Manipulating_the_browser_history	/en-US/docs/Web/API/History_API
 /en-US/docs/Web/Guide/DOM/Manipulating_the_browser_history/Example	/en-US/docs/Web/API/History_API/Working_with_the_History_API
 /en-US/docs/Web/Guide/DOM/Storage	/en-US/docs/Web/API/Web_Storage_API
@@ -13307,6 +13316,7 @@
 /en-US/docs/Web/HTML/Global_attributes/translate	/en-US/docs/Web/HTML/Reference/Global_attributes/translate
 /en-US/docs/Web/HTML/Global_attributes/virtualkeyboardpolicy	/en-US/docs/Web/HTML/Reference/Global_attributes/virtualkeyboardpolicy
 /en-US/docs/Web/HTML/Global_attributes/writingsuggestions	/en-US/docs/Web/HTML/Reference/Global_attributes/writingsuggestions
+/en-US/docs/Web/HTML/Guides/Viewport_meta_element	/en-US/docs/Web/HTML/Reference/Elements/meta/name/viewport
 /en-US/docs/Web/HTML/Index	/en-US/docs/Web/HTML
 /en-US/docs/Web/HTML/Inline_elemente	/en-US/docs/Glossary/Inline-level_content
 /en-US/docs/Web/HTML/Inline_elements	/en-US/docs/Glossary/Inline-level_content
@@ -13334,7 +13344,7 @@
 /en-US/docs/Web/HTML/Supported_media_formats	/en-US/docs/Web/Media/Guides/Formats
 /en-US/docs/Web/HTML/The_Importance_of_Correct_HTML_Commenting	/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#HTML_comments
 /en-US/docs/Web/HTML/Using_HTML5_audio_and_video	/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio
-/en-US/docs/Web/HTML/Viewport_meta_tag	/en-US/docs/Web/HTML/Guides/Viewport_meta_element
+/en-US/docs/Web/HTML/Viewport_meta_tag	/en-US/docs/Web/HTML/Reference/Elements/meta/name/viewport
 /en-US/docs/Web/HTML/element/content	/en-US/docs/Web/HTML/Reference/Elements/slot
 /en-US/docs/Web/HTML/microformats	/en-US/docs/Web/HTML/Guides/Microformats
 /en-US/docs/Web/HTTP/Access_control_CORS	/en-US/docs/Web/HTTP/Guides/CORS
