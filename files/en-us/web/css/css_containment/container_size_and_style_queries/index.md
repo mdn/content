@@ -2,7 +2,6 @@
 title: Using container size and style queries
 slug: Web/CSS/CSS_containment/Container_size_and_style_queries
 page-type: guide
-browser-compat: css.at-rules.container
 sidebar: cssref
 ---
 
@@ -399,14 +398,6 @@ It is expected that style queries will also accept properties in a boolean conte
 The above example will return true for any element that has a value for `font-weight` that differs from its initial value. User-agent stylesheets set `font-weight: bold` for {{htmlelement("heading_elements", "heading")}} and {{htmlelement("th")}} elements, for example. Some browsers set {{htmlelement("strong")}} and {{htmlelement("b")}} to `bold`, others to `bolder`. {{htmlelement("optgroup")}} also sometimes has a `font-weight` other than `normal` set by the user agent. As long as the element's `font-weight` is not the default value for that user-agent, the style query will return true.
 
 These features are not yet supported in any browser.
-
-## Specifications
-
-{{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 
