@@ -54,7 +54,7 @@ The client can then resend the same request multiple times, and the server can k
 
 ### Client responsibilities
 
-The client should attach the `Idempotency-Key` header for endpoints that require it, with a key that conforms to the requirements published by the server.
+Client JavaScript should attach the `Idempotency-Key` header in fetch requests for endpoints that require it, with a key that conforms to the requirements published by the server.
 
 A unique key must be used for each new request that is sent, and the same key should be used if that request is resent.
 
