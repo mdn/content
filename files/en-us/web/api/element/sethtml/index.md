@@ -27,7 +27,7 @@ setHTML(input, options)
   - : An options object with the following optional parameters:
     - `sanitizer`
       - : A {{domxref("Sanitizer")}} or {{domxref("SanitizerConfig")}} object which defines what elements of the input will be allowed or removed, or the string `"default"` for the default configuration.
-        Note that generally a `"Sanitizer` is expected to be more efficient than a `SanitizerConfig` if the configuration is to reused.
+        Note that generally a `Sanitizer` is expected to be more efficient than a `SanitizerConfig` if the configuration is to be reused.
         If not specified, the default sanitizer configuration is used.
 
 ### Return value
@@ -142,7 +142,7 @@ We also define the handler for the reload button.
 const unsanitizedString = `
   <div>
     <p>This is a paragraph. <button onclick="alert('You clicked the button!')">Click me</button></p>
-    <script src="path/to/a/module.js" type="module"><script>
+    <script src="path/to/a/module.js" type="module"></script>
   </div>
 `;
 

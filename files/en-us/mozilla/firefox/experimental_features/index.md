@@ -336,20 +336,6 @@ The {{CSSXRef(":heading")}} pseudo-class allows you to style all [heading elemen
 - `layout.css.heading-selector.enabled`
   - : Set to `true` to enable.
 
-### `text-autospace` property
-
-The **`text-autospace`** CSS property allows you to specify the space applied between Chinese/Japanese/Korean (CJK) and non-CJK characters. Currently these values are only parsed and there is no effect on the output. ([Firefox bug 1869577](https://bugzil.la/1869577)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 143           | No                  |
-| Developer Edition | 143           | No                  |
-| Beta              | 143           | No                  |
-| Release           | 143           | No                  |
-
-- `layout.css.text-autospace.enabled`
-  - : Set to `true` to enable.
-
 ## SVG
 
 **No experimental features in this release cycle.**
