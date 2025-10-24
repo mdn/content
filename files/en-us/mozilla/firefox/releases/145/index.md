@@ -40,7 +40,7 @@ Firefox 145 is the current [Beta version of Firefox](https://www.firefox.com/en-
   This keyword is an alias for the recently-standardized `stretch` keyword (i.e., [`width: stretch`](/en-US/docs/Web/CSS/width#stretch) and [`height: stretch`](/en-US/docs/Web/CSS/height#stretch)) which isn't yet supported in Firefox.
   ([Firefox bug 1988938](https://bugzil.la/1988938), [Firefox bug 1789477](https://bugzil.la/1789477)).
 
-- [`font-family: math`](/en-US/docs/Web/CSS/font-family#math) is now supported, allowing to set a generic font family intended for use with mathematical expressions.
+- The [`math`](/en-US/docs/Web/CSS/font-family#math) generic font family is now supported as a value of the `font-family` property, allowing mathematical expressions to use appropriate fonts.
   ([Firefox bug 1788937](https://bugzil.la/1788937)).
 
 <!-- No notable changes. -->
