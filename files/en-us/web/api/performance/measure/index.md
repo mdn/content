@@ -39,7 +39,20 @@ To only provide an `endMark`, you need to provide an empty `measureOptions` obje
   - : An object that may contain measure options.
     - `detail` {{optional_inline}}
       - : Arbitrary metadata to be included in the measure. Defaults to `null`. Must be [structured-cloneable](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
-        Some browsers have use a structured `devtools` object within the `detail` object as part of its Extensibility API that surfaces these in custom tracks in performance traces. See the [Chrome's Extensibility API documentation](https://developer.chrome.com/docs/devtools/performance/extension#inject_your_data_with_the_user_timings_api) for more information.
+        - `devtools`
+          - : Some browsers have use a structured `devtools` object within the `detail` object as part of an Extensibility API that surfaces these in custom tracks in performance traces. See the [Chrome's Extensibility API documentation](https://developer.chrome.com/docs/devtools/performance/extension#inject_your_data_with_the_user_timings_api) for more information.
+            - `dataType` {{experimental_inline}}
+              - : String with a value of `track-entry` (for defining a new track) or `marker` (for defining an entry in a track).
+            - `color` {{optional_inline}} {{experimental_inline}}
+              - : Defaults to `"primary"`. Must be one of `"primary"`, `"primary-light"`, `"primary-dark"`, `"secondary"`, `"secondary-light"`, `"secondary-dark"`, `"tertiary"`, `"tertiary-light"`, `"tertiary-dark"`, `"error"`.
+            - `track` {{optional_inline}} {{experimental_inline}}
+              - : String of the name of the custom track (required for `track-entry`)
+            - `trackGroup` {{optional_inline}} {{experimental_inline}}
+              - : String of the name of the grouping withing a custom track (required for `track-entry`)
+            - `properties` {{optional_inline}} {{experimental_inline}}
+              - : Array of key-value pairs. Values can be any JSON-compatible type.
+            - `tooltipText` {{optional_inline}} {{experimental_inline}}
+              - : Short description for tooltip.
 
     - `start` {{optional_inline}}
       - : Timestamp ({{domxref("DOMHighResTimeStamp")}}) to be used as the start time, or string that names a {{domxref("PerformanceMark")}} to use for the start time.
@@ -149,27 +162,32 @@ performance.measure("login-click", {
 For browsers that support the [Extensibility API](https://developer.chrome.com/docs/devtools/performance/extension) you can use the `detail` parameter to provide more details in a `devtools` object that will be used to display this in performance profiles:
 
 ```js
-// Mark used to represent the start of the image processing task
-// The start time is defaulted to now
-const imageProcessinTimeStart = performance.now();
+const imageProcessingTimeStart = performance.now();
 
 // ... later in your code
 
-// Track entry representing the completion of image processing
-// with additional details and a tooltip
-// The start time is a marker from earlier
-// The end time is defaulted to now
 performance.measure("Image Processing Complete", {
-  start: imageProcessinTimeStart,
+  start: imageProcessingTimeStart,
+  end: performance.now(),
   detail: {
+    // This data appears in the "Summary"
+    extraInfo: {
+      imageId: "xyz-123",
+      source: "cache",
+      checkUrl: "https://example.com/check/xyz-123",
+    },
+    // The devtools object controls the track visualization
     devtools: {
       dataType: "track-entry",
       track: "Image Processing Tasks",
-      trackGroup: "My Tracks", // Group related tracks together
+      trackGroup: "My Tracks",
       color: "tertiary-dark",
       properties: [
         ["Filter Type", "Gaussian Blur"],
-        ["Resize Dimensions", "500x300"],
+        // Values can be objects, arrays, or other types
+        ["Resize Dimensions", { w: 500, h: 300 }],
+        // String values that are URLs get linkified
+        ["Image URL", "https://example.com/img.png"],
       ],
       tooltipText: "Image processed successfully",
     },

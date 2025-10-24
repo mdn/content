@@ -19,13 +19,17 @@ Some browsers have further extended this `console.timeStamp()` method to allow a
 ## Syntax
 
 ```js-nolint
-console.timeStamp(label)
+console.timeStamp(label);
+console.timeStamp(label, start, end, trackName, trackGroup, color, data);
 ```
 
 ### Parameters
 
 - `color` {{Optional_Inline}} {{Experimental_Inline}}
   - : A string for the display colour of the entry. Must be one of `"primary"`, `"primary-light"`, `"primary-dark"`, `"secondary"`, `"secondary-light"`, `"secondary-dark"`, `"tertiary"`, `"tertiary-light"`, `"tertiary-dark"`, `"error"`.
+
+- `data` {{Optional_Inline}} {{Experimental_Inline}}
+  - : An object with additional data to display. URLs may automatically be turned into links by some browsers.
 
 - `end` {{Optional_Inline}} {{Experimental_Inline}}
   - : A string referencing a previously defined `timeStamp` label or a timestamp ({{domxref("DOMHighResTimeStamp")}}) to be used as the end time.
@@ -57,30 +61,44 @@ console.timeStamp("marker 1");
 ### Using the Extensibility API to provide richer details for display
 
 ```js
-// Take a start timestamp
-const start = performance.now();
+// 1. Create a duration event with rich data
+const start = performance.now() - 150;
+const end = performance.now() - 20;
 
-// Measure duration from start to now
+const durationData = {
+  processingTime: `${end - start}ms`,
+  info: "Check this URL: https://example.com for more.",
+  metrics: {
+    items: 5,
+    isCached: true,
+  },
+};
+
 console.timeStamp(
-  "measure 1",
-  start,
-  undefined,
-  "My Track",
-  "My Group",
-  "primary-light",
+  "My Timed Task", // label
+  start, // startTime
+  end, // endTime
+  "Tasks", // trackName
+  "My Extension", // trackGroup
+  "tertiary", // color
+  durationData, // data (object)
 );
 
-// Take an end timestamp
-const end = performance.now();
+// 2. Create an instant event with a deep link for a DevTools extension
+const linkData = {
+  url: "ext://resource/123",
+  description: "View Resource 123",
+  otherDetail: "This data also appears in the JSON viewer",
+};
 
-// Measure duration from start to end
 console.timeStamp(
-  "measure 2",
-  start,
-  end,
-  "My Track",
-  "My Group",
-  "secondary-dark",
+  "Event with Link", // label
+  performance.now(), // startTime (instant)
+  undefined, // endTime (instant)
+  "Tasks", // trackName
+  "My Extension", // trackGroup
+  "primary-light", // color
+  linkData, // data (object)
 );
 ```
 

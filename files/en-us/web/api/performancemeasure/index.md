@@ -35,7 +35,7 @@ This interface has no methods.
 
 See the example in [Using the User Timing API](/en-US/docs/Web/API/Performance_API/User_timing).
 
-Chrome DevTools uses `performance.measure()` and in particular a structured `detail` property as part of its extensibility API that surfaces these in custom tracks in performance traces. See the [Chrome's extensibility API documentation](https://developer.chrome.com/docs/devtools/performance/extension#inject_your_data_with_consoletimestamp) for more information and examples.
+Chrome DevTools uses `performance.measure()` and in particular a structured `detail` property as part of its extensibility API that surfaces these in custom tracks in performance traces. See the example in [Performance: measure() method](/en-US/docs/Web/API/Performance/measure) page and the [Chrome's extensibility API documentation](https://developer.chrome.com/docs/devtools/performance/extension#inject_your_data_with_the_user_timings_api) for more information and examples.
 
 ## Specifications
 

@@ -26,7 +26,16 @@ mark(name, markOptions)
   - : An object for specifying a timestamp and additional metadata for the mark.
     - `detail` {{optional_inline}}
       - : Arbitrary metadata to include in the mark. Defaults to `null`. Must be [structured-cloneable](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
-        Some browsers have use a structured `devtools` object within the `detail` object as part of its Extensibility API that surfaces these in custom tracks in performance traces. See the [Chrome's Extensibility API documentation](https://developer.chrome.com/docs/devtools/performance/extension#inject_your_data_with_the_user_timings_api) for more information.
+        - `devtools` {{optional_inline}} {{experimental_inline}}
+          - : Some browsers have use a structured `devtools` object within the `detail` object as part of an Extensibility API that surfaces these in custom tracks in performance traces. See the [Chrome's Extensibility API documentation](https://developer.chrome.com/docs/devtools/performance/extension#inject_your_data_with_the_user_timings_api) for more information.
+            - `dataType` {{experimental_inline}}
+              - : A string which must be set to `marker`. Identifies as a marker.
+            - `color` {{optional_inline}} {{experimental_inline}}
+              - : Defaults to `"primary"`. Must be one of `"primary"`, `"primary-light"`, `"primary-dark"`, `"secondary"`, `"secondary-light"`, `"secondary-dark"`, `"tertiary"`, `"tertiary-light"`, `"tertiary-dark"`, `"error"`.
+            - `properties` {{optional_inline}} {{experimental_inline}}
+              - : Array of key-value pairs. Values can be any JSON-compatible type.
+            - `tooltipText` {{optional_inline}} {{experimental_inline}}
+              - : Short description for tooltip.
 
     - `startTime` {{optional_inline}}
       - : {{domxref("DOMHighResTimeStamp")}} to use as the mark time. Defaults to {{domxref("performance.now()")}}.
