@@ -32,7 +32,13 @@ Firefox 145 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### CSS -->
+### CSS
+
+- The {{cssxref("text-autospace")}} property is now supported, allowing automatic spacing adjustments between characters from different scripts ([Firefox bug 1981086](https://bugzil.la/1981086), [Firefox bug 1869577](https://bugzil.la/1869577)).
+
+- Firefox now supports the legacy [`-webkit-fill-available` keyword](Web/CSS/WebKit_Extensions) as a value for the CSS {{cssxref("width")}} and {{cssxref("height")}} properties, to improve web compatibility.
+  This keyword is an alias for the recently-standardized `stretch` keyword (i.e., [`width: stretch`](/en-US/docs/Web/CSS/width#stretch) and [`height: stretch`](/en-US/docs/Web/CSS/height#stretch)) which isn't yet supported in Firefox.
+  ([Firefox bug 1988938](https://bugzil.la/1988938), [Firefox bug 1789477](https://bugzil.la/1789477)).
 
 <!-- No notable changes. -->
 
@@ -91,3 +97,9 @@ Firefox 145 is the current [Beta version of Firefox](https://www.firefox.com/en-
 These features are shipping in Firefox 145 but are disabled by default.
 To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
 You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+
+- **CSS anchor positioning** (Nightly): `layout.css.anchor-positioning.enabled`
+
+  Nightly builds now support [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) by default, which allows to tether elements together.
+  The anchor-positioned elements can then have their size and position set relative to the size and location of the anchor elements to which they are bound.
+  ([Firefox bug 1988224](https://bugzil.la/1988224)).
