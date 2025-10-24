@@ -97,3 +97,15 @@ Firefox 145 is the current [Beta version of Firefox](https://www.firefox.com/en-
 These features are shipping in Firefox 145 but are disabled by default.
 To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
 You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+
+- **Trusted Types API** for scripts (Early Beta): `dom.security.trusted_types.enabled`
+
+  The [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API) is now fully implemented. ([Firefox bug 1976656](https://bugzil.la/1976656)).
+
+  The changes include:
+  - Addition of new interfaces {{domxref("TrustedTypePolicyFactory")}}, {{domxref("TrustedTypePolicy")}}, {{domxref("TrustedHTML")}}, {{domxref("TrustedScript")}}, {{domxref("TrustedScriptURL")}}, and the `trustedTypes` property on {{domxref("Window/trustedTypes", "Window")}} and {{domxref("WorkerGlobalScope/trustedTypes", "WorkerGlobalScope")}}
+  - Updates to [injection sink](/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage) APIs, such as {{domxref("Element.innerHTML")}} and {{domxref("Document.write()", "document.write()")}}, to allow the `TrustedHTML`, `TrustedScript`, `TrustedScriptURL` to be passed as well as strings.
+  - Support for the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) directive of the {{HTTPHeader("Content-Security-Policy")}} HTTP header.
+    This can be used to enforce that trusted types used instead of strings (or use a default policy).
+  - Support for the [`trusted-types`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/trusted-types) directive of the {{HTTPHeader("Content-Security-Policy")}} HTTP header.
+    This can be used to restrict the allowed names of trusted type policies defined in the page.
