@@ -44,7 +44,7 @@ The **`IDBObjectStore`** interface of the [IndexedDB API](/en-US/docs/Web/API/In
   - : Returns an {{domxref("IDBRequest")}} object and, in a separate thread, retrieves all objects in the object store matching the specified parameter or all objects in the store if no parameters are given.
 - {{domxref("IDBObjectStore.getAllKeys()")}}
   - : Returns an {{domxref("IDBRequest")}} object and, in a separate thread, retrieves record keys for all objects in the object store matching the specified parameter or all objects in the store if no parameters are given.
-- {{domxref("IDBObjectStore.getAllRecords()")}}
+- {{domxref("IDBObjectStore.getAllRecords()")}} {{experimental_inline}}
   - : Returns an {{domxref("IDBRequest")}} object and, in a separate thread, finds all matching records in the object store (including primary keys and values) that correspond to the given key or are in range, if `key` is an {{domxref("IDBKeyRange")}}.
 - {{domxref("IDBObjectStore.index()")}}
   - : Opens an index from this object store after which it can, for example, be used to return a sequence of records sorted by that index using a cursor.

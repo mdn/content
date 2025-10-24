@@ -46,7 +46,7 @@ Inherits from: [EventTarget](/en-US/docs/Web/API/EventTarget)
   - : Returns an {{domxref("IDBRequest")}} object and, in a separate thread, finds all matching values in the referenced object store that correspond to the given key or are in range, if `key` is an {{domxref("IDBKeyRange")}}.
 - {{domxref("IDBIndex.getAllKeys()")}}
   - : Returns an {{domxref("IDBRequest")}} object and, in a separate thread, finds all matching keys in the referenced object store that correspond to the given key or are in range, if `key` is an {{domxref("IDBKeyRange")}}.
-- {{domxref("IDBIndex.getAllRecords()")}}
+- {{domxref("IDBIndex.getAllRecords()")}} {{experimental_inline}}
   - : Returns an {{domxref("IDBRequest")}} object and, in a separate thread, finds all matching records in the referenced object store (including index keys, primary keys, and values) that correspond to the given key or are in range, if `key` is an {{domxref("IDBKeyRange")}}.
 - {{domxref("IDBIndex.openCursor()")}}
   - : Returns an {{domxref("IDBRequest")}} object and, in a separate thread, creates a [cursor](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#cursor) over the specified key range.
