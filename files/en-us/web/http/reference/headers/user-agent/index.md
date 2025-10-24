@@ -94,7 +94,7 @@ Mozilla/5.0 (Macintosh; Intel Mac OS X x.y; rv:42.0) Gecko/20100101 Firefox/42.0
 
 ## Chrome UA string
 
-The Chrome (or Chromium/Blink-based engines) user agent string is similar to Firefox's. For compatibility, it adds strings like `KHTML, like Gecko` and `Safari`.
+The Chrome (or Chromium/Blink-based engines) user agent string is similar to Firefox's. For compatibility, it adds strings like `KHTML, like Gecko` and `Safari`. It adds `"CriOS/<version>"` on iPhone.
 
 ### Examples
 
@@ -120,7 +120,7 @@ Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51
 
 ## Opera UA string
 
-The Opera browser is also based on the Blink engine, which is why it almost looks the same as the Chrome UA string, but adds `"OPR/<version>"`. For preview versions, Opera also includes a description of the particular browser edition in parentheses, for example `(Edition developer)`.
+The Opera browser is also based on the Blink engine, which is why it almost looks the same as the Chrome UA string, but adds `"OPR/<version>"` on desktop and Android, and `"OPT/<version>"` on iPhone. For preview versions, Opera also includes a description of the particular browser edition in parentheses, for example `(Edition developer)`.
 
 ### Examples
 
@@ -183,7 +183,7 @@ Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)
 Safari is based on the WebKit engine, but its UA string is also similar to the Blink-based browsers. It tends to include a `Version/xxx` string before the actual engine build version to indicate the browser release version, which unlike Blink-based browsers is different. In the case of iPhone (Mobile) Safari, the string also includes `Mobile`.
 
 > [!NOTE]
-> At the time of writing, non-Apple iPhone browsers (such as Firefox, Chrome, and Edge) are still based on WebKit, therefore their UA strings are the same or similar to the Safari UA string.
+> At the time of writing, non-Apple iPhone browsers (such as Firefox, Chrome, and Edge) are still based on WebKit, therefore their UA strings are similar to the Safari UA string.
 
 ### Examples
 

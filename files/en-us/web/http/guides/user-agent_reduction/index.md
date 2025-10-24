@@ -59,7 +59,10 @@ Also see [Browser detection using the user agent](/en-US/docs/Web/HTTP/Guides/Br
 
 You may still have code that relies on detailed UA string data, which can't be coverted to use feature detection or progressive enhancement. Examples include fine-grained logging, fraud prevention measures, or a software help site that serves different content based on the user's device type.
 
-If this is the case, you can still access detailed UA string data via [`Sec-CH-UA-*`](/en-US/docs/Web/HTTP/Reference/Headers#user_agent_client_hints) headers (aka **User-Agent client hints**) and other headers besides. The headers provide a safer, more privacy-preserving way to send such information because servers have to opt in to the pieces of information they want, rather it being sent all the time through the `User-Agent` string. It also provides access to a wider selection of information.
+If this is the case, you can still access detailed UA string data via [`Sec-CH-UA-*`](/en-US/docs/Web/HTTP/Reference/Headers#user_agent_client_hints) headers (aka **User-Agent client hints**). The headers provide a safer, more privacy-preserving way to send such information because servers have to opt in to the pieces of information they want, rather it being sent all the time through the `User-Agent` string. It also provides access to a wider selection of information.
+
+> [!NOTE]
+> You can also [access client hint information via JavaScript](#accessing_client_hints_via_javascript).
 
 Client hints are used like so:
 
@@ -67,41 +70,46 @@ Client hints are used like so:
 2. Additionally, it will send the server a default set of `Sec-CH-UA-*` headers. The Android example we looked at earlier would send the following:
 
    ```http
-   Sec-CH-UA: "Chrome"; v="143"
+   Sec-CH-UA: "Google Chrome";v="143", "Chromium";v="143", "Not A(Brand";v="24"
    Sec-CH-UA-Platform: "Android"
    Sec-CH-UA-Mobile: ?1
    ```
 
    These headers provide the following information:
-   - {{httpheader("Sec-CH-UA")}}: The major browser version.
+   - {{httpheader("Sec-CH-UA")}}: The major browser version and other brands associated with it.
    - {{httpheader("Sec-CH-UA-Platform")}}: The platform.
    - {{httpheader("Sec-CH-UA-Mobile")}}: A boolean that indicates whether the browser is running on a mobile device (`?1`) or not (`?0`).
 
-3. The server can request additional client hints using the {{httpheader("Accept-CH")}} response header, which contains a comma-delimited list of the headers it would like to receive in subsequent requests. For example:
+3. The server can request additional client hints using the {{httpheader("Accept-CH")}} response header, which contains a comma-delimited list of the additional headers it would like to receive in subsequent requests. For example:
 
    ```http
-   Accept-CH: Sec-CH-UA, Sec-CH-UA-Platform, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Form-Factors
+   Accept-CH: Sec-CH-UA-Model, Sec-CH-UA-Form-Factors
    ```
 
-   Here we've requested the default set of headers. We do this because each subsequent `Accept-CH` setting overrides the previous one, and we want to continue to receive the default information _in addition_ to the newly-requested information:
+   The default set of headers are always sent. In addition to those, we've also requested:
    - {{httpheader("Sec-CH-UA-Model")}}: The device model the platform is running on.
    - {{httpheader("Sec-CH-UA-Form-Factors")}}: The device's form factor(s), which indicate how the user interacts with the user-agent — the screen size, controls, etc.
 
 4. If the browser is permitted to send the server all the requested information, it will do so along with all subsequent requests until the browser or tab is closed. For example, our example Android phone might send the following updated headers with subsequent requests:
 
    ```http
-   Sec-CH-UA: "Chrome"; v="143"
+   Sec-CH-UA: "Google Chrome";v="143", "Chromium";v="143", "Not A(Brand";v="24"
    Sec-CH-UA-Platform: "Android"
    Sec-CH-UA-Mobile: ?1
    Sec-CH-UA-Model: "Pixel 9"
    Sec-CH-UA-Form-Factors: "Mobile"
    ```
 
-Since these are hints, the browser may choose to ignore some of all of the server's requests for more information. In addition, the browser may be blocked from sending some or all of the information by various security features such as {{httpheader("Permissions-Policy")}}.
-
-[EDITORIAL: IS THIS TRUE? I READ THIS SOMEWHERE, BUT I CAN'T FIND ANY INFO ANYWHERE ON WHAT CAN BLOCK BROWSERS FROM SENDING CLIENT HINTS. WHAT CLIENT FEATURES CAN BLOCK SENDING CLIENT HINTS?]
-
 For more information, see [User-Agent client hints](/en-US/docs/Web/HTTP/Guides/Client_hints).
+
+### Low- and high-entropy hints
+
+Client hints are divided in low-entropy and high-entropy hints:
+
+- The default hints are considered low-entropy hints because they don't give away much information that could be used to fingerprint a user.
+- All other hints are considered high-entropy — they could potentially be used for fingerprinting, so they are controlled by user preferences or by preferences such as {{httpheader("Permissions-Policy")}}.
+
+By default, high-entropy hints can only be sent for the top-level site (you have to opt-in to send them across cross-site frame boundaries). See [Policy-controlled features](https://wicg.github.io/client-hints-infrastructure/#policy-controlled-features) for a list of the associated `Permissions-Policy` directives.
 
 ### Critical client hints
 
@@ -149,7 +157,7 @@ console.log(navigator.userAgentData.mobile);
 // Whether the browser is running on a mobile device: true or false
 ```
 
-To access so-called [high-entropy](/en-US/docs/Web/HTTP/Guides/Client_hints#high_entropy_hints) hints like `Sec-CH-UA-Model` and `Sec-CH-UA-Form-Factors`, you need to use the {{domxref("NavigatorUAData.getHighEntropyValues()")}} method. This takes an array of the requested hints as an argument and returns a promise that fulfills with an object containing the requested hint values.
+To access high-entropy hints like `Sec-CH-UA-Model` and `Sec-CH-UA-Form-Factors`, you need to use the {{domxref("NavigatorUAData.getHighEntropyValues()")}} method. This takes an array of the requested hints as an argument and returns a promise that fulfills with an object containing the requested hint values.
 
 For example:
 
