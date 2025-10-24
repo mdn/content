@@ -64,6 +64,10 @@ Firefox 145 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ### APIs
 
+- The {{domxref("ToggleEvent/source", "source")}} property of the {{domxref("ToggleEvent")}} interface is now supported.
+  If a [popover](/en-US/docs/Web/API/Popover_API) was triggered open or closed by an HTML element, such as a {{htmlelement("button")}}, the corresponding event will include the element in this property.
+  ([Firefox bug 1968987](https://bugzil.la/1968987)).
+
 <!-- #### DOM -->
 
 #### Media, WebRTC, and Web Audio
