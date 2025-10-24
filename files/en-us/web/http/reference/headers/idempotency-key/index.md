@@ -52,7 +52,7 @@ Idempotence is important in cases where a client does not receive a response, be
 The HTTP `Idempotency-Key` header allows a client to make `POST` and `PATCH` requests idempotent by giving them a unique identifier (key).
 The client can then resend the same request multiple times, and the server can know that it should only perform the action once.
 
-### Server responsibilities
+### Client responsibilities
 
 The client should attach the `Idempotency-Key` header for endpoints that require it, with a key that conforms to the requirements published by the server.
 
