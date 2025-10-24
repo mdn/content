@@ -77,4 +77,4 @@ For a `disconnect()` call to work, the IdP must include a [`disconnect_endpoint`
 
 ## See also
 
-- [Federated Credential Management API](https://privacysandbox.google.com/cookies/fedcm) on privacysandbox.google.com (2023)
+- [Federated Credential Management API](https://developer.chrome.com/docs/identity/fedcm/overview) on developer.chrome.com (2023)
