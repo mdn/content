@@ -44,9 +44,11 @@ Firefox 145 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### JavaScript -->
+### JavaScript
 
-<!-- No notable changes. -->
+- Firefox now supports the {{jsxref("Atomics.waitAsync()")}} static method, which waits asynchronously on a shared memory location and returns an object representing the result of the operation.
+  It is non-blocking and usable on the main thread.
+  ([Firefox bug 1884148](https://bugzil.la/1884148)).
 
 <!-- #### Removals -->
 
