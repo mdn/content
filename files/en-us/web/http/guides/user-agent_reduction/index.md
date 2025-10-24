@@ -107,7 +107,7 @@ For more information, see [User-Agent client hints](/en-US/docs/Web/HTTP/Guides/
 Client hints are divided in low-entropy and high-entropy hints:
 
 - The default hints are considered low-entropy hints because they don't give away much information that could be used to fingerprint a user.
-- All other hints are considered high-entropy — they could potentially be used for fingerprinting, so they are controlled by user preferences or by preferences such as {{httpheader("Permissions-Policy")}}.
+- All other hints are considered high-entropy — they could potentially be used for fingerprinting, so they are controlled by {{httpheader("Permissions-Policy")}} headers.
 
 By default, high-entropy hints can only be sent for the top-level site (you have to opt-in to send them across cross-site frame boundaries). See [Policy-controlled features](https://wicg.github.io/client-hints-infrastructure/#policy-controlled-features) for a list of the associated `Permissions-Policy` directives.
 
