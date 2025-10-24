@@ -299,7 +299,9 @@ getUserMedia({
 });
 ```
 
-The above will return the camera you requested, or a different camera based on internally-available information to the browsers, such as user preference or if that specific camera no longer available.
+The above will return the camera you requested, or a different camera if that specific camera no longer available.
+Browsers' internally-available information, such as user preference, may also override your request.
+For example, when the user was asked for camera permissions, the camera they selected may be used instead of the one you requested.
 Again, to _require_ the specific camera, you would use:
 
 ```js
