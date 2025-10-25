@@ -8,37 +8,50 @@ browser-compat: api.Navigator.appVersion
 
 {{APIRef("HTML DOM")}}
 
-Returns either `"4.0"` or a string representing version information about
-the browser.
-
-> [!NOTE]
-> Do not rely on this property to return the correct browser version.
+The **`Navigator.appVersion`** read-only property of the {{domxref("Navigator")}} interface returns a string representing version information about the browser.
 
 ## Value
 
-Either `"4.0"` or a string representing version information about the
-browser.
+A string representing version information about the browser.
+
+## Description
+
+The `appVersion` property returns some information indicating the browser version.
+
+In some browsers, such as Chrome, this is nearly the same as the value returned by {{domxref("Navigator.userAgent")}}, with the `Mozilla/` prefix removed. For example:
+
+```plain
+5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+```
+
+In other browsers, such as Firefox, this is cut down to a short string that hints at the platform/OS. For example:
+
+```plain
+5.0 (Macintosh)
+```
+
+### Browser detection
+
+Theoretically this information is useful for detecting the browser and serving code to work around browser-specific bugs or lack of feature support. However, this is **unreliable** and **is not recommended**:
+
+- Future browsers will fix bugs and add support for new features, so your browser detection code will need to be regularly updated to avoid locking out browsers that do actually support the features you are testing for. [Feature detection](/en-US/docs/Learn_web_development/Extensions/Testing/Feature_detection) is a much more reliable strategy.
+- You really have no guarantee that the user agent advertised by this property is really the one your site is loaded in. Browser vendors can basically do what they like with the UA string, and some browsers enable users to change the value of this field if they want (**UA spoofing**).
+- Browser detection lead to a situation where browsers had to return fake values from such properties in order not to be locked out of some websites.
+
+See [Browser detection using the user agent](/en-US/docs/Web/HTTP/Guides/Browser_detection_using_the_user_agent) for more information on why serving different content to different browsers is usually a bad idea, and recommendations for what you should do instead.
+
+### User-Agent reduction
+
+The information exposed in the `appVersion` property has historically raised [privacy](/en-US/docs/Web/Privacy) concerns — it can be used to identify a particular user agent, and can therefore be used for {{glossary("fingerprinting")}}. To mitigate such concerns, [supporting browsers](#browser_compatibility) provide a reduced set of information in their {{HTTPHeader("User-agent")}} header, the {{domxref("Navigator.userAgent", "userAgent")}} property, and other related properties. For more information, see [User-Agent reduction](/en-US/docs/Web/HTTP/Guides/User-agent_reduction).
 
 ## Examples
 
 ```js
-alert(`Your browser version is reported as ${navigator.appVersion}`);
+console.log(navigator.appVersion);
+// On Chrome, logs something like "5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36" (reduced UA string)
+
+// On Firefox, logs something like "5.0 (Macintosh)"
 ```
-
-## Notes
-
-The `window.navigator.userAgent` property may also contain the version
-number (for example
-`"Mozilla/5.0 (Windows; U; Win98; en-US; rv:0.9.2) Gecko/20010725 Netscape 6/6.1"`),
-but you should be aware of how easy it is to change the user agent string and "spoof"
-other browsers, platforms, or user agents, and also how cavalier the browser vendor
-themselves are with these properties.
-
-The `window.navigator.appVersion`, `window.navigator.appName` and
-`window.navigator.userAgent` properties have been used in "browser sniffing"
-code: scripts that attempt to find out what kind of browser you are using and adjust
-pages accordingly. This lead to the current situation, where browsers had to return fake
-values from these properties in order not to be locked out of some websites.
 
 ## Specifications
 
@@ -47,3 +60,8 @@ values from these properties in order not to be locked out of some websites.
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("Navigator.userAgent")}}
+- {{HTTPHeader("User-agent")}} HTTP header
