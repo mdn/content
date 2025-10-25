@@ -249,7 +249,7 @@ For example consider the case where we are using the (safe) default sanitizer, b
 const sanitizer = new Sanitizer();
 sanitizer.removeElement("div");
 
-const sanitizer = Sanitizer({
+const sanitizer = new Sanitizer({
   removeElements: ["script", "div", "span"],
   removeAttributes: ["onclick"],
 });
