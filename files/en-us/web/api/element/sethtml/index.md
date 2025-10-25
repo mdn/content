@@ -50,6 +50,7 @@ The **`setHTML()`** method provides an XSS-safe method to parse and sanitize a s
 It then removes any HTML entities that aren't allowed by the sanitizer configuration, and further removes any XSS-unsafe elements or attributes — whether or not they are allowed by the sanitizer configuration.
 
 If no sanitizer configuration is specified in the `options.sanitizer` parameter, `setHTML()` is used with the default {{domxref("Sanitizer")}} configuration.
+**For details on the default configuration, see the [`Sanitizer()`](/en-US/docs/Web/API/Sanitizer/Sanitizer) constructor's documentation.**
 This configuration allows all elements and attributes that are considered XSS-safe, thereby disallowing entities that are considered unsafe.
 A custom sanitizer or sanitizer configuration can be specified to choose which elements, attributes, and comments are allowed or removed.
 Note that even if unsafe options are allowed by the sanitizer configuration, they will still be removed when using this method (which implicitly calls {{domxref('Sanitizer.removeUnsafe()')}}).
