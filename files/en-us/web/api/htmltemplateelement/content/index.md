@@ -20,7 +20,7 @@ A {{domxref("DocumentFragment")}}.
 
 ```js
 const templateElement = document.querySelector("#foo");
-const documentFragment = templateElement.content.cloneNode(true);
+const documentFragment = document.importNode(templateElement.content, true);
 ```
 
 ## Specifications

@@ -28,7 +28,7 @@ Additionally, for a {{HTMLElement("canvas")}} element, the painted image is not 
 > Also, `name` attributes may need to be modified,
 > depending on whether duplicate names are expected.
 
-To clone a node to insert into a _different_ document, use
+To clone a node to insert into a _different_ document, or when cloning a {{htmlelement("template")}} element, use
 {{domxref("Document.importNode()")}} instead.
 
 ## Syntax
