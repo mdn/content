@@ -1,9 +1,9 @@
 ---
-title: "HTMLScriptElement: text property"
-short-title: text
-slug: Web/API/HTMLScriptElement/text
+title: "HTMLScriptElement: innerText property"
+short-title: innerText
+slug: Web/API/HTMLScriptElement/innerText
 page-type: web-api-instance-property
-browser-compat: api.HTMLScriptElement.text
+browser-compat: api.HTMLScriptElement.innerText
 ---
 
 {{APIRef("HTML DOM")}}
@@ -15,12 +15,12 @@ browser-compat: api.HTMLScriptElement.text
 > You can mitigate this risk by always assigning {{domxref("TrustedScript")}} objects instead of strings and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types).
 > See [Security considerations](#security_considerations) for more information.
 
-The **`text`** property of the {{domxref("HTMLScriptElement")}} interface represents the inline text content of the {{HTMLElement("script")}} element.
-It behaves in the same way as the {{domxref("HTMLScriptElement.textContent","textContent")}} and {{domxref("HTMLScriptElement.innerText","innerText")}} property.
+The **`innerText`** property of the {{domxref("HTMLScriptElement")}} interface represents the text content of the {{HTMLElement("script")}} element.
+It behaves in the same way as the {{domxref("HTMLScriptElement.textContent","textContent")}} and {{domxref("HTMLScriptElement.text","text")}} properties.
 
 ## Value
 
-Getting the property returns a string containing the script's text.
+Getting the property returns a string containing the scripts's text.
 
 Setting the property accepts either a {{domxref("TrustedScript")}} object or a string.
 
@@ -31,12 +31,15 @@ Setting the property accepts either a {{domxref("TrustedScript")}} object or a s
 
 ## Description
 
-The **`text`** property of the {{domxref("HTMLScriptElement")}} interface represents the text content inside the {{HTMLElement("script")}} element.
+The **`innerText`** property of the {{domxref("HTMLScriptElement")}} interface represents the text content inside the {{HTMLElement("script")}} element.
 
 For an executable script (that is, a script whose {{domxref('HTMLScriptElement/type','type')}} indicates that it is a module or classic script), this text is inline executable code.
 For other types it might represent an import map, speculation rules, or some other kind of data block.
 
-Note that if the {{domxref('HTMLScriptElement/src','src')}} property is set the content of the `text` property is ignored.
+Note that if the {{domxref('HTMLScriptElement/src','src')}} property is set the content of the `innerText` property is ignored.
+
+The `innerText` property is also defined on {{domxref("HTMLElement.innerText","HTMLElement")}} and can hence be used with other elements.
+When used with other elements, the property does not expect or enforce the assignment of a {{domxref("TrustedScript")}}.
 
 ### Security considerations
 
@@ -56,5 +59,4 @@ See the [examples](/en-US/docs/Web/API/HTMLScriptElement/textContent#examples) i
 
 ## See also
 
-- {{domxref("HTMLScriptElement.textContent")}}
-- {{domxref("HTMLScriptElement.innerText")}}
+- {{domxref("HTMLElement.innerText")}}
