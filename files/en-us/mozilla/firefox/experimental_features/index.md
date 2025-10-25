@@ -305,6 +305,20 @@ The CSS {{CSSXRef("anchor-size")}} function lets you set an anchor-positioned el
 - `layout.css.anchor-positioning.enabled`
   - : Set to `true` to enable.
 
+#### `position-area` property
+
+The CSS {{CSSXRef("position-area")}} property allows you to position an anchor-positioned element relative to the edges of its associated anchor element by placing the positioned element on one or more tiles of an implicit 3x3 grid, where the anchoring element is the center cell. ([Firefox bug 1924086](https://bugzil.la/1924086)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 145           | Yes                 |
+| Developer Edition | 145           | No                  |
+| Beta              | 145           | No                  |
+| Release           | 145           | No                  |
+
+- `layout.css.anchor-positioning.enabled`
+  - : Set to `true` to enable.
+
 ### Allow pseudo-elements after element-backed pseudo-elements
 
 Work has started on allowing [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) such as {{cssxref("::first-letter")}} and {{cssxref("::before")}} to be appended to [element-backed pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements#element-backed_pseudo-elements) such as {{cssxref("::details-content")}} and {{cssxref("::file-selector-button")}}.
