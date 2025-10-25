@@ -804,6 +804,10 @@
       "inh": "",
       "impl": []
     },
+    "CSSSupportsConditionRule": {
+      "inh": "CSSGroupingRule",
+      "impl": []
+    },
     "CSSSupportsRule": {
       "inh": "CSSConditionRule",
       "impl": []
