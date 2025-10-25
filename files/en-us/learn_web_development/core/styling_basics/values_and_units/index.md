@@ -342,7 +342,7 @@ li {
 
 {{EmbedLiveSample("percentage-fonts")}}
 
-Note that, while many value types accept a length or a percentage, there are some that only accept length. You can see which values are accepted on the MDN property reference pages. If the allowed value includes {{cssxref("length-percentage")}} then you can use a length or a percentage. If the allowed value only includes `<length>`, it is not possible to use a percentage.
+Note that, while many value types accept a length or a percentage, there are some that only accept length; `border-width` is an example of such a property. You can see which values are accepted on the MDN property reference pages. If the allowed value includes {{cssxref("length-percentage")}} then you can use a length or a percentage. If the allowed value only includes `<length>`, it is not possible to use a percentage.
 
 ### Numbers
 
