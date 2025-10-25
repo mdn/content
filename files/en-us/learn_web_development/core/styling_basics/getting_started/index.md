@@ -213,6 +213,10 @@ li {
 
 {{EmbedLiveSample("started-types", "", "240px")}}
 
+The following interactive lesson teaches basic CSS concepts and provides some practice.
+
+<mdn-scrim-inline url="https://scrimba.com/frontend-path-c0j/~015" scrimtitle="Write your first lines of CSS!"></scrim-inline>
+
 ### Adding a class
 
 So far, we have styled elements based on their HTML element names. This works as long as you want all of the elements of that type in your document to look the same. To select a subset of the elements without changing the others, you can add a `class` to your HTML element and target that class in your CSS.

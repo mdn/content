@@ -257,6 +257,20 @@ The above code sets new values for several properties of the {{htmlelement("body
 - `padding: 0 20px 20px 20px;`: This sets four values for padding. The goal is to put some space around the content. In this example, there is no padding on the top of the body, and 20 pixels on the right, bottom, and left. The values set top, right, bottom, and left padding, in that order.
 - `border: 5px solid black;`: This sets values for the width, style, and color of the border. In this case, it's a 5-pixel-wide solid black border around all sides of the body.
 
+### An aside on shorthand properties
+
+CSS property values that set multiple properties in one go are called **shorthand properties**. For example, `padding: 0 20px 20px 20px` is equivalent to the following four properties:
+
+```css
+padding-top: 0;
+padding-right: 20px;
+padding-bottom: 20px;
+padding-left: 20px;
+```
+
+> [!NOTE]
+> Scrimba's [Margin/padding shorthand](https://scrimba.com/frontend-path-c0j/~0g?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> is an interactive lesson providing a practical walkthrough of margin and padding shorthand usage.
+
 ## Positioning and styling the main page title
 
 Now add this:
