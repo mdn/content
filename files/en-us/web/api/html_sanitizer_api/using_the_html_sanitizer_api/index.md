@@ -243,16 +243,11 @@ const sanitizer = new Sanitizer({
 ```
 
 Specifying elements to remove is more useful when you want to tweak an existing configuration.
-For example consider the case where we are using the (safe) default sanitizer, but want to also ensure
+For example consider the case where we are using the (safe) default sanitizer, but want to also ensure that some other elements are removed.
 
 ```js
 const sanitizer = new Sanitizer();
 sanitizer.removeElement("div");
-
-const sanitizer = new Sanitizer({
-  removeElements: ["script", "div", "span"],
-  removeAttributes: ["onclick"],
-});
 ```
 
 ### Removing elements
