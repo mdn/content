@@ -342,20 +342,7 @@ The {{CSSXRef(":heading")}} pseudo-class allows you to style all [heading elemen
 
 ## JavaScript
 
-### Atomics.waitAsync()
-
-The {{jsxref("Atomics.waitAsync()")}} static method waits asynchronously on a shared memory location and returns an object representing the result of the operation.
-It is non-blocking and usable on the main thread. ([Firefox bug 1467846](https://bugzil.la/1467846)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 140           | No                  |
-| Developer Edition | 140           | No                  |
-| Beta              | 140           | No                  |
-| Release           | 140           | No                  |
-
-- `javascript.options.atomics_wait_async`
-  - : Set to `true` to enable.
+**No experimental features in this release cycle.**
 
 ## APIs
 
