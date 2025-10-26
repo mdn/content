@@ -1,5 +1,5 @@
 ---
-title: Firefox 43 for developers
+title: Firefox 43 release notes for developers
 short-title: Firefox 43
 slug: Mozilla/Firefox/Releases/43
 page-type: firefox-release-notes

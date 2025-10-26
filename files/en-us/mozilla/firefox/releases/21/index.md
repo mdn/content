@@ -1,5 +1,5 @@
 ---
-title: Firefox 21 for developers
+title: Firefox 21 release notes for developers
 short-title: Firefox 21
 slug: Mozilla/Firefox/Releases/21
 page-type: firefox-release-notes

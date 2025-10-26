@@ -1,5 +1,5 @@
 ---
-title: Firefox 4 for developers
+title: Firefox 4 release notes for developers
 short-title: Firefox 4
 slug: Mozilla/Firefox/Releases/4
 page-type: firefox-release-notes

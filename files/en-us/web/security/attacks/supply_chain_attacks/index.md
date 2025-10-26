@@ -79,7 +79,7 @@ However, updating dependencies too eagerly comes with its own risks. For example
 
 The first step towards securing dependency updates is to use a _lockfile_ for dependencies, commit it to source control, and use it when building your project.
 
-Package managers like [npm](https://www.npmjs.com/) and [Yarn](https://yarnpkg.com/) let you provide a file such as [package.json](https://docs.npmjs.com/cli/configuring-npm/package-json) that lists your project's dependencies. You can then run a command that installs the given dependencies so the project can use them.
+Package managers like [npm](https://www.npmjs.com/) and [Yarn](https://yarnpkg.com/) let you provide a file such as [package.json](https://docs.npmjs.com/cli/configuring-npm/package-json/) that lists your project's dependencies. You can then run a command that installs the given dependencies so the project can use them.
 
 However, the dependency list doesn't determine the exact version of each package: if the package supplier releases a new version, then it may be automatically included in your project when it is built. If the new version of the dependency is malicious, it may be included in your project automatically, without you even being aware of it.
 
@@ -103,9 +103,9 @@ All this has happened without any changes to your project's direct artifacts, or
 
 The solution to this is to use a lockfile when building your project. A lockfile is automatically generated whenever a project's dependencies are installed, and it lists the exact versions of the direct and indirect dependencies used in a project.
 
-That is, if _package.json_ tells you that your project is using "example-project", then _package.lock_ will tell you exactly which version of "example-project" to use, and what the versions of its dependencies are.
+That is, if _package.json_ tells you that your project is using "example-dependency", then _package.lock_ will tell you exactly which version of "example-dependency" to use, and what the versions of its dependencies are.
 
-Your project's lockfile should be checked into source control. When building your project you should use the lockfile to control which versions of your dependencies are installed: in npm you do this by using [`npm ci`](https://docs.npmjs.com/cli/commands/npm-ci) instead of `npm install`.
+Your project's lockfile should be checked into source control. When building your project you should use the lockfile to control which versions of your dependencies are installed: in npm you do this by using [`npm ci`](https://docs.npmjs.com/cli/commands/npm-ci/) instead of `npm install`.
 
 > [!NOTE]
 > Fixing the versions of your dependencies in this way is sometimes called "version pinning".
@@ -160,7 +160,7 @@ The SBOM also lists vulnerabilities that have been identified in the product's d
 
 #### Creating an SBOM
 
-You can generate an SBOM for a product using a separate tool such as [cdxgen](https://cyclonedx.github.io/cdxgen/#/) or a command such as [`npm sbom`](https://docs.npmjs.com/cli/commands/npm-sbom). An SBOM is usually generated as part of the build process, although it is possible to generate one at other stages of the software lifecycle.
+You can generate an SBOM for a product using a separate tool such as [cdxgen](https://cyclonedx.github.io/cdxgen/#/) or a command such as [`npm sbom`](https://docs.npmjs.com/cli/commands/npm-sbom/). An SBOM is usually generated as part of the build process, although it is possible to generate one at other stages of the software lifecycle.
 
 #### Using an SBOM
 

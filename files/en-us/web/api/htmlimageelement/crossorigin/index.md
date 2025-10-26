@@ -85,7 +85,8 @@ loadImage("clock-demo-400px.png");
 ```css
 body {
   font:
-    1.125rem/1.5 Helvetica,
+    1.125rem/1.5 "Helvetica",
+    "Arial",
     sans-serif;
 }
 
@@ -102,7 +103,7 @@ img {
 
 output {
   background: rgb(100 100 100 / 100%);
-  font-family: Courier, monospace;
+  font-family: "Courier New", monospace;
   width: 95%;
 }
 ```

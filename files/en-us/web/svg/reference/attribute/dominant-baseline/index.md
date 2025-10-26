@@ -38,9 +38,9 @@ svg {
 
 text {
   font:
-    bold 14px Verdana,
-    Helvetica,
-    Arial,
+    bold 14px "Helvetica",
+    "Verdana",
+    "Arial",
     sans-serif;
 }
 ```

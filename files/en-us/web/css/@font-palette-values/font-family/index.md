@@ -71,7 +71,7 @@ h2.extra-spicy {
 
 ### Using the same palette identifier for multiple font-families
 
-In this example, two [@font-palette-values](/en-US/docs/Web/CSS/@font-palette-values) at-rules are set for two font families, but both the at-rules use the same dashed-ident identifier, `--Dark Mode`. This helps to set the [font-palette](/en-US/docs/Web/CSS/font-palette) property for multiple elements, `h1` and `h2` in this case, at the same time. This can be useful when you want to update font colors to match your site's branding.
+In this example, two [@font-palette-values](/en-US/docs/Web/CSS/@font-palette-values) at-rules are set for two font families, but both the at-rules use the same dashed-ident identifier, `--Dark-Mode`. This helps to set the [font-palette](/en-US/docs/Web/CSS/font-palette) property for multiple elements, `h1` and `h2` in this case, at the same time. This can be useful when you want to update font colors to match your site's branding.
 
 ```css
 @font-palette-values --Dark-Mode {
@@ -80,7 +80,7 @@ In this example, two [@font-palette-values](/en-US/docs/Web/CSS/@font-palette-va
 }
 
 @font-palette-values --Dark-Mode {
-  font-family: Bixa;
+  font-family: "Bixa";
   /* palette settings for Bixa */
 }
 
@@ -94,7 +94,7 @@ h1 {
 }
 
 h2 {
-  font-family: Bixa, fantasy;
+  font-family: "Bixa", fantasy;
 }
 ```
 

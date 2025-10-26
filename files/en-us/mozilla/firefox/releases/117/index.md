@@ -1,5 +1,5 @@
 ---
-title: Firefox 117 for developers
+title: Firefox 117 release notes for developers
 short-title: Firefox 117
 slug: Mozilla/Firefox/Releases/117
 page-type: firefox-release-notes

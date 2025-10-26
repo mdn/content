@@ -57,15 +57,15 @@ font-stretch: 150%;
 ```css interactive-example
 @font-face {
   src: url("/shared-assets/fonts/LeagueMono-VF.ttf") format("truetype");
-  font-family: League;
+  font-family: "League";
   font-style: normal;
-  font-weight: 400;
+  font-weight: normal;
   font-stretch: 50% 200%; /* Required by Chrome - allow 50% to 200% */
 }
 
 section {
   font-size: 1.2em;
-  font-family: League, sans-serif;
+  font-family: "League", sans-serif;
 }
 ```
 
@@ -159,7 +159,7 @@ td {
 
 #inconsolata td {
   font:
-    90px Inconsolata,
+    90px "Inconsolata",
     sans-serif;
 }
 #anek-malayalam td {

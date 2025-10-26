@@ -52,9 +52,9 @@ In this example the `montserrat-regular.woff2` font file will neither be preload
 ```css
 @media (prefers-reduced-data: no-preference) {
   @font-face {
-    font-family: Montserrat;
+    font-family: "Montserrat";
     font-style: normal;
-    font-weight: 400;
+    font-weight: normal;
     font-display: swap;
     /* latin */
     src:
@@ -70,18 +70,14 @@ In this example the `montserrat-regular.woff2` font file will neither be preload
 
 body {
   font-family:
-    Montserrat,
+    "Montserrat",
     -apple-system,
     BlinkMacSystemFont,
     "Segoe UI",
-    Roboto,
-    Helvetica,
-    Arial,
-    "Microsoft YaHei",
-    sans-serif,
-    "Apple Color Emoji",
-    "Segoe UI Emoji",
-    "Segoe UI Symbol";
+    "Roboto",
+    "Helvetica",
+    "Arial",
+    sans-serif;
 }
 ```
 

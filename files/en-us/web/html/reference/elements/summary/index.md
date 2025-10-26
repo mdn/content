@@ -146,7 +146,7 @@ In the first disclosure widget, we style the `::marker`, changing the {{cssxref(
 ```css
 details {
   font-size: 1rem;
-  font-family: "Open Sans", Calibri, sans-serif;
+  font-family: "Open Sans", "Calibri", sans-serif;
   border: solid;
   padding: 2px 6px;
   margin-bottom: 1em;

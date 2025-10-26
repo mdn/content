@@ -64,7 +64,7 @@ By allowing authors to provide their own fonts, `@font-face` makes it possible t
 > [!NOTE]
 > Fallback strategies for loading fonts on older browsers are described in the [`src` descriptor page](/en-US/docs/Web/CSS/@font-face/src#specifying_fallbacks_for_older_browsers).
 
-The `@font-face` at-rule may be used not only at the top level of a CSS, but also inside any [CSS conditional-group at-rule](/en-US/docs/Web/CSS/CSS_conditional_rules#at-rules).
+The `@font-face` at-rule may be used not only at the top level of a CSS, but also inside any [CSS conditional-group at-rule](/en-US/docs/Web/CSS/CSS_conditional_rules#at-rules_and_descriptors).
 
 ### Font MIME Types
 

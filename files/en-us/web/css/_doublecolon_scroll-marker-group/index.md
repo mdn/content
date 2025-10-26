@@ -73,7 +73,7 @@ We first convert our `<ul>` into a carousel by setting the {{cssxref("display")}
 
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 ```
 

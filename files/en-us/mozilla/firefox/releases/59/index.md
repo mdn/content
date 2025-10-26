@@ -1,5 +1,5 @@
 ---
-title: Firefox 59 for developers
+title: Firefox 59 release notes for developers
 short-title: Firefox 59
 slug: Mozilla/Firefox/Releases/59
 page-type: firefox-release-notes

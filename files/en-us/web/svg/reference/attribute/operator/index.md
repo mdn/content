@@ -23,8 +23,8 @@ body,
 svg {
   height: 100%;
   font:
-    20px Arial,
-    Helvetica,
+    20px "Helvetica",
+    "Arial",
     sans-serif;
 }
 ```

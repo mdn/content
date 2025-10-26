@@ -63,7 +63,7 @@ The value of `--stop-color` is set to `cornflowerblue` at first, but when you ho
 
 ## Reference
 
-### At-rules
+### At-rules and descriptors
 
 - {{cssxref("@property")}}
   - [syntax](/en-US/docs/Web/CSS/@property#descriptors) descriptor

@@ -1,5 +1,5 @@
 ---
-title: Firefox 48 for developers
+title: Firefox 48 release notes for developers
 short-title: Firefox 48
 slug: Mozilla/Firefox/Releases/48
 page-type: firefox-release-notes
