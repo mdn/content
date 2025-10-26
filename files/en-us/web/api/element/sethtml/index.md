@@ -10,7 +10,12 @@ browser-compat: api.Element.setHTML
 
 {{APIRef("HTML Sanitizer API")}}{{SeeCompatTable}}
 
-The **`setHTML()`** method of the {{domxref("Element")}} interface provides an XSS-safe method to parse and sanitize a string of HTML into a {{domxref("DocumentFragment")}}, and then insert it into the DOM as a subtree of the element.
+The **`setHTML()`** method of the {{domxref("Element")}} interface provides an XSS-safe method to parse and sanitize a string of HTML and insert it into the DOM as a subtree of the element.
+
+The method removes any elements and attributes that are considered XSS-unsafe, even if allowed by a passed sanitizer.
+Notably, the following elements are always removed: {{HTMLElement("script")}}, {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, {{SVGElement("use")}}, event handler attributes, and data attributes.
+
+It is recommended (if supported) as a drop-in replacement for {{domxref("Element.innerHTML")}} when setting a user-provided string of HTML.
 
 ## Syntax
 
@@ -27,9 +32,10 @@ setHTML(input, options)
   - : An options object with the following optional parameters:
     - `sanitizer`
       - : A {{domxref("Sanitizer")}} or {{domxref("SanitizerConfig")}} object which defines what elements of the input will be allowed or removed, or the string `"default"` for the default configuration.
+        The method will remove any XSS-unsafe elements and attributes, even if allowed by the sanitizer.
+
         Note that generally a `Sanitizer` is expected to be more efficient than a `SanitizerConfig` if the configuration is to be reused.
         If not specified, the default sanitizer configuration is used.
-        The default configuration only allows known elements and attributes that are considered XSS-safe; notably, {{HTMLElement("script")}}, {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, {{SVGElement("use")}}, event handler attributes, and data attributes are all not in the allowlist.
 
 ### Return value
 
