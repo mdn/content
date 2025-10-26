@@ -22,7 +22,7 @@ DOMQuad.fromQuad(quad)
 - `quad` {{optional_inline}}
   - : An object specifying the coordinates for the four corners of the quadrilateral. If not specified, all corners default to `(0, 0, 0, 1)`. The object can contain the following properties:
     - `p1` {{optional_inline}}
-      - : A {{domxref("DOMPoint")}} representing one corner of the quad.
+      - : A {{domxref("DOMPoint")}} or an object with the same properties representing one corner of the quad.
     - `p2` {{optional_inline}}
       - : A {{domxref("DOMPoint")}} representing one corner of the quad.
     - `p3` {{optional_inline}}
