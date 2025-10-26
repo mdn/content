@@ -30,7 +30,7 @@ DOMQuad.fromQuad(quad)
     - `p4` {{optional_inline}}
       - : A {{domxref("DOMPoint")}} representing one corner of the quad.
 
-     This object should usually be another {{domxref("DOMQuad")}} instance, or an existing object retrieved from some data storage. If you are creating this object from scratch, you should use the {{domxref("DOMQuad.DOMQuad", "DOMQuad()")}} constructor, which accepts the four points separately, avoiding creating the intermediate object.
+    This object should usually be another {{domxref("DOMQuad")}} instance, or an existing object retrieved from some data storage. If you are creating this object from scratch, you should use the {{domxref("DOMQuad.DOMQuad", "DOMQuad()")}} constructor, which accepts the four points separately, avoiding creating the intermediate object.
 
 ### Return value
 
