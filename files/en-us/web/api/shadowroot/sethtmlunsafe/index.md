@@ -270,7 +270,7 @@ We also get variable `shadow`, which is our handle to the shadow root.
 const unsanitizedString = `
   <div>
     <p>Paragraph to inject into shadow DOM. <button onclick="alert('You clicked the button!')">Click me</button></p>
-    <script src="path/to/a/module.js" type="module"><script>
+    <script src="path/to/a/module.js" type="module"></script>
   </div>
 `;
 
