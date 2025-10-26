@@ -28,7 +28,7 @@ To ensure backward compatibility with ARIA 1.0 user agents and assistive technol
 ## Best practices
 
 - Use the `graphics-symbol` role for meaningful, atomic objects.
-- When used as a part of structured symbolic language, the [`ariaRoleDescription`](/en-US/docs/Web/API/Element/ariaRoleDescription/ariaRoleDescription) property can be used to assign the symbol type, separately from the name and description of the symbol.
+- When used as a part of structured symbolic language, the [`ariaRoleDescription`](/en-US/docs/Web/API/Element/ariaRoleDescription) property can be used to assign the symbol type, separately from the name and description of the symbol.
 
 ## Specifications
 
