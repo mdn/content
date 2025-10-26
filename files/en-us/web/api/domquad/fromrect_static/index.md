@@ -8,7 +8,7 @@ browser-compat: api.DOMQuad.fromRect_static
 
 {{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
-The **`fromRect()`** static method of the {{domxref("DOMQuad")}} interface returns a new `DOMQuad` object based on the passed set of coordinates.
+The **`fromRect()`** static method of the {{domxref("DOMQuad")}} interface returns a new `DOMQuad` object based on the provided set of coordinates in the shape of a `DOMRect` object.
 
 ## Syntax
 
