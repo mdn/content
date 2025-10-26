@@ -8,9 +8,9 @@ browser-compat: api.DOMMatrixReadOnly.fromFloat64Array_static
 
 {{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
-The **`fromFloat64Array()`** static method of the {{domxref("DOMMatrixReadOnly")}} interface creates a new mutable {{domxref("DOMMatrix")}} object given an array of double-precision (64-bit) floating-point values.
+The **`fromFloat64Array()`** static method of the {{domxref("DOMMatrixReadOnly")}} interface creates a new {{domxref("DOMMatrixReadOnly")}} object given an array of double-precision (64-bit) floating-point values.
 
-If the array has six values, the result is a 2D matrix; if the array has 16 values, the result is a 3D matrix.
+If the array has 6 values, the result is a 2D matrix; if the array has 16 values, the result is a 3D matrix. Otherwise, a {{jsxref("TypeError")}} exception is thrown.
 
 ## Syntax
 
@@ -21,11 +21,11 @@ DOMMatrixReadOnly.fromFloat64Array(array)
 ### Parameters
 
 - `array`
-  - : A {{jsxref("Float64Array")}}.
+  - : A {{jsxref("Float64Array")}} with 6 or 16 elements in column-major order.
 
 ### Return value
 
-A {{domxref("DOMMatrix")}} object.
+A {{domxref("DOMMatrixReadonly")}} object.
 
 ## Examples
 

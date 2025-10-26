@@ -8,7 +8,7 @@ browser-compat: api.DOMMatrixReadOnly.fromMatrix_static
 
 {{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
-The **`fromMatrix()`** static method of the {{domxref("DOMMatrixReadOnly")}} interface creates a new mutable {{domxref("DOMMatrix")}} object given an existing matrix or an object which provides the values for its properties.
+The **`fromMatrix()`** static method of the {{domxref("DOMMatrixReadOnly")}} interface creates a new {{domxref("DOMMatrixReadOnly")}} object given an existing matrix or an object which provides the values for its properties.
 
 ## Syntax
 
@@ -22,6 +22,8 @@ DOMMatrixReadOnly.fromMatrix(other)
 - `other` {{optional_inline}}
   - : An existing matrix or an object providing the matrix values. If not specified, the matrix is initialized with every element set to `0` _except_ the bottom-right corner and the element immediately above and to its left: `m33` and `m34`. These have the default value of `1`.
 
+    This should usually be another {{domxref("DOMMatrix")}} or {{domxref("DOMMatrixReadOnly")}} instance. To manually construct the matrix properties, you should use the {{domxref("DOMMatrixReadOnly.DOMMatrixReadOnly", "DOMMatrixReadOnly()")}} constructor.
+
     The object can contain any of the following properties:
     - `m11`, `m12`, `m13`, `m14`, `m21`, `m22`, `m23`, `m24`, `m31`, `m32`, `m33`, `m34`, `m41`, `m42`, `m43`, `m44`
       - : Double-precision floating-point values representing each component of a 4×4 matrix, where `m11` through `m14` are the first column, `m21` through `m24` are the second column, and so forth.
@@ -32,13 +34,13 @@ DOMMatrixReadOnly.fromMatrix(other)
 
 ### Return value
 
-A {{domxref("DOMMatrix")}} object.
+A {{domxref("DOMMatrixReadonly")}} object.
 
 ## Examples
 
 ### Creating a matrix from an object
 
-This example creates a `DOMMatrix` by providing matrix values in an object.
+This example creates a `DOMMatrixReadonly` by providing matrix values in an object.
 
 ```js
 const matrix = DOMMatrixReadOnly.fromMatrix({
@@ -60,7 +62,7 @@ console.log(matrix.is2D);
 
 ### Creating a matrix from an existing matrix
 
-This example creates a new `DOMMatrix` from an existing `DOMMatrixReadOnly`.
+This example creates a new `DOMMatrixReadOnly` from an existing `DOMMatrixReadOnly`.
 
 ```js
 const readOnlyMatrix = new DOMMatrixReadOnly([1, 0, 0, 1, 100, 100]);
