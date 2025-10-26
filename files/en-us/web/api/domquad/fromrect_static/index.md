@@ -32,20 +32,6 @@ A {{domxref("DOMQuad")}} object.
 
 ## Examples
 
-### Creating a quad from a rectangle
-
-This example creates a `DOMQuad` from a rectangle object with position and dimensions.
-
-```js
-const rect = { x: 10, y: 20, width: 100, height: 50 };
-const quad = DOMQuad.fromRect(rect);
-
-console.log(quad.p1); // DOMPoint {x: 10, y: 20, z: 0, w: 1}
-console.log(quad.p2); // DOMPoint {x: 110, y: 20, z: 0, w: 1}
-console.log(quad.p3); // DOMPoint {x: 110, y: 70, z: 0, w: 1}
-console.log(quad.p4); // DOMPoint {x: 10, y: 70, z: 0, w: 1}
-```
-
 ### Creating a quad from DOMRect
 
 This example shows how to create a `DOMQuad` from a {{domxref("DOMRect")}} object.
