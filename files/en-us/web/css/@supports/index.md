@@ -302,14 +302,42 @@ If a browser doesn't support the font technology, a fallback font (`Bungee-fallb
 
 ### Testing for the support of a font format
 
-The following example applies the CSS style if the browser supports the `woff2` font format:
+The following example uses the WOFF 2 version of the font if the browser supports this font format, otherwise it falls back to the previously specified WOFF 1 version:
 
 ```css
+@font-face {
+  font-family: "Open Sans WOFF 1";
+  src: url("open-sans.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Open Sans WOFF 2";
+  src: url("open-sans.woff2") format("woff2");
+}
+
+body {
+  font-family: "Open Sans WOFF 1", sans-serif;
+}
+
 @supports font-format(woff2) {
-  p {
-    font-family: "Open Sans", sans-serif;
-    src: url("open-sans.woff2") format("woff2");
+  body {
+    font-family: "Open Sans WOFF 2", sans-serif;
   }
+}
+```
+
+However, a more efficient way to specify multiple font formats is to list them in the `src` descriptor of a single {{cssxref("@font-face")}} at-rule in the order from the most preferred format to the least preferred:
+
+```css
+@font-face {
+  font-family: "Open Sans";
+  src:
+    url("open-sans.woff2") format("woff2"),
+    url("open-sans.woff") format("woff");
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
 }
 ```
 
