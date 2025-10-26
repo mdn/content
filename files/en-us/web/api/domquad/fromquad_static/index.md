@@ -20,7 +20,7 @@ DOMQuad.fromQuad(quad)
 ### Parameters
 
 - `quad` {{optional_inline}}
-  - : An object specifying the coordinates for the four corners of the quadrilateral. If not specified, all corners default to `(0, 0, 0, 1)`. This object should usually be another {{domxref("DOMQuad")}} instance. To manually construct the point properties, you should use the {{domxref("DOMQuad.DOMQuad", "DOMQuad()")}} constructor. The object can contain the following properties:
+  - : An object specifying the coordinates for the four corners of the quadrilateral. If not specified, all corners default to `(0, 0, 0, 1)`. The object can contain the following properties:
     - `p1` {{optional_inline}}
       - : A {{domxref("DOMPoint")}} representing one corner of the quad.
     - `p2` {{optional_inline}}
