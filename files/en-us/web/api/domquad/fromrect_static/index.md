@@ -20,7 +20,7 @@ DOMQuad.fromRect(rect)
 ### Parameters
 
 - `rect` {{optional_inline}}
-  - : An object specifying the coordinates of a rectangle. All properties default to `0`. This object should usually be a {{domxref("DOMRect")}} or {{domxref("DOMRectReadOnly")}} instance. To manually construct the rectangle properties, you should use the {{domxref("DOMQuad.DOMQuad", "DOMQuad()")}} constructor. The properties are:
+  - : A {{domxref("DOMRect")}}, {{domxref("DOMRectReadOnly")}}, or an object with the same properties. All properties default to `0`. The properties are:
     - `x`: The x coordinate of the rectangle's origin (top-left corner).
     - `y`: The y coordinate of the rectangle's origin (top-left corner).
     - `width`: The width of the rectangle.
