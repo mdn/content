@@ -10,7 +10,7 @@ browser-compat: api.DOMMatrix.fromFloat32Array_static
 
 The **`fromFloat32Array()`** static method of the {{domxref("DOMMatrix")}} interface creates a new mutable `DOMMatrix` object given an array of single-precision (32-bit) floating-point values.
 
-If the array has six values, the result is a 2D matrix; if the array has 16 values, the result is a 3D matrix.
+If the array has six values, the result is a 2D matrix; if the array has 16 values, the result is a 3D matrix. Otherwise, a {{jsxref("TypeError")}} exception is thrown.
 
 ## Syntax
 
@@ -21,7 +21,7 @@ DOMMatrix.fromFloat32Array(array)
 ### Parameters
 
 - `array`
-  - : A {{jsxref("Float32Array")}}.
+  - : A {{jsxref("Float32Array")}} with 6 or 16 elements in column-major order.
 
 ### Return value
 

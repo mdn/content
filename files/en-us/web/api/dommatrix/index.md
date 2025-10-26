@@ -71,9 +71,9 @@ _This interface includes the following methods, as well as the methods it inheri
 _This interface inherits methods from {{domxref("DOMMatrixReadOnly")}}._
 
 - {{domxref("DOMMatrix.fromFloat32Array_static", "fromFloat32Array()")}}
-  - : Creates a new mutable `DOMMatrix` object given an array of single-precision (32-bit) floating-point values. If the array has six values, the result is a 2D matrix; if the array has 16 values, the result is a 3D matrix. Otherwise, a {{jsxref("TypeError")}} exception is thrown.
+  - : Creates a new mutable `DOMMatrix` object given an array of single-precision (32-bit) floating-point values. If the array has 6 values, the result is a 2D matrix; if the array has 16 values, the result is a 3D matrix. Otherwise, a {{jsxref("TypeError")}} exception is thrown.
 - {{domxref("DOMMatrix.fromFloat64Array_static", "fromFloat64Array()")}}
-  - : Creates a new mutable `DOMMatrix` object given an array of double-precision (64-bit) floating-point values. If the array has six values, the result is a 2D matrix; if the array has 16 values, the result is a 3D matrix. Otherwise, a {{jsxref("TypeError")}} exception is thrown.
+  - : Creates a new mutable `DOMMatrix` object given an array of double-precision (64-bit) floating-point values. If the array has 6 values, the result is a 2D matrix; if the array has 16 values, the result is a 3D matrix. Otherwise, a {{jsxref("TypeError")}} exception is thrown.
 - {{domxref("DOMMatrix.fromMatrix_static", "fromMatrix()")}}
   - : Creates a new mutable `DOMMatrix` object given an existing matrix or an object which provides the values for its properties.
 
