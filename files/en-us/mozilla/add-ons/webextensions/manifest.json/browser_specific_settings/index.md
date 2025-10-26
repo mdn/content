@@ -55,6 +55,8 @@ Firefox stores browser-specific settings in these sub-keys:
 
 The `gecko` sub-key supports these properties:
 
+- `data_collection_permissions`
+  - : The optional and required data types that the extension collects and transmits for storage and processing outside the extension. For more information, see the Extension Workshop article [Firefox built-in consent for data collection and transmission](https://extensionworkshop.com/documentation/develop/firefox-builtin-data-consent/).
 - `id`
   - : The extension ID. When provided, this property must contain 80 characters or less. See [Extensions and the Add-on ID](https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/) to determine when to specify the ID.
 - `strict_min_version`
