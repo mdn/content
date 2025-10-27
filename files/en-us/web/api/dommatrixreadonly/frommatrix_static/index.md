@@ -20,27 +20,31 @@ DOMMatrixReadOnly.fromMatrix(other)
 ### Parameters
 
 - `other` {{optional_inline}}
-  - : An existing matrix or an object providing the matrix values. If not specified, the matrix is initialized with every element set to `0` _except_ the bottom-right corner and the element immediately above and to its left: `m33` and `m34`. These have the default value of `1`.
-
-    This should usually be another {{domxref("DOMMatrix")}} or {{domxref("DOMMatrixReadOnly")}} instance. To manually construct the matrix properties, you should use the {{domxref("DOMMatrixReadOnly.DOMMatrixReadOnly", "DOMMatrixReadOnly()")}} constructor.
-
-    The object can contain any of the following properties:
-    - `m11`, `m12`, `m13`, `m14`, `m21`, `m22`, `m23`, `m24`, `m31`, `m32`, `m33`, `m34`, `m41`, `m42`, `m43`, `m44`
-      - : Double-precision floating-point values representing each component of a 4×4 matrix, where `m11` through `m14` are the first column, `m21` through `m24` are the second column, and so forth.
-    - `a`, `b`, `c`, `d`, `e`, `f`
-      - : Double-precision floating-point values representing the components of a 4×4 matrix which are required in order to perform 2D rotations and translations. These are aliases for specific components of a 4×4 matrix: `a` = `m11`, `b` = `m12`, `c` = `m21`, `d` = `m22`, `e` = `m41`, `f` = `m42`.
+  - : A {{domxref("DOMMatrix")}}, {{domxref("DOMMatrixReadOnly")}}, or an object with the same properties. All properties default to `0`. The properties are:
     - `is2D`
-      - : A Boolean flag whose value is `true` if the matrix was initialized as a 2D matrix. If `false`, the matrix is 3D.
+      - : A boolean. `true` if the matrix should be created as a 2D matrix. Defaults to `false` if at least one of `m13`, `m14`, `m23`, `m24`, `m31`, `m32`, `m34`, or `m43` is non-zero, or at least one of `m33` or `m44` is not 1; otherwise, defaults to `true`.
+    - `m11`, `m12`, `m13`, `m14`, `m21`, `m22`, `m23`, `m24`, `m31`, `m32`, `m33`, `m34`, `m41`, `m42`, `m43`, `m44`
+      - : Numbers representing each component of a 4×4 matrix, where `m11` through `m14` are the first column, `m21` through `m24` are the second column, and so forth. `m11`, `m22`, `m33`, and `m44` default to `1`, and all other components default to `0`.
+
+        If `is2D` is explicitly set to `true`, `m13`, `m14`, `m23`, `m24`, `m31`, `m32`, `m34`, or `m43` must either be omitted or set to `0`, and `m33` and `m44` must either be omitted or set to `1`.
+
+    - `a`, `b`, `c`, `d`, `e`, `f`
+      - : Aliases for `m11`, `m12`, `m21`, `m22`, `m41`, and `m42`, respectively, for convenience when initializing 2D matrices. If these aliases are provided with the `m` counterparts, their values must be equal.
 
 ### Return value
 
-A {{domxref("DOMMatrixReadonly")}} object.
+A {{domxref("DOMMatrixReadOnly")}} object.
+
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if the provided object's properties are inconsistent (for example, if both `a` and `m11` are provided but have different values).
 
 ## Examples
 
 ### Creating a matrix from an object
 
-This example creates a `DOMMatrixReadonly` by providing matrix values in an object.
+This example creates a `DOMMatrixReadOnly` by providing matrix values in an object.
 
 ```js
 const matrix = DOMMatrixReadOnly.fromMatrix({
@@ -65,17 +69,11 @@ console.log(matrix.is2D);
 This example creates a new `DOMMatrixReadOnly` from an existing `DOMMatrixReadOnly`.
 
 ```js
-const readOnlyMatrix = new DOMMatrixReadOnly([1, 0, 0, 1, 100, 100]);
-const mutableMatrix = DOMMatrixReadOnly.fromMatrix(readOnlyMatrix);
+const matrix1 = new DOMMatrixReadOnly([1, 0, 0, 1, 100, 100]);
+const matrix2 = DOMMatrixReadOnly.fromMatrix(matrix1);
 
-console.log(mutableMatrix.toString());
+console.log(matrix2.toString());
 // Output: matrix(1, 0, 0, 1, 100, 100)
-
-// The returned matrix is mutable
-mutableMatrix.translateSelf(50, 25);
-
-console.log(mutableMatrix.toString());
-// Output: matrix(1, 0, 0, 1, 150, 125)
 ```
 
 ### Creating a default identity matrix
@@ -103,4 +101,5 @@ console.log(identityMatrix.isIdentity);
 ## See also
 
 - {{domxref("DOMMatrixReadOnly.DOMMatrixReadOnly", "DOMMatrixReadOnly()")}} constructor
-- {{domxref("DOMMatrix.DOMMatrix", "DOMMatrix()")}} constructor
+- {{domxref("DOMMatrixReadOnly.fromFloat32Array_static", "DOMMatrixReadOnly.fromFloat32Array()")}}
+- {{domxref("DOMMatrixReadOnly.fromFloat64Array_static", "DOMMatrixReadOnly.fromFloat64Array()")}}

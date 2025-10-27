@@ -25,7 +25,12 @@ DOMMatrixReadOnly.fromFloat32Array(array)
 
 ### Return value
 
-A {{domxref("DOMMatrixReadonly")}} object.
+A {{domxref("DOMMatrixReadOnly")}} object.
+
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if the length of the `array` parameter is not 6 or 16.
 
 ## Examples
 
@@ -71,5 +76,8 @@ console.log(matrix3D.m41, matrix3D.m42, matrix3D.m43);
 
 ## See also
 
+- {{domxref("DOMMatrixReadOnly/DOMMatrixReadOnly", "DOMMatrixReadOnly()")}}
 - {{domxref("DOMMatrixReadOnly.toFloat32Array()")}}
 - {{domxref("DOMMatrixReadOnly.toFloat64Array()")}}
+- {{domxref("DOMMatrixReadOnly.fromFloat64Array_static", "DOMMatrixReadOnly.fromFloat64Array()")}}
+- {{domxref("DOMMatrixReadOnly.fromMatrix_static", "DOMMatrixReadOnly.fromMatrix()")}}
