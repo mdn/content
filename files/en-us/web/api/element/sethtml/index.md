@@ -146,12 +146,11 @@ We also define the handler for the reload button.
 
 ```js
 // Define unsafe string of HTML
-const unsanitizedString = `
-  <div>
+const unsanitizedString =
+  `<div>
     <p>This is a paragraph. <button onclick="alert('You clicked the button!')">Click me</button></p>
-    <script src="path/to/a/module.js" type="module"></script>
-  </div>
-`;
+    <script src="path/to/a/module.js" type="module"><\/script>
+  </div>`;
 
 const reload = document.querySelector("#reload");
 reload.addEventListener("click", () => document.location.reload());
