@@ -9,7 +9,7 @@ browser-compat: api.Range.Range
 {{ APIRef("DOM") }}
 
 The **`Range()`** constructor returns a newly created
-{{domxref("Range")}} object whose start and end is the global {{domxref("Document")}}
+{{domxref("Range")}} object whose start and end is offset 0 of the the global {{domxref("Window/document", "document")}}
 object.
 
 ## Syntax

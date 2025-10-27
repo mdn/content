@@ -9,7 +9,8 @@ browser-compat: api.Document.createRange
 {{APIRef("DOM")}}
 
 The **`Document.createRange()`** method returns a new
-{{domxref("Range")}} object.
+{{domxref("Range")}} object whose start and end is offset 0 of the {{domxref("Document")}}
+object on which it was called.
 
 ## Syntax
 
