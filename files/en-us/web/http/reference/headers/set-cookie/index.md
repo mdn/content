@@ -74,7 +74,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 
     Only the current domain can be set as the value, or a domain of a higher order, unless it is a public suffix. Setting the domain will make the cookie available to it, as well as to all its subdomains.
 
-    If omitted, the cookie is returned only to the host that sent them (i.e. it becomes a "host-only cookie").
+    If omitted, the cookie is returned only to the host that sent them (i.e., it becomes a "host-only cookie").
     This is more restrictive than setting the host name, as the cookie is not made available to subdomains of the host.
 
     Contrary to earlier specifications, leading dots in domain names (`.example.com`) are ignored.
