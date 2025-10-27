@@ -137,6 +137,27 @@ const text =
 async function digestMessage(message) {
   const msgUint8 = new TextEncoder().encode(message); // encode as (utf-8) Uint8Array
   const hashBuffer = await window.crypto.subtle.digest("SHA-256", msgUint8); // hash the message
+  const hashHex = new Uint8Array(hashBuffer).toHex(); // Convert ArrayBuffer to hex string.
+  return hashHex;
+}
+
+digestMessage(text).then((digestHex) => console.log(digestHex));
+```
+
+The above example uses {{jsxref("Uint8Array.fromHex()")}}, which became available in 2025.
+To support older browsers, the following alternative can be used instead:
+
+```js
+const text =
+  "An obscure body in the S-K System, your majesty. The inhabitants refer to it as the planet Earth.";
+
+async function digestMessage(message) {
+  const msgUint8 = new TextEncoder().encode(message); // encode as (utf-8) Uint8Array
+  const hashBuffer = await window.crypto.subtle.digest("SHA-256", msgUint8); // hash the message
+  if (Uint8Array.prototype.toHex) { // Use toHex if supported.
+    return new Uint8Array(hashBuffer).toHex(); // Convert ArrayBuffer to hex string.
+  }
+  // If toHex() is not supported, fall back to an alternative implementation.
   const hashArray = Array.from(new Uint8Array(hashBuffer)); // convert buffer to byte array
   const hashHex = hashArray
     .map((b) => b.toString(16).padStart(2, "0"))
@@ -160,3 +181,4 @@ digestMessage(text).then((digestHex) => console.log(digestHex));
 - [Non-cryptographic uses of SubtleCrypto](/en-US/docs/Web/API/Web_Crypto_API/Non-cryptographic_uses_of_subtle_crypto)
 - [Chromium secure origins specification](https://www.chromium.org/Home/chromium-security/prefer-secure-origins-for-powerful-new-features/)
 - [FIPS 180-4](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf) specifies the SHA family of digest algorithms.
+- {{jsxref("Uint8Array.toHex()")}}
