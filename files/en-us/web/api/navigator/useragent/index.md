@@ -14,23 +14,15 @@ The **`Navigator.userAgent`** read-only property of the {{domxref("Navigator")}}
 
 A string specifying the browser's complete UA string.
 
-The browser also provides this via the {{HTTPHeader("User-agent")}} HTTP header. Parts of this information are also available in {{Glossary("HTTP")}} headers such as [User-Agent client hints](/en-US/docs/Web/HTTP/Guides/Client_hints) and other related API features such as {{domxref("Navigator.appVersion")}} and {{domxref("Navigator.platform")}}.
-
-The UA string is built on a formal structure, which can be decomposed into several pieces of information. For more information about the form of the UA string, see the {{HTTPHeader("User-agent")}} HTTP header.
-
 ## Description
 
-The `userAgent` property provides the current browser's UA string. Theoretically this is useful for detecting the browser and serving code to work around browser-specific bugs or lack of feature support. However, browser identification based on detecting the UA string is **unreliable** and **is not recommended**:
+The `userAgent` property provides the current browser's UA string. The UA string is built on a formal structure, which can be decomposed into several pieces of information.
 
-- Future browsers will fix bugs and add support for new features, so your browser detection code will need to be regularly updated to avoid locking out browsers that do actually support the features you are testing for. [Feature detection](/en-US/docs/Learn_web_development/Extensions/Testing/Feature_detection) is a much more reliable strategy.
-- You really have no guarantee that the user agent advertised by this property is really the one your site is loaded in. Browser vendors can basically do what they like with the UA string, and some browsers enable users to change the value of this field if they want (**UA spoofing**).
-- Even the specification asks browsers to provide as little information via this property as possible.
+The browser also provides the UA string via the {{HTTPHeader("User-Agent")}} HTTP header. Parts of this information are also available in {{Glossary("HTTP")}} headers such as [User-Agent client hints](/en-US/docs/Web/HTTP/Guides/Client_hints) and other related API features such as {{domxref("Navigator.appVersion")}} and {{domxref("Navigator.platform")}}.
 
-See [Browser detection using the user agent](/en-US/docs/Web/HTTP/Guides/Browser_detection_using_the_user_agent) for more information on why serving different content to different browsers is usually a bad idea, and recommendations for what you should do instead.
+Theoretically this information is useful for detecting the browser and serving code to work around browser-specific bugs or lack of feature support. However, this is **unreliable** and **is not recommended** for the reasons given in [User-Agent reduction](/en-US/docs/Web/HTTP/Guides/User-agent_reduction) and [Browser detection using the user agent](/en-US/docs/Web/HTTP/Guides/Browser_detection_using_the_user_agent).
 
-### User-Agent reduction
-
-The information exposed in the `userAgent` property has historically raised [privacy](/en-US/docs/Web/Privacy) concerns — it can be used to identify a particular user agent, and can therefore be used for {{glossary("fingerprinting")}}. To mitigate such concerns, [supporting browsers](#browser_compatibility) provide a reduced set of information in their {{HTTPHeader("User-agent")}} header, the `userAgent` property, and other related properties. For more information, see [User-Agent reduction](/en-US/docs/Web/HTTP/Guides/User-agent_reduction).
+[Feature detection](/en-US/docs/Learn_web_development/Extensions/Testing/Feature_detection) is a much more reliable strategy.
 
 ## Examples
 

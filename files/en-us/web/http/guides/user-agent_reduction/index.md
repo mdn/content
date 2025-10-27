@@ -5,9 +5,32 @@ page-type: guide
 sidebar: http
 ---
 
-The information exposed in the {{httpheader("User-Agent")}} HTTP header has historically raised [privacy](/en-US/docs/Web/Privacy) concerns — it can be used to identify a particular user agent, and can therefore be used for {{glossary("fingerprinting")}}. To mitigate such concerns, **User-Agent reduction** provides a reduced set of information in the browser `User-Agent` header, and in related API features such as {{domxref("Navigator.userAgent")}}, {{domxref("Navigator.appVersion")}}, and {{domxref("Navigator.platform")}}.
+This article explains the differences in user agent (UA) strings as a result of **User-Agent reduction**, and explains how you can access both the redacted and additional UA information if it is needed.
 
-This article explains the differences in user agent (UA) strings as a result of User-Agent reduction, and explains modern strategies for accessing further UA information if required.
+## Background
+
+The user agent (UA) string — available in the {{httpheader("User-Agent")}} HTTP header and in related API features such as {{domxref("Navigator.userAgent")}}, {{domxref("Navigator.appVersion")}}, and {{domxref("Navigator.platform")}} — allows servers and network peers identify the application, operating system, vendor, and/or version of the requesting {{Glossary("user agent")}}.
+
+### Browser detection
+
+Theoretically the UA string is useful for detecting the browser and serving code to work around browser-specific bugs or lack of feature support. However, this is **unreliable** and **is not recommended**:
+
+- Future browsers will fix bugs and add support for new features, so your browser detection code will need to be regularly updated to avoid locking out browsers that do actually support the features you are testing for. [Feature detection](/en-US/docs/Learn_web_development/Extensions/Testing/Feature_detection) is a much more reliable strategy.
+- You really have no guarantee that the user agent advertised by this property is really the one your site is loaded in. Browser vendors can basically do what they like with the UA string, and some browsers enable users to change the value of this field if they want (**UA spoofing**).
+- Browser detection lead to a situation where browsers had to return fake values from such properties in order not to be locked out of some websites.
+
+The following are much more reliable strategies for working around bugs and differing browser support:
+
+- [Feature detection](/en-US/docs/Learn_web_development/Extensions/Testing/Feature_detection): Detecting support for a feature, rather than the browser version.
+- [Progressive enhancement](/en-US/docs/Glossary/Progressive_Enhancement): Providing a baseline of essential content and functionality to as many users as possible, while delivering the best possible experience to browsers that can run all the required code.
+
+Also see [Browser detection using the user agent](/en-US/docs/Web/HTTP/Guides/Browser_detection_using_the_user_agent) for more information on why serving different content to different browsers is usually a bad idea.
+
+### Privacy concerns
+
+In addition, the information exposed in the UA string has historically raised [privacy](/en-US/docs/Web/Privacy) concerns — it can be used to identify a particular user agent, and can therefore be used for {{glossary("fingerprinting")}}.
+
+To mitigate such concerns, [supporting browsers](/en-US/docs/Web/HTTP/Reference/Headers/User-Agent#browser_compatibility) implement user-agent reduction, which updates the `User-agent` header and related API features to provide a reduced set of information.
 
 ## UA string differences resulting from User-Agent reduction
 
@@ -29,7 +52,7 @@ The below sections provide more detail about each of the US string changes.
 
 ### Platform/OS version and device model
 
-The platform version and devce model are always represented by fixed values:
+The platform version and device model are always represented by fixed values:
 
 - `Android 10; K` on Android.
 - `Macintosh; Intel Mac OS X 10_15_7` on macOS.
@@ -41,137 +64,21 @@ The platform version and devce model are always represented by fixed values:
 
 The major browser version number shows correctly, but the minor version numbers are always shown as zeros — `0.0.0`.
 
-## Alternatives to UA string browser sniffing
-
-Theoretically, the information available in the UA string is useful for detecting the browser and serving code to work around browser-specific bugs or lack of feature support. However, in addition to the privacy concerns mentioned earlier, browser identification based on detecting the UA string is **unreliable** and **is not recommended**:
-
-- Future browsers will fix bugs and add support for new features, so your browser detection code will need to be regularly updated to avoid locking out browsers that do actually support the features you are testing for.
-- You really have no guarantee that the user agent advertised by this property is really the one your site is loaded in. Browser vendors can basically do what they like with the UA string, and some browsers enable users to change the value of this field if they want (**UA spoofing**).
-
-The following are much more reliable strategies for working around bugs and differing browser support:
-
-- [Feature detection](/en-US/docs/Learn_web_development/Extensions/Testing/Feature_detection): Detecting support for a feature, rather than the browser version.
-- [Progressive enhancement](/en-US/docs/Glossary/Progressive_Enhancement): Providing a baseline of essential content and functionality to as many users as possible, while delivering the best possible experience to browsers that can run all the required code.
-
-Also see [Browser detection using the user agent](/en-US/docs/Web/HTTP/Guides/Browser_detection_using_the_user_agent) for more information on why serving different content to different browsers is usually a bad idea.
-
 ## Requesting detailed UA information via client hints
 
 You may still have code that relies on detailed UA string data, which can't be coverted to use feature detection or progressive enhancement. Examples include fine-grained logging, fraud prevention measures, or a software help site that serves different content based on the user's device type.
 
-If this is the case, you can still access detailed UA string data via [`Sec-CH-UA-*`](/en-US/docs/Web/HTTP/Reference/Headers#user_agent_client_hints) headers (aka **User-Agent client hints**). The headers provide a safer, more privacy-preserving way to send such information because servers have to opt in to the pieces of information they want, rather it being sent all the time through the `User-Agent` string. It also provides access to a wider selection of information.
-
-> [!NOTE]
-> You can also [access client hint information via JavaScript](#accessing_client_hints_via_javascript).
-
-Client hints are used like so:
-
-1. When the browser first makes a request to load a webpage, it will send the reduced `User-Agent` header (as detailed earlier) to the server.
-2. Additionally, it will send the server a default set of `Sec-CH-UA-*` headers. The Android example we looked at earlier would send the following:
-
-   ```http
-   Sec-CH-UA: "Google Chrome";v="143", "Chromium";v="143", "Not A(Brand";v="24"
-   Sec-CH-UA-Platform: "Android"
-   Sec-CH-UA-Mobile: ?1
-   ```
-
-   These headers provide the following information:
-   - {{httpheader("Sec-CH-UA")}}: The major browser version and other brands associated with it.
-   - {{httpheader("Sec-CH-UA-Platform")}}: The platform.
-   - {{httpheader("Sec-CH-UA-Mobile")}}: A boolean that indicates whether the browser is running on a mobile device (`?1`) or not (`?0`).
-
-3. The server can request additional client hints using the {{httpheader("Accept-CH")}} response header, which contains a comma-delimited list of the additional headers it would like to receive in subsequent requests. For example:
-
-   ```http
-   Accept-CH: Sec-CH-UA-Model, Sec-CH-UA-Form-Factors
-   ```
-
-   The default set of headers are always sent. In addition to those, we've also requested:
-   - {{httpheader("Sec-CH-UA-Model")}}: The device model the platform is running on.
-   - {{httpheader("Sec-CH-UA-Form-Factors")}}: The device's form factor(s), which indicate how the user interacts with the user-agent — the screen size, controls, etc.
-
-4. If the browser is permitted to send the server all the requested information, it will do so along with all subsequent requests until the browser or tab is closed. For example, our example Android phone might send the following updated headers with subsequent requests:
-
-   ```http
-   Sec-CH-UA: "Google Chrome";v="143", "Chromium";v="143", "Not A(Brand";v="24"
-   Sec-CH-UA-Platform: "Android"
-   Sec-CH-UA-Mobile: ?1
-   Sec-CH-UA-Model: "Pixel 9"
-   Sec-CH-UA-Form-Factors: "Mobile"
-   ```
+If this is the case, you can still access detailed UA string data via [`Sec-CH-UA-*`](/en-US/docs/Web/HTTP/Reference/Headers#user_agent_client_hints) headers (also known as **User-Agent client hints**). The headers provide a safer, more privacy-preserving way to send such information because servers have to opt in to the pieces of information they want, rather it being sent all the time through the `User-Agent` string. It also provides access to a wider selection of information.
 
 For more information, see [User-Agent client hints](/en-US/docs/Web/HTTP/Guides/Client_hints).
 
-### Low- and high-entropy hints
-
-Client hints are divided in low-entropy and high-entropy hints:
-
-- The default hints are considered low-entropy hints because they don't give away much information that could be used to fingerprint a user.
-- All other hints are considered high-entropy — they could potentially be used for fingerprinting, so they are controlled by {{httpheader("Permissions-Policy")}} headers.
-
-By default, high-entropy hints can only be sent for the top-level site (you have to opt-in to send them across cross-site frame boundaries). See [Policy-controlled features](https://wicg.github.io/client-hints-infrastructure/#policy-controlled-features) for a list of the associated `Permissions-Policy` directives.
-
-### Critical client hints
-
-If you need a specific set of client hints sent in your initial request for the initial page rendering to work, you can use the {{httpheader("Critical-CH")}} response header. `Critical-CH` values must be a subset of the values requested by `Accept-CH`.
-
-For example, the initial response may include a request for {{httpheader("Device-Memory")}} and {{httpheader("Viewport-Width")}}, where `Device-Memory` is considered critical:
-
-```http
-GET / HTTP/1.1
-Host: example.com
-
-HTTP/1.1 200 OK
-Content-Type: text/html
-Accept-CH: Device-Memory, Viewport-Width
-Vary: Device-Memory, Viewport-Width
-Critical-CH: Device-Memory
-```
-
-This will cause the browser to send a new request for the page, including the critical hint.
-
-In summary, `Accept-CH` requests all values you'd like for the page, while `Critical-CH` requests only the subset of values you must have on-load to properly load the page.
-
 ## Accessing client hints via JavaScript
 
-The [User-Agent Client Hints API](/en-US/docs/Web/API/User-Agent_Client_Hints_API) allows you to access client-hint information via JavaScript. The {{domxref("Navigator.userAgentData")}} property provides access to the {{domxref("NavigatorUAData")}} object, which contains the client hints.
+The [User-Agent Client Hints API](/en-US/docs/Web/API/User-Agent_Client_Hints_API) allows you to access client-hint information via JavaScript. The {{domxref("Navigator.userAgentData")}} property provides access to the {{domxref("NavigatorUAData")}} object, which contains properties representing the low-entropy client hints.
 
-For example, if we consider our `Accept-CH` example from earlier:
+To access high-entropy hints like `Sec-CH-UA-Model` and `Sec-CH-UA-Form-Factors`, you need to use the {{domxref("NavigatorUAData.getHighEntropyValues()")}} method.
 
-```http
-  Accept-CH: Sec-CH-UA, Sec-CH-UA-Platform, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Form-Factors
-```
-
-Once the server sends this header, provided there is nothing blocking the browser from providing this information, we can access the `Sec-CH-UA`, `Sec-CH-UA-Platform`, and `Sec-CH-UA-Mobile` values using properties on the `NavigatorUAData` object:
-
-```js
-console.log(navigator.userAgentData.brands[0].brand);
-console.log(navigator.userAgentData.brands[0].version);
-// The browser and version
-// For example "Chrome" and "143"
-
-console.log(navigator.userAgentData.platform);
-// The platform/OS, for example "macOS"
-
-console.log(navigator.userAgentData.mobile);
-// Whether the browser is running on a mobile device: true or false
-```
-
-To access high-entropy hints like `Sec-CH-UA-Model` and `Sec-CH-UA-Form-Factors`, you need to use the {{domxref("NavigatorUAData.getHighEntropyValues()")}} method. This takes an array of the requested hints as an argument and returns a promise that fulfills with an object containing the requested hint values.
-
-For example:
-
-```js
-navigator.userAgentData
-  .getHighEntropyValues(["model", "formFactors"])
-  .then((values) => {
-    console.log(values.model);
-    console.log(values.formFactors);
-    // For example
-    // "Pixel 9"
-    // ["Mobile"]
-  });
-```
+For more information, see the [User-Agent Client Hints API](/en-US/docs/Web/API/User-Agent_Client_Hints_API).
 
 ## See also
 

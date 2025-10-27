@@ -66,7 +66,7 @@ Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome
 - The device model is always a fixed value, in this case, `K`.
 - The Chrome major version number shows correctly, but the minor version numbers are always shown as zeros — `0.0.0`.
 
-Servers that want to request more information can do so using [User-Agent client hints](/en-US/docs/Web/HTTP/Guides/Client_hints). After the initial connection, the server can send an {{httpheader("Accept-CH")}} response header detailing the data items they want, and the client can then send the data back via [`Sec-CH-UA-*`](/en-US/docs/Web/HTTP/Reference/Headers#user_agent_client_hints) headers. This information can also be accessed via the [User-Agent Client Hints API](/en-US/docs/Web/API/User-Agent_Client_Hints_API).
+Servers that need more information can request it via [User-Agent client hints](/en-US/docs/Web/HTTP/Guides/Client_hints). After the initial connection, the server can send an {{httpheader("Accept-CH")}} response header detailing the data items they want, and the client can then send the data back via [`Sec-CH-UA-*`](/en-US/docs/Web/HTTP/Reference/Headers#user_agent_client_hints) headers. This information can also be accessed via the [User-Agent Client Hints API](/en-US/docs/Web/API/User-Agent_Client_Hints_API).
 
 For more detailed information, including a guide to retrieving more information as required, see [User-Agent reduction](/en-US/docs/Web/HTTP/Guides/User-agent_reduction). You can also find examples of reduced `User-Agent` strings in the following sections.
 
@@ -84,7 +84,7 @@ Mozilla/5.0 (platform; rv:gecko-version) Gecko/gecko-trail Firefox/firefox-versi
 4. **_Gecko/gecko-trail_** indicates that the browser is based on Gecko. (On the desktop, **_gecko-trail_** is always the fixed string `20100101`.)
 5. **_Firefox/firefox-version_** indicates that the browser is Firefox and provides the version (such as "_17.0_").
 
-### Examples
+Desktop examples:
 
 ```plain
 Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0) Gecko/20100101 Firefox/47.0
@@ -96,9 +96,7 @@ Mozilla/5.0 (Macintosh; Intel Mac OS X x.y; rv:42.0) Gecko/20100101 Firefox/42.0
 
 The Chrome (or Chromium/Blink-based engines) user agent string is similar to Firefox's. For compatibility, it adds strings like `KHTML, like Gecko` and `Safari`. It adds `"CriOS/<version>"` on iPhone.
 
-### Examples
-
-Desktop example:
+Desktop examples:
 
 ```plain
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
@@ -112,17 +110,9 @@ Android phone example:
 Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Mobile Safari/537.36
 ```
 
-#### Pre-User-Agent reduction example
-
-```plain
-Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36
-```
-
 ## Opera UA string
 
 The Opera browser is also based on the Blink engine, which is why it almost looks the same as the Chrome UA string, but adds `"OPR/<version>"` on desktop and Android, and `"OPT/<version>"` on iPhone. For preview versions, Opera also includes a description of the particular browser edition in parentheses, for example `(Edition developer)`.
-
-### Examples
 
 Desktop examples:
 
@@ -138,25 +128,9 @@ Android phone example:
 Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Mobile Safari/537.36 OPR/92.0.0.0
 ```
 
-#### Pre-User-Agent reduction examples
-
-```plain
-Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.106 Safari/537.36 OPR/38.0.2220.41
-```
-
-Older, Presto-based Opera releases used:
-
-```plain
-Opera/9.80 (Macintosh; Intel Mac OS X; U; en) Presto/2.2.15 Version/10.00
-
-Opera/9.60 (Windows NT 6.0; U; en) Presto/2.1.1
-```
-
 ## Microsoft Edge UA string
 
 The Edge browser is also based on the Blink engine. It adds `"Edg/<version>"` on desktop platforms, `"EdgA/<version>"` on Android, and `"EdgiOS/<version>"` on iPhone.
-
-### Examples
 
 Desktop examples:
 
@@ -172,20 +146,12 @@ Android phone example:
 Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Mobile Safari/537.36 EdgA/141.0.0.0
 ```
 
-#### Pre-User-Agent reduction example
-
-```plain
-Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 Edg/91.0.864.59
-```
-
 ## Safari UA string
 
 Safari is based on the WebKit engine, but its UA string is also similar to the Blink-based browsers. It tends to include a `Version/xxx` string before the actual engine build version to indicate the browser release version, which unlike Blink-based browsers is different. In the case of iPhone (Mobile) Safari, the string also includes `Mobile`.
 
 > [!NOTE]
 > At the time of writing, non-Apple iPhone browsers (such as Firefox, Chrome, and Edge) are still based on WebKit, therefore their UA strings are similar to the Safari UA string.
-
-### Examples
 
 Desktop example:
 
@@ -197,6 +163,36 @@ iPhone example:
 
 ```plain
 Mozilla/5.0 (iPhone; CPU iPhone OS 18_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.0 Mobile/15E148 Safari/604.1
+```
+
+## Pre-user-agent reduction examples
+
+This section provides some examples of UA strings prior to user-agent reduction:
+
+Google Chrome:
+
+```plain
+Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36
+```
+
+Microsoft Edge:
+
+```plain
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 Edg/91.0.864.59
+```
+
+Opera:
+
+```plain
+Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.106 Safari/537.36 OPR/38.0.2220.41
+```
+
+Older, Presto-based Opera releases used a structure like this:
+
+```plain
+Opera/9.80 (Macintosh; Intel Mac OS X; U; en) Presto/2.2.15 Version/10.00
+
+Opera/9.60 (Windows NT 6.0; U; en) Presto/2.1.1
 ```
 
 ## Crawler and bot UA strings

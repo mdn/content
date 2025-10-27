@@ -13,34 +13,41 @@ The set of "hint" headers are listed in the topic [HTTP Headers](/en-US/docs/Web
 
 ## Overview
 
-When the browser first makes a request to load a webpage, it will send a {{httpheader("User-Agent")}} header and a default set of `Sec-CH-UA-*` headers along with the initial request. An Android device, for example, might send the following:
+1. When the browser first makes a request to load a webpage, it will send the {{httpheader("User-Agent")}} header to the server.
+2. Additionally, it will send the server a default set of `Sec-CH-UA-*` headers; this set of hints are referred to as the [low entropy hints](#low_entropy_hints). An Android device, for example, would send something like this:
 
-```http
-User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Mobile Safari/537.36
-Sec-CH-UA: "Google Chrome";v="143", "Chromium";v="143", "Not A(Brand";v="24"
-Sec-CH-UA-Platform: "Android"
-Sec-CH-UA-Mobile: ?1
-```
+   ```http
+   Sec-CH-UA: "Google Chrome";v="143", "Chromium";v="143", "Not A(Brand";v="24"
+   Sec-CH-UA-Platform: "Android"
+   Sec-CH-UA-Mobile: ?1
+   ```
 
-These `CH-UA` headers provide the following information:
+   These headers provide the following information:
+   - {{httpheader("Sec-CH-UA")}}: The major browser version and other brands associated with it.
+   - {{httpheader("Sec-CH-UA-Platform")}}: The platform.
+   - {{httpheader("Sec-CH-UA-Mobile")}}: A boolean that indicates whether the browser is running on a mobile device (`?1`) or not (`?0`).
 
-- {{httpheader("Sec-CH-UA")}}: The major browser version and other brands associated with it.
-- {{httpheader("Sec-CH-UA-Platform")}}: The platform.
-- {{httpheader("Sec-CH-UA-Mobile")}}: A boolean that indicates whether the browser is on a mobile device (`?1`) or not (`?0`).
+3. The server can announce that it supports client hints and request additional client hints using the {{httpheader("Accept-CH")}} response header, which contains a comma-delimited list of the additional headers it would like to receive in subsequent requests. For example:
 
-In response, the server can announce that it supports client hints and specify the hints that it is interested in receiving using the {{HTTPHeader("Accept-CH")}} header (or {{HTTPHeader("Critical-CH")}}; see [Critical client hints](#critical_client_hints)).
-When a client that supports client hints receives the `Accept-CH` header it can choose to append some or all of the listed client hint headers in its subsequent requests.
+   ```http
+   Accept-CH: Sec-CH-UA-Model, Sec-CH-UA-Form-Factors
+   ```
 
-For example, following `Accept-CH` in a response below, the client could append {{HTTPHeader("Width")}}, {{HTTPHeader("Downlink")}} and {{HTTPHeader("Sec-CH-UA")}} headers to all subsequent requests.
+   The default set of headers are always sent. In addition to those, we've also requested:
+   - {{httpheader("Sec-CH-UA-Model")}}: The device model the platform is running on.
+   - {{httpheader("Sec-CH-UA-Form-Factors")}}: The device's form factor(s), which indicate how the user interacts with the user-agent — the screen size, controls, etc.
 
-```http
-Accept-CH: Width, Downlink, Sec-CH-UA
-```
+4. If the browser is permitted to send the server all the requested information, it will do so along with all subsequent requests until the browser or tab is closed. For example, our example Android phone might send the following updated headers with subsequent requests:
 
-This approach is efficient in that the server only requests the information that it is able to usefully handle.
-It is also relatively "privacy-preserving", in that it is up to the client to decide what information it can safely share.
+   ```http
+   Sec-CH-UA: "Google Chrome";v="143", "Chromium";v="143", "Not A(Brand";v="24"
+   Sec-CH-UA-Platform: "Android"
+   Sec-CH-UA-Mobile: ?1
+   Sec-CH-UA-Model: "Pixel 9"
+   Sec-CH-UA-Form-Factors: "Mobile"
+   ```
 
-There is a small set of [low entropy client hint headers](#low_entropy_hints) that may be sent by a client even if not requested.
+This approach is efficient in that the server only requests the information that it is able to usefully handle. It is also relatively "privacy-preserving", in that it is up to the client to decide what information it can safely share.
 
 > [!NOTE]
 > Client hints can also be specified in HTML using the {{HTMLElement("meta")}} element with the [`http-equiv`](/en-US/docs/Web/HTML/Reference/Elements/meta/http-equiv) attribute.
@@ -78,7 +85,7 @@ For example, to stop requesting any hints it would send `Accept-CH` with an empt
 ## Low entropy hints
 
 Client hints are broadly divided into high and low entropy hints.
-The low entropy hints are those that don't give away much information that might be used to create a [fingerprinting](/en-US/docs/Glossary/Fingerprinting) for a user.
+The low entropy hints are those that don't give away much information that might be used to [fingerprint](/en-US/docs/Glossary/Fingerprinting) a user.
 They may be sent by default on every client request, irrespective of the server `Accept-CH` response header, depending on the permission policy.
 Low entropy hints are:
 
@@ -122,6 +129,8 @@ GET / HTTP/1.1
 Host: example.com
 Sec-CH-Prefers-Reduced-Motion: "reduce"
 ```
+
+In summary, `Accept-CH` requests all values you'd like for the page, while `Critical-CH` requests only the subset of values you must have on-load to properly load the page.
 
 ## Hint types
 
