@@ -9,7 +9,7 @@ sidebar: http
 
 The HTTP **`Sec-Fetch-Storage-Access`** {{Glossary("fetch metadata request header")}} provides the "storage access status" for the current fetch context.
 
-The status indicates that permission to access third party cookies is not granted, has been granted but not activated for the current request context, or that the context has access to the cookies and they have been sent with the request.
+The status indicates that permission to access [unpartitioned](/en-US/docs/Web/Privacy/Guides/State_Partitioning#state_partitioning) third party cookies is not granted, has been granted but not activated for the current request context, or that the context has access to the cookies and they have been sent with the request.
 
 Supporting browsers must include this header on cross-site requests when the request credential mode is [`include`](/en-US/docs/Web/API/Request/credentials#include).
 The header should not be sent with same-site requests (since those requests cannot involve cross-site cookies), or if the request's [credentials mode](/en-US/docs/Web/API/Request/credentials) is "omit".
