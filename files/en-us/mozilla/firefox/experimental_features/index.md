@@ -731,6 +731,26 @@ When `Integrity-Policy` is used, the browser blocks the loading of styles refere
 - `security.integrity_policy.stylesheet.enabled`
   - : Set to `true` to enable.
 
+### Idempotency-Key
+
+The {{httpheader("Idempotency-Key")}} HTTP request header can be used by website client code to make a {{HTTPMethod("POST")}} or {{HTTPMethod("PATCH")}} requests {{glossary("idempotent")}} when used with a corresponding server.
+The specification indicates that the endpoints that require this header, the format of the key, and any error responses are defined by the server.
+
+Firefox _automatically_ adds the header with a unique key for each new `POST` request if it has not already been added by the page client-side code.
+This simplifies the client-side code required to work with servers that support the feature.
+
+([Firefox bug 1830022](https://bugzil.la/1830022)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 135           | No                  |
+| Developer Edition | 135           | No                  |
+| Beta              | 135           | No                  |
+| Release           | 135           | No                  |
+
+- `network.http.idempotencyKey.enabled`
+  - : Set to `true` to enable.
+
 ### Accept header with MIME type image/jxl
 
 The HTTP [`Accept`](/en-US/docs/Web/HTTP/Reference/Headers/Accept) header in [default requests and image requests](/en-US/docs/Web/HTTP/Guides/Content_negotiation/List_of_default_Accept_values) can be configured via a preference to indicate support for the `image/jxl` MIME type.
