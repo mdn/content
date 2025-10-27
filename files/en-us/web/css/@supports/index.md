@@ -275,28 +275,25 @@ ul:has(> li li) {
 
 ### Testing for the support of a font technology
 
-The following example applies the CSS style if the browser supports the `COLRv1` font technology:
+The following example applies the [Bungee Spice](https://fonts.google.com/specimen/Bungee+Spice) color font family if the browser supports the `COLRv1` font technology:
 
 ```css
-@import "https://fonts.googleapis.com/css2?family=Bungee+Spice";
-
 @supports font-tech(color-COLRv1) {
-  p {
+  body {
     font-family: "Bungee Spice", fantasy;
   }
 }
 ```
 
 It's also possible to test for the support of a font technology by using the `tech` function inside the {{CSSxRef("@font-face")}} at-rule.
-If a browser doesn't support the font technology, a fallback font (`Bungee-fallback.otf`) can be used instead.
+If a browser doesn't support the color font technology, a regular [Bungee](https://fonts.google.com/specimen/Bungee) font can be used instead.
 
 ```css
 @font-face {
   font-family: "Bungee Spice";
   src:
-    url("https://fonts.googleapis.com/css2?family=Bungee+Spice")
-      tech(color-COLRv1),
-    url("Bungee-fallback.otf") format("opentype");
+    url("bungee-spice.woff2") tech(color-COLRv1) format("woff2"),
+    url("bungee.woff2") format("woff2");
 }
 ```
 
