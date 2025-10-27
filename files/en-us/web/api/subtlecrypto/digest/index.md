@@ -154,7 +154,8 @@ const text =
 async function digestMessage(message) {
   const msgUint8 = new TextEncoder().encode(message); // encode as (utf-8) Uint8Array
   const hashBuffer = await window.crypto.subtle.digest("SHA-256", msgUint8); // hash the message
-  if (Uint8Array.prototype.toHex) { // Use toHex if supported.
+  if (Uint8Array.prototype.toHex) {
+    // Use toHex if supported.
     return new Uint8Array(hashBuffer).toHex(); // Convert ArrayBuffer to hex string.
   }
   // If toHex() is not supported, fall back to an alternative implementation.
