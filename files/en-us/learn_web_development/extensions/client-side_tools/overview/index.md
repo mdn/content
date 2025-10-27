@@ -61,7 +61,7 @@ Let's look at each one of these in more detail.
 
 The editor, operating system, and browser are all development environments. We will assume that you have already settled down with a choice you are most comfortable with. However, before installing and running other tools, there are yet two choices to make:
 
-- Where you are going to run the tools on. Most tools that are run locally are written in JavaScript, so you need a JavaScript interpreter on your computer that can be invoked from the command line (not the one in your browser). [Node.js](https://nodejs.org/) remains the industry standard and we will use it. [Bun](https://bun.sh/) is intended as a drop-in replacement for Node.js, known for its speed and powerful APIs.
+- Where you are going to run the tools on. Most tools that are run locally are written in JavaScript, so you need a JavaScript interpreter on your computer that can be invoked from the command line (not the one in your browser). [Node.js](https://nodejs.org/) remains the industry standard and we will use it. [Bun](https://bun.com/) is intended as a drop-in replacement for Node.js, known for its speed and powerful APIs.
 - How you are going to install the tools, in other words, the _package manager_. Node provides [npm](https://www.npmjs.com/) by default, so we will use it. [Yarn](https://yarnpkg.com/) and [pnpm](https://pnpm.io/) are other popular choices, each with their own advantages such as speed, project management, etc.
 
 ### Safety net

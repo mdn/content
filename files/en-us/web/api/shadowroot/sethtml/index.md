@@ -3,12 +3,16 @@ title: "ShadowRoot: setHTML() method"
 short-title: setHTML()
 slug: Web/API/ShadowRoot/setHTML
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.ShadowRoot.setHTML
 ---
 
-{{APIRef("HTML Sanitizer API")}}
+{{APIRef("HTML Sanitizer API")}}{{SeeCompatTable}}
 
-The **`setHTML()`** method of the {{domxref("ShadowRoot")}} interface provides an XSS-safe method to parse and sanitize a string of HTML into a {{domxref("DocumentFragment")}}, which then replaces the existing tree in the Shadow DOM.
+The **`setHTML()`** method of the {{domxref("ShadowRoot")}} interface provides an XSS-safe method to parse and sanitize a string of HTML, which then replaces the existing tree in the Shadow DOM.
+
+It is recommended (if supported) as a drop-in replacement for {{domxref("ShadowRoot.innerHTML")}} when setting a user-provided string of HTML.
 
 ## Syntax
 
@@ -25,9 +29,10 @@ setHTML(input, options)
   - : An options object with the following optional parameters:
     - `sanitizer`
       - : A {{domxref("Sanitizer")}} or {{domxref("SanitizerConfig")}} object which defines what elements of the input will be allowed or removed, or the string `"default"` for the default configuration.
+        The method will remove any XSS-unsafe elements and attributes, even if allowed by the sanitizer.
+
         Note that generally a `Sanitizer` is expected to be more efficient than a `SanitizerConfig` if the configuration is to be reused.
         If not specified, the default sanitizer configuration is used.
-        The default configuration only allows known elements and attributes that are considered XSS-safe; notably, {{HTMLElement("script")}}, {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, {{SVGElement("use")}}, event handler attributes, and data attributes are all not in the allowlist.
 
 ### Return value
 

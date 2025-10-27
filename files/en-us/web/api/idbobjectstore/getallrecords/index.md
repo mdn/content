@@ -70,7 +70,7 @@ This method may raise a {{domxref("DOMException")}} of the following types:
 ## Examples
 
 ```js
-const query = IDBKeyRange.lowerBound("mykey", true);
+const query = IDBKeyRange.lowerBound("myKey", true);
 const objectStore = transaction.objectStore("contactsList");
 
 const myRecords = (objectStore.getAllRecords({

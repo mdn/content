@@ -73,6 +73,7 @@ Browsersync
 Bubka
 Bundlesize
 Bunyakovsky
+Bushell
 Butterick
 Buzzcocks
 Bynens
@@ -114,6 +115,7 @@ codingintrigue
 Codrops
 Coleoptera
 Colomb
+Comeau
 Conde
 Corber
 Cortana
