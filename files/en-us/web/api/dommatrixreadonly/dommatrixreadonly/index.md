@@ -13,9 +13,9 @@ The **`DOMMatrixReadOnly()`** constructor creates a new {{domxref("DOMMatrixRead
 ## Syntax
 
 ```js-nolint
-DOMMatrixReadOnly()
-DOMMatrixReadOnly(initString)
-DOMMatrixReadOnly(initArray)
+new DOMMatrixReadOnly()
+new DOMMatrixReadOnly(initString)
+new DOMMatrixReadOnly(initArray)
 ```
 
 ### Parameters

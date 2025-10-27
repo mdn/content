@@ -8,7 +8,7 @@ browser-compat: api.DOMMatrix.fromMatrix_static
 
 {{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
-The **`fromMatrix()`** static method of the {{domxref("DOMMatrix")}} interface creates a new mutable `DOMMatrix` object given an existing matrix or an object which provides the values for its properties.
+The **`fromMatrix()`** static method of the {{domxref("DOMMatrix")}} interface creates a new {{domxref("DOMMatrix")}} object given an existing matrix or an object which provides the values for its properties.
 
 ## Syntax
 
@@ -20,21 +20,25 @@ DOMMatrix.fromMatrix(other)
 ### Parameters
 
 - `other` {{optional_inline}}
-  - : An existing matrix or an object providing the matrix values. If not specified, the matrix is initialized with every element set to `0` _except_ the bottom-right corner and the element immediately above and to its left: `m33` and `m34`. These have the default value of `1`.
-
-    This should usually be another {{domxref("DOMMatrix")}} or {{domxref("DOMMatrixReadOnly")}} instance. To manually construct the matrix properties, you should use the {{domxref("DOMMatrixReadOnly.DOMMatrixReadOnly", "DOMMatrixReadOnly()")}} constructor.
-
-    The object can contain any of the following properties:
-    - `m11`, `m12`, `m13`, `m14`, `m21`, `m22`, `m23`, `m24`, `m31`, `m32`, `m33`, `m34`, `m41`, `m42`, `m43`, `m44`
-      - : Double-precision floating-point values representing each component of a 4×4 matrix, where `m11` through `m14` are the first column, `m21` through `m24` are the second column, and so forth.
-    - `a`, `b`, `c`, `d`, `e`, `f`
-      - : Double-precision floating-point values representing the components of a 4×4 matrix which are required in order to perform 2D rotations and translations. These are aliases for specific components of a 4×4 matrix: `a` = `m11`, `b` = `m12`, `c` = `m21`, `d` = `m22`, `e` = `m41`, `f` = `m42`.
+  - : A {{domxref("DOMMatrix")}}, {{domxref("DOMMatrix")}}, or an object with the same properties. All properties default to `0`. The properties are:
     - `is2D`
-      - : A Boolean flag whose value is `true` if the matrix was initialized as a 2D matrix. If `false`, the matrix is 3D.
+      - : A boolean. `true` if the matrix should be created as a 2D matrix. Defaults to `false` if at least one of `m13`, `m14`, `m23`, `m24`, `m31`, `m32`, `m34`, or `m43` is non-zero, or at least one of `m33` or `m44` is not 1; otherwise, defaults to `true`.
+    - `m11`, `m12`, `m13`, `m14`, `m21`, `m22`, `m23`, `m24`, `m31`, `m32`, `m33`, `m34`, `m41`, `m42`, `m43`, `m44`
+      - : Numbers representing each component of a 4×4 matrix, where `m11` through `m14` are the first column, `m21` through `m24` are the second column, and so forth. `m11`, `m22`, `m33`, and `m44` default to `1`, and all other components default to `0`.
+
+        If `is2D` is explicitly set to `true`, `m13`, `m14`, `m23`, `m24`, `m31`, `m32`, `m34`, or `m43` must either be omitted or set to `0`, and `m33` and `m44` must either be omitted or set to `1`.
+
+    - `a`, `b`, `c`, `d`, `e`, `f`
+      - : Aliases for `m11`, `m12`, `m21`, `m22`, `m41`, and `m42`, respectively, for convenience when initializing 2D matrices. If these aliases are provided with the `m` counterparts, their values must be equal.
 
 ### Return value
 
 A {{domxref("DOMMatrix")}} object.
+
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if the provided object's properties are inconsistent (for example, if both `a` and `m11` are provided but have different values).
 
 ## Examples
 
@@ -62,20 +66,23 @@ console.log(matrix.is2D);
 
 ### Creating a matrix from an existing matrix
 
-This example creates a new mutable `DOMMatrix` from an existing `DOMMatrixReadOnly`.
+This example creates a new `DOMMatrix` from an existing `DOMMatrix`.
 
 ```js
-const readOnlyMatrix = new DOMMatrixReadOnly([1, 0, 0, 1, 100, 100]);
-const mutableMatrix = DOMMatrix.fromMatrix(readOnlyMatrix);
+const matrix1 = new DOMMatrix([1, 0, 0, 1, 100, 100]);
+const matrix2 = DOMMatrix.fromMatrix(matrix1);
 
-console.log(mutableMatrix.toString());
+console.log(matrix2.toString());
 // Output: matrix(1, 0, 0, 1, 100, 100)
 
 // Now we can mutate it
-mutableMatrix.translateSelf(50, 25);
+matrix2.translateSelf(50, 25);
 
-console.log(mutableMatrix.toString());
+console.log(matrix2.toString());
 // Output: matrix(1, 0, 0, 1, 150, 125)
+
+console.log(matrix1.toString());
+// Output: matrix(1, 0, 0, 1, 100, 100)
 ```
 
 ### Creating a default identity matrix
@@ -103,4 +110,5 @@ console.log(identityMatrix.isIdentity);
 ## See also
 
 - {{domxref("DOMMatrix.DOMMatrix", "DOMMatrix()")}} constructor
-- {{domxref("DOMMatrixReadOnly.DOMMatrixReadOnly", "DOMMatrixReadOnly()")}} constructor
+- {{domxref("DOMMatrix.fromFloat32Array_static", "DOMMatrix.fromFloat32Array()")}}
+- {{domxref("DOMMatrix.fromFloat64Array_static", "DOMMatrix.fromFloat64Array()")}}

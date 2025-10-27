@@ -8,9 +8,9 @@ browser-compat: api.DOMMatrix.fromFloat32Array_static
 
 {{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
-The **`fromFloat32Array()`** static method of the {{domxref("DOMMatrix")}} interface creates a new mutable `DOMMatrix` object given an array of single-precision (32-bit) floating-point values.
+The **`fromFloat32Array()`** static method of the {{domxref("DOMMatrix")}} interface creates a new {{domxref("DOMMatrix")}} object given an array of single-precision (32-bit) floating-point values.
 
-If the array has six values, the result is a 2D matrix; if the array has 16 values, the result is a 3D matrix. Otherwise, a {{jsxref("TypeError")}} exception is thrown.
+If the array has 6 values, the result is a 2D matrix; if the array has 16 values, the result is a 3D matrix. Otherwise, a {{jsxref("TypeError")}} exception is thrown.
 
 ## Syntax
 
@@ -26,6 +26,11 @@ DOMMatrix.fromFloat32Array(array)
 ### Return value
 
 A {{domxref("DOMMatrix")}} object.
+
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if the length of the `array` parameter is not 6 or 16.
 
 ## Examples
 
@@ -71,5 +76,8 @@ console.log(matrix3D.m41, matrix3D.m42, matrix3D.m43);
 
 ## See also
 
-- {{domxref("DOMMatrixReadOnly.toFloat32Array()")}}
-- {{domxref("DOMMatrixReadOnly.toFloat64Array()")}}
+- {{domxref("DOMMatrix/DOMMatrix", "DOMMatrix()")}}
+- {{domxref("DOMMatrix.toFloat32Array()")}}
+- {{domxref("DOMMatrix.toFloat64Array()")}}
+- {{domxref("DOMMatrix.fromFloat64Array_static", "DOMMatrix.fromFloat64Array()")}}
+- {{domxref("DOMMatrix.fromMatrix_static", "DOMMatrix.fromMatrix()")}}
