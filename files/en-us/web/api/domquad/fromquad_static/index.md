@@ -20,15 +20,9 @@ DOMQuad.fromQuad(quad)
 ### Parameters
 
 - `quad` {{optional_inline}}
-  - : An object specifying the coordinates for the four corners of the quadrilateral. If not specified, all corners default to `(0, 0, 0, 1)`. The object can contain the following properties:
-    - `p1` {{optional_inline}}
-      - : A {{domxref("DOMPoint")}} or an object with the same properties representing one corner of the quad.
-    - `p2` {{optional_inline}}
-      - : A {{domxref("DOMPoint")}} representing one corner of the quad.
-    - `p3` {{optional_inline}}
-      - : A {{domxref("DOMPoint")}} representing one corner of the quad.
-    - `p4` {{optional_inline}}
-      - : A {{domxref("DOMPoint")}} representing one corner of the quad.
+  - : A {{domxref("DOMQuad")}} or an object with the same properties. All properties default to `(0, 0, 0, 1)`. The properties are:
+    - {{domxref("DOMQuad/p1", "p1")}} {{optional_inline}}, {{domxref("DOMQuad/p2", "p2")}} {{optional_inline}}, {{domxref("DOMQuad/p3", "p3")}} {{optional_inline}}, {{domxref("DOMQuad/p4", "p4")}} {{optional_inline}}
+      - : Each a {{domxref("DOMPoint")}} or an object with the same properties representing one corner of the quad.
 
     This object should usually be another {{domxref("DOMQuad")}} instance, or an existing object retrieved from some data storage. If you are creating this object from scratch, you should use the {{domxref("DOMQuad.DOMQuad", "DOMQuad()")}} constructor, which accepts the four points separately, avoiding creating the intermediate object.
 
@@ -68,5 +62,4 @@ console.log(newQuad.p2.x, newQuad.p2.y); // 50 0
 
 - {{domxref("DOMQuad.DOMQuad", "DOMQuad()")}} constructor
 - {{domxref("DOMPoint")}}
-- {{domxref("DOMQuad.p1", "p1")}}, {{domxref("DOMQuad.p2", "p2")}}, {{domxref("DOMQuad.p3", "p3")}}, {{domxref("DOMQuad.p4", "p4")}}
 - {{domxref("DOMRect")}}

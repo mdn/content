@@ -8,7 +8,7 @@ browser-compat: api.DOMQuad.fromRect_static
 
 {{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
-The **`fromRect()`** static method of the {{domxref("DOMQuad")}} interface returns a new `DOMQuad` object based on the provided set of coordinates in the shape of a `DOMRect` object.
+The **`fromRect()`** static method of the {{domxref("DOMQuad")}} interface returns a new `DOMQuad` object based on the provided set of coordinates in the shape of a {{domxref("DOMRect")}} object.
 
 ## Syntax
 
@@ -21,10 +21,14 @@ DOMQuad.fromRect(rect)
 
 - `rect` {{optional_inline}}
   - : A {{domxref("DOMRect")}}, {{domxref("DOMRectReadOnly")}}, or an object with the same properties. All properties default to `0`. The properties are:
-    - `x`: The x coordinate of the rectangle's origin (top-left corner).
-    - `y`: The y coordinate of the rectangle's origin (top-left corner).
-    - `width`: The width of the rectangle.
-    - `height`: The height of the rectangle.
+    - {{domxref("DOMRect/x", "x")}} {{optional_inline}}
+      - : The x coordinate of the rectangle's origin (top-left corner).
+    - {{domxref("DOMRect/y", "y")}} {{optional_inline}}
+      - : The y coordinate of the rectangle's origin (top-left corner).
+    - {{domxref("DOMRect/width", "width")}} {{optional_inline}}
+      - : The width of the rectangle.
+    - {{domxref("DOMRect/height", "height")}} {{optional_inline}}
+      - : The height of the rectangle.
 
 ### Return value
 
@@ -32,13 +36,12 @@ A {{domxref("DOMQuad")}} object.
 
 ## Examples
 
-### Creating a quad from a rectangle
+### Creating a rectangular quad
 
-This example creates a `DOMQuad` from a rectangle object with position and dimensions.
+This example creates a `DOMQuad` from scratch that happens to be rectangular. Using `fromRect()` is more convenient than using the {{domxref("DOMQuad.DOMQuad", "DOMQuad()")}} constructor.
 
 ```js
-const rect = { x: 10, y: 20, width: 100, height: 50 };
-const quad = DOMQuad.fromRect(rect);
+const quad = DOMQuad.fromRect({ x: 10, y: 20, width: 100, height: 50 });
 
 console.log(quad.p1); // DOMPoint {x: 10, y: 20, z: 0, w: 1}
 console.log(quad.p2); // DOMPoint {x: 110, y: 20, z: 0, w: 1}
