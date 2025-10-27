@@ -302,26 +302,26 @@ If a browser doesn't support the font technology, a fallback font (`Bungee-fallb
 
 ### Testing for the support of a font format
 
-The following example uses the WOFF 2 version of the font if the browser supports this font format, otherwise it falls back to the previously specified WOFF 1 version:
+The following example uses the WOFF2 version of the font if the browser supports this font format, otherwise it falls back to the previously specified WOFF version:
 
 ```css
 @font-face {
-  font-family: "Open Sans WOFF 1";
+  font-family: "Open Sans WOFF";
   src: url("open-sans.woff") format("woff");
 }
 
 @font-face {
-  font-family: "Open Sans WOFF 2";
+  font-family: "Open Sans WOFF2";
   src: url("open-sans.woff2") format("woff2");
 }
 
 body {
-  font-family: "Open Sans WOFF 1", sans-serif;
+  font-family: "Open Sans WOFF", sans-serif;
 }
 
 @supports font-format(woff2) {
   body {
-    font-family: "Open Sans WOFF 2", sans-serif;
+    font-family: "Open Sans WOFF2", sans-serif;
   }
 }
 ```
