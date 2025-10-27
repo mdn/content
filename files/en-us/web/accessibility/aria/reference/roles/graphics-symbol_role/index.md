@@ -7,6 +7,10 @@ spec-urls: https://www.w3.org/TR/graphics-aria-1.0/#graphics-symbol
 sidebar: accessibilitysidebar
 ---
 
+> [!NOTE]
+> The `graphics-symbol` role is defined in the [Graphics Accessibility API Mappings(graphics-aam)](https://www.w3.org/TR/graphics-aam-1.0/) specs.
+> It's not a part of the core [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.3/).
+
 The `graphics-symbol` role represents a graphical symbol that conveys a simple meaning.
 
 ## Description
@@ -21,13 +25,9 @@ The `graphics-symbol` role identifies an element as a meaningful, atomic symbol 
 </g>
 ```
 
-## Accessibility concerns
-
-To ensure backward compatibility with ARIA 1.0 user agents and assistive technologies, include [`img`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/img_role) as a fallback role value.
-
 ## Best practices
 
-- Use the `graphics-symbol` role for meaningful, atomic objects.
+- The `graphics-symbol` role can be used for meaningful, atomic objects.
 - When used as a part of structured symbolic language, the [`ariaRoleDescription`](/en-US/docs/Web/API/Element/ariaRoleDescription) property can be used to assign the symbol type, separately from the name and description of the symbol.
 
 ## Specifications

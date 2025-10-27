@@ -7,6 +7,10 @@ spec-urls: https://www.w3.org/TR/graphics-aria-1.0/#graphics-object
 sidebar: accessibilitysidebar
 ---
 
+> [!NOTE]
+> The `graphics-object` role is defined in the [Graphics Accessibility API Mappings(graphics-aam)](https://www.w3.org/TR/graphics-aam-1.0/) specs.
+> It's not a part of the core [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.3/).
+
 The `graphics-object` role constitutes a distinct object with semantically meaningful content within a larger graphic.
 
 ## Description
@@ -22,13 +26,9 @@ The `graphics-object` role identifies an element as a unique, distinct object, o
 </svg>
 ```
 
-## Accessibility concerns
-
-To ensure backward compatibility with ARIA 1.0 user agents and assistive technologies, include [`group`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/group_role) as a fallback role value.
-
 ## Best practices
 
-- Use the `graphics-object` role for distinct, semantically meaningful parts of larger graphical content, such as map regions, chart elements, or diagram components.
+- The `graphics-object` role can be used for distinct, semantically meaningful parts of larger graphical content, such as map regions, chart elements, or diagram components.
 - When dealing with container elements that represent a collection of separate objects, use [`group`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/group_role) or [`list`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/list_role) roles instead.
 - Avoid assigning this role to grouping elements used purely for styling or layout purposes. In such cases, keep the role as `none` or use `presentation` instead.
 

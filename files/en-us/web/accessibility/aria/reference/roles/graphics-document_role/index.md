@@ -7,6 +7,10 @@ spec-urls: https://www.w3.org/TR/graphics-aria-1.0/#graphics-document
 sidebar: accessibilitysidebar
 ---
 
+> [!NOTE]
+> The `graphics-document` role is defined in the [Graphics Accessibility API Mappings(graphics-aam)](https://www.w3.org/TR/graphics-aam-1.0/) specs.
+> It's not a part of the core [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.3/).
+
 The `graphics-document` role identifies a structured document whose structure is defined by its visual layout or appearance.
 
 ## Description
@@ -33,13 +37,9 @@ The `graphics-document` role is used to identify a region of the page where the 
 </svg>
 ```
 
-## Accessibility concerns
-
-To ensure backward compatibility with ARIA 1.0 user agents and assistive technologies, include the [`document`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/document_role) role as a fallback value.
-
 ## Best practices
 
-- Use `graphics-document` role for structured, self-contained graphical content such as charts, maps, diagrams, technical drawings, blueprints, and instructional graphics.
+- The `graphics-document` role can be used for structured, self-contained graphical content such as charts, maps, diagrams, technical drawings, blueprints, and instructional graphics.
 - Nested `graphics-document` roles are applicable for complex structures, such as a map containing regional charts.
 - When dealing with a single large graphical content with discrete or unrelated regions, each region should be separated as a standalone `graphics-document`. Alternatively, you can combine them using [`figure`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/figure_role) rule.
 
