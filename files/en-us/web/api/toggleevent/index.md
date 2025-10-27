@@ -12,7 +12,7 @@ The **`ToggleEvent`** interface represents an event that fires when a popover el
 This is the event object for the {{domxref("HTMLElement.beforetoggle_event", "beforetoggle")}} and {{domxref("HTMLElement.toggle_event", "toggle")}} events, which fire on elements as follows:
 
 - The `beforetoggle` event fires before [popover](/en-US/docs/Web/API/Popover_API) or {{htmlelement("dialog")}} elements are shown or hidden.
-- The `toggle` event fires after [popover](/en-US/docs/Web/API/Popover_API), {{htmlelement("dialog")}}, or {{htmlelement("details")}} elements are shown or hidden.
+- The `toggle` event fires after popover, `<dialog>`, or {{htmlelement("details")}} elements are shown or hidden.
 
 {{InheritanceDiagram}}
 
