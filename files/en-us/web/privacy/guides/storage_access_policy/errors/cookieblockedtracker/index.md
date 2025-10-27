@@ -21,7 +21,7 @@ The permission can be changed or removed by:
 
 - Going to _Preferences > Privacy & Security > Enhanced Tracking Protection_ and either
   - adding an exception with the _Manage Exceptions_… button
-  - choosing the _Custom_ Content Blocking and unchecking the _Tracking content_ checkbox
+  - choosing the _Custom_ Content Blocking option and unchecking the _Tracking content_ checkbox
 
 If the blocked resource doesn't need authentication, you can fix the warning message by adding a `crossorigin="anonymous"` attribute to the relevant element.
 
