@@ -261,8 +261,8 @@ To complete the task:
 
 1. Make any paragraph that directly follows an `<h2>` element red.
 2. Style list items that are a direct child of the `<ul>` with a class of `list` as follows:
-    - Remove their bullets.
-    - Give them a `1px` grey bottom border.
+   - Remove their bullets.
+   - Give them a `1px` grey bottom border.
 
 Your final result should look like the image below:
 
