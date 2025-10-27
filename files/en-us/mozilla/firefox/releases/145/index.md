@@ -40,13 +40,16 @@ Firefox 145 is the current [Beta version of Firefox](https://www.firefox.com/en-
   This keyword is an alias for the recently-standardized `stretch` keyword (i.e., [`width: stretch`](/en-US/docs/Web/CSS/width#stretch) and [`height: stretch`](/en-US/docs/Web/CSS/height#stretch)), which isn't yet supported in Firefox.
   ([Firefox bug 1988938](https://bugzil.la/1988938), [Firefox bug 1789477](https://bugzil.la/1789477)).
 
-<!-- No notable changes. -->
+- The [`math`](/en-US/docs/Web/CSS/font-family#math) generic font family is now supported as a value of the `font-family` property, allowing mathematical expressions to use appropriate fonts.
+  ([Firefox bug 1788937](https://bugzil.la/1788937)).
 
 <!-- #### Removals -->
 
-<!-- ### JavaScript -->
+### JavaScript
 
-<!-- No notable changes. -->
+- Firefox now supports the {{jsxref("Atomics.waitAsync()")}} static method, which allows synchronization of threads based upon the value in a shared memory location.
+  The method waits asynchronously on the value and returns an object representing the result of the operation. It is non-blocking and usable on the main thread.
+  ([Firefox bug 1884148](https://bugzil.la/1884148)).
 
 <!-- #### Removals -->
 
@@ -63,6 +66,10 @@ Firefox 145 is the current [Beta version of Firefox](https://www.firefox.com/en-
 <!-- #### Removals -->
 
 ### APIs
+
+- The {{domxref("ToggleEvent/source", "source")}} property of the {{domxref("ToggleEvent")}} interface is now supported.
+  If a [popover](/en-US/docs/Web/API/Popover_API) is triggered to open or close by an HTML element such as a {{htmlelement("button")}}, the event's `source` property will contain the element that triggered the popover.
+  ([Firefox bug 1968987](https://bugzil.la/1968987)).
 
 <!-- #### DOM -->
 

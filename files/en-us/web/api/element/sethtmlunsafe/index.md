@@ -251,7 +251,7 @@ We also define the handler for the reload button.
 const unsanitizedString = `
   <div>
     <p>This is a paragraph. <button onclick="alert('You clicked the button!')">Click me</button></p>
-    <script src="path/to/a/module.js" type="module"><script>
+    <script src="path/to/a/module.js" type="module"></script>
   </div>
 `;
 

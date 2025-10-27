@@ -273,7 +273,7 @@ With this function defined, we can now create variants of this background value 
 
 ```css
 #one {
-  background: --shippo-pattern(100px, #def);
+  background: --shippo-pattern(100px, #ddeeff);
 }
 
 #two {

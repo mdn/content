@@ -27,7 +27,7 @@ position-area: start end;
 position-area: block-start center;
 position-area: inline-start block-end;
 position-area: x-start y-end;
-position-area: center y-self-end;
+position-area: center self-y-end;
 
 /* Two <position-area> keywords spanning two tiles */
 position-area: top span-left;
@@ -38,7 +38,7 @@ position-area: y-start span-x-end;
 /* Two <position-area> keywords spanning three tiles */
 position-area: top span-all;
 position-area: block-end span-all;
-position-area: x-self-start span-all;
+position-area: self-x-start span-all;
 
 /* One <position-area> keyword with an implicit second <position-area> keyword  */
 position-area: top; /* equiv: top span-all */
