@@ -8,7 +8,7 @@ browser-compat: api.DOMMatrixReadOnly.DOMMatrixReadOnly
 
 {{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
-The **`DOMMatrixReadOnly`** constructor creates a new {{domxref("DOMMatrixReadOnly")}} object which represents a 4x4 matrix, suitable for 2D and 3D operations.
+The **`DOMMatrixReadOnly()`** constructor creates a new {{domxref("DOMMatrixReadOnly")}} object which represents a 4x4 matrix, suitable for 2D and 3D operations.
 
 ## Syntax
 
