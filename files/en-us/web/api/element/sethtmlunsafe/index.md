@@ -221,7 +221,7 @@ The HTML defines two {{htmlelement("button")}} elements for calling the method w
 
 ```css hidden
 #log {
-  height: 240px;
+  height: 320px;
   overflow: scroll;
   padding: 0.5rem;
   border: 1px solid black;
@@ -250,8 +250,11 @@ We also define the handler for the reload button.
 // Define unsafe string of HTML
 const unsanitizedString = `
   <div>
-    <p>This is a paragraph. <button onclick="alert('You clicked the button!')">Click me</button></p>
-    <script src="path/to/a/module.js" type="module"></script>
+    <p>Paragraph to inject into shadow DOM.
+      <button onclick="alert('You clicked the button!')">Click me</button>
+    </p>
+    <script src="path/to/a/module.js" type="module"><\/script>
+    <p data-id="123">Para with <code>data-</code> attribute</p>
   </div>
 `;
 
@@ -273,7 +276,7 @@ buttonNoSanitizer.addEventListener("click", () => {
   logElement.textContent =
     "No sanitizer: string should be injected without filtering\n\n";
   log(`\nunsanitized: ${unsanitizedString}`);
-  log(`\nsanitized: ${target.innerHTML}`);
+  log(`\n\nsanitized: ${target.innerHTML}`);
 });
 ```
 
@@ -292,7 +295,7 @@ allowScriptButton.addEventListener("click", () => {
   // Log HTML before sanitization and after being injected
   logElement.textContent = "Sanitizer: {elements: ['div', 'p', 'script']}\n";
   log(`\nunsanitized: ${unsanitizedString}`);
-  log(`\nsanitized: ${target.innerHTML}`);
+  log(`\n\nsanitized: ${target.innerHTML}`);
 });
 ```
 
@@ -311,7 +314,7 @@ When you click the "None" button, you should see that the input and output match
 When you click the "allowScript" button the `<script>` element is still present, but the `<button>` element is removed.
 With this approach you can create safe HTML, but you aren't forced to.
 
-{{EmbedLiveSample("setHTMLUnsafe() live example","100","380px")}}
+{{EmbedLiveSample("setHTMLUnsafe() live example","100","450px")}}
 
 ## Specifications
 

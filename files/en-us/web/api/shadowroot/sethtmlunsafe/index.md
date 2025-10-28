@@ -233,7 +233,7 @@ The HTML defines two {{htmlelement("button")}} elements for injecting the HTML w
 
 ```css hidden
 #log {
-  height: 250px;
+  height: 320px;
   overflow: scroll;
   padding: 0.5rem;
   border: 1px solid black;
@@ -269,8 +269,11 @@ We also get variable `shadow`, which is our handle to the shadow root.
 // Define unsafe string of HTML
 const unsanitizedString = `
   <div>
-    <p>Paragraph to inject into shadow DOM. <button onclick="alert('You clicked the button!')">Click me</button></p>
-    <script src="path/to/a/module.js" type="module"></script>
+    <p>Paragraph to inject into shadow DOM.
+      <button onclick="alert('You clicked the button!')">Click me</button>
+    </p>
+    <script src="path/to/a/module.js" type="module"><\/script>
+    <p data-id="123">Para with <code>data-</code> attribute</p>
   </div>
 `;
 
@@ -289,7 +292,7 @@ buttonNoSanitizer.addEventListener("click", () => {
   // Log HTML before sanitization and after being injected
   logElement.textContent = "No sanitizer\n\n";
   log(`\nunsanitized: ${unsanitizedString}`);
-  log(`\nsanitized: ${shadow.innerHTML}`);
+  log(`\n\nsanitized: ${shadow.innerHTML}`);
 });
 ```
 
@@ -306,7 +309,7 @@ allowScriptButton.addEventListener("click", () => {
 
   // Log HTML before sanitization and after being injected
   logElement.textContent = "Sanitizer: {elements: ['div', 'p', 'script']}\n";
-  log(`\nunsanitized: ${unsanitizedString}`);
+  log(`\n\nunsanitized: ${unsanitizedString}`);
   log(`\nsanitized: ${shadow.innerHTML}`);
 });
 ```
@@ -326,7 +329,7 @@ When you click the "None" button, you should see that the input and output match
 When you click the "allowScript" button the `<script>` element is still present, but the `<button>` element is removed.
 With this approach you can create safe HTML, but you aren't forced to.
 
-{{EmbedLiveSample("setHTMLUnsafe() live example","100","350px")}}
+{{EmbedLiveSample("setHTMLUnsafe() live example","100","450px")}}
 
 ## Specifications
 
