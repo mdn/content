@@ -8,7 +8,7 @@ spec-urls: https://datatracker.ietf.org/doc/draft-ietf-httpapi-idempotency-key-h
 sidebar: http
 ---
 
-The HTTP **Idempotency-Key** {{glossary("request header")}} can be used to make {{HTTPMethod("POST")}} and {{HTTPMethod("PATCH")}} requests {{glossary("idempotent")}}.
+The HTTP **`Idempotency-Key`** {{glossary("request header")}} can be used to make {{HTTPMethod("POST")}} and {{HTTPMethod("PATCH")}} requests {{glossary("idempotent")}}.
 
 This allows clients to resend unacknowledged requests without having to be concerned that the request has already have been received and acted on by the server.
 
@@ -75,7 +75,7 @@ If idempotency fingerprinting is supported, the server can send an error respons
 
 #### Request processing
 
-On receiving a `POST` or `PATCH` request with an **Idempotency-Key** on an endpoint that requires it, the server should check whether it already has received a response with that key.
+On receiving a `POST` or `PATCH` request with an `Idempotency-Key` on an endpoint that requires it, the server should check whether it already has received a request with that key.
 
 - If it hasn't, the server should perform the operation and respond, and then store the key.
 - If it has, it should not perform the operation, but should respond as though it had.
@@ -83,7 +83,7 @@ On receiving a `POST` or `PATCH` request with an **Idempotency-Key** on an endpo
 Servers that are using an idempotency fingerprint would also generate and store a fingerprint for each new request.
 This would be used to respond with an error if a subsequent key and fingerprint did not match.
 
-If a request is received without an **Idempotency-Key** on an endpoint that requires it, the server should respond with an error.
+If a request is received without an `Idempotency-Key` on an endpoint that requires it, the server should respond with an error.
 
 #### Server error responses
 
@@ -141,6 +141,7 @@ Note that only the HTTP status code is mandated, the rest of the information is 
 HTTP/1.1 409 Conflict
 Content-Type: application/problem+json
 Content-Language: en
+
 {
     "type": "https://example.com/idempotency/docs",
     "title": "Server processing previous request.",
