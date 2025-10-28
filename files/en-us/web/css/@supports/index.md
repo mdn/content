@@ -275,7 +275,7 @@ ul:has(> li li) {
 
 ### Testing for the support of a font technology
 
-The following example applies the [Bungee Spice](https://fonts.google.com/specimen/Bungee+Spice) color font family if the browser supports the `COLRv1` font technology:
+The following example applies the [Bungee Spice](https://fonts.google.com/specimen/Bungee+Spice) color font if the browser supports the `COLRv1` font technology:
 
 ```css
 @supports font-tech(color-COLRv1) {
