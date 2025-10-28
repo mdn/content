@@ -152,7 +152,7 @@ const unsanitizedString = `
       <button onclick="alert('You clicked the button!')">Click me</button>
     </p>
     <script src="path/to/a/module.js" type="module"><\/script>
-    <p data-id="123">Para with data-attribute</p>
+    <p data-id="123">Para with <code>data-</code> attribute</p>
   </div>
 `;
 
@@ -210,7 +210,7 @@ allowScriptButton.addEventListener("click", () => {
 Click the "Default" and "allowScript" buttons to see the effects of the default and custom sanitizer, respectively.
 
 Note that because we are using a safe sanitization method, in both cases the `<script>` element and `onclick` handler are removed, even if explicitly allowed by the sanitizer.
-However while the data-attribute is removed with the default sanitizer, it is allowed when we pass a sanitizer.
+However while the `data-` attribute is removed with the default sanitizer, it is allowed when we pass a sanitizer.
 
 {{EmbedLiveSample("setHTML() live example","100","450px")}}
 

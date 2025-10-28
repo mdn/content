@@ -254,7 +254,7 @@ const unsanitizedString = `
       <button onclick="alert('You clicked the button!')">Click me</button>
     </p>
     <script src="path/to/a/module.js" type="module"><\/script>
-    <p data-id="123">Para with data-attribute</p>
+    <p data-id="123">Para with <code>data-</code> attribute</p>
   </div>
 `;
 
