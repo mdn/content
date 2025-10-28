@@ -197,6 +197,7 @@ const obj = {
   },
 };
 ```
+
 ### Feature detection
 
 Oftentimes, a method will take an object and lookup the properties as if
@@ -206,15 +207,15 @@ parameter is recognized.
 This example checks if the `colorType` parameter is supported on the `HTMLCanvasElement.getContext()` method.
 
 ```js
-const canvas = document.createElement('canvas');
+const canvas = document.createElement("canvas");
 let supported = false;
 const obj = {
   get colorType() {
     supported = true;
-  }
+  },
 };
-const ctx = canvas.getContext('2d', obj);
-console.log('colorType is supported:', supported);
+const ctx = canvas.getContext("2d", obj);
+console.log("colorType is supported:", supported);
 ```
 
 ### get vs. defineProperty
