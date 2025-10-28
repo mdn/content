@@ -26,9 +26,9 @@ div.warning {
 
 #customized {
   font:
-    16px Lucida Grande,
-    Arial,
-    Helvetica,
+    16px "Lucida Grande",
+    "Helvetica",
+    "Arial",
     sans-serif;
 }
 ```

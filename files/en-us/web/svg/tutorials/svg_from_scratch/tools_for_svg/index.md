@@ -45,7 +45,7 @@ Drawings from Google Docs can be exported as SVG.
 
 ## Science
 
-The well-known plotting tools xfig and gnuplot both support exporting as SVG. To render graphs on the web [JSXGraph](https://jsxgraph.uni-bayreuth.de/wp/) supports VML, SVG and canvas, automatically deciding which technology to use based on browser capabilities.
+The well-known plotting tools xfig and gnuplot both support exporting as SVG. To render graphs on the web [JSXGraph](https://jsxgraph.uni-bayreuth.de/home/) supports VML, SVG and canvas, automatically deciding which technology to use based on browser capabilities.
 
 In GIS (Geographic Information System) applications SVG is often used as both storage and rendering format. See [carto.net](https://carto.net/) for details.
 

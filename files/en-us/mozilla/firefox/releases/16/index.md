@@ -1,5 +1,5 @@
 ---
-title: Firefox 16 for developers
+title: Firefox 16 release notes for developers
 short-title: Firefox 16
 slug: Mozilla/Firefox/Releases/16
 page-type: firefox-release-notes

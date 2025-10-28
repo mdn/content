@@ -40,7 +40,7 @@ The `locales` and `options` parameters customize the behavior of the function an
 In implementations that support the [`Intl.DateTimeFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat), these parameters correspond exactly to the [`Intl.DateTimeFormat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat) constructor's parameters. Implementations without `Intl.DateTimeFormat` support are asked to ignore both parameters, making the locale used and the form of the string returned entirely implementation-dependent.
 
 - `locales` {{optional_inline}}
-  - : A string with a BCP 47 language tag, or an array of such strings. Corresponds to the [`locales`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#locales) parameter of the `Intl.DateTimeFormat()` constructor.
+  - : A string with a {{glossary("BCP 47 language tag")}}, or an array of such strings. Corresponds to the [`locales`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#locales) parameter of the `Intl.DateTimeFormat()` constructor.
 
     In implementations without `Intl.DateTimeFormat` support, this parameter is ignored and the host's locale is usually used.
 
@@ -64,13 +64,11 @@ In implementations with `Intl.DateTimeFormat`, this is equivalent to `new Intl.D
 
 ### Using toLocaleString()
 
-Basic use of this method without specifying a `locale` returns a formatted string in the default locale and with default options.
+Basic use of this method – without specifying `locale` or `options` – depends on the implementation and returns a string formatted based on the default locale and time zone, and with default options.
 
 ```js
 const date = new Date(Date.UTC(2012, 11, 12, 3, 0, 0));
 
-// toLocaleString() without arguments depends on the
-// implementation, the default locale, and the default time zone
 console.log(date.toLocaleString());
 // "12/11/2012, 7:00:00 PM" if run in en-US locale with time zone America/Los_Angeles
 ```
@@ -94,36 +92,36 @@ function toLocaleStringSupportsLocales() {
 This example shows some of the variations in localized date and time formats. In order to get the format of the language used in the user interface of your application, make sure to specify that language (and possibly some fallback languages) using the `locales` argument:
 
 ```js
-const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+const date = new Date(Date.UTC(2012, 1, 2, 3, 0, 0));
 
 // Formats below assume the local time zone of the locale;
 // America/Los_Angeles for the US
 
 // US English uses month-day-year order and 12-hour time with AM/PM
 console.log(date.toLocaleString("en-US"));
-// "12/19/2012, 7:00:00 PM"
+// "2/1/2012, 7:00:00 PM" (UTC-8 is the previous day)
 
 // British English uses day-month-year order and 24-hour time without AM/PM
 console.log(date.toLocaleString("en-GB"));
-// "20/12/2012 03:00:00"
+// "02/02/2012, 03:00:00" (UTC+0 or UTC+1 depending on time of the year)
 
 // Korean uses year-month-day order and 12-hour time with AM/PM
 console.log(date.toLocaleString("ko-KR"));
-// "2012. 12. 20. 오후 12:00:00"
+// "2012. 2. 2. 오후 12:00:00"
 
 // Arabic in most Arabic-speaking countries uses Eastern Arabic numerals
 console.log(date.toLocaleString("ar-EG"));
-// "٢٠‏/١٢‏/٢٠١٢ ٥:٠٠:٠٠ ص"
+// "٢‏/٢‏/٢٠١٢ ٥:٠٠:٠٠ ص"
 
 // For Japanese, applications may want to use the Japanese calendar,
 // where 2012 was the year 24 of the Heisei era
 console.log(date.toLocaleString("ja-JP-u-ca-japanese"));
-// "24/12/20 12:00:00"
+// "H24/2/2 12:00:00"
 
 // When requesting a language that may not be supported, such as
 // Balinese, include a fallback language (in this case, Indonesian)
 console.log(date.toLocaleString(["ban", "id"]));
-// "20/12/2012 11.00.00"
+// "2/2/2012 11.00.00"
 ```
 
 ### Using options
@@ -141,17 +139,19 @@ const options = {
   day: "numeric",
 };
 console.log(date.toLocaleString("de-DE", options));
-// "Donnerstag, 20. Dezember 2012"
+// Example output: "Donnerstag, 20. Dezember 2012"
+// The exact date may shift depending on your local time zone.
 
 // An application may want to use UTC and make that visible
 options.timeZone = "UTC";
 options.timeZoneName = "short";
 console.log(date.toLocaleString("en-US", options));
-// "Thursday, December 20, 2012, GMT"
+// Example output: "Thursday, December 20, 2012 at UTC"
 
 // Sometimes even the US needs 24-hour time
 console.log(date.toLocaleString("en-US", { hour12: false }));
-// "12/19/2012, 19:00:00"
+// Example output: "12/19/2012, 19:00:00"
+// The exact date and time may shift depending on your local time zone.
 ```
 
 ## Specifications

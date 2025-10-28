@@ -1,5 +1,5 @@
 ---
-title: Firefox 50 for developers
+title: Firefox 50 release notes for developers
 short-title: Firefox 50
 slug: Mozilla/Firefox/Releases/50
 page-type: firefox-release-notes

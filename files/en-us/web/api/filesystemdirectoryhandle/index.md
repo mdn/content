@@ -53,7 +53,9 @@ The following example returns a directory handle with the specified name; if the
 const dirName = "directoryToGetName";
 
 // assuming we have a directory handle: 'currentDirHandle'
-const subDir = currentDirHandle.getDirectoryHandle(dirName, { create: true });
+const subDir = await currentDirHandle.getDirectoryHandle(dirName, {
+  create: true,
+});
 ```
 
 ### Return file path

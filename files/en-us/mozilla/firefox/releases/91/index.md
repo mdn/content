@@ -1,5 +1,5 @@
 ---
-title: Firefox 91 for developers
+title: Firefox 91 release notes for developers
 short-title: Firefox 91
 slug: Mozilla/Firefox/Releases/91
 page-type: firefox-release-notes

@@ -1,5 +1,5 @@
 ---
-title: Firefox 83 for developers
+title: Firefox 83 release notes for developers
 short-title: Firefox 83
 slug: Mozilla/Firefox/Releases/83
 page-type: firefox-release-notes

@@ -49,6 +49,20 @@ HTML password input elements ([`<input type="password">`](/en-US/docs/Web/HTML/R
 - `layout.forms.reveal-password-button.enabled`
   - : Set to `true` to enable.
 
+### Time picker for datetime-local input field
+
+HTML datetime-local input elements ([`<input type="datetime-local">`](/en-US/docs/Web/HTML/Reference/Elements/input/datetime-local)) now includes a time picker ([Firefox bug 1726108](https://bugzil.la/1726108)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 144           | No                  |
+| Developer Edition | 144           | No                  |
+| Beta              | 144           | No                  |
+| Release           | 144           | No                  |
+
+- `dom.forms.datetime.timepicker`
+  - : Set to `true` to enable.
+
 ## CSS
 
 ### Hex boxes to display stray control characters
@@ -263,16 +277,44 @@ The CSS [`calc()`](/en-US/docs/Web/CSS/calc) function can now parse color channe
 
 The [CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module defines a number of features that allow elements to be defined as anchor elements, and for other elements to be positioned relative to anchor elements.
 This allows, for example, tooltips to be displayed alongside associated content as it scrolls through the viewport, moving as needed when it would overflow the viewport, and disappearing when the anchor moves offscreen.
-The set of features are being progressively rolled out behind a preference ([Firefox bug 1838746](https://bugzil.la/1838746)).
+The set of features are being progressively rolled out behind a preference ([Firefox bug 1988224](https://bugzil.la/1988224), [Firefox bug 1838746](https://bugzil.la/1838746)).
 
 The parts that have been implemented include [`CSSPositionTryRule`](/en-US/docs/Web/API/CSSPositionTryRule) and [`CSSPositionTryDescriptors`](/en-US/docs/Web/API/CSSPositionTryDescriptors) (Firefox 131).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 131           | No                  |
+| Nightly           | 145           | Yes                 |
 | Developer Edition | 131           | No                  |
 | Beta              | 131           | No                  |
 | Release           | 131           | No                  |
+
+- `layout.css.anchor-positioning.enabled`
+  - : Set to `true` to enable.
+
+#### `anchor-size()` function
+
+The CSS {{CSSXRef("anchor-size")}} function lets you set an anchor-positioned element's size, position, and margins relative to the dimensions of its anchor element. ([Firefox bug 1972610](https://bugzil.la/1972610)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 145           | Yes                 |
+| Developer Edition | 142           | No                  |
+| Beta              | 142           | No                  |
+| Release           | 142           | No                  |
+
+- `layout.css.anchor-positioning.enabled`
+  - : Set to `true` to enable.
+
+#### `position-area` property
+
+The CSS {{CSSXRef("position-area")}} property allows you to position an anchor-positioned element relative to the edges of its associated anchor element by placing the positioned element on one or more tiles of an implicit 3x3 grid, where the anchoring element is the center cell. ([Firefox bug 1924086](https://bugzil.la/1924086)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 145           | Yes                 |
+| Developer Edition | 145           | No                  |
+| Beta              | 145           | No                  |
+| Release           | 145           | No                  |
 
 - `layout.css.anchor-positioning.enabled`
   - : Set to `true` to enable.
@@ -294,48 +336,6 @@ The `::file-selector-button` pseudo-element is not yet marked as an element-base
 | Beta              | 138           | No                  |
 | Release           | 138           | No                  |
 
-### `:active-view-transition` pseudo-class
-
-The CSS {{CSSXRef(":active-view-transition")}} pseudo-class enables you to style content while a [view transition](/en-US/docs/Web/API/View_Transition_API) is taking place in a single-page app (SPA). ([Firefox bug 1956140](https://bugzil.la/1956140)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 141           | Yes                 |
-| Developer Edition | 141           | No                  |
-| Beta              | 141           | No                  |
-| Release           | 141           | No                  |
-
-- `dom.viewTransitions.enabled`
-  - : Set to `true` to enable.
-
-### `match-element` value for `view-transition-name` property
-
-The {{CSSXRef("view-transition-name", "match-element", "#match-element")}} value of the CSS {{CSSXRef("view-transition-name")}} property [automatically](/en-US/docs/Web/CSS/view-transition-name#specifying_view-transition-name_values_automatically) assigns a unique internal `view-transition-name` to each selected element, rather than having to name them individually. ([Firefox bug 1956141](https://bugzil.la/1956141)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 142           | Yes                 |
-| Developer Edition | 142           | No                  |
-| Beta              | 142           | No                  |
-| Release           | 142           | No                  |
-
-- `dom.viewTransitions.enabled`
-  - : Set to `true` to enable.
-
-### `anchor-size()` function
-
-The CSS {{CSSXRef("anchor-size")}} function enables setting anchor-positioned element's size, position, and margins relative to the dimensions of anchor elements. ([Firefox bug 1972610](https://bugzil.la/1972610)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 142           | No                  |
-| Developer Edition | 142           | No                  |
-| Beta              | 142           | No                  |
-| Release           | 142           | No                  |
-
-- `layout.css.anchor-positioning.enabled`
-  - : Set to `true` to enable.
-
 ### `:heading` and `:heading()` pseudo-classes
 
 The {{CSSXRef(":heading")}} pseudo-class allows you to style all [heading elements](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) (`<h1>`-`<h6>`) at once, rather than targeting them individually. The {{CSSXRef(":heading_function", ":heading()")}} functional pseudo-class allows you to style heading elements that match the [`<An+B>`](/en-US/docs/Web/CSS/:heading_function#functional_notation) notation. ([Firefox bug 1974386](https://bugzil.la/1974386)).
@@ -350,40 +350,13 @@ The {{CSSXRef(":heading")}} pseudo-class allows you to style all [heading elemen
 - `layout.css.heading-selector.enabled`
   - : Set to `true` to enable.
 
-### `text-autospace` property
-
-The **`text-autospace`** CSS property allows you to specify the space applied between Chinese/Japanese/Korean (CJK) and non-CJK characters. Currently these values are only parsed and there is no effect on the output. ([Firefox bug 1869577](https://bugzil.la/1869577)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 143           | No                  |
-| Developer Edition | 143           | No                  |
-| Beta              | 143           | No                  |
-| Release           | 143           | No                  |
-
-- `layout.css.text-autospace.enabled`
-  - : Set to `true` to enable.
-
 ## SVG
 
 **No experimental features in this release cycle.**
 
 ## JavaScript
 
-### Atomics.waitAsync()
-
-The {{jsxref("Atomics.waitAsync()")}} static method waits asynchronously on a shared memory location and returns an object representing the result of the operation.
-It is non-blocking and usable on the main thread. ([Firefox bug 1467846](https://bugzil.la/1467846)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 140           | No                  |
-| Developer Edition | 140           | No                  |
-| Beta              | 140           | No                  |
-| Release           | 140           | No                  |
-
-- `javascript.options.atomics_wait_async`
-  - : Set to `true` to enable.
+**No experimental features in this release cycle.**
 
 ## APIs
 
@@ -459,20 +432,6 @@ The non-standard events [`beforescriptexecute`](/en-US/docs/Web/API/Document/bef
 | Release           | 139           | Yes                 |
 
 - `dom.events.script_execute.enable`
-  - : Set to `true` to enable.
-
-### PerformanceEventTiming.interactionId
-
-{{domxref("PerformanceEventTiming.interactionId")}} can be used to measure latency timing for events triggered by a particular user interaction. ([Firefox bug 1934683](https://bugzil.la/1934683)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 138           | No                  |
-| Developer Edition | 138           | No                  |
-| Beta              | 138           | No                  |
-| Release           | 138           | No                  |
-
-- `dom.performance.event_timing.enable_interactionid`
   - : Set to `true` to enable.
 
 ### Notification actions and maxActions properties
@@ -716,20 +675,6 @@ Notifications have the [`requireInteraction`](/en-US/docs/Web/API/Notification/r
 - `dom.webnotifications.requireinteraction.enabled`
   - : Set to `true` to enable.
 
-### View Transition API
-
-The [View Transition API](/en-US/docs/Web/API/View_Transition_API) provides a mechanism for easily creating animated transitions between different website views. This is especially useful for [SPAs (single-page applications)](/en-US/docs/Glossary/SPA). ([Firefox bug 1950759](https://bugzil.la/1950759)).
-
-| Release channel   | Version changed | Enabled by default? |
-| ----------------- | --------------- | ------------------- |
-| Nightly           | 139             | Yes                 |
-| Developer Edition | 139             | No                  |
-| Beta              | 139             | No                  |
-| Release           | 139             | No                  |
-
-- `dom.viewTransitions.enabled`
-  - : Set to `true` to enable.
-
 ## Security and privacy
 
 ### Insecure page labeling
@@ -782,24 +727,6 @@ Note that supported policies can be set through the [`allow`](/en-US/docs/Web/HT
   - : Set to `true` to enable.
 
 ## HTTP
-
-### Integrity policy for script resources
-
-The {{httpheader("Integrity-Policy")}} and {{httpheader("Integrity-Policy-Report-Only")}} HTTP headers are now supported for script resources. These allow websites to either enforce [subresource integrity guarantees](/en-US/docs/Web/Security/Subresource_Integrity) for scripts or only report violations of the policy, respectively.
-Note that Firefox ignores reporting endpoints, and logs violations to the developer console.
-When `Integrity-Policy` is used, the browser blocks the loading of scripts that either lack the [`integrity`](/en-US/docs/Web/HTML/Reference/Elements/script#integrity) attribute or have an integrity hash that doesn't match the script resource on the server.
-The browser will also stop requests in [`no-cors` mode](/en-US/docs/Web/API/Request/mode#no-cors) from ever being made, such as those from a {{htmlelement("script")}} element without the [`crossorigin`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) attribute.
-([Firefox bug 1976656](https://bugzil.la/1976656)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 142           | Yes                 |
-| Developer Edition | 142           | No                  |
-| Beta              | 142           | No                  |
-| Release           | 142           | No                  |
-
-- `security.integrity_policy.enabled`
-  - : Set to `true` to enable.
 
 ### Integrity policy for stylesheet resources
 

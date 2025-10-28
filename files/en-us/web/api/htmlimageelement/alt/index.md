@@ -85,8 +85,8 @@ p {
   width: 100vh;
   height: 95vh;
   font:
-    16px Arial,
-    Helvetica,
+    16px "Helvetica",
+    "Arial",
     sans-serif;
 }
 
@@ -228,9 +228,8 @@ The main feature of the CSS here is the use of {{cssxref("clip-path")}} and {{cs
 .contents {
   margin-top: 1em;
   font:
-    16px Arial,
-    Helvetica,
-    Verdana,
+    16px "Helvetica",
+    "Arial",
     sans-serif;
 }
 ```

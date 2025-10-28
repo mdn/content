@@ -6,7 +6,7 @@ browser-compat: css.types.filter-function.invert
 sidebar: cssref
 ---
 
-The **`invert()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) inverts the color samples in the input image. Its result is a {{cssxref("&lt;filter-function&gt;")}}.
+The **`invert()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) inverts the color samples in the input image. Its result is a {{cssxref("&lt;filter-function&gt;")}}.
 
 {{InteractiveExample("CSS Demo: invert()")}}
 
@@ -145,11 +145,10 @@ We include CSS that will invert elements based on their `filter` or `svgFilter` 
         <svg id="svg" height="220" width="220" overflow="visible">
           <filter id="svgInvert">
             <feComponentTransfer>
-              <feFuncR type="table" tableValues="0.3 0"/>
-              <feFuncG type="table" tableValues="0.3 0"/>
-              <feFuncB type="table" tableValues="0.3 0"/>
+              <feFuncR type="table" tableValues="0.3 0" />
+              <feFuncG type="table" tableValues="0.3 0" />
+              <feFuncB type="table" tableValues="0.3 0" />
             </feComponentTransfer>
-          </filter>
           </filter>
           <image
             href="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"

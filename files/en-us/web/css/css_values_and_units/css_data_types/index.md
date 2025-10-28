@@ -1,6 +1,6 @@
 ---
 title: CSS data types
-slug: Web/CSS/CSS_Values_and_Units/CSS_data_types
+slug: Web/CSS/CSS_values_and_units/CSS_data_types
 page-type: guide
 spec-urls: https://drafts.csswg.org/css-values/
 sidebar: cssref
@@ -8,7 +8,7 @@ sidebar: cssref
 
 **CSS data types** define typical values (including keywords and units) accepted by CSS properties and functions. They are a special kind of [component value type](https://drafts.csswg.org/css-values/#component-types).
 
-The most commonly-used types are defined in the [CSS Values and Units](/en-US/docs/Web/CSS/CSS_Values_and_Units) module. This module also defines [functional notations](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions), which allow for more complex types or processing. Other types are defined in the specifications to which they apply.
+The most commonly-used types are defined in the [CSS Values and Units](/en-US/docs/Web/CSS/CSS_values_and_units) module. This module also defines [functional notations](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions), which allow for more complex types or processing. Other types are defined in the specifications to which they apply.
 
 Below you will find a reference to the types that you are most likely to come across, however it is not a comprehensive reference for all types defined in every CSS specification.
 
@@ -48,13 +48,13 @@ These types include keywords and identifiers as well as strings, and URLs.
 These data types are used to indicate quantities, indexes, and positions. The majority of these are defined in the CSS values and units module, however additional types are described in other modules where they are specific to that specification alone — for example the `fr` unit in the [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) module.
 
 - {{cssxref("&lt;integer&gt;")}}
-  - : One or more decimal units 0 through 9.
+  - : One or more decimal units 0 through 9, optionally preceded by `-` or `+`.
 - {{cssxref("&lt;number&gt;")}}
-  - : Real numbers which may also have a fractional component, for example 1 or 1.34.
+  - : Real numbers which may also have a fractional component, for example `1` or `1.34`.
 - {{cssxref("&lt;dimension&gt;")}}
-  - : A number with a unit attached to it, for example 23px or 15em.
+  - : A number with a unit attached to it, for example `90deg`, `50ms`, or `15em`. This type includes distances ({{cssxref("&lt;length&gt;")}}), durations ({{cssxref("&lt;time&gt;")}}), frequencies ({{cssxref("&lt;frequency&gt;")}}), resolutions ({{cssxref("&lt;resolution&gt;")}}), and other quantities.
 - {{cssxref("&lt;percentage&gt;")}}
-  - : A number with a percentage sign attached to it, for example 10%.
+  - : A number with a percentage sign attached to it, for example `10%`.
 - {{cssxref("&lt;ratio&gt;")}}
   - : A ratio, written with the syntax `<number> / <number>`.
 - {{cssxref("&lt;flex&gt;")}}
@@ -62,7 +62,7 @@ These data types are used to indicate quantities, indexes, and positions. The ma
 
 ## Quantities
 
-These types are used to specify distance and other quantities.
+These {{cssxref("&lt;dimension&gt;")}} types are used to specify distance and other quantities.
 
 - {{cssxref("&lt;length&gt;")}}
   - : Lengths are a `<dimension>` and refer to distances.
@@ -77,7 +77,7 @@ These types are used to specify distance and other quantities.
 
 ## Combinations of types
 
-Some CSS properties can take a dimension or a percentage value. In this case the percentage value will be resolved to a quantity that matches the allowable dimension. Properties which can accept a percentage in addition to a dimension will use one of the types listed below.
+Some CSS properties can take a {{cssxref("&lt;dimension&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} value. In this case the percentage value will be resolved to a quantity that matches the allowable dimension. Properties which can accept a percentage in addition to a dimension will use one of the types listed below.
 
 - {{cssxref("&lt;length-percentage&gt;")}}
   - : A type that can accept a length or a percentage as a value.
@@ -125,7 +125,7 @@ The {{cssxref("&lt;position&gt;")}} data type is interpreted as defined for the 
 
 ## Calculation data types
 
-These data types are used in [CSS math function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#math_functions) calculations.
+These data types are used in [CSS math function](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#math_functions) calculations.
 
 - {{cssxref("&lt;calc-sum&gt;")}}
   - : A calculation which is a sequence of calculation values interspersed with addition (`+`) and subtraction (`-`) operators. This data type requires both values to have units.
@@ -151,6 +151,6 @@ The [CSS shapes](/en-US/docs/Web/CSS/CSS_shapes) and [CSS borders and box decora
 
 ## See also
 
-- [CSS values and units](/en-US/docs/Web/CSS/CSS_Values_and_Units) module
+- [CSS values and units](/en-US/docs/Web/CSS/CSS_values_and_units) module
 - [Learn: Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
-- [CSS functional notation](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)
+- [CSS functional notation](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)

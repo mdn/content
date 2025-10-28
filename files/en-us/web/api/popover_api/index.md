@@ -57,7 +57,7 @@ See [Using the popover API](/en-US/docs/Web/API/Popover_API/Using) for a detaile
 ## Interfaces
 
 - {{domxref("ToggleEvent")}}
-  - : Represents an event notifying the user when a popover element's state toggles between showing and hidden. It is the event object for the {{domxref("HTMLElement.beforetoggle_event", "beforetoggle")}} and {{domxref("HTMLElement.toggle_event", "toggle")}} events, which fire on popovers when their state changes.
+  - : Represents an event that fires when a popover element is toggled between being shown and hidden. It is the event object for the {{domxref("HTMLElement.beforetoggle_event", "beforetoggle")}} and {{domxref("HTMLElement.toggle_event", "toggle")}} events, which fire on popovers when their state changes.
 
 ## Extensions to other interfaces
 

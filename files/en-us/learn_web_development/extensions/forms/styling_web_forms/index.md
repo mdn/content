@@ -157,12 +157,16 @@ Take the following example:
         <input type="checkbox" id="cabbage" name="cabbage" value="cabbage" />
       </li>
       <li>
-        <label for="cauli">Cauliflower</label>
-        <input type="checkbox" id="cauli" name="cauli" value="cauli" />
+        <label for="cauliflower">Cauliflower</label>
+        <input
+          type="checkbox"
+          id="cauliflower"
+          name="cauliflower"
+          value="cauliflower" />
       </li>
       <li>
-        <label for="broc">Broccoli</label>
-        <input type="checkbox" id="broc" name="broc" value="broc" />
+        <label for="broccoli">Broccoli</label>
+        <input type="checkbox" id="broccoli" name="broccoli" value="broccoli" />
       </li>
     </ul>
   </fieldset>
@@ -186,8 +190,8 @@ Take the following example:
         <input type="radio" id="tacos" name="meal" value="tacos" />
       </li>
       <li>
-        <label for="bolognaise">Bolognaise</label>
-        <input type="radio" id="bolognaise" name="meal" value="bolognaise" />
+        <label for="bolognese">Bolognese</label>
+        <input type="radio" id="bolognese" name="meal" value="bolognese" />
       </li>
     </ul>
   </fieldset>

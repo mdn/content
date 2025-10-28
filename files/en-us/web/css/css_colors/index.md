@@ -5,6 +5,7 @@ page-type: css-module
 spec-urls:
   - https://drafts.csswg.org/css-color/
   - https://drafts.csswg.org/css-color-5/
+  - https://drafts.csswg.org/css-color-hdr/
 sidebar: cssref
 ---
 
@@ -27,6 +28,7 @@ To see the code for this color syntax converter, [view the source on GitHub](htt
 ### Properties
 
 - {{cssxref("color")}}
+- {{cssxref("dynamic-range-limit")}}
 - {{cssxref("opacity")}}
 
 ### At-rules and descriptors
@@ -47,8 +49,9 @@ The CSS colors module also introduces the {{cssxref("@color-profile")}} at-rule,
 - [`color-mix()`](/en-US/docs/Web/CSS/color_value/color-mix)
 - [`contrast-color()`](/en-US/docs/Web/CSS/color_value/contrast-color)
 - {{CSSXref("color_value/light-dark", "light-dark()")}}
+- {{cssxref("dynamic-range-limit-mix()")}}
 
-The CSS color module also introduces the {{CSSXref("color_value/device-cmyk", "device-cmyk()")}} and `contrast-color()` functions. Currently, no browsers support these features.
+The CSS color modules also introduce the {{CSSXref("color_value/device-cmyk", "device-cmyk()")}}, `contrast-color()`, and `hdr-color()` functions. Currently, no browsers support these features.
 
 ### Data types
 
@@ -63,9 +66,9 @@ The CSS color module also introduces the {{CSSXref("color_value/device-cmyk", "d
 
 ### Glossary terms and keywords
 
-- {{glossary("color space")}}
+- {{glossary("Color space")}}
 - [`currentColor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword)
-- {{glossary("interpolation")}}
+- {{glossary("Interpolation")}}
 - {{glossary("RGB")}}
 - [`transparent`](/en-US/docs/Web/CSS/named-color#transparent)
 
@@ -83,8 +86,8 @@ The CSS color module also introduces the `CSSColorProfileRule` interface. Curren
   - : Color theory and resources, including finding the right colors to create an accessible color palette, contrast, and printing in color.
 - [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)
   - : This article explains relative CSS color syntax, shows what the different options are, and looks at some illustrative examples.
-- [Color picker](/en-US/docs/Web/CSS/CSS_colors/Color_picker)
-  - : A tool that lets you pick a color in the sRGB color space and converts it between various CSS color formats, helping you understand the syntax of the different color notations.
+- [Color format converter](/en-US/docs/Web/CSS/CSS_colors/Color_format_converter)
+  - : A tool that lets you enter or pick a color and copy its corresponding value in any CSS [color format](/en-US/docs/Web/CSS/color_value).
 - [Understanding color and luminance](/en-US/docs/Web/Accessibility/Guides/Colors_and_Luminance)
   - : Color perception and using colors with color insensitive (color blind) users, reduced vision users and users with vestibular disorders or other neurological disorders in mind.
 - [WCAG 1.4.1: Color contrast](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)

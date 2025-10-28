@@ -89,7 +89,7 @@ By default, {{cssxref("pointer-events")}} are not dispatched on clipped regions.
 
 {{Compat}}
 
-## Related
+## See also
 
 - {{SVGElement("mask")}}
 - CSS {{cssxref("clip-path")}} property

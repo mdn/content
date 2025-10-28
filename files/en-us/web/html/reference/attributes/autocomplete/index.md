@@ -127,7 +127,7 @@ The tokens that identify the type of recipient include:
   - : The contact type identified by subsequent tokens is for contacting the recipient regardless of location.
 - `fax`
   - : The recipient identified by subsequent tokens is for a fax machine.
-- `page`
+- `pager`
   - : The recipient identified by subsequent tokens is for a pager or beeper.
 
 ##### Digital contact tokens
@@ -228,7 +228,7 @@ When the form field is not a phone number, email address, or instant messaging p
 - `transaction-amount`
   - : The amount, given in the currency specified by `transaction-currency`, of the transaction, for a payment form.
 - `language`
-  - : A preferred language, given as a valid [BCP 47 language tag](https://en.wikipedia.org/wiki/IETF_language_tag).
+  - : A preferred language, given as a valid {{glossary("BCP 47 language tag")}}.
 - `bday`
   - : A birth date, as a full date.
     - `bday-day`

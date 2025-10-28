@@ -62,6 +62,8 @@ BGRA
 Bignums
 bikeshedding
 bilevel
+bioinformatics
+biscotti
 bitfield
 bitmapped
 bitness
@@ -175,6 +177,7 @@ discardable
 distros
 DLRR
 DLSR
+DMARC
 docshell
 docshells
 doctypes
@@ -241,6 +244,7 @@ foveation
 fragmentainer
 fragmentainers
 framebuffers
+framebusting
 frontmost
 Fullband
 fullscreened
@@ -302,6 +306,7 @@ ICANN
 ICNS
 iconset
 idents
+IDOR
 IERS
 IMSC
 Indo-Pacific
@@ -365,6 +370,7 @@ linkify
 livemark
 livemarks
 livestreamed
+lockdown
 lofi
 logpoints
 longhands
@@ -792,6 +798,7 @@ TIPC
 toggletips
 toolkits
 toolsets
+TOTP
 touchpads
 touchpoint
 touchpoints
@@ -885,6 +892,7 @@ untriaged
 unzoomed
 uppercasing
 userbase
+Uyghur
 VDOM
 Velociraptor
 versor

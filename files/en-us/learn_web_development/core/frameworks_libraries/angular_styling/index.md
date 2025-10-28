@@ -46,7 +46,7 @@ In `src/styles.css`, paste the following styles:
 
 ```css
 body {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 .btn-wrapper {

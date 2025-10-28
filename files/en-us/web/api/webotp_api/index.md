@@ -23,7 +23,7 @@ Phone numbers are often used as a way to identify the user of an app. An SMS is 
 
 OTP use cases include:
 
-- Improving sign-in security by using a phone number as an extra factor (i.e., for two-factor authentication (2FA) or multifactor authentication (MFA)).
+- Improving sign-in security by using a phone number as an extra factor as part of a {{glossary("multi-factor authentication")}} system.
 - Verifying sensitive actions such as payments.
 
 The WebOTP API allows web apps to expedite this validation process by copying the OTP from the SMS and passing it to the app automatically after the user has provided consent (most native platforms have an equivalent API).
@@ -66,7 +66,7 @@ Your verification code is 123456.
   - Followed by the OTP, preceded by a pound sign (`#`).
 
 > [!NOTE]
-> The provided domain value must not include a URL schema, port, or other URL features not shown above.
+> The provided domain value must not include a URL scheme, port, or other URL features not shown above.
 
 If the `get()` method is invoked by a third-party site embedded in an {{htmlelement("iframe")}}, the SMS structure should be:
 

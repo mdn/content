@@ -804,6 +804,10 @@
       "inh": "",
       "impl": []
     },
+    "CSSSupportsConditionRule": {
+      "inh": "CSSGroupingRule",
+      "impl": []
+    },
     "CSSSupportsRule": {
       "inh": "CSSConditionRule",
       "impl": []
@@ -1045,6 +1049,10 @@
       "impl": []
     },
     "EventTarget": {
+      "inh": "",
+      "impl": []
+    },
+    "Exception": {
       "inh": "",
       "impl": []
     },
@@ -3080,6 +3088,14 @@
       "inh": "EventTarget",
       "impl": []
     },
+    "SFrameDecrypterStream": {
+      "inh": "EventTarget",
+      "impl": []
+    },
+    "SFrameEncrypterStream": {
+      "inh": "EventTarget",
+      "impl": []
+    },
     "SFrameTransform": {
       "inh": "EventTarget",
       "impl": []
@@ -3362,10 +3378,6 @@
     },
     "SVGDescElement": {
       "inh": "SVGElement",
-      "impl": []
-    },
-    "SVGDiscardElement": {
-      "inh": "SVGAnimationElement",
       "impl": []
     },
     "SVGElement": {
@@ -3669,6 +3681,10 @@
       "impl": []
     },
     "Table": {
+      "inh": "",
+      "impl": []
+    },
+    "Tag": {
       "inh": "",
       "impl": []
     },
@@ -4292,6 +4308,14 @@
       "inh": "",
       "impl": []
     },
+    "XRBody": {
+      "inh": "",
+      "impl": []
+    },
+    "XRBodySpace": {
+      "inh": "XRSpace",
+      "impl": []
+    },
     "XRBoundedReferenceSpace": {
       "inh": "XRReferenceSpace",
       "impl": []
@@ -4474,6 +4498,10 @@
     },
     "XRViewport": {
       "inh": "",
+      "impl": []
+    },
+    "XRVisibilityMaskChangeEvent": {
+      "inh": "Event",
       "impl": []
     },
     "XRWebGLBinding": {

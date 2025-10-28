@@ -177,11 +177,11 @@ Using shorthand properties for defining style rules is good because it uses a ve
 ```css
 #stockTicker {
   font-size: 12px;
-  font-family: Verdana;
+  font-family: "Verdana";
   font-weight: bold;
 }
 .stockSymbol {
-  font: 14px Arial;
+  font: 14px "Arial";
   color: red;
 }
 ```
@@ -195,7 +195,7 @@ In the previous example the problem occurred on rules belonging to different ele
 ```css
 #stockTicker {
   font-weight: bold;
-  font: 12px Verdana; /* font-weight is now set to normal */
+  font: 12px "Verdana"; /* font-weight is now set to normal */
 }
 ```
 
@@ -208,7 +208,7 @@ body * {
   font-weight: normal;
 }
 #stockTicker {
-  font: 12px Verdana;
+  font: 12px "Verdana";
 }
 .corpName {
   font-weight: bold;
@@ -266,7 +266,7 @@ border-block-end-color: navy;
 ```
 
 > [!NOTE]
-> See the [Mozilla CSS Extensions](/en-US/docs/Web/CSS/Mozilla_Extensions) and [WebKit CSS Extensions](/en-US/docs/Web/CSS/WebKit_Extensions) for lists of browser-prefixed CSS properties.
+> See the [Mozilla CSS Extensions](/en-US/docs/Web/CSS/Reference/Mozilla_extensions) and [WebKit CSS Extensions](/en-US/docs/Web/CSS/Reference/Webkit_extensions) for lists of browser-prefixed CSS properties.
 
 ## How does z-index relate to positioning?
 

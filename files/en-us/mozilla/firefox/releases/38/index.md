@@ -1,5 +1,5 @@
 ---
-title: Firefox 38 for developers
+title: Firefox 38 release notes for developers
 short-title: Firefox 38
 slug: Mozilla/Firefox/Releases/38
 page-type: firefox-release-notes

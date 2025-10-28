@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.XSLTProcessor.removeParameter
 ---
 
-{{APIRef("XSLT")}}
+{{APIRef("DOM")}}
 
 The `removeParameter()` method of the {{domxref("XSLTProcessor")}} interface removes the parameter (`<xsl:param>`) and its value from the stylesheet imported in the processor.
 

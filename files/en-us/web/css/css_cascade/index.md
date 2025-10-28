@@ -24,7 +24,7 @@ The opposite also occurs. Sometimes there are no declarations defining the value
 
 - {{cssxref("all")}}
 
-### At-rules
+### At-rules and descriptors
 
 - {{cssxref("@import")}}
 - {{cssxref("@layer")}}
@@ -45,7 +45,7 @@ The opposite also occurs. Sometimes there are no declarations defining the value
 - {{DOMXRef("CSSLayerStatementRule")}}
 - {{DOMXRef("CSSRule")}}
 
-### Glossary and definitions
+### Glossary terms and definitions
 
 - [Actual value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#actual_value)
 - [Anonymous layer](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers#the_layer_block_at-rule_for_named_and_anonymous_layers)
@@ -82,7 +82,7 @@ The opposite also occurs. Sometimes there are no declarations defining the value
 - [Element-attached styles](/en-US/docs/Web/HTML/Reference/Global_attributes/style)
 - [Inline styles and the cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade#inline_styles)
 - [Conditional rules for @imports](/en-US/docs/Web/CSS/@import#importing_css_rules_conditional_on_media_queries)
-- [Value definition syntax](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+- [Value definition syntax](/en-US/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
 
 ## Specifications
 

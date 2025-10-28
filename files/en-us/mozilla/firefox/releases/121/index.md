@@ -1,5 +1,5 @@
 ---
-title: Firefox 121 for developers
+title: Firefox 121 release notes for developers
 short-title: Firefox 121
 slug: Mozilla/Firefox/Releases/121
 page-type: firefox-release-notes
@@ -46,11 +46,11 @@ This article provides information about the changes in Firefox 121 that affect d
 
 #### DOM
 
-- {{domxref("HTMLInputElement.showPicker()")}} now works for [`<input type="week">`](/en-US/docs/Web/HTML/Reference/Elements/input/month) and [`<input type="month">`](/en-US/docs/Web/HTML/Reference/Elements/input/month) elements on Android ([Firefox bug 1853797](https://bugzil.la/161853797)).
+- {{domxref("HTMLInputElement.showPicker()")}} now works for [`<input type="week">`](/en-US/docs/Web/HTML/Reference/Elements/input/month) and [`<input type="month">`](/en-US/docs/Web/HTML/Reference/Elements/input/month) elements on Android ([Firefox bug 1853797](https://bugzil.la/1853797)).
 
 ### WebAssembly
 
-- WebAssembly now supports tail call optimization via new `return_call` and `return_call_indirect` alternatives to the [`call`](/en-US/docs/WebAssembly/Reference/Control_flow/call) instruction. This improves performance, reduces stack space usage, and enhances compatibility with programming languages that use tail calls. ([Firefox bug 1858855](https://bugzil.la/1846789)).
+- WebAssembly now supports tail call optimization via new `return_call` and `return_call_indirect` alternatives to the [`call`](/en-US/docs/WebAssembly/Reference/Control_flow/call) instruction. This improves performance, reduces stack space usage, and enhances compatibility with programming languages that use tail calls. ([Firefox bug 1846789](https://bugzil.la/1846789)).
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 

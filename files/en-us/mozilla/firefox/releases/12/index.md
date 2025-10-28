@@ -1,5 +1,5 @@
 ---
-title: Firefox 12 for developers
+title: Firefox 12 release notes for developers
 short-title: Firefox 12
 slug: Mozilla/Firefox/Releases/12
 page-type: firefox-release-notes

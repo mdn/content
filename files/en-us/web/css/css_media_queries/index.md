@@ -21,47 +21,44 @@ When designing reusable HTML components, you may also use [container queries](/e
 
 ## Reference
 
-### At-rules
+### At-rules and descriptors
 
 - {{cssxref("@import")}}
 - {{cssxref("@media")}}
-
-### Descriptors
-
-- {{cssxref("@media/any-hover", "any-hover")}}
-- {{cssxref("@media/any-pointer", "any-pointer")}}
-- {{cssxref("@media/aspect-ratio", "aspect-ratio")}}
-- {{cssxref("@media/color", "color")}}
-- {{cssxref("@media/color-gamut", "color-gamut")}}
-- {{cssxref("@media/color-index", "color-index")}}
-- {{cssxref("@media/device-aspect-ratio", "device-aspect-ratio")}}
-- {{cssxref("@media/device-height", "device-height")}}
-- {{cssxref("@media/device-width", "device-width")}}
-- {{cssxref("@media/display-mode", "display-mode")}}
-- {{cssxref("@media/dynamic-range", "dynamic-range")}}
-- {{cssxref("@media/forced-colors", "forced-colors")}}
-- {{cssxref("@media/grid", "grid")}}
-- {{cssxref("@media/height", "height")}}
-- {{cssxref("@media/horizontal-viewport-segments", "horizontal-viewport-segments")}}
-- {{cssxref("@media/hover", "hover")}}
-- {{cssxref("@media/inverted-colors", "inverted-colors")}}
-- {{cssxref("@media/monochrome", "monochrome")}}
-- {{cssxref("@media/orientation", "orientation")}}
-- {{cssxref("@media/overflow-block", "overflow-block")}}
-- {{cssxref("@media/overflow-inline", "overflow-inline")}}
-- {{cssxref("@media/pointer", "pointer")}}
-- {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}}
-- {{cssxref("@media/prefers-contrast", "prefers-contrast")}}
-- {{cssxref("@media/prefers-reduced-data", "prefers-reduced-data")}}
-- {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}}
-- {{cssxref("@media/prefers-reduced-transparency", "prefers-reduced-transparency")}}
-- {{cssxref("@media/resolution", "resolution")}}
-- {{cssxref("@media/scan", "scan")}}
-- {{cssxref("@media/scripting", "scripting")}}
-- {{cssxref("@media/update", "update")}}
-- {{cssxref("@media/vertical-viewport-segments", "vertical-viewport-segments")}}
-- {{cssxref("@media/video-dynamic-range", "video-dynamic-range")}}
-- {{cssxref("@media/width", "width")}}
+  - {{cssxref("@media/any-hover", "any-hover")}}
+  - {{cssxref("@media/any-pointer", "any-pointer")}}
+  - {{cssxref("@media/aspect-ratio", "aspect-ratio")}}
+  - {{cssxref("@media/color", "color")}}
+  - {{cssxref("@media/color-gamut", "color-gamut")}}
+  - {{cssxref("@media/color-index", "color-index")}}
+  - {{cssxref("@media/device-aspect-ratio", "device-aspect-ratio")}}
+  - {{cssxref("@media/device-height", "device-height")}}
+  - {{cssxref("@media/device-width", "device-width")}}
+  - {{cssxref("@media/display-mode", "display-mode")}}
+  - {{cssxref("@media/dynamic-range", "dynamic-range")}}
+  - {{cssxref("@media/forced-colors", "forced-colors")}}
+  - {{cssxref("@media/grid", "grid")}}
+  - {{cssxref("@media/height", "height")}}
+  - {{cssxref("@media/horizontal-viewport-segments", "horizontal-viewport-segments")}}
+  - {{cssxref("@media/hover", "hover")}}
+  - {{cssxref("@media/inverted-colors", "inverted-colors")}}
+  - {{cssxref("@media/monochrome", "monochrome")}}
+  - {{cssxref("@media/orientation", "orientation")}}
+  - {{cssxref("@media/overflow-block", "overflow-block")}}
+  - {{cssxref("@media/overflow-inline", "overflow-inline")}}
+  - {{cssxref("@media/pointer", "pointer")}}
+  - {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}}
+  - {{cssxref("@media/prefers-contrast", "prefers-contrast")}}
+  - {{cssxref("@media/prefers-reduced-data", "prefers-reduced-data")}}
+  - {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}}
+  - {{cssxref("@media/prefers-reduced-transparency", "prefers-reduced-transparency")}}
+  - {{cssxref("@media/resolution", "resolution")}}
+  - {{cssxref("@media/scan", "scan")}}
+  - {{cssxref("@media/scripting", "scripting")}}
+  - {{cssxref("@media/update", "update")}}
+  - {{cssxref("@media/vertical-viewport-segments", "vertical-viewport-segments")}}
+  - {{cssxref("@media/video-dynamic-range", "video-dynamic-range")}}
+  - {{cssxref("@media/width", "width")}}
 
 The CSS media queries level 5 module also introduces the `environment-blending`, `nav-controls`, and `video-color-gamut` `@media` descriptors. Currently, no browsers support these features.
 
@@ -126,7 +123,7 @@ The CSS media queries level 5 module also introduces the `environment-blending`,
 - HTML
   - `sizes` attribute for [`<img>`](/en-US/docs/Web/HTML/Reference/Elements/img#sizes), [`<link>`](/en-US/docs/Web/HTML/Reference/Elements/link#sizes), and [`<source>`](/en-US/docs/Web/HTML/Reference/Elements/source#sizes) for {{HTMLElement("picture")}}
   - `media` attribute for [`<link>`](/en-US/docs/Web/HTML/Reference/Elements/link#media), [`<source>`](/en-US/docs/Web/HTML/Reference/Elements/source#media), and [`<style>`](/en-US/docs/Web/HTML/Reference/Elements/style#media) [HTML](/en-US/docs/Web/HTML)
-  - [Viewport `<meta>` tag](/en-US/docs/Web/HTML/Guides/Viewport_meta_element)
+  - [`<meta name="viewport">`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/viewport)
 - SVG [`media`](/en-US/docs/Web/SVG/Reference/Attribute/media) attribute
 
 ## Specifications

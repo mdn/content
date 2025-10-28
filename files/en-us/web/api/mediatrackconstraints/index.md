@@ -2,7 +2,9 @@
 title: MediaTrackConstraints
 slug: Web/API/MediaTrackConstraints
 page-type: web-api-interface
-spec-urls: https://w3c.github.io/mediacapture-main/#dom-mediatrackconstraints
+spec-urls:
+  - https://w3c.github.io/mediacapture-main/#dom-mediatrackconstraints
+  - https://w3c.github.io/mediacapture-screen-share/#extensions-to-mediatrackconstraintset
 ---
 
 {{APIRef("Media Capture and Streams")}}
@@ -41,6 +43,10 @@ Its value may either be set to a Boolean (`true` or `false`) or an object contai
 - `ideal`
   - : A Boolean specifying an ideal value for the property.
     If possible, this value will be used, but if it's not possible, the user agent will use the closest possible match.
+
+### ConstrainBooleanOrDOMString
+
+The `ConstrainBooleanOrDOMString` constraint type is used to specify a constraint for a property whose value is a Boolean or string value. It can take values as specified in the [`ConstrainBoolean`](#constrainboolean) and [`ConstrainDOMString`](#constraindomstring) sections.
 
 ### ConstrainDouble
 
@@ -108,7 +114,7 @@ For example, because {{Glossary("RTP")}} doesn't provide some of these values du
 - {{domxref("MediaTrackConstraints.channelCount", "channelCount")}}
   - : A [`ConstrainULong`](#constrainulong) specifying the channel count or range of channel counts which are acceptable and/or required.
 - {{domxref("MediaTrackConstraints.echoCancellation", "echoCancellation")}}
-  - : A [`ConstrainBoolean`](#constrainboolean) object specifying whether or not echo cancellation is preferred and/or required.
+  - : A [`ConstrainBooleanOrDOMString`](#constrainbooleanordomstring) object specifying whether or not echo cancellation is preferred and/or required, and if supported, what type.
 - {{domxref("MediaTrackConstraints.latency", "latency")}}
   - : A [`ConstrainDouble`](#constraindouble) specifying the latency or range of latencies which are acceptable and/or required.
 - {{domxref("MediaTrackConstraints.noiseSuppression", "noiseSuppression")}}
@@ -196,6 +202,10 @@ These constraints apply to the `video` property of the object passed into {{domx
 - {{domxref("MediaTrackConstraints.suppressLocalAudioPlayback", "suppressLocalAudioPlayback")}} {{Experimental_Inline}}
   - : A [`ConstrainBoolean`](#constrainboolean) value describing the requested or mandatory constraints placed upon the value of the {{domxref("MediaTrackSettings.suppressLocalAudioPlayback","suppressLocalAudioPlayback")}} constrainable property.
     This property controls whether the audio playing in a tab will continue to be played out of a user's local speakers when the tab is captured.
+
+- {{domxref("MediaTrackConstraints.restrictOwnAudio", "restrictOwnAudio")}} {{Experimental_Inline}}
+  - : A [`ConstrainBoolean`](#constrainboolean) value that specifies the requested or mandatory constraints placed on the value of the {{domxref("MediaTrackSettings.restrictOwnAudio","restrictOwnAudio")}} constrainable property.
+    This property controls whether the system audio originating from the capturing tab is filtered out of the screen capture.
 
 ## Specifications
 

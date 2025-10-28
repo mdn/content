@@ -29,7 +29,9 @@ jobs:
       BUILD_OUT_ROOT: build
 
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+        with:
+          persist-credentials: false
 
       - name: Get changed files
         id: check
@@ -78,7 +80,7 @@ jobs:
 
       - name: Setup Node.js environment
         if: steps.check.outputs.HAS_FILES == 'true'
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # v6.0.0
         with:
           node-version-file: ".nvmrc"
           cache: yarn
@@ -108,24 +110,14 @@ jobs:
           # information about the flaws when we analyze the built PR.
           BUILD_FLAW_LEVELS: "unsafe_html: error, *:warn"
 
-          # Because we build these pages in a way that you get a toolbar,
-          # so the flaws can be displayed, but we don't want any of the
-          # other toolbar features like "Fix fixable flaws" or "Quick-edit"
-          # we set this to disable that stuff.
-          REACT_APP_CRUD_MODE_READONLY: true
-
           BUILD_LIVE_SAMPLES_BASE_URL: https://live.mdnyalp.dev
           BUILD_LEGACY_LIVE_SAMPLES_BASE_URL: https://live-samples.mdn.allizom.net
-
-          # In these builds, we never care for or need the ability to sign in.
-          # This environment variable will disable that functionality entirely.
-          REACT_APP_DISABLE_AUTH: true
 
           # TODO: This should be implicit when `CI=true`
           BUILD_NO_PROGRESSBAR: true
 
-          # Playground
-          REACT_APP_PLAYGROUND_BASE_HOST: mdnyalp.dev
+          FRED_WRITER_MODE: true
+          FRED_PLAYGROUND_BASE_HOST: mdnyalp.dev
 
           # rari
           LIVE_SAMPLES_BASE_URL: https://live.mdnyalp.dev
@@ -164,15 +156,11 @@ jobs:
           # be able to use this raw diff file for the benefit of analyzing.
           wget https://github.com/${{ github.repository }}/compare/${BASE_SHA}...${HEAD_SHA}.diff -O ${BUILD_OUT_ROOT}/DIFF
 
-      - name: Merge static assets with built documents
+      - name: Show final disk usage size of build
         if: steps.check.outputs.HAS_MD_FILES == 'true'
-        run: |
-          # Exclude the .map files, as they're used for debugging JS and CSS.
-          rsync -a --exclude "*.map" node_modules/@mdn/yari/client/build/ $BUILD_OUT_ROOT
-          # Show the final disk usage size of the build.
-          du -sh $BUILD_OUT_ROOT
+        run: du -sh $BUILD_OUT_ROOT
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5.0.0
         if: steps.check.outputs.HAS_MD_FILES == 'true'
         with:
           name: build

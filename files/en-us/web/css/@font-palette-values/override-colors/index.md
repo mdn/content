@@ -6,7 +6,7 @@ browser-compat: css.at-rules.font-palette-values.override-colors
 sidebar: cssref
 ---
 
-The **`override-colors`** CSS [descriptor](/en-US/docs/Glossary/CSS_Descriptor) is used to override colors in the chosen [base-palette](/en-US/docs/Web/CSS/@font-palette-values/base-palette) for a color font.
+The **`override-colors`** [CSS](/en-US/docs/Web/CSS) [descriptor](/en-US/docs/Glossary/CSS_Descriptor) is used to override colors in the chosen [base-palette](/en-US/docs/Web/CSS/@font-palette-values/base-palette) for a color font.
 
 ## Syntax
 
@@ -84,7 +84,7 @@ This example shows how to override colors in the [Noto Color Emoji](https://font
 @font-face {
   font-family: "Noto Color Emoji";
   font-style: normal;
-  font-weight: 400;
+  font-weight: normal;
   src: url("https://fonts.gstatic.com/l/font?kit=Yq6P-KqIXTD0t4D9z1ESnKM3-HpFabts6diywYkdG3gjD0U&skey=a373f7129eaba270&v=v24")
     format("woff2");
 }

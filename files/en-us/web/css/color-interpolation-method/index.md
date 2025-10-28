@@ -7,7 +7,7 @@ spec-urls: https://drafts.csswg.org/css-color/#interpolation-space
 sidebar: cssref
 ---
 
-The **`<color-interpolation-method>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents the [color space](/en-US/docs/Glossary/Color_space) used for interpolation between {{CSSXref("&lt;color&gt;")}} values. It can be used to override the default interpolation color space for color-related functional notations such as {{CSSXref("color_value/color-mix", "color-mix()")}} and {{CSSXref("gradient/linear-gradient", "linear-gradient()")}}.
+The **`<color-interpolation-method>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types) represents the [color space](/en-US/docs/Glossary/Color_space) used for interpolation between {{CSSXref("&lt;color&gt;")}} values. It can be used to override the default interpolation color space for color-related functional notations such as {{CSSXref("color_value/color-mix", "color-mix()")}} and {{CSSXref("gradient/linear-gradient", "linear-gradient()")}}.
 
 When interpolating `<color>` values, the interpolation color space defaults to Oklab.
 
@@ -83,7 +83,7 @@ The following example shows the effect of using different interpolation color sp
 The following example shows how to specify a color space when interpolating colors in repeating gradients.
 Three boxes show different types of repeating gradients using the [`repeating-conic-gradient()`](/en-US/docs/Web/CSS/gradient/repeating-conic-gradient), [`repeating-linear-gradient()`](/en-US/docs/Web/CSS/gradient/repeating-linear-gradient), and [`repeating-radial-gradient()`](/en-US/docs/Web/CSS/gradient/repeating-radial-gradient) functions.
 The first box uses the Lab color space to interpolate between two color values.
-The second and third boxes use Oklch and additionally provide a [`<hue-interpolation-method>`](/en-US/docs/Web/CSS/hue-interpolation-method) to specify how to interpolate between hue values.
+The second and third boxes use OkLCh and additionally provide a [`<hue-interpolation-method>`](/en-US/docs/Web/CSS/hue-interpolation-method) to specify how to interpolate between hue values.
 
 #### HTML
 

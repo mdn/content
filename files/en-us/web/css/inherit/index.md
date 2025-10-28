@@ -6,7 +6,7 @@ browser-compat: css.types.global_keywords.inherit
 sidebar: cssref
 ---
 
-The **`inherit`** CSS keyword causes the element to take the [computed value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value) of the property from its parent element. It can be applied to any CSS property, including the CSS shorthand property {{cssxref("all")}}.
+The **`inherit`** [CSS](/en-US/docs/Web/CSS) keyword causes the element to take the [computed value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value) of the property from its parent element. It can be applied to any CSS property, including the CSS shorthand property {{cssxref("all")}}.
 
 For [inherited properties](/en-US/docs/Web/CSS/CSS_cascade/Inheritance#inherited_properties), this reinforces the default behavior, and is only needed to override another rule.
 

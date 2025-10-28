@@ -1,11 +1,11 @@
 ---
 title: CSS value functions
-slug: Web/CSS/CSS_Values_and_Units/CSS_Value_Functions
+slug: Web/CSS/CSS_values_and_units/CSS_value_functions
 page-type: guide
 sidebar: cssref
 ---
 
-**CSS value functions** are statements that invoke special data processing or calculations to return a [CSS](/en-US/docs/Web/CSS) [value](/en-US/docs/Web/CSS/CSS_Values_and_Units) for a CSS property. CSS value functions represent more complex [data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) and they may take some input arguments to calculate the return value.
+**CSS value functions** are statements that invoke special data processing or calculations to return a [CSS](/en-US/docs/Web/CSS) [value](/en-US/docs/Web/CSS/CSS_values_and_units) for a CSS property. CSS value functions represent more complex [data types](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types) and they may take some input arguments to calculate the return value.
 
 ## Syntax
 
@@ -24,7 +24,7 @@ Functions can take multiple arguments, which are formatted similarly to CSS prop
 
 ## Transform functions
 
-The {{CSSxRef("&lt;transform-function&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represent appearance transformation. It is used as a value of {{CSSxRef("transform")}} property.
+The {{CSSxRef("&lt;transform-function&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types) represent appearance transformation. It is used as a value of {{CSSxRef("transform")}} property.
 
 ### Translate functions
 
@@ -90,7 +90,7 @@ The {{CSSxRef("&lt;transform-function&gt;")}} CSS [data type](/en-US/docs/Web/CS
 
 The math functions allow CSS numeric values to be written as mathematical expressions.
 
-Each of the pages below contains detailed information about a math function's syntax, browser compatibility data, examples, and more. For a holistic introduction to CSS math functions, see [Using CSS math functions](/en-US/docs/Web/CSS/CSS_Values_and_Units/Using_CSS_math_functions).
+Each of the pages below contains detailed information about a math function's syntax, browser compatibility data, examples, and more. For a holistic introduction to CSS math functions, see [Using CSS math functions](/en-US/docs/Web/CSS/CSS_values_and_units/Using_CSS_math_functions).
 
 ### Basic arithmetic
 
@@ -114,6 +114,8 @@ Each of the pages below contains detailed information about a math function's sy
   - : Calculates a rounded number based on a rounding strategy.
 - {{CSSxRef("mod", "mod()")}}
   - : Calculates a modulus (with the same sign as the divisor) when dividing one number by another.
+- {{CSSxRef("progress", "progress()")}}
+  - : Calculates the position of a value between two other values — a start value and an end value. The result is expressed as a number between 0 and 1 representing the progress between the start and end values.
 - {{CSSxRef("rem", "rem()")}}
   - : Calculates a remainder (with the same sign as the dividend) when dividing one number by another.
 
@@ -156,7 +158,7 @@ Each of the pages below contains detailed information about a math function's sy
 
 ## Filter functions
 
-The {{CSSxRef("&lt;filter-function&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents a graphical effect that can change the appearance of an input image. It is used in the {{CSSxRef("filter")}} and {{CSSxRef("backdrop-filter")}} properties.
+The {{CSSxRef("&lt;filter-function&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types) represents a graphical effect that can change the appearance of an input image. It is used in the {{CSSxRef("filter")}} and {{CSSxRef("backdrop-filter")}} properties.
 
 - {{CSSxRef("filter-function/blur", "blur()")}}
   - : Increases the image gaussian blur.
@@ -181,7 +183,7 @@ The {{CSSxRef("&lt;filter-function&gt;")}} CSS [data type](/en-US/docs/Web/CSS/C
 
 ## Color functions
 
-The {{CSSxRef("color_value","&lt;color&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) specifies different color representations.
+The {{CSSxRef("color_value","&lt;color&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types) specifies different color representations.
 
 - {{CSSxRef("color_value/rgb", "rgb()")}}
   - : Defines a given color according to its red, green, blue and alpha (transparency) components.
@@ -194,9 +196,9 @@ The {{CSSxRef("color_value","&lt;color&gt;")}} CSS [data type](/en-US/docs/Web/C
 - {{CSSxRef("color_value/oklch", "oklch()")}}
   - : Defines a given color according to its lightness, chroma, hue and alpha (transparency) components.
 - {{CSSxRef("color_value/lab", "lab()")}}
-  - : Defines a given color according to its lightness, a-axis distance and b-axis distance in the lab colorspace.
+  - : Defines a given color according to its lightness, a-axis distance and b-axis distance in the Lab colorspace.
 - {{CSSxRef("color_value/oklab", "oklab()")}}
-  - : Defines a given color according to its lightness, a-axis distance, b-axis distance in the lab colorspace and alpha (transparency).
+  - : Defines a given color according to its lightness, a-axis distance, b-axis distance in the Lab colorspace and alpha (transparency).
 - {{CSSxRef("color_value/color", "color()")}}
   - : Specifies a particular, specified colorspace rather than the implicit sRGB colorspace.
 - {{CSSxRef("color_value/color-mix", "color-mix()")}}
@@ -207,10 +209,12 @@ The {{CSSxRef("color_value","&lt;color&gt;")}} CSS [data type](/en-US/docs/Web/C
   - : Defines CMYK colors in a device-dependent way.
 - {{CSSXref("color_value/light-dark", "light-dark()")}}
   - : Returns one of two provided colors based on the current color scheme.
+- {{cssxref("dynamic-range-limit-mix()")}}
+  - : Creates a custom maximum luminance limit that is a mix of different {{cssxref("dynamic-range-limit")}} keywords in specified percentages.
 
 ## Image functions
 
-The {{CSSxRef("&lt;image&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) provides graphical representation of images or gradients.
+The {{CSSxRef("&lt;image&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types) provides graphical representation of images or gradients.
 
 ### Gradient functions
 
@@ -255,7 +259,7 @@ CSS counter functions are generally used with the {{CSSxRef("content")}} propert
 
 ### Basic shapes
 
-The {{CSSxRef("&lt;basic-shape&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents a graphical shape. It is used in the {{CSSxRef("clip-path")}}, {{CSSxRef("offset-path")}}, and {{CSSxRef("shape-outside")}} properties.
+The {{CSSxRef("&lt;basic-shape&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types) represents a graphical shape. It is used in the {{CSSxRef("clip-path")}}, {{CSSxRef("offset-path")}}, and {{CSSxRef("shape-outside")}} properties.
 
 - {{CSSxRef("basic-shape/circle","circle()")}}
   - : Defines a circle shape.
@@ -326,7 +330,7 @@ CSS font functions are used with the {{CSSxRef("font-variant-alternates")}} prop
 
 ## Easing functions
 
-The {{CSSxRef("&lt;easing-function&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents a mathematical function. It is used in transition and animation properties:
+The {{CSSxRef("&lt;easing-function&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types) represents a mathematical function. It is used in transition and animation properties:
 
 - {{cssxref("easing-function/linear", "linear()")}}
   - : Easing function that interpolates linearly between its points.
@@ -364,5 +368,5 @@ The following functions return an integer value based on the DOM tree, rather th
 
 ## See also
 
-- [CSS values and units](/en-US/docs/Web/CSS/CSS_Values_and_Units) module
+- [CSS values and units](/en-US/docs/Web/CSS/CSS_values_and_units) module
 - [Learn: Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

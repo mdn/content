@@ -5,52 +5,6 @@ sidebar:
     link: /Web/CSS
     title: CSS
   - type: section
-    link: /Learn_web_development/Core/Styling_basics
-    title: Beginners
-  - link: /Learn_web_development/Getting_started/Your_first_website/Styling_the_content
-    title: Styling_the_content
-  - link: /Learn_web_development/Core/Styling_basics
-    title: CSS_styling_basics
-    details: closed
-    children:
-      - /Learn_web_development/Core/Styling_basics/What_is_CSS
-      - /Learn_web_development/Core/Styling_basics/Getting_started
-      - /Learn_web_development/Core/Styling_basics/Styling_a_bio_page
-      - /Learn_web_development/Core/Styling_basics/Basic_selectors
-      - /Learn_web_development/Core/Styling_basics/Attribute_selectors
-      - /Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements
-      - /Learn_web_development/Core/Styling_basics/Combinators
-      - /Learn_web_development/Core/Styling_basics/Box_model
-      - /Learn_web_development/Core/Styling_basics/Handling_conflicts
-      - /Learn_web_development/Core/Styling_basics/Values_and_units
-      - /Learn_web_development/Core/Styling_basics/Sizing
-      - /Learn_web_development/Core/Styling_basics/Backgrounds_and_borders
-      - /Learn_web_development/Core/Styling_basics/Overflow
-      - /Learn_web_development/Core/Styling_basics/Images_media_forms
-      - /Learn_web_development/Core/Styling_basics/Tables
-      - /Learn_web_development/Core/Styling_basics/Debugging_CSS
-  - link: /Learn_web_development/Core/Text_styling
-    title: CSS_text_styling
-    details: closed
-    children:
-      - /Learn_web_development/Core/Text_styling/Fundamentals
-      - /Learn_web_development/Core/Text_styling/Styling_lists
-      - /Learn_web_development/Core/Text_styling/Styling_links
-      - /Learn_web_development/Core/Text_styling/Web_fonts
-      - /Learn_web_development/Core/Text_styling/Typesetting_a_homepage
-  - link: /Learn_web_development/Core/CSS_layout
-    title: CSS_layout
-    details: closed
-    children:
-      - /Learn_web_development/Core/CSS_layout/Introduction
-      - /Learn_web_development/Core/CSS_layout/Floats
-      - /Learn_web_development/Core/CSS_layout/Positioning
-      - /Learn_web_development/Core/CSS_layout/Flexbox
-      - /Learn_web_development/Core/CSS_layout/Grids
-      - /Learn_web_development/Core/CSS_layout/Responsive_Design
-      - /Learn_web_development/Core/CSS_layout/Media_queries
-      - /Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension
-  - type: section
     link: /Web/CSS/Reference
   - type: listSubPages
     path: /Web/CSS
@@ -97,13 +51,13 @@ sidebar:
     path: /Web/CSS
     tags: css-function
     depth: 2
-    link: /Web/CSS/CSS_Values_and_Units/CSS_Value_Functions
+    link: /Web/CSS/CSS_values_and_units/CSS_value_functions
     title: Functions
     details: closed
   - type: listSubPages
     path: /Web/CSS
     tags: css-type
-    link: /Web/CSS/CSS_Values_and_Units/CSS_data_types
+    link: /Web/CSS/CSS_values_and_units/CSS_data_types
     title: Types
     details: closed
   - type: section
@@ -326,10 +280,10 @@ sidebar:
   - title: Values and units
     details: closed
     children:
-      - /Web/CSS/CSS_Values_and_Units/Value_definition_syntax
-      - /Web/CSS/CSS_Values_and_Units/Numeric_data_types
-      - /Web/CSS/CSS_Values_and_Units/Textual_data_types
-      - /Web/CSS/CSS_Values_and_Units/Using_CSS_math_functions
+      - /Web/CSS/CSS_values_and_units/Value_definition_syntax
+      - /Web/CSS/CSS_values_and_units/Numeric_data_types
+      - /Web/CSS/CSS_values_and_units/Textual_data_types
+      - /Web/CSS/CSS_values_and_units/Using_CSS_math_functions
   - type: section
     link: /Web/CSS/Layout_cookbook
   - children:
@@ -349,16 +303,11 @@ sidebar:
       - /Web/CSS/CSS_backgrounds_and_borders/Border-image_generator
       - /Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator
       - /Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator
+      - /Web/CSS/CSS_colors/Color_format_converter
       - /Web/CSS/CSS_colors/Color_mixer
-      - /Web/CSS/CSS_colors/Color_picker
       - /Web/CSS/CSS_shapes/Shape_generator
 l10n:
   de:
-    Beginners: Einsteiger-Tutorials
-    Styling_the_content: "Ihre erste Website: Das Styling des Inhalts"
-    CSS_styling_basics: Grundlagen des CSS-Stylings
-    CSS_text_styling: CSS-Textgestaltung
-    CSS_layout: CSS-Layout
     Guides: Leitfäden
     Animations: Animationen
     Accessibility_Understanding_colors_and_luminance: "Barrierefreiheit: Farbwerte verstehen"
@@ -402,11 +351,6 @@ l10n:
   en-US:
     Accessibility_Understanding_colors_and_luminance: "Accessibility: Colors and luminance"
     Applying_color_to_HTML_elements: Applying color to HTML
-    Beginners: Beginner's tutorials
-    Styling_the_content: "Your first website: Styling the content"
-    CSS_styling_basics: CSS styling basics
-    CSS_text_styling: CSS text styling
-    CSS_layout: CSS layout
     Guides: Guides
     Anchor_positioning: Anchor positioning
     Animations: Animations
@@ -444,7 +388,6 @@ l10n:
     Transitions: Transitions
     Tools: Tools
   fr:
-    CSS_layout: Dispositions CSS
     Guides: Guides
     Animations: Animations
     Backgrounds_and_Borders: Arrière-plans et bordures
@@ -473,11 +416,6 @@ l10n:
     Accessibility_Understanding_colors_and_luminance: "アクセシビリティ: 色と輝度"
     Applying_color_to_HTML_elements: HTML への色の適用
     At-rules: アットルール
-    Beginners: 初心者向けチュートリアル
-    Styling_the_content: "初めてのウェブサイト: コンテンツのスタイル設定"
-    CSS_styling_basics: CSS スタイル設定の基本
-    CSS_text_styling: CSS テキスト装飾
-    CSS_layout: CSS レイアウト
     Guides: ガイド
     Anchor_positioning: アンカー位置指定
     Animations: アニメーション
@@ -526,7 +464,6 @@ l10n:
     Types: データ型
     Values and units: 値と単位
   ko:
-    CSS_layout: CSS 레이아웃
     Guides: 안내서
     Animations: 애니메이션
     Backgrounds_and_Borders: 배경과 보더
@@ -552,11 +489,9 @@ l10n:
     Transitions: 트랜지션
     Tools: 도구
   pt-BR:
-    CSS_layout: Esquemas CSS
     Flexbox: Flexbox
     Positioning: Posicionamento
   ru:
-    CSS_layout: CSS макет
     Guides: Руководства
     Animations: Анимации
     Backgrounds_and_Borders: Фоны и границы
@@ -582,12 +517,7 @@ l10n:
     Transitions: Переходы
     Tools: Инструменты
   zh-CN:
-    Beginners: 初学者教程
-    Styling_the_content: 你的第一个网站：样式化内容
-    CSS_styling_basics: CSS 样式基础
-    CSS_text_styling: CSS 文本样式
     Containment: CSS 局限
-    CSS_layout: CSS 布局概述
     Combinators: 关系选择器
     Guides: 指南
     Anchor_positioning: 锚点定位
@@ -636,6 +566,5 @@ l10n:
     Types: 类型
     Values and units: 值和单位
   zh-TW:
-    CSS_layout: CSS 版面配置
     Flexbox: 彈性區塊
     Positioning: 定位

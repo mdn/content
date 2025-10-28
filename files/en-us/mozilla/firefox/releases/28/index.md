@@ -1,5 +1,5 @@
 ---
-title: Firefox 28 for developers
+title: Firefox 28 release notes for developers
 short-title: Firefox 28
 slug: Mozilla/Firefox/Releases/28
 page-type: firefox-release-notes

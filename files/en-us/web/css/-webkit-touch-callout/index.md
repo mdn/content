@@ -64,5 +64,5 @@ Not part of any standard. Apple has a [description in the Safari CSS Reference](
 
 ## See also
 
-- [WebKit CSS extensions](/en-US/docs/Web/CSS/WebKit_Extensions)
+- [WebKit CSS extensions](/en-US/docs/Web/CSS/Reference/Webkit_extensions)
 - [-webkit-touch-callout in the Apple developer documentation](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-_webkit_touch_callout)

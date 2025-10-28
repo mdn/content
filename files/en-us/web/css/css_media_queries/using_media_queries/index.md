@@ -321,5 +321,5 @@ For example, the following queries are both valid:
 - [Container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries)
 - [Testing media queries programmatically](/en-US/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
 - [CSS Animations Between Media Queries](https://davidwalsh.name/animate-media-queries)
-- [Extended Mozilla media features](/en-US/docs/Web/CSS/Mozilla_Extensions#media_features)
-- [Extended WebKit media features](/en-US/docs/Web/CSS/WebKit_Extensions#media_features)
+- [Extended Mozilla media features](/en-US/docs/Web/CSS/Reference/Mozilla_extensions#media_features)
+- [Extended WebKit media features](/en-US/docs/Web/CSS/Reference/Webkit_extensions#media_features)

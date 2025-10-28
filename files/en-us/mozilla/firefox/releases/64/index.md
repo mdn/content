@@ -1,5 +1,5 @@
 ---
-title: Firefox 64 for developers
+title: Firefox 64 release notes for developers
 short-title: Firefox 64
 slug: Mozilla/Firefox/Releases/64
 page-type: firefox-release-notes

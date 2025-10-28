@@ -1,5 +1,5 @@
 ---
-title: Firefox 125 for developers
+title: Firefox 125 release notes for developers
 short-title: Firefox 125
 slug: Mozilla/Firefox/Releases/125
 page-type: firefox-release-notes
@@ -71,7 +71,7 @@ No notable changes.
 
 #### Removals
 
-- The [`SVGAElement.text`](/en-US/docs/Web/API/SVGAElement#svgaelement.text) property has been removed. The {{domxref("Node.textContent", "textContent")}} property (inherited from `Node`) is broadly supported and should be used instead. ([Firefox bug 1880689](https://bugzil.la/1880689)).
+- The [`SVGAElement.text`](/en-US/docs/Web/API/SVGAElement/text) property has been removed. The {{domxref("Node.textContent", "textContent")}} property (inherited from `Node`) is broadly supported and should be used instead. ([Firefox bug 1880689](https://bugzil.la/1880689)).
 
 ### WebAssembly
 

@@ -9,7 +9,7 @@ sidebar: cssref
 
 {{Non-standard_header}}
 
-The **`:-moz-drag-over`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that matches an element when a {{domxref("HTMLElement/dragover_event", "dragover")}} event is called on it.
+The **`:-moz-drag-over`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) is a [Mozilla extension](/en-US/docs/Web/CSS/Reference/Mozilla_extensions) that matches an element when a {{domxref("HTMLElement/dragover_event", "dragover")}} event is called on it.
 
 ## Syntax
 
@@ -37,7 +37,7 @@ The **`:-moz-drag-over`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/
 
 Most elements are not valid places to drop data, so in order to allow a drop, you must prevent default behavior by cancelling [`dragenter`](/en-US/docs/Web/API/HTMLElement/dragenter_event) or [`dragover`](/en-US/docs/Web/API/HTMLElement/dragover_event) (or both) events.
 In this example, we only need to cancel the `dragenter` event, which is the first event fired when the browser evaluates if an element can be a drop target.
-For more information, see [Drag operations: Specifying drop targets](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#specifying_drop_targets).
+For more information, see [Drag operations: Specifying drop targets](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragging_over_elements_and_specifying_drop_targets).
 
 ```js
 const target = document.getElementById("drop-target");
@@ -52,7 +52,7 @@ target.addEventListener("dragenter", (event) => {
 
 ```css
 body {
-  font-family: Arial;
+  font-family: "Arial";
 }
 div {
   display: inline-block;
@@ -88,5 +88,5 @@ Not part of any standard.
 
 ## See also
 
-- [Mozilla CSS extensions](/en-US/docs/Web/CSS/Mozilla_Extensions)
+- [Mozilla CSS extensions](/en-US/docs/Web/CSS/Reference/Mozilla_extensions)
 - [HTML drag and drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
