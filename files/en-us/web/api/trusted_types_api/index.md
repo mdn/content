@@ -209,6 +209,7 @@ The following sections list injection sinks that are expected to accept trusted 
 
 - {{domxref("Document.parseHTMLUnsafe_static()")}}
 - {{domxref("Document.write()")}}
+- {{domxref("Document.writeln()")}}
 - {{domxref("DOMParser.parseFromString()")}}
 - {{domxref("Element.innerHTML")}}
 - {{domxref("Element.insertAdjacentHTML")}}
@@ -232,12 +233,27 @@ The following sections list injection sinks that are expected to accept trusted 
 - {{domxref("HTMLScriptElement.src")}}
 - {{domxref("SvgAnimatedString.baseVal")}}
 
+<!--
+
+These still require links, and possibly docs
+- [`ServiceWorkerContainer.register()`](https://developer.mozilla.org/docs/Web/API/ServiceWorkerContainer/register)
+- [`WorkerGlobalScope.importScripts`](https://developer.mozilla.org/docs/Web/API/WorkerGlobalScope/importScripts)
+- [`Window.trustedTypes`](https://developer.mozilla.org/docs/Web/API/Window/trustedTypes)
+-->
+
 ## Extensions to HTTP
+
+{{httpheader("Content-Security-Policy")}} directives:
 
 - {{CSP("require-trusted-types-for")}}
   - : Enforces that [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) are passed to DOM XSS [injection sinks](/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage).
 - {{CSP("trusted-types")}}
   - : Used to specify an allowlist of [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) policy names.
+
+{{httpheader("Content-Security-Policy")}} keywords:
+
+- [`'trusted-types-eval'`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#trusted-types-eval)
+  - : Allows [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval) and similar functions to be used but only when [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) are supported and enabled.
 
 ## Examples
 
