@@ -5,7 +5,9 @@ page-type: guide
 sidebar: http
 ---
 
-This article explains the differences in user agent (UA) strings as a result of **User-Agent reduction**, and explains how you can access both the redacted and additional UA information if it is needed.
+**User-Agent reduction** is a broadly accepted browser initiative to reduce the amount of privacy-sensitive information provided in user agent (UA) strings.
+
+This article shows the differences in UA strings as a result of User-Agent reduction, and explains how you can access both redacted and additional UA information when needed.
 
 ## Background
 
@@ -16,8 +18,8 @@ The user agent (UA) string — available in the {{httpheader("User-Agent")}} HTT
 Theoretically the UA string is useful for detecting the browser and serving code to work around browser-specific bugs or lack of feature support. However, this is **unreliable** and **is not recommended**:
 
 - Future browsers will fix bugs and add support for new features, so your browser detection code will need to be regularly updated to avoid locking out browsers that do actually support the features you are testing for. [Feature detection](/en-US/docs/Learn_web_development/Extensions/Testing/Feature_detection) is a much more reliable strategy.
-- You really have no guarantee that the user agent advertised by this property is really the one your site is loaded in. Browser vendors can basically do what they like with the UA string, and some browsers enable users to change the value of this field if they want (**UA spoofing**).
-- Browser detection lead to a situation where browsers had to return fake values from such properties in order not to be locked out of some websites.
+- You really have no guarantee that the user agent advertised by this property is really the one your site is loaded in. Browser vendors can basically do what they like with the UA string, and historically would return fake values from such properties in order not to be locked out of some websites.
+- Some browsers enable users to change the value of this field if they want (**UA spoofing**).
 
 The following are much more reliable strategies for working around bugs and differing browser support:
 
@@ -32,7 +34,7 @@ In addition, the information exposed in the UA string has historically raised [p
 
 To mitigate such concerns, [supporting browsers](/en-US/docs/Web/HTTP/Reference/Headers/User-Agent#browser_compatibility) implement user-agent reduction, which updates the `User-agent` header and related API features to provide a reduced set of information.
 
-## UA string differences resulting from User-Agent reduction
+## UA string changes after reduction
 
 In [supporting browsers](/en-US/docs/Web/HTTP/Reference/Headers/User-Agent#browser_compatibility), User-Agent reduction removes three pieces of information from the UA string — the exact platform/OS version, device model, and minor browser version.
 
@@ -64,7 +66,7 @@ The platform version and device model are always represented by fixed values:
 
 The major browser version number shows correctly, but the minor version numbers are always shown as zeros — `0.0.0`.
 
-## Requesting detailed UA information via client hints
+## Requesting UA information via client hints
 
 You may still have code that relies on detailed UA string data, which can't be coverted to use feature detection or progressive enhancement. Examples include fine-grained logging, fraud prevention measures, or a software help site that serves different content based on the user's device type.
 

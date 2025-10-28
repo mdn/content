@@ -12,7 +12,7 @@ The **`Navigator.userAgent`** read-only property of the {{domxref("Navigator")}}
 
 ## Value
 
-A string specifying the browser's complete UA string.
+A string.
 
 ## Description
 

@@ -12,7 +12,7 @@ The **`Navigator.appVersion`** read-only property of the {{domxref("Navigator")}
 
 ## Value
 
-A string representing version information about the browser.
+A string.
 
 ## Description
 

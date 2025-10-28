@@ -167,7 +167,7 @@ Mozilla/5.0 (iPhone; CPU iPhone OS 18_6 like Mac OS X) AppleWebKit/605.1.15 (KHT
 
 ## Pre-user-agent reduction examples
 
-This section provides some examples of UA strings prior to user-agent reduction:
+This section provides some examples of UA strings in earlier browser versions, prior to the introduction of user-agent reduction:
 
 Google Chrome:
 

@@ -33,11 +33,11 @@ The set of "hint" headers are listed in the topic [HTTP Headers](/en-US/docs/Web
    Accept-CH: Sec-CH-UA-Model, Sec-CH-UA-Form-Factors
    ```
 
-   The default set of headers are always sent. In addition to those, we've also requested:
+   The default set of headers is always sent; in this case, we've also requested:
    - {{httpheader("Sec-CH-UA-Model")}}: The device model the platform is running on.
    - {{httpheader("Sec-CH-UA-Form-Factors")}}: The device's form factor(s), which indicate how the user interacts with the user-agent — the screen size, controls, etc.
 
-4. If the browser is permitted to send the server all the requested information, it will do so along with all subsequent requests until the browser or tab is closed. For example, our example Android phone might send the following updated headers with subsequent requests:
+4. If the browser is permitted, it will send the requested headers in all subsequent requests, until the browser or tab is closed. For example, our example Android phone might send the following updated headers with subsequent requests:
 
    ```http
    Sec-CH-UA: "Google Chrome";v="143", "Chromium";v="143", "Not A(Brand";v="24"
@@ -86,7 +86,7 @@ For example, to stop requesting any hints it would send `Accept-CH` with an empt
 
 Client hints are broadly divided into high and low entropy hints.
 The low entropy hints are those that don't give away much information that might be used to [fingerprint](/en-US/docs/Glossary/Fingerprinting) a user.
-They may be sent by default on every client request, irrespective of the server `Accept-CH` response header, depending on the permission policy.
+They may be sent by default on every client request, irrespective of the server `Accept-CH` response header, depending on the [permission policy](https://wicg.github.io/client-hints-infrastructure/#policy-controlled-features).
 Low entropy hints are:
 
 - {{HTTPHeader("Save-Data")}},
@@ -97,7 +97,7 @@ Low entropy hints are:
 ## High entropy hints
 
 The high entropy hints are those that have the potential to give away more information that can be used for user fingerprinting, and therefore are gated in such a way that the user agent can make a decision whether to provide them.
-The decision might be based on user preferences, a permission request, or the permission policy.
+The decision might be based on user preferences, a permission request, or a [permission policy](https://wicg.github.io/client-hints-infrastructure/#policy-controlled-features).
 All client hints that are not low entropy hints are considered high entropy hints.
 
 ## Critical client hints
