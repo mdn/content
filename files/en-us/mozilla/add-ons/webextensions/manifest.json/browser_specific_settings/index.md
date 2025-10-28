@@ -62,7 +62,7 @@ The `gecko` sub-key supports these properties:
     - `required`
       - : The data that the extension requires to be collected and transmitted for its operation. Must contain the value `none`, or one or more of `authenticationInfo`, `bookmarksInfo`, `browsingActivity`, `financialAndPaymentInfo`, `healthInfo`, `locationInfo`, `personalCommunications`, `personallyIdentifyingInfo`, `searchTerms`, `websiteActivity`, or `websiteContent`.
     - `optional` {{optional_inline}}
-      - : The data that the user can opt to provide. Can contain one or more of `authenticationInfo`, `bookmarksInfo`, `browsingActivity`, `financialAndPaymentInfo`, `healthInfo`, `locationInfo`, `personalCommunications`, `personallyIdentifyingInfo`, `searchTerms`, `websiteActivity`, or `websiteContent`.
+      - : The data that the user can opt to provide. Can contain one or more of `authenticationInfo`, `bookmarksInfo`, `browsingActivity`, `financialAndPaymentInfo`, `healthInfo`, `locationInfo`, `personalCommunications`, `personallyIdentifyingInfo`, `searchTerms`, `technicalAndInteraction`, `websiteActivity`, or `websiteContent`.
 
   - : For more information, see the Extension Workshop article [Firefox built-in consent for data collection and transmission](https://extensionworkshop.com/documentation/develop/firefox-builtin-data-consent/).
 
