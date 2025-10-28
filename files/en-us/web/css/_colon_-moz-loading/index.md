@@ -9,7 +9,7 @@ sidebar: cssref
 
 {{Non-standard_header}}
 
-The **`:-moz-loading`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that matches elements that can't be displayed because they have not started loading, such as images that haven't started to arrive yet. Note that images that are _in the process_ of loading _are not_ matched by this pseudo-class.
+The **`:-moz-loading`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) is a [Mozilla extension](/en-US/docs/Web/CSS/Reference/Mozilla_extensions) that matches elements that can't be displayed because they have not started loading, such as images that haven't started to arrive yet. Note that images that are _in the process_ of loading _are not_ matched by this pseudo-class.
 
 > [!NOTE]
 > This selector is mainly intended to be used by theme developers.

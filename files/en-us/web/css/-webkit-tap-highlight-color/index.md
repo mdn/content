@@ -48,7 +48,7 @@ Not part of any standard. Apple has [a description in the Safari Web Content Gui
 
 ## See also
 
-- [WebKit CSS extensions](/en-US/docs/Web/CSS/WebKit_Extensions)
+- [WebKit CSS extensions](/en-US/docs/Web/CSS/Reference/Webkit_extensions)
 - Related CSS pseudo-classes:
   - [`:hover`](/en-US/docs/Web/CSS/:hover)
   - [`:active`](/en-US/docs/Web/CSS/:active)
