@@ -162,4 +162,3 @@ This is discussed in https://bugzilla.mozilla.org/show_bug.cgi?id=1991641#c6
 Since this might not survive in the shipped release it is undocumented now - there is a BCD key
 This hidden comment is here as a reminder when there is an update to browser status w.r.t this header.
 -->
-
