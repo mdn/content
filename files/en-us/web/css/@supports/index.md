@@ -286,7 +286,7 @@ The following example applies the [Bungee Spice](https://fonts.google.com/specim
 ```
 
 It's also possible to test for the support of a font technology by using the `tech` function inside the {{CSSxRef("@font-face")}} at-rule.
-If a browser doesn't support the color font technology, a regular [Bungee](https://fonts.google.com/specimen/Bungee) font can be used instead.
+In the following example, if a browser doesn't support the color font technology in the [`bungee-spice.woff2`](https://fonts.google.com/specimen/Bungee+Spice) font, a regular [`bungee.woff2`](https://fonts.google.com/specimen/Bungee) font will be used instead.
 
 ```css
 @font-face {
