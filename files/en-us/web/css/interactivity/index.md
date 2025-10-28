@@ -243,7 +243,7 @@ A {{cssxref("width")}} of `100vw` is set on the unordered list to make it as wid
 
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 h1 {
@@ -272,23 +272,23 @@ Each list item has the following styles applied:
 
 - A {{cssxref("flex")}} value of `0 0 98vw`, forcing each item to be as big as the scroll container minus the {{cssxref("gap")}} set on the list (see the `gap` declaration in the `ul` rule shown earlier). This also has the effect of centering each page inside the scroll container.
 - A {{cssxref("scroll-snap-align")}} value of `center`, to cause the scroll container to snap to the center of each snap target.
-- A {{cssxref("view-timeline")}} value of `--inertChange inline`, to declare the element as the subject of the `--inertChange` view progress timeline, and set that timeline to progress in the inline direction as it moves through its ancestor scroll container.
+- A {{cssxref("view-timeline")}} value of `--inner-change inline`, to declare the element as the subject of the `--inner-change` view progress timeline, and set that timeline to progress in the inline direction as it moves through its ancestor scroll container.
 - An {{cssxref("animation-timeline")}} value with the same name as the {{cssxref("view-timeline-name")}}, as defined in the `view-timeline` shorthand, which means that the named view progress timeline will be used to control the progress of animations applied to the element.
 - An {{cssxref("animation-name")}} and {{cssxref("animation-fill-mode")}} defining the animation applied to this element and its fill mode. The `both` value is required because you want the starting animation state to apply to the element before the animation starts, and the end animation state to apply to the element after the animation finishes. If the animation isn't persisted, the `interactivity: inert` declaration applied via the animation won't apply to list items when they are outside the scroll container.
 
 ```css live-sample___offscreen-inert
 li {
   list-style-type: none;
-  background-color: #eee;
-  border: 1px solid #ddd;
+  background-color: #eeeeee;
+  border: 1px solid #dddddd;
   padding: 20px;
 
   flex: 0 0 98vw;
 
   scroll-snap-align: center;
 
-  view-timeline: --inertChange inline;
-  animation-timeline: --inertChange;
+  view-timeline: --inner-change inline;
+  animation-timeline: --inner-change;
   animation-name: inert-change;
   animation-fill-mode: both;
 }
