@@ -196,7 +196,7 @@ defaultSanitizerButton.addEventListener("click", () => {
 
   // Log HTML before sanitization and after being injected
   logElement.textContent =
-    "Default sanitizer: remove script element, onclick attribute, data-attribute\n\n";
+    "Default sanitizer: remove script element, onclick attribute, data- attribute\n\n";
   log(`\nunsanitized: ${unsanitizedString}`);
   log(`\n\nsanitized: ${shadow.innerHTML}`);
 });
