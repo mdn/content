@@ -182,7 +182,7 @@ const obj = {
 
 ### Feature detection
 
-Many functions accept an object and retrieve individual properties from it as separate parameters (this object parameter is known as an _options bag_). You can detect whether a specific option is supported by detecting if the property has been retrieved with a getter. This example checks if the `colorType` option is supported on the {{domxref("HTMLCanvasElement.getContext()")}} method.
+Many functions accept an object and retrieve individual properties from it as separate parameters (this object parameter is known as an _options bag_). You can detect whether a specific option is supported by using a getter to track if the property has been retrieved. This example checks if the `colorType` option is supported by the {{domxref("HTMLCanvasElement.getContext()")}} method.
 
 ```js
 function isColorTypeSupported() {
