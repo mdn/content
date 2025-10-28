@@ -1,6 +1,6 @@
 ---
 title: Split navigation
-slug: Web/CSS/Layout_cookbook/Split_Navigation
+slug: Web/CSS/How_to/Layout_cookbook/Split_navigation
 page-type: guide
 sidebar: cssref
 ---

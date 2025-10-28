@@ -1,6 +1,6 @@
 ---
 title: "Recipe: Media objects"
-slug: Web/CSS/Layout_cookbook/Media_objects
+slug: Web/CSS/How_to/Layout_cookbook/Media_objects
 page-type: guide
 sidebar: cssref
 ---
