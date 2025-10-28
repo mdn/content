@@ -34,7 +34,7 @@ Translator.create(options)
     - `signal` {{optional_inline}}
       - : An {{domxref("AbortSignal")}} object instance, which allows a `create()` operation to be aborted via the associated {{domxref("AbortController")}}. The exact effect is dependant on when {{domxref("AbortController.abort()")}} is called:
         - If `abort()` is called before the `create()` promise resolves, the `create()` operation is cancelled.
-        - If `abort()` is called after the `create()` promise fulfills, it has the same effect as calling {{domxref("Translator.destroy()")}}: The resources assigned to the resulting `Translator` instance are released, and any further translation activity will fail.
+        - If `abort()` is called after the `create()` promise fulfills, it has the same effect as calling {{domxref("Translator.destroy()")}}: The resources assigned to the resulting `Translator` instance are released, and any ongoing and subsequent `Translator` method calls will reject with an `AbortError`.
 
 ### Return value
 

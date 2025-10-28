@@ -43,7 +43,7 @@ Summarizer.create(options)
     - `signal`
       - : An {{domxref("AbortSignal")}} object instance, which allows a `create()` operation to be aborted via the associated {{domxref("AbortController")}}. The exact effect is dependant on when {{domxref("AbortController.abort()")}} is called:
         - If `abort()` is called before the `create()` promise resolves, the `create()` operation is cancelled.
-        - If `abort()` is called after the `create()` promise fulfills, it has the same effect as calling {{domxref("Summarizer.destroy()")}}: The resources assigned to the resulting `Summarizer` instance are released, and any further summarizing activity will fail.
+        - If `abort()` is called after the `create()` promise fulfills, it has the same effect as calling {{domxref("Summarizer.destroy()")}}: The resources assigned to the resulting `Summarizer` instance are released, and any ongoing and subsequent `Summarizer` method calls will reject with an `AbortError`.
     - `type`
       - : An enumerated value specifying the {{domxref("Summarizer.type", "type")}} of summary you want this `Summarizer` to generate. Defaults to `key-points`.
 
