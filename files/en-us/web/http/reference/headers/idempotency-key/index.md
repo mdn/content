@@ -44,12 +44,12 @@ What this means is that you can send a message with these methods any number of 
 For example, if you send the same `PUT` message multiple times it will update the same resource on the server each time, with the same value.
 
 The {{HTTPMethod("POST")}} and {{HTTPMethod("PATCH")}} methods are non-idempotent, which means that the server state may change each time the message is received.
-Unlike a `PUT` message, if you send the same `POST` message multiple times it may create a new record each time.
+Unlike a `PUT` message, if you send the same `POST` request multiple times, the server may create a new resource for each successful request.
 Similarly, a `PATCH` reflects a change with respect to a particular state, and that state is changed each time the patch is applied.
 
 Idempotence is important in cases where a client does not receive a response, because it means the client can safely resend the request without having to worry about possible side effects.
 
-The HTTP `Idempotency-Key` header allows a client to make `POST` and `PATCH` requests idempotent by giving them a unique identifier (key).
+The HTTP `Idempotency-Key` header allows a client to make `POST` and `PATCH` requests idempotent by giving them a unique identifier (a key).
 The client can then resend the same request multiple times, and the server can know that it should only perform the action once.
 
 ### Client responsibilities
@@ -62,7 +62,7 @@ A unique key must be used for each new request that is sent, and the same key sh
 
 Servers that support the `Idempotency-Key` header are expected to document and publish their support, including the endpoints that require the header, and any requirements on the key (such as length, computation method, and expiry).
 
-Note that the server may choose to expire received keys over time; the key expiry behavior must be defined and documented.
+Note that the server may choose to expire received keys over time; the key expiry behavior must be defined and documented so that clients can make conforming requests.
 
 #### Idempotency fingerprint
 
@@ -96,7 +96,7 @@ A server should provide error responses in the following cases:
 In the case of a `409 Conflict` response, clients will need to wait before retrying.
 For all the other errors clients will need to amend the requests before resending.
 
-The specification does not mandate the format of the error response payload, but indicates it should contain a link to site-specific documentation explaining the error.
+The specification does not mandate a format for the error response payload, but errors should contain a link to implementation-specific documentation explaining the error.
 The JSON payload format outlined in {{rfc(9457, "Problem Details for HTTP APIs")}} is one option.
 For example, the following response might be used for a missing key:
 
@@ -104,6 +104,7 @@ For example, the following response might be used for a missing key:
 HTTP/1.1 400 Bad Request
 Content-Type: application/problem+json
 Content-Language: en
+
 {
     "type": "https://developer.example.com/idempotency/docs",
     "title": "Idempotency-Key is missing",
@@ -138,9 +139,9 @@ Idempotency-Key: 9c7d2b4a0e1f6c835a2d1b0f4e3c5a7d
 }
 ```
 
-If no response is received the client can safely resend exactly the same request again; if the server didn't get the request it will act on it, if it has already had the request is will not make the post, but it will respond as though it had.
+If no response is received, the client can safely resend exactly the same request again; if the server didn't get the request it will act on it, if it has already had the request is will not make the post, but it will respond as though it had.
 
-The client resends the request too quickly it might get an error response like this.
+If the client resends the request too quickly, it might get an error response like this.
 Note that only the HTTP status code is mandated, the rest of the information is defined by the server.
 
 ```http
