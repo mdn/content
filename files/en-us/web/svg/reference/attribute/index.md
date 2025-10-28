@@ -331,7 +331,7 @@ The XLink attributes can reference resources.
 All SVG presentation attributes can be used as CSS properties.
 
 > [!NOTE]
-> Whether these attributes are presentation attributes depends on the element on which they are set. For example, `x` is a presentation attribute for {{svgelem("circle")}}, but not for {{svgelem("tspan")}}; it's the coordinate of the starting point of the text baseline, or the x coordinate of each individual glyph if a list of values is provided.
+> Whether these attributes are presentation attributes depends on the element on which they are set. For example, `x` is a presentation attribute for {{svgelement("circle")}}, but not for {{svgelement("tspan")}}; it's the coordinate of the starting point of the text baseline, or the x coordinate of each individual glyph if a list of values is provided.
 
 - {{SVGAttr("alignment-baseline")}}
 - {{SVGAttr("baseline-shift")}}

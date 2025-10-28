@@ -36,17 +36,20 @@ Firefox 145 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 - The {{cssxref("text-autospace")}} property is now supported, allowing automatic spacing adjustments between characters from different scripts ([Firefox bug 1981086](https://bugzil.la/1981086), [Firefox bug 1869577](https://bugzil.la/1869577)).
 
-- Firefox now supports the legacy [`-webkit-fill-available` keyword](Web/CSS/WebKit_Extensions) as a value for the CSS {{cssxref("width")}} and {{cssxref("height")}} properties, to improve web compatibility.
-  This keyword is an alias for the recently-standardized `stretch` keyword (i.e., [`width: stretch`](/en-US/docs/Web/CSS/width#stretch) and [`height: stretch`](/en-US/docs/Web/CSS/height#stretch)) which isn't yet supported in Firefox.
+- The legacy [`-webkit-fill-available`](/en-US/docs/Web/CSS/WebKit_Extensions#-webkit-prefixed_property_values) keyword is now supported as a value for the CSS {{cssxref("width")}} and {{cssxref("height")}} properties to improve web compatibility.
+  This keyword is an alias for the recently-standardized `stretch` keyword (i.e., [`width: stretch`](/en-US/docs/Web/CSS/width#stretch) and [`height: stretch`](/en-US/docs/Web/CSS/height#stretch)), which isn't yet supported in Firefox.
   ([Firefox bug 1988938](https://bugzil.la/1988938), [Firefox bug 1789477](https://bugzil.la/1789477)).
 
-<!-- No notable changes. -->
+- The [`math`](/en-US/docs/Web/CSS/font-family#math) generic font family is now supported as a value of the `font-family` property, allowing mathematical expressions to use appropriate fonts.
+  ([Firefox bug 1788937](https://bugzil.la/1788937)).
 
 <!-- #### Removals -->
 
-<!-- ### JavaScript -->
+### JavaScript
 
-<!-- No notable changes. -->
+- Firefox now supports the {{jsxref("Atomics.waitAsync()")}} static method, which allows synchronization of threads based upon the value in a shared memory location.
+  The method waits asynchronously on the value and returns an object representing the result of the operation. It is non-blocking and usable on the main thread.
+  ([Firefox bug 1884148](https://bugzil.la/1884148)).
 
 <!-- #### Removals -->
 
@@ -63,6 +66,12 @@ Firefox 145 is the current [Beta version of Firefox](https://www.firefox.com/en-
 <!-- #### Removals -->
 
 ### APIs
+
+- The {{domxref("ToggleEvent/source", "source")}} property of the {{domxref("ToggleEvent")}} interface is now supported.
+  If a [popover](/en-US/docs/Web/API/Popover_API) is triggered to open or close by an HTML element such as a {{htmlelement("button")}}, the event's `source` property will contain the element that triggered the popover.
+  ([Firefox bug 1968987](https://bugzil.la/1968987)).
+- A {{domxref("CSSStyleProperties")}} instance is now returned for the `style` property on {{domxref("HTMLElement.style", "HTMLElement")}}, {{domxref("MathMLElement.style", "MathMLElement")}}, {{domxref("SVGElement.style", "SVGElement")}}, and {{domxref("CSSStyleRule.style", "CSSStyleRule")}}, and the {{domxref("Window.getComputedStyle()")}} method. Previously a {{domxref("CSSStyleDeclaration")}} instance was returned.
+  ([Firefox bug 1989925](https://bugzil.la/1989925))
 
 <!-- #### DOM -->
 
@@ -100,6 +109,6 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
 - **CSS anchor positioning** (Nightly): `layout.css.anchor-positioning.enabled`
 
-  Nightly builds now support [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) by default, which allows to tether elements together.
+  Nightly builds now support [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) by default, which allows you to tether elements together.
   The anchor-positioned elements can then have their size and position set relative to the size and location of the anchor elements to which they are bound.
-  ([Firefox bug 1988224](https://bugzil.la/1988224)).
+  (General: [Firefox bug 1988224](https://bugzil.la/1988224), `position-area`: [Firefox bug 1924086](https://bugzil.la/1924086)).

@@ -3,37 +3,37 @@
 # https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/about-code-owners
 
 # Default owners
-* @mdn/core-yari-content
+* @mdn/content-team
 
 # Default content owners
-/files/en-us/ @mdn/yari-content-mdn
+/files/en-us/ @mdn/web
 
 # MDN Firefox release notes
-/files/en-us/mozilla/ @mdn/core-yari-content
+/files/en-us/mozilla/ @mdn/content-team
 
 # Mozilla Add-ons
-/files/en-us/mozilla/add-ons/ @mdn/yari-content-mozilla-add-ons
+/files/en-us/mozilla/add-ons/ @mdn/add-ons
 
 # Accessibility
-/files/en-us/web/accessibility/ @mdn/yari-content-accessibility
+/files/en-us/web/accessibility/ @mdn/accessibility
 
 # Web API
-/files/en-us/web/api/ @mdn/yari-content-web-api
+/files/en-us/web/api/ @mdn/web-api
 
 # CSS
-/files/en-us/web/css/ @mdn/yari-content-css
+/files/en-us/web/css/ @mdn/css
 
 # HTML
-/files/en-us/web/html/ @mdn/yari-content-html
+/files/en-us/web/html/ @mdn/web
 
 # HTTP
-/files/en-us/web/http/ @mdn/yari-content-http
+/files/en-us/web/http/ @mdn/http
 
 # JavaScript
-/files/en-us/web/javascript/ @mdn/yari-content-javascript
+/files/en-us/web/javascript/ @mdn/javascript
 
 # MathML
-/files/en-us/web/mathml/ @mdn/content-mathml
+/files/en-us/web/mathml/ @mdn/mathml
 
 # Templates and sidebars (rari)
 /files/jsondata/L10n-Template.json @mdn/engineering
@@ -45,12 +45,12 @@
 # mdn/content GitHub configuration
 /.github/ @mdn/engineering
 # Issue templates in .github
-/.github/ISSUE_TEMPLATE/ff-project-issue.md @mdn/core-yari-content
+/.github/ISSUE_TEMPLATE/ff-project-issue.md @mdn/content-team
 
 # Root directory
 /* @mdn/engineering
 # Markdown files in root directory
-/*.md @mdn/core-yari-content
+/*.md @mdn/content-team
 # Filecheck
 /scripts @mdn/engineering
 
