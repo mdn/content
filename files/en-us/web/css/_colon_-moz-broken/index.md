@@ -11,7 +11,7 @@ sidebar: cssref
 
 {{Non-standard_header}}{{deprecated_header}}
 
-The **`:-moz-broken`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that matches elements representing broken image links.
+The **`:-moz-broken`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) is a [Mozilla extension](/en-US/docs/Web/CSS/Reference/Mozilla_extensions) that matches elements representing broken image links.
 
 > [!NOTE]
 > This selector is mainly intended to be used by theme developers.

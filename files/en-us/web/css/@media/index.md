@@ -290,5 +290,5 @@ For more examples, please see [Using media queries](/en-US/docs/Web/CSS/CSS_medi
 - [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries) module
 - [Using media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - {{domxref("CSSMediaRule")}} interface
-- [Extended Mozilla media features](/en-US/docs/Web/CSS/Mozilla_Extensions#media_features)
-- [Extended WebKit media features](/en-US/docs/Web/CSS/WebKit_Extensions#media_features)
+- [Extended Mozilla media features](/en-US/docs/Web/CSS/Reference/Mozilla_extensions#media_features)
+- [Extended WebKit media features](/en-US/docs/Web/CSS/Reference/Webkit_extensions#media_features)

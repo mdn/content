@@ -1,6 +1,6 @@
 ---
 title: Firefox (-moz-) vendor-prefixed CSS extensions
-slug: Web/CSS/Mozilla_Extensions
+slug: Web/CSS/Reference/Mozilla_extensions
 page-type: landing-page
 status:
   - non-standard
@@ -291,5 +291,5 @@ See [Browser Compatibility](/en-US/docs/Web/CSS/list-style-type#browser_compatib
 
 ## See also
 
-- [WebKit (-webkit-) vendor-prefixed CSS extensions](/en-US/docs/Web/CSS/WebKit_Extensions)
+- [WebKit (-webkit-) vendor-prefixed CSS extensions](/en-US/docs/Web/CSS/Reference/Webkit_extensions)
 - {{glossary("Vendor Prefix")}} glossary entry
