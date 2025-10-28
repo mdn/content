@@ -1,7 +1,7 @@
 ---
 title: List group with badges
 slug: Web/CSS/How_to/Layout_cookbook/List_group_with_badges
-page-type: guide
+page-type: how-to
 sidebar: cssref
 ---
 

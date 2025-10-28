@@ -1,7 +1,7 @@
 ---
 title: Card
 slug: Web/CSS/How_to/Layout_cookbook/Card
-page-type: guide
+page-type: how-to
 sidebar: cssref
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Pagination
 slug: Web/CSS/How_to/Layout_cookbook/Pagination
-page-type: guide
+page-type: how-to
 sidebar: cssref
 ---
 

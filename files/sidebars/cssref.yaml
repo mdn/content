@@ -300,6 +300,11 @@ sidebar:
       - /Web/CSS/How_to/Layout_cookbook/Pagination
       - /Web/CSS/How_to/Layout_cookbook/Card
       - /Web/CSS/How_to/Layout_cookbook/Grid_wrapper
+      - link: /Web/CSS/How_to/Layout_cookbook/Contribute_a_recipe
+        title: Contribute a recipe
+        details: closed
+        children:
+          - /Web/CSS/How_to/Layout_cookbook/Contribute_a_recipe/Cookbook_template
   - type: section
     title: Tools
   - children:
