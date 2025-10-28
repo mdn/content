@@ -51,6 +51,9 @@ const foo = null;
 foo; // null
 ```
 
+> [!NOTE]
+> Even though null is a primitive value, the [typeof](/en-US/docs/Web/JavaScript/Reference/Operators/typeof#typeof_null) operator returns "object" for it. This is a long-standing bug in JavaScript for backward compatibility.
+
 ## Examples
 
 ### Difference between `null` and `undefined`
