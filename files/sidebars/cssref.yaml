@@ -285,8 +285,11 @@ sidebar:
       - /Web/CSS/CSS_values_and_units/Textual_data_types
       - /Web/CSS/CSS_values_and_units/Using_CSS_math_functions
   - type: section
-    link: /Web/CSS/How_to/Layout_cookbook
-  - children:
+    link: /Web/CSS/How_to
+  - link: /Web/CSS/How_to/Layout_cookbook
+    title: Layout cookbook
+    details: closed
+    children:
       - /Web/CSS/How_to/Layout_cookbook/Media_objects
       - /Web/CSS/How_to/Layout_cookbook/Column_layouts
       - /Web/CSS/How_to/Layout_cookbook/Center_an_element
