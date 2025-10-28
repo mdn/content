@@ -112,13 +112,6 @@ Content-Language: en
 }
 ```
 
-<!-- ## Browser integration -->
-<!-- Firefox has a (non-standard) integration that automatically applies keys.
-This is discussed in https://bugzilla.mozilla.org/show_bug.cgi?id=1991641#c6
-Since this might not survive in the shipped release it is undocumented now.
-This hidden comment remains so that the possible differences are known at that point by the editor.
--->
-
 ## Examples
 
 ### A POST with a key
@@ -162,3 +155,11 @@ Content-Language: en
 ## Browser compatibility
 
 {{Compat}}
+
+<!-- ## Browser integration -->
+<!-- Firefox has a (non-standard) integration that automatically applies keys to POST requests (but not PATCH).
+This is discussed in https://bugzilla.mozilla.org/show_bug.cgi?id=1991641#c6
+Since this might not survive in the shipped release it is undocumented now - there is a BCD key
+This hidden comment is here as a reminder when there is an update to browser status w.r.t this header.
+-->
+
