@@ -17,7 +17,7 @@ The **`<svg>`** [SVG](/en-US/docs/Web/SVG) element is a container that defines a
 
 ## Attributes
 
-This element's attributes include the ARIA [role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles) attribute and various [aria-*](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes) attributes.
+This element's attributes include the ARIA [role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles) attribute and various [aria-\*](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes) attributes.
 
 - {{SVGAttr("baseProfile")}} {{deprecated_inline}}
   - : The minimum SVG language profile that the document requires.
