@@ -8,7 +8,7 @@ sidebar: cssref
 
 A common UI pattern involves elements that are animated as the user scrolls up and down (or left and right) across a page. These animations are called _scroll-driven animations_ as the effects are in direct response to scrolling; be it scrolling a page, or just an overflowing scroll container within a page.
 
-The properties defined in the [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations) module expand upon [CSS animations](/en-US/docs/Web/CSS/CSS__animations) by enabling animating property values defined in {{cssxref("@keyframes")}} animations in response to user interaction.
+The properties defined in the [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations) module expand upon [CSS animations](/en-US/docs/Web/CSS/CSS_animations) by enabling animating property values defined in {{cssxref("@keyframes")}} animations in response to user interaction.
 
 This guide provides an overview of using CSS to scroll-driven animation timelines and creating scroll-driven animations.
 
@@ -42,7 +42,7 @@ Alternatively, the `animation-timeline` property can be used to explicitly state
 
 By default, CSS animation progression is based on the time-based document timeline.
 
-Setting `animation-timeline` explicitly to `auto`, or omitting the property and allowing it to default to `auto`, sets the timeline to be the default document timeline. When set to this default value, the animation's progress is determined by the {{csscref("animation-duration")}}, the {{csscref("animation-delay")}}, and how much time has passed since the animation was associated with the element via the `animation-name` property. The time-based document timeline is the timeline traditionally associated with CSS animations.
+Setting `animation-timeline` explicitly to `auto`, or omitting the property and allowing it to default to `auto`, sets the timeline to be the default document timeline. When set to this default value, the animation's progress is determined by the {{cssxref("animation-duration")}}, the {{cssxref("animation-delay")}}, and how much time has passed since the animation was associated with the element via the `animation-name` property. The time-based document timeline is the timeline traditionally associated with CSS animations.
 
 ```css live-sample___regular
 :checked ~ .container > .item {
