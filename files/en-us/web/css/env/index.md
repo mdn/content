@@ -141,7 +141,7 @@ button {
 }
 ```
 
-We set [`position: sticky`](/en-US/docs/Web/CSS/position#sticky) to stick the footer to the bottom of the viewport. We then use the {{cssxref("padding")}} shorthand to add padding to the footer. We include the value of the `safe-area-inset-bottom` environment value to an initial `1em` of bottom padding. A larger black area will display on devices that have a positive value for this variable, ensuring the buttons in the footer are never obscured.
+We set [`position: sticky`](/en-US/docs/Web/CSS/Reference/Properties/position#sticky) to stick the footer to the bottom of the viewport. We then use the {{cssxref("padding")}} shorthand to add padding to the footer. We include the value of the `safe-area-inset-bottom` environment value to an initial `1em` of bottom padding. A larger black area will display on devices that have a positive value for this variable, ensuring the buttons in the footer are never obscured.
 
 ```css
 footer {

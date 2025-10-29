@@ -1,5 +1,6 @@
 ---
 title: CSS reference
+short-title: Reference
 slug: Web/CSS/Reference
 page-type: landing-page
 sidebar: cssref

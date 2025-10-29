@@ -59,7 +59,7 @@ For most properties, in particular those that depend on layout such as `display`
 For properties that depend on layout, the used value may differ slightly from the computed value, and this is what is returned as the resolved value.
 For an animating property value, it will be the computed value at the current point in the animation.
 
-The returned object has dash-named and corresponding {{Glossary("camel_case", "camel-case")}} named properties for **all** [CSS properties](/en-US/docs/Web/CSS/Properties) supported by the browser, including both [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) and longhand properties.
+The returned object has dash-named and corresponding {{Glossary("camel_case", "camel-case")}} named properties for **all** [CSS properties](/en-US/docs/Web/CSS/Reference/Properties) supported by the browser, including both [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) and longhand properties.
 
 Shorthand CSS properties of the element are expanded to their corresponding long-form properties.
 For example, an element with style `"border-top: 1px solid black"` would be represented in the returned object by properties with the names {{cssxref("border-top")}} and `borderTop`, and the corresponding longhand properties {{cssxref("border-top-color")}} and `borderTopColor`, {{cssxref("border-top-style")}} and `borderTopStyle`, and {{cssxref("border-top-width")}} and `borderTopWidth`.

@@ -314,7 +314,7 @@ Color as in hues and saturation can affect our mood, and enhance — or de-enhan
 
 - [Accessibility](/en-US/docs/Web/Accessibility)
 - [Accessibility learning path](/en-US/docs/Learn_web_development/Core/Accessibility)
-- CSS [`color`](/en-US/docs/Web/CSS/color) property
+- CSS [`color`](/en-US/docs/Web/CSS/Reference/Properties/color) property
 - [`<color>`](/en-US/docs/Web/CSS/color_value) data type
 - [Web accessibility for seizures and physical reactions](/en-US/docs/Web/Accessibility/Guides/Seizure_disorders)
 - [How the Color Red Influences Our Behavior](https://www.scientificamerican.com/article/how-the-color-red-influences-our-behavior/) Scientific American By Susana Martinez-Conde, Stephen L. Macknik on November 1, 2014

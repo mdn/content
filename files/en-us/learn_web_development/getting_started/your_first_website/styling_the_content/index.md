@@ -51,7 +51,7 @@ This renders as follows on its own:
 
 {{EmbedLiveSample("basic-html", "100%", "140px")}}
 
-If we add some CSS into the mix, we can change how the HTML looks. The following snippet selects the {{htmlelement("p")}} element and gives it a different [font](/en-US/docs/Web/CSS/font-family) and a red text {{cssxref("color")}}. It then selects all the {{htmlelement("li")}} elements and gives each one a greeny-yellow {{cssxref("background-color")}}, a 1-pixel solid black {{cssxref("border")}}, and a 5-pixel [bottom margin](/en-US/docs/Web/CSS/margin-bottom):
+If we add some CSS into the mix, we can change how the HTML looks. The following snippet selects the {{htmlelement("p")}} element and gives it a different [font](/en-US/docs/Web/CSS/Reference/Properties/font-family) and a red text {{cssxref("color")}}. It then selects all the {{htmlelement("li")}} elements and gives each one a greeny-yellow {{cssxref("background-color")}}, a 1-pixel solid black {{cssxref("border")}}, and a 5-pixel [bottom margin](/en-US/docs/Web/CSS/Reference/Properties/margin-bottom):
 
 ```css live-sample___basic-css
 p {

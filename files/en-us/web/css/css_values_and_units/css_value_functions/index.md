@@ -283,7 +283,7 @@ The {{CSSxRef("&lt;basic-shape&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_v
 - {{CSSxRef("ray", "ray()")}}
   - : Valid with {{cssxref("offset-path")}}; defines the line segment an animated element can follow.
 - {{CSSxRef("superellipse()")}}
-  - : Defines the curvature of an ellipse; can be used to specify a {{cssxref("corner-shape-value")}}, which is used with {{cssxref("corner-shape")}} and its [constituent](/en-US/docs/Web/CSS/corner-shape#constituent_properties) and [related](/en-US/docs/Web/CSS/corner-shape#properties_that_follow_the_corner_shape) properties.
+  - : Defines the curvature of an ellipse; can be used to specify a {{cssxref("corner-shape-value")}}, which is used with {{cssxref("corner-shape")}} and its [constituent](/en-US/docs/Web/CSS/Reference/Properties/corner-shape#constituent_properties) and [related](/en-US/docs/Web/CSS/Reference/Properties/corner-shape#properties_that_follow_the_corner_shape) properties.
 
 ## Reference functions
 

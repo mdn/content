@@ -65,7 +65,7 @@ div {
 
 ## Default layering behavior
 
-To stack the elements, we can [position](/en-US/docs/Web/CSS/position#types_of_positioning) them.
+To stack the elements, we can [position](/en-US/docs/Web/CSS/Reference/Properties/position#types_of_positioning) them.
 If we use absolute positioning to place them in (almost) the same spot, the default stacking order follows the source order: the first element in the HTML appears at the bottom layer and the last element appears at the top layer.
 
 ```css live-sample___example2 live-sample___example3 live-sample___example4

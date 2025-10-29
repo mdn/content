@@ -116,7 +116,7 @@ Try changing the browser or OS dark mode setting to see the effect.
 ```html hidden
 <pre>
     Q: How does CSS transform light into energy?
-  Ans: Using <a href="/en-US/docs/Web/CSS/font-synthesis">font-synthesis</a>.
+  Ans: Using <a href="/en-US/docs/Web/CSS/Reference/Properties/font-synthesis">font-synthesis</a>.
 </pre>
 ```
 

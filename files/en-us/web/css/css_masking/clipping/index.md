@@ -35,7 +35,7 @@ With the `clip-path` property, you can make complex shapes by clipping an elemen
 
 ### Values of the `clip-path` property
 
-To visually clip an element, the `clip-path` property is set to either a [`<geometry-box>`](/en-US/docs/Web/CSS/clip-path#geometry-box), a {{cssxref("url_value", "url")}} to a {{svgElement("clipPath")}} clip source, or a {{cssxref("basic-shape")}} created with [shape function](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#shape_functions).
+To visually clip an element, the `clip-path` property is set to either a [`<geometry-box>`](/en-US/docs/Web/CSS/Reference/Properties/clip-path#geometry-box), a {{cssxref("url_value", "url")}} to a {{svgElement("clipPath")}} clip source, or a {{cssxref("basic-shape")}} created with [shape function](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#shape_functions).
 
 ### Geometry boxes
 
@@ -232,7 +232,7 @@ body:has([value="content-box"]:checked) {
 
 {{ EmbedLiveSample('shape origin', 230, 420) }}
 
-For another example, see [`clip-path` shapes and geometry boxes](/en-US/docs/Web/CSS/clip-path#shapes_and_geometry_boxes).
+For another example, see [`clip-path` shapes and geometry boxes](/en-US/docs/Web/CSS/Reference/Properties/clip-path#shapes_and_geometry_boxes).
 
 Even values like `clip-path: margin-box` can be useful. In addition to creative visuals made by placing the clip-path's edge at the margin-box edge, any computed value for `clip-path`, other than `none`, results in the creation of a new [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context) the same way that CSS {{cssxref("opacity")}} does for values other than `1`.
 

@@ -12,7 +12,7 @@ For floating elements, the stacking order is a bit different. Floating elements 
 3. _Floating elements_.
 4. Descendant positioned elements, in order of appearance in the HTML.
 
-See [types of positioning](/en-US/docs/Web/CSS/position#types_of_positioning) for an explanation of positioned and non-positioned elements.
+See [types of positioning](/en-US/docs/Web/CSS/Reference/Properties/position#types_of_positioning) for an explanation of positioned and non-positioned elements.
 
 > [!NOTE]
 > If an `opacity` value is applied to a non-positioned element (i.e., DIV #4 in the example below), something strange happens: the background and border of that block pop up above the floating blocks and the positioned blocks. This is due to a peculiar part of the specification: applying an `opacity` value creates a new stacking context (see [What No One Told You About Z-Index](https://philipwalton.com/articles/what-no-one-told-you-about-z-index/)).

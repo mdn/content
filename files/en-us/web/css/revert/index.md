@@ -24,7 +24,7 @@ Revert will not affect rules applied to children of an element you reset (but wi
 > [!NOTE]
 > The `revert` keyword is different from and should not be confused with the {{cssxref("initial")}} keyword, which uses the [initial value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value) defined on a per-property basis by the CSS specifications. In contrast, user-agent stylesheets set default values on the basis of CSS selectors.
 >
-> For example, the [initial value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value) for the [`display`](/en-US/docs/Web/CSS/display#formal_definition) property is `inline`, whereas a normal user-agent stylesheet sets the default {{cssxref("display")}} value of {{HTMLElement("div")}}s to `block`, of {{HTMLElement("table")}}s to `table`, etc.
+> For example, the [initial value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value) for the [`display`](/en-US/docs/Web/CSS/Reference/Properties/display#formal_definition) property is `inline`, whereas a normal user-agent stylesheet sets the default {{cssxref("display")}} value of {{HTMLElement("div")}}s to `block`, of {{HTMLElement("table")}}s to `table`, etc.
 
 ## Examples
 
@@ -32,7 +32,7 @@ Revert will not affect rules applied to children of an element you reset (but wi
 
 Although `revert` and `unset` are similar, they differ for some properties for some elements.
 
-So in the below example, we set custom [`font-weight`](/en-US/docs/Web/CSS/font-weight#formal_definition), but then try to `revert` and `unset` it inline in the HTML document. The `revert` keyword will revert the text to bold because that is the default value for headers in most browsers. The `unset` keyword will keep the text normal because, as an inherited property, the `font-weight` would then inherit its value from the body.
+So in the below example, we set custom [`font-weight`](/en-US/docs/Web/CSS/Reference/Properties/font-weight#formal_definition), but then try to `revert` and `unset` it inline in the HTML document. The `revert` keyword will revert the text to bold because that is the default value for headers in most browsers. The `unset` keyword will keep the text normal because, as an inherited property, the `font-weight` would then inherit its value from the body.
 
 #### HTML
 

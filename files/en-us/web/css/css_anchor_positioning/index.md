@@ -42,8 +42,8 @@ The CSS anchor positioning module also introduces the `anchor-scope` property. C
 - [`<anchor-side>`](/en-US/docs/Web/CSS/anchor#anchor-side)
 - [`<anchor-size>`](/en-US/docs/Web/CSS/anchor-size#anchor-size)
 - [`<position-area>`](/en-US/docs/Web/CSS/position-area_value)
-- [`<try-size>`](/en-US/docs/Web/CSS/position-try-order#try-size)
-- [`<try-tactic>`](/en-US/docs/Web/CSS/position-try-fallbacks#try-tactic)
+- [`<try-size>`](/en-US/docs/Web/CSS/Reference/Properties/position-try-order#try-size)
+- [`<try-tactic>`](/en-US/docs/Web/CSS/Reference/Properties/position-try-fallbacks#try-tactic)
 
 ### HTML attributes
 
