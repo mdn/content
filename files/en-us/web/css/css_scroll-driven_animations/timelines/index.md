@@ -6,11 +6,11 @@ spec-urls: https://drafts.csswg.org/scroll-animations-1/
 sidebar: cssref
 ---
 
-A common UI pattern involves elements that are animated as the user scrolls up and down (or left and right) across a page. These animations are called _scroll-driven animations_ as the effects are in direct response to scrolling; be it scrolling a page, or just an overflowing scroll container within a page.
+A common UI pattern involves animating elements in direct response to scrolling, as the user scrolls across a page. These _scroll-driven animations_ have been implemented in many places, including effects that respond to user scrolling up and down a page, or left and right on overflowing content.
 
 The properties defined in the [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations) module expand upon [CSS animations](/en-US/docs/Web/CSS/CSS_animations) by enabling animating property values defined in {{cssxref("@keyframes")}} animations in response to user interaction.
 
-This guide provides an overview of using CSS to scroll-driven animation timelines and creating scroll-driven animations.
+This guide provides an overview of using CSS for scroll-driven animation timelines and creating scroll-driven animations.
 
 ## What is scroll-driven animation
 
@@ -18,22 +18,22 @@ The [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animati
 
 Animations can be set to progress along a scroll-based timeline instead of the default time-based document timeline, without needing JavaScript. This means that, by [defining which animation timeline](#animation_timelines) to use, you can animate an element by scrolling a scrollable element, rather than just by the passing of time with CSS.
 
-CSS scroll driven animations are performant. JavaScript scroll driven animations requires [`scroll`](/en-US/docs/Web/API/Document/scroll_event) event listeners and {{domxref("IntersectionObserver")}} objects on the {{glossary("main thread")}} to track elements across the [scrollport](/en-US/docs/Glossary/Scroll_container#scrollport). Any time you rely on the main thread to render effects with JavaScript, you run the risk of blocking the main thread, leading to an unresponsive page and a bad user experience, or {{glossary("jank")}}. As CSS scroll-driven animations are native to the web platform, JavaScript isn't necessary.
+CSS scroll-driven animations are performant. JavaScript scroll driven animations requires [`scroll`](/en-US/docs/Web/API/Document/scroll_event) event listeners and {{domxref("IntersectionObserver")}} objects on the {{glossary("main thread")}} to track elements across the [scrollport](/en-US/docs/Glossary/Scroll_container#scrollport). Any time you rely on the main thread to render effects with JavaScript, you run the risk of blocking the main thread, leading to an unresponsive page and a bad user experience, or {{glossary("jank")}}. As CSS scroll-driven animations are native to the web platform, JavaScript isn't necessary.
 
 > [!NOTE]
-> Scroll driven animations build upon [CSS animations](/en-US/docs/Web/CSS/CSS_animations) and the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API). Prior to creating scroll driven animations, you must have an understanding of CSS {{cssxref("@keyframes")}} animations. See the [using CSS animations guide](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations) to learn more.
+> Scroll driven animations build upon [CSS animations](/en-US/docs/Web/CSS/CSS_animations) and the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API). Prior to creating scroll-driven animations, you must have an understanding of CSS {{cssxref("@keyframes")}} animations. See the [using CSS animations guide](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations) to learn more.
 
-Animations in CSS are created by attaching keyframe animations to an element using the {{cssxref("animation-name")}} property (or {{cssxref("animation")}} shorthand). By default, animations run on the default document timeline, moving from the `from` keyframe to the `to` keyframe as time passes by, with the animation lasting as long as the time defined by the {{cssxref("animation-duration")}} property value. When set to run on the default document timeline, animation play through completion unless prevented of doing so, such as by having the {{cssxref("animation-play-state")}} set to `paused` or by removing the `animation-name` from the element.
+Animations in CSS are created by attaching keyframe animations to an element using the {{cssxref("animation-name")}} property (or {{cssxref("animation")}} shorthand). By default, animations run on the default document timeline, moving from the `from` keyframe to the `to` keyframe as time passes by, with the animation lasting as long as the time defined by the {{cssxref("animation-duration")}} property value. When set to run on the default document timeline, animations play through completion unless prevented from doing so, such as by having the {{cssxref("animation-play-state")}} set to `paused` or by removing the `animation-name` from the element.
 
-Scroll-driven animations are CSS animations are not run on the default document timeline; rather, on a scroll-progress or view-progress timeline, which is driven by user scrolling.
+Scroll-driven animations are CSS animations that are not run on the default [DocumentTimeline](/en-US/docs/Web/API/DocumentTimeline); rather, on a scroll-progress or view-progress timeline, which is driven by user scrolling.
 
-In scroll-driven animations, there's a direct link between the user's scrolling action and the progress of the animation along the `@keyframe` key frames. Instead of progressing through animation keyframes based on time, the scroll-driven animation progresses based on the scroll position of overflowing content in its scroll port. As the user scroll up or down or left or right the animation moves forward or backward through the keyframe animation progression. When scrolling is paused, the animation pauses, as if `animation-play-state` were set to `pause`.
+In scroll-driven animations, there's a direct link between the user's scrolling action and the animation's progress along the `@keyframe` keyframes. Instead of progressing through animation keyframes over time, the scroll-driven animation progresses based on the scroll position of overflowing content within its scroll port. As the user scrolls up, down, left, or right, the animation moves forward or backward through the keyframe progression. When scrolling is paused, the animation pauses, as if `animation-play-state` were set to `pause`.
 
 ## Animation timelines
 
-All animations run on a timeline. In CSS, you can have regular CSS animations that progress based on time, or you can set animations to progress based on scrolling, using either a _scroll progress timeline_ or a _view progress timeline_.
+All animations run on a timeline. In CSS, you can have regular CSS animations that progress over time, or you can set animations to progress based on scrolling, using either a _scroll progress timeline_ or a _view progress timeline_.
 
-The {{cssxref("animation-timeline")}} property, defined in the [CSS animations](/en-US/docs/Web/CSS/CSS_animations) module, is used to set the timeline used for the animation. The [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations) module expands upon the notion of animation timelines, defining properties that enable animating elements based on scroll positioning and element visibility.
+The {{cssxref("animation-timeline")}} property, defined in the [CSS animations](/en-US/docs/Web/CSS/CSS_animations) module, is used to set the timeline used for the animation. The [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations) module extends the concept of animation timelines, defining properties that enable animating elements based on scroll position and element visibility.
 
 You can define an element to drive another element's animation progression by explicitly [naming an element as a timeline controller](#named_timelines) using the `scroll-timeline-*` and `view-timeline-*` properties, then setting that name as the `animation-timeline` of a descendant element. You can also define _anonymous scroll progress timelines_ and _anonymous view progress timelines_ using the [`scroll()`](#scroll-progress_timelines) and [`view()`](#view-progress_timelines)) functions.
 Alternatively, the `animation-timeline` property can be used to explicitly state that the [default document timeline be used](#regular_css_animations_default_document_timeline) or to specify that the [animation doesn't have a timeline](#removing_an_animations_timeline), and therefore shouldn't occur at all.
@@ -100,7 +100,7 @@ When the checkbox is checked, the `action` animation is applied to the element. 
 
 {{EmbedLiveSample("regular", "100%", "150")}}
 
-Try checking the checkbox. Nothing will happen for the 3-second duration of the animation delay. Then, once the animation starts, the box will turn 45 degrees, and then it will take 3 seconds to rotate an additional 720 degrees, or two rotations. After a total of six seconds, the animation concludes, and the `<div>` will return to its default rotation.
+Try checking the checkbox. Nothing will happen during the 3-second animation delay. Then, once the animation starts, the box will jump to a 45 degree rotation, and then it will take 3 seconds to rotate an additional 720 degrees, or two additional full rotations. After a total of six seconds, the animation concludes, and the `<div>` will return to its default non-rotated state.
 
 ### `animation-timeline` and the `animation` shorthand
 
@@ -114,7 +114,7 @@ To create a scroll progress timeline, the `animation-timeline` value must refere
 
 #### Named scroll progress timelines
 
-A _named scroll progress timeline_ is one where the scroller is explicitly named using the {{cssxref("scroll-timeline-name")}} property (or the {{cssxref("scroll-timeline")}} shorthand). The name is a {{cssxref("dashed-ident")}}. This name is applied to the scroller, the {{glossary("scroll container")}} whose scrolling controls the progress of the animation timeline. The scroller is linked to the element to be animated by specifying it's name as the value of that element's `animation-timeline` property.
+A _named scroll progress timeline_ is one where the scroller is explicitly named using the {{cssxref("scroll-timeline-name")}} property (or the {{cssxref("scroll-timeline")}} shorthand). The name is a {{cssxref("dashed-ident")}}. This name is applied to the scroller, the {{glossary("scroll container")}} whose scrolling controls the progress of the animation timeline. The scroller is linked to the element to be animated by specifying its name as the value of that element's `animation-timeline` property.
 
 Our HTML includes three elements: the `item`, which we will be animating; its `container`, which we will be scrolling; and the' scroller', which will need to be large enough to overflow its `scroller` parent.
 
@@ -139,7 +139,7 @@ We provide some basic styles, which we've hidden for brevity. The important styl
 }
 ```
 
-Setting an `animation-timeline` on the element to be animated that matches the `scroll-timeline-name` of an ancestor element is what creates the named scroll progress timeline. We also have to include an animation, which we do by setting the value of the `animation-name` component of the {{cssxref("animation")}} shorthand to the {{cssxref("custom-ident")}} name of our keyframe animation:
+Setting an `animation-timeline` on the animated element that matches the `scroll-timeline-name` of an ancestor element is what creates the named scroll progress timeline. We also have to include an animation, which we do by setting the value of the `animation-name` component of the {{cssxref("animation")}} shorthand to the {{cssxref("custom-ident")}} name of our keyframe animation:
 
 ```css live-sample___named_scroll
 .scroller {
