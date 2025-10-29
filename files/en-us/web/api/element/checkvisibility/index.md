@@ -72,7 +72,7 @@ The first (default selected) values should result in `checkVisibility()` returni
 <select id="css_display" name="css_display">
   <option value="block" selected>display: block</option>
   <option value="none">display: none</option>
-  <option value="content">display: content</option>
+  <option value="contents">display: contents</option>
 </select>
 
 <select id="css_content_visibility" name="css_content_visibility">
