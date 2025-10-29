@@ -18,6 +18,14 @@ Welcome to MDN **Learning Web Development** (also known as **Learn**). This reso
 > [!NOTE]
 > Last updated: August 2025 ([see changelog](/en-US/docs/Learn_web_development/Changelog)).
 
+> [!CALLOUT]
+>
+> ### Try our partner video courses
+>
+> Interested in an interactive video course to complement our articles? Scrimba's [Frontend Developer Career Path](https://scrimba.com/the-frontend-developer-career-path-c0j?via=mdn)<sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> also teaches the topics contained in the MDN Curriculum.
+>
+> <mdn-scrim-inline url="https://scrimba.com/s06icdv" scrimtitle="Scrimba + MDN"></scrim-inline>
+
 ## Don't know where to get started?
 
 - Never coded before?
@@ -27,7 +35,7 @@ Welcome to MDN **Learning Web Development** (also known as **Learn**). This reso
 - Beyond the basics?
   - : Our [Extension modules](/en-US/docs/Learn_web_development/Extensions) cover useful additional skills to learn as you start to expand your knowledge and develop specialisms. Go onto these after you finish our Core.
 - Working at a school?
-  - : Use our modules to guide your teaching, check out our [Educators page](/en-US/docs/Learn_web_development/Educators) for more ideas, or enroll your students in Scrimba's [Frontend Developer Career Path](https://scrimba.com/the-frontend-developer-career-path-c0j?via=mdn)<sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>.
+  - : Use our modules to guide your teaching, check out our [Educators page](/en-US/docs/Learn_web_development/Educators) for more ideas.
 
 ## Test your skills
 
