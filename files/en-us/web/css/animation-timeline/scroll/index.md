@@ -39,7 +39,7 @@ animation-timeline: scroll(x self);
 
 ### Parameters
 
-- scroller
+- `<scroller>`
   - : The value for indicating the scroller element that will provide the scroll progress timeline can be any one of the following:
     - `nearest`
       - : The nearest ancestor of the current element that has scrollbars on either axis. This is the default value.
@@ -48,7 +48,7 @@ animation-timeline: scroll(x self);
     - `self`
       - : The current element itself.
 
-- axis
+- `<axis>`
   - : The scrollbar axis value can be any one of the following:
     - `block`
       - : The scrollbar on the block axis of the scroll container, which is the axis in the direction perpendicular to the flow of text within a line. For horizontal writing modes, such as standard English, this is the same as `y`, while for vertical writing modes, it is the same as `x`. This is the default value.
