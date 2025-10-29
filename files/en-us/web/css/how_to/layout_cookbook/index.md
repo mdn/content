@@ -13,18 +13,33 @@ The CSS layout cookbook aims to bring together recipes for common layout pattern
 
 ## The Recipes
 
-| Recipe                                                                                      | Description                                                                                                   | Layout Methods                                                                                                                                               |
-| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [Media objects](/en-US/docs/Web/CSS/How_to/Layout_cookbook/Media_objects)                   | A two-column box with an image on one side and descriptive text on the other, e.g., a facebook post or tweet. | [CSS grid](/en-US/docs/Web/CSS/CSS_grid_layout), {{cssxref("float")}} fallback, {{cssxref("fit-content")}} sizing                                            |
-| [Columns](/en-US/docs/Web/CSS/How_to/Layout_cookbook/Column_layouts)                        | When to choose multi-column layout, flexbox or grid for your columns.                                         | [CSS grid](/en-US/docs/Web/CSS/CSS_grid_layout), [Multicol](/en-US/docs/Web/CSS/CSS_multicol_layout), [Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) |
-| [Center an element](/en-US/docs/Web/CSS/How_to/Layout_cookbook/Center_an_element)           | How to center an item horizontally and vertically.                                                            | [Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout), [Box Alignment](/en-US/docs/Web/CSS/CSS_box_alignment)                                               |
-| [Sticky footers](/en-US/docs/Web/CSS/How_to/Layout_cookbook/Sticky_footers)                 | Creating a footer which sits at the bottom of the container or viewport when the content is shorter.          | [CSS grid](/en-US/docs/Web/CSS/CSS_grid_layout), [Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout)                                                      |
-| [Split navigation](/en-US/docs/Web/CSS/How_to/Layout_cookbook/Split_navigation)             | A navigation pattern where some links are visually separated from the others.                                 | [Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout), {{cssxref("margin")}}                                                                                |
-| [Breadcrumb navigation](/en-US/docs/Web/CSS/How_to/Layout_cookbook/Breadcrumb_navigation)   | Creating a list of links to allow the visitor to navigate back up through the page hierarchy.                 | [Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout)                                                                                                       |
-| [List group with badges](/en-US/docs/Web/CSS/How_to/Layout_cookbook/List_group_with_badges) | A list of items with a badge to display a count.                                                              | [Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout), [Box Alignment](/en-US/docs/Web/CSS/CSS_box_alignment)                                               |
-| [Pagination](/en-US/docs/Web/CSS/How_to/Layout_cookbook/Pagination)                         | Links to pages of content (such as search results).                                                           | [Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout), [Box Alignment](/en-US/docs/Web/CSS/CSS_box_alignment)                                               |
-| [Card](/en-US/docs/Web/CSS/How_to/Layout_cookbook/Card)                                     | A card component, which displays in a grid of cards.                                                          | [Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout)                                                                                                           |
-| [Grid wrapper](/en-US/docs/Web/CSS/How_to/Layout_cookbook/Grid_wrapper)                     | For aligning grid content within a central wrapper, while also allowing items to break out.                   | [CSS grid](/en-US/docs/Web/CSS/CSS_grid_layout)                                                                                                              |
+| Recipe                                | Description                                                                                              | Layout Methods                                                                         |
+| ------------------------------------- | -------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------|
+| [Media objects][media-objects]        | A two-column box with an image on one side and descriptive text on the other, e.g., a social media post. | [CSS grid][css-grid], {{cssxref("float")}} fallback, {{cssxref("fit-content")}} sizing |
+| [Columns][columns]                    | When to choose multi-column layout, flexbox or grid for your columns.                                    | [CSS grid][css-grid], [Multicol][multicol], [Flexbox][flexbox]                         |
+| [Center an element][center]           | How to center an item horizontally and vertically.                                                       | [Flexbox][flexbox], [Box Alignment][box-alignment]                                     |
+| [Sticky footers][sticky-footers]      | Creating a footer which sits at the bottom of the container or viewport when the content is shorter.     | [CSS grid][css-grid], [Flexbox][flexbox]                                               |
+| [Split navigation][split-navigation]  | A navigation pattern where some links are visually separated from the others.                            | [Flexbox][flexbox], {{cssxref("margin")}}                                              |
+| [Breadcrumb navigation][breadcrumb]   | Creating a list of links to allow the visitor to navigate back up through the page hierarchy.            | [Flexbox][flexbox]                                                                     |
+| [List group with badges][list-badges] | A list of items with a badge to display a count.                                                         | [Flexbox][flexbox], [Box Alignment][box-alignment]                                     |
+| [Pagination][pagination]              | Links to pages of content (such as search results).                                                      | [Flexbox][flexbox], [Box Alignment][box-alignment]                                     |
+| [Card][card]                          | A card component, which displays in a grid of cards.                                                     | [Grid Layout][css-grid]                                                                |
+| [Grid wrapper][grid-wrapper]          | For aligning grid content within a central wrapper, while also allowing items to break out.              | [CSS grid][css-grid]                                                                   |
+
+[media-objects]: /en-US/docs/Web/CSS/How_to/Layout_cookbook/Media_objects
+[columns]: /en-US/docs/Web/CSS/How_to/Layout_cookbook/Column_layouts
+[center]: /en-US/docs/Web/CSS/How_to/Layout_cookbook/Center_an_element
+[sticky-footers]: /en-US/docs/Web/CSS/How_to/Layout_cookbook/Sticky_footers
+[split-navigation]: /en-US/docs/Web/CSS/How_to/Layout_cookbook/Split_navigation
+[breadcrumb]: /en-US/docs/Web/CSS/How_to/Layout_cookbook/Breadcrumb_navigation
+[list-badges]: /en-US/docs/Web/CSS/How_to/Layout_cookbook/List_group_with_badges
+[pagination]: /en-US/docs/Web/CSS/How_to/Layout_cookbook/Pagination
+[card]: /en-US/docs/Web/CSS/How_to/Layout_cookbook/Card
+[grid-wrapper]: /en-US/docs/Web/CSS/How_to/Layout_cookbook/Grid_wrapper
+[css-grid]: /en-US/docs/Web/CSS/CSS_grid_layout
+[multicol]: /en-US/docs/Web/CSS/CSS_multicol_layout
+[flexbox]: /en-US/docs/Web/CSS/CSS_flexible_box_layout
+[box-alignment]: /en-US/docs/Web/CSS/CSS_box_alignment
 
 ## Contribute a Recipe
 
