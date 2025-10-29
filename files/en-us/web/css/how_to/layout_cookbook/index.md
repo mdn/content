@@ -14,7 +14,7 @@ The CSS layout cookbook aims to bring together recipes for common layout pattern
 ## The Recipes
 
 | Recipe                                | Description                                                                                              | Layout Methods                                                                         |
-| ------------------------------------- | -------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------|
+| ------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
 | [Media objects][media-objects]        | A two-column box with an image on one side and descriptive text on the other, e.g., a social media post. | [CSS grid][css-grid], {{cssxref("float")}} fallback, {{cssxref("fit-content")}} sizing |
 | [Columns][columns]                    | When to choose multi-column layout, flexbox or grid for your columns.                                    | [CSS grid][css-grid], [Multicol][multicol], [Flexbox][flexbox]                         |
 | [Center an element][center]           | How to center an item horizontally and vertically.                                                       | [Flexbox][flexbox], [Box Alignment][box-alignment]                                     |
