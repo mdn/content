@@ -2,8 +2,6 @@ name: Lint YAML
 
 on:
   pull_request:
-    branches:
-      - main
     paths:
       - .nvmrc
       - yarn.lock

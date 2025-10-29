@@ -2,8 +2,6 @@ name: Check scripts
 
 on:
   pull_request:
-    branches:
-      - main
     paths:
       - .nvmrc
       - package.json
