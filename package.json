@@ -69,7 +69,7 @@
     "imagemin-pngquant": "^10.0.0",
     "imagemin-svgo": "^11.0.1",
     "is-svg": "^6.1.0",
-    "lefthook": "^2.0.1",
+    "lefthook": "^2.0.2",
     "markdownlint-cli2": "0.18.1",
     "markdownlint-rule-search-replace": "1.2.0",
     "node-html-parser": "^7.0.1",
