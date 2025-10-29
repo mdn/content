@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Map.has
 sidebar: jsref
 ---
 
-The **`has()`** method of {{jsxref("WeakMap")}} instances returns a boolean indicating whether an entry with the specified key exists in this `WeakMap` or not.
+The **`has()`** method of {{jsxref("Map")}} instances returns a boolean indicating whether an entry with the specified key exists in this `Map` or not.
 
 {{InteractiveExample("JavaScript Demo: Map.prototype.has()")}}
 

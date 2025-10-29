@@ -3,10 +3,12 @@ title: "IDBIndex: getAllRecords() method"
 short-title: getAllRecords()
 slug: Web/API/IDBIndex/getAllRecords
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.IDBIndex.getAllRecords
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }}{{SeeCompatTable}}
 
 The **`getAllRecords()`** method of the {{domxref("IDBIndex")}}
 interface retrieves all records (including index keys, primary keys, and values) from the index.
@@ -68,7 +70,7 @@ This method may raise a {{domxref("DOMException")}} of the following types:
 ## Examples
 
 ```js
-const query = IDBKeyRange.lowerBound("mykey", true);
+const query = IDBKeyRange.lowerBound("myKey", true);
 const objectStore = transaction.objectStore("contactsList");
 const myIndex = objectStore.index("lastName");
 

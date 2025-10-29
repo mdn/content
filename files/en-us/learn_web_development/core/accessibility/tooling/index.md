@@ -404,7 +404,7 @@ A switch control setup usually involves two parts:
 - A physical switch or button for activating options on the device. You can also assign switch functionality to regular device buttons (such as volume controls) or keys on a keyboard.
 - A device mode or third-party software add-on that makes the device compatible with the switch or button control. For example, Switch Access on Android is a mode whereby the different options in various situations (for example, apps on the home screen) are cycled through and then the one you want can be selected with a button or switch when reached.
 
-## Planing for accessibility
+## Planning for accessibility
 
 You should think carefully about accessibility near the start of each project. Make sure accessibility is considered during the initial design phase, so that you can:
 

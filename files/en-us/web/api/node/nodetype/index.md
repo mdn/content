@@ -9,8 +9,8 @@ browser-compat: api.Node.nodeType
 {{APIRef("DOM")}}
 
 The read-only **`nodeType`** property of a {{domxref("Node")}} interface is an integer
-that identifies what the node is. It distinguishes different kind of nodes from each other,
-such as {{domxref("Element", "elements")}}, {{domxref("Text", "text")}} and {{domxref("Comment", "comments")}}.
+that identifies what the node is. It distinguishes different kinds of nodes from each other,
+such as {{domxref("Element", "elements")}}, {{domxref("Text", "text")}}, and {{domxref("Comment", "comments")}}.
 
 ## Value
 

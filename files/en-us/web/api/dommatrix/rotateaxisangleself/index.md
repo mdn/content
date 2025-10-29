@@ -25,9 +25,9 @@ rotateAxisAngleSelf(rotX, rotY, rotZ, angle)
 ### Parameters
 
 - `rotX`
-  - : A number; the x-coordinate of the vector denoting the axis of rotation. If non-zero, {{domxref("DOMMatrixReadonly.is2D", "is2D")}} is false.
+  - : A number; the x-coordinate of the vector denoting the axis of rotation. If non-zero, {{domxref("DOMMatrixReadOnly.is2D", "is2D")}} is false.
 - `rotY` {{optional_inline}}
-  - : A number; the y-coordinate of the vector denoting the axis of rotation. If undefined, the `rotX` value is used. If non-zero, {{domxref("DOMMatrixReadonly.is2D", "is2D")}} is false.
+  - : A number; the y-coordinate of the vector denoting the axis of rotation. If undefined, the `rotX` value is used. If non-zero, {{domxref("DOMMatrixReadOnly.is2D", "is2D")}} is false.
 - `rotZ` {{optional_inline}}
   - : A number; the z-coordinate of the vector denoting the axis of rotation. If undefined, the `rotX` value is used.
 - `angle` {{optional_inline}}

@@ -17,6 +17,10 @@ sidebar:
   - /Web/Security/Weak_Signature_Algorithm
   - /Web/Security/Firefox_Security_Guidelines
   - type: listSubPages
+    path: /Web/Security/Authentication
+    link: /Web/Security/Authentication
+    details: closed
+  - type: listSubPages
     path: /Web/Security/Attacks
     link: /Web/Security/Attacks
     details: closed

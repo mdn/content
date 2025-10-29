@@ -1,6 +1,6 @@
 ---
 title: WebKit (-webkit-) vendor-prefixed CSS extensions
-slug: Web/CSS/WebKit_Extensions
+slug: Web/CSS/Reference/Webkit_extensions
 page-type: landing-page
 status:
   - non-standard
@@ -136,6 +136,12 @@ For each of the properties below, use the standard equivalents.
 - `-webkit-padding-end`: Use {{CSSxRef("padding-inline-end")}}.
 - `-webkit-padding-start`: Use {{CSSxRef("padding-inline-start")}}.
 
+## -webkit-prefixed property values
+
+- `-webkit-fill-available`
+  - : Used with sizing properties like {{CSSxRef("width")}} and {{CSSxRef("height")}}, to allow elements to take up all available space within their parent container.
+    The `stretch` value provides a standard replacement, but `-webkit-fill-available` is supported as an alias by browsers for backwards-compatibility reasons.
+
 ## Pseudo-classes
 
 > [!NOTE]
@@ -184,6 +190,6 @@ If a pseudo-element (but not pseudo-class) has a `-webkit-` prefix, Blink, WebKi
 
 ## See also
 
-- [Mozilla (-moz-) vendor-prefixed CSS extensions](/en-US/docs/Web/CSS/Mozilla_Extensions)
+- [Mozilla (-moz-) vendor-prefixed CSS extensions](/en-US/docs/Web/CSS/Reference/Mozilla_extensions)
 - {{glossary("Vendor Prefix")}} glossary entry
 - [Styling Form Controls on the WebKit Trac](https://trac.webkit.org/wiki/Styling%20Form%20Controls)

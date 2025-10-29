@@ -220,7 +220,7 @@ Let's get you to put these new elements into action.
      </tr>
      <tr>
        <td>Shoes</td>
-       <td>Shoeshop</td>
+       <td>Shoe shop</td>
        <td>13/09</td>
        <td>Big regrets</td>
        <td>65</td>
