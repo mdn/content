@@ -25,11 +25,11 @@ overlay: auto;
 overlay: none;
 
 /* Global values */
-display: inherit;
-display: initial;
-display: revert;
-display: revert-layer;
-display: unset;
+overlay: inherit;
+overlay: initial;
+overlay: revert;
+overlay: revert-layer;
+overlay: unset;
 ```
 
 ### Values
