@@ -37,6 +37,9 @@ label {
 }
 ```
 
+> [!NOTE]
+> To exit the editor above using your keyboard, press `Esc`, then press the `Tab` key.
+
 ## Value
 
 The [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) attribute is a string that contains the current value of the text entered into the text field. You can retrieve this using the {{domxref("HTMLInputElement")}} `value` property in JavaScript.
