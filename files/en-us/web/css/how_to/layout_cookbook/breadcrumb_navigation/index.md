@@ -1,7 +1,7 @@
 ---
 title: Breadcrumb navigation
-slug: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
-page-type: guide
+slug: Web/CSS/How_to/Layout_cookbook/Breadcrumb_navigation
+page-type: how-to
 sidebar: cssref
 ---
 

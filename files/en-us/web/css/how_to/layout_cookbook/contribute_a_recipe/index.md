@@ -1,6 +1,6 @@
 ---
 title: Contribute a recipe
-slug: Web/CSS/Layout_cookbook/Contribute_a_recipe
+slug: Web/CSS/How_to/Layout_cookbook/Contribute_a_recipe
 page-type: guide
 sidebar: cssref
 ---
@@ -15,7 +15,7 @@ A recipe consists of:
 
 - A live example, stored in the [CSS Examples GitHub repo](https://github.com/mdn/css-examples).
 - A downloadable version of that example, also stored in the CSS Examples repo.
-- A page in the [CSS layout cookbook](/en-US/docs/Web/CSS/Layout_cookbook) section of the site, which should include the following components:
+- A page in the [CSS layout cookbook](/en-US/docs/Web/CSS/How_to/Layout_cookbook) section of the site, which should include the following components:
   1. Introduction
   2. Requirements
   3. Recipe
@@ -29,11 +29,15 @@ A recipe consists of:
 
 To create a recipe and add it to the CSS layout cookbook, follow these steps:
 
-1. [Build a pattern](#1._build_a_pattern)
-2. [Create a live example](#2._create_a_live_example)
-3. [Create a downloadable version](#3._create_a_downloadable_version)
-4. [Open a pull request with your example](#4._open_a_pull_request_with_your_example)
-5. [Create your page](#5._create_your_page)
+- [What makes a good recipe?](#what-makes-a-good-recipe)
+- [Steps to publish a recipe](#steps-to-publish-a-recipe)
+  - [1. Build a pattern](#1-build-a-pattern)
+  - [2. Create a live example](#2-create-a-live-example)
+    - [Useful tips](#useful-tips)
+  - [3. Create a downloadable version](#3-create-a-downloadable-version)
+  - [4. Open a pull request with your example](#4-open-a-pull-request-with-your-example)
+  - [5. Create your page](#5-create-your-page)
+- [See also](#see-also)
 
 ### 1. Build a pattern
 
@@ -43,7 +47,7 @@ Ensure that you've tested the HTML and CSS across multiple browsers, viewport si
 
 ### 2. Create a live example
 
-The live examples on cookbook pages, such as for [centering an element](/en-US/docs/Web/CSS/Layout_cookbook/Center_an_element), and elsewhere on MDN allow readers to play with the code and change relevant parts without being overwhelmed with all of the code. Your recipe will be demonstrated by way of one or more examples.
+The live examples on cookbook pages, such as for [centering an element](/en-US/docs/Web/CSS/How_to/Layout_cookbook/Center_an_element), and elsewhere on MDN allow readers to play with the code and change relevant parts without being overwhelmed with all of the code. Your recipe will be demonstrated by way of one or more examples.
 
 Fork the [CSS Examples repo](https://github.com/mdn/css-examples) and then take a look in the `css-cookbook` folder. There is a [cookbook-template.html](https://github.com/mdn/css-examples/blob/main/css-cookbook/cookbook-template.html) file. Copy this file and use it as a starting point. Save this in the `css-cookbook` directory with a name that makes sense for your pattern. The template contains comments to guide you in adding various parts at the appropriate places.
 
@@ -57,7 +61,7 @@ The important parts of this template are as follows:
 
 - The editable CSS from the second `<head>` block must also be copied into the `playable-css` section.
 
-A working example is [center.html](https://github.com/mdn/css-examples/blob/main/css-cookbook/center.html), which is embedded on the page [Center an element](/en-US/docs/Web/CSS/Layout_cookbook/Center_an_element). You can use this to see how to add the various bits correctly.
+A working example is [center.html](https://github.com/mdn/css-examples/blob/main/css-cookbook/center.html), which is embedded on the page [Center an element](/en-US/docs/Web/CSS/How_to/Layout_cookbook/Center_an_element). You can use this to see how to add the various bits correctly.
 
 If you've forked the repo and have our CSS and JavaScript files with your example, opening your live example in a browser should display everything working exactly as it would appear on an MDN page.
 
@@ -79,15 +83,15 @@ Open a pull request (PR) on the [CSS Examples repo](https://github.com/mdn/css-e
 
 ### 5. Create your page
 
-After your example PR is merged, open a pull request to create a new page in the [Layout Cookbook directory](https://github.com/mdn/content/tree/main/files/en-us/web/css/layout_cookbook).
-Use our [template for Cookbook pages](https://github.com/mdn/content/blob/main/files/en-us/web/css/layout_cookbook/contribute_a_recipe/cookbook_template/index.md?plain=1).
+After your example PR is merged, open a pull request to create a new page in the [Layout Cookbook directory](https://github.com/mdn/content/tree/main/files/en-us/web/css/how_to/layout_cookbook).
+Use our [template for Cookbook pages](https://github.com/mdn/content/blob/main/files/en-us/web/css/how_to/layout_cookbook/contribute_a_recipe/cookbook_template/index.md?plain=1).
 The template explains the requirements of each section, and you can refer to other cookbook examples for more help.
 
-Remember to add a link to your new recipe on the main [Layout cookbook](/en-US/docs/Web/CSS/Layout_cookbook) page.
+Remember to add a link to your new recipe on the main [Layout cookbook](/en-US/docs/Web/CSS/How_to/Layout_cookbook) page.
 
 If you have any questions or want someone to take a look at your page, get in touch via any of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## See also
 
-- [Cookbook page template](/en-US/docs/Web/CSS/Layout_cookbook/Contribute_a_recipe/Cookbook_template)
+- [Cookbook page template](/en-US/docs/Web/CSS/How_to/Layout_cookbook/Contribute_a_recipe/Cookbook_template)
 - [CSS Examples repo](https://github.com/mdn/css-examples)

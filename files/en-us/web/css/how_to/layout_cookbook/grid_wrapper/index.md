@@ -1,7 +1,7 @@
 ---
 title: Grid wrapper
-slug: Web/CSS/Layout_cookbook/Grid_wrapper
-page-type: guide
+slug: Web/CSS/How_to/Layout_cookbook/Grid_wrapper
+page-type: how-to
 sidebar: cssref
 ---
 

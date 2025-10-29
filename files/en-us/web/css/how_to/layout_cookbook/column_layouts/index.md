@@ -1,7 +1,7 @@
 ---
 title: Column layouts
-slug: Web/CSS/Layout_cookbook/Column_layouts
-page-type: guide
+slug: Web/CSS/How_to/Layout_cookbook/Column_layouts
+page-type: how-to
 sidebar: cssref
 ---
 

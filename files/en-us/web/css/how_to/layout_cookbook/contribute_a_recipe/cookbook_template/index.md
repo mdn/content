@@ -1,6 +1,6 @@
 ---
 title: Cookbook template
-slug: Web/CSS/Layout_cookbook/Contribute_a_recipe/Cookbook_template
+slug: Web/CSS/How_to/Layout_cookbook/Contribute_a_recipe/Cookbook_template
 page-type: guide
 sidebar: cssref
 ---
