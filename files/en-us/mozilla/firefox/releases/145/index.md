@@ -115,5 +115,5 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
 - **text-decoration-trim**: `layout.css.text-decoration-trim.enabled`
 
-  The CSS `text-decoration-trim` property is supported but currently disabled by default. 
+  The CSS `text-decoration-trim` property is supported but currently disabled by default.
   It allows you to specify {{cssxref("text-decoration")}} start and end offsets to shorten, lengthen, or shift the position of text decorations with respect to the text ([Firefox bug 1979915](https://bugzil.la/1979915)).
