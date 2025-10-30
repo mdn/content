@@ -173,7 +173,7 @@ Some table rows ({{HTMLElement("tr")}} elements) contain both header cells ({{HT
 
 #### CSS
 
-Some basic CSS is used to style the table and its cells. CSS [attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) and the {{cssxref(":nth-of-type")}} pseudo-class are used to alternate the appearance of the cells to make the information in the table easier to understand and identify.
+Some basic CSS is used to style the table and its cells. CSS [attribute selectors](/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors) and the {{cssxref(":nth-of-type")}} pseudo-class are used to alternate the appearance of the cells to make the information in the table easier to understand and identify.
 
 ```css
 td,

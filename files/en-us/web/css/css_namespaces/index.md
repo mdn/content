@@ -28,8 +28,8 @@ The `@namespace` rule is used for declaring a default namespace and for binding 
 ## Related concepts
 
 - CSS [namespace separator (`|`)](/en-US/docs/Web/CSS/Namespace_separator) combinator
-- CSS [type selectors](/en-US/docs/Web/CSS/Type_selectors)
-- CSS [universal selector](/en-US/docs/Web/CSS/Universal_selectors)
+- CSS [type selectors](/en-US/docs/Web/CSS/Reference/Selectors/Type_selectors)
+- CSS [universal selector](/en-US/docs/Web/CSS/Reference/Selectors/Universal_selectors)
 - {{DOMXRef("CSSNamespaceRule")}} interface
   - {{DOMXRef("CSSNamespaceRule.namespaceURI")}} property
   - {{DOMXRef("CSSNamespaceRule.prefix")}} property

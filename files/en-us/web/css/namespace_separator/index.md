@@ -23,7 +23,7 @@ myNameSpace|a {
 }
 ```
 
-[Type selectors](/en-US/docs/Web/CSS/Type_selectors) and the [universal selector](/en-US/docs/Web/CSS/Universal_selectors) allow an optional namespace component. When a namespace has been previously declared via {{CSSXref("@namespace")}}, these selectors can be namespaced by prepending the selector with the name of the namespace separated by the namespace separator (`|`). This is useful when dealing with documents containing multiple namespaces such as HTML with inline SVG or MathML, or XML that mixes multiple vocabularies.
+[Type selectors](/en-US/docs/Web/CSS/Reference/Selectors/Type_selectors) and the [universal selector](/en-US/docs/Web/CSS/Reference/Selectors/Universal_selectors) allow an optional namespace component. When a namespace has been previously declared via {{CSSXref("@namespace")}}, these selectors can be namespaced by prepending the selector with the name of the namespace separated by the namespace separator (`|`). This is useful when dealing with documents containing multiple namespaces such as HTML with inline SVG or MathML, or XML that mixes multiple vocabularies.
 
 - `ns|h1` - matches `<h1>` elements in namespace `ns`
 - `*|h1` - matches all `<h1>` elements
@@ -184,6 +184,6 @@ The selector with no namespace, the `|a`, matched the JavaScript defined and app
 - [`@namespace`](/en-US/docs/Web/CSS/@namespace)
 - [`Document.createElementNS()`](/en-US/docs/Web/API/Document/createElementNS) method
 - [`Element.namespaceURI`](/en-US/docs/Web/API/Element/namespaceURI) property
-- [CSS type selector](/en-US/docs/Web/CSS/Type_selectors)
-- [CSS universal selector](/en-US/docs/Web/CSS/Universal_selectors)
+- [CSS type selector](/en-US/docs/Web/CSS/Reference/Selectors/Type_selectors)
+- [CSS universal selector](/en-US/docs/Web/CSS/Reference/Selectors/Universal_selectors)
 - [CSS selector module](/en-US/docs/Web/CSS/CSS_selectors)

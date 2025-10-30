@@ -454,7 +454,7 @@
 /en-US/docs/CSS/Alias	/en-US/docs/Web/CSS/Reference/Properties/cursor
 /en-US/docs/CSS/Alternative_style_sheets	/en-US/docs/Web/HTML/Reference/Attributes/rel/alternate_stylesheet
 /en-US/docs/CSS/At-rule	/en-US/docs/Web/CSS/CSS_syntax/At-rule
-/en-US/docs/CSS/Attribute_selectors	/en-US/docs/Web/CSS/Attribute_selectors
+/en-US/docs/CSS/Attribute_selectors	/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors
 /en-US/docs/CSS/Aural	/en-US/docs/Web/CSS/@media
 /en-US/docs/CSS/CSS3_Columns	/en-US/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts
 /en-US/docs/CSS/CSS_Properties_Reference	/en-US/docs/Web/CSS/Reference#index
@@ -471,7 +471,7 @@
 /en-US/docs/CSS/CSS_values_syntax	/en-US/docs/Web/CSS
 /en-US/docs/CSS/Cascade	/en-US/docs/Web/CSS/CSS_cascade/Cascade
 /en-US/docs/CSS/Child_selectors	/en-US/docs/Web/CSS/Child_combinator
-/en-US/docs/CSS/Class_selectors	/en-US/docs/Web/CSS/Class_selectors
+/en-US/docs/CSS/Class_selectors	/en-US/docs/Web/CSS/Reference/Selectors/Class_selectors
 /en-US/docs/CSS/Comments	/en-US/docs/Web/CSS/CSS_syntax/Comments
 /en-US/docs/CSS/Common_CSS_Questions	/en-US/docs/Learn_web_development/Howto/Solve_CSS_problems/CSS_FAQ
 /en-US/docs/CSS/Counters	/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters
@@ -504,7 +504,7 @@
 /en-US/docs/CSS/Getting_Started/Why_use_CSS	/en-US/docs/Learn_web_development/Core/Styling_basics/What_is_CSS
 /en-US/docs/CSS/Getting_Started/Why_use_CSS-redirect-1	/en-US/docs/Learn_web_development/Core/Styling_basics/What_is_CSS
 /en-US/docs/CSS/Getting_Started/Why_use_CSS?	/en-US/docs/Learn_web_development/Core/Styling_basics/What_is_CSS
-/en-US/docs/CSS/ID_selectors	/en-US/docs/Web/CSS/ID_selectors
+/en-US/docs/CSS/ID_selectors	/en-US/docs/Web/CSS/Reference/Selectors/ID_selectors
 /en-US/docs/CSS/Interactive	/en-US/docs/Web/CSS/@media
 /en-US/docs/CSS/Layout_mode	/en-US/docs/Glossary/Layout_mode
 /en-US/docs/CSS/List_of_Proprietary_CSS_Features	/en-US/docs/Web/CSS/Reference
@@ -534,7 +534,7 @@
 /en-US/docs/CSS/Tutorials/Using_CSS_multiple_backgrounds	/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
 /en-US/docs/CSS/Tutorials/Using_CSS_transforms	/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms
 /en-US/docs/CSS/Tutorials/Using_CSS_transitions	/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions
-/en-US/docs/CSS/Type_selectors	/en-US/docs/Web/CSS/Type_selectors
+/en-US/docs/CSS/Type_selectors	/en-US/docs/Web/CSS/Reference/Selectors/Type_selectors
 /en-US/docs/CSS/Understanding_CSS_z-index	/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index
 /en-US/docs/CSS/Understanding_CSS_z-index/Adding_z-index	/en-US/docs/Web/CSS/CSS_positioned_layout/Using_z-index
 /en-US/docs/CSS/Understanding_CSS_z-index/Stacking_and_float	/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_floating_elements
@@ -551,7 +551,7 @@
 /en-US/docs/CSS/Understanding_z-index/Stacking_context_example_3	/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_3
 /en-US/docs/CSS/Understanding_z-index/Stacking_without_z-index	/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index
 /en-US/docs/CSS/Understanding_z-index/The_stacking_context	/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context
-/en-US/docs/CSS/Universal_selectors	/en-US/docs/Web/CSS/Universal_selectors
+/en-US/docs/CSS/Universal_selectors	/en-US/docs/Web/CSS/Reference/Selectors/Universal_selectors
 /en-US/docs/CSS/Using_CSS_Columns	/en-US/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts
 /en-US/docs/CSS/Using_CSS_animations	/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations
 /en-US/docs/CSS/Using_CSS_flexible_boxes	/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
@@ -934,7 +934,7 @@
 /en-US/docs/CSS:@import	/en-US/docs/Web/CSS/@import
 /en-US/docs/CSS:@media	/en-US/docs/Web/CSS/@media
 /en-US/docs/CSS:Adjacent_sibling_selectors	/en-US/docs/Web/CSS/Next-sibling_combinator
-/en-US/docs/CSS:Attribute_selectors	/en-US/docs/Web/CSS/Attribute_selectors
+/en-US/docs/CSS:Attribute_selectors	/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors
 /en-US/docs/CSS:Aural	/en-US/docs/Web/CSS/@media
 /en-US/docs/CSS:Child_selectors	/en-US/docs/Web/CSS/Child_combinator
 /en-US/docs/CSS:Descendant_selectors	/en-US/docs/Web/CSS/Descendant_combinator
@@ -957,8 +957,8 @@
 /en-US/docs/CSS:Interactive	/en-US/docs/Web/CSS/@media
 /en-US/docs/CSS:Media:Visual	/en-US/docs/Web/CSS/@media
 /en-US/docs/CSS:Other_Resources	/en-US/docs/Web/CSS
-/en-US/docs/CSS:Type_selectors	/en-US/docs/Web/CSS/Type_selectors
-/en-US/docs/CSS:Universal_selectors	/en-US/docs/Web/CSS/Universal_selectors
+/en-US/docs/CSS:Type_selectors	/en-US/docs/Web/CSS/Reference/Selectors/Type_selectors
+/en-US/docs/CSS:Universal_selectors	/en-US/docs/Web/CSS/Reference/Selectors/Universal_selectors
 /en-US/docs/CSS:auto	/en-US/docs/Web/CSS/Reference/Properties/width
 /en-US/docs/CSS:background	/en-US/docs/Web/CSS/Reference/Properties/background
 /en-US/docs/CSS:background-attachment	/en-US/docs/Web/CSS/Reference/Properties/background-attachment
@@ -12172,6 +12172,7 @@
 /en-US/docs/Web/CSS/Alternative_style_sheets	/en-US/docs/Web/HTML/Reference/Attributes/rel/alternate_stylesheet
 /en-US/docs/Web/CSS/At-rule	/en-US/docs/Web/CSS/CSS_syntax/At-rule
 /en-US/docs/Web/CSS/At-rule-functions	/en-US/docs/Web/CSS/CSS_syntax/At-rule_functions
+/en-US/docs/Web/CSS/Attribute_selectors	/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors
 /en-US/docs/Web/CSS/Aural	/en-US/docs/Web/CSS/@media
 /en-US/docs/Web/CSS/Block_formatting_context	/en-US/docs/Web/CSS/CSS_display/Block_formatting_context
 /en-US/docs/Web/CSS/CSS3_Columns	/en-US/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts
@@ -12322,6 +12323,7 @@
 /en-US/docs/Web/CSS/CSS_values_syntax	/en-US/docs/Web/CSS
 /en-US/docs/Web/CSS/Cascade	/en-US/docs/Web/CSS/CSS_cascade/Cascade
 /en-US/docs/Web/CSS/Child_selectors	/en-US/docs/Web/CSS/Child_combinator
+/en-US/docs/Web/CSS/Class_selectors	/en-US/docs/Web/CSS/Reference/Selectors/Class_selectors
 /en-US/docs/Web/CSS/Comments	/en-US/docs/Web/CSS/CSS_syntax/Comments
 /en-US/docs/Web/CSS/Common_CSS_Questions	/en-US/docs/Learn_web_development/Howto/Solve_CSS_problems/CSS_FAQ
 /en-US/docs/Web/CSS/Compositing_and_Blending	/en-US/docs/Web/CSS/CSS_compositing_and_blending
@@ -12337,6 +12339,7 @@
 /en-US/docs/Web/CSS/General_sibling_combinator	/en-US/docs/Web/CSS/Subsequent-sibling_combinator
 /en-US/docs/Web/CSS/General_sibling_selectors	/en-US/docs/Web/CSS/Subsequent-sibling_combinator
 /en-US/docs/Web/CSS/Grouping_selectors	/en-US/docs/Web/CSS/Selector_list
+/en-US/docs/Web/CSS/ID_selectors	/en-US/docs/Web/CSS/Reference/Selectors/ID_selectors
 /en-US/docs/Web/CSS/Inheritance	/en-US/docs/Web/CSS/CSS_cascade/Inheritance
 /en-US/docs/Web/CSS/Inline_formatting_context	/en-US/docs/Web/CSS/CSS_inline_layout/Inline_formatting_context
 /en-US/docs/Web/CSS/Interactive	/en-US/docs/Web/CSS/@media
@@ -12362,6 +12365,7 @@
 /en-US/docs/Web/CSS/Media_Queries/Using_media_queries_for_accessibility	/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries_for_accessibility
 /en-US/docs/Web/CSS/Motion_Path	/en-US/docs/Web/CSS/CSS_motion_path
 /en-US/docs/Web/CSS/Mozilla_Extensions	/en-US/docs/Web/CSS/Reference/Mozilla_extensions
+/en-US/docs/Web/CSS/Nesting_selector	/en-US/docs/Web/CSS/Reference/Selectors/Nesting_selector
 /en-US/docs/Web/CSS/Other_Resources	/en-US/docs/Web/CSS
 /en-US/docs/Web/CSS/Paged_Media	/en-US/docs/Web/CSS/CSS_paged_media
 /en-US/docs/Web/CSS/Privacy_and_the_:visited_selector	/en-US/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector
@@ -12382,6 +12386,7 @@
 /en-US/docs/Web/CSS/Tools/Border-radius_generator	/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator
 /en-US/docs/Web/CSS/Tools/Box-shadow_generator	/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator
 /en-US/docs/Web/CSS/Tools/ColorPicker_Tool	/en-US/docs/Web/CSS/CSS_colors/Color_format_converter
+/en-US/docs/Web/CSS/Type_selectors	/en-US/docs/Web/CSS/Reference/Selectors/Type_selectors
 /en-US/docs/Web/CSS/Understanding_CSS_z-index	/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index
 /en-US/docs/Web/CSS/Understanding_CSS_z-index/Adding_z-index	/en-US/docs/Web/CSS/CSS_positioned_layout/Using_z-index
 /en-US/docs/Web/CSS/Understanding_CSS_z-index/Stacking_and_float	/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_floating_elements
@@ -12390,6 +12395,7 @@
 /en-US/docs/Web/CSS/Understanding_CSS_z-index/Stacking_context_example_3	/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_3
 /en-US/docs/Web/CSS/Understanding_CSS_z-index/Stacking_without_z-index	/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index
 /en-US/docs/Web/CSS/Understanding_CSS_z-index/The_stacking_context	/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context
+/en-US/docs/Web/CSS/Universal_selectors	/en-US/docs/Web/CSS/Reference/Selectors/Universal_selectors
 /en-US/docs/Web/CSS/Using_CSS_Columns	/en-US/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts
 /en-US/docs/Web/CSS/Using_CSS_custom_properties	/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties
 /en-US/docs/Web/CSS/Using_CSS_media_queries	/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries

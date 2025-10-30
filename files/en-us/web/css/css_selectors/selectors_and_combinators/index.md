@@ -17,9 +17,9 @@ There are over 80 selectors and combinators. CSS selectors can be grouped into t
 
 ### Basic selectors
 
-The [type selector](/en-US/docs/Web/CSS/Type_selectors) selects all elements that have the given node name. For example, `div` will select all {{HTMLElement("div")}} elements and `input` will match any {{HTMLElement("input")}} element. The [universal selector](/en-US/docs/Web/CSS/Universal_selectors), denoted with an asterisk (`*`), is a special type selector that selects all elements.
+The [type selector](/en-US/docs/Web/CSS/Reference/Selectors/Type_selectors) selects all elements that have the given node name. For example, `div` will select all {{HTMLElement("div")}} elements and `input` will match any {{HTMLElement("input")}} element. The [universal selector](/en-US/docs/Web/CSS/Reference/Selectors/Universal_selectors), denoted with an asterisk (`*`), is a special type selector that selects all elements.
 
-The [class selector](/en-US/docs/Web/CSS/Class_selectors) selects all elements that have the given `class` attribute denoted by the class name prefixed with a period (`.`). For example, `.index` will match any element that has `class="index"`. The [ID selector](/en-US/docs/Web/CSS/ID_selectors) selects an element based on the value of its `id` attribute. The selector is the `id` prefixed with a "number sign" (U+0023, `#`). For example, `#toc` will match the element that has `id="toc"`. Both [`class`](/en-US/docs/Web/HTML/Reference/Global_attributes/class) and [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) are global attributes. There should be only one element with a given `id` in a document; but if there is more than one, the ID selector will match all the elements with that `id`.
+The [class selector](/en-US/docs/Web/CSS/Reference/Selectors/Class_selectors) selects all elements that have the given `class` attribute denoted by the class name prefixed with a period (`.`). For example, `.index` will match any element that has `class="index"`. The [ID selector](/en-US/docs/Web/CSS/Reference/Selectors/ID_selectors) selects an element based on the value of its `id` attribute. The selector is the `id` prefixed with a "number sign" (U+0023, `#`). For example, `#toc` will match the element that has `id="toc"`. Both [`class`](/en-US/docs/Web/HTML/Reference/Global_attributes/class) and [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) are global attributes. There should be only one element with a given `id` in a document; but if there is more than one, the ID selector will match all the elements with that `id`.
 
 When combining a type or universal selector with a class or id selector to create a [compound selector](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector), the type or universal selector must precede the class or id.
 
@@ -82,7 +82,7 @@ There is also a [column combinator](/en-US/docs/Web/CSS/Column_combinator), deno
 
 ### Namespace separator
 
-The [namespace separator](/en-US/docs/Web/CSS/Namespace_separator) is another combinator that is generally used in conjunction with the {{CSSXref("@namespace")}} at-rule. This combinator is denoted by a single pipe character (`|`). It enables limiting [type selectors](/en-US/docs/Web/CSS/Type_selectors) and the [universal selector](/en-US/docs/Web/CSS/Universal_selectors) to a specific namespace. For example, by defining a namespace such as `@namespace SVG url('http://www.w3.org/2000/svg');`, you can include selectors that target elements nested in an SVG namespace only. Declaring `SVG|a` would match links within SVGs and not those in the rest of the document. Namespacing can be useful to target MathML, SVG, or other XML-based content within your HTML.
+The [namespace separator](/en-US/docs/Web/CSS/Namespace_separator) is another combinator that is generally used in conjunction with the {{CSSXref("@namespace")}} at-rule. This combinator is denoted by a single pipe character (`|`). It enables limiting [type selectors](/en-US/docs/Web/CSS/Reference/Selectors/Type_selectors) and the [universal selector](/en-US/docs/Web/CSS/Reference/Selectors/Universal_selectors) to a specific namespace. For example, by defining a namespace such as `@namespace SVG url('http://www.w3.org/2000/svg');`, you can include selectors that target elements nested in an SVG namespace only. Declaring `SVG|a` would match links within SVGs and not those in the rest of the document. Namespacing can be useful to target MathML, SVG, or other XML-based content within your HTML.
 
 #### CSS
 
@@ -130,7 +130,7 @@ h2 + p + p {
 
 ### Creating complex selectors with CSS nesting
 
-The above complex selectors can also be defined using simple selectors, combinators, and [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting), with or without the [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector).
+The above complex selectors can also be defined using simple selectors, combinators, and [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting), with or without the [`&` nesting selector](/en-US/docs/Web/CSS/Reference/Selectors/Nesting_selector).
 
 #### CSS
 
@@ -188,7 +188,7 @@ h2 {
 
 ## Attribute selectors
 
-[Attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) select all elements that, depending on how the selector is written, either have the given attribute or have the given attribute with a substring value match.
+[Attribute selectors](/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors) select all elements that, depending on how the selector is written, either have the given attribute or have the given attribute with a substring value match.
 For example, `[type]` will match all elements that have the `type` attribute set (to any value), and `[type="submit"]` will match `<input type="submit">` and `<button type="submit">`, or any element with `type="submit"` set, even though this attribute-value pair is only supported on {{HTMLElement("input")}} and {{HTMLElement("button")}} elements. The match is case-insensitive.
 
 The case sensitivity of the attribute depends on the language. Generally, in HTML, if an attribute is {{glossary("enumerated")}}, the value in the selector is case-insensitive, even if the value is not one of the enumerated values or if the attribute is not a valid value for the element on which it is set. For non-enumerated attributes, like `class`, `id`, or any `data-*` attribute, or for non-HTML attributes, like `role` or `aria-*` attributes, the value match is case-sensitive; the match can be made case-insensitive with a case-insensitive modifier (`i`).

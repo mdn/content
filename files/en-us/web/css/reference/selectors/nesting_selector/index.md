@@ -1,6 +1,6 @@
 ---
 title: "& nesting selector"
-slug: Web/CSS/Nesting_selector
+slug: Web/CSS/Reference/Selectors/Nesting_selector
 page-type: css-selector
 browser-compat: css.selectors.nesting
 sidebar: cssref

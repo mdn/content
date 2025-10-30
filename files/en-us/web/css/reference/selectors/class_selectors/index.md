@@ -1,6 +1,6 @@
 ---
 title: Class selectors
-slug: Web/CSS/Class_selectors
+slug: Web/CSS/Reference/Selectors/Class_selectors
 page-type: css-selector
 browser-compat: css.selectors.class
 sidebar: cssref
@@ -34,7 +34,7 @@ li.spacious.elegant {
 }
 ```
 
-Note that this is equivalent to the following [attribute selector](/en-US/docs/Web/CSS/Attribute_selectors):
+Note that this is equivalent to the following [attribute selector](/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors):
 
 ```css
 [class~="class_name"] {

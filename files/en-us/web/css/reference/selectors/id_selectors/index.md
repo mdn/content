@@ -1,6 +1,6 @@
 ---
 title: ID selectors
-slug: Web/CSS/ID_selectors
+slug: Web/CSS/Reference/Selectors/ID_selectors
 page-type: css-selector
 browser-compat: css.selectors.id
 sidebar: cssref
@@ -23,7 +23,7 @@ The CSS **ID selector** matches an element based on the value of the element's [
 }
 ```
 
-Note that syntactically (but not specificity-wise), this is equivalent to the following [attribute selector](/en-US/docs/Web/CSS/Attribute_selectors):
+Note that syntactically (but not specificity-wise), this is equivalent to the following [attribute selector](/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors):
 
 ```css
 [id="id_value"] {

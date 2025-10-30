@@ -221,7 +221,7 @@ The use of such table content groups and {{Glossary("semantics", "semantic")}} m
 
 #### CSS
 
-The CSS is nearly unchanged from the [previous example](#not_specifying_a_body), except for some basic styling to highlight the table head so that the headers of the columns stand out from the data in the table body. As in the [example above](#not_specifying_a_body), the `tbody` [type selector](/en-US/docs/Web/CSS/Type_selectors) is used to style the body cells.
+The CSS is nearly unchanged from the [previous example](#not_specifying_a_body), except for some basic styling to highlight the table head so that the headers of the columns stand out from the data in the table body. As in the [example above](#not_specifying_a_body), the `tbody` [type selector](/en-US/docs/Web/CSS/Reference/Selectors/Type_selectors) is used to style the body cells.
 
 ```css
 tbody {

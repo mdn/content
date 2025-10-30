@@ -500,7 +500,7 @@ The HTML contains a {{htmlelement("div")}} element declared to be a popover via 
 
 #### CSS
 
-The two popover properties we want to transition are [`opacity`](/en-US/docs/Web/CSS/Reference/Properties/opacity) and [`transform`](/en-US/docs/Web/CSS/Reference/Properties/transform). We want the popover to fade in or out while growing or shrinking horizontally. To achieve this, we set a starting state for these properties on the hidden state of the popover element (selected with the `[popover]` [attribute selector](/en-US/docs/Web/CSS/Attribute_selectors)) and an end state for the shown state of the popover (selected via the [`:popover-open`](/en-US/docs/Web/CSS/:popover-open) pseudo-class). We also use the [`transition`](/en-US/docs/Web/CSS/Reference/Properties/transition) property to define the properties to animate and the animation's duration as the popover gets shown or hidden.
+The two popover properties we want to transition are [`opacity`](/en-US/docs/Web/CSS/Reference/Properties/opacity) and [`transform`](/en-US/docs/Web/CSS/Reference/Properties/transform). We want the popover to fade in or out while growing or shrinking horizontally. To achieve this, we set a starting state for these properties on the hidden state of the popover element (selected with the `[popover]` [attribute selector](/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors)) and an end state for the shown state of the popover (selected via the [`:popover-open`](/en-US/docs/Web/CSS/:popover-open) pseudo-class). We also use the [`transition`](/en-US/docs/Web/CSS/Reference/Properties/transition) property to define the properties to animate and the animation's duration as the popover gets shown or hidden.
 
 ```css
 html {

@@ -16,7 +16,7 @@ No notable changes.
 
 ### CSS
 
-- The [CSS Nesting](/en-US/docs/Web/CSS/CSS_nesting) module is now supported in Firefox, along with the [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector). This allows developers to write nested CSS, which helps with the readability, modularity, and maintainability of CSS stylesheets. It also potentially helps reduce CSS file size, decreasing download sizes. ([Firefox bug 1835066](https://bugzil.la/1835066), [Firefox bug 1840781](https://bugzil.la/1840781))
+- The [CSS Nesting](/en-US/docs/Web/CSS/CSS_nesting) module is now supported in Firefox, along with the [`&` nesting selector](/en-US/docs/Web/CSS/Reference/Selectors/Nesting_selector). This allows developers to write nested CSS, which helps with the readability, modularity, and maintainability of CSS stylesheets. It also potentially helps reduce CSS file size, decreasing download sizes. ([Firefox bug 1835066](https://bugzil.la/1835066), [Firefox bug 1840781](https://bugzil.la/1840781))
 
 - The [`math-style`](/en-US/docs/Web/CSS/Reference/Properties/math-style) and [`math-depth`](/en-US/docs/Web/CSS/Reference/Properties/math-depth) properties are now supported, as well as the `math` value for the [`font-size`](/en-US/docs/Web/CSS/Reference/Properties/font-size#values) property ([Firefox bug 1845516](https://bugzil.la/1845516)).
 

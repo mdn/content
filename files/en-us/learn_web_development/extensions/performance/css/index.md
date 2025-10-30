@@ -86,7 +86,7 @@ To optimize the CSSOM construction and improve page performance, you can do one 
 
   Making your selectors less complex and specific is also good for maintenance. It is easy to understand what simple selectors are doing, and it is easy to override styles when needed later on if the selectors are less [specific](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#specificity_2).
 
-- **Don't apply styles to more elements than needed**: A common mistake is to apply styles to all elements using the [universal selector](/en-US/docs/Web/CSS/Universal_selectors), or at least, to more elements than needed. This kind of styling can impact performance negatively, especially on larger sites.
+- **Don't apply styles to more elements than needed**: A common mistake is to apply styles to all elements using the [universal selector](/en-US/docs/Web/CSS/Reference/Selectors/Universal_selectors), or at least, to more elements than needed. This kind of styling can impact performance negatively, especially on larger sites.
 
   ```css
   /* Selects every element inside the <body> */

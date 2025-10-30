@@ -89,11 +89,11 @@ The CSS selectors module also introduces the [column combinator](/en-US/docs/Web
 - {{CSSXref(":volume-locked")}}
 - {{CSSXref(":where", ":where()")}}
 - [`:-webkit-` pseudo-classes](/en-US/docs/Web/CSS/Reference/Webkit_extensions#pseudo-classes)
-- [Attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors)
-- [Class selector](/en-US/docs/Web/CSS/Class_selectors)
-- [ID selectors](/en-US/docs/Web/CSS/ID_selectors)
-- [Type selectors](/en-US/docs/Web/CSS/Type_selectors)
-- [Universal selectors](/en-US/docs/Web/CSS/Universal_selectors)
+- [Attribute selectors](/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors)
+- [Class selector](/en-US/docs/Web/CSS/Reference/Selectors/Class_selectors)
+- [ID selectors](/en-US/docs/Web/CSS/Reference/Selectors/ID_selectors)
+- [Type selectors](/en-US/docs/Web/CSS/Reference/Selectors/Type_selectors)
+- [Universal selectors](/en-US/docs/Web/CSS/Reference/Selectors/Universal_selectors)
 
 The CSS selectors module also introduces the {{CSSXref(":blank")}}, {{CSSXref(":current")}}, and {{CSSXref(":local-link")}} pseudo-classes. Currently, no browsers support these features.
 
@@ -138,7 +138,7 @@ The CSS selectors module also introduces the {{CSSXref(":blank")}}, {{CSSXref(":
 
 - {{CSSXref(":state","state()")}} pseudo-class
 - [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting) module
-  - [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector)
+  - [`&` nesting selector](/en-US/docs/Web/CSS/Reference/Selectors/Nesting_selector)
 - [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) module
   - {{CSSXref(":host")}} pseudo-class
   - {{CSSXref(":host_function", ":host()")}} pseudo-class

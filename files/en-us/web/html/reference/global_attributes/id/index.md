@@ -76,4 +76,4 @@ const content = window.preamble.textContent;
 - All [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 - {{domxref("Element.id")}} that reflects this attribute.
 - The {{domxref("Document.getElementById")}} method.
-- CSS [ID selectors](/en-US/docs/Web/CSS/ID_selectors).
+- CSS [ID selectors](/en-US/docs/Web/CSS/Reference/Selectors/ID_selectors).

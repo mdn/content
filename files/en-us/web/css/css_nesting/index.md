@@ -16,7 +16,7 @@ CSS nesting helps with the readability, modularity, and maintainability of CSS s
 
 ### Selectors
 
-- [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector)
+- [`&` nesting selector](/en-US/docs/Web/CSS/Reference/Selectors/Nesting_selector)
 
 ## Guides
 

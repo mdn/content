@@ -61,11 +61,11 @@ The resulting page content is styled like this:
 
 - [Learn more about CSS selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) in our introduction to CSS.
 - Basic selectors
-  - [Type selectors](/en-US/docs/Web/CSS/Type_selectors) `elementname`
-  - [Class selectors](/en-US/docs/Web/CSS/Class_selectors) `.classname`
-  - [ID selectors](/en-US/docs/Web/CSS/ID_selectors) `#idname`
-  - [Universal selectors](/en-US/docs/Web/CSS/Universal_selectors) `* ns|* *|*`
-  - [Attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) `[attr=value]`
+  - [Type selectors](/en-US/docs/Web/CSS/Reference/Selectors/Type_selectors) `elementname`
+  - [Class selectors](/en-US/docs/Web/CSS/Reference/Selectors/Class_selectors) `.classname`
+  - [ID selectors](/en-US/docs/Web/CSS/Reference/Selectors/ID_selectors) `#idname`
+  - [Universal selectors](/en-US/docs/Web/CSS/Reference/Selectors/Universal_selectors) `* ns|* *|*`
+  - [Attribute selectors](/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors) `[attr=value]`
   - [State selectors](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) `a:active, a:visited`
 
 - Grouping selectors

@@ -13,7 +13,7 @@ These selectors can be combined into a comma-separated [selector list](#selector
 
 ### Simple selector
 
-A **simple selector** is a selector with a single component, such as a single type selector, attribute selector, or pseudo-class, that's not used in combination with or contains any other selector component or combinator. A given element is said to match a simple selector when that simple selector accurately describes the element. Any selector that contains a single [basic selector](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#basic_selectors), [attribute selector](/en-US/docs/Web/CSS/Attribute_selectors), [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes), or [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) selector is a simple selector.
+A **simple selector** is a selector with a single component, such as a single type selector, attribute selector, or pseudo-class, that's not used in combination with or contains any other selector component or combinator. A given element is said to match a simple selector when that simple selector accurately describes the element. Any selector that contains a single [basic selector](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#basic_selectors), [attribute selector](/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors), [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes), or [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) selector is a simple selector.
 
 ```css
 #myId {
@@ -35,7 +35,7 @@ a#selected {
 }
 ```
 
-In a compound selector, the [type selector](/en-US/docs/Web/CSS/Type_selectors) or [universal selector](/en-US/docs/Web/CSS/Universal_selectors) must come first in the sequence of selectors. Only one type selector or universal selector is allowed in the sequence. As whitespace represents the [descendant combinator](/en-US/docs/Web/CSS/Descendant_combinator), no whitespace is allowed between the simple selectors that make up a compound selector.
+In a compound selector, the [type selector](/en-US/docs/Web/CSS/Reference/Selectors/Type_selectors) or [universal selector](/en-US/docs/Web/CSS/Reference/Selectors/Universal_selectors) must come first in the sequence of selectors. Only one type selector or universal selector is allowed in the sequence. As whitespace represents the [descendant combinator](/en-US/docs/Web/CSS/Descendant_combinator), no whitespace is allowed between the simple selectors that make up a compound selector.
 
 ### Complex selector
 

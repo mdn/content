@@ -19,7 +19,7 @@ Firefox 142 was released on [August 19, 2025](https://whattrainisitnow.com/relea
 
 ### CSS
 
-- The [`&` selector](/en-US/docs/Web/CSS/Nesting_selector) inside {{cssxref("@scope")}} no longer inherits the [specificity of the scope start selector](/en-US/docs/Web/CSS/@scope#specificity_in_scope).
+- The [`&` selector](/en-US/docs/Web/CSS/Reference/Selectors/Nesting_selector) inside {{cssxref("@scope")}} no longer inherits the [specificity of the scope start selector](/en-US/docs/Web/CSS/@scope#specificity_in_scope).
   This makes `&` selectors in `@scope` consistent with [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting), avoiding unexpected specificity differences (see [CSS nesting and specificity](/en-US/docs/Web/CSS/CSS_nesting/Nesting_and_specificity)).
   ([Firefox bug 1975531](https://bugzil.la/1975531)).
 

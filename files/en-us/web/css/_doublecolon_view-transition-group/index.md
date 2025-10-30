@@ -43,7 +43,7 @@ In addition, the element's transform is animated from the "old" view state's scr
 ### Parameters
 
 - `*`
-  - : The [universal selector (`*`)](/en-US/docs/Web/CSS/Universal_selectors); selects all view transition groups on a page.
+  - : The [universal selector (`*`)](/en-US/docs/Web/CSS/Reference/Selectors/Universal_selectors); selects all view transition groups on a page.
 - `root`
   - : The {{cssxref("view-transition-name")}} applied to {{cssxref(":root")}} causes the pseudo-element to match the default `root` view transition group. This is the snapshot group created by the user agent to contain the view transition for the overall page. This group includes any element not assigned to its own specific view transition snapshot group via the `view-transition-name` property.
 - `<pt-name-selector>`

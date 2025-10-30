@@ -1,6 +1,6 @@
 ---
 title: Type selectors
-slug: Web/CSS/Type_selectors
+slug: Web/CSS/Reference/Selectors/Type_selectors
 page-type: css-selector
 browser-compat: css.selectors.type
 sidebar: cssref

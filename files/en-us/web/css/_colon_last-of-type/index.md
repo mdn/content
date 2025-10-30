@@ -73,7 +73,7 @@ p:last-of-type {
 
 ### Nested elements
 
-This example shows how nested elements can also be targeted. Note that the [universal selector](/en-US/docs/Web/CSS/Universal_selectors) (`*`) is implied when no simple selector is written.
+This example shows how nested elements can also be targeted. Note that the [universal selector](/en-US/docs/Web/CSS/Reference/Selectors/Universal_selectors) (`*`) is implied when no simple selector is written.
 
 #### HTML
 

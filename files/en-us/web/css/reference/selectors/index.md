@@ -9,7 +9,7 @@ sidebar: cssref
 
 **CSS selectors** are patterns used in [CSS rules](/en-US/docs/Web/CSS/CSS_syntax/Syntax#css_rulesets) to target and select specific HTML elements for styling.
 
-For example, to style paragraphs, you will use the `p` [type selector](/en-US/docs/Web/CSS/Type_selectors) to select all {{HTMLElement("p")}} elements and apply a style to them:
+For example, to style paragraphs, you will use the `p` [type selector](/en-US/docs/Web/CSS/Reference/Selectors/Type_selectors) to select all {{HTMLElement("p")}} elements and apply a style to them:
 
 ```css
 /* Set font size on all <p> elements */
@@ -30,14 +30,14 @@ selector {
 
 ## Index of selectors
 
-- [& nesting selector](/en-US/docs/Web/CSS/Nesting_selector)
-- [Attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors)
-- [Class selectors](/en-US/docs/Web/CSS/Class_selectors)
-- [ID selectors](/en-US/docs/Web/CSS/ID_selectors)
+- [& nesting selector](/en-US/docs/Web/CSS/Reference/Selectors/Nesting_selector)
+- [Attribute selectors](/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors)
+- [Class selectors](/en-US/docs/Web/CSS/Reference/Selectors/Class_selectors)
+- [ID selectors](/en-US/docs/Web/CSS/Reference/Selectors/ID_selectors)
 - [Pseudo-class selectors](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
 - [Pseudo-element selectors](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements)
-- [Type selectors](/en-US/docs/Web/CSS/Type_selectors)
-- [Universal selectors](/en-US/docs/Web/CSS/Universal_selectors)
+- [Type selectors](/en-US/docs/Web/CSS/Reference/Selectors/Type_selectors)
+- [Universal selectors](/en-US/docs/Web/CSS/Reference/Selectors/Universal_selectors)
 
 ## Specifications
 

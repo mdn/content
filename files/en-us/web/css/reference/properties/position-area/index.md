@@ -161,7 +161,7 @@ The HTML includes a {{htmlelement("div")}} and a {{htmlelement("p")}}. The `<p>`
 
 We convert the `<div>` to an anchor element with the {{cssxref("anchor-name")}} property. We then associate the absolutely-positioned `<p>` with it by setting its {{cssxref("position-anchor")}} value to the same anchor name.
 
-We set the initial `position-area` value to `top center`. This value is set on a `p` selector, so the value has less [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity) than any value added to the `<style>` block's `.positionedElement` [class selector](/en-US/docs/Web/CSS/Class_selectors). As a result, you can override the initial `position-area` value by setting a `position-area` value inside the style block.
+We set the initial `position-area` value to `top center`. This value is set on a `p` selector, so the value has less [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity) than any value added to the `<style>` block's `.positionedElement` [class selector](/en-US/docs/Web/CSS/Reference/Selectors/Class_selectors). As a result, you can override the initial `position-area` value by setting an `position-area` value inside the style block.
 
 ```css
 .anchor {

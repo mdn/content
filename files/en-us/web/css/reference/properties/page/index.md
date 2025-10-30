@@ -186,7 +186,7 @@ body {
 }
 ```
 
-The next part of the CSS uses [attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) to apply the print dimensions, orientation, and margins defined in the named `@page` rules defined in the previous CSS section to elements using the `page` property.
+The next part of the CSS uses [attribute selectors](/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors) to apply the print dimensions, orientation, and margins defined in the named `@page` rules defined in the previous CSS section to elements using the `page` property.
 The sections with `class="chapter"` are concurrent and appear as one page.
 The `break-after: page;` is used to split them up, which splits each chapter into a separately printed page.
 

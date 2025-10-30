@@ -1,6 +1,6 @@
 ---
 title: Attribute selectors
-slug: Web/CSS/Attribute_selectors
+slug: Web/CSS/Reference/Selectors/Attribute_selectors
 page-type: css-selector
 browser-compat: css.selectors.attribute
 sidebar: cssref

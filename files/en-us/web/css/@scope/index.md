@@ -168,7 +168,7 @@ Here's some considerations for `:scope` within `@scope` blocks:
 
 ### Specificity in `@scope`
 
-Inside an `@scope` rule, both bare selectors and the [`&`](/en-US/docs/Web/CSS/Nesting_selector) nesting selector behave as if `:where(:scope)` were prepended to the selector.
+Inside an `@scope` rule, both bare selectors and the [`&`](/en-US/docs/Web/CSS/Reference/Selectors/Nesting_selector) nesting selector behave as if `:where(:scope)` were prepended to the selector.
 Because {{cssxref(":where", ":where()")}} has zero [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity), bare selectors and `&` add zero weight. The specificity weight is determined by the rest of the selector.
 For example, the specificity of the `& img` selector is equivalent to the specificity of `:where(:scope) img` (0-0-1).
 
