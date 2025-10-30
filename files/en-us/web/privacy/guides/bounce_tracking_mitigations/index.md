@@ -28,7 +28,7 @@ In both instances, users may be unaware they have visited `tracker.example`. The
 
 ## How Bounce tracking mitigations work
 
-Bounce tracking mitigations work by identifying tracker sites via a heuristic and periodically deleting cookies and other state data associated with them (for example, [localStorage](/en-US/docs/Web/API/Web_Storage_API), [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), [Cache API](/en-US/docs/Web/API/CacheStorage), or network state data). The feature avoids using block or allow lists to decide which websites are affected.
+Bounce tracking mitigations work by identifying tracker sites via a heuristic and periodically deleting cookies and other state data associated with them (other examples include [localStorage](/en-US/docs/Web/API/Web_Storage_API), [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), [Cache API](/en-US/docs/Web/API/CacheStorage), and network state data). The feature avoids using block or allow lists to decide which websites are affected.
 
 It is critical that, while defending against bounce tracking, the browser doesn't interfere with legitimate, non-tracking redirection flow uses. For example, single sign-on (SSO), [identity federation](/en-US/docs/Web/API/FedCM_API#fedcm_concepts), and payment services generally involve redirecting the user to another site where they perform an action, updating state information as a result, then redirecting the user back to the original site.
 
