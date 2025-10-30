@@ -12,7 +12,7 @@ sidebar: cssref
 
 The **`calc-size()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) allows you to perform calculations on [intrinsic size](/en-US/docs/Glossary/Intrinsic_Size) values such as `auto`, [`fit-content`](/en-US/docs/Web/CSS/fit-content), and [`max-content`](/en-US/docs/Web/CSS/max-content); this is not supported by the regular {{cssxref("calc()")}} function.
 
-`calc-size()` return values can also be [interpolated](/en-US/docs/Glossary/Interpolation), enabling size keyword values to be used in [animations](/en-US/docs/Web/CSS/CSS_animations) and [transitions](/en-US/docs/Web/CSS/CSS_transitions). In effect, including `calc-size()` in a property value automatically applies [`interpolate-size: allow-keywords`](/en-US/docs/Web/CSS/interpolate-size) to the selection.
+`calc-size()` return values can also be [interpolated](/en-US/docs/Glossary/Interpolation), enabling size keyword values to be used in [animations](/en-US/docs/Web/CSS/CSS_animations) and [transitions](/en-US/docs/Web/CSS/CSS_transitions). In effect, including `calc-size()` in a property value automatically applies [`interpolate-size: allow-keywords`](/en-US/docs/Web/CSS/Reference/Properties/interpolate-size) to the selection.
 
 Note however that `interpolate-size` is inherited, therefore applying it to an element enables interpolation of intrinsic size keywords for every property applied to that element and its children. As a result, `interpolate-size` is the preferred solution for enabling intrinsic size animations. You should only use `calc-size()` to enable intrinsic size animations if they also require calculations.
 
@@ -467,7 +467,7 @@ Try clicking the `<button>` a few times to adjust the `<section>` between the wi
 
 ### Using a function inside the `calc-size()` function
 
-As mentioned earlier, it is possible to use another function inside `calc-size()`. This example sets [`field-sizing: content`](/en-US/docs/Web/CSS/field-sizing) on {{htmlelement("input")}} elements to make them as wide as the entered content, and then uses a [`max()`](/en-US/docs/Web/CSS/max) function inside `calc-size()` to ensure that the `<input>`s are at least a minimum size, and only start to grow when the entered text becomes wider than that size — by being set to `fit-content` plus `20px`.
+As mentioned earlier, it is possible to use another function inside `calc-size()`. This example sets [`field-sizing: content`](/en-US/docs/Web/CSS/Reference/Properties/field-sizing) on {{htmlelement("input")}} elements to make them as wide as the entered content, and then uses a [`max()`](/en-US/docs/Web/CSS/max) function inside `calc-size()` to ensure that the `<input>`s are at least a minimum size, and only start to grow when the entered text becomes wider than that size — by being set to `fit-content` plus `20px`.
 
 #### HTML
 

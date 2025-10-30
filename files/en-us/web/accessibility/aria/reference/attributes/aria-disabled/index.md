@@ -56,7 +56,7 @@ The [`forced-colors` media query](/en-US/docs/Web/CSS/@media/forced-colors) dete
 Another thing to keep in mind, when using `aria-disabled` over the native HTML attribute, is that the ARIA attribute will require the manual styling necessary to visually communicate the element as disabled in Windows High Contrast Mode.
 
 > [!NOTE]
-> If you are using CSS's [`pointer-events: none;`](/en-US/docs/Web/CSS/pointer-events) to make an element non-clickable, make sure you disable interactivity with JavaScript as well. `pointer-events: none;` prevents mouse clicks, but does not prevent the element from being activated via the keyboard.
+> If you are using CSS's [`pointer-events: none;`](/en-US/docs/Web/CSS/Reference/Properties/pointer-events) to make an element non-clickable, make sure you disable interactivity with JavaScript as well. `pointer-events: none;` prevents mouse clicks, but does not prevent the element from being activated via the keyboard.
 
 ```js
 function onClick(event) {

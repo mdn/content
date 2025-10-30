@@ -40,7 +40,7 @@ em {
 
 {{EmbedLiveSample('Using_initial_to_reset_color_for_an_element')}}
 
-With the `initial` keyword in this example, `color` value on the `em` element is restored to the initial value of [`color`](/en-US/docs/Web/CSS/color#formal_definition), as defined in the specification.
+With the `initial` keyword in this example, `color` value on the `em` element is restored to the initial value of [`color`](/en-US/docs/Web/CSS/Reference/Properties/color#formal_definition), as defined in the specification.
 
 ## Specifications
 

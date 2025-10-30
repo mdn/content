@@ -23,7 +23,7 @@ The process of paginating content into generated pages and controlling breaks in
 - {{cssxref("@page")}}
   - {{cssxref("@page/page-orientation", "page-orientation")}} descriptor
   - {{cssxref("@page/size", "size")}} descriptor
-  - [Margin descriptors](/en-US/docs/Web/CSS/margin)
+  - [Margin descriptors](/en-US/docs/Web/CSS/Reference/Properties/margin)
 - [Margin at-rules](/en-US/docs/Web/CSS/@page#margin_at-rules)
 
 The CSS paged media module also introduces the `bleeds` and `marks` descriptors of the `@page` at-rule. Currently, no browsers support these features.

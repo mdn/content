@@ -12,7 +12,7 @@ sidebar: cssref
 {{Non-standard_header}}{{Deprecated_Header}}
 
 > [!NOTE]
-> All browsers support the [`animation`](/en-US/docs/Web/CSS/animation#browser_compatibility) property without vendor prefixes. Only WebKit (Safari), and not Chromium, based browsers supports the `-webkit-animation` media feature. No browsers support `animation`, without the prefix, as a media query. Use the [`@supports (animation)`](/en-US/docs/Web/CSS/@supports) feature query instead.
+> All browsers support the [`animation`](/en-US/docs/Web/CSS/Reference/Properties/animation#browser_compatibility) property without vendor prefixes. Only WebKit (Safari), and not Chromium, based browsers supports the `-webkit-animation` media feature. No browsers support `animation`, without the prefix, as a media query. Use the [`@supports (animation)`](/en-US/docs/Web/CSS/@supports) feature query instead.
 
 The **`-webkit-animation`** Boolean [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) is a [WebKit extension](/en-US/docs/Web/CSS/Reference/Webkit_extensions) whose value is `true` if vendor-prefixed CSS {{cssxref("animation")}}s are supported.
 

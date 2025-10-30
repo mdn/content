@@ -12,11 +12,11 @@ sidebar:
     title: Modules
     details: closed
   - type: listSubPagesGrouped
-    path: /Web/CSS
+    path: /Web/CSS/Reference/Properties
     tags:
       - css-property
       - css-shorthand-property
-    link: /Web/CSS/Properties
+    link: /Web/CSS/Reference/Properties
     title: Properties
     details: closed
   - type: listSubPages

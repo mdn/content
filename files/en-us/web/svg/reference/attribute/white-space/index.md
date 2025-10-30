@@ -30,7 +30,7 @@ The **`white-space`** SVG attribute specifies how {{Glossary("whitespace", "whit
   </tbody>
 </table>
 
-For a description of the values, please refer to the [CSS `white-space`](/en-US/docs/Web/CSS/white-space#values) property.
+For a description of the values, please refer to the [CSS `white-space`](/en-US/docs/Web/CSS/Reference/Properties/white-space#values) property.
 
 ## Specifications
 

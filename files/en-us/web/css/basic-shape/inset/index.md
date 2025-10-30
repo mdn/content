@@ -59,7 +59,7 @@ shape-outside: inset(20px 50px 10px 0 round 50px);
     If a pair of insets for a dimension adds up to more than 100% of that dimension, both values are proportionally reduced so their sum equals 100%. For example, the value `inset(90% 10% 60% 10%)` has a top inset of `90%` and a bottom inset of `60%`. These values are reduced proportionally to `inset(60% 10% 40% 10%)`. Shapes such as this, that enclose no area and have no {{cssxref("shape-margin")}}, do not affect wrapping.
 
 - `<border-radius>`
-  - : The optional [`<border-radius>`](/en-US/docs/Web/CSS/border-radius) argument(s) define rounded corners for the inset rectangle using the border-radius shorthand syntax.
+  - : The optional [`<border-radius>`](/en-US/docs/Web/CSS/Reference/Properties/border-radius) argument(s) define rounded corners for the inset rectangle using the border-radius shorthand syntax.
 
 ## Formal syntax
 

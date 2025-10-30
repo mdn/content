@@ -27,7 +27,7 @@ No notable changes
 
 - The global CSS keyword {{cssxref("revert-layer")}} has been added to allow rolling back of property values in one cascade layer to the matching rules in the previous cascade layer. This keyword can be applied on any property, including the CSS shorthand property {{cssxref("all")}}. For more information, see [Firefox bug 1699220](https://bugzil.la/1699220).
 
-- The CSS [`scrollbar-gutter`](/en-US/docs/Web/CSS/scrollbar-gutter) property is now supported. This gives developers control over reserved space for the scrollbar, preventing unwanted layout changes as the content grows.
+- The CSS [`scrollbar-gutter`](/en-US/docs/Web/CSS/Reference/Properties/scrollbar-gutter) property is now supported. This gives developers control over reserved space for the scrollbar, preventing unwanted layout changes as the content grows.
   See [Firefox bug 1715112](https://bugzil.la/1715112) for more details.
 
 ### JavaScript

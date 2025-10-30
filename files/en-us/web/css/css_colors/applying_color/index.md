@@ -64,7 +64,7 @@ Every element is a box with some sort of content, and has a background and a bor
 
 Any element can have a border drawn around it. A basic element border is a line drawn around the edges of the element's content. See [The box model](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model) to learn about the relationship between elements and their borders, and the article [Styling borders using CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders) to learn more about applying styles to borders.
 
-You can use the {{cssxref("border")}} shorthand property, which lets you configure everything about the border in one shot (including non-color features of borders, such as its [width](/en-US/docs/Web/CSS/border-width), [style](/en-US/docs/Web/CSS/border-style) (solid, dashed, etc.), and so forth.
+You can use the {{cssxref("border")}} shorthand property, which lets you configure everything about the border in one shot (including non-color features of borders, such as its [width](/en-US/docs/Web/CSS/Reference/Properties/border-width), [style](/en-US/docs/Web/CSS/Reference/Properties/border-style) (solid, dashed, etc.), and so forth.
 
 - {{cssxref("border-color")}} shorthand
   - : Specifies a single color to use for every side of the element's border.

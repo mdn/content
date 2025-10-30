@@ -22,7 +22,7 @@ With alpha masks, the color of the mask is irrelevant. Only the opacity of the m
 
 Masks can be defined using CSS gradients, raster images (such as PNGs), and SVG {{svgelement("mask")}} elements. In this guide, we introduce the various mask image types as we discuss [opaqueness and transparency](#opaqueness_versus_transparency), [luminance](#alpha_transparency_versus_luminance), and [masking versus CSS clipping](#svg_mask_as_mask_source).
 
-Each mask layer consists of a {{cssxref("mask-image")}}, which is [positioned](/en-US/docs/Web/CSS/mask-position) relative to an origin box. The mask images can be [sized](/en-US/docs/Web/CSS/mask-size), [repeated](/en-US/docs/Web/CSS/mask-repeat), and [clipped](/en-US/docs/Web/CSS/mask-clip). In cases where multiple mask images are declared, the way the [mask layers are composited](/en-US/docs/Web/CSS/mask-composite), or combined, can be set. These are discussed in the [masking properties guide](/en-US/docs/Web/CSS/CSS_masking/Mask_properties).
+Each mask layer consists of a {{cssxref("mask-image")}}, which is [positioned](/en-US/docs/Web/CSS/Reference/Properties/mask-position) relative to an origin box. The mask images can be [sized](/en-US/docs/Web/CSS/Reference/Properties/mask-size), [repeated](/en-US/docs/Web/CSS/Reference/Properties/mask-repeat), and [clipped](/en-US/docs/Web/CSS/Reference/Properties/mask-clip). In cases where multiple mask images are declared, the way the [mask layers are composited](/en-US/docs/Web/CSS/Reference/Properties/mask-composite), or combined, can be set. These are discussed in the [masking properties guide](/en-US/docs/Web/CSS/CSS_masking/Mask_properties).
 
 > [!NOTE]
 > All examples will be using the following image as the underlying element upon which masks will be applied:

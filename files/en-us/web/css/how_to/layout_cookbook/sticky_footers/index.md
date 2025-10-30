@@ -143,7 +143,7 @@ body {
 
 {{EmbedLiveSample("sticky-footer-flexbox-example", "", "400px")}}
 
-The flexbox example starts out in the same way, but we use `display:flex` rather than `display:grid` on the `.wrapper`; we also set {{cssxref("flex-direction")}} to `column`. Then we set our main content to [`flex-grow: 1`](/en-US/docs/Web/CSS/flex-grow) and the other two elements to [`flex-shrink: 0`](/en-US/docs/Web/CSS/flex-shrink) — this prevents them from shrinking smaller when content fills the main area.
+The flexbox example starts out in the same way, but we use `display:flex` rather than `display:grid` on the `.wrapper`; we also set {{cssxref("flex-direction")}} to `column`. Then we set our main content to [`flex-grow: 1`](/en-US/docs/Web/CSS/Reference/Properties/flex-grow) and the other two elements to [`flex-shrink: 0`](/en-US/docs/Web/CSS/Reference/Properties/flex-shrink) — this prevents them from shrinking smaller when content fills the main area.
 
 ## Resources on MDN
 

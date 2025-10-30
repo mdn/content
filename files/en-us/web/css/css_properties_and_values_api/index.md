@@ -58,8 +58,8 @@ CSS.registerProperty({
 
 {{EmbedLiveSample("Properties and values API in action",600,120)}}
 
-The box has a [background](/en-US/docs/Web/CSS/background) consisting of a [linear gradient](/en-US/docs/Web/CSS/gradient/linear-gradient) from `--stop-color` (the custom property) to [`lavenderblush`](/en-US/docs/Web/CSS/named-color).
-The value of `--stop-color` is set to `cornflowerblue` at first, but when you hover over the box, `--stop-color` [transitions](/en-US/docs/Web/CSS/transition) to `aquamarine` over two seconds (`linear-gradient(to right, aquamarine, lavenderblush)`).
+The box has a [background](/en-US/docs/Web/CSS/Reference/Properties/background) consisting of a [linear gradient](/en-US/docs/Web/CSS/gradient/linear-gradient) from `--stop-color` (the custom property) to [`lavenderblush`](/en-US/docs/Web/CSS/named-color).
+The value of `--stop-color` is set to `cornflowerblue` at first, but when you hover over the box, `--stop-color` [transitions](/en-US/docs/Web/CSS/Reference/Properties/transition) to `aquamarine` over two seconds (`linear-gradient(to right, aquamarine, lavenderblush)`).
 
 ## Reference
 
