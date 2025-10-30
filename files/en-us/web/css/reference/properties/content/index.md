@@ -408,7 +408,7 @@ Check the [browser compatibility chart](#browser_compatibility). All browsers su
 
 ### Element replacement with `image-set()`
 
-This example replaces an element's content with a {{cssxref("image/image-set", "image-set()")}}. If the users display has normal resolution the `1x.png` will be displayed. Screens with a higher resolution will display the `2x.png` image.
+This example replaces an element's content with an {{cssxref("image/image-set", "image-set()")}}. If the users display has normal resolution the `1x.png` will be displayed. Screens with a higher resolution will display the `2x.png` image.
 
 #### HTML
 
