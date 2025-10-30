@@ -41,17 +41,17 @@ If set, scripts provided via the text properties {{domxref("HTMLScriptElement.te
 The `src` property is used to load and run external scripts.
 The fetched script is run in the context of the current page, and can hence do anything that your own website code can do (even if the URL is not same-origin with your site).
 If the input is provided by a user, this is a possible vector for [cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks.
-Even if the resource is trusted by your website, it may still be compromised in a supply chain attack.
-
-A website should control what scripts that are allowed to run using a [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) with the [`script-src`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src) directive (or a fallback defined in [`default-src`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/default-src)).
-This can restrict scripts to those from the current origin, or a specific set of origins, or even particular files.
-To mitigate against supply chain attacks you can even restrict files to those that have a specific hash or nonce: the browser won't load a file that does not match the condition even if it is sent by a compromised server.
 
 It is extremely risky to accept and execute arbitrary URLs from untrusted origins.
-If you find a situation where this is necessary, you should always assign {{domxref("TrustedScriptURL")}} objects instead of strings, and [enforce trusted type](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) using the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) CSP directive.
-This ensures that the input is passed through a transformation function, which has the chance to [sanitize](/en-US/docs/Web/Security/Attacks/XSS#sanitization) or reject the URL before it is injected.
+A website should control what scripts that are allowed to run using a [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) with the [`script-src`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src) directive (or a fallback defined in [`default-src`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/default-src)).
+This can restrict scripts to those from the current origin, or a specific set of origins, or even particular files.
 
-The behavior of the transformation function will depend on the specific use case that requires a user provided script.
+If you're using this property and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) (using the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) CSP directive), you will need to always assign {{domxref("TrustedScriptURL")}} objects instead of strings.
+This ensures that the input is passed through a transformation function, which has the chance to reject or modify the URL before it is injected.
+If you're permitting some sources using `CSP: script-src`, the transformation function would use the sources as an allow-list.
+
+Even if the resource is trusted by your website, it may still be compromised in a [supply chain attack](/en-US/docs/Web/Security/Attacks/Supply_chain_attacks).
+To mitigate against this kind of attack you should use the [subresource integrity](/en-US/docs/Web/Security/Attacks/Supply_chain_attacks#using_subresource_integrity) feature.
 
 ## Examples
 
