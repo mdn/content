@@ -111,7 +111,7 @@ This test does not match because the base URL is not a valid URL, and together w
 console.log(pattern.test("/books/123", "data:text/plain,hello world!")); // false
 ```
 
-### Testing an URL object
+### Testing a URL object
 
 This example uses the same pattern as before to test against a number of URLs defined as structured objects.
 

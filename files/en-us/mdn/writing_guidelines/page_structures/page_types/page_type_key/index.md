@@ -122,7 +122,7 @@ This section lists `page-type` values for pages under [Web/JavaScript](/en-US/do
 
 This section lists `page-type` values for pages under [Web/MathML](/en-US/docs/Web/MathML). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
 
-- `mathml-attribute`: an MathML attribute, like [`mathcolor`](/en-US/docs/Web/MathML/Reference/Global_attributes/mathcolor).
+- `mathml-attribute`: a MathML attribute, like [`mathcolor`](/en-US/docs/Web/MathML/Reference/Global_attributes/mathcolor).
 - `mathml-element`: an HTML element, like [`<msqrt>`](/en-US/docs/Web/MathML/Reference/Element/msqrt).
 
 ### SVG page types

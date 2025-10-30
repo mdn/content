@@ -26,7 +26,7 @@ The `:open` pseudo-class selects any element currently in the open state, which 
 
 Note that the open and closed states are semantic states, and don't necessary correlate with the visibility of the element in question. For example, a `<details>` element that is expanded to show its content is open, and will be selected by the `details:open` selector, even if it is hidden with a {{cssxref("visibility")}} value of `hidden`.
 
-{{domxref("Popover API", "Popover", "", "nocode")}} elements (that is, elements with the [`popover`](/en-US/docs/Web/HTML/Reference/Global_attributes/popover) attribute set on them) have distinct semantic states representing popovers that are showing or hidden, which can coexist alongside open and closed states. To target a popover element in an showing state, use the {{cssxref(":popover-open")}} pseudo-class instead.
+{{domxref("Popover API", "Popover", "", "nocode")}} elements (that is, elements with the [`popover`](/en-US/docs/Web/HTML/Reference/Global_attributes/popover) attribute set on them) have distinct semantic states representing popovers that are showing or hidden, which can coexist alongside open and closed states. To target a popover element in a showing state, use the {{cssxref(":popover-open")}} pseudo-class instead.
 
 ## Examples
 

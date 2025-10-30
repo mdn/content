@@ -154,7 +154,7 @@ Rubber Duckie, I'm awfully fond of you
 
 ### CSS
 
-For the purpose of demonstration, the size of the `<pre>` element box has been defined to ensure that the content overflows its container in both the inline and block directions. A different `<overflow>` value is set for each of the repeating `<pre>` elements. For the `clip` value demonstration, a {{CSSXref("overflow-clip-margin")}} has been added.
+For the purpose of demonstration, the size of the `<pre>` element box has been defined to ensure that the content overflows its container in both the inline and block directions. A different `<overflow>` value is set for each of the repeating `<pre>` elements. For the `clip` value demonstration, an {{CSSXref("overflow-clip-margin")}} has been added.
 
 ```css hidden
 pre {

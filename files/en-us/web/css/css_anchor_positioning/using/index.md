@@ -439,7 +439,7 @@ selectElem.addEventListener("change", () => {
 
 Try selecting new `position-area` values from the `<select>` menu to see the effect they have on the position of the infobox:
 
-{{ EmbedLiveSample("Setting an `position-area`", "100%", "250") }}
+{{ EmbedLiveSample("Setting a `position-area`", "100%", "250") }}
 
 ### Positioned element width
 

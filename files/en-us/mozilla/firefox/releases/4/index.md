@@ -404,7 +404,7 @@ Remote XUL is no longer supported; this affects XUL documents being served throu
 - The `<xul:window>` element now has a `chromemargin` attribute that lets you set the margin between chrome and content on each side of a window; you can use this to draw into the title bar, for example.
 - The `<xul:window>` element now has a `disablechrome` attribute; this is used to hide most of the chrome in a window when it's being used to display in-browser UI, such as `about:addons`.
 - The `<xul:window>` element now has a `disablefastfind` attribute, which lets you disable the find bar in a window when the content doesn't support it. This is used, for example, by the add-ons panel.
-- Toolbars can now be external to toolboxes, while still being considered a member of the `<xul:toolbox>`, by setting the `toolboxid` property of the `<xul:toolbar>`. Also, the `<xul:toolbox>` element now has a `externalToolbars` property, which lists all the toolbars that are considered members of the toolbox.
+- Toolbars can now be external to toolboxes, while still being considered a member of the `<xul:toolbox>`, by setting the `toolboxid` property of the `<xul:toolbar>`. Also, the `<xul:toolbox>` element now has an `externalToolbars` property, which lists all the toolbars that are considered members of the toolbox.
 - Support has been added for logging XUL templates for debugging purposes.
 
 ### UI changes affecting developers

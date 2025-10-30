@@ -81,7 +81,7 @@ new WebTransport(url, options)
 
 This example shows how you might construct a `WebTransport` using just a URL, wait for it to connect, and then monitor the transport and report when it has closed.
 
-First we define an `async` method that takes an URL and uses it to construct the `WebTransport` object.
+First we define an `async` method that takes a URL and uses it to construct the `WebTransport` object.
 No constructor options are specified, so the connection uses default options: dedicated connection, support for unreliable transports is not required, default congestion control, and normal Web PKI authentication with the server.
 Note that the scheme needs to be HTTPS, and the port number needs to be explicitly specified.
 
