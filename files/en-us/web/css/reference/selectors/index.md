@@ -8,7 +8,8 @@ sidebar: cssref
 ---
 
 **CSS selectors** are patterns used in [CSS rules](/en-US/docs/Web/CSS/CSS_syntax/Syntax#css_rulesets) to target and select specific HTML elements for styling.
-For example, to style paragraphs, you will use the `p` type selector to select all paragraph elements and apply a style to them:
+
+For example, to style paragraphs, you will use the `p` [type selector](/en-US/docs/Web/CSS/Type_selectors) to select all {{HTMLElement("p")}} elements and apply a style to them:
 
 ```css
 /* Set font size on all <p> elements */
