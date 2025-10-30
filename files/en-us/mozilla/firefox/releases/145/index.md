@@ -112,3 +112,8 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
   Nightly builds now support [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) by default, which allows you to tether elements together.
   The anchor-positioned elements can then have their size and position set relative to the size and location of the anchor elements to which they are bound.
   (General: [Firefox bug 1988224](https://bugzil.la/1988224), `position-area`: [Firefox bug 1924086](https://bugzil.la/1924086)).
+
+- **text-decoration-trim**: `layout.css.text-decoration-trim.enabled`
+
+  The CSS `text-decoration-trim` property is supported but currently disabled by default.
+  It allows you to specify {{cssxref("text-decoration")}} start and end offsets to shorten, lengthen, or shift the position of text decorations with respect to the text ([Firefox bug 1979915](https://bugzil.la/1979915)).
