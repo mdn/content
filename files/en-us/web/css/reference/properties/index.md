@@ -2,7 +2,7 @@
 title: CSS properties
 short-title: Properties
 slug: Web/CSS/Reference/Properties
-page-type: landing-page
+page-type: listing-page
 spec-urls:
   - https://drafts.csswg.org/css-syntax/
   - https://drafts.csswg.org/css-2024/
