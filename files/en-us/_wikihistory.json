@@ -71583,622 +71583,6 @@
       "ebidel"
     ]
   },
-  "Web/CSS/::-moz-color-swatch": {
-    "modified": "2020-10-15T22:01:52.313Z",
-    "contributors": [
-      "wbamberg",
-      "estelle",
-      "MNizam0802",
-      "fscholz",
-      "teoli",
-      "mfluehr",
-      "ntoniazzi"
-    ]
-  },
-  "Web/CSS/::-moz-focus-inner": {
-    "modified": "2020-10-15T22:25:40.021Z",
-    "contributors": ["Sheppy", "wbamberg", "estelle"]
-  },
-  "Web/CSS/::-moz-list-bullet": {
-    "modified": "2020-07-29T00:11:45.506Z",
-    "contributors": [
-      "wbamberg",
-      "mfluehr",
-      "duncanmcdonald",
-      "Sebastianz",
-      "teoli",
-      "Sheppy",
-      "j.j.",
-      "Marsf",
-      "Zibibbo84"
-    ]
-  },
-  "Web/CSS/::-moz-list-number": {
-    "modified": "2020-07-29T00:11:54.995Z",
-    "contributors": [
-      "wbamberg",
-      "mfluehr",
-      "Sebastianz",
-      "teoli",
-      "velvel53",
-      "Sheppy"
-    ]
-  },
-  "Web/CSS/::-moz-progress-bar": {
-    "modified": "2020-07-29T00:12:03.398Z",
-    "contributors": [
-      "wbamberg",
-      "YexuanXiao",
-      "estelle",
-      "MNizam0802",
-      "mfluehr",
-      "Sebastianz",
-      "Sohail05",
-      "cvrebert",
-      "teoli",
-      "kscarfone",
-      "Sheppy",
-      "Ecmanaut"
-    ]
-  },
-  "Web/CSS/::-moz-range-progress": {
-    "modified": "2020-10-15T21:41:10.279Z",
-    "contributors": [
-      "wbamberg",
-      "fscholz",
-      "teoli",
-      "mfluehr",
-      "Sebastianz",
-      "cvrebert"
-    ]
-  },
-  "Web/CSS/::-moz-range-thumb": {
-    "modified": "2020-10-15T21:41:11.562Z",
-    "contributors": [
-      "wbamberg",
-      "fscholz",
-      "teoli",
-      "mfluehr",
-      "Sebastianz",
-      "cvrebert"
-    ]
-  },
-  "Web/CSS/::-moz-range-track": {
-    "modified": "2020-10-15T21:41:12.042Z",
-    "contributors": [
-      "wbamberg",
-      "fscholz",
-      "teoli",
-      "mfluehr",
-      "Sebastianz",
-      "cvrebert"
-    ]
-  },
-  "Web/CSS/::-webkit-inner-spin-button": {
-    "modified": "2020-10-15T21:42:34.532Z",
-    "contributors": [
-      "Sheppy",
-      "wbamberg",
-      "Sebastianz",
-      "fscholz",
-      "teoli",
-      "manoj1991",
-      "mfluehr",
-      "SphinxKnight",
-      "cvrebert",
-      "vidhi1902"
-    ]
-  },
-  "Web/CSS/::-webkit-meter-bar": {
-    "modified": "2020-10-15T21:45:00.630Z",
-    "contributors": [
-      "Sheppy",
-      "wbamberg",
-      "teoli",
-      "fscholz",
-      "mfluehr",
-      "pekechis",
-      "chrisdavidmills",
-      "yusufgulled"
-    ]
-  },
-  "Web/CSS/::-webkit-meter-even-less-good-value": {
-    "modified": "2020-10-15T21:45:01.529Z",
-    "contributors": [
-      "Sheppy",
-      "wbamberg",
-      "teoli",
-      "fscholz",
-      "mfluehr",
-      "chrisdavidmills",
-      "yusufgulled"
-    ]
-  },
-  "Web/CSS/::-webkit-meter-inner-element": {
-    "modified": "2020-10-15T21:45:00.625Z",
-    "contributors": [
-      "Sheppy",
-      "wbamberg",
-      "teoli",
-      "fscholz",
-      "mfluehr",
-      "chrisdavidmills",
-      "yusufgulled"
-    ]
-  },
-  "Web/CSS/::-webkit-meter-optimum-value": {
-    "modified": "2020-10-15T21:45:06.312Z",
-    "contributors": [
-      "Sheppy",
-      "wbamberg",
-      "teoli",
-      "fscholz",
-      "mfluehr",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/CSS/::-webkit-meter-suboptimum-value": {
-    "modified": "2020-10-15T21:45:01.452Z",
-    "contributors": [
-      "Sheppy",
-      "wbamberg",
-      "teoli",
-      "fscholz",
-      "mfluehr",
-      "chrisdavidmills",
-      "yusufgulled"
-    ]
-  },
-  "Web/CSS/::-webkit-progress-bar": {
-    "modified": "2020-10-15T21:41:33.061Z",
-    "contributors": [
-      "Sheppy",
-      "wbamberg",
-      "STerziev",
-      "teoli",
-      "ExE-Boss",
-      "mfluehr",
-      "Sebastianz",
-      "pkpatel88",
-      "cvrebert"
-    ]
-  },
-  "Web/CSS/::-webkit-progress-inner-element": {
-    "modified": "2020-10-15T21:41:31.546Z",
-    "contributors": [
-      "Sheppy",
-      "wbamberg",
-      "teoli",
-      "ExE-Boss",
-      "mfluehr",
-      "Sebastianz",
-      "cvrebert"
-    ]
-  },
-  "Web/CSS/::-webkit-progress-value": {
-    "modified": "2020-10-15T21:41:31.355Z",
-    "contributors": [
-      "Sheppy",
-      "wbamberg",
-      "teoli",
-      "ExE-Boss",
-      "mfluehr",
-      "Sebastianz",
-      "pkpatel88",
-      "cvrebert"
-    ]
-  },
-  "Web/CSS/::-webkit-scrollbar": {
-    "modified": "2020-12-11T11:59:02.561Z",
-    "contributors": [
-      "mfluehr",
-      "zink.krysty",
-      "rachelandrew",
-      "Richard_Nabaasa",
-      "wbamberg",
-      "SUM1",
-      "Malvoz",
-      "ExE-Boss",
-      "breadadams",
-      "chrisdavidmills",
-      "SphinxKnight",
-      "mohammadayoub96",
-      "trevdor",
-      "Artoria2e5",
-      "ssuperczynski",
-      "Lemondoge"
-    ]
-  },
-  "Web/CSS/::-webkit-search-cancel-button": {
-    "modified": "2020-10-15T21:42:48.680Z",
-    "contributors": [
-      "wbamberg",
-      "teoli",
-      "fscholz",
-      "mfluehr",
-      "rolfedh",
-      "cvrebert"
-    ]
-  },
-  "Web/CSS/::-webkit-search-results-button": {
-    "modified": "2020-10-15T21:42:36.844Z",
-    "contributors": ["wbamberg", "fscholz", "mfluehr", "rolfedh", "cvrebert"]
-  },
-  "Web/CSS/::-webkit-slider-runnable-track": {
-    "modified": "2020-10-15T21:41:12.869Z",
-    "contributors": [
-      "mfuji09",
-      "Sheppy",
-      "wbamberg",
-      "ExE-Boss",
-      "teoli",
-      "mfluehr",
-      "cvrebert"
-    ]
-  },
-  "Web/CSS/::-webkit-slider-thumb": {
-    "modified": "2020-10-15T21:41:11.535Z",
-    "contributors": [
-      "Sheppy",
-      "wbamberg",
-      "mfuji09",
-      "joshsoll",
-      "ExE-Boss",
-      "teoli",
-      "mfluehr",
-      "cvrebert"
-    ]
-  },
-  "Web/CSS/::after": {
-    "modified": "2020-10-15T21:03:51.402Z",
-    "contributors": [
-      "wbamberg",
-      "sideshowbarker",
-      "djmitchella",
-      "marktnoonan",
-      "verdy_p",
-      "ExE-Boss",
-      "SphinxKnight",
-      "dijam",
-      "mfluehr",
-      "roy-vanegas",
-      "fscholz",
-      "tjcrowder",
-      "chrisdavidmills",
-      "erikadoyle",
-      "Sebastianz",
-      "teoli",
-      "jsx",
-      "AbdullahAlger",
-      "neuroleptic",
-      "wakka27",
-      "saylormic",
-      "J-Mackerel",
-      "GKFX",
-      "kscarfone",
-      "SJW",
-      "rashidtherash",
-      "Tripad",
-      "Deraillor",
-      "brunodeleo",
-      "arasbm",
-      "Sheppy",
-      "fusionchess",
-      "FredB",
-      "parthiv",
-      "ethertank",
-      "shaunm",
-      "tregagnon",
-      "brianloveswords",
-      "Spirit55555",
-      "Jürgen Jeka",
-      "Verruckt",
-      "j.j.",
-      "miken32",
-      "Nathymig",
-      "Ptak82",
-      "Mgjbot",
-      "DBaron",
-      "Jethro"
-    ]
-  },
-  "Web/CSS/::backdrop": {
-    "modified": "2020-12-04T14:36:31.674Z",
-    "contributors": [
-      "rachelandrew",
-      "wbamberg",
-      "estelle",
-      "MNizam0802",
-      "Sheppy",
-      "ExE-Boss",
-      "beingmrkenny",
-      "fscholz",
-      "mfluehr",
-      "erikadoyle",
-      "teoli",
-      "yisibl",
-      "cvrebert",
-      "Sebastianz",
-      "Delapouite",
-      "kscarfone",
-      "dhodder",
-      "rctgamer3"
-    ]
-  },
-  "Web/CSS/::before": {
-    "modified": "2020-11-17T07:17:51.346Z",
-    "contributors": [
-      "liesahead",
-      "mfuji09",
-      "wbamberg",
-      "sideshowbarker",
-      "chrisdavidmills",
-      "brennanyoung",
-      "estelle",
-      "Sheppy",
-      "Tsilva",
-      "SphinxKnight",
-      "dijam",
-      "rifai",
-      "dima74",
-      "zhuangyin",
-      "fscholz",
-      "mfluehr",
-      "tjcrowder",
-      "JimSaiya",
-      "lerouche",
-      "erikadoyle",
-      "Sebastianz",
-      "Delapouite",
-      "MusikAnimal",
-      "jsx",
-      "TimothyGu",
-      "rhyne24",
-      "dbruant",
-      "TWebs",
-      "wakka27",
-      "J-Mackerel",
-      "tim_kraut",
-      "shybloo",
-      "Haraldson",
-      "kscarfone",
-      "rushcreekdev",
-      "Thibaut",
-      "codepo8",
-      "teoli",
-      "arasbm",
-      "FredB",
-      "parthiv",
-      "HMax13",
-      "ethertank",
-      "tregagnon",
-      "brianloveswords",
-      "Jürgen Jeka",
-      "Brettz9",
-      "j.j.",
-      "miken32",
-      "Nathymig",
-      "Ptak82",
-      "Kohei",
-      "Mgjbot",
-      "DBaron",
-      "Jethro"
-    ]
-  },
-  "Web/CSS/::cue": {
-    "modified": "2020-10-15T21:54:40.039Z",
-    "contributors": [
-      "wbamberg",
-      "mfuji09",
-      "Malvoz",
-      "Sheppy",
-      "ExE-Boss",
-      "mfluehr",
-      "fscholz"
-    ]
-  },
-  "Web/CSS/::file-selector-button": {
-    "modified": "2020-10-28T10:50:12.079Z",
-    "contributors": [
-      "emilio_",
-      "chrisdavidmills",
-      "rachelandrew",
-      "Sheppy",
-      "wbamberg",
-      "fscholz",
-      "teoli",
-      "mfluehr",
-      "Sebastianz",
-      "pgustafs"
-    ]
-  },
-  "Web/CSS/::first-letter": {
-    "modified": "2020-11-29T08:08:54.466Z",
-    "contributors": [
-      "mfuji09",
-      "chrisdavidmills",
-      "wbamberg",
-      "sideshowbarker",
-      "jsartelle",
-      "fscholz",
-      "mfluehr",
-      "erikadoyle",
-      "Sebastianz",
-      "yisibl",
-      "HTMLValidator",
-      "floEdelmann",
-      "LouisLazaris",
-      "bradleyflood",
-      "MusikAnimal",
-      "teoli",
-      "NosCandidats",
-      "kscarfone",
-      "awendland",
-      "Matt_Coughlin",
-      "Sheppy",
-      "syoichi",
-      "FredB",
-      "brianloveswords",
-      "Jürgen Jeka",
-      "BijuGC"
-    ]
-  },
-  "Web/CSS/::first-line": {
-    "modified": "2020-12-01T12:12:40.739Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg",
-      "sideshowbarker",
-      "mfluehr",
-      "fscholz",
-      "erikadoyle",
-      "Sebastianz",
-      "Tigt",
-      "jswisher",
-      "wyrewolwerowany",
-      "floEdelmann",
-      "MusikAnimal",
-      "TimothyGu",
-      "Sheppy",
-      "teoli",
-      "geoyws",
-      "anotheruiguy",
-      "kscarfone",
-      "Azaryah",
-      "FredB",
-      "eliranmal",
-      "brianloveswords",
-      "Jürgen Jeka",
-      "BijuGC"
-    ]
-  },
-  "Web/CSS/::grammar-error": {
-    "modified": "2020-10-15T21:41:38.618Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "gerfolder",
-      "rachelandrew",
-      "MNizam0802",
-      "fscholz",
-      "mfluehr",
-      "rolfedh",
-      "cvrebert"
-    ]
-  },
-  "Web/CSS/::marker": {
-    "modified": "2020-10-15T21:41:34.557Z",
-    "contributors": [
-      "jswisher",
-      "wbamberg",
-      "prayagbs",
-      "rachelandrew",
-      "ExE-Boss",
-      "fscholz",
-      "Tigt",
-      "mfluehr",
-      "cPhost",
-      "TylerH",
-      "cvrebert"
-    ]
-  },
-  "Web/CSS/::part": {
-    "modified": "2020-10-15T22:19:11.620Z",
-    "contributors": [
-      "sophantlew",
-      "mfuji09",
-      "Caterpy",
-      "wbamberg",
-      "rachelandrew",
-      "chrisdavidmills",
-      "breckwagner",
-      "ExE-Boss"
-    ]
-  },
-  "Web/CSS/::placeholder": {
-    "modified": "2020-12-01T11:31:05.609Z",
-    "contributors": [
-      "mfluehr",
-      "wbamberg",
-      "ExE-Boss",
-      "verdy_p",
-      "Sheppy",
-      "estelle",
-      "MNizam0802",
-      "SphinxKnight",
-      "alfie",
-      "mfuji09",
-      "chrisdavidmills",
-      "ericwbailey",
-      "fscholz",
-      "alberts+",
-      "jpmedley",
-      "cPhost",
-      "Duckbug",
-      "Sebastianz",
-      "rolfedh",
-      "cvrebert"
-    ]
-  },
-  "Web/CSS/::selection": {
-    "modified": "2020-10-15T21:04:19.134Z",
-    "contributors": [
-      "wbamberg",
-      "hinell",
-      "ramiy",
-      "mfuji09",
-      "Tigt",
-      "ExE-Boss",
-      "ericwbailey",
-      "SphinxKnight",
-      "chrisdavidmills",
-      "fscholz",
-      "mfluehr",
-      "erikadoyle",
-      "cvrebert",
-      "Sebastianz",
-      "floEdelmann",
-      "gravgun",
-      "amitabha197",
-      "LouisLazaris",
-      "kscarfone",
-      "Sheppy",
-      "plapier",
-      "FredB",
-      "teoli",
-      "jswisher",
-      "paul.irish",
-      "ebidel",
-      "rubena",
-      "Jürgen Jeka",
-      "juergen jeka",
-      "j.j.",
-      "BijuGC"
-    ]
-  },
-  "Web/CSS/::slotted": {
-    "modified": "2020-10-15T22:01:27.187Z",
-    "contributors": [
-      "wbamberg",
-      "wise",
-      "Halochkin",
-      "pallxk",
-      "jpmedley",
-      "fscholz",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/CSS/::spelling-error": {
-    "modified": "2020-10-15T21:41:35.693Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "fscholz",
-      "mfluehr",
-      "rolfedh",
-      "cvrebert"
-    ]
-  },
   "Web/CSS/@charset": {
     "modified": "2020-10-15T21:07:49.472Z",
     "contributors": [
@@ -86504,6 +85888,622 @@
       "Croydon",
       "velvel53",
       "MarkusStange"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/::-moz-color-swatch": {
+    "modified": "2020-10-15T22:01:52.313Z",
+    "contributors": [
+      "wbamberg",
+      "estelle",
+      "MNizam0802",
+      "fscholz",
+      "teoli",
+      "mfluehr",
+      "ntoniazzi"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/::-moz-focus-inner": {
+    "modified": "2020-10-15T22:25:40.021Z",
+    "contributors": ["Sheppy", "wbamberg", "estelle"]
+  },
+  "Web/CSS/Reference/Selectors/::-moz-list-bullet": {
+    "modified": "2020-07-29T00:11:45.506Z",
+    "contributors": [
+      "wbamberg",
+      "mfluehr",
+      "duncanmcdonald",
+      "Sebastianz",
+      "teoli",
+      "Sheppy",
+      "j.j.",
+      "Marsf",
+      "Zibibbo84"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/::-moz-list-number": {
+    "modified": "2020-07-29T00:11:54.995Z",
+    "contributors": [
+      "wbamberg",
+      "mfluehr",
+      "Sebastianz",
+      "teoli",
+      "velvel53",
+      "Sheppy"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/::-moz-progress-bar": {
+    "modified": "2020-07-29T00:12:03.398Z",
+    "contributors": [
+      "wbamberg",
+      "YexuanXiao",
+      "estelle",
+      "MNizam0802",
+      "mfluehr",
+      "Sebastianz",
+      "Sohail05",
+      "cvrebert",
+      "teoli",
+      "kscarfone",
+      "Sheppy",
+      "Ecmanaut"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/::-moz-range-progress": {
+    "modified": "2020-10-15T21:41:10.279Z",
+    "contributors": [
+      "wbamberg",
+      "fscholz",
+      "teoli",
+      "mfluehr",
+      "Sebastianz",
+      "cvrebert"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/::-moz-range-thumb": {
+    "modified": "2020-10-15T21:41:11.562Z",
+    "contributors": [
+      "wbamberg",
+      "fscholz",
+      "teoli",
+      "mfluehr",
+      "Sebastianz",
+      "cvrebert"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/::-moz-range-track": {
+    "modified": "2020-10-15T21:41:12.042Z",
+    "contributors": [
+      "wbamberg",
+      "fscholz",
+      "teoli",
+      "mfluehr",
+      "Sebastianz",
+      "cvrebert"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/::-webkit-inner-spin-button": {
+    "modified": "2020-10-15T21:42:34.532Z",
+    "contributors": [
+      "Sheppy",
+      "wbamberg",
+      "Sebastianz",
+      "fscholz",
+      "teoli",
+      "manoj1991",
+      "mfluehr",
+      "SphinxKnight",
+      "cvrebert",
+      "vidhi1902"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/::-webkit-meter-bar": {
+    "modified": "2020-10-15T21:45:00.630Z",
+    "contributors": [
+      "Sheppy",
+      "wbamberg",
+      "teoli",
+      "fscholz",
+      "mfluehr",
+      "pekechis",
+      "chrisdavidmills",
+      "yusufgulled"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/::-webkit-meter-even-less-good-value": {
+    "modified": "2020-10-15T21:45:01.529Z",
+    "contributors": [
+      "Sheppy",
+      "wbamberg",
+      "teoli",
+      "fscholz",
+      "mfluehr",
+      "chrisdavidmills",
+      "yusufgulled"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/::-webkit-meter-inner-element": {
+    "modified": "2020-10-15T21:45:00.625Z",
+    "contributors": [
+      "Sheppy",
+      "wbamberg",
+      "teoli",
+      "fscholz",
+      "mfluehr",
+      "chrisdavidmills",
+      "yusufgulled"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/::-webkit-meter-optimum-value": {
+    "modified": "2020-10-15T21:45:06.312Z",
+    "contributors": [
+      "Sheppy",
+      "wbamberg",
+      "teoli",
+      "fscholz",
+      "mfluehr",
+      "chrisdavidmills"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/::-webkit-meter-suboptimum-value": {
+    "modified": "2020-10-15T21:45:01.452Z",
+    "contributors": [
+      "Sheppy",
+      "wbamberg",
+      "teoli",
+      "fscholz",
+      "mfluehr",
+      "chrisdavidmills",
+      "yusufgulled"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/::-webkit-progress-bar": {
+    "modified": "2020-10-15T21:41:33.061Z",
+    "contributors": [
+      "Sheppy",
+      "wbamberg",
+      "STerziev",
+      "teoli",
+      "ExE-Boss",
+      "mfluehr",
+      "Sebastianz",
+      "pkpatel88",
+      "cvrebert"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/::-webkit-progress-inner-element": {
+    "modified": "2020-10-15T21:41:31.546Z",
+    "contributors": [
+      "Sheppy",
+      "wbamberg",
+      "teoli",
+      "ExE-Boss",
+      "mfluehr",
+      "Sebastianz",
+      "cvrebert"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/::-webkit-progress-value": {
+    "modified": "2020-10-15T21:41:31.355Z",
+    "contributors": [
+      "Sheppy",
+      "wbamberg",
+      "teoli",
+      "ExE-Boss",
+      "mfluehr",
+      "Sebastianz",
+      "pkpatel88",
+      "cvrebert"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/::-webkit-scrollbar": {
+    "modified": "2020-12-11T11:59:02.561Z",
+    "contributors": [
+      "mfluehr",
+      "zink.krysty",
+      "rachelandrew",
+      "Richard_Nabaasa",
+      "wbamberg",
+      "SUM1",
+      "Malvoz",
+      "ExE-Boss",
+      "breadadams",
+      "chrisdavidmills",
+      "SphinxKnight",
+      "mohammadayoub96",
+      "trevdor",
+      "Artoria2e5",
+      "ssuperczynski",
+      "Lemondoge"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/::-webkit-search-cancel-button": {
+    "modified": "2020-10-15T21:42:48.680Z",
+    "contributors": [
+      "wbamberg",
+      "teoli",
+      "fscholz",
+      "mfluehr",
+      "rolfedh",
+      "cvrebert"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/::-webkit-search-results-button": {
+    "modified": "2020-10-15T21:42:36.844Z",
+    "contributors": ["wbamberg", "fscholz", "mfluehr", "rolfedh", "cvrebert"]
+  },
+  "Web/CSS/Reference/Selectors/::-webkit-slider-runnable-track": {
+    "modified": "2020-10-15T21:41:12.869Z",
+    "contributors": [
+      "mfuji09",
+      "Sheppy",
+      "wbamberg",
+      "ExE-Boss",
+      "teoli",
+      "mfluehr",
+      "cvrebert"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/::-webkit-slider-thumb": {
+    "modified": "2020-10-15T21:41:11.535Z",
+    "contributors": [
+      "Sheppy",
+      "wbamberg",
+      "mfuji09",
+      "joshsoll",
+      "ExE-Boss",
+      "teoli",
+      "mfluehr",
+      "cvrebert"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/::after": {
+    "modified": "2020-10-15T21:03:51.402Z",
+    "contributors": [
+      "wbamberg",
+      "sideshowbarker",
+      "djmitchella",
+      "marktnoonan",
+      "verdy_p",
+      "ExE-Boss",
+      "SphinxKnight",
+      "dijam",
+      "mfluehr",
+      "roy-vanegas",
+      "fscholz",
+      "tjcrowder",
+      "chrisdavidmills",
+      "erikadoyle",
+      "Sebastianz",
+      "teoli",
+      "jsx",
+      "AbdullahAlger",
+      "neuroleptic",
+      "wakka27",
+      "saylormic",
+      "J-Mackerel",
+      "GKFX",
+      "kscarfone",
+      "SJW",
+      "rashidtherash",
+      "Tripad",
+      "Deraillor",
+      "brunodeleo",
+      "arasbm",
+      "Sheppy",
+      "fusionchess",
+      "FredB",
+      "parthiv",
+      "ethertank",
+      "shaunm",
+      "tregagnon",
+      "brianloveswords",
+      "Spirit55555",
+      "Jürgen Jeka",
+      "Verruckt",
+      "j.j.",
+      "miken32",
+      "Nathymig",
+      "Ptak82",
+      "Mgjbot",
+      "DBaron",
+      "Jethro"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/::backdrop": {
+    "modified": "2020-12-04T14:36:31.674Z",
+    "contributors": [
+      "rachelandrew",
+      "wbamberg",
+      "estelle",
+      "MNizam0802",
+      "Sheppy",
+      "ExE-Boss",
+      "beingmrkenny",
+      "fscholz",
+      "mfluehr",
+      "erikadoyle",
+      "teoli",
+      "yisibl",
+      "cvrebert",
+      "Sebastianz",
+      "Delapouite",
+      "kscarfone",
+      "dhodder",
+      "rctgamer3"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/::before": {
+    "modified": "2020-11-17T07:17:51.346Z",
+    "contributors": [
+      "liesahead",
+      "mfuji09",
+      "wbamberg",
+      "sideshowbarker",
+      "chrisdavidmills",
+      "brennanyoung",
+      "estelle",
+      "Sheppy",
+      "Tsilva",
+      "SphinxKnight",
+      "dijam",
+      "rifai",
+      "dima74",
+      "zhuangyin",
+      "fscholz",
+      "mfluehr",
+      "tjcrowder",
+      "JimSaiya",
+      "lerouche",
+      "erikadoyle",
+      "Sebastianz",
+      "Delapouite",
+      "MusikAnimal",
+      "jsx",
+      "TimothyGu",
+      "rhyne24",
+      "dbruant",
+      "TWebs",
+      "wakka27",
+      "J-Mackerel",
+      "tim_kraut",
+      "shybloo",
+      "Haraldson",
+      "kscarfone",
+      "rushcreekdev",
+      "Thibaut",
+      "codepo8",
+      "teoli",
+      "arasbm",
+      "FredB",
+      "parthiv",
+      "HMax13",
+      "ethertank",
+      "tregagnon",
+      "brianloveswords",
+      "Jürgen Jeka",
+      "Brettz9",
+      "j.j.",
+      "miken32",
+      "Nathymig",
+      "Ptak82",
+      "Kohei",
+      "Mgjbot",
+      "DBaron",
+      "Jethro"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/::cue": {
+    "modified": "2020-10-15T21:54:40.039Z",
+    "contributors": [
+      "wbamberg",
+      "mfuji09",
+      "Malvoz",
+      "Sheppy",
+      "ExE-Boss",
+      "mfluehr",
+      "fscholz"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/::file-selector-button": {
+    "modified": "2020-10-28T10:50:12.079Z",
+    "contributors": [
+      "emilio_",
+      "chrisdavidmills",
+      "rachelandrew",
+      "Sheppy",
+      "wbamberg",
+      "fscholz",
+      "teoli",
+      "mfluehr",
+      "Sebastianz",
+      "pgustafs"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/::first-letter": {
+    "modified": "2020-11-29T08:08:54.466Z",
+    "contributors": [
+      "mfuji09",
+      "chrisdavidmills",
+      "wbamberg",
+      "sideshowbarker",
+      "jsartelle",
+      "fscholz",
+      "mfluehr",
+      "erikadoyle",
+      "Sebastianz",
+      "yisibl",
+      "HTMLValidator",
+      "floEdelmann",
+      "LouisLazaris",
+      "bradleyflood",
+      "MusikAnimal",
+      "teoli",
+      "NosCandidats",
+      "kscarfone",
+      "awendland",
+      "Matt_Coughlin",
+      "Sheppy",
+      "syoichi",
+      "FredB",
+      "brianloveswords",
+      "Jürgen Jeka",
+      "BijuGC"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/::first-line": {
+    "modified": "2020-12-01T12:12:40.739Z",
+    "contributors": [
+      "mfuji09",
+      "wbamberg",
+      "sideshowbarker",
+      "mfluehr",
+      "fscholz",
+      "erikadoyle",
+      "Sebastianz",
+      "Tigt",
+      "jswisher",
+      "wyrewolwerowany",
+      "floEdelmann",
+      "MusikAnimal",
+      "TimothyGu",
+      "Sheppy",
+      "teoli",
+      "geoyws",
+      "anotheruiguy",
+      "kscarfone",
+      "Azaryah",
+      "FredB",
+      "eliranmal",
+      "brianloveswords",
+      "Jürgen Jeka",
+      "BijuGC"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/::grammar-error": {
+    "modified": "2020-10-15T21:41:38.618Z",
+    "contributors": [
+      "chrisdavidmills",
+      "wbamberg",
+      "gerfolder",
+      "rachelandrew",
+      "MNizam0802",
+      "fscholz",
+      "mfluehr",
+      "rolfedh",
+      "cvrebert"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/::marker": {
+    "modified": "2020-10-15T21:41:34.557Z",
+    "contributors": [
+      "jswisher",
+      "wbamberg",
+      "prayagbs",
+      "rachelandrew",
+      "ExE-Boss",
+      "fscholz",
+      "Tigt",
+      "mfluehr",
+      "cPhost",
+      "TylerH",
+      "cvrebert"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/::part": {
+    "modified": "2020-10-15T22:19:11.620Z",
+    "contributors": [
+      "sophantlew",
+      "mfuji09",
+      "Caterpy",
+      "wbamberg",
+      "rachelandrew",
+      "chrisdavidmills",
+      "breckwagner",
+      "ExE-Boss"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/::placeholder": {
+    "modified": "2020-12-01T11:31:05.609Z",
+    "contributors": [
+      "mfluehr",
+      "wbamberg",
+      "ExE-Boss",
+      "verdy_p",
+      "Sheppy",
+      "estelle",
+      "MNizam0802",
+      "SphinxKnight",
+      "alfie",
+      "mfuji09",
+      "chrisdavidmills",
+      "ericwbailey",
+      "fscholz",
+      "alberts+",
+      "jpmedley",
+      "cPhost",
+      "Duckbug",
+      "Sebastianz",
+      "rolfedh",
+      "cvrebert"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/::selection": {
+    "modified": "2020-10-15T21:04:19.134Z",
+    "contributors": [
+      "wbamberg",
+      "hinell",
+      "ramiy",
+      "mfuji09",
+      "Tigt",
+      "ExE-Boss",
+      "ericwbailey",
+      "SphinxKnight",
+      "chrisdavidmills",
+      "fscholz",
+      "mfluehr",
+      "erikadoyle",
+      "cvrebert",
+      "Sebastianz",
+      "floEdelmann",
+      "gravgun",
+      "amitabha197",
+      "LouisLazaris",
+      "kscarfone",
+      "Sheppy",
+      "plapier",
+      "FredB",
+      "teoli",
+      "jswisher",
+      "paul.irish",
+      "ebidel",
+      "rubena",
+      "Jürgen Jeka",
+      "juergen jeka",
+      "j.j.",
+      "BijuGC"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/::slotted": {
+    "modified": "2020-10-15T22:01:27.187Z",
+    "contributors": [
+      "wbamberg",
+      "wise",
+      "Halochkin",
+      "pallxk",
+      "jpmedley",
+      "fscholz",
+      "chrisdavidmills"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/::spelling-error": {
+    "modified": "2020-10-15T21:41:35.693Z",
+    "contributors": [
+      "chrisdavidmills",
+      "wbamberg",
+      "fscholz",
+      "mfluehr",
+      "rolfedh",
+      "cvrebert"
     ]
   },
   "Web/CSS/Reference/Selectors/:active": {
