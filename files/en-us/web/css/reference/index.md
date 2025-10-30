@@ -76,22 +76,22 @@ The following are the various [selectors](/en-US/docs/Web/CSS/CSS_selectors), wh
 
 ### Grouping selectors
 
-- [Selector list](/en-US/docs/Web/CSS/Selector_list) `A, B`
+- [Selector list](/en-US/docs/Web/CSS/Reference/Selectors/Selector_list) `A, B`
   - : Specifies that both `A` and `B` elements are selected. This is a grouping method to select several matching elements.
 
 ### Combinators
 
 Combinators are selectors that establish a relationship between two or more simple selectors, such as "`A` is a child of `B`" or "`A` is adjacent to `B`", creating a complex selector.
 
-- [Next-sibling combinator](/en-US/docs/Web/CSS/Next-sibling_combinator) `A + B`
+- [Next-sibling combinator](/en-US/docs/Web/CSS/Reference/Selectors/Next-sibling_combinator) `A + B`
   - : Specifies that the elements selected by both `A` and `B` have the same parent and that the element selected by `B` immediately follows the element selected by `A` horizontally.
-- [Subsequent-sibling combinator](/en-US/docs/Web/CSS/Subsequent-sibling_combinator) `A ~ B`
+- [Subsequent-sibling combinator](/en-US/docs/Web/CSS/Reference/Selectors/Subsequent-sibling_combinator) `A ~ B`
   - : Specifies that the elements selected by both `A` and `B` share the same parent and that the element selected by `A` comes before—but not necessarily immediately before—the element selected by `B`.
-- [Child combinator](/en-US/docs/Web/CSS/Child_combinator) `A > B`
+- [Child combinator](/en-US/docs/Web/CSS/Reference/Selectors/Child_combinator) `A > B`
   - : Specifies that the element selected by `B` is the direct child of the element selected by `A`.
-- [Descendant combinator](/en-US/docs/Web/CSS/Descendant_combinator) `A B`
+- [Descendant combinator](/en-US/docs/Web/CSS/Reference/Selectors/Descendant_combinator) `A B`
   - : Specifies that the element selected by `B` is a descendant of the element selected by `A`, but is not necessarily a direct child.
-- [Column combinator](/en-US/docs/Web/CSS/Column_combinator) `A || B` {{Experimental_Inline}}
+- [Column combinator](/en-US/docs/Web/CSS/Reference/Selectors/Column_combinator) `A || B` {{Experimental_Inline}}
   - : Specifies that the element selected by `B` is located within the table column specified by `A`. Elements which span multiple columns are considered to be a member of all of those columns.
 
 ### Pseudo

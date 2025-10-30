@@ -195,5 +195,5 @@ However, selectors inside `:where()` have specificity 0, so the orange footer li
 ## See also
 
 - {{CSSxRef(":is", ":is()")}}
-- [Selector list](/en-US/docs/Web/CSS/Selector_list)
+- [Selector list](/en-US/docs/Web/CSS/Reference/Selectors/Selector_list)
 - [Web components](/en-US/docs/Web/API/Web_components)

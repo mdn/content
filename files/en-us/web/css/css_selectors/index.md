@@ -16,14 +16,14 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 
 ### Combinators and separators
 
-- `+` ([Next-sibling combinator](/en-US/docs/Web/CSS/Next-sibling_combinator))
-- `>` ([Child combinator](/en-US/docs/Web/CSS/Child_combinator))
-- `~` ([Subsequent sibling combinator](/en-US/docs/Web/CSS/Subsequent-sibling_combinator))
-- " " ([Descendant combinator](/en-US/docs/Web/CSS/Descendant_combinator))
-- `|` ([Namespace separator](/en-US/docs/Web/CSS/Namespace_separator))
-- `,` ([Selector list](/en-US/docs/Web/CSS/Selector_list))
+- `+` ([Next-sibling combinator](/en-US/docs/Web/CSS/Reference/Selectors/Next-sibling_combinator))
+- `>` ([Child combinator](/en-US/docs/Web/CSS/Reference/Selectors/Child_combinator))
+- `~` ([Subsequent sibling combinator](/en-US/docs/Web/CSS/Reference/Selectors/Subsequent-sibling_combinator))
+- " " ([Descendant combinator](/en-US/docs/Web/CSS/Reference/Selectors/Descendant_combinator))
+- `|` ([Namespace separator](/en-US/docs/Web/CSS/Reference/Selectors/Namespace_separator))
+- `,` ([Selector list](/en-US/docs/Web/CSS/Reference/Selectors/Selector_list))
 
-The CSS selectors module also introduces the [column combinator](/en-US/docs/Web/CSS/Column_combinator) (`||`). Currently, no browsers support this feature.
+The CSS selectors module also introduces the [column combinator](/en-US/docs/Web/CSS/Reference/Selectors/Column_combinator) (`||`). Currently, no browsers support this feature.
 
 ### Selectors
 

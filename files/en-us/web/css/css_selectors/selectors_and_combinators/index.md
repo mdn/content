@@ -62,27 +62,27 @@ Using CSS combinators, we can combine selectors to select DOM nodes based on the
 
 ### Descendant combinator
 
-The [descendant combinator](/en-US/docs/Web/CSS/Descendant_combinator), denoted with one or more spaces, selects nodes that are descendants of the first element. For example, `div span` will match all {{HTMLElement("span")}} elements that are inside a {{HTMLElement("div")}} element.
+The [descendant combinator](/en-US/docs/Web/CSS/Reference/Selectors/Descendant_combinator), denoted with one or more spaces, selects nodes that are descendants of the first element. For example, `div span` will match all {{HTMLElement("span")}} elements that are inside a {{HTMLElement("div")}} element.
 
 ### Child combinator
 
-The [child combinator](/en-US/docs/Web/CSS/Child_combinator) is more specific than the descendant combinator. Denoted with the greater than character (`>`), the child combinator selects nodes that are direct children of the first element. Comparing with our previous example, `div > span` will match only the {{HTMLElement("span")}} elements that are direct children of a {{HTMLElement("div")}} element.
+The [child combinator](/en-US/docs/Web/CSS/Reference/Selectors/Child_combinator) is more specific than the descendant combinator. Denoted with the greater than character (`>`), the child combinator selects nodes that are direct children of the first element. Comparing with our previous example, `div > span` will match only the {{HTMLElement("span")}} elements that are direct children of a {{HTMLElement("div")}} element.
 
 ### Subsequent-sibling combinator
 
-In addition to descendant selectors, CSS also enables selecting elements based on their siblings. The [subsequent-sibling combinator](/en-US/docs/Web/CSS/Subsequent-sibling_combinator), denoted with a tilde (`~`), selects siblings. Given `A ~ B`, all elements matching `B` will be selected if they are preceded by `A`, provided both `A` and `B` share the same parent. For example, `h2 ~ p` will match all {{HTMLElement("p")}} elements that follow an {{HTMLElement("Heading_Elements", "h2")}}, immediately or not.
+In addition to descendant selectors, CSS also enables selecting elements based on their siblings. The [subsequent-sibling combinator](/en-US/docs/Web/CSS/Reference/Selectors/Subsequent-sibling_combinator), denoted with a tilde (`~`), selects siblings. Given `A ~ B`, all elements matching `B` will be selected if they are preceded by `A`, provided both `A` and `B` share the same parent. For example, `h2 ~ p` will match all {{HTMLElement("p")}} elements that follow an {{HTMLElement("Heading_Elements", "h2")}}, immediately or not.
 
 ### Next-sibling combinator
 
-The [next-sibling combinator](/en-US/docs/Web/CSS/Next-sibling_combinator), denoted by the plus symbol (`+`), is similar to the subsequent-sibling. However, given `A + B`, it only matches `B` if `B` is immediately preceded by `A`, with both sharing the same parent. Amending our previous example, `h2 + p` will match only the single `<p>` element that _immediately_ follows an `<h2>` element.
+The [next-sibling combinator](/en-US/docs/Web/CSS/Reference/Selectors/Next-sibling_combinator), denoted by the plus symbol (`+`), is similar to the subsequent-sibling. However, given `A + B`, it only matches `B` if `B` is immediately preceded by `A`, with both sharing the same parent. Amending our previous example, `h2 + p` will match only the single `<p>` element that _immediately_ follows an `<h2>` element.
 
 ### Column combinator
 
-There is also a [column combinator](/en-US/docs/Web/CSS/Column_combinator), denoted by two pipe characters (`||`), which, when supported, selects nodes that belong to a column. For example, `col || td` will match all {{HTMLElement("td")}} elements that belong to the scope of the {{HTMLElement("col")}}.
+There is also a [column combinator](/en-US/docs/Web/CSS/Reference/Selectors/Column_combinator), denoted by two pipe characters (`||`), which, when supported, selects nodes that belong to a column. For example, `col || td` will match all {{HTMLElement("td")}} elements that belong to the scope of the {{HTMLElement("col")}}.
 
 ### Namespace separator
 
-The [namespace separator](/en-US/docs/Web/CSS/Namespace_separator) is another combinator that is generally used in conjunction with the {{CSSXref("@namespace")}} at-rule. This combinator is denoted by a single pipe character (`|`). It enables limiting [type selectors](/en-US/docs/Web/CSS/Reference/Selectors/Type_selectors) and the [universal selector](/en-US/docs/Web/CSS/Reference/Selectors/Universal_selectors) to a specific namespace. For example, by defining a namespace such as `@namespace SVG url('http://www.w3.org/2000/svg');`, you can include selectors that target elements nested in an SVG namespace only. Declaring `SVG|a` would match links within SVGs and not those in the rest of the document. Namespacing can be useful to target MathML, SVG, or other XML-based content within your HTML.
+The [namespace separator](/en-US/docs/Web/CSS/Reference/Selectors/Namespace_separator) is another combinator that is generally used in conjunction with the {{CSSXref("@namespace")}} at-rule. This combinator is denoted by a single pipe character (`|`). It enables limiting [type selectors](/en-US/docs/Web/CSS/Reference/Selectors/Type_selectors) and the [universal selector](/en-US/docs/Web/CSS/Reference/Selectors/Universal_selectors) to a specific namespace. For example, by defining a namespace such as `@namespace SVG url('http://www.w3.org/2000/svg');`, you can include selectors that target elements nested in an SVG namespace only. Declaring `SVG|a` would match links within SVGs and not those in the rest of the document. Namespacing can be useful to target MathML, SVG, or other XML-based content within your HTML.
 
 #### CSS
 
@@ -216,7 +216,7 @@ See the [pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes#
 
 ## See also
 
-- [Selector list](/en-US/docs/Web/CSS/Selector_list)
+- [Selector list](/en-US/docs/Web/CSS/Reference/Selectors/Selector_list)
 - [CSS selector structure](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure)
 - [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
 - [CSS nesting module](/en-US/docs/Web/CSS/CSS_nesting)

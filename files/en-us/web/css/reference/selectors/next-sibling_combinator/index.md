@@ -1,6 +1,6 @@
 ---
 title: Next-sibling combinator
-slug: Web/CSS/Next-sibling_combinator
+slug: Web/CSS/Reference/Selectors/Next-sibling_combinator
 page-type: css-combinator
 browser-compat: css.selectors.next-sibling
 sidebar: cssref
@@ -93,4 +93,4 @@ li:has(+ li:last-of-type) {
 
 ## See also
 
-- [Subsequent-sibling combinator](/en-US/docs/Web/CSS/Subsequent-sibling_combinator)
+- [Subsequent-sibling combinator](/en-US/docs/Web/CSS/Reference/Selectors/Subsequent-sibling_combinator)

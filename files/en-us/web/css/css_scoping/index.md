@@ -52,7 +52,7 @@ Sometimes it's useful to be able to style a host from inside the shadow tree con
 - {{Glossary("Shadow tree")}} glossary term
 - {{Glossary("DOM")}} glossary term
 - [Compound selector](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector) term
-- [Selector list](/en-US/docs/Web/CSS/Selector_list) term
+- [Selector list](/en-US/docs/Web/CSS/Reference/Selectors/Selector_list) term
 
 - [Web components](/en-US/docs/Web/API/Web_components) interfaces, properties, and methods
   - {{DOMxRef("CustomElementRegistry")}} interface

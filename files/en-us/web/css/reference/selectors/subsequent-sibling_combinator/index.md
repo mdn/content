@@ -1,6 +1,6 @@
 ---
 title: Subsequent-sibling combinator
-slug: Web/CSS/Subsequent-sibling_combinator
+slug: Web/CSS/Reference/Selectors/Subsequent-sibling_combinator
 page-type: css-combinator
 browser-compat: css.selectors.subsequent-sibling
 sidebar: cssref
@@ -106,4 +106,4 @@ In the above HTML, the two siblings of `.foo p` are `span` and `.foo`. The green
 
 ## See also
 
-- [Next-sibling combinator](/en-US/docs/Web/CSS/Next-sibling_combinator)
+- [Next-sibling combinator](/en-US/docs/Web/CSS/Reference/Selectors/Next-sibling_combinator)

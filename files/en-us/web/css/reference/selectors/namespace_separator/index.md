@@ -1,6 +1,6 @@
 ---
 title: Namespace separator
-slug: Web/CSS/Namespace_separator
+slug: Web/CSS/Reference/Selectors/Namespace_separator
 page-type: css-combinator
 browser-compat: css.selectors.namespace
 sidebar: cssref

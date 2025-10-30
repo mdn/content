@@ -1,6 +1,6 @@
 ---
 title: Selector list
-slug: Web/CSS/Selector_list
+slug: Web/CSS/Reference/Selectors/Selector_list
 page-type: css-combinator
 browser-compat: css.selectors.list
 sidebar: cssref

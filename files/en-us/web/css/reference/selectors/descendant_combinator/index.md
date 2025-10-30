@@ -1,6 +1,6 @@
 ---
 title: Descendant combinator
-slug: Web/CSS/Descendant_combinator
+slug: Web/CSS/Reference/Selectors/Descendant_combinator
 page-type: css-combinator
 browser-compat: css.selectors.descendant
 sidebar: cssref
@@ -74,4 +74,4 @@ li li {
 
 ## See also
 
-- [Child combinator](/en-US/docs/Web/CSS/Child_combinator)
+- [Child combinator](/en-US/docs/Web/CSS/Reference/Selectors/Child_combinator)

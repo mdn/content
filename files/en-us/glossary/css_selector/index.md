@@ -69,13 +69,13 @@ The resulting page content is styled like this:
   - [State selectors](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) `a:active, a:visited`
 
 - Grouping selectors
-  - [Selector list](/en-US/docs/Web/CSS/Selector_list) `A, B`
+  - [Selector list](/en-US/docs/Web/CSS/Reference/Selectors/Selector_list) `A, B`
 
 - Combinators
-  - [Next-sibling selectors](/en-US/docs/Web/CSS/Next-sibling_combinator) `A + B`
-  - [Subsequent-sibling selectors](/en-US/docs/Web/CSS/Subsequent-sibling_combinator) `A ~ B`
-  - [Child selectors](/en-US/docs/Web/CSS/Child_combinator) `A > B`
-  - [Descendant selectors](/en-US/docs/Web/CSS/Descendant_combinator) `A B`
+  - [Next-sibling selectors](/en-US/docs/Web/CSS/Reference/Selectors/Next-sibling_combinator) `A + B`
+  - [Subsequent-sibling selectors](/en-US/docs/Web/CSS/Reference/Selectors/Subsequent-sibling_combinator) `A ~ B`
+  - [Child selectors](/en-US/docs/Web/CSS/Reference/Selectors/Child_combinator) `A > B`
+  - [Descendant selectors](/en-US/docs/Web/CSS/Reference/Selectors/Descendant_combinator) `A B`
 
 - Pseudo
   - [Pseudo classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) `:`

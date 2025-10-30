@@ -1,6 +1,6 @@
 ---
 title: Child combinator
-slug: Web/CSS/Child_combinator
+slug: Web/CSS/Reference/Selectors/Child_combinator
 page-type: css-combinator
 browser-compat: css.selectors.child
 sidebar: cssref
@@ -15,7 +15,7 @@ ul.my-things > li {
 }
 ```
 
-Elements matched by the second selector must be the immediate children of the elements matched by the first selector. This is stricter than the [descendant combinator](/en-US/docs/Web/CSS/Descendant_combinator), which matches all elements matched by the second selector for which there exists an ancestor element matched by the first selector, regardless of the number of "hops" up the DOM.
+Elements matched by the second selector must be the immediate children of the elements matched by the first selector. This is stricter than the [descendant combinator](/en-US/docs/Web/CSS/Reference/Selectors/Descendant_combinator), which matches all elements matched by the second selector for which there exists an ancestor element matched by the first selector, regardless of the number of "hops" up the DOM.
 
 ## Syntax
 
@@ -64,4 +64,4 @@ div > span {
 
 ## See also
 
-- [Descendant combinator](/en-US/docs/Web/CSS/Descendant_combinator)
+- [Descendant combinator](/en-US/docs/Web/CSS/Reference/Selectors/Descendant_combinator)

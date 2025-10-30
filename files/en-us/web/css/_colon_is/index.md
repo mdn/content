@@ -269,5 +269,5 @@ some-element::after {
 ## See also
 
 - {{CSSxRef(":where", ":where()")}} - Like `:is()`, but with 0 [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity).
-- [Selector list](/en-US/docs/Web/CSS/Selector_list)
+- [Selector list](/en-US/docs/Web/CSS/Reference/Selectors/Selector_list)
 - [Web components](/en-US/docs/Web/API/Web_components)

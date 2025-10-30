@@ -49,7 +49,7 @@ Check the [pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classe
 
 - [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module
 - [CSS selector structure](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure)
-- [Selector list](/en-US/docs/Web/CSS/Selector_list)
+- [Selector list](/en-US/docs/Web/CSS/Reference/Selectors/Selector_list)
 - [Selectors and combinators](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators)
 - [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting) module
 - [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)

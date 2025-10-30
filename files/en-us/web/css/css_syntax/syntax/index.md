@@ -40,7 +40,7 @@ A CSS declaration block is visualized in the diagram below.
 
 If style sheets could only apply a declaration to each element of a Web page, they would be pretty useless. The real goal is to apply different declarations to different parts of the document.
 
-CSS allows this by associating conditions with declarations blocks. Each (valid) declaration block is preceded by one or more comma-separated [**selectors**](/en-US/docs/Web/CSS/CSS_selectors), which are conditions selecting some elements of the page. A [selector list](/en-US/docs/Web/CSS/Selector_list) and an associated declarations block, together, are called a **ruleset**, or often a **rule**.
+CSS allows this by associating conditions with declarations blocks. Each (valid) declaration block is preceded by one or more comma-separated [**selectors**](/en-US/docs/Web/CSS/CSS_selectors), which are conditions selecting some elements of the page. A [selector list](/en-US/docs/Web/CSS/Reference/Selectors/Selector_list) and an associated declarations block, together, are called a **ruleset**, or often a **rule**.
 
 A CSS ruleset (or rule) is visualized in the diagram below.
 

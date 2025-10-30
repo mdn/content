@@ -28,13 +28,13 @@ selector1 combinator selector2 {
 
 ## Index of combinators
 
-- [Child combinator (`>`)](/en-US/docs/Web/CSS/Child_combinator)
-- [Column combinator (`||`)](/en-US/docs/Web/CSS/Column_combinator)
-- [Descendant combinator (" ")](/en-US/docs/Web/CSS/Descendant_combinator)
-- [Namespace separator (`|`)](/en-US/docs/Web/CSS/Namespace_separator)
-- [Next-sibling combinator (`+`)](/en-US/docs/Web/CSS/Next-sibling_combinator)
-- [Selector list (`,`)](/en-US/docs/Web/CSS/Selector_list)
-- [Subsequent-sibling combinator (`~`)](/en-US/docs/Web/CSS/Subsequent-sibling_combinator)
+- [Child combinator (`>`)](/en-US/docs/Web/CSS/Reference/Selectors/Child_combinator)
+- [Column combinator (`||`)](/en-US/docs/Web/CSS/Reference/Selectors/Column_combinator)
+- [Descendant combinator (" ")](/en-US/docs/Web/CSS/Reference/Selectors/Descendant_combinator)
+- [Namespace separator (`|`)](/en-US/docs/Web/CSS/Reference/Selectors/Namespace_separator)
+- [Next-sibling combinator (`+`)](/en-US/docs/Web/CSS/Reference/Selectors/Next-sibling_combinator)
+- [Selector list (`,`)](/en-US/docs/Web/CSS/Reference/Selectors/Selector_list)
+- [Subsequent-sibling combinator (`~`)](/en-US/docs/Web/CSS/Reference/Selectors/Subsequent-sibling_combinator)
 
 ## See also
 

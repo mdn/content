@@ -213,7 +213,7 @@ These pseudo-classes require some interaction by the user in order for them to a
 
 ## Functional pseudo-classes
 
-These pseudo-classes accept a [selector list](/en-US/docs/Web/CSS/Selector_list) or [forgiving selector list](/en-US/docs/Web/CSS/Selector_list#forgiving_selector_list) as a parameter.
+These pseudo-classes accept a [selector list](/en-US/docs/Web/CSS/Reference/Selectors/Selector_list) or [forgiving selector list](/en-US/docs/Web/CSS/Reference/Selectors/Selector_list#forgiving_selector_list) as a parameter.
 
 - {{CSSxRef(":is", ":is()")}}
   - : The matches-any pseudo-class matches any element that matches any of the selectors in the list provided. The list is forgiving.
