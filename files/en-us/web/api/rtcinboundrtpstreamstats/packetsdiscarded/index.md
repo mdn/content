@@ -14,7 +14,7 @@ The value does not include packets that are discarded to due to packet duplicati
 
 ## Value
 
-An positive integer value.
+A positive integer value.
 
 This is calculated as defined in {{rfc("7002",,"3.2")}} (and appendix A.a.)
 

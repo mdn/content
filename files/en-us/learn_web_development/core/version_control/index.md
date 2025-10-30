@@ -15,7 +15,7 @@ This module takes you through the essentials of version control using Git and Gi
 
 ## Prerequisites
 
-- A desktop computer with Git installed on it (see the [Git downloads page](https://git-scm.com/downloads)).
+- A desktop computer with Git installed on it (see the [Git downloads page](https://git-scm.com/downloads/)).
 - A tool to use Git. Depending on how you like to work, you could use:
   - A [Git GUI client](https://git-scm.com/downloads/guis/) (we'd recommend [GitHub Desktop](https://desktop.github.com/download/), [SourceTree](https://www.sourcetreeapp.com/) or [Git Kraken](https://www.gitkraken.com/)).
   - A command line/terminal window (check out our [Command line crash course](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Command_line) for an introduction).
@@ -38,6 +38,9 @@ This module takes you through the essentials of version control using Git and Gi
 
 > [!NOTE]
 > As you get deeper into Git, you'll start to realize that it is easy to go wrong when you start using more complicated commands. Don't worry, even professional web developers find Git confusing sometimes, and often solve problems by searching for solutions on the web, or consulting sites like [Flight rules for Git](https://github.com/k88hudson/git-flight-rules) and [Dangit, git!](https://dangitgit.com/).
+
+> [!NOTE]
+> Scrimba's [Intro to Git](https://scrimba.com/intro-to-git-c0l4grs2sa) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> provides a practical introduction to using Git and GitHub.
 
 ## See also
 

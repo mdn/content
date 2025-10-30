@@ -143,7 +143,7 @@ Client hints are better than UA sniffing for detecting Blink-based browsers in t
 Changing site functionality based on client hints is still a bad idea!
 Where possible you should instead use feature detection and progressive enhancement [as described above](#why_feature_detection_is_better_than_browser_detection).
 
-For example, in the HTTP mechanism, the server includes a {{httpheader("Accept-CH")}} header along with a list of headers that should be included by the client in subsequent requests.
+For example, in the HTTP mechanism, the server includes an {{httpheader("Accept-CH")}} header along with a list of headers that should be included by the client in subsequent requests.
 Let's assume the server sends this response to the client:
 
 ```http

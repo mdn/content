@@ -103,7 +103,7 @@ The [Security](#security_concerns) section below goes into more detail about why
 
 The example includes the bare essentials needed to use an `<iframe>`:
 
-- [`border: none`](/en-US/docs/Web/CSS/border)
+- [`border: none`](/en-US/docs/Web/CSS/Reference/Properties/border)
   - : If used, the `<iframe>` is displayed without a surrounding border. Otherwise, by default, browsers display the `<iframe>` with a surrounding border (which is generally undesirable).
 - [`allowfullscreen`](/en-US/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen)
   - : If set, the `<iframe>` is able to be placed in fullscreen mode using the [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API) (somewhat beyond the scope of this article).

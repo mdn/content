@@ -30,7 +30,7 @@ browser.action.setBadgeBackgroundColor(
     - `color`
       - : The color, specified as one of:
         - a string: any CSS [\<color>](/en-US/docs/Web/CSS/color_value) value, for example `"red"`, `"#FF0000"`, or `"rgb(255 0 0)"`. If the string is not a valid color, the returned promise will be rejected and the background color won't be altered.
-        - a {{WebExtAPIRef('action.ColorArray')}} object.
+        - an {{WebExtAPIRef('action.ColorArray')}} object.
         - `null`. If a `tabId` is specified, it removes the tab-specific badge background color so that the tab inherits the global badge background color. Otherwise it reverts the global badge background color to the default value.
 
         The default color in Firefox is: `[217, 0, 0, 255]`.

@@ -54,17 +54,17 @@ These properties are defined on `Temporal.PlainTime.prototype` and shared by all
 - {{jsxref("Object/constructor", "Temporal.PlainTime.prototype.constructor")}}
   - : The constructor function that created the instance object. For `Temporal.PlainTime` instances, the initial value is the {{jsxref("Temporal/PlainTime/PlainTime", "Temporal.PlainTime()")}} constructor.
 - {{jsxref("Temporal/PlainTime/hour", "Temporal.PlainTime.prototype.hour")}} {{experimental_inline}}
-  - : Returns a integer from 0 to 23 representing the hour component of this time.
+  - : Returns an integer from 0 to 23 representing the hour component of this time.
 - {{jsxref("Temporal/PlainTime/microsecond", "Temporal.PlainTime.prototype.microsecond")}} {{experimental_inline}}
-  - : Returns a integer from 0 to 999 representing the microsecond (10<sup>-6</sup> second) component of this time.
+  - : Returns an integer from 0 to 999 representing the microsecond (10<sup>-6</sup> second) component of this time.
 - {{jsxref("Temporal/PlainTime/millisecond", "Temporal.PlainTime.prototype.millisecond")}} {{experimental_inline}}
-  - : Returns a integer from 0 to 999 representing the millisecond (10<sup>-3</sup> second) component of this time.
+  - : Returns an integer from 0 to 999 representing the millisecond (10<sup>-3</sup> second) component of this time.
 - {{jsxref("Temporal/PlainTime/minute", "Temporal.PlainTime.prototype.minute")}} {{experimental_inline}}
-  - : Returns a integer from 0 to 59 representing the minute component of this time.
+  - : Returns an integer from 0 to 59 representing the minute component of this time.
 - {{jsxref("Temporal/PlainTime/nanosecond", "Temporal.PlainTime.prototype.nanosecond")}} {{experimental_inline}}
-  - : Returns a integer from 0 to 999 representing the nanosecond (10<sup>-9</sup> second) component of this time.
+  - : Returns an integer from 0 to 999 representing the nanosecond (10<sup>-9</sup> second) component of this time.
 - {{jsxref("Temporal/PlainTime/second", "Temporal.PlainTime.prototype.second")}} {{experimental_inline}}
-  - : Returns a integer from 0 to 59 representing the second component of this time.
+  - : Returns an integer from 0 to 59 representing the second component of this time.
 - `Temporal.PlainTime.prototype[Symbol.toStringTag]`
   - : The initial value of the [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Temporal.PlainTime"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 

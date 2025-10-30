@@ -134,7 +134,7 @@ Finally you can use {{CSSxRef("max-inline-size")}} and {{CSSxRef("max-block-size
 <div class="container">
   <div class="physical box">I have a max-width of 200px.</div>
 
-  <div class="logical box">I have an max-inline-size of 200px.</div>
+  <div class="logical box">I have a max-inline-size of 200px.</div>
 </div>
 ```
 

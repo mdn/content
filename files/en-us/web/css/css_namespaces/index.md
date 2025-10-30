@@ -16,7 +16,7 @@ The `@namespace` rule is used for declaring a default namespace and for binding 
 
 ## Reference
 
-### At-rules
+### At-rules and descriptors
 
 - {{cssxref("@namespace")}}
 

@@ -8,30 +8,43 @@ browser-compat: api.DOMMatrix.DOMMatrix
 
 {{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
-The **`DOMMatrix`** constructor creates a new
-{{domxref("DOMMatrix")}} object which represents 4x4 matrices, suitable for 2D and 3D
-operations.
+The **`DOMMatrix()`** constructor creates a new {{domxref("DOMMatrix")}} object which represents a 4x4 matrix, suitable for 2D and 3D operations.
 
 ## Syntax
 
 ```js-nolint
 new DOMMatrix()
-new DOMMatrix(init)
+new DOMMatrix(initString)
+new DOMMatrix(initArray)
 ```
 
 ### Parameters
 
-- `init` {{optional_inline}}
-  - : An array of numbers specifying the matrix you want to create, or a CSS transform string.
+- `initString` {{optional_inline}}
+  - : A string representing a 2D or 3D matrix in CSS {{cssxref("transform-function/matrix", "matrix()")}} or {{cssxref("transform-function/matrix3d", "matrix3d()")}} format.
+- `initArray` {{optional_inline}}
+  - : An array containing either 6 or 16 numbers in column-major order. Other array lengths throw a {{jsxref("TypeError")}}.
+    - A 6-element array is interpreted as the matrix components `[m11, m12, m21, m22, m41, m42]`, creating a 2D matrix.
+    - A 16-element array is interpreted as the matrix components `[m11, m12, m13, m14, m21, m22, m23, m24, m31, m32, m33, m34, m41, m42, m43, m44]`, creating a 3D matrix.
 
-    In case an array of numbers is passed, the behavior depends on the length of the array:
-    - for a 6-element array of components in the form `[a, b, c, d, e, f]`, a 2D matrix is created, initialized with the provided components.
-    - for a 16-element array of components (in the column-major order) in the form `[m11, m12, m13, …, m42, m43, m44]`, a 3D matrix is created, initialized with the provided components.
+    If this argument is omitted, an identity matrix is created, i.e., equivalent to `[1, 0, 0, 1, 0, 0]`.
+
+    If this argument is provided as a {{jsxref("Float32Array")}} or {{jsxref("Float64Array")}}, consider using the more performant static methods {{domxref("DOMMatrix.fromFloat32Array_static", "DOMMatrix.fromFloat32Array()")}} or {{domxref("DOMMatrix.fromFloat64Array_static", "DOMMatrix.fromFloat64Array()")}} instead.
+
+### Return value
+
+A new {{domxref("DOMMatrix")}} object.
+
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if the argument is not a string or an array with a length other than 6 or 16.
+- {{jsxref("SyntaxError")}}
+  - : Thrown if the string argument is not in a valid CSS {{cssxref("transform-function/matrix", "matrix()")}} or {{cssxref("transform-function/matrix3d", "matrix3d()")}} format.
 
 ## Examples
 
-This example creates a DOMMatrix to use as an argument for calling
-{{domxref("DOMPointReadOnly.matrixTransform()")}}.
+This example creates a DOMMatrix to use as an argument for calling {{domxref("DOMPointReadOnly.matrixTransform()")}}.
 
 ```js
 const point = new DOMPoint(5, 4);
@@ -58,3 +71,9 @@ const transformedPoint = point.matrixTransform(matrix);
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("DOMMatrix.fromFloat32Array_static", "DOMMatrix.fromFloat32Array()")}}
+- {{domxref("DOMMatrix.fromFloat64Array_static", "DOMMatrix.fromFloat64Array()")}}
+- {{domxref("DOMMatrix.fromMatrix_static", "DOMMatrix.fromMatrix()")}}

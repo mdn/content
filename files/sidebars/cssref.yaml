@@ -12,11 +12,11 @@ sidebar:
     title: Modules
     details: closed
   - type: listSubPagesGrouped
-    path: /Web/CSS
+    path: /Web/CSS/Reference/Properties
     tags:
       - css-property
       - css-shorthand-property
-    link: /Web/CSS/Properties
+    link: /Web/CSS/Reference/Properties
     title: Properties
     details: closed
   - type: listSubPages
@@ -285,18 +285,26 @@ sidebar:
       - /Web/CSS/CSS_values_and_units/Textual_data_types
       - /Web/CSS/CSS_values_and_units/Using_CSS_math_functions
   - type: section
-    link: /Web/CSS/Layout_cookbook
-  - children:
-      - /Web/CSS/Layout_cookbook/Media_objects
-      - /Web/CSS/Layout_cookbook/Column_layouts
-      - /Web/CSS/Layout_cookbook/Center_an_element
-      - /Web/CSS/Layout_cookbook/Sticky_footers
-      - /Web/CSS/Layout_cookbook/Split_Navigation
-      - /Web/CSS/Layout_cookbook/Breadcrumb_Navigation
-      - /Web/CSS/Layout_cookbook/List_group_with_badges
-      - /Web/CSS/Layout_cookbook/Pagination
-      - /Web/CSS/Layout_cookbook/Card
-      - /Web/CSS/Layout_cookbook/Grid_wrapper
+    link: /Web/CSS/How_to
+  - link: /Web/CSS/How_to/Layout_cookbook
+    title: Layout cookbook
+    details: closed
+    children:
+      - /Web/CSS/How_to/Layout_cookbook/Media_objects
+      - /Web/CSS/How_to/Layout_cookbook/Column_layouts
+      - /Web/CSS/How_to/Layout_cookbook/Center_an_element
+      - /Web/CSS/How_to/Layout_cookbook/Sticky_footers
+      - /Web/CSS/How_to/Layout_cookbook/Split_navigation
+      - /Web/CSS/How_to/Layout_cookbook/Breadcrumb_navigation
+      - /Web/CSS/How_to/Layout_cookbook/List_group_with_badges
+      - /Web/CSS/How_to/Layout_cookbook/Pagination
+      - /Web/CSS/How_to/Layout_cookbook/Card
+      - /Web/CSS/How_to/Layout_cookbook/Grid_wrapper
+      - link: /Web/CSS/How_to/Layout_cookbook/Contribute_a_recipe
+        title: Contribute a recipe
+        details: closed
+        children:
+          - /Web/CSS/How_to/Layout_cookbook/Contribute_a_recipe/Cookbook_template
   - type: section
     title: Tools
   - children:

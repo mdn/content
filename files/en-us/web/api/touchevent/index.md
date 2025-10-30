@@ -93,7 +93,7 @@ The exception to this is Chrome, starting with version 56 (desktop, Chrome for A
 
 ## Example
 
-See the [example on the main Touch events article](/en-US/docs/Web/API/Touch_events#example).
+See the [example on the main Touch events article](/en-US/docs/Web/API/Touch_events#examples).
 
 ## Specifications
 

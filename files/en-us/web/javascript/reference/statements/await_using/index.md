@@ -6,7 +6,7 @@ browser-compat: javascript.statements.await_using
 sidebar: jssidebar
 ---
 
-The **`await using`** declaration declares block-scoped local variables that are _asynchronously disposed_. Like {{jsxref("Statements/const", "const")}}, variables declared with `await using` must be initialized and cannot be reassigned. The variable's value must be either `null`, `undefined`, or an object with an [`[Symbol.asyncDispose]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/asyncDispose) or [`[Symbol.dispose]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/dispose) method. When the variable goes out of scope, the `[Symbol.asyncDispose]()` or `[Symbol.dispose]()` method of the object is called and awaited, to ensure that resources are freed.
+The **`await using`** declaration declares block-scoped local variables that are _asynchronously disposed_. Like {{jsxref("Statements/const", "const")}}, variables declared with `await using` must be initialized and cannot be reassigned. The variable's value must be either `null`, `undefined`, or an object with a [`[Symbol.asyncDispose]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/asyncDispose) or [`[Symbol.dispose]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/dispose) method. When the variable goes out of scope, the `[Symbol.asyncDispose]()` or `[Symbol.dispose]()` method of the object is called and awaited, to ensure that resources are freed.
 
 ## Syntax
 
@@ -19,7 +19,7 @@ await using name1 = value1, name2 = value2, /* …, */ nameN = valueN;
 - `nameN`
   - : The name of the variable to declare. Each must be a legal JavaScript [identifier](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers) and _not_ a [destructuring binding pattern](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring).
 - `valueN`
-  - : Initial value of the variable. It can be any legal expression but its value must be either `null`, `undefined`, or an object with an [`[Symbol.asyncDispose]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/asyncDispose) or [`[Symbol.dispose]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/dispose) method.
+  - : Initial value of the variable. It can be any legal expression but its value must be either `null`, `undefined`, or an object with a [`[Symbol.asyncDispose]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/asyncDispose) or [`[Symbol.dispose]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/dispose) method.
 
 ## Description
 

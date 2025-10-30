@@ -152,7 +152,7 @@ console.log(JSON.parse(jsonText));
 
 JSON can contain number literals of arbitrary precision. However, it is not possible to represent all JSON numbers exactly in JavaScript, because JavaScript uses floating point representation which has a fixed precision. For example, `12345678901234567890 === 12345678901234567000` in JavaScript because they have the same floating point representation. This means there is no JavaScript number that corresponds precisely to the `12345678901234567890` JSON number.
 
-Let's assume you have a exact representation of some number (either via {{jsxref("BigInt")}} or a custom library):
+Let's assume you have an exact representation of some number (either via {{jsxref("BigInt")}} or a custom library):
 
 ```js
 const data = {

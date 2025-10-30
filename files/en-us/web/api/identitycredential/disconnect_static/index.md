@@ -49,7 +49,7 @@ A {{jsxref("Promise")}} that fulfills with {{jsxref("undefined")}}.
     - The FedCM API has been disabled globally.
     - The IdP's `configURL` is neither secure nor [potentially trustworthy](/en-US/docs/Web/Security/Secure_Contexts#potentially_trustworthy_origins).
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : Thrown if the embedding `<iframe>` does not have a {{httpheader("Permissions-Policy/identity-credentials-get", "identity-credentials-get")}} [Permissions-Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) set to allow the use of `disconnect()` or if the FedCM API is disabled globally by a policy set on the top-level document.
+  - : Thrown if the embedding `<iframe>` does not have an {{httpheader("Permissions-Policy/identity-credentials-get", "identity-credentials-get")}} [Permissions-Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) set to allow the use of `disconnect()` or if the FedCM API is disabled globally by a policy set on the top-level document.
 
 ## Examples
 
@@ -77,4 +77,4 @@ For a `disconnect()` call to work, the IdP must include a [`disconnect_endpoint`
 
 ## See also
 
-- [Federated Credential Management API](https://privacysandbox.google.com/cookies/fedcm) on privacysandbox.google.com (2023)
+- [Federated Credential Management API](https://developer.chrome.com/docs/identity/fedcm/overview) on developer.chrome.com (2023)

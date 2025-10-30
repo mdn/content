@@ -92,7 +92,7 @@ The CSS fonts module also defines the {{cssxref("@font-feature-values/font-displ
 
 `font-feature-settings` type:
 
-- [`<feature-tag-value>`](/en-US/docs/Web/CSS/font-feature-settings#values)
+- [`<feature-tag-value>`](/en-US/docs/Web/CSS/Reference/Properties/font-feature-settings#values)
 
 `font-format` type:
 
@@ -100,7 +100,7 @@ The CSS fonts module also defines the {{cssxref("@font-feature-values/font-displ
 
 `font-stretch` type:
 
-- [`<font-stretch-css3>`](/en-US/docs/Web/CSS/font-stretch#values)
+- [`<font-stretch-css3>`](/en-US/docs/Web/CSS/Reference/Properties/font-stretch#values)
 
 `font-tech` types:
 
@@ -110,26 +110,26 @@ The CSS fonts module also defines the {{cssxref("@font-feature-values/font-displ
 
 `font-variant` types:
 
-- [`<font-variant-css2>`](/en-US/docs/Web/CSS/font-variant)
-- [`<east-asian-variant-values>`](/en-US/docs/Web/CSS/font-variant#values)
-- [`<east-asian-width-values>`](/en-US/docs/Web/CSS/font-variant#values)
+- [`<font-variant-css2>`](/en-US/docs/Web/CSS/Reference/Properties/font-variant)
+- [`<east-asian-variant-values>`](/en-US/docs/Web/CSS/Reference/Properties/font-variant#values)
+- [`<east-asian-width-values>`](/en-US/docs/Web/CSS/Reference/Properties/font-variant#values)
 
 `font-variant-ligatures` types:
 
-- [`<common-lig-values>`](/en-US/docs/Web/CSS/font-variant-ligatures#values)
-- [`<contextual-alt-values>`](/en-US/docs/Web/CSS/font-variant-ligatures#values)
-- [`<discretionary-lig-values>`](/en-US/docs/Web/CSS/font-variant-ligatures#values)
-- [`<historical-lig-values>`](/en-US/docs/Web/CSS/font-variant-ligatures#values)
+- [`<common-lig-values>`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-ligatures#values)
+- [`<contextual-alt-values>`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-ligatures#values)
+- [`<discretionary-lig-values>`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-ligatures#values)
+- [`<historical-lig-values>`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-ligatures#values)
 
 `font-variant-numeric` types:
 
-- [`<numeric-figure-values>`](/en-US/docs/Web/CSS/font-variant-numeric#values)
-- [`<numeric-fraction-values>`](/en-US/docs/Web/CSS/font-variant-numeric#values)
-- [`<numeric-spacing-values>`](/en-US/docs/Web/CSS/font-variant-numeric#values)
+- [`<numeric-figure-values>`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-numeric#values)
+- [`<numeric-fraction-values>`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-numeric#values)
+- [`<numeric-spacing-values>`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-numeric#values)
 
 `font-weight` type:
 
-- [`<font-weight-absolute>`](/en-US/docs/Web/CSS/font-weight#values)
+- [`<font-weight-absolute>`](/en-US/docs/Web/CSS/Reference/Properties/font-weight#values)
 
 ### Interfaces
 

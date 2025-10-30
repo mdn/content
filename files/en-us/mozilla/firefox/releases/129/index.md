@@ -13,7 +13,7 @@ This article provides information about the changes in Firefox 129 that affect d
 ### CSS
 
 - The [@starting-style](/en-US/docs/Web/CSS/@starting-style) CSS at-rule is supported. This lets you define starting values for properties set on an element that you want to transition from when the element receives its first style update. Currently animating from `display: none;` is not supported ([Firefox bug 1834876](https://bugzil.la/1834876) and [Firefox bug 1834877](https://bugzil.la/1834877)).
-- The {{CSSXRef("transition-behavior")}} CSS property is supported. This lets you specify if discrete properties, such as {{CSSXRef("display")}} and {{CSSXRef("overlay")}}, can be transitioned by setting the value to [`allow-discrete`](/en-US/docs/Web/CSS/transition-behavior#allow-discrete). ([Firefox bug 1901645](https://bugzil.la/1901645)).
+- The {{CSSXRef("transition-behavior")}} CSS property is supported. This lets you specify if discrete properties, such as {{CSSXRef("display")}} and {{CSSXRef("overlay")}}, can be transitioned by setting the value to [`allow-discrete`](/en-US/docs/Web/CSS/Reference/Properties/transition-behavior#allow-discrete). ([Firefox bug 1901645](https://bugzil.la/1901645)).
 - `-webkit-font-feature-settings` has been implemented as an alias of the standard {{cssxref("font-feature-settings")}} property ([Firefox bug 1595620](https://bugzil.la/1595620)).
 
 ### JavaScript

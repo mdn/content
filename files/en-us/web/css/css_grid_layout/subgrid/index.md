@@ -10,7 +10,7 @@ The [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) module includes a `su
 
 ## Introduction to subgrid
 
-When you add [`display: grid`](/en-US/docs/Web/CSS/display) to a grid container, only the direct children become grid items, which can then be placed on the grid you created. The children of these items display in normal flow.
+When you add [`display: grid`](/en-US/docs/Web/CSS/Reference/Properties/display) to a grid container, only the direct children become grid items, which can then be placed on the grid you created. The children of these items display in normal flow.
 
 You can "nest" grids by making a grid item a grid container. These grids, however, are independent of the parent grid and of each other, meaning that they do not take their track sizing from the parent grid. This makes it difficult to line nested grid items up with the main grid.
 

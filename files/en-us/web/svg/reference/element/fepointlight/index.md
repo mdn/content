@@ -6,9 +6,7 @@ browser-compat: svg.elements.fePointLight
 sidebar: svgref
 ---
 
-The **`<fePointLight>`** [SVG](/en-US/docs/Web/SVG) filter primitive defines a light source which allows to create a point light effect. It that can be used within a lighting filter primitive: {{SVGElement("feDiffuseLighting")}} or {{SVGElement("feSpecularLighting")}}.
-
-Like other filter primitives, it handles color components in the `linearRGB` {{glossary("color space")}} by default. You can use {{svgattr("color-interpolation-filters")}} to use `sRGB` instead.
+The **`<fePointLight>`** [SVG](/en-US/docs/Web/SVG) element defines a light source which allows to create a point light effect. It can be used within a lighting filter primitive: {{SVGElement("feDiffuseLighting")}} or {{SVGElement("feSpecularLighting")}}.
 
 ## Usage context
 

@@ -64,7 +64,7 @@ Avoid JavaScript blocking by using the [`async`](/en-US/docs/Web/HTML/Reference/
 
 EOT and TTF formats are not compressed by default. Apply compression such as GZIP or Brotli for these file types. Use WOFF and WOFF2. These formats have compression built in.
 
-Within @font-face use font-display: swap. By using font display swap the browser will not block rendering and will use the backup system fonts that are defined. Optimize [font weight](/en-US/docs/Web/CSS/font-weight) to match the web font as closely as possible.
+Within @font-face use font-display: swap. By using font display swap the browser will not block rendering and will use the backup system fonts that are defined. Optimize [font weight](/en-US/docs/Web/CSS/Reference/Properties/font-weight) to match the web font as closely as possible.
 
 #### Icon web fonts
 

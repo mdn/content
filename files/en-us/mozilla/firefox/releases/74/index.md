@@ -24,8 +24,8 @@ _No changes._
 
 ### CSS
 
-- [`text-underline-position`](/en-US/docs/Web/CSS/text-underline-position) is now enabled by default ([bug 1606997](https://bugzil.la/1606997)).
-- The [`text-underline-offset`](/en-US/docs/Web/CSS/text-underline-offset) and [`text-decoration-thickness`](/en-US/docs/Web/CSS/text-decoration-thickness) properties now accept percentage values ([bug 1607534](https://bugzil.la/1607534)).
+- [`text-underline-position`](/en-US/docs/Web/CSS/Reference/Properties/text-underline-position) is now enabled by default ([bug 1606997](https://bugzil.la/1606997)).
+- The [`text-underline-offset`](/en-US/docs/Web/CSS/Reference/Properties/text-underline-offset) and [`text-decoration-thickness`](/en-US/docs/Web/CSS/Reference/Properties/text-decoration-thickness) properties now accept percentage values ([bug 1607534](https://bugzil.la/1607534)).
 - The `auto` value of the {{cssxref("outline-style")}} property has been enabled by default ([Firefox bug 1031664](https://bugzil.la/1031664)).
 
 #### Removals

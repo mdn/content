@@ -10,7 +10,7 @@ browser-compat: api.DOMPointReadOnly.matrixTransform
 
 The **`matrixTransform()`** method of the {{domxref("DOMPointReadOnly")}} interface applies a matrix transform specified as an object to the DOMPointReadOnly object, creating and returning a new `DOMPointReadOnly` object. Neither the matrix nor the point are altered.
 
-If the matrix passed as a parameter is 2D (the {{domxref("DOMMatrixReadonly.is2D", "is2D")}} is `true`) then this is a 2D transformation and the point's `z` coordinate will be `0` and point's `w` perspective will be `1`. Otherwise this is a 3D transformation.
+If the matrix passed as a parameter is 2D (the {{domxref("DOMMatrixReadOnly.is2D", "is2D")}} is `true`) then this is a 2D transformation and the point's `z` coordinate will be `0` and point's `w` perspective will be `1`. Otherwise this is a 3D transformation.
 
 You can also create a new `DOMPoint` with a point and matrix with the {{domxref("DOMMatrixReadOnly.transformPoint()")}} method.
 

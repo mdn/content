@@ -87,3 +87,7 @@ However, just because multiple languages are present within the object on which 
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{SVGAttr("requiredExtensions")}}

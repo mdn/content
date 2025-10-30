@@ -3,12 +3,10 @@ title: "ToggleEvent: source property"
 short-title: source
 slug: Web/API/ToggleEvent/source
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.ToggleEvent.source
 ---
 
-{{APIRef("Popover API")}}{{SeeCompatTable}}
+{{APIRef("Popover API")}}
 
 The **`source`** read-only property of the {{domxref("ToggleEvent")}} interface is an {{domxref("Element")}} object instance representing the HTML popover control element that initiated the toggle.
 
@@ -20,25 +18,24 @@ An {{domxref("Element")}} object instance, or `null` if the popover was not acti
 
 A {{htmlelement("button")}} element can be set as a popover control by specifying the [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) of the popover element in its [`commandfor`](/en-US/docs/Web/HTML/Reference/Elements/button#commandfor) or [`popovertarget`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertarget) attribute (if the button is specified using `<input type="button">`, only the `popovertarget` attribute works).
 
-When the [`toggle`](/en-US/docs/Web/API/HTMLElement/toggle_event) event fires on the popover, the `ToggleEvent` event object's `source` property will then contain a reference to the popover control button that initiated the toggle. This is useful for running different code in response to the `toggle` event depending on which control initiated it (see an [example](#basic_source_usage)).
+When the [`toggle`](/en-US/docs/Web/API/HTMLElement/toggle_event) event fires on the popover, the `ToggleEvent` event object's `source` property will then contain a reference to the popover control button that initiated the toggle. This is useful for running different code in response to the `toggle` event depending on which popover control initiated it (see an [example](#basic_source_usage)).
 
-Before the `source` property was available, developers would have to reimplement the `command` attribute functionality from scratch to provide a similar identifier and then monitor it with JavaScript to know which button invoked the popover.
+Before the `source` property existed, you had to manually reimplement the `command` attribute functionality in JavaScript to provide a similar identifier and then monitor it to identify which button invoked the popover.
 In addition, there was a danger of such JavaScript tasks blocking the showing or hiding of the popover.
 The `toggle` event is asynchronous, and therefore avoids this problem.
 
-If the popover was not activated by a control button — for example, if the popover is being controlled using a JavaScript method such as {{domxref("HTMLElement.togglePopover()")}} — the `source` property returns `null`.
+If the popover element is not activated by a control button — for example, if it's controlled using a JavaScript method such as {{domxref("HTMLElement.togglePopover()")}} — the `source` property is `null`.
 
 ## Examples
 
 ### Basic `source` usage
 
-This demo shows how to use the `source` property to perform a different action depending on which control button was used to close a popover.
+This demo shows how to use the `source` property to perform different actions based on the control button that closes the popover element.
 
 #### HTML
 
 Our markup contains a `<button>`, a {{htmlelement("p")}}, and a {{htmlelement("div")}} element. The `<div>` is designated as an [`auto` popover](/en-US/docs/Web/API/Popover_API/Using#auto_state_and_light_dismiss), and the button is designated as a control for showing the popover using the [`commandfor`](/en-US/docs/Web/HTML/Reference/Elements/button#commandfor) and [`command`](/en-US/docs/Web/HTML/Reference/Elements/button#command) attributes.
-
-The popover contains a heading asking the user if they would like a cookie, and two buttons allowing them to select an answer of "yes" or "no". Each one of these buttons is designated as a control for hiding the popover.
+The popover contains a heading asking the user if they would like a cookie, and two buttons labeled **Yes** and **No** allowing them to select an answer. Each of these buttons is designated as a control for hiding the popover.
 
 ```html live-sample___toggleevent-source
 <button commandfor="popover" command="show-popover">
@@ -70,7 +67,7 @@ html {
 
 #### JavaScript
 
-In our script, we start off by grabbing references to the "yes" and "no" buttons, the popover, and the output `<p>`.
+In our script, we start off by grabbing references to the `"yes"` and `"no"` buttons, the popover, and the output `<p>`.
 
 ```js live-sample___toggleevent-source
 const yesBtn = document.getElementById("yes");
@@ -79,7 +76,7 @@ const popover = document.getElementById("popover");
 const output = document.getElementById("output");
 ```
 
-We then add some feature detection to detect whether the HTML `command` attribute is supported, and whether the `source` property is supported. If either are not supported, we output an appropriate message to the output `<p>`. If both are supported, we add a [`toggle`](/en-US/docs/Web/API/HTMLElement/toggle_event) event listener to the popover. When fired, it checks if the "yes" or the "no" button was used to toggle (hide) the popover; an appropriate message is printed to the output `<p>` in each case.
+We've added feature detection for the HTML `command` attribute and the `source` property. If either is not supported in the browser, we print a message in the `<p>` element. If both are supported, we add a [`toggle`](/en-US/docs/Web/API/HTMLElement/toggle_event) event listener to the popover element. When the event fires, the code checks if the `"yes"` or `"no"` button was used to toggle (hide) the popover element; an appropriate message is printed to the output `<p>` in each case.
 
 ```js live-sample___toggleevent-source
 if (yesBtn.command === undefined) {

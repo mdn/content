@@ -12,7 +12,7 @@ The read-only **`nameList`** property of the {{DOMxRef("CSSLayerStatementRule")}
 
 ## Value
 
-A {{jsxref("Array")}} of strings, each representing a cascade layer represented by the {{cssxref("@layer")}} statement rule.
+An {{jsxref("Array")}} of strings, each representing a cascade layer represented by the {{cssxref("@layer")}} statement rule.
 
 ## Examples
 

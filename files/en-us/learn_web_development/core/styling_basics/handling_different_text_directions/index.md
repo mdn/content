@@ -61,7 +61,7 @@ h1 {
 
 {{EmbedLiveSample("simple-vertical", "", "350px")}}
 
-The three possible values for the [`writing-mode`](/en-US/docs/Web/CSS/writing-mode) property are:
+The three possible values for the [`writing-mode`](/en-US/docs/Web/CSS/Reference/Properties/writing-mode) property are:
 
 - `horizontal-tb`: Top-to-bottom block flow direction. Sentences run horizontally.
 - `vertical-rl`: Right-to-left block flow direction. Sentences run vertically.

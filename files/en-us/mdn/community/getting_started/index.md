@@ -46,7 +46,7 @@ We need your technical expertise, and we'll help polish your English in order to
 
 ## Choosing what to work on and getting started
 
-Once you've decided what sort of task you want to work on, it is time to head over to the [contributors task board](https://github.com/orgs/mdn/projects/25/views/1), pick an issue, and let us know by commenting on the issue and tagging the `@mdn/mdn-community-engagement` team.
+Once you've decided what sort of task you want to work on, it is time to head over to the [contributors task board](https://github.com/orgs/mdn/projects/25/views/1), pick an issue, and let us know by commenting on the issue and tagging the `@mdn/community` team.
 Someone from the team will respond with some comments, hints, or guidance.
 
 Make sure you're not working on something that's already in-progress - it can be frustrating to duplicate or lose work.

@@ -55,7 +55,7 @@ Modify timeline scope:
 
 - {{cssxref("timeline-scope")}}
 
-### At-rules
+### At-rules and descriptors
 
 CSS scroll-driven animations adds the ability to include `<timeline-range-name>`s in {{cssxref("@keyframes")}} blocks, to place keyframes at specific positions inside named timeline ranges.
 
@@ -63,8 +63,8 @@ CSS scroll-driven animations adds the ability to include `<timeline-range-name>`
 
 Possible values of the {{cssxref("animation-timeline")}} property for defining _anonymous scroll progress timelines_ and _anonymous view progress timelines_ (i.e., implicitly defined by the browser rather than being explicitly named and defined using the `scroll-timeline-*` and `view-timeline-*` properties):
 
-- [`scroll()`](/en-US/docs/Web/CSS/animation-timeline/scroll)
-- [`view()`](/en-US/docs/Web/CSS/animation-timeline/view)
+- [`scroll()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/scroll)
+- [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view)
 
 ### Interfaces
 

@@ -14,7 +14,7 @@ The **`unset`** [CSS](/en-US/docs/Web/CSS) keyword resets a property to its inhe
 
 ### Color
 
-[`color`](/en-US/docs/Web/CSS/color#formal_definition) is an inherited property.
+[`color`](/en-US/docs/Web/CSS/Reference/Properties/color#formal_definition) is an inherited property.
 
 #### HTML
 
@@ -54,7 +54,7 @@ p {
 
 ### Border
 
-[`border`](/en-US/docs/Web/CSS/border#formal_definition) is a non-inherited property.
+[`border`](/en-US/docs/Web/CSS/Reference/Properties/border#formal_definition) is a non-inherited property.
 
 #### HTML
 

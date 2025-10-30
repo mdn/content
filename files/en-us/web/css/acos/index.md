@@ -29,7 +29,7 @@ The `acos(number)` function accepts only one value as its parameter.
 
 ### Return value
 
-The inverse cosine of an `number` will always return an {{cssxref("&lt;angle&gt;")}} between `0deg` and `180deg`.
+The inverse cosine of a `number` will always return an {{cssxref("&lt;angle&gt;")}} between `0deg` and `180deg`.
 
 - If `number` is less than `-1` or greater than `1`, the result is `NaN`.
 - If `number` is exactly `1`, the result is `0`.

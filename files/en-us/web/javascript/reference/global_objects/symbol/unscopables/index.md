@@ -107,7 +107,7 @@ with (character) {
 }
 ```
 
-To preserve backward compatibility, you decided to add an `[Symbol.unscopables]` property when adding more properties to `character`. You may naïvely do it like:
+To preserve backward compatibility, you decided to add a `[Symbol.unscopables]` property when adding more properties to `character`. You may naïvely do it like:
 
 ```js example-bad
 const character = {

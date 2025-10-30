@@ -143,7 +143,7 @@ The [CSS shapes](/en-US/docs/Web/CSS/CSS_shapes) and [CSS borders and box decora
 - {{cssxref("&lt;basic-shape>")}}
   - : Describes shape functions used in the {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}, and {{cssxref("offset-path")}} properties.
 - {{cssxref("&lt;corner-shape-value>")}}
-  - : Describes the shape of a container corner. It is used by the {{cssxref("corner-shape")}} shorthand property and its [constituent properties](/en-US/docs/Web/CSS/corner-shape#constituent_properties) to specify the shape applied to affected container corners.
+  - : Describes the shape of a container corner. It is used by the {{cssxref("corner-shape")}} shorthand property and its [constituent properties](/en-US/docs/Web/CSS/Reference/Properties/corner-shape#constituent_properties) to specify the shape applied to affected container corners.
 
 ## Specifications
 

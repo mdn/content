@@ -10,7 +10,7 @@ browser-compat: api.EditContext.compositionend_event
 
 {{APIRef("EditContext API")}}{{SeeCompatTable}}
 
-The `compositionend` event of the {{domxref("EditContext")}} interface fires when composition using a {{glossary("Input Method Editor")}} (IME) window ends.
+The `compositionend` event of the {{domxref("EditContext")}} interface fires when composition using an {{glossary("Input Method Editor")}} (IME) window ends.
 
 ## Syntax
 

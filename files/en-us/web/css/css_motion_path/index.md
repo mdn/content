@@ -110,7 +110,7 @@ In this example, we used [CSS masking](/en-US/docs/Web/CSS/CSS_masking) and [CSS
 
 [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module
 
-- [`<coord-box>`](/en-US/docs/Web/CSS/offset-path#coord-box)
+- [`<coord-box>`](/en-US/docs/Web/CSS/Reference/Properties/offset-path#coord-box)
 
 ## Specifications
 

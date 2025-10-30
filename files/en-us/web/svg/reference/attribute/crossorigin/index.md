@@ -1,5 +1,5 @@
 ---
-title: "SVG attribute: crossorigin"
+title: crossorigin
 slug: Web/SVG/Reference/Attribute/crossorigin
 page-type: svg-attribute
 browser-compat:

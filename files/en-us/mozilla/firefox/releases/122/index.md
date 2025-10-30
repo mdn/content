@@ -19,7 +19,7 @@ This article provides information about the changes in Firefox 122 that affect d
 
 - The CSS {{cssxref("offset-position")}} property is now available by default. It defines the initial position of an element on a path. ([Firefox bug 1598152](https://bugzil.la/1598152))
 
-- The various methods for defining a CSS {{cssxref("offset-path")}} — including [`<basic-shape>`](/en-US/docs/Web/CSS/offset-path#basic-shape), [`<coord-box>`](/en-US/docs/Web/CSS/offset-path#coord-box), and [`url()`](/en-US/docs/Web/CSS/offset-path#url) — are now enabled by default. ([Firefox bug 1598159](https://bugzil.la/1598159))
+- The various methods for defining a CSS {{cssxref("offset-path")}} — including [`<basic-shape>`](/en-US/docs/Web/CSS/Reference/Properties/offset-path#basic-shape), [`<coord-box>`](/en-US/docs/Web/CSS/Reference/Properties/offset-path#coord-box), and [`url()`](/en-US/docs/Web/CSS/Reference/Properties/offset-path#url) — are now enabled by default. ([Firefox bug 1598159](https://bugzil.la/1598159))
 
 - The CSS {{cssxref("ray")}} function is now available by default. You can use this function to define an {{cssxref("offset-path")}} as a line segment that begins from an {{cssxref("offset-position")}} and extends in the direction of the specified angle. ([Firefox bug 1598151](https://bugzil.la/1598151))
 
@@ -49,7 +49,7 @@ This article provides information about the changes in Firefox 122 that affect d
 
 #### Removals
 
-- Removed support for the CSS [`-moz-user-focus`](/en-US/docs/Web/CSS/-moz-user-focus) property ([Firefox bug 1871745](https://bugzil.la/1871745) and [Firefox bug 1868552](https://bugzil.la/1868552)).
+- Removed support for the CSS [`-moz-user-focus`](/en-US/docs/Web/CSS/Reference/Properties/-moz-user-focus) property ([Firefox bug 1871745](https://bugzil.la/1871745) and [Firefox bug 1868552](https://bugzil.la/1868552)).
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -81,7 +81,7 @@ These features are newly shipped in Firefox 122 but are disabled by default. To 
   - The {{domxref("Element.attachShadow()")}} method now supports the `clonable` boolean option that specifies whether the created shadow root is clonable: the default value is `false` but when set to `true`, the shadow host cloned with {{domxref("Node.cloneNode()")}} or {{domxref("Document.importNode()")}} will include shadow root in the copy.
   - The {{domxref("ShadowRoot")}} interface now supports the {{domxref("ShadowRoot.clonable", "clonable")}} read-only property. It returns `true` if the shadow root is clonable, and `false` otherwise. It always returns `true` for shadow roots created via declarative shadow DOM.
 
-  When shadow root is created via declarative shadow DOM, the `clonable` option is set to `true` by default, and the `clonable` property returns `true`. ([Firefox bug 1712140](https://bugzil.la/1868428))
+  When shadow root is created via declarative shadow DOM, the `clonable` option is set to `true` by default, and the `clonable` property returns `true`. ([Firefox bug 1868428](https://bugzil.la/1868428))
 
 - **Popover API:** `dom.element.popover.enabled`.
 

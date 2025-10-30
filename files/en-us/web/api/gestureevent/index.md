@@ -27,7 +27,7 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 _This interface also inherits methods of its parents, {{domxref("UIEvent")}} and {{domxref("Event")}}._
 
 - {{domxref("GestureEvent.initGestureEvent()")}} {{Non-standard_Inline}}
-  - : Initializes the value of an `GestureEvent`. If the event has already been dispatched, this method does nothing.
+  - : Initializes the value of a `GestureEvent`. If the event has already been dispatched, this method does nothing.
 
 ## Gesture event types
 

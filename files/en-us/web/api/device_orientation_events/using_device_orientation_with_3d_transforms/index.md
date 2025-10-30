@@ -10,7 +10,7 @@ This article provides tips on how to use device orientation information in tande
 
 ## Using orientation to rotate an element
 
-The easiest way to convert [orientation data](/en-US/docs/Web/API/Window/deviceorientation_event) to a [3D transform](/en-US/docs/Web/CSS/transform) is basically to use the `alpha`, `gamma`, and `beta` values as `rotateZ`, `rotateX` and `rotateY` values.
+The easiest way to convert [orientation data](/en-US/docs/Web/API/Window/deviceorientation_event) to a [3D transform](/en-US/docs/Web/CSS/Reference/Properties/transform) is basically to use the `alpha`, `gamma`, and `beta` values as `rotateZ`, `rotateX` and `rotateY` values.
 
 It is important to keep in mind, however, that the [Device Orientation coordinate system](/en-US/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained) is different from the [CSS coordinate system](/en-US/docs/Web/API/CSSOM_view_API/Coordinate_systems). Namely, the former is [right-handed](https://en.wikipedia.org/wiki/Right-hand_rule) and its Y axis is positive upwards, while the latter is a left-handed coordinate system whose Y axis is positive to the bottom. Furthermore, the Device Orientation angle rotations should always be done in a Z - X' - Y'' order that does not match the order of some [CSS Transforms](/en-US/docs/Web/CSS/CSS_transforms). These are some of the practical consequences of these differences:
 

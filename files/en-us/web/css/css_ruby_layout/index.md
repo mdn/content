@@ -27,9 +27,9 @@ The CSS ruby layout module adds the following values to the {{cssxref("display")
 - `ruby-base-container`
 - `ruby-text-container`
 
-### Glossary and keywords
+### Glossary terms
 
-- {{Glossary("ruby")}}
+- {{Glossary("Ruby")}}
 
 ## Related concepts
 

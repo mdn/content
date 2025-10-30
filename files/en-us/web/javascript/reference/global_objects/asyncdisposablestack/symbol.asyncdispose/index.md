@@ -27,7 +27,7 @@ None ({{jsxref("undefined")}}).
 
 ### Declaring a stack with `await using`
 
-The `Symbol.asyncDispose` method is intended to be automatically called in a `await using` declaration.
+The `Symbol.asyncDispose` method is intended to be automatically called in an `await using` declaration.
 
 ```js
 async function doSomething() {

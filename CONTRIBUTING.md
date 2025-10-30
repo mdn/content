@@ -62,7 +62,7 @@ If you've created a new GitHub account and want to know what to do next, you can
   This is the easiest way to contribute **small changes** described in [Simple changes](#simple-changes).
 - [GitHub Desktop](https://docs.github.com/en/get-started/using-github/github-desktop) - A desktop app for managing interaction with GitHub.
 - [GitHub CLI](https://docs.github.com/en/github-cli/github-cli/about-github-cli) - A command-line wrapper for interacting with GitHub.
-- [`git`](https://git-scm.com/downloads) - You can use `git` from the command line to interact with GitHub.
+- [`git`](https://git-scm.com/downloads/) - You can use `git` from the command line to interact with GitHub.
   The examples in this document assume you are using this method.
   The [`git` cheat sheet](https://training.github.com/) and [Using Git](https://docs.github.com/en/get-started) guide are useful resources for beginners and advanced users.
 

@@ -50,7 +50,7 @@ This is still unsafe, but allows you to reduce the risk by restricting unsafe en
 For example, if you wanted to inject unsafe HTML but for some reason you needed the input to include the `onblur` handler, you could more safely do so by amending the default sanitizer and using an unsafe method as shown:
 
 ```js
-const sanitizer = Sanitizer(); // Default sanitizer
+const sanitizer = new Sanitizer(); // Default sanitizer
 sanitizer.allowAttribute("onblur"); // Allow onblur
 
 someElement.setHTMLUnsafe(untrustedString, { sanitizer });
@@ -79,7 +79,7 @@ For example, the following configuration allows only {{htmlelement("p")}} and {{
 It will also replace {{htmlelement("b")}} elements with their child nodes, effectively stripping the style their nested content.
 
 ```js
-const sanitizer = Sanitizer({
+const sanitizer = new Sanitizer({
   elements: ["p", "div"],
   replaceWithChildrenElements: ["b"],
   attributes: ["cite", "onclick"],
@@ -93,7 +93,7 @@ In "remove configurations" you specify the HTML elements and attributes that you
 For example, the following sanitizer would remove the same elements that were allowed in the previous code:
 
 ```js
-const sanitizer = Sanitizer({
+const sanitizer = new Sanitizer({
   removeElements: ["p", "div", "b"],
   removeAttributes: ["cite", "onclick"],
 });

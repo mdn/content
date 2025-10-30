@@ -23,7 +23,7 @@ Specifically:
 - `writing-mode: vertical-lr` will create vertical form controls with a left-to-right block flow direction, meaning that in controls with wrapping or multiple lines of text, subsequent lines will appear to the right of previous lines.
 - `writing-mode: vertical-rl` will create vertical form controls with a right-to-left block flow direction, meaning that in controls with wrapping or multiple lines of text, subsequent lines will appear to the left of previous lines.
 
-You could use a [transform](/en-US/docs/Web/CSS/transform) to rotate the controls by 90 degrees, but that would place the controls in their own layer and cause unintended layout side effects such as other content being overlapped. Using `writing-mode` offers a more reliable solution.
+You could use a [transform](/en-US/docs/Web/CSS/Reference/Properties/transform) to rotate the controls by 90 degrees, but that would place the controls in their own layer and cause unintended layout side effects such as other content being overlapped. Using `writing-mode` offers a more reliable solution.
 
 > [!NOTE]
 > While the {{cssxref("writing-mode")}} property is well supported, creating vertically-oriented form controls with `writing-mode` only gained full browser support in 2024.
@@ -112,7 +112,7 @@ The result of this looks like so:
 
 In older browsers that do not support the creation of vertical form controls with `writing-mode` and `direction`, there are limited alternatives available. The following only work on `<input type="range">`, causing the text to flow from bottom to top — they have no effect on `<meter>` and `<progress>` elements:
 
-- The non-standard [`appearance: slider-vertical`](/en-US/docs/Web/CSS/appearance) property can be used in older versions of Safari and Chrome.
+- The non-standard [`appearance: slider-vertical`](/en-US/docs/Web/CSS/Reference/Properties/appearance) property can be used in older versions of Safari and Chrome.
 - The non-standard `orient="vertical"` attribute can be added to the `<input type="range">` element itself in older versions of Firefox.
 
 The HTML for this example includes an [`<input type="range">`](/en-US/docs/Web/HTML/Reference/Elements/input/range) slider only, with `orient="vertical"` added to make it display vertically in older Firefox versions:

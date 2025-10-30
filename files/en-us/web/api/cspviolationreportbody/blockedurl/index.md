@@ -12,7 +12,7 @@ The **`blockedURL`** read-only property of the {{domxref("CSPViolationReportBody
 
 ## Value
 
-An string containing a value or URL that represents the resource that violated the policy.
+A string containing a value or URL that represents the resource that violated the policy.
 
 If the value is not the URL of a resource, it must be one of the following strings:
 
@@ -23,7 +23,7 @@ If the value is not the URL of a resource, it must be one of the following strin
   - : An `eval()`.
     For example, `eval()` was used but [`'unsafe-eval'`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#unsafe-eval) was not specified in the CSP.
 - `wasm-eval`
-  - : An Wasm evaluation.
+  - : A Wasm evaluation.
     For example, `eval()` was used but [`'wasm-unsafe-eval'`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#wasm-unsafe-eval) was not specified in the CSP.
 - `trusted-types-policy`
   - : A resource that violated the [`trusted-types`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/trusted-types) CSP directive.

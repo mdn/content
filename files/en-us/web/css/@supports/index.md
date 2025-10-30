@@ -275,41 +275,66 @@ ul:has(> li li) {
 
 ### Testing for the support of a font technology
 
-The following example applies the CSS style if the browser supports the `COLRv1` font technology:
+The following example applies the [Bungee Spice](https://fonts.google.com/specimen/Bungee+Spice) color font if the browser supports the `COLRv1` font technology:
 
 ```css
-@import "https://fonts.googleapis.com/css2?family=Bungee+Spice";
-
 @supports font-tech(color-COLRv1) {
-  p {
+  body {
     font-family: "Bungee Spice", fantasy;
   }
 }
 ```
 
 It's also possible to test for the support of a font technology by using the `tech` function inside the {{CSSxRef("@font-face")}} at-rule.
-If a browser doesn't support the font technology, a fallback font (`Bungee-fallback.otf`) can be used instead.
+In the following example, if a browser doesn't support the color font technology in the [`bungee-spice.woff2`](https://fonts.google.com/specimen/Bungee+Spice) font, a regular [`bungee.woff2`](https://fonts.google.com/specimen/Bungee) font will be used instead.
 
 ```css
 @font-face {
   font-family: "Bungee Spice";
   src:
-    url("https://fonts.googleapis.com/css2?family=Bungee+Spice")
-      tech(color-COLRv1),
-    url("Bungee-fallback.otf") format("opentype");
+    url("bungee-spice.woff2") tech(color-COLRv1) format("woff2"),
+    url("bungee.woff2") format("woff2");
 }
 ```
 
 ### Testing for the support of a font format
 
-The following example applies the CSS style if the browser supports the `woff2` font format:
+The following example uses the WOFF2 version of the font if the browser supports this font format, otherwise it falls back to the previously specified WOFF version:
 
 ```css
+@font-face {
+  font-family: "Open Sans WOFF";
+  src: url("open-sans.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Open Sans WOFF2";
+  src: url("open-sans.woff2") format("woff2");
+}
+
+body {
+  font-family: "Open Sans WOFF", sans-serif;
+}
+
 @supports font-format(woff2) {
-  p {
-    font-family: "Open Sans", sans-serif;
-    src: url("open-sans.woff2") format("woff2");
+  body {
+    font-family: "Open Sans WOFF2", sans-serif;
   }
+}
+```
+
+However, a more efficient way to specify multiple font formats is to list them in the `src` descriptor of a single {{cssxref("@font-face")}} at-rule in the order from the most preferred format to the least preferred:
+
+```css
+@font-face {
+  font-family: "Open Sans";
+  src:
+    url("open-sans.woff2") format("woff2"),
+    url("open-sans.woff") format("woff");
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
 }
 ```
 

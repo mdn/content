@@ -127,7 +127,7 @@ The tokens that identify the type of recipient include:
   - : The contact type identified by subsequent tokens is for contacting the recipient regardless of location.
 - `fax`
   - : The recipient identified by subsequent tokens is for a fax machine.
-- `page`
+- `pager`
   - : The recipient identified by subsequent tokens is for a pager or beeper.
 
 ##### Digital contact tokens

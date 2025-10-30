@@ -939,7 +939,7 @@ SVG files are ideal for diagrams, icons, and other images which can be accuratel
 As such, SVG is popular for user interface elements in modern Web design.
 
 SVG files are text files containing source code that, when interpreted, draws the desired image.
-For instance, this example defines an drawing area with initial size 100 by 100 units, containing a line drawn diagonally through the box:
+For instance, this example defines a drawing area with initial size 100 by 100 units, containing a line drawn diagonally through the box:
 
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">

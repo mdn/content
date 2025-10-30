@@ -12,7 +12,7 @@ When the {{cssxref("z-index")}} property is not specified on any element, elemen
 2. Descendant non-positioned elements, in order of appearance in the HTML.
 3. Descendant positioned elements, in order of appearance in the HTML.
 
-See [types of positioning](/en-US/docs/Web/CSS/position#types_of_positioning) for an explanation of positioned and non-positioned elements.
+See [types of positioning](/en-US/docs/Web/CSS/Reference/Properties/position#types_of_positioning) for an explanation of positioned and non-positioned elements.
 
 Keep in mind, when the {{cssxref("order")}} property alters rendering from the _order of appearance in the HTML_ within {{cssxref("flex")}} containers, it similarly affects the order for stacking context.
 

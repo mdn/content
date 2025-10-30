@@ -28,7 +28,7 @@ A new `DisposableStack` object.
 
 ## Examples
 
-### Creating an DisposableStack
+### Creating a DisposableStack
 
 ```js
 const disposer = new DisposableStack();

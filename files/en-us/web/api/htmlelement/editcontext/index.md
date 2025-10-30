@@ -26,7 +26,7 @@ If you try to set the `editContext` property on an element that is not one of th
 
 ### Element association
 
-Setting the `editContext` property of an element to a {{domxref("EditContext")}} instance associates that element with the `EditContext` instance.
+Setting the `editContext` property of an element to an {{domxref("EditContext")}} instance associates that element with the `EditContext` instance.
 
 The association is one-to-one:
 

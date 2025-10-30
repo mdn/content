@@ -167,5 +167,5 @@ Not part of any standard.
 
 ## See also
 
-- [Mozilla CSS extensions](/en-US/docs/Web/CSS/Mozilla_Extensions)
+- [Mozilla CSS extensions](/en-US/docs/Web/CSS/Reference/Mozilla_extensions)
 - [CSS Backgrounds and Borders module](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders)

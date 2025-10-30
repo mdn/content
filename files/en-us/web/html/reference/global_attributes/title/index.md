@@ -57,7 +57,7 @@ The `title` attribute may contain several lines. Each `U+000A LINE FEED` (`LF`) 
 multiline title">
     example span
   </span>
-  has a title a attribute with a newline.
+  has a title attribute with a newline.
 </p>
 <hr />
 <pre id="output"></pre>

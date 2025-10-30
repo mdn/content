@@ -33,7 +33,7 @@ In some situations, anchor-positioned content does not make sense if the anchor 
 
 ## Predefined fallback options
 
-The predefined fallback option values of the `position-try-fallbacks` property (defined as [`<try-tactic>`](/en-US/docs/Web/CSS/position-try-fallbacks#try-tactic)s in the spec) will "flip" the position of the anchor-positioned element across one or both axes if the element would otherwise overflow.
+The predefined fallback option values of the `position-try-fallbacks` property (defined as [`<try-tactic>`](/en-US/docs/Web/CSS/Reference/Properties/position-try-fallbacks#try-tactic)s in the spec) will "flip" the position of the anchor-positioned element across one or both axes if the element would otherwise overflow.
 
 The element can be set to flip across the block axis (`flip-block`), the inline axis (`flip-inline`), or diagonally across an imaginary line drawn from a corner of the anchor through its center to its opposite corner (`flip-start`). These three values flip the element, mirroring its position on an opposite side for the first two values, and an adjacent side for `flip-start`. For example, if an element positioned `10px` above its anchor starts to overflow at the top of the anchor, the `flip-block` value would flip the positioned element to be 10px below its anchor.
 

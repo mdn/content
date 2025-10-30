@@ -47,7 +47,7 @@ To recap what we said in the previous article, we have:
 - [`<input type="file">`](/en-US/docs/Web/HTML/Reference/Elements/input/file)
 - {{HTMLElement("progress")}} and {{HTMLElement("meter")}}
 
-Let's first talk about the [`appearance`](/en-US/docs/Web/CSS/appearance) property, which is useful for making all of the above more stylable.
+Let's first talk about the [`appearance`](/en-US/docs/Web/CSS/Reference/Properties/appearance) property, which is useful for making all of the above more stylable.
 
 ## `appearance`: controlling OS-level styling
 

@@ -11,7 +11,7 @@ sidebar: jsref
 
 {{SeeCompatTable}}
 
-The **`second`** accessor property of {{jsxref("Temporal.PlainTime")}} instances returns a integer from 0 to 59 representing the second component of this time.
+The **`second`** accessor property of {{jsxref("Temporal.PlainTime")}} instances returns an integer from 0 to 59 representing the second component of this time.
 
 The set accessor of `second` is `undefined`. You cannot change this property directly. Use the {{jsxref("Temporal/PlainTime/with", "with()")}} method to create a new `Temporal.PlainTime` object with the desired new value.
 

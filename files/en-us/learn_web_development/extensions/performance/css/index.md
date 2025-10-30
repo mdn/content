@@ -135,33 +135,33 @@ For essential DOM animations, you are advised to use [CSS animations](/en-US/doc
 
 Next, animation performance relies heavily on what properties you are animating. Certain properties, when animated, trigger a [reflow](/en-US/docs/Glossary/Reflow) (and therefore also a [repaint](/en-US/docs/Glossary/Repaint)) and should be avoided. These include properties that:
 
-- Alter an element's dimensions, such as [`width`](/en-US/docs/Web/CSS/width), [`height`](/en-US/docs/Web/CSS/height), [`border`](/en-US/docs/Web/CSS/border), and [`padding`](/en-US/docs/Web/CSS/padding).
-- Reposition an element, such as [`margin`](/en-US/docs/Web/CSS/margin), [`top`](/en-US/docs/Web/CSS/top), [`bottom`](/en-US/docs/Web/CSS/bottom), [`left`](/en-US/docs/Web/CSS/left), and [`right`](/en-US/docs/Web/CSS/right).
-- Change an element's layout, such as [`align-content`](/en-US/docs/Web/CSS/align-content), [`align-items`](/en-US/docs/Web/CSS/align-items), and [`flex`](/en-US/docs/Web/CSS/flex).
-- Add visual effects that change the element geometry, such as [`box-shadow`](/en-US/docs/Web/CSS/box-shadow).
+- Alter an element's dimensions, such as [`width`](/en-US/docs/Web/CSS/Reference/Properties/width), [`height`](/en-US/docs/Web/CSS/Reference/Properties/height), [`border`](/en-US/docs/Web/CSS/Reference/Properties/border), and [`padding`](/en-US/docs/Web/CSS/Reference/Properties/padding).
+- Reposition an element, such as [`margin`](/en-US/docs/Web/CSS/Reference/Properties/margin), [`top`](/en-US/docs/Web/CSS/Reference/Properties/top), [`bottom`](/en-US/docs/Web/CSS/Reference/Properties/bottom), [`left`](/en-US/docs/Web/CSS/Reference/Properties/left), and [`right`](/en-US/docs/Web/CSS/Reference/Properties/right).
+- Change an element's layout, such as [`align-content`](/en-US/docs/Web/CSS/Reference/Properties/align-content), [`align-items`](/en-US/docs/Web/CSS/Reference/Properties/align-items), and [`flex`](/en-US/docs/Web/CSS/Reference/Properties/flex).
+- Add visual effects that change the element geometry, such as [`box-shadow`](/en-US/docs/Web/CSS/Reference/Properties/box-shadow).
 
 Modern browsers are smart enough to repaint only the changed area of the document, rather than the entire page. As a result, larger animations are more costly.
 
 If at all possible, it is better to animate properties that do not cause reflow/repaint. This includes:
 
 - [Transforms](/en-US/docs/Web/CSS/CSS_transforms)
-- [`opacity`](/en-US/docs/Web/CSS/opacity)
-- [`filter`](/en-US/docs/Web/CSS/filter)
+- [`opacity`](/en-US/docs/Web/CSS/Reference/Properties/opacity)
+- [`filter`](/en-US/docs/Web/CSS/Reference/Properties/filter)
 
 ### Animating on the GPU
 
 To further improve performance, you should consider moving animation work off the main thread and onto the device's GPU (also referred to as compositing). This is done by choosing specific types of animations that the browser will automatically send to the GPU to handle; these include:
 
-- 3D transform animations such as [`transform: translateZ()`](/en-US/docs/Web/CSS/transform) and [`rotate3d()`](/en-US/docs/Web/CSS/transform-function/rotate3d).
-- Elements with certain other properties animated such as [`position: fixed`](/en-US/docs/Web/CSS/position).
-- Elements with [`will-change`](/en-US/docs/Web/CSS/will-change) applied (see the section below).
+- 3D transform animations such as [`transform: translateZ()`](/en-US/docs/Web/CSS/Reference/Properties/transform) and [`rotate3d()`](/en-US/docs/Web/CSS/transform-function/rotate3d).
+- Elements with certain other properties animated such as [`position: fixed`](/en-US/docs/Web/CSS/Reference/Properties/position).
+- Elements with [`will-change`](/en-US/docs/Web/CSS/Reference/Properties/will-change) applied (see the section below).
 - Certain elements that are rendered in their own layer, including [`<video>`](/en-US/docs/Web/HTML/Reference/Elements/video), [`<canvas>`](/en-US/docs/Web/HTML/Reference/Elements/canvas), and [`<iframe>`](/en-US/docs/Web/HTML/Reference/Elements/iframe).
 
 Animation on the GPU can result in improved performance, especially on mobile. However, moving animations to GPU is not always that simple. Read [CSS GPU Animation: Doing It Right](https://www.smashingmagazine.com/2016/12/gpu-animation-doing-it-right/) (smashingmagazine.com, 2016) for a very useful and detailed analysis.
 
 ## Optimizing element changes with `will-change`
 
-Browsers may set up optimizations before an element is actually changed. These kinds of optimizations can increase the responsiveness of a page by doing potentially expensive work before it is required. The CSS [`will-change`](/en-US/docs/Web/CSS/will-change) property hints to browsers how an element is expected to change.
+Browsers may set up optimizations before an element is actually changed. These kinds of optimizations can increase the responsiveness of a page by doing potentially expensive work before it is required. The CSS [`will-change`](/en-US/docs/Web/CSS/Reference/Properties/will-change) property hints to browsers how an element is expected to change.
 
 > [!NOTE]
 > `will-change` is intended to be used as a last resort to try to deal with existing performance problems. It should not be used to anticipate performance problems.
@@ -197,7 +197,7 @@ In general, think carefully about the fonts you use on your site. Some font file
 
 ### Font loading
 
-Bear in mind that a font is only loaded when it is actually applied to an element using the [`font-family`](/en-US/docs/Web/CSS/font-family) property, not when it is first referenced using the [`@font-face`](/en-US/docs/Web/CSS/@font-face) at-rule:
+Bear in mind that a font is only loaded when it is actually applied to an element using the [`font-family`](/en-US/docs/Web/CSS/Reference/Properties/font-family) property, not when it is first referenced using the [`@font-face`](/en-US/docs/Web/CSS/@font-face) at-rule:
 
 ```css
 /* Font not loaded here */

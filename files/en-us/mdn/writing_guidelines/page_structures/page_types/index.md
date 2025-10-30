@@ -198,7 +198,7 @@ A **CSS reference page** lists all the available syntax for a CSS feature such a
 
 #### Examples
 
-- [`background-color` property](/en-US/docs/Web/CSS/background-color)
+- [`background-color` property](/en-US/docs/Web/CSS/Reference/Properties/background-color)
 - [`:hover` pseudo-class](/en-US/docs/Web/CSS/:hover)
 - [`@media` at-rule](/en-US/docs/Web/CSS/@media)
 

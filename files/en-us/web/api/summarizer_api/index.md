@@ -29,7 +29,9 @@ This is done using the functionality made available by the {{domxref("Summarizer
    > If you want to check whether the browser AI model is able to support your preferences, you can do so with the {{domxref("Summarizer.availability_static", "Summarizer.availability()")}} static method.
 2. Run the {{domxref("Summarizer.summarize()")}} instance method to request the summary.
 
-After a `Summarizer` instance has been created, you can remove it again using the {{domxref("Summarizer.destroy()")}} instance method. You can also cancel a pending `create()` or `summarize()` operation using an {{domxref("AbortController")}}.
+You can cancel a pending `create()` or `summarize()` operation using an {{domxref("AbortController")}}.
+
+After a `Summarizer` instance has been created, you can release its assigned resources and stop any further activity by calling its {{domxref("Summarizer.destroy()")}} method. You are encouraged to do this after you've finished with the `Summarizer` object as it can consume a lot of resources.
 
 See [Using the Summarizer API](/en-US/docs/Web/API/Summarizer_API/Using) for a walkthrough of how the API works.
 

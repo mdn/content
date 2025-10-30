@@ -36,7 +36,7 @@ Like all CSS modules, this module impacts and is impacted by other modules. This
 
 - {{cssxref("::backdrop")}}
 
-### Glossary and terms
+### Glossary terms and definitions
 
 - [Block direction](/en-US/docs/Glossary/Flow_relative_values#block_direction)
 - [Containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block)
@@ -44,7 +44,7 @@ Like all CSS modules, this module impacts and is impacted by other modules. This
 - [Inline direction](/en-US/docs/Glossary/Flow_relative_values#inline_direction)
 - {{glossary("Inset properties")}}
 - [Positioning context](/en-US/docs/Learn_web_development/Core/CSS_layout/Positioning#positioning_contexts)
-- [Relative position](/en-US/docs/Web/CSS/position#relative_positioning)
+- [Relative position](/en-US/docs/Web/CSS/Reference/Properties/position#relative_positioning)
 - {{glossary("Stacking context")}}
 - [Static positioning](/en-US/docs/Learn_web_development/Core/CSS_layout/Positioning#static_positioning)
 - {{glossary("Top layer")}}

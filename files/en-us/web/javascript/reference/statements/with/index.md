@@ -51,7 +51,7 @@ One exception to this is the [global object](/en-US/docs/Glossary/Global_object)
 console.log(globalThis.Math === Math); // true
 ```
 
-The `with` statement adds the given object to the head of this scope chain during the evaluation of its statement body. Every unqualified name would first be searched within the object (through a [`in`](/en-US/docs/Web/JavaScript/Reference/Operators/in) check) before searching in the upper scope chain.
+The `with` statement adds the given object to the head of this scope chain during the evaluation of its statement body. Every unqualified name would first be searched within the object (through an [`in`](/en-US/docs/Web/JavaScript/Reference/Operators/in) check) before searching in the upper scope chain.
 
 Note that if the unqualified reference refers to a method of the object, the method is called with the object as its `this` value.
 
@@ -61,7 +61,7 @@ with ([1, 2, 3]) {
 }
 ```
 
-The object may have an [`[Symbol.unscopables]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/unscopables) property, which defines a list of properties that should not be added to the scope chain (for backward compatibility). See the [`Symbol.unscopables`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/unscopables) documentation for more information.
+The object may have a [`[Symbol.unscopables]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/unscopables) property, which defines a list of properties that should not be added to the scope chain (for backward compatibility). See the [`Symbol.unscopables`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/unscopables) documentation for more information.
 
 The reasons to use a `with` statement include saving one temporary variable and reducing file size by avoiding repeating a lengthy object reference. However, there are far more reasons why `with` statements are not desirable:
 

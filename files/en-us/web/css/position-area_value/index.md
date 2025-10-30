@@ -14,9 +14,9 @@ The `<position-area>` keyword values can be set as the value of the {{cssxref("p
 
 ```plain
 <position-area> = [
-  [ left | center | right | span-left | span-right | x-start | x-end | span-x-start | span-x-end | x-self-start | x-self-end | span-x-self-start | span-x-self-end | span-all ]
+  [ left | center | right | span-left | span-right | x-start | x-end | span-x-start | span-x-end | self-x-start | self-x-end | span-self-x-start | span-self-x-end | span-all ]
 ||
-  [ top | center | bottom | span-top | span-bottom | y-start | y-end | span-y-start | span-y-end | y-self-start | y-self-end | span-y-self-start | span-y-self-end | span-all ]
+  [ top | center | bottom | span-top | span-bottom | y-start | y-end | span-y-start | span-y-end | self-y-start | self-y-end | span-self-y-start | span-self-y-end | span-all ]
 |
   [ block-start | center | block-end | span-block-start | span-block-end | span-all ]
 ||
@@ -56,7 +56,7 @@ position-area: center end;
 position-area: block-start center;
 position-area: inline-start block-end;
 position-area: x-start y-end;
-position-area: center y-self-end;
+position-area: center self-y-end;
 
 /* Examples: Two keywords to span the element across two tiles */
 position-area: top span-left;
@@ -68,7 +68,7 @@ position-area: y-start span-x-end;
 /* Examples: Two keywords to span the element across three tiles */
 position-area: top span-all;
 position-area: block-end span-all;
-position-area: x-self-start span-all;
+position-area: self-x-start span-all;
 
 /* Examples: One keyword with an implicit second keyword  */
 position-area: top; /* equiv: top span-all */
@@ -257,10 +257,10 @@ The x-axis keywords include:
 - `x-end`
   - : The end tile along the grid's x-axis, calculated from the containing block's writing mode.
 
-- `x-self-start`
+- `self-x-start`
   - : The start tile along the grid's x-axis, calculated from the element's own writing mode.
 
-- `x-self-end`
+- `self-x-end`
   - : The end tile along the grid's x-axis, calculated from the element's own writing mode.
 
 - `center`
@@ -274,16 +274,16 @@ The y-axis keywords include:
 - `y-end`
   - : The end tile along the grid's y-axis, calculated from the containing block's writing mode.
 
-- `y-self-start`
+- `self-y-start`
   - : The start tile along the grid's y-axis, calculated from the element's own writing mode.
 
-- `y-self-end`
+- `self-y-end`
   - : The end tile along the grid's y-axis, calculated from the element's own writing mode.
 
 - `center`
   - : The center of the grid's y-axis, calculated from the element's own writing mode.
 
-For example, `x-end y-start` and `x-self-end y-self-start` both select the grid cell at end of the x-axis and the start of the y-axis. With `writing-mode: horizontal-tb` set, this would be the cell to the top right of the anchor, whereas with `writing-mode: vertical-rl` is at the top left.
+For example, `x-end y-start` and `self-x-end self-y-start` both select the grid cell at end of the x-axis and the start of the y-axis. With `writing-mode: horizontal-tb` set, this would be the cell to the top right of the anchor, whereas with `writing-mode: vertical-rl` is at the top left.
 
 ### Coordinate spanning keywords
 
@@ -310,10 +310,10 @@ For example, `y-end span-x-end` selects the tile at the center of the end y-row,
 
 If only a single coordinate grid `<position-area>` keyword is specified, the other value is implied as follows:
 
-- `x-start`, `x-self-start`, `x-end`, `x-self-end`, `y-start`, `y-self-start`, `y-end`, or `y-self-end`
+- `x-start`, `self-x-start`, `x-end`, `self-x-end`, `y-start`, `self-y-start`, `y-end`, or `self-y-end`
   - : The other value defaults to [`span-all`](#span-all_2), selecting the grid tiles spanning all three tiles of the column or row it was initially placed in. For example, `x-start` is equivalent to `x-start span-all`.
 
-- `span-x-start`, `span-x-end`, `span-y-start`, or `span-y-end`
+- `span-x-start`, `span-x-end`, `span-y-start`, `span-y-end`, `span-self-x-start`, `span-self-x-end`, `span-self-y-end`, or `span-self-y-start`
   - : The other value defaults to `center`. For example, `span-start` is equivalent to `span-start center`.
 
 ## `span-all`

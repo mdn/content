@@ -21,7 +21,7 @@ A Boolean value.
 
 ## Examples
 
-Use CSS `white-space` instead. An [example](/en-US/docs/Web/CSS/white-space#controlling_line_wrapping_in_tables) is available on the {{cssxref("white-space")}} page.
+Use CSS `white-space` instead. An [example](/en-US/docs/Web/CSS/Reference/Properties/white-space#controlling_line_wrapping_in_tables) is available on the {{cssxref("white-space")}} page.
 
 ## Specifications
 

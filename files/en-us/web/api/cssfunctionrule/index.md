@@ -2,10 +2,12 @@
 title: CSSFunctionRule
 slug: Web/API/CSSFunctionRule
 page-type: web-api-interface
+status:
+  - experimental
 browser-compat: api.CSSFunctionRule
 ---
 
-{{ APIRef("CSSOM") }}
+{{ APIRef("CSSOM") }}{{SeeCompatTable}}
 
 The **`CSSFunctionRule`** interface of the [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model) represents CSS {{cssxref("@function")}} (custom function) [at-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rule).
 
@@ -15,16 +17,16 @@ The **`CSSFunctionRule`** interface of the [CSS Object Model](/en-US/docs/Web/AP
 
 _This interface also inherits properties from {{domxref("CSSGroupingRule")}}._
 
-- {{domxref("CSSFunctionRule.name")}} {{ReadOnlyInline}}
+- {{domxref("CSSFunctionRule.name")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : Returns a string representing the custom function's name.
-- {{domxref("CSSFunctionRule.returnType")}} {{ReadOnlyInline}}
+- {{domxref("CSSFunctionRule.returnType")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : Returns a string representing the custom function's return type.
 
 ## Instance methods
 
 _This interface also inherits methods from {{domxref("CSSGroupingRule")}}._
 
-- {{domxref("CSSFunctionRule.getParameters()")}}
+- {{domxref("CSSFunctionRule.getParameters()")}} {{experimental_inline}}
   - : Returns an array of objects representing the custom function's parameters.
 
 ## Examples

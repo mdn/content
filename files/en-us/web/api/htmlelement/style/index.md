@@ -24,7 +24,7 @@ A live {{domxref("CSSStyleProperties")}} object.
 The values of the inline styles set in the element's [`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style) attribute are reflected by corresponding properties of the returned {{domxref("CSSStyleProperties")}} object.
 
 > [!NOTE]
-> {{domxref("CSSStyleProperties")}} has dash-named and corresponding {{Glossary("camel_case", "camel-case")}} named properties for **all** [CSS properties](/en-US/docs/Web/CSS/Properties) supported by the browser (not just those with inline styles).
+> {{domxref("CSSStyleProperties")}} has dash-named and corresponding {{Glossary("camel_case", "camel-case")}} named properties for **all** [CSS properties](/en-US/docs/Web/CSS/Reference/Properties) supported by the browser (not just those with inline styles).
 > Properties that don't have a corresponding inline style are set to `""`.
 
 Shorthand CSS properties of the element are expanded to their corresponding long-form properties.

@@ -246,7 +246,7 @@ Click "Play" in the example above to see or edit the code for the animation in t
 
 The CSS animations module level 2 also introduces the `animation-trigger`, `animation-trigger-exit-range`, `animation-trigger-exit-range-end`, `animation-trigger-exit-range-start`, `animation-trigger-range`, `animation-trigger-range-end`, `animation-trigger-range-start`, `animation-trigger-timeline`, and `animation-trigger-type` properties. Currently, no browsers support these features.
 
-### At-rules
+### At-rules and descriptors
 
 - {{cssxref("@keyframes")}}
 

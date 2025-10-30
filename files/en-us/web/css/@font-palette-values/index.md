@@ -6,7 +6,7 @@ browser-compat: css.at-rules.font-palette-values
 sidebar: cssref
 ---
 
-The **`@font-palette-values`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) allows you to customize the default values of [font-palette](/en-US/docs/Web/CSS/font-palette) created by the font-maker.
+The **`@font-palette-values`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) allows you to customize the default values of [font-palette](/en-US/docs/Web/CSS/Reference/Properties/font-palette) created by the font-maker.
 
 ## Syntax
 

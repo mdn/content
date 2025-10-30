@@ -25,7 +25,7 @@ The `filter` and `backdrop-filter` properties accept a space-separated list of f
 
 ## Filter functions
 
-The CSS filter effects module provides 10 [`<filter-function>`](/en-US/docs/Web/CSS/filter#functions) functions, as well as the ability to define an almost endless array of effects using SVG filters applied via a `url()` reference.
+The CSS filter effects module provides 10 [`<filter-function>`](/en-US/docs/Web/CSS/Reference/Properties/filter#functions) functions, as well as the ability to define an almost endless array of effects using SVG filters applied via a `url()` reference.
 
 The following table lists the 10 filter functions, along with their value types, the minimum valid value if applicable, the largest value that creates an effect, and the initial value used for [interpolation](/en-US/docs/Glossary/Interpolation).
 

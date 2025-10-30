@@ -102,8 +102,8 @@ scale factor is 1, in which case the function is the identity transform. The sca
 of the element are not conserved. `scaleZ(-1)` defines an [axial symmetry](https://en.wikipedia.org/wiki/Axial_symmetry), with the z-axis passing through the origin
 (as specified by the {{cssxref("transform-origin")}} property).
 
-In the above interactive examples, [`perspective: 550px;`](/en-US/docs/Web/CSS/perspective) (to
-create a 3D space) and [`transform-style: preserve-3d;`](/en-US/docs/Web/CSS/transform-style)
+In the above interactive examples, [`perspective: 550px;`](/en-US/docs/Web/CSS/Reference/Properties/perspective) (to
+create a 3D space) and [`transform-style: preserve-3d;`](/en-US/docs/Web/CSS/Reference/Properties/transform-style)
 (so the children, the 6 sides of the cube, are also positioned in the 3D space), have been set on the cube.
 
 > [!NOTE]

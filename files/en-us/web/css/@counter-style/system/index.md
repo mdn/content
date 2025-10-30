@@ -339,7 +339,7 @@ ol {
 
 ### Extending a counter
 
-This example uses the algorithm, symbols, and other properties of [`lower-alpha`](/en-US/docs/Web/CSS/list-style-type#lower-alpha), one of the several native {{CSSXref("list-style-type")}} counter values, but extends it by removing the period (`'.'`) after the counter representation and enclosing the characters in parentheses, as in `(a)` and `(b)`.
+This example uses the algorithm, symbols, and other properties of [`lower-alpha`](/en-US/docs/Web/CSS/Reference/Properties/list-style-type#lower-alpha), one of the several native {{CSSXref("list-style-type")}} counter values, but extends it by removing the period (`'.'`) after the counter representation and enclosing the characters in parentheses, as in `(a)` and `(b)`.
 
 #### HTML
 

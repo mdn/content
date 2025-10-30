@@ -47,7 +47,7 @@ body {
 
 {{EmbedLiveSample("overflow", "", "370px")}}
 
-The content goes into the box. Once it fills the box, it continues to overflow in a visible way, displaying content outside the box, potentially displaying under subsequent content. The property that controls how overflow behaves is the [`overflow`](/en-US/docs/Web/CSS/overflow) property which has an initial value of `visible`. This is why we can see the overflow content.
+The content goes into the box. Once it fills the box, it continues to overflow in a visible way, displaying content outside the box, potentially displaying under subsequent content. The property that controls how overflow behaves is the [`overflow`](/en-US/docs/Web/CSS/Reference/Properties/overflow) property which has an initial value of `visible`. This is why we can see the overflow content.
 
 ## Controlling overflow
 
@@ -166,7 +166,7 @@ As we have already learned, using any of these values, other than the default of
 
 `overflow: clip` acts like `overflow: hidden`, but it does not allow programmatic scrolling; the box becomes non-scrollable. It also does not create a block formatting context.
 
-The overflow property is in reality a shorthand for the [`overflow-x`](/en-US/docs/Web/CSS/overflow-x) and [`overflow-y`](/en-US/docs/Web/CSS/overflow-y) properties. If you specify only one value for overflow, this value is used for both axes. However, you can specify both values in which case the first is used for `overflow-x` and therefore the horizontal direction, and the second for `overflow-y` and the vertical direction. In the below example, I have only specified `overflow-y: scroll` so we do not get the unwanted horizontal scrollbar.
+The overflow property is in reality a shorthand for the [`overflow-x`](/en-US/docs/Web/CSS/Reference/Properties/overflow-x) and [`overflow-y`](/en-US/docs/Web/CSS/Reference/Properties/overflow-y) properties. If you specify only one value for overflow, this value is used for both axes. However, you can specify both values in which case the first is used for `overflow-x` and therefore the horizontal direction, and the second for `overflow-y` and the vertical direction. In the below example, I have only specified `overflow-y: scroll` so we do not get the unwanted horizontal scrollbar.
 
 ```html hidden live-sample___overflow-y
 <div class="box">
@@ -213,7 +213,7 @@ In the CSS overflow module, there are some properties that can help improve the 
 
 ### Inline-Axis Overflow
 
-The [`text-overflow`](/en-US/docs/Web/CSS/text-overflow) property deals with text overflowing in the inline direction. It takes one of two values `clip`, in which case content is clipped when it overflows, this is the initial value and therefore the default behavior. We also have `ellipsis` which renders an ellipsis, which may be replaced with a better character for the language or writing mode in use.
+The [`text-overflow`](/en-US/docs/Web/CSS/Reference/Properties/text-overflow) property deals with text overflowing in the inline direction. It takes one of two values `clip`, in which case content is clipped when it overflows, this is the initial value and therefore the default behavior. We also have `ellipsis` which renders an ellipsis, which may be replaced with a better character for the language or writing mode in use.
 
 ```html hidden live-sample___text-overflow
 <div class="box">

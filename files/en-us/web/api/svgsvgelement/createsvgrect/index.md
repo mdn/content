@@ -8,7 +8,7 @@ browser-compat: api.SVGSVGElement.createSVGRect
 
 {{APIRef("SVG")}}
 
-The `createSVGRect()` method of the {{domxref("SVGSVGElement")}} interface creates an {{domxref("DOMRect")}} object outside of any document trees.
+The `createSVGRect()` method of the {{domxref("SVGSVGElement")}} interface creates a {{domxref("DOMRect")}} object outside of any document trees.
 
 ## Syntax
 

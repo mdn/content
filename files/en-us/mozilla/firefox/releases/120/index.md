@@ -21,7 +21,7 @@ This article provides information about the changes in Firefox 120 that affect d
 
 #### Removals
 
-- The non-standard {{cssxref("-moz-image-rect")}} CSS function for clipping background images has been removed. First introduced in Firefox 4, this function was never standardized or implemented in other browsers ([Firefox bug 1856999](https://bugzil.la/1853867)).
+- The non-standard {{cssxref("-moz-image-rect")}} CSS function for clipping background images has been removed. First introduced in Firefox 4, this function was never standardized or implemented in other browsers ([Firefox bug 1853867](https://bugzil.la/1853867)).
 
 ### JavaScript
 

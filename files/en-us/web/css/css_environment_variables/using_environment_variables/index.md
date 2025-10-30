@@ -109,7 +109,7 @@ main {
 }
 ```
 
-The `<footer>` is positioned to be stuck to the bottom of the viewport. The declaration [`position: sticky`](/en-US/docs/Web/CSS/position#sticky) offsets the element relative to the `<body>` (its scrolling ancestor and [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block)), based on the {{cssxref("bottom")}} value of `0`. We give the `<footer>` a {{cssxref("padding")}} value of `1em` on all four sides. We then add the `safe-area-inset-bottom` value to the `1em` of bottom padding, with a fallback of `1em`.
+The `<footer>` is positioned to be stuck to the bottom of the viewport. The declaration [`position: sticky`](/en-US/docs/Web/CSS/Reference/Properties/position#sticky) offsets the element relative to the `<body>` (its scrolling ancestor and [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block)), based on the {{cssxref("bottom")}} value of `0`. We give the `<footer>` a {{cssxref("padding")}} value of `1em` on all four sides. We then add the `safe-area-inset-bottom` value to the `1em` of bottom padding, with a fallback of `1em`.
 
 ```css
 footer {

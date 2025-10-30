@@ -34,7 +34,7 @@ _Inherits instance methods from its parent {{jsxref("Error")}}_.
 
 ## Examples
 
-### Catching an URIError
+### Catching a URIError
 
 ```js
 try {
@@ -47,7 +47,7 @@ try {
 }
 ```
 
-### Creating an URIError
+### Creating a URIError
 
 ```js
 try {

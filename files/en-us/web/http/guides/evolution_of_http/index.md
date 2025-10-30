@@ -32,7 +32,7 @@ The response was extremely simple, too: it only consisted of the file itself.
 
 ```html
 <html>
-  An text-only web page
+  A text-only web page
 </html>
 ```
 

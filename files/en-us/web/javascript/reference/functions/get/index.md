@@ -61,8 +61,7 @@ Properties defined using this syntax are own properties of the created object, a
 
 ### Defining a getter on new objects in object initializers
 
-This will create a pseudo-property `latest` for object `obj`,
-which will return the last array item in `log`.
+This will create a pseudo-property `latest` for object `obj`, which will return the last array item in `log`.
 
 ```js
 const obj = {
@@ -104,8 +103,7 @@ Static getters and private getters use similar syntaxes, which are described in 
 
 ### Deleting a getter using the `delete` operator
 
-If you want to remove the getter, you can just {{jsxref("Operators/delete", "delete")}}
-it:
+If you want to remove the getter, you can just {{jsxref("Operators/delete", "delete")}} it:
 
 ```js
 delete obj.latest;
@@ -113,8 +111,7 @@ delete obj.latest;
 
 ### Defining a getter on existing objects using `defineProperty`
 
-To append a getter to an existing object later at any time, use
-{{jsxref("Object.defineProperty()")}}.
+To append a getter to an existing object later at any time, use {{jsxref("Object.defineProperty()")}}.
 
 ```js
 const o = { a: 0 };
@@ -158,35 +155,20 @@ console.log(MyConstants.foo); // 'foo', a static getter's value cannot be change
 
 ### Smart / self-overwriting / lazy getters
 
-Getters give you a way to _define_ a property of an object, but they do not
-_calculate_ the property's value until it is accessed. A getter defers the cost
-of calculating the value until the value is needed. If it is never needed, you never pay
-the cost.
+Getters give you a way to _define_ a property of an object, but they do not _calculate_ the property's value until it is accessed. A getter defers the cost of calculating the value until the value is needed. If it is never needed, you never pay the cost.
 
-An additional optimization technique to lazify or delay the calculation of a property
-value and cache it for later access are _smart_ (or _[memoized](https://en.wikipedia.org/wiki/Memoization)_) getters.
-The value is calculated the first time the getter is called and is then cached so
-subsequent accesses return the cached value without recalculating it. This is useful in
-the following situations:
+An additional optimization technique to lazify or delay the calculation of a property value and cache it for later access are _smart_ (or _[memoized](https://en.wikipedia.org/wiki/Memoization)_) getters. The value is calculated the first time the getter is called and is then cached so subsequent accesses return the cached value without recalculating it. This is useful in the following situations:
 
-- If the calculation of a property value is expensive (takes much RAM or CPU time,
-  spawns worker threads, retrieves remote file, etc.).
-- If the value isn't needed just now. It will be used later, or in some cases, it's not
-  used at all.
-- If it's used, it will be accessed several times, and there is no need to
-  re-calculate that value will never be changed or shouldn't be re-calculated.
+- If the calculation of a property value is expensive (takes much RAM or CPU time, spawns worker threads, retrieves remote file, etc.).
+- If the value isn't needed just now. It will be used later, or in some cases, it's not used at all.
+- If it's used, it will be accessed several times, and there is no need to re-calculate that value will never be changed or shouldn't be re-calculated.
 
 > [!NOTE]
-> This means that you shouldn't write a lazy getter for a property whose value you
-> expect to change, because if the getter is lazy, then it will not recalculate the
-> value.
+> This means that you shouldn't write a lazy getter for a property whose value you expect to change, because if the getter is lazy, then it will not recalculate the value.
 >
-> Note that getters are not "lazy" or "memoized" by nature; you must implement this
-> technique if you desire this behavior.
+> Note that getters are not "lazy" or "memoized" by nature; you must implement this technique if you desire this behavior.
 
-In the following example, the object has a getter as its own property. On getting the
-property, the property is removed from the object and re-added, but implicitly as a data
-property this time. Finally, the value gets returned.
+In the following example, the object has a getter as its own property. On getting the property, the property is removed from the object and re-added, but implicitly as a data property this time. Finally, the value gets returned.
 
 ```js
 const obj = {
@@ -198,15 +180,26 @@ const obj = {
 };
 ```
 
+### Feature detection
+
+Many functions accept an object and retrieve individual properties from it as separate parameters (this object parameter is known as an _options bag_). You can detect whether a specific option is supported by using a getter to track if the property has been retrieved. This example checks if the `colorType` option is supported by the {{domxref("HTMLCanvasElement.getContext()")}} method.
+
+```js
+function isColorTypeSupported() {
+  let supported = false;
+  const obj = {
+    get colorType() {
+      supported = true;
+    },
+  };
+  document.createElement("canvas").getContext("2d", obj);
+  return supported;
+}
+```
+
 ### get vs. defineProperty
 
-While using the `get` keyword and {{jsxref("Object.defineProperty()")}} have
-similar results, there is a subtle difference between the two when used on
-{{jsxref("classes")}}.
-
-When using `get` the property will be defined on the instance's prototype,
-while using {{jsxref("Object.defineProperty()")}} the property will be defined on the
-instance it is applied to.
+While using the `get` keyword and {{jsxref("Object.defineProperty()")}} have similar results, there is a subtle difference between the two when used on [classes](/en-US/docs/Web/JavaScript/Reference/Classes). The `get` syntax defines the property on the instance's prototype, while {{jsxref("Object.defineProperty()")}} defines the property on the instance it is applied to.
 
 ```js
 class Example {

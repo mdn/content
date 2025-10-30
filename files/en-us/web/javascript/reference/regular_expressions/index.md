@@ -12,7 +12,7 @@ You are encouraged to read the [regular expressions guide](/en-US/docs/Web/JavaS
 
 ## Description
 
-[_Regular expressions_](https://en.wikipedia.org/wiki/Regular_expression) are a important concept in formal language theory. They are a way to describe a possibly infinite set of character strings (called a _language_). A regular expression, at its core, needs the following features:
+[_Regular expressions_](https://en.wikipedia.org/wiki/Regular_expression) are an important concept in formal language theory. They are a way to describe a possibly infinite set of character strings (called a _language_). A regular expression, at its core, needs the following features:
 
 - A set of _characters_ that can be used in the language, called the _alphabet_.
 - _Concatenation_: `ab` means "the character `a` followed by the character `b`".

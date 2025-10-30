@@ -11,7 +11,7 @@ sidebar: cssref
 
 {{Non-standard_header}}{{deprecated_header}}
 
-The **`::-webkit-meter-bar`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Glossary/Pseudo-element) is a [WebKit extension](/en-US/docs/Web/CSS/WebKit_Extensions) that represents the background of a {{HTMLElement("meter")}} element. It is used for selecting and applying styles to the container of a meter gauge.
+The **`::-webkit-meter-bar`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Glossary/Pseudo-element) is a [WebKit extension](/en-US/docs/Web/CSS/Reference/Webkit_extensions) that represents the background of a {{HTMLElement("meter")}} element. It is used for selecting and applying styles to the container of a meter gauge.
 
 ## Syntax
 
@@ -93,4 +93,4 @@ Not part of any standard.
   - {{cssxref("::-webkit-meter-optimum-value")}}
   - {{cssxref("::-webkit-meter-suboptimum-value")}}
 
-- [WebKit CSS extensions](/en-US/docs/Web/CSS/WebKit_Extensions)
+- [WebKit CSS extensions](/en-US/docs/Web/CSS/Reference/Webkit_extensions)

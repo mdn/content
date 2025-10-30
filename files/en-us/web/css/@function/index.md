@@ -2,9 +2,13 @@
 title: "@function"
 slug: Web/CSS/@function
 page-type: css-at-rule
+status:
+  - experimental
 browser-compat: css.at-rules.function
 sidebar: cssref
 ---
+
+{{SeeCompatTable}}
 
 The **`@function`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) enables defining [CSS custom functions](/en-US/docs/Web/CSS/CSS_custom_functions_and_mixins/Using_custom_functions). Once defined, a custom function can be called using the {{cssxref("&lt;dashed-function>")}} syntax (for example, `--my-function(30px, 3)`) within any property value.
 

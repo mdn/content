@@ -73,7 +73,7 @@ You can use this attribute with the following SVG elements:
   </tbody>
 </table>
 
-For a description of the values, please refer to the [CSS `font-variant`](/en-US/docs/Web/CSS/font-variant#values) property.
+For a description of the values, please refer to the [CSS `font-variant`](/en-US/docs/Web/CSS/Reference/Properties/font-variant#values) property.
 
 ## Specifications
 

@@ -62,6 +62,9 @@ This HTML will render as follows in a web browser:
 
 As well as structuring text, HTML has many other uses — making text or images link to other web pages, embedding images or videos, creating data tables, and so on.
 
+> [!NOTE]
+> Scrimba's [HTML tags](https://scrimba.com/frontend-path-c0j/~0g?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> is an interactive lesson providing practice with HTML basics, including headings.
+
 ## Creating your first HTML document
 
 Let's see how individual elements are combined to form an HTML page. In this section, you'll create a basic HTML file and take a look at what it's made up of.

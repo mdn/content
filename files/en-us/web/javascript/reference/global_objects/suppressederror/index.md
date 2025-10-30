@@ -44,7 +44,7 @@ _Inherits instance methods from its parent {{jsxref("Error")}}_.
 
 ## Examples
 
-### Catching an SuppressedError
+### Catching a SuppressedError
 
 A `SuppressedError` is thrown when an error occurs during [resource disposal](/en-US/docs/Web/JavaScript/Guide/Resource_management). Throwing an error causes scope cleanup, and each disposer during the cleanup can throw its own error. All these errors are collected into a chain of `SuppressedError` instances, with the original error as the `suppressed` property and the new error thrown by the next disposer as the `error` property.
 
@@ -83,7 +83,7 @@ Error while disposing resource1   Error while disposing resource2
     (Disposal happens later)        (Disposal happens earlier)
 ```
 
-### Creating an SuppressedError
+### Creating a SuppressedError
 
 ```js
 try {

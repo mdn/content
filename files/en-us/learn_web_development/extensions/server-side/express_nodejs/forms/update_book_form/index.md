@@ -159,7 +159,7 @@ Run the application, open your browser to `http://localhost:3000/`, select the _
 
 The form should look just like the _Create book_ page, only with a title of 'Update book', and pre-populated with record values.
 
-![The update book section of the Local library application. The left column has a vertical navigation bar. The right column has a form to update the book with an heading that reads 'Update book'. There are five input fields labelled Title, Author, Summary, ISBN, Genre. Genre is a checkbox option field. There is a button labelled 'Submit' at the end.](locallibary_express_book_update_noerrors.png)
+![The update book section of the Local library application. The left column has a vertical navigation bar. The right column has a form to update the book with a heading that reads 'Update book'. There are five input fields labelled Title, Author, Summary, ISBN, Genre. Genre is a checkbox option field. There is a button labelled 'Submit' at the end.](locallibary_express_book_update_noerrors.png)
 
 > [!NOTE]
 > The other pages for updating objects can be implemented in much the same way. We've left that as a challenge.

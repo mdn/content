@@ -29,7 +29,7 @@ The **CSS display** module defines how the CSS formatting box tree is generated 
 - {{CSSxRef("&lt;display-internal&gt;")}}
 - {{CSSxRef("&lt;display-legacy&gt;")}}
 
-### Glossary and terms
+### Glossary terms and definitions
 
 - {{glossary("block/css", "Block")}}
 - [Block formatting context (BFC)](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context)
@@ -62,7 +62,7 @@ The **CSS display** module defines how the CSS formatting box tree is generated 
 - {{cssxref("overflow")}}
 - {{cssxref("transition-behavior")}}
 
-### Glossary and terms
+### Glossary terms and definitions
 
 - {{glossary("Flex")}}
 - {{glossary("Grid")}}

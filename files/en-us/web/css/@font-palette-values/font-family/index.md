@@ -6,7 +6,7 @@ browser-compat: css.at-rules.font-palette-values.font-family
 sidebar: cssref
 ---
 
-The [@font-palette-values](/en-US/docs/Web/CSS/@font-palette-values) [descriptor](/en-US/docs/Glossary/CSS_Descriptor) **`font-family`** is used to specify which font-family palette values are to be applied to. This need to match exactly the values used when setting the CSS [font-family](/en-US/docs/Web/CSS/font-family).
+The [@font-palette-values](/en-US/docs/Web/CSS/@font-palette-values) [descriptor](/en-US/docs/Glossary/CSS_Descriptor) **`font-family`** is used to specify which font-family palette values are to be applied to. This need to match exactly the values used when setting the CSS [font-family](/en-US/docs/Web/CSS/Reference/Properties/font-family).
 
 ## Syntax
 
@@ -22,7 +22,7 @@ Other palette values that follow apply only to the specified font family. You ca
 ### Values
 
 - `<family-name>`
-  - : Specifies the name of the [font-family](/en-US/docs/Web/CSS/font-family).
+  - : Specifies the name of the [font-family](/en-US/docs/Web/CSS/Reference/Properties/font-family).
 
 ## Formal definition
 
@@ -71,7 +71,7 @@ h2.extra-spicy {
 
 ### Using the same palette identifier for multiple font-families
 
-In this example, two [@font-palette-values](/en-US/docs/Web/CSS/@font-palette-values) at-rules are set for two font families, but both the at-rules use the same dashed-ident identifier, `--Dark-Mode`. This helps to set the [font-palette](/en-US/docs/Web/CSS/font-palette) property for multiple elements, `h1` and `h2` in this case, at the same time. This can be useful when you want to update font colors to match your site's branding.
+In this example, two [@font-palette-values](/en-US/docs/Web/CSS/@font-palette-values) at-rules are set for two font families, but both the at-rules use the same dashed-ident identifier, `--Dark-Mode`. This helps to set the [font-palette](/en-US/docs/Web/CSS/Reference/Properties/font-palette) property for multiple elements, `h1` and `h2` in this case, at the same time. This can be useful when you want to update font colors to match your site's branding.
 
 ```css
 @font-palette-values --Dark-Mode {

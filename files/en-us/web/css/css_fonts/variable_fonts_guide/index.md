@@ -362,7 +362,7 @@ angle.addEventListener("input", (e) => {
 
 Slant (represented by the `slnt` tag), or as it's often referred to, 'oblique' — is different from true italics in that it changes the angle of the letterforms but doesn't perform any kind of character substitution. It is also variable, in that it is expressed as a numeric range. This allows the font to be varied anywhere along the slant axis. The allowed range is from -90 to 90 degrees.
 
-The two properties that can control the slant are [`font-style`](/en-US/docs/Web/CSS/font-style) and [`font-variation-settings`](/en-US/docs/Web/CSS/font-variation-settings). The following two property declarations are the same:
+The two properties that can control the slant are [`font-style`](/en-US/docs/Web/CSS/Reference/Properties/font-style) and [`font-variation-settings`](/en-US/docs/Web/CSS/Reference/Properties/font-variation-settings). The following two property declarations are the same:
 
 ```plain
 font-style: oblique 14deg;
@@ -665,7 +665,7 @@ The basic syntax is the same, but the font technology can be specified, and allo
 }
 ```
 
-In this case, the `font-style: normal` declaration indicates that this font file should be used when `font-family` is set to `MyVariableFontName` and [`font-style`](/en-US/docs/Web/CSS/font-style) is set to `normal`. As an alternative, you could use `font-style: oblique 0deg` or `font-style: oblique 0deg 20deg` to indicate that the font has normal upright glyphs (indicated by `0deg`).
+In this case, the `font-style: normal` declaration indicates that this font file should be used when `font-family` is set to `MyVariableFontName` and [`font-style`](/en-US/docs/Web/CSS/Reference/Properties/font-style) is set to `normal`. As an alternative, you could use `font-style: oblique 0deg` or `font-style: oblique 0deg 20deg` to indicate that the font has normal upright glyphs (indicated by `0deg`).
 
 #### Example for a font that contains only italics and no upright characters
 
@@ -681,7 +681,7 @@ In this case, the `font-style: normal` declaration indicates that this font file
 }
 ```
 
-In this case, the `font-style: italic` declaration indicates that this font file should be used when `font-family` is set to `MyVariableFontName` and [`font-style`](/en-US/docs/Web/CSS/font-style) is set to `italic`. As an alternative, you could use `font-style: oblique 14deg` to indicate that the font has italic glyphs.
+In this case, the `font-style: italic` declaration indicates that this font file should be used when `font-family` is set to `MyVariableFontName` and [`font-style`](/en-US/docs/Web/CSS/Reference/Properties/font-style) is set to `italic`. As an alternative, you could use `font-style: oblique 14deg` to indicate that the font has italic glyphs.
 
 #### Example for a font that contains an oblique (slant) axis
 
@@ -697,7 +697,7 @@ In this case, the `font-style: italic` declaration indicates that this font file
 }
 ```
 
-In this case, the `oblique 0deg 12deg` value indicates that this font file should be used when in a style rule the `font-family` property is `MyVariableFontName` and the [font-style](/en-US/docs/Web/CSS/font-style) property is oblique with an angle between zero and 12 degrees inclusive.
+In this case, the `oblique 0deg 12deg` value indicates that this font file should be used when in a style rule the `font-family` property is `MyVariableFontName` and the [font-style](/en-US/docs/Web/CSS/Reference/Properties/font-style) property is oblique with an angle between zero and 12 degrees inclusive.
 
 > [!NOTE]
 > Not all browsers have implemented the full syntax for font format, so test carefully. All browsers that support variable fonts will still render them if you set the format to just the file format, rather than format-variations (i.e., `woff2` instead of `woff2-variations`), but it's best to use the proper syntax if possible.

@@ -40,6 +40,7 @@ createTexture(descriptor)
         > - The `texture-compression-astc` feature needs to be enabled to create two-dimensional (`dimension: "2d"`) ASTC compressed `GPUTexture`s: `astc-4x4-unorm`, `astc-4x4-unorm-srgb`, `astc-5x4-unorm`, `astc-5x4-unorm-srgb`, `astc-5x5-unorm`, `astc-5x5-unorm-srgb`, `astc-6x5-unorm`, `astc-6x5-unorm-srgb`, `astc-6x6-unorm`, `astc-6x6-unorm-srgb`, `astc-8x5-unorm`, `astc-8x5-unorm-srgb`, `astc-8x6-unorm`, `astc-8x6-unorm-srgb`, `astc-8x8-unorm`, `astc-8x8-unorm-srgb`, `astc-10x5-unorm`, `astc-10x5-unorm-srgb`, `astc-10x6-unorm`, `astc-10x6-unorm-srgb`, `astc-10x8-unorm`, `astc-10x8-unorm-srgb`, `astc-10x10-unorm`, `astc-10x10-unorm-srgb`, `astc-12x10-unorm`, `astc-12x10-unorm-srgb`, `astc-12x12-unorm`, and `astc-12x12-unorm-srgb` formats.
         > - The `texture-compression-astc` and `texture-compression-astc-sliced-3d` features need to be enabled to create three-dimensional BC compressed `GPUTexture`s (the same `format` values specified in the previous bullet, but with `dimension` set to `3d`).
         > - The `texture-compression-etc2` feature needs to be enabled to create two-dimensional ETC2 compressed `GPUTexture`s: `etc2-rgb8unorm`, `etc2-rgb8unorm-srgb`, `etc2-rgb8a1unorm`, `etc2-rgb8a1unorm-srgb`, `etc2-rgba8unorm`, `etc2-rgba8unorm-srgb`, `eac-r11unorm`, `eac-r11snorm`, `eac-rg11unorm`, and `eac-rg11snorm` formats.
+        > - See the [Tier 1 and Tier 2 texture formats](#tier_1_and_tier_2_texture_formats) section for more information about those texture format sets and the requirements to create them.
 
     - `label` {{optional_inline}}
       - : A string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
@@ -104,6 +105,78 @@ The following criteria must be met when calling **`createTexture()`**, otherwise
   - `dimension` is set to `"2d"`.
 - If `usage` includes the `GPUTextureUsage.STORAGE_BINDING` flag:
   - The specified `format` includes the `STORAGE_BINDING` capability (see the [Plain color formats](https://gpuweb.github.io/gpuweb/#plain-color-formats) table for reference).
+
+## Tier 1 and Tier 2 texture formats
+
+This section describes the WebGPU Tier1 and Tier2 texture formats.
+
+### Tier 1
+
+The Tier 1 set of texture formats is designed to allow developers to port existing content to the web without needing to rewrite it to use WebGPU's lower-level capabilities. To use this set, enable the `texture-formats-tier1` feature (see {{domxref("GPUSupportedFeatures")}}).
+
+Enabling this feature allows:
+
+- Using the following [`formats`](#format) with [`usages`](#usage) of `RENDER_ATTACHMENT` (including blendable and multisampling capabilities) and `STORAGE_BINDING` (with `read-only` and `write-only` [`access`](/en-US/docs/Web/API/GPUDevice/createBindGroupLayout#access)):
+  - `r16unorm`
+  - `r16snorm`
+  - `rg16unorm`
+  - `rg16snorm`
+  - `rgba16unorm`
+  - `rgba16snorm`
+- Using the following [`formats`](#format) with the `RENDER_ATTACHMENT` [`usage`](#usage) (including blendable and multisampling capabilities):
+  - `r8snorm`
+  - `rg8snorm`
+  - `rgba8snorm`
+- Using the following [`formats`](#format) with the `STORAGE_BINDING` [`usage`](#usage) (with `read-only` and `write-only` [`access`](/en-US/docs/Web/API/GPUDevice/createBindGroupLayout#access)):
+  - `r8unorm`
+  - `r8snorm`
+  - `r8uint`
+  - `r8sint`
+  - `rg8unorm`
+  - `rg8snorm`
+  - `rg8uint`
+  - `rg8sint`
+  - `r16uint`
+  - `r16sint`
+  - `r16float`
+  - `rg16uint`
+  - `rg16sint`
+  - `rg16float`
+  - `rgb10a2uint`
+  - `rgb10a2unorm`
+  - `rg11b10ufloat`
+- Using the following `GPUTexture` formats in the destination [`texture`](/en-US/docs/Web/API/GPUQueue/copyExternalImageToTexture#texture) of {{domxref("GPUQueue.copyExternalImageToTexture()")}} calls:
+  - `r16unorm`
+  - `rg16unorm`
+  - `rgba16unorm`
+
+> [!NOTE]
+> Enabling the `texture-formats-tier1` feature automatically enables the `rg11b10ufloat-renderable` feature, which allows the `rg11b10ufloat` texture to be used with the `RENDER_ATTACHMENT` usage, including blending and multisampling.
+
+### Tier2
+
+The Tier 2 set of texture formats supports storage texture formats that don't have support in "core" WebGPU, and are required for advanced usage. To use this set, enable the `texture-formats-tier2` feature (see {{domxref("GPUSupportedFeatures")}}).
+
+Enabling this feature allows using the following [`formats`](#format) with the `STORAGE_BINDING` [`usage`](#usage) (with `read-write` [`access`](/en-US/docs/Web/API/GPUDevice/createBindGroupLayout#access)):
+
+- `r8unorm`
+- `r8uint`
+- `r8sint`
+- `rgba8unorm`
+- `rgba8uint`
+- `rgba8sint`
+- `r16uint`
+- `r16sint`
+- `r16float`
+- `rgba16uint`
+- `rgba16sint`
+- `rgba16float`
+- `rgba32uint`
+- `rgba32sint`
+- `rgba32float`
+
+> [!NOTE]
+> Enabling the `texture-formats-tier2` feature automatically enables the `rg11b10ufloat-renderable` and `texture-formats-tier1` features.
 
 ## Examples
 

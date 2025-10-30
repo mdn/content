@@ -10,14 +10,14 @@ The **CSS syntax** module describes, in general terms, the structure and syntax 
 
 This module doesn't define any properties, [data types](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types), [functions](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions), or [at-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rule). Rather, it elaborates on how all of these features should be defined and how user agents should parse CSS.
 
-## At-rules
+## Reference
+
+### At-rules and descriptors
 
 - none
 
 > [!NOTE]
 > The module explicitly states that {{cssxref("@charset")}} is not an actual at-rule, but rather an unrecognized legacy rule that should be omitted when a stylesheet is grammar-checked. The only valid `@charset` usage is at the very beginning of a stylesheet, where it is interpreted as a special byte sequence stripped before processing the content.
-
-## Reference
 
 ### Key concepts
 
@@ -27,15 +27,15 @@ This module doesn't define any properties, [data types](/en-US/docs/Web/CSS/CSS_
 - [CSS declaration](/en-US/docs/Web/API/CSS_Object_Model/CSS_Declaration)
 - [CSS declaration block](/en-US/docs/Web/API/CSS_Object_Model/CSS_Declaration_Block)
 - [CSS function](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)
-- [invalid](/en-US/docs/Web/CSS/CSS_syntax/Error_handling)
-- [style rule](/en-US/docs/Web/API/CSSStyleRule)
+- [Invalid](/en-US/docs/Web/CSS/CSS_syntax/Error_handling)
+- [Style rule](/en-US/docs/Web/API/CSSStyleRule)
 
 ### Glossary terms
 
-- {{glossary("CSS_Descriptor", "CSS descriptor")}}
-- {{glossary("parse")}}
-- {{glossary("stylesheet")}}
-- {{glossary("whitespace")}}
+- {{glossary("CSS descriptor")}}
+- {{glossary("Parse")}}
+- {{glossary("Stylesheet")}}
+- {{glossary("Whitespace")}}
 
 ## Guides
 

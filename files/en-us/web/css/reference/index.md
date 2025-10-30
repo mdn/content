@@ -1,5 +1,6 @@
 ---
 title: CSS reference
+short-title: Reference
 slug: Web/CSS/Reference
 page-type: landing-page
 sidebar: cssref
@@ -161,8 +162,8 @@ Combinators are selectors that establish a relationship between two or more simp
 
 ## See also
 
-- [Mozilla CSS extensions](/en-US/docs/Web/CSS/Mozilla_Extensions) (prefixed with `-moz-`)
-- [WebKit CSS extensions](/en-US/docs/Web/CSS/WebKit_Extensions) (mostly prefixed with `-webkit-`)
+- [Mozilla CSS extensions](/en-US/docs/Web/CSS/Reference/Mozilla_extensions) (prefixed with `-moz-`)
+- [WebKit CSS extensions](/en-US/docs/Web/CSS/Reference/Webkit_extensions) (mostly prefixed with `-webkit-`)
 
 ## External Links
 
