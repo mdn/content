@@ -98,7 +98,7 @@ const sanitizer = new Sanitizer({
   elements: ["div", "script"],
 });
 
-// Allow <p> specifying an string
+// Allow <p> specifying a string
 sanitizer.allowElement("p");
 
 // Allow <span> specifying an object

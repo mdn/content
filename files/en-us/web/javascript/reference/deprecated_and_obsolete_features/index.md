@@ -227,7 +227,7 @@ Array comprehensions and generator comprehensions are removed.
 (for (x of iterable) for (y of iterable) x + y)
 ```
 
-Firefox, prior to version 26, implemented another iterator protocol that is similar to the standard [Iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols). An object is an legacy iterator when it implements a `next()` method, which produces a value on each call and throws a `StopIteration` object at the end of iteration. This legacy iterator protocol differs from the standard iterator protocol:
+Firefox, prior to version 26, implemented another iterator protocol that is similar to the standard [Iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols). An object is a legacy iterator when it implements a `next()` method, which produces a value on each call and throws a `StopIteration` object at the end of iteration. This legacy iterator protocol differs from the standard iterator protocol:
 
 - The value was returned directly as the return value of calls to `next()`, instead of the `value` property of the `IteratorResult` object.
 - Iteration termination was expressed by throwing a `StopIteration` object, instead of through the `done` property of the `IteratorResult` object.

@@ -146,7 +146,7 @@ Similarly, the [Match the username and password](#match_the_username_and_passwor
 
 ### Default pattern
 
-This code demonstrates that URL-parts that are not supplied in an URL or [inherited from a base URL](#inheritance_from_a_baseurl) default to the wildcard value.
+This code demonstrates that URL-parts that are not supplied in a URL or [inherited from a base URL](#inheritance_from_a_baseurl) default to the wildcard value.
 
 ```js
 console.log(new URLPattern());
