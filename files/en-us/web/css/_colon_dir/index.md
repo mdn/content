@@ -6,7 +6,7 @@ browser-compat: css.selectors.dir
 sidebar: cssref
 ---
 
-The **`:dir()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches elements based on the directionality of the text contained in them.
+The **`:dir()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) matches elements based on the directionality of the text contained in them.
 
 ```css
 /* Selects any element with right-to-left text */

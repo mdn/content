@@ -9,7 +9,7 @@ sidebar: cssref
 
 {{Non-standard_header}}
 
-The **`:-moz-locale-dir(rtl)`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) is a [Mozilla extension](/en-US/docs/Web/CSS/Reference/Mozilla_extensions) that matches an element if the user interface is being displayed right-to-left. This is determined by the preference `intl.uidirection.locale` (where `locale` is the current locale) being set to "rtl".
+The **`:-moz-locale-dir(rtl)`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) is a [Mozilla extension](/en-US/docs/Web/CSS/Reference/Mozilla_extensions) that matches an element if the user interface is being displayed right-to-left. This is determined by the preference `intl.uidirection.locale` (where `locale` is the current locale) being set to "rtl".
 
 > [!NOTE]
 > This selector is mainly used by extensions and themes to adapt the user interface based on the user's locale. (This can vary from window to window, and even from tab to tab.) It also allows extensions to work even when they don't support the user's default locale, since they can support both left-to-right and right-to-left layouts regardless of locale specifics.

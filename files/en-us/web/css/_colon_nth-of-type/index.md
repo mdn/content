@@ -6,7 +6,7 @@ browser-compat: css.selectors.nth-of-type
 sidebar: cssref
 ---
 
-The **`:nth-of-type()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches elements based on their position among siblings of the same type (tag name).
+The **`:nth-of-type()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) matches elements based on their position among siblings of the same type (tag name).
 
 {{InteractiveExample("CSS Demo: :nth-of-type", "tabbed-shorter")}}
 

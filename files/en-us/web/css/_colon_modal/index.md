@@ -6,7 +6,7 @@ browser-compat: css.selectors.modal
 sidebar: cssref
 ---
 
-The **`:modal`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches an element that is in a state in which it excludes all interaction with elements outside it until the interaction has been dismissed. Multiple elements can be selected by the `:modal` pseudo-class at the same time, but only one of them will be active and able to receive input.
+The **`:modal`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) matches an element that is in a state in which it excludes all interaction with elements outside it until the interaction has been dismissed. Multiple elements can be selected by the `:modal` pseudo-class at the same time, but only one of them will be active and able to receive input.
 
 {{InteractiveExample("CSS Demo: :modal", "tabbed-shorter")}}
 
@@ -159,4 +159,4 @@ favDialog.addEventListener("close", () => {
 
 - [`dialog`](/en-US/docs/Web/HTML/Reference/Elements/dialog) element
 - Other element display state pseudo-classes: {{CSSxRef(":fullscreen")}} and {{CSSxRef(":picture-in-picture")}}
-- Complete list of [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes)
+- Complete list of [pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes)

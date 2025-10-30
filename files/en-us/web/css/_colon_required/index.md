@@ -6,7 +6,7 @@ browser-compat: css.selectors.required
 sidebar: cssref
 ---
 
-The **`:required`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element that has the [`required`](/en-US/docs/Web/HTML/Reference/Elements/input#required) attribute set on it.
+The **`:required`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) represents any {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element that has the [`required`](/en-US/docs/Web/HTML/Reference/Elements/input#required) attribute set on it.
 
 {{InteractiveExample("CSS Demo: :required", "tabbed-standard")}}
 

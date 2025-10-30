@@ -9,7 +9,7 @@ sidebar: cssref
 
 {{Non-standard_header}}
 
-The **`:-moz-drag-over`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) is a [Mozilla extension](/en-US/docs/Web/CSS/Reference/Mozilla_extensions) that matches an element when a {{domxref("HTMLElement/dragover_event", "dragover")}} event is called on it.
+The **`:-moz-drag-over`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) is a [Mozilla extension](/en-US/docs/Web/CSS/Reference/Mozilla_extensions) that matches an element when a {{domxref("HTMLElement/dragover_event", "dragover")}} event is called on it.
 
 ## Syntax
 

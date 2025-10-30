@@ -100,7 +100,7 @@ The CSS selectors module also introduces the {{CSSXref(":blank")}}, {{CSSXref(":
 ## Terms
 
 - {{glossary("Pseudo-class")}} glossary term
-- [Functional pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes#functional_pseudo-classes)
+- [Functional pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes#functional_pseudo-classes)
 - [Combinators](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#combinators)
 - [Simple selector](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#simple_selector)
 - [Compound selector](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector)
@@ -116,7 +116,7 @@ The CSS selectors module also introduces the {{CSSXref(":blank")}}, {{CSSXref(":
 - [CSS selector structure](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure)
   - : Explanation of the structure of CSS selectors and the terminologies introduced in the CSS selectors module, ranging from "simple selector" to "forgiving relative selector list".
 
-- [Pseudo classes](/en-US/docs/Web/CSS/Pseudo-classes)
+- [Pseudo classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
   - : Lists the pseudo-classes, selectors that allow the selection of elements based on state information that is not contained in the document tree, defined in the various CSS modules and HTML.
 
 - [Using the `:target` pseudo-class in selectors](/en-US/docs/Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors)

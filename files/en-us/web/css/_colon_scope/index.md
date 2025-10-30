@@ -6,7 +6,7 @@ browser-compat: css.selectors.scope
 sidebar: cssref
 ---
 
-The **`:scope`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents elements that are a reference point, or scope, for selectors to match against.
+The **`:scope`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) represents elements that are a reference point, or scope, for selectors to match against.
 
 ```css
 /* Selects a scoped element */
@@ -154,7 +154,7 @@ The scope of `context` is the element with the [`id`](/en-US/docs/Web/HTML/Refer
 ## See also
 
 - The {{cssxref("@scope")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule)
-- The {{cssxref(":root")}} [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes)
+- The {{cssxref(":root")}} [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
 - [Selection and traversal on the DOM tree](/en-US/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree)
 - {{domxref("Element.querySelector()")}} and {{domxref("Element.querySelectorAll()")}}
 - {{domxref("Document.querySelector()")}} and {{domxref("Document.querySelectorAll()")}}

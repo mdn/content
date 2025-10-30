@@ -6,7 +6,7 @@ browser-compat: css.selectors.past
 sidebar: cssref
 ---
 
-The **`:past`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) selector is a time-dimensional pseudo-class that will match for any element which appears entirely before an element that matches {{cssxref(":current")}}. For example in a video with captions which are being displayed by [WebVTT](/en-US/docs/Web/API/WebVTT_API).
+The **`:past`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) selector is a time-dimensional pseudo-class that will match for any element which appears entirely before an element that matches {{cssxref(":current")}}. For example in a video with captions which are being displayed by [WebVTT](/en-US/docs/Web/API/WebVTT_API).
 
 ```css
 :past(p, span) {

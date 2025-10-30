@@ -10,7 +10,7 @@ sidebar: cssref
 
 {{Non-standard_header}}
 
-The **`:-moz-window-inactive`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) is a [Mozilla extension](/en-US/docs/Web/CSS/Reference/Mozilla_extensions) that matches any element while it's in an inactive window.
+The **`:-moz-window-inactive`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) is a [Mozilla extension](/en-US/docs/Web/CSS/Reference/Mozilla_extensions) that matches any element while it's in an inactive window.
 
 `:-moz-window-inactive` works in content HTML documents, too.
 

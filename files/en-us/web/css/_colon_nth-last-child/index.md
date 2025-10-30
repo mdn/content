@@ -6,7 +6,7 @@ browser-compat: css.selectors.nth-last-child
 sidebar: cssref
 ---
 
-The **`:nth-last-child()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches elements based on their position among a group of siblings, counting from the end.
+The **`:nth-last-child()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) matches elements based on their position among a group of siblings, counting from the end.
 
 {{InteractiveExample("CSS Demo: :nth-last-child", "tabbed-shorter")}}
 

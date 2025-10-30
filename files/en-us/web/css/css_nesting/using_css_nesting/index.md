@@ -18,7 +18,7 @@ You can use CSS nesting to create child selectors of a parent, which in turn can
 
 There are certain instances where using the `&` nesting selector can be necessary or helpful:
 
-- When joining selectors together, such as using [compound selectors](#compound_selectors) or [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes).
+- When joining selectors together, such as using [compound selectors](#compound_selectors) or [pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes).
 - For backwards compatibility.
 - As a visual indicator to aid with readability, when seeing the `&` nesting selector you know that CSS nesting is being used.
 

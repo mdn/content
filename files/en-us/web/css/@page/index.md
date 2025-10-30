@@ -362,7 +362,7 @@ section {
 
 ### @page pseudo-class examples
 
-See the various [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) of `@page` for examples.
+See the various [pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) of `@page` for examples.
 
 - {{Cssxref(":blank")}}
 - {{Cssxref(":first")}}

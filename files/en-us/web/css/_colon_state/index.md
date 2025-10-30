@@ -6,7 +6,7 @@ browser-compat: css.selectors.state
 sidebar: cssref
 ---
 
-The **`:state()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches [custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements) that have the specified custom state.
+The **`:state()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) matches [custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements) that have the specified custom state.
 
 ## Syntax
 
@@ -105,6 +105,6 @@ For a live example of this code in action, see the [Matching a custom state in a
 ## See also
 
 - [`CustomStateSet`](/en-US/docs/Web/API/CustomStateSet)
-- [Pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes)
+- [Pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
 - [Learn: Pseudo-classes and pseudo-elements](/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)
 - [Custom states and custom state pseudo-class CSS selectors](/en-US/docs/Web/API/Web_components/Using_custom_elements#custom_states_and_custom_state_pseudo-class_css_selectors) in [Using custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements)

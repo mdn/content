@@ -6,7 +6,7 @@ browser-compat: css.selectors.first-child
 sidebar: cssref
 ---
 
-The **`:first-child`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents the first element among a group of sibling elements.
+The **`:first-child`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) represents the first element among a group of sibling elements.
 
 {{InteractiveExample("CSS Demo: :first-child", "tabbed-shorter")}}
 

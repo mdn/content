@@ -6,7 +6,7 @@ browser-compat: css.selectors.read-write
 sidebar: cssref
 ---
 
-The **`:read-write`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element (such as `input` or `textarea`) that is editable by the user.
+The **`:read-write`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) represents an element (such as `input` or `textarea`) that is editable by the user.
 
 {{InteractiveExample("CSS Demo: :read-write", "tabbed-shorter")}}
 

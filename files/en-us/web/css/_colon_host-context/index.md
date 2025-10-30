@@ -10,7 +10,7 @@ sidebar: cssref
 
 {{deprecated_header}}
 
-The **`:host-context()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) allows you to style elements within a [shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) differently based on the selector of the shadow host (the element that has the shadow root) and its DOM ancestors.
+The **`:host-context()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) allows you to style elements within a [shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) differently based on the selector of the shadow host (the element that has the shadow root) and its DOM ancestors.
 
 Normally, elements within a shadow DOM are isolated from the DOM outside of it. The `:host-context()` allows you to "peek outside" of this Shadow DOM and check if any of the element's ancestor elements match a certain CSS selector. For example, applying a different text color to elements within a shadow root when a `.dark-theme` class is applied to `<body>`.
 
@@ -23,7 +23,7 @@ To limit the selector to only the `<greenhouse>` host directly or limit the sele
 > [!NOTE]
 > This has no effect when used outside a shadow DOM.
 
-The [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity) of `:host-context()` is that of a [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes), plus the specificity of the selector passed as the function's argument.
+The [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity) of `:host-context()` is that of a [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes), plus the specificity of the selector passed as the function's argument.
 
 {{InteractiveExample("CSS Demo: :host-context()", "tabbed-shorter")}}
 

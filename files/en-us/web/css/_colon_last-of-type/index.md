@@ -6,7 +6,7 @@ browser-compat: css.selectors.last-of-type
 sidebar: cssref
 ---
 
-The **`:last-of-type`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents the last element of its type (tag name) among a group of sibling elements.
+The **`:last-of-type`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) represents the last element of its type (tag name) among a group of sibling elements.
 
 {{InteractiveExample("CSS Demo: :last-of-type", "tabbed-shorter")}}
 

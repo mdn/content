@@ -6,7 +6,7 @@ browser-compat: css.selectors.last-child
 sidebar: cssref
 ---
 
-The **`:last-child`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents the last element among a group of sibling elements.
+The **`:last-child`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) represents the last element among a group of sibling elements.
 
 {{InteractiveExample("CSS Demo: :last-child", "tabbed-shorter")}}
 

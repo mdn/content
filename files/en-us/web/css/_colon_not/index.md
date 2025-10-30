@@ -6,7 +6,7 @@ browser-compat: css.selectors.not
 sidebar: cssref
 ---
 
-The **`:not()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents elements that do not match a list of selectors. Since it prevents specific items from being selected, it is known as the _negation pseudo-class_.
+The **`:not()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) represents elements that do not match a list of selectors. Since it prevents specific items from being selected, it is known as the _negation pseudo-class_.
 
 {{InteractiveExample("CSS Demo: :not", "tabbed-shorter")}}
 
@@ -179,7 +179,7 @@ If `:invalid-pseudo-class` was a valid selector, the first two rules above would
 
 ## See also
 
-- [Pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes)
+- [Pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
 - [Learn: Pseudo-classes and pseudo-elements](/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)
 - Other functional CSS pseudo-classes:
   - {{cssxref(":has", ":has()")}}

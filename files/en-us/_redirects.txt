@@ -517,7 +517,7 @@
 /en-US/docs/CSS/Other_Resources	/en-US/docs/Web/CSS
 /en-US/docs/CSS/Paged_Media	/en-US/docs/Web/CSS/CSS_paged_media
 /en-US/docs/CSS/Privacy_and_the_:visited_selector	/en-US/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector
-/en-US/docs/CSS/Pseudo-classes	/en-US/docs/Web/CSS/Pseudo-classes
+/en-US/docs/CSS/Pseudo-classes	/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes
 /en-US/docs/CSS/Pseudo-elements	/en-US/docs/Web/CSS/Pseudo-elements
 /en-US/docs/CSS/Replaced_element	/en-US/docs/Web/CSS/CSS_images/Replaced_element_properties
 /en-US/docs/CSS/Scaling_background_images	/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images
@@ -7813,10 +7813,10 @@
 /en-US/docs/Updating_web_applications_for_Firefox_3	/en-US/docs/Mozilla/Firefox/Releases/3/Updating_web_applications
 /en-US/docs/Useful_CSS_tips	/en-US/docs/Web/CSS
 /en-US/docs/Useful_CSS_tips/Color_and_Background	/en-US/docs/Web/CSS/color_value
-/en-US/docs/Useful_CSS_tips/Links	/en-US/docs/Web/CSS/Pseudo-classes
+/en-US/docs/Useful_CSS_tips/Links	/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes
 /en-US/docs/Useful_CSS_tips/Tables	/en-US/docs/Web/CSS/Reference/Properties/border-collapse
 /en-US/docs/Useful_CSS_tips:Color_and_Background	/en-US/docs/Web/CSS/color_value
-/en-US/docs/Useful_CSS_tips:Links	/en-US/docs/Web/CSS/Pseudo-classes
+/en-US/docs/Useful_CSS_tips:Links	/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes
 /en-US/docs/Useful_CSS_tips:Tables	/en-US/docs/Web/CSS/Reference/Properties/border-collapse
 /en-US/docs/User_Agent_Strings_Reference	/en-US/docs/Web/HTTP/Reference/Headers/User-Agent/Firefox
 /en-US/docs/Using_DOM_workers	/en-US/docs/Web/API/Web_Workers_API/Using_web_workers
@@ -12366,6 +12366,7 @@
 /en-US/docs/Web/CSS/Paged_Media	/en-US/docs/Web/CSS/CSS_paged_media
 /en-US/docs/Web/CSS/Privacy_and_the_:visited_selector	/en-US/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector
 /en-US/docs/Web/CSS/Properties	/en-US/docs/Web/CSS/Reference/Properties
+/en-US/docs/Web/CSS/Pseudo-classes	/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes
 /en-US/docs/Web/CSS/Reference/object-position	/en-US/docs/Web/CSS/Reference/Properties/object-position
 /en-US/docs/Web/CSS/Replaced_element	/en-US/docs/Web/CSS/CSS_images/Replaced_element_properties
 /en-US/docs/Web/CSS/Scaling_of_SVG_backgrounds	/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds

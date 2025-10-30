@@ -66,7 +66,7 @@ The resulting page content is styled like this:
   - [ID selectors](/en-US/docs/Web/CSS/ID_selectors) `#idname`
   - [Universal selectors](/en-US/docs/Web/CSS/Universal_selectors) `* ns|* *|*`
   - [Attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) `[attr=value]`
-  - [State selectors](/en-US/docs/Web/CSS/Pseudo-classes) `a:active, a:visited`
+  - [State selectors](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) `a:active, a:visited`
 
 - Grouping selectors
   - [Selector list](/en-US/docs/Web/CSS/Selector_list) `A, B`
@@ -78,5 +78,5 @@ The resulting page content is styled like this:
   - [Descendant selectors](/en-US/docs/Web/CSS/Descendant_combinator) `A B`
 
 - Pseudo
-  - [Pseudo classes](/en-US/docs/Web/CSS/Pseudo-classes) `:`
+  - [Pseudo classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) `:`
   - [Pseudo elements](/en-US/docs/Web/CSS/Pseudo-elements) `::`

@@ -132,7 +132,7 @@ Go back to our [first pseudo-class example](#basic_pseudo-class_example) and edi
 1. Add a rule that colors the paragraph text `blue` when they are hovered over.
 2. Add a rule that selects only the last paragraph inside the article, and gives it an `orange` `background-color`.
 
-You can find information on all the other available pseudo-classes on the MDN [Pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) reference page.
+You can find information on all the other available pseudo-classes on the MDN [Pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) reference page.
 
 ## What is a pseudo-element?
 
@@ -280,7 +280,7 @@ In the next article, we'll learn about combinators.
 
 ## See also
 
-- [Pseudo-classes reference](/en-US/docs/Web/CSS/Pseudo-classes)
+- [Pseudo-classes reference](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
 - [Pseudo-elements reference](/en-US/docs/Web/CSS/Pseudo-elements)
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Attribute_selectors", "Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics")}}

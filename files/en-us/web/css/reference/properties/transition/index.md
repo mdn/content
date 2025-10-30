@@ -60,7 +60,7 @@ transition: all 1s ease-out;
 }
 ```
 
-Transitions enable you to define the transition between two states of an element. Different states may be defined using [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) like {{cssxref(":hover")}} or {{cssxref(":active")}} or dynamically set using JavaScript.
+Transitions enable you to define the transition between two states of an element. Different states may be defined using [pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) like {{cssxref(":hover")}} or {{cssxref(":active")}} or dynamically set using JavaScript.
 
 ## Constituent properties
 

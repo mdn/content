@@ -6,7 +6,7 @@ browser-compat: css.selectors.popover-open
 sidebar: cssref
 ---
 
-The **`:popover-open`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents a {{domxref("Popover API", "popover", "", "nocode")}} element (i.e., one with a [`popover` attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/popover)) that is in the showing state. You can use this to apply style to popover elements only when they are shown.
+The **`:popover-open`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) represents a {{domxref("Popover API", "popover", "", "nocode")}} element (i.e., one with a [`popover` attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/popover)) that is in the showing state. You can use this to apply style to popover elements only when they are shown.
 
 ## Syntax
 

@@ -6,7 +6,7 @@ browser-compat: css.selectors.picture-in-picture
 sidebar: cssref
 ---
 
-The **`:picture-in-picture`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches the element which is currently in picture-in-picture mode.
+The **`:picture-in-picture`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) matches the element which is currently in picture-in-picture mode.
 
 ## Syntax
 

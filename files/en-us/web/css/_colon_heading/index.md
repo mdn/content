@@ -10,7 +10,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`:heading`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches all [heading elements](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) in a document. This allows you to style all headings at once, rather than matching and styling them individually.
+The **`:heading`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) matches all [heading elements](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) in a document. This allows you to style all headings at once, rather than matching and styling them individually.
 
 This pseudo-class matches only elements that by default are semantically recognized as headings (`<h1>` through `<h6>`). Elements with [`role="heading"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/heading_role) are not matched; you can select those by using the `[role="heading"]` [attribute selector](/en-US/docs/Web/CSS/Attribute_selectors).
 

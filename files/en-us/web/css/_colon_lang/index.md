@@ -6,7 +6,7 @@ browser-compat: css.selectors.lang
 sidebar: cssref
 ---
 
-The **`:lang()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches elements based on the language they are determined to be in.
+The **`:lang()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) matches elements based on the language they are determined to be in.
 
 {{InteractiveExample("CSS Demo: :lang()", "tabbed-shorter")}}
 

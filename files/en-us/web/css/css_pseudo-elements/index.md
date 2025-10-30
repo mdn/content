@@ -91,7 +91,7 @@ The specification also defines the `::details-content` and `::search-text` pseud
   - [Class selectors](/en-US/docs/Web/CSS/Class_selectors)
   - [ID selectors](/en-US/docs/Web/CSS/ID_selectors)
   - [Type selectors](/en-US/docs/Web/CSS/Type_selectors)
-  - [Pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes)
+  - [Pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
   - [Universal selectors](/en-US/docs/Web/CSS/Universal_selectors)
 
 - [`placeholder`](/en-US/docs/Web/HTML/Reference/Elements/input#placeholder) attribute of the `<input>` element

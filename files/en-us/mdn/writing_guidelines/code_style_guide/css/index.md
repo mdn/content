@@ -272,7 +272,7 @@ Use classes for styling, and reserve IDs for non-CSS purposes, such as for use i
 
 ### Old pseudo-element selectors
 
-The `::before`, `::after`, `::first-letter`, and `::first-line` [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) can also be written with single colons (like `:before`). Avoid the single-colon syntax because it is discouraged and could be misidentified as a [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) (`:hover`) by readers.
+The `::before`, `::after`, `::first-letter`, and `::first-line` [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) can also be written with single colons (like `:before`). Avoid the single-colon syntax because it is discouraged and could be misidentified as a [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) (`:hover`) by readers.
 
 ### Complex selector lists
 

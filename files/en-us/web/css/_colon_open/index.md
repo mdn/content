@@ -6,7 +6,7 @@ browser-compat: css.selectors.open
 sidebar: cssref
 ---
 
-The **`:open`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element that has open and closed states, only when it is currently in the open state.
+The **`:open`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) represents an element that has open and closed states, only when it is currently in the open state.
 
 ## Syntax
 

@@ -6,7 +6,7 @@ browser-compat: css.selectors.first
 sidebar: cssref
 ---
 
-The **`:first`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes), used with the {{cssxref("@page")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule), represents the first page of a printed document. (See {{cssxref(":first-child")}} for general first element of a node.)
+The **`:first`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes), used with the {{cssxref("@page")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule), represents the first page of a printed document. (See {{cssxref(":first-child")}} for general first element of a node.)
 
 ```css
 /* Selects the first page when printing */

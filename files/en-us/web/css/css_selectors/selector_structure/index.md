@@ -13,7 +13,7 @@ These selectors can be combined into a comma-separated [selector list](#selector
 
 ### Simple selector
 
-A **simple selector** is a selector with a single component, such as a single type selector, attribute selector, or pseudo-class, that's not used in combination with or contains any other selector component or combinator. A given element is said to match a simple selector when that simple selector accurately describes the element. Any selector that contains a single [basic selector](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#basic_selectors), [attribute selector](/en-US/docs/Web/CSS/Attribute_selectors), [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes), or [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) selector is a simple selector.
+A **simple selector** is a selector with a single component, such as a single type selector, attribute selector, or pseudo-class, that's not used in combination with or contains any other selector component or combinator. A given element is said to match a simple selector when that simple selector accurately describes the element. Any selector that contains a single [basic selector](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#basic_selectors), [attribute selector](/en-US/docs/Web/CSS/Attribute_selectors), [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes), or [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) selector is a simple selector.
 
 ```css
 #myId {

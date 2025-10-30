@@ -9,7 +9,7 @@ sidebar: cssref
 
 {{Non-standard_header}}
 
-The **`:-moz-suppressed`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) is a [Mozilla extension](/en-US/docs/Web/CSS/Reference/Mozilla_extensions) that matches elements representing images that were suppressed because loading images from the specified site has been blocked.
+The **`:-moz-suppressed`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) is a [Mozilla extension](/en-US/docs/Web/CSS/Reference/Mozilla_extensions) that matches elements representing images that were suppressed because loading images from the specified site has been blocked.
 
 > [!NOTE]
 > This selector is mainly intended to be used by theme developers.

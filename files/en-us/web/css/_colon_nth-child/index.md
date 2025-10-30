@@ -6,7 +6,7 @@ browser-compat: css.selectors.nth-child
 sidebar: cssref
 ---
 
-The **`:nth-child()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches elements based on the indexes of the elements in the child list of their parents. In other words, the `:nth-child()` selector selects child elements according to their position among all the sibling elements within a parent element.
+The **`:nth-child()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) matches elements based on the indexes of the elements in the child list of their parents. In other words, the `:nth-child()` selector selects child elements according to their position among all the sibling elements within a parent element.
 
 {{InteractiveExample("CSS Demo: :nth-child", "tabbed-shorter")}}
 
@@ -514,5 +514,5 @@ tbody tr :nth-child(3) {
 - {{ Cssxref(":nth-of-type", ":nth-of-type()") }}
 - {{ Cssxref(":nth-last-child", ":nth-last-child()") }}
 - {{ Cssxref(":has", ":has()") }}: pseudo-class for selecting parent element
-- [Tree-structural pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes#tree-structural_pseudo-classes)
+- [Tree-structural pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes#tree-structural_pseudo-classes)
 - [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module

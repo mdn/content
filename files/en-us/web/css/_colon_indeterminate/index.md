@@ -6,7 +6,7 @@ browser-compat: css.selectors.indeterminate
 sidebar: cssref
 ---
 
-The **`:indeterminate`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any form element whose state is indeterminate, such as checkboxes that have been set to an [`indeterminate`](/en-US/docs/Web/API/HTMLInputElement/indeterminate) state with JavaScript, radio buttons which are members of a group in which all radio buttons are unchecked, and {{HTMLElement("progress")}} elements with no `value` attribute.
+The **`:indeterminate`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) represents any form element whose state is indeterminate, such as checkboxes that have been set to an [`indeterminate`](/en-US/docs/Web/API/HTMLInputElement/indeterminate) state with JavaScript, radio buttons which are members of a group in which all radio buttons are unchecked, and {{HTMLElement("progress")}} elements with no `value` attribute.
 
 ```css
 /* Selects any <input> whose state is indeterminate */

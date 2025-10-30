@@ -1,6 +1,6 @@
 ---
 title: Pseudo-classes
-slug: Web/CSS/Pseudo-classes
+slug: Web/CSS/Reference/Selectors/Pseudo-classes
 page-type: landing-page
 spec-urls:
   - https://html.spec.whatwg.org/multipage/semantics-other.html#pseudo-classes

@@ -6,7 +6,7 @@ browser-compat: css.selectors.default
 sidebar: cssref
 ---
 
-The **`:default`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) selects form elements that are the default in a group of related elements.
+The **`:default`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) selects form elements that are the default in a group of related elements.
 
 {{InteractiveExample("CSS Demo: :default", "tabbed-shorter")}}
 

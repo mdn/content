@@ -34,7 +34,7 @@ selector {
 - [Attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors)
 - [Class selectors](/en-US/docs/Web/CSS/Class_selectors)
 - [ID selectors](/en-US/docs/Web/CSS/ID_selectors)
-- [Pseudo-class selectors](/en-US/docs/Web/CSS/Pseudo-classes)
+- [Pseudo-class selectors](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
 - [Pseudo-element selectors](/en-US/docs/Web/CSS/Pseudo-elements)
 - [Type selectors](/en-US/docs/Web/CSS/Type_selectors)
 - [Universal selectors](/en-US/docs/Web/CSS/Universal_selectors)
@@ -43,7 +43,7 @@ selector {
 
 {{Specifications}}
 
-Check the [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes#specifications) and [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements#specifications) pages for their respective specification tables.
+Check the [pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes#specifications) and [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements#specifications) pages for their respective specification tables.
 
 ## See also
 

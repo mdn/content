@@ -6,7 +6,7 @@ browser-compat: css.selectors.target
 sidebar: cssref
 ---
 
-The **`:target`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) selects the _target element of the document_. When the document is loaded, the target element is derived using the document's [URL fragment identifier](/en-US/docs/Web/URI/Reference/Fragment#fragment).
+The **`:target`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) selects the _target element of the document_. When the document is loaded, the target element is derived using the document's [URL fragment identifier](/en-US/docs/Web/URI/Reference/Fragment#fragment).
 
 ```css
 /* Selects document's target element */
