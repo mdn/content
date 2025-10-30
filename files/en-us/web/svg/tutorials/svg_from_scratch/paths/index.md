@@ -650,7 +650,7 @@ Arcs are an easy way to create pieces of circles or ellipses in drawings. For in
 If transitioning to SVG from {{HTMLElement("canvas")}}, arcs can be the hardest thing to learn, but are also much more powerful. Complete circles and ellipses are the only shapes that SVG arcs have trouble drawing. Because the start and end points for any path going around a circle are the same point, there are an infinite number of circles that could be chosen, and the actual path is undefined. It's possible to approximate them by making the start and end points of the path slightly askew, and then connecting them with another path segment. For example, it's possible to make a circle with an arc for each semi-circle. At that point, it's often easier to use a real {{SVGElement("circle")}} or {{SVGElement("ellipse")}} node instead. This interactive demo might help understand the concepts behind SVG arcs.
 
 ```html hidden live-sample___arcs_interactive
-<script src="https://cdn.rawgit.com/lingtalfi/simpledrag/master/simpledrag.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/lingtalfi/simpledrag@2.2.0/simpledrag.js"></script>
 <div class="ui">
   <div class="controls">
     Radius X: <input id="rx" type="range" min="0" max="500" /><br />
