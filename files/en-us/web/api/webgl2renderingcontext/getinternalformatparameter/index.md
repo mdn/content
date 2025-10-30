@@ -34,7 +34,7 @@ getInternalformatParameter(target, internalformat, pname)
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the type of information to query. Possible
     values:
     - `gl.SAMPLES`
-      - : Returns a {{jsxref("Int32Array")}} containing sample
+      - : Returns an {{jsxref("Int32Array")}} containing sample
         counts supported for `internalformat` in descending order.
 
 ### Return value

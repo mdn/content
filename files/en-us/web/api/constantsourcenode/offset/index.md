@@ -9,7 +9,7 @@ browser-compat: api.ConstantSourceNode.offset
 {{ APIRef("Web Audio API") }}
 
 The read-only `offset` property of the {{ domxref("ConstantSourceNode") }}
-interface returns a {{domxref("AudioParam")}} object indicating the numeric [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) value which is always returned
+interface returns an {{domxref("AudioParam")}} object indicating the numeric [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) value which is always returned
 by the source when asked for the next sample.
 
 > [!NOTE]

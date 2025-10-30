@@ -27,7 +27,7 @@ onerror = (message, source, lineno, colno, error) => { }
 
 ## Event type
 
-The event object is a {{domxref("ErrorEvent")}} instance if it was generated from a user interface element, or an {{domxref("Event")}} instance otherwise.
+The event object is an {{domxref("ErrorEvent")}} instance if it was generated from a user interface element, or an {{domxref("Event")}} instance otherwise.
 
 {{InheritanceDiagram("ErrorEvent")}}
 

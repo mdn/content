@@ -53,7 +53,7 @@ new URLPattern(url, baseURL, options)
 
 - `baseURL` {{Optional_Inline}}
   - : A string that provides an absolute URL from which [undefined less-specific URL-parts may be inherited](#inheritance_from_a_baseurl)
-    This must be set when `url` is a relative URL, and must not be set if `input` is used (`input.baseURL` may be used to provide inherited values for a `input`, but, unlike this property, is never required).
+    This must be set when `url` is a relative URL, and must not be set if `input` is used (`input.baseURL` may be used to provide inherited values for an `input`, but, unlike this property, is never required).
 
 - `options` {{Optional_Inline}}
   - : An object providing options for matching the given pattern.

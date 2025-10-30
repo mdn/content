@@ -32,7 +32,7 @@ Relative colors are created using the same [color functions](/en-US/docs/Web/CSS
 
 The browser converts the origin color to a syntax compatible with the color function then destructures it into component color channels (plus the `alpha` channel if the origin color has one). These are made available as appropriately-named values inside the color function — `r`, `g`, `b`, and `alpha` in the case of the `rgb()` function, `l`, `a`, `b`, and `alpha` in the case of the `lab()` function, `h`, `w`, `b`, and `alpha` in the case of `hwb()`, etc. — that can be used to calculate new output channel values.
 
-Let's look at relative color syntax in action. The below CSS is used to style two {{htmlelement("div")}} elements, one with a absolute background color — `red` — and one with a relative background color created with the `rgb()` function, based on the same `red` color value:
+Let's look at relative color syntax in action. The below CSS is used to style two {{htmlelement("div")}} elements, one with an absolute background color — `red` — and one with a relative background color created with the `rgb()` function, based on the same `red` color value:
 
 ```html hidden live-sample___simple-relative-color
 <div id="container">

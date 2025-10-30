@@ -39,7 +39,7 @@ The `DynamicsCompressorNode` interface provides a compression effect, which lowe
 ## Constructor
 
 - {{domxref("DynamicsCompressorNode.DynamicsCompressorNode", "DynamicsCompressorNode()")}}
-  - : Creates a new instance of an `DynamicsCompressorNode` object.
+  - : Creates a new instance of a `DynamicsCompressorNode` object.
 
 ## Instance properties
 

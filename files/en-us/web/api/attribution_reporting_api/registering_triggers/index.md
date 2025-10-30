@@ -24,7 +24,7 @@ However, what happens behind the scenes to register triggers, look for matches, 
 
 2. When the server receives a request that includes an `Attribution-Reporting-Eligible` header, it can include an {{httpheader("Attribution-Reporting-Register-Trigger")}} along with the response. Its value is a JSON string containing data that can be included in generated reports, such as the ID of the trigger, and priority and deduplication values.
 
-   The following example is intended to match with a [event-level report](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#event-level_reports) attribution source:
+   The following example is intended to match with an [event-level report](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#event-level_reports) attribution source:
 
    ```js
    res.set(

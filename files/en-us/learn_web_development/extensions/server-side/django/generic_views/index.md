@@ -549,7 +549,7 @@ This method is needed because you declare a `ForeignKey` (one-to many) field onl
 >
 > This tutorial hasn't covered **Pagination** (yet!), but since you can't use `sort_by()` and pass a parameter (the same with `filter()` described above) you will have to choose between three choices:
 >
-> 1. Add a `ordering` inside a `class Meta` declaration on your model.
+> 1. Add an `ordering` inside a `class Meta` declaration on your model.
 > 2. Add a `queryset` attribute in your custom class-based view, specifying an `order_by()`.
 > 3. Adding a `get_queryset` method to your custom class-based view and also specify the `order_by()`.
 >
