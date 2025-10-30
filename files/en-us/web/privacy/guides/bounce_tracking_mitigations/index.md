@@ -6,7 +6,7 @@ spec-urls: https://privacycg.github.io/nav-tracking-mitigations/#bounce-tracking
 sidebar: privacy
 ---
 
-**Bounce tracking mitigations** are a browser feature that enhances user privacy by protecting against **bounce tracking**. This article explains what bounce tracking is, and how bounce tracking mitigations work.
+**Bounce tracking mitigations** is a browser feature that enhances user privacy by protecting against **bounce tracking**. This article explains what bounce tracking is, and how bounce tracking mitigations work.
 
 ## Bounce tracking defined
 
@@ -28,14 +28,14 @@ In both instances, users may be unaware they have visited `tracker.example`. The
 
 ## How Bounce tracking mitigations work
 
-Bounce tracking mitigations work by identifying tracker sites via a heuristic and periodically deleting cookies and other state data (for example, [localStorage](/en-US/docs/Web/API/Web_Storage_API), [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), or [Cache API](/en-US/docs/Web/API/CacheStorage) data) associated with them. The feature avoids using block or allow lists to decide which websites are affected.
+Bounce tracking mitigations work by identifying tracker sites via a heuristic and periodically deleting cookies and other state data associated with them (for example, [localStorage](/en-US/docs/Web/API/Web_Storage_API), [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), [Cache API](/en-US/docs/Web/API/CacheStorage), or network state data). The feature avoids using block or allow lists to decide which websites are affected.
 
-It is critical that, while defending against bounce tracking, the browser doesn't interfere with legitimate, non-tracking redirection flow uses. For example, single sign-on (SSO), [identity federation](/en-US/docs/Web/API/FedCM_API#fedcm_concepts), and payment services generally involve redirecting the user to another site where they perform a function, updating state information as a result, then redirecting the user back to the original site.
+It is critical that, while defending against bounce tracking, the browser doesn't interfere with legitimate, non-tracking redirection flow uses. For example, single sign-on (SSO), [identity federation](/en-US/docs/Web/API/FedCM_API#fedcm_concepts), and payment services generally involve redirecting the user to another site where they perform an action, updating state information as a result, then redirecting the user back to the original site.
 
 The process works as follows:
 
-1. The browser monitors navigations and flags sites that are part of a "stateful bounce". This means a navigation redirected through the site, and the site accessed state during the redirection. This includes both server-initiated redirections and client-side redirections where JavaScript programmatically triggers a navigation.
-2. The browser periodically examines its list of flagged sites and checks to see if the user has actively used the site by interacting with it within the last 45 days. An interaction may include clicking a button, entering data into a form, or scrolling the site. The interaction can occur before, during, or after the bounce was detected.
+1. The browser monitors navigations and flags sites that are part of a "bounce", meaning sites through which a navigation was redirected. This includes both server-initiated redirections and client-side redirections where JavaScript programmatically triggers a navigation.
+2. The browser periodically examines its list of flagged sites and checks to see if the user has actively used the site by interacting with it within the last 45 days. Example interactions include clicking a button, entering data into a form, and scrolling the site. The interaction can occur before, during, or after the bounce was detected.
 3. If the site does not have any user interaction and third-party cookies are blocked, then its state will be deleted.
 
 The heuristic operates on sites defined by {{Glossary("eTLD", "eTLD+1")}}. As a result, both `foo.example.site` and `bar.example.site` are treated as `example.site`.
