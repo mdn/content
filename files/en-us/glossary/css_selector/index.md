@@ -79,4 +79,4 @@ The resulting page content is styled like this:
 
 - Pseudo
   - [Pseudo classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) `:`
-  - [Pseudo elements](/en-US/docs/Web/CSS/Pseudo-elements) `::`
+  - [Pseudo elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) `::`

@@ -6,7 +6,7 @@ browser-compat: css.selectors.view-transition-new
 sidebar: cssref
 ---
 
-The **`::view-transition-new()`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the "new" view state of a view transition — a snapshot live representation of the state after the transition.
+The **`::view-transition-new()`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) represents the "new" view state of a view transition — a snapshot live representation of the state after the transition.
 
 During a view transition, `::view-transition-new()` is included in the associated pseudo-element tree as explained in [The view transition pseudo-element tree](/en-US/docs/Web/API/View_Transition_API/Using#the_view_transition_pseudo-element_tree). It is only ever a child of a {{cssxref("::view-transition-image-pair()")}}, and never has any children.
 

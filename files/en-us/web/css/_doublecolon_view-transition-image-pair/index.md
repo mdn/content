@@ -6,7 +6,7 @@ browser-compat: css.selectors.view-transition-image-pair
 sidebar: cssref
 ---
 
-The **`::view-transition-image-pair()`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents a container for a [view transition's](/en-US/docs/Web/API/View_Transition_API) "old" and "new" view states — before and after the transition.
+The **`::view-transition-image-pair()`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) represents a container for a [view transition's](/en-US/docs/Web/API/View_Transition_API) "old" and "new" view states — before and after the transition.
 
 During a view transition, `::view-transition-image-pair()` is included in the associated pseudo-element tree as explained in [The view transition pseudo-element tree](/en-US/docs/Web/API/View_Transition_API/Using#the_view_transition_pseudo-element_tree). It is only ever a child of a {{cssxref("::view-transition-group()")}}. In terms of children, it can have a {{cssxref("::view-transition-new()")}} or a {{cssxref("::view-transition-old()")}}, or both.
 

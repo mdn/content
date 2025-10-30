@@ -1,6 +1,6 @@
 ---
 title: Pseudo-elements
-slug: Web/CSS/Pseudo-elements
+slug: Web/CSS/Reference/Selectors/Pseudo-elements
 page-type: landing-page
 spec-urls:
   - https://drafts.csswg.org/css-pseudo/

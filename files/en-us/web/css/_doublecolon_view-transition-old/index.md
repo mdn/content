@@ -6,7 +6,7 @@ browser-compat: css.selectors.view-transition-old
 sidebar: cssref
 ---
 
-The **`::view-transition-old()`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the "old" view state of a view transition — a static snapshot of the old view, before the transition.
+The **`::view-transition-old()`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) represents the "old" view state of a view transition — a static snapshot of the old view, before the transition.
 
 During a view transition, `::view-transition-old()` is included in the associated pseudo-element tree as explained in [The view transition pseudo-element tree](/en-US/docs/Web/API/View_Transition_API/Using#the_view_transition_pseudo-element_tree), provided there's an "old" view state to represent. It is only ever a child of a {{cssxref("::view-transition-image-pair()")}}, and never has any children.
 

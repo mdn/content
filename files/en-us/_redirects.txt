@@ -518,7 +518,7 @@
 /en-US/docs/CSS/Paged_Media	/en-US/docs/Web/CSS/CSS_paged_media
 /en-US/docs/CSS/Privacy_and_the_:visited_selector	/en-US/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector
 /en-US/docs/CSS/Pseudo-classes	/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes
-/en-US/docs/CSS/Pseudo-elements	/en-US/docs/Web/CSS/Pseudo-elements
+/en-US/docs/CSS/Pseudo-elements	/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements
 /en-US/docs/CSS/Replaced_element	/en-US/docs/Web/CSS/CSS_images/Replaced_element_properties
 /en-US/docs/CSS/Scaling_background_images	/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images
 /en-US/docs/CSS/Scaling_of_SVG_backgrounds	/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds
@@ -12367,6 +12367,7 @@
 /en-US/docs/Web/CSS/Privacy_and_the_:visited_selector	/en-US/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector
 /en-US/docs/Web/CSS/Properties	/en-US/docs/Web/CSS/Reference/Properties
 /en-US/docs/Web/CSS/Pseudo-classes	/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes
+/en-US/docs/Web/CSS/Pseudo-elements	/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements
 /en-US/docs/Web/CSS/Reference/object-position	/en-US/docs/Web/CSS/Reference/Properties/object-position
 /en-US/docs/Web/CSS/Replaced_element	/en-US/docs/Web/CSS/CSS_images/Replaced_element_properties
 /en-US/docs/Web/CSS/Scaling_of_SVG_backgrounds	/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds

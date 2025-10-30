@@ -6,7 +6,7 @@ browser-compat: css.selectors.details-content
 sidebar: cssref
 ---
 
-The **`::details-content`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the expandable/collapsible contents of a {{HTMLElement("details")}} element.
+The **`::details-content`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) represents the expandable/collapsible contents of a {{HTMLElement("details")}} element.
 
 {{InteractiveExample("CSS Demo: ::details-content", "tabbed-shorter")}}
 

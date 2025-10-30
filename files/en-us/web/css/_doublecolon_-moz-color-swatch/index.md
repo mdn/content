@@ -10,7 +10,7 @@ sidebar: cssref
 
 {{Non-standard_header}}
 
-The **`::-moz-color-swatch`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) is a [Mozilla extension](/en-US/docs/Web/CSS/Reference/Mozilla_extensions) that represents the color selected in an {{HTMLElement("input")}} of `type="color"`.
+The **`::-moz-color-swatch`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) is a [Mozilla extension](/en-US/docs/Web/CSS/Reference/Mozilla_extensions) that represents the color selected in an {{HTMLElement("input")}} of `type="color"`.
 
 > [!NOTE]
 > Using `::-moz-color-swatch` with anything but an `<input type="color">` doesn't match anything and has no effect.

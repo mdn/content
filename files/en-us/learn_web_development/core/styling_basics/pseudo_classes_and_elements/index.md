@@ -186,7 +186,7 @@ Edit the CSS of the previous example using the MDN playground:
 - A `1px solid black` `border`.
 - A `font-size` of `2rem`.
 
-You can find information on all the other available pseudo-elements on the MDN [Pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) reference page.
+You can find information on all the other available pseudo-elements on the MDN [Pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) reference page.
 
 ## Combining pseudo-classes and pseudo-elements
 
@@ -281,6 +281,6 @@ In the next article, we'll learn about combinators.
 ## See also
 
 - [Pseudo-classes reference](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
-- [Pseudo-elements reference](/en-US/docs/Web/CSS/Pseudo-elements)
+- [Pseudo-elements reference](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements)
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Attribute_selectors", "Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics")}}

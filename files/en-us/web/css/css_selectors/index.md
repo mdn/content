@@ -180,7 +180,7 @@ The CSS selectors module also introduces the {{CSSXref(":blank")}}, {{CSSXref(":
 - [CSS positioned layout module](/en-US/docs/Web/CSS/CSS_positioned_layout)
   - {{CSSxRef("::backdrop")}}
 
-- Other [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements)
+- Other [pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements)
   - {{CSSxRef("::cue")}}
 
 - {{CSSXref("@namespace")}} at-rule

@@ -27,7 +27,7 @@ By default, elements in a shadow tree can be styled only within their respective
 
 ## Guides
 
-- [CSS pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements)
+- [CSS pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements)
   - : Alphabetical list of pseudo-elements defined by all the CSS specifications and WebVTT
 
 - [Web components](/en-US/docs/Web/API/Web_components)

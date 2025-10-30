@@ -38,7 +38,7 @@ sidebar:
   - type: listSubPagesGrouped
     path: /Web/CSS
     tags: css-pseudo-element
-    link: /Web/CSS/Pseudo-elements
+    link: /Web/CSS/Reference/Selectors/Pseudo-elements
     title: Pseudo-elements
     details: closed
   - type: listSubPages

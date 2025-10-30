@@ -24,7 +24,7 @@ A pseudo-class consists of a colon (`:`) followed by the pseudo-class name (e.g.
 Pseudo-classes let you apply a style to an element not only in relation to the content of the document tree, but also in relation to external factors like the history of the navigator ({{CSSxRef(":visited")}}, for example), the status of its content (like {{CSSxRef(":checked")}} on certain form elements), or the position of the mouse (like {{CSSxRef(":hover")}}, which lets you know if the mouse is over an element or not).
 
 > [!NOTE]
-> In contrast to pseudo-classes, [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) can be used to style a _specific part_ of an element.
+> In contrast to pseudo-classes, [pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) can be used to style a _specific part_ of an element.
 
 ## Elemental pseudo-classes
 
@@ -407,4 +407,4 @@ W
 
 ## See also
 
-- [Pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements)
+- [Pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements)

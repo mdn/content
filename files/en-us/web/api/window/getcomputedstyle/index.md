@@ -118,7 +118,7 @@ para.textContent =
 
 ### Use with pseudo-elements
 
-`getComputedStyle()` can pull style info from [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements), such as `::after`, `::before`, `::marker`, or `::line-marker`.
+`getComputedStyle()` can pull style info from [pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements), such as `::after`, `::before`, `::marker`, or `::line-marker`.
 
 ```html
 <h3>Generated content</h3>

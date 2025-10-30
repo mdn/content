@@ -6,7 +6,7 @@ browser-compat: css.selectors.view-transition-group
 sidebar: cssref
 ---
 
-The **`::view-transition-group()`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents a single view transition snapshot group.
+The **`::view-transition-group()`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) represents a single view transition snapshot group.
 
 During a view transition, `::view-transition-group()` is included in the associated pseudo-element tree as explained in [The view transition pseudo-element tree](/en-US/docs/Web/API/View_Transition_API/Using#the_view_transition_pseudo-element_tree). It is only ever a child of {{cssxref("::view-transition")}}, and has a {{cssxref("::view-transition-image-pair()")}} as a child.
 

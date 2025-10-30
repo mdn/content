@@ -604,7 +604,7 @@ Non-standard, or vendor-prefixed properties include the following:
 ## See also
 
 - [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax/Syntax)
-- [Pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements)
+- [Pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements)
 - [Firefox (-moz-) vendor-prefixed CSS extensions](/en-US/docs/Web/CSS/Reference/Mozilla_extensions)
 - [WebKit (-webkit-) vendor-prefixed CSS extensions](/en-US/docs/Web/CSS/Reference/Webkit_extensions)
 - {{Glossary("Vendor prefix")}}

@@ -10,7 +10,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`::scroll-marker`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) can be generated inside any element and represents its scroll marker. All elements can have a `::scroll-marker` pseudo-element, which is placed into the {{cssxref("::scroll-marker-group")}} of the nearest {{glossary("scroll container")}} ancestor. A scroll marker behaves like an anchor ({{htmlelement("a")}} element) whose scroll target is the marker's originating element — and scrolls the scroll container to that element when activated.
+The **`::scroll-marker`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) can be generated inside any element and represents its scroll marker. All elements can have a `::scroll-marker` pseudo-element, which is placed into the {{cssxref("::scroll-marker-group")}} of the nearest {{glossary("scroll container")}} ancestor. A scroll marker behaves like an anchor ({{htmlelement("a")}} element) whose scroll target is the marker's originating element — and scrolls the scroll container to that element when activated.
 
 ## Syntax
 

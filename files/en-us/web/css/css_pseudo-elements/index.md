@@ -43,7 +43,7 @@ The specification also defines the `::details-content` and `::search-text` pseud
 
 ## Guides
 
-- [CSS pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements)
+- [CSS pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements)
   - : Alphabetical list of pseudo-elements defined by all the CSS specifications and WebVTT.
 
 - [Learn: Pseudo-classes and pseudo-elements](/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)

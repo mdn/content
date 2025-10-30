@@ -6,7 +6,7 @@ page-type: landing-page
 sidebar: cssref
 ---
 
-Use this **CSS reference** to browse an [alphabetical index](#index) of all of the standard [CSS](/en-US/docs/Web/CSS) properties, [pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes), [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements), [data types](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types), [functional notations](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) and [at-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rule). You can also browse [key CSS concepts](#concepts) and a list of [selectors organized by type](#selectors). Also included is a brief [DOM-CSS / CSSOM reference](#dom-css_cssom).
+Use this **CSS reference** to browse an [alphabetical index](#index) of all of the standard [CSS](/en-US/docs/Web/CSS) properties, [pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes), [pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements), [data types](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types), [functional notations](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) and [at-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rule). You can also browse [key CSS concepts](#concepts) and a list of [selectors organized by type](#selectors). Also included is a brief [DOM-CSS / CSSOM reference](#dom-css_cssom).
 
 ## Basic rule syntax
 
@@ -98,7 +98,7 @@ Combinators are selectors that establish a relationship between two or more simp
 
 - [Pseudo classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) `:`
   - : Specifies a special state of the selected element(s).
-- [Pseudo elements](/en-US/docs/Web/CSS/Pseudo-elements) `::`
+- [Pseudo elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) `::`
   - : Represents entities that are not included in HTML.
 
 > [!CALLOUT]

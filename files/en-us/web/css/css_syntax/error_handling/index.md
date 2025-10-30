@@ -68,7 +68,7 @@ Outside of these exceptions, a single invalid or unsupported selector in the sel
 
 #### `-webkit-` exception
 
-Due to legacy issues from the overuse of browser-specific prefixes in selectors and [property names (and values)](#vendor_prefixes), browsers avoid excessive invalidation of selector lists by treating all [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) that start with a case-insensitive `-webkit-` prefix and don't end with `()` as valid.
+Due to legacy issues from the overuse of browser-specific prefixes in selectors and [property names (and values)](#vendor_prefixes), browsers avoid excessive invalidation of selector lists by treating all [pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) that start with a case-insensitive `-webkit-` prefix and don't end with `()` as valid.
 
 This means that a pseudo-element like `::-webkit-works-only-in-samsung` will not invalidate a selector list, regardless of which browser the code is running in. In such cases, the pseudo-element may not be recognized or supported by the browser, but it will not cause the entire selector list and its associated style block to be ignored. On the other hand, an unknown prefixed selector with a function notation of `::-webkit-imaginary-function()` will invalidate the entire selector list, and the browser will ignore the entire selector block.
 
