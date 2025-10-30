@@ -58,6 +58,7 @@ To mitigate against this kind of attack you should use the [subresource integrit
 ### Using TrustedScriptURL
 
 To mitigate the risk of XSS, we should always assign `TrustedScriptURL` instances to the `src` property.
+We also need to do this if we're enforcing trusted types for other reasons and we want to allow some script sources that have been permitted (by `CSP: script-src`).
 
 Trusted types are not yet supported on all browsers, so first we define the [trusted types tinyfill](/en-US/docs/Web/API/Trusted_Types_API#trusted_types_tinyfill).
 This acts as a transparent replacement for the trusted types JavaScript API:
@@ -68,13 +69,21 @@ if (typeof trustedTypes === "undefined")
 ```
 
 Next we create a {{domxref("TrustedTypePolicy")}} that defines a {{domxref("TrustedTypePolicy/createScriptURL", "createScriptURL()")}} method for transforming input strings into {{domxref("TrustedScriptURL")}} instances.
-For the purpose of this example we'll just log the script URL:
+
+For the purpose of this example we'll assume that we want to allow a set URLs in the `scriptAllowList` array and log any other scripts.
+Note that if we were using a `CSP: script-src` we might just be able to pass through all URLs.
 
 ```js
+const scriptAllowList = [
+  /*Some list of allowed URLs */
+];
 const policy = trustedTypes.createPolicy("script-url-policy", {
   createScriptURL(input) {
-    console.log(`Log TT script-url-policy: ${input}`);
-    return input; // allow the script
+    if (scriptAllowList.includes(input)) {
+      return input; // allow the script
+    }
+    console.log(`Script not in scriptAllowList: ${input}`);
+    return ""; // Block the script
   },
 });
 ```
@@ -94,6 +103,7 @@ Then we use the `policy` object to create a `trustedScript` object from the pote
 
 ```js
 // The potentially malicious string
+// We won't be including untrustedScript in our scriptAllowList array
 const untrustedScript = "https://evil.example.com/naughty.js";
 
 // Create a TrustedScriptURL instance using the policy
