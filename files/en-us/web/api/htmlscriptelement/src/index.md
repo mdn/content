@@ -10,7 +10,7 @@ browser-compat: api.HTMLScriptElement.src
 
 > [!WARNING]
 > This property represents the URI of an external script loaded into the script element, which may be executable depending on the script {{domxref("HTMLScriptElement/type","type")}}.
-> APIs like this are known as [injection sinks](/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage), and are potentially a vector for [cross-site-scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) and other types of [website attacks](/en-US/docs/Web/Security/Attacks).
+> APIs like this are known as [injection sinks](/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage), and are potentially a vector for [cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks.
 >
 > You can mitigate this risk by having a [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) that restricts the locations from which scripts can be loaded, and by always assigning {{domxref("TrustedScriptURL")}} objects instead of strings and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types).
 > See [Security considerations](#security_considerations) for more information.
@@ -40,7 +40,7 @@ If set, scripts provided via the text properties {{domxref("HTMLScriptElement.te
 
 The `src` property is used to load and run external scripts.
 The fetched script is run in the context of the current page, and can hence do anything that your own website code can do (even if the URL is not same-origin with your site).
-If the input is provided by a user, this is a possible vector for [Cross-site-scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks.
+If the input is provided by a user, this is a possible vector for [cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks.
 Even if the resource is trusted by your website, it may still be compromised in a supply chain attack.
 
 A website should control what scripts that are allowed to run using a [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) with the [`script-src`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src) directive (or a fallback defined in [`default-src`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/default-src)).
