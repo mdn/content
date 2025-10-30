@@ -37,7 +37,7 @@ allowElement(element)
     - `attributes` {{optional_inline}}
       - : An array indicating the attributes to allow on this (allowed) element when sanitizing HTML.
 
-        Each attribute can be specified by name (a string), or as a object with the following properties:
+        Each attribute can be specified by name (a string), or as an object with the following properties:
         - `name`
           - : A string containing the name of the attribute.
         - `namespace` {{optional_inline}}
@@ -46,7 +46,7 @@ allowElement(element)
     - `removeAttributes` {{optional_inline}}
       - : An array indicating the attributes to remove on this (allowed) element when sanitizing HTML.
 
-        Each attribute can be specified by name (a string), or as a object with the following properties:
+        Each attribute can be specified by name (a string), or as an object with the following properties:
         - `name`
           - : A string containing the name of the attribute.
         - `namespace` {{optional_inline}}

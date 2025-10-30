@@ -45,7 +45,7 @@ The `clip-path` hides everything outside of the clipped region. The most basic c
 
 #### Visual box values
 
-This live example demonstrates the `clip-path` property's different visual box values on a element, while comparing it to the CSS `background-origin` property. We've applied a {{cssxref("border")}}, a {{cssxref("background-color")}}, a {{cssxref("background-image")}}, and {{cssxref("padding")}} to the {{htmlelement("blockquote")}}. Select a radio button to update the `--value` to a different `<geometry-box>` value, which updates the {{cssxref("background-origin")}} and the {{cssxref("clip-path")}} resolved values.
+This live example demonstrates the `clip-path` property's different visual box values on an element, while comparing it to the CSS `background-origin` property. We've applied a {{cssxref("border")}}, a {{cssxref("background-color")}}, a {{cssxref("background-image")}}, and {{cssxref("padding")}} to the {{htmlelement("blockquote")}}. Select a radio button to update the `--value` to a different `<geometry-box>` value, which updates the {{cssxref("background-origin")}} and the {{cssxref("clip-path")}} resolved values.
 
 ```css hidden
 body {

@@ -52,7 +52,7 @@ The following properties are common to all statistics objects. <!-- RTCStats -->
 ## Description
 
 The interface provides statistics about a video media source attached to one or more senders.
-The information includes a identifier for the associated `MediaStreamTrack`, along with the height and width of the last frame sent from the source, the number of frames sent from the source, and the frame rate.
+The information includes an identifier for the associated `MediaStreamTrack`, along with the height and width of the last frame sent from the source, the number of frames sent from the source, and the frame rate.
 
 ## Examples
 
