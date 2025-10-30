@@ -103,7 +103,7 @@ const trustedScriptURL = policy.createScriptURL(untrustedScript);
 el.src = trustedScriptURL;
 ```
 
-## Reading the `src` element
+### Reading the `src` element
 
 Assume the code is running on a website whose URL is `https://example.com`.
 
