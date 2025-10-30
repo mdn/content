@@ -65,7 +65,7 @@ Using CSS, you can control exactly how HTML elements look in the browser, presen
 CSS can be used for many purposes related to the look and feel of your web page, for example:
 
 - Text styling, including changing the [color](/en-US/docs/Web/CSS/color_value) and [size](/en-US/docs/Web/CSS/font-size) of headings and links.
-- Creating layouts, such as [grid layouts](/en-US/docs/Learn_web_development/Core/CSS_layout/Grids) or [multiple-column layouts](/en-US/docs/Web/CSS/Layout_cookbook/Column_layouts).
+- Creating layouts, such as [grid layouts](/en-US/docs/Learn_web_development/Core/CSS_layout/Grids) or [multiple-column layouts](/en-US/docs/Web/CSS/How_to/Layout_cookbook/Column_layouts).
 - Special effects such as [animation](/en-US/docs/Web/CSS/CSS_animations).
 
 The CSS language is organized into _modules_ that contain related functionality. For example, take a look at the MDN reference pages for the [Backgrounds and Borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders) module to find out what its purpose is and the properties and features it contains. In our module pages, you will also find links to _Specifications_ that define the technologies.

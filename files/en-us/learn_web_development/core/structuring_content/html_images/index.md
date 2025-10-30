@@ -125,6 +125,9 @@ Essentially, the key is to deliver a usable experience, even when the images can
 > [!NOTE]
 > See our guide to [Text Alternatives](/en-US/docs/Learn_web_development/Core/Accessibility/HTML#text_alternatives) and [An alt Decision Tree](https://www.w3.org/WAI/tutorials/images/decision-tree/) to learn how to use an `alt` attribute for images in various situations.
 
+> [!NOTE]
+> [HTML tags](https://scrimba.com/html-css-crash-course-c02l/~0d?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> from Scrimba is an interactive lesson providing information on images, and mini-challenges.
+
 ### Width and height
 
 You can use the [`width`](/en-US/docs/Web/HTML/Reference/Elements/img#width) and [`height`](/en-US/docs/Web/HTML/Reference/Elements/img#height) attributes to specify the width and height of your image. They are given as integers without a unit, and represent the image's width and height in pixels.

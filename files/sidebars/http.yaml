@@ -21,6 +21,7 @@ sidebar:
   - /Web/HTTP/Guides/Conditional_requests
   - /Web/HTTP/Guides/Range_requests
   - /Web/HTTP/Guides/Client_hints
+  - /Web/HTTP/Guides/User-agent_reduction
   - /Web/HTTP/Guides/Compression_dictionary_transport
   - /Web/HTTP/Guides/Network_Error_Logging
   - type: listSubPages

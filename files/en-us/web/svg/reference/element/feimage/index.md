@@ -17,7 +17,9 @@ The **`<feImage>`** [SVG](/en-US/docs/Web/SVG) filter primitive fetches image da
 - {{SVGAttr("crossorigin")}}
 - {{SVGAttr("fetchpriority")}} {{experimental_inline}}
 - {{SVGAttr("preserveAspectRatio")}}
+- {{SVGAttr("href")}}
 - {{SVGAttr("xlink:href")}} {{deprecated_inline}}
+- [Filter primitive attributes](/en-US/docs/Web/SVG/Reference/Attribute#filter_primitive_attributes_presentation_attributes): {{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}}, {{SVGAttr("height")}}, {{SVGAttr("result")}}
 
 ## DOM Interface
 

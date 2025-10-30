@@ -114,7 +114,7 @@ The `base-select` value, which is relevant only to the {{htmlelement("select")}}
 
 ### Prefixed non-standard values
 
-Before standardization, the prefixed **`-moz-appearance`** and **`-webkit-appearance`** properties allowed elements to be shown as widgets such as buttons or checkboxes. The following non-standard values may be encountered in legacy style sheets, most commonly as values of shadow DOM component [prefixed pseudo-elements](/en-US/docs/Web/CSS/WebKit_Extensions#pseudo-elements).
+Before standardization, the prefixed **`-moz-appearance`** and **`-webkit-appearance`** properties allowed elements to be shown as widgets such as buttons or checkboxes. The following non-standard values may be encountered in legacy style sheets, most commonly as values of shadow DOM component [prefixed pseudo-elements](/en-US/docs/Web/CSS/Reference/Webkit_extensions#pseudo-elements).
 
 <details>
 <summary>Non-standard values</summary>

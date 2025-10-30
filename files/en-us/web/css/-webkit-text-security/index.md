@@ -66,4 +66,4 @@ Not part of any standard.
 
 ## See also
 
-- [WebKit CSS extensions](/en-US/docs/Web/CSS/WebKit_Extensions)
+- [WebKit CSS extensions](/en-US/docs/Web/CSS/Reference/Webkit_extensions)

@@ -331,7 +331,7 @@ The XLink attributes can reference resources.
 All SVG presentation attributes can be used as CSS properties.
 
 > [!NOTE]
-> Whether these attributes are presentation attributes depends on the element on which they are set. For example, `x` is a presentation attribute for {{svgelem("circle")}}, but not for {{svgelem("tspan")}}; it's the coordinate of the starting point of the text baseline, or the x coordinate of each individual glyph if a list of values is provided.
+> Whether these attributes are presentation attributes depends on the element on which they are set. For example, `x` is a presentation attribute for {{svgelement("circle")}}, but not for {{svgelement("tspan")}}; it's the coordinate of the starting point of the text baseline, or the x coordinate of each individual glyph if a list of values is provided.
 
 - {{SVGAttr("alignment-baseline")}}
 - {{SVGAttr("baseline-shift")}}
@@ -427,70 +427,11 @@ All SVG presentation attributes can be used as CSS properties.
 
 ### Event attributes
 
-- **`onabort`**
-- **`onactivate`**
-- **`onbegin`**
-- **`oncancel`**
-- **`oncanplay`**
-- **`oncanplaythrough`**
-- **`onchange`**
-- **`onclick`**
-- **`onclose`**
-- **`oncuechange`**
-- **`ondblclick`**
-- **`ondrag`**
-- **`ondragend`**
-- **`ondragenter`**
-- **`ondragleave`**
-- **`ondragover`**
-- **`ondragstart`**
-- **`ondrop`**
-- **`ondurationchange`**
-- **`onemptied`**
-- **`onend`**
-- **`onended`**
-- **`onerror`**
-- **`onfocus`**
-- **`onfocusin`**
-- **`onfocusout`**
-- **`oninput`**
-- **`oninvalid`**
-- **`onkeydown`**
-- **`onkeypress`**
-- **`onkeyup`**
-- **`onload`**
-- **`onloadeddata`**
-- **`onloadedmetadata`**
-- **`onloadstart`**
-- **`onmousedown`**
-- **`onmouseenter`**
-- **`onmouseleave`**
-- **`onmousemove`**
-- **`onmouseout`**
-- **`onmouseover`**
-- **`onmouseup`**
-- **`onmousewheel`**
-- **`onpause`**
-- **`onplay`**
-- **`onplaying`**
-- **`onprogress`**
-- **`onratechange`**
-- **`onrepeat`**
-- **`onreset`**
-- **`onresize`**
-- **`onscroll`**
-- **`onseeked`**
-- **`onseeking`**
-- **`onselect`**
-- **`onshow`**
-- **`onstalled`**
-- **`onsubmit`**
-- **`onsuspend`**
-- **`ontimeupdate`**
-- **`ontoggle`**
-- **`onunload`**
-- **`onvolumechange`**
-- **`onwaiting`**
+All HTML and SVG elements support event handler attributes defined on the [`GlobalEventHandlers`](/en-US/docs/Web/HTML/Reference/Global_attributes#list_of_global_event_handler_attributes) mixin.
+
+While event handler attributes, like {{domxref("Element/blur_event", "onblur")}} and {{domxref("Element/drag_event", "ondrag")}}, apply to all elements, they may not have any effect. For example, the {{domxref("HTMLTrackElement/cuechange_event", "oncuechange")}} attribute can be applied to any element, but it is only relevant to the {{htmlelement("track")}} element.
+
+Event handler attributes are discouraged, considered unsafe, and may be blocked by [content security policies (CSP)](/en-US/docs/Web/Security/Practical_implementation_guides/CSP). Use the event name withing an {{domxref("EventTarget.addEventListener", "addEventListener()")}} method instead.
 
 ## See also
 

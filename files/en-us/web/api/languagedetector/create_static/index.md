@@ -30,7 +30,9 @@ LanguageDetector.create(options)
     - `monitor` {{optional_inline}}
       - : A callback function with a {{domxref("CreateMonitor")}} argument that enables monitoring download progress of the AI model.
     - `signal` {{optional_inline}}
-      - : An {{domxref("AbortSignal")}} object instance, which allows the `create()` operation to be aborted via the associated {{domxref("AbortController")}}.
+      - : An {{domxref("AbortSignal")}} object instance, which allows a `create()` operation to be aborted via the associated {{domxref("AbortController")}}. The exact effect is dependant on when {{domxref("AbortController.abort()")}} is called:
+        - If `abort()` is called before the `create()` promise resolves, the `create()` operation is cancelled.
+        - If `abort()` is called after the `create()` promise fulfills, it has the same effect as calling {{domxref("LanguageDetector.destroy()")}}: The resources assigned to the resulting `LanguageDetector` instance are released, and any ongoing and subsequent `LanguageDetector` method calls will reject with an `AbortError`.
 
 ### Return value
 

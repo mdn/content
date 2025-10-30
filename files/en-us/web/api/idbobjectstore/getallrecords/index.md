@@ -3,10 +3,12 @@ title: "IDBObjectStore: getAllRecords() method"
 short-title: getAllRecords()
 slug: Web/API/IDBObjectStore/getAllRecords
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.IDBObjectStore.getAllRecords
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }}{{SeeCompatTable}}
 
 The **`getAllRecords()`** method of the {{domxref("IDBObjectStore")}}
 interface retrieves all records (including primary keys and values) from the object store.
@@ -68,7 +70,7 @@ This method may raise a {{domxref("DOMException")}} of the following types:
 ## Examples
 
 ```js
-const query = IDBKeyRange.lowerBound("mykey", true);
+const query = IDBKeyRange.lowerBound("myKey", true);
 const objectStore = transaction.objectStore("contactsList");
 
 const myRecords = (objectStore.getAllRecords({

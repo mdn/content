@@ -88,7 +88,7 @@ The CSS selectors module also introduces the [column combinator](/en-US/docs/Web
 - {{CSSXref(":visited")}}
 - {{CSSXref(":volume-locked")}}
 - {{CSSXref(":where", ":where()")}}
-- [`:-webkit-` pseudo-classes](/en-US/docs/Web/CSS/WebKit_Extensions#pseudo-classes)
+- [`:-webkit-` pseudo-classes](/en-US/docs/Web/CSS/Reference/Webkit_extensions#pseudo-classes)
 - [Attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors)
 - [Class selector](/en-US/docs/Web/CSS/Class_selectors)
 - [ID selectors](/en-US/docs/Web/CSS/ID_selectors)
