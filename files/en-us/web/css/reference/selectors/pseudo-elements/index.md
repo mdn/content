@@ -288,7 +288,7 @@ When using the universal selector with highlight pseudo-elements, it prevents hi
 
 ## See also
 
-- [CSS pseudo-element](/en-US/docs/Web/CSS/CSS_pseudo-elements) module
+- [CSS pseudo-elements](/en-US/docs/Web/CSS/CSS_pseudo-elements) module
 - [Pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
 - [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module
 - [Learn: Pseudo-classes and pseudo-elements](/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)
