@@ -102,8 +102,8 @@ When the checkbox is checked, the `action` animation is applied to the element. 
 
 Try checking the checkbox. Nothing will happen during the half-second animation delay. Then, once the animation starts, the box will jump to a 45 degree rotation, and then it will take 3 seconds to rotate an additional 720 degrees, or two additional full rotations. After a total of three and half seconds, the animation concludes, and the `<div>` will return to its default non-rotated state.
 
->[!NOTE]
->The `animation-timeline` is reset to the default `auto` value by the {{cssxref("animation")}} shorthand property, but cannot be set using the shorthand. Therefore, when creating scroll-driven animations, always declare the `animation-timeline` after any `animation` shorthand declarations to achieve the desired effect.
+> [!NOTE]
+> The `animation-timeline` is reset to the default `auto` value by the {{cssxref("animation")}} shorthand property, but cannot be set using the shorthand. Therefore, when creating scroll-driven animations, always declare the `animation-timeline` after any `animation` shorthand declarations to achieve the desired effect.
 
 ### Scroll progress timelines
 
@@ -290,7 +290,7 @@ Scroll the element into view. Note that the element animates through the `@keyfr
 
 #### Anonymous view progress timeline: the `view()` function
 
-Alternatively, a {{cssxref("animation-timeline/view", "view()")}} function can be set as the value of the  `animation-timeline` property to specify that an element's animation timeline is an _anonymous view progress timeline_. This causes the element to be animated based on its position inside its nearest parent scroller.
+Alternatively, a {{cssxref("animation-timeline/view", "view()")}} function can be set as the value of the `animation-timeline` property to specify that an element's animation timeline is an _anonymous view progress timeline_. This causes the element to be animated based on its position inside its nearest parent scroller.
 
 The `view()` function is used to create a view timeline. You attach the timeline to the element you want to animate using the `animation-timeline` property. The function creates a view timeline for each element matched by the selector.
 
@@ -357,7 +357,6 @@ Setting `animation-timeline: none` disassociates the element from all animation 
 ```
 
 Because the [`animation` shorthand sets the `animation-timeline` to `auto`](#animation-timeline-and-the-animation-shorthand), use a selector with great enough specificity to ensure your `animation-timeline` isn't overridden by your `animation` shorthand declarations.
-
 
 ## See also
 
