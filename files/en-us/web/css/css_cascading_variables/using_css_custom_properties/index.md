@@ -6,11 +6,11 @@ page-type: guide
 sidebar: cssref
 ---
 
-**Custom properties** (sometimes referred to as **CSS variables** or **cascading variables**) are entities defined by CSS authors that represent specific values to be reused throughout a document. They are set using the {{cssxref("@property")}} at-rule or by [custom property syntax](/en-US/docs/Web/CSS/--*) (e.g., **`--primary-color: blue;`**). Custom properties are accessed using the CSS {{cssxref("var", "var()")}} function (e.g., **`color: var(--primary-color);`**).
+**Custom properties** (sometimes referred to as **CSS variables** or **cascading variables**) are entities defined by CSS authors that represent specific values to be reused throughout a document. They are set using the {{cssxref("@property")}} at-rule or by [custom property syntax](/en-US/docs/Web/CSS/Reference/Properties/--*) (e.g., **`--primary-color: blue;`**). Custom properties are accessed using the CSS {{cssxref("var", "var()")}} function (e.g., **`color: var(--primary-color);`**).
 
 Complex websites have very large amounts of CSS, and this often results in a lot of repeated CSS values. For example, it's common to see the same color used in hundreds of different places in stylesheets. Changing a color that's been duplicated in many places requires a search and replace across all rules and CSS files. Custom properties allow a value to be defined in one place, then referenced in multiple other places so that it's easier to work with. Another benefit is readability and semantics. For example, `--main-text-color` is easier to understand than the hexadecimal color `#00ff00`, especially if the color is used in different contexts.
 
-Custom properties defined [using two dashes (`--`)](/en-US/docs/Web/CSS/--*) are subject to the [cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade) and inherit their value from their parent.
+Custom properties defined [using two dashes (`--`)](/en-US/docs/Web/CSS/Reference/Properties/--*) are subject to the [cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade) and inherit their value from their parent.
 The {{cssxref("@property")}} at-rule allows more control over the custom property and lets you specify whether it inherits its value from a parent, what the initial value is, and the type constraints that should apply.
 
 > [!NOTE]
@@ -553,7 +553,7 @@ element.style.setProperty("--my-var", jsVar + 4);
 
 ## See also
 
-- [Custom property syntax](/en-US/docs/Web/CSS/--*)
+- [Custom property syntax](/en-US/docs/Web/CSS/Reference/Properties/--*)
 - {{cssxref("@property")}} at-rule
 - [`var()`](/en-US/docs/Web/CSS/var)
 - [CSS Properties and Values API](/en-US/docs/Web/API/CSS_Properties_and_Values_API)

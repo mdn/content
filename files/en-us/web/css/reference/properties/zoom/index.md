@@ -196,7 +196,7 @@ The final block just defines the content that will be zoomed.
 
 #### CSS
 
-In this first block, of CSS, we are setting the starting value for the `--zoom-level` using [custom properties](/en-US/docs/Web/CSS/--*) and then using that as the value for `zoom` on the content block.
+In this first block, of CSS, we are setting the starting value for the `--zoom-level` using [custom properties](/en-US/docs/Web/CSS/Reference/Properties/--*) and then using that as the value for `zoom` on the content block.
 
 ```css
 html {

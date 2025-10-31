@@ -7,7 +7,7 @@ sidebar: cssref
 ---
 
 The **CSS properties and values API** module defines a method for registering new CSS properties, defining the property's data type, inheritance behavior, and, optionally, an initial value.
-This API expands on [CSS custom properties for cascading variables](/en-US/docs/Web/CSS/CSS_cascading_variables) module, which allows authors to define custom properties in CSS using [two dash syntax (`--`)](/en-US/docs/Web/CSS/--*).
+This API expands on [CSS custom properties for cascading variables](/en-US/docs/Web/CSS/CSS_cascading_variables) module, which allows authors to define custom properties in CSS using [two dash syntax (`--`)](/en-US/docs/Web/CSS/Reference/Properties/--*).
 The CSS properties and values API is part of the [CSS Houdini](/en-US/docs/Web/API/Houdini_APIs) umbrella of APIs.
 
 Custom properties let you reuse values across a project to simplify complex or repetitive stylesheets.
@@ -16,7 +16,7 @@ The CSS properties and values API expands on that module, enabling adding metada
 
 Whether registered with CSS or JavaScript, setting metadata on custom properties provides for an expected data type that the browser can use depending on the context, defines an initial value, and lets you control inheritance.
 
-CSS properties and values API custom property registration is more robust than the more basic CSS cascading variable custom property declaration, especially when it comes to transitioning and animating values as browsers can interpolate between custom values of this type, whereas properties that use [two dash syntax (`--`)](/en-US/docs/Web/CSS/--*) behave more like a string substitution.
+CSS properties and values API custom property registration is more robust than the more basic CSS cascading variable custom property declaration, especially when it comes to transitioning and animating values as browsers can interpolate between custom values of this type, whereas properties that use [two dash syntax (`--`)](/en-US/docs/Web/CSS/Reference/Properties/--*) behave more like a string substitution.
 
 ## Properties and values API in action
 

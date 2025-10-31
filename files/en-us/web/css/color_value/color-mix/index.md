@@ -178,7 +178,7 @@ This example demonstrates using the `color-mix()` function to add transparency t
 
 #### CSS
 
-The `color-mix()` function is used to add increasing percentages of `red`, which is declared using a [custom property](/en-US/docs/Web/CSS/--*) named `--base`, defined on the {{cssxref(":root")}}. The 6th {{htmlelement("li")}} doesn't include a percentage, creating an output color that is half as opaque as the `--base` color. We include a striped background on the {{htmlelement("ul")}} to make the transparency visible.
+The `color-mix()` function is used to add increasing percentages of `red`, which is declared using a [custom property](/en-US/docs/Web/CSS/Reference/Properties/--*) named `--base`, defined on the {{cssxref(":root")}}. The 6th {{htmlelement("li")}} doesn't include a percentage, creating an output color that is half as opaque as the `--base` color. We include a striped background on the {{htmlelement("ul")}} to make the transparency visible.
 
 ```css hidden
 ul {
@@ -293,7 +293,7 @@ For more information, see {{cssxref("&lt;hue-interpolation-method&gt;")}}.
 
 The `shorter hue` interpolation method takes the shorter route around the color wheel, whereas the `longer hue` interpolation method takes the longer route. With `increasing hue`, the route starts with increasing values. With `decreasing hue` the value decreases. We mix two {{cssxref("named-color")}} values to create a series of `lch()` intermediary colors that differ based on which route is taken around the color wheel. The mixed colors include `red`, `blue`, and `yellow` with LCH hue values of approximately 41deg, 301deg, and 100deg, respectively.
 
-To reduce code redundancy, we used [CSS custom properties](/en-US/docs/Web/CSS/--*) for both colors and for the interpolation method, setting different values on each {{htmlelement("ul")}}.
+To reduce code redundancy, we used [CSS custom properties](/en-US/docs/Web/CSS/Reference/Properties/--*) for both colors and for the interpolation method, setting different values on each {{htmlelement("ul")}}.
 
 ```css hidden
 body {
