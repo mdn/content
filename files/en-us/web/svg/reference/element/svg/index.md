@@ -8,8 +8,7 @@ sidebar: svgref
 
 The **`<svg>`** [SVG](/en-US/docs/Web/SVG) element is a container that defines a new coordinate system and [viewport](/en-US/docs/Web/SVG/Reference/Attribute/viewBox). It is used as the outermost element of SVG documents, but it can also be used to embed an SVG fragment inside an SVG or HTML document.
 
-> [!NOTE]
-> The `svg` element is not required to put svg files in the document. Instead, the `img` element can be used for that. The `src` attribute of the `img` element will be equal to the path of the file.
+This element is for creating _new_ SVG documents. If you have an existing SVG document to embed in another document via URL, use {{HTMLElement("img")}}, {{HTMLElement("object")}}, or {{SVGElement("image")}}.
 
 > [!NOTE]
 > The `xmlns` attribute is only required on the outermost `svg` element of _SVG documents_, or inside HTML documents with XML serialization. It is unnecessary for inner `svg` elements or inside HTML documents with HTML serialization.
