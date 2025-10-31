@@ -180,7 +180,7 @@ Finally, the left and right position options are given a narrower {{cssxref("wid
 }
 ```
 
-The infobox is given fixed positioning, a {{cssxref("position-anchor")}} property that references the anchor's `anchor-name` to associate the two together, and it is tethered to the anchor's top edge using an {{cssxref("position-area")}}. We also give it a fixed {{cssxref("width")}} and some bottom {{cssxref("margin")}}. The custom position options are then referenced in the {{cssxref("position-try-fallbacks")}} property to prevent the positioned element from overflowing, or being scrolled out of view, when the anchor gets near the edge of the viewport.
+The infobox is given fixed positioning, a {{cssxref("position-anchor")}} property that references the anchor's `anchor-name` to associate the two together, and it is tethered to the anchor's top edge using a {{cssxref("position-area")}}. We also give it a fixed {{cssxref("width")}} and some bottom {{cssxref("margin")}}. The custom position options are then referenced in the {{cssxref("position-try-fallbacks")}} property to prevent the positioned element from overflowing, or being scrolled out of view, when the anchor gets near the edge of the viewport.
 
 ```css
 .infobox {

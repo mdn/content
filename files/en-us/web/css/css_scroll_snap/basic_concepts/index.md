@@ -282,7 +282,7 @@ body {
 
 {{EmbedLiveSample("scroll-padding", "", "350px")}}
 
-This is potentially useful if you have a [fixed](/en-US/docs/Web/CSS/position#fixed_positioning) element such as a navigation bar, which could end up overlapping scrolled content. By using `scroll-padding`, you can reserve space for the fixed element, as shown in the example below, where the `<h1>` element remains on screen as the content scrolls beneath it. Without padding, the heading would overlap some of the content when snapping happens.
+This is potentially useful if you have a [fixed](/en-US/docs/Web/CSS/Reference/Properties/position#fixed_positioning) element such as a navigation bar, which could end up overlapping scrolled content. By using `scroll-padding`, you can reserve space for the fixed element, as shown in the example below, where the `<h1>` element remains on screen as the content scrolls beneath it. Without padding, the heading would overlap some of the content when snapping happens.
 
 ```html hidden live-sample___scroll-padding-sticky
 <article class="scroller">

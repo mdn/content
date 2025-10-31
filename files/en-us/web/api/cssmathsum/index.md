@@ -33,7 +33,7 @@ _The interface may also inherit methods from its parent interface, {{domxref("CS
 
 ## Examples
 
-We create an element with a [`width`](/en-US/docs/Web/CSS/width) determined using a [`calc()`](/en-US/docs/Web/CSS/calc) function, then {{domxref("console/log_static", "console.log()")}} the `operator` and `values`, and dig into the values a bit.
+We create an element with a [`width`](/en-US/docs/Web/CSS/Reference/Properties/width) determined using a [`calc()`](/en-US/docs/Web/CSS/calc) function, then {{domxref("console/log_static", "console.log()")}} the `operator` and `values`, and dig into the values a bit.
 
 ```html
 <div>has width</div>

@@ -255,7 +255,7 @@ The CSS overflow level 4 module also introduces the `block-ellipsis`, `continue`
   - : Learn what overflow is and how to manage it.
 - [Creating CSS carousels](/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels)
   - : Create pure-CSS carousel UI features using scroll buttons, scroll markers, and generated columns.
-- [Creating a named scroll progress timeline animation](/en-US/docs/Web/CSS/scroll-timeline-name#creating_a_named_scroll_progress_timeline_animation)
+- [Creating a named scroll progress timeline animation](/en-US/docs/Web/CSS/Reference/Properties/scroll-timeline-name#creating_a_named_scroll_progress_timeline_animation)
   - : The CSS scroll timeline {{cssxref('scroll-timeline-name')}} and {{cssxref('scroll-timeline-axis')}} properties, along with the {{cssxref('scroll-timeline')}} shorthand, create animations tied to the scroll offset of a scroll container.
 
 ## Related concepts

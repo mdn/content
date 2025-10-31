@@ -16,7 +16,7 @@ The **`type()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_v
 - The {{cssxref("@function")}} at-rule, to specify the permitted data types for [CSS custom function](/en-US/docs/Web/CSS/CSS_custom_functions_and_mixins/Using_custom_functions) parameters and results.
 
 > [!NOTE]
-> The {{cssxref("@property")}} at-rule {{cssxref("@property/syntax", "syntax")}} descriptor value uses the same `<syntax>` to define the permitted data types for registered [custom properties](/en-US/docs/Web/CSS/--*), however, this always takes the form of a string.
+> The {{cssxref("@property")}} at-rule {{cssxref("@property/syntax", "syntax")}} descriptor value uses the same `<syntax>` to define the permitted data types for registered [custom properties](/en-US/docs/Web/CSS/Reference/Properties/--*), however, this always takes the form of a string.
 
 ## Syntax
 

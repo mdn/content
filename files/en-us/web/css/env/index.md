@@ -50,7 +50,7 @@ The function accepts an `<environment-variable>` as its first argument. This is 
 
 The second argument, if provided, is the fallback value, which is used if the environment variable referenced in the first argument is not supported or doesn't exist. The fallback can be another environment variable, even with its own fallback.
 
-The syntax of the fallback is similar to the fallback syntax of the {{cssxref("var()")}} function used to insert [CSS custom properties](/en-US/docs/Web/CSS/--*) in that it allows for multiple commas. Anything between the first comma and the end of the function is considered the fallback value. However, if the `env()` function is used within a property value or descriptor that doesn't include commas, a fallback value that includes commas will not be valid.
+The syntax of the fallback is similar to the fallback syntax of the {{cssxref("var()")}} function used to insert [CSS custom properties](/en-US/docs/Web/CSS/Reference/Properties/--*) in that it allows for multiple commas. Anything between the first comma and the end of the function is considered the fallback value. However, if the `env()` function is used within a property value or descriptor that doesn't include commas, a fallback value that includes commas will not be valid.
 
 A property or descriptor containing a syntactically valid `env()` function is assumed to be valid at parse time, when the browser first reads and interprets the downloaded CSS text. It is only syntax-checked at compute time, after each `env()` function has been substituted with its browser-provided value (or the fallback value if the environment variable passed as the first parameter is not a recognized environment variable name). If the value is invalid and no fallback is provided, the property or descriptor containing the `env()` function is [invalid at computed-value time](/en-US/docs/Web/CSS/CSS_syntax/Error_handling#invalid_custom_properties).
 
@@ -141,7 +141,7 @@ button {
 }
 ```
 
-We set [`position: sticky`](/en-US/docs/Web/CSS/position#sticky) to stick the footer to the bottom of the viewport. We then use the {{cssxref("padding")}} shorthand to add padding to the footer. We include the value of the `safe-area-inset-bottom` environment value to an initial `1em` of bottom padding. A larger black area will display on devices that have a positive value for this variable, ensuring the buttons in the footer are never obscured.
+We set [`position: sticky`](/en-US/docs/Web/CSS/Reference/Properties/position#sticky) to stick the footer to the bottom of the viewport. We then use the {{cssxref("padding")}} shorthand to add padding to the footer. We include the value of the `safe-area-inset-bottom` environment value to an initial `1em` of bottom padding. A larger black area will display on devices that have a positive value for this variable, ensuring the buttons in the footer are never obscured.
 
 ```css
 footer {
@@ -243,7 +243,7 @@ The [Viewport segment API demo](https://mdn.github.io/dom-examples/viewport-segm
 - [CSS environment variables](/en-US/docs/Web/CSS/CSS_environment_variables) module
 - {{CSSxRef("var")}}
 - [CSS custom properties for cascading variables](/en-US/docs/Web/CSS/CSS_cascading_variables) module
-- [Custom properties (`--*`): CSS variables](/en-US/docs/Web/CSS/--*)
+- [Custom properties (`--*`): CSS variables](/en-US/docs/Web/CSS/Reference/Properties/--*)
 - [Using CSS custom properties (variables)](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)
 - [Viewport Segments API](/en-US/docs/Web/API/Viewport_segments_API)
 - [Customize the window controls overlay of your PWA's title bar](https://web.dev/articles/window-controls-overlay)

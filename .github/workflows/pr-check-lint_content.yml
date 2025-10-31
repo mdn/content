@@ -2,8 +2,6 @@ name: Lint and review content files
 
 on:
   pull_request_target:
-    branches:
-      - main
     paths:
       - .nvmrc
       - "*.md"

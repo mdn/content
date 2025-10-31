@@ -67,7 +67,7 @@ fields:
 - `module`: A [`WebAssembly.Module`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Module) object representing the compiled WebAssembly module. This `Module` can be instantiated again, shared via {{domxref("Worker.postMessage", "postMessage()")}}, or [cached](/en-US/docs/Web/Progressive_web_apps/Guides/Caching).
 - `instance`: A [`WebAssembly.Instance`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Instance) object that contains all the [Exported WebAssembly functions](/en-US/docs/WebAssembly/Guides/Exported_functions).
 
-If a `module` is passed, returns a `Promise` that resolves to an [`WebAssembly.Instance`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Instance) object.
+If a `module` is passed, returns a `Promise` that resolves to a [`WebAssembly.Instance`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Instance) object.
 
 ### Exceptions
 

@@ -144,4 +144,4 @@ section {
 - [`prefers-contrast`](/en-US/docs/Web/CSS/@media/prefers-contrast) {{cssxref("@media")}} feature
 - [`contrast()`](/en-US/docs/Web/CSS/filter-function/contrast)
 - [WCAG: color contrast](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)
-- [CSS custom properties](/en-US/docs/Web/CSS/--*) and {{cssxref("var")}}
+- [CSS custom properties](/en-US/docs/Web/CSS/Reference/Properties/--*) and {{cssxref("var")}}

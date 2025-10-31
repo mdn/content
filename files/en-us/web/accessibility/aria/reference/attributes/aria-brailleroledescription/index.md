@@ -33,7 +33,7 @@ The `aria-brailleroledescription` attribute should only be used to clarify the p
 
 As the `aria-brailleroledescription` attribute overrides how assistive technologies localize and express the name of a role in braille, inappropriate values will prevent users from understanding and interacting with an element on braille interfaces.
 
-Only use `aria-brailleroledescription` if [`aria-roledescription`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-roledescription) is present. However, if the `aria-roledescription` value works in braille, the braille version of the attribute is not needed. In general, `aria-brailleroledescription` should only be used in the rare case when a `aria-roledescription` is too verbose for braille.
+Only use `aria-brailleroledescription` if [`aria-roledescription`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-roledescription) is present. However, if the `aria-roledescription` value works in braille, the braille version of the attribute is not needed. In general, `aria-brailleroledescription` should only be used in the rare case when an `aria-roledescription` is too verbose for braille.
 
 A few rules to remember:
 

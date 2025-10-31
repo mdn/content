@@ -12,7 +12,7 @@ The **`baseline-shift`** attribute allows repositioning of the dominant-baseline
 > As a presentation attribute, `baseline-shift` also has a CSS property counterpart: {{cssxref("baseline-shift")}}. When both are specified, the CSS property takes priority.
 
 > [!NOTE]
-> This property is going to be deprecated and authors are advised to use [`vertical-align`](/en-US/docs/Web/CSS/vertical-align) instead.
+> This property is going to be deprecated and authors are advised to use [`vertical-align`](/en-US/docs/Web/CSS/Reference/Properties/vertical-align) instead.
 
 You can use this attribute with the following SVG elements:
 

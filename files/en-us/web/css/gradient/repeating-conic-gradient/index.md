@@ -58,7 +58,7 @@ repeating-conic-gradient(in hsl shorter hue, red, blue 90deg, green 180deg)
 - {{CSSxRef("&lt;angle&gt;")}}
   - : Preceded by the `from` keyterm, and taking an angle as its value, defines the gradient rotation in clockwise direction.
 - `<position>`
-  - : Using the same length, order and keyterm values as the [background-position](/en-US/docs/Web/CSS/background-position) property, the position defines center of the gradient. If omitted, the default value is `center`, meaning the gradient will be centered.
+  - : Using the same length, order and keyterm values as the [background-position](/en-US/docs/Web/CSS/Reference/Properties/background-position) property, the position defines center of the gradient. If omitted, the default value is `center`, meaning the gradient will be centered.
 - `<angular-color-stop>`
   - : A color-stop's {{CSSxRef("&lt;color&gt;")}} value, followed by one or two optional stop positions, (an {{CSSxRef("&lt;angle&gt;")}} along the gradient's circumference axis). The last color stop minus the first color-stop angle defines the size of the repeating gradient.
 - `<color-hint>`

@@ -63,7 +63,7 @@ You can specify the optional `form` and `submitter` arguments when creating the 
 <form id="form">
   <input type="text" name="text1" value="foo" />
   <input type="text" name="text2" value="bar" />
-  <input type="text" name="text2" value="baz" />
+  <input type="text" name="text3" value="baz" />
   <input type="checkbox" name="check" checked disabled />
   <button name="intent" value="save">Save</button>
   <button name="intent" value="saveAsCopy">Save As Copy</button>

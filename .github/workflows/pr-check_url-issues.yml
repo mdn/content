@@ -2,8 +2,6 @@ name: Check URL issues
 
 on:
   pull_request:
-    branches:
-      - main
     paths:
       - "files/**/*.md"
 

@@ -40,7 +40,7 @@ _No changes._
 - Percentage values of {{cssxref("column-gap")}} are now supported in [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout) ([Firefox bug 1398537](https://bugzil.la/1398537)).
 - The CSS {{cssxref(":host")}} pseudo-class is now supported; this selects a custom element from inside its shadow DOM ([Firefox bug 992245](https://bugzil.la/992245)).
 - {{cssxref("overflow")}} now accepts two-value syntax ([Firefox bug 1453148](https://bugzil.la/1453148)).
-- Flex items that are sized according to their content are now sized using `max-content`, not `fit-content` ([Firefox bug 1282821](https://bugzil.la/1282821)). See the [`width` value definitions](/en-US/docs/Web/CSS/width#values) for more details of these values.
+- Flex items that are sized according to their content are now sized using `max-content`, not `fit-content` ([Firefox bug 1282821](https://bugzil.la/1282821)). See the [`width` value definitions](/en-US/docs/Web/CSS/Reference/Properties/width#values) for more details of these values.
 - {{cssxref("font-weight")}}, {{cssxref("font-stretch")}} and {{cssxref("font-style")}} now support additional values as defined by [CSS Fonts level 4](https://drafts.csswg.org/css-fonts-4/) ([Firefox bug 1436048](https://bugzil.la/1436048)):
   - {{cssxref("font-weight")}} now accepts a floating-point value between 1 and 1000 inclusive.
   - {{cssxref("font-stretch")}} now accepts percentage values.

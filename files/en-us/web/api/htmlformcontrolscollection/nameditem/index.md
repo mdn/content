@@ -32,7 +32,7 @@ namedItem(name)
 
 ### Return value
 
-- A {{domxref("RadioNodeList")}}, {{domxref("Element")}}, or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
+A {{domxref("RadioNodeList")}}, {{domxref("Element")}}, or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
 
 ## Examples
 

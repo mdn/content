@@ -324,7 +324,7 @@ Many of the grid examples you will find online make the assumption that you will
 
 ### Media object example
 
-As an example, we can create a "[media object](/en-US/docs/Web/CSS/Layout_cookbook/Media_objects)". This is a component with space for an image or other media on one side and content on the other. The image might be displayed on the right or left of the box.
+As an example, we can create a "[media object](/en-US/docs/Web/CSS/How_to/Layout_cookbook/Media_objects)". This is a component with space for an image or other media on one side and content on the other. The image might be displayed on the right or left of the box.
 
 ![Images showing an example media object design](4_media_objects.png)
 

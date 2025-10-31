@@ -67,7 +67,7 @@ In [browsers that support `computedStyleMap()`](/en-US/docs/Web/API/Element/comp
 
 {{EmbedLiveSample("Getting_all_the_properties_and_values", 120, 300)}}
 
-Did you realize how many default CSS properties a link had? Update the first `document.querySelector` call to select the {{htmlelement("p")}} rather than the {{htmlelement("a")}}. You'll notice a difference in the [`margin-top`](/en-US/docs/Web/CSS/margin-top) and [`margin-bottom`](/en-US/docs/Web/CSS/margin-bottom) default computed values.
+Did you realize how many default CSS properties a link had? Update the first `document.querySelector` call to select the {{htmlelement("p")}} rather than the {{htmlelement("a")}}. You'll notice a difference in the [`margin-top`](/en-US/docs/Web/CSS/Reference/Properties/margin-top) and [`margin-bottom`](/en-US/docs/Web/CSS/Reference/Properties/margin-bottom) default computed values.
 
 ### .get() method / custom properties
 
@@ -234,7 +234,7 @@ There are other types available:
 - An [`<image>`](/en-US/docs/Web/CSS/image) will return a {{domxref('CSSImageValue')}}.
 - A [`<color>`](/en-US/docs/Web/CSS/color_value) would return a {{domxref('CSSStyleValue')}}.
 - A {{cssxref('transform')}} returns a `CSSTransformValue`.
-- A [custom property](/en-US/docs/Web/CSS/--*) returns a {{domxref('CSSUnparsedValue')}}.
+- A [custom property](/en-US/docs/Web/CSS/Reference/Properties/--*) returns a {{domxref('CSSUnparsedValue')}}.
 
 You can use a `CSSUnitValue` or `CSSKeywordValue` to create other objects.
 

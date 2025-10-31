@@ -203,7 +203,7 @@ article p:first-child::first-line {
 
 ## Generating content with ::before and ::after
 
-There are a couple of special pseudo-elements, which are used along with the [`content`](/en-US/docs/Web/CSS/content) property to insert content into your document using CSS. This technique is called **generated content**.
+There are a couple of special pseudo-elements, which are used along with the [`content`](/en-US/docs/Web/CSS/Reference/Properties/content) property to insert content into your document using CSS. This technique is called **generated content**.
 
 You could use it to insert a string of text, such as in the example below. We've also given the generated content a `yellow` background color so it can be easily distinguished from the paragraph content.
 

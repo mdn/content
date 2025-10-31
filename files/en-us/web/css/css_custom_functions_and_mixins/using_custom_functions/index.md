@@ -5,7 +5,7 @@ page-type: guide
 sidebar: cssref
 ---
 
-CSS custom functions enable you to create reusable blocks of CSS code that can accept arguments, contain complex logic (defined using features such as CSS {{cssxref("if()")}} functions and {{cssxref("@media")}} at-rules), and return values based on that logic. They work similarly to [CSS custom properties](/en-US/docs/Web/CSS/--*), but provide more flexibility.
+CSS custom functions enable you to create reusable blocks of CSS code that can accept arguments, contain complex logic (defined using features such as CSS {{cssxref("if()")}} functions and {{cssxref("@media")}} at-rules), and return values based on that logic. They work similarly to [CSS custom properties](/en-US/docs/Web/CSS/Reference/Properties/--*), but provide more flexibility.
 
 In this article, we'll show you how to use them and present some real-world examples.
 
@@ -287,7 +287,7 @@ With this function defined, we can now create variants of this background value 
 
 ## See also
 
-- [CSS custom properties](/en-US/docs/Web/CSS/--*)
+- [CSS custom properties](/en-US/docs/Web/CSS/Reference/Properties/--*)
 - [CSS custom functions and mixins](/en-US/docs/Web/CSS/CSS_custom_functions_and_mixins) module
 - [Custom CSS Functions in the Browser](https://www.oddbird.net/2025/04/11/custom-functions/) by Miriam Suzanne (2025)
 - [CSS @function + CSS if()](https://www.bram.us/2025/02/18/css-at-function-and-css-if/) by Bramus (2025)

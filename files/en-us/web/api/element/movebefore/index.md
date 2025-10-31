@@ -168,7 +168,6 @@ The HTML features an {{htmlelement("article")}} element containing two {{htmlele
         height="200"
         src="https://www.youtube.com/embed/XvoENpR9cCQ?si=o2i6MvxugD-O5yyv"
         title="YouTube video player"
-        frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin"
         allowfullscreen></iframe>
@@ -196,6 +195,10 @@ We use [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) for the layout to 
 
 #wrapper {
   margin-bottom: 10px;
+}
+
+iframe {
+  border: none;
 }
 
 section {

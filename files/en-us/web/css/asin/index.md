@@ -29,7 +29,7 @@ The `asin(number)` function accepts only one value as its parameter.
 
 ### Return value
 
-The inverse sine of an `number` will always return an {{cssxref("&lt;angle&gt;")}} between `-90deg` and `90deg`.
+The inverse sine of a `number` will always return an {{cssxref("&lt;angle&gt;")}} between `-90deg` and `90deg`.
 
 - If `number` is less than `-1` or greater than `1`, the result is `NaN`.
 - If `number` is `0⁻`, the result is `0⁻`.

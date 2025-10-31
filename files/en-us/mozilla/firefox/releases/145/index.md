@@ -36,11 +36,7 @@ Firefox 145 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 - The {{cssxref("text-autospace")}} property is now supported, allowing automatic spacing adjustments between characters from different scripts ([Firefox bug 1981086](https://bugzil.la/1981086), [Firefox bug 1869577](https://bugzil.la/1869577)).
 
-- The legacy [`-webkit-fill-available`](/en-US/docs/Web/CSS/Reference/Webkit_extensions#-webkit-prefixed_property_values) keyword is now supported as a value for the CSS {{cssxref("width")}} and {{cssxref("height")}} properties to improve web compatibility.
-  This keyword is an alias for the recently-standardized `stretch` keyword (i.e., [`width: stretch`](/en-US/docs/Web/CSS/width#stretch) and [`height: stretch`](/en-US/docs/Web/CSS/height#stretch)), which isn't yet supported in Firefox.
-  ([Firefox bug 1988938](https://bugzil.la/1988938), [Firefox bug 1789477](https://bugzil.la/1789477)).
-
-- The [`math`](/en-US/docs/Web/CSS/font-family#math) generic font family is now supported as a value of the `font-family` property, allowing mathematical expressions to use appropriate fonts.
+- The [`math`](/en-US/docs/Web/CSS/Reference/Properties/font-family#math) generic font family is now supported as a value of the `font-family` property, allowing mathematical expressions to use appropriate fonts.
   ([Firefox bug 1788937](https://bugzil.la/1788937)).
 
 <!-- #### Removals -->
@@ -112,3 +108,12 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
   Nightly builds now support [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) by default, which allows you to tether elements together.
   The anchor-positioned elements can then have their size and position set relative to the size and location of the anchor elements to which they are bound.
   (General: [Firefox bug 1988224](https://bugzil.la/1988224), `position-area`: [Firefox bug 1924086](https://bugzil.la/1924086)).
+
+- **CSS module scripts:** (Nightly) and `layout.css.module-scripts.enabled`.
+
+  CSS module scripts are now supported, allowing a stylesheet to be loaded into a script as a {{domxref("CSSStyleSheet")}} instance using the [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) keyword and the [`type` import attribute](/en-US/docs/Web/JavaScript/Reference/Statements/import/with) set to `type="css"`. ([Firefox bug 1720570](https://bugzil.la/1720570)).
+
+- **text-decoration-trim**: `layout.css.text-decoration-trim.enabled`
+
+  The CSS `text-decoration-trim` property is supported but currently disabled by default.
+  It allows you to specify {{cssxref("text-decoration")}} start and end offsets to shorten, lengthen, or shift the position of text decorations with respect to the text ([Firefox bug 1979915](https://bugzil.la/1979915)).

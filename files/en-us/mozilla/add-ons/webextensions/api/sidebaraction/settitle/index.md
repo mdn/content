@@ -10,7 +10,7 @@ Sets the sidebar's title. The title is displayed anywhere the browser lists avai
 
 ## Types of title
 
-Your extension should specify an title for the sidebar in the [sidebar_action](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) manifest key. This is called the _"manifest title"_. If you don't specify the manifest title, it will default to the extension name.
+Your extension should specify a title for the sidebar in the [sidebar_action](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) manifest key. This is called the _"manifest title"_. If you don't specify the manifest title, it will default to the extension name.
 
 If you set a new title using `setTitle()`, and include the `tabId` option, then the title is set only for the given tab. This title is called the _"tab-specific title"_.
 

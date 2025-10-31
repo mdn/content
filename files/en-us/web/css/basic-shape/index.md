@@ -68,7 +68,7 @@ The `<basic-shape>` data type is used to create basic shapes including rectangle
 The parameters common across the syntax of some basic shape functions include:
 
 - `round <'border-radius'>`
-  - : Defines rounded corners for [rectangles by container insets](#syntax_for_rectangles_by_container_insets), [rectangles by distance](#syntax_for_rectangles_by_distance), and [rectangles with dimensions](#syntax_for_rectangles_with_dimensions) using the same syntax as the CSS [`border-radius`](/en-US/docs/Web/CSS/border-radius) shorthand property.
+  - : Defines rounded corners for [rectangles by container insets](#syntax_for_rectangles_by_container_insets), [rectangles by distance](#syntax_for_rectangles_by_distance), and [rectangles with dimensions](#syntax_for_rectangles_with_dimensions) using the same syntax as the CSS [`border-radius`](/en-US/docs/Web/CSS/Reference/Properties/border-radius) shorthand property.
 
 - `<shape-radius>`
   - : Defines the radius for a [circle](#syntax_for_circles) or an [ellipse](#syntax_for_ellipses). Valid values include {{cssxref("length")}}, {{cssxref("percentage")}}, `closest-side` (the default), and `farthest-side`. Negative values are invalid.
@@ -184,7 +184,7 @@ The values in a `<basic-shape>` function are computed as specified, with the fol
 
 - For any omitted values, their defaults are used.
 - A {{cssxref("position_value", "&lt;position&gt;")}} value in `circle()` or `ellipse()` is computed as a pair of offsets from the top left corner of the reference box: the first offset is horizontal, and the second is vertical. Each offset is specified as a {{cssxref("length-percentage")}} value.
-- A [`<border-radius>`](/en-US/docs/Web/CSS/border-radius) value in `inset()` is expanded into a list of eight values, each either a {{cssxref("length")}} or a {{cssxref("percentage")}}.
+- A [`<border-radius>`](/en-US/docs/Web/CSS/Reference/Properties/border-radius) value in `inset()` is expanded into a list of eight values, each either a {{cssxref("length")}} or a {{cssxref("percentage")}}.
 - {{cssxref("basic-shape/inset","inset()")}}, {{cssxref("basic-shape/rect","rect()")}}, and {{cssxref("basic-shape/xywh","xywh()")}} functions compute to the equivalent `inset()` function.
 
 ### Interpolation of basic shapes

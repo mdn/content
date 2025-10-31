@@ -361,4 +361,4 @@ selectElem.addEventListener("change", () => {
 Description to various blend modes on other website:
 
 - [Blend modes](https://en.wikipedia.org/wiki/Blend_modes) on Wikipedia
-- [Blending modes in Adobe Photoshop](https://helpx.adobe.com/photoshop/using/blending-modes.html) by Adobe
+- [Blending modes in Adobe Photoshop](https://helpx.adobe.com/photoshop/desktop/repair-retouch/adjust-light-tone/blending-mode-descriptions.html) by Adobe

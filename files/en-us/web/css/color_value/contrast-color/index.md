@@ -116,7 +116,7 @@ Try changing the browser or OS dark mode setting to see the effect.
 ```html hidden
 <pre>
     Q: How does CSS transform light into energy?
-  Ans: Using <a href="/en-US/docs/Web/CSS/font-synthesis">font-synthesis</a>.
+  Ans: Using <a href="/en-US/docs/Web/CSS/Reference/Properties/font-synthesis">font-synthesis</a>.
 </pre>
 ```
 
@@ -181,7 +181,7 @@ pre {
 
 - [`contrast()`](/en-US/docs/Web/CSS/filter-function/contrast)
 - [CSS colors](/en-US/docs/Web/CSS/CSS_colors) module
-- [CSS custom properties](/en-US/docs/Web/CSS/--*) and {{cssxref("var")}}
+- [CSS custom properties](/en-US/docs/Web/CSS/Reference/Properties/--*) and {{cssxref("var")}}
 - [`prefers-contrast`](/en-US/docs/Web/CSS/@media/prefers-contrast) and [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) {{cssxref("@media")}} features
 - [WCAG: color contrast](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)
 - [How to have the browser pick a contrasting color in CSS](https://webkit.org/blog/16929/contrast-color/) on webkit.org (2025)

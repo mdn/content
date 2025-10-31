@@ -2,8 +2,6 @@ name: JSON lint
 
 on:
   pull_request:
-    branches:
-      - main
     paths:
       - .nvmrc
       - "**/*.json"

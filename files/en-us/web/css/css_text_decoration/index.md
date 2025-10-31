@@ -20,7 +20,7 @@ Several features can help improve text readability:
 
 These features all help improve legibility, and therefore, accessibility. Reducing visual noise and improving text clarity is especially helpful for users with [dyslexia](https://en.wikipedia.org/wiki/Dyslexia) or low vision.
 
-In the writing systems of some languages, [overlines](/en-US/docs/Web/CSS/text-decoration-line#overline) and [underlines](/en-US/docs/Web/CSS/text-decoration-line#underline) carry semantic meaning. CSS lets you adapt styling to cultural norms. Text decoration features are especially useful for languages that do not use Latin-based scripts and instead follow different underline placements, such as Japanese and Korean.
+In the writing systems of some languages, [overlines](/en-US/docs/Web/CSS/Reference/Properties/text-decoration-line#overline) and [underlines](/en-US/docs/Web/CSS/Reference/Properties/text-decoration-line#underline) carry semantic meaning. CSS lets you adapt styling to cultural norms. Text decoration features are especially useful for languages that do not use Latin-based scripts and instead follow different underline placements, such as Japanese and Korean.
 
 Text decoration features also enable you to follow editorial and localization standards that come from print media. For example, with a strikethrough (line-through), you can indicate the status of content. Use it to inform users that content has been removed or that prices have been halved. This feature lets you present both the original and the updated content. Overlines or double underlines are commonly used for academic and editorial annotations.
 

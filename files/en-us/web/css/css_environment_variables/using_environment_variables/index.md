@@ -11,7 +11,7 @@ The [CSS environment variables module](/en-US/docs/Web/CSS/CSS_environment_varia
 
 CSS environment variables are global variables; globally scoped to the entire document. They are defined by the user agent. Environment variables are special values provided by the browser or operating system that help your styles adapt to the user's device or context. They are accessed using the `env()` function.
 
-Environment variables work similarly to [custom properties](/en-US/docs/Web/CSS/--*) and the {{cssxref("var()")}} function, but are globally defined and scoped. This means they are always scoped to the entire document, unlike custom properties, which are scoped to elements. In addition, environment variables are read-only, whereas custom properties are mutable.
+Environment variables work similarly to [custom properties](/en-US/docs/Web/CSS/Reference/Properties/--*) and the {{cssxref("var()")}} function, but are globally defined and scoped. This means they are always scoped to the entire document, unlike custom properties, which are scoped to elements. In addition, environment variables are read-only, whereas custom properties are mutable.
 
 Similar to custom properties, environment variables are case-sensitive. Unlike custom properties, which cannot be used outside of declarations, the `env()` function can be used in place of any part of a property value, or any part of a descriptor (for example, in [Media query rules](/en-US/docs/Web/CSS/@media)).
 
@@ -109,7 +109,7 @@ main {
 }
 ```
 
-The `<footer>` is positioned to be stuck to the bottom of the viewport. The declaration [`position: sticky`](/en-US/docs/Web/CSS/position#sticky) offsets the element relative to the `<body>` (its scrolling ancestor and [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block)), based on the {{cssxref("bottom")}} value of `0`. We give the `<footer>` a {{cssxref("padding")}} value of `1em` on all four sides. We then add the `safe-area-inset-bottom` value to the `1em` of bottom padding, with a fallback of `1em`.
+The `<footer>` is positioned to be stuck to the bottom of the viewport. The declaration [`position: sticky`](/en-US/docs/Web/CSS/Reference/Properties/position#sticky) offsets the element relative to the `<body>` (its scrolling ancestor and [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block)), based on the {{cssxref("bottom")}} value of `0`. We give the `<footer>` a {{cssxref("padding")}} value of `1em` on all four sides. We then add the `safe-area-inset-bottom` value to the `1em` of bottom padding, with a fallback of `1em`.
 
 ```css
 footer {

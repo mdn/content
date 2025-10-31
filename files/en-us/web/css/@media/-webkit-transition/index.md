@@ -12,7 +12,7 @@ sidebar: cssref
 {{deprecated_header}} {{ Non-standard_header }}
 
 > [!NOTE]
-> All browsers support the [`transition`](/en-US/docs/Web/CSS/animation#browser_compatibility) property without vendor prefixes. Only WebKit (Safari), and not Chromium, based browsers support the `-webkit-transition` media feature. No browsers support `transition` without the prefix as a media query (though some browsers do support - {{cssxref("@media/-webkit-transform-3d", "-webkit-transform-3d")}}). Use the [`@supports (transition)`](/en-US/docs/Web/CSS/@supports) feature query instead.
+> All browsers support the [`transition`](/en-US/docs/Web/CSS/Reference/Properties/animation#browser_compatibility) property without vendor prefixes. Only WebKit (Safari), and not Chromium, based browsers support the `-webkit-transition` media feature. No browsers support `transition` without the prefix as a media query (though some browsers do support - {{cssxref("@media/-webkit-transform-3d", "-webkit-transform-3d")}}). Use the [`@supports (transition)`](/en-US/docs/Web/CSS/@supports) feature query instead.
 
 The **`-webkit-transition`** Boolean non-standard [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) is a [WebKit extension](/en-US/docs/Web/CSS/Reference/Webkit_extensions) whose value is `true` if the browsing context supports [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions).
 

@@ -6,7 +6,7 @@ browser-compat: css.at-rules.property
 sidebar: cssref
 ---
 
-The **`@property`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) is part of the [CSS Houdini](/en-US/docs/Web/API/Houdini_APIs) set of APIs. It allows developers to explicitly define [CSS custom properties](/en-US/docs/Web/CSS/--*), allowing for property type checking and constraining, setting default values, and defining whether a custom property can inherit values or not.
+The **`@property`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) is part of the [CSS Houdini](/en-US/docs/Web/API/Houdini_APIs) set of APIs. It allows developers to explicitly define [CSS custom properties](/en-US/docs/Web/CSS/Reference/Properties/--*), allowing for property type checking and constraining, setting default values, and defining whether a custom property can inherit values or not.
 
 The `@property` rule represents a custom property registration directly in a stylesheet without having to run any JavaScript. Valid `@property` rules result in a registered custom property, which is similar to calling {{domxref('CSS.registerProperty_static', 'registerProperty()')}} with equivalent parameters.
 

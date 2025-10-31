@@ -29,21 +29,21 @@ In addition to the basic MathML global attributes, the following global attribut
     - `ltr`, which means _left to right_ and is used to render mathematical expressions from the left to the right (e.g., English or Moroccan style);
     - `rtl`, which means _right to left_ and is used to render mathematical expressions from the right to the left (e.g., Maghreb or Machrek style);
 - [`displaystyle`](/en-US/docs/Web/MathML/Reference/Global_attributes/displaystyle):
-  - : A boolean setting the [math-style](/en-US/docs/Web/CSS/math-style) for the element.
+  - : A boolean setting the [math-style](/en-US/docs/Web/CSS/Reference/Properties/math-style) for the element.
     - `true`, which means `normal`.
     - `false`, which means `compact`.
 - [`id`](/en-US/docs/Web/MathML/Reference/Global_attributes/id)
   - : Defines a unique identifier (ID) which must be unique in the whole document. Its purpose is to identify the element when linking (using a fragment identifier), scripting, or styling (with CSS).
 - [`mathbackground`](/en-US/docs/Web/MathML/Reference/Global_attributes/mathbackground)
-  - : A [background-color](/en-US/docs/Web/CSS/background-color) for the element.
+  - : A [background-color](/en-US/docs/Web/CSS/Reference/Properties/background-color) for the element.
 - [`mathcolor`](/en-US/docs/Web/MathML/Reference/Global_attributes/mathcolor)
-  - : A [color](/en-US/docs/Web/CSS/color) for the element.
+  - : A [color](/en-US/docs/Web/CSS/Reference/Properties/color) for the element.
 - [`mathsize`](/en-US/docs/Web/MathML/Reference/Global_attributes/mathsize)
-  - : A {{cssxref("length-percentage")}} used as a [font-size](/en-US/docs/Web/CSS/font-size) for the element.
+  - : A {{cssxref("length-percentage")}} used as a [font-size](/en-US/docs/Web/CSS/Reference/Properties/font-size) for the element.
 - [`nonce`](/en-US/docs/Web/MathML/Reference/Global_attributes/nonce)
   - : A cryptographic nonce ("number used once") which can be used by [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) to determine whether a given fetch will be allowed to proceed.
 - [`scriptlevel`](/en-US/docs/Web/MathML/Reference/Global_attributes/scriptlevel)
-  - : Specifies a [math-depth](/en-US/docs/Web/CSS/math-depth) for the element. See the [scriptlevel page](/en-US/docs/Web/MathML/Reference/Global_attributes/scriptlevel#values) for accepted values and mapping.
+  - : Specifies a [math-depth](/en-US/docs/Web/CSS/Reference/Properties/math-depth) for the element. See the [scriptlevel page](/en-US/docs/Web/MathML/Reference/Global_attributes/scriptlevel#values) for accepted values and mapping.
 - [`style`](/en-US/docs/Web/MathML/Reference/Global_attributes/style)
   - : Contains [CSS](/en-US/docs/Web/CSS) styling declarations to be applied to the element. Note that it is recommended for styles to be defined in a separate file or files. This attribute and the {{HTMLElement("style")}} element have mainly the purpose of allowing for quick styling, for example for testing purposes.
 - [`tabindex`](/en-US/docs/Web/MathML/Reference/Global_attributes/tabindex)

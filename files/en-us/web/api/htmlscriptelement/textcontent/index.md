@@ -90,7 +90,7 @@ const policy = trustedTypes.createPolicy("inline-script-policy", {
 Next we'll create the script element to which we will assign the value and get a handle to the element.
 
 ```html
-<script id="el" type="text/javascript"></script>
+<script id="el"></script>
 ```
 
 ```js

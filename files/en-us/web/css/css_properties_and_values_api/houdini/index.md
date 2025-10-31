@@ -11,7 +11,7 @@ While many Houdini examples showcase the creative possibilities of the APIs, the
 
 ## Basic example
 
-A regular [CSS custom property](/en-US/docs/Web/CSS/--*) consists of a property name and a value. Therefore I might create a custom property called `--background-color` and expect it to be given a color value. The value is then used in the CSS as if it were the color value.
+A regular [CSS custom property](/en-US/docs/Web/CSS/Reference/Properties/--*) consists of a property name and a value. Therefore I might create a custom property called `--background-color` and expect it to be given a color value. The value is then used in the CSS as if it were the color value.
 
 ```css
 :root {
