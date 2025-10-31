@@ -6,11 +6,11 @@ spec-urls: https://drafts.csswg.org/scroll-animations-1/
 sidebar: cssref
 ---
 
-A common UI pattern involves animating elements in direct response to scrolling, as the user scrolls across a page. These _scroll-driven animations_ have been implemented in many places, including effects that respond to user scrolling up and down a page, or left and right on overflowing content.
+A common UI pattern involves elements that animate as the user scrolls vertically or horizontally across a page. These _scroll-driven animations_ occur in direct response to page scrolling or an overflowing scroll container within a page.
 
 The properties defined in the [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations) module expand upon [CSS animations](/en-US/docs/Web/CSS/CSS_animations) by enabling animating property values defined in {{cssxref("@keyframes")}} animations in response to user interaction.
 
-This guide provides an overview of using CSS for scroll-driven animation timelines and creating scroll-driven animations.
+This guide provides an overview of using CSS to create scroll-driven animation timelines and animations.
 
 ## What is scroll-driven animation?
 
