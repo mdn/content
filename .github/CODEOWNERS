@@ -52,7 +52,9 @@
 # Markdown files in root directory
 /*.md @mdn/content-team
 # VSCode configuration
-/.vscode/ @mdn/engineering
+/.vscode/              @mdn/engineering
+/.vscode/dictionaries/ @mdn/content-team
+/.vscode/cspell.json   @mdn/content-team
 # Scripts and Tests
 /scripts @mdn/engineering
 /tests @mdn/engineering
