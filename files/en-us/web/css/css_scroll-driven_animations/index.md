@@ -6,7 +6,7 @@ spec-urls: https://drafts.csswg.org/scroll-animations-1/
 sidebar: cssref
 ---
 
-The **CSS scroll-driven animations** module provides functionality that builds on top of the [CSS animations module](/en-US/docs/Web/CSS/CSS_animations) and [Web Animations API](/en-US/docs/Web/API/Web_Animations_API). It allows you to animate property values based on a progression along a scroll-based timeline instead of the default time-based document timeline. This means that you can animate an element by scrolling the element, its scroll container or its root element, rather than just by the passing of time.
+The **CSS scroll-driven animations** module provides functionality that builds on the [CSS animations module](/en-US/docs/Web/CSS/CSS_animations) and [Web Animations API](/en-US/docs/Web/API/Web_Animations_API). It allows you to animate property values along a scroll-based timeline rather than the default time-based document timeline. This means that you can animate an element by scrolling the element, its scroll container, or its root element, rather than just by the passing of time.
 
 ## Scroll-driven animations in action
 
@@ -92,7 +92,7 @@ div::after {
 @layer noSupport {
   @supports not (scroll-timeline: --mainTimeline) {
     body::before {
-      content: "Your browser doesn't support scroll driven animations.";
+      content: "Your browser doesn't support scroll-driven animations.";
       background-color: wheat;
       display: block;
       width: 100%;
@@ -133,8 +133,8 @@ Scroll the element in the inline direction to see its background color change. S
 
 ### Functions
 
-- [`scroll()`](/en-US/docs/Web/CSS/animation-timeline/scroll)
-- [`view()`](/en-US/docs/Web/CSS/animation-timeline/view)
+- [`scroll()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/scroll)
+- [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view)
 
 ### Interfaces
 
