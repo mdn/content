@@ -62,5 +62,5 @@
 
 # These are @mdn-bot because the auto-merge GHA workflow uses the PAT of this account.
 # If another reviewer is specified, update the PAT token or auto-merge will cease to be automatic.
-/package.json @mdn-bot
-/yarn.lock @mdn-bot
+/package.json @mdn/engineering @mdn-bot
+/yarn.lock    @mdn/engineering @mdn-bot
