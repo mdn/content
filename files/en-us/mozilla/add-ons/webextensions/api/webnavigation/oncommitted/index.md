@@ -44,30 +44,31 @@ Events have three functions:
 
 ### details
 
+- `tabId`
+  - : `integer`. The ID of the tab in which the navigation is about to occur.
+- `url`
+  - : `string`. The URL to which the frame will navigate.
+- `frameId`
+  - : `integer`. Frame in which the navigation will occur. `0` indicates that navigation happens in the tab's top-level browsing context, not in a nested {{HTMLElement("iframe")}}. A positive value indicates that navigation happens in a nested iframe. Frame IDs are unique for a given tab and process.
+- `frameType`
+  - : `string`. The type of frame the navigation occurred in. Returns the values `"outermost_frame"`
+- `parentFrameId`
+  - : `integer`. ID of this frame's parent. Set to `-1` if this is a top-level frame.
+    , `"fenced_frame"`, and `"sub_frame"`.
 - `documentId`
   - : `string`. A UUID of the document loaded.
 - `parentDocumentId`
   - : `string`. A UUID of the parent document owning the frame. Not set if there is no parent.
 - `documentLifecycle`
   - : `string`. The lifecycle the document is in. Returns the values `"prerender"`, `"active"`, `"cached"`, and `"pending_deletion"`.
-- `tabId`
-  - : `integer`. The ID of the tab in which the navigation is about to occur.
-- `url`
-  - : `string`. The URL to which the given frame will navigate.
-- `processId` {{optional_inline}} {{deprecated_inline}}
-  - : `integer`. This value is not set in modern browsers. When it was set, it represented the ID of the process running the renderer for this tab.
-- `frameId`
-  - : `integer`. Frame in which the navigation will occur. `0` indicates that navigation happens in the tab's top-level browsing context, not in a nested {{HTMLElement("iframe")}}. A positive value indicates that navigation happens in a nested iframe. Frame IDs are unique for a given tab and process.
-- `parentFrameId`
-  - : `integer`. ID of this frame's parent. Set to `-1` if this is a top-level frame.
-- `frameType`
-  - : `string`. The type of frame the navigation occurred in. Returns the values `"outermost_frame"`, `"fenced_frame"`, and `"sub_frame"`.
-- `timeStamp`
-  - : `number`. The time that the navigation was committed, in [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time).
 - `transitionType`
   - : {{WebExtAPIRef("webNavigation.transitionType", "transitionType")}}. The reason for the navigation. (For example, `"link"` if the user clicked a link, or `"reload"` if the user reloaded the page.)
 - `transitionQualifiers`
   - : `Array` of {{WebExtAPIRef("webNavigation.transitionQualifier", "transitionQualifier")}}. Extra information about the navigation: for example, whether there was a server or client redirect.
+- `timeStamp`
+  - : `number`. The time that the navigation was committed, in [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time).
+- `processId` {{optional_inline}} {{deprecated_inline}}
+  - : `integer`. This value is not set in modern browsers. When it was set, it represented the ID of the process running the renderer for this tab.
 
 ## Examples
 
