@@ -733,8 +733,8 @@ When `Integrity-Policy` is used, the browser blocks the loading of styles refere
 
 ### Idempotency-Key
 
-The {{httpheader("Idempotency-Key")}} HTTP request header can be used by website client code to make a {{HTTPMethod("POST")}} or {{HTTPMethod("PATCH")}} requests {{glossary("idempotent")}} when used with a corresponding server.
-The specification indicates that the endpoints that require this header, the format of the key, and any error responses are defined by the server.
+The {{httpheader("Idempotency-Key")}} HTTP request header can be used by website client code to make a {{HTTPMethod("POST")}} or {{HTTPMethod("PATCH")}} requests {{glossary("idempotent")}} when used with a server that supports it.
+The specification indicates that the server should document and advertise which endpoints require this header, the format of the key, and expected error responses.
 
 Firefox _automatically_ adds the header with a unique key for each new `POST` request if it has not already been added by the page client-side code.
 This simplifies the client-side code required to work with servers that support the feature.
