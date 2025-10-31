@@ -12,7 +12,7 @@ The **Trusted Types API** gives web developers a way to ensure that input has be
 
 ## Concepts and usage
 
-Client-side, or DOM-based, XSS attacks happen when data crafted by an attacker is passed to a browser API that executes that data as code. These APIs are known as _injection sinks_.
+Client-side, or DOM-based, XSS attacks happen when data crafted by an attacker is passed to a browser API that executes that data as code. These APIs are known as [_injection sinks_](#injection_sink_interfaces).
 
 The Trusted Types API distinguishes three sorts of injection sinks:
 
@@ -203,10 +203,33 @@ Either way, the injection sink gets sanitized data, and because we could enforce
 
 ### Extensions to other interfaces
 
-The following sections list injection sinks that are expected to accept trusted types as well as strings.
+- {{domxref("Window.trustedTypes")}}
+  - : Returns the {{domxref("TrustedTypePolicyFactory")}} object associated with the global object in the main thread.
+    This is the entry point for using the API in the Window thread.
+- {{domxref("WorkerGlobalScope.trustedTypes")}}.
+  - : Returns the {{domxref("TrustedTypePolicyFactory")}} object associated with the global object in a worker.
 
-#### TrustedHTML
+### Extensions to HTTP
 
+#### `Content-Security-Policy` directives
+
+- {{CSP("require-trusted-types-for")}}
+  - : Enforces that [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) are passed to DOM XSS [injection sinks](/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage).
+- {{CSP("trusted-types")}}
+  - : Used to specify an allowlist of [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) policy names.
+
+#### `Content-Security-Policy` keywords
+
+- [`trusted-types-eval`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#trusted-types-eval)
+  - : Allows [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval) and similar functions to be used but only when [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) are supported and enforced.
+
+## Injection sink interfaces
+
+This section provides a (potentially) non-exhaustive list of injection sink interfaces.
+
+##### TrustedHTML
+
+- {{domxref("Document.execCommand()")}} with a `commandName` of [`"insertHTML"`](/en-US/docs/Web/API/Document/execCommand#inserthtml)
 - {{domxref("Document.parseHTMLUnsafe_static()")}}
 - {{domxref("Document.write()")}}
 - {{domxref("Document.writeln()")}}
@@ -220,40 +243,26 @@ The following sections list injection sinks that are expected to accept trusted 
 - {{domxref("ShadowRoot.innerHTML")}}
 - {{domxref("ShadowRoot.setHTMLUnsafe()")}}
 
-#### TrustedScript
+##### TrustedScript
 
+- [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval)
+- [`Element.setAttribute()`](/en-US/docs/Web/API/Element/setAttribute#value) (`value` argument)
+- [`Element.setAttributeNS()`](/en-US/docs/Web/API/Element/setAttributeNS#value) (`value` argument)
+- [`Function()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/Function)
 - {{domxref("HTMLScriptElement.innerText")}}
 - {{domxref("HTMLScriptElement.textContent")}}
 - {{domxref("HTMLScriptElement.text")}}
-- {{domxref("window.setTimeout()")}}
-- {{domxref("window.setInterval()")}}
+- [`window.setTimeout()`](/en-US/docs/Web/API/Window/setTimeout#code) and [`WorkerGlobalScope.setTimeout()`](/en-US/docs/Web/API/WorkerGlobalScope/setTimeout#code) (`code` argument)
+- [`window.setInterval()`](/en-US/docs/Web/API/Window/setInterval#code) and [`WorkerGlobalScope.setInterval()`](/en-US/docs/Web/API/WorkerGlobalScope/setInterval#code) (`code` argument)
 
-#### TrustedScriptURL
+##### TrustedScriptURL
 
 - {{domxref("HTMLScriptElement.src")}}
+- {{domxref("ServiceWorkerContainer.register()")}}
 - {{domxref("SvgAnimatedString.baseVal")}}
-
-<!--
-
-These still require links, and possibly docs
-- [`ServiceWorkerContainer.register()`](https://developer.mozilla.org/docs/Web/API/ServiceWorkerContainer/register)
-- [`WorkerGlobalScope.importScripts`](https://developer.mozilla.org/docs/Web/API/WorkerGlobalScope/importScripts)
-- [`Window.trustedTypes`](https://developer.mozilla.org/docs/Web/API/Window/trustedTypes)
--->
-
-## Extensions to HTTP
-
-{{httpheader("Content-Security-Policy")}} directives:
-
-- {{CSP("require-trusted-types-for")}}
-  - : Enforces that [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) are passed to DOM XSS [injection sinks](/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage).
-- {{CSP("trusted-types")}}
-  - : Used to specify an allowlist of [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) policy names.
-
-{{httpheader("Content-Security-Policy")}} keywords:
-
-- [`'trusted-types-eval'`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#trusted-types-eval)
-  - : Allows [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval) and similar functions to be used but only when [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) are supported and enabled.
+- {{domxref("WorkerGlobalScope.importScripts()")}}
+- `url` argument to [`Worker()` constructor](/en-US/docs/Web/API/Worker/Worker#url)
+- `url` argument to [`SharedWorker()` constructor](/en-US/docs/Web/API/SharedWorker/SharedWorker#url)
 
 ## Examples
 
