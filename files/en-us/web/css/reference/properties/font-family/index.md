@@ -147,6 +147,7 @@ font-family: "Gill Sans Extrabold", sans-serif;
       - : The default user interface font that has rounded features.
     - `math`
       - : This is for the particular stylistic concerns of representing mathematics: superscript and subscript, brackets that cross several lines, nesting expressions, and double struck glyphs with distinct meanings.
+        UA stylesheets may set `math { font-family: math }` so that the {{MathMLElement("math")}} element uses appropriate fonts by default.
     - `fangsong`
       - : A particular style of Chinese characters that are between serif-style Song and cursive-style Kai forms. This style is often used for government documents.
 
@@ -192,6 +193,12 @@ font-family: "Gill Sans Extrabold", sans-serif;
 }
 ```
 
+```css hidden
+div {
+  margin: 0.5rem;
+}
+```
+
 ```html hidden
 <div class="serif">This is an example of a serif font.</div>
 
@@ -205,7 +212,7 @@ font-family: "Gill Sans Extrabold", sans-serif;
 
 <div class="fangsong">This is an example of a fangsong font.</div>
 
-<div class="math">This is a math font for styling text like ℝ, ∫, ∑, etc.</div>
+<div class="math">This is an example of a math font: ℝ, ∫, ∑…</div>
 ```
 
 {{EmbedLiveSample("Some_common_font_families", 600, 220)}}
