@@ -50,7 +50,7 @@ document.getElementById("b2").previousSibling.id; // "b1"
 
 ### Second example
 
-In this example, there are whitespace text nodes (line breaks) between the `span` elements.
+In this example, there are whitespace text nodes (line breaks) between the {{htmlelement("span")}} elements.
 
 ```html
 <span id="b0"></span>
