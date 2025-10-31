@@ -25,7 +25,7 @@ A string.
     srcset="medium-pic.jpg"
     type="image/jpeg"
     sizes="(50em <= width <= 60px) 50em,
-         (30em <= width < 50em) 30em" />
+           (30em <= width < 50em) 30em" />
 </picture>
 ```
 
