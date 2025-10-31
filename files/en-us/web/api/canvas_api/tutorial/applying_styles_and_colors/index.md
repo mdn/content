@@ -400,20 +400,20 @@ function draw() {
 ```
 
 ```html hidden
-<table>
-  <tr>
-    <td>
-      <canvas id="canvas" width="150" height="150" role="presentation"></canvas>
-    </td>
-    <td>
-      Change the <code>miterLimit</code> by entering a new value below and
-      clicking the redraw button.<br /><br />
-      <label for="miterLimit">Miter limit</label>
-      <input type="number" id="miterLimit" size="3" min="1" />
-      <input type="submit" id="redraw" value="Redraw" />
-    </td>
-  </tr>
-</table>
+<canvas id="canvas" width="150" height="150" role="presentation"></canvas>
+<div>
+  Change the <code>miterLimit</code> by entering a new value below and clicking
+  the redraw button.<br /><br />
+  <label for="miterLimit">Miter limit</label>
+  <input type="number" id="miterLimit" min="1" />
+  <button id="redraw">Redraw</button>
+</div>
+```
+
+```css hidden
+body {
+  display: flex;
+}
 ```
 
 ```js hidden

@@ -50,18 +50,18 @@ document.getElementById("b2").previousSibling.id; // "b1"
 
 ### Second example
 
-In this example, there are whitespace text nodes (line breaks) between the `img` elements.
+In this example, there are whitespace text nodes (line breaks) between the `span` elements.
 
 ```html
-<img id="b0" />
-<img id="b1" />
-<img id="b2" />
+<span id="b0"></span>
+<span id="b1"></span>
+<span id="b2"></span>
 ```
 
 ```js
 document.getElementById("b1").previousSibling; // #text
-document.getElementById("b1").previousSibling.previousSibling; // <img id="b0">
-document.getElementById("b2").previousSibling.previousSibling; // <img id="b1">
+document.getElementById("b1").previousSibling.previousSibling; // <span id="b0">
+document.getElementById("b2").previousSibling.previousSibling; // <span id="b1">
 document.getElementById("b2").previousSibling; // #text
 document.getElementById("b2").previousSibling.id; // undefined
 ```

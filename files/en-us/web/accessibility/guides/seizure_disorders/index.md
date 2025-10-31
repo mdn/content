@@ -188,6 +188,9 @@ By not indexing the page (`noindex`) and not following links on the page (`nofol
     <title>…</title>
     <meta name="robots" content="noindex, nofollow" />
   </head>
+  <body>
+    …
+  </body>
 </html>
 ```
 

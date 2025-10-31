@@ -119,7 +119,7 @@ All of the `tabpanel` elements have `tabindex="0"` to make them tabbable, and al
       role="tabpanel"
       tabindex="0"
       aria-labelledby="tab-2"
-      hidden="hidden">
+      hidden>
       <p>How to run this application on macOS</p>
     </div>
     <div
@@ -127,7 +127,7 @@ All of the `tabpanel` elements have `tabindex="0"` to make them tabbable, and al
       role="tabpanel"
       tabindex="0"
       aria-labelledby="tab-3"
-      hidden="hidden">
+      hidden>
       <p>How to run this application on Linux</p>
     </div>
   </div>

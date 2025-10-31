@@ -19,11 +19,13 @@ A string.
 ## Examples
 
 ```html
-<source
-  id="el"
-  src="largeVideo.mov"
-  type="video/quicktime"
-  media="screen and (width >= 600px)" />
+<video>
+  <source
+    id="el"
+    src="largeVideo.mov"
+    type="video/quicktime"
+    media="screen and (width >= 600px)" />
+</video>
 ```
 
 ```js
