@@ -225,9 +225,12 @@ Either way, the injection sink gets sanitized data, and because we could enforce
 
 ## Injection sink interfaces
 
-This section provides a (potentially) non-exhaustive list of injection sink interfaces.
+This section provides an list of "direct" injection sink interfaces.
 
-##### TrustedHTML
+Note that there are cases where untrusted strings may be "indirectly injected", such as when an untrusted string is added as the child node of a script element, and then the element is added to the document.
+These cases are evaluated the untrusted script is added to the document.
+
+### TrustedHTML
 
 - {{domxref("Document.execCommand()")}} with a `commandName` of [`"insertHTML"`](/en-US/docs/Web/API/Document/execCommand#inserthtml)
 - {{domxref("Document.parseHTMLUnsafe_static()")}}
@@ -243,7 +246,7 @@ This section provides a (potentially) non-exhaustive list of injection sink inte
 - {{domxref("ShadowRoot.innerHTML")}}
 - {{domxref("ShadowRoot.setHTMLUnsafe()")}}
 
-##### TrustedScript
+### TrustedScript
 
 - [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval)
 - [`Element.setAttribute()`](/en-US/docs/Web/API/Element/setAttribute#value) (`value` argument)
@@ -255,7 +258,7 @@ This section provides a (potentially) non-exhaustive list of injection sink inte
 - [`window.setTimeout()`](/en-US/docs/Web/API/Window/setTimeout#code) and [`WorkerGlobalScope.setTimeout()`](/en-US/docs/Web/API/WorkerGlobalScope/setTimeout#code) (`code` argument)
 - [`window.setInterval()`](/en-US/docs/Web/API/Window/setInterval#code) and [`WorkerGlobalScope.setInterval()`](/en-US/docs/Web/API/WorkerGlobalScope/setInterval#code) (`code` argument)
 
-##### TrustedScriptURL
+### TrustedScriptURL
 
 - {{domxref("HTMLScriptElement.src")}}
 - {{domxref("ServiceWorkerContainer.register()")}}
