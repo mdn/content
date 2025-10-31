@@ -32,12 +32,12 @@ For more information, please refer to the [`type`](/en-US/docs/Web/HTML/Referenc
 ## Examples
 
 ```html
-<script id="el" type="text/javascript"></script>
+<script id="el" type="module"></script>
 ```
 
 ```js
 const el = document.getElementById("el");
-console.log(el.type); // Output: "text/javascript"
+console.log(el.type); // Output: "module"
 ```
 
 ## Specifications

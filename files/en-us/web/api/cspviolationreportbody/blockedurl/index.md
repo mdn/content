@@ -167,18 +167,18 @@ In addition, it specifies the directive `require-trusted-types-for 'script'`, wh
     <input type="text" id="userInput" />
     <button>Update Content</button>
     <div id="content"></div>
+
+    <script>
+      function updateContent() {
+        const userInput = document.getElementById("userInput").value;
+
+        // Passing unsanitized content - a violation of the policy
+        document.getElementById("content").innerHTML = userInput;
+      }
+
+      document.querySelector("button").addEventListener("click", updateContent);
+    </script>
   </body>
-
-  <script>
-    function updateContent() {
-      const userInput = document.getElementById("userInput").value;
-
-      // Passing unsanitized content - a violation of the policy
-      document.getElementById("content").innerHTML = userInput;
-    }
-
-    document.querySelector("button").addEventListener("click", updateContent);
-  </script>
 </html>
 ```
 

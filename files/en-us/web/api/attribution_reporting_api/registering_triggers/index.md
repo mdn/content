@@ -115,6 +115,7 @@ Here's an `<img>` element example:
 ```html
 <img
   src="https://shop.example/conversion/4rghshdh5"
+  alt=""
   width="1"
   height="1"
   attributionsrc />
@@ -211,6 +212,7 @@ For example, in the case of an `<img>` element you could declare the URL in the 
 ```html
 <img
   src="https://shop.example/conversion/4rghshdh5"
+  alt=""
   attributionsrc="https://my-separate-tracking-site.example.com"
   width="1"
   height="1" />
