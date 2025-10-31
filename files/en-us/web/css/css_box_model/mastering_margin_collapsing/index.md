@@ -5,15 +5,15 @@ page-type: guide
 sidebar: cssref
 ---
 
-The [top](/en-US/docs/Web/CSS/margin-top) and [bottom](/en-US/docs/Web/CSS/margin-bottom) margins of blocks are sometimes combined (collapsed) into a single margin whose size is the largest of the individual margins (or just one of them, if they are equal), a behavior known as **margin collapsing**. Note that the margins of [floating](/en-US/docs/Web/CSS/float) and [absolutely positioned](/en-US/docs/Web/CSS/position#types_of_positioning) elements never collapse.
+The [top](/en-US/docs/Web/CSS/Reference/Properties/margin-top) and [bottom](/en-US/docs/Web/CSS/Reference/Properties/margin-bottom) margins of blocks are sometimes combined (collapsed) into a single margin whose size is the largest of the individual margins (or just one of them, if they are equal), a behavior known as **margin collapsing**. Note that the margins of [floating](/en-US/docs/Web/CSS/Reference/Properties/float) and [absolutely positioned](/en-US/docs/Web/CSS/Reference/Properties/position#types_of_positioning) elements never collapse.
 
 Margin collapsing occurs in three basic cases:
 
 - Adjacent siblings
-  - : The margins of adjacent siblings are collapsed (except when the latter sibling needs to be [cleared](/en-US/docs/Web/CSS/clear) past floats).
+  - : The margins of adjacent siblings are collapsed (except when the latter sibling needs to be [cleared](/en-US/docs/Web/CSS/Reference/Properties/clear) past floats).
 - No content separating parent and descendants
   - : The vertical margins between a parent block and its descendants can collapse. This happens when there is no separating content between them. Specifically, this occurs in two main cases:
-    - The {{cssxref("margin-top")}} of a parent collapses with the {{cssxref("margin-top")}} of its first in-flow descendant unless the parent has a {{cssxref("border-top")}} , {{cssxref("padding-top")}} , contains any inline content (such as text), or has _[clearance](/en-US/docs/Web/CSS/clear)_ applied.
+    - The {{cssxref("margin-top")}} of a parent collapses with the {{cssxref("margin-top")}} of its first in-flow descendant unless the parent has a {{cssxref("border-top")}} , {{cssxref("padding-top")}} , contains any inline content (such as text), or has _[clearance](/en-US/docs/Web/CSS/Reference/Properties/clear)_ applied.
     - The {{cssxref("margin-bottom")}} of a parent collapses with the {{cssxref("margin-bottom")}} of its last in-flow descendant unless the parent has a defined {{cssxref("height")}} or {{cssxref("min-height")}}, a {{cssxref("border-bottom")}}, or {{cssxref("padding-bottom")}}.
 
     In both cases, creating a new [block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context) on the parent will also prevent its margins from collapsing with its children.

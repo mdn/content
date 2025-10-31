@@ -68,7 +68,7 @@ You can use the `timeout` event to detect an upload that stopped because it was 
 The timeout is set on the {{domxref("XMLHttpRequest")}} object using the {{domxref("XMLHttpRequest.timeout")}} property.
 
 ```js
-// In case of an timeout we hide the progress bar
+// In case of a timeout we hide the progress bar
 // Note that this event can be listened to on the xhr object too
 function errorAction(event) {
   progressBar.classList.remove("visible");

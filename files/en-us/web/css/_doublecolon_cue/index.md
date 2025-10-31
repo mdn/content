@@ -53,39 +53,39 @@ In the example above, the `::cue(u)` selector selects all the [`<u>`](/en-US/doc
 
 Rules whose selectors include this element may only use the following CSS properties:
 
-- [`background`](/en-US/docs/Web/CSS/background)
-- [`background-attachment`](/en-US/docs/Web/CSS/background-attachment)
-- [`background-clip`](/en-US/docs/Web/CSS/background-clip)
-- [`background-color`](/en-US/docs/Web/CSS/background-color)
-- [`background-image`](/en-US/docs/Web/CSS/background-image)
-- [`background-origin`](/en-US/docs/Web/CSS/background-origin)
-- [`background-position`](/en-US/docs/Web/CSS/background-position)
-- [`background-repeat`](/en-US/docs/Web/CSS/background-repeat)
-- [`background-size`](/en-US/docs/Web/CSS/background-size)
-- [`color`](/en-US/docs/Web/CSS/color)
-- [`font`](/en-US/docs/Web/CSS/font)
-- [`font-family`](/en-US/docs/Web/CSS/font-family)
-- [`font-size`](/en-US/docs/Web/CSS/font-size)
-- [`font-stretch`](/en-US/docs/Web/CSS/font-stretch)
-- [`font-style`](/en-US/docs/Web/CSS/font-style)
-- [`font-variant`](/en-US/docs/Web/CSS/font-variant)
-- [`font-weight`](/en-US/docs/Web/CSS/font-weight)
-- [`line-height`](/en-US/docs/Web/CSS/line-height)
-- [`opacity`](/en-US/docs/Web/CSS/opacity)
-- [`outline`](/en-US/docs/Web/CSS/outline)
-- [`outline-color`](/en-US/docs/Web/CSS/outline-color)
-- [`outline-style`](/en-US/docs/Web/CSS/outline-style)
-- [`outline-width`](/en-US/docs/Web/CSS/outline-width)
-- [`ruby-position`](/en-US/docs/Web/CSS/ruby-position)
-- [`text-combine-upright`](/en-US/docs/Web/CSS/text-combine-upright)
-- [`text-decoration`](/en-US/docs/Web/CSS/text-decoration)
-- [`text-decoration-color`](/en-US/docs/Web/CSS/text-decoration-color)
-- [`text-decoration-line`](/en-US/docs/Web/CSS/text-decoration-line)
-- [`text-decoration-style`](/en-US/docs/Web/CSS/text-decoration-style)
-- [`text-decoration-thickness`](/en-US/docs/Web/CSS/text-decoration-thickness)
-- [`text-shadow`](/en-US/docs/Web/CSS/text-shadow)
-- [`visibility`](/en-US/docs/Web/CSS/visibility)
-- [`white-space`](/en-US/docs/Web/CSS/white-space)
+- [`background`](/en-US/docs/Web/CSS/Reference/Properties/background)
+- [`background-attachment`](/en-US/docs/Web/CSS/Reference/Properties/background-attachment)
+- [`background-clip`](/en-US/docs/Web/CSS/Reference/Properties/background-clip)
+- [`background-color`](/en-US/docs/Web/CSS/Reference/Properties/background-color)
+- [`background-image`](/en-US/docs/Web/CSS/Reference/Properties/background-image)
+- [`background-origin`](/en-US/docs/Web/CSS/Reference/Properties/background-origin)
+- [`background-position`](/en-US/docs/Web/CSS/Reference/Properties/background-position)
+- [`background-repeat`](/en-US/docs/Web/CSS/Reference/Properties/background-repeat)
+- [`background-size`](/en-US/docs/Web/CSS/Reference/Properties/background-size)
+- [`color`](/en-US/docs/Web/CSS/Reference/Properties/color)
+- [`font`](/en-US/docs/Web/CSS/Reference/Properties/font)
+- [`font-family`](/en-US/docs/Web/CSS/Reference/Properties/font-family)
+- [`font-size`](/en-US/docs/Web/CSS/Reference/Properties/font-size)
+- [`font-stretch`](/en-US/docs/Web/CSS/Reference/Properties/font-stretch)
+- [`font-style`](/en-US/docs/Web/CSS/Reference/Properties/font-style)
+- [`font-variant`](/en-US/docs/Web/CSS/Reference/Properties/font-variant)
+- [`font-weight`](/en-US/docs/Web/CSS/Reference/Properties/font-weight)
+- [`line-height`](/en-US/docs/Web/CSS/Reference/Properties/line-height)
+- [`opacity`](/en-US/docs/Web/CSS/Reference/Properties/opacity)
+- [`outline`](/en-US/docs/Web/CSS/Reference/Properties/outline)
+- [`outline-color`](/en-US/docs/Web/CSS/Reference/Properties/outline-color)
+- [`outline-style`](/en-US/docs/Web/CSS/Reference/Properties/outline-style)
+- [`outline-width`](/en-US/docs/Web/CSS/Reference/Properties/outline-width)
+- [`ruby-position`](/en-US/docs/Web/CSS/Reference/Properties/ruby-position)
+- [`text-combine-upright`](/en-US/docs/Web/CSS/Reference/Properties/text-combine-upright)
+- [`text-decoration`](/en-US/docs/Web/CSS/Reference/Properties/text-decoration)
+- [`text-decoration-color`](/en-US/docs/Web/CSS/Reference/Properties/text-decoration-color)
+- [`text-decoration-line`](/en-US/docs/Web/CSS/Reference/Properties/text-decoration-line)
+- [`text-decoration-style`](/en-US/docs/Web/CSS/Reference/Properties/text-decoration-style)
+- [`text-decoration-thickness`](/en-US/docs/Web/CSS/Reference/Properties/text-decoration-thickness)
+- [`text-shadow`](/en-US/docs/Web/CSS/Reference/Properties/text-shadow)
+- [`visibility`](/en-US/docs/Web/CSS/Reference/Properties/visibility)
+- [`white-space`](/en-US/docs/Web/CSS/Reference/Properties/white-space)
 
 ## Examples
 
@@ -111,7 +111,7 @@ Consider the following cue text that uses the `<u>` tag to underline some text:
 Tell me, is the <u>lord of the universe</u> in?
 ```
 
-The following CSS rule customizes the text inside the `<u>` tag with a color and a [text-decoration](/en-US/docs/Web/CSS/text-decoration):
+The following CSS rule customizes the text inside the `<u>` tag with a color and a [text-decoration](/en-US/docs/Web/CSS/Reference/Properties/text-decoration):
 
 ```css
 ::cue(u) {

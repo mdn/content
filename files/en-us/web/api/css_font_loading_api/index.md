@@ -11,7 +11,7 @@ The **CSS Font Loading API** provides events and interfaces for dynamically load
 
 ## Concepts and usage
 
-CSS stylesheets allow authors to use custom fonts; specifying fonts to download using the [`@font-face`](/en-US/docs/Web/CSS/@font-face) rule, and applying them to elements with the [`font-family`](/en-US/docs/Web/CSS/font-family) property.
+CSS stylesheets allow authors to use custom fonts; specifying fonts to download using the [`@font-face`](/en-US/docs/Web/CSS/@font-face) rule, and applying them to elements with the [`font-family`](/en-US/docs/Web/CSS/Reference/Properties/font-family) property.
 The point at which a font is downloaded is controlled by the user agent.
 Most agents only fetch and load fonts when they are first needed, which can result in a perceptible delay.
 

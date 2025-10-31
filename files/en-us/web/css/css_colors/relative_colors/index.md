@@ -32,7 +32,7 @@ Relative colors are created using the same [color functions](/en-US/docs/Web/CSS
 
 The browser converts the origin color to a syntax compatible with the color function then destructures it into component color channels (plus the `alpha` channel if the origin color has one). These are made available as appropriately-named values inside the color function — `r`, `g`, `b`, and `alpha` in the case of the `rgb()` function, `l`, `a`, `b`, and `alpha` in the case of the `lab()` function, `h`, `w`, `b`, and `alpha` in the case of `hwb()`, etc. — that can be used to calculate new output channel values.
 
-Let's look at relative color syntax in action. The below CSS is used to style two {{htmlelement("div")}} elements, one with a absolute background color — `red` — and one with a relative background color created with the `rgb()` function, based on the same `red` color value:
+Let's look at relative color syntax in action. The below CSS is used to style two {{htmlelement("div")}} elements, one with an absolute background color — `red` — and one with a relative background color created with the `rgb()` function, based on the same `red` color value:
 
 ```html hidden live-sample___simple-relative-color
 <div id="container">
@@ -714,7 +714,7 @@ The relative colors are as follows:
 - `--bg-color`: A much lighter variant of `--base-color`, intended to be used as a background. This is created by taking an origin color of `--base-color` and adding 40 to its lightness value.
 - `--complementary-color`: A complementary color 180 degrees around the color wheel from `--base-color`. This is created by taking an origin color of `--base-color` and adding 180 to its hue value.
 
-Now have a look at the rest of the CSS and take note of all the places where these colors are used. This includes [backgrounds](/en-US/docs/Web/CSS/background), [borders](/en-US/docs/Web/CSS/border), [`text-shadow`](/en-US/docs/Web/CSS/text-shadow), and even the [`accent-color`](/en-US/docs/Web/CSS/accent-color) of the slider.
+Now have a look at the rest of the CSS and take note of all the places where these colors are used. This includes [backgrounds](/en-US/docs/Web/CSS/Reference/Properties/background), [borders](/en-US/docs/Web/CSS/Reference/Properties/border), [`text-shadow`](/en-US/docs/Web/CSS/Reference/Properties/text-shadow), and even the [`accent-color`](/en-US/docs/Web/CSS/Reference/Properties/accent-color) of the slider.
 
 > [!NOTE]
 > For brevity, only the parts of the CSS relevant to relative color usage are shown.

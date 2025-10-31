@@ -45,8 +45,8 @@ The **`@page`** at-rule is a CSS at-rule used to modify different aspects of pri
 
 The `@page` at-rule can contain only page descriptors and [margin at-rules](#margin_at-rules). The following descriptors have been implemented by at least one browser:
 
-- [`margin`](/en-US/docs/Web/CSS/margin)
-  - : Specifies the page margins. Individual margin properties [`margin-top`](/en-US/docs/Web/CSS/margin-top), [`margin-right`](/en-US/docs/Web/CSS/margin-right), [`margin-bottom`](/en-US/docs/Web/CSS/margin-bottom), and [`margin-left`](/en-US/docs/Web/CSS/margin-left) can also be used.
+- [`margin`](/en-US/docs/Web/CSS/Reference/Properties/margin)
+  - : Specifies the page margins. Individual margin properties [`margin-top`](/en-US/docs/Web/CSS/Reference/Properties/margin-top), [`margin-right`](/en-US/docs/Web/CSS/Reference/Properties/margin-right), [`margin-bottom`](/en-US/docs/Web/CSS/Reference/Properties/margin-bottom), and [`margin-left`](/en-US/docs/Web/CSS/Reference/Properties/margin-left) can also be used.
 - [`page-orientation`](/en-US/docs/Web/CSS/@page/page-orientation)
   - : Specifies the orientation of the page. This does not affect the layout of the page; the rotation is applied after the layout in the output medium.
 - [`size`](/en-US/docs/Web/CSS/@page/size)
@@ -280,7 +280,7 @@ Named pages enable performing per-page layout and adding [page-breaks](/en-US/do
 
 Named pages can be applied using the {{Cssxref("page")}} property. This allows the user to create different page configurations for use in print layouts.
 
-An example of this can be found on the [`page`](/en-US/docs/Web/CSS/page#examples) examples.
+An example of this can be found on the [`page`](/en-US/docs/Web/CSS/Reference/Properties/page#examples) examples.
 
 ## Examples
 

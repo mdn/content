@@ -120,7 +120,7 @@ code {
 #### JavaScript
 
 Trusted types are not yet supported on all browsers, so first we define the [trusted types tinyfill](/en-US/docs/Web/API/Trusted_Types_API#trusted_types_tinyfill).
-This acts as a transparent replacement for the trusted types JavaScript API:
+This acts as a transparent replacement for the Trusted Types JavaScript API:
 
 ```js
 if (typeof trustedTypes === "undefined")

@@ -22,7 +22,7 @@ onmidimessage = (event) => { }
 
 ## Event type
 
-An {{domxref("MIDIMessageEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("MIDIMessageEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("MIDIMessageEvent")}}
 

@@ -77,7 +77,7 @@ console.log(matrix3D.m41, matrix3D.m42, matrix3D.m43);
 ## See also
 
 - {{domxref("DOMMatrix/DOMMatrix", "DOMMatrix()")}}
-- {{domxref("DOMMatrix.toFloat32Array()")}}
-- {{domxref("DOMMatrix.toFloat64Array()")}}
+- {{domxref("DOMMatrixReadOnly.toFloat32Array()")}}
+- {{domxref("DOMMatrixReadOnly.toFloat64Array()")}}
 - {{domxref("DOMMatrix.fromFloat64Array_static", "DOMMatrix.fromFloat64Array()")}}
 - {{domxref("DOMMatrix.fromMatrix_static", "DOMMatrix.fromMatrix()")}}

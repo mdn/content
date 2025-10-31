@@ -443,7 +443,7 @@ To animate the {{cssxref("opacity")}} and {{cssxref("scale")}} of each `<div>` a
 
 - Specify the ending state of the properties we want to transition on the `div { ... }` rule.
 - Specify the starting state from which to transition the properties inside a `@starting-style` block.
-- Specify the exit animation inside the `.fade-out` rule — this is the class that the JavaScript assigns to the `<div>` elements when their close buttons are pressed. Besides setting the `opacity` and `scale` ending states, we also set [`display: none`](/en-US/docs/Web/CSS/display) on the `<div>`s — we want them to become immediately unavailable when removed from the UI.
+- Specify the exit animation inside the `.fade-out` rule — this is the class that the JavaScript assigns to the `<div>` elements when their close buttons are pressed. Besides setting the `opacity` and `scale` ending states, we also set [`display: none`](/en-US/docs/Web/CSS/Reference/Properties/display) on the `<div>`s — we want them to become immediately unavailable when removed from the UI.
 - Specify the {{cssxref("transition")}} list inside the `div { ... }` rule to animate `opacity`, `scale`, and `display`. Note that for `display`, the {{cssxref("transition-behavior", "transition-behavior: allow-discrete")}} value is also set in the shorthand so that it will animate.
 
 #### Result

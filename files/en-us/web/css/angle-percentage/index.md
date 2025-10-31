@@ -6,7 +6,7 @@ browser-compat: css.types.angle-percentage
 sidebar: cssref
 ---
 
-The **`<angle-percentage>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types) represents a value that can be either a {{Cssxref("angle")}} or a {{Cssxref("percentage")}}.
+The **`<angle-percentage>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types) represents a value that can be either an {{Cssxref("angle")}} or a {{Cssxref("percentage")}}.
 
 Where an `<angle-percentage>` is specified as an allowable type, this means that the percentage resolves to an angle and therefore can be used in a {{Cssxref("calc", "calc()")}} expression.
 

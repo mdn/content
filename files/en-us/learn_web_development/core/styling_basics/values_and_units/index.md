@@ -691,7 +691,7 @@ You'll learn about image values in more depth in our [Background and borders](/e
 
 ## Position
 
-The [`<position>`](/en-US/docs/Web/CSS/position_value) value type represents a set of 2D coordinates, used to position an item such as a background image (via [`background-position`](/en-US/docs/Web/CSS/background-position)). It can take keywords such as `top`, `left`, `bottom`, `right`, and `center` to align items with specific bounds of a 2D box, and lengths, which represent offsets from the top and left-hand edges of the box.
+The [`<position>`](/en-US/docs/Web/CSS/position_value) value type represents a set of 2D coordinates, used to position an item such as a background image (via [`background-position`](/en-US/docs/Web/CSS/Reference/Properties/background-position)). It can take keywords such as `top`, `left`, `bottom`, `right`, and `center` to align items with specific bounds of a 2D box, and lengths, which represent offsets from the top and left-hand edges of the box.
 
 A typical position value consists of two values — the first sets the position horizontally, the second vertically. If you only specify values for one axis the other will default to `center`.
 

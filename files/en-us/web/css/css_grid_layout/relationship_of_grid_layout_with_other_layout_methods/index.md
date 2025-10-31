@@ -322,7 +322,7 @@ With grid layout, we can create a grid with a dynamic number of flexible tracks 
 
 ## Grid and absolutely positioned elements
 
-Grid interacts with [absolutely positioned](/en-US/docs/Web/CSS/position#absolute_positioning) elements, which can be useful if you want to position an item inside a grid or grid area. The specification defines the behavior when a grid container is a containing block and a parent of the absolutely positioned item.
+Grid interacts with [absolutely positioned](/en-US/docs/Web/CSS/Reference/Properties/position#absolute_positioning) elements, which can be useful if you want to position an item inside a grid or grid area. The specification defines the behavior when a grid container is a containing block and a parent of the absolutely positioned item.
 
 ### A grid container as containing block
 

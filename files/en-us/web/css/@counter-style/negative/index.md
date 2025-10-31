@@ -43,7 +43,7 @@ The `negative` descriptor is relevant in two cases: if counter styles have the `
 
 ### Rendering negative counters
 
-This example [extends](/en-US/docs/Web/CSS/@counter-style/system#extends) the [`decimal`](/en-US/docs/Web/CSS/list-style-type#decimal) list style. The `negative` descriptor is used to add `(-` and `)` before and after negative counter values.
+This example [extends](/en-US/docs/Web/CSS/@counter-style/system#extends) the [`decimal`](/en-US/docs/Web/CSS/Reference/Properties/list-style-type#decimal) list style. The `negative` descriptor is used to add `(-` and `)` before and after negative counter values.
 
 #### HTML
 

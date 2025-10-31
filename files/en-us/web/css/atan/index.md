@@ -29,7 +29,7 @@ The `atan(number)` function accepts only one value as its parameter.
 
 ### Return value
 
-The inverse tangent of an `number` will always return an {{cssxref("&lt;angle&gt;")}} between `-90deg` and `90deg`.
+The inverse tangent of a `number` will always return an {{cssxref("&lt;angle&gt;")}} between `-90deg` and `90deg`.
 
 - If `number` is `0⁻`, the result is `0⁻`.
 - If `number` is `+∞` the result is `90deg`.

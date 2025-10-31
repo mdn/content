@@ -50,7 +50,7 @@ For maximum control over CSS across platforms, many people used to use CSS reset
 
 ### Formal syntax and pseudocode
 
-Formal syntax is an integral part of MDN's CSS documentation (as an example, see the [Formal syntax](/en-US/docs/Web/CSS/background-image#formal_syntax) section on the `background-image` property page). Because a lot of developers are familiar with syntax in this format, it's acceptable to write pseudocode in a formal-syntax-like fashion in descriptions and examples. However, any code that is not syntactically well-formed CSS should not be marked as CSS. Syntax errors in `css` code blocks result in the code being unparsable by static checkers, confuse readers who expect to see valid CSS code, and may even result in nonsensical syntax highlighting. Either mark your code block as `plain`, or use the `CSSSyntaxRaw` macro to render the complete formal syntax.
+Formal syntax is an integral part of MDN's CSS documentation (as an example, see the [Formal syntax](/en-US/docs/Web/CSS/Reference/Properties/background-image#formal_syntax) section on the `background-image` property page). Because a lot of developers are familiar with syntax in this format, it's acceptable to write pseudocode in a formal-syntax-like fashion in descriptions and examples. However, any code that is not syntactically well-formed CSS should not be marked as CSS. Syntax errors in `css` code blocks result in the code being unparsable by static checkers, confuse readers who expect to see valid CSS code, and may even result in nonsensical syntax highlighting. Either mark your code block as `plain`, or use the `CSSSyntaxRaw` macro to render the complete formal syntax.
 
 Don't write descriptions like this (this is not real formal syntax anyway; it's just pseudo-CSS with some placeholders):
 
@@ -345,7 +345,7 @@ h3 {
 
 ### Specifying font families
 
-When specifying a font family, always add a [generic font family](/en-US/docs/Web/CSS/font-family#generic-name) name as the last fallback. This ensures that if the specified font is not available, the browser displays a more suitable fallback font. [Web-safe fonts](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals#web_safe_fonts) are exempt from this rule.
+When specifying a font family, always add a [generic font family](/en-US/docs/Web/CSS/Reference/Properties/font-family#generic-name) name as the last fallback. This ensures that if the specified font is not available, the browser displays a more suitable fallback font. [Web-safe fonts](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals#web_safe_fonts) are exempt from this rule.
 
 ```css example-bad
 body {
