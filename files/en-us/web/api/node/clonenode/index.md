@@ -45,7 +45,7 @@ cloneNode(deep)
     including text that may be in child {{domxref("Text")}} nodes,
     is also copied.
 
-    If `false`, only the node will be cloned.
+    If `false` or omitted, only the node will be cloned.
     The subtree, including any text that the node contains, is not cloned.
 
     Note that `deep` has no effect on {{glossary("void element", "void elements")}},
