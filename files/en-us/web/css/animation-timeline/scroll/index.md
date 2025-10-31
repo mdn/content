@@ -39,7 +39,7 @@ animation-timeline: scroll(x self);
 
 ### Parameters
 
-- `<scroller>`
+- scroller
   - : The value for indicating the scroller element that will provide the scroll progress timeline can be any one of the following:
     - `nearest`
       - : The nearest ancestor of the current element that has scrollbars on either axis. This is the default value.
