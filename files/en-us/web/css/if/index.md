@@ -82,7 +82,7 @@ The return value is calculated as follows:
 
 1. The `<if-condition>` expressions are evaluated, in the order they appear in the function.
 2. The first `<if-condition>` that evaluates to `true` has its associated `<value>` returned.
-3. If no `<if-condition>` evaluates to `true`, the function returns a {{glossary("guaranteed_invalid_value", "&lt;guaranteed-invalid&gt:")}}. This behaves as invalid or `false` if the `if()` function is used in a value statement that has a fallback, such as a [custom property](/en-US/docs/Web/CSS/--*) or an {{cssxref("anchor()")}} function.
+3. If no `<if-condition>` evaluates to `true`, the function returns a {{glossary("guaranteed_invalid_value", "&lt;guaranteed-invalid&gt:")}}. This behaves as invalid or `false` if the `if()` function is used in a value statement that has a fallback, such as a [custom property](/en-US/docs/Web/CSS/Reference/Properties/--*) or an {{cssxref("anchor()")}} function.
 
 For example:
 
@@ -96,7 +96,7 @@ div {
 }
 ```
 
-In this case, we are setting a different {{cssxref("linear-gradient()")}} as the {{cssxref("background-image")}} on {{htmlelement("div")}} elements, depending on whether a `--scheme` [custom property](/en-US/docs/Web/CSS/--*) is set to `ice` or `fire`. If `--scheme` doesn't exist, or it exists and is set to any other value, the `else` value comes into play, and the `background-image` property is set to `none`.
+In this case, we are setting a different {{cssxref("linear-gradient()")}} as the {{cssxref("background-image")}} on {{htmlelement("div")}} elements, depending on whether a `--scheme` [custom property](/en-US/docs/Web/CSS/Reference/Properties/--*) is set to `ice` or `fire`. If `--scheme` doesn't exist, or it exists and is set to any other value, the `else` value comes into play, and the `background-image` property is set to `none`.
 
 > [!NOTE]
 > Each condition must be separated from its associated value with a colon, and each `<if-condition> : <value>` pair must be separated with a semi-colon. The semi-colon is optional for the last `<if-condition> : <value>` pair.

@@ -45,7 +45,7 @@ Standard properties defined by CSS specifications include the following:
 
 ### Misc
 
-- [Custom properties (`--*`): CSS variables](/en-US/docs/Web/CSS/--*)
+- [Custom properties (`--*`): CSS variables](/en-US/docs/Web/CSS/Reference/Properties/--*)
 
 ### A
 

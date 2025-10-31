@@ -101,7 +101,7 @@ The {{domxref('CSSKeywordValue')}} interface of the CSS Typed Object Model API c
 - {{domxref('CSSUnitValue')}}
   - : An interface representing numeric values that can be represented as a single unit, or a named number and percentage.
 - {{domxref('CSSUnparsedValue')}}
-  - : Represents property values that reference [custom properties](/en-US/docs/Web/CSS/--*). It consists of a list of string fragments and variable references.
+  - : Represents property values that reference [custom properties](/en-US/docs/Web/CSS/Reference/Properties/--*). It consists of a list of string fragments and variable references.
 
 ## Specifications
 

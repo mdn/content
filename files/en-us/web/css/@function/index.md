@@ -29,7 +29,7 @@ The different parts of the `@function` syntax are as follows:
 - `<function-parameter>#?` {{optional_inline}}
   - : Zero or more function parameter definitions. Multiple parameter definitions are separated by commas. Each parameter consists of:
     - `--param-name`
-      - : A [CSS custom property](/en-US/docs/Web/CSS/--*) name to identify the parameter, a [`<dashed-ident>`](/en-US/docs/Web/CSS/dashed-ident) that starts with `--` and is followed by a valid, user-defined identifier. It is case-sensitive. Function parameters can be considered custom properties that are locally scoped to the function body.
+      - : A [CSS custom property](/en-US/docs/Web/CSS/Reference/Properties/--*) name to identify the parameter, a [`<dashed-ident>`](/en-US/docs/Web/CSS/dashed-ident) that starts with `--` and is followed by a valid, user-defined identifier. It is case-sensitive. Function parameters can be considered custom properties that are locally scoped to the function body.
     - `<css-type>` {{optional_inline}}
       - : A CSS data type or a {{cssxref("type()")}} function that defines the accepted data type(s) for the parameter. If this is not specified, any data type will be valid for the parameter (the same as specifying `type(*)`).
     - `<default-value>` {{optional_inline}}
@@ -310,7 +310,7 @@ p {
 
 ## See also
 
-- [CSS custom properties](/en-US/docs/Web/CSS/--*)
+- [CSS custom properties](/en-US/docs/Web/CSS/Reference/Properties/--*)
 - {{cssxref("&lt;dashed-function>")}} data type
 - [`type()`](/en-US/docs/Web/CSS/type) function
 - [Using CSS custom functions](/en-US/docs/Web/CSS/CSS_custom_functions_and_mixins/Using_custom_functions)

@@ -294,7 +294,7 @@ The output is as follows:
 
 ## Manipulating the alpha channel
 
-This example demonstrates changing the alpha channel of a named color. Here, we have an item wrapped in a container that both have a `teal` background. To distinguish between the backgrounds, we vary the alpha channel value using the relative color feature, the [`calc()` function](/en-US/docs/Web/CSS/calc), and a [custom property](/en-US/docs/Web/CSS/--*).
+This example demonstrates changing the alpha channel of a named color. Here, we have an item wrapped in a container that both have a `teal` background. To distinguish between the backgrounds, we vary the alpha channel value using the relative color feature, the [`calc()` function](/en-US/docs/Web/CSS/calc), and a [custom property](/en-US/docs/Web/CSS/Reference/Properties/--*).
 
 ```html
 <div class="container">

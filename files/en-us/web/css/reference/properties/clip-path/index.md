@@ -233,7 +233,7 @@ As a result, the path defined with the shape() function grows with the element, 
 
 {{EmbedLiveSample("shapes2", "", "230")}}
 
-Because the `shape()` function allows using {{cssxref("percentage")}} values (and [custom properties](/en-US/docs/Web/CSS/--*) too), it is more robust.
+Because the `shape()` function allows using {{cssxref("percentage")}} values (and [custom properties](/en-US/docs/Web/CSS/Reference/Properties/--*) too), it is more robust.
 
 We'll demonstrate this by increasing the size of the underlying element:
 

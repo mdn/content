@@ -488,7 +488,7 @@ div {
 
 This example styles three {{htmlelement("div")}} elements with different background colors, demonstrating the use of relative colors to change a color's brightness using the `lch()` color function. The middle `<div>` retains the original `--base-color`, while the left and right `<div>`s are given lightened and darkened variants of the `--base-color`.
 
-These variants are defined using relative colors — the `--base-color` [custom property](/en-US/docs/Web/CSS/--*) is passed into an `lch()` function, and the output colors have their lightness channel modified to achieve the desired effect via a `calc()` function. The lightened color has 15% added to the lightness channel, and the darkened color has 15% subtracted from the lightness channel.
+These variants are defined using relative colors — the `--base-color` [custom property](/en-US/docs/Web/CSS/Reference/Properties/--*) is passed into an `lch()` function, and the output colors have their lightness channel modified to achieve the desired effect via a `calc()` function. The lightened color has 15% added to the lightness channel, and the darkened color has 15% subtracted from the lightness channel.
 
 ```html hidden
 <div id="container">

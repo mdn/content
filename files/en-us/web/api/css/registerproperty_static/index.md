@@ -9,7 +9,7 @@ browser-compat: api.CSS.registerProperty_static
 {{APIRef("CSSOM")}}
 
 The **`CSS.registerProperty()`** static method registers
-[custom properties](/en-US/docs/Web/CSS/--*), allowing for property type checking, default
+[custom properties](/en-US/docs/Web/CSS/Reference/Properties/--*), allowing for property type checking, default
 values, and properties that do or do not inherit their value.
 
 Registering a custom property allows you to tell the browser how the custom property
@@ -56,7 +56,7 @@ CSS.registerProperty(propertyDefinition)
 
 ## Examples
 
-The following will register a [custom property](/en-US/docs/Web/CSS/--*),
+The following will register a [custom property](/en-US/docs/Web/CSS/Reference/Properties/--*),
 `--my-color`, using `registerProperty()`, as a color, give it a
 default value, and have it not inherit its value:
 

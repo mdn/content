@@ -103,7 +103,7 @@ The `progress()` function outputs unitless values, therefore it can be used for 
 
 ### Combining `progress()` with other functions and custom properties
 
-Because `progress()` only ever returns a unitless value between `0` and `1`, it is common to combine it with another math function such as {{cssxref("calc()")}} to output the value and units you want. You can also use [CSS custom properties](/en-US/docs/Web/CSS/--*) inside `progress()` functions — this makes sense, as you'll often want to set the same values in multiple places, and/or base them on custom properties set via JavaScript.
+Because `progress()` only ever returns a unitless value between `0` and `1`, it is common to combine it with another math function such as {{cssxref("calc()")}} to output the value and units you want. You can also use [CSS custom properties](/en-US/docs/Web/CSS/Reference/Properties/--*) inside `progress()` functions — this makes sense, as you'll often want to set the same values in multiple places, and/or base them on custom properties set via JavaScript.
 
 The following example calculates what percentage the viewport width is between a minimum width of `320px` and a maximum width of `1200px`. The `calc()` function is used to multiply the `progress()` return value by `600px` to convert it into a pixel value that will half of the viewport width's progress value between `320px` and `1200px`.
 
