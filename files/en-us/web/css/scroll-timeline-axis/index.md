@@ -6,12 +6,7 @@ browser-compat: css.properties.scroll-timeline-axis
 sidebar: cssref
 ---
 
-The **`scroll-timeline-axis`** [CSS](/en-US/docs/Web/CSS) property is used to specify the scrollbar direction that will be used to provide the timeline for a _named scroll progress timeline_ animation, which is progressed through by scrolling a scrollable element (_scroller_) between top and bottom (or left and right). `scroll-timeline` is set on the scroller that will provide the timeline. See [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations) for more details.
-
-> [!NOTE]
-> If the scroller element does not overflow its container in the axis dimension or if the overflow is hidden or clipped, no scroll progress timeline will be created.
-
-The `scroll-timeline-axis` and {{cssxref("scroll-timeline-name")}} properties can also be set using the [`scroll-timeline`](/en-US/docs/Web/CSS/scroll-timeline) shorthand property.
+The **`scroll-timeline-axis`** [CSS](/en-US/docs/Web/CSS) property is used to specify the scrollbar direction that will be used to provide the [timeline for a scroll driven animation](/en-us/web/css/css_scroll-driven_animations/timelines) animation, which is progressed through by scrolling a scrollable element (_scroller_).
 
 ## Syntax
 
@@ -19,23 +14,24 @@ The `scroll-timeline-axis` and {{cssxref("scroll-timeline-name")}} properties ca
 /* Logical property values */
 scroll-timeline-axis: block;
 scroll-timeline-axis: inline;
-/* Non-logical property values */
+
+/* Physical property values */
 scroll-timeline-axis: y;
 scroll-timeline-axis: x;
 ```
 
 ### Values
 
-Allowed values for `scroll-timeline-axis` are:
+- `<axis>`
+  - : An {{ cssxref("axis") }} keyword value describing the direction, or axis, of the scrollport that controls the scroll-driven animation. The default value is `block`.
 
-- `block`
-  - : The scrollbar on the block axis of the scroller element, which is the axis in the direction perpendicular to the flow of text within a line. For horizontal writing modes, such as standard English, this is the same as `y`, while for vertical writing modes, it is the same as `x`. This is the default value.
-- `inline`
-  - : The scrollbar on the inline axis of the scroller element, which is the axis in the direction parallel to the flow of text in a line. For horizontal writing modes, this is the same as `x`, while for vertical writing modes, this is the same as `y`.
-- `y`
-  - : The scrollbar on the vertical axis of the scroller element.
-- `x`
-  - : The scrollbar on the horizontal axis of the scroller element.
+## Description
+
+The `scroll-timeline-axis`property specifies which scrollbar will be used to provide the timeline for a [scroll progress timeline](/en-us/web/css/css_scroll-driven_animations/timelines) animation. The value is the `<axis>` of the scrollbar. The `scroll-timeline` property is set on the scroller that will provide the timeline.
+
+If the scroller element does not overflow its container in the axis dimension or if the overflow is hidden or clipped, no scroll progress timeline will be created.
+
+The `scroll-timeline-axis` and {{cssxref("scroll-timeline-name")}} properties can also be set using the [`scroll-timeline`](/en-US/docs/Web/CSS/scroll-timeline) shorthand property.
 
 ## Formal definition
 
@@ -138,7 +134,9 @@ Scroll the horizontal bar at the bottom to see the square animate as you scroll.
 
 ## See also
 
-- [`animation-timeline`](/en-US/docs/Web/CSS/animation-timeline)
-- [`scroll-timeline`](/en-US/docs/Web/CSS/scroll-timeline), [`scroll-timeline-name`](/en-US/docs/Web/CSS/scroll-timeline-name)
+- {{cssxref("animation-timeline")}}
+- {{cssxref("scroll-timeline")}}
+- {{cssxref("scroll-timeline-name")}}
 - {{cssxref("timeline-scope")}}
-- [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations)
+- [Scroll-driven animation timelines](/en-US/docs/Web/CSS/CSS_scroll-driven_animations/Timelines)
+- [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations) module

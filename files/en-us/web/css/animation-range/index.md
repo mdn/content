@@ -18,71 +18,58 @@ This property is a shorthand for the following CSS properties:
 ## Syntax
 
 ```css
-/* single keyword or length percentage value */
-animation-range: normal; /* Equivalent to normal normal */
-animation-range: 20%; /* Equivalent to 20% normal */
-animation-range: 100px; /* Equivalent to 100px normal */
+/* Single value syntax */
+animation-range: normal;
+animation-range: 20%;
+animation-range: 100px;
+animation-range: cover;
+animation-range: contain;
 
-/* single named timeline range value */
-animation-range: cover; /* Equivalent to cover 0% cover 100% */
-animation-range: contain; /* Equivalent to contain 0% contain 100% */
-animation-range: cover 20%; /* Equivalent to cover 20% cover 100% */
-animation-range: contain 100px; /* Equivalent to contain 100px cover 100% */
-
-/* two values for range start and end */
+/* Two value syntax */
+/* Named timeline range value */
+animation-range: cover 20%;
+animation-range: contain 100px;
+/* Range start and end */
 animation-range: normal 25%;
 animation-range: 25% normal;
 animation-range: 25% 50%;
-animation-range: entry exit; /* Equivalent to entry 0% exit 100% */
-animation-range: cover cover 200px; /* Equivalent to cover 0% cover 200px */
-animation-range: entry 10% exit; /* Equivalent to entry 10% exit 100% */
+animation-range: entry exit;
+
+/* Three value syntax */
+animation-range: cover cover 200px;
 animation-range: 10% exit 90%;
 animation-range: entry 10% 90%;
+
+/* Four value syntax */
+animation-range: cover 0% cover 200px;
+animation-range: entry 10% exit 100%;
 ```
-
-The `animation-range` shorthand property can be applied to a container element as a combination of the `<animation-range-start>` and `<animation-range-end>` values. If both the values are specified, they will be interpreted in the order `<animation-range-start>` then `<animation-range-end>`.
-
-As shown by the comments in the syntax block above, if only a single value is provided there are a couple of possible interpretations:
-
-- If the value is a {{cssxref("length-percentage")}} or `normal`, `<animation-range-start>` will take that value, and `<animation-range-end>` will equal `normal`.
-- If the value is a named timeline range without a `<length-percentage>` following it, the range will be between that named timeline range at 0% and 100%.
-- If the value is a named timeline range with a `<length-percentage>` following it, the range will start at that named timeline range and percentage, and end at that named timeline range and 100%.
 
 ### Values
 
-One or two values representing the [`animation-range-start`](/en-US/docs/Web/CSS/animation-range-start) and/or [`animation-range-end`](/en-US/docs/Web/CSS/animation-range-end). These values can be one of the following:
+- `<animation-range-start>`
+  - : The keyword `normal`, a `<length-percentage>`, a `<timeline-range-name>`, or a `<timeline-range-name> <length-percentage>` pair, representing the [`animation-range-start`](/en-US/docs/Web/CSS/animation-range-start). If a `<timeline-range-name>` is set without a `<length-percentage>`, the `<length-percentage>` defaults to `0%`.
+- `<animation-range-end>`
+  - : The keyword `normal`, a `<length-percentage>`, a `<timeline-range-name>`, or a `<timeline-range-name> <length-percentage>` pair, representing the [`animation-range-end`](/en-US/docs/Web/CSS/animation-range-end). If a `<timeline-range-name>` is set without a `<length-percentage>`, the `<length-percentage>` defaults to `100%`.
 
-- `normal`
-  - : Represents the start of the timeline in the case of `animation-range-start` and the end of the timeline in the case of `animation-range-end`. This is the default value.
-- `<length-percentage>`
-  - : A length or percentage value measured from the beginning of the timeline.
-- `<timeline-range-name>`
-  - : A specific named timeline range inside the overall timeline. Possible values are:
-    - `cover`
-      - : Represents the full range of a _named view progress timeline_ (see [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations) for more details), from the point where the subject element first starts to enter the scroll port's view progress visibility range (0% progress) to the point where it has completely left it (100% progress).
-    - `contain`
-      - : Represents the range of a _named view progress timeline_ where the subject element is fully contained by, or fully contains, the scroll port's view progress visibility range.
-        - If the subject element is smaller than the scrollport, it ranges from the point where the subject element is first completely contained by the scroll port (0% progress), to the point where it is no longer completely contained by the scroll port (100% progress).
-        - If the subject element is larger than the scrollport, it ranges from the point where the subject element first completely covers the scroll port (0% progress), to the point where it no longer completely covers the scroll port (100% progress).
-    - `entry`
-      - : Represents the range of a _named view progress timeline_ from the point where the subject element first starts to enter the scroll port (0% progress), to the point where it has completely entered the scroll port (100%).
-    - `exit`
-      - : Represents the range of a _named view progress timeline_ from the point where the subject element first starts to exit the scroll port (0% progress), to the point where it has completely exited the scroll port (100%).
-    - `entry-crossing`
-      - : Represents the range of a _named view progress timeline_ from the point where the subject element first starts to cross the scroll port's starting edge (0% progress), to the point where it has completely crossed the scroll port's starting edge (100%).
-    - `exit-crossing`
-      - : Represents the range of a _named view progress timeline_ from the point where the subject element first starts to cross the scroll port's end edge (0% progress), to the point where it has completely crossed the scroll port's end edge (100%).
+## Description
 
-    In the case of `<timeline-range-name>` values that do not include a `<length-percentage>`, the percentage defaults to `0%` if it is an `animation-range-start` value, and `100%` if it is an `animation-range-end` value.
+The `animation-range` shorthand property sets the `animation-range-start` and `animation-range-end` values, defining where along the animation timeline the animation will start and end.
 
-    > [!NOTE]
-    > It is quite hard to visualize what these values mean from the descriptions above. Fortunately, the [View Timeline Ranges Visualizer](https://scroll-driven-animations.style/tools/view-timeline/ranges/) shows exactly what they mean in a visual format.
+The property can be applied to a container element as a combination of the `<animation-range-start>` and `<animation-range-end>` values. If both the values are specified, they will be interpreted in the order `<animation-range-start>` then `<animation-range-end>`.
 
-- `<timeline-range-name> <length-percentage>`
-  - : A combination value that equals the specified percentage or distance through the specified named timeline range, measured from the start of that timeline range.
+The value of each component is either the keyword `normal`, a {{cssxref("length-percentage")}}, or a {{cssxref("timeline-range-name")}}, optionally defined with a `<length-percentage>`
 
-> [!NOTE]
-> The scroll port (see {{glossary("Scroll container")}} for more details) area known as the view progress visibility range is the area inside which the subject element of a _named view progress timeline_ animation is deemed to be visible. By default, this is the full range of the scrollport, but it can be adjusted using the {{cssxref("view-timeline-inset")}} property.
+If the value is a {{cssxref("length-percentage")}} or `normal`, `<animation-range-start>` will take that value, and `<animation-range-end>` will equal `normal`. For example, `animation-range: 20%;` is the equivalent to `animation-range: 20% normal;` and `animation-range: normal;` is the equivalent to `animation-range: normal normal;`.
+
+If the value is a {{cssxref("timeline-range-name")}} without a `<length-percentage>` following it, that timeline range name is applied to both the start and end animation range components at 0% and 100%. For example, `animation-range: contain;` is equivalent to `animation-range: contain 0% contain 100%;`.
+
+If the value is a `<timeline-range-name>` with a `<length-percentage>` following it, that defines the range start. In this case, both the start and end animation range components are set to the `<timeline-range-name>`, while the `<length-percentage>` value applies to the `<animation-range-start>` component and the `<animation-range-end>` component is set to `100%`. For example, `animation-range: cover 20%;` is equivalent to `animation-range: cover 20% cover 100%` and `animation-range: contain 100px;` is equivalent to `animation-range: contain 100px contain 100%`.
+
+Otherwise, both `<animation-range-start>` and `<animation-range-end>` are defined. If the first value is `normal` or a `<length-percentage>`, that defines the `<animation-range-start>`, and the rest of the value defines the `<animation-range-end>`. For example, `animation-range: normal 25%;` is equivalent to `animation-range-start: normal; animation-range-end: 25%`, and `animation-range: 25% 50%;` is equivalent to `animation-range-start: 25%; animation-range-end: 50%`. Including `<timeline-range-name>`; `animation-range: entry exit;` is equivalent to `animation-range: entry 0% exit 100%`,
+`animation-range: cover cover 200px;`is equivalent to `animation-range: cover 0% cover 200px;`, and `animation-range: entry 10% exit;` is equivalent to `animation-range: entry 10% exit 100%;`.
+
+The {{glossary("Scroll container", "scroll port")}} area known as the view progress visibility range is the area inside which the subject element of a [named view progress timeline](/en-US/docs/Web/CSS/CSS_scroll-driven_animations/Timelines#view_progress_timelines) animation is deemed to be visible. By default, this is the full range of the scrollport, but it can be adjusted using the {{cssxref("view-timeline-inset")}} property.
 
 ## Formal definition
 

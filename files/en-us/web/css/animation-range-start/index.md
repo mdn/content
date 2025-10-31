@@ -8,11 +8,6 @@ sidebar: cssref
 
 The **`animation-range-start`** [CSS](/en-US/docs/Web/CSS) property is used to set the start of an animation's attachment range along its timeline, i.e., where along the timeline an animation will start.
 
-The `animation-range-start` and {{cssxref("animation-range-end")}} properties can also be set using the [`animation-range`](/en-US/docs/Web/CSS/animation-range) shorthand property.
-
-> [!NOTE]
-> `animation-range-start` is included in the {{cssxref("animation")}} shorthand as a reset-only value. This means that including `animation` resets a previously-declared `animation-range-start` value to `normal`, but a specific value cannot be set via `animation`. When creating [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations), you need to declare `animation-range-start` after declaring any `animation` shorthand for it to take effect.
-
 ## Syntax
 
 ```css
@@ -30,9 +25,26 @@ animation-range-start: contain 100px;
 
 ### Values
 
+- `normal`
+  - : Represents the start of the timeline. This is the default value.
+- {{cssxref("length-percentage")}}
+  - : A length or percentage value measured from the beginning of the timeline.
+- {{cssxref("timeline-range-name")}}
+  - : A specific named timeline range inside the overall timeline, starting at `0%`.
+- `<timeline-range-name> <length-percentage>`
+  - : The specified percentage or distance through the specified named timeline range, measured from the start of that timeline range.
+
+## Description
+
+In the case of `<timeline-range-name>` values that do not include a `<length-percentage>`, the percentage defaults to `0%`.
+
 Allowed values for `animation-range-start` are `normal`, a {{cssxref("length-percentage")}}, a `<timeline-range-name>`, or a `<timeline-range-name>` with a `<length-percentage>` following it. See [`animation-range`](/en-US/docs/Web/CSS/animation-range) for a detailed description of the available values.
 
 Also check out the [View Timeline Ranges Visualizer](https://scroll-driven-animations.style/tools/view-timeline/ranges/), which shows exactly what the different values mean in an easy visual format.
+
+The `animation-range-start` and {{cssxref("animation-range-end")}} properties can also be set using the {{cssxref("animation-range")}} shorthand property.
+
+The `animation-range-start` is included in the {{cssxref("animation")}} shorthand as a reset-only value. This means that the `animation` resets a previously-declared `animation-range-start` value of equal or lower specificity to `normal`, but the range start value cannot be set via an `animation` shorthand declaration. For this reason, when creating ranges for [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations/Timelines), you should declare `animation-range-start` after declaring any `animation` shorthand for it to take effect.
 
 ## Formal definition
 
@@ -46,17 +58,14 @@ Also check out the [View Timeline Ranges Visualizer](https://scroll-driven-anima
 
 ### Creating a named view progress timeline with range start
 
-A view progress timeline named `--subject-reveal` is defined using the `view-timeline` property on a subject element with a `class` of `animation`.
-This is then set as the timeline for the same element using `animation-timeline: --subject-reveal;`. The result is that the subject element animates as it moves upwards through the document as it is scrolled.
-
-An `animation-range-start` declaration is also set to make the animation begin later than expected.
+In this example, a `subject` in a large block of text will be made to fade in and size up as it moves up it's {{glossary("scroll container")}}. We'll use the `animation-range-start` property to make the animation begin later than expected.
 
 #### HTML
 
-The HTML for the example is shown below.
+We include several headings and paragraphs with a lot of text to ensure the content overflows its `container`. In the middle, we include a `subject` that we will animate along a timeline in our CSS.
 
 ```html
-<div class="content">
+<div class="container">
   <h1>Content</h1>
 
   <p>
@@ -75,7 +84,7 @@ The HTML for the example is shown below.
     arcu vitae elementum curabitur vitae nunc sed velit.
   </p>
 
-  <div class="subject animation"></div>
+  <div class="subject"></div>
 
   <p>
     Adipiscing enim eu turpis egestas pretium aenean pharetra magna ac. Arcu
@@ -92,50 +101,19 @@ The HTML for the example is shown below.
 
 #### CSS
 
-The `subject` element and its containing `content` element are styled minimally, and the text content is given some basic font settings:
+We set a width and margin for the `container` and `subject`. We also define a keyframe animation that animates an element's opacity and scale, which we will apply to our `subject`. Other basic styles were hidden for brevity.
 
 ```css
+.container {
+  width: 75%;
+  max-width: 800px;
+  margin: 0 auto;
+}
 .subject {
   width: 300px;
   height: 200px;
   margin: 0 auto;
   background-color: deeppink;
-}
-
-.content {
-  width: 75%;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-p,
-h1 {
-  font-family: "Helvetica", "Arial", sans-serif;
-}
-
-h1 {
-  font-size: 3rem;
-}
-
-p {
-  font-size: 1.5rem;
-  line-height: 1.5;
-}
-```
-
-The `<div>` with the class of `subject` is also given a class of `animation` — this is where `view-timeline` is set to define a named view progress timeline. It is also given an `animation-timeline` name with the same value to declare that this will be the element animated as the view progress timeline is progressed. We also give it an `animation-range-start` declaration to make the animation begin later than expected.
-
-Last, an animation is specified on the element that animates its opacity and scale, causing it to fade in and size up as it moves up the scroller.
-
-```css
-.animation {
-  view-timeline: --subject-reveal block;
-  animation-timeline: --subject-reveal;
-
-  animation-name: appear;
-  animation-range-start: entry 25%;
-  animation-fill-mode: both;
-  animation-duration: 1ms; /* Firefox requires this to apply the animation */
 }
 
 @keyframes appear {
@@ -147,6 +125,40 @@ Last, an animation is specified on the element that animates its opacity and sca
   to {
     opacity: 1;
     transform: scaleX(1);
+  }
+}
+```
+
+The `subject` is set to be its own view progress timeline with the {{cssxref("view()")}} function as the value of the {{cssxref("animation-timeline")}}. We give it an `animation-range-start` declaration to make the animation begin later than expected.
+
+```css
+.subject {
+  animation: appear 1ms;
+  animation-timeline: view();
+  animation-range-start: entry 25%;
+}
+```
+
+```css hidden
+@layer setupCSS {
+  .container {
+    width: 75%;
+    max-width: 800px;
+    margin: 0 auto;
+    border: 1px solid;
+  }
+  p,
+  h1 {
+    font-family: "Helvetica", "Arial", sans-serif;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+    line-height: 1.5;
   }
 }
 ```
@@ -167,10 +179,10 @@ Scroll to see the subject element being animated.
 
 ## See also
 
-- [`animation-timeline`](/en-US/docs/Web/CSS/animation-timeline)
-- [`animation-range`](/en-US/docs/Web/CSS/animation-range), [`animation-range-end`](/en-US/docs/Web/CSS/animation-range-end)
-- [`scroll-timeline`](/en-US/docs/Web/CSS/scroll-timeline), [`scroll-timeline-axis`](/en-US/docs/Web/CSS/scroll-timeline-axis), [`scroll-timeline-name`](/en-US/docs/Web/CSS/scroll-timeline-name)
-- {{cssxref("timeline-scope")}}
-- [`view-timeline-inset`](/en-US/docs/Web/CSS/view-timeline-inset)
-- The JavaScript equivalent: The `rangeStart` property available in {{domxref("Element.animate()")}} calls
-- [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations)
+- {{cssxref("animation-timeline")}}
+- {{cssxref("animation-range")}}
+- {{cssxref("animation-range-end")}}
+- {{cssxref("view-timeline-inset")}}
+- {{domxref("Element.animate()")}} `rangeStart` property
+- [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations) module
+- [View timeline ranges visualizer](https://scroll-driven-animations.style/tools/view-timeline/ranges/)

@@ -6,41 +6,35 @@ browser-compat: css.properties.animation-timeline.scroll
 sidebar: cssref
 ---
 
-The **`scroll()`** [CSS function](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) can be used with {{cssxref("animation-timeline")}} to indicate a scrollable element (_scroller_) and scrollbar axis that will provide an anonymous scroll progress timeline for animating the current element. The scroll progress timeline is progressed through by scrolling the scroller between top and bottom (or left and right). The position in the scroll range is converted into a percentage of progress — 0% at the start and 100% at the end.
-
-> [!NOTE]
-> If the indicated axis does not contain a scrollbar, then the animation timeline will be inactive (have zero progress).
-
-> [!NOTE]
-> Each use of `scroll()` corresponds to its own unique instance of {{domxref("ScrollTimeline")}} in the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API).
+The **`scroll()`** [CSS function](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) can be used to define the scroller and axis of an [anonymous scroll progress timeline](/en-US/docs/Web/CSS/CSS_scroll-driven_animations/Timelines#anonymous_scroll_progress_timelines).
 
 ## Syntax
 
 ```css
-/* Function with no parameters set */
+/* No arguments */
 animation-timeline: scroll();
 
-/* Values for selecting the scroller element */
-animation-timeline: scroll(nearest); /* Default */
+/* <scroller> argument only */
+animation-timeline: scroll(nearest);
 animation-timeline: scroll(root);
 animation-timeline: scroll(self);
 
-/* Values for selecting the axis */
-animation-timeline: scroll(block); /* Default */
+/*`<axis>` argument only */
+animation-timeline: scroll(block);
 animation-timeline: scroll(inline);
 animation-timeline: scroll(y);
 animation-timeline: scroll(x);
 
-/* Examples that specify scroller and axis */
-animation-timeline: scroll(block nearest); /* Default */
+/* <scroller> and <axis> */
+animation-timeline: scroll(block nearest);
 animation-timeline: scroll(inline root);
 animation-timeline: scroll(x self);
 ```
 
 ### Parameters
 
-- scroller
-  - : The value for indicating the scroller element that will provide the scroll progress timeline can be any one of the following:
+- `<scroller>`
+  - : The scroller element that will provide the scroll progress timeline. Valid values include:
     - `nearest`
       - : The nearest ancestor of the current element that has scrollbars on either axis. This is the default value.
     - `root`
@@ -48,19 +42,24 @@ animation-timeline: scroll(x self);
     - `self`
       - : The current element itself.
 
-- axis
-  - : The scrollbar axis value can be any one of the following:
-    - `block`
-      - : The scrollbar on the block axis of the scroll container, which is the axis in the direction perpendicular to the flow of text within a line. For horizontal writing modes, such as standard English, this is the same as `y`, while for vertical writing modes, it is the same as `x`. This is the default value.
-    - `inline`
-      - : The scrollbar on the inline axis of the scroll container, which is the axis in the direction parallel to the flow of text in a line. For horizontal writing modes, this is the same as `x`, while for vertical writing modes, this is the same as `y`.
-    - `y`
-      - : The scrollbar on the vertical axis of the scroll container.
-    - `x`
-      - : The scrollbar on the horizontal axis of the scroll container.
+- `<axis>`
+  - : An {{ cssxref("axis") }} keyword value describing the direction, or axis, of the scrollport that controls the scroll-driven animation. The default value is `block`.
 
-> [!NOTE]
-> The scroller and axis values can be specified in any order.
+## Description
+
+The `scroll()` CSS function can be used as a singe animation timeline value within the comma-separated {{cssxref("animation-timeline")}} property to specify a scroll progress timeline for a {{cssxref("@keyframes")}} animation. It defines the scrollable element (_scroller_) and scrollbar axis that will provide the animation timeline.
+
+By default, `scroll()` references the `block` axis of the `nearest` ancestor scroll container, but these defaults can be modified by the arguments passed by the function. The scroller and axis values can be specified in any order. The following five declarations are equivalent:
+
+```css
+animation-timeline: scroll();
+animation-timeline: scroll(block);
+animation-timeline: scroll(nearest);
+animation-timeline: scroll(block nearest);
+animation-timeline: scroll(nearest block);
+```
+
+The scroll progress timeline is progressed through by scrolling the scroller horizontally or vertically, depending on the `<axis>` and [writing mode](/en-US/docs/Web/CSS/CSS_writing_modes/Writing_mode_systems). If the indicated axis does not contain a scrollbar, then the animation timeline will be inactive.
 
 ## Formal syntax
 
@@ -149,6 +148,8 @@ Scroll to see the square element being animated.
 
 ## See also
 
-- [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations)
 - [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- [`animation-timeline`](/en-US/docs/Web/CSS/animation-timeline)
+- [CSS animations](/en-US/docs/Web/CSS/CSS_animations) module
+- [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations) module
+- {{domxref("ScrollTimeline")}}
+- [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)

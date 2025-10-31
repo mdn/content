@@ -22,3 +22,4 @@ The scrollport is the visible part of a scroll container and coincides with the 
 - [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
 - [CSS overscroll behavior](/en-US/docs/Web/CSS/CSS_overscroll_behavior) module
 - [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) module
+- [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations) module
