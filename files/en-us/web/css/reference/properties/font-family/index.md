@@ -203,9 +203,9 @@ font-family: "Gill Sans Extrabold", sans-serif;
 
 <div class="fantasy">This is an example of a fantasy font.</div>
 
-<div class="math">This is an example of a math font.</div>
-
 <div class="fangsong">This is an example of a fangsong font.</div>
+
+<div class="math">This is a math font for styling text like ℝ, ∫, ∑, etc.</div>
 ```
 
 {{EmbedLiveSample("Some_common_font_families", 600, 220)}}
