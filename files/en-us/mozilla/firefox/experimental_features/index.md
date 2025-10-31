@@ -359,7 +359,7 @@ The {{CSSXRef(":heading")}} pseudo-class allows you to style all [heading elemen
 ### CSS module scripts
 
 CSS module scripts are now supported, allowing a stylesheet to be loaded into a script as a {{domxref("CSSStyleSheet")}} instance using the [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) statement.
-The `import` statement must also specify the `type` [import attribute](/en-US/docs/Web/JavaScript/Reference/Statements/import/with) and set it to `"css"`, and the stylesheet must be served with the MIME type of `text/css`.
+The `import` statement must also specify the `type` [import attribute](/en-US/docs/Web/JavaScript/Reference/Statements/import/with) and set it to `"css"`, and the stylesheet must be served with the [media type](/en-US/docs/Web/HTTP/Guides/MIME_types) of `text/css`.
 ([Firefox bug 1720570](https://bugzil.la/1720570)).
 
 | Release channel   | Version added | Enabled by default? |
