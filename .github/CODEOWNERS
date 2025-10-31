@@ -47,14 +47,15 @@
 # Issue templates in .github
 /.github/ISSUE_TEMPLATE/ff-project-issue.md @mdn/content-team
 
-# Root directory
-/* @mdn/engineering
-# Markdown files in root directory
-/*.md @mdn/content-team
 # VSCode configuration
 /.vscode/              @mdn/engineering
 /.vscode/dictionaries/ @mdn/content-team
 /.vscode/cspell.json   @mdn/content-team
+
+# Root directory
+/* @mdn/engineering
+# Markdown files in root directory
+/*.md @mdn/content-team
 # Scripts and Tests
 /scripts @mdn/engineering
 /tests @mdn/engineering
