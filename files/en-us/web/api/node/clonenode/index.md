@@ -41,12 +41,13 @@ cloneNode(deep)
 ### Parameters
 
 - `deep` {{optional_inline}}
-  - : If `true`, then the node and its whole subtree,
-    including text that may be in child {{domxref("Text")}} nodes,
-    is also copied.
-
-    If `false`, only the node will be cloned.
-    The subtree, including any text that the node contains, is not cloned.
+  - : A boolean value indicating whether to clone the subtree rooted by the node.
+    If the parameter is omitted, it defaults to `false`.
+    - If `true`, then the node and its whole subtree,
+      including text that may be in child {{domxref("Text")}} nodes,
+      is also copied.
+    - If `false`, only the node will be cloned.
+      The subtree, including any text that the node contains, is not cloned.
 
     Note that `deep` has no effect on {{glossary("void element", "void elements")}},
     such as the {{HTMLElement("img")}} and {{HTMLElement("input")}} elements.
