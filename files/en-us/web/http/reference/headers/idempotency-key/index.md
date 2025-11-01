@@ -132,7 +132,7 @@ Idempotency-Key: 9c7d2b4a0e1f6c835a2d1b0f4e3c5a7d
 }
 ```
 
-If no response is received, the client can safely resend the exactly same request. If the server didn't get the previous request, it will act on this one; if it has already received the previous request, the second one will be ignored, but the server will respond as though it processed the second one as usual.
+If no response is received, the client can safely resend the exact same request. If the server didn't get the previous request, it will act on this one; if it has already received the previous request, the second one will be ignored, but the server will respond as though it processed the second one as usual.
 
 If the client resends the request too quickly, it might get an error response like this.
 Note that only the HTTP status code is mandated, the rest of the information is defined by the server.
