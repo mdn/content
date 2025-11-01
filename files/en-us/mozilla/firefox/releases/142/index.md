@@ -77,6 +77,7 @@ No notable changes.
 - The {{WebExtAPIRef("cookies")}} methods now accept and return milliseconds in the fractional part of `expirationDate`. ([Firefox bug 1972757](https://bugzil.la/1972757))
 - Adds the {{WebExtAPIRef("browserAction.onUserSettingsChanged")}} and {{WebExtAPIRef("action.onUserSettingsChanged")}} events that listen for changes in the user-specified settings that affect an extension's action. ([Firefox bug 1828220](https://bugzil.la/1828220))
 - Adds {{WebExtAPIRef("browserSettings.verticalTabs")}}, which enables extensions to control whether the browser displays the tab bar horizontally or vertically. ([Firefox bug 1946600](https://bugzil.la/1946600))
+- Enabled the Firefox built-in data collection consent feature for Firefox for Android. See the Extension Workshop article [Firefox built-in consent for data collection and transmission](http://extensionworkshop.com/documentation/develop/firefox-builtin-data-consent/). ([Firefox bug 1954524](https://bugzil.la/1954524))
 
 ## Experimental web features
 
