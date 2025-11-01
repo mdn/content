@@ -7,6 +7,9 @@ sidebar: privacy
 
 Since version 79, Firefox has protected users against **redirect tracking** by periodically clearing cookies and site data set by known trackers. This data is only cleared from storage if the user is [blocking tracking cookies](/en-US/docs/Web/Privacy/Guides/Storage_Access_Policy) (i.e., the `network.cookie.cookieBehavior` pref is set to `4`).
 
+> [!NOTE]
+> This article refers to Firefox's original redirect/bounce tracking mechanism, which has since been superceded by [bounce tracking mitigations](/en-US/docs/Web/Privacy/Guides/Bounce_tracking_mitigations).
+
 Support for other cookie policies is tracked by [Bug 1643045](https://bugzil.la/1643045).
 
 ## Redirect tracking defined
