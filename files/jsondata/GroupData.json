@@ -309,7 +309,8 @@
         "/docs/Web/API/CSS_Object_Model/CSS_Declaration_Block",
         "/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements",
         "/docs/Web/API/CSS_Object_Model/Managing_screen_orientation",
-        "/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information"
+        "/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information",
+        "/docs/Web/API/CSS_Object_Model/CSS_value_serialization"
       ],
       "interfaces": [
         "CaretPosition",
