@@ -132,16 +132,19 @@ In this example we use `:invalid` along with `~`, the [subsequent-sibling combin
 ```html
 <form>
   <fieldset>
+    <legend>Personal Information</legend>
     <label for="form-name">Name</label><br />
     <input type="text" name="name" id="form-name" required />
   </fieldset>
 
   <fieldset>
+    <legend>Contact Information</legend>
     <label for="form-email">Email Address</label><br />
     <input type="email" name="email" id="form-email" required />
   </fieldset>
 
   <fieldset>
+    <legend>Message</legend>
     <label for="form-message">Message</label><br />
     <textarea name="message" id="form-message" required></textarea>
   </fieldset>

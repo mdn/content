@@ -79,7 +79,10 @@ If sanitization does fail, there are various forms the injected malicious code c
 - An inline event handler:
 
   ```html
-  <img onmouseover="console.log(`You've been hacked!`)" />
+  <img
+    onmouseover="console.log(`You've been hacked!`)"
+    src="thumbnail.jpg"
+    alt="" />
   ```
 
 - A `javascript:` URL:
@@ -291,7 +294,7 @@ If a CSP contains either a `default-src` or a `script-src` directive, then inlin
 - JavaScript in a `javascript:` URL:
 
   ```html
-  <a href="javascript:console.log('Hello from a javascript: URL')"></a>
+  <a href="javascript:console.log('Hello from a javascript: URL')">Click me</a>
   ```
 
 The `unsafe-inline` keyword can be used to override this restriction. For example, the following directive requires all resources to be same-origin, but allows inline JavaScript:

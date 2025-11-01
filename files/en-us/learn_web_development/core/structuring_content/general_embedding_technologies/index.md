@@ -79,11 +79,6 @@ If you were to add the code below into one of your pages, you might be surprised
   height="500"
   allowfullscreen
   sandbox>
-  <p>
-    <a href="/en-US/docs/Glossary">
-      Fallback link for browsers that don't support iframes
-    </a>
-  </p>
 </iframe>
 ```
 

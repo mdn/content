@@ -38,7 +38,7 @@ The example includes options to change the values for the `overflow-clip-margin`
     </label>
     <label>
       <code>overflow-clip-margin</code>:
-      <input type="number" id="ocm" value="1" min="0" max="10" size="2" />
+      <input type="number" id="ocm" value="1" min="0" max="10" />
       <code>em</code>
     </label>
     <label

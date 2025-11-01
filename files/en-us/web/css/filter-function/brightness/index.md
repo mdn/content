@@ -181,7 +181,7 @@ filter: url("folder/fileName.svg#darken25"); /* external svg filter definition *
 In the images below, the first one has a `brightness()` filter function applied, the second one has a similar SVG brightness function applied, and the third is the original image for comparison.
 
 ```html hidden live-sample___svg_filter
-<table cellpadding="5">
+<table>
   <thead>
     <tr>
       <th>Live example</th>
@@ -219,6 +219,11 @@ In the images below, the first one has a `brightness()` filter function applied,
 }
 .svg-filter {
   filter: url("#darken25");
+}
+
+th,
+td {
+  padding: 5px;
 }
 svg:not(:root) {
   display: none;

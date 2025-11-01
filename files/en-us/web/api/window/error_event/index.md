@@ -100,7 +100,7 @@ This special behavior only happens for the `onerror` event handler on `window`. 
 ```html
 <div class="controls">
   <button id="script-error" type="button">Generate script error</button>
-  <img class="bad-img" />
+  <img src="bad-image.jpg" class="bad-img" alt="I don't exist" />
 </div>
 
 <div class="event-log">
@@ -163,8 +163,7 @@ window.addEventListener("error", (event) => {
 
 const scriptError = document.querySelector("#script-error");
 scriptError.addEventListener("click", () => {
-  const badCode = "const s;";
-  eval(badCode);
+  throw new Error("This is a script error");
 });
 ```
 

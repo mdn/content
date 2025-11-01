@@ -81,9 +81,11 @@ In this example, the 1967 speech from Canada's centennial, _A Lament for Confede
     nations.
   </p>
 </article>
-<fieldset id="options">
-  <legend role="button" aria-expanded="true" aria-controls="controls">
-    Column options
+<fieldset id="options" class="open">
+  <legend>
+    <button aria-expanded="true" aria-controls="controls">
+      Column options
+    </button>
   </legend>
   <div id="controls">
     <p>
@@ -123,6 +125,7 @@ const page = document.querySelector("article");
 const title = document.querySelector(".title");
 const options = document.querySelector("#options");
 const legend = document.querySelector("#options > legend");
+const legendBtn = document.querySelector("#options > legend > button");
 const blockquote = document.getElementsByTagName("blockquote")[0];
 
 const colCount = document.getElementById("colCount");
@@ -136,7 +139,7 @@ const breakP = document.getElementById("break");
 // make options visible if js is enabled
 options.style.display = "revert";
 
-legend.addEventListener("click", () => {
+legendBtn.addEventListener("click", () => {
   showAndHideMenu();
 });
 
@@ -177,12 +180,16 @@ breakP.addEventListener("change", () => {
 });
 
 function showAndHideMenu() {
-  if (legend.getAttribute("aria-expanded") === "true") {
+  if (legendBtn.getAttribute("aria-expanded") === "true") {
     // close it
-    legend.setAttribute("aria-expanded", "false");
+    legendBtn.setAttribute("aria-expanded", "false");
+    legend.classList.add("closed");
+    legend.classList.remove("open");
   } else {
     // open it
-    legend.setAttribute("aria-expanded", "true");
+    legendBtn.setAttribute("aria-expanded", "true");
+    legend.classList.remove("closed");
+    legend.classList.add("open");
   }
 }
 
@@ -229,22 +236,26 @@ p {
 fieldset p {
   margin-bottom: 0.25em;
 }
-[aria-expanded] {
+legend {
   position: relative;
   top: 0;
   transition: 200ms;
 }
-[aria-expanded="false"] {
+legend.closed {
   top: 0.75em;
 }
-[aria-expanded="false"] + #controls {
+legend.closed + #controls {
   display: none;
 }
 legend {
   background-color: #dedede;
   padding: 0.5em;
 }
-[aria-expanded="false"] {
+legend > button {
+  all: unset;
+  cursor: pointer;
+}
+legend.closed {
   margin: -1em;
   display: inline-block;
 }

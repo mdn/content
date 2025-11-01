@@ -110,7 +110,7 @@ The toggle that turns the IIR filter on and off is set up in the similar way. Fi
   role="switch"
   data-filteron="false"
   aria-pressed="false"
-  aria-describedby="label"
+  aria-labelledby="label"
   disabled></button>
 ```
 
