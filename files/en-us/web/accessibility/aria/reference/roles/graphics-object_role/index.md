@@ -20,10 +20,10 @@ The `graphics-object` role identifies an element as a unique, distinct object, o
 ## Examples
 
 ```html
-<svg role="graphics-document document" aria-label="Example map">
-  <g role="graphics-object group" aria-label="Europe region"></g>
-  <g role="graphics-object group" aria-label="Asia region"></g>
-</svg>
+<div role="graphics-document" aria-label="Example map">
+  <div role="graphics-object" aria-label="Europe region"></div>
+  <div role="graphics-object" aria-label="Asia region"></div>
+</div>
 ```
 
 ## Best practices

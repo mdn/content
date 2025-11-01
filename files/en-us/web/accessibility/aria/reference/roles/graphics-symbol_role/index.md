@@ -20,9 +20,9 @@ The `graphics-symbol` role identifies an element as a meaningful, atomic symbol 
 ## Examples
 
 ```html
-<g role="graphics-symbol img" aria-label="Sun symbol">
-  <circle cx="50" cy="50" r="20"></circle>
-</g>
+<div role="graphics-object" aria-lable="weather icon">
+  <span role="graphics-symbol" aria-lable="Sun symbol"></span>
+</div>
 ```
 
 ## Best practices

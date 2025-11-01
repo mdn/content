@@ -29,12 +29,14 @@ The `graphics-document` role is used to identify a region of the page where the 
 ## Examples
 
 ```html
-<svg role="graphics-document document" aria-label="Example map">
-  <g
+<div role="graphics-document" aria-label="Example map">
+  <div
     role="graphics-object"
     aria-label="Map compass"
-    transform="translate(50,50)"></g>
-</svg>
+    transform="translate(50,50)">
+    <span role="graphics-symbol" aria-label="North">^</span>
+  </div>
+</div>
 ```
 
 ## Best practices
