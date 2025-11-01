@@ -3,10 +3,14 @@ title: Idempotency-Key header
 short-title: Idempotency-Key
 slug: Web/HTTP/Reference/Headers/Idempotency-Key
 page-type: http-header
+status:
+  - experimental
 browser-compat: http.headers.Idempotency-Key
 spec-urls: https://datatracker.ietf.org/doc/draft-ietf-httpapi-idempotency-key-header/
 sidebar: http
 ---
+
+{{SeeCompatTable}}
 
 The HTTP **`Idempotency-Key`** {{glossary("request header")}} can be used to make {{HTTPMethod("POST")}} and {{HTTPMethod("PATCH")}} requests {{glossary("idempotent")}}.
 
