@@ -75,7 +75,9 @@ import data from "https://example.com/data.json" with { type: "json" };
 or alternatively via the await-import syntax
 
 ```js
-const data = await import("https://example.com/data.json", { with: { type: "json" } });
+const data = await import("https://example.com/data.json", {
+  with: { type: "json" },
+});
 ```
 
 The `type` attribute changes how the module is fetched (the browser sends the request with `{{HTTPHeader("Accept")}}: application/json` header), but does _not_ change how the module is parsed or evaluated. The runtime already knows to parse the module as JSON given the response MIME type. It only uses the attribute to do _after-the-fact_ checking that the `data.json` module is, in fact, a JSON module. For example, if the response header changes to `Content-Type: text/javascript` instead, the program will fail with a similar error as above.
