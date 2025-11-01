@@ -14,6 +14,7 @@ This approach to color is useful when creating material to be output to a partic
 
 ```css
 device-cmyk(0 81% 81% 30%);
+device-cmyk(none 0.81 0.81 0.3);
 device-cmyk(0 81% 81% 30% / .5);
 device-cmyk(0 81% 81% 30% / .5, rgb(178 34 34));
 ```
