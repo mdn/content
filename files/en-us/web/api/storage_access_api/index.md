@@ -137,6 +137,16 @@ Documentation for Firefox's new storage access policy for blocking tracking cook
 - `Permissions.query()`, the `"top-level-storage-access"` feature name {{experimental_inline}}
   - : A separate feature name used to query whether permission to access third-party cookies has already been granted via `requestStorageAccessFor()`. If so, you don't need to call `requestStorageAccessFor()` again.
 
+### Additions to HTTP
+
+These headers enable a more efficient workflow for activating an already granted storage-access permission for a particular context (reducing the network traffic and unnecessary resource loads).
+
+- {{HTTPHeader("Sec-Fetch-Storage-Access")}}
+  - : Indicates the "storage access status" for the current fetch context, which will be one of `none`, `inactive`, `active`.
+    The server may respond with `Activate-Storage-Access` to request the browser activate an `inactive` request, instead of having it load the resource and call `Document.requestStorageAccess()`.
+- {{HTTPHeader("Activate-Storage-Access")}}
+  - : Used in response to `Sec-Fetch-Storage-Access` to indicate that the browser can activate an existing permission for secure access and retry the request with cookies, or load a resource with cookie access if it already has an activated permission.
+
 ## Specifications
 
 {{Specifications}}
