@@ -21,10 +21,9 @@ Note that, when none of the media query conditions are true, the background will
 ### HTML
 
 ```html
-<iframe id="outer">
-  <div id="inner">
-    Watch this element as you resize iframe viewport's width and height.
-  </div>
+<iframe
+  id="outer"
+  srcdoc="<div id='inner'>Watch this element as you resize iframe viewport's width and height.</div>">
 </iframe>
 ```
 

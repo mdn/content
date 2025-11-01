@@ -317,7 +317,7 @@ While more common in script typefaces, in the below example they are used to cre
 <fieldset>
   <legend>Using <code>font-variant-ligatures</code> property</legend>
   <div class="container container1">
-    <p>Puffy Perfect -^ <-></p>
+    <p>Puffy Perfect -^ &lt;-&gt;</p>
   </div>
   <input type="checkbox" name="checkbox1" id="checkbox1" value="on" checked />
   <label for="checkbox1">Ligatures active</label>
@@ -326,7 +326,7 @@ While more common in script typefaces, in the below example they are used to cre
 <fieldset>
   <legend>Using <code>font-feature-settings</code> property</legend>
   <div class="container container2">
-    <p>Puffy Perfect -^ <-></p>
+    <p>Puffy Perfect -^ &lt;-&gt;</p>
   </div>
   <input type="checkbox" name="checkbox2" id="checkbox2" value="on" checked />
   <label for="checkbox2">Ligatures active</label>

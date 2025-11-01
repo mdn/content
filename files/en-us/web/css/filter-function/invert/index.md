@@ -124,8 +124,15 @@ We include CSS that will invert elements based on their `filter` or `svgFilter` 
 }
 ```
 
+```css hidden
+th,
+td {
+  padding: 5px;
+}
+```
+
 ```html hidden
-<table cellpadding="5">
+<table>
   <thead>
     <tr>
       <th><code>invert()</code> filter</th>

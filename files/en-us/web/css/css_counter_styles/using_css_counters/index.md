@@ -396,9 +396,9 @@ a[href]:empty::after {
 #### HTML
 
 ```html
-<p>See <a href="https://www.mozilla.org/"></a></p>
+<p>See <a href="https://www.mozilla.org/" aria-label="Mozilla"></a></p>
 <p>Do not forget to <a href="contact-me.html">leave a message</a>!</p>
-<p>See also <a href="https://developer.mozilla.org/"></a></p>
+<p>See also <a href="https://developer.mozilla.org/" aria-label="MDN"></a></p>
 ```
 
 #### Result

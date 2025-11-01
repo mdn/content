@@ -109,13 +109,13 @@ In this case, the parent element with a `color-scheme` CSS property is a `<div>`
 
 ```html
 <div>
-  <img />
+  <img alt="circle" src="" />
 </div>
 <div class="light">
-  <img />
+  <img alt="circle" src="" />
 </div>
 <div class="dark">
-  <img />
+  <img alt="circle" src="" />
 </div>
 ```
 
@@ -131,8 +131,7 @@ In this case, the parent element with a `color-scheme` CSS property is a `<div>`
 
 ```js
 // Embed an SVG for all <img> elements
-for (let img of document.querySelectorAll("img")) {
-  img.alt = "circle";
+for (const img of document.querySelectorAll("img")) {
   img.src = `data:image/svg+xml;base64,${window.btoa(`
     <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
       <style>

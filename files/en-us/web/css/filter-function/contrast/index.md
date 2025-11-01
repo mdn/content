@@ -183,7 +183,7 @@ filter: url("folder/fileName.svg#contrast"); /* external svg filter definition *
 This example shows three images: the image with a `contrast()` filter function applied, the image with an equivalent `url()` filter applied, and the original images for comparison:
 
 ```html hidden live-sample___svg_filter
-<table cellpadding="5">
+<table>
   <thead>
     <tr>
       <th><code>contrast()</code></th>
@@ -221,6 +221,11 @@ This example shows three images: the image with a `contrast()` filter function a
 }
 .svg-filter {
   filter: url("#contrast");
+}
+
+th,
+td {
+  padding: 5px;
 }
 svg:not(:root) {
   display: none;

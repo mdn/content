@@ -164,7 +164,7 @@ filter: url("folder/fileName.svg#hue-rotate"); /* external svg filter definition
 This example shows three images: the image with a `hue-rotate()` filter function applied, the image with an equivalent `url()` filter applied, and the original images for comparison:
 
 ```html hidden live-sample___svg_filter
-<table cellpadding="5">
+<table>
   <thead>
     <tr>
       <th><code>hue-rotate()</code></th>
@@ -202,6 +202,11 @@ This example shows three images: the image with a `hue-rotate()` filter function
 }
 .svg-filter {
   filter: url("#hue-rotate");
+}
+
+th,
+td {
+  padding: 5px;
 }
 svg:not(:root) {
   display: none;

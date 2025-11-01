@@ -352,7 +352,7 @@ The aim of this example is to show how to use a scope root and limit to style `<
 <article class="feature">
   <section class="article-hero">
     <h2>Article heading</h2>
-    <img alt="image" />
+    <img alt="image" src="" />
   </section>
 
   <section class="article-body">
@@ -364,19 +364,19 @@ The aim of this example is to show how to use a scope root and limit to style `<
       pharetra velit nisi, ac efficitur magna luctus nec.
     </p>
 
-    <img alt="image" />
+    <img alt="image" src="" />
 
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
     <figure>
-      <img alt="image" />
+      <img alt="image" src="" />
       <figcaption>My infographic</figcaption>
     </figure>
   </section>
 
   <footer>
     <p>Written by Chris Mills.</p>
-    <img alt="image" />
+    <img alt="image" src="" />
   </footer>
 </article>
 ```

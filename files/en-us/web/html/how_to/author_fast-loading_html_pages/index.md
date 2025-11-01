@@ -81,35 +81,7 @@ Moreover, valid markup allows for the free use of other tools that can _pre-proc
 
 Tables for layouts are a legacy method that should not be used anymore. Layouts utilizing [floats](/en-US/docs/Learn_web_development/Core/CSS_layout/Floats), [positioning](/en-US/docs/Learn_web_development/Core/CSS_layout/Positioning), [flexbox](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox), or [grids](/en-US/docs/Learn_web_development/Core/CSS_layout/Grids) should be used instead.
 
-Tables are still considered valid markup but should be used for displaying tabular data. To help the browser render your page quicker, you should avoid nesting your tables.
-
-Rather than deeply nesting tables as in:
-
-```html
-<table>
-  <table>
-    <table>
-      …
-    </table>
-  </table>
-</table>
-```
-
-use non-nested tables or divs as in
-
-```html
-<table>
-  …
-</table>
-<table>
-  …
-</table>
-<table>
-  …
-</table>
-```
-
-See also: [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) and [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) modules.
+Tables are still considered valid markup but should be used for displaying tabular data. To help the browser render your page quicker, you should use CSS methods such as [flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) and [grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) instead of nesting tables.
 
 ### Minify and compress SVG assets
 
