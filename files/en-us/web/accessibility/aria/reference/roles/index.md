@@ -130,15 +130,7 @@ Window roles define sub-windows to the main document window, within the same win
 - [`alertdialog`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alertdialog_role)
 - [`dialog`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role)
 
-### 6. Graphics roles
-
-Graphics roles are used to define the structure and semantical meaning of graphical content:
-
-- [graphics-document](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/graphics-document_role)
-- [graphics-object](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/graphics-object_role)
-- [graphics-symbol](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/graphics-symbol_role)
-
-### 7. Abstract roles
+### 6. Abstract roles
 
 Abstract roles are only intended for use by browsers to help organize and streamline a document. They should not be used by developers writing HTML markup. Doing so will not result in any meaningful information being conveyed to assistive technologies or to users.
 
@@ -149,6 +141,14 @@ Avoid using [`command`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/comma
 
 > [!WARNING]
 > "Abstract roles are used for the ontology. Authors **MUST NOT** use abstract roles in content." - The <abbr>WAI-ARIA</abbr> specification
+
+### 7. Graphics roles
+
+Graphics roles are used to define the structure and semantical meaning of graphical content:
+
+- [graphics-document](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/graphics-document_role)
+- [graphics-object](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/graphics-object_role)
+- [graphics-symbol](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/graphics-symbol_role)
 
 ## Roles defined on MDN
 
