@@ -244,6 +244,11 @@ The CSS overflow level 4 module also introduces the `block-ellipsis`, `continue`
 
 - [`<overflow>`](/en-US/docs/Web/CSS/overflow_value) enumerated values
 
+### Glossary terms and definitions
+
+- {{glossary("Scroll container")}}
+- [Scrollport](/en-US/docs/Glossary/Scroll_container#scrollport)
+
 ## Guides
 
 - [Learn: Overflowing content](/en-US/docs/Learn_web_development/Core/Styling_basics/Overflow)
