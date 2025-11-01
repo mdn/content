@@ -75,20 +75,20 @@ section {
 const colors = ["darkred", "darkslateblue", "darkgreen"];
 const colBlock = document.querySelector("section");
 let count = 0;
-const updateColour = () => {
+const updateColor = () => {
   colBlock.style = `--bg: ${colors[count]}`;
   count = count !== colors.length - 1 ? ++count : 0;
 };
 const changeColor = () => {
   // Fallback for browsers that don't support View Transitions:
   if (!document.startViewTransition) {
-    updateColour();
+    updateColor();
     return;
   }
 
   // With View Transitions:
   const transition = document.startViewTransition(() => {
-    updateColour();
+    updateColor();
   });
 };
 const changeColorButton = document.querySelector("#change-color");
@@ -111,6 +111,7 @@ Otherwise, the background color is set using a fallback method, without any anim
 
 ## See also
 
+- {{domxref("Document.activeViewTransition")}}
 - {{CSSXRef(":active-view-transition")}} pseudo-class
 - {{cssxref(":active-view-transition-type", ":active-view-transition-type()")}} pseudo-class
 - [Smooth transitions with the View Transition API](https://developer.chrome.com/docs/web-platform/view-transitions/)
