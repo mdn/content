@@ -257,7 +257,7 @@ In both the cases, the blur radius value, specified as a {{cssxref("&lt;length&g
 The [`<filter>`](/en-US/docs/Web/SVG/Reference/Element/filter)'s {{SVGAttr("stdDeviation")}} attribute accepts up to two values enabling creating more complex blur values. To create an equivalent blur, we include one value for `stdDeviation`:
 
 ```html hidden
-<table cellpadding="5">
+<table>
   <thead>
     <tr>
       <th>CSS example</th>
@@ -301,6 +301,13 @@ The [`<filter>`](/en-US/docs/Web/SVG/Reference/Element/filter)'s {{SVGAttr("stdD
 ```
 
 The SVG `url()` filter value can be included as the value of the SVG [`<image>`](/en-US/docs/Web/SVG/Reference/Element/image) element's [`filter`](/en-US/docs/Web/SVG/Reference/Attribute/filter) attribute or as part of the value of the CSS `filter` and `backdrop-filter` properties.
+
+```css hidden
+th,
+td {
+  padding: 5px;
+}
+```
 
 ```css
 .filter {

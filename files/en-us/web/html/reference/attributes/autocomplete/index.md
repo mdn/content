@@ -42,7 +42,7 @@ The `autocomplete` attribute provides a hint to the user agent specifying how to
 ```html
 <input autocomplete="off" />
 <input autocomplete="on" />
-<input autocomplete="shipping street-address" />
+<textarea autocomplete="shipping street-address"></textarea>
 <input autocomplete="section-user1 billing postal-code" />
 ```
 

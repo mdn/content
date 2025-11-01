@@ -194,7 +194,7 @@ Using the same HTML and CSS, this demonstration includes a slider that changes t
 ```html hidden
 <div></div>
 <label
-  >width: <output></output><br />
+  >width: <span></span><br />
   <input type="range" min="0" max="400" value="250" id="width" />
 </label>
 ```
@@ -219,7 +219,7 @@ input {
 ```js hidden
 const div = document.querySelector("div");
 const range = document.getElementById("width");
-const output = document.querySelector("output");
+const output = document.querySelector("span");
 
 range.addEventListener("change", () => {
   const value = `${range.value}px`;

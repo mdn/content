@@ -122,7 +122,6 @@ The following example highlights the Student ID field with a custom style.
   <p>
     <label for="sid">Enter Student ID:</label>
     <input
-      type="number"
       pattern="[0-9]{8}"
       title="8 digit ID"
       id="sid"

@@ -301,7 +301,6 @@ We use the [`start`](/en-US/docs/Web/HTML/Reference/Elements/ol#start) attribute
   <li>51</li>
   <li value="109">109</li>
   <li>110</li>
-  <ol></ol>
 </ol>
 ```
 

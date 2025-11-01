@@ -29,7 +29,7 @@ accent-color: hsl(250 100% 34%);
 ```html interactive-example
 <section class="default-example container" id="default-example">
   <div>
-    <input checked="" id="example-element" type="checkbox" />
+    <input checked id="example-element" type="checkbox" />
     <label for="example-element" id="example-label">Example Label</label>
   </div>
 </section>

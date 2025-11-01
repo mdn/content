@@ -242,30 +242,36 @@ In this case, if the value of `--accent-color` were set to `blue`, `#00f`, `#000
 In this example, we have a {{htmlelement("fieldset")}} with four radio buttons. The fourth option includes a text {{htmlelement("input")}} for entering a custom color.
 
 ```html
-<fieldset>
-  <legend>Change the value of <code>--theme</code></legend>
-  <ol>
-    <li>
-      <input type="radio" name="selection" value="red" id="red" />
-      <label for="red">--theme: red;</label>
-    </li>
-    <li>
-      <input type="radio" name="selection" value="green" id="green" />
-      <label for="green">--theme: green</label>
-    </li>
-    <li>
-      <input type="radio" name="selection" value="blue" id="blue" />
-      <label for="blue">--theme: blue</label>
-    </li>
-    <li>
-      <input type="radio" name="selection" value="currentColor" id="other" />
-      <label for="other">Other</label>
-      <label for="color">color:</label>
-      <input text="checkbox" name="selection" value="currentColor" id="color" />
-    </li>
-  </ol>
-</fieldset>
-<output>I change colors</output>
+<form>
+  <fieldset>
+    <legend>Change the value of <code>--theme</code></legend>
+    <ol>
+      <li>
+        <input type="radio" name="selection" value="red" id="red" />
+        <label for="red">--theme: red;</label>
+      </li>
+      <li>
+        <input type="radio" name="selection" value="green" id="green" />
+        <label for="green">--theme: green</label>
+      </li>
+      <li>
+        <input type="radio" name="selection" value="blue" id="blue" />
+        <label for="blue">--theme: blue</label>
+      </li>
+      <li>
+        <input type="radio" name="selection" value="currentColor" id="other" />
+        <label for="other">Other</label>
+        <label for="color">color:</label>
+        <input
+          text="checkbox"
+          name="selection-value"
+          value="currentColor"
+          id="color" />
+      </li>
+    </ol>
+  </fieldset>
+  <output>I change colors</output>
+</form>
 ```
 
 JavaScript updates the value of the CSS `--theme` variable on the {{htmlelement("body")}} element, which is an ancestor of the {{htmlelement("fieldset")}} and {{htmlelement("output")}} elements, whenever a radio button is selected. When the text `<input>` is updated, the {{domxref("HTMLInputElement.value", "value")}} of the `other` radio button is updated only if the `other` radio button is checked, which in turn updates the value of `--theme`.
