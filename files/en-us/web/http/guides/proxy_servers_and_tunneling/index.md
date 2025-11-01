@@ -69,7 +69,7 @@ function FindProxyForURL(url, host) {
   if (isResolvable(host)) {
     return "DIRECT";
   }
-  return "PROXY proxy.mydomain.com:8080";
+  return "PROXY proxy.mydomain.example:8080";
 }
 ```
 
