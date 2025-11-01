@@ -10,7 +10,7 @@ sidebar: http
 
 The HTTP **`Idempotency-Key`** {{glossary("request header")}} can be used to make {{HTTPMethod("POST")}} and {{HTTPMethod("PATCH")}} requests {{glossary("idempotent")}}.
 
-This allows clients to resend unacknowledged requests without having to be concerned that the request has already have been received and acted on by the server.
+This allows clients to resend unacknowledged requests without having to be concerned that the request has already been received and acted on by the server.
 
 <table class="properties">
   <tbody>
@@ -71,7 +71,7 @@ A unique key is expected to be used in each request.
 In order to protect against clients reusing keys for new requests, a server may create and store an "idempotency fingerprint" of the request along with the key.
 This is a hash of all or part of a request that can be compared to other requests with the same key.
 
-If idempotency fingerprinting is supported, the server can send an error response the same key has a different fingerprint.
+If idempotency fingerprinting is supported, the server can send an error response if the same key has a different fingerprint.
 
 #### Request processing
 
@@ -114,9 +114,9 @@ Content-Language: en
 
 ## Examples
 
-### A POST with a key
+### A `POST` request with a key
 
-The following message shows POST request to create a new user.
+The following message shows a `POST` request to create a new user.
 The key `9c7d2b4a0e1f6c835a2d1b0f4e3c5a7d` is a unique value that matches the requirements published by the host (example.com doesn't support this header, so we've just made up a value).
 
 ```http
@@ -132,7 +132,7 @@ Idempotency-Key: 9c7d2b4a0e1f6c835a2d1b0f4e3c5a7d
 }
 ```
 
-If no response is received, the client can safely resend exactly the same request again; if the server didn't get the request it will act on it, if it has already had the request is will not make the post, but it will respond as though it had.
+If no response is received, the client can safely resend the exact same request. If the server didn't get the previous request, it will act on this one; if it has already received the previous request, the second one will be ignored, but the server will respond as though it processed the second one as usual.
 
 If the client resends the request too quickly, it might get an error response like this.
 Note that only the HTTP status code is mandated, the rest of the information is defined by the server.
