@@ -80,6 +80,9 @@ const data = await import("https://example.com/data.json", {
 });
 ```
 
+> [!NOTE]
+> await imports are cached for the lifetime of the environment (e.g. a page or worker), if you expect this data to continually change (such as updating the latest news, or a user's credits), use the [js fetch api](/en-US/docs/Web/API/Fetch_API) instead!
+
 The `type` attribute changes how the module is fetched (the browser sends the request with `{{HTTPHeader("Accept")}}: application/json` header), but does _not_ change how the module is parsed or evaluated. The runtime already knows to parse the module as JSON given the response MIME type. It only uses the attribute to do _after-the-fact_ checking that the `data.json` module is, in fact, a JSON module. For example, if the response header changes to `Content-Type: text/javascript` instead, the program will fail with a similar error as above.
 
 The specification explicitly calls out `type: "json"` to be supported — if a module is asserted to be `type: "json"` and the runtime does not fail this import, then it must be parsed as JSON. However, there's no behavior requirement otherwise: for imports without a `type: "json"` attribute, the runtime may still parse it as JSON if security is not an issue in this environment. Browsers, on the other hand, implicitly assume that the module is JavaScript, and fail if the module is not JavaScript (for example, JSON). This ensures that module types are always strictly validated and prevents any security risks. In reality, non-browser runtimes such as Node and Deno align with browser semantics and enforce `type` for JSON modules.
@@ -138,37 +141,6 @@ Start a local HTTP server (see [troubleshooting](/en-US/docs/Web/JavaScript/Guid
 
 > [!NOTE]
 > JSON modules only have one default export. You cannot do named imports from them (like `import { name } from "data.json"`).
-
-### Await-importing json modules with type attribute
-
-In the prior example, we can also use await-imports similarly, by modifying the html as below to optionally, work at the click of a button
-
-```html
-<!doctype html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <title>Dynamic JSON Import Example</title>
-    <script type="module">
-      const button = document.createElement("button");
-      button.textContent = "Load Name";
-      document.body.appendChild(button);
-
-      const p = document.createElement("p");
-      document.body.appendChild(p);
-
-      button.addEventListener("click", async () => {
-        const module = await import("./data.json", {
-          with: { type: "json" },
-        });
-        const data = module.default;
-        p.textContent = `Name: ${data.name}`;
-      });
-    </script>
-  </head>
-  <body></body>
-</html>
-```
 
 ## Specifications
 
