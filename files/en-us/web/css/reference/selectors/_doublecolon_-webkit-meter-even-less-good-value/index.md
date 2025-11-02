@@ -71,11 +71,11 @@ body {
 // using `::-webkit-meter-*` selectors, but `appearance: none` breaks rendering on Chrome.
 // Therefore, we must check if the browser is Safari-based.
 
-const is_safari =
+const isSafari =
   navigator.userAgent.includes("AppleWebKit/") &&
   !navigator.userAgent.includes("Chrome/");
 
-if (is_safari) {
+if (isSafari) {
   document.body.classList.add("safari");
 }
 ```

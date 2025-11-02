@@ -127,9 +127,9 @@ const mongoDB =
 Replace the line with the following code that uses `process.env.MONGODB_URI` to get the connection string from an environment variable named `MONGODB_URI` if has been set (use your own database URL instead of the placeholder below).
 
 ```js
-const dev_db_url =
+const devDbUrl =
   "mongodb+srv://your_user_name:your_password@cluster0.cojoign.mongodb.net/local_library?retryWrites=true&w=majority";
-const mongoDB = process.env.MONGODB_URI || dev_db_url;
+const mongoDB = process.env.MONGODB_URI || devDbUrl;
 ```
 
 > [!NOTE]

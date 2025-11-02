@@ -77,14 +77,12 @@ if ("currentCSSZoom" in Element.prototype) {
   log(`child1 (zoom: 2). currentCSSZoom: ${child1.currentCSSZoom}`);
   const child2 = document.querySelector("#child2");
   log(`child2 (zoom: 2). currentCSSZoom: ${child2.currentCSSZoom}`);
-  const top_child3_rendered = document.querySelector("#child3_rendered");
+  const child3Rendered = document.querySelector("#child3_rendered");
   log(
-    `child3_rendered (unzoomed). currentCSSZoom: ${child3_rendered.currentCSSZoom}`,
+    `child3_rendered (unzoomed). currentCSSZoom: ${child3Rendered.currentCSSZoom}`,
   );
-  const top_child3_notRendered = document.querySelector("#child3_not-rendered");
-  log(
-    `child3_notRendered (not rendered): ${child3_notRendered.currentCSSZoom}`,
-  );
+  const child3NotRendered = document.querySelector("#child3_not-rendered");
+  log(`child3_notRendered (not rendered): ${child3NotRendered.currentCSSZoom}`);
 } else {
   log("Element.currentCSSZoom not supported in this browser");
 }

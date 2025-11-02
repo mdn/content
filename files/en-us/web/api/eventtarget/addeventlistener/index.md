@@ -140,8 +140,8 @@ the element. It will be the same as the value of the `currentTarget` property of
 the event argument that is passed to the handler.
 
 ```js
-my_element.addEventListener("click", function (e) {
-  console.log(this.className); // logs the className of my_element
+myElement.addEventListener("click", function (e) {
+  console.log(this.className); // logs the className of myElement
   console.log(e.currentTarget === this); // logs `true`
 });
 ```
@@ -149,8 +149,8 @@ my_element.addEventListener("click", function (e) {
 As a reminder, [arrow functions do not have their own `this` context](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#cannot_be_used_as_methods).
 
 ```js
-my_element.addEventListener("click", (e) => {
-  console.log(this.className); // WARNING: `this` is not `my_element`
+myElement.addEventListener("click", (e) => {
+  console.log(this.className); // WARNING: `this` is not `myElement`
   console.log(e.currentTarget === this); // logs `false`
 });
 ```
@@ -158,8 +158,8 @@ my_element.addEventListener("click", (e) => {
 If an event handler (for example, {{domxref("Element.click_event", "onclick")}}) is specified on an element in the HTML source, the JavaScript code in the attribute value is effectively wrapped in a handler function that binds the value of `this` in a manner consistent with the `addEventListener()`; an occurrence of `this` within the code represents a reference to the element.
 
 ```html
-<table id="my_table" onclick="console.log(this.id);">
-  <!-- `this` refers to the table; logs 'my_table' -->
+<table id="my-table" onclick="console.log(this.id);">
+  <!-- `this` refers to the table; logs 'my-table' -->
   …
 </table>
 ```
@@ -174,7 +174,7 @@ shown in the following example:
     console.log(this.id);
   }
 </script>
-<table id="my_table" onclick="logID();">
+<table id="my-table" onclick="logID();">
   <!-- when called, `this` will refer to the global object -->
   …
 </table>
