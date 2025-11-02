@@ -8,7 +8,7 @@ sidebar: security
 In a **federated identity** system, a website delegates authentication to a third party.
 
 - The third party, which is commonly called an {{glossary("identity provider", "Identity Provider (IdP)")}}, manages a user's credentials and can authenticate users.
-- The website, which is commonly called a {{glossary("relying party",  "Relying Party (RP)")}}, trusts the IdP to make assertions about a user's identity.
+- The website, which is commonly called a {{glossary("relying party", "Relying Party (RP)")}}, trusts the IdP to make assertions about a user's identity.
 
 When the user wants to sign into the website, the website redirects them to the IdP. The user authenticates to the IdP, and the IdP returns a token to the website indicating that the user authenticated successfully. The website checks that the token is valid, and if it is, signs the user in.
 
