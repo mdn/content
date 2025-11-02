@@ -136,7 +136,7 @@ Start a local HTTP server (see [troubleshooting](/en-US/docs/Web/JavaScript/Guid
 Import attributes are also accepted as the second parameter of the `import()` syntax.
 
 ```js
-const data = await import("https://example.com/data.json", {
+const data = await import("./data.json", {
   with: { type: "json" },
 });
 ```
