@@ -28,6 +28,15 @@ None.
 A {{jsxref("Promise")}} that resolves to a JavaScript object. This object could be
 anything that can be represented by JSON — an object, an array, a string, a number…
 
+### Exceptions
+
+* `TypeError`
+    :   Thrown for one of the following reasons:
+        * The response body is [disturbed or locked](/en-US/docs/Web/API/Fetch_API/Using_Fetch#locked_and_disturbed_streams).
+        * There was an error decoding the body content (for example, because the {{httpheader("Content-Encoding")}} header is incorrect).
+* `SyntaxError`
+    :   The response body cannot be parsed as JSON.
+
 ## Examples
 
 ```js
