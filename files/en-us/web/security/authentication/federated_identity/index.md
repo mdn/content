@@ -8,7 +8,7 @@ sidebar: security
 In a **federated identity** system, a website delegates authentication to a third party.
 
 - The third party, which is commonly called an {{glossary("identity provider", "Identity Provider (IdP)")}}, manages a user's credentials and can authenticate users.
-- The website, which is commonly called a {{glossary("relying party",  "Relying Party (RP)")}}, trusts the IdP to make assertions about a user's identity.
+- The website, which is commonly called a {{glossary("relying party", "Relying Party (RP)")}}, trusts the IdP to make assertions about a user's identity.
 
 When the user wants to sign into the website, the website redirects them to the IdP. The user authenticates to the IdP, and the IdP returns a token to the website indicating that the user authenticated successfully. The website checks that the token is valid, and if it is, signs the user in.
 
@@ -28,7 +28,7 @@ In this guide we'll explore how a website can work with an IdP to add federated 
 - The main flows defined in the [OpenID Connect (OIDC)](https://openid.net/developers/how-connect-works/) protocol, which is the dominant standard for federated identity, and good practices to follow when implementing them.
 - Third-party services that can simplify the process of implementing federated identity.
 - How browser restrictions on third-party cookies create problems for federated identity implementations.
-- The [Federated Credential Management (FedCM) API](https://developer.mozilla.org/en-US/docs/Web/API/FedCM_API), which makes the browser's role much more active, to simplify the role of the RP and avoid relying on third-party cookies.
+- The [Federated Credential Management (FedCM) API](/en-US/docs/Web/API/FedCM_API), which makes the browser's role much more active, to simplify the role of the RP and avoid relying on third-party cookies.
 
 ## OpenID Connect
 
