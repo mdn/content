@@ -17,7 +17,7 @@ If required but missing or invalid, the entire `@property` rule is invalid and i
 initial-value: rebeccapurple;
 
 /* Set initial length value */
-initial-value: 2rem;
+initial-value: 16px;
 ```
 
 ### Values
