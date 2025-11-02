@@ -41,6 +41,17 @@ X-Content-Type-Options: nosniff
     `style` and the MIME type is not `text/css`,
     or of type `script` and the MIME type is not a [JavaScript MIME type](https://html.spec.whatwg.org/multipage/scripting.html#javascript-mime-type).
 
+## Effect on HTML document sniffing
+
+Although `X-Content-Type-Options: nosniff` is often described in the context of scripts and styles, it also impacts navigations to documents. When a response is delivered with an incorrect or missing `Content-Type`, user agents that honor `nosniff` must not "sniff" the content and treat it as HTML. This reduces the risk of accidentally executing HTML when servers mislabel content.
+
+In practice, this means that if a document is served with a generic or incorrect MIME type (for example, `application/octet-stream`) and `X-Content-Type-Options: nosniff` is present, browsers following the MIME type sniffing algorithm will avoid treating the response as HTML.
+
+See:
+
+- MIME type sniffing algorithm (WHATWG) - [https://mimesniff.spec.whatwg.org/#mime-type-sniffing-algorithm](https://mimesniff.spec.whatwg.org/#mime-type-sniffing-algorithm)
+- Discussion on document sniffing and `nosniff` - [https://github.com/whatwg/mimesniff/issues/98](https://github.com/whatwg/mimesniff/issues/98)
+
 ## Specifications
 
 {{Specifications}}
