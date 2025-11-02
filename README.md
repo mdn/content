@@ -54,3 +54,14 @@ It can be replaced with the normal links syntax after successfully closing https
 
 [mdn web docs]: https://developer.mozilla.org
 [communication channels]: https://developer.mozilla.org/en-US/docs/MDN/Community/Communication_channels
+
+## 🧑‍💻 How to Contribute
+
+We welcome all contributions! 🎉  
+If you’d like to help improve this project, here’s how you can get started:
+
+1. **Fork** this repository to your own GitHub account.
+2. **Clone** your fork to your local machine:
+   ```bash
+   git clone https://github.com/<your-username>/<repo-name>.git
+
