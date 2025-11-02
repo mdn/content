@@ -121,8 +121,7 @@ You can give your table a caption by putting it inside a {{htmlelement("caption"
   <caption>
     Dinosaurs in the Jurassic period
   </caption>
-
-  …
+  <!-- … -->
 </table>
 ```
 

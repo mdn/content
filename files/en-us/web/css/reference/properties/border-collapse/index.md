@@ -21,18 +21,20 @@ border-collapse: separate;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <table class="transition-all" id="example-element">
-    <tr>
-      <td>Cell 1.1</td>
-      <td>Cell 1.2</td>
-    </tr>
-    <tr>
-      <td>Cell 2.1</td>
-      <td>Cell 2.2</td>
-    </tr>
-    <tr>
-      <td>Cell 3.1</td>
-      <td>Cell 3.2</td>
-    </tr>
+    <tbody>
+      <tr>
+        <td>Cell 1.1</td>
+        <td>Cell 1.2</td>
+      </tr>
+      <tr>
+        <td>Cell 2.1</td>
+        <td>Cell 2.2</td>
+      </tr>
+      <tr>
+        <td>Cell 3.1</td>
+        <td>Cell 3.2</td>
+      </tr>
+    </tbody>
   </table>
 </section>
 ```

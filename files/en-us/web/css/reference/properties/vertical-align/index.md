@@ -250,17 +250,19 @@ The sixth cell is only used to ensure that the cells are tall enough to see the 
 
 ```html
 <table>
-  <tr class="bottom">
-    <td class="baseline">baseline</td>
-    <td class="top">top</td>
-    <td class="middle">middle</td>
-    <td>bottom</td>
-    <td>Row's style</td>
-    <td>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-      pretium felis eu sem mattis vulputate.
-    </td>
-  </tr>
+  <tbody>
+    <tr class="bottom">
+      <td class="baseline">baseline</td>
+      <td class="top">top</td>
+      <td class="middle">middle</td>
+      <td>bottom</td>
+      <td>Row's style</td>
+      <td>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+        pretium felis eu sem mattis vulputate.
+      </td>
+    </tr>
+  </tbody>
 </table>
 ```
 

@@ -277,16 +277,18 @@ select.addEventListener("change", (e) => {
 
 ```html
 <table>
-  <tr>
-    <td></td>
-    <td>Very long content that splits</td>
-    <td class="nw">Very long content that don't split</td>
-  </tr>
-  <tr>
-    <td class="nw">white-space:</td>
-    <td>normal</td>
-    <td>nowrap</td>
-  </tr>
+  <tbody>
+    <tr>
+      <td></td>
+      <td>Very long content that splits</td>
+      <td class="nw">Very long content that don't split</td>
+    </tr>
+    <tr>
+      <td class="nw">white-space:</td>
+      <td>normal</td>
+      <td>nowrap</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
