@@ -116,6 +116,14 @@ import(`/my-module.js?t=${Date.now()}`);
 
 Note that this can lead to memory leaks in a long-running application, because the engine cannot safely garbage-collect any module namespace objects. Currently, there is no way to manually clear the cache of module namespace objects.
 
+You can also use the [Fetch API](/en-US/docs/Web/API/Fetch_API) to fetch module source code as text, and then evaluate the module manually depending on the module type:
+
+- For JavaScript modules, you can dynamically import the source code as a [`blob:` URL](/en-US/docs/Web/API/URL/createObjectURL) in browsers, or use [`vm.Module`](/en-US/docs/Web/Node.js/vm/Module) to evaluate it in Node.js.
+- For JSON modules, you can parse the source code using {{jsxref("JSON.parse()")}}.
+- For CSS modules, you can create a new {{domxref("CSSStyleSheet")}} object and use its [`replace()`](/en-US/docs/Web/API/CSSStyleSheet/replace) method to populate it with the source code.
+
+However, this is semantically not the same as dynamic import, because user-agent settings like [fetch destination](/en-US/docs/Web/API/Request/destination), [CSP](/en-US/docs/Web/HTTP/Guides/CSP), or [module resolution](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta/resolve) may not be applied correctly.
+
 Module namespace object caching only applies to modules that are loaded and linked _successfully_. A module is imported in three steps: loading (fetching the module), linking (mostly, parsing the module), and evaluating (executing the parsed code). Only evaluation failures are cached; if a module fails to load or link, the next import may try to load and link the module again. The browser may or may not cache the result of the fetch operation, but it should follow typical HTTP semantics, so handling such network failures should not be different from handling {{domxref("Window/fetch", "fetch()")}} failures.
 
 ## Examples
@@ -198,6 +206,16 @@ Promise.all(
     (_, index) => import(`/modules/module-${index}.js`),
   ),
 ).then((modules) => modules.forEach((module) => module.load()));
+```
+
+### Using import attributes with dynamic import
+
+[Import attributes](/en-US/docs/Web/JavaScript/Reference/Statements/import/with) are accepted as the second parameter of the `import()` syntax.
+
+```js
+const data = await import("./data.json", {
+  with: { type: "json" },
+});
 ```
 
 ## Specifications
