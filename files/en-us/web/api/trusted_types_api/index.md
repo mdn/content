@@ -134,6 +134,50 @@ element.innerHTML = userInput;
 > [!NOTE]
 > It's recommended that you use the default policy only while you are transitioning from legacy code that passes input directly to injection sinks, to code that uses trusted types explicitly.
 
+### Injection sink interfaces
+
+This section provides an list of "direct" injection sink interfaces.
+
+Note that there are cases where untrusted strings may be "indirectly injected", such as when an untrusted string is added as the child node of a script element, and then the element is added to the document.
+These cases are evaluated the untrusted script is added to the document.
+
+#### TrustedHTML
+
+- {{domxref("Document.execCommand()")}} with a `commandName` of [`"insertHTML"`](/en-US/docs/Web/API/Document/execCommand#inserthtml)
+- {{domxref("Document.parseHTMLUnsafe_static()")}}
+- {{domxref("Document.write()")}}
+- {{domxref("Document.writeln()")}}
+- {{domxref("DOMParser.parseFromString()")}}
+- {{domxref("Element.innerHTML")}}
+- {{domxref("Element.insertAdjacentHTML")}}
+- {{domxref("Element.outerHTML")}}
+- {{domxref("Element.setHTMLUnsafe()")}}
+- {{domxref("HTMLIFrameElement.srcdoc")}}
+- {{domxref("Range.createContextualFragment()")}}
+- {{domxref("ShadowRoot.innerHTML")}}
+- {{domxref("ShadowRoot.setHTMLUnsafe()")}}
+
+#### TrustedScript
+
+- [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval)
+- [`Element.setAttribute()`](/en-US/docs/Web/API/Element/setAttribute#value) (`value` argument)
+- [`Element.setAttributeNS()`](/en-US/docs/Web/API/Element/setAttributeNS#value) (`value` argument)
+- [`Function()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/Function)
+- {{domxref("HTMLScriptElement.innerText")}}
+- {{domxref("HTMLScriptElement.textContent")}}
+- {{domxref("HTMLScriptElement.text")}}
+- [`window.setTimeout()`](/en-US/docs/Web/API/Window/setTimeout#code) and [`WorkerGlobalScope.setTimeout()`](/en-US/docs/Web/API/WorkerGlobalScope/setTimeout#code) (`code` argument)
+- [`window.setInterval()`](/en-US/docs/Web/API/Window/setInterval#code) and [`WorkerGlobalScope.setInterval()`](/en-US/docs/Web/API/WorkerGlobalScope/setInterval#code) (`code` argument)
+
+#### TrustedScriptURL
+
+- {{domxref("HTMLScriptElement.src")}}
+- {{domxref("ServiceWorkerContainer.register()")}}
+- {{domxref("SvgAnimatedString.baseVal")}}
+- {{domxref("WorkerGlobalScope.importScripts()")}}
+- `url` argument to [`Worker()` constructor](/en-US/docs/Web/API/Worker/Worker#url)
+- `url` argument to [`SharedWorker()` constructor](/en-US/docs/Web/API/SharedWorker/SharedWorker#url)
+
 ### Cross-browser support for trusted types
 
 The Trusted Types API is not yet available in all modern browsers, but it is usable everywhere today thanks to [compatibility aids created by the W3C](https://github.com/w3c/trusted-types/tree/main?tab=readme-ov-file#polyfill).
@@ -222,50 +266,6 @@ Either way, the injection sink gets sanitized data, and because we could enforce
 
 - [`trusted-types-eval`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#trusted-types-eval)
   - : Allows [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval) and similar functions to be used but only when [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) are supported and enforced.
-
-## Injection sink interfaces
-
-This section provides an list of "direct" injection sink interfaces.
-
-Note that there are cases where untrusted strings may be "indirectly injected", such as when an untrusted string is added as the child node of a script element, and then the element is added to the document.
-These cases are evaluated the untrusted script is added to the document.
-
-### TrustedHTML
-
-- {{domxref("Document.execCommand()")}} with a `commandName` of [`"insertHTML"`](/en-US/docs/Web/API/Document/execCommand#inserthtml)
-- {{domxref("Document.parseHTMLUnsafe_static()")}}
-- {{domxref("Document.write()")}}
-- {{domxref("Document.writeln()")}}
-- {{domxref("DOMParser.parseFromString()")}}
-- {{domxref("Element.innerHTML")}}
-- {{domxref("Element.insertAdjacentHTML")}}
-- {{domxref("Element.outerHTML")}}
-- {{domxref("Element.setHTMLUnsafe()")}}
-- {{domxref("HTMLIFrameElement.srcdoc")}}
-- {{domxref("Range.createContextualFragment()")}}
-- {{domxref("ShadowRoot.innerHTML")}}
-- {{domxref("ShadowRoot.setHTMLUnsafe()")}}
-
-### TrustedScript
-
-- [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval)
-- [`Element.setAttribute()`](/en-US/docs/Web/API/Element/setAttribute#value) (`value` argument)
-- [`Element.setAttributeNS()`](/en-US/docs/Web/API/Element/setAttributeNS#value) (`value` argument)
-- [`Function()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/Function)
-- {{domxref("HTMLScriptElement.innerText")}}
-- {{domxref("HTMLScriptElement.textContent")}}
-- {{domxref("HTMLScriptElement.text")}}
-- [`window.setTimeout()`](/en-US/docs/Web/API/Window/setTimeout#code) and [`WorkerGlobalScope.setTimeout()`](/en-US/docs/Web/API/WorkerGlobalScope/setTimeout#code) (`code` argument)
-- [`window.setInterval()`](/en-US/docs/Web/API/Window/setInterval#code) and [`WorkerGlobalScope.setInterval()`](/en-US/docs/Web/API/WorkerGlobalScope/setInterval#code) (`code` argument)
-
-### TrustedScriptURL
-
-- {{domxref("HTMLScriptElement.src")}}
-- {{domxref("ServiceWorkerContainer.register()")}}
-- {{domxref("SvgAnimatedString.baseVal")}}
-- {{domxref("WorkerGlobalScope.importScripts()")}}
-- `url` argument to [`Worker()` constructor](/en-US/docs/Web/API/Worker/Worker#url)
-- `url` argument to [`SharedWorker()` constructor](/en-US/docs/Web/API/SharedWorker/SharedWorker#url)
 
 ## Examples
 
