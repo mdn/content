@@ -28,7 +28,7 @@ In this guide we'll explore how a website can work with an IdP to add federated 
 - The main flows defined in the [OpenID Connect (OIDC)](https://openid.net/developers/how-connect-works/) protocol, which is the dominant standard for federated identity, and good practices to follow when implementing them.
 - Third-party services that can simplify the process of implementing federated identity.
 - How browser restrictions on third-party cookies create problems for federated identity implementations.
-- The [Federated Credential Management (FedCM) API](https://developer.mozilla.org/en-US/docs/Web/API/FedCM_API), which makes the browser's role much more active, to simplify the role of the RP and avoid relying on third-party cookies.
+- The [Federated Credential Management (FedCM) API](/en-US/docs/Web/API/FedCM_API), which makes the browser's role much more active, to simplify the role of the RP and avoid relying on third-party cookies.
 
 ## OpenID Connect
 
