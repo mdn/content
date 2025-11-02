@@ -72,17 +72,6 @@ Therefore, the code above should be re-written as:
 import data from "https://example.com/data.json" with { type: "json" };
 ```
 
-or alternatively via the await-import syntax
-
-```js
-const data = await import("https://example.com/data.json", {
-  with: { type: "json" },
-});
-```
-
-> [!NOTE]
-> await imports are cached for the lifetime of the environment (e.g. a page or worker), if you expect this data to continually change (such as updating the latest news, or a user's credits), use the [js fetch api](/en-US/docs/Web/API/Fetch_API) instead!
-
 The `type` attribute changes how the module is fetched (the browser sends the request with `{{HTTPHeader("Accept")}}: application/json` header), but does _not_ change how the module is parsed or evaluated. The runtime already knows to parse the module as JSON given the response MIME type. It only uses the attribute to do _after-the-fact_ checking that the `data.json` module is, in fact, a JSON module. For example, if the response header changes to `Content-Type: text/javascript` instead, the program will fail with a similar error as above.
 
 The specification explicitly calls out `type: "json"` to be supported — if a module is asserted to be `type: "json"` and the runtime does not fail this import, then it must be parsed as JSON. However, there's no behavior requirement otherwise: for imports without a `type: "json"` attribute, the runtime may still parse it as JSON if security is not an issue in this environment. Browsers, on the other hand, implicitly assume that the module is JavaScript, and fail if the module is not JavaScript (for example, JSON). This ensures that module types are always strictly validated and prevents any security risks. In reality, non-browser runtimes such as Node and Deno align with browser semantics and enforce `type` for JSON modules.
@@ -141,6 +130,18 @@ Start a local HTTP server (see [troubleshooting](/en-US/docs/Web/JavaScript/Guid
 
 > [!NOTE]
 > JSON modules only have one default export. You cannot do named imports from them (like `import { name } from "data.json"`).
+
+### Using import attributes with dynamic import
+
+Import attributes are also accepted as the second parameter of the `import()` syntax.
+
+```js
+const data = await import("https://example.com/data.json", {
+  with: { type: "json" },
+});
+```
+
+Note that, like static imports, dynamic imports are cached for the lifetime of the environment (e.g. a page or worker). If you expect this data to change (such as the latest news or a user's credits), use the [Fetch API](/en-US/docs/Web/API/Fetch_API) instead.
 
 ## Specifications
 
