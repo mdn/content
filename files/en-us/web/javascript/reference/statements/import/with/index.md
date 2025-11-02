@@ -141,7 +141,7 @@ const data = await import("https://example.com/data.json", {
 });
 ```
 
-Note that, like static imports, dynamic imports are cached for the lifetime of the environment (e.g. a page or worker). If you expect this data to change (such as the latest news or a user's credits), use the [Fetch API](/en-US/docs/Web/API/Fetch_API) instead.
+Note that, like static imports, dynamic imports are cached for the lifetime of the environment (e.g., a page or worker). If you expect this data to change (such as the latest news or a user's credits), use the [Fetch API](/en-US/docs/Web/API/Fetch_API) instead.
 
 ## Specifications
 
