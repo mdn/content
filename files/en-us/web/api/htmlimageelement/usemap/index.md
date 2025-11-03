@@ -12,38 +12,7 @@ The **`useMap`** property of the {{domxref("HTMLImageElement")}} interface provi
 
 ## Value
 
-A string providing a valid anchor to a {{HTMLElement("map")}} element, formed by prepending the hash character `#` to the map's [`name`](/en-US/docs/Web/HTML/Reference/Elements/map#name) attribute.
-
-You can learn more about client-side image maps in our learning article [Add a hitmap on top of an image](/en-US/docs/Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image).
-
-## Examples
-
-Consider a `<map>` that looks like this:
-
-```html
-<map name="mainmenu-map">
-  <area
-    shape="circle"
-    coords="25, 25, 75"
-    href="/index.html"
-    alt="Return to home page" />
-  <area shape="rect" coords="25, 25, 100, 150" href="/index.html" alt="Shop" />
-</map>
-```
-
-You could set `useMap` like this:
-
-```js
-const menuBox = document.getElementById("menu-box");
-menuBox.useMap = "#mainmenu-map";
-```
-
-## Value
-
-A string containing the hash `#` symbol followed by the [`name`](/en-US/docs/Web/HTML/Reference/Elements/map#name) of the {{HTMLElement("map")}} element
-which defines the image map to apply to the image.
-
-You can learn more about client-side image maps in our learning article [Add a hitmap on top of an image](/en-US/docs/Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image).
+A string containing the hash `#` symbol followed by the [`name`](/en-US/docs/Web/HTML/Reference/Elements/map#name) of the {{HTMLElement("map")}} element which defines the image map to apply to the image.
 
 ## Examples
 
@@ -71,8 +40,7 @@ image.alt = "";
 image.useMap = "#mainmenu-map";
 ```
 
-For additional examples (including interactive ones), see the articles about the
-{{HTMLElement("map")}} and {{HTMLElement("area")}} elements, as well as the [guide to using image maps](/en-US/docs/Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image).
+For additional examples (including interactive ones), see the articles about the {{HTMLElement("map")}} and {{HTMLElement("area")}} elements, as well as the [guide to using image maps](/en-US/docs/Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image).
 
 ## Specifications
 
