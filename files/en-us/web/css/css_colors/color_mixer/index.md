@@ -74,26 +74,28 @@ The two input colors, `color-one` and `color-two`, are shown on the outside, and
   <dialog id="picker-dialog">
     <div>Pick a color</div>
     <table>
-      <tr>
-        <td><label for="color-text">Enter color:</label></td>
-        <td><input type="text" id="color-text" value="#bada55" /></td>
-      </tr>
-      <tr>
-        <td><label for="color-input">Pick color:</label></td>
-        <td><input type="color" id="color-input" value="#bada55" /></td>
-      </tr>
-      <tr>
-        <td><label for="color-opacity">Select an opacity:</label></td>
-        <td>
-          <input
-            type="range"
-            id="color-opacity"
-            value="1"
-            min="0"
-            max="1"
-            step="0.01" />
-        </td>
-      </tr>
+      <tbody>
+        <tr>
+          <td><label for="color-text">Enter color:</label></td>
+          <td><input type="text" id="color-text" value="#bada55" /></td>
+        </tr>
+        <tr>
+          <td><label for="color-input">Pick color:</label></td>
+          <td><input type="color" id="color-input" value="#bada55" /></td>
+        </tr>
+        <tr>
+          <td><label for="color-opacity">Select an opacity:</label></td>
+          <td>
+            <input
+              type="range"
+              id="color-opacity"
+              value="1"
+              min="0"
+              max="1"
+              step="0.01" />
+          </td>
+        </tr>
+      </tbody>
     </table>
     <div><button id="picker-ok-button">Ok</button></div>
   </dialog>

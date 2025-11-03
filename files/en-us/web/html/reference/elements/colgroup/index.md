@@ -20,20 +20,24 @@ The **`<colgroup>`** [HTML](/en-US/docs/Web/HTML) element defines a group of col
     <col span="2" class="batman" />
     <col span="2" class="flash" />
   </colgroup>
-  <tr>
-    <td></td>
-    <th scope="col">Batman</th>
-    <th scope="col">Robin</th>
-    <th scope="col">The Flash</th>
-    <th scope="col">Kid Flash</th>
-  </tr>
-  <tr>
-    <th scope="row">Skill</th>
-    <td>Smarts, strong</td>
-    <td>Dex, acrobat</td>
-    <td>Super speed</td>
-    <td>Super speed</td>
-  </tr>
+  <thead>
+    <tr>
+      <td></td>
+      <th scope="col">Batman</th>
+      <th scope="col">Robin</th>
+      <th scope="col">The Flash</th>
+      <th scope="col">Kid Flash</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Skill</th>
+      <td>Smarts, strong</td>
+      <td>Dex, acrobat</td>
+      <td>Super speed</td>
+      <td>Super speed</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -142,33 +146,37 @@ Two `<colgroup>` elements are used to structure a basic table by creating column
   </caption>
   <colgroup span="5" class="weekdays"></colgroup>
   <colgroup span="2" class="weekend"></colgroup>
-  <tr>
-    <th>Mon</th>
-    <th>Tue</th>
-    <th>Wed</th>
-    <th>Thu</th>
-    <th>Fri</th>
-    <th>Sat</th>
-    <th>Sun</th>
-  </tr>
-  <tr>
-    <td>Clean room</td>
-    <td>Football training</td>
-    <td>Dance Course</td>
-    <td>History Class</td>
-    <td>Buy drinks</td>
-    <td>Study hour</td>
-    <td>Free time</td>
-  </tr>
-  <tr>
-    <td>Yoga</td>
-    <td>Chess Club</td>
-    <td>Meet friends</td>
-    <td>Gymnastics</td>
-    <td>Birthday party</td>
-    <td>Fishing trip</td>
-    <td>Free time</td>
-  </tr>
+  <thead>
+    <tr>
+      <th>Mon</th>
+      <th>Tue</th>
+      <th>Wed</th>
+      <th>Thu</th>
+      <th>Fri</th>
+      <th>Sat</th>
+      <th>Sun</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Clean room</td>
+      <td>Football training</td>
+      <td>Dance Course</td>
+      <td>History Class</td>
+      <td>Buy drinks</td>
+      <td>Study hour</td>
+      <td>Free time</td>
+    </tr>
+    <tr>
+      <td>Yoga</td>
+      <td>Chess Club</td>
+      <td>Meet friends</td>
+      <td>Gymnastics</td>
+      <td>Birthday party</td>
+      <td>Fishing trip</td>
+      <td>Free time</td>
+    </tr>
+  </tbody>
 </table>
 ```
 

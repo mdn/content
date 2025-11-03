@@ -513,12 +513,14 @@ However, stopEvent also calls an event object method, {{domxref("event.stopPropa
 
 ```html
 <table id="t-daddy">
-  <tr id="tbl1">
-    <td id="c1">one</td>
-  </tr>
-  <tr>
-    <td id="c2">two</td>
-  </tr>
+  <tbody>
+    <tr id="tbl1">
+      <td id="c1">one</td>
+    </tr>
+    <tr>
+      <td id="c2">two</td>
+    </tr>
+  </tbody>
 </table>
 ```
 

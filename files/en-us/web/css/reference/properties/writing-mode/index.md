@@ -128,48 +128,52 @@ The HTML is a {{HTMLElement("table")}} with each writing mode in a row with a co
   <caption>
     Using multiple writing modes
   </caption>
-  <tr>
-    <th>Value</th>
-    <th>Vertical script</th>
-    <th>Horizontal (LTR) script</th>
-    <th>Horizontal (RTL) script</th>
-    <th>Mixed script</th>
-  </tr>
-  <tr class="text1">
-    <th>horizontal-tb</th>
-    <td>我家没有电脑。</td>
-    <td>Example text</td>
-    <td>מלל ארוך לדוגמא</td>
-    <td>1994年に至っては</td>
-  </tr>
-  <tr class="text2">
-    <th>vertical-lr</th>
-    <td>我家没有电脑。</td>
-    <td>Example text</td>
-    <td>מלל ארוך לדוגמא</td>
-    <td>1994年に至っては</td>
-  </tr>
-  <tr class="text3">
-    <th>vertical-rl</th>
-    <td>我家没有电脑。</td>
-    <td>Example text</td>
-    <td>מלל ארוך לדוגמא</td>
-    <td>1994年に至っては</td>
-  </tr>
-  <tr class="experimental text4">
-    <th>sideways-lr</th>
-    <td>我家没有电脑。</td>
-    <td>Example text</td>
-    <td>מלל ארוך לדוגמא</td>
-    <td>1994年に至っては</td>
-  </tr>
-  <tr class="experimental text5">
-    <th>sideways-rl</th>
-    <td>我家没有电脑。</td>
-    <td>Example text</td>
-    <td>מלל ארוך לדוגמא</td>
-    <td>1994年に至っては</td>
-  </tr>
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Vertical script</th>
+      <th>Horizontal (LTR) script</th>
+      <th>Horizontal (RTL) script</th>
+      <th>Mixed script</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="text1">
+      <th>horizontal-tb</th>
+      <td>我家没有电脑。</td>
+      <td>Example text</td>
+      <td>מלל ארוך לדוגמא</td>
+      <td>1994年に至っては</td>
+    </tr>
+    <tr class="text2">
+      <th>vertical-lr</th>
+      <td>我家没有电脑。</td>
+      <td>Example text</td>
+      <td>מלל ארוך לדוגמא</td>
+      <td>1994年に至っては</td>
+    </tr>
+    <tr class="text3">
+      <th>vertical-rl</th>
+      <td>我家没有电脑。</td>
+      <td>Example text</td>
+      <td>מלל ארוך לדוגמא</td>
+      <td>1994年に至っては</td>
+    </tr>
+    <tr class="experimental text4">
+      <th>sideways-lr</th>
+      <td>我家没有电脑。</td>
+      <td>Example text</td>
+      <td>מלל ארוך לדוגמא</td>
+      <td>1994年に至っては</td>
+    </tr>
+    <tr class="experimental text5">
+      <th>sideways-rl</th>
+      <td>我家没有电脑。</td>
+      <td>Example text</td>
+      <td>מלל ארוך לדוגמא</td>
+      <td>1994年に至っては</td>
+    </tr>
+  </tbody>
 </table>
 <p class="notice">
   Your browser does not support the <code>sideways-lr</code> or

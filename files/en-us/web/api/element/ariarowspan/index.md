@@ -20,16 +20,22 @@ In this example the `aria-rowspan` attribute on the element with an ID of `spann
 
 ```html
 <table>
-  <tr>
-    <th id="spanning-heading" rowspan="3" aria-rowspan="3">Spanning heading</th>
-    <th>Heading</th>
-  </tr>
-  <tr>
-    <td>One</td>
-  </tr>
-  <tr>
-    <td>Two</td>
-  </tr>
+  <thead>
+    <tr>
+      <th id="spanning-heading" rowspan="3" aria-rowspan="3">
+        Spanning heading
+      </th>
+      <th>Heading</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>One</td>
+    </tr>
+    <tr>
+      <td>Two</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
