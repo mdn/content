@@ -73,7 +73,7 @@ Looking at this overview, we can see some of the ways an attacker can impersonat
 - **Secure password storage**
   - : To defend against [database compromise](#database_compromise), the server must store passwords in a form that makes it impractical for an attacker to retrieve the original password, even if they get access to the server's database. We'll cover the requirements for this in our guidelines for the [registration](#registration) flow.
 
-In the next three sections we'll look in more detail about how to implement the main flows needed for a password-based authentication system:
+In the next three sections we'll take a more detailed look at the main flows needed for a password-based authentication system:
 
 - [Registration](#registration)
 - [Login](#login)
