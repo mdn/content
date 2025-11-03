@@ -656,18 +656,18 @@ ol.shortcut {
       value="disclosure-closed" />disclosure-closed
   </label>
 
-  <label for="-moz-ethiopic-halehame">
+  <label for="moz-ethiopic-halehame">
     <input
       type="radio"
-      id="-moz-ethiopic-halehame"
+      id="moz-ethiopic-halehame"
       name="type"
       value="-moz-ethiopic-halehame" />-moz-ethiopic-halehame
   </label>
 
-  <label for="-moz-ethiopic-halehame-am">
+  <label for="moz-ethiopic-halehame-am">
     <input
       type="radio"
-      id="-moz-ethiopic-halehame-am"
+      id="moz-ethiopic-halehame-am"
       name="type"
       value="-moz-ethiopic-halehame-am" />-moz-ethiopic-halehame-am
   </label>
@@ -704,40 +704,40 @@ ol.shortcut {
     <input type="radio" id="urdu" name="type" value="urdu" />urdu
   </label>
 
-  <label for="-moz-ethiopic-halehame-ti-er">
+  <label for="moz-ethiopic-halehame-ti-er">
     <input
       type="radio"
-      id="-moz-ethiopic-halehame-ti-er"
+      id="moz-ethiopic-halehame-ti-er"
       name="type"
       value="-moz-ethiopic-halehame-ti-er" />-moz-ethiopic-halehame-ti-er
   </label>
 
-  <label for="-moz-ethiopic-halehame-ti-et">
+  <label for="moz-ethiopic-halehame-ti-et">
     <input
       type="radio"
-      id="-moz-ethiopic-halehame-ti-et"
+      id="moz-ethiopic-halehame-ti-et"
       name="type"
       value="-moz-ethiopic-halehame-ti-et" />-moz-ethiopic-halehame-ti-et
   </label>
 
-  <label for="-moz-hangul">
+  <label for="moz-hangul">
     <input
       type="radio"
-      id="-moz-hangul"
+      id="moz-hangul"
       name="type"
       value="-moz-hangul" />-moz-hangul
   </label>
 
-  <label for="-moz-hangul-consonant">
+  <label for="moz-hangul-consonant">
     <input
       type="radio"
-      id="-moz-hangul-consonant"
+      id="moz-hangul-consonant"
       name="type"
       value="-moz-hangul-consonant" />-moz-hangul-consonant
   </label>
 
-  <label for="-moz-urdu">
-    <input type="radio" id="-moz-urdu" name="type" value="-moz-urdu" />-moz-urdu
+  <label for="moz-urdu">
+    <input type="radio" id="moz-urdu" name="type" value="-moz-urdu" />-moz-urdu
   </label>
 </div>
 ```

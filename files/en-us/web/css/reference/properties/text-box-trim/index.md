@@ -157,7 +157,7 @@ We have hidden the exact HTML code for brevity.
     </select>
   </div>
 </section>
-<p class="display" contenteditable="">Holly Golightly</p>
+<p class="display" contenteditable>Holly Golightly</p>
 <section>
   <div>
     <label for="trim-under">Select trim under (end) value:</label>

@@ -113,11 +113,11 @@ This example demonstrates using the `:scope` pseudo-class in JavaScript. This ca
 ```html
 <div id="context">
   <div id="element-1">
-    <div id="element-1.1"></div>
-    <div id="element-1.2"></div>
+    <div id="element-1-1"></div>
+    <div id="element-1-2"></div>
   </div>
   <div id="element-2">
-    <div id="element-2.1"></div>
+    <div id="element-2-1"></div>
   </div>
 </div>
 <p>
@@ -132,8 +132,8 @@ This example demonstrates using the `:scope` pseudo-class in JavaScript. This ca
 const context = document.getElementById("context");
 const selected = context.querySelectorAll(":scope > div");
 
-document.getElementById("results").textContent = Array.prototype.map
-  .call(selected, (element) => `#${element.getAttribute("id")}`)
+document.getElementById("results").textContent = [...selected]
+  .map((element) => `#${element.id}`)
   .join(", ");
 ```
 

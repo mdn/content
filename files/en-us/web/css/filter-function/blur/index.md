@@ -97,10 +97,15 @@ This example shows three images: the image with a `blur()` filter function appli
 svg:not([height]) {
   display: none;
 }
+
+th,
+td {
+  padding: 5px;
+}
 ```
 
 ```html hidden
-<table cellpadding="5">
+<table>
   <thead>
     <tr>
       <th>Live example</th>

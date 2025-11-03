@@ -31,7 +31,7 @@ text-wrap-style: stable;
   <div class="whole-content-wrapper">
     <p>Edit the text in the box:</p>
     <div class="transition-all" id="example-element">
-      <p contenteditable="">
+      <p contenteditable>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem aut
         cum eum id quos est.
       </p>

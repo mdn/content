@@ -325,7 +325,7 @@ Use the sliders in the example below to modify the translation, rotation, scale,
               <span><code>backface-visibility</code></span>
               <input
                 type="checkbox"
-                checked="checked"
+                checked
                 data-default="checked"
                 id="backfaceVisibilityCheckbox" />
             </label>
