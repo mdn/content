@@ -202,7 +202,7 @@ In [back channel logout](https://openid.net/specs/openid-connect-backchannel-1_0
 
 When implementing a federated identity system, we have to coordinate the interactions between the RP, the IdP, and the user. Some implementations of this coordination depend on browser support for [third-party cookies](/en-US/docs/Web/Privacy/Guides/Third-party_cookies).
 
-For example, in front-channel logout (one of the approaches to implementing [sign-out in OpenID Connect](#oidc_sign-out)) we use cross-site {{htmlelement("iframe")}} elements, in which the RP's document contains an `<iframe>` whose content is loaded from the OP, or vice versa. This depends on the embedded `<iframe>` being able to send its cookies to its origin.
+For example, in front-channel logout (one of the approaches to implementing [sign-out in OpenID Connect](#oidc_sign-out)) we use cross-site {{htmlelement("iframe")}} elements, in which the RP's document contains an `<iframe>` whose content is loaded from the IdP, or vice versa. This depends on the embedded `<iframe>` being able to send its cookies to its origin.
 
 Similarly, while the main [OpenID Connect authentication flow](#authentication_flow) uses full-page redirects to coordinate between the participants, this is a distracting experience for users and is difficult for {{glossary("SPA", "single-page apps")}} to support. A better user experience can be achieved by embedding the IdP as an `<iframe>` in the RP's page, and this again depends on third-party cookies.
 
