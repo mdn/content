@@ -38,6 +38,16 @@ selector {
 - [Pseudo-element selectors](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements)
 - [Type selectors](/en-US/docs/Web/CSS/Reference/Selectors/Type_selectors)
 - [Universal selectors](/en-US/docs/Web/CSS/Reference/Selectors/Universal_selectors)
+- [Namespace separator](/en-US/docs/Web/CSS/Reference/Selectors/Namespace_separator)
+
+## Index of combinators
+
+- [Child combinator (`>`)](/en-US/docs/Web/CSS/Reference/Selectors/Child_combinator)
+- [Column combinator (`||`)](/en-US/docs/Web/CSS/Reference/Selectors/Column_combinator) {{Experimental_Inline}}
+- [Descendant combinator (whitespace)](/en-US/docs/Web/CSS/Reference/Selectors/Descendant_combinator)
+- [Next-sibling combinator (`+`)](/en-US/docs/Web/CSS/Reference/Selectors/Next-sibling_combinator)
+- [Subsequent-sibling combinator (`~`)](/en-US/docs/Web/CSS/Reference/Selectors/Subsequent-sibling_combinator)
+- [Selector list (`,`)](/en-US/docs/Web/CSS/Reference/Selectors/Selector_list)
 
 ## Specifications
 
