@@ -67,6 +67,8 @@ You can learn more about client-side image maps in our learning article [Add a h
 
 ## Examples
 
+### Using useMap
+
 Consider a `<map>` that looks like this:
 
 ```html
