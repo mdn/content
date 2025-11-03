@@ -12313,7 +12313,7 @@
 /en-US/docs/Web/CSS/All_About_The_Containing_Block	/en-US/docs/Web/CSS/CSS_display/Containing_block
 /en-US/docs/Web/CSS/Alternative_style_sheets	/en-US/docs/Web/HTML/Reference/Attributes/rel/alternate_stylesheet
 /en-US/docs/Web/CSS/At-rule	/en-US/docs/Web/CSS/CSS_syntax/At-rule
-/en-US/docs/Web/CSS/At-rule-functions	/en-US/docs/Web/CSS/CSS_syntax/At-rule_functions
+/en-US/docs/Web/CSS/At-rule-functions	/en-US/docs/Web/CSS/Reference/At-rules/At-rule_functions
 /en-US/docs/Web/CSS/Attribute_selectors	/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors
 /en-US/docs/Web/CSS/Aural	/en-US/docs/Web/CSS/@media
 /en-US/docs/Web/CSS/Block_formatting_context	/en-US/docs/Web/CSS/CSS_display/Block_formatting_context
@@ -12460,6 +12460,7 @@
 /en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index	/en-US/docs/Web/CSS/CSS_positioned_layout/Using_z-index
 /en-US/docs/Web/CSS/CSS_ruby	/en-US/docs/Web/CSS/CSS_ruby_layout
 /en-US/docs/Web/CSS/CSS_special_properties	/en-US/docs/Web/CSS
+/en-US/docs/Web/CSS/CSS_syntax/At-rule_functions	/en-US/docs/Web/CSS/Reference/At-rules/At-rule_functions
 /en-US/docs/Web/CSS/CSS_transform_functions	/en-US/docs/Web/CSS/Reference/Properties/transform
 /en-US/docs/Web/CSS/CSS_values_serialization	/en-US/docs/Web/CSS
 /en-US/docs/Web/CSS/CSS_values_syntax	/en-US/docs/Web/CSS

@@ -1,7 +1,7 @@
 ---
 title: CSS at-rule functions
 short-title: At-rule functions
-slug: Web/CSS/CSS_syntax/At-rule_functions
+slug: Web/CSS/Reference/At-rules/At-rule_functions
 page-type: guide
 sidebar: cssref
 ---

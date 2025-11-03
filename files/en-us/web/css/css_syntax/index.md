@@ -97,6 +97,6 @@ This module doesn't define any properties, [data types](/en-US/docs/Web/CSS/CSS_
 
 ## See also
 
-- [CSS at-rule functions](/en-US/docs/Web/CSS/CSS_syntax/At-rule_functions)
+- [CSS at-rule functions](/en-US/docs/Web/CSS/Reference/At-rules/At-rule_functions)
 - [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module
 - [CSS values and units](/en-US/docs/Web/CSS/CSS_values_and_units) module

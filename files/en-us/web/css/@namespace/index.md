@@ -101,4 +101,4 @@ svg|a {
 ## See also
 
 - [Namespaces crash course](/en-US/docs/Web/SVG/Guides/Namespaces_crash_course)
-- [CSS at-rule functions](/en-US/docs/Web/CSS/CSS_syntax/At-rule_functions)
+- [CSS at-rule functions](/en-US/docs/Web/CSS/Reference/At-rules/At-rule_functions)

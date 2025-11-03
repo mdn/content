@@ -32,5 +32,5 @@ The `framework.themes.dark` is the layer into which the CSS file would be import
 ## See also
 
 - {{CSSxRef("@import")}}
-- [CSS at-rule functions](/en-US/docs/Web/CSS/CSS_syntax/At-rule_functions)
+- [CSS at-rule functions](/en-US/docs/Web/CSS/Reference/At-rules/At-rule_functions)
 - [CSS cascading and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module

@@ -469,4 +469,4 @@ See [Using container scroll-state queries](/en-US/docs/Web/CSS/CSS_conditional_r
 - {{Cssxref("contain")}}
 - {{Cssxref("content-visibility")}}
 - [CSS containment module](/en-US/docs/Web/CSS/CSS_containment)
-- [CSS at-rule functions](/en-US/docs/Web/CSS/CSS_syntax/At-rule_functions)
+- [CSS at-rule functions](/en-US/docs/Web/CSS/Reference/At-rules/At-rule_functions)

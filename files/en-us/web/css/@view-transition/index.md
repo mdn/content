@@ -99,4 +99,4 @@ See this [transitions multi-page app](https://mdn.github.io/dom-examples/view-tr
 - {{cssxref("::view-transition-image-pair()")}}
 - [View Transition API](/en-US/docs/Web/API/View_Transition_API)
 - [CSS at-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rule)
-- [CSS at-rule functions](/en-US/docs/Web/CSS/CSS_syntax/At-rule_functions)
+- [CSS at-rule functions](/en-US/docs/Web/CSS/Reference/At-rules/At-rule_functions)
