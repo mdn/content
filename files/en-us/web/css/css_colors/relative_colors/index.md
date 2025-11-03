@@ -443,7 +443,7 @@ The full HTML is included below for reference. The most interesting parts are as
 
 Below we are only showing the CSS that sets the palette colors. Note how, in each case, descendant selectors are used to apply the correct {{cssxref("background-color")}} to each child `<div>` for the chosen palette. We care more about the position of the `<div>`s in the source order than the type of element, so we have used {{cssxref(":nth-child")}} to target them.
 
-In the last rule we've used the [general sibling selector (`~`)](/en-US/docs/Web/CSS/Subsequent-sibling_combinator) to target the unused `<div>` elements in each palette type, setting [`display: none`](/en-US/docs/Web/CSS/Subsequent-sibling_combinator) to stop them being rendered.
+In the last rule we've used the [general sibling selector (`~`)](/en-US/docs/Web/CSS/Reference/Selectors/Subsequent-sibling_combinator) to target the unused `<div>` elements in each palette type, setting [`display: none`](/en-US/docs/Web/CSS/Reference/Selectors/Subsequent-sibling_combinator) to stop them being rendered.
 
 The colors themselves include the `--base-color`, plus relative colors derived from that `--base-color`. The relative colors use the [`lch()`](/en-US/docs/Web/CSS/color_value/lch) function — passing in the origin `--base-color` and defining an output color with an adjusted lightness or hue channel as appropriate.
 

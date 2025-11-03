@@ -36,7 +36,7 @@ A non-live {{domxref("NodeList")}} containing one {{domxref("Element")}} object 
 each descendant node that matches at least one of the specified selectors. The elements are in document order — that is, parents before children, earlier siblings before later siblings.
 
 > [!NOTE]
-> If the specified `selectors` include a [CSS pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements), the returned list
+> If the specified `selectors` include a [CSS pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements), the returned list
 > is always empty.
 
 ### Exceptions
@@ -48,7 +48,7 @@ each descendant node that matches at least one of the specified selectors. The e
 
 ### Getting all elements with a custom data value
 
-This example uses the [attribute selector](/en-US/docs/Web/CSS/Attribute_selectors) to select multiple elements with a `data-name` data attribute that contains "funnel-chart-percent".
+This example uses the [attribute selector](/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors) to select multiple elements with a `data-name` data attribute that contains "funnel-chart-percent".
 
 ```html
 <section class="box" id="sect1">
@@ -89,7 +89,7 @@ const container = document.querySelector("#test");
 const matches = container.querySelectorAll("div.highlighted > p");
 ```
 
-This example uses an [attribute selector](/en-US/docs/Web/CSS/Attribute_selectors) to return a list of the {{HTMLElement("iframe")}} elements in the document
+This example uses an [attribute selector](/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors) to return a list of the {{HTMLElement("iframe")}} elements in the document
 that contain an attribute named `"data-src"`:
 
 ```js
@@ -293,7 +293,7 @@ Clicking the first button gives an error, while the second and third buttons wor
 ## See also
 
 - [Selection and traversal on the DOM tree](/en-US/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree)
-- [Attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) in the CSS
+- [Attribute selectors](/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors) in the CSS
   Guide
 - [Attribute selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors) in the MDN Learning Area
 - {{domxref("Element.querySelector()")}}

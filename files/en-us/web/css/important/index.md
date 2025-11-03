@@ -138,7 +138,7 @@ In this example, the paragraph will be red, not blue, as the custom property val
 
 Avoid using `!important` to override specificity. When intentionally creating important declarations for UI requirements, comment in your CSS code to explain to maintainers why they should not override that feature.
 
-Even when working to override high-specificity styles not under your control, such as styles in a 3rd party plugin declared with an [id selector](/en-US/docs/Web/CSS/ID_selectors), you don't need to use `!important`. Consider instead importing the 3rd party stylesheet script into a [named or anonymous layer](/en-US/docs/Web/CSS/@layer) as your first cascade layer, instead of using `!important`. As long as the external styles do not include important declarations, your styles will take precedence over the widget styles, no matter the specificity.
+Even when working to override high-specificity styles not under your control, such as styles in a 3rd party plugin declared with an [id selector](/en-US/docs/Web/CSS/Reference/Selectors/ID_selectors), you don't need to use `!important`. Consider instead importing the 3rd party stylesheet script into a [named or anonymous layer](/en-US/docs/Web/CSS/@layer) as your first cascade layer, instead of using `!important`. As long as the external styles do not include important declarations, your styles will take precedence over the widget styles, no matter the specificity.
 
 If you need to override an external stylesheet containing important declarations, create a cascade layer containing the needed overrides, and declare that layer first.
 

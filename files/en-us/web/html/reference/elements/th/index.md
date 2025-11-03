@@ -185,7 +185,7 @@ The remaining rows contain the main data of the table. Each of these rows has a 
 
 #### CSS
 
-Some basic CSS is used to style the table and its cells. We use CSS [attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) to target header cells based on their [`scope`](#scope) attribute values, highlighting column and row headers (`<th>` elements) and differentiating them each other and from the data cells ({{HTMLElement("td")}}).
+Some basic CSS is used to style the table and its cells. We use CSS [attribute selectors](/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors) to target header cells based on their [`scope`](#scope) attribute values, highlighting column and row headers (`<th>` elements) and differentiating them each other and from the data cells ({{HTMLElement("td")}}).
 
 ```css
 th,

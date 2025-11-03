@@ -47,7 +47,7 @@ _No changes._
 #### Removals
 
 - The non-standard `-moz-box` and `-moz-inline-box` {{CSSxRef("display")}} values have been hidden from web content ([Firefox bug 1496961](https://bugzil.la/1496961)).
-- The non-standard `::-moz-tree` [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) has been hidden from web content ([Firefox bug 1496961](https://bugzil.la/1496961)).
+- The non-standard `::-moz-tree` [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) has been hidden from web content ([Firefox bug 1496961](https://bugzil.la/1496961)).
 - The `layout.css.filters.enabled` preference has been removed; [CSS filters](/en-US/docs/Web/CSS/CSS_filter_effects) can no longer be disabled ([Firefox bug 1408841](https://bugzil.la/1408841)).
 - A previous change — to swap the values of the 2-value {{cssxref("overflow")}} syntax so block is specified first and inline second ([Firefox bug 1481866](https://bugzil.la/1481866)) — has been reverted ([Firefox bug 1492567](https://bugzil.la/1492567)). See [Bug 1481866 comment 14](https://bugzil.la/1481866#c14) for why.
 

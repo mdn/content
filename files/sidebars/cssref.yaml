@@ -20,25 +20,27 @@ sidebar:
     title: Properties
     details: closed
   - type: listSubPages
-    path: /Web/CSS
+    path: /Web/CSS/Reference/Selectors
     tags: css-selector
+    link: /Web/CSS/Reference/Selectors
     title: Selectors
     details: closed
   - type: listSubPages
-    path: /Web/CSS
+    path: /Web/CSS/Reference/Selectors
     tags: css-combinator
+    link: /Web/CSS/Reference/Selectors/Combinators
     title: Combinators
     details: closed
   - type: listSubPagesGrouped
-    path: /Web/CSS
+    path: /Web/CSS/Reference/Selectors
     tags: css-pseudo-class
-    link: /Web/CSS/Pseudo-classes
+    link: /Web/CSS/Reference/Selectors/Pseudo-classes
     title: Pseudo-classes
     details: closed
   - type: listSubPagesGrouped
-    path: /Web/CSS
+    path: /Web/CSS/Reference/Selectors
     tags: css-pseudo-element
-    link: /Web/CSS/Pseudo-elements
+    link: /Web/CSS/Reference/Selectors/Pseudo-elements
     title: Pseudo-elements
     details: closed
   - type: listSubPages

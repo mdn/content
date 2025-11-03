@@ -80,7 +80,7 @@ The functions supported in the function syntax are described in the following se
 #### `selector()`
 
 This function evaluates if a browser supports the specified selector syntax.
-The following example returns true and applies the CSS style if the browser supports the [child combinator](/en-US/docs/Web/CSS/Child_combinator):
+The following example returns true and applies the CSS style if the browser supports the [child combinator](/en-US/docs/Web/CSS/Reference/Selectors/Child_combinator):
 
 ```css
 @supports selector(h2 > p) {

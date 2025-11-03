@@ -30,7 +30,7 @@ A text track and cues can be defined in a file using the [WebVTT File Format](/e
 
 Alternatively you can add a {{domxref("TextTrack")}} to a media element in JavaScript using [`HTMLMediaElement.addTextTrack()`](/en-US/docs/Web/API/HTMLMediaElement/addTextTrack), and then add individual {{domxref("VTTCue")}} objects to the track with {{domxref("TextTrack.addCue()")}}.
 
-The {{cssxref("::cue")}} [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) can be used both in HTML and in a WebVTT file to style the cues for a particular element, for a particular tag within a cue, for a VTT class, or for a cue with a particular label.
+The {{cssxref("::cue")}} [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) can be used both in HTML and in a WebVTT file to style the cues for a particular element, for a particular tag within a cue, for a VTT class, or for a cue with a particular label.
 The `::cue-region` pseudo-element is intended for styling cues in a particular region, but is not supported in any browser.
 
 Most important WebVTT features can be accessed using either the file format or Web API.
@@ -58,7 +58,7 @@ Most important WebVTT features can be accessed using either the file format or W
 
 ### Related CSS extensions
 
-These [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) are used to style cues in media with VTT tracks.
+These [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) are used to style cues in media with VTT tracks.
 
 - {{CSSxRef("::cue")}}
   - : Matches cues within a selected element in media with VTT tracks.
