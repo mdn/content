@@ -23,7 +23,7 @@ sidebar: firefox
 
 #### Newly-supported CSS features
 
-- [Downloadable fonts support](/en-US/docs/Web/CSS/@font-face)
+- [Downloadable fonts support](/en-US/docs/Web/CSS/Reference/At-rules/@font-face)
   - : The new {{ cssxref("@font-face") }} @rule lets web pages provide downloadable fonts, so that sites can be rendered exactly as the page author expects.
 - [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
   - : Firefox 3.5 now supports CSS media queries, which enhance support for media-dependent style sheets.

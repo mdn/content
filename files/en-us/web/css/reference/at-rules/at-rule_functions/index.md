@@ -27,7 +27,7 @@ The {{CSSxRef("@import")}} at-rule is used to import styles from other styleshee
   - : Imports a stylesheet file from the specified URL.
 - {{CSSxRef("@import", "@import supports()")}}
   - : Imports a stylesheet file based on browser support.
-- [`@import layer()`](/en-US/docs/Web/CSS/@import/layer_function)
+- [`@import layer()`](/en-US/docs/Web/CSS/Reference/At-rules/@import/layer_function)
   - : Imports a stylesheet file into the specified cascade layer.
 
 ## @supports functions

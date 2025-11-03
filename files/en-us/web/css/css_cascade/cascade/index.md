@@ -7,7 +7,7 @@ spec-urls: https://drafts.csswg.org/css-cascade/
 sidebar: cssref
 ---
 
-The **cascade** is an algorithm that defines how user agents combine property values originating from different sources. The cascade defines the origin and layer that takes precedence when declarations in more than one [origin](#origin_types), [cascade layer](/en-US/docs/Web/CSS/@layer), or {{CSSxRef("@scope")}} block set a value for a property on an element.
+The **cascade** is an algorithm that defines how user agents combine property values originating from different sources. The cascade defines the origin and layer that takes precedence when declarations in more than one [origin](#origin_types), [cascade layer](/en-US/docs/Web/CSS/Reference/At-rules/@layer), or {{CSSxRef("@scope")}} block set a value for a property on an element.
 
 The cascade lies at the core of CSS, as emphasized by the name: _**Cascading**_ Style Sheets. When a [selector](/en-US/docs/Web/CSS/CSS_selectors) matches an element, the property value from the origin with the highest precedence gets applied, even if the selector from a lower precedence origin or layer has greater [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity).
 
@@ -17,7 +17,7 @@ This article explains what the cascade is and the order in which {{Glossary("CSS
 
 The CSS cascade algorithm's job is to select CSS declarations in order to determine the correct values for CSS properties. CSS declarations come from different origin types: **[User-agent stylesheets](#user-agent_stylesheets)**, **[Author stylesheets](#author_stylesheets)**, and **[User stylesheets](#user_stylesheets)**.
 
-Though stylesheets come from these different origins and can be within different [layers](/en-US/docs/Web/CSS/@layer) in each of these origins, they overlap in terms of their default scope; to make this work, the cascade algorithm defines how they interact. Before addressing the interactions, we'll define some key terms in the next few sections.
+Though stylesheets come from these different origins and can be within different [layers](/en-US/docs/Web/CSS/Reference/At-rules/@layer) in each of these origins, they overlap in terms of their default scope; to make this work, the cascade algorithm defines how they interact. Before addressing the interactions, we'll define some key terms in the next few sections.
 
 ### User-agent stylesheets
 
@@ -39,7 +39,7 @@ In most browsers, the user (or reader) of the website can choose to override sty
 
 ### Cascade layers
 
-The cascade order is based on origin type. The cascade within each origin type is based on the declaration order of [cascade layers](/en-US/docs/Web/CSS/@layer) within that type. For all origins - user-agent, author, or user - styles can be declared within or outside of named or anonymous layers. When declared using [`layer`, `layer()`](/en-US/docs/Web/CSS/@import) or [`@layer`](/en-US/docs/Web/CSS/@layer), styles are placed into the specified named layer, or into an anonymous layer if no name is provided. Styles declared outside of a layer are treated as being part of an anonymous last declared layer.
+The cascade order is based on origin type. The cascade within each origin type is based on the declaration order of [cascade layers](/en-US/docs/Web/CSS/Reference/At-rules/@layer) within that type. For all origins - user-agent, author, or user - styles can be declared within or outside of named or anonymous layers. When declared using [`layer`, `layer()`](/en-US/docs/Web/CSS/Reference/At-rules/@import) or [`@layer`](/en-US/docs/Web/CSS/Reference/At-rules/@layer), styles are placed into the specified named layer, or into an anonymous layer if no name is provided. Styles declared outside of a layer are treated as being part of an anonymous last declared layer.
 
 Let's take a look at cascading origin type before diving into cascade layers within each origin type.
 
@@ -62,7 +62,7 @@ The cascading algorithm determines how to find the value to apply for each prope
    | 8                              | CSS transitions         |              |
 
 3. **Specificity**: In case of equality with an origin, the [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity) of a rule is considered to choose one value or another. The specificity of the selectors are compared, and the declaration with the highest specificity wins.
-4. **Scoping proximity**: When two selectors in the origin layer with precedence have the same specificity, the property value within scoped rules with the smallest number of hops up the DOM hierarchy to the scope root wins. See [How `@scope` conflicts are resolved](/en-US/docs/Web/CSS/@scope#how_scope_conflicts_are_resolved) for more details and an example.
+4. **Scoping proximity**: When two selectors in the origin layer with precedence have the same specificity, the property value within scoped rules with the smallest number of hops up the DOM hierarchy to the scope root wins. See [How `@scope` conflicts are resolved](/en-US/docs/Web/CSS/Reference/At-rules/@scope#how_scope_conflicts_are_resolved) for more details and an example.
 5. **Order of appearance**: In the origin with precedence, if there are competing values for a property that are in style block matching selectors of equal specificity and scoping proximity, the last declaration in the style order is applied.
 
 The cascade is in ascending order, meaning:
@@ -339,13 +339,13 @@ Only CSS property/value pair declarations participate in the cascade. CSS at-rul
 
 CSS [at-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rule) containing entities other than declarations, such as a {{ cssxref("@font-face")}} rule containing _descriptors_, don't participate in the cascade.
 
-For the most part, the properties and descriptors defined in at-rules don't participate in the cascade. Only at-rules as a whole participate in the cascade. For example, within a `@font-face` rule, font names are identified by [`font-family`](/en-US/docs/Web/CSS/@font-face/font-family) descriptors. If several `@font-face` rules with the same descriptor are defined, only the most appropriate `@font-face`, as a whole, is considered. If more than one are identically appropriate, the entire `@font-face` declarations are compared using steps 1, 2, and 4 of the algorithm (there is no specificity when it comes to at-rules).
+For the most part, the properties and descriptors defined in at-rules don't participate in the cascade. Only at-rules as a whole participate in the cascade. For example, within a `@font-face` rule, font names are identified by [`font-family`](/en-US/docs/Web/CSS/Reference/At-rules/@font-face/font-family) descriptors. If several `@font-face` rules with the same descriptor are defined, only the most appropriate `@font-face`, as a whole, is considered. If more than one are identically appropriate, the entire `@font-face` declarations are compared using steps 1, 2, and 4 of the algorithm (there is no specificity when it comes to at-rules).
 
 While the declarations contained in most at-rules — such as those in {{cssxref("@media")}}, {{cssxref("@document")}}, or {{cssxref("@supports")}} — participate in the cascade, the at-rule may make an entire selector not relevant, as we saw with the print style in the [basic example](#basic_example).
 
 Declarations in {{cssxref("@keyframes")}} don't participate in the cascade. As with `@font-face`, only the `@keyframes` as a whole is selected via the cascade algorithm. The [precedence order of animation is described below](#css_animations_and_the_cascade).
 
-When it comes to {{cssxref("@import")}}, the `@import` doesn't participate itself in the cascade, but all of the imported styles do participate. If the `@import` defines a [named or anonymous layer](/en-US/docs/Web/CSS/@layer), the contents of the imported stylesheet are placed into the specified layer. All other CSS imported with `@import` is treated as the last declared layer. This was discussed above.
+When it comes to {{cssxref("@import")}}, the `@import` doesn't participate itself in the cascade, but all of the imported styles do participate. If the `@import` defines a [named or anonymous layer](/en-US/docs/Web/CSS/Reference/At-rules/@layer), the contents of the imported stylesheet are placed into the specified layer. All other CSS imported with `@import` is treated as the last declared layer. This was discussed above.
 
 Finally, {{cssxref("@charset")}} obeys specific algorithms and isn't affected by the cascade algorithm.
 

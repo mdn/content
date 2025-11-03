@@ -67,10 +67,10 @@ The CSS media queries level 5 module also introduces the `environment-blending`,
 
 ### Data types and operators
 
-- [`<media-types>`](/en-US/docs/Web/CSS/@media#media_types)
-- [`<media-features>`](/en-US/docs/Web/CSS/@media#media_features)
+- [`<media-types>`](/en-US/docs/Web/CSS/Reference/At-rules/@media#media_types)
+- [`<media-features>`](/en-US/docs/Web/CSS/Reference/At-rules/@media#media_features)
 - [`<resolution>`](/en-US/docs/Web/CSS/resolution)
-- [Logical operators](/en-US/docs/Web/CSS/@media#logical_operators)
+- [Logical operators](/en-US/docs/Web/CSS/Reference/At-rules/@media#logical_operators)
 
 ### Glossary terms
 

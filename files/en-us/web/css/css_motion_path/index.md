@@ -121,5 +121,5 @@ In this example, we used [CSS masking](/en-US/docs/Web/CSS/CSS_masking) and [CSS
 - {{cssxref("position_value", "&lt;position&gt;")}}
 - [`<easing-function>`](/en-US/docs/Web/CSS/easing-function)
 - {{cssxref("radial-gradient")}} function
-- [`prefers-reduced-motion`](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) media query
+- [`prefers-reduced-motion`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) media query
 - {{cssxref("will-change")}} CSS property

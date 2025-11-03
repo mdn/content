@@ -33,7 +33,7 @@ page: unset;
 - `auto`
   - : Default value. Use the value of the nearest ancestor with a non-`auto` value. If no ancestor has a named page value set, the used value for auto is the empty string.
 - {{cssxref("custom-ident")}}
-  - : Case-sensitive name defined in a [`@page`](/en-US/docs/Web/CSS/@page) at-rule.
+  - : Case-sensitive name defined in a [`@page`](/en-US/docs/Web/CSS/Reference/At-rules/@page) at-rule.
 
 ## Formal definition
 
@@ -134,7 +134,7 @@ The print controls allow the user to select how the `section`s in the `article` 
 </article>
 ```
 
-The first part of the CSS sets up the **named** pages, these include the size and orientation and also some content to go in the [`@top-center` margin](/en-US/docs/Web/CSS/@page#margin_at-rules) of the printed pages.
+The first part of the CSS sets up the **named** pages, these include the size and orientation and also some content to go in the [`@top-center` margin](/en-US/docs/Web/CSS/Reference/At-rules/@page#margin_at-rules) of the printed pages.
 
 ```css live-sample___page-property
 @page toc {

@@ -264,7 +264,7 @@ Here we are providing an [RGB](/en-US/docs/Web/CSS/color_value/rgb) {{cssxref("b
 To sort this out, we have added a second `background-color` declaration, which just specifies the `red` color keyword — this is supported way back in really old browsers, and acts as a fallback if the modern shiny features don't work. What happens is a browser visiting this page first applies the first `background-color` value; when it gets to the second `background-color` declaration, it will override the initial value with this value if it supports RGB colors. If not, it will just ignore the entire declaration and move on.
 
 > [!NOTE]
-> The same is true for other CSS features like [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries), [`@font-face`](/en-US/docs/Web/CSS/@font-face) and [`@supports`](/en-US/docs/Web/CSS/@supports) blocks — if they are not supported, the browser just ignores them.
+> The same is true for other CSS features like [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries), [`@font-face`](/en-US/docs/Web/CSS/Reference/At-rules/@font-face) and [`@supports`](/en-US/docs/Web/CSS/Reference/At-rules/@supports) blocks — if they are not supported, the browser just ignores them.
 
 ### Selector support
 
@@ -326,7 +326,7 @@ Try this simple example:
 
 As you start to type the property name representation after the second dot (note that in JavaScript, CSS property names are written in {{Glossary("camel_case", "lower camel case")}}, not {{Glossary("kebab_case", "kebab-case")}}), the JavaScript console should begin to autocomplete the names of the properties that exist in the browser and match what you've written so far. This is useful for finding out what properties are implemented in that browser.
 
-If you do need to include modern features, test for feature support using [`@supports`](/en-US/docs/Web/CSS/@supports), which allows you to implement native feature detection tests, and nest the prefixed or new feature within the `@supports` block.
+If you do need to include modern features, test for feature support using [`@supports`](/en-US/docs/Web/CSS/Reference/At-rules/@supports), which allows you to implement native feature detection tests, and nest the prefixed or new feature within the `@supports` block.
 
 ### Responsive design problems
 

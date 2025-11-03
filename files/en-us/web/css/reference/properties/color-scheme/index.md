@@ -13,7 +13,7 @@ The **`color-scheme`** [CSS](/en-US/docs/Web/CSS) property allows an element to 
 - The default colors of form controls.
 - The default colors of other browser-provided UI, such as "spellcheck" underlines.
 
-Component authors must use the [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) media feature to support the color schemes on the rest of the elements.
+Component authors must use the [`prefers-color-scheme`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) media feature to support the color schemes on the rest of the elements.
 
 Common choices for operating system color schemes are "light" and "dark", or "day mode" and "night mode". When a user selects one of these color schemes, the operating system makes adjustments to the user interface. This includes [form controls](/en-US/docs/Learn_web_development/Extensions/Forms), [scrollbars](/en-US/docs/Web/CSS/CSS_scrollbars_styling), and the used values of [CSS system colors](/en-US/docs/Web/CSS/system-color).
 
@@ -114,7 +114,7 @@ Along with the above CSS, also include the [`<meta name="color-scheme">`](/en-US
 
 ### Styling based on color schemes
 
-To style elements based on color scheme preferences, use the [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) media query. The example below opts in the entire page to using both light and dark operating system color schemes via the `color-scheme` property, and then uses `prefers-color-scheme` to specify the desired foreground and background colors for individual elements in those color schemes.
+To style elements based on color scheme preferences, use the [`prefers-color-scheme`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) media query. The example below opts in the entire page to using both light and dark operating system color schemes via the `color-scheme` property, and then uses `prefers-color-scheme` to specify the desired foreground and background colors for individual elements in those color schemes.
 
 ```css
 :root {
@@ -159,7 +159,7 @@ Alternatively, use the [`light-dark()`](/en-US/docs/Web/CSS/color_value/light-da
 
 ## See also
 
-- [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) media query to detect user preferences for color schemes.
+- [`prefers-color-scheme`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) media query to detect user preferences for color schemes.
 - {{CSSXref("color_value/light-dark", "light-dark()")}} color function to set colors for both light and dark color schemes.
 - Other color-related properties: {{cssxref("color")}}, {{cssxref("accent-color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}
 - {{cssxref("background-image")}}

@@ -43,7 +43,7 @@ After an app has loaded, the `background-color` in the stylesheet takes preceden
 The manifest's `background_color` is used only as a temporary measure during the initial loading phase and for generating splash screens in some environments.
 
 > [!NOTE]
-> Browsers may override the `background_color` manifest value to support any [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) media query defined in your app's CSS.
+> Browsers may override the `background_color` manifest value to support any [`prefers-color-scheme`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) media query defined in your app's CSS.
 
 ## Examples
 

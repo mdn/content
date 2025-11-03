@@ -47,7 +47,7 @@ Block at-rules end in a `{}`-block that contain nested rules, other at-rules, or
 - {{cssxref("@counter-style")}}
   - : Define custom counter styles and extend predefined list styles ([CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles)).
 - {{cssxref("@container")}}
-  - : A conditional group rule that applies its content if the container meets the [`<container-condition>`](/en-US/docs/Web/CSS/@container#container-condition)s ([CSS containment](/en-US/docs/Web/CSS/CSS_containment)).
+  - : A conditional group rule that applies its content if the container meets the [`<container-condition>`](/en-US/docs/Web/CSS/Reference/At-rules/@container#container-condition)s ([CSS containment](/en-US/docs/Web/CSS/CSS_containment)).
 - {{cssxref("@font-face")}}
   - : Defines font resource locations, both local and external, along with the style characteristics for when those resources are used with a declared {{cssxref("font-family")}} ([CSS fonts](/en-US/docs/Web/CSS/CSS_fonts)).
 - {{cssxref("@font-feature-values")}} (plus `@swash`, `@ornaments`, `@annotation`, `@stylistic`, `@styleset` and `@character-variant`)

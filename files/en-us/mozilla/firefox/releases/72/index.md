@@ -27,7 +27,7 @@ This article provides information about the changes in Firefox 72 that will affe
 
 [Page Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html):
 
-- You can set a [preference to enable a simulator](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#view-media-rules-for-color-scheme-preference) for different values of the [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) media feature ([Firefox bug 1550804](https://bugzil.la/1550804)).
+- You can set a [preference to enable a simulator](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#view-media-rules-for-color-scheme-preference) for different values of the [`prefers-color-scheme`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) media feature ([Firefox bug 1550804](https://bugzil.la/1550804)).
 
 #### Removals
 

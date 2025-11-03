@@ -99,7 +99,7 @@ At-rules can be nested within other at-rules. Below you can see an example of th
 
 ### Nesting Cascade Layers (`@layer`)
 
-[Cascade Layers](/en-US/docs/Web/CSS/@layer) can be nested to [create child-layers](/en-US/docs/Web/CSS/@layer#nesting_layers). These are joined with a `.` (dot).
+[Cascade Layers](/en-US/docs/Web/CSS/Reference/At-rules/@layer) can be nested to [create child-layers](/en-US/docs/Web/CSS/Reference/At-rules/@layer#nesting_layers). These are joined with a `.` (dot).
 
 #### Defining the parent & child layers
 

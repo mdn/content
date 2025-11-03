@@ -12,7 +12,7 @@ The {{Glossary("DOM")}} provides features that can test the results of a {{Gloss
 
 Before you can evaluate the results of a media query, you need to create the {{domxref("MediaQueryList")}} object representing the query. To do this, use the {{domxref("window.matchMedia")}} method.
 
-For example, to set up a query list that determines if the device is in landscape or portrait [orientation](/en-US/docs/Web/CSS/@media/orientation):
+For example, to set up a query list that determines if the device is in landscape or portrait [orientation](/en-US/docs/Web/CSS/Reference/At-rules/@media/orientation):
 
 ```js
 const mediaQueryList = window.matchMedia("(orientation: portrait)");

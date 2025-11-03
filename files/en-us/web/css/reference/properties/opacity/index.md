@@ -85,7 +85,7 @@ Opacity alone should not be used to provide information to screen readers. Use t
 
 ### Transitioning opacity
 
-When [transitioning](/en-US/docs/Web/CSS/CSS_transitions) the opacity of elements as you add them to the page when content was formerly hidden with [`visibility: hidden`](/en-US/docs/Web/CSS/Reference/Properties/visibility#hidden), [`display: none`](/en-US/docs/Web/CSS/Reference/Properties/display#none), or [`content-visibility: hidden`](/en-US/docs/Web/CSS/Reference/Properties/content-visibility#hidden), you need to include both a [`@starting-style`](/en-US/docs/Web/CSS/@starting-style) and [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/Reference/Properties/transition-behavior#allow-discrete):
+When [transitioning](/en-US/docs/Web/CSS/CSS_transitions) the opacity of elements as you add them to the page when content was formerly hidden with [`visibility: hidden`](/en-US/docs/Web/CSS/Reference/Properties/visibility#hidden), [`display: none`](/en-US/docs/Web/CSS/Reference/Properties/display#none), or [`content-visibility: hidden`](/en-US/docs/Web/CSS/Reference/Properties/content-visibility#hidden), you need to include both a [`@starting-style`](/en-US/docs/Web/CSS/Reference/At-rules/@starting-style) and [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/Reference/Properties/transition-behavior#allow-discrete):
 
 ```css
 .card {
@@ -106,7 +106,7 @@ When [transitioning](/en-US/docs/Web/CSS/CSS_transitions) the opacity of element
 }
 ```
 
-To enable first-style transitions, `@starting-style` rules are needed. In the above code, setting `opacity: 0` in `@starting-style` provides a starting point for the transition when the element receives its initial style update. For more details, see [`@starting-style`](/en-US/docs/Web/CSS/@starting-style).
+To enable first-style transitions, `@starting-style` rules are needed. In the above code, setting `opacity: 0` in `@starting-style` provides a starting point for the transition when the element receives its initial style update. For more details, see [`@starting-style`](/en-US/docs/Web/CSS/Reference/At-rules/@starting-style).
 
 Setting `transition-behavior: allow-discrete` is required to transition to `display: none`. See the [`transition-behavior`](/en-US/docs/Web/CSS/Reference/Properties/transition-behavior) property for more details.
 
@@ -120,7 +120,7 @@ Color contrast ratio is determined by comparing the luminosity of the opacity-ad
 - [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 
-Various operating systems provide a preference for reducing transparency. To set the `opacity` based on the user's operating systems transparency preferences, use the [`prefers-reduced-transparency`](/en-US/docs/Web/CSS/@media/prefers-reduced-transparency) media query.
+Various operating systems provide a preference for reducing transparency. To set the `opacity` based on the user's operating systems transparency preferences, use the [`prefers-reduced-transparency`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-transparency) media query.
 
 ## Formal definition
 
@@ -214,7 +214,7 @@ img.opacity:hover {
 
 ### Styling based on user preferences
 
-To style elements based on user's operating systems transparency preferences, use the [`prefers-reduced-transparency`](/en-US/docs/Web/CSS/@media/prefers-reduced-transparency) media query. The following example demonstrates how to use the `prefers-color-scheme` media query to specify the desired `opacity` based on the user's preferences.
+To style elements based on user's operating systems transparency preferences, use the [`prefers-reduced-transparency`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-transparency) media query. The following example demonstrates how to use the `prefers-color-scheme` media query to specify the desired `opacity` based on the user's preferences.
 
 ```css
 .element {
@@ -238,6 +238,6 @@ To style elements based on user's operating systems transparency preferences, us
 
 ## See also
 
-- [`prefers-reduced-transparency`](/en-US/docs/Web/CSS/@media/prefers-reduced-transparency) media query
+- [`prefers-reduced-transparency`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-transparency) media query
 - [CSS color](/en-US/docs/Web/CSS/CSS_colors) module
 - SVG {{SVGAttr("opacity")}} attribute

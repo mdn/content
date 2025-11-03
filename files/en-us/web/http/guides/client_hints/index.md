@@ -152,7 +152,7 @@ Client hints are available to web page JavaScript via the [User Agent Client Hin
 
 ### User preference media features client hints
 
-User Preference Media Features Client Hints allow a server to vary responses based on a user agent's preferences for [CSS media features](/en-US/docs/Web/CSS/@media#media_features) such as color scheme or reduced motion.
+User Preference Media Features Client Hints allow a server to vary responses based on a user agent's preferences for [CSS media features](/en-US/docs/Web/CSS/Reference/At-rules/@media#media_features) such as color scheme or reduced motion.
 Headers include: {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}, {{HTTPHeader("Sec-CH-Prefers-Color-Scheme")}}.
 
 ### Device client hints

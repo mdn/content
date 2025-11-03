@@ -26,7 +26,7 @@ When it comes to important declarations, the [cascade origin and layer orders](/
 When a declaration is important, the order of precedence is reversed. Declarations marked as important in the user-agent style sheets override all important declarations in the user style sheets. Similarly, all important declarations in the user style sheets override all important declarations in the author's style sheets. Finally, all important declarations take precedence over all animations.
 
 > [!NOTE]
-> All important declarations take precedence over all animations. `!important` is not valid within [@keyframes animation](/en-US/docs/Web/CSS/@keyframes) declarations.
+> All important declarations take precedence over all animations. `!important` is not valid within [@keyframes animation](/en-US/docs/Web/CSS/Reference/At-rules/@keyframes) declarations.
 
 Reversing the precedence order for important declarations ensures users with special needs, such as personalized color schemes or large fonts, can override author styles when needed by marking some declarations in their user's style sheet as important. It also guarantees malicious extensions can't override important user-agent styles, which might break functionality or negatively impact security.
 
@@ -138,7 +138,7 @@ In this example, the paragraph will be red, not blue, as the custom property val
 
 Avoid using `!important` to override specificity. When intentionally creating important declarations for UI requirements, comment in your CSS code to explain to maintainers why they should not override that feature.
 
-Even when working to override high-specificity styles not under your control, such as styles in a 3rd party plugin declared with an [id selector](/en-US/docs/Web/CSS/Reference/Selectors/ID_selectors), you don't need to use `!important`. Consider instead importing the 3rd party stylesheet script into a [named or anonymous layer](/en-US/docs/Web/CSS/@layer) as your first cascade layer, instead of using `!important`. As long as the external styles do not include important declarations, your styles will take precedence over the widget styles, no matter the specificity.
+Even when working to override high-specificity styles not under your control, such as styles in a 3rd party plugin declared with an [id selector](/en-US/docs/Web/CSS/Reference/Selectors/ID_selectors), you don't need to use `!important`. Consider instead importing the 3rd party stylesheet script into a [named or anonymous layer](/en-US/docs/Web/CSS/Reference/At-rules/@layer) as your first cascade layer, instead of using `!important`. As long as the external styles do not include important declarations, your styles will take precedence over the widget styles, no matter the specificity.
 
 If you need to override an external stylesheet containing important declarations, create a cascade layer containing the needed overrides, and declare that layer first.
 
