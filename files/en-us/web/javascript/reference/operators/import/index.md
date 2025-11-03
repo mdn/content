@@ -118,7 +118,7 @@ Note that this can lead to memory leaks in a long-running application, because t
 
 You can also use the [Fetch API](/en-US/docs/Web/API/Fetch_API) to fetch module source code as text, and then evaluate the module manually depending on the module type:
 
-- For JavaScript modules, you can dynamically import the source code as a [`blob:` URL](/en-US/docs/Web/API/URL/createObjectURL) in browsers, or use [`vm.Module`](/en-US/docs/Web/Node.js/vm/Module) to evaluate it in Node.js.
+- For JavaScript modules, you can dynamically import the source code as a [`blob:` URL](/en-US/docs/Web/API/URL/createObjectURL_static) in browsers, or use [`vm.Module`](/en-US/docs/Web/Node.js/vm/Module) to evaluate it in Node.js.
 - For JSON modules, you can parse the source code using {{jsxref("JSON.parse()")}}.
 - For CSS modules, you can create a new {{domxref("CSSStyleSheet")}} object and use its [`replace()`](/en-US/docs/Web/API/CSSStyleSheet/replace) method to populate it with the source code.
 
