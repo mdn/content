@@ -46,7 +46,7 @@ WebGL extensions are prefixed with "ANGLE", "OES", "EXT" or "WEBGL". These prefi
 The WebGL context supports querying what extensions are available.
 
 ```js
-const available_extensions = gl.getSupportedExtensions();
+const availableExtensions = gl.getSupportedExtensions();
 ```
 
 The {{domxref("WebGLRenderingContext.getSupportedExtensions()")}} method returns an array of strings, one for each supported extension.
@@ -98,7 +98,7 @@ The current extensions are:
 Before an extension can be used it has to be enabled using {{domxref("WebGLRenderingContext.getExtension()")}}. For example:
 
 ```js
-const float_texture_ext = gl.getExtension("OES_texture_float");
+const ext = gl.getExtension("OES_texture_float");
 ```
 
 The return value is `null` if the extension is not supported, or an extension object otherwise.
