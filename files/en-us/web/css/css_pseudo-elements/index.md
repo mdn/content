@@ -12,6 +12,9 @@ Pseudo-elements are prefixed with a double colon (`::`). You add pseudo-elements
 
 Pseudo-elements enable targeting entities not included in HTML and sections of content that cannot be targeted otherwise without adding extra markup. Consider the placeholder of an {{HTMLelement("input")}} element. This is an abstract element and not a distinct node in the document tree. You can select this placeholder by using the {{CSSXref("::placeholder")}} pseudo-element. As another example, the {{CSSXref("::selection")}} pseudo-element matches the content currently highlighted by a user, allowing you to style what is matched as the user interacts with the content and changes the selection. Similarly, the {{CSSXref("::first-line")}} pseudo-element targets the first line of an element, updating automatically if the character count of the first line changes, without having to query the element's line length.
 
+> [!NOTE]
+> This page introduces a CSS module. To find an exhaustive list of all pseudo-elements defined by CSS specifications, see the [pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) reference page.
+
 ## Reference
 
 ### Selectors
@@ -114,6 +117,7 @@ The specification also defines the `::details-content` and `::search-text` pseud
 ## See also
 
 - [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
+- [List of pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements)
 - [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module
 - [CSS shadow-parts](/en-US/docs/Web/CSS/CSS_shadow_parts) module
 - [CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content) module

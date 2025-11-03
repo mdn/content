@@ -173,7 +173,10 @@ Standard properties defined by CSS specifications include the following:
 - {{CSSxRef("break-before")}}
 - {{CSSxRef("break-inside")}}
 - {{CSSxRef("caption-side")}}
+- {{CSSxRef("caret-animation")}}
 - {{CSSxRef("caret-color")}}
+- {{CSSxRef("caret-shape")}}
+- {{CSSxRef("caret")}} (shorthand)
 - {{CSSxRef("clear")}}
 - {{CSSxRef("clip-path")}}
 - {{CSSxRef("clip-rule")}}
@@ -203,6 +206,23 @@ Standard properties defined by CSS specifications include the following:
 - {{CSSxRef("container")}} (shorthand)
 - {{CSSxRef("content-visibility")}}
 - {{CSSxRef("content")}}
+- {{CSSxRef("corner-block-end-shape")}}
+- {{CSSxRef("corner-block-start-shape")}}
+- {{CSSxRef("corner-bottom-left-shape")}}
+- {{CSSxRef("corner-bottom-right-shape")}}
+- {{CSSxRef("corner-bottom-shape")}} (shorthand)
+- {{CSSxRef("corner-end-end-shape")}}
+- {{CSSxRef("corner-end-start-shape")}}
+- {{CSSxRef("corner-inline-end-shape")}}
+- {{CSSxRef("corner-inline-start-shape")}}
+- {{CSSxRef("corner-left-shape")}} (shorthand)
+- {{CSSxRef("corner-right-shape")}} (shorthand)
+- {{CSSxRef("corner-shape")}} (shorthand)
+- {{CSSxRef("corner-start-end-shape")}}
+- {{CSSxRef("corner-start-start-shape")}}
+- {{CSSxRef("corner-top-left-shape")}}
+- {{CSSxRef("corner-top-right-shape")}}
+- {{CSSxRef("corner-top-shape")}} (shorthand)
 - {{CSSxRef("counter-increment")}}
 - {{CSSxRef("counter-reset")}}
 - {{CSSxRef("counter-set")}}
@@ -216,6 +236,7 @@ Standard properties defined by CSS specifications include the following:
 - {{CSSxRef("direction")}}
 - {{CSSxRef("display")}}
 - {{CSSxRef("dominant-baseline")}}
+- {{CSSxRef("dynamic-range-limit")}}
 - {{CSSxRef("empty-cells")}}
 - {{CSSxRef("field-sizing")}}
 - {{CSSxRef("fill-opacity")}}
@@ -299,6 +320,7 @@ Standard properties defined by CSS specifications include the following:
 - {{CSSxRef("inset-inline")}} (shorthand)
 - {{CSSxRef("inset")}} (shorthand)
 - {{CSSxRef("inset")}} (shorthand)
+- {{CSSxRef("interactivity")}}
 - {{CSSxRef("interpolate-size")}}
 - {{CSSxRef("isolation")}}
 
@@ -369,6 +391,7 @@ Standard properties defined by CSS specifications include the following:
 
 - {{CSSxRef("object-fit")}}
 - {{CSSxRef("object-position")}}
+- {{CSSxRef("object-view-box")}}
 - {{CSSxRef("offset-anchor")}}
 - {{CSSxRef("offset-distance")}}
 - {{CSSxRef("offset-path")}}
@@ -439,6 +462,7 @@ Standard properties defined by CSS specifications include the following:
 - {{CSSxRef("rotate")}}
 - {{CSSxRef("row-gap")}}
 - {{CSSxRef("ruby-align")}}
+- {{CSSxRef("ruby-overhang")}}
 - {{CSSxRef("ruby-position")}}
 - {{CSSxRef("rx")}}
 - {{CSSxRef("ry")}}
@@ -470,6 +494,7 @@ Standard properties defined by CSS specifications include the following:
 - {{CSSxRef("scroll-snap-align")}}
 - {{CSSxRef("scroll-snap-stop")}}
 - {{CSSxRef("scroll-snap-type")}}
+- {{CSSxRef("scroll-target-group")}}
 - {{CSSxRef("scroll-timeline-axis")}}
 - {{CSSxRef("scroll-timeline-name")}}
 - {{CSSxRef("scroll-timeline")}} (shorthand)
@@ -499,6 +524,7 @@ Standard properties defined by CSS specifications include the following:
 - {{CSSxRef("text-align-last")}}
 - {{CSSxRef("text-align")}}
 - {{CSSxRef("text-anchor")}}
+- {{CSSxRef("text-autospace")}}
 - {{CSSxRef("text-box-edge")}}
 - {{CSSxRef("text-box-trim")}}
 - {{CSSxRef("text-box")}} (shorthand)

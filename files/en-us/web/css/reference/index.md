@@ -6,7 +6,7 @@ page-type: landing-page
 sidebar: cssref
 ---
 
-Use this **CSS reference** to browse an [alphabetical index](#index) of all of the standard [CSS](/en-US/docs/Web/CSS) properties, [pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes), [pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements), [data types](/en-US/docs/Web/CSS/Reference/Values/Data_types), [functional notations](/en-US/docs/Web/CSS/Reference/Values/Functions) and [at-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rules). You can also browse [key CSS concepts](#concepts) and a list of [selectors organized by type](#selectors). Also included is a brief [DOM-CSS / CSSOM reference](#dom-css_cssom).
+Use this **CSS reference** to browse an [alphabetical index](#index) of all of the standard [CSS](/en-US/docs/Web/CSS) [properties](/en-US/docs/Web/CSS/Reference/Properties), [pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes), [pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements), [data types](/en-US/docs/Web/CSS/Reference/Values/Data_types), [functional notations](/en-US/docs/Web/CSS/Reference/Values/Functions) and [at-rules](/en-US/docs/Web/CSS/Reference/At-rules). You can also browse [key CSS concepts](#concepts) and a list of [selectors organized by type](#selectors). Also included is a brief [DOM-CSS / CSSOM reference](#dom-css_cssom).
 
 ## Basic rule syntax
 
@@ -48,7 +48,7 @@ For a beginner-level introduction to the syntax of selectors, see our [guide on 
 
 ### At-rule syntax
 
-As the structure of at-rules varies widely, please see [At-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rules) to find the syntax of the specific one you want.
+As the structure of at-rules varies widely, please see [At-rule](/en-US/docs/Web/CSS/Reference/At-rules) to find the syntax of the specific one you want.
 
 ## Index
 
@@ -62,7 +62,7 @@ As the structure of at-rules varies widely, please see [At-rule](/en-US/docs/Web
 
 ## Selectors
 
-The following are the various [selectors](/en-US/docs/Web/CSS/CSS_selectors), which allow styles to be conditional based on various features of elements within the DOM.
+The following are the various [selectors](/en-US/docs/Web/CSS/Reference/Selectors), which allow styles to be conditional based on various features of elements within the DOM.
 
 ### Basic selectors
 
@@ -110,7 +110,7 @@ Combinators are selectors that establish a relationship between two or more simp
 ### Syntax and semantics
 
 - [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax/Syntax)
-- [At-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rules)
+- [At-rules](/en-US/docs/Web/CSS/Reference/At-rules)
 - [Cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade)
 - [Comments](/en-US/docs/Web/CSS/CSS_syntax/Comments)
 - [Descriptor](/en-US/docs/Glossary/CSS_Descriptor)
