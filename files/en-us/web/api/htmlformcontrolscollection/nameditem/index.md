@@ -32,12 +32,12 @@ namedItem(name)
 
 ### Return value
 
-- A {{domxref("RadioNodeList")}} if there are multiple elements with the given `name` or `id`
-- An {{domxref("Element")}} if there is exactly one element with the given `name` or `id`
-- [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) if no element has the given `name` or `id`
+- A {{domxref("RadioNodeList")}} if there are multiple elements with the given `name` or `id`,
+- An {{domxref("Element")}} if there is exactly one element with the given `name` or `id`, or
+- [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) if no element has the given `name` or `id`.
 
 > [!NOTE]
-> The returned {{domxref("RadioNodeList")}} is live, meaning that its contents automatically update if elements that match the given name are added to or removed from collection. Furthermore, it may contain non-radio input elements, despite the name of the collection.
+> The returned {{domxref("RadioNodeList")}} is live, meaning that its contents automatically update if elements that match the given name are added to or removed from the collection. Furthermore, it may contain non-radio input elements despite the collection's name.
 
 ## Examples
 

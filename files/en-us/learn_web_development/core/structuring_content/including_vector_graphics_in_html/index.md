@@ -178,7 +178,7 @@ This is definitely not the best method to choose:
 
 #### Cons
 
-- `iframe`s do have a fallback mechanism by including content between the opening and closing tags, but browsers only display the fallback if they lack support for `iframe`s altogether.
+- `<iframe>` elements can include fallback content between their opening and closing tags, but this is only displayed in browsers that don't support `<iframe>`s, not when the image fails to load.
 - Moreover, unless the SVG and your current webpage have the same {{glossary('origin')}}, you cannot use JavaScript on your main webpage to manipulate the SVG.
 
 ## Playing with SVG

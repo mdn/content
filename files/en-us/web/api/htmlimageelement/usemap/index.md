@@ -80,11 +80,13 @@ Consider a `<map>` that looks like this:
 </map>
 ```
 
-Given the image map named `mainmenu-map`, the image which uses it should
-look something like the following:
+Given the image map named `mainmenu-map`, you can dynamically construct images that reference the image map as follows:
 
-```html
-<img src="menubox.png" usemap="#mainmenu-map" />
+```js
+const image = new Image();
+image.src = "menubox.png";
+image.alt = "";
+image.useMap = "#mainmenu-map";
 ```
 
 For additional examples (including interactive ones), see the articles about the
