@@ -128,7 +128,7 @@ The HTML is a {{HTMLElement("table")}} with each writing mode in a row with a co
   <caption>
     Using multiple writing modes
   </caption>
-  <tbody>
+  <thead>
     <tr>
       <th>Value</th>
       <th>Vertical script</th>
@@ -136,6 +136,8 @@ The HTML is a {{HTMLElement("table")}} with each writing mode in a row with a co
       <th>Horizontal (RTL) script</th>
       <th>Mixed script</th>
     </tr>
+  </thead>
+  <tbody>
     <tr class="text1">
       <th>horizontal-tb</th>
       <td>我家没有电脑。</td>

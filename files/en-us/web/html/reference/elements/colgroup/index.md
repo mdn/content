@@ -20,7 +20,7 @@ The **`<colgroup>`** [HTML](/en-US/docs/Web/HTML) element defines a group of col
     <col span="2" class="batman" />
     <col span="2" class="flash" />
   </colgroup>
-  <tbody>
+  <thead>
     <tr>
       <td></td>
       <th scope="col">Batman</th>
@@ -28,6 +28,8 @@ The **`<colgroup>`** [HTML](/en-US/docs/Web/HTML) element defines a group of col
       <th scope="col">The Flash</th>
       <th scope="col">Kid Flash</th>
     </tr>
+  </thead>
+  <tbody>
     <tr>
       <th scope="row">Skill</th>
       <td>Smarts, strong</td>
@@ -144,7 +146,7 @@ Two `<colgroup>` elements are used to structure a basic table by creating column
   </caption>
   <colgroup span="5" class="weekdays"></colgroup>
   <colgroup span="2" class="weekend"></colgroup>
-  <tbody>
+  <thead>
     <tr>
       <th>Mon</th>
       <th>Tue</th>
@@ -154,6 +156,8 @@ Two `<colgroup>` elements are used to structure a basic table by creating column
       <th>Sat</th>
       <th>Sun</th>
     </tr>
+  </thead>
+  <tbody>
     <tr>
       <td>Clean room</td>
       <td>Football training</td>

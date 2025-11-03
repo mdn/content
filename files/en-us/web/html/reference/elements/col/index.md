@@ -20,7 +20,7 @@ The **`<col>`** [HTML](/en-US/docs/Web/HTML) element defines one or more columns
     <col span="2" class="batman" />
     <col span="2" class="flash" />
   </colgroup>
-  <tbody>
+  <thead>
     <tr>
       <td></td>
       <th scope="col">Batman</th>
@@ -28,6 +28,8 @@ The **`<col>`** [HTML](/en-US/docs/Web/HTML) element defines one or more columns
       <th scope="col">The Flash</th>
       <th scope="col">Kid Flash</th>
     </tr>
+  </thead>
+  <tbody>
     <tr>
       <th scope="row">Skill</th>
       <td>Smarts, strong</td>
@@ -145,7 +147,7 @@ A {{HTMLElement("colgroup")}} element provides structures to a basic table, crea
     <col span="5" class="weekdays" />
     <col span="2" class="weekend" />
   </colgroup>
-  <tbody>
+  <thead>
     <tr>
       <th>Period</th>
       <th>Mon</th>
@@ -156,6 +158,8 @@ A {{HTMLElement("colgroup")}} element provides structures to a basic table, crea
       <th>Sat</th>
       <th>Sun</th>
     </tr>
+  </thead>
+  <tbody>
     <tr>
       <th>a.m.</th>
       <td>Clean room</td>

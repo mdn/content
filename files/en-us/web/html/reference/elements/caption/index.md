@@ -133,11 +133,13 @@ A `<caption>` element is used as the first child of the {{HTMLElement("table")}}
   <caption>
     User login email addresses
   </caption>
-  <tbody>
+  <thead>
     <tr>
       <th>Login</th>
       <th>Email</th>
     </tr>
+  </thead>
+  <tbody>
     <tr>
       <td>user1</td>
       <td>user1@example.com</td>
