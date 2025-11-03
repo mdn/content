@@ -2,7 +2,7 @@
 title: CSS at-rule functions
 short-title: At-rule functions
 slug: Web/CSS/Reference/At-rules/At-rule_functions
-page-type: guide
+page-type: listing-page
 sidebar: cssref
 ---
 
@@ -57,5 +57,5 @@ The {{CSSxRef("@container")}} at-rule is used to specify styles for a containmen
 
 ## See also
 
-- [CSS at-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rule)
+- [CSS at-rules](/en-US/docs/Web/CSS/Reference/At-rules)
 - [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax) module

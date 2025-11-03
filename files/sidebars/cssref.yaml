@@ -44,9 +44,9 @@ sidebar:
     title: Pseudo-elements
     details: closed
   - type: listSubPages
-    path: /Web/CSS
+    path: /Web/CSS/Reference/At-rules
     tags: css-at-rule
-    link: /Web/CSS/CSS_syntax/At-rule
+    link: /Web/CSS/Reference/At-rules
     title: At-rules
     details: closed
   - type: listSubPages
@@ -260,7 +260,6 @@ sidebar:
     children:
       - /Web/CSS/CSS_syntax/Syntax
       - /Web/CSS/CSS_syntax/Comments
-      - /Web/CSS/Reference/At-rules/At-rule_functions
       - /Web/CSS/CSS_syntax/Error_handling
   - title: Text
     details: closed
