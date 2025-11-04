@@ -74,6 +74,7 @@ No notable changes.
 ## Changes for add-on developers
 
 - Support added for `unspecified` in {{WebExtAPIRef("cookies.SameSiteStatus")}}. In addition, `unspecified` is now the default value for `sameSite` in {{WebExtAPIRef("cookies.set()")}}. ([Firefox bug 1550032](https://bugzil.la/1550032))
+- Added the `data_collection_permissions` property to the `gecko` sub-key of the manifest key [`browser_specific_settings`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) for Firefox for desktop. This property enables the Firefox built-in data collection consent feature. See the Extension Workshop article [Firefox built-in consent for data collection and transmission](http://extensionworkshop.com/documentation/develop/firefox-builtin-data-consent/). ([Firefox bug 1954524](https://bugzil.la/1954524))
 
 ## Experimental web features
 
