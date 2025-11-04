@@ -144,7 +144,7 @@ These cases are evaluated the untrusted script is added to the document.
 #### TrustedHTML
 
 - {{domxref("Document.execCommand()")}} with a `commandName` of [`"insertHTML"`](/en-US/docs/Web/API/Document/execCommand#inserthtml)
-- {{domxref("Document.parseHTMLUnsafe_static()")}}
+- {{domxref("Document.parseHTMLUnsafe_static", "Document.parseHTMLUnsafe()")}}
 - {{domxref("Document.write()")}}
 - {{domxref("Document.writeln()")}}
 - {{domxref("DOMParser.parseFromString()")}}
@@ -258,14 +258,14 @@ Either way, the injection sink gets sanitized data, and because we could enforce
 #### `Content-Security-Policy` directives
 
 - {{CSP("require-trusted-types-for")}}
-  - : Enforces that [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) are passed to DOM XSS [injection sinks](/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage).
+  - : Enforces that Trusted Types are passed to DOM XSS [injection sinks](#concepts_and_usage).
 - {{CSP("trusted-types")}}
-  - : Used to specify an allowlist of [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) policy names.
+  - : Used to specify an allowlist of Trusted Types policy names.
 
 #### `Content-Security-Policy` keywords
 
 - [`trusted-types-eval`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#trusted-types-eval)
-  - : Allows [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval) and similar functions to be used but only when [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) are supported and enforced.
+  - : Allows [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval) and similar functions to be used but only when Trusted Types are supported and enforced.
 
 ## Examples
 
