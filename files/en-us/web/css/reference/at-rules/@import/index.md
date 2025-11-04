@@ -6,7 +6,7 @@ browser-compat: css.at-rules.import
 sidebar: cssref
 ---
 
-The **`@import`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) is used to import style rules from other valid stylesheets.
+The **`@import`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rules) is used to import style rules from other valid stylesheets.
 An `@import` rule _must_ be defined at the top of the stylesheet, before any other at-rule (except [@charset](/en-US/docs/Web/CSS/Reference/At-rules/@charset) and [@layer](/en-US/docs/Web/CSS/Reference/At-rules/@layer)) and style declarations, or it will be ignored.
 
 ## Syntax

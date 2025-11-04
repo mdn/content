@@ -6,7 +6,7 @@ browser-compat: css.at-rules.container
 sidebar: cssref
 ---
 
-The **`@container`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) is a conditional group rule that applies styles to a [containment context](/en-US/docs/Web/CSS/CSS_containment/Container_queries#naming_containment_contexts).
+The **`@container`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rules) is a conditional group rule that applies styles to a [containment context](/en-US/docs/Web/CSS/CSS_containment/Container_queries#naming_containment_contexts).
 Style declarations are filtered by a condition and applied to the container if the condition is true.
 The condition is evaluated when the queried container size, [`<style-feature>`](#container_style_queries), or scroll-state changes.
 

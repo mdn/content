@@ -6,7 +6,7 @@ browser-compat: css.at-rules.property.inherits
 sidebar: cssref
 ---
 
-The **`inherits`** [CSS](/en-US/docs/Web/CSS) descriptor of the {{cssxref("@property")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) controls whether or not the registered [CSS custom property](/en-US/docs/Web/CSS/Reference/Properties/--*) inherits by default.
+The **`inherits`** [CSS](/en-US/docs/Web/CSS) descriptor of the {{cssxref("@property")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rules) controls whether or not the registered [CSS custom property](/en-US/docs/Web/CSS/Reference/Properties/--*) inherits by default.
 It is a required descriptor; if missing or invalid, the entire `@property` rule is invalid and ignored.
 
 ## Syntax

@@ -337,7 +337,7 @@ Only CSS property/value pair declarations participate in the cascade. CSS at-rul
 
 ### At-rules
 
-CSS [at-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rule) containing entities other than declarations, such as a {{ cssxref("@font-face")}} rule containing _descriptors_, don't participate in the cascade.
+CSS [at-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rules) containing entities other than declarations, such as a {{ cssxref("@font-face")}} rule containing _descriptors_, don't participate in the cascade.
 
 For the most part, the properties and descriptors defined in at-rules don't participate in the cascade. Only at-rules as a whole participate in the cascade. For example, within a `@font-face` rule, font names are identified by [`font-family`](/en-US/docs/Web/CSS/Reference/At-rules/@font-face/font-family) descriptors. If several `@font-face` rules with the same descriptor are defined, only the most appropriate `@font-face`, as a whole, is considered. If more than one are identically appropriate, the entire `@font-face` declarations are compared using steps 1, 2, and 4 of the algorithm (there is no specificity when it comes to at-rules).
 
@@ -421,5 +421,5 @@ After your content has finished altering styles, it may find itself in a situati
 - [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax/Syntax)
 - [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
 - [Inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance)
-- [At-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rule)
+- [At-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rules)
 - [Initial](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value), [computed](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value), [used](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#used_value), and [actual](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#actual_value) values

@@ -6,7 +6,7 @@ browser-compat: css.selectors.right
 sidebar: cssref
 ---
 
-The **`:right`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes), used with the {{cssxref("@page")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule), represents all right-hand pages of a printed document.
+The **`:right`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes), used with the {{cssxref("@page")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rules), represents all right-hand pages of a printed document.
 
 ```css
 /* Selects any right-hand pages when printing */

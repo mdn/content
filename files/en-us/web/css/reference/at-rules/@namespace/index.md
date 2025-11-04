@@ -6,7 +6,7 @@ browser-compat: css.at-rules.namespace
 sidebar: cssref
 ---
 
-**`@namespace`** is an [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) that defines XML [namespaces](/en-US/docs/Glossary/Namespace) to be used in a [CSS](/en-US/docs/Glossary/CSS) [style sheet](/en-US/docs/Web/API/StyleSheet).
+**`@namespace`** is an [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rules) that defines XML [namespaces](/en-US/docs/Glossary/Namespace) to be used in a [CSS](/en-US/docs/Glossary/CSS) [style sheet](/en-US/docs/Web/API/StyleSheet).
 
 {{InteractiveExample("CSS Demo: @namespace", "tabbed-shorter")}}
 

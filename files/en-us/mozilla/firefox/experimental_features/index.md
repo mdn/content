@@ -133,7 +133,7 @@ The {{cssxref('timeline-scope')}}, {{cssxref('animation-range-start')}} and {{cs
 
 ### @scope at-rule
 
-The [@scope](/en-US/docs/Web/CSS/Reference/At-rules/@scope) [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) allows you to select specific child elements without having to overly increase the specificity of CSS selectors ([Firefox bug 1886441](https://bugzil.la/1886441)).
+The [@scope](/en-US/docs/Web/CSS/Reference/At-rules/@scope) [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rules) allows you to select specific child elements without having to overly increase the specificity of CSS selectors ([Firefox bug 1886441](https://bugzil.la/1886441)).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |

@@ -6,7 +6,7 @@ browser-compat: css.at-rules.layer
 sidebar: cssref
 ---
 
-The **`@layer`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) is used to declare a cascade layer and can also be used to define the order of precedence in case of multiple cascade layers.
+The **`@layer`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rules) is used to declare a cascade layer and can also be used to define the order of precedence in case of multiple cascade layers.
 
 {{InteractiveExample("CSS Demo: @layer", "tabbed-standard")}}
 

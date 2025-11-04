@@ -483,7 +483,7 @@ A few things to remember about specificity:
 - [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax/Syntax) guide
 - [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax) module
 - [CSS error handling](/en-US/docs/Web/CSS/CSS_syntax/Error_handling)
-- [At-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rule)
+- [At-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rules)
 - [Inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance)
 - [Initial](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value), [computed](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value), [used](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#used_value), and [actual](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#actual_value) values
 - [Value definition syntax](/en-US/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)

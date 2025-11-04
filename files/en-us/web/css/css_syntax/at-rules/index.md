@@ -1,6 +1,6 @@
 ---
 title: At-rules
-slug: Web/CSS/CSS_syntax/At-rule
+slug: Web/CSS/CSS_syntax/At-rules
 page-type: guide
 spec-urls: https://drafts.csswg.org/css-syntax/
 sidebar: cssref
@@ -73,39 +73,18 @@ Block at-rules end in a `{}`-block that contain nested rules, other at-rules, or
 - {{cssxref("@view-transition")}}
   - : Opts the current document into a [view transition](/en-US/docs/Web/API/View_Transition_API), and the destination document as well in the case of cross-document navigation transitions.
 
-## Index
-
-- {{cssxref("@charset")}}
-- {{cssxref("@color-profile")}}
-- {{cssxref("@container")}}
-- {{cssxref("@counter-style")}}
-- {{cssxref("@font-face")}}
-- {{cssxref("@font-feature-values")}}
-- {{cssxref("@font-palette-values")}}
-- {{cssxref("@import")}}
-- {{cssxref("@keyframes")}}
-- {{cssxref("@layer")}}
-- {{cssxref("@media")}}
-- {{cssxref("@namespace")}}
-- {{cssxref("@page")}}
-- {{cssxref("@position-try")}}
-- {{cssxref("@property")}}
-- {{cssxref("@scope")}}
-- {{cssxref("@starting-style")}}
-- {{cssxref("@supports")}}
-- {{cssxref("@view-transition")}}
-
 ## Specifications
 
 {{Specifications}}
 
 ## See also
 
+- [CSS at-rules](/en-US/docs/Web/CSS/Reference/At-rules)
 - [CSS at-rule functions](/en-US/docs/Web/CSS/Reference/At-rules/At-rule_functions)
-- [Nesting CSS at-rules](/en-US/docs/Web/CSS/CSS_nesting/Nesting_at-rules)
+- [Nesting at-rules](/en-US/docs/Web/CSS/CSS_nesting/Nesting_at-rules)
 - [CSS statements](/en-US/docs/Web/CSS/CSS_syntax/Syntax#css_statements)
 - [CSSRule](/en-US/docs/Web/API/CSSRule) interface
 - [CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules) module
-- [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax/Syntax)
+- [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax/Syntax) module
 - [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
 - [Inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance)
