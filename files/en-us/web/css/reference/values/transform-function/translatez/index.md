@@ -6,7 +6,7 @@ browser-compat: css.types.transform-function.translateZ
 sidebar: cssref
 ---
 
-The **`translateZ()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) repositions an element along the z-axis in 3D space, i.e.,
+The **`translateZ()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) repositions an element along the z-axis in 3D space, i.e.,
 closer to or farther away from the viewer. Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
 {{InteractiveExample("CSS Demo: translateZ()")}}

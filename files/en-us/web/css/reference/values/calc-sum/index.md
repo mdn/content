@@ -6,7 +6,7 @@ spec-urls: https://drafts.csswg.org/css-values/#typedef-calc-sum
 sidebar: cssref
 ---
 
-The **`<calc-sum>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types) represents an expression which performs a calculation in any [CSS math function](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#math_functions). The expression executes a basic arithmetic operation of addition and subtraction between two values.
+The **`<calc-sum>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types) represents an expression which performs a calculation in any [CSS math function](/en-US/docs/Web/CSS/Reference/Values/Functions#math_functions). The expression executes a basic arithmetic operation of addition and subtraction between two values.
 
 ## Syntax
 

@@ -6,7 +6,7 @@ browser-compat: css.properties.grid-template-columns.minmax
 sidebar: cssref
 ---
 
-The **`minmax()`** [CSS function](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) defines a size range greater than or equal to _min_ and less than or equal to _max_. It is used with [CSS grids](/en-US/docs/Web/CSS/CSS_grid_layout).
+The **`minmax()`** [CSS function](/en-US/docs/Web/CSS/Reference/Values/Functions) defines a size range greater than or equal to _min_ and less than or equal to _max_. It is used with [CSS grids](/en-US/docs/Web/CSS/CSS_grid_layout).
 
 {{InteractiveExample("CSS Demo: minmax()")}}
 

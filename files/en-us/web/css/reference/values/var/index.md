@@ -6,7 +6,7 @@ browser-compat: css.types.var
 sidebar: cssref
 ---
 
-The **`var()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) can be used to insert the value of a [custom property](/en-US/docs/Web/CSS/Reference/Properties/--*) (sometimes called a "CSS variable") instead of any part of a value of another property.
+The **`var()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) can be used to insert the value of a [custom property](/en-US/docs/Web/CSS/Reference/Properties/--*) (sometimes called a "CSS variable") instead of any part of a value of another property.
 
 {{InteractiveExample("CSS Demo: var()")}}
 

@@ -6,7 +6,7 @@ browser-compat: css.types.image.paint
 sidebar: cssref
 ---
 
-The **`paint()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) defines an {{cssxref("&lt;image&gt;")}} value generated with a PaintWorklet.
+The **`paint()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) defines an {{cssxref("&lt;image&gt;")}} value generated with a PaintWorklet.
 
 ## Syntax
 

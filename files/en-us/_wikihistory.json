@@ -73845,10 +73845,6 @@
       "mantou"
     ]
   },
-  "Web/CSS/CSS_values_and_units/CSS_value_functions": {
-    "modified": "2020-12-11T10:25:38.547Z",
-    "contributors": ["rachelandrew", "ramiy", "chrisdavidmills", "mfuji09"]
-  },
   "Web/CSS/CSS_values_and_units/Value_definition_syntax": {
     "modified": "2020-10-06T14:06:23.915Z",
     "contributors": [
@@ -88123,6 +88119,10 @@
       "ethertank",
       "ebidel"
     ]
+  },
+  "Web/CSS/Reference/Values/Functions": {
+    "modified": "2020-12-11T10:25:38.547Z",
+    "contributors": ["rachelandrew", "ramiy", "chrisdavidmills", "mfuji09"]
   },
   "Web/CSS/Reference/Values/alpha-value": {
     "modified": "2020-08-10T17:42:27.732Z",

@@ -6,7 +6,7 @@ browser-compat: css.types.env
 sidebar: cssref
 ---
 
-The **`env()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) can be used to insert the value of a user-agent defined [environment variable](/en-US/docs/Web/CSS/CSS_environment_variables/Using_environment_variables) into your CSS.
+The **`env()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) can be used to insert the value of a user-agent defined [environment variable](/en-US/docs/Web/CSS/CSS_environment_variables/Using_environment_variables) into your CSS.
 
 ## Syntax
 

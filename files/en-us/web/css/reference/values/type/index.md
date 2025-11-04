@@ -10,7 +10,7 @@ sidebar: cssref
 
 {{seecompattable}}
 
-The **`type()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) allows you to specify a particular data type, and is used by the following CSS features:
+The **`type()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) allows you to specify a particular data type, and is used by the following CSS features:
 
 - The {{cssxref("attr()")}} function, to specify the data type that an attribute value should be parsed into.
 - The {{cssxref("@function")}} at-rule, to specify the permitted data types for [CSS custom function](/en-US/docs/Web/CSS/CSS_custom_functions_and_mixins/Using_custom_functions) parameters and results.

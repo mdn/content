@@ -12448,8 +12448,8 @@
 /en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_flexbox_to_lay_out_web_applications	/en-US/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox
 /en-US/docs/Web/CSS/CSS_Flow_Layout/Formatting_Contexts_Explained	/en-US/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts
 /en-US/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts	/en-US/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts
-/en-US/docs/Web/CSS/CSS_Functionals	/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions
-/en-US/docs/Web/CSS/CSS_Functions	/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions
+/en-US/docs/Web/CSS/CSS_Functionals	/en-US/docs/Web/CSS/Reference/Values/Functions
+/en-US/docs/Web/CSS/CSS_Functions	/en-US/docs/Web/CSS/Reference/Values/Functions
 /en-US/docs/Web/CSS/CSS_Functions/Using_CSS_math_functions	/en-US/docs/Web/CSS/CSS_values_and_units/Using_CSS_math_functions
 /en-US/docs/Web/CSS/CSS_Grid	/en-US/docs/Web/CSS/CSS_grid_layout
 /en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout	/en-US/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout
@@ -12560,6 +12560,7 @@
 /en-US/docs/Web/CSS/CSS_syntax/At-rule	/en-US/docs/Web/CSS/CSS_syntax/At-rules
 /en-US/docs/Web/CSS/CSS_syntax/At-rule_functions	/en-US/docs/Web/CSS/Reference/At-rules/At-rule_functions
 /en-US/docs/Web/CSS/CSS_transform_functions	/en-US/docs/Web/CSS/Reference/Properties/transform
+/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions	/en-US/docs/Web/CSS/Reference/Values/Functions
 /en-US/docs/Web/CSS/CSS_values_serialization	/en-US/docs/Web/CSS
 /en-US/docs/Web/CSS/CSS_values_syntax	/en-US/docs/Web/CSS
 /en-US/docs/Web/CSS/Cascade	/en-US/docs/Web/CSS/CSS_cascade/Cascade

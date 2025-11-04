@@ -6,7 +6,7 @@ browser-compat: css.types.transform-function.translate
 sidebar: cssref
 ---
 
-The **`translate()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) repositions an element in the horizontal and/or vertical
+The **`translate()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) repositions an element in the horizontal and/or vertical
 directions. Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
 {{InteractiveExample("CSS Demo: translate()")}}

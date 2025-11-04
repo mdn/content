@@ -173,7 +173,7 @@ The CSS values and units module also introduces the [`<frequency>`](/en-US/docs/
 - [Component value combinators](/en-US/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax#component_value_combinators)
 - [CSS-wide keywords](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types#css-wide_keywords)
 - {{glossary("Device pixel")}}
-- [Functional notation](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)
+- [Functional notation](/en-US/docs/Web/CSS/Reference/Values/Functions)
 - {{glossary("Identifier")}}
 - {{glossary("Interpolation")}}
 - {{glossary("Keyword")}}
@@ -196,7 +196,7 @@ The CSS values and units module also introduces the [`<frequency>`](/en-US/docs/
 - [Textual data types](/en-US/docs/Web/CSS/CSS_values_and_units/Textual_data_types)
   - : Overview of the textual data types, including pre-defined keyword values, global CSS keyword values, and URLs.
 
-- [CSS value functions](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)
+- [CSS value functions](/en-US/docs/Web/CSS/Reference/Values/Functions)
   - : Overview of the CSS statements that invoke special data processing or calculations to return a CSS value for a CSS property.
 
 - [Using CSS math functions](/en-US/docs/Web/CSS/CSS_values_and_units/Using_CSS_math_functions)

@@ -10,7 +10,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`dynamic-range-limit-mix()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) creates a custom maximum luminance limit by mixing different {{cssxref("dynamic-range-limit")}} keywords in specified amounts.
+The **`dynamic-range-limit-mix()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) creates a custom maximum luminance limit by mixing different {{cssxref("dynamic-range-limit")}} keywords in specified amounts.
 
 ## Syntax
 

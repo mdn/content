@@ -6,7 +6,7 @@ browser-compat: css.types.filter-function.grayscale
 sidebar: cssref
 ---
 
-The **`grayscale()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) converts the input image to grayscale. Its result is a {{cssxref("&lt;filter-function&gt;")}}.
+The **`grayscale()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) converts the input image to grayscale. Its result is a {{cssxref("&lt;filter-function&gt;")}}.
 
 {{InteractiveExample("CSS Demo: grayscale()")}}
 

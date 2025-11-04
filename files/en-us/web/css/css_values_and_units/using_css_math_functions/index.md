@@ -20,7 +20,7 @@ In all of these cases, we need to rely on math to achieve the desired outcomes. 
 
 In many instances, including in the examples above, **we can instead utilize math functions built directly into CSS**. This solution is often simpler to implement and faster for the browser to execute than using JavaScript.
 
-In total, developers can use a combination of [nearly two dozen CSS math functions](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#math_functions) in their stylesheets. In this guide, we'll exemplify four of the more commonly-used, and introduce those more advanced.
+In total, developers can use a combination of [nearly two dozen CSS math functions](/en-US/docs/Web/CSS/Reference/Values/Functions#math_functions) in their stylesheets. In this guide, we'll exemplify four of the more commonly-used, and introduce those more advanced.
 
 ## `calc()`: Basic math operations
 
@@ -316,11 +316,11 @@ div > code {
 
 When laying out and styling DOM elements, the four basic math functions {{CSSxRef("calc", "calc()")}}, {{CSSxRef("min", "min()")}}, {{CSSxRef("max", "max()")}}, and {{CSSxRef("clamp", "clamp()")}} are often sufficient. However, for advanced uses like mathematics learning materials, 3D visualizations, or CSS animations, you may consider using:
 
-- [Stepped value functions](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#stepped_value_functions)
+- [Stepped value functions](/en-US/docs/Web/CSS/Reference/Values/Functions#stepped_value_functions)
   - {{CSSxRef("round", "round()")}}: calculates a **value given a rounding strategy**
   - {{CSSxRef("mod", "mod()")}}: calculates the **remainder** of a division operation with the **same sign as the divisor**
   - {{CSSxRef("rem", "rem()")}}: calculates the **remainder** of a division operation with the **same sign as the dividend**
-- [Trigonometric functions](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#trigonometric_functions)
+- [Trigonometric functions](/en-US/docs/Web/CSS/Reference/Values/Functions#trigonometric_functions)
   - {{CSSxRef("sin", "sin()")}}: calculates the **trigonometric sine** of a number
   - {{CSSxRef("cos", "cos()")}}: calculates the **trigonometric cosine** of a number
   - {{CSSxRef("tan", "tan()")}}: calculates the **trigonometric tangent** of a number
@@ -328,13 +328,13 @@ When laying out and styling DOM elements, the four basic math functions {{CSSxRe
   - {{CSSxRef("acos", "acos()")}}: calculates the **trigonometric inverse** cosine of a number
   - {{CSSxRef("atan", "atan()")}}: calculates the **trigonometric inverse** tangent of a number
   - {{CSSxRef("atan2", "atan2()")}}: calculates the **trigonometric inverse** tangent given two numbers
-- [Exponential functions](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#exponential_functions)
+- [Exponential functions](/en-US/docs/Web/CSS/Reference/Values/Functions#exponential_functions)
   - {{CSSxRef("pow", "pow()")}}: calculates a number **raised to the power** of another number
   - {{CSSxRef("sqrt", "sqrt()")}}: calculates the **square root** of a number
   - {{CSSxRef("hypot", "hypot()")}}: calculates the **square root of the sum of the squares** of the given numbers
   - {{CSSxRef("log", "log()")}}: calculates the **logarithm** of a number (with `e` as the default base)
   - {{CSSxRef("exp", "exp()")}}: calculates **`e` raised to the power** of another number
-- [Sign functions](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#sign-related_functions)
+- [Sign functions](/en-US/docs/Web/CSS/Reference/Values/Functions#sign-related_functions)
   - {{CSSxRef("abs", "abs()")}}: calculates the **absolute value** of a number
   - {{CSSxRef("sign", "sign()")}}: calculates the **sign (positive, negative, or zero)** of a number
 

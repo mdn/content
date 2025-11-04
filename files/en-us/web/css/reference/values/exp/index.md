@@ -6,7 +6,7 @@ browser-compat: css.types.exp
 sidebar: cssref
 ---
 
-The **`exp()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) is an exponential function that takes a number as an argument and returns the mathematical constant `e` raised to the power of the given number.
+The **`exp()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) is an exponential function that takes a number as an argument and returns the mathematical constant `e` raised to the power of the given number.
 
 The mathematical constant [`e`](<https://en.wikipedia.org/wiki/E_(mathematical_constant)>) is the base of natural logarithms, and is approximately `2.718281828459045`.
 

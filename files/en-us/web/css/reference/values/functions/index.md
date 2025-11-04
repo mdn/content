@@ -1,6 +1,6 @@
 ---
 title: CSS value functions
-slug: Web/CSS/CSS_values_and_units/CSS_value_functions
+slug: Web/CSS/Reference/Values/Functions
 page-type: guide
 sidebar: cssref
 ---

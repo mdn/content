@@ -53,7 +53,7 @@ sidebar:
     path: /Web/CSS
     tags: css-function
     depth: 2
-    link: /Web/CSS/CSS_values_and_units/CSS_value_functions
+    link: /Web/CSS/Reference/Values/Functions
     title: Functions
     details: closed
   - type: listSubPages

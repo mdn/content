@@ -9,7 +9,7 @@ browser-compat: css.types.progress
 
 {{CSSRef}}{{SeeCompatTable}}
 
-The **`progress()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) returns a {{cssxref("&lt;number>")}} value representing the position of one value (the progress value) relative to two other values (the progress start and end values).
+The **`progress()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) returns a {{cssxref("&lt;number>")}} value representing the position of one value (the progress value) relative to two other values (the progress start and end values).
 
 ## Syntax
 

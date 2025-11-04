@@ -6,7 +6,7 @@ browser-compat: css.types.pow
 sidebar: cssref
 ---
 
-The **`pow()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) is an exponential function that returns the value of a base raised to the power of a number.
+The **`pow()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) is an exponential function that returns the value of a base raised to the power of a number.
 
 The {{CSSxRef("exp")}} function is a special case of `pow()` where the value of the base is the mathematical constant [e](<https://en.wikipedia.org/wiki/E_(mathematical_constant)>).
 
