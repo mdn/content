@@ -1,56 +1,44 @@
 # Welcome to MDN Web Docs
 
-![github-profile](https://user-images.githubusercontent.com/10350960/166113119-629295f6-c282-42c9-9379-af2de5ad4338.png)
+![github-profile](https://user-images.githubusercontent.com/10350960/166113119-5a7f5a3d-7f7d-493f-bd1d-d18b2c09d582.png)
 
-[MDN Web Docs][] is an open-source, collaborative project that documents web technologies including CSS, HTML, JavaScript, and Web APIs.
-Alongside detailed reference documentation, we provide extensive learning resources for students and beginners getting started with web development.
+[MDN Web Docs](https://developer.mozilla.org) is an open-source, community-driven project that documents **web technologies** such as HTML, CSS, and JavaScript.  
+Alongside detailed reference documentation, MDN also provides extensive **learning resources** to help developers at all levels build for the open web.
 
-## MDN's mission
+---
 
-MDN's mission is to provide a blueprint for a better internet and empower a new generation of developers and content creators to build it.
+## 🌍 MDN’s Mission
 
-The strength of MDN Web Docs lies in its vast community of active readers and contributors.
-Since 2005, approximately 45,000 contributors have created the documentation we know and love.
-Together, contributors have created over 45,000 documents that make up an up-to-date, comprehensive, and free resource for web developers worldwide.
+Our mission is to provide a **blueprint for a better internet** — one that empowers a new generation of developers and creators.  
 
-In addition to English-language articles, over 35 volunteers lead translation and localization efforts for Chinese, French, Japanese, Korean, Portuguese, Russian, and Spanish.
+The strength of MDN Web Docs lies in its **global community** of active readers and contributors.  
+Since 2005, over **45,000 contributors** have created the documentation we rely on today, producing more than **45,000 up-to-date articles** covering web standards and best practices.
 
-## Build the site
+In addition to English-language articles, more than **35 volunteer-led teams** maintain localized versions of MDN Web Docs in multiple languages to make web knowledge accessible to everyone.
 
-To set up the site locally, you need to have [Node.js](https://nodejs.org/) and [Yarn](https://classic.yarnpkg.com/) installed.
-You can check if these are installed by running the following commands:
+---
 
-```bash
-node -v
-yarn -v
-```
+## 🛠️ Build the Site Locally
 
-After you have installed Node.js and Yarn, you can install the dependencies using `yarn` and start the local preview:
+To set up the site on your system, ensure you have [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.com/) installed.
 
-```bash
-yarn
-yarn start
-```
+You can contribute to MDN Web Docs and join our community through:
+- Content updates and translations  
+- Bug reports and issue discussions  
+- Documentation reviews and improvements  
 
-Once started, a live preview is available at `http://localhost:5042/`.
+The MDN Web Docs project welcomes contributions from **everyone** who shares our goal of keeping web documentation open, accurate, and accessible.
 
-## Contribute to MDN Web Docs
+For setup and contribution details, see our [CONTRIBUTING.md](CONTRIBUTING.md) guide.  
+By participating in and contributing to our projects and discussions, you agree to follow our community guidelines.
 
-You can contribute to MDN Web Docs and be a part of our community through content contributions, engineering, or translation work.
-The MDN Web Docs project welcomes contributions from everyone who shares our goals and wants to contribute constructively and respectfully within our community.
+---
 
-To find out how to get started, see the [CONTRIBUTING.md](CONTRIBUTING.md) document in this repository.
-By participating in and contributing to our projects and discussions, you acknowledge that you have read and agree to our [Code of Conduct](CODE_OF_CONDUCT.md), which means adhering to [Mozilla's Community Participation Guidelines](https://www.mozilla.org/en-US/about/governance/policies/participation/).
+## 💬 Get in Touch
 
-## Get in touch
+Join the MDN Web Docs team and community using our official [communication channels](https://developer.mozilla.org/en-US/docs/MDN/Community/Communication_channels).  
+Whether you’re reporting an issue, sharing feedback, or helping others learn — your participation makes MDN stronger.
 
-You can communicate with the MDN Web Docs team and community using the [communication channels][].
+---
 
-<!---
-Reference links syntax is used here because of linting markdown files ("fqdn-moz-links" rule).
-See https://github.com/mdn/content/pull/21432 and https://github.com/mdn/content/pull/38369.
-It can be replaced with the normal links syntax after successfully closing https://github.com/DavidAnson/markdownlint/issues/673.
--->
-
-[mdn web docs]: https://developer.mozilla.org
-[communication channels]: https://developer.mozilla.org/en-US/docs/MDN/Community/Communication_channels
+> _Thank you for helping make web knowledge open and free for everyone._ 🌐
