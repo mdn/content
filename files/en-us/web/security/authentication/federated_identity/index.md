@@ -192,7 +192,7 @@ Supporting these scenarios means implementing some communication mechanism betwe
 
 The OpenID specifications define two general approaches to implementing this coordination, which they call "front channel logout" and "back channel logout".
 
-In [front channel logout](https://openid.net/specs/openid-connect-frontchannel-1_0.html), the browser is used to mediate the communication, by embedding an {{htmlelement("iframe")}} in a page from the sender, whose content is loaded from the recipient. For example, if the user signs out at the IdP, the IdP may embed an `<iframe>` whose `src` attribute points to the RP's logout URL: when the `<iframe>` is rendered, the browser makes a {{httpmethod("GET")}} request to that URL, which the RP interprets as an instruction to sign the user out.
+In [front channel logout](https://openid.net/specs/openid-connect-frontchannel-1_0.html), the browser is used to mediate the communication. In this approach, the sender's page embeds an {{htmlelement("iframe")}} whose content is loaded from the recipient. For example, if the user signs out at the IdP, the IdP may embed an `<iframe>` whose `src` attribute points to the RP's logout URL: when the `<iframe>` is rendered, the browser makes a {{httpmethod("GET")}} request to that URL, which the RP interprets as an instruction to sign the user out.
 
 In [back channel logout](https://openid.net/specs/openid-connect-backchannel-1_0.html), the RP and the IdP communicate directly with each other, bypassing the browser. For example, when the IdP needs to tell the RP to sign the user out, the IdP makes a {{httpmethod("POST")}} request directly to the RP.
 
