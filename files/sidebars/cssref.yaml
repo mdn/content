@@ -260,6 +260,7 @@ sidebar:
     children:
       - /Web/CSS/CSS_syntax/Syntax
       - /Web/CSS/CSS_syntax/Comments
+      - /Web/CSS/CSS_syntax/At-rules
       - /Web/CSS/CSS_syntax/Error_handling
   - title: Text
     details: closed
