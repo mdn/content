@@ -40,7 +40,12 @@ In this section we'll start by walking through the main authentication flow defi
 
 This flow is defined in the [OpenID Connect Core](https://openid.net/specs/openid-connect-core-1_0.html) specification.
 
-As a prerequisite, the RP needs to be known to the IdP: the IdP needs to have an ID for the RP, which is called a client ID, and the RP must be able to authenticate itself to the IdP, for example using a shared secret called a client secret or using some other mechanism such as TLS client authentication.
+As a prerequisite, the RP needs to be known to the IdP:
+
+- The IdP needs to have an identifier for the RP, which is called a client ID
+- The RP must be able to authenticate itself to the IdP
+
+Authentication could use a shared secret called a client secret or some other mechanism such as TLS client authentication.
 
 > [!NOTE]
 > The OpenID specifications use the term "OpenID Provider" (OP) to refer to what we call an IdP in this guide.
@@ -73,7 +78,7 @@ In the token request:
 
 1. The RP makes a {{httpmethod("POST")}} request to the token endpoint. This request includes the following parameters:
    - `client_id`: Identifies this RP to the IdP.
-   - `client_secret`: The secret used to authenticate the RP to the token endpoint. The RP could use some alternative mechanism for client authentication, such as TLS client authentication.
+   - `client_secret`: The secret used to authenticate the RP to the IdP. The RP could use some alternative mechanism for client authentication, such as TLS client authentication.
    - `grant_type`: This should be `"authorization_code"`.
    - `code`: The authorization code.
    - `code_verifier`: This is the original secret that was used to produce the `code_challenge` parameter in the authentication request.
