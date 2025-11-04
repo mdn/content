@@ -49,7 +49,7 @@ As a prerequisite, the RP needs to be known to the IdP: the IdP needs to have an
 
 The first thing to note here is that the flow consists of two parts.
 
-- **Authentication request**: the RP asks the IdP to authenticate the user by making a request to the IdP's _authorization endpoint_. The IdP authenticates the user and returns an _authorization code_ to the RP. The code expires after a short period of time (recommended to be no more than 10 minutes).
+- **Authentication request**: the RP makes a request to the IdP's _authorization endpoint_, asking the IdP to authenticate the user. The IdP authenticates the user and returns an _authorization code_ to the RP, by redirecting the browser back to an endpoint in the RP and including the code as a URL parameter. The code expires after a short period of time (recommended to be no more than 10 minutes).
 - **Token request**: the RP sends the authorization code to a separate endpoint in the IdP, called the _token endpoint_, and this endpoint responds with an object containing two tokens:
   - An _access token_, which enables the user to access specific resources in the website (like an API key)
   - An _ID token_, which identifies the user, and enables the RP to sign the user in.
