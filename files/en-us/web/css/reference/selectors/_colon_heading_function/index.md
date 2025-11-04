@@ -35,7 +35,7 @@ The heading level used by `:heading()` may be different from an element's [type 
 
 ## Examples
 
-### Using heading function
+### Selecting specific heading levels
 
 In this example, a comma-separated list of values is used to target headings at odd-numbered levels (`<h1>` and `<h3>`) and even-numbered levels (`<h2>` and `<h4>`).
 
