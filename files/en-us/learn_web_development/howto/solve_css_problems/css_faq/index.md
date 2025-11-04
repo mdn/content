@@ -80,7 +80,7 @@ h1 {
 }
 ```
 
-This has changed with CSS 2; the keyword [initial](/en-US/docs/Web/CSS/initial) is now a valid value for a CSS property. It resets it to its default value, which is defined in the CSS specification of the given property.
+This has changed with CSS 2; the keyword [initial](/en-US/docs/Web/CSS/Reference/Values/initial) is now a valid value for a CSS property. It resets it to its default value, which is defined in the CSS specification of the given property.
 
 ```css
 /* Heading default color is black */

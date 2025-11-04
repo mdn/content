@@ -87,7 +87,7 @@ max-width: unset;
 - {{cssxref("min-content")}}
   - : The intrinsic minimum `max-width`.
 - {{cssxref("fit-content")}}
-  - : Use the available space, but not more than [max-content](/en-US/docs/Web/CSS/max-content), i.e., `min(max-content, max(min-content, stretch))`.
+  - : Use the available space, but not more than [max-content](/en-US/docs/Web/CSS/Reference/Values/max-content), i.e., `min(max-content, max(min-content, stretch))`.
 - [`fit-content(<length-percentage>)`](/en-US/docs/Web/CSS/fit-content_function)
   - : Uses the `fit-content` formula with the available space replaced by the specified argument, i.e., `min(max-content, max(min-content, argument))`.
 - `stretch`

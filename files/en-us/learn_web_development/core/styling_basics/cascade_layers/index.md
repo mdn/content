@@ -9,7 +9,7 @@ This lesson aims to introduce you to [cascade layers](/en-US/docs/Web/CSS/Refere
 
 If you are new to CSS, working through this lesson may seem less relevant immediately and a little more academic than some other parts of the course. However, knowing the basics of what cascade layers are should you encounter them in your projects is helpful. The more you work with CSS, understanding cascade layers and knowing how to leverage their power will save you from a lot of pain managing a code base with CSS from different parties, plugins, and development teams.
 
-Cascade layers are most relevant when you're working with CSS from multiple sources when there are conflicting CSS selectors and competing specificities, or when you're considering using [`!important`](/en-US/docs/Web/CSS/important).
+Cascade layers are most relevant when you're working with CSS from multiple sources when there are conflicting CSS selectors and competing specificities, or when you're considering using [`!important`](/en-US/docs/Web/CSS/Reference/Values/important).
 
 <table>
   <tbody>
@@ -41,7 +41,7 @@ To understand cascade layers, you must understand the CSS cascade well. The sect
 The 'C' in CSS stands for "Cascading". It is the method by which styles cascade together. The user agent runs through several clearly defined steps to determine the values assigned to every property for every element. We will briefly list these steps here and then dig deeper into step 4, **Cascade layers**, which is what you came here to learn:
 
 1. **Relevance:** Find all the declaration blocks with a selector match for each element.
-2. **Importance:** Sort rules based on whether they are normal or important. Important styles are those that have the [`!important`](/en-US/docs/Web/CSS/important) flag set.
+2. **Importance:** Sort rules based on whether they are normal or important. Important styles are those that have the [`!important`](/en-US/docs/Web/CSS/Reference/Values/important) flag set.
 3. **Origin:** Within each of the two importance buckets, sort rules by author, user, or user-agent origin.
 4. **Cascade layers:** Within each of the six origin importance buckets, sort by cascade layer. The layer order for normal declarations is from the first layer created to the last, followed by unlayered normal styles. This order is inverted for important styles, with unlayered important styles having the lowest precedence.
 5. **Specificity:** For competing styles in the origin layer with precedence, sort declarations by [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity).

@@ -1,6 +1,6 @@
 ---
 title: revert
-slug: Web/CSS/revert
+slug: Web/CSS/Reference/Values/revert
 page-type: css-keyword
 browser-compat: css.types.global_keywords.revert
 sidebar: cssref
@@ -14,7 +14,7 @@ This keyword removes from the cascade all of the styles that have been overridde
 - If used in a user's custom stylesheet, or if the style was applied by the user (the user origin), `revert` rolls back the cascaded value to the user agent's default style.
 - If used within the user agent's default styles, this keyword is functionally equivalent to {{cssxref("unset")}}.
 
-The `revert` keyword works exactly the same as [`unset`](/en-US/docs/Web/CSS/unset) in many cases. The only difference is for properties that have values set by the browser or by custom stylesheets created by users (set on the browser side).
+The `revert` keyword works exactly the same as [`unset`](/en-US/docs/Web/CSS/Reference/Values/unset) in many cases. The only difference is for properties that have values set by the browser or by custom stylesheets created by users (set on the browser side).
 
 Revert will not affect rules applied to children of an element you reset (but will remove effects of a parent rule on a child). So if you have a `color: green` for all sections and `all: revert` on a specific section, the color of the section will be black. But if you have a rule to make all paragraphs red, then all paragraphs will still be red in all sections.
 

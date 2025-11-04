@@ -1,6 +1,6 @@
 ---
 title: revert-layer
-slug: Web/CSS/revert-layer
+slug: Web/CSS/Reference/Values/revert-layer
 page-type: css-keyword
 browser-compat: css.types.global_keywords.revert-layer
 sidebar: cssref

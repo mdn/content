@@ -261,7 +261,7 @@
 /en-US/docs/CSS/-moz-hyphens	/en-US/docs/Web/CSS/Reference/Properties/hyphens
 /en-US/docs/CSS/-moz-image-rect	/en-US/docs/Web/CSS/-moz-image-rect
 /en-US/docs/CSS/-moz-image-region	/en-US/docs/Web/CSS/Reference/Properties/clip
-/en-US/docs/CSS/-moz-initial	/en-US/docs/Web/CSS/initial
+/en-US/docs/CSS/-moz-initial	/en-US/docs/Web/CSS/Reference/Values/initial
 /en-US/docs/CSS/-moz-linear-gradient	/en-US/docs/Web/CSS/gradient/linear-gradient
 /en-US/docs/CSS/-moz-margin-end	/en-US/docs/Web/CSS/Reference/Properties/margin-inline-end
 /en-US/docs/CSS/-moz-margin-start	/en-US/docs/Web/CSS/Reference/Properties/margin-inline-start
@@ -712,10 +712,10 @@
 /en-US/docs/CSS/image()	/en-US/docs/Web/CSS/image/image
 /en-US/docs/CSS/image-orientation	/en-US/docs/Web/CSS/Reference/Properties/image-orientation
 /en-US/docs/CSS/image-rendering	/en-US/docs/Web/CSS/Reference/Properties/image-rendering
-/en-US/docs/CSS/inherit	/en-US/docs/Web/CSS/inherit
+/en-US/docs/CSS/inherit	/en-US/docs/Web/CSS/Reference/Values/inherit
 /en-US/docs/CSS/inheritance	/en-US/docs/Web/CSS/CSS_cascade/Inheritance
 /en-US/docs/CSS/inherited_and_non-inherited_properties	/en-US/docs/Web/CSS/CSS_cascade/Inheritance
-/en-US/docs/CSS/initial	/en-US/docs/Web/CSS/initial
+/en-US/docs/CSS/initial	/en-US/docs/Web/CSS/Reference/Values/initial
 /en-US/docs/CSS/initial_value	/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value
 /en-US/docs/CSS/integer	/en-US/docs/Web/CSS/integer
 /en-US/docs/CSS/justify-content	/en-US/docs/Web/CSS/Reference/Properties/justify-content
@@ -1018,10 +1018,10 @@
 /en-US/docs/CSS:font-weight	/en-US/docs/Web/CSS/Reference/Properties/font-weight
 /en-US/docs/CSS:height	/en-US/docs/Web/CSS/Reference/Properties/height
 /en-US/docs/CSS:hidden	/en-US/docs/Web/CSS/Reference/Properties/visibility
-/en-US/docs/CSS:inherit	/en-US/docs/Web/CSS/inherit
+/en-US/docs/CSS:inherit	/en-US/docs/Web/CSS/Reference/Values/inherit
 /en-US/docs/CSS:inheritance	/en-US/docs/Web/CSS/CSS_cascade/Inheritance
 /en-US/docs/CSS:inherited_and_non-inherited_properties	/en-US/docs/Web/CSS/CSS_cascade/Inheritance
-/en-US/docs/CSS:initial	/en-US/docs/Web/CSS/initial
+/en-US/docs/CSS:initial	/en-US/docs/Web/CSS/Reference/Values/initial
 /en-US/docs/CSS:initial_value	/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value
 /en-US/docs/CSS:integer	/en-US/docs/Web/CSS/integer
 /en-US/docs/CSS:left	/en-US/docs/Web/CSS/Reference/Properties/left
@@ -11951,7 +11951,7 @@
 /en-US/docs/Web/CSS/-moz-hidden-unscrollable	/en-US/docs/Web/CSS/Reference/Properties/overflow
 /en-US/docs/Web/CSS/-moz-hyphens	/en-US/docs/Web/CSS/Reference/Properties/hyphens
 /en-US/docs/Web/CSS/-moz-image-region	/en-US/docs/Web/CSS/Reference/Properties/clip
-/en-US/docs/Web/CSS/-moz-initial	/en-US/docs/Web/CSS/initial
+/en-US/docs/Web/CSS/-moz-initial	/en-US/docs/Web/CSS/Reference/Values/initial
 /en-US/docs/Web/CSS/-moz-linear-gradient	/en-US/docs/Web/CSS/gradient/linear-gradient
 /en-US/docs/Web/CSS/-moz-margin-end	/en-US/docs/Web/CSS/Reference/Properties/margin-inline-end
 /en-US/docs/Web/CSS/-moz-margin-start	/en-US/docs/Web/CSS/Reference/Properties/margin-inline-start
@@ -12901,6 +12901,7 @@
 /en-US/docs/Web/CSS/filter-function/saturate()	/en-US/docs/Web/CSS/filter-function/saturate
 /en-US/docs/Web/CSS/filter-function/sepia()	/en-US/docs/Web/CSS/filter-function/sepia
 /en-US/docs/Web/CSS/filter-function/url	/en-US/docs/Web/CSS/url_value
+/en-US/docs/Web/CSS/fit-content	/en-US/docs/Web/CSS/Reference/Values/fit-content
 /en-US/docs/Web/CSS/fit-content()	/en-US/docs/Web/CSS/fit-content_function
 /en-US/docs/Web/CSS/flex	/en-US/docs/Web/CSS/Reference/Properties/flex
 /en-US/docs/Web/CSS/flex-align	/en-US/docs/Web/CSS/Reference/Properties/align-items
@@ -12988,7 +12989,10 @@
 /en-US/docs/Web/CSS/image/image-set()	/en-US/docs/Web/CSS/image/image-set
 /en-US/docs/Web/CSS/image/paint()	/en-US/docs/Web/CSS/image/paint
 /en-US/docs/Web/CSS/imagefunction	/en-US/docs/Web/CSS/image/image
+/en-US/docs/Web/CSS/important	/en-US/docs/Web/CSS/Reference/Values/important
+/en-US/docs/Web/CSS/inherit	/en-US/docs/Web/CSS/Reference/Values/inherit
 /en-US/docs/Web/CSS/inherited_and_non-inherited_properties	/en-US/docs/Web/CSS/CSS_cascade/Inheritance
+/en-US/docs/Web/CSS/initial	/en-US/docs/Web/CSS/Reference/Values/initial
 /en-US/docs/Web/CSS/initial-letter	/en-US/docs/Web/CSS/Reference/Properties/initial-letter
 /en-US/docs/Web/CSS/initial_value	/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value
 /en-US/docs/Web/CSS/inline-size	/en-US/docs/Web/CSS/Reference/Properties/inline-size
@@ -13063,6 +13067,7 @@
 /en-US/docs/Web/CSS/math-style	/en-US/docs/Web/CSS/Reference/Properties/math-style
 /en-US/docs/Web/CSS/max()	/en-US/docs/Web/CSS/max
 /en-US/docs/Web/CSS/max-block-size	/en-US/docs/Web/CSS/Reference/Properties/max-block-size
+/en-US/docs/Web/CSS/max-content	/en-US/docs/Web/CSS/Reference/Values/max-content
 /en-US/docs/Web/CSS/max-height	/en-US/docs/Web/CSS/Reference/Properties/max-height
 /en-US/docs/Web/CSS/max-inline-size	/en-US/docs/Web/CSS/Reference/Properties/max-inline-size
 /en-US/docs/Web/CSS/max-width	/en-US/docs/Web/CSS/Reference/Properties/max-width
@@ -13073,6 +13078,7 @@
 /en-US/docs/Web/CSS/media/visual	/en-US/docs/Web/CSS/Reference/At-rules/@media
 /en-US/docs/Web/CSS/min()	/en-US/docs/Web/CSS/min
 /en-US/docs/Web/CSS/min-block-size	/en-US/docs/Web/CSS/Reference/Properties/min-block-size
+/en-US/docs/Web/CSS/min-content	/en-US/docs/Web/CSS/Reference/Values/min-content
 /en-US/docs/Web/CSS/min-height	/en-US/docs/Web/CSS/Reference/Properties/min-height
 /en-US/docs/Web/CSS/min-inline-size	/en-US/docs/Web/CSS/Reference/Properties/min-inline-size
 /en-US/docs/Web/CSS/min-width	/en-US/docs/Web/CSS/Reference/Properties/min-width
@@ -13177,6 +13183,8 @@
 /en-US/docs/Web/CSS/repeating-radial-gradient()	/en-US/docs/Web/CSS/gradient/repeating-radial-gradient
 /en-US/docs/Web/CSS/resize	/en-US/docs/Web/CSS/Reference/Properties/resize
 /en-US/docs/Web/CSS/resolved_value	/en-US/docs/Web/CSS/CSS_cascade/Value_processing#resolved_value
+/en-US/docs/Web/CSS/revert	/en-US/docs/Web/CSS/Reference/Values/revert
+/en-US/docs/Web/CSS/revert-layer	/en-US/docs/Web/CSS/Reference/Values/revert-layer
 /en-US/docs/Web/CSS/rgb	/en-US/docs/Web/CSS/color_value/rgb
 /en-US/docs/Web/CSS/right	/en-US/docs/Web/CSS/Reference/Properties/right
 /en-US/docs/Web/CSS/rotate	/en-US/docs/Web/CSS/Reference/Properties/rotate
@@ -13323,6 +13331,7 @@
 /en-US/docs/Web/CSS/translate	/en-US/docs/Web/CSS/Reference/Properties/translate
 /en-US/docs/Web/CSS/unicode-bidi	/en-US/docs/Web/CSS/Reference/Properties/unicode-bidi
 /en-US/docs/Web/CSS/unicode-range	/en-US/docs/Web/CSS/Reference/At-rules/@font-face/unicode-range
+/en-US/docs/Web/CSS/unset	/en-US/docs/Web/CSS/Reference/Values/unset
 /en-US/docs/Web/CSS/uri	/en-US/docs/Web/CSS/url_value
 /en-US/docs/Web/CSS/url	/en-US/docs/Web/CSS/url_value
 /en-US/docs/Web/CSS/url()	/en-US/docs/Web/CSS/url_function

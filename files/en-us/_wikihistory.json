@@ -88124,6 +88124,130 @@
       "BijuGC"
     ]
   },
+  "Web/CSS/Reference/Values/fit-content": {
+    "modified": "2020-11-10T06:14:23.564Z",
+    "contributors": [
+      "rachelandrew",
+      "chrisdavidmills",
+      "ramiy",
+      "wbamberg",
+      "mfuji09",
+      "vinyldarkscratch",
+      "Sheppy",
+      "Konrud",
+      "sushant-j",
+      "fscholz",
+      "mfluehr",
+      "meyerweb",
+      "Sebastianz"
+    ]
+  },
+  "Web/CSS/Reference/Values/inherit": {
+    "modified": "2020-10-15T21:05:21.625Z",
+    "contributors": [
+      "wbamberg",
+      "mfuji09",
+      "Sheppy",
+      "fscholz",
+      "mfluehr",
+      "cvrebert",
+      "tregagnon",
+      "Sebastianz",
+      "teoli",
+      "kscarfone",
+      "Delapouite",
+      "trevorh",
+      "shitface",
+      "nicholascamp",
+      "brianloveswords",
+      "Abid",
+      "Jürgen Jeka",
+      "Mgjbot",
+      "Fredchat",
+      "DBaron"
+    ]
+  },
+  "Web/CSS/Reference/Values/initial": {
+    "modified": "2020-10-15T21:07:54.355Z",
+    "contributors": [
+      "wbamberg",
+      "mfuji09",
+      "gerfolder",
+      "brianmcoates",
+      "wis",
+      "engelfrost",
+      "Sheppy",
+      "fscholz",
+      "mfluehr",
+      "SphinxKnight",
+      "anchengjian",
+      "malyw",
+      "cvrebert",
+      "Sebastianz",
+      "u_7cc",
+      "teoli",
+      "kscarfone",
+      "ethertank",
+      "kohei.yoshino",
+      "meelash",
+      "brianloveswords",
+      "Jürgen Jeka",
+      "Mgjbot",
+      "DBaron",
+      "Kyodev",
+      "Fredchat"
+    ]
+  },
+  "Web/CSS/Reference/Values/max-content": {
+    "modified": "2020-11-05T09:28:34.298Z",
+    "contributors": ["chrisdavidmills", "rachelandrew"]
+  },
+  "Web/CSS/Reference/Values/min-content": {
+    "modified": "2020-11-05T09:23:39.222Z",
+    "contributors": ["chrisdavidmills", "rachelandrew"]
+  },
+  "Web/CSS/Reference/Values/revert": {
+    "modified": "2020-12-01T01:19:10.242Z",
+    "contributors": [
+      "runn1ng",
+      "phanos",
+      "xinnhui",
+      "elias6",
+      "Nux",
+      "chrisdavidmills",
+      "bgs99",
+      "Sheppy",
+      "fscholz",
+      "HTMLValidator",
+      "mfluehr",
+      "ebidel",
+      "teoli",
+      "cvrebert",
+      "yisibl",
+      "Sebastianz"
+    ]
+  },
+  "Web/CSS/Reference/Values/unset": {
+    "modified": "2020-10-15T21:25:43.482Z",
+    "contributors": [
+      "mfuji09",
+      "wbamberg",
+      "OtterOne",
+      "olehhusiev",
+      "Sheppy",
+      "fscholz",
+      "mfluehr",
+      "xfq",
+      "jrencz",
+      "Krinkle",
+      "RedLucas",
+      "cvrebert",
+      "f0086",
+      "Sebastianz",
+      "myakura",
+      "teoli"
+    ]
+  },
   "Web/CSS/Reference/Webkit_extensions": {
     "modified": "2020-10-05T04:22:03.202Z",
     "contributors": [
@@ -88785,24 +88909,6 @@
       "mfluehr"
     ]
   },
-  "Web/CSS/fit-content": {
-    "modified": "2020-11-10T06:14:23.564Z",
-    "contributors": [
-      "rachelandrew",
-      "chrisdavidmills",
-      "ramiy",
-      "wbamberg",
-      "mfuji09",
-      "vinyldarkscratch",
-      "Sheppy",
-      "Konrud",
-      "sushant-j",
-      "fscholz",
-      "mfluehr",
-      "meyerweb",
-      "Sebastianz"
-    ]
-  },
   "Web/CSS/fit-content_function": {
     "modified": "2020-11-27T16:21:05.359Z",
     "contributors": ["rachelandrew", "chrisdavidmills", "escattone"]
@@ -89152,62 +89258,6 @@
       "estelle"
     ]
   },
-  "Web/CSS/inherit": {
-    "modified": "2020-10-15T21:05:21.625Z",
-    "contributors": [
-      "wbamberg",
-      "mfuji09",
-      "Sheppy",
-      "fscholz",
-      "mfluehr",
-      "cvrebert",
-      "tregagnon",
-      "Sebastianz",
-      "teoli",
-      "kscarfone",
-      "Delapouite",
-      "trevorh",
-      "shitface",
-      "nicholascamp",
-      "brianloveswords",
-      "Abid",
-      "Jürgen Jeka",
-      "Mgjbot",
-      "Fredchat",
-      "DBaron"
-    ]
-  },
-  "Web/CSS/initial": {
-    "modified": "2020-10-15T21:07:54.355Z",
-    "contributors": [
-      "wbamberg",
-      "mfuji09",
-      "gerfolder",
-      "brianmcoates",
-      "wis",
-      "engelfrost",
-      "Sheppy",
-      "fscholz",
-      "mfluehr",
-      "SphinxKnight",
-      "anchengjian",
-      "malyw",
-      "cvrebert",
-      "Sebastianz",
-      "u_7cc",
-      "teoli",
-      "kscarfone",
-      "ethertank",
-      "kohei.yoshino",
-      "meelash",
-      "brianloveswords",
-      "Jürgen Jeka",
-      "Mgjbot",
-      "DBaron",
-      "Kyodev",
-      "Fredchat"
-    ]
-  },
   "Web/CSS/integer": {
     "modified": "2020-10-15T21:03:55.646Z",
     "contributors": [
@@ -89318,10 +89368,6 @@
       "estelle"
     ]
   },
-  "Web/CSS/max-content": {
-    "modified": "2020-11-05T09:28:34.298Z",
-    "contributors": ["chrisdavidmills", "rachelandrew"]
-  },
   "Web/CSS/min": {
     "modified": "2020-11-16T09:03:39.420Z",
     "contributors": [
@@ -89337,10 +89383,6 @@
       "ExE-Boss",
       "estelle"
     ]
-  },
-  "Web/CSS/min-content": {
-    "modified": "2020-11-05T09:23:39.222Z",
-    "contributors": ["chrisdavidmills", "rachelandrew"]
   },
   "Web/CSS/minmax": {
     "modified": "2020-11-16T09:05:16.242Z",
@@ -89493,27 +89535,6 @@
       "mnoorenberghe",
       "Marsf",
       "Jürgen Jeka"
-    ]
-  },
-  "Web/CSS/revert": {
-    "modified": "2020-12-01T01:19:10.242Z",
-    "contributors": [
-      "runn1ng",
-      "phanos",
-      "xinnhui",
-      "elias6",
-      "Nux",
-      "chrisdavidmills",
-      "bgs99",
-      "Sheppy",
-      "fscholz",
-      "HTMLValidator",
-      "mfluehr",
-      "ebidel",
-      "teoli",
-      "cvrebert",
-      "yisibl",
-      "Sebastianz"
     ]
   },
   "Web/CSS/shape": {
@@ -89980,27 +90001,6 @@
       "Sebastianz",
       "mrstork",
       "SphinxKnight"
-    ]
-  },
-  "Web/CSS/unset": {
-    "modified": "2020-10-15T21:25:43.482Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg",
-      "OtterOne",
-      "olehhusiev",
-      "Sheppy",
-      "fscholz",
-      "mfluehr",
-      "xfq",
-      "jrencz",
-      "Krinkle",
-      "RedLucas",
-      "cvrebert",
-      "f0086",
-      "Sebastianz",
-      "myakura",
-      "teoli"
     ]
   },
   "Web/CSS/url_value": {

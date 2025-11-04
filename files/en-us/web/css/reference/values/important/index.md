@@ -1,6 +1,6 @@
 ---
 title: "!important"
-slug: Web/CSS/important
+slug: Web/CSS/Reference/Values/important
 page-type: css-keyword
 sidebar: cssref
 ---

@@ -1,6 +1,6 @@
 ---
 title: fit-content
-slug: Web/CSS/fit-content
+slug: Web/CSS/Reference/Values/fit-content
 page-type: css-keyword
 browser-compat: css.properties.width.fit-content
 sidebar: cssref

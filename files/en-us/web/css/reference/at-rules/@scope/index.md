@@ -269,7 +269,7 @@ To fix this, you can use `@scope` as follows:
 Now the innermost paragraph is correctly colored black. This is because it is only one DOM tree hierarchy level away from the `.light-theme` scope root, but two levels away from the `.dark-theme` scope root. Therefore, the light style wins.
 
 > [!NOTE]
-> Scoping proximity overrules source order but is itself overridden by other, higher-priority criteria such as [importance](/en-US/docs/Web/CSS/important), [layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers), and [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity).
+> Scoping proximity overrules source order but is itself overridden by other, higher-priority criteria such as [importance](/en-US/docs/Web/CSS/Reference/Values/important), [layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers), and [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity).
 
 ## Formal syntax
 

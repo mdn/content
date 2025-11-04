@@ -77,7 +77,7 @@ This involves:
 
 As a result of defaulting, every property is guaranteed to have a [specified value](#specified_value).
 
-Note that explicit defaulting keywords ([`initial`](/en-US/docs/Web/CSS/initial), [`inherit`](/en-US/docs/Web/CSS/inherit), [`unset`](/en-US/docs/Web/CSS/unset), [`revert`](/en-US/docs/Web/CSS/revert), [`revert-layer`](/en-US/docs/Web/CSS/revert-layer)) are also resolved to their corresponding values to determine the [specified value](#specified_value).
+Note that explicit defaulting keywords ([`initial`](/en-US/docs/Web/CSS/Reference/Values/initial), [`inherit`](/en-US/docs/Web/CSS/Reference/Values/inherit), [`unset`](/en-US/docs/Web/CSS/Reference/Values/unset), [`revert`](/en-US/docs/Web/CSS/Reference/Values/revert), [`revert-layer`](/en-US/docs/Web/CSS/Reference/Values/revert-layer)) are also resolved to their corresponding values to determine the [specified value](#specified_value).
 
 ## Processing stages
 
@@ -282,6 +282,6 @@ CSS 2.0 defined _computed value_ as the last step in a property's calculation. C
 
 ## See also
 
-- CSS values for controlling inheritance: [`inherit`](/en-US/docs/Web/CSS/inherit), [`initial`](/en-US/docs/Web/CSS/initial), [`revert`](/en-US/docs/Web/CSS/revert), [`revert-layer`](/en-US/docs/Web/CSS/revert-layer), and [`unset`](/en-US/docs/Web/CSS/unset)
+- CSS values for controlling inheritance: [`inherit`](/en-US/docs/Web/CSS/Reference/Values/inherit), [`initial`](/en-US/docs/Web/CSS/Reference/Values/initial), [`revert`](/en-US/docs/Web/CSS/Reference/Values/revert), [`revert-layer`](/en-US/docs/Web/CSS/Reference/Values/revert-layer), and [`unset`](/en-US/docs/Web/CSS/Reference/Values/unset)
 - [CSS cascading and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module
 - [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax) module
