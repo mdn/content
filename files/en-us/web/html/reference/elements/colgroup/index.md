@@ -113,7 +113,7 @@ The following attributes are deprecated and should not be used. They are documen
     > [!NOTE]
     > Setting `vertical-align` on the `<colgroup>` element has no effect as {{HTMLElement("td")}} and {{HTMLElement("th")}} elements are not descendants of the `<colgroup>` element, and therefore they do not inherit from it.
     >
-    > If the table does not use a [`colspan`](/en-US/docs/Web/HTML/Reference/Elements/td#colspan) attribute, use the [`td:nth-of-type()`](/en-US/docs/Web/CSS/:nth-of-type) CSS selector per column, e.g., `td:nth-of-type(2) { vertical-align: middle; }` to center the second column cells vertically.
+    > If the table does not use a [`colspan`](/en-US/docs/Web/HTML/Reference/Elements/td#colspan) attribute, use the [`td:nth-of-type()`](/en-US/docs/Web/CSS/Reference/Selectors/:nth-of-type) CSS selector per column, e.g., `td:nth-of-type(2) { vertical-align: middle; }` to center the second column cells vertically.
     >
     > If the table does use a [`colspan`](/en-US/docs/Web/HTML/Reference/Elements/td#colspan) attribute, the effect can be achieved by combining adequate CSS attribute selectors like `[colspan=n]`, though this is not trivial.
 

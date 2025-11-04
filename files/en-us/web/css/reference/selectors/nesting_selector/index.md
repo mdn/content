@@ -11,7 +11,7 @@ The CSS **`&` nesting selector** explicitly states the relationship between pare
 > [!NOTE]
 > _Child rule_ does not mean _child element selector_. A child rule can target parent element or child elements depending on use of the `&` nesting selector.
 
-If not used in nested style rule, the `&` nesting selector represents the [scoping root](/en-US/docs/Web/CSS/:scope).
+If not used in nested style rule, the `&` nesting selector represents the [scoping root](/en-US/docs/Web/CSS/Reference/Selectors/:scope).
 
 ## Syntax
 
@@ -237,7 +237,7 @@ This example uses nested CSS styling.
 
 ### Using `&` outside nested rule
 
-If not used in nested style rule, the `&` nesting selector represents the [scoping root](/en-US/docs/Web/CSS/:scope).
+If not used in nested style rule, the `&` nesting selector represents the [scoping root](/en-US/docs/Web/CSS/Reference/Selectors/:scope).
 
 ```html
 <p>Hover over the output box to change document's background color.</p>

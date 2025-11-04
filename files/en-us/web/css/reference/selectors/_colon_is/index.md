@@ -69,7 +69,7 @@ The `:is()` pseudo-class requires a [selector list](/en-US/docs/Web/CSS/CSS_sele
 
 ### Difference between :is() and :where()
 
-The difference between the two is that `:is()` counts towards the specificity of the overall selector (it takes the specificity of its most specific argument), whereas [`:where()`](/en-US/docs/Web/CSS/:where) has a specificity value of 0. This is demonstrated by the [example on the `:where()` reference page](/en-US/docs/Web/CSS/:where#examples).
+The difference between the two is that `:is()` counts towards the specificity of the overall selector (it takes the specificity of its most specific argument), whereas [`:where()`](/en-US/docs/Web/CSS/Reference/Selectors/:where) has a specificity value of 0. This is demonstrated by the [example on the `:where()` reference page](/en-US/docs/Web/CSS/Reference/Selectors/:where#examples).
 
 ### Forgiving Selector Parsing
 

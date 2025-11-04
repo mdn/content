@@ -39,7 +39,7 @@ _No changes._
 
 ### CSS
 
-- CSS Shadow Parts are now enabled. This includes the [`part` attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/part) and [`::part` pseudo-element](/en-US/docs/Web/CSS/::part), which allow shadow hosts to selectively expose chosen elements from their shadow tree to the outside page for styling purposes ([Firefox bug 1559074](https://bugzil.la/1559074)).
+- CSS Shadow Parts are now enabled. This includes the [`part` attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/part) and [`::part` pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/::part), which allow shadow hosts to selectively expose chosen elements from their shadow tree to the outside page for styling purposes ([Firefox bug 1559074](https://bugzil.la/1559074)).
 - [CSS Motion Path](/en-US/docs/Web/CSS/CSS_motion_path) has been shipped ([Firefox bug 1582554](https://bugzil.la/1582554), also see the [Intent to Ship](https://groups.google.com/forum/#!topic/mozilla.dev.platform/nOOIRsuxvuc)). This includes:
   - {{cssxref("offset")}}
   - {{cssxref("offset-path")}}

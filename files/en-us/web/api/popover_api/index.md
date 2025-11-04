@@ -104,5 +104,5 @@ See our [Popover API examples landing page](https://mdn.github.io/dom-examples/p
 - [`popover`](/en-US/docs/Web/HTML/Reference/Global_attributes/popover) HTML global attribute
 - [`popovertarget`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertarget) HTML attribute
 - [`popovertargetaction`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertargetaction) HTML attribute
-- [`::backdrop`](/en-US/docs/Web/CSS/::backdrop) CSS pseudo-element
-- [`:popover-open`](/en-US/docs/Web/CSS/:popover-open) CSS pseudo-class
+- [`::backdrop`](/en-US/docs/Web/CSS/Reference/Selectors/::backdrop) CSS pseudo-element
+- [`:popover-open`](/en-US/docs/Web/CSS/Reference/Selectors/:popover-open) CSS pseudo-class

@@ -50,6 +50,6 @@ Not part of any standard. Apple has [a description in the Safari Web Content Gui
 
 - [WebKit CSS extensions](/en-US/docs/Web/CSS/Reference/Webkit_extensions)
 - Related CSS pseudo-classes:
-  - [`:hover`](/en-US/docs/Web/CSS/:hover)
-  - [`:active`](/en-US/docs/Web/CSS/:active)
-  - [`:visited`](/en-US/docs/Web/CSS/:visited)
+  - [`:hover`](/en-US/docs/Web/CSS/Reference/Selectors/:hover)
+  - [`:active`](/en-US/docs/Web/CSS/Reference/Selectors/:active)
+  - [`:visited`](/en-US/docs/Web/CSS/Reference/Selectors/:visited)

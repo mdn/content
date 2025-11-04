@@ -65,7 +65,7 @@ showNumber.addEventListener("click", () => {
 Examples of elements that will prevent user interaction with the rest of the page and will be selected by the `:modal` pseudo-class include:
 
 - The [`dialog`](/en-US/docs/Web/HTML/Reference/Elements/dialog) element opened with the `showModal()` API.
-- The element selected by the [`:fullscreen`](/en-US/docs/Web/CSS/:fullscreen) pseudo-class when opened with the `requestFullscreen()` API.
+- The element selected by the [`:fullscreen`](/en-US/docs/Web/CSS/Reference/Selectors/:fullscreen) pseudo-class when opened with the `requestFullscreen()` API.
 
 ## Examples
 

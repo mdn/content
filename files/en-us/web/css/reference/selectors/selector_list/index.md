@@ -131,7 +131,7 @@ h2:has(+ p, + ul.red) {
 }
 ```
 
-In the above example, the italic style will be applied to any `h2` heading that is immediately followed by `<p>` or `<ul class="red">`. Note that pseudo-elements and the `:has()` selector are not valid within the [`:has()`](/en-US/docs/Web/CSS/:has) relative selector list.
+In the above example, the italic style will be applied to any `h2` heading that is immediately followed by `<p>` or `<ul class="red">`. Note that pseudo-elements and the `:has()` selector are not valid within the [`:has()`](/en-US/docs/Web/CSS/Reference/Selectors/:has) relative selector list.
 
 ## Specifications
 
@@ -143,8 +143,8 @@ In the above example, the italic style will be applied to any `h2` heading that 
 
 ## See also
 
-- The [`:is()`](/en-US/docs/Web/CSS/:is) and [`:where()`](/en-US/docs/Web/CSS/:where) pseudo-classes accept forgiving selector lists.
-- The [`:not()`](/en-US/docs/Web/CSS/:not) pseudo-class accepts a regular selector list
-- The [`:has()`](/en-US/docs/Web/CSS/:has) pseudo-class accepts a relative selector list.
+- The [`:is()`](/en-US/docs/Web/CSS/Reference/Selectors/:is) and [`:where()`](/en-US/docs/Web/CSS/Reference/Selectors/:where) pseudo-classes accept forgiving selector lists.
+- The [`:not()`](/en-US/docs/Web/CSS/Reference/Selectors/:not) pseudo-class accepts a regular selector list
+- The [`:has()`](/en-US/docs/Web/CSS/Reference/Selectors/:has) pseudo-class accepts a relative selector list.
 - [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module
 - [Selectors and combinators](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators)
