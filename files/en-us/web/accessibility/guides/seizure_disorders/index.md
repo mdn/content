@@ -563,7 +563,7 @@ The requirement for the `literal` property is taken from [WAI-Adapt: Help and Su
 - [Basic Animations](/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations) (Canvas Tutorial)
 - [Canvas API](/en-US/docs/Web/API/Canvas_API)
 - [CanvasRenderingContext2D.drawImage()](/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage)
-- [\<color>](/en-US/docs/Web/CSS/color_value)
+- [\<color>](/en-US/docs/Web/CSS/Reference/Values/color_value)
 - [Document Object Model](/en-US/docs/Web/API/Document_Object_Model)
 - [MediaQueryList](/en-US/docs/Web/API/MediaQueryList)
 - [Using dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)

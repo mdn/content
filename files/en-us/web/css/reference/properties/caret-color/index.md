@@ -62,7 +62,7 @@ caret-color: unset;
 ### Values
 
 - `auto`
-  - : Generally resolves to [`currentColor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword), the {{cssxref("color")}} of the text that will be modified.
+  - : Generally resolves to [`currentColor`](/en-US/docs/Web/CSS/Reference/Values/color_value#currentcolor_keyword), the {{cssxref("color")}} of the text that will be modified.
 
 - {{cssxref("&lt;color&gt;")}}
   - : The color of the caret.

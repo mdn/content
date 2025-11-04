@@ -128,7 +128,7 @@ width: calc(
 
 It is possible to use `progress()` functions to calculate individual values inside other functions and component values inside shorthand property values, provided your functions return valid types for those values.
 
-This can result in some complex expressions. For example, here we are calculating the first two channels of an [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) color proportionate to the same width proportion as before:
+This can result in some complex expressions. For example, here we are calculating the first two channels of an [`rgb()`](/en-US/docs/Web/CSS/Reference/Values/color_value/rgb) color proportionate to the same width proportion as before:
 
 ```css
 background-color: rgb(

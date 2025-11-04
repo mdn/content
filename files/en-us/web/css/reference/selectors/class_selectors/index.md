@@ -42,7 +42,7 @@ Note that this is equivalent to the following [attribute selector](/en-US/docs/W
 }
 ```
 
-The `class_name` value must be a valid [CSS identifier](/en-US/docs/Web/CSS/ident). HTML `class` attributes which are not valid CSS identifiers must be [escaped](/en-US/docs/Web/CSS/ident#escaping_characters) before they can be used in class selectors.
+The `class_name` value must be a valid [CSS identifier](/en-US/docs/Web/CSS/Reference/Values/ident). HTML `class` attributes which are not valid CSS identifiers must be [escaped](/en-US/docs/Web/CSS/Reference/Values/ident#escaping_characters) before they can be used in class selectors.
 
 ## Examples
 

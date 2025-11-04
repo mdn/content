@@ -5,7 +5,7 @@ page-type: glossary-definition
 sidebar: glossarysidebar
 ---
 
-**Color spaces** are named organizations of colors for underlying color models of coordinate-based color arrangements. A color model defines how the components of a color (for example, the `h`, `w`, and `b` channels of an [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb) color) relate to a color space. Most color spaces are three- or four- dimensional grids that represent colors. Each dimension (or axis) corresponds to a different channel. Colors can be expressed in multiple color spaces, and can be transformed from one color space to another, while still looking the same.
+**Color spaces** are named organizations of colors for underlying color models of coordinate-based color arrangements. A color model defines how the components of a color (for example, the `h`, `w`, and `b` channels of an [`hwb()`](/en-US/docs/Web/CSS/Reference/Values/color_value/hwb) color) relate to a color space. Most color spaces are three- or four- dimensional grids that represent colors. Each dimension (or axis) corresponds to a different channel. Colors can be expressed in multiple color spaces, and can be transformed from one color space to another, while still looking the same.
 
 Color spaces categorize and define specific ranges of colors. Each color space is defined by a mathematical model and associated rule set. Each color space has a defined {{glossary("Gamut", "gamut")}}, which refers to the specific range of colors it can represent. These rules enable consistent and reproducible color representation across different devices and software.
 
@@ -21,13 +21,13 @@ Color spaces are either [rectangular or polar](https://ericportis.com/posts/2024
 
 RGB is a color model that represents colors as mixtures of three underlying components — red, green, and blue color channels — that create various hues when combined. sRGB, or "Standard RGB", is the underlying color space for {{Glossary("RGB")}} colors. sRGB is intended to codify the display specification of PC and the {{glossary("world wide web", "Web")}} based imaging systems. It is now usually the assumed color space for those without tagged or without an embedded color profile.
 
-There are several RGB color spaces, like the _Adobe RGB_ color space, that can represent a wider {{glossary("gamut")}} of color than the _sRGB_ color space. The coordinates in _sRGB_ and _Adobe RGB_ (`a98-rgb`) are different. There are many ways to describe the RGB components of a color. In {{Glossary("CSS")}} they can be represented as a single 24-bit integer in hexadecimal notation (for example, `#add8e6` is light blue), or in [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) functional notation as three separate numbers between 0 and 255 (for example, `rgb(46 139.5 87)`).
+There are several RGB color spaces, like the _Adobe RGB_ color space, that can represent a wider {{glossary("gamut")}} of color than the _sRGB_ color space. The coordinates in _sRGB_ and _Adobe RGB_ (`a98-rgb`) are different. There are many ways to describe the RGB components of a color. In {{Glossary("CSS")}} they can be represented as a single 24-bit integer in hexadecimal notation (for example, `#add8e6` is light blue), or in [`rgb()`](/en-US/docs/Web/CSS/Reference/Values/color_value/rgb) functional notation as three separate numbers between 0 and 255 (for example, `rgb(46 139.5 87)`).
 
-CSS `<color>` values in the sRGB color spaces include {{cssxref("hex-color")}}, {{cssxref("named-color")}}, {{cssxref("color_value/rgb", "rgb()")}}, {{cssxref("color_value/hsl", "hsl()")}} (hue, saturation, lightness), and {{cssxref("color_value/hwb", "hwb()")}} (hue, whiteness, blackness). There are also the `srgb`, `srgb-linear`, `a98-rgb`, and `prophoto-rgb` color spaces for the [`color()`](/en-US/docs/Web/CSS/color_value/color) function.
+CSS `<color>` values in the sRGB color spaces include {{cssxref("hex-color")}}, {{cssxref("named-color")}}, {{cssxref("color_value/rgb", "rgb()")}}, {{cssxref("color_value/hsl", "hsl()")}} (hue, saturation, lightness), and {{cssxref("color_value/hwb", "hwb()")}} (hue, whiteness, blackness). There are also the `srgb`, `srgb-linear`, `a98-rgb`, and `prophoto-rgb` color spaces for the [`color()`](/en-US/docs/Web/CSS/Reference/Values/color_value/color) function.
 
-The HSV (hue, saturation, and value) color space, and its synonym HSB (hue, saturation, and brightness), are represented in CSS as [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb). Named colors are simply keywords mapped to specific hex values. Converting these various color notations to sRGB is straightforward mathematically. Note that {{cssxref("&lt;color&gt;","currentColor","#currentcolor_keyword")}} can be any color — it is not restricted to sRGB.
+The HSV (hue, saturation, and value) color space, and its synonym HSB (hue, saturation, and brightness), are represented in CSS as [`hwb()`](/en-US/docs/Web/CSS/Reference/Values/color_value/hwb). Named colors are simply keywords mapped to specific hex values. Converting these various color notations to sRGB is straightforward mathematically. Note that {{cssxref("&lt;color&gt;","currentColor","#currentcolor_keyword")}} can be any color — it is not restricted to sRGB.
 
-The `rgb()` color function is not the only color function that can represent the _sRGB_ color space. Cylindrical coordinate systems like the [`HSL`](/en-US/docs/Web/CSS/color_value/hsl) (_hue-saturation-lightness_) or [`HWB`](/en-US/docs/Web/CSS/color_value/hwb) (_hue-whiteness-blackness_) color models are also used to represent a sRGB color on the web.
+The `rgb()` color function is not the only color function that can represent the _sRGB_ color space. Cylindrical coordinate systems like the [`HSL`](/en-US/docs/Web/CSS/Reference/Values/color_value/hsl) (_hue-saturation-lightness_) or [`HWB`](/en-US/docs/Web/CSS/Reference/Values/color_value/hwb) (_hue-whiteness-blackness_) color models are also used to represent a sRGB color on the web.
 
 - `srgb` color space
   - : The sRGB color space, or "Standard RGB", is the standard RGB (red, green, blue) color space. It was created to be used on monitors, printers, and the Web. It is the most widely used color space and is supported by most operating systems, software programs, monitors, and printers. sRGB is based on `r`, `g`, and `b`, with in-gamut values ranging from `0` to `1`. The whitepoint is D65.
@@ -87,7 +87,7 @@ People with normal vision have three kinds of cone cells that sense light, havin
 ## See also
 
 - {{cssxref("@media/color-gamut", "color-gamut")}} `@media` feature
-- [CSS data type: `<color>`](/en-US/docs/Web/CSS/color_value)
+- [CSS data type: `<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value)
 - [sRGB color space](https://webstore.iec.ch/en/publication/6168)
 - [CIELAB color space](https://en.wikipedia.org/wiki/CIELAB_color_space) on Wikipedia
 - [CIE 1931 color space](https://en.wikipedia.org/wiki/CIE_1931_color_space) on Wikipedia

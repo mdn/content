@@ -152,7 +152,7 @@ If at all possible, it is better to animate properties that do not cause reflow/
 
 To further improve performance, you should consider moving animation work off the main thread and onto the device's GPU (also referred to as compositing). This is done by choosing specific types of animations that the browser will automatically send to the GPU to handle; these include:
 
-- 3D transform animations such as [`transform: translateZ()`](/en-US/docs/Web/CSS/Reference/Properties/transform) and [`rotate3d()`](/en-US/docs/Web/CSS/transform-function/rotate3d).
+- 3D transform animations such as [`transform: translateZ()`](/en-US/docs/Web/CSS/Reference/Properties/transform) and [`rotate3d()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/rotate3d).
 - Elements with certain other properties animated such as [`position: fixed`](/en-US/docs/Web/CSS/Reference/Properties/position).
 - Elements with [`will-change`](/en-US/docs/Web/CSS/Reference/Properties/will-change) applied (see the section below).
 - Certain elements that are rendered in their own layer, including [`<video>`](/en-US/docs/Web/HTML/Reference/Elements/video), [`<canvas>`](/en-US/docs/Web/HTML/Reference/Elements/canvas), and [`<iframe>`](/en-US/docs/Web/HTML/Reference/Elements/iframe).

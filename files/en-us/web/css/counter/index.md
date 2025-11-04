@@ -8,7 +8,7 @@ sidebar: cssref
 
 The **`counter()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) returns a string representing the current value of the named counter, if there is one.
 
-The `counter()` function is generally used within [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) through the {{cssxref("content")}} property but, theoretically, it can be used wherever a [`<string>`](/en-US/docs/Web/CSS/string) value is supported.
+The `counter()` function is generally used within [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) through the {{cssxref("content")}} property but, theoretically, it can be used wherever a [`<string>`](/en-US/docs/Web/CSS/Reference/Values/string) value is supported.
 
 {{InteractiveExample("CSS Demo: counter()", "tabbed-shorter")}}
 

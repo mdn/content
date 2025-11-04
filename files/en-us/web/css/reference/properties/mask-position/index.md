@@ -74,7 +74,7 @@ Each `mask-position` value in the comma-separated list of values is matched up w
 
 Each `mask-position` defines the associated mask layer's position relative to the associated {{cssxref("mask-origin")}} value. The `mask-origin` property values are similarly matched up with the `mask-image` values, in order, with excess `mask-position` values being unused or `mask-position` values being repeated if they are fewer in number than the `mask-origin` values. Each mask layer, therefore, has an associated `mask-origin` and `mask-position` value.
 
-If no `mask-origin` is set, the value defaults to `padding-box`, meaning the origin of each `mask-position` is the element's [padding-box](/en-US/docs/Web/CSS/box-edge#padding-box).
+If no `mask-origin` is set, the value defaults to `padding-box`, meaning the origin of each `mask-position` is the element's [padding-box](/en-US/docs/Web/CSS/Reference/Values/box-edge#padding-box).
 
 ### One-value syntax
 

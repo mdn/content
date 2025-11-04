@@ -70,7 +70,7 @@ This section lists `page-type` values for pages under [Web/CSS](/en-US/docs/Web/
 - `css-pseudo-element`: a [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements), like {{cssxref("::before")}}.
 - `css-selector`: a [basic selector](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#basic_selectors), like the [class selector](/en-US/docs/Web/CSS/Reference/Selectors/Class_selectors).
 - `css-shorthand-property`: a [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties), like {{cssxref("background")}}.
-- `css-type`: a [data type](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types), like [`<color>`](/en-US/docs/Web/CSS/color_value).
+- `css-type`: a [data type](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types), like [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value).
 
 ### Glossary page types
 

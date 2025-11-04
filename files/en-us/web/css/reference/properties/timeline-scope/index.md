@@ -32,7 +32,7 @@ Allowed values for `timeline-scope` are:
   - : Specifies the name of an existing named timeline (i.e., declared using {{cssxref("scroll-timeline-name")}} or {{cssxref("view-timeline-name")}}) defined on a descendant element. This causes the timeline scope to be increased to the element that `timeline-scope` is set on and any of its descendants.
 
     > [!NOTE]
-    > [`<dashed-ident>`](/en-US/docs/Web/CSS/custom-ident) values must start with `--`, which helps to avoid name clashes with standard CSS keywords.
+    > [`<dashed-ident>`](/en-US/docs/Web/CSS/Reference/Values/custom-ident) values must start with `--`, which helps to avoid name clashes with standard CSS keywords.
 
 ## Formal definition
 

@@ -16,7 +16,7 @@ No notable changes
 
 ### CSS
 
-- The [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb) function for use as a [CSS color value](/en-US/docs/Web/CSS/color_value) has been implemented. The `hwb()` functional notation expresses a given color according to its hue, whiteness, and blackness. An optional alpha component represents the color's transparency. ([Firefox bug 1352755](https://bugzil.la/1352755)).
+- The [`hwb()`](/en-US/docs/Web/CSS/Reference/Values/color_value/hwb) function for use as a [CSS color value](/en-US/docs/Web/CSS/Reference/Values/color_value) has been implemented. The `hwb()` functional notation expresses a given color according to its hue, whiteness, and blackness. An optional alpha component represents the color's transparency. ([Firefox bug 1352755](https://bugzil.la/1352755)).
 
 - Firefox now provides support for the {{CSSxRef("color-scheme")}} property. This allows an element to indicate which color schemes it can comfortably be rendered in. Common options include "light" and "dark", or "day mode" and "night mode". ([Firefox bug 1576289](https://bugzil.la/1576289)).
 

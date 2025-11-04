@@ -367,7 +367,7 @@ In these examples, a size was explicitly set on the element itself. When working
 
 ### Creating a circle based on the container size
 
-The inline-size of non-replaced block-level elements is the size of their container's [content box](/en-US/docs/Web/CSS/box-edge#content-box). Because they have a size by default, they don't need to have an explicit size set for the `aspect-ratio` property to work.
+The inline-size of non-replaced block-level elements is the size of their container's [content box](/en-US/docs/Web/CSS/Reference/Values/box-edge#content-box). Because they have a size by default, they don't need to have an explicit size set for the `aspect-ratio` property to work.
 
 In this example, we have a container {{htmlelement("div")}} that is `200px` wide, which includes `5px` of padding on each side. Therefore, the inline-size of the content box is `190px`. Without setting a height or width on the nested {{htmlelement("p")}} element, we know its inline-size is `190px`. With `aspect-ratio: 1` set, the paragraph will be `190px` tall, unless it has visible overflowing content causing it to be taller (which it doesn't).
 

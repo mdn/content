@@ -99,7 +99,7 @@ perspective-origin: 500% 200%;
 }
 ```
 
-The **`perspective-origin`** and {{cssxref('perspective')}} properties are attached to the parent of a child transformed in 3-dimensional space, unlike the [`perspective()`](/en-US/docs/Web/CSS/transform-function/perspective) transform function which is placed on the element being transformed.
+The **`perspective-origin`** and {{cssxref('perspective')}} properties are attached to the parent of a child transformed in 3-dimensional space, unlike the [`perspective()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/perspective) transform function which is placed on the element being transformed.
 
 ## Syntax
 
@@ -166,4 +166,4 @@ An example showing how to change `perspective-origin` is given in [Using CSS tra
 - {{cssxref('transform-style')}}
 - {{cssxref('transform-function')}}
 - {{cssxref('perspective')}}
-- [`transform: perspective()`](/en-US/docs/Web/CSS/transform-function/perspective) function
+- [`transform: perspective()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/perspective) function

@@ -63,7 +63,7 @@ You can use different units for each value in your expression. You may also use 
 
 ## Accessibility
 
-When `max()` is used for controlling text size, make sure the text is always large enough to read. A suggestion is to use the {{CSSxRef("min", "min()")}} function nested within a `max()` that has as its second value a [relative length unit](/en-US/docs/Web/CSS/length#relative_length_units) that is always large enough to read. For example:
+When `max()` is used for controlling text size, make sure the text is always large enough to read. A suggestion is to use the {{CSSxRef("min", "min()")}} function nested within a `max()` that has as its second value a [relative length unit](/en-US/docs/Web/CSS/Reference/Values/length#relative_length_units) that is always large enough to read. For example:
 
 ```css
 small {

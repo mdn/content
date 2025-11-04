@@ -17,7 +17,7 @@ The `forced-colors` media feature indicates whether or not the browser is curren
 - `none`
   - : Forced colors mode is not active; the page's colors are not being forced into a limited palette.
 - `active`
-  - : Indicates that forced colors mode is active. The browser provides the color palette to authors through the [CSS system color](/en-US/docs/Web/CSS/system-color) keywords and, if appropriate, triggers the appropriate value of [`prefers-color-scheme`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) so that authors can adapt the page. The browser selects the value for `prefers-color-scheme` based on the lightness of the `Canvas` system color (see the [color adjust spec](https://drafts.csswg.org/css-color-adjust-1/#forced) for more details).
+  - : Indicates that forced colors mode is active. The browser provides the color palette to authors through the [CSS system color](/en-US/docs/Web/CSS/Reference/Values/system-color) keywords and, if appropriate, triggers the appropriate value of [`prefers-color-scheme`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) so that authors can adapt the page. The browser selects the value for `prefers-color-scheme` based on the lightness of the `Canvas` system color (see the [color adjust spec](https://drafts.csswg.org/css-color-adjust-1/#forced) for more details).
 
 ## Usage notes
 
@@ -46,7 +46,7 @@ Additionally the following properties have special behavior in forced colors mod
 - {{cssxref("color-scheme")}} is forced to 'light dark'
 - {{cssxref("scrollbar-color")}} is forced to 'auto'
 
-The system colors that are forced for the above properties depend on the context of the element. For example the {{cssxref("color")}} property on button element will be forced to `ButtonText`. On normal text it will be forced to `CanvasText`. See the [list of system colors](/en-US/docs/Web/CSS/system-color) for additional details of when each might be appropriate in various UI contexts.
+The system colors that are forced for the above properties depend on the context of the element. For example the {{cssxref("color")}} property on button element will be forced to `ButtonText`. On normal text it will be forced to `CanvasText`. See the [list of system colors](/en-US/docs/Web/CSS/Reference/Values/system-color) for additional details of when each might be appropriate in various UI contexts.
 
 > [!NOTE]
 > User agents choose system colors based on native element semantics, _not_ on added ARIA roles.
@@ -60,7 +60,7 @@ When {{cssxref("forced-color-adjust")}} is set to `none` on an element, none of 
 
 When {{cssxref("forced-color-adjust")}} is set to `preserve-parent-color` on an element, and the {{cssxref("color")}} value on the element does not inherit from its parent, then the element will behave the same as setting `preserve-parent-color` to `none`.
 
-When a [system color](/en-US/docs/Web/CSS/system-color) is specified, it will be used instead of the value that would otherwise have been forced.
+When a [system color](/en-US/docs/Web/CSS/Reference/Values/system-color) is specified, it will be used instead of the value that would otherwise have been forced.
 
 You can also use system colors with any property _other_ than those listed above, to ensure that the rest of the page integrates with the restricted color palette available in forced colors mode.
 

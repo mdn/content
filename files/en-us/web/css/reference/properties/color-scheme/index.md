@@ -15,7 +15,7 @@ The **`color-scheme`** [CSS](/en-US/docs/Web/CSS) property allows an element to 
 
 Component authors must use the [`prefers-color-scheme`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) media feature to support the color schemes on the rest of the elements.
 
-Common choices for operating system color schemes are "light" and "dark", or "day mode" and "night mode". When a user selects one of these color schemes, the operating system makes adjustments to the user interface. This includes [form controls](/en-US/docs/Learn_web_development/Extensions/Forms), [scrollbars](/en-US/docs/Web/CSS/CSS_scrollbars_styling), and the used values of [CSS system colors](/en-US/docs/Web/CSS/system-color).
+Common choices for operating system color schemes are "light" and "dark", or "day mode" and "night mode". When a user selects one of these color schemes, the operating system makes adjustments to the user interface. This includes [form controls](/en-US/docs/Learn_web_development/Extensions/Forms), [scrollbars](/en-US/docs/Web/CSS/CSS_scrollbars_styling), and the used values of [CSS system colors](/en-US/docs/Web/CSS/Reference/Values/system-color).
 
 {{InteractiveExample("CSS Demo: color-scheme")}}
 
@@ -136,7 +136,7 @@ To style elements based on color scheme preferences, use the [`prefers-color-sch
 }
 ```
 
-Alternatively, use the [`light-dark()`](/en-US/docs/Web/CSS/color_value/light-dark) [`<color>` function](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#color_functions) to set the foreground and background colors for the different color schemes using a more compact code structure:
+Alternatively, use the [`light-dark()`](/en-US/docs/Web/CSS/Reference/Values/color_value/light-dark) [`<color>` function](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#color_functions) to set the foreground and background colors for the different color schemes using a more compact code structure:
 
 ```css
 :root {

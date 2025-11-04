@@ -242,7 +242,7 @@ The CSS overflow level 4 module also introduces the `block-ellipsis`, `continue`
 
 ### Data types
 
-- [`<overflow>`](/en-US/docs/Web/CSS/overflow_value) enumerated values
+- [`<overflow>`](/en-US/docs/Web/CSS/Reference/Values/overflow_value) enumerated values
 
 ## Guides
 

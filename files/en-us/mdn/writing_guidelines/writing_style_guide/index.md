@@ -133,7 +133,7 @@ Instead, use descriptive phrases that clearly identify the section, concept, or 
 
 For example:
 
-- **Correct**: "Refer to the [Accessibility](/en-US/docs/Web/CSS/gradient/repeating-conic-gradient#accessibility) section later on this page."
+- **Correct**: "Refer to the [Accessibility](/en-US/docs/Web/CSS/Reference/Values/gradient/repeating-conic-gradient#accessibility) section later on this page."
 - **Incorrect**: "Refer to the Accessibility section below."
 
 - **Correct**: "In the following code example, we animate a circle using CSS transitions."
@@ -467,8 +467,8 @@ Follow a consistent style when linking to sections within a page:
 
 If the section you're linking to is on the same page, you can hint at the location of the section using descriptive phrases.
 
-- **Correct**: "This concept is described in more detail in the [Accessibility](/en-US/docs/Web/CSS/gradient/repeating-conic-gradient#accessibility) section of this document."
-- **Incorrect**: "This concept is described in more detail in the [Accessibility](/en-US/docs/Web/CSS/gradient/repeating-conic-gradient#accessibility) section below."
+- **Correct**: "This concept is described in more detail in the [Accessibility](/en-US/docs/Web/CSS/Reference/Values/gradient/repeating-conic-gradient#accessibility) section of this document."
+- **Incorrect**: "This concept is described in more detail in the [Accessibility](/en-US/docs/Web/CSS/Reference/Values/gradient/repeating-conic-gradient#accessibility) section below."
 
 On MDN, another way to link to a reference page is by using a macro. These macros are described on the [Commonly-used macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#linking_to_pages_in_references) page. For example, to link to the reference page of an HTML element, use the `HTMLElement` macro, and to link to the reference page of a CSS property, use the `CSSxRef` macro.
 

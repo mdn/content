@@ -298,7 +298,7 @@ input:not(:checked):not(:disabled) {
 
 By default, all identifiers should be lowercase. This applies to selectors, functions, and keywords. Custom identifiers should use [kebab-case](/en-US/docs/Glossary/Kebab_case), such as `--custom-property` or `my-animation`. See the [HTML style guide](/en-US/docs/MDN/Writing_guidelines/Code_style_guide/HTML#casing_convention_on_mdn) for casing conventions of HTML IDs and classes which are referenced as CSS selectors.
 
-Exceptions include keyword values defined in SVG, which for historical reasons are [camelCase](/en-US/docs/Glossary/Camel_case), and should be written as such to enhance readability. These keywords include: [`currentColor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword), {{cssxref("text-rendering")}} values, {{cssxref("shape-rendering")}} values, {{cssxref("pointer-events")}} values, and {{cssxref("color-interpolation-filters")}} values.
+Exceptions include keyword values defined in SVG, which for historical reasons are [camelCase](/en-US/docs/Glossary/Camel_case), and should be written as such to enhance readability. These keywords include: [`currentColor`](/en-US/docs/Web/CSS/Reference/Values/color_value#currentcolor_keyword), {{cssxref("text-rendering")}} values, {{cssxref("shape-rendering")}} values, {{cssxref("pointer-events")}} values, and {{cssxref("color-interpolation-filters")}} values.
 
 ## Colors
 

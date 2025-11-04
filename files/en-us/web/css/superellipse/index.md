@@ -219,7 +219,7 @@ setCorners();
 {{EmbedLiveSample("value-comparison", "100%", "300")}}
 
 > [!NOTE]
-> See also the [`<corner-shape-value>` value comparison](/en-US/docs/Web/CSS/corner-shape-value#corner-shape-value_value_comparison) example.
+> See also the [`<corner-shape-value>` value comparison](/en-US/docs/Web/CSS/Reference/Values/corner-shape-value#corner-shape-value_value_comparison) example.
 
 ## Specifications
 

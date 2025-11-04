@@ -157,7 +157,7 @@ You should see that the items have rearranged themselves such that there's one i
 
 ### Flexible grids with the fr unit
 
-In addition to creating grids using lengths and percentages, we can use [`fr`](/en-US/docs/Web/CSS/flex_value). The `fr` unit represents one fraction of the available space in the grid container to flexibly size grid rows and columns.
+In addition to creating grids using lengths and percentages, we can use [`fr`](/en-US/docs/Web/CSS/Reference/Values/flex_value). The `fr` unit represents one fraction of the available space in the grid container to flexibly size grid rows and columns.
 
 ```html hidden live-sample___grid-fr-unit_0
 <div class="container">

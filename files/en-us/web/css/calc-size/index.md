@@ -44,7 +44,7 @@ The parameters are:
 - `<calc-size-basis>`
   - : The value (most commonly an intrinsic size) that you want to perform a calculation on.
 
-- [`<calc-sum>`](/en-US/docs/Web/CSS/calc-sum)
+- [`<calc-sum>`](/en-US/docs/Web/CSS/Reference/Values/calc-sum)
   - : An expression that defines the calculation to be performed on the `<calc-size-basis>`.
 
 ### Return value
@@ -53,7 +53,7 @@ Returns a value equal to the `<calc-size-basis>` modified by the `<calc-sum>` ex
 
 ## Description
 
-Certain browser layout algorithms have special behaviors for intrinsic sizing keywords. The `calc-size()` function is explicitly defined to represent an intrinsic size rather than a [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage), thereby enforcing correctness. `calc-size()` enables calculations to be performed on intrinsic size values in a safe, well-defined manner.
+Certain browser layout algorithms have special behaviors for intrinsic sizing keywords. The `calc-size()` function is explicitly defined to represent an intrinsic size rather than a [`<length-percentage>`](/en-US/docs/Web/CSS/Reference/Values/length-percentage), thereby enforcing correctness. `calc-size()` enables calculations to be performed on intrinsic size values in a safe, well-defined manner.
 
 ### Valid values for the first argument (`<calc-size-basis>`)
 
@@ -107,7 +107,7 @@ Mixing different intrinsic sizes together in the same calculation doesn't work. 
 
 ### Valid values for the second argument (`<calc-sum>`)
 
-The second `calc-size()` argument is a [`<calc-sum>`](/en-US/docs/Web/CSS/calc-sum) expression.
+The second `calc-size()` argument is a [`<calc-sum>`](/en-US/docs/Web/CSS/Reference/Values/calc-sum) expression.
 
 In this expression:
 
@@ -115,11 +115,11 @@ In this expression:
 - Operands can include `size`, and any value types that make sense in the context.
 - The `+`, `-`, `*`, and `/` operators can be included.
 - Other mathematical functions can be included such as {{cssxref("round()")}}, {{cssxref("max()")}}, or even a nested `calc-size()`.
-- The overall expression must match [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage), and resolve to a [`<length>`](/en-US/docs/Web/CSS/length).
+- The overall expression must match [`<length-percentage>`](/en-US/docs/Web/CSS/Reference/Values/length-percentage), and resolve to a [`<length>`](/en-US/docs/Web/CSS/Reference/Values/length).
 
 ### Enabling animation of intrinsic size values
 
-`calc-size()` return values can be interpolated, enabling animations between a [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) value and a `calc-size()` intrinsic size return value.
+`calc-size()` return values can be interpolated, enabling animations between a [`<length-percentage>`](/en-US/docs/Web/CSS/Reference/Values/length-percentage) value and a `calc-size()` intrinsic size return value.
 
 > [!NOTE]
 > You should avoid animating box model properties if possible, to cut down on layout events and mitigate the resulting impact on performance (see [Critical rendering path > Layout](/en-US/docs/Web/Performance/Guides/Critical_rendering_path#layout)).

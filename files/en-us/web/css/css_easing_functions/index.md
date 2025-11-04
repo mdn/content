@@ -23,9 +23,9 @@ Alternatively, you may want an animation to move forward in distinct steps, to c
 ### data types
 
 - {{cssxref("easing-function")}}
-- [`<linear-easing-function>`](/en-US/docs/Web/CSS/easing-function#linear-easing-function)
-- [`<cubic-bezier-easing-function>`](/en-US/docs/Web/CSS/easing-function#cubic-bezier-easing-function)
-- [`<step-easing-function>`](/en-US/docs/Web/CSS/easing-function#step-easing-function)
+- [`<linear-easing-function>`](/en-US/docs/Web/CSS/Reference/Values/easing-function#linear-easing-function)
+- [`<cubic-bezier-easing-function>`](/en-US/docs/Web/CSS/Reference/Values/easing-function#cubic-bezier-easing-function)
+- [`<step-easing-function>`](/en-US/docs/Web/CSS/Reference/Values/easing-function#step-easing-function)
 
 ### Terms and glossary definitions
 

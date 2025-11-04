@@ -277,7 +277,7 @@ All animations, even those with 0 seconds duration, throw animation events.
 ## Related concepts
 
 - {{cssxref("will-change")}} CSS property
-- [`<easing-function>`](/en-US/docs/Web/CSS/easing-function) data type
+- [`<easing-function>`](/en-US/docs/Web/CSS/Reference/Values/easing-function) data type
 - [`prefers-reduced-motion`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) media query
 - {{glossary("Bezier curve")}} glossary term
 

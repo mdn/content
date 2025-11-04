@@ -539,7 +539,7 @@ Once you have done this, you can work on the element in the 3D space.
 
 ## See also
 
-- The [CSS `transform` property](/en-US/docs/Web/CSS/Reference/Properties/transform) and the [CSS `<transform-function>` data types](/en-US/docs/Web/CSS/transform-function)
+- The [CSS `transform` property](/en-US/docs/Web/CSS/Reference/Properties/transform) and the [CSS `<transform-function>` data types](/en-US/docs/Web/CSS/Reference/Values/transform-function)
 - The individual transforms properties: {{cssxref('translate')}}, {{cssxref('rotate')}}, and {{cssxref('scale')}} (There is no `skew` property)
 - [Using device orientation with 3D Transforms](/en-US/docs/Web/API/Device_orientation_events/Using_device_orientation_with_3D_transforms)
 - [Intro to CSS 3D transforms](https://3dtransforms.desandro.com/) (Blog post by David DeSandro)

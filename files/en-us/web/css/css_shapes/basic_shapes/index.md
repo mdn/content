@@ -15,7 +15,7 @@ Before looking at shapes, it is worth understanding two pieces of information th
 
 ## The \<basic-shape> type
 
-The [`<basic-shape>`](/en-US/docs/Web/CSS/basic-shape) type is used as the value for all of our basic shapes. This type is a functional notation: the function parentheses contain arguments used to describe the shape.
+The [`<basic-shape>`](/en-US/docs/Web/CSS/Reference/Values/basic-shape) type is used as the value for all of our basic shapes. This type is a functional notation: the function parentheses contain arguments used to describe the shape.
 
 The accepted arguments vary depending on the shape you are creating. We will cover these in the examples below.
 
@@ -50,7 +50,7 @@ Shapes created that extend past the margin box will have the shape clipped to th
 
 ## inset()
 
-The [`inset()`](/en-US/docs/Web/CSS/basic-shape/inset) function defines a rectangle. This may not seem very useful as floating an item, without shapes, will give you a rectangular shape around it. However, the `inset()` type enables the definition of offsets, thus pulling the wrapping text around the reduced-size rectangle, over parts of the floated element.
+The [`inset()`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/inset) function defines a rectangle. This may not seem very useful as floating an item, without shapes, will give you a rectangular shape around it. However, the `inset()` type enables the definition of offsets, thus pulling the wrapping text around the reduced-size rectangle, over parts of the floated element.
 
 The `inset()` function takes up to four side offset values, plus an optional `round` keyword, followed by a {{cssxref("border-radius")}} value. The below CSS creates a rectangular shape inset from the reference box of the floated element 20 pixels from the top and bottom and 10 pixels from the left and right, with a `border-radius` value of 10 pixels.
 
@@ -154,17 +154,17 @@ body {
 
 {{EmbedLiveSample("inset-box", "", "250px")}}
 
-You can also create rectangles based on distances from the top and left edges of the reference box with the [`rect()`](/en-US/docs/Web/CSS/basic-shape/rect) function, or by width and height with the [`xywh()`](/en-US/docs/Web/CSS/basic-shape/xywh) function; both of these also support optional rounded corners.
+You can also create rectangles based on distances from the top and left edges of the reference box with the [`rect()`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/rect) function, or by width and height with the [`xywh()`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/xywh) function; both of these also support optional rounded corners.
 
 ## circle()
 
-The [`circle()`](/en-US/docs/Web/CSS/basic-shape/circle) value for `shape-outside` can accept two possible arguments: a `<shape-radius>` defining the size and the `<position>` defining its location.
+The [`circle()`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/circle) value for `shape-outside` can accept two possible arguments: a `<shape-radius>` defining the size and the `<position>` defining its location.
 
-The `circle()` and `ellipse()` `shape-outside` values both accept [`<shape-radius>`](/en-US/docs/Web/CSS/basic-shape#shape-radius) as an argument. This can be a {{cssxref("length")}}, a {{cssxref("percentage")}}, or one of the keywords `closest-side` or `farthest-side`.
+The `circle()` and `ellipse()` `shape-outside` values both accept [`<shape-radius>`](/en-US/docs/Web/CSS/Reference/Values/basic-shape#shape-radius) as an argument. This can be a {{cssxref("length")}}, a {{cssxref("percentage")}}, or one of the keywords `closest-side` or `farthest-side`.
 
 The `closest-side` keyword value uses the length from the center of the shape to the closest side of the reference box to create the radius length. The `farthest-side` keyword value uses the length from the center of the shape to the farthest side of the reference box.
 
-The second argument is a `position`, which accepts a one- or two-keyword [`<position>`](/en-US/docs/Web/CSS/position_value) value, to indicate the position of the center of the circle. This is specified the same way as {{cssxref("background-position")}}; if one or both values are omitted, the values default to `center`.
+The second argument is a `position`, which accepts a one- or two-keyword [`<position>`](/en-US/docs/Web/CSS/Reference/Values/position_value) value, to indicate the position of the center of the circle. This is specified the same way as {{cssxref("background-position")}}; if one or both values are omitted, the values default to `center`.
 
 To create a circle, we include a single radius value, optionally followed by the keyword **at** followed by a position value. This example has a circle applied to an {{htmlelement("img")}} with a `width` and `height` of `210px` and a `margin` of `20px`. This gives a total width for the reference box of `250px`. The `50%` value for the `<shape-radius>` means the radius is `125px`. The position value is set to `30%`, which is `30%` from the left and at the default vertical `center`.
 
@@ -252,7 +252,7 @@ img {
 
 ## ellipse()
 
-An ellipse is a squashed circle. As such, the [`ellipse()`](/en-US/docs/Web/CSS/basic-shape/ellipse) function acts in a very similar way to `circle()` except that we have to specify two radii, `x` and `y`, in that order.
+An ellipse is a squashed circle. As such, the [`ellipse()`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/ellipse) function acts in a very similar way to `circle()` except that we have to specify two radii, `x` and `y`, in that order.
 
 These may then be followed by one or two `<position>` values, as with `circle()`, to define the location of the center of the ellipse. In the example below, we have an ellipse with an `x` radius of `40%`, a `y` radius of `50%` and the `<position>` set to `left`. This means that the center of the ellipse is at the center of the left edge of the reference box. This creates a half ellipse shape around which the text will wrap. You can change these values to see how the ellipse changes.
 
@@ -325,7 +325,7 @@ body {
 
 ## polygon()
 
-The [`polygon()`](/en-US/docs/Web/CSS/basic-shape/polygon) function is more complex, enabling the creation of multiple-sided polygon shapes. This shape accepts three or more pairs of values (a polygon must at least draw a triangle). Each space-separated pair of values is separated with a comma and represents the coordinates of a single vertex drawn relative to the reference box. Each pair of coordinates defines an edge of the polygon, with the final edge defined by the first and last set of coordinates.
+The [`polygon()`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/polygon) function is more complex, enabling the creation of multiple-sided polygon shapes. This shape accepts three or more pairs of values (a polygon must at least draw a triangle). Each space-separated pair of values is separated with a comma and represents the coordinates of a single vertex drawn relative to the reference box. Each pair of coordinates defines an edge of the polygon, with the final edge defined by the first and last set of coordinates.
 
 The example below creates a shape for text to follow using the `polygon()` function. Try changing the coordinate values to see how the shape changes.
 
@@ -367,7 +367,7 @@ body {
 
 {{EmbedLiveSample("polygon", "", "250px")}}
 
-To create even more complex shapes, you can define the outline of any shape with the [`path()`](/en-US/docs/Web/CSS/basic-shape/path) or [`shape()`](/en-US/docs/Web/CSS/basic-shape/shape) functions.
+To create even more complex shapes, you can define the outline of any shape with the [`path()`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/path) or [`shape()`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/shape) functions.
 
 The `inset()`, `circle()`, `ellipse()`, and `polygon()` are inspectable and editable using the Firefox Developer Tools Shape Inspector. The screenshot below shows the shape highlighted in the tool.
 

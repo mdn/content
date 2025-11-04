@@ -8,7 +8,7 @@ sidebar: cssref
 
 The **`counters()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) enables combining markers when nesting counters. The function returns a string that concatenates the current values of the named and nested counters, if any are present, with the string provided. The third, optional parameter enables defining the list style.
 
-The `counters()` function is generally used within [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) through the {{cssxref("content")}} property, but theoretically, it can be used wherever a [`<string>`](/en-US/docs/Web/CSS/string) value is supported.
+The `counters()` function is generally used within [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) through the {{cssxref("content")}} property, but theoretically, it can be used wherever a [`<string>`](/en-US/docs/Web/CSS/Reference/Values/string) value is supported.
 
 The `counters()` function has two forms: `counters(<name>, <string>)` and `counters(<name>, <string>, <style>)`. The generated text is the value of all counters with the given `<name>`, arranged from the outermost to the innermost, and separated by the specified `<string>`. The counters are rendered in the `<style>` indicated, defaulting to `decimal` if no `<style>` is specified.
 

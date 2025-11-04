@@ -88124,209 +88124,11 @@
       "BijuGC"
     ]
   },
-  "Web/CSS/Reference/Values/fit-content": {
-    "modified": "2020-11-10T06:14:23.564Z",
-    "contributors": [
-      "rachelandrew",
-      "chrisdavidmills",
-      "ramiy",
-      "wbamberg",
-      "mfuji09",
-      "vinyldarkscratch",
-      "Sheppy",
-      "Konrud",
-      "sushant-j",
-      "fscholz",
-      "mfluehr",
-      "meyerweb",
-      "Sebastianz"
-    ]
-  },
-  "Web/CSS/Reference/Values/inherit": {
-    "modified": "2020-10-15T21:05:21.625Z",
-    "contributors": [
-      "wbamberg",
-      "mfuji09",
-      "Sheppy",
-      "fscholz",
-      "mfluehr",
-      "cvrebert",
-      "tregagnon",
-      "Sebastianz",
-      "teoli",
-      "kscarfone",
-      "Delapouite",
-      "trevorh",
-      "shitface",
-      "nicholascamp",
-      "brianloveswords",
-      "Abid",
-      "Jürgen Jeka",
-      "Mgjbot",
-      "Fredchat",
-      "DBaron"
-    ]
-  },
-  "Web/CSS/Reference/Values/initial": {
-    "modified": "2020-10-15T21:07:54.355Z",
-    "contributors": [
-      "wbamberg",
-      "mfuji09",
-      "gerfolder",
-      "brianmcoates",
-      "wis",
-      "engelfrost",
-      "Sheppy",
-      "fscholz",
-      "mfluehr",
-      "SphinxKnight",
-      "anchengjian",
-      "malyw",
-      "cvrebert",
-      "Sebastianz",
-      "u_7cc",
-      "teoli",
-      "kscarfone",
-      "ethertank",
-      "kohei.yoshino",
-      "meelash",
-      "brianloveswords",
-      "Jürgen Jeka",
-      "Mgjbot",
-      "DBaron",
-      "Kyodev",
-      "Fredchat"
-    ]
-  },
-  "Web/CSS/Reference/Values/max-content": {
-    "modified": "2020-11-05T09:28:34.298Z",
-    "contributors": ["chrisdavidmills", "rachelandrew"]
-  },
-  "Web/CSS/Reference/Values/min-content": {
-    "modified": "2020-11-05T09:23:39.222Z",
-    "contributors": ["chrisdavidmills", "rachelandrew"]
-  },
-  "Web/CSS/Reference/Values/revert": {
-    "modified": "2020-12-01T01:19:10.242Z",
-    "contributors": [
-      "runn1ng",
-      "phanos",
-      "xinnhui",
-      "elias6",
-      "Nux",
-      "chrisdavidmills",
-      "bgs99",
-      "Sheppy",
-      "fscholz",
-      "HTMLValidator",
-      "mfluehr",
-      "ebidel",
-      "teoli",
-      "cvrebert",
-      "yisibl",
-      "Sebastianz"
-    ]
-  },
-  "Web/CSS/Reference/Values/unset": {
-    "modified": "2020-10-15T21:25:43.482Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg",
-      "OtterOne",
-      "olehhusiev",
-      "Sheppy",
-      "fscholz",
-      "mfluehr",
-      "xfq",
-      "jrencz",
-      "Krinkle",
-      "RedLucas",
-      "cvrebert",
-      "f0086",
-      "Sebastianz",
-      "myakura",
-      "teoli"
-    ]
-  },
-  "Web/CSS/Reference/Webkit_extensions": {
-    "modified": "2020-10-05T04:22:03.202Z",
-    "contributors": [
-      "rachelandrew",
-      "wbamberg",
-      "Malvoz",
-      "estelle",
-      "mfluehr",
-      "ExE-Boss",
-      "Sheppy",
-      "mfuji09",
-      "upsuper",
-      "tobias47n9e",
-      "Sebastianz",
-      "teoli",
-      "yisibl",
-      "teo1978",
-      "y0ssar1an",
-      "abdullahasseiri",
-      "aneesh.mb",
-      "Rob W",
-      "Jeremie",
-      "Inkbug",
-      "ziyunfei"
-    ]
-  },
-  "Web/CSS/Tutorials": {
-    "modified": "2020-04-27T22:31:52.172Z",
-    "contributors": ["mfluehr", "kscarfone", "Sheppy", "teoli", "robwala"]
-  },
-  "Web/CSS/Visual_formatting_model": {
-    "modified": "2020-09-05T23:17:19.677Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg",
-      "j9t",
-      "Konrud",
-      "chrisdavidmills",
-      "rachelandrew",
-      "LurN",
-      "ishan123456789",
-      "andreaswachowski",
-      "VladPavel15",
-      "mikkelrd",
-      "mfluehr",
-      "mustafasalah",
-      "david_ross",
-      "Levenson",
-      "jacklj",
-      "manavm1990",
-      "codingplayboy",
-      "jichao",
-      "BychekRU",
-      "YoutaoXing",
-      "rolfedh",
-      "jackarmley",
-      "zhen-w",
-      "NicBright",
-      "teoli",
-      "xfq",
-      "arigoldx",
-      "zhanglun",
-      "denised",
-      "AprilMorone",
-      "adrianocastro",
-      "Jeremie",
-      "Naesten",
-      "ZhoraVdB",
-      "maybe",
-      "Sheppy",
-      "ethertank",
-      "Dholbert"
-    ]
-  },
-  "Web/CSS/alpha-value": {
+  "Web/CSS/Reference/Values/alpha-value": {
     "modified": "2020-08-10T17:42:27.732Z",
     "contributors": ["Sheppy", "wbamberg", "mfuji09", "pans9", "jswisher"]
   },
-  "Web/CSS/angle": {
+  "Web/CSS/Reference/Values/angle": {
     "modified": "2020-10-15T21:07:52.613Z",
     "contributors": [
       "Sheppy",
@@ -88354,7 +88156,7 @@
       "Jürgen Jeka"
     ]
   },
-  "Web/CSS/angle-percentage": {
+  "Web/CSS/Reference/Values/angle-percentage": {
     "modified": "2020-10-15T22:14:24.982Z",
     "contributors": [
       "Sheppy",
@@ -88364,45 +88166,7 @@
       "rachelandrew"
     ]
   },
-  "Web/CSS/attr": {
-    "modified": "2020-11-04T08:51:17.860Z",
-    "contributors": [
-      "chrisdavidmills",
-      "ramiy",
-      "wbamberg",
-      "mfuji09",
-      "xiaochengh",
-      "valtlai",
-      "WebMechanic",
-      "Mookiepiece",
-      "QuentinA",
-      "jpmedley",
-      "ExE-Boss",
-      "torazaburo",
-      "xgqfrms-GitHub",
-      "fscholz",
-      "mfluehr",
-      "Sebastianz",
-      "erikadoyle",
-      "mrstork",
-      "prayash",
-      "jrencz",
-      "teoli",
-      "jwhitlock",
-      "Loiro",
-      "visiongeist",
-      "Bzbarsky",
-      "tregagnon",
-      "kscarfone",
-      "Sheppy",
-      "mattbasta",
-      "arhayward",
-      "m_gol",
-      "ethertank",
-      "McGurk"
-    ]
-  },
-  "Web/CSS/basic-shape": {
+  "Web/CSS/Reference/Values/basic-shape": {
     "modified": "2020-10-15T21:27:25.148Z",
     "contributors": [
       "wbamberg",
@@ -88422,11 +88186,11 @@
       "rebeccahauck"
     ]
   },
-  "Web/CSS/basic-shape/path": {
+  "Web/CSS/Reference/Values/basic-shape/path": {
     "modified": "2020-12-11T11:12:50.012Z",
     "contributors": ["chrisdavidmills", "rachelandrew"]
   },
-  "Web/CSS/blend-mode": {
+  "Web/CSS/Reference/Values/blend-mode": {
     "modified": "2020-10-15T21:29:47.283Z",
     "contributors": [
       "wbamberg",
@@ -88441,73 +88205,7 @@
       "bigbossSNK"
     ]
   },
-  "Web/CSS/calc": {
-    "modified": "2020-11-04T09:07:52.492Z",
-    "contributors": [
-      "chrisdavidmills",
-      "ramiy",
-      "wbamberg",
-      "brookjordan",
-      "mfuji09",
-      "r-i-c-h",
-      "alattalatta",
-      "v-python",
-      "Sheppy",
-      "rtfeldman",
-      "kevinlg",
-      "ericwbailey",
-      "fscholz",
-      "mfluehr",
-      "Melvin",
-      "erikadoyle",
-      "Sebastianz",
-      "kongkx",
-      "teoli",
-      "yisibl",
-      "ziyunfei",
-      "rolfedh",
-      "tomalec",
-      "mrstork",
-      "prayash",
-      "gapple",
-      "jsx",
-      "Odd3r",
-      "raselmahmud",
-      "Francois06",
-      "nhoizey",
-      "kscarfone",
-      "bigbossSNK",
-      "Nox",
-      "matt.kantor",
-      "mattbrundage",
-      "m_gol",
-      "ethertank",
-      "trevorh",
-      "FredB",
-      "jswisher",
-      "Jürgen Jeka",
-      "sprt",
-      "ebidel",
-      "Glazou",
-      "livingston"
-    ]
-  },
-  "Web/CSS/clamp": {
-    "modified": "2020-12-13T22:34:13.391Z",
-    "contributors": [
-      "sideshowbarker",
-      "chrisdavidmills",
-      "ramiy",
-      "wbamberg",
-      "jswisher",
-      "rhlowe",
-      "mfuji09",
-      "missmatsuko",
-      "ExE-Boss",
-      "estelle"
-    ]
-  },
-  "Web/CSS/color_value": {
+  "Web/CSS/Reference/Values/color_value": {
     "modified": "2020-12-01T13:24:01.277Z",
     "contributors": [
       "mfluehr",
@@ -88590,49 +88288,7 @@
       "BijuGC"
     ]
   },
-  "Web/CSS/counter": {
-    "modified": "2020-11-09T07:17:56.455Z",
-    "contributors": [
-      "chrisdavidmills",
-      "ramiy",
-      "myf",
-      "mfuji09",
-      "wbamberg",
-      "rachelandrew",
-      "xfq",
-      "anonyco",
-      "estelle"
-    ]
-  },
-  "Web/CSS/counters": {
-    "modified": "2020-11-09T07:19:10.542Z",
-    "contributors": [
-      "chrisdavidmills",
-      "ramiy",
-      "mfuji09",
-      "wbamberg",
-      "rachelandrew",
-      "xfq",
-      "estelle"
-    ]
-  },
-  "Web/CSS/cross-fade": {
-    "modified": "2020-11-09T07:22:01.145Z",
-    "contributors": [
-      "chrisdavidmills",
-      "ramiy",
-      "HTMLValidator",
-      "mfuji09",
-      "wbamberg",
-      "arshadrr",
-      "aardrian",
-      "ddbeck",
-      "estelle",
-      "SphinxKnight",
-      "Sebastianz"
-    ]
-  },
-  "Web/CSS/custom-ident": {
+  "Web/CSS/Reference/Values/custom-ident": {
     "modified": "2020-06-25T19:01:25.034Z",
     "contributors": [
       "wbamberg",
@@ -88648,7 +88304,7 @@
       "brianloveswords"
     ]
   },
-  "Web/CSS/dimension": {
+  "Web/CSS/Reference/Values/dimension": {
     "modified": "2020-10-15T22:14:21.979Z",
     "contributors": [
       "Sheppy",
@@ -88659,7 +88315,7 @@
       "rachelandrew"
     ]
   },
-  "Web/CSS/display-box": {
+  "Web/CSS/Reference/Values/display-box": {
     "modified": "2020-10-15T22:08:53.947Z",
     "contributors": [
       "mfuji09",
@@ -88671,7 +88327,7 @@
       "chrisdavidmills"
     ]
   },
-  "Web/CSS/display-inside": {
+  "Web/CSS/Reference/Values/display-inside": {
     "modified": "2020-10-15T22:08:48.571Z",
     "contributors": [
       "wbamberg",
@@ -88683,7 +88339,7 @@
       "chrisdavidmills"
     ]
   },
-  "Web/CSS/display-internal": {
+  "Web/CSS/Reference/Values/display-internal": {
     "modified": "2020-10-15T22:08:54.522Z",
     "contributors": [
       "mfuji09",
@@ -88694,7 +88350,7 @@
       "rachelandrew"
     ]
   },
-  "Web/CSS/display-legacy": {
+  "Web/CSS/Reference/Values/display-legacy": {
     "modified": "2020-10-15T22:08:53.191Z",
     "contributors": [
       "mfuji09",
@@ -88705,7 +88361,7 @@
       "chrisdavidmills"
     ]
   },
-  "Web/CSS/display-listitem": {
+  "Web/CSS/Reference/Values/display-listitem": {
     "modified": "2020-10-15T22:08:52.569Z",
     "contributors": [
       "wbamberg",
@@ -88715,7 +88371,7 @@
       "chrisdavidmills"
     ]
   },
-  "Web/CSS/display-outside": {
+  "Web/CSS/Reference/Values/display-outside": {
     "modified": "2020-10-15T22:08:46.923Z",
     "contributors": [
       "mfuji09",
@@ -88727,7 +88383,7 @@
       "chrisdavidmills"
     ]
   },
-  "Web/CSS/easing-function": {
+  "Web/CSS/Reference/Values/easing-function": {
     "modified": "2020-12-07T09:11:33.352Z",
     "contributors": [
       "schalkneethling",
@@ -88740,56 +88396,11 @@
       "wbamberg"
     ]
   },
-  "Web/CSS/element": {
-    "modified": "2020-11-10T11:00:46.628Z",
-    "contributors": [
-      "chrisdavidmills",
-      "ramiy",
-      "wbamberg",
-      "mfuji09",
-      "estelle",
-      "fscholz",
-      "mfluehr",
-      "wizAmit",
-      "jwhitlock",
-      "heea",
-      "m_gol",
-      "kscarfone",
-      "Sheppy",
-      "teoli",
-      "Alexei03a",
-      "ethertank",
-      "brianloveswords",
-      "ebidel",
-      "BijuGC"
-    ]
-  },
-  "Web/CSS/env": {
-    "modified": "2020-11-10T11:09:18.411Z",
-    "contributors": [
-      "chrisdavidmills",
-      "ramiy",
-      "wbamberg",
-      "ExE-Boss",
-      "equinusocio",
-      "mfuji09",
-      "chayeoi",
-      "theSdev",
-      "mfluehr",
-      "spjpgrd",
-      "Rondinelly",
-      "pldz",
-      "estelle",
-      "Sheppy",
-      "jhpratt",
-      "nhoizey"
-    ]
-  },
-  "Web/CSS/filter-function": {
+  "Web/CSS/Reference/Values/filter-function": {
     "modified": "2020-07-30T14:24:12.854Z",
     "contributors": ["chrisdavidmills", "wbamberg", "alattalatta", "mfluehr"]
   },
-  "Web/CSS/filter-function/blur": {
+  "Web/CSS/Reference/Values/filter-function/blur": {
     "modified": "2020-11-05T09:45:29.272Z",
     "contributors": [
       "chrisdavidmills",
@@ -88800,7 +88411,7 @@
       "mfluehr"
     ]
   },
-  "Web/CSS/filter-function/brightness": {
+  "Web/CSS/Reference/Values/filter-function/brightness": {
     "modified": "2020-11-05T09:57:05.715Z",
     "contributors": [
       "chrisdavidmills",
@@ -88812,7 +88423,7 @@
       "mfluehr"
     ]
   },
-  "Web/CSS/filter-function/contrast": {
+  "Web/CSS/Reference/Values/filter-function/contrast": {
     "modified": "2020-11-09T07:20:34.915Z",
     "contributors": [
       "chrisdavidmills",
@@ -88823,7 +88434,7 @@
       "mfluehr"
     ]
   },
-  "Web/CSS/filter-function/drop-shadow": {
+  "Web/CSS/Reference/Values/filter-function/drop-shadow": {
     "modified": "2020-11-10T10:58:11.635Z",
     "contributors": [
       "chrisdavidmills",
@@ -88835,7 +88446,7 @@
       "mfluehr"
     ]
   },
-  "Web/CSS/filter-function/grayscale": {
+  "Web/CSS/Reference/Values/filter-function/grayscale": {
     "modified": "2020-11-10T11:18:24.117Z",
     "contributors": [
       "chrisdavidmills",
@@ -88847,7 +88458,7 @@
       "mfluehr"
     ]
   },
-  "Web/CSS/filter-function/hue-rotate": {
+  "Web/CSS/Reference/Values/filter-function/hue-rotate": {
     "modified": "2020-11-16T08:50:27.814Z",
     "contributors": [
       "chrisdavidmills",
@@ -88860,7 +88471,7 @@
       "shoelaces"
     ]
   },
-  "Web/CSS/filter-function/invert": {
+  "Web/CSS/Reference/Values/filter-function/invert": {
     "modified": "2020-11-16T08:55:10.969Z",
     "contributors": [
       "chrisdavidmills",
@@ -88872,7 +88483,7 @@
       "mfluehr"
     ]
   },
-  "Web/CSS/filter-function/opacity": {
+  "Web/CSS/Reference/Values/filter-function/opacity": {
     "modified": "2020-11-16T09:07:33.648Z",
     "contributors": [
       "chrisdavidmills",
@@ -88884,7 +88495,7 @@
       "mfluehr"
     ]
   },
-  "Web/CSS/filter-function/saturate": {
+  "Web/CSS/Reference/Values/filter-function/saturate": {
     "modified": "2020-11-30T10:11:32.452Z",
     "contributors": [
       "chrisdavidmills",
@@ -88897,7 +88508,7 @@
       "mfluehr"
     ]
   },
-  "Web/CSS/filter-function/sepia": {
+  "Web/CSS/Reference/Values/filter-function/sepia": {
     "modified": "2020-11-30T10:24:17.180Z",
     "contributors": [
       "chrisdavidmills",
@@ -88909,11 +88520,25 @@
       "mfluehr"
     ]
   },
-  "Web/CSS/fit-content_function": {
-    "modified": "2020-11-27T16:21:05.359Z",
-    "contributors": ["rachelandrew", "chrisdavidmills", "escattone"]
+  "Web/CSS/Reference/Values/fit-content": {
+    "modified": "2020-11-10T06:14:23.564Z",
+    "contributors": [
+      "rachelandrew",
+      "chrisdavidmills",
+      "ramiy",
+      "wbamberg",
+      "mfuji09",
+      "vinyldarkscratch",
+      "Sheppy",
+      "Konrud",
+      "sushant-j",
+      "fscholz",
+      "mfluehr",
+      "meyerweb",
+      "Sebastianz"
+    ]
   },
-  "Web/CSS/flex_value": {
+  "Web/CSS/Reference/Values/flex_value": {
     "modified": "2020-10-15T21:50:01.854Z",
     "contributors": [
       "rachelandrew",
@@ -88925,7 +88550,7 @@
       "Sebastianz"
     ]
   },
-  "Web/CSS/frequency": {
+  "Web/CSS/Reference/Values/frequency": {
     "modified": "2020-12-14T06:45:44.567Z",
     "contributors": [
       "rachelandrew",
@@ -88946,7 +88571,7 @@
       "McGurk"
     ]
   },
-  "Web/CSS/frequency-percentage": {
+  "Web/CSS/Reference/Values/frequency-percentage": {
     "modified": "2020-10-15T22:14:26.797Z",
     "contributors": [
       "mfuji09",
@@ -88956,7 +88581,7 @@
       "rachelandrew"
     ]
   },
-  "Web/CSS/gradient": {
+  "Web/CSS/Reference/Values/gradient": {
     "modified": "2020-10-15T21:07:47.060Z",
     "contributors": [
       "mfuji09",
@@ -88980,7 +88605,7 @@
       "brianloveswords"
     ]
   },
-  "Web/CSS/gradient/conic-gradient": {
+  "Web/CSS/Reference/Values/gradient/conic-gradient": {
     "modified": "2020-11-09T14:59:49.432Z",
     "contributors": [
       "chrisdavidmills",
@@ -88992,7 +88617,7 @@
       "mfuji09"
     ]
   },
-  "Web/CSS/gradient/linear-gradient": {
+  "Web/CSS/Reference/Values/gradient/linear-gradient": {
     "modified": "2020-11-16T08:56:31.311Z",
     "contributors": [
       "chrisdavidmills",
@@ -89069,7 +88694,7 @@
       "Level"
     ]
   },
-  "Web/CSS/gradient/radial-gradient": {
+  "Web/CSS/Reference/Values/gradient/radial-gradient": {
     "modified": "2020-11-18T14:41:59.110Z",
     "contributors": [
       "chrisdavidmills",
@@ -89120,7 +88745,7 @@
       "Mvent2"
     ]
   },
-  "Web/CSS/gradient/repeating-conic-gradient": {
+  "Web/CSS/Reference/Values/gradient/repeating-conic-gradient": {
     "modified": "2020-11-18T14:49:01.954Z",
     "contributors": [
       "chrisdavidmills",
@@ -89130,7 +88755,7 @@
       "estelle"
     ]
   },
-  "Web/CSS/gradient/repeating-linear-gradient": {
+  "Web/CSS/Reference/Values/gradient/repeating-linear-gradient": {
     "modified": "2020-11-18T14:45:34.125Z",
     "contributors": [
       "chrisdavidmills",
@@ -89164,7 +88789,7 @@
       "cers"
     ]
   },
-  "Web/CSS/gradient/repeating-radial-gradient": {
+  "Web/CSS/Reference/Values/gradient/repeating-radial-gradient": {
     "modified": "2020-11-18T14:47:20.840Z",
     "contributors": [
       "chrisdavidmills",
@@ -89190,11 +88815,11 @@
       "kathyw"
     ]
   },
-  "Web/CSS/ident": {
+  "Web/CSS/Reference/Values/ident": {
     "modified": "2020-07-07T20:12:35.628Z",
     "contributors": ["wbamberg", "ExE-Boss"]
   },
-  "Web/CSS/image": {
+  "Web/CSS/Reference/Values/image": {
     "modified": "2020-10-15T21:07:51.020Z",
     "contributors": [
       "catchmyfame",
@@ -89220,7 +88845,7 @@
       "Rob W"
     ]
   },
-  "Web/CSS/image/image": {
+  "Web/CSS/Reference/Values/image/image": {
     "modified": "2020-11-16T08:51:49.198Z",
     "contributors": [
       "chrisdavidmills",
@@ -89232,7 +88857,7 @@
       "estelle"
     ]
   },
-  "Web/CSS/image/image-set": {
+  "Web/CSS/Reference/Values/image/image-set": {
     "modified": "2020-11-16T08:53:13.058Z",
     "contributors": [
       "chrisdavidmills",
@@ -89247,7 +88872,7 @@
       "apepper"
     ]
   },
-  "Web/CSS/image/paint": {
+  "Web/CSS/Reference/Values/image/paint": {
     "modified": "2020-11-16T09:08:59.452Z",
     "contributors": [
       "chrisdavidmills",
@@ -89258,7 +88883,63 @@
       "estelle"
     ]
   },
-  "Web/CSS/integer": {
+  "Web/CSS/Reference/Values/inherit": {
+    "modified": "2020-10-15T21:05:21.625Z",
+    "contributors": [
+      "wbamberg",
+      "mfuji09",
+      "Sheppy",
+      "fscholz",
+      "mfluehr",
+      "cvrebert",
+      "tregagnon",
+      "Sebastianz",
+      "teoli",
+      "kscarfone",
+      "Delapouite",
+      "trevorh",
+      "shitface",
+      "nicholascamp",
+      "brianloveswords",
+      "Abid",
+      "Jürgen Jeka",
+      "Mgjbot",
+      "Fredchat",
+      "DBaron"
+    ]
+  },
+  "Web/CSS/Reference/Values/initial": {
+    "modified": "2020-10-15T21:07:54.355Z",
+    "contributors": [
+      "wbamberg",
+      "mfuji09",
+      "gerfolder",
+      "brianmcoates",
+      "wis",
+      "engelfrost",
+      "Sheppy",
+      "fscholz",
+      "mfluehr",
+      "SphinxKnight",
+      "anchengjian",
+      "malyw",
+      "cvrebert",
+      "Sebastianz",
+      "u_7cc",
+      "teoli",
+      "kscarfone",
+      "ethertank",
+      "kohei.yoshino",
+      "meelash",
+      "brianloveswords",
+      "Jürgen Jeka",
+      "Mgjbot",
+      "DBaron",
+      "Kyodev",
+      "Fredchat"
+    ]
+  },
+  "Web/CSS/Reference/Values/integer": {
     "modified": "2020-10-15T21:03:55.646Z",
     "contributors": [
       "wbamberg",
@@ -89282,7 +88963,7 @@
       "Mgjbot"
     ]
   },
-  "Web/CSS/length": {
+  "Web/CSS/Reference/Values/length": {
     "modified": "2020-11-04T22:36:17.098Z",
     "contributors": [
       "h-h",
@@ -89340,7 +89021,7 @@
       "DBaron"
     ]
   },
-  "Web/CSS/length-percentage": {
+  "Web/CSS/Reference/Values/length-percentage": {
     "modified": "2020-12-14T06:47:07.973Z",
     "contributors": [
       "rachelandrew",
@@ -89350,6 +89031,908 @@
       "Yialo",
       "alattalatta"
     ]
+  },
+  "Web/CSS/Reference/Values/max-content": {
+    "modified": "2020-11-05T09:28:34.298Z",
+    "contributors": ["chrisdavidmills", "rachelandrew"]
+  },
+  "Web/CSS/Reference/Values/min-content": {
+    "modified": "2020-11-05T09:23:39.222Z",
+    "contributors": ["chrisdavidmills", "rachelandrew"]
+  },
+  "Web/CSS/Reference/Values/number": {
+    "modified": "2020-10-15T21:10:27.983Z",
+    "contributors": [
+      "wbamberg",
+      "rachelandrew",
+      "ExE-Boss",
+      "fscholz",
+      "mfluehr",
+      "Sebastianz",
+      "ConorOB",
+      "teoli",
+      "P0lip",
+      "KyliRouge",
+      "guillaume.s",
+      "kscarfone",
+      "Sheppy",
+      "ethertank",
+      "Marsf",
+      "Mgjbot",
+      "BijuGC",
+      "Kohei"
+    ]
+  },
+  "Web/CSS/Reference/Values/percentage": {
+    "modified": "2020-12-14T06:48:33.216Z",
+    "contributors": [
+      "rachelandrew",
+      "wbamberg",
+      "mfluehr",
+      "ExE-Boss",
+      "fscholz",
+      "Sebastianz",
+      "moali1.",
+      "Prinz_Rana",
+      "hashedhyphen",
+      "jswisher",
+      "sudheerDev",
+      "jsx",
+      "noe132",
+      "teoli",
+      "kscarfone",
+      "roryokane",
+      "zziccardi",
+      "Sheppy",
+      "gregtyler",
+      "myakura",
+      "Mgjbot",
+      "BijuGC"
+    ]
+  },
+  "Web/CSS/Reference/Values/position_value": {
+    "modified": "2020-10-15T21:19:10.360Z",
+    "contributors": [
+      "mfuji09",
+      "wbamberg",
+      "sideshowbarker",
+      "chrisdavidmills",
+      "rachelandrew",
+      "estelle",
+      "ericwilligers",
+      "fscholz",
+      "mfluehr",
+      "mrstork",
+      "zhenlilu2003",
+      "Sebastianz",
+      "teoli",
+      "kscarfone",
+      "Sheppy",
+      "majensen1"
+    ]
+  },
+  "Web/CSS/Reference/Values/ratio": {
+    "modified": "2020-10-15T21:10:32.599Z",
+    "contributors": [
+      "wbamberg",
+      "rachelandrew",
+      "fscholz",
+      "mfluehr",
+      "Sebastianz",
+      "teoli",
+      "kscarfone",
+      "velvel53",
+      "Sheppy",
+      "FredB"
+    ]
+  },
+  "Web/CSS/Reference/Values/resolution": {
+    "modified": "2020-10-15T21:08:57.270Z",
+    "contributors": [
+      "wbamberg",
+      "estelle",
+      "ExE-Boss",
+      "fscholz",
+      "mfluehr",
+      "zbjornson",
+      "Sebastianz",
+      "Prinz_Rana",
+      "grigs",
+      "trusktr",
+      "spleen387",
+      "paul.gaske",
+      "teoli",
+      "kscarfone",
+      "alberts+",
+      "FredB",
+      "ethertank",
+      "Sheppy",
+      "myakura",
+      "bitinn",
+      "trevorh",
+      "mnoorenberghe",
+      "Marsf",
+      "Jürgen Jeka"
+    ]
+  },
+  "Web/CSS/Reference/Values/revert": {
+    "modified": "2020-12-01T01:19:10.242Z",
+    "contributors": [
+      "runn1ng",
+      "phanos",
+      "xinnhui",
+      "elias6",
+      "Nux",
+      "chrisdavidmills",
+      "bgs99",
+      "Sheppy",
+      "fscholz",
+      "HTMLValidator",
+      "mfluehr",
+      "ebidel",
+      "teoli",
+      "cvrebert",
+      "yisibl",
+      "Sebastianz"
+    ]
+  },
+  "Web/CSS/Reference/Values/shape": {
+    "modified": "2020-10-15T21:10:26.057Z",
+    "contributors": [
+      "rachelandrew",
+      "wbamberg",
+      "mfluehr",
+      "fscholz",
+      "teoli",
+      "Prinz_Rana",
+      "astatine211",
+      "kscarfone",
+      "Sheppy",
+      "McGurk",
+      "rkawaguchi@mozilla.com",
+      "BijuGC"
+    ]
+  },
+  "Web/CSS/Reference/Values/string": {
+    "modified": "2020-10-15T21:10:29.888Z",
+    "contributors": [
+      "rachelandrew",
+      "wbamberg",
+      "brasmon8351",
+      "alattalatta",
+      "An-Error94",
+      "mfuji09",
+      "ExE-Boss",
+      "mupple",
+      "estelle",
+      "mfluehr",
+      "fscholz",
+      "Sebastianz",
+      "teoli",
+      "kscarfone",
+      "FredB",
+      "Sheppy",
+      "McGurk",
+      "BijuGC"
+    ]
+  },
+  "Web/CSS/Reference/Values/time": {
+    "modified": "2020-12-14T10:49:50.015Z",
+    "contributors": [
+      "rachelandrew",
+      "wbamberg",
+      "fscholz",
+      "jpmedley",
+      "mfluehr",
+      "xfq",
+      "Sebastianz",
+      "moali1.",
+      "Prinz_Rana",
+      "Jeremie",
+      "teoli",
+      "kscarfone",
+      "FredB",
+      "Cust0dian",
+      "Sheppy",
+      "tregagnon",
+      "Huan",
+      "TabAtkins",
+      "McGurk"
+    ]
+  },
+  "Web/CSS/Reference/Values/time-percentage": {
+    "modified": "2020-12-14T06:50:03.783Z",
+    "contributors": ["rachelandrew", "chrisdavidmills", "wbamberg", "mfuji09"]
+  },
+  "Web/CSS/Reference/Values/transform-function": {
+    "modified": "2020-11-03T17:16:33.777Z",
+    "contributors": [
+      "ramiy",
+      "chrisdavidmills",
+      "wbamberg",
+      "mfluehr",
+      "bernardirfan",
+      "Sebastianz",
+      "komalbharadiya",
+      "wise",
+      "mfuji09",
+      "fscholz",
+      "ExE-Boss",
+      "draccicgeb",
+      "mrstork",
+      "SphinxKnight",
+      "medifle",
+      "beneb",
+      "Sheppy",
+      "panqiuhui",
+      "R3IDV3",
+      "teoli",
+      "kscarfone",
+      "Kwan",
+      "Saviio",
+      "y0ssar1an",
+      "YepoMax",
+      "nickspiel",
+      "MartinRinehart",
+      "velvel53",
+      "maybe",
+      "ethertank",
+      "DavidBradbury"
+    ]
+  },
+  "Web/CSS/Reference/Values/transform-function/matrix": {
+    "modified": "2020-11-18T05:54:00.147Z",
+    "contributors": [
+      "rachelandrew",
+      "chrisdavidmills",
+      "ramiy",
+      "wbamberg",
+      "mfuji09",
+      "Sebastianz",
+      "komalbharadiya",
+      "mfluehr",
+      "fta2012",
+      "mrstork",
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Values/transform-function/matrix3d": {
+    "modified": "2020-11-18T05:54:30.569Z",
+    "contributors": [
+      "rachelandrew",
+      "chrisdavidmills",
+      "ramiy",
+      "wbamberg",
+      "stevenvachon",
+      "mfluehr",
+      "fscholz",
+      "hinell",
+      "mfuji09",
+      "Sebastianz",
+      "mrstork",
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Values/transform-function/perspective": {
+    "modified": "2020-11-18T05:54:56.899Z",
+    "contributors": [
+      "rachelandrew",
+      "chrisdavidmills",
+      "ramiy",
+      "wbamberg",
+      "JakeParis",
+      "codercanvas",
+      "mfuji09",
+      "estelle",
+      "komalbharadiya",
+      "1056237661",
+      "sponia-joker",
+      "mfluehr",
+      "JSideris",
+      "Sebastianz",
+      "mrstork",
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Values/transform-function/rotate": {
+    "modified": "2020-11-19T16:05:02.344Z",
+    "contributors": [
+      "chrisdavidmills",
+      "rachelandrew",
+      "ramiy",
+      "wbamberg",
+      "Sheppy",
+      "mfuji09",
+      "Sebastianz",
+      "komalbharadiya",
+      "mfluehr",
+      "khs",
+      "prayash",
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Values/transform-function/rotate3d": {
+    "modified": "2020-11-19T16:07:00.565Z",
+    "contributors": [
+      "chrisdavidmills",
+      "rachelandrew",
+      "ramiy",
+      "wbamberg",
+      "mfuji09",
+      "komalbharadiya",
+      "AozakiOrenji",
+      "mfluehr",
+      "khs",
+      "trusktr",
+      "Sebastianz",
+      "Druzion",
+      "moali1.",
+      "prayash",
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Values/transform-function/rotateX": {
+    "modified": "2020-11-19T16:08:47.625Z",
+    "contributors": [
+      "chrisdavidmills",
+      "rachelandrew",
+      "ramiy",
+      "wbamberg",
+      "mfuji09",
+      "komalbharadiya",
+      "mfluehr",
+      "Sebastianz",
+      "prayash",
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Values/transform-function/rotateY": {
+    "modified": "2020-11-19T16:09:45.046Z",
+    "contributors": [
+      "chrisdavidmills",
+      "rachelandrew",
+      "ramiy",
+      "wbamberg",
+      "mfuji09",
+      "komalbharadiya",
+      "mfluehr",
+      "Sheppy",
+      "Sebastianz",
+      "prayash",
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Values/transform-function/rotateZ": {
+    "modified": "2020-11-30T10:07:19.818Z",
+    "contributors": [
+      "chrisdavidmills",
+      "rachelandrew",
+      "ramiy",
+      "wbamberg",
+      "mfuji09",
+      "komalbharadiya",
+      "andrewkshim",
+      "mfluehr",
+      "Sebastianz",
+      "Thr1ve",
+      "prayash",
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Values/transform-function/scale": {
+    "modified": "2020-11-30T10:15:19.703Z",
+    "contributors": [
+      "chrisdavidmills",
+      "rachelandrew",
+      "ramiy",
+      "wbamberg",
+      "mfuji09",
+      "Sheppy",
+      "komalbharadiya",
+      "mfluehr",
+      "jpaugh",
+      "Sebastianz",
+      "Jack-Q",
+      "knod",
+      "moali1.",
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Values/transform-function/scale3d": {
+    "modified": "2020-11-30T10:19:05.109Z",
+    "contributors": [
+      "chrisdavidmills",
+      "rachelandrew",
+      "ramiy",
+      "wbamberg",
+      "estelle",
+      "komalbharadiya",
+      "mfluehr",
+      "Sebastianz",
+      "moali1.",
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Values/transform-function/scaleX": {
+    "modified": "2020-11-30T10:20:23.369Z",
+    "contributors": [
+      "chrisdavidmills",
+      "rachelandrew",
+      "ramiy",
+      "wbamberg",
+      "estelle",
+      "komalbharadiya",
+      "mfluehr",
+      "Sebastianz",
+      "Youmoo",
+      "moali1.",
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Values/transform-function/scaleY": {
+    "modified": "2020-11-30T10:21:36.495Z",
+    "contributors": [
+      "chrisdavidmills",
+      "rachelandrew",
+      "ramiy",
+      "wbamberg",
+      "estelle",
+      "komalbharadiya",
+      "xgqfrms",
+      "mfluehr",
+      "Sebastianz",
+      "moali1.",
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Values/transform-function/scaleZ": {
+    "modified": "2020-11-30T10:23:25.872Z",
+    "contributors": [
+      "chrisdavidmills",
+      "rachelandrew",
+      "ramiy",
+      "wbamberg",
+      "estelle",
+      "Sebastianz",
+      "komalbharadiya",
+      "mfluehr",
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Values/transform-function/skew": {
+    "modified": "2020-11-30T10:25:32.194Z",
+    "contributors": [
+      "chrisdavidmills",
+      "rachelandrew",
+      "ramiy",
+      "wbamberg",
+      "mfuji09",
+      "komalbharadiya",
+      "mfluehr",
+      "Sebastianz",
+      "prayash",
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Values/transform-function/skewX": {
+    "modified": "2020-11-30T10:27:02.414Z",
+    "contributors": [
+      "chrisdavidmills",
+      "rachelandrew",
+      "ramiy",
+      "wbamberg",
+      "mfuji09",
+      "komalbharadiya",
+      "mfluehr",
+      "Sebastianz",
+      "prayash",
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Values/transform-function/skewY": {
+    "modified": "2020-11-30T10:28:03.752Z",
+    "contributors": [
+      "chrisdavidmills",
+      "rachelandrew",
+      "ramiy",
+      "wbamberg",
+      "mfuji09",
+      "komalbharadiya",
+      "mfluehr",
+      "Sebastianz",
+      "prayash",
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Values/transform-function/translate": {
+    "modified": "2020-12-02T12:06:17.494Z",
+    "contributors": [
+      "cdoublev",
+      "chrisdavidmills",
+      "rachelandrew",
+      "ramiy",
+      "wbamberg",
+      "Konrud",
+      "Sebastianz",
+      "Sheppy",
+      "estelle",
+      "komalbharadiya",
+      "mfluehr",
+      "trrapp12",
+      "mrstork",
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Values/transform-function/translate3d": {
+    "modified": "2020-11-30T12:55:57.164Z",
+    "contributors": [
+      "chrisdavidmills",
+      "rachelandrew",
+      "ramiy",
+      "wbamberg",
+      "mfuji09",
+      "Sheppy",
+      "Sebastianz",
+      "komalbharadiya",
+      "mfluehr",
+      "mrstork",
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Values/transform-function/translateX": {
+    "modified": "2020-12-11T16:52:10.696Z",
+    "contributors": [
+      "Johuspect",
+      "rachelandrew",
+      "ramiy",
+      "wbamberg",
+      "Sebastianz",
+      "estelle",
+      "komalbharadiya",
+      "mfluehr",
+      "chrisdavidmills",
+      "Sheppy",
+      "SphinxKnight",
+      "xjlin",
+      "mrstork",
+      "jsx",
+      "teoli"
+    ]
+  },
+  "Web/CSS/Reference/Values/transform-function/translateY": {
+    "modified": "2020-12-11T16:15:25.160Z",
+    "contributors": [
+      "chrisdavidmills",
+      "rachelandrew",
+      "ramiy",
+      "wbamberg",
+      "Sebastianz",
+      "estelle",
+      "komalbharadiya",
+      "mfluehr",
+      "mrstork",
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Values/transform-function/translateZ": {
+    "modified": "2020-12-11T16:48:46.593Z",
+    "contributors": [
+      "chrisdavidmills",
+      "rachelandrew",
+      "mfuji09",
+      "ramiy",
+      "wbamberg",
+      "estelle",
+      "mfluehr",
+      "Sheppy",
+      "Sebastianz",
+      "mrstork",
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Values/unset": {
+    "modified": "2020-10-15T21:25:43.482Z",
+    "contributors": [
+      "mfuji09",
+      "wbamberg",
+      "OtterOne",
+      "olehhusiev",
+      "Sheppy",
+      "fscholz",
+      "mfluehr",
+      "xfq",
+      "jrencz",
+      "Krinkle",
+      "RedLucas",
+      "cvrebert",
+      "f0086",
+      "Sebastianz",
+      "myakura",
+      "teoli"
+    ]
+  },
+  "Web/CSS/Reference/Values/url_value": {
+    "modified": "2020-12-11T11:18:33.507Z",
+    "contributors": [
+      "rachelandrew",
+      "chrisdavidmills",
+      "ramiy",
+      "wbamberg",
+      "mfuji09",
+      "Kaiido",
+      "paul-go",
+      "GuyLewin",
+      "estelle"
+    ]
+  },
+  "Web/CSS/Reference/Webkit_extensions": {
+    "modified": "2020-10-05T04:22:03.202Z",
+    "contributors": [
+      "rachelandrew",
+      "wbamberg",
+      "Malvoz",
+      "estelle",
+      "mfluehr",
+      "ExE-Boss",
+      "Sheppy",
+      "mfuji09",
+      "upsuper",
+      "tobias47n9e",
+      "Sebastianz",
+      "teoli",
+      "yisibl",
+      "teo1978",
+      "y0ssar1an",
+      "abdullahasseiri",
+      "aneesh.mb",
+      "Rob W",
+      "Jeremie",
+      "Inkbug",
+      "ziyunfei"
+    ]
+  },
+  "Web/CSS/Tutorials": {
+    "modified": "2020-04-27T22:31:52.172Z",
+    "contributors": ["mfluehr", "kscarfone", "Sheppy", "teoli", "robwala"]
+  },
+  "Web/CSS/Visual_formatting_model": {
+    "modified": "2020-09-05T23:17:19.677Z",
+    "contributors": [
+      "mfuji09",
+      "wbamberg",
+      "j9t",
+      "Konrud",
+      "chrisdavidmills",
+      "rachelandrew",
+      "LurN",
+      "ishan123456789",
+      "andreaswachowski",
+      "VladPavel15",
+      "mikkelrd",
+      "mfluehr",
+      "mustafasalah",
+      "david_ross",
+      "Levenson",
+      "jacklj",
+      "manavm1990",
+      "codingplayboy",
+      "jichao",
+      "BychekRU",
+      "YoutaoXing",
+      "rolfedh",
+      "jackarmley",
+      "zhen-w",
+      "NicBright",
+      "teoli",
+      "xfq",
+      "arigoldx",
+      "zhanglun",
+      "denised",
+      "AprilMorone",
+      "adrianocastro",
+      "Jeremie",
+      "Naesten",
+      "ZhoraVdB",
+      "maybe",
+      "Sheppy",
+      "ethertank",
+      "Dholbert"
+    ]
+  },
+  "Web/CSS/attr": {
+    "modified": "2020-11-04T08:51:17.860Z",
+    "contributors": [
+      "chrisdavidmills",
+      "ramiy",
+      "wbamberg",
+      "mfuji09",
+      "xiaochengh",
+      "valtlai",
+      "WebMechanic",
+      "Mookiepiece",
+      "QuentinA",
+      "jpmedley",
+      "ExE-Boss",
+      "torazaburo",
+      "xgqfrms-GitHub",
+      "fscholz",
+      "mfluehr",
+      "Sebastianz",
+      "erikadoyle",
+      "mrstork",
+      "prayash",
+      "jrencz",
+      "teoli",
+      "jwhitlock",
+      "Loiro",
+      "visiongeist",
+      "Bzbarsky",
+      "tregagnon",
+      "kscarfone",
+      "Sheppy",
+      "mattbasta",
+      "arhayward",
+      "m_gol",
+      "ethertank",
+      "McGurk"
+    ]
+  },
+  "Web/CSS/calc": {
+    "modified": "2020-11-04T09:07:52.492Z",
+    "contributors": [
+      "chrisdavidmills",
+      "ramiy",
+      "wbamberg",
+      "brookjordan",
+      "mfuji09",
+      "r-i-c-h",
+      "alattalatta",
+      "v-python",
+      "Sheppy",
+      "rtfeldman",
+      "kevinlg",
+      "ericwbailey",
+      "fscholz",
+      "mfluehr",
+      "Melvin",
+      "erikadoyle",
+      "Sebastianz",
+      "kongkx",
+      "teoli",
+      "yisibl",
+      "ziyunfei",
+      "rolfedh",
+      "tomalec",
+      "mrstork",
+      "prayash",
+      "gapple",
+      "jsx",
+      "Odd3r",
+      "raselmahmud",
+      "Francois06",
+      "nhoizey",
+      "kscarfone",
+      "bigbossSNK",
+      "Nox",
+      "matt.kantor",
+      "mattbrundage",
+      "m_gol",
+      "ethertank",
+      "trevorh",
+      "FredB",
+      "jswisher",
+      "Jürgen Jeka",
+      "sprt",
+      "ebidel",
+      "Glazou",
+      "livingston"
+    ]
+  },
+  "Web/CSS/clamp": {
+    "modified": "2020-12-13T22:34:13.391Z",
+    "contributors": [
+      "sideshowbarker",
+      "chrisdavidmills",
+      "ramiy",
+      "wbamberg",
+      "jswisher",
+      "rhlowe",
+      "mfuji09",
+      "missmatsuko",
+      "ExE-Boss",
+      "estelle"
+    ]
+  },
+  "Web/CSS/counter": {
+    "modified": "2020-11-09T07:17:56.455Z",
+    "contributors": [
+      "chrisdavidmills",
+      "ramiy",
+      "myf",
+      "mfuji09",
+      "wbamberg",
+      "rachelandrew",
+      "xfq",
+      "anonyco",
+      "estelle"
+    ]
+  },
+  "Web/CSS/counters": {
+    "modified": "2020-11-09T07:19:10.542Z",
+    "contributors": [
+      "chrisdavidmills",
+      "ramiy",
+      "mfuji09",
+      "wbamberg",
+      "rachelandrew",
+      "xfq",
+      "estelle"
+    ]
+  },
+  "Web/CSS/cross-fade": {
+    "modified": "2020-11-09T07:22:01.145Z",
+    "contributors": [
+      "chrisdavidmills",
+      "ramiy",
+      "HTMLValidator",
+      "mfuji09",
+      "wbamberg",
+      "arshadrr",
+      "aardrian",
+      "ddbeck",
+      "estelle",
+      "SphinxKnight",
+      "Sebastianz"
+    ]
+  },
+  "Web/CSS/element": {
+    "modified": "2020-11-10T11:00:46.628Z",
+    "contributors": [
+      "chrisdavidmills",
+      "ramiy",
+      "wbamberg",
+      "mfuji09",
+      "estelle",
+      "fscholz",
+      "mfluehr",
+      "wizAmit",
+      "jwhitlock",
+      "heea",
+      "m_gol",
+      "kscarfone",
+      "Sheppy",
+      "teoli",
+      "Alexei03a",
+      "ethertank",
+      "brianloveswords",
+      "ebidel",
+      "BijuGC"
+    ]
+  },
+  "Web/CSS/env": {
+    "modified": "2020-11-10T11:09:18.411Z",
+    "contributors": [
+      "chrisdavidmills",
+      "ramiy",
+      "wbamberg",
+      "ExE-Boss",
+      "equinusocio",
+      "mfuji09",
+      "chayeoi",
+      "theSdev",
+      "mfluehr",
+      "spjpgrd",
+      "Rondinelly",
+      "pldz",
+      "estelle",
+      "Sheppy",
+      "jhpratt",
+      "nhoizey"
+    ]
+  },
+  "Web/CSS/fit-content_function": {
+    "modified": "2020-11-27T16:21:05.359Z",
+    "contributors": ["rachelandrew", "chrisdavidmills", "escattone"]
   },
   "Web/CSS/max": {
     "modified": "2020-12-13T23:18:36.280Z",
@@ -89407,92 +89990,6 @@
       "Sebastianz"
     ]
   },
-  "Web/CSS/number": {
-    "modified": "2020-10-15T21:10:27.983Z",
-    "contributors": [
-      "wbamberg",
-      "rachelandrew",
-      "ExE-Boss",
-      "fscholz",
-      "mfluehr",
-      "Sebastianz",
-      "ConorOB",
-      "teoli",
-      "P0lip",
-      "KyliRouge",
-      "guillaume.s",
-      "kscarfone",
-      "Sheppy",
-      "ethertank",
-      "Marsf",
-      "Mgjbot",
-      "BijuGC",
-      "Kohei"
-    ]
-  },
-  "Web/CSS/percentage": {
-    "modified": "2020-12-14T06:48:33.216Z",
-    "contributors": [
-      "rachelandrew",
-      "wbamberg",
-      "mfluehr",
-      "ExE-Boss",
-      "fscholz",
-      "Sebastianz",
-      "moali1.",
-      "Prinz_Rana",
-      "hashedhyphen",
-      "jswisher",
-      "sudheerDev",
-      "jsx",
-      "noe132",
-      "teoli",
-      "kscarfone",
-      "roryokane",
-      "zziccardi",
-      "Sheppy",
-      "gregtyler",
-      "myakura",
-      "Mgjbot",
-      "BijuGC"
-    ]
-  },
-  "Web/CSS/position_value": {
-    "modified": "2020-10-15T21:19:10.360Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg",
-      "sideshowbarker",
-      "chrisdavidmills",
-      "rachelandrew",
-      "estelle",
-      "ericwilligers",
-      "fscholz",
-      "mfluehr",
-      "mrstork",
-      "zhenlilu2003",
-      "Sebastianz",
-      "teoli",
-      "kscarfone",
-      "Sheppy",
-      "majensen1"
-    ]
-  },
-  "Web/CSS/ratio": {
-    "modified": "2020-10-15T21:10:32.599Z",
-    "contributors": [
-      "wbamberg",
-      "rachelandrew",
-      "fscholz",
-      "mfluehr",
-      "Sebastianz",
-      "teoli",
-      "kscarfone",
-      "velvel53",
-      "Sheppy",
-      "FredB"
-    ]
-  },
   "Web/CSS/repeat": {
     "modified": "2020-11-18T14:44:09.005Z",
     "contributors": [
@@ -89508,75 +90005,6 @@
       "Sebastianz"
     ]
   },
-  "Web/CSS/resolution": {
-    "modified": "2020-10-15T21:08:57.270Z",
-    "contributors": [
-      "wbamberg",
-      "estelle",
-      "ExE-Boss",
-      "fscholz",
-      "mfluehr",
-      "zbjornson",
-      "Sebastianz",
-      "Prinz_Rana",
-      "grigs",
-      "trusktr",
-      "spleen387",
-      "paul.gaske",
-      "teoli",
-      "kscarfone",
-      "alberts+",
-      "FredB",
-      "ethertank",
-      "Sheppy",
-      "myakura",
-      "bitinn",
-      "trevorh",
-      "mnoorenberghe",
-      "Marsf",
-      "Jürgen Jeka"
-    ]
-  },
-  "Web/CSS/shape": {
-    "modified": "2020-10-15T21:10:26.057Z",
-    "contributors": [
-      "rachelandrew",
-      "wbamberg",
-      "mfluehr",
-      "fscholz",
-      "teoli",
-      "Prinz_Rana",
-      "astatine211",
-      "kscarfone",
-      "Sheppy",
-      "McGurk",
-      "rkawaguchi@mozilla.com",
-      "BijuGC"
-    ]
-  },
-  "Web/CSS/string": {
-    "modified": "2020-10-15T21:10:29.888Z",
-    "contributors": [
-      "rachelandrew",
-      "wbamberg",
-      "brasmon8351",
-      "alattalatta",
-      "An-Error94",
-      "mfuji09",
-      "ExE-Boss",
-      "mupple",
-      "estelle",
-      "mfluehr",
-      "fscholz",
-      "Sebastianz",
-      "teoli",
-      "kscarfone",
-      "FredB",
-      "Sheppy",
-      "McGurk",
-      "BijuGC"
-    ]
-  },
   "Web/CSS/symbols": {
     "modified": "2020-11-30T10:29:16.600Z",
     "contributors": [
@@ -89587,434 +90015,6 @@
       "mfluehr",
       "teoli",
       "jsx"
-    ]
-  },
-  "Web/CSS/time": {
-    "modified": "2020-12-14T10:49:50.015Z",
-    "contributors": [
-      "rachelandrew",
-      "wbamberg",
-      "fscholz",
-      "jpmedley",
-      "mfluehr",
-      "xfq",
-      "Sebastianz",
-      "moali1.",
-      "Prinz_Rana",
-      "Jeremie",
-      "teoli",
-      "kscarfone",
-      "FredB",
-      "Cust0dian",
-      "Sheppy",
-      "tregagnon",
-      "Huan",
-      "TabAtkins",
-      "McGurk"
-    ]
-  },
-  "Web/CSS/time-percentage": {
-    "modified": "2020-12-14T06:50:03.783Z",
-    "contributors": ["rachelandrew", "chrisdavidmills", "wbamberg", "mfuji09"]
-  },
-  "Web/CSS/transform-function": {
-    "modified": "2020-11-03T17:16:33.777Z",
-    "contributors": [
-      "ramiy",
-      "chrisdavidmills",
-      "wbamberg",
-      "mfluehr",
-      "bernardirfan",
-      "Sebastianz",
-      "komalbharadiya",
-      "wise",
-      "mfuji09",
-      "fscholz",
-      "ExE-Boss",
-      "draccicgeb",
-      "mrstork",
-      "SphinxKnight",
-      "medifle",
-      "beneb",
-      "Sheppy",
-      "panqiuhui",
-      "R3IDV3",
-      "teoli",
-      "kscarfone",
-      "Kwan",
-      "Saviio",
-      "y0ssar1an",
-      "YepoMax",
-      "nickspiel",
-      "MartinRinehart",
-      "velvel53",
-      "maybe",
-      "ethertank",
-      "DavidBradbury"
-    ]
-  },
-  "Web/CSS/transform-function/matrix": {
-    "modified": "2020-11-18T05:54:00.147Z",
-    "contributors": [
-      "rachelandrew",
-      "chrisdavidmills",
-      "ramiy",
-      "wbamberg",
-      "mfuji09",
-      "Sebastianz",
-      "komalbharadiya",
-      "mfluehr",
-      "fta2012",
-      "mrstork",
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/transform-function/matrix3d": {
-    "modified": "2020-11-18T05:54:30.569Z",
-    "contributors": [
-      "rachelandrew",
-      "chrisdavidmills",
-      "ramiy",
-      "wbamberg",
-      "stevenvachon",
-      "mfluehr",
-      "fscholz",
-      "hinell",
-      "mfuji09",
-      "Sebastianz",
-      "mrstork",
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/transform-function/perspective": {
-    "modified": "2020-11-18T05:54:56.899Z",
-    "contributors": [
-      "rachelandrew",
-      "chrisdavidmills",
-      "ramiy",
-      "wbamberg",
-      "JakeParis",
-      "codercanvas",
-      "mfuji09",
-      "estelle",
-      "komalbharadiya",
-      "1056237661",
-      "sponia-joker",
-      "mfluehr",
-      "JSideris",
-      "Sebastianz",
-      "mrstork",
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/transform-function/rotate": {
-    "modified": "2020-11-19T16:05:02.344Z",
-    "contributors": [
-      "chrisdavidmills",
-      "rachelandrew",
-      "ramiy",
-      "wbamberg",
-      "Sheppy",
-      "mfuji09",
-      "Sebastianz",
-      "komalbharadiya",
-      "mfluehr",
-      "khs",
-      "prayash",
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/transform-function/rotate3d": {
-    "modified": "2020-11-19T16:07:00.565Z",
-    "contributors": [
-      "chrisdavidmills",
-      "rachelandrew",
-      "ramiy",
-      "wbamberg",
-      "mfuji09",
-      "komalbharadiya",
-      "AozakiOrenji",
-      "mfluehr",
-      "khs",
-      "trusktr",
-      "Sebastianz",
-      "Druzion",
-      "moali1.",
-      "prayash",
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/transform-function/rotateX": {
-    "modified": "2020-11-19T16:08:47.625Z",
-    "contributors": [
-      "chrisdavidmills",
-      "rachelandrew",
-      "ramiy",
-      "wbamberg",
-      "mfuji09",
-      "komalbharadiya",
-      "mfluehr",
-      "Sebastianz",
-      "prayash",
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/transform-function/rotateY": {
-    "modified": "2020-11-19T16:09:45.046Z",
-    "contributors": [
-      "chrisdavidmills",
-      "rachelandrew",
-      "ramiy",
-      "wbamberg",
-      "mfuji09",
-      "komalbharadiya",
-      "mfluehr",
-      "Sheppy",
-      "Sebastianz",
-      "prayash",
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/transform-function/rotateZ": {
-    "modified": "2020-11-30T10:07:19.818Z",
-    "contributors": [
-      "chrisdavidmills",
-      "rachelandrew",
-      "ramiy",
-      "wbamberg",
-      "mfuji09",
-      "komalbharadiya",
-      "andrewkshim",
-      "mfluehr",
-      "Sebastianz",
-      "Thr1ve",
-      "prayash",
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/transform-function/scale": {
-    "modified": "2020-11-30T10:15:19.703Z",
-    "contributors": [
-      "chrisdavidmills",
-      "rachelandrew",
-      "ramiy",
-      "wbamberg",
-      "mfuji09",
-      "Sheppy",
-      "komalbharadiya",
-      "mfluehr",
-      "jpaugh",
-      "Sebastianz",
-      "Jack-Q",
-      "knod",
-      "moali1.",
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/transform-function/scale3d": {
-    "modified": "2020-11-30T10:19:05.109Z",
-    "contributors": [
-      "chrisdavidmills",
-      "rachelandrew",
-      "ramiy",
-      "wbamberg",
-      "estelle",
-      "komalbharadiya",
-      "mfluehr",
-      "Sebastianz",
-      "moali1.",
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/transform-function/scaleX": {
-    "modified": "2020-11-30T10:20:23.369Z",
-    "contributors": [
-      "chrisdavidmills",
-      "rachelandrew",
-      "ramiy",
-      "wbamberg",
-      "estelle",
-      "komalbharadiya",
-      "mfluehr",
-      "Sebastianz",
-      "Youmoo",
-      "moali1.",
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/transform-function/scaleY": {
-    "modified": "2020-11-30T10:21:36.495Z",
-    "contributors": [
-      "chrisdavidmills",
-      "rachelandrew",
-      "ramiy",
-      "wbamberg",
-      "estelle",
-      "komalbharadiya",
-      "xgqfrms",
-      "mfluehr",
-      "Sebastianz",
-      "moali1.",
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/transform-function/scaleZ": {
-    "modified": "2020-11-30T10:23:25.872Z",
-    "contributors": [
-      "chrisdavidmills",
-      "rachelandrew",
-      "ramiy",
-      "wbamberg",
-      "estelle",
-      "Sebastianz",
-      "komalbharadiya",
-      "mfluehr",
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/transform-function/skew": {
-    "modified": "2020-11-30T10:25:32.194Z",
-    "contributors": [
-      "chrisdavidmills",
-      "rachelandrew",
-      "ramiy",
-      "wbamberg",
-      "mfuji09",
-      "komalbharadiya",
-      "mfluehr",
-      "Sebastianz",
-      "prayash",
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/transform-function/skewX": {
-    "modified": "2020-11-30T10:27:02.414Z",
-    "contributors": [
-      "chrisdavidmills",
-      "rachelandrew",
-      "ramiy",
-      "wbamberg",
-      "mfuji09",
-      "komalbharadiya",
-      "mfluehr",
-      "Sebastianz",
-      "prayash",
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/transform-function/skewY": {
-    "modified": "2020-11-30T10:28:03.752Z",
-    "contributors": [
-      "chrisdavidmills",
-      "rachelandrew",
-      "ramiy",
-      "wbamberg",
-      "mfuji09",
-      "komalbharadiya",
-      "mfluehr",
-      "Sebastianz",
-      "prayash",
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/transform-function/translate": {
-    "modified": "2020-12-02T12:06:17.494Z",
-    "contributors": [
-      "cdoublev",
-      "chrisdavidmills",
-      "rachelandrew",
-      "ramiy",
-      "wbamberg",
-      "Konrud",
-      "Sebastianz",
-      "Sheppy",
-      "estelle",
-      "komalbharadiya",
-      "mfluehr",
-      "trrapp12",
-      "mrstork",
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/transform-function/translate3d": {
-    "modified": "2020-11-30T12:55:57.164Z",
-    "contributors": [
-      "chrisdavidmills",
-      "rachelandrew",
-      "ramiy",
-      "wbamberg",
-      "mfuji09",
-      "Sheppy",
-      "Sebastianz",
-      "komalbharadiya",
-      "mfluehr",
-      "mrstork",
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/transform-function/translateX": {
-    "modified": "2020-12-11T16:52:10.696Z",
-    "contributors": [
-      "Johuspect",
-      "rachelandrew",
-      "ramiy",
-      "wbamberg",
-      "Sebastianz",
-      "estelle",
-      "komalbharadiya",
-      "mfluehr",
-      "chrisdavidmills",
-      "Sheppy",
-      "SphinxKnight",
-      "xjlin",
-      "mrstork",
-      "jsx",
-      "teoli"
-    ]
-  },
-  "Web/CSS/transform-function/translateY": {
-    "modified": "2020-12-11T16:15:25.160Z",
-    "contributors": [
-      "chrisdavidmills",
-      "rachelandrew",
-      "ramiy",
-      "wbamberg",
-      "Sebastianz",
-      "estelle",
-      "komalbharadiya",
-      "mfluehr",
-      "mrstork",
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/transform-function/translateZ": {
-    "modified": "2020-12-11T16:48:46.593Z",
-    "contributors": [
-      "chrisdavidmills",
-      "rachelandrew",
-      "mfuji09",
-      "ramiy",
-      "wbamberg",
-      "estelle",
-      "mfluehr",
-      "Sheppy",
-      "Sebastianz",
-      "mrstork",
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/url_value": {
-    "modified": "2020-12-11T11:18:33.507Z",
-    "contributors": [
-      "rachelandrew",
-      "chrisdavidmills",
-      "ramiy",
-      "wbamberg",
-      "mfuji09",
-      "Kaiido",
-      "paul-go",
-      "GuyLewin",
-      "estelle"
     ]
   },
   "Web/CSS/var": {
