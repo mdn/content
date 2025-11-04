@@ -29,7 +29,7 @@ The `:heading()` pseudo-class function takes a comma-separated list of {{cssxref
 
 ## Usage notes
 
-The `:heading()` functional pseudo-class matches only elements that are semantically recognized as headings. It does not match elements with a [`role="heading"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/heading_role) attribute, nor does it respect the ['aria-level'](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-level) ARIA attribute.
+The `:heading()` functional pseudo-class matches only elements that are semantically recognized as headings. It does not match elements that use [`role="heading"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/heading_role) or ['aria-level'](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-level) attributes.
 
 The heading level might be different from an element's [type selector](/en-US/docs/Web/CSS/Reference/Selectors/Type_selectors). So, a selector `h1:heading(3)` matches any `<h1>` element which has an exposed heading level of 3.
 
