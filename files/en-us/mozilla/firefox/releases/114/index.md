@@ -21,7 +21,7 @@ No notable changes.
 
 ### CSS
 
-- The [`:lang()`](/en-US/docs/Web/CSS/:lang) pseudo-class now uses string-matching semantics (including `*` wildcards) for matching language codes rather than prefix-matching semantics.
+- The [`:lang()`](/en-US/docs/Web/CSS/Reference/Selectors/:lang) pseudo-class now uses string-matching semantics (including `*` wildcards) for matching language codes rather than prefix-matching semantics.
   Additionally, comma-separated lists of languages are now supported for matching multiple languages ([Firefox bug 1121792](https://bugzil.la/1121792)).
 - The [`-webkit-text-security`](/en-US/docs/Web/CSS/Reference/Properties/-webkit-text-security) property that lets you replace characters with shapes is now supported. You can now control the rendering of text security using this property ([Firefox bug 1826629](https://bugzil.la/1826629)).
 - The `infinity` and `NaN` constants are now supported inside the [`calc()`](/en-US/docs/Web/CSS/calc) function ([Firefox bug 1830759](https://bugzil.la/1830759)).

@@ -31,10 +31,10 @@ sidebar: mdnsidebar
 >
 > - **title**
 >   - : Title heading displayed at the top of the page. Format as _:NameOfTheSelector_.
->     For example, the [`:hover`](/en-US/docs/Web/CSS/:hover) selector has a title of _:hover_.
+>     For example, the [`:hover`](/en-US/docs/Web/CSS/Reference/Selectors/:hover) selector has a title of _:hover_.
 > - **slug**
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`). This will be formatted like `Web/CSS/:NameOfTheSelector`.
->     For example, the [`:hover`](/en-US/docs/Web/CSS/:hover) selector slug is `Web/CSS/:hover`.
+>     For example, the [`:hover`](/en-US/docs/Web/CSS/Reference/Selectors/:hover) selector slug is `Web/CSS/:hover`.
 > - **page-type**
 >   - : The `page-type` key for CSS properties is one of `css-selector`, `css-pseudo-class`, or `css-pseudo-element`, depending on whether the selector is a [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes), a [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements), a [combinator](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#combinators), or a [simple selector](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#simple_selector).
 > - **status**

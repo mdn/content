@@ -20,7 +20,7 @@ This page is based largely on [https://www.squarefree.com/burningedg...eases/](h
 
 - CSS2 quotes nesting
   - : Starting with this release, the [`quotes`](/en-US/docs/Web/CSS/Reference/Properties/quotes) CSS2 property is fully supported, with the correct quote (depending on the nesting level) used for open-quote and close-quote.
-- CSS3 [`:only-child`](/en-US/docs/Web/CSS/:only-child)
+- CSS3 [`:only-child`](/en-US/docs/Web/CSS/Reference/Selectors/:only-child)
   - : This CSS3 selector allows selecting an element that has no other elements as siblings in the DOM.
 - CSS3 columns
   - : An experimental implementation of the proposed [CSS3 multicolumn layout](https://drafts.csswg.org/css-multicol/) draft. This allows easily doing newspaper-like multicolumn presentation.

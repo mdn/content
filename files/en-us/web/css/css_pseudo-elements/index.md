@@ -95,7 +95,7 @@ The specification also defines the `::details-content` and `::search-text` pseud
   - [Universal selectors](/en-US/docs/Web/CSS/Reference/Selectors/Universal_selectors)
 
 - [`placeholder`](/en-US/docs/Web/HTML/Reference/Elements/input#placeholder) attribute of the `<input>` element
-- [`:placeholder-shown`](/en-US/docs/Web/CSS/:placeholder-shown) selector
+- [`:placeholder-shown`](/en-US/docs/Web/CSS/Reference/Selectors/:placeholder-shown) selector
 
 - [CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content)
   - {{cssxref("content")}} property

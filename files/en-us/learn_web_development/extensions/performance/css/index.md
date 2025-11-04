@@ -285,7 +285,7 @@ article {
 
 ## Optimizing `:has()` selectors
 
-The {{cssxref(":has", ":has()")}} pseudo-class enables powerful selection capabilities but requires careful use to avoid performance bottlenecks. For detailed guidance on writing efficient `:has()` selectors, see [Performance considerations in the `:has()` reference documentation](/en-US/docs/Web/CSS/:has#performance_considerations).
+The {{cssxref(":has", ":has()")}} pseudo-class enables powerful selection capabilities but requires careful use to avoid performance bottlenecks. For detailed guidance on writing efficient `:has()` selectors, see [Performance considerations in the `:has()` reference documentation](/en-US/docs/Web/CSS/Reference/Selectors/:has#performance_considerations).
 
 ## See also
 

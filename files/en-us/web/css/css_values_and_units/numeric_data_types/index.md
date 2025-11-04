@@ -53,7 +53,7 @@ For example, `em` is relative to the font size on the element and `ex` is relati
 
 #### Root font-relative lengths
 
-Root font-relative lengths specify a length in relation to the element's [root element](/en-US/docs/Web/CSS/:root) ancestor, such as {{HTMLElement("HTML")}} or {{SVGElement("SVG")}}.
+Root font-relative lengths specify a length in relation to the element's [root element](/en-US/docs/Web/CSS/Reference/Selectors/:root) ancestor, such as {{HTMLElement("HTML")}} or {{SVGElement("SVG")}}.
 For example, `rem` is relative to the font size on the root element and `rex` is the x-height of the root element's font.
 
 | Unit   | Relative to                                                                                                                                 |

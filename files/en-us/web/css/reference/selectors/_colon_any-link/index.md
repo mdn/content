@@ -92,5 +92,5 @@ a:-webkit-any-link {
 - [Creating links](/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links)
 - Matches HTML elements: [`<a>`](/en-US/docs/Web/HTML/Reference/Elements/a) and [`<area>`](/en-US/docs/Web/HTML/Reference/Elements/area) with an [`href`](/en-US/docs/Web/HTML/Reference/Elements/a#href) attribute
 - Related CSS selectors:
-  - [`:visited`](/en-US/docs/Web/CSS/:visited)
-  - [`:link`](/en-US/docs/Web/CSS/:link)
+  - [`:visited`](/en-US/docs/Web/CSS/Reference/Selectors/:visited)
+  - [`:link`](/en-US/docs/Web/CSS/Reference/Selectors/:link)

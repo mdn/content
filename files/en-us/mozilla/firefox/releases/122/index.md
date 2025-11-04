@@ -85,7 +85,7 @@ These features are newly shipped in Firefox 122 but are disabled by default. To 
 
 - **Popover API:** `dom.element.popover.enabled`.
 
-  Displaying popovers on top of page content is now supported via HTML attributes or JavaScript API, including styling with the CSS [`:popover-open`](/en-US/docs/Web/CSS/:popover-open) pseudo-class and extended support for the [`::backdrop`](/en-US/docs/Web/CSS/::backdrop) pseudo-element. See the [Popover API](/en-US/docs/Web/API/Popover_API) reference for more details. ([Firefox bug 1823757](https://bugzil.la/1823757))
+  Displaying popovers on top of page content is now supported via HTML attributes or JavaScript API, including styling with the CSS [`:popover-open`](/en-US/docs/Web/CSS/Reference/Selectors/:popover-open) pseudo-class and extended support for the [`::backdrop`](/en-US/docs/Web/CSS/Reference/Selectors/::backdrop) pseudo-element. See the [Popover API](/en-US/docs/Web/API/Popover_API) reference for more details. ([Firefox bug 1823757](https://bugzil.la/1823757))
 
 - **Clipboard read and write:** `dom.events.asyncClipboard.clipboardItem`, `dom.events.asyncClipboard.readText` and `dom.events.asyncClipboard.writeText`.
 

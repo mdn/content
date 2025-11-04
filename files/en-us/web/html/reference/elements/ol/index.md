@@ -54,7 +54,7 @@ This element also accepts the [global attributes](/en-US/docs/Web/HTML/Reference
 
 ## Usage notes
 
-Typically, ordered list items display with a preceding [marker](/en-US/docs/Web/CSS/::marker), such as a number or letter.
+Typically, ordered list items display with a preceding [marker](/en-US/docs/Web/CSS/Reference/Selectors/::marker), such as a number or letter.
 
 The `<ol>` and {{HTMLElement("ul")}} (or the synonym {{HTMLElement("menu")}}) elements may nest as deeply as desired, alternating between `<ol>`, `<ul>` (or `<menu>`) as needed.
 

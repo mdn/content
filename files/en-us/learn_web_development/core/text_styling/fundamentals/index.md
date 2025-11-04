@@ -49,7 +49,7 @@ The CSS properties used to style text generally fall into two categories, which 
 - **Text layout styles**: Properties that affect the spacing and other layout features of the text, allowing manipulation of, for example, the space between lines and letters, and how the text is aligned within the content box.
 
 > [!NOTE]
-> Bear in mind that the text inside an element is all affected as one single entity. You can't select and style subsections of text unless you wrap them in an appropriate element (such as a {{htmlelement("span")}} or {{htmlelement("strong")}}), or use a text-specific pseudo-element like [`::first-letter`](/en-US/docs/Web/CSS/::first-letter) (selects the first letter of an element's text), [`::first-line`](/en-US/docs/Web/CSS/::first-line) (selects the first line of an element's text), or [`::selection`](/en-US/docs/Web/CSS/::selection) (selects the text currently highlighted by the cursor).
+> Bear in mind that the text inside an element is all affected as one single entity. You can't select and style subsections of text unless you wrap them in an appropriate element (such as a {{htmlelement("span")}} or {{htmlelement("strong")}}), or use a text-specific pseudo-element like [`::first-letter`](/en-US/docs/Web/CSS/Reference/Selectors/::first-letter) (selects the first letter of an element's text), [`::first-line`](/en-US/docs/Web/CSS/Reference/Selectors/::first-line) (selects the first line of an element's text), or [`::selection`](/en-US/docs/Web/CSS/Reference/Selectors/::selection) (selects the text currently highlighted by the cursor).
 
 ## Fonts
 

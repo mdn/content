@@ -148,7 +148,7 @@ On the other hand, if your `@keyframes` rule contains more than just the start a
 
 ### Controlling specificity
 
-If possible, avoid surprises for increasing or decreasing specificity, such as overusing the [`:where()`](/en-US/docs/Web/CSS/:where) pseudo-class or duplicating selectors. Instead, consider the following techniques to manage specificity:
+If possible, avoid surprises for increasing or decreasing specificity, such as overusing the [`:where()`](/en-US/docs/Web/CSS/Reference/Selectors/:where) pseudo-class or duplicating selectors. Instead, consider the following techniques to manage specificity:
 
 - Changing the order of declarations to take advantage of the cascade
 - Rearranging properties in each declaration such that they don't override each other

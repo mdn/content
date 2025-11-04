@@ -27,7 +27,7 @@ The `:has()` pseudo-class takes on the [specificity](/en-US/docs/Web/CSS/CSS_cas
 }
 ```
 
-If the `:has()` pseudo-class itself is not supported in a browser, the entire selector block will fail unless `:has()` is in a forgiving selector list, such as in [`:is()`](/en-US/docs/Web/CSS/:is) and [`:where()`](/en-US/docs/Web/CSS/:where).
+If the `:has()` pseudo-class itself is not supported in a browser, the entire selector block will fail unless `:has()` is in a forgiving selector list, such as in [`:is()`](/en-US/docs/Web/CSS/Reference/Selectors/:is) and [`:where()`](/en-US/docs/Web/CSS/Reference/Selectors/:where).
 
 The `:has()` pseudo-class cannot be nested within another `:has()`.
 
@@ -200,7 +200,7 @@ h3 {
 
 {{EmbedLiveSample('With_the_:is()_pseudo-class', 600, 170)}}
 
-Here, the first [`:is()`](/en-US/docs/Web/CSS/:is) pseudo-class is used to select any of the heading elements in the list. The second `:is()` pseudo-class is used to pass a list of next-sibling selectors as an argument to `:has()`. The `:has()` pseudo-class helps to select any `H1`, `H2`, or `H3` element that is immediately followed by (indicated by [`+`](/en-US/docs/Web/CSS/Reference/Selectors/Next-sibling_combinator)) an `H2`, `H3`, or `H4` element and the CSS rule reduces the spacing after such `H1`, `H2`, or `H3` elements.
+Here, the first [`:is()`](/en-US/docs/Web/CSS/Reference/Selectors/:is) pseudo-class is used to select any of the heading elements in the list. The second `:is()` pseudo-class is used to pass a list of next-sibling selectors as an argument to `:has()`. The `:has()` pseudo-class helps to select any `H1`, `H2`, or `H3` element that is immediately followed by (indicated by [`+`](/en-US/docs/Web/CSS/Reference/Selectors/Next-sibling_combinator)) an `H2`, `H3`, or `H4` element and the CSS rule reduces the spacing after such `H1`, `H2`, or `H3` elements.
 
 This selector could have also been written as:
 
@@ -335,7 +335,7 @@ Constraining the inner selector with specific classes or direct child combinator
 
 ## See also
 
-- [`:is()`](/en-US/docs/Web/CSS/:is), [`:where()`](/en-US/docs/Web/CSS/:where), [`:not()`](/en-US/docs/Web/CSS/:not)
+- [`:is()`](/en-US/docs/Web/CSS/Reference/Selectors/:is), [`:where()`](/en-US/docs/Web/CSS/Reference/Selectors/:where), [`:not()`](/en-US/docs/Web/CSS/Reference/Selectors/:not)
 - [CSS selectors and combinators](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators)
 - [CSS selector structure](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure)
 - [Selector list](/en-US/docs/Web/CSS/Reference/Selectors/Selector_list)

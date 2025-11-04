@@ -52,7 +52,7 @@ Font lengths define the `<length>` value in terms of the size of a particular ch
 
 ### Relative length units based on root element's font
 
-Root element font relative length units define the `<length>` value in terms of the size of a particular character or font attribute of the [root](/en-US/docs/Web/CSS/:root) element:
+Root element font relative length units define the `<length>` value in terms of the size of a particular character or font attribute of the [root](/en-US/docs/Web/CSS/Reference/Selectors/:root) element:
 
 - `rcap`
   - : Equal to the "cap height" (nominal height of capital letters) of the root element's {{Cssxref("font")}}.
