@@ -61,7 +61,7 @@ The following values are allowed (servers should ignore other values):
 
 ## Examples
 
-See [Examples](http://localhost:5042/en-US/docs/Web/HTTP/Reference/Headers/Activate-Storage-Access#examples) in {{httpheader("Activate-Storage-Access")}}.
+See [Examples](/en-US/docs/Web/HTTP/Reference/Headers/Activate-Storage-Access#examples) in {{httpheader("Activate-Storage-Access")}}.
 
 ## Specifications
 
