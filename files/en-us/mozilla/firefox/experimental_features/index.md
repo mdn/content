@@ -767,11 +767,11 @@ When `Integrity-Policy` is used, the browser blocks the loading of styles refere
 - `security.integrity_policy.stylesheet.enabled`
   - : Set to `true` to enable.
 
-### Storage Access Headers
+### Storage Access headers
 
 The {{httpheader("Sec-Fetch-Storage-Access")}} and {{httpheader("Activate-Storage-Access")}} HTTP headers are now supported, enabling a more efficient [Storage Access API](/en-US/docs/Web/API/Storage_Access_API) workflow. ([Firefox bug 1991688](https://bugzil.la/1991688)).
 
-In the JavaScript-only workflow, a third party resource has to be requested and loaded in order to activate a storage-access permission for a particular context (such as a new browser tab), even if the permission has already been granted.
+In the JavaScript-only workflow, a third-party resource must be requested and loaded to activate a storage-access permission for a particular context (such as a new browser tab). This is required even if the permission has already been granted.
 The storage access headers allow the browser to advertise the permission state for the particular context, so the server can request activation of an already-granted permission.
 This avoids the overhead of unnecessarily fetching and loading the resource.
 
