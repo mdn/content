@@ -55,7 +55,7 @@ In this example, a comma-separated list of values is used to target headings at 
 }
 ```
 
-{{EmbedLiveSample("using_heading_function", "", "215")}}
+{{EmbedLiveSample("selecting_specific_heading_levels", "", "215")}}
 
 ## Specifications
 
