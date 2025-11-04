@@ -6,7 +6,7 @@ browser-compat: css.types.integer
 sidebar: cssref
 ---
 
-The **`<integer>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types) is a special type of {{cssxref("number")}} that represents a positive or negative whole number. Integers can be used in numerous CSS properties and descriptors, such as the {{cssxref("column-count")}}, {{cssxref("counter-increment")}}, {{cssxref("grid-column")}}, {{cssxref("grid-row")}}, and {{cssxref("z-index")}} properties and the {{cssxref("@counter-style/range", "range")}} descriptor.
+The **`<integer>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types) is a special type of {{cssxref("number")}} that represents a positive or negative whole number. Integers can be used in numerous CSS properties and descriptors, such as the {{cssxref("column-count")}}, {{cssxref("counter-increment")}}, {{cssxref("grid-column")}}, {{cssxref("grid-row")}}, and {{cssxref("z-index")}} properties and the {{cssxref("@counter-style/range", "range")}} descriptor.
 
 ## Syntax
 

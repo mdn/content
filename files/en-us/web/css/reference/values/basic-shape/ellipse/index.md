@@ -6,7 +6,7 @@ browser-compat: css.types.basic-shape.ellipse
 sidebar: cssref
 ---
 
-The **`ellipse()`** [CSS](/en-US/docs/Web/CSS) function is one of the {{cssxref("&lt;basic-shape&gt;")}} [data types](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types).
+The **`ellipse()`** [CSS](/en-US/docs/Web/CSS) function is one of the {{cssxref("&lt;basic-shape&gt;")}} [data types](/en-US/docs/Web/CSS/Reference/Values/Data_types).
 
 {{InteractiveExample("CSS Demo: ellipse()")}}
 

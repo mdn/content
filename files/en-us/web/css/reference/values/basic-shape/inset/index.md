@@ -6,7 +6,7 @@ browser-compat: css.types.basic-shape.inset
 sidebar: cssref
 ---
 
-The **`inset()`** [CSS](/en-US/docs/Web/CSS) function defines a rectangle at the specified inset distances from each side of the reference box. It is a basic shape function used to define one of the {{cssxref("&lt;basic-shape&gt;")}} [data types](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types).
+The **`inset()`** [CSS](/en-US/docs/Web/CSS) function defines a rectangle at the specified inset distances from each side of the reference box. It is a basic shape function used to define one of the {{cssxref("&lt;basic-shape&gt;")}} [data types](/en-US/docs/Web/CSS/Reference/Values/Data_types).
 
 {{InteractiveExample("CSS Demo: inset()")}}
 

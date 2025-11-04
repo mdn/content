@@ -73828,23 +73828,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/CSS/CSS_values_and_units/CSS_data_types": {
-    "modified": "2020-12-11T13:13:56.675Z",
-    "contributors": [
-      "rachelandrew",
-      "chrisdavidmills",
-      "ramiy",
-      "mfuji09",
-      "wbamberg",
-      "jswisher",
-      "estelle",
-      "Sheppy",
-      "mfluehr",
-      "david_ross",
-      "CarloMartini",
-      "mantou"
-    ]
-  },
   "Web/CSS/CSS_values_and_units/Value_definition_syntax": {
     "modified": "2020-10-06T14:06:23.915Z",
     "contributors": [
@@ -88118,6 +88101,23 @@
       "teoli",
       "ethertank",
       "ebidel"
+    ]
+  },
+  "Web/CSS/Reference/Values/Data_types": {
+    "modified": "2020-12-11T13:13:56.675Z",
+    "contributors": [
+      "rachelandrew",
+      "chrisdavidmills",
+      "ramiy",
+      "mfuji09",
+      "wbamberg",
+      "jswisher",
+      "estelle",
+      "Sheppy",
+      "mfluehr",
+      "david_ross",
+      "CarloMartini",
+      "mantou"
     ]
   },
   "Web/CSS/Reference/Values/Functions": {

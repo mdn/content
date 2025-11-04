@@ -6,7 +6,7 @@ browser-compat: css.types.number
 sidebar: cssref
 ---
 
-The **`<number>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types) represents a number, being either an integer, a number with a fractional component, or a base-ten exponent in scientific notation.
+The **`<number>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types) represents a number, being either an integer, a number with a fractional component, or a base-ten exponent in scientific notation.
 
 ## Syntax
 

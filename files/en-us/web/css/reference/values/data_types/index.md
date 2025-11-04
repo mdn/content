@@ -1,6 +1,6 @@
 ---
 title: CSS data types
-slug: Web/CSS/CSS_values_and_units/CSS_data_types
+slug: Web/CSS/Reference/Values/Data_types
 page-type: guide
 spec-urls: https://drafts.csswg.org/css-values/
 sidebar: cssref

@@ -12512,11 +12512,11 @@
 /en-US/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes	/en-US/docs/Web/CSS/CSS_shapes/Overview_of_shapes
 /en-US/docs/Web/CSS/CSS_Shapes/Shapes_From_Box_Values	/en-US/docs/Web/CSS/CSS_shapes/From_box_values
 /en-US/docs/Web/CSS/CSS_Text/Wrapping_text	/en-US/docs/Web/CSS/CSS_text/Wrapping_breaking_text
-/en-US/docs/Web/CSS/CSS_Types	/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types
+/en-US/docs/Web/CSS/CSS_Types	/en-US/docs/Web/CSS/Reference/Values/Data_types
 /en-US/docs/Web/CSS/CSS_Types/display-inside	/en-US/docs/Web/CSS/Reference/Values/display-inside
 /en-US/docs/Web/CSS/CSS_Types/display-outside	/en-US/docs/Web/CSS/Reference/Values/display-outside
 /en-US/docs/Web/CSS/CSS_User_Interface	/en-US/docs/Web/CSS/CSS_basic_user_interface
-/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Types	/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types
+/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Types	/en-US/docs/Web/CSS/Reference/Values/Data_types
 /en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions/Using_CSS_math_functions	/en-US/docs/Web/CSS/CSS_values_and_units/Using_CSS_math_functions
 /en-US/docs/Web/CSS/CSS_Variables	/en-US/docs/Web/CSS/CSS_cascading_variables
 /en-US/docs/Web/CSS/CSS_animations/Tips	/en-US/docs/Web/API/Web_Animations_API/Tips
@@ -12560,6 +12560,7 @@
 /en-US/docs/Web/CSS/CSS_syntax/At-rule	/en-US/docs/Web/CSS/CSS_syntax/At-rules
 /en-US/docs/Web/CSS/CSS_syntax/At-rule_functions	/en-US/docs/Web/CSS/Reference/At-rules/At-rule_functions
 /en-US/docs/Web/CSS/CSS_transform_functions	/en-US/docs/Web/CSS/Reference/Properties/transform
+/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types	/en-US/docs/Web/CSS/Reference/Values/Data_types
 /en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions	/en-US/docs/Web/CSS/Reference/Values/Functions
 /en-US/docs/Web/CSS/CSS_values_serialization	/en-US/docs/Web/CSS
 /en-US/docs/Web/CSS/CSS_values_syntax	/en-US/docs/Web/CSS

@@ -6,7 +6,7 @@ browser-compat: css.types.global_keywords.revert-layer
 sidebar: cssref
 ---
 
-The **`revert-layer`** [CSS-wide keyword](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types#css-wide_keywords) rolls back the value of a property in a [cascade layer](/en-US/docs/Web/CSS/Reference/At-rules/@layer) to the value of the property in a CSS rule matching the element in a previous cascade layer. The value of a property with this keyword is recalculated as if no rules were specified on the target element in the current cascade layer.
+The **`revert-layer`** [CSS-wide keyword](/en-US/docs/Web/CSS/Reference/Values/Data_types#css-wide_keywords) rolls back the value of a property in a [cascade layer](/en-US/docs/Web/CSS/Reference/At-rules/@layer) to the value of the property in a CSS rule matching the element in a previous cascade layer. The value of a property with this keyword is recalculated as if no rules were specified on the target element in the current cascade layer.
 
 If there is no other cascade layer to revert to for the matching CSS rule, the property value rolls back to the [computed value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value) derived from the current layer. Furthermore, if there is no matching CSS rule in the current layer, the property value for the element rolls back to the style defined in a previous [style origin](/en-US/docs/Glossary/Style_origin).
 

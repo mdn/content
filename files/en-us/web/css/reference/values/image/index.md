@@ -6,7 +6,7 @@ browser-compat: css.types.image
 sidebar: cssref
 ---
 
-The **`<image>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types) represents a two-dimensional image.
+The **`<image>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types) represents a two-dimensional image.
 
 ## Syntax
 

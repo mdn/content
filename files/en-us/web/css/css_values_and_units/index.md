@@ -171,7 +171,7 @@ The CSS values and units module also introduces the [`<frequency>`](/en-US/docs/
 - {{glossary("Advance measure")}}
 - [Bracketed range notation](/en-US/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax#bracketed_range_notation_minmax)
 - [Component value combinators](/en-US/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax#component_value_combinators)
-- [CSS-wide keywords](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types#css-wide_keywords)
+- [CSS-wide keywords](/en-US/docs/Web/CSS/Reference/Values/Data_types#css-wide_keywords)
 - {{glossary("Device pixel")}}
 - [Functional notation](/en-US/docs/Web/CSS/Reference/Values/Functions)
 - {{glossary("Identifier")}}
@@ -187,7 +187,7 @@ The CSS values and units module also introduces the [`<frequency>`](/en-US/docs/
 
 ## Guides
 
-- [CSS data types](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types)
+- [CSS data types](/en-US/docs/Web/CSS/Reference/Values/Data_types)
   - : Introduction to CSS data types that define typical values accepted by CSS properties and functions.
 
 - [Numeric data types](/en-US/docs/Web/CSS/CSS_values_and_units/Numeric_data_types)

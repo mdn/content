@@ -6,7 +6,7 @@ browser-compat: css.properties.position-area
 sidebar: cssref
 ---
 
-The **`<position-area>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types) defines the cell or spanned cells of a **position-area grid**, a 3x3 grid whose center cell is an anchor element.
+The **`<position-area>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types) defines the cell or spanned cells of a **position-area grid**, a 3x3 grid whose center cell is an anchor element.
 
 The `<position-area>` keyword values can be set as the value of the {{cssxref("position-area")}} property to place an anchor-positioned element in a specific location relative to its associated anchor element.
 

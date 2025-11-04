@@ -6,7 +6,7 @@ spec-urls: https://drafts.csswg.org/css-values/#typedef-time-percentage
 sidebar: cssref
 ---
 
-The **`<time-percentage>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types) represents a value that can be either a {{Cssxref("time")}} or a {{Cssxref("percentage")}}.
+The **`<time-percentage>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types) represents a value that can be either a {{Cssxref("time")}} or a {{Cssxref("percentage")}}.
 
 ## Syntax
 

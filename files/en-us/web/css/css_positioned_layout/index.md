@@ -105,7 +105,7 @@ Like all CSS modules, this module impacts and is impacted by other modules. This
   - {{cssxref("ruby-position")}}
   - {{cssxref("text-emphasis-position")}}
   - {{cssxref("text-underline-position")}}
-- Position-related [data types](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types)
+- Position-related [data types](/en-US/docs/Web/CSS/Reference/Values/Data_types)
   - {{cssxref("baseline-position")}}
   - {{cssxref("content-position")}}
   - {{cssxref("overflow-position")}}

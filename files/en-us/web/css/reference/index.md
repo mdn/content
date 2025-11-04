@@ -6,7 +6,7 @@ page-type: landing-page
 sidebar: cssref
 ---
 
-Use this **CSS reference** to browse an [alphabetical index](#index) of all of the standard [CSS](/en-US/docs/Web/CSS) properties, [pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes), [pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements), [data types](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types), [functional notations](/en-US/docs/Web/CSS/Reference/Values/Functions) and [at-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rules). You can also browse [key CSS concepts](#concepts) and a list of [selectors organized by type](#selectors). Also included is a brief [DOM-CSS / CSSOM reference](#dom-css_cssom).
+Use this **CSS reference** to browse an [alphabetical index](#index) of all of the standard [CSS](/en-US/docs/Web/CSS) properties, [pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes), [pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements), [data types](/en-US/docs/Web/CSS/Reference/Values/Data_types), [functional notations](/en-US/docs/Web/CSS/Reference/Values/Functions) and [at-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rules). You can also browse [key CSS concepts](#concepts) and a list of [selectors organized by type](#selectors). Also included is a brief [DOM-CSS / CSSOM reference](#dom-css_cssom).
 
 ## Basic rule syntax
 
