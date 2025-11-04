@@ -97,6 +97,6 @@ p {
 
 - [CSS custom properties](/en-US/docs/Web/CSS/Reference/Properties/--*)
 - {{cssxref("@function")}} at-rule
-- [`type()`](/en-US/docs/Web/CSS/type) function
+- [`type()`](/en-US/docs/Web/CSS/Reference/Values/type) function
 - [Using CSS custom functions](/en-US/docs/Web/CSS/CSS_custom_functions_and_mixins/Using_custom_functions)
 - [CSS custom functions and mixins](/en-US/docs/Web/CSS/CSS_custom_functions_and_mixins) module

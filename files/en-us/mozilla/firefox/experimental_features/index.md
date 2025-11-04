@@ -261,7 +261,7 @@ The CSS {{cssxref("letter-spacing")}} property now splits the specified letter s
 
 ### `calc()` color channel support in relative colors
 
-The CSS [`calc()`](/en-US/docs/Web/CSS/calc) function can now parse color channels in [relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors#using_math_functions), allowing you to correctly calculate changes to colors in different color spaces or while using different functional notations [Firefox bug 1889561](https://bugzil.la/1889561).
+The CSS [`calc()`](/en-US/docs/Web/CSS/Reference/Values/calc) function can now parse color channels in [relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors#using_math_functions), allowing you to correctly calculate changes to colors in different color spaces or while using different functional notations [Firefox bug 1889561](https://bugzil.la/1889561).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |

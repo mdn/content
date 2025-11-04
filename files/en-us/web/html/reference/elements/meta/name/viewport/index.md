@@ -59,7 +59,7 @@ A `<meta name="viewport">` element has the following additional attributes:
         - `auto`: Doesn't affect the initial layout viewport, and the whole web page is viewable.
         - `contain`: The viewport is scaled to fit the largest rectangle inscribed within the display.
         - `cover`: The viewport is scaled to fill the device display.
-          It's highly recommended to use the [safe area inset](/en-US/docs/Web/CSS/env) variables to ensure that important content doesn't end up outside the display.
+          It's highly recommended to use the [safe area inset](/en-US/docs/Web/CSS/Reference/Values/env) variables to ensure that important content doesn't end up outside the display.
 
 ### Viewport width and screen width
 

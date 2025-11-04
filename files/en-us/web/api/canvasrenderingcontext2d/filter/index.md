@@ -18,7 +18,7 @@ It is similar to the CSS {{cssxref("filter")}} property and accepts the same val
 The `filter` property accepts a value of `"none"` or one or more
 of the following filter functions in a string.
 
-- [`url()`](/en-US/docs/Web/CSS/url_function)
+- [`url()`](/en-US/docs/Web/CSS/Reference/Values/url_function)
   - : A CSS {{cssxref("url_function", "url()")}}. Takes any URL that resolves to SVG filter element.
     This can be the ID of an element, a path to external XML file, or even a data encoded SVG value.
 - [`blur()`](/en-US/docs/Web/CSS/Reference/Values/filter-function/blur)

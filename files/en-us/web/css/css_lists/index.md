@@ -38,8 +38,8 @@ There is also a `marker-side` property, which is yet to be fully defined or impl
 ### Data types
 
 - [`<counter>`](/en-US/docs/Web/CSS/Reference/Properties/content#counter)
-- [`<counter-name>`](/en-US/docs/Web/CSS/counter#counter-name)
-- [`<counter-style>`](/en-US/docs/Web/CSS/counter#counter-style)
+- [`<counter-name>`](/en-US/docs/Web/CSS/Reference/Values/counter#counter-name)
+- [`<counter-style>`](/en-US/docs/Web/CSS/Reference/Values/counter#counter-style)
 
 ## Guides
 

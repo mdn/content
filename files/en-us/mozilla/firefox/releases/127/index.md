@@ -84,7 +84,7 @@ These features are newly shipped in Firefox 127 but are disabled by default. To 
 
 - **`calc()` color channel support in relative colors:** `layout.css.relative-color-syntax.enabled`.
 
-  The CSS [`calc()`](/en-US/docs/Web/CSS/calc) function can now parse color channels in [relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors#using_math_functions) ([Firefox bug 1889561](https://bugzil.la/1889561)).
+  The CSS [`calc()`](/en-US/docs/Web/CSS/Reference/Values/calc) function can now parse color channels in [relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors#using_math_functions) ([Firefox bug 1889561](https://bugzil.la/1889561)).
 
 - **JavaScript `Float16Array` typed array**: `javascript.options.experimental.float16array`.
 

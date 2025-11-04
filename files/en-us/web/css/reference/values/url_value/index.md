@@ -18,11 +18,11 @@ The **`<url>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_v
 
 The value is either of the following:
 
-- [`<url()>`](/en-US/docs/Web/CSS/url_function)
+- [`<url()>`](/en-US/docs/Web/CSS/Reference/Values/url_function)
   - : The `url()` function accepts only a URL literal string (with or without quotes).
 
 > [!NOTE]
-> The specification defines an alternative function called `src()` that accepts a URL string or a [CSS variable](/en-US/docs/Web/CSS/var). But no web browser has implemented the function yet.
+> The specification defines an alternative function called `src()` that accepts a URL string or a [CSS variable](/en-US/docs/Web/CSS/Reference/Values/var). But no web browser has implemented the function yet.
 
 ## Specifications
 

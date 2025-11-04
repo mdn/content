@@ -94,104 +94,108 @@ sidebar: cssref
 - {{cssxref("atan")}}
 - {{cssxref("atan2")}}
 - {{cssxref("attr")}}
-- {{cssxref("blur")}}
-- {{cssxref("brightness")}}
+- {{cssxref("filter-function/blur", "blur()")}}
+- {{cssxref("filter-function/brightness", "brightness()")}}
 - {{cssxref("calc")}}
 - {{cssxref("calc-size")}}
-- {{cssxref("circle")}}
+- {{cssxref("basic-shape/circle", "circle()")}}
 - {{cssxref("clamp")}}
-- {{cssxref("color")}}
-- {{cssxref("color-mix")}}
-- {{cssxref("conic-gradient")}}
-- {{cssxref("contrast")}}
-- {{cssxref("contrast-color")}}
+- {{cssxref("color_value/color", "color()")}}
+- {{cssxref("color_value/color-mix", "color-mix()")}}
+- {{cssxref("gradient/conic-gradient", "conic-gradient()")}}
+- {{cssxref("filter-function/contrast", "contrast()")}}
+- {{cssxref("color_value/contrast-color", "contrast-color()")}}
 - {{cssxref("cos")}}
 - {{cssxref("counter")}}
 - {{cssxref("counters")}}
 - {{cssxref("cross-fade")}}
-- {{cssxref("cubic-bezier")}}
-- {{cssxref("device-cmyk")}}
-- {{cssxref("drop-shadow")}}
+- {{cssxref("easing-function/cubic-bezier", "cubic-bezier()")}}
+- {{cssxref("color_value/device-cmyk", "device-cmyk()")}}
+- {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
 - {{cssxref("dynamic-range-limit-mix")}}
 - {{cssxref("element")}}
-- {{cssxref("ellipse")}}
+- {{cssxref("basic-shape/ellipse", "ellipse()")}}
 - {{cssxref("env")}}
 - {{cssxref("exp")}}
 - {{cssxref("fit-content_function")}}
-- {{cssxref("grayscale")}}
-- {{cssxref("hsl")}}
-- {{cssxref("hue-rotate")}}
-- {{cssxref("hwb")}}
+- {{cssxref("filter-function/grayscale", "grayscale()")}}
+- {{cssxref("color_value/hsl", "hsl()")}}
+- {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
+- {{cssxref("color_value/hwb", "hwb()")}}
 - {{cssxref("hypot")}}
 - {{cssxref("if")}}
-- {{cssxref("image")}}
-- {{cssxref("image-set")}}
-- {{cssxref("inset")}}
-- {{cssxref("invert")}}
-- {{cssxref("lab")}}
-- {{cssxref("lch")}}
-- {{cssxref("light-dark")}}
-- {{cssxref("linear")}}
-- {{cssxref("linear-gradient")}}
+- {{cssxref("image/image", "image()")}}
+- {{cssxref("image/image-set", "image-set()")}}
+- {{cssxref("basic-shape/inset", "inset()")}}
+- {{cssxref("filter-function/invert", "invert()")}}
+- {{cssxref("color_value/lab", "lab()")}}
+- {{cssxref("import/layer_function", "layer()")}}
+- {{cssxref("color_value/lch", "lch()")}}
+- {{cssxref("color_value/light-dark", "light-dark()")}}
+- {{cssxref("easing-function/linear", "linear()")}}
+- {{cssxref("gradient/linear-gradient", "linear-gradient()")}}
 - {{cssxref("log")}}
-- {{cssxref("matrix")}}
-- {{cssxref("matrix3d")}}
+- {{cssxref("transform-function/matrix", "matrix()")}}
+- {{cssxref("transform-function/matrix3d", "matrix3d()")}}
 - {{cssxref("max")}}
 - {{cssxref("min")}}
 - {{cssxref("minmax")}}
 - {{cssxref("mod")}}
-- {{cssxref("oklab")}}
-- {{cssxref("oklch")}}
-- {{cssxref("opacity")}}
-- {{cssxref("paint")}}
-- {{cssxref("path")}}
-- {{cssxref("perspective")}}
-- {{cssxref("polygon")}}
+- {{cssxref("color_value/oklab", "oklab()")}}
+- {{cssxref("color_value/oklch", "oklch()")}}
+- {{cssxref("filter-function/opacity", "opacity()")}}
+- {{cssxref("image/paint", "paint()")}}
+- {{cssxref("font-palette/palette-mix", "palette-mix()")}}
+- {{cssxref("basic-shape/path", "path()")}}
+- {{cssxref("transform-function/perspective", "perspective()")}}
+- {{cssxref("basic-shape/polygon", "polygon()")}}
 - {{cssxref("pow")}}
 - {{cssxref("progress")}}
-- {{cssxref("radial-gradient")}}
+- {{cssxref("gradient/radial-gradient", "radial-gradient()")}}
 - {{cssxref("ray")}}
-- {{cssxref("rect")}}
+- {{cssxref("basic-shape/rect", "rect()")}}
 - {{cssxref("rem")}}
 - {{cssxref("repeat")}}
-- {{cssxref("repeating-conic-gradient")}}
-- {{cssxref("repeating-linear-gradient")}}
-- {{cssxref("repeating-radial-gradient")}}
-- {{cssxref("rgb")}}
-- {{cssxref("rotate")}}
-- {{cssxref("rotate3d")}}
-- {{cssxref("rotatex")}}
-- {{cssxref("rotatey")}}
-- {{cssxref("rotatez")}}
+- {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
+- {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}
+- {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient())}}
+- {{cssxref("color_value/rgb", "rgb()")}}
+- {{cssxref("transform-function/rotate", "rotate()")}}
+- {{cssxref("transform-function/rotate3d", "rotate3d()")}}
+- {{cssxref("transform-function/rotatex", "rotatex()")}}
+- {{cssxref("transform-function/rotatey", "rotatey()")}}
+- {{cssxref("transform-function/rotatez", "rotatez()")}}
 - {{cssxref("round")}}
-- {{cssxref("saturate")}}
-- {{cssxref("scale")}}
-- {{cssxref("scale3d")}}
-- {{cssxref("scalex")}}
-- {{cssxref("scaley")}}
-- {{cssxref("scalez")}}
-- {{cssxref("sepia")}}
-- {{cssxref("shape")}}
+- {{cssxref("filter-function/saturate", "saturate()")}}
+- {{cssxref("transform-function/scale", "scale()")}}
+- {{cssxref("transform-function/scale3d", "scale3d()")}}
+- {{cssxref("transform-function/scalex", "scalex()")}}
+- {{cssxref("transform-function/scaley", "scaley()")}}
+- {{cssxref("transform-function/scalez", "scalez()")}}
+- {{cssxref("animation-timeline/scroll", "scroll()")}}
+- {{cssxref("filter-function/sepia", "sepia()")}}
+- {{cssxref("basic-shape/shape", "shape()")}}
 - {{cssxref("sibling-count")}}
 - {{cssxref("sibling-index")}}
 - {{cssxref("sign")}}
 - {{cssxref("sin")}}
-- {{cssxref("skew")}}
-- {{cssxref("skewx")}}
-- {{cssxref("skewy")}}
+- {{cssxref("transform-function/skew", "skew()")}}
+- {{cssxref("transform-function/skewx", "skewx()")}}
+- {{cssxref("transform-function/skewy", "skewy()")}}
 - {{cssxref("sqrt")}}
-- {{cssxref("steps")}}
+- {{cssxref("easing-function/steps", "steps()")}}
 - {{cssxref("superellipse")}}
 - {{cssxref("symbols")}}
 - {{cssxref("tan")}}
-- {{cssxref("translate")}}
-- {{cssxref("translate3d")}}
-- {{cssxref("translatex")}}
-- {{cssxref("translatey")}}
-- {{cssxref("translatez")}}
+- {{cssxref("transform-function/translate", "translate()")}}
+- {{cssxref("transform-function/translate3d", "translate3d()")}}
+- {{cssxref("transform-function/translatex", "translatex()")}}
+- {{cssxref("transform-function/translatey", "translatey()")}}
+- {{cssxref("transform-function/translatez", "translatez()")}}
 - {{cssxref("type")}}
 - {{cssxref("url_function")}}
 - {{cssxref("var")}}
-- {{cssxref("xywh")}}
+- {{cssxref("animation-timeline/view", "view()")}}
+- {{cssxref("basic-shape/xywh", "xywh()")}}
 
 ## See also

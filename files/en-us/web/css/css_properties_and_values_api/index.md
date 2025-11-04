@@ -108,5 +108,5 @@ The value of `--stop-color` is set to `cornflowerblue` at first, but when you ho
 - [Using shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM)
 - [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API) module
 - [Worklet](/en-US/docs/Web/API/Worklet) interface
-- [CSS `env()`](/en-US/docs/Web/CSS/env)
+- [CSS `env()`](/en-US/docs/Web/CSS/Reference/Values/env)
 - [CSS Typed Object Model](/en-US/docs/Web/API/CSS_Typed_OM_API)

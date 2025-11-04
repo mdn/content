@@ -122,7 +122,7 @@ These attributes are as follows:
 - Background images created with the {{cssxref("element", "element()")}} function use the intrinsic dimensions and proportions of the generating element.
 
 > [!NOTE]
-> In Gecko, background images created using the [`element()`](/en-US/docs/Web/CSS/element) function are currently treated as images with the dimensions of the element, or of the background positioning area if the element is SVG, with the corresponding intrinsic proportion. This is non-standard behavior.
+> In Gecko, background images created using the [`element()`](/en-US/docs/Web/CSS/Reference/Values/element) function are currently treated as images with the dimensions of the element, or of the background positioning area if the element is SVG, with the corresponding intrinsic proportion. This is non-standard behavior.
 
 Based on the intrinsic dimensions and proportions, the rendered size of the background image is computed as follows:
 

@@ -353,7 +353,7 @@ You can define fallback values for custom properties using the `var()` function,
 
 ### Defining fallbacks in the `var()` function
 
-Using the [`var()`](/en-US/docs/Web/CSS/var) function, you can define multiple **fallback values** when the given variable is not yet defined; this can be useful when working with [Custom Elements](/en-US/docs/Web/API/Web_components/Using_custom_elements) and [Shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM).
+Using the [`var()`](/en-US/docs/Web/CSS/Reference/Values/var) function, you can define multiple **fallback values** when the given variable is not yet defined; this can be useful when working with [Custom Elements](/en-US/docs/Web/API/Web_components/Using_custom_elements) and [Shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM).
 
 The first argument to the function is the name of the custom property. The second argument to the function is an optional fallback value, which is used as the substitution value when the referenced custom property is invalid.
 The function accepts two parameters, assigning everything following the first comma as the second parameter. If the second parameter is invalid, the fallback will fail. For example:
@@ -555,6 +555,6 @@ element.style.setProperty("--my-var", jsVar + 4);
 
 - [Custom property syntax](/en-US/docs/Web/CSS/Reference/Properties/--*)
 - {{cssxref("@property")}} at-rule
-- [`var()`](/en-US/docs/Web/CSS/var)
+- [`var()`](/en-US/docs/Web/CSS/Reference/Values/var)
 - [CSS Properties and Values API](/en-US/docs/Web/API/CSS_Properties_and_Values_API)
 - [CSS custom properties for cascading variables](/en-US/docs/Web/CSS/CSS_cascading_variables) module

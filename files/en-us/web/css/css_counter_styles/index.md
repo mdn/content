@@ -24,7 +24,7 @@ No properties are defined in this module
 
 - [`<counter-style-name>`](/en-US/docs/Web/CSS/Reference/At-rules/@counter-style#counter-style-name)
 - [`<symbol>`](/en-US/docs/Web/CSS/Reference/At-rules/@counter-style/symbols#values)
-- [`<symbols-type>`](/en-US/docs/Web/CSS/symbols#syntax)
+- [`<symbols-type>`](/en-US/docs/Web/CSS/Reference/Values/symbols#syntax)
 
 ### At-rules and descriptors
 

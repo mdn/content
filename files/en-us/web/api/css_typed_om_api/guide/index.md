@@ -318,7 +318,7 @@ console.log(parsedUnit.value); // 1.2
 
 ### CSSMathSum
 
-Although the [`<button>`](/en-US/docs/Web/HTML/Reference/Elements/button) element is an inline element by default, we've added [`display: inline-block;`](/en-US/docs/Web/CSS/CSS_display) to enable sizing. In our CSS we have `width: calc(30% + 20px);`, which is a [`calc()`](/en-US/docs/Web/CSS/calc) function to define the width.
+Although the [`<button>`](/en-US/docs/Web/HTML/Reference/Elements/button) element is an inline element by default, we've added [`display: inline-block;`](/en-US/docs/Web/CSS/CSS_display) to enable sizing. In our CSS we have `width: calc(30% + 20px);`, which is a [`calc()`](/en-US/docs/Web/CSS/Reference/Values/calc) function to define the width.
 
 When we `get()` the `width`, we get a [`CSSMathSum`](/en-US/docs/Web/API/CSSMathSum) returned. {{domxref('CSSMathSum.values')}} is a {{domxref('CSSNumericArray')}} with 2 `CSSUnitValues`.
 

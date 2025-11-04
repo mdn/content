@@ -115,7 +115,7 @@ In this example, we display a sequence of numbers counting backward. To do this,
 
 We set the initial value of the counter named `sevens` to `100` by using {{cssxref("counter-reset")}}. Then, for each {{HTMLElement("i")}}, we decrease the counter by `7`.
 
-To set the first count at `100`, we target the first `<i>` element by using the {{cssxref(":first-of-type")}} pseudo-class and setting `counter-increment: none;`. Additionally, the {{cssxref("content")}} property is used in the {{cssxref("::before")}} pseudo-element to display the value of the counter using the [`counter()`](/en-US/docs/Web/CSS/counter) function.
+To set the first count at `100`, we target the first `<i>` element by using the {{cssxref(":first-of-type")}} pseudo-class and setting `counter-increment: none;`. Additionally, the {{cssxref("content")}} property is used in the {{cssxref("::before")}} pseudo-element to display the value of the counter using the [`counter()`](/en-US/docs/Web/CSS/Reference/Values/counter) function.
 
 ```css
 div {

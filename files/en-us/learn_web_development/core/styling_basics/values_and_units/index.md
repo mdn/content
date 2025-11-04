@@ -764,7 +764,7 @@ If you want to have these values change based on other values, you will need to 
 You could calculate the percentage of a value or add a number to another number, then update your CSS with the result.
 
 CSS has support for [Math functions](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#math_functions), which allow us to perform calculations in CSS instead of relying on static values or doing the math in JavaScript.
-One of the most common math functions is [`calc()`](/en-US/docs/Web/CSS/calc), which lets you do operations like addition, subtraction, multiplication, and division.
+One of the most common math functions is [`calc()`](/en-US/docs/Web/CSS/Reference/Values/calc), which lets you do operations like addition, subtraction, multiplication, and division.
 
 For example, let's say we want to set the width of an element to be `20%` of its parent container plus `100px`.
 We can't specify this width with a static value — if the parent uses a percentage width (or a relative unit like `em` or `rem`) then it will vary depending on the context it is used in, and other factors such as the user's device or browser window width.
@@ -792,7 +792,7 @@ The `20%` is based on the width of the parent container (`.wrapper`) and if that
 
 {{EmbedLiveSample("calc")}}
 
-There are many other math functions that you can use in CSS, such as [`min()`](/en-US/docs/Web/CSS/min), [`max()`](/en-US/docs/Web/CSS/max), and [`clamp()`](/en-US/docs/Web/CSS/clamp); respectively these let you pick the smallest, largest, or middle value from a set of values. Explore our [CSS value functions](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) reference page to check out all the available CSS functions.
+There are many other math functions that you can use in CSS, such as [`min()`](/en-US/docs/Web/CSS/Reference/Values/min), [`max()`](/en-US/docs/Web/CSS/Reference/Values/max), and [`clamp()`](/en-US/docs/Web/CSS/Reference/Values/clamp); respectively these let you pick the smallest, largest, or middle value from a set of values. Explore our [CSS value functions](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) reference page to check out all the available CSS functions.
 
 Knowing about CSS functions is useful so you recognize them when you see them. You should start experimenting with them in your projects — they will help you avoid writing custom or repetitive code to achieve results that you can get with regular CSS.
 

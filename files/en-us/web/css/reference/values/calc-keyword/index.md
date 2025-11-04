@@ -28,7 +28,7 @@ The `<calc-keyword>` type defines numeric constants that can be used in [CSS mat
 
 ### Notes
 
-Serializing the arguments inside [`calc()`](/en-US/docs/Web/CSS/calc) follows the IEEE-754 standard for floating point math which means there's a few cases to be aware of regarding constants like `infinity` and `NaN`:
+Serializing the arguments inside [`calc()`](/en-US/docs/Web/CSS/Reference/Values/calc) follows the IEEE-754 standard for floating point math which means there's a few cases to be aware of regarding constants like `infinity` and `NaN`:
 
 - Dividing by zero will return positive or negative `infinity` depending on the sign of the numerator.
 - Adding, subtracting or multiplying `infinity` to anything will return `infinity` unless it produces `NaN` (see below).
@@ -97,7 +97,7 @@ NAN
 ### Using e and pi in `calc()`
 
 The following example shows how to use `e` inside `calc()` to rotate an element with an exponentially-increasing angle.
-The second box shows how to use `pi` inside a [`sin()`](/en-US/docs/Web/CSS/sin) function.
+The second box shows how to use `pi` inside a [`sin()`](/en-US/docs/Web/CSS/Reference/Values/sin) function.
 
 ```css hidden
 #wrapper {

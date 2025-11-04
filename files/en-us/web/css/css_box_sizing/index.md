@@ -47,7 +47,7 @@ The CSS box sizing module also introduces the `min-intrinsic-sizing` property. C
 
 ### Functions
 
-- [`fit-content()`](/en-US/docs/Web/CSS/fit-content_function)
+- [`fit-content()`](/en-US/docs/Web/CSS/Reference/Values/fit-content_function)
 
 ### Glossary terms
 
