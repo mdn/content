@@ -116,14 +116,16 @@ In the authentication request:
 
 - The RP generates a value that is hard to guess and is specific to this authentication request. This value is called the _code verifier_.
 - The RP creates a {{glossary("hash", "cryptographic hash")}} of the code verifier, and uses it as the `code_challenge` parameter in the authentication request.
-- The IdP stores the code challenge, and associates it with the access code that it returns to the RP.
+- The IdP stores the code challenge, and associates it with the authorization code that it returns to the RP.
 
 In the token request:
 
 - The RP passes the code verifier in the _code_verifier_ parameter.
 - The IdP hashes the code verifier, and compares the result with the stored code challenge: if they do not match, then the token request is denied.
 
-This defends against two attacks: CSRF against the RP's redirect URL, and authorization code injection.
+This defends against two attacks: [CSRF](/en-US/docs/Web/Security/Attacks/CSRF) against the RP's redirect URL, and authorization code injection.
+
+##### CSRF against the redirect URL
 
 The CSRF attack works as follows:
 
@@ -137,30 +139,42 @@ The CSRF attack works as follows:
 
 5. The RP signs the user into the attacker's account: now any information or instructions they provide are under the attacker's control.
 
-Essentially, the attack succeeds because the RP doesn't know that the authentication response is not a response to a request made on behalf of the user. PKCE prevents this attack because the IdP would have a stored code challenge for the attacker's access code, and this would not match the code verifier that the RP passes into the token request.
+Essentially, the attack succeeds because the RP doesn't know that the authentication response is not a response to a request made on behalf of the user. PKCE prevents this attack because the IdP would have a stored code challenge for the attacker's authorization code, and this would not match the code verifier that the RP passes into the token request.
 
 An alternative protection against this attack is the `state` parameter defined in OAuth 2.0. In this defense, the RP provides an unpredictable value as a parameter in the authentication request, and the IdP includes the same value in the response: the RP checks that they match. Because the attacker can't predict the value of `state`, they can't pass a matching value to the RP's redirect URL.
 
-In the authorization code injection attack:
+##### Authorization code injection
 
-1. The attacker is able to steal the user's authorization code.
+In an authorization code injection attack, the attacker steals an authorization code from the target user, and is able to inject it into the attacker's own sign-in flow. The result is that the attacker is signed into the user's account.
 
-2. The attacker starts its own OIDC authentication flow, but intercepts the IdP's authentication response, replacing the authorization code with the code it stole from the user. This is straightforward, because the authentication response is for the attacker, so it passes through the attacker's device.
+It's generally accepted that authorization codes in OIDC are vulnerable, in part because they're exposed to the user's browser. For example, if the user installs a malicious browser extension, then it will be able to steal authorization codes.
 
-3. The RP then continues its authentication flow for the attacker by making the token request to the IdP, including the user's authorization code that the attacker has injected.
+The main mitigation here is [client authentication](#client_authentication): because the RP authenticates itself to the IdP when it makes a token request, an attacker can't just make their own token request with the stolen code. However, with the authorization code injection attack, it's the real RP making the token request, so client authentication is successful.
 
-4. The IdP responds with the user's tokens.
+With an authorization code injection attack:
 
-5. The RP signs the attacker into the user's account.
+1. The attacker is able to steal the user's authorization code. For example, the user has installed a malicious browser extension that can access the URLs that the browser visits.
 
-Note that this is really the inverse of the CSRF attack. Note also that the `state` parameter doesn't help here, because the authentication request and response really do belong to the same flow - the attacker's.
+2. The user tries to sign in. The RP makes an authentication request, the user authenticates, and the IdP redirects the browser to the RP's redirect URL, with the authorization code as a URL parameter.
 
-PKCE protects against this attack, because the IdP's token endpoint will check the `code_verifier` in the token request against the code challenge that it received in the authentication request.
+3. At this point, the browser extension retrieves the authorization code, sends it to the attacker, and terminates the user's authentication flow.
 
-- Because the IdP's stored code challenge is associated with the authorization code, it will be the challenge for the user.
-- Because the `code_verifier` in the token request is part of the attacker's flow, it will be the verifier for the attacker.
+4. The attacker receives the user's authorization code.
 
-So the codes won't match, and the token request fails.
+5. The attacker starts its own OIDC authentication flow, but intercepts the IdP's authentication response, replacing the authorization code with the code it stole from the user. This is straightforward, because the authentication response is for the attacker, so it passes through the attacker's device.
+
+6. The RP then continues its authentication flow for the attacker by making the token request to the IdP, including the user's authorization code that the attacker has injected.
+
+7. The IdP responds with the user's tokens.
+
+8. The RP signs the attacker into the user's account.
+
+Note that the `state` parameter doesn't help here, because the authentication request and response really do belong to the same flow - the attacker's.
+
+PKCE protects against this attack, because:
+
+- In step 2, the RP generates a code verifier and sent the hashed code challenge to the IdP, which stores the challenge alongside the user's code.
+- In step 6, the RP's token request contains the _attacker's_ code verifier but the _user's_ code. The IdP looks up the code challenge for the user's code: it won't match the attacker's code verifier, and the token request will be denied.
 
 An alternative to PKCE, specified in OIDC, is the [`nonce`](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-security-topics#name-nonce) value. The RP includes this as another parameter in the authentication request: the IdP stores it, and the token endpoint returns it to the RP along with the tokens. The RP then checks that the returned value is the same as the original value.
 
