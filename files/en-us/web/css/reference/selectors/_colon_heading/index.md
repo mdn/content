@@ -59,4 +59,4 @@ The `:heading` pseudo-class applies the `color` to all the headings in the docum
 
 ## See also
 
-- {{CSSXRef(":heading_function", ":heading()")}}
+- [`:heading()`](/en-US/docs/Web/CSS/Reference/Selectors/:heading_function)
