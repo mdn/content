@@ -71,7 +71,7 @@ In addition to the pre-defined keywords that are part of the specification for a
 - {{cssxref("revert")}}
   - : Resets the property to its inherited value if it inherits from its parent or to the default value established by the user agent's stylesheet (or by user styles if any exist).
 - {{cssxref("revert-layer")}}
-  - : Rolls back the value of a property in a [cascade layer](/en-US/docs/Web/CSS/@layer) to the value of the property in a CSS rule matching the element in a previous cascade layer. The value of the property with this keyword is recalculated as if no rules were specified on the target element in the current cascade layer.
+  - : Rolls back the value of a property in a [cascade layer](/en-US/docs/Web/CSS/Reference/At-rules/@layer) to the value of the property in a CSS rule matching the element in a previous cascade layer. The value of the property with this keyword is recalculated as if no rules were specified on the target element in the current cascade layer.
 
 ## URLs
 

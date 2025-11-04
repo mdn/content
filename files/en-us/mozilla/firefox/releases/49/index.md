@@ -259,9 +259,9 @@ In order to improve compatibility with existing content, Firefox now accepts som
 
 - The `WebKitCSSMatrix` interface is an alias of {{domxref("DOMMatrix")}}
 - The following media query features have been implemented:
-  - `-webkit-min-device-pixel-ratio` as an alias of [`min-resolution`](/en-US/docs/Web/CSS/@media/resolution) with the same value (in `dppx)`, though this feature is [disabled by default](https://bugzil.la/1237720) (behind about:config pref `layout.css.prefixes.device-pixel-ratio-webkit`)
-  - `-webkit-max-device-pixel-ratio` as an alias of [`max-resolution`](/en-US/docs/Web/CSS/@media/resolution) of the same value (in `dppx`); this feature is also disabled by default, behind the same about:config pref.
-  - [`-webkit-transform-3d`](/en-US/docs/Web/CSS/@media/-webkit-transform-3d) always matching, indicating 3d transform support.
+  - `-webkit-min-device-pixel-ratio` as an alias of [`min-resolution`](/en-US/docs/Web/CSS/Reference/At-rules/@media/resolution) with the same value (in `dppx)`, though this feature is [disabled by default](https://bugzil.la/1237720) (behind about:config pref `layout.css.prefixes.device-pixel-ratio-webkit`)
+  - `-webkit-max-device-pixel-ratio` as an alias of [`max-resolution`](/en-US/docs/Web/CSS/Reference/At-rules/@media/resolution) of the same value (in `dppx`); this feature is also disabled by default, behind the same about:config pref.
+  - [`-webkit-transform-3d`](/en-US/docs/Web/CSS/Reference/At-rules/@media/-webkit-transform-3d) always matching, indicating 3d transform support.
 
 ## Changes for add-on and Mozilla developers
 

@@ -8,7 +8,7 @@ browser-compat: api.CSSImportRule.supportsText
 
 {{APIRef("CSSOM")}}
 
-The read-only **`supportsText`** property of the {{domxref("CSSImportRule")}} interface returns the supports condition specified by the {{cssxref("@import")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule).
+The read-only **`supportsText`** property of the {{domxref("CSSImportRule")}} interface returns the supports condition specified by the {{cssxref("@import")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rules).
 
 ## Value
 

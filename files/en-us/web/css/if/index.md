@@ -312,7 +312,7 @@ Because an `if()` function can take the place of whole property values or indivi
 
 For example, in this declaration we are using `if()` to set a `color` property value depending on various conditions. We have an outer `if()` function that returns a particular value depending on whether the `--scheme` custom property is set to `ice` or `fire` (with an `else` value of `black` that is returned if neither of the conditions return true).
 
-However, the two `<value>`s are also `if()` functions. These inner `if()` functions return a light color value if the user prefers a dark color scheme (determined using the [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) media query), and a dark color value otherwise.
+However, the two `<value>`s are also `if()` functions. These inner `if()` functions return a light color value if the user prefers a dark color scheme (determined using the [`prefers-color-scheme`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) media query), and a dark color value otherwise.
 
 ```css-nolint
 color: if(
@@ -362,7 +362,7 @@ Our HTML features a {{htmlelement("section")}} element with two {{htmlelement("a
 
 #### CSS
 
-In our CSS, we first target the `<section>` element, laying it out with [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) and setting a {{cssxref("gap")}} between the two child `<article>` elements. We then use an `if()` function with an [`orientation`](/en-US/docs/Web/CSS/@media/orientation) media query `<if-test>` to set the value of the {{cssxref("flex-direction")}} property to `row` if the document is in landscape orientation, or `column` if it is in portrait orientation. This lays out the `article` elements side-by-side in wide screens, and top-to-bottom in narrow screens.
+In our CSS, we first target the `<section>` element, laying it out with [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) and setting a {{cssxref("gap")}} between the two child `<article>` elements. We then use an `if()` function with an [`orientation`](/en-US/docs/Web/CSS/Reference/At-rules/@media/orientation) media query `<if-test>` to set the value of the {{cssxref("flex-direction")}} property to `row` if the document is in landscape orientation, or `column` if it is in portrait orientation. This lays out the `article` elements side-by-side in wide screens, and top-to-bottom in narrow screens.
 
 ```css hidden live-sample___basic
 html {

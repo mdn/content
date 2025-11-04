@@ -20,7 +20,7 @@ The **CSS view transitions** module defines the behavior of the [View Transition
 ### At-rules and descriptors
 
 - {{cssxref("@view-transition")}}
-  - [`navigation`](/en-US/docs/Web/CSS/@view-transition#navigation) descriptor
+  - [`navigation`](/en-US/docs/Web/CSS/Reference/At-rules/@view-transition#navigation) descriptor
 
 ### Selectors and pseudo-elements
 

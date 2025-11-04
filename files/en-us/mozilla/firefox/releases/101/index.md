@@ -16,7 +16,7 @@ No notable changes.
 
 ### CSS
 
-- The [`prefers-contrast`](/en-US/docs/Web/CSS/@media/prefers-contrast) media feature that is used to detect whether the user has specified a preference for higher (`more`) or lower (`less`) contrast in the presentation of web content is now available by default. This feature now also lets users specify a set of colors to use for the contrast through the new `custom` value ([Firefox bug 1656363](https://bugzil.la/1656363)).
+- The [`prefers-contrast`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-contrast) media feature that is used to detect whether the user has specified a preference for higher (`more`) or lower (`less`) contrast in the presentation of web content is now available by default. This feature now also lets users specify a set of colors to use for the contrast through the new `custom` value ([Firefox bug 1656363](https://bugzil.la/1656363)).
 
 - Three new viewport sizes have been introduced: small (`s`), large (`l`), and dynamic (`d`). These new sizes have added new [viewport-percentage length units](/en-US/docs/Web/CSS/length) in addition to the existing ones - `vh`, `vw`, `vmax`, and `vmin`. The new viewport-percentage length units include `svh`, `lvh`, `dvh`, `svw`, `lvw`, `dvw`, `svmax`, `lvmax`, `dvmax`, `svmin`, `lvmin`, and `dvmin` ([Firefox bug 1610815](https://bugzil.la/1610815)). Additionally, the units `vb` and `vi` are now supported by default ([Firefox bug 1610815](https://bugzil.la/1610815)).
 
@@ -54,7 +54,7 @@ No notable changes.
 
 #### SVG
 
-- SVG images in the Firefox UI that are styled using [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) will respect the [`color-scheme`](/en-US/docs/Web/CSS/Reference/Properties/color-scheme) of the embedder (previously `prefers-color-scheme` ignored the `color-scheme` of the embedder and triggered off either the device or browser theme).
+- SVG images in the Firefox UI that are styled using [`prefers-color-scheme`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) will respect the [`color-scheme`](/en-US/docs/Web/CSS/Reference/Properties/color-scheme) of the embedder (previously `prefers-color-scheme` ignored the `color-scheme` of the embedder and triggered off either the device or browser theme).
   This ensures that a favicon, for example, is always styled to match the theme of the elements that nest it, and not necessarily the (potentially different) theme of the device. ([Firefox bug 1764354](https://bugzil.la/1764354)).
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)

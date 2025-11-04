@@ -33,7 +33,7 @@ in <polar-color-space>[ <hue-interpolation method>]
   - : The algorithm for hue interpolation. It defaults to `shorter hue`.
 
 - `<custom-color-space>`
-  - : A [`<dashed-ident>`](/en-US/docs/Web/CSS/dashed-ident#using_with_color-profile) referring to a custom [@color profile](/en-US/docs/Web/CSS/@color-profile).
+  - : A [`<dashed-ident>`](/en-US/docs/Web/CSS/dashed-ident#using_with_color-profile) referring to a custom [@color profile](/en-US/docs/Web/CSS/Reference/At-rules/@color-profile).
 
 ## Formal syntax
 

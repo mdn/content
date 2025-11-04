@@ -12,7 +12,7 @@ sidebar: cssref
 
 The **`color()`** functional notation allows a color to be specified in a particular, specified {{glossary("color space")}} rather than the implicit sRGB color space that most of the other color functions operate in.
 
-Support for a particular color space can be detected with the [`color-gamut`](/en-US/docs/Web/CSS/@media/color-gamut) CSS media feature.
+Support for a particular color space can be detected with the [`color-gamut`](/en-US/docs/Web/CSS/Reference/At-rules/@media/color-gamut) CSS media feature.
 
 ## Syntax
 
@@ -248,7 +248,7 @@ div {
 
 ### Using color-gamut media queries with color()
 
-This example shows how to use the [`color-gamut`](/en-US/docs/Web/CSS/@media/color-gamut) media query to detect support for a particular color space and use that color space to specify a color.
+This example shows how to use the [`color-gamut`](/en-US/docs/Web/CSS/Reference/At-rules/@media/color-gamut) media query to detect support for a particular color space and use that color space to specify a color.
 
 #### HTML
 
@@ -385,5 +385,5 @@ The output is as follows:
 - [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)
 - [Color_format_converter tool](/en-US/docs/Web/CSS/CSS_colors/Color_format_converter)
 - [CSS colors](/en-US/docs/Web/CSS/CSS_colors) module
-- [`color-gamut`](/en-US/docs/Web/CSS/@media/color-gamut) media feature
+- [`color-gamut`](/en-US/docs/Web/CSS/Reference/At-rules/@media/color-gamut) media feature
 - [Wide Gamut Color in CSS with Display-p3](https://webkit.org/blog/10042/wide-gamut-color-in-css-with-display-p3/)

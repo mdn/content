@@ -78,7 +78,7 @@ p {
 
 - CSS key concepts:
   - [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax/Syntax)
-  - [At-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rule)
+  - [At-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rules)
   - [Comments](/en-US/docs/Web/CSS/CSS_syntax/Comments)
   - [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
   - [Inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance)

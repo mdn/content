@@ -214,7 +214,7 @@ In all other cases, no interpolation occurs and the animation is discrete.
 
 ### Animated polygon
 
-In this example, we use the [@keyframes](/en-US/docs/Web/CSS/@keyframes) at-rule to animate a clip path between two polygons. Note that both polygons have the same number of vertices, which is necessary for this type of animation to work.
+In this example, we use the [@keyframes](/en-US/docs/Web/CSS/Reference/At-rules/@keyframes) at-rule to animate a clip path between two polygons. Note that both polygons have the same number of vertices, which is necessary for this type of animation to work.
 
 #### HTML
 

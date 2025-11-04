@@ -57,7 +57,7 @@ Container queries are similar to dimension [media queries](/en-US/docs/Web/CSS/C
 
 - [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries) module
   - {{cssxref("@media")}} at-rule
-  - [CSS logical operators](/en-US/docs/Web/CSS/@media#logical_operators) (`not`, `or`, and `and`)
+  - [CSS logical operators](/en-US/docs/Web/CSS/Reference/At-rules/@media#logical_operators) (`not`, `or`, and `and`)
 
 - [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions) module
   - {{cssxref("@starting-style")}} at-rule

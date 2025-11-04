@@ -12,7 +12,7 @@ However, user agents can provide an accessibility feature called _forced colors 
 
 In forced colors mode, authors should use colors from the `<system-color>` type for all properties that are _not_ in the set of properties whose colors are overridden. This ensures that the page consistently uses the same color palette across all properties.
 
-Authors can detect forced colors mode using the [`forced-colors`](/en-US/docs/Web/CSS/@media/forced-colors) media feature.
+Authors can detect forced colors mode using the [`forced-colors`](/en-US/docs/Web/CSS/Reference/At-rules/@media/forced-colors) media feature.
 
 A `<system-color>` value can be used anywhere a [`<color>`](/en-US/docs/Web/CSS/color_value) can be used.
 

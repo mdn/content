@@ -1383,7 +1383,7 @@ If you do choose a lossy format, such as JPEG or lossy WebP, carefully weigh the
 ## Providing image fallbacks
 
 While the standard HTML {{HTMLElement("img")}} element doesn't support compatibility fallbacks for images, the {{HTMLElement("picture")}} element does.
-`<picture>` is used as a wrapper for a number of {{HTMLElement("source")}} elements, each specifying a version of the image in a different format or under different [media conditions](/en-US/docs/Web/CSS/@media), as well as an `<img>` element which defines where to display the image and the fallback to the default or "most compatible" version.
+`<picture>` is used as a wrapper for a number of {{HTMLElement("source")}} elements, each specifying a version of the image in a different format or under different [media conditions](/en-US/docs/Web/CSS/Reference/At-rules/@media), as well as an `<img>` element which defines where to display the image and the fallback to the default or "most compatible" version.
 
 For example, if you're displaying a diagram best displayed with SVG, but wish to offer a fallback to a PNG or GIF of the diagram, you would do something like this:
 

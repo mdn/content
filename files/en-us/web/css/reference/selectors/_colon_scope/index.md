@@ -153,7 +153,7 @@ The scope of `context` is the element with the [`id`](/en-US/docs/Web/HTML/Refer
 
 ## See also
 
-- The {{cssxref("@scope")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule)
+- The {{cssxref("@scope")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rules)
 - The {{cssxref(":root")}} [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
 - [Selection and traversal on the DOM tree](/en-US/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree)
 - {{domxref("Element.querySelector()")}} and {{domxref("Element.querySelectorAll()")}}

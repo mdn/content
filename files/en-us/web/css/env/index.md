@@ -44,7 +44,7 @@ The `env( <environment-variable>, <fallback> )` function accepts the following p
 
 ## Description
 
-The `env()` function is used to insert the value of a globally-scoped, [user-agent-defined environment variable](/en-US/docs/Web/CSS/CSS_environment_variables/Using_environment_variables#browser-defined_environment_variables) into your CSS. The `env()` function can be used as a property value or in place of any part of a property value or descriptor (for example, in [Media query rules](/en-US/docs/Web/CSS/@media)).
+The `env()` function is used to insert the value of a globally-scoped, [user-agent-defined environment variable](/en-US/docs/Web/CSS/CSS_environment_variables/Using_environment_variables#browser-defined_environment_variables) into your CSS. The `env()` function can be used as a property value or in place of any part of a property value or descriptor (for example, in [Media query rules](/en-US/docs/Web/CSS/Reference/At-rules/@media)).
 
 The function accepts an `<environment-variable>` as its first argument. This is a case-sensitive {{cssxref("&lt;custom-ident>")}} equal to the [name of the environment variable](/en-US/docs/Web/CSS/CSS_environment_variables/Using_environment_variables#browser-defined_environment_variables) to be substituted, but it can also include additional space-separated values if required. For example, `env(viewport-segment-width 0 0)` would return the width of the top or left segment in the case of a device with multiple viewport segments.
 

@@ -100,7 +100,7 @@ For a page containing iframes, objects, or external SVG, both the containing pag
 
 The layout viewport and visual viewport described above are not the only viewports you will encounter. Any sub-viewport that is fully or partially displayed within the layout viewport is considered a visual viewport.
 
-We generally think of [`width`](/en-US/docs/Web/CSS/@media/width) and [`height`](/en-US/docs/Web/CSS/@media/height) media queries as being relative to the width and height of the browser window. They are actually relative to the viewport, which is the window in the main document but is the intrinsic size of the element's parent in a nested browsing context like objects, iframes and SVG. In CSS, we also have [length units based on the viewport size](/en-US/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#viewport_units). A `vh` unit is 1% of the layout viewport's height. Similarly, the `vw` unit is 1% of the layout viewport's width.
+We generally think of [`width`](/en-US/docs/Web/CSS/Reference/At-rules/@media/width) and [`height`](/en-US/docs/Web/CSS/Reference/At-rules/@media/height) media queries as being relative to the width and height of the browser window. They are actually relative to the viewport, which is the window in the main document but is the intrinsic size of the element's parent in a nested browsing context like objects, iframes and SVG. In CSS, we also have [length units based on the viewport size](/en-US/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#viewport_units). A `vh` unit is 1% of the layout viewport's height. Similarly, the `vw` unit is 1% of the layout viewport's width.
 
 #### `<iframe>`
 

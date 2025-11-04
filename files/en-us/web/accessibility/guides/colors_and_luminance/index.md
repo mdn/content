@@ -18,7 +18,7 @@ The choice of colors and their use is a significant component of accessibility. 
 
 Environment matters. Perception of color in a well-lit room will be different than perception of that same color on that same computer screen in a dark room. Regarding accessibility, using certain color combinations has more impact than others. Font size, [font style](https://www.nngroup.com/articles/glanceable-fonts/) (some fonts are so thin or fancy that they present accessibility problems on their own), background color, the size of the background space around the text, even pixel densities, and more all affect how color is delivered from the screen.
 
-A viewer's distance from the screen, the ambient background, the health of his eyes, and more all affect how that color is received by the viewer. How the viewer perceives color after it gets to their eyes is yet another matter, and can be affected by overall health. Fortunately, there are [media queries](/en-US/docs/Web/CSS/@media) that enable developers to provide styles based on user preferences, including [contrast](/en-US/docs/Web/CSS/@media/prefers-contrast) and [color scheme](/en-US/docs/Web/CSS/@media/prefers-color-scheme) preferences.
+A viewer's distance from the screen, the ambient background, the health of his eyes, and more all affect how that color is received by the viewer. How the viewer perceives color after it gets to their eyes is yet another matter, and can be affected by overall health. Fortunately, there are [media queries](/en-US/docs/Web/CSS/Reference/At-rules/@media) that enable developers to provide styles based on user preferences, including [contrast](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-contrast) and [color scheme](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) preferences.
 
 When supported, the [Ambient Light Sensor](/en-US/docs/Web/API/AmbientLightSensor) interface returns the current light level or illuminance of the ambient light around the hosting device, enabling a web page to be aware of any change in the light intensity, and consequently, adjust the text accordingly. Additionally, the above media queries enable developers to provide alternative user experiences when user preferences indicate preferred contrast levels, automatically adjusting levels depending on the user's location and what kind of screen they are using.
 
@@ -218,7 +218,7 @@ Dark adaptation to low luminance is slow. When you come in from outside, where t
 
 Light adaptation is the reverse. Going from a dark room into bright sunlight is quicker but can also hurt.
 
-The implication is that web developers who seek to improve the legibility of text in which the ambient conditions of a room have changed can take advantage of the `AmbientLightSensor` interface and the [`prefers-contrast`](/en-US/docs/Web/CSS/@media/prefers-contrast) media query.
+The implication is that web developers who seek to improve the legibility of text in which the ambient conditions of a room have changed can take advantage of the `AmbientLightSensor` interface and the [`prefers-contrast`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-contrast) media query.
 
 ## Saturation
 

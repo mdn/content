@@ -55,6 +55,6 @@ When content is physically printed or displayed as a print preview, there are pa
 
 ## See also
 
-- [`horizontal-viewport-segments`](/en-US/docs/Web/CSS/@media/horizontal-viewport-segments) and [`vertical-viewport-segments`](/en-US/docs/Web/CSS/@media/vertical-viewport-segments) `@media` descriptors
+- [`horizontal-viewport-segments`](/en-US/docs/Web/CSS/Reference/At-rules/@media/horizontal-viewport-segments) and [`vertical-viewport-segments`](/en-US/docs/Web/CSS/Reference/At-rules/@media/vertical-viewport-segments) `@media` descriptors
 - [Viewport Segments API](/en-US/docs/Web/API/Viewport_segments_API)
 - [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout) module

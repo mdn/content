@@ -7,7 +7,7 @@ browser-compat: api.CSSPositionTryRule
 
 {{APIRef("CSSOM")}}
 
-The **`CSSPositionTryRule`** interface describes an object representing a {{cssxref("@position-try")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule).
+The **`CSSPositionTryRule`** interface describes an object representing a {{cssxref("@position-try")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rules).
 
 {{InheritanceDiagram}}
 

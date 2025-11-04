@@ -6,7 +6,7 @@ page-type: guide
 sidebar: cssref
 ---
 
-Any [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) whose body contains style rules can be nested inside another style rule using CSS nesting. Style rules nested inside at-rules take their nesting selector definition from the nearest ancestor style rule. Properties can be directly included inside a nested at-rule, acting as if they were nested in a `& {...}` block.
+Any [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rules) whose body contains style rules can be nested inside another style rule using CSS nesting. Style rules nested inside at-rules take their nesting selector definition from the nearest ancestor style rule. Properties can be directly included inside a nested at-rule, acting as if they were nested in a `& {...}` block.
 
 ## at-rules that can be nested
 
@@ -99,7 +99,7 @@ At-rules can be nested within other at-rules. Below you can see an example of th
 
 ### Nesting Cascade Layers (`@layer`)
 
-[Cascade Layers](/en-US/docs/Web/CSS/@layer) can be nested to [create child-layers](/en-US/docs/Web/CSS/@layer#nesting_layers). These are joined with a `.` (dot).
+[Cascade Layers](/en-US/docs/Web/CSS/Reference/At-rules/@layer) can be nested to [create child-layers](/en-US/docs/Web/CSS/Reference/At-rules/@layer#nesting_layers). These are joined with a `.` (dot).
 
 #### Defining the parent & child layers
 

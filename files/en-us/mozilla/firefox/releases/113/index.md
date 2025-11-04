@@ -21,7 +21,7 @@ No notable changes.
   ([Firefox bug 1352753](https://bugzil.la/1352753), [Firefox bug 1813497](https://bugzil.la/1813497), [Firefox bug 1818819](https://bugzil.la/1818819), [Firefox bug 1824526](https://bugzil.la/1824526)).
 - The [`:nth-child of <selector>` syntax](/en-US/docs/Web/CSS/Reference/Selectors/:nth-child#the_of_selector_syntax) allows you to target a group of children based upon the `An+B` rule that also matches a defined selector.
   See ([Firefox bug 1808229](https://bugzil.la/1808229)) for more details.
-- The [`scripting`](/en-US/docs/Web/CSS/@media/scripting) media feature is now supported. See ([Firefox bug 1166581](https://bugzil.la/1166581)) for more details.
+- The [`scripting`](/en-US/docs/Web/CSS/Reference/At-rules/@media/scripting) media feature is now supported. See ([Firefox bug 1166581](https://bugzil.la/1166581)) for more details.
 - The [`content`](/en-US/docs/Web/CSS/Reference/Properties/content) property now supports all image type including, `<gradient>`, `image-set()` and `url()`. See ([Firefox bug 1684958](https://bugzil.la/1684958)) for more details. There is currently an issue with the `::before` and `::after` pseudo selectors that means that they don't paint `<gradient>`s. See ([Firefox bug 1832901](https://bugzil.la/1832901)) for more details.
 
 ### JavaScript
