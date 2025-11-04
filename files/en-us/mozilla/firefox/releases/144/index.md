@@ -101,4 +101,4 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
 - **:heading():** `layout.css.heading-selector.enabled`
 
-  The [`:heading()`](/en-US/docs/Web/CSS/Reference/Selectors/:heading_function) functional pseudo class now has a much simpler syntax that takes a comma separated list of integers that match the heading level. ([Firefox bug 1974386](https://bugzil.la/1974386) & [Firefox bug 1984310](https://bugzil.la/1984310)).
+  The [`:heading()`](/en-US/docs/Web/CSS/Reference/Selectors/:heading_function) functional pseudo-class now has a much simpler syntax that takes a comma-separated list of integers that match the heading level. ([Firefox bug 1974386](https://bugzil.la/1974386) & [Firefox bug 1984310](https://bugzil.la/1984310)).
