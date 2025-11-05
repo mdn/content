@@ -119,7 +119,7 @@ To set the first count at `100`, we target the first `<i>` element by using the 
 
 ```css
 :root {
-  --starter: 7
+  --starter: 7;
 }
 div {
   counter-reset: sevens calc(var(--starter)*3*3*3);
