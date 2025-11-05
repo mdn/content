@@ -146,6 +146,69 @@ The [CSS shapes](/en-US/docs/Web/CSS/CSS_shapes) and [CSS borders and box decora
 - {{cssxref("&lt;corner-shape-value>")}}
   - : Describes the shape of a container corner. It is used by the {{cssxref("corner-shape")}} shorthand property and its [constituent properties](/en-US/docs/Web/CSS/Reference/Properties/corner-shape#constituent_properties) to specify the shape applied to affected container corners.
 
+## Alphabetical index of data types
+
+- {{cssxref("absolute-size")}}
+- {{cssxref("alpha-value")}}
+- {{cssxref("angle")}}
+- {{cssxref("angle-percentage")}}
+- {{cssxref("baseline-position")}}
+- {{cssxref("basic-shape")}}
+- {{cssxref("blend-mode")}}
+- {{cssxref("box-edge")}}
+- {{cssxref("calc-keyword")}}
+- {{cssxref("calc-sum")}}
+- {{cssxref("color_value", "&lt;color&gt;")}}
+- {{cssxref("color-interpolation-method")}}
+- {{cssxref("content-distribution")}}
+- {{cssxref("content-position")}}
+- {{cssxref("corner-shape-value")}} {{experimental_inline}}
+- {{cssxref("custom-ident")}}
+- {{cssxref("dashed-function")}} {{experimental_inline}}
+- {{cssxref("dashed-ident")}}
+- {{cssxref("dimension")}}
+- {{cssxref("display-box")}}
+- {{cssxref("display-inside")}}
+- {{cssxref("display-internal")}}
+- {{cssxref("display-legacy")}}
+- {{cssxref("display-listitem")}}
+- {{cssxref("display-outside")}}
+- {{cssxref("easing-function")}}
+- {{cssxref("filter-function")}}
+- {{cssxref("flex_value", "&lt;flex&gt;")}}
+- {{cssxref("frequency")}}
+- {{cssxref("frequency-percentage")}}
+- {{cssxref("generic-family")}}
+- {{cssxref("gradient")}}
+- {{cssxref("hex-color")}}
+- {{cssxref("hue")}}
+- {{cssxref("hue-interpolation-method")}}
+- {{cssxref("ident")}}
+- {{cssxref("image")}}
+- {{cssxref("integer")}}
+- {{cssxref("length")}}
+- {{cssxref("length-percentage")}}
+- {{cssxref("line-style")}}
+- {{cssxref("named-color")}}
+- {{cssxref("number")}}
+- {{cssxref("overflow_value", "&lt;overflow&gt;")}}
+- {{cssxref("overflow-position")}}
+- {{cssxref("percentage")}}
+- {{cssxref("position_value", "&lt;position&gt;")}}
+- {{cssxref("position-area_value", "&lt;position-area&gt;")}}
+- {{cssxref("ratio")}}
+- {{cssxref("relative-size")}}
+- {{cssxref("resolution")}}
+- {{cssxref("self-position")}}
+- {{cssxref("shape")}} {{deprecated_inline}}
+- {{cssxref("string")}}
+- {{cssxref("system-color")}}
+- {{cssxref("text-edge")}}
+- {{cssxref("time")}}
+- {{cssxref("time-percentage")}}
+- {{cssxref("transform-function")}}
+- {{cssxref("url_value", "&lt;url&gt;")}}
+
 ## Specifications
 
 {{Specifications}}
