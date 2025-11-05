@@ -50,17 +50,23 @@ sidebar:
     title: At-rules
     details: closed
   - type: listSubPages
-    path: /Web/CSS
+    path: /Web/CSS/Reference/Values
+    tags: css-keyword
+    link: /Web/CSS/Reference/Values
+    title: Values
+    details: closed
+  - type: listSubPages
+    path: /Web/CSS/Reference/Values
+    tags: css-type
+    link: /Web/CSS/Reference/Values/Data_types
+    title: Types
+    details: closed
+  - type: listSubPages
+    path: /Web/CSS/Reference/Values
     tags: css-function
     depth: 2
     link: /Web/CSS/Reference/Values/Functions
     title: Functions
-    details: closed
-  - type: listSubPages
-    path: /Web/CSS
-    tags: css-type
-    link: /Web/CSS/Reference/Values/Data_types
-    title: Types
     details: closed
   - type: section
     link: /Web/CSS/Guides

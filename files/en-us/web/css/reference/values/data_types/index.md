@@ -1,5 +1,6 @@
 ---
 title: CSS data types
+short-title: Data types
 slug: Web/CSS/Reference/Values/Data_types
 page-type: landing-page
 spec-urls: https://drafts.csswg.org/css-values/

@@ -36,13 +36,13 @@ sidebar: cssref
 - {{cssxref("box-edge")}}
 - {{cssxref("calc-keyword")}}
 - {{cssxref("calc-sum")}}
-- {{cssxref("color_value")}}
+- {{cssxref("color_value", "&lt;color&gt;")}}
 - {{cssxref("color-interpolation-method")}}
 - {{cssxref("content-distribution")}}
 - {{cssxref("content-position")}}
-- {{cssxref("corner-shape-value")}}
+- {{cssxref("corner-shape-value")}} {{experimental_inline}}
 - {{cssxref("custom-ident")}}
-- {{cssxref("dashed-function")}}
+- {{cssxref("dashed-function")}} {{experimental_inline}}
 - {{cssxref("dashed-ident")}}
 - {{cssxref("dimension")}}
 - {{cssxref("display-box")}}
@@ -53,7 +53,7 @@ sidebar: cssref
 - {{cssxref("display-outside")}}
 - {{cssxref("easing-function")}}
 - {{cssxref("filter-function")}}
-- {{cssxref("flex_value")}}
+- {{cssxref("flex_value", "&lt;flex&gt;")}}
 - {{cssxref("frequency")}}
 - {{cssxref("frequency-percentage")}}
 - {{cssxref("generic-family")}}
@@ -69,27 +69,27 @@ sidebar: cssref
 - {{cssxref("line-style")}}
 - {{cssxref("named-color")}}
 - {{cssxref("number")}}
-- {{cssxref("overflow-value")}}
+- {{cssxref("overflow_value", "&lt;overflow&gt;")}}
 - {{cssxref("overflow-position")}}
 - {{cssxref("percentage")}}
-- {{cssxref("position_value")}}
-- {{cssxref("position-area_value")}}
+- {{cssxref("position_value", "&lt;position&gt;")}}
+- {{cssxref("position-area_value", "&lt;position-area&gt;")}}
 - {{cssxref("ratio")}}
 - {{cssxref("relative-size")}}
 - {{cssxref("resolution")}}
 - {{cssxref("self-position")}}
-- {{cssxref("shape")}}
+- {{cssxref("shape")}} {{deprecated_inline}}
 - {{cssxref("string")}}
 - {{cssxref("system-color")}}
 - {{cssxref("text-edge")}}
 - {{cssxref("time")}}
 - {{cssxref("time-percentage")}}
 - {{cssxref("transform-function")}}
-- {{cssxref("url_value")}}
+- {{cssxref("url_value", "&lt;url&gt;")}}
 
 ## Index of functions
 
-- {{cssxref("-moz-image-rect")}}
+- {{cssxref("-moz-image-rect")}} {{non-standard_inline}} {{deprecated_inline}}
 - {{cssxref("abs")}}
 - {{cssxref("acos")}}
 - {{cssxref("anchor")}}
@@ -101,14 +101,14 @@ sidebar: cssref
 - {{cssxref("filter-function/blur", "blur()")}}
 - {{cssxref("filter-function/brightness", "brightness()")}}
 - {{cssxref("calc")}}
-- {{cssxref("calc-size")}}
+- {{cssxref("calc-size")}} {{experimental_inline}}
 - {{cssxref("basic-shape/circle", "circle()")}}
 - {{cssxref("clamp")}}
 - {{cssxref("color_value/color", "color()")}}
 - {{cssxref("color_value/color-mix", "color-mix()")}}
 - {{cssxref("gradient/conic-gradient", "conic-gradient()")}}
 - {{cssxref("filter-function/contrast", "contrast()")}}
-- {{cssxref("color_value/contrast-color", "contrast-color()")}}
+- {{cssxref("color_value/contrast-color", "contrast-color()")}} {{experimental_inline}}
 - {{cssxref("cos")}}
 - {{cssxref("counter")}}
 - {{cssxref("counters")}}
@@ -116,8 +116,8 @@ sidebar: cssref
 - {{cssxref("easing-function/cubic-bezier", "cubic-bezier()")}}
 - {{cssxref("color_value/device-cmyk", "device-cmyk()")}}
 - {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
-- {{cssxref("dynamic-range-limit-mix")}}
-- {{cssxref("element")}}
+- {{cssxref("dynamic-range-limit-mix")}} {{experimental_inline}}
+- {{cssxref("element")}} {{experimental_inline}}
 - {{cssxref("basic-shape/ellipse", "ellipse()")}}
 - {{cssxref("env")}}
 - {{cssxref("exp")}}
@@ -127,13 +127,13 @@ sidebar: cssref
 - {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
 - {{cssxref("color_value/hwb", "hwb()")}}
 - {{cssxref("hypot")}}
-- {{cssxref("if")}}
+- {{cssxref("if")}} {{experimental_inline}}
 - {{cssxref("image/image", "image()")}}
 - {{cssxref("image/image-set", "image-set()")}}
 - {{cssxref("basic-shape/inset", "inset()")}}
 - {{cssxref("filter-function/invert", "invert()")}}
 - {{cssxref("color_value/lab", "lab()")}}
-- {{cssxref("import/layer_function", "layer()")}}
+- {{cssxref("@import/layer_function", "layer()")}}
 - {{cssxref("color_value/lch", "lch()")}}
 - {{cssxref("color_value/light-dark", "light-dark()")}}
 - {{cssxref("easing-function/linear", "linear()")}}
@@ -154,7 +154,7 @@ sidebar: cssref
 - {{cssxref("transform-function/perspective", "perspective()")}}
 - {{cssxref("basic-shape/polygon", "polygon()")}}
 - {{cssxref("pow")}}
-- {{cssxref("progress")}}
+- {{cssxref("progress")}} {{experimental_inline}}
 - {{cssxref("gradient/radial-gradient", "radial-gradient()")}}
 - {{cssxref("ray")}}
 - {{cssxref("basic-shape/rect", "rect()")}}
@@ -179,8 +179,8 @@ sidebar: cssref
 - {{cssxref("animation-timeline/scroll", "scroll()")}}
 - {{cssxref("filter-function/sepia", "sepia()")}}
 - {{cssxref("basic-shape/shape", "shape()")}}
-- {{cssxref("sibling-count")}}
-- {{cssxref("sibling-index")}}
+- {{cssxref("sibling-count")}} {{experimental_inline}}
+- {{cssxref("sibling-index")}} {{experimental_inline}}
 - {{cssxref("sign")}}
 - {{cssxref("sin")}}
 - {{cssxref("transform-function/skew", "skew()")}}
@@ -188,7 +188,7 @@ sidebar: cssref
 - {{cssxref("transform-function/skewy", "skewy()")}}
 - {{cssxref("sqrt")}}
 - {{cssxref("easing-function/steps", "steps()")}}
-- {{cssxref("superellipse")}}
+- {{cssxref("superellipse")}} {{experimental_inline}}
 - {{cssxref("symbols")}}
 - {{cssxref("tan")}}
 - {{cssxref("transform-function/translate", "translate()")}}
@@ -196,7 +196,7 @@ sidebar: cssref
 - {{cssxref("transform-function/translatex", "translatex()")}}
 - {{cssxref("transform-function/translatey", "translatey()")}}
 - {{cssxref("transform-function/translatez", "translatez()")}}
-- {{cssxref("type")}}
+- {{cssxref("type")}} {{experimental_inline}}
 - {{cssxref("url_function")}}
 - {{cssxref("var")}}
 - {{cssxref("animation-timeline/view", "view()")}}

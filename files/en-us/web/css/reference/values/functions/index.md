@@ -1,5 +1,6 @@
 ---
 title: CSS value functions
+short-title: Functions
 slug: Web/CSS/Reference/Values/Functions
 page-type: landing-page
 sidebar: cssref
