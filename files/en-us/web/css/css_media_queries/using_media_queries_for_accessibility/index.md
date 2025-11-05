@@ -11,7 +11,7 @@ sidebar: cssref
 
 Blinking and flashing animation can be problematic for people with cognitive concerns such as Attention Deficit Hyperactivity Disorder (ADHD). Additionally, certain kinds of motion can be a trigger for Vestibular disorders, epilepsy, and migraine and Scotopic sensitivity. Reducing animations or switching animation off completely based on the user's preference can also benefit users with low battery or low-end devices.
 
-The [`prefers-reduced-motion`](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) media query enables providing an experience with fewer animations and transitions to users who have set their operating system's accessibility preferences to reduce motion. It has two possible values:
+The [`prefers-reduced-motion`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) media query enables providing an experience with fewer animations and transitions to users who have set their operating system's accessibility preferences to reduce motion. It has two possible values:
 
 - `no-preference`
   - : Indicates that the user has made no preference known to the system.
@@ -46,8 +46,8 @@ The value of `prefers-reduced-motion` is `reduce`, not "none". This preference d
 
 ## See also
 
-- [`prefers-contrast`](/en-US/docs/Web/CSS/@media/prefers-contrast): to adjust page styles based on user's contrast preference
-- [`prefers-reduced-transparency`](/en-US/docs/Web/CSS/@media/prefers-reduced-transparency)
-- [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme)
-- [`inverted-colors`](/en-US/docs/Web/CSS/@media/inverted-colors)
+- [`prefers-contrast`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-contrast): to adjust page styles based on user's contrast preference
+- [`prefers-reduced-transparency`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-transparency)
+- [`prefers-color-scheme`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme)
+- [`inverted-colors`](/en-US/docs/Web/CSS/Reference/At-rules/@media/inverted-colors)
 - [Designing With Reduced Motion For Motion Sensitivities](https://www.smashingmagazine.com/2020/09/design-reduced-motion-sensitivities/)

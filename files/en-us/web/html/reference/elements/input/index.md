@@ -148,7 +148,7 @@ The available types are as follows:
       </td>
       <td id="examplehidden">
         <pre class="brush: html hidden">
-&#x3C;input id="userId" name="userId" type="hidden" value="abc123"></pre
+&#x3C;input id="userId" name="userId" type="hidden" value="abc123" /></pre
         >
         {{EmbedLiveSample("examplehidden",200,55)}}
       </td>
@@ -1132,12 +1132,12 @@ If there is an error, supporting browsers will both alert the user and prevent t
 
 ```js
 function validate(input) {
-  let validityState_object = input.validity;
-  if (validityState_object.valueMissing) {
+  let validityState = input.validity;
+  if (validityState.valueMissing) {
     input.setCustomValidity("A value is required");
-  } else if (validityState_object.rangeUnderflow) {
+  } else if (validityState.rangeUnderflow) {
     input.setCustomValidity("Your value is too low");
-  } else if (validityState_object.rangeOverflow) {
+  } else if (validityState.rangeOverflow) {
     input.setCustomValidity("Your value is too high");
   } else {
     input.setCustomValidity("");

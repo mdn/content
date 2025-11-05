@@ -18,9 +18,9 @@ No notable changes.
 
 - Container queries and container query length units are now supported by default.
   For more information on these queries and the related units of length, see the [CSS Container Queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries#container_query_length_units) documentation ([Firefox bug 1809720](https://bugzil.la/1809720)).
-- The [color-gamut media query](/en-US/docs/Web/CSS/@media/color-gamut) is now supported ([Firefox bug 1422237](https://bugzil.la/1422237)).
+- The [color-gamut media query](/en-US/docs/Web/CSS/Reference/At-rules/@media/color-gamut) is now supported ([Firefox bug 1422237](https://bugzil.la/1422237)).
 - The [`list`](/en-US/docs/Web/HTML/Reference/Elements/datalist#color_type) attribute is supported in `<input>` elements with `type="color"` on Windows and Linux ([Firefox bug 960984](https://bugzil.la/960984)).
-- The [`@page`](/en-US/docs/Web/CSS/@page) at-rule now supports named pages, which allows a user to create page breaks for specific selectors using the [`page`](/en-US/docs/Web/CSS/Reference/Properties/page) property ([Firefox bug 1787947](https://bugzil.la/1787947))
+- The [`@page`](/en-US/docs/Web/CSS/Reference/At-rules/@page) at-rule now supports named pages, which allows a user to create page breaks for specific selectors using the [`page`](/en-US/docs/Web/CSS/Reference/Properties/page) property ([Firefox bug 1787947](https://bugzil.la/1787947))
 
 ### JavaScript
 

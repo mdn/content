@@ -324,10 +324,10 @@ When animating `display` with [CSS animations](/en-US/docs/Web/CSS/CSS_animation
 
 When animating `display` with [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions), two additional features are needed:
 
-- [`@starting-style`](/en-US/docs/Web/CSS/@starting-style) provides starting values for properties you want to transition from when the animated element is first shown. This is needed to avoid unexpected behavior. By default, CSS transitions are not triggered on an element's first style update or when the `display` type changes from `none` to another type.
+- [`@starting-style`](/en-US/docs/Web/CSS/Reference/At-rules/@starting-style) provides starting values for properties you want to transition from when the animated element is first shown. This is needed to avoid unexpected behavior. By default, CSS transitions are not triggered on an element's first style update or when the `display` type changes from `none` to another type.
 - [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/Reference/Properties/transition-behavior) needs to be set on the {{cssxref("transition-property")}} declaration (or the {{cssxref("transition")}} shorthand) to enable `display` transitions.
 
-For examples of transitioning the `display` property, see the [`@starting-style`](/en-US/docs/Web/CSS/@starting-style#examples) and [`transition-behavior`](/en-US/docs/Web/CSS/Reference/Properties/transition-behavior#examples) pages.
+For examples of transitioning the `display` property, see the [`@starting-style`](/en-US/docs/Web/CSS/Reference/At-rules/@starting-style#examples) and [`transition-behavior`](/en-US/docs/Web/CSS/Reference/Properties/transition-behavior#examples) pages.
 
 ## Accessibility
 

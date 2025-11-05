@@ -6,7 +6,7 @@ browser-compat: css.properties.font-palette
 sidebar: cssref
 ---
 
-The **`font-palette`** [CSS](/en-US/docs/Web/CSS) property allows specifying one of the many palettes contained in a [color font](https://www.colorfonts.wtf/) that a user agent may use for the font. Users can also override the values in a palette or create a new palette by using the [`@font-palette-values`](/en-US/docs/Web/CSS/@font-palette-values) at-rule.
+The **`font-palette`** [CSS](/en-US/docs/Web/CSS) property allows specifying one of the many palettes contained in a [color font](https://www.colorfonts.wtf/) that a user agent may use for the font. Users can also override the values in a palette or create a new palette by using the [`@font-palette-values`](/en-US/docs/Web/CSS/Reference/At-rules/@font-palette-values) at-rule.
 
 > [!NOTE]
 > A `font-palette` palette takes precedence when coloring a font. The {{cssxref("color")}} property will not override a font palette, even if specified with {{cssxref("important", "!important")}}.
@@ -33,7 +33,7 @@ font-palette: palette-mix(in lch, --blue, --yellow);
 - `dark`
   - : Specifies the first palette in the font that matches 'dark' to be used for the font. Some fonts contain metadata that identify a palette as applicable for a dark (close to black) background. If a font does not have this metadata, the value behaves as `normal`.
 - `<palette-identifier>`
-  - : Allows you to specify your own values for the font palette by using the [@font-palette-values](/en-US/docs/Web/CSS/@font-palette-values) at-rule. This value is specified using the [&lt;dashed-ident&gt;](/en-US/docs/Web/CSS/dashed-ident) format.
+  - : Allows you to specify your own values for the font palette by using the [@font-palette-values](/en-US/docs/Web/CSS/Reference/At-rules/@font-palette-values) at-rule. This value is specified using the [&lt;dashed-ident&gt;](/en-US/docs/Web/CSS/dashed-ident) format.
 - {{cssxref("font-palette/palette-mix", "palette-mix()")}}
   - : Creates a new `font-palette` value by blending together two `font-palette` values by specified percentages and color interpolation methods.
 

@@ -21,7 +21,7 @@ In addition to the basic MathML global attributes, the following global attribut
 - [`autofocus`](/en-US/docs/Web/MathML/Reference/Global_attributes/autofocus)
   - : A boolean attribute that indicates that the element should be focused on page load.
 - [`class`](/en-US/docs/Web/MathML/Reference/Global_attributes/class)
-  - : A space-separated list of the classes of the element. Classes allow CSS and JavaScript to select and access specific elements via the [class selectors](/en-US/docs/Web/CSS/Class_selectors) or functions like the method {{DOMxRef("Document.getElementsByClassName()")}}.
+  - : A space-separated list of the classes of the element. Classes allow CSS and JavaScript to select and access specific elements via the [class selectors](/en-US/docs/Web/CSS/Reference/Selectors/Class_selectors) or functions like the method {{DOMxRef("Document.getElementsByClassName()")}}.
 - [`data-*`](/en-US/docs/Web/MathML/Reference/Global_attributes/data-*)
   - : Forms a class of attributes, called custom data attributes, that allow proprietary information to be exchanged between the [MathML](/en-US/docs/Web/MathML) and its {{glossary("DOM")}} representation that may be used by scripts. All such custom data are available via the {{DOMxRef("MathMLElement")}} interface of the element the attribute is set on. The {{DOMxRef("MathMLElement.dataset")}} property gives access to them.
 - [`dir`](/en-US/docs/Web/MathML/Reference/Global_attributes/dir)

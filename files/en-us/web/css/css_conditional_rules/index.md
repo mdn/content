@@ -11,7 +11,7 @@ sidebar: cssref
 
 The **CSS conditional rules** module defines CSS media and support queries, enabling you to define styles that are only applied if specific conditions are met. The conditional rules defined in this module are based on device, user-agent, and viewport capabilities. With conditional rules, you can target CSS styles based on query values or browser and device features, independent of the document being rendered.
 
-The first CSS conditional rules were [media types](/en-US/docs/Web/CSS/@media#media_types) specifying the intended destination medium for the linked styles, for example `screen` or `print`. These were set as the value of the HTML {{HTMLElement("link")}} and {{HTMLElement("style")}} elements' `media` attributes or as a comma-separated list of media types within an {{cssxref("@import")}} statement or at-rule. The ability to conditionally apply CSS rules has been greatly expanded since the CSS 2.1 and HTML 4.01 implementations that limited conditional queries to a few media types.
+The first CSS conditional rules were [media types](/en-US/docs/Web/CSS/Reference/At-rules/@media#media_types) specifying the intended destination medium for the linked styles, for example `screen` or `print`. These were set as the value of the HTML {{HTMLElement("link")}} and {{HTMLElement("style")}} elements' `media` attributes or as a comma-separated list of media types within an {{cssxref("@import")}} statement or at-rule. The ability to conditionally apply CSS rules has been greatly expanded since the CSS 2.1 and HTML 4.01 implementations that limited conditional queries to a few media types.
 
 CSS conditional rules now include feature queries; the `@supports` at-rule enables targeting CSS styles based on a user-agent's CSS capabilities. Additional conditions include which selector, font-formats, and font-techs are supported.
 
@@ -39,22 +39,22 @@ The CSS conditional rules module also introduces the `@else` and `@when` at-rule
 
 ### Functions
 
-- [`style()`](/en-US/docs/Web/CSS/@container#container_style_queries)
-- [`font-tech()`](/en-US/docs/Web/CSS/@supports#font-tech)
-- [`font-format()`](/en-US/docs/Web/CSS/@supports#font-format)
-- [`selector()`](/en-US/docs/Web/CSS/@supports#function_syntax)
-- [`supports()`](/en-US/docs/Web/CSS/@import#supports-condition)
+- [`style()`](/en-US/docs/Web/CSS/Reference/At-rules/@container#container_style_queries)
+- [`font-tech()`](/en-US/docs/Web/CSS/Reference/At-rules/@supports#font-tech)
+- [`font-format()`](/en-US/docs/Web/CSS/Reference/At-rules/@supports#font-format)
+- [`selector()`](/en-US/docs/Web/CSS/Reference/At-rules/@supports#function_syntax)
+- [`supports()`](/en-US/docs/Web/CSS/Reference/At-rules/@import#supports-condition)
 
 The CSS conditional rules module also introduces a `media()` CSS function. Currently, no browsers support this feature.
 
 ### data types
 
-- [`<container-name>`](/en-US/docs/Web/CSS/@container#container-name)
-- [`<style-feature>`](/en-US/docs/Web/CSS/@container#container_style_queries)
+- [`<container-name>`](/en-US/docs/Web/CSS/Reference/At-rules/@container#container-name)
+- [`<style-feature>`](/en-US/docs/Web/CSS/Reference/At-rules/@container#container_style_queries)
 - [Container relative `<length>` units](/en-US/docs/Web/CSS/length#container_query_length_units)
 - [`<media-query>`](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#syntax)
-- [`<supports-condition>`](/en-US/docs/Web/CSS/@import#importing_css_rules_conditional_on_feature_support)
-- `<supports-feature>` (see [`supports()`](/en-US/docs/Web/CSS/@import#supports-condition))
+- [`<supports-condition>`](/en-US/docs/Web/CSS/Reference/At-rules/@import#importing_css_rules_conditional_on_feature_support)
+- `<supports-feature>` (see [`supports()`](/en-US/docs/Web/CSS/Reference/At-rules/@import#supports-condition))
 
 ### Interfaces
 
@@ -91,11 +91,11 @@ The CSS conditional rules module also introduces a `media()` CSS function. Curre
   - {{cssxref("@import")}} at-rule
 
 - [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries) module
-  - [`<media-feature>`](/en-US/docs/Web/CSS/@media#media_features)
-  - [`<media-type>`](/en-US/docs/Web/CSS/@media#media_types)
-  - [`<media-condition>`](/en-US/docs/Web/CSS/@media#logical_operators)
+  - [`<media-feature>`](/en-US/docs/Web/CSS/Reference/At-rules/@media#media_features)
+  - [`<media-type>`](/en-US/docs/Web/CSS/Reference/At-rules/@media#media_types)
+  - [`<media-condition>`](/en-US/docs/Web/CSS/Reference/At-rules/@media#logical_operators)
   - [`<media-query-list>`](/en-US/docs/Web/SVG/Reference/Attribute/media)
-  - [CSS logical operators](/en-US/docs/Web/CSS/@media#logical_operators) (`not`, `or`, and `and`)
+  - [CSS logical operators](/en-US/docs/Web/CSS/Reference/At-rules/@media#logical_operators) (`not`, `or`, and `and`)
 
 - [CSSOM view](/en-US/docs/Web/CSS/CSSOM_view) module
   - {{domxref("CSS")}} API

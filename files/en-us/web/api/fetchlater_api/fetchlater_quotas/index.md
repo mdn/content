@@ -176,22 +176,23 @@ The `allow="deferred-fetch"` directive is needed to prevent same-origin iframes 
 
 ```js
 // Maximum of 64KiB per origin
-fetchLater(a_72_kb_url);
+const url = "<72KiB of characters>";
+fetchLater(url);
 
 // Maximum of 64KiB per origin including headers
-fetchLater("https://origin.example.com", { headers: headers_exceeding_64kb });
+fetchLater("https://origin.example.com", { headers: headersExceeding64KiB });
 
 // Maximum of 64KiB per origin including body and headers
-fetchLater(a_32_kib_url, { headers: headers_exceeding_32kib });
+fetchLater("<32KiB of characters>", { headers: headersExceeding32KiB });
 
 // Maximum of 64KiB per origin including body
 fetchLater("https://origin.example.com", {
   method: "POST",
-  body: body_exceeding_64_kib,
+  body: bodyExceeding64KiB,
 });
 
 // Maximum of 64KiB per origin including body and automatically added headers
-fetchLater(a_62_kib_url /* with a 3kb referrer */);
+fetchLater("<62KiB of characters>" /* with a 3kb referrer */);
 ```
 
 ### Examples which eventually throw a `QuotaExceededError`
@@ -199,9 +200,9 @@ fetchLater(a_62_kib_url /* with a 3kb referrer */);
 In the following sequence, contained in the top-level document, the first two requests would succeed, but the third would throw. That's because, even though the overall 640KiB quota was not exceeded, the third request exceeds the reporting-origin quota for `https://a.example.com` and would throw.
 
 ```js
-fetchLater("https://a.example.com", { method: "POST", body: a_40kb_body });
-fetchLater("https://b.example.com", { method: "POST", body: a_40kb_body });
-fetchLater("https://a.example.com", { method: "POST", body: a_40kb_body });
+fetchLater("https://a.example.com", { method: "POST", body: a40KiBBody });
+fetchLater("https://b.example.com", { method: "POST", body: a40KiBBody });
+fetchLater("https://a.example.com", { method: "POST", body: a40KiBBody });
 ```
 
 ### Redirects of subframes back to the top-level origin allow use of the top-level quota

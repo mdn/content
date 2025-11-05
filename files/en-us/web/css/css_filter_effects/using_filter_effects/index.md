@@ -56,7 +56,7 @@ The `filter` and `backdrop-filter` properties accept a filter function list, whi
 
 If you hover over the sepia image below, you'll see the full-color image come into view instantly.
 
-The image is set to be sepia by specifying the value of the `filter` property as the [`sepia()`](/en-US/docs/Web/CSS/filter-function/sepia) filter function. The filter is removed on [`:hover`](/en-US/docs/Web/CSS/:hover) and [`:focus`](/en-US/docs/Web/CSS/:focus) by setting `filter: none`.
+The image is set to be sepia by specifying the value of the `filter` property as the [`sepia()`](/en-US/docs/Web/CSS/filter-function/sepia) filter function. The filter is removed on [`:hover`](/en-US/docs/Web/CSS/Reference/Selectors/:hover) and [`:focus`](/en-US/docs/Web/CSS/Reference/Selectors/:focus) by setting `filter: none`.
 
 ```html
 <img tabindex="0" alt="Four trans-people, circa 1912" src="activists.jpg" />
@@ -257,7 +257,7 @@ In both the cases, the blur radius value, specified as a {{cssxref("&lt;length&g
 The [`<filter>`](/en-US/docs/Web/SVG/Reference/Element/filter)'s {{SVGAttr("stdDeviation")}} attribute accepts up to two values enabling creating more complex blur values. To create an equivalent blur, we include one value for `stdDeviation`:
 
 ```html hidden
-<table cellpadding="5">
+<table>
   <thead>
     <tr>
       <th>CSS example</th>
@@ -301,6 +301,13 @@ The [`<filter>`](/en-US/docs/Web/SVG/Reference/Element/filter)'s {{SVGAttr("stdD
 ```
 
 The SVG `url()` filter value can be included as the value of the SVG [`<image>`](/en-US/docs/Web/SVG/Reference/Element/image) element's [`filter`](/en-US/docs/Web/SVG/Reference/Attribute/filter) attribute or as part of the value of the CSS `filter` and `backdrop-filter` properties.
+
+```css hidden
+th,
+td {
+  padding: 5px;
+}
+```
 
 ```css
 .filter {

@@ -75,13 +75,13 @@ The opposite also occurs. Sometimes there are no declarations defining the value
   - : The most fundamental concepts of CSS — the cascade, specificity, and inheritance — which control how CSS is applied to HTML and how conflicts are resolved.
 
 - [Learn: Cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
-  - : Introduction to [cascade layers](/en-US/docs/Web/CSS/@layer), a more advanced feature that builds on the fundamental concepts of the [CSS cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade) and [CSS specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity).
+  - : Introduction to [cascade layers](/en-US/docs/Web/CSS/Reference/At-rules/@layer), a more advanced feature that builds on the fundamental concepts of the [CSS cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade) and [CSS specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity).
 
 ## Related concepts
 
 - [Element-attached styles](/en-US/docs/Web/HTML/Reference/Global_attributes/style)
 - [Inline styles and the cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade#inline_styles)
-- [Conditional rules for @imports](/en-US/docs/Web/CSS/@import#importing_css_rules_conditional_on_media_queries)
+- [Conditional rules for @imports](/en-US/docs/Web/CSS/Reference/At-rules/@import#importing_css_rules_conditional_on_media_queries)
 - [Value definition syntax](/en-US/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
 
 ## Specifications

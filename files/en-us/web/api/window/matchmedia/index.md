@@ -25,7 +25,7 @@ matchMedia(mediaQueryString)
 - `mediaQueryString`
   - : A string specifying the media query to parse into a {{domxref("MediaQueryList")}}.
 
-    Just like in CSS, any [media feature](/en-US/docs/Web/CSS/@media#media_features) must be wrapped in parentheses inside the expression. For example: `matchMedia("(width <= 600px)")` or `matchMedia("(orientation: landscape)")` work, whereas `matchMedia("width < 600px")` or `matchMedia("orientation: landscape")` do not. Keywords for media types (`all`, `print`, `screen`) and logical operators (`and`, `or`, `not`, `only`) do not need to be wrapped in parentheses.
+    Just like in CSS, any [media feature](/en-US/docs/Web/CSS/Reference/At-rules/@media#media_features) must be wrapped in parentheses inside the expression. For example: `matchMedia("(width <= 600px)")` or `matchMedia("(orientation: landscape)")` work, whereas `matchMedia("width < 600px")` or `matchMedia("orientation: landscape")` do not. Keywords for media types (`all`, `print`, `screen`) and logical operators (`and`, `or`, `not`, `only`) do not need to be wrapped in parentheses.
 
 ### Return value
 

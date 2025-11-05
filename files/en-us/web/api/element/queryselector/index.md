@@ -244,7 +244,7 @@ format for the `selectors`.
 ## See also
 
 - [Selection and traversal on the DOM tree](/en-US/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree)
-- [Attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) in the CSS
+- [Attribute selectors](/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors) in the CSS
   Guide
 - [Attribute selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors) in the MDN Learning Area
 - {{domxref("Element.querySelectorAll()")}}

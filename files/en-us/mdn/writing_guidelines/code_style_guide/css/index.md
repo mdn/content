@@ -148,7 +148,7 @@ On the other hand, if your `@keyframes` rule contains more than just the start a
 
 ### Controlling specificity
 
-If possible, avoid surprises for increasing or decreasing specificity, such as overusing the [`:where()`](/en-US/docs/Web/CSS/:where) pseudo-class or duplicating selectors. Instead, consider the following techniques to manage specificity:
+If possible, avoid surprises for increasing or decreasing specificity, such as overusing the [`:where()`](/en-US/docs/Web/CSS/Reference/Selectors/:where) pseudo-class or duplicating selectors. Instead, consider the following techniques to manage specificity:
 
 - Changing the order of declarations to take advantage of the cascade
 - Rearranging properties in each declaration such that they don't override each other
@@ -254,7 +254,7 @@ Empty lines between properties should be used sparingly. Add them only when each
 
 ### Use class selectors
 
-Generally, prefer [class selectors](/en-US/docs/Web/CSS/Class_selectors) (and use `class` instead of `id` in your HTML). They can be composed: multiple elements can use the same class, and the same class can be used for multiple elements.
+Generally, prefer [class selectors](/en-US/docs/Web/CSS/Reference/Selectors/Class_selectors) (and use `class` instead of `id` in your HTML). They can be composed: multiple elements can use the same class, and the same class can be used for multiple elements.
 
 ```css example-good
 .footnote {
@@ -272,7 +272,7 @@ Use classes for styling, and reserve IDs for non-CSS purposes, such as for use i
 
 ### Old pseudo-element selectors
 
-The `::before`, `::after`, `::first-letter`, and `::first-line` [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) can also be written with single colons (like `:before`). Avoid the single-colon syntax because it is discouraged and could be misidentified as a [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) (`:hover`) by readers.
+The `::before`, `::after`, `::first-letter`, and `::first-line` [pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) can also be written with single colons (like `:before`). Avoid the single-colon syntax because it is discouraged and could be misidentified as a [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) (`:hover`) by readers.
 
 ### Complex selector lists
 

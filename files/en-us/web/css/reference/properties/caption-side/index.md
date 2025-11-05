@@ -24,26 +24,28 @@ caption-side: bottom;
     <caption>
       Famous animals
     </caption>
-    <tr>
-      <th>Name</th>
-      <th>Location</th>
-    </tr>
-    <tr>
-      <td>Giraffe</td>
-      <td>Africa</td>
-    </tr>
-    <tr>
-      <td>Penguin</td>
-      <td>Antarctica</td>
-    </tr>
-    <tr>
-      <td>Sloth</td>
-      <td>South America</td>
-    </tr>
-    <tr>
-      <td>Tiger</td>
-      <td>Asia</td>
-    </tr>
+    <tbody>
+      <tr>
+        <th>Name</th>
+        <th>Location</th>
+      </tr>
+      <tr>
+        <td>Giraffe</td>
+        <td>Africa</td>
+      </tr>
+      <tr>
+        <td>Penguin</td>
+        <td>Antarctica</td>
+      </tr>
+      <tr>
+        <td>Sloth</td>
+        <td>South America</td>
+      </tr>
+      <tr>
+        <td>Tiger</td>
+        <td>Asia</td>
+      </tr>
+    </tbody>
   </table>
 </section>
 ```
@@ -120,10 +122,12 @@ The `caption-side` property is specified as one of the keyword values listed bel
   <caption>
     Caption ABOVE the table
   </caption>
-  <tr>
-    <td>Some data</td>
-    <td>Some more data</td>
-  </tr>
+  <tbody>
+    <tr>
+      <td>Some data</td>
+      <td>Some more data</td>
+    </tr>
+  </tbody>
 </table>
 
 <br />
@@ -132,10 +136,12 @@ The `caption-side` property is specified as one of the keyword values listed bel
   <caption>
     Caption BELOW the table
   </caption>
-  <tr>
-    <td>Some data</td>
-    <td>Some more data</td>
-  </tr>
+  <tbody>
+    <tr>
+      <td>Some data</td>
+      <td>Some more data</td>
+    </tr>
+  </tbody>
 </table>
 ```
 

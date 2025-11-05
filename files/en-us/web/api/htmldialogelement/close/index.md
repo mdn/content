@@ -36,7 +36,7 @@ From there you can click the _X_ button to close the dialog (via the `HTMLDialog
 <!-- Simple pop-up dialog box, containing a form -->
 <dialog id="favDialog">
   <form method="dialog">
-    <button id="close" aria-label="close" formnovalidate>X</button>
+    <button type="button" id="close" aria-label="close">X</button>
     <section>
       <p>
         <label for="favAnimal">Favorite animal:</label>
@@ -49,15 +49,17 @@ From there you can click the _X_ button to close the dialog (via the `HTMLDialog
       </p>
     </section>
     <menu>
-      <button type="reset">Reset</button>
-      <button type="submit">Confirm</button>
+      <li>
+        <button type="reset">Reset</button>
+      </li>
+      <li>
+        <button type="submit">Confirm</button>
+      </li>
     </menu>
   </form>
 </dialog>
 
-<menu>
-  <button id="updateDetails">Update details</button>
-</menu>
+<button id="updateDetails">Update details</button>
 ```
 
 ```js

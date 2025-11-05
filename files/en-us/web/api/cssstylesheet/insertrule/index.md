@@ -32,7 +32,7 @@ insertRule(rule, index)
     - **For [rule-sets](/en-US/docs/Web/CSS/CSS_syntax/Syntax#css_statements)**, both
       a [selector](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) and a
       style declaration.
-    - **For [at-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rule)**, both an
+    - **For [at-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rules)**, both an
       at-identifier and the rule content.
 
 - `index` {{optional_inline}}

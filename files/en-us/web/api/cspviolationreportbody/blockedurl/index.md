@@ -122,14 +122,14 @@ The policy also uses the `trusted-types` directive to specify that a {{domxref("
     <script src="main.js"></script>
   </head>
 
-  <body></body>
-
-  <script>
-    const policy = trustedTypes.createPolicy("somePolicy", {
-      // Some (insufficient) sanitization code
-      createHTML: (string) => string.replace(/</g, "&lt;"),
-    });
-  </script>
+  <body>
+    <script>
+      const policy = trustedTypes.createPolicy("somePolicy", {
+        // Some (insufficient) sanitization code
+        createHTML: (string) => string.replace(/</g, "&lt;"),
+      });
+    </script>
+  </body>
 </html>
 ```
 

@@ -509,7 +509,7 @@ select {
 }
 ```
 
-We then created our own icon using generated content. We put an extra wrapper around the control, because [`::before`](/en-US/docs/Web/CSS/::before)/[`::after`](/en-US/docs/Web/CSS/::after) don't work on `<select>` elements (their content is fully controlled by the browser):
+We then created our own icon using generated content. We put an extra wrapper around the control, because [`::before`](/en-US/docs/Web/CSS/Reference/Selectors/::before)/[`::after`](/en-US/docs/Web/CSS/Reference/Selectors/::after) don't work on `<select>` elements (their content is fully controlled by the browser):
 
 ```html
 <label for="select">Select a fruit</label>

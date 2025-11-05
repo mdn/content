@@ -37,14 +37,14 @@ The following examples demonstrate how `previousSibling` works with and without 
 
 ### First example
 
-In this example, we have a series of `img` elements directly adjacent to each other, with no whitespace between them.
+In this example, we have a series of {{HTMLElement("span")}} elements directly adjacent to each other, with no whitespace between them.
 
 ```html
-<img id="b0" /><img id="b1" /><img id="b2" />
+<span id="b0"></span><span id="b1"></span><span id="b2"></span>
 ```
 
 ```js
-document.getElementById("b1").previousSibling; // <img id="b0">
+document.getElementById("b1").previousSibling; // <span id="b0">
 document.getElementById("b2").previousSibling.id; // "b1"
 ```
 

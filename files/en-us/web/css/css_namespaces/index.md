@@ -10,7 +10,7 @@ The **CSS namespaces** module defines the syntax for using {{glossary("namespace
 
 CSS isn't just for styling HTML. A stylesheet may be used to style SVG, MathML, XML, or HTML, each of which has a different namespace or a document containing multiple namespaces.
 
-The [`@namespace`](/en-US/docs/Web/CSS/@namespace) at-rule defined in this module enables distinguishing between same-named elements in different namespaces. Element tag names are not unique to a single language. For example, the `<a>` element isn't limited to HTML. You may want to style the `<a>`s within your SVGs differently from the links in your HTML. You also will likely want to ensure that {{domxref("Document.querySelectorAll", "querySelectorAll(\"a\")")}} selects the right kind of element. Namespacing can help.
+The [`@namespace`](/en-US/docs/Web/CSS/Reference/At-rules/@namespace) at-rule defined in this module enables distinguishing between same-named elements in different namespaces. Element tag names are not unique to a single language. For example, the `<a>` element isn't limited to HTML. You may want to style the `<a>`s within your SVGs differently from the links in your HTML. You also will likely want to ensure that {{domxref("Document.querySelectorAll", "querySelectorAll(\"a\")")}} selects the right kind of element. Namespacing can help.
 
 The `@namespace` rule is used for declaring a default namespace and for binding namespaces to namespace prefixes. The namespaces module also defines the syntax for using these prefixes to represent namespace-qualified names. That's it. What a name means or if the name is even valid depends on the context and host language.
 
@@ -27,9 +27,9 @@ The `@namespace` rule is used for declaring a default namespace and for binding 
 
 ## Related concepts
 
-- CSS [namespace separator (`|`)](/en-US/docs/Web/CSS/Namespace_separator) combinator
-- CSS [type selectors](/en-US/docs/Web/CSS/Type_selectors)
-- CSS [universal selector](/en-US/docs/Web/CSS/Universal_selectors)
+- CSS [namespace separator (`|`)](/en-US/docs/Web/CSS/Reference/Selectors/Namespace_separator) combinator
+- CSS [type selectors](/en-US/docs/Web/CSS/Reference/Selectors/Type_selectors)
+- CSS [universal selector](/en-US/docs/Web/CSS/Reference/Selectors/Universal_selectors)
 - {{DOMXRef("CSSNamespaceRule")}} interface
   - {{DOMXRef("CSSNamespaceRule.namespaceURI")}} property
   - {{DOMXRef("CSSNamespaceRule.prefix")}} property
@@ -57,6 +57,6 @@ The `@namespace` rule is used for declaring a default namespace and for binding 
 
 - [`<a>`](/en-US/docs/Web/SVG/Reference/Element/a#example) SVG element
 - [CSS `<url>` type](/en-US/docs/Web/CSS/url_value)
-- [CSS at-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rule)
-- [CSS at-rule functions](/en-US/docs/Web/CSS/CSS_syntax/At-rule_functions)
+- [CSS at-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rules)
+- [CSS at-rule functions](/en-US/docs/Web/CSS/Reference/At-rules/At-rule_functions)
 - [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors)

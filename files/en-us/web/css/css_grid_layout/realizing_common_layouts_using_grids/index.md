@@ -600,7 +600,7 @@ h2 {
 
 {{ EmbedLiveSample('Preventing_gaps_with_the_dense_keyword', '800', '900') }}
 
-Using auto-placement with some rules applied to certain items is very useful and can help with content you can't control, such as CMS output, where you have repeated items and can use [structural pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes#tree-structural_pseudo-classes) to target them.
+Using auto-placement with some rules applied to certain items is very useful and can help with content you can't control, such as CMS output, where you have repeated items and can use [structural pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes#tree-structural_pseudo-classes) to target them.
 
 ## Further exploration
 

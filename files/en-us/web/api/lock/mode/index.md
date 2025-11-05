@@ -22,23 +22,19 @@ The following examples show how the mode property is passed in the call to {{dom
 
 ```js
 // Should show "exclusive" (the default)
-navigator.locks.request("my_resource", show_lock_properties);
+navigator.locks.request("my_resource", showLockProperties);
 
 // Should show "exclusive"
 navigator.locks.request(
   "my_resource",
   { mode: "exclusive" },
-  show_lock_properties,
+  showLockProperties,
 );
 
 // Should show "shared"
-navigator.locks.request(
-  "my_resource",
-  { mode: "shared" },
-  show_lock_properties,
-);
+navigator.locks.request("my_resource", { mode: "shared" }, showLockProperties);
 
-function show_lock_properties(lock) {
+function showLockProperties(lock) {
   console.log(`The lock name is: ${lock.name}`);
   console.log(`The lock mode is: ${lock.mode}`);
 }

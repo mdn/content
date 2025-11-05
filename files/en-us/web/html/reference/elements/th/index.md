@@ -15,26 +15,30 @@ The **`<th>`** [HTML](/en-US/docs/Web/HTML) element defines a cell as the header
   <caption>
     Alien football stars
   </caption>
-  <tr>
-    <th scope="col">Player</th>
-    <th scope="col">Gloobles</th>
-    <th scope="col">Za'taak</th>
-  </tr>
-  <tr>
-    <th scope="row">TR-7</th>
-    <td>7</td>
-    <td>4,569</td>
-  </tr>
-  <tr>
-    <th scope="row">Khiresh Odo</th>
-    <td>7</td>
-    <td>7,223</td>
-  </tr>
-  <tr>
-    <th scope="row">Mia Oolong</th>
-    <td>9</td>
-    <td>6,219</td>
-  </tr>
+  <thead>
+    <tr>
+      <th scope="col">Player</th>
+      <th scope="col">Gloobles</th>
+      <th scope="col">Za'taak</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">TR-7</th>
+      <td>7</td>
+      <td>4,569</td>
+    </tr>
+    <tr>
+      <th scope="row">Khiresh Odo</th>
+      <td>7</td>
+      <td>7,223</td>
+    </tr>
+    <tr>
+      <th scope="row">Mia Oolong</th>
+      <td>9</td>
+      <td>6,219</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -185,7 +189,7 @@ The remaining rows contain the main data of the table. Each of these rows has a 
 
 #### CSS
 
-Some basic CSS is used to style the table and its cells. We use CSS [attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) to target header cells based on their [`scope`](#scope) attribute values, highlighting column and row headers (`<th>` elements) and differentiating them each other and from the data cells ({{HTMLElement("td")}}).
+Some basic CSS is used to style the table and its cells. We use CSS [attribute selectors](/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors) to target header cells based on their [`scope`](#scope) attribute values, highlighting column and row headers (`<th>` elements) and differentiating them each other and from the data cells ({{HTMLElement("td")}}).
 
 ```css
 th,

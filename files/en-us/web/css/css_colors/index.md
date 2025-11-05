@@ -120,10 +120,10 @@ The CSS color module also introduces the `CSSColorProfileRule` interface. Curren
 - SVG [`color`](/en-US/docs/Web/SVG/Reference/Attribute/color) attribute
 - {{glossary("Color wheel")}} glossary term
 - {{glossary("Interpolation")}} glossary term
-- The [`@font-palette-values`](/en-US/docs/Web/CSS/@font-palette-values) at-rule [`override-colors`](/en-US/docs/Web/CSS/@font-palette-values/override-colors) descriptor
-- The [`@color-profile`](/en-US/docs/Web/CSS/@color-profile) at-rule
-- The [`color-gamut`](/en-US/docs/Web/CSS/@media/color-gamut) @media feature
-- The [`forced-colors`](/en-US/docs/Web/CSS/@media/forced-colors) @media feature
+- The [`@font-palette-values`](/en-US/docs/Web/CSS/Reference/At-rules/@font-palette-values) at-rule [`override-colors`](/en-US/docs/Web/CSS/Reference/At-rules/@font-palette-values/override-colors) descriptor
+- The [`@color-profile`](/en-US/docs/Web/CSS/Reference/At-rules/@color-profile) at-rule
+- The [`color-gamut`](/en-US/docs/Web/CSS/Reference/At-rules/@media/color-gamut) @media feature
+- The [`forced-colors`](/en-US/docs/Web/CSS/Reference/At-rules/@media/forced-colors) @media feature
 
 ## Specifications
 

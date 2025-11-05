@@ -395,4 +395,4 @@ Notice that, by default, the inline-size of the `<select>` is generally the inli
 
 ## See also
 
-- [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme)
+- [`prefers-color-scheme`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme)

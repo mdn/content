@@ -32,7 +32,7 @@ Another reason to use the `aria-disabled` attribute over the HTML `disabled` att
 <div role="button" aria-disabled="true" tabindex="-1">Edit</div>
 ```
 
-Similarly to needing to use JavaScript to ensure an element with `aria-disabled="true"` is not functional, the element will also need styling adjustments. In contrast to the HTML `disabled` attribute, where specifying it provides `:disabled` user-agent styles to be applied, adding `aria-disabled="true"` doesn't. The element can be styled with the [attribute selector](/en-US/docs/Web/CSS/Attribute_selectors) `[aria-disabled="true"]`.
+Similarly to needing to use JavaScript to ensure an element with `aria-disabled="true"` is not functional, the element will also need styling adjustments. In contrast to the HTML `disabled` attribute, where specifying it provides `:disabled` user-agent styles to be applied, adding `aria-disabled="true"` doesn't. The element can be styled with the [attribute selector](/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors) `[aria-disabled="true"]`.
 
 ```css
 [aria-disabled="true"] {
@@ -51,7 +51,7 @@ If you are purposefully using the `aria-disabled` attribute to allow for a form 
 }
 ```
 
-The [`forced-colors` media query](/en-US/docs/Web/CSS/@media/forced-colors) detects if the [user agent](/en-US/docs/Glossary/User_agent) has enabled a forced colors mode; if so, the text and border colors are both set to the [system color `greyText`](/en-US/docs/Web/CSS/system-color#syntax).
+The [`forced-colors` media query](/en-US/docs/Web/CSS/Reference/At-rules/@media/forced-colors) detects if the [user agent](/en-US/docs/Glossary/User_agent) has enabled a forced colors mode; if so, the text and border colors are both set to the [system color `greyText`](/en-US/docs/Web/CSS/system-color#syntax).
 
 Another thing to keep in mind, when using `aria-disabled` over the native HTML attribute, is that the ARIA attribute will require the manual styling necessary to visually communicate the element as disabled in Windows High Contrast Mode.
 

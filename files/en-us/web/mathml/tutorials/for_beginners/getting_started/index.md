@@ -14,25 +14,17 @@ In this article, we will take a simple HTML document and see how to add MathML f
 
 MathML uses the same syntax as HTML to represent a tree of elements and attributes. In particular, each mathematical formula is represented by an element `<math>` which can be placed inside an HTML page. In the following document, it is inside a paragraph of text:
 
-```html
-<!doctype html>
-<html lang="en-US">
-  <head>
-    <title>My first math page</title>
-  </head>
-  <body>
-    <p>
-      The fraction
-      <math>
-        <mfrac>
-          <mn>1</mn>
-          <mn>3</mn>
-        </mfrac>
-      </math>
-      is not a decimal number.
-    </p>
-  </body>
-</html>
+```html live-sample___inserting_formulas_in_HTML
+<p>
+  The fraction
+  <math>
+    <mfrac>
+      <mn>1</mn>
+      <mn>3</mn>
+    </mfrac>
+  </math>
+  is not a decimal number.
+</p>
 ```
 
 The `<mfrac>` element specifies a fraction with a numerator (its first child) and a denominator (its second child). This is how it renders in your browser:
@@ -46,25 +38,17 @@ The `<mfrac>` element specifies a fraction with a numerator (its first child) an
 
 Note that in the previous example, the formula is on the same line as the text of the paragraph. However, it is quite common to instead render large mathematical formulas centered on their own line as shown below. To achieve that, you need to attach a `display="block"` attribute on the `<math>` element.
 
-```html hidden
-<!doctype html>
-<html lang="en-US">
-  <head>
-    <title>My first math page</title>
-  </head>
-  <body>
-    <p>
-      The fraction
-      <math display="block">
-        <mfrac>
-          <mn>1</mn>
-          <mn>3</mn>
-        </mfrac>
-      </math>
-      is not a decimal number.
-    </p>
-  </body>
-</html>
+```html hidden live-sample___the_display_attribute
+<p>
+  The fraction
+  <math display="block">
+    <mfrac>
+      <mn>1</mn>
+      <mn>3</mn>
+    </mfrac>
+  </math>
+  is not a decimal number.
+</p>
 ```
 
 {{ EmbedLiveSample('The_display_attribute', 700, 100, "", "") }}

@@ -501,7 +501,7 @@ for (let b = -4; b <= 4; b++) {
 If you want explicit control over color spaces when defining colors, you can use the [`color()`](/en-US/docs/Web/CSS/color_value/color) function.
 
 This is useful to describe a color for high-definition devices with wider color [gamuts](/en-US/docs/Glossary/Gamut).
-For example, if you wanted to show the `display-p3 0 0 1` color, which is outside of the sRGB gamut, you could use a `@media` [`color-gamut`](/en-US/docs/Web/CSS/@media/color-gamut) at-rule to detect if the client's hardware supports colors in this range before trying to use it:
+For example, if you wanted to show the `display-p3 0 0 1` color, which is outside of the sRGB gamut, you could use a `@media` [`color-gamut`](/en-US/docs/Web/CSS/Reference/At-rules/@media/color-gamut) at-rule to detect if the client's hardware supports colors in this range before trying to use it:
 
 ```css
 .vibrant {

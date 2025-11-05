@@ -154,21 +154,23 @@ This example demonstrates the use of `background-color` on HTML {{HTMLelement("t
 
 ```html
 <table>
-  <tr id="r1">
-    <td id="c11">11</td>
-    <td id="c12">12</td>
-    <td id="c13">13</td>
-  </tr>
-  <tr id="r2">
-    <td id="c21">21</td>
-    <td id="c22">22</td>
-    <td id="c23">23</td>
-  </tr>
-  <tr id="r3">
-    <td id="c31">31</td>
-    <td id="c32">32</td>
-    <td id="c33">33</td>
-  </tr>
+  <tbody>
+    <tr id="r1">
+      <td id="c11">11</td>
+      <td id="c12">12</td>
+      <td id="c13">13</td>
+    </tr>
+    <tr id="r2">
+      <td id="c21">21</td>
+      <td id="c22">22</td>
+      <td id="c23">23</td>
+    </tr>
+    <tr id="r3">
+      <td id="c31">31</td>
+      <td id="c32">32</td>
+      <td id="c33">33</td>
+    </tr>
+  </tbody>
 </table>
 ```
 

@@ -103,41 +103,41 @@ Using the dot notation with a camel case property is the easiest way to access a
 
 ```js
 // Get style using dot notation
-const elem_borderTop = elementStyle.borderTop;
-const comp_borderTop = computedStyle.borderTop;
+const elemBorderTop = elementStyle.borderTop;
+const compBorderTop = computedStyle.borderTop;
 
 log('Format: Style = "Element" / "Computed"');
-log(`"borderTop" = "${elem_borderTop}" / "${comp_borderTop}"'`);
+log(`"borderTop" = "${elemBorderTop}" / "${compBorderTop}"'`);
 ```
 
 We can also get the same property using the {{DOMxRef("CSSStyleDeclaration/getPropertyPriority", "getPropertyValue()")}} method or bracket notation.
 
 ```js
 // Get style using dashed-name property value
-const elem_border_top = elementStyle.getPropertyValue("border-top");
-const comp_border_top = computedStyle.getPropertyValue("border-top");
-log(`"border-top" = "${elem_border_top}" / "${elem_border_top}"'`);
+const elemBorderTop = elementStyle.getPropertyValue("border-top");
+const compBorderTop = computedStyle.getPropertyValue("border-top");
+log(`"border-top" = "${elemBorderTop}" / "${compBorderTop}"'`);
 ```
 
 The following code gets each of the longhand properties that correspond to the shorthand property `border-top`, using the dot notation for simplicity.
 
 ```js
 // Get shorthand properties using dot notation
-const elem_borderTopWidth = elementStyle.borderTopWidth;
-const comp_borderTopWidth = computedStyle.borderTopWidth;
-log(`"borderTopWidth" = "${elem_borderTopWidth}" / "${comp_borderTopWidth}"'`);
+const elemBorderTopWidth = elementStyle.borderTopWidth;
+const compBorderTopWidth = computedStyle.borderTopWidth;
+log(`"borderTopWidth" = "${elemBorderTopWidth}" / "${compBorderTopWidth}"'`);
 
-const elem_borderTopColor = elementStyle.borderTopColor;
-const comp_borderTopColor = computedStyle.borderTopColor;
-log(`"borderTopColor" = "${elem_borderTopColor}" / "${comp_borderTopColor}"'`);
+const elemBorderTopColor = elementStyle.borderTopColor;
+const compBorderTopColor = computedStyle.borderTopColor;
+log(`"borderTopColor" = "${elemBorderTopColor}" / "${compBorderTopColor}"'`);
 
-const elem_borderTopStyle = elementStyle.borderTopStyle;
-const comp_borderTopStyle = computedStyle.borderTopStyle;
-log(`"borderTopStyle" = "${elem_borderTopStyle}" / "${comp_borderTopStyle}"'`);
+const elemBorderTopStyle = elementStyle.borderTopStyle;
+const compBorderTopStyle = computedStyle.borderTopStyle;
+log(`"borderTopStyle" = "${elemBorderTopStyle}" / "${compBorderTopStyle}"'`);
 
-const elem_fontWeight = elementStyle.fontWeight;
-const comp_fontWeight = computedStyle.fontWeight;
-log(`"fontWeight" = "${elem_fontWeight}" / "${comp_fontWeight}"'`);
+const elemFontWeight = elementStyle.fontWeight;
+const compFontWeight = computedStyle.fontWeight;
+log(`"fontWeight" = "${elemFontWeight}" / "${compFontWeight}"'`);
 ```
 
 Lastly we demonstrate how you can use the dot notation to set a property value.
