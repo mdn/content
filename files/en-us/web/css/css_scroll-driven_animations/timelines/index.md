@@ -285,7 +285,7 @@ The animation is slightly different from the previous animations in that the spi
 </main>
 ```
 
-{{EmbedLiveSample("named_view", "100%", "150")}}
+{{EmbedLiveSample("named_view", "100%", "250")}}
 
 Scroll the element into view. Note that the element animates through the `@keyframe` animation as it moves through the visible area of its ancestor scroller.
 
