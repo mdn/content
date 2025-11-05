@@ -3,6 +3,10 @@ title: CSS values
 short-title: Values
 slug: Web/CSS/Reference/Values
 page-type: listing-page
+spec-urls:
+  - https://drafts.csswg.org/css-values-3/
+  - https://drafts.csswg.org/css-values-4/
+  - https://drafts.csswg.org/css-values-5/
 sidebar: cssref
 ---
 
@@ -198,4 +202,13 @@ sidebar: cssref
 - {{cssxref("animation-timeline/view", "view()")}}
 - {{cssxref("basic-shape/xywh", "xywh()")}}
 
+## Specifications
+
+{{Specifications}}
+
 ## See also
+
+- [CSS values and units](/en-US/docs/Web/CSS/CSS_values_and_units) module
+- [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax) module
+- [CSS value functions](/en-US/docs/Web/CSS/Reference/Values/Functions)
+- [CSS data types](/en-US/docs/Web/CSS/Reference/Values/Data_types)

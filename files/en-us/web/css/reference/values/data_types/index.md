@@ -1,7 +1,7 @@
 ---
 title: CSS data types
 slug: Web/CSS/Reference/Values/Data_types
-page-type: guide
+page-type: landing-page
 spec-urls: https://drafts.csswg.org/css-values/
 sidebar: cssref
 ---
