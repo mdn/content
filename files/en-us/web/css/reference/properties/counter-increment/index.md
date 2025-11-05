@@ -125,7 +125,7 @@ div {
   counter-reset: sevens calc(var(--starter) * 3 * 3 * 3);
 }
 i {
-  counter-increment: sevens calc(-1*var(--starter));
+  counter-increment: sevens calc(-1 * var(--starter));
 }
 i:first-of-type {
   counter-increment: none;
