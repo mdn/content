@@ -304,7 +304,7 @@ In this example, we again define the `animation` before the `animation-timeline`
 }
 ```
 
-{{EmbedLiveSample("anon_view", "100%", "150")}}
+{{EmbedLiveSample("anon_view", "100%", "250")}}
 
 ### Parameters of the `view()` function
 
