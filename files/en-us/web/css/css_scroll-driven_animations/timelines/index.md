@@ -125,9 +125,9 @@ Our HTML includes three elements: the `item`, which we will be animating; its `c
 </main>
 ```
 
-We provide some basic styles, which we've hidden for brevity. The important styles include setting a height on the container that is taller than the scroller, and then setting the overflow to allow scrolling:
+We provide some basic styles. The important ones include setting a height on the container that is taller than the scroller, and then setting the overflow to allow scrolling:
 
-```css hidden live-sample___named_scroll live-sample___anon_scroll
+```css live-sample___named_scroll live-sample___anon_scroll
 .scroller {
   width: 400px;
   height: 100px;
@@ -253,7 +253,8 @@ The animation is slightly different from the previous animations in that the spi
 ```css hidden live-sample___named_view live-sample___anon_view live-sample___anon_view_args
 .scroller {
   width: 400px;
-  height: 100px;
+  height: 200px;
+  line-height: 2;
   overflow: scroll;
   border: 1px solid;
   background-color: palegoldenrod;
