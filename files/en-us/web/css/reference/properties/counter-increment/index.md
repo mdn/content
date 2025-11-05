@@ -118,11 +118,14 @@ We set the initial value of the counter named `sevens` to `100` by using {{cssxr
 To set the first count at `100`, we target the first `<i>` element by using the {{cssxref(":first-of-type")}} pseudo-class and setting `counter-increment: none;`. Additionally, the {{cssxref("content")}} property is used in the {{cssxref("::before")}} pseudo-element to display the value of the counter using the [`counter()`](/en-US/docs/Web/CSS/counter) function.
 
 ```css
+:root {
+  --starter: 7
+}
 div {
-  counter-reset: sevens 100;
+  counter-reset: sevens calc(var(--starter)*3*3*3);
 }
 i {
-  counter-increment: sevens -7;
+  counter-increment: sevens calc(-1*var(--starter));
 }
 i:first-of-type {
   counter-increment: none;
