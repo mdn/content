@@ -339,7 +339,7 @@ In this example, as we are using inset values, we can use the `from` and `to` ke
 }
 ```
 
-{{EmbedLiveSample("anon_view_args", "100%", "150")}}
+{{EmbedLiveSample("anon_view_args", "100%", "250")}}
 
 ## Accessibility concerns
 
