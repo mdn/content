@@ -42,7 +42,6 @@ Alternatively, the `animation-timeline` property can be used to explicitly state
 
 ### Regular CSS animations: default document timeline
 
-
 Setting `animation-timeline` explicitly to `auto`, or omitting the property and allowing it to default to `auto`, sets the timeline to be the default document timeline. When set to this default value, the animation's progress is determined by the {{cssxref("animation-duration")}}, the {{cssxref("animation-delay")}}, and how much time has passed since the animation was associated with the element via the `animation-name` property. The time-based document timeline is the timeline traditionally associated with CSS animations.
 
 ```css live-sample___regular
