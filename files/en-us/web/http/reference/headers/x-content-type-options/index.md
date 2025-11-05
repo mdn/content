@@ -8,12 +8,12 @@ sidebar: http
 ---
 
 The HTTP **`X-Content-Type-Options`** {{Glossary("response header")}} indicates that the [MIME types](/en-US/docs/Web/HTTP/Guides/MIME_types) advertised in the {{HTTPHeader("Content-Type")}} headers should be respected and not changed.
-The header allows you to avoid [MIME type sniffing](/en-US/docs/Web/HTTP/Guides/MIME_types#mime_sniffing) by specifying that the MIME types are deliberately configured.
+The header allows you to avoid [MIME type sniffing](/en-US/docs/Web/HTTP/Guides/MIME_types#mime_sniffing) by specifying that the MIME types are deliberately configured. Developers and server operators should ensure that their servers send the correct {{HTTPHeader("Content-Type")}} for every response; using `X-Content-Type-Options: nosniff` complements accurate server configuration rather than replacing it.
 
 Site security testers usually expect this header to be set.
 
 > [!NOTE]
-> The `X-Content-Type-Options` header only apply request-blocking [due to `nosniff`](https://fetch.spec.whatwg.org/#ref-for-determine-nosniff) for [request destinations](/en-US/docs/Web/API/Request/destination) of `"script"` and `"style"`.
+> The `X-Content-Type-Options` header only applies to request blocking [due to `nosniff`](https://fetch.spec.whatwg.org/#ref-for-determine-nosniff) for [request destinations](/en-US/docs/Web/API/Request/destination) of `"script"` and `"style"`. This check happens during the Fetch process; browser navigations are not blocked by `nosniff`, so responses (especially documents) must always be served with the correct `Content-Type`.
 
 <table class="properties">
   <tbody>
@@ -41,17 +41,6 @@ X-Content-Type-Options: nosniff
     `style` and the MIME type is not `text/css`,
     or of type `script` and the MIME type is not a [JavaScript MIME type](https://html.spec.whatwg.org/multipage/scripting.html#javascript-mime-type).
 
-## Effect on HTML document sniffing
-
-Although `X-Content-Type-Options: nosniff` is often described in the context of scripts and styles, it also impacts navigations to documents. When a response is delivered with an incorrect or missing `Content-Type`, user agents that honor `nosniff` must not "sniff" the content and treat it as HTML. This reduces the risk of accidentally executing HTML when servers mislabel content.
-
-In practice, this means that if a document is served with a generic or incorrect MIME type (for example, `application/octet-stream`) and `X-Content-Type-Options: nosniff` is present, browsers following the MIME type sniffing algorithm will avoid treating the response as HTML.
-
-See:
-
-- MIME type sniffing algorithm (WHATWG) - [https://mimesniff.spec.whatwg.org/#mime-type-sniffing-algorithm](https://mimesniff.spec.whatwg.org/#mime-type-sniffing-algorithm)
-- Discussion on document sniffing and `nosniff` - [https://github.com/whatwg/mimesniff/issues/98](https://github.com/whatwg/mimesniff/issues/98)
-
 ## Specifications
 
 {{Specifications}}
@@ -66,3 +55,4 @@ See:
 - The [original definition](https://learn.microsoft.com/en-us/archive/blogs/ie/ie8-security-part-vi-beta-2-update) of X-Content-Type-Options by Microsoft.
 - Use [HTTP Observatory](/en-US/observatory) to test the security configuration of websites (including this header).
 - [Mitigating MIME Confusion Attacks in Firefox](https://blog.mozilla.org/security/2016/08/26/mitigating-mime-confusion-attacks-in-firefox/)
+- [Practical implementation guides: MIME types](/en-US/docs/Web/Security/Practical_implementation_guides/MIME_types)
