@@ -25,7 +25,7 @@ sidebar: cssref
   - {{cssxref("@counter-style/suffix")}}
   - {{cssxref("@counter-style/symbols")}}
   - {{cssxref("@counter-style/system")}}
-- {{cssxref("@document")}}
+- {{cssxref("@document")}} {{non-standard_inline}} {{deprecated_inline}}
 - {{cssxref("@font-face")}}
   - {{cssxref("@font-face/ascent-override")}}
   - {{cssxref("@font-face/descent-override")}}
@@ -46,7 +46,7 @@ sidebar: cssref
   - {{cssxref("@font-palette-values/base-palette")}}
   - {{cssxref("@font-palette-values/font-family")}}
   - {{cssxref("@font-palette-values/override-colors")}}
-- {{cssxref("@function")}}
+- {{cssxref("@function")}} {{experimental_inline}}
 - {{cssxref("@import")}}
 - {{cssxref("@keyframes")}}
 - {{cssxref("@layer")}}
