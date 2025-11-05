@@ -24,9 +24,9 @@ Animations can be set to progress along a _scroll-based timeline_ instead of the
 
 CSS scroll-driven animations are performant. JavaScript scroll-driven animations require [`scroll`](/en-US/docs/Web/API/Document/scroll_event) event listeners and {{domxref("IntersectionObserver")}} objects on the {{glossary("main thread")}} to track elements across the [scrollport](/en-US/docs/Glossary/Scroll_container#scrollport). Any time you rely on the main thread to render effects with JavaScript, you run the risk of blocking the main thread, which can lead to an unresponsive page and a bad user experience, or {{glossary("jank")}}.
 
-### Foundations
+## Foundations
 
-Scroll driven animations build upon [CSS animations](/en-US/docs/Web/CSS/CSS_animations) and the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API). Prior to creating scroll-driven animations, you must have an understanding of CSS {{cssxref("@keyframes")}} animations. See the [using CSS animations guide](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations) to learn more.
+Scroll-driven animations build upon [CSS animations](/en-US/docs/Web/CSS/CSS_animations) and the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API). Prior to creating scroll-driven animations, you must have an understanding of CSS {{cssxref("@keyframes")}} animations. See the [using CSS animations guide](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations) to learn more.
 
 In CSS, animations are created by attaching keyframe animations to an element using the {{cssxref("animation-name")}} property (or {{cssxref("animation")}} shorthand). By default, animations run on the default document timeline, moving from the `from` keyframe to the `to` keyframe as time passes by, with the animation lasting as long as the time defined by the {{cssxref("animation-duration")}} property value. When set to run on the default document timeline, animations play through to completion unless prevented from doing so, for example, by having the {{cssxref("animation-play-state")}} set to `paused` or by removing the `animation-name` from the element.
 
@@ -105,13 +105,13 @@ Try checking the checkbox. Nothing will happen during the half-second animation 
 > [!NOTE]
 > The `animation-timeline` is reset to the default `auto` value by the {{cssxref("animation")}} shorthand property, but cannot be set using the shorthand. Therefore, when creating scroll-driven animations, always declare the `animation-timeline` after any `animation` shorthand declarations to achieve the desired effect.
 
-### Scroll progress timelines
+## Scroll progress timelines
 
 With _scroll progress timeline_, the timeline progresses based on the scrolling of the scrollable element (_scroller_) from top to bottom (or left to right) and back again. By default, the position in the scroll range is converted into a percentage of progress — `0%` at the start and `100%` at the end. <!--This [animation range can be controlled](#controlling_the_animation_range) via the {{cssxref("animation-range")}} properties.-->
 
 To create a scroll progress timeline, the `animation-timeline` value must reference the scroller, which can be named or anonymous.
 
-#### Named scroll progress timelines
+### Named scroll progress timelines
 
 A _named scroll progress timeline_ is one where the scroller is explicitly named using the {{cssxref("scroll-timeline-name")}} property (or the {{cssxref("scroll-timeline")}} shorthand). The name is a {{cssxref("dashed-ident")}}. The scroller is linked to the element to be animated by specifying its `scroll-timeline-name` as the value of that element's `animation-timeline` property.
 
@@ -176,13 +176,13 @@ In this case, we don't have a checkbox, as the `action` animation progression is
 
 Before any scrolling occurs, the container's position is at the top of the scroller, and the animation is at the 0% keyframe. Try scrolling down. As you scroll, the animation progresses through the timeline, rotating an additional 720 degrees. When you can no longer scroll, the animation's progression is at the 100%, or `to`, keyframe. The animated item doesn't return to its default rotation unless the scroller is scrolled back up to the top.
 
-##### Animation duration
+#### Animation duration
 
 You may have noticed that the {{cssxref("animation-duration")}} component of the `animation` shorthand was set to `1ms`. When creating [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations), specifying an `animation-duration` value does not affect the duration of the animation, and shouldn't be necessary. However, durations can affect non-linear view progress animation timelines, and Firefox requires a non-zero `animation-duration` to apply an animation to an element. For these reasons, it is common practice to set `animation-duration` to `1ms`.
 
 Setting `animation-durations: 1ms` ensures that the animation works in Firefox, that the animation effect is consistent across all browsers, and that the animation is not visible if a browser doesn't support view progress animation timelines. If the browser supports `@keyframe` animations, the animation will not be visible to the user, but the animation still happens, and animation events are fired.
 
-#### Anonymous scroll progress timelines
+### Anonymous scroll progress timelines
 
 You don't have to name your scroll progress timeline. Instead, you can associate an _anonymous scroll progress timeline_ with the animation. In this case, the `animation-timeline` of the element to animate is set to a {{cssxref("animation-timeline/scroll", "scroll()")}} function. The function selects the scroller that provides the scroll progress timeline and the scroll axis to use based on the optional arguments you pass to it. One parameter is a [`<scroller>`](/en-US/docs/Web/CSS/animation-timeline/scroll#scroller) keyword defining the relationship of the scroller element to the current element (`nearest`, `root`, or `self`). The other is the scrollbar [`<axis>`](/en-US/docs/Web/CSS/animation-timeline/scroll#axis) value (`block`, `inline`, `y`, or `x`).
 
@@ -203,7 +203,7 @@ This example uses all the same CSS as the previous example, except for the `anim
 
 We set an {{cssxref("inline-size")}} on the container so that it overflows in the inline direction, and set the {{cssxref("block-size")}} to `100%`, so it no longer overflows in the block direction. Try scrolling in the inline direction.
 
-### View progress timelines
+## View progress timelines
 
 You can also progress an animation based on the change in visibility of an element inside a scroller — this is done via _view progress timelines_. Instead of tracking the scroll offset of a scroll container, view progress timelines track the relative position of an element, called the _subject_, within a scrollport. The progression of an animation's keyframes is based on the _visibility_ of the subject inside the scroller. Unlike scroll progress timelines, with view progress timelines, you can't specify the scroller — the subject's visibility is always tracked within its nearest ancestor scroller.
 
@@ -216,7 +216,7 @@ Use {{cssxref("view-timeline-inset")}}, part of the {{cssxref("view-timeline")}}
 
 Similar to scroll progress timelines, the view progress timeline can be named or anonymous.
 
-#### Named view progress timeline
+### Named view progress timeline
 
 A _named view progress timeline_ is one where the subject is explicitly named using the {{cssxref("view-timeline-name")}} property, a component of the `view-timeline` shorthand. The `<dashed-ident>` name is then linked to the element to animate by specifying it as the value of that element's `animation-timeline` property.
 
@@ -289,7 +289,7 @@ The animation is slightly different from the previous animations in that the spi
 
 Scroll the element into view. Note that the element animates through the `@keyframe` animation as it moves through the visible area of its ancestor scroller.
 
-#### Anonymous view progress timeline: the `view()` function
+### Anonymous view progress timeline: the `view()` function
 
 Alternatively, a {{cssxref("animation-timeline/view", "view()")}} function can be set as the value of the `animation-timeline` property to specify that an element's animation timeline is an _anonymous view progress timeline_. This causes the element to be animated based on its position inside its nearest parent scroller.
 
@@ -306,7 +306,7 @@ In this example, we again define the `animation` before the `animation-timeline`
 
 {{EmbedLiveSample("anon_view", "100%", "150")}}
 
-#### Parameters of the `view()` function
+### Parameters of the `view()` function
 
 The `view()` function takes up to three optional values as arguments:
 
