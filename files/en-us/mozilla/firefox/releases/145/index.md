@@ -81,13 +81,17 @@ Firefox 145 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### WebDriver conformance (WebDriver BiDi, Marionette) -->
+### WebDriver conformance (WebDriver BiDi, Marionette)
 
-<!-- #### General -->
+#### WebDriver BiDi
 
-<!-- #### WebDriver BiDi -->
-
-<!-- #### Marionette -->
+- Implemented the `emulation.setUserAgentOverride` command, which allows to override the user-agent string used by the browser either for a set of contexts, user contexts or globally. ([Firefox bug 1987935](https://bugzil.la/1987935)).
+- Implemented the `browsingContext.downloadEnd` event, which is emitted when a download finishes (whether it is successful or canceled) ([Firefox bug 1970293](https://bugzil.la/1970293)).
+- Updated the `destination` property of the `network.beforeRequestSent` event to `document` for top-level navigations. ([Firefox bug 1985552](https://bugzil.la/1985552)).
+- Updated the `browsingContext` download events to reuse the same navigation id as the previous `browsingContext.navigationStarted` event. ([Firefox bug 1986938](https://bugzil.la/1986938)).
+- Fixed a bug for network data collection, where non-ASCII characters in response bodies were not properly encoded. ([Firefox bug 1986022](https://bugzil.la/1986022)).
+- Fixed a bug with the `network.getData` command, which would fail requests with an empty response body. ([Firefox bug 1986025](https://bugzil.la/1986025)).
+- Fixed a bug where some `network` events could be flagged as blocked even if they were not. ([Firefox bug 1989919](https://bugzil.la/1989919)).
 
 ## Changes for add-on developers
 
