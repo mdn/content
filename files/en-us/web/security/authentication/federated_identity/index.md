@@ -132,19 +132,31 @@ This defends against two attacks: [CSRF](/en-US/docs/Web/Security/Attacks/CSRF) 
 
 ##### CSRF against the redirect URL
 
+In a CSRF attack, the attacker tricks the user's browser into signing the user into the attacker's account. This can have various bad effects: for example, any private data the user uploads to the account is available to, and under control of, the attacker.
+
 The CSRF attack works as follows:
 
-1. The attacker makes an authentication request to the IdP for themselves, and gets back an authorization code for their own tokens.
+1. The attacker asks to sign into the RP. The RP makes an authentication request to the IdP and the attacker authenticates to the IdP.
 
-2. The attacker tricks the user's browser into making an HTTP request to the RP's redirect URL, including the attacker's authorization code. To the RP, this looks like a response from the IdP to an authentication request originating from the user.
+2. The IdP generates an authorization code for the attacker, and redirects the attacker's browser to the RP's redirect URL, with the authorization code as a URL parameter.
 
-3. The RP makes a token request to the IdP, including the attacker's authorization code.
+3. The attacker intercepts this redirect, extracts the redirect URL including the authorization code, and terminates the flow.
 
-4. The IdP responds with the attacker's tokens.
+4. The attacker tricks the user into clicking the redirect URL. To the RP, this looks like a response from the IdP to an authentication request originating from the user.
 
-5. The RP signs the user into the attacker's account: now any information or instructions they provide are under the attacker's control.
+5. The RP makes a token request to the IdP, including the attacker's authorization code, which it took from the redirect URL.
 
-Essentially, the attack succeeds because the RP doesn't know that the authentication response is not a response to a request made on behalf of the user. PKCE prevents this attack because the IdP would have a stored code challenge for the attacker's authorization code, and this would not match the code verifier that the RP passes into the token request.
+6. The IdP responds with the attacker's tokens.
+
+7. The RP signs the user into the attacker's account: now any information or instructions they provide are under the attacker's control.
+
+Essentially, the attack succeeds because the RP doesn't know that the request to the redirect URL is not a response to a request made on behalf of the user.
+
+When PKCE is used:
+
+- In step 1, the RP generates a code verifier for the attacker's request, and sends the hashed code verifier (the code challenge) to the IdP.
+- In step 2, the IdP stores the code challenge alongside the attacker's authorization code.
+- In step 5, the RP won't be able to find a code verifier for the user that matches the challenge the IdP stored, so the token request will fail.
 
 An alternative protection against this attack is the `state` parameter defined in OAuth 2.0. In this defense, the RP provides an unpredictable value as a parameter in the authentication request, and the IdP includes the same value in the response: the RP checks that they match. Because the attacker can't predict the value of `state`, they can't pass a matching value to the RP's redirect URL.
 
