@@ -362,7 +362,7 @@ Our HTML features a {{htmlelement("section")}} element with two {{htmlelement("a
 
 #### CSS
 
-In our CSS, we first target the `<section>` element, laying it out with [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) and setting a {{cssxref("gap")}} between the two child `<article>` elements. We then use an `if()` function with an [`orientation`](/en-US/docs/Web/CSS/Reference/At-rules/@media/orientation) media query `<if-test>` to set the value of the {{cssxref("flex-direction")}} property to `row` if the document is in landscape orientation, or `column` if it is in portrait orientation. This lays out the `article` elements side-by-side in wide screens, and top-to-bottom in narrow screens.
+In our CSS, we first target the `<section>` element, laying it out with [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) and setting a {{cssxref("gap")}} between the two child `<article>` elements. We then use an `if()` function with an [`orientation`](/en-US/docs/Web/CSS/Reference/At-rules/@media/orientation) media query `<if-test>` to set the value of the {{cssxref("flex-direction")}} property to `row` if the document is in landscape orientation, or `column` if it is in portrait orientation. This lays out the `article` elements side-by-side in wide screens, and top-to-bottom in narrow screens.
 
 ```css hidden live-sample___basic
 html {

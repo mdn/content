@@ -34,7 +34,7 @@ reading-order: unset;
 
 ## Description
 
-When an element's [block](/en-US/docs/Glossary/Block/CSS), [flex](/en-US/docs/Web/CSS/CSS_flexible_box_layout), or [grid](/en-US/docs/Web/CSS/CSS_grid_layout) parent container has a {{cssxref("reading-flow")}} property set to a value other than `normal`, the `reading-order` property can be used to set the element's [reading flow](/en-US/docs/Glossary/Reading_order#reading_flow) position relative to that of its siblings.
+When an element's [block](/en-US/docs/Glossary/Block/CSS), [flex](/en-US/docs/Web/CSS/Guides/Flexible_box_layout), or [grid](/en-US/docs/Web/CSS/CSS_grid_layout) parent container has a {{cssxref("reading-flow")}} property set to a value other than `normal`, the `reading-order` property can be used to set the element's [reading flow](/en-US/docs/Glossary/Reading_order#reading_flow) position relative to that of its siblings.
 
 For reading and navigation, elements inside a block, flex, or grid container are sorted by ascending `reading-order` value. If multiple siblings have the same `reading-order` value, those items are sorted according to the container's `reading-flow`. Siblings not given an explicit `reading-order` value are assigned the default value of `0`, which puts all the children of a reading flow container in the same ordinal group by default.
 

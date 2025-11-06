@@ -98,7 +98,7 @@ The HTML features an {{htmlelement("article")}} element containing a {{htmleleme
 
 #### CSS
 
-We provide some rudimentary styling for the look and feel and spacing of the boxes, and use [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) to center their content.
+We provide some rudimentary styling for the look and feel and spacing of the boxes, and use [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) to center their content.
 
 ```css live-sample___movebefore-basic
 #section1,
@@ -184,7 +184,7 @@ The HTML features an {{htmlelement("article")}} element containing two {{htmlele
 
 #### CSS
 
-We use [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) for the layout to make the two `<section>` elements sit side-by-side, and space the buttons evenly inside the `controls` `<div>`.
+We use [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) for the layout to make the two `<section>` elements sit side-by-side, and space the buttons evenly inside the `controls` `<div>`.
 
 ```css live-sample___movebefore-state
 #wrapper,

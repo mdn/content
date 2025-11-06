@@ -107,14 +107,14 @@ For each of the properties below, use the standard equivalents.
 - `-webkit-border-start-color`: Use {{CSSxRef("border-inline-start-color")}}
 - `-webkit-border-start-style`: Use {{CSSxRef("border-inline-start-style")}}.
 - `-webkit-border-start-width`: Use {{CSSxRef("border-inline-start-width")}}.
-- `-webkit-box-align`: Use [CSS flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) with {{CSSxRef("align-items")}}.
-- `-webkit-box-direction`: Use [CSS flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) with {{CSSxRef("flex-direction")}}.
-- {{CSSxRef("box-flex-group", "-webkit-box-flex-group")}}: Use [CSS flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) with {{CSSxRef("flex-basis")}}, {{CSSxRef("flex-grow")}}, and {{CSSxRef("flex-shrink")}}.
-- `-webkit-box-flex`: Use [CSS flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) with {{CSSxRef("flex-grow")}}.
-- `-webkit-box-lines`: Use [CSS flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) with {{CSSxRef("flex-flow")}}.
-- `-webkit-box-ordinal-group`: Use [CSS flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) with {{CSSxRef("order")}}.
-- `-webkit-box-orient`: Use [CSS flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) with {{CSSxRef("flex-direction")}}.
-- `-webkit-box-pack`: Use [CSS flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) with {{CSSxRef("justify-content")}}.
+- `-webkit-box-align`: Use [CSS flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) with {{CSSxRef("align-items")}}.
+- `-webkit-box-direction`: Use [CSS flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) with {{CSSxRef("flex-direction")}}.
+- {{CSSxRef("box-flex-group", "-webkit-box-flex-group")}}: Use [CSS flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) with {{CSSxRef("flex-basis")}}, {{CSSxRef("flex-grow")}}, and {{CSSxRef("flex-shrink")}}.
+- `-webkit-box-flex`: Use [CSS flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) with {{CSSxRef("flex-grow")}}.
+- `-webkit-box-lines`: Use [CSS flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) with {{CSSxRef("flex-flow")}}.
+- `-webkit-box-ordinal-group`: Use [CSS flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) with {{CSSxRef("order")}}.
+- `-webkit-box-orient`: Use [CSS flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) with {{CSSxRef("flex-direction")}}.
+- `-webkit-box-pack`: Use [CSS flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) with {{CSSxRef("justify-content")}}.
 - {{CSSxRef("-webkit-box-reflect")}}: Use the CSS {{CSSxRef("element", "element()")}} function.
 
 ### C-I

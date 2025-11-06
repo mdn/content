@@ -121,4 +121,4 @@ li {
 
 - CSS {{cssxref("relative-size")}} data type
 - CSS {{cssxref("font")}} and {{cssxref("font-size")}} properties
-- [CSS fonts](/en-US/docs/Web/CSS/CSS_fonts) module
+- [CSS fonts](/en-US/docs/Web/CSS/Guides/Fonts) module

@@ -278,7 +278,7 @@ With this set up, we can now set some property values based on the `--container-
 
 The following section explains just the CSS relevant to how we've used the `progress()` function in the demo. For the full CSS, see the [CSS source](https://github.com/mdn/dom-examples/blob/main/css-progress/index.css).
 
-We first center the `<article>` inside the `<body>` using [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout), then set some custom properties on it to represent the `min-width` and `max-width` values we will use elsewhere. We then target the `<article>` element, giving it {{cssxref("min-width")}} and {{cssxref("max-width")}} values equal to the custom properties we set earlier. We set its {{cssxref("position")}} to `relative` so we can position its content relative to it, then give it a percentage {{cssxref("width")}}, fixed {{cssxref("height")}}, and {{cssxref("border")}}.
+We first center the `<article>` inside the `<body>` using [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout), then set some custom properties on it to represent the `min-width` and `max-width` values we will use elsewhere. We then target the `<article>` element, giving it {{cssxref("min-width")}} and {{cssxref("max-width")}} values equal to the custom properties we set earlier. We set its {{cssxref("position")}} to `relative` so we can position its content relative to it, then give it a percentage {{cssxref("width")}}, fixed {{cssxref("height")}}, and {{cssxref("border")}}.
 
 ```css
 body {

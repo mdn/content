@@ -13,4 +13,4 @@ Fragmented contexts are found in [CSS paged media](/en-US/docs/Web/CSS/CSS_paged
 
 ## See also
 
-- [CSS fragmentation](/en-US/docs/Web/CSS/CSS_fragmentation) module
+- [CSS fragmentation](/en-US/docs/Web/CSS/Guides/Fragmentation) module

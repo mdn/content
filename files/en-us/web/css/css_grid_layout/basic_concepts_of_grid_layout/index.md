@@ -32,7 +32,7 @@ CSS grid layout and [CSS box alignment](/en-US/docs/Web/CSS/Guides/Box_alignment
 
 More than one item can be placed into a grid cell or area and they can partially overlap each other. This layering may then be controlled with the {{cssxref("z-index")}} property.
 
-Grid is a powerful layout method that, when combined with other parts of CSS such as [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout), can help you create layouts that are responsive, flexible, and accessible. It all starts by creating a grid in your **{{glossary("grid container")}}**.
+Grid is a powerful layout method that, when combined with other parts of CSS such as [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout), can help you create layouts that are responsive, flexible, and accessible. It all starts by creating a grid in your **{{glossary("grid container")}}**.
 
 ## Grid container
 

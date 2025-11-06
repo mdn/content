@@ -35,7 +35,7 @@ The {{glossary("viewport")}} initial containing block for continuous media has t
 - [Viewport concepts](/en-US/docs/Web/CSS/Guides/CSSOM_view/Viewport_concepts)
   - : The concept of the viewport — what it is, its impact in terms of CSS, SVG, and mobile devices — and the difference between the visual viewport and the layout viewport.
 
-- [Using environment variables](/en-US/docs/Web/CSS/CSS_environment_variables/Using_environment_variables)
+- [Using environment variables](/en-US/docs/Web/CSS/Guides/Environment_variables/Using)
   - : An overview of what environment variables are, browser-defined environment variables, and how to use the `env()` function.
 
 - [Using the Viewport Segments API](/en-US/docs/Web/API/Viewport_segments_API/Using)
@@ -48,9 +48,9 @@ The {{glossary("viewport")}} initial containing block for continuous media has t
   - {{cssxref("@media/horizontal-viewport-segments", "horizontal-viewport-segments")}} descriptor
   - {{cssxref("@media/vertical-viewport-segments", "vertical-viewport-segments")}} descriptor
 
-- [CSS environment variables](/en-US/docs/Web/CSS/CSS_environment_variables)
+- [CSS environment variables](/en-US/docs/Web/CSS/Guides/Environment_variables)
   - {{cssxref("env()")}}
-  - [`<environment-variable-name>`](/en-US/docs/Web/CSS/CSS_environment_variables/Using_environment_variables#browser-defined_environment_variables)
+  - [`<environment-variable-name>`](/en-US/docs/Web/CSS/Guides/Environment_variables/Using#browser-defined_environment_variables)
 
 - [Device Posture API](/en-US/docs/Web/API/Device_Posture_API)
 

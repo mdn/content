@@ -574,7 +574,7 @@ The following image shows graphs of all the `step()` function values used in thi
 
 - [Using CSS animations](/en-US/docs/Web/CSS/Guides/Animations/Using)
 - {{cssxref('easing-function')}}
-- [CSS easing functions](/en-US/docs/Web/CSS/CSS_easing_functions) module
+- [CSS easing functions](/en-US/docs/Web/CSS/Guides/Easing_functions) module
 - JavaScript {{domxref("AnimationEvent")}} API
 - [Cubic bézier generation tool](https://cubic-bezier.com/)
 - Other related animation properties: {{cssxref("animation")}}, {{cssxref("animation-composition")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timeline")}}

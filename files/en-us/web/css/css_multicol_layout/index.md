@@ -278,7 +278,7 @@ blockquote p::after {
 {{EmbedLiveSample("multicol", "", "800px")}}
 
 > [!NOTE]
-> Multiple-column layout is closely related to [paged media](/en-US/docs/Web/CSS/CSS_paged_media). Each column box is a fragment, much like each printed page is a fragment of a document. Using the properties defined in the [CSS fragmentation](/en-US/docs/Web/CSS/CSS_fragmentation) module, you can control how content breaks between columns and pages.
+> Multiple-column layout is closely related to [paged media](/en-US/docs/Web/CSS/CSS_paged_media). Each column box is a fragment, much like each printed page is a fragment of a document. Using the properties defined in the [CSS fragmentation](/en-US/docs/Web/CSS/Guides/Fragmentation) module, you can control how content breaks between columns and pages.
 
 ## Reference
 
@@ -321,7 +321,7 @@ blockquote p::after {
 
 ## Related concepts
 
-[CSS fragmentation](/en-US/docs/Web/CSS/CSS_fragmentation) module
+[CSS fragmentation](/en-US/docs/Web/CSS/Guides/Fragmentation) module
 
 - {{cssxref("break-after")}}
 - {{cssxref("break-before")}}
@@ -359,7 +359,7 @@ blockquote p::after {
 ## See also
 
 - [Learn: multiple-column layout](/en-US/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)
-- [CSS fragmentation](/en-US/docs/Web/CSS/CSS_fragmentation) module
-- [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module
+- [CSS fragmentation](/en-US/docs/Web/CSS/Guides/Fragmentation) module
+- [CSS flexible box layout](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) module
 - [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) module
 - [CSS paged media](/en-US/docs/Web/CSS/CSS_paged_media) module

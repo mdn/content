@@ -105,7 +105,7 @@ select,
 }
 ```
 
-Assuming [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) is being used to lay out the `<option>` elements (which is true in **current implementations** of customizable selects), you could then move the checkmark from the start of the row to the end by setting an {{cssxref("order")}} value on it greater than `0`, and aligning it to the end of the row using an `auto` {{cssxref("margin-left")}} value (see [Alignment and auto margins](/en-US/docs/Web/CSS/Guides/Box_alignment/In_flexbox#alignment_and_auto_margins)).
+Assuming [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) is being used to lay out the `<option>` elements (which is true in **current implementations** of customizable selects), you could then move the checkmark from the start of the row to the end by setting an {{cssxref("order")}} value on it greater than `0`, and aligning it to the end of the row using an `auto` {{cssxref("margin-left")}} value (see [Alignment and auto margins](/en-US/docs/Web/CSS/Guides/Box_alignment/In_flexbox#alignment_and_auto_margins)).
 
 The value of the {{cssxref("content")}} property could also be set to a different emoji to change the displayed icon.
 

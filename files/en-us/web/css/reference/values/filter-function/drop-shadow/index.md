@@ -157,4 +157,4 @@ In the absence of a `<color>` value in the `drop-shadow()` function in the first
 - {{cssxref("box-shadow")}}
 - {{cssxref("text-shadow")}}
 - [Introduction to text shadows](/en-US/docs/Web/CSS/CSS_text_decoration/Text_shadows)
-- [CSS filter effects](/en-US/docs/Web/CSS/CSS_filter_effects) module
+- [CSS filter effects](/en-US/docs/Web/CSS/Guides/Filter_effects) module

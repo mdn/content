@@ -30,7 +30,7 @@ Valid `<display-inside>` values:
 - `table`
   - : These elements behave like HTML {{HTMLElement("table")}} elements. It defines a block-level box.
 - `flex`
-  - : The element behaves like a block element and lays out its content according to the [flexbox model](/en-US/docs/Web/CSS/CSS_flexible_box_layout).
+  - : The element behaves like a block element and lays out its content according to the [flexbox model](/en-US/docs/Web/CSS/Guides/Flexible_box_layout).
 - `grid`
   - : The element behaves like a block element and lays out its content according to the [grid model](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout).
 - `ruby`
@@ -96,5 +96,5 @@ In this example the parent box has been given `display: flow-root` and so establ
   - {{CSSxRef("&lt;display-box&gt;")}}
   - {{CSSxRef("&lt;display-legacy&gt;")}}
 
-- [Basic concepts of flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [Basic concepts of flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
 - [Basic Concepts of grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)

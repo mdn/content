@@ -49,9 +49,9 @@ Block at-rules end in a `{}`-block that contain nested rules, other at-rules, or
 - {{cssxref("@container")}}
   - : A conditional group rule that applies its content if the container meets the [`<container-condition>`](/en-US/docs/Web/CSS/Reference/At-rules/@container#container-condition)s ([CSS containment](/en-US/docs/Web/CSS/Guides/Containment)).
 - {{cssxref("@font-face")}}
-  - : Defines font resource locations, both local and external, along with the style characteristics for when those resources are used with a declared {{cssxref("font-family")}} ([CSS fonts](/en-US/docs/Web/CSS/CSS_fonts)).
+  - : Defines font resource locations, both local and external, along with the style characteristics for when those resources are used with a declared {{cssxref("font-family")}} ([CSS fonts](/en-US/docs/Web/CSS/Guides/Fonts)).
 - {{cssxref("@font-feature-values")}} (plus `@swash`, `@ornaments`, `@annotation`, `@stylistic`, `@styleset` and `@character-variant`)
-  - : Controls font display per font-family by defining font-specific alternates, or custom names, to feature indexes in {{cssxref("font-variant-alternates")}} in OpenType ([CSS fonts](/en-US/docs/Web/CSS/CSS_fonts)).
+  - : Controls font display per font-family by defining font-specific alternates, or custom names, to feature indexes in {{cssxref("font-variant-alternates")}} in OpenType ([CSS fonts](/en-US/docs/Web/CSS/Guides/Fonts)).
 - {{cssxref("@keyframes")}} (and the `@-webkit-keyframes` alias)
   - : Define a named animation by describing defining CSS styles for intermediate steps (or keyframes) in the animation sequence ([CSS animations](/en-US/docs/Web/CSS/Guides/Animations)).
 - {{cssxref("@layer")}}

@@ -56,6 +56,6 @@ Though the simplest way to achieve such layout, they are more complex to use for
 - [CSS multi-column layouts](/en-US/docs/Web/CSS/CSS_multicol_layout)
   - : CSS3 introduces a new layout allowing you to easily define multiple columns in an element.
     Though multi-column text is not that common on devices like screens, this is particularly useful on printed pages, or for indexes.
-- [CSS flexible boxes layouts](/en-US/docs/Web/CSS/CSS_flexible_box_layout)
+- [CSS flexible boxes layouts](/en-US/docs/Web/CSS/Guides/Flexible_box_layout)
   - : This new layout allow you to give boxes flexibility, allowing them to be resized smoothly.
     It is a powerful way to describe complex interfaces.

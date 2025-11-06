@@ -34,7 +34,7 @@ li::marker {
 
 The `::marker` pseudo-element supports a limited number of CSS properties, including:
 
-- All [font properties](/en-US/docs/Web/CSS/CSS_fonts)
+- All [font properties](/en-US/docs/Web/CSS/Guides/Fonts)
 - The {{CSSxRef("white-space")}} property
 - {{CSSxRef("color")}}
 - {{CSSxRef("text-combine-upright")}}, {{CSSxRef("unicode-bidi")}}, and {{CSSxRef("direction")}} properties

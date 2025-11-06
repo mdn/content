@@ -10,7 +10,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`reading-flow`** [CSS](/en-US/docs/Web/CSS) property enables modifying the {{glossary("reading order")}} of child elements of a [block](/en-US/docs/Glossary/Block/CSS), [flex](/en-US/docs/Web/CSS/CSS_flexible_box_layout), or [grid](/en-US/docs/Web/CSS/CSS_grid_layout) layout. This affects the order in which they are rendered to speech and navigated to when using sequential navigation such as tabbing to links or buttons.
+The **`reading-flow`** [CSS](/en-US/docs/Web/CSS) property enables modifying the {{glossary("reading order")}} of child elements of a [block](/en-US/docs/Glossary/Block/CSS), [flex](/en-US/docs/Web/CSS/Guides/Flexible_box_layout), or [grid](/en-US/docs/Web/CSS/CSS_grid_layout) layout. This affects the order in which they are rendered to speech and navigated to when using sequential navigation such as tabbing to links or buttons.
 
 ## Syntax
 
@@ -59,7 +59,7 @@ The `reading-flow` property takes one of the following keywords as its value:
 
 ## Description
 
-The `reading-flow` property modifies the {{glossary("reading order")}} of elements within a [block](/en-US/docs/Glossary/Block/CSS), [flex](/en-US/docs/Web/CSS/CSS_flexible_box_layout), or [grid](/en-US/docs/Web/CSS/CSS_grid_layout) container when set to a value other than `normal`. Such a container is referred to as a [reading flow container](/en-US/docs/Glossary/Reading_order#reading_flow_container).
+The `reading-flow` property modifies the {{glossary("reading order")}} of elements within a [block](/en-US/docs/Glossary/Block/CSS), [flex](/en-US/docs/Web/CSS/Guides/Flexible_box_layout), or [grid](/en-US/docs/Web/CSS/CSS_grid_layout) container when set to a value other than `normal`. Such a container is referred to as a [reading flow container](/en-US/docs/Glossary/Reading_order#reading_flow_container).
 
 By default, web content is read out in DOM source order. Generally, the source order should express a sensible reading order for the content, and this should also be reflected by the visual order in the content layout. However, sometimes the visual order or tab order differs from the source order. For example, when applying multiple flexbox or grid layouts to a document via [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) to suit different device or user requirements, the content order may differ based on the viewport width. In such a case, the `reading-flow` can be used to ensure the reading and tabbing order reflect the visual order.
 

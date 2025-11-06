@@ -6,7 +6,7 @@ browser-compat: css.properties.gap
 sidebar: cssref
 ---
 
-The **`gap`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) sets the gaps (also called {{glossary("gutters")}}) between rows and columns. This property applies to [multi-column](/en-US/docs/Web/CSS/CSS_multicol_layout), [flex](/en-US/docs/Web/CSS/CSS_flexible_box_layout), and [grid](/en-US/docs/Web/CSS/CSS_grid_layout) containers.
+The **`gap`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) sets the gaps (also called {{glossary("gutters")}}) between rows and columns. This property applies to [multi-column](/en-US/docs/Web/CSS/CSS_multicol_layout), [flex](/en-US/docs/Web/CSS/Guides/Flexible_box_layout), and [grid](/en-US/docs/Web/CSS/CSS_grid_layout) containers.
 
 {{InteractiveExample("CSS Demo: gap")}}
 
@@ -111,7 +111,7 @@ This property is specified as a value for `<'row-gap'>`, followed optionally by 
 
 ## Description
 
-This property defines gaps between columns in [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout), between flex items and flex lines in [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout), and between rows and columns in [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout).
+This property defines gaps between columns in [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout), between flex items and flex lines in [CSS flexible box layout](/en-US/docs/Web/CSS/Guides/Flexible_box_layout), and between rows and columns in [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout).
 
 The generated gaps create empty spaces that have the width or height of the gap's specified size, much like an empty item or track. The visible space between elements may differ from the provided `gap` value because margins, padding, and distributed alignment may increase the separation between elements beyond what is determined by `gap`.
 
@@ -359,6 +359,6 @@ In case of the flex layout, the percentage gap always results in zero value.
 - {{CSSxRef("column-gap")}}
 - [Basic concepts of grid layout: gutters](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#gutters)
 - [CSS box alignment](/en-US/docs/Web/CSS/Guides/Box_alignment) module
-- [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module
+- [CSS flexible box layout](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) module
 - [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) module
 - [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout) module

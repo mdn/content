@@ -83,6 +83,6 @@ If including generated separators that will be exposed to AT, opt for creating t
 
 ## See also
 
-- [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout)
+- [CSS flexible box layout](/en-US/docs/Web/CSS/Guides/Flexible_box_layout)
 - [Providing a breadcrumb trail](https://www.w3.org/TR/WCAG20-TECHS/G65.html)
 - [Using the `aria-current` attribute](https://tink.uk/using-the-aria-current-attribute/)

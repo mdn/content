@@ -173,7 +173,7 @@ The {{cssxref("grid-template-columns")}} property defines the widths of the grid
 
 ## Alternative methods
 
-[Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) can also be used to lay out each card. With flexbox, the dimensions of each card's rows are set with the {{cssxref("flex")}} property on each row, rather than on the card container.
+[Flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) can also be used to lay out each card. With flexbox, the dimensions of each card's rows are set with the {{cssxref("flex")}} property on each row, rather than on the card container.
 
 With flexbox, the dimensions of the flex items are defined on the children rather than the parent. Whether you choose to use grid or flexbox depends on your preference, whether you prefer controlling the tracks from the container or prefer adding rules to the items.
 

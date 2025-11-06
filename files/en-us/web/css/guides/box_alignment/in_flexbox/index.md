@@ -5,7 +5,7 @@ page-type: guide
 sidebar: cssref
 ---
 
-The [box alignment](/en-US/docs/Web/CSS/Guides/Box_alignment) module details how alignment works in various layout methods. In this guide, we explore how box alignment works in the context of [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox). As this guide aims to detail things which are specific to flexbox and box alignment, it should be read in conjunction with the [box alignment overview](/en-US/docs/Web/CSS/Guides/Box_alignment/Overview) guide, which details the common features of box alignment across layout methods.
+The [box alignment](/en-US/docs/Web/CSS/Guides/Box_alignment) module details how alignment works in various layout methods. In this guide, we explore how box alignment works in the context of [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts). As this guide aims to detail things which are specific to flexbox and box alignment, it should be read in conjunction with the [box alignment overview](/en-US/docs/Web/CSS/Guides/Box_alignment/Overview) guide, which details the common features of box alignment across layout methods.
 
 ## Basic example
 
@@ -147,6 +147,6 @@ On the cross axis the `row-gap` property creates spacing between adjacent flex l
 - [Box alignment in CSS grid layout](/en-US/docs/Web/CSS/Guides/Box_alignment/In_grid_layout)
 - [Box alignment in multiple-column layout](/en-US/docs/Web/CSS/Guides/Box_alignment/In_multi-column_layout)
 - [Box alignment for block, absolutely positioned and table layout](/en-US/docs/Web/CSS/Guides/Box_alignment/In_block_abspos_tables)
-- [Alignment in flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
+- [Alignment in flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
 - {{Glossary("Cross axis")}}
 - {{Glossary("Main axis")}}

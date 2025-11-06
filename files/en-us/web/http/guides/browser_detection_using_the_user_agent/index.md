@@ -127,7 +127,7 @@ if (navigator.maxTouchPoints > 1) {
 }
 ```
 
-For other concerns, like layout, use modern CSS like [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) and [grid](/en-US/docs/Web/CSS/CSS_grid_layout) for flexible layouts.
+For other concerns, like layout, use modern CSS like [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) and [grid](/en-US/docs/Web/CSS/CSS_grid_layout) for flexible layouts.
 Instead of hiding content on smaller screens, adjust the layout dynamically.
 [Media queries](/en-US/docs/Web/CSS/CSS_media_queries) should handle most layout changes, reducing the need for JavaScript-based adjustments.
 

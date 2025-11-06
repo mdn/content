@@ -58,9 +58,9 @@ This page is a curated list of some of the most popular goal-oriented learning m
 
 ## Fonts
 
-- [Variable fonts guide](/en-US/docs/Web/CSS/CSS_fonts/Variable_fonts_guide)
+- [Variable fonts guide](/en-US/docs/Web/CSS/Guides/Fonts/Variable_fonts)
   - : Find out how to use variable fonts in your designs.
-- [The Web Open Font Format (WOFF)](/en-US/docs/Web/CSS/CSS_fonts/WOFF)
+- [The Web Open Font Format (WOFF)](/en-US/docs/Web/CSS/Guides/Fonts/WOFF)
   - : WOFF (Web Open Font Format) is a font file format that is free for anyone to use on the web.
 
 ## User interface development

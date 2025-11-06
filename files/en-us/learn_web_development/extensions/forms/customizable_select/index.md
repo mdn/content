@@ -217,7 +217,7 @@ First of all, the picker's default black {{cssxref("border")}} is removed:
 }
 ```
 
-Now the `<option>` elements are styled. They are laid out with [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout), aligning them all to the start of the flex container and including a `20px` {{cssxref("gap")}} between each one. Each `<option>` is also given the same {{cssxref("border")}}, {{cssxref("background")}}, {{cssxref("padding")}}, and {{cssxref("transition")}} as the `<select>`, to provide a consistent look and feel:
+Now the `<option>` elements are styled. They are laid out with [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout), aligning them all to the start of the flex container and including a `20px` {{cssxref("gap")}} between each one. Each `<option>` is also given the same {{cssxref("border")}}, {{cssxref("background")}}, {{cssxref("padding")}}, and {{cssxref("transition")}} as the `<select>`, to provide a consistent look and feel:
 
 ```css live-sample___third-render live-sample___fourth-render live-sample___full-render
 option {

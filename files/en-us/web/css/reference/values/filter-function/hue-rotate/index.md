@@ -272,7 +272,7 @@ for (let i = 0; i < 360; i++) {
 
 ## See also
 
-- [CSS filter effects](/en-US/docs/Web/CSS/CSS_filter_effects) module
+- [CSS filter effects](/en-US/docs/Web/CSS/Guides/Filter_effects) module
 - The other {{cssxref("&lt;filter-function&gt;")}} functions available to be used in values of the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties include:
   - {{cssxref("filter-function/blur", "blur()")}}
   - {{cssxref("filter-function/brightness", "brightness()")}}

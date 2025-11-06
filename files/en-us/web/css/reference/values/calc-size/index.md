@@ -220,7 +220,7 @@ p {
 }
 ```
 
-In the CSS, we use [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) to center the child elements inside the `<section>`, and set the `width` and `height` of the `<section>` to `calc-size()` functions. The `width` is set equal to `fit-content` plus `6rem`. The `height` is set to `auto` multiplied by two.
+In the CSS, we use [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) to center the child elements inside the `<section>`, and set the `width` and `height` of the `<section>` to `calc-size()` functions. The `width` is set equal to `fit-content` plus `6rem`. The `height` is set to `auto` multiplied by two.
 
 ```css
 section {

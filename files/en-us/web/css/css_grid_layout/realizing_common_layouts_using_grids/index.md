@@ -128,7 +128,7 @@ With our mobile layout in place, we can now proceed to add a {{cssxref("@media")
 }
 ```
 
-You can see the layout taking shape in the value of {{cssxref("grid-template-areas")}}. The `header` spans over two column tracks, as does the `nav`. In the third row track, we place the `sidebar` alongside the `content`. We place the `ad` content in the fourth row track so it appears under the sidebar. The `footer` is next to it under the content. We use [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) on the navigation to evenly space the navigation items in a row.
+You can see the layout taking shape in the value of {{cssxref("grid-template-areas")}}. The `header` spans over two column tracks, as does the `nav`. In the third row track, we place the `sidebar` alongside the `content`. We place the `ad` content in the fourth row track so it appears under the sidebar. The `footer` is next to it under the content. We use [CSS flexible box layout](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) on the navigation to evenly space the navigation items in a row.
 
 We can now add a final breakpoint for wider screens able to display a three-column layout.
 

@@ -134,7 +134,7 @@ justify-content: unset;
   - : If the combined size of the items along the main axis is less than the size of the alignment container, any `auto`-sized items have their size increased equally (not proportionally), while still respecting the constraints imposed by {{cssxref("max-height")}}/{{cssxref("max-width")}} (or equivalent functionality), so that the combined size exactly fills the alignment container along the main axis.
 
     > [!NOTE]
-    > For [flexboxes](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox), the `stretch` value behaves as `flex-start` or `start`. This is because, in flexboxes, stretching is controlled using the {{CSSXref("flex-grow")}} property.
+    > For [flexboxes](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts), the `stretch` value behaves as `flex-start` or `start`. This is because, in flexboxes, stretching is controlled using the {{CSSXref("flex-grow")}} property.
 
 - `safe`
   - : If the item overflows the alignment container, then the item is aligned as if the alignment mode is `start`. The desired alignment will not be implemented.
@@ -148,7 +148,7 @@ Defined in the [CSS box alignment](/en-US/docs/Web/CSS/Guides/Box_alignment) mod
 
 This property shares many keyword values with the {{cssxref("align-content")}} property, but not all! `justify-content` isn't involved in baseline alignment, and therefore does not take baseline values.
 
-In [flex layouts](/en-US/docs/Web/CSS/CSS_flexible_box_layout), the property defines how positive free space is distributed between or around flex items along the main axis. This property impacts the space between elements in a line, not the space between lines. The alignment is done after the lengths and auto margins are applied, which means that when one or more flex items in a line have a {{cssxref("flex-grow")}} factor greater than `0`, the property has no effect as there is no space to distribute along that line. Also, as stretching along the main axis is controlled by {{cssxref("flex")}}, the `stretch` value behaves as `flex-start`.
+In [flex layouts](/en-US/docs/Web/CSS/Guides/Flexible_box_layout), the property defines how positive free space is distributed between or around flex items along the main axis. This property impacts the space between elements in a line, not the space between lines. The alignment is done after the lengths and auto margins are applied, which means that when one or more flex items in a line have a {{cssxref("flex-grow")}} factor greater than `0`, the property has no effect as there is no space to distribute along that line. Also, as stretching along the main axis is controlled by {{cssxref("flex")}}, the `stretch` value behaves as `flex-start`.
 
 With [grid layout](/en-US/docs/Web/CSS/CSS_grid_layout), this property distributes available space between or around grid columns, not grid items. If the grid container is larger than the grid itself, the `justify-content` property can be used to justify the grid along the inline axis, aligning the grid columns.
 
@@ -424,7 +424,7 @@ Select different keywords from the drop-down menu to visualize the different `ju
 
 ## See also
 
-- [Basic concepts of flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- [Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
+- [Basic concepts of flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
+- [Aligning items in a flex container](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
 - [Box alignment in grid layout](/en-US/docs/Web/CSS/Guides/Box_alignment/In_grid_layout)
 - [CSS box alignment](/en-US/docs/Web/CSS/Guides/Box_alignment) module

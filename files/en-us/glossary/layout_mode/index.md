@@ -24,7 +24,7 @@ There are several layout modes:
   - : Designed for positioning elements without much interaction with other elements.
 - **[Multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout)**
   - : Designed for laying content out in columns as in a newspaper.
-- **[Flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout)**
+- **[Flexible box layout](/en-US/docs/Web/CSS/Guides/Flexible_box_layout)**
   - : Designed for laying out complex pages that can be resized smoothly.
 - **[Grid layout](/en-US/docs/Web/CSS/CSS_grid_layout)**
   - : Designed for laying out elements relative to a fixed grid.

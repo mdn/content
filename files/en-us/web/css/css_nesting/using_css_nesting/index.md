@@ -242,7 +242,7 @@ In this example the `&` nesting selector is used to create compound selectors to
 
 ##### CSS
 
-Styles for the `.notices` to create a column using [flexbox layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout).
+Styles for the `.notices` to create a column using [flexbox layout](/en-US/docs/Web/CSS/Guides/Flexible_box_layout).
 
 ```css
 .notices {

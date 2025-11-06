@@ -109,7 +109,7 @@ Click "Play" in the example above to see or edit the code for the animation in t
 
 ## See also
 
-- Properties in the [CSS filter effects](/en-US/docs/Web/CSS/CSS_filter_effects) module enable applying filters effects, such as blurring and changing color intensity, to images, backgrounds, and borders.
+- Properties in the [CSS filter effects](/en-US/docs/Web/CSS/Guides/Filter_effects) module enable applying filters effects, such as blurring and changing color intensity, to images, backgrounds, and borders.
 - [Compositing And Blending In CSS](https://www.sarasoueidan.com/blog/compositing-and-blending-in-css/) (2015)
 - [Editing Images in CSS: Blend Modes](https://webdesign.tutsplus.com/editing-images-in-css-blend-modes--cms-26058t) (2022)
 - [web.dev: blend modes](https://web.dev/learn/css/blend-modes) (2021)

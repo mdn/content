@@ -70,7 +70,7 @@ The HTML consists of a [heading element](/en-US/docs/Web/HTML/Reference/Elements
 
 ### Carousel layout with flexbox
 
-We use [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) to create a single row of items; the `<ul>` is the flex container, and the `<li>` child list items are displayed horizontally with each item taking up the full width of the carousel.
+We use [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) to create a single row of items; the `<ul>` is the flex container, and the `<li>` child list items are displayed horizontally with each item taking up the full width of the carousel.
 
 The unordered list is made to fill the full width of the viewport with a width {{cssxref("width")}} of `100vw`; it is also given a {{cssxref("height")}} of `300px`, and some {{cssxref("padding")}}. We then use flexbox to lay out the list — setting a {{cssxref("display")}} value of `flex` to cause the child list items to display in a row (due to the default {{cssxref("flex-direction")}} value of `row`), with a {{cssxref("gap")}} of `4vw` between each one.
 

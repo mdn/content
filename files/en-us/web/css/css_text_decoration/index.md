@@ -15,7 +15,7 @@ By varying the color, style, and thickness of text decoration using pseudo-class
 Several features can help improve text readability:
 
 - {{cssxref("text-decoration-skip-ink")}} can increase legibility by skipping descenders.
-- {{cssxref("text-underline-offset")}} enables you to fine-tune the underline placement to better match font metrics or design aesthetics, which can be especially useful for unique [typefaces](/en-US/docs/Web/CSS/CSS_fonts).
+- {{cssxref("text-underline-offset")}} enables you to fine-tune the underline placement to better match font metrics or design aesthetics, which can be especially useful for unique [typefaces](/en-US/docs/Web/CSS/Guides/Fonts).
 - {{cssxref("text-shadow")}} colors that contrast with text {{cssxref("color")}} can make the text visually pop when placed on a background with insufficient contrast.
 
 These features all help improve legibility, and therefore, accessibility. Reducing visual noise and improving text clarity is especially helpful for users with [dyslexia](https://en.wikipedia.org/wiki/Dyslexia) or low vision.
@@ -126,9 +126,9 @@ The specification also defines the `text-decoration-skip-box`, `text-decoration-
 
 ## See also
 
-- [CSS fonts](/en-US/docs/Web/CSS/CSS_fonts) module
+- [CSS fonts](/en-US/docs/Web/CSS/Guides/Fonts) module
 - [CSS ruby layout](/en-US/docs/Web/CSS/CSS_ruby_layout) module
 - [CSS text](/en-US/docs/Web/CSS/CSS_text) module
 - [CSS writing modes](/en-US/docs/Web/CSS/CSS_writing_modes) module
 - [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
-- [CSS fonts](/en-US/docs/Web/CSS/CSS_fonts) module
+- [CSS fonts](/en-US/docs/Web/CSS/Guides/Fonts) module

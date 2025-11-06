@@ -6,7 +6,7 @@ browser-compat: css.types.env
 sidebar: cssref
 ---
 
-The **`env()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) can be used to insert the value of a user-agent defined [environment variable](/en-US/docs/Web/CSS/CSS_environment_variables/Using_environment_variables) into your CSS.
+The **`env()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) can be used to insert the value of a user-agent defined [environment variable](/en-US/docs/Web/CSS/Guides/Environment_variables/Using) into your CSS.
 
 ## Syntax
 
@@ -26,7 +26,7 @@ env(viewport-segment-width 0 0, 40%);
 
 The `env( <environment-variable>, <fallback> )` function accepts the following parameters:
 
-- [`<environment-variable>`](/en-US/docs/Web/CSS/CSS_environment_variables/Using_environment_variables#browser-defined_environment_variables)
+- [`<environment-variable>`](/en-US/docs/Web/CSS/Guides/Environment_variables/Using#browser-defined_environment_variables)
   - : A {{cssxref("&lt;custom-ident>")}} specifying the name of the environment variable to be inserted. If the name provided represents an array-like environment variable, the name is followed by {{cssxref("&lt;integer>")}} values identifying the specific instance the name is referencing. The case-sensitive environment variable name can be one of the following:
     - `safe-area-inset-top`, `safe-area-inset-right`, `safe-area-inset-bottom`, `safe-area-inset-left`
       - : The safe distance from the top, right, bottom, or left inset edge of the viewport, defining where it is safe to place content into without risking it being cut off by the shape of a non‑rectangular display. The four values form a rectangle, inside which all content is visible. The values are `0` if the viewport is a rectangle and no features — such as toolbars or dynamic keyboards — are occupying viewport space; otherwise, it is a `px` value greater than `0`.
@@ -44,9 +44,9 @@ The `env( <environment-variable>, <fallback> )` function accepts the following p
 
 ## Description
 
-The `env()` function is used to insert the value of a globally-scoped, [user-agent-defined environment variable](/en-US/docs/Web/CSS/CSS_environment_variables/Using_environment_variables#browser-defined_environment_variables) into your CSS. The `env()` function can be used as a property value or in place of any part of a property value or descriptor (for example, in [Media query rules](/en-US/docs/Web/CSS/Reference/At-rules/@media)).
+The `env()` function is used to insert the value of a globally-scoped, [user-agent-defined environment variable](/en-US/docs/Web/CSS/Guides/Environment_variables/Using#browser-defined_environment_variables) into your CSS. The `env()` function can be used as a property value or in place of any part of a property value or descriptor (for example, in [Media query rules](/en-US/docs/Web/CSS/Reference/At-rules/@media)).
 
-The function accepts an `<environment-variable>` as its first argument. This is a case-sensitive {{cssxref("&lt;custom-ident>")}} equal to the [name of the environment variable](/en-US/docs/Web/CSS/CSS_environment_variables/Using_environment_variables#browser-defined_environment_variables) to be substituted, but it can also include additional space-separated values if required. For example, `env(viewport-segment-width 0 0)` would return the width of the top or left segment in the case of a device with multiple viewport segments.
+The function accepts an `<environment-variable>` as its first argument. This is a case-sensitive {{cssxref("&lt;custom-ident>")}} equal to the [name of the environment variable](/en-US/docs/Web/CSS/Guides/Environment_variables/Using#browser-defined_environment_variables) to be substituted, but it can also include additional space-separated values if required. For example, `env(viewport-segment-width 0 0)` would return the width of the top or left segment in the case of a device with multiple viewport segments.
 
 The second argument, if provided, is the fallback value, which is used if the environment variable referenced in the first argument is not supported or doesn't exist. The fallback can be another environment variable, even with its own fallback.
 
@@ -106,7 +106,7 @@ We have a {{htmlelement("main")}} section containing a fake application and a {{
 
 #### CSS
 
-Using [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout), we create a footer that is only as tall as it needs to be, while the main section containing the application fills up the rest of the viewport:
+Using [CSS flexible box layout](/en-US/docs/Web/CSS/Guides/Flexible_box_layout), we create a footer that is only as tall as it needs to be, while the main section containing the application fills up the rest of the viewport:
 
 ```css
 body {
@@ -239,8 +239,8 @@ The [Viewport segment API demo](https://mdn.github.io/dom-examples/viewport-segm
 
 ## See also
 
-- [Using environment variables](/en-US/docs/Web/CSS/CSS_environment_variables/Using_environment_variables)
-- [CSS environment variables](/en-US/docs/Web/CSS/CSS_environment_variables) module
+- [Using environment variables](/en-US/docs/Web/CSS/Guides/Environment_variables/Using)
+- [CSS environment variables](/en-US/docs/Web/CSS/Guides/Environment_variables) module
 - {{CSSxRef("var")}}
 - [CSS custom properties for cascading variables](/en-US/docs/Web/CSS/Guides/Cascading_variables) module
 - [Custom properties (`--*`): CSS variables](/en-US/docs/Web/CSS/Reference/Properties/--*)

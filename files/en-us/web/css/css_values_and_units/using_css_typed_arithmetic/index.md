@@ -274,7 +274,7 @@ Next, we set several properties on the {{htmlelement("body")}} element:
 
 - We start by setting a `height` of `inherit`, meaning the `<body>` will inherit the `:root` element's `100%` height and therefore span the full height of the viewport.
 - Next, we horizontally center the `<body>` using {{cssxref("margin")}}, and give it a {{cssxref("max-width")}}. As you'll see later on, this upper bound is important for controlling the maximum rotation of the fan/circle shape.
-- We center the `<div>` with `class="story-circle"` horizontally and vertically inside the `<body>` using [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout).
+- We center the `<div>` with `class="story-circle"` horizontally and vertically inside the `<body>` using [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout).
 - We use the {{cssxref("container-type")}} property to declare the `<body>` as an inline [size query container](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#container_size_queries). This is important because we want to vary the shape rotation based on the `<body>` width, and not the viewport width as we did in previous examples. Setting it as a size query container allows us to reference its size in calculations.
 
 ```css

@@ -165,5 +165,5 @@ body {
 - {{cssxref("filter")}}
 - {{cssxref("&lt;filter-function&gt;")}}
 - {{cssxref("background-blend-mode")}}, {{cssxref("mix-blend-mode")}}
-- [CSS filter effects](/en-US/docs/Web/CSS/CSS_filter_effects)
+- [CSS filter effects](/en-US/docs/Web/CSS/Guides/Filter_effects)
 - [CSS compositing and blending](/en-US/docs/Web/CSS/Guides/Compositing_and_blending)

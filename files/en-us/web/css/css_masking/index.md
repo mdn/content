@@ -14,7 +14,7 @@ CSS **masking** properties are used to apply a mask to an element or its border.
 
 The image used as the mask is specified by the {{cssxref("mask-image")}} or {{cssxref("mask-border-source")}} properties. The specified mask can be an {{cssxref("image")}}, a {{cssxref("gradient")}}, or an SVG {{SVGElement("mask")}} element. The mask can be sized and positioned similarly to [background and border images](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders).
 
-Clipping and masking in CSS behaves the same way as it does with SVG: First, the element is styled without filter effects, masking, clipping, and opacity. Then, any effects are applied to the element in the following order: [filter effects](/en-US/docs/Web/CSS/CSS_filter_effects), clipping, masking, and opacity.
+Clipping and masking in CSS behaves the same way as it does with SVG: First, the element is styled without filter effects, masking, clipping, and opacity. Then, any effects are applied to the element in the following order: [filter effects](/en-US/docs/Web/CSS/Guides/Filter_effects), clipping, masking, and opacity.
 
 While masking provides more control and options, clipping can perform better if a basic shape is all that's required — they are easier to interpolate.
 
@@ -103,7 +103,7 @@ While masking provides more control and options, clipping can perform better if 
 ## See also
 
 - {{cssxref("background-clip")}}
-- [CSS filter effects](/en-US/docs/Web/CSS/CSS_filter_effects) module
+- [CSS filter effects](/en-US/docs/Web/CSS/Guides/Filter_effects) module
 - [SVG tutorial: clipping and masking](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Clipping_and_masking)
 - {{domxref("CanvasRenderingContext2D.clip()")}}
 - {{domxref("WebGLRenderingContext.colorMask()")}}

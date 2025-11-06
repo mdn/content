@@ -47,7 +47,7 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground:
 
 ## Using flexbox
 
-To center a box within another box, first turn the containing box into a [flex container](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox#the_flex_container) by setting its {{cssxref("display")}} property to `flex`. Then set {{cssxref("align-items")}} to `center` for vertical centering (on the block axis) and {{cssxref("justify-content")}} to `center` for horizontal centering (on the inline axis). And that's all it takes to center one box inside another!
+To center a box within another box, first turn the containing box into a [flex container](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts#the_flex_container) by setting its {{cssxref("display")}} property to `flex`. Then set {{cssxref("align-items")}} to `center` for vertical centering (on the block axis) and {{cssxref("justify-content")}} to `center` for horizontal centering (on the inline axis). And that's all it takes to center one box inside another!
 
 ### HTML
 

@@ -185,7 +185,7 @@ For example, the `<easing-function>` data type and the `prefers-reduced-motion` 
 
 - [CSS animations](/en-US/docs/Web/CSS/Guides/Animations)
 - [CSS basic user interface](/en-US/docs/Web/CSS/Guides/Basic_user_interface)
-- [CSS filter effects](/en-US/docs/Web/CSS/CSS_filter_effects)
+- [CSS filter effects](/en-US/docs/Web/CSS/Guides/Filter_effects)
 - [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap)
 
 #### Templates

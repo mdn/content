@@ -82,7 +82,7 @@ In the above example we achieve the sticky footer using [CSS grid layout](/en-US
 
 ## Alternate method
 
-You can also use [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) to create a sticky footer.
+You can also use [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) to create a sticky footer.
 
 ```html live-sample___sticky-footer-flexbox-example
 <div class="wrapper">
@@ -150,5 +150,5 @@ The flexbox example starts out in the same way, but we use `display:flex` rather
 - CSS properties: {{cssxref("display")}}, {{cssxref("min-height")}}, {{cssxref("grid-template-rows")}}, {{cssxref("flex-direction")}}, {{cssxref("flex-grow")}}, {{cssxref("flex-shrink")}}
 - [Basic concepts of grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
 - [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) module
-- [Basic concepts of flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module
+- [Basic concepts of flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
+- [CSS flexible box layout](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) module

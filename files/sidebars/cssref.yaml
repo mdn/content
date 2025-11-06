@@ -167,21 +167,21 @@ sidebar:
       - /Web/CSS/Guides/Display/Multi-keyword_syntax
       - /Web/CSS/Guides/Display/Visual_formatting_model
   - type: listSubPages
-    path: /Web/CSS/CSS_filter_effects
+    path: /Web/CSS/Guides/Filter_effects
     title: Filter_effects
     details: closed
   - title: Flexbox
     details: closed
     children:
-      - /Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
-      - /Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods
-      - /Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container
-      - /Web/CSS/CSS_flexible_box_layout/Ordering_flex_items
-      - /Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis
-      - /Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items
-      - /Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox
+      - /Web/CSS/Guides/Flexible_box_layout/Basic_concepts
+      - /Web/CSS/Guides/Flexible_box_layout/Relationship_with_other_layout_methods
+      - /Web/CSS/Guides/Flexible_box_layout/Aligning_items
+      - /Web/CSS/Guides/Flexible_box_layout/Ordering_flex_items
+      - /Web/CSS/Guides/Flexible_box_layout/Controlling_ratios_along_main_axis
+      - /Web/CSS/Guides/Flexible_box_layout/Wrapping_flex_items
+      - /Web/CSS/Guides/Flexible_box_layout/Use_cases
   - type: listSubPages
-    path: /Web/CSS/CSS_fonts
+    path: /Web/CSS/Guides/Fonts
     title: Fonts
     details: closed
   - title: Grid

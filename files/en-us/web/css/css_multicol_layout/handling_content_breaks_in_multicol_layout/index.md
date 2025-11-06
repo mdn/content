@@ -6,7 +6,7 @@ page-type: guide
 sidebar: cssref
 ---
 
-Content between column boxes in a multicol layout breaks in the same way that it breaks between pages in paged media. In both contexts, you can control where and how content breaks by using properties of the [CSS fragmentation](/en-US/docs/Web/CSS/CSS_fragmentation) module. In this guide, we see how fragmentation works in a _multi-column container_ or _multicol container_ for short.
+Content between column boxes in a multicol layout breaks in the same way that it breaks between pages in paged media. In both contexts, you can control where and how content breaks by using properties of the [CSS fragmentation](/en-US/docs/Web/CSS/Guides/Fragmentation) module. In this guide, we see how fragmentation works in a _multi-column container_ or _multicol container_ for short.
 
 ## Fragmentation basics
 

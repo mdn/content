@@ -68,7 +68,7 @@ The CSS box sizing module also introduces the `min-intrinsic-sizing` property. C
 - [Visual formatting model](/en-US/docs/Web/CSS/Guides/Display/Visual_formatting_model)
   - : Explains the visual formatting model.
 
-- [Controlling ratios of flex items along the main axis](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
+- [Controlling ratios of flex items along the main axis](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_ratios_along_main_axis)
   - : Explains intrinsic sizing as a precursor to understanding how to control the size and flexibility of flex items along the main axis using {{CSSxRef("flex-grow")}}, {{CSSxRef("flex-shrink")}}, and {{CSSxRef("flex-basis")}}.
 
 ## Related concepts
@@ -128,7 +128,7 @@ The CSS box sizing module also introduces the `min-intrinsic-sizing` property. C
   - {{CSSxRef("grid-template-rows")}}
   - {{CSSxRef("repeat")}}
   - {{CSSxRef("minmax")}} function
-- [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module
+- [CSS flexible box layout](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) module
   - {{CSSxRef("flex-basis")}}
   - {{CSSxRef("flex")}}
 
@@ -139,7 +139,7 @@ The CSS box sizing module also introduces the `min-intrinsic-sizing` property. C
 ## See also
 
 - [CSS display](/en-US/docs/Web/CSS/Guides/Display) module
-- [CSS flex layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module
+- [CSS flex layout](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) module
 - [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) module
 - [CSS positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout) module
-- [CSS fragmentation](/en-US/docs/Web/CSS/CSS_fragmentation) module
+- [CSS fragmentation](/en-US/docs/Web/CSS/Guides/Fragmentation) module
