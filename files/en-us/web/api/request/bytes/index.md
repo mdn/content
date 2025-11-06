@@ -24,7 +24,7 @@ None.
 
 A promise that resolves with an {{jsxref("Uint8Array")}}.
 
-## Exceptions
+### Exceptions
 
 - `TypeError`
   : Thrown for one of the following reasons:
