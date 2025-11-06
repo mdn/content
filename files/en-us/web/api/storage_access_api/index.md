@@ -60,7 +60,7 @@ When we talk about third-party cookies in the context of the Storage Access API,
 
 Third party content embedded in an {{htmlelement("iframe")}} that needs to access cookie or other unpartitioned state can request access using the Storage Access API as follows:
 
-1. {{domxref("Document.hasStorageAccess()")}} can be called to check if it already has access to unpartitioned cookies.
+1. {{domxref("Document.hasStorageAccess()")}} can be called to check if the embedded content already has access to unpartitioned cookies.
 2. If not, {{domxref("Document.requestStorageAccess()")}} can be called with {{Glossary("transient activation")}} to request the `storage-access` permission.
 
    Depending on the browser, the user will be asked whether to grant permission to the requesting embed in slightly different ways.
@@ -75,7 +75,7 @@ Third party content embedded in an {{htmlelement("iframe")}} that needs to acces
    Once permission is granted, a permission key is stored in the browser with the structure `<top-level site, embedded site>`.
    For example, if the embedding site is `embedder.com`, and the embed is `locator.example.com`, the key would be `<embedder.com, example.com>`.
 
-   What this means is that permission is granted for access to unpartitioned cookies for any page on the `example.com` site or one of its subdomains that is embedded in any page on the `embedder.com` site.
+   This means that permission is granted for unpartitioned cookie access to any page on the `example.com` site or any of its subdomains embedded in any page on the `embedder.com` site.
    For example, `docs.example.com`, `profile.example.com`, can now call `requestStorageAccess()` and the promise would fulfill automatically.
 
    > [!NOTE]
@@ -84,8 +84,8 @@ Third party content embedded in an {{htmlelement("iframe")}} that needs to acces
 4. Permission must be explicitly activated for each _context_.
 
    When an embed is granted permission, that permission is also activated for the current context.
-   However other contexts, such as new browser tabs or content in other {{htmlelement("iframe")}} elements in the page, have their third-party cookie access blocked by default.
-   That means that even if permission is granted, the page will need to be loaded and call `requestStorageAccess()` to activate the permission.
+   However, other contexts, such as new browser tabs or content in other {{htmlelement("iframe")}} elements in the page, have their third-party cookie access blocked by default.
+   That means that even if permission is granted, the page will need to load and call `requestStorageAccess()` to activate the permission.
    If permission has already been granted then a call to `requestStorageAccess()` will not require transient activation and the promise will fulfill automatically.
 
    The only exception to the "blocked by default" behavior is if an embed performs a same-origin navigation to reload itself after after being granted permission or activating a permission.
@@ -97,7 +97,7 @@ Third party content embedded in an {{htmlelement("iframe")}} that needs to acces
    > This was not desirable behavior from a security standpoint — for example, if `shop.example.com` embedded `locator.users.com` to allow users to use their location info while shopping, and `locator.users.com` called `requestStorageAccess()`, `shop.example.com` and any other sites it embeds would be able to access its cookies, but also access cookies from `private.users.com`, which is not intended to be embedded. [Read more about the motivations](https://github.com/privacycg/storage-access/issues/113) behind this change.
 
 5. After an embed has activated the storage-access permission it should reload itself.
-   The browser will the re-request the resource with third party cookies included, and make them available to the embedded resource once it has loaded.
+   The browser will re-request the resource with third-party cookies included, and make them available to the embedded resource once it has loaded.
 
 ### Storage access headers
 
@@ -110,9 +110,9 @@ The resource must still be loaded in order to request permission the first time.
 There are two headers:
 
 - The browser adds the {{HTTPHeader("Sec-Fetch-Storage-Access")}} header to requests to indicate the storage access state of the current fetch context, such as whether permission has been activated, granted, or not granted.
-- Depending on the storage access state of the request, the server can respond with an {{HTTPHeader("Activate-Storage-Access")}} to request that the browser activate the permission for the context and retry the request with cookies (avoiding it having to load the resource so it can call `requestStorageAccess()`), or activate the permission and load the returned resource.
+- Depending on the storage access state of the request, the server can respond with an {{HTTPHeader("Activate-Storage-Access")}} header to request that the browser activate the permission for the context and retry the request with cookies (avoiding it having to load the resource so it can call `requestStorageAccess()` to achieve the same thing), or activate the permission and load the returned resource.
 
-The storage access headers can also be used to activate permission for passive resources, such as images (provided the context has already been granted permission).
+The storage access headers can also be used to activate permission for passive resources, such as images, provided the context has already been granted permission.
 This might be used, for example, to serve different images for different users, demographics, or locales.
 
 The workflows are shown in the [Storage access header sequences](#storage_access_header_sequences) section.
@@ -121,15 +121,15 @@ The workflows are shown in the [Storage access header sequences](#storage_access
 
 #### JavaScript sequences
 
-Consider the example of a library to be loaded in an {{htmlelement("iframe")}} that needs to be shared among a number of sites, and which relies on credentials stored in unpartitioned cookies.
+Consider the example of a library loaded in an {{htmlelement("iframe")}} that needs to be shared across a number of sites and relies on credentials stored in unpartitioned cookies.
 
 First consider the case where permission has not been granted.
 
-- Resources are requested without third party cookies by default, so the server returns a version that does not rely on credentials (and which when loaded doesn't have access to the cookies).
+- Resources are requested without third-party cookies by default, so the server returns a version that does not rely on credentials (and which, when loaded, doesn't have access to the cookies).
 - Once loaded, the resource calls `requestStorageAccess()` with transient activation to request and activate the `storage-access` permission.
 - If permission is granted, the resource will then reload itself.
-  This time the browser makes the request with third party cookies included, and the server may respond with a different "credentialed" version of the resource.
-- The browser then loads the resource, and because it has an activated `storage-access` permission, gives it access to its cookies.
+  This time the browser makes the request with third-party cookies included, and the server may respond with a different "credentialed" version of the resource.
+- The browser then loads the resource; because the resource has an activated `storage-access` permission, the browser gives it access to the third-party cookies.
 
 ![Storage API workflow - without storage-access permission](storage_api_no_permission.png)
 
@@ -152,7 +152,7 @@ Now consider the case where permission has been granted but not activated.
 This would happen if you were to open the same URL in a new browser tab, or attempt to embed the same resource from another page in the same site.
 
 The workflow is almost exactly the same because the resource still needs to be loaded the first time without cookies, and it then needs to call `requestStorageAccess()` to activate the permission for the context.
-In this case though it doesn't need transient activation and can execute on load.
+In this case, however, it doesn't need transient activation and can execute on load.
 
 ![Storage API workflow - activate storage-access permission](storage_api_permission.png)
 
@@ -174,10 +174,10 @@ sequenceDiagram;
 #### Storage access header sequences
 
 The storage access headers enable an improved workflow that allows the server to request that the browser activate a permission that has been granted and retry the request with cookies included.
-This avoids having to load the resource, in order to call `requestStorageAccess()`, when the user has already granted permission.
+This avoids the requirement to load the resource to call `requestStorageAccess()` when the user has already granted permission.
 
 The {{HTTPHeader("Sec-Fetch-Storage-Access")}} header is added to requests to indicate the storage access state of the current fetch context, such as whether permission has been activated, granted, or not granted.
-Depending on the storage access state of the request, the server can respond with an {{HTTPHeader("Activate-Storage-Access")}} to request that the browser activate the permission for the context and retry the request with cookies (avoiding it having to load the resource so it can call `requestStorageAccess()`).
+Depending on the storage access state of the request, the server can respond with an {{HTTPHeader("Activate-Storage-Access")}} header to request that the browser activate the permission for the context and retry the request with cookies.
 
 First consider the case where permission has not been granted.
 This is effectively the same as the initial sequence for the API, because we still need to first load the resource without cookies so that the permission can be requested and granted.
@@ -203,13 +203,14 @@ What differs in the above sequence is that the browser and server have added som
 
 - Initially the browser adds the header `Sec-Fetch-Storage-Access: none` to the request to indicate that permission has not been granted.
 - After the user has granted (and thereby activated) the permission, the embed reloads itself.
-  - The browser adds `Sec-Fetch-Storage-Access: active` to the request to indicate the context has an activated `storage-access` permission, and includes the third party cookies.
-  - The server responds with `Activate-Storage-Access: load` which tells the browser to load the new version of the library with access to third party cookies.
+  - The browser adds `Sec-Fetch-Storage-Access: active` to the request to indicate the context has an activated `storage-access` permission, and includes the third-party cookies.
+  - The server responds with `Activate-Storage-Access: load`, which tells the browser to load the new version of the library with access to third-party cookies.
 
 The real benefit of the headers comes when attempting to load an embedded resource that already has permission granted.
-In this case the browser will attach `Sec-Fetch-Storage-Access: inactive` to the request to indicate that the context has permission but that it is inactive.
+In this case, the browser will attach `Sec-Fetch-Storage-Access: inactive` to the request to indicate that the context has permission, but the permission is inactive.
 The server can then respond with `Activate-Storage-Access: retry` to indicate that the browser should activate the permission, and retry the request with cookies.
-If the browser retries the request it adds `Sec-Fetch-Storage-Access: active` to the request along with the cookies, and the server responds with `Activate-Storage-Access: load` which tells the browser to load the new version of the library with access to third party cookies.
+If the browser retries the request, it adds `Sec-Fetch-Storage-Access: active` to the request along with the cookies.
+The server then responds with `Activate-Storage-Access: load`, which tells the browser to load the new version of the library with access to third-party cookies.
 
 ![Storage access header workflow - activate storage-access permission and retry](storage_headers_activate_permission.png)
 
@@ -241,7 +242,9 @@ Check the below list if you are having trouble getting a request to work:
 2. The document and top-level document must not have a `null` origin.
 3. Origins that have never been interacted with as a first party do not have a notion of first-party storage. From the user's perspective, they only have a third-party relationship with that origin. Access requests are automatically denied if the browser detects that the user hasn't interacted with the embedded content in a first-party context recently (in Firefox, "recently" means within 30 days).
 4. The document's window must be a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
-5. Sandboxed {{htmlelement("iframe")}}s cannot be granted storage access by default for security reasons. The API therefore also adds the [`allow-storage-access-by-user-activation`](/en-US/docs/Web/HTML/Reference/Elements/iframe#allow-storage-access-by-user-activation) [sandbox token](/en-US/docs/Web/HTML/Reference/Elements/iframe#sandbox). The embedding website needs to add this to allow storage access requests to be successful, along with `allow-scripts` and `allow-same-origin` to allow it to execute a script to call the API and execute it in an origin that can have cookies/state:
+5. Sandboxed {{htmlelement("iframe")}}s cannot be granted storage access by default for security reasons.
+   To handle this, the API provides the [`allow-storage-access-by-user-activation`](/en-US/docs/Web/HTML/Reference/Elements/iframe#allow-storage-access-by-user-activation) [sandbox token](/en-US/docs/Web/HTML/Reference/Elements/iframe#sandbox).
+   The `<iframe>` needs to include this to enable storage access requests, along with `allow-scripts` and `allow-same-origin` to allow it to execute a script to call the API and execute it in an origin that can have cookies/state:
 
    ```html
    <iframe
@@ -313,7 +316,7 @@ Documentation for Firefox's new storage access policy for blocking tracking cook
 #### Storage access headers
 
 - {{HTTPHeader("Sec-Fetch-Storage-Access")}}
-  - : Indicates the "storage access status" for the current request context, which will be one of `none`, `inactive`, `active`.
+  - : Indicates the "storage access status" for the current request context, which will be one of `none`, `inactive`, or `active`.
 - {{HTTPHeader("Activate-Storage-Access")}}
   - : Used in response to `Sec-Fetch-Storage-Access` to indicate that the browser can activate an existing permission for secure access and retry the request with cookies, or load a resource with cookie access if it already has an activated permission.
 
