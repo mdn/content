@@ -115,6 +115,6 @@ sidebar: cssref
 ## See also
 
 - [CSS at-rule functions](/en-US/docs/Web/CSS/Reference/At-rules/At-rule_functions)
-- [Nesting at-rules](/en-US/docs/Web/CSS/CSS_nesting/Nesting_at-rules)
+- [Nesting at-rules](/en-US/docs/Web/CSS/Guides/Nesting/At-rules)
 - [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax) module
 - [CSS conditional rules](/en-US/docs/Web/CSS/Guides/Conditional_rules) module

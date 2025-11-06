@@ -74,8 +74,8 @@ Container queries are similar to dimension [media queries](/en-US/docs/Web/CSS/G
 - [CSS counter styles](/en-US/docs/Web/CSS/Guides/Counter_styles) module
   - [Using CSS counters](/en-US/docs/Web/CSS/Guides/Counter_styles/Using_counters) guide
 
-- [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting) module
-  - [CSS nesting at-rules](/en-US/docs/Web/CSS/CSS_nesting/Nesting_at-rules) guide
+- [CSS nesting](/en-US/docs/Web/CSS/Guides/Nesting) module
+  - [CSS nesting at-rules](/en-US/docs/Web/CSS/Guides/Nesting/At-rules) guide
 
 ## Specifications
 

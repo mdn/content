@@ -168,7 +168,7 @@ div:not(.inner, #fakeId) p {
 
 In the above CSS code block, we have included `#fakeId` in the selectors. This `#fakeId` adds `1-0-0` to the specificity weight of each paragraph.
 
-When creating complex selector lists with [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting) this behaves in exactly the same way as the `:is()` pseudo-class.
+When creating complex selector lists with [CSS nesting](/en-US/docs/Web/CSS/Guides/Nesting) this behaves in exactly the same way as the `:is()` pseudo-class.
 
 ```css
 p,
@@ -490,4 +490,4 @@ A few things to remember about specificity:
 - [Learn: Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - [Learn: cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
 - [CSS cascading and inheritance](/en-US/docs/Web/CSS/Guides/Cascade) module
-- [CSS nesting module](/en-US/docs/Web/CSS/CSS_nesting)
+- [CSS nesting module](/en-US/docs/Web/CSS/Guides/Nesting)

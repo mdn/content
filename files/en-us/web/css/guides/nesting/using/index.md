@@ -1,14 +1,14 @@
 ---
 title: Using CSS nesting
 short-title: Using nesting
-slug: Web/CSS/CSS_nesting/Using_CSS_nesting
+slug: Web/CSS/Guides/Nesting/Using
 page-type: guide
 sidebar: cssref
 ---
 
-The [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting) module allows you to write your stylesheets so that they are easier to read, more modular, and more maintainable. As you are not constantly repeating selectors, the file size can also be reduced.
+The [CSS nesting](/en-US/docs/Web/CSS/Guides/Nesting) module allows you to write your stylesheets so that they are easier to read, more modular, and more maintainable. As you are not constantly repeating selectors, the file size can also be reduced.
 
-CSS nesting is different from CSS preprocessors such as [Sass](https://sass-lang.com/) in that it is parsed by the browser rather than being pre-compiled by a CSS preprocessor. Also, in CSS nesting, the [specificity of the `&` nesting selector](/en-US/docs/Web/CSS/CSS_nesting/Nesting_and_specificity) is similar to the {{cssxref(':is',':is()')}} function; it is calculated using the highest specificity in the associated selector list.
+CSS nesting is different from CSS preprocessors such as [Sass](https://sass-lang.com/) in that it is parsed by the browser rather than being pre-compiled by a CSS preprocessor. Also, in CSS nesting, the [specificity of the `&` nesting selector](/en-US/docs/Web/CSS/Guides/Nesting/Nesting_and_specificity) is similar to the {{cssxref(':is',':is()')}} function; it is calculated using the highest specificity in the associated selector list.
 
 This guide shows different ways to arrange nesting in CSS.
 
@@ -475,9 +475,9 @@ In the following example, there is an invalid selector (`%` is not a valid chara
 
 ## See also
 
-- [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting) module
+- [CSS nesting](/en-US/docs/Web/CSS/Guides/Nesting) module
 - [`&` nesting selector](/en-US/docs/Web/CSS/Reference/Selectors/Nesting_selector)
-- [Nesting `@` at-rules](/en-US/docs/Web/CSS/CSS_nesting/Nesting_at-rules)
-- [Nesting and specificity](/en-US/docs/Web/CSS/CSS_nesting/Nesting_and_specificity)
+- [Nesting `@` at-rules](/en-US/docs/Web/CSS/Guides/Nesting/At-rules)
+- [Nesting and specificity](/en-US/docs/Web/CSS/Guides/Nesting/Nesting_and_specificity)
 - {{domxref("CSSNestedDeclarations")}}
 - [The Nested Declarations Rule](https://drafts.csswg.org/css-nesting-1/#nested-declarations-rule)

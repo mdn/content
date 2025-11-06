@@ -25,7 +25,7 @@ The **`:target-current`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/
 
 ## Examples
 
-See [Creating CSS carousels](/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels) and {{cssxref("::scroll-marker")}} for complete examples that use the `:target-current` pseudo-class.
+See [Creating CSS carousels](/en-US/docs/Web/CSS/Guides/Overflow/Carousels) and {{cssxref("::scroll-marker")}} for complete examples that use the `:target-current` pseudo-class.
 
 ### Basic usage
 
@@ -52,6 +52,6 @@ See [Creating CSS carousels](/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels) and
 - {{cssxref("scroll-marker-group")}}
 - {{cssxref("::scroll-marker")}}
 - {{cssxref("::scroll-marker-group")}}
-- [Creating CSS carousels](/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels)
-- [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
+- [Creating CSS carousels](/en-US/docs/Web/CSS/Guides/Overflow/Carousels)
+- [CSS overflow](/en-US/docs/Web/CSS/Guides/Overflow) module
 - [CSS Carousel Gallery](https://chrome.dev/carousel/) via chrome.dev (2025)

@@ -153,7 +153,7 @@ Scroll the element in the inline direction to see its background color change. S
 - [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module
   - {{cssxref("animation-timeline")}}
   - {{cssxref("@keyframes")}}
-- [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
+- [CSS overflow](/en-US/docs/Web/CSS/Guides/Overflow) module
   - {{glossary("Scroll container")}}
   - [Scrollport](/en-US/docs/Glossary/Scroll_container#scrollport)
 - [Web Animations](/en-US/docs/Web/API/Web_Animations_API) API

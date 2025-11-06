@@ -22,7 +22,7 @@ Boundary default actions can be local or non-local.
 ## See also
 
 - {{CSSxRef("overscroll-behavior")}} CSS property
-- [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
-- [CSS overscroll behavior](/en-US/docs/Web/CSS/CSS_overscroll_behavior) module
+- [CSS overflow](/en-US/docs/Web/CSS/Guides/Overflow) module
+- [CSS overscroll behavior](/en-US/docs/Web/CSS/Guides/Overscroll_behavior) module
 - [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) module
 - [CSS scroll anchoring](/en-US/docs/Web/CSS/CSS_scroll_anchoring) module

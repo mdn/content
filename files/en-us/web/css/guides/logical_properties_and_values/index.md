@@ -161,12 +161,12 @@ CSS was initially designed with only physical coordinates. The logical propertie
 - {{CSSxRef("contain-intrinsic-block-size")}}
 - {{CSSxRef("contain-intrinsic-inline-size")}}
 
-[CSS overflow](/en-US/docs/Web/CSS/CSS_overflow)
+[CSS overflow](/en-US/docs/Web/CSS/Guides/Overflow)
 
 - {{CSSxRef("overflow-block")}}
 - {{CSSxRef("overflow-inline")}}
 
-[CSS overscroll behavior](/en-US/docs/Web/CSS/CSS_overscroll_behavior)
+[CSS overscroll behavior](/en-US/docs/Web/CSS/Guides/Overscroll_behavior)
 
 - {{CSSxRef("overscroll-behavior-block")}}
 - {{CSSxRef("overscroll-behavior-inline")}}

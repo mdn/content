@@ -316,7 +316,7 @@ blockquote p::after {
   - : What happens when an item overflows the column it is in and what happens when there is too much columned content to fit a container.
 - [Handling content breaks in multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout/Handling_content_breaks)
   - : Introduction to the fragmentation specification and how to control where column content breaks.
-- [Creating CSS carousels](/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels)
+- [Creating CSS carousels](/en-US/docs/Web/CSS/Guides/Overflow/Carousels)
   - : Create pure-CSS carousel UI features using scroll buttons, scroll markers, and generated columns.
 
 ## Related concepts
@@ -341,7 +341,7 @@ blockquote p::after {
 - {{cssxref("width")}}
 - {{cssxref("max-width")}}
 
-[CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
+[CSS overflow](/en-US/docs/Web/CSS/Guides/Overflow) module
 
 - {{cssxref("overflow")}}
 - {{cssxref("::scroll-marker")}}

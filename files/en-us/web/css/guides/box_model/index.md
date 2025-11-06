@@ -106,7 +106,7 @@ The CSS box model module defines physical (or "page relative") properties such a
   - {{cssxref("min-height")}}
   - {{cssxref("min-width")}}
   - {{cssxref("width")}}
-- [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
+- [CSS overflow](/en-US/docs/Web/CSS/Guides/Overflow) module
   - {{CSSxRef("overflow")}} shorthand
   - {{CSSxRef("overflow-block")}}
   - {{CSSxRef("overflow-clip-margin")}}

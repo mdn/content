@@ -146,7 +146,7 @@ The CSS generated content module introduces six yet-to-be implemented CSS functi
   - {{cssxref("counter-increment")}} property
   - {{cssxref("counter-reset")}} property
 
-- [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
+- [CSS overflow](/en-US/docs/Web/CSS/Guides/Overflow) module
   - {{cssxref("::scroll-button()")}} pseudo-element
   - {{cssxref("::scroll-marker")}} pseudo-element
   - {{cssxref(":target-current")}} pseudo-class

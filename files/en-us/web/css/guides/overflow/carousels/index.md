@@ -1,12 +1,12 @@
 ---
 title: Creating CSS carousels
 short-title: Creating carousels
-slug: Web/CSS/CSS_overflow/CSS_carousels
+slug: Web/CSS/Guides/Overflow/Carousels
 page-type: guide
 sidebar: cssref
 ---
 
-The [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module defines features enabling the creation of flexible and accessible pure-CSS carousels with browser-generated and developer-styled scroll buttons and scroll markers. This guide explains how to create a carousel using these features.
+The [CSS overflow](/en-US/docs/Web/CSS/Guides/Overflow) module defines features enabling the creation of flexible and accessible pure-CSS carousels with browser-generated and developer-styled scroll buttons and scroll markers. This guide explains how to create a carousel using these features.
 
 ## Carousel concepts
 
@@ -551,7 +551,7 @@ Also, try resizing the screen width and you'll see that the number of list items
 
 ## See also
 
-- [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
+- [CSS overflow](/en-US/docs/Web/CSS/Guides/Overflow) module
 - [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) module
 - [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) module
 - [CSS Carousel Gallery](https://chrome.dev/carousel/) via chrome.dev (2025)

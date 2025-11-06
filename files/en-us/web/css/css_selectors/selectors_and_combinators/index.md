@@ -130,7 +130,7 @@ h2 + p + p {
 
 ### Creating complex selectors with CSS nesting
 
-The above complex selectors can also be defined using simple selectors, combinators, and [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting), with or without the [`&` nesting selector](/en-US/docs/Web/CSS/Reference/Selectors/Nesting_selector).
+The above complex selectors can also be defined using simple selectors, combinators, and [CSS nesting](/en-US/docs/Web/CSS/Guides/Nesting), with or without the [`&` nesting selector](/en-US/docs/Web/CSS/Reference/Selectors/Nesting_selector).
 
 #### CSS
 
@@ -219,4 +219,4 @@ See the [pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes#
 - [Selector list](/en-US/docs/Web/CSS/Reference/Selectors/Selector_list)
 - [CSS selector structure](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure)
 - [Specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity)
-- [CSS nesting module](/en-US/docs/Web/CSS/CSS_nesting)
+- [CSS nesting module](/en-US/docs/Web/CSS/Guides/Nesting)

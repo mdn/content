@@ -110,4 +110,4 @@ We can see here another border around the word "emphasized text".
 - [At-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rules)
 - [Initial](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#initial_value), [computed](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#computed_value), [used](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#used_value), and [actual](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#actual_value) values
 - [Value definition syntax](/en-US/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
-- [CSS nesting module](/en-US/docs/Web/CSS/CSS_nesting)
+- [CSS nesting module](/en-US/docs/Web/CSS/Guides/Nesting)

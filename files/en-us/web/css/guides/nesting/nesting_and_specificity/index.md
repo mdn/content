@@ -1,7 +1,7 @@
 ---
 title: CSS nesting and specificity
 short-title: Nesting and specificity
-slug: Web/CSS/CSS_nesting/Nesting_and_specificity
+slug: Web/CSS/Guides/Nesting/Nesting_and_specificity
 page-type: guide
 sidebar: cssref
 ---
@@ -48,7 +48,7 @@ The `.foo` class selector has a specificity of `0-1-0`. This makes the total spe
 
 ## See also
 
-- [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting) module
+- [CSS nesting](/en-US/docs/Web/CSS/Guides/Nesting) module
 - [`&` nesting selector](/en-US/docs/Web/CSS/Reference/Selectors/Nesting_selector)
-- [Using CSS nesting](/en-US/docs/Web/CSS/CSS_nesting/Using_CSS_nesting)
-- [Nesting at-rules](/en-US/docs/Web/CSS/CSS_nesting/Nesting_at-rules)
+- [Using CSS nesting](/en-US/docs/Web/CSS/Guides/Nesting/Using)
+- [Nesting at-rules](/en-US/docs/Web/CSS/Guides/Nesting/At-rules)

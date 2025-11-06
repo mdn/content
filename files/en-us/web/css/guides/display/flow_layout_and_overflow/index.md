@@ -205,7 +205,7 @@ body {
 
 ## Flow Relative Properties
 
-In the guide to [Writing Modes and Flow Layout](/en-US/docs/Web/CSS/Guides/Display/Flow_layout_and_writing_modes), we looked at the `block-size` and `inline-size` properties, which make more sense when working with different writing modes than tying our layout to the physical dimensions of the screen. The [CSS overflow module](/en-US/docs/Web/CSS/CSS_overflow) also includes flow relative properties for overflow - [`overflow-block`](/en-US/docs/Web/CSS/Reference/At-rules/@media/overflow-block) and [`overflow-inline`](/en-US/docs/Web/CSS/Reference/At-rules/@media/overflow-inline). These correspond to `overflow-x` and `overflow-y` but the mapping depends on the writing mode of the document.
+In the guide to [Writing Modes and Flow Layout](/en-US/docs/Web/CSS/Guides/Display/Flow_layout_and_writing_modes), we looked at the `block-size` and `inline-size` properties, which make more sense when working with different writing modes than tying our layout to the physical dimensions of the screen. The [CSS overflow module](/en-US/docs/Web/CSS/Guides/Overflow) also includes flow relative properties for overflow - [`overflow-block`](/en-US/docs/Web/CSS/Reference/At-rules/@media/overflow-block) and [`overflow-inline`](/en-US/docs/Web/CSS/Reference/At-rules/@media/overflow-inline). These correspond to `overflow-x` and `overflow-y` but the mapping depends on the writing mode of the document.
 
 ## Indicating Overflow
 
@@ -268,5 +268,5 @@ Whether you are in continuous media on the web or in a Paged Media format such a
 ## See also
 
 - [Overflowing content](/en-US/docs/Learn_web_development/Core/Styling_basics/Overflow) guide
-- [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
+- [CSS overflow](/en-US/docs/Web/CSS/Guides/Overflow) module
 - [CSS containment](/en-US/docs/Web/CSS/Guides/Containment) module

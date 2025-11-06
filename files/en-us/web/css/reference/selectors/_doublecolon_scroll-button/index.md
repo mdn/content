@@ -59,7 +59,7 @@ When it is not possible to scroll any further in a particular scroll button's sc
 
 ## Examples
 
-See [Creating CSS carousels](/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels) for more carousel examples.
+See [Creating CSS carousels](/en-US/docs/Web/CSS/Guides/Overflow/Carousels) for more carousel examples.
 
 ### Creating scroll buttons
 
@@ -223,7 +223,7 @@ ul::scroll-button(right) {
 - {{cssxref("::scroll-marker")}}
 - {{cssxref("::column")}}
 - {{cssxref(":target-current")}}
-- [Creating CSS carousels](/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels)
-- [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
+- [Creating CSS carousels](/en-US/docs/Web/CSS/Guides/Overflow/Carousels)
+- [CSS overflow](/en-US/docs/Web/CSS/Guides/Overflow) module
 - [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) module
 - [CSS Carousel Gallery](https://chrome.dev/carousel/) via chrome.dev (2025)

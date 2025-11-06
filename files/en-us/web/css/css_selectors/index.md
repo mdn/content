@@ -137,7 +137,7 @@ The CSS selectors module also introduces the {{CSSXref(":blank")}}, {{CSSXref(":
 ## Related concepts
 
 - {{CSSXref(":state","state()")}} pseudo-class
-- [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting) module
+- [CSS nesting](/en-US/docs/Web/CSS/Guides/Nesting) module
   - [`&` nesting selector](/en-US/docs/Web/CSS/Reference/Selectors/Nesting_selector)
 - [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) module
   - {{CSSXref(":host")}} pseudo-class
@@ -146,7 +146,7 @@ The CSS selectors module also introduces the {{CSSXref(":blank")}}, {{CSSXref(":
   - {{CSSXref(":has-slotted")}} pseudo-class
   - {{CSSXref("::slotted")}} pseudo-element
 
-- [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
+- [CSS overflow](/en-US/docs/Web/CSS/Guides/Overflow) module
   - {{cssxref("::scroll-button()")}}
   - {{cssxref("::scroll-marker")}}
   - {{cssxref("::scroll-marker-group")}}
@@ -201,5 +201,5 @@ The CSS selectors module also introduces the {{CSSXref(":blank")}}, {{CSSXref(":
 
 - [CSS pseudo-element module](/en-US/docs/Web/CSS/CSS_pseudo-elements)
 - [CSS cascading and inheritance module](/en-US/docs/Web/CSS/Guides/Cascade)
-- [CSS nesting module](/en-US/docs/Web/CSS/CSS_nesting)
+- [CSS nesting module](/en-US/docs/Web/CSS/Guides/Nesting)
 - [Using shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM)

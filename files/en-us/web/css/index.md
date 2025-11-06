@@ -31,7 +31,7 @@ The [CSS reference](/en-US/docs/Web/CSS/Reference) is an exhaustive reference fo
 
 - The [syntax and forms of the language](/en-US/docs/Web/CSS/CSS_syntax/Syntax)
 - [Specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity), [inheritance](/en-US/docs/Web/CSS/Guides/Cascade/Inheritance), and [the cascade](/en-US/docs/Web/CSS/Guides/Cascade/Introduction)
-- [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors), including [pseudo-elements](/en-US/docs/Web/CSS/CSS_pseudo-elements), [nesting](/en-US/docs/Web/CSS/CSS_nesting), [scoping](/en-US/docs/Web/CSS/CSS_scoping) and [shadow parts](/en-US/docs/Web/CSS/CSS_shadow_parts)
+- [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors), including [pseudo-elements](/en-US/docs/Web/CSS/CSS_pseudo-elements), [nesting](/en-US/docs/Web/CSS/Guides/Nesting), [scoping](/en-US/docs/Web/CSS/CSS_scoping) and [shadow parts](/en-US/docs/Web/CSS/CSS_shadow_parts)
 - [CSS at-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rules), including [media](/en-US/docs/Web/CSS/Guides/Media_queries) and [container](/en-US/docs/Web/CSS/Guides/Containment) queries
 - [CSS values and units](/en-US/docs/Web/CSS/CSS_values_and_units) module, including [numeric data types](/en-US/docs/Web/CSS/CSS_values_and_units/Numeric_data_types), [textual data types](/en-US/docs/Web/CSS/CSS_values_and_units/Textual_data_types) and [functional notations](/en-US/docs/Web/CSS/Reference/Values/Functions)
 - [Box model](/en-US/docs/Web/CSS/Guides/Box_model/Introduction) and [margin collapse](/en-US/docs/Web/CSS/Guides/Box_model/Margin_collapsing)

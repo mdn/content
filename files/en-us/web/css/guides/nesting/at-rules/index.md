@@ -1,7 +1,7 @@
 ---
 title: CSS nesting at-rules
 short-title: Nesting at-rules
-slug: Web/CSS/CSS_nesting/Nesting_at-rules
+slug: Web/CSS/Guides/Nesting/At-rules
 page-type: guide
 sidebar: cssref
 ---
@@ -145,8 +145,8 @@ Here the `.foo` selector assigns its rules to the **base** `@layer`. The nested 
 
 ## See also
 
-- [CSS Nesting](/en-US/docs/Web/CSS/CSS_nesting) module
+- [CSS Nesting](/en-US/docs/Web/CSS/Guides/Nesting) module
 - [`&` nesting selector](/en-US/docs/Web/CSS/Reference/Selectors/Nesting_selector)
-- [Using CSS nesting](/en-US/docs/Web/CSS/CSS_nesting/Using_CSS_nesting)
-- [Nesting and specificity](/en-US/docs/Web/CSS/CSS_nesting/Nesting_and_specificity)
+- [Using CSS nesting](/en-US/docs/Web/CSS/Guides/Nesting/Using)
+- [Nesting and specificity](/en-US/docs/Web/CSS/Guides/Nesting/Nesting_and_specificity)
 - [Nesting container queries](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#nested_queries)

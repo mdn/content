@@ -173,6 +173,6 @@ html {
 
 ## See also
 
-- [CSS overscroll behavior](/en-US/docs/Web/CSS/CSS_overscroll_behavior) module
+- [CSS overscroll behavior](/en-US/docs/Web/CSS/Guides/Overscroll_behavior) module
 - [CSS scroll anchoring](/en-US/docs/Web/CSS/CSS_scroll_anchoring) module
 - [Take control of your scroll: customizing pull-to-refresh and overflow effects](https://developer.chrome.com/blog/overscroll-behavior) on developer.chrome.com (2017)

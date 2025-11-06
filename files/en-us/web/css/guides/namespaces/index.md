@@ -1,6 +1,6 @@
 ---
 title: CSS namespaces
-slug: Web/CSS/CSS_namespaces
+slug: Web/CSS/Guides/Namespaces
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-namespaces/
 sidebar: cssref

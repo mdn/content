@@ -33,7 +33,7 @@ Statement at-rules end in a semicolon. There are several statement at-rules, des
 - {{cssxref("@layer")}}
   - : Defines the order of precedence in case of multiple cascade layers ([CSS cascading and inheritance](/en-US/docs/Web/CSS/Guides/Cascade)). Also used as a [block at-rule](#layer_2) to define a layer's styles.
 - {{cssxref("@namespace")}}
-  - : Defines a default namespace for a style sheet or a namespace prefix that a selector only matches if the namespace and other selector components match ([CSS namespaces](/en-US/docs/Web/CSS/CSS_namespaces)).
+  - : Defines a default namespace for a style sheet or a namespace prefix that a selector only matches if the namespace and other selector components match ([CSS namespaces](/en-US/docs/Web/CSS/Guides/Namespaces)).
 
 ### Block at-rules
 
@@ -81,7 +81,7 @@ Block at-rules end in a `{}`-block that contain nested rules, other at-rules, or
 
 - [CSS at-rules](/en-US/docs/Web/CSS/Reference/At-rules)
 - [CSS at-rule functions](/en-US/docs/Web/CSS/Reference/At-rules/At-rule_functions)
-- [Nesting at-rules](/en-US/docs/Web/CSS/CSS_nesting/Nesting_at-rules)
+- [Nesting at-rules](/en-US/docs/Web/CSS/Guides/Nesting/At-rules)
 - [CSS statements](/en-US/docs/Web/CSS/CSS_syntax/Syntax#css_statements)
 - [CSSRule](/en-US/docs/Web/API/CSSRule) interface
 - [CSS conditional rules](/en-US/docs/Web/CSS/Guides/Conditional_rules) module

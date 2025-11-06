@@ -13,4 +13,4 @@ As {{ glossary("replaced elements")}} always establish an independent [formattin
 
 ## See also
 
-- [CSS overflow module](/en-US/docs/Web/CSS/CSS_overflow)
+- [CSS overflow module](/en-US/docs/Web/CSS/Guides/Overflow)

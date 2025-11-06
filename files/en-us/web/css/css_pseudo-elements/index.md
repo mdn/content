@@ -63,7 +63,7 @@ The specification also defines the `::details-content` and `::search-text` pseud
 - [CSS multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout) module
   - {{cssxref("::column")}}
 
-- [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
+- [CSS overflow](/en-US/docs/Web/CSS/Guides/Overflow) module
   - {{cssxref("::scroll-button()")}}
   - {{cssxref("::scroll-marker")}}
   - {{cssxref("::scroll-marker-group")}}

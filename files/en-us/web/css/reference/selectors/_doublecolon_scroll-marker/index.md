@@ -33,7 +33,7 @@ When a scroll marker group container is created on a scroll container using the 
 
 ## Examples
 
-See [Creating CSS carousels](/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels) for other examples that use the `::scroll-marker` pseudo-element.
+See [Creating CSS carousels](/en-US/docs/Web/CSS/Guides/Overflow/Carousels) for other examples that use the `::scroll-marker` pseudo-element.
 
 ### Creating carousel scroll markers
 
@@ -196,7 +196,7 @@ To improve user experience, we set a different color on the markers on {{cssxref
 - {{cssxref("::scroll-button()")}}
 - {{cssxref("::scroll-marker-group")}}
 - {{cssxref(":target-current")}}
-- [Creating CSS carousels](/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels)
+- [Creating CSS carousels](/en-US/docs/Web/CSS/Guides/Overflow/Carousels)
 - [CSS lists and counters](/en-US/docs/Web/CSS/Guides/Lists) module
-- [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
+- [CSS overflow](/en-US/docs/Web/CSS/Guides/Overflow) module
 - [CSS Carousel Gallery](https://chrome.dev/carousel/) via chrome.dev (2025)

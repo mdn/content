@@ -71644,28 +71644,6 @@
       "rachelandrew"
     ]
   },
-  "Web/CSS/CSS_namespaces": {
-    "modified": "2020-10-15T21:38:33.987Z",
-    "contributors": [
-      "wbamberg",
-      "fscholz",
-      "mfluehr",
-      "Sebastianz",
-      "Tigt",
-      "teoli"
-    ]
-  },
-  "Web/CSS/CSS_overflow": {
-    "modified": "2020-10-22T21:15:13.514Z",
-    "contributors": [
-      "hamishwillee",
-      "mfuji09",
-      "wbamberg",
-      "dominicegginton",
-      "SphinxKnight",
-      "rachelandrew"
-    ]
-  },
   "Web/CSS/CSS_paged_media": {
     "modified": "2020-07-07T12:24:16.035Z",
     "contributors": ["wbamberg", "fscholz", "mfluehr", "teoli", "cvrebert"]
@@ -73866,6 +73844,28 @@
       "BenoitL",
       "Staszyna",
       "Roc"
+    ]
+  },
+  "Web/CSS/Guides/Namespaces": {
+    "modified": "2020-10-15T21:38:33.987Z",
+    "contributors": [
+      "wbamberg",
+      "fscholz",
+      "mfluehr",
+      "Sebastianz",
+      "Tigt",
+      "teoli"
+    ]
+  },
+  "Web/CSS/Guides/Overflow": {
+    "modified": "2020-10-22T21:15:13.514Z",
+    "contributors": [
+      "hamishwillee",
+      "mfuji09",
+      "wbamberg",
+      "dominicegginton",
+      "SphinxKnight",
+      "rachelandrew"
     ]
   },
   "Web/CSS/How_to/Layout_cookbook": {

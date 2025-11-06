@@ -242,4 +242,4 @@ To see the effect of keyboard focus on overflow and scroll behaviors, try tabbin
 ## See also
 
 - Properties that use this data type: {{cssxref("overflow-x")}}, {{cssxref("overflow-y")}}, {{cssxref("overflow-inline")}}, {{cssxref("overflow-block")}} and {{cssxref("overflow")}}
-- [CSS overflow module](/en-US/docs/Web/CSS/CSS_overflow)
+- [CSS overflow module](/en-US/docs/Web/CSS/Guides/Overflow)

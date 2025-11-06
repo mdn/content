@@ -112,7 +112,7 @@ The CSS conditional rules module also introduces a `media()` CSS function. Curre
   - {{glossary("parse")}} term
   - [style rule](/en-US/docs/Web/API/CSSStyleRule) term
 
-- [CSS namespaces](/en-US/docs/Web/CSS/CSS_namespaces) module
+- [CSS namespaces](/en-US/docs/Web/CSS/Guides/Namespaces) module
   - {{cssxref("@namespace")}} at-rule
 
 ## Specifications

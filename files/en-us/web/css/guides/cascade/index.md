@@ -94,5 +94,5 @@ The opposite also occurs. Sometimes there are no declarations defining the value
 - [CSS pseudo-elements module](/en-US/docs/Web/CSS/CSS_pseudo-elements)
 - [CSS paged media module](/en-US/docs/Web/CSS/CSS_paged_media)
 - [CSS conditional rules module](/en-US/docs/Web/CSS/Guides/Conditional_rules)
-- [CSS nesting module](/en-US/docs/Web/CSS/CSS_nesting)
+- [CSS nesting module](/en-US/docs/Web/CSS/Guides/Nesting)
 - [Shorthand properties](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties)

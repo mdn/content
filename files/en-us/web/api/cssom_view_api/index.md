@@ -124,8 +124,8 @@ This module defines geometric utility methods that apply to the {{domxref("Text"
 
 - [CSS Object Model (CSSOM)](/en-US/docs/Web/API/CSS_Object_Model) API
 - [CSSOM view](/en-US/docs/Web/CSS/Guides/CSSOM_view) module
-- [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
-- [CSS overscroll behavior](/en-US/docs/Web/CSS/CSS_overscroll_behavior) module
+- [CSS overflow](/en-US/docs/Web/CSS/Guides/Overflow) module
+- [CSS overscroll behavior](/en-US/docs/Web/CSS/Guides/Overscroll_behavior) module
 - [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) module
 - {{glossary("Viewport")}}
 - {{glossary("Layout viewport")}}

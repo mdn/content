@@ -6,7 +6,7 @@ browser-compat: css.selectors.nesting
 sidebar: cssref
 ---
 
-The CSS **`&` nesting selector** explicitly states the relationship between parent and child rules when using [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting). It makes the nested child rule selectors _relative to the parent element_. Without the `&` nesting selector, the child rule selector selects child elements. The child rule selectors have the same [specificity](/en-US/docs/Web/CSS/CSS_nesting/Nesting_and_specificity) weight as if they were within {{cssxref(":is", ":is()")}}.
+The CSS **`&` nesting selector** explicitly states the relationship between parent and child rules when using [CSS nesting](/en-US/docs/Web/CSS/Guides/Nesting). It makes the nested child rule selectors _relative to the parent element_. Without the `&` nesting selector, the child rule selector selects child elements. The child rule selectors have the same [specificity](/en-US/docs/Web/CSS/Guides/Nesting/Nesting_and_specificity) weight as if they were within {{cssxref(":is", ":is()")}}.
 
 > [!NOTE]
 > _Child rule_ does not mean _child element selector_. A child rule can target parent element or child elements depending on use of the `&` nesting selector.
@@ -151,7 +151,7 @@ For example, with the following style rule, no generated content will be styled 
 }
 ```
 
-This limitation also applies to [nested at-rules](/en-US/docs/Web/CSS/CSS_nesting/Nesting_at-rules), whose properties are implicitly wrapped in an `&` selector. For example, with the following rule, no generated content will be styled red, even on a small screen, because the `color: red` property is implicitly wrapped in an `&` selector, which in this case is `:is(.foo::before)`.
+This limitation also applies to [nested at-rules](/en-US/docs/Web/CSS/Guides/Nesting/At-rules), whose properties are implicitly wrapped in an `&` selector. For example, with the following rule, no generated content will be styled red, even on a small screen, because the `color: red` property is implicitly wrapped in an `&` selector, which in this case is `:is(.foo::before)`.
 
 ```css
 .foo::before {
@@ -270,6 +270,6 @@ In this case, all the styles apply to [document](/en-US/docs/Web/API/Document).
 
 ## See also
 
-- [Using CSS nesting](/en-US/docs/Web/CSS/CSS_nesting/Using_CSS_nesting)
-- [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting) module
+- [Using CSS nesting](/en-US/docs/Web/CSS/Guides/Nesting/Using)
+- [CSS nesting](/en-US/docs/Web/CSS/Guides/Nesting) module
 - [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module

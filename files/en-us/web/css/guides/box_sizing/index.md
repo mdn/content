@@ -112,7 +112,7 @@ The CSS box sizing module also introduces the `min-intrinsic-sizing` property. C
   - {{cssxref("border-left-width")}}
   - {{cssxref("border-right-width")}}
   - {{cssxref("border-top-width")}}
-- [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
+- [CSS overflow](/en-US/docs/Web/CSS/Guides/Overflow) module
   - {{CSSxRef("overflow")}} shorthand
   - {{CSSxRef("overflow-block")}}
   - {{CSSxRef("overflow-clip-margin")}}

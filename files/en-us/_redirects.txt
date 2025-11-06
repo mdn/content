@@ -12679,6 +12679,14 @@
 /en-US/docs/Web/CSS/CSS_multicol_layout/Spanning_balancing_columns	/en-US/docs/Web/CSS/Guides/Multicol_layout/Spanning_balancing_columns
 /en-US/docs/Web/CSS/CSS_multicol_layout/Styling_columns	/en-US/docs/Web/CSS/Guides/Multicol_layout/Styling_columns
 /en-US/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts	/en-US/docs/Web/CSS/Guides/Multicol_layout/Using
+/en-US/docs/Web/CSS/CSS_namespaces	/en-US/docs/Web/CSS/Guides/Namespaces
+/en-US/docs/Web/CSS/CSS_nesting	/en-US/docs/Web/CSS/Guides/Nesting
+/en-US/docs/Web/CSS/CSS_nesting/Nesting_and_specificity	/en-US/docs/Web/CSS/Guides/Nesting/Nesting_and_specificity
+/en-US/docs/Web/CSS/CSS_nesting/Nesting_at-rules	/en-US/docs/Web/CSS/Guides/Nesting/At-rules
+/en-US/docs/Web/CSS/CSS_nesting/Using_CSS_nesting	/en-US/docs/Web/CSS/Guides/Nesting/Using
+/en-US/docs/Web/CSS/CSS_overflow	/en-US/docs/Web/CSS/Guides/Overflow
+/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels	/en-US/docs/Web/CSS/Guides/Overflow/Carousels
+/en-US/docs/Web/CSS/CSS_overscroll_behavior	/en-US/docs/Web/CSS/Guides/Overscroll_behavior
 /en-US/docs/Web/CSS/CSS_percentage_values	/en-US/docs/Web/CSS
 /en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context	/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context
 /en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_1	/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_1
@@ -12762,6 +12770,9 @@
 /en-US/docs/Web/CSS/Guides/Multicol_layout/Handling_content_breaks_in_multicol_layout	/en-US/docs/Web/CSS/Guides/Multicol_layout/Handling_content_breaks
 /en-US/docs/Web/CSS/Guides/Multicol_layout/Handling_overflow_in_multicol_layout	/en-US/docs/Web/CSS/Guides/Multicol_layout/Handling_overflow
 /en-US/docs/Web/CSS/Guides/Multicol_layout/Using_multicol_layouts	/en-US/docs/Web/CSS/Guides/Multicol_layout/Using
+/en-US/docs/Web/CSS/Guides/Nesting/Nesting_at-rules	/en-US/docs/Web/CSS/Guides/Nesting/At-rules
+/en-US/docs/Web/CSS/Guides/Nesting/Using_CSS_nesting	/en-US/docs/Web/CSS/Guides/Nesting/Using
+/en-US/docs/Web/CSS/Guides/Overflow/CSS_carousels	/en-US/docs/Web/CSS/Guides/Overflow/Carousels
 /en-US/docs/Web/CSS/ID_selectors	/en-US/docs/Web/CSS/Reference/Selectors/ID_selectors
 /en-US/docs/Web/CSS/Inheritance	/en-US/docs/Web/CSS/Guides/Cascade/Inheritance
 /en-US/docs/Web/CSS/Inline_formatting_context	/en-US/docs/Web/CSS/Guides/Inline_layout/Inline_formatting_context

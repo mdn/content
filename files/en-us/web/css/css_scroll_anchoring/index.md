@@ -38,6 +38,6 @@ For scroll containers that are [snapped](/en-US/docs/Glossary/Scroll_snap) to an
 
 ## See also
 
-- [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
+- [CSS overflow](/en-US/docs/Web/CSS/Guides/Overflow) module
 - [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) module
-- [CSS overscroll behavior](/en-US/docs/Web/CSS/CSS_overscroll_behavior) module
+- [CSS overscroll behavior](/en-US/docs/Web/CSS/Guides/Overscroll_behavior) module

@@ -1,6 +1,6 @@
 ---
 title: CSS overscroll behavior
-slug: Web/CSS/CSS_overscroll_behavior
+slug: Web/CSS/Guides/Overscroll_behavior
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-overscroll/
 sidebar: cssref
@@ -40,7 +40,7 @@ This module defines the overscroll behavior, enabling you to specify the actions
 
 - [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/scrollbar_role) ARIA role
 - [Containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block) concept
-- [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module:
+- [CSS overflow](/en-US/docs/Web/CSS/Guides/Overflow) module:
   - {{cssxref("overflow")}} shorthand property
     - {{Cssxref("overflow-x")}}
     - {{Cssxref("overflow-y")}}

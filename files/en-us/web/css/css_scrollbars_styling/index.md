@@ -93,5 +93,5 @@ for us to breathe.
 ## See also
 
 - {{cssxref('scroll-timeline')}}, {{cssxref('scroll-timeline-axis')}}, {{cssxref('scroll-timeline-name')}}
-- [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
+- [CSS overflow](/en-US/docs/Web/CSS/Guides/Overflow) module
 - [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) module
