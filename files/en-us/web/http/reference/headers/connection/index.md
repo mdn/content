@@ -18,7 +18,7 @@ If the value sent is `keep-alive`, the connection is persistent and not closed, 
 > Firefox ignore them in HTTP/2 responses, but Safari conforms to the HTTP/2
 > spec requirements and does not load any response that contains them.
 
-All [hop-by-hop headers](/en-US/docs/Web/HTTP/Guides/Compression#hop-by-hop_compression), including the standard hop-by-hop headers ({{HTTPHeader("Keep-Alive")}},
+All hop-by-hop headers, including the standard hop-by-hop headers ({{HTTPHeader("Keep-Alive")}},
 {{HTTPHeader("Transfer-Encoding")}}, {{HTTPHeader("TE")}}, `Connection`,
 {{HTTPHeader("Trailer")}}, {{HTTPHeader("Upgrade")}},
 {{HTTPHeader("Proxy-Authorization")}}, and {{HTTPHeader("Proxy-Authenticate")}}) must be listed in the `Connection`
