@@ -61,7 +61,7 @@ No properties are defined in this module
 - {{cssxref("counter", "counter()")}} function
 - {{cssxref("counters", "counters()")}} function
 
-[CSS pseudo-elements](/en-US/docs/Web/CSS/CSS_pseudo-elements) module:
+[CSS pseudo-elements](/en-US/docs/Web/CSS/Guides/Pseudo-elements) module:
 
 - {{cssxref("::after")}} pseudo-element
 - {{cssxref("::before")}} pseudo-element
@@ -78,6 +78,6 @@ No properties are defined in this module
 ## See also
 
 - [CSS lists and counters](/en-US/docs/Web/CSS/Guides/Lists) module
-- [CSS pseudo-elements](/en-US/docs/Web/CSS/CSS_pseudo-elements) module
+- [CSS pseudo-elements](/en-US/docs/Web/CSS/Guides/Pseudo-elements) module
 - [CSS generated content](/en-US/docs/Web/CSS/Guides/Generated_content) module
 - [Ready-made counter styles](https://w3c.github.io/predefined-counter-styles/#builtins) via W3C (2023)

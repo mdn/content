@@ -1,6 +1,6 @@
 ---
 title: CSS ruby layout
-slug: Web/CSS/CSS_ruby_layout
+slug: Web/CSS/Guides/Ruby_layout
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-ruby/
 sidebar: cssref

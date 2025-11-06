@@ -1,6 +1,6 @@
 ---
 title: Stacking context
-slug: Web/CSS/CSS_positioned_layout/Stacking_context
+slug: Web/CSS/Guides/Positioned_layout/Stacking_context
 page-type: guide
 sidebar: cssref
 ---
@@ -48,7 +48,7 @@ A stacking context is formed, anywhere in the document, by any element in the fo
 
 Stacking contexts can be contained in other stacking contexts, and they can together create a hierarchy of stacking contexts.
 
-The root element of a document is a stacking context which, in most cases, contains nested stacking contexts, many of which will contain additional stacking contexts. Within each stacking context, child elements are stacked according to the same rules explained in [Using `z-index`](/en-US/docs/Web/CSS/CSS_positioned_layout/Using_z-index). Importantly, the `z-index` values of its child stacking contexts only have meaning within its parent's stacking context. Stacking contexts are treated atomically as a single unit in the parent stacking context.
+The root element of a document is a stacking context which, in most cases, contains nested stacking contexts, many of which will contain additional stacking contexts. Within each stacking context, child elements are stacked according to the same rules explained in [Using `z-index`](/en-US/docs/Web/CSS/Guides/Positioned_layout/Using_z-index). Importantly, the `z-index` values of its child stacking contexts only have meaning within its parent's stacking context. Stacking contexts are treated atomically as a single unit in the parent stacking context.
 
 To figure out the _rendering order_ of stacked elements along the z-axis, think of each index value as a "version number" of sorts, where child elements represent minor version numbers underneath their parent's major version number.
 
@@ -229,13 +229,13 @@ In our example (sorted according to the final rendering order):
 
 ## Additional examples
 
-Additional examples include a [2-level hierarchy with `z-index` on the last level](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_1), a [2-level HTML hierarchy, `z-index` on all levels](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_2), and a [3-level HTML hierarchy, `z-index` on the second level](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_3).
+Additional examples include a [2-level hierarchy with `z-index` on the last level](/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_context/Example_1), a [2-level HTML hierarchy, `z-index` on all levels](/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_context/Example_2), and a [3-level HTML hierarchy, `z-index` on the second level](/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_context/Example_3).
 
 ## See also
 
-- [Understanding z-index](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)
-- [Stacking without the `z-index` property](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index)
-- [Stacking floating elements](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_floating_elements)
-- [Using z-index](/en-US/docs/Web/CSS/CSS_positioned_layout/Using_z-index)
+- [Understanding z-index](/en-US/docs/Web/CSS/Guides/Positioned_layout/Understanding_z-index)
+- [Stacking without the `z-index` property](/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_without_z-index)
+- [Stacking floating elements](/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_floating_elements)
+- [Using z-index](/en-US/docs/Web/CSS/Guides/Positioned_layout/Using_z-index)
 - {{glossary("Top layer")}}
-- [CSS positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout) module
+- [CSS positioned layout](/en-US/docs/Web/CSS/Guides/Positioned_layout) module

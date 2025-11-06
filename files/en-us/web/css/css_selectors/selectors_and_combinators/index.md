@@ -204,7 +204,7 @@ Multiple pseudo-classes can be combined to create [compound selectors](/en-US/do
 
 ## Pseudo-element selectors
 
-Not all CSS selectors are defined in the [CSS selectors module](/en-US/docs/Web/CSS). CSS pseudo-element selectors are defined in the [CSS pseudo-elements](/en-US/docs/Web/CSS/CSS_pseudo-elements) module.
+Not all CSS selectors are defined in the [CSS selectors module](/en-US/docs/Web/CSS). CSS pseudo-element selectors are defined in the [CSS pseudo-elements](/en-US/docs/Web/CSS/Guides/Pseudo-elements) module.
 
 CSS [pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements), prefixed with two colons (`::`), represent entities that are not included in HTML. For example, the simple {{cssxref("::marker")}} selector selects list item bullets, and the compound selector [`p::first-line`](/en-US/docs/Web/CSS/Reference/Selectors/::first-line) matches the first line of all {{HTMLElement("p")}} elements.
 

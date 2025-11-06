@@ -59,7 +59,7 @@ Block at-rules end in a `{}`-block that contain nested rules, other at-rules, or
 - {{cssxref("@media")}}
   - : A conditional group rule that applies its content if the device meets the criteria of the condition defined using a _media query_ ([CSS conditional rules](/en-US/docs/Web/CSS/Guides/Conditional_rules)).
 - {{cssxref("@page")}}
-  - : Specifies aspects of a page to be printed, such as its dimensions, orientation, and margins ([CSS paged media](/en-US/docs/Web/CSS/CSS_paged_media)).
+  - : Specifies aspects of a page to be printed, such as its dimensions, orientation, and margins ([CSS paged media](/en-US/docs/Web/CSS/Guides/Paged_media)).
 - {{cssxref("@position-try")}}
   - : Defines custom position options which can be used to define fallback positioning and alignment options for anchor-positioned elements ([CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning)).
 - {{cssxref("@property")}}

@@ -1,6 +1,6 @@
 ---
 title: CSS round display
-slug: Web/CSS/CSS_round_display
+slug: Web/CSS/Guides/Round_display
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-round-display/
 sidebar: cssref

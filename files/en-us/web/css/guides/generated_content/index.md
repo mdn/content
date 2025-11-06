@@ -135,7 +135,7 @@ The CSS generated content module introduces six yet-to-be implemented CSS functi
 
 ## Related concepts
 
-- [CSS pseudo-elements](/en-US/docs/Web/CSS/CSS_pseudo-elements) module
+- [CSS pseudo-elements](/en-US/docs/Web/CSS/Guides/Pseudo-elements) module
   - {{cssxref("::before")}} pseudo-element
   - {{cssxref("::after")}} pseudo-element
   - {{cssxref("::marker")}} pseudo-element
@@ -162,6 +162,6 @@ The CSS generated content module introduces six yet-to-be implemented CSS functi
 
 ## See also
 
-- [CSS pseudo-elements](/en-US/docs/Web/CSS/CSS_pseudo-elements) module
+- [CSS pseudo-elements](/en-US/docs/Web/CSS/Guides/Pseudo-elements) module
 - [CSS lists and counters](/en-US/docs/Web/CSS/Guides/Lists) module
 - {{glossary("Replaced elements")}}

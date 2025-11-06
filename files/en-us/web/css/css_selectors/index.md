@@ -155,13 +155,13 @@ The CSS selectors module also introduces the {{CSSXref(":blank")}}, {{CSSXref(":
 - [CSS multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout) module
   - {{cssxref("::column")}}
 
-- [CSS paged media](/en-US/docs/Web/CSS/CSS_paged_media) module
+- [CSS paged media](/en-US/docs/Web/CSS/Guides/Paged_media) module
   - {{CSSXref(":left")}} pseudo-class
   - {{CSSXref(":right")}} pseudo-class
   - {{CSSXref(":first")}} pseudo-class
   - `:blank` pseudo-class
 
-- [CSS pseudo-element module](/en-US/docs/Web/CSS/CSS_pseudo-elements) (representing entities not included in HTML)
+- [CSS pseudo-element module](/en-US/docs/Web/CSS/Guides/Pseudo-elements) (representing entities not included in HTML)
   - {{CSSXref("::after")}}
   - {{CSSXref("::before")}}
   - {{CSSXref("::file-selector-button")}}
@@ -177,7 +177,7 @@ The CSS selectors module also introduces the {{CSSXref(":blank")}}, {{CSSXref(":
 - [CSS shadow parts module](/en-US/docs/Web/CSS/CSS_shadow_parts)
   - {{CSSXref("::part")}} pseudo-element
 
-- [CSS positioned layout module](/en-US/docs/Web/CSS/CSS_positioned_layout)
+- [CSS positioned layout module](/en-US/docs/Web/CSS/Guides/Positioned_layout)
   - {{CSSxRef("::backdrop")}}
 
 - Other [pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements)
@@ -199,7 +199,7 @@ The CSS selectors module also introduces the {{CSSXref(":blank")}}, {{CSSXref(":
 
 ## See also
 
-- [CSS pseudo-element module](/en-US/docs/Web/CSS/CSS_pseudo-elements)
+- [CSS pseudo-element module](/en-US/docs/Web/CSS/Guides/Pseudo-elements)
 - [CSS cascading and inheritance module](/en-US/docs/Web/CSS/Guides/Cascade)
 - [CSS nesting module](/en-US/docs/Web/CSS/Guides/Nesting)
 - [Using shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM)

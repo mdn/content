@@ -114,7 +114,7 @@ The CSS writing module addresses the orientations of all writing modes. Other mo
 ## See also
 
 - [CSS fonts](/en-US/docs/Web/CSS/Guides/Fonts) module
-- [CSS ruby layout](/en-US/docs/Web/CSS/CSS_ruby_layout) module
+- [CSS ruby layout](/en-US/docs/Web/CSS/Guides/Ruby_layout) module
 - [CSS text decoration](/en-US/docs/Web/CSS/CSS_text_decoration) module
 - [CSS counter styles](/en-US/docs/Web/CSS/Guides/Counter_styles) module
 - [CSS lists](/en-US/docs/Web/CSS/Guides/Lists) module

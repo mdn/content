@@ -120,7 +120,7 @@ If a value in the comma-separated list of values is an empty image, fails to dow
 
 No masking occurs if the entire property resolves to `none`, which makes the element fully visible. On the other hand, if the value includes multiple layers and at least one is not `none`, the `none` layers don't reveal any part of the element (or don't make any part of the element visible). In this example, the value doesn't resolve to `none`; but because all non-`none` images are invalid, masking occurs, and the element will be fully hidden.
 
-A computed value other than `none` creates a [CSS stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context).
+A computed value other than `none` creates a [CSS stacking context](/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_context).
 
 ### How mask layers affect `mask-*` properties
 

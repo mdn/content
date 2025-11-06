@@ -127,7 +127,7 @@ The specification also defines the `text-decoration-skip-box`, `text-decoration-
 ## See also
 
 - [CSS fonts](/en-US/docs/Web/CSS/Guides/Fonts) module
-- [CSS ruby layout](/en-US/docs/Web/CSS/CSS_ruby_layout) module
+- [CSS ruby layout](/en-US/docs/Web/CSS/Guides/Ruby_layout) module
 - [CSS text](/en-US/docs/Web/CSS/CSS_text) module
 - [CSS writing modes](/en-US/docs/Web/CSS/CSS_writing_modes) module
 - [CSS overflow](/en-US/docs/Web/CSS/Guides/Overflow) module

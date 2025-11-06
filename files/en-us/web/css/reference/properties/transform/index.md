@@ -9,7 +9,7 @@ sidebar: cssref
 The **`transform`** [CSS](/en-US/docs/Web/CSS) property lets you rotate, scale, skew, or translate an element.
 It modifies the coordinate space of the CSS [visual formatting model](/en-US/docs/Web/CSS/Guides/Display/Visual_formatting_model).
 
-If the property has a value different from `none`, a [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context) will be created.
+If the property has a value different from `none`, a [stacking context](/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_context) will be created.
 In that case, the element will act as a [containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block) for any `position: fixed;` or `position: absolute;` elements that it contains.
 
 You can also use the individual transform properties: {{cssxref('translate')}}, {{cssxref('rotate')}}, and {{cssxref('scale')}}. These properties are applied in the order: `translate`, `rotate`, `scale`, and finally `transform`.

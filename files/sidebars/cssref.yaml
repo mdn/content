@@ -237,11 +237,11 @@ sidebar:
   - title: Positioning
     details: closed
     children:
-      - /Web/CSS/CSS_positioned_layout/Stacking_context
-      - /Web/CSS/CSS_positioned_layout/Stacking_floating_elements
-      - /Web/CSS/CSS_positioned_layout/Understanding_z-index
-      - /Web/CSS/CSS_positioned_layout/Using_z-index
-      - /Web/CSS/CSS_positioned_layout/Stacking_without_z-index
+      - /Web/CSS/Guides/Positioned_layout/Stacking_context
+      - /Web/CSS/Guides/Positioned_layout/Stacking_floating_elements
+      - /Web/CSS/Guides/Positioned_layout/Understanding_z-index
+      - /Web/CSS/Guides/Positioned_layout/Using_z-index
+      - /Web/CSS/Guides/Positioned_layout/Stacking_without_z-index
   - type: listSubPages
     path: /Web/CSS/CSS_scroll_anchoring
     title: Scroll_anchoring

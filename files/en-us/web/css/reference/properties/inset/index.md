@@ -161,5 +161,5 @@ div {
 - {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, and {{cssxref("left")}}
 - {{cssxref("inset-block")}} and {{cssxref("inset-inline")}}
 - {{cssxref("position")}}
-- [CSS positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout) module
+- [CSS positioned layout](/en-US/docs/Web/CSS/Guides/Positioned_layout) module
 - [CSS logical properties and values](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values)

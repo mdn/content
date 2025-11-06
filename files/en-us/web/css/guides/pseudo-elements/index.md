@@ -1,6 +1,6 @@
 ---
 title: CSS pseudo-elements
-slug: Web/CSS/CSS_pseudo-elements
+slug: Web/CSS/Guides/Pseudo-elements
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-pseudo/
 sidebar: cssref
@@ -117,5 +117,5 @@ The specification also defines the `::details-content` and `::search-text` pseud
 - [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module
 - [CSS shadow-parts](/en-US/docs/Web/CSS/CSS_shadow_parts) module
 - [CSS generated content](/en-US/docs/Web/CSS/Guides/Generated_content) module
-- [CSS positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout) module
+- [CSS positioned layout](/en-US/docs/Web/CSS/Guides/Positioned_layout) module
 - [CSS custom highlight API](/en-US/docs/Web/API/CSS_Custom_Highlight_API)

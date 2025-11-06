@@ -108,7 +108,7 @@ The CSS media queries level 5 module also introduces the `environment-blending`,
   - [Using feature queries](/en-US/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries)
 - [CSS environment variables](/en-US/docs/Web/CSS/Guides/Environment_variables)
   - {{cssxref("env()")}} function
-- [CSS paged media](/en-US/docs/Web/CSS/CSS_paged_media) module
+- [CSS paged media](/en-US/docs/Web/CSS/Guides/Paged_media) module
   - {{cssxref("@page")}} at-rule
 - [CSS object model](/en-US/docs/Web/API/CSS_Object_Model) module
   - {{DOMxRef("MediaQueryList")}} interface
@@ -134,5 +134,5 @@ The CSS media queries level 5 module also introduces the `environment-blending`,
 
 - [Container queries](/en-US/docs/Web/CSS/Guides/Containment/Container_queries)
 - [Using the `srcset` and `sizes` attributes](/en-US/docs/Web/HTML/Reference/Elements/img#using_the_srcset_and_sizes_attributes)
-- [CSS paged media](/en-US/docs/Web/CSS/CSS_paged_media)
+- [CSS paged media](/en-US/docs/Web/CSS/Guides/Paged_media)
 - Use {{cssxref("@supports")}} to apply styles that depend on browser support for various CSS technologies.

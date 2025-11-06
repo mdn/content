@@ -27,7 +27,7 @@ Documents, like this article, may be very long. Your viewport is everything that
 - On most mobile devices and when the browser is in fullscreen mode, the viewport is the entire screen.
 - In fullscreen mode, the viewport is the device screen, the window is the browser window, which can be as big as the viewport or smaller, and the document is the website, which can be much taller or wider than the viewport.
 
-For [paged media](/en-US/docs/Web/CSS/CSS_paged_media), the initial containing block is based on the page area. The page area can be set through {{cssxref("@page")}} rules.
+For [paged media](/en-US/docs/Web/CSS/Guides/Paged_media), the initial containing block is based on the page area. The page area can be set through {{cssxref("@page")}} rules.
 
 To recap, the viewport is basically the part of the document that is currently visible.
 

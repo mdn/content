@@ -1,6 +1,6 @@
 ---
 title: CSS properties and values API
-slug: Web/CSS/CSS_properties_and_values_API
+slug: Web/CSS/Guides/Properties_and_values_API
 page-type: css-module
 spec-urls: https://drafts.css-houdini.org/css-properties-values-api-1/
 sidebar: cssref
@@ -81,7 +81,7 @@ The value of `--stop-color` is set to `cornflowerblue` at first, but when you ho
 
 - [Using the CSS properties and values API](/en-US/docs/Web/API/CSS_Properties_and_Values_API/guide)
   - : Explains how to register custom properties in CSS and JavaScript, with hints on handling undefined and invalid values, fallbacks, and inheritance.
-- [CSS Houdini](/en-US/docs/Web/CSS/CSS_properties_and_values_API/Houdini)
+- [CSS Houdini](/en-US/docs/Web/CSS/Guides/Properties_and_values_API/Houdini)
   - : Reference guide to Houdini resources including the CSS modules, API guides, and external resources.
 - [Houdini APIs](/en-US/docs/Web/API/Houdini_APIs)
   - : Explains what CSS Houdini is and its advantages, along with a list of available APIs and their statuses.

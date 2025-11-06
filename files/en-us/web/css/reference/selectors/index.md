@@ -52,6 +52,6 @@ Check the [pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classe
 - [CSS combinators](/en-US/docs/Web/CSS/Reference/Selectors/Combinators)
 - [Selector list](/en-US/docs/Web/CSS/Reference/Selectors/Selector_list)
 - [Selectors and combinators](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators)
-- [CSS pseudo-elements](/en-US/docs/Web/CSS/CSS_pseudo-elements) module
+- [CSS pseudo-elements](/en-US/docs/Web/CSS/Guides/Pseudo-elements) module
 - [CSS nesting](/en-US/docs/Web/CSS/Guides/Nesting) module
 - [Specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity)

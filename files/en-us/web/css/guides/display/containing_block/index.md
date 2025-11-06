@@ -261,7 +261,7 @@ p {
 - [Layout modes](/en-US/docs/Glossary/Layout_mode)
 - [Visual formatting models](/en-US/docs/Web/CSS/Guides/Display/Visual_formatting_model)
 - [Block formatting context](/en-US/docs/Web/CSS/Guides/Display/Block_formatting_context)
-- [Stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context)
+- [Stacking context](/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_context)
 - [Margin collapsing](/en-US/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
 - [Initial](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#initial_value), [computed](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#computed_value), [used](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#used_value), and [actual](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#actual_value) values
 - {{glossary("Replaced elements")}}

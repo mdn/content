@@ -100,5 +100,5 @@ This module adds properties and methods to interfaces defined in other specifica
 
 ## See also
 
-- [CSS pseudo-element module](/en-US/docs/Web/CSS/CSS_pseudo-elements)
+- [CSS pseudo-element module](/en-US/docs/Web/CSS/Guides/Pseudo-elements)
 - [CSS Object Model (CSSOM)](/en-US/docs/Web/API/CSS_Object_Model) APIs

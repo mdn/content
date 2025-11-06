@@ -10,7 +10,7 @@ Multi-column layout, usually referred to as multicol layout, is a specification 
 
 ## Key properties
 
-Multicol layout is unlike any of the other layout methods in CSS; it fragments the content, including all descendant elements, into columns. This happens in the same way that content is fragmented into pages when we work with [CSS paged media](/en-US/docs/Web/CSS/CSS_paged_media) by creating a print stylesheet.
+Multicol layout is unlike any of the other layout methods in CSS; it fragments the content, including all descendant elements, into columns. This happens in the same way that content is fragmented into pages when we work with [CSS paged media](/en-US/docs/Web/CSS/Guides/Paged_media) by creating a print stylesheet.
 
 In this and subsequent guides, we will be discussing the following properties defined in the [CSS multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout) module:
 

@@ -1,6 +1,6 @@
 ---
 title: Stacking context example 3
-slug: Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_3
+slug: Web/CSS/Guides/Positioned_layout/Stacking_context/Example_3
 page-type: guide
 sidebar: cssref
 ---
@@ -144,9 +144,9 @@ div {
 
 ## See also
 
-- [Stacking without the `z-index` property](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index): The stacking rules that apply when `z-index` is not used.
-- [Stacking floating elements](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_floating_elements): How floating elements are handled with stacking.
-- [Using z-index](/en-US/docs/Web/CSS/CSS_positioned_layout/Using_z-index): How to use `z-index` to change default stacking.
-- [Stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context): Notes on the stacking context.
-- [Stacking context example 1](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_1): 2-level HTML hierarchy, `z-index` on the last level
-- [Stacking context example 2](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_2): 2-level HTML hierarchy, `z-index` on all levels
+- [Stacking without the `z-index` property](/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_without_z-index): The stacking rules that apply when `z-index` is not used.
+- [Stacking floating elements](/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_floating_elements): How floating elements are handled with stacking.
+- [Using z-index](/en-US/docs/Web/CSS/Guides/Positioned_layout/Using_z-index): How to use `z-index` to change default stacking.
+- [Stacking context](/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_context): Notes on the stacking context.
+- [Stacking context example 1](/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_context/Example_1): 2-level HTML hierarchy, `z-index` on the last level
+- [Stacking context example 2](/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_context/Example_2): 2-level HTML hierarchy, `z-index` on all levels

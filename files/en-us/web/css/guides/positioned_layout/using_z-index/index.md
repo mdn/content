@@ -1,11 +1,11 @@
 ---
 title: Using z-index
-slug: Web/CSS/CSS_positioned_layout/Using_z-index
+slug: Web/CSS/Guides/Positioned_layout/Using_z-index
 page-type: guide
 sidebar: cssref
 ---
 
-The first article of this guide, [Stacking without the `z-index` property](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index), explains how stacking is arranged by default. If you want to create a custom stacking order, you can use the {{cssxref("z-index")}} property on a [positioned](/en-US/docs/Web/CSS/Reference/Properties/position#types_of_positioning) element.
+The first article of this guide, [Stacking without the `z-index` property](/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_without_z-index), explains how stacking is arranged by default. If you want to create a custom stacking order, you can use the {{cssxref("z-index")}} property on a [positioned](/en-US/docs/Web/CSS/Reference/Properties/position#types_of_positioning) element.
 
 The `z-index` property can be specified with an integer value (positive, zero, or negative), which represents the position of the element along an imaginary z-axis. If you are not familiar with the term 'z-axis', imagine the page as a stack of layers, each one having a number. Layers are rendered in numerical order, with larger numbers above smaller numbers (_X_ represents an arbitrary positive integer):
 
@@ -20,7 +20,7 @@ The `z-index` property can be specified with an integer value (positive, zero, o
 > [!NOTE]
 >
 > - When no `z-index` property is specified, elements are rendered on the default rendering layer (Layer 0).
-> - If several elements share the same `z-index` value (i.e., they are placed on the same layer), stacking rules explained in the section [Stacking without the `z-index` property](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index) apply.
+> - If several elements share the same `z-index` value (i.e., they are placed on the same layer), stacking rules explained in the section [Stacking without the `z-index` property](/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_without_z-index) apply.
 
 ## Example
 
@@ -126,8 +126,8 @@ strong {
 
 ## See also
 
-- [Understanding z-index](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)
-- [Stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context)
-- [Stacking floating elements](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_floating_elements)
-- [Stacking without `z-index`](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index)
-- [CSS positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout) module
+- [Understanding z-index](/en-US/docs/Web/CSS/Guides/Positioned_layout/Understanding_z-index)
+- [Stacking context](/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_context)
+- [Stacking floating elements](/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_floating_elements)
+- [Stacking without `z-index`](/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_without_z-index)
+- [CSS positioned layout](/en-US/docs/Web/CSS/Guides/Positioned_layout) module

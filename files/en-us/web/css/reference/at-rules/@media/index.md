@@ -78,7 +78,7 @@ Except when using the `only` logical operator, the media type is optional and th
 - `all`
   - : Suitable for all devices.
 - `print`
-  - : Intended for paged material and documents viewed on a screen in print preview mode. (Please see [paged media](/en-US/docs/Web/CSS/CSS_paged_media) for information about formatting issues that are specific to these formats.)
+  - : Intended for paged material and documents viewed on a screen in print preview mode. (Please see [paged media](/en-US/docs/Web/CSS/Guides/Paged_media) for information about formatting issues that are specific to these formats.)
 - `screen`
   - : Intended primarily for screens.
 

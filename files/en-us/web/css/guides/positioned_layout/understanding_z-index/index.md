@@ -1,11 +1,11 @@
 ---
 title: Understanding z-index
-slug: Web/CSS/CSS_positioned_layout/Understanding_z-index
+slug: Web/CSS/Guides/Positioned_layout/Understanding_z-index
 page-type: guide
 sidebar: cssref
 ---
 
-In the most basic cases, when text, images, and other elements are arranged on the page without overlapping, [HTML](/en-US/docs/Web/HTML) pages can be considered two-dimensional. In such cases, there is a single rendering flow, and all elements are aware of the space taken by others. CSS isn't that simple — CSS positioning, transformation, containment, and other features can cause elements to overlap. In this guide, we introduce the {{cssxref("z-index")}} property, which lets you place elements in front or behind other elements in the same [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context).
+In the most basic cases, when text, images, and other elements are arranged on the page without overlapping, [HTML](/en-US/docs/Web/HTML) pages can be considered two-dimensional. In such cases, there is a single rendering flow, and all elements are aware of the space taken by others. CSS isn't that simple — CSS positioning, transformation, containment, and other features can cause elements to overlap. In this guide, we introduce the {{cssxref("z-index")}} property, which lets you place elements in front or behind other elements in the same [stacking context](/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_context).
 
 ## Layers on the z-axis
 
@@ -119,7 +119,7 @@ The element with the lowest `z-index` value appears on the bottom layer. The ele
 
 Using `z-index` may appear fairly straightforward at first: a single property assigned a single integer number with a seemingly understandable behavior. When `z-index` is applied to complex hierarchies of HTML elements, many find the resulting behavior hard to understand or predict.
 
-If the elements are not siblings, the stacking behavior can become more complicated because each element may belong to a different [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context). This is shown in the example below.
+If the elements are not siblings, the stacking behavior can become more complicated because each element may belong to a different [stacking context](/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_context). This is shown in the example below.
 
 ```html live-sample___example4
 <section>
@@ -138,16 +138,16 @@ section {
 
 {{EmbedLiveSample("Example4", 600, 130)}}
 
-Even though the `z-index` value of `#div3` (`0`) is greater than that of `#div2` (`-9`), `#div2` appears above `#div3` because `#div1` and `#div2` are nested in a separate stacking context created by `<section>`. The `<section>` element and `#div3` are siblings, and since the `<section>` element's z-index is greater than that of `#div3` (`2` versus `0`), `#div3` is placed behind `<section>` and all of `<section>`'s contents. For more in-depth details about the topic, see our [Stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context) guide.
+Even though the `z-index` value of `#div3` (`0`) is greater than that of `#div2` (`-9`), `#div2` appears above `#div3` because `#div1` and `#div2` are nested in a separate stacking context created by `<section>`. The `<section>` element and `#div3` are siblings, and since the `<section>` element's z-index is greater than that of `#div3` (`2` versus `0`), `#div3` is placed behind `<section>` and all of `<section>`'s contents. For more in-depth details about the topic, see our [Stacking context](/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_context) guide.
 
 ## Conclusion
 
-As we've seen in this guide, `z-index` provides a way to control how elements stack along z-axis. You learned how the integer values of the `z-index` property can be used to alter the stacking order. However, as demonstrated in the last example, stacking orders can be complicated. Stacking orders follow a series of complex stacking rules to ensure that all browsers stack the same content in the same manner providing consistency and predictability. It's important to understand the [features that create stacking contexts](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context#features_creating_stacking_contexts) and how [nested stacking contexts](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context#nested_stacking_contexts) affect layer order.
+As we've seen in this guide, `z-index` provides a way to control how elements stack along z-axis. You learned how the integer values of the `z-index` property can be used to alter the stacking order. However, as demonstrated in the last example, stacking orders can be complicated. Stacking orders follow a series of complex stacking rules to ensure that all browsers stack the same content in the same manner providing consistency and predictability. It's important to understand the [features that create stacking contexts](/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_context#features_creating_stacking_contexts) and how [nested stacking contexts](/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_context#nested_stacking_contexts) affect layer order.
 
 ## See also
 
-- [Stacking without the `z-index` property](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index)
-- [Stacking floating elements](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_floating_elements)
-- [Using `z-index`](/en-US/docs/Web/CSS/CSS_positioned_layout/Using_z-index)
-- [Stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context)
-- [CSS positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout) module
+- [Stacking without the `z-index` property](/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_without_z-index)
+- [Stacking floating elements](/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_floating_elements)
+- [Using `z-index`](/en-US/docs/Web/CSS/Guides/Positioned_layout/Using_z-index)
+- [Stacking context](/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_context)
+- [CSS positioned layout](/en-US/docs/Web/CSS/Guides/Positioned_layout) module

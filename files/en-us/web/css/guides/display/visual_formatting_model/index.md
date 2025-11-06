@@ -5,7 +5,7 @@ page-type: guide
 sidebar: cssref
 ---
 
-In CSS, the **visual formatting model** describes how user agents take the document tree, and process and display it for visual media. This includes {{glossary("continuous media")}} such as a computer screen and [paged media](/en-US/docs/Web/CSS/CSS_paged_media) such as a book or document printed by browser print functions. Most of the information applies equally to continuous and paged media.
+In CSS, the **visual formatting model** describes how user agents take the document tree, and process and display it for visual media. This includes {{glossary("continuous media")}} such as a computer screen and [paged media](/en-US/docs/Web/CSS/Guides/Paged_media) such as a book or document printed by browser print functions. Most of the information applies equally to continuous and paged media.
 
 In the visual formatting model, each element in the document tree generates zero or more boxes according to the box model. The layout of these boxes is governed by:
 
@@ -28,7 +28,7 @@ If the viewport is smaller than the size of the document then the user agent nee
 
 **Box generation** is the part of the CSS visual formatting model that creates boxes from the document's elements. Generated boxes are of different types, which affect their visual formatting. The type of the box generated depends on the value of the CSS {{cssxref("display")}} property.
 
-Initially defined in CSS2, the `display` property was extended in the [CSS display](/en-US/docs/Web/CSS/Guides/Display), [CSS flexible box layout](/en-US/docs/Web/CSS/Guides/Flexible_box_layout), [CSS grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout), and [CSS ruby layout](/en-US/docs/Web/CSS/CSS_ruby_layout) modules. In addition, some of the terminologies around the display have been updated and clarified in the years since CSS2.
+Initially defined in CSS2, the `display` property was extended in the [CSS display](/en-US/docs/Web/CSS/Guides/Display), [CSS flexible box layout](/en-US/docs/Web/CSS/Guides/Flexible_box_layout), [CSS grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout), and [CSS ruby layout](/en-US/docs/Web/CSS/Guides/Ruby_layout) modules. In addition, some of the terminologies around the display have been updated and clarified in the years since CSS2.
 
 CSS takes your source document and renders it onto a canvas. To do this, it generates an intermediary structure, the **box tree**, which represents the formatting structure of the rendered document. Each box in the box tree represents its corresponding element (or pseudo-element) in space and/or time on the canvas, while each text run in the box tree likewise represents the contents of its corresponding text nodes.
 
@@ -162,7 +162,7 @@ In the absolute positioning model (which also includes `fixed` positioning), a b
 
 An element is called **out of flow** if it is floated, absolutely positioned, or is the root element. An element is called **in-flow** if it is not out of the flow.
 
-Read about [CSS positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout).
+Read about [CSS positioned layout](/en-US/docs/Web/CSS/Guides/Positioned_layout).
 
 ## Formatting contexts and the display property
 
@@ -252,7 +252,7 @@ A block box is a block-level box that is also a block container. As described in
 - [Comments](/en-US/docs/Web/CSS/CSS_syntax/Comments)
 - [Specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity)
 - [Inheritance](/en-US/docs/Web/CSS/Guides/Cascade/Inheritance)
-- [Stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context)
+- [Stacking context](/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_context)
 - [Block formatting context](/en-US/docs/Web/CSS/Guides/Display/Block_formatting_context)
 - [Box model](/en-US/docs/Web/CSS/Guides/Box_model/Introduction)
 - [Layout modes](/en-US/docs/Glossary/Layout_mode)

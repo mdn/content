@@ -16,7 +16,7 @@ One of the fundamental design principles of CSS is cascading of rules. It allows
 The opposite also occurs. Sometimes there are no declarations defining the value of a property. The CSS cascade module defines how these missing values should be set via inheritance or from the property's initial value.
 
 > [!NOTE]
-> The rules for finding the specified values in the page context and its margin boxes are described in the [CSS page module](/en-US/docs/Web/CSS/CSS_paged_media).
+> The rules for finding the specified values in the page context and its margin boxes are described in the [CSS page module](/en-US/docs/Web/CSS/Guides/Paged_media).
 
 ## Reference
 
@@ -91,8 +91,8 @@ The opposite also occurs. Sometimes there are no declarations defining the value
 ## See also
 
 - [CSS selectors module](/en-US/docs/Web/CSS/CSS_selectors)
-- [CSS pseudo-elements module](/en-US/docs/Web/CSS/CSS_pseudo-elements)
-- [CSS paged media module](/en-US/docs/Web/CSS/CSS_paged_media)
+- [CSS pseudo-elements module](/en-US/docs/Web/CSS/Guides/Pseudo-elements)
+- [CSS paged media module](/en-US/docs/Web/CSS/Guides/Paged_media)
 - [CSS conditional rules module](/en-US/docs/Web/CSS/Guides/Conditional_rules)
 - [CSS nesting module](/en-US/docs/Web/CSS/Guides/Nesting)
 - [Shorthand properties](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties)

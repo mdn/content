@@ -143,7 +143,7 @@ CSS was initially designed with only physical coordinates. The logical propertie
 - {{CSSxRef("border")}} shorthand
 - {{CSSxRef("border-radius")}}
 
-[CSS positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout)
+[CSS positioned layout](/en-US/docs/Web/CSS/Guides/Positioned_layout)
 
 - {{CSSxRef("top")}}
 - {{CSSxRef("right")}}

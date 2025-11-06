@@ -141,5 +141,5 @@ The CSS box sizing module also introduces the `min-intrinsic-sizing` property. C
 - [CSS display](/en-US/docs/Web/CSS/Guides/Display) module
 - [CSS flex layout](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) module
 - [CSS grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout) module
-- [CSS positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout) module
+- [CSS positioned layout](/en-US/docs/Web/CSS/Guides/Positioned_layout) module
 - [CSS fragmentation](/en-US/docs/Web/CSS/Guides/Fragmentation) module

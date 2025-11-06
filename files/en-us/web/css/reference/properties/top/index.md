@@ -160,4 +160,4 @@ div {
 - {{cssxref("inset-block-start")}}, {{cssxref("inset-block-end")}}, {{cssxref("inset-inline-start")}}, and {{cssxref("inset-inline-end")}}
 - {{cssxref("inset-block")}} and {{cssxref("inset-inline")}} shorthands
 - {{cssxref("position")}}
-- [CSS positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout) module
+- [CSS positioned layout](/en-US/docs/Web/CSS/Guides/Positioned_layout) module

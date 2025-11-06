@@ -25,7 +25,7 @@ They are grouped by complexity so that you can choose the most appropriate for y
 - [Using media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using)
   - : The size of the screens, or the kind of devices like touchscreens or printed sheets vary greatly nowadays.
     Media queries are the fundamental building blocks in building websites that render everywhere in their best quality.
-- [Understanding CSS z-index](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)
+- [Understanding CSS z-index](/en-US/docs/Web/CSS/Guides/Positioned_layout/Understanding_z-index)
   - : Controlling superposition of boxes is a basic feature that is very quickly needed by Web developers.
     Though not that difficult, it requires a basic knowledge of CSS.
 

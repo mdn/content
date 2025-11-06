@@ -6,7 +6,7 @@ spec-urls: https://drafts.csswg.org/css-break/
 sidebar: cssref
 ---
 
-The **CSS fragmentation** module defines how content is displayed when it is broken (fragmented) and flows across multiple [pages](/en-US/docs/Web/CSS/CSS_paged_media), regions, or [columns](/en-US/docs/Web/CSS/Guides/Multicol_layout). This module defines features for pagination, breaking variable fragment size and orientation, widows and orphans.
+The **CSS fragmentation** module defines how content is displayed when it is broken (fragmented) and flows across multiple [pages](/en-US/docs/Web/CSS/Guides/Paged_media), regions, or [columns](/en-US/docs/Web/CSS/Guides/Multicol_layout). This module defines features for pagination, breaking variable fragment size and orientation, widows and orphans.
 
 This module explains how content breaks across fragmentation containers and how such breaks can be controlled by the author. The generic term for breaking content across containers is _fragmentation_. Fragmentation occurs when an inline box wraps onto multiple lines. This can happen when using layout features such as [CSS multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout): For example, when a block spans more than one column inside a column layout container, or spans a page break when printed. Each piece of the rendering for the element is called a _fragment_.
 
@@ -39,7 +39,7 @@ When content is physically printed or displayed as a print preview, there are pa
 - {{cssxref("width")}}, {{cssxref("max-width")}}, and {{cssxref("inline-size")}} CSS properties
 - [Block formatting context](/en-US/docs/Web/CSS/Guides/Display/Block_formatting_context)
 
-[CSS paged media](/en-US/docs/Web/CSS/CSS_paged_media) module
+[CSS paged media](/en-US/docs/Web/CSS/Guides/Paged_media) module
 
 - {{cssxref("page")}}
 - {{cssxref("@page")}}

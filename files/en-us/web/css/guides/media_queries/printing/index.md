@@ -95,4 +95,4 @@ document.getElementById("print_external").addEventListener("click", () => {
 - {{ domxref("window.afterprint_event", "afterprint") }} event
 - [Media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using)
 - {{cssxref("@media")}}
-- [CSS paged media](/en-US/docs/Web/CSS/CSS_paged_media) module
+- [CSS paged media](/en-US/docs/Web/CSS/Guides/Paged_media) module

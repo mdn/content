@@ -74,7 +74,7 @@ Sometimes it's useful to be able to style a host from inside the shadow tree con
 ## See also
 
 - [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module
-- [CSS pseudo elements](/en-US/docs/Web/CSS/CSS_pseudo-elements) module
+- [CSS pseudo elements](/en-US/docs/Web/CSS/Guides/Pseudo-elements) module
 - [CSS namespaces](/en-US/docs/Web/CSS/Guides/Namespaces) module
 - [CSS shadow-parts](/en-US/docs/Web/CSS/CSS_shadow_parts) module
 - [Template, slot, and shadow](https://web.dev/learn/html/template/) on web.dev (2023)

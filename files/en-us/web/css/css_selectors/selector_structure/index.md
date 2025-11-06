@@ -103,4 +103,4 @@ dt:has(+ img) ~ dd {
 - {{DOMXref("Document.querySelector()")}}
 - {{DOMXref("Document.querySelectorAll()")}}
 - [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module
-- [CSS pseudo-elements](/en-US/docs/Web/CSS/CSS_pseudo-elements) module
+- [CSS pseudo-elements](/en-US/docs/Web/CSS/Guides/Pseudo-elements) module

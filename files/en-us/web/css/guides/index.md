@@ -26,7 +26,7 @@ If you are not using a flex or grid layout, then your content is laid out using 
   - : Understanding the box model is a CSS fundamental; this guide explains how it works.
 - [Mastering margin collapsing](/en-US/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
   - : Find out why you sometimes end up with less margin than you expect, due to margin collapsing in normal flow.
-- [Understanding CSS z-index](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)
+- [Understanding CSS z-index](/en-US/docs/Web/CSS/Guides/Positioned_layout/Understanding_z-index)
   - : Absolute positioning, flexbox, and grid all result in the stack (elements' relative position on the z-axis) to be manipulable via the `z-index` property. This article explains how to manage it.
 
 ## Multi-column layout

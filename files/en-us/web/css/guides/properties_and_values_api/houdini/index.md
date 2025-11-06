@@ -1,6 +1,6 @@
 ---
 title: CSS Houdini
-slug: Web/CSS/CSS_properties_and_values_API/Houdini
+slug: Web/CSS/Guides/Properties_and_values_API/Houdini
 page-type: guide
 sidebar: cssref
 ---

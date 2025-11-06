@@ -234,7 +234,7 @@ body:has([value="content-box"]:checked) {
 
 For another example, see [`clip-path` shapes and geometry boxes](/en-US/docs/Web/CSS/Reference/Properties/clip-path#shapes_and_geometry_boxes).
 
-Even values like `clip-path: margin-box` can be useful. In addition to creative visuals made by placing the clip-path's edge at the margin-box edge, any computed value for `clip-path`, other than `none`, results in the creation of a new [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context) the same way that CSS {{cssxref("opacity")}} does for values other than `1`.
+Even values like `clip-path: margin-box` can be useful. In addition to creative visuals made by placing the clip-path's edge at the margin-box edge, any computed value for `clip-path`, other than `none`, results in the creation of a new [stacking context](/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_context) the same way that CSS {{cssxref("opacity")}} does for values other than `1`.
 
 ## Clipping to basic shapes
 

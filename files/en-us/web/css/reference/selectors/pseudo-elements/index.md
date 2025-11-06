@@ -48,7 +48,7 @@ A pseudo-element can be selected based on the current state of the originating e
 - {{CSSxRef("::cue")}}
   - : The [WebVTT](/en-US/docs/Web/API/WebVTT_API) cues within a selected element.
     This can be used to [style captions and other cues](/en-US/docs/Web/API/WebVTT_API#styling_webvtt_in_html_or_a_stylesheet) in media with VTT tracks.
-    The [CSS pseudo-elements](/en-US/docs/Web/CSS/CSS_pseudo-elements) module also defines the `::postfix` and `::prefix` sub-pseudo elements. These are not yet supported by any browser.
+    The [CSS pseudo-elements](/en-US/docs/Web/CSS/Guides/Pseudo-elements) module also defines the `::postfix` and `::prefix` sub-pseudo elements. These are not yet supported by any browser.
 
 ## Highlight pseudo-elements
 
@@ -288,7 +288,7 @@ When using the universal selector with highlight pseudo-elements, it prevents hi
 
 ## See also
 
-- [CSS pseudo-elements](/en-US/docs/Web/CSS/CSS_pseudo-elements) module
+- [CSS pseudo-elements](/en-US/docs/Web/CSS/Guides/Pseudo-elements) module
 - [Pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
 - [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module
 - [Learn: Pseudo-classes and pseudo-elements](/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)

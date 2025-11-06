@@ -14,6 +14,6 @@ This is opposed to {{glossary("logical properties")}}, which are relative to the
 
 ## See also
 
-- [CSS positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout) module
+- [CSS positioned layout](/en-US/docs/Web/CSS/Guides/Positioned_layout) module
 - [CSS box model](/en-US/docs/Web/CSS/Guides/Box_model) module
 - [CSS box sizing](/en-US/docs/Web/CSS/Guides/Box_sizing) module

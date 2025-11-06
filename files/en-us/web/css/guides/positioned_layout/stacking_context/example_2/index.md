@@ -1,6 +1,6 @@
 ---
 title: Stacking context example 2
-slug: Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_2
+slug: Web/CSS/Guides/Positioned_layout/Stacking_context/Example_2
 page-type: guide
 sidebar: cssref
 ---
@@ -118,7 +118,7 @@ span.bold {
 
 ## See also
 
-- [Example: 1-level HTML hierarchy, `z-index` on the last level](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_1)
-- [Example: 3-level HTML hierarchy, `z-index` on the second level](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_3)
-- [Stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context)
-- [CSS positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout) module
+- [Example: 1-level HTML hierarchy, `z-index` on the last level](/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_context/Example_1)
+- [Example: 3-level HTML hierarchy, `z-index` on the second level](/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_context/Example_3)
+- [Stacking context](/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_context)
+- [CSS positioned layout](/en-US/docs/Web/CSS/Guides/Positioned_layout) module

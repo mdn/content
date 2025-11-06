@@ -1,6 +1,6 @@
 ---
 title: Stacking floating elements
-slug: Web/CSS/CSS_positioned_layout/Stacking_floating_elements
+slug: Web/CSS/Guides/Positioned_layout/Stacking_floating_elements
 page-type: guide
 sidebar: cssref
 ---
@@ -118,8 +118,8 @@ strong {
 
 ## See also
 
-- [Understanding z-index](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)
-- [Stacking without the `z-index` property](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index)
-- [Using z-index](/en-US/docs/Web/CSS/CSS_positioned_layout/Using_z-index)
-- [Stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context)
-- [CSS positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout) module
+- [Understanding z-index](/en-US/docs/Web/CSS/Guides/Positioned_layout/Understanding_z-index)
+- [Stacking without the `z-index` property](/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_without_z-index)
+- [Using z-index](/en-US/docs/Web/CSS/Guides/Positioned_layout/Using_z-index)
+- [Stacking context](/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_context)
+- [CSS positioned layout](/en-US/docs/Web/CSS/Guides/Positioned_layout) module

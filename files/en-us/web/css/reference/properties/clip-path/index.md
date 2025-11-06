@@ -158,7 +158,7 @@ The `clip-path` property is specified as one or a combination of the values list
   - : No clipping path is created.
 
 > [!NOTE]
-> A computed value other than **`none`** results in the creation of a new [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context) the same way that CSS {{cssxref("opacity")}} does for values other than `1`.
+> A computed value other than **`none`** results in the creation of a new [stacking context](/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_context) the same way that CSS {{cssxref("opacity")}} does for values other than `1`.
 
 ## Formal definition
 
