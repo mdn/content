@@ -43,7 +43,7 @@ For shorthand properties, its constituent longhand properties are serialized and
 
 ### Color value serialization
 
-Colors are one of the most common cases affected by serialization. Regardless of whether you define a color using `hsl()`, `hwb()`, a keyword, or a modern color space, JavaScript usually returns it in `rgb()` or `rgba()` format.
+Colors are among the most common types affected by serialization. Regardless of whether you define a color using `hsl()`, `hwb()`, a keyword, or a modern color space, JavaScript usually returns it in [legacy `rgb()` or `rgba()` format](/en-US/docs/Web/CSS/color_value/rgb#syntax).
 
 The following examples demonstrate how different color formats are serialized when accessed through JavaScript.
 
