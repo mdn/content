@@ -75,6 +75,8 @@ Firefox 145 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 - {{domxref("RTCEncodedVideoFrame")}} and {{domxref("RTCEncodedAudioFrame")}} are now {{glossary("Serializable object", "serializable objects")}}, and {{domxref("RTCEncodedAudioFrame/RTCEncodedAudioFrame", "RTCEncodedAudioFrame()")}} and {{domxref("RTCEncodedVideoFrame/RTCEncodedVideoFrame", "RTCEncodedVideoFrame()")}} copy constructors are supported. These changes allow frames to be cloned, and to be shared between workers and the main thread. ([Firefox bug 1868223](https://bugzil.la/1868223) and [Firefox bug 1975032](https://bugzil.la/1975032)).
 
+- Added `.mkv` [Matroska container](/en-US/docs/Web/Media/Guides/Formats/Containers) support for the most commonly-used codecs: AVC, HEVC, VP8, VP9, AV1, AAC, Opus, and Vorbis ([Firefox bug 1991752](https://bugzil.la/1991752)).
+
 <!-- #### Removals -->
 
 <!-- ### WebAssembly -->
