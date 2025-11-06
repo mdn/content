@@ -6,7 +6,7 @@ browser-compat: css.properties.contain-intrinsic-width
 sidebar: cssref
 ---
 
-The **`contain-intrinsic-width`** [CSS](/en-US/docs/Web/CSS) property sets the width of an element that a browser will use for layout when the element is subject to [size containment](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment#size_containment).
+The **`contain-intrinsic-width`** [CSS](/en-US/docs/Web/CSS) property sets the width of an element that a browser will use for layout when the element is subject to [size containment](/en-US/docs/Web/CSS/Guides/Containment/Using#size_containment).
 
 ## Syntax
 
@@ -42,7 +42,7 @@ The following values may be specified for an element.
 
 ## Description
 
-The property is commonly applied alongside elements that can trigger size containment, such as [`contain: size`](/en-US/docs/Web/CSS/Reference/Properties/contain) and [`content-visibility`](/en-US/docs/Web/CSS/Reference/Properties/content-visibility), and may also be set using the [`contain-intrinsic-size`](/en-US/docs/Web/CSS/Reference/Properties/contain-intrinsic-size) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties).
+The property is commonly applied alongside elements that can trigger size containment, such as [`contain: size`](/en-US/docs/Web/CSS/Reference/Properties/contain) and [`content-visibility`](/en-US/docs/Web/CSS/Reference/Properties/content-visibility), and may also be set using the [`contain-intrinsic-size`](/en-US/docs/Web/CSS/Reference/Properties/contain-intrinsic-size) [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties).
 
 Size containment allows a user agent to lay out an element as though it had a fixed size, preventing unnecessary reflows by avoiding the re-rendering of child elements to determine the actual size (thereby improving user experience).
 By default, size containment treats elements as though they had no contents, and may collapse the layout in the same way as if the contents had no width or height.

@@ -42,15 +42,15 @@ CSS stands for **Cascading Style Sheets**, and that first word _cascading_ is in
 
 At some point, you will be working on a project and you will find that some CSS you think should be applying to an element is not working. Often, this problem occurs when you create two rules that apply different values of the same property to the same element.
 
-The [**Cascade**](/en-US/docs/Web/CSS/CSS_cascade/Cascade), and the closely-related concept of [**specificity**](/en-US/docs/Web/CSS/CSS_cascade/Specificity), are mechanisms that control which rule applies when such a conflict occurs. The declaration that's styling your element may not be the one you expect, so you need to understand how these mechanisms work.
+The [**Cascade**](/en-US/docs/Web/CSS/Guides/Cascade/Introduction), and the closely-related concept of [**specificity**](/en-US/docs/Web/CSS/Guides/Cascade/Specificity), are mechanisms that control which rule applies when such a conflict occurs. The declaration that's styling your element may not be the one you expect, so you need to understand how these mechanisms work.
 
-Also significant here is the concept of [**inheritance**](/en-US/docs/Web/CSS/CSS_cascade/Inheritance), which means that some CSS properties by default inherit values set on the current element's parent element and some don't. This can also cause unexpected behavior.
+Also significant here is the concept of [**inheritance**](/en-US/docs/Web/CSS/Guides/Cascade/Inheritance), which means that some CSS properties by default inherit values set on the current element's parent element and some don't. This can also cause unexpected behavior.
 
 Let's start by taking a quick look at the key concepts we are dealing with, then we'll look at each in turn and see how they interact with each other and your CSS. These concepts can seem tricky to understand, but they will become clearer as you get more practice writing CSS.
 
 ### Cascade
 
-Stylesheets [**cascade**](/en-US/docs/Web/CSS/CSS_cascade/Cascade). At a very simple level, this means that the origin and the order of CSS rules matter. When two rules both have equal specificity, the one that is defined last in the stylesheet is the one that will be used. There are other concepts that have an effect, such as [cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers), but these are more advanced and we won't cover them in any detail here.
+Stylesheets [**cascade**](/en-US/docs/Web/CSS/Guides/Cascade/Introduction). At a very simple level, this means that the origin and the order of CSS rules matter. When two rules both have equal specificity, the one that is defined last in the stylesheet is the one that will be used. There are other concepts that have an effect, such as [cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers), but these are more advanced and we won't cover them in any detail here.
 
 In the below example, we have two rules that could apply to the `<h1>` element. The `<h1>` content ends up being colored blue. This is because both the rules are from the same source, have an identical element selector, and therefore, carry the same specificity, but the last one in the source order wins.
 
@@ -71,7 +71,7 @@ h1 {
 
 ### Specificity
 
-[Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity) is an algorithm that the browser uses to decide which property value is applied to an element. If multiple rules have different selectors that set different values for the same property and target the same element, specificity decides the property value that gets applied to the element. Specificity is basically a measure of how specific a selector's selection will be:
+[Specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity) is an algorithm that the browser uses to decide which property value is applied to an element. If multiple rules have different selectors that set different values for the same property and target the same element, specificity decides the property value that gets applied to the element. Specificity is basically a measure of how specific a selector's selection will be:
 
 - A type (element) selector is less specific; it will select all elements of that type that appear on a page, so it has less weight. Pseudo-element selectors have the same specificity as regular element selectors.
 - A class selector is more specific; it will select only the elements on a page that have a specific `class` attribute value, so it has more weight. Attribute selectors and pseudo-classes have the same weight as a class.
@@ -194,7 +194,7 @@ CSS provides five special universal property values for controlling inheritance.
 - {{cssxref("inherit")}}
   - : Sets the property value applied to a selected element to be the same as that of its parent element. Effectively, this "turns on inheritance".
 - {{cssxref("initial")}}
-  - : Sets the property value applied to a selected element to the [initial value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value) of that property.
+  - : Sets the property value applied to a selected element to the [initial value](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#initial_value) of that property.
 - {{cssxref("revert")}}
   - : Resets the property value applied to a selected element to the browser's default styling rather than the defaults applied to that property. This value acts like {{cssxref("unset")}} in many cases.
 - {{cssxref("revert-layer")}}
@@ -203,7 +203,7 @@ CSS provides five special universal property values for controlling inheritance.
   - : Resets the property to its natural value, which means that if the property is naturally inherited it acts like `inherit`, otherwise it acts like `initial`.
 
 > [!NOTE]
-> See [Origin types](/en-US/docs/Web/CSS/CSS_cascade/Cascade#origin_types) for more information on each of these and how they work.
+> See [Origin types](/en-US/docs/Web/CSS/Guides/Cascade/Introduction#origin_types) for more information on each of these and how they work.
 
 ### Playing with inheritance control properties
 

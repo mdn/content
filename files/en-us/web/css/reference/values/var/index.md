@@ -272,6 +272,6 @@ Note how the paragraphs using `var()` are reset to the default black, but the pa
 ## See also
 
 - {{cssxref("env","env(…)")}} – read‑only environment variables controlled by the user‑agent.
-- [Using CSS custom properties (variables)](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)
+- [Using CSS custom properties (variables)](/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties)
 - {{cssxref("@property")}} at-rule
-- [CSS custom properties for cascading variables](/en-US/docs/Web/CSS/CSS_cascading_variables) module
+- [CSS custom properties for cascading variables](/en-US/docs/Web/CSS/Guides/Cascading_variables) module

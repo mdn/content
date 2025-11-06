@@ -140,7 +140,7 @@ section {
 
 - {{CSSXref("color-scheme")}}
 - {{CSSXref("&lt;color&gt;")}}
-- [CSS colors](/en-US/docs/Web/CSS/CSS_colors) module
+- [CSS colors](/en-US/docs/Web/CSS/Guides/Colors) module
 - [`prefers-contrast`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-contrast) {{cssxref("@media")}} feature
 - [`contrast()`](/en-US/docs/Web/CSS/Reference/Values/filter-function/contrast)
 - [WCAG: color contrast](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)

@@ -262,9 +262,9 @@ Applied to the `@font-face` at-rule, the [`font-display`](/en-US/docs/Web/CSS/Re
 
 ## Optimizing styling recalculation with CSS containment
 
-By using the properties defined in the [CSS containment](/en-US/docs/Web/CSS/CSS_containment) module, you can instruct the browser to isolate different parts of a page and optimize their rendering independently from one another. This allows for improved performance in rendering individual sections. As an example, you can specify to the browser to not render certain containers until they are visible in the viewport.
+By using the properties defined in the [CSS containment](/en-US/docs/Web/CSS/Guides/Containment) module, you can instruct the browser to isolate different parts of a page and optimize their rendering independently from one another. This allows for improved performance in rendering individual sections. As an example, you can specify to the browser to not render certain containers until they are visible in the viewport.
 
-The {{cssxref("contain")}} property allows an author to specify exactly what [containment types](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment) they want applied to individual containers on the page. This allows the browser to recalculate layout, style, paint, size, or any combination of them for a limited part of the DOM.
+The {{cssxref("contain")}} property allows an author to specify exactly what [containment types](/en-US/docs/Web/CSS/Guides/Containment/Using) they want applied to individual containers on the page. This allows the browser to recalculate layout, style, paint, size, or any combination of them for a limited part of the DOM.
 
 ```css
 article {

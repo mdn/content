@@ -218,5 +218,5 @@ See the [pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes#
 
 - [Selector list](/en-US/docs/Web/CSS/Reference/Selectors/Selector_list)
 - [CSS selector structure](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure)
-- [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
+- [Specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity)
 - [CSS nesting module](/en-US/docs/Web/CSS/CSS_nesting)

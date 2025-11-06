@@ -13,7 +13,7 @@ sidebar: cssref
 The **`:heading()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) function represents all [heading elements](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) whose levels match a comma-separated list of integers. This allows you to style elements at specific heading levels at once, rather than matching and styling them individually.
 
 > [!NOTE]
-> The `:heading()` functional pseudo-class has the same [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity#how_is_specificity_calculated) as a class selector, that is, `0-1-0`. For example, `section:heading()` has a specificity of `0-1-1`.
+> The `:heading()` functional pseudo-class has the same [specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity#how_is_specificity_calculated) as a class selector, that is, `0-1-0`. For example, `section:heading()` has a specificity of `0-1-1`.
 
 ## Syntax
 

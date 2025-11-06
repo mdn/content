@@ -156,4 +156,4 @@ In the future, we may see support for developer-defined environment variables, b
 - [`@media` `shape` descriptor](/en-US/docs/Web/CSS/Reference/At-rules/@media/shape)
 - [CSS environment_variables](/en-US/docs/Web/CSS/CSS_environment_variables) module
 - [CSS round display](/en-US/docs/Web/CSS/CSS_round_display) module
-- [CSS custom properties for cascading variables](/en-US/docs/Web/CSS/CSS_cascading_variables) module
+- [CSS custom properties for cascading variables](/en-US/docs/Web/CSS/Guides/Cascading_variables) module

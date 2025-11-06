@@ -95,4 +95,4 @@ In this example, the list of values for the `symbols` descriptor include letters
 - List style properties: {{cssxref("list-style")}}, {{cssxref("list-style-image")}}, {{cssxref("list-style-position")}}
 - {{cssxref("symbols", "symbols()")}} function
 - {{cssxref("url_value", "&lt;url&gt;")}} type
-- [CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles) module
+- [CSS counter styles](/en-US/docs/Web/CSS/Guides/Counter_styles) module

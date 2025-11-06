@@ -194,7 +194,7 @@ Check out the individual pseudo-element reference pages for examples and browser
 
 ## Highlight pseudo-elements inheritance
 
-[Highlight pseudo-elements](#highlight_pseudo-elements), such as {{CSSxref("::selection")}}, {{CSSxref("::target-text")}}, {{CSSxref("::highlight()")}}, {{CSSxref("::spelling-error")}}, and {{CSSxref("::grammar-error")}}, follow a consistent inheritance model that differs from [regular element inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance).
+[Highlight pseudo-elements](#highlight_pseudo-elements), such as {{CSSxref("::selection")}}, {{CSSxref("::target-text")}}, {{CSSxref("::highlight()")}}, {{CSSxref("::spelling-error")}}, and {{CSSxref("::grammar-error")}}, follow a consistent inheritance model that differs from [regular element inheritance](/en-US/docs/Web/CSS/Guides/Cascade/Inheritance).
 
 When you apply styles to highlight pseudo-elements, they inherit from both:
 
@@ -252,7 +252,7 @@ Try selecting the text in both the parent and child elements. Notice that:
 
 This demonstrates how the child's highlight pseudo-element inherits from both its parent element and the parent's highlight pseudo-element.
 
-[CSS custom properties (variables)](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) in highlight pseudo-elements inherit from their originating element (the element they're being applied to), not through the highlight inheritance chain. For example:
+[CSS custom properties (variables)](/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties) in highlight pseudo-elements inherit from their originating element (the element they're being applied to), not through the highlight inheritance chain. For example:
 
 ```css
 :root {

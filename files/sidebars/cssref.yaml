@@ -106,23 +106,23 @@ sidebar:
   - title: Cascade
     details: closed
     children:
-      - /Web/CSS/CSS_cascade/Cascade
-      - /Web/CSS/CSS_cascade/Inheritance
-      - /Web/CSS/CSS_cascade/Specificity
-      - /Web/CSS/CSS_cascade/Value_processing
-      - /Web/CSS/CSS_cascade/Shorthand_properties
+      - /Web/CSS/Guides/Cascade/Introduction
+      - /Web/CSS/Guides/Cascade/Inheritance
+      - /Web/CSS/Guides/Cascade/Specificity
+      - /Web/CSS/Guides/Cascade/Value_processing
+      - /Web/CSS/Guides/Cascade/Shorthand_properties
   - type: listSubPages
-    path: /Web/CSS/CSS_cascading_variables
+    path: /Web/CSS/Guides/Cascading_variables
     title: Custom_properties
     details: closed
   - title: Colors
     details: closed
     children:
-      - link: /Web/CSS/CSS_colors/Applying_color
+      - link: /Web/CSS/Guides/Colors/Applying_color
         title: Applying_color_to_HTML_elements
-      - /Web/CSS/CSS_colors/Color_values
-      - /Web/CSS/CSS_colors/Relative_colors
-      - /Web/CSS/CSS_colors/Using_color_wisely
+      - /Web/CSS/Guides/Colors/Color_values
+      - /Web/CSS/Guides/Colors/Using_relative_colors
+      - /Web/CSS/Guides/Colors/Using_color_wisely
       - link: /Web/Accessibility/Guides/Colors_and_Luminance
         title: Accessibility_Understanding_colors_and_luminance
       - link: /Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast
@@ -139,19 +139,19 @@ sidebar:
   - title: Conditional_rules
     details: closed
     children:
-      - /Web/CSS/CSS_conditional_rules/Using_feature_queries
-      - /Web/CSS/CSS_conditional_rules/Container_scroll-state_queries
+      - /Web/CSS/Guides/Conditional_rules/Using_feature_queries
+      - /Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries
   - title: Containment
     details: closed
     children:
-      - /Web/CSS/CSS_containment/Container_queries
-      - /Web/CSS/CSS_containment/Using_CSS_containment
-      - /Web/CSS/CSS_containment/Container_size_and_style_queries
+      - /Web/CSS/Guides/Containment/Container_queries
+      - /Web/CSS/Guides/Containment/Using
+      - /Web/CSS/Guides/Containment/Container_size_and_style_queries
   - title: CSSOM_view
     details: closed
     children:
       - /Web/API/CSSOM_view_API/Coordinate_systems
-      - /Web/CSS/CSSOM_view/Viewport_concepts
+      - /Web/CSS/Guides/CSSOM_view/Viewport_concepts
   - title: Display
     details: closed
     children:
@@ -208,7 +208,7 @@ sidebar:
   - title: Lists_and_counters
     details: closed
     children:
-      - /Web/CSS/CSS_counter_styles/Using_CSS_counters
+      - /Web/CSS/Guides/Counter_styles/Using_counters
       - /Web/CSS/CSS_lists/Consistent_list_indentation
   - title: Logical_properties
     details: closed
@@ -319,8 +319,8 @@ sidebar:
       - /Web/CSS/Guides/Backgrounds_and_borders/Border-image_generator
       - /Web/CSS/Guides/Backgrounds_and_borders/Border-radius_generator
       - /Web/CSS/Guides/Backgrounds_and_borders/Box-shadow_generator
-      - /Web/CSS/CSS_colors/Color_format_converter
-      - /Web/CSS/CSS_colors/Color_mixer
+      - /Web/CSS/Guides/Colors/Color_format_converter
+      - /Web/CSS/Guides/Colors/Color_mixer
       - /Web/CSS/CSS_shapes/Shape_generator
 l10n:
   de:

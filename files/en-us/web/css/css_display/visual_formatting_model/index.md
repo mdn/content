@@ -250,8 +250,8 @@ A block box is a block-level box that is also a block container. As described in
 
 - [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax/Syntax) guide
 - [Comments](/en-US/docs/Web/CSS/CSS_syntax/Comments)
-- [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
-- [Inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance)
+- [Specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity)
+- [Inheritance](/en-US/docs/Web/CSS/Guides/Cascade/Inheritance)
 - [Stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context)
 - [Block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context)
 - [Box model](/en-US/docs/Web/CSS/Guides/Box_model/Introduction)

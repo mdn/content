@@ -53,5 +53,5 @@ _This interface doesn't implement any specific method but inherits methods from 
 ## See also
 
 - {{CSSxRef("@counter-style")}}
-- [CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles) module
-- [Using CSS counters](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) guide
+- [CSS counter styles](/en-US/docs/Web/CSS/Guides/Counter_styles) module
+- [Using CSS counters](/en-US/docs/Web/CSS/Guides/Counter_styles/Using_counters) guide

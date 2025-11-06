@@ -13,7 +13,7 @@ The **CSSOM view API** lets you manipulate the visual view of a document, includ
 
 - [Coordinate systems](/en-US/docs/Web/API/CSSOM_view_API/Coordinate_systems)
   - : The coordinate systems used to specify a position in a display context such as a window on a monitor, a viewport on a mobile device, or a position on a sheet of paper when printing.
-- [Viewport concepts](/en-US/docs/Web/CSS/CSSOM_view/Viewport_concepts)
+- [Viewport concepts](/en-US/docs/Web/CSS/Guides/CSSOM_view/Viewport_concepts)
   - : The concept of the viewport — what it is, its impact in terms of CSS, SVG, and mobile devices — and the difference between the visual viewport and the layout viewport.
 
 ## Interfaces
@@ -123,7 +123,7 @@ This module defines geometric utility methods that apply to the {{domxref("Text"
 ## See also
 
 - [CSS Object Model (CSSOM)](/en-US/docs/Web/API/CSS_Object_Model) API
-- [CSSOM view](/en-US/docs/Web/CSS/CSSOM_view) module
+- [CSSOM view](/en-US/docs/Web/CSS/Guides/CSSOM_view) module
 - [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
 - [CSS overscroll behavior](/en-US/docs/Web/CSS/CSS_overscroll_behavior) module
 - [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) module

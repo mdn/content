@@ -8,7 +8,7 @@ browser-compat: api.Animation.commitStyles
 
 {{APIRef("Web Animations")}}
 
-The `commitStyles()` method of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)'s {{domxref("Animation")}} interface writes the [computed values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value) of the animation's current styles into its target element's [`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style) attribute.
+The `commitStyles()` method of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)'s {{domxref("Animation")}} interface writes the [computed values](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#computed_value) of the animation's current styles into its target element's [`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style) attribute.
 
 It is primarily used to write the styles for the final state of an animation into the target element, so that the styling persists after the animation ends.
 
@@ -28,7 +28,7 @@ None ({{jsxref("undefined")}}).
 
 ## Description
 
-The `commitStyles()` method is primarily used to write the [computed values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value) for the final state of an animation into the target element's [`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style) attribute, so that the styling persists after the animation ends.
+The `commitStyles()` method is primarily used to write the [computed values](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#computed_value) for the final state of an animation into the target element's [`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style) attribute, so that the styling persists after the animation ends.
 This can be done when the animation has finished (that is, the {{domxref("Animation")}} object's {{domxref("Animation.finished","finished")}} property has resolved).
 
 ### `commitStyles()` alongside fill mode
@@ -56,7 +56,7 @@ animation.cancel();
 As `fill` persists the animation indefinitely, once we've committed the styles, we cancel the animation.
 
 Note that the same effect could be achieved with `fill` alone, but [using indefinitely filling animations is discouraged](https://drafts.csswg.org/web-animations-1/#fill-behavior).
-Animations [take precedence over all static styles](/en-US/docs/Web/CSS/CSS_cascade/Cascade#cascading_order), so an indefinite filling animation can prevent the target element from ever being styled normally.
+Animations [take precedence over all static styles](/en-US/docs/Web/CSS/Guides/Cascade/Introduction#cascading_order), so an indefinite filling animation can prevent the target element from ever being styled normally.
 
 > [!NOTE]
 > You might also avoid having to explicitly save the final state by setting them as the element initial styles and animating to the final styles.

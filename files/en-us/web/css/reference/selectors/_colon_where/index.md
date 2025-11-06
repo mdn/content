@@ -8,7 +8,7 @@ sidebar: cssref
 
 The **`:where()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) function takes a selector list as its argument, and selects any element that can be selected by one of the selectors in that list.
 
-The difference between `:where()` and {{CSSxRef(":is", ":is()")}} is that `:where()` always has 0 [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity), whereas `:is()` takes on the specificity of the most specific selector in its arguments.
+The difference between `:where()` and {{CSSxRef(":is", ":is()")}} is that `:where()` always has 0 [specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity), whereas `:is()` takes on the specificity of the most specific selector in its arguments.
 
 {{InteractiveExample("CSS Demo: :where", "tabbed-shorter")}}
 

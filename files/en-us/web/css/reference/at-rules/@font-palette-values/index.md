@@ -19,7 +19,7 @@ The **`@font-palette-values`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/
 }
 ```
 
-The [&lt;dashed-ident&gt;](/en-US/docs/Web/CSS/Reference/Values/dashed-ident) is a user defined identifier, that while it looks like a [CSS custom property](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) behaves in a different way and is not wrapped in a [CSS var() function](/en-US/docs/Web/CSS/Reference/Values/var).
+The [&lt;dashed-ident&gt;](/en-US/docs/Web/CSS/Reference/Values/dashed-ident) is a user defined identifier, that while it looks like a [CSS custom property](/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties) behaves in a different way and is not wrapped in a [CSS var() function](/en-US/docs/Web/CSS/Reference/Values/var).
 
 ### Descriptors
 

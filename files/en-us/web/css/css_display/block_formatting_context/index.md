@@ -235,12 +235,12 @@ In this example, we wrap the second `<div>` in an outer `<div>`, and create a ne
 ## See also
 
 - [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax/Syntax)
-- [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
-- [Inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance)
+- [Specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity)
+- [Inheritance](/en-US/docs/Web/CSS/Guides/Cascade/Inheritance)
 - [Box model](/en-US/docs/Web/CSS/Guides/Box_model/Introduction)
 - [Layout modes](/en-US/docs/Glossary/Layout_mode)
 - [Visual formatting models](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model)
 - [Margin collapsing](/en-US/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
-- [Initial](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value), [computed](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value), [used values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#used_value), and [actual](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#actual_value) values
+- [Initial](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#initial_value), [computed](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#computed_value), [used values](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#used_value), and [actual](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#actual_value) values
 - [Value definition syntax](/en-US/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
 - {{glossary("Replaced elements")}}

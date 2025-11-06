@@ -38,7 +38,7 @@ These types include keywords and identifiers as well as strings, and URLs.
 - {{cssxref("&lt;custom-ident&gt;")}}
   - : A user-defined identifier, for example the name assigned using the {{cssxref("grid-area")}} property.
 - {{cssxref("&lt;dashed-ident&gt;")}}
-  - : A `<custom-ident>` with the additional restriction that it must start with two dashes, for example, with [CSS Custom Properties](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties).
+  - : A `<custom-ident>` with the additional restriction that it must start with two dashes, for example, with [CSS Custom Properties](/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties).
 - {{cssxref("&lt;string&gt;")}}
   - : A quoted string, such as used for a value of the {{cssxref("content")}} property.
 - {{cssxref("url_value", "&lt;url&gt;")}}
@@ -91,7 +91,7 @@ Some CSS properties can take a {{cssxref("&lt;dimension&gt;")}} or a {{cssxref("
 
 ## Color
 
-The [CSS color](/en-US/docs/Web/CSS/CSS_colors) module defines the {{cssxref("&lt;color&gt;")}} data type, and other types which relate to color in CSS.
+The [CSS color](/en-US/docs/Web/CSS/Guides/Colors) module defines the {{cssxref("&lt;color&gt;")}} data type, and other types which relate to color in CSS.
 
 - {{cssxref("&lt;color&gt;")}}
   - : Specified as a keyword or a numerical color value.

@@ -348,7 +348,7 @@ body {
 
 ## See also
 
-- [Using feature queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)
+- [Using feature queries](/en-US/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries)
 - [CSS at-rule functions](/en-US/docs/Web/CSS/Reference/At-rules/At-rule_functions)
 - {{DOMxRef("CSSSupportsRule")}}
 - {{DOMxref("CSS.supports_static", "CSS.supports()")}} method

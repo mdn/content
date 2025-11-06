@@ -17,7 +17,7 @@ Other common examples include increasing the font size and hiding navigation men
 
 In [CSS](/en-US/docs/Web/CSS), use the {{cssxref("@media")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rules) to conditionally apply part of a style sheet based on the result of a media query. To conditionally apply an entire style sheet, use {{cssxref("@import")}}.
 
-When designing reusable HTML components, you may also use [container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries), which allow you to apply styles based on the size of a containing element rather than the viewport or other device characteristics.
+When designing reusable HTML components, you may also use [container queries](/en-US/docs/Web/CSS/Guides/Containment/Container_queries), which allow you to apply styles based on the size of a containing element rather than the viewport or other device characteristics.
 
 ## Reference
 
@@ -99,13 +99,13 @@ The CSS media queries level 5 module also introduces the `environment-blending`,
 
 ## Related concepts
 
-- [CSS containment](/en-US/docs/Web/CSS/CSS_containment) module
+- [CSS containment](/en-US/docs/Web/CSS/Guides/Containment) module
   - {{cssxref("@container")}} at-rule
-  - [Using container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries)
-  - [Using size and style container queries](/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries)
-- [CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules) module
+  - [Using container queries](/en-US/docs/Web/CSS/Guides/Containment/Container_queries)
+  - [Using size and style container queries](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries)
+- [CSS conditional rules](/en-US/docs/Web/CSS/Guides/Conditional_rules) module
   - {{cssxref("@supports")}} at-rule
-  - [Using feature queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)
+  - [Using feature queries](/en-US/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries)
 - [CSS environment variables](/en-US/docs/Web/CSS/CSS_environment_variables)
   - {{cssxref("env()")}} function
 - [CSS paged media](/en-US/docs/Web/CSS/CSS_paged_media) module
@@ -132,7 +132,7 @@ The CSS media queries level 5 module also introduces the `environment-blending`,
 
 ## See also
 
-- [Container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries)
+- [Container queries](/en-US/docs/Web/CSS/Guides/Containment/Container_queries)
 - [Using the `srcset` and `sizes` attributes](/en-US/docs/Web/HTML/Reference/Elements/img#using_the_srcset_and_sizes_attributes)
 - [CSS paged media](/en-US/docs/Web/CSS/CSS_paged_media)
 - Use {{cssxref("@supports")}} to apply styles that depend on browser support for various CSS technologies.

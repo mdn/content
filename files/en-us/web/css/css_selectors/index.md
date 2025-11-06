@@ -6,7 +6,7 @@ spec-urls: https://drafts.csswg.org/selectors/
 sidebar: cssref
 ---
 
-The **CSS selectors** module defines the patterns to select elements to which a set of CSS rules are then applied along with their [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity). The CSS selectors module provides us with more than 60 selectors and five combinators. [Other modules](#related_concepts) provide additional pseudo-class selectors and pseudo-elements.
+The **CSS selectors** module defines the patterns to select elements to which a set of CSS rules are then applied along with their [specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity). The CSS selectors module provides us with more than 60 selectors and five combinators. [Other modules](#related_concepts) provide additional pseudo-class selectors and pseudo-elements.
 
 In CSS, selectors are patterns used to match, or select, the elements you want to style. Selectors are also used in JavaScript to enable selecting the DOM nodes to return as a [`NodeList`](/en-US/docs/Web/API/NodeList).
 
@@ -106,7 +106,7 @@ The CSS selectors module also introduces the {{CSSXref(":blank")}}, {{CSSXref(":
 - [Compound selector](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector)
 - [Complex selector](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#complex_selector)
 - [Relative selector](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#relative_selector)
-- [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
+- [Specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity)
 
 ## Guides
 
@@ -186,8 +186,8 @@ The CSS selectors module also introduces the {{CSSXref(":blank")}}, {{CSSXref(":
 - {{CSSXref("@namespace")}} at-rule
 
 - {{cssxref("important", "!important")}}
-- [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
-- [Cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade)
+- [Specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity)
+- [Cascade](/en-US/docs/Web/CSS/Guides/Cascade/Introduction)
 
 - {{domxref("Document.querySelector")}} method
 - {{domxref("Document.querySelectorAll")}} method
@@ -200,6 +200,6 @@ The CSS selectors module also introduces the {{CSSXref(":blank")}}, {{CSSXref(":
 ## See also
 
 - [CSS pseudo-element module](/en-US/docs/Web/CSS/CSS_pseudo-elements)
-- [CSS cascading and inheritance module](/en-US/docs/Web/CSS/CSS_cascade)
+- [CSS cascading and inheritance module](/en-US/docs/Web/CSS/Guides/Cascade)
 - [CSS nesting module](/en-US/docs/Web/CSS/CSS_nesting)
 - [Using shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM)

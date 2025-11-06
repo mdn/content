@@ -58,7 +58,7 @@ This module defines the overscroll behavior, enabling you to specify the actions
   - {{cssxref("scroll-snap-stop")}} property
   - {{cssxref("scroll-snap-align")}} property
 
-- [CSSOM view](/en-US/docs/Web/CSS/CSSOM_view) module:
+- [CSSOM view](/en-US/docs/Web/CSS/Guides/CSSOM_view) module:
   - {{domxref("Element.getBoundingClientRect()")}} method
   - {{domxref("Element.scroll()")}} method
   - {{domxref("Element.scrollBy()")}} method

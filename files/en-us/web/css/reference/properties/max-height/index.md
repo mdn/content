@@ -6,7 +6,7 @@ browser-compat: css.properties.max-height
 sidebar: cssref
 ---
 
-The **`max-height`** [CSS](/en-US/docs/Web/CSS) property sets the maximum height of an element. It prevents the [used value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#used_value) of the {{cssxref("height")}} property from becoming larger than the value specified for `max-height`.
+The **`max-height`** [CSS](/en-US/docs/Web/CSS) property sets the maximum height of an element. It prevents the [used value](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#used_value) of the {{cssxref("height")}} property from becoming larger than the value specified for `max-height`.
 
 {{InteractiveExample("CSS Demo: max-height")}}
 

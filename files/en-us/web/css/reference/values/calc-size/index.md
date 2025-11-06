@@ -67,7 +67,7 @@ The first `calc-size()` argument can be one of the following intrinsic values:
 
 There are also a few special values that this argument can take:
 
-- A nested `calc-size()` value. This isn't something you'd be likely to do very often, but it is available ensuring using a [CSS variable](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) as the `<calc-size-basis>` will always work, provided the variable is a valid value for the property `calc-size()` is being set on. So for example, this will work:
+- A nested `calc-size()` value. This isn't something you'd be likely to do very often, but it is available ensuring using a [CSS variable](/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties) as the `<calc-size-basis>` will always work, provided the variable is a valid value for the property `calc-size()` is being set on. So for example, this will work:
 
   ```css
   section {

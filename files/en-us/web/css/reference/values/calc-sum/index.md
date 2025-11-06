@@ -28,7 +28,7 @@ The operands in the expression may be any {{cssxref("&lt;length&gt;")}} syntax v
 
 The two operands' types must be consistent. For lengths, you can't use `0` to mean `0px` (or another length unit). Instead, you must add an explicit unit: `margin-top: calc(0px + 20px);` is valid, while `margin-top: calc(0 + 20px);` is invalid. Percentage value types are resolved based on the context. For example, `margin-top: calc(50% + 20px);` is valid because `margin-top` resolves percentages to lengths.
 
-Including [CSS variables](/en-US/docs/Web/CSS/CSS_cascading_variables) in `calc-sum` expressions is also allowed. The following code `calc(10px + var(--variable))`, is a valid expression.
+Including [CSS variables](/en-US/docs/Web/CSS/Guides/Cascading_variables) in `calc-sum` expressions is also allowed. The following code `calc(10px + var(--variable))`, is a valid expression.
 
 The `+` and `-` operators **must be surrounded by {{Glossary("whitespace")}}**. For instance, `calc(50% -8px)` will be parsed as "a percentage followed by a negative length" — which is an invalid expression — while `calc(50% - 8px)` is "a percentage followed by a subtraction operator and a length". Likewise, `calc(8px + -50%)` is treated as "a length followed by an addition operator and a negative percentage".
 

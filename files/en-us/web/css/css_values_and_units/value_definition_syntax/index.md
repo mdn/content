@@ -103,7 +103,7 @@ But not:
 
 ### Double bar
 
-Separating two or more components by a _double bar_, `||`, means that all entities are options: **at least one must be present, and they may appear in any order**. Typically this is used to define the different values of a [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties).
+Separating two or more components by a _double bar_, `||`, means that all entities are options: **at least one must be present, and they may appear in any order**. Typically this is used to define the different values of a [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties).
 
 {{CSSSyntaxRaw(`example = <number> || <length> || <color>`)}}
 
@@ -416,17 +416,17 @@ Here are some more examples:
 - CSS key concepts:
   - [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax/Syntax)
   - [Comments](/en-US/docs/Web/CSS/CSS_syntax/Comments)
-  - [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
-  - [Inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance)
+  - [Specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity)
+  - [Inheritance](/en-US/docs/Web/CSS/Guides/Cascade/Inheritance)
   - [Box model](/en-US/docs/Web/CSS/Guides/Box_model/Introduction)
   - [Layout modes](/en-US/docs/Glossary/Layout_mode)
   - [Visual formatting model](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model)
   - [Margin collapsing](/en-US/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
   - Values
-    - [Initial values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value)
-    - [Computed values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value)
-    - [Used values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#used_value)
-    - [Actual values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#actual_value)
+    - [Initial values](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#initial_value)
+    - [Computed values](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#computed_value)
+    - [Used values](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#used_value)
+    - [Actual values](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#actual_value)
   - **Value definition syntax**
-  - [Shorthand properties](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties)
+  - [Shorthand properties](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties)
   - {{glossary("Replaced elements")}}

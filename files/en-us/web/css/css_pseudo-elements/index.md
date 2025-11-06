@@ -113,7 +113,7 @@ The specification also defines the `::details-content` and `::search-text` pseud
 
 ## See also
 
-- [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
+- [Specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity)
 - [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module
 - [CSS shadow-parts](/en-US/docs/Web/CSS/CSS_shadow_parts) module
 - [CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content) module

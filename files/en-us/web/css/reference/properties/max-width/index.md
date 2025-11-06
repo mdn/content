@@ -6,7 +6,7 @@ browser-compat: css.properties.max-width
 sidebar: cssref
 ---
 
-The **`max-width`** [CSS](/en-US/docs/Web/CSS) property sets the maximum width of an element. It prevents the [used value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#used_value) of the {{cssxref("width")}} property from becoming larger than the value specified by `max-width`.
+The **`max-width`** [CSS](/en-US/docs/Web/CSS) property sets the maximum width of an element. It prevents the [used value](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#used_value) of the {{cssxref("width")}} property from becoming larger than the value specified by `max-width`.
 
 {{InteractiveExample("CSS Demo: max-width")}}
 

@@ -201,6 +201,6 @@ The title in the card section should double in size as the width of the page goe
 ## See also
 
 - CSS {{cssxref("container-name")}}, {{cssxref("container-type")}}, and {{cssxref("container")}} shorthand properties
-- [CSS containment module](/en-US/docs/Web/CSS/CSS_containment)
-- [Container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries)
-- [Using container size and style queries](/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries)
+- [CSS containment module](/en-US/docs/Web/CSS/Guides/Containment)
+- [Container queries](/en-US/docs/Web/CSS/Guides/Containment/Container_queries)
+- [Using container size and style queries](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries)

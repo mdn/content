@@ -22,7 +22,7 @@ A stacking context is formed, anywhere in the document, by any element in the fo
 - Root element of the document (`<html>`).
 - Element with a {{cssxref("position")}} value `absolute` or `relative` and {{cssxref("z-index")}} value other than `auto`.
 - Element with a {{cssxref("position")}} value `fixed` or `sticky`.
-- Element with a {{cssxref("container-type")}} value `size` or `inline-size` set (See [container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries)).
+- Element with a {{cssxref("container-type")}} value `size` or `inline-size` set (See [container queries](/en-US/docs/Web/CSS/Guides/Containment/Container_queries)).
 - Element that is a [flex item](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) with a {{cssxref("z-index")}} value other than `auto`.
 - Element that is a [grid item]() with {{cssxref("z-index")}} value other than `auto`.
 - Element with an {{cssxref("opacity")}} value less than `1`.

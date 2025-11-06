@@ -160,7 +160,7 @@ The other three declarations use the light, bold, and extra-bold versions of the
 - the bold font is associated with the range 500-700
 - the extra-bold font is associated with the range 700-1000
 
-The CSS [cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade) ensures that the three latter declarations override parts of the range that was set in the `FiraSans-Regular` declaration.
+The CSS [cascade](/en-US/docs/Web/CSS/Guides/Cascade/Introduction) ensures that the three latter declarations override parts of the range that was set in the `FiraSans-Regular` declaration.
 
 ```css
 @font-face {

@@ -65,7 +65,7 @@ To specify the starting values of the popover's properties that will be animated
 ```
 
 > [!NOTE]
-> The `@starting-style` at-rule and the "original rule" have the same [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity). To ensure that starting styles get applied, include the `@starting-style` at-rule _after_ the "original rule". If you specify the `@starting-style` at-rule before the "original rule", the original styles will override the starting styles.
+> The `@starting-style` at-rule and the "original rule" have the same [specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity). To ensure that starting styles get applied, include the `@starting-style` at-rule _after_ the "original rule". If you specify the `@starting-style` at-rule before the "original rule", the original styles will override the starting styles.
 
 To specify the starting style for the popover using the nested method, you can nest the `@starting-style` block inside the "original rule":
 

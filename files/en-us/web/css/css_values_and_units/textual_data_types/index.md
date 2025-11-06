@@ -95,4 +95,4 @@ The parameter for `url()` can be either quoted or unquoted. If unquoted, it is p
 - [CSS data types](/en-US/docs/Web/CSS/Reference/Values/Data_types)
 - [CSS values and units](/en-US/docs/Web/CSS/CSS_values_and_units) module
 - [Learn: Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
-- [CSS cascade and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module
+- [CSS cascade and inheritance](/en-US/docs/Web/CSS/Guides/Cascade) module

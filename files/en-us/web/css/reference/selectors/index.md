@@ -54,4 +54,4 @@ Check the [pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classe
 - [Selectors and combinators](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators)
 - [CSS pseudo-elements](/en-US/docs/Web/CSS/CSS_pseudo-elements) module
 - [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting) module
-- [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
+- [Specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity)

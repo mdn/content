@@ -128,5 +128,5 @@ The output looks like this:
 - {{cssxref("font-palette")}}
 - {{cssxref("@font-palette-values", "@font-palette-values")}}
 - {{cssxref("color_value/color-mix", "color-mix()")}}
-- [CSS color values](/en-US/docs/Web/CSS/CSS_colors/Color_values) guide
+- [CSS color values](/en-US/docs/Web/CSS/Guides/Colors/Color_values) guide
 - {{glossary("Color space")}}

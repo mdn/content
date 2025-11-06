@@ -55,25 +55,25 @@ This module doesn't define any properties, [data types](/en-US/docs/Web/CSS/Refe
 
 [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module:
 
-- [CSS specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
+- [CSS specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity)
 
-[CSS cascading and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module:
+[CSS cascading and inheritance](/en-US/docs/Web/CSS/Guides/Cascade) module:
 
 - {{cssxref("@import")}} at-rule
 - {{cssxref("important")}} flag
-- [Initial values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value)
-- [Computed values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value)
-- [Used values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#used_value)
-- [Actual values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#actual_value)
-- [CSS inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance)
+- [Initial values](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#initial_value)
+- [Computed values](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#computed_value)
+- [Used values](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#used_value)
+- [Actual values](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#actual_value)
+- [CSS inheritance](/en-US/docs/Web/CSS/Guides/Cascade/Inheritance)
 - {{Glossary("Property/CSS", "CSS property")}}
 
-[CSS custom properties for cascading variables](/en-US/docs/Web/CSS/CSS_cascading_variables) module:
+[CSS custom properties for cascading variables](/en-US/docs/Web/CSS/Guides/Cascading_variables) module:
 
 - [custom property (`--*`)](/en-US/docs/Web/CSS/Reference/Properties/--*)
 - {{cssxref("var")}} function
 
-[CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules) module:
+[CSS conditional rules](/en-US/docs/Web/CSS/Guides/Conditional_rules) module:
 
 - {{cssxref("@media")}} at-rule
 - {{cssxref("@supports")}} at-rule

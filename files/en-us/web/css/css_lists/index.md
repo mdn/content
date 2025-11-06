@@ -10,7 +10,7 @@ The **CSS lists and counters** module enables styling and positioning of list it
 
 A list item's marker, whether a bullet symbol or ordinal counter, is its defining feature. List items are not limited to {{HTMLElement("li")}} elements nested within {{HTMLElement("ol")}} or {{HTMLElement("ul")}} elements. Rather, list items are any element with `display: list-item` set.
 
-This module defines CSS features to set and reset a list's counters, set which [counter-styles](/en-US/docs/Web/CSS/CSS_counter_styles) or symbols to use as its markers, and position those markers. It also provides developers with the ability to create customized markers.
+This module defines CSS features to set and reset a list's counters, set which [counter-styles](/en-US/docs/Web/CSS/Guides/Counter_styles) or symbols to use as its markers, and position those markers. It also provides developers with the ability to create customized markers.
 
 ## Reference
 
@@ -46,12 +46,12 @@ There is also a `marker-side` property, which is yet to be fully defined or impl
 - [Consistent list indentation](/en-US/docs/Web/CSS/CSS_lists/Consistent_list_indentation)
   - : Explains how to achieve consistent list indentation across different browsers.
 
-- [Using CSS Counters](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
+- [Using CSS Counters](/en-US/docs/Web/CSS/Guides/Counter_styles/Using_counters)
   - : Explains how to use the CSS counter properties to control list counters.
 
 ## Related concepts
 
-- [CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles)
+- [CSS counter styles](/en-US/docs/Web/CSS/Guides/Counter_styles)
   - {{cssxref("@counter-style")}} at-rule
   - [`<counter-style-name>`](/en-US/docs/Web/CSS/Reference/At-rules/@counter-style#counter-style-name) data type
   - [`<symbol>`](/en-US/docs/Web/CSS/Reference/At-rules/@counter-style/symbols#values) data type
@@ -67,6 +67,6 @@ There is also a `marker-side` property, which is yet to be fully defined or impl
 
 ## See also
 
-- [CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles) module
+- [CSS counter styles](/en-US/docs/Web/CSS/Guides/Counter_styles) module
 - [CSS pseudo-elements](/en-US/docs/Web/CSS/CSS_pseudo-elements) module
 - [CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content) module

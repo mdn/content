@@ -67,4 +67,4 @@ Currently, no browsers support this feature.
 
 ## See also
 
-- [CSS colors](/en-US/docs/Web/CSS/CSS_colors) module
+- [CSS colors](/en-US/docs/Web/CSS/Guides/Colors) module

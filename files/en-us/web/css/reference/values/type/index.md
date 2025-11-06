@@ -13,7 +13,7 @@ sidebar: cssref
 The **`type()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) allows you to specify a particular data type, and is used by the following CSS features:
 
 - The {{cssxref("attr()")}} function, to specify the data type that an attribute value should be parsed into.
-- The {{cssxref("@function")}} at-rule, to specify the permitted data types for [CSS custom function](/en-US/docs/Web/CSS/CSS_custom_functions_and_mixins/Using_custom_functions) parameters and results.
+- The {{cssxref("@function")}} at-rule, to specify the permitted data types for [CSS custom function](/en-US/docs/Web/CSS/Guides/Custom_functions_and_mixins/Using_custom_functions) parameters and results.
 
 > [!NOTE]
 > The {{cssxref("@property")}} at-rule {{cssxref("@property/syntax", "syntax")}} descriptor value uses the same `<syntax>` to define the permitted data types for registered [custom properties](/en-US/docs/Web/CSS/Reference/Properties/--*), however, this always takes the form of a string.
@@ -128,7 +128,7 @@ You can use the `|` token as a separator when specifying a range of permitted da
 - `type(red | green)`
 - `type(<length> | auto)`
 
-The following example shows how a {{cssxref("@function")}} at-rule can be used to define a [custom function](/en-US/docs/Web/CSS/CSS_custom_functions_and_mixins/Using_custom_functions) that takes two color parameters, and returns the first one unless the viewport width is less than `700px`, in which case it returns the second one. The first one is allowed to be `red` or `green`, while the second one has to be `blue`.
+The following example shows how a {{cssxref("@function")}} at-rule can be used to define a [custom function](/en-US/docs/Web/CSS/Guides/Custom_functions_and_mixins/Using_custom_functions) that takes two color parameters, and returns the first one unless the viewport width is less than `700px`, in which case it returns the second one. The first one is allowed to be `red` or `green`, while the second one has to be `blue`.
 
 ```css
 @function --color-choice(--color1 type(red | green), --color2 blue) {
@@ -211,4 +211,4 @@ section::after {
 
 - {{cssxref("@function")}} at-rule
 - {{cssxref("attr()")}} function
-- [Using CSS custom functions](/en-US/docs/Web/CSS/CSS_custom_functions_and_mixins/Using_custom_functions)
+- [Using CSS custom functions](/en-US/docs/Web/CSS/Guides/Custom_functions_and_mixins/Using_custom_functions)

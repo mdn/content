@@ -116,8 +116,8 @@ The CSS writing module addresses the orientations of all writing modes. Other mo
 - [CSS fonts](/en-US/docs/Web/CSS/CSS_fonts) module
 - [CSS ruby layout](/en-US/docs/Web/CSS/CSS_ruby_layout) module
 - [CSS text decoration](/en-US/docs/Web/CSS/CSS_text_decoration) module
-- [CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles) module
+- [CSS counter styles](/en-US/docs/Web/CSS/Guides/Counter_styles) module
 - [CSS lists](/en-US/docs/Web/CSS/CSS_lists) module
-- [CSS containment](/en-US/docs/Web/CSS/CSS_containment) module: {{CSSxRef("contain-intrinsic-block-size")}} and {{CSSxRef("contain-intrinsic-inline-size")}}
+- [CSS containment](/en-US/docs/Web/CSS/Guides/Containment) module: {{CSSxRef("contain-intrinsic-block-size")}} and {{CSSxRef("contain-intrinsic-inline-size")}}
 - [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module: {{CSSxRef("overflow-block")}} and {{CSSxRef("overflow-inline")}}
 - [CSS overscroll behavior](/en-US/docs/Web/CSS/CSS_overscroll_behavior) module: {{CSSxRef("overscroll-behavior-block")}} and {{CSSxRef("overscroll-behavior-inline")}}

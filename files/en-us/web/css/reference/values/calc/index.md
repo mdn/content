@@ -119,9 +119,9 @@ For a full explanation of typed arithmetic in CSS, along with examples, see [Usi
 
 ### Support for computing color channels in relative colors
 
-The `calc()` function can be used to manipulate color channels directly within the context of [relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors). This allows for dynamic adjustments of color channels in color models such as [`rgb()`](/en-US/docs/Web/CSS/Reference/Values/color_value/rgb), [`hsl()`](/en-US/docs/Web/CSS/Reference/Values/color_value/hsl), and [`lch()`](/en-US/docs/Web/CSS/Reference/Values/color_value/lch).
+The `calc()` function can be used to manipulate color channels directly within the context of [relative colors](/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors). This allows for dynamic adjustments of color channels in color models such as [`rgb()`](/en-US/docs/Web/CSS/Reference/Values/color_value/rgb), [`hsl()`](/en-US/docs/Web/CSS/Reference/Values/color_value/hsl), and [`lch()`](/en-US/docs/Web/CSS/Reference/Values/color_value/lch).
 
-The relative color syntax defines several color-channel keywords, each of which represents the value of the color channel as a {{cssxref("&lt;number&gt;")}} (see [Channel values resolve to `<number>` values](/en-US/docs/Web/CSS/CSS_colors/Relative_colors#channel_values_resolve_to_number_values) for more information). The `calc()` function can use these color-channel keywords to perform dynamic adjustments on the color channels, for example, `calc(r + 10)`.
+The relative color syntax defines several color-channel keywords, each of which represents the value of the color channel as a {{cssxref("&lt;number&gt;")}} (see [Channel values resolve to `<number>` values](/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors#channel_values_resolve_to_number_values) for more information). The `calc()` function can use these color-channel keywords to perform dynamic adjustments on the color channels, for example, `calc(r + 10)`.
 
 ## Formal syntax
 
@@ -203,7 +203,7 @@ Here, the form itself is established to use 1/6 of the available window width. T
 
 ### Nesting with CSS variables
 
-You can use `calc()` with [CSS variables](/en-US/docs/Web/CSS/CSS_cascading_variables). Consider the following code:
+You can use `calc()` with [CSS variables](/en-US/docs/Web/CSS/Guides/Cascading_variables). Consider the following code:
 
 ```css
 .foo {
@@ -218,7 +218,7 @@ After all variables are expanded, `--width-c`'s value will be `calc(calc(100px /
 
 ### Adjusting color channels in relative colors
 
-The `calc()` function can be used to adjust individual color channels in [relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors) without the need for storing color channel values as variables.
+The `calc()` function can be used to adjust individual color channels in [relative colors](/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors) without the need for storing color channel values as variables.
 
 In the example below, the first paragraph uses a [`<named-color>`](/en-US/docs/Web/CSS/Reference/Values/named-color).
 In the paragraphs that follow, `calc()` is used with the [`rgb()`](/en-US/docs/Web/CSS/Reference/Values/color_value/rgb) and [`hsl()`](/en-US/docs/Web/CSS/Reference/Values/color_value/hsl) functions to adjust the values of each color channel relative to the original named color.
@@ -257,7 +257,7 @@ p {
 
 {{EmbedLiveSample('Adjusting color channels in relative colors', '700', '300')}}
 
-For another example of using the `calc()` function to derive relative colors, see the [Using math functions](/en-US/docs/Web/CSS/CSS_colors/Relative_colors#using_math_functions) section on the _Using relative colors_ page.
+For another example of using the `calc()` function to derive relative colors, see the [Using math functions](/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors#using_math_functions) section on the _Using relative colors_ page.
 
 ## Specifications
 

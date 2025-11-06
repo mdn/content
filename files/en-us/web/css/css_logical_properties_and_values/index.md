@@ -156,7 +156,7 @@ CSS was initially designed with only physical coordinates. The logical propertie
 - {{CSSxRef("text-orientation")}}
 - {{CSSxRef("writing-mode")}}
 
-[CSS containment](/en-US/docs/Web/CSS/CSS_containment)
+[CSS containment](/en-US/docs/Web/CSS/Guides/Containment)
 
 - {{CSSxRef("contain-intrinsic-block-size")}}
 - {{CSSxRef("contain-intrinsic-inline-size")}}

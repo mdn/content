@@ -176,4 +176,4 @@ It is often more convenient to use the shorthand {{cssxref("list-style")}}.
 - {{Cssxref("list-style-image")}} property
 - {{cssxref("::marker")}} pseudo-element
 - [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
-- [CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles) module
+- [CSS counter styles](/en-US/docs/Web/CSS/Guides/Counter_styles) module

@@ -280,5 +280,5 @@ function sepia() {
 
 ## See also
 
-- Properties in the [CSS compositing and blending](/en-US/docs/Web/CSS/CSS_compositing_and_blending) module enable blending an element's background layers together and blending an element with its container
+- Properties in the [CSS compositing and blending](/en-US/docs/Web/CSS/Guides/Compositing_and_blending) module enable blending an element's background layers together and blending an element with its container
 - The SVG {{SVGElement("filter")}} element and the SVG filter primitives: {{SVGElement("feSpotLight")}}, {{SVGElement("feBlend")}}, {{SVGElement("feColorMatrix")}}, {{SVGElement("feComponentTransfer")}}, {{SVGElement("feComposite")}}, {{SVGElement("feConvolveMatrix")}}, {{SVGElement("feDiffuseLighting")}}, {{SVGElement("feDisplacementMap")}}, {{SVGElement("feDropShadow")}}, {{SVGElement("feFlood")}}, {{SVGElement("feGaussianBlur")}}, {{SVGElement("feImage")}}, {{SVGElement("feMerge")}}, {{SVGElement("feMorphology")}}, {{SVGElement("feOffset")}}, {{SVGElement("feSpecularLighting")}}, {{SVGElement("feTile")}}, {{SVGElement("feTurbulence")}}

@@ -6,7 +6,7 @@ browser-compat: mathml.global_attributes.scriptlevel
 sidebar: mathmlref
 ---
 
-The **`scriptlevel`** [global attribute](/en-US/docs/Web/MathML/Reference/Global_attributes) sets the [math-depth](/en-US/docs/Web/CSS/Reference/Properties/math-depth) of a MathML element. It allows overriding rules from the [user agent stylesheet](/en-US/docs/Web/CSS/CSS_cascade/Cascade#user-agent_stylesheets) that define automatic calculation of [font-size](/en-US/docs/Web/CSS/Reference/Properties/font-size) within MathML formulas.
+The **`scriptlevel`** [global attribute](/en-US/docs/Web/MathML/Reference/Global_attributes) sets the [math-depth](/en-US/docs/Web/CSS/Reference/Properties/math-depth) of a MathML element. It allows overriding rules from the [user agent stylesheet](/en-US/docs/Web/CSS/Guides/Cascade/Introduction#user-agent_stylesheets) that define automatic calculation of [font-size](/en-US/docs/Web/CSS/Reference/Properties/font-size) within MathML formulas.
 
 ## Syntax
 

@@ -29,9 +29,9 @@ Statement at-rules end in a semicolon. There are several statement at-rules, des
 - {{cssxref("@charset")}}
   - : An algorithm (has the syntactic form of an at-rule, but isn't a definition) that determines the fallback character set used by the style sheet ([CSS Syntax](/en-US/docs/Web/CSS/CSS_syntax)).
 - {{cssxref("@import")}}
-  - : Tells the CSS engine to include an external style sheet ([CSS cascading and inheritance](/en-US/docs/Web/CSS/CSS_cascade)).
+  - : Tells the CSS engine to include an external style sheet ([CSS cascading and inheritance](/en-US/docs/Web/CSS/Guides/Cascade)).
 - {{cssxref("@layer")}}
-  - : Defines the order of precedence in case of multiple cascade layers ([CSS cascading and inheritance](/en-US/docs/Web/CSS/CSS_cascade)). Also used as a [block at-rule](#layer_2) to define a layer's styles.
+  - : Defines the order of precedence in case of multiple cascade layers ([CSS cascading and inheritance](/en-US/docs/Web/CSS/Guides/Cascade)). Also used as a [block at-rule](#layer_2) to define a layer's styles.
 - {{cssxref("@namespace")}}
   - : Defines a default namespace for a style sheet or a namespace prefix that a selector only matches if the namespace and other selector components match ([CSS namespaces](/en-US/docs/Web/CSS/CSS_namespaces)).
 
@@ -45,9 +45,9 @@ Statement at-rules end in a semicolon. There are several statement at-rules, des
 Block at-rules end in a `{}`-block that contain nested rules, other at-rules, or property or descriptor declarations.
 
 - {{cssxref("@counter-style")}}
-  - : Define custom counter styles and extend predefined list styles ([CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles)).
+  - : Define custom counter styles and extend predefined list styles ([CSS counter styles](/en-US/docs/Web/CSS/Guides/Counter_styles)).
 - {{cssxref("@container")}}
-  - : A conditional group rule that applies its content if the container meets the [`<container-condition>`](/en-US/docs/Web/CSS/Reference/At-rules/@container#container-condition)s ([CSS containment](/en-US/docs/Web/CSS/CSS_containment)).
+  - : A conditional group rule that applies its content if the container meets the [`<container-condition>`](/en-US/docs/Web/CSS/Reference/At-rules/@container#container-condition)s ([CSS containment](/en-US/docs/Web/CSS/Guides/Containment)).
 - {{cssxref("@font-face")}}
   - : Defines font resource locations, both local and external, along with the style characteristics for when those resources are used with a declared {{cssxref("font-family")}} ([CSS fonts](/en-US/docs/Web/CSS/CSS_fonts)).
 - {{cssxref("@font-feature-values")}} (plus `@swash`, `@ornaments`, `@annotation`, `@stylistic`, `@styleset` and `@character-variant`)
@@ -55,21 +55,21 @@ Block at-rules end in a `{}`-block that contain nested rules, other at-rules, or
 - {{cssxref("@keyframes")}} (and the `@-webkit-keyframes` alias)
   - : Define a named animation by describing defining CSS styles for intermediate steps (or keyframes) in the animation sequence ([CSS animations](/en-US/docs/Web/CSS/Guides/Animations)).
 - {{cssxref("@layer")}}
-  - : Creates a named cascade layer with the CSS rules for that layer inside ([CSS cascading and inheritance](/en-US/docs/Web/CSS/CSS_cascade)). Also used as a [statement at-rule](#layer) to define the order of precedence in case of multiple cascade layers
+  - : Creates a named cascade layer with the CSS rules for that layer inside ([CSS cascading and inheritance](/en-US/docs/Web/CSS/Guides/Cascade)). Also used as a [statement at-rule](#layer) to define the order of precedence in case of multiple cascade layers
 - {{cssxref("@media")}}
-  - : A conditional group rule that applies its content if the device meets the criteria of the condition defined using a _media query_ ([CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules)).
+  - : A conditional group rule that applies its content if the device meets the criteria of the condition defined using a _media query_ ([CSS conditional rules](/en-US/docs/Web/CSS/Guides/Conditional_rules)).
 - {{cssxref("@page")}}
   - : Specifies aspects of a page to be printed, such as its dimensions, orientation, and margins ([CSS paged media](/en-US/docs/Web/CSS/CSS_paged_media)).
 - {{cssxref("@position-try")}}
   - : Defines custom position options which can be used to define fallback positioning and alignment options for anchor-positioned elements ([CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning)).
 - {{cssxref("@property")}}
-  - : Defines a [CSS custom property](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties), allowing for property type checking and constraining, setting default values, and defining whether a custom property can inherit values or not ([CSS custom properties for cascading variables](/en-US/docs/Web/CSS/CSS_cascading_variables)).
+  - : Defines a [CSS custom property](/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties), allowing for property type checking and constraining, setting default values, and defining whether a custom property can inherit values or not ([CSS custom properties for cascading variables](/en-US/docs/Web/CSS/Guides/Cascading_variables)).
 - {{cssxref("@scope")}}
-  - : Defines a scope in which to apply them to selected elements and the styles to apply to the elements in that scope ([CSS cascading and inheritance](/en-US/docs/Web/CSS/CSS_cascade)).
+  - : Defines a scope in which to apply them to selected elements and the styles to apply to the elements in that scope ([CSS cascading and inheritance](/en-US/docs/Web/CSS/Guides/Cascade)).
 - {{cssxref("@starting-style")}}
   - : Define the starting property values for an element to transition from when the element receives its first style update, such as when transitioning from `display: none` ([CSS transitions](/en-US/docs/Web/CSS/CSS_transitions)).
 - {{cssxref("@supports")}}
-  - : A conditional group rule applies its content if the browser supports the CSS features of the given condition ([CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules)).
+  - : A conditional group rule applies its content if the browser supports the CSS features of the given condition ([CSS conditional rules](/en-US/docs/Web/CSS/Guides/Conditional_rules)).
 - {{cssxref("@view-transition")}}
   - : Opts the current document into a [view transition](/en-US/docs/Web/API/View_Transition_API), and the destination document as well in the case of cross-document navigation transitions.
 
@@ -84,7 +84,7 @@ Block at-rules end in a `{}`-block that contain nested rules, other at-rules, or
 - [Nesting at-rules](/en-US/docs/Web/CSS/CSS_nesting/Nesting_at-rules)
 - [CSS statements](/en-US/docs/Web/CSS/CSS_syntax/Syntax#css_statements)
 - [CSSRule](/en-US/docs/Web/API/CSSRule) interface
-- [CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules) module
+- [CSS conditional rules](/en-US/docs/Web/CSS/Guides/Conditional_rules) module
 - [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax/Syntax) module
-- [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
-- [Inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance)
+- [Specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity)
+- [Inheritance](/en-US/docs/Web/CSS/Guides/Cascade/Inheritance)

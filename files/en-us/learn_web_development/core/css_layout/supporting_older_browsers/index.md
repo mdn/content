@@ -158,5 +158,5 @@ Now that you have worked through our articles on CSS layout, it's time to test y
 
 - [`@supports`](/en-US/docs/Web/CSS/Reference/At-rules/@supports) at-rule
 - [CSS at-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rules)
-- [Using feature queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)
-- [CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules) module
+- [Using feature queries](/en-US/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries)
+- [CSS conditional rules](/en-US/docs/Web/CSS/Guides/Conditional_rules) module

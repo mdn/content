@@ -7,11 +7,11 @@ sidebar: cssref
 ---
 
 The **CSS properties and values API** module defines a method for registering new CSS properties, defining the property's data type, inheritance behavior, and, optionally, an initial value.
-This API expands on [CSS custom properties for cascading variables](/en-US/docs/Web/CSS/CSS_cascading_variables) module, which allows authors to define custom properties in CSS using [two dash syntax (`--`)](/en-US/docs/Web/CSS/Reference/Properties/--*).
+This API expands on [CSS custom properties for cascading variables](/en-US/docs/Web/CSS/Guides/Cascading_variables) module, which allows authors to define custom properties in CSS using [two dash syntax (`--`)](/en-US/docs/Web/CSS/Reference/Properties/--*).
 The CSS properties and values API is part of the [CSS Houdini](/en-US/docs/Web/API/Houdini_APIs) umbrella of APIs.
 
 Custom properties let you reuse values across a project to simplify complex or repetitive stylesheets.
-Basic custom properties are defined in the [CSS custom properties for cascading variables](/en-US/docs/Web/CSS/CSS_cascading_variables) module.
+Basic custom properties are defined in the [CSS custom properties for cascading variables](/en-US/docs/Web/CSS/Guides/Cascading_variables) module.
 The CSS properties and values API expands on that module, enabling adding metadata to custom properties using CSS with the [`@property`](/en-US/docs/Web/CSS/Reference/At-rules/@property) at-rule or, alternatively, using JavaScript's {{domxref('CSS/registerProperty_static', 'CSS.registerProperty')}} method.
 
 Whether registered with CSS or JavaScript, setting metadata on custom properties provides for an expected data type that the browser can use depending on the context, defines an initial value, and lets you control inheritance.
@@ -103,7 +103,7 @@ The value of `--stop-color` is set to `cornflowerblue` at first, but when you ho
 
 ## See also
 
-- [CSS cascading and inheritance](/en-US/docs/Web/CSS/CSS_cascade)
+- [CSS cascading and inheritance](/en-US/docs/Web/CSS/Guides/Cascade)
 - [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) module
 - [Using shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM)
 - [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API) module

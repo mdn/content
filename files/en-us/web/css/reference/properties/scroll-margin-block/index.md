@@ -6,7 +6,7 @@ browser-compat: css.properties.scroll-margin-block
 sidebar: cssref
 ---
 
-The `scroll-margin-block` [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) sets the scroll margins of an element in the block dimension.
+The `scroll-margin-block` [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) sets the scroll margins of an element in the block dimension.
 
 {{InteractiveExample("CSS Demo: scroll-margin-block")}}
 

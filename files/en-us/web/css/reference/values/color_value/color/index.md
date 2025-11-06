@@ -28,7 +28,7 @@ color(from #123456 xyz calc(x + 0.75) y calc(z - 0.35))
 
 ### Values
 
-Below are descriptions of the allowed values for both absolute and [relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors).
+Below are descriptions of the allowed values for both absolute and [relative colors](/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors).
 
 #### Absolute value syntax
 
@@ -382,8 +382,8 @@ The output is as follows:
 
 - {{CSSXref("color")}} property
 - [The `<color>` data type](/en-US/docs/Web/CSS/Reference/Values/color_value) for a list of all color notations
-- [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)
-- [Color_format_converter tool](/en-US/docs/Web/CSS/CSS_colors/Color_format_converter)
-- [CSS colors](/en-US/docs/Web/CSS/CSS_colors) module
+- [Using relative colors](/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors)
+- [Color_format_converter tool](/en-US/docs/Web/CSS/Guides/Colors/Color_format_converter)
+- [CSS colors](/en-US/docs/Web/CSS/Guides/Colors) module
 - [`color-gamut`](/en-US/docs/Web/CSS/Reference/At-rules/@media/color-gamut) media feature
 - [Wide Gamut Color in CSS with Display-p3](https://webkit.org/blog/10042/wide-gamut-color-in-css-with-display-p3/)

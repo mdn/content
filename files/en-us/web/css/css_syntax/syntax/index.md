@@ -70,7 +70,7 @@ Any statement which isn't a ruleset or an at-rule is invalid and ignored.
 
 ### Nested statements
 
-There is another group of statements – the **nested statements**. These are statements that can be used in a specific subset of at-rules – the _conditional group rules_. These statements only apply if a specific condition is matched: the `@media` at-rule content is applied only if the device on which the browser runs matches the expressed condition; the `@document` at-rule content is applied only if the current page matches some conditions, and so on. In CSS1 and CSS2.1, only _rulesets_ could be used inside conditional group rules. That was very restrictive and this restriction was lifted in [_CSS Conditionals Level 3_](/en-US/docs/Web/CSS/CSS_conditional_rules). Now, though still experimental and not supported by every browser, conditional group rules can contain a wider range of content: rulesets but also some, but not all, at-rules.
+There is another group of statements – the **nested statements**. These are statements that can be used in a specific subset of at-rules – the _conditional group rules_. These statements only apply if a specific condition is matched: the `@media` at-rule content is applied only if the device on which the browser runs matches the expressed condition; the `@document` at-rule content is applied only if the current page matches some conditions, and so on. In CSS1 and CSS2.1, only _rulesets_ could be used inside conditional group rules. That was very restrictive and this restriction was lifted in [_CSS Conditionals Level 3_](/en-US/docs/Web/CSS/Guides/Conditional_rules). Now, though still experimental and not supported by every browser, conditional group rules can contain a wider range of content: rulesets but also some, but not all, at-rules.
 
 ## See also
 
@@ -78,13 +78,13 @@ There is another group of statements – the **nested statements**. These are st
 - [Selectors and combinators](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators)
 - [Selector structure](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure)
 - [Error handling](/en-US/docs/Web/CSS/CSS_syntax/Error_handling)
-- [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
-- [Inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance)
-- [Cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade)
+- [Specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity)
+- [Inheritance](/en-US/docs/Web/CSS/Guides/Cascade/Inheritance)
+- [Cascade](/en-US/docs/Web/CSS/Guides/Cascade/Introduction)
 - [Value definition syntax](/en-US/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
 - Values
-  - [Initial values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value)
-  - [Computed values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value)
-  - [Used values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#used_value)
-  - [Actual values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#actual_value)
-- [Shorthand properties](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties)
+  - [Initial values](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#initial_value)
+  - [Computed values](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#computed_value)
+  - [Used values](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#used_value)
+  - [Actual values](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#actual_value)
+- [Shorthand properties](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties)

@@ -42,4 +42,4 @@ Environment variables provide values that can be used on the page based on infor
 
 - [CSS value functions](/en-US/docs/Web/CSS/Reference/Values/Functions) guide
 - [CSS properties and values API](/en-US/docs/Web/CSS/CSS_properties_and_values_API) module
-- [CSS custom properties for cascading variables](/en-US/docs/Web/CSS/CSS_cascading_variables) module
+- [CSS custom properties for cascading variables](/en-US/docs/Web/CSS/Guides/Cascading_variables) module
