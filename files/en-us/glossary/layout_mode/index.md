@@ -22,7 +22,7 @@ There are several layout modes:
   - : Designed to cause an item to position itself left or right with the rest of the content in normal flow wrapping around it.
 - **[Positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout)**
   - : Designed for positioning elements without much interaction with other elements.
-- **[Multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout)**
+- **[Multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout)**
   - : Designed for laying content out in columns as in a newspaper.
 - **[Flexible box layout](/en-US/docs/Web/CSS/Guides/Flexible_box_layout)**
   - : Designed for laying out complex pages that can be resized smoothly.

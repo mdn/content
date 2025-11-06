@@ -11,7 +11,7 @@ Feature queries are created using the CSS at-rule [`@supports`](/en-US/docs/Web/
 
 ## Syntax
 
-CSS feature queries are part of the [CSS conditional rules](/en-US/docs/Web/CSS/Guides/Conditional_rules) module, which also defines the media query [`@media`](/en-US/docs/Web/CSS/Reference/At-rules/@media) at-rule. Feature queries behave similarly to [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries). The difference is that with a media query, you are testing something about the environment in which the web page is running, whereas with feature queries you are testing browser support for CSS features.
+CSS feature queries are part of the [CSS conditional rules](/en-US/docs/Web/CSS/Guides/Conditional_rules) module, which also defines the media query [`@media`](/en-US/docs/Web/CSS/Reference/At-rules/@media) at-rule. Feature queries behave similarly to [media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using). The difference is that with a media query, you are testing something about the environment in which the web page is running, whereas with feature queries you are testing browser support for CSS features.
 
 A feature query consists of the `@supports` at-rule followed by the support condition or a `supports()` function and declaration parameter within an `@import` at-rule declaration:
 
@@ -267,6 +267,6 @@ You don't need to use feature queries to start using new CSS features; CSS error
 ## See also
 
 - [CSS conditional rules](/en-US/docs/Web/CSS/Guides/Conditional_rules) module
-- [Using CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Using CSS media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using)
 - [Supporting older browsers: feature queries](/en-US/docs/Learn_web_development/Core/CSS_layout/Supporting_Older_Browsers#feature_queries)
 - [Browser feature detection: CSS `@supports`](/en-US/docs/Learn_web_development/Extensions/Testing/Feature_detection#supports)

@@ -341,5 +341,5 @@ When laying out and styling DOM elements, the four basic math functions {{CSSxRe
 ## Final thoughts
 
 - You can use CSS math functions to create responsive user interfaces without writing any JavaScript code.
-- CSS math functions can sometimes be used instead of [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) to define layout breakpoints.
+- CSS math functions can sometimes be used instead of [CSS media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using) to define layout breakpoints.
 - In 2023, members of the Interop Project [selected "CSS Math Functions" as a focus area of improvement](https://github.com/web-platform-tests/interop/blob/main/2023/README.md#css-math-functions). This means that browser vendors are working together to ensure that CSS math functions perform the same across browsers and devices.

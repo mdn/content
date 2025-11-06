@@ -22,7 +22,7 @@ They are grouped by complexity so that you can choose the most appropriate for y
 - [Resizing background images](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Resizing_background_images)
   - : CSS allows you to resize images used as an element's background.
     This tutorial describes how to achieve this.
-- [Using media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Using media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using)
   - : The size of the screens, or the kind of devices like touchscreens or printed sheets vary greatly nowadays.
     Media queries are the fundamental building blocks in building websites that render everywhere in their best quality.
 - [Understanding CSS z-index](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)
@@ -53,7 +53,7 @@ They are easy to use for anybody with a fair knowledge of basic concepts.
 CSS also got new features allowing you to create complex layouts.
 Though the simplest way to achieve such layout, they are more complex to use for people without too much experience.
 
-- [CSS multi-column layouts](/en-US/docs/Web/CSS/CSS_multicol_layout)
+- [CSS multi-column layouts](/en-US/docs/Web/CSS/Guides/Multicol_layout)
   - : CSS3 introduces a new layout allowing you to easily define multiple columns in an element.
     Though multi-column text is not that common on devices like screens, this is particularly useful on printed pages, or for indexes.
 - [CSS flexible boxes layouts](/en-US/docs/Web/CSS/Guides/Flexible_box_layout)

@@ -84,7 +84,7 @@ Once the lines have names, we can use the name we defined, rather than the line 
 
 {{ EmbedLiveSample('Naming_lines_when_defining_a_grid', '500', '330') }}
 
-Everything else about line-based placement still works in the same way. In our grid layout, we provided each numeric line with an alias name. In our grid items, we reference a name rather than a number. Naming lines in this way is useful — when creating a responsive design, we can update the container's grid properties rather than updating the grid items within each [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries).
+Everything else about line-based placement still works in the same way. In our grid layout, we provided each numeric line with an alias name. In our grid items, we reference a name rather than a number. Naming lines in this way is useful — when creating a responsive design, we can update the container's grid properties rather than updating the grid items within each [media query](/en-US/docs/Web/CSS/Guides/Media_queries/Using).
 
 ### Giving lines multiple names
 

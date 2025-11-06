@@ -395,5 +395,5 @@ We position the `content` `<section>` absolutely so it sits over the top of the 
 
 - [CSS values and units module](/en-US/docs/Web/CSS/CSS_values_and_units)
 - [Container style queries](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#container_style_queries)
-- [Media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using)
 - [Feature queries](/en-US/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries)

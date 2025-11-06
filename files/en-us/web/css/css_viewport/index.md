@@ -43,7 +43,7 @@ The {{glossary("viewport")}} initial containing block for continuous media has t
 
 ## Related concepts
 
-- [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries) module
+- [CSS media queries](/en-US/docs/Web/CSS/Guides/Media_queries) module
   - {{cssxref("@media")}}
   - {{cssxref("@media/horizontal-viewport-segments", "horizontal-viewport-segments")}} descriptor
   - {{cssxref("@media/vertical-viewport-segments", "vertical-viewport-segments")}} descriptor

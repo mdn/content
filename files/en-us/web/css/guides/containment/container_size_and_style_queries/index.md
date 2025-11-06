@@ -7,7 +7,7 @@ sidebar: cssref
 
 [Container queries](/en-US/docs/Web/CSS/Guides/Containment/Container_queries) enable you to apply styles to elements nested within a specific container based on the features of that container. The query returns true or false depending on whether the query condition is true for the container.
 
-Container queries are similar to [media queries](/en-US/docs/Web/CSS/CSS_media_queries). The {{cssxref("@media")}} at-rule enables applying styles to elements based on viewport size or other device characteristics. Similarly, the {{cssxref("@container")}} at-rule enables applying styles to elements based on a containing element's size or other style features, rather than the viewport's. Container queries have the same syntax rules and logical operators as media queries.
+Container queries are similar to [media queries](/en-US/docs/Web/CSS/Guides/Media_queries). The {{cssxref("@media")}} at-rule enables applying styles to elements based on viewport size or other device characteristics. Similarly, the {{cssxref("@container")}} at-rule enables applying styles to elements based on a containing element's size or other style features, rather than the viewport's. Container queries have the same syntax rules and logical operators as media queries.
 
 ```css
 @container <container-condition># {
@@ -407,7 +407,7 @@ These features are not yet supported in any browser.
 
 ## See also
 
-- [Media queries](/en-US/docs/Web/CSS/CSS_media_queries)
+- [Media queries](/en-US/docs/Web/CSS/Guides/Media_queries)
 - CSS {{Cssxref("@container")}} at-rule
 - CSS {{Cssxref("contain")}} property
 - CSS {{Cssxref("container")}} shorthand property

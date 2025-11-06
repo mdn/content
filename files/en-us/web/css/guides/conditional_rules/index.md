@@ -15,7 +15,7 @@ The first CSS conditional rules were [media types](/en-US/docs/Web/CSS/Reference
 
 CSS conditional rules now include feature queries; the `@supports` at-rule enables targeting CSS styles based on a user-agent's CSS capabilities. Additional conditions include which selector, font-formats, and font-techs are supported.
 
-The CSS conditional rules module also expands `@media` to enable nesting at-rules, with the related [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries) module removing unused media types and adding many media features and conditions that can be targeted.
+The CSS conditional rules module also expands `@media` to enable nesting at-rules, with the related [CSS media queries](/en-US/docs/Web/CSS/Guides/Media_queries) module removing unused media types and adding many media features and conditions that can be targeted.
 
 The [CSS container queries module](/en-US/docs/Web/CSS/Guides/Containment/Container_queries) defines similar conditional rules, but based on an element's parent rather than the viewport.
 
@@ -52,7 +52,7 @@ The CSS conditional rules module also introduces a `media()` CSS function. Curre
 - [`<container-name>`](/en-US/docs/Web/CSS/Reference/At-rules/@container#container-name)
 - [`<style-feature>`](/en-US/docs/Web/CSS/Reference/At-rules/@container#container_style_queries)
 - [Container relative `<length>` units](/en-US/docs/Web/CSS/Reference/Values/length#container_query_length_units)
-- [`<media-query>`](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#syntax)
+- [`<media-query>`](/en-US/docs/Web/CSS/Guides/Media_queries/Using#syntax)
 - [`<supports-condition>`](/en-US/docs/Web/CSS/Reference/At-rules/@import#importing_css_rules_conditional_on_feature_support)
 - `<supports-feature>` (see [`supports()`](/en-US/docs/Web/CSS/Reference/At-rules/@import#supports-condition))
 
@@ -73,7 +73,7 @@ The CSS conditional rules module also introduces a `media()` CSS function. Curre
 - [Using CSS feature queries](/en-US/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries)
   - : Selectively applying CSS rules after checking browser support for the specified properties and values via feature queries.
 
-- [Using CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Using CSS media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using)
   - : Introduces media queries, their syntax, and the operators and media features that are used to construct media query expressions.
 
 - [Supporting older browsers: feature queries](/en-US/docs/Learn_web_development/Core/CSS_layout/Supporting_Older_Browsers#feature_queries)
@@ -90,7 +90,7 @@ The CSS conditional rules module also introduces a `media()` CSS function. Curre
 - [CSS cascading and inheritance](/en-US/docs/Web/CSS/Guides/Cascade) module
   - {{cssxref("@import")}} at-rule
 
-- [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries) module
+- [CSS media queries](/en-US/docs/Web/CSS/Guides/Media_queries) module
   - [`<media-feature>`](/en-US/docs/Web/CSS/Reference/At-rules/@media#media_features)
   - [`<media-type>`](/en-US/docs/Web/CSS/Reference/At-rules/@media#media_types)
   - [`<media-condition>`](/en-US/docs/Web/CSS/Reference/At-rules/@media#logical_operators)
@@ -122,5 +122,5 @@ The CSS conditional rules module also introduces a `media()` CSS function. Curre
 ## See also
 
 - [CSS container queries](/en-US/docs/Web/CSS/Guides/Containment/Container_queries) module
-- [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries) module
+- [CSS media queries](/en-US/docs/Web/CSS/Guides/Media_queries) module
 - [CSS cascading and inheritance](/en-US/docs/Web/CSS/Guides/Cascade) module

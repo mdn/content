@@ -74,7 +74,7 @@ These pseudo-elements behave like regular elements, fitting seamlessly within th
 - {{CSSxRef("::after")}}
   - : Creates a pseudo-element that is the last child of the selected element.
 - {{CSSxRef("::column")}}
-  - : Each column fragment of a [multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout).
+  - : Each column fragment of a [multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout).
 - {{CSSxRef("::marker")}}
   - : The automatically generated marker box of a list item.
 - {{CSSxRef("::backdrop")}}

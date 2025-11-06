@@ -12,7 +12,7 @@ The **CSS shapes** module describes geometric shapes. It also defines CSS proper
 
 The specification defines several ways to create shapes. Content can be wrapped around or within a shape rather than following the default rectangle shape of the element's box.
 
-Shapes define geometries that can be used as CSS values. This module provides functions for creating ellipses, polygons, and arbitrary geometries. Other CSS modules can make use of shapes defined in this specification, including [CSS motion path](/en-US/docs/Web/CSS/CSS_motion_path) and [CSS masking](/en-US/docs/Web/CSS/CSS_masking).
+Shapes define geometries that can be used as CSS values. This module provides functions for creating ellipses, polygons, and arbitrary geometries. Other CSS modules can make use of shapes defined in this specification, including [CSS motion path](/en-US/docs/Web/CSS/Guides/Motion_path) and [CSS masking](/en-US/docs/Web/CSS/Guides/Masking).
 
 ## CSS shapes in action
 
@@ -95,7 +95,7 @@ The CSS shapes module also introduces the `shape-inside` and `shape-padding` pro
 
 ## Related concepts
 
-[CSS motion path](/en-US/docs/Web/CSS/CSS_motion_path) module
+[CSS motion path](/en-US/docs/Web/CSS/Guides/Motion_path) module
 
 - {{cssxref("offset")}}
 - {{cssxref("offset-anchor")}}
@@ -105,7 +105,7 @@ The CSS shapes module also introduces the `shape-inside` and `shape-padding` pro
 - {{cssxref("offset-rotate")}}
 - {{cssxref("ray")}} function
 
-[CSS masking](/en-US/docs/Web/CSS/CSS_masking) module
+[CSS masking](/en-US/docs/Web/CSS/Guides/Masking) module
 
 - {{cssxref("clip")}}
 - {{cssxref("clip-path")}}

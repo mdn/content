@@ -72,7 +72,7 @@ The rest of this article will explain the various web platform features you migh
 
 ## Media Queries
 
-[Media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) allow us to run a series of tests (for example, whether the user's screen is greater than a certain width or resolution) and apply CSS selectively to style the page appropriately for the user's needs.
+[Media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using) allow us to run a series of tests (for example, whether the user's screen is greater than a certain width or resolution) and apply CSS selectively to style the page appropriately for the user's needs.
 
 For example, the following media query tests to see if the current web page is being displayed as screen media (therefore not a printed document) and the viewport is at least `80rem` wide. The `.container` rule will only be applied if these two things are true.
 

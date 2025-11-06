@@ -10,7 +10,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`if()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) allows different values to be set for a property depending on the result of a conditional test. The test can be based on a [style query](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#container_style_queries), a [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries), or a [feature query](/en-US/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries).
+The **`if()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) allows different values to be set for a property depending on the result of a conditional test. The test can be based on a [style query](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#container_style_queries), a [media query](/en-US/docs/Web/CSS/Guides/Media_queries/Using), or a [feature query](/en-US/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries).
 
 ## Syntax
 
@@ -60,7 +60,7 @@ The parameter is a semi-colon–separated list of `<if-branch>`es. Each `<if-bra
 - `<if-condition>`
   - : An `<if-test>` or the `else` keyword.
     - `<if-test>`
-      - : A [style query](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#container_style_queries), [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries), or [feature query](/en-US/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries).
+      - : A [style query](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#container_style_queries), [media query](/en-US/docs/Web/CSS/Guides/Media_queries/Using), or [feature query](/en-US/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries).
 
     - `else`
       - : A keyword representing an `<if-condition>` that always evaluates to true.
@@ -191,7 +191,7 @@ if(
 
 #### Media queries
 
-A [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) `<if-test>` can be used to set a value for a property depending on whether a media query test returns true.
+A [media query](/en-US/docs/Web/CSS/Guides/Media_queries/Using) `<if-test>` can be used to set a value for a property depending on whether a media query test returns true.
 
 You can use media types. For example, the following `<if-test> : <value>` pair returns a value of `white` on print media, while the `else` clause causes `#eeeeee` to be returned on non-print media.
 
@@ -606,6 +606,6 @@ Try selecting different color scheme values to see the effect on the look and fe
 ## See also
 
 - [Container style queries](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#container_style_queries)
-- [Media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using)
 - [Feature queries](/en-US/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries)
 - [CSS values and units module](/en-US/docs/Web/CSS/CSS_values_and_units)

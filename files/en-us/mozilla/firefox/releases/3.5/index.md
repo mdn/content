@@ -25,7 +25,7 @@ sidebar: firefox
 
 - [Downloadable fonts support](/en-US/docs/Web/CSS/Reference/At-rules/@font-face)
   - : The new {{ cssxref("@font-face") }} @rule lets web pages provide downloadable fonts, so that sites can be rendered exactly as the page author expects.
-- [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [CSS media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using)
   - : Firefox 3.5 now supports CSS media queries, which enhance support for media-dependent style sheets.
 - {{ cssxref("::before") }} and {{ cssxref("::after") }} updated to CSS 2.1
   - : The `::before` and `::after` pseudo-elements have been updated to full CSS 2.1 support, adding support for the `position`, `float`, `list-style-*`, and some `display` properties.

@@ -75,7 +75,7 @@ Two ratios are compared using the quotients' numeric values. For example, 16/16 
 - [Understanding aspect ratios](/en-US/docs/Web/CSS/Guides/Box_sizing/Aspect_ratios)
 - [CSS container queries](/en-US/docs/Web/CSS/Guides/Containment/Container_queries) guide
 - [Using container size and style queries](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries) guide
-- [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries) module
+- [CSS media queries](/en-US/docs/Web/CSS/Guides/Media_queries) module
 - [CSS containment](/en-US/docs/Web/CSS/Guides/Containment) module
 - [CSS box sizing](/en-US/docs/Web/CSS/Guides/Box_sizing) module
 - [CSS values and units](/en-US/docs/Web/CSS/CSS_values_and_units) module

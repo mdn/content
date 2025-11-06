@@ -6,7 +6,7 @@ browser-compat: css.at-rules.media
 sidebar: cssref
 ---
 
-The **`@media`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rules) can be used to apply part of a style sheet based on the result of one or more [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries). With it, you specify a media query and a block of CSS to apply to the document if and only if the media query matches the device on which the content is being used.
+The **`@media`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rules) can be used to apply part of a style sheet based on the result of one or more [media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using). With it, you specify a media query and a block of CSS to apply to the document if and only if the media query matches the device on which the content is being used.
 
 > [!NOTE]
 > In JavaScript, the rules created using `@media` can be accessed with the {{domxref("CSSMediaRule")}} CSS object model interface.
@@ -64,7 +64,7 @@ abbr {
 
 The `@media` at-rule may be placed at the top level of your code or nested inside any other conditional group at-rule.
 
-For a discussion of media query syntax, please see [Using media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#syntax).
+For a discussion of media query syntax, please see [Using media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using#syntax).
 
 ## Description
 
@@ -222,7 +222,7 @@ They include {{HTTPHeader("Sec-CH-Prefers-Color-Scheme")}} and {{HTTPHeader("Sec
 
 ## Accessibility
 
-To best accommodate people who adjust a site's text size, use [`em`](/en-US/docs/Web/CSS/CSS_values_and_units/Numeric_data_types)s when you need a {{cssxref("&lt;length&gt;")}} for your [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries).
+To best accommodate people who adjust a site's text size, use [`em`](/en-US/docs/Web/CSS/CSS_values_and_units/Numeric_data_types)s when you need a {{cssxref("&lt;length&gt;")}} for your [media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using).
 
 Both [`em`](/en-US/docs/Web/CSS/CSS_values_and_units/Numeric_data_types) and [`px`](/en-US/docs/Web/CSS/CSS_values_and_units/Numeric_data_types) are valid units, but [`em`](/en-US/docs/Web/CSS/CSS_values_and_units/Numeric_data_types) works better if the user changes the browser text size.
 
@@ -275,7 +275,7 @@ The range syntax allows for less verbose media queries when testing for any feat
 }
 ```
 
-For more examples, please see [Using media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries).
+For more examples, please see [Using media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using).
 
 ## Specifications
 
@@ -287,8 +287,8 @@ For more examples, please see [Using media queries](/en-US/docs/Web/CSS/CSS_medi
 
 ## See also
 
-- [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries) module
-- [Using media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [CSS media queries](/en-US/docs/Web/CSS/Guides/Media_queries) module
+- [Using media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using)
 - {{domxref("CSSMediaRule")}} interface
 - [Extended Mozilla media features](/en-US/docs/Web/CSS/Reference/Mozilla_extensions#media_features)
 - [Extended WebKit media features](/en-US/docs/Web/CSS/Reference/Webkit_extensions#media_features)

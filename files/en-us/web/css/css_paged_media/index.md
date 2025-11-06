@@ -37,7 +37,7 @@ The CSS paged media module also introduces the `bleeds` and `marks` descriptors 
 
 ## Guides
 
-- [Printing](/en-US/docs/Web/CSS/CSS_media_queries/Printing)
+- [Printing](/en-US/docs/Web/CSS/Guides/Media_queries/Printing)
   - : Tips and techniques for helping improve web content printer output.
 
 ## Related concepts
@@ -56,4 +56,4 @@ The CSS paged media module also introduces the `bleeds` and `marks` descriptors 
 ## See also
 
 - [CSS fragmentation](/en-US/docs/Web/CSS/Guides/Fragmentation) module
-- [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries) module
+- [CSS media queries](/en-US/docs/Web/CSS/Guides/Media_queries) module

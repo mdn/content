@@ -59,5 +59,5 @@ The `height` feature is specified as a {{cssxref("&lt;length&gt;")}} value repre
 
 ## See also
 
-- [Using media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Using media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using)
 - [@media](/en-US/docs/Web/CSS/Reference/At-rules/@media)

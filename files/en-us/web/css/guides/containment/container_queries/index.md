@@ -12,7 +12,7 @@ Container queries enable you to apply styles to an element based on certain attr
 - Styles applied to the container.
 - The container's scroll-state or that of its scrolling ancestor.
 
-Container queries are an alternative to [media queries](/en-US/docs/Web/CSS/CSS_media_queries), which apply styles to elements based on viewport size or other device characteristics.
+Container queries are an alternative to [media queries](/en-US/docs/Web/CSS/Guides/Media_queries), which apply styles to elements based on viewport size or other device characteristics.
 
 This article provides an introduction to using container queries, specifically focusing on size container queries. Other guides discuss [style](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#container_style_queries) and [scroll-state](/en-US/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries) container queries in detail.
 
@@ -166,7 +166,7 @@ If you want to use a single-column layout for devices with a smaller viewport, y
 
 ## See also
 
-- [Media queries](/en-US/docs/Web/CSS/CSS_media_queries)
+- [Media queries](/en-US/docs/Web/CSS/Guides/Media_queries)
 - CSS {{Cssxref("@container")}} at-rule
 - CSS {{Cssxref("contain")}} property
 - CSS {{Cssxref("container")}} shorthand property

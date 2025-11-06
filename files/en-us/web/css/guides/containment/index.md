@@ -12,7 +12,7 @@ The **CSS containment** module defines containment and container queries.
 
 Containment enables the isolation of page subtrees from the rest of the DOM. The browser can then improve performance by optimizing the rendering of these independent parts.
 
-Container queries are similar to dimension [media queries](/en-US/docs/Web/CSS/CSS_media_queries), except that the queries are based on the dimensions of a specific container element defined as a _containment context_, rather than on the dimensions of the viewport. Container queries enable querying a container's size, properties, and property values to conditionally apply CSS styles. When applying these conditional styles, you can use container query length units, which specify lengths relative to the dimensions of the query container. Additional properties are defined to enable establishing a specific element as a query container and giving it a specific name.
+Container queries are similar to dimension [media queries](/en-US/docs/Web/CSS/Guides/Media_queries), except that the queries are based on the dimensions of a specific container element defined as a _containment context_, rather than on the dimensions of the viewport. Container queries enable querying a container's size, properties, and property values to conditionally apply CSS styles. When applying these conditional styles, you can use container query length units, which specify lengths relative to the dimensions of the query container. Additional properties are defined to enable establishing a specific element as a query container and giving it a specific name.
 
 ## Reference
 
@@ -55,7 +55,7 @@ Container queries are similar to dimension [media queries](/en-US/docs/Web/CSS/C
   - {{CSSxRef("container-name")}} property
   - {{CSSxRef("container-type")}} property
 
-- [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries) module
+- [CSS media queries](/en-US/docs/Web/CSS/Guides/Media_queries) module
   - {{cssxref("@media")}} at-rule
   - [CSS logical operators](/en-US/docs/Web/CSS/Reference/At-rules/@media#logical_operators) (`not`, `or`, and `and`)
 
@@ -84,6 +84,6 @@ Container queries are similar to dimension [media queries](/en-US/docs/Web/CSS/C
 ## See also
 
 - [Using feature queries](/en-US/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries)
-- [Using CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Using CSS media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using)
 - [Understanding aspect ratios](/en-US/docs/Web/CSS/Guides/Box_sizing/Aspect_ratios)
 - {{cssxref("@supports")}} at-rule

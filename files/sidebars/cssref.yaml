@@ -130,12 +130,12 @@ sidebar:
   - title: Columns
     details: closed
     children:
-      - /Web/CSS/CSS_multicol_layout/Basic_concepts
-      - /Web/CSS/CSS_multicol_layout/Styling_columns
-      - /Web/CSS/CSS_multicol_layout/Using_multicol_layouts
-      - /Web/CSS/CSS_multicol_layout/Spanning_balancing_columns
-      - /Web/CSS/CSS_multicol_layout/Handling_overflow_in_multicol_layout
-      - /Web/CSS/CSS_multicol_layout/Handling_content_breaks_in_multicol_layout
+      - /Web/CSS/Guides/Multicol_layout/Basic_concepts
+      - /Web/CSS/Guides/Multicol_layout/Styling_columns
+      - /Web/CSS/Guides/Multicol_layout/Using
+      - /Web/CSS/Guides/Multicol_layout/Spanning_balancing_columns
+      - /Web/CSS/Guides/Multicol_layout/Handling_overflow
+      - /Web/CSS/Guides/Multicol_layout/Handling_content_breaks
   - title: Conditional_rules
     details: closed
     children:
@@ -220,10 +220,10 @@ sidebar:
   - title: Media_queries
     details: closed
     children:
-      - /Web/CSS/CSS_media_queries/Using_media_queries
-      - /Web/CSS/CSS_media_queries/Using_media_queries_for_accessibility
-      - /Web/CSS/CSS_media_queries/Testing_media_queries
-      - /Web/CSS/CSS_media_queries/Printing
+      - /Web/CSS/Guides/Media_queries/Using
+      - /Web/CSS/Guides/Media_queries/Using_for_accessibility
+      - /Web/CSS/Guides/Media_queries/Testing
+      - /Web/CSS/Guides/Media_queries/Printing
   - title: Nesting
     details: closed
     children:

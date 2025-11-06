@@ -20,7 +20,7 @@ The CSS round display module introduces the `border-boundary` and `shape-inside`
 
 ## Guides
 
-- [Using media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Using media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using)
   - : Introduces media queries, their syntax, and the operators and media features used to construct media query expressions.
 
 - [Overview of CSS Shapes](/en-US/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
@@ -46,5 +46,5 @@ The CSS round display module introduces the `border-boundary` and `shape-inside`
 - {{cssxref("basic-shape")}} data-type
 - {{cssxref("shape-outside")}} property
 - [CSS shapes](/en-US/docs/Web/CSS/CSS_shapes) module
-- [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries) module
+- [CSS media queries](/en-US/docs/Web/CSS/Guides/Media_queries) module
 - [CSS environment variables](/en-US/docs/Web/CSS/Guides/Environment_variables) module

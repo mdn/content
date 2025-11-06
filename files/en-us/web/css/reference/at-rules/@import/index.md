@@ -28,7 +28,7 @@ where:
 - _url_
   - : Is a {{CSSxRef("string")}} or a {{cssxref("url_value", "&lt;url&gt;")}} type representing the location of the resource to import. The URL may be absolute or relative.
 - _list-of-media-queries_
-  - : Is a comma-separated list of [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries), which specify the media-dependent conditions for applying the CSS rules defined in the linked URL. If the browser does not support any of these queries, it does not load the linked resource.
+  - : Is a comma-separated list of [media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using), which specify the media-dependent conditions for applying the CSS rules defined in the linked URL. If the browser does not support any of these queries, it does not load the linked resource.
 - _layer-name_
   - : Is the name of a [cascade layer](/en-US/docs/Web/CSS/Reference/At-rules/@layer) into which the contents of the linked resource are imported. See [`layer()`](/en-US/docs/Web/CSS/Reference/At-rules/@import/layer_function) for more information.
 - _supports-condition_
@@ -64,7 +64,7 @@ As the `@import` at-rule is declared after the styles it is invalid and hence ig
 
 The `@import` rule is not a [nested statement](/en-US/docs/Web/CSS/CSS_syntax/Syntax#nested_statements). Therefore, it cannot be used inside [conditional group at-rules](/en-US/docs/Web/CSS/Guides/Conditional_rules#at-rules_and_descriptors).
 
-So that {{glossary("user agent", "user agents")}} can avoid retrieving resources for unsupported media types, authors may specify media-dependent import conditions. These conditional imports specify comma-separated [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) after the URL. In the absence of any media query, the import is not conditional on the media used. Specifying `all` for the `list-of-media-queries` has the same effect.
+So that {{glossary("user agent", "user agents")}} can avoid retrieving resources for unsupported media types, authors may specify media-dependent import conditions. These conditional imports specify comma-separated [media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using) after the URL. In the absence of any media query, the import is not conditional on the media used. Specifying `all` for the `list-of-media-queries` has the same effect.
 
 Similarly, user agents can use the `supports()` function in an `@import` at-rule to only fetch resources if a particular feature set is (or is not) supported.
 This allows authors to take advantage of recently introduced CSS features, while providing graceful fallbacks for older browser versions.

@@ -40,7 +40,7 @@ The CSS carousel features provide pseudo-elements and pseudo-classes that enable
 - {{cssxref(":target-current")}}
   - : This pseudo-class can be used to select the currently-active scroll marker. It can be used to provide a highlight style to the currently active marker, which is important for usability and accessibility.
 - {{cssxref("::column")}}
-  - : This pseudo-element represents the individual columns generated when a container is set to display its content in multiple columns via [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout). It can be used in conjunction with {{cssxref("::scroll-marker")}} to generate a scroll marker for each column.
+  - : This pseudo-element represents the individual columns generated when a container is set to display its content in multiple columns via [CSS multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout). It can be used in conjunction with {{cssxref("::scroll-marker")}} to generate a scroll marker for each column.
 
 ## Carousel with single pages
 
@@ -316,7 +316,7 @@ You can also navigate between pages by swiping left and right, dragging the scro
 
 The second demo is a carousel with multiple items per page, which again includes [scroll buttons](#creating_scroll_buttons) and [scroll markers](#creating_scroll_markers) for navigating through the pages. This demo is also responsive — different numbers of items appear on each page depending on the viewport width.
 
-This demo is very similar to the [Carousel with single pages](#carousel_with_single_pages) demo, except that instead of using flexbox for layout, it uses [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout) and the {{cssxref("::column")}} pseudo-element to create arbitrary columns that span the full width of the carousel and may contain multiple items.
+This demo is very similar to the [Carousel with single pages](#carousel_with_single_pages) demo, except that instead of using flexbox for layout, it uses [CSS multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout) and the {{cssxref("::column")}} pseudo-element to create arbitrary columns that span the full width of the carousel and may contain multiple items.
 
 Using this approach, we can be sure that if the viewport grows or shrinks, while the item size remains constant, we'll never have a partial item displayed off the edge of the scrollport. In this case, the scroll markers are created on scroll container fragments, per-column, rather than on children, per-item.
 
@@ -385,7 +385,7 @@ This demo also has very similar CSS, with the exception of the rules explained i
 
 ### Carousel layout using columns
 
-This example uses [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout), rather than flexbox, to layout the carousel items. The {{cssxref("columns")}} value of `1` forces each column to be the full width of the container, with the contents displaying a single column at a time. A {{cssxref("text-align")}} value of `center` is also applied, forcing the contents to align with the center of the list.
+This example uses [CSS multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout), rather than flexbox, to layout the carousel items. The {{cssxref("columns")}} value of `1` forces each column to be the full width of the container, with the contents displaying a single column at a time. A {{cssxref("text-align")}} value of `center` is also applied, forcing the contents to align with the center of the list.
 
 ```css hidden live-sample___second-example
 * {

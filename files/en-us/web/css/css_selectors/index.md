@@ -152,7 +152,7 @@ The CSS selectors module also introduces the {{CSSXref(":blank")}}, {{CSSXref(":
   - {{cssxref("::scroll-marker-group")}}
   - {{cssxref(":target-current")}}
 
-- [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout) module
+- [CSS multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout) module
   - {{cssxref("::column")}}
 
 - [CSS paged media](/en-US/docs/Web/CSS/CSS_paged_media) module

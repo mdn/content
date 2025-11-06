@@ -56,7 +56,7 @@ sidebar: firefox
   - Implemented grid layout support for {{cssxref("align-self")}}, {{cssxref("justify-self")}} values `baseline` and `last-baseline` (aka "baseline self-alignment") ([Firefox bug 1221525](https://bugzil.la/1221525)).
   - Implemented grid item baseline content alignment ([Firefox bug 1256429](https://bugzil.la/1256429)).
 
-- Our experimental [CSS Masks](/en-US/docs/Web/CSS/CSS_masking) implementation has been improved:
+- Our experimental [CSS Masks](/en-US/docs/Web/CSS/Guides/Masking) implementation has been improved:
   - The {{cssxref("mask-origin")}} property now uses `border-box` instead of `padding-box` as initial value, to match the spec ([Firefox bug 1258286](https://bugzil.la/1258286)).
   - The {{cssxref("mask-repeat")}} property now supports the `space` and `round` values ([Firefox bug 1258626](https://bugzil.la/1258626)).
   - Fixed an issue preventing the {{cssxref("mask-position")}} attribute from being animated ([Firefox bug 1273804](https://bugzil.la/1273804)).

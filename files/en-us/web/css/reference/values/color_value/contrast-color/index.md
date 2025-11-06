@@ -109,7 +109,7 @@ updateColor();
 
 ### Light and dark mode usage
 
-In the following example, the [`prefers-color-scheme`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) is used to set a background color based on operating system or browser color scheme settings. The `contrast-color()` function is used to set the text color automatically.
+In the following example, the [`prefers-color-scheme`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) [media query](/en-US/docs/Web/CSS/Guides/Media_queries/Using) is used to set a background color based on operating system or browser color scheme settings. The `contrast-color()` function is used to set the text color automatically.
 
 Try changing the browser or OS dark mode setting to see the effect.
 

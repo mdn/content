@@ -70,7 +70,7 @@ nav ul {
 </div>
 ```
 
-As we are using {{cssxref("grid-template-areas")}} to create the layout, we need to name the areas outside of any [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries). We name areas using the {{cssxref("grid-area")}} property.
+As we are using {{cssxref("grid-template-areas")}} to create the layout, we need to name the areas outside of any [media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using). We name areas using the {{cssxref("grid-area")}} property.
 
 ```css
 .main-head {
@@ -372,7 +372,7 @@ Something to note as we created this layout is that we didn't need to explicitly
 
 In this last example in this guide, we create a layout that entirely relies on auto-placement.
 
-Many layouts are essentially sets of "cards" – product listings, image galleries, and so on. A grid enables creating these listings in a way that is responsive without needing to add [media queries](/en-US/docs/Web/CSS/CSS_media_queries). In this example, we combine CSS grid and flexbox layouts to make a basic product listing layout.
+Many layouts are essentially sets of "cards" – product listings, image galleries, and so on. A grid enables creating these listings in a way that is responsive without needing to add [media queries](/en-US/docs/Web/CSS/Guides/Media_queries). In this example, we combine CSS grid and flexbox layouts to make a basic product listing layout.
 
 The markup for the listing is an unordered list of items. Each item contains a heading, some text of varying height, and a call to action link.
 

@@ -119,9 +119,9 @@ For each of the properties below, use the standard equivalents.
 
 ### C-I
 
-- `-webkit-column-break-after`: Use [CSS multicolumn layout](/en-US/docs/Web/CSS/CSS_multicol_layout) with {{CSSxRef("break-after")}}.
-- `-webkit-column-break-before`: Use [CSS multicolumn layout](/en-US/docs/Web/CSS/CSS_multicol_layout) with {{CSSxRef("break-before")}}.
-- `-webkit-column-break-inside`: Use [CSS multicolumn layout](/en-US/docs/Web/CSS/CSS_multicol_layout) with {{CSSxRef("break-inside")}}.
+- `-webkit-column-break-after`: Use [CSS multicolumn layout](/en-US/docs/Web/CSS/Guides/Multicol_layout) with {{CSSxRef("break-after")}}.
+- `-webkit-column-break-before`: Use [CSS multicolumn layout](/en-US/docs/Web/CSS/Guides/Multicol_layout) with {{CSSxRef("break-before")}}.
+- `-webkit-column-break-inside`: Use [CSS multicolumn layout](/en-US/docs/Web/CSS/Guides/Multicol_layout) with {{CSSxRef("break-inside")}}.
 - `-webkit-font-feature-settings`: Use {{CSSxRef("font-feature-settings")}} (the prefixed version not supported in Safari).
 - `-webkit-hyphenate-character`: Use {{CSSxRef("hyphenate-character")}}.
 - `-webkit-initial-letter`: Use {{CSSxRef("initial-letter")}}.

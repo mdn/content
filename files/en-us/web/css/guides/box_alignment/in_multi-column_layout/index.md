@@ -5,9 +5,9 @@ page-type: guide
 sidebar: cssref
 ---
 
-The [CSS box alignment](/en-US/docs/Web/CSS/Guides/Box_alignment) module details how alignment works in various layout methods; in this guide, we explore how box alignment works in the context of [multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout). As this guide aims to detail things that are specific to both modules, it should be read in conjunction with the [box alignment overview](/en-US/docs/Web/CSS/Guides/Box_alignment/Overview) guide, which details the common features of box alignment across layout methods.
+The [CSS box alignment](/en-US/docs/Web/CSS/Guides/Box_alignment) module details how alignment works in various layout methods; in this guide, we explore how box alignment works in the context of [multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout). As this guide aims to detail things that are specific to both modules, it should be read in conjunction with the [box alignment overview](/en-US/docs/Web/CSS/Guides/Box_alignment/Overview) guide, which details the common features of box alignment across layout methods.
 
-In [multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout/Basic_concepts), the {{glossary("alignment container")}} is the content box of the multicol container. The {{glossary("alignment subject")}} is the column box. The properties which apply to multi-column layouts are detailed below.
+In [multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout/Basic_concepts), the {{glossary("alignment container")}} is the content box of the multicol container. The {{glossary("alignment subject")}} is the column box. The properties which apply to multi-column layouts are detailed below.
 
 ## align-content and justify-content
 

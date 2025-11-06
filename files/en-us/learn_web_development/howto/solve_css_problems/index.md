@@ -50,7 +50,7 @@ This page rounds up questions and answers, and other material on the MDN site th
 ### Layout guides
 
 - [Using CSS flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
-- [Using CSS multi-column layouts](/en-US/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts)
+- [Using CSS multi-column layouts](/en-US/docs/Web/CSS/Guides/Multicol_layout/Using)
 - [Using CSS grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)
 - [Using CSS generated content](/en-US/docs/Learn_web_development/Howto/Solve_CSS_problems/Generated_content)
 

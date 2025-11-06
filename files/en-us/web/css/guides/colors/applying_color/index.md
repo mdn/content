@@ -55,7 +55,7 @@ Every element is a box with some sort of content, and has a background and a bor
   - : Configures inset shadow and drop shadow effects on the box. Among the options for each shadow is the shadow's base color (which is then blurred and blended with any background based on the other parameters).
 
 - {{cssxref("column-rule-color")}}
-  - : The color to use when drawing the line separating columns of text when using [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout).
+  - : The color to use when drawing the line separating columns of text when using [CSS multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout).
 
 - {{cssxref("outline-color")}}
   - : The color to use when drawing an outline around the outside of the element. This outline is different from the border in that it doesn't get space set aside for it in the document. Outlines do not participate in the [box model](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model), overlapping other content. Outlines are generally used as focus indicators, indicating which element currently has focus and will receive keyboard input events.

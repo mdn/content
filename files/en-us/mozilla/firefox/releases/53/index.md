@@ -21,7 +21,7 @@ Firefox 53 was released on April 19, 2017. This article lists key changes that a
 
 #### New features
 
-- The `mask-*` longhand properties (see [CSS Masks](/en-US/docs/Web/CSS/CSS_masking)) are all supported and available by default (see [Firefox bug 1251161](https://bugzil.la/1251161)).
+- The `mask-*` longhand properties (see [CSS Masks](/en-US/docs/Web/CSS/Guides/Masking)) are all supported and available by default (see [Firefox bug 1251161](https://bugzil.la/1251161)).
 - Added {{cssxref("caret-color")}} property ([Firefox bug 1063162](https://bugzil.la/1063162)).
 - Implemented the {{cssxref("place-items")}}/{{cssxref("place-self")}}/{{cssxref("place-content")}} shorthands ([Firefox bug 1319958](https://bugzil.la/1319958)).
 - Added `flow-root` value to {{cssxref("display")}} property ([Firefox bug 1322191](https://bugzil.la/1322191)).

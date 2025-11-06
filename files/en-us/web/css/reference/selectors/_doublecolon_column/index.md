@@ -10,7 +10,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`::column`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) represents the individual columns generated when a container is set to display its content in multiple columns via [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout). The `::column` pseudo-element enables applying styles that do not affect the layout to these generated fragments.
+The **`::column`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) represents the individual columns generated when a container is set to display its content in multiple columns via [CSS multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout). The `::column` pseudo-element enables applying styles that do not affect the layout to these generated fragments.
 
 ## Syntax
 
@@ -234,6 +234,6 @@ See [Creating CSS carousels](/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels) for
 - {{cssxref("::scroll-marker-group")}}
 - {{cssxref(":target-current")}}
 - [Creating CSS carousels](/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels)
-- [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout) module
+- [CSS multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout) module
 - [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
 - [CSS Carousel Gallery](https://chrome.dev/carousel/) via chrome.dev (2025)

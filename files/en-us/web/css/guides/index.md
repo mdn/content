@@ -33,15 +33,15 @@ If you are not using a flex or grid layout, then your content is laid out using 
 
 Multi-column layout, often referred to as multicol, takes content in normal flow, and breaks it into columns. Find out how to use this layout method in the following guides.
 
-- [Basic concepts of Multicol](/en-US/docs/Web/CSS/CSS_multicol_layout/Basic_concepts)
+- [Basic concepts of Multicol](/en-US/docs/Web/CSS/Guides/Multicol_layout/Basic_concepts)
   - : An overview of the basic functionality of multicol.
-- [Styling columns](/en-US/docs/Web/CSS/CSS_multicol_layout/Styling_columns)
+- [Styling columns](/en-US/docs/Web/CSS/Guides/Multicol_layout/Styling_columns)
   - : There is a limited amount of styling opportunities for columns; this guide explains what you can do.
-- [Spanning and balancing](/en-US/docs/Web/CSS/CSS_multicol_layout/Spanning_balancing_columns)
+- [Spanning and balancing](/en-US/docs/Web/CSS/Guides/Multicol_layout/Spanning_balancing_columns)
   - : Spanning elements across columns, and balancing the content of columns.
-- [Handling overflow in Multicol](/en-US/docs/Web/CSS/CSS_multicol_layout/Handling_overflow_in_multicol_layout)
+- [Handling overflow in Multicol](/en-US/docs/Web/CSS/Guides/Multicol_layout/Handling_overflow)
   - : What happens when there is more content than available column space?
-- [Content breaks in Multicol](/en-US/docs/Web/CSS/CSS_multicol_layout/Handling_content_breaks_in_multicol_layout)
+- [Content breaks in Multicol](/en-US/docs/Web/CSS/Guides/Multicol_layout/Handling_content_breaks)
   - : Dealing with content breaks as the content is split into columns.
 
 ## Flexbox

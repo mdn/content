@@ -141,7 +141,7 @@ There are other layout techniques that are less commonly used, which we won't co
 
 - [Table layout](/en-US/docs/Web/CSS/CSS_table)
   - : Features designed for styling parts of an HTML table can be used on non-table elements using `display: table` and associated properties.
-- [Multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout)
+- [Multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout)
   - : The multi-column layout properties can cause the content of a block to lay out in columns, as you might see in a newspaper.
 
 ## Summary

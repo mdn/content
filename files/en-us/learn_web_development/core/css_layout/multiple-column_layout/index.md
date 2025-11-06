@@ -516,4 +516,4 @@ You now know how to use the basic features of multiple-column layout, another to
 ## See also
 
 - [CSS Fragmentation](/en-US/docs/Web/CSS/Guides/Fragmentation)
-- [Using multi-column layouts](/en-US/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts)
+- [Using multi-column layouts](/en-US/docs/Web/CSS/Guides/Multicol_layout/Using)
