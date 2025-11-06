@@ -123,19 +123,19 @@ CSS was initially designed with only physical coordinates. The logical propertie
 - {{CSSxRef("resize")}}
 - {{CSSxRef("text-align")}}
 
-[CSS box model](/en-US/docs/Web/CSS/CSS_box_model)
+[CSS box model](/en-US/docs/Web/CSS/Guides/Box_model)
 
 - {{CSSxRef("margin")}} shorthand
 - {{CSSxRef("padding")}} shorthand
 
-[CSS box sizing](/en-US/docs/Web/CSS/CSS_box_sizing)
+[CSS box sizing](/en-US/docs/Web/CSS/Guides/Box_sizing)
 
 - {{CSSxRef("max-height")}}
 - {{CSSxRef("max-width")}}
 - {{CSSxRef("min-height")}}
 - {{CSSxRef("min-width")}}
 
-[CSS backgrounds and borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders)
+[CSS backgrounds and borders](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders)
 
 - {{CSSxRef("border-color")}}
 - {{CSSxRef("border-style")}}

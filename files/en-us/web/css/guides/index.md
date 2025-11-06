@@ -22,9 +22,9 @@ If you are not using a flex or grid layout, then your content is laid out using 
   - : How flow layout works if you use a different writing mode, such as vertical text.
 - [Flow layout and overflow](/en-US/docs/Web/CSS/CSS_display/Flow_layout_and_overflow)
   - : Understanding and managing overflow.
-- [Introduction to the CSS box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+- [Introduction to the CSS box model](/en-US/docs/Web/CSS/Guides/Box_model/Introduction)
   - : Understanding the box model is a CSS fundamental; this guide explains how it works.
-- [Mastering margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+- [Mastering margin collapsing](/en-US/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
   - : Find out why you sometimes end up with less margin than you expect, due to margin collapsing in normal flow.
 - [Understanding CSS z-index](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)
   - : Absolute positioning, flexbox, and grid all result in the stack (elements' relative position on the z-axis) to be manipulable via the `z-index` property. This article explains how to manage it.
@@ -94,11 +94,11 @@ CSS Grid Layout introduces a two-dimensional grid system to CSS. Grids can be us
 
 ## Alignment
 
-- [Box alignment in block layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables)
+- [Box alignment in block layout](/en-US/docs/Web/CSS/Guides/Box_alignment/In_block_abspos_tables)
   - : The alignment properties are specified for block and inline layout, though there is no browser support as yet.
-- [Box alignment in flexbox](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
+- [Box alignment in flexbox](/en-US/docs/Web/CSS/Guides/Box_alignment/In_flexbox)
   - : The alignment properties first appeared with flexbox; this guide explains how they work.
-- [Box alignment in grid layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)
+- [Box alignment in grid layout](/en-US/docs/Web/CSS/Guides/Box_alignment/In_grid_layout)
   - : How to align items in grid layout.
-- [Box alignment in multi-column layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_multi-column_layout)
+- [Box alignment in multi-column layout](/en-US/docs/Web/CSS/Guides/Box_alignment/In_multi-column_layout)
   - : How alignment will work in multicol.

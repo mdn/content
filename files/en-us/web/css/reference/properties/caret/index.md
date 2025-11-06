@@ -223,4 +223,4 @@ span {
 ## See also
 
 - {{cssxref("caret-color")}}, {{cssxref("caret-animation")}}, {{cssxref("caret-shape")}}
-- [CSS basic user interface](/en-US/docs/Web/CSS/CSS_basic_user_interface) module
+- [CSS basic user interface](/en-US/docs/Web/CSS/Guides/Basic_user_interface) module

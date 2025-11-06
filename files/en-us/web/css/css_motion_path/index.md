@@ -108,7 +108,7 @@ In this example, we used [CSS masking](/en-US/docs/Web/CSS/CSS_masking) and [CSS
 - {{cssxref("animation")}} shorthand
 - {{cssxref("@keyframes")}}
 
-[CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module
+[CSS box model](/en-US/docs/Web/CSS/Guides/Box_model) module
 
 - [`<coord-box>`](/en-US/docs/Web/CSS/Reference/Properties/offset-path#coord-box)
 

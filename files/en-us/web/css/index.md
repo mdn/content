@@ -34,7 +34,7 @@ The [CSS reference](/en-US/docs/Web/CSS/Reference) is an exhaustive reference fo
 - [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors), including [pseudo-elements](/en-US/docs/Web/CSS/CSS_pseudo-elements), [nesting](/en-US/docs/Web/CSS/CSS_nesting), [scoping](/en-US/docs/Web/CSS/CSS_scoping) and [shadow parts](/en-US/docs/Web/CSS/CSS_shadow_parts)
 - [CSS at-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rules), including [media](/en-US/docs/Web/CSS/CSS_media_queries) and [container](/en-US/docs/Web/CSS/CSS_containment) queries
 - [CSS values and units](/en-US/docs/Web/CSS/CSS_values_and_units) module, including [numeric data types](/en-US/docs/Web/CSS/CSS_values_and_units/Numeric_data_types), [textual data types](/en-US/docs/Web/CSS/CSS_values_and_units/Textual_data_types) and [functional notations](/en-US/docs/Web/CSS/Reference/Values/Functions)
-- [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) and [margin collapse](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+- [Box model](/en-US/docs/Web/CSS/Guides/Box_model/Introduction) and [margin collapse](/en-US/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
 - The [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block)
 - [Stacking](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context) and [block-formatting](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context) contexts
 - [Initial](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value), [computed](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value), [used](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#used_value), and [actual](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#actual_value) values

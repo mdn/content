@@ -87,4 +87,4 @@ You can enable animations to and from `fit-content` using the {{cssxref("interpo
 ## See also
 
 - Related sizing keywords: {{cssxref("min-content")}}, {{cssxref("max-content")}}
-- [CSS box sizing](/en-US/docs/Web/CSS/CSS_box_sizing) module
+- [CSS box sizing](/en-US/docs/Web/CSS/Guides/Box_sizing) module

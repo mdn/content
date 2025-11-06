@@ -114,11 +114,11 @@ The CSS shapes module also introduces the `shape-inside` and `shape-padding` pro
 - {{cssxref("mask-origin")}}
 - {{cssxref("mask-position")}}
 
-[CSS backgrounds and borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders) module
+[CSS backgrounds and borders](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders) module
 
 - {{cssxref("border-radius")}} shorthand
 
-[CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module
+[CSS box model](/en-US/docs/Web/CSS/Guides/Box_model) module
 
 - {{cssxref("box-edge")}} data type
 

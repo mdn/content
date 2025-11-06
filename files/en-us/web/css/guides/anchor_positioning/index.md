@@ -91,7 +91,7 @@ The CSS anchor positioning module also introduces the `anchor-scope` property. C
   - {{cssxref("left")}}
   - {{cssxref("bottom")}}
   - {{cssxref("right")}}
-- [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module:
+- [CSS box model](/en-US/docs/Web/CSS/Guides/Box_model) module:
   - {{cssxref("width")}}
   - {{cssxref("height")}}
   - {{cssxref("min-width")}}
@@ -103,7 +103,7 @@ The CSS anchor positioning module also introduces the `anchor-scope` property. C
   - {{cssxref("margin-left")}}
   - {{cssxref("margin-right")}}
   - {{cssxref("margin-top")}}
-- [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module:
+- [CSS box alignment](/en-US/docs/Web/CSS/Guides/Box_alignment) module:
   - {{cssxref("align-items")}}
   - {{cssxref("align-self")}}
   - {{cssxref("justify-items")}}

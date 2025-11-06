@@ -148,7 +148,7 @@ Consider providing a mechanism for pausing or disabling animation as well as usi
 ## Examples
 
 > [!NOTE]
-> Animating [CSS Box Model](/en-US/docs/Web/CSS/CSS_box_model) properties is discouraged. Animating any box model property is inherently CPU intensive; consider animating the [transform](/en-US/docs/Web/CSS/Reference/Properties/transform) property instead.
+> Animating [CSS Box Model](/en-US/docs/Web/CSS/Guides/Box_model) properties is discouraged. Animating any box model property is inherently CPU intensive; consider animating the [transform](/en-US/docs/Web/CSS/Reference/Properties/transform) property instead.
 
 ### Sun Rise
 

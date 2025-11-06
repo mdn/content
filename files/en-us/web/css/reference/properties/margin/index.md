@@ -6,7 +6,7 @@ browser-compat: css.properties.margin
 sidebar: cssref
 ---
 
-The **`margin`** [CSS](/en-US/docs/Web/CSS) shorthand property sets the [margin area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#margin_area) on all four sides of an element.
+The **`margin`** [CSS](/en-US/docs/Web/CSS) shorthand property sets the [margin area](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#margin_area) on all four sides of an element.
 
 {{InteractiveExample("CSS Demo: margin")}}
 
@@ -137,7 +137,7 @@ A more common method to center an element horizontally is by setting `display: f
 
 ### Margin collapsing
 
-Elements' top and bottom margins are sometimes collapsed into a single margin that is equal to the larger of the two margins. See [Mastering margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing) for more information.
+Elements' top and bottom margins are sometimes collapsed into a single margin that is equal to the larger of the two margins. See [Mastering margin collapsing](/en-US/docs/Web/CSS/Guides/Box_model/Margin_collapsing) for more information.
 
 ## Formal definition
 
@@ -216,6 +216,6 @@ margin: auto; /* top and bottom: 0 margin     */
 - {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, and {{cssxref("margin-left")}}
 - {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}}, and {{cssxref("margin-inline-end")}}
 - {{cssxref("margin-block")}} and {{cssxref("margin-inline")}} shorthands
-- [Mastering margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-- [Introduction to the CSS box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) guide
-- [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module
+- [Mastering margin collapsing](/en-US/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
+- [Introduction to the CSS box model](/en-US/docs/Web/CSS/Guides/Box_model/Introduction) guide
+- [CSS box model](/en-US/docs/Web/CSS/Guides/Box_model) module

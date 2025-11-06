@@ -135,5 +135,5 @@ form {
 - {{cssxref("min-inline-size")}}
 - {{cssxref("min-block-size")}}
 - {{cssxref("box-sizing")}}
-- [Introduction to the CSS box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) guide
-- [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module
+- [Introduction to the CSS box model](/en-US/docs/Web/CSS/Guides/Box_model/Introduction) guide
+- [CSS box model](/en-US/docs/Web/CSS/Guides/Box_model) module

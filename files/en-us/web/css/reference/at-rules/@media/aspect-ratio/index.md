@@ -112,6 +112,6 @@ From the initial state, as you reduce height, the aspect ratio starts increasing
 
 ## See also
 
-- [Understanding `aspect-ratio`](/en-US/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)
+- [Understanding `aspect-ratio`](/en-US/docs/Web/CSS/Guides/Box_sizing/Aspect_ratios)
 - [Using Media Queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - [@media](/en-US/docs/Web/CSS/Reference/At-rules/@media)

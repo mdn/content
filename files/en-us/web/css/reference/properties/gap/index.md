@@ -358,7 +358,7 @@ In case of the flex layout, the percentage gap always results in zero value.
 - {{CSSxRef("row-gap")}}
 - {{CSSxRef("column-gap")}}
 - [Basic concepts of grid layout: gutters](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#gutters)
-- [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module
+- [CSS box alignment](/en-US/docs/Web/CSS/Guides/Box_alignment) module
 - [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module
 - [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) module
 - [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout) module

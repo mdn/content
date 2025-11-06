@@ -9,7 +9,7 @@ As column boxes created inside multi-column (_multicol_) containers are anonymou
 
 ## Column gaps
 
-The gap between columns is controlled using the {{CSSXref("column-gap")}} or {{CSSXref("gap")}} property. The `column-gap` property is defined in the [multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout) module. The `gap` property is defined in the [box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module. This is a unified property to define gaps between boxes in all layouts that support gaps, including [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout) and [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items).
+The gap between columns is controlled using the {{CSSXref("column-gap")}} or {{CSSXref("gap")}} property. The `column-gap` property is defined in the [multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout) module. The `gap` property is defined in the [box alignment](/en-US/docs/Web/CSS/Guides/Box_alignment) module. This is a unified property to define gaps between boxes in all layouts that support gaps, including [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout) and [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items).
 
 The initial value of `column-gap` is `1em`, which prevents columns from running into each other. In other layout methods, `column-gap` is supported as a synonym for `gap`, but with an initial value of `0`. The keyword value `normal` sets `column-gap` to the initial value.
 

@@ -173,7 +173,7 @@ An **SVG reference page** lists all the attributes that are available on an SVG 
 
 ### CSS module landing page
 
-Every **[CSS](/en-US/docs/Web/CSS) module** represents a CSS specification that provides support for certain features and implementations in CSS. For example, the [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module represents the [specification](/en-US/docs/Web/CSS/CSS_box_model#specifications) that describes the margin and padding properties that let you create spacing in and around a CSS box.
+Every **[CSS](/en-US/docs/Web/CSS) module** represents a CSS specification that provides support for certain features and implementations in CSS. For example, the [CSS box model](/en-US/docs/Web/CSS/Guides/Box_model) module represents the [specification](/en-US/docs/Web/CSS/Guides/Box_model#specifications) that describes the margin and padding properties that let you create spacing in and around a CSS box.
 
 A **CSS module landing page** provides an overview of the features that the module provides and lists all the properties, data types, CSS functions, and so on offered by the module. When possible, the CSS module landing page provides a quick demonstration of what can be achieved using the properties of the module through an interactive example.
 The module landing page serves primarily as a _navigation_ page, but also functions as an at-a-glance _reference_ page for the module.
@@ -184,7 +184,7 @@ For example, the `<easing-function>` data type and the `prefers-reduced-motion` 
 #### Examples
 
 - [CSS animations](/en-US/docs/Web/CSS/Guides/Animations)
-- [CSS basic user interface](/en-US/docs/Web/CSS/CSS_basic_user_interface)
+- [CSS basic user interface](/en-US/docs/Web/CSS/Guides/Basic_user_interface)
 - [CSS filter effects](/en-US/docs/Web/CSS/CSS_filter_effects)
 - [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap)
 

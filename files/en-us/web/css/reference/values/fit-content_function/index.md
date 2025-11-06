@@ -138,7 +138,7 @@ fit-content(40%)
 
 - {{cssxref("min-content")}} keyterm
 - {{cssxref("max-content")}} keyterm
-- [CSS box sizing](/en-US/docs/Web/CSS/CSS_box_sizing) module
+- [CSS box sizing](/en-US/docs/Web/CSS/Guides/Box_sizing) module
 - {{cssxref("grid-template")}}
 - {{cssxref("grid-template-rows")}}
 - {{cssxref("grid-template-columns")}}

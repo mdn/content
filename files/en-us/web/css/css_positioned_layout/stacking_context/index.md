@@ -188,7 +188,7 @@ article {
 }
 ```
 
-The CSS properties for colors, fonts, alignment, and [box-model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) have been hidden for brevity.
+The CSS properties for colors, fonts, alignment, and [box-model](/en-US/docs/Web/CSS/Guides/Box_model/Introduction) have been hidden for brevity.
 
 {{ EmbedLiveSample('Nested stacking contexts', '100%', '396') }}
 

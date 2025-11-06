@@ -309,7 +309,7 @@ option:checked {
 
 You've probably noticed that when you open the picker to make a selection, the currently selected `<option>` has a checkmark at its inline-start end. This checkmark can be targeted using the {{cssxref("::checkmark")}} pseudo-element. For example, you might want to hide this checkmark (for example, via `display: none`).
 
-You could also choose to do something a bit more interesting with it — earlier on the `<option>` elements were laid out horizontally using flexbox, with the flex items being aligned to the start of the row. In the below rule, the checkmark is moved from the start of the row to the end by setting an {{cssxref("order")}} value on it greater than `0`, and aligning it to the end of the row using an `auto` {{cssxref("margin-left")}} value (see [Alignment and auto margins](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox#alignment_and_auto_margins)).
+You could also choose to do something a bit more interesting with it — earlier on the `<option>` elements were laid out horizontally using flexbox, with the flex items being aligned to the start of the row. In the below rule, the checkmark is moved from the start of the row to the end by setting an {{cssxref("order")}} value on it greater than `0`, and aligning it to the end of the row using an `auto` {{cssxref("margin-left")}} value (see [Alignment and auto margins](/en-US/docs/Web/CSS/Guides/Box_alignment/In_flexbox#alignment_and_auto_margins)).
 
 Finally, the value of the {{cssxref("content")}} property is set to a different emoji, to set a different icon to display.
 

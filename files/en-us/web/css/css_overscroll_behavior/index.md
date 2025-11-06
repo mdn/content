@@ -74,5 +74,5 @@ This module defines the overscroll behavior, enabling you to specify the actions
 
 - [CSS scroll anchoring](/en-US/docs/Web/CSS/CSS_scroll_anchoring) module
 - [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) module
-- [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module
+- [CSS box model](/en-US/docs/Web/CSS/Guides/Box_model) module
 - [CSS logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) module

@@ -45,4 +45,4 @@ console.log(inputElement.width);
 - CSS {{CSSXRef("inline-size")}} property
 - CSS {{CSSXRef("width")}} property
 - CSS {{CSSXRef("aspect-ratio")}} property
-- [CSS box sizing](/en-US/docs/Web/CSS/CSS_box_sizing) module
+- [CSS box sizing](/en-US/docs/Web/CSS/Guides/Box_sizing) module

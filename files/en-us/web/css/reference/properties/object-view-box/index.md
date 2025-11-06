@@ -366,5 +366,5 @@ img {
 - {{cssxref("object-fit")}}
 - {{cssxref("object-position")}}
 - {{cssxref("background-size")}}
-- [Understanding aspect ratio](/en-US/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)
+- [Understanding aspect ratio](/en-US/docs/Web/CSS/Guides/Box_sizing/Aspect_ratios)
 - [CSS images](/en-US/docs/Web/CSS/CSS_images) module

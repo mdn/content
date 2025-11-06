@@ -157,7 +157,7 @@ This sample animation uses {{cssxref("display")}}, {{cssxref("grid-template-colu
 - [Masonry layout](/en-US/docs/Web/CSS/CSS_grid_layout/Masonry_layout)
   - : Details what masonry layout is and it is used.
 
-- [Box alignment in CSS grid layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)
+- [Box alignment in CSS grid layout](/en-US/docs/Web/CSS/Guides/Box_alignment/In_grid_layout)
   - : How box alignment works in the context of grid layout.
 
 ## Related features
@@ -167,7 +167,7 @@ This sample animation uses {{cssxref("display")}}, {{cssxref("grid-template-colu
 - {{CSSxRef("display")}}
 - {{CSSxRef("order")}}
 
-[CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module
+[CSS box alignment](/en-US/docs/Web/CSS/Guides/Box_alignment) module
 
 - {{cssxref("align-content")}}
 - {{cssxref("align-items")}}
@@ -182,7 +182,7 @@ This sample animation uses {{cssxref("display")}}, {{cssxref("grid-template-colu
 - {{cssxref("place-self")}}
 - {{cssxref("row-gap")}}
 
-[CSS box sizing](/en-US/docs/Web/CSS/CSS_box_sizing) module
+[CSS box sizing](/en-US/docs/Web/CSS/Guides/Box_sizing) module
 
 - {{cssxref("aspect-ratio")}}
 - {{cssxref("box-sizing")}}

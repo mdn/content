@@ -132,7 +132,7 @@ When the `filter` property values contains multiple functions, the filters are a
     ```
 
 - {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
-  - : Applies the parameter `<shadow>` as a drop shadow, following the contours of the image. The shadow syntax is similar to `<box-shadow>` (defined in the [CSS backgrounds and borders module](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders)), with the exception that the `inset` keyword and `spread` parameter are not allowed. As with all `filter` property values, any filters after the `drop-shadow()` are applied to the shadow.
+  - : Applies the parameter `<shadow>` as a drop shadow, following the contours of the image. The shadow syntax is similar to `<box-shadow>` (defined in the [CSS backgrounds and borders module](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders)), with the exception that the `inset` keyword and `spread` parameter are not allowed. As with all `filter` property values, any filters after the `drop-shadow()` are applied to the shadow.
 
     ```css
     filter: drop-shadow(16px 16px 10px black);

@@ -63,7 +63,7 @@ Container queries are similar to dimension [media queries](/en-US/docs/Web/CSS/C
   - {{cssxref("@starting-style")}} at-rule
   - {{cssxref("transition-behavior")}} property
 
-- [CSS box sizing](/en-US/docs/Web/CSS/CSS_box_sizing) module
+- [CSS box sizing](/en-US/docs/Web/CSS/Guides/Box_sizing) module
   - {{CSSxRef("aspect-ratio")}} property
   - {{cssxref("contain-intrinsic-size")}} shorthand property
   - {{CSSxRef("contain-intrinsic-inline-size")}} property
@@ -85,5 +85,5 @@ Container queries are similar to dimension [media queries](/en-US/docs/Web/CSS/C
 
 - [Using feature queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)
 - [Using CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [Understanding aspect ratios](/en-US/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)
+- [Understanding aspect ratios](/en-US/docs/Web/CSS/Guides/Box_sizing/Aspect_ratios)
 - {{cssxref("@supports")}} at-rule

@@ -671,6 +671,6 @@ The rendered result looks like this:
 ## See also
 
 - {{Cssxref("border-radius")}}
-- [CSS borders and box decorations](/en-US/docs/Web/CSS/CSS_borders_and_box_decorations) module
-- [CSS backgrounds and borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders) module
+- [CSS borders and box decorations](/en-US/docs/Web/CSS/Guides/Borders_and_box_decorations) module
+- [CSS backgrounds and borders](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders) module
 - [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module

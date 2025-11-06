@@ -187,7 +187,7 @@ Click **"Play"** and try changing the alignment, for example aligning the item t
 
 {{EmbedLiveSample("center", "", "320px")}}
 
-With [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) properties, you can vertically center an element inside another without flexbox. In the example above, try removing the flex properties from the box and adding `align-content: center`. Then add `margin: auto` to the element you want to horizontally center.
+With [CSS box alignment](/en-US/docs/Web/CSS/Guides/Box_alignment) properties, you can vertically center an element inside another without flexbox. In the example above, try removing the flex properties from the box and adding `align-content: center`. Then add `margin: auto` to the element you want to horizontally center.
 
 ## Card layout pushing footer down
 

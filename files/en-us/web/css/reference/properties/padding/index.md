@@ -6,7 +6,7 @@ browser-compat: css.properties.padding
 sidebar: cssref
 ---
 
-The **`padding`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) sets the [padding area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#padding_area) on all four sides of an element at once.
+The **`padding`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) sets the [padding area](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#padding_area) on all four sides of an element at once.
 
 {{InteractiveExample("CSS Demo: padding")}}
 
@@ -174,5 +174,5 @@ padding: 1em 3px 30px 5px; /* top:    1em padding  */
 - {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, and {{cssxref("padding-left")}}
 - {{cssxref("padding-block-start")}}, {{cssxref("padding-block-end")}}, {{cssxref("padding-inline-start")}}, and {{cssxref("padding-inline-end")}}
 - {{cssxref("padding-block")}} and {{cssxref("padding-inline")}} shorthands
-- [Introduction to the CSS box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) guide
-- [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module
+- [Introduction to the CSS box model](/en-US/docs/Web/CSS/Guides/Box_model/Introduction) guide
+- [CSS box model](/en-US/docs/Web/CSS/Guides/Box_model) module

@@ -53,7 +53,7 @@ The CSS images module also defines the {{CSSxRef("image/image", "image()")}} fun
 - [Styling replaced elements](/en-US/docs/Web/CSS/CSS_images/Replaced_element_properties)
   - : Introduces the properties that only apply to _replaced elements_.
 
-- [Understanding aspect ratios](/en-US/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)
+- [Understanding aspect ratios](/en-US/docs/Web/CSS/Guides/Box_sizing/Aspect_ratios)
   - : Learn about the `aspect-ratio` property, discuss aspect ratios for replaced and non-replaced elements, and examine some common aspect ratio use cases.
 
 - [Using the CSS `object-view-box` property](/en-US/docs/Web/CSS/CSS_images/Using_object-view-box)

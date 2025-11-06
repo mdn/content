@@ -12,7 +12,7 @@ In this article, we will take a look at how flexbox fits in with all the other C
 
 Many people first look at flexbox when they want to properly align flex items inside a flex container. Flexbox provides access to properties that allow the alignment of items on their cross axis and justification of items on the main axis.
 
-Flexbox was originally defined in its own [flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module, but the properties and values that are common to other layout methods are defined in the [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module. This module details how alignment, justification, gaps, and gutters work in all layout systems — not just flexbox. When a feature is defined in both specifications, note that the box alignment module supersedes the flexible box layout module.
+Flexbox was originally defined in its own [flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module, but the properties and values that are common to other layout methods are defined in the [CSS box alignment](/en-US/docs/Web/CSS/Guides/Box_alignment) module. This module details how alignment, justification, gaps, and gutters work in all layout systems — not just flexbox. When a feature is defined in both specifications, note that the box alignment module supersedes the flexible box layout module.
 
 ## Writing Modes
 

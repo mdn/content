@@ -6,7 +6,7 @@ browser-compat: css.properties.margin-left
 sidebar: cssref
 ---
 
-The **`margin-left`** [CSS](/en-US/docs/Web/CSS) property sets the [margin area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#margin_area) on the left side of an element. A positive value places it farther from its neighbors, while a negative value places it closer.
+The **`margin-left`** [CSS](/en-US/docs/Web/CSS) property sets the [margin area](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#margin_area) on the left side of an element. A positive value places it farther from its neighbors, while a negative value places it closer.
 
 {{InteractiveExample("CSS Demo: margin-left")}}
 
@@ -58,7 +58,7 @@ margin-left: 0;
 }
 ```
 
-The vertical margins of two adjacent boxes may fuse. This is called [_margin collapsing_](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing).
+The vertical margins of two adjacent boxes may fuse. This is called [_margin collapsing_](/en-US/docs/Web/CSS/Guides/Box_model/Margin_collapsing).
 
 In the rare cases where width is overconstrained (i.e., when all of `width`, `margin-left`, `border`, `padding`, the content area, and `margin-right` are defined), `margin-left` is ignored, and will have the same calculated value as if the `auto` value was specified.
 
@@ -244,4 +244,4 @@ Percentage values for `margin-left` are relative to the container's inline size.
 - {{cssxref("margin")}} shorthand
 - {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}}, and {{cssxref("margin-inline-end")}}
 - {{cssxref("margin-block")}} and {{cssxref("margin-inline")}} shorthands
-- [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module
+- [CSS box model](/en-US/docs/Web/CSS/Guides/Box_model) module

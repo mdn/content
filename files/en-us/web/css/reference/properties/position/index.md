@@ -131,7 +131,7 @@ position: unset;
 - `absolute`
   - : The element is removed from the normal document flow, and no space is created for the element in the page layout. The element is positioned relative to its closest positioned ancestor (if any) or to the initial [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block#identifying_the_containing_block). Its final position is determined by the values of `top`, `right`, `bottom`, and `left`.
 
-    This value creates a new [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context) when the value of `z-index` is not `auto`. The margins of absolutely positioned boxes do not [collapse](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing) with other margins.
+    This value creates a new [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context) when the value of `z-index` is not `auto`. The margins of absolutely positioned boxes do not [collapse](/en-US/docs/Web/CSS/Guides/Box_model/Margin_collapsing) with other margins.
 
 - `fixed`
   - : The element is removed from the normal document flow, and no space is created for the element in the page layout. The element is positioned relative to its initial [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block#identifying_the_containing_block), which is the viewport in the case of visual media. Its final position is determined by the values of `top`, `right`, `bottom`, and `left`.

@@ -418,10 +418,10 @@ Here are some more examples:
   - [Comments](/en-US/docs/Web/CSS/CSS_syntax/Comments)
   - [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
   - [Inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance)
-  - [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+  - [Box model](/en-US/docs/Web/CSS/Guides/Box_model/Introduction)
   - [Layout modes](/en-US/docs/Glossary/Layout_mode)
   - [Visual formatting model](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model)
-  - [Margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+  - [Margin collapsing](/en-US/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
   - Values
     - [Initial values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value)
     - [Computed values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value)

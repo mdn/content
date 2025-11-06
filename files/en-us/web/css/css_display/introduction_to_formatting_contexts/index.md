@@ -186,4 +186,4 @@ In this guide, we have looked in more detail at the block and Inline formatting 
 
 - [Block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context)
 - [Visual formatting model](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model)
-- [CSS Box Model](/en-US/docs/Web/CSS/CSS_box_model)
+- [CSS Box Model](/en-US/docs/Web/CSS/Guides/Box_model)

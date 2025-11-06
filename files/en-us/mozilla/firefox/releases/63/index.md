@@ -32,7 +32,7 @@ This article provides information about the changes in Firefox 63 that will affe
 ### CSS
 
 - Support for the {{CSSxRef(":defined")}} pseudo-class has been added ([Firefox bug 1331334](https://bugzil.la/1331334)).
-- Support for {{CSSxRef("row-gap")}}, {{CSSxRef("column-gap")}} and {{CSSxRef("gap")}} have been added in [Flexbox layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox#the_gap_properties) ([Firefox bug 1398483](https://bugzil.la/1398483)).
+- Support for {{CSSxRef("row-gap")}}, {{CSSxRef("column-gap")}} and {{CSSxRef("gap")}} have been added in [Flexbox layout](/en-US/docs/Web/CSS/Guides/Box_alignment/In_flexbox#the_gap_properties) ([Firefox bug 1398483](https://bugzil.la/1398483)).
 - Re-enabled support for [webkit-prefixed pixel-density @media queries](/en-US/docs/Web/CSS/Reference/At-rules/@media/-webkit-device-pixel-ratio) ([Firefox bug 1444139](https://bugzil.la/1444139)).
 - Support added for the [CSS Flexible Box Layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) (Flexbox) properties {{CSSxRef("align-self")}}, {{CSSxRef("align-content")}}, and {{CSSxRef("align-items")}} as well as the {{CSSxRef("justify-content")}} property ([Firefox bug 1472843](https://bugzil.la/1472843)).
 - Implemented the `path()` function for {{CSSxRef("offset-path")}} ([Firefox bug 1429298](https://bugzil.la/1429298)).

@@ -84,25 +84,25 @@ sidebar:
   - title: Backgrounds_and_Borders
     details: closed
     children:
-      - /Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
-      - link: /Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images
+      - /Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds
+      - link: /Web/CSS/Guides/Backgrounds_and_borders/Resizing_background_images
         title: Resizing_background_images
-      - /Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds
+      - /Web/CSS/Guides/Backgrounds_and_borders/Scaling_SVG_backgrounds
   - title: Box alignment
     details: closed
     children:
-      - link: /Web/CSS/CSS_box_alignment/Box_alignment
+      - link: /Web/CSS/Guides/Box_alignment/Overview
         title: Overview
-      - link: /Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables
+      - link: /Web/CSS/Guides/Box_alignment/In_block_abspos_tables
         title: Box_alignment_in_block_layout
-      - /Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox
-      - /Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout
-      - /Web/CSS/CSS_box_alignment/Box_alignment_in_multi-column_layout
+      - /Web/CSS/Guides/Box_alignment/In_flexbox
+      - /Web/CSS/Guides/Box_alignment/In_grid_layout
+      - /Web/CSS/Guides/Box_alignment/In_multi-column_layout
   - title: Box_model
     details: closed
     children:
-      - /Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
-      - /Web/CSS/CSS_box_model/Mastering_margin_collapsing
+      - /Web/CSS/Guides/Box_model/Introduction
+      - /Web/CSS/Guides/Box_model/Margin_collapsing
   - title: Cascade
     details: closed
     children:
@@ -316,9 +316,9 @@ sidebar:
   - type: section
     title: Tools
   - children:
-      - /Web/CSS/CSS_backgrounds_and_borders/Border-image_generator
-      - /Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator
-      - /Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator
+      - /Web/CSS/Guides/Backgrounds_and_borders/Border-image_generator
+      - /Web/CSS/Guides/Backgrounds_and_borders/Border-radius_generator
+      - /Web/CSS/Guides/Backgrounds_and_borders/Box-shadow_generator
       - /Web/CSS/CSS_colors/Color_format_converter
       - /Web/CSS/CSS_colors/Color_mixer
       - /Web/CSS/CSS_shapes/Shape_generator

@@ -12,7 +12,7 @@ The **CSS masking** module defines masking and clipping, two different graphical
 
 CSS **masking** properties are used to apply a mask to an element or its border. A graphical object is then painted onto the background or border, completely or partially masking out parts of the element or its border, depending on the opacity or luminance of the mask.
 
-The image used as the mask is specified by the {{cssxref("mask-image")}} or {{cssxref("mask-border-source")}} properties. The specified mask can be an {{cssxref("image")}}, a {{cssxref("gradient")}}, or an SVG {{SVGElement("mask")}} element. The mask can be sized and positioned similarly to [background and border images](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders).
+The image used as the mask is specified by the {{cssxref("mask-image")}} or {{cssxref("mask-border-source")}} properties. The specified mask can be an {{cssxref("image")}}, a {{cssxref("gradient")}}, or an SVG {{SVGElement("mask")}} element. The mask can be sized and positioned similarly to [background and border images](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders).
 
 Clipping and masking in CSS behaves the same way as it does with SVG: First, the element is styled without filter effects, masking, clipping, and opacity. Then, any effects are applied to the element in the following order: [filter effects](/en-US/docs/Web/CSS/CSS_filter_effects), clipping, masking, and opacity.
 
@@ -78,7 +78,7 @@ While masking provides more control and options, clipping can perform better if 
 - {{cssxref("&lt;position&gt;")}}
 - {{cssxref("&lt;url&gt;")}}
 
-- [CSS backgrounds and borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders) module
+- [CSS backgrounds and borders](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders) module
   - {{cssxref("background")}} shorthand
   - {{cssxref("background-origin")}}
   - {{cssxref("background-position")}}

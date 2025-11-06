@@ -84,8 +84,8 @@ body {
   - : Common design patterns that are typical Flexbox use cases.
 - [CSS layout: flexbox](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox)
   - : Learn how to use flexbox layout to create web layouts.
-- [Box alignment in flexbox](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
-  - : Details features of [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) which are specific to flexbox.
+- [Box alignment in flexbox](/en-US/docs/Web/CSS/Guides/Box_alignment/In_flexbox)
+  - : Details features of [CSS box alignment](/en-US/docs/Web/CSS/Guides/Box_alignment) which are specific to flexbox.
 
 ## Related concepts
 
@@ -94,7 +94,7 @@ body {
 - {{cssxref("display")}}
 - {{cssxref("order")}}
 
-[CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module
+[CSS box alignment](/en-US/docs/Web/CSS/Guides/Box_alignment) module
 
 - {{cssxref("align-content")}}
 - {{cssxref("align-items")}}
@@ -106,7 +106,7 @@ body {
 - {{cssxref("place-items")}}
 - {{cssxref("row-gap")}}
 
-[CSS box sizing](/en-US/docs/Web/CSS/CSS_box_sizing) module
+[CSS box sizing](/en-US/docs/Web/CSS/Guides/Box_sizing) module
 
 - {{cssxref("aspect-ratio")}}
 - {{cssxref("max-content")}} value

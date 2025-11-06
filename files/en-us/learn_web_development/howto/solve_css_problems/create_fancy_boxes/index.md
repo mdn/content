@@ -71,11 +71,11 @@ Yes, we get a circle:
 
 ## Backgrounds
 
-When we talk about a fancy box, the core properties to handle that are [background-\* properties](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders). When you start fiddling with backgrounds it's like your CSS box is turned into a blank canvas you'll fill.
+When we talk about a fancy box, the core properties to handle that are [background-\* properties](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders). When you start fiddling with backgrounds it's like your CSS box is turned into a blank canvas you'll fill.
 
 Before we jump to some practical examples, let's step back a bit as there are two things you should know about backgrounds.
 
-- It's possible to set [several backgrounds](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds) on a single box. They are stacked on top of each other like layers.
+- It's possible to set [several backgrounds](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds) on a single box. They are stacked on top of each other like layers.
 - Backgrounds can be either solid colors or images: solid color always fills the whole surface but images can be scaled and positioned.
 
 ```html hidden

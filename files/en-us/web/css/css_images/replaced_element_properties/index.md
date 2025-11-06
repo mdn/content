@@ -142,7 +142,7 @@ The `object-position` property works equally well with `<iframe>`, `<video>`, an
 
 ## See also
 
-- [Understanding aspect ratios](/en-US/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)
+- [Understanding aspect ratios](/en-US/docs/Web/CSS/Guides/Box_sizing/Aspect_ratios)
 - [CSS images](/en-US/docs/Web/CSS/CSS_images) module
 - [CSS display](/en-US/docs/Web/CSS/CSS_display) module
-- [CSS backgrounds and borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders) module
+- [CSS backgrounds and borders](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders) module

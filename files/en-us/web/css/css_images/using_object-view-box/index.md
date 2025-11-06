@@ -12,7 +12,7 @@ The {{cssxref("object-view-box")}} property can be used to define a viewbox with
 
 Every replaced elements has two sizes; an {{glossary("extrinsic size")}} and an {{glossary("intrinsic size")}}.
 
-The extrinsic size is the dimension of the HTML element in which the content is rendered based on the box and visual formatting models. The [box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) and [visual formatting model](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model) determine the size of rendered elements based on content, HTML attributes, CSS applied to the elements and their ancestors, and the viewport size.
+The extrinsic size is the dimension of the HTML element in which the content is rendered based on the box and visual formatting models. The [box model](/en-US/docs/Web/CSS/Guides/Box_model/Introduction) and [visual formatting model](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model) determine the size of rendered elements based on content, HTML attributes, CSS applied to the elements and their ancestors, and the viewport size.
 
 The intrinsic size is the actual size of the content itself; the size the element is when no styles are applied and without any layout constraints. While the intrinsic and extrinsic sizes don't have to be the same, it is generally important to maintain a replaced element's intrinsic {{glossary("aspect ratio")}}.
 
@@ -188,4 +188,4 @@ Move the slider. Note how increasing and decreasing the `x` value of the `xywh()
 - {{cssxref("object-fit")}}
 - {{cssxref("object-position")}}
 - {{cssxref("background-size")}}
-- [Understanding aspect ratio](/en-US/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)
+- [Understanding aspect ratio](/en-US/docs/Web/CSS/Guides/Box_sizing/Aspect_ratios)

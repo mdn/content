@@ -39,7 +39,7 @@ The properties introduced in this module aren't limited to the `<table>` element
 - {{cssxref("vertical-align")}} property
 - {{cssxref("text-align")}} property
 
-- [CSS box sizing](/en-US/docs/Web/CSS/CSS_box_sizing) module
+- [CSS box sizing](/en-US/docs/Web/CSS/Guides/Box_sizing) module
   - {{cssxref("box-sizing")}}
   - {{cssxref("height")}}
   - {{cssxref("max-width")}}
@@ -48,7 +48,7 @@ The properties introduced in this module aren't limited to the `<table>` element
   - {{cssxref("width")}}
   - {{cssxref("min-content")}} keyword
 
-- [CSS backgrounds and borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders) module
+- [CSS backgrounds and borders](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders) module
   - {{cssxref("border")}} shorthand
   - {{cssxref("border-width")}}
   - {{cssxref("border-style")}}

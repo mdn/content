@@ -56,9 +56,9 @@ The effect of this property is dependent of the layout mode we are in:
 
 - In block-level layouts, it aligns an item inside its containing block on the inline axis.
 - For absolutely-positioned elements, it aligns an item inside its containing block on the inline axis, accounting for the offset values of top, left, bottom, and right.
-- In table cell layouts, this property is _ignored_. Read more about [alignment in block, absolute positioned and table layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables).
-- In flexbox layouts, this property is _ignored_. Read more about [alignment in flexbox](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox).
-- In grid layouts, it aligns an item inside its grid area on the inline axis. Read more about [alignment in grid layouts](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout).
+- In table cell layouts, this property is _ignored_. Read more about [alignment in block, absolute positioned and table layout](/en-US/docs/Web/CSS/Guides/Box_alignment/In_block_abspos_tables).
+- In flexbox layouts, this property is _ignored_. Read more about [alignment in flexbox](/en-US/docs/Web/CSS/Guides/Box_alignment/In_flexbox).
+- In grid layouts, it aligns an item inside its grid area on the inline axis. Read more about [alignment in grid layouts](/en-US/docs/Web/CSS/Guides/Box_alignment/In_grid_layout).
 
 ## Syntax
 
@@ -233,8 +233,8 @@ span {
 
 ## See also
 
-- [Box alignment in grid layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)
-- [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module
+- [Box alignment in grid layout](/en-US/docs/Web/CSS/Guides/Box_alignment/In_grid_layout)
+- [CSS box alignment](/en-US/docs/Web/CSS/Guides/Box_alignment) module
 - {{CSSxRef("justify-items")}}
 - {{cssxref("align-self")}}
 - {{cssxref("place-self")}}

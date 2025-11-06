@@ -144,7 +144,7 @@ justify-content: unset;
 
 ## Description
 
-Defined in the [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module, `justify-content` applies to multicol containers, flex containers, and grid containers. The property does not apply to and has no effect on block containers.
+Defined in the [CSS box alignment](/en-US/docs/Web/CSS/Guides/Box_alignment) module, `justify-content` applies to multicol containers, flex containers, and grid containers. The property does not apply to and has no effect on block containers.
 
 This property shares many keyword values with the {{cssxref("align-content")}} property, but not all! `justify-content` isn't involved in baseline alignment, and therefore does not take baseline values.
 
@@ -426,5 +426,5 @@ Select different keywords from the drop-down menu to visualize the different `ju
 
 - [Basic concepts of flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
 - [Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
-- [Box alignment in grid layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)
-- [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module
+- [Box alignment in grid layout](/en-US/docs/Web/CSS/Guides/Box_alignment/In_grid_layout)
+- [CSS box alignment](/en-US/docs/Web/CSS/Guides/Box_alignment) module

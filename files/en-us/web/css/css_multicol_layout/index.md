@@ -329,11 +329,11 @@ blockquote p::after {
 - {{cssxref("orphans")}}
 - {{cssxref("widows")}}
 
-[CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module
+[CSS box alignment](/en-US/docs/Web/CSS/Guides/Box_alignment) module
 
 - {{cssxref("gap")}}
 
-[CSS box sizing](/en-US/docs/Web/CSS/CSS_box_sizing) module
+[CSS box sizing](/en-US/docs/Web/CSS/Guides/Box_sizing) module
 
 - {{cssxref("height")}}
 - {{cssxref("max-height")}}

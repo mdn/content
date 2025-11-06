@@ -254,9 +254,9 @@ A block box is a block-level box that is also a block container. As described in
 - [Inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance)
 - [Stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context)
 - [Block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context)
-- [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+- [Box model](/en-US/docs/Web/CSS/Guides/Box_model/Introduction)
 - [Layout modes](/en-US/docs/Glossary/Layout_mode)
-- [Margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+- [Margin collapsing](/en-US/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
 - {{glossary("Replaced elements")}}
 - {{DOMxRef("VisualViewport")}} interface
 - {{glossary("Scroll container")}}

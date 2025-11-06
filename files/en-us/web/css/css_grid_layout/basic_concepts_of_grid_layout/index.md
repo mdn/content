@@ -26,7 +26,7 @@ You can define an explicit grid with grid layout. The features defined by the gr
 
 ### Alignment control
 
-CSS grid layout and [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) features enable us to control how the items align once placed into a grid area, and how the entire grid is aligned.
+CSS grid layout and [CSS box alignment](/en-US/docs/Web/CSS/Guides/Box_alignment) features enable us to control how the items align once placed into a grid area, and how the entire grid is aligned.
 
 ### Control of overlapping content
 

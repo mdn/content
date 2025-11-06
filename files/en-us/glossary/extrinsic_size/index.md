@@ -19,5 +19,5 @@ Block-level elements are sized extrinsically. When a width isn't specified, the 
 
 - Related glossary terms:
   - {{glossary("Intrinsic size")}}
-- [CSS box sizing](/en-US/docs/Web/CSS/CSS_box_sizing) module
+- [CSS box sizing](/en-US/docs/Web/CSS/Guides/Box_sizing) module
 - [CSS Box Sizing Module Level 3](https://drafts.csswg.org/css-sizing-3/#extrinsic) specification

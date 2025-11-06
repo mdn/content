@@ -30,7 +30,7 @@ Formatting contexts affect layout because an element that establishes a new bloc
 
 - contain internal floats.
 - exclude external floats.
-- suppress [margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing).
+- suppress [margin collapsing](/en-US/docs/Web/CSS/Guides/Box_model/Margin_collapsing).
 
 Flex and grid containers, defined by setting an element's ({{ cssxref("display") }} to `flex`, `grid`, `inline-flex`, or `inline-grid`, establishes a new flex or grid formatting context. These are similar to block formatting context except there are no floating children available inside a flex or grid container, but these formatting contexts do exclude external floats and suppress margin collapsing.
 
@@ -165,7 +165,7 @@ section {
 
 ### Prevent margin collapsing
 
-You can create a new BFC to avoid [margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing) between two neighbor elements.
+You can create a new BFC to avoid [margin collapsing](/en-US/docs/Web/CSS/Guides/Box_model/Margin_collapsing) between two neighbor elements.
 
 #### Margin collapsing example
 
@@ -237,10 +237,10 @@ In this example, we wrap the second `<div>` in an outer `<div>`, and create a ne
 - [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax/Syntax)
 - [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
 - [Inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance)
-- [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+- [Box model](/en-US/docs/Web/CSS/Guides/Box_model/Introduction)
 - [Layout modes](/en-US/docs/Glossary/Layout_mode)
 - [Visual formatting models](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model)
-- [Margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+- [Margin collapsing](/en-US/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
 - [Initial](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value), [computed](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value), [used values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#used_value), and [actual](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#actual_value) values
 - [Value definition syntax](/en-US/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
 - {{glossary("Replaced elements")}}

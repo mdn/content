@@ -6,7 +6,7 @@ browser-compat: css.properties.padding-right
 sidebar: cssref
 ---
 
-The **`padding-right`** [CSS](/en-US/docs/Web/CSS) property sets the width of the [padding area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#padding_area) on the right of an element.
+The **`padding-right`** [CSS](/en-US/docs/Web/CSS) property sets the width of the [padding area](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#padding_area) on the right of an element.
 
 {{InteractiveExample("CSS Demo: padding-right")}}
 
@@ -121,5 +121,5 @@ The `padding-right` property is specified as a single value chosen from the list
 - {{cssxref("padding")}} shorthand
 - {{cssxref("padding-block-start")}}, {{cssxref("padding-block-end")}}, {{cssxref("padding-inline-start")}}, and {{cssxref("padding-inline-end")}}
 - {{cssxref("padding-block")}} and {{cssxref("padding-inline")}} shorthands
-- [Introduction to the CSS box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) guide
-- [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module
+- [Introduction to the CSS box model](/en-US/docs/Web/CSS/Guides/Box_model/Introduction) guide
+- [CSS box model](/en-US/docs/Web/CSS/Guides/Box_model) module

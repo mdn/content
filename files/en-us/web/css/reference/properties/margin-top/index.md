@@ -6,7 +6,7 @@ browser-compat: css.properties.margin-top
 sidebar: cssref
 ---
 
-The **`margin-top`** [CSS](/en-US/docs/Web/CSS) property sets the [margin area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#margin_area) on the top of an element. A positive value places it farther from its neighbors, while a negative value places it closer.
+The **`margin-top`** [CSS](/en-US/docs/Web/CSS) property sets the [margin area](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#margin_area) on the top of an element. A positive value places it farther from its neighbors, while a negative value places it closer.
 
 {{InteractiveExample("CSS Demo: margin-top")}}
 
@@ -137,4 +137,4 @@ The `margin-top` property is specified as the keyword `auto`, or a `<length>`, o
 - {{cssxref("margin")}} shorthand
 - {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}}, and {{cssxref("margin-inline-end")}}
 - {{cssxref("margin-block")}} and {{cssxref("margin-inline")}} shorthands
-- [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module
+- [CSS box model](/en-US/docs/Web/CSS/Guides/Box_model) module
