@@ -27,7 +27,7 @@ sidebar: firefox
 
 #### Miscellaneous CSS changes
 
-- The [`rem`](/en-US/docs/Web/CSS/length#relative_length_units) length unit is now supported. [Firefox bug 472195](https://bugzil.la/472195)
+- The [`rem`](/en-US/docs/Web/CSS/Reference/Values/length#relative_length_units) length unit is now supported. [Firefox bug 472195](https://bugzil.la/472195)
 - {{Cssxref("image-rendering")}} is supported for images, background images, videos and canvases. [Firefox bug 423756](https://bugzil.la/423756)
 - {{Cssxref("text-align")}}:end is now supported. [Firefox bug 299837](https://bugzil.la/299837)
 - DOM changes to elements using the table {{Cssxref("display")}} types now work much better.

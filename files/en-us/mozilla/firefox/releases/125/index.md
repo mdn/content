@@ -38,8 +38,8 @@ No notable changes.
   - [`HTMLElement`](/en-US/docs/Web/API/HTMLElement) property [`popover`](/en-US/docs/Web/API/HTMLElement/popover), [`hidePopover()`](/en-US/docs/Web/API/HTMLElement/hidePopover), [`showPopover()`](/en-US/docs/Web/API/HTMLElement/showPopover), and [`togglePopover()`](/en-US/docs/Web/API/HTMLElement/togglePopover) methods, and [`beforetoggle`](/en-US/docs/Web/API/HTMLElement/beforetoggle_event) and [`toggle_event`](/en-US/docs/Web/API/HTMLElement/toggle_event) events (of type [`ToggleEvent`](/en-US/docs/Web/API/ToggleEvent)).
 
   The following CSS pseudo class and element are now supported for use with popovers:
-  - [`:popover-open`](/en-US/docs/Web/CSS/:popover-open)
-  - [`::backdrop`](/en-US/docs/Web/CSS/::backdrop) has been extended to support popovers
+  - [`:popover-open`](/en-US/docs/Web/CSS/Reference/Selectors/:popover-open)
+  - [`::backdrop`](/en-US/docs/Web/CSS/Reference/Selectors/::backdrop) has been extended to support popovers
 
   The following HTML global attributes are supported:
   - [`popovertarget`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertarget)

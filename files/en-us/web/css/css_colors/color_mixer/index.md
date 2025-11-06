@@ -74,26 +74,28 @@ The two input colors, `color-one` and `color-two`, are shown on the outside, and
   <dialog id="picker-dialog">
     <div>Pick a color</div>
     <table>
-      <tr>
-        <td><label for="color-text">Enter color:</label></td>
-        <td><input type="text" id="color-text" value="#bada55" /></td>
-      </tr>
-      <tr>
-        <td><label for="color-input">Pick color:</label></td>
-        <td><input type="color" id="color-input" value="#bada55" /></td>
-      </tr>
-      <tr>
-        <td><label for="color-opacity">Select an opacity:</label></td>
-        <td>
-          <input
-            type="range"
-            id="color-opacity"
-            value="1"
-            min="0"
-            max="1"
-            step="0.01" />
-        </td>
-      </tr>
+      <tbody>
+        <tr>
+          <td><label for="color-text">Enter color:</label></td>
+          <td><input type="text" id="color-text" value="#bada55" /></td>
+        </tr>
+        <tr>
+          <td><label for="color-input">Pick color:</label></td>
+          <td><input type="color" id="color-input" value="#bada55" /></td>
+        </tr>
+        <tr>
+          <td><label for="color-opacity">Select an opacity:</label></td>
+          <td>
+            <input
+              type="range"
+              id="color-opacity"
+              value="1"
+              min="0"
+              max="1"
+              step="0.01" />
+          </td>
+        </tr>
+      </tbody>
     </table>
     <div><button id="picker-ok-button">Ok</button></div>
   </dialog>
@@ -107,7 +109,7 @@ The two input colors, `color-one` and `color-two`, are shown on the outside, and
     <tr id="rgb-function">
       <th>
         <a
-          href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/rgb"
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/rgb"
           target="_blank">
           RGB
         </a>
@@ -117,7 +119,7 @@ The two input colors, `color-one` and `color-two`, are shown on the outside, and
     <tr id="hex">
       <th>
         <a
-          href="https://developer.mozilla.org/en-US/docs/Web/CSS/hex-color"
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/hex-color"
           target="_blank"
           >HEX</a
         >
@@ -127,7 +129,7 @@ The two input colors, `color-one` and `color-two`, are shown on the outside, and
     <tr id="hsl-function">
       <th>
         <a
-          href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/hsl"
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/hsl"
           target="_blank">
           HSL
         </a>
@@ -137,7 +139,7 @@ The two input colors, `color-one` and `color-two`, are shown on the outside, and
     <tr id="hwb-function">
       <th>
         <a
-          href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/hwb"
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/hwb"
           target="_blank">
           HWB
         </a>
@@ -147,7 +149,7 @@ The two input colors, `color-one` and `color-two`, are shown on the outside, and
     <tr id="color-function">
       <th>
         <a
-          href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/color"
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/color"
           target="_blank">
           color()
         </a>
@@ -157,7 +159,7 @@ The two input colors, `color-one` and `color-two`, are shown on the outside, and
     <tr id="lab-function">
       <th>
         <a
-          href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/lab"
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/lab"
           target="_blank">
           Lab
         </a>
@@ -167,7 +169,7 @@ The two input colors, `color-one` and `color-two`, are shown on the outside, and
     <tr id="lch-function">
       <th>
         <a
-          href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/lch"
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/lch"
           target="_blank">
           LCH
         </a>
@@ -177,7 +179,7 @@ The two input colors, `color-one` and `color-two`, are shown on the outside, and
     <tr id="oklab-function">
       <th>
         <a
-          href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/oklab"
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/oklab"
           target="_blank">
           Oklab
         </a>
@@ -187,7 +189,7 @@ The two input colors, `color-one` and `color-two`, are shown on the outside, and
     <tr id="oklch-function">
       <th>
         <a
-          href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/oklch"
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/oklch"
           target="_blank">
           OkLCh
         </a>

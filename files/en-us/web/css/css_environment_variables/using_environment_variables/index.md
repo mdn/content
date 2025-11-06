@@ -13,7 +13,7 @@ CSS environment variables are global variables; globally scoped to the entire do
 
 Environment variables work similarly to [custom properties](/en-US/docs/Web/CSS/Reference/Properties/--*) and the {{cssxref("var()")}} function, but are globally defined and scoped. This means they are always scoped to the entire document, unlike custom properties, which are scoped to elements. In addition, environment variables are read-only, whereas custom properties are mutable.
 
-Similar to custom properties, environment variables are case-sensitive. Unlike custom properties, which cannot be used outside of declarations, the `env()` function can be used in place of any part of a property value, or any part of a descriptor (for example, in [Media query rules](/en-US/docs/Web/CSS/@media)).
+Similar to custom properties, environment variables are case-sensitive. Unlike custom properties, which cannot be used outside of declarations, the `env()` function can be used in place of any part of a property value, or any part of a descriptor (for example, in [Media query rules](/en-US/docs/Web/CSS/Reference/At-rules/@media)).
 
 ### History
 
@@ -153,7 +153,7 @@ In the future, we may see support for developer-defined environment variables, b
 ## See also
 
 - {{cssxref("var")}}
-- [`@media` `shape` descriptor](/en-US/docs/Web/CSS/@media/shape)
+- [`@media` `shape` descriptor](/en-US/docs/Web/CSS/Reference/At-rules/@media/shape)
 - [CSS environment_variables](/en-US/docs/Web/CSS/CSS_environment_variables) module
 - [CSS round display](/en-US/docs/Web/CSS/CSS_round_display) module
 - [CSS custom properties for cascading variables](/en-US/docs/Web/CSS/CSS_cascading_variables) module

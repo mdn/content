@@ -366,7 +366,7 @@ See the {{cssxref("@position-try")}} reference page.
 - {{cssxref("position-try-order")}}
 - {{cssxref("@position-try")}} at-rule
 - {{cssxref("position-area")}}
-- [`<position-area>`](/en-US/docs/Web/CSS/position-area_value) value
+- [`<position-area>`](/en-US/docs/Web/CSS/Reference/Values/position-area_value) value
 - [Fallback options and conditional hiding for overflow](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide
 - [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide
 - [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module

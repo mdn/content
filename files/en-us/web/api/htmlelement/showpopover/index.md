@@ -53,7 +53,9 @@ First, some HTML:
     <li>Press <ins>C</ins> to order cheese</li>
     <li>Press <ins>T</ins> to order tofu</li>
     <li>Press <ins>B</ins> to order bacon</li>
-    <hr />
+  </ul>
+  <hr />
+  <ul>
     <li>Say "Service" to summon the robot waiter to take your order</li>
     <li>Say "Escape" to engage the ejector seat</li>
   </ul>

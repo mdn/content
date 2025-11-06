@@ -284,7 +284,7 @@ The generated content on each list item's marker adds the text "item " as a pref
 
 ### Strings with attribute values
 
-This example is useful for print stylesheets. It uses an [attribute selector](/en-US/docs/Web/CSS/Attribute_selectors) to select every fully qualified secure link, adding the value of the `href` attribute after the link text as the content of the {{cssxref("::after")}} pseudo-element.
+This example is useful for print stylesheets. It uses an [attribute selector](/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors) to select every fully qualified secure link, adding the value of the `href` attribute after the link text as the content of the {{cssxref("::after")}} pseudo-element.
 
 #### HTML
 

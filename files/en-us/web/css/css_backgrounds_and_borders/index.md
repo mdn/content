@@ -173,7 +173,7 @@ The CSS backgrounds module level 4 also introduces the `background-position-bloc
 - {{cssxref("url")}} data type
 - {{cssxref("image")}} data type
 - {{cssxref("position")}} data type
-- [`currentColor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword) keyword
+- [`currentColor`](/en-US/docs/Web/CSS/Reference/Values/color_value#currentcolor_keyword) keyword
 
 ## Specifications
 
@@ -183,7 +183,7 @@ The CSS backgrounds module level 4 also introduces the `background-position-bloc
 
 - {{cssxref("filter")}}
 - {{cssxref("backdrop-filter")}}
-- [`drop-shadow()`](/en-US/docs/Web/CSS/filter-function/drop-shadow) filter function
+- [`drop-shadow()`](/en-US/docs/Web/CSS/Reference/Values/filter-function/drop-shadow) filter function
 - [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color)
 - [Border-image generator](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Border-image_generator)
 - [Border-radius generator](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator)

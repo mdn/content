@@ -7,7 +7,7 @@ browser-compat: api.CSSPageDescriptors
 
 {{APIRef("CSSOM")}}
 
-The **`CSSPageDescriptors`** interface represents a CSS declaration block for an {{cssxref("@page")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule).
+The **`CSSPageDescriptors`** interface represents a CSS declaration block for an {{cssxref("@page")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rules).
 
 The interface exposes style information and various style-related methods and properties for the page.
 Each multi-word property has versions in camel- and snake-case.

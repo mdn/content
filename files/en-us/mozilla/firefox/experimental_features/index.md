@@ -133,7 +133,7 @@ The {{cssxref('timeline-scope')}}, {{cssxref('animation-range-start')}} and {{cs
 
 ### @scope at-rule
 
-The [@scope](/en-US/docs/Web/CSS/@scope) [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) allows you to select specific child elements without having to overly increase the specificity of CSS selectors ([Firefox bug 1886441](https://bugzil.la/1886441)).
+The [@scope](/en-US/docs/Web/CSS/Reference/At-rules/@scope) [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rules) allows you to select specific child elements without having to overly increase the specificity of CSS selectors ([Firefox bug 1886441](https://bugzil.la/1886441)).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
@@ -147,7 +147,7 @@ The [@scope](/en-US/docs/Web/CSS/@scope) [CSS](/en-US/docs/Web/CSS) [at-rule](/e
 
 ### prefers-reduced-transparency media feature
 
-The CSS [`prefers-reduced-transparency`](/en-US/docs/Web/CSS/@media/prefers-reduced-transparency) media feature lets you detect if a user has enabled the setting to minimize the amount of transparent or translucent layer effects on their device.
+The CSS [`prefers-reduced-transparency`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-transparency) media feature lets you detect if a user has enabled the setting to minimize the amount of transparent or translucent layer effects on their device.
 See ([Firefox bug 1736914](https://bugzil.la/1736914)) for more details.
 
 | Release channel   | Version added | Enabled by default? |
@@ -162,7 +162,7 @@ See ([Firefox bug 1736914](https://bugzil.la/1736914)) for more details.
 
 ### inverted-colors media feature
 
-The CSS [`inverted-colors`](/en-US/docs/Web/CSS/@media/inverted-colors) media feature lets you detect if a user agent or the underlying operating system is inverting colors.
+The CSS [`inverted-colors`](/en-US/docs/Web/CSS/Reference/At-rules/@media/inverted-colors) media feature lets you detect if a user agent or the underlying operating system is inverting colors.
 See ([Firefox bug 1794628](https://bugzil.la/1794628)) for more details.
 
 | Release channel   | Version added | Enabled by default? |
@@ -232,7 +232,7 @@ Specifically, this preference will disable the following prefixed properties:
 
 ### `shape()` function
 
-The CSS [`shape()`](/en-US/docs/Web/CSS/basic-shape/shape) function is a [`<basic-shape>`](/en-US/docs/Web/CSS/basic-shape) data type that enables you to define a shape in the {{cssxref("clip-path")}} and {{cssxref("offset-path")}} properties using one or more "shape commands". These commands are very similar to the [SVG path commands](/en-US/docs/Web/SVG/Reference/Attribute/d#path_commands). The `shape()` function is similar in some respects to the {{cssxref("basic-shape/path","path()")}} function, but unlike `path()`, which uses the [SVG path](/en-US/docs/Web/SVG/Reference/Element/path) syntax, `shape()` uses standard CSS syntax. This enables you to easily create and edit shapes and also allows the use of CSS math functions.
+The CSS [`shape()`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/shape) function is a [`<basic-shape>`](/en-US/docs/Web/CSS/Reference/Values/basic-shape) data type that enables you to define a shape in the {{cssxref("clip-path")}} and {{cssxref("offset-path")}} properties using one or more "shape commands". These commands are very similar to the [SVG path commands](/en-US/docs/Web/SVG/Reference/Attribute/d#path_commands). The `shape()` function is similar in some respects to the {{cssxref("basic-shape/path","path()")}} function, but unlike `path()`, which uses the [SVG path](/en-US/docs/Web/SVG/Reference/Element/path) syntax, `shape()` uses standard CSS syntax. This enables you to easily create and edit shapes and also allows the use of CSS math functions.
 For more details, see [Firefox bug 1823463](https://bugzil.la/1823463) for the `shape()` function support in `clip-path`, [Firefox bug 1884424](https://bugzil.la/1884424) for the function's support in `offset-path`, and [Firefox bug 1884425](https://bugzil.la/1884425) for its interpolation support.
 
 | Release channel   | Version added | Enabled by default? |
@@ -261,7 +261,7 @@ The CSS {{cssxref("letter-spacing")}} property now splits the specified letter s
 
 ### `calc()` color channel support in relative colors
 
-The CSS [`calc()`](/en-US/docs/Web/CSS/calc) function can now parse color channels in [relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors#using_math_functions), allowing you to correctly calculate changes to colors in different color spaces or while using different functional notations [Firefox bug 1889561](https://bugzil.la/1889561).
+The CSS [`calc()`](/en-US/docs/Web/CSS/Reference/Values/calc) function can now parse color channels in [relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors#using_math_functions), allowing you to correctly calculate changes to colors in different color spaces or while using different functional notations [Firefox bug 1889561](https://bugzil.la/1889561).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
@@ -321,7 +321,7 @@ The CSS {{CSSXRef("position-area")}} property allows you to position an anchor-p
 
 ### Allow pseudo-elements after element-backed pseudo-elements
 
-Work has started on allowing [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) such as {{cssxref("::first-letter")}} and {{cssxref("::before")}} to be appended to [element-backed pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements#element-backed_pseudo-elements) such as {{cssxref("::details-content")}} and {{cssxref("::file-selector-button")}}.
+Work has started on allowing [pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) such as {{cssxref("::first-letter")}} and {{cssxref("::before")}} to be appended to [element-backed pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements#element-backed_pseudo-elements) such as {{cssxref("::details-content")}} and {{cssxref("::file-selector-button")}}.
 
 This will allow users to, for example, style the first letter of the {{htmlElement("details")}} element by using the CSS selector `::details-content::first-letter` or add content before an {{HTMLElement("input") }} of [`type="file"`](/en-US/docs/Web/HTML/Reference/Elements/input/file) using the CSS selector `::file-selector-button::before`.
 
@@ -338,7 +338,7 @@ The `::file-selector-button` pseudo-element is not yet marked as an element-base
 
 ### `:heading` and `:heading()` pseudo-classes
 
-The {{CSSXRef(":heading")}} pseudo-class allows you to style all [heading elements](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) (`<h1>`-`<h6>`) at once, rather than targeting them individually. The {{CSSXRef(":heading_function", ":heading()")}} functional pseudo-class allows you to style heading elements that match the [`<An+B>`](/en-US/docs/Web/CSS/:heading_function#functional_notation) notation. ([Firefox bug 1974386](https://bugzil.la/1974386)).
+The [`:heading`](/en-US/docs/Web/CSS/Reference/Selectors/:heading) pseudo-class allows you to style all [heading elements](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) (`<h1>`-`<h6>`) at once, rather than targeting them individually. The [`:heading()`](/en-US/docs/Web/CSS/Reference/Selectors/:heading_function) functional pseudo-class allows you to style heading elements that match a comma-separated list of integers that match the heading levels. ([Firefox bug 1974386](https://bugzil.la/1974386) & [Firefox bug 1984310](https://bugzil.la/1984310)).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
@@ -765,6 +765,24 @@ When `Integrity-Policy` is used, the browser blocks the loading of styles refere
 | Release           | 142           | No                  |
 
 - `security.integrity_policy.stylesheet.enabled`
+  - : Set to `true` to enable.
+
+### Storage Access headers
+
+The {{httpheader("Sec-Fetch-Storage-Access")}} and {{httpheader("Activate-Storage-Access")}} HTTP headers are now supported, enabling a more efficient [Storage Access API](/en-US/docs/Web/API/Storage_Access_API) workflow. ([Firefox bug 1991688](https://bugzil.la/1991688)).
+
+In the JavaScript-only workflow, a third-party resource must be requested and loaded to activate a storage-access permission for a particular context (such as a new browser tab). This is required even if the permission has already been granted.
+The storage access headers allow the browser to advertise the permission state for the particular context, so the server can request activation of an already-granted permission.
+This avoids the overhead of unnecessarily fetching and loading the resource.
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 145           | Yes                 |
+| Developer Edition | 145           | No                  |
+| Beta              | 145           | No                  |
+| Release           | 145           | No                  |
+
+- `dom.storage_access.headers.enabled`
   - : Set to `true` to enable.
 
 ### Idempotency-Key

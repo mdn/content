@@ -356,7 +356,7 @@ h1, ..special {
 
 ## The universal selector
 
-The universal selector is indicated by an asterisk (`*`). It selects everything in the document. If `*` is chained using a [descendant combinator](/en-US/docs/Web/CSS/Descendant_combinator), it selects everything inside that ancestor element. For example, `p *` selects all the nested elements inside the `<p>` element.
+The universal selector is indicated by an asterisk (`*`). It selects everything in the document. If `*` is chained using a [descendant combinator](/en-US/docs/Web/CSS/Reference/Selectors/Descendant_combinator), it selects everything inside that ancestor element. For example, `p *` selects all the nested elements inside the `<p>` element.
 
 In the following example, we use the universal selector to remove the margins on all elements. Instead of the browser's default styling, which spaces out headings and paragraphs with margins, everything is close together.
 

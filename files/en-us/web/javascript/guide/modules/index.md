@@ -421,7 +421,7 @@ Module-defined variables are scoped to the module unless explicitly attached to 
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
-    <title></title>
+    <title>Example page</title>
     <link rel="stylesheet" href="" />
   </head>
   <body>

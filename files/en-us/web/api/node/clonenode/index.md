@@ -61,8 +61,8 @@ using {{domxref("Node.appendChild()")}} or a similar method.
 ## Example
 
 ```js
-let p = document.getElementById("para1");
-let p_prime = p.cloneNode(true);
+const p = document.getElementById("para1");
+const p2 = p.cloneNode(true);
 ```
 
 ## Specifications

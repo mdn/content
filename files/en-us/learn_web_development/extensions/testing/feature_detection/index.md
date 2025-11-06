@@ -149,11 +149,11 @@ Common patterns for detectable features include:
     This example shows a way of detecting [Canvas API](/en-US/docs/Web/API/Canvas_API) support:
 
     ```js
-    function supports_canvas() {
+    function supportsCanvas() {
       return !!document.createElement("canvas").getContext;
     }
 
-    if (supports_canvas()) {
+    if (supportsCanvas()) {
       // Create and draw on canvas elements
     }
     ```

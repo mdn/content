@@ -25,18 +25,20 @@ border-spacing: 5px 1rem;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <table class="transition-all" id="example-element">
-    <tr>
-      <td>Cell 1.1</td>
-      <td>Cell 1.2</td>
-    </tr>
-    <tr>
-      <td>Cell 2.1</td>
-      <td>Cell 2.2</td>
-    </tr>
-    <tr>
-      <td>Cell 3.1</td>
-      <td>Cell 3.2</td>
-    </tr>
+    <tbody>
+      <tr>
+        <td>Cell 1.1</td>
+        <td>Cell 1.2</td>
+      </tr>
+      <tr>
+        <td>Cell 2.1</td>
+        <td>Cell 2.2</td>
+      </tr>
+      <tr>
+        <td>Cell 3.1</td>
+        <td>Cell 3.2</td>
+      </tr>
+    </tbody>
   </table>
 </section>
 ```
@@ -104,21 +106,23 @@ This example applies a spacing of `.5em` vertically and `1em` horizontally betwe
 
 ```html
 <table>
-  <tr>
-    <td>1</td>
-    <td>2</td>
-    <td>3</td>
-  </tr>
-  <tr>
-    <td>4</td>
-    <td>5</td>
-    <td>6</td>
-  </tr>
-  <tr>
-    <td>7</td>
-    <td>8</td>
-    <td>9</td>
-  </tr>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>8</td>
+      <td>9</td>
+    </tr>
+  </tbody>
 </table>
 ```
 

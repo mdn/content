@@ -23,14 +23,14 @@ sidebar: firefox
 
 #### Newly-supported CSS features
 
-- [Downloadable fonts support](/en-US/docs/Web/CSS/@font-face)
+- [Downloadable fonts support](/en-US/docs/Web/CSS/Reference/At-rules/@font-face)
   - : The new {{ cssxref("@font-face") }} @rule lets web pages provide downloadable fonts, so that sites can be rendered exactly as the page author expects.
 - [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
   - : Firefox 3.5 now supports CSS media queries, which enhance support for media-dependent style sheets.
 - {{ cssxref("::before") }} and {{ cssxref("::after") }} updated to CSS 2.1
   - : The `::before` and `::after` pseudo-elements have been updated to full CSS 2.1 support, adding support for the `position`, `float`, `list-style-*`, and some `display` properties.
 - `ch` units for length
-  - : The `ch` unit can now be used anywhere that accepts a [length](/en-US/docs/Web/CSS/length). `1ch` is the width of the "0" (zero) character.
+  - : The `ch` unit can now be used anywhere that accepts a [length](/en-US/docs/Web/CSS/Reference/Values/length). `1ch` is the width of the "0" (zero) character.
 - {{ cssxref("opacity") }}
   - : The `-moz-opacity` Mozilla extension to CSS has been removed in favor of the standard `opacity` property.
 - {{ cssxref("text-shadow") }}

@@ -49,7 +49,7 @@ The CSS properties used to style text generally fall into two categories, which 
 - **Text layout styles**: Properties that affect the spacing and other layout features of the text, allowing manipulation of, for example, the space between lines and letters, and how the text is aligned within the content box.
 
 > [!NOTE]
-> Bear in mind that the text inside an element is all affected as one single entity. You can't select and style subsections of text unless you wrap them in an appropriate element (such as a {{htmlelement("span")}} or {{htmlelement("strong")}}), or use a text-specific pseudo-element like [`::first-letter`](/en-US/docs/Web/CSS/::first-letter) (selects the first letter of an element's text), [`::first-line`](/en-US/docs/Web/CSS/::first-line) (selects the first line of an element's text), or [`::selection`](/en-US/docs/Web/CSS/::selection) (selects the text currently highlighted by the cursor).
+> Bear in mind that the text inside an element is all affected as one single entity. You can't select and style subsections of text unless you wrap them in an appropriate element (such as a {{htmlelement("span")}} or {{htmlelement("strong")}}), or use a text-specific pseudo-element like [`::first-letter`](/en-US/docs/Web/CSS/Reference/Selectors/::first-letter) (selects the first letter of an element's text), [`::first-line`](/en-US/docs/Web/CSS/Reference/Selectors/::first-line) (selects the first line of an element's text), or [`::selection`](/en-US/docs/Web/CSS/Reference/Selectors/::selection) (selects the text currently highlighted by the cursor).
 
 ## Fonts
 
@@ -393,7 +393,7 @@ The four properties are as follows:
 1. The horizontal offset of the shadow from the original text — this can take most available CSS [length and size units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units#lengths), but you'll most commonly use `px`; positive values move the shadow right, and negative values left. This value has to be included.
 2. The vertical offset of the shadow from the original text. This behaves similarly to the horizontal offset, except that it moves the shadow up/down, not left/right. This value has to be included.
 3. The blur radius: a higher value means the shadow is dispersed more widely. If this value is not included, it defaults to 0, which means no blur. This can take most available CSS [length and size units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units#lengths).
-4. The base color of the shadow, which can take any [CSS color unit](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units#color). If not included, it defaults to [`currentColor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword), i.e., the shadow's color is taken from the element's [`color`](/en-US/docs/Web/CSS/Reference/Properties/color) property.
+4. The base color of the shadow, which can take any [CSS color unit](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units#color). If not included, it defaults to [`currentColor`](/en-US/docs/Web/CSS/Reference/Values/color_value#currentcolor_keyword), i.e., the shadow's color is taken from the element's [`color`](/en-US/docs/Web/CSS/Reference/Properties/color) property.
 
 #### Multiple shadows
 

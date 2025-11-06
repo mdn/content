@@ -32,7 +32,7 @@ Allowed values for `scroll-timeline-name` are:
   - : An arbitrary custom identifier defining a name for a scroll progress timeline, which can then be referenced in an [`animation-timeline`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline) property.
 
     > [!NOTE]
-    > [`<dashed-ident>`](/en-US/docs/Web/CSS/dashed-ident) values must start with `--`, which helps avoid name clashes with standard CSS keywords.
+    > [`<dashed-ident>`](/en-US/docs/Web/CSS/Reference/Values/dashed-ident) values must start with `--`, which helps avoid name clashes with standard CSS keywords.
 
 ## Formal definition
 

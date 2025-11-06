@@ -148,7 +148,7 @@ The available types are as follows:
       </td>
       <td id="examplehidden">
         <pre class="brush: html hidden">
-&#x3C;input id="userId" name="userId" type="hidden" value="abc123"></pre
+&#x3C;input id="userId" name="userId" type="hidden" value="abc123" /></pre
         >
         {{EmbedLiveSample("examplehidden",200,55)}}
       </td>
@@ -432,7 +432,7 @@ A few additional non-standard attributes are listed following the descriptions o
 
 - `colorspace` {{experimental_inline}}
   - : Valid for the `color` input type only, the `colorspace` attribute specifies the [color space](/en-US/docs/Glossary/Color_space) that is used by the `type="color"` input. Possible {{Glossary("enumerated")}} values are:
-    - `"limited-srgb"`: The color is in the {{glossary("RGB", "sRGB")}} color space. This includes [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb), [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl), [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb), and {{cssxref("hex-color")}} values. The color value is limited to 8-bits per `r`, `g`, and `b` component. This is the default.
+    - `"limited-srgb"`: The color is in the {{glossary("RGB", "sRGB")}} color space. This includes [`rgb()`](/en-US/docs/Web/CSS/Reference/Values/color_value/rgb), [`hsl()`](/en-US/docs/Web/CSS/Reference/Values/color_value/hsl), [`hwb()`](/en-US/docs/Web/CSS/Reference/Values/color_value/hwb), and {{cssxref("hex-color")}} values. The color value is limited to 8-bits per `r`, `g`, and `b` component. This is the default.
     - `"display-p3"`: The [Display P3 color space](/en-US/docs/Glossary/Color_space#display-p3), e.g., `color(display-p3 1.84 -0.19 0.72 / 0.6)`
 
 - [`dirname`](/en-US/docs/Web/HTML/Reference/Attributes/dirname)
@@ -1132,12 +1132,12 @@ If there is an error, supporting browsers will both alert the user and prevent t
 
 ```js
 function validate(input) {
-  let validityState_object = input.validity;
-  if (validityState_object.valueMissing) {
+  let validityState = input.validity;
+  if (validityState.valueMissing) {
     input.setCustomValidity("A value is required");
-  } else if (validityState_object.rangeUnderflow) {
+  } else if (validityState.rangeUnderflow) {
     input.setCustomValidity("Your value is too low");
-  } else if (validityState_object.rangeOverflow) {
+  } else if (validityState.rangeOverflow) {
     input.setCustomValidity("Your value is too high");
   } else {
     input.setCustomValidity("");

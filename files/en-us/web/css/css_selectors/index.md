@@ -16,14 +16,14 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 
 ### Combinators and separators
 
-- `+` ([Next-sibling combinator](/en-US/docs/Web/CSS/Next-sibling_combinator))
-- `>` ([Child combinator](/en-US/docs/Web/CSS/Child_combinator))
-- `~` ([Subsequent sibling combinator](/en-US/docs/Web/CSS/Subsequent-sibling_combinator))
-- " " ([Descendant combinator](/en-US/docs/Web/CSS/Descendant_combinator))
-- `|` ([Namespace separator](/en-US/docs/Web/CSS/Namespace_separator))
-- `,` ([Selector list](/en-US/docs/Web/CSS/Selector_list))
+- `+` ([Next-sibling combinator](/en-US/docs/Web/CSS/Reference/Selectors/Next-sibling_combinator))
+- `>` ([Child combinator](/en-US/docs/Web/CSS/Reference/Selectors/Child_combinator))
+- `~` ([Subsequent sibling combinator](/en-US/docs/Web/CSS/Reference/Selectors/Subsequent-sibling_combinator))
+- " " ([Descendant combinator](/en-US/docs/Web/CSS/Reference/Selectors/Descendant_combinator))
+- `|` ([Namespace separator](/en-US/docs/Web/CSS/Reference/Selectors/Namespace_separator))
+- `,` ([Selector list](/en-US/docs/Web/CSS/Reference/Selectors/Selector_list))
 
-The CSS selectors module also introduces the [column combinator](/en-US/docs/Web/CSS/Column_combinator) (`||`). Currently, no browsers support this feature.
+The CSS selectors module also introduces the [column combinator](/en-US/docs/Web/CSS/Reference/Selectors/Column_combinator) (`||`). Currently, no browsers support this feature.
 
 ### Selectors
 
@@ -89,18 +89,18 @@ The CSS selectors module also introduces the [column combinator](/en-US/docs/Web
 - {{CSSXref(":volume-locked")}}
 - {{CSSXref(":where", ":where()")}}
 - [`:-webkit-` pseudo-classes](/en-US/docs/Web/CSS/Reference/Webkit_extensions#pseudo-classes)
-- [Attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors)
-- [Class selector](/en-US/docs/Web/CSS/Class_selectors)
-- [ID selectors](/en-US/docs/Web/CSS/ID_selectors)
-- [Type selectors](/en-US/docs/Web/CSS/Type_selectors)
-- [Universal selectors](/en-US/docs/Web/CSS/Universal_selectors)
+- [Attribute selectors](/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors)
+- [Class selector](/en-US/docs/Web/CSS/Reference/Selectors/Class_selectors)
+- [ID selectors](/en-US/docs/Web/CSS/Reference/Selectors/ID_selectors)
+- [Type selectors](/en-US/docs/Web/CSS/Reference/Selectors/Type_selectors)
+- [Universal selectors](/en-US/docs/Web/CSS/Reference/Selectors/Universal_selectors)
 
 The CSS selectors module also introduces the {{CSSXref(":blank")}}, {{CSSXref(":current")}}, and {{CSSXref(":local-link")}} pseudo-classes. Currently, no browsers support these features.
 
 ## Terms
 
 - {{glossary("Pseudo-class")}} glossary term
-- [Functional pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes#functional_pseudo-classes)
+- [Functional pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes#functional_pseudo-classes)
 - [Combinators](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#combinators)
 - [Simple selector](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#simple_selector)
 - [Compound selector](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector)
@@ -116,7 +116,7 @@ The CSS selectors module also introduces the {{CSSXref(":blank")}}, {{CSSXref(":
 - [CSS selector structure](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure)
   - : Explanation of the structure of CSS selectors and the terminologies introduced in the CSS selectors module, ranging from "simple selector" to "forgiving relative selector list".
 
-- [Pseudo classes](/en-US/docs/Web/CSS/Pseudo-classes)
+- [Pseudo classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
   - : Lists the pseudo-classes, selectors that allow the selection of elements based on state information that is not contained in the document tree, defined in the various CSS modules and HTML.
 
 - [Using the `:target` pseudo-class in selectors](/en-US/docs/Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors)
@@ -138,7 +138,7 @@ The CSS selectors module also introduces the {{CSSXref(":blank")}}, {{CSSXref(":
 
 - {{CSSXref(":state","state()")}} pseudo-class
 - [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting) module
-  - [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector)
+  - [`&` nesting selector](/en-US/docs/Web/CSS/Reference/Selectors/Nesting_selector)
 - [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) module
   - {{CSSXref(":host")}} pseudo-class
   - {{CSSXref(":host_function", ":host()")}} pseudo-class
@@ -180,7 +180,7 @@ The CSS selectors module also introduces the {{CSSXref(":blank")}}, {{CSSXref(":
 - [CSS positioned layout module](/en-US/docs/Web/CSS/CSS_positioned_layout)
   - {{CSSxRef("::backdrop")}}
 
-- Other [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements)
+- Other [pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements)
   - {{CSSxRef("::cue")}}
 
 - {{CSSXref("@namespace")}} at-rule

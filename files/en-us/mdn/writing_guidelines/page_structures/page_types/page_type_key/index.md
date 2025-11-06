@@ -58,19 +58,19 @@ This section lists `page-type` values for pages under [Web/Accessibility](/en-US
 
 This section lists `page-type` values for pages under [Web/CSS](/en-US/docs/Web/CSS). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
 
-- `css-at-rule`: an [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule), like {{cssxref("@media")}}.
-- `css-at-rule-descriptor`: an at-rule descriptor, like [`@counter-style/prefix`](/en-US/docs/Web/CSS/@counter-style/prefix).
-- `css-combinator`: a combinator, like the [descendant combinator](/en-US/docs/Web/CSS/Descendant_combinator).
-- `css-function`: a [function](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions), like {{cssxref("max")}}.
+- `css-at-rule`: an [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rules), like {{cssxref("@media")}}.
+- `css-at-rule-descriptor`: an at-rule descriptor, like [`@counter-style/prefix`](/en-US/docs/Web/CSS/Reference/At-rules/@counter-style/prefix).
+- `css-combinator`: a combinator, like the [descendant combinator](/en-US/docs/Web/CSS/Reference/Selectors/Descendant_combinator).
+- `css-function`: a [function](/en-US/docs/Web/CSS/Reference/Values/Functions), like {{cssxref("max")}}.
 - `css-keyword`: a keyword, like {{cssxref("inherit")}}.
-- `css-media-feature`: a [media feature](/en-US/docs/Web/CSS/@media#media_features), like [`hover`](/en-US/docs/Web/CSS/@media/hover).
+- `css-media-feature`: a [media feature](/en-US/docs/Web/CSS/Reference/At-rules/@media#media_features), like [`hover`](/en-US/docs/Web/CSS/Reference/At-rules/@media/hover).
 - `css-module`: a module, like [CSS Animations](/en-US/docs/Web/CSS/CSS_animations).
 - `css-property`: a property, like {{cssxref("background-color")}}.
-- `css-pseudo-class`: a [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes), like {{cssxref(":enabled")}}.
-- `css-pseudo-element`: a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements), like {{cssxref("::before")}}.
-- `css-selector`: a [basic selector](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#basic_selectors), like the [class selector](/en-US/docs/Web/CSS/Class_selectors).
+- `css-pseudo-class`: a [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes), like {{cssxref(":enabled")}}.
+- `css-pseudo-element`: a [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements), like {{cssxref("::before")}}.
+- `css-selector`: a [basic selector](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#basic_selectors), like the [class selector](/en-US/docs/Web/CSS/Reference/Selectors/Class_selectors).
 - `css-shorthand-property`: a [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties), like {{cssxref("background")}}.
-- `css-type`: a [data type](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types), like [`<color>`](/en-US/docs/Web/CSS/color_value).
+- `css-type`: a [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types), like [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value).
 
 ### Glossary page types
 

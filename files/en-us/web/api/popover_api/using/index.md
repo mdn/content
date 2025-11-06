@@ -500,7 +500,7 @@ The HTML contains a {{htmlelement("div")}} element declared to be a popover via 
 
 #### CSS
 
-The two popover properties we want to transition are [`opacity`](/en-US/docs/Web/CSS/Reference/Properties/opacity) and [`transform`](/en-US/docs/Web/CSS/Reference/Properties/transform). We want the popover to fade in or out while growing or shrinking horizontally. To achieve this, we set a starting state for these properties on the hidden state of the popover element (selected with the `[popover]` [attribute selector](/en-US/docs/Web/CSS/Attribute_selectors)) and an end state for the shown state of the popover (selected via the [`:popover-open`](/en-US/docs/Web/CSS/:popover-open) pseudo-class). We also use the [`transition`](/en-US/docs/Web/CSS/Reference/Properties/transition) property to define the properties to animate and the animation's duration as the popover gets shown or hidden.
+The two popover properties we want to transition are [`opacity`](/en-US/docs/Web/CSS/Reference/Properties/opacity) and [`transform`](/en-US/docs/Web/CSS/Reference/Properties/transform). We want the popover to fade in or out while growing or shrinking horizontally. To achieve this, we set a starting state for these properties on the hidden state of the popover element (selected with the `[popover]` [attribute selector](/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors)) and an end state for the shown state of the popover (selected via the [`:popover-open`](/en-US/docs/Web/CSS/Reference/Selectors/:popover-open) pseudo-class). We also use the [`transition`](/en-US/docs/Web/CSS/Reference/Properties/transition) property to define the properties to animate and the animation's duration as the popover gets shown or hidden.
 
 ```css
 html {
@@ -573,7 +573,7 @@ As discussed earlier, we have also:
 - Added `overlay` to the list of transitioned properties to make sure that the removal of the element from the top layer is deferred until the animation has been completed. The effect of this may not be noticeable for basic animations such as this one, but in more complex cases, omitting this property can result in the element being removed from the overlay before the transition completes.
 - Set `allow-discrete` on both properties in the above transitions to enable [discrete transitions](/en-US/docs/Web/CSS/CSS_animated_properties#discrete).
 
-You'll note that we've also included a transition on the [`::backdrop`](/en-US/docs/Web/CSS/::backdrop) appearing behind the popover when it opens, providing a nice darkening animation.
+You'll note that we've also included a transition on the [`::backdrop`](/en-US/docs/Web/CSS/Reference/Selectors/::backdrop) appearing behind the popover when it opens, providing a nice darkening animation.
 
 #### Result
 
@@ -584,7 +584,7 @@ The code renders as follows:
 > [!NOTE]
 > Because popovers change from `display: none` to `display: block` each time they are shown, the popover transitions from its `@starting-style` styles to its `[popover]:popover-open` styles every time the entry transition occurs. When the popover closes, it transitions from its `[popover]:popover-open` state to the default `[popover]` state.
 >
-> It is possible for the style transition on entry and exit to be different in such cases. See our [Demonstration of when starting styles are used](/en-US/docs/Web/CSS/@starting-style#demonstration_of_when_starting_styles_are_used) example for a proof of this.
+> It is possible for the style transition on entry and exit to be different in such cases. See our [Demonstration of when starting styles are used](/en-US/docs/Web/CSS/Reference/At-rules/@starting-style#demonstration_of_when_starting_styles_are_used) example for a proof of this.
 
 ### A popover keyframe animation
 

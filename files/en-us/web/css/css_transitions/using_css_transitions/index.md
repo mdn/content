@@ -33,7 +33,7 @@ You can control the individual components of the transition with the following s
 - {{cssxref("transition-duration")}}
   - : Specifies the duration over which transitions should occur. You can specify a single duration that applies to all properties during the transition, or multiple values to allow each property to transition over a different period of time.
 - {{cssxref("transition-timing-function")}}
-  - : Specifies a function to define how intermediate values for properties are computed. _Easing functions_ determine how intermediate values of the transition are calculated. Most [easing functions](/en-US/docs/Web/CSS/easing-function) can be specified by providing the graph of the corresponding function, as defined by four points defining a cubic bezier. You can also choose easing from [Easing functions cheat sheet](https://easings.net/).
+  - : Specifies a function to define how intermediate values for properties are computed. _Easing functions_ determine how intermediate values of the transition are calculated. Most [easing functions](/en-US/docs/Web/CSS/Reference/Values/easing-function) can be specified by providing the graph of the corresponding function, as defined by four points defining a cubic bezier. You can also choose easing from [Easing functions cheat sheet](https://easings.net/).
 - {{cssxref("transition-delay")}}
   - : Defines how long to wait between the time a property is changed and the transition actually begins.
 
@@ -199,7 +199,7 @@ So for example:
 
 When transitioning these properties [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/Reference/Properties/transition-behavior) needs to be set on the transitions. This effectively enables `display`/`content-visibility` transitions.
 
-When transitioning `display`, [`@starting-style`](/en-US/docs/Web/CSS/@starting-style) is needed to provide a set of starting values for properties set on an element that you want to transition from when the element receives its first style update. This is needed to avoid unexpected behavior. By default, CSS transitions are not triggered on elements' first style updates when they first appear in the DOM, which includes when `display` changes from `none` to another state. `content-visibility` animations do not need starting values specified in a `@starting-style` block. This is because `content-visibility` doesn't hide an element from the DOM like `display` does: it just skips rendering the element's content.
+When transitioning `display`, [`@starting-style`](/en-US/docs/Web/CSS/Reference/At-rules/@starting-style) is needed to provide a set of starting values for properties set on an element that you want to transition from when the element receives its first style update. This is needed to avoid unexpected behavior. By default, CSS transitions are not triggered on elements' first style updates when they first appear in the DOM, which includes when `display` changes from `none` to another state. `content-visibility` animations do not need starting values specified in a `@starting-style` block. This is because `content-visibility` doesn't hide an element from the DOM like `display` does: it just skips rendering the element's content.
 
 #### HTML
 

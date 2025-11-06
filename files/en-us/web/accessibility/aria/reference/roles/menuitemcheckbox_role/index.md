@@ -108,7 +108,7 @@ If the `menuitemcheckbox` is in a submenu in a `menubar` or a menu opened with a
 
 The [`tabindex="-1"`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) makes the `menuitemcheckbox` focusable but not part of the page tab sequence. Had we included `aria-checked="true"` it would have indicated that the `menuitemcheckbox` was checked, and we would have visually styled the selected state to look checked using the attribute selector `[role='menuitemcheckbox'][aria-checked='true']`. Instead, the presence of `aria-checked="false"` indicates to assistive technologies that the `menuitemcheckbox` is checkable but not currently checked. The accessible name "purple" comes from the contents.
 
-The visual appearance of the selected state is a checked checkbox which we can create using [generated content](/en-US/docs/Web/CSS/CSS_generated_content), making it visible and the same color as the content by synchronizing with the `aria-checked` value using CSS [attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) and [inheriting](/en-US/docs/Web/CSS/inherit) the color.
+The visual appearance of the selected state is a checked checkbox which we can create using [generated content](/en-US/docs/Web/CSS/CSS_generated_content), making it visible and the same color as the content by synchronizing with the `aria-checked` value using CSS [attribute selectors](/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors) and [inheriting](/en-US/docs/Web/CSS/Reference/Values/inherit) the color.
 
 ```css
 [role="menuitemcheckbox"]::before {

@@ -117,7 +117,7 @@ The markup features two {{htmlelement("p")}} elements, each of which contain a l
   in-browser search features, and focus and click the link. There is a
   <code>click</code> event handler set on the paragraph that changes the border
   color for a second when it is clicked anywhere.
-  <span contenteditable="">This sentence has <code>contenteditable</code> set on
+  <span contenteditable>This sentence has <code>contenteditable</code> set on
   it, so it is editable</span>.
 </p>
 
@@ -130,7 +130,7 @@ The markup features two {{htmlelement("p")}} elements, each of which contain a l
   in-browser search features, focus and click the link, or issue
   <code>click</code> events on it (the border color won't change when it is
   clicked).
-  <span contenteditable=""
+  <span contenteditable
     >This sentence has <code>contenteditable</code> set on it, but it is not
     editable because it is inert</span
   >.

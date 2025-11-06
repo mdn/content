@@ -12,7 +12,7 @@ The CSS properties and values API is part of the [CSS Houdini](/en-US/docs/Web/A
 
 Custom properties let you reuse values across a project to simplify complex or repetitive stylesheets.
 Basic custom properties are defined in the [CSS custom properties for cascading variables](/en-US/docs/Web/CSS/CSS_cascading_variables) module.
-The CSS properties and values API expands on that module, enabling adding metadata to custom properties using CSS with the [`@property`](/en-US/docs/Web/CSS/@property) at-rule or, alternatively, using JavaScript's {{domxref('CSS/registerProperty_static', 'CSS.registerProperty')}} method.
+The CSS properties and values API expands on that module, enabling adding metadata to custom properties using CSS with the [`@property`](/en-US/docs/Web/CSS/Reference/At-rules/@property) at-rule or, alternatively, using JavaScript's {{domxref('CSS/registerProperty_static', 'CSS.registerProperty')}} method.
 
 Whether registered with CSS or JavaScript, setting metadata on custom properties provides for an expected data type that the browser can use depending on the context, defines an initial value, and lets you control inheritance.
 
@@ -58,7 +58,7 @@ CSS.registerProperty({
 
 {{EmbedLiveSample("Properties and values API in action",600,120)}}
 
-The box has a [background](/en-US/docs/Web/CSS/Reference/Properties/background) consisting of a [linear gradient](/en-US/docs/Web/CSS/gradient/linear-gradient) from `--stop-color` (the custom property) to [`lavenderblush`](/en-US/docs/Web/CSS/named-color).
+The box has a [background](/en-US/docs/Web/CSS/Reference/Properties/background) consisting of a [linear gradient](/en-US/docs/Web/CSS/Reference/Values/gradient/linear-gradient) from `--stop-color` (the custom property) to [`lavenderblush`](/en-US/docs/Web/CSS/Reference/Values/named-color).
 The value of `--stop-color` is set to `cornflowerblue` at first, but when you hover over the box, `--stop-color` [transitions](/en-US/docs/Web/CSS/Reference/Properties/transition) to `aquamarine` over two seconds (`linear-gradient(to right, aquamarine, lavenderblush)`).
 
 ## Reference
@@ -66,11 +66,11 @@ The value of `--stop-color` is set to `cornflowerblue` at first, but when you ho
 ### At-rules and descriptors
 
 - {{cssxref("@property")}}
-  - [syntax](/en-US/docs/Web/CSS/@property#descriptors) descriptor
-    - [`+` and `#`](/en-US/docs/Web/CSS/@property#descriptors) multipliers
-    - [`|`](/en-US/docs/Web/CSS/@property#descriptors) combinator
-  - [inherits](/en-US/docs/Web/CSS/@property#descriptors) descriptor
-  - [initial-value](/en-US/docs/Web/CSS/@property#descriptors) descriptor
+  - [syntax](/en-US/docs/Web/CSS/Reference/At-rules/@property#descriptors) descriptor
+    - [`+` and `#`](/en-US/docs/Web/CSS/Reference/At-rules/@property#descriptors) multipliers
+    - [`|`](/en-US/docs/Web/CSS/Reference/At-rules/@property#descriptors) combinator
+  - [inherits](/en-US/docs/Web/CSS/Reference/At-rules/@property#descriptors) descriptor
+  - [initial-value](/en-US/docs/Web/CSS/Reference/At-rules/@property#descriptors) descriptor
 
 ### Interfaces and APIs
 
@@ -108,5 +108,5 @@ The value of `--stop-color` is set to `cornflowerblue` at first, but when you ho
 - [Using shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM)
 - [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API) module
 - [Worklet](/en-US/docs/Web/API/Worklet) interface
-- [CSS `env()`](/en-US/docs/Web/CSS/env)
+- [CSS `env()`](/en-US/docs/Web/CSS/Reference/Values/env)
 - [CSS Typed Object Model](/en-US/docs/Web/API/CSS_Typed_OM_API)

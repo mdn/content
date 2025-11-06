@@ -5,7 +5,7 @@ page-type: guide
 sidebar: cssref
 ---
 
-This tool lets you enter or pick a color and copy its corresponding value in any CSS [color format](/en-US/docs/Web/CSS/color_value). You can use the generated color value anywhere the {{cssxref("color_value", "&lt;color&gt;")}} data type is supported in CSS. This tool can also help you understand the syntax of the different color notations.
+This tool lets you enter or pick a color and copy its corresponding value in any CSS [color format](/en-US/docs/Web/CSS/Reference/Values/color_value). You can use the generated color value anywhere the {{cssxref("color_value", "&lt;color&gt;")}} data type is supported in CSS. This tool can also help you understand the syntax of the different color notations.
 
 ## How to use the tool
 
@@ -44,7 +44,7 @@ Click the **Copy** button next to the corresponding color format to quickly copy
         <tr id="rgb-function">
           <th>
             <a
-              href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/rgb"
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/rgb"
               target="_blank">
               RGB
             </a>
@@ -54,7 +54,7 @@ Click the **Copy** button next to the corresponding color format to quickly copy
         <tr id="hex">
           <th>
             <a
-              href="https://developer.mozilla.org/en-US/docs/Web/CSS/hex-color"
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/hex-color"
               target="_blank">
               HEX
             </a>
@@ -64,7 +64,7 @@ Click the **Copy** button next to the corresponding color format to quickly copy
         <tr id="hsl-function">
           <th>
             <a
-              href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/hsl"
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/hsl"
               target="_blank">
               HSL
             </a>
@@ -74,7 +74,7 @@ Click the **Copy** button next to the corresponding color format to quickly copy
         <tr id="hwb-function">
           <th>
             <a
-              href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/hwb"
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/hwb"
               target="_blank">
               HWB
             </a>
@@ -84,7 +84,7 @@ Click the **Copy** button next to the corresponding color format to quickly copy
         <tr id="color-function">
           <th>
             <a
-              href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/color"
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/color"
               target="_blank">
               color()
             </a>
@@ -94,7 +94,7 @@ Click the **Copy** button next to the corresponding color format to quickly copy
         <tr id="lab-function">
           <th>
             <a
-              href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/lab"
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/lab"
               target="_blank">
               Lab
             </a>
@@ -104,7 +104,7 @@ Click the **Copy** button next to the corresponding color format to quickly copy
         <tr id="lch-function">
           <th>
             <a
-              href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/lch"
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/lch"
               target="_blank">
               LCH
             </a>
@@ -114,7 +114,7 @@ Click the **Copy** button next to the corresponding color format to quickly copy
         <tr id="oklab-function">
           <th>
             <a
-              href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/oklab"
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/oklab"
               target="_blank">
               Oklab
             </a>
@@ -124,7 +124,7 @@ Click the **Copy** button next to the corresponding color format to quickly copy
         <tr id="oklch-function">
           <th>
             <a
-              href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/oklch"
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/oklch"
               target="_blank">
               OkLCh
             </a>

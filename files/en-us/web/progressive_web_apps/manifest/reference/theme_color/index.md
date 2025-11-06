@@ -26,7 +26,7 @@ It can be particularly noticeable in contexts like the task switcher or when the
 ### Values
 
 - `theme_color`
-  - : A string that specifies a valid [color value](/en-US/docs/Web/CSS/color_value).
+  - : A string that specifies a valid [color value](/en-US/docs/Web/CSS/Reference/Values/color_value).
 
     > [!NOTE]
     > Browsers may ignore the alpha component of the color based on the context.
@@ -64,7 +64,7 @@ You can override this default in the following ways:
 These override methods provide you the flexibility to adapt your app's appearance for specific pages or user preferences, improving the overall user experience.
 
 Browsers may also adjust the applied theme color based on user preferences.
-If a user has set a preference for light or dark mode, browsers may override the manifest `theme_color` value to support any [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) media query defined in your app's CSS.
+If a user has set a preference for light or dark mode, browsers may override the manifest `theme_color` value to support any [`prefers-color-scheme`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) media query defined in your app's CSS.
 
 ```css
 body {

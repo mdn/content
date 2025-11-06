@@ -117,7 +117,7 @@ As the slider's value changes from 0 up to 360, the value of the `--hue` [custom
 ## Related concepts
 
 - [CSS Properties and Values API](/en-US/docs/Web/CSS/CSS_properties_and_values_API) module
-  - [`@property`](/en-US/docs/Web/CSS/@property) at-rule
+  - [`@property`](/en-US/docs/Web/CSS/Reference/At-rules/@property) at-rule
   - [`CSS.registerProperty()`](/en-US/docs/Web/API/CSS/registerProperty_static) method
 
 ## Specifications
@@ -127,6 +127,6 @@ As the slider's value changes from 0 up to 360, the value of the `--hue` [custom
 ## See also
 
 - [CSS cascading and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module
-- [CSS `env()`](/en-US/docs/Web/CSS/env) function
-- [CSS `calc()`](/en-US/docs/Web/CSS/calc) function
+- [CSS `env()`](/en-US/docs/Web/CSS/Reference/Values/env) function
+- [CSS `calc()`](/en-US/docs/Web/CSS/Reference/Values/calc) function
 - [`getPropertyValue()`](/en-US/docs/Web/API/CSSStyleDeclaration/getPropertyValue) method

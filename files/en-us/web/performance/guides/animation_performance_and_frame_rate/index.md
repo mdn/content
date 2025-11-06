@@ -12,7 +12,7 @@ For animated media, such as video and animated GIFs, the main performance concer
 
 Users expect all interface interactions to be smooth and all user interfaces to be responsive. Animation can help make a site feel faster and responsive, but animations can also make a site feel slower and janky if not done correctly. Responsive user interfaces have a frame rate of 60 frames per second (fps). While it is not always possible to maintain 60fps, it is important to maintain a high and steady frame rate for all animations.
 
-With [CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations) you specify a number of [keyframes](/en-US/docs/Web/CSS/@keyframes), each of which uses CSS to define the appearance of the element at a particular stage of the animation. The browser creates the animation as a transition from each keyframe to the next.
+With [CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations) you specify a number of [keyframes](/en-US/docs/Web/CSS/Reference/At-rules/@keyframes), each of which uses CSS to define the appearance of the element at a particular stage of the animation. The browser creates the animation as a transition from each keyframe to the next.
 
 Compared with animating elements using JavaScript, CSS animations can be easier to create. They can also give better performance, as they give the browser more control over when to render frames, and to drop frames if necessary.
 

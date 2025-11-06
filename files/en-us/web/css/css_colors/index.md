@@ -15,7 +15,7 @@ While this module has only two CSS properties, {{cssxref("color")}} and {{cssxre
 
 ## Colors in action
 
-The color syntax converter below shows the values of the currently selected color in [red-green-blue](/en-US/docs/Web/CSS/color_value/rgb) (RGB), [hexadecimal](/en-US/docs/Web/CSS/hex-color) (HEX), [hue, saturation, and lightness](/en-US/docs/Web/CSS/color_value/hsl) (HSL), and [hue, whiteness, and blackness](/en-US/docs/Web/CSS/color_value/hwb) (HWB) CSS color formats. All the RGB, HEX, HSL, and HWB color values here, while written differently, represent the same color value.
+The color syntax converter below shows the values of the currently selected color in [red-green-blue](/en-US/docs/Web/CSS/Reference/Values/color_value/rgb) (RGB), [hexadecimal](/en-US/docs/Web/CSS/Reference/Values/hex-color) (HEX), [hue, saturation, and lightness](/en-US/docs/Web/CSS/Reference/Values/color_value/hsl) (HSL), and [hue, whiteness, and blackness](/en-US/docs/Web/CSS/Reference/Values/color_value/hwb) (HWB) CSS color formats. All the RGB, HEX, HSL, and HWB color values here, while written differently, represent the same color value.
 
 {{EmbedGHLiveSample("css-examples/modules/colors.html", '100%', 450)}}
 
@@ -38,16 +38,16 @@ The CSS colors module also introduces the {{cssxref("@color-profile")}} at-rule,
 ### Functions
 
 - Color functions:
-  - [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb)
-  - [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl)
-  - [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb)
-  - [`lab()`](/en-US/docs/Web/CSS/color_value/lab)
-  - [`lch()`](/en-US/docs/Web/CSS/color_value/lch)
-  - [`oklab()`](/en-US/docs/Web/CSS/color_value/oklab)
-  - [`oklch()`](/en-US/docs/Web/CSS/color_value/oklch)
-  - [`color()`](/en-US/docs/Web/CSS/color_value/color)
-- [`color-mix()`](/en-US/docs/Web/CSS/color_value/color-mix)
-- [`contrast-color()`](/en-US/docs/Web/CSS/color_value/contrast-color)
+  - [`rgb()`](/en-US/docs/Web/CSS/Reference/Values/color_value/rgb)
+  - [`hsl()`](/en-US/docs/Web/CSS/Reference/Values/color_value/hsl)
+  - [`hwb()`](/en-US/docs/Web/CSS/Reference/Values/color_value/hwb)
+  - [`lab()`](/en-US/docs/Web/CSS/Reference/Values/color_value/lab)
+  - [`lch()`](/en-US/docs/Web/CSS/Reference/Values/color_value/lch)
+  - [`oklab()`](/en-US/docs/Web/CSS/Reference/Values/color_value/oklab)
+  - [`oklch()`](/en-US/docs/Web/CSS/Reference/Values/color_value/oklch)
+  - [`color()`](/en-US/docs/Web/CSS/Reference/Values/color_value/color)
+- [`color-mix()`](/en-US/docs/Web/CSS/Reference/Values/color_value/color-mix)
+- [`contrast-color()`](/en-US/docs/Web/CSS/Reference/Values/color_value/contrast-color)
 - {{CSSXref("color_value/light-dark", "light-dark()")}}
 - {{cssxref("dynamic-range-limit-mix()")}}
 
@@ -62,15 +62,15 @@ The CSS color modules also introduce the {{CSSXref("color_value/device-cmyk", "d
 - {{cssxref("alpha-value")}}
 - {{cssxref("hue")}}
 - {{cssxref("system-color")}}
-- [`<colorspace-params>`](/en-US/docs/Web/CSS/color_value/color#using_predefined_color_spaces_with_color)
+- [`<colorspace-params>`](/en-US/docs/Web/CSS/Reference/Values/color_value/color#using_predefined_color_spaces_with_color)
 
 ### Glossary terms and keywords
 
 - {{glossary("Color space")}}
-- [`currentColor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword)
+- [`currentColor`](/en-US/docs/Web/CSS/Reference/Values/color_value#currentcolor_keyword)
 - {{glossary("Interpolation")}}
 - {{glossary("RGB")}}
-- [`transparent`](/en-US/docs/Web/CSS/named-color#transparent)
+- [`transparent`](/en-US/docs/Web/CSS/Reference/Values/named-color#transparent)
 
 ### Interfaces
 
@@ -87,7 +87,7 @@ The CSS color module also introduces the `CSSColorProfileRule` interface. Curren
 - [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)
   - : This article explains relative CSS color syntax, shows what the different options are, and looks at some illustrative examples.
 - [Color format converter](/en-US/docs/Web/CSS/CSS_colors/Color_format_converter)
-  - : A tool that lets you enter or pick a color and copy its corresponding value in any CSS [color format](/en-US/docs/Web/CSS/color_value).
+  - : A tool that lets you enter or pick a color and copy its corresponding value in any CSS [color format](/en-US/docs/Web/CSS/Reference/Values/color_value).
 - [Understanding color and luminance](/en-US/docs/Web/Accessibility/Guides/Colors_and_Luminance)
   - : Color perception and using colors with color insensitive (color blind) users, reduced vision users and users with vestibular disorders or other neurological disorders in mind.
 - [WCAG 1.4.1: Color contrast](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)
@@ -120,10 +120,10 @@ The CSS color module also introduces the `CSSColorProfileRule` interface. Curren
 - SVG [`color`](/en-US/docs/Web/SVG/Reference/Attribute/color) attribute
 - {{glossary("Color wheel")}} glossary term
 - {{glossary("Interpolation")}} glossary term
-- The [`@font-palette-values`](/en-US/docs/Web/CSS/@font-palette-values) at-rule [`override-colors`](/en-US/docs/Web/CSS/@font-palette-values/override-colors) descriptor
-- The [`@color-profile`](/en-US/docs/Web/CSS/@color-profile) at-rule
-- The [`color-gamut`](/en-US/docs/Web/CSS/@media/color-gamut) @media feature
-- The [`forced-colors`](/en-US/docs/Web/CSS/@media/forced-colors) @media feature
+- The [`@font-palette-values`](/en-US/docs/Web/CSS/Reference/At-rules/@font-palette-values) at-rule [`override-colors`](/en-US/docs/Web/CSS/Reference/At-rules/@font-palette-values/override-colors) descriptor
+- The [`@color-profile`](/en-US/docs/Web/CSS/Reference/At-rules/@color-profile) at-rule
+- The [`color-gamut`](/en-US/docs/Web/CSS/Reference/At-rules/@media/color-gamut) @media feature
+- The [`forced-colors`](/en-US/docs/Web/CSS/Reference/At-rules/@media/forced-colors) @media feature
 
 ## Specifications
 
@@ -132,7 +132,7 @@ The CSS color module also introduces the `CSSColorProfileRule` interface. Curren
 ## See also
 
 - [CSS color adjustment](/en-US/docs/Web/CSS/CSS_color_adjustment) module and the {{cssxref("print-color-adjust")}} property.
-- [CSS images](/en-US/docs/Web/CSS/CSS_images) module, which is where CSS [`<gradient>`](/en-US/docs/Web/CSS/gradient) images are defined.
+- [CSS images](/en-US/docs/Web/CSS/CSS_images) module, which is where CSS [`<gradient>`](/en-US/docs/Web/CSS/Reference/Values/gradient) images are defined.
 - The [`VideoColorSpace`](/en-US/docs/Web/API/VideoColorSpace) interface
 - The SVG [`<feColorMatrix>`](/en-US/docs/Web/SVG/Reference/Element/feColorMatrix) element
 - [Canvas API: applying styles and colors](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#colors)

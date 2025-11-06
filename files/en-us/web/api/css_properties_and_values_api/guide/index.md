@@ -28,7 +28,7 @@ window.CSS.registerProperty({
 
 ### @property
 
-The same registration can take place in CSS. The following will register a [custom property](/en-US/docs/Web/CSS/Reference/Properties/--*) named `--my-prop` using the {{cssxref('@property')}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule). `--my-prop` will use the CSS color syntax, it will have a default value of `#c0ffee`, and it will not inherit its value:
+The same registration can take place in CSS. The following will register a [custom property](/en-US/docs/Web/CSS/Reference/Properties/--*) named `--my-prop` using the {{cssxref('@property')}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rules). `--my-prop` will use the CSS color syntax, it will have a default value of `#c0ffee`, and it will not inherit its value:
 
 ```css
 @property --my-prop {

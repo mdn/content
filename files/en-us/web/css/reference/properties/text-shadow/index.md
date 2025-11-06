@@ -87,7 +87,7 @@ Each shadow is specified as two or three `<length>` values, followed optionally 
 
 When more than one shadow is given, shadows are applied front-to-back, with the first-specified shadow on top.
 
-This property applies to both {{cssxref("::first-line")}} and {{cssxref("::first-letter")}} [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements).
+This property applies to both {{cssxref("::first-line")}} and {{cssxref("::first-letter")}} [pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements).
 
 ### Values
 

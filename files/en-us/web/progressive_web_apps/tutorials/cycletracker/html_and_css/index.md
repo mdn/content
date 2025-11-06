@@ -241,7 +241,7 @@ If every line is familiar to you, you can copy the above CSS, or write your own 
 
 We use the {{CSSXref("background-color")}} property to set a light green (`#eeffee`) background color on the `body`. Then on the unordered list, fieldset, and legend, we use a white background color, along with a thin solid border added with the {{CSSXref("border")}} property. We override the `background-color` for the legend, making the legend and the list items a darker green (`#ccffcc`).
 
-We use the [`:nth-of-type(even)`](/en-US/docs/Web/CSS/:nth-of-type) pseudo-class [selector](/en-US/docs/Web/CSS/CSS_selectors) to set every even-numbered list item to {{CSSXref("inherit")}} the background color from its parent; in this case, inheriting the `white` background color from the unordered list.
+We use the [`:nth-of-type(even)`](/en-US/docs/Web/CSS/Reference/Selectors/:nth-of-type) pseudo-class [selector](/en-US/docs/Web/CSS/CSS_selectors) to set every even-numbered list item to {{CSSXref("inherit")}} the background color from its parent; in this case, inheriting the `white` background color from the unordered list.
 
 ```css
 body {
@@ -273,7 +273,7 @@ li {
 }
 ```
 
-We add a little white space by setting the `body`'s {{CSSXref("margin")}} using the `vw` and `vh` [viewport units](/en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport), making white space on the outside of our app be proportional to the viewport's size. We also add a little padding to the `li` and `legend`. Finally, to improve, but not fix, the alignment of the past-periods data, we set the {{CSSXref("font-family")}} of the `ul` results section to be `monospace`, making each glyph have the same fixed width.
+We add a little white space by setting the `body`'s {{CSSXref("margin")}} using the `vw` and `vh` [viewport units](/en-US/docs/Web/CSS/Reference/Values/length#relative_length_units_based_on_viewport), making white space on the outside of our app be proportional to the viewport's size. We also add a little padding to the `li` and `legend`. Finally, to improve, but not fix, the alignment of the past-periods data, we set the {{CSSXref("font-family")}} of the `ul` results section to be `monospace`, making each glyph have the same fixed width.
 
 ```css
 body {

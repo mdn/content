@@ -40,7 +40,7 @@ The `container-type` property can take a single value from the list below, or tw
     Applies [style](/en-US/docs/Web/CSS/Reference/Properties/contain#style) and [inline-size](/en-US/docs/Web/CSS/Reference/Properties/contain#inline-size) containment to the element. The inline size of the element can be [computed in isolation](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment#size_containment), ignoring the child elements (see [Using CSS containment](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment)).
 
 - `normal`
-  - : Default value. The element is not a query container for any container size queries, but remains a query container for [container style queries](/en-US/docs/Web/CSS/@container#container_style_queries).
+  - : Default value. The element is not a query container for any container size queries, but remains a query container for [container style queries](/en-US/docs/Web/CSS/Reference/At-rules/@container#container_style_queries).
 
 - `scroll-state`
   - : Establishes a query container for scroll-state queries on the container. In this case, the size of the element is not computed in isolation; no containment is applied.

@@ -70,7 +70,7 @@ Content-Security-Policy: script-src-attr 'none'
 …the following inline event handler is blocked and won't be loaded or executed:
 
 ```html
-<button id="btn" onclick="doSomething()"></button>
+<button id="btn" onclick="doSomething()">Click me</button>
 ```
 
 Note that generally you should replace inline event handlers with {{domxref("EventTarget.addEventListener", "addEventListener")}} calls:

@@ -5,7 +5,7 @@ page-type: guide
 sidebar: cssref
 ---
 
-**Container scroll-state queries** are a type of [container query](/en-US/docs/Web/CSS/@container). Rather than selectively applying styles to descendant elements based on the container's size, scroll-state queries allow you to selectively apply styles to descendant elements based on the container's scroll state. This can include whether the container is partially scrolled, snapped to a [scroll snap container](/en-US/docs/Glossary/Scroll_snap#scroll_snap_container) ancestor, or positioned via [`position: sticky`](/en-US/docs/Web/CSS/Reference/Properties/position) and stuck to a boundary of a {{glossary("scroll container")}} ancestor.
+**Container scroll-state queries** are a type of [container query](/en-US/docs/Web/CSS/Reference/At-rules/@container). Rather than selectively applying styles to descendant elements based on the container's size, scroll-state queries allow you to selectively apply styles to descendant elements based on the container's scroll state. This can include whether the container is partially scrolled, snapped to a [scroll snap container](/en-US/docs/Glossary/Scroll_snap#scroll_snap_container) ancestor, or positioned via [`position: sticky`](/en-US/docs/Web/CSS/Reference/Properties/position) and stuck to a boundary of a {{glossary("scroll container")}} ancestor.
 
 This article explains how to use container scroll-state queries, walking through an example of each type. It assumes that you know the basics of container queries. If you are new to container queries, read [CSS container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries) before continuing.
 
@@ -43,7 +43,7 @@ Here, we query only containers named `my-container` to determine whether the con
 
 ## Using `scrollable` queries
 
-Scroll-state [`scrollable`](/en-US/docs/Web/CSS/@container#scrollable) queries, written as `scroll-state(scrollable: value)`, test whether a container's scrolling ancestor can be scrolled in the given direction via user-initiated scrolling. If not, the query returns false.
+Scroll-state [`scrollable`](/en-US/docs/Web/CSS/Reference/At-rules/@container#scrollable) queries, written as `scroll-state(scrollable: value)`, test whether a container's scrolling ancestor can be scrolled in the given direction via user-initiated scrolling. If not, the query returns false.
 
 The `value` indicates the direction you are testing for scrolling availability in, for example:
 
@@ -327,7 +327,7 @@ Try scrolling the document down, and note how the "back-to-top" link appears as 
 
 ## Using `snapped` queries
 
-Relevant only when [scroll snapping](/en-US/docs/Web/CSS/CSS_scroll_snap) is implemented, scroll-state [`snapped`](/en-US/docs/Web/CSS/@container#snapped) queries (written as `scroll-state(snapped: value)`) test whether a container is going to be snapped to a [scroll snap container](/en-US/docs/Glossary/Scroll_snap#scroll_snap_container) ancestor along the given axis. If not, the query returns false.
+Relevant only when [scroll snapping](/en-US/docs/Web/CSS/CSS_scroll_snap) is implemented, scroll-state [`snapped`](/en-US/docs/Web/CSS/Reference/At-rules/@container#snapped) queries (written as `scroll-state(snapped: value)`) test whether a container is going to be snapped to a [scroll snap container](/en-US/docs/Glossary/Scroll_snap#scroll_snap_container) ancestor along the given axis. If not, the query returns false.
 
 The `value` in this case indicates the direction you are testing the element's ability to snap in, for example:
 
@@ -549,7 +549,7 @@ The rendered result is shown below. Try scrolling the container up and down, and
 
 ## Using `stuck` queries
 
-Scroll-state [`stuck`](/en-US/docs/Web/CSS/@container#scrollable) queries, written as `scroll-state(stuck: value)`, test whether a container with a {{cssxref("position")}} value of `sticky` is stuck to an edge of its scroll container ancestor. If not, the query returns false.
+Scroll-state [`stuck`](/en-US/docs/Web/CSS/Reference/At-rules/@container#scrollable) queries, written as `scroll-state(stuck: value)`, test whether a container with a {{cssxref("position")}} value of `sticky` is stuck to an edge of its scroll container ancestor. If not, the query returns false.
 
 The `value` in this case indicates the scroll container edge you are testing, for example:
 

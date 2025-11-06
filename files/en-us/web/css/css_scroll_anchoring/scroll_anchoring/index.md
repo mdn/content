@@ -75,7 +75,7 @@ Additionally, {{cssxref("position")}} changes anywhere inside the {{glossary("sc
 
 {{Compat}}
 
-To conditionally apply styles based on whether scroll anchoring can be disabled, use [`@supports` feature queries](/en-US/docs/Web/CSS/@supports) to test support for the `overflow-anchor` property.
+To conditionally apply styles based on whether scroll anchoring can be disabled, use [`@supports` feature queries](/en-US/docs/Web/CSS/Reference/At-rules/@supports) to test support for the `overflow-anchor` property.
 
 ## See also
 

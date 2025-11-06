@@ -184,7 +184,7 @@ font-synthesis: unset;
 
 Most standard Western fonts include italic and bold variants, and some fonts include a small-caps and subscript/superscript variants. However, many fonts do not. Fonts used for Chinese, Japanese, Korean and other logographic scripts tend not to include these variants and synthesizing them might impede the legibility or change the meaning of the text. In these cases, it may be desirable to switch off the browser's default font-synthesis.
 
-For example, using the [:lang()](/en-US/docs/Web/CSS/:lang) pseudo-class, you can disable the browser from synthesizing bold and oblique characters for a language, in this case Arabic:
+For example, using the [:lang()](/en-US/docs/Web/CSS/Reference/Selectors/:lang) pseudo-class, you can disable the browser from synthesizing bold and oblique characters for a language, in this case Arabic:
 
 ```css
 *:lang(ar) {

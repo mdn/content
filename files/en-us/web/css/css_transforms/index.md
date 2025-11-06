@@ -325,7 +325,7 @@ Use the sliders in the example below to modify the translation, rotation, scale,
               <span><code>backface-visibility</code></span>
               <input
                 type="checkbox"
-                checked="checked"
+                checked
                 data-default="checked"
                 id="backfaceVisibilityCheckbox" />
             </label>
@@ -738,12 +738,12 @@ The cube in the above example is comprised of six `<div>` elements, all of which
   - [`transition`](/en-US/docs/Web/CSS/Reference/Properties/transition)
   - [`visibility`](/en-US/docs/Web/CSS/Reference/Properties/visibility)
 - Data types:
-  - [`<angle>`](/en-US/docs/Web/CSS/angle)
+  - [`<angle>`](/en-US/docs/Web/CSS/Reference/Values/angle)
   - {{cssxref("length-percentage")}}
   - {{cssxref("length")}}
-  - [`<number>`](/en-US/docs/Web/CSS/number)
+  - [`<number>`](/en-US/docs/Web/CSS/Reference/Values/number)
   - {{cssxref("percentage")}}
-  - [`<position>`](/en-US/docs/Web/CSS/position_value)
+  - [`<position>`](/en-US/docs/Web/CSS/Reference/Values/position_value)
 - Glossary terms:
   - [Interpolation](/en-US/docs/Glossary/Interpolation)
   - [Stacking context](/en-US/docs/Glossary/Stacking_context)

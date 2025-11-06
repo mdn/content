@@ -395,7 +395,7 @@ h1 {
 
 The problem with doing the above is that the user loses the ability to zoom any text set using the `vw` unit, as that text is always related to the size of the viewport. **Therefore you should never set text using viewport units alone**.
 
-There is a solution, and it involves using [`calc()`](/en-US/docs/Web/CSS/calc). If you add the `vw` unit to a value set using a fixed size such as `em`s or `rem`s then the text will still be zoomable. Essentially, the `vw` unit adds on top of that zoomed value:
+There is a solution, and it involves using [`calc()`](/en-US/docs/Web/CSS/Reference/Values/calc). If you add the `vw` unit to a value set using a fixed size such as `em`s or `rem`s then the text will still be zoomable. Essentially, the `vw` unit adds on top of that zoomed value:
 
 ```css
 h1 {
@@ -495,7 +495,7 @@ Next, we will study media queries in more detail and show how to use them to sol
 
 - Working with touchscreen devices:
   - [Touch events](/en-US/docs/Web/API/Touch_events) provide the ability to interpret finger (or stylus) activity on touch screens or trackpads, enabling quality support for complex touch-based user interfaces.
-  - Use the [pointer](/en-US/docs/Web/CSS/@media/pointer) or [any-pointer](/en-US/docs/Web/CSS/@media/any-pointer) media queries to load different CSS on touch-enabled devices.
+  - Use the [pointer](/en-US/docs/Web/CSS/Reference/At-rules/@media/pointer) or [any-pointer](/en-US/docs/Web/CSS/Reference/At-rules/@media/any-pointer) media queries to load different CSS on touch-enabled devices.
 - [CSS-Tricks guide to media queries](https://css-tricks.com/a-complete-guide-to-css-media-queries/)
 - [The Frontend Developer Career Path](https://scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> from Scrimba teaches all you need to know to be a competent front-end web developer, with fun interactive lessons and challenges, knowledgeable teachers, and a supportive community. Go from zero to landing your first front-end job! Many of the course components are available as standalone free versions. This includes a module on responsive design.
 

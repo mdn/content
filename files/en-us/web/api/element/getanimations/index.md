@@ -31,7 +31,7 @@ getAnimations(options)
     - `subtree`
       - : A boolean value which, if `true`, causes animations that target
         descendants of _Element_ to be returned as well. This includes animations
-        that target any CSS [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) attached to
+        that target any CSS [pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) attached to
         _Element_ or one of its descendants. Defaults to `false`.
 
 ### Return value

@@ -33,26 +33,28 @@ width: 100%;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <table class="transition-all" id="example-element">
-    <tr>
-      <th>Name</th>
-      <th>Location</th>
-    </tr>
-    <tr>
-      <td>Lion</td>
-      <td>Africa</td>
-    </tr>
-    <tr>
-      <td>Norwegian Lemming</td>
-      <td>Europe</td>
-    </tr>
-    <tr>
-      <td>Seal</td>
-      <td>Antarctica</td>
-    </tr>
-    <tr>
-      <td>Tiger</td>
-      <td>Asia</td>
-    </tr>
+    <tbody>
+      <tr>
+        <th>Name</th>
+        <th>Location</th>
+      </tr>
+      <tr>
+        <td>Lion</td>
+        <td>Africa</td>
+      </tr>
+      <tr>
+        <td>Norwegian Lemming</td>
+        <td>Europe</td>
+      </tr>
+      <tr>
+        <td>Seal</td>
+        <td>Antarctica</td>
+      </tr>
+      <tr>
+        <td>Tiger</td>
+        <td>Asia</td>
+      </tr>
+    </tbody>
   </table>
 </section>
 ```
@@ -118,22 +120,24 @@ This example uses a fixed table layout, combined with the {{cssxref("width")}} p
 
 ```html
 <table>
-  <tr>
-    <td>Ed</td>
-    <td>Wood</td>
-  </tr>
-  <tr>
-    <td>Albert</td>
-    <td>Schweitzer</td>
-  </tr>
-  <tr>
-    <td>Jane</td>
-    <td>Fonda</td>
-  </tr>
-  <tr>
-    <td>William</td>
-    <td>Shakespeare</td>
-  </tr>
+  <tbody>
+    <tr>
+      <td>Ed</td>
+      <td>Wood</td>
+    </tr>
+    <tr>
+      <td>Albert</td>
+      <td>Schweitzer</td>
+    </tr>
+    <tr>
+      <td>Jane</td>
+      <td>Fonda</td>
+    </tr>
+    <tr>
+      <td>William</td>
+      <td>Shakespeare</td>
+    </tr>
+  </tbody>
 </table>
 ```
 

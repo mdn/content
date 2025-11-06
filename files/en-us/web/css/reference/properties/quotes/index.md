@@ -122,7 +122,6 @@ The default value of `quotes` is [`auto`](#auto). In this example, the first lis
       >, - писал Раджу.
     </p>
   </li>
-  <ul></ul>
 </ul>
 ```
 

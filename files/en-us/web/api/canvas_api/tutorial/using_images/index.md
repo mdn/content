@@ -290,18 +290,20 @@ We loop through the {{domxref("document.images")}} container and add new canvas 
 
 ```html
 <table>
-  <tr>
-    <td><img src="gallery_1.jpg" /></td>
-    <td><img src="gallery_2.jpg" /></td>
-    <td><img src="gallery_3.jpg" /></td>
-    <td><img src="gallery_4.jpg" /></td>
-  </tr>
-  <tr>
-    <td><img src="gallery_5.jpg" /></td>
-    <td><img src="gallery_6.jpg" /></td>
-    <td><img src="gallery_7.jpg" /></td>
-    <td><img src="gallery_8.jpg" /></td>
-  </tr>
+  <tbody>
+    <tr>
+      <td><img src="gallery_1.jpg" /></td>
+      <td><img src="gallery_2.jpg" /></td>
+      <td><img src="gallery_3.jpg" /></td>
+      <td><img src="gallery_4.jpg" /></td>
+    </tr>
+    <tr>
+      <td><img src="gallery_5.jpg" /></td>
+      <td><img src="gallery_6.jpg" /></td>
+      <td><img src="gallery_7.jpg" /></td>
+      <td><img src="gallery_8.jpg" /></td>
+    </tr>
+  </tbody>
 </table>
 <img id="frame" src="canvas_picture_frame.png" width="132" height="150" />
 ```

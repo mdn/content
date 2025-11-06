@@ -24,7 +24,7 @@ After the `@function` syntax, we define a name for the function: `--half-opacity
 > [!NOTE]
 > If multiple CSS functions are given the same name, the function in the stronger cascade {{cssxref("@layer")}} wins. If all of them are in the same layer, the function defined last in the source order wins.
 
-Inside the curly braces is the function **body**, which is where the function logic is defined. This can contain multiple declarations, including custom properties (which will be locally scoped to the function body), at-rules such as {{cssxref("@media")}}, and the [`result`](/en-US/docs/Web/CSS/@function#result_2) descriptor. The value of the `result` descriptor is evaluated to determine the value returned by the function.
+Inside the curly braces is the function **body**, which is where the function logic is defined. This can contain multiple declarations, including custom properties (which will be locally scoped to the function body), at-rules such as {{cssxref("@media")}}, and the [`result`](/en-US/docs/Web/CSS/Reference/At-rules/@function#result_2) descriptor. The value of the `result` descriptor is evaluated to determine the value returned by the function.
 
 Here, we are setting `result` to the value `0.5`: the `--half-opacity()` function will always return `0.5`.
 
@@ -85,7 +85,7 @@ CSS function parameters are specified as comma-separated custom properties insid
 }
 ```
 
-This function has a name of `--transparent` and takes two custom properties as parameters, `--color` and `--alpha`, which can be used locally inside the function body. The body contains a `result` descriptor, which uses [CSS relative color syntax](/en-US/docs/Web/CSS/CSS_colors/Relative_colors) to convert the input `--color` value into an [`oklch()`](/en-US/docs/Web/CSS/color_value/oklch) color with an alpha channel value as specified in the input `--alpha` value.
+This function has a name of `--transparent` and takes two custom properties as parameters, `--color` and `--alpha`, which can be used locally inside the function body. The body contains a `result` descriptor, which uses [CSS relative color syntax](/en-US/docs/Web/CSS/CSS_colors/Relative_colors) to convert the input `--color` value into an [`oklch()`](/en-US/docs/Web/CSS/Reference/Values/color_value/oklch) color with an alpha channel value as specified in the input `--alpha` value.
 
 You can then call this function anywhere you want to produce a semi-transparent version of an existing color.
 

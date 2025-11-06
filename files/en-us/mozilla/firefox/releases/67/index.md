@@ -52,7 +52,7 @@ This article provides information about the changes in Firefox 67 that will affe
 
 - The {{cssxref("revert")}} keyword has been implemented ([Firefox bug 1215878](https://bugzil.la/1215878)).
 - The `break-word` value of the {{cssxref("word-break")}} property is now supported ([Firefox bug 1296042](https://bugzil.la/1296042)).
-- The [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) media feature is now supported ([Firefox bug 1494034](https://bugzil.la/1494034)).
+- The [`prefers-color-scheme`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) media feature is now supported ([Firefox bug 1494034](https://bugzil.la/1494034)).
 - Custom {{cssxref("cursor")}}s of greater than 32px in size are now disallowed, to mitigate potential malware uses of large cursors ([Firefox bug 1445844](https://bugzil.la/1445844)).
 
 #### Removals

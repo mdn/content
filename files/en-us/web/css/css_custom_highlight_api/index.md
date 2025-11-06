@@ -12,7 +12,7 @@ The CSS Custom Highlight API extends the concept of other highlight pseudo-eleme
 
 ## Custom highlight API in action
 
-To enable styling text ranges on a webpage using the CSS Custom Highlight API, you create a {{domxref("Range")}} object, then a {{domxref("Highlight")}} object for the range. After registering the highlight using the {{domxref("HighlightRegistry.set()")}} method, you can then select the range using the {{cssxref("::highlight", "::highlight()")}} pseudo-element. The name defined in the `set()` method is used as the parameter of the `::highlight()` pseudo-element selector to select that range.The range selected by the `::highlight()` pseudo-element can be styled using a [limited number of properties](/en-US/docs/Web/CSS/::highlight#allowable_properties).
+To enable styling text ranges on a webpage using the CSS Custom Highlight API, you create a {{domxref("Range")}} object, then a {{domxref("Highlight")}} object for the range. After registering the highlight using the {{domxref("HighlightRegistry.set()")}} method, you can then select the range using the {{cssxref("::highlight", "::highlight()")}} pseudo-element. The name defined in the `set()` method is used as the parameter of the `::highlight()` pseudo-element selector to select that range.The range selected by the `::highlight()` pseudo-element can be styled using a [limited number of properties](/en-US/docs/Web/CSS/Reference/Selectors/::highlight#allowable_properties).
 
 ```html-nolint hidden
 <h1>Directions</h1>

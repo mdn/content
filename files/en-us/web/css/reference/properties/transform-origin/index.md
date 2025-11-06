@@ -142,7 +142,7 @@ update();
 crosshair.style.opacity = "1";
 ```
 
-The transform origin is the point around which a transformation is applied. For example, the transform origin of the [`rotate()`](/en-US/docs/Web/CSS/transform-function/rotate) function is the center of rotation.
+The transform origin is the point around which a transformation is applied. For example, the transform origin of the [`rotate()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/rotate) function is the center of rotation.
 
 In effect, this property wraps a pair of translations around the element's other transformations. The first translation moves the transform origin to the true origin at <math><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></math>. Then the other transformations are applied, and because the transform origin is at <math><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></math>, those transformations act about the transform origin. Finally, the opposite translation is applied, moving the transform origin back to its original location. Consequently, this definition
 

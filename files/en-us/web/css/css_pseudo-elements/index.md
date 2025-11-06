@@ -43,7 +43,7 @@ The specification also defines the `::details-content` and `::search-text` pseud
 
 ## Guides
 
-- [CSS pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements)
+- [CSS pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements)
   - : Alphabetical list of pseudo-elements defined by all the CSS specifications and WebVTT.
 
 - [Learn: Pseudo-classes and pseudo-elements](/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)
@@ -86,16 +86,16 @@ The specification also defines the `::details-content` and `::search-text` pseud
   - {{cssxref("::view-transition-old()")}} {{Experimental_Inline}}
 
 - [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors)
-  - [Attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors)
+  - [Attribute selectors](/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors)
   - [Combinators](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#combinators)
-  - [Class selectors](/en-US/docs/Web/CSS/Class_selectors)
-  - [ID selectors](/en-US/docs/Web/CSS/ID_selectors)
-  - [Type selectors](/en-US/docs/Web/CSS/Type_selectors)
-  - [Pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes)
-  - [Universal selectors](/en-US/docs/Web/CSS/Universal_selectors)
+  - [Class selectors](/en-US/docs/Web/CSS/Reference/Selectors/Class_selectors)
+  - [ID selectors](/en-US/docs/Web/CSS/Reference/Selectors/ID_selectors)
+  - [Type selectors](/en-US/docs/Web/CSS/Reference/Selectors/Type_selectors)
+  - [Pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
+  - [Universal selectors](/en-US/docs/Web/CSS/Reference/Selectors/Universal_selectors)
 
 - [`placeholder`](/en-US/docs/Web/HTML/Reference/Elements/input#placeholder) attribute of the `<input>` element
-- [`:placeholder-shown`](/en-US/docs/Web/CSS/:placeholder-shown) selector
+- [`:placeholder-shown`](/en-US/docs/Web/CSS/Reference/Selectors/:placeholder-shown) selector
 
 - [CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content)
   - {{cssxref("content")}} property
