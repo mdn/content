@@ -74,6 +74,8 @@ _This interface also inherits properties of {{domxref("XMLHttpRequestEventTarget
   - : Sends the request. If the request is asynchronous (which is the default), this method returns as soon as the request is sent.
 - {{domxref("XMLHttpRequest.setAttributionReporting()")}} {{securecontext_inline}} {{experimental_inline}}
   - : Indicates that you want the request's response to be able to register an attribution source or trigger event.
+- {{domxref("XMLHttpRequest.setPrivateToken()")}} {{experimental_inline}}
+  - : Adds [private state token](/en-US/docs/Web/API/Private_State_Token_API/Using) information to an `XMLHttpRequest` call, to initiate private state token operations.
 - {{domxref("XMLHttpRequest.setRequestHeader()")}}
   - : Sets the value of an HTTP request header. You must call `setRequestHeader()` after {{domxref("XMLHttpRequest.open", "open()")}}, but before {{domxref("XMLHttpRequest.send", "send()")}}.
 

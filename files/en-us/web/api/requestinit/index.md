@@ -167,6 +167,27 @@ You can also construct a `Request` with a `RequestInit`, and pass the `Request` 
 
     Defaults to `auto`.
 
+- `privateToken` {{optional_inline}}
+  - : An object containing options for initiating a [private state token](/en-US/docs/Web/API/Private_State_Token_API/Using) operation. Possible properties include:
+    - `issuers`
+      - : An array of strings containing the URLs of issuers that you want to forward redemption records for. This setting is ignored unless `operation` is set to `send-redemption-record`, in which case the `issuers` array must be included.
+    - `operation`
+      - : A string representing the type of token operation you want to initiate. When specifying the `privateToken` option, this property is mandatory. Possible values are:
+        - `token-request`
+          - : Initiates a [token request](/en-US/docs/Web/API/Private_State_Token_API/Using#issuing_a_token_via_your_server) operation.
+        - `token-redemption`
+          - : Initiates a [token redemption](/en-US/docs/Web/API/Private_State_Token_API/Using#redeeming_a_token_via_your_server) operation.
+        - `send-redemption-record`
+          - : Initiates a [send redemption record](/en-US/docs/Web/API/Private_State_Token_API/Using#redemption_record_usage_2) operation.
+    - `refreshPolicy`
+      - : An enumerated value that specifies the expected behavior when a non-expired redemption record for the current user and site has previously been set. This setting is ignored unless `operation` is set to `token-redemption`. Possible values are:
+        - `none`
+          - : The previously-set redemption record should be used, and a new one should not be issued. This is the default value.
+        - `refresh`
+          - : A new redemption record is always issued.
+    - `version`
+      - : A number indicating the version of the cryptographic protocol you wish to use when generating a token. Currently this is always set to `1`, which is the only version that the specification supports. When specifying the `privateToken` option, this property is mandatory.
+
 - `redirect` {{optional_inline}}
   - : Determines the browser's behavior in case the server replies with a [redirect status](/en-US/docs/Web/HTTP/Reference/Status#redirection_messages). One of the following values:
     - `follow`
