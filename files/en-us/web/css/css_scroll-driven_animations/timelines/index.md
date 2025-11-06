@@ -26,7 +26,7 @@ CSS scroll-driven animations are performant. JavaScript scroll-driven animations
 
 ## Foundations
 
-Scroll-driven animations build upon [CSS animations](/en-US/docs/Web/CSS/CSS_animations) and the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API). Prior to creating scroll-driven animations, you must have an understanding of CSS {{cssxref("@keyframes")}} animations. See the [using CSS animations guide](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations) to learn more.
+Scroll-driven animations build upon [CSS animations](/en-US/docs/Web/CSS/CSS_animations) and the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API). Before creating scroll-driven animations, you must have an understanding of CSS {{cssxref("@keyframes")}} animations. See the [using CSS animations guide](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations) to learn more.
 
 In CSS, animations are created by attaching keyframe animations to an element using the {{cssxref("animation-name")}} property (or {{cssxref("animation")}} shorthand). By default, animations run on the default document timeline, moving from the `from` keyframe to the `to` keyframe as time passes by, with the animation lasting as long as the time defined by the {{cssxref("animation-duration")}} property value. When set to run on the default document timeline, animations play through to completion unless prevented from doing so, for example, by having the {{cssxref("animation-play-state")}} set to `paused` or by removing the `animation-name` from the element.
 
@@ -100,7 +100,7 @@ When the checkbox is checked, the `action` animation is applied to the element. 
 
 {{EmbedLiveSample("regular", "100%", "150")}}
 
-Try checking the checkbox. Nothing will happen during the half-second animation delay. Then, once the animation starts, the box will jump to a 45 degree rotation, and then it will take 3 seconds to rotate an additional 720 degrees, or two additional full rotations. After a total of three and half seconds, the animation concludes, and the `<div>` will return to its default non-rotated state.
+Try checking the checkbox. Nothing will happen during the half-second animation delay. Then, once the animation starts, the box will jump to a 45-degree rotation, and then it will take 3 seconds to rotate an additional 720 degrees, or two additional full rotations. After a total of three and a half seconds, the animation concludes, and the `<div>` will return to its default non-rotated state.
 
 > [!NOTE]
 > The `animation-timeline` is reset to the default `auto` value by the {{cssxref("animation")}} shorthand property, but cannot be set using the shorthand. Therefore, when creating scroll-driven animations, always declare the `animation-timeline` after any `animation` shorthand declarations to achieve the desired effect.
@@ -115,7 +115,7 @@ To create a scroll progress timeline, the `animation-timeline` value must refere
 
 A _named scroll progress timeline_ is one where the scroller is explicitly named using the {{cssxref("scroll-timeline-name")}} property (or the {{cssxref("scroll-timeline")}} shorthand). The name is a {{cssxref("dashed-ident")}}. The scroller is linked to the element to be animated by specifying its `scroll-timeline-name` as the value of that element's `animation-timeline` property.
 
-Our HTML includes three elements: the `item`, which we will be animating; its `container`, which we will be scrolling; and the scroller. The `container` needs to be large enough to overflow its `scroller` parent: If there is no scrolling, there will be no scroll timeline.
+Our HTML includes three elements: the `item`, which we will animate; its `container`, which we will scroll; and the scroller. The `container` needs to be large enough to overflow its `scroller` parent: If there is no scrolling, there will be no scroll timeline.
 
 ```html live-sample___named_scroll live-sample___anon_scroll
 <main class="scroller">
@@ -180,7 +180,7 @@ Before any scrolling occurs, the container's position is at the top of the scrol
 
 You may have noticed that the {{cssxref("animation-duration")}} component of the `animation` shorthand was set to `1ms`. When creating [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations), specifying an `animation-duration` value does not affect the duration of the animation, and shouldn't be necessary. However, durations can affect non-linear view progress animation timelines, and Firefox requires a non-zero `animation-duration` to apply an animation to an element. For these reasons, it is common practice to set `animation-duration` to `1ms`.
 
-Setting `animation-durations: 1ms` ensures that the animation works in Firefox, that the animation effect is consistent across all browsers, and that the animation is not visible if a browser doesn't support view progress animation timelines. If the browser supports `@keyframe` animations, the animation will not be visible to the user, but the animation still happens, and animation events are fired.
+Setting `animation-duration: 1ms` ensures that the animation works in Firefox, the animation effect is consistent across all browsers, and the animation is hidden if a browser doesn't support view progress animation timelines. If the browser supports keyframe animations, the animation will not be visible to the user. However, the animation still happens, and animation events are fired.
 
 ### Anonymous scroll progress timelines
 
@@ -201,7 +201,7 @@ This example uses all the same CSS as the previous example, except for the `anim
 
 {{EmbedLiveSample("anon_scroll", "100%", "150")}}
 
-We set an {{cssxref("inline-size")}} on the container so that it overflows in the inline direction, and set the {{cssxref("block-size")}} to `100%`, so it no longer overflows in the block direction. Try scrolling in the inline direction.
+We set an {{cssxref("inline-size")}} on the container so that it overflows in the inline direction, and set the {{cssxref("block-size")}} to `100%` so it no longer overflows in the block direction. Try scrolling in the inline direction.
 
 ## View progress timelines
 
@@ -235,7 +235,7 @@ Here we use the {{cssxref("view-timeline-name")}} property to name an element, i
 
 We applied the animation **before** the animation timeline, as the `animation` resets the `animation-timeline` to `auto`.
 
-The animation is slightly different from the previous animations in that the spinning effect starts 20% through the animation and ends 80% of the way through the animation; this means the element will not be actively spinning when it first comes into view and will stop spinning before it is completely out of view.
+The animation is slightly different from the previous examples in that the spinning effect starts at `20%` and ends at `80%` of the way through the animation; this means the element will not be actively spinning when it first comes into view and will stop spinning before it is completely out of view.
 
 ```css live-sample___named_view live-sample___anon_view
 @keyframes action {
@@ -287,13 +287,13 @@ The animation is slightly different from the previous animations in that the spi
 
 {{EmbedLiveSample("named_view", "100%", "250")}}
 
-Scroll the element into view. Note that the element animates through the `@keyframe` animation as it moves through the visible area of its ancestor scroller.
+Scroll the element into view. Note that the element animates through the `@keyframes` animation as it moves through the visible area of its ancestor scroller.
 
 ### Anonymous view progress timeline: the `view()` function
 
 Alternatively, a {{cssxref("animation-timeline/view", "view()")}} function can be set as the value of the `animation-timeline` property to specify that an element's animation timeline is an _anonymous view progress timeline_. This causes the element to be animated based on its position inside its nearest parent scroller.
 
-The `view()` function is used to create a view timeline. You attach the timeline to the element you want to animate using the `animation-timeline` property. The function creates a view timeline for each element matched by the selector.
+The `view()` function creates a view timeline. You attach the timeline to the element you want to animate using the `animation-timeline` property. The function creates a view timeline for each element matched by the selector.
 
 In this example, we again define the `animation` before the `animation-timeline`, so the timeline is not reset. We then include an argument-less `view()` function. We don't specify a scroller, as, by definition, the subject's visibility is tracked by its nearest ancestor scroller.
 
@@ -311,7 +311,7 @@ In this example, we again define the `animation` before the `animation-timeline`
 The `view()` function takes up to three optional values as arguments:
 
 - Zero or one `<axis>` parameters. If set, this specifies the scroll axis along which the animation progresses.
-- Either the keyword `auto` or zero, one, or two {{cssxref("length-percentage")}} inset values. If set, these values specify offsets for the start and/or end of the scrollport.
+- Either the keyword `auto` or zero, one, or two {{cssxref("length-percentage")}} inset values. If set, these values specify offsets for the scrollport start and/or end.
 
 Declaring `view()` is equivalent to `view(block auto)`, which defines `block` as the axis of the parent element that supplies the timeline and the {{cssxref("scroll-padding")}}, which generally defaults to `0`, as the insets within the visible area at which the animation starts and ends.
 
@@ -357,7 +357,7 @@ Setting `animation-timeline: none` disassociates the element from all animation 
 }
 ```
 
-Because the [`animation` shorthand sets the `animation-timeline` to `auto`](#animation-timeline-and-the-animation-shorthand), use a selector with great enough specificity to ensure your `animation-timeline` isn't overridden by your `animation` shorthand declarations.
+Because the [`animation` shorthand sets the `animation-timeline` to `auto`](#animation-timeline-and-the-animation-shorthand), use a selector with enough specificity to ensure your `animation-timeline` isn't overridden by your `animation` shorthand declarations.
 
 ## See also
 
