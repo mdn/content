@@ -174,7 +174,7 @@ In a nutshell, different whitespace characters are collapsed and transformed in 
 
 ### Trimming and positioning
 
-In both [inline](/en-US/docs/Web/CSS/CSS_inline_layout/Inline_formatting_context) and [block](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context) formatting contexts, elements are laid out in _lines_. In an inline formatting context, lines are created by text wrapping. In a block formatting context, on the other hand, each block forms its own line. As each line is laid out, whitespace is processed further. Let's take a look at an example to explain how this works.
+In both [inline](/en-US/docs/Web/CSS/CSS_inline_layout/Inline_formatting_context) and [block](/en-US/docs/Web/CSS/Guides/Display/Block_formatting_context) formatting contexts, elements are laid out in _lines_. In an inline formatting context, lines are created by text wrapping. In a block formatting context, on the other hand, each block forms its own line. As each line is laid out, whitespace is processed further. Let's take a look at an example to explain how this works.
 
 In this example, as before, we've marked the whitespace characters in a comment. We have three text nodes that contain only whitespace: one before the first `<div>`, one between the 2 `<div>`s, and one after the second `<div>`.
 

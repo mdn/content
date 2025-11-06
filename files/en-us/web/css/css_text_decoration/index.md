@@ -118,7 +118,7 @@ The specification also defines the `text-decoration-skip-box`, `text-decoration-
 - {{HTMLElement("sup")}}
 - {{HTMLElement("sub")}}
 - [Inline formatting context](/en-US/docs/Web/CSS/CSS_inline_layout/Inline_formatting_context)
-- [Introduction to formatting contexts](/en-US/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts#inline_formatting_contexts)
+- [Introduction to formatting contexts](/en-US/docs/Web/CSS/Guides/Display/Formatting_contexts#inline_formatting_contexts)
 
 ## Specifications
 

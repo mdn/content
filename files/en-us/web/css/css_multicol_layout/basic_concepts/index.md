@@ -72,7 +72,7 @@ body {
 
 {{EmbedLiveSample("column-count", "", "280px")}}
 
-In the above example, the content is wrapped within the paragraph `<p>` tags with the default styling. Therefore, there is a margin above each paragraph. You can see how this margin causes the first line of text to be pushed down. This is because a multicol container creates a [block formatting context (BFC)](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context) because of which margins on child elements do not collapse with any margin on the container.
+In the above example, the content is wrapped within the paragraph `<p>` tags with the default styling. Therefore, there is a margin above each paragraph. You can see how this margin causes the first line of text to be pushed down. This is because a multicol container creates a [block formatting context (BFC)](/en-US/docs/Web/CSS/Guides/Display/Block_formatting_context) because of which margins on child elements do not collapse with any margin on the container.
 
 ### Specifying the width of columns
 

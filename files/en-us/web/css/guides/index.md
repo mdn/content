@@ -12,15 +12,15 @@ There are a number of methods that you can use to lay out your web pages and app
 
 If you are not using a flex or grid layout, then your content is laid out using normal flow, or block and inline layout. These guides will help you to understand the way this layout method works.
 
-- [Block and inline layout in normal flow](/en-US/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow)
+- [Block and inline layout in normal flow](/en-US/docs/Web/CSS/Guides/Display/Block_and_inline_layout_in_normal_flow)
   - : An introduction to normal flow.
-- [In flow and out of flow](/en-US/docs/Web/CSS/CSS_display/In_flow_and_out_of_flow)
+- [In flow and out of flow](/en-US/docs/Web/CSS/Guides/Display/In_flow_and_out_of_flow)
   - : How to take an item out of flow, and what that does to the layout of your document.
-- [Formatting contexts explained](/en-US/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts)
+- [Formatting contexts explained](/en-US/docs/Web/CSS/Guides/Display/Formatting_contexts)
   - : An introduction to creating a new formatting context.
-- [Flow layout and writing modes](/en-US/docs/Web/CSS/CSS_display/Flow_layout_and_writing_modes)
+- [Flow layout and writing modes](/en-US/docs/Web/CSS/Guides/Display/Flow_layout_and_writing_modes)
   - : How flow layout works if you use a different writing mode, such as vertical text.
-- [Flow layout and overflow](/en-US/docs/Web/CSS/CSS_display/Flow_layout_and_overflow)
+- [Flow layout and overflow](/en-US/docs/Web/CSS/Guides/Display/Flow_layout_and_overflow)
   - : Understanding and managing overflow.
 - [Introduction to the CSS box model](/en-US/docs/Web/CSS/Guides/Box_model/Introduction)
   - : Understanding the box model is a CSS fundamental; this guide explains how it works.

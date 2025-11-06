@@ -58,7 +58,7 @@ The parameters are:
     - `outside`
       - : The opposite side of the inset property.
     - `start`
-      - : The logical start of the anchor element's [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block) along the axis of the inset property on which the `anchor()` function is set.
+      - : The logical start of the anchor element's [containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block) along the axis of the inset property on which the `anchor()` function is set.
     - `end`
       - : The logical end of the anchor element's containing block along the axis of the inset property on which the `anchor()` function is set.
     - `self-start`

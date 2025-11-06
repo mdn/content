@@ -40,7 +40,7 @@ Finally, note that for non-replaced inline elements, the amount of space taken u
 
 ## See also
 
-- [Layout and the containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block)
+- [Layout and the containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block)
 - [Introducing the CSS Cascade](/en-US/docs/Web/CSS/Guides/Cascade/Introduction)
 - [Learn: Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - CSS key concepts:
@@ -50,7 +50,7 @@ Finally, note that for non-replaced inline elements, the amount of space taken u
   - [Specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity)
   - [Inheritance](/en-US/docs/Web/CSS/Guides/Cascade/Inheritance)
   - [Layout modes](/en-US/docs/Glossary/Layout_mode)
-  - [Visual formatting model](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model)
+  - [Visual formatting model](/en-US/docs/Web/CSS/Guides/Display/Visual_formatting_model)
   - [Margin collapsing](/en-US/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
   - Values
     - [Initial values](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#initial_value)

@@ -60,7 +60,7 @@ The parameters are:
       - : The height of the anchor element.
 
     - `block`
-      - : The length of the anchor element's [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block) in the block direction.
+      - : The length of the anchor element's [containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block) in the block direction.
 
     - `inline`
       - : The length of the anchor element's containing block in the inline direction.

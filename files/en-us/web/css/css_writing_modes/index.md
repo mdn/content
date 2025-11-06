@@ -74,12 +74,12 @@ The CSS writing module addresses the orientations of all writing modes. Other mo
 - {{glossary("Logical properties")}}
 - {{glossary("Physical properties")}}
 
-[CSS display](/en-US/docs/Web/CSS/CSS_display) module
+[CSS display](/en-US/docs/Web/CSS/Guides/Display) module
 
 - {{cssxref("display")}}
 
 - {{CSSxRef("&lt;display-internal&gt;")}}
-- [Visual formatting model](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model)
+- [Visual formatting model](/en-US/docs/Web/CSS/Guides/Display/Visual_formatting_model)
 
 [CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content)
 

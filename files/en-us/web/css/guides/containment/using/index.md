@@ -62,13 +62,13 @@ article {
 }
 ```
 
-Layout is normally scoped to the entire document, which means that if you move one element the entire document needs to be treated as if things could have moved anywhere. By using `contain: layout` you can tell the browser it only needs to check this element — everything inside the element is scoped to that element and does not affect the rest of the page, with the containing box establishing an independent [formatting context](/en-US/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts).
+Layout is normally scoped to the entire document, which means that if you move one element the entire document needs to be treated as if things could have moved anywhere. By using `contain: layout` you can tell the browser it only needs to check this element — everything inside the element is scoped to that element and does not affect the rest of the page, with the containing box establishing an independent [formatting context](/en-US/docs/Web/CSS/Guides/Display/Formatting_contexts).
 
 In addition:
 
 - {{cssxref("float")}} layout will be performed independently inside the specified element.
 - Margins won't collapse across a layout containment boundary.
-- The layout container is a [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block) for `absolute`- and `fixed`-positioned descendants.
+- The layout container is a [containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block) for `absolute`- and `fixed`-positioned descendants.
 - The containing box creates a [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context), therefore {{cssxref("z-index")}} can be used.
 
 > [!NOTE]
@@ -82,7 +82,7 @@ article {
 }
 ```
 
-Paint containment essentially clips the box to the padding edge of the [principal box](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model#the_principal_box). There can be no visible overflow. The same additional notes are true for `paint` containment as `layout` containment (see above).
+Paint containment essentially clips the box to the padding edge of the [principal box](/en-US/docs/Web/CSS/Guides/Display/Visual_formatting_model#the_principal_box). There can be no visible overflow. The same additional notes are true for `paint` containment as `layout` containment (see above).
 
 Another advantage is that if the element with containment applied is offscreen, the browser does not need to paint its child elements — these are also offscreen as they are contained completely by that box.
 

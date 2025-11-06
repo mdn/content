@@ -124,7 +124,7 @@ The `offset-path` property takes as its value an `<offset-path>` value, a [`<coo
   - : Specifies that the element does not follow any offset path. The `none` value is equivalent to the element not having any [offset transform](/en-US/docs/Web/CSS/Reference/Properties/offset). The element's movement in this case is determined by its default position properties, such as {{cssxref("top")}} and {{cssxref("left")}}, instead of an offset path. This is the default value.
 
 - `<offset-path>`
-  - : A `ray()` function, a `<url>` value, or a `<basic-shape>` value that specifies the geometrical offset path. If omitted, the path shape for the `<coord-box>` value is `inset(0 round X)`, where `X` is the value of {{cssxref("border-radius")}} of the element that establishes the [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block).
+  - : A `ray()` function, a `<url>` value, or a `<basic-shape>` value that specifies the geometrical offset path. If omitted, the path shape for the `<coord-box>` value is `inset(0 round X)`, where `X` is the value of {{cssxref("border-radius")}} of the element that establishes the [containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block).
     - {{cssxref("ray","ray()")}}
       - : Defines a line starting at a set position, of a set length, and extending at the specified angle. The `ray()` function accepts up to four parameters – an {{CSSxRef("angle")}}, an optional size value, the optional keyword `contain`, and an optional `at <position>`.
 

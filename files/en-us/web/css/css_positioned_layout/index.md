@@ -39,7 +39,7 @@ Like all CSS modules, this module impacts and is impacted by other modules. This
 ### Glossary terms and definitions
 
 - [Block direction](/en-US/docs/Glossary/Flow_relative_values#block_direction)
-- [Containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block)
+- [Containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block)
 - {{glossary("Flow relative values")}}
 - [Inline direction](/en-US/docs/Glossary/Flow_relative_values#inline_direction)
 - {{glossary("Inset properties")}}

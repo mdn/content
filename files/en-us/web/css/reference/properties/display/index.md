@@ -6,9 +6,9 @@ browser-compat: css.properties.display
 sidebar: cssref
 ---
 
-The **`display`** [CSS](/en-US/docs/Web/CSS) property sets whether an element is treated as a [block or inline box](/en-US/docs/Web/CSS/CSS_display/Flow_layout) and the layout used for its children, such as [flow layout](/en-US/docs/Web/CSS/CSS_display/Flow_layout), [grid](/en-US/docs/Web/CSS/CSS_grid_layout) or [flex](/en-US/docs/Web/CSS/CSS_flexible_box_layout).
+The **`display`** [CSS](/en-US/docs/Web/CSS) property sets whether an element is treated as a [block or inline box](/en-US/docs/Web/CSS/Guides/Display/Flow_layout) and the layout used for its children, such as [flow layout](/en-US/docs/Web/CSS/Guides/Display/Flow_layout), [grid](/en-US/docs/Web/CSS/CSS_grid_layout) or [flex](/en-US/docs/Web/CSS/CSS_flexible_box_layout).
 
-Formally, the **`display`** property sets an element's inner and outer _display types_. The outer type sets an element's participation in [flow layout](/en-US/docs/Web/CSS/CSS_display/Flow_layout); the inner type sets the layout of children. Some values of `display` are fully defined in their own individual specifications; for example the detail of what happens when `display: flex` is declared is defined in the CSS Flexible Box Model specification.
+Formally, the **`display`** property sets an element's inner and outer _display types_. The outer type sets an element's participation in [flow layout](/en-US/docs/Web/CSS/Guides/Display/Flow_layout); the inner type sets the layout of children. Some values of `display` are fully defined in their own individual specifications; for example the detail of what happens when `display: flex` is declared is defined in the CSS Flexible Box Model specification.
 
 {{InteractiveExample("CSS Demo: display")}}
 
@@ -141,7 +141,7 @@ The keyword values can be grouped into six value categories.
 > }
 > ```
 >
-> See [Using the multi-keyword syntax with CSS display](/en-US/docs/Web/CSS/CSS_display/multi-keyword_syntax_of_display) for more information.
+> See [Using the multi-keyword syntax with CSS display](/en-US/docs/Web/CSS/Guides/Display/Multi-keyword_syntax) for more information.
 
 ### Inside
 
@@ -152,10 +152,10 @@ The keyword values can be grouped into six value categories.
 
         If its outer display type is `inline`, and it is participating in a block or inline formatting context, then it generates an inline box. Otherwise it generates a block box.
 
-        Depending on the value of other properties (such as {{CSSxRef("position")}}, {{CSSxRef("float")}}, or {{CSSxRef("overflow")}}) and whether it is itself participating in a block or inline formatting context, it either establishes a new [block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context) (BFC) for its contents or integrates its contents into its parent formatting context.
+        Depending on the value of other properties (such as {{CSSxRef("position")}}, {{CSSxRef("float")}}, or {{CSSxRef("overflow")}}) and whether it is itself participating in a block or inline formatting context, it either establishes a new [block formatting context](/en-US/docs/Web/CSS/Guides/Display/Block_formatting_context) (BFC) for its contents or integrates its contents into its parent formatting context.
 
     - `flow-root`
-      - : The element generates a block box that establishes a new [block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context), defining where the formatting root lies.
+      - : The element generates a block box that establishes a new [block formatting context](/en-US/docs/Web/CSS/Guides/Display/Block_formatting_context), defining where the formatting root lies.
     - `table`
       - : These elements behave like HTML {{HTMLElement("table")}} elements. It defines a block-level box.
     - `flex`
@@ -249,7 +249,7 @@ This can be used together with {{CSSxRef("list-style-type")}} and {{CSSxRef("lis
 
 ### Which syntax should you use?
 
-The [CSS display module](/en-US/docs/Web/CSS/CSS_display) describes a multi-keyword syntax for values you can use with the `display` property to explicitly define **outer** and **inner** display.
+The [CSS display module](/en-US/docs/Web/CSS/Guides/Display) describes a multi-keyword syntax for values you can use with the `display` property to explicitly define **outer** and **inner** display.
 The single keyword values (precomposed `<display-legacy>` values) are supported for backward-compatibility.
 
 For example, using two values you can specify an inline flex container as follows:
@@ -268,7 +268,7 @@ This can also be specified using the legacy single value:
 }
 ```
 
-For more information on these changes, see the [Using the multi-keyword syntax with CSS display](/en-US/docs/Web/CSS/CSS_display/multi-keyword_syntax_of_display) guide.
+For more information on these changes, see the [Using the multi-keyword syntax with CSS display](/en-US/docs/Web/CSS/Guides/Display/Multi-keyword_syntax) guide.
 
 ## Description
 
@@ -276,15 +276,15 @@ The individual pages for the different types of value that `display` can have se
 
 ### Multi-keyword values
 
-- [Using the multi-keyword syntax with CSS display](/en-US/docs/Web/CSS/CSS_display/multi-keyword_syntax_of_display)
+- [Using the multi-keyword syntax with CSS display](/en-US/docs/Web/CSS/Guides/Display/Multi-keyword_syntax)
 
 ### CSS Flow Layout (display: block, display: inline)
 
-- [Block and inline layout in normal flow](/en-US/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow)
-- [Flow layout and overflow](/en-US/docs/Web/CSS/CSS_display/Flow_layout_and_overflow)
-- [Flow layout and writing modes](/en-US/docs/Web/CSS/CSS_display/Flow_layout_and_writing_modes)
-- [Introduction to formatting contexts](/en-US/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts)
-- [In flow and out of flow](/en-US/docs/Web/CSS/CSS_display/In_flow_and_out_of_flow)
+- [Block and inline layout in normal flow](/en-US/docs/Web/CSS/Guides/Display/Block_and_inline_layout_in_normal_flow)
+- [Flow layout and overflow](/en-US/docs/Web/CSS/Guides/Display/Flow_layout_and_overflow)
+- [Flow layout and writing modes](/en-US/docs/Web/CSS/Guides/Display/Flow_layout_and_writing_modes)
+- [Introduction to formatting contexts](/en-US/docs/Web/CSS/Guides/Display/Formatting_contexts)
+- [In flow and out of flow](/en-US/docs/Web/CSS/Guides/Display/In_flow_and_out_of_flow)
 
 ### display: flex
 
@@ -503,5 +503,5 @@ You can find more examples in the pages for each separate display type under [Gr
 - {{CSSxRef("visibility")}}, {{CSSxRef("float")}}, {{CSSxRef("position")}}
 - {{CSSxRef("grid")}}, {{CSSxRef("flex")}}
 - SVG {{SVGAttr("display")}} attribute
-- [Block and inline layout in normal flow](/en-US/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow)
-- [Introduction to formatting contexts](/en-US/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts)
+- [Block and inline layout in normal flow](/en-US/docs/Web/CSS/Guides/Display/Block_and_inline_layout_in_normal_flow)
+- [Introduction to formatting contexts](/en-US/docs/Web/CSS/Guides/Display/Formatting_contexts)

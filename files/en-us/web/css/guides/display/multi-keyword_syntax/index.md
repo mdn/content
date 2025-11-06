@@ -1,12 +1,12 @@
 ---
 title: Using the multi-keyword syntax with CSS display
 short-title: Using multi-keyword syntax
-slug: Web/CSS/CSS_display/multi-keyword_syntax_of_display
+slug: Web/CSS/Guides/Display/Multi-keyword_syntax
 page-type: guide
 sidebar: cssref
 ---
 
-The [CSS display module](/en-US/docs/Web/CSS/CSS_display) defines a multi-keyword syntax for the CSS [`display`](/en-US/docs/Web/CSS/Reference/Properties/display) property. This guide explains the multi-keyword syntax.
+The [CSS display module](/en-US/docs/Web/CSS/Guides/Display) defines a multi-keyword syntax for the CSS [`display`](/en-US/docs/Web/CSS/Reference/Properties/display) property. This guide explains the multi-keyword syntax.
 
 > [!NOTE]
 > Multi-keyword syntax is also referred to as "two-value syntax" or "multi-value syntax."
@@ -142,7 +142,7 @@ There are mappings for all of the existing values of `display`; the most common 
 
 ## display: block flow-root and display: inline flow-root
 
-Regarding how this multi-value syntax helps clarify CSS layout, we can look at some values in the table above that might be less familiar to you. The multi-keyword `display: block flow-root` maps to a single value; `display: flow-root`. This value's only purpose is to create a new [Block Formatting Context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context) (BFC). A BFC ensures that everything inside your box stays inside, and things outside the box cannot intrude into it.
+Regarding how this multi-value syntax helps clarify CSS layout, we can look at some values in the table above that might be less familiar to you. The multi-keyword `display: block flow-root` maps to a single value; `display: flow-root`. This value's only purpose is to create a new [Block Formatting Context](/en-US/docs/Web/CSS/Guides/Display/Block_formatting_context) (BFC). A BFC ensures that everything inside your box stays inside, and things outside the box cannot intrude into it.
 
 In the example below, two `<p>` elements, one inside a `<div>` demonstrate how display values affect formatting contexts.
 The first `<div>` element with the demo controls is hidden so we can focus on the elements that follow instead.

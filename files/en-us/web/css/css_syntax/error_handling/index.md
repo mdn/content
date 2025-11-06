@@ -23,7 +23,7 @@ div {
 }
 ```
 
-The {{cssxref("display")}} property accepts both legacy single value and [multi-keyword syntax](/en-US/docs/Web/CSS/CSS_display/multi-keyword_syntax_of_display). Browsers will render the old syntax until they recognize the new syntax as valid, at which point the new syntax will override the old. If a user has an old browser, the valid fallback won't get overwritten by the new CSS, because the browser perceives it as invalid.
+The {{cssxref("display")}} property accepts both legacy single value and [multi-keyword syntax](/en-US/docs/Web/CSS/Guides/Display/Multi-keyword_syntax). Browsers will render the old syntax until they recognize the new syntax as valid, at which point the new syntax will override the old. If a user has an old browser, the valid fallback won't get overwritten by the new CSS, because the browser perceives it as invalid.
 
 The type and amount of CSS that a browser ignores due to an error depends on the type of error. Some common error situations are listed below:
 

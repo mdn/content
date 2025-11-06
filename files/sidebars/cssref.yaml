@@ -155,17 +155,17 @@ sidebar:
   - title: Display
     details: closed
     children:
-      - /Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow
-      - /Web/CSS/CSS_display/Flow_layout
-      - /Web/CSS/CSS_display/Flow_layout_and_overflow
-      - /Web/CSS/CSS_display/Flow_layout_and_writing_modes
-      - /Web/CSS/CSS_display/In_flow_and_out_of_flow
-      - /Web/CSS/CSS_display/Containing_block
-      - /Web/CSS/CSS_display/Introduction_to_formatting_contexts
-      - /Web/CSS/CSS_display/Block_formatting_context
+      - /Web/CSS/Guides/Display/Block_and_inline_layout_in_normal_flow
+      - /Web/CSS/Guides/Display/Flow_layout
+      - /Web/CSS/Guides/Display/Flow_layout_and_overflow
+      - /Web/CSS/Guides/Display/Flow_layout_and_writing_modes
+      - /Web/CSS/Guides/Display/In_flow_and_out_of_flow
+      - /Web/CSS/Guides/Display/Containing_block
+      - /Web/CSS/Guides/Display/Formatting_contexts
+      - /Web/CSS/Guides/Display/Block_formatting_context
       - /Web/CSS/CSS_inline_layout/Inline_formatting_context
-      - /Web/CSS/CSS_display/multi-keyword_syntax_of_display
-      - /Web/CSS/CSS_display/Visual_formatting_model
+      - /Web/CSS/Guides/Display/Multi-keyword_syntax
+      - /Web/CSS/Guides/Display/Visual_formatting_model
   - type: listSubPages
     path: /Web/CSS/CSS_filter_effects
     title: Filter_effects

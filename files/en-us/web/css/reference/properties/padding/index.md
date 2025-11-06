@@ -102,7 +102,7 @@ The `padding` property may be specified using one, two, three, or four values. E
 - {{cssxref("&lt;length&gt;")}}
   - : The size of the padding as a fixed value.
 - {{cssxref("&lt;percentage&gt;")}}
-  - : The size of the padding as a percentage, relative to the inline size (_width_ in a horizontal language, defined by {{cssxref("writing-mode")}}) of the [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block).
+  - : The size of the padding as a percentage, relative to the inline size (_width_ in a horizontal language, defined by {{cssxref("writing-mode")}}) of the [containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block).
 
 ## Formal definition
 

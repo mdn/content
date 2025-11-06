@@ -348,9 +348,9 @@ blockquote p::after {
 - {{cssxref("::scroll-marker-group")}}
 - {{glossary("Scroll container")}} glossary term
 
-[CSS display](/en-US/docs/Web/CSS/CSS_display) module
+[CSS display](/en-US/docs/Web/CSS/Guides/Display) module
 
-- [Block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context) guide
+- [Block formatting context](/en-US/docs/Web/CSS/Guides/Display/Block_formatting_context) guide
 
 ## Specifications
 

@@ -89,7 +89,7 @@ body {
 
 ## Related concepts
 
-[CSS display module](/en-US/docs/Web/CSS/CSS_display)
+[CSS display module](/en-US/docs/Web/CSS/Guides/Display)
 
 - {{cssxref("display")}}
 - {{cssxref("order")}}
@@ -122,4 +122,4 @@ body {
 
 - [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) module
 - [CSS writing modes](/en-US/docs/Web/CSS/CSS_writing_modes) module
-- [Using the multi-keyword syntax with CSS display](/en-US/docs/Web/CSS/CSS_display/multi-keyword_syntax_of_display)
+- [Using the multi-keyword syntax with CSS display](/en-US/docs/Web/CSS/Guides/Display/Multi-keyword_syntax)

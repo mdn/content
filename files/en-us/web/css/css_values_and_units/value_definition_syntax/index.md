@@ -420,7 +420,7 @@ Here are some more examples:
   - [Inheritance](/en-US/docs/Web/CSS/Guides/Cascade/Inheritance)
   - [Box model](/en-US/docs/Web/CSS/Guides/Box_model/Introduction)
   - [Layout modes](/en-US/docs/Glossary/Layout_mode)
-  - [Visual formatting model](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model)
+  - [Visual formatting model](/en-US/docs/Web/CSS/Guides/Display/Visual_formatting_model)
   - [Margin collapsing](/en-US/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
   - Values
     - [Initial values](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#initial_value)

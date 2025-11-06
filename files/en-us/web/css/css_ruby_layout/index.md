@@ -33,7 +33,7 @@ The CSS ruby layout module adds the following values to the {{cssxref("display")
 
 ## Related concepts
 
-- [CSS display](/en-US/docs/Web/CSS/CSS_display) module
+- [CSS display](/en-US/docs/Web/CSS/Guides/Display) module
   - {{cssxref("display")}}
   - {{CSSxRef("&lt;display-internal&gt;")}}
 - [CSS text decoration](/en-US/docs/Web/CSS/CSS_text_decoration) module

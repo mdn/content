@@ -162,7 +162,7 @@ This sample animation uses {{cssxref("display")}}, {{cssxref("grid-template-colu
 
 ## Related features
 
-[CSS display](/en-US/docs/Web/CSS/CSS_display) module
+[CSS display](/en-US/docs/Web/CSS/Guides/Display) module
 
 - {{CSSxRef("display")}}
 - {{CSSxRef("order")}}
@@ -205,7 +205,7 @@ This sample animation uses {{cssxref("display")}}, {{cssxref("grid-template-colu
 ## See also
 
 - [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module
-- [CSS display](/en-US/docs/Web/CSS/CSS_display) module
+- [CSS display](/en-US/docs/Web/CSS/Guides/Display) module
 - [Grid by example](https://gridbyexample.com/)
 - [CSS grid reference](https://tympanus.net/codrops/css_reference/grid/) via Codrops
 - [Firefox DevTools: grid inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)

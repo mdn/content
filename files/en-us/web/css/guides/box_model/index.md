@@ -8,7 +8,7 @@ sidebar: cssref
 
 The **CSS box model** module defines the `margin` and `padding` properties, which along with the [height](/en-US/docs/Web/CSS/Guides/Box_sizing), [width](/en-US/docs/Web/CSS/Guides/Box_sizing) and [border properties](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders), make up the CSS [box model](/en-US/docs/Web/CSS/Guides/Box_model/Introduction).
 
-Every visible element on a webpage is a box laid out according to the [visual formatting model](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model). CSS properties define their size, position, and stacking level, with the box model properties (and others) defining the extrinsic size of each box, and the space around them.
+Every visible element on a webpage is a box laid out according to the [visual formatting model](/en-US/docs/Web/CSS/Guides/Display/Visual_formatting_model). CSS properties define their size, position, and stacking level, with the box model properties (and others) defining the extrinsic size of each box, and the space around them.
 
 Each box has a rectangular content area, inside which any text, images, and other content is displayed. The content may be surrounded by padding, a border, and a margin, on one or more sides. The padding is around the content, the border is around the padding, and the margin sits outside the border. The box model describes how these features — the content, padding, border, and margin — work together to create a box as displayed by CSS.
 
@@ -49,7 +49,7 @@ The CSS box model module defines physical (or "page relative") properties such a
 - [Mastering margin collapsing](/en-US/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
   - : Sometimes, two adjacent margins are collapsed into one. This article describes the rules that govern when and why this happens, and how to control it.
 
-- [Visual formatting model](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model)
+- [Visual formatting model](/en-US/docs/Web/CSS/Guides/Display/Visual_formatting_model)
   - : Explains the visual formatting model.
 
 ## Related concepts
@@ -121,7 +121,7 @@ The CSS box model module defines physical (or "page relative") properties such a
 
 ## See also
 
-- [CSS display](/en-US/docs/Web/CSS/CSS_display) module
+- [CSS display](/en-US/docs/Web/CSS/Guides/Display) module
 - [CSS flex layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module
 - [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) module
 - [CSS table](/en-US/docs/Web/CSS/CSS_table) module

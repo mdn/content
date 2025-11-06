@@ -51,7 +51,7 @@ A `<meta name="viewport">` element has the following additional attributes:
         - `resizes-content`: The {{Glossary("viewport")}} gets resized by the interactive widget.
         - `overlays-content`: Neither the viewport nor the visual viewport gets resized by the interactive widget.
 
-        When the {{Glossary("viewport")}} gets resized, the initial [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block) also gets resized, thereby affecting the computed size of [viewport units](/en-US/docs/Web/CSS/Reference/Values/length#relative_length_units_based_on_viewport).
+        When the {{Glossary("viewport")}} gets resized, the initial [containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block) also gets resized, thereby affecting the computed size of [viewport units](/en-US/docs/Web/CSS/Reference/Values/length#relative_length_units_based_on_viewport).
 
     - `viewport-fit`
       - : Defines the viewable portions of the web page.

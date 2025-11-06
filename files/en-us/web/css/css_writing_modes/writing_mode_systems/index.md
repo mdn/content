@@ -19,7 +19,7 @@ In an English document, with the text running horizontally left-to-right, or an 
 
 ### Inline and block boxes
 
-The _outer display_ type of boxes in a [normal flowing layout](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model#normal_flow) determines how the box behaves alongside other elements on the page. _Inline boxes_ wrap each line of text and are laid out along the inline dimension.
+The _outer display_ type of boxes in a [normal flowing layout](/en-US/docs/Web/CSS/Guides/Display/Visual_formatting_model#normal_flow) determines how the box behaves alongside other elements on the page. _Inline boxes_ wrap each line of text and are laid out along the inline dimension.
 
 _Block boxes_ represent containers on the page that can contain other block and inline elements. They are laid out along the block dimension and will extend in the inline dimension to fill all the space available in their container (provided a specific size is not set in the inline dimension using a property such as {{cssxref("inline-size")}}). Block boxes are only displayed from the top to the bottom of the page if you are using a writing mode that displays text horizontally, such as English.
 

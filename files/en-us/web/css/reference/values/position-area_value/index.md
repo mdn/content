@@ -38,7 +38,7 @@ Position areas work on the concept of a **position-area grid**, a 3x3 grid of ti
 
 ![The position-area grid, as described below](position-area.png)
 
-When used as the value of a positioned element's `position-area` property, the dimensions of the center tile are defined by the [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block) of the element's default anchor element. The dimensions of the grid's outer edge are defined by the positioned element's containing block. Logical keyterms are generally based on the writing mode and direction of the containing block, except for the `self-*` keyterms, which are calculated from the writing mode of the anchor-positioned element.
+When used as the value of a positioned element's `position-area` property, the dimensions of the center tile are defined by the [containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block) of the element's default anchor element. The dimensions of the grid's outer edge are defined by the positioned element's containing block. Logical keyterms are generally based on the writing mode and direction of the containing block, except for the `self-*` keyterms, which are calculated from the writing mode of the anchor-positioned element.
 
 The grid tiles are broken up into rows and columns:
 
@@ -136,7 +136,7 @@ If only a single physical keyword is specified in the `position-area` value, the
 
 ## Logical grid keywords
 
-The logical grid keywords specify an area of the position area grid using logical values. With these values, the position and direction are affected by {{cssxref("writing-mode")}} and {{cssxref("direction")}} settings on either the element's [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block) or, in the case of the `self` keywords, the positioned element itself. There are two types of logical keywords; generic and explicit.
+The logical grid keywords specify an area of the position area grid using logical values. With these values, the position and direction are affected by {{cssxref("writing-mode")}} and {{cssxref("direction")}} settings on either the element's [containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block) or, in the case of the `self` keywords, the positioned element itself. There are two types of logical keywords; generic and explicit.
 
 ### Generic logical row and column keywords
 
@@ -240,7 +240,7 @@ If only a single logical `<position-area>` keyword is specified, the other value
 
 ## Coordinate grid keywords
 
-These keywords specify the cells of the `position-area` grid using x- and y-coordinate values. Its position/direction will be affected by {{cssxref("writing-mode")}} and/or {{cssxref("direction")}} settings on either an element's [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block) or, in the case of the `self` keywords, the element itself.
+These keywords specify the cells of the `position-area` grid using x- and y-coordinate values. Its position/direction will be affected by {{cssxref("writing-mode")}} and/or {{cssxref("direction")}} settings on either an element's [containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block) or, in the case of the `self` keywords, the element itself.
 
 However, the grid cells are defined according to physical axes rather than block/inline directions:
 

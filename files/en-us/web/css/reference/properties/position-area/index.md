@@ -76,7 +76,7 @@ The grid tiles are broken up into rows and columns:
 - The three rows are represented by the [physical values](/en-US/docs/Web/CSS/Reference/Values/position-area_value#physical_grid_keywords) `top`, `center`, and `bottom`. They also have [logical equivalents](/en-US/docs/Web/CSS/Reference/Values/position-area_value#logical_grid_keywords) such as `block-start`, `center`, and `block-end`, and [coordinate equivalents](/en-US/docs/Web/CSS/Reference/Values/position-area_value#coordinate_grid_keywords) — `y-start`, `center`, and `y-end`.
 - The three columns are represented by the physical values `left`, `center`, and `right`. They also have logical equivalents such as `inline-start`, `center`, and `inline-end`, and coordinate equivalents — `x-start`, `center`, and `x-end`.
 
-The dimensions of the center tile are defined by the [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block) of the anchor element, while the dimensions of the grid's outer edge are defined by the positioned element's containing block.
+The dimensions of the center tile are defined by the [containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block) of the anchor element, while the dimensions of the grid's outer edge are defined by the positioned element's containing block.
 
 The [`<position-area>`](/en-US/docs/Web/CSS/Reference/Values/position-area_value) value is composed of one or two keywords, which define the region of the grid the positioned element should be placed inside. To be exact, the containing block of the positioned element is set to the grid area.
 

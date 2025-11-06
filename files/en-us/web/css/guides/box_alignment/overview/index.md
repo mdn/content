@@ -279,7 +279,7 @@ As the CSS box alignment properties are implemented differently depending on the
 
 ## See also
 
-- [CSS display](/en-US/docs/Web/CSS/CSS_display) module
+- [CSS display](/en-US/docs/Web/CSS/Guides/Display) module
 - [CSS flex layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module
 - [Basic concepts of flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
 - [Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)

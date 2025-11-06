@@ -65,7 +65,7 @@ The CSS box sizing module also introduces the `min-intrinsic-sizing` property. C
 - [Mastering margin collapsing](/en-US/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
   - : Sometimes, two adjacent margins are collapsed into one. This article describes the rules that govern when and why this happens, and how to control it.
 
-- [Visual formatting model](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model)
+- [Visual formatting model](/en-US/docs/Web/CSS/Guides/Display/Visual_formatting_model)
   - : Explains the visual formatting model.
 
 - [Controlling ratios of flex items along the main axis](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
@@ -138,7 +138,7 @@ The CSS box sizing module also introduces the `min-intrinsic-sizing` property. C
 
 ## See also
 
-- [CSS display](/en-US/docs/Web/CSS/CSS_display) module
+- [CSS display](/en-US/docs/Web/CSS/Guides/Display) module
 - [CSS flex layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module
 - [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) module
 - [CSS positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout) module

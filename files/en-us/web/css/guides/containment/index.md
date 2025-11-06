@@ -46,8 +46,8 @@ Container queries are similar to dimension [media queries](/en-US/docs/Web/CSS/C
 
 ## Related concepts
 
-- [Layout and the containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block)
-- [Block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context)
+- [Layout and the containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block)
+- [Block formatting context](/en-US/docs/Web/CSS/Guides/Display/Block_formatting_context)
 
 - [CSS conditional rules](/en-US/docs/Web/CSS/Guides/Conditional_rules) module
   - {{cssxref("@container")}} at-rule

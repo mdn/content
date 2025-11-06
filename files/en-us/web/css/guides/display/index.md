@@ -1,6 +1,6 @@
 ---
 title: CSS display
-slug: Web/CSS/CSS_display
+slug: Web/CSS/Guides/Display
 page-type: css-module
 spec-urls:
   - https://drafts.csswg.org/css-display/
@@ -32,27 +32,27 @@ The **CSS display** module defines how the CSS formatting box tree is generated 
 ### Glossary terms and definitions
 
 - {{glossary("block/css", "Block")}}
-- [Block formatting context (BFC)](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context)
+- [Block formatting context (BFC)](/en-US/docs/Web/CSS/Guides/Display/Block_formatting_context)
 - {{glossary("Block-level content")}}
-- [Containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block)
-- [Flow layout](/en-US/docs/Web/CSS/CSS_display/Flow_layout)
+- [Containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block)
+- [Flow layout](/en-US/docs/Web/CSS/Guides/Display/Flow_layout)
 - {{glossary("Reading order")}}
 - {{glossary("Replaced elements")}}
 - {{glossary("Ruby")}}
 
 ## Guides
 
-- [Using the multi-keyword syntax with CSS display](/en-US/docs/Web/CSS/CSS_display/multi-keyword_syntax_of_display)
+- [Using the multi-keyword syntax with CSS display](/en-US/docs/Web/CSS/Guides/Display/Multi-keyword_syntax)
   - : Describes the multi-keyword syntax and compares this syntax with legacy single-keyword values.
-- [Block and inline layout in normal flow](/en-US/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow)
+- [Block and inline layout in normal flow](/en-US/docs/Web/CSS/Guides/Display/Block_and_inline_layout_in_normal_flow)
   - : The basics of how block and inline elements behave when they are part of the normal flow.
-- [Flow layout and overflow](/en-US/docs/Web/CSS/CSS_display/Flow_layout_and_overflow)
+- [Flow layout and overflow](/en-US/docs/Web/CSS/Guides/Display/Flow_layout_and_overflow)
   - : How overflow works when working with normal flow.
-- [Flow layout and writing modes](/en-US/docs/Web/CSS/CSS_display/Flow_layout_and_writing_modes)
+- [Flow layout and writing modes](/en-US/docs/Web/CSS/Guides/Display/Flow_layout_and_writing_modes)
   - : How flow layout behaves when used with different document writing modes.
-- [Introduction to formatting contexts](/en-US/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts)
+- [Introduction to formatting contexts](/en-US/docs/Web/CSS/Guides/Display/Formatting_contexts)
   - : Formatting contexts, including block, inline, and flex, their behaviors, and use.
-- [In flow and out of flow](/en-US/docs/Web/CSS/CSS_display/In_flow_and_out_of_flow)
+- [In flow and out of flow](/en-US/docs/Web/CSS/Guides/Display/In_flow_and_out_of_flow)
   - : What takes elements out of flow, and the effect of creating new Block Formatting Contexts.
 
 ## Related Concepts
@@ -101,4 +101,4 @@ The **CSS display** module defines how the CSS formatting box tree is generated 
 - [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
 - [CSS ruby layout](/en-US/docs/Web/CSS/CSS_ruby_layout) module
 - [CSS table](/en-US/docs/Web/CSS/CSS_table) module
-- [Visual formatting model](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model)
+- [Visual formatting model](/en-US/docs/Web/CSS/Guides/Display/Visual_formatting_model)

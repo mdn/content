@@ -6,7 +6,7 @@ browser-compat: css.at-rules.media.overflow-block
 sidebar: cssref
 ---
 
-The **`overflow-block`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Reference/At-rules/@media#media_features) can be used to test how the output device handles content that overflows the initial [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block) along the block axis.
+The **`overflow-block`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Reference/At-rules/@media#media_features) can be used to test how the output device handles content that overflows the initial [containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block) along the block axis.
 
 > [!NOTE]
 > The `overflow-block` property does not determine whether overflow occurs; rather, it reveals the device's handling of such overflow. Typically, on screens in most browsers, the behavior will be "scroll": when content exceeds the available vertical space, the device allows you to scroll to access the overflowed content.

@@ -1,7 +1,7 @@
 ---
 title: CSS flow layout
 short-title: Flow layout
-slug: Web/CSS/CSS_display/Flow_layout
+slug: Web/CSS/Guides/Display/Flow_layout
 page-type: guide
 sidebar: cssref
 ---
@@ -51,8 +51,8 @@ span {
 
 ## See also
 
-- [Block and inline layout in normal flow](/en-US/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow)
-- [In flow and out of flow](/en-US/docs/Web/CSS/CSS_display/In_flow_and_out_of_flow)
-- [Formatting contexts explained](/en-US/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts)
-- [Flow layout and writing modes](/en-US/docs/Web/CSS/CSS_display/Flow_layout_and_writing_modes)
-- [Flow layout and overflow](/en-US/docs/Web/CSS/CSS_display/Flow_layout_and_overflow)
+- [Block and inline layout in normal flow](/en-US/docs/Web/CSS/Guides/Display/Block_and_inline_layout_in_normal_flow)
+- [In flow and out of flow](/en-US/docs/Web/CSS/Guides/Display/In_flow_and_out_of_flow)
+- [Formatting contexts explained](/en-US/docs/Web/CSS/Guides/Display/Formatting_contexts)
+- [Flow layout and writing modes](/en-US/docs/Web/CSS/Guides/Display/Flow_layout_and_writing_modes)
+- [Flow layout and overflow](/en-US/docs/Web/CSS/Guides/Display/Flow_layout_and_overflow)

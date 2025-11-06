@@ -326,7 +326,7 @@ Grid interacts with [absolutely positioned](/en-US/docs/Web/CSS/Reference/Proper
 
 ### A grid container as containing block
 
-To make the grid container a [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block), you need to add the {{cssxref("position")}} property to the container with a value of `relative`, just as you would make a containing block for any other absolutely positioned items. Once you have done this, if you give a grid item `position: absolute` it will take as its containing block the grid container or, if the item also has a grid position, the area of the grid it is placed into.
+To make the grid container a [containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block), you need to add the {{cssxref("position")}} property to the container with a value of `relative`, just as you would make a containing block for any other absolutely positioned items. Once you have done this, if you give a grid item `position: absolute` it will take as its containing block the grid container or, if the item also has a grid position, the area of the grid it is placed into.
 
 In the below example we have a wrapper containing four child items. Item three is absolutely positioned and also placed on the grid using line-based placement. The grid container has `position: relative` and so becomes the positioning context of this item.
 
@@ -467,7 +467,7 @@ We have given `.box3` position relative and then positioned the sub-item with th
 
 ## Grid and display: contents
 
-A final interaction worth noting is the interaction between CSS grid layout and `display: contents`, defined in the [CSS display](/en-US/docs/Web/CSS/CSS_display) module. When the {{cssxref("display")}} property is set to `contents`, the element itself does not generate any boxes, but its children and pseudo-elements still generate boxes as normal. This means that, for the purposes of box generation and layout, the element is treated as if it had been replaced with its children and pseudo-elements in the document tree.
+A final interaction worth noting is the interaction between CSS grid layout and `display: contents`, defined in the [CSS display](/en-US/docs/Web/CSS/Guides/Display) module. When the {{cssxref("display")}} property is set to `contents`, the element itself does not generate any boxes, but its children and pseudo-elements still generate boxes as normal. This means that, for the purposes of box generation and layout, the element is treated as if it had been replaced with its children and pseudo-elements in the document tree.
 
 If you set an item to `display: contents`, the box it would normally create disappears and the boxes of the child elements appear as if they have risen up a level. This means that children of a grid item can become grid items. Sound odd? Here is an example.
 

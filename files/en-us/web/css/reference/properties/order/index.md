@@ -84,7 +84,7 @@ order: unset;
 
 Since `order` is only meant to affect the _visual order_ of elements and not their logical or tab order, it must not be used on non-visual media such as [speech](https://drafts.csswg.org/css-speech/).
 
-Defined in the [CSS display](/en-US/docs/Web/CSS/CSS_display) module, this property impacts only grid and flex items. When `order` is set on an element whose parent's {{cssxref("display")}} property is not creating a flex or grid container, it has no effect.
+Defined in the [CSS display](/en-US/docs/Web/CSS/Guides/Display) module, this property impacts only grid and flex items. When `order` is set on an element whose parent's {{cssxref("display")}} property is not creating a flex or grid container, it has no effect.
 
 ### Values
 
@@ -172,5 +172,5 @@ The `<article>` appears first in the source order but visually rendered in the c
 - [Basic concepts of flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
 - [Ordering flex items](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)
 - [CSS grid layout and accessibility](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
-- [CSS display](/en-US/docs/Web/CSS/CSS_display) module
+- [CSS display](/en-US/docs/Web/CSS/Guides/Display) module
 - {{glossary("Reading order")}}

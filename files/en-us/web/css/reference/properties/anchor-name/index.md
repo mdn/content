@@ -42,7 +42,7 @@ The anchor element accepts one or more `<dashed-ident>` anchor names set on it v
 
 If multiple anchor elements have the same anchor name set on them, and that name is referenced by the `position-anchor` property value of a positioned element, that positioned element will be associated with the last anchor element with that anchor name in the source order.
 
-Anchor positioning changes the [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block) of anchor-positioned elements, making its `position` relative to its anchor rather than to the nearest positioned ancestor element.
+Anchor positioning changes the [containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block) of anchor-positioned elements, making its `position` relative to its anchor rather than to the nearest positioned ancestor element.
 
 To tether and place a positioned element in a specific location relative to an anchor element, an anchor positioning feature is needed, such as the {{cssxref("anchor()")}} function (set within an {{glossary("inset properties", "inset property's")}} value) or the {{cssxref("position-area")}} property.
 

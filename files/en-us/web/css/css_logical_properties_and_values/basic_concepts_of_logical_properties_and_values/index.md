@@ -95,5 +95,5 @@ This diagram shows block and inline in a vertical writing mode:
 
 - [Box alignment in grid layout](/en-US/docs/Web/CSS/Guides/Box_alignment/In_grid_layout)
 - [Box alignment in flex layout](/en-US/docs/Web/CSS/Guides/Box_alignment/In_flexbox)
-- [Flow layout and writing modes](/en-US/docs/Web/CSS/CSS_display/Flow_layout_and_writing_modes)
+- [Flow layout and writing modes](/en-US/docs/Web/CSS/Guides/Display/Flow_layout_and_writing_modes)
 - [Understanding logical properties and values](https://www.smashingmagazine.com/2018/03/understanding-logical-properties-values/) on Smashing Magazine (2018)

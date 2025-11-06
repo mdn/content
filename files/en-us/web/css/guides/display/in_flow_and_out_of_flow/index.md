@@ -1,11 +1,11 @@
 ---
 title: In flow and out of flow
-slug: Web/CSS/CSS_display/In_flow_and_out_of_flow
+slug: Web/CSS/Guides/Display/In_flow_and_out_of_flow
 page-type: guide
 sidebar: cssref
 ---
 
-The [previous guide](/en-US/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow) explained block and inline layout in normal flow. All elements that are in flow will be laid out using this method.
+The [previous guide](/en-US/docs/Web/CSS/Guides/Display/Block_and_inline_layout_in_normal_flow) explained block and inline layout in normal flow. All elements that are in flow will be laid out using this method.
 
 ## Example of elements in flow
 
@@ -61,7 +61,7 @@ All elements are in-flow apart from:
 - items with `position: absolute` (including `position: fixed` which acts in the same way)
 - the root element (`html`)
 
-Out-of-flow items create a new [Block Formatting Context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context) (BFC), and therefore, everything inside them can be seen as a mini layout, separate from the rest of the page. The root element, therefore, is out of flow, as the container for everything in our document, and establishes the Block Formatting Context for the document.
+Out-of-flow items create a new [Block Formatting Context](/en-US/docs/Web/CSS/Guides/Display/Block_formatting_context) (BFC), and therefore, everything inside them can be seen as a mini layout, separate from the rest of the page. The root element, therefore, is out of flow, as the container for everything in our document, and establishes the Block Formatting Context for the document.
 
 ### Floated items
 
@@ -211,7 +211,7 @@ When you do anything to remove or shift an item from where it would be placed in
 
 ## Summary
 
-In this guide, we have explained how to take an element out of flow to achieve some very specific types of positioning. In the next guide we will look at a related issue, that of creating a [Block Formatting Context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context), in [Introduction to formatting contexts](/en-US/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts).
+In this guide, we have explained how to take an element out of flow to achieve some very specific types of positioning. In the next guide we will look at a related issue, that of creating a [Block Formatting Context](/en-US/docs/Web/CSS/Guides/Display/Block_formatting_context), in [Introduction to formatting contexts](/en-US/docs/Web/CSS/Guides/Display/Formatting_contexts).
 
 ## See also
 

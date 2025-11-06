@@ -14,7 +14,7 @@ The inline formatting context is part of the visual rendering of a web page. Inl
 - In a horizontal writing mode, boxes are laid out horizontally, starting on the left.
 - In a vertical writing mode they would be laid out vertically starting at the top.
 
-In the example below, the two {{HTMLElement("div")}} elements with the black borders are part of a [block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context), while inside each box, the words participate in an inline formatting context. The words in the horizontal writing mode run horizontally, while words in the vertical writing mode run vertically.
+In the example below, the two {{HTMLElement("div")}} elements with the black borders are part of a [block formatting context](/en-US/docs/Web/CSS/Guides/Display/Block_formatting_context), while inside each box, the words participate in an inline formatting context. The words in the horizontal writing mode run horizontally, while words in the vertical writing mode run vertically.
 
 ```html live-sample___inline
 <div class="example horizontal">One Two Three</div>
@@ -226,5 +226,5 @@ body {
 
 ## See also
 
-- [Block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context)
-- [Visual formatting model](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model)
+- [Block formatting context](/en-US/docs/Web/CSS/Guides/Display/Block_formatting_context)
+- [Visual formatting model](/en-US/docs/Web/CSS/Guides/Display/Visual_formatting_model)

@@ -9,9 +9,9 @@ A **layout mode**, sometimes called _layout_, is a [CSS](/en-US/docs/Web/CSS) al
 
 There are several layout modes:
 
-- **[Flow layout or normal flow](/en-US/docs/Web/CSS/CSS_display/Flow_layout)**
+- **[Flow layout or normal flow](/en-US/docs/Web/CSS/Guides/Display/Flow_layout)**
   - : All elements are part of normal flow until you do something to take them out of it.Normal flow includes:
-    - **[Block layout](/en-US/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow)**
+    - **[Block layout](/en-US/docs/Web/CSS/Guides/Display/Block_and_inline_layout_in_normal_flow)**
       - : Designed for laying out boxes such as paragraphs.
     - **[Inline layout](/en-US/docs/Web/CSS/CSS_inline_layout)**
       - : Designed for laying out inline items such as text.
@@ -34,5 +34,5 @@ There are several layout modes:
 
 ## See also
 
-- [Visual formatting model](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model)
-- [CSS display](/en-US/docs/Web/CSS/CSS_display) module
+- [Visual formatting model](/en-US/docs/Web/CSS/Guides/Display/Visual_formatting_model)
+- [CSS display](/en-US/docs/Web/CSS/Guides/Display) module

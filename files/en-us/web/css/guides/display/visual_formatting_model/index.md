@@ -1,6 +1,6 @@
 ---
 title: Visual formatting model
-slug: Web/CSS/CSS_display/Visual_formatting_model
+slug: Web/CSS/Guides/Display/Visual_formatting_model
 page-type: guide
 sidebar: cssref
 ---
@@ -28,7 +28,7 @@ If the viewport is smaller than the size of the document then the user agent nee
 
 **Box generation** is the part of the CSS visual formatting model that creates boxes from the document's elements. Generated boxes are of different types, which affect their visual formatting. The type of the box generated depends on the value of the CSS {{cssxref("display")}} property.
 
-Initially defined in CSS2, the `display` property was extended in the [CSS display](/en-US/docs/Web/CSS/CSS_display), [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout), [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout), and [CSS ruby layout](/en-US/docs/Web/CSS/CSS_ruby_layout) modules. In addition, some of the terminologies around the display have been updated and clarified in the years since CSS2.
+Initially defined in CSS2, the `display` property was extended in the [CSS display](/en-US/docs/Web/CSS/Guides/Display), [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout), [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout), and [CSS ruby layout](/en-US/docs/Web/CSS/CSS_ruby_layout) modules. In addition, some of the terminologies around the display have been updated and clarified in the years since CSS2.
 
 CSS takes your source document and renders it onto a canvas. To do this, it generates an intermediary structure, the **box tree**, which represents the formatting structure of the rendered document. Each box in the box tree represents its corresponding element (or pseudo-element) in space and/or time on the canvas, while each text run in the box tree likewise represents the contents of its corresponding text nodes.
 
@@ -148,7 +148,7 @@ In CSS, a box may be laid out according to three positioning schemes — **norma
 
 In CSS, the normal flow includes block-level formatting of block boxes, inline-level formatting of inline boxes, and also includes relative and sticky positioning of block-level and inline-level boxes.
 
-Read more about [flow layout](/en-US/docs/Web/CSS/CSS_display/Flow_layout) in CSS.
+Read more about [flow layout](/en-US/docs/Web/CSS/Guides/Display/Flow_layout) in CSS.
 
 ### Floats
 
@@ -170,7 +170,7 @@ Boxes can be described as having an **outer display type**, which is `block` or 
 
 Boxes also have an inner display type, dictating how their children behave. For normal block and inline layout, or normal flow, this display type is `flow`. This means that the child elements will also be either `block` or `inline`.
 
-However, the inner display type might be something like `grid` or `flex`, in which case the direct children will display as a grid, or flex items. In such a case the element is described as creating a grid or flex [formatting context](/en-US/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts). In many ways, this is similar to a block formatting context, however, the children behave as flex or grid items rather than items in normal flow.
+However, the inner display type might be something like `grid` or `flex`, in which case the direct children will display as a grid, or flex items. In such a case the element is described as creating a grid or flex [formatting context](/en-US/docs/Web/CSS/Guides/Display/Formatting_contexts). In many ways, this is similar to a block formatting context, however, the children behave as flex or grid items rather than items in normal flow.
 
 The interactions between block-level and inline-level boxes are described in the {{cssxref("display")}} property reference.
 
@@ -186,7 +186,7 @@ In addition, the references for specific values of display explain how these for
 
 Elements either participate in the formatting context of their containing block or establish an independent formatting context. A grid container, for example, establishes a new **grid formatting context** for its children.
 
-**Independent formatting contexts** contain floats, and margins do not collapse across formatting context boundaries. Therefore, creating a new block formatting context can ensure that floats and margins remain inside a box. To do this, add `display: flow-root` to the box on which you wish to create a new [block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context).
+**Independent formatting contexts** contain floats, and margins do not collapse across formatting context boundaries. Therefore, creating a new block formatting context can ensure that floats and margins remain inside a box. To do this, add `display: flow-root` to the box on which you wish to create a new [block formatting context](/en-US/docs/Web/CSS/Guides/Display/Block_formatting_context).
 
 The following example shows the effect of `display: flow-root`. The box with the black background appears to wrap around the floated item and text. If you remove `display: flow-root`, the floated item will poke out of the bottom of the box as it is no longer contained.
 
@@ -253,7 +253,7 @@ A block box is a block-level box that is also a block container. As described in
 - [Specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity)
 - [Inheritance](/en-US/docs/Web/CSS/Guides/Cascade/Inheritance)
 - [Stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context)
-- [Block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context)
+- [Block formatting context](/en-US/docs/Web/CSS/Guides/Display/Block_formatting_context)
 - [Box model](/en-US/docs/Web/CSS/Guides/Box_model/Introduction)
 - [Layout modes](/en-US/docs/Glossary/Layout_mode)
 - [Margin collapsing](/en-US/docs/Web/CSS/Guides/Box_model/Margin_collapsing)

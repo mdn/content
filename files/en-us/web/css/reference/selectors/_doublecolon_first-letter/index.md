@@ -6,7 +6,7 @@ browser-compat: css.selectors.first-letter
 sidebar: cssref
 ---
 
-The **`::first-letter`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) applies styles to the first letter of the first line of a [block container](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model#block_containers), but only when not preceded by other content (such as images or inline tables).
+The **`::first-letter`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) applies styles to the first letter of the first line of a [block container](/en-US/docs/Web/CSS/Guides/Display/Visual_formatting_model#block_containers), but only when not preceded by other content (such as images or inline tables).
 
 {{InteractiveExample("CSS Demo: ::first-letter", "tabbed-shorter")}}
 

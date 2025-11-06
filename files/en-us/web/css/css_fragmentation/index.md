@@ -37,17 +37,17 @@ When content is physically printed or displayed as a print preview, there are pa
 - {{cssxref("overflow")}}
 - {{cssxref("height")}}, {{cssxref("max-height")}}, and {{cssxref("block-size")}} CSS properties
 - {{cssxref("width")}}, {{cssxref("max-width")}}, and {{cssxref("inline-size")}} CSS properties
-- [Block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context)
+- [Block formatting context](/en-US/docs/Web/CSS/Guides/Display/Block_formatting_context)
 
 [CSS paged media](/en-US/docs/Web/CSS/CSS_paged_media) module
 
 - {{cssxref("page")}}
 - {{cssxref("@page")}}
 
-[CSS display](/en-US/docs/Web/CSS/CSS_display) module
+[CSS display](/en-US/docs/Web/CSS/Guides/Display) module
 
-- [Principal box](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model#the_principal_box) term
-- [Block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context) guide
+- [Principal box](/en-US/docs/Web/CSS/Guides/Display/Visual_formatting_model#the_principal_box) term
+- [Block formatting context](/en-US/docs/Web/CSS/Guides/Display/Block_formatting_context) guide
 
 ## Specifications
 

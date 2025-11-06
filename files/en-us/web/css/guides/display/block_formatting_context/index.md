@@ -1,6 +1,6 @@
 ---
 title: Block formatting context
-slug: Web/CSS/CSS_display/Block_formatting_context
+slug: Web/CSS/Guides/Display/Block_formatting_context
 page-type: guide
 spec-urls: https://drafts.csswg.org/css-display/#block-formatting-context
 sidebar: cssref
@@ -40,7 +40,7 @@ Let's have a look at a couple of these in order to see the effect creating a new
 
 ### Contain internal floats
 
-In the following example, we have float content that is the same height as the content alongside it. We have a floated element inside a `<div>` with a `border` applied. The content of that `<div>` has floated alongside the floated element. As the content of the float is taller than the content alongside it, the border of the `<div>` now runs through the float. As explained in the [guide to in flow and out of flow elements](/en-US/docs/Web/CSS/CSS_display/In_flow_and_out_of_flow), the float has been taken out of flow so the `background` and `border` of the `<div>` only contain the content and not the float.
+In the following example, we have float content that is the same height as the content alongside it. We have a floated element inside a `<div>` with a `border` applied. The content of that `<div>` has floated alongside the floated element. As the content of the float is taller than the content alongside it, the border of the `<div>` now runs through the float. As explained in the [guide to in flow and out of flow elements](/en-US/docs/Web/CSS/Guides/Display/In_flow_and_out_of_flow), the float has been taken out of flow so the `background` and `border` of the `<div>` only contain the content and not the float.
 
 **using `overflow: auto`**
 
@@ -239,7 +239,7 @@ In this example, we wrap the second `<div>` in an outer `<div>`, and create a ne
 - [Inheritance](/en-US/docs/Web/CSS/Guides/Cascade/Inheritance)
 - [Box model](/en-US/docs/Web/CSS/Guides/Box_model/Introduction)
 - [Layout modes](/en-US/docs/Glossary/Layout_mode)
-- [Visual formatting models](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model)
+- [Visual formatting models](/en-US/docs/Web/CSS/Guides/Display/Visual_formatting_model)
 - [Margin collapsing](/en-US/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
 - [Initial](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#initial_value), [computed](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#computed_value), [used values](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#used_value), and [actual](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#actual_value) values
 - [Value definition syntax](/en-US/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
