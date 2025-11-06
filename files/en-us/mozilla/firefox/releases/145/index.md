@@ -39,6 +39,9 @@ Firefox 145 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - The [`math`](/en-US/docs/Web/CSS/Reference/Properties/font-family#math) generic font family is now supported as a value of the `font-family` property, allowing mathematical expressions to use appropriate fonts.
   ([Firefox bug 1788937](https://bugzil.la/1788937)).
 
+- Separators can appear in {{htmlelement("select")}} menus since {{htmlelement("hr")}} in `<select>` was implemented.
+  These are now also supported in Firefox for Android. ([Firefox bug 1867045](https://bugzil.la/1867045), [Firefox bug 1830909](https://bugzil.la/1830909)).
+
 <!-- #### Removals -->
 
 ### JavaScript
