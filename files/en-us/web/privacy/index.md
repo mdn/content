@@ -100,7 +100,7 @@ Browsers have implemented several anti-tracking features that automatically enha
 
 - The {{httpheader("Set-Cookie")}} header [`SameSite`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) attribute's default value has been updated to `Lax`, to provide better protection against tracking and {{glossary("CSRF")}} attacks. See [Controlling third-party cookies with `SameSite`](/en-US/docs/Web/HTTP/Guides/Cookies#controlling_third-party_cookies_with_samesite) for more information.
 - Browsers have all started to block third-party cookies by default. See [How do browsers handle third-party cookies?](/en-US/docs/Web/Privacy/Guides/Third-party_cookies#how_do_browsers_handle_third-party_cookies) for more details.
-- Browsers are implementing technologies to allow third-party cookies only in certain circumstances that do not damage privacy, or to implement common use cases that currently require third-party cookies in alternative ways. See [Transitioning from third-party cookies](/en-US/docs/Web/Privacy/Guides/Third-party_cookies#transitioning_from_third-party_cookies) and [Replacing third-party cookies](/en-US/docs/Web/Privacy/Guides/Third-party_cookies#replacing_third-party_cookies).
+- Browsers are implementing technologies to allow third-party cookies only in certain circumstances that do not damage privacy, or to implement common use cases that currently require third-party cookies in alternative ways. See [Transitioning from third-party cookies](/en-US/docs/Web/Privacy/Guides/Third-party_cookies#transitioning_from_third-party_cookies).
 - Several browsers strip out known tracking parameters from URLs — this includes Firefox, Safari, and Brave. Browser extensions also help to do this, for example [ClearURLs](https://addons.mozilla.org/en-GB/firefox/addon/clearurls/).
 - Browsers have implemented [redirect tracking protection](/en-US/docs/Web/Privacy/Guides/Redirect_tracking_protection).
 
@@ -220,5 +220,4 @@ The below tips offer some guidance on protecting your user's data:
 
 - [Web security](/en-US/docs/Web/Security)
 - [Learn Privacy](https://web.dev/learn/privacy/) on web.dev
-- [The Privacy Sandbox](https://privacysandbox.google.com/) on privacysandbox.google.com
 - [Lean Data Practices](https://www.mozilla.org/en-US/about/policy/lean-data/) on mozilla.org
