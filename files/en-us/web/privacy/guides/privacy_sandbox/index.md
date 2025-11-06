@@ -19,6 +19,8 @@ Google's **privacy sandbox** project is a series of proposals to satisfy cross-s
   - : Also known as **partitioned cookies**, CHIPS allows developers to opt a cookie into partitioned storage, with a separate cookie jar per top-level site.
 - [Fenced Frame API](/en-US/docs/Web/API/Fenced_frame_API)
   - : Provides functionality for controlling content embedded in {{htmlelement("fencedframe")}} elements, which enable content to be embedded while solving the privacy issues of {{htmlelement("iframe")}}s.
+- [Private State Token API](/en-US/docs/Web/API/Private_State_Token_API)
+  - : Provides a mechanism for conveying trust in a user's authenticity from one browsing context to another, without sharing the user's identity or allowing their activity across websites to be tracked.
 - [Related website sets](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets)
   - : A mechanism for a company to declare relationships between different sites. Supporting browsers will then allow limited third-party cookie access across those sites for specific purposes, via the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API).
 - [Shared Storage API](/en-US/docs/Web/API/Shared_Storage_API)
