@@ -171,9 +171,9 @@ div {
   - {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
   - {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
   - {{cssxref("url_value", "&lt;url&gt;")}}
-- [Using CSS gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients)
-- [Implementing image sprites in CSS](/en-US/docs/Web/CSS/CSS_images/Implementing_image_sprites_in_CSS)
-- [CSS images](/en-US/docs/Web/CSS/CSS_images) module
+- [Using CSS gradients](/en-US/docs/Web/CSS/Guides/Images/Using_CSS_gradients)
+- [Implementing image sprites in CSS](/en-US/docs/Web/CSS/Guides/Images/Implementing_image_sprites)
+- [CSS images](/en-US/docs/Web/CSS/Guides/Images) module
 
 - Background-related properties
   - {{cssxref("background-attachment")}}

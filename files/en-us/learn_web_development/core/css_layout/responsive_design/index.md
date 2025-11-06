@@ -279,7 +279,7 @@ This scales media elements to ensure they never overflow their containers.
 Other useful tips:
 
 - Always make sure to use an appropriate image format for your website images (such as PNG or JPG), and make sure to optimize the file size using a graphics editor before you put them on your website.
-- You can make use of CSS features like [gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients) and [shadows](/en-US/docs/Web/CSS/Reference/Properties/box-shadow) to implement visual effects without using images.
+- You can make use of CSS features like [gradients](/en-US/docs/Web/CSS/Guides/Images/Using_CSS_gradients) and [shadows](/en-US/docs/Web/CSS/Reference/Properties/box-shadow) to implement visual effects without using images.
 - You can use media queries inside the media attribute on {{htmlelement("source")}} elements nested inside {{htmlelement("video")}}/{{htmlelement("audio")}} elements to serve video/audio files as appropriate for different devices (responsive video/audio).
 
 ## Responsive typography

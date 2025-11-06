@@ -7,7 +7,7 @@ sidebar: cssref
 
 The [CSS box alignment](/en-US/docs/Web/CSS/Guides/Box_alignment) module specifies CSS features that relate to the alignment of boxes in the various CSS box layout models. The module aims to create a consistent method of alignment across all of CSS. The CSS box alignment properties provide full horizontal and vertical alignment capabilities.
 
-This guide details the general concepts found in this module. Additional guides provide more information on box alignment in [flexbox](/en-US/docs/Web/CSS/Guides/Box_alignment/In_flexbox), [grid layout](/en-US/docs/Web/CSS/Guides/Box_alignment/In_grid_layout), [multiple-column layout](/en-US/docs/Web/CSS/Guides/Box_alignment/In_multi-column_layout), and [block, absolutely positioned and table layout](/en-US/docs/Web/CSS/Guides/Box_alignment/In_block_abspos_tables). Alignment of text is covered by the [CSS text](/en-US/docs/Web/CSS/CSS_text) and [CSS inline layout](/en-US/docs/Web/CSS/CSS_inline_layout) modules.
+This guide details the general concepts found in this module. Additional guides provide more information on box alignment in [flexbox](/en-US/docs/Web/CSS/Guides/Box_alignment/In_flexbox), [grid layout](/en-US/docs/Web/CSS/Guides/Box_alignment/In_grid_layout), [multiple-column layout](/en-US/docs/Web/CSS/Guides/Box_alignment/In_multi-column_layout), and [block, absolutely positioned and table layout](/en-US/docs/Web/CSS/Guides/Box_alignment/In_block_abspos_tables). Alignment of text is covered by the [CSS text](/en-US/docs/Web/CSS/CSS_text) and [CSS inline layout](/en-US/docs/Web/CSS/Guides/Inline_layout) modules.
 
 ## Key concepts and terminology
 

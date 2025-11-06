@@ -595,5 +595,5 @@ Scroll down the page and note how the positioned element is hidden once it reach
 - [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) module
 - [Using CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using)
 - [Learn: CSS positioning](/en-US/docs/Learn_web_development/Core/CSS_layout/Positioning)
-- [CSS logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) module
+- [CSS logical properties and values](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values) module
 - [Learn: Sizing items in CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Sizing)

@@ -109,5 +109,5 @@ speak-as: spell-out digits no-punctuation;
 
 - {{cssxref("@counter-style")}} at-rule {{cssxref("@counter-style/speak-as", "speak-as")}} descriptor
 - [CSS counter styles](/en-US/docs/Web/CSS/Guides/Counter_styles) module
-- [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
+- [CSS lists and counters](/en-US/docs/Web/CSS/Guides/Lists) module
 - [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)

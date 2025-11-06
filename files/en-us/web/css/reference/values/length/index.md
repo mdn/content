@@ -128,13 +128,13 @@ Viewport-percentage lengths define `<length>` values in percentage relative to t
     `vmin` is equivalent to `lvmin`, representing the viewport-percentage length unit based on the large viewport size.
 
 - `vb`
-  - : Represents the percentage of the size of the initial [containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block), in the direction of the root element's [block axis](/en-US/docs/Web/CSS/CSS_logical_properties_and_values).
+  - : Represents the percentage of the size of the initial [containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block), in the direction of the root element's [block axis](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values).
 
     For small, large, and dynamic viewport sizes, the respective viewport-percentage units are `svb`, `lvb`, and `dvb`, respectively.
     `vb` is equivalent to `lvb`, representing the viewport-percentage length unit based on the large viewport size.
 
 - `vi`
-  - : Represents a percentage of the size of the initial [containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block), in the direction of the root element's [inline axis](/en-US/docs/Web/CSS/CSS_logical_properties_and_values).
+  - : Represents a percentage of the size of the initial [containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block), in the direction of the root element's [inline axis](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values).
 
     For small, large, and dynamic viewport sizes, the respective viewport-percentage units are `svi`, `lvi`, and `dvi`.
     `vi` is equivalent to `lvi`, representing the viewport-percentage length unit based on the large viewport size.

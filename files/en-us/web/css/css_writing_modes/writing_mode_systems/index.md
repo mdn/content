@@ -23,7 +23,7 @@ The _outer display_ type of boxes in a [normal flowing layout](/en-US/docs/Web/C
 
 _Block boxes_ represent containers on the page that can contain other block and inline elements. They are laid out along the block dimension and will extend in the inline dimension to fill all the space available in their container (provided a specific size is not set in the inline dimension using a property such as {{cssxref("inline-size")}}). Block boxes are only displayed from the top to the bottom of the page if you are using a writing mode that displays text horizontally, such as English.
 
-The [CSS logical properties and values module](/en-US/docs/Web/CSS/CSS_logical_properties_and_values#properties) defines {{glossary("flow relative values", "flow-relative mappings")}} for many of the {{glossary("physical properties")}} and values in CSS, which is helpful in understanding the [basic concepts of logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values).
+The [CSS logical properties and values module](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values#properties) defines {{glossary("flow relative values", "flow-relative mappings")}} for many of the {{glossary("physical properties")}} and values in CSS, which is helpful in understanding the [basic concepts of logical properties and values](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values/Basic_concepts).
 
 ### Inline base and block flow directions
 

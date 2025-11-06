@@ -1,6 +1,6 @@
 ---
 title: CSS inline layout
-slug: Web/CSS/CSS_inline_layout
+slug: Web/CSS/Guides/Inline_layout
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-inline
 sidebar: cssref
@@ -34,7 +34,7 @@ The specification also defines the `baseline-shift`, `baseline-source`, `initial
 
 ## Guides
 
-- [Inline formatting context](/en-US/docs/Web/CSS/CSS_inline_layout/Inline_formatting_context)
+- [Inline formatting context](/en-US/docs/Web/CSS/Guides/Inline_layout/Inline_formatting_context)
   - : Explains the inline formatting context.
 
 ## Related concepts

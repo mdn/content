@@ -51,7 +51,7 @@ No properties are defined in this module
 
 ## Related concepts
 
-[CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module:
+[CSS lists and counters](/en-US/docs/Web/CSS/Guides/Lists) module:
 
 - {{cssxref("counter-increment")}} property
 - {{cssxref("counter-reset")}} property
@@ -77,7 +77,7 @@ No properties are defined in this module
 
 ## See also
 
-- [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
+- [CSS lists and counters](/en-US/docs/Web/CSS/Guides/Lists) module
 - [CSS pseudo-elements](/en-US/docs/Web/CSS/CSS_pseudo-elements) module
 - [CSS generated content](/en-US/docs/Web/CSS/Guides/Generated_content) module
 - [Ready-made counter styles](https://w3c.github.io/predefined-counter-styles/#builtins) via W3C (2023)

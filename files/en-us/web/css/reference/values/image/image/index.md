@@ -170,4 +170,4 @@ Currently, no browsers support this feature.
 - {{CSSxRef("&lt;gradient&gt;")}}
 - {{CSSxRef("image/image-set", "image-set()")}}
 - {{CSSxRef("cross-fade", "cross-fade()")}}
-- [CSS images](/en-US/docs/Web/CSS/CSS_images) module
+- [CSS images](/en-US/docs/Web/CSS/Guides/Images) module

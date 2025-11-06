@@ -1,6 +1,6 @@
 ---
 title: CSS logical properties and values
-slug: Web/CSS/CSS_logical_properties_and_values
+slug: Web/CSS/Guides/Logical_properties_and_values
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-logical/
 sidebar: cssref
@@ -103,16 +103,16 @@ CSS was initially designed with only physical coordinates. The logical propertie
 
 ## Guides
 
-- [Basic concepts of logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values)
+- [Basic concepts of logical properties and values](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values/Basic_concepts)
   - : Overview of flow relative properties and values.
 
-- [Logical properties for sizing](/en-US/docs/Web/CSS/CSS_logical_properties_and_values/Sizing)
+- [Logical properties for sizing](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values/Sizing)
   - : Flow-relative mappings between physical properties and logical properties used for sizing elements on the page.
 
-- [Logical properties for margins, borders, and padding](/en-US/docs/Web/CSS/CSS_logical_properties_and_values/Margins_borders_padding)
+- [Logical properties for margins, borders, and padding](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values/Margins_borders_padding)
   - : Flow-relative mappings for the various margin, border, and padding properties and their shorthands.
 
-- [Logical properties for floating and positioning](/en-US/docs/Web/CSS/CSS_logical_properties_and_values/Floating_and_positioning)
+- [Logical properties for floating and positioning](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values/Floating_and_positioning)
   - : Details mappings between the physical and logical values for `float` and `clear`, [inset properties](/en-US/docs/Glossary/Inset_properties), and `resize`.
 
 ## Related concepts

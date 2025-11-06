@@ -1,6 +1,6 @@
 ---
 title: CSS lists and counters
-slug: Web/CSS/CSS_lists
+slug: Web/CSS/Guides/Lists
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-lists/
 sidebar: cssref
@@ -43,7 +43,7 @@ There is also a `marker-side` property, which is yet to be fully defined or impl
 
 ## Guides
 
-- [Consistent list indentation](/en-US/docs/Web/CSS/CSS_lists/Consistent_list_indentation)
+- [Consistent list indentation](/en-US/docs/Web/CSS/Guides/Lists/Consistent_list_indentation)
   - : Explains how to achieve consistent list indentation across different browsers.
 
 - [Using CSS Counters](/en-US/docs/Web/CSS/Guides/Counter_styles/Using_counters)

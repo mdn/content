@@ -245,5 +245,5 @@ In the output, the items are numbered in reversed order from 5 to 1. Notice in t
 - {{cssxref("counter", "counter()")}} and {{cssxref("counters", "counters()")}} functions
 - {{cssxref("content")}} property
 - {{cssxref("::marker")}} pseudo-class
-- [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
+- [CSS lists and counters](/en-US/docs/Web/CSS/Guides/Lists) module
 - [CSS counter styles](/en-US/docs/Web/CSS/Guides/Counter_styles) module

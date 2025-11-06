@@ -43,7 +43,7 @@ If your main axis is `column` or `column-reverse` then the cross axis runs along
 
 ## Start and end lines
 
-Another vital area of understanding is how flexbox makes no assumption about the writing mode of the document. Flexbox doesn't just assume that all lines of text start at the top left of a document and run towards the right-hand side, with new lines appearing one under the other. Rather, it supports all writing modes, like other [logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values).
+Another vital area of understanding is how flexbox makes no assumption about the writing mode of the document. Flexbox doesn't just assume that all lines of text start at the top left of a document and run towards the right-hand side, with new lines appearing one under the other. Rather, it supports all writing modes, like other [logical properties and values](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values).
 
 You can [read more about the relationship between flexbox and writing modes](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Relationship_with_other_layout_methods#writing_modes) in a later article; however, the following description should help explain why we do not talk about left and right and top and bottom when we describe the direction that our flex items flow in.
 

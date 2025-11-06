@@ -102,7 +102,7 @@ The [CSS color](/en-US/docs/Web/CSS/Guides/Colors) module defines the {{cssxref(
 
 ## Images
 
-The [CSS images](/en-US/docs/Web/CSS/CSS_images) module defines the data types which deal with images, including gradients.
+The [CSS images](/en-US/docs/Web/CSS/Guides/Images) module defines the data types which deal with images, including gradients.
 
 - {{cssxref("&lt;image&gt;")}}
   - : A URL reference to an image or a color gradient.

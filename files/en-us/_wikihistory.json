@@ -71644,181 +71644,6 @@
       "rachelandrew"
     ]
   },
-  "Web/CSS/CSS_images": {
-    "modified": "2020-07-07T12:17:40.924Z",
-    "contributors": [
-      "wbamberg",
-      "estelle",
-      "mfuji09",
-      "ExE-Boss",
-      "fscholz",
-      "mfluehr",
-      "wizAmit",
-      "mrstork",
-      "cvrebert",
-      "Sebastianz",
-      "teoli"
-    ]
-  },
-  "Web/CSS/CSS_images/Implementing_image_sprites_in_CSS": {
-    "modified": "2020-07-31T05:09:18.549Z",
-    "contributors": [
-      "mfuji09",
-      "cjbt",
-      "mfluehr",
-      "Sebastianz",
-      "teoli",
-      "xfq",
-      "Jeremie",
-      "kscarfone",
-      "i80and",
-      "Luke314"
-    ]
-  },
-  "Web/CSS/CSS_images/Replaced_element_properties": {
-    "modified": "2020-07-07T12:38:37.398Z",
-    "contributors": [
-      "wbamberg",
-      "Sheppy",
-      "SelenIT",
-      "Nisarg-Shah",
-      "TotalAMD",
-      "Konrud",
-      "yisibl",
-      "mfluehr",
-      "Dholbert",
-      "AdrianSandu",
-      "josketres",
-      "cris-luz-07",
-      "RosevearDev",
-      "Alrashel",
-      "atesgoral",
-      "FredB",
-      "peb",
-      "ethertank",
-      "teoli"
-    ]
-  },
-  "Web/CSS/CSS_images/Using_CSS_gradients": {
-    "modified": "2020-11-09T14:36:47.079Z",
-    "contributors": [
-      "chrisdavidmills",
-      "rachelandrew",
-      "mfuji09",
-      "estelle",
-      "mfluehr",
-      "VitalyR",
-      "jwhitlock",
-      "joyously",
-      "sebastien-bartoli",
-      "Maruti-Ram",
-      "undest",
-      "ArenM",
-      "steveperrito",
-      "Krenair",
-      "Mahan91",
-      "mrenty",
-      "sraghav",
-      "Sebastianz",
-      "una",
-      "teoli",
-      "Dietrich",
-      "xfq",
-      "stephaniehobson",
-      "wakka27",
-      "Jeremie",
-      "kscarfone",
-      "shendry",
-      "Sheppy",
-      "netfuzzer55",
-      "chrisk8er",
-      "jswisher",
-      "netfuzzer33",
-      "ethertank",
-      "Inkbug",
-      "gadgetboy",
-      "danieltott",
-      "backflip",
-      "borncssed",
-      "marcobiscaro2112",
-      "floEdelmann",
-      "sebmozilla",
-      "Piro",
-      "BenoitL"
-    ]
-  },
-  "Web/CSS/CSS_inline_layout/Inline_formatting_context": {
-    "modified": "2020-04-27T22:33:13.546Z",
-    "contributors": ["pans9", "chrisdavidmills", "rachelandrew"]
-  },
-  "Web/CSS/CSS_lists": {
-    "modified": "2020-07-07T12:20:22.683Z",
-    "contributors": [
-      "wbamberg",
-      "rachelandrew",
-      "fscholz",
-      "mfluehr",
-      "TylerH",
-      "Sebastianz",
-      "teoli"
-    ]
-  },
-  "Web/CSS/CSS_lists/Consistent_list_indentation": {
-    "modified": "2020-04-27T22:28:57.922Z",
-    "contributors": [
-      "mfluehr",
-      "Sebastianz",
-      "fscholz",
-      "teoli",
-      "xfq",
-      "Jeremie",
-      "kscarfone",
-      "Sheppy",
-      "pdmdn",
-      "enderandpeter",
-      "Dria",
-      "Laurent Denis",
-      "CitizenK"
-    ]
-  },
-  "Web/CSS/CSS_logical_properties_and_values": {
-    "modified": "2020-08-06T03:12:04.912Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg",
-      "David_Gilbertson",
-      "chrisdavidmills",
-      "rachelandrew",
-      "ExE-Boss",
-      "mfluehr",
-      "Patrick_Dark",
-      "Sebastianz",
-      "teoli"
-    ]
-  },
-  "Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values": {
-    "modified": "2020-05-08T04:42:35.461Z",
-    "contributors": ["chrisdavidmills", "maxcaluva", "ExE-Boss", "rachelandrew"]
-  },
-  "Web/CSS/CSS_logical_properties_and_values/Floating_and_positioning": {
-    "modified": "2020-07-25T07:53:54.241Z",
-    "contributors": [
-      "mfuji09",
-      "jonjohnjohnson",
-      "wes-moberly",
-      "chrisdavidmills",
-      "rachelandrew",
-      "ExE-Boss"
-    ]
-  },
-  "Web/CSS/CSS_logical_properties_and_values/Margins_borders_padding": {
-    "modified": "2020-04-27T22:29:14.138Z",
-    "contributors": ["rachelandrew", "chrisdavidmills", "ExE-Boss"]
-  },
-  "Web/CSS/CSS_logical_properties_and_values/Sizing": {
-    "modified": "2020-04-27T22:29:20.643Z",
-    "contributors": ["chrisdavidmills", "ExE-Boss", "rachelandrew"]
-  },
   "Web/CSS/CSS_masking": {
     "modified": "2020-07-07T12:23:11.029Z",
     "contributors": [
@@ -73867,6 +73692,181 @@
       "chrisdavidmills",
       "SphinxKnight"
     ]
+  },
+  "Web/CSS/Guides/Images": {
+    "modified": "2020-07-07T12:17:40.924Z",
+    "contributors": [
+      "wbamberg",
+      "estelle",
+      "mfuji09",
+      "ExE-Boss",
+      "fscholz",
+      "mfluehr",
+      "wizAmit",
+      "mrstork",
+      "cvrebert",
+      "Sebastianz",
+      "teoli"
+    ]
+  },
+  "Web/CSS/Guides/Images/Implementing_image_sprites": {
+    "modified": "2020-07-31T05:09:18.549Z",
+    "contributors": [
+      "mfuji09",
+      "cjbt",
+      "mfluehr",
+      "Sebastianz",
+      "teoli",
+      "xfq",
+      "Jeremie",
+      "kscarfone",
+      "i80and",
+      "Luke314"
+    ]
+  },
+  "Web/CSS/Guides/Images/Replaced_element_properties": {
+    "modified": "2020-07-07T12:38:37.398Z",
+    "contributors": [
+      "wbamberg",
+      "Sheppy",
+      "SelenIT",
+      "Nisarg-Shah",
+      "TotalAMD",
+      "Konrud",
+      "yisibl",
+      "mfluehr",
+      "Dholbert",
+      "AdrianSandu",
+      "josketres",
+      "cris-luz-07",
+      "RosevearDev",
+      "Alrashel",
+      "atesgoral",
+      "FredB",
+      "peb",
+      "ethertank",
+      "teoli"
+    ]
+  },
+  "Web/CSS/Guides/Images/Using_CSS_gradients": {
+    "modified": "2020-11-09T14:36:47.079Z",
+    "contributors": [
+      "chrisdavidmills",
+      "rachelandrew",
+      "mfuji09",
+      "estelle",
+      "mfluehr",
+      "VitalyR",
+      "jwhitlock",
+      "joyously",
+      "sebastien-bartoli",
+      "Maruti-Ram",
+      "undest",
+      "ArenM",
+      "steveperrito",
+      "Krenair",
+      "Mahan91",
+      "mrenty",
+      "sraghav",
+      "Sebastianz",
+      "una",
+      "teoli",
+      "Dietrich",
+      "xfq",
+      "stephaniehobson",
+      "wakka27",
+      "Jeremie",
+      "kscarfone",
+      "shendry",
+      "Sheppy",
+      "netfuzzer55",
+      "chrisk8er",
+      "jswisher",
+      "netfuzzer33",
+      "ethertank",
+      "Inkbug",
+      "gadgetboy",
+      "danieltott",
+      "backflip",
+      "borncssed",
+      "marcobiscaro2112",
+      "floEdelmann",
+      "sebmozilla",
+      "Piro",
+      "BenoitL"
+    ]
+  },
+  "Web/CSS/Guides/Inline_layout/Inline_formatting_context": {
+    "modified": "2020-04-27T22:33:13.546Z",
+    "contributors": ["pans9", "chrisdavidmills", "rachelandrew"]
+  },
+  "Web/CSS/Guides/Lists": {
+    "modified": "2020-07-07T12:20:22.683Z",
+    "contributors": [
+      "wbamberg",
+      "rachelandrew",
+      "fscholz",
+      "mfluehr",
+      "TylerH",
+      "Sebastianz",
+      "teoli"
+    ]
+  },
+  "Web/CSS/Guides/Lists/Consistent_list_indentation": {
+    "modified": "2020-04-27T22:28:57.922Z",
+    "contributors": [
+      "mfluehr",
+      "Sebastianz",
+      "fscholz",
+      "teoli",
+      "xfq",
+      "Jeremie",
+      "kscarfone",
+      "Sheppy",
+      "pdmdn",
+      "enderandpeter",
+      "Dria",
+      "Laurent Denis",
+      "CitizenK"
+    ]
+  },
+  "Web/CSS/Guides/Logical_properties_and_values": {
+    "modified": "2020-08-06T03:12:04.912Z",
+    "contributors": [
+      "mfuji09",
+      "wbamberg",
+      "David_Gilbertson",
+      "chrisdavidmills",
+      "rachelandrew",
+      "ExE-Boss",
+      "mfluehr",
+      "Patrick_Dark",
+      "Sebastianz",
+      "teoli"
+    ]
+  },
+  "Web/CSS/Guides/Logical_properties_and_values/Basic_concepts": {
+    "modified": "2020-05-08T04:42:35.461Z",
+    "contributors": ["chrisdavidmills", "maxcaluva", "ExE-Boss", "rachelandrew"]
+  },
+  "Web/CSS/Guides/Logical_properties_and_values/Floating_and_positioning": {
+    "modified": "2020-07-25T07:53:54.241Z",
+    "contributors": [
+      "mfuji09",
+      "jonjohnjohnson",
+      "wes-moberly",
+      "chrisdavidmills",
+      "rachelandrew",
+      "ExE-Boss"
+    ]
+  },
+  "Web/CSS/Guides/Logical_properties_and_values/Margins_borders_padding": {
+    "modified": "2020-04-27T22:29:14.138Z",
+    "contributors": ["rachelandrew", "chrisdavidmills", "ExE-Boss"]
+  },
+  "Web/CSS/Guides/Logical_properties_and_values/Sizing": {
+    "modified": "2020-04-27T22:29:20.643Z",
+    "contributors": ["chrisdavidmills", "ExE-Boss", "rachelandrew"]
   },
   "Web/CSS/How_to/Layout_cookbook": {
     "modified": "2020-07-07T12:18:05.178Z",

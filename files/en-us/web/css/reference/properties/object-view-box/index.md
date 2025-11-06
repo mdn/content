@@ -362,9 +362,9 @@ img {
 
 ## See also
 
-- [Using the CSS `object-view-box` property](/en-US/docs/Web/CSS/CSS_images/Using_object-view-box)
+- [Using the CSS `object-view-box` property](/en-US/docs/Web/CSS/Guides/Images/Using_object-view-box)
 - {{cssxref("object-fit")}}
 - {{cssxref("object-position")}}
 - {{cssxref("background-size")}}
 - [Understanding aspect ratio](/en-US/docs/Web/CSS/Guides/Box_sizing/Aspect_ratios)
-- [CSS images](/en-US/docs/Web/CSS/CSS_images) module
+- [CSS images](/en-US/docs/Web/CSS/Guides/Images) module

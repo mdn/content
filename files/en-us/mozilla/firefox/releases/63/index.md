@@ -41,7 +41,7 @@ This article provides information about the changes in Firefox 63 that will affe
 - Added support for the [prefers-reduced-motion](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) media feature ([Firefox bug 1365045](https://bugzil.la/1365045), [Firefox bug 1475462](https://bugzil.la/1475462)).
 - Added flow relative values (`block`, `inline`) for the {{CSSxRef("resize")}} property ([Firefox bug 1464786](https://bugzil.la/1464786)).
 - Implemented flexbox layout for `safe` & `unsafe` values in {{CSSxRef("align-self")}}, {{CSSxRef("align-content")}}, and {{CSSxRef("justify-content")}} ([Firefox bug 1297774](https://bugzil.la/1297774)).
-- The [logical properties](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) (where appropriate) are now animatable ([Firefox bug 1309752](https://bugzil.la/1309752)).
+- The [logical properties](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values) (where appropriate) are now animatable ([Firefox bug 1309752](https://bugzil.la/1309752)).
 
 #### Removals
 

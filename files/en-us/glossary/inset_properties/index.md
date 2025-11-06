@@ -17,5 +17,5 @@ The interpretation of inset properties depends on the value of the {{cssxref("po
 
 - [Layout and the containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block)
 - [CSS positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout) module
-- [CSS logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) module
+- [CSS logical properties and values](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values) module
 - [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) module

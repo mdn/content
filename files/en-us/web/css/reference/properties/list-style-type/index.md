@@ -793,5 +793,5 @@ We're not limited to the list style types defined on this page or the specificat
 - {{Cssxref("list-style-image")}} property
 - {{Cssxref("list-style-position")}} property
 - {{Cssxref("::marker")}} pseudo-element
-- [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
+- [CSS lists and counters](/en-US/docs/Web/CSS/Guides/Lists) module
 - [CSS counter styles](/en-US/docs/Web/CSS/Guides/Counter_styles) module

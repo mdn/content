@@ -215,6 +215,6 @@ li::before {
 - {{cssxref("@counter-style")}} at-rule
 - CSS [`counter()`](/en-US/docs/Web/CSS/Reference/Values/counter) function
 - {{cssxref("::marker")}} pseudo-element
-- [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
+- [CSS lists and counters](/en-US/docs/Web/CSS/Guides/Lists) module
 - [CSS counter styles](/en-US/docs/Web/CSS/Guides/Counter_styles) module
 - [CSS generated content](/en-US/docs/Web/CSS/Guides/Generated_content) module

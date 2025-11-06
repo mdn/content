@@ -541,5 +541,5 @@ When you put both bulbs in their proper place, you'll notice that they are relat
 
 - {{glossary("Inset properties")}}
 - [Learn CSS: Positioning](/en-US/docs/Learn_web_development/Core/CSS_layout/Positioning)
-- [Inset properties for positioned layout](/en-US/docs/Web/CSS/CSS_logical_properties_and_values/Floating_and_positioning#example_inset_properties_for_positioned_layout)
+- [Inset properties for positioned layout](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values/Floating_and_positioning#example_inset_properties_for_positioned_layout)
 - [CSS positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout) modules

@@ -1,6 +1,6 @@
 ---
 title: Styling replaced elements
-slug: Web/CSS/CSS_images/Replaced_element_properties
+slug: Web/CSS/Guides/Images/Replaced_element_properties
 page-type: guide
 sidebar: cssref
 ---
@@ -13,7 +13,7 @@ A **{{glossary("replaced elements", "replaced element")}}** is an element whose 
 
 CSS handles replaced elements specifically in some cases, like when calculating margins and some `auto` values. Only replaced elements can ever have {{glossary("intrinsic size", "intrinsic dimensions")}}. Some replaced elements, but not all, have intrinsic dimensions or a defined baseline, which is used by some CSS properties, such as {{cssxref("vertical-align")}}.
 
-While document styles can set the size and position of replaced elements, document styles dont affect the replaced elements' content, with some exceptions: The [CSS images module](/en-US/docs/Web/CSS/CSS_images) includes properties which support controlling the positioning of the element's content within its box.
+While document styles can set the size and position of replaced elements, document styles dont affect the replaced elements' content, with some exceptions: The [CSS images module](/en-US/docs/Web/CSS/Guides/Images) includes properties which support controlling the positioning of the element's content within its box.
 
 ## Controlling object position within the content box
 
@@ -143,6 +143,6 @@ The `object-position` property works equally well with `<iframe>`, `<video>`, an
 ## See also
 
 - [Understanding aspect ratios](/en-US/docs/Web/CSS/Guides/Box_sizing/Aspect_ratios)
-- [CSS images](/en-US/docs/Web/CSS/CSS_images) module
+- [CSS images](/en-US/docs/Web/CSS/Guides/Images) module
 - [CSS display](/en-US/docs/Web/CSS/Guides/Display) module
 - [CSS backgrounds and borders](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders) module

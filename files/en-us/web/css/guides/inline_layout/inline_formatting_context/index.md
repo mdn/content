@@ -1,6 +1,6 @@
 ---
 title: Inline formatting context
-slug: Web/CSS/CSS_inline_layout/Inline_formatting_context
+slug: Web/CSS/Guides/Inline_layout/Inline_formatting_context
 page-type: guide
 sidebar: cssref
 ---
@@ -107,7 +107,7 @@ span {
 {{EmbedLiveSample("mbp", "", "340px")}}
 
 > [!NOTE]
-> I am using the logical, flow-relative properties — {{cssxref("padding-inline-start")}} rather than {{cssxref("padding-left")}} — so that they work in the inline dimension whether the text is horizontal or vertical. Read more about these properties in [Logical Properties and Values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values).
+> I am using the logical, flow-relative properties — {{cssxref("padding-inline-start")}} rather than {{cssxref("padding-left")}} — so that they work in the inline dimension whether the text is horizontal or vertical. Read more about these properties in [Logical Properties and Values](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values).
 
 ## Alignment in the block direction
 

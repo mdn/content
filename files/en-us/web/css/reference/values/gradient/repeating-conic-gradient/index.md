@@ -241,7 +241,7 @@ The box on the left uses [shorter interpolation](/en-US/docs/Web/CSS/Reference/V
 
 ### More repeating-conic-gradient examples
 
-Please see [Using CSS gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients) for more examples.
+Please see [Using CSS gradients](/en-US/docs/Web/CSS/Guides/Images/Using_CSS_gradients) for more examples.
 
 ## Specifications
 
@@ -253,7 +253,7 @@ Please see [Using CSS gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradie
 
 ## See also
 
-- [Using CSS gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+- [Using CSS gradients](/en-US/docs/Web/CSS/Guides/Images/Using_CSS_gradients)
 - Other gradient functions: {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
 - [`<hue-interpolation-method>`](/en-US/docs/Web/CSS/Reference/Values/hue-interpolation-method)
 - [`<color-interpolation-method>`](/en-US/docs/Web/CSS/Reference/Values/color-interpolation-method)

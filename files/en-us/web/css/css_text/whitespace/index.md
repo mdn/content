@@ -101,7 +101,7 @@ The `<h1>` element contains:
 - An inline element (`<span>`, which contains a space, and the word "World!").
 - Another text node (with a tab and spaces after the `<span>`).
 
-Because this `<h1>` element contains only inline elements, it establishes an [inline formatting context](/en-US/docs/Web/CSS/CSS_inline_layout/Inline_formatting_context). This is one of the several layout rendering contexts that browser engines use to arrange content on the page.
+Because this `<h1>` element contains only inline elements, it establishes an [inline formatting context](/en-US/docs/Web/CSS/Guides/Inline_layout/Inline_formatting_context). This is one of the several layout rendering contexts that browser engines use to arrange content on the page.
 
 Inside this inline formatting context, whitespace characters are processed as follows:
 
@@ -174,7 +174,7 @@ In a nutshell, different whitespace characters are collapsed and transformed in 
 
 ### Trimming and positioning
 
-In both [inline](/en-US/docs/Web/CSS/CSS_inline_layout/Inline_formatting_context) and [block](/en-US/docs/Web/CSS/Guides/Display/Block_formatting_context) formatting contexts, elements are laid out in _lines_. In an inline formatting context, lines are created by text wrapping. In a block formatting context, on the other hand, each block forms its own line. As each line is laid out, whitespace is processed further. Let's take a look at an example to explain how this works.
+In both [inline](/en-US/docs/Web/CSS/Guides/Inline_layout/Inline_formatting_context) and [block](/en-US/docs/Web/CSS/Guides/Display/Block_formatting_context) formatting contexts, elements are laid out in _lines_. In an inline formatting context, lines are created by text wrapping. In a block formatting context, on the other hand, each block forms its own line. As each line is laid out, whitespace is processed further. Let's take a look at an example to explain how this works.
 
 In this example, as before, we've marked the whitespace characters in a comment. We have three text nodes that contain only whitespace: one before the first `<div>`, one between the 2 `<div>`s, and one after the second `<div>`.
 

@@ -143,5 +143,5 @@ h1 {
 - {{cssxref("@counter-style")}}
 - {{cssxref("counter", "counter()")}} and {{cssxref("counters", "counters()")}} functions
 - {{cssxref("content")}} property
-- [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
+- [CSS lists and counters](/en-US/docs/Web/CSS/Guides/Lists) module
 - [CSS counter styles](/en-US/docs/Web/CSS/Guides/Counter_styles) module

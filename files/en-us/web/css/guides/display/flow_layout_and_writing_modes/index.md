@@ -317,7 +317,7 @@ body {
 
 {{EmbedLiveSample("inline-size", "", "200px")}}
 
-The [CSS logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) module includes logical versions of the properties that control margins, padding and borders as well as other mappings for things that we have typically used physical directions to specify.
+The [CSS logical properties and values](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values) module includes logical versions of the properties that control margins, padding and borders as well as other mappings for things that we have typically used physical directions to specify.
 
 ## Summary
 

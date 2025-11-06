@@ -1,12 +1,12 @@
 ---
 title: Basic concepts of logical properties and values
 short-title: Basic concepts
-slug: Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values
+slug: Web/CSS/Guides/Logical_properties_and_values/Basic_concepts
 page-type: guide
 sidebar: cssref
 ---
 
-The [CSS logical properties and values module](/en-US/docs/Web/CSS/CSS_logical_properties_and_values#properties) defines flow-relative mappings for many of the {{glossary("physical properties")}} and values in CSS. This article discusses this module, and explains {{glossary("flow relative values")}} and properties.
+The [CSS logical properties and values module](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values#properties) defines flow-relative mappings for many of the {{glossary("physical properties")}} and values in CSS. This article discusses this module, and explains {{glossary("flow relative values")}} and properties.
 
 ## Why are logical properties useful
 

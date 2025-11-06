@@ -132,7 +132,7 @@ The CSS color module also introduces the `CSSColorProfileRule` interface. Curren
 ## See also
 
 - [CSS color adjustment](/en-US/docs/Web/CSS/Guides/Color_adjustment) module and the {{cssxref("print-color-adjust")}} property.
-- [CSS images](/en-US/docs/Web/CSS/CSS_images) module, which is where CSS [`<gradient>`](/en-US/docs/Web/CSS/Reference/Values/gradient) images are defined.
+- [CSS images](/en-US/docs/Web/CSS/Guides/Images) module, which is where CSS [`<gradient>`](/en-US/docs/Web/CSS/Reference/Values/gradient) images are defined.
 - The [`VideoColorSpace`](/en-US/docs/Web/API/VideoColorSpace) interface
 - The SVG [`<feColorMatrix>`](/en-US/docs/Web/SVG/Reference/Element/feColorMatrix) element
 - [Canvas API: applying styles and colors](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#colors)

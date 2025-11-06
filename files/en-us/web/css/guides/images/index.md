@@ -1,6 +1,6 @@
 ---
 title: CSS images
-slug: Web/CSS/CSS_images
+slug: Web/CSS/Guides/Images
 page-type: css-module
 spec-urls:
   - https://drafts.csswg.org/css-images/
@@ -44,19 +44,19 @@ The CSS images module also defines the {{CSSxRef("image/image", "image()")}} fun
 
 ## Guides
 
-- [Using CSS gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+- [Using CSS gradients](/en-US/docs/Web/CSS/Guides/Images/Using_CSS_gradients)
   - : Presents a specific type of CSS images, _gradients_, and how to create and use these.
 
-- [Implementing image sprites in CSS](/en-US/docs/Web/CSS/CSS_images/Implementing_image_sprites_in_CSS)
+- [Implementing image sprites in CSS](/en-US/docs/Web/CSS/Guides/Images/Implementing_image_sprites)
   - : Describes the common technique grouping several images in one single document to save download requests and speed up the availability of a page.
 
-- [Styling replaced elements](/en-US/docs/Web/CSS/CSS_images/Replaced_element_properties)
+- [Styling replaced elements](/en-US/docs/Web/CSS/Guides/Images/Replaced_element_properties)
   - : Introduces the properties that only apply to _replaced elements_.
 
 - [Understanding aspect ratios](/en-US/docs/Web/CSS/Guides/Box_sizing/Aspect_ratios)
   - : Learn about the `aspect-ratio` property, discuss aspect ratios for replaced and non-replaced elements, and examine some common aspect ratio use cases.
 
-- [Using the CSS `object-view-box` property](/en-US/docs/Web/CSS/CSS_images/Using_object-view-box)
+- [Using the CSS `object-view-box` property](/en-US/docs/Web/CSS/Guides/Images/Using_object-view-box)
   - : Learn the CSS `object-view-box` property, including how to zoom in, zoom out, and pan across images.
 
 ## Related concepts

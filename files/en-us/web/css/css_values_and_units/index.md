@@ -233,7 +233,7 @@ The CSS values and units module also introduces the [`<frequency>`](/en-US/docs/
   - {{cssxref("system-color")}}
   - [`color-mix()`](/en-US/docs/Web/CSS/Reference/Values/color_value/color-mix)
 
-- [CSS images](/en-US/docs/Web/CSS/CSS_images) module
+- [CSS images](/en-US/docs/Web/CSS/Guides/Images) module
   - {{cssxref("&lt;image&gt;")}}
   - {{cssxref("&lt;gradient&gt;")}}
 

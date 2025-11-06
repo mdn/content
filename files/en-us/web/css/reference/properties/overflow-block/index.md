@@ -160,7 +160,7 @@ div {
 ## See also
 
 - {{cssxref("text-overflow")}}, {{cssxref("white-space")}}, {{Cssxref("overflow")}}, {{Cssxref("overflow-inline")}}, {{Cssxref("overflow-x")}}, {{Cssxref("overflow-y")}}, {{Cssxref("clip")}}, {{Cssxref("display")}}
-- [CSS logical properties](/en-US/docs/Web/CSS/CSS_logical_properties_and_values)
+- [CSS logical properties](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values)
 - [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
 - [CSS scrollbars style](/en-US/docs/Web/CSS/CSS_scrollbars_styling) module
 - [CSS writing modes](/en-US/docs/Web/CSS/CSS_writing_modes)

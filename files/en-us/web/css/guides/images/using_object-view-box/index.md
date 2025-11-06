@@ -1,7 +1,7 @@
 ---
 title: Using the CSS object-view-box property
 short-title: Using object-view-box
-slug: Web/CSS/CSS_images/Using_object-view-box
+slug: Web/CSS/Guides/Images/Using_object-view-box
 page-type: guide
 sidebar: cssref
 ---

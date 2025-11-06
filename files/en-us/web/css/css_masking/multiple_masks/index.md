@@ -46,7 +46,7 @@ mask-border-width: auto;
 
 ### Defining mask layers with `mask-image`
 
-As long as a comma-separated {{cssxref("mask-image")}} property declaration includes at least one value other than `none`, a mask layer is created for every value in the declaration, even for the `none` values. This behavior applies whether you're using the `mask-image` property or the `mask` shorthand. These mask images can be gradients, images, or SVG sources. You can define them using a [CSS gradient](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients), a raster image (such as PNGs), or an SVG {{svgelement("mask")}} element.
+As long as a comma-separated {{cssxref("mask-image")}} property declaration includes at least one value other than `none`, a mask layer is created for every value in the declaration, even for the `none` values. This behavior applies whether you're using the `mask-image` property or the `mask` shorthand. These mask images can be gradients, images, or SVG sources. You can define them using a [CSS gradient](/en-US/docs/Web/CSS/Guides/Images/Using_CSS_gradients), a raster image (such as PNGs), or an SVG {{svgelement("mask")}} element.
 
 ```css
 .gradient-mask {

@@ -26,10 +26,10 @@ To do this, use the {{cssxref("container-type")}} property with a value of `size
 These values have the following effects:
 
 - `size`
-  - : The query will be based on the [inline and block](/en-US/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values#block_and_inline_dimensions) dimensions of the container.
+  - : The query will be based on the [inline and block](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values/Basic_concepts#block_and_inline_dimensions) dimensions of the container.
     Applies layout, style, and size [containment](/en-US/docs/Web/CSS/Guides/Containment/Using) to the container.
 - `inline-size`
-  - : The query will be based on the [inline](/en-US/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values#block_and_inline_dimensions) dimensions of the container.
+  - : The query will be based on the [inline](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values/Basic_concepts#block_and_inline_dimensions) dimensions of the container.
     Applies layout, style, and inline-size containment to the element.
 - `normal`
   - : The element is not a query container for any container size queries, but remains a query container for container style queries.

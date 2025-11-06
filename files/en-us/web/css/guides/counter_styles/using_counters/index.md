@@ -477,4 +477,4 @@ li::before {
 - {{cssxref("counter-increment")}}
 - {{cssxref("@counter-style")}}
 - [CSS counter styles](/en-US/docs/Web/CSS/Guides/Counter_styles) module
-- [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
+- [CSS lists and counters](/en-US/docs/Web/CSS/Guides/Lists) module

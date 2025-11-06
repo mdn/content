@@ -229,5 +229,5 @@ List 2
 
 - Component properties: {{Cssxref("list-style-type")}}, {{Cssxref("list-style-image")}}, and {{Cssxref("list-style-position")}}
 - {{Cssxref("::marker")}} pseudo-element
-- [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
+- [CSS lists and counters](/en-US/docs/Web/CSS/Guides/Lists) module
 - [CSS counter styles](/en-US/docs/Web/CSS/Guides/Counter_styles) module

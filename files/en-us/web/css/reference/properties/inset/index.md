@@ -65,7 +65,7 @@ inset: 0;
 }
 ```
 
-While part of the [CSS logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) module, it does not define _logical_ offsets. It defines _physical_ offsets, regardless of the element's writing mode, directionality, and text orientation.
+While part of the [CSS logical properties and values](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values) module, it does not define _logical_ offsets. It defines _physical_ offsets, regardless of the element's writing mode, directionality, and text orientation.
 
 ## Constituent properties
 
@@ -162,4 +162,4 @@ div {
 - {{cssxref("inset-block")}} and {{cssxref("inset-inline")}}
 - {{cssxref("position")}}
 - [CSS positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout) module
-- [CSS logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values)
+- [CSS logical properties and values](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values)

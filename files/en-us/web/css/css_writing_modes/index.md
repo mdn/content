@@ -57,7 +57,7 @@ The CSS writing module addresses the orientations of all writing modes. Other mo
 - {{cssxref("word-break")}}
 - {{cssxref("word-spacing")}}
 
-[CSS inline layout](/en-US/docs/Web/CSS/CSS_inline_layout) module
+[CSS inline layout](/en-US/docs/Web/CSS/Guides/Inline_layout) module
 
 - {{cssxref("alignment-baseline")}}
 - {{cssxref("dominant-baseline")}}
@@ -67,7 +67,7 @@ The CSS writing module addresses the orientations of all writing modes. Other mo
 - {{cssxref("text-box")}} shorthand
 - {{cssxref("text-edge")}}
 
-[CSS logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) module
+[CSS logical properties and values](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values) module
 
 - {{glossary("Flow relative values")}}
 - {{glossary("Inset properties")}}
@@ -117,7 +117,7 @@ The CSS writing module addresses the orientations of all writing modes. Other mo
 - [CSS ruby layout](/en-US/docs/Web/CSS/CSS_ruby_layout) module
 - [CSS text decoration](/en-US/docs/Web/CSS/CSS_text_decoration) module
 - [CSS counter styles](/en-US/docs/Web/CSS/Guides/Counter_styles) module
-- [CSS lists](/en-US/docs/Web/CSS/CSS_lists) module
+- [CSS lists](/en-US/docs/Web/CSS/Guides/Lists) module
 - [CSS containment](/en-US/docs/Web/CSS/Guides/Containment) module: {{CSSxRef("contain-intrinsic-block-size")}} and {{CSSxRef("contain-intrinsic-inline-size")}}
 - [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module: {{CSSxRef("overflow-block")}} and {{CSSxRef("overflow-inline")}}
 - [CSS overscroll behavior](/en-US/docs/Web/CSS/CSS_overscroll_behavior) module: {{CSSxRef("overscroll-behavior-block")}} and {{CSSxRef("overscroll-behavior-inline")}}

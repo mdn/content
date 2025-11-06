@@ -202,7 +202,7 @@ The box on the left uses [shorter interpolation](/en-US/docs/Web/CSS/Reference/V
 {{EmbedLiveSample("Interpolating with hue", 240, 200)}}
 
 > [!NOTE]
-> Please see [Using CSS gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients) for more examples.
+> Please see [Using CSS gradients](/en-US/docs/Web/CSS/Guides/Images/Using_CSS_gradients) for more examples.
 
 ## Specifications
 
@@ -214,7 +214,7 @@ The box on the left uses [shorter interpolation](/en-US/docs/Web/CSS/Reference/V
 
 ## See also
 
-- [Using CSS gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+- [Using CSS gradients](/en-US/docs/Web/CSS/Guides/Images/Using_CSS_gradients)
 - Other gradient functions: {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
 - [`<hue-interpolation-method>`](/en-US/docs/Web/CSS/Reference/Values/hue-interpolation-method)
 - [`<color-interpolation-method>`](/en-US/docs/Web/CSS/Reference/Values/color-interpolation-method)

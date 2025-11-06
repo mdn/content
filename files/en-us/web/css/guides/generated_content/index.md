@@ -99,7 +99,7 @@ div::before {
 
 {{EmbedLiveSample("generated_content", "", "400px")}}
 
-The HTML for this sample is a single, empty {{HTMLElement("div")}} inside an otherwise empty {{HTMLElement("body")}}. The snowman was created with [CSS images](/en-US/docs/Web/CSS/CSS_images) and [CSS backgrounds and borders](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders). The carrot nose was added using generated content: an empty box with a wide orange [left border](/en-US/docs/Web/CSS/Reference/Properties/border-left) added to the {{cssxref("::before")}} pseudo-element. The text is also generated content: "only one &lt;div>" was generated with the {{cssxref("content")}} property applied to the {{cssxref("::after")}} pseudo-element.
+The HTML for this sample is a single, empty {{HTMLElement("div")}} inside an otherwise empty {{HTMLElement("body")}}. The snowman was created with [CSS images](/en-US/docs/Web/CSS/Guides/Images) and [CSS backgrounds and borders](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders). The carrot nose was added using generated content: an empty box with a wide orange [left border](/en-US/docs/Web/CSS/Reference/Properties/border-left) added to the {{cssxref("::before")}} pseudo-element. The text is also generated content: "only one &lt;div>" was generated with the {{cssxref("content")}} property applied to the {{cssxref("::after")}} pseudo-element.
 
 Click "Play" in the example above to see or edit the code in the MDN Playground.
 
@@ -140,7 +140,7 @@ The CSS generated content module introduces six yet-to-be implemented CSS functi
   - {{cssxref("::after")}} pseudo-element
   - {{cssxref("::marker")}} pseudo-element
 
-- [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
+- [CSS lists and counters](/en-US/docs/Web/CSS/Guides/Lists) module
   - {{cssxref("counter", "counter()")}} function
   - {{cssxref("counters", "counters()")}} function
   - {{cssxref("counter-increment")}} property
@@ -163,5 +163,5 @@ The CSS generated content module introduces six yet-to-be implemented CSS functi
 ## See also
 
 - [CSS pseudo-elements](/en-US/docs/Web/CSS/CSS_pseudo-elements) module
-- [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
+- [CSS lists and counters](/en-US/docs/Web/CSS/Guides/Lists) module
 - {{glossary("Replaced elements")}}

@@ -91,4 +91,4 @@ The prefix and suffix listed as the value of the `negative` descriptor are only 
 - List style properties: {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
 - {{cssxref("symbols", "symbols()")}} function to create anonymous counter styles
 - [CSS counter styles](/en-US/docs/Web/CSS/Guides/Counter_styles) module
-- [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
+- [CSS lists and counters](/en-US/docs/Web/CSS/Guides/Lists) module

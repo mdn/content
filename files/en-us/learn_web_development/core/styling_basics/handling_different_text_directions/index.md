@@ -288,7 +288,7 @@ h2 {
 
 {{EmbedLiveSample("logical-mbp", "", "200px")}}
 
-There are a huge number of properties when you consider all of the individual border longhands, and you can see all of the mapped properties on the MDN page for [Logical Properties and Values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values).
+There are a huge number of properties when you consider all of the individual border longhands, and you can see all of the mapped properties on the MDN page for [Logical Properties and Values](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values).
 
 ### Logical values
 

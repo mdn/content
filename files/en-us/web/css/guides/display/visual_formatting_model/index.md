@@ -180,7 +180,7 @@ In addition, the references for specific values of display explain how these for
 - [CSS flexible box layout](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) module
 - [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout) module
 - [CSS table](/en-US/docs/Web/CSS/CSS_table) module
-- [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
+- [CSS lists and counters](/en-US/docs/Web/CSS/Guides/Lists) module
 
 ### Independent formatting contexts
 

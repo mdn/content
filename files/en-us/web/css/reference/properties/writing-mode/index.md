@@ -346,7 +346,7 @@ span {
 - {{Cssxref("unicode-bidi")}}
 - {{Cssxref("text-orientation")}}
 - {{Cssxref("text-combine-upright")}}
-- [CSS logical properties](/en-US/docs/Web/CSS/CSS_logical_properties_and_values)
+- [CSS logical properties](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values)
 - [CSS writing modes](/en-US/docs/Web/CSS/CSS_writing_modes) module
 - SVG {{SVGAttr("writing-mode")}} attribute
 - [Creating vertical form controls](/en-US/docs/Web/CSS/CSS_writing_modes/Vertical_controls)

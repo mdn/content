@@ -138,7 +138,7 @@ ul {
 
 ### Using a gradient
 
-This example has a [CSS gradient](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients) as a marker, which we create uses the {{cssxref("gradient/linear-gradient", "linear-gradient()")}} image function.
+This example has a [CSS gradient](/en-US/docs/Web/CSS/Guides/Images/Using_CSS_gradients) as a marker, which we create uses the {{cssxref("gradient/linear-gradient", "linear-gradient()")}} image function.
 
 #### HTML
 
@@ -176,5 +176,5 @@ ul {
 - {{Cssxref("list-style-type")}} property
 - {{Cssxref("list-style-position")}} property
 - {{cssxref("::marker")}} pseudo-element
-- [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
+- [CSS lists and counters](/en-US/docs/Web/CSS/Guides/Lists) module
 - [CSS counter styles](/en-US/docs/Web/CSS/Guides/Counter_styles) module

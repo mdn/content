@@ -16,7 +16,7 @@ The sizing values introduced in this module allow elements with [size containmen
 
 This module also introduced the ability to define an aspect ratio for an element's box, meaning the browser can automatically adjust an element's dimensions to maintain a specified aspect ratio as long as one of the dimensions is automatically sized.
 
-The [logical properties and values module](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) expanded the properties available in the box model and box sizing modules to include writing-mode-relative equivalents of the corresponding physical box model and intrinsic box sizing properties.
+The [logical properties and values module](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values) expanded the properties available in the box model and box sizing modules to include writing-mode-relative equivalents of the corresponding physical box model and intrinsic box sizing properties.
 
 ## Reference
 
@@ -73,7 +73,7 @@ The CSS box sizing module also introduces the `min-intrinsic-sizing` property. C
 
 ## Related concepts
 
-- [CSS logical properties](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) module
+- [CSS logical properties](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values) module
   - {{CSSxRef("min-inline-size")}}
   - {{CSSxRef("block-size")}}
   - {{CSSxRef("inline-size")}}
