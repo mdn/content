@@ -25,7 +25,7 @@ None.
 
 A promise that resolves with an {{jsxref("ArrayBuffer")}}.
 
-## Exceptions
+### Exceptions
 
 - `TypeError`
   : Thrown for one of the following reasons:
