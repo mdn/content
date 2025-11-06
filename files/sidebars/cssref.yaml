@@ -243,31 +243,31 @@ sidebar:
       - /Web/CSS/Guides/Positioned_layout/Using_z-index
       - /Web/CSS/Guides/Positioned_layout/Stacking_without_z-index
   - type: listSubPages
-    path: /Web/CSS/CSS_scroll_anchoring
+    path: /Web/CSS/Guides/Scroll_anchoring
     title: Scroll_anchoring
     details: closed
   - type: listSubPages
-    path: /Web/CSS/CSS_scroll_snap
+    path: /Web/CSS/Guides/Scroll_snap
     title: Scroll_snap
     details: closed
   - type: listSubPages
-    path: /Web/CSS/CSS_selectors
+    path: /Web/CSS/Guides/Selectors
     title: Selectors
     details: closed
   - title: Shapes
     details: closed
     children:
-      - /Web/CSS/CSS_shapes/Overview_of_shapes
-      - /Web/CSS/CSS_shapes/From_box_values
-      - /Web/CSS/CSS_shapes/Shapes_from_images
-      - /Web/CSS/CSS_shapes/Basic_shapes
+      - /Web/CSS/Guides/Shapes/Overview
+      - /Web/CSS/Guides/Shapes/From_box_values
+      - /Web/CSS/Guides/Shapes/From_images
+      - /Web/CSS/Guides/Shapes/Basic_shapes
   - title: Syntax
     details: closed
     children:
-      - /Web/CSS/CSS_syntax/Syntax
-      - /Web/CSS/CSS_syntax/Comments
-      - /Web/CSS/CSS_syntax/At-rules
-      - /Web/CSS/CSS_syntax/Error_handling
+      - /Web/CSS/Guides/Syntax/Introduction
+      - /Web/CSS/Guides/Syntax/Comments
+      - /Web/CSS/Guides/Syntax/At-rules
+      - /Web/CSS/Guides/Syntax/Error_handling
   - title: Text
     details: closed
     children:
@@ -321,7 +321,7 @@ sidebar:
       - /Web/CSS/Guides/Backgrounds_and_borders/Box-shadow_generator
       - /Web/CSS/Guides/Colors/Color_format_converter
       - /Web/CSS/Guides/Colors/Color_mixer
-      - /Web/CSS/CSS_shapes/Shape_generator
+      - /Web/CSS/Guides/Shapes/Shape_generator
 l10n:
   de:
     Guides: Leitfäden

@@ -17,7 +17,7 @@ Firefox 54 was released on June 13, 2017. This article lists key changes that ar
 
 ### CSS
 
-- {{cssxref("clip-path")}} now supports [basic shapes](/en-US/docs/Web/CSS/CSS_shapes) ([Firefox bug 1247229](https://bugzil.la/1247229)).
+- {{cssxref("clip-path")}} now supports [basic shapes](/en-US/docs/Web/CSS/Guides/Shapes) ([Firefox bug 1247229](https://bugzil.la/1247229)).
 - Firefox's implementations of CSS Flexbox and CSS alignment now implement updated spec language for interactions between the properties {{cssxref("align-items")}} and {{cssxref("align-self")}} as well as between {{cssxref("justify-items")}} and {{cssxref("justify-self")}} ([Firefox bug 1340309](https://bugzil.la/1340309)).
 - {{htmlelement("input")}} elements of types `checkbox` and `radio` with {{cssxref("appearance", "-moz-appearance: none")}} set on them are now non-replaced elements, for compatibility with other browsers ([Firefox bug 605985](https://bugzil.la/605985)).
 - Previously, an element styled with {{cssxref("display")}}: `inline-block` with a child element of type {{domxref("HTMLInputElement")}} styled with `display:block` had a wrong baseline ([Firefox bug 1330962](https://bugzil.la/1330962)). This is now fixed.

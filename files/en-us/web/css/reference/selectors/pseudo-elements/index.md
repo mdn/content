@@ -32,12 +32,12 @@ p::first-line {
 
 Double colons (`::`) are used for pseudo-elements. This distinguishes pseudo-elements from [pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) that use a single colon (`:`) in their notation. Note, browsers support single colon syntax for the original four pseudo-elements: `::before`, `::after`, `::first-line`, and `::first-letter`.
 
-Pseudo-elements do not exist independently. The element of which a pseudo-element is a part is called its _originating element_. A pseudo-element must appear after all the other components in the [complex](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#complex_selector) or [compound](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector) selector. The last element in the selector is the originating element of the pseudo-element. For example, you can select a paragraph's first line using `p::first-line` but not the first-line's children. So `p::first-line > *` is invalid.
+Pseudo-elements do not exist independently. The element of which a pseudo-element is a part is called its _originating element_. A pseudo-element must appear after all the other components in the [complex](/en-US/docs/Web/CSS/Guides/Selectors/Selector_structure#complex_selector) or [compound](/en-US/docs/Web/CSS/Guides/Selectors/Selector_structure#compound_selector) selector. The last element in the selector is the originating element of the pseudo-element. For example, you can select a paragraph's first line using `p::first-line` but not the first-line's children. So `p::first-line > *` is invalid.
 
 A pseudo-element can be selected based on the current state of the originating element. For example, `p:hover::first-line` selects the first line (pseudo-element) of a paragraph when the paragraph itself is being hovered (pseudo-class).
 
 > [!NOTE]
-> When a [selector list](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#selector_list) contains an invalid selector, the entire style block is ignored.
+> When a [selector list](/en-US/docs/Web/CSS/Guides/Selectors/Selector_structure#selector_list) contains an invalid selector, the entire style block is ignored.
 
 ## Typographic pseudo-elements
 
@@ -290,6 +290,6 @@ When using the universal selector with highlight pseudo-elements, it prevents hi
 
 - [CSS pseudo-elements](/en-US/docs/Web/CSS/Guides/Pseudo-elements) module
 - [Pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
-- [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module
+- [CSS selectors](/en-US/docs/Web/CSS/Guides/Selectors) module
 - [Learn: Pseudo-classes and pseudo-elements](/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)
 - [Inheritance changes for CSS selection styling](https://developer.chrome.com/blog/selection-styling) - Detailed explanation of the highlight pseudo-elements inheritance model changes in Chrome 134

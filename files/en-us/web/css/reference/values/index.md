@@ -33,4 +33,4 @@ sidebar: cssref
 - [CSS data types](/en-US/docs/Web/CSS/Reference/Values/Data_types)
 - [CSS value functions](/en-US/docs/Web/CSS/Reference/Values/Functions)
 - [CSS values and units](/en-US/docs/Web/CSS/CSS_values_and_units) module
-- [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax) module
+- [CSS syntax](/en-US/docs/Web/CSS/Guides/Syntax) module

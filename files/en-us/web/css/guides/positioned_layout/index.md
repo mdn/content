@@ -110,5 +110,5 @@ Like all CSS modules, this module impacts and is impacted by other modules. This
   - {{cssxref("content-position")}}
   - {{cssxref("overflow-position")}}
   - {{cssxref("self-position")}}
-- [CSS Scroll Snap](/en-US/docs/Web/CSS/CSS_scroll_snap) module
+- [CSS Scroll Snap](/en-US/docs/Web/CSS/Guides/Scroll_snap) module
   - {{glossary("Snap positions")}}

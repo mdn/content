@@ -6,7 +6,7 @@ browser-compat: css.at-rules.import
 sidebar: cssref
 ---
 
-The **`@import`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rules) is used to import style rules from other valid stylesheets.
+The **`@import`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules) is used to import style rules from other valid stylesheets.
 An `@import` rule _must_ be defined at the top of the stylesheet, before any other at-rule (except [@charset](/en-US/docs/Web/CSS/Reference/At-rules/@charset) and [@layer](/en-US/docs/Web/CSS/Reference/At-rules/@layer)) and style declarations, or it will be ignored.
 
 ## Syntax
@@ -62,7 +62,7 @@ As the `@import` at-rule is declared after the styles it is invalid and hence ig
 /* more styles */
 ```
 
-The `@import` rule is not a [nested statement](/en-US/docs/Web/CSS/CSS_syntax/Syntax#nested_statements). Therefore, it cannot be used inside [conditional group at-rules](/en-US/docs/Web/CSS/Guides/Conditional_rules#at-rules_and_descriptors).
+The `@import` rule is not a [nested statement](/en-US/docs/Web/CSS/Guides/Syntax/Introduction#nested_statements). Therefore, it cannot be used inside [conditional group at-rules](/en-US/docs/Web/CSS/Guides/Conditional_rules#at-rules_and_descriptors).
 
 So that {{glossary("user agent", "user agents")}} can avoid retrieving resources for unsupported media types, authors may specify media-dependent import conditions. These conditional imports specify comma-separated [media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using) after the URL. In the absence of any media query, the import is not conditional on the media used. Specifying `all` for the `list-of-media-queries` has the same effect.
 

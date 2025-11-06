@@ -56,7 +56,7 @@ For example, you can define a specific path of any shape you want with the {{css
 
 {{EmbedLiveSample('Motion paths in action', '100%', 220)}}
 
-In this example, we used [CSS masking](/en-US/docs/Web/CSS/Guides/Masking) and [CSS shapes](/en-US/docs/Web/CSS/CSS_shapes) to clip a container with a light pink background into a heart shape. We used a {{cssxref("basic-shape/path","path()")}} function as the value of the {{cssxref("clip-path")}} property. Its child is a `10px` by `10px` red box that is made to follow the edge of its parent. We did this by using the same {{cssxref("basic-shape")}} as the path, setting the box's {{cssxref("offset-path")}} property to the same `path()` function value. We used [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) to change the {{cssxref("offset-distance")}} from `0%` to `100%` over three seconds.
+In this example, we used [CSS masking](/en-US/docs/Web/CSS/Guides/Masking) and [CSS shapes](/en-US/docs/Web/CSS/Guides/Shapes) to clip a container with a light pink background into a heart shape. We used a {{cssxref("basic-shape/path","path()")}} function as the value of the {{cssxref("clip-path")}} property. Its child is a `10px` by `10px` red box that is made to follow the edge of its parent. We did this by using the same {{cssxref("basic-shape")}} as the path, setting the box's {{cssxref("offset-path")}} property to the same `path()` function value. We used [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) to change the {{cssxref("offset-distance")}} from `0%` to `100%` over three seconds.
 
 ## Reference
 
@@ -91,7 +91,7 @@ In this example, we used [CSS masking](/en-US/docs/Web/CSS/Guides/Masking) and [
 - {{cssxref("clip-path")}}
 - {{cssxref("clip-rule")}}
 
-[CSS shapes](/en-US/docs/Web/CSS/CSS_shapes) module
+[CSS shapes](/en-US/docs/Web/CSS/Guides/Shapes) module
 
 - {{cssxref("&lt;basic-shape&gt;")}}
 - {{cssxref("basic-shape/circle","circle()")}}

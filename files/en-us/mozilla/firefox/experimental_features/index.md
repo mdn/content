@@ -109,7 +109,7 @@ The {{cssxref("fit-content_function", "fit-content()")}} function as it applies 
 
 ### Scroll-driven animations
 
-Previously called "scroll-linked animations", a [scroll-driven animation](/en-US/docs/Web/CSS/CSS_scroll-driven_animations) depends on the scroll position of a scrollbar instead of time or some other dimension.
+Previously called "scroll-linked animations", a [scroll-driven animation](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) depends on the scroll position of a scrollbar instead of time or some other dimension.
 The {{cssxref('scroll-timeline-name')}} and {{cssxref('scroll-timeline-axis')}} properties (and the {{cssxref('scroll-timeline')}} shorthand property) allow you to specify that a particular scrollbar in a particular named container can be used as the source for a scroll-driven animation.
 The scroll timeline can then be associated with an [animation](/en-US/docs/Web/CSS/Guides/Animations) by setting the {{cssxref('animation-timeline')}} property to the name value defined using `scroll-timeline-name`.
 
@@ -133,7 +133,7 @@ The {{cssxref('timeline-scope')}}, {{cssxref('animation-range-start')}} and {{cs
 
 ### @scope at-rule
 
-The [@scope](/en-US/docs/Web/CSS/Reference/At-rules/@scope) [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rules) allows you to select specific child elements without having to overly increase the specificity of CSS selectors ([Firefox bug 1886441](https://bugzil.la/1886441)).
+The [@scope](/en-US/docs/Web/CSS/Reference/At-rules/@scope) [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules) allows you to select specific child elements without having to overly increase the specificity of CSS selectors ([Firefox bug 1886441](https://bugzil.la/1886441)).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |

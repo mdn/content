@@ -79,7 +79,7 @@ In certain cases, there is no originating "from" value for a transition. For exa
   - {{cssxref("transform-origin")}}
   - {{cssxref("transform-style")}}
 
-- [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) module
+- [CSS scroll snap](/en-US/docs/Web/CSS/Guides/Scroll_snap) module
   - {{cssxref("scroll-snap-type")}}
   - {{cssxref("scroll-padding")}}
   - {{cssxref("scroll-snap-align")}}

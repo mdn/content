@@ -6,7 +6,7 @@ page-type: listing-page
 sidebar: cssref
 ---
 
-**[CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rules) functions** are at-rule statements that represent complex rules or can invoke special data processing or calculations.
+**[CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules) functions** are at-rule statements that represent complex rules or can invoke special data processing or calculations.
 
 ## Syntax
 
@@ -58,4 +58,4 @@ The {{CSSxRef("@container")}} at-rule is used to specify styles for a containmen
 ## See also
 
 - [CSS at-rules](/en-US/docs/Web/CSS/Reference/At-rules)
-- [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax) module
+- [CSS syntax](/en-US/docs/Web/CSS/Guides/Syntax) module

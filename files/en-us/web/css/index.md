@@ -29,10 +29,10 @@ Our [learn web development core modules](/en-US/docs/Learn_web_development/Core)
 
 The [CSS reference](/en-US/docs/Web/CSS/Reference) is an exhaustive reference for seasoned Web developers, describing every property and concept of CSS, including:
 
-- The [syntax and forms of the language](/en-US/docs/Web/CSS/CSS_syntax/Syntax)
+- The [syntax and forms of the language](/en-US/docs/Web/CSS/Guides/Syntax/Introduction)
 - [Specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity), [inheritance](/en-US/docs/Web/CSS/Guides/Cascade/Inheritance), and [the cascade](/en-US/docs/Web/CSS/Guides/Cascade/Introduction)
-- [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors), including [pseudo-elements](/en-US/docs/Web/CSS/Guides/Pseudo-elements), [nesting](/en-US/docs/Web/CSS/Guides/Nesting), [scoping](/en-US/docs/Web/CSS/CSS_scoping) and [shadow parts](/en-US/docs/Web/CSS/CSS_shadow_parts)
-- [CSS at-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rules), including [media](/en-US/docs/Web/CSS/Guides/Media_queries) and [container](/en-US/docs/Web/CSS/Guides/Containment) queries
+- [CSS selectors](/en-US/docs/Web/CSS/Guides/Selectors), including [pseudo-elements](/en-US/docs/Web/CSS/Guides/Pseudo-elements), [nesting](/en-US/docs/Web/CSS/Guides/Nesting), [scoping](/en-US/docs/Web/CSS/Guides/Scoping) and [shadow parts](/en-US/docs/Web/CSS/Guides/Shadow_parts)
+- [CSS at-rules](/en-US/docs/Web/CSS/Guides/Syntax/At-rules), including [media](/en-US/docs/Web/CSS/Guides/Media_queries) and [container](/en-US/docs/Web/CSS/Guides/Containment) queries
 - [CSS values and units](/en-US/docs/Web/CSS/CSS_values_and_units) module, including [numeric data types](/en-US/docs/Web/CSS/CSS_values_and_units/Numeric_data_types), [textual data types](/en-US/docs/Web/CSS/CSS_values_and_units/Textual_data_types) and [functional notations](/en-US/docs/Web/CSS/Reference/Values/Functions)
 - [Box model](/en-US/docs/Web/CSS/Guides/Box_model/Introduction) and [margin collapse](/en-US/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
 - The [containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block)

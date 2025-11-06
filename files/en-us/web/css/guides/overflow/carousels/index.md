@@ -121,9 +121,9 @@ In addition, every even-numbered list item is given a different background-color
 
 ### Setting up scroll snapping on the list
 
-In this section, we will set an overflow value on the `<ul>` to turn it into a {{glossary("scroll container")}}, then apply [CSS scroll snapping](/en-US/docs/Web/CSS/CSS_scroll_snap) to cause the list to snap to the center of each list item as the content is scrolled.
+In this section, we will set an overflow value on the `<ul>` to turn it into a {{glossary("scroll container")}}, then apply [CSS scroll snapping](/en-US/docs/Web/CSS/Guides/Scroll_snap) to cause the list to snap to the center of each list item as the content is scrolled.
 
-An {{cssxref("overflow-x")}} value of `scroll` is set on the `<ul>` so that its content will scroll horizontally within the list, rather than the entire viewport scrolling. [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) is then used to snap to each "page" — a {{cssxref("scroll-snap-type")}} value of `x mandatory` is set to make the list into a [scroll snap container](/en-US/docs/Glossary/Scroll_snap#scroll_snap_container). The `x` keyword causes the container's [snap targets](/en-US/docs/Glossary/Scroll_snap#snap_target) to be snapped to horizontally, while the `mandatory` keyword means that the container will always snap to a snap target at the end of a scrolling action.
+An {{cssxref("overflow-x")}} value of `scroll` is set on the `<ul>` so that its content will scroll horizontally within the list, rather than the entire viewport scrolling. [CSS scroll snap](/en-US/docs/Web/CSS/Guides/Scroll_snap) is then used to snap to each "page" — a {{cssxref("scroll-snap-type")}} value of `x mandatory` is set to make the list into a [scroll snap container](/en-US/docs/Glossary/Scroll_snap#scroll_snap_container). The `x` keyword causes the container's [snap targets](/en-US/docs/Glossary/Scroll_snap#snap_target) to be snapped to horizontally, while the `mandatory` keyword means that the container will always snap to a snap target at the end of a scrolling action.
 
 ```css live-sample___first-example live-sample___first-example-step1 live-sample___first-example-step2
 ul {
@@ -553,5 +553,5 @@ Also, try resizing the screen width and you'll see that the number of list items
 
 - [CSS overflow](/en-US/docs/Web/CSS/Guides/Overflow) module
 - [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) module
-- [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) module
+- [CSS scroll snap](/en-US/docs/Web/CSS/Guides/Scroll_snap) module
 - [CSS Carousel Gallery](https://chrome.dev/carousel/) via chrome.dev (2025)

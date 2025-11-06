@@ -168,4 +168,4 @@ Scroll to see the subject element being animated.
 - {{cssxref("animation-timeline")}}
 - {{cssxref("timeline-scope")}}
 - {{cssxref("view-timeline")}}, {{cssxref("view-timeline-axis")}}, {{cssxref("view-timeline-inset")}}
-- [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations)
+- [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations)

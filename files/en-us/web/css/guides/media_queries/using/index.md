@@ -9,7 +9,7 @@ sidebar: cssref
 
 Media queries are used for the following:
 
-- To conditionally apply styles with the [CSS](/en-US/docs/Web/CSS) {{cssxref("@media")}} and {{cssxref("@import")}} [at-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rules).
+- To conditionally apply styles with the [CSS](/en-US/docs/Web/CSS) {{cssxref("@media")}} and {{cssxref("@import")}} [at-rules](/en-US/docs/Web/CSS/Guides/Syntax/At-rules).
 - To target specific media for the {{HTMLElement("style")}}, {{HTMLElement("link")}}, {{HTMLElement("source")}}, and other [HTML](/en-US/docs/Web/HTML) elements with the `media=` or `sizes="` attributes.
 - To [test and monitor media states](/en-US/docs/Web/CSS/Guides/Media_queries/Testing) using the {{domxref("Window.matchMedia()")}} and {{domxref("EventTarget.addEventListener()")}} methods.
 

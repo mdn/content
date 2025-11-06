@@ -42,7 +42,7 @@ You may already be familiar with the following pseudo-classes:
 - {{cssxref(":focus")}}: Selects an element only when it is focused (i.e., by being tabbed to via the keyboard).
 - {{cssxref(":active")}}: selects an element only when it is being activated (i.e., while it is being clicked on, or when the <kbd>Return</kbd> / <kbd>Enter</kbd> key is being pressed down in the case of a keyboard activation).
 
-[CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) provide several other pseudo-classes related to HTML forms. These provide several useful targeting conditions that you can take advantage of. We'll discuss these in more detail in the sections below, but briefly, the main ones we'll be looking at are:
+[CSS selectors](/en-US/docs/Web/CSS/Guides/Selectors) provide several other pseudo-classes related to HTML forms. These provide several useful targeting conditions that you can take advantage of. We'll discuss these in more detail in the sections below, but briefly, the main ones we'll be looking at are:
 
 - {{cssxref(':required')}} and {{cssxref(':optional')}}: Target elements that can be required (e.g., elements that support the [`required`](/en-US/docs/Web/HTML/Reference/Attributes/required) HTML attribute)), based on whether they are required or optional.
 - {{cssxref(":valid")}} and {{cssxref(":invalid")}}, and {{cssxref(":in-range")}} and {{cssxref(":out-of-range")}}: Target form controls that are valid/invalid according to form validation constraints set on them, or in-range/out-of-range.

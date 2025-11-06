@@ -90,7 +90,7 @@ The opposite also occurs. Sometimes there are no declarations defining the value
 
 ## See also
 
-- [CSS selectors module](/en-US/docs/Web/CSS/CSS_selectors)
+- [CSS selectors module](/en-US/docs/Web/CSS/Guides/Selectors)
 - [CSS pseudo-elements module](/en-US/docs/Web/CSS/Guides/Pseudo-elements)
 - [CSS paged media module](/en-US/docs/Web/CSS/Guides/Paged_media)
 - [CSS conditional rules module](/en-US/docs/Web/CSS/Guides/Conditional_rules)

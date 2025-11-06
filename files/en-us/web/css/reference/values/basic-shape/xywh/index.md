@@ -104,5 +104,5 @@ In the example below, the {{cssxref("offset-path")}} property uses the `xywh()` 
 - {{cssxref("clip-path")}} property
 - {{cssxref("offset-path")}} property
 - {{cssxref("&lt;basic-shape&gt;")}} data type
-- [CSS shapes](/en-US/docs/Web/CSS/CSS_shapes) module
-- [Guide to basic shapes](/en-US/docs/Web/CSS/CSS_shapes/Basic_shapes)
+- [CSS shapes](/en-US/docs/Web/CSS/Guides/Shapes) module
+- [Guide to basic shapes](/en-US/docs/Web/CSS/Guides/Shapes/Basic_shapes)

@@ -189,8 +189,8 @@ p {
 
 ## See also
 
-- [CSS shapes](/en-US/docs/Web/CSS/CSS_shapes)
-- [Overview of shapes](/en-US/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
+- [CSS shapes](/en-US/docs/Web/CSS/Guides/Shapes)
+- [Overview of shapes](/en-US/docs/Web/CSS/Guides/Shapes/Overview)
 - {{cssxref("&lt;basic-shape&gt;")}}
 - {{cssxref("shape-margin")}}
 - {{cssxref("shape-image-threshold")}}

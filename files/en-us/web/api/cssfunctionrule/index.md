@@ -9,7 +9,7 @@ browser-compat: api.CSSFunctionRule
 
 {{ APIRef("CSSOM") }}{{SeeCompatTable}}
 
-The **`CSSFunctionRule`** interface of the [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model) represents CSS {{cssxref("@function")}} (custom function) [at-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rules).
+The **`CSSFunctionRule`** interface of the [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model) represents CSS {{cssxref("@function")}} (custom function) [at-rules](/en-US/docs/Web/CSS/Guides/Syntax/At-rules).
 
 {{InheritanceDiagram}}
 

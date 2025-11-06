@@ -408,4 +408,4 @@ W
 ## See also
 
 - [Pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements)
-- [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module
+- [CSS selectors](/en-US/docs/Web/CSS/Guides/Selectors) module

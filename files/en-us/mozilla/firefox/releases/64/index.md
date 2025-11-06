@@ -33,7 +33,7 @@ _No changes._
 
 ### CSS
 
-- [CSS Scrollbars](/en-US/docs/Web/CSS/CSS_scrollbars_styling) spec functionality has been enabled by default ([Firefox bug 1492012](https://bugzil.la/1492012)).
+- [CSS Scrollbars](/en-US/docs/Web/CSS/Guides/Scrollbars_styling) spec functionality has been enabled by default ([Firefox bug 1492012](https://bugzil.la/1492012)).
 - Interaction Media Features implemented, including [`pointer:coarse`](/en-US/docs/Web/CSS/Reference/At-rules/@media/pointer) ([Firefox bug 1035774](https://bugzil.la/1035774)). For [`any-pointer`](/en-US/docs/Web/CSS/Reference/At-rules/@media/any-pointer) and [`any-hover`](/en-US/docs/Web/CSS/Reference/At-rules/@media/any-hover) implementation, see [Firefox bug 1483111](https://bugzil.la/1483111).
 - The [`prefers-reduced-motion`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) media feature is now supported in Firefox for Android ([Firefox bug 1478505](https://bugzil.la/1478505)).
 - CSS {{cssxref("&lt;gradient&gt;")}} values now support multi-position color stop syntax, e.g., `yellow 25%, yellow 50%` can now be written `yellow 25% 50%` ([Firefox bug 1352643](https://bugzil.la/1352643)).

@@ -67,7 +67,7 @@ clip-path: shape(
     > `<fill-rule>` is not supported in {{cssxref("offset-path")}} and using it invalidates the property.
 
 - `from <coordinate-pair>`
-  - : Defines the starting point of the first `<shape-command>` as a pair of coordinates that are measured from the top-left corner of the [reference box](/en-US/docs/Web/CSS/CSS_shapes/Basic_shapes#the_reference_box). The coordinates are specified as space-separated `<x> <y>` {{cssxref("&lt;length-percentage&gt;")}} values representing the left offset and top offset, respectively. Percentage values are relative to the width and height of the element's reference box, respectively. Add a comma after this parameter.
+  - : Defines the starting point of the first `<shape-command>` as a pair of coordinates that are measured from the top-left corner of the [reference box](/en-US/docs/Web/CSS/Guides/Shapes/Basic_shapes#the_reference_box). The coordinates are specified as space-separated `<x> <y>` {{cssxref("&lt;length-percentage&gt;")}} values representing the left offset and top offset, respectively. Percentage values are relative to the width and height of the element's reference box, respectively. Add a comma after this parameter.
 
 - `<shape-command>`
   - : Specifies a list of one or more comma-separated commands that define the shape, using syntax similar to [SVG path commands](/en-US/docs/Web/SVG/Reference/Attribute/d#path_commands). Commands include `<move-command>`, `<line-command>`, `<hv-line-command>`, `<curve-command>`, `<smooth-command>`, `<arc-command>`, and `close`. Each command's starting point is the previous command's ending point, with the first point of the shape defined by the [`from <coordinate-pair>`](#from_coordinate-pair) parameter.
@@ -321,6 +321,6 @@ body {
 
 - {{cssxref("clip-path")}}
 - {{cssxref("offset-path")}}
-- [CSS shapes](/en-US/docs/Web/CSS/CSS_shapes) module
-- [Overview of shapes](/en-US/docs/Web/CSS/CSS_shapes/Overview_of_shapes) guide
-- [Basic shapes](/en-US/docs/Web/CSS/CSS_shapes/Basic_shapes) guide
+- [CSS shapes](/en-US/docs/Web/CSS/Guides/Shapes) module
+- [Overview of shapes](/en-US/docs/Web/CSS/Guides/Shapes/Overview) guide
+- [Basic shapes](/en-US/docs/Web/CSS/Guides/Shapes/Basic_shapes) guide

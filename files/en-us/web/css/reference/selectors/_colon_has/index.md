@@ -6,7 +6,7 @@ browser-compat: css.selectors.has
 sidebar: cssref
 ---
 
-The functional **`:has()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) represents an element if any of the [relative selectors](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#relative_selector) that are passed as an argument match at least one element when anchored against this element. This pseudo-class presents a way of selecting a parent element or a previous sibling element with respect to a reference element by taking a [relative selector list](/en-US/docs/Web/CSS/Reference/Selectors/Selector_list#relative_selector_list) as an argument.
+The functional **`:has()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) represents an element if any of the [relative selectors](/en-US/docs/Web/CSS/Guides/Selectors/Selector_structure#relative_selector) that are passed as an argument match at least one element when anchored against this element. This pseudo-class presents a way of selecting a parent element or a previous sibling element with respect to a reference element by taking a [relative selector list](/en-US/docs/Web/CSS/Reference/Selectors/Selector_list#relative_selector_list) as an argument.
 
 ```css
 /* Selects an h1 heading with a
@@ -37,7 +37,7 @@ Pseudo-elements are also not valid selectors within `:has()` and pseudo-elements
 
 ### Selecting a parent element
 
-You may be looking for a "parent [combinator](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#combinators)", which allows you to go up the DOM tree and select the parent of a specific element. The `:has()` pseudo-class does that by using `parent:has(child)` (for any parent) or `parent:has(> child)` (for direct parent). This example shows how to style a `<section>` element when it contains a child with the `featured` class.
+You may be looking for a "parent [combinator](/en-US/docs/Web/CSS/Guides/Selectors/Selectors_and_combinators#combinators)", which allows you to go up the DOM tree and select the parent of a specific element. The `:has()` pseudo-class does that by using `parent:has(child)` (for any parent) or `parent:has(> child)` (for direct parent). This example shows how to style a `<section>` element when it contains a child with the `featured` class.
 
 ```html
 <section>
@@ -336,8 +336,8 @@ Constraining the inner selector with specific classes or direct child combinator
 ## See also
 
 - [`:is()`](/en-US/docs/Web/CSS/Reference/Selectors/:is), [`:where()`](/en-US/docs/Web/CSS/Reference/Selectors/:where), [`:not()`](/en-US/docs/Web/CSS/Reference/Selectors/:not)
-- [CSS selectors and combinators](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators)
-- [CSS selector structure](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure)
+- [CSS selectors and combinators](/en-US/docs/Web/CSS/Guides/Selectors/Selectors_and_combinators)
+- [CSS selector structure](/en-US/docs/Web/CSS/Guides/Selectors/Selector_structure)
 - [Selector list](/en-US/docs/Web/CSS/Reference/Selectors/Selector_list)
-- [CSS selector module](/en-US/docs/Web/CSS/CSS_selectors)
+- [CSS selector module](/en-US/docs/Web/CSS/Guides/Selectors)
 - [Selection and traversal on the DOM tree](/en-US/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree)

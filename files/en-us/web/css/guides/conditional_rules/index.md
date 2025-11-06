@@ -105,10 +105,10 @@ The CSS conditional rules module also introduces a `media()` CSS function. Curre
   - {{domxref("MediaList")}} interface
     - {{domxref("MediaList.mediaText")}} property
 
-- [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax) module
+- [CSS syntax](/en-US/docs/Web/CSS/Guides/Syntax) module
   - {{cssxref("@charset")}} declaration
   - {{cssxref("at-rule")}} term
-  - [`invalid`](/en-US/docs/Web/CSS/CSS_syntax/Error_handling) term
+  - [`invalid`](/en-US/docs/Web/CSS/Guides/Syntax/Error_handling) term
   - {{glossary("parse")}} term
   - [style rule](/en-US/docs/Web/API/CSSStyleRule) term
 

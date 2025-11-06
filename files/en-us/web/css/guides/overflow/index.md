@@ -291,7 +291,7 @@ The CSS overflow level 4 module also introduces the `block-ellipsis`, `continue`
 
 ## See also
 
-- [CSS scrollbars styling](/en-US/docs/Web/CSS/CSS_scrollbars_styling) module
-- [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) module
+- [CSS scrollbars styling](/en-US/docs/Web/CSS/Guides/Scrollbars_styling) module
+- [CSS scroll snap](/en-US/docs/Web/CSS/Guides/Scroll_snap) module
 - [CSSOM view](/en-US/docs/Web/CSS/Guides/CSSOM_view) module
 - How to [debug scrollable overflow](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/debug_scrollable_overflow/index.html)

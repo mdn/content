@@ -382,6 +382,6 @@ Since `firstClone` is a `DocumentFragment`, only its children are added to `cont
 - {{CSSXref("::part")}} and {{CSSXref("::slotted")}} CSS pseudo-elements
 - [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot) interface
 - [Using templates and slots](/en-US/docs/Web/API/Web_components/Using_templates_and_slots)
-- [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) module
+- [CSS scoping](/en-US/docs/Web/CSS/Guides/Scoping) module
 - [Declarative Shadow DOM (with html)](/en-US/docs/Web/API/Web_components/Using_shadow_DOM#declaratively_with_html) in _Using Shadow DOM_
 - [Declarative shadow DOM](https://web.dev/articles/declarative-shadow-dom) on web.dev (2023)

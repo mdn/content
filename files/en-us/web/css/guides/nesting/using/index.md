@@ -188,7 +188,7 @@ h2 {
 
 ## Compound selectors
 
-When using [compound selectors](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector) in nested CSS you **have** to use the `&` nesting selector. This is because the browser will automatically add whitespace between selectors that do not use the `&` nesting selector.
+When using [compound selectors](/en-US/docs/Web/CSS/Guides/Selectors/Selector_structure#compound_selector) in nested CSS you **have** to use the `&` nesting selector. This is because the browser will automatically add whitespace between selectors that do not use the `&` nesting selector.
 
 In order to target an element with `class="a b"` the `&` nesting selector is needed otherwise the whitespace will break the compound selector.
 
@@ -440,7 +440,7 @@ In CSS preprocessors such as [Sass](https://sass-lang.com/), it is possible to u
 > [!WARNING]
 > This is not possible in CSS nesting: when a [combinator](/en-US/docs/Learn_web_development/Core/Styling_basics/Combinators) is not used, the nested selector is treated as a [type selector](/en-US/docs/Web/CSS/Reference/Selectors/Type_selectors). Allowing concatenation would break this.
 
-In [compound selectors](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector), the type selector must come first. Writing `&Element` (a [type selector](/en-US/docs/Web/CSS/Reference/Selectors/Type_selectors)) makes the CSS selector, and the entire selector block, invalid. As the type selector must come first, the compound selector must be written as `Element&`.
+In [compound selectors](/en-US/docs/Web/CSS/Guides/Selectors/Selector_structure#compound_selector), the type selector must come first. Writing `&Element` (a [type selector](/en-US/docs/Web/CSS/Reference/Selectors/Type_selectors)) makes the CSS selector, and the entire selector block, invalid. As the type selector must come first, the compound selector must be written as `Element&`.
 
 ```css example-good
 .my-class {

@@ -6,7 +6,7 @@ browser-compat: css.at-rules.font-face
 sidebar: cssref
 ---
 
-The **`@font-face`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rules) specifies a custom font with which to display text; the font can be loaded from either a remote server or a locally-installed font on the user's own computer.
+The **`@font-face`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules) specifies a custom font with which to display text; the font can be loaded from either a remote server or a locally-installed font on the user's own computer.
 
 ## Syntax
 

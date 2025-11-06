@@ -53,7 +53,7 @@ You can generate up to four scroll buttons per scroll container, which will scro
 
 The generated buttons behave just like regular {{htmlelement("button")}} elements, including sharing their default browser styles. They are focusable, accessible, and can be activated like regular buttons. When a scroll button is pressed, the scroll container's content is scrolled in the specified direction by one "page," or approximately the dimension of the scroll container, similar to pressing <kbd>PgUp</kbd> and <kbd>PgDn</kbd> keys.
 
-The recommendation is to set up [CSS scroll snapping](/en-US/docs/Web/CSS/CSS_scroll_snap) on the scroll container and set each separate item of content you want to scroll to as a [snap target](/en-US/docs/Glossary/Scroll_snap#snap_target). This being the case, activating a scroll button will scroll the content to the snap target that is one "page" away. While the scroll buttons will work without scroll snapping, you might not get the desired effect.
+The recommendation is to set up [CSS scroll snapping](/en-US/docs/Web/CSS/Guides/Scroll_snap) on the scroll container and set each separate item of content you want to scroll to as a [snap target](/en-US/docs/Glossary/Scroll_snap#snap_target). This being the case, activating a scroll button will scroll the content to the snap target that is one "page" away. While the scroll buttons will work without scroll snapping, you might not get the desired effect.
 
 When it is not possible to scroll any further in a particular scroll button's scrolling direction, the button is automatically disabled, otherwise it is enabled. You can style the scroll buttons in their enabled and disabled states using the {{cssxref(":enabled")}} and {{cssxref(":disabled")}} pseudo-classes.
 

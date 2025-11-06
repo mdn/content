@@ -91,7 +91,7 @@ While masking provides more control and options, clipping can perform better if 
   - {{cssxref("border-image-width")}}
   - [`<repeat-style>`](/en-US/docs/Web/CSS/Reference/Properties/background-repeat#values) data type
 
-- [CSS shapes](/en-US/docs/Web/CSS/CSS_shapes) module
+- [CSS shapes](/en-US/docs/Web/CSS/Guides/Shapes) module
   - {{cssxref("&lt;basic-shape&gt;")}} data type
   - {{cssxref("basic-shape/polygon","polygon()")}} function
   - [`<shape-box>`](/en-US/docs/Web/CSS/Reference/Properties/shape-outside#shape-box) data type

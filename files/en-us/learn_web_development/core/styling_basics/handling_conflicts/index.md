@@ -339,7 +339,7 @@ The amount of specificity a selector has is measured using three different value
 > [!NOTE]
 > The universal selector ([`*`](/en-US/docs/Web/CSS/Reference/Selectors/Universal_selectors)), [combinators](/en-US/docs/Learn_web_development/Core/Styling_basics/Combinators) (`+`, `>`, `~`, ' '), and specificity adjustment selector ([`:where()`](/en-US/docs/Web/CSS/Reference/Selectors/:where)) along with its parameters, have no effect on specificity.
 
-The following table shows a few isolated examples to get you in the mood. Try going through these, and make sure you understand why they have the specificity that we have given them. We've not covered selectors in detail yet, but you can find details of each selector on the MDN [selectors reference](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators).
+The following table shows a few isolated examples to get you in the mood. Try going through these, and make sure you understand why they have the specificity that we have given them. We've not covered selectors in detail yet, but you can find details of each selector on the MDN [selectors reference](/en-US/docs/Web/CSS/Guides/Selectors/Selectors_and_combinators).
 
 | Selector                                  | Identifiers | Classes | Elements | Total specificity |
 | ----------------------------------------- | ----------- | ------- | -------- | ----------------- |

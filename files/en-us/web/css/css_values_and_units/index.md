@@ -78,7 +78,7 @@ The CSS values and units module also introduces the `calc-mix()`, `crossorigin()
 - [`<resolution>`](/en-US/docs/Web/CSS/Reference/Values/resolution)
 - [`<rounding-strategy>`](/en-US/docs/Web/CSS/Reference/Values/round#rounding-strategy) (`down`, `up`, `to-zero`)
 - [`<string>`](/en-US/docs/Web/CSS/Reference/Values/string)
-- [`<syntax>`](/en-US/docs/Web/CSS/CSS_syntax/Syntax)
+- [`<syntax>`](/en-US/docs/Web/CSS/Guides/Syntax/Introduction)
 - [`<time-percentage>`](/en-US/docs/Web/CSS/Reference/Values/time-percentage)
 - [`<time>`](/en-US/docs/Web/CSS/Reference/Values/time)
 - [`<url>`](/en-US/docs/Web/CSS/Reference/Values/url_value)
@@ -243,5 +243,5 @@ The CSS values and units module also introduces the [`<frequency>`](/en-US/docs/
 
 ## See also
 
-- [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax) module
-- [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module
+- [CSS syntax](/en-US/docs/Web/CSS/Guides/Syntax) module
+- [CSS selectors](/en-US/docs/Web/CSS/Guides/Selectors) module

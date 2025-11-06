@@ -6,7 +6,7 @@ browser-compat: css.at-rules.container
 sidebar: cssref
 ---
 
-The **`@container`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rules) is a conditional group rule that applies styles to a [containment context](/en-US/docs/Web/CSS/Guides/Containment/Container_queries#naming_containment_contexts).
+The **`@container`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules) is a conditional group rule that applies styles to a [containment context](/en-US/docs/Web/CSS/Guides/Containment/Container_queries#naming_containment_contexts).
 Style declarations are filtered by a condition and applied to the container if the condition is true.
 The condition is evaluated when the queried container size, [`<style-feature>`](#container_style_queries), or scroll-state changes.
 
@@ -217,7 +217,7 @@ Supported keywords for scroll-state container descriptors include physical and {
     ```
 
 - `snapped`
-  - : Queries whether the container is going to be snapped to a [scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) container ancestor along the given axis. Valid `snapped` values include the following keywords:
+  - : Queries whether the container is going to be snapped to a [scroll snap](/en-US/docs/Web/CSS/Guides/Scroll_snap) container ancestor along the given axis. Valid `snapped` values include the following keywords:
     - `none`
       - : The container is not a scroll [snap target](/en-US/docs/Glossary/Scroll_snap#snap_target) for its ancestor scroll container. When implementing a `snapped: none` query, containers that _are_ snap targets for the scroll container will _not_ have the `@container` styles applied, whereas non-snap targets _will_ have the styles applied.
     - `x`
@@ -417,7 +417,7 @@ Container queries can also evaluate the computed style of the container element.
 }
 ```
 
-The parameter of each `style()` is a single `<style-feature>`. A **`<style-feature>`** is a valid CSS [declaration](/en-US/docs/Web/CSS/CSS_syntax/Syntax#css_declarations), a CSS property, or a [`<custom-property-name>`](/en-US/docs/Web/CSS/Reference/Values/var#values).
+The parameter of each `style()` is a single `<style-feature>`. A **`<style-feature>`** is a valid CSS [declaration](/en-US/docs/Web/CSS/Guides/Syntax/Introduction#css_declarations), a CSS property, or a [`<custom-property-name>`](/en-US/docs/Web/CSS/Reference/Values/var#values).
 
 ```css
 @container style(--themeBackground),

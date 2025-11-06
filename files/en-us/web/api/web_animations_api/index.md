@@ -55,4 +55,4 @@ The Web Animations API adds features to {{domxref("document")}} and {{domxref("e
 - [Using the Web Animations API](/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API)
 - [Using CSS animations](/en-US/docs/Web/CSS/Guides/Animations/Using)
 - [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module
-- [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations) module
+- [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) module

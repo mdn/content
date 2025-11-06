@@ -117,7 +117,7 @@ The CSS anchor positioning module also introduces the `anchor-scope` property. C
 
 ## See also
 
-- [CSS scroll anchoring](/en-US/docs/Web/CSS/CSS_scroll_anchoring) module
+- [CSS scroll anchoring](/en-US/docs/Web/CSS/Guides/Scroll_anchoring) module
 - [Learn: CSS positioning](/en-US/docs/Learn_web_development/Core/CSS_layout/Positioning)
 - [CSS logical properties and values](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values) module
 - [Learn: Sizing items in CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Sizing)

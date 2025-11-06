@@ -414,8 +414,8 @@ Here are some more examples:
 ## See also
 
 - CSS key concepts:
-  - [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax/Syntax)
-  - [Comments](/en-US/docs/Web/CSS/CSS_syntax/Comments)
+  - [CSS syntax](/en-US/docs/Web/CSS/Guides/Syntax/Introduction)
+  - [Comments](/en-US/docs/Web/CSS/Guides/Syntax/Comments)
   - [Specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity)
   - [Inheritance](/en-US/docs/Web/CSS/Guides/Cascade/Inheritance)
   - [Box model](/en-US/docs/Web/CSS/Guides/Box_model/Introduction)

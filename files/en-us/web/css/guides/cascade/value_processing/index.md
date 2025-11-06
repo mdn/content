@@ -35,9 +35,9 @@ Before diving into the individual value stages, it's important to understand the
 - The declaration belongs to a style rule whose selector matches the element
 - The declaration is syntactically valid: the property name is recognized by the browser and the value matches the expected syntax for that property
 
-Only valid declarations become declared values. Declarations with invalid property names or invalid values get filtered out according to [CSS error handling rules](/en-US/docs/Web/CSS/CSS_syntax/Error_handling).
+Only valid declarations become declared values. Declarations with invalid property names or invalid values get filtered out according to [CSS error handling rules](/en-US/docs/Web/CSS/Guides/Syntax/Error_handling).
 
-In this example, only the {{cssxref("font-size")}} and {{cssxref("font-weight")}} declarations are processed. The [CSS parser filters out errors](/en-US/docs/Web/CSS/CSS_syntax/Error_handling#css_parser_errors), ignoring or "filtering" out the declaration with the invalid property name:
+In this example, only the {{cssxref("font-size")}} and {{cssxref("font-weight")}} declarations are processed. The [CSS parser filters out errors](/en-US/docs/Web/CSS/Guides/Syntax/Error_handling#css_parser_errors), ignoring or "filtering" out the declaration with the invalid property name:
 
 ```css
 p {
@@ -284,4 +284,4 @@ CSS 2.0 defined _computed value_ as the last step in a property's calculation. C
 
 - CSS values for controlling inheritance: [`inherit`](/en-US/docs/Web/CSS/Reference/Values/inherit), [`initial`](/en-US/docs/Web/CSS/Reference/Values/initial), [`revert`](/en-US/docs/Web/CSS/Reference/Values/revert), [`revert-layer`](/en-US/docs/Web/CSS/Reference/Values/revert-layer), and [`unset`](/en-US/docs/Web/CSS/Reference/Values/unset)
 - [CSS cascading and inheritance](/en-US/docs/Web/CSS/Guides/Cascade) module
-- [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax) module
+- [CSS syntax](/en-US/docs/Web/CSS/Guides/Syntax) module

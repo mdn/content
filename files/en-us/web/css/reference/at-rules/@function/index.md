@@ -10,7 +10,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`@function`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rules) enables defining [CSS custom functions](/en-US/docs/Web/CSS/Guides/Custom_functions_and_mixins/Using_custom_functions). Once defined, a custom function can be called using the {{cssxref("&lt;dashed-function>")}} syntax (for example, `--my-function(30px, 3)`) within any property value.
+The **`@function`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules) enables defining [CSS custom functions](/en-US/docs/Web/CSS/Guides/Custom_functions_and_mixins/Using_custom_functions). Once defined, a custom function can be called using the {{cssxref("&lt;dashed-function>")}} syntax (for example, `--my-function(30px, 3)`) within any property value.
 
 ## Syntax
 

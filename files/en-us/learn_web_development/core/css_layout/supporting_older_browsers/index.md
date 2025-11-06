@@ -62,7 +62,7 @@ It doesn't make commercial sense to spend time trying to give everyone an identi
 
 CSS specifications contain information that explain what the browser does when two similar features, such as layout methods, are applied to the same item. For example, they define what happens if an item is floated and is also a grid item and part of a CSS grid container. There is also a definition for what happens when an element has both {{cssxref("margin-top")}} and {{cssxref("margin-block-start")}} properties set.
 
-When a browser doesn't recognize a new feature, it discards the declaration as invalid [without throwing an error](/en-US/docs/Web/CSS/CSS_syntax/Error_handling#css_parser_errors). Because browsers discard CSS properties and values they don't support, both old and new values can coexist in the same ruleset. Just make sure to declare the old value before the new value so that, when supported, the new value overwrites the old value (the fallback).
+When a browser doesn't recognize a new feature, it discards the declaration as invalid [without throwing an error](/en-US/docs/Web/CSS/Guides/Syntax/Error_handling#css_parser_errors). Because browsers discard CSS properties and values they don't support, both old and new values can coexist in the same ruleset. Just make sure to declare the old value before the new value so that, when supported, the new value overwrites the old value (the fallback).
 
 For example, most browsers support the two-value syntax of the {{cssxref("display")}} property. If a browser doesn't, it will use the older, single-value syntax.
 
@@ -73,7 +73,7 @@ For example, most browsers support the two-value syntax of the {{cssxref("displa
 }
 ```
 
-Similarly, this [error-handling](/en-US/docs/Web/CSS/CSS_syntax/Error_handling#vendor_prefixes) ensures old CSS code bases continue to work even if legacy {{glossary("Vendor_Prefix", "vendor-prefixed")}} features are no longer supported. While vendor prefixing is no longer commonly used, if you must include a vendor-prefixed property or value, make sure to declare the prefixed value before the standard value so that, when supported, the new value overwrites the fallback value.
+Similarly, this [error-handling](/en-US/docs/Web/CSS/Guides/Syntax/Error_handling#vendor_prefixes) ensures old CSS code bases continue to work even if legacy {{glossary("Vendor_Prefix", "vendor-prefixed")}} features are no longer supported. While vendor prefixing is no longer commonly used, if you must include a vendor-prefixed property or value, make sure to declare the prefixed value before the standard value so that, when supported, the new value overwrites the fallback value.
 
 ### Using new selectors
 
@@ -157,6 +157,6 @@ Now that you have worked through our articles on CSS layout, it's time to test y
 ## See also
 
 - [`@supports`](/en-US/docs/Web/CSS/Reference/At-rules/@supports) at-rule
-- [CSS at-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rules)
+- [CSS at-rules](/en-US/docs/Web/CSS/Guides/Syntax/At-rules)
 - [Using feature queries](/en-US/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries)
 - [CSS conditional rules](/en-US/docs/Web/CSS/Guides/Conditional_rules) module

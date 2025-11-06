@@ -151,4 +151,4 @@ The square animates as you scroll, and the animation duration when using `scroll
 - [`animation-timeline`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline)
 - [`scroll-timeline-axis`](/en-US/docs/Web/CSS/Reference/Properties/scroll-timeline-axis), [`scroll-timeline-name`](/en-US/docs/Web/CSS/Reference/Properties/scroll-timeline-name)
 - {{cssxref("timeline-scope")}}
-- [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations)
+- [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations)

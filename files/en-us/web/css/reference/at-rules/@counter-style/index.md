@@ -6,7 +6,7 @@ browser-compat: css.at-rules.counter-style
 sidebar: cssref
 ---
 
-The **`@counter-style`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rules) lets you extend predefined list styles and define your own counter styles that are not part of the predefined set of styles. The `@counter-style` rule contains [descriptors](#descriptors) defining how the counter value is converted into a string representation.
+The **`@counter-style`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules) lets you extend predefined list styles and define your own counter styles that are not part of the predefined set of styles. The `@counter-style` rule contains [descriptors](#descriptors) defining how the counter value is converted into a string representation.
 
 While CSS provides many useful predefined counter styles, the `@counter-style` at-rule offers an open-ended method for creating counters. This at-rule caters to the needs of worldwide typography by allowing authors to define their own counter styles when the predefined styles don't fit their requirements.
 

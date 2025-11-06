@@ -8,7 +8,7 @@ sidebar: learnsidebar
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Fixing_blog_styles", "Learn_web_development/Core/Styling_basics/Test_your_skills/Values", "Learn_web_development/Core/Styling_basics")}}
 
-CSS rules contain [declarations](/en-US/docs/Web/CSS/CSS_syntax/Syntax#css_declarations), which in turn are composed of properties and values.
+CSS rules contain [declarations](/en-US/docs/Web/CSS/Guides/Syntax/Introduction#css_declarations), which in turn are composed of properties and values.
 Each property used in CSS has a **value type** that describes what kind of values it is allowed to have.
 In this lesson, we will take a look at some of the most frequently used value types, what they are, and how they work.
 

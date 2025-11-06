@@ -116,7 +116,7 @@ For reference, this image shows the same div as above, but with the user's syste
 ## See also
 
 - [CSS overflow](/en-US/docs/Web/CSS/Guides/Overflow) module
-- [CSS scrollbars styling](/en-US/docs/Web/CSS/CSS_scrollbars_styling) module
+- [CSS scrollbars styling](/en-US/docs/Web/CSS/Guides/Scrollbars_styling) module
 - {{CSSxRef("overflow")}}
 - {{CSSxRef("scrollbar-width")}}
 - {{CSSxRef("scrollbar-color")}}

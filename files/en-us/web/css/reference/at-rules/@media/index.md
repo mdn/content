@@ -6,7 +6,7 @@ browser-compat: css.at-rules.media
 sidebar: cssref
 ---
 
-The **`@media`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rules) can be used to apply part of a style sheet based on the result of one or more [media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using). With it, you specify a media query and a block of CSS to apply to the document if and only if the media query matches the device on which the content is being used.
+The **`@media`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules) can be used to apply part of a style sheet based on the result of one or more [media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using). With it, you specify a media query and a block of CSS to apply to the document if and only if the media query matches the device on which the content is being used.
 
 > [!NOTE]
 > In JavaScript, the rules created using `@media` can be accessed with the {{domxref("CSSMediaRule")}} CSS object model interface.

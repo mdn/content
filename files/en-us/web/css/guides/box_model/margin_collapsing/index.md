@@ -77,9 +77,9 @@ p {
 ## See also
 
 - CSS key concepts:
-  - [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax/Syntax)
-  - [At-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rules)
-  - [Comments](/en-US/docs/Web/CSS/CSS_syntax/Comments)
+  - [CSS syntax](/en-US/docs/Web/CSS/Guides/Syntax/Introduction)
+  - [At-rules](/en-US/docs/Web/CSS/Guides/Syntax/At-rules)
+  - [Comments](/en-US/docs/Web/CSS/Guides/Syntax/Comments)
   - [Specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity)
   - [Inheritance](/en-US/docs/Web/CSS/Guides/Cascade/Inheritance)
   - [Box model](/en-US/docs/Web/CSS/Guides/Box_model/Introduction)

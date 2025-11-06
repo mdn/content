@@ -100,14 +100,14 @@ We can see here another border around the word "emphasized text".
 ## See also
 
 - CSS values for controlling inheritance: [`inherit`](/en-US/docs/Web/CSS/Reference/Values/inherit), [`initial`](/en-US/docs/Web/CSS/Reference/Values/initial), [`revert`](/en-US/docs/Web/CSS/Reference/Values/revert), [`revert-layer`](/en-US/docs/Web/CSS/Reference/Values/revert-layer), and [`unset`](/en-US/docs/Web/CSS/Reference/Values/unset)
-- [CSS error handling](/en-US/docs/Web/CSS/CSS_syntax/Error_handling)
+- [CSS error handling](/en-US/docs/Web/CSS/Guides/Syntax/Error_handling)
 - [Introducing the CSS cascade](/en-US/docs/Web/CSS/Guides/Cascade/Introduction)
 - [Learn: Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - [Learn: cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
 - [CSS cascading and inheritance](/en-US/docs/Web/CSS/Guides/Cascade) module
-- [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax/Syntax) guide
-- [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax) module
-- [At-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rules)
+- [CSS syntax](/en-US/docs/Web/CSS/Guides/Syntax/Introduction) guide
+- [CSS syntax](/en-US/docs/Web/CSS/Guides/Syntax) module
+- [At-rules](/en-US/docs/Web/CSS/Guides/Syntax/At-rules)
 - [Initial](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#initial_value), [computed](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#computed_value), [used](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#used_value), and [actual](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#actual_value) values
 - [Value definition syntax](/en-US/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
 - [CSS nesting module](/en-US/docs/Web/CSS/Guides/Nesting)

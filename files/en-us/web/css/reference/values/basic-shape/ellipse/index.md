@@ -155,4 +155,4 @@ body {
 ## See also
 
 - Properties that use this data type: {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}
-- [Guide to Basic Shapes](/en-US/docs/Web/CSS/CSS_shapes/Basic_shapes)
+- [Guide to Basic Shapes](/en-US/docs/Web/CSS/Guides/Shapes/Basic_shapes)

@@ -69,13 +69,13 @@ The specification also defines the `::details-content` and `::search-text` pseud
   - {{cssxref("::scroll-marker-group")}}
   - {{cssxref(":target-current")}}
 
-- [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) module
+- [CSS scoping](/en-US/docs/Web/CSS/Guides/Scoping) module
   - {{CSSXref(":host")}}
   - {{CSSXref(":host_function", ":host()")}}
   - {{CSSXref(":host-context", ":host-context()")}}
   - {{CSSXref("::slotted", "::slotted()")}}
 
-- [CSS shadow parts](/en-US/docs/Web/CSS/CSS_shadow_parts) module
+- [CSS shadow parts](/en-US/docs/Web/CSS/Guides/Shadow_parts) module
   - {{CSSXref("::part")}}
 
 - [CSS view transitions](/en-US/docs/Web/CSS/CSS_view_transitions) module
@@ -85,9 +85,9 @@ The specification also defines the `::details-content` and `::search-text` pseud
   - {{cssxref("::view-transition-new()")}} {{Experimental_Inline}}
   - {{cssxref("::view-transition-old()")}} {{Experimental_Inline}}
 
-- [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors)
+- [CSS selectors](/en-US/docs/Web/CSS/Guides/Selectors)
   - [Attribute selectors](/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors)
-  - [Combinators](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#combinators)
+  - [Combinators](/en-US/docs/Web/CSS/Guides/Selectors/Selectors_and_combinators#combinators)
   - [Class selectors](/en-US/docs/Web/CSS/Reference/Selectors/Class_selectors)
   - [ID selectors](/en-US/docs/Web/CSS/Reference/Selectors/ID_selectors)
   - [Type selectors](/en-US/docs/Web/CSS/Reference/Selectors/Type_selectors)
@@ -114,8 +114,8 @@ The specification also defines the `::details-content` and `::search-text` pseud
 ## See also
 
 - [Specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity)
-- [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module
-- [CSS shadow-parts](/en-US/docs/Web/CSS/CSS_shadow_parts) module
+- [CSS selectors](/en-US/docs/Web/CSS/Guides/Selectors) module
+- [CSS shadow-parts](/en-US/docs/Web/CSS/Guides/Shadow_parts) module
 - [CSS generated content](/en-US/docs/Web/CSS/Guides/Generated_content) module
 - [CSS positioned layout](/en-US/docs/Web/CSS/Guides/Positioned_layout) module
 - [CSS custom highlight API](/en-US/docs/Web/API/CSS_Custom_Highlight_API)

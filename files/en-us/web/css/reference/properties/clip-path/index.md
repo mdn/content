@@ -140,13 +140,13 @@ The `clip-path` property is specified as one or a combination of the values list
 - `<geometry-box>`
   - : If specified in combination with a `<basic-shape>`, this value defines the reference box for the basic shape. If specified by itself, it causes the edges of the specified box, including any corner shaping (such as a {{cssxref("border-radius")}}), to be the clipping path. The geometry box can be one of the following values:
     - `margin-box`
-      - : Uses the [margin box](/en-US/docs/Web/CSS/CSS_shapes/From_box_values#margin-box) as the reference box.
+      - : Uses the [margin box](/en-US/docs/Web/CSS/Guides/Shapes/From_box_values#margin-box) as the reference box.
     - `border-box`
-      - : Uses the [border box](/en-US/docs/Web/CSS/CSS_shapes/From_box_values#border-box) as the reference box.
+      - : Uses the [border box](/en-US/docs/Web/CSS/Guides/Shapes/From_box_values#border-box) as the reference box.
     - `padding-box`
-      - : Uses the [padding box](/en-US/docs/Web/CSS/CSS_shapes/From_box_values#padding-box) as the reference box.
+      - : Uses the [padding box](/en-US/docs/Web/CSS/Guides/Shapes/From_box_values#padding-box) as the reference box.
     - `content-box`
-      - : Uses the [content box](/en-US/docs/Web/CSS/CSS_shapes/From_box_values#content-box) as the reference box.
+      - : Uses the [content box](/en-US/docs/Web/CSS/Guides/Shapes/From_box_values#content-box) as the reference box.
     - `fill-box`
       - : Uses the object bounding box as the reference box.
     - `stroke-box`

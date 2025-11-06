@@ -9,7 +9,7 @@ sidebar: cssref
 
 The **cascade** is an algorithm that defines how user agents combine property values originating from different sources. The cascade defines the origin and layer that takes precedence when declarations in more than one [origin](#origin_types), [cascade layer](/en-US/docs/Web/CSS/Reference/At-rules/@layer), or {{CSSxRef("@scope")}} block set a value for a property on an element.
 
-The cascade lies at the core of CSS, as emphasized by the name: _**Cascading**_ Style Sheets. When a [selector](/en-US/docs/Web/CSS/CSS_selectors) matches an element, the property value from the origin with the highest precedence gets applied, even if the selector from a lower precedence origin or layer has greater [specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity).
+The cascade lies at the core of CSS, as emphasized by the name: _**Cascading**_ Style Sheets. When a [selector](/en-US/docs/Web/CSS/Guides/Selectors) matches an element, the property value from the origin with the highest precedence gets applied, even if the selector from a lower precedence origin or layer has greater [specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity).
 
 This article explains what the cascade is and the order in which {{Glossary("CSS")}} [declarations](/en-US/docs/Web/API/CSSStyleDeclaration) cascade, covering cascade layers and origin type. Understanding origin precedence is key to understanding the cascade.
 
@@ -337,7 +337,7 @@ Only CSS property/value pair declarations participate in the cascade. CSS at-rul
 
 ### At-rules
 
-CSS [at-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rules) containing entities other than declarations, such as a {{ cssxref("@font-face")}} rule containing _descriptors_, don't participate in the cascade.
+CSS [at-rules](/en-US/docs/Web/CSS/Guides/Syntax/At-rules) containing entities other than declarations, such as a {{ cssxref("@font-face")}} rule containing _descriptors_, don't participate in the cascade.
 
 For the most part, the properties and descriptors defined in at-rules don't participate in the cascade. Only at-rules as a whole participate in the cascade. For example, within a `@font-face` rule, font names are identified by [`font-family`](/en-US/docs/Web/CSS/Reference/At-rules/@font-face/font-family) descriptors. If several `@font-face` rules with the same descriptor are defined, only the most appropriate `@font-face`, as a whole, is considered. If more than one are identically appropriate, the entire `@font-face` declarations are compared using steps 1, 2, and 4 of the algorithm (there is no specificity when it comes to at-rules).
 
@@ -418,8 +418,8 @@ After your content has finished altering styles, it may find itself in a situati
 - [Learn: Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - [Learn: cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
 - [CSS cascading and inheritance](/en-US/docs/Web/CSS/Guides/Cascade) module
-- [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax/Syntax)
+- [CSS syntax](/en-US/docs/Web/CSS/Guides/Syntax/Introduction)
 - [Specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity)
 - [Inheritance](/en-US/docs/Web/CSS/Guides/Cascade/Inheritance)
-- [At-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rules)
+- [At-rules](/en-US/docs/Web/CSS/Guides/Syntax/At-rules)
 - [Initial](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#initial_value), [computed](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#computed_value), [used](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#used_value), and [actual](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#actual_value) values

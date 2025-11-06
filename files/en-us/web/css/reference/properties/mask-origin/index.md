@@ -37,11 +37,11 @@ mask-origin: unset;
 The `mask-origin` property is a comma-separated list of `<coord-box>` keyword values, including:
 
 - `content-box`
-  - : The position is relative to the [content box](/en-US/docs/Web/CSS/CSS_shapes/From_box_values#content-box).
+  - : The position is relative to the [content box](/en-US/docs/Web/CSS/Guides/Shapes/From_box_values#content-box).
 - `padding-box`
-  - : The position is relative to the [padding box](/en-US/docs/Web/CSS/CSS_shapes/From_box_values#padding-box).
+  - : The position is relative to the [padding box](/en-US/docs/Web/CSS/Guides/Shapes/From_box_values#padding-box).
 - `border-box`
-  - : The position is relative to the [border box](/en-US/docs/Web/CSS/CSS_shapes/From_box_values#border-box).
+  - : The position is relative to the [border box](/en-US/docs/Web/CSS/Guides/Shapes/From_box_values#border-box).
 - `fill-box`
   - : The position is relative to the object bounding box.
 - `stroke-box`

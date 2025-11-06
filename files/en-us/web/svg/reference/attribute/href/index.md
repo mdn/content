@@ -215,7 +215,7 @@ For {{SVGElement("linearGradient")}} or {{SVGElement("radialGradient")}}, `href`
 
 ### mpath
 
-For {{SVGElement("mpath")}}, `href` defines a URL referring to the {{SVGElement("path")}} element or [basic shape](/en-US/docs/Web/CSS/CSS_shapes/Basic_shapes) which defines the motion path.
+For {{SVGElement("mpath")}}, `href` defines a URL referring to the {{SVGElement("path")}} element or [basic shape](/en-US/docs/Web/CSS/Guides/Shapes/Basic_shapes) which defines the motion path.
 
 <table class="properties">
   <tbody>
@@ -290,7 +290,7 @@ For {{SVGElement("script")}}, `href` defines a URL referring to an external reso
 
 ### textPath
 
-For {{SVGElement("textPath")}}, `href` defines a URL referring to the {{SVGElement("path")}} element or [basic shape](/en-US/docs/Web/CSS/CSS_shapes/Basic_shapes) onto which the text will be rendered if no {{SVGAttr("path")}} attribute is provided. On the {{SVGElement("textPath")}} element, the `href` attribute is animatable.
+For {{SVGElement("textPath")}}, `href` defines a URL referring to the {{SVGElement("path")}} element or [basic shape](/en-US/docs/Web/CSS/Guides/Shapes/Basic_shapes) onto which the text will be rendered if no {{SVGAttr("path")}} attribute is provided. On the {{SVGElement("textPath")}} element, the `href` attribute is animatable.
 
 <table class="properties">
   <tbody>

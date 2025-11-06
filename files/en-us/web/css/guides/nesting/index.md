@@ -29,7 +29,7 @@ CSS nesting helps with the readability, modularity, and maintainability of CSS s
 
 ## Related concepts
 
-- [Selectors and combinators](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators)
+- [Selectors and combinators](/en-US/docs/Web/CSS/Guides/Selectors/Selectors_and_combinators)
 - [Pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
 - [CSS preprocessor](/en-US/docs/Glossary/CSS_preprocessor)
 
@@ -41,4 +41,4 @@ CSS nesting helps with the readability, modularity, and maintainability of CSS s
 
 - [Specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity)
 - [CSS cascading and inheritance module](/en-US/docs/Web/CSS/Guides/Cascade)
-- [CSS selectors module](/en-US/docs/Web/CSS/CSS_selectors)
+- [CSS selectors module](/en-US/docs/Web/CSS/Guides/Selectors)

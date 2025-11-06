@@ -245,8 +245,8 @@ See [Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/H
 
 ## See also
 
-- [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax/Syntax)
-- [At-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rules)
+- [CSS syntax](/en-US/docs/Web/CSS/Guides/Syntax/Introduction)
+- [At-rules](/en-US/docs/Web/CSS/Guides/Syntax/At-rules)
 - [Specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity)
 - [Inheritance](/en-US/docs/Web/CSS/Guides/Cascade/Inheritance)
 - [Introducing the CSS Cascade](/en-US/docs/Web/CSS/Guides/Cascade/Introduction)
