@@ -34,12 +34,12 @@ The CSS box model module defines physical (or "page relative") properties such a
 
 ### Data types
 
-- [`<box-edge>`](/en-US/docs/Web/CSS/box-edge)
-  - [`<visual-box>`](/en-US/docs/Web/CSS/box-edge#visual-box)
-  - [`<layout-box>`](/en-US/docs/Web/CSS/box-edge#layout-box)
-  - [`<paint-box>`](/en-US/docs/Web/CSS/box-edge#paint-box)
-  - [`<coord-box>`](/en-US/docs/Web/CSS/box-edge#coord-box)
-  - [`<geometry-box>`](/en-US/docs/Web/CSS/box-edge#geometry-box)
+- [`<box-edge>`](/en-US/docs/Web/CSS/Reference/Values/box-edge)
+  - [`<visual-box>`](/en-US/docs/Web/CSS/Reference/Values/box-edge#visual-box)
+  - [`<layout-box>`](/en-US/docs/Web/CSS/Reference/Values/box-edge#layout-box)
+  - [`<paint-box>`](/en-US/docs/Web/CSS/Reference/Values/box-edge#paint-box)
+  - [`<coord-box>`](/en-US/docs/Web/CSS/Reference/Values/box-edge#coord-box)
+  - [`<geometry-box>`](/en-US/docs/Web/CSS/Reference/Values/box-edge#geometry-box)
 
 ## Guides
 

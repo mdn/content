@@ -30,7 +30,7 @@ sidebar: firefox
 - {{ cssxref("::before") }} and {{ cssxref("::after") }} updated to CSS 2.1
   - : The `::before` and `::after` pseudo-elements have been updated to full CSS 2.1 support, adding support for the `position`, `float`, `list-style-*`, and some `display` properties.
 - `ch` units for length
-  - : The `ch` unit can now be used anywhere that accepts a [length](/en-US/docs/Web/CSS/length). `1ch` is the width of the "0" (zero) character.
+  - : The `ch` unit can now be used anywhere that accepts a [length](/en-US/docs/Web/CSS/Reference/Values/length). `1ch` is the width of the "0" (zero) character.
 - {{ cssxref("opacity") }}
   - : The `-moz-opacity` Mozilla extension to CSS has been removed in favor of the standard `opacity` property.
 - {{ cssxref("text-shadow") }}

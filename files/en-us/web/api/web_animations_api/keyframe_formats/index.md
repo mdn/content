@@ -129,7 +129,7 @@ The following special attributes may also be specified:
 - offset
   - : The offset of the keyframe specified as a number between `0.0` and `1.0` inclusive or `null`. This is equivalent to specifying start and end states in percentages in CSS stylesheets using `@keyframes`. If this value is `null` or missing, the keyframe will be evenly spaced between adjacent keyframes.
 - easing
-  - : The [easing function](/en-US/docs/Web/CSS/easing-function) used from this keyframe until the next keyframe in the series.
+  - : The [easing function](/en-US/docs/Web/CSS/Reference/Values/easing-function) used from this keyframe until the next keyframe in the series.
 - composite
   - : The {{domxref("KeyframeEffect.composite")}} operation used to combine the values specified in this keyframe with the underlying value. This will be `auto` if the composite operation specified on the effect is being used.
 

@@ -61,7 +61,7 @@ li {
 <details>
 <summary>Click here to show the solution</summary>
 
-By using [a color conversion tool](https://convertingcolors.com/hex-color-86DEFA.html), you should be equipped to use different [color functions](/en-US/docs/Web/CSS/color_value#syntax) to define the same color in different ways:
+By using [a color conversion tool](https://convertingcolors.com/hex-color-86DEFA.html), you should be equipped to use different [color functions](/en-US/docs/Web/CSS/Reference/Values/color_value#syntax) to define the same color in different ways:
 
 ```css
 .hex {

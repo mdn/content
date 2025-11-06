@@ -9,7 +9,7 @@ browser-compat:
 sidebar: htmlsidebar
 ---
 
-{{HTMLElement("input")}} elements of type **`color`** provide a user interface element that lets a user specify a color, either by using a visual color picker interface or by entering the color into a text field in a [CSS color value](/en-US/docs/Web/CSS/color_value) format.
+{{HTMLElement("input")}} elements of type **`color`** provide a user interface element that lets a user specify a color, either by using a visual color picker interface or by entering the color into a text field in a [CSS color value](/en-US/docs/Web/CSS/Reference/Values/color_value) format.
 
 The element's presentation may vary substantially from one browser and/or platform to another—it might be a basic textual input that automatically validates to ensure that the color information is entered in the proper format, or a platform-standard color picker, or some kind of custom color picker window.
 
@@ -50,7 +50,7 @@ input {
 
 ## Value
 
-A [CSS color value](/en-US/docs/Web/CSS/color_value).
+A [CSS color value](/en-US/docs/Web/CSS/Reference/Values/color_value).
 
 > [!NOTE]
 > Historically, only basic hexadecimal colors (without alpha channel) were allowed. Now, any CSS color format, including named colors, functional notations, and hexadecimal colors with an alpha channel, can be used. The default value is `#000000` (black) if a `value` is omitted or is invalid.
@@ -64,7 +64,7 @@ In addition to the [global attribute](/en-US/docs/Web/HTML/Reference/Global_attr
 
 - `colorspace` {{experimental_inline}}
   - : Defines the {{glossary("color space")}} for the color and hints at the desired user interface for the color picker widget. Possible {{Glossary("enumerated")}} values are:
-    - `"limited-srgb"`: The color is in the {{glossary("RGB", "sRGB")}} color space. This includes [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb), [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl), [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb), and {{cssxref("hex-color")}} values. The color value is limited to 8-bits per `r`, `g`, and `b` component. This is the default.
+    - `"limited-srgb"`: The color is in the {{glossary("RGB", "sRGB")}} color space. This includes [`rgb()`](/en-US/docs/Web/CSS/Reference/Values/color_value/rgb), [`hsl()`](/en-US/docs/Web/CSS/Reference/Values/color_value/hsl), [`hwb()`](/en-US/docs/Web/CSS/Reference/Values/color_value/hwb), and {{cssxref("hex-color")}} values. The color value is limited to 8-bits per `r`, `g`, and `b` component. This is the default.
     - `"display-p3"`: The [Display P3 color space](/en-US/docs/Glossary/Color_space#display-p3), e.g., `color(display-p3 1.84 -0.19 0.72 / 0.6)`
 
 ## Using color inputs

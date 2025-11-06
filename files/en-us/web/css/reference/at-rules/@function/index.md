@@ -25,11 +25,11 @@ The **`@function`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS
 The different parts of the `@function` syntax are as follows:
 
 - `--function-name`
-  - : The identifying name of the function, a [`<dashed-ident>`](/en-US/docs/Web/CSS/dashed-ident) that starts with `--` and is followed by a valid, user-defined identifier. It is case-sensitive.
+  - : The identifying name of the function, a [`<dashed-ident>`](/en-US/docs/Web/CSS/Reference/Values/dashed-ident) that starts with `--` and is followed by a valid, user-defined identifier. It is case-sensitive.
 - `<function-parameter>#?` {{optional_inline}}
   - : Zero or more function parameter definitions. Multiple parameter definitions are separated by commas. Each parameter consists of:
     - `--param-name`
-      - : A [CSS custom property](/en-US/docs/Web/CSS/Reference/Properties/--*) name to identify the parameter, a [`<dashed-ident>`](/en-US/docs/Web/CSS/dashed-ident) that starts with `--` and is followed by a valid, user-defined identifier. It is case-sensitive. Function parameters can be considered custom properties that are locally scoped to the function body.
+      - : A [CSS custom property](/en-US/docs/Web/CSS/Reference/Properties/--*) name to identify the parameter, a [`<dashed-ident>`](/en-US/docs/Web/CSS/Reference/Values/dashed-ident) that starts with `--` and is followed by a valid, user-defined identifier. It is case-sensitive. Function parameters can be considered custom properties that are locally scoped to the function body.
     - `<css-type>` {{optional_inline}}
       - : A CSS data type or a {{cssxref("type()")}} function that defines the accepted data type(s) for the parameter. If this is not specified, any data type will be valid for the parameter (the same as specifying `type(*)`).
     - `<default-value>` {{optional_inline}}
@@ -58,7 +58,7 @@ A typical CSS function looks like this:
 }
 ```
 
-The function has a name of `--transparent` and takes two custom properties as parameters, `--color` and `--alpha`, which can be used locally inside the function body. The body contains a single line, which is a `result` descriptor that defines the value returned by the function. The value of the `result` descriptor uses [CSS relative color syntax](/en-US/docs/Web/CSS/CSS_colors/Relative_colors) to convert the input `--color` value into an [`oklch()`](/en-US/docs/Web/CSS/color_value/oklch) color with the alpha channel value specified in the input `--alpha` value.
+The function has a name of `--transparent` and takes two custom properties as parameters, `--color` and `--alpha`, which can be used locally inside the function body. The body contains a single line, which is a `result` descriptor that defines the value returned by the function. The value of the `result` descriptor uses [CSS relative color syntax](/en-US/docs/Web/CSS/CSS_colors/Relative_colors) to convert the input `--color` value into an [`oklch()`](/en-US/docs/Web/CSS/Reference/Values/color_value/oklch) color with the alpha channel value specified in the input `--alpha` value.
 
 You can then call this function anywhere you want to produce a semi-transparent version of an existing color, for example:
 
@@ -312,6 +312,6 @@ p {
 
 - [CSS custom properties](/en-US/docs/Web/CSS/Reference/Properties/--*)
 - {{cssxref("&lt;dashed-function>")}} data type
-- [`type()`](/en-US/docs/Web/CSS/type) function
+- [`type()`](/en-US/docs/Web/CSS/Reference/Values/type) function
 - [Using CSS custom functions](/en-US/docs/Web/CSS/CSS_custom_functions_and_mixins/Using_custom_functions)
 - [CSS custom functions and mixins](/en-US/docs/Web/CSS/CSS_custom_functions_and_mixins) module

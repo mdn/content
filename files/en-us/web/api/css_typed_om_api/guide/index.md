@@ -122,9 +122,9 @@ for (const value of ofInterest) {
 
 {{EmbedLiveSample(".get_method_custom_properties", 120, 300)}}
 
-We included {{cssxref('border-left-color')}} to demonstrate that, had we included all the properties, every value that defaults to [`currentColor`](/en-US/docs/Web/CSS/color_value) (including {{cssxref('caret-color')}}, {{cssxref('outline-color')}}, {{cssxref('text-decoration-color')}}, {{cssxref('column-rule-color')}}, etc.) would return `rgb(255 0 0)`. The link has inherited `font-weight: bold;` from the paragraph's styles, listing it as `font-weight: 700`. Custom properties, like our `--color: red`, are properties. As such, they are accessible via `get()`.
+We included {{cssxref('border-left-color')}} to demonstrate that, had we included all the properties, every value that defaults to [`currentColor`](/en-US/docs/Web/CSS/Reference/Values/color_value) (including {{cssxref('caret-color')}}, {{cssxref('outline-color')}}, {{cssxref('text-decoration-color')}}, {{cssxref('column-rule-color')}}, etc.) would return `rgb(255 0 0)`. The link has inherited `font-weight: bold;` from the paragraph's styles, listing it as `font-weight: 700`. Custom properties, like our `--color: red`, are properties. As such, they are accessible via `get()`.
 
-You'll note that custom properties retain the value as written in the stylesheet, whereas computed styles will be listed as the computed value — {{cssxref('color')}} was listed as an [`rgb()`](/en-US/docs/Web/CSS/color_value) value and the {{cssxref('font-weight')}} returned was `700` even though we use a [named color](/en-US/docs/Web/CSS/named-color) and the `bold` keyword.
+You'll note that custom properties retain the value as written in the stylesheet, whereas computed styles will be listed as the computed value — {{cssxref('color')}} was listed as an [`rgb()`](/en-US/docs/Web/CSS/Reference/Values/color_value) value and the {{cssxref('font-weight')}} returned was `700` even though we use a [named color](/en-US/docs/Web/CSS/Reference/Values/named-color) and the `bold` keyword.
 
 ### CSSUnitValue and CSSKeywordValue
 
@@ -231,8 +231,8 @@ Had the `width` or `height` been defined in a `<length>` or `<percent>`, the [`C
 
 There are other types available:
 
-- An [`<image>`](/en-US/docs/Web/CSS/image) will return a {{domxref('CSSImageValue')}}.
-- A [`<color>`](/en-US/docs/Web/CSS/color_value) would return a {{domxref('CSSStyleValue')}}.
+- An [`<image>`](/en-US/docs/Web/CSS/Reference/Values/image) will return a {{domxref('CSSImageValue')}}.
+- A [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value) would return a {{domxref('CSSStyleValue')}}.
 - A {{cssxref('transform')}} returns a `CSSTransformValue`.
 - A [custom property](/en-US/docs/Web/CSS/Reference/Properties/--*) returns a {{domxref('CSSUnparsedValue')}}.
 
@@ -318,7 +318,7 @@ console.log(parsedUnit.value); // 1.2
 
 ### CSSMathSum
 
-Although the [`<button>`](/en-US/docs/Web/HTML/Reference/Elements/button) element is an inline element by default, we've added [`display: inline-block;`](/en-US/docs/Web/CSS/CSS_display) to enable sizing. In our CSS we have `width: calc(30% + 20px);`, which is a [`calc()`](/en-US/docs/Web/CSS/calc) function to define the width.
+Although the [`<button>`](/en-US/docs/Web/HTML/Reference/Elements/button) element is an inline element by default, we've added [`display: inline-block;`](/en-US/docs/Web/CSS/CSS_display) to enable sizing. In our CSS we have `width: calc(30% + 20px);`, which is a [`calc()`](/en-US/docs/Web/CSS/Reference/Values/calc) function to define the width.
 
 When we `get()` the `width`, we get a [`CSSMathSum`](/en-US/docs/Web/API/CSSMathSum) returned. {{domxref('CSSMathSum.values')}} is a {{domxref('CSSNumericArray')}} with 2 `CSSUnitValues`.
 

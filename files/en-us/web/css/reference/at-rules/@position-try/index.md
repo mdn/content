@@ -32,7 +32,7 @@ The descriptors specify property values that define the behavior of the custom p
 - `position-area`
   - : Specifies a {{cssxref("position-area")}} property value that defines the position of the anchor-positioned element relative to the anchor.
 - [Inset property](/en-US/docs/Glossary/Inset_properties) descriptors
-  - : Specify [`anchor()`](/en-US/docs/Web/CSS/anchor) function values that define the position of the anchor-positioned element's edges relative to the anchor element's edge. Inset property descriptors can be set that represent the following properties:
+  - : Specify [`anchor()`](/en-US/docs/Web/CSS/Reference/Values/anchor) function values that define the position of the anchor-positioned element's edges relative to the anchor element's edge. Inset property descriptors can be set that represent the following properties:
     - {{cssxref("top")}}
     - {{cssxref("left")}}
     - {{cssxref("bottom")}}
@@ -58,7 +58,7 @@ The descriptors specify property values that define the behavior of the custom p
     - {{cssxref("margin-block")}}
     - {{cssxref("margin-inline")}}
 - Sizing property descriptors
-  - : Specify [`anchor-size()`](/en-US/docs/Web/CSS/anchor-size) function values that define the size of the anchor-positioned element relative to the anchor element size. Sizing property descriptors can be set that represent the following properties:
+  - : Specify [`anchor-size()`](/en-US/docs/Web/CSS/Reference/Values/anchor-size) function values that define the size of the anchor-positioned element relative to the anchor element size. Sizing property descriptors can be set that represent the following properties:
     - {{cssxref("width")}}
     - {{cssxref("height")}}
     - {{cssxref("min-width")}}

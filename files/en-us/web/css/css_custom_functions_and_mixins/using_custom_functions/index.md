@@ -85,7 +85,7 @@ CSS function parameters are specified as comma-separated custom properties insid
 }
 ```
 
-This function has a name of `--transparent` and takes two custom properties as parameters, `--color` and `--alpha`, which can be used locally inside the function body. The body contains a `result` descriptor, which uses [CSS relative color syntax](/en-US/docs/Web/CSS/CSS_colors/Relative_colors) to convert the input `--color` value into an [`oklch()`](/en-US/docs/Web/CSS/color_value/oklch) color with an alpha channel value as specified in the input `--alpha` value.
+This function has a name of `--transparent` and takes two custom properties as parameters, `--color` and `--alpha`, which can be used locally inside the function body. The body contains a `result` descriptor, which uses [CSS relative color syntax](/en-US/docs/Web/CSS/CSS_colors/Relative_colors) to convert the input `--color` value into an [`oklch()`](/en-US/docs/Web/CSS/Reference/Values/color_value/oklch) color with an alpha channel value as specified in the input `--alpha` value.
 
 You can then call this function anywhere you want to produce a semi-transparent version of an existing color.
 

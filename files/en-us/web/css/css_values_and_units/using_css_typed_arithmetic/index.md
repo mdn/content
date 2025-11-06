@@ -13,7 +13,7 @@ These quotients can then be used as a {{cssxref("number")}} in the values of uni
 This typed arithmetic behavior enables relationships to be created between different values on a page. This article explores typed arithmetic and presents several examples that make use of it.
 
 > [!NOTE]
-> Originally, the [CSS values and units](/en-US/docs/Web/CSS/CSS_values_and_units) module limited the arguments multiplication and division operations could take to make dividing by zero detectable at parse time and avoid issues such as squared units. Typed arithmetic relaxes some of those restrictions in [supporting browsers](/en-US/docs/Web/CSS/calc#browser_compatibility).
+> Originally, the [CSS values and units](/en-US/docs/Web/CSS/CSS_values_and_units) module limited the arguments multiplication and division operations could take to make dividing by zero detectable at parse time and avoid issues such as squared units. Typed arithmetic relaxes some of those restrictions in [supporting browsers](/en-US/docs/Web/CSS/Reference/Values/calc#browser_compatibility).
 
 ## CSS typed arithmetic rules
 
@@ -94,7 +94,7 @@ calc(100vw / 1em)
 
 If the viewport is `1000px` wide, and `1em` is equal to the browser default of `16px` at the point of calculation, the previous calculation will return `1000px / 16px` = `62.5`.
 
-It used to be the case that you couldn't divide one typed value by another, even if the two values have units of the same type. However, the specification was updated to permit this; check for [browser compatibility](/en-US/docs/Web/CSS/calc#browser_compatibility).
+It used to be the case that you couldn't divide one typed value by another, even if the two values have units of the same type. However, the specification was updated to permit this; check for [browser compatibility](/en-US/docs/Web/CSS/Reference/Values/calc#browser_compatibility).
 
 ## Why is the behavioral update useful?
 
@@ -219,7 +219,7 @@ We start off our CSS in a similar way to the previous demo, creating a unitless 
 Now on to the styling of the paragraph itself. We first give it some basic styles (a {{cssxref("border")}} and {{cssxref("text-align")}} of `center`), then set two values based on the `--viewport-in-pixels` property created earlier:
 
 1. We set the {{cssxref("font-size")}} of the paragraph to a value equal to `--viewport-in-pixels` divided by `200`, multiplied by `1em` to convert the numeric quotient into `em`s.
-2. We set the {{cssxref("background-color")}} of the paragraph to an [`lch()`](/en-US/docs/Web/CSS/color_value/lch) color value. The lightness and chroma components are constant values (`75%` and `50%`, respectively), whereas the hue component is set to `--viewport-in-pixels` divided by `10`, plus `100`. We then multiply the result of that by `1deg` to ensure the value is an {{cssxref("angle")}}.
+2. We set the {{cssxref("background-color")}} of the paragraph to an [`lch()`](/en-US/docs/Web/CSS/Reference/Values/color_value/lch) color value. The lightness and chroma components are constant values (`75%` and `50%`, respectively), whereas the hue component is set to `--viewport-in-pixels` divided by `10`, plus `100`. We then multiply the result of that by `1deg` to ensure the value is an {{cssxref("angle")}}.
    > [!NOTE]
    > This last step is not strictly necessary, as `lch()` also accepts unitless hue values. However, a degree value may be more intuitive, and we wanted to show another example of how the unitless value can be converted into a different data type.
 

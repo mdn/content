@@ -114,7 +114,7 @@ div {
 }
 ```
 
-We declare a [`repeating-linear-gradient`](/en-US/docs/Web/CSS/gradient/repeating-linear-gradient) with red, transparent, and semi-transparent red diagonal stripes. This gradient is used as our mask and, for the last container, as the background image:
+We declare a [`repeating-linear-gradient`](/en-US/docs/Web/CSS/Reference/Values/gradient/repeating-linear-gradient) with red, transparent, and semi-transparent red diagonal stripes. This gradient is used as our mask and, for the last container, as the background image:
 
 ```css live-sample___mode
 img {
@@ -622,7 +622,7 @@ The default value of `mask-size` is `auto`, rendering the mask at its {{glossary
 
 Like with all longhand components of shorthand property, if the {{cssxref("mask")}} shorthand property is set and the value of the `mask-size` property is not defined within any mask layer, the `mask-size` value is reset to its initial value of `auto` for those mask layers.
 
-If the image has no intrinsic proportion, for example in the case of a [CSS gradient](/en-US/docs/Web/CSS/gradient), the default `auto` is the entirety of the mask positioning area as set by [the `mask-origin` property](#the_mask-origin_property).
+If the image has no intrinsic proportion, for example in the case of a [CSS gradient](/en-US/docs/Web/CSS/Reference/Values/gradient), the default `auto` is the entirety of the mask positioning area as set by [the `mask-origin` property](#the_mask-origin_property).
 
 Continuing with the `masked-element` example, if we don't explicitly set the `mask-size` property, it will default to `auto` for each layer, as if we had set the following:
 

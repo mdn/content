@@ -213,7 +213,7 @@ Make sure to include a comment with every inclusion of the important flag so cod
 
 ### The `!important` exception
 
-CSS declarations marked as important override any other declarations within the same cascade layer and origin. Although technically, [`!important`](/en-US/docs/Web/CSS/important) has nothing to do with specificity, it interacts directly with specificity and the cascade. It reverses the [cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade) order of stylesheets.
+CSS declarations marked as important override any other declarations within the same cascade layer and origin. Although technically, [`!important`](/en-US/docs/Web/CSS/Reference/Values/important) has nothing to do with specificity, it interacts directly with specificity and the cascade. It reverses the [cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade) order of stylesheets.
 
 If declarations from the same origin and cascade layer conflict and one property value has the `!important` flag set, the important declaration is applied no matter the specificity. When conflicting declarations from the same origin and cascade layer with the `!important` flag are applied to the same element, the declaration with a greater specificity is applied.
 

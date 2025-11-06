@@ -156,7 +156,7 @@ The `mask-origin` value, listed in the syntax as `<origin>`, comes before the `m
 
 `<image> <position> / <size> <repeat> <origin> <clip> <composite> <mode>`
 
-Both accept [`<geometry-box>`](/en-US/docs/Web/CSS/box-edge#geometry-box) keywords. In addition, `mask-clip` also accepts `no-clip`. Because of this, the order of these two matters when you want to set `mask-clip` to any value other than `no-clip`.
+Both accept [`<geometry-box>`](/en-US/docs/Web/CSS/Reference/Values/box-edge#geometry-box) keywords. In addition, `mask-clip` also accepts `no-clip`. Because of this, the order of these two matters when you want to set `mask-clip` to any value other than `no-clip`.
 
 - If one `<geometry-box>` value is present along with the `no-clip` keyword, then the `<geometry-box>` sets the `mask-origin` value, and `mask-clip` is set to `no-clip`. In this case, the order doesn't matter.
 

@@ -57,7 +57,7 @@ The words "emphasized text" will not have another border (since the initial valu
 
 ## Notes
 
-The [`inherit`](/en-US/docs/Web/CSS/inherit) keyword allows authors to explicitly specify inheritance. It works on both inherited and non-inherited properties.
+The [`inherit`](/en-US/docs/Web/CSS/Reference/Values/inherit) keyword allows authors to explicitly specify inheritance. It works on both inherited and non-inherited properties.
 
 You can control inheritance for all properties at once using the [`all`](/en-US/docs/Web/CSS/Reference/Properties/all) shorthand property, which applies its value to all properties. For example:
 
@@ -99,7 +99,7 @@ We can see here another border around the word "emphasized text".
 
 ## See also
 
-- CSS values for controlling inheritance: [`inherit`](/en-US/docs/Web/CSS/inherit), [`initial`](/en-US/docs/Web/CSS/initial), [`revert`](/en-US/docs/Web/CSS/revert), [`revert-layer`](/en-US/docs/Web/CSS/revert-layer), and [`unset`](/en-US/docs/Web/CSS/unset)
+- CSS values for controlling inheritance: [`inherit`](/en-US/docs/Web/CSS/Reference/Values/inherit), [`initial`](/en-US/docs/Web/CSS/Reference/Values/initial), [`revert`](/en-US/docs/Web/CSS/Reference/Values/revert), [`revert-layer`](/en-US/docs/Web/CSS/Reference/Values/revert-layer), and [`unset`](/en-US/docs/Web/CSS/Reference/Values/unset)
 - [CSS error handling](/en-US/docs/Web/CSS/CSS_syntax/Error_handling)
 - [Introducing the CSS cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade)
 - [Learn: Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)

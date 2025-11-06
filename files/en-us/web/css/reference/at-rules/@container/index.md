@@ -127,7 +127,7 @@ The `<container-condition>` queries include [size](#size_container_descriptors) 
 
 #### Size container descriptors
 
-The `<container-condition>` can include one or more boolean size queries, each within a set of parentheses. A size query includes a size descriptor, a value, and — depending on the descriptor — a comparison operator. The queries always measures the [content box](/en-US/docs/Web/CSS/box-edge#content-box) as the comparison. The syntax for including multiple conditions is the same as for [`@media`](/en-US/docs/Web/CSS/Reference/At-rules/@media) size feature queries.
+The `<container-condition>` can include one or more boolean size queries, each within a set of parentheses. A size query includes a size descriptor, a value, and — depending on the descriptor — a comparison operator. The queries always measures the [content box](/en-US/docs/Web/CSS/Reference/Values/box-edge#content-box) as the comparison. The syntax for including multiple conditions is the same as for [`@media`](/en-US/docs/Web/CSS/Reference/At-rules/@media) size feature queries.
 
 ```css
 @container (min-width: 400px) {
@@ -417,7 +417,7 @@ Container queries can also evaluate the computed style of the container element.
 }
 ```
 
-The parameter of each `style()` is a single `<style-feature>`. A **`<style-feature>`** is a valid CSS [declaration](/en-US/docs/Web/CSS/CSS_syntax/Syntax#css_declarations), a CSS property, or a [`<custom-property-name>`](/en-US/docs/Web/CSS/var#values).
+The parameter of each `style()` is a single `<style-feature>`. A **`<style-feature>`** is a valid CSS [declaration](/en-US/docs/Web/CSS/CSS_syntax/Syntax#css_declarations), a CSS property, or a [`<custom-property-name>`](/en-US/docs/Web/CSS/Reference/Values/var#values).
 
 ```css
 @container style(--themeBackground),

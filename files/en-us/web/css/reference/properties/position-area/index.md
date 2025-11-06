@@ -59,7 +59,7 @@ position-area: unset;
 
 The property value is two `<position-area>` keyterms, or the keyword `none`. If only one `<position-area>` keyterm is provided, the second keyterm is implied.
 
-- [`<position-area>`](/en-US/docs/Web/CSS/position-area_value)
+- [`<position-area>`](/en-US/docs/Web/CSS/Reference/Values/position-area_value)
   - : Specifies the area of the position area grid on which to place selected positioned elements.
 
 - `none`
@@ -73,12 +73,12 @@ The `position-area` property provides an alternative to the `anchor()` function 
 
 The grid tiles are broken up into rows and columns:
 
-- The three rows are represented by the [physical values](/en-US/docs/Web/CSS/position-area_value#physical_grid_keywords) `top`, `center`, and `bottom`. They also have [logical equivalents](/en-US/docs/Web/CSS/position-area_value#logical_grid_keywords) such as `block-start`, `center`, and `block-end`, and [coordinate equivalents](/en-US/docs/Web/CSS/position-area_value#coordinate_grid_keywords) — `y-start`, `center`, and `y-end`.
+- The three rows are represented by the [physical values](/en-US/docs/Web/CSS/Reference/Values/position-area_value#physical_grid_keywords) `top`, `center`, and `bottom`. They also have [logical equivalents](/en-US/docs/Web/CSS/Reference/Values/position-area_value#logical_grid_keywords) such as `block-start`, `center`, and `block-end`, and [coordinate equivalents](/en-US/docs/Web/CSS/Reference/Values/position-area_value#coordinate_grid_keywords) — `y-start`, `center`, and `y-end`.
 - The three columns are represented by the physical values `left`, `center`, and `right`. They also have logical equivalents such as `inline-start`, `center`, and `inline-end`, and coordinate equivalents — `x-start`, `center`, and `x-end`.
 
 The dimensions of the center tile are defined by the [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block) of the anchor element, while the dimensions of the grid's outer edge are defined by the positioned element's containing block.
 
-The [`<position-area>`](/en-US/docs/Web/CSS/position-area_value) value is composed of one or two keywords, which define the region of the grid the positioned element should be placed inside. To be exact, the containing block of the positioned element is set to the grid area.
+The [`<position-area>`](/en-US/docs/Web/CSS/Reference/Values/position-area_value) value is composed of one or two keywords, which define the region of the grid the positioned element should be placed inside. To be exact, the containing block of the positioned element is set to the grid area.
 
 For example:
 
@@ -92,7 +92,7 @@ For detailed information on anchor features, usage, and the `position-area` prop
 
 ### Adjusted default behavior
 
-When a [`<position-area>`](/en-US/docs/Web/CSS/position-area_value) value is set on a positioned element, some of its properties will have their default behavior adjusted to provide a good default alignment.
+When a [`<position-area>`](/en-US/docs/Web/CSS/Reference/Values/position-area_value) value is set on a positioned element, some of its properties will have their default behavior adjusted to provide a good default alignment.
 
 #### Self-alignment property `normal` value
 
@@ -440,8 +440,8 @@ Try selecting new `position-area` values from the `<select>` menu to see the eff
 - {{cssxref("anchor-name")}}
 - {{cssxref("position-anchor")}}
 - {{cssxref("position-try-fallbacks")}}
-- The [`anchor()`](/en-US/docs/Web/CSS/anchor) function
-- The [`<position-area>`](/en-US/docs/Web/CSS/position-area_value) value
+- The [`anchor()`](/en-US/docs/Web/CSS/Reference/Values/anchor) function
+- The [`<position-area>`](/en-US/docs/Web/CSS/Reference/Values/position-area_value) value
 - [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide
 - [Fallback options and conditional hiding for overflow](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide
 - [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module

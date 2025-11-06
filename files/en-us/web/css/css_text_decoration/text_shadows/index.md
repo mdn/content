@@ -115,7 +115,7 @@ In this example, the `text-shadow` declarations differ only in their blur radii.
 
 ### Shadow color
 
-While you can apply [multiple shadows](#multiple_shadows) to text, each shadow consists of a single base color. That color can be any valid CSS {{cssxref("color")}} value, defaulting to [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword) if omitted.
+While you can apply [multiple shadows](#multiple_shadows) to text, each shadow consists of a single base color. That color can be any valid CSS {{cssxref("color")}} value, defaulting to [`currentcolor`](/en-US/docs/Web/CSS/Reference/Values/color_value#currentcolor_keyword) if omitted.
 
 The following three shadows are equivalent in terms of their shadow colors:
 

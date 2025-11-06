@@ -49,7 +49,7 @@ view-timeline: --custom_name_for_timeline;
 The `view-timeline` shorthand property can be applied to a container element as a combination of the `<view-timeline-name>`, `<view-timeline-inset>` and `<view-timeline-axis>` values. At least one of the values must be specified. If both the values are specified, the order followed must be the `<view-timeline-name>` value followed by the `<view-timeline-axis>` value and/or the `<view-timeline-inset>` value.
 
 > [!NOTE]
-> `<view-timeline-name>`s must be [`<dashed-ident>`](/en-US/docs/Web/CSS/dashed-ident) values, which means they must start with `--`. This helps avoid name clashes with standard CSS keywords.
+> `<view-timeline-name>`s must be [`<dashed-ident>`](/en-US/docs/Web/CSS/Reference/Values/dashed-ident) values, which means they must start with `--`. This helps avoid name clashes with standard CSS keywords.
 
 ### Values
 

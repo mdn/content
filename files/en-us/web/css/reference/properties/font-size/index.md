@@ -80,10 +80,10 @@ font-size: unset;
 ### Values
 
 - `xx-small`, `x-small`, `small`, `medium`, `large`, `x-large`, `xx-large`, `xxx-large`
-  - : [Absolute-size](/en-US/docs/Web/CSS/absolute-size) keywords, based on the user's default font size (which is `medium`).
+  - : [Absolute-size](/en-US/docs/Web/CSS/Reference/Values/absolute-size) keywords, based on the user's default font size (which is `medium`).
 
 - `larger`, `smaller`
-  - : [Relative-size](/en-US/docs/Web/CSS/relative-size) keywords. The font will be larger or smaller relative to the parent element's font size, roughly by the ratio used to separate the absolute-size keywords above.
+  - : [Relative-size](/en-US/docs/Web/CSS/Reference/Values/relative-size) keywords. The font will be larger or smaller relative to the parent element's font size, roughly by the ratio used to separate the absolute-size keywords above.
 
 - {{cssxref("&lt;length&gt;")}}
   - : A positive {{cssxref("&lt;length&gt;")}} value. For most font-relative units (such as `em` and `ex`), the font size is relative to the parent element's font size.

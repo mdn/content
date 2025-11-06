@@ -23,7 +23,7 @@ This article provides information about the changes in Firefox 122 that affect d
 
 - The CSS {{cssxref("ray")}} function is now available by default. You can use this function to define an {{cssxref("offset-path")}} as a line segment that begins from an {{cssxref("offset-position")}} and extends in the direction of the specified angle. ([Firefox bug 1598151](https://bugzil.la/1598151))
 
-- The {{CSSxref("clip-path")}} and {{CSSxref("offset-path")}} properties now accept [`rect()`](/en-US/docs/Web/CSS/basic-shape/rect) and [`xywh()`](/en-US/docs/Web/CSS/basic-shape/xywh) shape functions. These {{CSSXref("basic-shape")}} values allow the clipping and offsetting of elements with a rectangle defined by distance from the edge of the element (`rect()`) or coordinates and size (`xywh()`). ([Firefox bug 1868722](https://bugzil.la/1868722)).
+- The {{CSSxref("clip-path")}} and {{CSSxref("offset-path")}} properties now accept [`rect()`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/rect) and [`xywh()`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/xywh) shape functions. These {{CSSXref("basic-shape")}} values allow the clipping and offsetting of elements with a rectangle defined by distance from the edge of the element (`rect()`) or coordinates and size (`xywh()`). ([Firefox bug 1868722](https://bugzil.la/1868722)).
 
 ### JavaScript
 

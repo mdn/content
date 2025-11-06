@@ -37,7 +37,7 @@ No notable changes
 ### SVG
 
 - The SVG {{SVGAttr('d')}} attribute, used to define a path to be drawn, can now be used as a property in CSS.
-  It accepts the values [path()](/en-US/docs/Web/CSS/basic-shape/path) or `none`. (See [Firefox bug 1744599](https://bugzil.la/1744599) for details.)
+  It accepts the values [path()](/en-US/docs/Web/CSS/Reference/Values/basic-shape/path) or `none`. (See [Firefox bug 1744599](https://bugzil.la/1744599) for details.)
 
 #### Removals
 

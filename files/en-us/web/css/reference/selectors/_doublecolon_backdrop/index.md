@@ -88,7 +88,7 @@ We include a {{htmlelement("button")}} that, when clicked, will open the include
 
 #### CSS
 
-We add a background to the backdrop, creating a colorful donut using [CSS gradients](/en-US/docs/Web/CSS/gradient):
+We add a background to the backdrop, creating a colorful donut using [CSS gradients](/en-US/docs/Web/CSS/Reference/Values/gradient):
 
 ```css
 ::backdrop {

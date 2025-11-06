@@ -6,7 +6,7 @@ browser-compat: css.properties.color
 sidebar: cssref
 ---
 
-The **`color`** [CSS](/en-US/docs/Web/CSS) property sets the foreground [color value](/en-US/docs/Web/CSS/color_value) of an element's text and [text decorations](/en-US/docs/Web/CSS/Reference/Properties/text-decoration), and sets the [`currentColor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword) value. `currentColor` may be used as an indirect value on _other_ properties and is the default for other color properties, such as {{cssxref("border-color")}}.
+The **`color`** [CSS](/en-US/docs/Web/CSS) property sets the foreground [color value](/en-US/docs/Web/CSS/Reference/Values/color_value) of an element's text and [text decorations](/en-US/docs/Web/CSS/Reference/Properties/text-decoration), and sets the [`currentColor`](/en-US/docs/Web/CSS/Reference/Values/color_value#currentcolor_keyword) value. `currentColor` may be used as an indirect value on _other_ properties and is the default for other color properties, such as {{cssxref("border-color")}}.
 
 {{InteractiveExample("CSS Demo: color")}}
 
@@ -117,7 +117,7 @@ Note that the value must be a uniform color. It can't be a {{cssxref("&lt;gradie
 
 - {{cssxref("&lt;color&gt;")}}
   - : Sets the color of the textual and decorative parts of the element.
-- [`currentColor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword)
+- [`currentColor`](/en-US/docs/Web/CSS/Reference/Values/color_value#currentcolor_keyword)
   - : Sets the color to the element's `color` property value. However, if set as the value of `color`, `currentColor` is treated as `inherit`.
 
 ## Accessibility

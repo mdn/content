@@ -11,7 +11,7 @@ With [CSS](/en-US/docs/Web/CSS), there are lots of ways to add color to your [HT
 > [!NOTE]
 > It is important to [use colors wisely](/en-US/docs/Web/CSS/CSS_colors/Using_color_wisely). Always select appropriate colors, ensuring the contrast between text and the background is sufficient to ensure legibility, and always keep the needs of people with differing visual capabilities in mind.
 
-To learn more about CSS colors as a data type, see the [CSS `<color>` data type](/en-US/docs/Web/CSS/color_value) reference and the [CSS color values guide](/en-US/docs/Web/CSS/CSS_colors/Color_values).
+To learn more about CSS colors as a data type, see the [CSS `<color>` data type](/en-US/docs/Web/CSS/Reference/Values/color_value) reference and the [CSS color values guide](/en-US/docs/Web/CSS/CSS_colors/Color_values).
 
 ## Properties that can have color
 
@@ -33,7 +33,7 @@ Whenever an element is rendered, these properties are used to determine the colo
   - : Configures a shadow effect to apply to text. Among the options for the shadow is the shadow's base color (which is then blurred and blended with the background based on the other parameters). See [Text drop shadows](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals#text_drop_shadows) to learn more.
 
 - {{cssxref("text-decoration-color")}}
-  - : The default text decorations (such as underlines, strikethroughs, etc.) color is [`currentColor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword). This keyword represents the current value of the `color` property. However, you can override that value and use a different color for them with the `text-decoration-color` property.
+  - : The default text decorations (such as underlines, strikethroughs, etc.) color is [`currentColor`](/en-US/docs/Web/CSS/Reference/Values/color_value#currentcolor_keyword). This keyword represents the current value of the `color` property. However, you can override that value and use a different color for them with the `text-decoration-color` property.
 
 - {{cssxref("text-emphasis-color")}}
   - : The color to use when rendering emphasis symbols adjacent to each character in the text. This is used primarily when drawing text for East Asian languages.
@@ -131,7 +131,7 @@ div {
 
 The `.wrapper` class is used to assign styles to the {{HTMLElement("div")}} that encloses all of our other content. This establishes the height of the container using {{cssxref("height")}}, allowing the width of this block-level element to default to 100% of its parent. Setting the {{cssxref("display")}} to `flex` and adding a `10px` {{cssxref("gap")}} creates a flex container to lay out the children side by side with a gap between all the container's children. We use {{cssxref("flex")}} to let the flex children grow to fill the container; it doesn't effect the flex container itself.
 
-Of more interest to our discussion here is the use of the {{cssxref("border")}} property to establish a border around the outside edge of the element. This border is a solid line, 6 pixels wide, in the [named color](/en-US/docs/Web/CSS/named-color) `mediumturquoise`.
+Of more interest to our discussion here is the use of the {{cssxref("border")}} property to establish a border around the outside edge of the element. This border is a solid line, 6 pixels wide, in the [named color](/en-US/docs/Web/CSS/Reference/Values/named-color) `mediumturquoise`.
 
 Within our wrapper, we have a left box and a right box.
 
@@ -190,7 +190,7 @@ CSS isn't the only web technology that supports color. Other examples include:
 
 ## See also
 
-- [`<color>`](/en-US/docs/Web/CSS/color_value) data type
+- [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value) data type
 - [CSS color values](/en-US/docs/Web/CSS/CSS_colors/Color_values) guide
 - [Using color wisely](/en-US/docs/Web/CSS/CSS_colors/Using_color_wisely)
 - [CSS color module](/en-US/docs/Web/CSS/CSS_colors)

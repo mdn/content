@@ -60,7 +60,7 @@ The following changes were made to the {{domxref("CanvasRenderingContext2D")}} i
   - : The {{cssxref("-moz-image-rect")}} function makes it possible to use subrectangles of images as a {{cssxref("background-image")}}.
 - CSS touch properties
   - : Support for touch properties is added. Details, and real article names, to come later.
-- [Using arbitrary elements as CSS backgrounds](/en-US/docs/Web/CSS/element)
+- [Using arbitrary elements as CSS backgrounds](/en-US/docs/Web/CSS/Reference/Values/element)
   - : You can use the `-moz-element` CSS function and the {{domxref("document.mozSetImageElement()")}} DOM function to use arbitrary HTML elements as backgrounds.
 - [Privacy and the :visited selector](/en-US/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector)
   - : Changes have been made to what information can be obtained about the style of visited links using CSS selectors. This may affect some web applications.

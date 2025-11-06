@@ -88,7 +88,7 @@ object-view-box: unset;
 - `none`
   - : The element does not have a view box. This is the default.
 
-- [`<basic-shape-rect>`](/en-US/docs/Web/CSS/basic-shape#syntax_for_rectangles_basic-shape-rect)
+- [`<basic-shape-rect>`](/en-US/docs/Web/CSS/Reference/Values/basic-shape#syntax_for_rectangles_basic-shape-rect)
   - : An {{cssxref("basic-shape/inset","inset()")}}, {{cssxref("basic-shape/xywh","xywh()")}}, or {{cssxref("basic-shape/rect","rect()")}} function specifying a view box for an element with natural dimensions (replaced elements). Resolves to `none` otherwise.
 
 ## Description

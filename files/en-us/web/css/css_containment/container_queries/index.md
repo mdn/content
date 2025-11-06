@@ -119,7 +119,7 @@ When applying styles to a container using container queries, you can use contain
 These units specify a length relative to the dimensions of a query container.
 Components that use units of length relative to their container are more flexible to use in different containers without having to recalculate concrete length values.
 
-If no eligible container is available for the query, the container query length unit defaults to the [small viewport unit](/en-US/docs/Web/CSS/length#small_viewport_units) for that axis (`sv*`).
+If no eligible container is available for the query, the container query length unit defaults to the [small viewport unit](/en-US/docs/Web/CSS/Reference/Values/length#small_viewport_units) for that axis (`sv*`).
 
 The container query length units are:
 
@@ -140,7 +140,7 @@ The following example uses the `cqi` unit to set the font size of a heading base
 }
 ```
 
-For more information on these units, see the [Container query length units](/en-US/docs/Web/CSS/length#container_query_length_units) reference.
+For more information on these units, see the [Container query length units](/en-US/docs/Web/CSS/Reference/Values/length#container_query_length_units) reference.
 
 ## Fallbacks for container queries
 

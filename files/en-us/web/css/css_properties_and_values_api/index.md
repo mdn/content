@@ -58,7 +58,7 @@ CSS.registerProperty({
 
 {{EmbedLiveSample("Properties and values API in action",600,120)}}
 
-The box has a [background](/en-US/docs/Web/CSS/Reference/Properties/background) consisting of a [linear gradient](/en-US/docs/Web/CSS/gradient/linear-gradient) from `--stop-color` (the custom property) to [`lavenderblush`](/en-US/docs/Web/CSS/named-color).
+The box has a [background](/en-US/docs/Web/CSS/Reference/Properties/background) consisting of a [linear gradient](/en-US/docs/Web/CSS/Reference/Values/gradient/linear-gradient) from `--stop-color` (the custom property) to [`lavenderblush`](/en-US/docs/Web/CSS/Reference/Values/named-color).
 The value of `--stop-color` is set to `cornflowerblue` at first, but when you hover over the box, `--stop-color` [transitions](/en-US/docs/Web/CSS/Reference/Properties/transition) to `aquamarine` over two seconds (`linear-gradient(to right, aquamarine, lavenderblush)`).
 
 ## Reference
@@ -108,5 +108,5 @@ The value of `--stop-color` is set to `cornflowerblue` at first, but when you ho
 - [Using shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM)
 - [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API) module
 - [Worklet](/en-US/docs/Web/API/Worklet) interface
-- [CSS `env()`](/en-US/docs/Web/CSS/env)
+- [CSS `env()`](/en-US/docs/Web/CSS/Reference/Values/env)
 - [CSS Typed Object Model](/en-US/docs/Web/API/CSS_Typed_OM_API)
