@@ -76,6 +76,6 @@ The properties introduced in this module aren't limited to the `<table>` element
 ## See also
 
 - [CSS display](/en-US/docs/Web/CSS/Guides/Display) module
-- [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) module
+- [CSS grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout) module
 - [CSS flexible box layout](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) module
 - [CSS fragmentation](/en-US/docs/Web/CSS/Guides/Fragmentation) module

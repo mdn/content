@@ -150,7 +150,7 @@ This property shares many keyword values with the {{cssxref("align-content")}} p
 
 In [flex layouts](/en-US/docs/Web/CSS/Guides/Flexible_box_layout), the property defines how positive free space is distributed between or around flex items along the main axis. This property impacts the space between elements in a line, not the space between lines. The alignment is done after the lengths and auto margins are applied, which means that when one or more flex items in a line have a {{cssxref("flex-grow")}} factor greater than `0`, the property has no effect as there is no space to distribute along that line. Also, as stretching along the main axis is controlled by {{cssxref("flex")}}, the `stretch` value behaves as `flex-start`.
 
-With [grid layout](/en-US/docs/Web/CSS/CSS_grid_layout), this property distributes available space between or around grid columns, not grid items. If the grid container is larger than the grid itself, the `justify-content` property can be used to justify the grid along the inline axis, aligning the grid columns.
+With [grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout), this property distributes available space between or around grid columns, not grid items. If the grid container is larger than the grid itself, the `justify-content` property can be used to justify the grid along the inline axis, aligning the grid columns.
 
 Grid `auto` track sizes (and only `auto` track sizes) can be stretched by the `align-content` and `justify-content` properties. Therefore by default, an `auto` sized track will take up any remaining space in the grid container. As the grid's inline size has to be less than the grid container's inline size for there to be space to distribute, the property has no effect in this case.
 

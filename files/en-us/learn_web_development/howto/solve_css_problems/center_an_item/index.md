@@ -10,7 +10,7 @@ In this guide you can find out how to center an item inside another element, bot
 
 ## Center a box
 
-To center one box inside another using CSS you will need to use [CSS box alignment](/en-US/docs/Web/CSS/Guides/Box_alignment) properties on the parent container. As these alignment properties do not yet have browser support for block and inline layout you will need to make the parent a [flex](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) or [grid](/en-US/docs/Web/CSS/CSS_grid_layout) container to turn on the ability to use alignment.
+To center one box inside another using CSS you will need to use [CSS box alignment](/en-US/docs/Web/CSS/Guides/Box_alignment) properties on the parent container. As these alignment properties do not yet have browser support for block and inline layout you will need to make the parent a [flex](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) or [grid](/en-US/docs/Web/CSS/Guides/Grid_layout) container to turn on the ability to use alignment.
 
 In the example below we have given the parent container `display: flex`; then set {{cssxref("justify-content")}} to center to align it horizontally, and {{cssxref("align-items")}} to center to align it vertically.
 

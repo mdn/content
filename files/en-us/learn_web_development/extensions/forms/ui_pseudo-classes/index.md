@@ -171,7 +171,7 @@ In the next section, we'll look at a better example of indicating required field
 
 ## Using generated content with pseudo-classes
 
-In previous articles, we've seen the usage of [generated content](/en-US/docs/Web/CSS/CSS_generated_content), but we thought now would be a good time to talk about it in a bit more detail.
+In previous articles, we've seen the usage of [generated content](/en-US/docs/Web/CSS/Guides/Generated_content), but we thought now would be a good time to talk about it in a bit more detail.
 
 The idea is that we can use the [`::before`](/en-US/docs/Web/CSS/Reference/Selectors/::before) and [`::after`](/en-US/docs/Web/CSS/Reference/Selectors/::after) pseudo-elements along with the [`content`](/en-US/docs/Web/CSS/Reference/Properties/content) property to make a chunk of content appear before or after the affected element. The chunk of content is not added to the DOM, so it may be invisible to some screen readers. Because it is a pseudo-element, it can be targeted with styles in the same way that any actual DOM node can.
 

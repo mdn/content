@@ -1,6 +1,6 @@
 ---
 title: Masonry layout
-slug: Web/CSS/CSS_grid_layout/Masonry_layout
+slug: Web/CSS/Guides/Grid_layout/Masonry_layout
 page-type: guide
 status:
   - experimental
@@ -12,7 +12,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-Level 3 of the [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) specification includes a `masonry` value for {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}}. This guide details what masonry layout is and how to use it.
+Level 3 of the [CSS grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout) specification includes a `masonry` value for {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}}. This guide details what masonry layout is and how to use it.
 
 Masonry layout is a layout method where one axis uses a typical strict grid layout, most often columns, and the other a masonry layout. On the masonry axis, rather than sticking to a strict grid with gaps being left after shorter items, the items in the following row rise up to completely fill the gaps.
 

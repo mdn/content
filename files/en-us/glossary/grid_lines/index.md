@@ -5,7 +5,7 @@ page-type: glossary-definition
 sidebar: glossarysidebar
 ---
 
-**Grid lines** are created anytime you use a [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout).
+**Grid lines** are created anytime you use a [CSS grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout).
 
 ## Example
 
@@ -174,8 +174,8 @@ The lines created in the _explicit grid_ can be named, by adding the name in squ
 ### Further reading
 
 - CSS grid layout guides:
-  - [Basic concepts of grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
-  - [Line-based placement with CSS grid](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
-  - [Layout using named grid lines](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
-  - [CSS grids, logical values and writing modes](/en-US/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
+  - [Basic concepts of grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)
+  - [Line-based placement with CSS grid](/en-US/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)
+  - [Layout using named grid lines](/en-US/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines)
+  - [CSS grids, logical values and writing modes](/en-US/docs/Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes)
 - [Definition of grid lines in the CSS grid layout specification](https://drafts.csswg.org/css-grid/#grid-line-concept)

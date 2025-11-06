@@ -69,4 +69,4 @@ There is also a `marker-side` property, which is yet to be fully defined or impl
 
 - [CSS counter styles](/en-US/docs/Web/CSS/Guides/Counter_styles) module
 - [CSS pseudo-elements](/en-US/docs/Web/CSS/CSS_pseudo-elements) module
-- [CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content) module
+- [CSS generated content](/en-US/docs/Web/CSS/Guides/Generated_content) module

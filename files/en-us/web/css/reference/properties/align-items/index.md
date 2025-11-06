@@ -323,4 +323,4 @@ display.addEventListener("change", (evt) => {
 - [Box alignment in grid layout](/en-US/docs/Web/CSS/Guides/Box_alignment/In_grid_layout)
 - [CSS box alignment](/en-US/docs/Web/CSS/Guides/Box_alignment) module
 - [CSS flexible box layout](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) module
-- [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) module
+- [CSS grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout) module

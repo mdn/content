@@ -1,6 +1,6 @@
 ---
 title: CSS generated content
-slug: Web/CSS/CSS_generated_content
+slug: Web/CSS/Guides/Generated_content
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-content/
 sidebar: cssref

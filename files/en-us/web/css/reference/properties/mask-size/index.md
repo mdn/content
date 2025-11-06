@@ -204,7 +204,7 @@ The `mask-size` of two of the `<div>` elements is set to one of the property's k
 }
 ```
 
-The property values is displayed using [generated content](/en-US/docs/Web/CSS/CSS_generated_content).
+The property values is displayed using [generated content](/en-US/docs/Web/CSS/Guides/Generated_content).
 
 ```css
 section::before {

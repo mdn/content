@@ -28,7 +28,7 @@ If the viewport is smaller than the size of the document then the user agent nee
 
 **Box generation** is the part of the CSS visual formatting model that creates boxes from the document's elements. Generated boxes are of different types, which affect their visual formatting. The type of the box generated depends on the value of the CSS {{cssxref("display")}} property.
 
-Initially defined in CSS2, the `display` property was extended in the [CSS display](/en-US/docs/Web/CSS/Guides/Display), [CSS flexible box layout](/en-US/docs/Web/CSS/Guides/Flexible_box_layout), [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout), and [CSS ruby layout](/en-US/docs/Web/CSS/CSS_ruby_layout) modules. In addition, some of the terminologies around the display have been updated and clarified in the years since CSS2.
+Initially defined in CSS2, the `display` property was extended in the [CSS display](/en-US/docs/Web/CSS/Guides/Display), [CSS flexible box layout](/en-US/docs/Web/CSS/Guides/Flexible_box_layout), [CSS grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout), and [CSS ruby layout](/en-US/docs/Web/CSS/CSS_ruby_layout) modules. In addition, some of the terminologies around the display have been updated and clarified in the years since CSS2.
 
 CSS takes your source document and renders it onto a canvas. To do this, it generates an intermediary structure, the **box tree**, which represents the formatting structure of the rendered document. Each box in the box tree represents its corresponding element (or pseudo-element) in space and/or time on the canvas, while each text run in the box tree likewise represents the contents of its corresponding text nodes.
 
@@ -103,7 +103,7 @@ Something to consider about these anonymous boxes is that they inherit styles fr
 
 **Inline anonymous boxes** are created when a string is split by an inline element, for example, a sentence that includes a section wrapped with `<em></em>`. This splits the sentence into three inline boxes — an anonymous inline box before the emphasized section, the section wrapped in the `<em>` element, then a final anonymous inline box. As with the anonymous block boxes, these anonymous inline boxes cannot be styled independently in the way the `<em>` can; they just inherit the styles of their container.
 
-Other formatting contexts also create anonymous boxes. [Grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) behaves in the same way as the [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) example above, turning strings of text into a grid item with an anonymous box. [Multiple-column](/en-US/docs/Web/CSS/CSS_multicol_layout) layout creates anonymous column boxes around the columns; these also cannot be styled or otherwise targeted. [Table layout](/en-US/docs/Web/CSS/CSS_table) will add anonymous boxes to create a proper table structure — for example adding an anonymous table row — if there was no box with `display: table-row`.
+Other formatting contexts also create anonymous boxes. [Grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout) behaves in the same way as the [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) example above, turning strings of text into a grid item with an anonymous box. [Multiple-column](/en-US/docs/Web/CSS/CSS_multicol_layout) layout creates anonymous column boxes around the columns; these also cannot be styled or otherwise targeted. [Table layout](/en-US/docs/Web/CSS/CSS_table) will add anonymous boxes to create a proper table structure — for example adding an anonymous table row — if there was no box with `display: table-row`.
 
 ### Line boxes
 
@@ -176,7 +176,7 @@ The interactions between block-level and inline-level boxes are described in the
 
 In addition, the references for specific values of display explain how these formatting contexts work in terms of box layout.
 
-- [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) module
+- [CSS grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout) module
 - [CSS flexible box layout](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) module
 - [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout) module
 - [CSS table](/en-US/docs/Web/CSS/CSS_table) module

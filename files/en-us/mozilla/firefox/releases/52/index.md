@@ -55,7 +55,7 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 
 #### CSS Grids
 
-- [CSS Grids](/en-US/docs/Web/CSS/CSS_grid_layout) are implemented.
+- [CSS Grids](/en-US/docs/Web/CSS/Guides/Grid_layout) are implemented.
 
 #### Changes and removals
 

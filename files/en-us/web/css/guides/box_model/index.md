@@ -123,7 +123,7 @@ The CSS box model module defines physical (or "page relative") properties such a
 
 - [CSS display](/en-US/docs/Web/CSS/Guides/Display) module
 - [CSS flex layout](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) module
-- [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) module
+- [CSS grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout) module
 - [CSS table](/en-US/docs/Web/CSS/CSS_table) module
 - [CSS positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout) module
 - [CSS fragmentation](/en-US/docs/Web/CSS/Guides/Fragmentation) module

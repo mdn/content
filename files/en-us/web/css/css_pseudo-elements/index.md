@@ -97,7 +97,7 @@ The specification also defines the `::details-content` and `::search-text` pseud
 - [`placeholder`](/en-US/docs/Web/HTML/Reference/Elements/input#placeholder) attribute of the `<input>` element
 - [`:placeholder-shown`](/en-US/docs/Web/CSS/Reference/Selectors/:placeholder-shown) selector
 
-- [CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content)
+- [CSS generated content](/en-US/docs/Web/CSS/Guides/Generated_content)
   - {{cssxref("content")}} property
   - {{cssxref("quotes")}} property
 
@@ -116,6 +116,6 @@ The specification also defines the `::details-content` and `::search-text` pseud
 - [Specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity)
 - [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module
 - [CSS shadow-parts](/en-US/docs/Web/CSS/CSS_shadow_parts) module
-- [CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content) module
+- [CSS generated content](/en-US/docs/Web/CSS/Guides/Generated_content) module
 - [CSS positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout) module
 - [CSS custom highlight API](/en-US/docs/Web/API/CSS_Custom_Highlight_API)

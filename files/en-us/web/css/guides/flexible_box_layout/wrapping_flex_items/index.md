@@ -6,7 +6,7 @@ page-type: guide
 sidebar: cssref
 ---
 
-Flexbox was designed as a single-dimensional layout tool — it deals with laying out items as a row or column — but not both at once. It is, however, possible to wrap flex items onto new lines, creating new rows if {{cssxref("flex-direction")}} is `row` and new columns if `flex-direction` is `column`. This guide explains flexbox wrapping, what it is designed for, and what situations require [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) rather than flexbox.
+Flexbox was designed as a single-dimensional layout tool — it deals with laying out items as a row or column — but not both at once. It is, however, possible to wrap flex items onto new lines, creating new rows if {{cssxref("flex-direction")}} is `row` and new columns if `flex-direction` is `column`. This guide explains flexbox wrapping, what it is designed for, and what situations require [CSS grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout) rather than flexbox.
 
 ## Making things wrap
 

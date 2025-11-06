@@ -95,7 +95,7 @@ Instead of applying `align-items: center;` on the container, you can also vertic
 
 ## Using grid
 
-Another method you can use for centering one box inside another is to first make the containing box a [grid container](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#grid_container) and then set its {{cssxref("place-items")}} property to `center` to center align its items on both the block and inline axes.
+Another method you can use for centering one box inside another is to first make the containing box a [grid container](/en-US/docs/Web/CSS/Guides/Grid_layout/Basic_concepts#grid_container) and then set its {{cssxref("place-items")}} property to `center` to center align its items on both the block and inline axes.
 
 ### HTML
 

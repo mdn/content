@@ -187,18 +187,18 @@ sidebar:
   - title: Grid
     details: closed
     children:
-      - /Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout
-      - /Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods
-      - /Web/CSS/CSS_grid_layout/Grid_template_areas
-      - /Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
-      - /Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines
-      - /Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout
-      - /Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout
-      - /Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes
-      - /Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids
-      - /Web/CSS/CSS_grid_layout/Subgrid
-      - /Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility
-      - /Web/CSS/CSS_grid_layout/Masonry_layout
+      - /Web/CSS/Guides/Grid_layout/Basic_concepts
+      - /Web/CSS/Guides/Grid_layout/Relationship_with_other_layout_methods
+      - /Web/CSS/Guides/Grid_layout/Grid_template_areas
+      - /Web/CSS/Guides/Grid_layout/Line-based_placement
+      - /Web/CSS/Guides/Grid_layout/Named_grid_lines
+      - /Web/CSS/Guides/Grid_layout/Auto-placement
+      - /Web/CSS/Guides/Grid_layout/Box_alignment
+      - /Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes
+      - /Web/CSS/Guides/Grid_layout/Common_grid_layouts
+      - /Web/CSS/Guides/Grid_layout/Subgrid
+      - /Web/CSS/Guides/Grid_layout/Accessibility
+      - /Web/CSS/Guides/Grid_layout/Masonry_layout
   - title: Images
     details: closed
     children:

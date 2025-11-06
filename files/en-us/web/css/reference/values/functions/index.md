@@ -303,7 +303,7 @@ The following functions are used as a value of properties to reference a value d
 
 ## Grid functions
 
-The following functions are used to define a [CSS grid](/en-US/docs/Web/CSS/CSS_grid_layout):
+The following functions are used to define a [CSS grid](/en-US/docs/Web/CSS/Guides/Grid_layout):
 
 - {{CSSxRef("fit-content_function", "fit-content()")}}
   - : Clamps a given size to an available size according to the formula `min(maximum size, max(minimum size, argument))`.

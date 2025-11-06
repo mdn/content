@@ -71644,253 +71644,6 @@
       "rachelandrew"
     ]
   },
-  "Web/CSS/CSS_generated_content": {
-    "modified": "2020-07-07T12:15:43.237Z",
-    "contributors": [
-      "wbamberg",
-      "estelle",
-      "alattalatta",
-      "fscholz",
-      "mfluehr",
-      "Sebastianz",
-      "teoli"
-    ]
-  },
-  "Web/CSS/CSS_grid_layout": {
-    "modified": "2020-11-12T06:04:51.979Z",
-    "contributors": [
-      "chrisdavidmills",
-      "rachelandrew",
-      "wbamberg",
-      "motine",
-      "mfuji09",
-      "jaredef",
-      "ExE-Boss",
-      "estelle",
-      "denimX",
-      "sbmthakur",
-      "Jasum",
-      "willtennien",
-      "mfluehr",
-      "mASOUDd",
-      "DanRickerby",
-      "tshinnic",
-      "isomorphismes",
-      "jensimmons",
-      "yisibl",
-      "sideshowbarker",
-      "superwriter",
-      "AleshaOleg",
-      "dvincent",
-      "Paescari",
-      "teoli",
-      "Sheppy",
-      "psafont",
-      "Wishmaker888",
-      "david_ross",
-      "kwhinnery",
-      "rolfedh",
-      "PushpitaPikuDey"
-    ]
-  },
-  "Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout": {
-    "modified": "2020-11-11T09:28:53.973Z",
-    "contributors": [
-      "rachelandrew",
-      "mehtapratik",
-      "SphinxKnight",
-      "j9t",
-      "steveclason",
-      "denimX",
-      "gh3it8",
-      "weslord",
-      "mfluehr",
-      "tshinnic",
-      "aermolaev",
-      "teoli"
-    ]
-  },
-  "Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout": {
-    "modified": "2020-11-11T09:30:52.536Z",
-    "contributors": [
-      "rachelandrew",
-      "mfuji09",
-      "leonardoInf",
-      "Tingyu",
-      "chrisdavidmills",
-      "SanjeevSahoo",
-      "ValLynn",
-      "panckreous",
-      "ExE-Boss",
-      "Sheppy",
-      "RichWK",
-      "harupiyo",
-      "kan199041",
-      "stephaniehobson",
-      "KateSturmey",
-      "bgates",
-      "tshinnic",
-      "magnificode",
-      "mhusm",
-      "BluebirchCreative",
-      "MexieAndCo",
-      "johnjv",
-      "Sebastianz",
-      "richardkalehoff",
-      "AleshaOleg",
-      "dvincent",
-      "teoli"
-    ]
-  },
-  "Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout": {
-    "modified": "2020-11-12T04:20:04.207Z",
-    "contributors": [
-      "rachelandrew",
-      "applejam9029",
-      "mehtapratik",
-      "mklein",
-      "kp2017",
-      "waqarhussain",
-      "estelle",
-      "Jannaee",
-      "VAggrippino",
-      "juandesouza",
-      "Sheppy",
-      "cagross",
-      "stephaniehobson",
-      "comehope",
-      "AlexN",
-      "mfluehr",
-      "tshinnic",
-      "david_ross",
-      "Konrud",
-      "aermolaev",
-      "teoli"
-    ]
-  },
-  "Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility": {
-    "modified": "2020-11-12T04:27:12.717Z",
-    "contributors": [
-      "rachelandrew",
-      "j9t",
-      "juandesouza",
-      "mfluehr",
-      "aermolaev",
-      "teoli",
-      "scuveedog"
-    ]
-  },
-  "Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement": {
-    "modified": "2020-11-11T09:51:54.730Z",
-    "contributors": [
-      "rachelandrew",
-      "cdoublev",
-      "mfluehr",
-      "chrisdavidmills",
-      "neo01124",
-      "NouranMahmoud",
-      "bgates",
-      "dmitry-zabolotny",
-      "jarrodn",
-      "AleshaOleg",
-      "teoli",
-      "imagentleman"
-    ]
-  },
-  "Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines": {
-    "modified": "2020-11-11T09:57:51.799Z",
-    "contributors": [
-      "rachelandrew",
-      "escattone",
-      "richardkmichael",
-      "magnificode",
-      "jarrodn",
-      "1986slayer",
-      "Konrud",
-      "aermolaev",
-      "teoli"
-    ]
-  },
-  "Web/CSS/CSS_grid_layout/Grid_template_areas": {
-    "modified": "2020-11-12T13:21:19.042Z",
-    "contributors": [
-      "rachelandrew",
-      "juandesouza",
-      "miname",
-      "aermolaev",
-      "teoli"
-    ]
-  },
-  "Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes": {
-    "modified": "2020-11-12T04:23:35.016Z",
-    "contributors": [
-      "rachelandrew",
-      "Sheppy",
-      "j9t",
-      "estelle",
-      "MNizam0802",
-      "juandesouza",
-      "rileym7",
-      "mfluehr",
-      "david_ross",
-      "Konrud",
-      "aermolaev",
-      "teoli"
-    ]
-  },
-  "Web/CSS/CSS_grid_layout/Masonry_layout": {
-    "modified": "2020-11-12T05:33:14.237Z",
-    "contributors": ["chrisdavidmills", "rachelandrew"]
-  },
-  "Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids": {
-    "modified": "2020-11-12T04:33:54.397Z",
-    "contributors": [
-      "rachelandrew",
-      "ferrybig",
-      "mfluehr",
-      "Konrud",
-      "aermolaev",
-      "teoli"
-    ]
-  },
-  "Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods": {
-    "modified": "2020-11-11T09:35:50.512Z",
-    "contributors": [
-      "rachelandrew",
-      "gerfolder",
-      "escattone",
-      "raushanraja",
-      "cdoublev",
-      "mfuji09",
-      "chrisdavidmills",
-      "jaredef",
-      "richardkmichael",
-      "juandesouza",
-      "AndyK",
-      "jquinones618",
-      "kan199041",
-      "VladPavel15",
-      "mfluehr",
-      "NouranMahmoud",
-      "bgates",
-      "Pickles-Spill",
-      "jarrodn",
-      "AleshaOleg",
-      "teoli"
-    ]
-  },
-  "Web/CSS/CSS_grid_layout/Subgrid": {
-    "modified": "2020-11-12T04:35:24.907Z",
-    "contributors": [
-      "rachelandrew",
-      "mfuji09",
-      "wbamberg",
-      "inwardmovement",
-      "bershanskiy",
-      "chrisdavidmills",
-      "SphinxKnight"
-    ]
-  },
   "Web/CSS/CSS_images": {
     "modified": "2020-07-07T12:17:40.924Z",
     "contributors": [
@@ -73867,6 +73620,253 @@
   "Web/CSS/Guides/Fragmentation": {
     "modified": "2020-07-07T12:15:32.340Z",
     "contributors": ["wbamberg", "mfluehr"]
+  },
+  "Web/CSS/Guides/Generated_content": {
+    "modified": "2020-07-07T12:15:43.237Z",
+    "contributors": [
+      "wbamberg",
+      "estelle",
+      "alattalatta",
+      "fscholz",
+      "mfluehr",
+      "Sebastianz",
+      "teoli"
+    ]
+  },
+  "Web/CSS/Guides/Grid_layout": {
+    "modified": "2020-11-12T06:04:51.979Z",
+    "contributors": [
+      "chrisdavidmills",
+      "rachelandrew",
+      "wbamberg",
+      "motine",
+      "mfuji09",
+      "jaredef",
+      "ExE-Boss",
+      "estelle",
+      "denimX",
+      "sbmthakur",
+      "Jasum",
+      "willtennien",
+      "mfluehr",
+      "mASOUDd",
+      "DanRickerby",
+      "tshinnic",
+      "isomorphismes",
+      "jensimmons",
+      "yisibl",
+      "sideshowbarker",
+      "superwriter",
+      "AleshaOleg",
+      "dvincent",
+      "Paescari",
+      "teoli",
+      "Sheppy",
+      "psafont",
+      "Wishmaker888",
+      "david_ross",
+      "kwhinnery",
+      "rolfedh",
+      "PushpitaPikuDey"
+    ]
+  },
+  "Web/CSS/Guides/Grid_layout/Accessibility": {
+    "modified": "2020-11-12T04:27:12.717Z",
+    "contributors": [
+      "rachelandrew",
+      "j9t",
+      "juandesouza",
+      "mfluehr",
+      "aermolaev",
+      "teoli",
+      "scuveedog"
+    ]
+  },
+  "Web/CSS/Guides/Grid_layout/Auto-placement": {
+    "modified": "2020-11-11T09:28:53.973Z",
+    "contributors": [
+      "rachelandrew",
+      "mehtapratik",
+      "SphinxKnight",
+      "j9t",
+      "steveclason",
+      "denimX",
+      "gh3it8",
+      "weslord",
+      "mfluehr",
+      "tshinnic",
+      "aermolaev",
+      "teoli"
+    ]
+  },
+  "Web/CSS/Guides/Grid_layout/Basic_concepts": {
+    "modified": "2020-11-11T09:30:52.536Z",
+    "contributors": [
+      "rachelandrew",
+      "mfuji09",
+      "leonardoInf",
+      "Tingyu",
+      "chrisdavidmills",
+      "SanjeevSahoo",
+      "ValLynn",
+      "panckreous",
+      "ExE-Boss",
+      "Sheppy",
+      "RichWK",
+      "harupiyo",
+      "kan199041",
+      "stephaniehobson",
+      "KateSturmey",
+      "bgates",
+      "tshinnic",
+      "magnificode",
+      "mhusm",
+      "BluebirchCreative",
+      "MexieAndCo",
+      "johnjv",
+      "Sebastianz",
+      "richardkalehoff",
+      "AleshaOleg",
+      "dvincent",
+      "teoli"
+    ]
+  },
+  "Web/CSS/Guides/Grid_layout/Box_alignment": {
+    "modified": "2020-11-12T04:20:04.207Z",
+    "contributors": [
+      "rachelandrew",
+      "applejam9029",
+      "mehtapratik",
+      "mklein",
+      "kp2017",
+      "waqarhussain",
+      "estelle",
+      "Jannaee",
+      "VAggrippino",
+      "juandesouza",
+      "Sheppy",
+      "cagross",
+      "stephaniehobson",
+      "comehope",
+      "AlexN",
+      "mfluehr",
+      "tshinnic",
+      "david_ross",
+      "Konrud",
+      "aermolaev",
+      "teoli"
+    ]
+  },
+  "Web/CSS/Guides/Grid_layout/Common_grid_layouts": {
+    "modified": "2020-11-12T04:33:54.397Z",
+    "contributors": [
+      "rachelandrew",
+      "ferrybig",
+      "mfluehr",
+      "Konrud",
+      "aermolaev",
+      "teoli"
+    ]
+  },
+  "Web/CSS/Guides/Grid_layout/Grid_template_areas": {
+    "modified": "2020-11-12T13:21:19.042Z",
+    "contributors": [
+      "rachelandrew",
+      "juandesouza",
+      "miname",
+      "aermolaev",
+      "teoli"
+    ]
+  },
+  "Web/CSS/Guides/Grid_layout/Line-based_placement": {
+    "modified": "2020-11-11T09:51:54.730Z",
+    "contributors": [
+      "rachelandrew",
+      "cdoublev",
+      "mfluehr",
+      "chrisdavidmills",
+      "neo01124",
+      "NouranMahmoud",
+      "bgates",
+      "dmitry-zabolotny",
+      "jarrodn",
+      "AleshaOleg",
+      "teoli",
+      "imagentleman"
+    ]
+  },
+  "Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes": {
+    "modified": "2020-11-12T04:23:35.016Z",
+    "contributors": [
+      "rachelandrew",
+      "Sheppy",
+      "j9t",
+      "estelle",
+      "MNizam0802",
+      "juandesouza",
+      "rileym7",
+      "mfluehr",
+      "david_ross",
+      "Konrud",
+      "aermolaev",
+      "teoli"
+    ]
+  },
+  "Web/CSS/Guides/Grid_layout/Masonry_layout": {
+    "modified": "2020-11-12T05:33:14.237Z",
+    "contributors": ["chrisdavidmills", "rachelandrew"]
+  },
+  "Web/CSS/Guides/Grid_layout/Named_grid_lines": {
+    "modified": "2020-11-11T09:57:51.799Z",
+    "contributors": [
+      "rachelandrew",
+      "escattone",
+      "richardkmichael",
+      "magnificode",
+      "jarrodn",
+      "1986slayer",
+      "Konrud",
+      "aermolaev",
+      "teoli"
+    ]
+  },
+  "Web/CSS/Guides/Grid_layout/Relationship_with_other_layout_methods": {
+    "modified": "2020-11-11T09:35:50.512Z",
+    "contributors": [
+      "rachelandrew",
+      "gerfolder",
+      "escattone",
+      "raushanraja",
+      "cdoublev",
+      "mfuji09",
+      "chrisdavidmills",
+      "jaredef",
+      "richardkmichael",
+      "juandesouza",
+      "AndyK",
+      "jquinones618",
+      "kan199041",
+      "VladPavel15",
+      "mfluehr",
+      "NouranMahmoud",
+      "bgates",
+      "Pickles-Spill",
+      "jarrodn",
+      "AleshaOleg",
+      "teoli"
+    ]
+  },
+  "Web/CSS/Guides/Grid_layout/Subgrid": {
+    "modified": "2020-11-12T04:35:24.907Z",
+    "contributors": [
+      "rachelandrew",
+      "mfuji09",
+      "wbamberg",
+      "inwardmovement",
+      "bershanskiy",
+      "chrisdavidmills",
+      "SphinxKnight"
+    ]
   },
   "Web/CSS/How_to/Layout_cookbook": {
     "modified": "2020-07-07T12:18:05.178Z",

@@ -1,6 +1,6 @@
 ---
 title: CSS grid layout
-slug: Web/CSS/CSS_grid_layout
+slug: Web/CSS/Guides/Grid_layout
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-grid/
 sidebar: cssref
@@ -121,40 +121,40 @@ This sample animation uses {{cssxref("display")}}, {{cssxref("grid-template-colu
 
 ## Guides
 
-- [Basic concepts of grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
+- [Basic concepts of grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)
   - : An overview of the various features provided in the CSS grid layout module.
 
-- [Relationship of grid layout with other layout methods](/en-US/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
+- [Relationship of grid layout with other layout methods](/en-US/docs/Web/CSS/Guides/Grid_layout/Relationship_with_other_layout_methods)
   - : How grid layout fits together with other CSS features including flexbox, absolutely positioned elements, and `display: contents`.
 
-- [Grid layout using line-based placement](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
+- [Grid layout using line-based placement](/en-US/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)
   - : Grid lines and how to position items against those lines, including the `grid-area` properties, negative line numbers, spanning multiple cells, and creating grid gutters.
 
-- [Grid template areas](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
+- [Grid template areas](/en-US/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas)
   - : Placing grid items using named template areas.
 
-- [Grid layout using named grid lines](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
+- [Grid layout using named grid lines](/en-US/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines)
   - : Combining names and track sizes; placing grid items by defining named grid lined and template areas.
 
-- [Auto-placement in grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
+- [Auto-placement in grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout/Auto-placement)
   - : How grid positions items that don't have any placement properties declared.
 
-- [Aligning items in CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
+- [Aligning items in CSS grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout/Box_alignment)
   - : Aligning, justifying, and centering grid items along the two axes of a grid layout.
 
-- [Grids, logical values, and writing modes](/en-US/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
+- [Grids, logical values, and writing modes](/en-US/docs/Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes)
   - : A look at the interaction between CSS grid layout, box alignment and writing modes, along with CSS logical and physical properties and values.
 
-- [Grid layout and accessibility](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
+- [Grid layout and accessibility](/en-US/docs/Web/CSS/Guides/Grid_layout/Accessibility)
   - : A look at how CSS grid layout can both help and harm accessibility.
 
-- [Realizing common layouts using grids](/en-US/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
+- [Realizing common layouts using grids](/en-US/docs/Web/CSS/Guides/Grid_layout/Common_grid_layouts)
   - : A few different layouts demonstrating different techniques you can use when designing with CSS grid layouts, including using {{cssxref("grid-template-areas")}}, a 12-column flexible grid system, and a product listing using auto-placement.
 
-- [Subgrid](/en-US/docs/Web/CSS/CSS_grid_layout/Subgrid)
+- [Subgrid](/en-US/docs/Web/CSS/Guides/Grid_layout/Subgrid)
   - : What subgrid does with use cases and design patterns that subgrid solves.
 
-- [Masonry layout](/en-US/docs/Web/CSS/CSS_grid_layout/Masonry_layout)
+- [Masonry layout](/en-US/docs/Web/CSS/Guides/Grid_layout/Masonry_layout)
   - : Details what masonry layout is and it is used.
 
 - [Box alignment in CSS grid layout](/en-US/docs/Web/CSS/Guides/Box_alignment/In_grid_layout)

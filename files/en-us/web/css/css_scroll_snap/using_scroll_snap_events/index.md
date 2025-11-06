@@ -307,7 +307,7 @@ h2 {
 
 The CSS for this example is similar to the CSS in the previous example. The most significant differences are as follows.
 
-First let's look at the `<main>` element styling. We want the `<section>` elements to be laid out as a grid, so we use [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) to specify that we want them displayed in seven columns, using a {{cssxref("grid-template-columns")}} value of `repeat(7, 1fr)`. We also specify the space around the `<section>` elements by setting `padding` and {{cssxref("gap")}} on the `<main>` element rather than `margin` on the `<section>` elements.
+First let's look at the `<main>` element styling. We want the `<section>` elements to be laid out as a grid, so we use [CSS grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout) to specify that we want them displayed in seven columns, using a {{cssxref("grid-template-columns")}} value of `repeat(7, 1fr)`. We also specify the space around the `<section>` elements by setting `padding` and {{cssxref("gap")}} on the `<main>` element rather than `margin` on the `<section>` elements.
 
 Finally, since we are scrolling in both directions in this example, we set {{cssxref("scroll-snap-type")}} to `both mandatory` so that snap targets in the block direction _and_ inline direction will always be snapped to.
 

@@ -1,12 +1,12 @@
 ---
 title: Realizing common layouts using grids
 short-title: Common grid layouts
-slug: Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids
+slug: Web/CSS/Guides/Grid_layout/Common_grid_layouts
 page-type: guide
 sidebar: cssref
 ---
 
-To round off this [set of CSS grid layout guides](/en-US/docs/Web/CSS/CSS_grid_layout#guides), we're going to walk through a few different layouts, which demonstrate some of the techniques you can use when designing with grid layout. We will look at an example using {{cssxref("grid-template-areas")}}, a 12-column flexible grid system, and also a product listing using auto-placement. As you can see from this set of examples, there is often more than one way to get the results you want with CSS grid layout. Choose the method you find most helpful for the problems that you are solving and the designs that you need to implement.
+To round off this [set of CSS grid layout guides](/en-US/docs/Web/CSS/Guides/Grid_layout#guides), we're going to walk through a few different layouts, which demonstrate some of the techniques you can use when designing with grid layout. We will look at an example using {{cssxref("grid-template-areas")}}, a 12-column flexible grid system, and also a product listing using auto-placement. As you can see from this set of examples, there is often more than one way to get the results you want with CSS grid layout. Choose the method you find most helpful for the problems that you are solving and the designs that you need to implement.
 
 ## A responsive layout with 1 to 3 fluid columns using `grid-template-areas`
 
@@ -14,7 +14,7 @@ Many websites are a variation of this type of layout, with content, sidebars, a 
 
 ![three different layouts created by redefining the grid at two breakpoints.](11-responsive-areas.png)
 
-We're going to create this layout using the _named template areas_ that we learned about in the [Grid template areas](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_template_areas) guide.
+We're going to create this layout using the _named template areas_ that we learned about in the [Grid template areas](/en-US/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas) guide.
 
 The markup is a container with elements inside for a header, footer, main content, navigation, sidebar, and a block to place advertising.
 
@@ -93,7 +93,7 @@ As we are using {{cssxref("grid-template-areas")}} to create the layout, we need
 }
 ```
 
-This does not create a layout. Rather, the items now have names we can use to do so. Staying outside of any media queries we're now going to set up the layout for the mobile width. Here we're keeping everything in source order to avoid any disconnect between the source and display as described in the [Grid layout and accessibility](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility) guide. We've not explicitly defined any column or row tracks; this layout dictates a single column and creates rows as needed for each item in the implicit grid.
+This does not create a layout. Rather, the items now have names we can use to do so. Staying outside of any media queries we're now going to set up the layout for the mobile width. Here we're keeping everything in source order to avoid any disconnect between the source and display as described in the [Grid layout and accessibility](/en-US/docs/Web/CSS/Guides/Grid_layout/Accessibility) guide. We've not explicitly defined any column or row tracks; this layout dictates a single column and creates rows as needed for each item in the implicit grid.
 
 ```css
 .wrapper {
@@ -222,7 +222,7 @@ We can then place these on the grid using the named lines, and also the `span` k
 
 {{ EmbedLiveSample('A_flexible_12-column_layout', '800', '400') }}
 
-As described in the [using named grid lines guide](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines), we are using the named lines to place our items. As we have 12 lines all with the same name, we use the name and the index of the line. If you prefer, you can use the line index itself and avoid using named lines.
+As described in the [using named grid lines guide](/en-US/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines), we are using the named lines to place our items. As we have 12 lines all with the same name, we use the name and the index of the line. If you prefer, you can use the line index itself and avoid using named lines.
 
 Rather than setting the end line number, we define how many tracks this element should span using the `span` keyword. When working with a multiple-column layout system, this method may be more intuitive for those who think of blocks in terms of the number of tracks of the grid they span, then adjusting for different breakpoints. To see how the blocks align themselves to the tracks, use the grid inspector in your browser developer tools; it likely clearly demonstrates how the items are placed.
 
@@ -502,7 +502,7 @@ This is all looking fairly complete now. However, we sometimes have cards that c
 
 ![The layout has gaps as there is not space to lay out a two track item.](11-grid-auto-flow-sparse.png)
 
-We can make the grid backfill those gaps by setting {{cssxref("grid-auto-flow", "grid-auto-flow: dense")}} on the grid container. Take care when doing this as it can cause items to be taken out of their logical source order. You should only do this if your items do not have a set order. Additionally, be aware of the [accessibility and re-ordering issues](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility#visual_not_logical_re-ordering) resulting from the tab order following the source and not your reordered display.
+We can make the grid backfill those gaps by setting {{cssxref("grid-auto-flow", "grid-auto-flow: dense")}} on the grid container. Take care when doing this as it can cause items to be taken out of their logical source order. You should only do this if your items do not have a set order. Additionally, be aware of the [accessibility and re-ordering issues](/en-US/docs/Web/CSS/Guides/Grid_layout/Accessibility#visual_not_logical_re-ordering) resulting from the tab order following the source and not your reordered display.
 
 ```html hidden
 <ul class="listing">
@@ -606,7 +606,7 @@ Using auto-placement with some rules applied to certain items is very useful and
 
 CSS grid layout provides so many possibilities. The best way to learn to use grid layout is to continue to build examples like the ones we have covered here. Pick a layout from a responsive site you like and see if you can build it using grid. You can even take inspiration from magazines or other non-web sources.
 
-- [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout)
+- [CSS grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout)
 - [CSS Layout: Grids](/en-US/docs/Learn_web_development/Core/CSS_layout/Grids)
 - [A complete guide to CSS grid](https://css-tricks.com/snippets/css/complete-guide-grid/) on CSS-Tricks (2023)
 - [Grid by example](https://gridbyexample.com/)

@@ -1,14 +1,14 @@
 ---
 title: Grid layout using line-based placement
 short-title: Using line-based placement
-slug: Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
+slug: Web/CSS/Guides/Grid_layout/Line-based_placement
 page-type: guide
 sidebar: cssref
 ---
 
-In the [basic concepts of grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout) guide, we took a brief look at positioning items on a grid using line numbers. In this guide, we will fully explore how this fundamental feature of the specification works.
+In the [basic concepts of grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout/Basic_concepts) guide, we took a brief look at positioning items on a grid using line numbers. In this guide, we will fully explore how this fundamental feature of the specification works.
 
-Starting your exploration of grid with numbered lines is the most logical place to begin because when you use grid layout, you always have numbered lines. The lines are numbered for columns and rows, and are indexed from `1`. Note that grid is indexed according to the writing mode of the document. In a left-to-right language, such as English, line 1 is on the left-hand side of the grid. If you are working in a right-to-left language, such as Arabic, then line 1 will be on the right-hand of the grid. We will learn more about the interaction between writing modes and grids in the [grids, logical values, and writing modes](/en-US/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes) guide.
+Starting your exploration of grid with numbered lines is the most logical place to begin because when you use grid layout, you always have numbered lines. The lines are numbered for columns and rows, and are indexed from `1`. Note that grid is indexed according to the writing mode of the document. In a left-to-right language, such as English, line 1 is on the left-hand side of the grid. If you are working in a right-to-left language, such as Arabic, then line 1 will be on the right-hand of the grid. We will learn more about the interaction between writing modes and grids in the [grids, logical values, and writing modes](/en-US/docs/Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes) guide.
 
 ## A basic example
 
@@ -72,7 +72,7 @@ We can use line-based placement to control where these items sit on the grid. We
 }
 ```
 
-As you position some items, other items on the grid will continue to be laid out using the auto-placement rules. This behavior is explained in the [Auto-placement in grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout) guide. For now, observe how the grid is laying out un-placed items into empty cells of the grid.
+As you position some items, other items on the grid will continue to be laid out using the auto-placement rules. This behavior is explained in the [Auto-placement in grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout/Auto-placement) guide. For now, observe how the grid is laying out un-placed items into empty cells of the grid.
 
 Addressing each item individually using the same properties but with different values, we place all four items, spanning row and column tracks.
 
@@ -375,7 +375,7 @@ We can take things a step further and define each area with a single property �
 
 {{ EmbedLiveSample('The_grid-area_property', '300', '330') }}
 
-This order of values for `grid-area` can seem a little strange — it is the opposite of the direction in which we specify margins and padding as a shorthand, for example. It may help to realize that this is due to CSS grid layout using the flow-relative directions defined in [CSS writing modes](/en-US/docs/Web/CSS/CSS_writing_modes). We explore how grids work with writing modes in [grids, logical values, and writing modes](/en-US/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes). For now, consider the concept of four {{glossary("Flow relative values", "flow-relative")}} directions:
+This order of values for `grid-area` can seem a little strange — it is the opposite of the direction in which we specify margins and padding as a shorthand, for example. It may help to realize that this is due to CSS grid layout using the flow-relative directions defined in [CSS writing modes](/en-US/docs/Web/CSS/CSS_writing_modes). We explore how grids work with writing modes in [grids, logical values, and writing modes](/en-US/docs/Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes). For now, consider the concept of four {{glossary("Flow relative values", "flow-relative")}} directions:
 
 - `block-start`
 - `block-end`

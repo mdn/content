@@ -146,7 +146,7 @@ The CSS values and units module also introduces the [`<frequency>`](/en-US/docs/
 - [`vw`](/en-US/docs/Web/CSS/Reference/Values/length#vw)
 - [`x`](/en-US/docs/Web/CSS/Reference/Values/resolution#x)
 
-[Flex units](/en-US/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#flex_units) (`fr`) and [container units](/en-US/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#container_units) (`cqb`, `cqh`, `cqi`, `cqmax`, `cqmin`, `cqw`) are defined in the [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) and [CSS conditional rules](/en-US/docs/Web/CSS/Guides/Conditional_rules) modules, respectively.
+[Flex units](/en-US/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#flex_units) (`fr`) and [container units](/en-US/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#container_units) (`cqb`, `cqh`, `cqi`, `cqmax`, `cqmin`, `cqw`) are defined in the [CSS grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout) and [CSS conditional rules](/en-US/docs/Web/CSS/Guides/Conditional_rules) modules, respectively.
 
 #### Unit categorizations
 
@@ -221,7 +221,7 @@ The CSS values and units module also introduces the [`<frequency>`](/en-US/docs/
   - {{cssxref("unset")}}
   - {{cssxref("all")}}
 
-- [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) module
+- [CSS grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout) module
   - {{cssxref("&lt;flex&gt;")}}
   - [Flex units](/en-US/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#flex_units) (`fr`)
 

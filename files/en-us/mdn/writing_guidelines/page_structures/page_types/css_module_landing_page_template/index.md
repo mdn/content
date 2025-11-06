@@ -30,11 +30,11 @@ sidebar: mdnsidebar
 > - **title**
 >   - : The `title` value is displayed at the top of the page.
 >     This is the text "CSS" followed by the name of the module.
->     For example, the title for the [grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) module landing page is _CSS grid layout_.
+>     For example, the title for the [grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout) module landing page is _CSS grid layout_.
 > - **slug**
 >   - : The `slug` value is the end of the URL path after `https://developer.mozilla.org/en-US/docs/`.
 >     This will be formatted as `Web/CSS/CSS_NameOfTheModule`.
->     For example, the slug for the [grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) module landing page is `Web/CSS/CSS_grid_layout`.
+>     For example, the slug for the [grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout) module landing page is `Web/CSS/CSS_grid_layout`.
 > - **page-type**
 >   - : The `page-type` value for CSS module landing pages is always `css-module`.
 > - **spec-urls**

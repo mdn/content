@@ -1,18 +1,18 @@
 ---
 title: Layout using named grid lines
 short-title: Using named grid lines
-slug: Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines
+slug: Web/CSS/Guides/Grid_layout/Named_grid_lines
 page-type: guide
 sidebar: cssref
 ---
 
-In previous guides, we've looked at placing items on the lines created by [defining grid tracks](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement) and also how to place items [using named template areas](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_template_areas). In this guide, we look at how these two things work together when we use named lines.
+In previous guides, we've looked at placing items on the lines created by [defining grid tracks](/en-US/docs/Web/CSS/Guides/Grid_layout/Line-based_placement) and also how to place items [using named template areas](/en-US/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas). In this guide, we look at how these two things work together when we use named lines.
 
 Line naming is incredibly useful, but some of the more confusing grid syntax comes from this combination of names and track sizes. Once you work through some examples, it should become clearer and easier to work with.
 
 ## Naming lines when defining a grid
 
-You can assign some or all of the lines in your grid a name when you define your grid with the {{cssxref("grid-template-rows")}} and {{cssxref("grid-template-columns")}} properties. To demonstrate, we'll use the basic layout created in the guide on [line-based placement](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement). This time, we'll create the grid using named lines.
+You can assign some or all of the lines in your grid a name when you define your grid with the {{cssxref("grid-template-rows")}} and {{cssxref("grid-template-columns")}} properties. To demonstrate, we'll use the basic layout created in the guide on [line-based placement](/en-US/docs/Web/CSS/Guides/Grid_layout/Line-based_placement). This time, we'll create the grid using named lines.
 
 ```css hidden
 * {
@@ -141,7 +141,7 @@ We don't need to define where our areas are with {{cssxref("grid-template-areas"
 
 ## Implicit grid lines from named areas
 
-We have seen how named lines create a named area, and this also works in reverse. Named template areas create named lines that you can use to place your items. If we take the layout created in the guide to [grid template areas](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_template_areas), we can use the lines created by our areas to see how this works.
+We have seen how named lines create a named area, and this also works in reverse. Named template areas create named lines that you can use to place your items. If we take the layout created in the guide to [grid template areas](/en-US/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas), we can use the lines created by our areas to see how this works.
 
 In this example, we have added an extra `<div>` with a class of `overlay`. We have named areas created using the {{cssxref("grid-area")}} property, then a layout created in `grid-template-areas`. The area names are:
 
@@ -386,7 +386,7 @@ Using a track list, we can use the `span` keyword to span a number of lines, inc
 
 ### Twelve-column grid framework
 
-Having learned about numeric and named line-based placement and [grid template areas](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_template_areas), we now know there are several ways to place items using CSS grid layout. This may seem overly complex, but you don't need to use all of them. In practice, using named template areas works well for straightforward layouts as this method gives a good visual representation of what your layout looks like, and makes it more intuitive to move things around on the grid. For example, when working with a strict multiple-column layout, the named lines demonstration in the last part of this guide works well.
+Having learned about numeric and named line-based placement and [grid template areas](/en-US/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas), we now know there are several ways to place items using CSS grid layout. This may seem overly complex, but you don't need to use all of them. In practice, using named template areas works well for straightforward layouts as this method gives a good visual representation of what your layout looks like, and makes it more intuitive to move things around on the grid. For example, when working with a strict multiple-column layout, the named lines demonstration in the last part of this guide works well.
 
 Legacy grid systems such as Foundation or Bootstrap are based on a 12-column grid. These frameworks import code to do calculations that ensure the columns add up to 100%. Frameworks aren't needed! The only CSS we need for a 12-column grid "framework" is:
 
@@ -464,4 +464,4 @@ Once again, the developer tool's grid highlighter is helpful to show us how the 
 
 That's all we need. We don't need to do any calculations! CSS grid layout automatically removed our 10-pixel gutter track before assigning the space to the `1fr` column tracks.
 
-Up next, we will look at how CSS grid layout can position items for us without requiring placement properties at all, in the [auto-placement in grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout) guide.
+Up next, we will look at how CSS grid layout can position items for us without requiring placement properties at all, in the [auto-placement in grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout/Auto-placement) guide.

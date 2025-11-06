@@ -161,4 +161,4 @@ li::after {
 - CSS [`counters()`](/en-US/docs/Web/CSS/Reference/Values/counters) function
 - [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
 - [CSS counter styles](/en-US/docs/Web/CSS/Guides/Counter_styles) module
-- [CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content) module
+- [CSS generated content](/en-US/docs/Web/CSS/Guides/Generated_content) module

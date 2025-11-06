@@ -39,7 +39,7 @@ The [CSS reference](/en-US/docs/Web/CSS/Reference) is an exhaustive reference fo
 - [Stacking](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context) and [block-formatting](/en-US/docs/Web/CSS/Guides/Display/Block_formatting_context) contexts
 - [Initial](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#initial_value), [computed](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#computed_value), [used](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#used_value), and [actual](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#actual_value) values
 - [CSS shorthand properties](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties)
-- [CSS flexible box](/en-US/docs/Web/CSS/Guides/Flexible_box_layout), [multi-column](/en-US/docs/Web/CSS/CSS_multicol_layout) and [grid](/en-US/docs/Web/CSS/CSS_grid_layout) layout
+- [CSS flexible box](/en-US/docs/Web/CSS/Guides/Flexible_box_layout), [multi-column](/en-US/docs/Web/CSS/CSS_multicol_layout) and [grid](/en-US/docs/Web/CSS/Guides/Grid_layout) layout
 - [Animation](/en-US/docs/Web/CSS/Guides/Animations), [transitions](/en-US/docs/Web/CSS/CSS_transitions), and [transforms](/en-US/docs/Web/CSS/CSS_transforms)
 
 ## Cookbook

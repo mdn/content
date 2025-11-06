@@ -37,4 +37,4 @@ The following keyword values are represented by the `<overflow-position>` gramma
 - Other box alignment data types: {{cssxref("content-distribution")}}, {{cssxref("content-position")}}, {{cssxref("baseline-position")}}, and {{cssxref("self-position")}}
 - [CSS box alignment](/en-US/docs/Web/CSS/Guides/Box_alignment) module
 - [CSS flexible box layout](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) module
-- [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) module
+- [CSS grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout) module

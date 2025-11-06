@@ -67,29 +67,29 @@ CSS Flexible Box Layout, commonly known as flexbox, is a layout model optimized 
 
 CSS Grid Layout introduces a two-dimensional grid system to CSS. Grids can be used to lay out major page areas or small user interface elements.
 
-- [Basic concepts of Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
+- [Basic concepts of Grid Layout](/en-US/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)
   - : An overview of the features of grid layout.
-- [Relationship of Grid Layout to other layout methods](/en-US/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
+- [Relationship of Grid Layout to other layout methods](/en-US/docs/Web/CSS/Guides/Grid_layout/Relationship_with_other_layout_methods)
   - : How grid relates to other methods such as alignment, sizing, and flexbox.
-- [Layout using line-based placement](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
+- [Layout using line-based placement](/en-US/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)
   - : How to place items by numbered lines.
-- [Grid template areas](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
+- [Grid template areas](/en-US/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas)
   - : How to place items using the grid-template syntax.
-- [Layout using named grid lines](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
+- [Layout using named grid lines](/en-US/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines)
   - : How to name lines, and place items by line name rather than number.
-- [Auto-placement in CSS Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
+- [Auto-placement in CSS Grid Layout](/en-US/docs/Web/CSS/Guides/Grid_layout/Auto-placement)
   - : How to manage the auto-placement algorithm, and understand how the browser places items.
-- [Box alignment in CSS Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
+- [Box alignment in CSS Grid Layout](/en-US/docs/Web/CSS/Guides/Grid_layout/Box_alignment)
   - : How to align items, and distribute space on both axes in grid.
-- [CSS Grid, Logical Values and Writing Modes](/en-US/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
+- [CSS Grid, Logical Values and Writing Modes](/en-US/docs/Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes)
   - : How to use flow relative, rather than physical, properties and values with grid.
-- [CSS Grid Layout and accessibility](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
+- [CSS Grid Layout and accessibility](/en-US/docs/Web/CSS/Guides/Grid_layout/Accessibility)
   - : Some accessibility considerations when working with grid layout.
-- [Realizing common layouts using CSS Grid](/en-US/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
+- [Realizing common layouts using CSS Grid](/en-US/docs/Web/CSS/Guides/Grid_layout/Common_grid_layouts)
   - : Using grid to build some common layouts.
-- [Subgrid](/en-US/docs/Web/CSS/CSS_grid_layout/Subgrid)
+- [Subgrid](/en-US/docs/Web/CSS/Guides/Grid_layout/Subgrid)
   - : An explanation of the subgrid value, part of Grid Level 2.
-- [Masonry Layout](/en-US/docs/Web/CSS/CSS_grid_layout/Masonry_layout)
+- [Masonry Layout](/en-US/docs/Web/CSS/Guides/Grid_layout/Masonry_layout)
   - : An explanation of the masonry layout feature in Grid Level 3.
 
 ## Alignment

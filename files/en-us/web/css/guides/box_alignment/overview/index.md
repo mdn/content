@@ -112,7 +112,7 @@ For these keywords to take effect, space is required along the dimension in whic
 
 ### Basic examples
 
-The following examples demonstrate how some of the box alignment properties are applied in [Grid](/en-US/docs/Web/CSS/CSS_grid_layout) and [Flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout).
+The following examples demonstrate how some of the box alignment properties are applied in [Grid](/en-US/docs/Web/CSS/Guides/Grid_layout) and [Flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout).
 
 #### CSS grid layout alignment example
 
@@ -283,5 +283,5 @@ As the CSS box alignment properties are implemented differently depending on the
 - [CSS flex layout](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) module
 - [Basic concepts of flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
 - [Aligning items in a flex container](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
-- [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) module
+- [CSS grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout) module
 - [Box alignment in grid layout](/en-US/docs/Web/CSS/Guides/Box_alignment/In_grid_layout)

@@ -53,7 +53,7 @@ grid-template-columns: fit-content(40%) fit-content(40%) 1fr;
 }
 ```
 
-The function can be used as a track size in [CSS grid](/en-US/docs/Web/CSS/CSS_grid_layout) properties, where the maximum size is defined by `max-content` and the minimum size by `auto`, which is calculated similar to `auto` (i.e., [`minmax(auto, max-content)`](/en-US/docs/Web/CSS/Reference/Values/minmax)), except that the track size is clamped at _argument_ if it is greater than the `auto` minimum.
+The function can be used as a track size in [CSS grid](/en-US/docs/Web/CSS/Guides/Grid_layout) properties, where the maximum size is defined by `max-content` and the minimum size by `auto`, which is calculated similar to `auto` (i.e., [`minmax(auto, max-content)`](/en-US/docs/Web/CSS/Reference/Values/minmax)), except that the track size is clamped at _argument_ if it is greater than the `auto` minimum.
 
 See the {{cssxref("grid-template-columns")}} page for more information on the `max-content` and `auto` keywords.
 
@@ -146,5 +146,5 @@ fit-content(40%)
 - {{cssxref("grid-auto-columns")}}
 - {{cssxref("grid-auto-rows")}}
 - {{cssxref("grid-auto-flow")}}
-- [Line-based placement with CSS grid](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
-- [Grid template areas: grid definition shorthands](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_template_areas#grid_definition_shorthands)
+- [Line-based placement with CSS grid](/en-US/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)
+- [Grid template areas: grid definition shorthands](/en-US/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas#grid_definition_shorthands)

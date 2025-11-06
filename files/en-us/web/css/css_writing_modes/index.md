@@ -81,7 +81,7 @@ The CSS writing module addresses the orientations of all writing modes. Other mo
 - {{CSSxRef("&lt;display-internal&gt;")}}
 - [Visual formatting model](/en-US/docs/Web/CSS/Guides/Display/Visual_formatting_model)
 
-[CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content)
+[CSS generated content](/en-US/docs/Web/CSS/Guides/Generated_content)
 
 - {{CSSxRef("quotes")}}
 

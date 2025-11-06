@@ -45,7 +45,7 @@ As a "pure" container, the `<div>` element does not inherently represent anythin
 This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 > [!NOTE]
-> The `align` attribute is obsolete; do not use it anymore. Instead, you should use CSS properties or techniques such as [CSS Grid](/en-US/docs/Web/CSS/CSS_grid_layout) or [CSS Flexbox](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox) to align and position `<div>` elements on the page.
+> The `align` attribute is obsolete; do not use it anymore. Instead, you should use CSS properties or techniques such as [CSS Grid](/en-US/docs/Web/CSS/Guides/Grid_layout) or [CSS Flexbox](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox) to align and position `<div>` elements on the page.
 
 ## Usage notes
 
