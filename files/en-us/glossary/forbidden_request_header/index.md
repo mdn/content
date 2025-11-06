@@ -28,16 +28,17 @@ Forbidden headers are one of the following:
 - {{HTTPHeader("Connection")}}
 - {{HTTPHeader("Content-Length")}}
 - {{HTTPHeader("Cookie")}}
+- {{HTTPHeader("Cookie2")}}
 - {{HTTPHeader("Date")}}
 - {{HTTPHeader("DNT")}}
 - {{HTTPHeader("Expect")}}
 - {{HTTPHeader("Host")}}
 - {{HTTPHeader("Keep-Alive")}}
 - {{HTTPHeader("Origin")}}
-- {{HTTPHeader("Permissions-Policy")}}
 - `Proxy-` headers
 - `Sec-` headers
 - {{HTTPHeader("Referer")}}
+- {{HTTPHeader("Set-Cookie")}}
 - {{HTTPHeader("TE")}}
 - {{HTTPHeader("Trailer")}}
 - {{HTTPHeader("Transfer-Encoding")}}
@@ -52,6 +53,9 @@ Forbidden headers are one of the following:
 
 > [!NOTE]
 > While the {{HTTPHeader("Referer")}} header is listed as a forbidden header [in the spec](https://fetch.spec.whatwg.org/#forbidden-request-header), the user agent does not retain full control over it and the header can be programmatically modified. For example, when using [`fetch()`](/en-US/docs/Web/API/Window/fetch), the {{HTTPHeader("Referer")}} header can be programmatically modified via the [`referrer` option](/en-US/docs/Web/API/RequestInit#referrer).
+
+> [!NOTE]
+> Chrome also forbids `Access-Control-Request-Private-Network`
 
 ## See also
 
