@@ -32,8 +32,8 @@ anything that can be represented by JSON — an object, an array, a string, a nu
 
 - `TypeError`
   : Thrown for one of the following reasons:
-  _ The response body is [disturbed or locked](/en-US/docs/Web/API/Fetch_API/Using_Fetch#locked_and_disturbed_streams).
-  _ There was an error decoding the body content (for example, because the {{httpheader("Content-Encoding")}} header is incorrect).
+  - The response body is [disturbed or locked](/en-US/docs/Web/API/Fetch_API/Using_Fetch#locked_and_disturbed_streams).
+  - There was an error decoding the body content (for example, because the {{httpheader("Content-Encoding")}} header is incorrect).
 - `SyntaxError`
   : The response body cannot be parsed as JSON.
 
