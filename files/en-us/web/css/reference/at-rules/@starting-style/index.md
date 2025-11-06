@@ -40,7 +40,7 @@ To avoid unexpected behavior, [CSS transitions](/en-US/docs/Web/CSS/CSS_transiti
 `@starting-style` is especially useful when creating entry and exit transitions for elements displayed in the {{glossary("top layer")}} (such as [popovers](/en-US/docs/Web/API/Popover_API) and modal {{htmlelement("dialog")}}s), elements that are changing to and from `display: none`, and elements when first added to or removed from the DOM.
 
 > [!NOTE]
-> `@starting-style` is only relevant to CSS transitions. When using [CSS animations](/en-US/docs/Web/CSS/CSS_animations) to implement such effects, `@starting-style` is not needed. See [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations) for an example.
+> `@starting-style` is only relevant to CSS transitions. When using [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) to implement such effects, `@starting-style` is not needed. See [Using CSS animations](/en-US/docs/Web/CSS/Guides/Animations/Using) for an example.
 
 There are two ways to use `@starting-style`: as a standalone rule or nested within a ruleset.
 

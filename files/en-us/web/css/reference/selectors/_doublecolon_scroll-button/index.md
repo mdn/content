@@ -167,11 +167,11 @@ Note how the scroll buttons are created at the bottom left on the carousel. Try 
 
 ### Positioning the scroll buttons
 
-The previous example works, but the buttons are not ideally placed. In this section, we will add some CSS to position them using [anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning).
+The previous example works, but the buttons are not ideally placed. In this section, we will add some CSS to position them using [anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning).
 
 #### CSS
 
-First of all, a reference {{cssxref("anchor-name")}} is set on the `<ul>` to define it as a named anchor. Next, each scroll button has its {{cssxref("position")}} set to `absolute` and its {{cssxref("position-anchor")}} property set to the list's `anchor-name`, to [associate the two together](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#associating_anchor_and_positioned_elements).
+First of all, a reference {{cssxref("anchor-name")}} is set on the `<ul>` to define it as a named anchor. Next, each scroll button has its {{cssxref("position")}} set to `absolute` and its {{cssxref("position-anchor")}} property set to the list's `anchor-name`, to [associate the two together](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using#associating_anchor_and_positioned_elements).
 
 ```css live-sample___positioning-scroll-buttons
 ul {
@@ -225,5 +225,5 @@ ul::scroll-button(right) {
 - {{cssxref(":target-current")}}
 - [Creating CSS carousels](/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels)
 - [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
-- [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module
+- [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) module
 - [CSS Carousel Gallery](https://chrome.dev/carousel/) via chrome.dev (2025)

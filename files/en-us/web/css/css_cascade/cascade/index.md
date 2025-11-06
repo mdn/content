@@ -359,7 +359,7 @@ Presentational attributes cannot be declared `!important`.
 
 ## CSS animations and the cascade
 
-[CSS animations](/en-US/docs/Web/CSS/CSS_animations), using {{cssxref("@keyframes")}} at-rules, define animations between states. `@keyframes` don't cascade, meaning that at any given time CSS takes values from only one single set of `@keyframes` and never mixes multiple ones. If multiple sets of `@keyframes` are defined with the same animation name, the last defined set in the origin and layer with the greatest precedence is used. Other `@keyframes` are ignored, even if they animate different properties.
+[CSS animations](/en-US/docs/Web/CSS/Guides/Animations), using {{cssxref("@keyframes")}} at-rules, define animations between states. `@keyframes` don't cascade, meaning that at any given time CSS takes values from only one single set of `@keyframes` and never mixes multiple ones. If multiple sets of `@keyframes` are defined with the same animation name, the last defined set in the origin and layer with the greatest precedence is used. Other `@keyframes` are ignored, even if they animate different properties.
 
 ```css
 p {

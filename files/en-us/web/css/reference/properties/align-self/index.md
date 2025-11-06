@@ -118,7 +118,7 @@ align-self: unset;
 - `stretch`
   - : If the item's cross-size is `auto`, the used size is set to the length necessary to be as close to filling the container as possible, respecting the item's width and height limits. If the item is not auto-sized, this value falls back to `flex-start`, and to `self-start` or `self-end` if the container's {{cssxref("align-content")}} is `first baseline` (or `baseline`) or `last baseline`.
 - `anchor-center`
-  - : In the case of [anchor-positioned](/en-US/docs/Web/CSS/CSS_anchor_positioning) elements, aligns the item to the center of the associated anchor element in the block direction. See [Centering on the anchor using `anchor-center`](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#centering_on_the_anchor_using_anchor-center).
+  - : In the case of [anchor-positioned](/en-US/docs/Web/CSS/Guides/Anchor_positioning) elements, aligns the item to the center of the associated anchor element in the block direction. See [Centering on the anchor using `anchor-center`](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using#centering_on_the_anchor_using_anchor-center).
 - `safe`
   - : If the size of the item overflows the alignment container, the item is instead aligned as if the alignment mode were `start`.
 - `unsafe`

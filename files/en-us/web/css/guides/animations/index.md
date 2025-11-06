@@ -1,6 +1,6 @@
 ---
 title: CSS animations
-slug: Web/CSS/CSS_animations
+slug: Web/CSS/Guides/Animations
 page-type: css-module
 spec-urls:
   - https://drafts.csswg.org/css-animations-2/
@@ -269,7 +269,7 @@ All animations, even those with 0 seconds duration, throw animation events.
 
 ## Guides
 
-- [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [Using CSS animations](/en-US/docs/Web/CSS/Guides/Animations/Using)
   - : Step-by-step tutorial on how to create animations using CSS. This article describes the animation-related CSS properties and at-rule and how they interact with each other.
 - [Using the Web Animations API](/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API)
   - : Common animation requirements that can be solved with a few lines of JavaScript.

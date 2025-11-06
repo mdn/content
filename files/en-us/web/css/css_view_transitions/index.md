@@ -53,7 +53,7 @@ The **CSS view transitions** module defines the behavior of the [View Transition
 - {{domxref("PageSwapEvent", "pageswap")}} event
 - {{domxref("Document.visibilityState")}}
 
-- [CSS animations](/en-US/docs/Web/CSS/CSS_animations) module
+- [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module
   - {{cssxref("animation")}}
   - {{cssxref("@keyframes")}}
   - {{domxref("CSSKeyframesRule")}}

@@ -12,7 +12,7 @@ The **CSS positioned layout** module defines the coordinate-based positioning an
 
 The positioned layout module defines the physical, logical, and shorthand {{glossary("inset properties")}}. The logical properties enable developing with internationalization and responsiveness in mind.
 
-Like all CSS modules, this module impacts and is impacted by other modules. This module describes how positioning interacts with other layout modules such as [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) and [CSS Grid layout](/en-US/docs/Web/CSS/CSS_grid_layout). Other modules, such as [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning), build upon this module to enable positioning elements relative to other elements and layers.
+Like all CSS modules, this module impacts and is impacted by other modules. This module describes how positioning interacts with other layout modules such as [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) and [CSS Grid layout](/en-US/docs/Web/CSS/CSS_grid_layout). Other modules, such as [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning), build upon this module to enable positioning elements relative to other elements and layers.
 
 ## Reference
 
@@ -73,7 +73,7 @@ Like all CSS modules, this module impacts and is impacted by other modules. This
 - [Popover API](/en-US/docs/Web/API/Popover_API)
 - {{htmlelement("dialog")}} element
 
-- [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module
+- [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) module
   - {{cssxref("position-anchor")}}
   - {{cssxref("position-area")}}
   - {{cssxref("position-try-fallbacks")}}

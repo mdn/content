@@ -467,4 +467,4 @@ Scroll to see the subject element being animated.
 - {{cssxref("view-timeline-name")}}, {{cssxref("view-timeline-axis")}}, {{cssxref("view-timeline")}}, {{cssxref("view-timeline-inset")}}
 - The JavaScript equivalent: The `timeline` property available in {{domxref("Element.animate()")}} calls
 - [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations)
-- [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [Using CSS animations](/en-US/docs/Web/CSS/Guides/Animations/Using)

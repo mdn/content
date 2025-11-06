@@ -85,7 +85,7 @@ It returns a `<length>` value specifying the distance between the anchor-positio
 
 If no anchor with the name specified by the `<anchor-name>` exists, or if the positioned element does not have an anchor associated with it (i.e., via the {{cssxref("position-anchor")}} property), the first parameter is considered invalid and the fallback `<length-percentage>` value is used if one is available. For example, if `top: anchor(bottom, 50px)` were specified on the positioned element but no anchor was associated with it, the fallback value would be used, so `top` would get a computed value of `50px`.
 
-For detailed information on anchor features and usage, see the [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module landing page and the [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide.
+For detailed information on anchor features and usage, see the [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) module landing page and the [Using CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using) guide.
 
 ### Properties that accept `anchor()` function values
 
@@ -169,7 +169,7 @@ This example positions the positioned element's logical block end edge `10px` fr
 
 You can position an element relative to multiple anchors by specifying different `<anchor-name>` values inside the `anchor()` function of different inset properties on the same element (see [Element positioned relative to multiple anchors](#element_positioned_relative_to_multiple_anchors) below). This can be used to create useful functionality such as drag handles at the corners of a positioned element that can be used to resize it.
 
-While a positioned element can be positioned relative to more than one anchor element, it is only ever associated with the single anchor defined via its [`position-anchor`](/en-US/docs/Web/CSS/Reference/Properties/position-anchor) property (or the [`anchor`](/en-US/docs/Web/HTML/Reference/Global_attributes/anchor) HTML attribute). This is the anchor the element will scroll with when the page scrolls; it can also be used to control when the element is [conditionally hidden](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding#conditionally_hiding_anchor-positioned_elements).
+While a positioned element can be positioned relative to more than one anchor element, it is only ever associated with the single anchor defined via its [`position-anchor`](/en-US/docs/Web/CSS/Reference/Properties/position-anchor) property (or the [`anchor`](/en-US/docs/Web/HTML/Reference/Global_attributes/anchor) HTML attribute). This is the anchor the element will scroll with when the page scrolls; it can also be used to control when the element is [conditionally hidden](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding#conditionally_hiding_anchor-positioned_elements).
 
 ## Formal syntax
 
@@ -559,6 +559,6 @@ The positioned element is positioned relative to both anchor elements. Drag them
 - {{cssxref("position-anchor")}}
 - {{cssxref("position-area")}}
 - {{cssxref("anchor-size()")}} function
-- [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide
-- [Fallback options and conditional hiding for overflow](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide
-- [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module
+- [Using CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using) guide
+- [Fallback options and conditional hiding for overflow](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding) guide
+- [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) module

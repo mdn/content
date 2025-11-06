@@ -88,7 +88,7 @@ For example:
   - `block-end span-inline-end` causes the positioned element to be placed in the center of the block end row, and span across the center and inline end tiles of that row.
   - `bottom span-all` and `y-end span-all` cause the positioned element to be placed in the center of the bottom row, and span across three cells, in this case the left, center, and right tiles of the bottom row.
 
-For detailed information on anchor features, usage, and the `position-area` property, see the [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module landing page and the [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide, specifically the section on [setting a `position-area`](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#setting_a_position-area).
+For detailed information on anchor features, usage, and the `position-area` property, see the [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) module landing page and the [Using CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using) guide, specifically the section on [setting a `position-area`](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using#setting_a_position-area).
 
 ### Adjusted default behavior
 
@@ -96,7 +96,7 @@ When a [`<position-area>`](/en-US/docs/Web/CSS/Reference/Values/position-area_va
 
 #### Self-alignment property `normal` value
 
-The `normal` value of the self-alignment properties, including {{cssxref("align-items")}}, {{cssxref("align-self")}}, {{cssxref("justify-items")}}, and {{cssxref("justify-self")}}, behaves as either `start`, `end`, or [`anchor-center`](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#centering_on_the_anchor_using_anchor-center). Which value a self-alignment property defaults to depends on the positioning of the element:
+The `normal` value of the self-alignment properties, including {{cssxref("align-items")}}, {{cssxref("align-self")}}, {{cssxref("justify-items")}}, and {{cssxref("justify-self")}}, behaves as either `start`, `end`, or [`anchor-center`](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using#centering_on_the_anchor_using_anchor-center). Which value a self-alignment property defaults to depends on the positioning of the element:
 
 - If the `position-area` value specifies the center region in an axis, the default alignment in that axis is `anchor-center`.
 - Otherwise, the behavior is the opposite of the region specified by the `position-area` property. For example, if the `position-area` value specifies the start region of its axis, the default alignment in that axis is `end`.
@@ -442,6 +442,6 @@ Try selecting new `position-area` values from the `<select>` menu to see the eff
 - {{cssxref("position-try-fallbacks")}}
 - The [`anchor()`](/en-US/docs/Web/CSS/Reference/Values/anchor) function
 - The [`<position-area>`](/en-US/docs/Web/CSS/Reference/Values/position-area_value) value
-- [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide
-- [Fallback options and conditional hiding for overflow](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide
-- [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module
+- [Using CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using) guide
+- [Fallback options and conditional hiding for overflow](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding) guide
+- [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) module

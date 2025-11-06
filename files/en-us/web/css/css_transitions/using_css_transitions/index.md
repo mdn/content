@@ -390,4 +390,4 @@ el.addEventListener("transitionstart", signalStart);
 ## See also
 
 - The {{domxref("TransitionEvent")}} interface and the {{domxref("Element/transitionend_event", "transitionend")}} event
-- [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [Using CSS animations](/en-US/docs/Web/CSS/Guides/Animations/Using)

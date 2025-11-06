@@ -111,7 +111,7 @@ The {{cssxref("fit-content_function", "fit-content()")}} function as it applies 
 
 Previously called "scroll-linked animations", a [scroll-driven animation](/en-US/docs/Web/CSS/CSS_scroll-driven_animations) depends on the scroll position of a scrollbar instead of time or some other dimension.
 The {{cssxref('scroll-timeline-name')}} and {{cssxref('scroll-timeline-axis')}} properties (and the {{cssxref('scroll-timeline')}} shorthand property) allow you to specify that a particular scrollbar in a particular named container can be used as the source for a scroll-driven animation.
-The scroll timeline can then be associated with an [animation](/en-US/docs/Web/CSS/CSS_animations) by setting the {{cssxref('animation-timeline')}} property to the name value defined using `scroll-timeline-name`.
+The scroll timeline can then be associated with an [animation](/en-US/docs/Web/CSS/Guides/Animations) by setting the {{cssxref('animation-timeline')}} property to the name value defined using `scroll-timeline-name`.
 
 When using the {{cssxref('scroll-timeline')}} shorthand property, the order of the property values must be {{cssxref('scroll-timeline-name')}} followed by {{cssxref('scroll-timeline-axis')}}.
 The longhand and shorthand properties are both available behind the preference.
@@ -275,7 +275,7 @@ The CSS [`calc()`](/en-US/docs/Web/CSS/Reference/Values/calc) function can now p
 
 ### CSS Anchor Positioning
 
-The [CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module defines a number of features that allow elements to be defined as anchor elements, and for other elements to be positioned relative to anchor elements.
+The [CSS Anchor Positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) module defines a number of features that allow elements to be defined as anchor elements, and for other elements to be positioned relative to anchor elements.
 This allows, for example, tooltips to be displayed alongside associated content as it scrolls through the viewport, moving as needed when it would overflow the viewport, and disappearing when the anchor moves offscreen.
 The set of features are being progressively rolled out behind a preference ([Firefox bug 1988224](https://bugzil.la/1988224), [Firefox bug 1838746](https://bugzil.la/1838746)).
 

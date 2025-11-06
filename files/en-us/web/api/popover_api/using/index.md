@@ -429,7 +429,7 @@ You can see an isolated example of this in our [Popover positioning example](htt
 
 There is another useful positioning option that the Popover API provides. If you want to position a popover relative to its invoker rather than the viewport or a positioned ancestor, you can take advantage of the fact that popovers and their invokers have an **implicit anchor reference**.
 
-[Associating any kind of popover with its invoker](#other_ways_to_set_up_a_popover-invoker_relationship) creates an implicit anchor reference between the two. This causes the invoker to become the popover's **anchor element**, meaning that you can position the popover relative to it using [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning).
+[Associating any kind of popover with its invoker](#other_ways_to_set_up_a_popover-invoker_relationship) creates an implicit anchor reference between the two. This causes the invoker to become the popover's **anchor element**, meaning that you can position the popover relative to it using [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning).
 
 Because the association between the popover and the invoker is implicit, an explicit association does not need to be made using the {{cssxref("anchor-name")}} and {{cssxref("position-anchor")}} properties. However, you still need to specify the positioning CSS.
 
@@ -456,13 +456,13 @@ Or you could use a {{cssxref("position-area")}} property:
 
 When using {{cssxref("position-area")}} or {{cssxref("anchor()")}} to position popovers, be aware that [the default styles for popovers](https://html.spec.whatwg.org/multipage/rendering.html#flow-content-3:~:text=%5Bpopover%5D%20%7B) may conflict with the position you're trying to achieve. The usual culprits are the default styles for `margin` and `inset`, so it's advisable to reset those, as in the examples above. The CSS working group is [looking at ways to avoid requiring this workaround](https://github.com/w3c/csswg-drafts/issues/10258).
 
-See [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#positioning_elements_relative_to_their_anchor) for more details on associating anchor and positioned elements, and positioning elements relative to their anchor.
+See [Using CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using#positioning_elements_relative_to_their_anchor) for more details on associating anchor and positioned elements, and positioning elements relative to their anchor.
 
 > [!NOTE]
 > For an example that uses this implicit association, see our [popover hint demo](https://mdn.github.io/dom-examples/popover-api/popover-hint/) ([source](https://github.com/mdn/dom-examples/tree/main/popover-api/popover-hint)). If you check out the CSS code, you'll see that no explicit anchor associations are made using the {{cssxref("anchor-name")}} and {{cssxref("position-anchor")}} properties.
 
 > [!NOTE]
-> If you want to remove the implicit anchor reference to stop the popover from being anchored to its invoker, you can do so by setting the `position-anchor` property of the popover to an anchor name that doesn't exist in the current document, such as `--not-an-anchor-name`. See also [removing an anchor association](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#removing_an_anchor_association).
+> If you want to remove the implicit anchor reference to stop the popover from being anchored to its invoker, you can do so by setting the `position-anchor` property of the popover to an anchor name that doesn't exist in the current document, such as `--not-an-anchor-name`. See also [removing an anchor association](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using#removing_an_anchor_association).
 
 ## Animating popovers
 
@@ -472,7 +472,7 @@ Popovers are set to `display: none;` when hidden and `display: block;` when show
 - When animating `display` from `block` (or another visible `display` value) to `none`, the value will flip to `none` at `100%` of the animation duration so it is visible throughout.
 
 > [!NOTE]
-> When animating using [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions), [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/Reference/Properties/transition-behavior) needs to be set to enable the above behavior. When animating with [CSS animations](/en-US/docs/Web/CSS/CSS_animations), the above behavior is available by default; an equivalent step is not required.
+> When animating using [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions), [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/Reference/Properties/transition-behavior) needs to be set to enable the above behavior. When animating with [CSS animations](/en-US/docs/Web/CSS/Guides/Animations), the above behavior is available by default; an equivalent step is not required.
 
 ### Transitioning a popover
 

@@ -20,7 +20,7 @@ Firefox 16 shipped on October 9, 2012. This article lists key changes that are u
 
 ### CSS
 
-- Support for the standard, unprefixed version of [CSS Animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations) has been landed ([bug 762302](https://bugzil.la/762302)).
+- Support for the standard, unprefixed version of [CSS Animations](/en-US/docs/Web/CSS/Guides/Animations/Using) has been landed ([bug 762302](https://bugzil.la/762302)).
 - Support for reverse animation direction (keywords `reverse` and `alternate-reverse` on the {{cssxref("animation-direction")}} property) has been added. ([bug 655920](https://bugzil.la/655920)).
 - You can now animate the CSS {{cssxref("height")}} and {{cssxref("width")}} properties.
 - The {{cssxref("animation-duration")}} and {{cssxref("transition-duration")}} CSS properties now reject negative values (and do not handle them as `0s` anymore) ([bug 773102](https://bugzil.la/773102)).

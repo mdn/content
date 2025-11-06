@@ -10,7 +10,7 @@ browser-compat: api.Document.getAnimations
 
 The `getAnimations()` method of the {{domxref("Document")}} interface
 returns an array of all {{domxref("Animation")}} objects currently in effect whose
-target elements are descendants of the document. This array includes [CSS Animations](/en-US/docs/Web/CSS/CSS_animations), [CSS Transitions](/en-US/docs/Web/CSS/CSS_transitions), and [Web Animations](/en-US/docs/Web/API/Web_Animations_API).
+target elements are descendants of the document. This array includes [CSS Animations](/en-US/docs/Web/CSS/Guides/Animations), [CSS Transitions](/en-US/docs/Web/CSS/CSS_transitions), and [Web Animations](/en-US/docs/Web/API/Web_Animations_API).
 
 ## Syntax
 
@@ -50,7 +50,7 @@ document.getAnimations().forEach((animation) => {
 ## See also
 
 - [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
-- [CSS Animations](/en-US/docs/Web/CSS/CSS_animations)
+- [CSS Animations](/en-US/docs/Web/CSS/Guides/Animations)
 - [CSS Transitions](/en-US/docs/Web/CSS/CSS_transitions)
 - {{domxref("Element.getAnimations()")}} - Fetch only the animations on a single
   {{domxref("Element")}} and its descendants.

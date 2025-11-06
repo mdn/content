@@ -62,7 +62,7 @@ In certain cases, there is no originating "from" value for a transition. For exa
 - [CSS easing functions](/en-US/docs/Web/CSS/CSS_easing_functions) module
   - [`<easing-function>`](/en-US/docs/Web/CSS/Reference/Values/easing-function) data-type
 
-- [CSS animations](/en-US/docs/Web/CSS/CSS_animations) module.
+- [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module.
   - {{cssxref("animation")}} shorthand
   - {{cssxref("animation-delay")}}
   - {{cssxref("animation-direction")}}

@@ -462,7 +462,7 @@
 /en-US/docs/CSS/CSS_Reference/Mozilla_Extensions	/en-US/docs/Web/CSS/Reference/Mozilla_extensions
 /en-US/docs/CSS/CSS_Reference/Webkit_Extensions	/en-US/docs/Web/CSS/Reference/Webkit_extensions
 /en-US/docs/CSS/CSS_animated_properties	/en-US/docs/Web/CSS/CSS_animated_properties
-/en-US/docs/CSS/CSS_animations	/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations
+/en-US/docs/CSS/CSS_animations	/en-US/docs/Web/CSS/Guides/Animations/Using
 /en-US/docs/CSS/CSS_flex-wrap	/en-US/docs/Web/CSS/Reference/Properties/flex-wrap
 /en-US/docs/CSS/CSS_percentage_values	/en-US/docs/Web/CSS
 /en-US/docs/CSS/CSS_transform_functions	/en-US/docs/Web/CSS/Reference/Properties/transform
@@ -528,7 +528,7 @@
 /en-US/docs/CSS/Text-overflow_TEST	/en-US/docs/Web/CSS/Reference/Properties/text-overflow
 /en-US/docs/CSS/Tutorial/Using_CSS_flexible_boxes	/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
 /en-US/docs/CSS/Tutorials	/en-US/docs/Web/CSS/Tutorials
-/en-US/docs/CSS/Tutorials/Using_CSS_animations	/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations
+/en-US/docs/CSS/Tutorials/Using_CSS_animations	/en-US/docs/Web/CSS/Guides/Animations/Using
 /en-US/docs/CSS/Tutorials/Using_CSS_flexible_boxes	/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
 /en-US/docs/CSS/Tutorials/Using_CSS_gradients	/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients
 /en-US/docs/CSS/Tutorials/Using_CSS_multiple_backgrounds	/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
@@ -553,7 +553,7 @@
 /en-US/docs/CSS/Understanding_z-index/The_stacking_context	/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context
 /en-US/docs/CSS/Universal_selectors	/en-US/docs/Web/CSS/Reference/Selectors/Universal_selectors
 /en-US/docs/CSS/Using_CSS_Columns	/en-US/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts
-/en-US/docs/CSS/Using_CSS_animations	/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations
+/en-US/docs/CSS/Using_CSS_animations	/en-US/docs/Web/CSS/Guides/Animations/Using
 /en-US/docs/CSS/Using_CSS_flexible_boxes	/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
 /en-US/docs/CSS/Using_CSS_gradients	/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients
 /en-US/docs/CSS/Using_CSS_media_queries	/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries
@@ -12519,7 +12519,12 @@
 /en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Types	/en-US/docs/Web/CSS/Reference/Values/Data_types
 /en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions/Using_CSS_math_functions	/en-US/docs/Web/CSS/CSS_values_and_units/Using_CSS_math_functions
 /en-US/docs/Web/CSS/CSS_Variables	/en-US/docs/Web/CSS/CSS_cascading_variables
+/en-US/docs/Web/CSS/CSS_anchor_positioning	/en-US/docs/Web/CSS/Guides/Anchor_positioning
+/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding	/en-US/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding
+/en-US/docs/Web/CSS/CSS_anchor_positioning/Using	/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using
+/en-US/docs/Web/CSS/CSS_animations	/en-US/docs/Web/CSS/Guides/Animations
 /en-US/docs/Web/CSS/CSS_animations/Tips	/en-US/docs/Web/API/Web_Animations_API/Tips
+/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations	/en-US/docs/Web/CSS/Guides/Animations/Using
 /en-US/docs/Web/CSS/CSS_cascade/actual_value	/en-US/docs/Web/CSS/CSS_cascade/Value_processing#actual_value
 /en-US/docs/Web/CSS/CSS_cascade/computed_value	/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value
 /en-US/docs/Web/CSS/CSS_cascade/initial_value	/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value
@@ -12585,6 +12590,7 @@
 /en-US/docs/Web/CSS/General_sibling_combinator	/en-US/docs/Web/CSS/Reference/Selectors/Subsequent-sibling_combinator
 /en-US/docs/Web/CSS/General_sibling_selectors	/en-US/docs/Web/CSS/Reference/Selectors/Subsequent-sibling_combinator
 /en-US/docs/Web/CSS/Grouping_selectors	/en-US/docs/Web/CSS/Reference/Selectors/Selector_list
+/en-US/docs/Web/CSS/Guides/Animations/Using_CSS_animations	/en-US/docs/Web/CSS/Guides/Animations/Using
 /en-US/docs/Web/CSS/ID_selectors	/en-US/docs/Web/CSS/Reference/Selectors/ID_selectors
 /en-US/docs/Web/CSS/Inheritance	/en-US/docs/Web/CSS/CSS_cascade/Inheritance
 /en-US/docs/Web/CSS/Inline_formatting_context	/en-US/docs/Web/CSS/CSS_inline_layout/Inline_formatting_context
@@ -13893,7 +13899,7 @@
 /en-US/docs/Web/Guide/CSS/Understanding_z_index/Stacking_context_example_3	/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_3
 /en-US/docs/Web/Guide/CSS/Understanding_z_index/Stacking_without_z-index	/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index
 /en-US/docs/Web/Guide/CSS/Understanding_z_index/The_stacking_context	/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context
-/en-US/docs/Web/Guide/CSS/Using_CSS_animations	/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations
+/en-US/docs/Web/Guide/CSS/Using_CSS_animations	/en-US/docs/Web/CSS/Guides/Animations/Using
 /en-US/docs/Web/Guide/CSS/Using_CSS_gradients	/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients
 /en-US/docs/Web/Guide/CSS/Using_CSS_transforms	/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms
 /en-US/docs/Web/Guide/CSS/Using_CSS_transitions	/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions

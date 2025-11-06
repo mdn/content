@@ -1,7 +1,7 @@
 ---
 title: Using CSS animations
 short-title: Using animations
-slug: Web/CSS/CSS_animations/Using_CSS_animations
+slug: Web/CSS/Guides/Animations/Using
 page-type: guide
 sidebar: cssref
 ---

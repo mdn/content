@@ -144,7 +144,7 @@ Declarations in a keyframe qualified with `!important` are ignored.
 
 ### CSS animation examples
 
-See [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations) and [Animate elements on scroll with Scroll-driven animations](https://developer.chrome.com/docs/css-ui/scroll-driven-animations) for examples.
+See [Using CSS animations](/en-US/docs/Web/CSS/Guides/Animations/Using) and [Animate elements on scroll with Scroll-driven animations](https://developer.chrome.com/docs/css-ui/scroll-driven-animations) for examples.
 
 ## Specifications
 
@@ -158,7 +158,7 @@ See [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animatio
 
 - {{cssxref("animation-range")}}
 - [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations)
-- [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- [CSS animations](/en-US/docs/Web/CSS/CSS_animations) module
+- [Using CSS animations](/en-US/docs/Web/CSS/Guides/Animations/Using)
+- [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module
 - [Animate elements on scroll with Scroll-driven animations](https://developer.chrome.com/docs/css-ui/scroll-driven-animations)
 - {{domxref("AnimationEvent")}}

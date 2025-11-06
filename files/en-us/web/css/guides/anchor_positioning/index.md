@@ -1,6 +1,6 @@
 ---
 title: CSS anchor positioning
-slug: Web/CSS/CSS_anchor_positioning
+slug: Web/CSS/Guides/Anchor_positioning
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-anchor-position-1/
 sidebar: cssref
@@ -38,7 +38,7 @@ The CSS anchor positioning module also introduces the `anchor-scope` property. C
 
 ### Data types and values
 
-- [`anchor-center`](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#centering_on_the_anchor_using_anchor-center)
+- [`anchor-center`](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using#centering_on_the_anchor_using_anchor-center)
 - [`<anchor-side>`](/en-US/docs/Web/CSS/Reference/Values/anchor#anchor-side)
 - [`<anchor-size>`](/en-US/docs/Web/CSS/Reference/Values/anchor-size#anchor-size)
 - [`<position-area>`](/en-US/docs/Web/CSS/Reference/Values/position-area_value)
@@ -57,10 +57,10 @@ The CSS anchor positioning module also introduces the `anchor-scope` property. C
 
 ## Guides
 
-- [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using)
+- [Using CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using)
   - : An introductory guide to fundamental anchor positioning concepts, including associating, positioning, and sizing elements relative to their anchor.
 
-- [Fallback options and conditional hiding for overflow](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding)
+- [Fallback options and conditional hiding for overflow](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding)
   - : A guide to the mechanisms CSS anchor positioning provides to prevent anchor-positioned elements from overflowing their containing elements or the viewport, including position try fallback options and conditionally hiding elements.
 
 ## Related concepts

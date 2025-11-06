@@ -204,7 +204,7 @@ ul::scroll-button(right) {
 
 ### Positioning scroll buttons
 
-We've created the scroll buttons. Now we will position them relative to the carousel using [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning).
+We've created the scroll buttons. Now we will position them relative to the carousel using [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning).
 
 First of all, a reference {{cssxref("anchor-name")}} is set on the list. Next, each scroll button has its {{cssxref("position")}} set to `absolute`, and its {{cssxref("position-anchor")}} property set to the same reference name defined on the list, to associate the two together.
 
@@ -552,6 +552,6 @@ Also, try resizing the screen width and you'll see that the number of list items
 ## See also
 
 - [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
-- [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module
+- [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) module
 - [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) module
 - [CSS Carousel Gallery](https://chrome.dev/carousel/) via chrome.dev (2025)

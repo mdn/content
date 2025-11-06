@@ -6,7 +6,7 @@ spec-urls: https://drafts.csswg.org/scroll-animations-1/
 sidebar: cssref
 ---
 
-The **CSS scroll-driven animations** module provides functionality that builds on the [CSS animations module](/en-US/docs/Web/CSS/CSS_animations) and [Web Animations API](/en-US/docs/Web/API/Web_Animations_API). It allows you to animate property values along a scroll-based timeline rather than the default time-based document timeline. This means that you can animate an element by scrolling the element, its scroll container, or its root element, rather than just by the passing of time.
+The **CSS scroll-driven animations** module provides functionality that builds on the [CSS animations module](/en-US/docs/Web/CSS/Guides/Animations) and [Web Animations API](/en-US/docs/Web/API/Web_Animations_API). It allows you to animate property values along a scroll-based timeline rather than the default time-based document timeline. This means that you can animate an element by scrolling the element, its scroll container, or its root element, rather than just by the passing of time.
 
 ## Scroll-driven animations in action
 
@@ -150,7 +150,7 @@ Scroll the element in the inline direction to see its background color change. S
 
 ## Related concepts
 
-- [CSS animations](/en-US/docs/Web/CSS/CSS_animations) module
+- [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module
   - {{cssxref("animation-timeline")}}
   - {{cssxref("@keyframes")}}
 - [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module

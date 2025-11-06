@@ -131,7 +131,7 @@ Our [View Transitions MPA demo](https://mdn.github.io/dom-examples/view-transiti
 
 ## Customizing your animations
 
-The View Transitions pseudo-elements have default [CSS Animations](/en-US/docs/Web/CSS/CSS_animations) applied (which are detailed in their [reference pages](/en-US/docs/Web/API/View_Transition_API#pseudo-elements)).
+The View Transitions pseudo-elements have default [CSS Animations](/en-US/docs/Web/CSS/Guides/Animations) applied (which are detailed in their [reference pages](/en-US/docs/Web/API/View_Transition_API#pseudo-elements)).
 
 Most appearance transitions are given a default smooth cross-fade animation, as mentioned above. There are some exceptions:
 

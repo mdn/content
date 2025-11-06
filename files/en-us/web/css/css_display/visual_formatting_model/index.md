@@ -158,7 +158,7 @@ Find out more about [floats](/en-US/docs/Learn_web_development/Core/CSS_layout/F
 
 ### Absolute positioning
 
-In the absolute positioning model (which also includes `fixed` positioning), a box is removed from the normal flow entirely and assigned a position relative to a containing block (which is the viewport in the case of fixed positioning) or to one or more anchor elements in [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning).
+In the absolute positioning model (which also includes `fixed` positioning), a box is removed from the normal flow entirely and assigned a position relative to a containing block (which is the viewport in the case of fixed positioning) or to one or more anchor elements in [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning).
 
 An element is called **out of flow** if it is floated, absolutely positioned, or is the root element. An element is called **in-flow** if it is not out of the flow.
 

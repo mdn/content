@@ -74,13 +74,13 @@ sidebar:
   - title: Anchor_positioning
     details: closed
     children:
-      - /Web/CSS/CSS_anchor_positioning/Using
-      - /Web/CSS/CSS_anchor_positioning/Try_options_hiding
+      - /Web/CSS/Guides/Anchor_positioning/Using
+      - /Web/CSS/Guides/Anchor_positioning/Try_options_hiding
   - title: Animations
     details: closed
     children:
       - /Web/CSS/CSS_animated_properties
-      - /Web/CSS/CSS_animations/Using_CSS_animations
+      - /Web/CSS/Guides/Animations/Using
   - title: Backgrounds_and_Borders
     details: closed
     children:

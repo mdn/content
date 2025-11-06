@@ -39,7 +39,7 @@ Alternatively, you may want an animation to move forward in distinct steps, to c
 
 ## Related concepts
 
-- [CSS animations](/en-US/docs/Web/CSS/CSS_animations) module
+- [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module
   - {{cssxref("animation-timing-function")}}
   - {{cssxref("animation")}} shorthand
 
