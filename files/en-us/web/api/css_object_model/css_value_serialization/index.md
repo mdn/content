@@ -112,4 +112,5 @@ This normalization allows scripts to compare or calculate lengths consistently.
 - [`CSSStyleDeclaration.getPropertyValue()`](/en-US/docs/Web/API/CSSStyleDeclaration/getPropertyValue)
 - [`Window.getComputedStyle()`](/en-US/docs/Web/API/Window/getComputedStyle)
 - [CSS colors](/en-US/docs/Web/CSS/CSS_colors)
-- [CSS \<color>](/en-US/docs/Web/CSS/color_value)
+- [CSS `<color>`](/en-US/docs/Web/CSS/color_value)
+- [CSS values and units](/en-US/docs/Web/CSS/CSS_values_and_units) module
