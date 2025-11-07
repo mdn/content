@@ -738,10 +738,10 @@
   resolved "https://registry.yarnpkg.com/@marijn/find-cluster-break/-/find-cluster-break-1.0.2.tgz#775374306116d51c0c500b8c4face0f9a04752d8"
   integrity sha512-l0h88YhZFyKdXIFNfSWpyjStDjGHwZ/U7iobcK1cQQD8sejsONdQtTVU+1wVN1PBw40PiiHB1vA5S7VTfQiP9g==
 
-"@mdn/fred@1.8.0":
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/@mdn/fred/-/fred-1.8.0.tgz#78782aab6c6d076455d3aa8d43bb0adb26a32106"
-  integrity sha512-MsMkYCrviool1byyUSsR1Oq/dxhgXvCDV3e3FlBxVOunFAlRsnlp15nguHva5sy8pRKlg2UyfveFDNTDTT6Ghg==
+"@mdn/fred@1.8.1":
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/@mdn/fred/-/fred-1.8.1.tgz#d79ed7c109265796c7bae5755df2e01ba52bc738"
+  integrity sha512-Yt20De72HMB/SR2JM1uRsbBMuVh4bIev0Grszw7mPbeDNlk6V6XNuesMU872QJr41Jwr92tRon3tLrqQ3PV8FQ==
   dependencies:
     "@codemirror/lang-css" "^6.3.1"
     "@codemirror/lang-html" "^6.4.11"
@@ -753,7 +753,7 @@
     "@lit-labs/ssr" "^3.3.1"
     "@lit-labs/ssr-client" "^1.1.7"
     "@lit/task" "^1.0.3"
-    "@mdn/rari" "0.1.54"
+    "@mdn/rari" "0.2.0"
     "@mdn/watify" "^1.1.5"
     "@mozilla/glean" "^5.0.6"
     codemirror "^6.0.1"
@@ -772,10 +772,10 @@
     prismjs "^1.29.0"
     source-map-support "^0.5.21"
 
-"@mdn/rari@0.1.54":
-  version "0.1.54"
-  resolved "https://registry.yarnpkg.com/@mdn/rari/-/rari-0.1.54.tgz#0f36da6e89f57a23f11865dc54a567e11bb901b2"
-  integrity sha512-7hPZcQax0ZR1SFvJPC+EoAEepcGVZpPzU2W/0eQZ1/VxxcWUxpNC5bgMKy4Erxiy2B9mcrfn0qtwgJQ4xsRcsg==
+"@mdn/rari@0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@mdn/rari/-/rari-0.2.0.tgz#cc79583d0aad3cd9165dd00911841bad6963eba5"
+  integrity sha512-SXJQxEp5IuXBqxMlRIwzMjI4c5nKCHTOEnPt3QrTWJyyT3pIDlZe1xeAog4Q1HOdAbk34dRUKNwSYT3nawDo2A==
   dependencies:
     extract-zip "^2.0.1"
     https-proxy-agent "^7.0.2"
