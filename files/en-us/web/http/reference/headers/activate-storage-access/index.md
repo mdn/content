@@ -3,9 +3,13 @@ title: Activate-Storage-Access header
 short-title: Activate-Storage-Access
 slug: Web/HTTP/Reference/Headers/Activate-Storage-Access
 page-type: http-header
+status:
+  - experimental
 browser-compat: http.headers.Activate-Storage-Access
 sidebar: http
 ---
+
+{{SeeCompatTable}}
 
 The HTTP **`Activate-Storage-Access`** {{glossary("response header")}} allows a server to activate a granted permission to access its [unpartitioned cookies](/en-US/docs/Web/API/Storage_Access_API#unpartitioned_versus_partitioned_cookies) in a cross-site request.
 

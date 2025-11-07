@@ -3,17 +3,12 @@ title: "HTML attribute: fetchpriority"
 short-title: fetchpriority
 slug: Web/HTML/Reference/Attributes/fetchpriority
 page-type: html-attribute
-status:
-  - experimental
-  - non-standard
 browser-compat:
   - html.elements.img.fetchpriority
   - html.elements.link.fetchpriority
   - html.elements.script.fetchpriority
 sidebar: htmlsidebar
 ---
-
-{{SeeCompatTable}}{{non-standard_header}}
 
 The **`fetchpriority`** attribute allows a developer to signal that fetching a particular image early in the loading process has more or less impact on user experience than a browser can reasonably infer when assigning an internal priority.
 This in turn allows the browser to increase or decrease the priority, and potentially load the image earlier or later than it would otherwise.
