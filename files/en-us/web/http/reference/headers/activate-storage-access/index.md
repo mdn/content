@@ -53,25 +53,25 @@ Activate-Storage-Access: load
 
 The [Storage Access API](/en-US/docs/Web/API/Storage_Access_API#) provides a JavaScript mechanism to allow an embedded resource to request `storage-access` permission.
 This enables sending third-party cookies in requests, which would otherwise be blocked by default in most browsers.
-The resource must first be requested without cookies, so the server will return an uncredentialed version of the resource that will not have access to its own cookies.
+The resource must first be requested without cookies, so the server returns an uncredentialed version of the resource that will not have access to its own cookies.
 After loading, this resource can call {{domxref("Document.requestStorageAccess()")}} with transient activation to request the storage-access permission.
 If granted by the user, the permission is stored by the browser in a key associated with the embedder and embedded _site_.
-The resource must then reload the resource, which it is now able to request with cookies because it has the `active` permission state for the current context.
+The browser must then reload the resource, which it can now request with cookies because it has the `active` permission state for the current context.
 
 The permission is granted for a particular embedder/embedded site, but only activated for a particular context, such as an `<iframe>` or browser tab.
 This means that if you load the same page in a new tab or `<iframe>`, the permission state of that context will be `inactive`; it won't become `active` until the permission is activated.
 The normal storage access flow is to again request the resource without cookies, call `Document.requestStorageAccess()` to activate the existing permission, then reload the resource with cookies.
 
-The resource always needs to be loaded at least once in order to be granted the storage-access permission.
-However, once granted, a server can use `Activate-Storage-Access` to activate the permission for other contexts
-This avoids the need to load the resource just so that it can activate the permission by calling `Document.requestStorageAccess()`.
+The resource has to be loaded at least once to be granted the storage-access permission.
+However, once granted, a server can use `Activate-Storage-Access` to activate the permission for other contexts.
+This avoids the need to load the resource just to activate the permission by calling `Document.requestStorageAccess()`.
 
 The way this works is that:
 
 1. The browser adds `Sec-Fetch-Storage-Access: inactive` to requests when the context has permission but it isn't active (along with the `Origin` header indicating the source of the request).
 2. If the server gets `Sec-Fetch-Storage-Access: inactive` it can respond with `Activate-Storage-Access: retry; allowed-origin="<request_origin>"` to ask the browser to activate the permission for the context and retry the request.
 3. If the browser gets the retry request, it activates the permission and sends the request again, this time with `Sec-Fetch-Storage-Access: active` and including cookies.
-4. If the server sees a request with `Sec-Fetch-Storage-Access: active` and cookies it responds with the credentialed version of the resource.
+4. If the server sees a request with `Sec-Fetch-Storage-Access: active` and cookies, it responds with the credentialed version of the resource.
    Once loaded by the browser, this resource has access to its cookies as though it were a first-party resource.
 
 Responses must also include the {{httpheader("Vary")}} header with `Sec-Fetch-Storage-Access`.
@@ -127,7 +127,7 @@ Credentials-Mode: include
 Cookie: sessionid=abc123
 ```
 
-The server then provides a response with the credentialed resource that includes `Activate-Storage-Access: load`.
+The server then responds with the credentialed resource that includes `Activate-Storage-Access: load`.
 The resource is loaded and has access to its cookies as though it were a first-party embed.
 
 ```http
@@ -199,7 +199,7 @@ Credentials-Mode: include
 Cookie: sessionid=abc123
 ```
 
-The server responds with the credentialed version of the resource, which may be different than the first version that was loaded, and adds the header `Activate-Storage-Access: load`.
+The server responds with the credentialed version of the resource, which may be different to the first version that was loaded, and adds the header `Activate-Storage-Access: load`.
 The browser loads the page, which will now have access to its own cookie information.
 
 ```http
