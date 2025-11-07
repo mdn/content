@@ -66,12 +66,15 @@ The resource always needs to be loaded at least once in order to be granted the 
 However, once granted, a server can use `Activate-Storage-Access` to activate the permission for other contexts
 This avoids the need to load the resource just so that it can activate the permission by calling `Document.requestStorageAccess()`.
 
-The way this works is that the browser adds `Sec-Fetch-Storage-Access` to requests to indicate the storage access state.
-If it adds `Sec-Fetch-Storage-Access: inactive` to requests, along with the `Origin` header indicating the source of the request, the server knows that the resource has permission but that it isn't active.
-The server can then respond with `Activate-Storage-Access: retry; allowed-origin="<request_origin>"` to ask the browser to activate the permission for the context and retry the request.
-The browser then sends the request again, this time with `Sec-Fetch-Storage-Access: active` and including cookies, and the server responds with the credentialed version of the resource, which has access to its cookies as though it were a first-party resource.
+The way this works is that:
 
-The response must also include the {{httpheader("Vary")}} header with `Sec-Fetch-Storage-Access`.
+1. The browser adds `Sec-Fetch-Storage-Access: inactive` to requests when the context has permission but it isn't active (along with the `Origin` header indicating the source of the request).
+2. If the server gets `Sec-Fetch-Storage-Access: inactive` it can respond with `Activate-Storage-Access: retry; allowed-origin="<request_origin>"` to ask the browser to activate the permission for the context and retry the request.
+3. If the browser gets the retry request, it activates the permission and sends the request again, this time with `Sec-Fetch-Storage-Access: active` and including cookies.
+4. If the server sees a request with `Sec-Fetch-Storage-Access: active` and cookies it responds with the credentialed version of the resource.
+   Once loaded by the browser, this resource has access to its cookies as though it were a first-party resource.
+
+Responses must also include the {{httpheader("Vary")}} header with `Sec-Fetch-Storage-Access`.
 
 ## Examples
 
