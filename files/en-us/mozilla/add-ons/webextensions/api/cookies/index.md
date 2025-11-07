@@ -39,10 +39,10 @@ For an extension to use this API, it must specify the `"cookies"` [API permissio
 
 Trackers use third-party cookies, that is, cookies set by a website other than the one you are on, to identify the websites you visit. For example:
 
-1. You visit `a-shopping-site.example`, which uses `ad-tracker.example` to deliver its adverts on the web. `ad-tracker.example` sets a cookie associated with the `ad-tracker.example` domain. While you are on `a-shopping-site.example`, `ad-tracker.example` receives information about the products you browse.
-2. You now visit `a-news-site.example` that uses `ad-tracker.example` to deliver adverts. `ad-tracker.example` read its cookie and use the information collected from `a-shopping-site.example` to decide which adverts to display to you.
+1. You visit `a-shopping-site.com`, which uses `ad-tracker.com` to deliver its adverts on the web. `ad-tracker.com` sets a cookie associated with the `ad-tracker.com` domain. While you are on `a-shopping-site.com`, `ad-tracker.com` receives information about the products you browse.
+2. You now visit `a-news-site.com` that uses `ad-tracker.com` to deliver adverts. `ad-tracker.com` read its cookie and use the information collected from `a-shopping-site.com` to decide which adverts to display to you.
 
-Firefox includes two features to prevent tracking: [dynamic partitioning](#storage_partitioning) and [first-party isolation](#first-party_isolation). These features separate cookies so that trackers cannot make an association between websites visited. So, in the preceding example, `ad-tracker.example` cannot see the cookie created on `a-news-site.example` when visiting `a-shopping-site.example`.
+Firefox includes two features to prevent tracking: [dynamic partitioning](#storage_partitioning) and [first-party isolation](#first-party_isolation). These features separate cookies so that trackers cannot make an association between websites visited. So, in the preceding example, `ad-tracker.com` cannot see the cookie created on `a-news-site.com` when visiting `a-shopping-site.com`.
 
 From Firefox 103, dynamic partitioning is the default feature used. However, if the user or an extension turns on first-party isolation, it takes precedence over dynamic partitioning.
 
@@ -65,7 +65,7 @@ When first-party isolation is on, cookies are qualified by the domain of the ori
 
 First-party isolation can be enabled by the user by adjusting the browser's configuration and set by extensions using the {{WebExtAPIRef("privacy.websites","firstPartyIsolate")}} setting in the {{WebExtAPIRef("privacy")}} API. Note that first-party isolation is enabled by default in [Tor Browser](https://www.torproject.org/).
 
-The `cookies` API represents the first-party domain using the `firstPartyDomain` attribute. All cookies set while first-party isolation is on have this attribute set to the domain of the original page. In the preceding example, this is `a-shopping-site.example` for one cookie and `a-news-site.example` for the other. When first-party isolation is off, all cookies set by websites have this property set to an empty string.
+The `cookies` API represents the first-party domain using the `firstPartyDomain` attribute. All cookies set while first-party isolation is on have this attribute set to the domain of the original page. In the preceding example, this is `a-shopping-site.com` for one cookie and `a-news-site.com` for the other. When first-party isolation is off, all cookies set by websites have this property set to an empty string.
 
 The {{WebExtAPIRef("cookies.get()")}}, {{WebExtAPIRef("cookies.getAll()")}}, {{WebExtAPIRef("cookies.set()")}} and {{WebExtAPIRef("cookies.remove()")}} APIs all accept a `firstPartyDomain` option.
 

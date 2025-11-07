@@ -55,10 +55,10 @@ The {{HTMLElement("form")}} element defines how the data will be sent. All of it
 
 The [`action`](/en-US/docs/Web/HTML/Reference/Elements/form#action) attribute defines where the data gets sent. Its value must be a valid relative or absolute [URL](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL). If this attribute isn't provided, the data will be sent to the URL of the page containing the form — the current page.
 
-In this example, the data is sent to an absolute URL — `https://example.com`:
+In this example, the data is sent to an absolute URL — `https://www.example.com`:
 
 ```html
-<form action="https://example.com">…</form>
+<form action="https://www.example.com">…</form>
 ```
 
 Here, we use a relative URL — the data is sent to a different URL on the same origin:
@@ -93,7 +93,7 @@ The [`GET` method](/en-US/docs/Web/HTTP/Reference/Methods/GET) is the method use
 Consider the following form:
 
 ```html
-<form action="https://example.com/greet" method="GET">
+<form action="https://www.example.com/greet" method="GET">
   <div>
     <label for="say">What greeting do you want to say?</label>
     <input name="say" id="say" value="Hi" />
@@ -108,7 +108,7 @@ Consider the following form:
 </form>
 ```
 
-Since the `GET` method has been used, you'll see the URL `https://example.com/greet?say=Hi&to=Mom` appear in the browser address bar when you submit the form.
+Since the `GET` method has been used, you'll see the URL `https://www.example.com/greet?say=Hi&to=Mom` appear in the browser address bar when you submit the form.
 
 ![The changed url with query parameters after submitting the form with GET method with a "server not found" browser error page](url-parameters.png)
 
@@ -137,7 +137,7 @@ The [`POST` method](/en-US/docs/Web/HTTP/Reference/Methods/POST) is a little dif
 Let's look at an example — this is the same form we looked at in the `GET` section above, but with the [`method`](/en-US/docs/Web/HTML/Reference/Elements/form#method) attribute set to `POST`.
 
 ```html
-<form action="https://example.com/greet" method="POST">
+<form action="https://www.example.com/greet" method="POST">
   <div>
     <label for="say">What greeting do you want to say?</label>
     <input name="say" id="say" value="Hi" />
