@@ -69,9 +69,9 @@ These tutorials are created by forward-thinking companies and web developers who
 
 ### Advanced CSS topics
 
-- [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [Using CSS transforms](/en-US/docs/Web/CSS/Guides/Transforms/Using)
   - : Apply rotation, skewing, scaling, and translation using CSS.
-- [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [CSS transitions](/en-US/docs/Web/CSS/Guides/Transitions/Using)
   - : CSS transitions provide a way to animate changes to CSS properties, instead of having the changes take effect instantly.
 - [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial)
   - : Learn how to draw graphics using scripting using the canvas element.

@@ -1,6 +1,6 @@
 ---
 title: Handling whitespace
-slug: Web/CSS/CSS_text/Whitespace
+slug: Web/CSS/Guides/Text/Whitespace
 page-type: guide
 sidebar: cssref
 ---

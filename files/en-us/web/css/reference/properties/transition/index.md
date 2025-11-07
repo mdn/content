@@ -133,7 +133,7 @@ transition:
 
 In this case, all the properties that change as the element changes state will transition with a duration of 200ms except for {{cssxref("opacity")}}, which will take 400ms to transition.
 
-See [how things are handled](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions#when_property_value_lists_are_of_different_lengths) when lists of property values aren't the same length. In short, extra transition descriptions beyond the number of properties actually being animated are ignored.
+See [how things are handled](/en-US/docs/Web/CSS/Guides/Transitions/Using#when_property_value_lists_are_of_different_lengths) when lists of property values aren't the same length. In short, extra transition descriptions beyond the number of properties actually being animated are ignored.
 
 ## Formal definition
 
@@ -183,6 +183,6 @@ We include two {{cssxref("time")}} values. In the `transition` shorthand, the fi
 
 ## See also
 
-- [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions) module
-- [Using CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [CSS transitions](/en-US/docs/Web/CSS/Guides/Transitions) module
+- [Using CSS transitions](/en-US/docs/Web/CSS/Guides/Transitions/Using)
 - {{ domxref("TransitionEvent") }}

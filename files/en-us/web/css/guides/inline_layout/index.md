@@ -52,6 +52,6 @@ The specification also defines the `baseline-shift`, `baseline-source`, `initial
 
 ## See also
 
-- [CSS text](/en-US/docs/Web/CSS/CSS_text) module
+- [CSS text](/en-US/docs/Web/CSS/Guides/Text) module
 - [CSS fonts](/en-US/docs/Web/CSS/Guides/Fonts) module
 - [CSS writing modes](/en-US/docs/Web/CSS/CSS_writing_modes) module

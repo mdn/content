@@ -271,20 +271,20 @@ sidebar:
   - title: Text
     details: closed
     children:
-      - /Web/CSS/CSS_text/Wrapping_breaking_text
-      - /Web/CSS/CSS_text/Whitespace
+      - /Web/CSS/Guides/Text/Wrapping_breaking_text
+      - /Web/CSS/Guides/Text/Whitespace
   - title: Text decoration
     details: closed
     children:
-      - /Web/CSS/CSS_text_decoration/Text_shadows
+      - /Web/CSS/Guides/Text_decoration/Text_shadows
   - title: Transforms
     details: closed
     children:
-      - /Web/CSS/CSS_transforms/Using_CSS_transforms
+      - /Web/CSS/Guides/Transforms/Using
   - title: Transitions
     details: closed
     children:
-      - /Web/CSS/CSS_transitions/Using_CSS_transitions
+      - /Web/CSS/Guides/Transitions/Using
   - title: Values and units
     details: closed
     children:

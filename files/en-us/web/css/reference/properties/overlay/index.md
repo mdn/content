@@ -51,7 +51,7 @@ overlay: unset;
 
 ### Transitioning a popover
 
-In this example, a [popover](/en-US/docs/Web/API/Popover_API) is animated as it [transitions](/en-US/docs/Web/CSS/CSS_transitions) from hidden to shown and back again.
+In this example, a [popover](/en-US/docs/Web/API/Popover_API) is animated as it [transitions](/en-US/docs/Web/CSS/Guides/Transitions) from hidden to shown and back again.
 
 #### HTML
 
@@ -160,7 +160,7 @@ The code renders as follows:
 
 ## See also
 
-- [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions) module
+- [CSS transitions](/en-US/docs/Web/CSS/Guides/Transitions) module
 - [`@starting-style`](/en-US/docs/Web/CSS/Reference/At-rules/@starting-style)
 - [`transition-behavior`](/en-US/docs/Web/CSS/Reference/Properties/transition-behavior)
 - [Four new CSS features for smooth entry and exit animations](https://developer.chrome.com/blog/entry-exit-animations/) on developer.chrome.com (2023)

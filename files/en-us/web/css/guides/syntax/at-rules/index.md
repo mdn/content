@@ -67,7 +67,7 @@ Block at-rules end in a `{}`-block that contain nested rules, other at-rules, or
 - {{cssxref("@scope")}}
   - : Defines a scope in which to apply them to selected elements and the styles to apply to the elements in that scope ([CSS cascading and inheritance](/en-US/docs/Web/CSS/Guides/Cascade)).
 - {{cssxref("@starting-style")}}
-  - : Define the starting property values for an element to transition from when the element receives its first style update, such as when transitioning from `display: none` ([CSS transitions](/en-US/docs/Web/CSS/CSS_transitions)).
+  - : Define the starting property values for an element to transition from when the element receives its first style update, such as when transitioning from `display: none` ([CSS transitions](/en-US/docs/Web/CSS/Guides/Transitions)).
 - {{cssxref("@supports")}}
   - : A conditional group rule applies its content if the browser supports the CSS features of the given condition ([CSS conditional rules](/en-US/docs/Web/CSS/Guides/Conditional_rules)).
 - {{cssxref("@view-transition")}}

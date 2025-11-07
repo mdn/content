@@ -8,7 +8,7 @@ sidebar: cssref
 
 The **CSS motion path** module allows authors to animate any graphical object along a custom path.
 
-The [CSS transforms](/en-US/docs/Web/CSS/CSS_transforms) module provides features that enable boxes to be repositioned, rotated, scaled, and skewed relative to its laid out position, without disrupting the layout of any other elements on the page. These transforms can be animated and transitioned, but only in relatively basic ways.
+The [CSS transforms](/en-US/docs/Web/CSS/Guides/Transforms) module provides features that enable boxes to be repositioned, rotated, scaled, and skewed relative to its laid out position, without disrupting the layout of any other elements on the page. These transforms can be animated and transitioned, but only in relatively basic ways.
 
 The features of the CSS motion path module provide offset transforms: transforms that align a point on an element to an offset distance along an offset path, optionally rotating the transformed element to follow the path direction. This module enables powerful transform possibilities, for example:
 
@@ -80,7 +80,7 @@ In this example, we used [CSS masking](/en-US/docs/Web/CSS/Guides/Masking) and [
 
 ## Related concepts
 
-[CSS transforms](/en-US/docs/Web/CSS/CSS_transforms) module
+[CSS transforms](/en-US/docs/Web/CSS/Guides/Transforms) module
 
 - {{cssxref("transform")}}
 - {{cssxref("transform-origin")}}

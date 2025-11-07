@@ -466,7 +466,7 @@
 /en-US/docs/CSS/CSS_flex-wrap	/en-US/docs/Web/CSS/Reference/Properties/flex-wrap
 /en-US/docs/CSS/CSS_percentage_values	/en-US/docs/Web/CSS
 /en-US/docs/CSS/CSS_transform_functions	/en-US/docs/Web/CSS/Reference/Properties/transform
-/en-US/docs/CSS/CSS_transitions	/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions
+/en-US/docs/CSS/CSS_transitions	/en-US/docs/Web/CSS/Guides/Transitions/Using
 /en-US/docs/CSS/CSS_values_serialization	/en-US/docs/Web/CSS
 /en-US/docs/CSS/CSS_values_syntax	/en-US/docs/Web/CSS
 /en-US/docs/CSS/Cascade	/en-US/docs/Web/CSS/Guides/Cascade/Introduction
@@ -532,8 +532,8 @@
 /en-US/docs/CSS/Tutorials/Using_CSS_flexible_boxes	/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts
 /en-US/docs/CSS/Tutorials/Using_CSS_gradients	/en-US/docs/Web/CSS/Guides/Images/Using_CSS_gradients
 /en-US/docs/CSS/Tutorials/Using_CSS_multiple_backgrounds	/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds
-/en-US/docs/CSS/Tutorials/Using_CSS_transforms	/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms
-/en-US/docs/CSS/Tutorials/Using_CSS_transitions	/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions
+/en-US/docs/CSS/Tutorials/Using_CSS_transforms	/en-US/docs/Web/CSS/Guides/Transforms/Using
+/en-US/docs/CSS/Tutorials/Using_CSS_transitions	/en-US/docs/Web/CSS/Guides/Transitions/Using
 /en-US/docs/CSS/Type_selectors	/en-US/docs/Web/CSS/Reference/Selectors/Type_selectors
 /en-US/docs/CSS/Understanding_CSS_z-index	/en-US/docs/Web/CSS/Guides/Positioned_layout/Understanding_z-index
 /en-US/docs/CSS/Understanding_CSS_z-index/Adding_z-index	/en-US/docs/Web/CSS/Guides/Positioned_layout/Using_z-index
@@ -559,8 +559,8 @@
 /en-US/docs/CSS/Using_CSS_media_queries	/en-US/docs/Web/CSS/Guides/Media_queries/Using
 /en-US/docs/CSS/Using_CSS_multi-column_layouts	/en-US/docs/Web/CSS/Guides/Multicol_layout/Using
 /en-US/docs/CSS/Using_CSS_multiple_backgrounds	/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds
-/en-US/docs/CSS/Using_CSS_transforms	/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms
-/en-US/docs/CSS/Using_CSS_transitions	/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions
+/en-US/docs/CSS/Using_CSS_transforms	/en-US/docs/Web/CSS/Guides/Transforms/Using
+/en-US/docs/CSS/Using_CSS_transitions	/en-US/docs/Web/CSS/Guides/Transitions/Using
 /en-US/docs/CSS/Using_CSS_variables	/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties
 /en-US/docs/CSS/Using_media_queries_from_code	/en-US/docs/Web/CSS/Guides/Media_queries/Testing
 /en-US/docs/CSS/Using_the_CSS_multi-column_layout	/en-US/docs/Web/CSS/Guides/Multicol_layout/Using
@@ -8541,8 +8541,8 @@
 /en-US/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model/Example	/en-US/docs/Web/API/Document_Object_Model
 /en-US/docs/Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core	/en-US/docs/Web/API/Document_Object_Model
 /en-US/docs/Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core/Example	/en-US/docs/Web/API/Document_Object_Model
-/en-US/docs/Web/API/Document_Object_Model/Whitespace	/en-US/docs/Web/CSS/CSS_text/Whitespace
-/en-US/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM	/en-US/docs/Web/CSS/CSS_text/Whitespace
+/en-US/docs/Web/API/Document_Object_Model/Whitespace	/en-US/docs/Web/CSS/Guides/Text/Whitespace
+/en-US/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM	/en-US/docs/Web/CSS/Guides/Text/Whitespace
 /en-US/docs/Web/API/DoubleRange	/en-US/docs/Web/API/MediaTrackConstraints
 /en-US/docs/Web/API/DynamicsCompressorNode.attack	/en-US/docs/Web/API/DynamicsCompressorNode/attack
 /en-US/docs/Web/API/DynamicsCompressorNode.knee	/en-US/docs/Web/API/DynamicsCompressorNode/knee
@@ -12513,7 +12513,7 @@
 /en-US/docs/Web/CSS/CSS_Selectors/Comparison_with_XPath	/en-US/docs/Web/XML/XPath/Guides/Comparison_with_CSS_selectors
 /en-US/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes	/en-US/docs/Web/CSS/Guides/Shapes/Overview
 /en-US/docs/Web/CSS/CSS_Shapes/Shapes_From_Box_Values	/en-US/docs/Web/CSS/Guides/Shapes/From_box_values
-/en-US/docs/Web/CSS/CSS_Text/Wrapping_text	/en-US/docs/Web/CSS/CSS_text/Wrapping_breaking_text
+/en-US/docs/Web/CSS/CSS_Text/Wrapping_text	/en-US/docs/Web/CSS/Guides/Text/Wrapping_breaking_text
 /en-US/docs/Web/CSS/CSS_Types	/en-US/docs/Web/CSS/Reference/Values/Data_types
 /en-US/docs/Web/CSS/CSS_Types/display-inside	/en-US/docs/Web/CSS/Reference/Values/display-inside
 /en-US/docs/Web/CSS/CSS_Types/display-outside	/en-US/docs/Web/CSS/Reference/Values/display-outside
@@ -12740,7 +12740,17 @@
 /en-US/docs/Web/CSS/CSS_syntax/Comments	/en-US/docs/Web/CSS/Guides/Syntax/Comments
 /en-US/docs/Web/CSS/CSS_syntax/Error_handling	/en-US/docs/Web/CSS/Guides/Syntax/Error_handling
 /en-US/docs/Web/CSS/CSS_syntax/Syntax	/en-US/docs/Web/CSS/Guides/Syntax/Introduction
+/en-US/docs/Web/CSS/CSS_table	/en-US/docs/Web/CSS/Guides/Table
+/en-US/docs/Web/CSS/CSS_text	/en-US/docs/Web/CSS/Guides/Text
+/en-US/docs/Web/CSS/CSS_text/Whitespace	/en-US/docs/Web/CSS/Guides/Text/Whitespace
+/en-US/docs/Web/CSS/CSS_text/Wrapping_breaking_text	/en-US/docs/Web/CSS/Guides/Text/Wrapping_breaking_text
+/en-US/docs/Web/CSS/CSS_text_decoration	/en-US/docs/Web/CSS/Guides/Text_decoration
+/en-US/docs/Web/CSS/CSS_text_decoration/Text_shadows	/en-US/docs/Web/CSS/Guides/Text_decoration/Text_shadows
 /en-US/docs/Web/CSS/CSS_transform_functions	/en-US/docs/Web/CSS/Reference/Properties/transform
+/en-US/docs/Web/CSS/CSS_transforms	/en-US/docs/Web/CSS/Guides/Transforms
+/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms	/en-US/docs/Web/CSS/Guides/Transforms/Using
+/en-US/docs/Web/CSS/CSS_transitions	/en-US/docs/Web/CSS/Guides/Transitions
+/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions	/en-US/docs/Web/CSS/Guides/Transitions/Using
 /en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types	/en-US/docs/Web/CSS/Reference/Values/Data_types
 /en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions	/en-US/docs/Web/CSS/Reference/Values/Functions
 /en-US/docs/Web/CSS/CSS_values_serialization	/en-US/docs/Web/CSS
@@ -12821,6 +12831,8 @@
 /en-US/docs/Web/CSS/Guides/Shapes/Overview_of_shapes	/en-US/docs/Web/CSS/Guides/Shapes/Overview
 /en-US/docs/Web/CSS/Guides/Shapes/Shapes_from_images	/en-US/docs/Web/CSS/Guides/Shapes/From_images
 /en-US/docs/Web/CSS/Guides/Syntax/Syntax	/en-US/docs/Web/CSS/Guides/Syntax/Introduction
+/en-US/docs/Web/CSS/Guides/Transforms/Using_CSS_transforms	/en-US/docs/Web/CSS/Guides/Transforms/Using
+/en-US/docs/Web/CSS/Guides/Transitions/Using_CSS_transitions	/en-US/docs/Web/CSS/Guides/Transitions/Using
 /en-US/docs/Web/CSS/ID_selectors	/en-US/docs/Web/CSS/Reference/Selectors/ID_selectors
 /en-US/docs/Web/CSS/Inheritance	/en-US/docs/Web/CSS/Guides/Cascade/Inheritance
 /en-US/docs/Web/CSS/Inline_formatting_context	/en-US/docs/Web/CSS/Guides/Inline_layout/Inline_formatting_context
@@ -14072,7 +14084,7 @@
 /en-US/docs/Web/Guide/API/DOM/The_structured_clone_algorithm	/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm
 /en-US/docs/Web/Guide/API/DOM/Using_dynamic_styling_information	/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information
 /en-US/docs/Web/Guide/API/DOM/Using_full_screen_mode	/en-US/docs/Web/API/Fullscreen_API
-/en-US/docs/Web/Guide/API/DOM/Whitespace_in_the_DOM	/en-US/docs/Web/CSS/CSS_text/Whitespace
+/en-US/docs/Web/Guide/API/DOM/Whitespace_in_the_DOM	/en-US/docs/Web/CSS/Guides/Text/Whitespace
 /en-US/docs/Web/Guide/API/File System	/en-US/docs/Web/API/File_System_API
 /en-US/docs/Web/Guide/API/File System/Introduction	/en-US/docs/Web/API/File_System_API
 /en-US/docs/Web/Guide/API/Gamepad	/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API
@@ -14131,8 +14143,8 @@
 /en-US/docs/Web/Guide/CSS/Understanding_z_index/The_stacking_context	/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_context
 /en-US/docs/Web/Guide/CSS/Using_CSS_animations	/en-US/docs/Web/CSS/Guides/Animations/Using
 /en-US/docs/Web/Guide/CSS/Using_CSS_gradients	/en-US/docs/Web/CSS/Guides/Images/Using_CSS_gradients
-/en-US/docs/Web/Guide/CSS/Using_CSS_transforms	/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms
-/en-US/docs/Web/Guide/CSS/Using_CSS_transitions	/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions
+/en-US/docs/Web/Guide/CSS/Using_CSS_transforms	/en-US/docs/Web/CSS/Guides/Transforms/Using
+/en-US/docs/Web/Guide/CSS/Using_CSS_transitions	/en-US/docs/Web/CSS/Guides/Transitions/Using
 /en-US/docs/Web/Guide/CSS/Using_flexbox_to_lay_out_web_applications	/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Use_cases
 /en-US/docs/Web/Guide/CSS/Using_multi-column_layouts	/en-US/docs/Web/CSS/Guides/Multicol_layout/Using
 /en-US/docs/Web/Guide/CSS/Using_multiple_backgrounds	/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds
@@ -14153,7 +14165,7 @@
 /en-US/docs/Web/Guide/DOM/The_structured_clone_algorithm	/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm
 /en-US/docs/Web/Guide/DOM/Using_dynamic_styling_information	/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information
 /en-US/docs/Web/Guide/DOM/Using_full_screen_mode	/en-US/docs/Web/API/Fullscreen_API
-/en-US/docs/Web/Guide/DOM/Whitespace_in_the_DOM	/en-US/docs/Web/CSS/CSS_text/Whitespace
+/en-US/docs/Web/Guide/DOM/Whitespace_in_the_DOM	/en-US/docs/Web/CSS/Guides/Text/Whitespace
 /en-US/docs/Web/Guide/Events	/en-US/docs/Web/API/Document_Object_Model/Events
 /en-US/docs/Web/Guide/Events/Creating_and_triggering_events	/en-US/docs/Web/API/Document_Object_Model/Events
 /en-US/docs/Web/Guide/Events/Event_dispatching_example	/en-US/docs/Web/API/Document_Object_Model/Events
@@ -16786,7 +16798,7 @@
 /en-US/docs/Web_development/Writing_forward-compatible_websites	/en-US/docs/Learn_web_development/Core/Scripting/Debugging_JavaScript
 /en-US/docs/What's_New_in_Deer_Park_Alpha	/en-US/docs/Mozilla/Firefox/Releases/1.5/What_s_new_in_1.5_alpha
 /en-US/docs/What_does_tracking_mean	/en-US/docs/Web/HTTP/Reference/Headers/DNT
-/en-US/docs/Whitespace_in_the_DOM	/en-US/docs/Web/CSS/CSS_text/Whitespace
+/en-US/docs/Whitespace_in_the_DOM	/en-US/docs/Web/CSS/Guides/Text/Whitespace
 /en-US/docs/WindowEventHandlers.onbeforeprint	/en-US/docs/Web/API/Window/beforeprint_event
 /en-US/docs/WindowEventHandlers.onbeforeunload	/en-US/docs/Web/API/Window/beforeunload_event
 /en-US/docs/WindowEventHandlers.onhashchange	/en-US/docs/Web/API/Window/hashchange_event

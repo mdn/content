@@ -43,7 +43,7 @@ text-spacing-trim: unset;
       - : Behaves as `normal`, except that CJK full-width opening punctuation characters are set to be half-width at the start of each line.
 
     > [!NOTE]
-    > The [CSS Text](/en-US/docs/Web/CSS/CSS_text) module also defines `trim-both`, `trim-all`, and `auto` values. However, these are not currently implemented in any browser.
+    > The [CSS Text](/en-US/docs/Web/CSS/Guides/Text) module also defines `trim-both`, `trim-all`, and `auto` values. However, these are not currently implemented in any browser.
 
 ## Description
 
@@ -175,4 +175,4 @@ p {
 
 - {{CSSXref("text-autospace")}}
 - [`ic`](/en-US/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#local_font-relative_lengths) and [`ric`](/en-US/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#root_font-relative_lengths) units
-- [CSS text](/en-US/docs/Web/CSS/CSS_text) module
+- [CSS text](/en-US/docs/Web/CSS/Guides/Text) module

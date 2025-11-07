@@ -103,7 +103,7 @@ Something to consider about these anonymous boxes is that they inherit styles fr
 
 **Inline anonymous boxes** are created when a string is split by an inline element, for example, a sentence that includes a section wrapped with `<em></em>`. This splits the sentence into three inline boxes — an anonymous inline box before the emphasized section, the section wrapped in the `<em>` element, then a final anonymous inline box. As with the anonymous block boxes, these anonymous inline boxes cannot be styled independently in the way the `<em>` can; they just inherit the styles of their container.
 
-Other formatting contexts also create anonymous boxes. [Grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout) behaves in the same way as the [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) example above, turning strings of text into a grid item with an anonymous box. [Multiple-column](/en-US/docs/Web/CSS/Guides/Multicol_layout) layout creates anonymous column boxes around the columns; these also cannot be styled or otherwise targeted. [Table layout](/en-US/docs/Web/CSS/CSS_table) will add anonymous boxes to create a proper table structure — for example adding an anonymous table row — if there was no box with `display: table-row`.
+Other formatting contexts also create anonymous boxes. [Grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout) behaves in the same way as the [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) example above, turning strings of text into a grid item with an anonymous box. [Multiple-column](/en-US/docs/Web/CSS/Guides/Multicol_layout) layout creates anonymous column boxes around the columns; these also cannot be styled or otherwise targeted. [Table layout](/en-US/docs/Web/CSS/Guides/Table) will add anonymous boxes to create a proper table structure — for example adding an anonymous table row — if there was no box with `display: table-row`.
 
 ### Line boxes
 
@@ -179,7 +179,7 @@ In addition, the references for specific values of display explain how these for
 - [CSS grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout) module
 - [CSS flexible box layout](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) module
 - [CSS multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout) module
-- [CSS table](/en-US/docs/Web/CSS/CSS_table) module
+- [CSS table](/en-US/docs/Web/CSS/Guides/Table) module
 - [CSS lists and counters](/en-US/docs/Web/CSS/Guides/Lists) module
 
 ### Independent formatting contexts

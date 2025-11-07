@@ -43,7 +43,7 @@ Alternatively, you may want an animation to move forward in distinct steps, to c
   - {{cssxref("animation-timing-function")}}
   - {{cssxref("animation")}} shorthand
 
-- [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions) module
+- [CSS transitions](/en-US/docs/Web/CSS/Guides/Transitions) module
   - {{cssxref("transition-timing-function")}}
   - {{cssxref("transition")}} shorthand
 

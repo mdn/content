@@ -81,7 +81,7 @@ Like all CSS modules, this module impacts and is impacted by other modules. This
   - {{cssxref("position-try")}} shorthand
   - {{cssxref("position-visibility")}}
 
-- [CSS transforms](/en-US/docs/Web/CSS/CSS_transforms) module
+- [CSS transforms](/en-US/docs/Web/CSS/Guides/Transforms) module
   - {{cssxref("transform")}}
   - {{cssxref("transform-origin")}}
   - {{cssxref("translate")}}

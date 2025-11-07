@@ -1,6 +1,6 @@
 ---
 title: CSS text decoration
-slug: Web/CSS/CSS_text_decoration
+slug: Web/CSS/Guides/Text_decoration
 page-type: css-module
 spec-urls:
   - https://drafts.csswg.org/css-text-decor/
@@ -93,7 +93,7 @@ The specification also defines the `text-decoration-skip-box`, `text-decoration-
 
 ## Guides
 
-- [Introduction to text shadows](/en-US/docs/Web/CSS/CSS_text_decoration/Text_shadows)
+- [Introduction to text shadows](/en-US/docs/Web/CSS/Guides/Text_decoration/Text_shadows)
   - : Overview of the components of the {{cssxref("text-shadow")}} property and creating multiple text shadows
 
 ## Related concepts
@@ -128,7 +128,7 @@ The specification also defines the `text-decoration-skip-box`, `text-decoration-
 
 - [CSS fonts](/en-US/docs/Web/CSS/Guides/Fonts) module
 - [CSS ruby layout](/en-US/docs/Web/CSS/Guides/Ruby_layout) module
-- [CSS text](/en-US/docs/Web/CSS/CSS_text) module
+- [CSS text](/en-US/docs/Web/CSS/Guides/Text) module
 - [CSS writing modes](/en-US/docs/Web/CSS/CSS_writing_modes) module
 - [CSS overflow](/en-US/docs/Web/CSS/Guides/Overflow) module
 - [CSS fonts](/en-US/docs/Web/CSS/Guides/Fonts) module

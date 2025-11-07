@@ -447,6 +447,6 @@ transform-origin: 100% -30%;
 
 ## See also
 
-- [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [Using CSS transforms](/en-US/docs/Web/CSS/Guides/Transforms/Using)
 - SVG {{SVGAttr("transform-origin")}} attribute
 - <https://css-tricks.com/almanac/properties/t/transform-origin/>

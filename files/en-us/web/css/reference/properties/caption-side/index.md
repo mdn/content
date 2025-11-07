@@ -180,5 +180,5 @@ td {
 ## See also
 
 - {{HTMLelement("caption")}}
-- [CSS table](/en-US/docs/Web/CSS/CSS_table) module
+- [CSS table](/en-US/docs/Web/CSS/Guides/Table) module
 - [CSS logical properties and values](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values) module

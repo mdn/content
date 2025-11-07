@@ -35,7 +35,7 @@ The `@starting-style` at rule can be used in two ways:
 
 ## Description
 
-To avoid unexpected behavior, [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions) are by default not triggered on an element's initial style update, or when its {{CSSxRef("display")}} type changes from `none` to another value. To enable first-style transitions, `@starting-style` rules are needed. They provide starting styles for elements that do not have a previous state, defining the property values to transition from.
+To avoid unexpected behavior, [CSS transitions](/en-US/docs/Web/CSS/Guides/Transitions) are by default not triggered on an element's initial style update, or when its {{CSSxRef("display")}} type changes from `none` to another value. To enable first-style transitions, `@starting-style` rules are needed. They provide starting styles for elements that do not have a previous state, defining the property values to transition from.
 
 `@starting-style` is especially useful when creating entry and exit transitions for elements displayed in the {{glossary("top layer")}} (such as [popovers](/en-US/docs/Web/API/Popover_API) and modal {{htmlelement("dialog")}}s), elements that are changing to and from `display: none`, and elements when first added to or removed from the DOM.
 
@@ -210,7 +210,7 @@ The code renders as follows:
 
 ### Animating a popover
 
-In this example, a [popover](/en-US/docs/Web/API/Popover_API) is animated using [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions). Basic entry and exit animations are provided using the {{CSSxRef("transition")}} property.
+In this example, a [popover](/en-US/docs/Web/API/Popover_API) is animated using [CSS transitions](/en-US/docs/Web/CSS/Guides/Transitions). Basic entry and exit animations are provided using the {{CSSxRef("transition")}} property.
 
 #### HTML
 
@@ -462,7 +462,7 @@ The final result looks like this:
 
 ## See also
 
-- [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions) module
+- [CSS transitions](/en-US/docs/Web/CSS/Guides/Transitions) module
 - {{cssxref("overlay")}}
 - {{cssxref("transition-behavior")}}
 - {{domxref("CSSStartingStyleRule")}}

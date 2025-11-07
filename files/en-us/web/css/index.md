@@ -40,7 +40,7 @@ The [CSS reference](/en-US/docs/Web/CSS/Reference) is an exhaustive reference fo
 - [Initial](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#initial_value), [computed](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#computed_value), [used](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#used_value), and [actual](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#actual_value) values
 - [CSS shorthand properties](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties)
 - [CSS flexible box](/en-US/docs/Web/CSS/Guides/Flexible_box_layout), [multi-column](/en-US/docs/Web/CSS/Guides/Multicol_layout) and [grid](/en-US/docs/Web/CSS/Guides/Grid_layout) layout
-- [Animation](/en-US/docs/Web/CSS/Guides/Animations), [transitions](/en-US/docs/Web/CSS/CSS_transitions), and [transforms](/en-US/docs/Web/CSS/CSS_transforms)
+- [Animation](/en-US/docs/Web/CSS/Guides/Animations), [transitions](/en-US/docs/Web/CSS/Guides/Transitions), and [transforms](/en-US/docs/Web/CSS/Guides/Transforms)
 
 ## Cookbook
 

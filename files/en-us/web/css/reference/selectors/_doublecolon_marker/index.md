@@ -39,7 +39,7 @@ The `::marker` pseudo-element supports a limited number of CSS properties, inclu
 - {{CSSxRef("color")}}
 - {{CSSxRef("text-combine-upright")}}, {{CSSxRef("unicode-bidi")}}, and {{CSSxRef("direction")}} properties
 - The {{CSSxRef("content")}} property
-- All [animation](/en-US/docs/Web/CSS/Guides/Animations#properties) and [transition](/en-US/docs/Web/CSS/CSS_transitions#properties) properties
+- All [animation](/en-US/docs/Web/CSS/Guides/Animations#properties) and [transition](/en-US/docs/Web/CSS/Guides/Transitions#properties) properties
 
 > [!NOTE]
 > The specification states that additional CSS properties may be supported in the future.

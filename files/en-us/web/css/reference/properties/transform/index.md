@@ -216,7 +216,7 @@ When an element is rotated before being translated, the translate direction is o
 
 ### More examples
 
-Please see [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms) and {{cssxref("&lt;transform-function&gt;")}} for more examples.
+Please see [Using CSS transforms](/en-US/docs/Web/CSS/Guides/Transforms/Using) and {{cssxref("&lt;transform-function&gt;")}} for more examples.
 
 ## Specifications
 
@@ -228,7 +228,7 @@ Please see [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_t
 
 ## See also
 
-- [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [Using CSS transforms](/en-US/docs/Web/CSS/Guides/Transforms/Using)
 - {{cssxref("&lt;transform-function&gt;")}} data type with all the transform functions explained.
 - Individual CSS properties: {{cssxref('translate')}}, {{cssxref('rotate')}}, and {{cssxref('scale')}} (there is no `skew` property).
 - SVG {{SVGAttr("transform")}} attribute

@@ -139,7 +139,7 @@ The methods that can override normal flow and change how elements are laid out i
 
 There are other layout techniques that are less commonly used, which we won't cover in this module:
 
-- [Table layout](/en-US/docs/Web/CSS/CSS_table)
+- [Table layout](/en-US/docs/Web/CSS/Guides/Table)
   - : Features designed for styling parts of an HTML table can be used on non-table elements using `display: table` and associated properties.
 - [Multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout)
   - : The multi-column layout properties can cause the content of a block to lay out in columns, as you might see in a newspaper.

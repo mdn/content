@@ -144,7 +144,7 @@ Modern browsers are smart enough to repaint only the changed area of the documen
 
 If at all possible, it is better to animate properties that do not cause reflow/repaint. This includes:
 
-- [Transforms](/en-US/docs/Web/CSS/CSS_transforms)
+- [Transforms](/en-US/docs/Web/CSS/Guides/Transforms)
 - [`opacity`](/en-US/docs/Web/CSS/Reference/Properties/opacity)
 - [`filter`](/en-US/docs/Web/CSS/Reference/Properties/filter)
 

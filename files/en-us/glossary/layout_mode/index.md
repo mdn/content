@@ -16,7 +16,7 @@ There are several layout modes:
     - **[Inline layout](/en-US/docs/Web/CSS/Guides/Inline_layout)**
       - : Designed for laying out inline items such as text.
 
-- **[Table layout](/en-US/docs/Web/CSS/CSS_table)**
+- **[Table layout](/en-US/docs/Web/CSS/Guides/Table)**
   - : Designed for laying out tables.
 - **Float layout**
   - : Designed to cause an item to position itself left or right with the rest of the content in normal flow wrapping around it.

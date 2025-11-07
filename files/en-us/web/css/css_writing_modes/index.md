@@ -43,7 +43,7 @@ The CSS writing module addresses the orientations of all writing modes. Other mo
 
 ## Related concepts
 
-[CSS text](/en-US/docs/Web/CSS/CSS_text) module
+[CSS text](/en-US/docs/Web/CSS/Guides/Text) module
 
 - {{cssxref("hanging-punctuation")}}
 - {{cssxref("hyphens")}}
@@ -115,7 +115,7 @@ The CSS writing module addresses the orientations of all writing modes. Other mo
 
 - [CSS fonts](/en-US/docs/Web/CSS/Guides/Fonts) module
 - [CSS ruby layout](/en-US/docs/Web/CSS/Guides/Ruby_layout) module
-- [CSS text decoration](/en-US/docs/Web/CSS/CSS_text_decoration) module
+- [CSS text decoration](/en-US/docs/Web/CSS/Guides/Text_decoration) module
 - [CSS counter styles](/en-US/docs/Web/CSS/Guides/Counter_styles) module
 - [CSS lists](/en-US/docs/Web/CSS/Guides/Lists) module
 - [CSS containment](/en-US/docs/Web/CSS/Guides/Containment) module: {{CSSxRef("contain-intrinsic-block-size")}} and {{CSSxRef("contain-intrinsic-inline-size")}}

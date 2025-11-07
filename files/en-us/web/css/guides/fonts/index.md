@@ -168,5 +168,5 @@ The CSS fonts module also defines the {{cssxref("@font-feature-values/font-displ
 
 - [CSS font loading](/en-US/docs/Web/CSS/Guides/Font_loading) module
 - [CSS font loading API](/en-US/docs/Web/API/CSS_Font_Loading_API)
-- [CSS text](/en-US/docs/Web/CSS/CSS_text) module
+- [CSS text](/en-US/docs/Web/CSS/Guides/Text) module
 - [CSS writing modes](/en-US/docs/Web/CSS/CSS_writing_modes) module

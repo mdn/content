@@ -123,7 +123,7 @@ background-color: hsl(0deg 100% 50%);
 
 ## Interpolation
 
-Color interpolation happens with [gradients](/en-US/docs/Web/CSS/Reference/Values/gradient), [transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions), and [animations](/en-US/docs/Web/CSS/Guides/Animations/Using).
+Color interpolation happens with [gradients](/en-US/docs/Web/CSS/Reference/Values/gradient), [transitions](/en-US/docs/Web/CSS/Guides/Transitions/Using), and [animations](/en-US/docs/Web/CSS/Guides/Animations/Using).
 
 When interpolating `<color>` values, they are first converted to a given color space, and then each component of the [computed values](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#computed_value) are interpolated linearly, with interpolation's speed being determined by the [easing function](/en-US/docs/Web/CSS/Reference/Values/easing-function) in transitions and animations. The interpolation color space defaults to Oklab, but can be overridden through {{CSSXref("&lt;color-interpolation-method&gt;")}} in some color-related functional notations.
 

@@ -60,7 +60,7 @@ The **CSS view transitions** module defines the behavior of the [View Transition
   - {{domxref("CSSStyleRule")}}
   - [Web animations API](/en-US/docs/Web/API/Web_Animations_API)
 
-- [CSS transforms](/en-US/docs/Web/CSS/CSS_transforms) module
+- [CSS transforms](/en-US/docs/Web/CSS/Guides/Transforms) module
   - {{cssxref("transform")}}
   - {{cssxref("transform-function")}}
 

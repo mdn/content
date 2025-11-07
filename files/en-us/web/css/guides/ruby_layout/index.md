@@ -36,7 +36,7 @@ The CSS ruby layout module adds the following values to the {{cssxref("display")
 - [CSS display](/en-US/docs/Web/CSS/Guides/Display) module
   - {{cssxref("display")}}
   - {{CSSxRef("&lt;display-internal&gt;")}}
-- [CSS text decoration](/en-US/docs/Web/CSS/CSS_text_decoration) module
+- [CSS text decoration](/en-US/docs/Web/CSS/Guides/Text_decoration) module
   - {{cssxref("text-emphasis-color")}}
   - {{cssxref("text-emphasis-position")}}
   - {{cssxref("text-emphasis-style")}}

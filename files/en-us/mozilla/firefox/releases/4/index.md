@@ -50,7 +50,7 @@ The following changes were made to the {{domxref("CanvasRenderingContext2D")}} i
 
 ### CSS
 
-- [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [CSS transitions](/en-US/docs/Web/CSS/Guides/Transitions/Using)
   - : New CSS transitions support is available in Firefox 4.
 - Computed values in CSS
   - : Support for `-moz-calc` has been added. This lets you specify {{cssxref("length")}} values as mathematical expressions.

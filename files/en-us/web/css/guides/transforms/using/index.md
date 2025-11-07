@@ -1,7 +1,7 @@
 ---
 title: Using CSS transforms
 short-title: Using transforms
-slug: Web/CSS/CSS_transforms/Using_CSS_transforms
+slug: Web/CSS/Guides/Transforms/Using
 page-type: guide
 sidebar: cssref
 ---

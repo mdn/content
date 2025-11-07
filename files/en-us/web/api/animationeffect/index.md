@@ -9,7 +9,7 @@ browser-compat: api.AnimationEffect
 
 The `AnimationEffect` interface of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) is an interface representing animation effects.
 
-`AnimationEffect` is an abstract interface and so isn't directly instantiable. However, concrete interfaces such as {{domxref("KeyframeEffect")}} inherit from it, and instances of these interfaces can be passed to {{domxref("Animation")}} objects for playing, and may also be used by [CSS Animations](/en-US/docs/Web/CSS/Guides/Animations) and [Transitions](/en-US/docs/Web/CSS/CSS_transitions).
+`AnimationEffect` is an abstract interface and so isn't directly instantiable. However, concrete interfaces such as {{domxref("KeyframeEffect")}} inherit from it, and instances of these interfaces can be passed to {{domxref("Animation")}} objects for playing, and may also be used by [CSS Animations](/en-US/docs/Web/CSS/Guides/Animations) and [Transitions](/en-US/docs/Web/CSS/Guides/Transitions).
 
 ## Instance methods
 

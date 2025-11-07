@@ -39,9 +39,9 @@ They are easy to use for anybody with a fair knowledge of basic concepts.
   - : Counting items and pages is an easy task in CSS. Learn to use {{cssxref("counter-reset")}}, {{cssxref("counter-increment")}}, {{cssxref("counters", "counters()")}}, and {{cssxref("counter", "counter()")}}.
 - [CSS Animations](/en-US/docs/Web/CSS/Guides/Animations/Using)
   - : CSS Animations allow you to define configurations of style, as [keyframes](/en-US/docs/Web/CSS/Reference/At-rules/@keyframes), and to transition between them defining an animation.
-- [CSS Transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [CSS Transitions](/en-US/docs/Web/CSS/Guides/Transitions/Using)
   - : CSS Transitions allow you to define an animation between several styles and to control the way this transition happens.
-- [CSS Transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [CSS Transforms](/en-US/docs/Web/CSS/Guides/Transforms/Using)
   - : Transforms allow you to change the position of elements by modifying their coordinate space: it allows for translating, rotating, and deforming them in the 2D or 3D spaces.
 - [CSS Gradients](/en-US/docs/Web/CSS/Guides/Images/Using_CSS_gradients)
   - : Gradients are images that transition smoothly from one color to another.

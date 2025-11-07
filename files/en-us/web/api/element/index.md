@@ -502,13 +502,13 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 ### Transition events
 
 - {{domxref("Element/transitioncancel_event", "transitioncancel")}}
-  - : An {{domxref("Event")}} fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions) has been cancelled.
+  - : An {{domxref("Event")}} fired when a [CSS transition](/en-US/docs/Web/CSS/Guides/Transitions) has been cancelled.
 - {{domxref("Element/transitionend_event", "transitionend")}}
-  - : An {{domxref("Event")}} fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions) has finished playing.
+  - : An {{domxref("Event")}} fired when a [CSS transition](/en-US/docs/Web/CSS/Guides/Transitions) has finished playing.
 - {{domxref("Element/transitionrun_event", "transitionrun")}}
-  - : An {{domxref("Event")}} fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions) is created (i.e., when it is added to a set of running transitions), though not necessarily started.
+  - : An {{domxref("Event")}} fired when a [CSS transition](/en-US/docs/Web/CSS/Guides/Transitions) is created (i.e., when it is added to a set of running transitions), though not necessarily started.
 - {{domxref("Element/transitionstart_event", "transitionstart")}}
-  - : An {{domxref("Event")}} fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions) has started transitioning.
+  - : An {{domxref("Event")}} fired when a [CSS transition](/en-US/docs/Web/CSS/Guides/Transitions) has started transitioning.
 
 ## Specifications
 

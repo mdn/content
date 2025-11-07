@@ -1,6 +1,6 @@
 ---
 title: CSS transitions
-slug: Web/CSS/CSS_transitions
+slug: Web/CSS/Guides/Transitions
 page-type: css-module
 spec-urls:
   - https://drafts.csswg.org/css-transitions-1/
@@ -46,7 +46,7 @@ In certain cases, there is no originating "from" value for a transition. For exa
 
 ## Guides
 
-- [Using CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [Using CSS transitions](/en-US/docs/Web/CSS/Guides/Transitions/Using)
   - : Step-by-step tutorial explaining how to create transitions using CSS. This article describes each relevant CSS property and explains how they interact with each other.
 - [Animating `display`](/en-US/docs/Web/CSS/Reference/Properties/display#animating_display)
   - : Transitioning to and from the `none` value of the discretely animated {{cssxref("display")}} property.
@@ -73,7 +73,7 @@ In certain cases, there is no originating "from" value for a transition. For exa
   - {{cssxref("animation-play-state")}}
   - {{cssxref("animation-timing-function")}}
 
-- [CSS transforms](/en-US/docs/Web/CSS/CSS_transforms) module.
+- [CSS transforms](/en-US/docs/Web/CSS/Guides/Transforms) module.
   - {{cssxref("transform")}}
   - {{cssxref("transform-box")}}
   - {{cssxref("transform-origin")}}

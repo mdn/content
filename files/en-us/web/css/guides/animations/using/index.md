@@ -522,5 +522,5 @@ The code renders as follows:
 ## See also
 
 - {{domxref("AnimationEvent", "AnimationEvent")}}
-- [Using CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [Using CSS transitions](/en-US/docs/Web/CSS/Guides/Transitions/Using)
 - [Using the Web Animations API](/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API)

@@ -100,5 +100,5 @@ The **CSS display** module defines how the CSS formatting box tree is generated 
 
 - [CSS lists and counters](/en-US/docs/Web/CSS/Guides/Lists) module
 - [CSS ruby layout](/en-US/docs/Web/CSS/Guides/Ruby_layout) module
-- [CSS table](/en-US/docs/Web/CSS/CSS_table) module
+- [CSS table](/en-US/docs/Web/CSS/Guides/Table) module
 - [Visual formatting model](/en-US/docs/Web/CSS/Guides/Display/Visual_formatting_model)

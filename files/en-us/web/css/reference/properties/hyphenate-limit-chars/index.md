@@ -139,4 +139,4 @@ In the fourth box, we make the browser include at least 7 characters after the h
 ## See also
 
 - {{cssxref("hyphens")}}
-- [CSS Text module](/en-US/docs/Web/CSS/CSS_text)
+- [CSS Text module](/en-US/docs/Web/CSS/Guides/Text)

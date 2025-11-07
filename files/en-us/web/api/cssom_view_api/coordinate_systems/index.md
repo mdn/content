@@ -140,7 +140,7 @@ Here you can see the results in action. As you mouse in and around the blue box,
 ## See also
 
 - [Viewport concepts](/en-US/docs/Web/CSS/Guides/CSSOM_view/Viewport_concepts)
-- [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms): how to alter a coordinate system
+- [Using CSS transforms](/en-US/docs/Web/CSS/Guides/Transforms/Using): how to alter a coordinate system
 - Coordinates of a {{domxref("MouseEvent")}}:
   - {{domxref("MouseEvent.offsetX")}} and {{domxref("MouseEvent.offsetY")}}
   - {{domxref("MouseEvent.clientX")}} and {{domxref("MouseEvent.clientY")}}
