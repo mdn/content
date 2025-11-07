@@ -201,8 +201,8 @@ The humble favicon has been around for many years. It is the first icon of this 
 
 A favicon can be added to your page by:
 
-1. Saving it in the same directory as the site's index page, saved in `.ico` format (most also support favicons in more common formats like `.gif` or `.png`)
-2. Adding the following line into your HTML's {{HTMLElement("head")}} block to reference it:
+1. Saving it in a supported format such as `.ico`, `.gif`, or `.png` somewhere inside your website directory (in this example, it would be saved in the same directory as the HTML file).
+2. Adding the following {{htmlelement("link")}} element into your HTML's {{HTMLElement("head")}} block, which references the [path](/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links#a_quick_primer_on_urls_and_paths) to the favicon file (in this case, the path is just the file name because the favicon is in the same directory as the HTML):
 
    ```html
    <link rel="icon" href="favicon.ico" type="image/x-icon" />
@@ -243,7 +243,7 @@ This is a way to make the site show an icon when saved to an Apple device's home
 <link rel="icon" href="/favicon.ico" />
 ```
 
-The comments explain what each icon is used for — these elements cover things like providing a nice high resolution icon to use when the website is saved to an iPad's home screen.
+The comments explain what each icon is used for — these elements cover things like providing a high-resolution icon to use when the website is saved to an iPad's home screen.
 
 Don't worry too much about implementing all these types of icon right now — this is a fairly advanced feature, and you won't be expected to have knowledge of this to progress through the course. The main purpose here is to let you know what such things are, in case you come across them while browsing other websites' source code. If you do want to learn more about all these values and how to choose them, read the {{HTMLElement("link")}} element's reference page.
 
