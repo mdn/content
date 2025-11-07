@@ -123,28 +123,32 @@ The workflows are shown in the [Storage access header sequences](#storage_access
 
 Consider the example of a library loaded in an {{htmlelement("iframe")}} that needs to be shared across a number of sites and relies on credentials stored in unpartitioned cookies.
 
-First consider the case where permission has not been granted.
+First let's look at the case where permission has not been granted:
 
-- Resources are requested without third-party cookies by default, so the server returns a version that does not rely on credentials (and which, when loaded, doesn't have access to the cookies).
-- Once loaded, the resource calls `requestStorageAccess()` with transient activation to request and activate the `storage-access` permission.
-- If permission is granted, the resource will then reload itself.
-  This time the browser makes the request with third-party cookies included, and the server may respond with a different "credentialed" version of the resource.
-- The browser then loads the resource; because the resource has an activated `storage-access` permission, the browser gives it access to the third-party cookies.
+1. The browser requests the resource without including third-party cookies.
+2. The server responds with a "fallback" version of content that does not rely on credentials, and that when loaded doesn't have access to its cookies.
+   - Once loaded, the resource calls `requestStorageAccess()` with transient activation to request and activate the `storage-access` permission.
+   - If permission is granted, the resource will then reload itself.
+
+3. The browser requests the resource again, this time including third-party cookies.
+4. The server response includes a "credentialed" version of the resource.
+
+The browser loads the resource, which has access to its own cookies because it has an activated `storage-access` permission.
 
 ![Storage API workflow - without storage-access permission](storage_api_no_permission.png)
 
 <!--
-[![](https://mermaid.ink/img/pako:eNqFkkGPmzAQhf-K5VNWykbAkgBuGylK99pDo1669ODYE2It2NQedttG-e8dsKhWW62WC8zjfTP2sy9cOQ1c8AA_B7AKPhvZeNl9qC2jp5cejTK9tMj2rQGL_-sH8E_gox49t9ttFAX7OrYNyDwEN3gFbGEdU849Ggg3kYnWW4IiPUKhdzbAw0m27VGqRyIs0q8fkfjiEJgjiM3EfXcEzRTZA42aRh7QednATikIYXHDng2ePx79Fr20YaSYVGieJBpnGboZYz34zoRA6lvDvgUqKCSL4YV77B2X4aF1UgdmMEB7You5s7GqHTSEV_t_K7Ox4X5yCjbQSKM_pdnde5mxh_eyim8W1_hsdAM4hcMOu92L_cR4oLZ8yRsazgX6AZa8I4ccS34ZJ9Qcz9BBzQV9ajjJocWa1_ZKGF2P7851M-nd0Jy5oEMNVA29ljhft1fqvTZ0ev9ED1aD37vBIhdFUUydubjwX1xkZbVKk3WerNdVXiXrdLPkv7lIy3KVVHmeZVVZVEWSZtcl_zMtJlltyvWmzDdlUt2VRZYU178i0ga1?type=png)](https://mermaid.live/edit#pako:eNqFkkGPmzAQhf-K5VNWykbAkgBuGylK99pDo1669ODYE2It2NQedttG-e8dsKhWW62WC8zjfTP2sy9cOQ1c8AA_B7AKPhvZeNl9qC2jp5cejTK9tMj2rQGL_-sH8E_gox49t9ttFAX7OrYNyDwEN3gFbGEdU849Ggg3kYnWW4IiPUKhdzbAw0m27VGqRyIs0q8fkfjiEJgjiM3EfXcEzRTZA42aRh7QednATikIYXHDng2ePx79Fr20YaSYVGieJBpnGboZYz34zoRA6lvDvgUqKCSL4YV77B2X4aF1UgdmMEB7You5s7GqHTSEV_t_K7Ox4X5yCjbQSKM_pdnde5mxh_eyim8W1_hsdAM4hcMOu92L_cR4oLZ8yRsazgX6AZa8I4ccS34ZJ9Qcz9BBzQV9ajjJocWa1_ZKGF2P7851M-nd0Jy5oEMNVA29ljhft1fqvTZ0ev9ED1aD37vBIhdFUUydubjwX1xkZbVKk3WerNdVXiXrdLPkv7lIy3KVVHmeZVVZVEWSZtcl_zMtJlltyvWmzDdlUt2VRZYU178i0ga1)
+[![](https://mermaid.ink/img/pako:eNqFks1u2zAQhF-F4MkBnEB_lmU1MWC4ufZQo5dGOdDkWiYikSq5StoafveuRCgIHBjVRdrBfrOrIU9cWgW85B5-9WAkfNWidqL9UhlGTyccaqk7YZBtGw0GP-s7cK_ggh56btfrIJbsKX4u2ffB2yNz4G3vJNzv3XpmLJPWvmjwN4ENyC3BwYXgZIR9Z40foaeDaJq9kC-EGqSe54B-swjMEs0m9LHdg2KS2j2NHcfv0DpRw0ZK8H52w940HgdTdML4gWJCon4VqK1haCeMdeBa7T2p14b98FRQagb9h-7BO6zhoLFCeabRQ3Ngs8lZG9n0CvxFEJ9DTK-EuB25kvW0gFYPcZJejTK7jPJ_CYY3C5u_aVUDjpGx3Wbz4S9DaFAZPuc1LcFLdD3MeUsdYij5aZhQcTxCCxUv6VPBQfQNVrwyZ8LoFv20tp1IZ_v6yEs6ak9V3ymB0628UB-VpjN9Fx0YBW5re4O8jFfx6MzLE__NyyRb3aWLokjyPIuyfDHnf6iHxOVimWdFvMyTNCnOc_533CS6W-ZRGhfZooiKKFnFy_M_V38SSw?type=png)](https://mermaid.live/edit#pako:eNqFks1u2zAQhF-F4MkBnEB_lmU1MWC4ufZQo5dGOdDkWiYikSq5StoafveuRCgIHBjVRdrBfrOrIU9cWgW85B5-9WAkfNWidqL9UhlGTyccaqk7YZBtGw0GP-s7cK_ggh56btfrIJbsKX4u2ffB2yNz4G3vJNzv3XpmLJPWvmjwN4ENyC3BwYXgZIR9Z40foaeDaJq9kC-EGqSe54B-swjMEs0m9LHdg2KS2j2NHcfv0DpRw0ZK8H52w940HgdTdML4gWJCon4VqK1haCeMdeBa7T2p14b98FRQagb9h-7BO6zhoLFCeabRQ3Ngs8lZG9n0CvxFEJ9DTK-EuB25kvW0gFYPcZJejTK7jPJ_CYY3C5u_aVUDjpGx3Wbz4S9DaFAZPuc1LcFLdD3MeUsdYij5aZhQcTxCCxUv6VPBQfQNVrwyZ8LoFv20tp1IZ_v6yEs6ak9V3ymB0628UB-VpjN9Fx0YBW5re4O8jFfx6MzLE__NyyRb3aWLokjyPIuyfDHnf6iHxOVimWdFvMyTNCnOc_533CS6W-ZRGhfZooiKKFnFy_M_V38SSw)
 
 sequenceDiagram;
     participant Client
     participant Server
-    Client->>Server: Request resource (no cookies)
-    Server-- >>Client: Response[fallback content]
+    Client->>Server: [1]: Request resource<br>(no cookies)
+    Server-- >>Client: [2]: Response<br>[fallback content]
     Note over Client: Embed calls requestStorageAccess() with<br>transient activation to request permission
     Note over Client: User grants permission<br>Embed reloads itself (request includes cookies)
-    Client->>Server: Request<br>Cookie: userid=123
-    Server-- >>Client: Response [content]
+    Client->>Server: [3]: Request resource<br>Cookie: userid=123
+    Server-- >>Client: [4]: Response<br>[content]
     Note over Client: Client loads widget with SAA permission active
 -->
 
@@ -157,17 +161,17 @@ In this case, however, it doesn't need transient activation and can execute on l
 ![Storage API workflow - activate storage-access permission](storage_api_permission.png)
 
 <!--
-[![](https://mermaid.ink/img/pako:eNqFkk1P4zAQhv_KyKcilcoJSZuE3UpV4bqH7W0JB9eephaJHfzBflT97zutASFWC77YM3mfGb-eHJi0ClnDPD5GNBJvtOicGK5bA7RG4YKWehQmwLrXaMK_-Q26J3QpnzSXy2VKNvD9VNYHcOhtdBJhYixIax80-ovEJOklQYk-QX60xuPdTvT9VsgHIkygT_eJ-GYDgiUIXojbYYsKJMk9tTq33ATrRIcrKdH7yQUEC0IG_SSIHdEN2nttzccFHfZWKA86eOx3MHkuDdrIPir075z8z_2XrVuuz8oGoken1dcsv_rMPdx95jrtkO74U6sOA21hD5vV6o3H5Btbw6aso-asCS7ilA2kEKeQHU4dWhb2OGDLGjoq3InYh5a15kgYDfqHtcML6Wzs9qyh8XiK4qjoUZ9_nHfZW6VpDq9Jh0ahW9toAmvynJ8rs-bAflFY1bOMlwUvy7qoeZnNp-w3a7KqmvG6KPK8rhb1gmf5ccr-nC_DZ_OqnFfFvOL1VbXI-eL4F7UV8YQ?type=png)](https://mermaid.live/edit#pako:eNqFkk1P4zAQhv_KyKcilcoJSZuE3UpV4bqH7W0JB9eephaJHfzBflT97zutASFWC77YM3mfGb-eHJi0ClnDPD5GNBJvtOicGK5bA7RG4YKWehQmwLrXaMK_-Q26J3QpnzSXy2VKNvD9VNYHcOhtdBJhYixIax80-ovEJOklQYk-QX60xuPdTvT9VsgHIkygT_eJ-GYDgiUIXojbYYsKJMk9tTq33ATrRIcrKdH7yQUEC0IG_SSIHdEN2nttzccFHfZWKA86eOx3MHkuDdrIPir075z8z_2XrVuuz8oGoken1dcsv_rMPdx95jrtkO74U6sOA21hD5vV6o3H5Btbw6aso-asCS7ilA2kEKeQHU4dWhb2OGDLGjoq3InYh5a15kgYDfqHtcML6Wzs9qyh8XiK4qjoUZ9_nHfZW6VpDq9Jh0ahW9toAmvynJ8rs-bAflFY1bOMlwUvy7qoeZnNp-w3a7KqmvG6KPK8rhb1gmf5ccr-nC_DZ_OqnFfFvOL1VbXI-eL4F7UV8YQ)
+[![](https://mermaid.ink/img/pako:eNqFkk1P4zAQhv-K5VORSpWvJqmBSlWX6x7oDcLBtaepRWJn_cHuUvW_M40BrYpYfLE9nued8WsfqDASKKMOfgXQAn4o3lreXzWa4Bi49UqogWtP1p0C7T_HN2CfwcZ4zLlcLmOQkYf0kZG7k7bzxIIzwQq43trlRBsijHlS4C4iG5FLhKMKwtkIu8FoN0IPO951Wy6eENUecx4j-tN4IAZp8o7e9luQRGC6w7Jj-Y03lrewEgKcm1wQbwgXXj1zZAewvXJOGf1_QQud4dIR5R10OzJ5kyZKiy5IcGdX-mxH_oUd65FjJDiwSt6kWf6lKcW5Kd95EWcSO_-tZAseJ78nm9Xqn5tHN6DRdEpbbIIybwNMaY8Z_LSlh1OFhvo99NBQhksJOx4639BGHxHD_3BvTP9OWhPaPWX4aA53YZBo9dv_OoveSoWv8xG0oCXYtQnaU5YW81GZsgP9Q1lWLGb5vK6zsiySosSzv6ecxayaV2VRp1WZ5Vl9nNKXsZNkVpVJntbFvE7qJFuk1fEVT-z9Kg?type=png)](https://mermaid.live/edit#pako:eNqFkk1P4zAQhv-K5VORSpWvJqmBSlWX6x7oDcLBtaepRWJn_cHuUvW_M40BrYpYfLE9nued8WsfqDASKKMOfgXQAn4o3lreXzWa4Bi49UqogWtP1p0C7T_HN2CfwcZ4zLlcLmOQkYf0kZG7k7bzxIIzwQq43trlRBsijHlS4C4iG5FLhKMKwtkIu8FoN0IPO951Wy6eENUecx4j-tN4IAZp8o7e9luQRGC6w7Jj-Y03lrewEgKcm1wQbwgXXj1zZAewvXJOGf1_QQud4dIR5R10OzJ5kyZKiy5IcGdX-mxH_oUd65FjJDiwSt6kWf6lKcW5Kd95EWcSO_-tZAseJ78nm9Xqn5tHN6DRdEpbbIIybwNMaY8Z_LSlh1OFhvo99NBQhksJOx4639BGHxHD_3BvTP9OWhPaPWX4aA53YZBo9dv_OoveSoWv8xG0oCXYtQnaU5YW81GZsgP9Q1lWLGb5vK6zsiySosSzv6ecxayaV2VRp1WZ5Vl9nNKXsZNkVpVJntbFvE7qJFuk1fEVT-z9Kg)
 
 sequenceDiagram;
     participant Client
     participant Server
-    Client->>Server: Request resource (no cookies)
-    Server-- >>Client: Response[fallback content]
+    Client->>Server: [1]: Request resource<br>(no cookies)
+    Server-- >>Client: [2]: Response<br>[fallback content]
     Note over Client: Embed calls requestStorageAccess() to activate permission
     Note over Client: Embed reloads itself (request includes cookies)
-    Client->>Server: Request<br>Cookie: userid=123
-    Server-- >>Client: Response [content]
+    Client->>Server: [3]: Request resource<br>Cookie: userid=123
+    Server-- >>Client: [4]: Response<br>[content]
     Note over Client: Client loads widget with SAA permission active
 -->
 
@@ -176,55 +180,68 @@ sequenceDiagram;
 The storage access headers enable an improved workflow that allows the server to request that the browser activate a permission that has been granted and retry the request with cookies included.
 This avoids the requirement to load the resource to call `requestStorageAccess()` when the user has already granted permission.
 
+> [!NOTE]
+> These headers do not provide a mechanism to grant the storage access permission in the first place.
+> Permission must always be requested by the embedded resource calling `requestStorageAccess()` with transient activation.
+
 The {{HTTPHeader("Sec-Fetch-Storage-Access")}} header is added to requests to indicate the storage access state of the current fetch context, such as whether permission has been activated, granted, or not granted.
 Depending on the storage access state of the request, the server can respond with an {{HTTPHeader("Activate-Storage-Access")}} header to request that the browser activate the permission for the context and retry the request with cookies.
 
-First consider the case where permission has not been granted.
-This is effectively the same as the initial sequence for the API, because we still need to first load the resource without cookies so that the permission can be requested and granted.
+First let's look at the case of attempting to load an embedded resource for a new context that already has permission granted:
 
-![Storage access header workflow - without storage-access permission](storage_headers_no_permission.png)
-
-<!--
-[![](https://mermaid.ink/img/pako:eNqFkkGPmzAQhf-K5VNWChGwkIDbrhSl22MPjXrZpQfHnhBrwaa22W0b5b93jJPVqquoXMDDvG_ePPlIhZFAGXXwcwQt4LPireX9h0YTfAZuvRJq4NqTTadA-_f1LdhnsLEee5K7u1hk5FvAOk8sODNaAWSmDRHGPClwNx93FhtF8gW8OCRbbyxvIVkLAc4xoo2GSI2wBLGRH7BuMNrB45533Y6LJ2Rqj79-RMVX44EYFJGL4r7fgSQC2x2amUydB8Z5sxvyovwhWPKWaxdUhAuvnrlXRhNvLjIygO2Vc1hdXJv23eEBc9TevWkP8OjDQme4dER5B92ezC5opUU3SnCvEV2J9Xpqk2UIkzYTgpERvSj5Kctvr6W5jmvCO1gwGVCP_0s3vklc6kXJFvwUJ9mu128COLtrNJ3TFk1R5u0Ic9pjBw9HegwTGuoP0ENDGX5K2POx8w1t9AlleOUejOkvSmvG9kAZXgOHp3GQuMb5Cv9TvZcKt3stWtAS7MaM2lNW1BOYsiP9RVle1YssLYu0LOuiTstsOae_KcuqapHWRZHndbWqV2mWn-b0z-QlXSyrclkVyyqtb6tVnq5OfwFA_iPh?type=png)](https://mermaid.live/edit#pako:eNqFkkGPmzAQhf-K5VNWChGwkIDbrhSl22MPjXrZpQfHnhBrwaa22W0b5b93jJPVqquoXMDDvG_ePPlIhZFAGXXwcwQt4LPireX9h0YTfAZuvRJq4NqTTadA-_f1LdhnsLEee5K7u1hk5FvAOk8sODNaAWSmDRHGPClwNx93FhtF8gW8OCRbbyxvIVkLAc4xoo2GSI2wBLGRH7BuMNrB45533Y6LJ2Rqj79-RMVX44EYFJGL4r7fgSQC2x2amUydB8Z5sxvyovwhWPKWaxdUhAuvnrlXRhNvLjIygO2Vc1hdXJv23eEBc9TevWkP8OjDQme4dER5B92ezC5opUU3SnCvEV2J9Xpqk2UIkzYTgpERvSj5Kctvr6W5jmvCO1gwGVCP_0s3vklc6kXJFvwUJ9mu128COLtrNJ3TFk1R5u0Ic9pjBw9HegwTGuoP0ENDGX5K2POx8w1t9AlleOUejOkvSmvG9kAZXgOHp3GQuMb5Cv9TvZcKt3stWtAS7MaM2lNW1BOYsiP9RVle1YssLYu0LOuiTstsOae_KcuqapHWRZHndbWqV2mWn-b0z-QlXSyrclkVyyqtb6tVnq5OfwFA_iPh)
-
-sequenceDiagram;
-    participant Client
-    participant Server
-    Client->>Server: Request resource (no cookies)<br>Sec-Fetch-Storage-Access: none
-    Server-- >>Client: Response[fallback content]
-    Note over Client: Embed calls requestStorageAccess() with<br>transient activation to request permission.
-    Note over Client: User grants permission<br>Embed reloads itself (request includes cookies)
-    Client->>Server: Sec-Fetch-Storage-Access: active<br>Cookie: userid=123
-    Server-- >>Client: Activate-Storage-Access: load<br>[content]
-    Note over Client: Client loads widget with SAA permission active
--->
-
-What differs in the above sequence is that the browser and server have added some storage access headers (which aren't strictly needed).
-
-- Initially the browser adds the header `Sec-Fetch-Storage-Access: none` to the request to indicate that permission has not been granted.
-- After the user has granted (and thereby activated) the permission, the embed reloads itself.
-  - The browser adds `Sec-Fetch-Storage-Access: active` to the request to indicate the context has an activated `storage-access` permission, and includes the third-party cookies.
-  - The server responds with `Activate-Storage-Access: load`, which tells the browser to load the new version of the library with access to third-party cookies.
-
-The real benefit of the headers comes when attempting to load an embedded resource that already has permission granted.
-In this case, the browser will attach `Sec-Fetch-Storage-Access: inactive` to the request to indicate that the context has permission, but the permission is inactive.
-The server can then respond with `Activate-Storage-Access: retry` to indicate that the browser should activate the permission, and retry the request with cookies.
-If the browser retries the request, it adds `Sec-Fetch-Storage-Access: active` to the request along with the cookies.
-The server then responds with `Activate-Storage-Access: load`, which tells the browser to load the new version of the library with access to third-party cookies.
+1. The browser sends a request with `Sec-Fetch-Storage-Access: inactive` to indicate that the permission is granted but inactive for the context.
+   - The request will also include the {{httpheader("Origin")}} header to help the server decide if it wants to activate the permission.
+2. The server can then respond with `Activate-Storage-Access: retry` to indicate that the browser should activate the permission, and retry the request with cookies.
+   - The response should also include the {{httpheader("Vary","Vary: Sec-Fetch-Storage-Access")}} header, as it depends on the value of `Sec-Fetch-Storage-Access`.
+   - Note that the response doesn't include content.
+3. If the browser retries the request, it adds `Sec-Fetch-Storage-Access: active` to the request along with the cookies.
+4. The server then responds with `Activate-Storage-Access: load`, which tells the browser to load the new version of the library with access to third-party cookies.
 
 ![Storage access header workflow - activate storage-access permission and retry](storage_headers_activate_permission.png)
 
 <!--
-[![](https://mermaid.ink/img/pako:eNqVkkFP4zAQhf-KNSeQmirdNJQatlLVheNeeoNwMPaQWiR2157AQtX_ziRuV9VyAUtR7Od5n_1s70B7gyAh4p8OncZfVtVBtVeVE9y2KpDVdqsciVVj0dFnfY3hBUPSU022WCRR8qTObpH0JluTD6rGbKk1xiiFdUqTfcFkTPUZOxNCimU_qwg_GQNSeLt-DIv7J9U0j0o_C-0dsekhsX57QuEZJ46s9BfqgIwiHphqYIothtbGaL3rucqZYRHLhaE_lkji7NXShtfxz6yefztsitrDVwNCii5isObn5Efx7QNovDJD_i_G7uujeLWmRhJDjvVyeZJZHC8CRlDzpkBS6HAELVeofgi7foUKaIMtViC5a_BJdQ1VULk92_gh3HnfHp3Bd_UGJN9P5FG3NRzj8LD-U2-M5XT_xIDOYFj5zhHIeTGAQe7gL8iiyMflZFrmc_5m8_JiBG8gy2I8L2bT2YSFaTnNi_0I3oed5OPLWZmftMn-A8Dz_GQ?type=png)](https://mermaid.live/edit#pako:eNqVkkFP4zAQhf-KNSeQmirdNJQatlLVheNeeoNwMPaQWiR2157AQtX_ziRuV9VyAUtR7Od5n_1s70B7gyAh4p8OncZfVtVBtVeVE9y2KpDVdqsciVVj0dFnfY3hBUPSU022WCRR8qTObpH0JluTD6rGbKk1xiiFdUqTfcFkTPUZOxNCimU_qwg_GQNSeLt-DIv7J9U0j0o_C-0dsekhsX57QuEZJ46s9BfqgIwiHphqYIothtbGaL3rucqZYRHLhaE_lkji7NXShtfxz6yefztsitrDVwNCii5isObn5Efx7QNovDJD_i_G7uujeLWmRhJDjvVyeZJZHC8CRlDzpkBS6HAELVeofgi7foUKaIMtViC5a_BJdQ1VULk92_gh3HnfHp3Bd_UGJN9P5FG3NRzj8LD-U2-M5XT_xIDOYFj5zhHIeTGAQe7gL8iiyMflZFrmc_5m8_JiBG8gy2I8L2bT2YSFaTnNi_0I3oed5OPLWZmftMn-A8Dz_GQ)
+[![](https://mermaid.ink/img/pako:eNqFkkFP4zAQhf-KNSdWaqq2SWhr2EpVYY_LoRIHCAdjD6m1jd21J0Cp-t-ZJGW1oqJEimw_zXxv_OQdaG8QJET8W6PTeGVVGVR1UTjB30YFstpulCOxWFt0dKwvMTxj6PSuJpnNOlGK--GD5Aqd_ELSq2RJPqgSk7nWGKMU1ilN9hkvH8PsJtjSOikufbuZNdqZ80J7_8di_NE5dOCELTovthixxbzBKMIjh4AUtg3qVoXt16N08N-eUHjmiw94twp1wEcRD22qbRMbDJWN0XrXeChnWkMel1cONJI4e7G0-nSJ45jSkzGdDmnRsqWoIwZrfg5H6ZdRZaeiWntlvk-qqbjX3hETH76JrSFG8WJNiSTaHJbz-X-ZHS5WOOhBybODpFBjDyquUM0Rdo1DAbTCCguQvDX4pOo1FVC4PbfxE7zzvvroDL4uVyCf1Dryqd4YvujhSX9Sr43le_0TAzqDYeFrRyBHk0lLBrmDV5BpOujnwywfTPkfT_PzHmxB5ml_mo6z8ZCFLM8G6b4Hb-0og_5knO_fAfjRIqA?type=png)](https://mermaid.live/edit#pako:eNqFkkFP4zAQhf-KNSdWaqq2SWhr2EpVYY_LoRIHCAdjD6m1jd21J0Cp-t-ZJGW1oqJEimw_zXxv_OQdaG8QJET8W6PTeGVVGVR1UTjB30YFstpulCOxWFt0dKwvMTxj6PSuJpnNOlGK--GD5Aqd_ELSq2RJPqgSk7nWGKMU1ilN9hkvH8PsJtjSOikufbuZNdqZ80J7_8di_NE5dOCELTovthixxbzBKMIjh4AUtg3qVoXt16N08N-eUHjmiw94twp1wEcRD22qbRMbDJWN0XrXeChnWkMel1cONJI4e7G0-nSJ45jSkzGdDmnRsqWoIwZrfg5H6ZdRZaeiWntlvk-qqbjX3hETH76JrSFG8WJNiSTaHJbz-X-ZHS5WOOhBybODpFBjDyquUM0Rdo1DAbTCCguQvDX4pOo1FVC4PbfxE7zzvvroDL4uVyCf1Dryqd4YvujhSX9Sr43le_0TAzqDYeFrRyBHk0lLBrmDV5BpOujnwywfTPkfT_PzHmxB5ml_mo6z8ZCFLM8G6b4Hb-0og_5knO_fAfjRIqA)
 
 sequenceDiagram;
     participant Client
     participant Server
-    Client->>Server: Sec-Fetch-Storage-Access: inactive
-    Server-- >>Client: Activate-Storage-Access: retry<br>[fallback content]
+    Client->>Server: [1]: Sec-Fetch-Storage-Access: inactive<br>Origin: <origin><br>(no cookies)
+    Server-- >>Client: [2]: Activate-Storage-Access: retry<br>Vary: Sec-Fetch-Storage-Access
     Note over Client: Client activates storage-access permission<br>and retries request (with cookies)
-    Client->>Server: Sec-Fetch-Storage-Access: active<br>Cookie: userid=123
-    Server-- >>Client: Activate-Storage-Access: load<br>[content]
+    Client->>Server: [3]: Sec-Fetch-Storage-Access: active<br>Origin: <origin><br>Cookie: userid=123
+    Server-- >>Client: [4]: Activate-Storage-Access: load<br>Vary: Sec-Fetch-Storage-Access<br>[content]
+    Note over Client: Client loads widget with SAA permission active
+-->
+
+The last state to consider is when loading an embedded resource for which permission has not been granted:
+
+> [!NOTE]
+> Because we can't use the headers to grant permission, we need to load the resource without cookies so that it can request the permission.
+> This is the same sequence as if the headers were not applied.
+
+1. The browser sends a request with `Sec-Fetch-Storage-Access: none` to indicate that the permission has not been granted.
+2. The server then responds with the resource, which when loaded requests permission for secure access with transient activation.
+   The `Activate-Storage-Access` header isn't included in the response, but the server should add {{httpheader("Vary","Vary: Sec-Fetch-Storage-Access")}}.
+
+   After the user has granted (and thereby activated) the permission, the embed reloads itself.
+
+3. The browser adds `Sec-Fetch-Storage-Access: active` to the request to indicate the context has an activated `storage-access` permission, and includes the third-party cookies.
+4. The server responds with `Activate-Storage-Access: load`, which tells the browser to load the new version of the library with access to third-party cookies.
+
+![Storage access header workflow - without storage-access permission](storage_headers_no_permission.png)
+
+<!--
+[![](https://mermaid.ink/img/pako:eNqNk01v2zAMhv-KoFMKxEH8EcfWugBB1h23Q7AdVvegyIwj1JYySW7XBfnvpaxkKBpkmy82X5APyVfygQpdA2XUws8elIBPkjeGdx8qRfDZc-OkkHuuHFm1EpS71NdgnsAEPeREi0UQGbmPHxhmiOgzOLGL1k4b3kC0FAKsZURpBbcbs_hqZCMVI7d6-Fh4baQ0EVo_SrA3gR6gEeJDH8QniP_Ozcv1Jh51v-Vtu-HiEYHKYeVDAH7RDohGJjkD77oN1ERguiXGW2LdCRdooxvyLN3OQ53hyvoqwoWTT9xJrYjT5zKyB9NJa1GdXOv2zWKAditn36R7eJjDQKt5bYl0FtotGZ3RUom2r8G-8-fS_fSv7g9zX_V_NbAZ6XFIWX-Mk_TqKWTYZhlMgIsufgXP-49j-tfphDcJpjzLugE3HAdZL5dvDDwtVik6pg3OTpkzPYxphxnch_TgO1TU7aCDijL8rGHL-9ZVtFJHLMOb_UPr7lxpdN_sKMNrZDHq9zUuevpT3ql3tcS9_ogGVA1mpXvlKEuSZCBTdqC_MMzKSToriiTPs2mWz8b0hbIYxflsnmdFPM-TNCmOY_p7mGQ6mefTNC6yWVmWSZklx1dtqUSP?type=png)](https://mermaid.live/edit#pako:eNqNk01v2zAMhv-KoFMKxEH8EcfWugBB1h23Q7AdVvegyIwj1JYySW7XBfnvpaxkKBpkmy82X5APyVfygQpdA2XUws8elIBPkjeGdx8qRfDZc-OkkHuuHFm1EpS71NdgnsAEPeREi0UQGbmPHxhmiOgzOLGL1k4b3kC0FAKsZURpBbcbs_hqZCMVI7d6-Fh4baQ0EVo_SrA3gR6gEeJDH8QniP_Ozcv1Jh51v-Vtu-HiEYHKYeVDAH7RDohGJjkD77oN1ERguiXGW2LdCRdooxvyLN3OQ53hyvoqwoWTT9xJrYjT5zKyB9NJa1GdXOv2zWKAditn36R7eJjDQKt5bYl0FtotGZ3RUom2r8G-8-fS_fSv7g9zX_V_NbAZ6XFIWX-Mk_TqKWTYZhlMgIsufgXP-49j-tfphDcJpjzLugE3HAdZL5dvDDwtVik6pg3OTpkzPYxphxnch_TgO1TU7aCDijL8rGHL-9ZVtFJHLMOb_UPr7lxpdN_sKMNrZDHq9zUuevpT3ql3tcS9_ogGVA1mpXvlKEuSZCBTdqC_MMzKSToriiTPs2mWz8b0hbIYxflsnmdFPM-TNCmOY_p7mGQ6mefTNC6yWVmWSZklx1dtqUSP)
+
+sequenceDiagram;
+    participant Client
+    participant Server
+    Client->>Server: [1]: Sec-Fetch-Storage-Access: none<br>Origin: <origin><br>(no cookies)
+    Server-- >>Client: [2]: Vary: Sec-Fetch-Storage-Access<br>[fallback content]
+    Note over Client: Embed calls requestStorageAccess() with<br>transient activation to request permission.
+    Note over Client: User grants permission<br>Embed reloads itself (request includes cookies)
+    Client->>Server: [3]: Sec-Fetch-Storage-Access: active<br>Origin: <origin><br>Cookie: userid=123
+    Server-- >>Client: [4]: Activate-Storage-Access: load<br>Vary: Sec-Fetch-Storage-Access<br>[content]
     Note over Client: Client loads widget with SAA permission active
 -->
 
