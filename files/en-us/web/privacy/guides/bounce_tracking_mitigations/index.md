@@ -48,4 +48,4 @@ The heuristic operates on sites defined by {{Glossary("eTLD", "eTLD+1")}}. As a 
 
 - Chromium's implementation of bounce tracking mitigations was shipped in version 116.
 - Firefox [also supports it](https://firefox-source-docs.mozilla.org/toolkit/components/antitracking/anti-tracking/bounce-tracking-protection/).
-- WebKit first shipped bounce tracking protection in [ITP 2.0](https://webkit.org/blog/8311/intelligent-tracking-prevention-2-0/).
+- Safari first shipped bounce tracking protection in [ITP 2.0](https://webkit.org/blog/8311/intelligent-tracking-prevention-2-0/).
