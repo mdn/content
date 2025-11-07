@@ -401,7 +401,7 @@ The following functions return an integer value based on the DOM tree, rather th
 - {{cssxref("basic-shape/ellipse", "ellipse()")}}
 - {{cssxref("env")}}
 - {{cssxref("exp")}}
-- {{cssxref("fit-content_function")}}
+- {{cssxref("fit-content_function", "fit-content()")}}
 - {{cssxref("filter-function/grayscale", "grayscale()")}}
 - {{cssxref("color_value/hsl", "hsl()")}}
 - {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
@@ -442,7 +442,7 @@ The following functions return an integer value based on the DOM tree, rather th
 - {{cssxref("repeat")}}
 - {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
 - {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}
-- {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient())}}
+- {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
 - {{cssxref("color_value/rgb", "rgb()")}}
 - {{cssxref("transform-function/rotate", "rotate()")}}
 - {{cssxref("transform-function/rotate3d", "rotate3d()")}}

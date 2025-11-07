@@ -50,7 +50,7 @@ sidebar: cssref
 - {{cssxref("@import")}}
 - {{cssxref("@keyframes")}}
 - {{cssxref("@layer")}}
-- {{cssxref("@media")}} (see [list of media features](#index-of-media-features-used-in-at-rules) in the next section)
+- {{cssxref("@media")}} (see [list of media features](#index_of_media_features) in the next section)
 - {{cssxref("@namespace")}}
 - {{cssxref("@page")}}
   - {{cssxref("@page/page-orientation")}}
