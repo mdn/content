@@ -188,3 +188,4 @@ The CSS backgrounds module level 4 also introduces the `background-position-bloc
 - [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/Guides/Colors/Applying_color)
 - [Border-image generator](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-image_generator)
 - [Border-radius generator](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-radius_generator)
+- [Box-shadow generator](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Box-shadow_generator)

@@ -137,3 +137,4 @@ The CSS color module also introduces the `CSSColorProfileRule` interface. Curren
 - The [`VideoColorSpace`](/en-US/docs/Web/API/VideoColorSpace) interface
 - The SVG [`<feColorMatrix>`](/en-US/docs/Web/SVG/Reference/Element/feColorMatrix) element
 - [Canvas API: applying styles and colors](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#colors)
+- [Color mixer](/en-US/docs/Web/CSS/Guides/Colors/Color_mixer)

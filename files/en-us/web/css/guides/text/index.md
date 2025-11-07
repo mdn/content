@@ -44,6 +44,8 @@ The specification also defines the `hyphenate-limit-last`, `hyphenate-limit-line
 
 - [Wrapping and breaking text](/en-US/docs/Web/CSS/Guides/Text/Wrapping_breaking_text)
   - : A guide to the various ways in which overflowing text can be managed in CSS.
+- [Handling whitespace](/en-US/docs/Web/CSS/Guides/Text/Whitespace)
+  - : A guide introducing the various CSS properties that control the rendering of whitespace in the DOM, exploring the pitfalls and their mitigations.
 
 ## Related concepts
 

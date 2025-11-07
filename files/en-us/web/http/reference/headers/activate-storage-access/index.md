@@ -7,7 +7,7 @@ browser-compat: http.headers.Activate-Storage-Access
 sidebar: http
 ---
 
-The HTTP **`Activate-Storage-Access`** {{glossary("response header")}} allows a server to activate a granted permission to access its [unpartitioned cookies](/docs/Web/API/Storage_Access_API#unpartitioned_versus_partitioned_cookies) in a cross-site request.
+The HTTP **`Activate-Storage-Access`** {{glossary("response header")}} allows a server to activate a granted permission to access its [unpartitioned cookies](/en-US/docs/Web/API/Storage_Access_API#unpartitioned_versus_partitioned_cookies) in a cross-site request.
 
 The server relies on permission state information provided in the request's {{httpheader("Sec-Fetch-Storage-Access")}} header.
 

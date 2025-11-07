@@ -40,6 +40,10 @@ This attribute is [enumerated](/en-US/docs/Glossary/Enumerated) and can have one
 
 The attribute should be used sparingly, as excessive or incorrect prioritization can degrade performance.
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}
