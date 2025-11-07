@@ -33,10 +33,10 @@ _Inherits properties from its parent, {{DOMxRef("CSSValue")}}_.
 - {{DOMxRef("CSSPrimitiveValue.primitiveType")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : An `unsigned short` representing the type of the value. Possible values are:
 
-    | Constant         | Description                                                                                                                                                                     |
-    | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-    | `CSS_ATTR`       | The value is an {{CSSxRef("attr", "attr()")}} function. The value can be obtained by using the `getStringValue()` method.                                                       |
-    | `CSS_CM`         | The value is a {{CSSxRef("&lt;length&gt;")}} in centimeters. The value can be obtained by using the `getFloatValue()` method.                                                   |
+    | Constant         | Description                                                                                                                                                                 |
+    | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+    | `CSS_ATTR`       | The value is an {{CSSxRef("attr", "attr()")}} function. The value can be obtained by using the `getStringValue()` method.                                                   |
+    | `CSS_CM`         | The value is a {{CSSxRef("&lt;length&gt;")}} in centimeters. The value can be obtained by using the `getFloatValue()` method.                                               |
     | `CSS_COUNTER`    | The value is a [counter or counters](/en-US/docs/Web/CSS/Guides/Counter_styles/Using_counters) function. The value can be obtained by using the `getCounterValue()` method. |
     | `CSS_DEG`        | The value is an {{CSSxRef("&lt;angle&gt;")}} in degrees. The value can be obtained by using the `getFloatValue()` method.                                                       |
     | `CSS_DIMENSION`  | The value is a {{CSSxRef("&lt;number&gt;")}} with an unknown dimension. The value can be obtained by using the `getFloatValue()` method.                                        |
