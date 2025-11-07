@@ -148,10 +148,7 @@ That lets you bypass problems where it's unclear what `this` will be, depending 
 
 ### Security considerations
 
-When used with the `function` parameter, the method is no more or less dangerous than any other method that can trigger code execution.
-While specific mechanisms are not required to address this case, you should always consider deploying a [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) to harden your site.
-
-The method can also execute arbitrary input passed in the `code` parameter.
+The method can be used to execute arbitrary input passed in the `code` parameter.
 If the input is a potentially unsafe string provided by a user, this is a possible vector for [Cross-site-scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks.
 For example, the following example assumes the `scriptElement` is an executable `<script>` element, and that `untrustedCode` was provided by a user:
 
