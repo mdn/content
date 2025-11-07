@@ -12,7 +12,7 @@ The **`crossOrigin`** property of the {{domxref("HTMLImageElement")}} interface 
 
 ## Value
 
-A string. For the permitted values, see the HTML [`crossorigin`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) attribute reference.
+A string whose value is one of `anonymous` or `use-credentials`. For their meanings, see the HTML [`crossorigin`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) attribute reference.
 
 ## Examples
 

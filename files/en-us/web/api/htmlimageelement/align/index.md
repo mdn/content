@@ -16,7 +16,7 @@ You should instead use the CSS property {{cssxref("vertical-align")}}, which doe
 
 ## Value
 
-A string. For the permitted values, see the HTML [`<img>`](/en-US/docs/Web/HTML/Reference/Elements/img#align) reference.
+A string whose value is one of `top`, `middle`, `bottom`, `left`, or `right`. For their meanings, see the HTML [`<img>`](/en-US/docs/Web/HTML/Reference/Elements/img#align) reference.
 
 ## Examples
 

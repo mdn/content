@@ -12,7 +12,7 @@ The **`referrerPolicy`** property of the {{domxref("HTMLImageElement")}} interfa
 
 ## Value
 
-A string. For the permitted values, see the HTML [`<img>`](/en-US/docs/Web/HTML/Reference/Elements/img#referrerpolicy) reference.
+A string whose value is one of `no-referrer`, `no-referrer-when-downgrade`, `origin`, `origin-when-cross-origin`, `same-origin`, `strict-origin`, `strict-origin-when-cross-origin`, or `unsafe-url`. For their meanings, see the HTML [`<img>`](/en-US/docs/Web/HTML/Reference/Elements/img#referrerpolicy) reference.
 
 ## Examples
 

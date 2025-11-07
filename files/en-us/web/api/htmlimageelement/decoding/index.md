@@ -12,7 +12,7 @@ The **`decoding`** property of the {{domxref("HTMLImageElement")}} interface pro
 
 ## Value
 
-A string. For the permitted values, see the HTML [`<img>`](/en-US/docs/Web/HTML/Reference/Elements/img#decoding) reference.
+A string whose value is one of `sync`, `async`, or `auto`. For their meanings, see the HTML [`<img>`](/en-US/docs/Web/HTML/Reference/Elements/img#decoding) reference.
 
 ## Examples
 

@@ -12,7 +12,7 @@ The **`fetchPriority`** property of the {{domxref("HTMLImageElement")}} interfac
 
 ## Value
 
-A string. For the permitted values, see the HTML [`fetchpriority`](/en-US/docs/Web/HTML/Reference/Attributes/fetchpriority) attribute.
+A string whose value is one of `high`, `low`, or `auto`. For their meanings, see the HTML [`fetchpriority`](/en-US/docs/Web/HTML/Reference/Attributes/fetchpriority) attribute.
 
 ## Examples
 

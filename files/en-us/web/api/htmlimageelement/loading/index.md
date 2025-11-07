@@ -12,7 +12,7 @@ The **`loading`** property of the {{domxref("HTMLImageElement")}} interface prov
 
 ## Value
 
-A string. For the permitted values, see the HTML [`<img>`](/en-US/docs/Web/HTML/Reference/Elements/img#loading) reference.
+A string whose value is one of `eager` or `lazy`. For their meanings, see the HTML [`<img>`](/en-US/docs/Web/HTML/Reference/Elements/img#loading) reference.
 
 ## Examples
 
