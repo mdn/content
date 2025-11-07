@@ -10,7 +10,7 @@ sidebar: cssref
 
 {{seecompattable}}
 
-The **`interpolate-size`** [CSS](/en-US/docs/Web/CSS) property allows you to enable [animations](/en-US/docs/Web/CSS/CSS_animations) and [transitions](/en-US/docs/Web/CSS/CSS_transitions) between a [`<length-percentage>`](/en-US/docs/Web/CSS/Reference/Values/length-percentage) value and an [intrinsic size](/en-US/docs/Glossary/Intrinsic_Size) value such as `auto`, [`fit-content`](/en-US/docs/Web/CSS/Reference/Values/fit-content), or [`max-content`](/en-US/docs/Web/CSS/Reference/Values/max-content).
+The **`interpolate-size`** [CSS](/en-US/docs/Web/CSS) property allows you to enable [animations](/en-US/docs/Web/CSS/Guides/Animations) and [transitions](/en-US/docs/Web/CSS/Guides/Transitions) between a [`<length-percentage>`](/en-US/docs/Web/CSS/Reference/Values/length-percentage) value and an [intrinsic size](/en-US/docs/Glossary/Intrinsic_Size) value such as `auto`, [`fit-content`](/en-US/docs/Web/CSS/Reference/Values/fit-content), or [`max-content`](/en-US/docs/Web/CSS/Reference/Values/max-content).
 
 This property is typically used to animate the {{cssxref("width")}} and/or {{cssxref("height")}} of a container between a `<length-percentage>` and the full size of its content (i.e., between "closed" and "open" or "hide" and "reveal" states) when animating a non-box-model CSS property, such as {{cssxref("transform")}}, is not a viable solution.
 

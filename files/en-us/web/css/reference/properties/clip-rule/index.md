@@ -279,8 +279,8 @@ In this case, because the outer part of the path moves in a clockwise (left-to-r
 
 - {{cssxref("fill-rule")}}
 - {{cssxref("clip-path")}}
-- [Introduction to CSS clipping](/en-US/docs/Web/CSS/CSS_masking/Clipping)
-- [CSS masking](/en-US/docs/Web/CSS/CSS_masking) module
+- [Introduction to CSS clipping](/en-US/docs/Web/CSS/Guides/Masking/Clipping)
+- [CSS masking](/en-US/docs/Web/CSS/Guides/Masking) module
 - SVG {{SVGAttr("clip-rule")}} attribute
 - SVG {{SVGElement("clipPath")}} element
 - SVG {{SVGAttr("fill-rule")}} attribute

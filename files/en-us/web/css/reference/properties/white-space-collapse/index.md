@@ -34,7 +34,7 @@ The `white-space-collapse` property is specified as a single keyword chosen from
 ### Values
 
 - `collapse`
-  - : White space sequences are [collapsed](/en-US/docs/Web/CSS/CSS_text/Whitespace#collapsing_and_transformation).
+  - : White space sequences are [collapsed](/en-US/docs/Web/CSS/Guides/Text/Whitespace#collapsing_and_transformation).
 - `preserve`
   - : White space sequences and segment break characters are preserved.
 - `preserve-breaks`
@@ -51,7 +51,7 @@ The `white-space-collapse` property is specified as a single keyword chosen from
 > _Segment break characters_ are characters such as line feeds that cause text to break onto new lines.
 
 > [!NOTE]
-> The [CSS text](/en-US/docs/Web/CSS/CSS_text) module defines a `discard` value for the `white-space-collapse` property to discard all white space in the element, however, this is not supported in any browsers.
+> The [CSS text](/en-US/docs/Web/CSS/Guides/Text) module defines a `discard` value for the `white-space-collapse` property to discard all white space in the element, however, this is not supported in any browsers.
 
 ## Formal definition
 
@@ -126,5 +126,5 @@ h2 {
 ## See also
 
 - Shorthand for `white-space-collapse` and {{CSSxRef("text-wrap-mode")}}: The {{CSSxRef("white-space")}} property.
-- [CSS text module](/en-US/docs/Web/CSS/CSS_text)
-- [Handling whitespace in CSS](/en-US/docs/Web/CSS/CSS_text/Whitespace)
+- [CSS text module](/en-US/docs/Web/CSS/Guides/Text)
+- [Handling whitespace in CSS](/en-US/docs/Web/CSS/Guides/Text/Whitespace)

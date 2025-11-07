@@ -6,7 +6,7 @@ browser-compat: css.properties.grid-template-columns.minmax
 sidebar: cssref
 ---
 
-The **`minmax()`** [CSS function](/en-US/docs/Web/CSS/Reference/Values/Functions) defines a size range greater than or equal to _min_ and less than or equal to _max_. It is used with [CSS grids](/en-US/docs/Web/CSS/CSS_grid_layout).
+The **`minmax()`** [CSS function](/en-US/docs/Web/CSS/Reference/Values/Functions) defines a size range greater than or equal to _min_ and less than or equal to _max_. It is used with [CSS grids](/en-US/docs/Web/CSS/Guides/Grid_layout).
 
 {{InteractiveExample("CSS Demo: minmax()")}}
 
@@ -161,6 +161,6 @@ If _max_ < _min_, then _max_ is ignored and `minmax(min,max)` is treated as _min
 
 ## See also
 
-- [Basic concepts of grid layout: track sizing with minmax()](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#track_sizing_and_minmax)
-- [CSS grids, logical values and writing modes](/en-US/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
+- [Basic concepts of grid layout: track sizing with minmax()](/en-US/docs/Web/CSS/Guides/Grid_layout/Basic_concepts#track_sizing_and_minmax)
+- [CSS grids, logical values and writing modes](/en-US/docs/Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes)
 - Video: [Introducing minmax()](https://gridbyexample.com/video/series-minmax/)

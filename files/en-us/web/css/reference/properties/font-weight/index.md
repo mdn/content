@@ -304,4 +304,4 @@ span {
 - {{cssxref("font-style")}}
 - SVG {{SVGAttr("font-weight")}} attribute
 - [Learn: Fundamental text and font styling](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals)
-- [CSS fonts](/en-US/docs/Web/CSS/CSS_fonts) module
+- [CSS fonts](/en-US/docs/Web/CSS/Guides/Fonts) module

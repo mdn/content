@@ -196,5 +196,5 @@ Sometimes you may want to force an item to move below any floated elements. For 
 
 ## See also
 
-- [Block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context)
+- [Block formatting context](/en-US/docs/Web/CSS/Guides/Display/Block_formatting_context)
 - Use {{cssxref("clear")}} to force an item to move below a floated element.

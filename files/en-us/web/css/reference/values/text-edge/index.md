@@ -60,4 +60,4 @@ See [`text-box-edge` examples](/en-US/docs/Web/CSS/Reference/Properties/text-box
 ## See also
 
 - {{cssxref("text-box")}}, {{cssxref("text-box-edge")}}, {{cssxref("text-box-trim")}}
-- [CSS inline layout](/en-US/docs/Web/CSS/CSS_inline_layout) module
+- [CSS inline layout](/en-US/docs/Web/CSS/Guides/Inline_layout) module

@@ -57,7 +57,7 @@ That explains how elements are structured individually, but how about the way th
 
 Inline elements behave differently. They don't appear on new lines; instead, they all sit on the same line along with any adjacent (or wrapped) text content as long as there is space for them to do so inside the width of the parent block level element. If there isn't space, then the overflowing content will move down to a new line.
 
-If two vertically adjacent elements both have a margin set on them and their margins touch, the larger of the two margins remains and the smaller one disappears. This is known as [**margin collapsing**](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing).
+If two vertically adjacent elements both have a margin set on them and their margins touch, the larger of the two margins remains and the smaller one disappears. This is known as [**margin collapsing**](/en-US/docs/Web/CSS/Guides/Box_model/Margin_collapsing).
 Collapsing margins is only relevant in the **vertical direction**.
 
 ### Normal flow example
@@ -139,9 +139,9 @@ The methods that can override normal flow and change how elements are laid out i
 
 There are other layout techniques that are less commonly used, which we won't cover in this module:
 
-- [Table layout](/en-US/docs/Web/CSS/CSS_table)
+- [Table layout](/en-US/docs/Web/CSS/Guides/Table)
   - : Features designed for styling parts of an HTML table can be used on non-table elements using `display: table` and associated properties.
-- [Multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout)
+- [Multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout)
   - : The multi-column layout properties can cause the content of a block to lay out in columns, as you might see in a newspaper.
 
 ## Summary

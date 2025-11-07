@@ -60,7 +60,7 @@ It has a DOM tree that looks like this:
 
 ![The DOM as a tree-like representation of a document that has a root and node elements containing content](using_the_w3c_dom_level_1_core-doctree.jpg)
 
-Although the above tree is similar to the above document's DOM tree, they're not identical, as the actual DOM tree preserves [whitespace](/en-US/docs/Web/CSS/CSS_text/Whitespace).
+Although the above tree is similar to the above document's DOM tree, they're not identical, as the actual DOM tree preserves [whitespace](/en-US/docs/Web/CSS/Guides/Text/Whitespace).
 
 When a web browser parses an HTML document, it builds a DOM tree and then uses it to display the document.
 

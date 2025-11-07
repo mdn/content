@@ -186,4 +186,4 @@ The selector with no namespace, the `|a`, matched the JavaScript defined and app
 - [`Element.namespaceURI`](/en-US/docs/Web/API/Element/namespaceURI) property
 - [CSS type selector](/en-US/docs/Web/CSS/Reference/Selectors/Type_selectors)
 - [CSS universal selector](/en-US/docs/Web/CSS/Reference/Selectors/Universal_selectors)
-- [CSS selector module](/en-US/docs/Web/CSS/CSS_selectors)
+- [CSS selector module](/en-US/docs/Web/CSS/Guides/Selectors)

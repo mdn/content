@@ -91,7 +91,7 @@ The mouse cursor image shown for certain {{cssxref("cursor")}} property values (
 
 ### Animating from `auto`
 
-Generally, when the `caret-color` is set to or defaults to `auto`, user agents use `currentColor`, which is animatable. However, `auto` is not an animatable value by default: when animating or transitioning the `caret-color` from `auto` to any color value, no interpolation happens. The animation is [discrete](/en-US/docs/Web/CSS/CSS_animated_properties#discrete); the color switches from or to the `currentColor` color at the midpoint of the {{cssxref("animation-duration")}} or {{cssxref("transition-duration")}}.
+Generally, when the `caret-color` is set to or defaults to `auto`, user agents use `currentColor`, which is animatable. However, `auto` is not an animatable value by default: when animating or transitioning the `caret-color` from `auto` to any color value, no interpolation happens. The animation is [discrete](/en-US/docs/Web/CSS/Guides/Animations/Animatable_properties#discrete); the color switches from or to the `currentColor` color at the midpoint of the {{cssxref("animation-duration")}} or {{cssxref("transition-duration")}}.
 
 ## Formal definition
 

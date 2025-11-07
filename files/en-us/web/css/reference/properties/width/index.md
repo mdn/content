@@ -6,7 +6,7 @@ browser-compat: css.properties.width
 sidebar: cssref
 ---
 
-The **`width`** [CSS](/en-US/docs/Web/CSS) property sets an element's width. By default, it sets the width of the [content area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#content_area), but if {{cssxref("box-sizing")}} is set to `border-box`, it sets the width of the [border area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#border_area).
+The **`width`** [CSS](/en-US/docs/Web/CSS) property sets an element's width. By default, it sets the width of the [content area](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#content_area), but if {{cssxref("box-sizing")}} is set to `border-box`, it sets the width of the [border area](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#border_area).
 
 {{InteractiveExample("CSS Demo: width")}}
 
@@ -86,7 +86,7 @@ width: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : Defines the width as a distance value.
 - {{cssxref("&lt;percentage&gt;")}}
-  - : Defines the width as a percentage of the [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block)'s width.
+  - : Defines the width as a percentage of the [containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block)'s width.
 - `auto`
   - : The browser will calculate and select a width for the specified element.
 - {{cssxref("max-content")}}
@@ -98,7 +98,7 @@ width: unset;
 - [`fit-content(<length-percentage>)`](/en-US/docs/Web/CSS/Reference/Values/fit-content_function)
   - : Uses the fit-content formula with the available space replaced by the specified argument, i.e., `min(max-content, max(min-content, <length-percentage>))`.
 - `stretch`
-  - : Sets the width of the element's [margin box](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model#parts_of_a_box) to the width of its [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block#identifying_the_containing_block). It attempts to make the margin box fill the available space in the containing block, so in a way behaving similar to `100%` but applying the resulting size to the margin box rather than the box determined by [box-sizing](/en-US/docs/Web/CSS/Reference/Properties/box-sizing).
+  - : Sets the width of the element's [margin box](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model#parts_of_a_box) to the width of its [containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block#identifying_the_containing_block). It attempts to make the margin box fill the available space in the containing block, so in a way behaving similar to `100%` but applying the resulting size to the margin box rather than the box determined by [box-sizing](/en-US/docs/Web/CSS/Reference/Properties/box-sizing).
 
 ## Accessibility
 
@@ -267,5 +267,5 @@ p.min-blue {
 - {{cssxref("block-size")}}, {{cssxref("inline-size")}}
 - {{cssxref("anchor-size()")}}
 - SVG {{SVGAttr("width")}} attribute
-- [Introduction to the CSS box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) guide
-- [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module
+- [Introduction to the CSS box model](/en-US/docs/Web/CSS/Guides/Box_model/Introduction) guide
+- [CSS box model](/en-US/docs/Web/CSS/Guides/Box_model) module

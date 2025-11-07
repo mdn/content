@@ -11,7 +11,7 @@ browser-compat: api.CSSFunctionDeclarations
 
 The **`CSSFunctionDeclarations`** interface of the [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model) represents a consecutive run of CSS declarations included within a {{cssxref("@function")}} body.
 
-This can include [CSS custom properties](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties), and the value of the `results` descriptor inside the `@function` body, but it doesn't include blocks such as {{cssxref("@media")}} at-rules that may be included. Such a block, included in the middle of a set of declarations, would cause the body contents to be broken up into separate `CSSFunctionDeclarations` objects, as seen in our [Multiple `CSSFunctionDeclarations`](#multiple_cssfunctiondeclarations) demo.
+This can include [CSS custom properties](/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties), and the value of the `results` descriptor inside the `@function` body, but it doesn't include blocks such as {{cssxref("@media")}} at-rules that may be included. Such a block, included in the middle of a set of declarations, would cause the body contents to be broken up into separate `CSSFunctionDeclarations` objects, as seen in our [Multiple `CSSFunctionDeclarations`](#multiple_cssfunctiondeclarations) demo.
 
 {{InheritanceDiagram}}
 
@@ -30,7 +30,7 @@ In this example, we define a CSS custom function and then access its declaration
 
 #### CSS
 
-Our CSS defines a custom function using the {{cssxref("@function")}} at-rule. The function is called `--lighter()`, and outputs a lightened version of an input color. `--lighter()` accepts two parameters, a {{cssxref("&lt;color>")}} and a {{cssxref("&lt;number>")}}. It returns an [`oklch()`](/en-US/docs/Web/CSS/Reference/Values/color_value/oklch) color created using [relative color syntax](/en-US/docs/Web/CSS/CSS_colors/Relative_colors); the input color is transformed into an `oklch()` color and its lightness channel is increased by the input number.
+Our CSS defines a custom function using the {{cssxref("@function")}} at-rule. The function is called `--lighter()`, and outputs a lightened version of an input color. `--lighter()` accepts two parameters, a {{cssxref("&lt;color>")}} and a {{cssxref("&lt;number>")}}. It returns an [`oklch()`](/en-US/docs/Web/CSS/Reference/Values/color_value/oklch) color created using [relative color syntax](/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors); the input color is transformed into an `oklch()` color and its lightness channel is increased by the input number.
 
 ```css live-sample___cssfunctiondeclarations-basics
 @function --lighter(--color <color>, --lightness-adjust <number>: 0.2) returns
@@ -40,7 +40,7 @@ Our CSS defines a custom function using the {{cssxref("@function")}} at-rule. Th
 }
 ```
 
-We've also included a local [custom property](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) inside the function, `--someVar`, which isn't used, but illustrates what happens when multiple declarations are available continuously inside the `@function` body.
+We've also included a local [custom property](/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties) inside the function, `--someVar`, which isn't used, but illustrates what happens when multiple declarations are available continuously inside the `@function` body.
 
 #### JavaScript
 

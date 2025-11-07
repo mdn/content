@@ -45,7 +45,7 @@ The natural logarithm (base `e`) of `value`, when `base` is not defined.
 
 ### Using the `log()` function on a logarithmic scale
 
-This example illustrates how the `log()` function can be used to visualize data values by using a [logarithmic scale](https://en.wikipedia.org/wiki/Logarithmic_scale). The width of each bar in this example is relative to its data value on a logarithmic scale with base 10. On each element, its value is assigned to a [CSS custom property](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) named `--value`, which is then used by the `.bar` class to calculate its width.
+This example illustrates how the `log()` function can be used to visualize data values by using a [logarithmic scale](https://en.wikipedia.org/wiki/Logarithmic_scale). The width of each bar in this example is relative to its data value on a logarithmic scale with base 10. On each element, its value is assigned to a [CSS custom property](/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties) named `--value`, which is then used by the `.bar` class to calculate its width.
 
 #### HTML
 

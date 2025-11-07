@@ -217,5 +217,5 @@ img.animate(
 - {{domxref("Animation")}}
 - {{domxref("Element.getAnimations()")}}
 - {{cssxref("animation-range-end")}}, {{cssxref("animation-range-start")}}, {{cssxref("animation-timeline")}}
-- [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations)
+- [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations)
 - [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)

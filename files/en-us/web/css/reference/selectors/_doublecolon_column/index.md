@@ -10,7 +10,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`::column`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) represents the individual columns generated when a container is set to display its content in multiple columns via [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout). The `::column` pseudo-element enables applying styles that do not affect the layout to these generated fragments.
+The **`::column`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) represents the individual columns generated when a container is set to display its content in multiple columns via [CSS multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout). The `::column` pseudo-element enables applying styles that do not affect the layout to these generated fragments.
 
 ## Syntax
 
@@ -28,7 +28,7 @@ The `::column` pseudo-element only accepts scroll snap properties that apply to 
 
 The `::column` pseudo-element can have a {{cssxref("::scroll-marker")}} pseudo-element. Other pseudo-elements like {{cssxref("::before")}} and {{cssxref("::after")}} are not generated on `::column`. Applying `::column::scroll-marker` creates a marker for every column of the originating [scroll container](/en-US/docs/Glossary/Scroll_container), with the `::scroll-marker` pseudo-elements inheriting from the `::column` pseudo-element's originating element rather than the `::column` itself.
 
-This is useful for [CSS carousels](/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels) — `::column` can be used to generate `::scroll-marker` pseudo-elements for each column, and set them as [snap targets](/en-US/docs/Glossary/Scroll_snap#snap_target) using [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap).
+This is useful for [CSS carousels](/en-US/docs/Web/CSS/Guides/Overflow/Carousels) — `::column` can be used to generate `::scroll-marker` pseudo-elements for each column, and set them as [snap targets](/en-US/docs/Glossary/Scroll_snap#snap_target) using [CSS scroll snap](/en-US/docs/Web/CSS/Guides/Scroll_snap).
 
 While the styling that can be applied to `::column` is very limited, it may be expanded in the future. Any properties and values supported in the future will be limited to ones that do not affect layout.
 
@@ -104,7 +104,7 @@ The HTML consists of an [unordered list](/en-US/docs/Web/HTML/Reference/Elements
 
 #### CSS
 
-The list is given a fixed {{cssxref("height")}} and a {{cssxref("width")}} of `100vw` to make it span the full width of the viewport. An {{cssxref("overflow-x")}} value of `scroll` is then set so that the content will scroll horizontally, and [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) is used to snap to each item or "page" — a {{cssxref("scroll-snap-type")}} value of `x mandatory` is used to make the list into a [scroll snap container](/en-US/docs/Glossary/Scroll_snap#scroll_snap_container). Finally, a {{cssxref("columns")}} value of `1` is set to force the list contents to display as a single column. A {{cssxref("text-align")}} value of `center` is also applied, to align the content with the center of the list.
+The list is given a fixed {{cssxref("height")}} and a {{cssxref("width")}} of `100vw` to make it span the full width of the viewport. An {{cssxref("overflow-x")}} value of `scroll` is then set so that the content will scroll horizontally, and [CSS scroll snap](/en-US/docs/Web/CSS/Guides/Scroll_snap) is used to snap to each item or "page" — a {{cssxref("scroll-snap-type")}} value of `x mandatory` is used to make the list into a [scroll snap container](/en-US/docs/Glossary/Scroll_snap#scroll_snap_container). Finally, a {{cssxref("columns")}} value of `1` is set to force the list contents to display as a single column. A {{cssxref("text-align")}} value of `center` is also applied, to align the content with the center of the list.
 
 ```css hidden live-sample___column-layout-example live-sample___carousel-example
 * {
@@ -217,7 +217,7 @@ ul::column::scroll-marker:target-current {
 
 Try pressing the scroll markers to jump straight to each page. Note how the current marker is highlighted so you can see where you are in the pagination. Also try tabbing to the scroll marker group, then use the cursor keys to cycle through each page.
 
-See [Creating CSS carousels](/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels) for more carousel examples.
+See [Creating CSS carousels](/en-US/docs/Web/CSS/Guides/Overflow/Carousels) for more carousel examples.
 
 ## Specifications
 
@@ -233,7 +233,7 @@ See [Creating CSS carousels](/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels) for
 - {{cssxref("::scroll-marker")}}
 - {{cssxref("::scroll-marker-group")}}
 - {{cssxref(":target-current")}}
-- [Creating CSS carousels](/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels)
-- [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout) module
-- [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
+- [Creating CSS carousels](/en-US/docs/Web/CSS/Guides/Overflow/Carousels)
+- [CSS multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout) module
+- [CSS overflow](/en-US/docs/Web/CSS/Guides/Overflow) module
 - [CSS Carousel Gallery](https://chrome.dev/carousel/) via chrome.dev (2025)

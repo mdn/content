@@ -29,7 +29,7 @@ lab(from hsl(180 100% 50%) calc(l - 10) a b)
 
 ### Values
 
-Below are descriptions of the allowed values for both absolute and [relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors).
+Below are descriptions of the allowed values for both absolute and [relative colors](/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors).
 
 #### Absolute value syntax
 
@@ -478,8 +478,8 @@ The output is as follows:
 ## See also
 
 - [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value) data type
-- [`<color-function>`](/en-US/docs/Web/CSS/CSS_colors#functions) data type
-- [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)
-- [CSS colors](/en-US/docs/Web/CSS/CSS_colors) module
+- [`<color-function>`](/en-US/docs/Web/CSS/Guides/Colors#functions) data type
+- [Using relative colors](/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors)
+- [CSS colors](/en-US/docs/Web/CSS/Guides/Colors) module
 - [LCH colors in CSS: what, why, and how?](https://lea.verou.me/blog/2020/04/lch-colors-in-css-what-why-and-how/) by Lea Verou (2020)
 - [Safari Technology Preview 122 release notes](https://webkit.org/blog/11577/release-notes-for-safari-technology-preview-122/): includes `lab()` and {{cssxref("color_value/lch",'lch()')}} colors

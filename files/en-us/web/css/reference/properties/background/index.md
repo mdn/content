@@ -6,7 +6,7 @@ browser-compat: css.properties.background
 sidebar: cssref
 ---
 
-The **`background`** [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets all background style properties at once, such as color, image, origin and size, or repeat method. Component properties not set in the `background` shorthand property value declaration are set to their default values.
+The **`background`** [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets all background style properties at once, such as color, image, origin and size, or repeat method. Component properties not set in the `background` shorthand property value declaration are set to their default values.
 
 {{InteractiveExample("CSS Demo: background")}}
 
@@ -182,5 +182,5 @@ Browsers do not provide any special information on background images to assistiv
 ## See also
 
 - {{cssxref("box-decoration-break")}}
-- [Using gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients)
-- [Using multiple backgrounds](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
+- [Using gradients](/en-US/docs/Web/CSS/Guides/Images/Using_gradients)
+- [Using multiple backgrounds](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds)

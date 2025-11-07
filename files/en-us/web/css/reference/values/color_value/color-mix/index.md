@@ -242,7 +242,7 @@ li:nth-child(6) {
 
 {{EmbedLiveSample("adding transparency", "100%", 120)}}
 
-In this way, the `color-mix()` function can be used to add transparency to any color, even if the color is already non-opaque (with an alpha channel value < 1). However, `color-mix()` can't be used to make a semi-transparent color fully opaque. For this, use a [relative color](/en-US/docs/Web/CSS/CSS_colors/Relative_colors) with a CSS [color function](/en-US/docs/Web/CSS/CSS_colors#functions). Relative colors can alter the value of any color channel, including increasing a color's alpha channel to render the color fully opaque.
+In this way, the `color-mix()` function can be used to add transparency to any color, even if the color is already non-opaque (with an alpha channel value < 1). However, `color-mix()` can't be used to make a semi-transparent color fully opaque. For this, use a [relative color](/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors) with a CSS [color function](/en-US/docs/Web/CSS/Guides/Colors#functions). Relative colors can alter the value of any color channel, including increasing a color's alpha channel to render the color fully opaque.
 
 ### Using hue interpolation in color-mix()
 
@@ -409,4 +409,4 @@ With `longer hue` the increments or decrements between colors will always be the
 - {{CSSXref("&lt;color&gt;")}}
 - {{CSSXref("&lt;color-interpolation-method&gt;")}}
 - {{cssxref("&lt;hue&gt;")}}
-- [CSS relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)
+- [CSS relative colors](/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors)

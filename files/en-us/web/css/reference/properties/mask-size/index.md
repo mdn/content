@@ -204,7 +204,7 @@ The `mask-size` of two of the `<div>` elements is set to one of the property's k
 }
 ```
 
-The property values is displayed using [generated content](/en-US/docs/Web/CSS/CSS_generated_content).
+The property values is displayed using [generated content](/en-US/docs/Web/CSS/Guides/Generated_content).
 
 ```css
 section::before {
@@ -316,7 +316,7 @@ The `contain` value contains the mask within the origin box. The `cover` value c
 - {{cssxref("mask-border")}}
 - {{cssxref("background-size")}}
 - {{cssxref("mask-border-width")}}
-- [Introduction to CSS masking](/en-US/docs/Web/CSS/CSS_masking/Masking)
-- [CSS `mask` properties](/en-US/docs/Web/CSS/CSS_masking/Mask_properties)
-- [Declaring multiple masks](/en-US/docs/Web/CSS/CSS_masking/Multiple_masks)
-- [CSS masking](/en-US/docs/Web/CSS/CSS_masking) module
+- [Introduction to CSS masking](/en-US/docs/Web/CSS/Guides/Masking/Introduction)
+- [CSS `mask` properties](/en-US/docs/Web/CSS/Guides/Masking/Mask_properties)
+- [Declaring multiple masks](/en-US/docs/Web/CSS/Guides/Masking/Multiple_masks)
+- [CSS masking](/en-US/docs/Web/CSS/Guides/Masking) module

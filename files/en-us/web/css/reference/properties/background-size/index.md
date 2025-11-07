@@ -189,7 +189,7 @@ To do this, we can use a fixed `background-size` value of 150 pixels.
 
 {{EmbedLiveSample("Tiling_a_large_image", 340, 340)}}
 
-See [Resizing background images](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images) for more examples.
+See [Resizing background images](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Resizing_background_images) for more examples.
 
 ## Specifications
 
@@ -201,6 +201,6 @@ See [Resizing background images](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders
 
 ## See also
 
-- [Resizing background images](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
-- [Scaling SVG backgrounds](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds)
+- [Resizing background images](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Resizing_background_images)
+- [Scaling SVG backgrounds](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Scaling_SVG_backgrounds)
 - {{cssxref("object-fit")}}

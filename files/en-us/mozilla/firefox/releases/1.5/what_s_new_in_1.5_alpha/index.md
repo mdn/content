@@ -38,7 +38,7 @@ This page is based largely on [https://www.squarefree.com/burningedg...eases/](h
 - CSS `outline` property
   - : [CSS outlines](/en-US/docs/Web/CSS/Reference/Properties/outline) can now be used. These differ from borders in that they don't affect the page layout.
 - Counters in CSS-generated content
-  - : [CSS2 counters](/en-US/docs/Web/CSS/CSS_lists) are now completely supported (the implementation doesn't match the current CSS2.1 draft, but matches the upcoming one). This allows automatic numbering of sections, headings, and so forth via stylesheets.
+  - : [CSS2 counters](/en-US/docs/Web/CSS/Guides/Lists) are now completely supported (the implementation doesn't match the current CSS2.1 draft, but matches the upcoming one). This allows automatic numbering of sections, headings, and so forth via stylesheets.
 
 #### JavaScript and DOM
 

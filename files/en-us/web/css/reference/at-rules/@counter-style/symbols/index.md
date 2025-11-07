@@ -30,7 +30,7 @@ The `symbols` descriptor is specified as a list of one or more space-separated `
 
 ## Description
 
-A symbol can be a string, image, or identifier. It is used within the {{cssxref("@counter-style")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rules).
+A symbol can be a string, image, or identifier. It is used within the {{cssxref("@counter-style")}} [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules).
 
 When the value of the {{cssxref('@counter-style/system', 'system')}} descriptor is `cyclic`, `numeric`, `alphabetic`, `symbolic`, or `fixed`, the `symbols` descriptor must be specified. For the `additive` system, use the {{cssxref('@counter-style/additive-symbols', 'additive-symbols')}} descriptor instead to specify the symbols.
 
@@ -95,4 +95,4 @@ In this example, the list of values for the `symbols` descriptor include letters
 - List style properties: {{cssxref("list-style")}}, {{cssxref("list-style-image")}}, {{cssxref("list-style-position")}}
 - {{cssxref("symbols", "symbols()")}} function
 - {{cssxref("url_value", "&lt;url&gt;")}} type
-- [CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles) module
+- [CSS counter styles](/en-US/docs/Web/CSS/Guides/Counter_styles) module

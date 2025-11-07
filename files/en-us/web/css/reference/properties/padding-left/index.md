@@ -6,7 +6,7 @@ browser-compat: css.properties.padding-left
 sidebar: cssref
 ---
 
-The **`padding-left`** [CSS](/en-US/docs/Web/CSS) property sets the width of the [padding area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#padding_area) to the left of an element.
+The **`padding-left`** [CSS](/en-US/docs/Web/CSS) property sets the width of the [padding area](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#padding_area) to the left of an element.
 
 {{InteractiveExample("CSS Demo: padding-left")}}
 
@@ -84,7 +84,7 @@ The `padding-left` property is specified as a single value chosen from the list 
 - {{cssxref("&lt;length&gt;")}}
   - : The size of the padding as a fixed value. Must be nonnegative.
 - {{cssxref("&lt;percentage&gt;")}}
-  - : The size of the padding as a percentage, relative to the inline size (_width_ in a horizontal language, defined by {{cssxref("writing-mode")}}) of the [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block). Must be nonnegative.
+  - : The size of the padding as a percentage, relative to the inline size (_width_ in a horizontal language, defined by {{cssxref("writing-mode")}}) of the [containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block). Must be nonnegative.
 
 ## Formal definition
 
@@ -121,5 +121,5 @@ The `padding-left` property is specified as a single value chosen from the list 
 - {{cssxref("padding")}} shorthand
 - {{cssxref("padding-block-start")}}, {{cssxref("padding-block-end")}}, {{cssxref("padding-inline-start")}}, and {{cssxref("padding-inline-end")}}
 - {{cssxref("padding-block")}} and {{cssxref("padding-inline")}} shorthands
-- [Introduction to the CSS basic box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-- [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module
+- [Introduction to the CSS basic box model](/en-US/docs/Web/CSS/Guides/Box_model/Introduction)
+- [CSS box model](/en-US/docs/Web/CSS/Guides/Box_model) module

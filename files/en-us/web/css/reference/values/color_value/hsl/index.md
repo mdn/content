@@ -75,7 +75,7 @@ hsl(120deg, 75%, 25%, 0.8)
 
 ### Values
 
-Below are descriptions of the allowed values for both absolute and [relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors).
+Below are descriptions of the allowed values for both absolute and [relative colors](/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors).
 
 #### Absolute value syntax
 
@@ -401,7 +401,7 @@ div.legacyHSLA {
 - [`lch()`](/en-US/docs/Web/CSS/Reference/Values/color_value/lch) and [`hwb()`](/en-US/docs/Web/CSS/Reference/Values/color_value/hwb) color functions
 - [Hue interpolation in `color-mix()`](/en-US/docs/Web/CSS/Reference/Values/color_value/color-mix#using_hue_interpolation_in_color-mix)
 - [List of all color notations](/en-US/docs/Web/CSS/Reference/Values/color_value)
-- [Color format converter tool](/en-US/docs/Web/CSS/CSS_colors/Color_format_converter)
-- [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)
-- [CSS colors](/en-US/docs/Web/CSS/CSS_colors) module
+- [Color format converter tool](/en-US/docs/Web/CSS/Guides/Colors/Color_format_converter)
+- [Using relative colors](/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors)
+- [CSS colors](/en-US/docs/Web/CSS/Guides/Colors) module
 - [Color picker tool](https://apps.colorjs.io/picker/) by Lea Verou

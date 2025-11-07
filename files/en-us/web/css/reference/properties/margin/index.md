@@ -6,7 +6,7 @@ browser-compat: css.properties.margin
 sidebar: cssref
 ---
 
-The **`margin`** [CSS](/en-US/docs/Web/CSS) shorthand property sets the [margin area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#margin_area) on all four sides of an element.
+The **`margin`** [CSS](/en-US/docs/Web/CSS) shorthand property sets the [margin area](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#margin_area) on all four sides of an element.
 
 {{InteractiveExample("CSS Demo: margin")}}
 
@@ -116,10 +116,10 @@ The `margin` property may be specified using one, two, three, or four values. Ea
 
 - {{cssxref("length")}}
   - : The size of the margin as a fixed value.
-    - For _anchor-positioned elements_, the {{cssxref("anchor-size()")}} function resolves to a {{cssxref("&lt;length&gt;")}} value relative to the associated _anchor element_'s width or height (see [Setting element margin based on anchor size](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#setting_element_margin_based_on_anchor_size)).
+    - For _anchor-positioned elements_, the {{cssxref("anchor-size()")}} function resolves to a {{cssxref("&lt;length&gt;")}} value relative to the associated _anchor element_'s width or height (see [Setting element margin based on anchor size](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using#setting_element_margin_based_on_anchor_size)).
 
 - {{cssxref("percentage")}}
-  - : The size of the margin as a percentage, relative to the inline size (_width_ in a horizontal language, defined by {{cssxref("writing-mode")}}) of the [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block).
+  - : The size of the margin as a percentage, relative to the inline size (_width_ in a horizontal language, defined by {{cssxref("writing-mode")}}) of the [containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block).
 - `auto`
   - : The browser selects a suitable margin to use. For example, in certain cases this value can be used to center an element.
 
@@ -133,11 +133,11 @@ The top and bottom margins have no effect on _non-[replaced](/en-US/docs/Glossar
 
 You can horizontally center an element within its parent by setting `margin: 0 auto;`.
 
-A more common method to center an element horizontally is by setting `display: flex;` and [`justify-content: center;`](/en-US/docs/Web/CSS/Reference/Properties/justify-content) on a container, which [centers its flex item](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container) children.
+A more common method to center an element horizontally is by setting `display: flex;` and [`justify-content: center;`](/en-US/docs/Web/CSS/Reference/Properties/justify-content) on a container, which [centers its flex item](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items) children.
 
 ### Margin collapsing
 
-Elements' top and bottom margins are sometimes collapsed into a single margin that is equal to the larger of the two margins. See [Mastering margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing) for more information.
+Elements' top and bottom margins are sometimes collapsed into a single margin that is equal to the larger of the two margins. See [Mastering margin collapsing](/en-US/docs/Web/CSS/Guides/Box_model/Margin_collapsing) for more information.
 
 ## Formal definition
 
@@ -216,6 +216,6 @@ margin: auto; /* top and bottom: 0 margin     */
 - {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, and {{cssxref("margin-left")}}
 - {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}}, and {{cssxref("margin-inline-end")}}
 - {{cssxref("margin-block")}} and {{cssxref("margin-inline")}} shorthands
-- [Mastering margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-- [Introduction to the CSS box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) guide
-- [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module
+- [Mastering margin collapsing](/en-US/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
+- [Introduction to the CSS box model](/en-US/docs/Web/CSS/Guides/Box_model/Introduction) guide
+- [CSS box model](/en-US/docs/Web/CSS/Guides/Box_model) module
