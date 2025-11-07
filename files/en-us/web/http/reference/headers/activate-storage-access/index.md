@@ -62,7 +62,9 @@ The permission is granted for a particular embedder/embedded site, but only acti
 This means that if you load the same page in a new tab or `<iframe>`, the permission state of that context will be `inactive`; it won't become `active` until the permission is activated.
 The normal storage access flow is to again request the resource without cookies, call `Document.requestStorageAccess()` to activate the existing permission, then reload the resource with cookies.
 
-A server can use `Activate-Storage-Access` to activate a granted permission for a context, avoiding the need to load the resource just so that it can activate the permission by calling `Document.requestStorageAccess()`.
+The resource always needs to be loaded at least once in order to be granted the storage-access permission.
+However, once granted, a server can use `Activate-Storage-Access` to activate the permission for other contexts
+This avoids the need to load the resource just so that it can activate the permission by calling `Document.requestStorageAccess()`.
 
 The way this works is that the browser adds `Sec-Fetch-Storage-Access` to requests to indicate the storage access state.
 If it adds `Sec-Fetch-Storage-Access: inactive` to requests, along with the `Origin` header indicating the source of the request, the server knows that the resource has permission but that it isn't active.
@@ -76,80 +78,14 @@ Note that the response must also the {{httpheader("Vary")}} header with `Sec-Fet
 These examples show requests with {{httpheader("Sec-Fetch-Storage-Access")}} for contexts that have different storage access permission states, and corresponding responses with `Activate-Storage-Access`.
 They use the example of a site, `https://mysite.example`, which includes an {{htmlelement("iframe")}} that embeds a user profile page, `embedded.com/user/profile`.
 
-### secure-access permission initially not granted
-
-The request below assumes this is the first time that the user has visited a page that embeds anything from `embedded.com`, so the storage access permission has not been granted.
-
-The request is for a cross-site `<iframe>` with credentials mode ["include"](/en-US/docs/Web/API/Request/credentials#include).
-The browser has added `Sec-Fetch-Storage-Access: none` to the request, because the `secure-access` permission has not been granted.
-It hasn't added cookies because they are blocked by default.
-
-```http
-GET /user/profile HTTP/1.1
-Host: embedded.com
-Origin: https://mysite.example
-Sec-Fetch-Dest: iframe
-Sec-Fetch-Site: cross-site
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Storage-Access: none
-Credentials-Mode: include
-```
-
-The server can't ask the browser to activate a granted permission using `Activate-Storage-Access`, because no permission has been granted.
-Instead, the server returns a non-credentialed version of the resource.
-The server includes the {{httpheader("Vary")}} header, as the response may change with `Sec-Fetch-Storage-Access`.
-
-```http
-HTTP/1.1 200 OK
-Content-Type: text/html
-Vary: Sec-Fetch-Storage-Access
-
-<html>
-  ...
-</html>
-```
-
-The embedded page would call {{domxref("Document.requestStorageAccess()")}} with transient activation to request the storage-access permission (see the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API) for more information).
-If the storage-access permission is granted for the embedded page, it is also activated.
-
-It would then reload itself, resulting in the following request.
-This time the browser adds `Sec-Fetch-Storage-Access: active` and includes the third-party cookies, reflecting the permission state of the embedded content.
-
-```http
-GET /user/profile HTTP/1.1
-Host: embedded.com
-Origin: https://mysite.example
-Sec-Fetch-Dest: iframe
-Sec-Fetch-Site: cross-site
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Storage-Access: active
-Credentials-Mode: include
-Cookie: sessionid=abc123
-```
-
-The server responds with the credentialed version of the resource, which may be different than the first version that was loaded, and adds the header `Activate-Storage-Access: load`.
-The browser loads the page, which will now have access to its own cookie information.
-
-```http
-HTTP/1.1 200 OK
-Content-Type: text/html
-Vary: Sec-Fetch-Storage-Access
-Activate-Storage-Access: load
-
-<html>
-  ...
-</html>
-```
-
-Note that when working with a server that does not use these headers, the flow would be the same.
-This is because a resource always has to be loaded the first time without cookies before it can be granted permission.
-
 ### Server activating a permission
 
-This example uses the same scenario as in the previous example, but now we assume that the context has permission, but it has not yet been activated.
+This example assumes that the user has already granted permission for the context, but it has not yet been activated.
 (With the API, we'd activate the permission by reloading the resource so it can call `Document.requestStorageAccess()`.)
 
-The request is similar to the previous examples, except that the browser has set `Sec-Fetch-Storage-Access: inactive`, which indicates that the context has permission but that it has not been activated.
+The request is for a cross-site `<iframe>` with credentials mode ["include"](/en-US/docs/Web/API/Request/credentials#include).
+The browser has added `Sec-Fetch-Storage-Access: inactive` to the request, because the `secure-access` permission has been granted but not activated.
+It hasn't added cookies because they are blocked by default.
 The `Origin` is also set because the server needs to know the source of the request.
 
 ```http
@@ -164,6 +100,7 @@ Credentials-Mode: include
 ```
 
 The server responds with `Activate-Storage-Access: retry; allowed-origin="https://mysite.example"`, indicating that the browser should activate the granted permission and retry the request with cookies.
+The server includes the {{httpheader("Vary")}} header, as the response may change with `Sec-Fetch-Storage-Access`.
 
 ```http
 HTTP/1.1 401 Unauthorized
@@ -195,6 +132,78 @@ HTTP/1.1 200 OK
 Content-Type: text/html
 Activate-Storage-Access: load
 Vary: Sec-Fetch-Storage-Access
+
+<html>
+  ...
+</html>
+```
+
+### secure-access permission initially not granted
+
+This example assumes that it is the _first_ time that the user has visited a page that embeds anything from `embedded.com`, so the storage access permission has not been granted.
+
+The headers can only activate a permission for a context that has already been granted — they can't be used to _grant_ the storage-access permission in the first place.
+The embedded page must therefore be loaded without cookies and then call {{domxref("Document.requestStorageAccess()")}} with transient activation to request the storage-access permission.
+This is the same flow as if the headers were not present.
+
+> [!NOTE]
+> The headers are added where appropriate when the permission hasn't been granted, but don't materially affect the message flow or browser behavior.
+> Since the example doesn't demonstrate the main purpose of the headers we have presented it after the "already granted" example.
+
+The request is the same as in the previous example except that the browser has added `Sec-Fetch-Storage-Access: none`, because the `secure-access` permission has not been granted.
+Again, cookies aren't added because they are blocked by default.
+
+```http
+GET /user/profile HTTP/1.1
+Host: embedded.com
+Origin: https://mysite.example
+Sec-Fetch-Dest: iframe
+Sec-Fetch-Site: cross-site
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Storage-Access: none
+Credentials-Mode: include
+```
+
+The server returns a non-credentialed version of the resource.
+This includes the {{httpheader("Vary")}} header, as the response may change with `Sec-Fetch-Storage-Access`.
+Note that it does not include `Activate-Storage-Access` as the server can't activate a permission if none has been granted.
+
+```http
+HTTP/1.1 200 OK
+Content-Type: text/html
+Vary: Sec-Fetch-Storage-Access
+
+<html>
+  ...
+</html>
+```
+
+The embedded page would then call {{domxref("Document.requestStorageAccess()")}} with transient activation to request the storage-access permission.
+If the storage-access permission is granted for the embedded page, it is also activated.
+
+It would then reload itself, resulting in the following request.
+This time the browser adds `Sec-Fetch-Storage-Access: active` and includes the third-party cookies, reflecting the permission state of the embedded content.
+
+```http
+GET /user/profile HTTP/1.1
+Host: embedded.com
+Origin: https://mysite.example
+Sec-Fetch-Dest: iframe
+Sec-Fetch-Site: cross-site
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Storage-Access: active
+Credentials-Mode: include
+Cookie: sessionid=abc123
+```
+
+The server responds with the credentialed version of the resource, which may be different than the first version that was loaded, and adds the header `Activate-Storage-Access: load`.
+The browser loads the page, which will now have access to its own cookie information.
+
+```http
+HTTP/1.1 200 OK
+Content-Type: text/html
+Vary: Sec-Fetch-Storage-Access
+Activate-Storage-Access: load
 
 <html>
   ...
