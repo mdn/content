@@ -12,7 +12,7 @@ sidebar: firefox
 
 ### CSS
 
-- [Using gradients](/en-US/docs/Web/CSS/Guides/Images/Using_CSS_gradients)
+- [Using gradients](/en-US/docs/Web/CSS/Guides/Images/Using_gradients)
   - : Firefox 3.6 adds support for the proposed `-moz-linear-gradient` and `-moz-radial-gradient` properties for {{Cssxref("background")}}.
 - [Multiple backgrounds](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds)
   - : The {{cssxref("background")}} property (as well as {{Cssxref("background-color")}}, {{Cssxref("background-image")}}, {{Cssxref("background-position")}}, {{Cssxref("background-repeat")}}, and {{Cssxref("background-attachment")}}) now supports multiple backgrounds. This lets you specify multiple backgrounds that are rendered atop one another in layers.

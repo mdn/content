@@ -77,7 +77,7 @@ padding-block-start: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : The size of the padding as a fixed value. Must be nonnegative.
 - {{cssxref("&lt;percentage&gt;")}}
-  - : The size of the padding as a percentage, relative to the [inline-size](/en-US/docs/Web/CSS/Guides/Display/Block_and_inline_layout_in_normal_flow) (_width_ in a horizontal language) of the [containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block). Must be nonnegative.
+  - : The size of the padding as a percentage, relative to the [inline-size](/en-US/docs/Web/CSS/Guides/Display/Block_and_inline_layout) (_width_ in a horizontal language) of the [containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block). Must be nonnegative.
 
 ## Description
 

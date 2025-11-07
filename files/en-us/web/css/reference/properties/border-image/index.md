@@ -95,7 +95,7 @@ border-image: unset;
 The `border-image` property may be specified with anywhere from one to five of the values listed below.
 
 > [!NOTE]
-> If the [computed value](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#computed_value) of {{cssxref("border-image-source")}} is `none`, or if the image cannot be displayed, the {{cssxref("border-style")}} will be displayed instead.
+> If the [computed value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#computed_value) of {{cssxref("border-image-source")}} is `none`, or if the image cannot be displayed, the {{cssxref("border-style")}} will be displayed instead.
 
 ### Values
 

@@ -118,4 +118,4 @@ In this example, the {{cssxref("offset-path")}} property uses the `rect()` funct
 - {{cssxref("offset-path")}} property
 - {{cssxref("&lt;basic-shape&gt;")}} data type
 - [CSS shapes](/en-US/docs/Web/CSS/Guides/Shapes) module
-- [Guide to basic shapes](/en-US/docs/Web/CSS/Guides/Shapes/Basic_shapes)
+- [Guide to basic shapes](/en-US/docs/Web/CSS/Guides/Shapes/Using_shape-outside)

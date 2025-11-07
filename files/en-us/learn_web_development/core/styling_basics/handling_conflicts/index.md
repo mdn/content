@@ -194,7 +194,7 @@ CSS provides five special universal property values for controlling inheritance.
 - {{cssxref("inherit")}}
   - : Sets the property value applied to a selected element to be the same as that of its parent element. Effectively, this "turns on inheritance".
 - {{cssxref("initial")}}
-  - : Sets the property value applied to a selected element to the [initial value](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#initial_value) of that property.
+  - : Sets the property value applied to a selected element to the [initial value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#initial_value) of that property.
 - {{cssxref("revert")}}
   - : Resets the property value applied to a selected element to the browser's default styling rather than the defaults applied to that property. This value acts like {{cssxref("unset")}} in many cases.
 - {{cssxref("revert-layer")}}

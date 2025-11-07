@@ -43,7 +43,7 @@ They are easy to use for anybody with a fair knowledge of basic concepts.
   - : CSS Transitions allow you to define an animation between several styles and to control the way this transition happens.
 - [CSS Transforms](/en-US/docs/Web/CSS/Guides/Transforms/Using)
   - : Transforms allow you to change the position of elements by modifying their coordinate space: it allows for translating, rotating, and deforming them in the 2D or 3D spaces.
-- [CSS Gradients](/en-US/docs/Web/CSS/Guides/Images/Using_CSS_gradients)
+- [CSS Gradients](/en-US/docs/Web/CSS/Guides/Images/Using_gradients)
   - : Gradients are images that transition smoothly from one color to another.
     There are several types of gradients allowed in CSS: linear or radial, repeating or not.
     This tutorial describes how to use them.

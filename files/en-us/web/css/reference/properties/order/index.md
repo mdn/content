@@ -130,7 +130,7 @@ We include a header, a footer, and a main content area. The main content include
 
 #### CSS
 
-We style the main area using [flexible box layout](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) module features; by setting {{cssxref("display")}} to `flex`, the {{htmlelement("main")}} element becomes a flex container. By default, this creates flex items of equal vertical size. The sidebars are both given an absolute {{cssxref("width")}}, while the {{htmlelement("article")}} will consume all the [positive free space](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_ratios_along_main_axis#positive_and_negative_free_space) with a {{cssxref("flex-grow")}} factor set via the {{cssxref("flex")}} shorthand.
+We style the main area using [flexible box layout](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) module features; by setting {{cssxref("display")}} to `flex`, the {{htmlelement("main")}} element becomes a flex container. By default, this creates flex items of equal vertical size. The sidebars are both given an absolute {{cssxref("width")}}, while the {{htmlelement("article")}} will consume all the [positive free space](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios#positive_and_negative_free_space) with a {{cssxref("flex-grow")}} factor set via the {{cssxref("flex")}} shorthand.
 
 We then set different `order` property values on each of the flex container's three children; this means the CSS is defining that component's visual order rather than it appearing in the order declared in the HTML.
 

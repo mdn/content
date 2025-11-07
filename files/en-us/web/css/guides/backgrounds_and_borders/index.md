@@ -141,7 +141,7 @@ The CSS backgrounds module level 4 also introduces the `background-position-bloc
   - : Changing the size and repeating behavior of background images.
 - [Scaling SVG backgrounds](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Scaling_SVG_backgrounds)
   - : How SVG aspect ratio, SVG dimension values, and the CSS `background-size` property impact the scaling of SVG background images.
-- [Using CSS gradients](/en-US/docs/Web/CSS/Guides/Images/Using_CSS_gradients)
+- [Using CSS gradients](/en-US/docs/Web/CSS/Guides/Images/Using_gradients)
   - : Creating CSS gradients and using them as background images.
 - [Learn CSS: background and borders](/en-US/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
   - : Learn how to implement decorative images using CSS background images.

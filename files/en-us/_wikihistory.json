@@ -72219,7 +72219,7 @@
       "teoli"
     ]
   },
-  "Web/CSS/Guides/Display/Block_and_inline_layout_in_normal_flow": {
+  "Web/CSS/Guides/Display/Block_and_inline_layout": {
     "modified": "2020-06-24T00:31:42.747Z",
     "contributors": [
       "mfuji09",
@@ -72786,7 +72786,7 @@
       "teoli"
     ]
   },
-  "Web/CSS/Guides/Images/Using_CSS_gradients": {
+  "Web/CSS/Guides/Images/Using_gradients": {
     "modified": "2020-11-09T14:36:47.079Z",
     "contributors": [
       "chrisdavidmills",
@@ -72850,7 +72850,7 @@
       "teoli"
     ]
   },
-  "Web/CSS/Guides/Lists/Consistent_list_indentation": {
+  "Web/CSS/Guides/Lists/Indenting": {
     "modified": "2020-04-27T22:28:57.922Z",
     "contributors": [
       "mfluehr",
@@ -73515,10 +73515,6 @@
       "teoli"
     ]
   },
-  "Web/CSS/Guides/Shapes/Basic_shapes": {
-    "modified": "2020-04-27T22:31:14.909Z",
-    "contributors": ["EvanGenest", "mfluehr", "chrisdavidmills", "rachelandrew"]
-  },
   "Web/CSS/Guides/Shapes/From_box_values": {
     "modified": "2020-07-07T12:26:52.049Z",
     "contributors": [
@@ -73536,6 +73532,10 @@
   "Web/CSS/Guides/Shapes/Overview": {
     "modified": "2020-07-07T12:26:38.388Z",
     "contributors": ["wbamberg", "chrisdavidmills", "rachelandrew"]
+  },
+  "Web/CSS/Guides/Shapes/Using_shape-outside": {
+    "modified": "2020-04-27T22:31:14.909Z",
+    "contributors": ["EvanGenest", "mfluehr", "chrisdavidmills", "rachelandrew"]
   },
   "Web/CSS/Guides/Syntax": {
     "modified": "2020-10-15T21:38:35.251Z",

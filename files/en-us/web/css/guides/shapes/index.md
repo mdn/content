@@ -76,7 +76,7 @@ The CSS shapes module also introduces the `shape-inside` and `shape-padding` pro
 
 ### Terms
 
-- [Reference box](/en-US/docs/Web/CSS/Guides/Shapes/Basic_shapes#the_reference_box)
+- [Reference box](/en-US/docs/Web/CSS/Guides/Shapes/Using_shape-outside#the_reference_box)
 
 ## Guides
 
@@ -87,7 +87,7 @@ The CSS shapes module also introduces the `shape-inside` and `shape-padding` pro
 - [Shapes from box values](/en-US/docs/Web/CSS/Guides/Shapes/From_box_values)
   - : Using `border-radius` curvatures and CSS box model values to create shapes.
 
-- [Basic shapes with `shape-outside`](/en-US/docs/Web/CSS/Guides/Shapes/Basic_shapes)
+- [Basic shapes with `shape-outside`](/en-US/docs/Web/CSS/Guides/Shapes/Using_shape-outside)
   - : Creating rectangles, circles, ellipses, and polygons with CSS shapes, the reference box, and the `shape-outside` property.
 
 - [Shapes from images](/en-US/docs/Web/CSS/Guides/Shapes/From_images)

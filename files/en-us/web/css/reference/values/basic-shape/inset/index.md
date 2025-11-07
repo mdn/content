@@ -121,4 +121,4 @@ In the example below we have an `inset()` shape used to pull content over the fl
 
 - Properties that use this data type: {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}
 - [CSS shapes](/en-US/docs/Web/CSS/Guides/Shapes) module
-- [Guide to basic shapes](/en-US/docs/Web/CSS/Guides/Shapes/Basic_shapes)
+- [Guide to basic shapes](/en-US/docs/Web/CSS/Guides/Shapes/Using_shape-outside)

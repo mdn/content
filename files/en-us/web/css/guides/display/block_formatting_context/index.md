@@ -241,6 +241,6 @@ In this example, we wrap the second `<div>` in an outer `<div>`, and create a ne
 - [Layout modes](/en-US/docs/Glossary/Layout_mode)
 - [Visual formatting models](/en-US/docs/Web/CSS/Guides/Display/Visual_formatting_model)
 - [Margin collapsing](/en-US/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
-- [Initial](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#initial_value), [computed](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#computed_value), [used values](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#used_value), and [actual](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#actual_value) values
+- [Initial](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#initial_value), [computed](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#computed_value), [used values](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#used_value), and [actual](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#actual_value) values
 - [Value definition syntax](/en-US/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)
 - {{glossary("Replaced elements")}}

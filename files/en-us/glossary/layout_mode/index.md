@@ -11,7 +11,7 @@ There are several layout modes:
 
 - **[Flow layout or normal flow](/en-US/docs/Web/CSS/Guides/Display/Flow_layout)**
   - : All elements are part of normal flow until you do something to take them out of it.Normal flow includes:
-    - **[Block layout](/en-US/docs/Web/CSS/Guides/Display/Block_and_inline_layout_in_normal_flow)**
+    - **[Block layout](/en-US/docs/Web/CSS/Guides/Display/Block_and_inline_layout)**
       - : Designed for laying out boxes such as paragraphs.
     - **[Inline layout](/en-US/docs/Web/CSS/Guides/Inline_layout)**
       - : Designed for laying out inline items such as text.

@@ -422,4 +422,4 @@ After your content has finished altering styles, it may find itself in a situati
 - [Specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity)
 - [Inheritance](/en-US/docs/Web/CSS/Guides/Cascade/Inheritance)
 - [At-rules](/en-US/docs/Web/CSS/Guides/Syntax/At-rules)
-- [Initial](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#initial_value), [computed](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#computed_value), [used](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#used_value), and [actual](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#actual_value) values
+- [Initial](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#initial_value), [computed](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#computed_value), [used](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#used_value), and [actual](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#actual_value) values

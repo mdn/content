@@ -77,7 +77,7 @@ Three of these functions only define rectangles. With the `inset()` function, yo
 
 We have already seen how `circle()` creates a circular shape. An `ellipse()` is essentially a squashed circle. If none of these basic shapes do the trick you can create more complex shapes using the `polygon()` function, which allows the definition of a series of lines. The `path()` and `shape()` functions can be used to create ANY shape via a series of line, curve, and move commands.
 
-In our [Guide to Basic Shapes](/en-US/docs/Web/CSS/Guides/Shapes/Basic_shapes) we explore each of the possible Basic Shapes and how to create them.
+In our [Guide to Basic Shapes](/en-US/docs/Web/CSS/Guides/Shapes/Using_shape-outside) we explore each of the possible Basic Shapes and how to create them.
 
 ### Shapes from the box value
 

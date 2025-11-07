@@ -47,19 +47,19 @@ The opposite also occurs. Sometimes there are no declarations defining the value
 
 ### Glossary terms and definitions
 
-- [Actual value](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#actual_value)
+- [Actual value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#actual_value)
 - [Anonymous layer](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers#the_layer_block_at-rule_for_named_and_anonymous_layers)
 - [Author origin](/en-US/docs/Web/CSS/Guides/Cascade/Introduction#author_stylesheets)
 - [Cascade](/en-US/docs/Web/CSS/Guides/Cascade/Introduction)
-- [Computed value](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#computed_value)
-- [Initial value](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#initial_value)
+- [Computed value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#computed_value)
+- [Initial value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#initial_value)
 - [Named layer](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers#the_layer_statement_at-rule_for_named_layers)
-- [Resolved value](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#resolved_value)
+- [Resolved value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#resolved_value)
 - [Shorthand properties](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties)
 - [Specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity)
-- [Specified value](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#specified_value)
+- [Specified value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#specified_value)
 - {{glossary("style origin")}}
-- [Used value](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#used_value)
+- [Used value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#used_value)
 - [User origin](/en-US/docs/Web/CSS/Guides/Cascade/Introduction#user_stylesheets)
 - [User-agent origin](/en-US/docs/Web/CSS/Guides/Cascade/Introduction#user-agent_stylesheets)
 

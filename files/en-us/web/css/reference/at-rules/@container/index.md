@@ -432,7 +432,7 @@ A style feature without a value evaluates to true if the computed value is diffe
 
 If the `<style-feature>` passed as the `style()` function's argument is a declaration, the style query evaluates to true if the declaration's value is the same as the computed value of that property for the container being queried. Otherwise, it resolves to false.
 
-The following container query checks if the [computed value](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#computed_value) of the container element's `--accent-color` is `blue`:
+The following container query checks if the [computed value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#computed_value) of the container element's `--accent-color` is `blue`:
 
 ```css
 @container style(--accent-color: blue) {

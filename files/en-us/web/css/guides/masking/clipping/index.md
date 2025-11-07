@@ -41,7 +41,7 @@ To visually clip an element, the `clip-path` property is set to either a [`<geom
 
 The `clip-path` hides everything outside of the clipped region. The most basic clipping is done via a geometry box. You can clip an element based on it's margin, border, padding, or content. The effects of these visual box values can achieved via other CSS properties, such as setting the {{cssxref("border-color")}} to transparent and the {{cssxref("background-origin")}} to the desired visual box. We're looking at these values mostly because these values are using in conjunction with the shape functions, which we'll look at later, to define the origin of the shape clip path.
 
-[Understanding the reference box](/en-US/docs/Web/CSS/Guides/Shapes/Basic_shapes#the_reference_box) used by CSS shapes is important when using `clip-path`, especially with [basic shapes](#clipping_to_basic_shapes), as the reference box defines a shape's coordinate system.
+[Understanding the reference box](/en-US/docs/Web/CSS/Guides/Shapes/Using_shape-outside#the_reference_box) used by CSS shapes is important when using `clip-path`, especially with [basic shapes](#clipping_to_basic_shapes), as the reference box defines a shape's coordinate system.
 
 #### Visual box values
 

@@ -99,7 +99,7 @@ progress(3em, 0, 100)
 
 ### Creating unitless values
 
-The `progress()` function outputs unitless values, therefore it can be used for the purpose of removing units from values in the same manner as the [`tan(atan2())` hack](https://dev.to/janeori/css-type-casting-to-numeric-tanatan2-scalars-582j). Note however that, due to the updates in behavior around [CSS typed arithmetic](/en-US/docs/Web/CSS/Guides/Values_and_units/Using_CSS_typed_arithmetic), this can also be achieved via simple division.
+The `progress()` function outputs unitless values, therefore it can be used for the purpose of removing units from values in the same manner as the [`tan(atan2())` hack](https://dev.to/janeori/css-type-casting-to-numeric-tanatan2-scalars-582j). Note however that, due to the updates in behavior around [CSS typed arithmetic](/en-US/docs/Web/CSS/Guides/Values_and_units/Using_typed_arithmetic), this can also be achieved via simple division.
 
 ### Combining `progress()` with other functions and custom properties
 

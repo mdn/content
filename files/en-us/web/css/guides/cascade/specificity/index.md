@@ -485,7 +485,7 @@ A few things to remember about specificity:
 - [CSS error handling](/en-US/docs/Web/CSS/Guides/Syntax/Error_handling)
 - [At-rules](/en-US/docs/Web/CSS/Guides/Syntax/At-rules)
 - [Inheritance](/en-US/docs/Web/CSS/Guides/Cascade/Inheritance)
-- [Initial](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#initial_value), [computed](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#computed_value), [used](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#used_value), and [actual](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#actual_value) values
+- [Initial](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#initial_value), [computed](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#computed_value), [used](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#used_value), and [actual](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#actual_value) values
 - [Value definition syntax](/en-US/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)
 - [Learn: Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - [Learn: cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)

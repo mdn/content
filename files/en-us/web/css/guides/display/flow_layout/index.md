@@ -51,7 +51,7 @@ span {
 
 ## See also
 
-- [Block and inline layout in normal flow](/en-US/docs/Web/CSS/Guides/Display/Block_and_inline_layout_in_normal_flow)
+- [Block and inline layout in normal flow](/en-US/docs/Web/CSS/Guides/Display/Block_and_inline_layout)
 - [In flow and out of flow](/en-US/docs/Web/CSS/Guides/Display/In_flow_and_out_of_flow)
 - [Formatting contexts explained](/en-US/docs/Web/CSS/Guides/Display/Formatting_contexts)
 - [Flow layout and writing modes](/en-US/docs/Web/CSS/Guides/Display/Flow_layout_and_writing_modes)

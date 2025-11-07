@@ -242,4 +242,4 @@ body {
 
 {{EmbedLiveSample("bottom-margin-box", "", "240px")}}
 
-For more complex shapes, you will need to use one of the [basic shapes](/en-US/docs/Web/CSS/Guides/Shapes/Basic_shapes) as a value, or define your shape from an image as covered in other guides in this section.
+For more complex shapes, you will need to use one of the [basic shapes](/en-US/docs/Web/CSS/Guides/Shapes/Using_shape-outside) as a value, or define your shape from an image as covered in other guides in this section.

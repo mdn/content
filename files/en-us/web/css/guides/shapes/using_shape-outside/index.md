@@ -1,7 +1,7 @@
 ---
 title: Basic shapes with shape-outside
 short-title: Using shape-outside
-slug: Web/CSS/Guides/Shapes/Basic_shapes
+slug: Web/CSS/Guides/Shapes/Using_shape-outside
 page-type: guide
 sidebar: cssref
 ---

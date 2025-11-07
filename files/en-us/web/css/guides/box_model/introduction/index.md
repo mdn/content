@@ -53,10 +53,10 @@ Finally, note that for non-replaced inline elements, the amount of space taken u
   - [Visual formatting model](/en-US/docs/Web/CSS/Guides/Display/Visual_formatting_model)
   - [Margin collapsing](/en-US/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
   - Values
-    - [Initial values](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#initial_value)
-    - [Computed values](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#computed_value)
-    - [Used values](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#used_value)
-    - [Actual values](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#actual_value)
+    - [Initial values](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#initial_value)
+    - [Computed values](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#computed_value)
+    - [Used values](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#used_value)
+    - [Actual values](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#actual_value)
   - [Value definition syntax](/en-US/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)
   - [Shorthand properties](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties)
   - {{glossary("Replaced elements")}}

@@ -280,7 +280,7 @@ The individual pages for the different types of value that `display` can have se
 
 ### CSS Flow Layout (display: block, display: inline)
 
-- [Block and inline layout in normal flow](/en-US/docs/Web/CSS/Guides/Display/Block_and_inline_layout_in_normal_flow)
+- [Block and inline layout in normal flow](/en-US/docs/Web/CSS/Guides/Display/Block_and_inline_layout)
 - [Flow layout and overflow](/en-US/docs/Web/CSS/Guides/Display/Flow_layout_and_overflow)
 - [Flow layout and writing modes](/en-US/docs/Web/CSS/Guides/Display/Flow_layout_and_writing_modes)
 - [Introduction to formatting contexts](/en-US/docs/Web/CSS/Guides/Display/Formatting_contexts)
@@ -290,7 +290,7 @@ The individual pages for the different types of value that `display` can have se
 
 - [Basic concepts of flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
 - [Aligning items in a flex container](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
-- [Controlling ratios of flex items along the main axis](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_ratios_along_main_axis)
+- [Controlling ratios of flex items along the main axis](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios)
 - [Mastering wrapping of flex items](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Wrapping_flex_items)
 - [Ordering flex items](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_flex_items)
 - [Relationship of flexbox to other layout methods](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Relationship_with_other_layout_methods)
@@ -503,5 +503,5 @@ You can find more examples in the pages for each separate display type under [Gr
 - {{CSSxRef("visibility")}}, {{CSSxRef("float")}}, {{CSSxRef("position")}}
 - {{CSSxRef("grid")}}, {{CSSxRef("flex")}}
 - SVG {{SVGAttr("display")}} attribute
-- [Block and inline layout in normal flow](/en-US/docs/Web/CSS/Guides/Display/Block_and_inline_layout_in_normal_flow)
+- [Block and inline layout in normal flow](/en-US/docs/Web/CSS/Guides/Display/Block_and_inline_layout)
 - [Introduction to formatting contexts](/en-US/docs/Web/CSS/Guides/Display/Formatting_contexts)

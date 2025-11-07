@@ -881,7 +881,7 @@ That concludes our tour of the basics of flexbox. We hope you had fun and will h
 - [Basic concepts of flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
 - [Aligning items in a flex container](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
 - [Ordering flex items](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_flex_items)
-- [Controlling ratios of flex items along the main axis](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_ratios_along_main_axis)
+- [Controlling ratios of flex items along the main axis](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios)
 - [CSS flexible box layout](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) module
 - [CSS-Tricks guide to flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) — an article explaining everything about flexbox in a visually appealing way
 - [Flexbox Froggy](https://flexboxfroggy.com/) — an educational game to learn and better understand the basics of flexbox

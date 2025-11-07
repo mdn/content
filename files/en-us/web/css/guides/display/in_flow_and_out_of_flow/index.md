@@ -5,7 +5,7 @@ page-type: guide
 sidebar: cssref
 ---
 
-The [previous guide](/en-US/docs/Web/CSS/Guides/Display/Block_and_inline_layout_in_normal_flow) explained block and inline layout in normal flow. All elements that are in flow will be laid out using this method.
+The [previous guide](/en-US/docs/Web/CSS/Guides/Display/Block_and_inline_layout) explained block and inline layout in normal flow. All elements that are in flow will be laid out using this method.
 
 ## Example of elements in flow
 

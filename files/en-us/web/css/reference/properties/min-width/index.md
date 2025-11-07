@@ -6,7 +6,7 @@ browser-compat: css.properties.min-width
 sidebar: cssref
 ---
 
-The **`min-width`** [CSS](/en-US/docs/Web/CSS) property sets the minimum width of an element. It prevents the [used value](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#used_value) of the {{cssxref("width")}} property from becoming smaller than the value specified for `min-width`.
+The **`min-width`** [CSS](/en-US/docs/Web/CSS) property sets the minimum width of an element. It prevents the [used value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#used_value) of the {{cssxref("width")}} property from becoming smaller than the value specified for `min-width`.
 
 {{InteractiveExample("CSS Demo: min-width")}}
 

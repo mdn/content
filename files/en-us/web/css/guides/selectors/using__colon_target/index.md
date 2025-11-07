@@ -1,7 +1,7 @@
 ---
 title: Using the :target pseudo-class in selectors
 short-title: Using :target
-slug: Web/CSS/Guides/Selectors/Using_the_:target_pseudo-class_in_selectors
+slug: Web/CSS/Guides/Selectors/Using_:target
 page-type: guide
 sidebar: cssref
 ---

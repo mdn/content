@@ -1,7 +1,7 @@
 ---
 title: Using CSS gradients
 short-title: Using gradients
-slug: Web/CSS/Guides/Images/Using_CSS_gradients
+slug: Web/CSS/Guides/Images/Using_gradients
 page-type: guide
 sidebar: cssref
 ---

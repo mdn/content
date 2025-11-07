@@ -286,6 +286,6 @@ In [block layout](/en-US/docs/Web/CSS/Guides/Box_alignment/In_block_abspos_table
 - [Aligning items in a flex container](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
 - [Box alignment in grid layout](/en-US/docs/Web/CSS/Guides/Box_alignment/In_grid_layout)
 - [CSS box alignment](/en-US/docs/Web/CSS/Guides/Box_alignment)
-- [Block and inline layout in normal flow](/en-US/docs/Web/CSS/Guides/Display/Block_and_inline_layout_in_normal_flow)
+- [Block and inline layout in normal flow](/en-US/docs/Web/CSS/Guides/Display/Block_and_inline_layout)
 - [Block-level content](/en-US/docs/Glossary/Block-level_content)
 - {{CSSXRef("display")}}

@@ -79,10 +79,10 @@ Border repeat styles, when included, are interpreted in the order of `<repeat-x>
 
 ## Formal definition
 
-- [Initial value](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#initial_value): `none`
+- [Initial value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#initial_value): `none`
 - Applies to: all elements
 - [Inherited](/en-US/docs/Web/CSS/Guides/Cascade/Inheritance): no
-- [Computed value](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#computed_value): as specified
+- [Computed value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#computed_value): as specified
 
 ## Formal syntax
 

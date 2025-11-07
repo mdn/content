@@ -44,7 +44,7 @@ The CSS images module also defines the {{CSSxRef("image/image", "image()")}} fun
 
 ## Guides
 
-- [Using CSS gradients](/en-US/docs/Web/CSS/Guides/Images/Using_CSS_gradients)
+- [Using CSS gradients](/en-US/docs/Web/CSS/Guides/Images/Using_gradients)
   - : Presents a specific type of CSS images, _gradients_, and how to create and use these.
 
 - [Implementing image sprites in CSS](/en-US/docs/Web/CSS/Guides/Images/Implementing_image_sprites)

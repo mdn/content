@@ -74,7 +74,7 @@ transform-style: unset;
 ## Description
 
 The spec lists some [grouping property values](https://drafts.csswg.org/css-transforms-2/#grouping-property-values), which
-require the user agent to create a flattened representation of the descendant elements before they can be applied, and therefore force the element to have a [used value](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#used_value) of `transform-style: flat`, even when `preserve-3d` is specified. These property values include:
+require the user agent to create a flattened representation of the descendant elements before they can be applied, and therefore force the element to have a [used value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#used_value) of `transform-style: flat`, even when `preserve-3d` is specified. These property values include:
 
 - {{cssxref("overflow")}}: any value other than `visible` or `clip`.
 - {{cssxref("opacity")}}: any value less than `1`.

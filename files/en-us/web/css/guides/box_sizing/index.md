@@ -68,7 +68,7 @@ The CSS box sizing module also introduces the `min-intrinsic-sizing` property. C
 - [Visual formatting model](/en-US/docs/Web/CSS/Guides/Display/Visual_formatting_model)
   - : Explains the visual formatting model.
 
-- [Controlling ratios of flex items along the main axis](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_ratios_along_main_axis)
+- [Controlling ratios of flex items along the main axis](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios)
   - : Explains intrinsic sizing as a precursor to understanding how to control the size and flexibility of flex items along the main axis using {{CSSxRef("flex-grow")}}, {{CSSxRef("flex-shrink")}}, and {{CSSxRef("flex-basis")}}.
 
 ## Related concepts

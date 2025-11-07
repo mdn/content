@@ -109,7 +109,7 @@ sidebar:
       - /Web/CSS/Guides/Cascade/Introduction
       - /Web/CSS/Guides/Cascade/Inheritance
       - /Web/CSS/Guides/Cascade/Specificity
-      - /Web/CSS/Guides/Cascade/Value_processing
+      - /Web/CSS/Guides/Cascade/Property_value_processing
       - /Web/CSS/Guides/Cascade/Shorthand_properties
   - type: listSubPages
     path: /Web/CSS/Guides/Cascading_variables
@@ -155,7 +155,7 @@ sidebar:
   - title: Display
     details: closed
     children:
-      - /Web/CSS/Guides/Display/Block_and_inline_layout_in_normal_flow
+      - /Web/CSS/Guides/Display/Block_and_inline_layout
       - /Web/CSS/Guides/Display/Flow_layout
       - /Web/CSS/Guides/Display/Flow_layout_and_overflow
       - /Web/CSS/Guides/Display/Flow_layout_and_writing_modes
@@ -177,7 +177,7 @@ sidebar:
       - /Web/CSS/Guides/Flexible_box_layout/Relationship_with_other_layout_methods
       - /Web/CSS/Guides/Flexible_box_layout/Aligning_items
       - /Web/CSS/Guides/Flexible_box_layout/Ordering_flex_items
-      - /Web/CSS/Guides/Flexible_box_layout/Controlling_ratios_along_main_axis
+      - /Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios
       - /Web/CSS/Guides/Flexible_box_layout/Wrapping_flex_items
       - /Web/CSS/Guides/Flexible_box_layout/Use_cases
   - type: listSubPages
@@ -202,14 +202,14 @@ sidebar:
   - title: Images
     details: closed
     children:
-      - /Web/CSS/Guides/Images/Using_CSS_gradients
+      - /Web/CSS/Guides/Images/Using_gradients
       - /Web/CSS/Guides/Images/Replaced_element_properties
       - /Web/CSS/Guides/Images/Implementing_image_sprites
   - title: Lists_and_counters
     details: closed
     children:
       - /Web/CSS/Guides/Counter_styles/Using_counters
-      - /Web/CSS/Guides/Lists/Consistent_list_indentation
+      - /Web/CSS/Guides/Lists/Indenting
   - title: Logical_properties
     details: closed
     children:
@@ -260,7 +260,7 @@ sidebar:
       - /Web/CSS/Guides/Shapes/Overview
       - /Web/CSS/Guides/Shapes/From_box_values
       - /Web/CSS/Guides/Shapes/From_images
-      - /Web/CSS/Guides/Shapes/Basic_shapes
+      - /Web/CSS/Guides/Shapes/Using_shape-outside
   - title: Syntax
     details: closed
     children:
@@ -291,7 +291,7 @@ sidebar:
       - /Web/CSS/Guides/Values_and_units/Value_definition_syntax
       - /Web/CSS/Guides/Values_and_units/Numeric_data_types
       - /Web/CSS/Guides/Values_and_units/Textual_data_types
-      - /Web/CSS/Guides/Values_and_units/Using_CSS_math_functions
+      - /Web/CSS/Guides/Values_and_units/Using_math_functions
   - type: section
     link: /Web/CSS/How_to
   - link: /Web/CSS/How_to/Layout_cookbook

@@ -12,7 +12,7 @@ There are a number of methods that you can use to lay out your web pages and app
 
 If you are not using a flex or grid layout, then your content is laid out using normal flow, or block and inline layout. These guides will help you to understand the way this layout method works.
 
-- [Block and inline layout in normal flow](/en-US/docs/Web/CSS/Guides/Display/Block_and_inline_layout_in_normal_flow)
+- [Block and inline layout in normal flow](/en-US/docs/Web/CSS/Guides/Display/Block_and_inline_layout)
   - : An introduction to normal flow.
 - [In flow and out of flow](/en-US/docs/Web/CSS/Guides/Display/In_flow_and_out_of_flow)
   - : How to take an item out of flow, and what that does to the layout of your document.
@@ -56,7 +56,7 @@ CSS Flexible Box Layout, commonly known as flexbox, is a layout model optimized 
   - : How the Box Alignment properties work with Flexbox.
 - [Ordering flex items](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_flex_items)
   - : Explaining the different ways to change the order and direction of items, and covering the potential issues in doing so.
-- [Controlling Ratios of flex items along the main axis](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_ratios_along_main_axis)
+- [Controlling Ratios of flex items along the main axis](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios)
   - : Explaining the `flex-grow`, `flex-shrink`, and `flex-basis` properties.
 - [Mastering wrapping of flex items](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Wrapping_flex_items)
   - : How to create flex containers with multiple lines and control the display of the items along those lines.

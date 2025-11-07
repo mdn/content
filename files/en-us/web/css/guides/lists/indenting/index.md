@@ -1,7 +1,7 @@
 ---
 title: Consistent list indentation
 short-title: Indenting lists
-slug: Web/CSS/Guides/Lists/Consistent_list_indentation
+slug: Web/CSS/Guides/Lists/Indenting
 page-type: guide
 sidebar: cssref
 ---

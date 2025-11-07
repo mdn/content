@@ -223,7 +223,7 @@ If a style query includes a value for the custom property, the element's compute
 }
 ```
 
-This container style query matches any element that has `blue` as the [computed value](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#computed_value) of the `--accent-color` custom property.
+This container style query matches any element that has `blue` as the [computed value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#computed_value) of the `--accent-color` custom property.
 
 In this case, other color values equivalent to sRGB `blue` (such as the hexadecimal code `#0000ff`) will match only if the `--accent-color` property was defined as a color with `@property` or `CSS.registerProperty()`, for example:
 

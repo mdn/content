@@ -44,7 +44,7 @@ The **CSS display** module defines how the CSS formatting box tree is generated 
 
 - [Using the multi-keyword syntax with CSS display](/en-US/docs/Web/CSS/Guides/Display/Multi-keyword_syntax)
   - : Describes the multi-keyword syntax and compares this syntax with legacy single-keyword values.
-- [Block and inline layout in normal flow](/en-US/docs/Web/CSS/Guides/Display/Block_and_inline_layout_in_normal_flow)
+- [Block and inline layout in normal flow](/en-US/docs/Web/CSS/Guides/Display/Block_and_inline_layout)
   - : The basics of how block and inline elements behave when they are part of the normal flow.
 - [Flow layout and overflow](/en-US/docs/Web/CSS/Guides/Display/Flow_layout_and_overflow)
   - : How overflow works when working with normal flow.
@@ -74,7 +74,7 @@ The **CSS display** module defines how the CSS formatting box tree is generated 
 - [CSS flexible box layout](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) module
   - [Basic concepts of flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
   - [Aligning items in a flex container](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
-  - [Controlling ratios of flex items along the main axis](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_ratios_along_main_axis)
+  - [Controlling ratios of flex items along the main axis](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios)
   - [Mastering wrapping of flex items](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Wrapping_flex_items)
   - [Ordering flex items](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_flex_items)
   - [Relationship of flexbox to other layout methods](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Relationship_with_other_layout_methods)

@@ -35,7 +35,7 @@ Flexbox also enables alignment of items on the main or cross axis, thus providin
   - [Relationship of flexbox to other layout methods](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Relationship_with_other_layout_methods)
   - [Aligning items in a flex container](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
   - [Ordering flex items](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_flex_items)
-  - [Controlling ratios of flex items along the main axis](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_ratios_along_main_axis)
+  - [Controlling ratios of flex items along the main axis](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios)
   - [Mastering wrapping of flex items](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Wrapping_flex_items)
   - [Typical use cases of flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Use_cases)
 - [CSS Flexible Box Layout Module Level 1](https://drafts.csswg.org/css-flexbox-1/) specification

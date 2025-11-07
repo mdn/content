@@ -123,12 +123,12 @@ Combinators are selectors that establish a relationship between two or more simp
 
 ### Values
 
-- [Actual value](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#actual_value)
-- [Computed value](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#computed_value)
-- [Initial value](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#initial_value)
-- [Resolved value](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#resolved_value)
-- [Specified value](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#specified_value)
-- [Used value](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#used_value)
+- [Actual value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#actual_value)
+- [Computed value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#computed_value)
+- [Initial value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#initial_value)
+- [Resolved value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#resolved_value)
+- [Specified value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#specified_value)
+- [Used value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#used_value)
 
 ### Layout
 

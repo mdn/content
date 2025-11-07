@@ -1,7 +1,7 @@
 ---
 title: CSS property value processing
 short-title: Property value processing
-slug: Web/CSS/Guides/Cascade/Value_processing
+slug: Web/CSS/Guides/Cascade/Property_value_processing
 page-type: guide
 sidebar: cssref
 ---

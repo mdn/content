@@ -477,7 +477,7 @@ However, when the values of custom properties are parsed, the browser doesn't ye
 Unfortunately, these valid values can be used, via the `var()` functional notation, in a context where they might not make sense.
 Properties and custom variables can lead to invalid CSS statements, leading to the concept of _valid at computed time_.
 
-When the browser encounters an invalid `var()` substitution, then the [initial](/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#initial_value) or [inherited](/en-US/docs/Web/CSS/Guides/Cascade/Inheritance) value of the property is used.
+When the browser encounters an invalid `var()` substitution, then the [initial](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#initial_value) or [inherited](/en-US/docs/Web/CSS/Guides/Cascade/Inheritance) value of the property is used.
 This example is just like the last one, except we use a custom property.
 
 The browser substitutes the value of `--text-color` in place of `var(--text-color)`, but `16px` is not a valid property value for {{cssxref("color")}}.

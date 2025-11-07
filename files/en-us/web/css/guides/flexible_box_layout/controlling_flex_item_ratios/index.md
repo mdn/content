@@ -1,7 +1,7 @@
 ---
 title: Controlling ratios of flex items along the main axis
 short-title: Controlling flex item ratios
-slug: Web/CSS/Guides/Flexible_box_layout/Controlling_ratios_along_main_axis
+slug: Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios
 page-type: guide
 sidebar: cssref
 ---

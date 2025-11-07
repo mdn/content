@@ -316,5 +316,5 @@ When you click the `#flex-auto` item, we set the `#default` item's {{cssxref("di
 ## See also
 
 - [Basic concepts of flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
-- [Controlling ratios of flex items along the main axis](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_ratios_along_main_axis)
+- [Controlling ratios of flex items along the main axis](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios)
 - [CSS flexible box layout](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) module

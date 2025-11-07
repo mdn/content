@@ -177,7 +177,7 @@ The CSS values and units module also introduces the [`<frequency>`](/en-US/docs/
 - {{glossary("Identifier")}}
 - {{glossary("Interpolation")}}
 - {{glossary("Keyword")}}
-- [Math function](/en-US/docs/Web/CSS/Guides/Values_and_units/Using_CSS_math_functions)
+- [Math function](/en-US/docs/Web/CSS/Guides/Values_and_units/Using_math_functions)
 - [Numeric data types](/en-US/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types)
 - {{glossary("Origin")}}
 - {{glossary("Pixel")}}
@@ -199,13 +199,13 @@ The CSS values and units module also introduces the [`<frequency>`](/en-US/docs/
 - [CSS value functions](/en-US/docs/Web/CSS/Reference/Values/Functions)
   - : Overview of the CSS statements that invoke special data processing or calculations to return a CSS value for a CSS property.
 
-- [Using CSS math functions](/en-US/docs/Web/CSS/Guides/Values_and_units/Using_CSS_math_functions)
+- [Using CSS math functions](/en-US/docs/Web/CSS/Guides/Values_and_units/Using_math_functions)
   - : The CSS math functions that allow a property value to be written as a mathematical expression.
 
 - [Value definition syntax](/en-US/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)
   - : The formal grammar used to define the set of valid values for CSS properties and functions.
 
-- [Using CSS typed arithmetic](/en-US/docs/Web/CSS/Guides/Values_and_units/Using_CSS_typed_arithmetic)
+- [Using CSS typed arithmetic](/en-US/docs/Web/CSS/Guides/Values_and_units/Using_typed_arithmetic)
   - : An explanation of CSS typed arithmetic behavior and use cases enabled by it.
 
 - [Learn: Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

@@ -16,7 +16,7 @@ CSS masks are composed of one or more mask layers, with a mask layer created for
 The minimum requirement to create a mask is a {{cssxref("mask-image")}} property set to a value other than `none`.
 The keyword `none` within a list of mask sources creates a mask layer. However, if `none` is the only value of the `mask-image` property, no masking occurs.
 
-The mask image can be a [CSS gradient](/en-US/docs/Web/CSS/Guides/Images/Using_CSS_gradients), an [imported image](/en-US/docs/Web/CSS/Guides/Masking/Introduction#with_imported_images) (such as a PNG, SVG, etc.), or an SVG {{svgelement("mask")}} element.
+The mask image can be a [CSS gradient](/en-US/docs/Web/CSS/Guides/Images/Using_gradients), an [imported image](/en-US/docs/Web/CSS/Guides/Masking/Introduction#with_imported_images) (such as a PNG, SVG, etc.), or an SVG {{svgelement("mask")}} element.
 
 In this example, we create five mask layers, including an imported image, two gradients, a layer with no image, and an SVG `<mask>` source as the mask image.
 

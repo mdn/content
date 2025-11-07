@@ -76,7 +76,7 @@ body {
   - : How the box alignment properties work with Flexbox.
 - [Ordering flex items](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_flex_items)
   - : Explaining the different ways to change the order and direction of items, and covering the potential issues in doing so.
-- [Controlling ratios of flex items along the main axis](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_ratios_along_main_axis)
+- [Controlling ratios of flex items along the main axis](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios)
   - : Explaining the flex-grow, flex-shrink and flex-basis properties.
 - [Mastering wrapping of flex items](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Wrapping_flex_items)
   - : How to create flex containers with multiple lines and control the display of the items in those lines.
