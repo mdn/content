@@ -9,7 +9,7 @@ browser-compat: api.setInterval
 {{APIRef("HTML DOM")}}
 
 > [!WARNING]
-> This method dynamically executes input passed to the `code` parameter as JavaScript.
+> When the `code` parameter is used, this method dynamically executes its value as JavaScript.
 > APIs like this are known as [injection sinks](/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage), and are potentially a vector for [cross-site-scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks.
 >
 > You can mitigate this risk by always assigning {{domxref("TrustedScript")}} objects instead of strings and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types).
@@ -37,9 +37,9 @@ setInterval(func, delay, arg1, arg2, /* …, */ argN)
     The first execution happens after `delay` milliseconds.
 - `code`
   - : A {{domxref("TrustedScript")}} or a string of arbitrary code that is compiled and executed every `delay` milliseconds.
-    This can be used instead of passing a function, but is _highly discommended_ for the same reasons that make using {{jsxref("Global_Objects/eval", "eval()")}} a security risk.
+    This can be used instead of passing a function, but is _strongly discouraged_ for the same reasons that make using {{jsxref("Global_Objects/eval", "eval()")}} a security risk.
 - `delay` {{optional_inline}}
-  - : The time, in milliseconds (thousandths of a second), the timer should delay in between executions of the specified function or code.
+  - : The delay time between executions of the specified function or code, in milliseconds.
     Defaults to 0 if not specified.
     See [Delay restrictions](#delay_restrictions) below for details on the permitted range of `delay` values.
 - `arg1`, …, `argN` {{optional_inline}}
@@ -48,6 +48,8 @@ setInterval(func, delay, arg1, arg2, /* …, */ argN)
 ### Return value
 
 A positive integer (typically within the range of 1 to 2,147,483,647) that uniquely identifies the interval timer created by the call.
+
+This identifier, often referred to as an "interval ID", can be passed to {{domxref("Window.clearInterval", "clearInterval()")}} to stop the repeated execution of the specified function.
 
 ### Exceptions
 
@@ -146,14 +148,14 @@ That lets you bypass problems where it's unclear what `this` will be, depending 
 
 ### Security considerations
 
-When used with the function parameter, the method is no more or less dangerous than any other method that can trigger code execution.
+When used with the `function` parameter, the method is no more or less dangerous than any other method that can trigger code execution.
 While specific mechanisms are not required to address this case, you should always consider deploying a [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) to harden your site.
 
 The method can also execute arbitrary input passed in the `code` parameter.
 If the input is a potentially unsafe string provided by a user, this is a possible vector for [Cross-site-scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks.
 For example, the following example assumes the `scriptElement` is an executable `<script>` element, and that `untrustedCode` was provided by a user:
 
-```js
+```js example-bad
 const untrustedCode = "alert('Potentially evil code!');";
 const id = setInterval(untrustedCode, 1000);
 ```
@@ -161,7 +163,7 @@ const id = setInterval(untrustedCode, 1000);
 Websites with a [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) will prevent such code running by default; if you need to use the method with `code` then you will first need to allow the [`unsafe-eval`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#unsafe-eval) in your CSP [`script-src`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src).
 
 If you must allow the scripts to run you can mitigate these issues by always assigning {{domxref("TrustedScript")}} objects instead of strings, and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) using the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) CSP directive.
-This ensures that the input is passed through a transformation function, which has the chance to [sanitize](/en-US/docs/Web/Security/Attacks/XSS#sanitization) or reject the text before it is injected.
+This ensures that the input is passed through a transformation function.
 
 The behavior of the transformation function will depend on the specific use case that requires a user provided script.
 If possible you should lock the allowed scripts to exactly the code that you trust to run.
