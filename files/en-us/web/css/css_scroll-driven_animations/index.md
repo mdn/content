@@ -131,7 +131,7 @@ Scroll the element in the inline direction to see its background color change. S
 - {{cssxref("axis")}}
 - {{cssxref("scroller")}} -->
 
-- [`<timeline-range-name>`](/en-US/docs/Web/CSS/animation-range#timeline-range-name)
+- [`<timeline-range-name>`](/en-US/docs/Web/CSS/Reference/Properties/animation-range#timeline-range-name)
 
 ### Functions
 

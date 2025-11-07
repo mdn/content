@@ -184,7 +184,7 @@ Setting `animation-duration: 1ms` ensures that the animation works in Firefox, t
 
 ### Anonymous scroll progress timelines
 
-You don't have to name your scroll progress timeline. Instead, you can associate an _anonymous scroll progress timeline_ with the animation. In this case, the `animation-timeline` of the element to animate is set to a {{cssxref("animation-timeline/scroll", "scroll()")}} function. The function selects the scroller that provides the scroll progress timeline and the scroll axis to use based on the optional arguments you pass to it. One parameter is a [`<scroller>`](/en-US/docs/Web/CSS/animation-timeline/scroll#scroller) keyword defining the relationship of the scroller element to the current element (`nearest`, `root`, or `self`). The other is the scrollbar [`<axis>`](/en-US/docs/Web/CSS/animation-timeline/scroll#axis) value (`block`, `inline`, `y`, or `x`).
+You don't have to name your scroll progress timeline. Instead, you can associate an _anonymous scroll progress timeline_ with the animation. In this case, the `animation-timeline` of the element to animate is set to a {{cssxref("animation-timeline/scroll", "scroll()")}} function. The function selects the scroller that provides the scroll progress timeline and the scroll axis to use based on the optional arguments you pass to it. One parameter is a [`<scroller>`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/scroll#scroller) keyword defining the relationship of the scroller element to the current element (`nearest`, `root`, or `self`). The other is the scrollbar [`<axis>`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/scroll#axis) value (`block`, `inline`, `y`, or `x`).
 
 This example uses all the same CSS as the previous example, except for the `animation-timeline`, which we set to a `scroll()` function. We are also overriding the size of the container to change the direction of the scroll:
 
@@ -343,7 +343,7 @@ In this example, as we are using inset values, we can use the `from` and `to` ke
 
 ## Accessibility concerns
 
-As with all animations and transitions, always take any user's [`prefers-reduced-motion`](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) preference into account.
+As with all animations and transitions, always take any user's [`prefers-reduced-motion`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) preference into account.
 
 ### Removing an animation's timeline
 
