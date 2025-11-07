@@ -64,7 +64,7 @@ The `gecko` sub-key supports these properties:
     - `optional` {{optional_inline}}
       - : The data that the user can opt to provide. Can contain one or more of `authenticationInfo`, `bookmarksInfo`, `browsingActivity`, `financialAndPaymentInfo`, `healthInfo`, `locationInfo`, `personalCommunications`, `personallyIdentifyingInfo`, `searchTerms`, `technicalAndInteraction`, `websiteActivity`, or `websiteContent`.
 
-  - : For more information, see the Extension Workshop article [Firefox built-in consent for data collection and transmission](https://extensionworkshop.com/documentation/develop/firefox-builtin-data-consent/).
+    For more information, see the Extension Workshop article [Firefox built-in consent for data collection and transmission](https://extensionworkshop.com/documentation/develop/firefox-builtin-data-consent/).
 
 - `id`
   - : The extension ID. When provided, this property must contain 80 characters or less. See [Extensions and the Add-on ID](https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/) to determine when to specify the ID.

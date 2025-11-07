@@ -2,7 +2,6 @@
 title: Scroll-driven animation timelines
 slug: Web/CSS/CSS_scroll-driven_animations/Timelines
 page-type: guide
-spec-urls: https://drafts.csswg.org/scroll-animations-1/
 sidebar: cssref
 ---
 
@@ -36,7 +35,7 @@ Scroll-driven animations are CSS animations that are not run on the default [Doc
 
 The {{cssxref("animation-timeline")}} property, defined in the [CSS animations](/en-US/docs/Web/CSS/CSS_animations) module, is used to set the timeline used for the animation.
 
-The [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations) module defines features for setting the `animation-timeline` as a scroll-progress or view-progress timeline. You can explicitly [name an element as a timeline controller](#named_timelines) using the `scroll-timeline-*` and `view-timeline-*` properties, then set that name as the `animation-timeline` of a descendant element. You can also define _anonymous scroll progress timelines_ and _anonymous view progress timelines_ using the [`scroll()`](#scroll-progress_timelines) and [`view()`](#view-progress_timelines)) functions.
+The [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations) module defines features for setting the `animation-timeline` as a scroll-progress or view-progress timeline. You can explicitly [name an element as a timeline controller](#named_scroll_progress_timelines) using the `scroll-timeline-*` and `view-timeline-*` properties, then set that name as the `animation-timeline` of a descendant element. You can also define _anonymous scroll progress timelines_ and _anonymous view progress timelines_ using the [`scroll()`](#scroll_progress_timelines) and [`view()`](#view_progress_timelines)) functions.
 
 Alternatively, the `animation-timeline` property can be used to explicitly state that the [default document timeline be used](#regular_css_animations_default_document_timeline) or to specify that the [animation doesn't have a timeline](#removing_an_animations_timeline), and therefore shouldn't occur at all.
 
@@ -357,7 +356,7 @@ Setting `animation-timeline: none` disassociates the element from all animation 
 }
 ```
 
-Because the [`animation` shorthand sets the `animation-timeline` to `auto`](#animation-timeline-and-the-animation-shorthand), use a selector with enough specificity to ensure your `animation-timeline` isn't overridden by your `animation` shorthand declarations.
+Because the `animation` shorthand sets the `animation-timeline` to `auto`, use a selector with enough specificity to ensure your `animation-timeline` isn't overridden by your `animation` shorthand declarations.
 
 ## See also
 
