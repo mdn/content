@@ -71,7 +71,7 @@ If it adds `Sec-Fetch-Storage-Access: inactive` to requests, along with the `Ori
 The server can then respond with `Activate-Storage-Access: retry; allowed-origin="<request_origin>"` to ask the browser to activate the permission for the context and retry the request.
 The browser then sends the request again, this time with `Sec-Fetch-Storage-Access: active` and including cookies, and the server responds with the credentialed version of the resource, which has access to its cookies as though it were a first-party resource.
 
-Note that the response must also the {{httpheader("Vary")}} header with `Sec-Fetch-Storage-Access`.
+The response must also include the {{httpheader("Vary")}} header with `Sec-Fetch-Storage-Access`.
 
 ## Examples
 
