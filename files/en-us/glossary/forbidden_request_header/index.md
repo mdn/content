@@ -28,7 +28,7 @@ Forbidden headers are one of the following:
 - {{HTTPHeader("Connection")}}
 - {{HTTPHeader("Content-Length")}}
 - {{HTTPHeader("Cookie")}}
-- {{HTTPHeader("Cookie2")}}
+- `Cookie2`
 - {{HTTPHeader("Date")}}
 - {{HTTPHeader("DNT")}}
 - {{HTTPHeader("Expect")}}
