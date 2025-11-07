@@ -311,7 +311,7 @@ The individual pages for the different types of value that `display` can have se
 
 ### Animating display
 
-[Supporting browsers](#browser_compatibility) animate `display` with a [discrete animation type](/en-US/docs/Web/CSS/CSS_animated_properties#discrete). This generally means that the property will flip between two values 50% through animating between the two.
+[Supporting browsers](#browser_compatibility) animate `display` with a [discrete animation type](/en-US/docs/Web/CSS/Guides/Animations/Animatable_properties#discrete). This generally means that the property will flip between two values 50% through animating between the two.
 
 There is one exception, which is when animating to or from `display: none`. In this case, the browser will flip between the two values so that the animated content is shown for the entire animation duration. So for example:
 

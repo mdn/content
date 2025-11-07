@@ -17,7 +17,7 @@ CSS transitions let you decide which properties to animate (by [_listing them ex
 
 ## Which CSS properties can be transitioned?
 
-The Web author can define which property has to be animated and in which way. This allows the creation of complex transitions. However, some properties are [not animatable](/en-US/docs/Web/CSS/CSS_animated_properties) as it doesn't make sense to animate them.
+The Web author can define which property has to be animated and in which way. This allows the creation of complex transitions. However, some properties are [not animatable](/en-US/docs/Web/CSS/Guides/Animations/Animatable_properties) as it doesn't make sense to animate them.
 
 > [!NOTE]
 > The `auto` value is often a very complex case. The specification recommends not animating from and to `auto`. Some user agents, like those based on Gecko, implement this requirement and others, like those based on WebKit, are less strict. Using animations with `auto` may lead to unpredictable results, depending on the browser and its version, and should be avoided.
@@ -188,7 +188,7 @@ This CSS establishes the look of the menu, with the background and text colors b
 
 This example demonstrates how [`display`](/en-US/docs/Web/CSS/Reference/Properties/display) and [`content-visibility`](/en-US/docs/Web/CSS/Reference/Properties/content-visibility) can be transitioned. This behavior is useful for creating entry/exit animations where you want to for example remove a container from the DOM with `display: none`, but have it fade out with [`opacity`](/en-US/docs/Web/CSS/Reference/Properties/opacity) rather than disappearing immediately.
 
-Supporting browsers transition `display` and `content-visibility` with a variation on the [discrete animation type](/en-US/docs/Web/CSS/CSS_animated_properties#discrete). This generally means that properties will flip between two values 50% through animating between the two.
+Supporting browsers transition `display` and `content-visibility` with a variation on the [discrete animation type](/en-US/docs/Web/CSS/Guides/Animations/Animatable_properties#discrete). This generally means that properties will flip between two values 50% through animating between the two.
 
 There is an exception, however, which is when animating to/from `display: none` or `content-visibility: hidden`. In this case, the browser will flip between the two values so that the transitioned content is shown for the entire animation duration.
 

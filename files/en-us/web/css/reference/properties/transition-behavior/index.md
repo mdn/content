@@ -6,7 +6,7 @@ browser-compat: css.properties.transition-behavior
 sidebar: cssref
 ---
 
-The **`transition-behavior`** [CSS](/en-US/docs/Web/CSS) property specifies whether transitions will be started for properties whose animation behavior is [discrete](/en-US/docs/Web/CSS/CSS_animated_properties#discrete).
+The **`transition-behavior`** [CSS](/en-US/docs/Web/CSS) property specifies whether transitions will be started for properties whose animation behavior is [discrete](/en-US/docs/Web/CSS/Guides/Animations/Animatable_properties#discrete).
 
 ## Syntax
 

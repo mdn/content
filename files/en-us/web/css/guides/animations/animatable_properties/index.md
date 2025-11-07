@@ -1,7 +1,7 @@
 ---
 title: Animatable CSS properties
 short-title: Animatable properties
-slug: Web/CSS/CSS_animated_properties
+slug: Web/CSS/Guides/Animations/Animatable_properties
 page-type: landing-page
 sidebar: cssref
 ---

@@ -401,7 +401,7 @@ And here's the live output.
 
 This example demonstrates how [`display`](/en-US/docs/Web/CSS/Reference/Properties/display) and [`content-visibility`](/en-US/docs/Web/CSS/Reference/Properties/content-visibility) can be animated. This behavior is useful for creating entry/exit animations where you want to for example remove a container from the DOM with `display: none`, but have it fade out smoothly with [`opacity`](/en-US/docs/Web/CSS/Reference/Properties/opacity) rather than disappearing immediately.
 
-Supporting browsers animate `display` and `content-visibility` with a variation on the [discrete animation type](/en-US/docs/Web/CSS/CSS_animated_properties#discrete). This generally means that properties will flip between two values 50% of the way through animating between the two.
+Supporting browsers animate `display` and `content-visibility` with a variation on the [discrete animation type](/en-US/docs/Web/CSS/Guides/Animations/Animatable_properties#discrete). This generally means that properties will flip between two values 50% of the way through animating between the two.
 
 There is an exception, however, which is when animating to/from `display: none` or `content-visibility: hidden` to a visible value. In this case, the browser will flip between the two values so that the animated content is shown for the entire animation duration.
 

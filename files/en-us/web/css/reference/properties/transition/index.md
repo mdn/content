@@ -121,7 +121,7 @@ Each single-property transition describes the transition that should be applied 
   - No value, in which case a value of `all` will be inferred and the specified transition will still apply to all changing properties.
 - zero or one {{cssxref("&lt;easing-function&gt;")}} value representing the easing function to use
 - zero, one, or two {{cssxref("&lt;time&gt;")}} values. The first value that can be parsed as a time is assigned to the {{cssxref("transition-duration")}}, and the second value that can be parsed as a time is assigned to {{cssxref("transition-delay")}}.
-- zero or one value declaring whether to start transitions for properties whose animation behavior is [discrete](/en-US/docs/Web/CSS/CSS_animated_properties#discrete). The value, if present, is either the keyword `allow-discrete` or the keyword `normal`.
+- zero or one value declaring whether to start transitions for properties whose animation behavior is [discrete](/en-US/docs/Web/CSS/Guides/Animations/Animatable_properties#discrete). The value, if present, is either the keyword `allow-discrete` or the keyword `normal`.
 
 If you specify `all` as the transition property for one single-property transition, but then specify subsequent single-property transitions with {{cssxref("&lt;custom-ident&gt;")}} values, those subsequent transitions will override the first one. For example:
 

@@ -461,7 +461,7 @@
 /en-US/docs/CSS/CSS_Reference	/en-US/docs/Web/CSS/Reference
 /en-US/docs/CSS/CSS_Reference/Mozilla_Extensions	/en-US/docs/Web/CSS/Reference/Mozilla_extensions
 /en-US/docs/CSS/CSS_Reference/Webkit_Extensions	/en-US/docs/Web/CSS/Reference/Webkit_extensions
-/en-US/docs/CSS/CSS_animated_properties	/en-US/docs/Web/CSS/CSS_animated_properties
+/en-US/docs/CSS/CSS_animated_properties	/en-US/docs/Web/CSS/Guides/Animations/Animatable_properties
 /en-US/docs/CSS/CSS_animations	/en-US/docs/Web/CSS/Guides/Animations/Using
 /en-US/docs/CSS/CSS_flex-wrap	/en-US/docs/Web/CSS/Reference/Properties/flex-wrap
 /en-US/docs/CSS/CSS_percentage_values	/en-US/docs/Web/CSS
@@ -12524,6 +12524,7 @@
 /en-US/docs/Web/CSS/CSS_anchor_positioning	/en-US/docs/Web/CSS/Guides/Anchor_positioning
 /en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding	/en-US/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding
 /en-US/docs/Web/CSS/CSS_anchor_positioning/Using	/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using
+/en-US/docs/Web/CSS/CSS_animated_properties	/en-US/docs/Web/CSS/Guides/Animations/Animatable_properties
 /en-US/docs/Web/CSS/CSS_animations	/en-US/docs/Web/CSS/Guides/Animations
 /en-US/docs/Web/CSS/CSS_animations/Tips	/en-US/docs/Web/API/Web_Animations_API/Tips
 /en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations	/en-US/docs/Web/CSS/Guides/Animations/Using

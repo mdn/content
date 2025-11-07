@@ -71617,23 +71617,6 @@
       "CitizenK"
     ]
   },
-  "Web/CSS/CSS_animated_properties": {
-    "modified": "2020-12-14T07:30:52.556Z",
-    "contributors": [
-      "wbamberg",
-      "huynhtrongnhan",
-      "mfluehr",
-      "teoli",
-      "Sebastianz",
-      "jpmedley",
-      "tregagnon",
-      "rebeccahauck",
-      "ziyunfei",
-      "FredB",
-      "Marsf",
-      "Sheppy"
-    ]
-  },
   "Web/CSS/CSS_display/flow_layout": {
     "modified": "2020-06-24T00:31:39.254Z",
     "contributors": [
@@ -71655,6 +71638,23 @@
       "Sheppy",
       "MexieAndCo",
       "teoli"
+    ]
+  },
+  "Web/CSS/Guides/Animations/Animatable_properties": {
+    "modified": "2020-12-14T07:30:52.556Z",
+    "contributors": [
+      "wbamberg",
+      "huynhtrongnhan",
+      "mfluehr",
+      "teoli",
+      "Sebastianz",
+      "jpmedley",
+      "tregagnon",
+      "rebeccahauck",
+      "ziyunfei",
+      "FredB",
+      "Marsf",
+      "Sheppy"
     ]
   },
   "Web/CSS/Guides/Animations/Using": {

@@ -83,7 +83,7 @@ content-visibility: unset;
 
 ### Animating and transitioning content-visibility
 
-[Supporting browsers](#browser_compatibility) animate/transition `content-visibility` with a variation on the [discrete animation type](/en-US/docs/Web/CSS/CSS_animated_properties#discrete).
+[Supporting browsers](#browser_compatibility) animate/transition `content-visibility` with a variation on the [discrete animation type](/en-US/docs/Web/CSS/Guides/Animations/Animatable_properties#discrete).
 
 Discrete animation generally means that the property will flip between two values 50% of the way through the animation. In the case of `content-visibility`, however, the browser will flip between the two values to show the animated content for the entire animation duration. So, for example:
 

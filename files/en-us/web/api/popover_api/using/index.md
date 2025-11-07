@@ -466,7 +466,7 @@ See [Using CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning
 
 ## Animating popovers
 
-Popovers are set to `display: none;` when hidden and `display: block;` when shown, as well as being removed from / added to the {{glossary("top layer")}} and the [accessibility tree](/en-US/docs/Web/Performance/Guides/How_browsers_work#building_the_accessibility_tree). Therefore, for popovers to be animated, the {{cssxref("display")}} property needs to be animatable. [Supporting browsers](/en-US/docs/Web/CSS/Reference/Properties/display#browser_compatibility) animate `display` with a variation on the [discrete animation type](/en-US/docs/Web/CSS/CSS_animated_properties#discrete). Specifically, the browser will flip between `none` and another value of `display` so that the animated content is shown for the entire animation duration. So, for example:
+Popovers are set to `display: none;` when hidden and `display: block;` when shown, as well as being removed from / added to the {{glossary("top layer")}} and the [accessibility tree](/en-US/docs/Web/Performance/Guides/How_browsers_work#building_the_accessibility_tree). Therefore, for popovers to be animated, the {{cssxref("display")}} property needs to be animatable. [Supporting browsers](/en-US/docs/Web/CSS/Reference/Properties/display#browser_compatibility) animate `display` with a variation on the [discrete animation type](/en-US/docs/Web/CSS/Guides/Animations/Animatable_properties#discrete). Specifically, the browser will flip between `none` and another value of `display` so that the animated content is shown for the entire animation duration. So, for example:
 
 - When animating `display` from `none` to `block` (or another visible `display` value), the value will flip to `block` at `0%` of the animation duration so it is visible throughout.
 - When animating `display` from `block` (or another visible `display` value) to `none`, the value will flip to `none` at `100%` of the animation duration so it is visible throughout.
@@ -571,7 +571,7 @@ As discussed earlier, we have also:
 - Set a starting state for the `transition` inside the `@starting-style` block.
 - Added `display` to the list of transitioned properties so that the animated element is visible (set to `display: block`) throughout the popover's entry and exit animations. Without this, the exit animation would not be visible; in effect, the popover would just disappear.
 - Added `overlay` to the list of transitioned properties to make sure that the removal of the element from the top layer is deferred until the animation has been completed. The effect of this may not be noticeable for basic animations such as this one, but in more complex cases, omitting this property can result in the element being removed from the overlay before the transition completes.
-- Set `allow-discrete` on both properties in the above transitions to enable [discrete transitions](/en-US/docs/Web/CSS/CSS_animated_properties#discrete).
+- Set `allow-discrete` on both properties in the above transitions to enable [discrete transitions](/en-US/docs/Web/CSS/Guides/Animations/Animatable_properties#discrete).
 
 You'll note that we've also included a transition on the [`::backdrop`](/en-US/docs/Web/CSS/Reference/Selectors/::backdrop) appearing behind the popover when it opens, providing a nice darkening animation.
 

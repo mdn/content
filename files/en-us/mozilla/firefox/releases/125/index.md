@@ -109,7 +109,7 @@ These features are shipping in Firefox 125 but only in developer releases or beh
 - **CSS `transition-behavior`:** `layout.css.transition-behavior.enabled`.
 
   The {{cssxref("transition-behavior")}} property is enabled by default in the Nightly release.
-  Authors can use this property to control whether to apply CSS transitions to properties with a [discrete animation type](/en-US/docs/Web/CSS/CSS_animated_properties#discrete) ([Firefox bug 1882408](https://bugzil.la/1882408), [Firefox bug 1805727](https://bugzil.la/1805727)).
+  Authors can use this property to control whether to apply CSS transitions to properties with a [discrete animation type](/en-US/docs/Web/CSS/Guides/Animations/Animatable_properties#discrete) ([Firefox bug 1882408](https://bugzil.la/1882408), [Firefox bug 1805727](https://bugzil.la/1805727)).
 
 - **UA styles for `<h1>` nested into sectioning elements:** `layout.css.h1-in-section-ua-styles.enabled`.
 

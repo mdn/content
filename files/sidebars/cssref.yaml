@@ -79,7 +79,7 @@ sidebar:
   - title: Animations
     details: closed
     children:
-      - /Web/CSS/CSS_animated_properties
+      - /Web/CSS/Guides/Animations/Animatable_properties
       - /Web/CSS/Guides/Animations/Using
   - title: Backgrounds_and_Borders
     details: closed

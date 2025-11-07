@@ -400,7 +400,7 @@ Try clicking each button to open a dialog. The first one can only be closed by c
 
 ### Animating dialogs
 
-`<dialog>`s are set to [`display: none;`](/en-US/docs/Web/CSS/Reference/Properties/display) when hidden and `display: block;` when shown, as well as being removed from / added to the {{glossary("top layer")}} and the [accessibility tree](/en-US/docs/Web/Performance/Guides/How_browsers_work#building_the_accessibility_tree). Therefore, for `<dialog>` elements to be animated the {{cssxref("display")}} property needs to be animatable. [Supporting browsers](/en-US/docs/Web/CSS/Reference/Properties/display#browser_compatibility) animate `display` with a variation on the [discrete animation type](/en-US/docs/Web/CSS/CSS_animated_properties#discrete). Specifically, the browser will flip between `none` and another value of `display` so that the animated content is shown for the entire animation duration.
+`<dialog>`s are set to [`display: none;`](/en-US/docs/Web/CSS/Reference/Properties/display) when hidden and `display: block;` when shown, as well as being removed from / added to the {{glossary("top layer")}} and the [accessibility tree](/en-US/docs/Web/Performance/Guides/How_browsers_work#building_the_accessibility_tree). Therefore, for `<dialog>` elements to be animated the {{cssxref("display")}} property needs to be animatable. [Supporting browsers](/en-US/docs/Web/CSS/Reference/Properties/display#browser_compatibility) animate `display` with a variation on the [discrete animation type](/en-US/docs/Web/CSS/Guides/Animations/Animatable_properties#discrete). Specifically, the browser will flip between `none` and another value of `display` so that the animated content is shown for the entire animation duration.
 
 So for example:
 
