@@ -72385,7 +72385,7 @@
       "JayBee007"
     ]
   },
-  "Web/CSS/Guides/Flexible_box_layout/Ordering_flex_items": {
+  "Web/CSS/Guides/Flexible_box_layout/Ordering_items": {
     "modified": "2020-10-16T12:47:28.328Z",
     "contributors": [
       "mfuji09",
@@ -72421,7 +72421,7 @@
       "chrisdavidmills"
     ]
   },
-  "Web/CSS/Guides/Flexible_box_layout/Wrapping_flex_items": {
+  "Web/CSS/Guides/Flexible_box_layout/Wrapping_items": {
     "modified": "2020-06-24T00:31:25.845Z",
     "contributors": [
       "maksymczech",
@@ -73486,7 +73486,7 @@
       "ExE-Boss"
     ]
   },
-  "Web/CSS/Guides/Selectors/Privacy_and_the_visited_selector": {
+  "Web/CSS/Guides/Selectors/Privacy_and_:visited": {
     "modified": "2020-05-05T20:20:41.094Z",
     "contributors": [
       "jswisher",

@@ -54,11 +54,11 @@ CSS Flexible Box Layout, commonly known as flexbox, is a layout model optimized 
   - : How Flexbox relates to other layout methods, and other CSS specifications.
 - [Aligning items in a flex container](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
   - : How the Box Alignment properties work with Flexbox.
-- [Ordering flex items](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_flex_items)
+- [Ordering flex items](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items)
   - : Explaining the different ways to change the order and direction of items, and covering the potential issues in doing so.
 - [Controlling Ratios of flex items along the main axis](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios)
   - : Explaining the `flex-grow`, `flex-shrink`, and `flex-basis` properties.
-- [Mastering wrapping of flex items](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Wrapping_flex_items)
+- [Mastering wrapping of flex items](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Wrapping_items)
   - : How to create flex containers with multiple lines and control the display of the items along those lines.
 - [Typical use cases of Flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Use_cases)
   - : Common design patterns that are typical Flexbox use cases.

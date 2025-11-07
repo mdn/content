@@ -165,7 +165,7 @@ To cause wrapping behavior add the property {{cssxref("flex-wrap")}} with a valu
 
 {{EmbedLiveSample("flex-wrap")}}
 
-Find out more about wrapping flex items in the guide [Mastering wrapping of flex items](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Wrapping_flex_items).
+Find out more about wrapping flex items in the guide [Mastering wrapping of flex items](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Wrapping_items).
 
 ## The flex-flow shorthand
 

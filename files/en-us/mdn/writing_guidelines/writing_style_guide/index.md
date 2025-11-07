@@ -146,9 +146,9 @@ Additionally, avoid using vague link text like "Click here" or "Read this articl
 
 <!-- markdownlint-disable descriptive-link-text -->
 
-- **Correct**: "Learn more about [how to order flex items](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_flex_items)."
-- **Incorrect**: "Click [here](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_flex_items) to learn more."
-- **Incorrect**: "Read [this article](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_flex_items) to learn more."
+- **Correct**: "Learn more about [how to order flex items](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items)."
+- **Incorrect**: "Click [here](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items) to learn more."
+- **Incorrect**: "Read [this article](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items) to learn more."
 
 <!-- markdownlint-enable descriptive-link-text -->
 
@@ -458,8 +458,8 @@ To learn about how to style or format code examples for MDN Web Docs, see our [G
 
 When referencing another page or the section of a page on MDN by its title, follow sentence casing in the link text (match the page or section title). Use sentence casing in the link text even if it is different from the linked page title or section title (it might be that the case used in the page or section title is incorrect). Don't use quotation marks around the link text. To refer to a page on MDN by its title, use the following style:
 
-- **Correct**: "Refer to the [Ordering flex items](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_flex_items) guide."
-- **Incorrect**: "Refer to the "[Ordering flex items](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_flex_items)" guide."
+- **Correct**: "Refer to the [Ordering flex items](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items) guide."
+- **Incorrect**: "Refer to the "[Ordering flex items](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items)" guide."
 
 Follow a consistent style when linking to sections within a page:
 

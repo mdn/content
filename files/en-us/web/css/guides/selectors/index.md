@@ -123,7 +123,7 @@ The CSS selectors module also introduces the {{CSSXref(":blank")}}, {{CSSXref(":
 - [Using the `:target` pseudo-class in selectors](/en-US/docs/Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors)
   - : Learn how to use the {{CSSXref(":target")}} pseudo-class to style the target element a URL's fragment identifier.
 
-- [Privacy and the `:visited` selector](/en-US/docs/Web/CSS/Guides/Selectors/Privacy_and_the_visited_selector)
+- [Privacy and the `:visited` selector](/en-US/docs/Web/CSS/Guides/Selectors/Privacy_and_:visited)
   - : Explores the style limitations set on the `:visited` class for user privacy.
 
 - [CSS building blocks: CSS selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)

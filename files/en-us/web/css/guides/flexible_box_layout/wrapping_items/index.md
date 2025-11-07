@@ -1,7 +1,7 @@
 ---
 title: Mastering wrapping of flex items
 short-title: Wrapping flex items
-slug: Web/CSS/Guides/Flexible_box_layout/Wrapping_flex_items
+slug: Web/CSS/Guides/Flexible_box_layout/Wrapping_items
 page-type: guide
 sidebar: cssref
 ---

@@ -177,9 +177,9 @@ sidebar:
       - /Web/CSS/Guides/Flexible_box_layout/Basic_concepts
       - /Web/CSS/Guides/Flexible_box_layout/Relationship_with_other_layout_methods
       - /Web/CSS/Guides/Flexible_box_layout/Aligning_items
-      - /Web/CSS/Guides/Flexible_box_layout/Ordering_flex_items
+      - /Web/CSS/Guides/Flexible_box_layout/Ordering_items
       - /Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios
-      - /Web/CSS/Guides/Flexible_box_layout/Wrapping_flex_items
+      - /Web/CSS/Guides/Flexible_box_layout/Wrapping_items
       - /Web/CSS/Guides/Flexible_box_layout/Use_cases
   - type: listSubPages
     path: /Web/CSS/Guides/Fonts
@@ -267,7 +267,7 @@ sidebar:
     children:
       - /Web/CSS/Guides/Selectors/Selectors_and_combinators
       - /Web/CSS/Guides/Selectors/Selector_structure
-      - /Web/CSS/Guides/Selectors/Privacy_and_the_visited_selector
+      - /Web/CSS/Guides/Selectors/Privacy_and_:visited
       - /Web/CSS/Guides/Selectors/Using_:target
   - title: Shapes
     details: closed

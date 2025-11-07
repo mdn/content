@@ -1,7 +1,7 @@
 ---
 title: Privacy and the :visited selector
 short-title: Privacy and :visited
-slug: Web/CSS/Guides/Selectors/Privacy_and_the_visited_selector
+slug: Web/CSS/Guides/Selectors/Privacy_and_:visited
 page-type: guide
 sidebar: cssref
 ---

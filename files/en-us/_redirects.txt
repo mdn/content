@@ -516,7 +516,7 @@
 /en-US/docs/CSS/Multiple_backgrounds	/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds
 /en-US/docs/CSS/Other_Resources	/en-US/docs/Web/CSS
 /en-US/docs/CSS/Paged_Media	/en-US/docs/Web/CSS/Guides/Paged_media
-/en-US/docs/CSS/Privacy_and_the_:visited_selector	/en-US/docs/Web/CSS/Guides/Selectors/Privacy_and_the_visited_selector
+/en-US/docs/CSS/Privacy_and_the_:visited_selector	/en-US/docs/Web/CSS/Guides/Selectors/Privacy_and_:visited
 /en-US/docs/CSS/Pseudo-classes	/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes
 /en-US/docs/CSS/Pseudo-elements	/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements
 /en-US/docs/CSS/Replaced_element	/en-US/docs/Web/CSS/Guides/Images/Replaced_element_properties
@@ -12614,8 +12614,8 @@
 /en-US/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox	/en-US/docs/Glossary/Flexbox
 /en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox	/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts
 /en-US/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis	/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios
-/en-US/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items	/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Wrapping_flex_items
-/en-US/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items	/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_flex_items
+/en-US/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items	/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Wrapping_items
+/en-US/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items	/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items
 /en-US/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods	/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Relationship_with_other_layout_methods
 /en-US/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox	/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Use_cases
 /en-US/docs/Web/CSS/CSS_flow_layout	/en-US/docs/Web/CSS/Guides/Display/Flow_layout
@@ -12722,7 +12722,7 @@
 /en-US/docs/Web/CSS/CSS_scroll_snap/Using_scroll_snap_events	/en-US/docs/Web/CSS/Guides/Scroll_snap/Using_scroll_snap_events
 /en-US/docs/Web/CSS/CSS_scrollbars_styling	/en-US/docs/Web/CSS/Guides/Scrollbars_styling
 /en-US/docs/Web/CSS/CSS_selectors	/en-US/docs/Web/CSS/Guides/Selectors
-/en-US/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector	/en-US/docs/Web/CSS/Guides/Selectors/Privacy_and_the_visited_selector
+/en-US/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector	/en-US/docs/Web/CSS/Guides/Selectors/Privacy_and_:visited
 /en-US/docs/Web/CSS/CSS_selectors/Selector_structure	/en-US/docs/Web/CSS/Guides/Selectors/Selector_structure
 /en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators	/en-US/docs/Web/CSS/Guides/Selectors/Selectors_and_combinators
 /en-US/docs/Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors	/en-US/docs/Web/CSS/Guides/Selectors/Using_:target
@@ -12813,9 +12813,11 @@
 /en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts_of_flexbox	/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts
 /en-US/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_ratios_along_main_axis	/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios
 /en-US/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis	/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios
-/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Mastering_wrapping_of_flex_items	/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Wrapping_flex_items
+/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Mastering_wrapping_of_flex_items	/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Wrapping_items
+/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_flex_items	/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items
 /en-US/docs/Web/CSS/Guides/Flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods	/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Relationship_with_other_layout_methods
 /en-US/docs/Web/CSS/Guides/Flexible_box_layout/Typical_use_cases_of_flexbox	/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Use_cases
+/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Wrapping_flex_items	/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Wrapping_items
 /en-US/docs/Web/CSS/Guides/Fonts/OpenType_fonts_guide	/en-US/docs/Web/CSS/Guides/Fonts/OpenType_fonts
 /en-US/docs/Web/CSS/Guides/Fonts/Variable_fonts_guide	/en-US/docs/Web/CSS/Guides/Fonts/Variable_fonts
 /en-US/docs/Web/CSS/Guides/Grid_layout/Auto-placement_in_grid_layout	/en-US/docs/Web/CSS/Guides/Grid_layout/Auto-placement
@@ -12845,6 +12847,7 @@
 /en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_context/Stacking_context_example_2	/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_context/Example_2
 /en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_context/Stacking_context_example_3	/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_context/Example_3
 /en-US/docs/Web/CSS/Guides/Scroll_anchoring/Scroll_anchoring	/en-US/docs/Web/CSS/Guides/Scroll_anchoring/Overview
+/en-US/docs/Web/CSS/Guides/Selectors/Privacy_and_the_visited_selector	/en-US/docs/Web/CSS/Guides/Selectors/Privacy_and_:visited
 /en-US/docs/Web/CSS/Guides/Selectors/Using_the_:target_pseudo-class_in_selectors	/en-US/docs/Web/CSS/Guides/Selectors/Using_:target
 /en-US/docs/Web/CSS/Guides/Shapes/Basic_shapes	/en-US/docs/Web/CSS/Guides/Shapes/Using_shape-outside
 /en-US/docs/Web/CSS/Guides/Shapes/Overview_of_shapes	/en-US/docs/Web/CSS/Guides/Shapes/Overview
@@ -12885,7 +12888,7 @@
 /en-US/docs/Web/CSS/Next-sibling_combinator	/en-US/docs/Web/CSS/Reference/Selectors/Next-sibling_combinator
 /en-US/docs/Web/CSS/Other_Resources	/en-US/docs/Web/CSS
 /en-US/docs/Web/CSS/Paged_Media	/en-US/docs/Web/CSS/Guides/Paged_media
-/en-US/docs/Web/CSS/Privacy_and_the_:visited_selector	/en-US/docs/Web/CSS/Guides/Selectors/Privacy_and_the_visited_selector
+/en-US/docs/Web/CSS/Privacy_and_the_:visited_selector	/en-US/docs/Web/CSS/Guides/Selectors/Privacy_and_:visited
 /en-US/docs/Web/CSS/Properties	/en-US/docs/Web/CSS/Reference/Properties
 /en-US/docs/Web/CSS/Pseudo-classes	/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes
 /en-US/docs/Web/CSS/Pseudo-elements	/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements
