@@ -75,7 +75,7 @@ labeled-checkbox:state(checked) {
 
 CSS can also be used to match a custom state [within a custom element's shadow DOM](/en-US/docs/Web/CSS/Reference/Selectors/:state#matching_a_custom_state_in_a_custom_elements_shadow_dom) by specifying `:state()` within the [`:host()`](/en-US/docs/Web/CSS/Reference/Selectors/:host_function) pseudo-class function.
 
-Additionally, the `:state()` pseudo-class can be used after the [`::part()`](/en-US/docs/Web/CSS/Reference/Selectors/::part) pseudo-element to match the [shadow parts](/en-US/docs/Web/CSS/CSS_shadow_parts) of a custom element that are in a particular state.
+Additionally, the `:state()` pseudo-class can be used after the [`::part()`](/en-US/docs/Web/CSS/Reference/Selectors/::part) pseudo-element to match the [shadow parts](/en-US/docs/Web/CSS/Guides/Shadow_parts) of a custom element that are in a particular state.
 
 > [!WARNING]
 > Browsers that do not yet support [`:state()`](/en-US/docs/Web/CSS/Reference/Selectors/:state) will use a CSS `<dashed-ident>` for selecting custom states, which is now deprecated.
@@ -206,7 +206,7 @@ Click the element to see a different border being applied as the checkbox `check
 
 ### Matching a custom state in a shadow part of a custom element
 
-This example, which is adapted from the specification, demonstrates that custom states can be used to target the [shadow parts](/en-US/docs/Web/CSS/CSS_shadow_parts) of a custom element for styling.
+This example, which is adapted from the specification, demonstrates that custom states can be used to target the [shadow parts](/en-US/docs/Web/CSS/Guides/Shadow_parts) of a custom element for styling.
 Shadow parts are sections of the shadow tree that are intentionally exposed to pages that use the custom element.
 
 The example creates a `<question-box>` custom element that displays a question prompt along with a checkbox labeled "Yes".

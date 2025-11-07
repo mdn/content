@@ -114,7 +114,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
 - **CSS anchor positioning** (Nightly): `layout.css.anchor-positioning.enabled`
 
-  Nightly builds now support [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) by default, which allows you to tether elements together.
+  Nightly builds now support [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) by default, which allows you to tether elements together.
   The anchor-positioned elements can then have their size and position set relative to the size and location of the anchor elements to which they are bound.
   (General: [Firefox bug 1988224](https://bugzil.la/1988224), `position-area`: [Firefox bug 1924086](https://bugzil.la/1924086)).
 

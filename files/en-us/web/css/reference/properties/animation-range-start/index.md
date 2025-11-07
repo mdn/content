@@ -11,7 +11,7 @@ The **`animation-range-start`** [CSS](/en-US/docs/Web/CSS) property is used to s
 The `animation-range-start` and {{cssxref("animation-range-end")}} properties can also be set using the [`animation-range`](/en-US/docs/Web/CSS/Reference/Properties/animation-range) shorthand property.
 
 > [!NOTE]
-> `animation-range-start` is included in the {{cssxref("animation")}} shorthand as a reset-only value. This means that including `animation` resets a previously-declared `animation-range-start` value to `normal`, but a specific value cannot be set via `animation`. When creating [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations), you need to declare `animation-range-start` after declaring any `animation` shorthand for it to take effect.
+> `animation-range-start` is included in the {{cssxref("animation")}} shorthand as a reset-only value. This means that including `animation` resets a previously-declared `animation-range-start` value to `normal`, but a specific value cannot be set via `animation`. When creating [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations), you need to declare `animation-range-start` after declaring any `animation` shorthand for it to take effect.
 
 ## Syntax
 
@@ -173,4 +173,4 @@ Scroll to see the subject element being animated.
 - {{cssxref("timeline-scope")}}
 - [`view-timeline-inset`](/en-US/docs/Web/CSS/Reference/Properties/view-timeline-inset)
 - The JavaScript equivalent: The `rangeStart` property available in {{domxref("Element.animate()")}} calls
-- [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations)
+- [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations)

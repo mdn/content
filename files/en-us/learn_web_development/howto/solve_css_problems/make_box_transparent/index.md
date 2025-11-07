@@ -73,4 +73,4 @@ body {
 
 ## See also
 
-- [Applying color to HTML elements using CSS.](/en-US/docs/Web/CSS/CSS_colors/Applying_color)
+- [Applying color to HTML elements using CSS.](/en-US/docs/Web/CSS/Guides/Colors/Applying_color)

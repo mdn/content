@@ -130,5 +130,5 @@ blockquote {
 - {{CSSxRef("writing-mode")}}
 - SVG {{SVGAttr("direction")}} attribute
 - The HTML [`dir`](/en-US/docs/Web/HTML/Reference/Global_attributes/dir) global attribute
-- [Creating vertical form controls](/en-US/docs/Web/CSS/CSS_writing_modes/Vertical_controls)
+- [Creating vertical form controls](/en-US/docs/Web/CSS/Guides/Writing_modes/Vertical_controls)
 - [Handling different text directions](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions)

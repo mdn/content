@@ -18,7 +18,7 @@ The `<length>` data type consists of a {{cssxref("&lt;number&gt;")}} followed by
 > [!NOTE]
 > Some properties allow negative `<length>` values, while others do not.
 
-The [specified value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#specified_value) of a length (_specified length_) is represented by its quantity and unit. The [computed value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value) of a length (_computed length_) is the specified length resolved to an absolute length, and its unit is not distinguished.
+The [specified value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#specified_value) of a length (_specified length_) is represented by its quantity and unit. The [computed value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#computed_value) of a length (_computed length_) is the specified length resolved to an absolute length, and its unit is not distinguished.
 
 The `<length>` units can be relative or absolute. Relative lengths represent a measurement in terms of some other distance. Depending on the unit, this distance can be the size of a specific character, the [line height](/en-US/docs/Web/CSS/Reference/Properties/line-height), or the size of the {{Glossary("viewport")}}. Style sheets that use relative length units can more easily scale from one output environment to another.
 
@@ -99,18 +99,18 @@ The **viewport-percentage length units** are based on four different viewport si
     > [!NOTE]
     > For example, a browser might implement the default viewport-percentage unit for height (`vh`) that is equivalent to the large viewport-percentage height unit (`lvh`). If so, this could obscure content on a full-page display while the browser interface is expanded. Currently, all default viewport units (`vh`, `vw`, etc.) are equivalent to their large viewport counterparts (`lvh`, `lvw`, etc.).
 
-Viewport-percentage lengths define `<length>` values in percentage relative to the size of the initial [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block), which in turn is based on either the size of the {{Glossary("viewport")}} or the page area, i.e., the visible portion of the document. When the height or width of the initial containing block is changed, the elements that are sized based on them are scaled accordingly. There is a viewport-percentage length unit variant corresponding to each of the viewport sizes, as described below.
+Viewport-percentage lengths define `<length>` values in percentage relative to the size of the initial [containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block), which in turn is based on either the size of the {{Glossary("viewport")}} or the page area, i.e., the visible portion of the document. When the height or width of the initial containing block is changed, the elements that are sized based on them are scaled accordingly. There is a viewport-percentage length unit variant corresponding to each of the viewport sizes, as described below.
 
 > [!NOTE]
 > Viewport lengths are invalid in {{cssxref("@page")}} declaration blocks.
 
 - `vh`
-  - : Represents a percentage of the height of the viewport's initial [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block). `1vh` is 1% of the viewport height. For example, if the viewport height is `300px`, then a value of `70vh` on a property will be `210px`.
+  - : Represents a percentage of the height of the viewport's initial [containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block). `1vh` is 1% of the viewport height. For example, if the viewport height is `300px`, then a value of `70vh` on a property will be `210px`.
 
     The respective viewport-percentage units for small, large, and dynamic viewport sizes are `svh`, `lvh`, and `dvh`. `vh` is equivalent to `lvh`, representing the viewport-percentage length unit based on the large viewport size.
 
 - `vw`
-  - : Represents a percentage of the width of the viewport's initial [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block). `1vw` is 1% of the viewport width. For example, if the viewport width is `800px`, then a value of `50vw` on a property will be `400px`.
+  - : Represents a percentage of the width of the viewport's initial [containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block). `1vw` is 1% of the viewport width. For example, if the viewport width is `800px`, then a value of `50vw` on a property will be `400px`.
 
     For small, large, and dynamic viewport sizes, the respective viewport-percentage units are `svw`, `lvw`, and `dvw`.
     `vw` is equivalent to `lvw`, representing the viewport-percentage length unit based on the large viewport size.
@@ -128,13 +128,13 @@ Viewport-percentage lengths define `<length>` values in percentage relative to t
     `vmin` is equivalent to `lvmin`, representing the viewport-percentage length unit based on the large viewport size.
 
 - `vb`
-  - : Represents the percentage of the size of the initial [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block), in the direction of the root element's [block axis](/en-US/docs/Web/CSS/CSS_logical_properties_and_values).
+  - : Represents the percentage of the size of the initial [containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block), in the direction of the root element's [block axis](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values).
 
     For small, large, and dynamic viewport sizes, the respective viewport-percentage units are `svb`, `lvb`, and `dvb`, respectively.
     `vb` is equivalent to `lvb`, representing the viewport-percentage length unit based on the large viewport size.
 
 - `vi`
-  - : Represents a percentage of the size of the initial [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block), in the direction of the root element's [inline axis](/en-US/docs/Web/CSS/CSS_logical_properties_and_values).
+  - : Represents a percentage of the size of the initial [containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block), in the direction of the root element's [inline axis](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values).
 
     For small, large, and dynamic viewport sizes, the respective viewport-percentage units are `svi`, `lvi`, and `dvi`.
     `vi` is equivalent to `lvi`, representing the viewport-percentage length unit based on the large viewport size.
@@ -147,7 +147,7 @@ Components that use units of length relative to their container are more flexibl
 
 If no eligible container is available for the query, the container query length unit defaults to the [small viewport unit](#small_viewport_units) for that axis (`sv*`).
 
-For more information, see [Container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries).
+For more information, see [Container queries](/en-US/docs/Web/CSS/Guides/Containment/Container_queries).
 
 - `cqw`
   - : Represents a percentage of the width of the query container. `1cqw` is 1% of the query container's width. For example, if the query container's width is `800px`, then a value of `50cqw` on a property will be `400px`.
@@ -313,5 +313,5 @@ inputElem.addEventListener("change", () => {
 ## See also
 
 - [Learn: Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
-- [CSS values & units](/en-US/docs/Web/CSS/CSS_values_and_units) module
-- [Box Model](/en-US/docs/Web/CSS/CSS_box_model)
+- [CSS values & units](/en-US/docs/Web/CSS/Guides/Values_and_units) module
+- [Box Model](/en-US/docs/Web/CSS/Guides/Box_model)

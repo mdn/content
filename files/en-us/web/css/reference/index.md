@@ -6,7 +6,7 @@ page-type: landing-page
 sidebar: cssref
 ---
 
-Use this **CSS reference** to browse an [alphabetical index](#index) of all of the standard [CSS](/en-US/docs/Web/CSS) properties, [pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes), [pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements), [data types](/en-US/docs/Web/CSS/Reference/Values/Data_types), [functional notations](/en-US/docs/Web/CSS/Reference/Values/Functions) and [at-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rules). You can also browse [key CSS concepts](#concepts) and a list of [selectors organized by type](#selectors). Also included is a brief [DOM-CSS / CSSOM reference](#dom-css_cssom).
+Use this **CSS reference** to browse an [alphabetical index](#index) of all of the standard [CSS](/en-US/docs/Web/CSS) properties, [pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes), [pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements), [data types](/en-US/docs/Web/CSS/Reference/Values/Data_types), [functional notations](/en-US/docs/Web/CSS/Reference/Values/Functions) and [at-rules](/en-US/docs/Web/CSS/Guides/Syntax/At-rules). You can also browse [key CSS concepts](#concepts) and a list of [selectors organized by type](#selectors). Also included is a brief [DOM-CSS / CSSOM reference](#dom-css_cssom).
 
 ## Basic rule syntax
 
@@ -44,11 +44,11 @@ div.menu-bar li:hover > ul {
 }
 ```
 
-For a beginner-level introduction to the syntax of selectors, see our [guide on CSS Selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors). Be aware that any [syntax](/en-US/docs/Web/CSS/CSS_syntax/Syntax) error in a rule definition invalidates the entire rule. Invalid rules are ignored by the browser. Note that CSS rule definitions are entirely (Unicode) [text-based](https://drafts.csswg.org/css-syntax/#intro), whereas DOM-CSS / CSSOM (the rule management system) is [object-based](https://drafts.csswg.org/cssom/#introduction).
+For a beginner-level introduction to the syntax of selectors, see our [guide on CSS Selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors). Be aware that any [syntax](/en-US/docs/Web/CSS/Guides/Syntax/Introduction) error in a rule definition invalidates the entire rule. Invalid rules are ignored by the browser. Note that CSS rule definitions are entirely (Unicode) [text-based](https://drafts.csswg.org/css-syntax/#intro), whereas DOM-CSS / CSSOM (the rule management system) is [object-based](https://drafts.csswg.org/cssom/#introduction).
 
 ### At-rule syntax
 
-As the structure of at-rules varies widely, please see [At-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rules) to find the syntax of the specific one you want.
+As the structure of at-rules varies widely, please see [At-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules) to find the syntax of the specific one you want.
 
 ## Index
 
@@ -62,7 +62,7 @@ As the structure of at-rules varies widely, please see [At-rule](/en-US/docs/Web
 
 ## Selectors
 
-The following are the various [selectors](/en-US/docs/Web/CSS/CSS_selectors), which allow styles to be conditional based on various features of elements within the DOM.
+The following are the various [selectors](/en-US/docs/Web/CSS/Guides/Selectors), which allow styles to be conditional based on various features of elements within the DOM.
 
 ### Basic selectors
 
@@ -109,37 +109,37 @@ Combinators are selectors that establish a relationship between two or more simp
 
 ### Syntax and semantics
 
-- [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax/Syntax)
-- [At-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rules)
-- [Cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade)
-- [Comments](/en-US/docs/Web/CSS/CSS_syntax/Comments)
+- [CSS syntax](/en-US/docs/Web/CSS/Guides/Syntax/Introduction)
+- [At-rules](/en-US/docs/Web/CSS/Guides/Syntax/At-rules)
+- [Cascade](/en-US/docs/Web/CSS/Guides/Cascade/Introduction)
+- [Comments](/en-US/docs/Web/CSS/Guides/Syntax/Comments)
 - [Descriptor](/en-US/docs/Glossary/CSS_Descriptor)
-- [Inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance)
-- [Shorthand properties](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties)
-- [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
-- [Value definition syntax](/en-US/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
-- [CSS values and units](/en-US/docs/Web/CSS/CSS_values_and_units)
+- [Inheritance](/en-US/docs/Web/CSS/Guides/Cascade/Inheritance)
+- [Shorthand properties](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties)
+- [Specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity)
+- [Value definition syntax](/en-US/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)
+- [CSS values and units](/en-US/docs/Web/CSS/Guides/Values_and_units)
 - [CSS functional notations](/en-US/docs/Web/CSS/Reference/Values/Functions)
 
 ### Values
 
-- [Actual value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#actual_value)
-- [Computed value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value)
-- [Initial value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value)
-- [Resolved value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#resolved_value)
-- [Specified value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#specified_value)
-- [Used value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#used_value)
+- [Actual value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#actual_value)
+- [Computed value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#computed_value)
+- [Initial value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#initial_value)
+- [Resolved value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#resolved_value)
+- [Specified value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#specified_value)
+- [Used value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#used_value)
 
 ### Layout
 
-- [Block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context)
-- [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-- [Containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block)
+- [Block formatting context](/en-US/docs/Web/CSS/Guides/Display/Block_formatting_context)
+- [Box model](/en-US/docs/Web/CSS/Guides/Box_model/Introduction)
+- [Containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block)
 - [Layout mode](/en-US/docs/Glossary/Layout_mode)
-- [Margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+- [Margin collapsing](/en-US/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
 - {{glossary("Replaced elements")}}
-- [Stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context)
-- [Visual formatting model](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model)
+- [Stacking context](/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_context)
+- [Visual formatting model](/en-US/docs/Web/CSS/Guides/Display/Visual_formatting_model)
 
 ## DOM-CSS / CSSOM
 

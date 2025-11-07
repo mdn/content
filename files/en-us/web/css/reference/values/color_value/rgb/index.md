@@ -71,7 +71,7 @@ rgb(0, 255, 255, 50%)
 
 ### Values
 
-Below are descriptions of the allowed values for both absolute and [relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors).
+Below are descriptions of the allowed values for both absolute and [relative colors](/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors).
 
 #### Absolute value syntax
 
@@ -343,6 +343,6 @@ div.comma-separated {
 ## See also
 
 - The {{CSSXref("&lt;color&gt;")}} data type for a list of all color notations
-- [Color format converter tool](/en-US/docs/Web/CSS/CSS_colors/Color_format_converter)
-- [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)
-- [CSS colors](/en-US/docs/Web/CSS/CSS_colors) module
+- [Color format converter tool](/en-US/docs/Web/CSS/Guides/Colors/Color_format_converter)
+- [Using relative colors](/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors)
+- [CSS colors](/en-US/docs/Web/CSS/Guides/Colors) module

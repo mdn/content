@@ -8,7 +8,7 @@ browser-compat:
 sidebar: cssref
 ---
 
-The **`@scope`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rules) enables you to select elements in specific DOM subtrees, targeting elements precisely without writing overly-specific selectors that are hard to override, and without coupling your selectors too tightly to the DOM structure.
+The **`@scope`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules) enables you to select elements in specific DOM subtrees, targeting elements precisely without writing overly-specific selectors that are hard to override, and without coupling your selectors too tightly to the DOM structure.
 
 In JavaScript, `@scope` can be accessed via the CSS object model interface {{DOMxRef("CSSScopeRule")}}.
 
@@ -169,7 +169,7 @@ Here's some considerations for `:scope` within `@scope` blocks:
 ### Specificity in `@scope`
 
 Inside an `@scope` rule, both bare selectors and the [`&`](/en-US/docs/Web/CSS/Reference/Selectors/Nesting_selector) nesting selector behave as if `:where(:scope)` were prepended to the selector.
-Because {{cssxref(":where", ":where()")}} has zero [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity), bare selectors and `&` add zero weight. The specificity weight is determined by the rest of the selector.
+Because {{cssxref(":where", ":where()")}} has zero [specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity), bare selectors and `&` add zero weight. The specificity weight is determined by the rest of the selector.
 For example, the specificity of the `& img` selector is equivalent to the specificity of `:where(:scope) img` (0-0-1).
 
 > [!WARNING]
@@ -206,7 +206,7 @@ In the following code block, `:scope img` has a specificity of 0-1-1:
 
 ### How `@scope` conflicts are resolved
 
-`@scope` adds a new criterion to the [CSS cascade](/en-US/docs/Web/CSS/CSS_cascade): **scoping proximity**. This states that when two scopes have conflicting styles, the style that has the smallest number of hops up the DOM tree hierarchy to the scope root is applied. Let's look at an example to see what this means.
+`@scope` adds a new criterion to the [CSS cascade](/en-US/docs/Web/CSS/Guides/Cascade): **scoping proximity**. This states that when two scopes have conflicting styles, the style that has the smallest number of hops up the DOM tree hierarchy to the scope root is applied. Let's look at an example to see what this means.
 
 Take the following HTML snippet, where different-themed cards are nested inside one another:
 
@@ -269,7 +269,7 @@ To fix this, you can use `@scope` as follows:
 Now the innermost paragraph is correctly colored black. This is because it is only one DOM tree hierarchy level away from the `.light-theme` scope root, but two levels away from the `.dark-theme` scope root. Therefore, the light style wins.
 
 > [!NOTE]
-> Scoping proximity overrules source order but is itself overridden by other, higher-priority criteria such as [importance](/en-US/docs/Web/CSS/Reference/Values/important), [layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers), and [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity).
+> Scoping proximity overrules source order but is itself overridden by other, higher-priority criteria such as [importance](/en-US/docs/Web/CSS/Reference/Values/important), [layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers), and [specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity).
 
 ## Formal syntax
 
@@ -463,6 +463,6 @@ In the rendered code, note how all of the `<img>` elements are styled with the t
 
 - {{CSSxRef(":scope")}}
 - {{DOMxRef("CSSScopeRule")}}
-- [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
+- [Specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity)
 - [Defining the `&` selector in a `@scope` rule](https://css.oddbird.net/scope/parent-selector/) on css.oddbird.net (2025)
 - [Limit the reach of your selectors with the CSS `@scope` at-rule](https://developer.chrome.com/docs/css-ui/at-scope) on developer.chrome.com (2023)

@@ -297,7 +297,7 @@ div:nth-child(odd) {
 
 - Other scroll port properties: {{cssxref("scroll-margin")}}, {{cssxref("scroll-padding")}}
 - Scroll-child properties: {{cssxref("scroll-snap-align")}}, {{cssxref("scroll-margin")}}, {{cssxref("scroll-snap-stop")}}
-- [Basic concepts of CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap/Basic_concepts)
-- [Using scroll snap events](/en-US/docs/Web/CSS/CSS_scroll_snap/Using_scroll_snap_events)
-- [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap)
+- [Basic concepts of CSS scroll snap](/en-US/docs/Web/CSS/Guides/Scroll_snap/Basic_concepts)
+- [Using scroll snap events](/en-US/docs/Web/CSS/Guides/Scroll_snap/Using_scroll_snap_events)
+- [CSS scroll snap](/en-US/docs/Web/CSS/Guides/Scroll_snap)
 - [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap)

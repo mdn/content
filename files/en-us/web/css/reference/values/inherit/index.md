@@ -6,9 +6,9 @@ browser-compat: css.types.global_keywords.inherit
 sidebar: cssref
 ---
 
-The **`inherit`** [CSS](/en-US/docs/Web/CSS) keyword causes the element to take the [computed value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value) of the property from its parent element. It can be applied to any CSS property, including the CSS shorthand property {{cssxref("all")}}.
+The **`inherit`** [CSS](/en-US/docs/Web/CSS) keyword causes the element to take the [computed value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#computed_value) of the property from its parent element. It can be applied to any CSS property, including the CSS shorthand property {{cssxref("all")}}.
 
-For [inherited properties](/en-US/docs/Web/CSS/CSS_cascade/Inheritance#inherited_properties), this reinforces the default behavior, and is only needed to override another rule.
+For [inherited properties](/en-US/docs/Web/CSS/Guides/Cascade/Inheritance#inherited_properties), this reinforces the default behavior, and is only needed to override another rule.
 
 > [!NOTE]
 > Inheritance is always from the parent element in the document tree, even when the parent element is not the containing block.
@@ -49,7 +49,7 @@ Then, it would be blue.
 
 ## See also
 
-- [Inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance)
+- [Inheritance](/en-US/docs/Web/CSS/Guides/Cascade/Inheritance)
 - Use the {{cssxref("initial")}} keyword to set a property to its initial value.
 - Use the {{cssxref("revert")}} keyword to reset a property to the value established by the user-agent stylesheet (or by user styles, if any exist).
 - Use the {{cssxref("revert-layer")}} keyword to reset a property to the value established in a previous cascade layer.

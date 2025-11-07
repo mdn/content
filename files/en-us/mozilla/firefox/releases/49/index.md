@@ -51,12 +51,12 @@ sidebar: firefox
 - Added the [`q` length unit](/en-US/docs/Web/CSS/Reference/Values/length#q) ([Firefox bug 1274526](https://bugzil.la/1274526)).
 - The property {{cssxref("text-align-last")}} has been unprefixed ([Firefox bug 1039541](https://bugzil.la/1039541)).
 - Added support for {{cssxref("overflow-wrap")}}, replacing `word-wrap` that is still supported as an alternative name ([Firefox bug 955857](https://bugzil.la/955857)).
-- Our experimental [CSS Grids](/en-US/docs/Web/CSS/CSS_grid_layout) implementation has been improved:
+- Our experimental [CSS Grids](/en-US/docs/Web/CSS/Guides/Grid_layout) implementation has been improved:
   - Implemented {{cssxref("&lt;percentage&gt;")}} for the `grid-gap`, `grid-row-gap`, and `grid-column-gap` properties ([Firefox bug 1266268](https://bugzil.la/1266268)).
   - Implemented grid layout support for {{cssxref("align-self")}}, {{cssxref("justify-self")}} values `baseline` and `last-baseline` (aka "baseline self-alignment") ([Firefox bug 1221525](https://bugzil.la/1221525)).
   - Implemented grid item baseline content alignment ([Firefox bug 1256429](https://bugzil.la/1256429)).
 
-- Our experimental [CSS Masks](/en-US/docs/Web/CSS/CSS_masking) implementation has been improved:
+- Our experimental [CSS Masks](/en-US/docs/Web/CSS/Guides/Masking) implementation has been improved:
   - The {{cssxref("mask-origin")}} property now uses `border-box` instead of `padding-box` as initial value, to match the spec ([Firefox bug 1258286](https://bugzil.la/1258286)).
   - The {{cssxref("mask-repeat")}} property now supports the `space` and `round` values ([Firefox bug 1258626](https://bugzil.la/1258626)).
   - Fixed an issue preventing the {{cssxref("mask-position")}} attribute from being animated ([Firefox bug 1273804](https://bugzil.la/1273804)).

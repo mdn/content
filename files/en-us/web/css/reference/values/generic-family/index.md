@@ -111,4 +111,4 @@ ul {
 ## See also
 
 - Properties that use this data type: {{cssxref("font-family")}} and {{cssxref("font")}}
-- [CSS fonts module](/en-US/docs/Web/CSS/CSS_fonts)
+- [CSS fonts module](/en-US/docs/Web/CSS/Guides/Fonts)

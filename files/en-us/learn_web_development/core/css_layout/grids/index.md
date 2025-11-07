@@ -454,7 +454,7 @@ This works because grid is creating as many 230-pixel columns as will fit into t
 
 ## Line-based placement
 
-We now move on from creating a grid to placing things on the grid. Our grid always has lines — these are numbered beginning with 1 and relate to the [writing mode](/en-US/docs/Web/CSS/CSS_writing_modes) of the document. For example, column line 1 in English (written left-to-right) would be on the left-hand side of the grid and row line 1 at the top, while in Arabic (written right-to-left), column line 1 would be on the right-hand side.
+We now move on from creating a grid to placing things on the grid. Our grid always has lines — these are numbered beginning with 1 and relate to the [writing mode](/en-US/docs/Web/CSS/Guides/Writing_modes) of the document. For example, column line 1 in English (written left-to-right) would be on the left-hand side of the grid and row line 1 at the top, while in Arabic (written right-to-left), column line 1 would be on the right-hand side.
 
 To position items along these lines, we can specify the start and end lines of the grid area where an item should be placed. There are four properties we can use to do this:
 
@@ -650,7 +650,7 @@ You can play around with our layout, changing the footer to only sit underneath 
 
 ## Nesting grids and subgrid
 
-It's possible to nest a grid within another grid, creating a ["subgrid"](/en-US/docs/Web/CSS/CSS_grid_layout/Subgrid).
+It's possible to nest a grid within another grid, creating a ["subgrid"](/en-US/docs/Web/CSS/Guides/Grid_layout/Subgrid).
 You can do this by setting the `display: grid` property on an item in the parent grid.
 
 Let's expand on the previous example by adding a container for articles and using a nested grid to control the layout of multiple articles.
@@ -867,7 +867,7 @@ In the next article, we'll give you some tests that you can use to check how wel
 
 ## See also
 
-- [CSS Grid layout](/en-US/docs/Web/CSS/CSS_grid_layout#guides)
+- [CSS Grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout#guides)
   - : Main CSS Grid Layout module page, containing lots of further resources
 - [A complete guide to CSS grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
   - : A visual guide on CSS-Tricks (2023).

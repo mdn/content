@@ -203,4 +203,4 @@ pElem.addEventListener("dblclick", (event) => {
 ## See also
 
 - {{domxref("css_custom_highlight_api", "The CSS Custom Highlight API", "", "nocode")}}
-- [CSS custom highlight API](/en-US/docs/Web/CSS/CSS_custom_highlight_API) module
+- [CSS custom highlight API](/en-US/docs/Web/CSS/Guides/Custom_highlight_API) module

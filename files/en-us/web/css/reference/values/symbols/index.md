@@ -66,5 +66,5 @@ ol {
 
 - {{cssxref("@counter-style")}} descriptors: {{cssxref("@counter-style/system","system")}}, {{cssxref("@counter-style/symbols", "symbols")}}, {{cssxref("@counter-style/additive-symbols", "additive-symbols")}}, {{cssxref("@counter-style/prefix", "prefix")}}, {{cssxref("@counter-style/suffix", "suffix")}}, {{cssxref("@counter-style/range", "range")}}, {{cssxref("@counter-style/pad", "pad")}}, {{cssxref("@counter-style/speak-as", "speak-as")}}, {{cssxref("@counter-style/fallback", "fallback")}}
 - List style properties: {{cssxref("list-style")}}, {{cssxref("list-style-type")}}
-- [CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles) module
-- [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
+- [CSS counter styles](/en-US/docs/Web/CSS/Guides/Counter_styles) module
+- [CSS lists and counters](/en-US/docs/Web/CSS/Guides/Lists) module

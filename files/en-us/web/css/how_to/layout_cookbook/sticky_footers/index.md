@@ -76,13 +76,13 @@ body {
 
 ## Choices made
 
-In the above example we achieve the sticky footer using [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout). The `.wrapper` has a minimum height of `100%` which means it is as tall as the container it is in. We then create a single column grid layout with three rows, one row for each part of our layout.
+In the above example we achieve the sticky footer using [CSS grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout). The `.wrapper` has a minimum height of `100%` which means it is as tall as the container it is in. We then create a single column grid layout with three rows, one row for each part of our layout.
 
-[Grid auto-placement](/en-US/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout) will place our items in source order and so the header goes into the first auto sized track, the main content into the `1fr` track and the footer into the final auto sized track. The `1fr` track will take up all available space and so grows to fill the gap.
+[Grid auto-placement](/en-US/docs/Web/CSS/Guides/Grid_layout/Auto-placement) will place our items in source order and so the header goes into the first auto sized track, the main content into the `1fr` track and the footer into the final auto sized track. The `1fr` track will take up all available space and so grows to fill the gap.
 
 ## Alternate method
 
-You can also use [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) to create a sticky footer.
+You can also use [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) to create a sticky footer.
 
 ```html live-sample___sticky-footer-flexbox-example
 <div class="wrapper">
@@ -148,7 +148,7 @@ The flexbox example starts out in the same way, but we use `display:flex` rather
 ## Resources on MDN
 
 - CSS properties: {{cssxref("display")}}, {{cssxref("min-height")}}, {{cssxref("grid-template-rows")}}, {{cssxref("flex-direction")}}, {{cssxref("flex-grow")}}, {{cssxref("flex-shrink")}}
-- [Basic concepts of grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
-- [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) module
-- [Basic concepts of flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module
+- [Basic concepts of grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)
+- [CSS grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout) module
+- [Basic concepts of flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
+- [CSS flexible box layout](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) module

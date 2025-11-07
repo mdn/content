@@ -123,7 +123,7 @@ align-items: unset;
   - : If the item's cross-size is `auto`, the used size is set to the length necessary to be as close to filling the container as possible, respecting the item's width and height limits. If the item is not auto-sized, this value falls back to `flex-start`, and to `self-start` or `self-end` if the container's {{cssxref("align-content")}} is `first baseline` (or `baseline`) or `last baseline`.
 
 - `anchor-center`
-  - : In the case of [anchor-positioned](/en-US/docs/Web/CSS/CSS_anchor_positioning) elements, aligns the items to the center of the associated anchor element in the block direction. See [Centering on the anchor using `anchor-center`](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#centering_on_the_anchor_using_anchor-center).
+  - : In the case of [anchor-positioned](/en-US/docs/Web/CSS/Guides/Anchor_positioning) elements, aligns the items to the center of the associated anchor element in the block direction. See [Centering on the anchor using `anchor-center`](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using#centering_on_the_anchor_using_anchor-center).
 
 - `safe`
   - : Used alongside an alignment keyword. If the chosen keyword means that the item overflows the alignment container causing data loss, the item is instead aligned as if the alignment mode were `start`.
@@ -318,9 +318,9 @@ display.addEventListener("change", (evt) => {
 - {{cssxref("align-content")}}
 - {{cssxref("justify-items")}}
 - {{cssxref("place-items")}} shorthand
-- [Basic concepts of flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- [Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
-- [Box alignment in grid layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)
-- [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module
-- [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module
-- [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) module
+- [Basic concepts of flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
+- [Aligning items in a flex container](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
+- [Box alignment in grid layout](/en-US/docs/Web/CSS/Guides/Box_alignment/In_grid_layout)
+- [CSS box alignment](/en-US/docs/Web/CSS/Guides/Box_alignment) module
+- [CSS flexible box layout](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) module
+- [CSS grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout) module

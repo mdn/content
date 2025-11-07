@@ -246,7 +246,7 @@ The {{htmlelement("main")}} element contains an [unordered list](/en-US/docs/Web
 
 #### CSS
 
-We use [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) to lay out the `<li>` and the `<article>` side by side, and to make the list items share equal amount of space in the first column. The list takes up 35% of the container's width, while the `<article>` fills the remaining available horizontal space.
+We use [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) to lay out the `<li>` and the `<article>` side by side, and to make the list items share equal amount of space in the first column. The list takes up 35% of the container's width, while the `<article>` fills the remaining available horizontal space.
 
 ```css hidden
 /* General styles and resets */

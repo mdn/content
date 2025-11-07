@@ -6,7 +6,7 @@ browser-compat: css.at-rules.font-face
 sidebar: cssref
 ---
 
-The **`@font-face`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rules) specifies a custom font with which to display text; the font can be loaded from either a remote server or a locally-installed font on the user's own computer.
+The **`@font-face`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules) specifies a custom font with which to display text; the font can be loaded from either a remote server or a locally-installed font on the user's own computer.
 
 ## Syntax
 
@@ -64,7 +64,7 @@ By allowing authors to provide their own fonts, `@font-face` makes it possible t
 > [!NOTE]
 > Fallback strategies for loading fonts on older browsers are described in the [`src` descriptor page](/en-US/docs/Web/CSS/Reference/At-rules/@font-face/src#specifying_fallbacks_for_older_browsers).
 
-The `@font-face` at-rule may be used not only at the top level of a CSS, but also inside any [CSS conditional-group at-rule](/en-US/docs/Web/CSS/CSS_conditional_rules#at-rules_and_descriptors).
+The `@font-face` at-rule may be used not only at the top level of a CSS, but also inside any [CSS conditional-group at-rule](/en-US/docs/Web/CSS/Guides/Conditional_rules#at-rules_and_descriptors).
 
 ### Font MIME Types
 
@@ -145,7 +145,7 @@ In this example, the user's local copy of "Helvetica Neue Bold" is used; if the 
 
 ## See also
 
-- [About WOFF](/en-US/docs/Web/CSS/CSS_fonts/WOFF)
+- [About WOFF](/en-US/docs/Web/CSS/Guides/Fonts/WOFF)
 - [FontSquirrel @font-face generator](https://www.fontsquirrel.com/tools/webfont-generator)
 - [Beautiful fonts with @font-face](https://hacks.mozilla.org/2009/06/beautiful-fonts-with-font-face/)
 - [Font Library](https://fontlibrary.org/)

@@ -467,7 +467,7 @@ There are also longhand properties for width, style, and color for each of the f
 ```
 
 > [!NOTE]
-> These top, right, bottom, and left border properties also have mapped [_logical_ border properties](/en-US/docs/Web/CSS/CSS_logical_properties_and_values#properties) that relate to the writing mode of the document (e.g., left-to-right or right-to-left text, or top-to-bottom). You can read about these in [handling different text directions](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions).
+> These top, right, bottom, and left border properties also have mapped [_logical_ border properties](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values#properties) that relate to the writing mode of the document (e.g., left-to-right or right-to-left text, or top-to-bottom). You can read about these in [handling different text directions](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions).
 
 ### Playing with borders
 
@@ -521,11 +521,11 @@ Or to make the top right corner have a horizontal radius of `1em`, and a vertica
 ```
 
 > [!NOTE]
-> Like with the border properties above, these border-radius properties also have mapped [_logical_ border-radius properties](/en-US/docs/Web/CSS/CSS_logical_properties_and_values#properties).
+> Like with the border properties above, these border-radius properties also have mapped [_logical_ border-radius properties](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values#properties).
 
 ### Playing with border radius
 
-We have set all four corners in the example below and then changed the values for the top right corner to make it different. You can play with the values to change the corners. Take a look at the property page for {{cssxref("border-radius")}} to see the available syntax options. The [border-radius generator](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator) can be used to output rounded corner values for you.
+We have set all four corners in the example below and then changed the values for the top right corner to make it different. You can play with the values to change the corners. Take a look at the property page for {{cssxref("border-radius")}} to see the available syntax options. The [border-radius generator](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-radius_generator) can be used to output rounded corner values for you.
 
 ```html live-sample___corners
 <div class="box">

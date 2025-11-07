@@ -60,7 +60,7 @@ p ~ span {
 
 ### Using the combinator with complex selectors
 
-This example contains two [complex selectors](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#complex_selector), both using the subsequent-sibling combinator: `.foo p ~ span` and `.foo p ~ .foo span`.
+This example contains two [complex selectors](/en-US/docs/Web/CSS/Guides/Selectors/Selector_structure#complex_selector), both using the subsequent-sibling combinator: `.foo p ~ span` and `.foo p ~ .foo span`.
 
 - The first complex selector, `.foo p ~ span`, matches all spans that come after a paragraph _if_ the span and paragraph share the same parent **and** that parent or an ancestor of that parent has the class `.foo`.
 - The second complex selector, `.foo p ~ .foo span`, matches all spans that are a descendant of the element with class `.foo` _if_ that element is a sibling of the previously mentioned paragraph.

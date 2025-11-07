@@ -16,7 +16,7 @@ aspect ratios—as the document state changes to match different media
 conditions.
 
 Each condition is specified using the same conditional format used
-by [media queries](/en-US/docs/Web/CSS/CSS_media_queries).
+by [media queries](/en-US/docs/Web/CSS/Guides/Media_queries).
 
 ## Value
 
@@ -141,8 +141,8 @@ The page is best {{LiveSampleLink('Selecting an image to fit window width', 'vie
 
 ## See also
 
-- [Media queries](/en-US/docs/Web/CSS/CSS_media_queries)
-- [Using media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Media queries](/en-US/docs/Web/CSS/Guides/Media_queries)
+- [Using media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using)
 - [HTML images](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images)
 - [Responsive images](/en-US/docs/Web/HTML/Guides/Responsive_images)
 - [Using the `srcset` and `sizes` attributes](/en-US/docs/Web/HTML/Reference/Elements/img#using_the_srcset_and_sizes_attributes)

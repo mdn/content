@@ -187,7 +187,7 @@ Sec-CH-UA-Mobile: ?0
 
 The {{httpheader("Sec-CH-UA-Mobile")}} header can be used to determine whether the device is a mobile device or not. For hardware-specific use cases, the device model name and form factor can be requested via the high-entropy {{httpheader("Sec-CH-UA-Model")}} and {{httpheader("Sec-CH-UA-Form-Factors")}} hints.
 
-For many responsive design needs, [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) may be more convenient and flexible. However, there may be cases where you don't have control over the individual stylesheets of a site, and need to vary the stylesheet served based on the device signature or some kind of user preference. There are client hints that mirror some of the "user preference" media queries, such as {{httpheader("Sec-CH-Prefers-Color-Scheme")}}, {{httpheader("Sec-CH-Prefers-Reduced-Motion")}}, and {{httpheader("Sec-CH-Prefers-Reduced-Transparency")}}.
+For many responsive design needs, [media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using) may be more convenient and flexible. However, there may be cases where you don't have control over the individual stylesheets of a site, and need to vary the stylesheet served based on the device signature or some kind of user preference. There are client hints that mirror some of the "user preference" media queries, such as {{httpheader("Sec-CH-Prefers-Color-Scheme")}}, {{httpheader("Sec-CH-Prefers-Reduced-Motion")}}, and {{httpheader("Sec-CH-Prefers-Reduced-Transparency")}}.
 
 ## See also
 

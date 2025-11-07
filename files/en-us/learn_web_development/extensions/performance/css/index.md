@@ -66,7 +66,7 @@ To optimize the CSSOM construction and improve page performance, you can do one 
     media="screen and (width <= 480px)" />
   ```
 
-  The above example provides three sets of styles — default styles that will always load, styles that will only be loaded when the document is being printed, and styles that will be loaded only by devices with narrow screens. By default, the browser assumes that each specified style sheet is render-blocking. You can tell the browser when a style sheet should be applied by adding a `media` attribute containing a [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries). When the browser sees a style sheet that it only needs to apply in a specific scenario, it still downloads the stylesheet, but doesn't render-block. By separating the CSS into multiple files, the main render-blocking file, in this case `styles.css`, is much smaller, reducing the time for which rendering is blocked.
+  The above example provides three sets of styles — default styles that will always load, styles that will only be loaded when the document is being printed, and styles that will be loaded only by devices with narrow screens. By default, the browser assumes that each specified style sheet is render-blocking. You can tell the browser when a style sheet should be applied by adding a `media` attribute containing a [media query](/en-US/docs/Web/CSS/Guides/Media_queries/Using). When the browser sees a style sheet that it only needs to apply in a specific scenario, it still downloads the stylesheet, but doesn't render-block. By separating the CSS into multiple files, the main render-blocking file, in this case `styles.css`, is much smaller, reducing the time for which rendering is blocked.
 
 - **Minify and compress your CSS**: Minifying involves removing all the whitespace in the file that is only there for human readability, once the code is put into production. You can reduce loading times considerably by minifying your CSS. Minification is generally done as part of a build process (for example, most JavaScript frameworks will minify code when you build a project ready for deployment). In addition to minification, make sure that the server that your site is hosted on uses compression such as gzip on files before serving them.
 
@@ -129,7 +129,7 @@ Animations can improve perceived performance, making interfaces feel snappier an
 
 The simplest advice is to cut down on all unnecessary animations. You could also provide users with a control/site preference to turn off animations if they are using a low-powered device or a mobile device with limited battery power. You could also use JavaScript to control whether or not animation is applied to the page in the first place. There is also a media query called [`prefers-reduced-motion`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) that can be used to selectively serve animation styles or not based on a user's OS-level preferences for animation.
 
-For essential DOM animations, you are advised to use [CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations) where possible, rather than JavaScript animations (the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) provides a way to directly hook into CSS animations using JavaScript).
+For essential DOM animations, you are advised to use [CSS animations](/en-US/docs/Web/CSS/Guides/Animations/Using) where possible, rather than JavaScript animations (the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) provides a way to directly hook into CSS animations using JavaScript).
 
 ### Choosing properties to animate
 
@@ -144,7 +144,7 @@ Modern browsers are smart enough to repaint only the changed area of the documen
 
 If at all possible, it is better to animate properties that do not cause reflow/repaint. This includes:
 
-- [Transforms](/en-US/docs/Web/CSS/CSS_transforms)
+- [Transforms](/en-US/docs/Web/CSS/Guides/Transforms)
 - [`opacity`](/en-US/docs/Web/CSS/Reference/Properties/opacity)
 - [`filter`](/en-US/docs/Web/CSS/Reference/Properties/filter)
 
@@ -187,7 +187,7 @@ CSS can scope styles to particular conditions with media queries. Media queries 
 <link rel="stylesheet" href="mobile.css" media="screen and (width <= 480px)" />
 ```
 
-By default, the browser assumes that each specified style sheet is render blocking. Tell the browser when the style sheet should be applied by adding a `media` attribute with the [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries). When the browser sees a style sheet it knows that it only needs to apply it for a specific scenario, it still downloads the stylesheet, but doesn't render block. By separating out the CSS into multiple files, the main render-blocking file, in this case `styles.css`, is much smaller, reducing the time that rendering is blocked.
+By default, the browser assumes that each specified style sheet is render blocking. Tell the browser when the style sheet should be applied by adding a `media` attribute with the [media query](/en-US/docs/Web/CSS/Guides/Media_queries/Using). When the browser sees a style sheet it knows that it only needs to apply it for a specific scenario, it still downloads the stylesheet, but doesn't render block. By separating out the CSS into multiple files, the main render-blocking file, in this case `styles.css`, is much smaller, reducing the time that rendering is blocked.
 
 ## Improving font performance
 
@@ -262,9 +262,9 @@ Applied to the `@font-face` at-rule, the [`font-display`](/en-US/docs/Web/CSS/Re
 
 ## Optimizing styling recalculation with CSS containment
 
-By using the properties defined in the [CSS containment](/en-US/docs/Web/CSS/CSS_containment) module, you can instruct the browser to isolate different parts of a page and optimize their rendering independently from one another. This allows for improved performance in rendering individual sections. As an example, you can specify to the browser to not render certain containers until they are visible in the viewport.
+By using the properties defined in the [CSS containment](/en-US/docs/Web/CSS/Guides/Containment) module, you can instruct the browser to isolate different parts of a page and optimize their rendering independently from one another. This allows for improved performance in rendering individual sections. As an example, you can specify to the browser to not render certain containers until they are visible in the viewport.
 
-The {{cssxref("contain")}} property allows an author to specify exactly what [containment types](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment) they want applied to individual containers on the page. This allows the browser to recalculate layout, style, paint, size, or any combination of them for a limited part of the DOM.
+The {{cssxref("contain")}} property allows an author to specify exactly what [containment types](/en-US/docs/Web/CSS/Guides/Containment/Using) they want applied to individual containers on the page. This allows the browser to recalculate layout, style, paint, size, or any combination of them for a limited part of the DOM.
 
 ```css
 article {

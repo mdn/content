@@ -10,7 +10,7 @@ browser-compat: api.Document.querySelector
 
 The {{domxref("Document")}} method **`querySelector()`**
 returns the first {{domxref("Element")}} within the document that matches the specified
-[CSS selector](/en-US/docs/Web/CSS/CSS_selectors), or group of CSS selectors. If no matches are found, `null` is returned.
+[CSS selector](/en-US/docs/Web/CSS/Guides/Selectors), or group of CSS selectors. If no matches are found, `null` is returned.
 
 The matching is done using depth-first pre-order traversal of the document's nodes starting with the first element in the document's markup and iterating through sequential nodes by order of the number of child nodes.
 
@@ -37,7 +37,7 @@ querySelector(selectors)
 ### Return value
 
 An {{domxref("Element")}} object representing the first element in the document
-that matches the specified set of [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors), or `null` is returned if there are no matches.
+that matches the specified set of [CSS selectors](/en-US/docs/Web/CSS/Guides/Selectors), or `null` is returned if there are no matches.
 
 If you need a list of all elements matching the specified selectors, you should use
 {{domxref("Document.querySelectorAll", "querySelectorAll()")}} instead.

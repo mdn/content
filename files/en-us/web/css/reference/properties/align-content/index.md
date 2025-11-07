@@ -6,7 +6,7 @@ browser-compat: css.properties.align-content
 sidebar: cssref
 ---
 
-The [CSS](/en-US/docs/Web/CSS) **`align-content`** property sets the distribution of space between and around content items along a [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout)'s [cross axis](/en-US/docs/Glossary/Cross_Axis), or a [grid](/en-US/docs/Web/CSS/CSS_grid_layout) or [block-level](/en-US/docs/Glossary/Block-level_content) element's block axis.
+The [CSS](/en-US/docs/Web/CSS) **`align-content`** property sets the distribution of space between and around content items along a [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout)'s [cross axis](/en-US/docs/Glossary/Cross_Axis), or a [grid](/en-US/docs/Web/CSS/Guides/Grid_layout) or [block-level](/en-US/docs/Glossary/Block-level_content) element's block axis.
 
 The interactive example below uses grid layout to demonstrate some of the values of this property.
 
@@ -132,7 +132,7 @@ align-content: unset;
   - : Used alongside an alignment keyword. Regardless of the relative sizes of the item and alignment container and whether overflow which causes data loss might happen, the given alignment value is honored.
 
 > [!NOTE]
-> The `<content-distribution>` values (`space-between`, `space-around`, `space-evenly`, and `stretch`) have no effect in [block layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables#align-content_and_justify-content) as all the content in that block is treated as a single [alignment-subject](/en-US/docs/Glossary/Alignment_Subject).
+> The `<content-distribution>` values (`space-between`, `space-around`, `space-evenly`, and `stretch`) have no effect in [block layout](/en-US/docs/Web/CSS/Guides/Box_alignment/In_block_abspos_tables#align-content_and_justify-content) as all the content in that block is treated as a single [alignment-subject](/en-US/docs/Glossary/Alignment_Subject).
 
 ## Formal definition
 
@@ -270,7 +270,7 @@ Try changing the `display` value and the `align-content` value.
 
 {{EmbedLiveSample("Examples", 260, 310)}}
 
-In [block layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables#align-content_and_justify-content), child elements are treated as a single element, meaning `space-between`, `space-around`, and `space-evenly` behave differently.
+In [block layout](/en-US/docs/Web/CSS/Guides/Box_alignment/In_block_abspos_tables#align-content_and_justify-content), child elements are treated as a single element, meaning `space-between`, `space-around`, and `space-evenly` behave differently.
 
 ## Specifications
 
@@ -282,10 +282,10 @@ In [block layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_a
 
 ## See also
 
-- [Basic concepts of flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- [Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
-- [Box alignment in grid layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)
-- [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment)
-- [Block and inline layout in normal flow](/en-US/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow)
+- [Basic concepts of flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
+- [Aligning items in a flex container](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
+- [Box alignment in grid layout](/en-US/docs/Web/CSS/Guides/Box_alignment/In_grid_layout)
+- [CSS box alignment](/en-US/docs/Web/CSS/Guides/Box_alignment)
+- [Block and inline layout in normal flow](/en-US/docs/Web/CSS/Guides/Display/Block_and_inline_layout)
 - [Block-level content](/en-US/docs/Glossary/Block-level_content)
 - {{CSSXRef("display")}}

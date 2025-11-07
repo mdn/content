@@ -6,7 +6,7 @@ spec-urls: https://www.w3.org/TR/css-color-5/#at-profile
 sidebar: cssref
 ---
 
-The **`@color-profile`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rules) defines and names a color profile which can later be used in the {{cssxref("color_value/color", "color()")}} function to specify a color.
+The **`@color-profile`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules) defines and names a color profile which can later be used in the {{cssxref("color_value/color", "color()")}} function to specify a color.
 
 ## Syntax
 
@@ -67,4 +67,4 @@ Currently, no browsers support this feature.
 
 ## See also
 
-- [CSS colors](/en-US/docs/Web/CSS/CSS_colors) module
+- [CSS colors](/en-US/docs/Web/CSS/Guides/Colors) module

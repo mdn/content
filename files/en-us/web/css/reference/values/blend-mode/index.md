@@ -355,7 +355,7 @@ selectElem.addEventListener("change", () => {
 
 ## See also
 
-- The [CSS compositing and blending](/en-US/docs/Web/CSS/CSS_compositing_and_blending) module that defines the `<blend-mode>` values.
+- The [CSS compositing and blending](/en-US/docs/Web/CSS/Guides/Compositing_and_blending) module that defines the `<blend-mode>` values.
 - Properties that use this data type: {{cssxref("background-blend-mode")}}, {{cssxref("mix-blend-mode")}}
 
 Description to various blend modes on other website:

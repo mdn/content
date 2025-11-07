@@ -6,7 +6,7 @@ page-type: landing-page
 sidebar: cssref
 ---
 
-**CSS value functions** are statements that invoke special data processing or calculations to return a [CSS](/en-US/docs/Web/CSS) [value](/en-US/docs/Web/CSS/CSS_values_and_units) for a CSS property. CSS value functions represent more complex [data types](/en-US/docs/Web/CSS/Reference/Values/Data_types) and they may take some input arguments to calculate the return value.
+**CSS value functions** are statements that invoke special data processing or calculations to return a [CSS](/en-US/docs/Web/CSS) [value](/en-US/docs/Web/CSS/Guides/Values_and_units) for a CSS property. CSS value functions represent more complex [data types](/en-US/docs/Web/CSS/Reference/Values/Data_types) and they may take some input arguments to calculate the return value.
 
 ## Syntax
 
@@ -91,7 +91,7 @@ The {{CSSxRef("&lt;transform-function&gt;")}} CSS [data type](/en-US/docs/Web/CS
 
 The math functions allow CSS numeric values to be written as mathematical expressions.
 
-Each of the pages below contains detailed information about a math function's syntax, browser compatibility data, examples, and more. For a holistic introduction to CSS math functions, see [Using CSS math functions](/en-US/docs/Web/CSS/CSS_values_and_units/Using_CSS_math_functions).
+Each of the pages below contains detailed information about a math function's syntax, browser compatibility data, examples, and more. For a holistic introduction to CSS math functions, see [Using CSS math functions](/en-US/docs/Web/CSS/Guides/Values_and_units/Using_math_functions).
 
 ### Basic arithmetic
 
@@ -295,7 +295,7 @@ The following functions are used as a value of properties to reference a value d
 - {{CSSxRef("env", "env()")}}
   - : Uses the user-agent defined as environment variable.
 - {{CSSxRef("if", "if()")}}
-  - : Conditionally sets a property value depending on the result of a [style query](/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#container_style_queries), [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries), or [feature query](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries).
+  - : Conditionally sets a property value depending on the result of a [style query](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#container_style_queries), [media query](/en-US/docs/Web/CSS/Guides/Media_queries/Using), or [feature query](/en-US/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries).
 - {{cssxref("url_function", "url()")}}
   - : Uses a file from the specified URL.
 - {{CSSxRef("var", "var()")}}
@@ -303,7 +303,7 @@ The following functions are used as a value of properties to reference a value d
 
 ## Grid functions
 
-The following functions are used to define a [CSS grid](/en-US/docs/Web/CSS/CSS_grid_layout):
+The following functions are used to define a [CSS grid](/en-US/docs/Web/CSS/Guides/Grid_layout):
 
 - {{CSSxRef("fit-content_function", "fit-content()")}}
   - : Clamps a given size to an available size according to the formula `min(maximum size, max(minimum size, argument))`.
@@ -484,5 +484,5 @@ The following functions return an integer value based on the DOM tree, rather th
 
 ## See also
 
-- [CSS values and units](/en-US/docs/Web/CSS/CSS_values_and_units) module
+- [CSS values and units](/en-US/docs/Web/CSS/Guides/Values_and_units) module
 - [Learn: Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

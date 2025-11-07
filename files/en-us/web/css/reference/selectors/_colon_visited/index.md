@@ -56,7 +56,7 @@ For privacy reasons, browsers strictly limit which styles you can apply using th
 - DOM methods that match elements via CSS selectors — such as [`querySelector()`](/en-US/docs/Web/API/Document/querySelector) and [`querySelectorAll()`](/en-US/docs/Web/API/Document/querySelectorAll) — will always return an "empty" result even if there are visited links in a document. For the aforementioned methods, this will be `null` or an empty [`NodeList`](/en-US/docs/Web/API/NodeList), respectively.
 
 > [!NOTE]
-> For more information on these limitations and the reasons behind them, see [Privacy and the :visited selector](/en-US/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector).
+> For more information on these limitations and the reasons behind them, see [Privacy and the :visited selector](/en-US/docs/Web/CSS/Guides/Selectors/Privacy_and_:visited).
 
 ## Syntax
 
@@ -108,5 +108,5 @@ a:visited {
 
 ## See also
 
-- [Privacy and the :visited selector](/en-US/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector)
+- [Privacy and the :visited selector](/en-US/docs/Web/CSS/Guides/Selectors/Privacy_and_:visited)
 - Link-related pseudo-classes: {{cssxref(":link")}}, {{cssxref(":active")}}, {{cssxref(":hover")}}

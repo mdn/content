@@ -8,7 +8,7 @@ browser-compat: api.Element.transitionrun_event
 
 {{APIRef}}
 
-The **`transitionrun`** event is fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) is first created, i.e., before any {{cssxref("transition-delay")}} has begun.
+The **`transitionrun`** event is fired when a [CSS transition](/en-US/docs/Web/CSS/Guides/Transitions/Using) is first created, i.e., before any {{cssxref("transition-delay")}} has begun.
 
 This event is not cancelable.
 

@@ -47,7 +47,7 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground:
 
 ## Using flexbox
 
-To center a box within another box, first turn the containing box into a [flex container](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox#the_flex_container) by setting its {{cssxref("display")}} property to `flex`. Then set {{cssxref("align-items")}} to `center` for vertical centering (on the block axis) and {{cssxref("justify-content")}} to `center` for horizontal centering (on the inline axis). And that's all it takes to center one box inside another!
+To center a box within another box, first turn the containing box into a [flex container](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts#the_flex_container) by setting its {{cssxref("display")}} property to `flex`. Then set {{cssxref("align-items")}} to `center` for vertical centering (on the block axis) and {{cssxref("justify-content")}} to `center` for horizontal centering (on the inline axis). And that's all it takes to center one box inside another!
 
 ### HTML
 
@@ -95,7 +95,7 @@ Instead of applying `align-items: center;` on the container, you can also vertic
 
 ## Using grid
 
-Another method you can use for centering one box inside another is to first make the containing box a [grid container](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#grid_container) and then set its {{cssxref("place-items")}} property to `center` to center align its items on both the block and inline axes.
+Another method you can use for centering one box inside another is to first make the containing box a [grid container](/en-US/docs/Web/CSS/Guides/Grid_layout/Basic_concepts#grid_container) and then set its {{cssxref("place-items")}} property to `center` to center align its items on both the block and inline axes.
 
 ### HTML
 
@@ -140,5 +140,5 @@ Instead of applying `place-items: center;` on the container, you can achieve the
 
 ## Resources on MDN
 
-- [Box alignment in flexbox](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
-- [CSS box alignment guide](/en-US/docs/Web/CSS/CSS_box_alignment)
+- [Box alignment in flexbox](/en-US/docs/Web/CSS/Guides/Box_alignment/In_flexbox)
+- [CSS box alignment guide](/en-US/docs/Web/CSS/Guides/Box_alignment)

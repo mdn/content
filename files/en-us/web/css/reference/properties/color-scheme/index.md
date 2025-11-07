@@ -15,7 +15,7 @@ The **`color-scheme`** [CSS](/en-US/docs/Web/CSS) property allows an element to 
 
 Component authors must use the [`prefers-color-scheme`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) media feature to support the color schemes on the rest of the elements.
 
-Common choices for operating system color schemes are "light" and "dark", or "day mode" and "night mode". When a user selects one of these color schemes, the operating system makes adjustments to the user interface. This includes [form controls](/en-US/docs/Learn_web_development/Extensions/Forms), [scrollbars](/en-US/docs/Web/CSS/CSS_scrollbars_styling), and the used values of [CSS system colors](/en-US/docs/Web/CSS/Reference/Values/system-color).
+Common choices for operating system color schemes are "light" and "dark", or "day mode" and "night mode". When a user selects one of these color schemes, the operating system makes adjustments to the user interface. This includes [form controls](/en-US/docs/Learn_web_development/Extensions/Forms), [scrollbars](/en-US/docs/Web/CSS/Guides/Scrollbars_styling), and the used values of [CSS system colors](/en-US/docs/Web/CSS/Reference/Values/system-color).
 
 {{InteractiveExample("CSS Demo: color-scheme")}}
 
@@ -164,4 +164,4 @@ Alternatively, use the [`light-dark()`](/en-US/docs/Web/CSS/Reference/Values/col
 - Other color-related properties: {{cssxref("color")}}, {{cssxref("accent-color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}
 - {{cssxref("background-image")}}
 - {{cssxref("print-color-adjust")}}
-- [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)
+- [Using relative colors](/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors)

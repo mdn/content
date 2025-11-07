@@ -34,7 +34,7 @@ The `fit-content` size is calculated using the following formula:
 min(max-content, max(min-content, stretch))
 ```
 
-where, [`stretch`](/en-US/docs/Web/CSS/Reference/Properties/width#stretch) matches the element's [margin box](/en-US/docs/Web/CSS/Reference/Values/box-edge#margin-box) to the width of its [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block#identifying_the_containing_block). The keyword is essentially equivalent to `fit-content(stretch)`.
+where, [`stretch`](/en-US/docs/Web/CSS/Reference/Properties/width#stretch) matches the element's [margin box](/en-US/docs/Web/CSS/Reference/Values/box-edge#margin-box) to the width of its [containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block#identifying_the_containing_block). The keyword is essentially equivalent to `fit-content(stretch)`.
 
 You can enable animations to and from `fit-content` using the {{cssxref("interpolate-size")}} property and the {{cssxref("calc-size()")}} function.
 
@@ -87,4 +87,4 @@ You can enable animations to and from `fit-content` using the {{cssxref("interpo
 ## See also
 
 - Related sizing keywords: {{cssxref("min-content")}}, {{cssxref("max-content")}}
-- [CSS box sizing](/en-US/docs/Web/CSS/CSS_box_sizing) module
+- [CSS box sizing](/en-US/docs/Web/CSS/Guides/Box_sizing) module

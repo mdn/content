@@ -265,7 +265,7 @@ my-custom-element:state(hidden) {
 }
 ```
 
-The `:state()` pseudo-class can also be used within the [`:host()`](/en-US/docs/Web/CSS/Reference/Selectors/:host_function) pseudo-class function to match a custom state [within a custom element's shadow DOM](/en-US/docs/Web/CSS/Reference/Selectors/:state#matching_a_custom_state_in_a_custom_elements_shadow_dom). Additionally, the `:state()` pseudo-class can be used after the [`::part()`](/en-US/docs/Web/CSS/Reference/Selectors/::part) pseudo-element to match the [shadow parts](/en-US/docs/Web/CSS/CSS_shadow_parts) of a custom element that is in a particular state.
+The `:state()` pseudo-class can also be used within the [`:host()`](/en-US/docs/Web/CSS/Reference/Selectors/:host_function) pseudo-class function to match a custom state [within a custom element's shadow DOM](/en-US/docs/Web/CSS/Reference/Selectors/:state#matching_a_custom_state_in_a_custom_elements_shadow_dom). Additionally, the `:state()` pseudo-class can be used after the [`::part()`](/en-US/docs/Web/CSS/Reference/Selectors/::part) pseudo-element to match the [shadow parts](/en-US/docs/Web/CSS/Guides/Shadow_parts) of a custom element that is in a particular state.
 
 There are several live examples in {{domxref("CustomStateSet")}} showing how this works.
 

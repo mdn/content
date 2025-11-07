@@ -18,7 +18,7 @@ The viewport segments API provides features that allow you to detect (in CSS and
 
 ## Viewport segment media features
 
-Two [media query](/en-US/docs/Web/CSS/CSS_media_queries) features are available that enable testing whether a device has a specific number of viewport segments laid out horizontally or vertically. These look like so:
+Two [media query](/en-US/docs/Web/CSS/Guides/Media_queries) features are available that enable testing whether a device has a specific number of viewport segments laid out horizontally or vertically. These look like so:
 
 ```css
 /* Segments are laid out horizontally. */

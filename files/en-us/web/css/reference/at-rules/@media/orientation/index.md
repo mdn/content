@@ -6,7 +6,7 @@ browser-compat: css.at-rules.media.orientation
 sidebar: cssref
 ---
 
-The **`orientation`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Reference/At-rules/@media#media_features) can be used to test the orientation of the {{glossary("viewport")}} (or the page box, for [paged media](/en-US/docs/Web/CSS/CSS_paged_media)).
+The **`orientation`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Reference/At-rules/@media#media_features) can be used to test the orientation of the {{glossary("viewport")}} (or the page box, for [paged media](/en-US/docs/Web/CSS/Guides/Paged_media)).
 
 > [!NOTE]
 > This feature does not correspond to _device_ orientation. Opening the soft keyboard on many devices in portrait orientation will cause the viewport to become wider than it is tall, thereby causing the browser to use landscape styles instead of portrait.

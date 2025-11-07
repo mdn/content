@@ -35,7 +35,7 @@ oklab(from hsl(180 100% 50%) calc(l - 0.1) a b)
 
 ### Values
 
-Below are descriptions of the allowed values for both absolute and [relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors).
+Below are descriptions of the allowed values for both absolute and [relative colors](/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors).
 
 #### Absolute value syntax
 
@@ -481,7 +481,7 @@ The output is as follows:
 
 - The [`<color>` data type](/en-US/docs/Web/CSS/Reference/Values/color_value) for a list of all color notations
 - {{cssxref("color_value/lab","lab()")}} and {{cssxref("color_value/oklch","oklch()")}} color functions
-- [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)
-- [CSS colors](/en-US/docs/Web/CSS/CSS_colors) module
+- [Using relative colors](/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors)
+- [CSS colors](/en-US/docs/Web/CSS/Guides/Colors) module
 - [A perceptual color space for image processing](https://bottosson.github.io/posts/oklab/) on bottosson.github.io (2023)
 - [OKLAB color wheel](https://observablehq.com/@shan/oklab-color-wheel) on observablehq.com

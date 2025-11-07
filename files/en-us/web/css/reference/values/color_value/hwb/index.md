@@ -60,7 +60,7 @@ hwb(from lch(40% 70 240deg) h w calc(b - 30))
 
 This color function in the [`sRGB` color space](/en-US/docs/Glossary/Color_space#srgb) is defined by a {{CSSXref("&lt;hue&gt;")}} angle value, a whiteness value, a blackness value, and, optionally, an alpha value representing the color's transparency.
 
-The angles corresponding to particular hues differ across the sRGB (used by {{CSSXref("color_value/hsl", "hsl()")}} and `hwb()`), CIELAB (used by {{CSSXref("color_value/lch", "lch()")}}), and Oklab (used by {{CSSXref("color_value/oklch", "oklch()")}}) color spaces. `hwb()` is in the same color space as `hsl()`, and therefore has the same hue color angles. See the {{CSSXref("&lt;hue&gt;")}} reference page for more detail and examples, or try changing the hues on the [color picker](/en-US/docs/Web/CSS/CSS_colors#colors_in_action) to see it in action.
+The angles corresponding to particular hues differ across the sRGB (used by {{CSSXref("color_value/hsl", "hsl()")}} and `hwb()`), CIELAB (used by {{CSSXref("color_value/lch", "lch()")}}), and Oklab (used by {{CSSXref("color_value/oklch", "oklch()")}}) color spaces. `hwb()` is in the same color space as `hsl()`, and therefore has the same hue color angles. See the {{CSSXref("&lt;hue&gt;")}} reference page for more detail and examples, or try changing the hues on the [color picker](/en-US/docs/Web/CSS/Guides/Colors#colors_in_action) to see it in action.
 
 An `hwb()` color is fully saturated when its whiteness (`W`) and blackness (`B`) values are both `0`. For any hue value `H`, `hwb(H 0% 0%)` is the same color as `hsl(H 100% 50%)`. Increasing the whiteness value lightens the color. Increasing the blackness darkens the color.
 
@@ -68,7 +68,7 @@ When both the blackness and whiteness are greater than 0, the color gets muted, 
 
 ## Values
 
-Below are descriptions of the allowed values for both absolute and [relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors).
+Below are descriptions of the allowed values for both absolute and [relative colors](/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors).
 
 ### Absolute value syntax
 
@@ -275,7 +275,7 @@ The output is as follows:
 ## See also
 
 - {{CSSXref("&lt;color&gt;")}}: For a list of all color notations
-- [Color format converter tool](/en-US/docs/Web/CSS/CSS_colors/Color_format_converter)
-- [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)
-- [CSS colors](/en-US/docs/Web/CSS/CSS_colors) module
+- [Color format converter tool](/en-US/docs/Web/CSS/Guides/Colors/Color_format_converter)
+- [Using relative colors](/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors)
+- [CSS colors](/en-US/docs/Web/CSS/Guides/Colors) module
 - {{CSSXref("&lt;hue&gt;")}}: the data type representing a hue angle of a color
