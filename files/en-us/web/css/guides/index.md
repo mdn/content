@@ -2,7 +2,7 @@
 title: CSS guides
 short-title: Guides
 slug: Web/CSS/Guides
-page-type: guide
+page-type: landing-page
 sidebar: cssref
 ---
 
