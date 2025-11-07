@@ -18,11 +18,38 @@ Bounce tracking can be done in a couple of different ways:
 
 1. As a "bounce back". In this case, the user starts on a website (`site1.example`), is navigated to a tracker site (`tracker.example`) where the tracking cookie is set, and then redirected back to `site1.example`.
 
-   ![An illustration of a bounce back example](bounce-back.png)
+   <!--
+
+   Mermaid JS source:
+
+   flowchart LR
+      A["site1.example"] -- &nbsp;&nbsp;1: Navigate&nbsp;&nbsp; --&gt; B["tracker.example"]
+      B -- &nbsp;&nbsp;2: Store cookie&nbsp;&nbsp; --&gt; C[("Browser")]
+      B -- &nbsp;&nbsp;3: Redirect&nbsp;&nbsp; --&gt; A
+
+   https://www.mermaidchart.com/ was used to generate the chart, with the "Default theme"
+
+   -->
+
+   ![An illustration of a bounce back example](bounce-back.svg)
 
 2. As a "bounce through". In this case, the user starts on a website (`site1.example`), is navigated to a tracker site (`tracker.example`) where the tracking cookie is set, and then redirected to another site (`site2.example`).
 
-   ![An illustration of a bounce through example](bounce-through.png)
+      <!--
+   
+   Mermaid JS source:
+   
+   flowchart LR
+     A["site1.example"] -- &nbsp;&nbsp;1: Navigate&nbsp;&nbsp; --&gt; B["tracker.example"]
+     B -- &nbsp;&nbsp;3: Redirect&nbsp;&nbsp; --&gt; C["site2.example"]
+     B -- &nbsp;&nbsp;2: Store cookie&nbsp;&nbsp; --&gt; D[(Browser)]
+   
+   
+   https://www.mermaidchart.com/ was used to generate the chart, with the "Default theme"
+   
+   -->
+
+   ![An illustration of a bounce through example](bounce-through.svg)
 
 In both instances, users may be unaware they have visited `tracker.example`. They may believe they have only visited `site1.example` or tried to navigate to `site2.example`.
 
