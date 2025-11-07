@@ -564,7 +564,7 @@
 /en-US/docs/CSS/Using_CSS_variables	/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties
 /en-US/docs/CSS/Using_media_queries_from_code	/en-US/docs/Web/CSS/Guides/Media_queries/Testing
 /en-US/docs/CSS/Using_the_CSS_multi-column_layout	/en-US/docs/Web/CSS/Guides/Multicol_layout/Using
-/en-US/docs/CSS/Value_definition_syntax	/en-US/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax
+/en-US/docs/CSS/Value_definition_syntax	/en-US/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax
 /en-US/docs/CSS/Visual_formatting_model	/en-US/docs/Web/CSS/Guides/Display/Visual_formatting_model
 /en-US/docs/CSS/actual_value	/en-US/docs/Web/CSS/Guides/Cascade/Value_processing#actual_value
 /en-US/docs/CSS/align-content	/en-US/docs/Web/CSS/Reference/Properties/align-content
@@ -12452,7 +12452,7 @@
 /en-US/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts	/en-US/docs/Web/CSS/Guides/Display/Formatting_contexts
 /en-US/docs/Web/CSS/CSS_Functionals	/en-US/docs/Web/CSS/Reference/Values/Functions
 /en-US/docs/Web/CSS/CSS_Functions	/en-US/docs/Web/CSS/Reference/Values/Functions
-/en-US/docs/Web/CSS/CSS_Functions/Using_CSS_math_functions	/en-US/docs/Web/CSS/CSS_values_and_units/Using_CSS_math_functions
+/en-US/docs/Web/CSS/CSS_Functions/Using_CSS_math_functions	/en-US/docs/Web/CSS/Guides/Values_and_units/Using_CSS_math_functions
 /en-US/docs/Web/CSS/CSS_Grid	/en-US/docs/Web/CSS/Guides/Grid_layout
 /en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout	/en-US/docs/Web/CSS/Guides/Grid_layout/Auto-placement
 /en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout	/en-US/docs/Web/CSS/Guides/Grid_layout/Box_alignment
@@ -12519,7 +12519,7 @@
 /en-US/docs/Web/CSS/CSS_Types/display-outside	/en-US/docs/Web/CSS/Reference/Values/display-outside
 /en-US/docs/Web/CSS/CSS_User_Interface	/en-US/docs/Web/CSS/Guides/Basic_user_interface
 /en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Types	/en-US/docs/Web/CSS/Reference/Values/Data_types
-/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions/Using_CSS_math_functions	/en-US/docs/Web/CSS/CSS_values_and_units/Using_CSS_math_functions
+/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions/Using_CSS_math_functions	/en-US/docs/Web/CSS/Guides/Values_and_units/Using_CSS_math_functions
 /en-US/docs/Web/CSS/CSS_Variables	/en-US/docs/Web/CSS/Guides/Cascading_variables
 /en-US/docs/Web/CSS/CSS_anchor_positioning	/en-US/docs/Web/CSS/Guides/Anchor_positioning
 /en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding	/en-US/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding
@@ -12751,10 +12751,21 @@
 /en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms	/en-US/docs/Web/CSS/Guides/Transforms/Using
 /en-US/docs/Web/CSS/CSS_transitions	/en-US/docs/Web/CSS/Guides/Transitions
 /en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions	/en-US/docs/Web/CSS/Guides/Transitions/Using
+/en-US/docs/Web/CSS/CSS_values_and_units	/en-US/docs/Web/CSS/Guides/Values_and_units
 /en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types	/en-US/docs/Web/CSS/Reference/Values/Data_types
 /en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions	/en-US/docs/Web/CSS/Reference/Values/Functions
+/en-US/docs/Web/CSS/CSS_values_and_units/Numeric_data_types	/en-US/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types
+/en-US/docs/Web/CSS/CSS_values_and_units/Textual_data_types	/en-US/docs/Web/CSS/Guides/Values_and_units/Textual_data_types
+/en-US/docs/Web/CSS/CSS_values_and_units/Using_CSS_math_functions	/en-US/docs/Web/CSS/Guides/Values_and_units/Using_CSS_math_functions
+/en-US/docs/Web/CSS/CSS_values_and_units/Using_CSS_typed_arithmetic	/en-US/docs/Web/CSS/Guides/Values_and_units/Using_CSS_typed_arithmetic
+/en-US/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax	/en-US/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax
 /en-US/docs/Web/CSS/CSS_values_serialization	/en-US/docs/Web/CSS
 /en-US/docs/Web/CSS/CSS_values_syntax	/en-US/docs/Web/CSS
+/en-US/docs/Web/CSS/CSS_view_transitions	/en-US/docs/Web/CSS/Guides/View_transitions
+/en-US/docs/Web/CSS/CSS_viewport	/en-US/docs/Web/CSS/Guides/Viewport
+/en-US/docs/Web/CSS/CSS_writing_modes	/en-US/docs/Web/CSS/Guides/Writing_modes
+/en-US/docs/Web/CSS/CSS_writing_modes/Vertical_controls	/en-US/docs/Web/CSS/Guides/Writing_modes/Vertical_controls
+/en-US/docs/Web/CSS/CSS_writing_modes/Writing_mode_systems	/en-US/docs/Web/CSS/Guides/Writing_modes/Writing_mode_systems
 /en-US/docs/Web/CSS/Cascade	/en-US/docs/Web/CSS/Guides/Cascade/Introduction
 /en-US/docs/Web/CSS/Child_combinator	/en-US/docs/Web/CSS/Reference/Selectors/Child_combinator
 /en-US/docs/Web/CSS/Child_selectors	/en-US/docs/Web/CSS/Reference/Selectors/Child_combinator
@@ -12900,7 +12911,7 @@
 /en-US/docs/Web/CSS/Using_CSS_variables	/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties
 /en-US/docs/Web/CSS/Using_media_queries_from_code	/en-US/docs/Web/CSS/Guides/Media_queries/Testing
 /en-US/docs/Web/CSS/Using_the_CSS_multi-column_layout	/en-US/docs/Web/CSS/Guides/Multicol_layout/Using
-/en-US/docs/Web/CSS/Value_definition_syntax	/en-US/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax
+/en-US/docs/Web/CSS/Value_definition_syntax	/en-US/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax
 /en-US/docs/Web/CSS/Viewport_concepts	/en-US/docs/Web/CSS/Guides/CSSOM_view/Viewport_concepts
 /en-US/docs/Web/CSS/Visual_formatting_model	/en-US/docs/Web/CSS/Guides/Display/Visual_formatting_model
 /en-US/docs/Web/CSS/WebKit_Extensions	/en-US/docs/Web/CSS/Reference/Webkit_extensions

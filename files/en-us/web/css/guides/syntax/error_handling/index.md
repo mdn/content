@@ -200,4 +200,4 @@ To better control the way custom properties fall back, use the {{cssxref("@prope
 
 - [CSS syntax](/en-US/docs/Web/CSS/Guides/Syntax) module
 - [Syntax](/en-US/docs/Web/CSS/Guides/Syntax/Introduction) guide
-- [Value definition syntax](/en-US/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
+- [Value definition syntax](/en-US/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)

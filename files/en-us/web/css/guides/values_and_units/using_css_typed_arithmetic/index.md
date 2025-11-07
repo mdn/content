@@ -1,19 +1,19 @@
 ---
 title: Using CSS typed arithmetic
 short-title: Using typed arithmetic
-slug: Web/CSS/CSS_values_and_units/Using_CSS_typed_arithmetic
+slug: Web/CSS/Guides/Values_and_units/Using_CSS_typed_arithmetic
 page-type: guide
 sidebar: cssref
 ---
 
-**CSS typed arithmetic** refers to permitted calculations performed with typed CSS values via functions such as {{cssxref("calc()")}}, and specifically, to the behavior defined in the [CSS values and units](/en-US/docs/Web/CSS/CSS_values_and_units) module. CSS typed arithmetic enables dividing a value with one unit by a value with a different unit of the same data type, resulting in unitless quotients.
+**CSS typed arithmetic** refers to permitted calculations performed with typed CSS values via functions such as {{cssxref("calc()")}}, and specifically, to the behavior defined in the [CSS values and units](/en-US/docs/Web/CSS/Guides/Values_and_units) module. CSS typed arithmetic enables dividing a value with one unit by a value with a different unit of the same data type, resulting in unitless quotients.
 
 These quotients can then be used as a {{cssxref("number")}} in the values of unitless properties, or converted into any numeric data type (such as a {{cssxref("length")}}, {{cssxref("percentage")}}, or {{cssxref("angle")}}) by multiplying them by a numeric typed value.
 
 This typed arithmetic behavior enables relationships to be created between different values on a page. This article explores typed arithmetic and presents several examples that make use of it.
 
 > [!NOTE]
-> Originally, the [CSS values and units](/en-US/docs/Web/CSS/CSS_values_and_units) module limited the arguments multiplication and division operations could take to make dividing by zero detectable at parse time and avoid issues such as squared units. Typed arithmetic relaxes some of those restrictions in [supporting browsers](/en-US/docs/Web/CSS/Reference/Values/calc#browser_compatibility).
+> Originally, the [CSS values and units](/en-US/docs/Web/CSS/Guides/Values_and_units) module limited the arguments multiplication and division operations could take to make dividing by zero detectable at parse time and avoid issues such as squared units. Typed arithmetic relaxes some of those restrictions in [supporting browsers](/en-US/docs/Web/CSS/Reference/Values/calc#browser_compatibility).
 
 ## CSS typed arithmetic rules
 
@@ -338,5 +338,5 @@ To see the result, [view our animated story circle example live](https://mdn.git
 ## See also
 
 - {{cssxref("calc()")}}, {{cssxref("abs()")}}
-- [CSS values and units](/en-US/docs/Web/CSS/CSS_values_and_units) module
+- [CSS values and units](/en-US/docs/Web/CSS/Guides/Values_and_units) module
 - [CSS Typed Arithmetic](https://css-tricks.com/css-typed-arithmetic/) on css-tricks.com (2025)

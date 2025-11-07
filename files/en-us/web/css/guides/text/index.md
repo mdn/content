@@ -76,7 +76,7 @@ The specification also defines the `hyphenate-limit-last`, `hyphenate-limit-line
 
 ## See also
 
-- [CSS writing modes](/en-US/docs/Web/CSS/CSS_writing_modes) module
+- [CSS writing modes](/en-US/docs/Web/CSS/Guides/Writing_modes) module
 - [CSS overflow](/en-US/docs/Web/CSS/Guides/Overflow) module
 - [CSS fonts](/en-US/docs/Web/CSS/Guides/Fonts) module
 - [CSS ruby layout](/en-US/docs/Web/CSS/Guides/Ruby_layout) module

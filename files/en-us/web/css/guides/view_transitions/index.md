@@ -1,6 +1,6 @@
 ---
 title: CSS view transitions
-slug: Web/CSS/CSS_view_transitions
+slug: Web/CSS/Guides/View_transitions
 page-type: css-module
 spec-urls:
   - https://drafts.csswg.org/css-view-transitions-1/

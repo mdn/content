@@ -798,7 +798,7 @@ Knowing about CSS functions is useful so you recognize them when you see them. Y
 
 ## Summary
 
-This has been a quick run-through of the most common types of values and units you might encounter. You can have a look at all of the different types on the [CSS Values and units](/en-US/docs/Web/CSS/CSS_values_and_units) module page — you will encounter many of these in use as you work through these lessons.
+This has been a quick run-through of the most common types of values and units you might encounter. You can have a look at all of the different types on the [CSS Values and units](/en-US/docs/Web/CSS/Guides/Values_and_units) module page — you will encounter many of these in use as you work through these lessons.
 
 The key thing to remember is that each property has a defined list of allowed value types, and each value type has a definition explaining what the values are. You can then look up the specifics here on MDN. For example, understanding that [`<image>`](/en-US/docs/Web/CSS/Reference/Values/image) also allows you to create a color gradient is useful but perhaps non-obvious knowledge to have!
 

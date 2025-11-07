@@ -1,7 +1,7 @@
 ---
 title: Using CSS math functions
 short-title: Using math functions
-slug: Web/CSS/CSS_values_and_units/Using_CSS_math_functions
+slug: Web/CSS/Guides/Values_and_units/Using_CSS_math_functions
 page-type: guide
 sidebar: cssref
 ---

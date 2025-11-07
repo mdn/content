@@ -288,10 +288,10 @@ sidebar:
   - title: Values and units
     details: closed
     children:
-      - /Web/CSS/CSS_values_and_units/Value_definition_syntax
-      - /Web/CSS/CSS_values_and_units/Numeric_data_types
-      - /Web/CSS/CSS_values_and_units/Textual_data_types
-      - /Web/CSS/CSS_values_and_units/Using_CSS_math_functions
+      - /Web/CSS/Guides/Values_and_units/Value_definition_syntax
+      - /Web/CSS/Guides/Values_and_units/Numeric_data_types
+      - /Web/CSS/Guides/Values_and_units/Textual_data_types
+      - /Web/CSS/Guides/Values_and_units/Using_CSS_math_functions
   - type: section
     link: /Web/CSS/How_to
   - link: /Web/CSS/How_to/Layout_cookbook

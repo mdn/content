@@ -16,7 +16,7 @@ Flexbox was originally defined in its own [flexible box layout](/en-US/docs/Web/
 
 ## Writing Modes
 
-In the [Basic concepts of flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts) article, it is noted that flexbox is **writing mode aware**. Writing modes are fully detailed in the [CSS writing modes](/en-US/docs/Web/CSS/CSS_writing_modes) module, which details how CSS supports the different writing modes that exist internationally. We need to be aware of how this will impact our flex layouts as the writing mode changes the direction that blocks are laid out in our document. Understanding **block** and **inline** directions is key to new layout methods.
+In the [Basic concepts of flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts) article, it is noted that flexbox is **writing mode aware**. Writing modes are fully detailed in the [CSS writing modes](/en-US/docs/Web/CSS/Guides/Writing_modes) module, which details how CSS supports the different writing modes that exist internationally. We need to be aware of how this will impact our flex layouts as the writing mode changes the direction that blocks are laid out in our document. Understanding **block** and **inline** directions is key to new layout methods.
 
 It is worth noting that we might want to change the writing mode of our document for reasons other than publishing content in a language that uses a different writing mode. The CSS writing modes module defines how text can be written horizontally, left-to-right and right-to-left, and vertically, top-to-bottom. This is important for internationalization and translations, but these feature can also be used for creative designs.
 

@@ -1,6 +1,6 @@
 ---
 title: CSS writing modes
-slug: Web/CSS/CSS_writing_modes
+slug: Web/CSS/Guides/Writing_modes
 page-type: css-module
 spec-urls:
   - https://drafts.csswg.org/css-writing-modes/
@@ -36,9 +36,9 @@ The CSS writing module addresses the orientations of all writing modes. Other mo
 
 ## Guides
 
-- [Creating vertical form controls](/en-US/docs/Web/CSS/CSS_writing_modes/Vertical_controls)
+- [Creating vertical form controls](/en-US/docs/Web/CSS/Guides/Writing_modes/Vertical_controls)
   - : The article explains how to use the CSS {{cssxref("writing-mode")}} and {{cssxref("direction")}} properties to create and configure vertical form controls.
-- [Introduction to writing mode systems](/en-US/docs/Web/CSS/CSS_writing_modes/Writing_mode_systems)
+- [Introduction to writing mode systems](/en-US/docs/Web/CSS/Guides/Writing_modes/Writing_mode_systems)
   - : A brief overview of writing mode systems and their directionalities.
 
 ## Related concepts

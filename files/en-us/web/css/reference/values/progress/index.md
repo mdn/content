@@ -99,7 +99,7 @@ progress(3em, 0, 100)
 
 ### Creating unitless values
 
-The `progress()` function outputs unitless values, therefore it can be used for the purpose of removing units from values in the same manner as the [`tan(atan2())` hack](https://dev.to/janeori/css-type-casting-to-numeric-tanatan2-scalars-582j). Note however that, due to the updates in behavior around [CSS typed arithmetic](/en-US/docs/Web/CSS/CSS_values_and_units/Using_CSS_typed_arithmetic), this can also be achieved via simple division.
+The `progress()` function outputs unitless values, therefore it can be used for the purpose of removing units from values in the same manner as the [`tan(atan2())` hack](https://dev.to/janeori/css-type-casting-to-numeric-tanatan2-scalars-582j). Note however that, due to the updates in behavior around [CSS typed arithmetic](/en-US/docs/Web/CSS/Guides/Values_and_units/Using_CSS_typed_arithmetic), this can also be achieved via simple division.
 
 ### Combining `progress()` with other functions and custom properties
 
@@ -393,7 +393,7 @@ We position the `content` `<section>` absolutely so it sits over the top of the 
 
 ## See also
 
-- [CSS values and units module](/en-US/docs/Web/CSS/CSS_values_and_units)
+- [CSS values and units module](/en-US/docs/Web/CSS/Guides/Values_and_units)
 - [Container style queries](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#container_style_queries)
 - [Media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using)
 - [Feature queries](/en-US/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries)

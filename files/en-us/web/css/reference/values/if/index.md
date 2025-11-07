@@ -608,4 +608,4 @@ Try selecting different color scheme values to see the effect on the look and fe
 - [Container style queries](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#container_style_queries)
 - [Media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using)
 - [Feature queries](/en-US/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries)
-- [CSS values and units module](/en-US/docs/Web/CSS/CSS_values_and_units)
+- [CSS values and units module](/en-US/docs/Web/CSS/Guides/Values_and_units)

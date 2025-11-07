@@ -93,7 +93,7 @@ The `appearance` property can be applied to all elements and pseudo-elements, bu
 Some non-standard values are also supported in some browsers:
 
 - `slider-vertical`
-  - : Makes the slider vertical when applied to `<input type="range">` elements. To [create a vertical slider](/en-US/docs/Web/CSS/CSS_writing_modes/Vertical_controls) you should instead set the {{cssxref("writing-mode")}} to `vertical-lr` and the {{cssxref("direction")}} to `rtl`.
+  - : Makes the slider vertical when applied to `<input type="range">` elements. To [create a vertical slider](/en-US/docs/Web/CSS/Guides/Writing_modes/Vertical_controls) you should instead set the {{cssxref("writing-mode")}} to `vertical-lr` and the {{cssxref("direction")}} to `rtl`.
 
 - `-apple-pay-button`
   - : Displays the Apple Pay logo when set on a {{htmlelement("button")}}, {{htmlelement("a")}}, or {{htmlelement("input")}} element of type `button` or `reset`.

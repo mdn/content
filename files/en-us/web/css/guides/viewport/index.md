@@ -1,6 +1,6 @@
 ---
 title: CSS viewport
-slug: Web/CSS/CSS_viewport
+slug: Web/CSS/Guides/Viewport
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-viewport/
 sidebar: cssref

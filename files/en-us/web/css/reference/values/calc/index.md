@@ -115,7 +115,7 @@ Inversely, `200px / 4px` resolves to `50`, which does make sense in CSS. Therefo
 
 The quotient can then be used in the values of properties or functions that accept a {{cssxref("number")}} as a value or parameter, or converted into a different data type by multiplying it by a typed value.
 
-For a full explanation of typed arithmetic in CSS, along with examples, see [Using CSS typed arithmetic](/en-US/docs/Web/CSS/CSS_values_and_units/Using_CSS_typed_arithmetic).
+For a full explanation of typed arithmetic in CSS, along with examples, see [Using CSS typed arithmetic](/en-US/docs/Web/CSS/Guides/Values_and_units/Using_CSS_typed_arithmetic).
 
 ### Support for computing color channels in relative colors
 

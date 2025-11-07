@@ -63,7 +63,7 @@ For the JavaScript API defined by this module, see the [CSSOM view API](/en-US/d
 
 - [CSS Object Model (CSSOM)](/en-US/docs/Web/API/CSS_Object_Model) API
 - [CSSOM view API](/en-US/docs/Web/API/CSSOM_view_API)
-- [CSS viewport](/en-US/docs/Web/CSS/CSS_viewport) module
+- [CSS viewport](/en-US/docs/Web/CSS/Guides/Viewport) module
 - [CSS overflow](/en-US/docs/Web/CSS/Guides/Overflow) module
 - [CSS overscroll behavior](/en-US/docs/Web/CSS/Guides/Overscroll_behavior) module
 - [CSS scroll snap](/en-US/docs/Web/CSS/Guides/Scroll_snap) module

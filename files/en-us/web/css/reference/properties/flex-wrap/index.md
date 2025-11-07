@@ -74,7 +74,7 @@ The `flex-wrap` property is specified as a single keyword chosen from the follow
 - `nowrap`
   - : The flex items are laid out in a single line which may cause the flex container to overflow. The cross-start is the equivalent of [inline-start or block-start](/en-US/docs/Glossary/Flow_relative_values), depending on the {{cssxref("flex-direction")}} value. This is the default value.
 - `wrap`
-  - : The flex items break into multiple lines. The cross-start is the equivalent of [inline-start or block-start](/en-US/docs/Glossary/Flow_relative_values), depending on the current [writing mode](/en-US/docs/Web/CSS/CSS_writing_modes), and the {{cssxref("flex-direction")}} value.
+  - : The flex items break into multiple lines. The cross-start is the equivalent of [inline-start or block-start](/en-US/docs/Glossary/Flow_relative_values), depending on the current [writing mode](/en-US/docs/Web/CSS/Guides/Writing_modes), and the {{cssxref("flex-direction")}} value.
 - `wrap-reverse`
   - : Behaves the same as `wrap`, but cross-start and cross-end are inverted.
 

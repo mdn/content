@@ -84,7 +84,7 @@ When using logical rather than physical properties, we don't see the world as le
 
 ## CSS writing modes
 
-The [CSS writing modes](/en-US/docs/Web/CSS/CSS_writing_modes) module specifies how writing modes work in CSS. These features are not just for supporting languages with a different writing mode to English; they can also be used for creative purposes. The examples in this section make use of the {{cssxref("writing-mode")}} property to make changes to the writing mode applied to our grid, demonstrating how logical values work in the process.
+The [CSS writing modes](/en-US/docs/Web/CSS/Guides/Writing_modes) module specifies how writing modes work in CSS. These features are not just for supporting languages with a different writing mode to English; they can also be used for creative purposes. The examples in this section make use of the {{cssxref("writing-mode")}} property to make changes to the writing mode applied to our grid, demonstrating how logical values work in the process.
 
 ### `writing-mode`
 

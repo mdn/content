@@ -1,6 +1,6 @@
 ---
 title: Introduction to writing mode systems
-slug: Web/CSS/CSS_writing_modes/Writing_mode_systems
+slug: Web/CSS/Guides/Writing_modes/Writing_mode_systems
 page-type: guide
 sidebar: cssref
 ---
@@ -96,4 +96,4 @@ The `text-orientation` component of the writing mode controls the glyph orientat
 
 ## See also
 
-- [CSS writing modes](/en-US/docs/Web/CSS/CSS_writing_modes) module
+- [CSS writing modes](/en-US/docs/Web/CSS/Guides/Writing_modes) module

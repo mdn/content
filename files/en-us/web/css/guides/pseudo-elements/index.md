@@ -78,7 +78,7 @@ The specification also defines the `::details-content` and `::search-text` pseud
 - [CSS shadow parts](/en-US/docs/Web/CSS/Guides/Shadow_parts) module
   - {{CSSXref("::part")}}
 
-- [CSS view transitions](/en-US/docs/Web/CSS/CSS_view_transitions) module
+- [CSS view transitions](/en-US/docs/Web/CSS/Guides/View_transitions) module
   - {{cssxref("::view-transition")}} {{Experimental_Inline}}
   - {{cssxref("::view-transition-image-pair()")}} {{Experimental_Inline}}
   - {{cssxref("::view-transition-group()")}} {{Experimental_Inline}}

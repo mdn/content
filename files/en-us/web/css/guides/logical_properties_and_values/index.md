@@ -17,13 +17,13 @@ The start of a line is not always the left side of a line. Different writing sys
 
 The logical properties defined in this module enable defining properties relative to the content's writing direction, rather than a physical direction. This means content translated into languages with different writing modes will be rendered as intended.
 
-Logical properties and values use the abstract terms _block_ and _inline_ to describe the direction in which they flow. The physical meaning of these terms depends on the [writing mode](/en-US/docs/Web/CSS/CSS_writing_modes).
+Logical properties and values use the abstract terms _block_ and _inline_ to describe the direction in which they flow. The physical meaning of these terms depends on the [writing mode](/en-US/docs/Web/CSS/Guides/Writing_modes).
 
 The **block dimension** is perpendicular to the flow of text within a line, i.e., the vertical dimension in horizontal writing modes, and the horizontal dimension in vertical writing modes. For standard English text, it is the vertical dimension.
 
 The **inline dimension** is parallel to the flow of text within a line, i.e., the horizontal dimension in horizontal writing modes, and the vertical dimension in vertical writing modes. For standard English text, it is the horizontal dimension.
 
-CSS was initially designed with only physical coordinates. The logical properties and values module defines flow–relative equivalents for many [values](/en-US/docs/Web/CSS/CSS_values_and_units) and [properties](/en-US/docs/Glossary/Property/CSS). Properties that once only accepted physical values (`top`, `bottom`, `left`, `right`) now also accept flow-relative logical values (`block-start`, `block-end`, `inline-start`, `inline-end`).
+CSS was initially designed with only physical coordinates. The logical properties and values module defines flow–relative equivalents for many [values](/en-US/docs/Web/CSS/Guides/Values_and_units) and [properties](/en-US/docs/Glossary/Property/CSS). Properties that once only accepted physical values (`top`, `bottom`, `left`, `right`) now also accept flow-relative logical values (`block-start`, `block-end`, `inline-start`, `inline-end`).
 
 ## Reference
 
@@ -150,7 +150,7 @@ CSS was initially designed with only physical coordinates. The logical propertie
 - {{CSSxRef("bottom")}}
 - {{CSSxRef("left")}}
 
-[CSS writing modes](/en-US/docs/Web/CSS/CSS_writing_modes)
+[CSS writing modes](/en-US/docs/Web/CSS/Guides/Writing_modes)
 
 - {{CSSxRef("direction")}}
 - {{CSSxRef("text-orientation")}}

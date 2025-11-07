@@ -42,7 +42,7 @@ This module doesn't define any properties, [data types](/en-US/docs/Web/CSS/Refe
 - [Introduction to CSS syntax: declarations, rulesets, and statements](/en-US/docs/Web/CSS/Guides/Syntax/Introduction)
   - : Explains the overall CSS syntax and how declarations, declaration blocks, rulesets, and statements form the style rules.
 
-- [Value definition syntax](/en-US/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
+- [Value definition syntax](/en-US/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)
   - : Explains the formal grammar for defining valid values for CSS properties and functions, along with semantic constraints. A guide for understanding CSS component value types, combinators, and multipliers.
 
 - [CSS error handling](/en-US/docs/Web/CSS/Guides/Syntax/Error_handling)
@@ -99,4 +99,4 @@ This module doesn't define any properties, [data types](/en-US/docs/Web/CSS/Refe
 
 - [CSS at-rule functions](/en-US/docs/Web/CSS/Reference/At-rules/At-rule_functions)
 - [CSS selectors](/en-US/docs/Web/CSS/Guides/Selectors) module
-- [CSS values and units](/en-US/docs/Web/CSS/CSS_values_and_units) module
+- [CSS values and units](/en-US/docs/Web/CSS/Guides/Values_and_units) module

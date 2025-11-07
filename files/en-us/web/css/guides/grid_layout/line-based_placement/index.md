@@ -375,7 +375,7 @@ We can take things a step further and define each area with a single property �
 
 {{ EmbedLiveSample('The_grid-area_property', '300', '330') }}
 
-This order of values for `grid-area` can seem a little strange — it is the opposite of the direction in which we specify margins and padding as a shorthand, for example. It may help to realize that this is due to CSS grid layout using the flow-relative directions defined in [CSS writing modes](/en-US/docs/Web/CSS/CSS_writing_modes). We explore how grids work with writing modes in [grids, logical values, and writing modes](/en-US/docs/Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes). For now, consider the concept of four {{glossary("Flow relative values", "flow-relative")}} directions:
+This order of values for `grid-area` can seem a little strange — it is the opposite of the direction in which we specify margins and padding as a shorthand, for example. It may help to realize that this is due to CSS grid layout using the flow-relative directions defined in [CSS writing modes](/en-US/docs/Web/CSS/Guides/Writing_modes). We explore how grids work with writing modes in [grids, logical values, and writing modes](/en-US/docs/Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes). For now, consider the concept of four {{glossary("Flow relative values", "flow-relative")}} directions:
 
 - `block-start`
 - `block-end`

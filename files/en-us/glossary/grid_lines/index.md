@@ -54,7 +54,7 @@ In the following example there is a grid with three column tracks and two row tr
 
 {{ EmbedLiveSample('Example', '500', '250') }}
 
-Lines can be addressed using their line number. In a left-to-right language such as English, column line 1 will be on the left of the grid, row line 1 on the top. Lines numbers respect the [writing mode](/en-US/docs/Web/CSS/CSS_writing_modes) of the document and so in a right-to-left language for example, column line 1 will be on the right of the grid. The image below shows the line numbers of the grid, assuming the language is left-to-right.
+Lines can be addressed using their line number. In a left-to-right language such as English, column line 1 will be on the left of the grid, row line 1 on the top. Lines numbers respect the [writing mode](/en-US/docs/Web/CSS/Guides/Writing_modes) of the document and so in a right-to-left language for example, column line 1 will be on the right of the grid. The image below shows the line numbers of the grid, assuming the language is left-to-right.
 
 ![Diagram showing the grid with lines numbered.](1_diagram_numbered_grid_lines.png)
 

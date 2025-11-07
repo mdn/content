@@ -82,7 +82,7 @@ The opposite also occurs. Sometimes there are no declarations defining the value
 - [Element-attached styles](/en-US/docs/Web/HTML/Reference/Global_attributes/style)
 - [Inline styles and the cascade](/en-US/docs/Web/CSS/Guides/Cascade/Introduction#inline_styles)
 - [Conditional rules for @imports](/en-US/docs/Web/CSS/Reference/At-rules/@import#importing_css_rules_conditional_on_media_queries)
-- [Value definition syntax](/en-US/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
+- [Value definition syntax](/en-US/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)
 
 ## Specifications
 

@@ -78,4 +78,4 @@ Two ratios are compared using the quotients' numeric values. For example, 16/16 
 - [CSS media queries](/en-US/docs/Web/CSS/Guides/Media_queries) module
 - [CSS containment](/en-US/docs/Web/CSS/Guides/Containment) module
 - [CSS box sizing](/en-US/docs/Web/CSS/Guides/Box_sizing) module
-- [CSS values and units](/en-US/docs/Web/CSS/CSS_values_and_units) module
+- [CSS values and units](/en-US/docs/Web/CSS/Guides/Values_and_units) module

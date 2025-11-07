@@ -222,9 +222,9 @@ They include {{HTTPHeader("Sec-CH-Prefers-Color-Scheme")}} and {{HTTPHeader("Sec
 
 ## Accessibility
 
-To best accommodate people who adjust a site's text size, use [`em`](/en-US/docs/Web/CSS/CSS_values_and_units/Numeric_data_types)s when you need a {{cssxref("&lt;length&gt;")}} for your [media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using).
+To best accommodate people who adjust a site's text size, use [`em`](/en-US/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types)s when you need a {{cssxref("&lt;length&gt;")}} for your [media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using).
 
-Both [`em`](/en-US/docs/Web/CSS/CSS_values_and_units/Numeric_data_types) and [`px`](/en-US/docs/Web/CSS/CSS_values_and_units/Numeric_data_types) are valid units, but [`em`](/en-US/docs/Web/CSS/CSS_values_and_units/Numeric_data_types) works better if the user changes the browser text size.
+Both [`em`](/en-US/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types) and [`px`](/en-US/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types) are valid units, but [`em`](/en-US/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types) works better if the user changes the browser text size.
 
 Also consider media queries or [HTTP user agent client hints](/en-US/docs/Web/HTTP/Guides/Client_hints#user_agent_client_hints) to improve the user's experience.
 For example, the media query [`prefers-reduced-motion`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) or the equivalent HTTP header {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}) can be used to minimize the amount of animation or motion used based on user preferences.

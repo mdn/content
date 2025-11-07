@@ -6,7 +6,7 @@ page-type: landing-page
 sidebar: cssref
 ---
 
-**CSS value functions** are statements that invoke special data processing or calculations to return a [CSS](/en-US/docs/Web/CSS) [value](/en-US/docs/Web/CSS/CSS_values_and_units) for a CSS property. CSS value functions represent more complex [data types](/en-US/docs/Web/CSS/Reference/Values/Data_types) and they may take some input arguments to calculate the return value.
+**CSS value functions** are statements that invoke special data processing or calculations to return a [CSS](/en-US/docs/Web/CSS) [value](/en-US/docs/Web/CSS/Guides/Values_and_units) for a CSS property. CSS value functions represent more complex [data types](/en-US/docs/Web/CSS/Reference/Values/Data_types) and they may take some input arguments to calculate the return value.
 
 ## Syntax
 
@@ -91,7 +91,7 @@ The {{CSSxRef("&lt;transform-function&gt;")}} CSS [data type](/en-US/docs/Web/CS
 
 The math functions allow CSS numeric values to be written as mathematical expressions.
 
-Each of the pages below contains detailed information about a math function's syntax, browser compatibility data, examples, and more. For a holistic introduction to CSS math functions, see [Using CSS math functions](/en-US/docs/Web/CSS/CSS_values_and_units/Using_CSS_math_functions).
+Each of the pages below contains detailed information about a math function's syntax, browser compatibility data, examples, and more. For a holistic introduction to CSS math functions, see [Using CSS math functions](/en-US/docs/Web/CSS/Guides/Values_and_units/Using_CSS_math_functions).
 
 ### Basic arithmetic
 
@@ -484,5 +484,5 @@ The following functions return an integer value based on the DOM tree, rather th
 
 ## See also
 
-- [CSS values and units](/en-US/docs/Web/CSS/CSS_values_and_units) module
+- [CSS values and units](/en-US/docs/Web/CSS/Guides/Values_and_units) module
 - [Learn: Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
