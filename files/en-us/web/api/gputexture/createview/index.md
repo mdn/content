@@ -74,6 +74,26 @@ createView(descriptor)
 
         If `mipLevelCount` is omitted, it will be given a value of {{domxref("GPUTexture.mipLevelCount")}} - `baseMipLevel`.
 
+    - `swizzle` {{optional_inline}}
+      - : A string containing four characters. The position of each character maps to the texture view's red, green, blue, and alpha channel values, respectively. The value of each character specifies the value each of those channels will take when the view is accessed by a shader. Possible values are:
+        - `r`
+          - : The texture's red channel value.
+        - `g`
+          - : The texture's green channel value.
+        - `b`
+          - : The texture's blue channel value.
+        - `a`
+          - : The texture's alpha channel value.
+        - `0`
+          - : Enforces a value of `0`.
+        - `1`
+          - : Enforces a value of `1`.
+
+        For example, `swizzle: "grba"` would result in the texture's red and green channel values being swapped when a shader accesses the view. Texture component swizzle allows developers to optimize performance, correct component ordering mismatches, and reuse shader code across various texture formats when sampling textures.
+
+        > [!NOTE]
+        > To use the `swizzle` option, you must enable the `texture-component-swizzle` [feature](/en-US/docs/Web/API/GPUSupportedFeatures) in your {{domxref("GPUDevice")}}. If this feature is not enabled, the `swizzle` option will have no effect.
+
     - `usage` {{optional_inline}}
       - : A set of {{glossary("bitwise flags")}} representing a subset of the source texture's usage flags (available in the {{domxref("GPUTexture.usage")}} property) that are compatible with the chosen view format. This can be used to restrict the allowed view usage in cases where the view format is incompatible with certain usages. The available usage flags are listed in the [`GPUTexture.usage` value table](/en-US/docs/Web/API/GPUTexture/usage#value).
 
