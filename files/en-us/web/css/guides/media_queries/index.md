@@ -1,5 +1,6 @@
 ---
 title: CSS media queries
+short-title: Media queries
 slug: Web/CSS/Guides/Media_queries
 page-type: css-module
 spec-urls:

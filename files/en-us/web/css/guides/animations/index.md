@@ -1,5 +1,6 @@
 ---
 title: CSS animations
+short-title: Animations
 slug: Web/CSS/Guides/Animations
 page-type: css-module
 spec-urls:

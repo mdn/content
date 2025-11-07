@@ -1,5 +1,6 @@
 ---
 title: CSS viewport
+short-title: Viewport
 slug: Web/CSS/Guides/Viewport
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-viewport/

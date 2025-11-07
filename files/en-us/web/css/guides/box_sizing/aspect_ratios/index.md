@@ -1,5 +1,6 @@
 ---
 title: Understanding and setting aspect ratios
+short-title: Aspect ratios
 slug: Web/CSS/Guides/Box_sizing/Aspect_ratios
 page-type: guide
 spec-urls: https://drafts.csswg.org/css-sizing/#aspect-ratio

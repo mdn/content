@@ -1,5 +1,6 @@
 ---
 title: CSS counter styles
+short-title: Counter styles
 slug: Web/CSS/Guides/Counter_styles
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-counter-styles/

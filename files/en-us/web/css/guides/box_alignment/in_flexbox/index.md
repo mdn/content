@@ -1,5 +1,6 @@
 ---
 title: Box alignment in flexbox
+short-title: In flexbox
 slug: Web/CSS/Guides/Box_alignment/In_flexbox
 page-type: guide
 sidebar: cssref

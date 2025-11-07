@@ -1,5 +1,6 @@
 ---
 title: Box alignment in multi-column layout
+short-title: In multi-column layout
 slug: Web/CSS/Guides/Box_alignment/In_multi-column_layout
 page-type: guide
 sidebar: cssref

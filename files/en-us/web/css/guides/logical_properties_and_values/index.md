@@ -1,5 +1,6 @@
 ---
 title: CSS logical properties and values
+short-title: Logical properties and values
 slug: Web/CSS/Guides/Logical_properties_and_values
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-logical/

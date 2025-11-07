@@ -1,5 +1,6 @@
 ---
 title: CSS text
+short-title: Text
 slug: Web/CSS/Guides/Text
 page-type: css-module
 spec-urls:

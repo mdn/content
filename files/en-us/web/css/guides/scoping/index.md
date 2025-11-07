@@ -1,5 +1,6 @@
 ---
 title: CSS scoping
+short-title: Scoping
 slug: Web/CSS/Guides/Scoping
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-scoping/

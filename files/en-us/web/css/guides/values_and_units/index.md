@@ -1,5 +1,6 @@
 ---
 title: CSS values and units
+short-title: Values and units
 slug: Web/CSS/Guides/Values_and_units
 page-type: css-module
 spec-urls:

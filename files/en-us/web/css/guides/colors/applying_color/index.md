@@ -1,6 +1,6 @@
 ---
 title: Applying color to HTML elements using CSS
-short-title: Applying color to HTML elements
+short-title: Applying color
 slug: Web/CSS/Guides/Colors/Applying_color
 page-type: guide
 sidebar: cssref

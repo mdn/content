@@ -1,5 +1,6 @@
 ---
 title: CSS box alignment
+short-title: Box alignment
 slug: Web/CSS/Guides/Box_alignment
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-align/

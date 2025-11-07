@@ -1,5 +1,6 @@
 ---
 title: Logical properties for sizing
+short-title: For sizing
 slug: Web/CSS/Guides/Logical_properties_and_values/Sizing
 page-type: guide
 sidebar: cssref

@@ -1,5 +1,6 @@
 ---
 title: Logical properties for margins, borders, and padding
+short-title: For margins, borders, and padding
 slug: Web/CSS/Guides/Logical_properties_and_values/Margins_borders_padding
 page-type: guide
 sidebar: cssref

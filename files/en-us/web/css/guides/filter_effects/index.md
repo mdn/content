@@ -1,5 +1,6 @@
 ---
 title: CSS filter effects
+short-title: Filter effects
 slug: Web/CSS/Guides/Filter_effects
 page-type: css-module
 spec-urls:

@@ -1,5 +1,6 @@
 ---
 title: CSS paged media
+short-title: Paged media
 slug: Web/CSS/Guides/Paged_media
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-page/

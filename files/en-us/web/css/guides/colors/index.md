@@ -1,5 +1,6 @@
 ---
 title: CSS colors
+short-title: Colors
 slug: Web/CSS/Guides/Colors
 page-type: css-module
 spec-urls:

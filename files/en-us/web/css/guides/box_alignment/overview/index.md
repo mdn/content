@@ -1,5 +1,6 @@
 ---
 title: CSS box alignment overview
+short-title: Overview
 slug: Web/CSS/Guides/Box_alignment/Overview
 page-type: guide
 sidebar: cssref

@@ -1,5 +1,6 @@
 ---
 title: CSS shapes
+short-title: Shapes
 slug: Web/CSS/Guides/Shapes
 page-type: css-module
 spec-urls:

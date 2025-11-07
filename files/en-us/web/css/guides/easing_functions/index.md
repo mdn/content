@@ -1,5 +1,6 @@
 ---
 title: CSS easing functions
+short-title: Easing functions
 slug: Web/CSS/Guides/Easing_functions
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-easing-2

@@ -1,5 +1,6 @@
 ---
 title: Resizing background images with background-size
+short-title: Resizing background images
 slug: Web/CSS/Guides/Backgrounds_and_borders/Resizing_background_images
 page-type: guide
 sidebar: cssref

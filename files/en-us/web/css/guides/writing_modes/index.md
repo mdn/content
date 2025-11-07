@@ -1,5 +1,6 @@
 ---
 title: CSS writing modes
+short-title: Writing modes
 slug: Web/CSS/Guides/Writing_modes
 page-type: css-module
 spec-urls:

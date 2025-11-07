@@ -1,5 +1,6 @@
 ---
 title: CSS shadow parts
+short-title: Shadow parts
 slug: Web/CSS/Guides/Shadow_parts
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-shadow-parts/

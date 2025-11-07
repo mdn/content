@@ -1,5 +1,6 @@
 ---
 title: CSS positioned layout
+short-title: Positioned layout
 slug: Web/CSS/Guides/Positioned_layout
 page-type: css-module
 spec-urls:

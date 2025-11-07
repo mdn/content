@@ -1,5 +1,6 @@
 ---
 title: CSS lists and counters
+short-title: Lists and counters
 slug: Web/CSS/Guides/Lists
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-lists/

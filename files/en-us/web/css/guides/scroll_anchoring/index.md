@@ -1,5 +1,6 @@
 ---
 title: CSS scroll anchoring
+short-title: Scroll anchoring
 slug: Web/CSS/Guides/Scroll_anchoring
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-scroll-anchoring/

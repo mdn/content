@@ -1,5 +1,6 @@
 ---
 title: CSS box sizing
+short-title: Box sizing
 slug: Web/CSS/Guides/Box_sizing
 page-type: css-module
 spec-urls:

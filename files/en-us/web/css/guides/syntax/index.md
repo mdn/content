@@ -1,5 +1,6 @@
 ---
 title: CSS syntax
+short-title: Syntax
 slug: Web/CSS/Guides/Syntax
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-syntax

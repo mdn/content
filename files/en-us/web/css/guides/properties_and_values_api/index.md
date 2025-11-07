@@ -1,5 +1,6 @@
 ---
 title: CSS properties and values API
+short-title: Properties and values API
 slug: Web/CSS/Guides/Properties_and_values_API
 page-type: css-module
 spec-urls: https://drafts.css-houdini.org/css-properties-values-api-1/

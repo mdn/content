@@ -1,5 +1,6 @@
 ---
 title: Logical properties for floating and positioning
+short-title: For floating and positioning
 slug: Web/CSS/Guides/Logical_properties_and_values/Floating_and_positioning
 page-type: guide
 sidebar: cssref

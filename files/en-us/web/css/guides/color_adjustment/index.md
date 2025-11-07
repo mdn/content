@@ -1,5 +1,6 @@
 ---
 title: CSS color adjustment
+short-title: Color adjustment
 slug: Web/CSS/Guides/Color_adjustment
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-color-adjust-1/

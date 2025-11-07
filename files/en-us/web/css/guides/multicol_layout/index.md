@@ -1,5 +1,6 @@
 ---
 title: CSS multi-column layout
+short-title: Multi-column layout
 slug: Web/CSS/Guides/Multicol_layout
 page-type: css-module
 spec-urls:

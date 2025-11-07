@@ -1,5 +1,6 @@
 ---
 title: CSS conditional rules
+short-title: Conditional rules
 slug: Web/CSS/Guides/Conditional_rules
 page-type: css-module
 spec-urls:

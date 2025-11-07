@@ -1,5 +1,6 @@
 ---
 title: Mastering margin collapsing
+short-title: Margin collapsing
 slug: Web/CSS/Guides/Box_model/Margin_collapsing
 page-type: guide
 sidebar: cssref

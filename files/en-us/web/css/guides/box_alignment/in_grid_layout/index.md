@@ -1,5 +1,6 @@
 ---
 title: Box alignment in grid layout
+short-title: In grid layout
 slug: Web/CSS/Guides/Box_alignment/In_grid_layout
 page-type: guide
 sidebar: cssref

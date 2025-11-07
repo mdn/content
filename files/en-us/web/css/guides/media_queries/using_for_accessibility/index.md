@@ -1,5 +1,6 @@
 ---
 title: Using media queries for accessibility
+short-title: For accessibility
 slug: Web/CSS/Guides/Media_queries/Using_for_accessibility
 page-type: guide
 sidebar: cssref

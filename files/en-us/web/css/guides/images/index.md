@@ -1,5 +1,6 @@
 ---
 title: CSS images
+short-title: Images
 slug: Web/CSS/Guides/Images
 page-type: css-module
 spec-urls:

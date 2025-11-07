@@ -1,5 +1,6 @@
 ---
 title: CSS fonts
+short-title: Fonts
 slug: Web/CSS/Guides/Fonts
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-fonts/

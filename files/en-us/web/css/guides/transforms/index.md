@@ -1,5 +1,6 @@
 ---
 title: CSS transforms
+short-title: Transforms
 slug: Web/CSS/Guides/Transforms
 page-type: css-module
 spec-urls:

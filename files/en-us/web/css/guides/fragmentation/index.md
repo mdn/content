@@ -1,5 +1,6 @@
 ---
 title: CSS fragmentation
+short-title: Fragmentation
 slug: Web/CSS/Guides/Fragmentation
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-break/

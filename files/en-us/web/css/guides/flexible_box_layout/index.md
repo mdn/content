@@ -1,5 +1,6 @@
 ---
 title: CSS flexible box layout
+short-title: Flexible box layout
 slug: Web/CSS/Guides/Flexible_box_layout
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-flexbox/

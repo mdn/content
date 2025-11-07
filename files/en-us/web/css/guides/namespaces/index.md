@@ -1,5 +1,6 @@
 ---
 title: CSS namespaces
+short-title: Namespaces
 slug: Web/CSS/Guides/Namespaces
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-namespaces/

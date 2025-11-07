@@ -1,5 +1,6 @@
 ---
 title: CSS grid layout
+short-title: Grid layout
 slug: Web/CSS/Guides/Grid_layout
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-grid/

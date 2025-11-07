@@ -1,5 +1,6 @@
 ---
 title: CSS overscroll behavior
+short-title: Overscroll behavior
 slug: Web/CSS/Guides/Overscroll_behavior
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-overscroll/

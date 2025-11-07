@@ -1,5 +1,6 @@
 ---
 title: CSS box model
+short-title: Box model
 slug: Web/CSS/Guides/Box_model
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-box-4/

@@ -1,5 +1,6 @@
 ---
 title: Testing media queries programmatically
+short-title: Testing
 slug: Web/CSS/Guides/Media_queries/Testing
 page-type: guide
 browser-compat: api.MediaQueryList

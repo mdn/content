@@ -1,5 +1,6 @@
 ---
 title: CSS scroll snap
+short-title: Scroll snap
 slug: Web/CSS/Guides/Scroll_snap
 page-type: css-module
 spec-urls:

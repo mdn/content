@@ -1,5 +1,6 @@
 ---
 title: CSS scrollbars styling
+short-title: Scrollbars styling
 slug: Web/CSS/Guides/Scrollbars_styling
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-scrollbars/

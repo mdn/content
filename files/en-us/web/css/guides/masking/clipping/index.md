@@ -1,5 +1,6 @@
 ---
 title: Introduction to CSS clipping
+short-title: Clipping
 slug: Web/CSS/Guides/Masking/Clipping
 page-type: guide
 sidebar: cssref

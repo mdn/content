@@ -1,5 +1,6 @@
 ---
 title: Declaring multiple masks
+short-title: Multiple masks
 slug: Web/CSS/Guides/Masking/Multiple_masks
 page-type: guide
 sidebar: cssref

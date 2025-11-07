@@ -1,5 +1,6 @@
 ---
 title: CSS borders and box decorations
+short-title: Borders and box decorations
 slug: Web/CSS/Guides/Borders_and_box_decorations
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-borders-4/

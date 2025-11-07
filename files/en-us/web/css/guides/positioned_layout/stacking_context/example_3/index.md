@@ -1,5 +1,6 @@
 ---
 title: Stacking context example 3
+short-title: Example 3
 slug: Web/CSS/Guides/Positioned_layout/Stacking_context/Example_3
 page-type: guide
 sidebar: cssref

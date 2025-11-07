@@ -1,5 +1,6 @@
 ---
 title: CSS table
+short-title: Table
 slug: Web/CSS/Guides/Table
 page-type: css-module
 spec-urls: https://www.w3.org/TR/CSS22/tables.html

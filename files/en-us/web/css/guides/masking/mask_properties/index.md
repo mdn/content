@@ -1,5 +1,6 @@
 ---
 title: CSS mask properties
+short-title: Mask properties
 slug: Web/CSS/Guides/Masking/Mask_properties
 page-type: guide
 sidebar: cssref

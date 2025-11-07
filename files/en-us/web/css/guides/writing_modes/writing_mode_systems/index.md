@@ -1,5 +1,6 @@
 ---
 title: Introduction to writing mode systems
+short-title: Introduction
 slug: Web/CSS/Guides/Writing_modes/Writing_mode_systems
 page-type: guide
 sidebar: cssref

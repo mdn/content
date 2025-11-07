@@ -1,5 +1,6 @@
 ---
 title: CSS display
+short-title: Display
 slug: Web/CSS/Guides/Display
 page-type: css-module
 spec-urls:

@@ -1,5 +1,6 @@
 ---
 title: CSS cascading and inheritance
+short-title: Cascading and inheritance
 slug: Web/CSS/Guides/Cascade
 page-type: css-module
 spec-urls:

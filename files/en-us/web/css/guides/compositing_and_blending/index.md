@@ -1,5 +1,6 @@
 ---
 title: CSS compositing and blending
+short-title: Compositing and blending
 slug: Web/CSS/Guides/Compositing_and_blending
 page-type: css-module
 spec-urls: https://drafts.fxtf.org/compositing/

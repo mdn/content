@@ -1,5 +1,6 @@
 ---
 title: CSS containment
+short-title: Containment
 slug: Web/CSS/Guides/Containment
 page-type: css-module
 spec-urls:

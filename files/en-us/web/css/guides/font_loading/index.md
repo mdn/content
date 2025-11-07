@@ -1,5 +1,6 @@
 ---
 title: CSS font loading
+short-title: Font loading
 slug: Web/CSS/Guides/Font_loading
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-font-loading/

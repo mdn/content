@@ -1,5 +1,6 @@
 ---
 title: CSS custom highlight API
+short-title: Custom highlight API
 slug: Web/CSS/Guides/Custom_highlight_API
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-highlight-api-1/

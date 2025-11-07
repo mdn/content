@@ -1,5 +1,6 @@
 ---
 title: CSS pseudo-elements
+short-title: Pseudo-elements
 slug: Web/CSS/Guides/Pseudo-elements
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-pseudo/

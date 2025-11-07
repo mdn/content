@@ -1,5 +1,6 @@
 ---
 title: CSS overflow
+short-title: Overflow
 slug: Web/CSS/Guides/Overflow
 page-type: css-module
 spec-urls:

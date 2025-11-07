@@ -1,5 +1,6 @@
 ---
 title: CSS basic user interface
+short-title: Basic user interface
 slug: Web/CSS/Guides/Basic_user_interface
 page-type: css-module
 spec-urls:

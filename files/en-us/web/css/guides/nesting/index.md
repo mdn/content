@@ -1,5 +1,6 @@
 ---
 title: CSS nesting
+short-title: Nesting
 slug: Web/CSS/Guides/Nesting
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-nesting-1/

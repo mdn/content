@@ -1,5 +1,6 @@
 ---
 title: CSS scroll-driven animations
+short-title: Scroll-driven animations
 slug: Web/CSS/Guides/Scroll-driven_animations
 page-type: css-module
 spec-urls: https://drafts.csswg.org/scroll-animations-1/

@@ -1,5 +1,6 @@
 ---
 title: CSS view transitions
+short-title: View transitions
 slug: Web/CSS/Guides/View_transitions
 page-type: css-module
 spec-urls:

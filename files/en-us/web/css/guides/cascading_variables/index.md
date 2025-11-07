@@ -1,5 +1,6 @@
 ---
 title: CSS custom properties for cascading variables
+short-title: Custom properties for cascading variables
 slug: Web/CSS/Guides/Cascading_variables
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-variables/

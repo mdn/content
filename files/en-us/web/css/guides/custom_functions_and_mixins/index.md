@@ -1,5 +1,6 @@
 ---
 title: CSS custom functions and mixins
+short-title: Custom functions and mixins
 slug: Web/CSS/Guides/Custom_functions_and_mixins
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-mixins-1/

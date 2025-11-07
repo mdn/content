@@ -1,5 +1,6 @@
 ---
 title: Introduction to CSS masking
+short-title: Introduction
 slug: Web/CSS/Guides/Masking/Introduction
 page-type: guide
 sidebar: cssref

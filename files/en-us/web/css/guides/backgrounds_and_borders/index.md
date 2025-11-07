@@ -1,5 +1,6 @@
 ---
 title: CSS backgrounds and borders
+short-title: Backgrounds and borders
 slug: Web/CSS/Guides/Backgrounds_and_borders
 page-type: css-module
 spec-urls:

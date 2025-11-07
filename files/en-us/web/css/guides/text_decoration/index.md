@@ -1,5 +1,6 @@
 ---
 title: CSS text decoration
+short-title: Text decoration
 slug: Web/CSS/Guides/Text_decoration
 page-type: css-module
 spec-urls:

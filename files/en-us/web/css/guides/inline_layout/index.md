@@ -1,5 +1,6 @@
 ---
 title: CSS inline layout
+short-title: Inline layout
 slug: Web/CSS/Guides/Inline_layout
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-inline

@@ -6,11 +6,6 @@ sidebar:
     title: CSS
   - type: section
     link: /Web/CSS/Reference
-  - type: listSubPages
-    path: /Web/CSS
-    tags: css-module
-    title: Modules
-    details: closed
   - type: listSubPagesGrouped
     path: /Web/CSS/Reference/Properties
     tags:
@@ -71,6 +66,11 @@ sidebar:
   - type: section
     link: /Web/CSS/Guides
     title: Guides
+  - type: listSubPages
+    path: /Web/CSS/Guides
+    tags: css-module
+    title: Modules
+    details: closed
   - title: Anchor_positioning
     details: closed
     children:
@@ -85,16 +85,13 @@ sidebar:
     details: closed
     children:
       - /Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds
-      - link: /Web/CSS/Guides/Backgrounds_and_borders/Resizing_background_images
-        title: Resizing_background_images
+      - /Web/CSS/Guides/Backgrounds_and_borders/Resizing_background_images
       - /Web/CSS/Guides/Backgrounds_and_borders/Scaling_SVG_backgrounds
   - title: Box alignment
     details: closed
     children:
-      - link: /Web/CSS/Guides/Box_alignment/Overview
-        title: Overview
-      - link: /Web/CSS/Guides/Box_alignment/In_block_abspos_tables
-        title: Box_alignment_in_block_layout
+      - /Web/CSS/Guides/Box_alignment/Overview
+      - /Web/CSS/Guides/Box_alignment/In_block_abspos_tables
       - /Web/CSS/Guides/Box_alignment/In_flexbox
       - /Web/CSS/Guides/Box_alignment/In_grid_layout
       - /Web/CSS/Guides/Box_alignment/In_multi-column_layout
@@ -103,6 +100,10 @@ sidebar:
     children:
       - /Web/CSS/Guides/Box_model/Introduction
       - /Web/CSS/Guides/Box_model/Margin_collapsing
+  - title: Box sizing
+    details: closed
+    children:
+      - /Web/CSS/Guides/Box_sizing/Aspect_ratios
   - title: Cascade
     details: closed
     children:
@@ -113,13 +114,12 @@ sidebar:
       - /Web/CSS/Guides/Cascade/Shorthand_properties
   - type: listSubPages
     path: /Web/CSS/Guides/Cascading_variables
-    title: Custom_properties
+    title: Cascading variables
     details: closed
   - title: Colors
     details: closed
     children:
-      - link: /Web/CSS/Guides/Colors/Applying_color
-        title: Applying_color_to_HTML_elements
+      - /Web/CSS/Guides/Colors/Applying_color
       - /Web/CSS/Guides/Colors/Color_values
       - /Web/CSS/Guides/Colors/Using_relative_colors
       - /Web/CSS/Guides/Colors/Using_color_wisely
@@ -150,7 +150,8 @@ sidebar:
   - title: CSSOM_view
     details: closed
     children:
-      - /Web/API/CSSOM_view_API/Coordinate_systems
+      - link: /Web/API/CSSOM_view_API/Coordinate_systems
+        title: Coordinate_systems
       - /Web/CSS/Guides/CSSOM_view/Viewport_concepts
   - title: Display
     details: closed
@@ -203,6 +204,7 @@ sidebar:
     details: closed
     children:
       - /Web/CSS/Guides/Images/Using_gradients
+      - /Web/CSS/Guides/Images/Using_object-view-box
       - /Web/CSS/Guides/Images/Replaced_element_properties
       - /Web/CSS/Guides/Images/Implementing_image_sprites
   - title: Lists_and_counters
@@ -217,6 +219,13 @@ sidebar:
       - /Web/CSS/Guides/Logical_properties_and_values/Floating_and_positioning
       - /Web/CSS/Guides/Logical_properties_and_values/Margins_borders_padding
       - /Web/CSS/Guides/Logical_properties_and_values/Sizing
+  - title: Masking
+    details: closed
+    children:
+      - /Web/CSS/Guides/Masking/Introduction
+      - /Web/CSS/Guides/Masking/Clipping
+      - /Web/CSS/Guides/Masking/Multiple_masks
+      - /Web/CSS/Guides/Masking/Mask_properties
   - title: Media_queries
     details: closed
     children:
@@ -238,6 +247,9 @@ sidebar:
     details: closed
     children:
       - /Web/CSS/Guides/Positioned_layout/Stacking_context
+      - /Web/CSS/Guides/Positioned_layout/Stacking_context/Example_1
+      - /Web/CSS/Guides/Positioned_layout/Stacking_context/Example_2
+      - /Web/CSS/Guides/Positioned_layout/Stacking_context/Example_3
       - /Web/CSS/Guides/Positioned_layout/Stacking_floating_elements
       - /Web/CSS/Guides/Positioned_layout/Understanding_z-index
       - /Web/CSS/Guides/Positioned_layout/Using_z-index
@@ -250,10 +262,13 @@ sidebar:
     path: /Web/CSS/Guides/Scroll_snap
     title: Scroll_snap
     details: closed
-  - type: listSubPages
-    path: /Web/CSS/Guides/Selectors
-    title: Selectors
+  - title: Selectors
     details: closed
+    children:
+      - /Web/CSS/Guides/Selectors/Selectors_and_combinators
+      - /Web/CSS/Guides/Selectors/Selector_structure
+      - /Web/CSS/Guides/Selectors/Privacy_and_the_visited_selector
+      - /Web/CSS/Guides/Selectors/Using_:target
   - title: Shapes
     details: closed
     children:
@@ -292,6 +307,12 @@ sidebar:
       - /Web/CSS/Guides/Values_and_units/Numeric_data_types
       - /Web/CSS/Guides/Values_and_units/Textual_data_types
       - /Web/CSS/Guides/Values_and_units/Using_math_functions
+      - /Web/CSS/Guides/Values_and_units/Using_typed_arithmetic
+  - title: Writing modes
+    details: closed
+    children:
+      - /Web/CSS/Guides/Writing_modes/Writing_mode_systems
+      - /Web/CSS/Guides/Writing_modes/Vertical_controls
   - type: section
     link: /Web/CSS/How_to
   - link: /Web/CSS/How_to/Layout_cookbook
@@ -327,12 +348,9 @@ l10n:
     Guides: Leitfäden
     Animations: Animationen
     Accessibility_Understanding_colors_and_luminance: "Barrierefreiheit: Farbwerte verstehen"
-    Applying_color_to_HTML_elements: Farben auf HTML-Elemente anwenden
     At-rules: At-Regeln
     Backgrounds_and_Borders: Hintergründe und Rahmen
-    Resizing_background_images: Hintergrundbilder skalieren
     Box alignment: Box-Ausrichtung
-    Box_alignment_in_block_layout: Box-Ausrichtung im Block-Layout
     Box_model: Box-Modell
     Colors: Farben
     Color_contrast: "Barrierefreiheit: Farbkontrast"
@@ -366,13 +384,10 @@ l10n:
     Types: Typen
   en-US:
     Accessibility_Understanding_colors_and_luminance: "Accessibility: Colors and luminance"
-    Applying_color_to_HTML_elements: Applying color to HTML
     Guides: Guides
     Anchor_positioning: Anchor positioning
     Animations: Animations
     Backgrounds_and_Borders: Backgrounds and borders
-    Resizing_background_images: Resizing background images
-    Box_alignment_in_block_layout: Box alignment in block layout
     Box_model: Box model
     Cascade: Cascade
     Colors: Colors
@@ -380,7 +395,7 @@ l10n:
     Columns: Columns
     Conditional_rules: Conditional rules
     Containment: Containment
-    Custom_properties: Custom properties
+    Coordinate_systems: Coordinate systems (API)
     CSSOM_view: CSSOM view
     Display: Display
     Filter_effects: Filter effects
@@ -407,8 +422,6 @@ l10n:
     Guides: Guides
     Animations: Animations
     Backgrounds_and_Borders: Arrière-plans et bordures
-    Resizing_background_images: Redimensionner les images d'arrière-plan
-    Box_alignment_in_block_layout: Alignement des boîtes avec la disposition en bloc
     Box_model: Modèle de boîte
     Columns: Colonnes
     Conditional_rules: Règles conditionnelles
@@ -430,15 +443,12 @@ l10n:
     Tools: Outils
   ja:
     Accessibility_Understanding_colors_and_luminance: "アクセシビリティ: 色と輝度"
-    Applying_color_to_HTML_elements: HTML への色の適用
     At-rules: アットルール
     Guides: ガイド
     Anchor_positioning: アンカー位置指定
     Animations: アニメーション
     Backgrounds_and_Borders: 背景と境界
-    Resizing_background_images: 背景画像の拡大縮小
     Box alignment: ボックス配置
-    Box_alignment_in_block_layout: ブロックレイアウトでのボックス配置
     Box_model: ボックスモデル
     Cascade: カスケード
     Colors: 色
@@ -447,7 +457,6 @@ l10n:
     Combinators: 結合子
     Conditional_rules: 条件付きルール
     Containment: コンテナー
-    Custom_properties: カスタムプロパティ
     CSSOM_view: CSSOM view
     Display: 表示方法
     Filter_effects: フィルター効果
@@ -462,7 +471,6 @@ l10n:
     Modules: モジュール
     Nesting: 入れ子のスタイルルール
     Overflow: オーバーフロー
-    Overview: 概要
     Positioning: 位置指定
     Properties: プロパティ
     Pseudo-classes: 擬似クラス
@@ -483,8 +491,6 @@ l10n:
     Guides: 안내서
     Animations: 애니메이션
     Backgrounds_and_Borders: 배경과 보더
-    Resizing_background_images: 배경 이미지 크기 조정하기
-    Box_alignment_in_block_layout: 블록 레이아웃 박스 정렬하기
     Box_model: 박스 모델
     Columns: 열
     Conditional_rules: CSS에서 규칙 정의하기
@@ -511,8 +517,6 @@ l10n:
     Guides: Руководства
     Animations: Анимации
     Backgrounds_and_Borders: Фоны и границы
-    Resizing_background_images: Изменение размера фоновых изображений
-    Box_alignment_in_block_layout: Выравнивание в блочной раскладке
     Box_model: Блочная модель
     Columns: Колонки
     Conditional_rules: Условные конструкции
@@ -540,16 +544,13 @@ l10n:
     Animations: 动画
     At-rules: At 规则
     Backgrounds_and_Borders: 背景和边框
-    Resizing_background_images: 调整背景图片的大小
     Box alignment: 盒对齐
-    Box_alignment_in_block_layout: 块布局中的盒对齐方式
     Box_model: 盒模型
     Cascade: 层叠
     Colors: 颜色
     Color_contrast: Web 无障碍：色彩对比度
     Columns: 多列
     Conditional_rules: 条件规则
-    Custom_properties: 自定义属性
     CSSOM_view: CSS 对象模型视图
     Display: 流式布局
     Filter_effects: 滤镜效果
@@ -573,7 +574,6 @@ l10n:
     Transitions: 过渡
     Tools: 工具
     Accessibility_Understanding_colors_and_luminance: 无障碍：理解颜色和亮度
-    Applying_color_to_HTML_elements: 为 HTML 元素应用颜色
     Modules: 模块
     Pseudo-classes: 伪类
     Pseudo-elements: 伪元素

@@ -1,5 +1,6 @@
 ---
 title: CSS anchor positioning
+short-title: Anchor positioning
 slug: Web/CSS/Guides/Anchor_positioning
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-anchor-position-1/

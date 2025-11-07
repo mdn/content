@@ -1,5 +1,6 @@
 ---
 title: CSS ruby layout
+short-title: Ruby layout
 slug: Web/CSS/Guides/Ruby_layout
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-ruby/

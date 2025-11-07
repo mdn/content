@@ -1,5 +1,6 @@
 ---
 title: CSS environment variables
+short-title: Environment variables
 slug: Web/CSS/Guides/Environment_variables
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-env-1
