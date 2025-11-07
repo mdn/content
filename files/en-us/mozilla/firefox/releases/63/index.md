@@ -33,12 +33,12 @@ This article provides information about the changes in Firefox 63 that will affe
 
 - Support for the {{CSSxRef(":defined")}} pseudo-class has been added ([Firefox bug 1331334](https://bugzil.la/1331334)).
 - Support for {{CSSxRef("row-gap")}}, {{CSSxRef("column-gap")}} and {{CSSxRef("gap")}} have been added in [Flexbox layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox#the_gap_properties) ([Firefox bug 1398483](https://bugzil.la/1398483)).
-- Re-enabled support for [webkit-prefixed pixel-density @media queries](/en-US/docs/Web/CSS/@media/-webkit-device-pixel-ratio) ([Firefox bug 1444139](https://bugzil.la/1444139)).
+- Re-enabled support for [webkit-prefixed pixel-density @media queries](/en-US/docs/Web/CSS/Reference/At-rules/@media/-webkit-device-pixel-ratio) ([Firefox bug 1444139](https://bugzil.la/1444139)).
 - Support added for the [CSS Flexible Box Layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) (Flexbox) properties {{CSSxRef("align-self")}}, {{CSSxRef("align-content")}}, and {{CSSxRef("align-items")}} as well as the {{CSSxRef("justify-content")}} property ([Firefox bug 1472843](https://bugzil.la/1472843)).
 - Implemented the `path()` function for {{CSSxRef("offset-path")}} ([Firefox bug 1429298](https://bugzil.la/1429298)).
 - Implemented syntax improvements from the Media Queries Level 4 specification, notably [nested boolean expressions](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#creating_complex_media_queries) and the [range syntax](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#targeting_media_features) ([Firefox bug 1422225](https://bugzil.la/1422225)).
 - Renamed `offset-*` properties to {{CSSxRef("inset-block-start")}}, {{CSSxRef("inset-block-end")}}, {{CSSxRef("inset-inline-start")}}, and {{CSSxRef("inset-inline-end")}} ([Firefox bug 1464782](https://bugzil.la/1464782)).
-- Added support for the [prefers-reduced-motion](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) media feature ([Firefox bug 1365045](https://bugzil.la/1365045), [Firefox bug 1475462](https://bugzil.la/1475462)).
+- Added support for the [prefers-reduced-motion](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) media feature ([Firefox bug 1365045](https://bugzil.la/1365045), [Firefox bug 1475462](https://bugzil.la/1475462)).
 - Added flow relative values (`block`, `inline`) for the {{CSSxRef("resize")}} property ([Firefox bug 1464786](https://bugzil.la/1464786)).
 - Implemented flexbox layout for `safe` & `unsafe` values in {{CSSxRef("align-self")}}, {{CSSxRef("align-content")}}, and {{CSSxRef("justify-content")}} ([Firefox bug 1297774](https://bugzil.la/1297774)).
 - The [logical properties](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) (where appropriate) are now animatable ([Firefox bug 1309752](https://bugzil.la/1309752)).

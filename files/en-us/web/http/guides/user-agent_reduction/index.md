@@ -68,7 +68,7 @@ The major browser version number shows correctly, but the minor version numbers 
 
 ## Requesting UA information via client hints
 
-You may still have code that relies on detailed UA string data, which can't be coverted to use feature detection or progressive enhancement. Examples include fine-grained logging, fraud prevention measures, or a software help site that serves different content based on the user's device type.
+You may still have code that relies on detailed UA string data, which can't be converted to use feature detection or progressive enhancement. Examples include fine-grained logging, fraud prevention measures, or a software help site that serves different content based on the user's device type.
 
 If this is the case, you can still access detailed UA string data via [`Sec-CH-UA-*`](/en-US/docs/Web/HTTP/Reference/Headers#user_agent_client_hints) headers (also known as **User-Agent client hints**). The headers provide a safer, more privacy-preserving way to send such information because servers have to opt in to the pieces of information they want, rather it being sent all the time through the `User-Agent` string. It also provides access to a wider selection of information.
 

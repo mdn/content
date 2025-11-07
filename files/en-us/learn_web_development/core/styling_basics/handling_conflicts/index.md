@@ -130,7 +130,7 @@ span {
 Some properties do not inherit — for example {{cssxref("width")}} If you set a `width` of `50%` on an element, all of its descendants do not get a width of `50%` of their parent's `width`. If this was the case, CSS would be very frustrating to use!
 
 > [!NOTE]
-> On MDN CSS property reference pages, you can find a technical information box called "Formal definition", which lists a number of data points about that property, including whether it is inherited or not. See the [color property Formal definition section](/en-US/docs/Web/CSS/color#formal_definition) as an example.
+> On MDN CSS property reference pages, you can find a technical information box called "Formal definition", which lists a number of data points about that property, including whether it is inherited or not. See the [color property Formal definition section](/en-US/docs/Web/CSS/Reference/Properties/color#formal_definition) as an example.
 
 ### Understanding how the concepts work together
 
@@ -198,7 +198,7 @@ CSS provides five special universal property values for controlling inheritance.
 - {{cssxref("revert")}}
   - : Resets the property value applied to a selected element to the browser's default styling rather than the defaults applied to that property. This value acts like {{cssxref("unset")}} in many cases.
 - {{cssxref("revert-layer")}}
-  - : Resets the property value applied to a selected element to the value established in a previous [cascade layer](/en-US/docs/Web/CSS/@layer).
+  - : Resets the property value applied to a selected element to the value established in a previous [cascade layer](/en-US/docs/Web/CSS/Reference/At-rules/@layer).
 - {{cssxref("unset")}}
   - : Resets the property to its natural value, which means that if the property is naturally inherited it acts like `inherit`, otherwise it acts like `initial`.
 
@@ -247,7 +247,7 @@ body {
 
 ### Resetting all property values
 
-The CSS shorthand property [`all`](/en-US/docs/Web/CSS/all) can be used to apply one of these inheritance values to (almost) all properties at once. Its value can be any one of the inheritance values (`inherit`, `initial`, `revert`, `revert-layer`, or `unset`). It's a convenient way to undo changes made to styles so that you can get back to a known starting point before beginning new changes.
+The CSS shorthand property [`all`](/en-US/docs/Web/CSS/Reference/Properties/all) can be used to apply one of these inheritance values to (almost) all properties at once. Its value can be any one of the inheritance values (`inherit`, `initial`, `revert`, `revert-layer`, or `unset`). It's a convenient way to undo changes made to styles so that you can get back to a known starting point before beginning new changes.
 
 In the below example, we have two blockquotes. The first has styling applied to the blockquote element itself. The second has a class applied to the blockquote, which sets the value of `all` to `unset`.
 
@@ -337,7 +337,7 @@ The amount of specificity a selector has is measured using three different value
 - **Elements**: Score one in this column (1 point) for each element selector or pseudo-element contained inside the overall selector.
 
 > [!NOTE]
-> The universal selector ([`*`](/en-US/docs/Web/CSS/Universal_selectors)), [combinators](/en-US/docs/Learn_web_development/Core/Styling_basics/Combinators) (`+`, `>`, `~`, ' '), and specificity adjustment selector ([`:where()`](/en-US/docs/Web/CSS/:where)) along with its parameters, have no effect on specificity.
+> The universal selector ([`*`](/en-US/docs/Web/CSS/Reference/Selectors/Universal_selectors)), [combinators](/en-US/docs/Learn_web_development/Core/Styling_basics/Combinators) (`+`, `>`, `~`, ' '), and specificity adjustment selector ([`:where()`](/en-US/docs/Web/CSS/Reference/Selectors/:where)) along with its parameters, have no effect on specificity.
 
 The following table shows a few isolated examples to get you in the mood. Try going through these, and make sure you understand why they have the specificity that we have given them. We've not covered selectors in detail yet, but you can find details of each selector on the MDN [selectors reference](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators).
 
@@ -435,7 +435,7 @@ So what's going on here? First of all, we are only interested in the first seven
 
 ID selectors have high specificity. This means styles applied based on matching an ID selector will overrule styles applied based on other selectors, including class and type selectors. Because an ID can only occur once on a page and because of the high specificity of ID selectors, it is preferable to add a class to an element instead of an ID.
 
-If using the ID is the only way to target the element — perhaps because you do not have access to the markup and cannot edit it — consider using the ID within an [attribute selector](/en-US/docs/Web/CSS/Attribute_selectors), such as `p[id="header"]`.
+If using the ID is the only way to target the element — perhaps because you do not have access to the markup and cannot edit it — consider using the ID within an [attribute selector](/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors), such as `p[id="header"]`.
 
 ### Inline styles
 

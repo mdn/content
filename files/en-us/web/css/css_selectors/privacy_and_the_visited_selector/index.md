@@ -31,7 +31,7 @@ You can style visited links, but there are limits to which styles you can use. O
 - {{ cssxref("text-emphasis-color") }}
 - Color parts of the {{SVGAttr("fill")}} and {{SVGAttr("stroke")}} attributes
 
-In addition, even for the styles mentioned above, transparency differences between unvisited and visited links are not applied. This restriction prevents the use of the `alpha` parameter in various {{cssxref("color_value", "&lt;color&gt;")}} functions or the [`transparent`](/en-US/docs/Web/CSS/named-color#transparent) keyword to distinguish between the two states.
+In addition, even for the styles mentioned above, transparency differences between unvisited and visited links are not applied. This restriction prevents the use of the `alpha` parameter in various {{cssxref("color_value", "&lt;color&gt;")}} functions or the [`transparent`](/en-US/docs/Web/CSS/Reference/Values/named-color#transparent) keyword to distinguish between the two states.
 
 Here is an example of how to use styles with the aforementioned restrictions:
 

@@ -37,9 +37,9 @@ There is also a `marker-side` property, which is yet to be fully defined or impl
 
 ### Data types
 
-- [`<counter>`](/en-US/docs/Web/CSS/content#counter)
-- [`<counter-name>`](/en-US/docs/Web/CSS/counter#counter-name)
-- [`<counter-style>`](/en-US/docs/Web/CSS/counter#counter-style)
+- [`<counter>`](/en-US/docs/Web/CSS/Reference/Properties/content#counter)
+- [`<counter-name>`](/en-US/docs/Web/CSS/Reference/Values/counter#counter-name)
+- [`<counter-style>`](/en-US/docs/Web/CSS/Reference/Values/counter#counter-style)
 
 ## Guides
 
@@ -53,8 +53,8 @@ There is also a `marker-side` property, which is yet to be fully defined or impl
 
 - [CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles)
   - {{cssxref("@counter-style")}} at-rule
-  - [`<counter-style-name>`](/en-US/docs/Web/CSS/@counter-style#counter-style-name) data type
-  - [`<symbol>`](/en-US/docs/Web/CSS/@counter-style/symbols#values) data type
+  - [`<counter-style-name>`](/en-US/docs/Web/CSS/Reference/At-rules/@counter-style#counter-style-name) data type
+  - [`<symbol>`](/en-US/docs/Web/CSS/Reference/At-rules/@counter-style/symbols#values) data type
   - {{cssxref("symbols", "symbols()")}} function
 
 - {{HTMLElement("ol")}} `start`, `reversed`, and `type` attributes

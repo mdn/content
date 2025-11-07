@@ -47,18 +47,18 @@ The **`PaymentRequestEvent`** interface of the {{domxref("Payment Handler API", 
 When the {{domxref("PaymentRequest.show()")}} method is invoked, a {{domxref("ServiceWorkerGlobalScope.paymentrequest_event", "paymentrequest")}} event is fired on the service worker of the payment app. This event is listened for inside the payment app's service worker to begin the next stage of the payment process.
 
 ```js
-let payment_request_event;
+let paymentRequestEvent;
 let resolver;
 let client;
 
 // `self` is the global object in service worker
 self.addEventListener("paymentrequest", async (e) => {
-  if (payment_request_event) {
+  if (paymentRequestEvent) {
     // If there's an ongoing payment transaction, reject it.
     resolver.reject();
   }
   // Preserve the event for future use
-  payment_request_event = e;
+  paymentRequestEvent = e;
 
   // …
 });

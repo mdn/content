@@ -126,7 +126,7 @@ p1.addEventListener("drop", dropHandler);
 
 Outside of `dragstart` and `drop` events, the data store is in _protected mode_, disallowing code from accessing any payload. Namely:
 
-- All [modification](#modifying_the_drag_data_store) attempts silently do nothing or throw an `DOMException` (for `items.add()` and `items.remove()` only).
+- All [modification](#modifying_the_drag_data_store) attempts silently do nothing or throw a `DOMException` (for `items.add()` and `items.remove()` only).
 - `DataTransfer.getData()` always returns the empty string.
 - `DataTransfer.files` always returns an empty list.
 - `DataTransferItem.getAsString()` returns without ever calling the callback.

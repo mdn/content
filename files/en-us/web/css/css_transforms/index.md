@@ -325,7 +325,7 @@ Use the sliders in the example below to modify the translation, rotation, scale,
               <span><code>backface-visibility</code></span>
               <input
                 type="checkbox"
-                checked="checked"
+                checked
                 data-default="checked"
                 id="backfaceVisibilityCheckbox" />
             </label>
@@ -654,9 +654,9 @@ updateTransform();
 
 {{EmbedLiveSample("transforms", "", "850px")}}
 
-You can also use the `perspective` slider to modify the [`perspective`](/en-US/docs/Web/CSS/perspective) property of the cube's container, which determines the distance between you and the `z=0` plane.
+You can also use the `perspective` slider to modify the [`perspective`](/en-US/docs/Web/CSS/Reference/Properties/perspective) property of the cube's container, which determines the distance between you and the `z=0` plane.
 
-The [`perspective-origin`](/en-US/docs/Web/CSS/perspective-origin) sliders determine where you, the viewer, are looking into the 3D space for purposes of determining the view's _vanishing point_. This vanishing point is indicated by a small red dot. You can imagine modifying these sliders as physically moving your head up, down, left, and right to see different parts of the cube without moving the cube itself.
+The [`perspective-origin`](/en-US/docs/Web/CSS/Reference/Properties/perspective-origin) sliders determine where you, the viewer, are looking into the 3D space for purposes of determining the view's _vanishing point_. This vanishing point is indicated by a small red dot. You can imagine modifying these sliders as physically moving your head up, down, left, and right to see different parts of the cube without moving the cube itself.
 
 The `backface-visibility` checkbox determines whether the cube's back faces are set to `visible` or `hidden`.
 
@@ -722,28 +722,28 @@ The cube in the above example is comprised of six `<div>` elements, all of which
 ## Related concepts
 
 - CSS Properties:
-  - [`animation`](/en-US/docs/Web/CSS/animation)
-  - [`background-position`](/en-US/docs/Web/CSS/background-position)
-  - [`clip`](/en-US/docs/Web/CSS/clip)
-  - [`clip-path`](/en-US/docs/Web/CSS/clip-path)
-  - [`contain`](/en-US/docs/Web/CSS/contain)
-  - [`content-visibility`](/en-US/docs/Web/CSS/content-visibility)
-  - [`isolation`](/en-US/docs/Web/CSS/isolation)
-  - [`mask`](/en-US/docs/Web/CSS/mask)
-  - [`mask-border-source`](/en-US/docs/Web/CSS/mask-border-source)
-  - [`mask-image`](/en-US/docs/Web/CSS/mask-image)
-  - [`mix-blend-mode`](/en-US/docs/Web/CSS/mix-blend-mode)
-  - [`opacity`](/en-US/docs/Web/CSS/opacity)
-  - [`overflow`](/en-US/docs/Web/CSS/overflow)
-  - [`transition`](/en-US/docs/Web/CSS/transition)
-  - [`visibility`](/en-US/docs/Web/CSS/visibility)
+  - [`animation`](/en-US/docs/Web/CSS/Reference/Properties/animation)
+  - [`background-position`](/en-US/docs/Web/CSS/Reference/Properties/background-position)
+  - [`clip`](/en-US/docs/Web/CSS/Reference/Properties/clip)
+  - [`clip-path`](/en-US/docs/Web/CSS/Reference/Properties/clip-path)
+  - [`contain`](/en-US/docs/Web/CSS/Reference/Properties/contain)
+  - [`content-visibility`](/en-US/docs/Web/CSS/Reference/Properties/content-visibility)
+  - [`isolation`](/en-US/docs/Web/CSS/Reference/Properties/isolation)
+  - [`mask`](/en-US/docs/Web/CSS/Reference/Properties/mask)
+  - [`mask-border-source`](/en-US/docs/Web/CSS/Reference/Properties/mask-border-source)
+  - [`mask-image`](/en-US/docs/Web/CSS/Reference/Properties/mask-image)
+  - [`mix-blend-mode`](/en-US/docs/Web/CSS/Reference/Properties/mix-blend-mode)
+  - [`opacity`](/en-US/docs/Web/CSS/Reference/Properties/opacity)
+  - [`overflow`](/en-US/docs/Web/CSS/Reference/Properties/overflow)
+  - [`transition`](/en-US/docs/Web/CSS/Reference/Properties/transition)
+  - [`visibility`](/en-US/docs/Web/CSS/Reference/Properties/visibility)
 - Data types:
-  - [`<angle>`](/en-US/docs/Web/CSS/angle)
+  - [`<angle>`](/en-US/docs/Web/CSS/Reference/Values/angle)
   - {{cssxref("length-percentage")}}
   - {{cssxref("length")}}
-  - [`<number>`](/en-US/docs/Web/CSS/number)
+  - [`<number>`](/en-US/docs/Web/CSS/Reference/Values/number)
   - {{cssxref("percentage")}}
-  - [`<position>`](/en-US/docs/Web/CSS/position_value)
+  - [`<position>`](/en-US/docs/Web/CSS/Reference/Values/position_value)
 - Glossary terms:
   - [Interpolation](/en-US/docs/Glossary/Interpolation)
   - [Stacking context](/en-US/docs/Glossary/Stacking_context)

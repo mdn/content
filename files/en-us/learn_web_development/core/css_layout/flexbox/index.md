@@ -169,9 +169,9 @@ This single declaration gives us everything we need. Incredible, right? We have 
 
 Let's recap what's happening here. Adding a {{cssxref("display")}} value of `flex` to an element makes it a flex container. The container is displayed as [Block-level content](/en-US/docs/Glossary/Block-level_content) in terms of how it interacts with the rest of the page. When the element is converted to a flex container, its children are converted to (and laid out as) flex items.
 
-You can make the container inline using an [outside `display` value](/en-US/docs/Web/CSS/display#outside) (e.g., `display: inline flex`), which affects how the container itself is laid out in the page.
+You can make the container inline using an [outside `display` value](/en-US/docs/Web/CSS/Reference/Properties/display#outside) (e.g., `display: inline flex`), which affects how the container itself is laid out in the page.
 The legacy `inline-flex` display value displays the container as inline as well.
-We'll focus on how the contents of the container behave in this tutorial, but if you want to see the effect of inline versus block layout, you can have a look at the [value comparison](/en-US/docs/Web/CSS/display#display_value_comparison) on the `display` property page.
+We'll focus on how the contents of the container behave in this tutorial, but if you want to see the effect of inline versus block layout, you can have a look at the [value comparison](/en-US/docs/Web/CSS/Reference/Properties/display#display_value_comparison) on the `display` property page.
 
 The next sections explain in more detail what flex items are and what happens inside an element when you make it a flex container.
 
@@ -696,7 +696,7 @@ Have a look at what effect this has and remove it again when you've finished.
 - The value we've used above, `space-around`, is useful — it distributes all the items evenly along the main axis with a bit of space left at either end.
 - There is another value, `space-between`, which is very similar to `space-around` except that it doesn't leave any space at either end.
 
-The [`justify-items`](/en-US/docs/Web/CSS/justify-items) property is ignored in flexbox layouts.
+The [`justify-items`](/en-US/docs/Web/CSS/Reference/Properties/justify-items) property is ignored in flexbox layouts.
 
 We'd like to encourage you to play with these values to see how they work before you continue.
 

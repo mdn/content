@@ -24,7 +24,7 @@ Add the following to your {{HTMLElement("head")}} tag.
 
 ## Using media queries and @page to control printed content
 
-You can use the CSS {{cssxref("@media")}} at-rule to set different styles for your webpage when it is printed on paper or as a PDF versus when it is displayed on the screen. The `print` [media type](/en-US/docs/Web/CSS/@media#media_types) sets the styles for printed media; these styles will only be used for printed content.
+You can use the CSS {{cssxref("@media")}} at-rule to set different styles for your webpage when it is printed on paper or as a PDF versus when it is displayed on the screen. The `print` [media type](/en-US/docs/Web/CSS/Reference/At-rules/@media#media_types) sets the styles for printed media; these styles will only be used for printed content.
 
 Add this at the end of your stylesheet. Note that [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity) and precedence rules still apply:
 

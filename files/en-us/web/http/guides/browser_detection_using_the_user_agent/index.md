@@ -94,7 +94,7 @@ if ("virtualKeyboard" in navigator) {
 }
 ```
 
-For styles, you can also do feature detection in CSS using the [`@supports`](/en-US/docs/Web/CSS/@supports) at-rule, combined with the `not` keyword if you want to check for the absence of a feature.
+For styles, you can also do feature detection in CSS using the [`@supports`](/en-US/docs/Web/CSS/Reference/At-rules/@supports) at-rule, combined with the `not` keyword if you want to check for the absence of a feature.
 See [Using feature queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries) for information on using this in CSS.
 
 ```css
@@ -143,7 +143,7 @@ Client hints are better than UA sniffing for detecting Blink-based browsers in t
 Changing site functionality based on client hints is still a bad idea!
 Where possible you should instead use feature detection and progressive enhancement [as described above](#why_feature_detection_is_better_than_browser_detection).
 
-For example, in the HTTP mechanism, the server includes a {{httpheader("Accept-CH")}} header along with a list of headers that should be included by the client in subsequent requests.
+For example, in the HTTP mechanism, the server includes an {{httpheader("Accept-CH")}} header along with a list of headers that should be included by the client in subsequent requests.
 Let's assume the server sends this response to the client:
 
 ```http

@@ -80,7 +80,7 @@ In this example:
 - The cursor is placed in the Name field of the form the first time the page is loaded. In Firefox 1.5, when the user navigates back to the page, the cursor remains in the field it was when the user navigated away from the page. In other browsers, the cursor moves back to the Name field.
 
 ```html
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
   <head>
     <title>Order query Firefox 1.5 Example</title>

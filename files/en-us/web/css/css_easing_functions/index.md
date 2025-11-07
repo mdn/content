@@ -23,9 +23,9 @@ Alternatively, you may want an animation to move forward in distinct steps, to c
 ### data types
 
 - {{cssxref("easing-function")}}
-- [`<linear-easing-function>`](/en-US/docs/Web/CSS/easing-function#linear-easing-function)
-- [`<cubic-bezier-easing-function>`](/en-US/docs/Web/CSS/easing-function#cubic-bezier-easing-function)
-- [`<step-easing-function>`](/en-US/docs/Web/CSS/easing-function#step-easing-function)
+- [`<linear-easing-function>`](/en-US/docs/Web/CSS/Reference/Values/easing-function#linear-easing-function)
+- [`<cubic-bezier-easing-function>`](/en-US/docs/Web/CSS/Reference/Values/easing-function#cubic-bezier-easing-function)
+- [`<step-easing-function>`](/en-US/docs/Web/CSS/Reference/Values/easing-function#step-easing-function)
 
 ### Terms and glossary definitions
 
@@ -34,7 +34,7 @@ Alternatively, you may want an animation to move forward in distinct steps, to c
 
 ## Guides
 
-- [CSS value functions: easing functions](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#easing_functions)
+- [CSS value functions: easing functions](/en-US/docs/Web/CSS/Reference/Values/Functions#easing_functions)
   - : The CSS statements that invoke special data processing or calculations to return a CSS value for a CSS property.
 
 ## Related concepts
@@ -53,5 +53,5 @@ Alternatively, you may want an animation to move forward in distinct steps, to c
 
 ## See also
 
-- [CSS value functions](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)
+- [CSS value functions](/en-US/docs/Web/CSS/Reference/Values/Functions)
 - {{cssxref("will-change")}} CSS property

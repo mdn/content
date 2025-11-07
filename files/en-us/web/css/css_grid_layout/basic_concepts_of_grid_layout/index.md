@@ -143,7 +143,7 @@ We have now created a grid with three 200-pixel-wide column tracks. The child it
 
 ### The fr unit
 
-Tracks can be defined using any length unit. Grid also introduces an additional length unit to help us create flexible grid tracks. The [`fr`](/en-US/docs/Web/CSS/flex_value) unit represents a fraction of the available space in the grid container. The next grid definition would create three equal width tracks that grow and shrink according to the available space.
+Tracks can be defined using any length unit. Grid also introduces an additional length unit to help us create flexible grid tracks. The [`fr`](/en-US/docs/Web/CSS/Reference/Values/flex_value) unit represents a fraction of the available space in the grid container. The next grid definition would create three equal width tracks that grow and shrink according to the available space.
 
 ```html
 <div class="wrapper">
@@ -272,7 +272,7 @@ In this final example, we mix absolute sized tracks with `fr` units. The first t
 
 ### Track listings with repeat() notation
 
-Large grids with many tracks can use the [`repeat()`](/en-US/docs/Web/CSS/repeat) notation, to repeat all or a section of the list of grid tracks. For example the grid definition:
+Large grids with many tracks can use the [`repeat()`](/en-US/docs/Web/CSS/Reference/Values/repeat) notation, to repeat all or a section of the list of grid tracks. For example the grid definition:
 
 ```css
 .wrapper {

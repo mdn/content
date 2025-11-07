@@ -22,13 +22,13 @@ For example, the value of `containerName` for the {{cssxref("@container")}} belo
 
 ## Value
 
-A string that contains the [`container-name`](/en-US/docs/Web/CSS/container-name) of the {{cssxref("@container")}} associated with this {{domxref("CSSContainerRule")}}.
+A string that contains the [`container-name`](/en-US/docs/Web/CSS/Reference/Properties/container-name) of the {{cssxref("@container")}} associated with this {{domxref("CSSContainerRule")}}.
 If the `@container` is not [named](/en-US/docs/Web/API/CSSContainerRule#unnamed_container_rule), the function returns the empty string (`""`).
 
 ## Examples
 
 The example below defines a named {{cssxref("@container")}} rule, and displays the properties of the associated {{domxref("CSSContainerRule")}}.
-The CSS is very similar to that in the `@container` example [Creating named container contexts](/en-US/docs/Web/CSS/@container#creating_named_container_contexts).
+The CSS is very similar to that in the `@container` example [Creating named container contexts](/en-US/docs/Web/CSS/Reference/At-rules/@container#creating_named_container_contexts).
 
 ```html hidden
 <div id="log">

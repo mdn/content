@@ -9,7 +9,7 @@ sidebar: cssref
 
 Media queries are used for the following:
 
-- To conditionally apply styles with the [CSS](/en-US/docs/Web/CSS) {{cssxref("@media")}} and {{cssxref("@import")}} [at-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rule).
+- To conditionally apply styles with the [CSS](/en-US/docs/Web/CSS) {{cssxref("@media")}} and {{cssxref("@import")}} [at-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rules).
 - To target specific media for the {{HTMLElement("style")}}, {{HTMLElement("link")}}, {{HTMLElement("source")}}, and other [HTML](/en-US/docs/Web/HTML) elements with the `media=` or `sizes="` attributes.
 - To [test and monitor media states](/en-US/docs/Web/CSS/CSS_media_queries/Testing_media_queries) using the {{domxref("Window.matchMedia()")}} and {{domxref("EventTarget.addEventListener()")}} methods.
 
@@ -21,11 +21,11 @@ Media queries are used for the following:
 A media query is composed of an optional _media type_ and any number of _media feature_ expressions, which may optionally be combined in various ways using _logical operators_.
 Media queries are case-insensitive.
 
-- [Media types](/en-US/docs/Web/CSS/@media#media_types) define the broad category of device for which the media query applies: `all`, `print`, `screen`.
+- [Media types](/en-US/docs/Web/CSS/Reference/At-rules/@media#media_types) define the broad category of device for which the media query applies: `all`, `print`, `screen`.
 
   The type is optional (assumed to be `all`) except when using the `only` logical operator.
 
-- [Media features](/en-US/docs/Web/CSS/@media#media_features) describe a specific characteristic of the {{glossary("user agent")}}, output device, or environment:
+- [Media features](/en-US/docs/Web/CSS/Reference/At-rules/@media#media_features) describe a specific characteristic of the {{glossary("user agent")}}, output device, or environment:
   - {{cssxref("@media/any-hover", "any-hover")}}
   - {{cssxref("@media/any-pointer", "any-pointer")}}
   - {{cssxref("@media/aspect-ratio", "aspect-ratio")}}
@@ -62,7 +62,7 @@ Media queries are case-insensitive.
   Media feature expressions test for their presence or value, and are entirely optional.
   Each media feature expression must be surrounded by parentheses.
 
-- [Logical operators](/en-US/docs/Web/CSS/@media#logical_operators) can be used to compose a complex media query: `not`, `and`, and `only`.
+- [Logical operators](/en-US/docs/Web/CSS/Reference/At-rules/@media#logical_operators) can be used to compose a complex media query: `not`, `and`, and `only`.
   You can also combine multiple media queries into a single rule by separating them with commas.
 
 A media query computes to `true` when the media type (if specified) matches the device on which a document is being displayed _and_ all media feature expressions compute as true.
@@ -94,7 +94,7 @@ For instance, this `@media` rule uses two media queries to target both screen an
 }
 ```
 
-See [media types](/en-US/docs/Web/CSS/@media#media_types) for the list of available media types.
+See [media types](/en-US/docs/Web/CSS/Reference/At-rules/@media#media_types) for the list of available media types.
 Because media types describe devices in very broad terms, most of the originally-defined media types were deprecated, with just `screen`, `print`, and `all` remaining. To target more specific attributes, use _media features_ instead.
 
 ## Targeting media features
@@ -181,7 +181,7 @@ For example, this CSS will apply to any device with a color screen:
 
 If a feature doesn't apply to the device on which the browser is running, expressions involving that media feature are always false.
 
-For more [Media feature](/en-US/docs/Web/CSS/@media#media_features) examples, please see the reference page for each specific feature.
+For more [Media feature](/en-US/docs/Web/CSS/Reference/At-rules/@media#media_features) examples, please see the reference page for each specific feature.
 
 ## Creating complex media queries
 
@@ -317,7 +317,7 @@ For example, the following queries are both valid:
 
 ## See also
 
-- [@media](/en-US/docs/Web/CSS/@media)
+- [@media](/en-US/docs/Web/CSS/Reference/At-rules/@media)
 - [Container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries)
 - [Testing media queries programmatically](/en-US/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
 - [CSS Animations Between Media Queries](https://davidwalsh.name/animate-media-queries)

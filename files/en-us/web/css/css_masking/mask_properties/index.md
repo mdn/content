@@ -114,7 +114,7 @@ div {
 }
 ```
 
-We declare a [`repeating-linear-gradient`](/en-US/docs/Web/CSS/gradient/repeating-linear-gradient) with red, transparent, and semi-transparent red diagonal stripes. This gradient is used as our mask and, for the last container, as the background image:
+We declare a [`repeating-linear-gradient`](/en-US/docs/Web/CSS/Reference/Values/gradient/repeating-linear-gradient) with red, transparent, and semi-transparent red diagonal stripes. This gradient is used as our mask and, for the last container, as the background image:
 
 ```css live-sample___mode
 img {
@@ -215,7 +215,7 @@ or, using the `mask` shorthand:
 
 ## The `mask-position` property
 
-Analogous to the {{cssxref("background-position")}} property, the {{cssxref("mask-position")}} property sets the initial position of the mask image relative to the mask layer's origin box, defined by [the `mask-origin` property](#the_mask-origin_property). The syntax follows the [`background-position`'s `<position>` syntax](/en-US/docs/Web/CSS/background-position#position), with the value being one, two, or four {{cssxref("&lt;position&gt;")}} values, defining one to two relative or absolute position offsets.
+Analogous to the {{cssxref("background-position")}} property, the {{cssxref("mask-position")}} property sets the initial position of the mask image relative to the mask layer's origin box, defined by [the `mask-origin` property](#the_mask-origin_property). The syntax follows the [`background-position`'s `<position>` syntax](/en-US/docs/Web/CSS/Reference/Properties/background-position#position), with the value being one, two, or four {{cssxref("&lt;position&gt;")}} values, defining one to two relative or absolute position offsets.
 
 ### One-value syntax
 
@@ -243,7 +243,7 @@ In the two `<length-percentage>` syntax, the origin sides are `top` and `left`, 
 
 ### Percentage values
 
-When offsetting using percentage values, the mask's dimension is subtracted from the element's dimension, just as is done with [percentage offsets with `background-position`](/en-US/docs/Web/CSS/background-position#regarding_percentages).
+When offsetting using percentage values, the mask's dimension is subtracted from the element's dimension, just as is done with [percentage offsets with `background-position`](/en-US/docs/Web/CSS/Reference/Properties/background-position#regarding_percentages).
 
 ### Positioning repeating mask images
 
@@ -540,7 +540,7 @@ or, expanding on the example using the `mask` shorthand:
 }
 ```
 
-In the `mask` shorthand, if only one [`<geometry-box>`](/en-US/docs/Web/CSS/clip-path#geometry-box) value is given, it sets both the `mask-origin` and `mask-clip` property values. If two `<geometry-box>` values are present, the first defines the `mask-origin` and the second defines the `mask-clip`.
+In the `mask` shorthand, if only one [`<geometry-box>`](/en-US/docs/Web/CSS/Reference/Properties/clip-path#geometry-box) value is given, it sets both the `mask-origin` and `mask-clip` property values. If two `<geometry-box>` values are present, the first defines the `mask-origin` and the second defines the `mask-clip`.
 
 For mask layer images that do not reference an SVG {{svgelement("mask")}} element, the `mask-clip` property defines whether the mask painting area, or the area affected by the mask, is the border, padding, or content box. The painted content of the element will be restricted to this area.
 
@@ -622,7 +622,7 @@ The default value of `mask-size` is `auto`, rendering the mask at its {{glossary
 
 Like with all longhand components of shorthand property, if the {{cssxref("mask")}} shorthand property is set and the value of the `mask-size` property is not defined within any mask layer, the `mask-size` value is reset to its initial value of `auto` for those mask layers.
 
-If the image has no intrinsic proportion, for example in the case of a [CSS gradient](/en-US/docs/Web/CSS/gradient), the default `auto` is the entirety of the mask positioning area as set by [the `mask-origin` property](#the_mask-origin_property).
+If the image has no intrinsic proportion, for example in the case of a [CSS gradient](/en-US/docs/Web/CSS/Reference/Values/gradient), the default `auto` is the entirety of the mask positioning area as set by [the `mask-origin` property](#the_mask-origin_property).
 
 Continuing with the `masked-element` example, if we don't explicitly set the `mask-size` property, it will default to `auto` for each layer, as if we had set the following:
 
@@ -658,7 +658,7 @@ or, expanding on the example using the `mask` shorthand, with the `mask-size` co
 
 The {{cssxref("mask-repeat")}} property defines how mask images are repeated, or tiled, after the initial mask image has been sized and positioned. The `mask-repeat` property defines if and how that mask image is repeated along the horizontal and vertical axes. In most of the previous examples, you may have noticed the star mask repeated along the X and Y axes. This is because `repeat` is the default value.
 
-The `mask-repeat` property is analogous to the {{cssxref("background-repeat")}} property, accepting the same [`<repeat-style>`](/en-US/docs/Web/CSS/mask-repeat#values) values. As is the case with `background-repeat`, the first (and possibly only) mask-image repetition is positioned by [the `*-position` property](#the_mask-position_property) and sized by [the `*-size` property](#the_mask-size_property). The positions of the repeated background or mask images are based on this initial image instance.
+The `mask-repeat` property is analogous to the {{cssxref("background-repeat")}} property, accepting the same [`<repeat-style>`](/en-US/docs/Web/CSS/Reference/Properties/mask-repeat#values) values. As is the case with `background-repeat`, the first (and possibly only) mask-image repetition is positioned by [the `*-position` property](#the_mask-position_property) and sized by [the `*-size` property](#the_mask-size_property). The positions of the repeated background or mask images are based on this initial image instance.
 
 Continuing with the `masked-element` example, if we don't explicitly set the `mask-repeat` property, it will default to `repeat` for each layer, as if we had set the following:
 

@@ -48,9 +48,9 @@ In certain cases, there is no originating "from" value for a transition. For exa
 
 - [Using CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
   - : Step-by-step tutorial explaining how to create transitions using CSS. This article describes each relevant CSS property and explains how they interact with each other.
-- [Animating `display`](/en-US/docs/Web/CSS/display#animating_display)
+- [Animating `display`](/en-US/docs/Web/CSS/Reference/Properties/display#animating_display)
   - : Transitioning to and from the `none` value of the discretely animated {{cssxref("display")}} property.
-- [Transitioning a popover](/en-US/docs/Web/CSS/overlay#transitioning_a_popover) and [transitioning a `<dialog>`](/en-US/docs/Web/HTML/Reference/Elements/dialog#transitioning_dialog_elements)
+- [Transitioning a popover](/en-US/docs/Web/CSS/Reference/Properties/overlay#transitioning_a_popover) and [transitioning a `<dialog>`](/en-US/docs/Web/HTML/Reference/Elements/dialog#transitioning_dialog_elements)
   - : Examples of transitioning from {{cssxref("@starting-style")}} to final {{cssxref(":popover-open")}} and {{cssxref(":open")}} pseudo-class styles.
 
 ## Related concepts
@@ -60,7 +60,7 @@ In certain cases, there is no originating "from" value for a transition. For exa
 - {{Glossary("Intrinsic size")}} glossary term
 
 - [CSS easing functions](/en-US/docs/Web/CSS/CSS_easing_functions) module
-  - [`<easing-function>`](/en-US/docs/Web/CSS/easing-function) data-type
+  - [`<easing-function>`](/en-US/docs/Web/CSS/Reference/Values/easing-function) data-type
 
 - [CSS animations](/en-US/docs/Web/CSS/CSS_animations) module.
   - {{cssxref("animation")}} shorthand

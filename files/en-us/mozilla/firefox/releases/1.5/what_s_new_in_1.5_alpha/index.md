@@ -19,15 +19,15 @@ This page is based largely on [https://www.squarefree.com/burningedg...eases/](h
 #### CSS
 
 - CSS2 quotes nesting
-  - : Starting with this release, the [`quotes`](/en-US/docs/Web/CSS/quotes) CSS2 property is fully supported, with the correct quote (depending on the nesting level) used for open-quote and close-quote.
-- CSS3 [`:only-child`](/en-US/docs/Web/CSS/:only-child)
+  - : Starting with this release, the [`quotes`](/en-US/docs/Web/CSS/Reference/Properties/quotes) CSS2 property is fully supported, with the correct quote (depending on the nesting level) used for open-quote and close-quote.
+- CSS3 [`:only-child`](/en-US/docs/Web/CSS/Reference/Selectors/:only-child)
   - : This CSS3 selector allows selecting an element that has no other elements as siblings in the DOM.
 - CSS3 columns
   - : An experimental implementation of the proposed [CSS3 multicolumn layout](https://drafts.csswg.org/css-multicol/) draft. This allows easily doing newspaper-like multicolumn presentation.
 - CSS3 `overflow-x` and `overflow-y` properties
   - : These properties can be used to control the overflow behavior in the horizontal and vertical directions somewhat independently. For example, overflow in the horizontal direction could be hidden while overflow in the vertical direction can be scrolled to.
 - CSS3 cursors
-  - : More [mouse cursor names](/en-US/docs/Web/CSS/cursor) are now supported.
+  - : More [mouse cursor names](/en-US/docs/Web/CSS/Reference/Properties/cursor) are now supported.
 - URI values on CSS `cursor` properties
   - : On Windows, OS/2 and Linux (Gtk+ 2.x) one can now use an arbitrary image as the mouse cursor while a given DOM node is being hovered.
     Any image format supported by Gecko can be used for the image.
@@ -36,7 +36,7 @@ This page is based largely on [https://www.squarefree.com/burningedg...eases/](h
 - `-moz-outline-radius`
   - : CSS outlines can now have rounded corners.
 - CSS `outline` property
-  - : [CSS outlines](/en-US/docs/Web/CSS/outline) can now be used. These differ from borders in that they don't affect the page layout.
+  - : [CSS outlines](/en-US/docs/Web/CSS/Reference/Properties/outline) can now be used. These differ from borders in that they don't affect the page layout.
 - Counters in CSS-generated content
   - : [CSS2 counters](/en-US/docs/Web/CSS/CSS_lists) are now completely supported (the implementation doesn't match the current CSS2.1 draft, but matches the upcoming one). This allows automatic numbering of sections, headings, and so forth via stylesheets.
 

@@ -64,14 +64,14 @@ If the value exceeds the max value allowed, the {{domxref('validityState.rangeOv
     </tr>
     <tr>
       <td>{{HTMLElement("input/number", "number")}}</td>
-      <td><a href="/en-US/docs/Web/CSS/number">&#x3C;number></a></td>
+      <td><a href="/en-US/docs/Web/CSS/Reference/Values/number">&#x3C;number></a></td>
       <td>
         <code>&#x3C;input type="number" min="0" step="5" max="100"></code>
       </td>
     </tr>
     <tr>
       <td>{{HTMLElement("input/range", "range")}}</td>
-      <td><a href="/en-US/docs/Web/CSS/number">&#x3C;number></a></td>
+      <td><a href="/en-US/docs/Web/CSS/Reference/Values/number">&#x3C;number></a></td>
       <td>
         <code>&#x3C;input type="range" min="60" step="5" max="100"></code>
       </td>
@@ -102,7 +102,7 @@ For the {{htmlelement('progress')}} element, the `max` attribute describes how m
   <tbody>
     <tr>
       <td>{{HTMLElement("progress")}}</td>
-      <td><a href="/en-US/docs/Web/CSS/number">&#x3C;number></a></td>
+      <td><a href="/en-US/docs/Web/CSS/Reference/Values/number">&#x3C;number></a></td>
       <td>
         <code
           >&#x3C;progress id="file" max="100" value="70"> 70%
@@ -112,7 +112,7 @@ For the {{htmlelement('progress')}} element, the `max` attribute describes how m
     </tr>
     <tr>
       <td>{{HTMLElement("meter")}}</td>
-      <td><a href="/en-US/docs/Web/CSS/number">&#x3C;number></a></td>
+      <td><a href="/en-US/docs/Web/CSS/Reference/Values/number">&#x3C;number></a></td>
       <td>
         <code
           >&#x3C;meter id="fuel" min="0" max="100" low="33" high="66"

@@ -35,7 +35,7 @@ For an explanation of how the API works, see [Using the Viewport Segments API](/
   - : Detects whether the device has a specified number of viewport segments laid out horizontally.
 - {{cssxref("@media/vertical-viewport-segments", "vertical-viewport-segments")}} `@media` feature
   - : Detects whether the device has a specified number of viewport segments laid out vertically.
-- [Viewport segment environment variables](/en-US/docs/Web/CSS/env#viewport-segment-width)
+- [Viewport segment environment variables](/en-US/docs/Web/CSS/Reference/Values/env#viewport-segment-width)
   - : These [environment variables](/en-US/docs/Web/CSS/CSS_environment_variables/Using_environment_variables) provide access to the edge coordinates and dimensions of each viewport segment.
 
 ## Examples

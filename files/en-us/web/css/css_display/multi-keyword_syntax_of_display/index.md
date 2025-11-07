@@ -6,14 +6,14 @@ page-type: guide
 sidebar: cssref
 ---
 
-The [CSS display module](/en-US/docs/Web/CSS/CSS_display) defines a multi-keyword syntax for the CSS [`display`](/en-US/docs/Web/CSS/display) property. This guide explains the multi-keyword syntax.
+The [CSS display module](/en-US/docs/Web/CSS/CSS_display) defines a multi-keyword syntax for the CSS [`display`](/en-US/docs/Web/CSS/Reference/Properties/display) property. This guide explains the multi-keyword syntax.
 
 > [!NOTE]
 > Multi-keyword syntax is also referred to as "two-value syntax" or "multi-value syntax."
 
 ## What happens when we change the value of the display property?
 
-One of the first things we learn about CSS is that some elements are block-level and some are inline-level. These are their [outer](/en-US/docs/Web/CSS/display-outside) display types. For example, an `<h1>` or a `<p>` are block-level by default, and a `<span>` is inline-level. Using the {{cssxref("display")}} property we can switch between block and inline. For example to make a heading inline we would use the following CSS:
+One of the first things we learn about CSS is that some elements are block-level and some are inline-level. These are their [outer](/en-US/docs/Web/CSS/Reference/Values/display-outside) display types. For example, an `<h1>` or a `<p>` are block-level by default, and a `<span>` is inline-level. Using the {{cssxref("display")}} property we can switch between block and inline. For example to make a heading inline we would use the following CSS:
 
 ```css
 h1 {

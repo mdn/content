@@ -15,7 +15,7 @@ Media queries are a key component of [responsive design](/en-US/docs/Learn_web_d
 
 Other common examples include increasing the font size and hiding navigation menus when printing a page, adjusting the padding between paragraphs when a page is viewed in portrait or landscape mode, or increasing the size of buttons to provide a larger hit area on touchscreens.
 
-In [CSS](/en-US/docs/Web/CSS), use the {{cssxref("@media")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) to conditionally apply part of a style sheet based on the result of a media query. To conditionally apply an entire style sheet, use {{cssxref("@import")}}.
+In [CSS](/en-US/docs/Web/CSS), use the {{cssxref("@media")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rules) to conditionally apply part of a style sheet based on the result of a media query. To conditionally apply an entire style sheet, use {{cssxref("@import")}}.
 
 When designing reusable HTML components, you may also use [container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries), which allow you to apply styles based on the size of a containing element rather than the viewport or other device characteristics.
 
@@ -67,10 +67,10 @@ The CSS media queries level 5 module also introduces the `environment-blending`,
 
 ### Data types and operators
 
-- [`<media-types>`](/en-US/docs/Web/CSS/@media#media_types)
-- [`<media-features>`](/en-US/docs/Web/CSS/@media#media_features)
-- [`<resolution>`](/en-US/docs/Web/CSS/resolution)
-- [Logical operators](/en-US/docs/Web/CSS/@media#logical_operators)
+- [`<media-types>`](/en-US/docs/Web/CSS/Reference/At-rules/@media#media_types)
+- [`<media-features>`](/en-US/docs/Web/CSS/Reference/At-rules/@media#media_features)
+- [`<resolution>`](/en-US/docs/Web/CSS/Reference/Values/resolution)
+- [Logical operators](/en-US/docs/Web/CSS/Reference/At-rules/@media#logical_operators)
 
 ### Glossary terms
 

@@ -511,7 +511,7 @@ In cases where the set-like declaration is not prefixed by read-only, the follow
 - `clear()` that empties the set-like structure. E.g. the `.clear()` method of {{domxref('FontFaceSet')}}.
 - `delete()` that removes an entry. E.g. the `.delete()` method of {{domxref('FontFaceSet')}}.
 
-Such an set interface also allows to use the syntax `for (const p in object)` as a shorthand of `for (const p in object.entries())`.
+Such a set interface also allows to use the syntax `for (const p in object)` as a shorthand of `for (const p in object.entries())`.
 
 ## Special Behaviors
 

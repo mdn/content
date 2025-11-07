@@ -213,6 +213,10 @@ li {
 
 {{EmbedLiveSample("started-types", "", "240px")}}
 
+The following interactive lesson teaches basic CSS concepts and provides some practice.
+
+<mdn-scrim-inline url="https://scrimba.com/frontend-path-c0j/~015" scrimtitle="Write your first lines of CSS!"></scrim-inline>
+
 ### Adding a class
 
 So far, we have styled elements based on their HTML element names. This works as long as you want all of the elements of that type in your document to look the same. To select a subset of the elements without changing the others, you can add a `class` to your HTML element and target that class in your CSS.
@@ -254,7 +258,7 @@ li em {
 
 This selector will select any `<em>` element that is a descendant of an `<li>`. So in your example document, you should find that the `<em>` in the third list item is now purple, but the one inside the paragraph is unchanged.
 
-Something else you might like to try is styling a paragraph when it comes directly after a heading at the same hierarchy level in the HTML. To do so, place a `+` (an **next-sibling combinator**) between the selectors.
+Something else you might like to try is styling a paragraph when it comes directly after a heading at the same hierarchy level in the HTML. To do so, place a `+` (a **next-sibling combinator**) between the selectors.
 
 Try adding this rule to your stylesheet as well:
 
@@ -455,7 +459,7 @@ Look up different values of properties listed below. Try writing CSS rules that 
 
 ### @rules
 
-CSS [@rules](/en-US/docs/Web/CSS/CSS_syntax/At-rule) (pronounced "at-rules") provide instructions for how CSS should behave. One common @rule that you are likely to encounter is `@media`, which is used to create [media queries](/en-US/docs/Web/CSS/CSS_media_queries). Media queries use conditional logic for applying CSS styling.
+CSS [@rules](/en-US/docs/Web/CSS/CSS_syntax/At-rules) (pronounced "at-rules") provide instructions for how CSS should behave. One common @rule that you are likely to encounter is `@media`, which is used to create [media queries](/en-US/docs/Web/CSS/CSS_media_queries). Media queries use conditional logic for applying CSS styling.
 
 In the example below, the stylesheet defines a default pink background for the `<body>` element. However, a media query follows that sets a blue background on the `<body>` element if the browser viewport is wider than `30em`.
 

@@ -31,7 +31,7 @@ This article provides information about the changes in Firefox 82 that will affe
 
 #### Removals
 
-- We have removed the proprietary [`:-moz-user-disabled`](/en-US/docs/Web/CSS/:-moz-user-disabled) pseudo-class ([Firefox bug 1664432](https://bugzil.la/1664432)).
+- We have removed the proprietary [`:-moz-user-disabled`](/en-US/docs/Web/CSS/Reference/Selectors/:-moz-user-disabled) pseudo-class ([Firefox bug 1664432](https://bugzil.la/1664432)).
 
 ### HTTP
 

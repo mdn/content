@@ -9,7 +9,7 @@ sidebar: cssref
 **Specificity** is the algorithm used by browsers to determine the [CSS declaration](/en-US/docs/Learn_web_development/Core/Styling_basics/What_is_CSS#css_syntax_basics) that is the most relevant to an element, which in turn, determines the property value to apply to the element. The specificity algorithm calculates the weight of a [CSS selector](/en-US/docs/Web/CSS/Reference#selectors) to determine which rule from competing CSS declarations gets applied to an element.
 
 > [!NOTE]
-> Browsers consider specificity **after** determining [cascade origin and importance](/en-US/docs/Web/CSS/CSS_cascade/Cascade). In other words, for competing property declarations, specificity is relevant and compared only between selectors from the one [cascade origin and layer](/en-US/docs/Web/CSS/@layer) that has precedence for the property. [Scoping proximity](/en-US/docs/Web/CSS/@scope#how_scope_conflicts_are_resolved) and order of appearance become relevant when the selector specificities of the competing declarations in the cascade layer with precedence are equal.
+> Browsers consider specificity **after** determining [cascade origin and importance](/en-US/docs/Web/CSS/CSS_cascade/Cascade). In other words, for competing property declarations, specificity is relevant and compared only between selectors from the one [cascade origin and layer](/en-US/docs/Web/CSS/Reference/At-rules/@layer) that has precedence for the property. [Scoping proximity](/en-US/docs/Web/CSS/Reference/At-rules/@scope#how_scope_conflicts_are_resolved) and order of appearance become relevant when the selector specificities of the competing declarations in the cascade layer with precedence are equal.
 
 ## How is specificity calculated?
 
@@ -22,15 +22,15 @@ The specificity algorithm is basically a three-column value of three categories 
 The selector weight categories are listed here in the order of decreasing specificity:
 
 - ID column
-  - : Includes only [ID selectors](/en-US/docs/Web/CSS/ID_selectors), such as `#example`. For each ID in a matching selector, add 1-0-0 to the weight value.
+  - : Includes only [ID selectors](/en-US/docs/Web/CSS/Reference/Selectors/ID_selectors), such as `#example`. For each ID in a matching selector, add 1-0-0 to the weight value.
 - CLASS column
-  - : Includes [class selectors](/en-US/docs/Web/CSS/Class_selectors), such as `.myClass`, attribute selectors like `[type="radio"]` and `[lang|="fr"]`, and pseudo-classes, such as `:hover`, `:nth-of-type(3n)`, and `:required`. For each class, attribute selector, or pseudo-class in a matching selector, add 0-1-0 to the weight value.
+  - : Includes [class selectors](/en-US/docs/Web/CSS/Reference/Selectors/Class_selectors), such as `.myClass`, attribute selectors like `[type="radio"]` and `[lang|="fr"]`, and pseudo-classes, such as `:hover`, `:nth-of-type(3n)`, and `:required`. For each class, attribute selector, or pseudo-class in a matching selector, add 0-1-0 to the weight value.
 - TYPE column
-  - : Includes [type selectors](/en-US/docs/Web/CSS/Type_selectors), such as `p`, `h1`, and `td`, and pseudo-elements like `::before`, `::placeholder`, and all other selectors with double-colon notation. For each type or pseudo-element in a matching selector, add 0-0-1 to the weight value.
+  - : Includes [type selectors](/en-US/docs/Web/CSS/Reference/Selectors/Type_selectors), such as `p`, `h1`, and `td`, and pseudo-elements like `::before`, `::placeholder`, and all other selectors with double-colon notation. For each type or pseudo-element in a matching selector, add 0-0-1 to the weight value.
 - No value
   - : The universal selector ({{CSSxRef("Universal_selectors", "*")}}) and the pseudo-class {{CSSxRef(":where", ":where()")}} and its parameters aren't counted when calculating the weight so their value is 0-0-0, but they do match elements. These selectors do not impact the specificity weight value.
 
-Combinators, such as {{CSSxRef("Next-sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("Subsequent-sibling_combinator", "~")}}, [" "](/en-US/docs/Web/CSS/Descendant_combinator), and {{CSSxRef("Column_combinator", "||")}}, may make a selector more specific in what is selected but they don't add any value to the specificity weight.
+Combinators, such as {{CSSxRef("Next-sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("Subsequent-sibling_combinator", "~")}}, [" "](/en-US/docs/Web/CSS/Reference/Selectors/Descendant_combinator), and {{CSSxRef("Column_combinator", "||")}}, may make a selector more specific in what is selected but they don't add any value to the specificity weight.
 
 The `&` nesting combinator doesn't add specificity weight, but nested rules do. In terms of specificity, and functionality, nesting is very similar to the {{CSSxRef(":is", ":is()")}} pseudo-class.
 
@@ -213,13 +213,13 @@ Make sure to include a comment with every inclusion of the important flag so cod
 
 ### The `!important` exception
 
-CSS declarations marked as important override any other declarations within the same cascade layer and origin. Although technically, [`!important`](/en-US/docs/Web/CSS/important) has nothing to do with specificity, it interacts directly with specificity and the cascade. It reverses the [cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade) order of stylesheets.
+CSS declarations marked as important override any other declarations within the same cascade layer and origin. Although technically, [`!important`](/en-US/docs/Web/CSS/Reference/Values/important) has nothing to do with specificity, it interacts directly with specificity and the cascade. It reverses the [cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade) order of stylesheets.
 
 If declarations from the same origin and cascade layer conflict and one property value has the `!important` flag set, the important declaration is applied no matter the specificity. When conflicting declarations from the same origin and cascade layer with the `!important` flag are applied to the same element, the declaration with a greater specificity is applied.
 
 Using `!important` to override specificity is considered a **bad practice** and should be avoided for this purpose. Understanding and effectively using specificity and the cascade can remove any need for the `!important` flag.
 
-Instead of using `!important` to override foreign CSS (from external libraries, like Bootstrap or normalize.css), import the third-party scripts directly into [cascade layers](/en-US/docs/Web/CSS/@layer). If you must use `!important` in your CSS, comment your usage so future code maintainers know why the declaration was marked important and know not to override it. But definitely, don't use `!important` when writing plugins or frameworks that other developers will need to incorporate without being able to control.
+Instead of using `!important` to override foreign CSS (from external libraries, like Bootstrap or normalize.css), import the third-party scripts directly into [cascade layers](/en-US/docs/Web/CSS/Reference/At-rules/@layer). If you must use `!important` in your CSS, comment your usage so future code maintainers know why the declaration was marked important and know not to override it. But definitely, don't use `!important` when writing plugins or frameworks that other developers will need to incorporate without being able to control.
 
 ### The `:where()` exception
 
@@ -245,7 +245,7 @@ footer a {
 
 ### How `@scope` blocks affect specificity
 
-Including a ruleset inside a {{cssxref("@scope")}} block does not affect the specificity of its selector, regardless of the selectors used inside the [scope root and limit](/en-US/docs/Web/CSS/@scope#syntax).
+Including a ruleset inside a {{cssxref("@scope")}} block does not affect the specificity of its selector, regardless of the selectors used inside the [scope root and limit](/en-US/docs/Web/CSS/Reference/At-rules/@scope#syntax).
 However, if you decide to explicitly add the {{cssxref(":scope")}} pseudo-class, you'll need to factor it in when calculating their specificity.
 `:scope`, like all regular pseudo-classes, has a specificity of 0-1-0. For example:
 
@@ -257,7 +257,7 @@ However, if you decide to explicitly add the {{cssxref(":scope")}} pseudo-class,
 }
 ```
 
-See [Specificity in `@scope`](/en-US/docs/Web/CSS/@scope#specificity_in_scope) for more information.
+See [Specificity in `@scope`](/en-US/docs/Web/CSS/Reference/At-rules/@scope#specificity_in_scope) for more information.
 
 ## Tips for handling specificity headaches
 
@@ -349,7 +349,7 @@ To remove the perceived need for `!important`, you can do one of the following:
 
 All these methods are covered in preceding sections.
 
-If you're unable to remove `!important` flags from an authors style sheet, the only solution to overriding the important styles is by using `!important`. Creating a [cascade layer](/en-US/docs/Web/CSS/@layer) of important declaration overrides is an excellent solution. Two ways of doing this include:
+If you're unable to remove `!important` flags from an authors style sheet, the only solution to overriding the important styles is by using `!important`. Creating a [cascade layer](/en-US/docs/Web/CSS/Reference/At-rules/@layer) of important declaration overrides is an excellent solution. Two ways of doing this include:
 
 #### Method 1
 
@@ -460,9 +460,9 @@ When multiple declarations have equal specificity, the last declaration found in
 
 A few things to remember about specificity:
 
-1. Specificity only applies when the same element is targeted by multiple declarations in the same cascade layer or origin. Specificity only matters for declarations of the same importance and same origin and [cascade layer](/en-US/docs/Web/CSS/@layer). If matching selectors are in different origins, the [cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade) determines which declaration takes precedence.
+1. Specificity only applies when the same element is targeted by multiple declarations in the same cascade layer or origin. Specificity only matters for declarations of the same importance and same origin and [cascade layer](/en-US/docs/Web/CSS/Reference/At-rules/@layer). If matching selectors are in different origins, the [cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade) determines which declaration takes precedence.
 
-2. When two selectors in the same cascade layer and origin have the same specificity, scoping proximity is then calculated; the ruleset with the lowest scoping proximity wins. See [How `@scope` conflicts are resolved](/en-US/docs/Web/CSS/@scope#how_scope_conflicts_are_resolved) for more details and an example.
+2. When two selectors in the same cascade layer and origin have the same specificity, scoping proximity is then calculated; the ruleset with the lowest scoping proximity wins. See [How `@scope` conflicts are resolved](/en-US/docs/Web/CSS/Reference/At-rules/@scope#how_scope_conflicts_are_resolved) for more details and an example.
 
 3. If scope proximity is also the same for both selectors, source order then comes into play. When all else is equal, the last selector wins.
 
@@ -483,7 +483,7 @@ A few things to remember about specificity:
 - [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax/Syntax) guide
 - [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax) module
 - [CSS error handling](/en-US/docs/Web/CSS/CSS_syntax/Error_handling)
-- [At-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rule)
+- [At-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rules)
 - [Inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance)
 - [Initial](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value), [computed](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value), [used](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#used_value), and [actual](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#actual_value) values
 - [Value definition syntax](/en-US/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)

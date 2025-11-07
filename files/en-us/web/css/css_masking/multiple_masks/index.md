@@ -15,7 +15,7 @@ CSS masks are made up of one or more mask layers. In this guide, we discuss the 
 
 You can apply CSS masking to all HTML elements and most SVG elements. A mask can consist of one or more composited mask layers. You define multiple layers using comma-separated values in the {{cssxref("mask")}} shorthand property or the {{cssxref("mask-image")}} property–even a value set to `none` counts as a layer.
 
-Each mask layer can contain a [mask image](/en-US/docs/Web/CSS/mask-image), which is positioned relative to the mask's origin box. The image can be sized, repeated, and clipped. If you include more than one mask image, you can define the way the mask layers are composited or combined. (These features are briefly introduced in this guide. For more details and examples, see the [masking properties guide](/en-US/docs/Web/CSS/CSS_masking/Mask_properties).)
+Each mask layer can contain a [mask image](/en-US/docs/Web/CSS/Reference/Properties/mask-image), which is positioned relative to the mask's origin box. The image can be sized, repeated, and clipped. If you include more than one mask image, you can define the way the mask layers are composited or combined. (These features are briefly introduced in this guide. For more details and examples, see the [masking properties guide](/en-US/docs/Web/CSS/CSS_masking/Mask_properties).)
 
 ### Syntax for multiple mask layers
 
@@ -130,7 +130,7 @@ The `mask-*` properties include:
 
 - {{cssxref("mask-mode")}}: Sets the mode of each mask layer to either `alpha` or `luminance`, or allows it to default to the source's mode by setting the value to `match-source`. The default is `match-source`.
 
-- {{cssxref("mask-position")}}: Analogous to the {{cssxref("background-position")}} property with syntax that follows the [`background-position`'s `<position>` syntax](/en-US/docs/Web/CSS/background-position#position), it sets the initial position of the mask image relative to the mask layer's origin box, defined by the `mask-origin` property. You can specify one, two, or four {{cssxref("&lt;position&gt;")}} values. The default `0% 0%` positions the top-left corner of the mask at the top-left corner of the mask origin box.
+- {{cssxref("mask-position")}}: Analogous to the {{cssxref("background-position")}} property with syntax that follows the [`background-position`'s `<position>` syntax](/en-US/docs/Web/CSS/Reference/Properties/background-position#position), it sets the initial position of the mask image relative to the mask layer's origin box, defined by the `mask-origin` property. You can specify one, two, or four {{cssxref("&lt;position&gt;")}} values. The default `0% 0%` positions the top-left corner of the mask at the top-left corner of the mask origin box.
 
 - {{cssxref("mask-origin")}}: Analogous to the {{cssxref("background-origin")}} property, it specifies the _mask positioning area_, which is the mask origin box area within which a mask image is positioned. For example, if the `mask-position` is `top left`, this property defines whether that is relative to the border's outer edge, the padding's outer edge, or the content's outer edge.
 
@@ -156,7 +156,7 @@ The `mask-origin` value, listed in the syntax as `<origin>`, comes before the `m
 
 `<image> <position> / <size> <repeat> <origin> <clip> <composite> <mode>`
 
-Both accept [`<geometry-box>`](/en-US/docs/Web/CSS/box-edge#geometry-box) keywords. In addition, `mask-clip` also accepts `no-clip`. Because of this, the order of these two matters when you want to set `mask-clip` to any value other than `no-clip`.
+Both accept [`<geometry-box>`](/en-US/docs/Web/CSS/Reference/Values/box-edge#geometry-box) keywords. In addition, `mask-clip` also accepts `no-clip`. Because of this, the order of these two matters when you want to set `mask-clip` to any value other than `no-clip`.
 
 - If one `<geometry-box>` value is present along with the `no-clip` keyword, then the `<geometry-box>` sets the `mask-origin` value, and `mask-clip` is set to `no-clip`. In this case, the order doesn't matter.
 

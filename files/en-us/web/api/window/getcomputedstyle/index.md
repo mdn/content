@@ -59,7 +59,7 @@ For most properties, in particular those that depend on layout such as `display`
 For properties that depend on layout, the used value may differ slightly from the computed value, and this is what is returned as the resolved value.
 For an animating property value, it will be the computed value at the current point in the animation.
 
-The returned object has dash-named and corresponding {{Glossary("camel_case", "camel-case")}} named properties for **all** [CSS properties](/en-US/docs/Web/CSS/Properties) supported by the browser, including both [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) and longhand properties.
+The returned object has dash-named and corresponding {{Glossary("camel_case", "camel-case")}} named properties for **all** [CSS properties](/en-US/docs/Web/CSS/Reference/Properties) supported by the browser, including both [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) and longhand properties.
 
 Shorthand CSS properties of the element are expanded to their corresponding long-form properties.
 For example, an element with style `"border-top: 1px solid black"` would be represented in the returned object by properties with the names {{cssxref("border-top")}} and `borderTop`, and the corresponding longhand properties {{cssxref("border-top-color")}} and `borderTopColor`, {{cssxref("border-top-style")}} and `borderTopStyle`, and {{cssxref("border-top-width")}} and `borderTopWidth`.
@@ -69,10 +69,10 @@ However the `element.style` object can also be used to **set** styles on that el
 
 ### Color values
 
-For compatibility reasons, serialized color values specified using the traditional sRGB color space are expressed as [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) colors if the alpha channel value is exactly `1`, and `rgba()` colors otherwise.
+For compatibility reasons, serialized color values specified using the traditional sRGB color space are expressed as [`rgb()`](/en-US/docs/Web/CSS/Reference/Values/color_value/rgb) colors if the alpha channel value is exactly `1`, and `rgba()` colors otherwise.
 The legacy syntax with commas is used, with commas as separators (for example `rgb(255, 0, 0)`).
 
-For other {{glossary("color space","color spaces")}} the values are serialized using the corresponding functional expressions: [`lab()`](/en-US/docs/Web/CSS/color_value/lab), [`lch()`](/en-US/docs/Web/CSS/color_value/lch) [`oklab()`](/en-US/docs/Web/CSS/color_value/oklab), [`oklch()`](/en-US/docs/Web/CSS/color_value/oklch), [`color()`](/en-US/docs/Web/CSS/color_value/color).
+For other {{glossary("color space","color spaces")}} the values are serialized using the corresponding functional expressions: [`lab()`](/en-US/docs/Web/CSS/Reference/Values/color_value/lab), [`lch()`](/en-US/docs/Web/CSS/Reference/Values/color_value/lch) [`oklab()`](/en-US/docs/Web/CSS/Reference/Values/color_value/oklab), [`oklch()`](/en-US/docs/Web/CSS/Reference/Values/color_value/oklch), [`color()`](/en-US/docs/Web/CSS/Reference/Values/color_value/color).
 
 ## Examples
 
@@ -118,7 +118,7 @@ para.textContent =
 
 ### Use with pseudo-elements
 
-`getComputedStyle()` can pull style info from [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements), such as `::after`, `::before`, `::marker`, or `::line-marker`.
+`getComputedStyle()` can pull style info from [pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements), such as `::after`, `::before`, `::marker`, or `::line-marker`.
 
 ```html
 <h3>Generated content</h3>

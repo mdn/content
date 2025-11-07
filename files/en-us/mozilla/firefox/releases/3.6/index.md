@@ -22,12 +22,12 @@ sidebar: firefox
   - : The `background-size` property from the [CSS 3 Backgrounds and Borders draft](https://drafts.csswg.org/css-backgrounds-3/) is now supported under the name `-moz-background-size`.
 - [WOFF font support](/en-US/docs/Web/CSS/CSS_fonts/WOFF)
   - : {{cssxref("@font-face")}} now supports the WOFF downloadable font file format.
-- [Pointer events](/en-US/docs/Web/CSS/pointer-events)
+- [Pointer events](/en-US/docs/Web/CSS/Reference/Properties/pointer-events)
   - : The {{cssxref("pointer-events")}} property lets content specify whether or not an element may be the target of mouse pointer events.
 
 #### Miscellaneous CSS changes
 
-- The [`rem`](/en-US/docs/Web/CSS/length#relative_length_units) length unit is now supported. [Firefox bug 472195](https://bugzil.la/472195)
+- The [`rem`](/en-US/docs/Web/CSS/Reference/Values/length#relative_length_units) length unit is now supported. [Firefox bug 472195](https://bugzil.la/472195)
 - {{Cssxref("image-rendering")}} is supported for images, background images, videos and canvases. [Firefox bug 423756](https://bugzil.la/423756)
 - {{Cssxref("text-align")}}:end is now supported. [Firefox bug 299837](https://bugzil.la/299837)
 - DOM changes to elements using the table {{Cssxref("display")}} types now work much better.

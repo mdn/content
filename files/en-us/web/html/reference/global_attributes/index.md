@@ -30,7 +30,7 @@ In addition to the basic HTML global attributes, the following global attributes
 - [`autofocus`](/en-US/docs/Web/HTML/Reference/Global_attributes/autofocus)
   - : Indicates that an element is to be focused on page load, or as soon as the {{HTMLElement("dialog")}} it is part of is displayed. This attribute is a boolean, initially false.
 - [`class`](/en-US/docs/Web/HTML/Reference/Global_attributes/class)
-  - : A space-separated list of the classes of the element. Classes allow CSS and JavaScript to select and access specific elements via the [class selectors](/en-US/docs/Web/CSS/Class_selectors) or functions like the method {{DOMxRef("Document.getElementsByClassName()")}}.
+  - : A space-separated list of the classes of the element. Classes allow CSS and JavaScript to select and access specific elements via the [class selectors](/en-US/docs/Web/CSS/Reference/Selectors/Class_selectors) or functions like the method {{DOMxRef("Document.getElementsByClassName()")}}.
 - [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable)
   - : An [enumerated](/en-US/docs/Glossary/Enumerated) attribute indicating if the element should be editable by the user. If so, the browser modifies its widget to allow editing. The attribute must take one of the following values:
     - `true` or the _empty string_, which indicates that the element must be editable;

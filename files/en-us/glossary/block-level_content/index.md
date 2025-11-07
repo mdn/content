@@ -11,7 +11,7 @@ In a block layout, boxes are laid out one after the other, vertically, beginning
 A block-level element always starts on a new line. In horizontal writing modes, like English or Arabic, it occupies the entire horizontal space of its parent element (container) and vertical space equal to the height of its contents, thereby creating a "block".
 
 > [!NOTE]
-> The above behavior of block layout changes if the containing block's [`writing-mode`](/en-US/docs/Web/CSS/writing-mode) is set to value other than [the default value](/en-US/docs/Web/CSS/writing-mode#formal_definition).
+> The above behavior of block layout changes if the containing block's [`writing-mode`](/en-US/docs/Web/CSS/Reference/Properties/writing-mode) is set to value other than [the default value](/en-US/docs/Web/CSS/Reference/Properties/writing-mode#formal_definition).
 
 > [!NOTE]
 > HTML (_HyperText Markup Language_) elements historically were categorized as either "block-level" elements or "inline" elements. As a presentational characteristic, this is now specified by CSS.
@@ -46,4 +46,4 @@ p {
   - {{glossary("Inline-level content")}}
 - [Block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context)
 - {{cssxref("display")}}
-- [`writing-mode`](/en-US/docs/Web/CSS/writing-mode)
+- [`writing-mode`](/en-US/docs/Web/CSS/Reference/Properties/writing-mode)

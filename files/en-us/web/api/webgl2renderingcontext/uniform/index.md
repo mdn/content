@@ -88,7 +88,7 @@ uniform4uiv(location, data, srcOffset, srcLength)
   - : A new value to be used for the uniform variable. Possible types:
     - A {{jsxref("Number")}} for unsigned integer values (methods with `ui`), for integer values (methods with `i`), or for floats (methods with `f`).
     - A {{jsxref("Uint32Array")}} (or an {{jsxref("Array")}} of unsigned integer numbers) for unsigned integer vector methods (methods with `uiv`).
-    - A {{jsxref("Int32Array")}} (or an {{jsxref("Array")}} of integer numbers) for integer vector methods (methods with `iv`).
+    - An {{jsxref("Int32Array")}} (or an {{jsxref("Array")}} of integer numbers) for integer vector methods (methods with `iv`).
     - A {{jsxref("Float32Array")}} (or an {{jsxref("Array")}} of numbers) for floating point vector methods (methods with `fv`).
 - `srcOffset` {{optional_inline}}
   - : A non-negative integer specifying the index of the first element in the `data` array to be used. Defaults to `0`.

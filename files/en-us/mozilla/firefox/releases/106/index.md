@@ -21,7 +21,7 @@ This article provides information about the changes in Firefox 106 that will aff
 
 ### CSS
 
-- The [@supports](/en-US/docs/Web/CSS/@supports) at-rule now supports the `font-tech()` and `font-format()` functions.
+- The [@supports](/en-US/docs/Web/CSS/Reference/At-rules/@supports) at-rule now supports the `font-tech()` and `font-format()` functions.
   These functions can be used to test whether a browser supports a given font technology or format and CSS styles can be applied based on the result ([Firefox bug 1786493](https://bugzil.la/1786493)).
 
 ### JavaScript

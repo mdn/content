@@ -12,53 +12,61 @@ sidebar:
     title: Modules
     details: closed
   - type: listSubPagesGrouped
-    path: /Web/CSS
+    path: /Web/CSS/Reference/Properties
     tags:
       - css-property
       - css-shorthand-property
-    link: /Web/CSS/Properties
+    link: /Web/CSS/Reference/Properties
     title: Properties
     details: closed
   - type: listSubPages
-    path: /Web/CSS
+    path: /Web/CSS/Reference/Selectors
     tags: css-selector
+    link: /Web/CSS/Reference/Selectors
     title: Selectors
     details: closed
   - type: listSubPages
-    path: /Web/CSS
+    path: /Web/CSS/Reference/Selectors
     tags: css-combinator
+    link: /Web/CSS/Reference/Selectors/Combinators
     title: Combinators
     details: closed
   - type: listSubPagesGrouped
-    path: /Web/CSS
+    path: /Web/CSS/Reference/Selectors
     tags: css-pseudo-class
-    link: /Web/CSS/Pseudo-classes
+    link: /Web/CSS/Reference/Selectors/Pseudo-classes
     title: Pseudo-classes
     details: closed
   - type: listSubPagesGrouped
-    path: /Web/CSS
+    path: /Web/CSS/Reference/Selectors
     tags: css-pseudo-element
-    link: /Web/CSS/Pseudo-elements
+    link: /Web/CSS/Reference/Selectors/Pseudo-elements
     title: Pseudo-elements
     details: closed
   - type: listSubPages
-    path: /Web/CSS
+    path: /Web/CSS/Reference/At-rules
     tags: css-at-rule
-    link: /Web/CSS/CSS_syntax/At-rule
+    link: /Web/CSS/Reference/At-rules
     title: At-rules
     details: closed
   - type: listSubPages
-    path: /Web/CSS
-    tags: css-function
-    depth: 2
-    link: /Web/CSS/CSS_values_and_units/CSS_value_functions
-    title: Functions
+    path: /Web/CSS/Reference/Values
+    tags: css-keyword
+    link: /Web/CSS/Reference/Values
+    title: Values
     details: closed
   - type: listSubPages
-    path: /Web/CSS
+    path: /Web/CSS/Reference/Values
     tags: css-type
-    link: /Web/CSS/CSS_values_and_units/CSS_data_types
+    link: /Web/CSS/Reference/Values/Data_types
     title: Types
+    details: closed
+  - type: listSubPages
+    path: /Web/CSS/Reference/Values
+    tags: css-function
+    depth: 2
+    link: /Web/CSS/Reference/Values/Functions
+    title: Functions
     details: closed
   - type: section
     link: /Web/CSS/Guides
@@ -258,7 +266,7 @@ sidebar:
     children:
       - /Web/CSS/CSS_syntax/Syntax
       - /Web/CSS/CSS_syntax/Comments
-      - /Web/CSS/CSS_syntax/At-rule_functions
+      - /Web/CSS/CSS_syntax/At-rules
       - /Web/CSS/CSS_syntax/Error_handling
   - title: Text
     details: closed

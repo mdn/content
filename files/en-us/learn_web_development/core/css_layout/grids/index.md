@@ -157,7 +157,7 @@ You should see that the items have rearranged themselves such that there's one i
 
 ### Flexible grids with the fr unit
 
-In addition to creating grids using lengths and percentages, we can use [`fr`](/en-US/docs/Web/CSS/flex_value). The `fr` unit represents one fraction of the available space in the grid container to flexibly size grid rows and columns.
+In addition to creating grids using lengths and percentages, we can use [`fr`](/en-US/docs/Web/CSS/Reference/Values/flex_value). The `fr` unit represents one fraction of the available space in the grid container to flexibly size grid rows and columns.
 
 ```html hidden live-sample___grid-fr-unit_0
 <div class="container">
@@ -413,7 +413,7 @@ If you add extra content, you'll see that the track expands to allow it to fit. 
 
 ### As many columns as will fit
 
-We can combine some of the lessons we've learned about track listing, repeat notation, and {{cssxref("minmax", "minmax()")}} to create a useful pattern. Sometimes it's helpful to be able to ask grid to create as many columns as will fit into the container. We do this by setting the value of `grid-template-columns` using the {{cssxref("repeat", "repeat()")}} function, but instead of passing in a number, pass in the keyword [`auto-fit`](/en-US/docs/Web/CSS/repeat#auto-fit). For the second parameter of the function we use `minmax()` with a minimum value equal to the minimum track size that we would like to have and a maximum of `1fr`.
+We can combine some of the lessons we've learned about track listing, repeat notation, and {{cssxref("minmax", "minmax()")}} to create a useful pattern. Sometimes it's helpful to be able to ask grid to create as many columns as will fit into the container. We do this by setting the value of `grid-template-columns` using the {{cssxref("repeat", "repeat()")}} function, but instead of passing in a number, pass in the keyword [`auto-fit`](/en-US/docs/Web/CSS/Reference/Values/repeat#auto-fit). For the second parameter of the function we use `minmax()` with a minimum value equal to the minimum track size that we would like to have and a maximum of `1fr`.
 
 ```html hidden live-sample___grid-minmax_1
 <div class="container">

@@ -31,12 +31,12 @@ sidebar: mdnsidebar
 >
 > - **title**
 >   - : The `title` value is displayed at the top of the page. The title format is _NameOfTheProperty_.
->     For example, the [`background-color`](/en-US/docs/Web/CSS/background-color) property has a title of _background-color_.
+>     For example, the [`background-color`](/en-US/docs/Web/CSS/Reference/Properties/background-color) property has a title of _background-color_.
 > - **slug**
 >   - : The `slug` value is the end of the URL path after `https://developer.mozilla.org/en-US/docs/`. This will be formatted as `Web/CSS/NameOfTheProperty`.
->     For example, the slug for the [`background-color`](/en-US/docs/Web/CSS/background-color) property is `Web/CSS/background-color`. For a multi-word component such as `Getting_started` in a slug, the slug should use an underscore as in `/en-US/docs/Learn_web_development/Core/Structuring_content`.
+>     For example, the slug for the [`background-color`](/en-US/docs/Web/CSS/Reference/Properties/background-color) property is `Web/CSS/background-color`. For a multi-word component such as `Getting_started` in a slug, the slug should use an underscore as in `/en-US/docs/Learn_web_development/Core/Structuring_content`.
 > - **page-type**
->   - : The `page-type` value for CSS properties is `css-property`. For a shorthand CSS property, the value is `css-shorthand-property`. For example, the `page-type` value for the [animation](/en-US/docs/Web/CSS/animation) property is `css-shorthand-property` because it is a shorthand property, whereas the `page-type` value for the [animation-delay](/en-US/docs/Web/CSS/animation-delay) property is `css-property`.
+>   - : The `page-type` value for CSS properties is `css-property`. For a shorthand CSS property, the value is `css-shorthand-property`. For example, the `page-type` value for the [animation](/en-US/docs/Web/CSS/Reference/Properties/animation) property is `css-shorthand-property` because it is a shorthand property, whereas the `page-type` value for the [animation-delay](/en-US/docs/Web/CSS/Reference/Properties/animation-delay) property is `css-property`.
 > - **status**
 >   - : Flags describing the status of this feature. An array which may contain one or more of the following: `experimental`, `deprecated`, `non-standard`. This key should not be set manually: it is set automatically based on values in the browser compatibility data for the feature. See ["How feature statuses are added or updated"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated).
 > - **browser-compat**
@@ -89,7 +89,7 @@ See the [Interactive examples](/en-US/docs/MDN/Writing_guidelines/Page_structure
 
 ## Constituent properties
 
-Add this section only for shorthand properties, such as [animation](/en-US/docs/Web/CSS/animation), to list all the related longhand properties.
+Add this section only for shorthand properties, such as [animation](/en-US/docs/Web/CSS/Reference/Properties/animation), to list all the related longhand properties.
 
 ## Syntax
 

@@ -50,7 +50,7 @@ svg {
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/CSS/@media#syntax"
+          ><a href="/en-US/docs/Web/CSS/Reference/At-rules/@media#syntax"
             >&#x3C;media-query-list></a
           ></code
         >

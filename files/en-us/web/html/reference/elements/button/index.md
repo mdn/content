@@ -210,7 +210,7 @@ To describe the state of a button the correct ARIA attribute to use is [`aria-pr
 
 It is best not to override the default focus ring for elements that have focus. If the button styles are overridden, it is important to **ensure that the focus state has enough contrast** so that people experiencing low vision conditions can perceive it and people with cognitive differences will understand it.
 
-The {{cssxref(":focus-visible")}} pseudo-class can be used to apply styles to an element that has {{cssxref(":focus")}} only when the user agent's heuristics determine that the focus should be highlighted, such as when a `<button>` receives keyboard focus. See [:focus vs :focus-visible](/en-US/docs/Web/CSS/:focus-visible#focus_vs_focus-visible) for more information.
+The {{cssxref(":focus-visible")}} pseudo-class can be used to apply styles to an element that has {{cssxref(":focus")}} only when the user agent's heuristics determine that the focus should be highlighted, such as when a `<button>` receives keyboard focus. See [:focus vs :focus-visible](/en-US/docs/Web/CSS/Reference/Selectors/:focus-visible#focus_vs_focus-visible) for more information.
 
 Color contrast ratio is determined by comparing the luminosity of the button text and background color values to the background the button is placed on. To meet current [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/), a ratio of 4.5:1 is required for text content and 3:1 for large text. (Large text is defined as 18.66px and {{cssxref("font-weight", "bold")}} or larger, or 24px or larger.)
 

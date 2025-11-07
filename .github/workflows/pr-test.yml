@@ -8,8 +8,6 @@ name: PR Test
 
 on:
   pull_request:
-    branches:
-      - main
 
 permissions:
   # Compare two commits.

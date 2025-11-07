@@ -9,7 +9,7 @@ sidebar: glossarysidebar
 
 There is also a {{cssxref("flex")}} property, which is a shorthand for the flexbox properties {{cssxref("flex-grow")}}, {{cssxref("flex-shrink")}} and {{cssxref("flex-basis")}}. This property is only applicable to flex containers.
 
-In addition [`<flex>`](/en-US/docs/Web/CSS/flex_value) can refer to a [flexible length](/en-US/docs/Web/CSS/flex_value) in CSS Grid Layout.
+In addition [`<flex>`](/en-US/docs/Web/CSS/Reference/Values/flex_value) can refer to a [flexible length](/en-US/docs/Web/CSS/Reference/Values/flex_value) in CSS Grid Layout.
 
 ### Related CSS properties
 

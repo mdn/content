@@ -156,5 +156,5 @@ To test the example, try zooming the page in and out, and note the difference in
 
 - [Media queries](/en-US/docs/Web/CSS/CSS_media_queries)
 - [Using media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [CSS `resolution` media query](/en-US/docs/Web/CSS/@media/resolution)
+- [CSS `resolution` media query](/en-US/docs/Web/CSS/Reference/At-rules/@media/resolution)
 - The {{cssxref("image-resolution")}} property

@@ -9,7 +9,7 @@ sidebar: htmlsidebar
 The **`alternate stylesheet`** keyword pair, when used as a value for the [`rel`](/en-US/docs/Web/HTML/Reference/Elements/link#rel) attribute of the {{HTMLElement("link")}} element, indicates that the target resource is an _alternative style sheet_. Specifying **alternative style sheets** in a web page allows users to see multiple versions of a page based on their needs or preferences.
 
 > [!NOTE]
-> This feature is not well supported in browsers without an extension. To offer alternative presentations that work with a user's existing preferences, see the CSS [media features](/en-US/docs/Web/CSS/@media#media_features) {{cssxref("@media/prefers-color-scheme","prefers-color-scheme")}} and {{cssxref("@media/prefers-contrast","prefers-contrast")}}.
+> This feature is not well supported in browsers without an extension. To offer alternative presentations that work with a user's existing preferences, see the CSS [media features](/en-US/docs/Web/CSS/Reference/At-rules/@media#media_features) {{cssxref("@media/prefers-color-scheme","prefers-color-scheme")}} and {{cssxref("@media/prefers-contrast","prefers-contrast")}}.
 
 Firefox lets users select alternate {{glossary("stylesheet", "stylesheets")}} using the _View > Page Style_ submenu, which displays the values of the [`title`](/en-US/docs/Web/HTML/Reference/Global_attributes/title) attributes. Other browsers require an extension to enable this functionality. The web page can also provide its own user interface to let users switch styles.
 

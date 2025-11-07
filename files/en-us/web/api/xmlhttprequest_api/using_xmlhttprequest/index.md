@@ -75,7 +75,7 @@ req.overrideMimeType("text/plain; charset=x-user-defined");
 
 However, more modern techniques are available, since the {{domxref("XMLHttpRequest.responseType", "responseType")}} attribute now supports a number of additional content types, which makes sending and receiving binary data much easier.
 
-For example, consider this snippet, which uses the `responseType` of `"arraybuffer"` to fetch the remote content into a {{jsxref("ArrayBuffer")}} object, which stores the raw binary data.
+For example, consider this snippet, which uses the `responseType` of `"arraybuffer"` to fetch the remote content into an {{jsxref("ArrayBuffer")}} object, which stores the raw binary data.
 
 ```js
 const req = new XMLHttpRequest();

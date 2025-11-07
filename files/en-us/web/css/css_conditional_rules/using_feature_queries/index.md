@@ -7,11 +7,11 @@ sidebar: cssref
 
 **Feature queries** are conditional group rules that test whether the user agent supports or doesn't support one or more CSS features, such as CSS properties and property values. Feature queries give web developers a way to test to see if a browser has support for a certain feature, and then provide CSS that will only run based on the result of that test. In this guide, you will learn how to implement progressive enhancement using feature queries.
 
-Feature queries are created using the CSS at-rule [`@supports`](/en-US/docs/Web/CSS/@supports) (or the `supports()` function within [`@import`](/en-US/docs/Web/CSS/@import) at-rules).
+Feature queries are created using the CSS at-rule [`@supports`](/en-US/docs/Web/CSS/Reference/At-rules/@supports) (or the `supports()` function within [`@import`](/en-US/docs/Web/CSS/Reference/At-rules/@import) at-rules).
 
 ## Syntax
 
-CSS feature queries are part of the [CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules) module, which also defines the media query [`@media`](/en-US/docs/Web/CSS/@media) at-rule. Feature queries behave similarly to [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries). The difference is that with a media query, you are testing something about the environment in which the web page is running, whereas with feature queries you are testing browser support for CSS features.
+CSS feature queries are part of the [CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules) module, which also defines the media query [`@media`](/en-US/docs/Web/CSS/Reference/At-rules/@media) at-rule. Feature queries behave similarly to [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries). The difference is that with a media query, you are testing something about the environment in which the web page is running, whereas with feature queries you are testing browser support for CSS features.
 
 A feature query consists of the `@supports` at-rule followed by the support condition or a `supports()` function and declaration parameter within an `@import` at-rule declaration:
 
@@ -200,7 +200,7 @@ body {
 
 ## Additional feature query options
 
-Feature queries are not limited to property-value pairs. You can include [`font-tech()`](/en-US/docs/Web/CSS/@supports#font-tech), [`font-format()`](/en-US/docs/Web/CSS/@supports#font-format), and [`selector()`](/en-US/docs/Web/CSS/@supports#function_syntax) functions in your feature queries to selectively apply CSS based on whether the user-agent supports a specified font technology, font format, or selector syntax, respectively.
+Feature queries are not limited to property-value pairs. You can include [`font-tech()`](/en-US/docs/Web/CSS/Reference/At-rules/@supports#font-tech), [`font-format()`](/en-US/docs/Web/CSS/Reference/At-rules/@supports#font-format), and [`selector()`](/en-US/docs/Web/CSS/Reference/At-rules/@supports#function_syntax) functions in your feature queries to selectively apply CSS based on whether the user-agent supports a specified font technology, font format, or selector syntax, respectively.
 
 For example, the `selector()` function can be used to import a stylesheet for browsers that support a vendor-prefixed pseudo-element:
 

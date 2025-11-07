@@ -71,7 +71,7 @@ In addition to the pre-defined keywords that are part of the specification for a
 - {{cssxref("revert")}}
   - : Resets the property to its inherited value if it inherits from its parent or to the default value established by the user agent's stylesheet (or by user styles if any exist).
 - {{cssxref("revert-layer")}}
-  - : Rolls back the value of a property in a [cascade layer](/en-US/docs/Web/CSS/@layer) to the value of the property in a CSS rule matching the element in a previous cascade layer. The value of the property with this keyword is recalculated as if no rules were specified on the target element in the current cascade layer.
+  - : Rolls back the value of a property in a [cascade layer](/en-US/docs/Web/CSS/Reference/At-rules/@layer) to the value of the property in a CSS rule matching the element in a previous cascade layer. The value of the property with this keyword is recalculated as if no rules were specified on the target element in the current cascade layer.
 
 ## URLs
 
@@ -92,7 +92,7 @@ The parameter for `url()` can be either quoted or unquoted. If unquoted, it is p
 ## See also
 
 - [Numeric data types](/en-US/docs/Web/CSS/CSS_values_and_units/Numeric_data_types)
-- [CSS data types](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types)
+- [CSS data types](/en-US/docs/Web/CSS/Reference/Values/Data_types)
 - [CSS values and units](/en-US/docs/Web/CSS/CSS_values_and_units) module
 - [Learn: Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
 - [CSS cascade and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module

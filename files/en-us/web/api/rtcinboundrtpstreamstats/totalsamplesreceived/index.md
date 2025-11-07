@@ -15,7 +15,7 @@ The **`totalSamplesReceived`** property of the {{domxref("RTCInboundRtpStreamSta
 
 ## Value
 
-An positive integer.
+A positive integer.
 
 ## Specifications
 

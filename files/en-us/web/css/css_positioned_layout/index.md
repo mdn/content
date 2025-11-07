@@ -44,7 +44,7 @@ Like all CSS modules, this module impacts and is impacted by other modules. This
 - [Inline direction](/en-US/docs/Glossary/Flow_relative_values#inline_direction)
 - {{glossary("Inset properties")}}
 - [Positioning context](/en-US/docs/Learn_web_development/Core/CSS_layout/Positioning#positioning_contexts)
-- [Relative position](/en-US/docs/Web/CSS/position#relative_positioning)
+- [Relative position](/en-US/docs/Web/CSS/Reference/Properties/position#relative_positioning)
 - {{glossary("Stacking context")}}
 - [Static positioning](/en-US/docs/Learn_web_development/Core/CSS_layout/Positioning#static_positioning)
 - {{glossary("Top layer")}}
@@ -105,7 +105,7 @@ Like all CSS modules, this module impacts and is impacted by other modules. This
   - {{cssxref("ruby-position")}}
   - {{cssxref("text-emphasis-position")}}
   - {{cssxref("text-underline-position")}}
-- Position-related [data types](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types)
+- Position-related [data types](/en-US/docs/Web/CSS/Reference/Values/Data_types)
   - {{cssxref("baseline-position")}}
   - {{cssxref("content-position")}}
   - {{cssxref("overflow-position")}}

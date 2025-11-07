@@ -21,7 +21,7 @@ The {{HTMLElement("html")}} element is not the only element capable of creating 
 A new BFC is created in the following situations:
 
 - elements made to float using {{cssxref("float")}}
-- [absolutely positioned](/en-US/docs/Web/CSS/position#types_of_positioning) elements
+- [absolutely positioned](/en-US/docs/Web/CSS/Reference/Properties/position#types_of_positioning) elements
 - elements with {{cssxref("display", "display: inline-block", "#inline-block")}}
 - table cells or elements with `display: table-cell`, including anonymous table cells created when using the `display: table-*` properties
 - table captions or elements with `display: table-caption`

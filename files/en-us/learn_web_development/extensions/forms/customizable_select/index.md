@@ -351,7 +351,7 @@ The list of transitioned properties features `opacity`, however it also includes
   - : The `overlay` value changes from `none` to `auto` when the popover changes state from hidden to shown, to promote it to the {{glossary("top layer")}}, then back again when it is hidden to remove it. This needs to be animated to ensure the removal of the popover from the top layer is deferred until the transition completes, ensuring the transition is visible.
 
 > [!NOTE]
-> The [`allow-discrete`](/en-US/docs/Web/CSS/transition-behavior#allow-discrete) value is needed to enable discrete property animations.
+> The [`allow-discrete`](/en-US/docs/Web/CSS/Reference/Properties/transition-behavior#allow-discrete) value is needed to enable discrete property animations.
 
 Next, the picker is selected in the showing state using `::picker(select):popover-open` and given an `opacity` value to `1` — this is the end state of the transition:
 
@@ -377,7 +377,7 @@ These rules work together to make the picker smoothly fade in and fade out when 
 
 A customizable `<select>` element's select button and drop-down picker have an implicit anchor reference, and the picker is automatically associated with the select button via [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning). This means that an explicit association does not need to be made using the {{cssxref("anchor-name")}} and {{cssxref("position-anchor")}} properties.
 
-In addition, the [browser's default styles provide a default position](/en-US/docs/Web/CSS/::picker#picker_anchor_positioning), which you can customize as explained in [Positioning elements relative to their anchor](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#positioning_elements_relative_to_their_anchor).
+In addition, the [browser's default styles provide a default position](/en-US/docs/Web/CSS/Reference/Selectors/::picker#picker_anchor_positioning), which you can customize as explained in [Positioning elements relative to their anchor](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#positioning_elements_relative_to_their_anchor).
 
 In our demo, the position of the picker is set relative to its anchor by using the {{cssxref("anchor()")}} function inside its {{cssxref("top")}} and {{cssxref("left")}} property values:
 

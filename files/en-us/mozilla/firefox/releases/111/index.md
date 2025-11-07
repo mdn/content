@@ -19,7 +19,7 @@ This article provides information about the changes in Firefox 111 that affect d
 
 - CSS color functions `color()`, `lab()`, `lch()`, `oklab()`, and `oklch()` are now supported.
   These features are disabled by default and can be enabled by setting the preference `layout.css.more_color_4.enabled` to true.
-  For more information, see the [CSS color value](/en-US/docs/Web/CSS/color_value) documentation ([Firefox bug 1352757](https://bugzil.la/1352757) and [Firefox bug 1128204](https://bugzil.la/1128204)).
+  For more information, see the [CSS color value](/en-US/docs/Web/CSS/Reference/Values/color_value) documentation ([Firefox bug 1352757](https://bugzil.la/1352757) and [Firefox bug 1128204](https://bugzil.la/1128204)).
 
 ### JavaScript
 
@@ -44,7 +44,7 @@ No notable changes.
 - The HTTP [`Authorization`](/en-US/docs/Web/HTTP/Reference/Headers/Authorization) header is removed from [`fetch()`](/en-US/docs/Web/API/Window/fetch) and [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) requests that are redirected cross-origin (`fetch()` headers may be added by developers using the [`option.headers`](/en-US/docs/Web/API/RequestInit#headers) argument).
   See [Firefox bug 1802086](https://bugzil.la/1802086) for more details.
 - The `none` value of the `options.imageOrientation` parameter passed to {{domxref("Window.createImageBitmap()")}} and {{domxref("WorkerGlobalScope.createImageBitmap()")}} has been renamed to `from-image`.
-  This is to better match the meaning of the equivalent CSS [`image-orientation`](/en-US/docs/Web/CSS/image-orientation) property. ([Firefox bug 1809740](https://bugzil.la/1809740)).
+  This is to better match the meaning of the equivalent CSS [`image-orientation`](/en-US/docs/Web/CSS/Reference/Properties/image-orientation) property. ([Firefox bug 1809740](https://bugzil.la/1809740)).
 
 #### DOM
 

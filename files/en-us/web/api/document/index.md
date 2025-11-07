@@ -26,6 +26,8 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
 
 - {{DOMxRef("Document.activeElement")}} {{ReadOnlyInline}}
   - : Returns the {{DOMxRef('Element')}} that currently has focus.
+- {{DOMxRef("Document.activeViewTransition")}} {{ReadOnlyInline}}
+  - : Returns a {{DOMxRef('ViewTransition')}} instance representing the [view transition](/en-US/docs/Web/API/View_Transition_API) currently active on the document, or `null` if there is no active view transition.
 - {{DOMxRef("Document.adoptedStyleSheets")}}
   - : Add an array of constructed stylesheets to be used by the document.
     These stylesheets may also be shared with shadow DOM subtrees of the same document.

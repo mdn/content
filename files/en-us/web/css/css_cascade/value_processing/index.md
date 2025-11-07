@@ -77,7 +77,7 @@ This involves:
 
 As a result of defaulting, every property is guaranteed to have a [specified value](#specified_value).
 
-Note that explicit defaulting keywords ([`initial`](/en-US/docs/Web/CSS/initial), [`inherit`](/en-US/docs/Web/CSS/inherit), [`unset`](/en-US/docs/Web/CSS/unset), [`revert`](/en-US/docs/Web/CSS/revert), [`revert-layer`](/en-US/docs/Web/CSS/revert-layer)) are also resolved to their corresponding values to determine the [specified value](#specified_value).
+Note that explicit defaulting keywords ([`initial`](/en-US/docs/Web/CSS/Reference/Values/initial), [`inherit`](/en-US/docs/Web/CSS/Reference/Values/inherit), [`unset`](/en-US/docs/Web/CSS/Reference/Values/unset), [`revert`](/en-US/docs/Web/CSS/Reference/Values/revert), [`revert-layer`](/en-US/docs/Web/CSS/Reference/Values/revert-layer)) are also resolved to their corresponding values to determine the [specified value](#specified_value).
 
 ## Processing stages
 
@@ -161,7 +161,7 @@ A property's **initial value** is the default value as listed in its definition 
 You can explicitly set the initial value by using the {{cssxref("initial")}} keyword.
 
 > [!NOTE]
-> The initial value can be found in the formal syntax section of each CSS property reference page. For example, the [initial value of `font-size` is `medium`](/en-US/docs/Web/CSS/font-size#formal_definition). The initial value should not be confused with the value specified by the browser's style sheet.
+> The initial value can be found in the formal syntax section of each CSS property reference page. For example, the [initial value of `font-size` is `medium`](/en-US/docs/Web/CSS/Reference/Properties/font-size#formal_definition). The initial value should not be confused with the value specified by the browser's style sheet.
 
 ### Computed value
 
@@ -241,7 +241,7 @@ updateAllUsedWidths();
 window.addEventListener("resize", updateAllUsedWidths);
 ```
 
-While the three specified values, `auto`, `50%`, and `inherit`, are keyword and {{cssxref("percentage")}} values, retrieving the `width` using `window.getComputedStyle(el)["width"];` returns an [absolute length](/en-US/docs/Web/CSS/length#absolute_length_units) `px` value:
+While the three specified values, `auto`, `50%`, and `inherit`, are keyword and {{cssxref("percentage")}} values, retrieving the `width` using `window.getComputedStyle(el)["width"];` returns an [absolute length](/en-US/docs/Web/CSS/Reference/Values/length#absolute_length_units) `px` value:
 
 {{ EmbedLiveSample('Example', '80%', 372) }}
 
@@ -282,6 +282,6 @@ CSS 2.0 defined _computed value_ as the last step in a property's calculation. C
 
 ## See also
 
-- CSS values for controlling inheritance: [`inherit`](/en-US/docs/Web/CSS/inherit), [`initial`](/en-US/docs/Web/CSS/initial), [`revert`](/en-US/docs/Web/CSS/revert), [`revert-layer`](/en-US/docs/Web/CSS/revert-layer), and [`unset`](/en-US/docs/Web/CSS/unset)
+- CSS values for controlling inheritance: [`inherit`](/en-US/docs/Web/CSS/Reference/Values/inherit), [`initial`](/en-US/docs/Web/CSS/Reference/Values/initial), [`revert`](/en-US/docs/Web/CSS/Reference/Values/revert), [`revert-layer`](/en-US/docs/Web/CSS/Reference/Values/revert-layer), and [`unset`](/en-US/docs/Web/CSS/Reference/Values/unset)
 - [CSS cascading and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module
 - [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax) module

@@ -205,7 +205,7 @@ for (const paragraph of articleParagraphs) {
 
 ### Iterating over a user-defined iterable
 
-Iterating over an object with an `[Symbol.iterator]()` method that returns a custom iterator:
+Iterating over an object with a `[Symbol.iterator]()` method that returns a custom iterator:
 
 ```js
 const iterable = {
@@ -230,7 +230,7 @@ for (const value of iterable) {
 // 3
 ```
 
-Iterating over an object with an `[Symbol.iterator]()` generator method:
+Iterating over an object with a `[Symbol.iterator]()` generator method:
 
 ```js
 const iterable = {

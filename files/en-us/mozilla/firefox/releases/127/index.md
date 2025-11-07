@@ -16,7 +16,7 @@ This article provides information about the changes in Firefox 127 that affect d
 
 ### CSS
 
-- Using a [`<color-interpolation-method>`](/en-US/docs/Web/CSS/color-interpolation-method) is now supported in gradients created with [`conic-gradient()`](/en-US/docs/Web/CSS/gradient/conic-gradient), [`linear-gradient()`](/en-US/docs/Web/CSS/gradient/linear-gradient), and [`radial-gradient()`](/en-US/docs/Web/CSS/gradient/radial-gradient) functions and the [`repeating-conic-gradient()`](/en-US/docs/Web/CSS/gradient/repeating-conic-gradient), [`repeating-linear-gradient()`](/en-US/docs/Web/CSS/gradient/repeating-linear-gradient), and [`repeating-radial-gradient()`](/en-US/docs/Web/CSS/gradient/repeating-radial-gradient) functions for repeating gradients ([Firefox bug 1861363](https://bugzil.la/1861363)).
+- Using a [`<color-interpolation-method>`](/en-US/docs/Web/CSS/Reference/Values/color-interpolation-method) is now supported in gradients created with [`conic-gradient()`](/en-US/docs/Web/CSS/Reference/Values/gradient/conic-gradient), [`linear-gradient()`](/en-US/docs/Web/CSS/Reference/Values/gradient/linear-gradient), and [`radial-gradient()`](/en-US/docs/Web/CSS/Reference/Values/gradient/radial-gradient) functions and the [`repeating-conic-gradient()`](/en-US/docs/Web/CSS/Reference/Values/gradient/repeating-conic-gradient), [`repeating-linear-gradient()`](/en-US/docs/Web/CSS/Reference/Values/gradient/repeating-linear-gradient), and [`repeating-radial-gradient()`](/en-US/docs/Web/CSS/Reference/Values/gradient/repeating-radial-gradient) functions for repeating gradients ([Firefox bug 1861363](https://bugzil.la/1861363)).
 
 ### JavaScript
 
@@ -31,7 +31,7 @@ This article provides information about the changes in Firefox 127 that affect d
 
 ### SVG
 
-- The [`lh`](/en-US/docs/Web/CSS/length#lh) and [`rlh`](/en-US/docs/Web/CSS/length#rlh) line height units, first supported in CSS [in Firefox 120](/en-US/docs/Mozilla/Firefox/Releases/120#css), are now supported in SVG as well. They can be used both in CSS property values `stroke-width: 0.5lh` and SVG attributes values `stroke-width="0.5lh"`. ([Firefox bug 1892089](https://bugzil.la/1892089)).
+- The [`lh`](/en-US/docs/Web/CSS/Reference/Values/length#lh) and [`rlh`](/en-US/docs/Web/CSS/Reference/Values/length#rlh) line height units, first supported in CSS [in Firefox 120](/en-US/docs/Mozilla/Firefox/Releases/120#css), are now supported in SVG as well. They can be used both in CSS property values `stroke-width: 0.5lh` and SVG attributes values `stroke-width="0.5lh"`. ([Firefox bug 1892089](https://bugzil.la/1892089)).
 
 ### Security
 
@@ -84,7 +84,7 @@ These features are newly shipped in Firefox 127 but are disabled by default. To 
 
 - **`calc()` color channel support in relative colors:** `layout.css.relative-color-syntax.enabled`.
 
-  The CSS [`calc()`](/en-US/docs/Web/CSS/calc) function can now parse color channels in [relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors#using_math_functions) ([Firefox bug 1889561](https://bugzil.la/1889561)).
+  The CSS [`calc()`](/en-US/docs/Web/CSS/Reference/Values/calc) function can now parse color channels in [relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors#using_math_functions) ([Firefox bug 1889561](https://bugzil.la/1889561)).
 
 - **JavaScript `Float16Array` typed array**: `javascript.options.experimental.float16array`.
 

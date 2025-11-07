@@ -14,7 +14,7 @@ A common pattern is to style the first paragraph in an article differently to th
 
 ## The next-sibling combinator
 
-CSS has a group of [CSS Selectors](/en-US/docs/Web/CSS/CSS_selectors) which are referred to as **combinators**, because they select things based on a combination of selectors. In our case, we will use the [next-sibling combinator](/en-US/docs/Web/CSS/Next-sibling_combinator). This combinator selects an element based on it being next to another element. In our HTML we have a {{htmlelement("Heading_Elements", "h1")}} followed by a {{htmlelement("p")}}. The `<p>` is the next sibling of the `<h1>` so we can select it with `h1 + p`.
+CSS has a group of [CSS Selectors](/en-US/docs/Web/CSS/CSS_selectors) which are referred to as **combinators**, because they select things based on a combination of selectors. In our case, we will use the [next-sibling combinator](/en-US/docs/Web/CSS/Reference/Selectors/Next-sibling_combinator). This combinator selects an element based on it being next to another element. In our HTML we have a {{htmlelement("Heading_Elements", "h1")}} followed by a {{htmlelement("p")}}. The `<p>` is the next sibling of the `<h1>` so we can select it with `h1 + p`.
 
 ```html live-sample___highlight_h1_plus_para
 <div class="wrapper">
