@@ -49,7 +49,7 @@ The diagram below illustrates the execution model of agents:
 
 ## Realms
 
-Each agent owns one or more **realms**. Each piece of JavaScript code is associated with a realm when it's loaded, which remains the same even when called from another realm. A realm consists of the follow information:
+Each agent owns one or more **realms**. Each piece of JavaScript code is associated with a realm when it's loaded, which remains the same even when called from another realm. A realm consists of the following information:
 
 - A list of intrinsic objects like `Array`, `Array.prototype`, etc.
 - Globally declared variables, the value of [`globalThis`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis), and the global object
@@ -173,7 +173,7 @@ promise.then(() => {
 
 In this example, we create an already-resolved promise, which means any callback attached to it will be immediately scheduled as jobs. The two callbacks seem to cause a race condition, but actually, the output is fully predictable: `1` and `2` will be logged in order. This is because each job runs to completion before the next one is executed, so the overall order is always `i += 1; console.log(i); i += 1; console.log(i);` and never `i += 1; i += 1; console.log(i); console.log(i);`.
 
-A downside of this model is that if a job takes too long to complete, the web application is unable to process user interactions like click or scroll. The browser mitigates this with the "a script is taking too long to run" dialog. A good practice to follow is to make job processing short and if possible cut down one job into several jobs.
+A downside of this model is that if a job takes too long to complete, the web application is unable to process user interactions like click or scroll. The browser mitigates this with the "a script is taking too long to run" dialog. A good practice to follow is to make job processing short and, if possible, cut down one job into several jobs.
 
 ### Never blocking
 
