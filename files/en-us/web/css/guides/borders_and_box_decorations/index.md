@@ -81,7 +81,7 @@ body:has(input:checked) div {
   box-shadow: none;
 }
 
-@layer pageSetUp {
+@layer page-setup {
   html {
     font-family: "Helvetica", "Arial", sans-serif;
   }
