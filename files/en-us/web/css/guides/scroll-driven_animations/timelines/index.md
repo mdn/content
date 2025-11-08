@@ -227,8 +227,8 @@ Here we use the {{cssxref("view-timeline-name")}} property to name an element, i
 .item {
   animation: action 1ms linear;
 
-  view-timeline-name: --aName;
-  animation-timeline: --aName;
+  view-timeline-name: --a-name;
+  animation-timeline: --a-name;
 }
 ```
 
@@ -238,12 +238,12 @@ The animation is slightly different from the previous examples in that the spinn
 
 ```css live-sample___named_view live-sample___anon_view
 @keyframes action {
-  from,
+  0%,
   20% {
     rotate: 45deg;
   }
   80%,
-  to {
+  100% {
     rotate: 720deg;
   }
 }

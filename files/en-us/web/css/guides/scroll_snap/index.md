@@ -184,7 +184,7 @@ article.snapDisabled ul {
   overscroll-behavior-x: initial;
 }
 
-@layer pageSetup {
+@layer page-setup {
   article {
     display: flex;
     gap: 2vw;
