@@ -120,7 +120,7 @@ The CSS selectors module also introduces the {{CSSXref(":blank")}}, {{CSSXref(":
 - [Pseudo classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
   - : Lists the pseudo-classes, selectors that allow the selection of elements based on state information that is not contained in the document tree, defined in the various CSS modules and HTML.
 
-- [Using the `:target` pseudo-class in selectors](/en-US/docs/Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors)
+- [Using the `:target` pseudo-class in selectors](/en-US/docs/Web/CSS/Guides/Selectors/Using_:target)
   - : Learn how to use the {{CSSXref(":target")}} pseudo-class to style the target element a URL's fragment identifier.
 
 - [Privacy and the `:visited` selector](/en-US/docs/Web/CSS/Guides/Selectors/Privacy_and_:visited)
