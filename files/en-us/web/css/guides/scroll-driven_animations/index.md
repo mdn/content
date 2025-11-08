@@ -21,23 +21,23 @@ You can define the scroller that controls the animation either by naming the ani
 
 ```css live-sample___scroll_animation
 main {
-  scroll-timeline: --mainTimeline;
+  scroll-timeline: --main-timeline;
 }
 
 div {
-  animation: backgroundAnimation linear;
+  animation: background-animation linear;
   animation-timeline: scroll(nearest inline);
 }
 
 div::after {
-  animation: shapeAnimation linear;
-  animation-timeline: --mainTimeline;
+  animation: shape-animation linear;
+  animation-timeline: --main-timeline;
 }
 ```
 
 ```css hidden live-sample___scroll_animation
 @layer animations {
-  @keyframes backgroundAnimation {
+  @keyframes background-animation {
     0% {
       background-color: palegoldenrod;
     }
@@ -45,7 +45,7 @@ div::after {
       background-color: magenta;
     }
   }
-  @keyframes shapeAnimation {
+  @keyframes shape-animation {
     0% {
       left: 0;
       top: 0;
@@ -65,7 +65,7 @@ div::after {
   }
 }
 
-@layer pageSetup {
+@layer page-setup {
   :root {
     --elSize: 50px;
   }
@@ -90,8 +90,8 @@ div::after {
   }
 }
 
-@layer noSupport {
-  @supports not (scroll-timeline: --mainTimeline) {
+@layer no-support {
+  @supports not (scroll-timeline: --main-timeline) {
     body::before {
       content: "Your browser doesn't support scroll-driven animations.";
       background-color: wheat;
