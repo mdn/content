@@ -42,15 +42,13 @@ Here are some hints for opening issues:
 - Choose the appropriate category to report the issue. For example, to report a content bug, use the [Content issue](https://github.com/mdn/content/issues/new?assignees=&labels=needs+triage&template=content-bug.yml) template in the `mdn/content` repository.
 - Provide sufficient information while reporting the issue:
   - **Issue title** must convey succinctly the _required action_.
-  - **Issue description** must clearly describe the bug and the action required to resolve the issue. It must also list the task or sub-tasks to be completed to resolve the issue. Some other guidelines include:
-    - Use the description field to indicate the status of the task or sub-tasks by using checklists.
-    - Update the status of a task in the issue description instead of commenting on the issue. Use [task lists](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/about-tasklists) in the description if an issue has multiple parts. This helps others who may otherwise need to scroll through comments on the issue to determine the status of various tasks.
-    - Comments in an issue should be limited to details or context that help resolve the issue.
+  - **Issue description** must clearly describe the bug and, if you could, the action required to resolve the issue.
+
+    For complex issues that need multiple steps to resolve, break down the work into smaller tasks using a [task list](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/about-tasklists). Update the status of a task in the issue description instead of commenting on the issue. This helps others who may otherwise need to scroll through comments on the issue to determine the status of various tasks. Comments in an issue should be limited to details or context that help resolve the issue.
+
 - If you find yourself in one of the following situations, move the conversation to [MDN's discussion on GitHub](https://github.com/orgs/mdn/discussions):
-  - A discussion needs to take place to clarify an issue.
-  - A discussion begins after opening the issue.
+  - You are unsure if the issue is valid, or what the required action is.
   - The issue has no clear consensus on its resolution.
-  - The requirements for completing the task expand while it's being resolved or the work is unclear.
 - For minor bugs, you can [make the changes yourself](#fixing_issues_yourself) and submit a pull request.
 
 If the information you provide in the issue is incomplete, you might be asked to provide more details during the [issue triaging process](#review_the_issue_for_completeness_of_information) (look out for the `needs info` label).
@@ -85,9 +83,9 @@ Remember that if you take on an issue, the expectation is for the work to be com
 
 These are the general steps for working on an issue:
 
-1. **Find an issue:** If you're looking to contribute, search for issues with a priority label, `p2` or `p3` (see what these [priority labels](#set_a_priority_label) mean). Alternatively, look for issues with [one of these labels that indicate we're inviting PRs from the community](#set_other_labels): `good first issue`, `accepting PR`, and `help wanted`. Most repositories have issues with these labels. You are welcome to browse and pick an issue that is suitable for your skill set.
+1. **Find an issue:** If you're looking to contribute, search for issues with a priority label, `p2` or `p3` (see what these [priority labels](#set_a_priority_label) mean). Alternatively, look for issues with [one of these labels that indicate we're inviting PRs from the community](#apply_type_goal_and_effort_labels): `good first issue`, `accepting PR`, and `help wanted`. Most repositories have issues with these labels. You are welcome to browse and pick an issue that is suitable for your skill set.
 
-   Another useful place to look for issues is the [MDN Issue Board](https://github.com/orgs/mdn/projects/25). This project view lists open issues from multiple repositories. You can filter the list based on the topics (`Labels` column) you're interested in. If you're curious, read the meanings of the [labels](#set_other_labels) that get applied during the issue triage process.
+   Another useful place to look for issues is the [MDN Issue Board](https://github.com/orgs/mdn/projects/25). This project view lists open issues from multiple repositories. You can filter the list based on the topics (`Labels` column) you're interested in. If you're curious, read the meanings of the [labels](#apply_type_goal_and_effort_labels) that get applied during the issue triage process.
 
    > [!NOTE]
    > An issue with the `needs triage` label indicates that the MDN team has not reviewed the issue yet, and you shouldn't begin work on it.
@@ -155,11 +153,12 @@ These are the guidelines to follow while triaging each issue.
 
 These are some of the things to keep in mind while reviewing the validity of an issue:
 
-- Check if the issue raised is valid and if the fix will improve the content for the readers and the website.
+- Check if the issue raised is valid.
+- Evaluate if the fix will improve the content for the readers and the website.
 - Evaluate if the impact of the fix will be small or site-wide.
 - Evaluate if the fix for the issue will need a discussion first, in which case, point the author to open a [discussion](https://github.com/orgs/mdn/discussions) instead.
-- Check if the issue complies with our [writing guidelines](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide) and [templates](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types).
-- Check whether suggestions for adding links comply with our [external links policy](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#external_links).
+- Check if the issue complies with our [writing guidelines](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide) and [templates](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types).—for example, whether suggestions for adding links comply with our [external links policy](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#external_links).
+- Check if the issue is a duplicate of an existing issue. If it is, you can [close the issue as a duplicate](#closing_an_issue_as_a_duplicate).
 
 #### Review the issue for completeness of information
 
@@ -200,13 +199,13 @@ To whoever fixes this issue, it looks like the following is needed:
 - Update the compatibility data at Link-X
 ```
 
-#### Set other labels
+#### Apply type, goal, and effort labels
 
 Next, set the following labels where possible:
 
 - A label to indicate the "type of problem" that needs to be fixed, if applicable:
   - `broken link external`: The issue reports a broken link to an external page.
-  - `document not written`: The issue reports a necessary document that has not been written yet, usually because a link points to it. Note that we have a [Web Docs Backlog](https://openwebdocs.github.io/web-docs-backlog/all/) project that already tracks many unwritten reference pages, so if the issue is about one of those, you can [close the issue](#closing_an_issue_as_not_planned) with `closed: duplicate` and point to the backlog.
+  - `document not written`: The issue reports a necessary document that has not been written yet, usually because a link points to it. Note that we have a [Web Docs Backlog](https://openwebdocs.github.io/web-docs-backlog/all/) project that already tracks many unwritten reference pages, so if the issue is about one of those, you can [close the issue](#closing_an_issue_as_a_duplicate) with `closed: duplicate` and point to the backlog.
   - `screenshot`: The issue reports a missing or outdated screenshot.
   - `baseline`: The issue reports an incorrect [baseline](/en-US/docs/Glossary/Baseline/Compatibility) banner. Note that this banner is not controlled by content, but through a collaboration of [browser compat data](https://github.com/mdn/browser-compat-data), [front-end code](https://github.com/mdn/fred), and the [web-platform-dx/web-features](https://github.com/web-platform-dx/web-features) project. You should almost always either close the issue as working as intended or transfer it somewhere else.
 
@@ -224,7 +223,6 @@ Next, set the following labels where possible:
   - `effort: medium`: The fix would likely be between 50 and 1000 lines (corresponding to an `m` or `l`-sized PR).
   - `effort: large`: The fix would likely be over 1000 lines (corresponding to an `xl`-sized PR).
 
-
 - An "accepting contribution" type of label that indicates we're inviting PRs from the community:
   - `good first issue`: Add this label if the fix for the issue is really simple and would provide good practice for a newcomer who is getting used to the contribution process. Apply this label only if _all_ these are true:
     - There are instructions, either from the author or the triager, about what _exactly_ needs to be written (preferably verbatim text, or a step-by-step guide).
@@ -233,7 +231,7 @@ Next, set the following labels where possible:
   - `help wanted`: Set this label if the issue requires help from someone who knows about or is familiar with the topic. This is a popular label, and some contributors use it to search for issues to work on in open source projects in their areas of familiarity or expertise.
   - `accepting PR`: Add this neutral label if the issue is not as straightforward as a `good first issue`, but not so complex or niche to require a `help wanted` label.
 
-  If an issue has none of the above labels, it generally indicates that community contributions are discouraged, either because further discussion is needed, because it needs someone familiar with the MDN editorial conventions (i.e., the team), or because a team member would like to work on it. Contributors can still work on these issues if they are familiar enough with the process.
+  If an issue doesn't have any of the these labels, it generally indicates that community contributions are discouraged for the issue. This may be the case when further discussion is needed, the work requires someone familiar with MDN editorial conventions, or a team member intends to work on it. Contributors can still work on these issues if they are familiar enough with the process.
 
 - Issue status: if an issue is not marked as welcoming PRs or otherwise in progress, add a label indicating what it's blocked on.
   - `needs BCD update`: Set this label if the issue involves documentation for new features or behavior that would first need data about when it's implemented.
@@ -244,14 +242,20 @@ Next, set the following labels where possible:
   - `on hold`: A generic label to indicate that the issue should not be worked on yet.
   - `waiting for implementations`: Set this label if the issue involves a feature that is not yet implemented in browsers and therefore don't qualify for our [documentation criteria](/en-US/docs/MDN/Writing_guidelines/Criteria_for_inclusion).
 
-> [!NOTE]
-> After the triage process is complete, remove the `needs triage` label.
+After you've analyzed and validated the issue, and applied the appropriate labels (type, goal, effort, open to community), the triage process is complete and you can remove the `needs triage` label.
 
 ### Closing an issue as not planned
 
-If an issue does not map to any action items, you should consider closing the issue as not planned. Select from one of the labels below:
+If an issue does not map to any action items, you should consider closing the issue as not planned. Click the drop down next to the **Close issue** button and select **Close as not planned**. Post a comment explaining the reason for closing the issue. Also add one of the following labels:
 
 - `closed: browser bug`: The issue reports unexpected behavior (with their code or MDN's code) that's actually a browser bug, and it's not significant enough to warrant a BCD note.
-- `closed: duplicate`: The issue is already tracked elsewhere. If there's another issue, use GitHub's "close as duplicate" feature, linking that issue; otherwise, indicate where the canonical place to track the issue is, such as [Web Docs Backlog](https://openwebdocs.github.io/web-docs-backlog/all/).
 - `closed: question`: The issue is based on a user error or misunderstanding, and the content is sufficiently correct and clear. However, usually do give some acknowledgment of the issue and consider whether the content can be clarified further to avoid similar questions.
 - `closed: wontfix`: The issue reports a valid "problem", but MDN decides not to fix it. Reasons include too much effort, out of scope, working as intended, etc.
+
+### Closing an issue as a duplicate
+
+When an issue reports a problem that is already tracked elsewhere, you can close the issue. They don't have to be exact duplicates; if the issue is similar enough to an existing issue, they can be merged as a single issue that's fixed together.
+
+If there is a GitHub issue that tracks the same problem, click the drop down next to the **Close issue** button, select **Close as duplicate**, and paste the URL of the other issue. If the duplication is apparent, no comment is necessary; otherwise, post a comment explaining why the issues are duplicates.
+
+If the problem is tracked but not via a GitHub issue (such as [web docs backlog](https://openwebdocs.github.io/web-docs-backlog/all/)), you can [close the issue as not planned](#closing_an_issue_as_not_planned), post a comment, and add the `closed: duplicate` label. This label is optional for issues closed via the **Close as duplicate** option, but helps with searching for duplicate issues later.
