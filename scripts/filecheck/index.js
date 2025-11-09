@@ -35,7 +35,7 @@ function resolveFiles(files, cwd) {
 const argv = yargs(hideBin(process.argv))
   .scriptName("filecheck")
   .version("0.0.0")
-  .command("$0 [files...]", "Check image files")
+  .usage("$0 [options] [files...]")
   .option("cwd", {
     type: "string",
     describe: "Explicit current-working-directory",
