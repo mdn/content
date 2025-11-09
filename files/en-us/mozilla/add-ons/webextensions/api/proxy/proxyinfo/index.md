@@ -25,8 +25,8 @@ Values of this type are objects. They contain the following properties:
   - : `string`. The hostname of the proxy server. Mandatory unless `type` is `"direct"`.
 - `port`
   - : `number`. The port number of the proxy server. Mandatory unless `type` is `"direct"`.
-- `pathTemplate`
-  - : `string`. The path template. Must be set when the proxy type is `"masque"`, otherwise it's ignored.
+- `masqueTemplate`
+  - : `string`. The URI template for the MASQUE proxy, starting from the path component of the URI. This must contain the `target_host` and `target_port` template variables as defined in [RFC 9298](https://www.rfc-editor.org/rfc/rfc9298.html#name-client-configuration). For example, `/.well-known/masque/udp/{target_host}/{target_port}/`. Must be set when the proxy type is `"masque"`.
 - `username` {{optional_inline}}
   - : `string`. Username for the proxy service. This is usable with "socks". For HTTP proxy authorizations, use [`webRequest.onAuthRequired`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/onAuthRequired). Must not be set when proxy is `"masque"`.
 - `password` {{optional_inline}}
