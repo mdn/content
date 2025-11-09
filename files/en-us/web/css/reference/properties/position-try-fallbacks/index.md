@@ -199,7 +199,7 @@ Try scrolling so the anchor nears the edges:
 - If you move the anchor near the top of the viewport, you will see the positioned element flip to the bottom-left of the anchor to avoid overflowing.
 - If you move the anchor near the left of the viewport, you will see the positioned element flip to the top-right of the anchor to avoid overflowing.
 
-Depending on the browser, once the positioned element moves to the fallback position, it may remain in the fallback position even if the fallback positioning is no longer necessary, such as if updates to the user interface mean the space is available for it to return to the position defined by the {{cssxref("position-area")}}.
+Depending on the browser, once the positioned element moves to the fallback position, it may remain in the fallback position even if the fallback positioning is no longer necessary, such as when the space allows it to return to the position defined by the {{cssxref("position-area")}}.
 
 However, if you move the anchor towards the top-left corner of the viewport, you'll notice a problem — as the positioned element starts to overflow in the block and inline direction, it flips back to its default top-left position and overflows in both directions, which is not what we want.
 
