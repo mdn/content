@@ -425,7 +425,7 @@ The look of elements can be controlled via CSS pseudo-classes.
 
 #### :required and :optional CSS pseudo-classes
 
-The {{cssxref(':required')}} and {{cssxref(':optional')}} [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) allow writing selectors that match form elements that have the [`required`](/en-US/docs/Web/HTML/Reference/Elements/input#required) attribute, or that don't have it.
+The {{cssxref(':required')}} and {{cssxref(':optional')}} [pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) allow writing selectors that match form elements that have the [`required`](/en-US/docs/Web/HTML/Reference/Elements/input#required) attribute, or that don't have it.
 
 #### :placeholder-shown CSS pseudo-class
 
@@ -433,7 +433,7 @@ See {{cssxref(':placeholder-shown')}}.
 
 #### :valid :invalid CSS pseudo-classes
 
-The {{cssxref(':valid')}} and {{cssxref(':invalid')}} [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) are used to represent \<input> elements whose content validates and fails to validate respectively according to the input's type setting. These classes allow the user to style valid or invalid form elements to make it easier to identify elements that are either formatted correctly or incorrectly.
+The {{cssxref(':valid')}} and {{cssxref(':invalid')}} [pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) are used to represent \<input> elements whose content validates and fails to validate respectively according to the input's type setting. These classes allow the user to style valid or invalid form elements to make it easier to identify elements that are either formatted correctly or incorrectly.
 
 ### Controlling the text of constraint violation
 

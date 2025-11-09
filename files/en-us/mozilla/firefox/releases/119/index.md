@@ -1,5 +1,5 @@
 ---
-title: Firefox 119 for developers
+title: Firefox 119 release notes for developers
 short-title: Firefox 119
 slug: Mozilla/Firefox/Releases/119
 page-type: firefox-release-notes
@@ -28,7 +28,7 @@ This article provides information about the changes in Firefox 119 that affect d
 
 ### SVG
 
-- The [SVG attributes](/en-US/docs/Web/SVG/Reference/Attribute) that accept a [`<length>`](/en-US/docs/Web/SVG/Guides/Content_type#length) value now support [level 3](https://drafts.csswg.org/css-values-3/#lengths) {{cssxref("length")}} [CSS data types](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types) for all SVG elements. This enables the sizing of SVG elements based on font sizes (`cap`, `rem`, etc.), viewport (`vh`, `vw`, `vmin`, etc.), or absolute lengths (`px`, `cm`, etc.), e.g., `<line x1="10vw" y1="10vh" x2="50vw" y2="50vh"/>`. (See [Firefox bug 1287054](https://bugzil.la/1287054) for more details).
+- The [SVG attributes](/en-US/docs/Web/SVG/Reference/Attribute) that accept a [`<length>`](/en-US/docs/Web/SVG/Guides/Content_type#length) value now support [level 3](https://drafts.csswg.org/css-values-3/#lengths) {{cssxref("length")}} [CSS data types](/en-US/docs/Web/CSS/Reference/Values/Data_types) for all SVG elements. This enables the sizing of SVG elements based on font sizes (`cap`, `rem`, etc.), viewport (`vh`, `vw`, `vmin`, etc.), or absolute lengths (`px`, `cm`, etc.), e.g., `<line x1="10vw" y1="10vh" x2="50vw" y2="50vh"/>`. (See [Firefox bug 1287054](https://bugzil.la/1287054) for more details).
 
 ### HTTP
 

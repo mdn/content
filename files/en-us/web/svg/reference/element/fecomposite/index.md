@@ -130,6 +130,7 @@ The table below shows each of these operations using an image of the MDN logo co
 - {{SVGAttr("in2")}}: Second input for the given filter primitive (works the same as the `in` attribute).
 - {{SVGAttr("operator")}}: `over` | `in` | `out` | `atop` | `xor` | `lighter` | `arithmetic`
 - {{SVGAttr("k1")}}, {{SVGAttr("k2")}}, {{SVGAttr("k3")}}, {{SVGAttr("k4")}}: Values used for calculating the result pixel in `arithmetic` {{SVGAttr("operator")}} filter primitives.
+- [Filter primitive attributes](/en-US/docs/Web/SVG/Reference/Attribute#filter_primitive_attributes_presentation_attributes): {{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}}, {{SVGAttr("height")}}, {{SVGAttr("result")}}
 
 ## DOM Interface
 
@@ -272,7 +273,7 @@ svg {
 
 ## See also
 
-- [SVG filter primitive attributes](/en-US/docs/Web/SVG/Reference/Attribute#filter_primitive_attributes)
+- [SVG filter primitive attributes](/en-US/docs/Web/SVG/Reference/Attribute#filter_primitive_attributes_presentation_attributes)
 - {{SVGElement("filter")}}
 - {{SVGElement("animate")}}
 - {{SVGElement("set")}}

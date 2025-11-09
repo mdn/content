@@ -7,7 +7,7 @@ browser-compat: api.Document
 
 {{APIRef("DOM")}}
 
-The **`Document`** interface represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the [DOM tree](/en-US/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model#what_is_a_dom_tree).
+The **`Document`** interface represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the [DOM tree](/en-US/docs/Web/API/Document_Object_Model#what_is_a_dom_tree).
 
 The DOM tree includes elements such as {{HTMLElement("body")}} and {{HTMLElement("table")}}, among [many others](/en-US/docs/Web/HTML/Reference/Elements). It provides functionality globally to the document, like how to obtain the page's URL and create new elements in the document.
 
@@ -26,6 +26,8 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
 
 - {{DOMxRef("Document.activeElement")}} {{ReadOnlyInline}}
   - : Returns the {{DOMxRef('Element')}} that currently has focus.
+- {{DOMxRef("Document.activeViewTransition")}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : Returns a {{DOMxRef('ViewTransition')}} instance representing the [view transition](/en-US/docs/Web/API/View_Transition_API) currently active on the document, or `null` if there is no active view transition.
 - {{DOMxRef("Document.adoptedStyleSheets")}}
   - : Add an array of constructed stylesheets to be used by the document.
     These stylesheets may also be shared with shadow DOM subtrees of the same document.
@@ -321,7 +323,7 @@ The `Document` interface for HTML documents inherit from the {{DOMxRef("HTMLDocu
 
 _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventTarget")}} interfaces._
 
-- {{domxref("Document/parseHTML_static", "Document.parseHTML()")}}
+- {{domxref("Document/parseHTML_static", "Document.parseHTML()")}} {{experimental_inline}}
   - : Creates a new `Document` object from a string of HTML in an XSS-safe manner with sanitization.
 - {{domxref("Document/parseHTMLUnsafe_static", "Document.parseHTMLUnsafe()")}}
   - : Creates a new `Document` object from a string of HTML without performing sanitization.

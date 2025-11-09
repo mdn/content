@@ -1,5 +1,5 @@
 ---
-title: Firefox 84 for developers
+title: Firefox 84 release notes for developers
 short-title: Firefox 84
 slug: Mozilla/Firefox/Releases/84
 page-type: firefox-release-notes

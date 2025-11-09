@@ -244,7 +244,7 @@ New formats and protocols are being rolled out to facilitate adaptive streaming.
 The main formats used for adaptive streaming are [HLS](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/Live_streaming_web_audio_and_video#hls) and [MPEG-DASH](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/Live_streaming_web_audio_and_video#mpeg-dash). MSE has been designed with DASH in mind. MSE defines byte streams according to [ISOBMFF](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/isobmff-byte-stream-format.html) and [M2TS](https://en.wikipedia.org/wiki/M2ts) (both supported in DASH, the latter supported in HLS). Generally speaking, if you are interested in standards, are looking for flexibility, or wish to support most modern browsers, you are probably better off with DASH.
 
 > [!NOTE]
-> Currently Safari does not support DASH although dash.js will work on newer versions of Safari scheduled for release with OSX Yosemite.
+> Currently Safari does not support DASH although dash.js will work on newer versions of Safari scheduled for release with OS X Yosemite.
 
 DASH also provides a number of profiles including onDemand profiles that require no preprocessing and splitting up of media files. There are also a number of cloud based services that will convert your media to both HLS and DASH.
 
@@ -363,21 +363,21 @@ This lets you detect which sources failed to load, which may be useful. Consider
 ```html
 <video>
   <source
-    id="mp4_src"
+    id="src-mp4"
     src="video.mp4"
     type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
   <source
-    id="3gp_src"
+    id="src-3gp"
     src="video.3gp"
     type='video/3gpp; codecs="mp4v.20.8, samr"' />
   <source
-    id="ogg_src"
+    id="src-ogg"
     src="video.ogv"
     type='video/ogv; codecs="theora, vorbis"' />
 </video>
 ```
 
-Since Firefox doesn't support MP4 and 3GP on some platforms due to their patent-encumbered nature, the {{ HTMLElement("source") }} elements with the IDs "mp4_src" and "3gp_src" will receive `error` events before the Ogg resource is loaded. The sources are tried in the order in which they appear, and once one loads successfully, the remaining sources aren't tried at all.
+Since Firefox doesn't support MP4 and 3GP on some platforms due to their patent-encumbered nature, the {{ HTMLElement("source") }} elements with the IDs `src-mp4` and `src-3gp` will receive `error` events before the Ogg resource is loaded. The sources are tried in the order in which they appear, and once one loads successfully, the remaining sources aren't tried at all.
 
 ### Checking whether the browser supports the supplied formats
 

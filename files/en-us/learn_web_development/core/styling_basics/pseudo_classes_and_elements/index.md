@@ -104,8 +104,8 @@ All pseudo-classes behave like this. They target some bit of your document that 
 
 Some pseudo-classes only apply when the user interacts with the document in some way. These **user-action** pseudo-classes, sometimes referred to as **dynamic pseudo-classes**, act as if a class had been added to the element when the user interacts with it. Examples include:
 
-- [`:hover`](/en-US/docs/Web/CSS/:hover) — mentioned above; this only applies if the user moves their pointer over an element, typically a link.
-- [`:focus`](/en-US/docs/Web/CSS/:focus) — only applies if the user focuses the element by clicking or using keyboard controls.
+- [`:hover`](/en-US/docs/Web/CSS/Reference/Selectors/:hover) — mentioned above; this only applies if the user moves their pointer over an element, typically a link.
+- [`:focus`](/en-US/docs/Web/CSS/Reference/Selectors/:focus) — only applies if the user focuses the element by clicking or using keyboard controls.
 
 ```html live-sample___hover
 <p><a href="">Hover over me</a></p>
@@ -132,7 +132,7 @@ Go back to our [first pseudo-class example](#basic_pseudo-class_example) and edi
 1. Add a rule that colors the paragraph text `blue` when they are hovered over.
 2. Add a rule that selects only the last paragraph inside the article, and gives it an `orange` `background-color`.
 
-You can find information on all the other available pseudo-classes on the MDN [Pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) reference page.
+You can find information on all the other available pseudo-classes on the MDN [Pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) reference page.
 
 ## What is a pseudo-element?
 
@@ -186,7 +186,7 @@ Edit the CSS of the previous example using the MDN playground:
 - A `1px solid black` `border`.
 - A `font-size` of `2rem`.
 
-You can find information on all the other available pseudo-elements on the MDN [Pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) reference page.
+You can find information on all the other available pseudo-elements on the MDN [Pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) reference page.
 
 ## Combining pseudo-classes and pseudo-elements
 
@@ -203,7 +203,7 @@ article p:first-child::first-line {
 
 ## Generating content with ::before and ::after
 
-There are a couple of special pseudo-elements, which are used along with the [`content`](/en-US/docs/Web/CSS/content) property to insert content into your document using CSS. This technique is called **generated content**.
+There are a couple of special pseudo-elements, which are used along with the [`content`](/en-US/docs/Web/CSS/Reference/Properties/content) property to insert content into your document using CSS. This technique is called **generated content**.
 
 You could use it to insert a string of text, such as in the example below. We've also given the generated content a `yellow` background color so it can be easily distinguished from the paragraph content.
 
@@ -280,7 +280,7 @@ In the next article, we'll learn about combinators.
 
 ## See also
 
-- [Pseudo-classes reference](/en-US/docs/Web/CSS/Pseudo-classes)
-- [Pseudo-elements reference](/en-US/docs/Web/CSS/Pseudo-elements)
+- [Pseudo-classes reference](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
+- [Pseudo-elements reference](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements)
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Attribute_selectors", "Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics")}}

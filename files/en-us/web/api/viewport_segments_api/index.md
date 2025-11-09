@@ -35,8 +35,8 @@ For an explanation of how the API works, see [Using the Viewport Segments API](/
   - : Detects whether the device has a specified number of viewport segments laid out horizontally.
 - {{cssxref("@media/vertical-viewport-segments", "vertical-viewport-segments")}} `@media` feature
   - : Detects whether the device has a specified number of viewport segments laid out vertically.
-- [Viewport segment environment variables](/en-US/docs/Web/CSS/env#viewport-segment-width)
-  - : These [environment variables](/en-US/docs/Web/CSS/CSS_environment_variables/Using_environment_variables) provide access to the edge coordinates and dimensions of each viewport segment.
+- [Viewport segment environment variables](/en-US/docs/Web/CSS/Reference/Values/env#viewport-segment-width)
+  - : These [environment variables](/en-US/docs/Web/CSS/Guides/Environment_variables/Using) provide access to the edge coordinates and dimensions of each viewport segment.
 
 ## Examples
 
@@ -57,5 +57,5 @@ If possible, you should view the demo on a foldable device. Current browser deve
 - [Using the Viewport Segments API](/en-US/docs/Web/API/Viewport_segments_API/Using)
 - [Viewport API](/en-US/docs/Web/API/Viewport_API)
 - [Device Posture API](/en-US/docs/Web/API/Device_Posture_API)
-- [CSS environment variables](/en-US/docs/Web/CSS/CSS_environment_variables) module
+- [CSS environment variables](/en-US/docs/Web/CSS/Guides/Environment_variables) module
 - [Origin trial for Foldable APIs](https://developer.chrome.com/blog/foldable-apis-ot) via developer.chrome.com (2024)

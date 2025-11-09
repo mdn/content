@@ -48,7 +48,7 @@ console.log(stack.disposed); // true
 
 ### Allowing resources to be disposed within two code paths
 
-The major use case of `move()` is when you have one or more resources which could either be disposed right here or could be persisted for later use. In this case, you can put the resources in a `AsyncDisposableStack` and then call `move()` when you need to persist the resources for later usage.
+The major use case of `move()` is when you have one or more resources which could either be disposed right here or could be persisted for later use. In this case, you can put the resources in an `AsyncDisposableStack` and then call `move()` when you need to persist the resources for later usage.
 
 ```js
 class PluginHost {
@@ -58,7 +58,7 @@ class PluginHost {
   #socket;
 
   static async init() {
-    // Create a AsyncDisposableStack that is disposed when init exits.
+    // Create an AsyncDisposableStack that is disposed when init exits.
     // If construction succeeds, we move everything out of `stack` and into
     // `#disposables` to be disposed later.
     await using stack = new AsyncDisposableStack();

@@ -44,7 +44,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
         attributionsrc="https://a.example/register-source https://b.example/register-source"></script>
       ```
 
-      This is useful in cases where the requested resource is not on a server you control, or you just want to handle registering the attribution source on a different server. In this case, you can specify one or more URLs as the value of `attributionsrc`. When the resource request occurs the {{httpheader("Attribution-Reporting-Eligible")}} header will be sent to the URL(s) specified in `attributionSrc` in addition to the resource origin. These URLs can then respond with a {{httpheader("Attribution-Reporting-Register-Source")}} or {{httpheader("Attribution-Reporting-Register-Trigger")}} header as appropriate to complete registration.
+      This is useful in cases where the requested resource is not on a server you control, or you just want to handle registering the attribution source on a different server. In this case, you can specify one or more URLs as the value of `attributionsrc`. When the resource request occurs the {{httpheader("Attribution-Reporting-Eligible")}} header will be sent to the URL(s) specified in `attributionSrc` in addition to the resource origin. These URLs can then respond with an {{httpheader("Attribution-Reporting-Register-Source")}} or {{httpheader("Attribution-Reporting-Register-Trigger")}} header as appropriate to complete registration.
 
       > [!NOTE]
       > Specifying multiple URLs means that multiple attribution sources can be registered on the same feature. You might for example have different campaigns that you are trying to measure the success of, which involve generating different reports on different data.
@@ -76,9 +76,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 
     If the attribute is specified with the `async` attribute, the element will act as if only the `async` attribute is specified.
 
-- `fetchpriority`
-  - : Provides a hint of the relative priority to use when fetching an external script.
-    Allowed values:
+- [`fetchpriority`](/en-US/docs/Web/HTML/Reference/Attributes/fetchpriority)
+  - : Provides a hint of the relative priority to use when fetching an external script. Allowed values:
     - `high`
       - : Fetch the external script at a high priority relative to other external scripts.
     - `low`
@@ -87,9 +86,6 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
       - : Don't set a preference for the fetch priority.
         This is the default.
         It is used if no value or an invalid value is set.
-
-    See {{domxref("HTMLScriptElement.fetchPriority")}} for more information.
-
 - `integrity`
   - : This attribute contains inline metadata that a user agent can use to verify that a fetched resource has been delivered without unexpected manipulation. The attribute must not be specified when the `src` attribute is absent. See [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity).
 - `nomodule`

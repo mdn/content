@@ -26,7 +26,7 @@ showPopover(options)
     - `source` {{optional_inline}}
       - : An {{domxref("HTMLElement")}} reference; programmatically defines the invoker of the popover associated with the show action, that is, its control element. Establishing a relationship between a popover and its invoker using the `source` option has two useful effects:
         - The browser places the popover in a logical position in the keyboard focus navigation order when shown. This makes the popover more accessible to keyboard users (see also [Popover accessibility features](/en-US/docs/Web/API/Popover_API/Using#popover_accessibility_features)).
-        - The browser creates an implicit anchor reference between the two, making it very convenient to position popovers relative to their controls using [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning). See [Popover anchor positioning](/en-US/docs/Web/API/Popover_API/Using#popover_anchor_positioning) for more details.
+        - The browser creates an implicit anchor reference between the two, making it very convenient to position popovers relative to their controls using [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning). See [Popover anchor positioning](/en-US/docs/Web/API/Popover_API/Using#popover_anchor_positioning) for more details.
 
 ### Return value
 
@@ -53,7 +53,9 @@ First, some HTML:
     <li>Press <ins>C</ins> to order cheese</li>
     <li>Press <ins>T</ins> to order tofu</li>
     <li>Press <ins>B</ins> to order bacon</li>
-    <hr />
+  </ul>
+  <hr />
+  <ul>
     <li>Say "Service" to summon the robot waiter to take your order</li>
     <li>Say "Escape" to engage the ejector seat</li>
   </ul>

@@ -15,26 +15,30 @@ The **`<th>`** [HTML](/en-US/docs/Web/HTML) element defines a cell as the header
   <caption>
     Alien football stars
   </caption>
-  <tr>
-    <th scope="col">Player</th>
-    <th scope="col">Gloobles</th>
-    <th scope="col">Za'taak</th>
-  </tr>
-  <tr>
-    <th scope="row">TR-7</th>
-    <td>7</td>
-    <td>4,569</td>
-  </tr>
-  <tr>
-    <th scope="row">Khiresh Odo</th>
-    <td>7</td>
-    <td>7,223</td>
-  </tr>
-  <tr>
-    <th scope="row">Mia Oolong</th>
-    <td>9</td>
-    <td>6,219</td>
-  </tr>
+  <thead>
+    <tr>
+      <th scope="col">Player</th>
+      <th scope="col">Gloobles</th>
+      <th scope="col">Za'taak</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">TR-7</th>
+      <td>7</td>
+      <td>4,569</td>
+    </tr>
+    <tr>
+      <th scope="row">Khiresh Odo</th>
+      <td>7</td>
+      <td>7,223</td>
+    </tr>
+    <tr>
+      <th scope="row">Mia Oolong</th>
+      <td>9</td>
+      <td>6,219</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -108,7 +112,7 @@ The following attributes are deprecated and should not be used. They are documen
   - : Contains a list of space-separated strings, each corresponding to the `id` attribute of a group of cells that the header cell applies to. Use the [`scope`](#scope) attribute instead, as this attribute is deprecated.
 
 - `bgcolor` {{deprecated_inline}}
-  - : Defines the background color of the header cell. The value is an HTML color; either a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/hex-color), prefixed by a `#`, or a [color keyword](/en-US/docs/Web/CSS/named-color). Other CSS {{cssxref("color_value", "&lt;color&gt;")}} values are not supported. Use the {{cssxref("background-color")}} CSS property instead, as this attribute is deprecated.
+  - : Defines the background color of the header cell. The value is an HTML color; either a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/Reference/Values/hex-color), prefixed by a `#`, or a [color keyword](/en-US/docs/Web/CSS/Reference/Values/named-color). Other CSS {{cssxref("color_value", "&lt;color&gt;")}} values are not supported. Use the {{cssxref("background-color")}} CSS property instead, as this attribute is deprecated.
 
 - `char` {{deprecated_inline}}
   - : Does nothing. It was originally intended to specify the alignment of the content to a character of the header cell. Typical values for this include a period (`.`) when attempting to align numbers or monetary values. If [`align`](#align) is not set to `char`, this attribute is ignored.
@@ -185,7 +189,7 @@ The remaining rows contain the main data of the table. Each of these rows has a 
 
 #### CSS
 
-Some basic CSS is used to style the table and its cells. We use CSS [attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) to target header cells based on their [`scope`](#scope) attribute values, highlighting column and row headers (`<th>` elements) and differentiating them each other and from the data cells ({{HTMLElement("td")}}).
+Some basic CSS is used to style the table and its cells. We use CSS [attribute selectors](/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors) to target header cells based on their [`scope`](#scope) attribute values, highlighting column and row headers (`<th>` elements) and differentiating them each other and from the data cells ({{HTMLElement("td")}}).
 
 ```css
 th,

@@ -32,7 +32,7 @@ The possible values are: `"top"`, `"middle"`, `"bottom"`, or `"baseline"`
 
 ## Examples
 
-Use CSS {{cssxref("vertical-align")}} instead, which takes precedence, as demonstrated in the [vertical alignment table cells](/en-US/docs/Web/CSS/vertical-align#vertical_alignment_in_a_table_cell) example.
+Use CSS {{cssxref("vertical-align")}} instead, which takes precedence, as demonstrated in the [vertical alignment table cells](/en-US/docs/Web/CSS/Reference/Properties/vertical-align#vertical_alignment_in_a_table_cell) example.
 
 ## Specifications
 

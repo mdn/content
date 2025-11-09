@@ -76,7 +76,7 @@ If a non-same-origin `start_url` is specified, browsers will fallback to using t
 
 - **Fingerprinting**:
 
-  Encoding strings into `start_url` to uniquely identify users (e.g., server-assigned identifiers, such as `?user=123`, `/user/123/`, or `https://user123.foo.bar`) creates a persistent fingerprint.
+  Encoding strings into `start_url` to uniquely identify users (e.g., server-assigned identifiers, such as `?user=123`, `/user/123/`, or `https://user123.example.com`) creates a persistent fingerprint.
   Users may not be aware that their privacy-sensitive information can persist even after they've cleared site data.
   It is bad practice to include any information in `start_url` that could uniquely identify users.
 

@@ -211,7 +211,7 @@ The class `visually-hidden` has no effect yet, because we have not included any 
 
 Further down, you can find our [`<ul>`](/en-US/docs/Web/HTML/Reference/Elements/ul) element:
 
-```html
+```jsx
 <ul
   role="list"
   className="todo-list stack-large stack-exception"
@@ -314,7 +314,7 @@ body {
   background-color: whitesmoke;
   color: #4d4d4d;
   font:
-    1.6rem/1.25 Arial,
+    1.6rem/1.25 "Arial",
     sans-serif;
   margin: 0 auto;
   max-width: 68rem;
@@ -487,9 +487,9 @@ body {
   box-sizing: border-box;
   clear: left;
   display: block;
-  font-family: Arial, sans-serif;
+  font-family: "Arial", sans-serif;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 1.25;
   min-height: 44px;
   padding-left: 40px;

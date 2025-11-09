@@ -1,5 +1,5 @@
 ---
-title: Firefox 48 for developers
+title: Firefox 48 release notes for developers
 short-title: Firefox 48
 slug: Mozilla/Firefox/Releases/48
 page-type: firefox-release-notes
@@ -52,7 +52,7 @@ sidebar: firefox
   - `-webkit-box-direction`, `-webkit-box-orient` ([Firefox bug 1262049](https://bugzil.la/1262049).
   - The value `-webkit-inline-box` is now an alias of `inline-flex` on the {{cssxref("display")}} property. ([Firefox bug 1257661](https://bugzil.la/1257661)).
   - `-webkit-flex-direction`, `-webkit-flex-wrap`, `-webkit-flex-flow`, `-webkit-order`, `-webkit-flex`, `-webkit-flex-grow`, `-webkit-flex-shrink`, `-webkit-flex-basis`, `-webkit-justify-content`, `-webkit-align-items`, `-webkit-align-self` and `-webkit-align-content` were added as aliases for the unprefixed properties and the values `-webkit-flex` and `-webkit-inline-flex` for the {{cssxref("display")}} property as aliases for the unprefixed values ([Firefox bug 1274096](https://bugzil.la/1274096)).
-  - Added `-webkit-box-flex`, `-webkit-box-ordinal-group`, `-webkit-box-align` and `-webkit-box-pack` properties and `-webkit-box` value to {{cssxref("display")}} as aliases for modern [CSS Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox) ([Firefox bug 1208635](https://bugzil.la/1208635)).
+  - Added `-webkit-box-flex`, `-webkit-box-ordinal-group`, `-webkit-box-align` and `-webkit-box-pack` properties and `-webkit-box` value to {{cssxref("display")}} as aliases for modern [CSS Flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Use_cases) ([Firefox bug 1208635](https://bugzil.la/1208635)).
 
 - The `text` value of {{cssxref("background-clip")}} is now available in all type of Firefox (and not only non-release builds) ([Firefox bug 1263516](https://bugzil.la/1263516)).
 - The `absolute` value of {{cssxref("position")}} properties on the top layer element ([Firefox bug 1236828](https://bugzil.la/1236828)).

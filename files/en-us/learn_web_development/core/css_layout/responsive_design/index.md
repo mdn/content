@@ -72,7 +72,7 @@ The rest of this article will explain the various web platform features you migh
 
 ## Media Queries
 
-[Media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) allow us to run a series of tests (for example, whether the user's screen is greater than a certain width or resolution) and apply CSS selectively to style the page appropriately for the user's needs.
+[Media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using) allow us to run a series of tests (for example, whether the user's screen is greater than a certain width or resolution) and apply CSS selectively to style the page appropriately for the user's needs.
 
 For example, the following media query tests to see if the current web page is being displayed as screen media (therefore not a printed document) and the viewport is at least `80rem` wide. The `.container` rule will only be applied if these two things are true.
 
@@ -279,7 +279,7 @@ This scales media elements to ensure they never overflow their containers.
 Other useful tips:
 
 - Always make sure to use an appropriate image format for your website images (such as PNG or JPG), and make sure to optimize the file size using a graphics editor before you put them on your website.
-- You can make use of CSS features like [gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients) and [shadows](/en-US/docs/Web/CSS/box-shadow) to implement visual effects without using images.
+- You can make use of CSS features like [gradients](/en-US/docs/Web/CSS/Guides/Images/Using_gradients) and [shadows](/en-US/docs/Web/CSS/Reference/Properties/box-shadow) to implement visual effects without using images.
 - You can use media queries inside the media attribute on {{htmlelement("source")}} elements nested inside {{htmlelement("video")}}/{{htmlelement("audio")}} elements to serve video/audio files as appropriate for different devices (responsive video/audio).
 
 ## Responsive typography
@@ -342,8 +342,8 @@ html {
 
 body {
   font:
-    1.2em Helvetica,
-    Arial,
+    1.2em "Helvetica",
+    "Arial",
     sans-serif;
   margin: 20px;
   padding: 0;
@@ -395,7 +395,7 @@ h1 {
 
 The problem with doing the above is that the user loses the ability to zoom any text set using the `vw` unit, as that text is always related to the size of the viewport. **Therefore you should never set text using viewport units alone**.
 
-There is a solution, and it involves using [`calc()`](/en-US/docs/Web/CSS/calc). If you add the `vw` unit to a value set using a fixed size such as `em`s or `rem`s then the text will still be zoomable. Essentially, the `vw` unit adds on top of that zoomed value:
+There is a solution, and it involves using [`calc()`](/en-US/docs/Web/CSS/Reference/Values/calc). If you add the `vw` unit to a value set using a fixed size such as `em`s or `rem`s then the text will still be zoomable. Essentially, the `vw` unit adds on top of that zoomed value:
 
 ```css
 h1 {
@@ -481,7 +481,7 @@ By setting `width=device-width` you are overriding a mobile device's default, li
 
 **So you should _always_ include the viewport meta tag in the head of your documents.**
 
-There are a number of other options you can put inside the `content` attribute of the viewport meta tag — see [Using the viewport meta tag to control layout on mobile browsers](/en-US/docs/Web/HTML/Guides/Viewport_meta_element) for more details.
+There are a number of other options you can put inside the `content` attribute of the viewport meta tag — see the [`<meta name="viewport">`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/viewport) reference for more details.
 
 ## Summary
 
@@ -495,7 +495,7 @@ Next, we will study media queries in more detail and show how to use them to sol
 
 - Working with touchscreen devices:
   - [Touch events](/en-US/docs/Web/API/Touch_events) provide the ability to interpret finger (or stylus) activity on touch screens or trackpads, enabling quality support for complex touch-based user interfaces.
-  - Use the [pointer](/en-US/docs/Web/CSS/@media/pointer) or [any-pointer](/en-US/docs/Web/CSS/@media/any-pointer) media queries to load different CSS on touch-enabled devices.
+  - Use the [pointer](/en-US/docs/Web/CSS/Reference/At-rules/@media/pointer) or [any-pointer](/en-US/docs/Web/CSS/Reference/At-rules/@media/any-pointer) media queries to load different CSS on touch-enabled devices.
 - [CSS-Tricks guide to media queries](https://css-tricks.com/a-complete-guide-to-css-media-queries/)
 - [The Frontend Developer Career Path](https://scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> from Scrimba teaches all you need to know to be a competent front-end web developer, with fun interactive lessons and challenges, knowledgeable teachers, and a supportive community. Go from zero to landing your first front-end job! Many of the course components are available as standalone free versions. This includes a module on responsive design.
 

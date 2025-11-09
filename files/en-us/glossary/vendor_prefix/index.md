@@ -30,7 +30,7 @@ Sample usage:
 transition: all 4s ease;
 ```
 
-If you encounter the above code in a code base, you can safely remove all but the last line. All browsers support [transitions](/en-US/docs/Web/CSS/transition#browser_compatibility) without vendor prefixes:
+If you encounter the above code in a code base, you can safely remove all but the last line. All browsers support [transitions](/en-US/docs/Web/CSS/Reference/Properties/transition#browser_compatibility) without vendor prefixes:
 
 ```css
 transition: all 4s ease;
@@ -77,6 +77,6 @@ requestAnimationFrame(callback);
 
 ## See also
 
-- [`-moz-` vendor-prefixed CSS extensions](/en-US/docs/Web/CSS/Mozilla_Extensions)
-- [`-webkit-` vendor-prefixed CSS extensions](/en-US/docs/Web/CSS/WebKit_Extensions)
+- [`-moz-` vendor-prefixed CSS extensions](/en-US/docs/Web/CSS/Reference/Mozilla_extensions)
+- [`-webkit-` vendor-prefixed CSS extensions](/en-US/docs/Web/CSS/Reference/Webkit_extensions)
 - [Browser prefixes](https://en.wikipedia.org/wiki/CSS_hack#Browser_prefixes) on Wikipedia

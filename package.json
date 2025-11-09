@@ -44,8 +44,8 @@
   "dependencies": {
     "@apideck/better-ajv-errors": "^0.3.6",
     "@caporal/core": "^2.0.7",
-    "@mdn/fred": "1.6.1",
-    "@octokit/rest": "^22.0.0",
+    "@mdn/fred": "1.8.1",
+    "@octokit/rest": "^22.0.1",
     "ajv": "^8.17.1",
     "ajv-formats": "^3.0.1",
     "async": "^3.2.6",
@@ -59,7 +59,7 @@
   },
   "devDependencies": {
     "cheerio": "1.1.2",
-    "cspell": "9.2.1",
+    "cspell": "9.3.0",
     "cspell-group-by-file-reporter": "^1.0.1",
     "file-type": "^21.0.0",
     "fs-extra": "^11.3.2",
@@ -69,7 +69,7 @@
     "imagemin-pngquant": "^10.0.0",
     "imagemin-svgo": "^11.0.1",
     "is-svg": "^6.1.0",
-    "lefthook": "^1.13.6",
+    "lefthook": "^2.0.2",
     "markdownlint-cli2": "0.18.1",
     "markdownlint-rule-search-replace": "1.2.0",
     "node-html-parser": "^7.0.1",

@@ -14,7 +14,7 @@ Once all basic math notations are known, it remains to consider tabular layout w
 
 The MathML tabular elements are similar to the ones for [HTML tables](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics): the `<mtable>` element represents a mathematical table, it has `<mtr>` elements as its children (representing rows), each of them having `<mtd>` elements as its children (representing cells). An `<mtable>` element can be inserted anywhere in a MathML formula. The `<mtd>` element can contain any number of MathML children and will lay them out as an `<mrow>` container.
 
-Tables are typically used for matrix-like expressions (including vectors). Here is a basic example taken from the [article about the CSS `matrix()` function](/en-US/docs/Web/CSS/transform-function/matrix):
+Tables are typically used for matrix-like expressions (including vectors). Here is a basic example taken from the [article about the CSS `matrix()` function](/en-US/docs/Web/CSS/Reference/Values/transform-function/matrix):
 
 ```html hidden
 <link

@@ -41,7 +41,7 @@ execCommand(commandName, showDefaultUI, valueArgument)
     - `copy`
       - : Copies the current selection to the clipboard. Conditions of having this behavior enabled vary from one browser to another, and have evolved over time. Check the compatibility table to determine if you can use it in your case.
     - `createLink`
-      - : Creates an hyperlink from the selection, but only if there is a selection. Requires a {{Glossary("URI")}} string as a value argument for the hyperlink's `href`. The URI must contain at least a single character, which may be whitespace.
+      - : Creates a hyperlink from the selection, but only if there is a selection. Requires a {{Glossary("URI")}} string as a value argument for the hyperlink's `href`. The URI must contain at least a single character, which may be whitespace.
     - `cut`
       - : Removes the current selection and copies it to the clipboard. When this behavior is enabled varies between browsers, and its conditions have evolved over time. Check [the compatibility table](#browser_compatibility) for usage details.
     - `decreaseFontSize`

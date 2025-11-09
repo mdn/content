@@ -132,7 +132,7 @@ with
 console.error(`Response value: ${response}`);
 ```
 
-Save your code and refresh the browser and you'll now see the message reported as an error, with the same color and icon as the uncaught error below it. In addition, there will now be a expand/collapse arrow next to the message. If you press this, you'll see a single line telling you the line in the JavaScript file the error originated from. In fact, the uncaught error line _also_ has this, but it has two lines:
+Save your code and refresh the browser and you'll now see the message reported as an error, with the same color and icon as the uncaught error below it. In addition, there will now be an expand/collapse arrow next to the message. If you press this, you'll see a single line telling you the line in the JavaScript file the error originated from. In fact, the uncaught error line _also_ has this, but it has two lines:
 
 ```plain
 showHeroes http://localhost:7800/js-debug-test/index.js:25

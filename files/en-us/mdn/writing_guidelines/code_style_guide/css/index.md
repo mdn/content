@@ -32,7 +32,7 @@ This rule does not apply to the CSS feature being documented on the page (which 
 
 There are some uniformly acknowledged principles that we don't need to exhaustively state here:
 
-- Ensure that your code doesn't have syntax errors, which can result in the [property or declaration being ignored](/en-US/docs/Web/CSS/CSS_syntax/Error_handling). Standard syntax that hasn't been implemented is acceptable, if it fits our [general rule about modern CSS features](#use_modern_css_features_when_supported).
+- Ensure that your code doesn't have syntax errors, which can result in the [property or declaration being ignored](/en-US/docs/Web/CSS/Guides/Syntax/Error_handling). Standard syntax that hasn't been implemented is acceptable, if it fits our [general rule about modern CSS features](#use_modern_css_features_when_supported).
 - Don't use [non-standard, deprecated, or obsolete](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete) features. This guideline extends to [prefixed features](/en-US/docs/Glossary/Vendor_Prefix#css_prefixes): use the prefixed alternative _only if_ the standard feature is not available (see our [general rule about modern CSS features](#use_modern_css_features_when_supported)). If the reader needs broader compatibility, they can either add the prefixed fallback themselves or use a CSS postprocessor.
 - Don't write redundant or non-functional code, which is a common indicator of bugs or refactoring leftovers. This includes repeated properties in a declaration, empty declarations, empty comments, or selectors that don't match any elements.
 
@@ -50,7 +50,7 @@ For maximum control over CSS across platforms, many people used to use CSS reset
 
 ### Formal syntax and pseudocode
 
-Formal syntax is an integral part of MDN's CSS documentation (as an example, see the [Formal syntax](/en-US/docs/Web/CSS/background-image#formal_syntax) section on the `background-image` property page). Because a lot of developers are familiar with syntax in this format, it's acceptable to write pseudocode in a formal-syntax-like fashion in descriptions and examples. However, any code that is not syntactically well-formed CSS should not be marked as CSS. Syntax errors in `css` code blocks result in the code being unparsable by static checkers, confuse readers who expect to see valid CSS code, and may even result in nonsensical syntax highlighting. Either mark your code block as `plain`, or use the `CSSSyntaxRaw` macro to render the complete formal syntax.
+Formal syntax is an integral part of MDN's CSS documentation (as an example, see the [Formal syntax](/en-US/docs/Web/CSS/Reference/Properties/background-image#formal_syntax) section on the `background-image` property page). Because a lot of developers are familiar with syntax in this format, it's acceptable to write pseudocode in a formal-syntax-like fashion in descriptions and examples. However, any code that is not syntactically well-formed CSS should not be marked as CSS. Syntax errors in `css` code blocks result in the code being unparsable by static checkers, confuse readers who expect to see valid CSS code, and may even result in nonsensical syntax highlighting. Either mark your code block as `plain`, or use the `CSSSyntaxRaw` macro to render the complete formal syntax.
 
 Don't write descriptions like this (this is not real formal syntax anyway; it's just pseudo-CSS with some placeholders):
 
@@ -148,7 +148,7 @@ On the other hand, if your `@keyframes` rule contains more than just the start a
 
 ### Controlling specificity
 
-If possible, avoid surprises for increasing or decreasing specificity, such as overusing the [`:where()`](/en-US/docs/Web/CSS/:where) pseudo-class or duplicating selectors. Instead, consider the following techniques to manage specificity:
+If possible, avoid surprises for increasing or decreasing specificity, such as overusing the [`:where()`](/en-US/docs/Web/CSS/Reference/Selectors/:where) pseudo-class or duplicating selectors. Instead, consider the following techniques to manage specificity:
 
 - Changing the order of declarations to take advantage of the cascade
 - Rearranging properties in each declaration such that they don't override each other
@@ -254,7 +254,7 @@ Empty lines between properties should be used sparingly. Add them only when each
 
 ### Use class selectors
 
-Generally, prefer [class selectors](/en-US/docs/Web/CSS/Class_selectors) (and use `class` instead of `id` in your HTML). They can be composed: multiple elements can use the same class, and the same class can be used for multiple elements.
+Generally, prefer [class selectors](/en-US/docs/Web/CSS/Reference/Selectors/Class_selectors) (and use `class` instead of `id` in your HTML). They can be composed: multiple elements can use the same class, and the same class can be used for multiple elements.
 
 ```css example-good
 .footnote {
@@ -272,11 +272,11 @@ Use classes for styling, and reserve IDs for non-CSS purposes, such as for use i
 
 ### Old pseudo-element selectors
 
-The `::before`, `::after`, `::first-letter`, and `::first-line` [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) can also be written with single colons (like `:before`). Avoid the single-colon syntax because it is discouraged and could be misidentified as a [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) (`:hover`) by readers.
+The `::before`, `::after`, `::first-letter`, and `::first-line` [pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) can also be written with single colons (like `:before`). Avoid the single-colon syntax because it is discouraged and could be misidentified as a [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) (`:hover`) by readers.
 
 ### Complex selector lists
 
-The `:is()`, `:where()`, and `:not()` pseudo-classes accept [complex selector lists](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#complex_selector). Use them to shorten your selector.
+The `:is()`, `:where()`, and `:not()` pseudo-classes accept [complex selector lists](/en-US/docs/Web/CSS/Guides/Selectors/Selector_structure#complex_selector). Use them to shorten your selector.
 
 Write this:
 
@@ -298,7 +298,7 @@ input:not(:checked):not(:disabled) {
 
 By default, all identifiers should be lowercase. This applies to selectors, functions, and keywords. Custom identifiers should use [kebab-case](/en-US/docs/Glossary/Kebab_case), such as `--custom-property` or `my-animation`. See the [HTML style guide](/en-US/docs/MDN/Writing_guidelines/Code_style_guide/HTML#casing_convention_on_mdn) for casing conventions of HTML IDs and classes which are referenced as CSS selectors.
 
-Exceptions include keyword values defined in SVG, which for historical reasons are [camelCase](/en-US/docs/Glossary/Camel_case), and should be written as such to enhance readability. These keywords include: [`currentColor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword), {{cssxref("text-rendering")}} values, {{cssxref("shape-rendering")}} values, {{cssxref("pointer-events")}} values, and {{cssxref("color-interpolation-filters")}} values.
+Exceptions include keyword values defined in SVG, which for historical reasons are [camelCase](/en-US/docs/Glossary/Camel_case), and should be written as such to enhance readability. These keywords include: [`currentColor`](/en-US/docs/Web/CSS/Reference/Values/color_value#currentcolor_keyword), {{cssxref("text-rendering")}} values, {{cssxref("shape-rendering")}} values, {{cssxref("pointer-events")}} values, and {{cssxref("color-interpolation-filters")}} values.
 
 ## Colors
 
@@ -345,7 +345,7 @@ h3 {
 
 ### Specifying font families
 
-When specifying a font family, always add a [generic font family](/en-US/docs/Web/CSS/font-family#generic-name) name as the last fallback. This ensures that if the specified font is not available, the browser displays a more suitable fallback font. [Web-safe fonts](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals#web_safe_fonts) are exempt from this rule.
+When specifying a font family, always add a [generic font family](/en-US/docs/Web/CSS/Reference/Properties/font-family#generic-name) name as the last fallback. This ensures that if the specified font is not available, the browser displays a more suitable fallback font. [Web-safe fonts](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals#web_safe_fonts) are exempt from this rule.
 
 ```css example-bad
 body {
@@ -418,7 +418,7 @@ If you have different alternative styles selected by media thresholds, be especi
 
 ### Mobile-first media queries
 
-In a stylesheet that contains [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) styles for different target viewport sizes, first include the narrow screen/mobile styling before any other media queries are encountered. Add styling for wider viewport sizes via successive media queries. Following this rule has many advantages that are explained in [Responsive design](/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design).
+In a stylesheet that contains [media query](/en-US/docs/Web/CSS/Guides/Media_queries/Using) styles for different target viewport sizes, first include the narrow screen/mobile styling before any other media queries are encountered. Add styling for wider viewport sizes via successive media queries. Following this rule has many advantages that are explained in [Responsive design](/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design).
 
 ```css example-good
 /* Default CSS layout for narrow screens */

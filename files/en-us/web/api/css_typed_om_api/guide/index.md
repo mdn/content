@@ -67,7 +67,7 @@ In [browsers that support `computedStyleMap()`](/en-US/docs/Web/API/Element/comp
 
 {{EmbedLiveSample("Getting_all_the_properties_and_values", 120, 300)}}
 
-Did you realize how many default CSS properties a link had? Update the first `document.querySelector` call to select the {{htmlelement("p")}} rather than the {{htmlelement("a")}}. You'll notice a difference in the [`margin-top`](/en-US/docs/Web/CSS/margin-top) and [`margin-bottom`](/en-US/docs/Web/CSS/margin-bottom) default computed values.
+Did you realize how many default CSS properties a link had? Update the first `document.querySelector` call to select the {{htmlelement("p")}} rather than the {{htmlelement("a")}}. You'll notice a difference in the [`margin-top`](/en-US/docs/Web/CSS/Reference/Properties/margin-top) and [`margin-bottom`](/en-US/docs/Web/CSS/Reference/Properties/margin-bottom) default computed values.
 
 ### .get() method / custom properties
 
@@ -122,9 +122,9 @@ for (const value of ofInterest) {
 
 {{EmbedLiveSample(".get_method_custom_properties", 120, 300)}}
 
-We included {{cssxref('border-left-color')}} to demonstrate that, had we included all the properties, every value that defaults to [`currentColor`](/en-US/docs/Web/CSS/color_value) (including {{cssxref('caret-color')}}, {{cssxref('outline-color')}}, {{cssxref('text-decoration-color')}}, {{cssxref('column-rule-color')}}, etc.) would return `rgb(255 0 0)`. The link has inherited `font-weight: bold;` from the paragraph's styles, listing it as `font-weight: 700`. Custom properties, like our `--color: red`, are properties. As such, they are accessible via `get()`.
+We included {{cssxref('border-left-color')}} to demonstrate that, had we included all the properties, every value that defaults to [`currentColor`](/en-US/docs/Web/CSS/Reference/Values/color_value) (including {{cssxref('caret-color')}}, {{cssxref('outline-color')}}, {{cssxref('text-decoration-color')}}, {{cssxref('column-rule-color')}}, etc.) would return `rgb(255 0 0)`. The link has inherited `font-weight: bold;` from the paragraph's styles, listing it as `font-weight: 700`. Custom properties, like our `--color: red`, are properties. As such, they are accessible via `get()`.
 
-You'll note that custom properties retain the value as written in the stylesheet, whereas computed styles will be listed as the computed value — {{cssxref('color')}} was listed as an [`rgb()`](/en-US/docs/Web/CSS/color_value) value and the {{cssxref('font-weight')}} returned was `700` even though we use a [named color](/en-US/docs/Web/CSS/named-color) and the `bold` keyword.
+You'll note that custom properties retain the value as written in the stylesheet, whereas computed styles will be listed as the computed value — {{cssxref('color')}} was listed as an [`rgb()`](/en-US/docs/Web/CSS/Reference/Values/color_value) value and the {{cssxref('font-weight')}} returned was `700` even though we use a [named color](/en-US/docs/Web/CSS/Reference/Values/named-color) and the `bold` keyword.
 
 ### CSSUnitValue and CSSKeywordValue
 
@@ -231,10 +231,10 @@ Had the `width` or `height` been defined in a `<length>` or `<percent>`, the [`C
 
 There are other types available:
 
-- An [`<image>`](/en-US/docs/Web/CSS/image) will return a {{domxref('CSSImageValue')}}.
-- A [`<color>`](/en-US/docs/Web/CSS/color_value) would return a {{domxref('CSSStyleValue')}}.
+- An [`<image>`](/en-US/docs/Web/CSS/Reference/Values/image) will return a {{domxref('CSSImageValue')}}.
+- A [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value) would return a {{domxref('CSSStyleValue')}}.
 - A {{cssxref('transform')}} returns a `CSSTransformValue`.
-- A [custom property](/en-US/docs/Web/CSS/--*) returns a {{domxref('CSSUnparsedValue')}}.
+- A [custom property](/en-US/docs/Web/CSS/Reference/Properties/--*) returns a {{domxref('CSSUnparsedValue')}}.
 
 You can use a `CSSUnitValue` or `CSSKeywordValue` to create other objects.
 
@@ -297,7 +297,7 @@ The following examples reference `allComputedStyles`:
 
 ### CSSUnparsedValue
 
-The {{domxref('CSSUnparsedValue')}} represents [custom properties](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties):
+The {{domxref('CSSUnparsedValue')}} represents [custom properties](/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties):
 
 ```js
 // CSSUnparsedValue
@@ -318,7 +318,7 @@ console.log(parsedUnit.value); // 1.2
 
 ### CSSMathSum
 
-Although the [`<button>`](/en-US/docs/Web/HTML/Reference/Elements/button) element is an inline element by default, we've added [`display: inline-block;`](/en-US/docs/Web/CSS/CSS_display) to enable sizing. In our CSS we have `width: calc(30% + 20px);`, which is a [`calc()`](/en-US/docs/Web/CSS/calc) function to define the width.
+Although the [`<button>`](/en-US/docs/Web/HTML/Reference/Elements/button) element is an inline element by default, we've added [`display: inline-block;`](/en-US/docs/Web/CSS/Guides/Display) to enable sizing. In our CSS we have `width: calc(30% + 20px);`, which is a [`calc()`](/en-US/docs/Web/CSS/Reference/Values/calc) function to define the width.
 
 When we `get()` the `width`, we get a [`CSSMathSum`](/en-US/docs/Web/API/CSSMathSum) returned. {{domxref('CSSMathSum.values')}} is a {{domxref('CSSNumericArray')}} with 2 `CSSUnitValues`.
 
@@ -334,7 +334,7 @@ console.log(btnWidth.operator); // 'sum'
 
 ### CSSTransformValue with CSSScale
 
-The [`display: inline-block;`](/en-US/docs/Web/CSS/CSS_display) also enables transforming. In our CSS we have `transform: scale(0.95);`, which is a {{cssxref('transform')}} function.
+The [`display: inline-block;`](/en-US/docs/Web/CSS/Guides/Display) also enables transforming. In our CSS we have `transform: scale(0.95);`, which is a {{cssxref('transform')}} function.
 
 ```js
 const transform = allComputedStyles.get("transform");

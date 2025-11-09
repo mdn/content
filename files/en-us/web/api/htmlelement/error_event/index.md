@@ -37,7 +37,7 @@ The event object is a {{domxref("UIEvent")}} instance if it was generated from a
 ```html
 <div class="controls">
   <button id="img-error" type="button">Generate image error</button>
-  <img class="bad-img" />
+  <img src="bad-image.jpg" class="bad-img" alt="I don't exist" />
 </div>
 
 <div class="event-log">
