@@ -1,10 +1,12 @@
 ---
 title: "Test your skills: Images and form elements"
-short-title: Images and forms
+short-title: "Test: Images and forms"
 slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Images
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
+
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Images_media_forms", "Learn_web_development/Core/Styling_basics/Tables", "Learn_web_development/Core/Styling_basics")}}
 
 The aim of this skill test is to assess whether you understand how special elements like [images, media and form elements are treated in CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Images_media_forms).
 
@@ -29,7 +31,7 @@ Your final result should look like the image below:
 
 ```css live-sample___object-fit
 .box {
-  border: 5px solid #000;
+  border: 5px solid black;
   width: 400px;
   height: 200px;
 }
@@ -87,7 +89,7 @@ body {
   font: 1.2em / 1.5 sans-serif;
 }
 .my-form {
-  border: 2px solid #000;
+  border: 2px solid black;
   padding: 5px;
 }
 ```
@@ -101,7 +103,7 @@ Here's an example solution for the task:
 
 ```css
 .my-form {
-  border: 2px solid #000;
+  border: 2px solid black;
   padding: 5px;
 }
 
@@ -170,12 +172,12 @@ To complete the task:
 }
 
 body {
-  background-color: #fff;
-  color: #333;
+  background-color: white;
+  color: #333333;
   font:
-    1em / 1.4 Helvetica Neue,
-    Helvetica,
-    Arial,
+    1em / 1.4 "Helvetica Neue",
+    "Helvetica",
+    "Arial",
     sans-serif;
   padding: 1em;
   margin: 0;
@@ -234,7 +236,7 @@ select,
 button {
   display: block;
   padding: 5px 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   border-radius: 3px;
 }
 
@@ -246,13 +248,15 @@ button {
   margin: 0 auto;
   padding: 5px 20px;
   line-height: 1.5;
-  background: #eee;
+  background: #eeeeee;
 }
 
 button:hover,
 button:focus {
-  background: #ddd;
+  background: #dddddd;
 }
 ```
 
 </details>
+
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Images_media_forms", "Learn_web_development/Core/Styling_basics/Tables", "Learn_web_development/Core/Styling_basics")}}

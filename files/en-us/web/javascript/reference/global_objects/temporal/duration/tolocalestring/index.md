@@ -13,7 +13,7 @@ sidebar: jsref
 
 The **`toLocaleString()`** method of {{jsxref("Temporal.Duration")}} instances returns a string with a language-sensitive representation of this duration. In implementations with [`Intl.DurationFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat) support, this method delegates to `Intl.DurationFormat`.
 
-Every time `toLocaleString` is called, it has to perform a search in a big database of localization strings, which is potentially inefficient. When the method is called many times with the same arguments, it is better to create a {{jsxref("Intl.DurationFormat")}} object and use its {{jsxref("Intl/DurationFormat/format", "format()")}} method, because a `DurationFormat` object remembers the arguments passed to it and may decide to cache a slice of the database, so future `format` calls can search for localization strings within a more constrained context.
+Every time `toLocaleString` is called, it has to perform a search in a big database of localization strings, which is potentially inefficient. When the method is called many times with the same arguments, it is better to create an {{jsxref("Intl.DurationFormat")}} object and use its {{jsxref("Intl/DurationFormat/format", "format()")}} method, because a `DurationFormat` object remembers the arguments passed to it and may decide to cache a slice of the database, so future `format` calls can search for localization strings within a more constrained context.
 
 ## Syntax
 
@@ -30,7 +30,7 @@ The `locales` and `options` parameters customize the behavior of the function an
 In implementations that support the [`Intl.DurationFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat), these parameters correspond exactly to the [`Intl.DurationFormat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat/DurationFormat) constructor's parameters. Implementations without `Intl.DurationFormat` support return the exact same string as {{jsxref("Temporal/Duration/toString", "toString()")}}, ignoring both parameters.
 
 - `locales` {{optional_inline}}
-  - : A string with a BCP 47 language tag, or an array of such strings. Corresponds to the [`locales`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat/DurationFormat#locales) parameter of the `Intl.DurationFormat()` constructor.
+  - : A string with a {{glossary("BCP 47 language tag")}}, or an array of such strings. Corresponds to the [`locales`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat/DurationFormat#locales) parameter of the `Intl.DurationFormat()` constructor.
 - `options` {{optional_inline}}
   - : An object adjusting the output format. Corresponds to the [`options`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat/DurationFormat#options) parameter of the `Intl.DurationFormat()` constructor.
 

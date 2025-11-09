@@ -18,12 +18,12 @@ For example, the following code will remove all XSS-unsafe elements and attribut
 
 ```js
 const untrustedString = "abc <script>alert(1)<" + "/script> def";
-const someTargetElement = document.getElementById("target");
+const someElement = document.getElementById("target");
 
 // someElement.innerHTML = untrustedString;
 someElement.setHTML(untrustedString);
 
-console.log(target.innerHTML); // abc def
+console.log(someElement.innerHTML); // abc def
 ```
 
 The other XSS-safe methods, {{domxref('ShadowRoot.setHTML()')}} and {{domxref('Document/parseHTML_static','Document.parseHTML()')}}, are used in the same way.
@@ -35,7 +35,7 @@ You can specify the HTML entities that you want to allow or remove by passing a 
 For example, if you know that only {{htmlelement("p")}} and {{htmlelement("a")}} elements are expected in the context of "someElement" below, you might create a sanitizer configuration that allows only those elements:
 
 ```js
-sanitizerOne = Sanitizer({ elements: ["p", "a"] });
+const sanitizerOne = new Sanitizer({ elements: ["p", "a"] });
 sanitizerOne.allowAttribute("href");
 someElement.setHTML(untrustedString, { sanitizer: sanitizerOne });
 ```
@@ -54,9 +54,9 @@ For example, in the following sanitizer all safe elements are allowed, and we fu
 
 ```js
 const untrustedString = '<button onclick="alert(1)">Button text</button>';
-const someTargetElement = document.getElementById("target");
+const someElement = document.getElementById("target");
 
-sanitizerOne = Sanitizer(); // Default sanitizer
+const sanitizerOne = new Sanitizer(); // Default sanitizer
 sanitizerOne.allowElement({ name: "button", attributes: ["onclick"] });
 someElement.setHTMLUnsafe(untrustedString, { sanitizer: sanitizerOne });
 ```
@@ -75,7 +75,7 @@ For example, the following configuration "allows" the {{htmlelement("p")}} and {
 It also replaces {{htmlelement("b")}} elements with their contents (this is a form of "allowing", since the element contents are not removed).
 
 ```js
-const sanitizer = Sanitizer({
+const sanitizer = new Sanitizer({
   elements: ["p", "div"],
   attributes: ["cite", "onclick"],
   replaceWithChildrenElements: ["b"],
@@ -89,7 +89,7 @@ The allowed elements can be specified using the [`elements`](/en-US/docs/Web/API
 The simplest way to use the property is to specify an array of element names:
 
 ```js
-const sanitizer = Sanitizer({
+const sanitizer = new Sanitizer({
   elements: ["div", "span"],
 });
 ```
@@ -97,7 +97,7 @@ const sanitizer = Sanitizer({
 But you can also specify each of the allowed elements using an object that defines its `name` and `namespace`, as shown below (`Sanitizer` will automatically infer a namespace if it is able).
 
 ```js
-const sanitizer = Sanitizer({
+const sanitizer = new Sanitizer({
   elements: [
     {
       name: "div",
@@ -115,7 +115,7 @@ You can add the elements to the `Sanitizer` using its API.
 Here we add the same elements to an empty sanitizer:
 
 ```js
-const sanitizer = Sanitizer({});
+const sanitizer = new Sanitizer({});
 sanitizer.allowElement("div");
 sanitizer.allowElement({
   name: "span",
@@ -130,7 +130,7 @@ To allow attributes globally, on any element where allowed by the HTML specifica
 The simplest way to use the `attributes` property is to specify an array of attribute names:
 
 ```js
-const sanitizer = Sanitizer({
+const sanitizer = new Sanitizer({
   attributes: ["cite", "onclick"],
 });
 ```
@@ -138,7 +138,7 @@ const sanitizer = Sanitizer({
 You can also specify each attribute with the `name` and `namespace` properties, just like elements:
 
 ```js
-const sanitizer = Sanitizer({
+const sanitizer = new Sanitizer({
   attributes: [
     {
       name: "cite",
@@ -155,7 +155,7 @@ const sanitizer = Sanitizer({
 You can also add each of the allowed attributes to the `Sanitizer` using its `allowAttribute()` method:
 
 ```js
-const sanitizer = Sanitizer({});
+const sanitizer = new Sanitizer({});
 sanitizer.allowAttribute("cite");
 sanitizer.allowAttribute("onclick");
 ```
@@ -171,7 +171,7 @@ The [`attributes`](/en-US/docs/Web/API/SanitizerConfig#attributes) property cont
 Below we show a sanitizer where the {{htmlelement("div")}}, {{htmlelement("a")}}, and {{htmlelement("span")}} elements are allowed, and the {{htmlelement("a")}} element additionally allows the `href`, `rel`, `hreflang` and `type` attributes.
 
 ```js
-const sanitizer = Sanitizer({
+const sanitizer = new Sanitizer({
   elements: [
     "div",
     { name: "a", attributes: ["href", "rel", "hreflang", "type"] },
@@ -184,7 +184,7 @@ Similarly we can specify the attributes that are not allowed on an element using
 For example, the following sanitizer would strip the `type` attribute from all `<a>` elements.
 
 ```js
-const sanitizer = Sanitizer({
+const sanitizer = new Sanitizer({
   elements: ["div", { name: "a", removeAttributes: ["type"] }],
 });
 ```
@@ -202,7 +202,7 @@ This is most commonly used to strip styles from elements.
 For example, the following code uses the [`replaceWithChildrenElements`](/en-US/docs/Web/API/SanitizerConfig#replacewithchildrenelements) property of the {{domxref("SanitizerConfig")}} to specify that the {{htmlelement("b")}} element should be replaced:
 
 ```js
-const replaceBoldSanitizer = Sanitizer({
+const replaceBoldSanitizer = new Sanitizer({
   replaceWithChildrenElements: ["b"],
 });
 
@@ -211,13 +211,13 @@ targetElement.setHTML("This <b>highlighting</b> isn't needed", {
 });
 
 // Log the result
-targetElement.log(targetElement.innerHTML); // This highlighting isn't needed
+console.log(targetElement.innerHTML); // This highlighting isn't needed
 ```
 
 As with elements and attributes, you can also specify the replacement elements with a namespace, or use the {{domxref("Sanitizer.replaceElementWithChildren()")}} method:
 
 ```js
-const sanitizer = Sanitizer({});
+const sanitizer = new Sanitizer({});
 sanitizer.replaceElementWithChildren("b");
 sanitizer.replaceElementWithChildren({
   name: "i",
@@ -236,23 +236,18 @@ All other elements and attributes are allowed by the configuration, although the
 For example, the following configuration removes the {{htmlelement("script")}}, {{htmlelement("div")}} and {{htmlelement("span")}} elements and also the `onclick` attribute.
 
 ```js
-const sanitizer = Sanitizer({
+const sanitizer = new Sanitizer({
   removeElements: ["script", "div", "span"],
   removeAttributes: ["onclick"],
 });
 ```
 
 Specifying elements to remove is more useful when you want to tweak an existing configuration.
-For example consider the case where we are using the (safe) default sanitizer, but want to also ensure
+For example consider the case where we are using the (safe) default sanitizer, but want to also ensure that some other elements are removed.
 
 ```js
-const sanitizer = Sanitizer();
+const sanitizer = new Sanitizer();
 sanitizer.removeElement("div");
-
-const sanitizer = Sanitizer({
-  removeElements: ["script", "div", "span"],
-  removeAttributes: ["onclick"],
-});
 ```
 
 ### Removing elements
@@ -262,7 +257,7 @@ The [`removeElements`](/en-US/docs/Web/API/SanitizerConfig#removeelements) prope
 The simplest way to use the property is to specify an array of element names:
 
 ```js
-const sanitizer = Sanitizer({
+const sanitizer = new Sanitizer({
   removeElements: ["div", "span"],
 });
 ```
@@ -271,7 +266,7 @@ As when [allowing element](#allowing_elements) you can also specify each of the 
 You can also configure the removed elements using the using the `Sanitizer` API as shown:
 
 ```js
-const sanitizer = Sanitizer({});
+const sanitizer = new Sanitizer({});
 sanitizer.removeElement("div");
 sanitizer.removeElement({
   name: "span",
@@ -286,7 +281,7 @@ The [`removeElements`](/en-US/docs/Web/API/SanitizerConfig#removeelements) prope
 The simplest way to use the property is to specify an array of element names:
 
 ```js
-const sanitizer = Sanitizer({
+const sanitizer = new Sanitizer({
   removeAttributes: ["onclick", "lang"],
 });
 ```
@@ -294,7 +289,7 @@ const sanitizer = Sanitizer({
 You can also specify each of the elements using an object that defines its `name` and `namespace`, and also use {{domxref("Sanitizer.removeAttribute()")}} to add an attribute to be removed from all elements.
 
 ```js
-const sanitizer = Sanitizer({});
+const sanitizer = new Sanitizer({});
 sanitizer.removeAttribute("onclick");
 sanitizer.removeAttribute("lang");
 ```
@@ -306,7 +301,7 @@ The {{domxref("SanitizerConfig")}} can also be used to specify whether comments 
 To allow both comments and data attributes you might use a configuration like this:
 
 ```js
-const sanitizer = Sanitizer({
+const sanitizer = new Sanitizer({
   comments: true,
   dataAttributes: true,
 });
@@ -315,7 +310,7 @@ const sanitizer = Sanitizer({
 You can similarly enable or disable the comments or data-attributes on an existing sanitizer using {{domxref("Sanitizer.setComments()")}} and {{domxref("Sanitizer.setDataAttributes()")}} methods:
 
 ```js
-const sanitizer = Sanitizer({});
+const sanitizer = new Sanitizer({});
 sanitizer.setComments(true);
 sanitizer.setDataAttributes(true);
 ```

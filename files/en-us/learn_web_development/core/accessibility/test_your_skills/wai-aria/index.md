@@ -1,10 +1,12 @@
 ---
 title: "Test your skills: WAI-ARIA"
-short-title: WAI-ARIA
+short-title: "Test: WAI-ARIA"
 slug: Learn_web_development/Core/Accessibility/Test_your_skills/WAI-ARIA
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
+
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/WAI-ARIA_basics","Learn_web_development/Core/Accessibility/Multimedia", "Learn_web_development/Core/Accessibility")}}
 
 The aim of this skill test is to help you assess whether you've understood our [WAI-ARIA basics](/en-US/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics) article.
 
@@ -13,7 +15,7 @@ The aim of this skill test is to help you assess whether you've understood our [
 
 ## WAI-ARIA 1
 
-In our first ARIA task, we present you with a section of non-semantic markup, which is visually meant to be a list. Assuming you are not able to change the elements used, how can you allow screen reader users to understand what it is?
+Our first ARIA task includes a section of non-semantic markup, which is visually meant to be a list. Assuming you are not able to change the elements used, how can you allow screen reader users to understand what it is?
 
 To complete the task, add some WAI-ARIA semantics to make screen readers recognize the `<div>` elements as an unordered list.
 
@@ -21,12 +23,12 @@ To complete the task, add some WAI-ARIA semantics to make screen readers recogni
 
 ```css hidden live-sample___aria-1 live-sample___aria-2 live-sample___aria-3
 body {
-  background-color: #fff;
-  color: #333;
+  background-color: white;
+  color: #333333;
   font:
-    1em / 1.4 Helvetica Neue,
-    Helvetica,
-    Arial,
+    1em / 1.4 "Helvetica Neue",
+    "Helvetica",
+    "Arial",
     sans-serif;
   padding: 1em;
   margin: 0;
@@ -213,3 +215,5 @@ There are two ways to solve the problem outlined in this task:
 - Add a `role="alert"` attribute to the animal-description `<div>`, to make it have alert box semantics. This has the same effect on the screen reader as setting `aria-live="assertive"` on it.
 
 </details>
+
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/WAI-ARIA_basics","Learn_web_development/Core/Accessibility/Multimedia", "Learn_web_development/Core/Accessibility")}}

@@ -1,5 +1,5 @@
 ---
-title: Firefox 41 for developers
+title: Firefox 41 release notes for developers
 short-title: Firefox 41
 slug: Mozilla/Firefox/Releases/41
 page-type: firefox-release-notes

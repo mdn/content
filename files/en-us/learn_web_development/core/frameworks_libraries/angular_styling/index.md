@@ -46,7 +46,7 @@ In `src/styles.css`, paste the following styles:
 
 ```css
 body {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 .btn-wrapper {
@@ -57,8 +57,8 @@ body {
 }
 
 .btn {
-  color: #000;
-  background-color: #fff;
+  color: black;
+  background-color: white;
   border: 2px solid #cecece;
   padding: 0.35rem 1rem 0.25rem 1rem;
   font-size: 1rem;
@@ -78,8 +78,8 @@ body {
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: #000;
+  color: white;
+  background-color: black;
   width: 100%;
   padding: 0.75rem;
   font-size: 1.3rem;
@@ -92,9 +92,9 @@ body {
 }
 
 .btn-primary:focus {
-  color: #000;
+  color: black;
   outline: none;
-  border: #000 solid 2px;
+  border: black solid 2px;
   background-color: #d7ecff;
 }
 
@@ -136,7 +136,7 @@ label {
 .lg-text-input {
   width: 100%;
   padding: 1rem;
-  border: 2px solid #000;
+  border: 2px solid black;
   display: block;
   box-sizing: border-box;
   font-size: 1rem;

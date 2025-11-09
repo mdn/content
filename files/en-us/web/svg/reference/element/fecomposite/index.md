@@ -130,6 +130,7 @@ The table below shows each of these operations using an image of the MDN logo co
 - {{SVGAttr("in2")}}: Second input for the given filter primitive (works the same as the `in` attribute).
 - {{SVGAttr("operator")}}: `over` | `in` | `out` | `atop` | `xor` | `lighter` | `arithmetic`
 - {{SVGAttr("k1")}}, {{SVGAttr("k2")}}, {{SVGAttr("k3")}}, {{SVGAttr("k4")}}: Values used for calculating the result pixel in `arithmetic` {{SVGAttr("operator")}} filter primitives.
+- [Filter primitive attributes](/en-US/docs/Web/SVG/Reference/Attribute#filter_primitive_attributes_presentation_attributes): {{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}}, {{SVGAttr("height")}}, {{SVGAttr("result")}}
 
 ## DOM Interface
 
@@ -185,23 +186,48 @@ This example defines filters for each of the supported operations (`over`, `atop
     </filter>
   </defs>
   <g transform="translate(0,25)">
-    <circle cx="90px" cy="80px" r="70px" fill="#c00" filter="url(#imageOver)" />
+    <circle
+      cx="90px"
+      cy="80px"
+      r="70px"
+      fill="#cc0000"
+      filter="url(#imageOver)" />
     <text x="80" y="-5">over</text>
   </g>
   <g transform="translate(200,25)">
-    <circle cx="90px" cy="80px" r="70px" fill="#c00" filter="url(#imageIn)" />
+    <circle
+      cx="90px"
+      cy="80px"
+      r="70px"
+      fill="#cc0000"
+      filter="url(#imageIn)" />
     <text x="80" y="-5">in</text>
   </g>
   <g transform="translate(400,25)">
-    <circle cx="90px" cy="80px" r="70px" fill="#c00" filter="url(#imageOut)" />
+    <circle
+      cx="90px"
+      cy="80px"
+      r="70px"
+      fill="#cc0000"
+      filter="url(#imageOut)" />
     <text x="80" y="-5">out</text>
   </g>
   <g transform="translate(600,25)">
-    <circle cx="90px" cy="80px" r="70px" fill="#c00" filter="url(#imageAtop)" />
+    <circle
+      cx="90px"
+      cy="80px"
+      r="70px"
+      fill="#cc0000"
+      filter="url(#imageAtop)" />
     <text x="80" y="-5">atop</text>
   </g>
   <g transform="translate(0,240)">
-    <circle cx="90px" cy="80px" r="70px" fill="#c00" filter="url(#imageXor)" />
+    <circle
+      cx="90px"
+      cy="80px"
+      r="70px"
+      fill="#cc0000"
+      filter="url(#imageXor)" />
     <text x="80" y="-5">xor</text>
   </g>
   <g transform="translate(200,240)">
@@ -209,7 +235,7 @@ This example defines filters for each of the supported operations (`over`, `atop
       cx="90px"
       cy="80px"
       r="70px"
-      fill="#c00"
+      fill="#cc0000"
       filter="url(#imageArithmetic)" />
     <text x="70" y="-5">arithmetic</text>
   </g>
@@ -218,7 +244,7 @@ This example defines filters for each of the supported operations (`over`, `atop
       cx="90px"
       cy="80px"
       r="70px"
-      fill="#c00"
+      fill="#cc0000"
       filter="url(#imageLighter)" />
     <text x="80" y="-5">lighter</text>
   </g>
@@ -247,7 +273,7 @@ svg {
 
 ## See also
 
-- [SVG filter primitive attributes](/en-US/docs/Web/SVG/Reference/Attribute#filter_primitive_attributes)
+- [SVG filter primitive attributes](/en-US/docs/Web/SVG/Reference/Attribute#filter_primitive_attributes_presentation_attributes)
 - {{SVGElement("filter")}}
 - {{SVGElement("animate")}}
 - {{SVGElement("set")}}

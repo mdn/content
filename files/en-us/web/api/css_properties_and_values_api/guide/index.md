@@ -7,7 +7,7 @@ browser-compat: api.CSS.registerProperty_static
 
 {{DefaultAPISidebar("CSS Properties and Values API")}}
 
-The **CSS Properties and Values API** — part of the [CSS Houdini](/en-US/docs/Web/API/Houdini_APIs) umbrella of APIs — allows the registration of [CSS custom properties](/en-US/docs/Web/CSS/--*), allowing for property type checking, default values, and properties that do or do not inherit their value.
+The **CSS Properties and Values API** — part of the [CSS Houdini](/en-US/docs/Web/API/Houdini_APIs) umbrella of APIs — allows the registration of [CSS custom properties](/en-US/docs/Web/CSS/Reference/Properties/--*), allowing for property type checking, default values, and properties that do or do not inherit their value.
 
 ## Registering a custom property
 
@@ -15,7 +15,7 @@ Registering a custom property allows you to tell the browser how the custom prop
 
 ### CSS.registerProperty
 
-The following will register a [custom property](/en-US/docs/Web/CSS/--*) named `--my-prop` using {{domxref('CSS/registerProperty_static', 'CSS.registerProperty')}}. `--my-prop` will use the CSS color syntax, it will have a default value of `#c0ffee`, and it will not inherit its value:
+The following will register a [custom property](/en-US/docs/Web/CSS/Reference/Properties/--*) named `--my-prop` using {{domxref('CSS/registerProperty_static', 'CSS.registerProperty')}}. `--my-prop` will use the CSS color syntax, it will have a default value of `#c0ffee`, and it will not inherit its value:
 
 ```js
 window.CSS.registerProperty({
@@ -28,7 +28,7 @@ window.CSS.registerProperty({
 
 ### @property
 
-The same registration can take place in CSS. The following will register a [custom property](/en-US/docs/Web/CSS/--*) named `--my-prop` using the {{cssxref('@property')}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule). `--my-prop` will use the CSS color syntax, it will have a default value of `#c0ffee`, and it will not inherit its value:
+The same registration can take place in CSS. The following will register a [custom property](/en-US/docs/Web/CSS/Reference/Properties/--*) named `--my-prop` using the {{cssxref('@property')}} [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules). `--my-prop` will use the CSS color syntax, it will have a default value of `#c0ffee`, and it will not inherit its value:
 
 ```css
 @property --my-prop {
@@ -56,7 +56,7 @@ In this example, the custom property `--registered` has been registered using th
 ```css
 .registered {
   --registered: #c0ffee;
-  background-image: linear-gradient(to right, #fff, var(--registered));
+  background-image: linear-gradient(to right, white, var(--registered));
   transition: --registered 1s ease-in-out;
 }
 
@@ -67,7 +67,7 @@ In this example, the custom property `--registered` has been registered using th
 
 .unregistered {
   --unregistered: #c0ffee;
-  background-image: linear-gradient(to right, #fff, var(--unregistered));
+  background-image: linear-gradient(to right, white, var(--unregistered));
   transition: --unregistered 1s ease-in-out;
 }
 

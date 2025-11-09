@@ -286,6 +286,16 @@ The following request headers are not _strictly_ "fetch metadata request headers
 - {{HTTPHeader("Service-Worker-Navigation-Preload")}}
   - : A request header sent in preemptive request to {{domxref("Window/fetch", "fetch()")}} a resource during service worker boot. The value, which is set with {{domxref("NavigationPreloadManager.setHeaderValue()")}}, can be used to inform a server that a different resource should be returned than in a normal `fetch()` operation.
 
+## Fetch storage access headers
+
+These headers enable an enhanced workflow for the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API).
+
+- {{HTTPHeader("Sec-Fetch-Storage-Access")}}
+  - : Indicates the "storage access status" for the current fetch context, which will be one of `none`, `inactive`, or `active`.
+    The server may respond with `Activate-Storage-Access` to request that the browser activate an `inactive` permission and retry the request, or to load a resource with access to its third-party cookies if the status is `active`.
+- {{HTTPHeader("Activate-Storage-Access")}}
+  - : Used in response to `Sec-Fetch-Storage-Access` to indicate that the browser can activate an existing permission for secure access and retry the request with cookies, or load a resource with cookie access if it already has an activated permission.
+
 ## Server-sent events
 
 - {{HTTPHeader("Reporting-Endpoints")}}
@@ -484,6 +494,8 @@ See the [Topics API](/en-US/docs/Web/API/Topics_API) documentation for more info
   - : A client can send the [`Accept-Signature`](https://wicg.github.io/webpackage/draft-yasskin-http-origin-signed-responses.html#name-the-accept-signature-header) header field to indicate intention to take advantage of any available signatures and to indicate what kinds of signatures it supports.
 - {{HTTPHeader("Early-Data")}} {{experimental_inline}}
   - : Indicates that the request has been conveyed in TLS early data.
+- {{HTTPHeader("Idempotency-Key")}} {{experimental_inline}}
+  - : Provides a unique key for `POST` and `PATCH` requests, allowing them to be made idempotent.
 - {{HTTPHeader("Set-Login")}} {{experimental_inline}}
   - : Response header sent by a federated identity provider (IdP) to set its login status, meaning whether any users are logged into the IdP on the current browser or not.
     This is stored by the browser and used by the [FedCM API](/en-US/docs/Web/API/FedCM_API).

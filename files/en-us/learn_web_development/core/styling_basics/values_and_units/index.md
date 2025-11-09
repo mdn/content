@@ -6,9 +6,9 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Handling_conflicts", "Learn_web_development/Core/Styling_basics/Sizing", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Fixing_blog_styles", "Learn_web_development/Core/Styling_basics/Test_your_skills/Values", "Learn_web_development/Core/Styling_basics")}}
 
-CSS rules contain [declarations](/en-US/docs/Web/CSS/CSS_syntax/Syntax#css_declarations), which in turn are composed of properties and values.
+CSS rules contain [declarations](/en-US/docs/Web/CSS/Guides/Syntax/Introduction#css_declarations), which in turn are composed of properties and values.
 Each property used in CSS has a **value type** that describes what kind of values it is allowed to have.
 In this lesson, we will take a look at some of the most frequently used value types, what they are, and how they work.
 
@@ -43,9 +43,9 @@ In this lesson, we will take a look at some of the most frequently used value ty
 
 CSS values define what types of value are valid for each CSS property. For example, you can specify colors for the values of {{cssxref("color")}} or {{cssxref("border-color")}}, but not lengths or percentages.
 
-In CSS specifications, and on the property pages here on MDN, you will be able to spot value types as they will be surrounded by angle brackets (`<`, `>`) — such as [`<color>`](/en-US/docs/Web/CSS/color_value) or {{cssxref("length")}}. When you see the value type `<color>` as valid for a particular property, that means you can use any valid color as a value for that property, as listed on the [`<color>`](/en-US/docs/Web/CSS/color_value) reference page.
+In CSS specifications, and on the property pages here on MDN, you will be able to spot value types as they will be surrounded by angle brackets (`<`, `>`) — such as [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value) or {{cssxref("length")}}. When you see the value type `<color>` as valid for a particular property, that means you can use any valid color as a value for that property, as listed on the [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value) reference page.
 
-Sometimes value types and properties can have the same, or similar names — For example, there is a {{cssxref("color")}} property and a [`<color>`](/en-US/docs/Web/CSS/color_value) data type. You can use the angle brackets to determine which one you are studying in each case. HTML elements also use angle brackets, but it should be clear from the context which one you are looking at. If you are not sure, try searching for it on MDN.
+Sometimes value types and properties can have the same, or similar names — For example, there is a {{cssxref("color")}} property and a [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value) data type. You can use the angle brackets to determine which one you are studying in each case. HTML elements also use angle brackets, but it should be clear from the context which one you are looking at. If you are not sure, try searching for it on MDN.
 
 > [!NOTE]
 > You'll see CSS value types referred to as _data types_. The terms are basically interchangeable — when you see something in CSS referred to as a data type, it is really just a fancy way of saying value type. The term _value_ refers to any particular expression supported by a value type that you choose to use.
@@ -59,7 +59,7 @@ h1 {
 }
 ```
 
-A value type in CSS defines a collection of allowable values. This means that if you see `<color>` as valid you don't need to wonder which of the different types of color value can be used — keywords, hex values, `rgb()` functions, etc. You can use _any_ available `<color>` values, assuming they are supported by your browser. The page on MDN for each value will give you information about browser support. For example, if you look at the page for [`<color>`](/en-US/docs/Web/CSS/color_value) you will see that the browser compatibility section lists different types of color values and support for them.
+A value type in CSS defines a collection of allowable values. This means that if you see `<color>` as valid you don't need to wonder which of the different types of color value can be used — keywords, hex values, `rgb()` functions, etc. You can use _any_ available `<color>` values, assuming they are supported by your browser. The page on MDN for each value will give you information about browser support. For example, if you look at the page for [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value) you will see that the browser compatibility section lists different types of color values and support for them.
 
 Let's have a look at some of the types of values and units you may frequently encounter, with examples so that you can try out different possible values.
 
@@ -77,7 +77,7 @@ There are various numeric value types that you might find yourself using in CSS.
   <tbody>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/CSS/integer">&#x3C;integer></a></code>
+        <code><a href="/en-US/docs/Web/CSS/Reference/Values/integer">&#x3C;integer></a></code>
       </td>
       <td>
         An <code>&#x3C;integer></code> is a whole number such as
@@ -86,7 +86,7 @@ There are various numeric value types that you might find yourself using in CSS.
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/CSS/number">&#x3C;number></a></code>
+        <code><a href="/en-US/docs/Web/CSS/Reference/Values/number">&#x3C;number></a></code>
       </td>
       <td>
         A <code>&#x3C;number></code> represents a decimal number — it may or may
@@ -97,18 +97,18 @@ There are various numeric value types that you might find yourself using in CSS.
     <tr>
       <td>
         <code
-          ><a href="/en-US/docs/Web/CSS/dimension">&#x3C;dimension></a></code
+          ><a href="/en-US/docs/Web/CSS/Reference/Values/dimension">&#x3C;dimension></a></code
         >
       </td>
       <td>
         A <code>&#x3C;dimension></code> is a <code>&#x3C;number></code> with a
         unit attached to it. For example, <code>45deg</code>, <code>5s</code>,
         or <code>10px</code>. <code>&#x3C;dimension></code> is an umbrella
-        category that includes the {{cssxref("length")}}, <code><a href="/en-US/docs/Web/CSS/angle">&#x3C;angle></a></code
-        >, <code><a href="/en-US/docs/Web/CSS/time">&#x3C;time></a></code
+        category that includes the {{cssxref("length")}}, <code><a href="/en-US/docs/Web/CSS/Reference/Values/angle">&#x3C;angle></a></code
+        >, <code><a href="/en-US/docs/Web/CSS/Reference/Values/time">&#x3C;time></a></code
         >, and
         <code
-          ><a href="/en-US/docs/Web/CSS/resolution">&#x3C;resolution></a></code
+          ><a href="/en-US/docs/Web/CSS/Reference/Values/resolution">&#x3C;resolution></a></code
         >
         types.
       </td>
@@ -342,7 +342,7 @@ li {
 
 {{EmbedLiveSample("percentage-fonts")}}
 
-Note that, while many value types accept a length or a percentage, there are some that only accept length. You can see which values are accepted on the MDN property reference pages. If the allowed value includes {{cssxref("length-percentage")}} then you can use a length or a percentage. If the allowed value only includes `<length>`, it is not possible to use a percentage.
+While many properties accept a length or a percentage as a value, some only accept a length, for example {{cssxref("border-width")}}. MDN's property reference pages detail which value types they accept. If the allowed value includes {{cssxref("length-percentage")}}, then you can use a length or a percentage. If the allowed value only includes `<length>`, it is not possible to use a percentage.
 
 ### Numbers
 
@@ -358,7 +358,7 @@ In the below example, try changing the value of `opacity` to various decimal val
 
 ```css live-sample___opacity
 .wrapper {
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/balloons.jpg);
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/balloons.jpg");
   background-repeat: no-repeat;
   background-position: bottom left;
   padding: 20px;
@@ -394,9 +394,9 @@ You can mix and match color models, but it's usually best if your entire project
 
 ### Color keywords
 
-You will see the color keywords (or "named colors") used in many MDN code examples. Because the [`<named-color>`](/en-US/docs/Web/CSS/named-color) data type contains a very finite number of color values, they are not commonly used on production websites with a sophisticated design language. On the other hand, named colors are used in code examples to clearly tell the user what color is expected so the learner can focus on the content being taught.
+You will see the color keywords (or "named colors") used in many MDN code examples. Because the [`<named-color>`](/en-US/docs/Web/CSS/Reference/Values/named-color) data type contains a very finite number of color values, they are not commonly used on production websites with a sophisticated design language. On the other hand, named colors are used in code examples to clearly tell the user what color is expected so the learner can focus on the content being taught.
 
-In the next example, try playing with different color keywords, to get more of an idea how they work. You can look them up using the [`<named-color>`](/en-US/docs/Web/CSS/named-color) reference page.
+In the next example, try playing with different color keywords, to get more of an idea how they work. You can look them up using the [`<named-color>`](/en-US/docs/Web/CSS/Reference/Values/named-color) reference page.
 
 ```html live-sample___color-keywords
 <div class="wrapper">
@@ -472,7 +472,7 @@ In the next example, try changing the values to see how the colors vary:
 
 ### RGB values
 
-To create RGB values directly, the [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) function takes three parameters representing **red**, **green**, and **blue** channel values of the colors, with an optional fourth value separated by a slash (`/`) representing opacity, in much the same way as hex values. The difference with RGB is that each channel is represented not by two hex digits, but by a decimal number ranging from `0` and `255` or a percentage ranging from `0%` and `100%` (but not a mixture of the two).
+To create RGB values directly, the [`rgb()`](/en-US/docs/Web/CSS/Reference/Values/color_value/rgb) function takes three parameters representing **red**, **green**, and **blue** channel values of the colors, with an optional fourth value separated by a slash (`/`) representing opacity, in much the same way as hex values. The difference with RGB is that each channel is represented not by two hex digits, but by a decimal number ranging from `0` and `255` or a percentage ranging from `0%` and `100%` (but not a mixture of the two).
 
 Let's rewrite our last example to use RGB colors:
 
@@ -521,7 +521,7 @@ Try changing the alpha channel values to see how it affects the color output.
 
 ```css live-sample___color-rgba
 .wrapper {
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/balloons.jpg);
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/balloons.jpg");
   padding: 40px 20px;
 }
 
@@ -551,26 +551,26 @@ Try changing the alpha channel values to see how it affects the color output.
 
 ### Using hues to specify a color
 
-If you want to go beyond keywords, hexadecimal, and `rgb()` for colors, you might want to try using [`<hue>`](/en-US/docs/Web/CSS/hue).
+If you want to go beyond keywords, hexadecimal, and `rgb()` for colors, you might want to try using [`<hue>`](/en-US/docs/Web/CSS/Reference/Values/hue).
 Hue is the value type that allows us to tell the difference or similarity between colors like red, orange, yellow, green, blue, etc.
-The key concept is that you can specify a hue in an [`<angle>`](/en-US/docs/Web/CSS/angle) because most of the color models describe hues using a {{glossary("color wheel")}}.
+The key concept is that you can specify a hue in an [`<angle>`](/en-US/docs/Web/CSS/Reference/Values/angle) because most of the color models describe hues using a {{glossary("color wheel")}}.
 
-There are several color functions that include a [`<hue>`](/en-US/docs/Web/CSS/hue) component, including `hsl()`, `hwb()`, and [`lch()`](/en-US/docs/Web/CSS/color_value/lch). Other color functions, like [`lab()`](/en-US/docs/Web/CSS/color_value/lab), define colors based on what humans can see.
+There are several color functions that include a [`<hue>`](/en-US/docs/Web/CSS/Reference/Values/hue) component, including `hsl()`, `hwb()`, and [`lch()`](/en-US/docs/Web/CSS/Reference/Values/color_value/lch). Other color functions, like [`lab()`](/en-US/docs/Web/CSS/Reference/Values/color_value/lab), define colors based on what humans can see.
 
-If you want to find out more about these functions and color spaces, see the [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color) guide, the [`<color>`](/en-US/docs/Web/CSS/color_value) reference that lists all the different ways you can use colors in CSS, and the [CSS color module](/en-US/docs/Web/CSS/CSS_colors) that provides an overview of all the color types in CSS and the properties that use color values.
+If you want to find out more about these functions and color spaces, see the [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/Guides/Colors/Applying_color) guide, the [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value) reference that lists all the different ways you can use colors in CSS, and the [CSS color module](/en-US/docs/Web/CSS/Guides/Colors) that provides an overview of all the color types in CSS and the properties that use color values.
 
 ### HWB
 
-A great starting point for using hues in CSS is the [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb) function, which specifies an `srgb()` color.
+A great starting point for using hues in CSS is the [`hwb()`](/en-US/docs/Web/CSS/Reference/Values/color_value/hwb) function, which specifies an `srgb()` color.
 The three parts are:
 
-- **Hue**: The base shade of the color. This takes a [`<hue>`](/en-US/docs/Web/CSS/hue) value between `0` and `360`, representing the angles around a color wheel.
+- **Hue**: The base shade of the color. This takes a [`<hue>`](/en-US/docs/Web/CSS/Reference/Values/hue) value between `0` and `360`, representing the angles around a color wheel.
 - **Whiteness**: How white is the color? This takes a value from `0%` (no whiteness) to `100%` (full whiteness).
 - **Blackness**: How black is the color? This takes a value from `0%` (no blackness) to `100%` (full blackness).
 
 ### HSL
 
-Similar to the `hwb()` function is the [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl) function, which also specifies an `srgb()` color.
+Similar to the `hwb()` function is the [`hsl()`](/en-US/docs/Web/CSS/Reference/Values/color_value/hsl) function, which also specifies an `srgb()` color.
 HSL uses `Hue`, in addition to `Saturation` and `Lightness`:
 
 - **Hue**: Again, this represents the base shade of the color.
@@ -623,7 +623,7 @@ Just like with `rgb()` you can pass an alpha parameter to `hsl()` to specify opa
 
 ```css live-sample___color-hsla
 .wrapper {
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/balloons.jpg);
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/balloons.jpg");
   padding: 40px 20px;
 }
 
@@ -652,7 +652,7 @@ Before you move on, try modifying the previous two examples to use some hue-base
 
 ## Images
 
-The [`<image>`](/en-US/docs/Web/CSS/image) value type is used wherever an image is a valid value. This can be an actual image file pointed to via a `url()` function, or a gradient.
+The [`<image>`](/en-US/docs/Web/CSS/Reference/Values/image) value type is used wherever an image is a valid value. This can be an actual image file pointed to via a `url()` function, or a gradient.
 
 In the example below, we are using an image and a gradient as values for the CSS `background-image` property.
 
@@ -670,7 +670,7 @@ In the example below, we are using an image and a gradient as values for the CSS
 }
 
 .image {
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/big-star.png);
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/big-star.png");
 }
 
 .gradient {
@@ -685,13 +685,13 @@ In the example below, we are using an image and a gradient as values for the CSS
 {{EmbedLiveSample("image", "", "380px")}}
 
 > [!NOTE]
-> There are some other possible values for `<image>`, however these are newer and currently have poor browser support. Check out the page on MDN for the [`<image>`](/en-US/docs/Web/CSS/image) data type if you want to read about them.
+> There are some other possible values for `<image>`, however these are newer and currently have poor browser support. Check out the page on MDN for the [`<image>`](/en-US/docs/Web/CSS/Reference/Values/image) data type if you want to read about them.
 
 You'll learn about image values in more depth in our [Background and borders](/en-US/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders) article later on.
 
 ## Position
 
-The [`<position>`](/en-US/docs/Web/CSS/position_value) value type represents a set of 2D coordinates, used to position an item such as a background image (via [`background-position`](/en-US/docs/Web/CSS/background-position)). It can take keywords such as `top`, `left`, `bottom`, `right`, and `center` to align items with specific bounds of a 2D box, and lengths, which represent offsets from the top and left-hand edges of the box.
+The [`<position>`](/en-US/docs/Web/CSS/Reference/Values/position_value) value type represents a set of 2D coordinates, used to position an item such as a background image (via [`background-position`](/en-US/docs/Web/CSS/Reference/Properties/background-position)). It can take keywords such as `top`, `left`, `bottom`, `right`, and `center` to align items with specific bounds of a 2D box, and lengths, which represent offsets from the top and left-hand edges of the box.
 
 A typical position value consists of two values — the first sets the position horizontally, the second vertically. If you only specify values for one axis the other will default to `center`.
 
@@ -707,7 +707,7 @@ Try playing around with these values to see how you can push the image around.
 .box {
   height: 200px;
   width: 400px;
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/big-star.png);
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/big-star.png");
   background-repeat: no-repeat;
   background-position: right 60px;
   margin: 20px auto;
@@ -750,12 +750,12 @@ In programming, a function is a piece of code that does a specific task.
 Functions are useful because you can write code once then reuse it many times instead of writing the same logic over and over.
 Most programming languages not only support functions but also come with convenient built-in functions for common tasks so you don't have to write them yourself from scratch.
 
-CSS also has [functions](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions), which work in a similar way to functions in other languages.
-In fact, we've already seen CSS functions in the [Color](#color) section above, such as [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) and [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl).
+CSS also has [functions](/en-US/docs/Web/CSS/Reference/Values/Functions), which work in a similar way to functions in other languages.
+In fact, we've already seen CSS functions in the [Color](#color) section above, such as [`rgb()`](/en-US/docs/Web/CSS/Reference/Values/color_value/rgb) and [`hsl()`](/en-US/docs/Web/CSS/Reference/Values/color_value/hsl).
 
 Aside from applying colors, you can use functions in CSS to do a lot of other things.
-For example, [Transform functions](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#transform_functions) are a common way to move, rotate, and scale elements on a page.
-You might see [`translate()`](/en-US/docs/Web/CSS/transform-function/translate) for moving something horizontally or vertically, [`rotate()`](/en-US/docs/Web/CSS/transform-function/rotate) to rotate something, or [`scale()`](/en-US/docs/Web/CSS/transform-function/scale) to make something bigger or smaller.
+For example, [Transform functions](/en-US/docs/Web/CSS/Reference/Values/Functions#transform_functions) are a common way to move, rotate, and scale elements on a page.
+You might see [`translate()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/translate) for moving something horizontally or vertically, [`rotate()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/rotate) to rotate something, or [`scale()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/scale) to make something bigger or smaller.
 
 ### Math functions
 
@@ -763,8 +763,8 @@ When you are creating styles for a project, you will probably start off with num
 If you want to have these values change based on other values, you will need to do some math.
 You could calculate the percentage of a value or add a number to another number, then update your CSS with the result.
 
-CSS has support for [Math functions](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#math_functions), which allow us to perform calculations in CSS instead of relying on static values or doing the math in JavaScript.
-One of the most common math functions is [`calc()`](/en-US/docs/Web/CSS/calc), which lets you do operations like addition, subtraction, multiplication, and division.
+CSS has support for [Math functions](/en-US/docs/Web/CSS/Reference/Values/Functions#math_functions), which allow us to perform calculations in CSS instead of relying on static values or doing the math in JavaScript.
+One of the most common math functions is [`calc()`](/en-US/docs/Web/CSS/Reference/Values/calc), which lets you do operations like addition, subtraction, multiplication, and division.
 
 For example, let's say we want to set the width of an element to be `20%` of its parent container plus `100px`.
 We can't specify this width with a static value — if the parent uses a percentage width (or a relative unit like `em` or `rem`) then it will vary depending on the context it is used in, and other factors such as the user's device or browser window width.
@@ -792,20 +792,16 @@ The `20%` is based on the width of the parent container (`.wrapper`) and if that
 
 {{EmbedLiveSample("calc")}}
 
-There are many other math functions that you can use in CSS, such as [`min()`](/en-US/docs/Web/CSS/min), [`max()`](/en-US/docs/Web/CSS/max), and [`clamp()`](/en-US/docs/Web/CSS/clamp); respectively these let you pick the smallest, largest, or middle value from a set of values. Explore our [CSS value functions](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) reference page to check out all the available CSS functions.
+There are many other math functions that you can use in CSS, such as [`min()`](/en-US/docs/Web/CSS/Reference/Values/min), [`max()`](/en-US/docs/Web/CSS/Reference/Values/max), and [`clamp()`](/en-US/docs/Web/CSS/Reference/Values/clamp); respectively these let you pick the smallest, largest, or middle value from a set of values. Explore our [CSS value functions](/en-US/docs/Web/CSS/Reference/Values/Functions) reference page to check out all the available CSS functions.
 
 Knowing about CSS functions is useful so you recognize them when you see them. You should start experimenting with them in your projects — they will help you avoid writing custom or repetitive code to achieve results that you can get with regular CSS.
 
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Values).
-
 ## Summary
 
-This has been a quick run-through of the most common types of values and units you might encounter. You can have a look at all of the different types on the [CSS Values and units](/en-US/docs/Web/CSS/CSS_Values_and_Units) module page — you will encounter many of these in use as you work through these lessons.
+This has been a quick run-through of the most common types of values and units you might encounter. You can have a look at all of the different types on the [CSS Values and units](/en-US/docs/Web/CSS/Guides/Values_and_units) module page — you will encounter many of these in use as you work through these lessons.
 
-The key thing to remember is that each property has a defined list of allowed value types, and each value type has a definition explaining what the values are. You can then look up the specifics here on MDN. For example, understanding that [`<image>`](/en-US/docs/Web/CSS/image) also allows you to create a color gradient is useful but perhaps non-obvious knowledge to have!
+The key thing to remember is that each property has a defined list of allowed value types, and each value type has a definition explaining what the values are. You can then look up the specifics here on MDN. For example, understanding that [`<image>`](/en-US/docs/Web/CSS/Reference/Values/image) also allows you to create a color gradient is useful but perhaps non-obvious knowledge to have!
 
-In the next article, we'll take a look at how items are sized in CSS.
+In the next article, we'll give you some tests that you can use to check how well you've understood and retained the information we've provided on values and units.
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Handling_conflicts", "Learn_web_development/Core/Styling_basics/Sizing", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Fixing_blog_styles", "Learn_web_development/Core/Styling_basics/Test_your_skills/Values", "Learn_web_development/Core/Styling_basics")}}

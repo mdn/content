@@ -81,7 +81,7 @@ The root {{HTMLelement("html")}} tags wrap all the content with the [`lang`](/en
 
 The {{HTMLelement("head")}} contains machine-readable information about the web application that's not visible to readers except for the `<title>`, which is displayed as the heading of the browser tab.
 
-The `<head>` includes all the [metadata](/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata). The first two bits of information in your `<head>` should always be the character set definition, which defines the [character encoding](/en-US/docs/Glossary/Character_encoding), and the [viewport](/en-US/docs/Web/HTML/Guides/Viewport_meta_element) {{HTMLelement("meta")}} tag, which ensures the page renders at the width of the viewport and isn't shrunken down when loaded on very small screens.
+The `<head>` includes all the [metadata](/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata). The first two bits of information in your `<head>` should always be the character set definition, which defines the [character encoding](/en-US/docs/Glossary/Character_encoding), and the [viewport](/en-US/docs/Web/HTML/Reference/Elements/meta/name/viewport) {{HTMLelement("meta")}} tag, which ensures the page renders at the width of the viewport and isn't shrunken down when loaded on very small screens.
 
 ```html
 <head>
@@ -210,13 +210,13 @@ We can now style the static HTML using CSS. Our final CSS is:
 ```css
 body {
   margin: 1vh 1vw;
-  background-color: #efe;
+  background-color: #eeffee;
 }
 ul,
 fieldset,
 legend {
   border: 1px solid;
-  background-color: #fff;
+  background-color: white;
 }
 ul {
   padding: 0;
@@ -226,7 +226,7 @@ li,
 legend {
   list-style-type: none;
   padding: 0.2em 0.5em;
-  background-color: #cfc;
+  background-color: #ccffcc;
 }
 li:nth-of-type(even) {
   background-color: inherit;
@@ -239,23 +239,23 @@ If every line is familiar to you, you can copy the above CSS, or write your own 
 
 ### CSS explained
 
-We use the {{CSSXref("background-color")}} property to set a light green (`#efe`) background color on the `body`. Then on the unordered list, fieldset, and legend, we use a white (`#fff`) background color, along with a thin solid border added with the {{CSSXref("border")}} property. We override the `background-color` for the legend, making the legend and the list items a darker green (`#cfc`).
+We use the {{CSSXref("background-color")}} property to set a light green (`#eeffee`) background color on the `body`. Then on the unordered list, fieldset, and legend, we use a white background color, along with a thin solid border added with the {{CSSXref("border")}} property. We override the `background-color` for the legend, making the legend and the list items a darker green (`#ccffcc`).
 
-We use the [`:nth-of-type(even)`](/en-US/docs/Web/CSS/:nth-of-type) pseudo-class [selector](/en-US/docs/Web/CSS/CSS_selectors) to set every even-numbered list item to {{CSSXref("inherit")}} the background color from its parent; in this case, inheriting the `#fff` background color from the unordered list.
+We use the [`:nth-of-type(even)`](/en-US/docs/Web/CSS/Reference/Selectors/:nth-of-type) pseudo-class [selector](/en-US/docs/Web/CSS/Guides/Selectors) to set every even-numbered list item to {{CSSXref("inherit")}} the background color from its parent; in this case, inheriting the `white` background color from the unordered list.
 
 ```css
 body {
-  background-color: #efe;
+  background-color: #eeffee;
 }
 ul,
 fieldset,
 legend {
   border: 1px solid;
-  background-color: #fff;
+  background-color: white;
 }
 li,
 legend {
-  background-color: #cfc;
+  background-color: #ccffcc;
 }
 li:nth-of-type(even) {
   background-color: inherit;
@@ -273,7 +273,7 @@ li {
 }
 ```
 
-We add a little white space by setting the `body`'s {{CSSXref("margin")}} using the `vw` and `vh` [viewport units](/en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport), making white space on the outside of our app be proportional to the viewport's size. We also add a little padding to the `li` and `legend`. Finally, to improve, but not fix, the alignment of the past-periods data, we set the {{CSSXref("font-family")}} of the `ul` results section to be `monospace`, making each glyph have the same fixed width.
+We add a little white space by setting the `body`'s {{CSSXref("margin")}} using the `vw` and `vh` [viewport units](/en-US/docs/Web/CSS/Reference/Values/length#relative_length_units_based_on_viewport), making white space on the outside of our app be proportional to the viewport's size. We also add a little padding to the `li` and `legend`. Finally, to improve, but not fix, the alignment of the past-periods data, we set the {{CSSXref("font-family")}} of the `ul` results section to be `monospace`, making each glyph have the same fixed width.
 
 ```css
 body {
@@ -293,13 +293,13 @@ We can combine the above, putting multiple properties in each selector declarati
 ```css
 body {
   margin: 1vh 1vw;
-  background-color: #efe;
+  background-color: #eeffee;
 }
 ul,
 fieldset,
 legend {
   border: 1px solid;
-  background-color: #fff;
+  background-color: white;
 }
 ul {
   padding: 0;
@@ -309,14 +309,14 @@ li,
 legend {
   list-style-type: none;
   padding: 0.2em 0.5em;
-  background-color: #cfc;
+  background-color: #ccffcc;
 }
 li:nth-of-type(even) {
   background-color: inherit;
 }
 ```
 
-If any of the above CSS still looks unfamiliar to you, you can look up the [CSS properties](/en-US/docs/Glossary/Property/CSS) and [selectors](/en-US/docs/Web/CSS/CSS_selectors), or work through the [CSS Styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics) module.
+If any of the above CSS still looks unfamiliar to you, you can look up the [CSS properties](/en-US/docs/Glossary/Property/CSS) and [selectors](/en-US/docs/Web/CSS/Guides/Selectors), or work through the [CSS Styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics) module.
 
 Whether you use the above CSS verbatim, edit the above styles to your preference, or write your own CSS from scratch, include all the CSS in a new file and save it as [`style.css`](https://github.com/mdn/pwa-examples/blob/main/cycletracker/html_and_css/style.css) in the same directory as your `index.html` file.
 

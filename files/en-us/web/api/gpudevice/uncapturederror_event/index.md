@@ -3,12 +3,10 @@ title: "GPUDevice: uncapturederror event"
 short-title: uncapturederror
 slug: Web/API/GPUDevice/uncapturederror_event
 page-type: web-api-event
-status:
-  - experimental
 browser-compat: api.GPUDevice.uncapturederror_event
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`uncapturederror`** event of the {{domxref("GPUDevice")}} interface is fired when an error is thrown that has not been observed by a GPU error scope, to provide a way to report unexpected errors.
 
@@ -26,7 +24,7 @@ onuncapturederror = (event) => { }
 
 ## Event type
 
-An {{domxref("GPUUncapturedErrorEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("GPUUncapturedErrorEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("GPUUncapturedErrorEvent")}}
 

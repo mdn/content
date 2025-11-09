@@ -19,10 +19,10 @@ The [ECMAScript Language Specification](https://tc39.es/ecma262/multipage/ecmasc
 
 ## See also
 
-- [Whitespace character](https://en.wikipedia.org/wiki/Whitespace_character) (Wikipedia)
-- [How whitespace is handled by HTML, CSS, and in the DOM](/en-US/docs/Web/API/Document_Object_Model/Whitespace)
+- [Whitespace character](https://en.wikipedia.org/wiki/Whitespace_character) on Wikipedia
+- [Handling whitespace in CSS](/en-US/docs/Web/CSS/Guides/Text/Whitespace)
 - {{cssxref("white-space")}}
-- Specifications
+- Specifications:
   - [ASCII whitespace spec](https://infra.spec.whatwg.org/#ascii-whitespace)
   - [ECMAScript Language Specification](https://tc39.es/ecma262/multipage/ecmascript-language-lexical-grammar.html#sec-white-space)
 - Related glossary terms:

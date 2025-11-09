@@ -5,11 +5,11 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
-This lesson aims to introduce you to [cascade layers](/en-US/docs/Web/CSS/@layer), a more advanced feature that builds on the fundamental concepts of the [CSS cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade) and [CSS specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity).
+This lesson aims to introduce you to [cascade layers](/en-US/docs/Web/CSS/Reference/At-rules/@layer), a more advanced feature that builds on the fundamental concepts of the [CSS cascade](/en-US/docs/Web/CSS/Guides/Cascade/Introduction) and [CSS specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity).
 
 If you are new to CSS, working through this lesson may seem less relevant immediately and a little more academic than some other parts of the course. However, knowing the basics of what cascade layers are should you encounter them in your projects is helpful. The more you work with CSS, understanding cascade layers and knowing how to leverage their power will save you from a lot of pain managing a code base with CSS from different parties, plugins, and development teams.
 
-Cascade layers are most relevant when you're working with CSS from multiple sources when there are conflicting CSS selectors and competing specificities, or when you're considering using [`!important`](/en-US/docs/Web/CSS/important).
+Cascade layers are most relevant when you're working with CSS from multiple sources when there are conflicting CSS selectors and competing specificities, or when you're considering using [`!important`](/en-US/docs/Web/CSS/Reference/Values/important).
 
 <table>
   <tbody>
@@ -41,18 +41,18 @@ To understand cascade layers, you must understand the CSS cascade well. The sect
 The 'C' in CSS stands for "Cascading". It is the method by which styles cascade together. The user agent runs through several clearly defined steps to determine the values assigned to every property for every element. We will briefly list these steps here and then dig deeper into step 4, **Cascade layers**, which is what you came here to learn:
 
 1. **Relevance:** Find all the declaration blocks with a selector match for each element.
-2. **Importance:** Sort rules based on whether they are normal or important. Important styles are those that have the [`!important`](/en-US/docs/Web/CSS/important) flag set.
+2. **Importance:** Sort rules based on whether they are normal or important. Important styles are those that have the [`!important`](/en-US/docs/Web/CSS/Reference/Values/important) flag set.
 3. **Origin:** Within each of the two importance buckets, sort rules by author, user, or user-agent origin.
 4. **Cascade layers:** Within each of the six origin importance buckets, sort by cascade layer. The layer order for normal declarations is from the first layer created to the last, followed by unlayered normal styles. This order is inverted for important styles, with unlayered important styles having the lowest precedence.
-5. **Specificity:** For competing styles in the origin layer with precedence, sort declarations by [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity).
-6. **Scoping proximity**: When two selectors in the origin layer with precedence have the same specificity, the property value within scoped rules with the smallest number of hops up the DOM hierarchy to the scope root wins. See [How `@scope` conflicts are resolved](/en-US/docs/Web/CSS/@scope#how_scope_conflicts_are_resolved) for more details and an example.
+5. **Specificity:** For competing styles in the origin layer with precedence, sort declarations by [specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity).
+6. **Scoping proximity**: When two selectors in the origin layer with precedence have the same specificity, the property value within scoped rules with the smallest number of hops up the DOM hierarchy to the scope root wins. See [How `@scope` conflicts are resolved](/en-US/docs/Web/CSS/Reference/At-rules/@scope#how_scope_conflicts_are_resolved) for more details and an example.
 7. **Order of appearance:** When two selectors in the origin layer with precedence have the same specificity and scope proximity, the property value from the last declared selector with the highest specificity wins.
 
 For each step, only the declarations "still in the running" move on to "compete" in the next step. If only one declaration is in the running, it "wins", and the subsequent steps are moot.
 
 ### Origin and cascade
 
-There are three [cascade origin types](/en-US/docs/Web/CSS/CSS_cascade/Cascade#origin_types): user-agent stylesheets, user stylesheets, and author stylesheets. The browser sorts each declaration into six origin buckets by origin and importance. There are eight levels of precedence: the six origin buckets, properties that are transitioning, and properties that are animating. The order of precedence goes from normal user-agent styles, which have the lowest precedence, to styles within currently applied animations, to important user-agent styles, and then styles being transitioned, which have the highest precedence:
+There are three [cascade origin types](/en-US/docs/Web/CSS/Guides/Cascade/Introduction#origin_types): user-agent stylesheets, user stylesheets, and author stylesheets. The browser sorts each declaration into six origin buckets by origin and importance. There are eight levels of precedence: the six origin buckets, properties that are transitioning, and properties that are animating. The order of precedence goes from normal user-agent styles, which have the lowest precedence, to styles within currently applied animations, to important user-agent styles, and then styles being transitioned, which have the highest precedence:
 
 1. user-agent normal styles
 2. user normal styles
@@ -67,9 +67,9 @@ The "user-agent" is the browser. The "user" is the site visitor. The "author" is
 
 ### Origin and specificity
 
-For each property, the declaration that "wins" is the one from the origin with precedence based on the weight (normal or important). Ignoring layers for the moment, the value from the origin with the highest precedence gets applied. If the winning origin has more than one property declaration for an element, the [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity) of the selectors for those competing property values are compared. Specificity is never compared between selectors from different origins.
+For each property, the declaration that "wins" is the one from the origin with precedence based on the weight (normal or important). Ignoring layers for the moment, the value from the origin with the highest precedence gets applied. If the winning origin has more than one property declaration for an element, the [specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity) of the selectors for those competing property values are compared. Specificity is never compared between selectors from different origins.
 
-In the example below, there are two links. The first has no author styles applied, so only user-agent styles are applied (and your personal user styles, if any). The second has [`text-decoration`](/en-US/docs/Web/CSS/text-decoration) and [`color`](/en-US/docs/Web/CSS/color) set by author styles even though the selector in the author stylesheet has a specificity of [`0-0-0`](/en-US/docs/Web/CSS/CSS_cascade/Specificity#selector_weight_categories). The reason why author styles "win" is because when there are conflicting styles from different origins, the rules from the origin with precedence are applied, irrespective of the specificity in the origin that doesn't have precedence.
+In the example below, there are two links. The first has no author styles applied, so only user-agent styles are applied (and your personal user styles, if any). The second has [`text-decoration`](/en-US/docs/Web/CSS/Reference/Properties/text-decoration) and [`color`](/en-US/docs/Web/CSS/Reference/Properties/color) set by author styles even though the selector in the author stylesheet has a specificity of [`0-0-0`](/en-US/docs/Web/CSS/Guides/Cascade/Specificity#selector_weight_categories). The reason why author styles "win" is because when there are conflicting styles from different origins, the rules from the origin with precedence are applied, irrespective of the specificity in the origin that doesn't have precedence.
 
 ```html live-sample___basic-cascade
 <p><a href="https://example.org">User agent styles</a></p>
@@ -85,7 +85,7 @@ In the example below, there are two links. The first has no author styles applie
 
 {{EmbedLiveSample("basic-cascade")}}
 
-The "competing" selector in the user-agent stylesheet at the time of this writing is `a:any-link`, which has a specificity weight of `0-1-1`. While this is greater than the `0-0-0` selector in the author stylesheet, even if the selector in your current user agent is different, it doesn't matter: the specificity weights from author and user-agent origins are never compared. Learn more about [how specificity weight is calculated](/en-US/docs/Web/CSS/CSS_cascade/Specificity#how_is_specificity_calculated).
+The "competing" selector in the user-agent stylesheet at the time of this writing is `a:any-link`, which has a specificity weight of `0-1-1`. While this is greater than the `0-0-0` selector in the author stylesheet, even if the selector in your current user agent is different, it doesn't matter: the specificity weights from author and user-agent origins are never compared. Learn more about [how specificity weight is calculated](/en-US/docs/Web/CSS/Guides/Cascade/Specificity#how_is_specificity_calculated).
 
 Origin precedence always wins over selector specificity. If an element property is styled with a normal style declaration in multiple origins, the author style sheet will always override the redundant normal properties declared in a user or user-agent stylesheet. If the style is important, the user-agent stylesheet will always win over author and user styles. Cascade origin precedence ensures specificity conflicts between origins never happen.
 
@@ -99,7 +99,7 @@ We now understand "cascade origin precedence", but what is "cascade layer preced
 
 Similar to how we have six levels of priority based on origin and importance, cascade layers enable us to create sub-origin level of priority within any of those origins.
 
-Within each of the six origin buckets, there can be multiple cascade layers. The [order of layer creation](/en-US/docs/Web/CSS/@layer) matters a lot. It is the order of creation that sets the precedence order among layers within an origin.
+Within each of the six origin buckets, there can be multiple cascade layers. The [order of layer creation](/en-US/docs/Web/CSS/Reference/At-rules/@layer) matters a lot. It is the order of creation that sets the precedence order among layers within an origin.
 
 In normal origin buckets, layers are sorted in the order of each layer's creation. The order of precedence is from the first layer created to the last, followed by unlayered normal styles.
 
@@ -125,7 +125,7 @@ Layer precedence always beats selector specificity. Styles in layers with preced
 
 Cascade layers allow the creation of nested layers. Each cascade layer can contain nested layers.
 
-For example, a component library may be imported into a `components` layer. A regular cascade layer will add the component library to the author origin, removing any specificity conflicts with other author styles. Within the `components` layer, a developer can choose to define various themes, each as a separate nested layer. The order of these nested theme layers can be defined based on media queries (see the [Layer creation and media queries](#layer_creation_and_media_queries) section below), such as viewport size or [orientation](/en-US/docs/Web/CSS/@media/orientation). These nested layers provide a way to create themes that don't conflict based on specificity.
+For example, a component library may be imported into a `components` layer. A regular cascade layer will add the component library to the author origin, removing any specificity conflicts with other author styles. Within the `components` layer, a developer can choose to define various themes, each as a separate nested layer. The order of these nested theme layers can be defined based on media queries (see the [Layer creation and media queries](#layer_creation_and_media_queries) section below), such as viewport size or [orientation](/en-US/docs/Web/CSS/Reference/At-rules/@media/orientation). These nested layers provide a way to create themes that don't conflict based on specificity.
 
 The ability to nest layers is very useful for anybody who works on developing component libraries, frameworks, third-party widgets, and themes.
 
@@ -139,9 +139,9 @@ The ability to create nested layers also removes the worry of having conflicting
 
 Layers can be created using any one of the following methods:
 
-- The [`@layer`](/en-US/docs/Web/CSS/@layer) statement at-rule, declaring layers using `@layer` followed by the names of one or more layers. This creates named layers without assigning any styles to them.
+- The [`@layer`](/en-US/docs/Web/CSS/Reference/At-rules/@layer) statement at-rule, declaring layers using `@layer` followed by the names of one or more layers. This creates named layers without assigning any styles to them.
 - The `@layer` block at-rule, in which all styles within a block are added to a named or unnamed layer.
-- The [`@import`](/en-US/docs/Web/CSS/@import) rule with the `layer` keyword or `layer()` function, which assigns the contents of the imported file into that layer.
+- The [`@import`](/en-US/docs/Web/CSS/Reference/At-rules/@import) rule with the `layer` keyword or `layer()` function, which assigns the contents of the imported file into that layer.
 
 All three methods create a layer if a layer with that name has not already been initialized. If no layer name is provided in the `@layer` at-rule or `@import` with `layer()`, a new anonymous (unnamed) layer is created.
 
@@ -154,7 +154,7 @@ Let's cover the three ways of creating a layer in a little more detail before di
 
 The order of layers is set by the order in which the layers appear in your CSS. Declaring layers using `@layer` followed by the names of one or more layers without assigning any styles is one way to define the [layer order](#determining_the_precedence_based_on_the_order_of_layers).
 
-The [`@layer`](/en-US/docs/Web/CSS/@layer) CSS at-rule is used to declare a cascade layer and to define the order of precedence when there are multiple cascade layers. The following at-rule declares three layers, in the order listed:
+The [`@layer`](/en-US/docs/Web/CSS/Reference/At-rules/@layer) CSS at-rule is used to declare a cascade layer and to define the order of precedence when there are multiple cascade layers. The following at-rule declares three layers, in the order listed:
 
 ```css
 @layer theme, layout, utilities;
@@ -181,7 +181,7 @@ In the example below, we've used four `@layer` block at-rules and one `@layer` s
 
 /* unlayered styles */
 body {
-  color: #333;
+  color: #333333;
 }
 
 /* creates the first layer: `layout` */
@@ -204,7 +204,7 @@ body {
 /* adds styles to the already existing `layout` layer */
 @layer layout {
   main {
-    color: #000;
+    color: black;
   }
 }
 
@@ -227,7 +227,7 @@ Anonymous layers are created by assigning styles to a layer without naming the l
 
 The `@layer` at-rule creates a layer, named or not, or appends styles to a layer if the named layer already exists. We called the first anonymous layer `<anonymous(01)>` and the second `<anonymous(02)>`, this is just so we can explain them. These are actually unnamed layers. There is no way to reference them or add additional styles to them.
 
-All styles declared outside of a layer are joined together in an implicit layer. In the example code above, the first declaration set the `color: #333` property on `body`. This was declared outside of any layer. Normal unlayered declarations take precedence over normal layered declarations even if the unlayered styles have a lower specificity and come first in the order of appearance. This explains why even though the unlayered CSS was declared first in the code block, the implicit layer containing these unlayered styles takes precedence as if it was the last declared layer.
+All styles declared outside of a layer are joined together in an implicit layer. In the example code above, the first declaration set the `color: #333333` property on `body`. This was declared outside of any layer. Normal unlayered declarations take precedence over normal layered declarations even if the unlayered styles have a lower specificity and come first in the order of appearance. This explains why even though the unlayered CSS was declared first in the code block, the implicit layer containing these unlayered styles takes precedence as if it was the last declared layer.
 
 In the line `@layer theme, layout, utilities;`, in which a series of layers were declared, only the `theme` and `utilities` layers were created; `layout` was already created in the first line. Note that this declaration does not change the order of already created layers. There is currently no way to re-order layers once declared.
 
@@ -262,7 +262,7 @@ Try moving the last line, `@layer site, page;`, to make it the first line. What 
 
 #### Layer creation and media queries
 
-If you define a layer using [media](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) or [feature](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries) queries, and the media is not a match or the feature is not supported, the layer is not created. The example below shows how changing the size of your device or browser may change the layer order. In this example, we create the `site` layer only in wider browsers. We then assign styles to the `page` and `site` layers, in that order.
+If you define a layer using [media](/en-US/docs/Web/CSS/Guides/Media_queries/Using) or [feature](/en-US/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries) queries, and the media is not a match or the feature is not supported, the layer is not created. The example below shows how changing the size of your device or browser may change the layer order. In this example, we create the `site` layer only in wider browsers. We then assign styles to the `page` and `site` layers, in that order.
 
 ```html live-sample___media-order
 <h1>Is this heading underlined?</h1>
@@ -294,31 +294,31 @@ In wide screens, the `site` layer is declared in the first line, meaning `site` 
 
 ### Importing style sheets into named and anonymous layers with @import
 
-The [`@import`](/en-US/docs/Web/CSS/@import) rule allows users to import style rules from other style sheets either directly into a CSS file or into a {{htmlelement('style')}} element.
+The [`@import`](/en-US/docs/Web/CSS/Reference/At-rules/@import) rule allows users to import style rules from other style sheets either directly into a CSS file or into a {{htmlelement('style')}} element.
 
-When importing stylesheets, the `@import` statement must be defined before any CSS styles within the stylesheet or `<style>` block. The `@import` statement must come first, before any styles, but can be preceded by an `@layer` at-rule that creates one or more layers without assigning any styles to the layers. (`@import` can also be preceded by an [`@charset`](/en-US/docs/Web/CSS/@charset) rule.)
+When importing stylesheets, the `@import` statement must be defined before any CSS styles within the stylesheet or `<style>` block. The `@import` statement must come first, before any styles, but can be preceded by an `@layer` at-rule that creates one or more layers without assigning any styles to the layers. (`@import` can also be preceded by an [`@charset`](/en-US/docs/Web/CSS/Reference/At-rules/@charset) rule.)
 
 You can import a stylesheet into a named layer, a nested named layer, or an anonymous layer. The following layer imports the style sheets into a `components` layer, a nested `dialog` layer within the `components` layer, and an un-named layer, respectively:
 
 ```css
-@import url("components-lib.css") layer(components);
-@import url("dialog.css") layer(components.dialog);
-@import url("marketing.css") layer();
+@import "components-lib.css" layer(components);
+@import "dialog.css" layer(components.dialog);
+@import "marketing.css" layer();
 ```
 
 You can import more than one CSS file into a single layer. The following declaration imports two separate files into a single `social` layer:
 
 ```css
-@import url(comments.css) layer(social);
-@import url(sm-icons.css) layer(social);
+@import "comments.css" layer(social);
+@import "sm-icons.css" layer(social);
 ```
 
-You can import styles and create layers based on specific conditions using [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) and [feature queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries). The following imports a style sheet into an `international` layer only if the browser supports `display: ruby`, and the file being imported is dependent on the width of the screen.
+You can import styles and create layers based on specific conditions using [media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using) and [feature queries](/en-US/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries). The following imports a style sheet into an `international` layer only if the browser supports `display: ruby`, and the file being imported is dependent on the width of the screen.
 
 ```css
-@import url("ruby-narrow.css") layer(international) supports(display: ruby)
+@import "ruby-narrow.css" layer(international) supports(display: ruby)
   (width < 32rem);
-@import url("ruby-wide.css") layer(international) supports(display: ruby)
+@import "ruby-wide.css" layer(international) supports(display: ruby)
   (width >= 32rem);
 ```
 
@@ -342,8 +342,8 @@ If you nest a block `@layer` at-rule inside another block `@layer` at-rule, with
 Let's look at the following example:
 
 ```css
-@import url("components-lib.css") layer(components);
-@import url("narrow-theme.css") layer(components.narrow);
+@import "components-lib.css" layer(components);
+@import "narrow-theme.css" layer(components.narrow);
 ```
 
 In the first line, we import `components-lib.css` into the `components` layer. If that file contains any layers, named or not, those layers become nested layers within the `components` layer.
@@ -353,7 +353,7 @@ The second line imports `narrow-theme.css` into the `narrow` layer, which is a s
 Let's look at another example, where we [import `layers1.css` into a named layer](#the_layer_block_at-rule_for_named_and_anonymous_layers) using the following statement:
 
 ```css
-@import url(layers1.css) layer(example);
+@import "layers1.css" layer(example);
 ```
 
 This will create a single layer named `example` containing some declarations and five nested layers - `example.layout`, `example.<anonymous(01)>`, `example.theme`, `example.utilities`, and `example.<anonymous(02)>`.
@@ -375,9 +375,9 @@ The order of layers determines their order of precedence. Therefore, the order o
 ### Precedence order of regular cascade layers
 
 ```css
-@import url(A.css) layer(firstLayer);
-@import url(B.css) layer(secondLayer);
-@import url(C.css);
+@import "A.css" layer(firstLayer);
+@import "B.css" layer(secondLayer);
+@import "C.css";
 ```
 
 The above code creates two named layers (C.css styles get appended to the implicit layer of unlayered styles). Let us assume that the three files (`A.css`, `B.css`, and `C.css`) do not contain any additional layers within them. The following list shows where styles declared inside and outside of these files will be sorted from least (1) precedence to highest (10).
@@ -540,10 +540,6 @@ Here's a summary of the properties that are used and why each declaration is app
 - `border`: Because within a layer non-nested styles have precedence over normal nested styles, `red` color wins.
 - `color`: With important styles, layered styles take precedence over unlayered styles, with important styles in earlier declared layers having precedence over later declared layers. In this example, the order of nested layer creation is `components.narrow`, then `components.wide`, so important styles in `components.narrow` have precedence over important styles in `components.wide`, meaning `purple` color wins.
 - `border-radius`: The property has been set only in the nested layers so by declaration order `20%` radius wins.
-
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: The Cascade, Task 2](/en-US/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Cascade#task_2).
 
 ## Summary
 

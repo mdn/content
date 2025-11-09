@@ -43,7 +43,7 @@ For URL font sources it allows authors to trigger when the remote font is fetche
   - : A string that retrieves or sets the _range of unicode code points_ encompassing the font. It is equivalent to the {{cssxref("@font-face/unicode-range", "unicode-range")}} descriptor.
 - {{domxref("FontFace.variant")}} {{non-standard_inline}}
   - : A string that retrieves or sets the _variant_ of the font.
-- {{domxref("FontFace.variationSettings")}} {{Experimental_Inline}}
+- {{domxref("FontFace.variationSettings")}}
   - : A string that retrieves or sets the _variation settings_ of the font. It is equivalent to the {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}} descriptor.
 - {{domxref("FontFace.weight")}}
   - : A string that contains the _weight_ of the font. It is equivalent to the {{cssxref("@font-face/font-weight", "font-weight")}} descriptor.
@@ -57,7 +57,7 @@ Just to show how it works, we then define the `stretch` descriptor using a prope
 
 ```js
 // Define a FontFace
-const font = new FontFace("my-font", "url(my-font.woff)", {
+const font = new FontFace("my-font", 'url("my-font.woff")', {
   style: "italic",
   weight: "400",
 });
@@ -94,4 +94,4 @@ For additional examples see [CSS Font Loading API > Examples](/en-US/docs/Web/AP
 
 ## See also
 
-- [@font-face](/en-US/docs/Web/CSS/@font-face)
+- [@font-face](/en-US/docs/Web/CSS/Reference/At-rules/@font-face)

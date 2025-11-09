@@ -24,7 +24,7 @@ You can check out the [full demo live](https://mdn.github.io/webaudio-examples/i
 
 The Web Audio API now comes with an {{domxref("IIRFilterNode")}} interface. But what is this and how does it differ from the {{domxref("BiquadFilterNode")}} we have already?
 
-An IIR filter is a **infinite impulse response filter**. It's one of two primary types of filters used in audio and digital signal processing. The other type is FIR — **finite impulse response filter**. There's a really good overview to [IIF filters and FIR filters here](https://dspguru.com/dsp/faqs/iir/basics/).
+An IIR filter is an **infinite impulse response filter**. It's one of two primary types of filters used in audio and digital signal processing. The other type is FIR — **finite impulse response filter**. There's a really good overview to [IIF filters and FIR filters here](https://dspguru.com/dsp/faqs/iir/basics/).
 
 A [biquad filter](https://www.mathworks.com/help/dsphdl/ref/biquadfilter.html) is actually a _specific type_ of infinite impulse response filter. It's a commonly-used type and we already have it as a node in the Web Audio API. If you choose this node the hard work is done for you. For instance, if you want to filter lower frequencies from your sound, you can set the [type](/en-US/docs/Web/API/BiquadFilterNode/type) to `highpass` and then set which frequency to filter from (or cut off).
 
@@ -94,16 +94,12 @@ This function is called when the play button is pressed. The play button HTML lo
 And the `click` event listener starts like so:
 
 ```js
-playButton.addEventListener(
-  "click",
-  () => {
-    if (playButton.dataset.playing === "false") {
-      srcNode = playSourceNode(audioCtx, sample);
-      // …
-    }
-  },
-  false,
-);
+playButton.addEventListener("click", () => {
+  if (playButton.dataset.playing === "false") {
+    srcNode = playSourceNode(audioCtx, sample);
+    // …
+  }
+});
 ```
 
 The toggle that turns the IIR filter on and off is set up in the similar way. First, the HTML:
@@ -114,24 +110,20 @@ The toggle that turns the IIR filter on and off is set up in the similar way. Fi
   role="switch"
   data-filteron="false"
   aria-pressed="false"
-  aria-describedby="label"
+  aria-labelledby="label"
   disabled></button>
 ```
 
 The filter button's `click` handler then connects the `IIRFilter` up to the graph, between the source and the destination:
 
 ```js
-filterButton.addEventListener(
-  "click",
-  () => {
-    if (filterButton.dataset.filteron === "false") {
-      srcNode.disconnect(audioCtx.destination);
-      srcNode.connect(iirFilter).connect(audioCtx.destination);
-      // …
-    }
-  },
-  false,
-);
+filterButton.addEventListener("click", () => {
+  if (filterButton.dataset.filteron === "false") {
+    srcNode.disconnect(audioCtx.destination);
+    srcNode.connect(iirFilter).connect(audioCtx.destination);
+    // …
+  }
+});
 ```
 
 ### Frequency response

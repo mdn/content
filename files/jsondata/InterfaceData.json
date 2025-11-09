@@ -536,6 +536,10 @@
       "inh": "CSSRule",
       "impl": []
     },
+    "CSSCustomMediaRule": {
+      "inh": "CSSRule",
+      "impl": []
+    },
     "CSSFontFaceDescriptors": {
       "inh": "CSSStyleDeclaration",
       "impl": []
@@ -800,6 +804,10 @@
       "inh": "",
       "impl": []
     },
+    "CSSSupportsConditionRule": {
+      "inh": "CSSGroupingRule",
+      "impl": []
+    },
     "CSSSupportsRule": {
       "inh": "CSSConditionRule",
       "impl": []
@@ -1044,6 +1052,10 @@
       "inh": "",
       "impl": []
     },
+    "Exception": {
+      "inh": "",
+      "impl": []
+    },
     "EXT_blend_minmax": {
       "inh": "",
       "impl": []
@@ -1134,6 +1146,10 @@
     },
     "FetchEvent": {
       "inh": "ExtendableEvent",
+      "impl": []
+    },
+    "FetchLaterResult": {
+      "inh": "",
       "impl": []
     },
     "File": {
@@ -1744,6 +1760,10 @@
       "inh": "HTMLElement",
       "impl": []
     },
+    "HTMLSelectedContentElement": {
+      "inh": "HTMLElement",
+      "impl": []
+    },
     "HTMLSelectElement": {
       "inh": "HTMLElement",
       "impl": []
@@ -1850,6 +1870,10 @@
     },
     "IDBOpenDBRequest": {
       "inh": "IDBRequest",
+      "impl": []
+    },
+    "IDBRecord": {
+      "inh": "",
       "impl": []
     },
     "IDBRequest": {
@@ -2320,6 +2344,10 @@
       "inh": "EventTarget",
       "impl": []
     },
+    "NavigationPrecommitController": {
+      "inh": "",
+      "impl": []
+    },
     "NavigationPreloadManager": {
       "inh": "",
       "impl": []
@@ -2764,6 +2792,10 @@
       "inh": "",
       "impl": []
     },
+    "QuotaExceededError": {
+      "inh": "DOMException",
+      "impl": []
+    },
     "RadioNodeList": {
       "inh": "NodeList",
       "impl": []
@@ -3056,6 +3088,14 @@
       "inh": "EventTarget",
       "impl": []
     },
+    "SFrameDecrypterStream": {
+      "inh": "EventTarget",
+      "impl": []
+    },
+    "SFrameEncrypterStream": {
+      "inh": "EventTarget",
+      "impl": []
+    },
     "SFrameTransform": {
       "inh": "EventTarget",
       "impl": []
@@ -3338,10 +3378,6 @@
     },
     "SVGDescElement": {
       "inh": "SVGElement",
-      "impl": []
-    },
-    "SVGDiscardElement": {
-      "inh": "SVGAnimationElement",
       "impl": []
     },
     "SVGElement": {
@@ -3645,6 +3681,10 @@
       "impl": []
     },
     "Table": {
+      "inh": "",
+      "impl": []
+    },
+    "Tag": {
       "inh": "",
       "impl": []
     },
@@ -4268,6 +4308,14 @@
       "inh": "",
       "impl": []
     },
+    "XRBody": {
+      "inh": "",
+      "impl": []
+    },
+    "XRBodySpace": {
+      "inh": "XRSpace",
+      "impl": []
+    },
     "XRBoundedReferenceSpace": {
       "inh": "XRReferenceSpace",
       "impl": []
@@ -4450,6 +4498,10 @@
     },
     "XRViewport": {
       "inh": "",
+      "impl": []
+    },
+    "XRVisibilityMaskChangeEvent": {
+      "inh": "Event",
       "impl": []
     },
     "XRWebGLBinding": {

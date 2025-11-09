@@ -131,7 +131,7 @@ There is nothing magical going on here. When submitted to the server, the above 
 
 Sometimes it's helpful to offer an in-context hint as to what form the input data should take. This can be especially important if the page design doesn't offer descriptive labels for each {{HTMLElement("input")}}. This is where **placeholders** come in. A placeholder is a value that demonstrates the form the `value` should take by presenting an example of a valid value, which is displayed inside the edit box when the element's `value` is `""`. Once data is entered into the box, the placeholder disappears; if the box is emptied, the placeholder reappears.
 
-Here, we have an `tel` input with the placeholder `123-4567-8901`. Note how the placeholder disappears and reappears as you manipulate the contents of the edit field.
+Here, we have a `tel` input with the placeholder `123-4567-8901`. Note how the placeholder disappears and reappears as you manipulate the contents of the edit field.
 
 ```html
 <input id="telNo" name="telNo" type="tel" placeholder="123-4567-8901" />
@@ -178,7 +178,7 @@ The example below creates a 20-character wide telephone number entry box, requir
 
 #### Providing a single default using the value attribute
 
-As always, you can provide a default value for an `tel` input box by setting its [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) attribute:
+As always, you can provide a default value for a `tel` input box by setting its [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) attribute:
 
 ```html
 <input id="telNo" name="telNo" type="tel" value="333-4444-4444" />
@@ -254,7 +254,7 @@ input:invalid + span::after {
   position: absolute;
   content: "✖";
   padding-left: 5px;
-  color: #8b0000;
+  color: darkred;
 }
 
 input:valid + span::after {
@@ -313,7 +313,7 @@ input:invalid + span::after {
   position: absolute;
   content: "✖";
   padding-left: 5px;
-  color: #8b0000;
+  color: darkred;
 }
 
 input:valid + span::after {
@@ -462,7 +462,7 @@ input:invalid + span::after {
   position: absolute;
   content: "✖";
   padding-left: 5px;
-  color: #8b0000;
+  color: darkred;
 }
 
 input:valid + span::after {

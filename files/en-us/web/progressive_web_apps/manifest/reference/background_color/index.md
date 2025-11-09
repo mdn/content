@@ -25,7 +25,7 @@ This color appears in the application window before your application's styleshee
 ### Values
 
 - `background_color`
-  - : A string that specifies a valid [color value](/en-US/docs/Web/CSS/color_value).
+  - : A string that specifies a valid [color value](/en-US/docs/Web/CSS/Reference/Values/color_value).
 
 ## Description
 
@@ -43,7 +43,7 @@ After an app has loaded, the `background-color` in the stylesheet takes preceden
 The manifest's `background_color` is used only as a temporary measure during the initial loading phase and for generating splash screens in some environments.
 
 > [!NOTE]
-> Browsers may override the `background_color` manifest value to support any [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) media query defined in your app's CSS.
+> Browsers may override the `background_color` manifest value to support any [`prefers-color-scheme`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) media query defined in your app's CSS.
 
 ## Examples
 
@@ -53,7 +53,7 @@ Imagine you're building a weather app, and the background color in your app's st
 
 ```css
 body {
-  background-color: #87ceeb;
+  background-color: skyblue;
 }
 ```
 
@@ -63,7 +63,7 @@ To ensure your users see a consistent background color from launch to full load 
 {
   "name": "WeatherPro",
   "display": "standalone",
-  "background_color": "#87ceeb",
+  "background_color": "skyblue",
   "theme_color": "#4682b4",
   "icons": [
     {

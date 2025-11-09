@@ -94,6 +94,22 @@ setTimeout(() => {
 // Promise { <state>: "rejected", <reason>: Error: bad }
 ```
 
+### Destructuring the result
+
+You will find [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) very useful if you are batching together a known number of tasks.
+
+```js
+// With then()
+Promise.all([p1, p2, p3]).then(([a, b, c]) => {
+  console.log(a, b, c); // 3 1337 "foo"
+});
+
+// With await
+const [a, b, c] = await Promise.all([p1, p2, p3]);
+```
+
+Be careful: if the original promises and the result variables' order don't match, you may run into subtle bugs.
+
 ### Asynchronicity or synchronicity of Promise.all
 
 This following example demonstrates the asynchronicity of `Promise.all` when a non-empty `iterable` is passed:

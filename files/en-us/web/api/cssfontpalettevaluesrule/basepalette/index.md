@@ -25,7 +25,7 @@ A string that can be one of the following color values:
 
 ### Read the associated base palette
 
-This example adds rules in an extra stylesheet added to the document, returned as the last stylesheet in the document (`document.styleSheets[document.styleSheets.length-1].cssRules`). So, `rules[2]` returns the first {{domxref("CSSFontPaletteValuesRule")}} object, and `rules[3]` the second one.
+The MDN [live sample](/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples) infrastructure combines all the CSS blocks in the example into a single inline style with the id `css-output`, so we first use {{domxref("document.getElementById()")}} to find that sheet. `rules[2]` returns the first {{domxref("CSSFontPaletteValuesRule")}} object, and `rules[3]` the second one.
 
 #### HTML
 
@@ -39,7 +39,7 @@ This example adds rules in an extra stylesheet added to the document, returned a
 #### CSS
 
 ```css
-@import url("https://fonts.googleapis.com/css2?family=Nabla&display=swap");
+@import "https://fonts.googleapis.com/css2?family=Nabla&display=swap";
 
 h2 {
   font-family: "Nabla", fantasy;
@@ -69,7 +69,7 @@ h2 {
 ```js
 const log = document.getElementById("log");
 
-const rules = document.styleSheets[document.styleSheets.length - 1].cssRules;
+const rules = document.getElementById("css-output").sheet.cssRules;
 const twoRule = rules[2]; // A CSSFontPaletteValuesRule interface
 const fiveRule = rules[3]; // A CSSFontPaletteValuesRule interface
 

@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Element.keyup_event
 ---
 
-{{APIRef}}
+{{APIRef("UI Events")}}
 
 The **`keyup`** event is fired when a key is released.
 

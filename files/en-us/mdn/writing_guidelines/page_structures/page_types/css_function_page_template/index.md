@@ -31,10 +31,10 @@ sidebar: mdnsidebar
 >
 > - **title**
 >   - : The `title` value is displayed at the top of the page. The title format is _NameOfTheFunction()_.
->     For example, the [`pow()`](/en-US/docs/Web/CSS/pow) function has a title of _pow()_.
+>     For example, the [`pow()`](/en-US/docs/Web/CSS/Reference/Values/pow) function has a title of _pow()_.
 > - **slug**
 >   - : The `slug` value is the end of the URL path after `https://developer.mozilla.org/en-US/docs/`. This will be formatted as `Web/CSS/NameOfTheFunction`. Note the absence of parentheses in the slug.
->     For example, the slug for the [`pow()`](/en-US/docs/Web/CSS/pow) function is `Web/CSS/pow`.
+>     For example, the slug for the [`pow()`](/en-US/docs/Web/CSS/Reference/Values/pow) function is `Web/CSS/pow`.
 > - **page-type**
 >   - : The `page-type` value for CSS functions is `css-function`.
 > - **status**
@@ -108,7 +108,7 @@ var(--custom-prop,)
 /* With a fallback value */
 /* var( <custom-property-name> , <declaration-value> ) */
 var(--custom-prop, initial)
-var(--custom-prop, #FF0000)
+var(--custom-prop, red)
 var(--my-background, linear-gradient(transparent, aqua), pink)
 var(--custom-prop, var(--default-value))
 var(--custom-prop, var(--default-value, red))

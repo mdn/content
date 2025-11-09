@@ -112,7 +112,7 @@ In this example, we apply a `transform` to the {{svgelement("svg")}} root elemen
 The following transform functions can be used by the `transform` attribute `<transform-list>`.
 
 > [!WARNING]
-> As per the spec, you should be able to also use CSS [transform functions](/en-US/docs/Web/CSS/transform-function). However, the compatibility isn't guaranteed.
+> As per the spec, you should be able to also use CSS [transform functions](/en-US/docs/Web/CSS/Reference/Values/transform-function). However, the compatibility isn't guaranteed.
 
 ### Matrix
 

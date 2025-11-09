@@ -61,7 +61,7 @@ h1 {
 
 {{EmbedLiveSample("simple-vertical", "", "350px")}}
 
-The three possible values for the [`writing-mode`](/en-US/docs/Web/CSS/writing-mode) property are:
+The three possible values for the [`writing-mode`](/en-US/docs/Web/CSS/Reference/Properties/writing-mode) property are:
 
 - `horizontal-tb`: Top-to-bottom block flow direction. Sentences run horizontally.
 - `vertical-rl`: Right-to-left block flow direction. Sentences run vertically.
@@ -71,7 +71,7 @@ So the `writing-mode` property is in reality setting the direction in which bloc
 
 ## Writing modes and block and inline layout
 
-We have already discussed [block and inline layout](/en-US/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow), and the fact that some things display as block elements and others as inline elements. As we have seen described above, block and inline is tied to the writing mode of the document, and not the physical screen. Blocks are only displayed from the top to the bottom of the page if you are using a writing mode that displays text horizontally, such as English.
+We have already discussed [block and inline layout](/en-US/docs/Web/CSS/Guides/Display/Block_and_inline_layout), and the fact that some things display as block elements and others as inline elements. As we have seen described above, block and inline is tied to the writing mode of the document, and not the physical screen. Blocks are only displayed from the top to the bottom of the page if you are using a writing mode that displays text horizontally, such as English.
 
 If we look at an example this will become clearer. In this next example I have two boxes that contain a heading and a paragraph. The first uses `writing-mode: horizontal-tb`, a writing mode that is written horizontally and from the top of the page to the bottom. The second uses `writing-mode: vertical-rl`; this is a writing mode that is written vertically and from right to left.
 
@@ -98,7 +98,7 @@ body {
 }
 
 .box {
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   padding: 0.5em;
   margin: 10px;
 }
@@ -161,7 +161,7 @@ body {
 }
 
 .box {
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   padding: 0.5em;
   margin: 10px;
   width: 100px;
@@ -205,7 +205,7 @@ The property mapped to `width` when in a horizontal writing mode is called {{css
 }
 
 .box {
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   padding: 0.5em;
   margin: 10px;
   inline-size: 100px;
@@ -252,7 +252,7 @@ You can also see that the {{htmlelement("Heading_Elements", "h2")}} has a black 
 ```css live-sample___logical-mbp
 .wrapper {
   display: flex;
-  border: 5px solid #ccc;
+  border: 5px solid #cccccc;
 }
 
 .box {
@@ -288,7 +288,7 @@ h2 {
 
 {{EmbedLiveSample("logical-mbp", "", "200px")}}
 
-There are a huge number of properties when you consider all of the individual border longhands, and you can see all of the mapped properties on the MDN page for [Logical Properties and Values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values).
+There are a huge number of properties when you consider all of the individual border longhands, and you can see all of the mapped properties on the MDN page for [Logical Properties and Values](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values).
 
 ### Logical values
 
@@ -320,7 +320,7 @@ Change the writing mode on this example to `vertical-rl` to see what happens to 
 .box {
   margin: 10px;
   padding: 0.5em;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   inline-size: 200px;
   writing-mode: horizontal-tb;
 }

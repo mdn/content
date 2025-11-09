@@ -1,22 +1,15 @@
 ---
-title: Firefox 141 for developers
-short-title: Firefox 141 (Beta)
+title: Firefox 141 release notes for developers
+short-title: Firefox 141
 slug: Mozilla/Firefox/Releases/141
-page-type: firefox-release-notes-active
+page-type: firefox-release-notes
 sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 141 that affect developers.
-Firefox 141 is the current [Beta version of Firefox](https://www.firefox.com/en-US/channel/desktop/#nightly) and ships on [July 22, 2025](https://whattrainisitnow.com/release/?version=141).
-
-> [!NOTE]
-> The release notes for this Firefox version are still a work in progress. You can [view the project tracker for this release here](https://github.com/mdn/mdn/issues/698).
-
-<!-- Authors: Please uncomment any headings you are writing notes for -->
+Firefox 141 was released on [July 22, 2025](https://whattrainisitnow.com/release/?version=141).
 
 ## Changes for web developers
-
-<!-- ### Developer Tools -->
 
 ### HTML
 
@@ -24,38 +17,21 @@ Firefox 141 is the current [Beta version of Firefox](https://www.firefox.com/en-
   The attribute can be set to indicate that an [`<input type="file">`](/en-US/docs/Web/HTML/Reference/Elements/input/file) element should offer selection of directories instead of files.
   Note that the returned file entries for the selected folder always contain an empty string in ({{domxref("File.webkitRelativePath")}}), which means that using `webkitdirectory` is not suitable for use cases where information about the directory structure is needed ([Firefox bug 1973726](https://bugzil.la/1973726)).
 
-<!-- #### Removals -->
-
 ### CSS
 
 - The CSS {{CSSXRef("font-variant-emoji")}} property allows you to set a default presentation style for displaying emojis ([Firefox bug 1954214](https://bugzil.la/1954214)).
-
-<!-- No notable changes. -->
-
-<!-- #### Removals -->
 
 ### JavaScript
 
 - The [`variants`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/variants) accessor property is now supported on {{jsxref("Intl.Locale")}} instances.
   This property returns the variants associated with a locale as a string of dash (`-`) separated identifiers.
   It offers a more robust way to get and set variant subtags of a language identifier as opposed to manually parsing or modifying a locale string ([Firefox bug 1970161](https://bugzil.la/1970161)).
-
-<!-- #### Removals -->
-
-<!-- ### SVG -->
-
-<!-- #### Removals -->
+- The explicit [resource management](/en-US/docs/Web/JavaScript/Guide/Resource_management) API, which includes the {{jsxref("Statements/using", "using")}} and {{jsxref("Statements/await_using", "await using")}} declarations, the {{jsxref("DisposableStack")}}, {{jsxref("AsyncDisposableStack")}}, and {{jsxref("SuppressedError")}} objects, and the {{jsxref("Symbol.dispose")}} and {{jsxref("Symbol.asyncDispose")}} well-known symbols, is now supported. These features ensure automatic cleanup of resources such as file handles or stream readers when they go out of scope, reducing leaks and simplifying error handling ([Firefox bug 1967744](https://bugzil.la/1967744)).
 
 ### HTTP
 
 - The [`"cache"`](/en-US/docs/Web/HTTP/Reference/Headers/Clear-Site-Data#cache) directive of the {{httpheader("Clear-Site-Data")}} response header now clears the {{glossary("bfcache")}} (backwards-forwards cache).
   This allows a site to ensure that if anyone navigates backward after a user has signed out, private details that were visible during the initial session will not be exposed. ([Firefox bug 1930501](https://bugzil.la/1930501)).
-
-<!-- #### Removals -->
-
-<!-- ### Security -->
-
-<!-- #### Removals -->
 
 ### APIs
 
@@ -70,21 +46,13 @@ Firefox 141 is the current [Beta version of Firefox](https://www.firefox.com/en-
     In the same way as the equivalent declarative attribute, [`popovertarget`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertarget), this makes the popover more accessible to keyboard users (see [Popover accessibility features](/en-US/docs/Web/API/Popover_API/Using#popover_accessibility_features)). It also creates an implicit anchor reference between the two, which enables more natural positioning of popovers relative to their controls (see [Popover anchor positioning](/en-US/docs/Web/API/Popover_API/Using#popover_anchor_positioning)).
   - The [`force`](/en-US/docs/Web/API/HTMLElement/togglePopover#force) or [`options.force`](/en-US/docs/Web/API/HTMLElement/togglePopover#force_2) arguments to `togglePopover()` can be used to force the popover open or closed, and is ignored if the popover is already in the forced state.
     Unlike `showPopover()` and `hidePopover()`, this does not throw an exception if the popover is already in the target state.
-
-<!-- #### DOM -->
-
-<!-- #### Media, WebRTC, and Web Audio -->
-
-<!-- #### Removals -->
-
-<!-- ### WebAssembly -->
-
-<!-- #### Removals -->
+- The [WebGPU API](/en-US/docs/Web/API/WebGPU_API) is now fully supported on Windows, in all contexts except for service workers. This allows developers to perform computation and graphics rendering using the [Graphics Processing Unit](https://en.wikipedia.org/wiki/Graphics_Processing_Unit) (GPU) of a user's computer. ([Firefox bug 1972486](https://bugzil.la/1972486)).
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
 #### General
 
+- Removed the experimental CDP (Chrome DevTools Protocol) implementation from Firefox. With it we also removed the support for the `remote.active-protocols` preference. More details on this topic can be found on [Firefox Developer Experience](https://fxdx.dev/cdp-retirement-in-firefox/) ([Firefox bug 1882096](https://bugzil.la/1882096)).
 - Removed the temporary `remote.system-access-check.enabled` preference. This preference can no longer be used to disable system access checks when using WebDriver in Firefox's chrome scope during testing ([Firefox bug 1955007](https://bugzil.la/1955007)).
 
 #### WebDriver BiDi
@@ -102,11 +70,8 @@ Firefox 141 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ## Changes for add-on developers
 
-- Adds the {{WebExtAPIRef('i18n.getPreferredSystemLanguages')}} method to retrieve the preferred locales of the operating system. This complements {{WebExtAPIRef('i18n.getAcceptLanguages')}} which return details of the locales set in the browser. ([Firefox bug 1888486](https://bugzil.la/1888486))
-
-<!-- ### Removals -->
-
-<!-- ### Other -->
+- Adds the {{WebExtAPIRef('i18n.getPreferredSystemLanguages')}} method to retrieve the preferred locales of the operating system. This complements {{WebExtAPIRef('i18n.getAcceptLanguages')}}, which returns details of the locales set in the browser. ([Firefox bug 1888486](https://bugzil.la/1888486))
+- Adds the ability to filter results in {{WebExtAPIRef('tabs.onUpdated')}} by cookie store ID. ([Firefox bug 1960011](https://bugzil.la/1960011))
 
 ## Experimental web features
 

@@ -122,7 +122,7 @@ As `browser_style` is a deprecated in Manifest V3 you may want to remove support
 - Does the appearance of your extensions UI change?
   - If the appearance doesn't change, remove the key.
   - If the appearance changes, experiment to determine what dependency exist and add the relevant properties in the extension's stylesheet. The styles are most likely to cause layout changes are `box-sizing:`, `border-box`, and `display: flex`.
-    If you cannot identify the dependencies, include the content of [extension.css](https://searchfox.org/mozilla-central/source/browser/components/extensions/extension.css) with the extension and delete all parts that aren't relevant, usually the `body` and `body *` blocks as most extensions don't use the `browser-style` class.
+    If you cannot identify the dependencies, include the content of [extension.css](https://searchfox.org/firefox-main/source/browser/components/extensions/extension.css) with the extension and delete all parts that aren't relevant, usually the `body` and `body *` blocks as most extensions don't use the `browser-style` class.
 
 ## Firefox panel components (legacy)
 
@@ -190,7 +190,7 @@ The [legacy Firefox Style Guide](https://firefoxux.github.io/StyleGuide/#/naviga
   &#x3C;div class="panel-formElements-item">
     &#x3C;label for="picker01">Label:&#x3C;/label>
     &#x3C;select id="picker01">
-      &#x3C;option value="value1" selected="true">Dropdown&#x3C;/option>
+      &#x3C;option value="value1" selected>Dropdown&#x3C;/option>
       &#x3C;option value="value2">List Item&#x3C;/option>
       &#x3C;option value="value3">List Item&#x3C;/option>
     &#x3C;/select>
@@ -198,7 +198,7 @@ The [legacy Firefox Style Guide](https://firefoxux.github.io/StyleGuide/#/naviga
   &#x3C;div class="panel-formElements-item">
     &#x3C;label for="placeholder01">Label:&#x3C;/label>
     &#x3C;input type="text" placeholder="Placeholder" id="placeholder01" />
-    &#x3C;button name="expander" class="expander">&#x3C;/button>
+    &#x3C;button name="expander" class="expander" aria-label="Expand">&#x3C;/button>
   &#x3C;/div>
 &#x3C;/div></pre
         >
@@ -392,7 +392,7 @@ button.panel-section-tabs-button {
 }
 
 .panel-list-item.disabled {
-  color: #999;
+  color: #999999;
 }
 
 .panel-list-item > .icon {
@@ -405,7 +405,7 @@ button.panel-section-tabs-button {
 }
 
 .panel-list-item > .text-shortcut {
-  color: #808080;
+  color: gray;
   font-family: "Lucida Grande", caption;
   font-size: 0.847em;
   justify-content: flex-end;
@@ -436,7 +436,7 @@ button.panel-section-tabs-button {
 }
 
 .panel-section-footer-button > .text-shortcut {
-  color: #808080;
+  color: gray;
   font-family: "Lucida Grande", caption;
   font-size: 0.847em;
 }
@@ -452,7 +452,7 @@ button.panel-section-tabs-button {
 .panel-section-footer-button.default {
   background-color: #0996f8;
   box-shadow: 0 1px 0 #0670cc inset;
-  color: #fff;
+  color: white;
 }
 
 .panel-section-footer-button.default:hover {

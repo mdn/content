@@ -51,7 +51,7 @@ This element implements the {{domxref("SVGAElement")}} interface.
 ## Example
 
 ```css hidden
-@namespace svg url(http://www.w3.org/2000/svg);
+@namespace svg url("http://www.w3.org/2000/svg");
 html,
 body,
 svg {
@@ -77,7 +77,7 @@ svg {
 /* As SVG does not provide a default visual style for links,
    it's considered best practice to add some */
 
-@namespace svg url(http://www.w3.org/2000/svg);
+@namespace svg url("http://www.w3.org/2000/svg");
 /* Necessary to select only SVG <a> elements, and not also HTML's.
    See warning below */
 
@@ -101,7 +101,7 @@ svg|a:active {
 {{EmbedLiveSample('Example', 100, 100)}}
 
 > [!WARNING]
-> Since this element shares its tag name with [HTML's `<a>` element](/en-US/docs/Web/HTML/Reference/Elements/a), selecting `a` with CSS or {{domxref("Document.querySelector", "querySelector")}} may apply to the wrong kind of element. Try [the `@namespace` rule](/en-US/docs/Web/CSS/@namespace) to distinguish the two.
+> Since this element shares its tag name with [HTML's `<a>` element](/en-US/docs/Web/HTML/Reference/Elements/a), selecting `a` with CSS or {{domxref("Document.querySelector", "querySelector")}} may apply to the wrong kind of element. Try [the `@namespace` rule](/en-US/docs/Web/CSS/Reference/At-rules/@namespace) to distinguish the two.
 
 ## Specifications
 

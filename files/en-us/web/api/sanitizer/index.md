@@ -11,7 +11,7 @@ browser-compat: api.Sanitizer
 
 The **`Sanitizer`** interface of the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) defines a configuration object that specifies what elements, attributes and comments are allowed or should be removed when inserting strings of HTML into an {{domxref("Element")}} or {{domxref("ShadowRoot")}}, or when parsing an HTML string into a {{domxref("Document")}}.
 
-A `Sanitizer` instance is effectively a wrapper around a {{domxref("SanitizerConfig")}}, and can be passed as a configuration alterative in the same [sanitization methods](/en-US/docs/Web/API/HTML_Sanitizer_API#sanitization_methods):
+A `Sanitizer` instance is effectively a wrapper around a {{domxref("SanitizerConfig")}}, and can be passed as a configuration alternative in the same [sanitization methods](/en-US/docs/Web/API/HTML_Sanitizer_API#sanitization_methods):
 
 - {{domxref("Element/setHTML","setHTML()")}} or {{domxref("Element/setHTMLUnsafe","setHTMLUnsafe()")}} on {{domxref("Element")}}.
 - {{domxref("ShadowRoot/setHTML","setHTML()")}} or {{domxref("ShadowRoot/setHTMLUnsafe","setHTMLUnsafe()")}} on {{domxref("ShadowRoot")}}.
@@ -29,7 +29,7 @@ Note that `Sanitizer` is expected to be more efficient to reuse and modify when 
 - {{domxref('Sanitizer.allowElement()')}} {{experimental_inline}}
   - : Sets an element as allowed by the sanitizer, optionally with an array of attributes that are allowed or disallowed.
 - {{domxref('Sanitizer.get()')}} {{experimental_inline}}
-  - : Returns the current `Sanitizer` configuration as an {{domxref('SanitizerConfig')}} dictionary instance.
+  - : Returns the current `Sanitizer` configuration as a {{domxref('SanitizerConfig')}} dictionary instance.
 - {{domxref('Sanitizer.removeElement()')}} {{experimental_inline}}
   - : Sets an element to be removed by the sanitizer.
 - {{domxref('Sanitizer.removeUnsafe()')}} {{experimental_inline}}

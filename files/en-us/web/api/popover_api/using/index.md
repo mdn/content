@@ -47,6 +47,20 @@ You can see how the previous code snippet renders in our [Basic declarative popo
 
 When a popover is shown, it has `display: none` removed from it and it is put into the {{glossary("top layer")}} so it will sit on top of all other page content.
 
+### `command` and `commandfor`
+
+The [`commandfor`](/en-US/docs/Web/HTML/Reference/Elements/button#commandfor) and [`command`](/en-US/docs/Web/HTML/Reference/Elements/button#command) attributes provide very similar functionality to `popovertarget` and `popovertargetaction`, but with a more general design aimed at providing other functionality beyond popover commands, including custom commands.
+
+The previous code snippet could be rewritten like this:
+
+```html live-sample___command-commandfor
+<button commandfor="mypopover" command="show-popover">Show popover</button>
+<button commandfor="mypopover" command="hide-popover">Hide popover</button>
+<div id="mypopover" popover>Popover content</div>
+```
+
+{{EmbedLiveSample("command-commandfor", "100%", "100")}}
+
 ## auto state, and "light dismiss"
 
 When a popover element is set with `popover` or `popover="auto"` as shown above, it is said to have **auto state**. The two important behaviors to note about auto state are:
@@ -92,6 +106,30 @@ In this state:
 - Multiple independent popovers can be shown simultaneously.
 
 You can see this behavior in action in our [Multiple manual popovers example](https://mdn.github.io/dom-examples/popover-api/multiple-manual/) ([source](https://github.com/mdn/dom-examples/tree/main/popover-api/multiple-manual)).
+
+## The `beforetoggle` and `toggle` events
+
+You can respond to a popover being shown or hidden using the [`beforetoggle`](/en-US/docs/Web/API/HTMLElement/beforetoggle_event) and [`toggle`](/en-US/docs/Web/API/HTMLElement/toggle_event) events:
+
+- `beforetoggle` is fired just before a popover is shown or hidden. This can be used for example to prevent the popover being shown or hidden (using {{domxref("Event.preventDefault()")}}), to add animation classes to a popover to animate it, or to cleanup the state of a popover after it has been used.
+- `toggle` is fired just after a popover is shown or hidden. This is generally used to run other code in response to a popover toggle state changing.
+
+Both of these events have a {{domxref("ToggleEvent")}} event object. This event has the following features in addition to those inherited from the default {{domxref("Event")}} object:
+
+- The {{domxref("ToggleEvent.oldState", "oldState")}} and {{domxref("ToggleEvent.newState", "newState")}} properties indicate which state the popover has just transitioned from and to, allowing you to respond specifically to a popover opening or closing.
+- The {{domxref("ToggleEvent.source", "source")}} property contains a reference to the HTML popover control element that initiated the toggle, allowing you to run different code in response to the toggle event depending on which control initiated it.
+
+Typical usage might look something like this:
+
+```js
+const popover = document.getElementById("mypopover");
+
+popover.addEventListener("toggle", (e) => {
+  console.log(e.newState);
+});
+```
+
+See the previous reference links for more information and examples.
 
 ## Showing popovers via JavaScript
 
@@ -268,6 +306,9 @@ The sub-menu popovers work fine as they are, opening when the toolbar buttons ar
 <div id="tooltip-3" class="tooltip" popover="hint">Tooltip C</div>
 ```
 
+> [!NOTE]
+> In the demo [source code](https://github.com/mdn/dom-examples/tree/main/popover-api/popover-hint), the tooltips are nested inside the popover control buttons. This is because it provides a better fallback in browsers that don't support CSS anchor positioning — the `hint` popovers appear next to their associated control buttons rather than somewhere else entirely.
+
 To control the showing/hiding, we need to use JavaScript. First of all, we grab references to the `hint` popovers and the control buttons in two separate {{domxref("NodeList")}}s using {{domxref("Document.querySelectorAll()")}}:
 
 ```js
@@ -388,7 +429,7 @@ You can see an isolated example of this in our [Popover positioning example](htt
 
 There is another useful positioning option that the Popover API provides. If you want to position a popover relative to its invoker rather than the viewport or a positioned ancestor, you can take advantage of the fact that popovers and their invokers have an **implicit anchor reference**.
 
-[Associating any kind of popover with its invoker](#other_ways_to_set_up_a_popover-invoker_relationship) creates an implicit anchor reference between the two. This causes the invoker to become the popover's **anchor element**, meaning that you can position the popover relative to it using [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning).
+[Associating any kind of popover with its invoker](#other_ways_to_set_up_a_popover-invoker_relationship) creates an implicit anchor reference between the two. This causes the invoker to become the popover's **anchor element**, meaning that you can position the popover relative to it using [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning).
 
 Because the association between the popover and the invoker is implicit, an explicit association does not need to be made using the {{cssxref("anchor-name")}} and {{cssxref("position-anchor")}} properties. However, you still need to specify the positioning CSS.
 
@@ -396,6 +437,8 @@ For example, you could use a combination of {{cssxref("anchor()")}} function val
 
 ```css
 .my-popover {
+  margin: 0;
+  inset: auto;
   bottom: calc(anchor(top) + 20px);
   justify-self: anchor-center;
 }
@@ -405,24 +448,31 @@ Or you could use a {{cssxref("position-area")}} property:
 
 ```css
 .my-popover {
+  margin: 0;
+  inset: auto;
   position-area: top;
 }
 ```
 
-See [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#positioning_elements_relative_to_their_anchor) for more details on associating anchor and positioned elements, and positioning elements relative to their anchor.
+When using {{cssxref("position-area")}} or {{cssxref("anchor()")}} to position popovers, be aware that [the default styles for popovers](https://html.spec.whatwg.org/multipage/rendering.html#flow-content-3:~:text=%5Bpopover%5D%20%7B) may conflict with the position you're trying to achieve. The usual culprits are the default styles for `margin` and `inset`, so it's advisable to reset those, as in the examples above. The CSS working group is [looking at ways to avoid requiring this workaround](https://github.com/w3c/csswg-drafts/issues/10258).
+
+See [Using CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using#positioning_elements_relative_to_their_anchor) for more details on associating anchor and positioned elements, and positioning elements relative to their anchor.
 
 > [!NOTE]
 > For an example that uses this implicit association, see our [popover hint demo](https://mdn.github.io/dom-examples/popover-api/popover-hint/) ([source](https://github.com/mdn/dom-examples/tree/main/popover-api/popover-hint)). If you check out the CSS code, you'll see that no explicit anchor associations are made using the {{cssxref("anchor-name")}} and {{cssxref("position-anchor")}} properties.
 
+> [!NOTE]
+> If you want to remove the implicit anchor reference to stop the popover from being anchored to its invoker, you can do so by setting the `position-anchor` property of the popover to an anchor name that doesn't exist in the current document, such as `--not-an-anchor-name`. See also [removing an anchor association](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using#removing_an_anchor_association).
+
 ## Animating popovers
 
-Popovers are set to `display: none;` when hidden and `display: block;` when shown, as well as being removed from / added to the {{glossary("top layer")}} and the [accessibility tree](/en-US/docs/Web/Performance/Guides/How_browsers_work#building_the_accessibility_tree). Therefore, for popovers to be animated, the {{cssxref("display")}} property needs to be animatable. [Supporting browsers](/en-US/docs/Web/CSS/display#browser_compatibility) animate `display` with a variation on the [discrete animation type](/en-US/docs/Web/CSS/CSS_animated_properties#discrete). Specifically, the browser will flip between `none` and another value of `display` so that the animated content is shown for the entire animation duration. So, for example:
+Popovers are set to `display: none;` when hidden and `display: block;` when shown, as well as being removed from / added to the {{glossary("top layer")}} and the [accessibility tree](/en-US/docs/Web/Performance/Guides/How_browsers_work#building_the_accessibility_tree). Therefore, for popovers to be animated, the {{cssxref("display")}} property needs to be animatable. [Supporting browsers](/en-US/docs/Web/CSS/Reference/Properties/display#browser_compatibility) animate `display` with a variation on the [discrete animation type](/en-US/docs/Web/CSS/Guides/Animations/Animatable_properties#discrete). Specifically, the browser will flip between `none` and another value of `display` so that the animated content is shown for the entire animation duration. So, for example:
 
 - When animating `display` from `none` to `block` (or another visible `display` value), the value will flip to `block` at `0%` of the animation duration so it is visible throughout.
 - When animating `display` from `block` (or another visible `display` value) to `none`, the value will flip to `none` at `100%` of the animation duration so it is visible throughout.
 
 > [!NOTE]
-> When animating using [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions), [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/transition-behavior) needs to be set to enable the above behavior. When animating with [CSS animations](/en-US/docs/Web/CSS/CSS_animations), the above behavior is available by default; an equivalent step is not required.
+> When animating using [CSS transitions](/en-US/docs/Web/CSS/Guides/Transitions), [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/Reference/Properties/transition-behavior) needs to be set to enable the above behavior. When animating with [CSS animations](/en-US/docs/Web/CSS/Guides/Animations), the above behavior is available by default; an equivalent step is not required.
 
 ### Transitioning a popover
 
@@ -450,11 +500,11 @@ The HTML contains a {{htmlelement("div")}} element declared to be a popover via 
 
 #### CSS
 
-The two popover properties we want to transition are [`opacity`](/en-US/docs/Web/CSS/opacity) and [`transform`](/en-US/docs/Web/CSS/transform). We want the popover to fade in or out while growing or shrinking horizontally. To achieve this, we set a starting state for these properties on the hidden state of the popover element (selected with the `[popover]` [attribute selector](/en-US/docs/Web/CSS/Attribute_selectors)) and an end state for the shown state of the popover (selected via the [`:popover-open`](/en-US/docs/Web/CSS/:popover-open) pseudo-class). We also use the [`transition`](/en-US/docs/Web/CSS/transition) property to define the properties to animate and the animation's duration as the popover gets shown or hidden.
+The two popover properties we want to transition are [`opacity`](/en-US/docs/Web/CSS/Reference/Properties/opacity) and [`transform`](/en-US/docs/Web/CSS/Reference/Properties/transform). We want the popover to fade in or out while growing or shrinking horizontally. To achieve this, we set a starting state for these properties on the hidden state of the popover element (selected with the `[popover]` [attribute selector](/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors)) and an end state for the shown state of the popover (selected via the [`:popover-open`](/en-US/docs/Web/CSS/Reference/Selectors/:popover-open) pseudo-class). We also use the [`transition`](/en-US/docs/Web/CSS/Reference/Properties/transition) property to define the properties to animate and the animation's duration as the popover gets shown or hidden.
 
 ```css
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 /* Transition for the popover itself */
@@ -493,7 +543,7 @@ to take effect, as the specificity is the same */
 /* Transition for the popover's backdrop */
 
 [popover]::backdrop {
-  background-color: rgb(0 0 0 / 0%);
+  background-color: transparent;
   transition:
     display 0.7s allow-discrete,
     overlay 0.7s allow-discrete,
@@ -511,7 +561,7 @@ so this starting-style rule cannot be nested */
 
 @starting-style {
   [popover]:popover-open::backdrop {
-    background-color: rgb(0 0 0 / 0%);
+    background-color: transparent;
   }
 }
 ```
@@ -521,9 +571,9 @@ As discussed earlier, we have also:
 - Set a starting state for the `transition` inside the `@starting-style` block.
 - Added `display` to the list of transitioned properties so that the animated element is visible (set to `display: block`) throughout the popover's entry and exit animations. Without this, the exit animation would not be visible; in effect, the popover would just disappear.
 - Added `overlay` to the list of transitioned properties to make sure that the removal of the element from the top layer is deferred until the animation has been completed. The effect of this may not be noticeable for basic animations such as this one, but in more complex cases, omitting this property can result in the element being removed from the overlay before the transition completes.
-- Set `allow-discrete` on both properties in the above transitions to enable [discrete transitions](/en-US/docs/Web/CSS/CSS_animated_properties#discrete).
+- Set `allow-discrete` on both properties in the above transitions to enable [discrete transitions](/en-US/docs/Web/CSS/Guides/Animations/Animatable_properties#discrete).
 
-You'll note that we've also included a transition on the [`::backdrop`](/en-US/docs/Web/CSS/::backdrop) appearing behind the popover when it opens, providing a nice darkening animation.
+You'll note that we've also included a transition on the [`::backdrop`](/en-US/docs/Web/CSS/Reference/Selectors/::backdrop) appearing behind the popover when it opens, providing a nice darkening animation.
 
 #### Result
 
@@ -534,7 +584,7 @@ The code renders as follows:
 > [!NOTE]
 > Because popovers change from `display: none` to `display: block` each time they are shown, the popover transitions from its `@starting-style` styles to its `[popover]:popover-open` styles every time the entry transition occurs. When the popover closes, it transitions from its `[popover]:popover-open` state to the default `[popover]` state.
 >
-> It is possible for the style transition on entry and exit to be different in such cases. See our [Demonstration of when starting styles are used](/en-US/docs/Web/CSS/@starting-style#demonstration_of_when_starting_styles_are_used) example for a proof of this.
+> It is possible for the style transition on entry and exit to be different in such cases. See our [Demonstration of when starting styles are used](/en-US/docs/Web/CSS/Reference/At-rules/@starting-style#demonstration_of_when_starting_styles_are_used) example for a proof of this.
 
 ### A popover keyframe animation
 
@@ -561,7 +611,7 @@ We have defined keyframes that specify the desired entry and exit animations, an
 
 ```css
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 [popover] {
@@ -612,7 +662,7 @@ html {
 
 @keyframes backdrop-fade-in {
   0% {
-    background-color: rgb(0 0 0 / 0%);
+    background-color: transparent;
   }
 
   100% {

@@ -73,7 +73,7 @@ threeColumnArticles.forEach((article) => {
 
 ## CSS access
 
-Note that, as data attributes are plain HTML attributes, you can even access them from [CSS](/en-US/docs/Web/CSS). For example to show the parent data on the article you can use [generated content](/en-US/docs/Web/CSS/content) in CSS with the [`attr()`](/en-US/docs/Web/CSS/attr) function:
+Note that, as data attributes are plain HTML attributes, you can even access them from [CSS](/en-US/docs/Web/CSS). For example to show the parent data on the article you can use [generated content](/en-US/docs/Web/CSS/Reference/Properties/content) in CSS with the [`attr()`](/en-US/docs/Web/CSS/Reference/Values/attr) function:
 
 ```css
 article::before {
@@ -81,7 +81,7 @@ article::before {
 }
 ```
 
-You can also use the [attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) in CSS to change styles according to the data:
+You can also use the [attribute selectors](/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors) in CSS to change styles according to the data:
 
 ```css
 article[data-columns="3"] {

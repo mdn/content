@@ -44,15 +44,24 @@ We can obtain a reference to images on the same page as the canvas by using one 
 - The {{domxref("document.getElementsByTagName()")}} method
 - If you know the ID of the specific image you wish to use, you can use {{domxref("document.getElementById()")}} to retrieve that specific image
 
-### Using images from other domains
+If you want to use many images or [lazy-load resources](/en-US/docs/Web/Performance/Guides/Lazy_loading), you probably need to wait for all the files to be available before drawing to the canvas.
+The example below deals with multiple images using an async function and [`Promise.all`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) to wait for all images to load before calling `drawImage()`:
 
-Using the [`crossorigin`](/en-US/docs/Web/HTML/Reference/Elements/img#crossorigin) attribute of an {{HTMLElement("img")}} element (reflected by the {{domxref("HTMLImageElement.crossOrigin")}} property), you can request permission to load an image from another domain for use in your call to `drawImage()`. If the hosting domain permits cross-domain access to the image, the image can be used in your canvas without tainting it; otherwise using the image will [taint the canvas](/en-US/docs/Web/HTML/How_to/CORS_enabled_image#security_and_tainted_canvases).
+```js
+async function draw() {
+  // Wait for all images to be loaded:
+  await Promise.all(
+    Array.from(document.images).map(
+      (image) =>
+        new Promise((resolve) => image.addEventListener("load", resolve)),
+    ),
+  );
 
-### Using other canvas elements
-
-Just as with normal images, we access other canvas elements using either the {{domxref("document.getElementsByTagName()")}} or {{domxref("document.getElementById()")}} method. Be sure you've drawn something to the source canvas before using it in your target canvas.
-
-One of the more practical uses of this would be to use a second canvas element as a thumbnail view of the other larger canvas.
+  const ctx = document.getElementById("canvas").getContext("2d");
+  // call drawImage() as usual
+}
+draw();
+```
 
 ### Creating images from scratch
 
@@ -77,24 +86,7 @@ img.addEventListener("load", () => {
 img.src = "myImage.png";
 ```
 
-If you're using one external image, this can be a good approach, but once you want to use many images or [lazy-load resources](/en-US/docs/Web/Performance/Guides/Lazy_loading), you probably need to wait for all the files to be available before drawing to the canvas.
-The examples below that deal with multiple images use an async function and [Promise.all](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) to wait for all images to load before calling `drawImage()`:
-
-```js
-async function draw() {
-  // Wait for all images to be loaded:
-  await Promise.all(
-    Array.from(document.images).map(
-      (image) =>
-        new Promise((resolve) => image.addEventListener("load", resolve)),
-    ),
-  );
-
-  const ctx = document.getElementById("canvas").getContext("2d");
-  // call drawImage() as usual
-}
-draw();
-```
+Whether you have `<img>` elements in your markup or you create them programmatically in JavaScript, external images may have [CORS](/en-US/docs/Web/HTTP/Guides/CORS) restrictions. By default, externally fetched images [taint the canvas](/en-US/docs/Web/HTML/How_to/CORS_enabled_image#security_and_tainted_canvases), preventing your site from reading data cross-origin. Using the [`crossorigin`](/en-US/docs/Web/HTML/Reference/Elements/img#crossorigin) attribute of an {{HTMLElement("img")}} element (reflected by the {{domxref("HTMLImageElement.crossOrigin")}} property), you can request permission to load an image from another domain using CORS. If the hosting domain permits cross-domain access to the image, the image can be used in your canvas without tainting it.
 
 ### Embedding an image via data: URL
 
@@ -110,21 +102,23 @@ One advantage of data URLs is that the resulting image is available immediately 
 
 Some disadvantages of this method are that your image is not cached, and for larger images the encoded URL can become quite long.
 
+### Using other canvas elements
+
+Just as with normal images, we access other canvas elements using either the {{domxref("document.getElementsByTagName()")}} or {{domxref("document.getElementById()")}} method. Be sure you've drawn something to the source canvas before using it in your target canvas.
+
+One of the more practical uses of this would be to use a second canvas element as a thumbnail view of the other larger canvas.
+
 ### Using frames from a video
 
 You can also use frames from a video being presented by a {{HTMLElement("video")}} element (even if the video is not visible). For example, if you have a {{HTMLElement("video")}} element with the ID "myVideo", you can do this:
 
 ```js
-function getMyVideo() {
-  const canvas = document.getElementById("canvas");
-  if (canvas.getContext) {
-    const ctx = canvas.getContext("2d");
-    return document.getElementById("myVideo");
-  }
-}
+const video = document.getElementById("myVideo");
+video.currentTime = 10; // Seek to 10 seconds into the video
+video.pause(); // Pause the video to freeze the frame
 ```
 
-This returns the {{domxref("HTMLVideoElement")}} object for the video, which, as covered earlier, can be used as an image source for the canvas.
+Now the {{domxref("HTMLVideoElement")}} is at the 10 second mark, and you can draw the current frame to your canvas. To make sure that the frame is available when you call `drawImage()`, call `drawImage()` within [`requestVideoFrameCallback()`](/en-US/docs/Web/API/HTMLVideoElement/requestVideoFrameCallback#drawing_video_frames_on_a_canvas).
 
 ## Drawing images
 
@@ -141,11 +135,7 @@ Once we have a reference to our source image object we can use the `drawImage()`
 In the following example, we will use an external image as the backdrop for a small line graph. Using backdrops can make your script considerably smaller because we can avoid the need for code to generate the background. In this example, we're only using one image, so I use the image object's `load` event handler to execute the drawing statements. The `drawImage()` method places the backdrop at the coordinate (0, 0), which is the top-left corner of the canvas.
 
 ```html hidden
-<html lang="en">
-  <body>
-    <canvas id="canvas" width="180" height="150"></canvas>
-  </body>
-</html>
+<canvas id="canvas" width="180" height="150"></canvas>
 ```
 
 ```js
@@ -186,11 +176,7 @@ In this example, we'll use an image as a wallpaper and repeat it several times o
 > Images can become blurry when scaling up or grainy if they're scaled down too much. Scaling is probably best not done if you've got some text in it which needs to remain legible.
 
 ```html hidden
-<html lang="en">
-  <body>
-    <canvas id="canvas" width="150" height="150"></canvas>
-  </body>
-</html>
+<canvas id="canvas" width="150" height="150"></canvas>
 ```
 
 ```js
@@ -304,18 +290,20 @@ We loop through the {{domxref("document.images")}} container and add new canvas 
 
 ```html
 <table>
-  <tr>
-    <td><img src="gallery_1.jpg" /></td>
-    <td><img src="gallery_2.jpg" /></td>
-    <td><img src="gallery_3.jpg" /></td>
-    <td><img src="gallery_4.jpg" /></td>
-  </tr>
-  <tr>
-    <td><img src="gallery_5.jpg" /></td>
-    <td><img src="gallery_6.jpg" /></td>
-    <td><img src="gallery_7.jpg" /></td>
-    <td><img src="gallery_8.jpg" /></td>
-  </tr>
+  <tbody>
+    <tr>
+      <td><img src="gallery_1.jpg" /></td>
+      <td><img src="gallery_2.jpg" /></td>
+      <td><img src="gallery_3.jpg" /></td>
+      <td><img src="gallery_4.jpg" /></td>
+    </tr>
+    <tr>
+      <td><img src="gallery_5.jpg" /></td>
+      <td><img src="gallery_6.jpg" /></td>
+      <td><img src="gallery_7.jpg" /></td>
+      <td><img src="gallery_8.jpg" /></td>
+    </tr>
+  </tbody>
 </table>
 <img id="frame" src="canvas_picture_frame.png" width="132" height="150" />
 ```
@@ -324,7 +312,7 @@ And here's some CSS to make things look nice:
 
 ```css
 body {
-  background: 0 -100px repeat-x url(bg_gallery.png) #4f191a;
+  background: 0 -100px repeat-x url("bg_gallery.png") #4f191a;
   margin: 10px;
 }
 

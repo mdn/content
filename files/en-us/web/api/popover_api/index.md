@@ -57,7 +57,7 @@ See [Using the popover API](/en-US/docs/Web/API/Popover_API/Using) for a detaile
 ## Interfaces
 
 - {{domxref("ToggleEvent")}}
-  - : Represents an event notifying the user when a popover element's state toggles between showing and hidden. It is the event object for the {{domxref("HTMLElement.beforetoggle_event", "beforetoggle")}} and {{domxref("HTMLElement.toggle_event", "toggle")}} events, which fire on popovers when their state changes.
+  - : Represents an event that fires when a popover element is toggled between being shown and hidden. It is the event object for the {{domxref("HTMLElement.beforetoggle_event", "beforetoggle")}} and {{domxref("HTMLElement.toggle_event", "toggle")}} events, which fire on popovers when their state changes.
 
 ## Extensions to other interfaces
 
@@ -104,5 +104,5 @@ See our [Popover API examples landing page](https://mdn.github.io/dom-examples/p
 - [`popover`](/en-US/docs/Web/HTML/Reference/Global_attributes/popover) HTML global attribute
 - [`popovertarget`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertarget) HTML attribute
 - [`popovertargetaction`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertargetaction) HTML attribute
-- [`::backdrop`](/en-US/docs/Web/CSS/::backdrop) CSS pseudo-element
-- [`:popover-open`](/en-US/docs/Web/CSS/:popover-open) CSS pseudo-class
+- [`::backdrop`](/en-US/docs/Web/CSS/Reference/Selectors/::backdrop) CSS pseudo-element
+- [`:popover-open`](/en-US/docs/Web/CSS/Reference/Selectors/:popover-open) CSS pseudo-class

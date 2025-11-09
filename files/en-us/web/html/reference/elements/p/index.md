@@ -28,7 +28,7 @@ Paragraphs are [block-level elements](/en-US/docs/Glossary/Block-level_content),
 p {
   margin: 10px 0;
   padding: 5px;
-  border: 1px solid #999;
+  border: 1px solid #999999;
 }
 ```
 

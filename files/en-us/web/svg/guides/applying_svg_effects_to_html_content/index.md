@@ -8,7 +8,7 @@ sidebar: svgref
 
 Modern browsers support using [SVG](/en-US/docs/Web/SVG) within [CSS](/en-US/docs/Web/CSS) styles to apply graphical effects to HTML content.
 
-You may specify SVG in styles either within the same document or an external style sheet. There are 3 properties you can use: [`mask`](/en-US/docs/Web/CSS/mask), [`clip-path`](/en-US/docs/Web/CSS/clip-path), and [`filter`](/en-US/docs/Web/CSS/filter).
+You may specify SVG in styles either within the same document or an external style sheet. There are 3 properties you can use: [`mask`](/en-US/docs/Web/CSS/Reference/Properties/mask), [`clip-path`](/en-US/docs/Web/CSS/Reference/Properties/clip-path), and [`filter`](/en-US/docs/Web/CSS/Reference/Properties/filter).
 
 > [!NOTE]
 > References to SVG in external files must be to the [same origin](/en-US/docs/Web/Security/Same-origin_policy) as the referencing document.
@@ -19,7 +19,7 @@ To apply an SVG effect using CSS styles, you first need to create the CSS style 
 
 ```css
 p {
-  mask: url(#my-mask);
+  mask: url("#my-mask");
 }
 ```
 
@@ -44,11 +44,11 @@ For example, you can make a gradient mask for HTML content using SVG and CSS cod
 
 ```css
 .target {
-  mask: url(#mask-1);
+  mask: url("#mask-1");
 }
 p {
   width: 300px;
-  border: 1px solid #000;
+  border: 1px solid black;
   display: inline-block;
 }
 p.target {
@@ -109,11 +109,11 @@ This example demonstrates using SVG to clip HTML content. Notice that even the c
 
 ```css
 .target {
-  clip-path: url(#clipping-path-1);
+  clip-path: url("#clipping-path-1");
 }
 p {
   width: 300px;
-  border: 1px solid #000;
+  border: 1px solid black;
   display: inline-block;
 }
 p.target {
@@ -139,7 +139,7 @@ document.querySelector("button").addEventListener("click", toggleRadius);
 
 ### Example: Filtering
 
-This demonstrates applying a filter to HTML content using SVG. It establishes several filters, which are applied with CSS to three elements in both the normal and mouse [hover](/en-US/docs/Web/CSS/:hover) states.
+This demonstrates applying a filter to HTML content using SVG. It establishes several filters, which are applied with CSS to three elements in both the normal and mouse [hover](/en-US/docs/Web/CSS/Reference/Selectors/:hover) states.
 
 ```html
 <p class="target">
@@ -225,22 +225,22 @@ The five filters are applied using the following CSS:
 
 ```css
 p.target {
-  filter: url(#f3);
+  filter: url("#f3");
 }
 p.target:hover {
-  filter: url(#f5);
+  filter: url("#f5");
 }
 em.target {
-  filter: url(#f1);
+  filter: url("#f1");
 }
 em.target:hover {
-  filter: url(#f4);
+  filter: url("#f4");
 }
 pre.target {
-  filter: url(#f2);
+  filter: url("#f2");
 }
 pre.target:hover {
-  filter: url(#f3);
+  filter: url("#f3");
 }
 ```
 
@@ -248,7 +248,7 @@ pre.target:hover {
 
 ### Example: Blurred Text
 
-In order to blur text, there is a CSS filter function called [`blur()`](/en-US/docs/Web/CSS/filter-function/blur). You can achieve the same effect using SVG filters.
+In order to blur text, there is a CSS filter function called [`blur()`](/en-US/docs/Web/CSS/Reference/Values/filter-function/blur). You can achieve the same effect using SVG filters.
 
 ```html
 <p class="blur">Time to clean my glasses</p>
@@ -265,7 +265,7 @@ You can apply the SVG and the CSS filter in the same class:
 
 ```css
 .blur {
-  filter: url(#wherearemyglasses);
+  filter: url("#wherearemyglasses");
 }
 ```
 
@@ -295,7 +295,7 @@ For example, if your CSS is in a file named `default.css`, it can look like this
 
 ```css
 .target {
-  clip-path: url(resources.svg#c1);
+  clip-path: url("resources.svg#c1");
 }
 ```
 

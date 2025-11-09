@@ -1,5 +1,5 @@
 ---
-title: Firefox 28 for developers
+title: Firefox 28 release notes for developers
 short-title: Firefox 28
 slug: Mozilla/Firefox/Releases/28
 page-type: firefox-release-notes
@@ -27,8 +27,8 @@ More details in [this post](https://hacks.mozilla.org/2013/12/split-console-pret
 
 ### CSS
 
-- Support for multi-line [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) has been added ([Firefox bug 939901](https://bugzil.la/939901)).
-- Longhand East Asian [counter styles](/en-US/docs/Web/CSS/list-style-type) have been implemented ([Firefox bug 934072](https://bugzil.la/934072)).
+- Support for multi-line [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts) has been added ([Firefox bug 939901](https://bugzil.la/939901)).
+- Longhand East Asian [counter styles](/en-US/docs/Web/CSS/Reference/Properties/list-style-type) have been implemented ([Firefox bug 934072](https://bugzil.la/934072)).
 - Experimental support for the {{cssxref("background-blend-mode")}} property has been added, but is disabled by default ([Firefox bug 841601](https://bugzil.la/841601)).
 - The `none` value has been added to {{cssxref("font-variant-ligatures")}} ([Firefox bug 913264](https://bugzil.la/913264)).
 - Support for the {{cssxref(":hover")}} user action pseudo-class on pseudo-elements has been implemented ([Firefox bug 922669](https://bugzil.la/922669)).

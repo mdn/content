@@ -101,7 +101,7 @@ The properties are as follows:
 - `"shared_info"`
   - : This is a serialized JSON object providing information that an aggregation service will use to put together a summary report. This data is [encrypted](/en-US/docs/Glossary/Encryption) using [AEAD](https://en.wikipedia.org/wiki/Authenticated_encryption) to prevent tampering. The following properties are represented in the serialized string:
     - `"api"`
-      - : A enumerated value representing the API that triggered the report generation. Currently this will always be equal to `"attribution-reporting"`, but it may be extended with additional values to support other APIs in the future.
+      - : An enumerated value representing the API that triggered the report generation. Currently this will always be equal to `"attribution-reporting"`, but it may be extended with additional values to support other APIs in the future.
     - `"attribution_destination"`
       - : A string representing the attribution [`"destination"`](/en-US/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Source#destination) URL set in the source registration (via the associated {{httpheader("Attribution-Reporting-Register-Source")}} response header).
     - `"report_id"`
@@ -225,18 +225,25 @@ To declare filters:
 1. On source registration, add a `filter_data` field to the {{httpheader("Attribution-Reporting-Register-Source")}} header that defines the filter keys you will use to filter the conversions over on the trigger side. These are completely custom fields. For example, to specify only conversions on particular subdomains, and for particular products:
 
    ```json
-   "filter_data": {
-     "conversion_subdomain": ["electronics.megastore", "electronics2.megastore"],
-     "product": ["1234"]
+   {
+     "filter_data": {
+       "conversion_subdomain": [
+         "electronics.megastore",
+         "electronics2.megastore"
+       ],
+       "product": ["1234"]
+     }
    }
    ```
 
 2. On trigger registration, add a `filters` field to the {{httpheader("Attribution-Reporting-Register-Trigger")}} header. The following, for example, causes trigger interactions to match the above source registration, as they both contain the `"electronics.megastore"` `"conversion_subdomain"` field. The `"directory"` filter on the other hand is ignored when a match is attempted, because it was not included in the above source registration.
 
    ```json
-   "filters": {
-     "conversion_subdomain": ["electronics.megastore"],
-     "directory": ["/store/electronics"]
+   {
+     "filters": {
+       "conversion_subdomain": ["electronics.megastore"],
+       "directory": ["/store/electronics"]
+     }
    }
    ```
 

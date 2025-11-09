@@ -51,7 +51,7 @@ body {
 
 .container > * {
   background-color: #3740ff;
-  color: #fff;
+  color: white;
 }
 ```
 

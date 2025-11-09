@@ -30,7 +30,7 @@ for (variable of iterable)
 ```
 
 - `variable`
-  - : Receives a value from the sequence on each iteration. May be either a declaration with [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const), [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let), or [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var), or an [assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment) target (e.g., a previously declared variable, an object property, or a [destructuring pattern](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring)). Variables declared with `var` are not local to the loop, i.e., they are in the same scope the `for...of` loop is in.
+  - : Receives a value from the sequence on each iteration. May be either a declaration with [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const), [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let), [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var), [`using`](/en-US/docs/Web/JavaScript/Reference/Statements/using), [`await using`](/en-US/docs/Web/JavaScript/Reference/Statements/await_using), or an [assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment) target (e.g., a previously declared variable, an object property, or a [destructuring pattern](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring)). Variables declared with `var` are not local to the loop, i.e., they are in the same scope the `for...of` loop is in.
 - `iterable`
   - : An iterable object. The source of the sequence of values on which the loop operates.
 - `statement`
@@ -66,6 +66,17 @@ for (let value of iterable) {
 > [!NOTE]
 > Each iteration creates a new variable. Reassigning the variable inside the loop body does not affect the original value in the iterable (an array, in this case).
 
+Variables declared using the {{jsxref("Statements/using", "using")}} or {{jsxref("Statements/await_using", "await using")}} declaration are disposed every time a loop iteration is done (and `await using` causes an implicit `await` at the end of the iteration). However, if the loop early-exits, any values left in the iterator that haven't been visited are not disposed (although the current value is).
+
+```js
+const resources = [dbConnection1, dbConnection2, dbConnection3];
+
+for (using dbConnection of resources) {
+  dbConnection.query("...");
+  // dbConnection is disposed here
+}
+```
+
 You can use [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) to assign multiple local variables, or use a property accessor like `for (x.y of iterable)` to assign the value to an object property.
 
 However, a special rule forbids using `async` as the variable name. This is invalid syntax:
@@ -76,6 +87,14 @@ for (async of [1, 2, 3]); // SyntaxError: The left-hand side of a for-of loop ma
 ```
 
 This is to avoid syntax ambiguity with the valid code `for (async of => {};;)`, which is a [`for`](/en-US/docs/Web/JavaScript/Reference/Statements/for) loop.
+
+Similarly, if you use the `using` declaration, then the variable cannot be called `of`:
+
+```js-nolint example-bad
+for (using of of []); // SyntaxError
+```
+
+This is to avoid syntax ambiguity with the valid code `for (using of [])`, before `using` was introduced.
 
 ## Examples
 
@@ -186,7 +205,7 @@ for (const paragraph of articleParagraphs) {
 
 ### Iterating over a user-defined iterable
 
-Iterating over an object with an `[Symbol.iterator]()` method that returns a custom iterator:
+Iterating over an object with a `[Symbol.iterator]()` method that returns a custom iterator:
 
 ```js
 const iterable = {
@@ -211,7 +230,7 @@ for (const value of iterable) {
 // 3
 ```
 
-Iterating over an object with an `[Symbol.iterator]()` generator method:
+Iterating over an object with a `[Symbol.iterator]()` generator method:
 
 ```js
 const iterable = {

@@ -11,7 +11,7 @@ browser-compat: api.HTMLDialogElement.requestClose
 The **`requestClose()`** method of the {{domxref("HTMLDialogElement")}} interface requests to close the {{htmlelement("dialog")}}.
 An optional string may be passed as an argument, updating the `returnValue` of the dialog.
 
-This method differs from the {{domxref("HTMLDialogElement.close()")}} method in that it fires a `cancel` event before firing the `close` event.
+This method differs from the {{domxref("HTMLDialogElement.close()")}} method in that it fires a {{domxref("HTMLDialogElement.cancel_event", "cancel")}} event before firing the {{domxref("HTMLDialogElement.close_event", "close")}} event.
 Authors can call {{domxref("Event.preventDefault()")}} in the handler for the `cancel` event to prevent the dialog from closing.
 
 This method exposes the same behavior as the dialog's internal close watcher.
@@ -45,9 +45,7 @@ Once open you can click the **X** button to request to close the dialog (via the
 <!-- Simple pop-up dialog box, containing a form -->
 <dialog id="favDialog">
   <form method="dialog">
-    <button type="button" id="close" aria-label="close" formnovalidate>
-      X
-    </button>
+    <button type="button" id="close" aria-label="close">X</button>
     <section>
       <p>
         <label for="favAnimal">Favorite animal:</label>
@@ -60,15 +58,17 @@ Once open you can click the **X** button to request to close the dialog (via the
       </p>
     </section>
     <menu>
-      <button type="reset">Reset</button>
-      <button type="submit">Confirm</button>
+      <li>
+        <button type="reset">Reset</button>
+      </li>
+      <li>
+        <button type="submit">Confirm</button>
+      </li>
     </menu>
   </form>
 </dialog>
 
-<menu>
-  <button id="updateDetails">Update details</button>
-</menu>
+<button id="updateDetails">Update details</button>
 ```
 
 #### JavaScript

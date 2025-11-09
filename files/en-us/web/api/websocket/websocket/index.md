@@ -51,7 +51,7 @@ new WebSocket(url, protocols)
 
 The examples below show how you might connect to a `WebSocket`.
 
-The code below shows how we can connect to a socket using an URL with the `wss` schema:
+The code below shows how we can connect to a socket using a URL with the `wss` scheme:
 
 ```js
 const wssWebSocket = new WebSocket("wss://websocket.example.org");
@@ -63,7 +63,7 @@ wssWebSocket.close();
 ```
 
 The code for connecting to an HTTPS URL is nearly the same.
-Under the hood the browser resolves this to a "WSS" connection, so the {{domxref("WebSocket.url")}} will have the schema "wss:".
+Under the hood the browser resolves this to a "WSS" connection, so the {{domxref("WebSocket.url")}} will have the scheme "wss:".
 
 ```js
 const httpsWebSocket = new WebSocket("https://websocket.example.org");

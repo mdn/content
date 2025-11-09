@@ -44,7 +44,7 @@ The **`<thead>`** [HTML](/en-US/docs/Web/HTML) element encapsulates a set of tab
 thead,
 tfoot {
   background-color: #2c5e77;
-  color: #fff;
+  color: white;
 }
 
 tbody {
@@ -87,7 +87,7 @@ The following attributes are deprecated and should not be used. They are documen
   - : Specifies the horizontal alignment of each head cell. The possible {{Glossary("enumerated")}} values are `left`, `center`, `right`, `justify`, and `char`. When supported, the `char` value aligns the textual content on the character defined in the [`char`](#char) attribute and the offset defined by the [`charoff`](#charoff) attribute. Use the {{cssxref("text-align")}} CSS property instead, as this attribute is deprecated.
 
 - `bgcolor` {{deprecated_inline}}
-  - : Defines the background color of each head cell. The value is an HTML color; either a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/hex-color), prefixed by a `#`, or a [color keyword](/en-US/docs/Web/CSS/named-color). Other CSS {{cssxref("color_value", "&lt;color&gt;")}} values are not supported. Use the {{cssxref("background-color")}} CSS property instead, as this attribute is deprecated.
+  - : Defines the background color of each head cell. The value is an HTML color; either a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/Reference/Values/hex-color), prefixed by a `#`, or a [color keyword](/en-US/docs/Web/CSS/Reference/Values/named-color). Other CSS {{cssxref("color_value", "&lt;color&gt;")}} values are not supported. Use the {{cssxref("background-color")}} CSS property instead, as this attribute is deprecated.
 
 - `char` {{deprecated_inline}}
   - : Does nothing. It was originally intended to specify the alignment of the content to a character of each head cell. If [`align`](#align) is not set to `char`, this attribute is ignored.
@@ -158,7 +158,7 @@ thead {
   border-bottom: 2px solid rgb(160 160 160);
   text-align: center;
   background-color: #2c5e77;
-  color: #fff;
+  color: white;
 }
 
 tbody {
@@ -244,7 +244,7 @@ In order to associate and line up the header cells with the correct columns and 
 
 The column and row spanning demonstrated by this example are illustrated in the following figure:
 
-![Illustration demonstrating column and row spanning of table cells: cells 1, 3, and 4 spanning one column and two rows each; cell 2 spanning two columns and one row; cells 5 and 6 span a single row and column each, fitting into the available cells that are the second and third columns in the second row](column-row-span.png)
+![Illustration demonstrating column and row spanning of table cells: cells 1, 3, and 4 spanning one column and two rows each; cell 2 spanning two columns and one row; cells 5 and 6 span a single row and column each, fitting into the available cells that are the second and third columns in the second row](/shared-assets/images/diagrams/html/table/column-row-span.png)
 
 #### CSS
 
@@ -254,7 +254,7 @@ The CSS is unchanged from the [previous example](#basic_head_structure).
 thead {
   border-bottom: 2px solid rgb(160 160 160);
   background-color: #2c5e77;
-  color: #fff;
+  color: white;
 }
 
 table {

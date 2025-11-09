@@ -57,11 +57,7 @@ article {
   max-width: 500px;
   padding: 10px;
   background-color: red;
-  background-image: linear-gradient(
-    to bottom,
-    rgb(0 0 0 / 0%),
-    rgb(0 0 0 / 25%)
-  );
+  background-image: linear-gradient(to bottom, transparent, rgb(0 0 0 / 25%));
 }
 
 .simple {
@@ -95,7 +91,7 @@ You can also specify multiple box shadows in a single `box-shadow` declaration, 
 </article>
 ```
 
-```css-nolint
+```css
 p {
   margin: 0;
 }
@@ -104,20 +100,17 @@ article {
   max-width: 500px;
   padding: 10px;
   background-color: red;
-  background-image: linear-gradient(
-    to bottom,
-    rgb(0 0 0 / 0%),
-    rgb(0 0 0 / 25%)
-  );
+  background-image: linear-gradient(to bottom, transparent, rgb(0 0 0 / 25%));
 }
 
 .multiple {
-  box-shadow: 1px 1px 1px black,
-              2px 2px 1px black,
-              3px 3px 1px red,
-              4px 4px 1px red,
-              5px 5px 1px black,
-              6px 6px 1px black;
+  box-shadow:
+    1px 1px 1px black,
+    2px 2px 1px black,
+    3px 3px 1px red,
+    4px 4px 1px red,
+    5px 5px 1px black,
+    6px 6px 1px black;
 }
 ```
 
@@ -144,7 +137,7 @@ button {
   line-height: 2;
   border-radius: 10px;
   border: none;
-  background-image: linear-gradient(to bottom right, #777, #ddd);
+  background-image: linear-gradient(to bottom right, #777777, #dddddd);
   box-shadow:
     1px 1px 1px black,
     inset 2px 3px 5px rgb(0 0 0 / 30%),
@@ -153,7 +146,7 @@ button {
 
 button:focus,
 button:hover {
-  background-image: linear-gradient(to bottom right, #888, #eee);
+  background-image: linear-gradient(to bottom right, #888888, #eeeeee);
 }
 
 button:active {
@@ -183,7 +176,7 @@ In the example below we have used two different values for filter. The `first` i
 
 The second is `grayscale()`; by using a percentage we are setting how much color we want to be removed.
 
-Play with the percentage and pixel parameters in the example below to see how the images change. You could also swap the values for some others. Try `contrast(200%)`, `invert(100%)` or `hue-rotate(20deg)` on the live example above. Take a look at the MDN page for [`filter`](/en-US/docs/Web/CSS/filter) for many other options you could try.
+Play with the percentage and pixel parameters in the example below to see how the images change. You could also swap the values for some others. Try `contrast(200%)`, `invert(100%)` or `hue-rotate(20deg)` on the live example above. Take a look at the MDN page for [`filter`](/en-US/docs/Web/CSS/Reference/Properties/filter) for many other options you could try.
 
 ```html live-sample___filter
 <div class="wrapper">
@@ -237,7 +230,7 @@ img {
 
 {{EmbedLiveSample("filter", "", "260px")}}
 
-You can apply filters to any element and not just images. Some of the filter options available do very similar things to other CSS features, for example `drop-shadow()` works in a very similar way and gives a similar effect to [`box-shadow`](/en-US/docs/Web/CSS/box-shadow) or [`text-shadow`](/en-US/docs/Web/CSS/text-shadow). The really nice thing about filters however, is that they work on the exact shapes of the content inside the box, not just the box itself as one big chunk, so it is worth knowing the difference.
+You can apply filters to any element and not just images. Some of the filter options available do very similar things to other CSS features, for example `drop-shadow()` works in a very similar way and gives a similar effect to [`box-shadow`](/en-US/docs/Web/CSS/Reference/Properties/box-shadow) or [`text-shadow`](/en-US/docs/Web/CSS/Reference/Properties/text-shadow). The really nice thing about filters however, is that they work on the exact shapes of the content inside the box, not just the box itself as one big chunk, so it is worth knowing the difference.
 
 In this next example we are applying our filter to a box, and comparing it to a box shadow. As you can see, the drop-shadow filter follows the exact shape of the text and border dashes. The box shadow just follows the square of the box.
 
@@ -301,7 +294,7 @@ div {
   padding: 10px;
   margin: 10px;
   display: inline-block;
-  background: url(colorful-heart.png) no-repeat center 20px;
+  background: url("colorful-heart.png") no-repeat center 20px;
   background-color: green;
 }
 
@@ -354,7 +347,7 @@ article div:first-child {
   position: absolute;
   top: 10px;
   left: 0;
-  background: url(colorful-heart.png) no-repeat center 20px;
+  background: url("colorful-heart.png") no-repeat center 20px;
   background-color: green;
 }
 
@@ -382,7 +375,7 @@ You can see here that the multiply mix blend has blended together not only the t
 
 ## CSS shapes
 
-While it is true that everything in CSS is a rectangular box, and images are a physical rectangular box, we can make it look as if our content flows around non-rectangular things by using [CSS Shapes](/en-US/docs/Web/CSS/CSS_shapes).
+While it is true that everything in CSS is a rectangular box, and images are a physical rectangular box, we can make it look as if our content flows around non-rectangular things by using [CSS Shapes](/en-US/docs/Web/CSS/Guides/Shapes).
 
 The CSS Shapes specification enables the wrapping of text around a non-rectangular shape. It's especially useful when working with an image which has some white-space you might want to float text around.
 
@@ -424,7 +417,7 @@ The shape in this example is not reacting to the content of the image file. Inst
 > [!NOTE]
 > In Firefox you can use the DevTools [Shapes Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_shapes/index.html) to inspect Shapes.
 
-The `circle()` function is just one of a few basic shapes that are defined, however there are a number of different ways to create shapes. For more information and example code for CSS Shapes see the [Guides to CSS Shapes](/en-US/docs/Web/CSS/CSS_shapes/Overview_of_shapes) on MDN.
+The `circle()` function is just one of a few basic shapes that are defined, however there are a number of different ways to create shapes. For more information and example code for CSS Shapes see the [Guides to CSS Shapes](/en-US/docs/Web/CSS/Guides/Shapes/Overview) on MDN.
 
 ## -webkit-background-clip: text
 
@@ -438,7 +431,7 @@ You can see this in action in the live sample below:
 
 ```css hidden live-sample___webkit-background-clip
 body {
-  font-family: impact, sans-serif;
+  font-family: "impact", sans-serif;
 }
 
 h2 {
@@ -454,7 +447,7 @@ h2 {
 h2 {
   color: white;
   display: inline-block;
-  background: url(colorful-heart.png) no-repeat center;
+  background: url("colorful-heart.png") no-repeat center;
 }
 
 .text-clip {

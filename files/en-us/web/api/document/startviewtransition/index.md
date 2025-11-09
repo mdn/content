@@ -17,12 +17,19 @@ When `startViewTransition()` is invoked, a sequence of steps is followed as expl
 ```js-nolint
 startViewTransition()
 startViewTransition(updateCallback)
+startViewTransition(options)
 ```
 
 ### Parameters
 
 - `updateCallback` {{optional_inline}}
   - : An optional callback function typically invoked to update the DOM during the SPA view transition process, which returns a {{jsxref("Promise")}}. The callback is invoked once the API has taken a snapshot of the current page. When the promise returned by the callback fulfills, the view transition begins in the next frame. If the promise returned by the callback rejects, the transition is abandoned.
+- `options` {{optional_inline}}
+  - : An object containing options to configure the view transition. It can include the following properties:
+    - `update` {{optional_inline}}
+      - : The same `updateCallback` function described above. Defaults to `null`.
+    - `types` {{optional_inline}}
+      - : An array of strings. These strings act as class names or identifiers for the transition, allowing you to selectively apply CSS styles or run different JavaScript logic based on the type of transition occurring. Defaults to an empty sequence.
 
 ### Return value
 
@@ -68,20 +75,20 @@ section {
 const colors = ["darkred", "darkslateblue", "darkgreen"];
 const colBlock = document.querySelector("section");
 let count = 0;
-const updateColour = () => {
+const updateColor = () => {
   colBlock.style = `--bg: ${colors[count]}`;
   count = count !== colors.length - 1 ? ++count : 0;
 };
 const changeColor = () => {
   // Fallback for browsers that don't support View Transitions:
   if (!document.startViewTransition) {
-    updateColour();
+    updateColor();
     return;
   }
 
   // With View Transitions:
   const transition = document.startViewTransition(() => {
-    updateColour();
+    updateColor();
   });
 };
 const changeColorButton = document.querySelector("#change-color");
@@ -104,6 +111,7 @@ Otherwise, the background color is set using a fallback method, without any anim
 
 ## See also
 
+- {{domxref("Document.activeViewTransition")}}
 - {{CSSXRef(":active-view-transition")}} pseudo-class
 - {{cssxref(":active-view-transition-type", ":active-view-transition-type()")}} pseudo-class
 - [Smooth transitions with the View Transition API](https://developer.chrome.com/docs/web-platform/view-transitions/)

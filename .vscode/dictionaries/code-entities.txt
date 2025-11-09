@@ -38,6 +38,7 @@ ALTGR
 amssymb
 android-safetynet
 animalfound
+anims
 anonid
 apacheconf
 apachectl
@@ -61,6 +62,7 @@ associationlistitemvalue
 attributionsrc
 audiocontext
 authorid
+autospace
 backdrag
 backgroundfetchabort
 backgroundfetchclick
@@ -75,6 +77,7 @@ beforescriptexecute
 beforexrselect
 BGRX
 bhks
+biske
 bmatrix
 BPPV1
 Brai
@@ -138,6 +141,8 @@ Crsel
 cryptomining
 csiso
 csrfmiddlewaretoken
+css.selectors.headingfunction
+css.selectors.hostfunction
 CSS_RGBCOLOR
 csslint
 cssref
@@ -192,6 +197,7 @@ dweb
 ebuttm
 ebutts
 ECLF
+EdgiOS
 ehtml
 EISU
 elementname
@@ -379,6 +385,7 @@ longtask
 lowdelay
 lowp
 lquote
+LRGB
 ltrh
 makemigrations
 mathbb
@@ -386,6 +393,7 @@ mathbold
 mathdbl
 mathit
 mathml
+mathml.stixgeneral_operator_stretching.disabled
 mathmlref
 mathmono
 mathrm
@@ -629,6 +637,7 @@ romanlow
 rotr
 roundedbox
 rowindextext
+rozaj
 rport
 rquote
 rspadd
@@ -667,7 +676,6 @@ seekbackward
 seekforward
 seekto
 seeother
-selectchange
 selectedcontent
 selectend
 seltype
@@ -712,6 +720,7 @@ strncpy
 SUBDOCUMENT
 sund
 sunu
+superellipse
 superspeed
 SVGMPathElement
 svgref
@@ -729,7 +738,6 @@ telu
 testingbot-api
 texlive
 texlive-fontsextra
-text-autospace
 textformatupdate
 textupdate
 TEXTUREI
@@ -795,6 +803,7 @@ veryverythickmathspace
 veryverythinmathspace
 vfprintf
 videooutput
+viewbox
 viewsource.css
 VIRTUALENVWRAPPER
 virtualkeyboardpolicy

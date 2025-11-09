@@ -6,7 +6,7 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Accessibility/CSS_and_JavaScript","Learn_web_development/Core/Accessibility/Multimedia", "Learn_web_development/Core/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Test_your_skills/CSS_and_JavaScript","Learn_web_development/Core/Accessibility/Test_your_skills/WAI-ARIA", "Learn_web_development/Core/Accessibility")}}
 
 Following on from the previous article, sometimes making complex UI controls that involve unsemantic HTML and dynamic JavaScript-updated content can be difficult. WAI-ARIA is a technology that can help with such problems by adding in further semantics that browsers and assistive technologies can recognize and use to let users know what is going on. Here we'll show how to use it at a basic level to improve accessibility.
 
@@ -203,7 +203,7 @@ body {
 
 html {
   font-size: 10px;
-  background-color: #a9a9a9;
+  background-color: darkgrey;
 }
 
 body {
@@ -315,7 +315,7 @@ input[type="search"] {
 input[type="submit"] {
   flex: 1;
   margin-left: 1rem;
-  background: #333;
+  background: #333333;
   border: 0;
   color: white;
 }
@@ -365,7 +365,7 @@ If you go to VoiceOver's landmarks menu (accessed using VoiceOver key + U and th
 
 However, we could do better here. The search form is a really important landmark that people will want to find, but it is not listed in the landmarks menu or treated like a notable landmark beyond the actual input being called out as a search input (`<input type="search">`).
 
-We could improve it by the use of the ARIA `role="search"`, but using the {{htmlelement("search")}} element implicitly gives that role to the form.
+To mark the form as a landmark, you can either wrap it with the {{htmlelement("search")}} element or give it ARIA `role="search"`. As a general rule, use HTML semantics where possible and only use ARIA where there is no HTML equivalent.
 
 ```html live-sample___aria-website-roles
 <header>
@@ -456,7 +456,7 @@ body {
 
 html {
   font-size: 10px;
-  background-color: #a9a9a9;
+  background-color: darkgrey;
 }
 
 body {
@@ -568,7 +568,7 @@ input[type="search"] {
 input[type="submit"] {
   flex: 1;
   margin-left: 1rem;
-  background: #333;
+  background: #333333;
   border: 0;
   color: white;
 }
@@ -690,7 +690,7 @@ p {
 section {
   height: 100%;
   padding: 10px;
-  background: #666;
+  background: #666666;
   text-shadow: 1px 1px 1px black;
   color: white;
 }
@@ -855,13 +855,13 @@ function toggleMusician(bool) {
   const instrument = formItems[formItems.length - 1];
   if (bool) {
     instrument.input.disabled = false;
-    instrument.label.style.color = "#000";
+    instrument.label.style.color = "black";
     instrument.input.setAttribute("aria-disabled", "false");
     hiddenAlert.textContent =
       "Instruments played field now enabled; use it to tell us what you play.";
   } else {
     instrument.input.disabled = true;
-    instrument.label.style.color = "#999";
+    instrument.label.style.color = "#999999";
     instrument.input.setAttribute("aria-disabled", "true");
     instrument.input.removeAttribute("aria-label");
     hiddenAlert.textContent = "Instruments played field now disabled.";
@@ -894,13 +894,11 @@ There are a whole host of other [roles](/en-US/docs/Web/Accessibility/ARIA/Refer
 
 You can also find several live examples in our [WAI-ARIA roles](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles) documentation. See for example, our [ARIA: tab role example](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role#example), which explains how to implement an accessible tabbed interface.
 
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: WAI-ARIA](/en-US/docs/Learn_web_development/Core/Accessibility/Test_your_skills/WAI-ARIA).
-
 ## Summary
 
 This article has by no means covered all that's available in WAI-ARIA, but it should have given you enough information to understand how to use it, and know some of the most common patterns you will encounter that require it.
+
+In the next article, we'll give you some tests that you can use to check how well you've understood and retained all this information.
 
 ## See also
 
@@ -910,4 +908,4 @@ This article has by no means covered all that's available in WAI-ARIA, but it sh
 - [Deque university code library](https://dequeuniversity.com/library/): A library of really useful and practical examples showing complex UI controls made accessible using WAI-ARIA features
 - [WAI-ARIA authoring practices](https://www.w3.org/WAI/ARIA/apg/) on W3C: A very detailed design pattern from the W3C, explaining how to implement different types of complex UI control whilst making them accessible using WAI-ARIA features
 
-{{PreviousMenuNext("Learn_web_development/Core/Accessibility/CSS_and_JavaScript","Learn_web_development/Core/Accessibility/Multimedia", "Learn_web_development/Core/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Test_your_skills/CSS_and_JavaScript","Learn_web_development/Core/Accessibility/Test_your_skills/WAI-ARIA", "Learn_web_development/Core/Accessibility")}}

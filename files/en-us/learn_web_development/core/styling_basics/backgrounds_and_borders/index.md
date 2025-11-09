@@ -5,7 +5,7 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Sizing", "Learn_web_development/Core/Styling_basics/Overflow", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Test_your_skills/Sizing", "Learn_web_development/Core/Styling_basics/Test_your_skills/Backgrounds_and_borders", "Learn_web_development/Core/Styling_basics")}}
 
 In this lesson, we will take a look at some of the creative things you can do with CSS backgrounds and borders. From adding gradients, background images, and rounded corners, backgrounds and borders are the answer to a lot of styling questions in CSS.
 
@@ -37,11 +37,11 @@ In this lesson, we will take a look at some of the creative things you can do wi
 
 ## Background colors
 
-The {{cssxref("background-color")}} property defines the background color on any element in CSS. The property accepts any valid [`<color>`](/en-US/docs/Web/CSS/color_value). A `background-color` extends underneath the content and padding box of the element.
+The {{cssxref("background-color")}} property defines the background color on any element in CSS. The property accepts any valid [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value). A `background-color` extends underneath the content and padding box of the element.
 
 In the example below, we have used various color values to add a background color to the box, a heading, and a {{htmlelement("span")}} element.
 
-Try editing the example and swapping out the specified colors with any available [`<color>`](/en-US/docs/Web/CSS/color_value) values.
+Try editing the example and swapping out the specified colors with any available [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value) values.
 
 ```html live-sample___color
 <div class="box">
@@ -89,16 +89,16 @@ This example demonstrates two things about background images. By default, the la
   width: 200px;
   height: 80px;
   padding: 0.5em;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   margin: 20px;
 }
 
 .a {
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/balloons.jpg);
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/balloons.jpg");
 }
 
 .b {
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/star.png);
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/star.png");
 }
 ```
 
@@ -129,14 +129,14 @@ Try these values out in the example below. We have set the value to `no-repeat` 
   width: 200px;
   height: 80px;
   padding: 0.5em;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   margin: 20px;
 }
 ```
 
 ```css live-sample___repeat
 .box {
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/star.png);
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/star.png");
   background-repeat: no-repeat;
 }
 ```
@@ -171,14 +171,14 @@ Try the following:
   width: 500px;
   height: 100px;
   padding: 0.5em;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   margin: 10px;
 }
 ```
 
 ```css live-sample___size
 .box {
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/balloons.jpg);
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/balloons.jpg");
   background-repeat: no-repeat;
   background-size: 80px 10em;
 }
@@ -197,7 +197,7 @@ The most common `background-position` values take two individual values — a ho
 
 ```css
 .box {
-  background-image: url(image.png);
+  background-image: url("image.png");
   background-repeat: no-repeat;
   background-position: top center;
 }
@@ -207,7 +207,7 @@ You can also use {{cssxref("length", "lengths")}} and {{cssxref("percentage", "p
 
 ```css
 .box {
-  background-image: url(image.png);
+  background-image: url("image.png");
   background-repeat: no-repeat;
   background-position: 20px 10%;
 }
@@ -217,7 +217,7 @@ You can also mix keyword values with lengths or percentages, in which case the f
 
 ```css
 .box {
-  background-image: url(image.png);
+  background-image: url("image.png");
   background-repeat: no-repeat;
   background-position: 20px top;
 }
@@ -227,7 +227,7 @@ Finally, you can also use a 4-value syntax to indicate a distance from certain e
 
 ```css
 .box {
-  background-image: url(image.png);
+  background-image: url("image.png");
   background-repeat: no-repeat;
   background-position: top 20px right 10px;
 }
@@ -246,14 +246,14 @@ Use the example below to play around with these values and move the star around 
   width: 500px;
   height: 80px;
   padding: 0.5em;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   margin: 20px;
 }
 ```
 
 ```css live-sample___position
 .box {
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/star.png);
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/star.png");
   background-repeat: no-repeat;
   background-position: 120px 1em;
 }
@@ -268,7 +268,7 @@ Use the example below to play around with these values and move the star around 
 
 A gradient — when used for a background — acts just like an image and is also set by using the {{cssxref("background-image")}} property.
 
-You can find out about the different types of gradient value and things you can do with them on the MDN page for the [`<gradient>`](/en-US/docs/Web/CSS/gradient) data type.
+You can find out about the different types of gradient value and things you can do with them on the MDN page for the [`<gradient>`](/en-US/docs/Web/CSS/Reference/Values/gradient) data type.
 
 Try some different gradient values in the example below. Initially, we have a linear gradient that is stretched over the whole first box, and a radial gradient with a set size, repeating over the second box.
 
@@ -288,7 +288,7 @@ Try some different gradient values in the example below. Initially, we have a li
   width: 400px;
   height: 80px;
   padding: 0.5em;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   margin: 20px;
 }
 
@@ -328,7 +328,7 @@ The other `background-*` properties can also have comma-separated values in the 
 
 ```css
 background-image:
-  url(image1.png), url(image2.png), url(image3.png), url(image4.png);
+  url("image1.png"), url("image2.png"), url("image3.png"), url("image4.png");
 background-repeat: no-repeat, repeat-x, repeat;
 background-position:
   10px 20px,
@@ -360,14 +360,14 @@ Let's play. The example below includes two background images. Try editing the ex
   width: 500px;
   height: 80px;
   padding: 0.5em;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   margin: 20px;
 }
 
 .box {
   background-image:
-    url(https://mdn.github.io/shared-assets/images/examples/star.png),
-    url(https://mdn.github.io/shared-assets/images/examples/big-star.png);
+    url("https://mdn.github.io/shared-assets/images/examples/star.png"),
+    url("https://mdn.github.io/shared-assets/images/examples/big-star.png");
 }
 ```
 
@@ -412,8 +412,8 @@ Take a look at the MDN page for {{cssxref("background")}} to learn more about th
         rgb(51 56 57 / 100%) 96%
       )
       center center / 400px 200px no-repeat,
-    url(https://mdn.github.io/shared-assets/images/examples/big-star.png) center
-      no-repeat,
+    url("https://mdn.github.io/shared-assets/images/examples/big-star.png")
+      center no-repeat,
     rebeccapurple;
 }
 ```
@@ -430,7 +430,7 @@ Screen readers cannot parse background images; therefore, they should be purely 
 
 When learning about the [box model](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model), we discovered how borders affect the size of our box. In this lesson, we will look at how to use borders creatively.
 
-Typically, when we add borders to an element with CSS we use the {{cssxref("border")}} shorthand property to set the color, width, and [style](/en-US/docs/Web/CSS/line-style) of the border on all four sides of a box in one declaration:
+Typically, when we add borders to an element with CSS we use the {{cssxref("border")}} shorthand property to set the color, width, and [style](/en-US/docs/Web/CSS/Reference/Values/line-style) of the border on all four sides of a box in one declaration:
 
 ```css
 .box {
@@ -467,7 +467,7 @@ There are also longhand properties for width, style, and color for each of the f
 ```
 
 > [!NOTE]
-> These top, right, bottom, and left border properties also have mapped [_logical_ border properties](/en-US/docs/Web/CSS/CSS_logical_properties_and_values#properties) that relate to the writing mode of the document (e.g., left-to-right or right-to-left text, or top-to-bottom). You can read about these in [handling different text directions](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions).
+> These top, right, bottom, and left border properties also have mapped [_logical_ border properties](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values#properties) that relate to the writing mode of the document (e.g., left-to-right or right-to-left text, or top-to-bottom). You can read about these in [handling different text directions](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions).
 
 ### Playing with borders
 
@@ -489,7 +489,7 @@ There are a variety of styles that you can use for borders. In the example below
   background-color: #567895;
   border: 5px solid #0b385f;
   border-bottom-style: dashed;
-  color: #fff;
+  color: white;
 }
 
 h2 {
@@ -521,11 +521,11 @@ Or to make the top right corner have a horizontal radius of `1em`, and a vertica
 ```
 
 > [!NOTE]
-> Like with the border properties above, these border-radius properties also have mapped [_logical_ border-radius properties](/en-US/docs/Web/CSS/CSS_logical_properties_and_values#properties).
+> Like with the border properties above, these border-radius properties also have mapped [_logical_ border-radius properties](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values#properties).
 
 ### Playing with border radius
 
-We have set all four corners in the example below and then changed the values for the top right corner to make it different. You can play with the values to change the corners. Take a look at the property page for {{cssxref("border-radius")}} to see the available syntax options. The [border-radius generator](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator) can be used to output rounded corner values for you.
+We have set all four corners in the example below and then changed the values for the top right corner to make it different. You can play with the values to change the corners. Take a look at the property page for {{cssxref("border-radius")}} to see the available syntax options. The [border-radius generator](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-radius_generator) can be used to output rounded corner values for you.
 
 ```html live-sample___corners
 <div class="box">
@@ -547,14 +547,10 @@ We have set all four corners in the example below and then changed the values fo
 
 {{EmbedLiveSample("corners")}}
 
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Backgrounds and borders](/en-US/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Backgrounds_and_borders).
-
 ## Summary
 
 You can see that there is quite a lot to adding a background or a border to a box. Explore the different property pages if you want to find out more about any of the features discussed here. Almost every page on MDN has examples for you to play with to enhance your knowledge.
 
-In the next article, we'll learn more about the concept of overflow, which governs what happens when there is too much content to fit inside an element box.
+In the next article, we'll give you some tests that you can use to check how well you've understood and retained the information we've provided on background and border styling.
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Sizing", "Learn_web_development/Core/Styling_basics/Overflow", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Test_your_skills/Sizing", "Learn_web_development/Core/Styling_basics/Test_your_skills/Backgrounds_and_borders", "Learn_web_development/Core/Styling_basics")}}

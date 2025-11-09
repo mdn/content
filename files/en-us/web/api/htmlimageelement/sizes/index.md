@@ -8,42 +8,21 @@ browser-compat: api.HTMLImageElement.sizes
 
 {{APIRef("HTML DOM")}}
 
-The {{domxref("HTMLImageElement")}} property
-**`sizes`** allows you to specify the layout width of the
-[image](/en-US/docs/Web/HTML/Reference/Elements/img) for each of a list of media conditions. This provides the ability to
-automatically select among different images—even images of different orientations or
-aspect ratios—as the document state changes to match different media
-conditions.
-
-Each condition is specified using the same conditional format used
-by [media queries](/en-US/docs/Web/CSS/CSS_media_queries).
+The **`sizes`** property of the {{domxref("HTMLImageElement")}} interface allows you to specify the layout width of the [image](/en-US/docs/Web/HTML/Reference/Elements/img) for each of a list of [media queries](/en-US/docs/Web/CSS/Guides/Media_queries). This provides the ability to automatically select among different images—even images of different orientations or aspect ratios—as the document state changes to match different media conditions. It reflects the `<img>` element's [`sizes`](/en-US/docs/Web/HTML/Reference/Elements/img#sizes) content attribute.
 
 ## Value
 
-A string containing a comma-separated list of source size descriptors
-followed by an optional fallback size. Each source size descriptor is
-comprised of a media condition, then at least one whitespace character, then the
-source size value to use for the image when the media condition
-evaluates to `true`.
-You can use the value `auto` to replace the whole list of sizes or the first entry in the list.
-For more information about the syntax of the `sizes` attribute, see [`<img>`](/en-US/docs/Web/HTML/Reference/Elements/img#sizes).
+A string. For more information about the syntax of the `sizes` attribute, see the HTML [`<img>`](/en-US/docs/Web/HTML/Reference/Elements/img#sizes) reference.
 
 ## Examples
 
 ### Selecting an image to fit window width
 
-In this example, a blog-like layout is created, displaying some text and an image
-for which three size points are specified, depending on the width of the window. Three
-versions of the image are also available, with their widths specified. The browser takes
-all of this information and selects an image and width that best meets the specified
-values.
+In this example, a blog-like layout is created, displaying some text and an image for which three size points are specified, depending on the width of the window. Three versions of the image are also available, with their widths specified. The browser takes all of this information and selects an image and width that best meets the specified values.
 
-How exactly the images are used may depend upon the browser and the pixel density
-of the user's display.
+How exactly the images are used may depend upon the browser and the pixel density of the user's display.
 
-Buttons at the bottom of the example let you actually modify the `sizes`
-property slightly, switching the largest of the three widths for the image between 40em
-and 50em.
+Buttons at the bottom of the example let you actually modify the `sizes` property slightly, switching the largest of the three widths for the image between 40em and 50em.
 
 #### HTML
 
@@ -88,26 +67,24 @@ article {
   padding: 1.5em;
   font:
     16px "Open Sans",
-    Verdana,
-    Arial,
-    Helvetica,
+    "Verdana",
+    "Helvetica",
+    "Arial",
     sans-serif;
 }
 
 article img {
   display: block;
   max-width: 100%;
-  border: 1px solid #888;
-  box-shadow: 0 0.5em 0.3em #888;
+  border: 1px solid #888888;
+  box-shadow: 0 0.5em 0.3em #888888;
   margin-bottom: 1.25em;
 }
 ```
 
 #### JavaScript
 
-The JavaScript code handles the two buttons that let you toggle the third width option
-between 40em and 50em; this is done by handling the {{domxref("Element.click_event", "click")}}
-event, using the JavaScript string {{jsxref("String.replace", "replace()")}} method to replace the relevant portion of the `sizes` string.
+The JavaScript code handles the two buttons that let you toggle the third width option between 40em and 50em; this is done by handling the {{domxref("Element.click_event", "click")}} event, using the JavaScript string {{jsxref("String.replace", "replace()")}} method to replace the relevant portion of the `sizes` string.
 
 ```js
 const image = document.querySelector("article img");
@@ -141,8 +118,11 @@ The page is best {{LiveSampleLink('Selecting an image to fit window width', 'vie
 
 ## See also
 
-- [Media queries](/en-US/docs/Web/CSS/CSS_media_queries)
-- [Using media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Media queries](/en-US/docs/Web/CSS/Guides/Media_queries)
+- [Using media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using)
 - [HTML images](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images)
 - [Responsive images](/en-US/docs/Web/HTML/Guides/Responsive_images)
 - [Using the `srcset` and `sizes` attributes](/en-US/docs/Web/HTML/Reference/Elements/img#using_the_srcset_and_sizes_attributes)
+- {{domxref("HTMLImageElement.currentSrc")}}
+- {{domxref("HTMLImageElement.src")}}
+- {{domxref("HTMLImageElement.srcset")}}

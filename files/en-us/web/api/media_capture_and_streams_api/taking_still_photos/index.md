@@ -43,7 +43,7 @@ button {
   border: 1px solid rgb(255 255 255 / 70%);
   box-shadow: 0px 0px 1px 2px rgb(0 0 0 / 20%);
   font-size: 14px;
-  color: rgb(255 255 255 / 100%);
+  color: white;
 }
 
 #video,
@@ -110,7 +110,7 @@ We also have an {{HTMLElement("img")}} element into which we will draw the image
 ```html live-sample___photo-capture live-sample___photo-capture-with-filters
 <canvas id="canvas"></canvas>
 <div class="output">
-  <img id="photo" alt="The screen capture will appear in this box." />
+  <img id="photo" src="" alt="The screen capture will appear in this box." />
 </div>
 ```
 
@@ -184,21 +184,17 @@ This will happen for example if there's no compatible camera connected, or the u
 After calling [`HTMLMediaElement.play()`](/en-US/docs/Web/API/HTMLMediaElement/play_event) on the {{HTMLElement("video")}}, there's a (hopefully brief) period of time that elapses before the stream of video begins to flow. To avoid blocking until that happens, we add an event listener to `video` for the {{domxref("HTMLMediaElement/canplay_event", "canplay")}} event, which is delivered when the video playback actually begins. At that point, all the properties in the `video` object have been configured based on the stream's format.
 
 ```js live-sample___photo-capture live-sample___photo-capture-with-filters
-video.addEventListener(
-  "canplay",
-  (ev) => {
-    if (!streaming) {
-      height = video.videoHeight / (video.videoWidth / width);
+video.addEventListener("canplay", (ev) => {
+  if (!streaming) {
+    height = video.videoHeight / (video.videoWidth / width);
 
-      video.setAttribute("width", width);
-      video.setAttribute("height", height);
-      canvas.setAttribute("width", width);
-      canvas.setAttribute("height", height);
-      streaming = true;
-    }
-  },
-  false,
-);
+    video.setAttribute("width", width);
+    video.setAttribute("height", height);
+    canvas.setAttribute("width", width);
+    canvas.setAttribute("height", height);
+    streaming = true;
+  }
+});
 ```
 
 This callback does nothing unless it's the first time it's been called; this is tested by looking at the value of our `streaming` variable, which is `false` the first time this method is run.
@@ -212,14 +208,10 @@ Finally, the `width` and `height` of both the video and the canvas are set to ma
 To capture a still photo each time the user clicks the `startButton`, we need to add an event listener to the button, to be called when the {{domxref("Element/click_event", "click")}} event is issued:
 
 ```js live-sample___photo-capture live-sample___photo-capture-with-filters
-startButton.addEventListener(
-  "click",
-  (ev) => {
-    takePicture();
-    ev.preventDefault();
-  },
-  false,
-);
+startButton.addEventListener("click", (ev) => {
+  takePicture();
+  ev.preventDefault();
+});
 ```
 
 This method is straightforward: it calls the `takePicture()` function, defined below in the section [Capturing a frame from the stream](#capturing_a_frame_from_the_stream), then calls {{domxref("Event.preventDefault()")}} on the received event to prevent the click from being handled more than once.
@@ -231,7 +223,7 @@ Clearing the photo box involves creating an image, then converting it into a for
 ```js live-sample___photo-capture live-sample___photo-capture-with-filters
 function clearPhoto() {
   const context = canvas.getContext("2d");
-  context.fillStyle = "#AAA";
+  context.fillStyle = "#aaaaaa";
   context.fillRect(0, 0, canvas.width, canvas.height);
 
   const data = canvas.toDataURL("image/png");
@@ -241,7 +233,7 @@ function clearPhoto() {
 clearPhoto();
 ```
 
-We start by getting a reference to the hidden {{HTMLElement("canvas")}} element that we use for offscreen rendering. Next we set the `fillStyle` to `#AAA` (a fairly light grey), and fill the entire canvas with that color by calling {{domxref("CanvasRenderingContext2D.fillRect()","fillRect()")}}.
+We start by getting a reference to the hidden {{HTMLElement("canvas")}} element that we use for offscreen rendering. Next we set the `fillStyle` to `#aaaaaa` (a fairly light grey), and fill the entire canvas with that color by calling {{domxref("CanvasRenderingContext2D.fillRect()","fillRect()")}}.
 
 Last in this function, we convert the canvas into a PNG image and call {{domxref("Element.setAttribute", "photo.setAttribute()")}} to make our captured still box display the image.
 

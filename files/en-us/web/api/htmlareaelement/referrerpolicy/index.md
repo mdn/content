@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.HTMLAreaElement.referrerPolicy
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The
 **`HTMLAreaElement.referrerPolicy`**
@@ -51,8 +51,8 @@ A string; one of the following:
 ## Examples
 
 ```html
-<img usemap="#mapAround" width="100" height="100" src="/img/logo@2x.png" />
-<map id="myMap" name="mapAround"></map>
+<img usemap="#my-map" width="100" height="100" src="/img/logo@2x.png" />
+<map id="my-map" name="my-map"></map>
 ```
 
 ```js
@@ -61,7 +61,7 @@ elt.href = "/img2.png";
 elt.shape = "rect";
 elt.referrerPolicy = "no-referrer";
 elt.coords = "0,0,100,100";
-const map = document.getElementById("myMap");
+const map = document.getElementById("my-map");
 
 map.appendChild(elt);
 // When clicked, the area's link will not send a referrer header.

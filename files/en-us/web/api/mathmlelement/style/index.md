@@ -8,34 +8,46 @@ browser-compat: api.MathMLElement.style
 
 {{APIRef("CSSOM")}}
 
-The read-only **`style`** property of the {{domxref("MathMLElement")}} returns the _inline_ style of an element in the form of a live {{domxref("CSSStyleDeclaration")}} object that contains a list of all styles properties for that element with values assigned only for the attributes that are defined in the element's inline [`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style) attribute.
-
-Shorthand properties are expanded. If you set `style="border-top: 1px solid black"`, the longhand properties ({{cssxref("border-top-color")}}, {{cssxref("border-top-style")}}, and {{cssxref("border-top-width")}}) are set instead.
-
-This property is read-only, meaning it is not possible to assign a {{domxref("CSSStyleDeclaration")}} object to it. Nevertheless, it is possible to set an inline style by assigning a _string_ directly to the `style` property. In this case the string is forwarded to {{domxref("CSSStyleDeclaration.cssText")}}. Using `style` in this manner will completely overwrite all inline styles on the element.
-
-Therefore, to add specific styles to an element without altering other style values, it is generally preferable to set individual properties on the {{domxref("CSSStyleDeclaration")}} object. For example, you can write `element.style.backgroundColor = "red"`.
-
-A style declaration is reset by setting it to `null` or an empty string, e.g., `elt.style.color = null`.
-
-> [!NOTE]
-> CSS property names are converted to JavaScript identifier with these rules:
->
-> - If the property is made of one word, it remains as it is: `height` stays as is (in lowercase).
-> - If the property is made of several words, separated by dashes, the dashes are removed and it is converted to {{Glossary("camel_case", "camel case")}}: `background-attachment` becomes `backgroundAttachment`.
-> - The property `float`, being a reserved JavaScript keyword, is converted to `cssFloat`.
->
-> The `style` property has the same priority in the CSS cascade as an inline style declaration set via the `style` attribute.
+The read-only **`style`** property of the {{domxref("MathMLElement")}} returns the _inline_ [`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style) of an element in the form of a live {{domxref("CSSStyleProperties")}} object.
+This object can be used to get and set the inline styles of an element.
 
 ## Value
 
-A live {{domxref("CSSStyleDeclaration")}} object.
+A live {{domxref("CSSStyleProperties")}} object.
+
+> [!NOTE]
+> Earlier versions of the specification returned a {{domxref("CSSStyleDeclaration")}} (from which {{domxref("CSSStyleProperties")}} is derived).
+> See the [browser compatibility](#browser_compatibility) table for browser support information.
+
+## Description
+
+The values of the inline styles set in the element's [`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style) attribute are reflected by corresponding properties of the returned {{domxref("CSSStyleProperties")}} object.
+
+> [!NOTE]
+> {{domxref("CSSStyleProperties")}} has dash-named and corresponding {{Glossary("camel_case", "camel-case")}} named properties for **all** [CSS properties](/en-US/docs/Web/CSS/Reference/Properties) supported by the browser (not just those with inline styles).
+> Properties that don't have a corresponding inline style are set to `""`.
+
+Shorthand CSS properties of the element are expanded to their corresponding long-form properties.
+For example, an element with style `"border-top: 1px solid black"` would be represented in the returned object by properties with the names {{cssxref("border-top")}} and `borderTop`, and the corresponding longhand properties {{cssxref("border-top-color")}} and `borderTopColor`, {{cssxref("border-top-style")}} and `borderTopStyle`, and {{cssxref("border-top-width")}} and `borderTopWidth`.
+
+The `style` property is read-only, meaning it is not possible to assign a {{domxref("CSSStyleProperties")}} object to it.
+Nevertheless, it is possible to set an inline style by assigning a _string_ directly to the property.
+In this case the string can be read from {{domxref("CSSStyleDeclaration.cssText","cssText")}}.
+Using `style` in this manner will completely overwrite all inline styles on the element.
+
+To add specific styles to an element without altering other style values, it is generally preferable to set individual properties on the {{domxref("CSSStyleProperties")}} object.
+For example, you can write `element.style.backgroundColor = "red"`.
+A style declaration is reset by setting it to `null` or an empty string, e.g., `element.style.color = null`.
+
+The `style` property has the same priority in the CSS cascade as an inline style declaration set via the `style` attribute.
 
 ## Examples
 
-### Getting style information
+### Enumerating style information
 
-The following code snippet demonstrates how the `style` attribute is translated into a list of entries in {{domxref("CSSStyleDeclaration")}} :
+This example demonstrates how we can enumerate the dash-named properties of {{domxref("CSSStyleProperties")}}.
+
+#### HTML
 
 ```html
 <math>
@@ -48,30 +60,57 @@ The following code snippet demonstrates how the `style` attribute is translated 
     <mi>x</mi>
   </mrow>
 </math>
-<pre id="out"></pre>
+<pre id="log"></pre>
+```
+
+```css hidden
+#log {
+  height: 80px;
+  overflow: scroll;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+```
+
+#### JavaScript
+
+The following code iterates the enumerable properties of the `CSSStyleProperties` and logs the result.
+
+```js hidden
+const logElement = document.querySelector("#log");
+function log(text) {
+  logElement.innerText = `${logElement.innerText}${text}\n`;
+  logElement.scrollTop = logElement.scrollHeight;
+}
 ```
 
 ```js
 const element = document.querySelector(".parameter");
-const out = document.getElementById("out");
 const elementStyle = element.style;
 
-// We loop through all the element's styles using `for...in`
+// Loop through all the element's styles using `for...in`
 for (const prop in elementStyle) {
-  // We check if the property belongs to the CSSStyleDeclaration instance
-  // We also ensure that the property is a numeric index (indicating an inline style)
+  // Check the property belongs to the CSSStyleProperties instance
+  // Ensure the property is a numeric index (indicating a dash-named/inline style)
   if (
     Object.hasOwn(elementStyle, prop) &&
     !Number.isNaN(Number.parseInt(prop, 10))
   ) {
-    out.textContent += `${
-      elementStyle[prop]
-    } = '${elementStyle.getPropertyValue(elementStyle[prop])}'\n`;
+    log(
+      `${
+        elementStyle[prop]
+      } = '${elementStyle.getPropertyValue(elementStyle[prop])}'`,
+    );
   }
 }
 ```
 
-{{EmbedLiveSample("Getting_style_information", "100", "130")}}
+#### Results
+
+The result is shown below.
+Note that only the element's longhand CSS properties are enumerated values (the inline shorthand property is not enumerated).
+
+{{EmbedLiveSample("Enumerating style information", "100", "150")}}
 
 ## Specifications
 

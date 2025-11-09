@@ -6,7 +6,7 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Responsive_design", "Learn_web_development/Core/CSS_layout/Fundamental_layout_comprehension", "Learn_web_development/Core/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Responsive_design", "Learn_web_development/Core/CSS_layout/Test_your_skills/Responsive_design", "Learn_web_development/Core/CSS_layout")}}
 
 The **CSS Media Query** gives you a way to apply CSS only when the browser and device environment matches a rule that you specify, for example "viewport is wider than 480 pixels". Media queries are a key part of [responsive web design](/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design), as they allow you to create different layouts depending on the size of the viewport, but they can also be used to detect other things about the environment your site is running on, for example whether the user is using a touchscreen rather than a mouse.
 
@@ -144,7 +144,7 @@ Try narrowing the window until the above text turns blue.
 
 In practice, using minimum or maximum values is much more useful for responsive design so you will rarely see `width` or `height` used alone.
 
-There are many other media features that you can test for, although some of the newer features introduced in Levels 4 and 5 of the media queries specification have limited browser support. Each feature is documented on MDN along with browser support information, and you can find a complete list at [Using Media Queries: Syntax](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#syntax).
+There are many other media features that you can test for, although some of the newer features introduced in Levels 4 and 5 of the media queries specification have limited browser support. Each feature is documented on MDN along with browser support information, and you can find a complete list at [Using Media Queries: Syntax](/en-US/docs/Web/CSS/Guides/Media_queries/Using#syntax).
 
 #### Orientation
 
@@ -451,14 +451,14 @@ body {
   width: 90%;
   margin: 2em auto;
   font:
-    1em/1.3 Arial,
-    Helvetica,
+    1em/1.3 "Helvetica",
+    "Arial",
     sans-serif;
 }
 
 a:link,
 a:visited {
-  color: #333;
+  color: #333333;
 }
 
 nav ul,
@@ -474,7 +474,7 @@ nav a:visited {
   text-decoration: none;
   display: block;
   padding: 10px;
-  color: #333;
+  color: #333333;
   font-weight: bold;
 }
 
@@ -547,7 +547,7 @@ Add the following to the bottom of your CSS:
   }
 
   footer {
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #cccccc;
     margin-top: 2em;
   }
 }
@@ -612,7 +612,7 @@ body {
 }
 
 .grid li {
-  border: 1px solid #666;
+  border: 1px solid #666666;
   padding: 10px;
 }
 ```
@@ -623,10 +623,6 @@ Try making your browser window wider and narrower to see the number of column tr
 
 The nice thing about this method is that grid is not looking at the viewport width, but the width it has available for this component. It might seem strange to wrap up a section about media queries with a suggestion that you might not need one at all! However, in practice you will find that good use of modern layout methods, enhanced with media queries, will give the best results.
 
-## Test your skills
-
-You've reached the end of this article, but can you remember the most important information? You can find a test to verify that you've retained this information before you move on — see [Test your skills: Responsive web design and media queries](/en-US/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Responsive_design).
-
 ## Summary
 
 In this lesson you have learned about media queries, and also discovered how to use them in practice to create a mobile first responsive design.
@@ -635,6 +631,6 @@ You could use the starting point that we have created to test out more media que
 
 You could also experiment with adding different components and seeing whether the addition of a media query, or using a layout method like flexbox or grid is the most appropriate way to make the components responsive. Very often there is no right or wrong way — you should experiment and see which works best for your design and content.
 
-OK, we're nearly at the end of this module. Let's finish off by giving you a challenge to test your wider understanding of CSS layout.
+OK, we're nearly at the end of this module. In the next article, we'll give you some tests that you can use to check how well you've understood and retained all the responsive web design and media queries information provided in the previous couple of articles.
 
-{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Responsive_design", "Learn_web_development/Core/CSS_layout/Fundamental_layout_comprehension", "Learn_web_development/Core/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Responsive_design", "Learn_web_development/Core/CSS_layout/Test_your_skills/Responsive_design", "Learn_web_development/Core/CSS_layout")}}

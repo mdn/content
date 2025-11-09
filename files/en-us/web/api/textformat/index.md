@@ -52,7 +52,7 @@ In the following example, the `textformatupdate` event is used to log the variou
 ```css hidden
 #editor {
   height: 200px;
-  background: #eee;
+  background: #eeeeee;
 }
 ```
 

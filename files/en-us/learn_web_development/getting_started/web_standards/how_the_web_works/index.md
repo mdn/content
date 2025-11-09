@@ -72,10 +72,10 @@ In order for data to get back and forth, we need the following things:
 
 When you type a web address (which is technically part of a [URL](#components_of_a_url)) into your browser address bar, the following steps occur:
 
-1. The browser goes to the DNS server and finds the real address of the server that the website lives on (you look up the address of the shop).
-2. The browser sends an HTTP request message to the server, asking it to send a copy of the website to the client (you go to the shop and order your goods). This message, and all other data sent between the client and the server, is sent across your internet connection using TCP/IP.
-3. If the server approves the client's request, the server sends the client a "200 OK" message, which means "Of course you can look at that website! Here it is", and then starts sending the website's files to the browser as a series of small chunks called [data packets](#packets_explained) (the shop gives you your goods, and you bring them back to your house).
-4. The browser assembles the small chunks into a complete web page and displays it to you (you get the goods home — new shiny stuff, awesome!).
+1. The browser goes to the DNS server and finds the real address of the server that the website lives on.
+2. The browser sends an HTTP request message to the server, asking it to send a copy of the website to the client. This message, and all other data sent between the client and the server, is sent across your internet connection using TCP/IP.
+3. If the server approves the client's request, the server sends the client a "200 OK" message, which means "Of course you can look at that website! Here it is", and then starts sending the website's files to the browser as a series of small chunks called [packets](#packets_explained).
+4. The browser assembles the small chunks into a complete web page and displays it to you.
 
 ## DNS explained
 
@@ -93,12 +93,17 @@ Let's look up the MDN IP address now, and prove that it points to the same place
 
 ## Packets explained
 
-Earlier we used the term "packets" to describe the format in which the data is transferred between the client and server. What do we mean here?
+Earlier, we used the term "packets" to describe the format in which the data is transferred between the client and server. What do we mean here?
 
-Basically, when data is sent across the web, it is sent in thousands of small chunks. There are multiple reasons why data is sent in small packets, but most significantly:
+When data is sent across the web, it is sent in multiple small chunks called packets. Each packet contains:
 
-- They are sometimes dropped or corrupted and, when this happens, it's quicker and easier to replace small chunks than entire files.
-- Additionally, the packets can be routed along different paths, making the exchange faster and allowing many different users to download the same website at the same time. If each website was sent as a single big chunk, only one user could download it at a time, which would make the web very inefficient and not much fun to use.
+- A **header**, which includes details such as the server and client IP address, the packet number, the total number of packets in the transmission, and details of the protocols used in the transmission.
+- A **payload**, which contains the actual data sent in the packet.
+
+There are multiple reasons why data is sent in small packets, but most significantly:
+
+- They are sometimes dropped or corrupted, and when this happens, it's quicker and easier for the client to request the missing packets rather than an entire file.
+- The packets can be routed along different paths, making the transmission as efficient as possible and reducing the possibility of slowing down the network — especially when many users are requesting the same resource simultaneously. The packets may arrive out of sequence, but the client can use the information in the packet headers to make sure they are assembled in the correct order.
 
 ## HTTP basics
 
@@ -119,7 +124,7 @@ date: Tue, 11 Feb 2025 11:13:30 GMT
 expires: Tue, 11 Feb 2025 11:40:01 GMT
 server: Google frontend
 last-modified: Tue, 11 Feb 2025 00:49:32 GMT
-etag: "65f26b7f6463e2347f4e5a7a2adcee54"
+ETag: "65f26b7f6463e2347f4e5a7a2adcee54"
 content-length: 45227
 content-type: text/html
 

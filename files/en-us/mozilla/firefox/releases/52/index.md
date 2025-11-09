@@ -1,5 +1,5 @@
 ---
-title: Firefox 52 for developers
+title: Firefox 52 release notes for developers
 short-title: Firefox 52
 slug: Mozilla/Firefox/Releases/52
 page-type: firefox-release-notes
@@ -31,7 +31,7 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 
 - Added {{cssxref(":focus-within")}} pseudo-class ([Firefox bug 1176997](https://bugzil.la/1176997)).
 - Added support for `display:flex/grid` and columnset layout inside {{HTMLElement("button")}} elements ([Firefox bug 984869](https://bugzil.la/984869)).
-- Implemented interpolation between numeric color and [currentcolor](/en-US/docs/Web/CSS/color_value#currentcolor_keyword) ([Firefox bug 1299741](https://bugzil.la/1299741)).
+- Implemented interpolation between numeric color and [`currentColor`](/en-US/docs/Web/CSS/Reference/Values/color_value#currentcolor_keyword) ([Firefox bug 1299741](https://bugzil.la/1299741)).
 - Implemented flexbox layout for `{{cssxref("justify-content")}}: space-evenly` and `{{cssxref("align-content")}}: space-evenly` ([Firefox bug 1235922](https://bugzil.la/1235922)).
 - Added support for subpixel antialiasing in CSS {{cssxref("mask")}} / {{cssxref("clip-path")}} ([Firefox bug 1305259](https://bugzil.la/1305259)).
 - Implemented CSS Text 3 segment break transformation rules ([Firefox bug 1081858](https://bugzil.la/1081858)).
@@ -39,7 +39,7 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 - Implemented Flexbox layout for {{cssxref("align-self")}} and {{cssxref("justify-self")}} ([Firefox bug 1221524](https://bugzil.la/1221524)).
 - The {{cssxref("touch-action")}} property is now enabled by default on all platforms. (For the full story, see [intent to ship mail #1](https://groups.google.com/forum/#!topic/mozilla.dev.platform/6CGjsm1XpD4) and [intent to ship mail #2](https://groups.google.com/forum/#!topic/mozilla.dev.platform/SYEzvXJKw9M).)
 - Flexbox {{cssxref("align-content")}} handling & single-line-sizing should depend on {{cssxref("flex-wrap")}}, not number of lines ([Firefox bug 1090031](https://bugzil.la/1090031)).
-- [CSS Animations](/en-US/docs/Web/CSS/CSS_animations) can now be used to animate non-interpolated properties (see [Firefox bug 1064937](https://bugzil.la/1064937)).
+- [CSS Animations](/en-US/docs/Web/CSS/Guides/Animations) can now be used to animate non-interpolated properties (see [Firefox bug 1064937](https://bugzil.la/1064937)).
 - Changed `baseline|last-baseline` to `[ first | last ]? baseline` ([Firefox bug 1313254](https://bugzil.la/1313254)).
 - The used value for `left`/`right` is `start` for the block-axis ([Firefox bug 1221565](https://bugzil.la/1221565)).
 - Stretching flexible tracks with an indefinite containing block length now respects the min/max size([Firefox bug 1309407](https://bugzil.la/1309407)).
@@ -55,7 +55,7 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 
 #### CSS Grids
 
-- [CSS Grids](/en-US/docs/Web/CSS/CSS_grid_layout) are implemented.
+- [CSS Grids](/en-US/docs/Web/CSS/Guides/Grid_layout) are implemented.
 
 #### Changes and removals
 
@@ -64,8 +64,8 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 - Implemented grid container baselines ([Firefox bug 1151204](https://bugzil.la/1151204)).
 - Removed `<flex>` min-sizing from the style system ([Firefox bug 1305244](https://bugzil.la/1305244)).
 - Remove preference `layout.css.masking.enabled` ([Firefox bug 1308239](https://bugzil.la/1308239)).
-- The proprietary `-moz-images-in-menus` and `-moz-images-in-buttons` [media types](/en-US/docs/Web/CSS/@media#media_features) have been removed (see [Firefox bug 1302157](https://bugzil.la/1302157)).
-- Removed `-moz-use-text-color` value from color properties; use [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword) instead ([Firefox bug 1306214](https://bugzil.la/1306214)).
+- The proprietary `-moz-images-in-menus` and `-moz-images-in-buttons` [media types](/en-US/docs/Web/CSS/Reference/At-rules/@media#media_features) have been removed (see [Firefox bug 1302157](https://bugzil.la/1302157)).
+- Removed `-moz-use-text-color` value from color properties; use [`currentColor`](/en-US/docs/Web/CSS/Reference/Values/color_value#currentcolor_keyword) instead ([Firefox bug 1306214](https://bugzil.la/1306214)).
 - \[css-grid] 'max-width' set on grid item causes text to overflow ([Firefox bug 1330380](https://bugzil.la/1330380)).
 
 ### JavaScript

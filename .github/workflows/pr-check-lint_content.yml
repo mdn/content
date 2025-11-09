@@ -2,8 +2,6 @@ name: Lint and review content files
 
 on:
   pull_request_target:
-    branches:
-      - main
     paths:
       - .nvmrc
       - "*.md"
@@ -23,7 +21,9 @@ jobs:
 
     steps:
       - name: Checkout BASE
-        uses: actions/checkout@v4
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+        with:
+          persist-credentials: false
 
       - name: Get changed files
         id: check
@@ -34,21 +34,35 @@ jobs:
         run: |
           # Use the GitHub API to get the list of changed files
           # documentation: https://docs.github.com/rest/commits/commits#compare-two-commits
-          DIFF_DOCUMENTS=$(gh api repos/{owner}/{repo}/compare/${BASE_SHA}...${HEAD_SHA} \
-            --jq '.files | .[] | select(.status|IN("added", "modified", "renamed", "copied", "changed")) | .filename')
-          # filter out files that are not markdown
-          DIFF_DOCUMENTS=$(echo "${DIFF_DOCUMENTS}" | egrep -i "^files/.*\.md$" | xargs)
-          echo "DIFF_DOCUMENTS=${DIFF_DOCUMENTS}" >> "$GITHUB_OUTPUT"
+
+          # Get files as newline-separated list
+          FILTERED_FILES=$(gh api repos/{owner}/{repo}/compare/${BASE_SHA}...${HEAD_SHA} \
+            --jq '.files | .[] | select(.status|IN("added", "modified", "renamed", "copied", "changed")) | .filename' | \
+            egrep -i "^files/.*\.md$")
+
+          # Store as multiline output
+          EOF="$(openssl rand -hex 8)"
+          echo "DIFF_DOCUMENTS<<${EOF}" >> "$GITHUB_OUTPUT"
+          echo "${FILTERED_FILES}" >> "$GITHUB_OUTPUT"
+          echo "${EOF}" >> "$GITHUB_OUTPUT"
+
+          # Also set a simple flag for whether we have files
+          if [ -n "${FILTERED_FILES// /}" ]; then  # Remove all spaces and check if anything remains
+            echo "HAS_FILES=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "HAS_FILES=false" >> "$GITHUB_OUTPUT"
+          fi
 
       - name: Checkout HEAD
-        if: steps.check.outputs.DIFF_DOCUMENTS
-        uses: actions/checkout@v4
+        if: steps.check.outputs.HAS_FILES == 'true'
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           path: pr_head
+          persist-credentials: false
 
       - name: Get changed content from HEAD
-        if: steps.check.outputs.DIFF_DOCUMENTS
+        if: steps.check.outputs.HAS_FILES == 'true'
         run: |
           git config --global user.email "108879845+mdn-bot@users.noreply.github.com"
           git config --global user.name "mdn-bot"
@@ -64,14 +78,14 @@ jobs:
           git commit -m "Code from PR head"
 
       - name: Setup Node.js environment
-        if: steps.check.outputs.DIFF_DOCUMENTS
-        uses: actions/setup-node@v4
+        if: steps.check.outputs.HAS_FILES == 'true'
+        uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # v6.0.0
         with:
           node-version-file: ".nvmrc"
           cache: yarn
 
       - name: Install all yarn packages
-        if: steps.check.outputs.DIFF_DOCUMENTS
+        if: steps.check.outputs.HAS_FILES == 'true'
         run: yarn --frozen-lockfile
         env:
           # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
@@ -79,7 +93,7 @@ jobs:
 
       - name: Lint and format markdown files
         id: lint
-        if: steps.check.outputs.DIFF_DOCUMENTS
+        if: steps.check.outputs.HAS_FILES == 'true'
         env:
           DIFF_DOCUMENTS: ${{ steps.check.outputs.DIFF_DOCUMENTS }}
         run: |
@@ -87,11 +101,17 @@ jobs:
           # https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#multiline-strings
           EOF="$(openssl rand -hex 8)"
 
-          files_to_lint="$DIFF_DOCUMENTS"
+          # The DIFF_DOCUMENTS env var contains the clean newline-separated list
+          # Read into array, one filename per line
+          readarray -t files_to_lint <<< "$DIFF_DOCUMENTS"
+
+          # Debug: show what we got
+          printf "Files to process (%d files):\n" "${#files_to_lint[@]}"
+          printf "'%s'\n" "${files_to_lint[@]}"
 
           echo "crlf line ending check"
           CRLF_FAILED=true
-          CRLF_LOG=$(git ls-files --eol ${files_to_lint} | grep -E 'w/(mixed|crlf)') || CRLF_FAILED=false
+          CRLF_LOG=$(git ls-files --eol "${files_to_lint[@]}" | grep -E 'w/(mixed|crlf)') || CRLF_FAILED=false
           echo "CRLF_LOG<<${EOF}" >> "$GITHUB_OUTPUT"
           echo "${CRLF_LOG}" >> "$GITHUB_OUTPUT"
           echo "${EOF}" >> "$GITHUB_OUTPUT"
@@ -99,7 +119,7 @@ jobs:
 
           echo "Running markdownlint --fix"
           MD_LINT_FAILED=false
-          MD_LINT_LOG=$(yarn markdownlint-cli2 --fix ${files_to_lint} 2>&1) || MD_LINT_FAILED=true
+          MD_LINT_LOG=$(yarn markdownlint-cli2 --fix "${files_to_lint[@]}" 2>&1) || MD_LINT_FAILED=true
           echo "MD_LINT_LOG<<${EOF}" >> "$GITHUB_OUTPUT"
           echo "${MD_LINT_LOG}" >> "$GITHUB_OUTPUT"
           echo "${EOF}" >> "$GITHUB_OUTPUT"
@@ -107,7 +127,7 @@ jobs:
 
           echo "Linting front-matter"
           FM_LINT_FAILED=false
-          FM_LINT_LOG=$(node scripts/front-matter_linter.js --fix true ${files_to_lint} 2>&1) || FM_LINT_FAILED=true
+          FM_LINT_LOG=$(node scripts/front-matter_linter.js --fix true "${files_to_lint[@]}" 2>&1) || FM_LINT_FAILED=true
           echo "FM_LINT_LOG<<${EOF}" >> "$GITHUB_OUTPUT"
           echo "${FM_LINT_LOG}" >> "$GITHUB_OUTPUT"
           echo "${EOF}" >> "$GITHUB_OUTPUT"
@@ -115,12 +135,12 @@ jobs:
 
           echo "Running Prettier"
           PRETTIER_FAILED=false
-          PRETTIER_LOG=$(yarn prettier --check ${files_to_lint} 2>&1) || PRETTIER_FAILED=true
+          PRETTIER_LOG=$(yarn prettier --check "${files_to_lint[@]}" 2>&1) || PRETTIER_FAILED=true
           echo "PRETTIER_LOG<<${EOF}" >> "$GITHUB_OUTPUT"
           echo "${PRETTIER_LOG}" >> "$GITHUB_OUTPUT"
           echo "${EOF}" >> "$GITHUB_OUTPUT"
           echo "PRETTIER_FAILED=${PRETTIER_FAILED}" >> "$GITHUB_OUTPUT"
-          yarn prettier -w ${files_to_lint}
+          yarn prettier -w "${files_to_lint[@]}"
 
           if [[ -n $(git diff) ]]; then
             echo "FILES_MODIFIED=true" >> "$GITHUB_OUTPUT"
@@ -135,7 +155,7 @@ jobs:
 
       - name: Setup reviewdog
         if: steps.lint.outputs.FILES_MODIFIED == 'true' || steps.lint.outputs.MD_LINT_FAILED == 'true'
-        uses: reviewdog/action-setup@e04ffabe3898a0af8d0fb1af00c188831c4b5893 # v1.3.2
+        uses: reviewdog/action-setup@d8edfce3dd5e1ec6978745e801f9c50b5ef80252 # v1.4.0
         with:
           reviewdog_version: latest
 

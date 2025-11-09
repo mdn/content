@@ -14,14 +14,14 @@ In addition to the basic HTML global attributes, the following global attributes
 
 - `xml:lang` and `xml:base` — these are inherited from the XHTML specifications and deprecated, but kept for compatibility purposes.
 - The ARIA [`role`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles) attribute and the multiple [`aria-*`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes) states and properties, used for ensuring accessibility.
-- The [event handler](/en-US/docs/Web/HTML/Reference/Attributes#event_handler_attributes) attributes: `onabort`, `onautocomplete`, `onautocompleteerror`, `onblur`, `oncancel`, `oncanplay`, `oncanplaythrough`, `onchange`, `onclick`, `onclose`, `oncontextmenu`, `oncuechange`, `ondblclick`, `ondrag`, `ondragend`, `ondragenter`, `ondragleave`, `ondragover`, `ondragstart`, `ondrop`, `ondurationchange`, `onemptied`, `onended`, `onerror`, `onfocus`, `oninput`, `oninvalid`, `onkeydown`, `onkeypress`, `onkeyup`, `onload`, `onloadeddata`, `onloadedmetadata`, `onloadstart`, `onmousedown`, `onmouseenter`, `onmouseleave`, `onmousemove`, `onmouseout`, `onmouseover`, `onmouseup`, `onmousewheel`, `onpause`, `onplay`, `onplaying`, `onprogress`, `onratechange`, `onreset`, `onresize`, `onscroll`, `onseeked`, `onseeking`, `onselect`, `onshow`, `onsort`, `onstalled`, `onsubmit`, `onsuspend`, `ontimeupdate`, `ontoggle`, `onvolumechange`, `onwaiting`.
+- The [event handler attributes](#list_of_global_event_handler_attributes) listed below.
 
 ## List of global attributes
 
 - [`accesskey`](/en-US/docs/Web/HTML/Reference/Global_attributes/accesskey)
   - : Provides a hint for generating a keyboard shortcut for the current element. This attribute consists of a space-separated list of characters. The browser should use the first one that exists on the computer keyboard layout.
 - [`anchor`](/en-US/docs/Web/HTML/Reference/Global_attributes/anchor) {{non-standard_inline}}
-  - : Associates a positioned element with an anchor element. The attribute's value is the [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) value of the element you want to anchor the positioned element to. The element can then be positioned [using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using).
+  - : Associates a positioned element with an anchor element. The attribute's value is the [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) value of the element you want to anchor the positioned element to. The element can then be positioned [using CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using).
 - [`autocapitalize`](/en-US/docs/Web/HTML/Reference/Global_attributes/autocapitalize)
   - : Controls whether inputted text is automatically capitalized and, if so, in what manner.
 - [`autocorrect`](/en-US/docs/Web/HTML/Reference/Global_attributes/autocorrect)
@@ -30,7 +30,7 @@ In addition to the basic HTML global attributes, the following global attributes
 - [`autofocus`](/en-US/docs/Web/HTML/Reference/Global_attributes/autofocus)
   - : Indicates that an element is to be focused on page load, or as soon as the {{HTMLElement("dialog")}} it is part of is displayed. This attribute is a boolean, initially false.
 - [`class`](/en-US/docs/Web/HTML/Reference/Global_attributes/class)
-  - : A space-separated list of the classes of the element. Classes allow CSS and JavaScript to select and access specific elements via the [class selectors](/en-US/docs/Web/CSS/Class_selectors) or functions like the method {{DOMxRef("Document.getElementsByClassName()")}}.
+  - : A space-separated list of the classes of the element. Classes allow CSS and JavaScript to select and access specific elements via the [class selectors](/en-US/docs/Web/CSS/Reference/Selectors/Class_selectors) or functions like the method {{DOMxRef("Document.getElementsByClassName()")}}.
 - [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable)
   - : An [enumerated](/en-US/docs/Glossary/Enumerated) attribute indicating if the element should be editable by the user. If so, the browser modifies its widget to allow editing. The attribute must take one of the following values:
     - `true` or the _empty string_, which indicates that the element must be editable;
@@ -63,7 +63,7 @@ In addition to the basic HTML global attributes, the following global attributes
 - [`inputmode`](/en-US/docs/Web/HTML/Reference/Global_attributes/inputmode)
   - : Provides a hint to browsers about the type of virtual keyboard configuration to use when editing this element or its contents. Used primarily on {{HTMLElement("input")}} elements, but is usable on any element while in [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) mode.
 - [`is`](/en-US/docs/Web/HTML/Reference/Global_attributes/is)
-  - : Allows you to specify that a standard HTML element should behave like a registered custom built-in element (see [Using custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements) for more details).
+  - : Allows you to specify that a standard HTML element should behave like a registered customized built-in element (see [Using custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements) for more details).
 
 > [!NOTE]
 > The `item*` attributes are part of the [WHATWG HTML Microdata feature](https://html.spec.whatwg.org/multipage/microdata.html#microdata).
@@ -79,7 +79,7 @@ In addition to the basic HTML global attributes, the following global attributes
 - [`itemtype`](/en-US/docs/Web/HTML/Reference/Global_attributes/itemtype)
   - : Specifies the URL of the vocabulary that will be used to define `itemprop`s (item properties) in the data structure. [`itemscope`](/en-US/docs/Web/HTML/Reference/Global_attributes/itemscope) is used to set the scope of where in the data structure the vocabulary set by `itemtype` will be active.
 - [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang)
-  - : Helps define the language of an element: the language that non-editable elements are in, or the language that editable elements should be written in by the user. The attribute contains one "language tag" (made of hyphen-separated "language subtags") in the format defined in {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}. `xml:lang` has priority over it.
+  - : Helps define the language of an element: the language that non-editable elements are in, or the language that editable elements should be written in by the user. The attribute should contain a valid {{glossary("BCP 47 language tag")}}. `xml:lang` has priority over it.
 - [`nonce`](/en-US/docs/Web/HTML/Reference/Global_attributes/nonce)
   - : A cryptographic nonce ("number used once") which can be used by [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) to determine whether or not a given fetch will be allowed to proceed.
 - [`part`](/en-US/docs/Web/HTML/Reference/Global_attributes/part)
@@ -119,6 +119,125 @@ In addition to the basic HTML global attributes, the following global attributes
   - : An {{Glossary("enumerated")}} attribute indicating if browser-provided writing suggestions should be enabled under the scope of the element or not.
     - `false`, which disables the browser's writing suggestions.
     - `true` or an _empty string_, which enables writing suggestions.
+
+## List of global event handler attributes
+
+HTML event handler attributes are discouraged; see [HTML attribute reference](/en-US/docs/Web/HTML/Reference/Attributes#event_handler_attributes) for how they work.
+
+While the attributes listed below apply to all elements, they are not useful on all elements. For example, `onvolumechange` HTML attribute is accepted by all elements and attaches an event listener for `volumechange`, but only media elements will ever receive a `volumechange` event fired by the browser. For other elements, you can only use {{domxref("EventTarget.dispatchEvent()")}} to manually dispatch one. [Some attributes](/en-US/docs/Web/HTML/Reference/Elements/body#event_attributes) can be specified on {{HTMLElement("body")}}, but they would instead listen to events on `window`.
+
+- [`onabort`](/en-US/docs/Web/API/HTMLMediaElement/abort_event)
+- [`onanimationcancel`](/en-US/docs/Web/API/Element/animationcancel_event)
+- [`onanimationend`](/en-US/docs/Web/API/Element/animationend_event)
+- [`onanimationiteration`](/en-US/docs/Web/API/Element/animationiteration_event)
+- [`onanimationstart`](/en-US/docs/Web/API/Element/animationstart_event)
+- [`onauxclick`](/en-US/docs/Web/API/Element/auxclick_event)
+- [`onbeforeinput`](/en-US/docs/Web/API/Element/beforeinput_event)
+- [`onbeforematch`](/en-US/docs/Web/API/Element/beforematch_event)
+- [`onbeforetoggle`](/en-US/docs/Web/API/HTMLElement/beforetoggle_event)
+- [`onblur`](/en-US/docs/Web/API/Element/blur_event)
+- [`oncancel`](/en-US/docs/Web/API/HTMLInputElement/cancel_event)
+- [`oncanplay`](/en-US/docs/Web/API/HTMLMediaElement/canplay_event)
+- [`oncanplaythrough`](/en-US/docs/Web/API/HTMLMediaElement/canplaythrough_event)
+- [`onchange`](/en-US/docs/Web/API/HTMLElement/change_event)
+- [`onclick`](/en-US/docs/Web/API/Element/click_event)
+- [`onclose`](/en-US/docs/Web/API/HTMLDialogElement/close_event)
+- [`oncommand`](/en-US/docs/Web/API/HTMLElement/command_event)
+- [`oncontentvisibilityautostatechange`](/en-US/docs/Web/API/Element/contentvisibilityautostatechange_event)
+- [`oncontextlost`](/en-US/docs/Web/API/HTMLCanvasElement/contextlost_event)
+- [`oncontextmenu`](/en-US/docs/Web/API/Element/contextmenu_event)
+- [`oncontextrestored`](/en-US/docs/Web/API/HTMLCanvasElement/contextrestored_event)
+- [`oncopy`](/en-US/docs/Web/API/Element/copy_event)
+- [`oncuechange`](/en-US/docs/Web/API/HTMLTrackElement/cuechange_event)
+- [`oncut`](/en-US/docs/Web/API/Element/cut_event)
+- [`ondblclick`](/en-US/docs/Web/API/Element/dblclick_event)
+- [`ondrag`](/en-US/docs/Web/API/HTMLElement/drag_event)
+- [`ondragend`](/en-US/docs/Web/API/HTMLElement/dragend_event)
+- [`ondragenter`](/en-US/docs/Web/API/HTMLElement/dragenter_event)
+- [`ondragleave`](/en-US/docs/Web/API/HTMLElement/dragleave_event)
+- [`ondragover`](/en-US/docs/Web/API/HTMLElement/dragover_event)
+- [`ondragstart`](/en-US/docs/Web/API/HTMLElement/dragstart_event)
+- [`ondrop`](/en-US/docs/Web/API/HTMLElement/drop_event)
+- [`ondurationchange`](/en-US/docs/Web/API/HTMLMediaElement/durationchange_event)
+- [`onemptied`](/en-US/docs/Web/API/HTMLMediaElement/emptied_event)
+- [`onended`](/en-US/docs/Web/API/HTMLMediaElement/ended_event)
+- [`onerror`](/en-US/docs/Web/API/HTMLElement/error_event)
+- [`onfocus`](/en-US/docs/Web/API/Element/focus_event)
+- [`onfocusin`](/en-US/docs/Web/API/Element/focusin_event)
+- [`onfocusout`](/en-US/docs/Web/API/Element/focusout_event)
+- [`onformdata`](/en-US/docs/Web/API/HTMLFormElement/formdata_event)
+- [`onfullscreenchange`](/en-US/docs/Web/API/Element/fullscreenchange_event)
+- [`onfullscreenerror`](/en-US/docs/Web/API/Element/fullscreenerror_event)
+- [`ongesturechange`](/en-US/docs/Web/API/Element/gesturechange_event) {{non-standard_inline}}
+- [`ongestureend`](/en-US/docs/Web/API/Element/gestureend_event) {{non-standard_inline}}
+- [`ongesturestart`](/en-US/docs/Web/API/Element/gesturestart_event) {{non-standard_inline}}
+- [`ongotpointercapture`](/en-US/docs/Web/API/Element/gotpointercapture_event)
+- [`oninput`](/en-US/docs/Web/API/Element/input_event)
+- [`oninvalid`](/en-US/docs/Web/API/HTMLInputElement/invalid_event)
+- [`onkeydown`](/en-US/docs/Web/API/Element/keydown_event)
+- [`onkeypress`](/en-US/docs/Web/API/Element/keypress_event) {{deprecated_inline}}
+- [`onkeyup`](/en-US/docs/Web/API/Element/keyup_event)
+- [`onload`](/en-US/docs/Web/API/HTMLElement/load_event)
+- [`onloadeddata`](/en-US/docs/Web/API/HTMLMediaElement/loadeddata_event)
+- [`onloadedmetadata`](/en-US/docs/Web/API/HTMLMediaElement/loadedmetadata_event)
+- [`onloadstart`](/en-US/docs/Web/API/HTMLMediaElement/loadstart_event)
+- [`onlostpointercapture`](/en-US/docs/Web/API/Element/lostpointercapture_event)
+- [`onmousedown`](/en-US/docs/Web/API/Element/mousedown_event)
+- [`onmouseenter`](/en-US/docs/Web/API/Element/mouseenter_event)
+- [`onmouseleave`](/en-US/docs/Web/API/Element/mouseleave_event)
+- [`onmousemove`](/en-US/docs/Web/API/Element/mousemove_event)
+- [`onmouseout`](/en-US/docs/Web/API/Element/mouseout_event)
+- [`onmouseover`](/en-US/docs/Web/API/Element/mouseover_event)
+- [`onmouseup`](/en-US/docs/Web/API/Element/mouseup_event)
+- [`onmousewheel`](/en-US/docs/Web/API/Element/mousewheel_event) {{deprecated_inline}} {{non-standard_inline}}
+- [`onpaste`](/en-US/docs/Web/API/Element/paste_event)
+- [`onpause`](/en-US/docs/Web/API/HTMLMediaElement/pause_event)
+- [`onplay`](/en-US/docs/Web/API/HTMLMediaElement/play_event)
+- [`onplaying`](/en-US/docs/Web/API/HTMLMediaElement/playing_event)
+- [`onpointercancel`](/en-US/docs/Web/API/Element/pointercancel_event)
+- [`onpointerdown`](/en-US/docs/Web/API/Element/pointerdown_event)
+- [`onpointerenter`](/en-US/docs/Web/API/Element/pointerenter_event)
+- [`onpointerleave`](/en-US/docs/Web/API/Element/pointerleave_event)
+- [`onpointermove`](/en-US/docs/Web/API/Element/pointermove_event)
+- [`onpointerout`](/en-US/docs/Web/API/Element/pointerout_event)
+- [`onpointerover`](/en-US/docs/Web/API/Element/pointerover_event)
+- [`onpointerrawupdate`](/en-US/docs/Web/API/Element/pointerrawupdate_event)
+- [`onpointerup`](/en-US/docs/Web/API/Element/pointerup_event)
+- [`onprogress`](/en-US/docs/Web/API/HTMLMediaElement/progress_event)
+- [`onratechange`](/en-US/docs/Web/API/HTMLMediaElement/ratechange_event)
+- [`onreset`](/en-US/docs/Web/API/HTMLFormElement/reset_event)
+- [`onresize`](/en-US/docs/Web/API/HTMLVideoElement/resize_event)
+- [`onscroll`](/en-US/docs/Web/API/Element/scroll_event)
+- [`onscrollend`](/en-US/docs/Web/API/Element/scrollend_event)
+- [`onscrollsnapchange`](/en-US/docs/Web/API/Element/scrollsnapchange_event) {{Experimental_Inline}}
+- [`onscrollsnapchanging`](/en-US/docs/Web/API/Element/scrollsnapchanging_event) {{Experimental_Inline}}
+- [`onsecuritypolicyviolation`](/en-US/docs/Web/API/Element/securitypolicyviolation_event)
+- [`onseeked`](/en-US/docs/Web/API/HTMLMediaElement/seeked_event)
+- [`onseeking`](/en-US/docs/Web/API/HTMLMediaElement/seeking_event)
+- [`onselect`](/en-US/docs/Web/API/HTMLInputElement/select_event)
+- [`onselectionchange`](/en-US/docs/Web/API/HTMLInputElement/selectionchange_event)
+- [`onselectstart`](/en-US/docs/Web/API/Node/selectstart_event)
+- [`onslotchange`](/en-US/docs/Web/API/HTMLSlotElement/slotchange_event)
+- [`onstalled`](/en-US/docs/Web/API/HTMLMediaElement/stalled_event)
+- [`onsubmit`](/en-US/docs/Web/API/HTMLFormElement/submit_event)
+- [`onsuspend`](/en-US/docs/Web/API/HTMLMediaElement/suspend_event)
+- [`ontimeupdate`](/en-US/docs/Web/API/HTMLMediaElement/timeupdate_event)
+- [`ontoggle`](/en-US/docs/Web/API/HTMLElement/toggle_event)
+- [`ontouchcancel`](/en-US/docs/Web/API/Element/touchcancel_event)
+- [`ontouchend`](/en-US/docs/Web/API/Element/touchend_event)
+- [`ontouchmove`](/en-US/docs/Web/API/Element/touchmove_event)
+- [`ontouchstart`](/en-US/docs/Web/API/Element/touchstart_event)
+- [`ontransitioncancel`](/en-US/docs/Web/API/Element/transitioncancel_event)
+- [`ontransitionend`](/en-US/docs/Web/API/Element/transitionend_event)
+- [`ontransitionrun`](/en-US/docs/Web/API/Element/transitionrun_event)
+- [`ontransitionstart`](/en-US/docs/Web/API/Element/transitionstart_event)
+- [`onvolumechange`](/en-US/docs/Web/API/HTMLMediaElement/volumechange_event)
+- [`onwaiting`](/en-US/docs/Web/API/HTMLMediaElement/waiting_event)
+- [`onwebkitmouseforcechanged`](/en-US/docs/Web/API/Element/webkitmouseforcechanged_event) {{non-standard_inline}}
+- [`onwebkitmouseforcedown`](/en-US/docs/Web/API/Element/webkitmouseforcedown_event) {{non-standard_inline}}
+- [`onwebkitmouseforceup`](/en-US/docs/Web/API/Element/webkitmouseforceup_event) {{non-standard_inline}}
+- [`onwebkitmouseforcewillbegin`](/en-US/docs/Web/API/Element/webkitmouseforcewillbegin_event) {{non-standard_inline}}
+- [`onwheel`](/en-US/docs/Web/API/Element/wheel_event)
 
 ## Specifications
 

@@ -30,7 +30,7 @@ sidebar: addonsidebar
   },
   "colors": {
     "frame": "#CF723F",
-    "tab_background_text": "#000"
+    "tab_background_text": "black"
   }
 }</pre
         >
@@ -199,7 +199,7 @@ These properties define the colors used for different parts of the browser. They
 > [!NOTE]
 > Where a component is affected by multiple color properties, the properties are listed in order of precedence.
 
-All these properties can be specified as either a string containing any valid [CSS color string](/en-US/docs/Web/CSS/color_value) (including hexadecimal), or an RGB array, such as `"tab_background_text": [ 107 , 99 , 23 ]`.
+All these properties can be specified as either a string containing any valid [CSS color string](/en-US/docs/Web/CSS/Reference/Values/color_value) (including hexadecimal), or an RGB array, such as `"tab_background_text": [ 107 , 99 , 23 ]`.
 
 > [!NOTE]
 > [In Chrome, colors may only be specified as RGB arrays](#chrome_compatibility).
@@ -207,7 +207,7 @@ All these properties can be specified as either a string containing any valid [C
 > In Firefox for Android colors can be specified using:
 >
 > - full hexadecimal notation, that is #RRGGBB only. _alpha_ and shortened syntax, as in #RGB\[A], are not supported.
-> - [Functional notation](/en-US/docs/Web/CSS/color_value) (RGB arrays) for themes targeting Firefox 68.2 or later.
+> - [Functional notation](/en-US/docs/Web/CSS/Reference/Values/color_value) (RGB arrays) for themes targeting Firefox 68.2 or later.
 >
 > Colors for Firefox for Android themes cannot be specified using color names.
 
@@ -1381,7 +1381,7 @@ A basic theme must define an image to add to the header, the accent color to use
    },
    "colors": {
      "frame": "#CF723F",
-     "tab_background_text": "#000"
+     "tab_background_text": "black"
    }
  }
 ```
@@ -1398,7 +1398,7 @@ Multiple images can be used to fill the header. Before Firefox version 60, use a
    },
    "colors": {
      "frame": "blue",
-     "tab_background_text": "#ffffff"
+     "tab_background_text": "white"
    }
  }
 ```
@@ -1416,7 +1416,7 @@ You can also fill the header with a repeated image, or images, in this case a si
    },
    "colors": {
      "frame": "green",
-     "tab_background_text": "#000"
+     "tab_background_text": "black"
    }
  }
 ```

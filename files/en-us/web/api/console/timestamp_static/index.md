@@ -14,20 +14,93 @@ The **`console.timeStamp()`** static method adds a single marker to the browser'
 
 You can optionally supply an argument to label the timestamp, and this label will then be shown alongside the marker.
 
+Some browsers have further extended this `console.timeStamp()` method to allow additional, optional parameters to be provided as part of its extensibility API that surfaces these in performances traces. See the [Chrome's extensibility API documentation](https://developer.chrome.com/docs/devtools/performance/extension#inject_your_data_with_consoletimestamp) for more information.
+
 ## Syntax
 
 ```js-nolint
-console.timeStamp(label)
+console.timeStamp(label);
+console.timeStamp(label, start, end, trackName, trackGroup, color, data);
 ```
 
 ### Parameters
 
+- `color` {{Optional_Inline}} {{Experimental_Inline}}
+  - : A string for the display colour of the entry. Must be one of `"primary"`, `"primary-light"`, `"primary-dark"`, `"secondary"`, `"secondary-light"`, `"secondary-dark"`, `"tertiary"`, `"tertiary-light"`, `"tertiary-dark"`, `"error"`.
+
+- `data` {{Optional_Inline}} {{Experimental_Inline}}
+  - : An object with additional data to display. URLs may automatically be turned into links by some browsers.
+
+- `end` {{Optional_Inline}} {{Experimental_Inline}}
+  - : A string referencing a previously defined `timeStamp` label or a timestamp ({{domxref("DOMHighResTimeStamp")}}) to be used as the end time.
+
 - `label` {{Optional_Inline}}
   - : Label for the timestamp.
+
+- `start` {{Optional_Inline}} {{Experimental_Inline}}
+  - : A string referencing a previously defined `timeStamp` label or a timestamp ({{domxref("DOMHighResTimeStamp")}}) to be used as the start time.
+
+- `trackName` {{Optional_Inline}} {{Experimental_Inline}}
+  - : The name of the custom track used to display the timestamp data
+
+- `trackGroup` {{Optional_Inline}} {{Experimental_Inline}}
+  - : The group of the custom track used to display the timestamp data
 
 ### Return value
 
 None ({{jsxref("undefined")}}).
+
+## Examples
+
+### Basic usage
+
+```js
+console.timeStamp("marker 1");
+```
+
+### Using the Extensibility API to provide richer details for display
+
+```js
+// 1. Create a duration event with rich data
+const start = performance.now() - 150;
+const end = performance.now() - 20;
+
+const durationData = {
+  processingTime: `${end - start}ms`,
+  info: "Check this URL: https://example.com for more.",
+  metrics: {
+    items: 5,
+    isCached: true,
+  },
+};
+
+console.timeStamp(
+  "My Timed Task", // label
+  start, // startTime
+  end, // endTime
+  "Tasks", // trackName
+  "My Extension", // trackGroup
+  "tertiary", // color
+  durationData, // data (object)
+);
+
+// 2. Create an instant event with a deep link for a DevTools extension
+const linkData = {
+  url: "ext://resource/123",
+  description: "View Resource 123",
+  otherDetail: "This data also appears in the JSON viewer",
+};
+
+console.timeStamp(
+  "Event with Link", // label
+  performance.now(), // startTime (instant)
+  undefined, // endTime (instant)
+  "Tasks", // trackName
+  "My Extension", // trackGroup
+  "primary-light", // color
+  linkData, // data (object)
+);
+```
 
 ## Browser compatibility
 
@@ -41,3 +114,4 @@ None ({{jsxref("undefined")}}).
 - {{domxref("performance/mark", "performance.mark()")}}
 - {{domxref("performance/measure", "performance.measure()")}}
 - [Adding markers with the console API](https://web.archive.org/web/20211207010020/https://firefox-source-docs.mozilla.org/devtools-user/performance/waterfall/index.html#adding-markers-with-the-console-api)
+- [Chrome DevTools extensibility API](https://developer.chrome.com/docs/devtools/performance/extension#inject_your_data_with_consoletimestamp)

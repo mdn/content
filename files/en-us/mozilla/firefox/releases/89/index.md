@@ -1,5 +1,5 @@
 ---
-title: Firefox 89 for developers
+title: Firefox 89 release notes for developers
 short-title: Firefox 89
 slug: Mozilla/Firefox/Releases/89
 page-type: firefox-release-notes

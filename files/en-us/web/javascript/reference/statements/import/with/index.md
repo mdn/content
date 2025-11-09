@@ -131,6 +131,18 @@ Start a local HTTP server (see [troubleshooting](/en-US/docs/Web/JavaScript/Guid
 > [!NOTE]
 > JSON modules only have one default export. You cannot do named imports from them (like `import { name } from "data.json"`).
 
+### Using import attributes with dynamic import
+
+Import attributes are also accepted as the second parameter of the `import()` syntax.
+
+```js
+const data = await import("./data.json", {
+  with: { type: "json" },
+});
+```
+
+Note that, like static imports, dynamic imports are cached for the lifetime of the environment (e.g., a page or worker). If you expect this data to change (such as the latest news or a user's credits), use the [Fetch API](/en-US/docs/Web/API/Fetch_API) instead.
+
 ## Specifications
 
 {{Specifications}}

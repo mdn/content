@@ -57,7 +57,7 @@ Although mobile browsers can present problems, there are ways to work around the
 
 ### Audio sprites
 
-Audio sprites borrow their name from [CSS sprites](/en-US/docs/Web/CSS/CSS_images/Implementing_image_sprites_in_CSS), which is a visual technique for using CSS with a single graphic resource to break it into a series of sprites. We can apply the same principle to audio so that rather than having a bunch of small audio files that take time to load and play, we have one larger audio file containing all the smaller audio snippets we need. To play a specific sound from the file, we just use the known start and stop times for each audio sprite.
+Audio sprites borrow their name from [CSS sprites](/en-US/docs/Web/CSS/Guides/Images/Implementing_image_sprites), which is a visual technique for using CSS with a single graphic resource to break it into a series of sprites. We can apply the same principle to audio so that rather than having a bunch of small audio files that take time to load and play, we have one larger audio file containing all the smaller audio snippets we need. To play a specific sound from the file, we just use the known start and stop times for each audio sprite.
 
 The advantage is that we can prime one piece of audio and have our sprites ready to go. To do this we can just play and instantly pause the larger piece of audio. You'll also reduce the number of server requests and save bandwidth.
 
@@ -96,26 +96,18 @@ const buttons = document.getElementsByTagName("button");
 let stopTime = 0;
 
 for (const button of buttons) {
-  button.addEventListener(
-    "click",
-    () => {
-      myAudio.currentTime = button.dataset.start;
-      stopTime = Number(button.dataset.stop);
-      myAudio.play();
-    },
-    false,
-  );
+  button.addEventListener("click", () => {
+    myAudio.currentTime = button.dataset.start;
+    stopTime = Number(button.dataset.stop);
+    myAudio.play();
+  });
 }
 
-myAudio.addEventListener(
-  "timeupdate",
-  () => {
-    if (myAudio.currentTime > stopTime) {
-      myAudio.pause();
-    }
-  },
-  false,
-);
+myAudio.addEventListener("timeupdate", () => {
+  if (myAudio.currentTime > stopTime) {
+    myAudio.pause();
+  }
+});
 ```
 
 {{EmbedLiveSample("audio-sprite", "", 200)}}

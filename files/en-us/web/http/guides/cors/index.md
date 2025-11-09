@@ -24,7 +24,7 @@ This [cross-origin sharing standard](https://fetch.spec.whatwg.org/#http-cors-pr
 - Web Fonts (for cross-domain font usage in `@font-face` within CSS), as described in the [font fetching requirements](https://drafts.csswg.org/css-fonts/#font-fetching-requirements), so that servers can deploy TrueType fonts that can only be loaded cross-origin and used by websites that are permitted to do so.
 - [WebGL textures](/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL).
 - Images/video frames drawn to a canvas using {{domxref("CanvasRenderingContext2D.drawImage()", "drawImage()")}}.
-- [CSS Shapes from images.](/en-US/docs/Web/CSS/CSS_shapes/Shapes_from_images)
+- [CSS Shapes from images.](/en-US/docs/Web/CSS/Guides/Shapes/From_images)
 
 This is a general article about Cross-Origin Resource Sharing and includes a discussion of the necessary HTTP headers.
 
@@ -123,7 +123,7 @@ Content-Type: application/xml
 […XML Data…]
 ```
 
-In response, the server returns a {{HTTPHeader("Access-Control-Allow-Origin")}} header with `Access-Control-Allow-Origin: *`, which means that the resource can be accessed by **any** origin.
+In response, the server returns an {{HTTPHeader("Access-Control-Allow-Origin")}} header with `Access-Control-Allow-Origin: *`, which means that the resource can be accessed by **any** origin.
 
 ```http
 Access-Control-Allow-Origin: *
@@ -360,9 +360,12 @@ Also note that any `Set-Cookie` response header in a response would not set a co
 
 Note that cookies set in CORS responses are subject to normal third-party cookie policies. In the example above, the page is loaded from `foo.example` but the `Set-Cookie` header in the response is sent by `bar.other`, and would thus not be saved if the user's browser is configured to reject all third-party cookies.
 
-Cookie in the request may also be suppressed in normal third-party cookie policies. The enforced cookie policy may therefore nullify the capability described in this chapter, effectively preventing you from making credentialed requests whatsoever.
+Cookies set in CORS requests and responses are subject to normal third-party cookie policies.
 
-Cookie policy around the [SameSite](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) attribute would apply.
+Third-party cookie policies may prevent third party cookies being sent in requests, effectively stopping a site from making credentialed requests even if permitted by the third party server (using `Access-Control-Allow-Credentials`).
+The default policy differs between browsers, but may be set using the [SameSite](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) attribute.
+
+Even if credentialed requests are allowed, a browser may be configured to reject all third-party cookies in responses.
 
 ## The HTTP response headers
 

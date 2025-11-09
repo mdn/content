@@ -1,10 +1,12 @@
 ---
 title: "Test your skills: HTML text basics"
-short-title: HTML text basics
+short-title: "Test: HTML text basics"
 slug: Learn_web_development/Core/Structuring_content/Test_your_skills/HTML_text_basics
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
+
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Lists", "Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content")}}
 
 The aim of this skill test is to help you assess whether you understand how to mark up text in HTML to give it structure and meaning.
 
@@ -14,10 +16,6 @@ The aim of this skill test is to help you assess whether you understand how to m
 ## Task 1
 
 In this task, we want you to mark up the provided HTML using semantic heading and paragraph elements.
-
-The finished example should look like this:
-
-{{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/basic-text/basic-text1-finished.html", '100%', 300)}}
 
 ```html-nolint live-sample___text-basics-1
 Basic HTML Animals
@@ -35,14 +33,14 @@ The crafty anaconda likes to slither around the page, traveling rapidly by way o
 
 <!-- Shared/setup CSS code -->
 
-```css hidden live-sample___text-basics-1 live-sample___text-basics-2 live-sample___text-basics-3 live-sample___text-basics-4
+```css hidden live-sample___text-basics-1 live-sample___text-basics-1-finished live-sample___text-basics-2 live-sample___text-basics-2-finished live-sample___text-basics-3 live-sample___text-basics-3-finished live-sample___text-basics-4 live-sample___text-basics-4-finished
 body {
-  background-color: #fff;
-  color: #333;
+  background-color: white;
+  color: #333333;
   font:
-    1em / 1.4 Helvetica Neue,
-    Helvetica,
-    Arial,
+    1em / 1.4 "Helvetica Neue",
+    "Helvetica",
+    "Arial",
     sans-serif;
   padding: 1em;
   margin: 0;
@@ -65,7 +63,7 @@ h2 {
 
 <!-- Example-specific code -->
 
-```css hidden live-sample___text-basics-1
+```css hidden live-sample___text-basics-1 live-sample___text-basics-1-finished
 h1,
 h2 {
   color: purple;
@@ -79,12 +77,16 @@ p {
 
 {{ EmbedLiveSample('text-basics-1', "100%", 130) }}
 
+The finished example should look like this:
+
+{{ EmbedLiveSample('text-basics-1-finished', "100%", 320) }}
+
 <details>
 <summary>Click here to show the solution</summary>
 
 Your finished HTML should look like this:
 
-```html
+```html live-sample___text-basics-1-finished
 <h1>Basic HTML Animals</h1>
 
 <p>This is the first paragraph in our page. It introduces our animals.</p>
@@ -110,10 +112,6 @@ Your finished HTML should look like this:
 
 In this task, we want you to turn the first un-marked up list into an unordered list, and the second one into an ordered list.
 
-The finished example should look like this:
-
-{{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/basic-text/basic-text2-finished.html", '100%', 400)}}
-
 ```html-nolint live-sample___text-basics-2
 <h1>Looking at lists</h1>
 
@@ -132,7 +130,7 @@ Wait for at least 5 seconds
 Turn the handle and push
 ```
 
-```css hidden live-sample___text-basics-2
+```css hidden live-sample___text-basics-2 live-sample___text-basics-2-finished
 p {
   margin: 0.5em 0;
 }
@@ -154,12 +152,16 @@ ul {
 
 {{ EmbedLiveSample('text-basics-2', "100%", 220) }}
 
+The finished example should look like this:
+
+{{ EmbedLiveSample('text-basics-2-finished', "100%", 400) }}
+
 <details>
 <summary>Click here to show the solution</summary>
 
 Your finished HTML should look like this:
 
-```html
+```html live-sample___text-basics-2-finished
 <h1>Looking at lists</h1>
 
 <p>Turn the following list of my favorite vegetables into an unordered list.</p>
@@ -187,10 +189,6 @@ Your finished HTML should look like this:
 
 In this task, we want you to turn the provided animals and their definitions into a description list.
 
-The finished example should look like this:
-
-{{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/advanced-text/advanced-text1-finished.html", '100%', 250)}}
-
 ```html-nolint live-sample___text-basics-3
 <h1>Advanced HTML Animals</h1>
 
@@ -202,7 +200,7 @@ Hippopotamus
 His description is bottomless.
 ```
 
-```css hidden live-sample___text-basics-3
+```css hidden live-sample___text-basics-3 live-sample___text-basics-3-finished
 h1 {
   color: purple;
 }
@@ -220,12 +218,16 @@ dt {
 
 {{ EmbedLiveSample('text-basics-3', "100%", 160) }}
 
+The finished example should look like this:
+
+{{ EmbedLiveSample('text-basics-3-finished', "100%", 250) }}
+
 <details>
 <summary>Click here to show the solution</summary>
 
 Your finished HTML should look like this:
 
-```html
+```html live-sample___text-basics-3-finished
 <h1>Advanced HTML Animals</h1>
 
 <dl>
@@ -250,10 +252,6 @@ Your finished HTML should look like this:
 
 In this task, you are provided with a paragraph, and your aim is to use some inline elements to mark up a couple of appropriate words with strong importance, and a couple with emphasis.
 
-The finished example should look something like this:
-
-{{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/basic-text/basic-text3-finished.html", '100%', 120)}}
-
 ```html live-sample___text-basics-4
 <h1>Emphasis and importance</h1>
 
@@ -263,7 +261,7 @@ The finished example should look something like this:
 </p>
 ```
 
-```css hidden live-sample___text-basics-4
+```css hidden live-sample___text-basics-4 live-sample___text-basics-4-finished
 h1,
 strong {
   color: purple;
@@ -281,12 +279,16 @@ em {
 
 {{ EmbedLiveSample('text-basics-4', "100%", 160) }}
 
+The finished example should look something like this:
+
+{{ EmbedLiveSample('text-basics-4-finished', "100%", 140) }}
+
 <details>
 <summary>Click here to show the solution</summary>
 
 Your finished HTML should look like this:
 
-```html
+```html live-sample___text-basics-4-finished
 <h1>Emphasis and importance</h1>
 
 <p>
@@ -298,3 +300,5 @@ Your finished HTML should look like this:
 ```
 
 </details>
+
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Lists", "Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content")}}

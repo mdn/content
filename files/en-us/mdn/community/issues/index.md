@@ -29,7 +29,7 @@ If you want to suggest new documentation or ways to improve the website, see [Pr
 
 ## Guidelines for reporting an issue
 
-[Issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues) are used to track bugs. An issue must be a single actionable task or a collection of related actionable tasks and must have a clear outcome.
+[Issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/learning-about-issues/about-issues) are used to track bugs. An issue must be a single actionable task or a collection of related actionable tasks and must have a clear outcome.
 
 ### Before filing an issue
 
@@ -75,9 +75,9 @@ The task list in this issue will be used to compare the documented CSS propertie
 
 ### List of pages checked
 
-- [x] [accent-color](/en-US/docs/Web/CSS/accent-color) - checked, okay
-- [ ] [backdrop-filter](/en-US/docs/Web/CSS/backdrop-filter)
-- [ ] [letter-spacing](/en-US/docs/Web/CSS/letter-spacing) - open pull request to move `Accessibility concerns` and `Internationalization concerns` sections before the `Specifications` section.
+- [x] [accent-color](/en-US/docs/Web/CSS/Reference/Properties/accent-color) - checked, okay
+- [ ] [backdrop-filter](/en-US/docs/Web/CSS/Reference/Properties/backdrop-filter)
+- [ ] [letter-spacing](/en-US/docs/Web/CSS/Reference/Properties/letter-spacing) - open pull request to move `Accessibility concerns` and `Internationalization concerns` sections before the `Specifications` section.
 ```
 
 ## Guidelines for working on an issue
@@ -120,7 +120,7 @@ Using the [guidelines on working on an issue](#guidelines_for_working_on_an_issu
 
 - The MDN Web Docs **content** (in English) in the [mdn/content](https://github.com/mdn/content) repository
 - The MDN Web Docs **translated content** in the [mdn/translated-content](https://github.com/mdn/translated-content) repository
-- The MDN Web Docs **frontend** in the [mdn/yari](https://github.com/mdn/yari) repository
+- The MDN Web Docs **frontend** in the [mdn/fred](https://github.com/mdn/fred) repository
 
 Each repository includes useful information to guide you on how to contribute.
 For more information, see [our main GitHub repositories](/en-US/docs/MDN/Community/Our_repositories).

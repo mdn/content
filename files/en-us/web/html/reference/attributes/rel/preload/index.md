@@ -102,7 +102,7 @@ However, the lack of preloading doesn't prevent the `image/webp` image from actu
 
 ## CORS-enabled fetches
 
-When preloading resources that are fetched with [CORS](/en-US/docs/Web/HTTP/Guides/CORS) enabled (e.g., [`fetch()`](/en-US/docs/Web/API/Window/fetch), [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) or [fonts](/en-US/docs/Web/CSS/@font-face)), special care needs to be taken to setting the [`crossorigin`](/en-US/docs/Web/HTML/Reference/Elements/link#crossorigin) attribute on your [`<link>`](/en-US/docs/Web/HTML/Reference/Elements/link) element. The attribute needs to be set to match the resource's CORS and credentials mode, even when the fetch is not cross-origin.
+When preloading resources that are fetched with [CORS](/en-US/docs/Web/HTTP/Guides/CORS) enabled (e.g., [`fetch()`](/en-US/docs/Web/API/Window/fetch), [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) or [fonts](/en-US/docs/Web/CSS/Reference/At-rules/@font-face)), special care needs to be taken to setting the [`crossorigin`](/en-US/docs/Web/HTML/Reference/Elements/link#crossorigin) attribute on your [`<link>`](/en-US/docs/Web/HTML/Reference/Elements/link) element. The attribute needs to be set to match the resource's CORS and credentials mode, even when the fetch is not cross-origin.
 
 As mentioned above, one interesting case where this applies is font files. Because of various reasons, these have to be fetched using anonymous-mode CORS (see [Font fetching requirements](https://drafts.csswg.org/css-fonts/#font-fetching-requirements)).
 
@@ -137,7 +137,7 @@ Not only are we providing the MIME type hints in the `type` attributes, but we a
 
 ## Including media
 
-One nice feature of `<link>` elements is their ability to accept [`media`](/en-US/docs/Web/HTML/Reference/Elements/link#media) attributes. These can accept [media types](/en-US/docs/Web/CSS/@media#media_types) or full-blown [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries), allowing you to do responsive preloading!
+One nice feature of `<link>` elements is their ability to accept [`media`](/en-US/docs/Web/HTML/Reference/Elements/link#media) attributes. These can accept [media types](/en-US/docs/Web/CSS/Reference/At-rules/@media#media_types) or full-blown [media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using), allowing you to do responsive preloading!
 
 Let's look at an example (see it on GitHub — [source code](https://github.com/mdn/html-examples/tree/main/link-rel-preload/media), [live example](https://mdn.github.io/html-examples/link-rel-preload/media/)):
 
@@ -169,17 +169,17 @@ Let's look at an example (see it on GitHub — [source code](https://github.com/
     const header = document.querySelector("header");
 
     if (mediaQueryList.matches) {
-      header.style.backgroundImage = "url(bg-image-narrow.png)";
+      header.style.backgroundImage = 'url("bg-image-narrow.png")';
     } else {
-      header.style.backgroundImage = "url(bg-image-wide.png)";
+      header.style.backgroundImage = 'url("bg-image-wide.png")';
     }
   </script>
 </body>
 ```
 
-We include `media` attributes on our `<link>` elements so that a narrow image is preloaded if the user has a narrow viewport, and a wider image is loaded if they have a wide viewport. We use {{domxref("Window.matchMedia")}} / {{domxref("MediaQueryList")}} to do this (see [Testing media queries](/en-US/docs/Web/CSS/CSS_media_queries/Testing_media_queries) for more).
+We include `media` attributes on our `<link>` elements so that a narrow image is preloaded if the user has a narrow viewport, and a wider image is loaded if they have a wide viewport. We use {{domxref("Window.matchMedia")}} / {{domxref("MediaQueryList")}} to do this (see [Testing media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Testing) for more).
 
-This makes it much more likely that the font will be available for the page render, cutting down on FOUT (flash of unstyled text).
+This same technique also applies to other resource types. For example, when used with fonts, preloading makes it more likely the font will be available at render time, reducing the chance of a flash of unstyled text (FOUT).
 
 This doesn't have to be limited to images, or even files of the same type — think big! You could perhaps preload and display a simplified SVG diagram if the user is on a narrow screen where bandwidth and CPU is potentially more limited, or preload a complex chunk of JavaScript then use it to render an interactive 3D model if the user's resources are more plentiful.
 

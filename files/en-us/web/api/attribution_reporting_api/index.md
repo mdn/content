@@ -33,11 +33,11 @@ The Attribution Reporting API provides a way to measure ad conversions in a way 
 
 Let's illustrate how the Attribution Reporting API works via an example.
 
-Say we have a online shop, `shop.example` (aka the advertiser), which embeds an ad for one of its products on a content site, `news.example` (aka the publisher). The ad content is found at `ad.shop.example`.
+Say we have an online shop, `shop.example` (aka the advertiser), which embeds an ad for one of its products on a content site, `news.example` (aka the publisher). The ad content is found at `ad.shop.example`.
 
 The online shop owners want to measure how many conversions they get from users interacting with the ad, viewing the product page on their site, and putting the product into their shopping cart.
 
-![Image representation of the steps described below](ara-flow.png)
+![Image representation of the steps described below](/shared-assets/images/diagrams/api/attribution-reporting/ara-flow.svg)
 
 The steps involved are as follows:
 

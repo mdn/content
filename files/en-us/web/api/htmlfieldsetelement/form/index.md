@@ -27,5 +27,5 @@ An {{domxref("HTMLFormElement")}} or `null`.
 - {{domxref("HTMLFieldSetElement")}}
 - {{domxref("HTMLFormElement")}}
 - {{HTMLElement("fieldset")}}
-- HTML [`form`](/en-US/docs/Web/HTML/Reference/Elements/fieldset#form) attribute
+- HTML [`form`](/en-US/docs/Web/HTML/Reference/Attributes/form) attribute
 - [HTML forms guide](/en-US/docs/Learn_web_development/Extensions/Forms)

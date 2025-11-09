@@ -1,5 +1,5 @@
 ---
-title: Firefox 138 for developers
+title: Firefox 138 release notes for developers
 short-title: Firefox 138
 slug: Mozilla/Firefox/Releases/138
 page-type: firefox-release-notes
@@ -27,7 +27,7 @@ No notable changes
 
 ### HTTP
 
-- The [`Clear-Site-Data`](/en-US/docs/Web/HTTP/Reference/Headers/Clear-Site-Data) header can be used with the [`cache`](/en-US/docs/Web/HTTP/Reference/Headers/Clear-Site-Data#cache) (and `*`) directive to clear the browser network cache. This gives websites more control over data stored for their users, allowing them to, for example, mitigate the risk of privacy leaks by clearing the cache during logout. ([Firefox bug 1942272](https://bugzil.la/1930500)).
+- The [`Clear-Site-Data`](/en-US/docs/Web/HTTP/Reference/Headers/Clear-Site-Data) header can be used with the [`cache`](/en-US/docs/Web/HTTP/Reference/Headers/Clear-Site-Data#cache) (and `*`) directive to clear the browser network cache. This gives websites more control over data stored for their users, allowing them to, for example, mitigate the risk of privacy leaks by clearing the cache during logout. ([Firefox bug 1930500](https://bugzil.la/1930500)).
 - The HTTP {{httpheader("Origin-Agent-Cluster")}} response header can now be used by a site to hint that the associated document should be placed in an origin-keyed [agent cluster](/en-US/docs/Web/JavaScript/Reference/Execution_model#agent_clusters_and_memory_sharing).
   When in such a cluster, the operating system process and/or other OS resources used by the document are only shared with other documents from the same [origin](/en-US/docs/Glossary/Origin).
   This makes it less likely that a resource-intensive document will degrade the performance of documents from other origins.
@@ -102,16 +102,17 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
   > [!NOTE]
   > The preference for this feature works in reverse: it's set to `false` in the Nightly build, which removes the UA styling for headings nested in sectioning elements. It's set to `true` in all other channels, which retains the existing UA styling for the nested headings.
 
-- **::details-content CSS pseudo-element:** `layout.css.details-content.enabled`.
+- **`::details-content` CSS pseudo-element:** `layout.css.details-content.enabled`.
 
   The CSS {{cssxref("::details-content")}} pseudo-element enables you to style the content of the {{htmlElement("details")}} element ([Firefox bug 1901037](https://bugzil.la/1901037)).
 
 - **Allow pseudo-elements after element-backed pseudo-elements**
 
-  Work has begun on allowing [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) such as {{cssxref("::first-letter")}} and {{cssxref("::before")}} to be appended to [element-backed pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements#element-backed_pseudo-elements) such as {{cssxref("::details-content")}} and {{cssxref("::file-selector-button")}}. ([Firefox bug 1953557](https://bugzil.la/1953557)).
+  Work has begun on allowing [pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) such as {{cssxref("::first-letter")}} and {{cssxref("::before")}} to be appended to [element-backed pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements#element-backed_pseudo-elements) such as {{cssxref("::details-content")}} and {{cssxref("::file-selector-button")}}.
+  ([Firefox bug 1953557](https://bugzil.la/1953557)).
 
   > [!NOTE]
-  > The preference for this feature depends upon the element-backed pseudo-element being targeted, for example: [`::details-content`](/en-US/docs/Mozilla/Firefox/Experimental_features#details-content_pseudo-element).
+  > This feature depends on support for the element-backed pseudo-element being targeted, for example: {{cssxref("::details-content")}}, which is behind the `layout.css.details-content.enabled` preference.
 
 - **`MutationEvent` on path to removal**: `dom.mutation_events.enabled`
 
@@ -127,4 +128,4 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
 - **HTML Sanitizer API**: `dom.security.sanitizer.enabled`
 
-  The [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) allow developers to take untrusted strings of HTML and sanitize them for safe insertion into a document's DOM. ([Firefox bug 1950605](https://bugzil.la/1950605)), ([Firefox bug 1952250](https://bugzil.la/1952250)).
+  The [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) allow developers to take untrusted strings of HTML and sanitize them for safe insertion into a document's DOM. ([Firefox bug 1950605](https://bugzil.la/1950605), [Firefox bug 1952250](https://bugzil.la/1952250)).

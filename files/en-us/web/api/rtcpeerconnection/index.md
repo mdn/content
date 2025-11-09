@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.RTCPeerConnection
 ---
 
-{{APIRef('WebRTC')}}
+{{APIRef("WebRTC")}}
 
 The **`RTCPeerConnection`** interface represents a WebRTC connection between the local computer and a remote peer.
 It provides methods to connect to a remote peer, maintain and monitor the connection, and close the connection once it's no longer needed.
@@ -113,7 +113,7 @@ _Also inherits methods from {{DOMxRef("EventTarget")}}._
   - : Sets the current configuration of the connection based on the values included in the specified object.
     This lets you change the {{Glossary("ICE")}} servers used by the connection and which transport policies to use.
 - {{DOMxRef("RTCPeerConnection.setIdentityProvider", "setIdentityProvider()")}}
-  - : Sets the Identity Provider (IdP) to the triplet given in parameter: its name, the protocol used to communicate with it and an username.
+  - : Sets the Identity Provider (IdP) to the triplet given in parameter: its name, the protocol used to communicate with it and a username.
     The protocol and the username are optional.
 - {{DOMxRef("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}}
   - : Changes the local description associated with the connection.

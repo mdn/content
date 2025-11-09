@@ -10,9 +10,11 @@ The Web Animations API lets us construct animations and control their playback w
 
 ## Meet the Web Animations API
 
-The [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) opens the browser's animation engine to developers and manipulation by JavaScript. This API was designed to underlie implementations of both [CSS Animations](/en-US/docs/Web/CSS/CSS_animations) and [CSS Transitions](/en-US/docs/Web/CSS/CSS_transitions), and leaves the door open to future animation effects. It is one of the most performant ways to animate on the Web, letting the browser make its own internal optimizations without hacks, coercion, or {{domxref("Window.requestAnimationFrame()")}}.
+The [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) opens the browser's animation engine to developers and manipulation by JavaScript. This API was designed to underlie implementations of both [CSS Animations](/en-US/docs/Web/CSS/Guides/Animations) and [CSS Transitions](/en-US/docs/Web/CSS/Guides/Transitions), and leaves the door open to future animation effects. It is one of the most performant ways to animate on the Web, letting the browser make its own internal optimizations without hacks, coercion, or {{domxref("Window.requestAnimationFrame()")}}.
 
 With the Web Animations API, we can move interactive animations from stylesheets to JavaScript, separating presentation from behavior. We no longer need to rely on DOM-heavy techniques such as writing CSS properties and scoping classes onto elements to control playback direction. And unlike pure, declarative CSS, JavaScript also lets us dynamically set values from properties to durations. For building custom animation libraries and creating interactive animations, the Web Animations API might be the perfect tool for the job. Let's see what it can do!
+
+This page contains a suite of examples utilizing the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API), inspired by [Alice in Wonderland](https://en.wikipedia.org/wiki/Alice%27s_Adventures_in_Wonderland). These examples are created by and shared at the courtesy of [Rachel Nabors](https://nearestnabors.com/). The [full suite of examples](https://codepen.io/collection/nqNJvD) are available on CodePen; here we present the ones relevant for our docs.
 
 ## Writing CSS Animations with the Web Animations API
 
@@ -20,29 +22,103 @@ One of the more familiar ways to approach learning the Web Animations API is to 
 
 ### The CSS version
 
-Here's a tumbling animation written in CSS showing Alice falling down the rabbit hole that leads to Wonderland (see the full [code on CodePen](https://codepen.io/rachelnabors/pen/QyOqqW)):
+Here's a tumbling animation written in CSS showing Alice falling down the rabbit hole that leads to Wonderland:
 
-[![Alice Tumbling down the rabbit's hole.](tumbling-alice_optimized.gif)](https://codepen.io/rachelnabors/pen/rxpmJL)
+{{EmbedLiveSample("animations_css_version", "", 300)}}
 
-Notice that the background moves, Alice spins, and her color changes at an offset from her spinning. We're going to focus on just Alice for this tutorial. Here's the simplified CSS that controls Alice's animation:
+```html hidden live-sample___animations_css_version live-sample___animations_api_version
+<div class="wrapper">
+  <div id="tunnel"></div>
+  <div id="alice">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+      <path
+        d="M110.1 2.7h8.9c3.4.4 6.7.8 10.1 1.3 9.8 1.5 17.8 6.4 24.5 13.7.4.5 1.9.6 2.5.3 6.8-4.4 13.9-8.2 21.9-9.9 1.3-.3 3.4-1.2 3.7 1.5.6 4.9 1.4 9.9 1.7 14.8.3 4.4.1 8.7.1 12.2 2.1 1.5 4.6 2.3 5.5 4 4.2 8.4 3.2 17.6 3.1 26.6 0 1.2-.4 3.3.1 3.6 10.3 4.9 20.7 9.6 31.1 14.4 2.5-4.9-2.3-16-15.8-14.4.6-.5 1.4-1.1 2.2-1.1 2.5.1 4.9.4 7.4.7 6 .8 10.9 3.7 14.6 8.4 1.2 1.5 1.6 4.2 1.1 6.1-.7 3.2-3.7 4-7.1 4.1 4.5 3.5 6.5 8.1 6.8 13.3.6 9.4-1.1 18.6-4.8 27.1-3.9 8.8-5.2 17.5-3.3 26.8.6 3.2 1.2 7 .2 9.9-2 6.2-7.8 8.6-13.4 10.9-3 1.2-7.4 1.2-6.3 6.3.8 3.7-.4 4 .2 4.5 5.8 5.8 11.8 11.5 17.6 17.3 1.7 1.7 3 3.8 4.3 5.5-1.1.4-1.8.7-2.4 1 7.5 5.8 14.9 11.6 22.4 17.4 4.3-4.3 8.6-9 13.3-13.2 8.1-7.3 16.7-14 24.5-21.7 3.3-3.3 4.9-8.2 7.4-12.3.3-.4 1.3-.9 1.6-.7 4.6 2.7 6.8 7.2 7.9 12.1 1.3 5.7 1.6 11.6 2.3 17.1 4.2-.2 8.8-.8 13.4-.4 2 .1 4.6 1.8 5.5 3.5 2.2 4.3 3.8 8.9 5.3 13.5 3.7 11.5 6.9 23.2 10.7 34.7 1.7 5.1 3.4 10.4 8.6 13.4.5.3.5 2.7 0 3.1-3.3 2.5-6.9 4.6-10.5 7 2 5.8 4.3 12.6 6.7 19.6.7-.8 1.4-1.6 2.1-2.3 1.9-1.9 3.5-1.6 4.2 1.2.7 3 1.3 6.2 1.5 9.3.3 7.3.4 14.6.6 21.9 0 .4.2.8.5 1.2 3.6 4.7 7.1 9.3 10.7 14 1.7 2.3 3 5.4 5.3 6.6 5.5 2.7 11.5 4.4 17.3 6.6v.7c-.4.3-.7.8-1.2 1-5.8 2.1-11.6 4.3-17.5 6.2-4.2 1.3-8.4 2-12.4-1.2-1.8-1.5-3.9-2.6-5.8-3.8 0 2.3.1 4.4-.1 6.4-.1.8-.7 2.2-1.2 2.2-2.6.2-5.3.1-7.9.1-1.1 0-2.7.3-3.2-.3-1-1.2-2.1-2.9-2.1-4.4-.1-5.2.1-10.4.3-15.6.1-1.8 1.5-3.9.9-5.4-1.7-4.3-4-8.4-6.1-12.5-2.4-4.6-6.4-9.1-1.2-14.3.3-.3.3-1.3 0-1.7-4.7-6.5-9.5-13.1-14.4-19.5-1.2-1.5-2.9-3.7-4.4-3.7-6.7.1-13.4.8-20.1 1.3-.7.1-1.6.2-1.9.6-7.1 9.1-14 18.3-21.1 27.4-1.3 1.7-2.9 3.4-4.3 5 1.7.6 3.3 1.1 4.8 1.7.6.2 1.3.5 1.6 1 .2.3-.1 1.1-.4 1.5-2 2.6-4.1 5.2-6.1 7.8-4.3 5.3-8.7 10.5-13 15.9-.8 1-1.5 2.4-1.6 3.6-.2 5.4-.1 10.7-.1 16.1 0 1.5-.7 3.6.1 4.5 2.4 3 5.3 5.5 7.9 8.2 1.6 1.7 3 3.5 4.6 5.5-2.6.2-4.5.3-6.4.4h-3.7c-4.8-1.4-9.8-2.5-14.5-4.3-3.5-1.4-7.8-2.5-8-7.7-.1-2.1-.2-4.3-.4-6.7-1 1.1-1.7 2.1-2.6 2.9-.3.3-1 .4-1.3.2-1.9-1.1-3.7-2.2-5.5-3.4-1.7-1.1-4.5-1.6-3.5-4.5 2.3-6.5 6.4-11.6 12.7-14.9.6-.3 1.3-.9 1.6-1.5 3.9-8.2 7.8-16.4 11.8-24.6.7-1.5.4-4.5 3.8-3.8.2.1 1.2-3.1 1.8-4.9-2.8 1.5-5 2.9-7.4 3.9-7.4 3-14.7 6.4-23.1 5.6-8.5-.7-16.2-3.4-23.2-8-9.9-6.7-14.2-17-17.5-27.9-.5-1.7-.5-5.1-3.5-1.6-.1.2-.4.2-.6.3-2.5 1.7-5.4 3-6 6.5-.4 2.3-1 4.6-1.5 7-2.9 13.2-4.2 26.4-2.5 39.9 1.7 13.1 9.2 21.3 21 26.3 2.4 1 4.9 1.9 7.5 2.9-2.1.9-3.9 1.9-5.8 2.3-10.2 2.5-20.5 4.9-30.8 7.1-1.9.4-4.9.7-5.9-.3-6.4-6.5-8.9-14.8-8.3-23.7.7-9.6 2.1-19.2 3.9-28.6 2.2-11.5 6.1-22.5 11.7-32.9.7-1.3 2-3.1 1.6-4.1-1.8-4.6-4.5-8.9-6.2-13.6-2-5.7-4.2-11.6-1.2-17.8.1-.1-.3-.5-.5-.8 7.6.7 12.8 5.3 17.7 10.2-1.3-8.5-2.6-17.2-3.9-25.8 0-.3-.2-.7-.4-.9-6.7-5.5-13.3-11.2-17-19.2-2.6-5.7-4.3-11.8-6.3-17.7-.6-1.6.2-3.4-2.2-4.8-5.9-3.5-10.3-8.6-10.3-16 0-1.8 1.2-5 2.2-5.1 8.3-1.2 16.4-.1 23.8 4.2 2.4 1.4 4.9 2.7 8.1 4.4-.4-8.8-.8-16.2-1.2-23.6-4.2.9-8.6.9-11.5-2-3.3-3.3-5.4-7.8-7.9-11.8-1.1-1.7-2-3.6-3.5-6.4-3.8 10.3-7.4 19.9-10.8 29.1-.3-.6-1.1-1.7-1.5-2.9-3.5-10-2.8-20.2-1.1-30.3 1.2-7.4 4.3-14.6 3.1-22.4-.2-1.1.2-2.3.3-3.4-22.1 17.6-38.8 38.4-42.9 67.4-4 28-2.8 54.8 13.5 79.1-36.3-13.8-53-48.6-58.3-84.1-3 8-15 16.3-22.4 16.6v-.2c2.1-2.9 11.1-10.6 7-30.2-1.3-10.7-4.1-21.2-5.1-31.9-1-10.9-1-21.9-.5-32.9.3-11.6 3.8-22.7 8.6-33.2 5.7-12.5 13.5-23.8 23-33.6 5.6-5.8 11.9-11 18.2-16.1 8.6-6.8 17.7-12.9 28.2-16.5 5.1-1.9 10.4-3 15.7-4.5zm96.4 221.9c-.4.9-1.2 2-1.1 3 .5 7.6 1.2 15.2 2 22.7.2 2.1 0 4.8 3.3 5.5 3.3.7 6.6 1.8 9.9 2.6.3.1.9-.1 1.1-.4 3.8-4.8 7.5-9.6 10.9-14-8.4-6.1-17.1-12.6-26.1-19.4zm-23.1-42.5v6.3c1.9-2 3.6-3.9 5.3-5.7-1.7-.2-3.5-.4-5.3-.6z" />
+    </svg>
+  </div>
+</div>
+```
 
-```css
+Notice that the background moves, Alice spins, and her color changes at an offset from her spinning. We're going to focus on just Alice for this tutorial. You can check the full source code by clicking "Play" on the code block. Here's the simplified CSS that controls Alice's animation:
+
+```css live-sample___animations_css_version
 #alice {
-  animation: aliceTumbling infinite 3s linear;
+  animation: alice-tumbling infinite 3s linear;
 }
 
-@keyframes aliceTumbling {
+@keyframes alice-tumbling {
   0% {
-    color: #000;
+    color: black;
     transform: rotate(0) translate3d(-50%, -50%, 0);
   }
   30% {
     color: #431236;
   }
   100% {
-    color: #000;
+    color: black;
     transform: rotate(360deg) translate3d(-50%, -50%, 0);
   }
+}
+```
+
+```css hidden live-sample___animations_css_version
+#tunnel {
+  animation: tunnel-fly 1s linear infinite;
+}
+
+@keyframes tunnel-fly {
+  100% {
+    transform: translate3d(0, -300px, 0);
+  }
+}
+```
+
+```css hidden live-sample___animations_css_version live-sample___animations_api_version
+#alice {
+  color: #431236;
+  width: 25%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: 0 0;
+  transform: rotate(0) translate3d(-50%, -50%, 0);
+  backface-visibility: hidden;
+  will-change: transform, color;
+}
+
+path {
+  fill: currentColor;
+}
+
+#tunnel {
+  background:
+    url("/shared-assets/images/examples/web-animations/bg-tunnel-border-left.svg")
+      repeat-y,
+    url("/shared-assets/images/examples/web-animations/bg-tunnel-border-right.svg")
+      repeat-y 100% 100%,
+    url("/shared-assets/images/examples/web-animations/bg-tunnel-specks.png"),
+    #6c373f;
+  margin: 0 auto;
+  height: calc(100% + 300px);
+  width: 60%;
+  min-width: 400px;
+  backface-visibility: hidden;
+  will-change: transform;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background: black;
+}
+
+html,
+body {
+  height: 100%;
 }
 ```
 
@@ -56,11 +132,11 @@ Now let's try creating the same animation with the Web Animations API.
 
 The first thing we need is to create a [Keyframe Object](/en-US/docs/Web/API/Web_Animations_API/Keyframe_Formats) corresponding to our CSS {{cssxref("@keyframes")}} block:
 
-```js
+```js live-sample___animations_api_version
 const aliceTumbling = [
-  { transform: "rotate(0) translate3d(-50%, -50%, 0)", color: "#000" },
+  { transform: "rotate(0) translate3d(-50%, -50%, 0)", color: "black" },
   { color: "#431236", offset: 0.3 },
-  { transform: "rotate(360deg) translate3d(-50%, -50%, 0)", color: "#000" },
+  { transform: "rotate(360deg) translate3d(-50%, -50%, 0)", color: "black" },
 ];
 ```
 
@@ -76,7 +152,7 @@ So to recap, the keys are equally spaced by default unless you specify an offset
 
 We'll also need to create an object of timing properties corresponding to the values in Alice's animation:
 
-```js
+```js live-sample___animations_api_version
 const aliceTiming = {
   duration: 3000,
   iterations: Infinity,
@@ -95,20 +171,37 @@ You'll notice a few differences here from how equivalent values are represented 
 
 Now it's time to bring them both together with the {{domxref("Element.animate()")}} method:
 
-```js
+```js live-sample___animations_api_version
 document.getElementById("alice").animate(aliceTumbling, aliceTiming);
 ```
 
-And boom: the animation starts playing (see the finished [version on CodePen](https://codepen.io/rachelnabors/pen/rxpmJL)).
+And boom: the animation starts playing:
+
+```js hidden live-sample___animations_api_version
+document
+  .getElementById("tunnel")
+  .animate(
+    [
+      { transform: "translate3d(0, 0, 0)" },
+      { transform: "translate3d(0, -300px, 0)" },
+    ],
+    {
+      duration: 1000,
+      iterations: Infinity,
+    },
+  );
+```
+
+{{EmbedLiveSample("animations_api_version", "", 300)}}
 
 The `animate()` method can be called on any DOM element that could be animated with CSS. And it can be written in several ways. Instead of making objects for keyframes and timing properties, we could just pass their values in directly, like so:
 
 ```js
 document.getElementById("alice").animate(
   [
-    { transform: "rotate(0) translate3d(-50%, -50%, 0)", color: "#000" },
+    { transform: "rotate(0) translate3d(-50%, -50%, 0)", color: "black" },
     { color: "#431236", offset: 0.3 },
-    { transform: "rotate(360deg) translate3d(-50%, -50%, 0)", color: "#000" },
+    { transform: "rotate(360deg) translate3d(-50%, -50%, 0)", color: "black" },
   ],
   {
     duration: 3000,
@@ -122,9 +215,9 @@ What's more, if we only wanted to specify the duration of the animation and not 
 ```js
 document.getElementById("alice").animate(
   [
-    { transform: "rotate(0) translate3d(-50%, -50%, 0)", color: "#000" },
+    { transform: "rotate(0) translate3d(-50%, -50%, 0)", color: "black" },
     { color: "#431236", offset: 0.3 },
-    { transform: "rotate(360deg) translate3d(-50%, -50%, 0)", color: "#000" },
+    { transform: "rotate(360deg) translate3d(-50%, -50%, 0)", color: "black" },
   ],
   3000,
 );
@@ -132,59 +225,115 @@ document.getElementById("alice").animate(
 
 ## Controlling playback with play(), pause(), reverse(), and updatePlaybackRate()
 
-While we can write CSS Animations with the Web Animations API, where the API really comes in handy is manipulating the animation's playback. The Web Animations API provides several useful methods for controlling playback. Let's take a look at pausing and playing animations in the Growing/Shrinking Alice game (check out the [full code on CodePen](https://codepen.io/rachelnabors/pen/PNYGZQ)):
+While we can write CSS Animations with the Web Animations API, where the API really comes in handy is manipulating the animation's playback. The Web Animations API provides several useful methods for controlling playback. Let's take a look at pausing and playing animations in the Follow the White Rabbit example:
 
-[![Playing the growing and shrinking game with Alice.](growing-shrinking_article_optimized.gif)](https://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010)
+In this example, the white rabbit has an animation that causes it to go down a rabbit hole. It's only triggered when the user clicks on it.
 
-In this game, Alice has an animation that causes her to go from small to big which we control via a bottle and a cupcake. Both of these have their own animations.
+```html hidden live-sample___follow_the_white_rabbit
+<div class="wrapper">
+  <div class="page">
+    <div class="background"></div>
+    <div id="rabbit">Click the rabbit's ears!</div>
+    <div class="foreground"></div>
+    <p>
+      She was just in time to see him pop down a hole between a great tree's
+      roots.
+    </p>
+  </div>
+</div>
+```
+
+```css hidden live-sample___follow_the_white_rabbit
+#rabbit {
+  background: url("/shared-assets/images/examples/web-animations/park5_rabbit.png")
+    0 0 / 100% 100%;
+  cursor: pointer;
+  position: absolute;
+  top: 15%;
+  left: 60%;
+  width: 14.64844%;
+  padding-top: 31.00586%;
+}
+
+body {
+  background: black;
+}
+.wrapper {
+  max-width: 133.33vh;
+  margin: 0 auto;
+}
+.page {
+  background: #431236;
+  height: 0;
+  overflow: hidden;
+  padding-top: 75%;
+  position: relative;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+
+.foreground {
+  height: 100%;
+  background: url("/shared-assets/images/examples/web-animations/bg_park5_2.png")
+    no-repeat 100% 100% / 100% auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+}
+
+.background {
+  background: url("/shared-assets/images/examples/web-animations/bg_park5_1.png")
+    no-repeat 0 0 / 100% auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+```
 
 ### Pausing and playing animations
 
-We'll talk more about Alice's animation later, but for now, let's look closer at the cupcake's animation:
+We can animate the rabbit using the `animate()` method as usual:
 
-```js
-const nommingCake = document
-  .getElementById("eat-me_sprite")
-  .animate(
-    [{ transform: "translateY(0)" }, { transform: "translateY(-80%)" }],
-    {
-      fill: "forwards",
-      easing: "steps(4, end)",
-      duration: aliceChange.effect.getComputedTiming().duration / 2,
-    },
-  );
+```js live-sample___follow_the_white_rabbit
+const whiteRabbit = document.getElementById("rabbit");
+
+const rabbitDownAnimation = whiteRabbit.animate(
+  [{ transform: "translateY(0%)" }, { transform: "translateY(100%)" }],
+  { duration: 3000, fill: "forwards" },
+);
 ```
 
 The {{domxref("Element.animate()")}} method will immediately run after it is called. To prevent the cake from eating itself up before the user has had the chance to click on it, we call {{domxref("Animation.pause()")}} on it immediately after it is defined, like so:
 
-```js
-nommingCake.pause();
+```js live-sample___follow_the_white_rabbit
+rabbitDownAnimation.pause();
 ```
 
-We can now use the {{domxref("Animation.play()")}} method to run it whenever we're ready:
+> [!NOTE]
+> Alternatively, you can define `rabbitDownAnimation` using the {{domxref("Animation/Animation", "Animation()")}} constructor instead, which doesn't start playing until you call `play()`.
 
-```js
-nommingCake.play();
+We can now use the {{domxref("Animation.play()")}} method to run it whenever we're ready. Specifically, we want to link it to a clicking action. We can achieve this via the following:
+
+```js live-sample___follow_the_white_rabbit
+whiteRabbit.addEventListener("click", downHeGoes);
+whiteRabbit.addEventListener("touchstart", downHeGoes);
+
+function downHeGoes(event) {
+  whiteRabbit.removeEventListener("click", downHeGoes);
+  whiteRabbit.removeEventListener("touchstart", downHeGoes);
+
+  rabbitDownAnimation.play();
+}
 ```
 
-Specifically, we want to link it to Alice's animation, so she gets bigger as the cupcake gets eaten. We can achieve this via the following function:
+When a user clicks or presses their finger on the rabbit, we can now call `downHeGoes` to make all the animations play.
 
-```js
-const growAlice = () => {
-  // Play Alice's animation.
-  aliceChange.play();
-
-  // Play the cake's animation.
-  nommingCake.play();
-};
-```
-
-When a user holds their mouse down or presses their finger on the cake on a touch screen, we can now call `growAlice` to make all the animations play:
-
-```js
-cake.addEventListener("mousedown", growAlice, false);
-cake.addEventListener("touchstart", growAlice, false);
-```
+{{EmbedLiveSample("follow_the_white_rabbit", "", 400)}}
 
 ### Other useful methods
 
@@ -194,52 +343,351 @@ In addition to pausing and playing, we can use the following Animation methods:
 - {{domxref("Animation.cancel()")}} aborts the animation and removes its effects.
 - {{domxref("Animation.reverse()")}} sets the animation's playback rate ({{domxref("Animation.playbackRate")}}) to a negative value so it runs backward.
 
-Let's take a look at `playbackRate` first — a negative playbackRate will cause an animation to run in reverse. When Alice drinks from the bottle, she grows smaller. This is because the bottle changes her animation's playbackRate from 1 to -1:
+Let's take a look at `playbackRate` first — a negative `playbackRate` will cause an animation to run in reverse.
+In [Through the Looking-Glass](https://en.wikipedia.org/wiki/Through_the_Looking-Glass), Alice travels to a world where she must run to stay in place — and run twice as fast to move forward! In the Red Queen's Race example, Alice and the Red Queen are running to stay in place:
 
-```js
-const shrinkAlice = () => {
-  aliceChange.playbackRate = -1;
-  aliceChange.play();
-};
+```html hidden live-sample___red_queen_race
+<div class="wrapper">
+  <div class="sky"></div>
+  <div class="earth">
+    <div id="red-queen-and-alice">
+      <img
+        id="red-queen-and-alice-sprite"
+        src="/shared-assets/images/examples/web-animations/sprite_running-alice-queen_small.png"
+        srcset="
+          /shared-assets/images/examples/web-animations/sprite_running-alice-queen.png 2x
+        "
+        alt="Alice and the Red Queen running to stay in place." />
+    </div>
+  </div>
+  <div class="scenery" id="foreground1">
+    <img
+      id="palm3"
+      src="/shared-assets/images/examples/web-animations/palm3_small.png"
+      srcset="/shared-assets/images/examples/web-animations/palm3.png 2x"
+      alt="" />
+  </div>
+  <div class="scenery" id="foreground2">
+    <img
+      id="bush"
+      src="/shared-assets/images/examples/web-animations/bush_small.png"
+      srcset="/shared-assets/images/examples/web-animations/bush.png 2x"
+      alt="" />
+    <img
+      id="w_rook_upright"
+      src="/shared-assets/images/examples/web-animations/w_rook_upright_small.png"
+      srcset="
+        /shared-assets/images/examples/web-animations/w_rook_upright.png 2x
+      "
+      alt="" />
+  </div>
+  <div class="scenery" id="background1">
+    <img
+      id="r_pawn_upright"
+      src="/shared-assets/images/examples/web-animations/r_pawn_upright_small.png"
+      srcset="
+        /shared-assets/images/examples/web-animations/r_pawn_upright.png 2x
+      "
+      alt="" />
+    <img
+      id="w_rook"
+      src="/shared-assets/images/examples/web-animations/w_rook_small.png"
+      srcset="/shared-assets/images/examples/web-animations/w_rook.png 2x"
+      alt="" />
+    <img
+      id="palm1"
+      src="/shared-assets/images/examples/web-animations/palm1_small.png"
+      srcset="/shared-assets/images/examples/web-animations/palm1.png 2x"
+      alt="" />
+  </div>
+  <div class="scenery" id="background2">
+    <img
+      id="r_pawn"
+      src="/shared-assets/images/examples/web-animations/r_pawn_small.png"
+      srcset="/shared-assets/images/examples/web-animations/r_pawn.png 2x"
+      alt="" />
 
-bottle.addEventListener("mousedown", shrinkAlice, false);
-bottle.addEventListener("touchstart", shrinkAlice, false);
+    <img
+      id="r_knight"
+      src="/shared-assets/images/examples/web-animations/r_knight_small.png"
+      srcset="/shared-assets/images/examples/web-animations/r_knight.png 2x"
+      alt="" />
+    <img
+      id="palm2"
+      src="/shared-assets/images/examples/web-animations/palm2_small.png"
+      srcset="/shared-assets/images/examples/web-animations/palm2.png 2x"
+      alt="" />
+  </div>
+</div>
 ```
 
-In [Through the Looking-Glass](https://en.wikipedia.org/wiki/Through_the_Looking-Glass), Alice travels to a world where she must run to stay in place — and run twice as fast to move forward! In the Red Queen's Race example, Alice and the Red Queen are running to stay in place (check out the [full code on CodePen](https://codepen.io/rachelnabors/pen/PNGGaV)):
+```css hidden live-sample___red_queen_race
+* {
+  user-select: none;
+}
 
-[![Alice and the Red Queen race to get to the next square in this game.](red-queen-race_optimized.gif)](https://codepen.io/rachelnabors/pen/PNGGaV)
+img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
-Because small children tire out easily, unlike automaton chess pieces, Alice is constantly slowing down. We can do this by setting a decay on her animation's `playbackRate`. We use `updatePlaybackRate()` instead of setting the playbackRate directly since that produces a smooth update:
+.scenery {
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
 
-```js
+#foreground1,
+#foreground2 {
+  z-index: 1;
+}
+
+#foreground2,
+#background2 {
+  transform: translateX(100%);
+}
+
+#palm3 {
+  top: 0;
+  left: 10%;
+}
+
+#w_rook_upright {
+  top: 30%;
+  left: 75%;
+}
+
+#r_pawn {
+  top: 10%;
+  left: 15%;
+}
+
+#w_rook {
+  top: 10%;
+  left: 80%;
+}
+
+#r_pawn_upright {
+  top: 5%;
+  left: 30%;
+}
+
+#r_knight {
+  top: 0;
+  left: 70%;
+}
+
+#palm2 {
+  top: -15%;
+  left: 90%;
+}
+
+#palm1 {
+  top: -15%;
+  left: 40%;
+}
+
+#bush {
+  top: 55%;
+  left: 20%;
+}
+
+#red-queen-and-alice {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  width: 80%;
+  max-width: 450px;
+  z-index: 1;
+}
+
+#red-queen-and-alice::before {
+  content: " ";
+  display: block;
+  padding-top: 87%;
+}
+
+#red-queen-and-alice img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.sky,
+.earth {
+  position: absolute;
+  left: 0;
+  height: 50vh;
+  width: 100%;
+}
+
+.earth {
+  background: #eb125d
+    url("/shared-assets/images/examples/web-animations/bg_earth.jpg") repeat-x 0
+    0 / 100% auto;
+  bottom: 0;
+}
+
+.sky {
+  background: #246e89
+    url("/shared-assets/images/examples/web-animations/bg_sky.jpg") repeat-x
+    100% 100% / auto 100%;
+  top: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+```
+
+```js hidden live-sample___red_queen_race
+const background1 = document.getElementById("background1");
+const background2 = document.getElementById("background2");
+
+const foreground1 = document.getElementById("foreground1");
+const foreground2 = document.getElementById("foreground2");
+
+const redQueenAliceSprite = document.getElementById(
+  "red-queen-and-alice-sprite",
+);
+
+/* Background animations */
+const sceneryFrames = [
+  { transform: "translateX(100%)" },
+  { transform: "translateX(-100%)" },
+];
+
+const sceneryTimingBackground = {
+  duration: 36000,
+  iterations: Infinity,
+};
+
+const sceneryTimingForeground = {
+  duration: 12000,
+  iterations: Infinity,
+};
+
+const background1Movement = background1.animate(
+  sceneryFrames,
+  sceneryTimingBackground,
+);
+background1Movement.currentTime =
+  background1Movement.effect.getComputedTiming().duration / 2;
+
+const background2Movement = background2.animate(
+  sceneryFrames,
+  sceneryTimingBackground,
+);
+
+const foreground1Movement = foreground1.animate(
+  sceneryFrames,
+  sceneryTimingForeground,
+);
+foreground1Movement.currentTime =
+  foreground1Movement.effect.getComputedTiming().duration / 2;
+
+const foreground2Movement = foreground2.animate(
+  sceneryFrames,
+  sceneryTimingForeground,
+);
+
+const spriteFrames = [
+  { transform: "translateY(0)" },
+  { transform: "translateY(-100%)" },
+];
+
+const redQueenAlice = redQueenAliceSprite.animate(spriteFrames, {
+  easing: "steps(7, end)",
+  direction: "reverse",
+  duration: 600,
+  playbackRate: 1,
+  iterations: Infinity,
+});
+```
+
+{{EmbedLiveSample("red_queen_race", "", 400)}}
+
+Because small children tire out easily, unlike automaton chess pieces, Alice is constantly slowing down. We can do this by setting a decay on her animation's `playbackRate`. We use `updatePlaybackRate()` instead of setting the `playbackRate` directly since that produces a smooth update:
+
+```js live-sample___red_queen_race
 setInterval(() => {
   // Make sure the playback rate never falls below .4
-  if (redQueen_alice.playbackRate > 0.4) {
-    redQueen_alice.updatePlaybackRate(redQueen_alice.playbackRate * 0.9);
+  if (redQueenAlice.playbackRate > 0.4) {
+    redQueenAlice.updatePlaybackRate(redQueenAlice.playbackRate * 0.9);
   }
-}, 3000);
+  adjustBackgroundPlayback();
+}, 1000);
 ```
 
-But urging them on by clicking or tapping causes them to speed up by multiplying their playbackRate:
+But urging them on by clicking or tapping causes them to speed up by multiplying their `playbackRate`:
 
-```js
-const goFaster = () => {
-  redQueen_alice.updatePlaybackRate(redQueen_alice.playbackRate * 1.1);
-};
+```js live-sample___red_queen_race
+function goFaster() {
+  // But you can speed them up by giving the screen a click or a tap.
+  redQueenAlice.updatePlaybackRate(redQueenAlice.playbackRate * 1.1);
+  adjustBackgroundPlayback();
+}
 
 document.addEventListener("click", goFaster);
 document.addEventListener("touchstart", goFaster);
 ```
 
-The background elements also have `playbackRate`s that are impacted when you click or tap. What happens when you make Alice and the Red Queen run twice as fast? What happens when you let them slow down?
+The background elements also have `playbackRate`s that are impacted when you click or tap. Their playback rates are derived from Alice's, shown below. What happens when you make Alice and the Red Queen run twice as fast? What happens when you let them slow down?
+
+```js live-sample___red_queen_race
+/* Alice tires so easily! 
+  Every so many seconds, reduce their playback rate so they slow a little. 
+*/
+const sceneries = [
+  foreground1Movement,
+  foreground2Movement,
+  background1Movement,
+  background2Movement,
+];
+
+function adjustBackgroundPlayback() {
+  // If Alice and the Red Queen are running at a speed of 0.8–1.2,
+  // the background doesn't move.
+  // But if they fall under 0.8, the background slides backwards
+  if (redQueenAlice.playbackRate < 0.8) {
+    sceneries.forEach((anim) => {
+      anim.updatePlaybackRate(-redQueenAlice.playbackRate / 2);
+    });
+  } else if (redQueenAlice.playbackRate > 1.2) {
+    sceneries.forEach((anim) => {
+      anim.updatePlaybackRate(redQueenAlice.playbackRate / 2);
+    });
+  } else {
+    sceneries.forEach((anim) => {
+      anim.updatePlaybackRate(0);
+    });
+  }
+}
+adjustBackgroundPlayback();
+```
 
 ## Persisting animation styles
 
 When animating elements, a common use case is to persist the final state of the animation, after the animation has finished. One method sometimes used for this is to set the animation's [fill mode](/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect#fill) to `forwards`. However, it is not recommended to use fill modes to persist the effect of an animation indefinitely, for two reasons:
 
 - The browser has to maintain the state of the animation while it is still active, so the animation continues to consume resources even though it is no longer animating. Note that this is somewhat alleviated by the browser [automatically removing filling animations](#automatically_removing_filling_animations).
-- Styles applied by animations have a [higher precedence in the cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade#cascading_order) than specified styles, so it can be difficult to override them when needed.
+- Styles applied by animations have a [higher precedence in the cascade](/en-US/docs/Web/CSS/Guides/Cascade/Introduction#cascading_order) than specified styles, so it can be difficult to override them when needed.
 
 A better approach is to use the {{domxref("Animation.commitStyles()")}} method. This writes the computed values of the animation's current styles into its target element's [`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style) attribute, after which the element can be restyled normally.
 
@@ -278,8 +726,8 @@ With the Web Animations API, all you need to change is just one little property!
 Another thing that's tough to do with CSS Animations alone is creating dependencies on values provided by other animations. For instance, in the Growing and Shrinking Alice game example, you might have noticed something odd about the cake's duration:
 
 ```js
-document.getElementById("eat-me_sprite").animate([], {
-  duration: aliceChange.effect.timing.duration / 2,
+document.getElementById("eat-me-sprite").animate([], {
+  duration: aliceChange.effect.getComputedTiming().duration / 2,
 });
 ```
 

@@ -31,11 +31,11 @@ None.
 
 ### Return value
 
-A promise that resolves with a {{domxref("Blob")}}.
+A promise that resolves with a {{domxref("Blob")}} whose data is the body's bytes and the media type is the response's `Content-Type` header's value.
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `AbortError`
+- `AbortError` {{domxref("DOMException")}}
   - : The request was [aborted](/en-US/docs/Web/API/Fetch_API/Using_Fetch#canceling_a_request).
 - {{jsxref("TypeError")}}
   - : Thrown for one of the following reasons:

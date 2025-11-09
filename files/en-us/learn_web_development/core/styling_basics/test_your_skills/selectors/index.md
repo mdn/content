@@ -1,10 +1,12 @@
 ---
 title: "Test your skills: Selectors"
-short-title: Selectors
+short-title: "Test: Selectors"
 slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Selectors
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
+
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics")}}
 
 The aim of this skill test is to help you assess whether you understand [CSS selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors).
 
@@ -145,7 +147,7 @@ To complete the task:
 
 1. Style links, making the link-state orange, visited links green, and remove the underline on hover.
 2. Make the first element inside the container `font-size: 150%` and the first line of that element red.
-3. Stripe every other row in the table by selecting these rows and giving them a background color of `#333` and foreground white.
+3. Stripe every other row in the table by selecting these rows and giving them a background color of `#333333` and foreground white.
 
 Your final result should look like the image below:
 
@@ -246,8 +248,8 @@ a:hover {
 }
 
 tr:nth-child(even) {
-  background-color: #333;
-  color: #fff;
+  background-color: #333333;
+  color: white;
 }
 ```
 
@@ -258,7 +260,9 @@ tr:nth-child(even) {
 To complete the task:
 
 1. Make any paragraph that directly follows an `<h2>` element red.
-2. Remove the bullets and add a 1px grey bottom border only to list items that are a direct child of the `<ul>` with a class of `list`.
+2. Style list items that are a direct child of the `<ul>` with a class of `list` as follows:
+   - Remove their bullets.
+   - Give them a `1px` grey bottom border.
 
 Your final result should look like the image below:
 
@@ -309,7 +313,7 @@ h2 + p {
 
 .list > li {
   list-style: none;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #cccccc;
 }
 ```
 
@@ -317,7 +321,7 @@ h2 + p {
 
 ## Task 5
 
-To complete the task, provide solutions using for the following challenges using attribute selectors:
+To complete the task, provide solutions for the following challenges using attribute selectors:
 
 1. Target the `<a>` element with a `title` attribute and make the border pink (`border-color: pink`).
 2. Target the `<a>` element with an `href` attribute that contains the word `contact` somewhere in its value and make the border orange (`border-color: orange`).
@@ -348,7 +352,7 @@ ul {
 }
 
 li {
-  margin: 0 0 0.5em 0;
+  margin-bottom: 0.5em;
 }
 
 a {
@@ -389,3 +393,5 @@ a[href^="https"] {
 ```
 
 </details>
+
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics")}}

@@ -5,8 +5,7 @@ import path from "node:path";
 import { eachLimit } from "async";
 import cliProgress from "cli-progress";
 
-import fdir_pkg from "fdir";
-const { fdir } = fdir_pkg;
+import { fdir } from "fdir";
 
 import caporal from "@caporal/core";
 const { program } = caporal;
@@ -28,6 +27,7 @@ async function resolveDirectory(file) {
     file.endsWith("index.md") &&
     !file.includes("/conflicting/") &&
     !file.includes("/orphaned/") &&
+    !file.includes("scripts/filecheck/fixtures/") &&
     !file.includes("tests/front-matter_test_files")
   ) {
     return [file];

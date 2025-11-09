@@ -62,7 +62,7 @@ ctx.scale(scale, scale);
 
 ctx.fillStyle = "#bada55";
 ctx.fillRect(10, 10, 300, 300);
-ctx.fillStyle = "#ffffff";
+ctx.fillStyle = "white";
 ctx.font = "18px Arial";
 ctx.textAlign = "center";
 ctx.textBaseline = "middle";
@@ -99,15 +99,15 @@ In this example, we'll set up a media query and watch it to see when the device 
 ```css
 body {
   font:
-    22px arial,
+    22px "Arial",
     sans-serif;
 }
 
 #container {
-  border: 2px solid #22d;
+  border: 2px solid #2222dd;
   margin: 1rem auto;
   padding: 1rem;
-  background-color: #a9f;
+  background-color: #aa99ff;
 }
 ```
 
@@ -154,7 +154,7 @@ To test the example, try zooming the page in and out, and note the difference in
 
 ## See also
 
-- [Media queries](/en-US/docs/Web/CSS/CSS_media_queries)
-- [Using media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [CSS `resolution` media query](/en-US/docs/Web/CSS/@media/resolution)
+- [Media queries](/en-US/docs/Web/CSS/Guides/Media_queries)
+- [Using media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using)
+- [CSS `resolution` media query](/en-US/docs/Web/CSS/Reference/At-rules/@media/resolution)
 - The {{cssxref("image-resolution")}} property

@@ -14,25 +14,17 @@ In this article, we will take a simple HTML document and see how to add MathML f
 
 MathML uses the same syntax as HTML to represent a tree of elements and attributes. In particular, each mathematical formula is represented by an element `<math>` which can be placed inside an HTML page. In the following document, it is inside a paragraph of text:
 
-```html
-<!doctype html>
-<html lang="en-US">
-  <head>
-    <title>My first math page</title>
-  </head>
-  <body>
-    <p>
-      The fraction
-      <math>
-        <mfrac>
-          <mn>1</mn>
-          <mn>3</mn>
-        </mfrac>
-      </math>
-      is not a decimal number.
-    </p>
-  </body>
-</html>
+```html live-sample___inserting_formulas_in_HTML
+<p>
+  The fraction
+  <math>
+    <mfrac>
+      <mn>1</mn>
+      <mn>3</mn>
+    </mfrac>
+  </math>
+  is not a decimal number.
+</p>
 ```
 
 The `<mfrac>` element specifies a fraction with a numerator (its first child) and a denominator (its second child). This is how it renders in your browser:
@@ -46,25 +38,17 @@ The `<mfrac>` element specifies a fraction with a numerator (its first child) an
 
 Note that in the previous example, the formula is on the same line as the text of the paragraph. However, it is quite common to instead render large mathematical formulas centered on their own line as shown below. To achieve that, you need to attach a `display="block"` attribute on the `<math>` element.
 
-```html hidden
-<!doctype html>
-<html lang="en-US">
-  <head>
-    <title>My first math page</title>
-  </head>
-  <body>
-    <p>
-      The fraction
-      <math display="block">
-        <mfrac>
-          <mn>1</mn>
-          <mn>3</mn>
-        </mfrac>
-      </math>
-      is not a decimal number.
-    </p>
-  </body>
-</html>
+```html hidden live-sample___the_display_attribute
+<p>
+  The fraction
+  <math display="block">
+    <mfrac>
+      <mn>1</mn>
+      <mn>3</mn>
+    </mfrac>
+  </math>
+  is not a decimal number.
+</p>
 ```
 
 {{ EmbedLiveSample('The_display_attribute', 700, 100, "", "") }}
@@ -75,7 +59,7 @@ You may also notice some subtle change in the appearance: the text and vertical 
 > This corresponds to the LaTeX's concept of _inline_ formulas (delimited by dollar signs `$...$`) and _display_ formulas (delimited by `\[...\]`).
 
 > [!NOTE]
-> The appearance change mentioned above is actually controlled by the [`math-style`](/en-US/docs/Web/CSS/math-style) property which is initially `normal` for `<math display="block">` and `compact` otherwise. In some MathML subtrees, this property can then automatically become `compact` but we will ignore this subtlety for this introductory tutorial. Again, this is similar to LaTeX.
+> The appearance change mentioned above is actually controlled by the [`math-style`](/en-US/docs/Web/CSS/Reference/Properties/math-style) property which is initially `normal` for `<math display="block">` and `compact` otherwise. In some MathML subtrees, this property can then automatically become `compact` but we will ignore this subtlety for this introductory tutorial. Again, this is similar to LaTeX.
 
 ## Grouping with the \<mrow> element
 
@@ -106,11 +90,11 @@ The `<mrow>` element is a generic container that performs similar layout but can
 </math>
 ```
 
-### Active learning: nested expressions
+### Your turn: Writing nested expressions
 
 As an exercise, figure out how to write the following expressions using only the MathML elements we've seen so far. If you are stuck or want to verify the solution, check the source code of the example.
 
-```html hidden
+```html hidden live-sample___nested-expressions
 <ol>
   <li>
     "one half" plus "two third":
@@ -165,7 +149,7 @@ As an exercise, figure out how to write the following expressions using only the
 </ol>
 ```
 
-{{ EmbedLiveSample('Active_learning_nested_expressions', 700, 200, "", "") }}
+{{ EmbedLiveSample('nested_expressions', 700, 200, "", "") }}
 
 ## Summary
 
@@ -177,7 +161,7 @@ In this article, we have taken a look at how to use the `<math>` element to inse
 - [The `<math>` element](/en-US/docs/Web/MathML/Reference/Element/math)
 - [The `<mfrac>` element](/en-US/docs/Web/MathML/Reference/Element/mfrac)
 - [The `<mrow>` element](/en-US/docs/Web/MathML/Reference/Element/mrow)
-- [The `math-style` property](/en-US/docs/Web/CSS/math-style)
-- [The `math-depth` property](/en-US/docs/Web/CSS/math-depth)
+- [The `math-style` property](/en-US/docs/Web/CSS/Reference/Properties/math-style)
+- [The `math-depth` property](/en-US/docs/Web/CSS/Reference/Properties/math-depth)
 
 {{NextMenu("Web/MathML/Tutorials/For_beginners/Text_containers", "Web/MathML/Tutorials/For_beginners")}}

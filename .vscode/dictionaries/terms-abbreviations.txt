@@ -62,6 +62,8 @@ BGRA
 Bignums
 bikeshedding
 bilevel
+bioinformatics
+biscotti
 bitfield
 bitmapped
 bitness
@@ -175,6 +177,7 @@ discardable
 distros
 DLRR
 DLSR
+DMARC
 docshell
 docshells
 doctypes
@@ -188,7 +191,9 @@ DTLSL
 dyscalculia
 EBNF
 ECSDA
+editability
 effectful
+elytra
 Emscripting
 encrypter
 engageable
@@ -239,6 +244,7 @@ foveation
 fragmentainer
 fragmentainers
 framebuffers
+framebusting
 frontmost
 Fullband
 fullscreened
@@ -272,10 +278,13 @@ greenify
 greyscale
 gzipping
 halfwidth
+halteres
 harissa
 HDCP
 headworn
+highlightable
 HILN
+hindwings
 hissy
 hitbox
 hitmap
@@ -297,6 +306,7 @@ ICANN
 ICNS
 iconset
 idents
+IDOR
 IERS
 IMSC
 Indo-Pacific
@@ -336,6 +346,7 @@ JXON
 KACST
 Kbit
 Kbps
+kettlebell
 keysyms
 keyterm
 keyterms
@@ -359,6 +370,7 @@ linkify
 livemark
 livemarks
 livestreamed
+lockdown
 lofi
 logpoints
 longhands
@@ -463,12 +475,14 @@ overlines
 overscript
 overscripts
 overscrolling
+overtype
 packetization
 packetizer
 packetizing
 paintable
 pantherina
 papermakers
+parasitoids
 parentless
 passwordless
 pathfinding
@@ -543,12 +557,12 @@ QPACK
 QTFF
 qtrs
 quantizer
-quarternion
 querysets
 quicklinks
 quickmenu
 qvalues
 QWERTZ
+RAII
 rari
 rasterizes
 RDBMS
@@ -580,6 +594,7 @@ resends
 resizability
 respecified
 restartless
+Resveratrol
 retarget
 retargeted
 retargetings
@@ -667,6 +682,7 @@ spinlocks
 spoofable
 spritesheet
 spritesheets
+squircle
 SSML
 ssthresh
 STIX
@@ -680,6 +696,7 @@ stringifiers
 stringifying
 stringly
 strobing
+stylability
 styracosaurus
 subarticle
 subarticles
@@ -756,6 +773,7 @@ targetable
 taskbars
 taskboard
 teleporting
+telepresence
 texels
 textboxes
 thenables
@@ -772,7 +790,6 @@ tileset
 timebox
 timecode
 timecodes
-timerange
 timeslice
 timeslices
 timestep
@@ -781,6 +798,7 @@ TIPC
 toggletips
 toolkits
 toolsets
+TOTP
 touchpads
 touchpoint
 touchpoints
@@ -874,6 +892,7 @@ untriaged
 unzoomed
 uppercasing
 userbase
+Uyghur
 VDOM
 Velociraptor
 versor

@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Element.lostpointercapture_event
 ---
 
-{{APIRef}}
+{{APIRef("Pointer Events")}}
 
 The **`lostpointercapture`** event is fired when a [captured pointer](/en-US/docs/Web/API/Pointer_events#pointer_capture) is released.
 

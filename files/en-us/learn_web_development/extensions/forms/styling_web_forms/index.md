@@ -134,7 +134,92 @@ The {{HTMLElement("legend")}} element is okay to style, but it can be a bit tric
 
 Take the following example:
 
-{{EmbedGHLiveSample("learning-area/html/forms/native-form-widgets/positioned-legend.html", '100%', 400)}}
+```html hidden live-sample___positioned-legend
+<form>
+  <fieldset>
+    <legend>Choose all the vegetables you like to eat</legend>
+    <ul>
+      <li>
+        <label for="carrots">Carrots</label>
+        <input
+          type="checkbox"
+          checked
+          id="carrots"
+          name="carrots"
+          value="carrots" />
+      </li>
+      <li>
+        <label for="peas">Peas</label>
+        <input type="checkbox" id="peas" name="peas" value="peas" />
+      </li>
+      <li>
+        <label for="cabbage">Cabbage</label>
+        <input type="checkbox" id="cabbage" name="cabbage" value="cabbage" />
+      </li>
+      <li>
+        <label for="cauliflower">Cauliflower</label>
+        <input
+          type="checkbox"
+          id="cauliflower"
+          name="cauliflower"
+          value="cauliflower" />
+      </li>
+      <li>
+        <label for="broccoli">Broccoli</label>
+        <input type="checkbox" id="broccoli" name="broccoli" value="broccoli" />
+      </li>
+    </ul>
+  </fieldset>
+  <fieldset>
+    <legend>What is your favorite meal?</legend>
+    <ul>
+      <li>
+        <label for="soup">Soup</label>
+        <input type="radio" checked id="soup" name="meal" value="soup" />
+      </li>
+      <li>
+        <label for="curry">Curry</label>
+        <input type="radio" id="curry" name="meal" value="curry" />
+      </li>
+      <li>
+        <label for="pizza">Pizza</label>
+        <input type="radio" id="pizza" name="meal" value="pizza" />
+      </li>
+      <li>
+        <label for="tacos">Tacos</label>
+        <input type="radio" id="tacos" name="meal" value="tacos" />
+      </li>
+      <li>
+        <label for="bolognese">Bolognese</label>
+        <input type="radio" id="bolognese" name="meal" value="bolognese" />
+      </li>
+    </ul>
+  </fieldset>
+</form>
+```
+
+```css hidden live-sample___positioned-legend
+form {
+  width: 500px;
+  margin: 0 auto;
+}
+
+fieldset {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+legend {
+  position: absolute;
+  color: white;
+  background-color: black;
+  padding: 3px;
+  bottom: 0;
+  right: 0;
+}
+```
+
+{{EmbedLiveSample("positioned-legend", '100%', 400)}}
 
 To position the legend in this manner, we used the following CSS (other declarations removed for brevity):
 
@@ -240,7 +325,7 @@ body {
   font: 1.3rem sans-serif;
   padding: 0.5em;
   margin: 0;
-  background: #222;
+  background: #222222;
 }
 
 form {
@@ -250,7 +335,7 @@ form {
   margin: 0 auto;
   padding: 1em;
   box-sizing: border-box;
-  background: #fff url(background.jpg);
+  background: white url("background.jpg");
 
   /* we create our grid */
   display: grid;
@@ -260,7 +345,7 @@ form {
 }
 ```
 
-Notice that we've used some [CSS grid](/en-US/docs/Web/CSS/CSS_grid_layout) and [Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) to lay out the form. Using this we can easily position our elements, including the title and all the form elements:
+Notice that we've used some [CSS grid](/en-US/docs/Web/CSS/Guides/Grid_layout) and [Flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) to lay out the form. Using this we can easily position our elements, including the title and all the form elements:
 
 ```css
 h1 {
@@ -343,13 +428,13 @@ textarea {
 
 #### Styling the submit button
 
-The {{HTMLElement("button")}} element is really convenient to style with CSS; you can do whatever you want, even using [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements):
+The {{HTMLElement("button")}} element is really convenient to style with CSS; you can do whatever you want, even using [pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements):
 
 ```css
 button {
   padding: 5px;
   font: bold 0.6em sans-serif;
-  border: 2px solid #333;
+  border: 2px solid #333333;
   border-radius: 5px;
   background: none;
   cursor: pointer;
@@ -362,8 +447,8 @@ button::after {
 
 button:hover,
 button:focus {
-  background: #000;
-  color: #fff;
+  background: black;
+  color: white;
 }
 ```
 

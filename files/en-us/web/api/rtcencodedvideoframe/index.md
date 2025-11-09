@@ -9,6 +9,11 @@ browser-compat: api.RTCEncodedVideoFrame
 
 The **`RTCEncodedVideoFrame`** of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) represents an encoded video frame in the WebRTC receiver or sender pipeline, which may be modified using a [WebRTC Encoded Transform](/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms).
 
+## Constructor
+
+- {{domxref("RTCEncodedVideoFrame.RTCEncodedVideoFrame()","RTCEncodedVideoFrame()")}}
+  - : Copy constructor. Creates a new and independent `RTCEncodedVideoFrame` object from another frame, optionally overwriting some of the copied metadata.
+
 ## Instance properties
 
 - {{domxref("RTCEncodedVideoFrame.type")}} {{ReadOnlyInline}}
@@ -36,6 +41,8 @@ The {{domxref("RTCEncodedVideoFrame.type","type")}} property indicates whether t
 The {{domxref("RTCEncodedVideoFrame.data", "data")}} property provides access to the encoded image data for the frame, which can then be modified ("transformed") when frames are sent or received.
 
 ## Examples
+
+### Transforming an encoded video frame
 
 This code snippet shows a handler for the `rtctransform` event in a {{domxref("Worker")}} that implements a {{domxref("TransformStream")}}, and pipes encoded frames through it from the `event.transformer.readable` to `event.transformer.writable` (`event.transformer` is a {{domxref("RTCRtpScriptTransformer")}}, the worker-side counterpart of {{domxref("RTCRtpScriptTransform")}}).
 

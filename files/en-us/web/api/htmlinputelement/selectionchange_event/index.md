@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.HTMLInputElement.selectionchange_event
 ---
 
-{{APIRef}}
+{{APIRef("Selection API")}}
 
 The **`selectionchange`** event of the [Selection API](/en-US/docs/Web/API/Selection) is fired when the text selection within an {{HTMLElement("input")}} element is changed.
 This includes both changes in the selected range of characters, or if the caret moves.

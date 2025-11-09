@@ -5,7 +5,7 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Images_media_forms", "Learn_web_development/Core/Styling_basics/Debugging_CSS", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Test_your_skills/Images", "Learn_web_development/Core/Styling_basics/Home_color_scheme_search", "Learn_web_development/Core/Styling_basics")}}
 
 Styling an HTML table isn't the most glamorous job in the world, but sometimes we all have to do it. This article explains how to make HTML tables look good, with some specific table styling techniques highlighted.
 
@@ -38,7 +38,7 @@ Styling an HTML table isn't the most glamorous job in the world, but sometimes w
 
 Let's start by looking at a typical HTML table. Well, I say typical — most HTML table examples are about shoes, or the weather, or employees; we decided to make things more interesting by making it about famous punk bands from the UK. The markup looks like so:
 
-```html live-sample___unstyled live-sample___styled
+```html live-sample___unstyled live-sample___punk-style live-sample___best-practice-style
 <table>
   <caption>
     A summary of the UK's most famous punk bands
@@ -112,13 +112,13 @@ Let's start by looking at a typical HTML table. Well, I say typical — most HTM
 
 The table is nicely marked up, easily stylable, and accessible, thanks to features such as [`scope`](/en-US/docs/Web/HTML/Reference/Elements/th#scope), {{htmlelement("caption")}}, {{htmlelement("thead")}}, {{htmlelement("tbody")}}, etc. Unfortunately, it doesn't look that great. With only the default browser styling it looks cramped, hard to read, and a little boring:
 
-{{embedlivesample("unstyled")}}
+{{embedlivesample("unstyled", "", "200")}}
 
 We need to use some CSS to fix this up. You can style a table in any way you want using CSS. For example, we created this rather "punk" looking design:
 
-```css hidden live-sample___styled
+```css hidden live-sample___punk-style
 /* font import */
-@import url("https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap");
+@import "https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap";
 
 /* spacing */
 table {
@@ -155,7 +155,7 @@ td {
 
 /* typography */
 html {
-  font-family: "helvetica neue", helvetica, arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
 thead th,
@@ -182,7 +182,7 @@ tfoot th {
 /* graphics */
 thead,
 tfoot {
-  background: url(https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/leopardskin.jpg);
+  background: url("https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/leopardskin.jpg");
   color: white;
 }
 
@@ -203,7 +203,7 @@ tbody tr:nth-child(even) {
 }
 
 tbody tr {
-  background-image: url(https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/noise.png);
+  background-image: url("https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/noise.png");
 }
 
 table {
@@ -216,13 +216,13 @@ caption {
   padding: 20px;
   font-style: italic;
   caption-side: bottom;
-  color: #666;
+  color: #666666;
   text-align: right;
   letter-spacing: 1px;
 }
 ```
 
-{{embedlivesample("styled", "", "500")}}
+{{embedlivesample("punk-style", "", "500")}}
 
 However, this design is rather garish. In this article, we'll get you to mark it up using some best practices for table design — as outlined in [Web Typography: designing tables to be read not looked at](https://alistapart.com/article/web-typography-tables/).
 
@@ -230,7 +230,7 @@ However, this design is rather garish. In this article, we'll get you to mark it
 
 Let's work through styling our table example together.
 
-1. To start with, make a local copy of the [sample markup](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/styling-tables/punk-bands-unstyled.html) and save it in a working directory somewhere on your local computer.
+1. To start with, make a local copy of the sample markup [shown earlier](#a_typical_html_table) and save it in a working directory somewhere on your local computer.
 2. Next, create a new file called `style.css` and save it in the same directory as your other files.
 3. Link the CSS to the HTML by placing the following line of HTML inside your {{htmlelement("head")}}:
 
@@ -246,7 +246,7 @@ This is a minor point, and not strictly relevant to styling tables, but we thoug
 
 ```css
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 ```
 
@@ -257,9 +257,8 @@ The first thing we need to do to our table is sort out the spacing — default t
 ```css
 table {
   table-layout: fixed;
-  width: 80%;
-  min-width: 1000px;
-  margin: 0 auto;
+  width: 90%;
+  margin: 10px auto;
   border-collapse: collapse;
 }
 
@@ -273,7 +272,7 @@ The most important parts to note are as follows:
 
 - A {{cssxref("table-layout")}} value of `fixed` is generally a good idea to set on your table, as it makes the table behave a bit more predictably by default. Normally, table columns tend to be sized according to how much content they contain, which produces some strange results. With `table-layout: fixed`, you can size your columns according to the width of their headings, and then deal with their content as appropriate. Chris Coyier discusses this technique in more detail in [Fixed Table Layouts](https://css-tricks.com/fixing-tables-long-strings/).
 
-- We've coupled the fixed layout with a {{cssxref("width")}} of `80%`, a {{cssxref("min-width")}} of `1000px`, and a {{cssxref("margin")}} of `0 auto`. These settings mean that the table will mostly fill a wider viewport and be centered horizontally, while on narrow viewports the table will stay at a legible width and extend off the screen. Mobile users, for example, can then scroll to read the whole table. This is preferable to having the table stretch the width of a narrow screen and be cramped and unreadable.
+- We've coupled the fixed layout with a {{cssxref("width")}} of `90%` and a {{cssxref("margin")}} of `10px auto`. These settings mean that the table will mostly fill the viewport and be centered horizontally.
 
 - A {{cssxref("border-collapse")}} value of `collapse` is standard best practice for any table styling effort. By default, when you set borders on table elements, they will all have spacing between them, as the below image illustrates: ![a 2 by 2 table with default spacing between the borders showing no border collapse](no-border-collapse.png) This doesn't look very nice (although it might be the look you want, who knows?). With `border-collapse: collapse;` set, the borders collapse down into one, which looks much better: ![a 2 by 2 table with border-collapse property set to collapse showing borders collapse into one](border-collapse.png)
 - We've set some {{cssxref("padding")}} on the {{htmlelement("th")}} and {{htmlelement("td")}} elements — this gives the data items some space to breathe, making the table look a lot more legible.
@@ -328,7 +327,7 @@ The table is looking much better already, but we should add some borders to prov
 
 ```css
 tfoot {
-  border-top: 1px solid #999;
+  border-top: 1px solid #999999;
 }
 ```
 
@@ -337,12 +336,11 @@ Next, update your existing `table` rule to the following:
 ```css
 table {
   table-layout: fixed;
-  width: 80%;
-  min-width: 1000px;
-  margin: 0 auto;
+  width: 90%;
+  margin: 10px auto;
   border-collapse: collapse;
-  border-top: 1px solid #999;
-  border-bottom: 1px solid #999;
+  border-top: 1px solid #999999;
+  border-bottom: 1px solid #999999;
 }
 ```
 
@@ -354,7 +352,7 @@ We wanted to dedicate a separate section to showing you how to implement **zebra
 
 ```css
 tbody tr:nth-child(odd) {
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 ```
 
@@ -377,6 +375,68 @@ caption {
 
 There is nothing remarkable here, except for the {{cssxref("caption-side")}} property, which has been given a value of `bottom`. This causes the caption to be positioned on the bottom of the table.
 
+## Finished table
+
+Your finished table design should look like so:
+
+```css hidden live-sample___best-practice-style
+html {
+  font-family: "Helvetica", "Arial", sans-serif;
+}
+
+table {
+  table-layout: fixed;
+  width: 90%;
+  margin: 10px auto;
+  border-collapse: collapse;
+  border-top: 1px solid #999999;
+  border-bottom: 1px solid #999999;
+}
+
+th,
+td {
+  vertical-align: top;
+  padding: 0.6em;
+}
+
+tr :nth-child(2),
+tr :nth-child(3) {
+  text-align: right;
+  width: 15%;
+}
+
+tr :nth-child(1),
+tr :nth-child(4) {
+  text-align: left;
+  width: 35%;
+}
+
+tfoot tr :nth-child(1) {
+  text-align: right;
+}
+
+tfoot tr :nth-child(2) {
+  text-align: left;
+}
+
+tfoot {
+  border-top: 1px solid #999999;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #eeeeee;
+}
+
+caption {
+  padding: 1em;
+  font-style: italic;
+  caption-side: bottom;
+  letter-spacing: 1px;
+}
+```
+
+{{embedlivesample("best-practice-style", "", "520")}}
+
 ## Table styling quick tips
 
 Before moving on, we thought we'd provide you with a quick list of the most useful points illustrated above:
@@ -392,4 +452,4 @@ Before moving on, we thought we'd provide you with a quick list of the most usef
 
 With styling tables now behind us, we need something else to occupy our time. The next article explores debugging CSS — how to solve problems such as layouts not looking like they should, or properties not applying when you think they should. This includes information on using browser DevTools to find solutions to your problems.
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Images_media_forms", "Learn_web_development/Core/Styling_basics/Debugging_CSS", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Test_your_skills/Images", "Learn_web_development/Core/Styling_basics/Home_color_scheme_search", "Learn_web_development/Core/Styling_basics")}}

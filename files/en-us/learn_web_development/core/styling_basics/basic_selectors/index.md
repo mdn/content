@@ -193,7 +193,7 @@ body {
 }
 
 .notebox {
-  border: 4px solid #666;
+  border: 4px solid #666666;
   padding: 0.5em;
   margin: 0.5em;
 }
@@ -356,7 +356,7 @@ h1, ..special {
 
 ## The universal selector
 
-The universal selector is indicated by an asterisk (`*`). It selects everything in the document. If `*` is chained using a [descendant combinator](/en-US/docs/Web/CSS/Descendant_combinator), it selects everything inside that ancestor element. For example, `p *` selects all the nested elements inside the `<p>` element.
+The universal selector is indicated by an asterisk (`*`). It selects everything in the document. If `*` is chained using a [descendant combinator](/en-US/docs/Web/CSS/Reference/Selectors/Descendant_combinator), it selects everything inside that ancestor element. For example, `p *` selects all the nested elements inside the `<p>` element.
 
 In the following example, we use the universal selector to remove the margins on all elements. Instead of the browser's default styling, which spaces out headings and paragraphs with margins, everything is close together.
 
@@ -416,7 +416,7 @@ Although both do the same thing, the readability is significantly improved.
 In this article we've recapped CSS selectors, which enable you to target particular HTML elements, looking at type, class, and ID selectors in a bit more depth than we did previously. In the next article we will dive into attribute selectors.
 
 > [!NOTE]
-> For a complete list of selectors, see our [CSS selectors reference](/en-US/docs/Web/CSS/CSS_selectors).
+> For a complete list of selectors, see our [CSS selectors reference](/en-US/docs/Web/CSS/Guides/Selectors).
 
 ## See also
 

@@ -6,11 +6,11 @@ page-type: web-api-instance-property
 browser-compat: api.CanvasRenderingContext2D.textRendering
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 The **`CanvasRenderingContext2D.textRendering`** property of the [Canvas API](/en-US/docs/Web/API/Canvas_API) provides information to the rendering engine about what to optimize for when rendering text.
 
-The values correspond to the SVG [`text-rendering`](/en-US/docs/Web/SVG/Reference/Attribute/text-rendering) attribute (and CSS [`text-rendering`](/en-US/docs/Web/CSS/text-rendering) property).
+The values correspond to the SVG [`text-rendering`](/en-US/docs/Web/SVG/Reference/Attribute/text-rendering) attribute (and CSS [`text-rendering`](/en-US/docs/Web/CSS/Reference/Properties/text-rendering) property).
 
 ## Value
 
