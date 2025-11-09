@@ -75,7 +75,7 @@ Firefox 145 is the current [Nightly version of Firefox](https://www.firefox.com/
 ## Changes for add-on developers
 
 - Cookies created with {{WebExtAPIRef("cookies.set()")}} are now validated, and invalid cookies are rejected. This change was implemented in Nightly only from Firefox 142. ([Firefox bug 1976509](https://bugzil.la/1976509))
-- The {{WebExtAPIRef("proxy")}} API adds support for MASQUE (Multiplexed Application Substrate over QUIC Encryption) proxies. ([Firefox bug 1988988](https://bugzil.la/1988988))
+- The {{WebExtAPIRef("proxy.onRequest")}} API adds support for MASQUE (Multiplexed Application Substrate over QUIC Encryption) proxies in the {{WebExtAPIRef("proxy.ProxyInfo")}} return type. ([Firefox bug 1988988](https://bugzil.la/1988988))
 
 <!-- ### Removals -->
 
