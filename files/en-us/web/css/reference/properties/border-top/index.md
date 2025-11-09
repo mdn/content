@@ -6,7 +6,7 @@ browser-compat: css.properties.border-top
 sidebar: cssref
 ---
 
-The **`border-top`** [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets all the properties of an element's top [border](/en-US/docs/Web/CSS/Reference/Properties/border).
+The **`border-top`** [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets all the properties of an element's top [border](/en-US/docs/Web/CSS/Reference/Properties/border).
 
 {{InteractiveExample("CSS Demo: border-top")}}
 

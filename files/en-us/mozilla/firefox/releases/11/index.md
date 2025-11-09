@@ -36,7 +36,7 @@ Firefox 11 shipped on March 13, 2012. This article provides information about th
 ### CSS
 
 - the [`text-size-adjust`](/en-US/docs/Web/CSS/Reference/Properties/text-size-adjust) property is now supported
-- [CSS3](/en-US/docs/Web/CSS) [Conditional Rules](/en-US/docs/Web/CSS/CSS_syntax/At-rules#block_at-rules) are now better supported: nested statements can now be added to [@media](/en-US/docs/Web/CSS/Reference/At-rules/@media), [@-moz-document](/en-US/docs/Web/CSS/Reference/At-rules/@document). (See [CSS Syntax](/en-US/docs/Web/CSS/CSS_syntax/Syntax) and [CSS at-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rules)).
+- [CSS3](/en-US/docs/Web/CSS) [Conditional Rules](/en-US/docs/Web/CSS/Guides/Syntax/At-rules#block_at-rules) are now better supported: nested statements can now be added to [@media](/en-US/docs/Web/CSS/Reference/At-rules/@media), [@-moz-document](/en-US/docs/Web/CSS/Reference/At-rules/@document). (See [CSS Syntax](/en-US/docs/Web/CSS/Guides/Syntax/Introduction) and [CSS at-rules](/en-US/docs/Web/CSS/Guides/Syntax/At-rules)).
 
 ### JavaScript
 

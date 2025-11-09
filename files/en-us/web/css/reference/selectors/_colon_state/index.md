@@ -34,7 +34,7 @@ The CSS `:state()` pseudo-class matches an element when the identifier, passed a
 The `:state()` pseudo-class can also be used to match custom states within the implementation of a custom element.
 This is achieved by using `:state()` within the [`:host()`](/en-US/docs/Web/CSS/Reference/Selectors/:host_function) pseudo-class function, which matches a state only within the shadow DOM of the current custom element.
 
-Additionally, the [`::part()`](/en-US/docs/Web/CSS/Reference/Selectors/::part) pseudo-element followed by the `:state()` pseudo-class allows matching on the [shadow parts](/en-US/docs/Web/CSS/CSS_shadow_parts) of a custom element that are in a particular state. (**Shadow parts** are parts of a custom element's shadow tree that are explicitly exposed to a containing page for styling purposes.)
+Additionally, the [`::part()`](/en-US/docs/Web/CSS/Reference/Selectors/::part) pseudo-element followed by the `:state()` pseudo-class allows matching on the [shadow parts](/en-US/docs/Web/CSS/Guides/Shadow_parts) of a custom element that are in a particular state. (**Shadow parts** are parts of a custom element's shadow tree that are explicitly exposed to a containing page for styling purposes.)
 
 ## Examples
 
@@ -69,7 +69,7 @@ For a live example of this code in action, see the [Matching the custom state of
 
 ### Matching a custom state in a shadow part
 
-This example shows how the `:state()` pseudo-class can be used to target the [shadow parts](/en-US/docs/Web/CSS/CSS_shadow_parts) of a custom element.
+This example shows how the `:state()` pseudo-class can be used to target the [shadow parts](/en-US/docs/Web/CSS/Guides/Shadow_parts) of a custom element.
 
 Shadow parts are defined and named using the [`part`](/en-US/docs/Web/HTML/Reference/Global_attributes/part) attribute.
 For example, consider a custom element named `<question-box>` that uses a `<labeled-checkbox>` custom element as a shadow part named `checkbox`:

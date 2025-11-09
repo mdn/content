@@ -140,13 +140,13 @@ The `clip-path` property is specified as one or a combination of the values list
 - `<geometry-box>`
   - : If specified in combination with a `<basic-shape>`, this value defines the reference box for the basic shape. If specified by itself, it causes the edges of the specified box, including any corner shaping (such as a {{cssxref("border-radius")}}), to be the clipping path. The geometry box can be one of the following values:
     - `margin-box`
-      - : Uses the [margin box](/en-US/docs/Web/CSS/CSS_shapes/From_box_values#margin-box) as the reference box.
+      - : Uses the [margin box](/en-US/docs/Web/CSS/Guides/Shapes/From_box_values#margin-box) as the reference box.
     - `border-box`
-      - : Uses the [border box](/en-US/docs/Web/CSS/CSS_shapes/From_box_values#border-box) as the reference box.
+      - : Uses the [border box](/en-US/docs/Web/CSS/Guides/Shapes/From_box_values#border-box) as the reference box.
     - `padding-box`
-      - : Uses the [padding box](/en-US/docs/Web/CSS/CSS_shapes/From_box_values#padding-box) as the reference box.
+      - : Uses the [padding box](/en-US/docs/Web/CSS/Guides/Shapes/From_box_values#padding-box) as the reference box.
     - `content-box`
-      - : Uses the [content box](/en-US/docs/Web/CSS/CSS_shapes/From_box_values#content-box) as the reference box.
+      - : Uses the [content box](/en-US/docs/Web/CSS/Guides/Shapes/From_box_values#content-box) as the reference box.
     - `fill-box`
       - : Uses the object bounding box as the reference box.
     - `stroke-box`
@@ -158,7 +158,7 @@ The `clip-path` property is specified as one or a combination of the values list
   - : No clipping path is created.
 
 > [!NOTE]
-> A computed value other than **`none`** results in the creation of a new [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context) the same way that CSS {{cssxref("opacity")}} does for values other than `1`.
+> A computed value other than **`none`** results in the creation of a new [stacking context](/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_context) the same way that CSS {{cssxref("opacity")}} does for values other than `1`.
 
 ## Formal definition
 
@@ -278,7 +278,7 @@ We include two {{htmlElement("div")}} elements and an `<svg>` element containing
 
 #### CSS
 
-We use [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) to allow our elements to sit side-by-side with a gap between them, if there is space available. We define a {{cssxref("gradient/conic-gradient", "conic-gradient()")}} background image on both `<div>` elements, providing an interesting visual to clip, along with a {{cssxref("border")}}.
+We use [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) to allow our elements to sit side-by-side with a gap between them, if there is space available. We define a {{cssxref("gradient/conic-gradient", "conic-gradient()")}} background image on both `<div>` elements, providing an interesting visual to clip, along with a {{cssxref("border")}}.
 
 ```css
 body {
@@ -416,7 +416,7 @@ Select different options to change the `clip-path` value.
 - {{CSSxRef("mask")}}
 - {{CSSxRef("filter")}}
 - {{cssxref("background-clip")}}
-- [Introduction to CSS clipping](/en-US/docs/Web/CSS/CSS_masking/Clipping)
-- [CSS masking](/en-US/docs/Web/CSS/CSS_masking) module
+- [Introduction to CSS clipping](/en-US/docs/Web/CSS/Guides/Masking/Clipping)
+- [CSS masking](/en-US/docs/Web/CSS/Guides/Masking) module
 - SVG {{SVGAttr("clip-path")}} attribute
 - [Applying SVG effects to HTML content](/en-US/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)

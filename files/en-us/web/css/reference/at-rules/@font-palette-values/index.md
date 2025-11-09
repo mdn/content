@@ -6,7 +6,7 @@ browser-compat: css.at-rules.font-palette-values
 sidebar: cssref
 ---
 
-The **`@font-palette-values`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rules) allows you to customize the default values of [font-palette](/en-US/docs/Web/CSS/Reference/Properties/font-palette) created by the font-maker.
+The **`@font-palette-values`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules) allows you to customize the default values of [font-palette](/en-US/docs/Web/CSS/Reference/Properties/font-palette) created by the font-maker.
 
 ## Syntax
 
@@ -19,7 +19,7 @@ The **`@font-palette-values`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/
 }
 ```
 
-The [&lt;dashed-ident&gt;](/en-US/docs/Web/CSS/dashed-ident) is a user defined identifier, that while it looks like a [CSS custom property](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) behaves in a different way and is not wrapped in a [CSS var() function](/en-US/docs/Web/CSS/var).
+The [&lt;dashed-ident&gt;](/en-US/docs/Web/CSS/Reference/Values/dashed-ident) is a user defined identifier, that while it looks like a [CSS custom property](/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties) behaves in a different way and is not wrapped in a [CSS var() function](/en-US/docs/Web/CSS/Reference/Values/var).
 
 ### Descriptors
 

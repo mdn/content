@@ -112,4 +112,4 @@ Chromium-based browsers support an outdated version of this property — `mask-b
 - {{cssxref("mask-border-repeat")}}
 - {{cssxref("mask-border-source")}}
 - {{cssxref("mask-border-width")}}
-- [Illustrated description of the 1-to-4-value syntax](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties#tricky_edge_cases)
+- [Illustrated description of the 1-to-4-value syntax](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties#tricky_edge_cases)

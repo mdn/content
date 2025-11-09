@@ -88,5 +88,5 @@ Custom properties are scoped to the element(s) they are declared on, and partici
 
 - The {{cssxref("var", "var()")}} function
 - {{cssxref("@property")}} at-rule
-- [Using CSS custom properties (variables)](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) guide
-- [CSS custom properties for cascading variables](/en-US/docs/Web/CSS/CSS_cascading_variables) module
+- [Using CSS custom properties (variables)](/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties) guide
+- [CSS custom properties for cascading variables](/en-US/docs/Web/CSS/Guides/Cascading_variables) module

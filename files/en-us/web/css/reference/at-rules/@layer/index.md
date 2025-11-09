@@ -6,7 +6,7 @@ browser-compat: css.at-rules.layer
 sidebar: cssref
 ---
 
-The **`@layer`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rules) is used to declare a cascade layer and can also be used to define the order of precedence in case of multiple cascade layers.
+The **`@layer`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules) is used to declare a cascade layer and can also be used to define the order of precedence in case of multiple cascade layers.
 
 {{InteractiveExample("CSS Demo: @layer", "tabbed-standard")}}
 
@@ -65,7 +65,7 @@ The following diagram shows layer priorities where layers are declared in 1, 2, 
 As noted in the above diagram, _important declarations_, declarations with the `!important` flag, have priority over _normal declarations_, or regular declarations without the `!important` flag. The order of precedence among important rules is the inverse of normal rules. Transitions have the greatest precedence. Next in order of highest to lowest priority are the important {{glossary("user agent")}} declarations, important user declarations, and important author declarations; in that order. Users can specify styles using browser preferences, operating system preferences, or browser extensions. Their important declarations take precedence over _author_, or _web developer_ written, important declarations.
 
 Within author styles, all important declarations within CSS layers take precedence over any important declarations declared outside of a layer, while all normal declarations within CSS layers have a lower priority than declarations declared outside of a layer.
-The declaration order matters. The first declared layer gets the lowest priority and the last declared layer gets the highest priority. However, the priority is reversed when the [`!important`](/en-US/docs/Web/CSS/important) flag is used.
+The declaration order matters. The first declared layer gets the lowest priority and the last declared layer gets the highest priority. However, the priority is reversed when the [`!important`](/en-US/docs/Web/CSS/Reference/Values/important) flag is used.
 
 The `@layer` at-rule is used to create a cascade layer in one of three ways.
 
@@ -235,9 +235,9 @@ In the following example, two layers are created with no rules applied, then CSS
 - [`@import`](/en-US/docs/Web/CSS/Reference/At-rules/@import)
 - {{domxref("CSSLayerBlockRule")}}
 - {{domxref("CSSLayerStatementRule")}}
-- [`!important`](/en-US/docs/Web/CSS/important)
-- [`revert-layer`](/en-US/docs/Web/CSS/revert-layer)
-- [Introducing the CSS cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade)
+- [`!important`](/en-US/docs/Web/CSS/Reference/Values/important)
+- [`revert-layer`](/en-US/docs/Web/CSS/Reference/Values/revert-layer)
+- [Introducing the CSS cascade](/en-US/docs/Web/CSS/Guides/Cascade/Introduction)
 - [Learn: Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - [Learn: Cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
 - [The future of CSS: Cascade layers](https://www.bram.us/2021/09/15/the-future-of-css-cascade-layers-css-at-layer/) on bram.us (2021)

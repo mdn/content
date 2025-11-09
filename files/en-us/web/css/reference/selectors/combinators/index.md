@@ -38,5 +38,5 @@ selector1 combinator selector2 {
 
 ## See also
 
-- [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module
-- [Selectors and combinators](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators)
+- [CSS selectors](/en-US/docs/Web/CSS/Guides/Selectors) module
+- [Selectors and combinators](/en-US/docs/Web/CSS/Guides/Selectors/Selectors_and_combinators)

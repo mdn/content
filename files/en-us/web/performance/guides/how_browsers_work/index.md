@@ -164,7 +164,7 @@ The third step in the critical rendering path is combining the DOM and CSSOM int
 
 Elements that aren't going to be displayed, like the [`<head>`](/en-US/docs/Web/HTML/Reference/Elements/head) element and its children and any nodes with `display: none`, such as the `script { display: none; }` you will find in user agent stylesheets, are not included in the render tree as they will not appear in the rendered output. Nodes with `visibility: hidden` applied are included in the render tree, as they do take up space. As we have not given any directives to override the user agent default, the `script` node in our code example above will not be included in the render tree.
 
-Each visible node has its CSSOM rules applied to it. The render tree holds all the visible nodes with content and computed styles — matching up all the relevant styles to every visible node in the DOM tree, and determining, based on the [CSS cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade), what the computed styles are for each node.
+Each visible node has its CSSOM rules applied to it. The render tree holds all the visible nodes with content and computed styles — matching up all the relevant styles to every visible node in the DOM tree, and determining, based on the [CSS cascade](/en-US/docs/Web/CSS/Guides/Cascade/Introduction), what the computed styles are for each node.
 
 ### Layout
 

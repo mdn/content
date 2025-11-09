@@ -32,12 +32,12 @@ p::first-line {
 
 Double colons (`::`) are used for pseudo-elements. This distinguishes pseudo-elements from [pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) that use a single colon (`:`) in their notation. Note, browsers support single colon syntax for the original four pseudo-elements: `::before`, `::after`, `::first-line`, and `::first-letter`.
 
-Pseudo-elements do not exist independently. The element of which a pseudo-element is a part is called its _originating element_. A pseudo-element must appear after all the other components in the [complex](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#complex_selector) or [compound](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector) selector. The last element in the selector is the originating element of the pseudo-element. For example, you can select a paragraph's first line using `p::first-line` but not the first-line's children. So `p::first-line > *` is invalid.
+Pseudo-elements do not exist independently. The element of which a pseudo-element is a part is called its _originating element_. A pseudo-element must appear after all the other components in the [complex](/en-US/docs/Web/CSS/Guides/Selectors/Selector_structure#complex_selector) or [compound](/en-US/docs/Web/CSS/Guides/Selectors/Selector_structure#compound_selector) selector. The last element in the selector is the originating element of the pseudo-element. For example, you can select a paragraph's first line using `p::first-line` but not the first-line's children. So `p::first-line > *` is invalid.
 
 A pseudo-element can be selected based on the current state of the originating element. For example, `p:hover::first-line` selects the first line (pseudo-element) of a paragraph when the paragraph itself is being hovered (pseudo-class).
 
 > [!NOTE]
-> When a [selector list](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#selector_list) contains an invalid selector, the entire style block is ignored.
+> When a [selector list](/en-US/docs/Web/CSS/Guides/Selectors/Selector_structure#selector_list) contains an invalid selector, the entire style block is ignored.
 
 ## Typographic pseudo-elements
 
@@ -48,7 +48,7 @@ A pseudo-element can be selected based on the current state of the originating e
 - {{CSSxRef("::cue")}}
   - : The [WebVTT](/en-US/docs/Web/API/WebVTT_API) cues within a selected element.
     This can be used to [style captions and other cues](/en-US/docs/Web/API/WebVTT_API#styling_webvtt_in_html_or_a_stylesheet) in media with VTT tracks.
-    The [CSS pseudo-elements](/en-US/docs/Web/CSS/CSS_pseudo-elements) module also defines the `::postfix` and `::prefix` sub-pseudo elements. These are not yet supported by any browser.
+    The [CSS pseudo-elements](/en-US/docs/Web/CSS/Guides/Pseudo-elements) module also defines the `::postfix` and `::prefix` sub-pseudo elements. These are not yet supported by any browser.
 
 ## Highlight pseudo-elements
 
@@ -74,7 +74,7 @@ These pseudo-elements behave like regular elements, fitting seamlessly within th
 - {{CSSxRef("::after")}}
   - : Creates a pseudo-element that is the last child of the selected element.
 - {{CSSxRef("::column")}}
-  - : Each column fragment of a [multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout).
+  - : Each column fragment of a [multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout).
 - {{CSSxRef("::marker")}}
   - : The automatically generated marker box of a list item.
 - {{CSSxRef("::backdrop")}}
@@ -194,7 +194,7 @@ Check out the individual pseudo-element reference pages for examples and browser
 
 ## Highlight pseudo-elements inheritance
 
-[Highlight pseudo-elements](#highlight_pseudo-elements), such as {{CSSxref("::selection")}}, {{CSSxref("::target-text")}}, {{CSSxref("::highlight()")}}, {{CSSxref("::spelling-error")}}, and {{CSSxref("::grammar-error")}}, follow a consistent inheritance model that differs from [regular element inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance).
+[Highlight pseudo-elements](#highlight_pseudo-elements), such as {{CSSxref("::selection")}}, {{CSSxref("::target-text")}}, {{CSSxref("::highlight()")}}, {{CSSxref("::spelling-error")}}, and {{CSSxref("::grammar-error")}}, follow a consistent inheritance model that differs from [regular element inheritance](/en-US/docs/Web/CSS/Guides/Cascade/Inheritance).
 
 When you apply styles to highlight pseudo-elements, they inherit from both:
 
@@ -252,7 +252,7 @@ Try selecting the text in both the parent and child elements. Notice that:
 
 This demonstrates how the child's highlight pseudo-element inherits from both its parent element and the parent's highlight pseudo-element.
 
-[CSS custom properties (variables)](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) in highlight pseudo-elements inherit from their originating element (the element they're being applied to), not through the highlight inheritance chain. For example:
+[CSS custom properties (variables)](/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties) in highlight pseudo-elements inherit from their originating element (the element they're being applied to), not through the highlight inheritance chain. For example:
 
 ```css
 :root {
@@ -288,8 +288,8 @@ When using the universal selector with highlight pseudo-elements, it prevents hi
 
 ## See also
 
-- [CSS pseudo-elements](/en-US/docs/Web/CSS/CSS_pseudo-elements) module
+- [CSS pseudo-elements](/en-US/docs/Web/CSS/Guides/Pseudo-elements) module
 - [Pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
-- [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module
+- [CSS selectors](/en-US/docs/Web/CSS/Guides/Selectors) module
 - [Learn: Pseudo-classes and pseudo-elements](/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)
 - [Inheritance changes for CSS selection styling](https://developer.chrome.com/blog/selection-styling) - Detailed explanation of the highlight pseudo-elements inheritance model changes in Chrome 134

@@ -47,7 +47,7 @@ Firefox 22 was released on June 25, 2013. This article lists key changes that ar
 
 ### CSS
 
-- Support for [CSS Flexbox layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) has been enabled by default ([Firefox bug 841876](https://bugzil.la/841876)).
+- Support for [CSS Flexbox layout](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts) has been enabled by default ([Firefox bug 841876](https://bugzil.la/841876)).
 - Following a spec change, the initial value for {{cssxref("min-width")}} and {{cssxref("min-height")}} has been changed back to `0`, even on flex items ([Firefox bug 848539](https://bugzil.la/848539)).
 - Support for CSS Conditionals ({{cssxref("@supports")}} and {{domxref("CSS.supports_static", "CSS.supports()")}}) has been enabled by default ([Firefox bug 855455](https://bugzil.la/855455)).
 - Support for {{cssxref("background-clip")}} and {{cssxref("background-origin")}} properties in the {{cssxref("background")}} shorthand has been implemented ([Firefox bug 570896](https://bugzil.la/570896)).

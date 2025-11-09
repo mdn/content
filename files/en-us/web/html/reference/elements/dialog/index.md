@@ -89,7 +89,7 @@ This dialog is initially open because of the presence of the `open` attribute. D
 
 ### Creating a modal dialog
 
-This example demonstrates a modal dialog with a [gradient](/en-US/docs/Web/CSS/gradient) backdrop. The `.showModal()` method opens the modal dialog when the "Show the dialog" button is activated. The dialog can be closed by pressing the <kbd>Esc</kbd> key or via the `close()` method when the "Close" button within the dialog is activated.
+This example demonstrates a modal dialog with a [gradient](/en-US/docs/Web/CSS/Reference/Values/gradient) backdrop. The `.showModal()` method opens the modal dialog when the "Show the dialog" button is activated. The dialog can be closed by pressing the <kbd>Esc</kbd> key or via the `close()` method when the "Close" button within the dialog is activated.
 
 When a dialog opens, the browser, by default, gives focus to the first element that can be focused within the dialog. In this example, the [`autofocus`](/en-US/docs/Web/HTML/Reference/Global_attributes/autofocus) attribute is applied to the "Close" button, giving it focus when the dialog opens, as this is the element we expect the user will interact with immediately after the dialog opens.
 
@@ -400,7 +400,7 @@ Try clicking each button to open a dialog. The first one can only be closed by c
 
 ### Animating dialogs
 
-`<dialog>`s are set to [`display: none;`](/en-US/docs/Web/CSS/Reference/Properties/display) when hidden and `display: block;` when shown, as well as being removed from / added to the {{glossary("top layer")}} and the [accessibility tree](/en-US/docs/Web/Performance/Guides/How_browsers_work#building_the_accessibility_tree). Therefore, for `<dialog>` elements to be animated the {{cssxref("display")}} property needs to be animatable. [Supporting browsers](/en-US/docs/Web/CSS/Reference/Properties/display#browser_compatibility) animate `display` with a variation on the [discrete animation type](/en-US/docs/Web/CSS/CSS_animated_properties#discrete). Specifically, the browser will flip between `none` and another value of `display` so that the animated content is shown for the entire animation duration.
+`<dialog>`s are set to [`display: none;`](/en-US/docs/Web/CSS/Reference/Properties/display) when hidden and `display: block;` when shown, as well as being removed from / added to the {{glossary("top layer")}} and the [accessibility tree](/en-US/docs/Web/Performance/Guides/How_browsers_work#building_the_accessibility_tree). Therefore, for `<dialog>` elements to be animated the {{cssxref("display")}} property needs to be animatable. [Supporting browsers](/en-US/docs/Web/CSS/Reference/Properties/display#browser_compatibility) animate `display` with a variation on the [discrete animation type](/en-US/docs/Web/CSS/Guides/Animations/Animatable_properties#discrete). Specifically, the browser will flip between `none` and another value of `display` so that the animated content is shown for the entire animation duration.
 
 So for example:
 
@@ -408,7 +408,7 @@ So for example:
 - When animating `display` from `block` (or another visible `display` value) to `none`, the value will flip to `none` at `100%` of the animation duration so it is visible throughout.
 
 > [!NOTE]
-> When animating using [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions), [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/Reference/Properties/transition-behavior) needs to be set to enable the above behavior. This behavior is available by default when animating with [CSS animations](/en-US/docs/Web/CSS/CSS_animations); an equivalent step is not required.
+> When animating using [CSS transitions](/en-US/docs/Web/CSS/Guides/Transitions), [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/Reference/Properties/transition-behavior) needs to be set to enable the above behavior. This behavior is available by default when animating with [CSS animations](/en-US/docs/Web/CSS/Guides/Animations); an equivalent step is not required.
 
 #### Transitioning dialog elements
 

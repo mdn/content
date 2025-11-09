@@ -86,7 +86,7 @@ animation-play-state: unset;
   - : The **animation** is currently **paused**.
 
 > [!NOTE]
-> When you specify multiple comma-separated values on an `animation-*` property, they are applied to the animations in the order in which the {{cssxref("animation-name")}}s appear. For situations where the number of animations and `animation-*` property values do not match, see [Setting multiple animation property values](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations#setting_multiple_animation_property_values).
+> When you specify multiple comma-separated values on an `animation-*` property, they are applied to the animations in the order in which the {{cssxref("animation-name")}}s appear. For situations where the number of animations and `animation-*` property values do not match, see [Setting multiple animation property values](/en-US/docs/Web/CSS/Guides/Animations/Using#setting_multiple_animation_property_values).
 
 ## Formal definition
 
@@ -142,7 +142,7 @@ Hover over the rectangle to play the animation.
 
 {{EmbedLiveSample("Pausing an animation","100%","250")}}
 
-See [CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations) for examples.
+See [CSS animations](/en-US/docs/Web/CSS/Guides/Animations/Using) for examples.
 
 ## Specifications
 
@@ -154,6 +154,6 @@ See [CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations) fo
 
 ## See also
 
-- [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [Using CSS animations](/en-US/docs/Web/CSS/Guides/Animations/Using)
 - JavaScript {{domxref("AnimationEvent")}} API
 - Other related animation properties: {{cssxref("animation")}}, {{cssxref("animation-composition")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-timeline")}}, {{cssxref("animation-timing-function")}}

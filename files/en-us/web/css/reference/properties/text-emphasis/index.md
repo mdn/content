@@ -6,7 +6,7 @@ browser-compat: css.properties.text-emphasis
 sidebar: cssref
 ---
 
-The **`text-emphasis`** [CSS](/en-US/docs/Web/CSS) property applies emphasis marks to text (except spaces and control characters). It is a [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) for {{cssxref("text-emphasis-style")}} and {{cssxref("text-emphasis-color")}}.
+The **`text-emphasis`** [CSS](/en-US/docs/Web/CSS) property applies emphasis marks to text (except spaces and control characters). It is a [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) for {{cssxref("text-emphasis-style")}} and {{cssxref("text-emphasis-color")}}.
 
 {{InteractiveExample("CSS Demo: text-emphasis")}}
 

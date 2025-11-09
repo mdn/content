@@ -32,7 +32,7 @@ override-colors:
 
 The `override-colors` [descriptor](/en-US/docs/Glossary/CSS_Descriptor) takes a comma-separated list of the color index and new color value.
 
-The color index is zero-based and any [color value](/en-US/docs/Web/CSS/color_value) can be used.
+The color index is zero-based and any [color value](/en-US/docs/Web/CSS/Reference/Values/color_value) can be used.
 
 For each key-value pair of index and color, the color with the index in the specified [base-palette](/en-US/docs/Web/CSS/Reference/At-rules/@font-palette-values/base-palette) will be overwritten. If the color font does not have a color at the specified index, it will be ignored.
 
@@ -165,7 +165,7 @@ This example shows that in `base-palette` `3`, the color at index 0 is overridde
 
 ## See also
 
-- {{cssxref("@font-palette-values/", "@font-palette-values")}}
+- {{cssxref("@font-palette-values")}}
 - {{cssxref("@font-palette-values/base-palette", "base-palette")}}
 - {{cssxref("@font-palette-values/font-family", "font-family")}}
 - {{cssxref("font-palette")}}

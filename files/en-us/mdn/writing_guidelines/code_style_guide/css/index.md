@@ -32,7 +32,7 @@ This rule does not apply to the CSS feature being documented on the page (which 
 
 There are some uniformly acknowledged principles that we don't need to exhaustively state here:
 
-- Ensure that your code doesn't have syntax errors, which can result in the [property or declaration being ignored](/en-US/docs/Web/CSS/CSS_syntax/Error_handling). Standard syntax that hasn't been implemented is acceptable, if it fits our [general rule about modern CSS features](#use_modern_css_features_when_supported).
+- Ensure that your code doesn't have syntax errors, which can result in the [property or declaration being ignored](/en-US/docs/Web/CSS/Guides/Syntax/Error_handling). Standard syntax that hasn't been implemented is acceptable, if it fits our [general rule about modern CSS features](#use_modern_css_features_when_supported).
 - Don't use [non-standard, deprecated, or obsolete](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete) features. This guideline extends to [prefixed features](/en-US/docs/Glossary/Vendor_Prefix#css_prefixes): use the prefixed alternative _only if_ the standard feature is not available (see our [general rule about modern CSS features](#use_modern_css_features_when_supported)). If the reader needs broader compatibility, they can either add the prefixed fallback themselves or use a CSS postprocessor.
 - Don't write redundant or non-functional code, which is a common indicator of bugs or refactoring leftovers. This includes repeated properties in a declaration, empty declarations, empty comments, or selectors that don't match any elements.
 
@@ -276,7 +276,7 @@ The `::before`, `::after`, `::first-letter`, and `::first-line` [pseudo-elements
 
 ### Complex selector lists
 
-The `:is()`, `:where()`, and `:not()` pseudo-classes accept [complex selector lists](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#complex_selector). Use them to shorten your selector.
+The `:is()`, `:where()`, and `:not()` pseudo-classes accept [complex selector lists](/en-US/docs/Web/CSS/Guides/Selectors/Selector_structure#complex_selector). Use them to shorten your selector.
 
 Write this:
 
@@ -298,7 +298,7 @@ input:not(:checked):not(:disabled) {
 
 By default, all identifiers should be lowercase. This applies to selectors, functions, and keywords. Custom identifiers should use [kebab-case](/en-US/docs/Glossary/Kebab_case), such as `--custom-property` or `my-animation`. See the [HTML style guide](/en-US/docs/MDN/Writing_guidelines/Code_style_guide/HTML#casing_convention_on_mdn) for casing conventions of HTML IDs and classes which are referenced as CSS selectors.
 
-Exceptions include keyword values defined in SVG, which for historical reasons are [camelCase](/en-US/docs/Glossary/Camel_case), and should be written as such to enhance readability. These keywords include: [`currentColor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword), {{cssxref("text-rendering")}} values, {{cssxref("shape-rendering")}} values, {{cssxref("pointer-events")}} values, and {{cssxref("color-interpolation-filters")}} values.
+Exceptions include keyword values defined in SVG, which for historical reasons are [camelCase](/en-US/docs/Glossary/Camel_case), and should be written as such to enhance readability. These keywords include: [`currentColor`](/en-US/docs/Web/CSS/Reference/Values/color_value#currentcolor_keyword), {{cssxref("text-rendering")}} values, {{cssxref("shape-rendering")}} values, {{cssxref("pointer-events")}} values, and {{cssxref("color-interpolation-filters")}} values.
 
 ## Colors
 
@@ -418,7 +418,7 @@ If you have different alternative styles selected by media thresholds, be especi
 
 ### Mobile-first media queries
 
-In a stylesheet that contains [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) styles for different target viewport sizes, first include the narrow screen/mobile styling before any other media queries are encountered. Add styling for wider viewport sizes via successive media queries. Following this rule has many advantages that are explained in [Responsive design](/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design).
+In a stylesheet that contains [media query](/en-US/docs/Web/CSS/Guides/Media_queries/Using) styles for different target viewport sizes, first include the narrow screen/mobile styling before any other media queries are encountered. Add styling for wider viewport sizes via successive media queries. Following this rule has many advantages that are explained in [Responsive design](/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design).
 
 ```css example-good
 /* Default CSS layout for narrow screens */

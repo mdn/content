@@ -6,7 +6,7 @@ browser-compat: css.properties.height
 sidebar: cssref
 ---
 
-The **`height`** [CSS](/en-US/docs/Web/CSS) property specifies the height of an element. By default, the property defines the height of the [content area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#content_area). If {{cssxref("box-sizing")}} is set to `border-box`, however, it instead determines the height of the [border area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#border_area).
+The **`height`** [CSS](/en-US/docs/Web/CSS) property specifies the height of an element. By default, the property defines the height of the [content area](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#content_area). If {{cssxref("box-sizing")}} is set to `border-box`, however, it instead determines the height of the [border area](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#border_area).
 
 {{InteractiveExample("CSS Demo: height")}}
 
@@ -84,7 +84,7 @@ height: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : Defines the height as a distance value.
 - {{cssxref("&lt;percentage&gt;")}}
-  - : Defines the height as a percentage of the [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block)'s height.
+  - : Defines the height as a percentage of the [containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block)'s height.
 - `auto`
   - : The browser will calculate and select a height for the specified element.
 - {{cssxref("max-content")}}
@@ -92,11 +92,11 @@ height: unset;
 - {{cssxref("min-content")}}
   - : The intrinsic minimum height.
 - {{cssxref("fit-content")}}
-  - : Use the available space, but not more than [max-content](/en-US/docs/Web/CSS/max-content), i.e., `min(max-content, max(min-content, stretch))`.
-- [`fit-content(<length-percentage>)`](/en-US/docs/Web/CSS/fit-content_function)
+  - : Use the available space, but not more than [max-content](/en-US/docs/Web/CSS/Reference/Values/max-content), i.e., `min(max-content, max(min-content, stretch))`.
+- [`fit-content(<length-percentage>)`](/en-US/docs/Web/CSS/Reference/Values/fit-content_function)
   - : Uses the fit-content formula with the available space replaced by the specified argument, i.e., `min(max-content, max(min-content, <length-percentage>))`.
 - `stretch`
-  - : Sets the height of the element's [margin box](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model#parts_of_a_box) to the height of its [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block#identifying_the_containing_block). It attempts to make the margin box fill the available space in the containing block, so in a way behaving similar to `100%` but applying the resulting size to the margin box rather than the box determined by [box-sizing](/en-US/docs/Web/CSS/Reference/Properties/box-sizing).
+  - : Sets the height of the element's [margin box](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model#parts_of_a_box) to the height of its [containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block#identifying_the_containing_block). It attempts to make the margin box fill the available space in the containing block, so in a way behaving similar to `100%` but applying the resulting size to the margin box rather than the box determined by [box-sizing](/en-US/docs/Web/CSS/Reference/Properties/box-sizing).
 
 ## Accessibility
 
@@ -225,5 +225,5 @@ div {
 - {{cssxref("clamp", "clamp()")}}
 - {{cssxref("minmax", "minmax()")}}
 - SVG {{SVGAttr("height")}} attribute
-- [Introduction to the CSS box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-- [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module
+- [Introduction to the CSS box model](/en-US/docs/Web/CSS/Guides/Box_model/Introduction)
+- [CSS box model](/en-US/docs/Web/CSS/Guides/Box_model) module

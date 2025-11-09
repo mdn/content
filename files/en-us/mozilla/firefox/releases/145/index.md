@@ -39,6 +39,9 @@ Firefox 145 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - The [`math`](/en-US/docs/Web/CSS/Reference/Properties/font-family#math) generic font family is now supported as a value of the `font-family` property, allowing mathematical expressions to use appropriate fonts.
   ([Firefox bug 1788937](https://bugzil.la/1788937)).
 
+- Separators can appear in {{htmlelement("select")}} menus since {{htmlelement("hr")}} in `<select>` was implemented.
+  These are now also supported in Firefox for Android. ([Firefox bug 1867045](https://bugzil.la/1867045), [Firefox bug 1830909](https://bugzil.la/1830909)).
+
 <!-- #### Removals -->
 
 ### JavaScript
@@ -75,6 +78,8 @@ Firefox 145 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 - {{domxref("RTCEncodedVideoFrame")}} and {{domxref("RTCEncodedAudioFrame")}} are now {{glossary("Serializable object", "serializable objects")}}, and {{domxref("RTCEncodedAudioFrame/RTCEncodedAudioFrame", "RTCEncodedAudioFrame()")}} and {{domxref("RTCEncodedVideoFrame/RTCEncodedVideoFrame", "RTCEncodedVideoFrame()")}} copy constructors are supported. These changes allow frames to be cloned, and to be shared between workers and the main thread. ([Firefox bug 1868223](https://bugzil.la/1868223) and [Firefox bug 1975032](https://bugzil.la/1975032)).
 
+- The [Matroska container](/en-US/docs/Web/Media/Guides/Formats/Containers) (`.mkv`) is now supported for the most commonly-used codecs: AVC, HEVC, VP8, VP9, AV1, AAC, Opus, and Vorbis. ([Firefox bug 1991752](https://bugzil.la/1991752)).
+
 <!-- #### Removals -->
 
 <!-- ### WebAssembly -->
@@ -109,7 +114,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
 - **CSS anchor positioning** (Nightly): `layout.css.anchor-positioning.enabled`
 
-  Nightly builds now support [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) by default, which allows you to tether elements together.
+  Nightly builds now support [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) by default, which allows you to tether elements together.
   The anchor-positioned elements can then have their size and position set relative to the size and location of the anchor elements to which they are bound.
   (General: [Firefox bug 1988224](https://bugzil.la/1988224), `position-area`: [Firefox bug 1924086](https://bugzil.la/1924086)).
 

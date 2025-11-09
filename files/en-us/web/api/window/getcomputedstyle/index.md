@@ -8,7 +8,7 @@ browser-compat: api.Window.getComputedStyle
 
 {{APIRef("CSSOM")}}
 
-The **`Window.getComputedStyle()`** method returns a live read-only {{DOMxRef("CSSStyleProperties")}} object containing the [resolved values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#resolved_value) of all CSS properties of an element, after applying active stylesheets and resolving any computation those values may contain.
+The **`Window.getComputedStyle()`** method returns a live read-only {{DOMxRef("CSSStyleProperties")}} object containing the [resolved values](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#resolved_value) of all CSS properties of an element, after applying active stylesheets and resolving any computation those values may contain.
 
 ## Syntax
 
@@ -48,18 +48,18 @@ A _live_ {{DOMxRef("CSSStyleProperties")}} object, which updates automatically w
 
 ## Description
 
-The method returns a live read-only {{DOMxRef("CSSStyleProperties")}} object containing the [resolved values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#resolved_value) of all CSS properties of an element, after applying active stylesheets and resolving any computation those values may contain.
+The method returns a live read-only {{DOMxRef("CSSStyleProperties")}} object containing the [resolved values](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#resolved_value) of all CSS properties of an element, after applying active stylesheets and resolving any computation those values may contain.
 
 The returned object can be used to inspect the element's styles — including those set inline, using a `<style>` element, or via an external stylesheet.
 Since the object read-only you can't use it to set the styles of an element.
 However because it is "live", if you update the element styles using another API (such as {{domxref("HTMLElement.style")}}), the returned object will be updated with the corresponding resolved value.
 
-The distinction that the object contains [resolved values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#resolved_value) is important.
+The distinction that the object contains [resolved values](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#resolved_value) is important.
 For most properties, in particular those that depend on layout such as `display`, `font-size`, or `line-height`, the resolved value is the computed value.
 For properties that depend on layout, the used value may differ slightly from the computed value, and this is what is returned as the resolved value.
 For an animating property value, it will be the computed value at the current point in the animation.
 
-The returned object has dash-named and corresponding {{Glossary("camel_case", "camel-case")}} named properties for **all** [CSS properties](/en-US/docs/Web/CSS/Reference/Properties) supported by the browser, including both [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) and longhand properties.
+The returned object has dash-named and corresponding {{Glossary("camel_case", "camel-case")}} named properties for **all** [CSS properties](/en-US/docs/Web/CSS/Reference/Properties) supported by the browser, including both [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) and longhand properties.
 
 Shorthand CSS properties of the element are expanded to their corresponding long-form properties.
 For example, an element with style `"border-top: 1px solid black"` would be represented in the returned object by properties with the names {{cssxref("border-top")}} and `borderTop`, and the corresponding longhand properties {{cssxref("border-top-color")}} and `borderTopColor`, {{cssxref("border-top-style")}} and `borderTopStyle`, and {{cssxref("border-top-width")}} and `borderTopWidth`.
@@ -69,10 +69,10 @@ However the `element.style` object can also be used to **set** styles on that el
 
 ### Color values
 
-For compatibility reasons, serialized color values specified using the traditional sRGB color space are expressed as [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) colors if the alpha channel value is exactly `1`, and `rgba()` colors otherwise.
+For compatibility reasons, serialized color values specified using the traditional sRGB color space are expressed as [`rgb()`](/en-US/docs/Web/CSS/Reference/Values/color_value/rgb) colors if the alpha channel value is exactly `1`, and `rgba()` colors otherwise.
 The legacy syntax with commas is used, with commas as separators (for example `rgb(255, 0, 0)`).
 
-For other {{glossary("color space","color spaces")}} the values are serialized using the corresponding functional expressions: [`lab()`](/en-US/docs/Web/CSS/color_value/lab), [`lch()`](/en-US/docs/Web/CSS/color_value/lch) [`oklab()`](/en-US/docs/Web/CSS/color_value/oklab), [`oklch()`](/en-US/docs/Web/CSS/color_value/oklch), [`color()`](/en-US/docs/Web/CSS/color_value/color).
+For other {{glossary("color space","color spaces")}} the values are serialized using the corresponding functional expressions: [`lab()`](/en-US/docs/Web/CSS/Reference/Values/color_value/lab), [`lch()`](/en-US/docs/Web/CSS/Reference/Values/color_value/lch) [`oklab()`](/en-US/docs/Web/CSS/Reference/Values/color_value/oklab), [`oklch()`](/en-US/docs/Web/CSS/Reference/Values/color_value/oklch), [`color()`](/en-US/docs/Web/CSS/Reference/Values/color_value/color).
 
 ## Examples
 
@@ -150,4 +150,4 @@ console.log("the generated content is: ", result); // returns ' rocks!'
 - {{DOMxRef("window.getDefaultComputedStyle()")}}
 - {{DOMxRef("CSSStyleDeclaration.getPropertyValue", "getPropertyValue()")}}
 - {{domxref("Element.computedStyleMap()")}}
-- [Resolved value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#resolved_value)
+- [Resolved value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#resolved_value)

@@ -70,7 +70,7 @@ The `outline-color` property is specified as any one of the values listed below.
 - {{cssxref("&lt;color&gt;")}}
   - : The color of the outline, specified as a `<color>`.
 
-The specification also lists an additional value, `auto`, which is not currently supported in any browsers. When implemented, `auto` will compute to [`currentColor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword) unless [`outline-style`](/en-US/docs/Web/CSS/Reference/Properties/outline-style) is set to `auto` then it will compute to the [accent color](/en-US/docs/Web/CSS/Reference/Properties/accent-color).
+The specification also lists an additional value, `auto`, which is not currently supported in any browsers. When implemented, `auto` will compute to [`currentColor`](/en-US/docs/Web/CSS/Reference/Values/color_value#currentcolor_keyword) unless [`outline-style`](/en-US/docs/Web/CSS/Reference/Properties/outline-style) is set to `auto` then it will compute to the [accent color](/en-US/docs/Web/CSS/Reference/Properties/accent-color).
 
 ## Description
 

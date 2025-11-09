@@ -6,11 +6,11 @@ browser-compat: css.at-rules.position-try
 sidebar: cssref
 ---
 
-The **`@position-try`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rules) is used to define a custom position try fallback option, which can be used to define positioning and alignment for anchor-positioned elements. One or more sets of position try fallback options can be applied to the anchored element via the {{cssxref("position-try-fallbacks")}} property or {{cssxref("position-try")}} shorthand. When the positioned element is moved to a position where it starts to overflow its containing block or the viewport, the browser will select the first position try fallback option it finds that places the positioned element fully back on-screen.
+The **`@position-try`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules) is used to define a custom position try fallback option, which can be used to define positioning and alignment for anchor-positioned elements. One or more sets of position try fallback options can be applied to the anchored element via the {{cssxref("position-try-fallbacks")}} property or {{cssxref("position-try")}} shorthand. When the positioned element is moved to a position where it starts to overflow its containing block or the viewport, the browser will select the first position try fallback option it finds that places the positioned element fully back on-screen.
 
 Each position option is named with a {{cssxref("dashed-ident")}} and contains a descriptor list specifying declarations that define information such as inset position, margin, sizing, and self-alignment. The `<dashed-ident>` is used to reference the custom position option in the {{cssxref("position-try-fallbacks")}} property and {{cssxref("position-try")}} shorthand.
 
-For detailed information on anchor features and position try fallback usage, see the [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module landing page and the [Fallback options and conditional hiding for overflow](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide.
+For detailed information on anchor features and position try fallback usage, see the [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) module landing page and the [Fallback options and conditional hiding for overflow](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding) guide.
 
 ## Syntax
 
@@ -32,7 +32,7 @@ The descriptors specify property values that define the behavior of the custom p
 - `position-area`
   - : Specifies a {{cssxref("position-area")}} property value that defines the position of the anchor-positioned element relative to the anchor.
 - [Inset property](/en-US/docs/Glossary/Inset_properties) descriptors
-  - : Specify [`anchor()`](/en-US/docs/Web/CSS/anchor) function values that define the position of the anchor-positioned element's edges relative to the anchor element's edge. Inset property descriptors can be set that represent the following properties:
+  - : Specify [`anchor()`](/en-US/docs/Web/CSS/Reference/Values/anchor) function values that define the position of the anchor-positioned element's edges relative to the anchor element's edge. Inset property descriptors can be set that represent the following properties:
     - {{cssxref("top")}}
     - {{cssxref("left")}}
     - {{cssxref("bottom")}}
@@ -58,7 +58,7 @@ The descriptors specify property values that define the behavior of the custom p
     - {{cssxref("margin-block")}}
     - {{cssxref("margin-inline")}}
 - Sizing property descriptors
-  - : Specify [`anchor-size()`](/en-US/docs/Web/CSS/anchor-size) function values that define the size of the anchor-positioned element relative to the anchor element size. Sizing property descriptors can be set that represent the following properties:
+  - : Specify [`anchor-size()`](/en-US/docs/Web/CSS/Reference/Values/anchor-size) function values that define the size of the anchor-positioned element relative to the anchor element size. Sizing property descriptors can be set that represent the following properties:
     - {{cssxref("width")}}
     - {{cssxref("height")}}
     - {{cssxref("min-width")}}
@@ -72,7 +72,7 @@ The descriptors specify property values that define the behavior of the custom p
     - {{cssxref("max-block-size")}}
     - {{cssxref("max-inline-size")}}
 - Self-alignment property descriptors
-  - : Specify the [`anchor-center`](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#centering_on_the_anchor_using_anchor-center) value to align the anchor-positioned element relative to the anchor element's center, in the block or inline direction. {{cssxref("align-self")}} and {{cssxref("justify-self")}} property descriptors can take the `anchor-center` value.
+  - : Specify the [`anchor-center`](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using#centering_on_the_anchor_using_anchor-center) value to align the anchor-positioned element relative to the anchor element's center, in the block or inline direction. {{cssxref("align-self")}} and {{cssxref("justify-self")}} property descriptors can take the `anchor-center` value.
 
 > [!NOTE]
 > When a custom position option is applied to an element, the property values defined in the `@position-try` at-rule descriptor takes precedence over the values set on the element via standard CSS properties.
@@ -228,7 +228,7 @@ In some cases, we need to set values inside the custom position options to turn 
 - {{cssxref("position-try")}}
 - The {{cssxref("anchor()")}} function
 - The {{cssxref("anchor-size()")}} function
-- [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module
-- [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide
-- [Fallback options and conditional hiding for overflow](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide
+- [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) module
+- [Using CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using) guide
+- [Fallback options and conditional hiding for overflow](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding) guide
 - {{domxref("CSSPositionTryRule")}}

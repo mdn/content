@@ -7,7 +7,7 @@ spec-urls: https://drafts.csswg.org/selectors/
 sidebar: cssref
 ---
 
-**CSS selectors** are patterns used in [CSS rules](/en-US/docs/Web/CSS/CSS_syntax/Syntax#css_rulesets) to target and select specific elements for styling.
+**CSS selectors** are patterns used in [CSS rules](/en-US/docs/Web/CSS/Guides/Syntax/Introduction#css_rulesets) to target and select specific elements for styling.
 
 For example, to style paragraphs, you will use the `p` [type selector](/en-US/docs/Web/CSS/Reference/Selectors/Type_selectors) to select all {{HTMLElement("p")}} elements and apply a style to them:
 
@@ -47,11 +47,11 @@ Check the [pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classe
 
 ## See also
 
-- [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module
-- [CSS selector structure](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure)
+- [CSS selectors](/en-US/docs/Web/CSS/Guides/Selectors) module
+- [CSS selector structure](/en-US/docs/Web/CSS/Guides/Selectors/Selector_structure)
 - [CSS combinators](/en-US/docs/Web/CSS/Reference/Selectors/Combinators)
 - [Selector list](/en-US/docs/Web/CSS/Reference/Selectors/Selector_list)
-- [Selectors and combinators](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators)
-- [CSS pseudo-elements](/en-US/docs/Web/CSS/CSS_pseudo-elements) module
-- [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting) module
-- [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
+- [Selectors and combinators](/en-US/docs/Web/CSS/Guides/Selectors/Selectors_and_combinators)
+- [CSS pseudo-elements](/en-US/docs/Web/CSS/Guides/Pseudo-elements) module
+- [CSS nesting](/en-US/docs/Web/CSS/Guides/Nesting) module
+- [Specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity)

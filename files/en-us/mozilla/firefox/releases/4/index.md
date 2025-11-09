@@ -50,7 +50,7 @@ The following changes were made to the {{domxref("CanvasRenderingContext2D")}} i
 
 ### CSS
 
-- [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [CSS transitions](/en-US/docs/Web/CSS/Guides/Transitions/Using)
   - : New CSS transitions support is available in Firefox 4.
 - Computed values in CSS
   - : Support for `-moz-calc` has been added. This lets you specify {{cssxref("length")}} values as mathematical expressions.
@@ -60,9 +60,9 @@ The following changes were made to the {{domxref("CanvasRenderingContext2D")}} i
   - : The {{cssxref("-moz-image-rect")}} function makes it possible to use subrectangles of images as a {{cssxref("background-image")}}.
 - CSS touch properties
   - : Support for touch properties is added. Details, and real article names, to come later.
-- [Using arbitrary elements as CSS backgrounds](/en-US/docs/Web/CSS/element)
+- [Using arbitrary elements as CSS backgrounds](/en-US/docs/Web/CSS/Reference/Values/element)
   - : You can use the `-moz-element` CSS function and the {{domxref("document.mozSetImageElement()")}} DOM function to use arbitrary HTML elements as backgrounds.
-- [Privacy and the :visited selector](/en-US/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector)
+- [Privacy and the :visited selector](/en-US/docs/Web/CSS/Guides/Selectors/Privacy_and_:visited)
   - : Changes have been made to what information can be obtained about the style of visited links using CSS selectors. This may affect some web applications.
 
 #### New CSS properties
@@ -221,7 +221,7 @@ The following changes were made to the {{domxref("CanvasRenderingContext2D")}} i
 - The {{cssxref("text-shadow")}} property now caps the blur radius to 300px for sanity and performance reasons.
 - The {{cssxref("overflow")}} property no longer applies to table-group elements (`<thead>`, `<tbody>`, and `<tfoot>`).
 - The `-moz-appearance` property now supports the `-moz-win-borderless-glass` value, which applies a borderless Aero Glass look to an element.
-- The [`-moz-device-pixel-ratio`](/en-US/docs/Web/CSS/Reference/At-rules/@media/-moz-device-pixel-ratio) media feature has been added, allowing the use of the device pixels per CSS pixel ratio to be used in [Media Queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries).
+- The [`-moz-device-pixel-ratio`](/en-US/docs/Web/CSS/Reference/At-rules/@media/-moz-device-pixel-ratio) media feature has been added, allowing the use of the device pixels per CSS pixel ratio to be used in [Media Queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using).
 - Gecko's handling of CSS {{cssxref("length")}} units has been revised to better match other browsers, and to more accurately translate absolute lengths into screen pixel counts based on the device's DPI.
 
 ### Graphics and video

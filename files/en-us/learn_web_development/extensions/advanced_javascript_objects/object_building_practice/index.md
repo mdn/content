@@ -73,7 +73,7 @@ function randomRGB() {
 }
 ```
 
-The `random()` function takes two numbers as arguments, and returns a random number in the range between the two. The `randomRGB()` function generates a random color represented as an [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) string.
+The `random()` function takes two numbers as arguments, and returns a random number in the range between the two. The `randomRGB()` function generates a random color represented as an [`rgb()`](/en-US/docs/Web/CSS/Reference/Values/color_value/rgb) string.
 
 ## Modeling a ball in our program
 

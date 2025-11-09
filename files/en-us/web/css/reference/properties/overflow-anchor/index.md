@@ -152,5 +152,5 @@ To prevent scroll anchoring in a document, use the `overflow-anchor` property.
 
 ## See also
 
-- [Overview of scroll anchoring](/en-US/docs/Web/CSS/CSS_scroll_anchoring/Scroll_anchoring)
-- [CSS scroll anchoring](/en-US/docs/Web/CSS/CSS_scroll_anchoring) module
+- [Overview of scroll anchoring](/en-US/docs/Web/CSS/Guides/Scroll_anchoring/Overview)
+- [CSS scroll anchoring](/en-US/docs/Web/CSS/Guides/Scroll_anchoring) module

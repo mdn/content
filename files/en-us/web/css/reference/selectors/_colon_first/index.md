@@ -6,7 +6,7 @@ browser-compat: css.selectors.first
 sidebar: cssref
 ---
 
-The **`:first`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes), used with the {{cssxref("@page")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rules), represents the first page of a printed document. (See {{cssxref(":first-child")}} for general first element of a node.)
+The **`:first`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes), used with the {{cssxref("@page")}} [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules), represents the first page of a printed document. (See {{cssxref(":first-child")}} for general first element of a node.)
 
 ```css
 /* Selects the first page when printing */
@@ -17,7 +17,7 @@ The **`:first`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/R
 ```
 
 > [!NOTE]
-> You can't change all CSS properties with this pseudo-class. You can only change the margins, {{cssxref("orphans")}}, {{cssxref("widows")}}, and page breaks of the document. Furthermore, you may only use [absolute-length](/en-US/docs/Web/CSS/length#absolute_length_units) units when defining the margins. All other properties will be ignored.
+> You can't change all CSS properties with this pseudo-class. You can only change the margins, {{cssxref("orphans")}}, {{cssxref("widows")}}, and page breaks of the document. Furthermore, you may only use [absolute-length](/en-US/docs/Web/CSS/Reference/Values/length#absolute_length_units) units when defining the margins. All other properties will be ignored.
 
 ## Syntax
 

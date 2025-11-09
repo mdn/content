@@ -122,7 +122,7 @@ input::placeholder {
 
 ### Opaque text
 
-Some browsers make placeholder text less opaque. If you want fully opaque text, then set the {{CSSXref("color")}} property value explicitly. The [`currentColor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword) value can be used to have the same color as the corresponding input element.
+Some browsers make placeholder text less opaque. If you want fully opaque text, then set the {{CSSXref("color")}} property value explicitly. The [`currentColor`](/en-US/docs/Web/CSS/Reference/Values/color_value#currentcolor_keyword) value can be used to have the same color as the corresponding input element.
 
 #### HTML
 

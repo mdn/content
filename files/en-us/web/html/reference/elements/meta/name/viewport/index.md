@@ -19,9 +19,9 @@ A `<meta name="viewport">` element has the following additional attributes:
   - : The `content` attribute must be defined, and its value sets various viewport-related behaviors.
     Its value is a comma-separated list of one or more key-value pairs specified as `key=value`. The following keys are defined:
     - `width`
-      - : Controls the (minimum) pixel width of the viewport (see [viewport width and screen width](#viewport_width_and_screen_width)). It can be set to a positive whole number of pixels between 1 and 10000 (like `width=600`) or to the special value `device-width`, which is the physical size of the device screen in CSS pixels. This value establishes the value of the [`vw`](/en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport) unit.
+      - : Controls the (minimum) pixel width of the viewport (see [viewport width and screen width](#viewport_width_and_screen_width)). It can be set to a positive whole number of pixels between 1 and 10000 (like `width=600`) or to the special value `device-width`, which is the physical size of the device screen in CSS pixels. This value establishes the value of the [`vw`](/en-US/docs/Web/CSS/Reference/Values/length#relative_length_units_based_on_viewport) unit.
     - `height`
-      - : Controls the (minimum) pixel height of the viewport (see [viewport width and screen width](#viewport_width_and_screen_width)). It can be set to a positive whole number of pixels between 1 and 10000 (like `height=400`) or to the special value `device-height`, which is the physical size of the device screen in CSS pixels. This value establishes the value of the [`vh`](/en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport) unit.
+      - : Controls the (minimum) pixel height of the viewport (see [viewport width and screen width](#viewport_width_and_screen_width)). It can be set to a positive whole number of pixels between 1 and 10000 (like `height=400`) or to the special value `device-height`, which is the physical size of the device screen in CSS pixels. This value establishes the value of the [`vh`](/en-US/docs/Web/CSS/Reference/Values/length#relative_length_units_based_on_viewport) unit.
     - `initial-scale`
       - : Defines the ratio between the device width (`device-width` in portrait mode or `device-height` in landscape mode) and the viewport size.
         It can be a number between `0.0` and `10.0`.
@@ -51,7 +51,7 @@ A `<meta name="viewport">` element has the following additional attributes:
         - `resizes-content`: The {{Glossary("viewport")}} gets resized by the interactive widget.
         - `overlays-content`: Neither the viewport nor the visual viewport gets resized by the interactive widget.
 
-        When the {{Glossary("viewport")}} gets resized, the initial [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block) also gets resized, thereby affecting the computed size of [viewport units](/en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport).
+        When the {{Glossary("viewport")}} gets resized, the initial [containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block) also gets resized, thereby affecting the computed size of [viewport units](/en-US/docs/Web/CSS/Reference/Values/length#relative_length_units_based_on_viewport).
 
     - `viewport-fit`
       - : Defines the viewable portions of the web page.
@@ -59,13 +59,13 @@ A `<meta name="viewport">` element has the following additional attributes:
         - `auto`: Doesn't affect the initial layout viewport, and the whole web page is viewable.
         - `contain`: The viewport is scaled to fit the largest rectangle inscribed within the display.
         - `cover`: The viewport is scaled to fill the device display.
-          It's highly recommended to use the [safe area inset](/en-US/docs/Web/CSS/env) variables to ensure that important content doesn't end up outside the display.
+          It's highly recommended to use the [safe area inset](/en-US/docs/Web/CSS/Reference/Values/env) variables to ensure that important content doesn't end up outside the display.
 
 ### Viewport width and screen width
 
 The browser's {{glossary("viewport")}} is the area of the window in which web content can be seen. The viewport size needs to be computed before the page's content can be laid out—the page can overflow the viewport, in which case the browser provides scrollbars for the user to scroll around and access all the content, but the viewport size is the guideline for how much space, especially horizontally, the content should fit into.
 
-Some mobile devices and other narrow screens render pages in a virtual window or viewport that is wider than the screen, and then shrink the rendered result down to fit the screen size. Users can then zoom and pan to look more closely at different areas of the page. For example, if a mobile screen has a width of 640px, pages might be rendered with a virtual viewport of 980px, and then it will be shrunk down to fit into the 640px space. This is done because not all pages are optimized for mobile and break (or at least look bad) when rendered at a small viewport width. This virtual viewport is a way to make non-mobile-optimized sites in general look better on narrow screen devices. However, this mechanism is not so good for pages that are optimized for narrow screens using [media queries](/en-US/docs/Web/CSS/CSS_media_queries) — if the virtual viewport is 980px for example, media queries that kick in at 640px or 480px or less will never be used, limiting the effectiveness of such responsive design techniques. The viewport `<meta>` element mitigates this problem of virtual viewport on narrow screen devices.
+Some mobile devices and other narrow screens render pages in a virtual window or viewport that is wider than the screen, and then shrink the rendered result down to fit the screen size. Users can then zoom and pan to look more closely at different areas of the page. For example, if a mobile screen has a width of 640px, pages might be rendered with a virtual viewport of 980px, and then it will be shrunk down to fit into the 640px space. This is done because not all pages are optimized for mobile and break (or at least look bad) when rendered at a small viewport width. This virtual viewport is a way to make non-mobile-optimized sites in general look better on narrow screen devices. However, this mechanism is not so good for pages that are optimized for narrow screens using [media queries](/en-US/docs/Web/CSS/Guides/Media_queries) — if the virtual viewport is 980px for example, media queries that kick in at 640px or 480px or less will never be used, limiting the effectiveness of such responsive design techniques. The viewport `<meta>` element mitigates this problem of virtual viewport on narrow screen devices.
 
 The most common setting is the following, which sets the viewport to match the device's width and displays content at 100% zoom:
 

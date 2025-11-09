@@ -153,5 +153,5 @@ To view the animation, hover over the SVG.
 - {{cssxref("stroke")}}
 - {{cssxref("basic-shape/path", "path()")}} function
 - {{cssxref("basic-shape")}} data type
-- [Overview of CSS shapes](/en-US/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
-- [CSS shapes](/en-US/docs/Web/CSS/CSS_shapes) module
+- [Overview of CSS shapes](/en-US/docs/Web/CSS/Guides/Shapes/Overview)
+- [CSS shapes](/en-US/docs/Web/CSS/Guides/Shapes) module
