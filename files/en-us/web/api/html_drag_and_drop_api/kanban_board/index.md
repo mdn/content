@@ -177,12 +177,17 @@ function makePlaceholder(draggedTask) {
 }
 ```
 
-This indicator will be moved around on {{domxref("HTMLElement/dragover_event", "dragover")}}. This is the most complex of all, so we've extracted it into a separate function. We first get the elements we need:
+This indicator will be moved around on {{domxref("HTMLElement/dragover_event", "dragover")}}. This is the most complex of all, so we've extracted it into a separate function. The previous code for the "dragover" event has been moved to this function. We first get the elements we need, safely aborting if `draggedTask` is `null`:
 
 ```js live-sample___kanban
 function movePlaceholder(event) {
+  // Test a custom type we will set later
+  if (event.dataTransfer.types.includes("task")) {
+    event.preventDefault();
+  }
   const column = event.currentTarget;
   const draggedTask = document.getElementById("dragged-task");
+  if (!draggedTask) return;
   const tasks = column.children[1];
   const existingPlaceholder = column.querySelector(".placeholder");
 ```
