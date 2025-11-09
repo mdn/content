@@ -25,7 +25,6 @@ Functional notation: `device-cmyk(C M Y K[ / A][, color])`
 
 - `C`, `M`, `Y`, `K`
   - : Each a {{CSSXref("number")}}, a {{CSSXref("percentage")}}, or the keyword `none` providing the cyan, magenta, yellow, and black components of CMYK color.
- 
     > [!NOTE]
     > See [Missing color components](/en-US/docs/Web/CSS/Reference/Values/color_value#missing_color_components) for more information on the effect of `none`.
 
