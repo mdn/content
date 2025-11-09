@@ -17,7 +17,7 @@ For example, a client might be asking a server if it would allow a {{HTTPMethod(
 OPTIONS /resource/foo
 Access-Control-Request-Method: DELETE
 Access-Control-Request-Headers: x-requested-with
-Origin: https://example.com
+Origin: https://www.example.com
 ```
 
 If the server allows it, then it will respond to the preflight request with an {{HTTPHeader("Access-Control-Allow-Methods")}} response header, which lists `DELETE`:
@@ -25,7 +25,7 @@ If the server allows it, then it will respond to the preflight request with an {
 ```http
 HTTP/1.1 204 No Content
 Connection: keep-alive
-Access-Control-Allow-Origin: https://example.com
+Access-Control-Allow-Origin: https://www.example.com
 Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE
 Access-Control-Allow-Headers: X-Requested-With
 Access-Control-Max-Age: 86400
