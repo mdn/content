@@ -13,13 +13,12 @@ A block formatting context is created by at least one of the following:
 - The root element of the document (`<html>`).
 - Floats (elements where {{ cssxref("float") }} isn't `none`).
 - Absolutely positioned elements (elements where {{ cssxref("position") }} is `absolute` or `fixed`).
-- Inline-blocks (elements with {{cssxref("display", "display: inline-block")}}).
+- Inline-blocks (elements with {{cssxref("display", "display: inline-block")}}). This is the default display type for {{htmlelement("button")}} and button {{htmlelement("input")}} elements.
 - Table cells (elements with {{cssxref("display", "display: table-cell")}}, which is the default for HTML table cells).
 - Table captions (elements with {{cssxref("display", "display: table-caption")}}, which is the default for HTML table captions).
 - Anonymous table cells implicitly created by the elements with {{cssxref("display", "display: table")}}, `table-row`, `table-row-group`, `table-header-group`, `table-footer-group` (which is the default for HTML tables, table rows, table bodies, table headers, and table footers, respectively), or `inline-table`.
-- Block elements where {{ cssxref("overflow") }} has a value other than `visible` and `clip`.
 - Elements with {{cssxref("display", "display: flow-root")}}.
-- By default, browser user-agent stylesheets render {{htmlelement("button")}} and button {{htmlelement("input")}} types as inline-block elements. This display type causes them to establish a new Block Formatting Context (BFC). For the container {{htmlelement("button")}} element, this BFC meaningfully contains its children; for the void {{htmlelement("input")}} element, this context is empty.
+- Block elements where {{ cssxref("overflow") }} has a value other than `visible` and `clip`.
 - Elements with {{cssxref("contain", "contain: layout")}}, `content`, or `paint`.
 - Flex items (direct children of the element with {{cssxref("display", "display: flex")}} or `inline-flex`) if they are neither [flex](/en-US/docs/Glossary/Flex_Container) nor [grid](/en-US/docs/Glossary/Grid_Container) nor [table](/en-US/docs/Web/CSS/Guides/Table) containers themselves.
 - Grid items (direct children of the element with {{cssxref("display", "display: grid")}} or `inline-grid`) if they are neither [flex](/en-US/docs/Glossary/Flex_Container) nor [grid](/en-US/docs/Glossary/Grid_Container) nor [table](/en-US/docs/Web/CSS/Guides/Table) containers themselves.
