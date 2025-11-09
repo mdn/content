@@ -11,7 +11,7 @@ Clears the record of web pages that the user has visited (browsing history).
 You can use the `removalOptions` parameter, which is a {{WebExtAPIRef("browsingData.RemovalOptions")}} object, to:
 
 - clear records of web pages visited after a given time.
-- control whether to clear records of web pages or web pages and extensions.
+- control whether to clear records of web pages, or web pages and extensions.
 
 ## Syntax
 

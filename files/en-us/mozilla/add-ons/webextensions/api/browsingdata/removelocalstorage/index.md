@@ -10,8 +10,8 @@ Clears any [local storage](/en-US/docs/Web/API/Window/localStorage) and [session
 
 You can use the `removalOptions` parameter, which is a {{WebExtAPIRef("browsingData.RemovalOptions")}} object, to:
 
-- clear local and session storage objects created after a given time.
-- control whether to clear localStorage and sessionStorage objects created by web pages or web pages extensions.
+- clear local and session storage values created after a given time.
+- control whether to clear localStorage and sessionStorage values created by web pages or web pages extensions.
 
 ## Syntax
 
@@ -24,7 +24,7 @@ let removing = browser.browsingData.removeLocalStorage(
 ### Parameters
 
 - `removalOptions`
-  - : `object`. A {{WebExtAPIRef("browsingData.RemovalOptions")}} object, which can be used to clear local and session storage objects stored after a given time, and control whether to clear local and session storage objects created by web pages or web pages and extensions.
+  - : `object`. A {{WebExtAPIRef("browsingData.RemovalOptions")}} object, which can be used to clear localStorage and sessionStorage values stored after a given time, and control whether to clear localStorage and sessionStorage objects created by web pages, or web pages and extensions.
 
 ### Return value
 
