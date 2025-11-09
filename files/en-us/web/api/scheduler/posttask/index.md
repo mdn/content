@@ -36,7 +36,7 @@ postTask(callback, options)
 ### Parameters
 
 - `callback`
-  - : An callback function that implements the task.
+  - : A callback function that implements the task.
     The return value of the callback is used to resolve the promise returned by this function.
 
 - `options` {{optional_inline}}

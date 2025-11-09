@@ -121,8 +121,7 @@ You can give your table a caption by putting it inside a {{htmlelement("caption"
   <caption>
     Dinosaurs in the Jurassic period
   </caption>
-
-  …
+  <!-- … -->
 </table>
 ```
 
@@ -178,22 +177,115 @@ These elements don't necessarily make the table any more accessible to screen re
 To use them, they should be included in the following order:
 
 - The `<thead>` element must wrap the part of the table that is the header — this is usually the first row containing the column headings, but this is not necessarily always the case. If you are using {{htmlelement("col")}}/{{htmlelement("colgroup")}} elements, the table header should come just below those.
-- The `<tbody>` element needs to wrap the main part of the table content that isn't the table header or footer.
-- The `<tfoot>` element needs to wrap the part of the table that is the footer — this might be a final row with items in the previous rows summed, for example.
+- The `<tbody>` element needs to wrap the main part of the table content that isn't the table header or footer, and should come after the `<thead>`.
+- The `<tfoot>` element needs to wrap the part of the table that is the footer — this might be a final row with items in the previous rows summed, for example. The `<tfoot>` should come after the `<tbody>`.
 
 > [!NOTE]
-> `<tbody>` is always included in every table, implicitly if you don't specify it in your code. To check this, open up one of your previous examples that doesn't include `<tbody>` and look at the HTML code in your [browser developer tools](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) — you will see that the browser has added this tag for you. You might wonder why you ought to bother including it at all — you should, because it gives you more control over your table structure and styling.
+> `<tbody>` is always implicitly included in every table if you don't specify it in your code. To check this, open up one of your previous examples that doesn't include `<tbody>` and look at the HTML code in your [browser developer tools](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) — you will see that the browser has added this tag for you. You might wonder why you ought to bother including it at all — you should, because it gives you more control over your table structure and styling.
 
 ### Adding structure to a spending record table
 
 Let's get you to put these new elements into action.
 
-1. First of all, make a local copy of [spending-record.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/spending-record.html) and [minimal-table.css](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/minimal-table.css) in a new folder.
-2. Try putting the obvious headers row inside a `<thead>` element, the "SUM" row inside a `<tfoot>` element, and the rest of the content inside a `<tbody>` element.
-3. Next, add a [`colspan`](/en-US/docs/Web/HTML/Reference/Elements/td#colspan) attribute to make the "SUM" cell span across the first four columns, so the actual number appears at the bottom of the "Cost" column.
-4. Let's add some simple extra styling to the table, to give you an idea of how useful these elements are for applying CSS. Inside the head of your HTML document, you'll see an empty {{htmlelement("style")}} element. Inside this element, add the following lines of CSS code:
+1. First of all, create a new HTML file called `spending-record.html` and put the following HTML inside the `<body>`:
 
-   ```css
+   ```html
+   <h1>My spending record</h1>
+
+   <table>
+     <caption>
+       How I chose to spend my money
+     </caption>
+     <tr>
+       <th>Purchase</th>
+       <th>Location</th>
+       <th>Date</th>
+       <th>Evaluation</th>
+       <th>Cost (€)</th>
+     </tr>
+     <tr>
+       <td>Haircut</td>
+       <td>Hairdresser</td>
+       <td>12/09</td>
+       <td>Great idea</td>
+       <td>30</td>
+     </tr>
+     <tr>
+       <td>Lasagna</td>
+       <td>Restaurant</td>
+       <td>12/09</td>
+       <td>Regrets</td>
+       <td>18</td>
+     </tr>
+     <tr>
+       <td>Shoes</td>
+       <td>Shoe shop</td>
+       <td>13/09</td>
+       <td>Big regrets</td>
+       <td>65</td>
+     </tr>
+     <tr>
+       <td>Toothpaste</td>
+       <td>Supermarket</td>
+       <td>13/09</td>
+       <td>Good</td>
+       <td>5</td>
+     </tr>
+     <tr>
+       <td>SUM</td>
+       <td>118</td>
+     </tr>
+   </table>
+   ```
+
+2. Next, create a CSS file called `minimal-table.css` in the same directory as your HTML file and fill it with the following content:
+
+   ```css live-sample___finished-table-structure
+   html {
+     font-family: sans-serif;
+   }
+
+   table {
+     border-collapse: collapse;
+     border: 2px solid rgb(200 200 200);
+     letter-spacing: 1px;
+     font-size: 0.8rem;
+   }
+
+   td,
+   th {
+     border: 1px solid rgb(190 190 190);
+     padding: 10px 20px;
+   }
+
+   th {
+     background-color: rgb(235 235 235);
+   }
+
+   td {
+     text-align: center;
+   }
+
+   tr:nth-child(even) td {
+     background-color: rgb(250 250 250);
+   }
+
+   tr:nth-child(odd) td {
+     background-color: rgb(245 245 245);
+   }
+
+   caption {
+     padding: 10px;
+   }
+   ```
+
+3. Add a `<link>` element into your HTML `<head>` to apply the CSS to the HTML (see [Applying CSS and JavaScript to HTML](/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#applying_css_and_javascript_to_html) for help with this).
+
+4. Try putting the obvious headers row inside a `<thead>` element, the "SUM" row inside a `<tfoot>` element, and the rest of the content inside a `<tbody>` element.
+5. Next, add a [`colspan`](/en-US/docs/Web/HTML/Reference/Elements/td#colspan) attribute to make the "SUM" cell span across the first four columns, so the actual number appears at the bottom of the "Cost" column.
+6. Let's add some simple extra styling to the table, to give you an idea of how useful these elements are for applying CSS. Add the following to your CSS file:
+
+   ```css live-sample___finished-table-structure
    tbody {
      font-size: 95%;
      font-style: italic;
@@ -207,14 +299,18 @@ Let's get you to put these new elements into action.
    > [!NOTE]
    > We don't expect you to fully understand the CSS right now. You'll learn more about this when you go through our CSS modules (starting with [CSS Styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics), which includes an article specifically on [styling tables](/en-US/docs/Learn_web_development/Core/Styling_basics/Tables)).
 
-5. Save and refresh, and have a look at the result. If the `<tbody>` and `<tfoot>` elements weren't in place, you'd have to write much more complicated selectors/rules to apply the same styling.
+7. Save and refresh, and have a look at the result. If the `<tbody>` and `<tfoot>` elements weren't in place, you'd have to write much more complicated selectors/rules to apply the same styling.
+
+The finished example should look like this:
+
+{{embedlivesample("finished-table-structure", "100%", "300")}}
 
 <details>
 <summary>Click here to show the solution</summary>
 
 Your finished HTML should look something like this:
 
-```html
+```html live-sample___finished-table-structure
 <table>
   <caption>
     How I chose to spend my money
@@ -228,12 +324,6 @@ Your finished HTML should look something like this:
       <th>Cost (€)</th>
     </tr>
   </thead>
-  <tfoot>
-    <tr>
-      <td colspan="4">SUM</td>
-      <td>118</td>
-    </tr>
-  </tfoot>
   <tbody>
     <tr>
       <td>Haircut</td>
@@ -264,10 +354,14 @@ Your finished HTML should look something like this:
       <td>5</td>
     </tr>
   </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="4">SUM</td>
+      <td>118</td>
+    </tr>
+  </tfoot>
 </table>
 ```
-
-You can find the complete code on GitHub at [spending-record-finished.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/spending-record-finished.html) ([see it running live also](https://mdn.github.io/learning-area/html/tables/advanced/spending-record-finished.html)).
 
 </details>
 

@@ -27,8 +27,8 @@ The `textureHeight` of a layer is useful when creating render buffers for a laye
 ```js
 let glLayer = xrGLBinding.createProjectionLayer();
 
-let color_rb = gl.createRenderbuffer();
-gl.bindRenderbuffer(gl.RENDERBUFFER, color_rb);
+let colorRB = gl.createRenderbuffer();
+gl.bindRenderbuffer(gl.RENDERBUFFER, colorRB);
 gl.renderbufferStorageMultisample(
   gl.RENDERBUFFER,
   samples,

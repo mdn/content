@@ -28,19 +28,19 @@ The standard `doctype` declaration that will trigger standards mode is:
 When at all possible, you should just use the above doctype. There are other valid legacy doctypes that will trigger Standards or Almost Standards mode:
 
 ```html
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 ```
 
 ```html
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 ```
 
 ```html
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!doctype html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 ```
 
 ```html
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!doctype html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 ```
 
 ## Why doesn't my CSS, which is valid, render at all?
@@ -80,7 +80,7 @@ h1 {
 }
 ```
 
-This has changed with CSS 2; the keyword [initial](/en-US/docs/Web/CSS/initial) is now a valid value for a CSS property. It resets it to its default value, which is defined in the CSS specification of the given property.
+This has changed with CSS 2; the keyword [initial](/en-US/docs/Web/CSS/Reference/Values/initial) is now a valid value for a CSS property. It resets it to its default value, which is defined in the CSS specification of the given property.
 
 ```css
 /* Heading default color is black */
@@ -94,7 +94,7 @@ h1 {
 
 ## How do I derive one style from another?
 
-CSS does not exactly allow one style to be defined in terms of another. However, assigning multiple classes to a single element can provide the same effect, and [CSS Variables](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) now provide a way to define style information in one place that can be reused in multiple places.
+CSS does not exactly allow one style to be defined in terms of another. However, assigning multiple classes to a single element can provide the same effect, and [CSS Variables](/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties) now provide a way to define style information in one place that can be reused in multiple places.
 
 ## How do I assign multiple classes to an element?
 
@@ -248,7 +248,7 @@ div {
 <div id="orange" class="green" style="color: red;">This is red</div>
 ```
 
-The rules are more complicated when the selector has multiple parts. A more detailed explanation about how selector specificity is calculated can be found in the [CSS specificity documentation](/en-US/docs/Web/CSS/CSS_cascade/Specificity).
+The rules are more complicated when the selector has multiple parts. A more detailed explanation about how selector specificity is calculated can be found in the [CSS specificity documentation](/en-US/docs/Web/CSS/Guides/Cascade/Specificity).
 
 ## What do the -moz-\*, -ms-\*, -webkit-\*, -o-\* and -khtml-\* properties do?
 
@@ -266,7 +266,7 @@ border-block-end-color: navy;
 ```
 
 > [!NOTE]
-> See the [Mozilla CSS Extensions](/en-US/docs/Web/CSS/Mozilla_Extensions) and [WebKit CSS Extensions](/en-US/docs/Web/CSS/WebKit_Extensions) for lists of browser-prefixed CSS properties.
+> See the [Mozilla CSS Extensions](/en-US/docs/Web/CSS/Reference/Mozilla_extensions) and [WebKit CSS Extensions](/en-US/docs/Web/CSS/Reference/Webkit_extensions) for lists of browser-prefixed CSS properties.
 
 ## How does z-index relate to positioning?
 

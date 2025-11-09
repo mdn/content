@@ -1,5 +1,5 @@
 ---
-title: Firefox 120 for developers
+title: Firefox 120 release notes for developers
 short-title: Firefox 120
 slug: Mozilla/Firefox/Releases/120
 page-type: firefox-release-notes
@@ -17,11 +17,11 @@ This article provides information about the changes in Firefox 120 that affect d
 ### CSS
 
 - The {{CSSXref("color_value/light-dark", "light-dark()")}} CSS Color function is now supported. This allows the setting of a colors for both light & dark without the need for `prefers-color-scheme` media feature ([Firefox bug 1856999](https://bugzil.la/1856999)).
-- The [`lh`](/en-US/docs/Web/CSS/length#lh) and [`rlh`](/en-US/docs/Web/CSS/length#rlh) line height units are now supported. These allow setting properties relative to the line height of an element, for example, precisely aligning background decoration with multiline text ([Firefox bug 1310170](https://bugzil.la/1310170)).
+- The [`lh`](/en-US/docs/Web/CSS/Reference/Values/length#lh) and [`rlh`](/en-US/docs/Web/CSS/Reference/Values/length#rlh) line height units are now supported. These allow setting properties relative to the line height of an element, for example, precisely aligning background decoration with multiline text ([Firefox bug 1310170](https://bugzil.la/1310170)).
 
 #### Removals
 
-- The non-standard {{cssxref("-moz-image-rect")}} CSS function for clipping background images has been removed. First introduced in Firefox 4, this function was never standardized or implemented in other browsers ([Firefox bug 1856999](https://bugzil.la/1853867)).
+- The non-standard {{cssxref("-moz-image-rect")}} CSS function for clipping background images has been removed. First introduced in Firefox 4, this function was never standardized or implemented in other browsers ([Firefox bug 1853867](https://bugzil.la/1853867)).
 
 ### JavaScript
 

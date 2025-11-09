@@ -30,11 +30,11 @@ new TransitionEvent(type, options)
     - `elapsedTime` {{optional_inline}}
       - : A number giving the amount of time the animation has been running,
         in seconds, when this event fired, excluding any time the animation was paused.
-        For an `"animationstart"` event, `elapsedTime` is `0.0` unless there was a negative value for [`animation-delay`](/en-US/docs/Web/CSS/animation-delay),
+        For an `"animationstart"` event, `elapsedTime` is `0.0` unless there was a negative value for [`animation-delay`](/en-US/docs/Web/CSS/Reference/Properties/animation-delay),
         in which case the event will be fired with `elapsedTime` containing `(-1 * delay)`.
         It defaults to `0.0`.
     - `pseudoElement` {{optional_inline}}
-      - : A string, defaulting with `"::"`, containing the name of the [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) the animation runs on.
+      - : A string, defaulting with `"::"`, containing the name of the [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) the animation runs on.
         If the animation doesn't run on a pseudo-element but on the element, an empty string: `""`.
         It defaults to `""`.
 
@@ -52,7 +52,7 @@ A new {{domxref("TransitionEvent")}} object.
 
 ## See also
 
-- [Using CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [Using CSS transitions](/en-US/docs/Web/CSS/Guides/Transitions/Using)
 - CSS properties: {{cssxref("transition")}}, {{cssxref("transition-delay")}},
   {{cssxref("transition-duration")}}, {{cssxref("transition-property")}},
   {{cssxref("transition-timing-function")}}.

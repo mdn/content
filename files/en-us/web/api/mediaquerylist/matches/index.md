@@ -25,7 +25,7 @@ currently matches the media query list; otherwise, it's `false`.
 ## Examples
 
 This example detects viewport orientation changes by creating a media query using the
-[`orientation`](/en-US/docs/Web/CSS/@media/orientation) media
+[`orientation`](/en-US/docs/Web/CSS/Reference/At-rules/@media/orientation) media
 feature:
 
 ```js
@@ -49,8 +49,8 @@ mql.addEventListener("change", (event) => {
 
 ## See also
 
-- [Media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [Using media queries from code](/en-US/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
+- [Media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using)
+- [Using media queries from code](/en-US/docs/Web/CSS/Guides/Media_queries/Testing)
 - {{DOMxRef("window.matchMedia()")}}
 - {{DOMxRef("MediaQueryList")}}
 - {{DOMxRef("MediaQueryListEvent")}}

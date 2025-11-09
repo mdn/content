@@ -6,9 +6,7 @@ browser-compat: javascript.operators.null
 sidebar: jssidebar
 ---
 
-The **`null`** value represents the intentional absence of any object value. It
-is one of JavaScript's [primitive values](/en-US/docs/Glossary/Primitive) and
-is treated as [falsy](/en-US/docs/Glossary/Falsy) for boolean operations.
+The **`null`** keyword refers to the [`null`](/en-US/docs/Web/JavaScript/Guide/Data_structures#null_type) [primitive value](/en-US/docs/Glossary/Primitive), which represents the intentional absence of any object value.
 
 {{InteractiveExample("JavaScript Demo: null")}}
 
@@ -33,30 +31,22 @@ null
 
 ## Description
 
-The value `null` is written with a literal: `null`.
-`null` is not an identifier for a property of the global object, like
-{{jsxref("undefined")}} can be. Instead,
-`null` expresses a lack of identification, indicating that a variable points
-to no object. In APIs, `null` is often retrieved in a place where an object
-can be expected but no object is relevant.
+The keyword `null` is a literal for the `null` value. Unlike {{jsxref("undefined")}}, which is a global variable, `null` is not an identifier but a syntax keyword.
 
-```js
-// foo does not exist. It is not defined and has never been initialized:
-foo; // ReferenceError: foo is not defined
-```
+`null` has the following behaviors:
 
-```js
-// foo is known to exist now but it has no type or value:
-const foo = null;
-foo; // null
-```
+- Like `undefined`, accessing any property on `null` throws a {{jsxref("TypeError")}} instead of returning `undefined` or searching prototype chains.
+- Like `undefined`, `null` is treated as [falsy](/en-US/docs/Glossary/Falsy) for boolean operations, and [nullish](/en-US/docs/Glossary/Nullish) for [nullish coalescing](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing) and [optional chaining](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining).
+- The [`typeof null`](/en-US/docs/Web/JavaScript/Reference/Operators/typeof#typeof_null) result is `"object"`. This is a bug in JavaScript that cannot be fixed due to backward compatibility.
+- Unlike `undefined`, {{jsxref("JSON.stringify()")}} can represent `null` faithfully.
+
+JavaScript is unique to have two nullish values: `null` and `undefined`. Semantically, their difference is very minor: `undefined` represents the absence of a value, while `null` represents the absence of an _object_. For example, the end of the [prototype chain](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) is `null` because the prototype chain is composed of objects; {{domxref("document.querySelector()")}} returns `null` if it doesn't match, because had it matched, the result would be an object. If you are designing an API, you should likely accept `null` and `undefined` as equivalent inputs, because many codebases have stylistic rules about when to use `null` or `undefined` by default.
 
 ## Examples
 
 ### Difference between `null` and `undefined`
 
-When checking for `null` or `undefined`, beware of the [differences between equality (==) and identity (===) operators](/en-US/docs/Web/JavaScript/Reference/Operators), as the former performs
-type-conversion.
+When checking for `null` or `undefined`, beware of the [differences between equality (==) and identity (===) operators](/en-US/docs/Web/JavaScript/Reference/Operators), as the former performs type-conversion.
 
 ```js
 typeof null; // "object" (not "null" for legacy reasons)

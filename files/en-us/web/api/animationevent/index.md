@@ -7,7 +7,7 @@ browser-compat: api.AnimationEvent
 
 {{APIRef("Web Animations")}}
 
-The **`AnimationEvent`** interface represents events providing information related to [animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations).
+The **`AnimationEvent`** interface represents events providing information related to [animations](/en-US/docs/Web/CSS/Guides/Animations/Using).
 
 {{InheritanceDiagram}}
 
@@ -25,7 +25,7 @@ _Also inherits properties from its parent {{domxref("Event")}}_.
 - {{domxref("AnimationEvent.elapsedTime")}} {{ReadOnlyInline}}
   - : A `float` giving the amount of time the animation has been running, in seconds, when this event fired, excluding any time the animation was paused. For an `animationstart` event, `elapsedTime` is `0.0` unless there was a negative value for {{cssxref("animation-delay")}}, in which case the event will be fired with `elapsedTime` containing `(-1 * delay)`.
 - {{domxref("AnimationEvent.pseudoElement")}} {{ReadOnlyInline}}
-  - : A string, starting with `'::'`, containing the name of the [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) the animation runs on. If the animation doesn't run on a pseudo-element but on the element, an empty string: `''`.
+  - : A string, starting with `'::'`, containing the name of the [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) the animation runs on. If the animation doesn't run on a pseudo-element but on the element, an empty string: `''`.
 
 ## Instance methods
 
@@ -41,5 +41,5 @@ _Inherits methods from its parent, {{domxref("Event")}}_.
 
 ## See also
 
-- [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [Using CSS animations](/en-US/docs/Web/CSS/Guides/Animations/Using)
 - Animation-related CSS properties and at-rules: {{cssxref("animation")}}, {{cssxref("animation-composition")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timing-function")}}, {{cssxref("@keyframes")}}.

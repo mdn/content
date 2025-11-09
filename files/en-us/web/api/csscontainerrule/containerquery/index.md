@@ -29,7 +29,7 @@ Note that the value may not be identical to the original string, as normalizatio
 ## Examples
 
 The example below defines an unnamed {{cssxref("@container")}} rule, and displays the properties of the associated {{domxref("CSSContainerRule")}}.
-The CSS is the same as in the `@container` example [Setting styles based on a container's size](/en-US/docs/Web/CSS/@container#setting_styles_based_on_a_containers_size).
+The CSS is the same as in the `@container` example [Setting styles based on a container's size](/en-US/docs/Web/CSS/Reference/At-rules/@container#setting_styles_based_on_a_containers_size).
 
 ```html hidden
 <div id="log">
@@ -110,6 +110,6 @@ The card should change background and as the width of the page transitions throu
 
 ## See also
 
-- [CSS containment module](/en-US/docs/Web/CSS/CSS_containment)
-- [Container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries)
-- [Using container size and style queries](/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries)
+- [CSS containment module](/en-US/docs/Web/CSS/Guides/Containment)
+- [Container queries](/en-US/docs/Web/CSS/Guides/Containment/Container_queries)
+- [Using container size and style queries](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries)

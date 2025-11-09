@@ -1,5 +1,5 @@
 ---
-title: Firefox 19 for developers
+title: Firefox 19 release notes for developers
 short-title: Firefox 19
 slug: Mozilla/Firefox/Releases/19
 page-type: firefox-release-notes

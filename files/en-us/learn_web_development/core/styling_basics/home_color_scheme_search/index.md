@@ -110,7 +110,7 @@ To begin, click the **Play** button in one of the code panels below to open the 
 }
 
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 body {
@@ -240,7 +240,7 @@ A possible solution could be:
 }
 
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 body {
@@ -356,7 +356,7 @@ tr :nth-of-type(4) {
 /* Solution: Provide background colors for the "Raw color" cells */
 
 tr:nth-of-type(1) td:nth-of-type(2) {
-  background-color: rgb(255 192 203);
+  background-color: pink;
 }
 
 tr:nth-of-type(2) td:nth-of-type(2) {
@@ -364,11 +364,11 @@ tr:nth-of-type(2) td:nth-of-type(2) {
 }
 
 tr:nth-of-type(3) td:nth-of-type(2) {
-  background-color: rgb(255 105 180);
+  background-color: hotpink;
 }
 
 tr:nth-of-type(4) td:nth-of-type(2) {
-  background-color: rgb(255 0 255);
+  background-color: magenta;
 }
 
 tbody tr:nth-child(odd) {

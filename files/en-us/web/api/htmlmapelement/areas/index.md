@@ -17,9 +17,9 @@ A {{domxref("HTMLCollection")}} object of {{domxref("HTMLAreaElement")}} element
 ## Example
 
 ```html
-<map id="image-map">
-  <area shape="circle" coords="50,50,35" alt="left arrow" />
-  <area shape="circle" coords="150,50,35" alt="right arrow" />
+<map id="image-map" name="image-map">
+  <area shape="circle" coords="50,50,35" href="#left" alt="left arrow" />
+  <area shape="circle" coords="150,50,35" href="#right" alt="right arrow" />
 </map>
 <img
   usemap="#image-map"

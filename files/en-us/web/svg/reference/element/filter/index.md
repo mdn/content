@@ -22,13 +22,18 @@ The **`<filter>`** [SVG](/en-US/docs/Web/SVG) element defines a custom filter ef
 - {{SVGAttr("primitiveUnits")}}
 - {{SVGAttr("xlink:href")}} {{deprecated_inline}}
 
+> [!NOTE]
+> For `<filter>`, the `x` and `y` attributes default to `-10%`, and the `width` and `height` attributes default to `120%`. This is because many filter effects, such as {{svgelement("feGaussianBlur")}}, extend beyond the bounds of the element being filtered. The default sizing ensures that the filter effect is not clipped.
+
 ## DOM Interface
 
 This element implements the {{domxref("SVGFilterElement")}} interface.
 
-## Example
+## Examples
 
-### SVG
+### Adding a blur effect
+
+#### SVG
 
 ```html
 <svg width="230" height="120" xmlns="http://www.w3.org/2000/svg">
@@ -42,7 +47,7 @@ This element implements the {{domxref("SVGFilterElement")}} interface.
 </svg>
 ```
 
-### Result
+#### Result
 
 {{EmbedLiveSample("Example",235,150)}}
 

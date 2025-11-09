@@ -1,5 +1,5 @@
 ---
-title: Firefox 121 for developers
+title: Firefox 121 release notes for developers
 short-title: Firefox 121
 slug: Mozilla/Firefox/Releases/121
 page-type: firefox-release-notes
@@ -20,7 +20,7 @@ This article provides information about the changes in Firefox 121 that affect d
 
 - The {{CSSXRef("text-wrap")}} property has been updated with support for the values `balance` and `stable`. The `balance` value is used for short blocks of content, such as headings, and will make sure that the content is balanced and easy to read when spread over multiple lines. The `stable` value makes sure that editable content does not reflow while the user is editing it ([Firefox bug 1731541](https://bugzil.la/1731541)).
 - The {{cssxref(":has", ":has()")}} selector, commonly referred to as the _parent selector_, is now supported. It allows developers to apply styles to an element based on related elements, e.g., `li:has(ul)` will match a list which contains a sub-list, or `h1:has(+ p)` will match a heading with a paragraph directly after it.
-- The [`text-indent`](/en-US/docs/Web/CSS/text-indent) CSS property now supports the [`each-line`](/en-US/docs/Web/CSS/text-indent#each-line) and [`hanging`](/en-US/docs/Web/CSS/text-indent#hanging) property values ([Firefox bug 784648](https://bugzil.la/784648)), allowing developers to more easily specify certain text indentation styles. Additionally, developers can now combine multiple `text-indent` property values for more creativity, e.g., `text-indent: 3em hanging each-line`.
+- The [`text-indent`](/en-US/docs/Web/CSS/Reference/Properties/text-indent) CSS property now supports the [`each-line`](/en-US/docs/Web/CSS/Reference/Properties/text-indent#each-line) and [`hanging`](/en-US/docs/Web/CSS/Reference/Properties/text-indent#hanging) property values ([Firefox bug 784648](https://bugzil.la/784648)), allowing developers to more easily specify certain text indentation styles. Additionally, developers can now combine multiple `text-indent` property values for more creativity, e.g., `text-indent: 3em hanging each-line`.
 
 ### JavaScript
 
@@ -46,11 +46,11 @@ This article provides information about the changes in Firefox 121 that affect d
 
 #### DOM
 
-- {{domxref("HTMLInputElement.showPicker()")}} now works for [`<input type="week">`](/en-US/docs/Web/HTML/Reference/Elements/input/month) and [`<input type="month">`](/en-US/docs/Web/HTML/Reference/Elements/input/month) elements on Android ([Firefox bug 1853797](https://bugzil.la/161853797)).
+- {{domxref("HTMLInputElement.showPicker()")}} now works for [`<input type="week">`](/en-US/docs/Web/HTML/Reference/Elements/input/month) and [`<input type="month">`](/en-US/docs/Web/HTML/Reference/Elements/input/month) elements on Android ([Firefox bug 1853797](https://bugzil.la/1853797)).
 
 ### WebAssembly
 
-- WebAssembly now supports tail call optimization via new `return_call` and `return_call_indirect` alternatives to the [`call`](/en-US/docs/WebAssembly/Reference/Control_flow/call) instruction. This improves performance, reduces stack space usage, and enhances compatibility with programming languages that use tail calls. ([Firefox bug 1858855](https://bugzil.la/1846789)).
+- WebAssembly now supports tail call optimization via new `return_call` and `return_call_indirect` alternatives to the [`call`](/en-US/docs/WebAssembly/Reference/Control_flow/call) instruction. This improves performance, reduces stack space usage, and enhances compatibility with programming languages that use tail calls. ([Firefox bug 1846789](https://bugzil.la/1846789)).
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 

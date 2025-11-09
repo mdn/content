@@ -1,5 +1,5 @@
 ---
-title: Firefox 26 for developers
+title: Firefox 26 release notes for developers
 short-title: Firefox 26
 slug: Mozilla/Firefox/Releases/26
 page-type: firefox-release-notes

@@ -24,7 +24,7 @@ onuncapturederror = (event) => { }
 
 ## Event type
 
-An {{domxref("GPUUncapturedErrorEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("GPUUncapturedErrorEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("GPUUncapturedErrorEvent")}}
 

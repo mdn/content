@@ -5,7 +5,7 @@ page-type: glossary-definition
 sidebar: glossarysidebar
 ---
 
-**Scroll snapping** is when content "snaps" to a specific position, rather than stopping at any random point, when a scroll operation finishes. Normal scrolling operations lack precision. They don't align to a paragraph, a sentence, or an image boundary. For example, in a carousel, a scrolling operation could finish in the middle of an image, leaving it partially visible. Web developers have long relied on JavaScript-based solutions. Browsers have recently started supporting [CSS scroll-snapping features](/en-US/docs/Web/CSS/CSS_scroll_snap) that enable defining scroll-snap containers and snapping behaviors.
+**Scroll snapping** is when content "snaps" to a specific position, rather than stopping at any random point, when a scroll operation finishes. Normal scrolling operations lack precision. They don't align to a paragraph, a sentence, or an image boundary. For example, in a carousel, a scrolling operation could finish in the middle of an image, leaving it partially visible. Web developers have long relied on JavaScript-based solutions. Browsers have recently started supporting [CSS scroll-snapping features](/en-US/docs/Web/CSS/Guides/Scroll_snap) that enable defining scroll-snap containers and snapping behaviors.
 
 Scroll snapping is a well-controlled scrolling experience, whereby developers define an element as a [scroll container](/en-US/docs/Glossary/Scroll_container) with boundaries for scroll operations. Scroll operations then finish at these snap position boundaries, with the scrolled to content snapping into place. In the above carousel example, as the user finishes scrolling the carousel, its visible image will snap into place.
 
@@ -24,4 +24,4 @@ Scroll snapping is a well-controlled scrolling experience, whereby developers de
 - {{CSSXref("scroll-snap-align")}}
 - {{CSSXref("scroll-padding")}}
 - {{CSSXref("scroll-margin")}}
-- [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) module
+- [CSS scroll snap](/en-US/docs/Web/CSS/Guides/Scroll_snap) module

@@ -29,7 +29,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLImageElement.crossOrigin")}}
   - : A string specifying the CORS setting for this image element. See [CORS settings attributes](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) for further details. This may be `null` if CORS is not used.
 - {{domxref("HTMLImageElement.currentSrc")}} {{ReadOnlyInline}}
-  - : Returns a string representing the URL from which the currently displayed image was loaded. This may change as the image is adjusted due to changing conditions, as directed by any [media queries](/en-US/docs/Web/CSS/CSS_media_queries) which are in place.
+  - : Returns a string representing the URL from which the currently displayed image was loaded. This may change as the image is adjusted due to changing conditions, as directed by any [media queries](/en-US/docs/Web/CSS/Guides/Media_queries) which are in place.
 - {{domxref("HTMLImageElement.decoding")}}
   - : An optional string representing a hint given to the browser on how it should decode the image. If this value is provided, it must be one of the possible permitted values: `sync` to decode the image synchronously, `async` to decode it asynchronously, or `auto` to indicate no preference (which is the default). Read the {{domxref("HTMLImageElement.decoding", "decoding")}} page for details on the implications of this property's values.
 - {{domxref("HTMLImageElement.fetchPriority")}}
@@ -53,7 +53,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLImageElement.srcset")}}
   - : A string reflecting the [`srcset`](/en-US/docs/Web/HTML/Reference/Elements/img#srcset) HTML attribute. This specifies a list of candidate images, separated by commas (`',', U+002C COMMA`). Each candidate image is a URL followed by a space, followed by a specially-formatted string indicating the size of the image. The size may be specified either the width or a size multiple. Read the {{domxref("HTMLImageElement.srcset", "srcset")}} page for specifics on the format of the size substring.
 - {{domxref("HTMLImageElement.useMap")}}
-  - : A string reflecting the [`usemap`](/en-US/docs/Web/HTML/Reference/Elements/img#usemap) HTML attribute, containing the page-local URL of the {{HTMLElement("map")}} element describing the image map to use. The page-local URL is a pound (hash) symbol (`#`) followed by the ID of the `<map>` element, such as `#my-map-element`. The `<map>` in turn contains {{HTMLElement("area")}} elements indicating the clickable areas in the image.
+  - : A string reflecting the [`usemap`](/en-US/docs/Web/HTML/Reference/Elements/img#usemap) HTML attribute, containing the page-local URL of the {{HTMLElement("map")}} element describing the image map to use. The page-local URL is a pound (hash) symbol (`#`) followed by the `name` of the `<map>` element, such as `#my-map-element`. The `<map>` in turn contains {{HTMLElement("area")}} elements indicating the clickable areas in the image.
 - {{domxref("HTMLImageElement.width")}}
   - : An integer value that reflects the [`width`](/en-US/docs/Web/HTML/Reference/Elements/img#width) HTML attribute, indicating the rendered width of the image in CSS pixels.
 - {{domxref("HTMLImageElement.x")}} {{ReadOnlyInline}}

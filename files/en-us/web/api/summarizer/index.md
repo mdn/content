@@ -42,7 +42,7 @@ The **`Summarizer`** interface of the {{domxref("Summarizer API", "Summarizer AP
 ## Instance methods
 
 - {{domxref("Summarizer.destroy", "destroy()")}} {{Experimental_Inline}}
-  - : Destroys the `Summarizer` instance it is called on.
+  - : Releases the resources assigned to the `Summarizer` instance it is called on and stops any further activity on it.
 - {{domxref("Summarizer.measureInputUsage", "measureInputUsage()")}} {{Experimental_Inline}}
   - : Reports how much input quota would be used by a summarize operation for a given text input.
 - {{domxref("Summarizer.summarize", "summarize()")}} {{Experimental_Inline}}

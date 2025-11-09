@@ -14,7 +14,7 @@ property returns the element immediately following the specified one in its pare
 
 ## Value
 
-A {{domxref("Element")}} object, or `null`.
+An {{domxref("Element")}} object, or `null`.
 
 ## Examples
 

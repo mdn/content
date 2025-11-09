@@ -523,7 +523,7 @@ Storing data that you won't use again can have high cost, particularly on tiled-
 Operations like `readPixels` and `getBufferSubData` are typically synchronous, but using the same APIs, non-blocking, asynchronous data readback can be achieved. The approach in WebGL 2 is analogous to the approach in OpenGL: [Async downloads in blocking APIs](https://kdashg.github.io/misc/async-gpu-downloads.html)
 
 ```js
-function clientWaitAsync(gl, sync, flags, interval_ms) {
+function clientWaitAsync(gl, sync, flags, intervalMs) {
   return new Promise((resolve, reject) => {
     function test() {
       const res = gl.clientWaitSync(sync, flags, 0);
@@ -532,7 +532,7 @@ function clientWaitAsync(gl, sync, flags, interval_ms) {
         return;
       }
       if (res === gl.TIMEOUT_EXPIRED) {
-        setTimeout(test, interval_ms);
+        setTimeout(test, intervalMs);
         return;
       }
       resolve();

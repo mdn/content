@@ -90,7 +90,7 @@ The Emscripten tool is able to take just about any C/C++ source code and compile
 
 In a nutshell, the process works as follows:
 
-1. Emscripten first feeds the C/C++ into clang+LLVM — a mature open-source C/C++ compiler toolchain, shipped as part of XCode on OSX for example.
+1. Emscripten first feeds the C/C++ into clang+LLVM — a mature open-source C/C++ compiler toolchain, shipped as part of Xcode on macOS for example.
 2. Emscripten transforms the compiled result of clang+LLVM into a Wasm binary.
 3. By itself, WebAssembly cannot currently directly access the DOM; it can only call JavaScript, passing in integer and floating point primitive data types. Thus, to access any Web API, WebAssembly needs to call out to JavaScript, which then makes the Web API call. Emscripten therefore creates the HTML and JavaScript glue code needed to achieve this.
 

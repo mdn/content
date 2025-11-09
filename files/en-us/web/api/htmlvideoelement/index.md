@@ -41,7 +41,7 @@ _Inherits properties from its parent interface, {{domxref("HTMLMediaElement")}},
 - {{domxref("HTMLVideoElement.mozPaintedFrames")}} {{Non-standard_Inline}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : Returns an `unsigned long` with the count of presented frames which were painted on the screen.
 - {{domxref("HTMLVideoElement.mozFrameDelay")}} {{Non-standard_Inline}} {{ReadOnlyInline}} {{deprecated_inline}}
-  - : Returns an `double` with the time which the last painted video frame was late by, in seconds.
+  - : Returns a `double` with the time which the last painted video frame was late by, in seconds.
 - {{domxref("HTMLVideoElement.mozHasAudio")}} {{Non-standard_Inline}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : Returns a boolean indicating if there is some audio associated with the video.
 

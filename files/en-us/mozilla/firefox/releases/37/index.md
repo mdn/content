@@ -1,5 +1,5 @@
 ---
-title: Firefox 37 for developers
+title: Firefox 37 release notes for developers
 short-title: Firefox 37
 slug: Mozilla/Firefox/Releases/37
 page-type: firefox-release-notes
@@ -23,7 +23,7 @@ Highlights:
 ### CSS
 
 - `display: contents` is now activated by default ([Firefox bug 1102374](https://bugzil.la/1102374) and [Firefox bug 1105369](https://bugzil.la/1105369)).
-- [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts) is now working on elements with `display: table-caption` ([Firefox bug 1109571](https://bugzil.la/1109571)).
+- [CSS multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout/Using) is now working on elements with `display: table-caption` ([Firefox bug 1109571](https://bugzil.la/1109571)).
 - Relative positioning (`position: relative`) of table cells has been implemented ([Firefox bug 35168](https://bugzil.la/35168)).
 - The quirks mode behavior of {{cssxref("empty-cells")}} has been removed: it now defaults to `show` like in standard mode ([Firefox bug 1020400](https://bugzil.la/1020400)).
 
