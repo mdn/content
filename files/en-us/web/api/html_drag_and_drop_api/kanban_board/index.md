@@ -95,7 +95,7 @@ This defines the basic structure and styles for our application. The tasks are e
 
 We want to make the task columns into valid [drop targets](/en-US/docs/Web/API/HTML_Drag_and_Drop_API#drop_target) for the dragged tasks. As a baseline, we need to listen for {{domxref("HTMLElement/dragover_event", "dragover")}} and cancel it. However, we take care and only cancel the event if the drag event is dragging a task—if we are trying to drop anything else, the column should not be a drop target.
 
-```js live-sample___kanban
+```js
 const columns = document.querySelectorAll(".task-column");
 
 columns.forEach((column) => {
