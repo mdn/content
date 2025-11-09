@@ -38,7 +38,7 @@ text-wrap: stable;
   <div class="whole-content-wrapper">
     <p>Edit the text in the box:</p>
     <div class="transition-all" id="example-element">
-      <p contenteditable="">
+      <p contenteditable>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem aut
         cum eum id quos est.
       </p>
@@ -180,7 +180,7 @@ The text in the example is editable. Change the text, adding long words, to view
 
 - {{CSSxRef("white-space")}}
 - {{CSSxRef("white-space-collapse")}}
-- [CSS text module](/en-US/docs/Web/CSS/CSS_text)
+- [CSS text module](/en-US/docs/Web/CSS/Guides/Text)
 - [CSS `text-wrap: balance`](https://developer.chrome.com/docs/css-ui/css-text-wrap-balance) on developer.chrome.com (2023)
 - [CSS `text-wrap: pretty`](https://developer.chrome.com/blog/css-text-wrap-pretty/) on developer.chrome.com (2023)
 - [Balancing Japanese and Korean typography](https://ryelle.codes/2025/04/typography-troubles-balancing-in-japanese-korean/) by Kelly Choyce-Dwan (2025)

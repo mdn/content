@@ -101,8 +101,8 @@ WCAG criterion 2.1.1 (Keyboard) has been in place for a long time to advise on b
 
 ## See also
 
-- [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
-- [CSS scrollbars styling](/en-US/docs/Web/CSS/CSS_scrollbars_styling) module
+- [CSS overflow](/en-US/docs/Web/CSS/Guides/Overflow) module
+- [CSS scrollbars styling](/en-US/docs/Web/CSS/Guides/Scrollbars_styling) module
 - {{CSSxRef("overflow")}}
 - {{CSSxRef("scrollbar-gutter")}}
 - {{CSSxRef("scrollbar-color")}}

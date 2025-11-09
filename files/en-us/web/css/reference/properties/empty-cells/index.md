@@ -21,26 +21,28 @@ empty-cells: hide;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <table class="transition-all" id="example-element">
-    <tr>
-      <th>Client Name</th>
-      <th>Age</th>
-    </tr>
-    <tr>
-      <td></td>
-      <td>25</td>
-    </tr>
-    <tr>
-      <td>Louise Q.</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Owen B.</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Stan L.</td>
-      <td>71</td>
-    </tr>
+    <tbody>
+      <tr>
+        <th>Client Name</th>
+        <th>Age</th>
+      </tr>
+      <tr>
+        <td></td>
+        <td>25</td>
+      </tr>
+      <tr>
+        <td>Louise Q.</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Owen B.</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Stan L.</td>
+        <td>71</td>
+      </tr>
+    </tbody>
   </table>
 </section>
 ```
@@ -95,25 +97,29 @@ The `empty-cells` property is specified as one of the keyword values listed belo
 
 ```html
 <table class="table_1">
-  <tr>
-    <td>Moe</td>
-    <td>Larry</td>
-  </tr>
-  <tr>
-    <td>Curly</td>
-    <td></td>
-  </tr>
+  <tbody>
+    <tr>
+      <td>Moe</td>
+      <td>Larry</td>
+    </tr>
+    <tr>
+      <td>Curly</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 <br />
 <table class="table_2">
-  <tr>
-    <td>Moe</td>
-    <td>Larry</td>
-  </tr>
-  <tr>
-    <td>Curly</td>
-    <td></td>
-  </tr>
+  <tbody>
+    <tr>
+      <td>Moe</td>
+      <td>Larry</td>
+    </tr>
+    <tr>
+      <td>Curly</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -151,4 +157,4 @@ th {
 
 - {{cssxref("border-collapse")}}
 - [Learn: Styling tables](/en-US/docs/Learn_web_development/Core/Styling_basics/Tables)
-- [CSS table](/en-US/docs/Web/CSS/CSS_table) module
+- [CSS table](/en-US/docs/Web/CSS/Guides/Table) module

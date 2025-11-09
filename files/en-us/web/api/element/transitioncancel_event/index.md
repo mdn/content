@@ -8,7 +8,7 @@ browser-compat: api.Element.transitioncancel_event
 
 {{APIRef}}
 
-The **`transitioncancel`** event is fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) is canceled.
+The **`transitioncancel`** event is fired when a [CSS transition](/en-US/docs/Web/CSS/Guides/Transitions/Using) is canceled.
 
 ## Syntax
 
@@ -35,7 +35,7 @@ _Also inherits properties from its parent {{domxref("Event")}}_.
 - {{domxref("TransitionEvent.elapsedTime")}} {{ReadOnlyInline}}
   - : A `float` giving the amount of time the transition has been running, in seconds, when this event fired. This value is not affected by the {{cssxref("transition-delay")}} property.
 - {{domxref("TransitionEvent.pseudoElement")}} {{ReadOnlyInline}}
-  - : A string, starting with `::`, containing the name of the [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) the animation runs on. If the transition doesn't run on a pseudo-element but on the element, an empty string: `''`.
+  - : A string, starting with `::`, containing the name of the [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) the animation runs on. If the transition doesn't run on a pseudo-element but on the element, an empty string: `''`.
 
 ## Examples
 

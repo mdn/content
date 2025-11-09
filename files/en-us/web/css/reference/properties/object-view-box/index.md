@@ -88,7 +88,7 @@ object-view-box: unset;
 - `none`
   - : The element does not have a view box. This is the default.
 
-- [`<basic-shape-rect>`](/en-US/docs/Web/CSS/basic-shape#syntax_for_rectangles_basic-shape-rect)
+- [`<basic-shape-rect>`](/en-US/docs/Web/CSS/Reference/Values/basic-shape#syntax_for_rectangles_basic-shape-rect)
   - : An {{cssxref("basic-shape/inset","inset()")}}, {{cssxref("basic-shape/xywh","xywh()")}}, or {{cssxref("basic-shape/rect","rect()")}} function specifying a view box for an element with natural dimensions (replaced elements). Resolves to `none` otherwise.
 
 ## Description
@@ -362,9 +362,9 @@ img {
 
 ## See also
 
-- [Using the CSS `object-view-box` property](/en-US/docs/Web/CSS/CSS_images/Using_object-view-box)
+- [Using the CSS `object-view-box` property](/en-US/docs/Web/CSS/Guides/Images/Using_object-view-box)
 - {{cssxref("object-fit")}}
 - {{cssxref("object-position")}}
 - {{cssxref("background-size")}}
-- [Understanding aspect ratio](/en-US/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)
-- [CSS images](/en-US/docs/Web/CSS/CSS_images) module
+- [Understanding aspect ratio](/en-US/docs/Web/CSS/Guides/Box_sizing/Aspect_ratios)
+- [CSS images](/en-US/docs/Web/CSS/Guides/Images) module

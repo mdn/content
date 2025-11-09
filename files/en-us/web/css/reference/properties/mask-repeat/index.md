@@ -194,7 +194,7 @@ Using the same HTML and CSS, this demonstration includes a slider that changes t
 ```html hidden
 <div></div>
 <label
-  >width: <output></output><br />
+  >width: <span></span><br />
   <input type="range" min="0" max="400" value="250" id="width" />
 </label>
 ```
@@ -219,7 +219,7 @@ input {
 ```js hidden
 const div = document.querySelector("div");
 const range = document.getElementById("width");
-const output = document.querySelector("output");
+const output = document.querySelector("span");
 
 range.addEventListener("change", () => {
   const value = `${range.value}px`;
@@ -360,7 +360,7 @@ Each image is matched with a corresponding repeat style. As there are more `mask
 
 - {{cssxref("background-repeat")}}
 - {{cssxref("mask-border-repeat")}}
-- [Introduction to CSS masking](/en-US/docs/Web/CSS/CSS_masking/Masking)
-- [CSS `mask` properties](/en-US/docs/Web/CSS/CSS_masking/Mask_properties)
-- [Declaring multiple masks](/en-US/docs/Web/CSS/CSS_masking/Multiple_masks)
-- [CSS masking](/en-US/docs/Web/CSS/CSS_masking) module
+- [Introduction to CSS masking](/en-US/docs/Web/CSS/Guides/Masking/Introduction)
+- [CSS `mask` properties](/en-US/docs/Web/CSS/Guides/Masking/Mask_properties)
+- [Declaring multiple masks](/en-US/docs/Web/CSS/Guides/Masking/Multiple_masks)
+- [CSS masking](/en-US/docs/Web/CSS/Guides/Masking) module

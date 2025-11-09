@@ -6,7 +6,7 @@ browser-compat: css.properties.font
 sidebar: cssref
 ---
 
-The **`font`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) sets all the different properties of an element's font. Alternatively, it sets an element's font to a system font.
+The **`font`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) sets all the different properties of an element's font. Alternatively, it sets an element's font to a system font.
 
 {{InteractiveExample("CSS Demo: font")}}
 
@@ -215,7 +215,7 @@ p {
         type="radio"
         id="font-style-none"
         name="font_style"
-        checked=""
+        checked
         value="" />
       <label for="font-style-none">none</label><br />
       <input
@@ -244,7 +244,7 @@ p {
         type="radio"
         id="font-variant-none"
         name="font_variant"
-        checked=""
+        checked
         value=" " />
       <label for="font-variant-none">none</label><br />
       <input
@@ -268,7 +268,7 @@ p {
       <input
         type="radio"
         id="font-weight-normal"
-        checked=""
+        checked
         name="font_weight"
         value="400" />
       <label for="font-weight-normal">normal</label><br />
@@ -289,7 +289,7 @@ p {
         id="font-size-16px"
         name="font_size"
         value="16px"
-        checked="" />
+        checked />
       <label for="font-size-16px">16px</label><br />
       <input type="radio" id="font-size-24px" name="font_size" value="24px" />
       <label for="font-size-24px">24px</label>
@@ -301,15 +301,15 @@ p {
         type="radio"
         id="line-height-none"
         name="line_height"
-        checked=""
+        checked
         value="" />
       <label for="line-height-none">none</label><br />
       <input
         type="radio"
-        id="line-height-1.2"
+        id="line-height-1-2"
         name="line_height"
         value="/1.2" />
-      <label for="line-height-1.2">1.2</label><br />
+      <label for="line-height-1-2">1.2</label><br />
       <input type="radio" id="line-height-3" name="line_height" value="/3" />
       <label for="line-height-3">3</label>
     </div>
@@ -321,7 +321,7 @@ p {
         type="radio"
         id="font-family-courier"
         name="font_family"
-        checked=""
+        checked
         value="courier" />
       <label for="font-family-courier">courier</label><br />
       <input

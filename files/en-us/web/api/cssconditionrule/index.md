@@ -7,7 +7,7 @@ browser-compat: api.CSSConditionRule
 
 {{ APIRef("CSSOM") }}
 
-An object implementing the **`CSSConditionRule`** interface represents a single condition CSS [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule), which consists of a condition and a statement block.
+An object implementing the **`CSSConditionRule`** interface represents a single condition CSS [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules), which consists of a condition and a statement block.
 
 Three objects derive from `CSSConditionRule`: {{domxref("CSSMediaRule")}}, {{domxref("CSSContainerRule")}} and {{domxref("CSSSupportsRule")}}.
 

@@ -36,7 +36,7 @@ The index of the new rule.
 - `HierarchyRequestError` {{domxref("DOMException")}}
   - : Thrown if `rule` cannot be inserted at the specified index due to some CSS constraint.
 - `HierarchyRequestError` {{domxref("DOMException")}}
-  - : Thrown if the `rule` is a valid statement but not a [nested statement](/en-US/docs/Web/CSS/CSS_syntax/Syntax#nested_statements).
+  - : Thrown if the `rule` is a valid statement but not a [nested statement](/en-US/docs/Web/CSS/Guides/Syntax/Introduction#nested_statements).
 
 ## Examples
 

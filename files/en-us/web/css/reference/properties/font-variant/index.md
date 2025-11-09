@@ -6,7 +6,7 @@ browser-compat: css.properties.font-variant
 sidebar: cssref
 ---
 
-The **`font-variant`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) allows you to set all the font variants for a font.
+The **`font-variant`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) allows you to set all the font variants for a font.
 
 You can also set the `<font-variant-css2>` values of `font-variant` defined in CSS Level 2.1, (that is, `normal` or `small-caps`), by using the [`font`](/en-US/docs/Web/CSS/Reference/Properties/font) shorthand.
 
@@ -33,15 +33,17 @@ font-variant: small-caps slashed-zero;
   <div id="example-element">
     <p>Difficult waffles</p>
     <table>
-      <tr>
-        <td><span class="tabular">0O</span></td>
-      </tr>
-      <tr>
-        <td><span class="tabular">3.14</span></td>
-      </tr>
-      <tr>
-        <td><span class="tabular">2.71</span></td>
-      </tr>
+      <tbody>
+        <tr>
+          <td><span class="tabular">0O</span></td>
+        </tr>
+        <tr>
+          <td><span class="tabular">3.14</span></td>
+        </tr>
+        <tr>
+          <td><span class="tabular">2.71</span></td>
+        </tr>
+      </tbody>
     </table>
   </div>
 </section>

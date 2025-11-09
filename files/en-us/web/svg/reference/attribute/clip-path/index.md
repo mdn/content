@@ -131,4 +131,4 @@ svg {
 ## See also
 
 - CSS {{cssxref("clip-path")}} property
-- [Introduction to CSS clipping](/en-US/docs/Web/CSS/CSS_masking/Clipping)
+- [Introduction to CSS clipping](/en-US/docs/Web/CSS/Guides/Masking/Clipping)

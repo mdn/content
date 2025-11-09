@@ -66,7 +66,7 @@ To optimize the CSSOM construction and improve page performance, you can do one 
     media="screen and (width <= 480px)" />
   ```
 
-  The above example provides three sets of styles — default styles that will always load, styles that will only be loaded when the document is being printed, and styles that will be loaded only by devices with narrow screens. By default, the browser assumes that each specified style sheet is render-blocking. You can tell the browser when a style sheet should be applied by adding a `media` attribute containing a [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries). When the browser sees a style sheet that it only needs to apply in a specific scenario, it still downloads the stylesheet, but doesn't render-block. By separating the CSS into multiple files, the main render-blocking file, in this case `styles.css`, is much smaller, reducing the time for which rendering is blocked.
+  The above example provides three sets of styles — default styles that will always load, styles that will only be loaded when the document is being printed, and styles that will be loaded only by devices with narrow screens. By default, the browser assumes that each specified style sheet is render-blocking. You can tell the browser when a style sheet should be applied by adding a `media` attribute containing a [media query](/en-US/docs/Web/CSS/Guides/Media_queries/Using). When the browser sees a style sheet that it only needs to apply in a specific scenario, it still downloads the stylesheet, but doesn't render-block. By separating the CSS into multiple files, the main render-blocking file, in this case `styles.css`, is much smaller, reducing the time for which rendering is blocked.
 
 - **Minify and compress your CSS**: Minifying involves removing all the whitespace in the file that is only there for human readability, once the code is put into production. You can reduce loading times considerably by minifying your CSS. Minification is generally done as part of a build process (for example, most JavaScript frameworks will minify code when you build a project ready for deployment). In addition to minification, make sure that the server that your site is hosted on uses compression such as gzip on files before serving them.
 
@@ -86,7 +86,7 @@ To optimize the CSSOM construction and improve page performance, you can do one 
 
   Making your selectors less complex and specific is also good for maintenance. It is easy to understand what simple selectors are doing, and it is easy to override styles when needed later on if the selectors are less [specific](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#specificity_2).
 
-- **Don't apply styles to more elements than needed**: A common mistake is to apply styles to all elements using the [universal selector](/en-US/docs/Web/CSS/Universal_selectors), or at least, to more elements than needed. This kind of styling can impact performance negatively, especially on larger sites.
+- **Don't apply styles to more elements than needed**: A common mistake is to apply styles to all elements using the [universal selector](/en-US/docs/Web/CSS/Reference/Selectors/Universal_selectors), or at least, to more elements than needed. This kind of styling can impact performance negatively, especially on larger sites.
 
   ```css
   /* Selects every element inside the <body> */
@@ -127,9 +127,9 @@ To optimize the CSSOM construction and improve page performance, you can do one 
 
 Animations can improve perceived performance, making interfaces feel snappier and making users feel like progress is being made when they are waiting for a page to load (loading spinners, for example). However, larger animations and a higher number of animations will naturally require more processing power to handle, which can degrade performance.
 
-The simplest advice is to cut down on all unnecessary animations. You could also provide users with a control/site preference to turn off animations if they are using a low-powered device or a mobile device with limited battery power. You could also use JavaScript to control whether or not animation is applied to the page in the first place. There is also a media query called [`prefers-reduced-motion`](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) that can be used to selectively serve animation styles or not based on a user's OS-level preferences for animation.
+The simplest advice is to cut down on all unnecessary animations. You could also provide users with a control/site preference to turn off animations if they are using a low-powered device or a mobile device with limited battery power. You could also use JavaScript to control whether or not animation is applied to the page in the first place. There is also a media query called [`prefers-reduced-motion`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) that can be used to selectively serve animation styles or not based on a user's OS-level preferences for animation.
 
-For essential DOM animations, you are advised to use [CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations) where possible, rather than JavaScript animations (the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) provides a way to directly hook into CSS animations using JavaScript).
+For essential DOM animations, you are advised to use [CSS animations](/en-US/docs/Web/CSS/Guides/Animations/Using) where possible, rather than JavaScript animations (the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) provides a way to directly hook into CSS animations using JavaScript).
 
 ### Choosing properties to animate
 
@@ -144,7 +144,7 @@ Modern browsers are smart enough to repaint only the changed area of the documen
 
 If at all possible, it is better to animate properties that do not cause reflow/repaint. This includes:
 
-- [Transforms](/en-US/docs/Web/CSS/CSS_transforms)
+- [Transforms](/en-US/docs/Web/CSS/Guides/Transforms)
 - [`opacity`](/en-US/docs/Web/CSS/Reference/Properties/opacity)
 - [`filter`](/en-US/docs/Web/CSS/Reference/Properties/filter)
 
@@ -152,7 +152,7 @@ If at all possible, it is better to animate properties that do not cause reflow/
 
 To further improve performance, you should consider moving animation work off the main thread and onto the device's GPU (also referred to as compositing). This is done by choosing specific types of animations that the browser will automatically send to the GPU to handle; these include:
 
-- 3D transform animations such as [`transform: translateZ()`](/en-US/docs/Web/CSS/Reference/Properties/transform) and [`rotate3d()`](/en-US/docs/Web/CSS/transform-function/rotate3d).
+- 3D transform animations such as [`transform: translateZ()`](/en-US/docs/Web/CSS/Reference/Properties/transform) and [`rotate3d()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/rotate3d).
 - Elements with certain other properties animated such as [`position: fixed`](/en-US/docs/Web/CSS/Reference/Properties/position).
 - Elements with [`will-change`](/en-US/docs/Web/CSS/Reference/Properties/will-change) applied (see the section below).
 - Certain elements that are rendered in their own layer, including [`<video>`](/en-US/docs/Web/HTML/Reference/Elements/video), [`<canvas>`](/en-US/docs/Web/HTML/Reference/Elements/canvas), and [`<iframe>`](/en-US/docs/Web/HTML/Reference/Elements/iframe).
@@ -187,7 +187,7 @@ CSS can scope styles to particular conditions with media queries. Media queries 
 <link rel="stylesheet" href="mobile.css" media="screen and (width <= 480px)" />
 ```
 
-By default, the browser assumes that each specified style sheet is render blocking. Tell the browser when the style sheet should be applied by adding a `media` attribute with the [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries). When the browser sees a style sheet it knows that it only needs to apply it for a specific scenario, it still downloads the stylesheet, but doesn't render block. By separating out the CSS into multiple files, the main render-blocking file, in this case `styles.css`, is much smaller, reducing the time that rendering is blocked.
+By default, the browser assumes that each specified style sheet is render blocking. Tell the browser when the style sheet should be applied by adding a `media` attribute with the [media query](/en-US/docs/Web/CSS/Guides/Media_queries/Using). When the browser sees a style sheet it knows that it only needs to apply it for a specific scenario, it still downloads the stylesheet, but doesn't render block. By separating out the CSS into multiple files, the main render-blocking file, in this case `styles.css`, is much smaller, reducing the time that rendering is blocked.
 
 ## Improving font performance
 
@@ -197,7 +197,7 @@ In general, think carefully about the fonts you use on your site. Some font file
 
 ### Font loading
 
-Bear in mind that a font is only loaded when it is actually applied to an element using the [`font-family`](/en-US/docs/Web/CSS/Reference/Properties/font-family) property, not when it is first referenced using the [`@font-face`](/en-US/docs/Web/CSS/@font-face) at-rule:
+Bear in mind that a font is only loaded when it is actually applied to an element using the [`font-family`](/en-US/docs/Web/CSS/Reference/Properties/font-family) property, not when it is first referenced using the [`@font-face`](/en-US/docs/Web/CSS/Reference/At-rules/@font-face) at-rule:
 
 ```css
 /* Font not loaded here */
@@ -236,7 +236,7 @@ You can also consider:
 
 When choosing a font for body copy, it is harder to be sure of the glyphs that will be used in it, especially if you are dealing with user-generated content and/or content across multiple languages.
 
-However, if you know you are going to use a specific set of glyphs (for example, glyphs for headings or specific punctuation characters only), you could limit the number of glyphs the browser has to download. This can be done by creating a font file that only contains the required subset. A process called [subsetting](https://fonts.google.com/knowledge/glossary/subsetting). The [`unicode-range`](/en-US/docs/Web/CSS/@font-face/unicode-range) `@font-face` descriptor can then be used to specify when your subset font is used. If the page doesn't use any character in this range, the font is not downloaded.
+However, if you know you are going to use a specific set of glyphs (for example, glyphs for headings or specific punctuation characters only), you could limit the number of glyphs the browser has to download. This can be done by creating a font file that only contains the required subset. A process called [subsetting](https://fonts.google.com/knowledge/glossary/subsetting). The [`unicode-range`](/en-US/docs/Web/CSS/Reference/At-rules/@font-face/unicode-range) `@font-face` descriptor can then be used to specify when your subset font is used. If the page doesn't use any character in this range, the font is not downloaded.
 
 ```css
 @font-face {
@@ -248,7 +248,7 @@ However, if you know you are going to use a specific set of glyphs (for example,
 
 ### Defining font display behavior with the `font-display` descriptor
 
-Applied to the `@font-face` at-rule, the [`font-display`](/en-US/docs/Web/CSS/@font-face/font-display) descriptor defines how font files are loaded and displayed by the browser, allowing text to appear with a fallback font while a font loads, or fails to load. This improves performance by making the text visible instead of having a blank screen, with a trade-off being a flash of unstyled text.
+Applied to the `@font-face` at-rule, the [`font-display`](/en-US/docs/Web/CSS/Reference/At-rules/@font-face/font-display) descriptor defines how font files are loaded and displayed by the browser, allowing text to appear with a fallback font while a font loads, or fails to load. This improves performance by making the text visible instead of having a blank screen, with a trade-off being a flash of unstyled text.
 
 ```css
 @font-face {
@@ -262,9 +262,9 @@ Applied to the `@font-face` at-rule, the [`font-display`](/en-US/docs/Web/CSS/@f
 
 ## Optimizing styling recalculation with CSS containment
 
-By using the properties defined in the [CSS containment](/en-US/docs/Web/CSS/CSS_containment) module, you can instruct the browser to isolate different parts of a page and optimize their rendering independently from one another. This allows for improved performance in rendering individual sections. As an example, you can specify to the browser to not render certain containers until they are visible in the viewport.
+By using the properties defined in the [CSS containment](/en-US/docs/Web/CSS/Guides/Containment) module, you can instruct the browser to isolate different parts of a page and optimize their rendering independently from one another. This allows for improved performance in rendering individual sections. As an example, you can specify to the browser to not render certain containers until they are visible in the viewport.
 
-The {{cssxref("contain")}} property allows an author to specify exactly what [containment types](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment) they want applied to individual containers on the page. This allows the browser to recalculate layout, style, paint, size, or any combination of them for a limited part of the DOM.
+The {{cssxref("contain")}} property allows an author to specify exactly what [containment types](/en-US/docs/Web/CSS/Guides/Containment/Using) they want applied to individual containers on the page. This allows the browser to recalculate layout, style, paint, size, or any combination of them for a limited part of the DOM.
 
 ```css
 article {
@@ -285,7 +285,7 @@ article {
 
 ## Optimizing `:has()` selectors
 
-The {{cssxref(":has", ":has()")}} pseudo-class enables powerful selection capabilities but requires careful use to avoid performance bottlenecks. For detailed guidance on writing efficient `:has()` selectors, see [Performance considerations in the `:has()` reference documentation](/en-US/docs/Web/CSS/:has#performance_considerations).
+The {{cssxref(":has", ":has()")}} pseudo-class enables powerful selection capabilities but requires careful use to avoid performance bottlenecks. For detailed guidance on writing efficient `:has()` selectors, see [Performance considerations in the `:has()` reference documentation](/en-US/docs/Web/CSS/Reference/Selectors/:has#performance_considerations).
 
 ## See also
 

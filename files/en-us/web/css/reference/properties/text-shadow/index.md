@@ -87,7 +87,7 @@ Each shadow is specified as two or three `<length>` values, followed optionally 
 
 When more than one shadow is given, shadows are applied front-to-back, with the first-specified shadow on top.
 
-This property applies to both {{cssxref("::first-line")}} and {{cssxref("::first-letter")}} [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements).
+This property applies to both {{cssxref("::first-line")}} and {{cssxref("::first-letter")}} [pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements).
 
 ### Values
 
@@ -159,8 +159,8 @@ This property applies to both {{cssxref("::first-line")}} and {{cssxref("::first
 
 ## See also
 
-- [Introduction to text shadows](/en-US/docs/Web/CSS/CSS_text_decoration/Text_shadows)
+- [Introduction to text shadows](/en-US/docs/Web/CSS/Guides/Text_decoration/Text_shadows)
 - {{cssxref("&lt;color&gt;")}}
 - {{cssxref("box-shadow")}}
 - {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
-- [CSS text decoration](/en-US/docs/Web/CSS/CSS_text_decoration) module
+- [CSS text decoration](/en-US/docs/Web/CSS/Guides/Text_decoration) module

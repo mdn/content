@@ -6,7 +6,7 @@ browser-compat: css.properties.transition-property
 sidebar: cssref
 ---
 
-The **`transition-property`** [CSS](/en-US/docs/Web/CSS) property sets the CSS properties to which a [transition effect](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) should be applied.
+The **`transition-property`** [CSS](/en-US/docs/Web/CSS) property sets the CSS properties to which a [transition effect](/en-US/docs/Web/CSS/Guides/Transitions/Using) should be applied.
 
 {{InteractiveExample("CSS Demo: transition-property")}}
 
@@ -140,7 +140,7 @@ button {
 
 {{EmbedLiveSample('Basic_example', 600, 100)}}
 
-See our [Using CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) guide for more `transition-property` examples.
+See our [Using CSS transitions](/en-US/docs/Web/CSS/Guides/Transitions/Using) guide for more `transition-property` examples.
 
 ## Specifications
 
@@ -152,7 +152,7 @@ See our [Using CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_tr
 
 ## See also
 
-- [Using CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [Using CSS transitions](/en-US/docs/Web/CSS/Guides/Transitions/Using)
 - {{cssxref('transition')}}
 - {{cssxref('transition-duration')}}
 - {{cssxref('transition-timing-function')}}

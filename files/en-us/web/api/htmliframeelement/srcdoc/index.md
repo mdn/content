@@ -68,22 +68,22 @@ This ensures that the input is passed through a transformation function, which h
 
 ## Examples
 
-### Reading the HTML from a frame
+### Reading the HTML from an iframe
 
-Reading `srcdoc` causes the user agent to serialize the frame's document.
+Reading `srcdoc` causes the user agent to serialize the iframe's document.
 
 Given the following HTML:
 
 ```html
-<frame
+<iframe
   id="example"
-  srcdoc="<!doctype html><body><p>Hello World!</p></body>"></frame>
+  srcdoc="<!doctype html><body><p>Hello World!</p></body>"></iframe>
 ```
 
 You can get and log the markup as shown:
 
 ```js
-const frame = document.querySelector("#frame");
+const frame = document.querySelector("#example");
 const frameDoc = frame.srcdoc;
 console.log(frameDoc); // "<!doctype html><body><p>Hello World!</p></body>"
 ```
@@ -121,7 +121,7 @@ const untrustedString =
 const trustedHTML = policy.createHTML(untrustedString);
 
 // Inject the TrustedHTML (which contains a trusted string)
-const frame = document.querySelector("#frame");
+const frame = document.querySelector("#example");
 const frameDoc = frame.srcdoc;
 ```
 

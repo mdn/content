@@ -19,7 +19,7 @@ A boolean that is `true` if the `ValidityState` object does not conform to the e
 ### Detecting bad input
 
 The following example checks the validity of a [numeric input element](/en-US/docs/Web/HTML/Reference/Elements/input/number).
-If the user enters text instead of a number, the element fails constraint validation, and the styles matching [`input:invalid`](/en-US/docs/Web/CSS/:invalid) are applied.
+If the user enters text instead of a number, the element fails constraint validation, and the styles matching [`input:invalid`](/en-US/docs/Web/CSS/Reference/Selectors/:invalid) are applied.
 The [`<pre>`](/en-US/docs/Web/HTML/Reference/Elements/pre) element above the input shows the validation message when the element `badInput` evaluates to `true`:
 
 ```css

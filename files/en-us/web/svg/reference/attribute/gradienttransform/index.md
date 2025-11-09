@@ -80,7 +80,7 @@ svg {
 </table>
 
 - `<transform-list>`
-  - : A list of [transformation functions](/en-US/docs/Web/CSS/transform-function) specifying some additional transformation from the gradient coordinate system onto the target coordinate system.
+  - : A list of [transformation functions](/en-US/docs/Web/CSS/Reference/Values/transform-function) specifying some additional transformation from the gradient coordinate system onto the target coordinate system.
 
 ## Specifications
 

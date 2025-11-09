@@ -250,17 +250,19 @@ The sixth cell is only used to ensure that the cells are tall enough to see the 
 
 ```html
 <table>
-  <tr class="bottom">
-    <td class="baseline">baseline</td>
-    <td class="top">top</td>
-    <td class="middle">middle</td>
-    <td>bottom</td>
-    <td>Row's style</td>
-    <td>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-      pretium felis eu sem mattis vulputate.
-    </td>
-  </tr>
+  <tbody>
+    <tr class="bottom">
+      <td class="baseline">baseline</td>
+      <td class="top">top</td>
+      <td class="middle">middle</td>
+      <td>bottom</td>
+      <td>Row's style</td>
+      <td>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+        pretium felis eu sem mattis vulputate.
+      </td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -315,7 +317,7 @@ td {
 
 ## See also
 
-- [Typical use cases of flexbox, section "Center item"](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox#center_item)
+- [Typical use cases of flexbox, section "Center item"](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Use_cases#center_item)
 - {{Cssxref("line-height")}}, {{Cssxref("text-align")}}, {{Cssxref("margin")}}
 - [Understanding `vertical-align`, or "How (Not) To Vertically Center Content"](https://phrogz.net/css/vertical-align/index.html)
 - [Vertical-Align: All You Need To Know](https://christopheraue.net/design/vertical-align)

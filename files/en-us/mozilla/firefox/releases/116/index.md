@@ -17,7 +17,7 @@ This article provides information about the changes in Firefox 116 that affect d
 
 ### CSS
 
-- The syntax has been updated for the {{cssxref("offset-path")}} property, which is used to define the path for an element to follow. The updated syntax allows you to set a value of `none` or one of `<offset-path>` or `<coord-box>`. The new `<offset-path>` value can be a `<ray()>`, a `<url>`, or a `<basic-shape>`. The [`<coord-box>`](/en-US/docs/Web/CSS/box-edge) value has replaced the older `<geometry-box>` value and lets you specify the shape of the path based on the element's box model. The `<basic-shape>` and `<coord-box>` values require the `layout.css.motion-path-basic-shapes.enabled` and `layout.css.motion-path-coord-box.enabled` preferences to be enabled, respectively. ([Firefox bug 1598156](https://bugzil.la/1598156)) and ([Firefox bug 1837305](https://bugzil.la/1837305)).
+- The syntax has been updated for the {{cssxref("offset-path")}} property, which is used to define the path for an element to follow. The updated syntax allows you to set a value of `none` or one of `<offset-path>` or `<coord-box>`. The new `<offset-path>` value can be a `<ray()>`, a `<url>`, or a `<basic-shape>`. The [`<coord-box>`](/en-US/docs/Web/CSS/Reference/Values/box-edge) value has replaced the older `<geometry-box>` value and lets you specify the shape of the path based on the element's box model. The `<basic-shape>` and `<coord-box>` values require the `layout.css.motion-path-basic-shapes.enabled` and `layout.css.motion-path-coord-box.enabled` preferences to be enabled, respectively. ([Firefox bug 1598156](https://bugzil.la/1598156)) and ([Firefox bug 1837305](https://bugzil.la/1837305)).
 
 ### Accessibility (ARIA)
 

@@ -9,4 +9,4 @@ sidebar: glossarysidebar
 
 ## See also
 
-- [Explanation and example of the stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context)
+- [Explanation and example of the stacking context](/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_context)

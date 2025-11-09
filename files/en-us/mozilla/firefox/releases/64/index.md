@@ -33,9 +33,9 @@ _No changes._
 
 ### CSS
 
-- [CSS Scrollbars](/en-US/docs/Web/CSS/CSS_scrollbars_styling) spec functionality has been enabled by default ([Firefox bug 1492012](https://bugzil.la/1492012)).
-- Interaction Media Features implemented, including [`pointer:coarse`](/en-US/docs/Web/CSS/@media/pointer) ([Firefox bug 1035774](https://bugzil.la/1035774)). For [`any-pointer`](/en-US/docs/Web/CSS/@media/any-pointer) and [`any-hover`](/en-US/docs/Web/CSS/@media/any-hover) implementation, see [Firefox bug 1483111](https://bugzil.la/1483111).
-- The [`prefers-reduced-motion`](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) media feature is now supported in Firefox for Android ([Firefox bug 1478505](https://bugzil.la/1478505)).
+- [CSS Scrollbars](/en-US/docs/Web/CSS/Guides/Scrollbars_styling) spec functionality has been enabled by default ([Firefox bug 1492012](https://bugzil.la/1492012)).
+- Interaction Media Features implemented, including [`pointer:coarse`](/en-US/docs/Web/CSS/Reference/At-rules/@media/pointer) ([Firefox bug 1035774](https://bugzil.la/1035774)). For [`any-pointer`](/en-US/docs/Web/CSS/Reference/At-rules/@media/any-pointer) and [`any-hover`](/en-US/docs/Web/CSS/Reference/At-rules/@media/any-hover) implementation, see [Firefox bug 1483111](https://bugzil.la/1483111).
+- The [`prefers-reduced-motion`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) media feature is now supported in Firefox for Android ([Firefox bug 1478505](https://bugzil.la/1478505)).
 - CSS {{cssxref("&lt;gradient&gt;")}} values now support multi-position color stop syntax, e.g., `yellow 25%, yellow 50%` can now be written `yellow 25% 50%` ([Firefox bug 1352643](https://bugzil.la/1352643)).
 - The {{cssxref("text-transform")}} property now accepts the `full-size-kana` value ([Firefox bug 1498148](https://bugzil.la/1498148)).
 - Support added for {{cssxref("appearance", "-webkit-appearance")}} to alleviate associated web compat issues ([Firefox bug 1368555](https://bugzil.la/1368555)).
@@ -47,8 +47,8 @@ _No changes._
 #### Removals
 
 - The non-standard `-moz-box` and `-moz-inline-box` {{CSSxRef("display")}} values have been hidden from web content ([Firefox bug 1496961](https://bugzil.la/1496961)).
-- The non-standard `::-moz-tree` [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) has been hidden from web content ([Firefox bug 1496961](https://bugzil.la/1496961)).
-- The `layout.css.filters.enabled` preference has been removed; [CSS filters](/en-US/docs/Web/CSS/CSS_filter_effects) can no longer be disabled ([Firefox bug 1408841](https://bugzil.la/1408841)).
+- The non-standard `::-moz-tree` [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) has been hidden from web content ([Firefox bug 1496961](https://bugzil.la/1496961)).
+- The `layout.css.filters.enabled` preference has been removed; [CSS filters](/en-US/docs/Web/CSS/Guides/Filter_effects) can no longer be disabled ([Firefox bug 1408841](https://bugzil.la/1408841)).
 - A previous change — to swap the values of the 2-value {{cssxref("overflow")}} syntax so block is specified first and inline second ([Firefox bug 1481866](https://bugzil.la/1481866)) — has been reverted ([Firefox bug 1492567](https://bugzil.la/1492567)). See [Bug 1481866 comment 14](https://bugzil.la/1481866#c14) for why.
 
 ### SVG

@@ -2,7 +2,7 @@
 title: CSS properties
 short-title: Properties
 slug: Web/CSS/Reference/Properties
-page-type: landing-page
+page-type: listing-page
 spec-urls:
   - https://drafts.csswg.org/css-syntax/
   - https://drafts.csswg.org/css-2024/
@@ -10,7 +10,7 @@ spec-urls:
 sidebar: cssref
 ---
 
-A [CSS](/en-US/docs/Web/CSS) **_property_** is a parameter used in a [CSS declaration](/en-US/docs/Web/CSS/CSS_syntax/Syntax#css_declarations) that lets you style certain aspects of selected elements.
+A [CSS](/en-US/docs/Web/CSS) **_property_** is a parameter used in a [CSS declaration](/en-US/docs/Web/CSS/Guides/Syntax/Introduction#css_declarations) that lets you style certain aspects of selected elements.
 For example, the {{CSSxRef("opacity")}} property is used to set the opacity of a selected element, allowing you to control if content behind that element is visible:
 
 ```css
@@ -603,8 +603,8 @@ Non-standard, or vendor-prefixed properties include the following:
 
 ## See also
 
-- [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax/Syntax)
-- [Pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements)
+- [CSS syntax](/en-US/docs/Web/CSS/Guides/Syntax/Introduction)
+- [Pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements)
 - [Firefox (-moz-) vendor-prefixed CSS extensions](/en-US/docs/Web/CSS/Reference/Mozilla_extensions)
 - [WebKit (-webkit-) vendor-prefixed CSS extensions](/en-US/docs/Web/CSS/Reference/Webkit_extensions)
 - {{Glossary("Vendor prefix")}}

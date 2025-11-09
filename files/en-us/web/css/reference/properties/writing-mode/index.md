@@ -128,48 +128,52 @@ The HTML is a {{HTMLElement("table")}} with each writing mode in a row with a co
   <caption>
     Using multiple writing modes
   </caption>
-  <tr>
-    <th>Value</th>
-    <th>Vertical script</th>
-    <th>Horizontal (LTR) script</th>
-    <th>Horizontal (RTL) script</th>
-    <th>Mixed script</th>
-  </tr>
-  <tr class="text1">
-    <th>horizontal-tb</th>
-    <td>我家没有电脑。</td>
-    <td>Example text</td>
-    <td>מלל ארוך לדוגמא</td>
-    <td>1994年に至っては</td>
-  </tr>
-  <tr class="text2">
-    <th>vertical-lr</th>
-    <td>我家没有电脑。</td>
-    <td>Example text</td>
-    <td>מלל ארוך לדוגמא</td>
-    <td>1994年に至っては</td>
-  </tr>
-  <tr class="text3">
-    <th>vertical-rl</th>
-    <td>我家没有电脑。</td>
-    <td>Example text</td>
-    <td>מלל ארוך לדוגמא</td>
-    <td>1994年に至っては</td>
-  </tr>
-  <tr class="experimental text4">
-    <th>sideways-lr</th>
-    <td>我家没有电脑。</td>
-    <td>Example text</td>
-    <td>מלל ארוך לדוגמא</td>
-    <td>1994年に至っては</td>
-  </tr>
-  <tr class="experimental text5">
-    <th>sideways-rl</th>
-    <td>我家没有电脑。</td>
-    <td>Example text</td>
-    <td>מלל ארוך לדוגמא</td>
-    <td>1994年に至っては</td>
-  </tr>
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Vertical script</th>
+      <th>Horizontal (LTR) script</th>
+      <th>Horizontal (RTL) script</th>
+      <th>Mixed script</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="text1">
+      <th>horizontal-tb</th>
+      <td>我家没有电脑。</td>
+      <td>Example text</td>
+      <td>מלל ארוך לדוגמא</td>
+      <td>1994年に至っては</td>
+    </tr>
+    <tr class="text2">
+      <th>vertical-lr</th>
+      <td>我家没有电脑。</td>
+      <td>Example text</td>
+      <td>מלל ארוך לדוגמא</td>
+      <td>1994年に至っては</td>
+    </tr>
+    <tr class="text3">
+      <th>vertical-rl</th>
+      <td>我家没有电脑。</td>
+      <td>Example text</td>
+      <td>מלל ארוך לדוגמא</td>
+      <td>1994年に至っては</td>
+    </tr>
+    <tr class="experimental text4">
+      <th>sideways-lr</th>
+      <td>我家没有电脑。</td>
+      <td>Example text</td>
+      <td>מלל ארוך לדוגמא</td>
+      <td>1994年に至っては</td>
+    </tr>
+    <tr class="experimental text5">
+      <th>sideways-rl</th>
+      <td>我家没有电脑。</td>
+      <td>Example text</td>
+      <td>מלל ארוך לדוגמא</td>
+      <td>1994年に至っては</td>
+    </tr>
+  </tbody>
 </table>
 <p class="notice">
   Your browser does not support the <code>sideways-lr</code> or
@@ -342,9 +346,9 @@ span {
 - {{Cssxref("unicode-bidi")}}
 - {{Cssxref("text-orientation")}}
 - {{Cssxref("text-combine-upright")}}
-- [CSS logical properties](/en-US/docs/Web/CSS/CSS_logical_properties_and_values)
-- [CSS writing modes](/en-US/docs/Web/CSS/CSS_writing_modes) module
+- [CSS logical properties](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values)
+- [CSS writing modes](/en-US/docs/Web/CSS/Guides/Writing_modes) module
 - SVG {{SVGAttr("writing-mode")}} attribute
-- [Creating vertical form controls](/en-US/docs/Web/CSS/CSS_writing_modes/Vertical_controls)
+- [Creating vertical form controls](/en-US/docs/Web/CSS/Guides/Writing_modes/Vertical_controls)
 - [Handling different text directions](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions)
 - [Styling vertical text (Chinese, Japanese, Korean and Mongolian)](https://www.w3.org/International/articles/vertical-text/) on W3.org (2022)

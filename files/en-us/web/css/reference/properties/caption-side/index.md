@@ -24,26 +24,28 @@ caption-side: bottom;
     <caption>
       Famous animals
     </caption>
-    <tr>
-      <th>Name</th>
-      <th>Location</th>
-    </tr>
-    <tr>
-      <td>Giraffe</td>
-      <td>Africa</td>
-    </tr>
-    <tr>
-      <td>Penguin</td>
-      <td>Antarctica</td>
-    </tr>
-    <tr>
-      <td>Sloth</td>
-      <td>South America</td>
-    </tr>
-    <tr>
-      <td>Tiger</td>
-      <td>Asia</td>
-    </tr>
+    <tbody>
+      <tr>
+        <th>Name</th>
+        <th>Location</th>
+      </tr>
+      <tr>
+        <td>Giraffe</td>
+        <td>Africa</td>
+      </tr>
+      <tr>
+        <td>Penguin</td>
+        <td>Antarctica</td>
+      </tr>
+      <tr>
+        <td>Sloth</td>
+        <td>South America</td>
+      </tr>
+      <tr>
+        <td>Tiger</td>
+        <td>Asia</td>
+      </tr>
+    </tbody>
   </table>
 </section>
 ```
@@ -99,7 +101,7 @@ The `caption-side` property is specified as one of the keyword values listed bel
   - : The caption box should be positioned at the block end side of the table.
 
 > [!NOTE]
-> The [CSS logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) module defines two logical values, `inline-start` and `inline-end`, to position the caption box at the inline start edge and inline end edge of the table, respectively. These values are not supported in any browsers.
+> The [CSS logical properties and values](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values) module defines two logical values, `inline-start` and `inline-end`, to position the caption box at the inline start edge and inline end edge of the table, respectively. These values are not supported in any browsers.
 
 ## Formal definition
 
@@ -120,10 +122,12 @@ The `caption-side` property is specified as one of the keyword values listed bel
   <caption>
     Caption ABOVE the table
   </caption>
-  <tr>
-    <td>Some data</td>
-    <td>Some more data</td>
-  </tr>
+  <tbody>
+    <tr>
+      <td>Some data</td>
+      <td>Some more data</td>
+    </tr>
+  </tbody>
 </table>
 
 <br />
@@ -132,10 +136,12 @@ The `caption-side` property is specified as one of the keyword values listed bel
   <caption>
     Caption BELOW the table
   </caption>
-  <tr>
-    <td>Some data</td>
-    <td>Some more data</td>
-  </tr>
+  <tbody>
+    <tr>
+      <td>Some data</td>
+      <td>Some more data</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -174,5 +180,5 @@ td {
 ## See also
 
 - {{HTMLelement("caption")}}
-- [CSS table](/en-US/docs/Web/CSS/CSS_table) module
-- [CSS logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) module
+- [CSS table](/en-US/docs/Web/CSS/Guides/Table) module
+- [CSS logical properties and values](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values) module

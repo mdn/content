@@ -84,7 +84,7 @@ order: unset;
 
 Since `order` is only meant to affect the _visual order_ of elements and not their logical or tab order, it must not be used on non-visual media such as [speech](https://drafts.csswg.org/css-speech/).
 
-Defined in the [CSS display](/en-US/docs/Web/CSS/CSS_display) module, this property impacts only grid and flex items. When `order` is set on an element whose parent's {{cssxref("display")}} property is not creating a flex or grid container, it has no effect.
+Defined in the [CSS display](/en-US/docs/Web/CSS/Guides/Display) module, this property impacts only grid and flex items. When `order` is set on an element whose parent's {{cssxref("display")}} property is not creating a flex or grid container, it has no effect.
 
 ### Values
 
@@ -130,7 +130,7 @@ We include a header, a footer, and a main content area. The main content include
 
 #### CSS
 
-We style the main area using [flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module features; by setting {{cssxref("display")}} to `flex`, the {{htmlelement("main")}} element becomes a flex container. By default, this creates flex items of equal vertical size. The sidebars are both given an absolute {{cssxref("width")}}, while the {{htmlelement("article")}} will consume all the [positive free space](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis#positive_and_negative_free_space) with a {{cssxref("flex-grow")}} factor set via the {{cssxref("flex")}} shorthand.
+We style the main area using [flexible box layout](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) module features; by setting {{cssxref("display")}} to `flex`, the {{htmlelement("main")}} element becomes a flex container. By default, this creates flex items of equal vertical size. The sidebars are both given an absolute {{cssxref("width")}}, while the {{htmlelement("article")}} will consume all the [positive free space](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios#positive_and_negative_free_space) with a {{cssxref("flex-grow")}} factor set via the {{cssxref("flex")}} shorthand.
 
 We then set different `order` property values on each of the flex container's three children; this means the CSS is defining that component's visual order rather than it appearing in the order declared in the HTML.
 
@@ -169,8 +169,8 @@ The `<article>` appears first in the source order but visually rendered in the c
 
 ## See also
 
-- [Basic concepts of flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- [Ordering flex items](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)
-- [CSS grid layout and accessibility](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
-- [CSS display](/en-US/docs/Web/CSS/CSS_display) module
+- [Basic concepts of flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
+- [Ordering flex items](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items)
+- [CSS grid layout and accessibility](/en-US/docs/Web/CSS/Guides/Grid_layout/Accessibility)
+- [CSS display](/en-US/docs/Web/CSS/Guides/Display) module
 - {{glossary("Reading order")}}

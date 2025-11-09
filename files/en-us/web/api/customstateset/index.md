@@ -39,7 +39,7 @@ The interface can be used to expose the internal states of a custom element, all
 
 Built in HTML elements can have different _states_, such as "enabled" and "disabled, "checked" and "unchecked", "initial", "loading" and "ready".
 Some of these states are public and can be set or queried using properties/attributes, while others are effectively internal, and cannot be directly set.
-Whether external or internal, element states can generally be selected and styled using [CSS pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) as selectors.
+Whether external or internal, element states can generally be selected and styled using [CSS pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) as selectors.
 
 The `CustomStateSet` allows developers to add and delete states for autonomous custom elements (but not elements derived from built-in elements).
 These states can then be used as custom state pseudo-class selectors in a similar way to the pseudo-classes for built-in elements.
@@ -61,7 +61,7 @@ The states can be used within the custom element but are not directly accessible
 
 ### Interaction with CSS
 
-You can select a custom element that is in a specific state using the [`:state()`](/en-US/docs/Web/CSS/:state) _custom state pseudo-class_.
+You can select a custom element that is in a specific state using the [`:state()`](/en-US/docs/Web/CSS/Reference/Selectors/:state) _custom state pseudo-class_.
 The format of this pseudo-class is `:state(my-state-name)`, where `my-state-name` is the state as defined in the element.
 The custom state pseudo-class matches the custom element only if the state is `true` (i.e., if `my-state-name` is present in the `CustomStateSet`).
 
@@ -73,12 +73,12 @@ labeled-checkbox:state(checked) {
 }
 ```
 
-CSS can also be used to match a custom state [within a custom element's shadow DOM](/en-US/docs/Web/CSS/:state#matching_a_custom_state_in_a_custom_elements_shadow_dom) by specifying `:state()` within the [`:host()`](/en-US/docs/Web/CSS/:host_function) pseudo-class function.
+CSS can also be used to match a custom state [within a custom element's shadow DOM](/en-US/docs/Web/CSS/Reference/Selectors/:state#matching_a_custom_state_in_a_custom_elements_shadow_dom) by specifying `:state()` within the [`:host()`](/en-US/docs/Web/CSS/Reference/Selectors/:host_function) pseudo-class function.
 
-Additionally, the `:state()` pseudo-class can be used after the [`::part()`](/en-US/docs/Web/CSS/::part) pseudo-element to match the [shadow parts](/en-US/docs/Web/CSS/CSS_shadow_parts) of a custom element that are in a particular state.
+Additionally, the `:state()` pseudo-class can be used after the [`::part()`](/en-US/docs/Web/CSS/Reference/Selectors/::part) pseudo-element to match the [shadow parts](/en-US/docs/Web/CSS/Guides/Shadow_parts) of a custom element that are in a particular state.
 
 > [!WARNING]
-> Browsers that do not yet support [`:state()`](/en-US/docs/Web/CSS/:state) will use a CSS `<dashed-ident>` for selecting custom states, which is now deprecated.
+> Browsers that do not yet support [`:state()`](/en-US/docs/Web/CSS/Reference/Selectors/:state) will use a CSS `<dashed-ident>` for selecting custom states, which is now deprecated.
 > For information about how to support both approaches see the [Compatibility with `<dashed-ident>` syntax](#compatibility_with_dashed-ident_syntax) section below.
 
 ## Examples
@@ -206,7 +206,7 @@ Click the element to see a different border being applied as the checkbox `check
 
 ### Matching a custom state in a shadow part of a custom element
 
-This example, which is adapted from the specification, demonstrates that custom states can be used to target the [shadow parts](/en-US/docs/Web/CSS/CSS_shadow_parts) of a custom element for styling.
+This example, which is adapted from the specification, demonstrates that custom states can be used to target the [shadow parts](/en-US/docs/Web/CSS/Guides/Shadow_parts) of a custom element for styling.
 Shadow parts are sections of the shadow tree that are intentionally exposed to pages that use the custom element.
 
 The example creates a `<question-box>` custom element that displays a question prompt along with a checkbox labeled "Yes".
@@ -322,7 +322,7 @@ After registering the custom element, we can use the element in HTML as shown be
 
 #### CSS
 
-The first block of CSS matches the exposed shadow part named `checkbox` using the [`::part()`](/en-US/docs/Web/CSS/::part) selector, styling it to be `red` by default.
+The first block of CSS matches the exposed shadow part named `checkbox` using the [`::part()`](/en-US/docs/Web/CSS/Reference/Selectors/::part) selector, styling it to be `red` by default.
 
 ```css
 question-box::part(checkbox) {
@@ -482,7 +482,7 @@ Click the element to see a different border being applied as the state changes.
 
 ## Compatibility with `<dashed-ident>` syntax
 
-Previously custom elements with custom states were selected using a `<dashed-ident>` instead of the [`:state()`](/en-US/docs/Web/CSS/:state) function.
+Previously custom elements with custom states were selected using a `<dashed-ident>` instead of the [`:state()`](/en-US/docs/Web/CSS/Reference/Selectors/:state) function.
 Browser versions that don't support `:state()` will throw an error when supplied with an ident that is not prefixed with the double dash.
 If support for these browsers is required, either use a [try...catch](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block to support both syntaxes, or use a `<dashed-ident>` as the state's value and select it with both the `:--my-state` and `:state(--my-state)` CSS selector.
 

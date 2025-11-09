@@ -8,7 +8,7 @@ browser-compat: api.Element.animationend_event
 
 {{APIRef("Web Animations")}}
 
-The **`animationend`** event is fired when a [CSS Animation](/en-US/docs/Web/CSS/CSS_animations) has completed. If the animation aborts before reaching completion, such as if the element is removed from the DOM or the animation is removed from the element, the `animationend` event is not fired.
+The **`animationend`** event is fired when a [CSS Animation](/en-US/docs/Web/CSS/Guides/Animations) has completed. If the animation aborts before reaching completion, such as if the element is removed from the DOM or the animation is removed from the element, the `animationend` event is not fired.
 
 ## Syntax
 
@@ -35,7 +35,7 @@ _Also inherits properties from its parent {{domxref("Event")}}_.
 - {{domxref("AnimationEvent.elapsedTime")}} {{ReadOnlyInline}}
   - : A `float` giving the amount of time the animation has been running, in seconds, when this event fired, excluding any time the animation was paused. For an `animationstart` event, `elapsedTime` is `0.0` unless there was a negative value for {{cssxref("animation-delay")}}, in which case the event will be fired with `elapsedTime` containing `(-1 * delay)`.
 - {{domxref("AnimationEvent.pseudoElement")}} {{ReadOnlyInline}}
-  - : A string, starting with `'::'`, containing the name of the [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) the animation runs on. If the animation doesn't run on a pseudo-element but on the element, an empty string: `''`.
+  - : A string, starting with `'::'`, containing the name of the [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) the animation runs on. If the animation doesn't run on a pseudo-element but on the element, an empty string: `''`.
 
 ## Examples
 
@@ -161,7 +161,7 @@ applyAnimation.addEventListener("click", () => {
 
 ## See also
 
-- [CSS Animations](/en-US/docs/Web/CSS/CSS_animations)
-- [Using CSS Animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [CSS Animations](/en-US/docs/Web/CSS/Guides/Animations)
+- [Using CSS Animations](/en-US/docs/Web/CSS/Guides/Animations/Using)
 - {{domxref("AnimationEvent")}}
 - Related events: {{domxref("Element/animationstart_event", "animationstart")}}, {{domxref("Element/animationcancel_event", "animationcancel")}}, {{domxref("Element/animationiteration_event", "animationiteration")}}

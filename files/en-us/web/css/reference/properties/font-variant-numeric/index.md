@@ -48,21 +48,23 @@ font-variant-numeric: diagonal-fractions;
 <section id="default-example">
   <div id="example-element">
     <table>
-      <tr>
-        <td><span class="tabular">0</span></td>
-      </tr>
-      <tr>
-        <td><span class="tabular">3.54</span></td>
-      </tr>
-      <tr>
-        <td><span class="tabular">1.71</span></td>
-      </tr>
-      <tr>
-        <td><span class="tabular">1st</span></td>
-      </tr>
-      <tr>
-        <td><span class="tabular">3/4</span></td>
-      </tr>
+      <tbody>
+        <tr>
+          <td><span class="tabular">0</span></td>
+        </tr>
+        <tr>
+          <td><span class="tabular">3.54</span></td>
+        </tr>
+        <tr>
+          <td><span class="tabular">1.71</span></td>
+        </tr>
+        <tr>
+          <td><span class="tabular">1st</span></td>
+        </tr>
+        <tr>
+          <td><span class="tabular">3/4</span></td>
+        </tr>
+      </tbody>
     </table>
   </div>
 </section>

@@ -31,15 +31,17 @@ font-feature-settings: "smcp", "zero";
   <div id="example-element">
     <p>Difficult waffles</p>
     <table>
-      <tr>
-        <td><span class="tabular">0O</span></td>
-      </tr>
-      <tr>
-        <td><span class="tabular">3.14</span></td>
-      </tr>
-      <tr>
-        <td><span class="tabular">2.71</span></td>
-      </tr>
+      <tbody>
+        <tr>
+          <td><span class="tabular">0O</span></td>
+        </tr>
+        <tr>
+          <td><span class="tabular">3.14</span></td>
+        </tr>
+        <tr>
+          <td><span class="tabular">2.71</span></td>
+        </tr>
+      </tbody>
     </table>
   </div>
 </section>

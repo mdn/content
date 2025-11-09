@@ -26,10 +26,10 @@ Assume the code is running on a website whose URL is `https://example.com`.
 ```
 
 ```js
-const script_with_src = document.getElementById("script-with-src");
-console.log(script_with_src.src); // Output: "https://example.com/main.js"
-const script_without_src = document.getElementById("script-without-src");
-console.log(script_without_src.src); // Output: ""
+const scriptWithSrc = document.getElementById("script-with-src");
+console.log(scriptWithSrc.src); // Output: "https://example.com/main.js"
+const scriptWithoutSrc = document.getElementById("script-without-src");
+console.log(scriptWithoutSrc.src); // Output: ""
 ```
 
 ## Specifications

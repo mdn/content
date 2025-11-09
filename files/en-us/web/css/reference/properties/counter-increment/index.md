@@ -6,7 +6,7 @@ browser-compat: css.properties.counter-increment
 sidebar: cssref
 ---
 
-The **`counter-increment`** [CSS](/en-US/docs/Web/CSS) property can be used to increase or decrease the value of the named [CSS counters](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) by the specified values, or to prevent all counters or an individual counter's value from being changed.
+The **`counter-increment`** [CSS](/en-US/docs/Web/CSS) property can be used to increase or decrease the value of the named [CSS counters](/en-US/docs/Web/CSS/Guides/Counter_styles/Using_counters) by the specified values, or to prevent all counters or an individual counter's value from being changed.
 
 If a named counter in the list of space-separated counters and values doesn't exist, it will be created. If no value is provided for a counter in the list of counters, the counter will be increased by `1`.
 
@@ -115,7 +115,7 @@ In this example, we display a sequence of numbers counting backward. To do this,
 
 We set the initial value of the counter named `sevens` to `100` by using {{cssxref("counter-reset")}}. Then, for each {{HTMLElement("i")}}, we decrease the counter by `7`.
 
-To set the first count at `100`, we target the first `<i>` element by using the {{cssxref(":first-of-type")}} pseudo-class and setting `counter-increment: none;`. Additionally, the {{cssxref("content")}} property is used in the {{cssxref("::before")}} pseudo-element to display the value of the counter using the [`counter()`](/en-US/docs/Web/CSS/counter) function.
+To set the first count at `100`, we target the first `<i>` element by using the {{cssxref(":first-of-type")}} pseudo-class and setting `counter-increment: none;`. Additionally, the {{cssxref("content")}} property is used in the {{cssxref("::before")}} pseudo-element to display the value of the counter using the [`counter()`](/en-US/docs/Web/CSS/Reference/Values/counter) function.
 
 ```css
 div {
@@ -164,6 +164,6 @@ Had we not used `counter-reset` (or {{cssxref("counter-set")}}) to create the co
 - Counter properties: {{cssxref("counter-set")}}, {{cssxref("counter-reset")}}
 - Counter at-rule: {{cssxref("@counter-style")}}
 - Counter functions: {{cssxref("counter", "counter()")}}, {{cssxref("counters", "counters()")}}
-- [Using CSS counters](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) guide
-- [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
-- [CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles) module
+- [Using CSS counters](/en-US/docs/Web/CSS/Guides/Counter_styles/Using_counters) guide
+- [CSS lists and counters](/en-US/docs/Web/CSS/Guides/Lists) module
+- [CSS counter styles](/en-US/docs/Web/CSS/Guides/Counter_styles) module

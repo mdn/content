@@ -157,7 +157,7 @@ We have hidden the exact HTML code for brevity.
     </select>
   </div>
 </section>
-<p class="display" contenteditable="">Holly Golightly</p>
+<p class="display" contenteditable>Holly Golightly</p>
 <section>
   <div>
     <label for="trim-under">Select trim under (end) value:</label>
@@ -287,5 +287,5 @@ Try changing the `<select>` values to see the effect they have on the display te
 ## See also
 
 - {{cssxref("text-box")}}, {{cssxref("text-box-edge")}}
-- [CSS inline layout](/en-US/docs/Web/CSS/CSS_inline_layout) module
+- [CSS inline layout](/en-US/docs/Web/CSS/Guides/Inline_layout) module
 - [CSS text-box-trim](https://developer.chrome.com/blog/css-text-box-trim) on developer.chrome.com (2025)
