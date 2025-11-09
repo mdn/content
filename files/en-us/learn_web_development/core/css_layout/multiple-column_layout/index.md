@@ -53,8 +53,8 @@ body {
   max-width: 900px;
   margin: 2em auto;
   font:
-    0.9em/1.2 Arial,
-    Helvetica,
+    0.9em/1.2 "Helvetica",
+    "Arial",
     sans-serif;
 }
 ```
@@ -108,8 +108,8 @@ body {
   max-width: 900px;
   margin: 2em auto;
   font:
-    0.9em/1.2 Arial,
-    Helvetica,
+    0.9em/1.2 "Helvetica",
+    "Arial",
     sans-serif;
 }
 ```
@@ -172,8 +172,8 @@ body {
   max-width: 900px;
   margin: 2em auto;
   font:
-    0.9em/1.2 Arial,
-    Helvetica,
+    0.9em/1.2 "Helvetica",
+    "Arial",
     sans-serif;
 }
 ```
@@ -224,8 +224,8 @@ body {
   max-width: 900px;
   margin: 2em auto;
   font:
-    0.9em/1.2 Arial,
-    Helvetica,
+    0.9em/1.2 "Helvetica",
+    "Arial",
     sans-serif;
 }
 .container {
@@ -290,8 +290,8 @@ body {
   max-width: 900px;
   margin: 2em auto;
   font:
-    0.9em/1.2 Arial,
-    Helvetica,
+    0.9em/1.2 "Helvetica",
+    "Arial",
     sans-serif;
 }
 ```
@@ -394,7 +394,7 @@ body {
 
 ### Setting break-inside
 
-To control this behavior, we can use properties from the [CSS Fragmentation](/en-US/docs/Web/CSS/CSS_fragmentation) specification. This specification gives us properties to control the breaking of content in multicol and in paged media. For example, by adding the property {{cssxref("break-inside")}} with a value of `avoid` to the rules for `.card`. This is the container of the heading and text, so we don't want it fragmented.
+To control this behavior, we can use properties from the [CSS Fragmentation](/en-US/docs/Web/CSS/Guides/Fragmentation) specification. This specification gives us properties to control the breaking of content in multicol and in paged media. For example, by adding the property {{cssxref("break-inside")}} with a value of `avoid` to the rules for `.card`. This is the container of the heading and text, so we don't want it fragmented.
 
 ```css
 .card {
@@ -414,8 +414,8 @@ body {
   max-width: 900px;
   margin: 2em auto;
   font:
-    0.9em/1.2 Arial,
-    Helvetica,
+    0.9em/1.2 "Helvetica",
+    "Arial",
     sans-serif;
 }
 ```
@@ -515,5 +515,5 @@ You now know how to use the basic features of multiple-column layout, another to
 
 ## See also
 
-- [CSS Fragmentation](/en-US/docs/Web/CSS/CSS_fragmentation)
-- [Using multi-column layouts](/en-US/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts)
+- [CSS Fragmentation](/en-US/docs/Web/CSS/Guides/Fragmentation)
+- [Using multi-column layouts](/en-US/docs/Web/CSS/Guides/Multicol_layout/Using)

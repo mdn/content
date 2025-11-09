@@ -19,11 +19,17 @@ There are two types of custom element:
 - **Customized built-in elements** inherit from standard HTML elements such as {{domxref("HTMLImageElement")}} or {{domxref("HTMLParagraphElement")}}. Their implementation extends the behavior of select instances of the standard element.
 
   > [!NOTE]
-  > Safari does not plan to support custom built-in elements. See the [`is` attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/is) for more information.
+  > Safari does not plan to support customized built-in elements. See the [`is` attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/is) for more information.
+
+For both kinds of custom element, the basic steps to create and use them are the same:
+
+- You first [implement its behavior](#implementing_a_custom_element) by defining a JavaScript class.
+- You then [register the custom element](#registering_a_custom_element) to the current page.
+- Finally, you can [use the custom element](#using_a_custom_element) in your HTML or JavaScript code.
 
 ## Implementing a custom element
 
-A custom element is implemented as a [class](/en-US/docs/Web/JavaScript/Reference/Classes) which extends {{domxref("HTMLElement")}} (in the case of autonomous elements) or the interface you want to customize (in the case of customized built-in elements).
+A custom element is implemented as a [class](/en-US/docs/Web/JavaScript/Reference/Classes) which extends {{domxref("HTMLElement")}} (in the case of autonomous elements) or the interface you want to customize (in the case of customized built-in elements). This class will not be called by you, but will be called by the browser. Immediately after defining the class, you should [register](#registering_a_custom_element) the custom element, so you can create instances of it using standard DOM practices, such as writing the element in HTML markup, calling {{domxref("document.createElement()")}}, etc.
 
 Here's the implementation of a minimal custom element that customizes the {{HTMLElement("p")}} element:
 
@@ -210,9 +216,9 @@ For a complete example showing the use of `attributeChangedCallback()`, see [Lif
 
 Built in HTML elements can have different _states_, such as "hover", "disabled", and "read only".
 Some of these states can be set as attributes using HTML or JavaScript, while others are internal, and cannot.
-Whether external or internal, commonly these states have corresponding CSS [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) that can be used to select and style the element when it is in a particular state.
+Whether external or internal, commonly these states have corresponding CSS [pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) that can be used to select and style the element when it is in a particular state.
 
-Autonomous custom elements (but not elements based on built-in elements) also allow you to define states and select against them using the [`:state()`](/en-US/docs/Web/CSS/:state) pseudo-class function.
+Autonomous custom elements (but not elements based on built-in elements) also allow you to define states and select against them using the [`:state()`](/en-US/docs/Web/CSS/Reference/Selectors/:state) pseudo-class function.
 The code below shows how this works using the example of an autonomous custom element that has an internal state `"collapsed"`.
 
 The `collapsed` state is represented as a boolean property (with setter and getter methods) that is not visible outside of the element.
@@ -247,7 +253,7 @@ customElements.define("my-custom-element", MyCustomElement);
 ```
 
 We can use the identifier added to the custom element's `CustomStateSet` (`this._internals.states`) for matching the element's custom state.
-This is matched by passing the identifier to the [`:state()`](/en-US/docs/Web/CSS/:state) pseudo-class.
+This is matched by passing the identifier to the [`:state()`](/en-US/docs/Web/CSS/Reference/Selectors/:state) pseudo-class.
 For example, below we select on the `hidden` state being true (and hence the element's `collapsed` state) using the `:hidden` selector, and remove the border.
 
 ```css
@@ -259,7 +265,7 @@ my-custom-element:state(hidden) {
 }
 ```
 
-The `:state()` pseudo-class can also be used within the [`:host()`](/en-US/docs/Web/CSS/:host_function) pseudo-class function to match a custom state [within a custom element's shadow DOM](/en-US/docs/Web/CSS/:state#matching_a_custom_state_in_a_custom_elements_shadow_dom). Additionally, the `:state()` pseudo-class can be used after the [`::part()`](/en-US/docs/Web/CSS/::part) pseudo-element to match the [shadow parts](/en-US/docs/Web/CSS/CSS_shadow_parts) of a custom element that is in a particular state.
+The `:state()` pseudo-class can also be used within the [`:host()`](/en-US/docs/Web/CSS/Reference/Selectors/:host_function) pseudo-class function to match a custom state [within a custom element's shadow DOM](/en-US/docs/Web/CSS/Reference/Selectors/:state#matching_a_custom_state_in_a_custom_elements_shadow_dom). Additionally, the `:state()` pseudo-class can be used after the [`::part()`](/en-US/docs/Web/CSS/Reference/Selectors/::part) pseudo-element to match the [shadow parts](/en-US/docs/Web/CSS/Guides/Shadow_parts) of a custom element that is in a particular state.
 
 There are several live examples in {{domxref("CustomStateSet")}} showing how this works.
 
@@ -455,7 +461,7 @@ Now let's have a look at a customized built in element example. This example ext
 - [See the source code](https://github.com/mdn/web-components-examples/tree/main/expanding-list-web-component)
 
 > [!NOTE]
-> Please see the [`is`](/en-US/docs/Web/HTML/Reference/Global_attributes/is) attribute reference for caveats on implementation reality of custom built-in elements.
+> Please see the [`is`](/en-US/docs/Web/HTML/Reference/Global_attributes/is) attribute reference for caveats on implementation reality of customized built-in elements.
 
 First of all, we define our element's class:
 

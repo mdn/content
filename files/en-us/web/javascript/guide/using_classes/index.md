@@ -305,7 +305,7 @@ red.values[0] = 0;
 console.log(red.values[0]); // 0
 ```
 
-There is a philosophy in object-oriented programming called "encapsulation". This means you should not access the underlying implementation of an object, but instead use well-abstracted methods to interact with it. For example, if we suddenly decided to represent colors as [HSL](/en-US/docs/Web/CSS/color_value/hsl) instead:
+There is a philosophy in object-oriented programming called "encapsulation". This means you should not access the underlying implementation of an object, but instead use well-abstracted methods to interact with it. For example, if we suddenly decided to represent colors as [HSL](/en-US/docs/Web/CSS/Reference/Values/color_value/hsl) instead:
 
 ```js
 class Color {
@@ -637,7 +637,7 @@ There are a few things that have immediately come to attention. First is that in
 
 After the parent class is done with modifying `this`, the derived class can do its own logic. Here we added a private field called `#alpha`, and also provided a pair of getter/setters to interact with them.
 
-A derived class inherits all methods from its parent. For example, although `ColorWithAlpha` doesn't declare a `get red()` accessor itself, you can still access `red` because this behavior is specified by the parent class:
+A derived class inherits all methods from its parent. For example, consider the `get red()` accessor we added to the `Color` in the [Accessor fields](#accessor_fields) section—even though we haven't declared one in `ColorWithAlpha`, we can still access `red` because this behavior is specified by the parent class:
 
 ```js
 const color = new ColorWithAlpha(255, 0, 0, 0.5);

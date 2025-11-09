@@ -62,13 +62,9 @@ The following is a list of all mutation events:
 You can register a listener for mutation events using {{DOMxRef("EventTarget.addEventListener()")}} as follows:
 
 ```js
-element.addEventListener(
-  "DOMNodeInserted",
-  (event) => {
-    // …
-  },
-  false,
-);
+element.addEventListener("DOMNodeInserted", (event) => {
+  // …
+});
 ```
 
 ## Specifications

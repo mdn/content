@@ -26,13 +26,15 @@ Translator.create(options)
 - `options`
   - : An object specifying configuration options for the `Translator`. Possible values include:
     - `sourceLanguage`
-      - : A string specifying the expected language of the input text to be translated, which should be a valid [BCP 47 language tag](https://en.wikipedia.org/wiki/IETF_language_tag#List_of_common_primary_language_subtags) (as specified in [RFC 5646](https://datatracker.ietf.org/doc/html/rfc5646)).
+      - : A string specifying the expected language of the input text to be translated, which should be a valid {{glossary("BCP 47 language tag")}}.
     - `targetLanguage`
       - : A string specifying the language that the input text will be translated into, which should be valid BCP 47 language tag.
     - `monitor` {{optional_inline}}
       - : A callback function with a {{domxref("CreateMonitor")}} argument that enables monitoring download progress of the AI model.
     - `signal` {{optional_inline}}
-      - : An {{domxref("AbortSignal")}} object instance, which allows the `create()` operation to be aborted via the associated {{domxref("AbortController")}}.
+      - : An {{domxref("AbortSignal")}} object instance, which allows a `create()` operation to be aborted via the associated {{domxref("AbortController")}}. The exact effect is dependant on when {{domxref("AbortController.abort()")}} is called:
+        - If `abort()` is called before the `create()` promise resolves, the `create()` operation is cancelled.
+        - If `abort()` is called after the `create()` promise fulfills, it has the same effect as calling {{domxref("Translator.destroy()")}}: The resources assigned to the resulting `Translator` instance are released, and any ongoing and subsequent `Translator` method calls will reject with an `AbortError`.
 
 ### Return value
 

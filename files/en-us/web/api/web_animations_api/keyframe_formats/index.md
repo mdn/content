@@ -104,17 +104,20 @@ There are two different ways to format keyframes:
 
 ### Implicit to/from keyframes
 
-In newer browser versions, you are able to set a beginning or end state for an animation only (i.e., a single keyframe), and the browser will infer the other end of the animation if it is able to. For example, consider [this animation](https://mdn.github.io/dom-examples/web-animations-api/implicit-keyframes.html) — the Keyframe object looks like so:
+The browser can infer the start or end state of an animation by using the current state. By default, if a single keyframe is provided, it's treated as the end state, and the start state is inferred from the element's current computed style. However, you can specify the `offset` to indicate where the provided keyframe should be placed in the animation timeline. For more information, see [`Element.animate()`](/en-US/docs/Web/API/Element/animate#implicit_tofrom_keyframes).
 
 ```js
-let rotate360 = [{ transform: "rotate(360deg)" }];
+// Animate from the current state to translateX(300px)
+logo.animate({ transform: "translateX(300px)" }, 1000);
+// Animate from translateX(300px) to the current state
+logo.animate({ transform: "translateX(300px)", offset: 0 }, 1000);
+// Animate from the current state to translateX(300px) and back to the current state
+logo.animate({ transform: "translateX(300px)", offset: 0.5 }, 1000);
 ```
-
-We have only specified the end state of the animation, and the beginning state is implied.
 
 ## Attributes
 
-Keyframes specify property-value pairs of the [CSS properties to be animated](/en-US/docs/Web/CSS/CSS_animated_properties). The property names are specified using {{Glossary("camel_case", "camel case")}} so for example {{cssxref("background-color")}} becomes `backgroundColor` and {{cssxref("background-position-x")}} becomes `backgroundPositionX`. Shorthand values such as {{cssxref("margin")}} are also permitted.
+Keyframes specify property-value pairs of the [CSS properties to be animated](/en-US/docs/Web/CSS/Guides/Animations/Animatable_properties). The property names are specified using {{Glossary("camel_case", "camel case")}} so for example {{cssxref("background-color")}} becomes `backgroundColor` and {{cssxref("background-position-x")}} becomes `backgroundPositionX`. Shorthand values such as {{cssxref("margin")}} are also permitted.
 
 Two exceptional CSS properties are:
 
@@ -126,7 +129,7 @@ The following special attributes may also be specified:
 - offset
   - : The offset of the keyframe specified as a number between `0.0` and `1.0` inclusive or `null`. This is equivalent to specifying start and end states in percentages in CSS stylesheets using `@keyframes`. If this value is `null` or missing, the keyframe will be evenly spaced between adjacent keyframes.
 - easing
-  - : The [easing function](/en-US/docs/Web/CSS/easing-function) used from this keyframe until the next keyframe in the series.
+  - : The [easing function](/en-US/docs/Web/CSS/Reference/Values/easing-function) used from this keyframe until the next keyframe in the series.
 - composite
   - : The {{domxref("KeyframeEffect.composite")}} operation used to combine the values specified in this keyframe with the underlying value. This will be `auto` if the composite operation specified on the effect is being used.
 

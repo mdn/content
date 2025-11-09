@@ -44,7 +44,6 @@ pc.getSenders().forEach((sender) => {
         but others may still be working on it */
       }
     },
-    false,
   );
 });
 ```

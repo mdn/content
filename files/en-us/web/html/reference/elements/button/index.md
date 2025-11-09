@@ -63,7 +63,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
     - `"close"`
       - : The button will close a {{htmlelement("dialog")}} element. If the dialog is already closed, no action will be taken. This is a declarative equivalent of calling the {{domxref("HTMLDialogElement.close()")}} method on the `<dialog>` element.
     - `"request-close"`
-      - : The button will trigger a {{domxref("HTMLDialogElement.cancel_event", "cancel")}} element on a {{htmlelement("dialog")}} element to request that the browser dismiss it, followed by a {{domxref("HTMLDialogElement.close_event", "close")}} event. This differs from the `close` command in that authors can call {{domxref("Event.preventDefault()")}} on the `cancel` event to prevent the `<dialog>` from closing. If the dialog is already closed, no action will be taken. This is a declarative equivalent of calling the {{domxref("HTMLDialogElement.requestClose()")}} method on the `<dialog>` element.
+      - : The button will trigger a {{domxref("HTMLDialogElement.cancel_event", "cancel")}} event on a {{htmlelement("dialog")}} element to request that the browser dismiss it, followed by a {{domxref("HTMLDialogElement.close_event", "close")}} event. This differs from the `close` command in that authors can call {{domxref("Event.preventDefault()")}} on the `cancel` event to prevent the `<dialog>` from closing. If the dialog is already closed, no action will be taken. This is a declarative equivalent of calling the {{domxref("HTMLDialogElement.requestClose()")}} method on the `<dialog>` element.
     - `"show-popover"`
       - : The button will show a hidden popover. If you try to show an already showing popover, no action will be taken. See {{domxref("Popover API", "Popover API", "", "nocode")}} for more details. This is equivalent to setting a value of `show` for the [`popovertargetaction`](#popovertargetaction) attribute, and also provides a declarative equivalent to calling the {{domxref("HTMLElement.showPopover()")}} method on the popover element.
     - `"hide-popover"`
@@ -77,7 +77,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
   - : Turns a `<button>` element into a command button, controlling a given interactive element by issuing the command specified in the button's [`command`](#command) attribute. The `commandfor` attribute takes the ID of the element to control as its value. This is a more general version of [`popovertarget`](#popovertarget).
 - [`disabled`](/en-US/docs/Web/HTML/Reference/Attributes/disabled)
   - : This Boolean attribute prevents the user from interacting with the button: it cannot be pressed or focused.
-- `form`
+- [`form`](/en-US/docs/Web/HTML/Reference/Attributes/form)
   - : The {{HTMLElement("form")}} element to associate the button with (its _form owner_). The value of this attribute must be the `id` of a `<form>` in the same document. (If this attribute is not set, the `<button>` is associated with its ancestor `<form>` element, if any.)
 
     This attribute lets you associate `<button>` elements to `<form>`s anywhere in the document, not just inside a `<form>`. It can also override an ancestor `<form>` element.
@@ -118,7 +118,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
 - `popovertarget`
   - : Turns a `<button>` element into a popover control button; takes the ID of the popover element to control as its value. Establishing a relationship between a popover and its invoker button using the `popovertarget` attribute has two additional useful effects:
     - The browser creates an implicit [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details) and [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) relationship between popover and invoker, and places the popover in a logical position in the keyboard focus navigation order when shown. This makes the popover more accessible to keyboard and assistive technology (AT) users (see also [Popover accessibility features](/en-US/docs/Web/API/Popover_API/Using#popover_accessibility_features)).
-    - The browser creates an implicit anchor reference between the two, making it very convenient to position popovers relative to their controls using [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning). See [Popover anchor positioning](/en-US/docs/Web/API/Popover_API/Using#popover_anchor_positioning) for more details.
+    - The browser creates an implicit anchor reference between the two, making it very convenient to position popovers relative to their controls using [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning). See [Popover anchor positioning](/en-US/docs/Web/API/Popover_API/Using#popover_anchor_positioning) for more details.
 
 - `popovertargetaction`
   - : Specifies the action to be performed on a popover element being controlled by a control `<button>`. Possible values are:
@@ -148,7 +148,7 @@ If your buttons are not for submitting form data to a server, be sure to set the
 
 While `<button type="button">` has no default behavior, event handlers can be scripted to trigger behaviors. An activated button can perform programmable actions using [JavaScript](/en-US/docs/Learn_web_development/Core/Scripting), such as removing an item from a list.
 
-By default, user agents style buttons as `display: flow-root`, which establishes a new [block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context) and centers the button's children both horizontally and vertically as long as they do not overflow. If the button is defined as a flex or grid container, the children will behave as flex or grid items. A button set to `display: inline` will be styled as if the value were set to `display: inline-block`.
+By default, user agents style buttons as `display: flow-root`, which establishes a new [block formatting context](/en-US/docs/Web/CSS/Guides/Display/Block_formatting_context) and centers the button's children both horizontally and vertically as long as they do not overflow. If the button is defined as a flex or grid container, the children will behave as flex or grid items. A button set to `display: inline` will be styled as if the value were set to `display: inline-block`.
 
 ## Accessibility
 
@@ -210,7 +210,7 @@ To describe the state of a button the correct ARIA attribute to use is [`aria-pr
 
 It is best not to override the default focus ring for elements that have focus. If the button styles are overridden, it is important to **ensure that the focus state has enough contrast** so that people experiencing low vision conditions can perceive it and people with cognitive differences will understand it.
 
-The {{cssxref(":focus-visible")}} pseudo-class can be used to apply styles to an element that has {{cssxref(":focus")}} only when the user agent's heuristics determine that the focus should be highlighted, such as when a `<button>` receives keyboard focus. See [:focus vs :focus-visible](/en-US/docs/Web/CSS/:focus-visible#focus_vs_focus-visible) for more information.
+The {{cssxref(":focus-visible")}} pseudo-class can be used to apply styles to an element that has {{cssxref(":focus")}} only when the user agent's heuristics determine that the focus should be highlighted, such as when a `<button>` receives keyboard focus. See [:focus vs :focus-visible](/en-US/docs/Web/CSS/Reference/Selectors/:focus-visible#focus_vs_focus-visible) for more information.
 
 Color contrast ratio is determined by comparing the luminosity of the button text and background color values to the background the button is placed on. To meet current [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/), a ratio of 4.5:1 is required for text content and 3:1 for large text. (Large text is defined as 18.66px and {{cssxref("font-weight", "bold")}} or larger, or 24px or larger.)
 
@@ -224,11 +224,84 @@ Whether clicking on a `<button>` or {{HTMLElement("input")}} button types causes
 
 ## Examples
 
+### Creating a basic button
+
+This example creates a clickable button.
+The `type="button"` attribute ensures the button has no default behavior.
+You can make this button interactive using JavaScript or attributes such as `command` and `commandfor`.
+
 ```html
-<button name="button">Press me</button>
+<button type="button" name="button">I'm a button</button>
 ```
 
-{{ EmbedLiveSample('Example', 200, 64) }}
+{{ EmbedLiveSample('creating_a_basic_button', 200, 64) }}
+
+### Using the `request-close` value for the `command` attribute
+
+The dialog in this example has two radio buttons that control whether or not the dialog can be closed.
+Select **Yes** or **No**, and then click **Request to Close** to try to close the dialog.
+If **Yes** is selected, the dialog closes; if **No** is selected, the dialog stays open and shows a message instead.
+
+```html
+<button type="button" commandfor="mydialog" command="show-modal">
+  Open Dialog
+</button>
+<dialog id="mydialog">
+  <div class="wrapper">
+    <form>
+      <fieldset>
+        <legend>Allow this dialog to close when requested?</legend>
+        <div>
+          <input type="radio" id="no" name="close" value="no" checked />
+          <label for="no">No</label>
+        </div>
+        <div>
+          <input type="radio" id="yes" name="close" value="yes" />
+          <label for="yes">Yes</label>
+        </div>
+      </fieldset>
+    </form>
+    <button commandfor="mydialog" command="request-close">
+      Request to Close
+    </button>
+    <p class="warning" hidden>You must choose "Yes" to close this dialog.</p>
+  </div>
+</dialog>
+```
+
+```css hidden
+.warning {
+  color: tomato;
+}
+```
+
+```js
+const dialog = document.querySelector("dialog");
+const radio = document.querySelector("form").elements["close"];
+const warning = document.querySelector(".warning");
+
+dialog.addEventListener("cancel", (e) => {
+  if (!e.cancelable) return;
+  if (radio.value === "no") {
+    warning.hidden = false;
+    e.preventDefault();
+  } else {
+    warning.hidden = true;
+  }
+});
+```
+
+{{ EmbedLiveSample('using_the_request-close_value_for_the_command_attribute', 100, 200) }}
+
+The **Open Dialog** button opens the `<dialog>` element using `command="show-modal"`.
+
+The **Request to Close** button has `command="request-close"`, which targets the `<dialog>` element using the `commandfor="mydialog"` attribute. When it's clicked, it asks the `<dialog>` if it can be closed (unlike the `command="close"` attribute, which would close the `<dialog>` immediately).
+This checks if the `<dialog>` is [`cancelable`](/en-US/docs/Web/API/Event/cancelable) using a `cancel` event.
+
+When the event is `cancelable`, the value of the radio buttons is checked:
+
+- If set to `yes`, the dialog is closed.
+- If set to `no`, the `hidden` attribute is turned off on the warning and the [`preventDefault()`](/en-US/docs/Web/API/Event/preventDefault) method is called, which prevents the default `<dialog>` closing behavior.
 
 ## Technical summary
 

@@ -72,7 +72,7 @@ The name can include the following characters:
 At least this property must be set for every string. The `"message"` member contains a localized string that can contain [placeholders](#placeholders). You can use:
 
 - _$placeholder_name$_ (case insensitive) to insert a particular placeholder (for example $URL$ in the example above) into your string.
-- `$1`, `$2`, `$3`, etc. to directly insert values obtained from a {{WebExtAPIRef("i18n.getMessage()")}} call into your string.
+- `$1`, `$2`, `$3`, etc. to directly insert values obtained from an {{WebExtAPIRef("i18n.getMessage()")}} call into your string.
 
 Other points to note:
 
@@ -108,7 +108,7 @@ The placeholder name is used to represent the placeholder in the substitution st
 
 #### content
 
-The "content" item defines the content of the placeholder. This can be a hardcoded string, such as "My placeholder", but it can also include values obtained from a {{WebExtAPIRef("i18n.getMessage()")}} call. This property is required. For more information, see [Retrieving message strings from JavaScript](/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization#retrieving_message_strings_from_javascript).
+The "content" item defines the content of the placeholder. This can be a hardcoded string, such as "My placeholder", but it can also include values obtained from an {{WebExtAPIRef("i18n.getMessage()")}} call. This property is required. For more information, see [Retrieving message strings from JavaScript](/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization#retrieving_message_strings_from_javascript).
 
 #### example
 

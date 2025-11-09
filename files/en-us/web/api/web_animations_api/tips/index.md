@@ -10,7 +10,7 @@ CSS animations make it possible to do incredible things with the elements that m
 
 ## Run an animation again
 
-The [CSS Animations](/en-US/docs/Web/CSS/CSS_animations) specification doesn't offer a way to run an animation again. You can't just set the element's {{cssxref("animation-play-state")}} to `"running"` again once the animation ends. Instead, you have to use JavaScript to get a completed animation to replay.
+The [CSS Animations](/en-US/docs/Web/CSS/Guides/Animations) specification doesn't offer a way to run an animation again. You can't just set the element's {{cssxref("animation-play-state")}} to `"running"` again once the animation ends. Instead, you have to use JavaScript to get a completed animation to replay.
 
 This is one way to do it that is a stable and reliable method.
 
@@ -120,12 +120,12 @@ The code disables the button and starts the animation. The button is re-enabled 
 
 ## Stacking context in animations
 
-The properties that are animated during a CSS animation behave as if they were included in the [`will-change`](/en-US/docs/Web/CSS/will-change) property declaration. Any property that would create a stacking context, if marked as `will-change`, makes the element receive a new stacking context.
+The properties that are animated during a CSS animation behave as if they were included in the [`will-change`](/en-US/docs/Web/CSS/Reference/Properties/will-change) property declaration. Any property that would create a stacking context, if marked as `will-change`, makes the element receive a new stacking context.
 
-In the case of [`animation-fill-mode: forwards`](/en-US/docs/Web/CSS/animation-fill-mode#forwards) (and `both`), the animated properties remain at their final keyframe state after the animation is finished. The properties keep the `will-change` status, so if a new stacking context is created during the animation and is still present at the end of the animation, the target element retains the stacking context after the animation has finished.
+In the case of [`animation-fill-mode: forwards`](/en-US/docs/Web/CSS/Reference/Properties/animation-fill-mode#forwards) (and `both`), the animated properties remain at their final keyframe state after the animation is finished. The properties keep the `will-change` status, so if a new stacking context is created during the animation and is still present at the end of the animation, the target element retains the stacking context after the animation has finished.
 
 ## See also
 
 - [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
 - [Animation Interface](/en-US/docs/Web/API/Animation/Animation)
-- [CSS animations](/en-US/docs/Web/CSS/CSS_animations) module
+- [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module

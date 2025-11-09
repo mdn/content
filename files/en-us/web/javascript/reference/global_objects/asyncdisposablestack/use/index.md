@@ -37,7 +37,7 @@ The same `value` that was passed in.
 
 ### Using use()
 
-This function reads a file (as a Node.js [`FileHandle`](https://nodejs.org/api/fs.html#class-filehandle)) and returns its contents. The file handle is automatically closed when the function completes, given that the `FileHandle` class implements an `[Symbol.asyncDispose]()` method that asynchronously closes the file.
+This function reads a file (as a Node.js [`FileHandle`](https://nodejs.org/api/fs.html#class-filehandle)) and returns its contents. The file handle is automatically closed when the function completes, given that the `FileHandle` class implements a `[Symbol.asyncDispose]()` method that asynchronously closes the file.
 
 ```js
 async function readFileContents(path) {

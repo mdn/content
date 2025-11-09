@@ -21,7 +21,7 @@ This example creates a widget and assigns the ARIA `switch` role to it.
   id="speakerPower"
   class="switch">
   <span aria-hidden="true">off</span>
-  <span aria-hidden="true">on</span>
+  <span aria-hidden="false">on</span>
 </button>
 <label for="speakerPower" class="switch">Speaker power</label>
 ```
@@ -111,7 +111,7 @@ This JavaScript code defines and applies a function to handle click events on sw
 
 ```js
 document.querySelectorAll(".switch").forEach((theSwitch) => {
-  theSwitch.addEventListener("click", handleClickEvent, false);
+  theSwitch.addEventListener("click", handleClickEvent);
 });
 
 function handleClickEvent(evt) {

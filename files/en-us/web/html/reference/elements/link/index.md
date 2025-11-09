@@ -202,9 +202,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 
     Setting the `disabled` property in the DOM causes the stylesheet to be removed from the document's {{domxref("Document.styleSheets")}} list.
 
-- `fetchpriority`
-  - : Provides a hint of the relative priority to use when fetching a resource of a particular type.
-    Allowed values:
+- [`fetchpriority`](/en-US/docs/Web/HTML/Reference/Attributes/fetchpriority)
+  - : Provides a hint of the relative priority to use when fetching a resource of a particular type. Allowed values:
     - `high`
       - : Fetch the resource at a high priority relative to other resources of the same type.
     - `low`
@@ -213,15 +212,12 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
       - : Don't set a preference for the fetch priority.
         This is the default.
         It is used if no value or an invalid value is set.
-
-    See {{domxref("HTMLLinkElement.fetchPriority")}} for more information.
-
 - `href`
   - : This attribute specifies the {{glossary("URL")}} of the linked resource. A URL can be absolute or relative.
 - `hreflang`
   - : This attribute indicates the language of the linked resource.
     It is purely advisory.
-    Allowed values are specified by {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.
+    Values should be valid {{glossary("BCP 47 language tag", "BCP 47 language tags")}}.
     Use this attribute only if the [`href`](/en-US/docs/Web/HTML/Reference/Elements/a#href) attribute is present.
 - `imagesizes`
   - : For `rel="preload"` and `as="image"` only, the `imagesizes` attribute has similar syntax and semantics as the [`sizes`](/en-US/docs/Web/HTML/Reference/Elements/img#sizes) attribute that indicates to preload the appropriate resource used by an `img` element with corresponding values for its `srcset` and `sizes` attributes.
@@ -233,7 +229,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     The attribute must only be specified when the `rel` attribute is specified to `stylesheet`, `preload`, or `modulepreload`.
     See [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity).
 - `media`
-  - : This attribute specifies the media that the linked resource applies to. Its value must be a media type / [media query](/en-US/docs/Web/CSS/CSS_media_queries).
+  - : This attribute specifies the media that the linked resource applies to. Its value must be a media type / [media query](/en-US/docs/Web/CSS/Guides/Media_queries).
     This attribute is mainly useful when linking to external stylesheets — it allows the user agent to pick the best adapted one for the device it runs on.
 
 - `referrerpolicy`

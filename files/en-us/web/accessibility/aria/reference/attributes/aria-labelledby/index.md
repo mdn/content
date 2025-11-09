@@ -76,7 +76,7 @@ Fortunately, the HTML {{HTMLElement('input')}} with `type="checkbox"` works with
 
 4. The `aria-labelledby` property ignores repeated `id`s in its value. If an element is referenced more than one time, only the first reference is processed. `aria-labelledby="attr attr rm13 rm13">` is treated as `aria-labelledby="attr rm13">`
 
-5. The `aria-labelledby` property value can include content from elements that aren't even visible. While you should provide assistive technology users with the same content as all other users, you can include content from elements with the HTML [`hidden`](/en-US/docs/Web/HTML/Reference/Global_attributes/hidden) attribute, CSS [`display: none`](/en-US/docs/Web/CSS/display), and CSS [`visibility: hidden`](/en-US/docs/Web/CSS/visibility) in the calculated name string.
+5. The `aria-labelledby` property value can include content from elements that aren't even visible. While you should provide assistive technology users with the same content as all other users, you can include content from elements with the HTML [`hidden`](/en-US/docs/Web/HTML/Reference/Global_attributes/hidden) attribute, CSS [`display: none`](/en-US/docs/Web/CSS/Reference/Properties/display), and CSS [`visibility: hidden`](/en-US/docs/Web/CSS/Reference/Properties/visibility) in the calculated name string.
 
 6. The `aria-labelledby` property incorporates the value of input elements. If the value references an `<input>`, the current value of the form control is included in the calculated name string, changing if the value is updated.
 
@@ -105,8 +105,8 @@ Used in almost all roles **except** roles that can not be provided an accessible
 
 The `aria-labelledby` attribute is **NOT** supported in:
 
-- [`code`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
 - [`caption`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`code`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
 - [`deletion`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
 - [`emphasis`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
 - [`generic`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role)
@@ -116,8 +116,8 @@ The `aria-labelledby` attribute is **NOT** supported in:
 - [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) / [`none`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/none_role)
 - [`strong`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
 - [`subscript`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
-- [`superscript`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
 - [`suggestion`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/suggestion_role)
+- [`superscript`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
 - [`term`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/term_role)
 - [`time`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
 

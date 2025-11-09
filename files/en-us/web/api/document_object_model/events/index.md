@@ -114,7 +114,7 @@ This topic provides an index to the main _sorts_ of events you might be interest
       <td>
         <p>
           Events related to
-          <a href="/en-US/docs/Web/CSS/CSS_transitions">CSS Transitions</a>.
+          <a href="/en-US/docs/Web/CSS/Guides/Transitions">CSS Transitions</a>.
         </p>
         <p>
           Provides notification events when CSS transitions start, stop, are
@@ -837,13 +837,9 @@ Events can be created with the [`Event`](/en-US/docs/Web/API/Event) constructor 
 const event = new Event("build");
 
 // Listen for the event.
-elem.addEventListener(
-  "build",
-  (e) => {
-    /* … */
-  },
-  false,
-);
+elem.addEventListener("build", (e) => {
+  /* … */
+});
 
 // Dispatch the event.
 elem.dispatchEvent(event);

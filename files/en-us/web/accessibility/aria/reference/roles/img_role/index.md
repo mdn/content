@@ -12,7 +12,7 @@ The ARIA `img` role can be used to identify multiple elements inside page conten
 ```html
 <div role="img" aria-label="Description of the overall image">
   <img src="graphic1.png" alt="" />
-  <img src="graphic2.png" />
+  <img src="graphic2.png" alt="" />
 </div>
 ```
 

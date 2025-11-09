@@ -87,7 +87,7 @@ If you restrict a box with a `width` or a `height`, CSS trusts you to know what 
 
 ## The overflow property
 
-The {{cssxref("overflow")}} property allows you to specify how the browser should handle overflowing content. The default value of the [`<overflow>`](/en-US/docs/Web/CSS/overflow_value) value type is `visible`. With this default setting, one can see content when it overflows.
+The {{cssxref("overflow")}} property allows you to specify how the browser should handle overflowing content. The default value of the [`<overflow>`](/en-US/docs/Web/CSS/Reference/Values/overflow_value) value type is `visible`. With this default setting, one can see content when it overflows.
 
 ### Hiding overflowing content
 

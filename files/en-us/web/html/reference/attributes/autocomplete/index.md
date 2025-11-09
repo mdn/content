@@ -42,11 +42,11 @@ The `autocomplete` attribute provides a hint to the user agent specifying how to
 ```html
 <input autocomplete="off" />
 <input autocomplete="on" />
-<input autocomplete="shipping street-address" />
+<textarea autocomplete="shipping street-address"></textarea>
 <input autocomplete="section-user1 billing postal-code" />
 ```
 
-If an {{HTMLElement("input")}}, {{HTMLElement("select")}} or {{HTMLElement("textarea")}} element has no `autocomplete` attribute, the browser will use the [`autocomplete` attribute of the element's **owning form**](/en-US/docs/Web/HTML/Reference/Elements/form#autocomplete). The owning form is either the {{HTMLElement("form")}} matching the `id` specified by the [`form`](/en-US/docs/Web/HTML/Reference/Elements/input#form) attribute of the element (if present) or, more commonly, the `<form>` the element is nested in.
+If an {{HTMLElement("input")}}, {{HTMLElement("select")}} or {{HTMLElement("textarea")}} element has no `autocomplete` attribute, the browser will use the [`autocomplete` attribute of the element's **owning form**](/en-US/docs/Web/HTML/Reference/Elements/form#autocomplete). The owning form is either the {{HTMLElement("form")}} matching the `id` specified by the [`form`](/en-US/docs/Web/HTML/Reference/Attributes/form) attribute of the element (if present) or, more commonly, the `<form>` the element is nested in.
 
 > [!NOTE]
 > In order to provide autocompletion, user-agents might require `<input>`/`<select>`/`<textarea>` elements to:
@@ -127,7 +127,7 @@ The tokens that identify the type of recipient include:
   - : The contact type identified by subsequent tokens is for contacting the recipient regardless of location.
 - `fax`
   - : The recipient identified by subsequent tokens is for a fax machine.
-- `page`
+- `pager`
   - : The recipient identified by subsequent tokens is for a pager or beeper.
 
 ##### Digital contact tokens
@@ -228,7 +228,7 @@ When the form field is not a phone number, email address, or instant messaging p
 - `transaction-amount`
   - : The amount, given in the currency specified by `transaction-currency`, of the transaction, for a payment form.
 - `language`
-  - : A preferred language, given as a valid [BCP 47 language tag](https://en.wikipedia.org/wiki/IETF_language_tag).
+  - : A preferred language, given as a valid {{glossary("BCP 47 language tag")}}.
 - `bday`
   - : A birth date, as a full date.
     - `bday-day`

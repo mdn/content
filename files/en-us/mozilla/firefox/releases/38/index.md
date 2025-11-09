@@ -1,5 +1,5 @@
 ---
-title: Firefox 38 for developers
+title: Firefox 38 release notes for developers
 short-title: Firefox 38
 slug: Mozilla/Firefox/Releases/38
 page-type: firefox-release-notes
@@ -39,7 +39,7 @@ Highlights:
   - Direction-independent equivalents of {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}} and {{cssxref("border-left")}} and their longhands for width, style and color: {{cssxref("border-block-start")}}, {{cssxref("border-block-start-width")}}, {{cssxref("border-block-start-style")}}, {{cssxref("border-block-start-color")}}, {{cssxref("border-block-end")}}, {{cssxref("border-block-end-width")}}, {{cssxref("border-block-end-style")}}, {{cssxref("border-block-end-color")}}, {{cssxref("border-inline-start")}}, {{cssxref("border-inline-start-width")}}, {{cssxref("border-inline-start-style")}}, {{cssxref("border-inline-start-color")}}, {{cssxref("border-inline-end")}}, {{cssxref("border-inline-end-width")}}, {{cssxref("border-inline-end-style")}} and {{cssxref("border-inline-end-color")}} ([Firefox bug 649142](https://bugzil.la/649142)).
   - Direction-independent equivalents of {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}} and {{cssxref("left")}}: {{cssxref("inset-block-start")}}, `offset-block-end`, `offset-inline-start` and `offset-inline-end` ([Firefox bug 1120283](https://bugzil.la/1120283)).
 
-- How [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) start has been modified to match a recent change of the specifications, aiming at having an interoperable behavior between browsers ([Firefox bug 960465](https://bugzil.la/960465)).
+- How [CSS transitions](/en-US/docs/Web/CSS/Guides/Transitions/Using) start has been modified to match a recent change of the specifications, aiming at having an interoperable behavior between browsers ([Firefox bug 960465](https://bugzil.la/960465)).
 
 ### HTML
 

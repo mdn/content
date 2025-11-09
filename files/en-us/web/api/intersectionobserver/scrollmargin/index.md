@@ -15,7 +15,7 @@ This lets you, for example, adjust the bounds of the scroll container so that th
 
 Note that if the root element is also a scrollable container, then the `scrollMargin` and {{domxref("IntersectionObserver/rootMargin","rootMargin")}} are combined to determine the effective bounding rectangle used for calculating intersections with the target.
 
-For more information see [The intersection root and root margin](/en-US/docs/Web/API/Intersection_Observer_API#the_intersection_root_and_scroll_margin) in the API overview.
+For more information see [The intersection root and scroll margin](/en-US/docs/Web/API/Intersection_Observer_API#the_intersection_root_and_scroll_margin) in the API overview.
 
 ## Value
 
@@ -53,22 +53,33 @@ In our observer code, we will use this attribute to set the `img.src` when each 
   <div class="flex-container">
     <div class="carousel">
       <img
+        src=""
         data-src="ballon-portrait.jpg"
         class="lazy-carousel-img"
         alt="Balloon portrait" />
       <img
+        src=""
         data-src="balloon-small.jpg"
         class="lazy-carousel-img"
         alt="balloon-small" />
-      <img data-src="surfer.jpg" class="lazy-carousel-img" alt="surfer" />
       <img
+        src=""
+        data-src="surfer.jpg"
+        class="lazy-carousel-img"
+        alt="surfer" />
+      <img
+        src=""
         data-src="border-diamonds.png"
         class="lazy-carousel-img"
         alt="border-diamonds" />
-      <img data-src="fire.png" class="lazy-carousel-img" alt="fire" />
-      <img data-src="puppy-header.jpg" class="lazy-carousel-img" alt="puppy" />
-      <img data-src="moon.jpg" class="lazy-carousel-img" alt="moon" />
-      <img data-src="rhino.jpg" class="lazy-carousel-img" alt="rhino" />
+      <img src="" data-src="fire.png" class="lazy-carousel-img" alt="fire" />
+      <img
+        src=""
+        data-src="puppy-header.jpg"
+        class="lazy-carousel-img"
+        alt="puppy" />
+      <img src="" data-src="moon.jpg" class="lazy-carousel-img" alt="moon" />
+      <img src="" data-src="rhino.jpg" class="lazy-carousel-img" alt="rhino" />
     </div>
     <div id="margin-indicator"></div>
   </div>

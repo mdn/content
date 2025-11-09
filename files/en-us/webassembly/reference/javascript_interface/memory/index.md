@@ -68,7 +68,7 @@ WebAssembly.instantiateStreaming(fetch("memory.wasm"), {
 });
 ```
 
-Another way to get a `WebAssembly.Memory` object is to have it exported by a WebAssembly module. This memory can be accessed in the `exports` property of the WebAssembly instance (after the memory is exported within the WebAssembly module). The following example imports a memory exported from WebAssembly with the name `memory`, and then prints out the first element of the memory, interpreted as an {{jsxref("Uint32Array")}}.
+Another way to get a `WebAssembly.Memory` object is to have it exported by a WebAssembly module. This memory can be accessed in the `exports` property of the WebAssembly instance (after the memory is exported within the WebAssembly module). The following example imports a memory exported from WebAssembly with the name `memory`, and then prints out the first element of the memory, interpreted as a {{jsxref("Uint32Array")}}.
 
 ```js
 WebAssembly.instantiateStreaming(fetch("memory.wasm")).then((obj) => {

@@ -26,6 +26,7 @@ Ansari
 Ansyari
 Apapou
 Aptana
+Araneae
 Arkanoid
 Artur
 Arun
@@ -44,6 +45,7 @@ Aziz
 Balhetan
 bartaz
 Bartek
+Belgers
 belgin
 Benbadis
 Bento4
@@ -58,10 +60,12 @@ Blackman
 Blackmoon
 Blankers
 Bloggs
+Bobtown
 Bodmin
 Boonie
 bottosson
 Boulton
+Bramus
 Brians
 Browserleaks
 Browsershots
@@ -69,6 +73,7 @@ Browsersync
 Bubka
 Bundlesize
 Bunyakovsky
+Bushell
 Butterick
 Buzzcocks
 Bynens
@@ -86,6 +91,7 @@ carolinensis
 Cassini
 Caterina
 caugner
+cdxgen
 Chakra
 Chamakh
 Chimero
@@ -107,7 +113,9 @@ Codepens
 coderprateek
 codingintrigue
 Codrops
+Coleoptera
 Colomb
+Comeau
 Conde
 Corber
 Cortana
@@ -134,9 +142,11 @@ Delaville
 Denicola
 DeSandro
 Desaulniers
+Descouens
 Desproges
 Devlin
 Dexie
+Didier
 Diffie
 Digga
 Digianswer
@@ -205,6 +215,7 @@ Frida
 Galinski
 Gandi
 Gayatri
+Gaye
 Gebrselassie
 geckodriver
 Gedit
@@ -229,6 +240,7 @@ hamishwillee
 Haml
 Haverbeke
 Headsight
+Hemiptera
 Heydings
 Heydon
 Hickson
@@ -246,6 +258,7 @@ Holzman
 Honigswald
 Hoshi
 Hoth
+Houseology
 Hyperaudio
 Hönigswald
 Ibuki
@@ -313,6 +326,7 @@ Kobabe
 Koen
 Kokoro
 Konva
+Kravets
 Kyouko
 Kütük
 Laravel
@@ -334,6 +348,7 @@ Lighttpd
 Lindenberg
 Lindesay
 Liskov
+Lorc
 Loycom
 Luxon
 Léonie
@@ -363,6 +378,7 @@ McLellan
 McNally
 McVerry
 Megalosaurus
+Menard
 Mercure
 Merkle
 mfuji
@@ -398,6 +414,7 @@ Musicr
 Mustafa
 myshov
 Müller
+Nabors
 Naeher
 Nakamura
 Nakano
@@ -464,6 +481,7 @@ Quora
 rachelandrew
 Radev
 Radimir
+Ramesh
 Rapp
 Rauschmayer
 Realtek
@@ -497,6 +515,7 @@ Scarlett
 Schiff
 Schirra
 Schmarsow
+Schoenmakers
 Schola
 Schwarz
 Sciurus
@@ -507,6 +526,7 @@ Scrimba
 Seamonkey
 Serpentina
 Shadeed
+Sharma
 Shilpa
 Shinoda
 Shireen
@@ -590,6 +610,7 @@ Voikko
 Volkman
 Vorbis
 vulgaris
+Waarneming
 wabt
 Wakamai
 Waldron
@@ -613,6 +634,7 @@ wisedog
 Wolenetz
 Wrox
 XAMPP
+Xandar
 Xavi
 Xiluodu
 Xiowan

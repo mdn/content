@@ -146,7 +146,7 @@ In the first disclosure widget, we style the `::marker`, changing the {{cssxref(
 ```css
 details {
   font-size: 1rem;
-  font-family: "Open Sans", Calibri, sans-serif;
+  font-family: "Open Sans", "Calibri", sans-serif;
   border: solid;
   padding: 2px 6px;
   margin-bottom: 1em;
@@ -184,7 +184,7 @@ details:last-of-type summary::-webkit-details-marker {
 }
 ```
 
-The CSS includes the `[open]` [attribute selector](/en-US/docs/Web/CSS/Attribute_selectors), matching only when the `open` attribute is present (when the `<details>` are open). The {{cssxref(":first-of-type")}} and {{cssxref(":last-of-type")}} pseudo-classes target the first and sibling elements of the same type. We included the prefixed `-webkit-` pseudo-element within a {{cssxref(":is()")}} pseudo-class as it takes a [forgiving selector list](/en-US/docs/Web/CSS/Selector_list#forgiving_selector_list), so if the prefixed pseudo-element is invalid in a browser, the whole selector block will not be invalid. We also used CSS [nesting](/en-US/docs/Web/CSS/Nesting_selector). See the [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module.
+The CSS includes the `[open]` [attribute selector](/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors), matching only when the `open` attribute is present (when the `<details>` are open). The {{cssxref(":first-of-type")}} and {{cssxref(":last-of-type")}} pseudo-classes target the first and sibling elements of the same type. We included the prefixed `-webkit-` pseudo-element within a {{cssxref(":is()")}} pseudo-class as it takes a [forgiving selector list](/en-US/docs/Web/CSS/Reference/Selectors/Selector_list#forgiving_selector_list), so if the prefixed pseudo-element is invalid in a browser, the whole selector block will not be invalid. We also used CSS [nesting](/en-US/docs/Web/CSS/Reference/Selectors/Nesting_selector). See the [CSS selectors](/en-US/docs/Web/CSS/Guides/Selectors) module.
 
 #### HTML
 

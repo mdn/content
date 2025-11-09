@@ -31,9 +31,11 @@ postMessage(message, options)
 - `message`
   - : Data to be dispatched to the other window. The data is serialized using the {{domxref("Web_Workers_API/Structured_clone_algorithm", "structured clone algorithm", "", 1)}}. This means you can pass a broad variety of data objects safely to the destination window without having to serialize them yourself.
 - `targetOrigin` {{optional_Inline}}
-  - : Specifies the [origin](/en-US/docs/Glossary/Origin) the recipient window must have in order to receive the event. In order for the event to be dispatched, the origin must match exactly (including scheme, hostname, and port). If omitted, then defaults to the origin that is calling the method. This mechanism provides control over where messages are sent; for example, if `postMessage()` was used to transmit a password, it would be absolutely critical that this argument be a URI whose origin is the same as the intended receiver of the message containing the password, to prevent interception of the password by a malicious third party. `*` may also be provided, which means the message can be dispatched to a listener with any origin.
+  - : Specifies the [origin](/en-US/docs/Glossary/Origin) the recipient window must have in order to receive the event. In order for the event to be dispatched, the origin must match exactly (including scheme, hostname, and port). If omitted, it defaults to `"/"`, which is the origin that is calling the method. This mechanism provides control over where messages are sent; for example, if `postMessage()` was used to transmit a password, it would be absolutely critical that this argument be a URI whose origin is the same as the intended receiver of the message containing the password, to prevent interception of the password by a malicious third party. `*` may also be provided, which means the message can be dispatched to a listener with any origin.
     > [!NOTE]
     > Always provide a specific `targetOrigin`, not `*`, if you know where the other window's document should be located. Failing to provide a specific target could disclose data to a malicious site.
+    >
+    > Because [`data:`](/en-US/docs/Web/URI/Reference/Schemes/data) URLs have opaque origins, in order to send messages to a context with a `data:` URL, you must specify `"*"`.
 - `transfer` {{optional_inline}}
   - : An optional [array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) to transfer ownership of. The ownership of these objects is given to the destination side and they are no longer usable on the sending side. These transferable objects should be attached to the message; otherwise they would be moved but not actually accessible on the receiving end.
 - `options` {{optional_inline}}
@@ -52,15 +54,11 @@ None ({{jsxref("undefined")}}).
 A `window` can listen for dispatched messages by executing the following JavaScript:
 
 ```js
-window.addEventListener(
-  "message",
-  (event) => {
-    if (event.origin !== "http://example.org:8080") return;
+window.addEventListener("message", (event) => {
+  if (event.origin !== "http://example.org:8080") return;
 
-    // …
-  },
-  false,
-);
+  // …
+});
 ```
 
 The properties of the dispatched message are:
@@ -127,18 +125,14 @@ popup.postMessage(
 // the window hasn't changed its location.
 popup.postMessage("hello there!", "http://example.com");
 
-window.addEventListener(
-  "message",
-  (event) => {
-    // Do we trust the sender of this message? (might be
-    // different from what we originally opened, for example).
-    if (event.origin !== "http://example.com") return;
+window.addEventListener("message", (event) => {
+  // Do we trust the sender of this message? (might be
+  // different from what we originally opened, for example).
+  if (event.origin !== "http://example.com") return;
 
-    // event.source is popup
-    // event.data is "hi there yourself! the secret response is: rheeeeet!"
-  },
-  false,
-);
+  // event.source is popup
+  // event.data is "hi there yourself! the secret response is: rheeeeet!"
+});
 ```
 
 ```js

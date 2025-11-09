@@ -62,6 +62,7 @@ associationlistitemvalue
 attributionsrc
 audiocontext
 authorid
+autospace
 backdrag
 backgroundfetchabort
 backgroundfetchclick
@@ -140,6 +141,8 @@ Crsel
 cryptomining
 csiso
 csrfmiddlewaretoken
+css.selectors.headingfunction
+css.selectors.hostfunction
 CSS_RGBCOLOR
 csslint
 cssref
@@ -194,6 +197,7 @@ dweb
 ebuttm
 ebutts
 ECLF
+EdgiOS
 ehtml
 EISU
 elementname
@@ -381,6 +385,7 @@ longtask
 lowdelay
 lowp
 lquote
+LRGB
 ltrh
 makemigrations
 mathbb
@@ -388,6 +393,7 @@ mathbold
 mathdbl
 mathit
 mathml
+mathml.stixgeneral_operator_stretching.disabled
 mathmlref
 mathmono
 mathrm
@@ -714,6 +720,7 @@ strncpy
 SUBDOCUMENT
 sund
 sunu
+superellipse
 superspeed
 SVGMPathElement
 svgref
@@ -731,7 +738,6 @@ telu
 testingbot-api
 texlive
 texlive-fontsextra
-text-autospace
 textformatupdate
 textupdate
 TEXTUREI
@@ -797,6 +803,7 @@ veryverythickmathspace
 veryverythinmathspace
 vfprintf
 videooutput
+viewbox
 viewsource.css
 VIRTUALENVWRAPPER
 virtualkeyboardpolicy

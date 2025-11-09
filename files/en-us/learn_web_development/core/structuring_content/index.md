@@ -29,22 +29,26 @@ Before starting this module, you don't need any previous HTML knowledge, but you
   - : The previous article looked at why semantics are important in HTML, and focused on headings and paragraphs. This article continues on the theme of semantics, looking at HTML elements that apply emphasis and importance to text (parallel to italics and bold text in print media).
 - [Lists](/en-US/docs/Learn_web_development/Core/Structuring_content/Lists)
   - : Lists are everywhere in life—from your shopping list to the list of directions you subconsciously follow to get to your house every day, to the lists of instructions you are following in these tutorials! It may not surprise you that HTML has a convenient set of elements that allows us to define different types of list. On the web, we have three types of lists: unordered, ordered, and description lists. This lesson shows you how to use the different types.
-- [Structuring documents](/en-US/docs/Learn_web_development/Core/Structuring_content/Structuring_documents)
-  - : In addition to defining individual parts of your page (such as "a paragraph" or "an image"), HTML also boasts a number of block level elements used to define areas of your website (such as "the header", "the navigation menu", "the main content column"). This article looks into how to plan a basic website structure, and write the HTML to represent this structure.
 - [Advanced text features](/en-US/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features)
   - : There are many other elements in HTML for defining text semantics, which we didn't get to in the [Emphasis and importance](/en-US/docs/Learn_web_development/Core/Structuring_content/Emphasis_and_importance) article. The elements described in this article are less known, but still useful to know about (and this is still not a complete list by any means). Here you'll learn about marking up quotations, computer code and other related text, subscript and superscript, contact information, and more.
-- [Creating links](/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links)
-  - : Links (also known as hyperlinks) are really important — they are what makes the Web _a web_. This article shows the syntax required to make a link, and discusses link best practices.
+
 - [Marking up a letter](/en-US/docs/Learn_web_development/Core/Structuring_content/Marking_up_a_letter) <sup>Challenge</sup>
   - : We all learn to write a letter sooner or later; it is also a useful example to test our text formatting skills. In this challenge, you'll have a letter to mark up as a test for your HTML text formatting skills, as well as hyperlinks and proper use of the HTML `<head>` element.
+
+- [Structuring documents](/en-US/docs/Learn_web_development/Core/Structuring_content/Structuring_documents)
+  - : In addition to defining individual parts of your page (such as "a paragraph" or "an image"), HTML also boasts a number of block level elements used to define areas of your website (such as "the header", "the navigation menu", "the main content column"). This article looks into how to plan a basic website structure, and write the HTML to represent this structure.
+
+- [Creating links](/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links)
+  - : Links (also known as hyperlinks) are really important — they are what makes the Web _a web_. This article shows the syntax required to make a link, and discusses link best practices.
+
 - [Structuring a page of content](/en-US/docs/Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content) <sup>Challenge</sup>
   - : Structuring a page of content ready for laying it out using CSS is a very important skill to master, so in this challenge you'll be tested on your ability to think about how a page might end up looking, and choose appropriate structural semantics to build a layout on top of.
 - [HTML images](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images)
   - : In the beginning, the web was just text, and it was really quite boring. Fortunately, it wasn't too long before the ability to embed images (and other more interesting types of content) inside web pages was added. In this article we'll look at how to use the {{htmlelement("img")}} element in depth, including the basics, annotating it with captions using {{htmlelement("figure")}}, and detailing how it relates to {{glossary("CSS")}} background images.
 - [HTML video and audio](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
   - : Now that we are comfortable with adding simple images to a webpage, the next step is to start adding video and audio players to your HTML documents! In this article we'll look at doing just that with the {{htmlelement("video")}} and {{htmlelement("audio")}} elements; we'll then finish off by looking at how to add captions/subtitles to your videos.
-- [Mozilla splash page](/en-US/docs/Learn_web_development/Core/Structuring_content/Mozilla_splash_page) <sup>Challenge</sup>
-  - : In this challenge, we'll test your knowledge of some of the techniques discussed in the last couple of lessons, getting you to add some images and video to a funky splash page all about Mozilla!
+- [Creepy-crawly splash page](/en-US/docs/Learn_web_development/Core/Structuring_content/Splash_page) <sup>Challenge</sup>
+  - : In this challenge, we'll test your knowledge of some of the techniques discussed in the last couple of lessons, getting you to add some images and video to a splash page all about bugs and other creepy crawlies.
 - [HTML table basics](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
   - : This article gets you started with HTML tables, covering the very basics such as rows, cells, headings, making cells span multiple columns and rows, and how to group together all the cells in a column for styling purposes.
 - [HTML table accessibility](/en-US/docs/Learn_web_development/Core/Structuring_content/Table_accessibility)

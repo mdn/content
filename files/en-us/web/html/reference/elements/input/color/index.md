@@ -2,11 +2,14 @@
 title: <input type="color">
 slug: Web/HTML/Reference/Elements/input/color
 page-type: html-attribute-value
-browser-compat: html.elements.input.type_color
+browser-compat:
+  - html.elements.input.type_color
+  - html.elements.input.alpha
+  - html.elements.input.colorspace
 sidebar: htmlsidebar
 ---
 
-{{HTMLElement("input")}} elements of type **`color`** provide a user interface element that lets a user specify a color, either by using a visual color picker interface or by entering the color into a text field in a [CSS color value](/en-US/docs/Web/CSS/color_value) format.
+{{HTMLElement("input")}} elements of type **`color`** provide a user interface element that lets a user specify a color, either by using a visual color picker interface or by entering the color into a text field in a [CSS color value](/en-US/docs/Web/CSS/Reference/Values/color_value) format.
 
 The element's presentation may vary substantially from one browser and/or platform to another—it might be a basic textual input that automatically validates to ensure that the color information is entered in the proper format, or a platform-standard color picker, or some kind of custom color picker window.
 
@@ -47,7 +50,7 @@ input {
 
 ## Value
 
-A [CSS color value](/en-US/docs/Web/CSS/color_value).
+A [CSS color value](/en-US/docs/Web/CSS/Reference/Values/color_value).
 
 > [!NOTE]
 > Historically, only basic hexadecimal colors (without alpha channel) were allowed. Now, any CSS color format, including named colors, functional notations, and hexadecimal colors with an alpha channel, can be used. The default value is `#000000` (black) if a `value` is omitted or is invalid.
@@ -60,8 +63,8 @@ In addition to the [global attribute](/en-US/docs/Web/HTML/Reference/Global_attr
   - : A [boolean](/en-US/docs/Glossary/Boolean/HTML) attribute, if present, indicates the color's alpha component can be manipulated by the end user and does not have to be fully opaque.
 
 - `colorspace` {{experimental_inline}}
-  - : Defines the the {{glossary("color space")}} for the color and hints at the desired user interface for the color picker widget. Possible {{Glossary("enumerated")}} values are:
-    - `"limited-srgb"`: The color is in the {{glossary("RGB". "sRGB")}} color space. This includes [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb), [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl), [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb), and {{cssxref("hex-color")}} values. The color value is limited to 8-bits per `r`, `g`, and `b` component. This is the default.
+  - : Defines the {{glossary("color space")}} for the color and hints at the desired user interface for the color picker widget. Possible {{Glossary("enumerated")}} values are:
+    - `"limited-srgb"`: The color is in the {{glossary("RGB", "sRGB")}} color space. This includes [`rgb()`](/en-US/docs/Web/CSS/Reference/Values/color_value/rgb), [`hsl()`](/en-US/docs/Web/CSS/Reference/Values/color_value/hsl), [`hwb()`](/en-US/docs/Web/CSS/Reference/Values/color_value/hwb), and {{cssxref("hex-color")}} values. The color value is limited to 8-bits per `r`, `g`, and `b` component. This is the default.
     - `"display-p3"`: The [Display P3 color space](/en-US/docs/Glossary/Color_space#display-p3), e.g., `color(display-p3 1.84 -0.19 0.72 / 0.6)`
 
 ## Using color inputs
@@ -94,8 +97,8 @@ As is the case with other {{HTMLElement("input")}} types, there are two events t
 Here's an example that watches changes over time to the color value:
 
 ```js
-colorPicker.addEventListener("input", updateFirst, false);
-colorPicker.addEventListener("change", watchColorPicker, false);
+colorPicker.addEventListener("input", updateFirst);
+colorPicker.addEventListener("change", watchColorPicker);
 
 function watchColorPicker(event) {
   document.querySelectorAll("p").forEach((p) => {
@@ -146,27 +149,17 @@ The HTML is fairly straightforward — a couple of paragraphs of descriptive mat
 
 ### JavaScript
 
-First, there's some setup. Here we establish some variables, setting up a variable that contains the color we'll set the color picker to when we first load up, and then setting up a {{domxref("Window/load_event", "load")}} handler to do the main startup work once the page is fully loaded.
-
-```js
-let colorPicker;
-const defaultColor = "#0000ff";
-
-window.addEventListener("load", startup, false);
-```
-
 #### Initialization
 
-Once the page is loaded, our `load` event handler, `startup()`, is called:
+The following code initializes the color input:
 
 ```js
-function startup() {
-  colorPicker = document.querySelector("#color-picker");
-  colorPicker.value = defaultColor;
-  colorPicker.addEventListener("input", updateFirst, false);
-  colorPicker.addEventListener("change", updateAll, false);
-  colorPicker.select();
-}
+const defaultColor = "#0000ff";
+const colorPicker = document.querySelector("#color-picker");
+colorPicker.value = defaultColor;
+colorPicker.addEventListener("input", updateFirst);
+colorPicker.addEventListener("change", updateAll);
+colorPicker.select();
 ```
 
 This gets a reference to the color `<input>` element in a variable called `colorPicker`, then sets the color input's value to the value in `defaultColor`. Then the color input's {{domxref("Element/input_event", "input")}} event is set up to call our `updateFirst()` function, and the {{domxref("HTMLElement/change_event", "change")}} event is set to call `updateAll()`. These are both seen below.
@@ -261,3 +254,8 @@ The final result looks like this:
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref('HTMLInputElement.alpha')}}
+- {{domxref('HTMLInputElement.colorspace')}}

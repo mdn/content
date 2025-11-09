@@ -26,9 +26,9 @@ querySelectorAll(selectors)
     must be a valid CSS selector string; if it isn't, a `SyntaxError` exception
     is thrown.
 
-    Note that the HTML specification does not require attribute values to be valid CSS identifiers. If a [`class`](/en-US/docs/Web/HTML/Reference/Global_attributes/class) or [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) attribute value is not a valid CSS identifier, then you must escape it before using it in a selector, either by calling {{domxref("CSS.escape_static", "CSS.escape()")}} on the value, or using one of the techniques described in [Escaping characters](/en-US/docs/Web/CSS/ident#escaping_characters). See [Escaping attribute values](#escaping_attribute_values) for an example.
+    Note that the HTML specification does not require attribute values to be valid CSS identifiers. If a [`class`](/en-US/docs/Web/HTML/Reference/Global_attributes/class) or [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) attribute value is not a valid CSS identifier, then you must escape it before using it in a selector, either by calling {{domxref("CSS.escape_static", "CSS.escape()")}} on the value, or using one of the techniques described in [Escaping characters](/en-US/docs/Web/CSS/Reference/Values/ident#escaping_characters). See [Escaping attribute values](#escaping_attribute_values) for an example.
 
-    The selectors are applied to the entire document, not just the particular element on which `querySelectorAll()` is called. To restrict the selector to the element on which `querySelectorAll()` is called, include the [`:scope`](/en-US/docs/Web/CSS/:scope) pseudo-class at the start of the selector. See the [selector scope](#selector_scope) example.
+    The selectors are applied to the entire document, not just the particular element on which `querySelectorAll()` is called. To restrict the selector to the element on which `querySelectorAll()` is called, include the [`:scope`](/en-US/docs/Web/CSS/Reference/Selectors/:scope) pseudo-class at the start of the selector. See the [selector scope](#selector_scope) example.
 
 ### Return value
 
@@ -36,7 +36,7 @@ A non-live {{domxref("NodeList")}} containing one {{domxref("Element")}} object 
 each descendant node that matches at least one of the specified selectors. The elements are in document order — that is, parents before children, earlier siblings before later siblings.
 
 > [!NOTE]
-> If the specified `selectors` include a [CSS pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements), the returned list
+> If the specified `selectors` include a [CSS pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements), the returned list
 > is always empty.
 
 ### Exceptions
@@ -48,7 +48,7 @@ each descendant node that matches at least one of the specified selectors. The e
 
 ### Getting all elements with a custom data value
 
-This example uses the [attribute selector](/en-US/docs/Web/CSS/Attribute_selectors) to select multiple elements with a `data-name` data attribute that contains "funnel-chart-percent".
+This example uses the [attribute selector](/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors) to select multiple elements with a `data-name` data attribute that contains "funnel-chart-percent".
 
 ```html
 <section class="box" id="sect1">
@@ -89,7 +89,7 @@ const container = document.querySelector("#test");
 const matches = container.querySelectorAll("div.highlighted > p");
 ```
 
-This example uses an [attribute selector](/en-US/docs/Web/CSS/Attribute_selectors) to return a list of the {{HTMLElement("iframe")}} elements in the document
+This example uses an [attribute selector](/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors) to return a list of the {{HTMLElement("iframe")}} elements in the document
 that contain an attribute named `"data-src"`:
 
 ```js
@@ -129,7 +129,7 @@ highlightedItems.forEach((userItem) => {
 
 ### Selector scope
 
-The `querySelectorAll()` method applies its selectors to the whole document: they are not scoped to the element on which the method is called. To scope the selectors, include the [`:scope`](/en-US/docs/Web/CSS/:scope) pseudo-class at the start of the selector string.
+The `querySelectorAll()` method applies its selectors to the whole document: they are not scoped to the element on which the method is called. To scope the selectors, include the [`:scope`](/en-US/docs/Web/CSS/Reference/Selectors/:scope) pseudo-class at the start of the selector string.
 
 #### HTML
 
@@ -204,7 +204,7 @@ When we press "Select with :scope", the `:scope` pseudo-class restricts the sele
 
 ### Escaping attribute values
 
-This example shows that if an HTML document contains an [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) which is not a valid [CSS identifier](/en-US/docs/Web/CSS/ident), then we must escape the attribute value before using it in `querySelectorAll()`.
+This example shows that if an HTML document contains an [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) which is not a valid [CSS identifier](/en-US/docs/Web/CSS/Reference/Values/ident), then we must escape the attribute value before using it in `querySelectorAll()`.
 
 #### HTML
 
@@ -292,8 +292,8 @@ Clicking the first button gives an error, while the second and third buttons wor
 
 ## See also
 
-- [Locating DOM elements using selectors](/en-US/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
-- [Attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) in the CSS
+- [Selection and traversal on the DOM tree](/en-US/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree)
+- [Attribute selectors](/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors) in the CSS
   Guide
 - [Attribute selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors) in the MDN Learning Area
 - {{domxref("Element.querySelector()")}}

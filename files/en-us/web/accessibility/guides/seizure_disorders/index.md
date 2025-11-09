@@ -188,6 +188,9 @@ By not indexing the page (`noindex`) and not following links on the page (`nofol
     <title>…</title>
     <meta name="robots" content="noindex, nofollow" />
   </head>
+  <body>
+    …
+  </body>
 </html>
 ```
 
@@ -210,9 +213,9 @@ With animated GIFs, ensure animation is inactive until the user chooses to activ
 
 ### Videos
 
-As in the case of animated GIFs, the user must push a button or check a box in order to start the animation. There are many ways to do this, such as NOT adding the [`autoplay`](/en-US/docs/Web/API/HTMLMediaElement/autoplay) attribute to `<video controls>`, or setting {{CSSxRef('animation-play-state')}} to `paused` as an initial state. To see a powerful example of how this can actually work see the article by Kirupa, ["Toggling Animations On and Off"](https://www.kirupa.com/html5/toggling_animations_on_off.htm). Kirupa uses the `animation-play-state` in concert with {{CSSxRef('transition')}}, {{CSSxRef('transform')}}, and [`prefers-reduced-motion`](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) to create a very accessible experience under the user's control.
+As in the case of animated GIFs, the user must push a button or check a box in order to start the animation. There are many ways to do this, such as NOT adding the [`autoplay`](/en-US/docs/Web/API/HTMLMediaElement/autoplay) attribute to `<video controls>`, or setting {{CSSxRef('animation-play-state')}} to `paused` as an initial state. To see a powerful example of how this can actually work see the article by Kirupa, ["Toggling Animations On and Off"](https://www.kirupa.com/html5/toggling_animations_on_off.htm). Kirupa uses the `animation-play-state` in concert with {{CSSxRef('transition')}}, {{CSSxRef('transform')}}, and [`prefers-reduced-motion`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) to create a very accessible experience under the user's control.
 
-[`animation-play-state`](/en-US/docs/Web/CSS/animation-play-state) is a CSS property that sets whether an animation is running or paused.
+[`animation-play-state`](/en-US/docs/Web/CSS/Reference/Properties/animation-play-state) is a CSS property that sets whether an animation is running or paused.
 
 ```css
 div {
@@ -220,7 +223,7 @@ div {
 }
 ```
 
-[CSS transitions](/en-US/docs/Web/CSS/CSS_transitions) can be used to set the duration to zero for the initial stage of animation.
+[CSS transitions](/en-US/docs/Web/CSS/Guides/Transitions) can be used to set the duration to zero for the initial stage of animation.
 
 ```css
 div {
@@ -322,7 +325,7 @@ The animation property is already powerful on its own, but combined with other p
 
 JavaScript is often used to control {{HTMLElement('canvas')}} elements and SVGs. Most JavaScript code that applies to HTML video also applies to audio. `HTMLMediaElement.playbackRate` is used to implement user controls for the playback rate for both video and audio. A value of 1.0 is default and considered normal speed; a value of 0.5 is half the speed, a value of 2.0 is twice the speed. A negative number plays the video or audio backwards. Set the playback rate property: `HTMLMediaElement.playbackRate = playbackSpeed`.
 
-[document.getAnimations()](/en-US/docs/Web/API/Document/getAnimations) is an experimental technology, and includes [CSS Animations](/en-US/docs/Web/CSS/CSS_animations), [CSS Transitions](/en-US/docs/Web/CSS/CSS_transitions), and [Web Animations](/en-US/docs/Web/API/Web_Animations_API). The MDN page on [Document.getAnimations()](/en-US/docs/Web/API/Document/getAnimations) provides the following code sample of how to slow down all animations on a page to half speed:
+[document.getAnimations()](/en-US/docs/Web/API/Document/getAnimations) is an experimental technology, and includes [CSS Animations](/en-US/docs/Web/CSS/Guides/Animations), [CSS Transitions](/en-US/docs/Web/CSS/Guides/Transitions), and [Web Animations](/en-US/docs/Web/API/Web_Animations_API). The MDN page on [Document.getAnimations()](/en-US/docs/Web/API/Document/getAnimations) provides the following code sample of how to slow down all animations on a page to half speed:
 
 ```js
 document.getAnimations().forEach((animation) => {
@@ -363,9 +366,9 @@ The contrast ratio is defined in [WCAG 2.2](https://w3c.github.io/wcag/guideline
 
 It's best if you can adjust the contrast before it is uploaded or published to the web. For videos and animated GIFs, the Adobe Suite of products is a phenomenal resource for traditional images. Also for images, an online tool available is pinetools.com's [Brightness and contrast online](https://pinetools.com/brightness-contrast-image). If you intend to make animated GIFs, for example, start with one that has a lower contrast ratio.
 
-JavaScript is also an option for reducing contrast dynamically. Here's a code example from the section titled, ["Example: Setting the background color of a paragraph"](/en-US/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces#setting_the_background_color_of_a_paragraph) from the MDN document, [Traversing an HTML table with JavaScript and DOM Interfaces](/en-US/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces). Notice that the color in the example is described in the **RGB** color space.
+JavaScript is also an option for reducing contrast dynamically. Here's a code example from the section titled, ["Example: Setting the background color of a paragraph"](/en-US/docs/Web/API/Document_Object_Model/Building_and_updating_the_DOM_tree#setting_the_background_color_of_a_paragraph). Notice that the color in the example is described in the **RGB** color space.
 
-**HTML Content [(link to source page)](/en-US/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces#html_2)**
+**HTML Content [(link to source page)](/en-US/docs/Web/API/Document_Object_Model/Building_and_updating_the_DOM_tree#html_2)**
 
 ```html
 <body>
@@ -375,7 +378,7 @@ JavaScript is also an option for reducing contrast dynamically. Here's a code ex
 </body>
 ```
 
-**JavaScript Content [(link to source page)](/en-US/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces#javascript_2)**
+**JavaScript Content [(link to source page)](/en-US/docs/Web/API/Document_Object_Model/Building_and_updating_the_DOM_tree#javascript_2)**
 
 ```js
 function setBackground() {
@@ -465,7 +468,7 @@ Support for `prefers-reduced-motion` in modern browsers is growing.
 }
 ```
 
-To see a great example of how to use the code `prefers-reduced-motion`, visit the MDN document, [`prefers-reduced-motion`](/en-US/docs/Web/CSS/@media/prefers-reduced-motion), or see the example below from the section on ["New in Chrome 74"](https://developer.chrome.com/blog/new-in-chrome-74/).
+To see a great example of how to use the code `prefers-reduced-motion`, visit the MDN document, [`prefers-reduced-motion`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion), or see the example below from the section on ["New in Chrome 74"](https://developer.chrome.com/blog/new-in-chrome-74/).
 
 ```css
 button {
@@ -514,7 +517,7 @@ Eric Bailey, of CSS-Tricks, found an innovative use the update feature which, us
 }
 ```
 
-The [`update`](/en-US/docs/Web/CSS/@media/update) media feature is used to query the ability of the output device to modify the appearance of content once it has been rendered. It has the values of "none", "slow", and "fast".
+The [`update`](/en-US/docs/Web/CSS/Reference/At-rules/@media/update) media feature is used to query the ability of the output device to modify the appearance of content once it has been rendered. It has the values of "none", "slow", and "fast".
 
 ## Developmental & Experimental Features
 
@@ -533,12 +536,12 @@ EnvironmentMQ (Planned in Media Queries Level 5)
 
 - `inverted-colors`
   - : According to the section, [User Preference Media Features](https://drafts.csswg.org/mediaqueries-5/#mf-user-preferences), "The [`inverted-colors`](https://drafts.csswg.org/mediaqueries-5/#descdef-media-inverted-colors) media feature indicates whether the content is displayed normally, or whether colors have been inverted."
-- [`forced-colors`](/en-US/docs/Web/CSS/@media/forced-colors)
+- [`forced-colors`](/en-US/docs/Web/CSS/Reference/At-rules/@media/forced-colors)
   - : In [`forced-colors-mode`](https://drafts.csswg.org/css-color-adjust-1/#forced-colors-mode), the user agent enforces the user's preferred color palette on the page, overriding the author's chosen colors. From W3C's Draft document, Media Queries Level 5 section on forced-colors: _"The forced-colors media feature is used to detect if the user agent has enabled a [forced colors mode](https://drafts.csswg.org/css-color-adjust-1/#forced-colors-mode) where it enforces a user-chosen limited color palette on the page"._ The user will need to be made aware of this ability, and it will need to play nice with the appropriate value for the prefers-color-scheme media query.
 - `light-level`
   - : From W3C's Draft document, Media Queries Level 5 section on light-level: _"The [`light-level`](https://drafts.csswg.org/mediaqueries-5/#descdef-media-light-level) media feature is used to query about the ambient light-level in which the device is used, to allow the author to adjust style of the document in response."_ This will be a godsend to those who have motor-skills problems, or for some with cognitive difficulties, who cannot find the right "button" to change their screen settings.
 - prefers-contrast
-  - : From W3C's Draft document, Media Queries Level 5 section on [`prefers-contrast`](/en-US/docs/Web/CSS/@media/prefers-contrast): _"The `prefers-contrast` media feature is used to detect if the user has requested the system increase or decrease the amount of contrast between adjacent colors. For example, many users have difficulty reading text that has a small difference in contrast to the text background and would prefer a larger contrast."_ Sometimes there can be such a thing as too much contrast; a halo effect around text can occur in such situations and actually reduce legibility. Putting the amount of contrast in the user's control is a definite gift for accessibility.
+  - : From W3C's Draft document, Media Queries Level 5 section on [`prefers-contrast`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-contrast): _"The `prefers-contrast` media feature is used to detect if the user has requested the system increase or decrease the amount of contrast between adjacent colors. For example, many users have difficulty reading text that has a small difference in contrast to the text background and would prefer a larger contrast."_ Sometimes there can be such a thing as too much contrast; a halo effect around text can occur in such situations and actually reduce legibility. Putting the amount of contrast in the user's control is a definite gift for accessibility.
 
 #### `MediaQueryList` Interface
 
@@ -560,7 +563,7 @@ The requirement for the `literal` property is taken from [WAI-Adapt: Help and Su
 - [Basic Animations](/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations) (Canvas Tutorial)
 - [Canvas API](/en-US/docs/Web/API/Canvas_API)
 - [CanvasRenderingContext2D.drawImage()](/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage)
-- [\<color>](/en-US/docs/Web/CSS/color_value)
+- [\<color>](/en-US/docs/Web/CSS/Reference/Values/color_value)
 - [Document Object Model](/en-US/docs/Web/API/Document_Object_Model)
 - [MediaQueryList](/en-US/docs/Web/API/MediaQueryList)
 - [Using dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)
@@ -588,12 +591,6 @@ The requirement for the `literal` property is taken from [WAI-Adapt: Help and Su
 ### GPII
 
 - [Accessibility Master List](https://ds.gpii.net/learn/accessibility-masterlist) Gregg Vanderheiden Ph.D. Editor
-
-### Harding
-
-Along with the PEAT tool, is generally recognized to be one of the two "gold standards" for analyzing flashes.
-
-- [Harding Flash and Pattern Analyzer](https://www.hardingfpa.com/)
 
 ### ISO
 

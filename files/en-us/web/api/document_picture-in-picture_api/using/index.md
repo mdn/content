@@ -57,7 +57,7 @@ if ("documentPictureInPicture" in window) {
 
   const togglePipButton = document.createElement("button");
   togglePipButton.textContent = "Toggle Picture-in-Picture";
-  togglePipButton.addEventListener("click", togglePictureInPicture, false);
+  togglePipButton.addEventListener("click", togglePictureInPicture);
 
   document.getElementById("control-bar").appendChild(togglePipButton);
 }
@@ -128,7 +128,7 @@ To copy all CSS style sheets from the originating window, loop through all style
 
 ## Target styles when in Picture-in-Picture mode
 
-The `picture-in-picture` value of the {{cssxref("@media/display-mode", "display-mode")}} [media feature](/en-US/docs/Web/CSS/@media#media_features) allows developers to apply CSS to a document based on whether it is being displayed in Picture-in-Picture mode. Basic usage looks like so:
+The `picture-in-picture` value of the {{cssxref("@media/display-mode", "display-mode")}} [media feature](/en-US/docs/Web/CSS/Reference/At-rules/@media#media_features) allows developers to apply CSS to a document based on whether it is being displayed in Picture-in-Picture mode. Basic usage looks like so:
 
 ```css
 @media (display-mode: picture-in-picture) {

@@ -2,6 +2,11 @@
 
 sidebar:
   - type: section
+    link: /Learn_web_development
+  - type: section
+    link: /en-US/curriculum/
+    title: MDN curriculum
+  - type: section
     link: /Learn_web_development/Getting_started
     title: Getting_started_modules
   - link: /Learn_web_development/Getting_started/Environment_setup
@@ -50,25 +55,31 @@ sidebar:
       - /Learn_web_development/Core/Structuring_content/Emphasis_and_importance
       - /Learn_web_development/Core/Structuring_content/Lists
       - /Learn_web_development/Core/Structuring_content/Test_your_skills/HTML_text_basics
-      - /Learn_web_development/Core/Structuring_content/Structuring_documents
       - /Learn_web_development/Core/Structuring_content/Advanced_text_features
       - /Learn_web_development/Core/Structuring_content/Test_your_skills/Advanced_HTML_text
+      - /Learn_web_development/Core/Structuring_content/Marking_up_a_letter
+      - /Learn_web_development/Core/Structuring_content/Structuring_documents
       - /Learn_web_development/Core/Structuring_content/Creating_links
       - /Learn_web_development/Core/Structuring_content/Test_your_skills/Links
-      - /Learn_web_development/Core/Structuring_content/Marking_up_a_letter
       - /Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content
       - /Learn_web_development/Core/Structuring_content/HTML_images
       - /Learn_web_development/Core/Structuring_content/Test_your_skills/Images
       - /Learn_web_development/Core/Structuring_content/HTML_video_and_audio
       - /Learn_web_development/Core/Structuring_content/Test_your_skills/Audio_and_video
-      - /Learn_web_development/Core/Structuring_content/Mozilla_splash_page
+      - /Learn_web_development/Core/Structuring_content/Splash_page
       - /Learn_web_development/Core/Structuring_content/HTML_table_basics
       - /Learn_web_development/Core/Structuring_content/Table_accessibility
       - /Learn_web_development/Core/Structuring_content/Planet_data_table
       - /Learn_web_development/Core/Structuring_content/HTML_forms
       - /Learn_web_development/Core/Structuring_content/Test_your_skills/Forms_and_buttons
+      - /Learn_web_development/Core/Structuring_content/Forms_challenge
       - /Learn_web_development/Core/Structuring_content/Debugging_HTML
       - /Learn_web_development/Core/Structuring_content/Test_your_skills
+      - title: Additional_tutorials
+        details: closed
+        children:
+          - /Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML
+          - /Learn_web_development/Core/Structuring_content/General_embedding_technologies
   - link: /Learn_web_development/Core/Styling_basics
     title: CSS_styling_basics
     details: closed
@@ -85,6 +96,7 @@ sidebar:
       - /Learn_web_development/Core/Styling_basics/Test_your_skills/Box_model
       - /Learn_web_development/Core/Styling_basics/Handling_conflicts
       - /Learn_web_development/Core/Styling_basics/Test_your_skills/Cascade
+      - /Learn_web_development/Core/Styling_basics/Fixing_blog_styles
       - /Learn_web_development/Core/Styling_basics/Values_and_units
       - /Learn_web_development/Core/Styling_basics/Test_your_skills/Values
       - /Learn_web_development/Core/Styling_basics/Sizing
@@ -93,14 +105,20 @@ sidebar:
       - /Learn_web_development/Core/Styling_basics/Test_your_skills/Backgrounds_and_borders
       - /Learn_web_development/Core/Styling_basics/Overflow
       - /Learn_web_development/Core/Styling_basics/Test_your_skills/Overflow
+      - /Learn_web_development/Core/Styling_basics/Size_decorate_content_panel
       - /Learn_web_development/Core/Styling_basics/Images_media_forms
       - /Learn_web_development/Core/Styling_basics/Test_your_skills/Images
       - /Learn_web_development/Core/Styling_basics/Tables
+      - /Learn_web_development/Core/Styling_basics/Home_color_scheme_search
       - /Learn_web_development/Core/Styling_basics/Debugging_CSS
-      - /Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension
-      - /Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper
-      - /Learn_web_development/Core/Styling_basics/Cool-looking_box
       - /Learn_web_development/Core/Styling_basics/Test_your_skills
+      - title: Additional_tutorials
+        details: closed
+        children:
+          - /Learn_web_development/Core/Styling_basics/Advanced_styling_effects
+          - /Learn_web_development/Core/Styling_basics/Cascade_layers
+          - /Learn_web_development/Core/Styling_basics/Handling_different_text_directions
+          - /Learn_web_development/Core/Styling_basics/Organizing
   - link: /Learn_web_development/Core/Text_styling
     title: CSS_text_styling
     details: closed
@@ -123,11 +141,19 @@ sidebar:
       - /Learn_web_development/Core/CSS_layout/Test_your_skills/Flexbox
       - /Learn_web_development/Core/CSS_layout/Grids
       - /Learn_web_development/Core/CSS_layout/Test_your_skills/Grid
+      - /Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension
       - /Learn_web_development/Core/CSS_layout/Responsive_Design
       - /Learn_web_development/Core/CSS_layout/Media_queries
       - /Learn_web_development/Core/CSS_layout/Test_your_skills/Responsive_design
-      - /Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension
+      - /Learn_web_development/Core/CSS_layout/Mobile-first_challenge
       - /Learn_web_development/Core/CSS_layout/Test_your_skills
+      - title: Additional_tutorials
+        details: closed
+        children:
+          - /Learn_web_development/Core/CSS_layout/Multiple-column_Layout
+          - /Learn_web_development/Core/CSS_layout/Practical_positioning_examples
+          - /Learn_web_development/Core/CSS_layout/Legacy_Layout_Methods
+          - /Learn_web_development/Core/CSS_layout/Supporting_Older_Browsers
   - link: /Learn_web_development/Core/Scripting
     title: Dynamic_scripting_with_JavaScript
     details: closed
@@ -156,13 +182,14 @@ sidebar:
       - /Learn_web_development/Core/Scripting/Events
       - /Learn_web_development/Core/Scripting/Event_bubbling
       - /Learn_web_development/Core/Scripting/Test_your_skills/Events
-      - /Learn_web_development/Core/Scripting/Image_gallery
       - /Learn_web_development/Core/Scripting/Object_basics
       - /Learn_web_development/Core/Scripting/Test_your_skills/Object_basics
       - /Learn_web_development/Core/Scripting/DOM_scripting
+      - /Learn_web_development/Core/Scripting/Image_gallery
       - /Learn_web_development/Core/Scripting/Network_requests
       - /Learn_web_development/Core/Scripting/JSON
       - /Learn_web_development/Core/Scripting/Test_your_skills/JSON
+      - /Learn_web_development/Core/Scripting/House_data_UI
       - /Learn_web_development/Core/Scripting/Debugging_JavaScript
       - /Learn_web_development/Core/Scripting/Test_your_skills
   - link: /Learn_web_development/Core/Frameworks_libraries
@@ -245,6 +272,13 @@ sidebar:
       - /Learn_web_development/Extensions/Forms/UI_pseudo-classes
       - /Learn_web_development/Extensions/Forms/Form_validation
       - /Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data
+      - title: Additional_tutorials
+        details: closed
+        children:
+          - /Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls
+          - /Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript
+          - /Learn_web_development/Extensions/Forms/HTML_forms_in_legacy_browsers
+          - /Learn_web_development/Extensions/Forms/User_input_methods
   - link: /Learn_web_development/Extensions/Client-side_tools
     title: Understanding_client-side_tools
     details: closed
@@ -295,6 +329,12 @@ sidebar:
           - /Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data
           - /Learn_web_development/Extensions/Server-side/Express_Nodejs/forms
           - /Learn_web_development/Extensions/Server-side/Express_Nodejs/deployment
+      - title: Additional_tutorials
+        details: closed
+        children:
+          - /Learn_web_development/Extensions/Server-side/Apache_Configuration_htaccess
+          - /Learn_web_development/Extensions/Server-side/Configuring_server_MIME_types
+          - /Learn_web_development/Extensions/Server-side/Node_server_without_framework
   - link: /Learn_web_development/Extensions/Performance
     title: Web_performance
     details: closed
@@ -309,6 +349,7 @@ sidebar:
       - /Learn_web_development/Extensions/Performance/HTML
       - /Learn_web_development/Extensions/Performance/CSS
       - /Learn_web_development/Extensions/Performance/business_case_for_performance
+      - /Learn_web_development/Extensions/Performance/Best_practices
   - link: /Learn_web_development/Extensions/Testing
     title: Testing
     details: closed
@@ -393,6 +434,7 @@ l10n:
     About: About
     Resources_for_educators: Resources for educators
     Changelog: Changelog
+    Additional_tutorials: Additional tutorials
   pt-BR:
     CSS_layout: Esquemas CSS
     Asynchronous_JavaScript: Asynchronous JavaScript

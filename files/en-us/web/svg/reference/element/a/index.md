@@ -101,7 +101,7 @@ svg|a:active {
 {{EmbedLiveSample('Example', 100, 100)}}
 
 > [!WARNING]
-> Since this element shares its tag name with [HTML's `<a>` element](/en-US/docs/Web/HTML/Reference/Elements/a), selecting `a` with CSS or {{domxref("Document.querySelector", "querySelector")}} may apply to the wrong kind of element. Try [the `@namespace` rule](/en-US/docs/Web/CSS/@namespace) to distinguish the two.
+> Since this element shares its tag name with [HTML's `<a>` element](/en-US/docs/Web/HTML/Reference/Elements/a), selecting `a` with CSS or {{domxref("Document.querySelector", "querySelector")}} may apply to the wrong kind of element. Try [the `@namespace` rule](/en-US/docs/Web/CSS/Reference/At-rules/@namespace) to distinguish the two.
 
 ## Specifications
 

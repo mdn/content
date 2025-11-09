@@ -53,7 +53,7 @@ new URLPattern(url, baseURL, options)
 
 - `baseURL` {{Optional_Inline}}
   - : A string that provides an absolute URL from which [undefined less-specific URL-parts may be inherited](#inheritance_from_a_baseurl)
-    This must be set when `url` is a relative URL, and must not be set if `input` is used (`input.baseURL` may be used to provide inherited values for a `input`, but, unlike this property, is never required).
+    This must be set when `url` is a relative URL, and must not be set if `input` is used (`input.baseURL` may be used to provide inherited values for an `input`, but, unlike this property, is never required).
 
 - `options` {{Optional_Inline}}
   - : An object providing options for matching the given pattern.
@@ -146,7 +146,7 @@ Similarly, the [Match the username and password](#match_the_username_and_passwor
 
 ### Default pattern
 
-This code demonstrates that URL-parts that are not supplied in an URL or [inherited from a base URL](#inheritance_from_a_baseurl) default to the wildcard value.
+This code demonstrates that URL-parts that are not supplied in a URL or [inherited from a base URL](#inheritance_from_a_baseurl) default to the wildcard value.
 
 ```js
 console.log(new URLPattern());
@@ -191,7 +191,7 @@ let pattern4 = new URLPattern({
 let pattern5 = new URLPattern({
   pathname: "/books/:id",
   baseURL: "https://example.com/some/path/?search=3#param=1",
-  //More-specific URL parts are discarded
+  // More-specific URL parts are discarded
 });
 ```
 
@@ -269,14 +269,14 @@ const pattern = new URLPattern({
 });
 
 console.log(pattern);
-//protocol: https
-//username: *
-//password: *
-//hostname: example.com
-//port:
-//pathname: /some/path
-//search: *
-//hash: *
+// protocol: https
+// username: *
+// password: *
+// hostname: example.com
+// port:
+// pathname: /some/path
+// search: *
+// hash: *
 ```
 
 ## Specifications

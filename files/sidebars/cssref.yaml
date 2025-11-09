@@ -5,165 +5,124 @@ sidebar:
     link: /Web/CSS
     title: CSS
   - type: section
-    link: /Learn_web_development/Core/Styling_basics
-    title: Beginners
-  - link: /Learn_web_development/Getting_started/Your_first_website/Styling_the_content
-    title: Styling_the_content
-  - link: /Learn_web_development/Core/Styling_basics
-    title: CSS_styling_basics
-    details: closed
-    children:
-      - /Learn_web_development/Core/Styling_basics/What_is_CSS
-      - /Learn_web_development/Core/Styling_basics/Getting_started
-      - /Learn_web_development/Core/Styling_basics/Styling_a_bio_page
-      - /Learn_web_development/Core/Styling_basics/Basic_selectors
-      - /Learn_web_development/Core/Styling_basics/Attribute_selectors
-      - /Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements
-      - /Learn_web_development/Core/Styling_basics/Combinators
-      - /Learn_web_development/Core/Styling_basics/Box_model
-      - /Learn_web_development/Core/Styling_basics/Handling_conflicts
-      - /Learn_web_development/Core/Styling_basics/Values_and_units
-      - /Learn_web_development/Core/Styling_basics/Sizing
-      - /Learn_web_development/Core/Styling_basics/Backgrounds_and_borders
-      - /Learn_web_development/Core/Styling_basics/Overflow
-      - /Learn_web_development/Core/Styling_basics/Images_media_forms
-      - /Learn_web_development/Core/Styling_basics/Tables
-      - /Learn_web_development/Core/Styling_basics/Debugging_CSS
-      - /Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension
-      - /Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper
-      - /Learn_web_development/Core/Styling_basics/Cool-looking_box
-  - link: /Learn_web_development/Core/Text_styling
-    title: CSS_text_styling
-    details: closed
-    children:
-      - /Learn_web_development/Core/Text_styling/Fundamentals
-      - /Learn_web_development/Core/Text_styling/Styling_lists
-      - /Learn_web_development/Core/Text_styling/Styling_links
-      - /Learn_web_development/Core/Text_styling/Web_fonts
-      - /Learn_web_development/Core/Text_styling/Typesetting_a_homepage
-  - link: /Learn_web_development/Core/CSS_layout
-    title: CSS_layout
-    details: closed
-    children:
-      - /Learn_web_development/Core/CSS_layout/Introduction
-      - /Learn_web_development/Core/CSS_layout/Floats
-      - /Learn_web_development/Core/CSS_layout/Positioning
-      - /Learn_web_development/Core/CSS_layout/Flexbox
-      - /Learn_web_development/Core/CSS_layout/Grids
-      - /Learn_web_development/Core/CSS_layout/Responsive_Design
-      - /Learn_web_development/Core/CSS_layout/Media_queries
-      - /Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension
-  - type: section
     link: /Web/CSS/Reference
-  - type: listSubPages
-    path: /Web/CSS
-    tags: css-module
-    title: Modules
-    details: closed
   - type: listSubPagesGrouped
-    path: /Web/CSS
+    path: /Web/CSS/Reference/Properties
     tags:
       - css-property
       - css-shorthand-property
-    link: /Web/CSS/Properties
+    link: /Web/CSS/Reference/Properties
     title: Properties
     details: closed
   - type: listSubPages
-    path: /Web/CSS
+    path: /Web/CSS/Reference/Selectors
     tags: css-selector
+    link: /Web/CSS/Reference/Selectors
     title: Selectors
     details: closed
   - type: listSubPages
-    path: /Web/CSS
+    path: /Web/CSS/Reference/Selectors
     tags: css-combinator
+    link: /Web/CSS/Reference/Selectors/Combinators
     title: Combinators
     details: closed
   - type: listSubPagesGrouped
-    path: /Web/CSS
+    path: /Web/CSS/Reference/Selectors
     tags: css-pseudo-class
-    link: /Web/CSS/Pseudo-classes
+    link: /Web/CSS/Reference/Selectors/Pseudo-classes
     title: Pseudo-classes
     details: closed
   - type: listSubPagesGrouped
-    path: /Web/CSS
+    path: /Web/CSS/Reference/Selectors
     tags: css-pseudo-element
-    link: /Web/CSS/Pseudo-elements
+    link: /Web/CSS/Reference/Selectors/Pseudo-elements
     title: Pseudo-elements
     details: closed
   - type: listSubPages
-    path: /Web/CSS
+    path: /Web/CSS/Reference/At-rules
     tags: css-at-rule
-    link: /Web/CSS/CSS_syntax/At-rule
+    link: /Web/CSS/Reference/At-rules
     title: At-rules
     details: closed
   - type: listSubPages
-    path: /Web/CSS
-    tags: css-function
-    depth: 2
-    link: /Web/CSS/CSS_Values_and_Units/CSS_Value_Functions
-    title: Functions
+    path: /Web/CSS/Reference/Values
+    tags: css-keyword
+    link: /Web/CSS/Reference/Values
+    title: Values
     details: closed
   - type: listSubPages
-    path: /Web/CSS
+    path: /Web/CSS/Reference/Values
     tags: css-type
-    link: /Web/CSS/CSS_Values_and_Units/CSS_data_types
+    link: /Web/CSS/Reference/Values/Data_types
     title: Types
+    details: closed
+  - type: listSubPages
+    path: /Web/CSS/Reference/Values
+    tags: css-function
+    depth: 2
+    link: /Web/CSS/Reference/Values/Functions
+    title: Functions
     details: closed
   - type: section
     link: /Web/CSS/Guides
     title: Guides
+  - type: listSubPages
+    path: /Web/CSS/Guides
+    tags: css-module
+    title: Modules
+    details: closed
   - title: Anchor_positioning
     details: closed
     children:
-      - /Web/CSS/CSS_anchor_positioning/Using
-      - /Web/CSS/CSS_anchor_positioning/Try_options_hiding
+      - /Web/CSS/Guides/Anchor_positioning/Using
+      - /Web/CSS/Guides/Anchor_positioning/Try_options_hiding
   - title: Animations
     details: closed
     children:
-      - /Web/CSS/CSS_animated_properties
-      - /Web/CSS/CSS_animations/Using_CSS_animations
+      - /Web/CSS/Guides/Animations/Animatable_properties
+      - /Web/CSS/Guides/Animations/Using
   - title: Backgrounds_and_Borders
     details: closed
     children:
-      - /Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
-      - link: /Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images
-        title: Resizing_background_images
-      - /Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds
+      - /Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds
+      - /Web/CSS/Guides/Backgrounds_and_borders/Resizing_background_images
+      - /Web/CSS/Guides/Backgrounds_and_borders/Scaling_SVG_backgrounds
   - title: Box alignment
     details: closed
     children:
-      - link: /Web/CSS/CSS_box_alignment/Box_alignment
-        title: Overview
-      - link: /Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables
-        title: Box_alignment_in_block_layout
-      - /Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox
-      - /Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout
-      - /Web/CSS/CSS_box_alignment/Box_alignment_in_multi-column_layout
+      - /Web/CSS/Guides/Box_alignment/Overview
+      - /Web/CSS/Guides/Box_alignment/In_block_abspos_tables
+      - /Web/CSS/Guides/Box_alignment/In_flexbox
+      - /Web/CSS/Guides/Box_alignment/In_grid_layout
+      - /Web/CSS/Guides/Box_alignment/In_multi-column_layout
   - title: Box_model
     details: closed
     children:
-      - /Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
-      - /Web/CSS/CSS_box_model/Mastering_margin_collapsing
+      - /Web/CSS/Guides/Box_model/Introduction
+      - /Web/CSS/Guides/Box_model/Margin_collapsing
+  - title: Box sizing
+    details: closed
+    children:
+      - /Web/CSS/Guides/Box_sizing/Aspect_ratios
   - title: Cascade
     details: closed
     children:
-      - /Web/CSS/CSS_cascade/Cascade
-      - /Web/CSS/CSS_cascade/Inheritance
-      - /Web/CSS/CSS_cascade/Specificity
-      - /Web/CSS/CSS_cascade/Value_processing
-      - /Web/CSS/CSS_cascade/Shorthand_properties
+      - /Web/CSS/Guides/Cascade/Introduction
+      - /Web/CSS/Guides/Cascade/Inheritance
+      - /Web/CSS/Guides/Cascade/Specificity
+      - /Web/CSS/Guides/Cascade/Property_value_processing
+      - /Web/CSS/Guides/Cascade/Shorthand_properties
   - type: listSubPages
-    path: /Web/CSS/CSS_cascading_variables
-    title: Custom_properties
+    path: /Web/CSS/Guides/Cascading_variables
+    title: Cascading variables
     details: closed
   - title: Colors
     details: closed
     children:
-      - link: /Web/CSS/CSS_colors/Applying_color
-        title: Applying_color_to_HTML_elements
-      - /Web/CSS/CSS_colors/Color_values
-      - /Web/CSS/CSS_colors/Relative_colors
-      - /Web/CSS/CSS_colors/Using_color_wisely
+      - /Web/CSS/Guides/Colors/Applying_color
+      - /Web/CSS/Guides/Colors/Color_values
+      - /Web/CSS/Guides/Colors/Using_relative_colors
+      - /Web/CSS/Guides/Colors/Using_color_wisely
       - link: /Web/Accessibility/Guides/Colors_and_Luminance
         title: Accessibility_Understanding_colors_and_luminance
       - link: /Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast
@@ -171,205 +130,227 @@ sidebar:
   - title: Columns
     details: closed
     children:
-      - /Web/CSS/CSS_multicol_layout/Basic_concepts
-      - /Web/CSS/CSS_multicol_layout/Styling_columns
-      - /Web/CSS/CSS_multicol_layout/Using_multicol_layouts
-      - /Web/CSS/CSS_multicol_layout/Spanning_balancing_columns
-      - /Web/CSS/CSS_multicol_layout/Handling_overflow_in_multicol_layout
-      - /Web/CSS/CSS_multicol_layout/Handling_content_breaks_in_multicol_layout
+      - /Web/CSS/Guides/Multicol_layout/Basic_concepts
+      - /Web/CSS/Guides/Multicol_layout/Styling_columns
+      - /Web/CSS/Guides/Multicol_layout/Using
+      - /Web/CSS/Guides/Multicol_layout/Spanning_balancing_columns
+      - /Web/CSS/Guides/Multicol_layout/Handling_overflow
+      - /Web/CSS/Guides/Multicol_layout/Handling_content_breaks
   - title: Conditional_rules
     details: closed
     children:
-      - /Web/CSS/CSS_conditional_rules/Using_feature_queries
-      - /Web/CSS/CSS_conditional_rules/Container_scroll-state_queries
+      - /Web/CSS/Guides/Conditional_rules/Using_feature_queries
+      - /Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries
   - title: Containment
     details: closed
     children:
-      - /Web/CSS/CSS_containment/Container_queries
-      - /Web/CSS/CSS_containment/Using_CSS_containment
-      - /Web/CSS/CSS_containment/Container_size_and_style_queries
+      - /Web/CSS/Guides/Containment/Container_queries
+      - /Web/CSS/Guides/Containment/Using
+      - /Web/CSS/Guides/Containment/Container_size_and_style_queries
   - title: CSSOM_view
     details: closed
     children:
-      - /Web/CSS/CSSOM_view/Coordinate_systems
-      - /Web/CSS/CSSOM_view/Viewport_concepts
+      - link: /Web/API/CSSOM_view_API/Coordinate_systems
+        title: Coordinate_systems
+      - /Web/CSS/Guides/CSSOM_view/Viewport_concepts
   - title: Display
     details: closed
     children:
-      - /Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow
-      - /Web/CSS/CSS_display/Flow_layout
-      - /Web/CSS/CSS_display/Flow_layout_and_overflow
-      - /Web/CSS/CSS_display/Flow_layout_and_writing_modes
-      - /Web/CSS/CSS_display/In_flow_and_out_of_flow
-      - /Web/CSS/CSS_display/Containing_block
-      - /Web/CSS/CSS_display/Introduction_to_formatting_contexts
-      - /Web/CSS/CSS_display/Block_formatting_context
-      - /Web/CSS/CSS_inline_layout/Inline_formatting_context
-      - /Web/CSS/CSS_display/multi-keyword_syntax_of_display
-      - /Web/CSS/CSS_display/Visual_formatting_model
+      - /Web/CSS/Guides/Display/Block_and_inline_layout
+      - /Web/CSS/Guides/Display/Flow_layout
+      - /Web/CSS/Guides/Display/Flow_layout_and_overflow
+      - /Web/CSS/Guides/Display/Flow_layout_and_writing_modes
+      - /Web/CSS/Guides/Display/In_flow_and_out_of_flow
+      - /Web/CSS/Guides/Display/Containing_block
+      - /Web/CSS/Guides/Display/Formatting_contexts
+      - /Web/CSS/Guides/Display/Block_formatting_context
+      - /Web/CSS/Guides/Inline_layout/Inline_formatting_context
+      - /Web/CSS/Guides/Display/Multi-keyword_syntax
+      - /Web/CSS/Guides/Display/Visual_formatting_model
   - type: listSubPages
-    path: /Web/CSS/CSS_filter_effects
+    path: /Web/CSS/Guides/Filter_effects
     title: Filter_effects
     details: closed
   - title: Flexbox
     details: closed
     children:
-      - /Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
-      - /Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods
-      - /Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container
-      - /Web/CSS/CSS_flexible_box_layout/Ordering_flex_items
-      - /Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis
-      - /Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items
-      - /Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox
+      - /Web/CSS/Guides/Flexible_box_layout/Basic_concepts
+      - /Web/CSS/Guides/Flexible_box_layout/Relationship_with_other_layout_methods
+      - /Web/CSS/Guides/Flexible_box_layout/Aligning_items
+      - /Web/CSS/Guides/Flexible_box_layout/Ordering_items
+      - /Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios
+      - /Web/CSS/Guides/Flexible_box_layout/Wrapping_items
+      - /Web/CSS/Guides/Flexible_box_layout/Use_cases
   - type: listSubPages
-    path: /Web/CSS/CSS_fonts
+    path: /Web/CSS/Guides/Fonts
     title: Fonts
     details: closed
   - title: Grid
     details: closed
     children:
-      - /Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout
-      - /Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods
-      - /Web/CSS/CSS_grid_layout/Grid_template_areas
-      - /Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
-      - /Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines
-      - /Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout
-      - /Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout
-      - /Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes
-      - /Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids
-      - /Web/CSS/CSS_grid_layout/Subgrid
-      - /Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility
-      - /Web/CSS/CSS_grid_layout/Masonry_layout
+      - /Web/CSS/Guides/Grid_layout/Basic_concepts
+      - /Web/CSS/Guides/Grid_layout/Relationship_with_other_layout_methods
+      - /Web/CSS/Guides/Grid_layout/Grid_template_areas
+      - /Web/CSS/Guides/Grid_layout/Line-based_placement
+      - /Web/CSS/Guides/Grid_layout/Named_grid_lines
+      - /Web/CSS/Guides/Grid_layout/Auto-placement
+      - /Web/CSS/Guides/Grid_layout/Box_alignment
+      - /Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes
+      - /Web/CSS/Guides/Grid_layout/Common_grid_layouts
+      - /Web/CSS/Guides/Grid_layout/Subgrid
+      - /Web/CSS/Guides/Grid_layout/Accessibility
+      - /Web/CSS/Guides/Grid_layout/Masonry_layout
   - title: Images
     details: closed
     children:
-      - /Web/CSS/CSS_images/Using_CSS_gradients
-      - /Web/CSS/CSS_images/Replaced_element_properties
-      - /Web/CSS/CSS_images/Implementing_image_sprites_in_CSS
+      - /Web/CSS/Guides/Images/Using_gradients
+      - /Web/CSS/Guides/Images/Using_object-view-box
+      - /Web/CSS/Guides/Images/Replaced_element_properties
+      - /Web/CSS/Guides/Images/Implementing_image_sprites
   - title: Lists_and_counters
     details: closed
     children:
-      - /Web/CSS/CSS_counter_styles/Using_CSS_counters
-      - /Web/CSS/CSS_lists/Consistent_list_indentation
+      - /Web/CSS/Guides/Counter_styles/Using_counters
+      - /Web/CSS/Guides/Lists/Indenting
   - title: Logical_properties
     details: closed
     children:
-      - /Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values
-      - /Web/CSS/CSS_logical_properties_and_values/Floating_and_positioning
-      - /Web/CSS/CSS_logical_properties_and_values/Margins_borders_padding
-      - /Web/CSS/CSS_logical_properties_and_values/Sizing
+      - /Web/CSS/Guides/Logical_properties_and_values/Basic_concepts
+      - /Web/CSS/Guides/Logical_properties_and_values/Floating_and_positioning
+      - /Web/CSS/Guides/Logical_properties_and_values/Margins_borders_padding
+      - /Web/CSS/Guides/Logical_properties_and_values/Sizing
+  - title: Masking
+    details: closed
+    children:
+      - /Web/CSS/Guides/Masking/Introduction
+      - /Web/CSS/Guides/Masking/Clipping
+      - /Web/CSS/Guides/Masking/Multiple_masks
+      - /Web/CSS/Guides/Masking/Mask_properties
   - title: Media_queries
     details: closed
     children:
-      - /Web/CSS/CSS_media_queries/Using_media_queries
-      - /Web/CSS/CSS_media_queries/Using_media_queries_for_accessibility
-      - /Web/CSS/CSS_media_queries/Testing_media_queries
-      - /Web/CSS/CSS_media_queries/Printing
+      - /Web/CSS/Guides/Media_queries/Using
+      - /Web/CSS/Guides/Media_queries/Using_for_accessibility
+      - /Web/CSS/Guides/Media_queries/Testing
+      - /Web/CSS/Guides/Media_queries/Printing
   - title: Nesting
     details: closed
     children:
-      - /Web/CSS/CSS_nesting/Nesting_at-rules
-      - /Web/CSS/CSS_nesting/Nesting_and_specificity
-      - /Web/CSS/CSS_nesting/Using_CSS_nesting
+      - /Web/CSS/Guides/Nesting/At-rules
+      - /Web/CSS/Guides/Nesting/Nesting_and_specificity
+      - /Web/CSS/Guides/Nesting/Using
   - type: listSubPages
-    path: /Web/CSS/CSS_overflow
+    path: /Web/CSS/Guides/Overflow
     title: Overflow
     details: closed
   - title: Positioning
     details: closed
     children:
-      - /Web/CSS/CSS_positioned_layout/Stacking_context
-      - /Web/CSS/CSS_positioned_layout/Stacking_floating_elements
-      - /Web/CSS/CSS_positioned_layout/Understanding_z-index
-      - /Web/CSS/CSS_positioned_layout/Using_z-index
-      - /Web/CSS/CSS_positioned_layout/Stacking_without_z-index
+      - /Web/CSS/Guides/Positioned_layout/Stacking_context
+      - /Web/CSS/Guides/Positioned_layout/Stacking_context/Example_1
+      - /Web/CSS/Guides/Positioned_layout/Stacking_context/Example_2
+      - /Web/CSS/Guides/Positioned_layout/Stacking_context/Example_3
+      - /Web/CSS/Guides/Positioned_layout/Stacking_floating_elements
+      - /Web/CSS/Guides/Positioned_layout/Understanding_z-index
+      - /Web/CSS/Guides/Positioned_layout/Using_z-index
+      - /Web/CSS/Guides/Positioned_layout/Stacking_without_z-index
   - type: listSubPages
-    path: /Web/CSS/CSS_scroll_anchoring
+    path: /Web/CSS/Guides/Scroll_anchoring
     title: Scroll_anchoring
     details: closed
   - type: listSubPages
-    path: /Web/CSS/CSS_scroll_snap
+    path: /Web/CSS/Guides/Scroll_snap
     title: Scroll_snap
     details: closed
-  - type: listSubPages
-    path: /Web/CSS/CSS_selectors
-    title: Selectors
+  - title: Selectors
     details: closed
+    children:
+      - /Web/CSS/Guides/Selectors/Selectors_and_combinators
+      - /Web/CSS/Guides/Selectors/Selector_structure
+      - /Web/CSS/Guides/Selectors/Privacy_and_:visited
+      - /Web/CSS/Guides/Selectors/Using_:target
   - title: Shapes
     details: closed
     children:
-      - /Web/CSS/CSS_shapes/Overview_of_shapes
-      - /Web/CSS/CSS_shapes/From_box_values
-      - /Web/CSS/CSS_shapes/Shapes_from_images
-      - /Web/CSS/CSS_shapes/Basic_shapes
+      - /Web/CSS/Guides/Shapes/Overview
+      - /Web/CSS/Guides/Shapes/From_box_values
+      - /Web/CSS/Guides/Shapes/From_images
+      - /Web/CSS/Guides/Shapes/Using_shape-outside
   - title: Syntax
     details: closed
     children:
-      - /Web/CSS/CSS_syntax/Syntax
-      - /Web/CSS/CSS_syntax/Comments
-      - /Web/CSS/CSS_syntax/At-rule_functions
-      - /Web/CSS/CSS_syntax/Error_handling
+      - /Web/CSS/Guides/Syntax/Introduction
+      - /Web/CSS/Guides/Syntax/Comments
+      - /Web/CSS/Guides/Syntax/At-rules
+      - /Web/CSS/Guides/Syntax/Error_handling
   - title: Text
     details: closed
     children:
-      - /Web/CSS/CSS_text/Wrapping_breaking_text
-      - /Web/CSS/CSS_text/Whitespace
+      - /Web/CSS/Guides/Text/Wrapping_breaking_text
+      - /Web/CSS/Guides/Text/Whitespace
   - title: Text decoration
     details: closed
     children:
-      - /Web/CSS/CSS_text_decoration/Text_shadows
+      - /Web/CSS/Guides/Text_decoration/Text_shadows
   - title: Transforms
     details: closed
     children:
-      - /Web/CSS/CSS_transforms/Using_CSS_transforms
+      - /Web/CSS/Guides/Transforms/Using
   - title: Transitions
     details: closed
     children:
-      - /Web/CSS/CSS_transitions/Using_CSS_transitions
+      - /Web/CSS/Guides/Transitions/Using
   - title: Values and units
     details: closed
     children:
-      - /Web/CSS/CSS_Values_and_Units/Value_definition_syntax
-      - /Web/CSS/CSS_Values_and_Units/Numeric_data_types
-      - /Web/CSS/CSS_Values_and_Units/Textual_data_types
-      - /Web/CSS/CSS_Values_and_Units/Using_CSS_math_functions
+      - /Web/CSS/Guides/Values_and_units/Value_definition_syntax
+      - /Web/CSS/Guides/Values_and_units/Numeric_data_types
+      - /Web/CSS/Guides/Values_and_units/Textual_data_types
+      - /Web/CSS/Guides/Values_and_units/Using_math_functions
+      - /Web/CSS/Guides/Values_and_units/Using_typed_arithmetic
+  - title: Writing modes
+    details: closed
+    children:
+      - /Web/CSS/Guides/Writing_modes/Writing_mode_systems
+      - /Web/CSS/Guides/Writing_modes/Vertical_controls
   - type: section
-    link: /Web/CSS/Layout_cookbook
-  - children:
-      - /Web/CSS/Layout_cookbook/Media_objects
-      - /Web/CSS/Layout_cookbook/Column_layouts
-      - /Web/CSS/Layout_cookbook/Center_an_element
-      - /Web/CSS/Layout_cookbook/Sticky_footers
-      - /Web/CSS/Layout_cookbook/Split_Navigation
-      - /Web/CSS/Layout_cookbook/Breadcrumb_Navigation
-      - /Web/CSS/Layout_cookbook/List_group_with_badges
-      - /Web/CSS/Layout_cookbook/Pagination
-      - /Web/CSS/Layout_cookbook/Card
-      - /Web/CSS/Layout_cookbook/Grid_wrapper
+    link: /Web/CSS/How_to
+  - link: /Web/CSS/How_to/Layout_cookbook
+    title: Layout cookbook
+    details: closed
+    children:
+      - /Web/CSS/How_to/Layout_cookbook/Media_objects
+      - /Web/CSS/How_to/Layout_cookbook/Column_layouts
+      - /Web/CSS/How_to/Layout_cookbook/Center_an_element
+      - /Web/CSS/How_to/Layout_cookbook/Sticky_footers
+      - /Web/CSS/How_to/Layout_cookbook/Split_navigation
+      - /Web/CSS/How_to/Layout_cookbook/Breadcrumb_navigation
+      - /Web/CSS/How_to/Layout_cookbook/List_group_with_badges
+      - /Web/CSS/How_to/Layout_cookbook/Pagination
+      - /Web/CSS/How_to/Layout_cookbook/Card
+      - /Web/CSS/How_to/Layout_cookbook/Grid_wrapper
+      - link: /Web/CSS/How_to/Layout_cookbook/Contribute_a_recipe
+        title: Contribute a recipe
+        details: closed
+        children:
+          - /Web/CSS/How_to/Layout_cookbook/Contribute_a_recipe/Cookbook_template
   - type: section
     title: Tools
   - children:
-      - /Web/CSS/CSS_colors/Color_picker_tool
-      - /Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator
-      - /Web/CSS/CSS_backgrounds_and_borders/Border-image_generator
-      - /Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator
-      - /Web/CSS/CSS_shapes/Shape_generator
+      - /Web/CSS/Guides/Backgrounds_and_borders/Border-image_generator
+      - /Web/CSS/Guides/Backgrounds_and_borders/Border-radius_generator
+      - /Web/CSS/Guides/Backgrounds_and_borders/Box-shadow_generator
+      - /Web/CSS/Guides/Colors/Color_format_converter
+      - /Web/CSS/Guides/Colors/Color_mixer
+      - /Web/CSS/Guides/Shapes/Shape_generator
 l10n:
   de:
-    Beginners: Einsteiger-Tutorials
-    Styling_the_content: "Ihre erste Website: Das Styling des Inhalts"
-    CSS_styling_basics: Grundlagen des CSS-Stylings
-    CSS_text_styling: CSS-Textgestaltung
-    CSS_layout: CSS-Layout
     Guides: Leitfäden
     Animations: Animationen
     Accessibility_Understanding_colors_and_luminance: "Barrierefreiheit: Farbwerte verstehen"
-    Applying_color_to_HTML_elements: Farben auf HTML-Elemente anwenden
     At-rules: At-Regeln
     Backgrounds_and_Borders: Hintergründe und Rahmen
-    Resizing_background_images: Hintergrundbilder skalieren
     Box alignment: Box-Ausrichtung
-    Box_alignment_in_block_layout: Box-Ausrichtung im Block-Layout
     Box_model: Box-Modell
     Colors: Farben
     Color_contrast: "Barrierefreiheit: Farbkontrast"
@@ -403,18 +384,10 @@ l10n:
     Types: Typen
   en-US:
     Accessibility_Understanding_colors_and_luminance: "Accessibility: Colors and luminance"
-    Applying_color_to_HTML_elements: Applying color to HTML
-    Beginners: Beginner's tutorials
-    Styling_the_content: "Your first website: Styling the content"
-    CSS_styling_basics: CSS styling basics
-    CSS_text_styling: CSS text styling
-    CSS_layout: CSS layout
     Guides: Guides
     Anchor_positioning: Anchor positioning
     Animations: Animations
     Backgrounds_and_Borders: Backgrounds and borders
-    Resizing_background_images: Resizing background images
-    Box_alignment_in_block_layout: Box alignment in block layout
     Box_model: Box model
     Cascade: Cascade
     Colors: Colors
@@ -422,7 +395,7 @@ l10n:
     Columns: Columns
     Conditional_rules: Conditional rules
     Containment: Containment
-    Custom_properties: Custom properties
+    Coordinate_systems: Coordinate systems (API)
     CSSOM_view: CSSOM view
     Display: Display
     Filter_effects: Filter effects
@@ -446,12 +419,9 @@ l10n:
     Transitions: Transitions
     Tools: Tools
   fr:
-    CSS_layout: Dispositions CSS
     Guides: Guides
     Animations: Animations
     Backgrounds_and_Borders: Arrière-plans et bordures
-    Resizing_background_images: Redimensionner les images d'arrière-plan
-    Box_alignment_in_block_layout: Alignement des boîtes avec la disposition en bloc
     Box_model: Modèle de boîte
     Columns: Colonnes
     Conditional_rules: Règles conditionnelles
@@ -473,20 +443,12 @@ l10n:
     Tools: Outils
   ja:
     Accessibility_Understanding_colors_and_luminance: "アクセシビリティ: 色と輝度"
-    Applying_color_to_HTML_elements: HTML への色の適用
     At-rules: アットルール
-    Beginners: 初心者向けチュートリアル
-    Styling_the_content: "初めてのウェブサイト: コンテンツのスタイル設定"
-    CSS_styling_basics: CSS スタイル設定の基本
-    CSS_text_styling: CSS テキスト装飾
-    CSS_layout: CSS レイアウト
     Guides: ガイド
     Anchor_positioning: アンカー位置指定
     Animations: アニメーション
     Backgrounds_and_Borders: 背景と境界
-    Resizing_background_images: 背景画像の拡大縮小
     Box alignment: ボックス配置
-    Box_alignment_in_block_layout: ブロックレイアウトでのボックス配置
     Box_model: ボックスモデル
     Cascade: カスケード
     Colors: 色
@@ -495,7 +457,6 @@ l10n:
     Combinators: 結合子
     Conditional_rules: 条件付きルール
     Containment: コンテナー
-    Custom_properties: カスタムプロパティ
     CSSOM_view: CSSOM view
     Display: 表示方法
     Filter_effects: フィルター効果
@@ -510,7 +471,6 @@ l10n:
     Modules: モジュール
     Nesting: 入れ子のスタイルルール
     Overflow: オーバーフロー
-    Overview: 概要
     Positioning: 位置指定
     Properties: プロパティ
     Pseudo-classes: 擬似クラス
@@ -528,12 +488,9 @@ l10n:
     Types: データ型
     Values and units: 値と単位
   ko:
-    CSS_layout: CSS 레이아웃
     Guides: 안내서
     Animations: 애니메이션
     Backgrounds_and_Borders: 배경과 보더
-    Resizing_background_images: 배경 이미지 크기 조정하기
-    Box_alignment_in_block_layout: 블록 레이아웃 박스 정렬하기
     Box_model: 박스 모델
     Columns: 열
     Conditional_rules: CSS에서 규칙 정의하기
@@ -554,16 +511,12 @@ l10n:
     Transitions: 트랜지션
     Tools: 도구
   pt-BR:
-    CSS_layout: Esquemas CSS
     Flexbox: Flexbox
     Positioning: Posicionamento
   ru:
-    CSS_layout: CSS макет
     Guides: Руководства
     Animations: Анимации
     Backgrounds_and_Borders: Фоны и границы
-    Resizing_background_images: Изменение размера фоновых изображений
-    Box_alignment_in_block_layout: Выравнивание в блочной раскладке
     Box_model: Блочная модель
     Columns: Колонки
     Conditional_rules: Условные конструкции
@@ -584,28 +537,20 @@ l10n:
     Transitions: Переходы
     Tools: Инструменты
   zh-CN:
-    Beginners: 初学者教程
-    Styling_the_content: 你的第一个网站：样式化内容
-    CSS_styling_basics: CSS 样式基础
-    CSS_text_styling: CSS 文本样式
     Containment: CSS 局限
-    CSS_layout: CSS 布局概述
     Combinators: 关系选择器
     Guides: 指南
     Anchor_positioning: 锚点定位
     Animations: 动画
     At-rules: At 规则
     Backgrounds_and_Borders: 背景和边框
-    Resizing_background_images: 调整背景图片的大小
     Box alignment: 盒对齐
-    Box_alignment_in_block_layout: 块布局中的盒对齐方式
     Box_model: 盒模型
     Cascade: 层叠
     Colors: 颜色
     Color_contrast: Web 无障碍：色彩对比度
     Columns: 多列
     Conditional_rules: 条件规则
-    Custom_properties: 自定义属性
     CSSOM_view: CSS 对象模型视图
     Display: 流式布局
     Filter_effects: 滤镜效果
@@ -629,7 +574,6 @@ l10n:
     Transitions: 过渡
     Tools: 工具
     Accessibility_Understanding_colors_and_luminance: 无障碍：理解颜色和亮度
-    Applying_color_to_HTML_elements: 为 HTML 元素应用颜色
     Modules: 模块
     Pseudo-classes: 伪类
     Pseudo-elements: 伪元素
@@ -638,6 +582,5 @@ l10n:
     Types: 类型
     Values and units: 值和单位
   zh-TW:
-    CSS_layout: CSS 版面配置
     Flexbox: 彈性區塊
     Positioning: 定位

@@ -1,5 +1,6 @@
 ---
 title: How to build custom form controls
+short-title: Custom form controls
 slug: Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls
 page-type: learn-module-chapter
 sidebar: learnsidebar
@@ -176,7 +177,7 @@ So now that we have the basic functionality in place, the fun can start. The fol
   /* The computations are made assuming 1em equals 16px which is the default value in most browsers.
      If you are lost with px to em conversion, try https://nekocalc.com/px-to-em-converter */
   font-size: 0.625em; /* this (10px) is the new font size context for em value in this context */
-  font-family: Verdana, Arial, sans-serif;
+  font-family: "Verdana", "Arial", sans-serif;
 
   box-sizing: border-box;
 
@@ -317,7 +318,7 @@ So here's the result with our three states ([check out the source code here](/en
 
 .select {
   font-size: 0.625em; /* 10px */
-  font-family: Verdana, Arial, sans-serif;
+  font-family: "Verdana", "Arial", sans-serif;
 
   box-sizing: border-box;
 
@@ -438,7 +439,7 @@ So here's the result with our three states ([check out the source code here](/en
 
 .select {
   font-size: 0.625em; /* 10px */
-  font-family: Verdana, Arial, sans-serif;
+  font-family: "Verdana", "Arial", sans-serif;
 
   box-sizing: border-box;
 
@@ -559,7 +560,7 @@ So here's the result with our three states ([check out the source code here](/en
 
 .select {
   font-size: 0.625em; /* 10px */
-  font-family: Verdana, Arial, sans-serif;
+  font-family: "Verdana", "Arial", sans-serif;
 
   box-sizing: border-box;
 
@@ -713,10 +714,8 @@ This CSS visually hides one of the elements, but it is still available to screen
 Now we need a JavaScript switch to determine if the script is running or not. This switch is a couple of lines: if at page load time our script is running, it will remove the `no-widget` class and add the `widget` class, thereby swapping the visibility of the {{HTMLElement("select")}} element and the custom control.
 
 ```js
-window.addEventListener("load", () => {
-  document.body.classList.remove("no-widget");
-  document.body.classList.add("widget");
-});
+document.body.classList.remove("no-widget");
+document.body.classList.add("widget");
 ```
 
 #### Without JS
@@ -818,7 +817,7 @@ Check out the [full source code](/en-US/docs/Learn_web_development/Extensions/Fo
 
 .select {
   font-size: 0.625em; /* 10px */
-  font-family: Verdana, Arial, sans-serif;
+  font-family: "Verdana", "Arial", sans-serif;
 
   box-sizing: border-box;
 
@@ -898,12 +897,10 @@ Check out the [full source code](/en-US/docs/Learn_web_development/Extensions/Fo
 ```
 
 ```js hidden
-window.addEventListener("load", () => {
-  const form = document.querySelector("form");
+const form = document.querySelector("form");
 
-  form.classList.remove("no-widget");
-  form.classList.add("widget");
-});
+form.classList.remove("no-widget");
+form.classList.add("widget");
 ```
 
 {{EmbedLiveSample("With_JS",120,130)}}
@@ -995,60 +992,57 @@ You need these to handle the various states of custom control.
 Next, we bind these functions to the appropriate events:
 
 ```js
-// We handle the event binding when the document is loaded.
-window.addEventListener("load", () => {
-  const selectList = document.querySelectorAll(".select");
+const selectList = document.querySelectorAll(".select");
 
-  // Each custom control needs to be initialized
-  selectList.forEach((select) => {
-    // as well as all its `option` elements
-    const optionList = select.querySelectorAll(".option");
+// Each custom control needs to be initialized
+selectList.forEach((select) => {
+  // as well as all its `option` elements
+  const optionList = select.querySelectorAll(".option");
 
-    // Each time a user hovers their mouse over an option, we highlight the given option
-    optionList.forEach((option) => {
-      option.addEventListener("mouseover", () => {
-        // Note: the `select` and `option` variable are closures
-        // available in the scope of our function call.
-        highlightOption(select, option);
-      });
-    });
-
-    // Each times the user clicks on or taps a custom select element
-    select.addEventListener("click", (event) => {
-      // Note: the `select` variable is a closure
+  // Each time a user hovers their mouse over an option, we highlight the given option
+  optionList.forEach((option) => {
+    option.addEventListener("mouseover", () => {
+      // Note: the `select` and `option` variable are closures
       // available in the scope of our function call.
-
-      // We toggle the visibility of the list of options
-      toggleOptList(select);
+      highlightOption(select, option);
     });
+  });
 
-    // In case the control gains focus
-    // The control gains the focus each time the user clicks on it or each time
-    // they use the tabulation key to access the control
-    select.addEventListener("focus", (event) => {
-      // Note: the `select` and `selectList` variable are closures
-      // available in the scope of our function call.
+  // Each times the user clicks on or taps a custom select element
+  select.addEventListener("click", (event) => {
+    // Note: the `select` variable is a closure
+    // available in the scope of our function call.
 
-      // We activate the control
-      activeSelect(select, selectList);
-    });
+    // We toggle the visibility of the list of options
+    toggleOptList(select);
+  });
 
-    // In case the control loses focus
-    select.addEventListener("blur", (event) => {
-      // Note: the `select` variable is a closure
-      // available in the scope of our function call.
+  // In case the control gains focus
+  // The control gains the focus each time the user clicks on it or each time
+  // they use the tabulation key to access the control
+  select.addEventListener("focus", (event) => {
+    // Note: the `select` and `selectList` variable are closures
+    // available in the scope of our function call.
 
-      // We deactivate the control
+    // We activate the control
+    activeSelect(select, selectList);
+  });
+
+  // In case the control loses focus
+  select.addEventListener("blur", (event) => {
+    // Note: the `select` variable is a closure
+    // available in the scope of our function call.
+
+    // We deactivate the control
+    deactivateSelect(select);
+  });
+
+  // Loose focus if the user hits `esc`
+  select.addEventListener("keyup", (event) => {
+    // deactivate on keyup of `esc`
+    if (event.key === "Escape") {
       deactivateSelect(select);
-    });
-
-    // Loose focus if the user hits `esc`
-    select.addEventListener("keyup", (event) => {
-      // deactivate on keyup of `esc`
-      if (event.key === "Escape") {
-        deactivateSelect(select);
-      }
-    });
+    }
   });
 });
 ```
@@ -1115,7 +1109,7 @@ Check out the [full source code](/en-US/docs/Learn_web_development/Extensions/Fo
 
 .select {
   font-size: 0.625em; /* 10px */
-  font-family: Verdana, Arial, sans-serif;
+  font-family: "Verdana", "Arial", sans-serif;
 
   box-sizing: border-box;
 
@@ -1227,46 +1221,38 @@ function highlightOption(select, option) {
   option.classList.add("highlight");
 }
 
-window.addEventListener("load", () => {
-  const form = document.querySelector("form");
+const form = document.querySelector("form");
 
-  form.classList.remove("no-widget");
-  form.classList.add("widget");
-});
+form.classList.remove("no-widget");
+form.classList.add("widget");
 
-window.addEventListener("load", () => {
-  const selectList = document.querySelectorAll(".select");
+const selectList = document.querySelectorAll(".select");
 
-  selectList.forEach((select) => {
-    const optionList = select.querySelectorAll(".option");
+selectList.forEach((select) => {
+  const optionList = select.querySelectorAll(".option");
 
-    optionList.forEach((option) => {
-      option.addEventListener("mouseover", () => {
-        highlightOption(select, option);
-      });
+  optionList.forEach((option) => {
+    option.addEventListener("mouseover", () => {
+      highlightOption(select, option);
     });
+  });
 
-    select.addEventListener(
-      "click",
-      (event) => {
-        toggleOptList(select);
-      },
-      false,
-    );
+  select.addEventListener("click", (event) => {
+    toggleOptList(select);
+  });
 
-    select.addEventListener("focus", (event) => {
-      activeSelect(select, selectList);
-    });
+  select.addEventListener("focus", (event) => {
+    activeSelect(select, selectList);
+  });
 
-    select.addEventListener("blur", (event) => {
+  select.addEventListener("blur", (event) => {
+    deactivateSelect(select);
+  });
+
+  select.addEventListener("keyup", (event) => {
+    if (event.key === "Escape") {
       deactivateSelect(select);
-    });
-
-    select.addEventListener("keyup", (event) => {
-      if (event.key === "Escape") {
-        deactivateSelect(select);
-      }
-    });
+    }
   });
 });
 ```
@@ -1322,60 +1308,57 @@ function getIndex(select) {
 With these two functions, we can bind the native controls to the custom ones:
 
 ```js
-// We handle event binding when the document is loaded.
-window.addEventListener("load", () => {
-  const selectList = document.querySelectorAll(".select");
+const selectList = document.querySelectorAll(".select");
 
-  // Each custom control needs to be initialized
-  selectList.forEach((select) => {
-    const optionList = select.querySelectorAll(".option");
-    const selectedIndex = getIndex(select);
+// Each custom control needs to be initialized
+selectList.forEach((select) => {
+  const optionList = select.querySelectorAll(".option");
+  const selectedIndex = getIndex(select);
 
-    // We make our custom control focusable
-    select.tabIndex = 0;
+  // We make our custom control focusable
+  select.tabIndex = 0;
 
-    // We make the native control no longer focusable
-    select.previousElementSibling.tabIndex = -1;
+  // We make the native control no longer focusable
+  select.previousElementSibling.tabIndex = -1;
 
-    // We make sure that the default selected value is correctly displayed
-    updateValue(select, selectedIndex);
+  // We make sure that the default selected value is correctly displayed
+  updateValue(select, selectedIndex);
 
-    // Each time a user clicks on an option, we update the value accordingly
-    optionList.forEach((option, index) => {
-      option.addEventListener("click", (event) => {
-        updateValue(select, index);
-      });
-    });
-
-    // Each time a user uses their keyboard on a focused control, we update the value accordingly
-    select.addEventListener("keyup", (event) => {
-      let index = getIndex(select);
-      // When the user hits the Escape key, deactivate the custom control
-      if (event.key === "Escape") {
-        deactivateSelect(select);
-      }
-
-      // When the user hits the down arrow, we jump to the next option
-      if (event.key === "ArrowDown" && index < optionList.length - 1) {
-        index++;
-        // Prevent the default action of the ArrowDown key press.
-        // Without this, the page would scroll down when the ArrowDown key is pressed.
-        event.preventDefault();
-      }
-
-      // When the user hits the up arrow, we jump to the previous option
-      if (event.key === "ArrowUp" && index > 0) {
-        index--;
-        // Prevent the default action of the ArrowUp key press.
-        event.preventDefault();
-      }
-      if (event.key === "Enter" || event.key === " ") {
-        // If Enter or Space is pressed, toggle the option list
-        toggleOptList(select);
-      }
-
+  // Each time a user clicks on an option, we update the value accordingly
+  optionList.forEach((option, index) => {
+    option.addEventListener("click", (event) => {
       updateValue(select, index);
     });
+  });
+
+  // Each time a user uses their keyboard on a focused control, we update the value accordingly
+  select.addEventListener("keyup", (event) => {
+    let index = getIndex(select);
+    // When the user hits the Escape key, deactivate the custom control
+    if (event.key === "Escape") {
+      deactivateSelect(select);
+    }
+
+    // When the user hits the down arrow, we jump to the next option
+    if (event.key === "ArrowDown" && index < optionList.length - 1) {
+      index++;
+      // Prevent the default action of the ArrowDown key press.
+      // Without this, the page would scroll down when the ArrowDown key is pressed.
+      event.preventDefault();
+    }
+
+    // When the user hits the up arrow, we jump to the previous option
+    if (event.key === "ArrowUp" && index > 0) {
+      index--;
+      // Prevent the default action of the ArrowUp key press.
+      event.preventDefault();
+    }
+    if (event.key === "Enter" || event.key === " ") {
+      // If Enter or Space is pressed, toggle the option list
+      toggleOptList(select);
+    }
+
+    updateValue(select, index);
   });
 });
 ```
@@ -1444,7 +1427,7 @@ Check out the [source code here](/en-US/docs/Learn_web_development/Extensions/Fo
 
 .select {
   font-size: 0.625em; /* 10px */
-  font-family: Verdana, Arial, sans-serif;
+  font-family: "Verdana", "Arial", sans-serif;
 
   box-sizing: border-box;
 
@@ -1572,72 +1555,66 @@ function getIndex(select) {
   return nativeWidget.selectedIndex;
 }
 
-window.addEventListener("load", () => {
-  const form = document.querySelector("form");
+const form = document.querySelector("form");
 
-  form.classList.remove("no-widget");
-  form.classList.add("widget");
-});
+form.classList.remove("no-widget");
+form.classList.add("widget");
 
-window.addEventListener("load", () => {
-  const selectList = document.querySelectorAll(".select");
+const selectList = document.querySelectorAll(".select");
 
-  selectList.forEach((select) => {
-    const optionList = select.querySelectorAll(".option");
+selectList.forEach((select) => {
+  const optionList = select.querySelectorAll(".option");
 
-    optionList.forEach((option) => {
-      option.addEventListener("mouseover", () => {
-        highlightOption(select, option);
-      });
+  optionList.forEach((option) => {
+    option.addEventListener("mouseover", () => {
+      highlightOption(select, option);
     });
+  });
 
-    select.addEventListener("click", (event) => {
-      toggleOptList(select);
-    });
+  select.addEventListener("click", (event) => {
+    toggleOptList(select);
+  });
 
-    select.addEventListener("focus", (event) => {
-      activeSelect(select, selectList);
-    });
+  select.addEventListener("focus", (event) => {
+    activeSelect(select, selectList);
+  });
 
-    select.addEventListener("blur", (event) => {
-      deactivateSelect(select);
-    });
+  select.addEventListener("blur", (event) => {
+    deactivateSelect(select);
   });
 });
 
-window.addEventListener("load", () => {
-  const selectList = document.querySelectorAll(".select");
+const selectList = document.querySelectorAll(".select");
 
-  selectList.forEach((select) => {
-    const optionList = select.querySelectorAll(".option");
-    const selectedIndex = getIndex(select);
+selectList.forEach((select) => {
+  const optionList = select.querySelectorAll(".option");
+  const selectedIndex = getIndex(select);
 
-    select.tabIndex = 0;
-    select.previousElementSibling.tabIndex = -1;
+  select.tabIndex = 0;
+  select.previousElementSibling.tabIndex = -1;
 
-    updateValue(select, selectedIndex);
+  updateValue(select, selectedIndex);
 
-    optionList.forEach((option, index) => {
-      option.addEventListener("click", (event) => {
-        updateValue(select, index);
-      });
-    });
-
-    select.addEventListener("keyup", (event) => {
-      let index = getIndex(select);
-
-      if (event.key === "Escape") {
-        deactivateSelect(select);
-      }
-      if (event.key === "ArrowDown" && index < optionList.length - 1) {
-        index++;
-      }
-      if (event.key === "ArrowUp" && index > 0) {
-        index--;
-      }
-
+  optionList.forEach((option, index) => {
+    option.addEventListener("click", (event) => {
       updateValue(select, index);
     });
+  });
+
+  select.addEventListener("keyup", (event) => {
+    let index = getIndex(select);
+
+    if (event.key === "Escape") {
+      deactivateSelect(select);
+    }
+    if (event.key === "ArrowDown" && index < optionList.length - 1) {
+      index++;
+    }
+    if (event.key === "ArrowUp" && index > 0) {
+      index--;
+    }
+
+    updateValue(select, index);
   });
 });
 ```
@@ -1677,7 +1654,7 @@ To support the [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/li
 ```
 
 > [!NOTE]
-> Including both the `role` attribute and a `class` attribute is not necessary. Instead of using `.option` use the `[role="option"]` [attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) in your CSS.
+> Including both the `role` attribute and a `class` attribute is not necessary. Instead of using `.option` use the `[role="option"]` [attribute selectors](/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors) in your CSS.
 
 ### The `aria-selected` attribute
 
@@ -1769,7 +1746,7 @@ Check out the [full source code here](/en-US/docs/Learn_web_development/Extensio
 
 .select {
   font-size: 0.625em; /* 10px */
-  font-family: Verdana, Arial, sans-serif;
+  font-family: "Verdana", "Arial", sans-serif;
 
   box-sizing: border-box;
 
@@ -1903,62 +1880,58 @@ function getIndex(select) {
   return nativeWidget.selectedIndex;
 }
 
-window.addEventListener("load", () => {
-  const form = document.querySelector("form");
+const form = document.querySelector("form");
 
-  form.classList.remove("no-widget");
-  form.classList.add("widget");
-});
+form.classList.remove("no-widget");
+form.classList.add("widget");
 
-window.addEventListener("load", () => {
-  const selectList = document.querySelectorAll(".select");
+const selectList = document.querySelectorAll(".select");
 
-  selectList.forEach((select) => {
-    const optionList = select.querySelectorAll(".option");
-    const selectedIndex = getIndex(select);
+selectList.forEach((select) => {
+  const optionList = select.querySelectorAll(".option");
+  const selectedIndex = getIndex(select);
 
-    select.tabIndex = 0;
-    select.previousElementSibling.tabIndex = -1;
+  select.tabIndex = 0;
+  select.previousElementSibling.tabIndex = -1;
 
-    updateValue(select, selectedIndex);
+  updateValue(select, selectedIndex);
 
-    optionList.forEach((option, index) => {
-      option.addEventListener("mouseover", () => {
-        highlightOption(select, option);
-      });
-
-      option.addEventListener("click", (event) => {
-        updateValue(select, index);
-      });
+  optionList.forEach((option, index) => {
+    option.addEventListener("mouseover", () => {
+      highlightOption(select, option);
     });
 
-    select.addEventListener("click", (event) => {
-      toggleOptList(select);
-    });
-
-    select.addEventListener("focus", (event) => {
-      activeSelect(select, selectList);
-    });
-
-    select.addEventListener("blur", (event) => {
-      deactivateSelect(select);
-    });
-
-    select.addEventListener("keyup", (event) => {
-      let index = getIndex(select);
-
-      if (event.key === "Escape") {
-        deactivateSelect(select);
-      }
-      if (event.key === "ArrowDown" && index < optionList.length - 1) {
-        index++;
-      }
-      if (event.key === "ArrowUp" && index > 0) {
-        index--;
-      }
-
+    option.addEventListener("click", (event) => {
       updateValue(select, index);
     });
+  });
+
+  select.addEventListener("click", (event) => {
+    toggleOptList(select);
+  });
+
+  select.addEventListener("focus", (event) => {
+    activeSelect(select, selectList);
+  });
+
+  select.addEventListener("blur", (event) => {
+    deactivateSelect(select);
+  });
+
+  select.addEventListener("keyup", (event) => {
+    let index = getIndex(select);
+
+    if (event.key === "Escape") {
+      deactivateSelect(select);
+    }
+    if (event.key === "ArrowDown" && index < optionList.length - 1) {
+      index++;
+    }
+    if (event.key === "ArrowUp" && index > 0) {
+      index--;
+    }
+
+    updateValue(select, index);
   });
 });
 ```

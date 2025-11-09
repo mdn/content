@@ -6,11 +6,11 @@ page-type: web-api-instance-property
 browser-compat: api.CanvasRenderingContext2D.fontVariantCaps
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 The **`CanvasRenderingContext2D.fontVariantCaps`** property of the [Canvas API](/en-US/docs/Web/API/Canvas_API) specifies an alternative capitalization of the rendered text.
 
-This corresponds to the CSS [`font-variant-caps`](/en-US/docs/Web/CSS/font-variant-caps) property.
+This corresponds to the CSS [`font-variant-caps`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-caps) property.
 
 ## Value
 
@@ -37,7 +37,7 @@ The font alternative capitalization value, which is one of:
 
 The property can be used to get or set the font capitalization value.
 
-Note that there are accessibility concerns with some of these, which are outlined in the corresponding [`font-variant-caps`](/en-US/docs/Web/CSS/font-variant-caps#accessibility) topic.
+Note that there are accessibility concerns with some of these, which are outlined in the corresponding [`font-variant-caps`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-caps#accessibility) topic.
 
 ## Examples
 

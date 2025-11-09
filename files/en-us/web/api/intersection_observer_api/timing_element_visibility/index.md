@@ -18,7 +18,7 @@ Let's get started!
 
 ### Site structure: The HTML
 
-The site's structure is not too complicated. We'll be using [CSS Grid](/en-US/docs/Web/CSS/CSS_grid_layout) to style and lay out the site, so we can be pretty straightforward here:
+The site's structure is not too complicated. We'll be using [CSS Grid](/en-US/docs/Web/CSS/Guides/Grid_layout) to style and lay out the site, so we can be pretty straightforward here:
 
 ```html
 <div class="wrapper">
@@ -55,7 +55,7 @@ We provide styles for the {{HTMLElement("body")}} and {{HTMLElement("main")}} el
 
 ```css
 body {
-  font-family: "Open Sans", "Arial", "Helvetica", sans-serif;
+  font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
   background-color: aliceblue;
 }
 
@@ -196,14 +196,11 @@ There's nothing magic in here. It's fairly basic CSS.
 That brings us to the JavaScript code which makes everything work. Let's start with the global variables:
 
 ```js
-let contentBox;
+const contentBox = document.querySelector("main");
 
 let nextArticleID = 1;
 let visibleAds = new Set();
 let previouslyVisibleAds = null;
-
-let adObserver;
-let refreshIntervalID = 0;
 ```
 
 These are used as follows:
@@ -216,41 +213,44 @@ These are used as follows:
   - : A {{jsxref("Set")}} which we'll use to track the ads currently visible on the screen.
 - `previouslyVisibleAds`
   - : Used to temporarily store the list of visible ads while the document is not visible (for example, if the user has tabbed to another page).
-- `adObserver`
-  - : Will hold our {{domxref("IntersectionObserver")}} used to track the intersection between the ads and the `<main>` element's bounds.
-- `refreshIntervalID`
-  - : Used to store the interval ID returned by {{domxref("Window.setInterval", "setInterval()")}}. This interval will be used to trigger our periodic refreshes of the ads' content.
 
 #### Setting up
 
-To set things up, we run the `startup()` function below when the page loads:
+To set things up, we run the following code when the page loads:
 
 ```js
-window.addEventListener("load", startup, false);
+document.addEventListener("visibilitychange", handleVisibilityChange);
 
-function startup() {
-  contentBox = document.querySelector("main");
+const observerOptions = {
+  root: null,
+  rootMargin: "0px",
+  threshold: [0.0, 0.75],
+};
+const adObserver = new IntersectionObserver(
+  intersectionCallback,
+  observerOptions,
+);
+const refreshIntervalID = setInterval(handleRefreshInterval, 1000);
 
-  document.addEventListener("visibilitychange", handleVisibilityChange, false);
+const loremIpsum =
+  "<p>Lorem ipsum dolor sit amet, consectetur adipiscing" +
+  " elit. Cras at sem diam. Vestibulum venenatis massa in tincidunt" +
+  " egestas. Morbi eu lorem vel est sodales auctor hendrerit placerat" +
+  " risus. Etiam rutrum faucibus sem, vitae mattis ipsum ullamcorper" +
+  " eu. Donec nec imperdiet nibh, nec vehicula libero. Phasellus vel" +
+  " malesuada nulla. Aliquam sed magna aliquam, vestibulum nisi at," +
+  " cursus nunc.</p>";
 
-  const observerOptions = {
-    root: null,
-    rootMargin: "0px",
-    threshold: [0.0, 0.75],
-  };
-
-  adObserver = new IntersectionObserver(intersectionCallback, observerOptions);
-
-  buildContents();
-  refreshIntervalID = setInterval(handleRefreshInterval, 1000);
-}
+buildContents();
 ```
 
-First, a reference to the content wrapping {{HTMLElement("main")}} element is obtained, so we can insert our content into it. Then we set up an event listener for the {{domxref("document.visibilitychange_event", "visibilitychange")}} event. This event is sent when the document becomes hidden or visible, such as when the user switches tabs in their browser. The Intersection Observer API doesn't take this into account when detecting intersection, since intersection isn't affected by page visibility. Therefore, we need to pause our timers while the page is tabbed out; hence this event listener.
+First, we set up an event listener for the {{domxref("document.visibilitychange_event", "visibilitychange")}} event. This event is sent when the document becomes hidden or visible, such as when the user switches tabs in their browser. The Intersection Observer API doesn't take this into account when detecting intersection, since intersection isn't affected by page visibility. Therefore, we need to pause our timers while the page is tabbed out; hence this event listener.
 
 Next we set up the options for the {{domxref("IntersectionObserver")}} which will monitor target elements (ads, in our case) for intersection changes relative to the document. The options are configured to watch for intersections with the document's viewport (by setting `root` to `null`). We have no margins to extend or contract the intersection root's rectangle; we want to match the boundaries of the document's viewport exactly for intersection purposes. And the `threshold` is set to an array containing the values 0.0 and 0.75; this will cause our callback to execute whenever a targeted element becomes completely obscured or first starts to become unobscured (intersection ratio 0.0) or passes through 75% visible in either direction (intersection ratio 0.75).
 
 The observer, `adObserver`, is created by calling `IntersectionObserver`'s constructor, passing in the callback function, `intersectionCallback`, and our options.
+
+The variable `loremIpsum` contains the text we'll use for the body of all of our articles. Obviously in the real world, you'd have some code to pull articles from a database or the like, but this does the job for our purposes. Every article uses the same text; you could of course change that easily enough.
 
 We then call a function `buildContents()`, which we'll define later to actually generate and insert into the document the articles and ads we want to present.
 
@@ -408,15 +408,6 @@ This code finds the ad's timer using its ID, `"timer"`, and computes the number 
 The `buildContents()` function is called by the [startup code](#setting_up) to select and insert into the document the articles and ads to be presented:
 
 ```js
-const loremIpsum =
-  "<p>Lorem ipsum dolor sit amet, consectetur adipiscing" +
-  " elit. Cras at sem diam. Vestibulum venenatis massa in tincidunt" +
-  " egestas. Morbi eu lorem vel est sodales auctor hendrerit placerat" +
-  " risus. Etiam rutrum faucibus sem, vitae mattis ipsum ullamcorper" +
-  " eu. Donec nec imperdiet nibh, nec vehicula libero. Phasellus vel" +
-  " malesuada nulla. Aliquam sed magna aliquam, vestibulum nisi at," +
-  " cursus nunc.</p>";
-
 function buildContents() {
   for (let i = 0; i < 5; i++) {
     contentBox.appendChild(createArticle(loremIpsum));
@@ -427,8 +418,6 @@ function buildContents() {
   }
 }
 ```
-
-The variable `loremIpsum` contains the text we'll use for the body of all of our articles. Obviously in the real world, you'd have some code to pull articles from a database or the like, but this does the job for our purposes. Every article uses the same text; you could of course change that easily enough.
 
 `buildContents()` creates a page with five articles. Following every odd-numbered article, an ad is "loaded" and inserted into the page. Articles are inserted into the content box (that is, the {{HTMLElement("main")}} element that contains all the site content) after being created using a method called `createArticle()`, which we'll look at next.
 

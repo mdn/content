@@ -3,13 +3,9 @@ title: Integrity-Policy header
 short-title: Integrity-Policy
 slug: Web/HTTP/Reference/Headers/Integrity-Policy
 page-type: http-header
-status:
-  - experimental
 browser-compat: http.headers.Integrity-Policy
 sidebar: http
 ---
-
-{{SeeCompatTable}}
 
 The HTTP **`Integrity-Policy`** response header allows website administrators to ensure that all resources the user agent loads (of a certain type) have [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity) guarantees.
 
@@ -72,8 +68,8 @@ This example shows a document that blocks and reports when any {{htmlelement("sc
 Note that the `integrity-endpoint` used in `Integrity-Policy` is defined in the {{httpheader("Reporting-Endpoints")}} header.
 
 ```http
-Reporting-Endpoints: integrity-endpoint=https://example.com/integrity, backup-integrity-endpoint=https://report-provider.example/integrity
-Integrity-Policy: blocked-destinations=(script), endpoints=(integrity-endpoint, backup-integrity-endpoint)
+Reporting-Endpoints: integrity-endpoint="https://example.com/integrity", backup-integrity-endpoint="https://report-provider.example/integrity"
+Integrity-Policy: blocked-destinations=(script), endpoints=(integrity-endpoint backup-integrity-endpoint)
 ```
 
 The [report payload](/en-US/docs/Web/API/Reporting_API#reporting_server_endpoints) might look like this.

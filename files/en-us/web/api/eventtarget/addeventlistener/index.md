@@ -140,8 +140,8 @@ the element. It will be the same as the value of the `currentTarget` property of
 the event argument that is passed to the handler.
 
 ```js
-my_element.addEventListener("click", function (e) {
-  console.log(this.className); // logs the className of my_element
+myElement.addEventListener("click", function (e) {
+  console.log(this.className); // logs the className of myElement
   console.log(e.currentTarget === this); // logs `true`
 });
 ```
@@ -149,8 +149,8 @@ my_element.addEventListener("click", function (e) {
 As a reminder, [arrow functions do not have their own `this` context](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#cannot_be_used_as_methods).
 
 ```js
-my_element.addEventListener("click", (e) => {
-  console.log(this.className); // WARNING: `this` is not `my_element`
+myElement.addEventListener("click", (e) => {
+  console.log(this.className); // WARNING: `this` is not `myElement`
   console.log(e.currentTarget === this); // logs `false`
 });
 ```
@@ -158,8 +158,8 @@ my_element.addEventListener("click", (e) => {
 If an event handler (for example, {{domxref("Element.click_event", "onclick")}}) is specified on an element in the HTML source, the JavaScript code in the attribute value is effectively wrapped in a handler function that binds the value of `this` in a manner consistent with the `addEventListener()`; an occurrence of `this` within the code represents a reference to the element.
 
 ```html
-<table id="my_table" onclick="console.log(this.id);">
-  <!-- `this` refers to the table; logs 'my_table' -->
+<table id="my-table" onclick="console.log(this.id);">
+  <!-- `this` refers to the table; logs 'my-table' -->
   …
 </table>
 ```
@@ -174,7 +174,7 @@ shown in the following example:
     console.log(this.id);
   }
 </script>
-<table id="my_table" onclick="logID();">
+<table id="my-table" onclick="logID();">
   <!-- when called, `this` will refer to the global object -->
   …
 </table>
@@ -198,8 +198,8 @@ class Something {
   constructor(element) {
     // bind causes a fixed `this` context to be assigned to `onclick2`
     this.onclick2 = this.onclick2.bind(this);
-    element.addEventListener("click", this.onclick1, false);
-    element.addEventListener("click", this.onclick2, false); // Trick
+    element.addEventListener("click", this.onclick1);
+    element.addEventListener("click", this.onclick2); // Trick
   }
   onclick1(event) {
     console.log(this.name); // undefined, as `this` is the element
@@ -220,8 +220,8 @@ class Something {
   name = "Something Good";
   constructor(element) {
     // Note that the listeners in this case are `this`, not this.handleEvent
-    element.addEventListener("click", this, false);
-    element.addEventListener("dblclick", this, false);
+    element.addEventListener("click", this);
+    element.addEventListener("dblclick", this);
   }
   handleEvent(event) {
     console.log(this.name); // 'Something Good', as this is bound to newly created object
@@ -301,13 +301,9 @@ const elems = document.getElementsByTagName("*");
 
 // Case 1
 for (const elem of elems) {
-  elem.addEventListener(
-    "click",
-    (e) => {
-      // Do something
-    },
-    false,
-  );
+  elem.addEventListener("click", (e) => {
+    // Do something
+  });
 }
 
 // Case 2
@@ -316,7 +312,7 @@ function processEvent(e) {
 }
 
 for (const elem of elems) {
-  elem.addEventListener("click", processEvent, false);
+  elem.addEventListener("click", processEvent);
 }
 ```
 
@@ -359,12 +355,14 @@ clicks on an element.
 
 ```html
 <table id="outside">
-  <tr>
-    <td id="t1">one</td>
-  </tr>
-  <tr>
-    <td id="t2">two</td>
-  </tr>
+  <tbody>
+    <tr>
+      <td id="t1">one</td>
+    </tr>
+    <tr>
+      <td id="t2">two</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -380,7 +378,7 @@ function modifyText() {
 
 // Add event listener to table
 const el = document.getElementById("outside");
-el.addEventListener("click", modifyText, false);
+el.addEventListener("click", modifyText);
 ```
 
 In this code, `modifyText()` is a listener for `click` events
@@ -399,12 +397,14 @@ This example demonstrates how to add an `addEventListener()` that can be aborted
 
 ```html
 <table id="outside">
-  <tr>
-    <td id="t1">one</td>
-  </tr>
-  <tr>
-    <td id="t2">two</td>
-  </tr>
+  <tbody>
+    <tr>
+      <td id="t1">one</td>
+    </tr>
+    <tr>
+      <td id="t2">two</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -443,12 +443,14 @@ event listener.
 
 ```html
 <table id="outside">
-  <tr>
-    <td id="t1">one</td>
-  </tr>
-  <tr>
-    <td id="t2">two</td>
-  </tr>
+  <tbody>
+    <tr>
+      <td id="t1">one</td>
+    </tr>
+    <tr>
+      <td id="t2">two</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -463,13 +465,9 @@ function modifyText(newText) {
 
 // Function to add event listener to table
 const el = document.getElementById("outside");
-el.addEventListener(
-  "click",
-  function () {
-    modifyText("four");
-  },
-  false,
-);
+el.addEventListener("click", function () {
+  modifyText("four");
+});
 ```
 
 Notice that the listener is an anonymous function that encapsulates code that is then,
@@ -489,12 +487,14 @@ notation.
 
 ```html
 <table id="outside">
-  <tr>
-    <td id="t1">one</td>
-  </tr>
-  <tr>
-    <td id="t2">two</td>
-  </tr>
+  <tbody>
+    <tr>
+      <td id="t1">one</td>
+    </tr>
+    <tr>
+      <td id="t2">two</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -509,13 +509,9 @@ function modifyText(newText) {
 
 // Add event listener to table with an arrow function
 const el = document.getElementById("outside");
-el.addEventListener(
-  "click",
-  () => {
-    modifyText("four");
-  },
-  false,
-);
+el.addEventListener("click", () => {
+  modifyText("four");
+});
 ```
 
 #### Result
@@ -767,6 +763,8 @@ The code adds a listener to the container's {{domxref("Element/wheel_event", "wh
 
 ```js
 const passive = document.querySelector("#passive");
+const container = document.querySelector("#container");
+
 passive.addEventListener("change", (event) => {
   container.removeEventListener("wheel", wheelHandler);
   container.addEventListener("wheel", wheelHandler, {
@@ -775,7 +773,6 @@ passive.addEventListener("change", (event) => {
   });
 });
 
-const container = document.querySelector("#container");
 container.addEventListener("wheel", wheelHandler, {
   passive: true,
   once: true,

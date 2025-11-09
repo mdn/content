@@ -19,7 +19,7 @@ See [Supported algorithms](#supported_algorithms) for some more detail on this.
 ## Syntax
 
 ```js-nolint
-deriveKey(algorithm, baseKey, derivedKeyAlgorithm, extractable, keyUsages)
+deriveKey(algorithm, baseKey, derivedKeyType, extractable, keyUsages)
 ```
 
 ### Parameters
@@ -34,12 +34,10 @@ deriveKey(algorithm, baseKey, derivedKeyAlgorithm, extractable, keyUsages)
   - : A {{domxref("CryptoKey")}} representing the input to the derivation algorithm.
     If `algorithm` is ECDH or X25519, then this will be the ECDH or X25519 private key.
     Otherwise it will be the initial key material for the derivation function: for example, for PBKDF2 it might be a password, imported as a `CryptoKey` using [`SubtleCrypto.importKey()`](/en-US/docs/Web/API/SubtleCrypto/importKey).
-- `derivedKeyAlgorithm`
+- `derivedKeyType`
   - : An object defining the algorithm the derived key will be used for:
-    - For [HMAC](/en-US/docs/Web/API/SubtleCrypto/sign#hmac) pass an [`HmacKeyGenParams`](/en-US/docs/Web/API/HmacKeyGenParams) object.
-    - For [AES-CTR](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr), [AES-CBC](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-cbc), [AES-GCM](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm), or [AES-KW](/en-US/docs/Web/API/SubtleCrypto/wrapKey#aes-kw), pass an [`AesKeyGenParams`](/en-US/docs/Web/API/AesKeyGenParams) object.
-    - For [HKDF](#hkdf), pass an [`HkdfParams`](/en-US/docs/Web/API/HkdfParams) object.
-    - For [PBKDF2](#pbkdf2), pass a [`Pbkdf2Params`](/en-US/docs/Web/API/Pbkdf2Params) object.
+    - For [HMAC](/en-US/docs/Web/API/SubtleCrypto/sign#hmac) pass an [`HmacImportParams`](/en-US/docs/Web/API/HmacImportParams) object.
+    - For [AES-CTR](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr), [AES-CBC](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-cbc), [AES-GCM](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm), or [AES-KW](/en-US/docs/Web/API/SubtleCrypto/wrapKey#aes-kw), pass an [`AesDerivedKeyParams`](/en-US/docs/Web/API/AesDerivedKeyParams) object.
 - `extractable`
   - : A boolean value indicating whether it will be possible to export the key using {{domxref("SubtleCrypto.exportKey()")}} or {{domxref("SubtleCrypto.wrapKey()")}}.
 - `keyUsages`

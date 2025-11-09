@@ -152,6 +152,14 @@ Overview: [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_
 - [Iterables](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators#iterables)
 - [Generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators#generator_functions)
 
+## Resource management
+
+Overview: [JavaScript resource management](/en-US/docs/Web/JavaScript/Guide/Resource_management)
+
+- [The `using` and `await using` declarations](/en-US/docs/Web/JavaScript/Guide/Resource_management#the_using_and_await_using_declarations)
+- [The `DisposableStack` and `AsyncDisposableStack` objects](/en-US/docs/Web/JavaScript/Guide/Resource_management#the_disposablestack_and_asyncdisposablestack_objects)
+- [Error handling](/en-US/docs/Web/JavaScript/Guide/Resource_management#error_handling)
+
 ## Internationalization
 
 Overview: [Internationalization](/en-US/docs/Web/JavaScript/Guide/Internationalization)

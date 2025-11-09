@@ -27,7 +27,7 @@ Summarizer.create(options)
 - `options` {{optional_inline}}
   - : An object specifying configuration options for the `Summarizer`. Possible values include:
     - `expectedInputLanguages`
-      - : An array of strings specifying the expected languages of the input text, which should be valid [BCP 47 language tags](https://en.wikipedia.org/wiki/IETF_language_tag#List_of_common_primary_language_subtags) (as specified in [RFC 5646](https://datatracker.ietf.org/doc/html/rfc5646)). Defaults to `["en"]`.
+      - : An array of strings specifying the expected languages of the input text, which should be valid {{glossary("BCP 47 language tag", "BCP 47 language tags")}}. Defaults to `["en"]`.
     - `expectedContextLanguages`
       - : An array of strings specifying the expected languages of any provided context strings (either the [`sharedContext`](#sharedcontext) passed to the `Summarizer`, or a `context` specified during a {{domxref("Summarizer.summarize", "summarize()")}} or {{domxref("Summarizer.summarizeStreaming", "summarizeStreaming()")}} call), which should be valid BCP 47 language tags. Defaults to `["en"]`.
     - `format`
@@ -41,7 +41,9 @@ Summarizer.create(options)
     - `sharedContext`
       - : A {{domxref("Summarizer.sharedContext", "sharedContext")}} string describing the context the pieces of text to summarize are being used in, which helps the `Summarizer` generate more suitable summaries.
     - `signal`
-      - : An {{domxref("AbortSignal")}} object instance, which allows the `create()` operation to be aborted via the associated {{domxref("AbortController")}}.
+      - : An {{domxref("AbortSignal")}} object instance, which allows a `create()` operation to be aborted via the associated {{domxref("AbortController")}}. The exact effect is dependant on when {{domxref("AbortController.abort()")}} is called:
+        - If `abort()` is called before the `create()` promise resolves, the `create()` operation is cancelled.
+        - If `abort()` is called after the `create()` promise fulfills, it has the same effect as calling {{domxref("Summarizer.destroy()")}}: The resources assigned to the resulting `Summarizer` instance are released, and any ongoing and subsequent `Summarizer` method calls will reject with an `AbortError`.
     - `type`
       - : An enumerated value specifying the {{domxref("Summarizer.type", "type")}} of summary you want this `Summarizer` to generate. Defaults to `key-points`.
 

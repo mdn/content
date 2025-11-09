@@ -58,8 +58,6 @@ This creates a new `<div>` and inserts it before the element with the ID `div1`.
 #### JavaScript
 
 ```js
-document.body.onload = addElement;
-
 function addElement() {
   // create a new div element
   const newDiv = document.createElement("div");
@@ -74,6 +72,8 @@ function addElement() {
   const currentDiv = document.getElementById("div1");
   document.body.insertBefore(newDiv, currentDiv);
 }
+
+addElement();
 ```
 
 #### Result
@@ -83,7 +83,7 @@ function addElement() {
 ### Web component example
 
 > [!NOTE]
-> Check the [browser compatibility](#browser_compatibility) section for support, and the [`is`](/en-US/docs/Web/HTML/Reference/Global_attributes/is) attribute reference for caveats on implementation reality of custom built-in elements.
+> Check the [browser compatibility](#browser_compatibility) section for support, and the [`is`](/en-US/docs/Web/HTML/Reference/Global_attributes/is) attribute reference for caveats on implementation reality of customized built-in elements.
 
 The following example snippet is taken from our [expanding-list-web-component](https://github.com/mdn/web-components-examples/tree/main/expanding-list-web-component) example ([see it live also](https://mdn.github.io/web-components-examples/expanding-list-web-component/)). In this case, our custom element extends the {{domxref("HTMLUListElement")}}, which represents the {{htmlelement("ul")}} element.
 

@@ -254,8 +254,10 @@ npm install -g nodemon
 If you open your project's **package.json** file you'll now see a new section with this dependency:
 
 ```json
- "devDependencies": {
+{
+  "devDependencies": {
     "nodemon": "^3.1.10"
+  }
 }
 ```
 
@@ -264,11 +266,13 @@ Because the tool isn't installed globally, we can't launch it from the command l
 - On Linux and macOS, the scripts section will look like this:
 
   ```json
+  {
     "scripts": {
       "start": "node ./bin/www",
       "devstart": "nodemon ./bin/www",
       "serverstart": "DEBUG=express-locallibrary-tutorial:* npm run devstart"
-    },
+    }
+  }
   ```
 
 - On Windows, the "serverstart" value would instead look like this (if using the command prompt):
@@ -357,11 +361,13 @@ We already modified this section in [Enable server restart on file changes](#ena
 These can be used to start the same **./bin/www** file with _nodemon_ rather than _node_ (this version of the scripts is for Linux and macOS, as discussed above).
 
 ```json
+{
   "scripts": {
     "start": "node ./bin/www",
     "devstart": "nodemon ./bin/www",
     "serverstart": "DEBUG=express-locallibrary-tutorial:* npm run devstart"
-  },
+  }
+}
 ```
 
 The dependencies include the _express_ package and the package for our selected view engine (_pug_).
@@ -376,6 +382,7 @@ The default versions in the generated project are a little out of date.
 Replace the dependencies section of your `package.json` file with the following text, which specifies the latest versions of these libraries at the time of writing:
 
 ```json
+{
   "dependencies": {
     "cookie-parser": "^1.4.7",
     "debug": "^4.4.1",
@@ -383,7 +390,8 @@ Replace the dependencies section of your `package.json` file with the following 
     "http-errors": "~2.0.0",
     "morgan": "^1.10.0",
     "pug": "3.0.3"
-  },
+  }
+}
 ```
 
 Then update your installed dependencies using the command:
@@ -393,7 +401,7 @@ npm install
 ```
 
 > [!NOTE]
-> It is a good idea to regularly update to the latest compatible versions of your dependency libraries — this may even be done automatically or semi-automatically as part of a continuous integration setup.
+> It is a good idea to regularly update to the latest compatible versions of your dependency libraries — this may even be done automatically or semi-automatically as part of a {{glossary("continuous integration")}} setup.
 >
 > Usually library updates to the minor and patch version remain compatible.
 > We've prefixed each version with `^` above so that we can automatically update to the latest `minor.patch` version by running:

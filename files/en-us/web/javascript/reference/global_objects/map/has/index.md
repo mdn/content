@@ -7,8 +7,7 @@ browser-compat: javascript.builtins.Map.has
 sidebar: jsref
 ---
 
-The **`has()`** method of {{jsxref("Map")}} instances returns a boolean indicating whether an element with the
-specified key exists in this map or not.
+The **`has()`** method of {{jsxref("Map")}} instances returns a boolean indicating whether an entry with the specified key exists in this `Map` or not.
 
 {{InteractiveExample("JavaScript Demo: Map.prototype.has()")}}
 
@@ -32,12 +31,11 @@ has(key)
 ### Parameters
 
 - `key`
-  - : The key of the element to test for presence in the `Map` object.
+  - : The key of the entry to test for presence in the `Map` object. Object keys are compared by [reference](/en-US/docs/Glossary/Object_reference), not by value.
 
 ### Return value
 
-`true` if an element with the specified key exists in the `Map` object;
-otherwise `false`.
+Returns `true` if an entry with the specified key exists in the `Map` object; otherwise `false`.
 
 ## Examples
 
@@ -62,5 +60,6 @@ console.log(myMap.has("baz")); // false
 ## See also
 
 - {{jsxref("Map")}}
-- {{jsxref("Map.prototype.set()")}}
+- {{jsxref("Map.prototype.delete()")}}
 - {{jsxref("Map.prototype.get()")}}
+- {{jsxref("Map.prototype.set()")}}

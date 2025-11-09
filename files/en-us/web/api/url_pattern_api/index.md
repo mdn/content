@@ -117,7 +117,7 @@ console.log(pattern3.test("https://example.com/ba")); // true
 #### Start and end of line anchors
 
 The start of line anchor (`^`) and end-of line anchor (`$`) are used to anchor patterns to the start and end of the test string, respectively.
-While these can be specified for the start and end of an URL-part they are redundant.
+While these can be specified for the start and end of a URL-part they are redundant.
 This is because all URL-parts are implicitly preceded by the `^` anchor, and followed by the `$` anchor.
 
 The following code demonstrates that it doesn't matter whether or not `^` is specified.
@@ -597,7 +597,7 @@ console.log(result.hostname.input); // 'example.com'
 The following example shows how base URLs can also be used to construct the `URLPattern`.
 The base URL is treated strictly as a URL and cannot contain any pattern syntax itself.
 
-The pattern only [inherits URL parts from the base URL](/en-US/docs/Web/API/URL_Pattern_API#inheritance_from_a_base_url) that are less specific than those in the other properties.
+The pattern only [inherits URL parts from the base URL](#inheritance_from_a_base_url) that are less specific than those in the other properties.
 
 In this case the `pathname` is specified so the protocol and host can be inherited, but not the search, hash, username, or password.
 The properties that are not inherited default to the wildcard string (`"*"`).

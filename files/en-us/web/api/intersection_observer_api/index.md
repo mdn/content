@@ -69,7 +69,7 @@ The `options` object passed into the {{domxref("IntersectionObserver.Intersectio
     The margins are applied to nested scrollable containers before computing intersections.
     Positive values grow the clipping rectangle of the container, allowing targets to intersect before they becomes visible, while negative values shrink the clipping rectangle.
 - `threshold`
-  - : Either a single number or an array of numbers which indicate at what percentage of the target's visibility the observer's callback should be executed. If you only want to detect when visibility passes the 50% mark, you can use a value of 0.5. If you want the callback to run every time visibility passes another 25%, you would specify the array \[0, 0.25, 0.5, 0.75, 1]. The default is 0 (meaning as soon as even one pixel is visible, the callback will be run). A value of 1.0 means that the threshold isn't considered passed until every pixel is visible.
+  - : Either a single number or an array of numbers which indicate at what percentage of the target's visibility the observer's callback should be executed. If you only want to detect when visibility passes the 50% mark, you can use a value of 0.5. If you want the callback to run every time visibility passes another 25%, you would specify the array \[0, 0.25, 0.5, 0.75, 1]. The default is 0 (meaning the callback will be run as soon as the target element intersects or touches the boundary of the root, even if no pixels are yet visible). A value of 1.0 means that the threshold isn't considered passed until every pixel is visible.
 - `delay` {{experimental_inline}}
   - : When tracking target visibility ([trackVisibility](#trackvisibility) is `true`), this can be used to set the minimum delay in milliseconds between notifications from this observer.
     Limiting the notification rate is desirable because the visibility calculation is computationally intensive.
@@ -303,22 +303,33 @@ Similarly, a negative value will mean that the intersection is detected once ima
   <div class="flex-container">
     <div class="carousel">
       <img
+        src=""
         data-src="ballon-portrait.jpg"
         class="lazy-carousel-img"
         alt="Balloon portrait" />
       <img
+        src=""
         data-src="balloon-small.jpg"
         class="lazy-carousel-img"
         alt="balloon-small" />
-      <img data-src="surfer.jpg" class="lazy-carousel-img" alt="surfer" />
       <img
+        src=""
+        data-src="surfer.jpg"
+        class="lazy-carousel-img"
+        alt="surfer" />
+      <img
+        src=""
         data-src="border-diamonds.png"
         class="lazy-carousel-img"
         alt="border-diamonds" />
-      <img data-src="fire.png" class="lazy-carousel-img" alt="fire" />
-      <img data-src="puppy-header.jpg" class="lazy-carousel-img" alt="puppy" />
-      <img data-src="moon.jpg" class="lazy-carousel-img" alt="moon" />
-      <img data-src="rhino.jpg" class="lazy-carousel-img" alt="rhino" />
+      <img src="" data-src="fire.png" class="lazy-carousel-img" alt="fire" />
+      <img
+        src=""
+        data-src="puppy-header.jpg"
+        class="lazy-carousel-img"
+        alt="puppy" />
+      <img src="" data-src="moon.jpg" class="lazy-carousel-img" alt="moon" />
+      <img src="" data-src="rhino.jpg" class="lazy-carousel-img" alt="rhino" />
     </div>
     <div id="margin-indicator"></div>
   </div>
@@ -708,7 +719,7 @@ The HTML for this example is very short, with a primary element which is the box
 
 ### CSS
 
-The CSS isn't terribly important for the purposes of this example; it lays out the element and establishes that the {{cssxref("background-color")}} and {{cssxref("border")}} attributes can participate in [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions), which we'll use to affect the changes to the element as it becomes more or less obscured.
+The CSS isn't terribly important for the purposes of this example; it lays out the element and establishes that the {{cssxref("background-color")}} and {{cssxref("border")}} attributes can participate in [CSS transitions](/en-US/docs/Web/CSS/Guides/Transitions), which we'll use to affect the changes to the element as it becomes more or less obscured.
 
 ```css
 #box {
@@ -751,21 +762,12 @@ First, we need to prepare some variables and install the observer.
 ```js
 const numSteps = 20.0;
 
-let boxElement;
+const boxElement = document.querySelector("#box");
 let prevRatio = 0.0;
 let increasingColor = "rgb(40 40 190 / ratio)";
 let decreasingColor = "rgb(190 40 40 / ratio)";
 
-// Set things up
-window.addEventListener(
-  "load",
-  (event) => {
-    boxElement = document.querySelector("#box");
-
-    createObserver();
-  },
-  false,
-);
+createObserver();
 ```
 
 The constants and variables we set up here are:
@@ -779,7 +781,7 @@ The constants and variables we set up here are:
 - `decreasingColor`
   - : Similarly, this is a string defining a color we'll apply when the visibility ratio is decreasing.
 
-We call {{domxref("EventTarget.addEventListener", "Window.addEventListener()")}} to start listening for the {{domxref("Window/load_event", "load")}} event; once the page has finished loading, we get a reference to the element with the ID `"box"` using {{domxref("Document.querySelector", "querySelector()")}}, then call the `createObserver()` method we'll create in a moment to handle building and installing the intersection observer.
+We get a reference to the element with the ID `"box"` using {{domxref("Document.querySelector", "querySelector()")}}, then call the `createObserver()` method we'll create in a moment to handle building and installing the intersection observer.
 
 #### Creating the intersection observer
 
@@ -787,15 +789,13 @@ The `createObserver()` method is called once page load is complete to handle act
 
 ```js
 function createObserver() {
-  let observer;
-
-  let options = {
+  const options = {
     root: null,
     rootMargin: "0px",
     threshold: buildThresholdList(),
   };
 
-  observer = new IntersectionObserver(handleIntersect, options);
+  const observer = new IntersectionObserver(handleIntersect, options);
   observer.observe(boxElement);
 }
 ```
@@ -814,11 +814,11 @@ The `buildThresholdList()` function, which builds the list of thresholds, looks 
 
 ```js
 function buildThresholdList() {
-  let thresholds = [];
-  let numSteps = 20;
+  const thresholds = [];
+  const numSteps = 20;
 
   for (let i = 1.0; i <= numSteps; i++) {
-    let ratio = i / numSteps;
+    const ratio = i / numSteps;
     thresholds.push(ratio);
   }
 
