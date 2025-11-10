@@ -396,8 +396,8 @@ const stations = [
 
 for (const station of stations) {
   const code = station.slice(0, 3);
-  const semiColon = station.indexOf(";");
-  const name = station.slice(semiColon + 1);
+  const semiColonIndex = station.indexOf(";");
+  const name = station.slice(semiColonIndex + 1);
   const result = `${code}: ${name}`;
   const listItem = document.createElement("li");
   listItem.textContent = result;
