@@ -1,4 +1,4 @@
----
+https://en.wikipedia.org/wiki/Dual-tone_multi-frequency_signaling---
 title: DTMF (Dual-Tone Multi-Frequency signaling)
 slug: Glossary/DTMF
 page-type: glossary-definition
