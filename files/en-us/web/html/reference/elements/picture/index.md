@@ -70,7 +70,7 @@ If the {{HTMLElement("source")}}'s media condition evaluates to `false`, the bro
 </picture>
 ```
 
-You can swap image assets for light and dark themes using the [`prefers-color-scheme`]((/en-US/docs/Web/CSS/@media/prefers-color-scheme)) media feature:
+You can swap image assets for light and dark themes using the [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) media feature:
 
 ```html
 <picture>
