@@ -44,9 +44,9 @@ _Inherits methods from its ancestors {{domxref("CSSGroupingRule")}} and {{domxre
 
 ```js
 const item = document.getElementsByTagName("p")[0];
-const rules = document.styleSheets[1].cssRules;
-// Note that stylesheet #1 is the stylesheet associated with this embedded example,
-// while stylesheet #0 is the stylesheet associated with the whole MDN page
+const rules = document.styleSheets[2].cssRules;
+// Note that stylesheet #2 is the stylesheet associated with this embedded example,
+// while stylesheet #0 and #1 are the stylesheets associated with the whole MDN page
 
 const layer = rules[0]; // A CSSLayerBlockRule
 
