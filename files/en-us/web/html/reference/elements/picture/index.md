@@ -70,9 +70,7 @@ If the {{HTMLElement("source")}}'s media condition evaluates to `false`, the bro
 </picture>
 ```
 
-#### Using `prefers-color-scheme`
-
-You can swap image assets for light and dark themes using the color-scheme media feature:
+You can swap image assets for light and dark themes using the [`prefers-color-scheme`]((/en-US/docs/Web/CSS/@media/prefers-color-scheme)) media feature:
 
 ```html
 <picture>
@@ -81,8 +79,6 @@ You can swap image assets for light and dark themes using the color-scheme media
   <img src="logo-light.png" alt="Product logo" />
 </picture>
 ```
-
-For details, see the CSS [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) media feature.
 
 ### The srcset attribute
 
