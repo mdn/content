@@ -277,9 +277,7 @@ The CSS [`calc()`](/en-US/docs/Web/CSS/Reference/Values/calc) function can now p
 
 The [CSS Anchor Positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) module defines a number of features that allow elements to be defined as anchor elements, and for other elements to be positioned relative to anchor elements.
 This allows, for example, tooltips to be displayed alongside associated content as it scrolls through the viewport, moving as needed when it would overflow the viewport, and disappearing when the anchor moves offscreen.
-The set of features are being progressively rolled out behind a preference ([Firefox bug 1988224](https://bugzil.la/1988224), [Firefox bug 1838746](https://bugzil.la/1838746)).
-
-The parts that have been implemented include [`CSSPositionTryRule`](/en-US/docs/Web/API/CSSPositionTryRule) and [`CSSPositionTryDescriptors`](/en-US/docs/Web/API/CSSPositionTryDescriptors) (Firefox 131).
+The set of features are being progressively rolled out behind a preference (general: [Firefox bug 1988224](https://bugzil.la/1988224), {{cssxref("position-area")}}: [Firefox bug 1924086](https://bugzil.la/1924086), custom {{cssxref("@position-try")}} fallbacks: [Firefox bug 1962598](https://bugzil.la/1962598)).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
