@@ -637,7 +637,7 @@ AVC is a proprietary format, however, and numerous patents are owned by multiple
 
 Non-web browser implementations of WebRTC (any implementation which doesn't include the JavaScript APIs) are _required_ to support AVC as a codec in WebRTC calls. While web browsers are not required to do so, some do.
 
-In HTML content for web browsers, AVC is broadly compatible and many platforms support hardware encoding and decoding of AVC media. However, be aware of its [licensing requirements](https://www.via-la.com/licensing-2/avc-h-264/) before choosing to use AVC in your project!
+In HTML content for web browsers, AVC is broadly compatible and many platforms support hardware encoding and decoding of AVC media. However, be aware of its [licensing requirements](https://via-la.com/licensing-programs/avc-h-264/) before choosing to use AVC in your project!
 
 <table class="standard-table">
   <tbody>
@@ -780,7 +780,7 @@ In HTML content for web browsers, AVC is broadly compatible and many platforms s
       <th scope="row">Licensing</th>
       <td>
         Proprietary with numerous patents. Commercial use
-        <a href="https://www.via-la.com/licensing-2/avc-h-264/"
+        <a href="https://via-la.com/licensing-programs/avc-h-264/"
           >requires a license</a
         >. Note that multiple patent pools may apply.
       </td>
@@ -917,7 +917,7 @@ For example, each coding tree unit (CTU)—similar to the macroblock used in pre
 
 An interesting feature of HEVC is that the main profile supports only 8-bit per component color with 4:2:0 chroma subsampling. Also interesting is that 4:4:4 video is handled specially. Instead of having the luma samples (representing the image's pixels in grayscale) and the Cb and Cr samples (indicating how to alter the grays to create color pixels), the three channels are instead treated as three monochrome images, one for each color, which are then combined during rendering to produce a full-color image.
 
-HEVC is a proprietary format and is covered by a number of patents. Licensing is [managed by Via LA](https://www.via-la.com/licensing-2/hevc-vvc/); fees are charged to developers rather than to content producers and distributors. Be sure to review the latest license terms and requirements before making a decision on whether or not to use HEVC in your app or website!
+HEVC is a proprietary format and is covered by a number of patents. Licensing is [managed by Via LA](https://via-la.com/licensing-programs/hevc-vvc/); fees are charged to developers rather than to content producers and distributors. Be sure to review the latest license terms and requirements before making a decision on whether or not to use HEVC in your app or website!
 
 <table class="standard-table">
   <tbody>
@@ -1093,7 +1093,7 @@ HEVC is a proprietary format and is covered by a number of patents. Licensing is
       <th scope="row">Licensing</th>
       <td>
         Proprietary; confirm your compliance with the
-        <a href="https://www.via-la.com/licensing-2/hevc-vvc/"
+        <a href="https://via-la.com/licensing-programs/hevc-vvc/"
           >licensing requirements</a
         >. Note that multiple patent pools may apply.
       </td>
@@ -1204,10 +1204,10 @@ You almost certainly don't want to use this format, since it isn't supported in 
       <th scope="row">Licensing</th>
       <td>
         Proprietary;
-        <a href="https://www.via-la.com/licensing-2/mpeg-4-visual/"
+        <a href="https://via-la.com/licensing-programs/mpeg-4-visual/"
           >obtain a license</a
         >
-        through <a href="https://www.via-la.com/">Via LA</a> and/or
+        through <a href="https://via-la.com/">Via LA</a> and/or
         <a href="https://about.att.com/innovation/ip/patents"
           >AT&#x26;T</a
         >
@@ -1485,7 +1485,7 @@ However, few web browsers support MPEG-2 without the support of a plugin, and wi
       <th scope="row">Licensing</th>
       <td>
         Proprietary; all patents have expired worldwide with the exception of in Malaysia (as of October 1, 2024), so MPEG-2 can be used freely outside of Malaysia.
-        Patents are licensed by <a href="https://www.via-la.com/licensing-2/mpeg-2/">Via LA</a>.
+        Patents are licensed by <a href="https://via-la.com/licensing-programs/mpeg-2/">Via LA</a>.
       </td>
     </tr>
   </tbody>

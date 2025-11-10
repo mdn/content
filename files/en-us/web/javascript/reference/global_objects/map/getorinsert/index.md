@@ -50,10 +50,9 @@ The `getOrInsert()` method is equivalent to the following:
 ```js
 if (map.has(key)) {
   return map.get(key);
-} else {
-  map.set(key, defaultValue);
-  return defaultValue;
 }
+map.set(key, defaultValue);
+return defaultValue;
 ```
 
 It is also similar to the following pattern (which is slightly less reliable if `null` or `undefined` are valid values in your map):

@@ -6,11 +6,9 @@ browser-compat: webextensions.api.cookies.set
 sidebar: addonsidebar
 ---
 
-The **`set()`** method of the {{WebExtAPIRef("cookies")}} API sets a cookie containing the specified cookie data. This method is equivalent to issuing an HTTP `Set-Cookie` header during a request to a given URL.
+Sets a cookie. This method is equivalent to issuing an HTTP `Set-Cookie` header during a request to a URL.
 
 To use this method, an extension must have the `"cookies"` permission and relevant host permissions. See [`cookie` permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#permissions) for more details.
-
-This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntax
 
@@ -54,14 +52,17 @@ let setting = browser.cookies.set(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled with a {{WebExtAPIRef('cookies.Cookie')}} object containing details about the cookie that's been set.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) fulfilled with a {{WebExtAPIRef('cookies.Cookie')}} object containing details about the set cookie.
 
 If there is more than one cookie with the same name for a URL, the cookie with the longest path is returned. For cookies with the same path length, the cookie with the earliest creation time is returned.
 
 > [!NOTE]
 > Before Firefox 133, when there was more than one cookie with the same name, Firefox returned the cookie with the earliest creation time.
 
-If the call fails, the promise is rejected with an error message.
+If the requested cookie is invalid or the call otherwise fails, the promise is rejected with an error message.
+
+> [!NOTE]
+> Before Firefox 145, invalid cookies were created.
 
 ## Examples
 

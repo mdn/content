@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.TimeRanges.length
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("HTML DOM")}}
 
 The **`TimeRanges.length`** read-only property returns the
 number of ranges in the object.

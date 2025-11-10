@@ -187,7 +187,7 @@ Using semantic HTML, this could have been written as:
 
 By using {{HTMLElement('input')}}, we get an already-styled range-input widget with keyboard focus, focus styling, keyboard interactions, and `value` updated on user interaction for free. We still need to use JavaScript to change the `aria-valuetext` and the value of the {{HTMLElement('output')}} element.
 
-There are a few ways to make a range input vertical. In this example, we used [CSS transforms](/en-US/docs/Web/CSS/transform).
+There are a few ways to make a range input vertical. In this example, we used [CSS transforms](/en-US/docs/Web/CSS/Reference/Properties/transform).
 
 ## Best practices
 

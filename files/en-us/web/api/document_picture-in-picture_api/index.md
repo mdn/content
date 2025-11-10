@@ -25,7 +25,7 @@ However, this API has been found to be somewhat limiting — you can only put a 
 - An always-on-top custom video player showing one or multiple videos with custom controls and styling.
 - A video conferencing system that allows the user to always see the other participant's streams, plus controls for presenting content, muting, ending calls, etc.
 - Always-visible productivity tools such as timers, notes, to-do lists, messenger tools, etc.
-- A separate window in which to keep additional content while the main app window is kept free of clutter. For example, you might have a action or roleplaying game running where you want to show the game controls, instructions, or lore in an additional window, keeping the main window free for displaying the game locations and map.
+- A separate window in which to keep additional content while the main app window is kept free of clutter. For example, you might have an action or roleplaying game running where you want to show the game controls, instructions, or lore in an additional window, keeping the main window free for displaying the game locations and map.
 
 ### How does it work?
 
@@ -58,7 +58,7 @@ See [Using the Document Picture-in-Picture API](/en-US/docs/Web/API/Document_Pic
 ## CSS additions
 
 - {{cssxref("@media/display-mode", "display-mode")}}, the `picture-in-picture` value
-  - : A [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) value that allows developers to apply CSS to a document based on whether it is being displayed in Picture-in-Picture mode.
+  - : A [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Reference/At-rules/@media#media_features) value that allows developers to apply CSS to a document based on whether it is being displayed in Picture-in-Picture mode.
 
 ## Examples
 

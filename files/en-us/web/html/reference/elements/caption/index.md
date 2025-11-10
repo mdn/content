@@ -6,7 +6,7 @@ browser-compat: html.elements.caption
 sidebar: htmlsidebar
 ---
 
-The **`<caption>`** [HTML](/en-US/docs/Web/HTML) element specifies the caption (or title) of a table, providing the table an {{glossary("accessible description")}}.
+The **`<caption>`** [HTML](/en-US/docs/Web/HTML) element specifies the caption (or title) of a table, providing the table an {{glossary("accessible name")}} or {{glossary("accessible description")}}.
 
 {{InteractiveExample("HTML Demo: &lt;caption&gt;", "tabbed-taller")}}
 
@@ -15,26 +15,28 @@ The **`<caption>`** [HTML](/en-US/docs/Web/HTML) element specifies the caption (
   <caption>
     He-Man and Skeletor facts
   </caption>
-  <tr>
-    <td></td>
-    <th scope="col" class="heman">He-Man</th>
-    <th scope="col" class="skeletor">Skeletor</th>
-  </tr>
-  <tr>
-    <th scope="row">Role</th>
-    <td>Hero</td>
-    <td>Villain</td>
-  </tr>
-  <tr>
-    <th scope="row">Weapon</th>
-    <td>Power Sword</td>
-    <td>Havoc Staff</td>
-  </tr>
-  <tr>
-    <th scope="row">Dark secret</th>
-    <td>Expert florist</td>
-    <td>Cries at romcoms</td>
-  </tr>
+  <tbody>
+    <tr>
+      <td></td>
+      <th scope="col" class="heman">He-Man</th>
+      <th scope="col" class="skeletor">Skeletor</th>
+    </tr>
+    <tr>
+      <th scope="row">Role</th>
+      <td>Hero</td>
+      <td>Villain</td>
+    </tr>
+    <tr>
+      <th scope="row">Weapon</th>
+      <td>Power Sword</td>
+      <td>Havoc Staff</td>
+    </tr>
+    <tr>
+      <th scope="row">Dark secret</th>
+      <td>Expert florist</td>
+      <td>Cries at romcoms</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -77,7 +79,7 @@ tr:nth-child(odd) td {
 
 .heman {
   font:
-    1.4rem molot,
+    1.4rem "molot",
     sans-serif;
   text-shadow:
     1px 1px 1px white,
@@ -86,7 +88,7 @@ tr:nth-child(odd) td {
 
 .skeletor {
   font:
-    1.7rem rapscallion,
+    1.7rem "rapscallion",
     fantasy;
   letter-spacing: 3px;
   text-shadow:
@@ -131,18 +133,22 @@ A `<caption>` element is used as the first child of the {{HTMLElement("table")}}
   <caption>
     User login email addresses
   </caption>
-  <tr>
-    <th>Login</th>
-    <th>Email</th>
-  </tr>
-  <tr>
-    <td>user1</td>
-    <td>user1@example.com</td>
-  </tr>
-  <tr>
-    <td>user2</td>
-    <td>user2@example.com</td>
-  </tr>
+  <thead>
+    <tr>
+      <th>Login</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>user1</td>
+      <td>user1@example.com</td>
+    </tr>
+    <tr>
+      <td>user2</td>
+      <td>user2@example.com</td>
+    </tr>
+  </tbody>
 </table>
 ```
 

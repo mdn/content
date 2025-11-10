@@ -1,5 +1,5 @@
 ---
-title: Firefox 142 for developers
+title: Firefox 142 release notes for developers
 short-title: Firefox 142
 slug: Mozilla/Firefox/Releases/142
 page-type: firefox-release-notes
@@ -19,8 +19,8 @@ Firefox 142 was released on [August 19, 2025](https://whattrainisitnow.com/relea
 
 ### CSS
 
-- The [`&` selector](/en-US/docs/Web/CSS/Nesting_selector) inside {{cssxref("@scope")}} no longer inherits the [specificity of the scope start selector](/en-US/docs/Web/CSS/@scope#specificity_in_scope).
-  This makes `&` selectors in `@scope` consistent with [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting), avoiding unexpected specificity differences (see [CSS nesting and specificity](/en-US/docs/Web/CSS/CSS_nesting/Nesting_and_specificity)).
+- The [`&` selector](/en-US/docs/Web/CSS/Reference/Selectors/Nesting_selector) inside {{cssxref("@scope")}} no longer inherits the [specificity of the scope start selector](/en-US/docs/Web/CSS/Reference/At-rules/@scope#specificity_in_scope).
+  This makes `&` selectors in `@scope` consistent with [CSS nesting](/en-US/docs/Web/CSS/Guides/Nesting), avoiding unexpected specificity differences (see [CSS nesting and specificity](/en-US/docs/Web/CSS/Guides/Nesting/Nesting_and_specificity)).
   ([Firefox bug 1975531](https://bugzil.la/1975531)).
 
 ### JavaScript
@@ -77,6 +77,7 @@ No notable changes.
 - The {{WebExtAPIRef("cookies")}} methods now accept and return milliseconds in the fractional part of `expirationDate`. ([Firefox bug 1972757](https://bugzil.la/1972757))
 - Adds the {{WebExtAPIRef("browserAction.onUserSettingsChanged")}} and {{WebExtAPIRef("action.onUserSettingsChanged")}} events that listen for changes in the user-specified settings that affect an extension's action. ([Firefox bug 1828220](https://bugzil.la/1828220))
 - Adds {{WebExtAPIRef("browserSettings.verticalTabs")}}, which enables extensions to control whether the browser displays the tab bar horizontally or vertically. ([Firefox bug 1946600](https://bugzil.la/1946600))
+- Enabled the Firefox built-in data collection consent feature for Firefox for Android. See the Extension Workshop article [Firefox built-in consent for data collection and transmission](https://extensionworkshop.com/documentation/develop/firefox-builtin-data-consent/). ([Firefox bug 1954524](https://bugzil.la/1954524))
 
 ## Experimental web features
 
@@ -86,11 +87,11 @@ No notable changes.
 
 - **`:heading`** and **`:heading()`**: `layout.css.heading-selector.enabled`
 
-  The CSS {{CSSXRef(":heading")}} pseudo-class allows you to style all [heading elements](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) (`<h1>`-`<h6>`) at once rather than targeting them individually. The {{CSSXRef(":heading_function", ":heading()")}} functional pseudo-class allows you to style heading elements that match the [`<An+B>`](/en-US/docs/Web/CSS/:heading_function#functional_notation) notation. ([Firefox bug 1974386](https://bugzil.la/1974386)).
+  The CSS {{CSSXRef(":heading")}} pseudo-class allows you to style all [heading elements](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) (`<h1>`-`<h6>`) at once rather than targeting them individually. The {{CSSXRef(":heading_function", ":heading()")}} functional pseudo-class allows you to style heading elements that match the given heading levels. ([Firefox bug 1974386](https://bugzil.la/1974386)).
 
 - **`view-transition-name: match-element`** (Nightly): `dom.viewTransitions.enabled`
 
-  The {{CSSXRef("view-transition-name", "match-element", "#match-element")}} value of the CSS {{CSSXRef("view-transition-name")}} property [automatically](/en-US/docs/Web/CSS/view-transition-name#specifying_view-transition-name_values_automatically) assigns a unique internal `view-transition-name` to each selected element, rather than having to name them individually. ([Firefox bug 1956141](https://bugzil.la/1956141)).
+  The {{CSSXRef("view-transition-name", "match-element", "#match-element")}} value of the CSS {{CSSXRef("view-transition-name")}} property [automatically](/en-US/docs/Web/CSS/Reference/Properties/view-transition-name#specifying_view-transition-name_values_automatically) assigns a unique internal `view-transition-name` to each selected element, rather than having to name them individually. ([Firefox bug 1956141](https://bugzil.la/1956141)).
 
 - **`Integrity-Policy` and `Integrity-Policy-Report-Only`** for scripts (Nightly): `security.integrity_policy.enabled`
 

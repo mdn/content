@@ -316,6 +316,9 @@
         "CaretPosition",
         "CSS",
         "CSSConditionRule",
+        "CSSFunctionDeclarations",
+        "CSSFunctionDescriptors",
+        "CSSFunctionRule",
         "CSSGroupingRule",
         "CSSImportRule",
         "CSSKeyframeRule",
@@ -333,6 +336,7 @@
         "CSSRuleList",
         "CSSStyleDeclaration",
         "CSSStartingStyleRule",
+        "CSSStyleProperties",
         "CSSStyleRule",
         "CSSStyleSheet",
         "CSSSupportsRule",
@@ -422,13 +426,11 @@
     "DOM": {
       "overview": ["Document Object Model"],
       "guides": [
-        "/docs/Web/API/Document_Object_Model/Introduction",
-        "/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model",
+        "/docs/Web/API/Document_Object_Model/Anatomy_of_the_DOM",
         "/docs/Web/API/Document_Object_Model/Reflected_attributes",
-        "/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces",
-        "/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors",
-        "/docs/Web/API/Document_Object_Model/Events",
-        "/docs/Web/API/Document_Object_Model/Examples"
+        "/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree",
+        "/docs/Web/API/Document_Object_Model/Building_and_updating_the_DOM_tree",
+        "/docs/Web/API/Document_Object_Model/Events"
       ],
       "interfaces": [
         "AbortController",
@@ -446,9 +448,6 @@
         "DOMException",
         "DOMImplementation",
         "DOMParser",
-        "DOMPoint",
-        "DOMPointReadOnly",
-        "DOMRect",
         "DOMTokenList",
         "Element",
         "Event",
@@ -463,13 +462,15 @@
         "ProcessingInstruction",
         "QuotaExceededError",
         "Range",
+        "ShadowRoot",
         "StaticRange",
         "Text",
-        "TextDecoder",
-        "TextEncoder",
-        "TimeRanges",
         "TreeWalker",
-        "XMLDocument"
+        "XMLDocument",
+        "XPathEvaluator",
+        "XPathExpression",
+        "XPathResult",
+        "XSLTProcessor"
       ],
       "methods": [],
       "properties": [],
@@ -827,6 +828,7 @@
         "PluginArray",
         "PromiseRejectionEvent",
         "RadioNodeList",
+        "TimeRanges",
         "UserActivation",
         "ValidityState",
         "Window",
@@ -894,9 +896,10 @@
     "HTML Drag and Drop API": {
       "overview": ["HTML Drag and Drop API"],
       "guides": [
-        "/docs/Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop",
         "/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations",
-        "/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types"
+        "/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store",
+        "/docs/Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop",
+        "/docs/Web/API/HTML_Drag_and_Drop_API/Kanban_board"
       ],
       "interfaces": [
         "DataTransfer",
@@ -2379,6 +2382,7 @@
         "SpeechRecognitionAlternative",
         "SpeechRecognitionErrorEvent",
         "SpeechRecognitionEvent",
+        "SpeechRecognitionPhrase",
         "SpeechRecognitionResult",
         "SpeechRecognitionResultList",
         "SpeechSynthesis",
@@ -2607,9 +2611,6 @@
       "methods": [],
       "properties": [],
       "events": []
-    },
-    "XSLT": {
-      "interfaces": ["XSLTProcessor"]
     }
   }
 ]

@@ -21,7 +21,7 @@ In addition to the basic HTML global attributes, the following global attributes
 - [`accesskey`](/en-US/docs/Web/HTML/Reference/Global_attributes/accesskey)
   - : Provides a hint for generating a keyboard shortcut for the current element. This attribute consists of a space-separated list of characters. The browser should use the first one that exists on the computer keyboard layout.
 - [`anchor`](/en-US/docs/Web/HTML/Reference/Global_attributes/anchor) {{non-standard_inline}}
-  - : Associates a positioned element with an anchor element. The attribute's value is the [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) value of the element you want to anchor the positioned element to. The element can then be positioned [using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using).
+  - : Associates a positioned element with an anchor element. The attribute's value is the [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) value of the element you want to anchor the positioned element to. The element can then be positioned [using CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using).
 - [`autocapitalize`](/en-US/docs/Web/HTML/Reference/Global_attributes/autocapitalize)
   - : Controls whether inputted text is automatically capitalized and, if so, in what manner.
 - [`autocorrect`](/en-US/docs/Web/HTML/Reference/Global_attributes/autocorrect)
@@ -30,7 +30,7 @@ In addition to the basic HTML global attributes, the following global attributes
 - [`autofocus`](/en-US/docs/Web/HTML/Reference/Global_attributes/autofocus)
   - : Indicates that an element is to be focused on page load, or as soon as the {{HTMLElement("dialog")}} it is part of is displayed. This attribute is a boolean, initially false.
 - [`class`](/en-US/docs/Web/HTML/Reference/Global_attributes/class)
-  - : A space-separated list of the classes of the element. Classes allow CSS and JavaScript to select and access specific elements via the [class selectors](/en-US/docs/Web/CSS/Class_selectors) or functions like the method {{DOMxRef("Document.getElementsByClassName()")}}.
+  - : A space-separated list of the classes of the element. Classes allow CSS and JavaScript to select and access specific elements via the [class selectors](/en-US/docs/Web/CSS/Reference/Selectors/Class_selectors) or functions like the method {{DOMxRef("Document.getElementsByClassName()")}}.
 - [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable)
   - : An [enumerated](/en-US/docs/Glossary/Enumerated) attribute indicating if the element should be editable by the user. If so, the browser modifies its widget to allow editing. The attribute must take one of the following values:
     - `true` or the _empty string_, which indicates that the element must be editable;

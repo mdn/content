@@ -65,6 +65,7 @@ Bodmin
 Boonie
 bottosson
 Boulton
+Bramus
 Brians
 Browserleaks
 Browsershots
@@ -72,6 +73,7 @@ Browsersync
 Bubka
 Bundlesize
 Bunyakovsky
+Bushell
 Butterick
 Buzzcocks
 Bynens
@@ -89,6 +91,7 @@ carolinensis
 Cassini
 Caterina
 caugner
+cdxgen
 Chakra
 Chamakh
 Chimero
@@ -112,6 +115,7 @@ codingintrigue
 Codrops
 Coleoptera
 Colomb
+Comeau
 Conde
 Corber
 Cortana
@@ -254,6 +258,7 @@ Holzman
 Honigswald
 Hoshi
 Hoth
+Houseology
 Hyperaudio
 Hönigswald
 Ibuki
@@ -321,6 +326,7 @@ Kobabe
 Koen
 Kokoro
 Konva
+Kravets
 Kyouko
 Kütük
 Laravel
@@ -520,6 +526,7 @@ Scrimba
 Seamonkey
 Serpentina
 Shadeed
+Sharma
 Shilpa
 Shinoda
 Shireen
@@ -627,6 +634,7 @@ wisedog
 Wolenetz
 Wrox
 XAMPP
+Xandar
 Xavi
 Xiluodu
 Xiowan

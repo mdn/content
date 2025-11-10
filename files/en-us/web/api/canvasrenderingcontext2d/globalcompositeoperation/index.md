@@ -190,9 +190,9 @@ canvas2.height = height;
 This code, `runComposite()`, handles the bulk of the work, relying on a number of utility functions to do the hard parts.
 
 ```js
-function createCanvas() {
+function createCanvas(op) {
   const canvas = document.createElement("canvas");
-  canvas.style.background = `url(${JSON.stringify(op_8x8.data)})`;
+  canvas.style.background = `url(${JSON.stringify(op.data)})`;
   canvas.style.border = "1px solid black";
   canvas.style.margin = "5px";
   canvas.width = width / 2;
@@ -200,7 +200,7 @@ function createCanvas() {
   return canvas;
 }
 
-function runComposite() {
+function runComposite(op) {
   const dl = document.createElement("dl");
   document.body.appendChild(dl);
   while (gco.length) {
@@ -213,9 +213,9 @@ function runComposite() {
     p.textContent = gcoText.pop();
     dd.appendChild(p);
 
-    const canvasToDrawOn = createCanvas();
-    const canvasToDrawFrom = createCanvas();
-    const canvasToDrawResult = createCanvas();
+    const canvasToDrawOn = createCanvas(op);
+    const canvasToDrawFrom = createCanvas(op);
+    const canvasToDrawResult = createCanvas(op);
 
     let ctx = canvasToDrawResult.getContext("2d");
     ctx.clearRect(0, 0, width, height);
@@ -292,7 +292,7 @@ function lightMix() {
 ```
 
 ```js
-function colorSphere(element) {
+function colorSphere() {
   const ctx = canvas1.getContext("2d");
   const width = 360;
   const halfWidth = width / 2;
@@ -401,7 +401,7 @@ function createInterlace(size, color1, color2) {
   return pattern;
 }
 
-const op_8x8 = createInterlace(8, "white", "#eeeeee");
+const op8x8 = createInterlace(8, "white", "#eeeeee");
 ```
 
 #### Start running
@@ -411,7 +411,7 @@ Finally, we call the functions to set everything in motion.
 ```js
 lightMix();
 colorSphere();
-runComposite();
+runComposite(op8x8);
 ```
 
 #### Result

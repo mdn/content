@@ -1,5 +1,5 @@
 ---
-title: Firefox 39 for developers
+title: Firefox 39 release notes for developers
 short-title: Firefox 39
 slug: Mozilla/Firefox/Releases/39
 page-type: firefox-release-notes
@@ -77,7 +77,7 @@ _No change._
 
 ### Miscellaneous
 
-- [WOFF2](/en-US/docs/Web/CSS/CSS_fonts/WOFF) fonts support is now turned on by default in release version of Firefox (Beta and Release, in addition of Nightly and Developer Edition) ([Firefox bug 1084026](https://bugzil.la/1084026)).
+- [WOFF2](/en-US/docs/Web/CSS/Guides/Fonts/WOFF) fonts support is now turned on by default in release version of Firefox (Beta and Release, in addition of Nightly and Developer Edition) ([Firefox bug 1084026](https://bugzil.la/1084026)).
 - The [`-remote`](https://wiki.mozilla.org/Firefox/CommandLineOptions#-remote_remote_command) command-line option has been removed ([Firefox bug 1080319](https://bugzil.la/1080319)).
 - Support for new [Unicode 8.0 skin tone emoji](https://www.bbc.co.uk/news/newsbeat-32220611) ([Firefox bug 1153460](https://bugzil.la/1153460)).
 

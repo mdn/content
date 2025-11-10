@@ -158,6 +158,9 @@ You can specify
 - {{httpheader('Permissions-Policy/midi', 'midi')}} {{Experimental_Inline}}
   - : Controls whether the current document is allowed to use the [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API). When this policy is disabled, the {{jsxref("Promise")}} returned by {{domxref("Navigator.requestMIDIAccess()")}} will reject with a `SecurityError` {{domxref("DOMException")}}.
 
+- {{httpheader("Permissions-Policy/on-device-speech-recognition", "on-device-speech-recognition")}} {{Experimental_Inline}}
+  - : Controls access to the [on-device speech recognition](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#on-device_speech_recognition) functionality of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API).
+
 - {{httpheader("Permissions-Policy/otp-credentials", "otp-credentials")}} {{Experimental_Inline}}
   - : Controls whether the current document is allowed to use the [WebOTP API](/en-US/docs/Web/API/WebOTP_API) to request a one-time password (OTP) from a specially-formatted SMS message sent by the app's server, i.e., via {{domxref("CredentialsContainer.get", "navigator.credentials.get({otp: ..., ...})")}}.
 
@@ -264,9 +267,8 @@ Several features can be controlled at the same time by including a semi-colon-se
 It is worth giving the `src` value a special mention. We mentioned above that using this allowlist value will mean that the associated feature will be allowed in this `<iframe>`, as long as the document loaded into it comes from the same origin as the URL in its {{HTMLElement('iframe','src','#Attributes')}} attribute. This value is the _default_ `allowlist` value for features listed in `allow`, so the following are equivalent:
 
 ```html
-<iframe src="https://example.com" allow="geolocation 'src'">
-  <iframe src="https://example.com" allow="geolocation"></iframe
-></iframe>
+<iframe src="https://example.com" allow="geolocation 'src'"></iframe>
+<iframe src="https://example.com" allow="geolocation"></iframe>
 ```
 
 ### Denying access to powerful features

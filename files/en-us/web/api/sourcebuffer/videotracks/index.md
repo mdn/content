@@ -14,7 +14,7 @@ contained inside the `SourceBuffer`.
 
 ## Value
 
-An {{domxref("VideoTrackList")}} object.
+A {{domxref("VideoTrackList")}} object.
 
 ## Examples
 

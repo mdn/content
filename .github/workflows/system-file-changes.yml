@@ -2,6 +2,8 @@ name: System file changes
 
 on:
   pull_request_target:
+    branches:
+      - main
     paths:
       - ".github/workflows/**"
       - ".github/CODEOWNERS"
@@ -22,10 +24,11 @@ jobs:
     steps:
       - name: Block if author/actor is not an admin
         env:
+          ACTOR: ${{ github.actor }}
+          AUTHOR: ${{ github.event.pull_request.user.login }}
           GH_TOKEN: ${{ github.token }}
         run: |
           # Check author.
-          AUTHOR="${{ github.event.pull_request.user.login }}"
           AUTHOR_PERMISSION=$(gh api https://api.github.com/repos/${{ github.repository }}/collaborators/$AUTHOR/permission --jq .permission)
 
           if [ "$AUTHOR_PERMISSION" != "admin" ]; then
@@ -34,7 +37,6 @@ jobs:
           fi
 
           # Check actor.
-          ACTOR="${{ github.actor }}"
           if [ "$ACTOR" != "$AUTHOR" ]; then
             ACTOR_PERMISSION=$(gh api https://api.github.com/repos/${{ github.repository }}/collaborators/$ACTOR/permission --jq .permission)  
 

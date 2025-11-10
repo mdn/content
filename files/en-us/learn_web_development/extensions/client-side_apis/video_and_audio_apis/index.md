@@ -101,7 +101,7 @@ Our finished example will look (and function) something like the following:
     <button class="stop" data-icon="S" aria-label="stop"></button>
     <div class="timer">
       <div></div>
-      <span aria-label="timer">00:00</span>
+      <span>00:00</span>
     </div>
     <button class="rwd" data-icon="B" aria-label="rewind"></button>
     <button class="fwd" data-icon="F" aria-label="fast forward"></button>
@@ -173,7 +173,7 @@ button,
 }
 
 button::before {
-  font-family: HeydingsControlsRegular;
+  font-family: "HeydingsControlsRegular";
   font-size: 20px;
   position: relative;
   content: attr(data-icon);
@@ -271,6 +271,9 @@ rwd.addEventListener("click", mediaBackward);
 fwd.addEventListener("click", mediaForward);
 media.addEventListener("timeupdate", setTime);
 
+let intervalFwd;
+let intervalRwd;
+
 function playPauseMedia() {
   rwd.classList.remove("active");
   fwd.classList.remove("active");
@@ -294,9 +297,6 @@ function stopMedia() {
   clearInterval(intervalFwd);
   play.setAttribute("data-icon", "P");
 }
-
-let intervalFwd;
-let intervalRwd;
 
 function mediaBackward() {
   clearInterval(intervalFwd);
@@ -399,7 +399,7 @@ To get started with this example, follow these steps:
            <button class="stop" data-icon="S" aria-label="stop"></button>
            <div class="timer">
              <div></div>
-             <span aria-label="timer">00:00</span>
+             <span>00:00</span>
            </div>
            <button class="rwd" data-icon="B" aria-label="rewind"></button>
            <button class="fwd" data-icon="F" aria-label="fast forward"></button>
@@ -471,7 +471,7 @@ To get started with this example, follow these steps:
    }
 
    button::before {
-     font-family: HeydingsControlsRegular;
+     font-family: "HeydingsControlsRegular";
      font-size: 20px;
      position: relative;
      content: attr(data-icon);
@@ -609,7 +609,7 @@ Next, let's look at our button icons:
 }
 
 button::before {
-  font-family: HeydingsControlsRegular;
+  font-family: "HeydingsControlsRegular";
   font-size: 20px;
   position: relative;
   content: attr(data-icon);

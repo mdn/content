@@ -6,7 +6,7 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Size_decorate_content_panel", "Learn_web_development/Core/Styling_basics/Test_your_skills/Overflow", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Test_your_skills/Backgrounds_and_borders", "Learn_web_development/Core/Styling_basics/Test_your_skills/Overflow", "Learn_web_development/Core/Styling_basics")}}
 
 Overflow is what happens when there is too much content to fit inside an element box. In this lesson, you will learn how to manage overflow using CSS.
 
@@ -87,7 +87,7 @@ If you restrict a box with a `width` or a `height`, CSS trusts you to know what 
 
 ## The overflow property
 
-The {{cssxref("overflow")}} property allows you to specify how the browser should handle overflowing content. The default value of the [`<overflow>`](/en-US/docs/Web/CSS/overflow_value) value type is `visible`. With this default setting, one can see content when it overflows.
+The {{cssxref("overflow")}} property allows you to specify how the browser should handle overflowing content. The default value of the [`<overflow>`](/en-US/docs/Web/CSS/Reference/Values/overflow_value) value type is `visible`. With this default setting, one can see content when it overflows.
 
 ### Hiding overflowing content
 
@@ -212,4 +212,4 @@ This lesson introduced the concept of overflow. You should understand that defau
 
 In the next article, we'll give you some tests that you can use to check how well you've understood and retained the information we've provided on overflow.
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Size_decorate_content_panel", "Learn_web_development/Core/Styling_basics/Test_your_skills/Overflow", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Test_your_skills/Backgrounds_and_borders", "Learn_web_development/Core/Styling_basics/Test_your_skills/Overflow", "Learn_web_development/Core/Styling_basics")}}

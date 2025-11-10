@@ -9,11 +9,11 @@ browser-compat: api.CSSPageRule.style
 {{APIRef("CSSOM")}}
 
 The **`style`** read-only property of the {{domxref("CSSPageRule")}} interface returns a {{domxref("CSSPageDescriptors")}} object.
-This represents a [CSS declaration block](/en-US/docs/Web/API/CSS_Object_Model/CSS_Declaration_Block) for a CSS {{cssxref("@page")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule), and exposes style information and various style-related methods and properties for the page.
+This represents a [CSS declaration block](/en-US/docs/Web/API/CSS_Object_Model/CSS_Declaration_Block) for a CSS {{cssxref("@page")}} [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules), and exposes style information and various style-related methods and properties for the page.
 
 ## Value
 
-A {{domxref("CSSPageDescriptors")}} object with properties that match the associated {{cssxref("@page")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule).
+A {{domxref("CSSPageDescriptors")}} object with properties that match the associated {{cssxref("@page")}} [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules).
 
 > [!NOTE]
 > Earlier versions of the specification defined this property as a {{domxref("CSSStyleDeclaration")}}.
@@ -63,11 +63,10 @@ This allows us to see how the properties map in the Web API object.
 
 #### JavaScript
 
-The code first gets the document stylesheet at index `1`, and then gets the `cssRules` defined in that stylesheet.
-We need to get this stylesheet because the example is embedded in a separate frame with its own sheet (index `0` is the CSS for this page).
+The MDN [live sample](/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples) infrastructure combines all the CSS blocks in the example into a single inline style with the id `css-output`, so we first use {{domxref("document.getElementById()")}} to find that sheet.
 
 ```js
-const myRules = document.styleSheets[1].cssRules;
+const myRules = document.getElementById("css-output").sheet.cssRules;
 ```
 
 We then iterate through the rules defined for the live example and match any that are of type `CSSPageRule`, as these correspond to `@page` rules.

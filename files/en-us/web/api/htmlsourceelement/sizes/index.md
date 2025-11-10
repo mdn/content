@@ -19,12 +19,14 @@ A string.
 ## Examples
 
 ```html
-<source
-  id="el"
-  src="mediumVideo.mov"
-  type="video/quicktime"
-  sizes="(50em <= width <= 60px) 50em,
-         (30em <= width < 50em) 30em" />
+<picture>
+  <source
+    id="el"
+    srcset="medium-pic.jpg"
+    type="image/jpeg"
+    sizes="(50em <= width <= 60px) 50em,
+           (30em <= width < 50em) 30em" />
+</picture>
 ```
 
 ```js

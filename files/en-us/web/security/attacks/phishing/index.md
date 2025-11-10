@@ -117,7 +117,7 @@ In practice there are a few difficulties with this technique:
 
 As a result of these weaknesses, this defense is rarely used: both MFA and passkeys are considered to be stronger defenses.
 
-### Defense summary checklist
+## Defense summary checklist
 
 - Set `SPF`, `DKIM`, and `DMARC` DNS records for your domains.
 - Consider using passkeys to authenticate users.

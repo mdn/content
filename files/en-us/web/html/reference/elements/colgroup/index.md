@@ -20,20 +20,24 @@ The **`<colgroup>`** [HTML](/en-US/docs/Web/HTML) element defines a group of col
     <col span="2" class="batman" />
     <col span="2" class="flash" />
   </colgroup>
-  <tr>
-    <td></td>
-    <th scope="col">Batman</th>
-    <th scope="col">Robin</th>
-    <th scope="col">The Flash</th>
-    <th scope="col">Kid Flash</th>
-  </tr>
-  <tr>
-    <th scope="row">Skill</th>
-    <td>Smarts, strong</td>
-    <td>Dex, acrobat</td>
-    <td>Super speed</td>
-    <td>Super speed</td>
-  </tr>
+  <thead>
+    <tr>
+      <td></td>
+      <th scope="col">Batman</th>
+      <th scope="col">Robin</th>
+      <th scope="col">The Flash</th>
+      <th scope="col">Kid Flash</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Skill</th>
+      <td>Smarts, strong</td>
+      <td>Dex, acrobat</td>
+      <td>Super speed</td>
+      <td>Super speed</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -95,7 +99,7 @@ The following attributes are deprecated and should not be used. They are documen
     > If the table does use a [`colspan`](/en-US/docs/Web/HTML/Reference/Elements/td#colspan) attribute, the effect can be achieved by combining adequate CSS attribute selectors like `[colspan=n]`, though this is not trivial.
 
 - `bgcolor` {{deprecated_inline}}
-  - : Defines the background color of each column group cell. The value is an HTML color; either a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/hex-color), prefixed by a `#`, or a [color keyword](/en-US/docs/Web/CSS/named-color). Other CSS {{cssxref("color_value", "&lt;color&gt;")}} values are not supported. Use the {{cssxref("background-color")}} CSS property instead, as this attribute is deprecated.
+  - : Defines the background color of each column group cell. The value is an HTML color; either a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/Reference/Values/hex-color), prefixed by a `#`, or a [color keyword](/en-US/docs/Web/CSS/Reference/Values/named-color). Other CSS {{cssxref("color_value", "&lt;color&gt;")}} values are not supported. Use the {{cssxref("background-color")}} CSS property instead, as this attribute is deprecated.
 
 - `char` {{deprecated_inline}}
   - : Does nothing. It was originally intended to specify the alignment of the content to a character of each column group cell. Typical values for this include a period (`.`) when attempting to align numbers or monetary values. If [`align`](#align) is not set to `char`, this attribute is ignored, though it will still be used as the default value for the [`align`](/en-US/docs/Web/HTML/Reference/Elements/col#align) of the {{HTMLElement("col")}} elements which are members of this column group.
@@ -109,7 +113,7 @@ The following attributes are deprecated and should not be used. They are documen
     > [!NOTE]
     > Setting `vertical-align` on the `<colgroup>` element has no effect as {{HTMLElement("td")}} and {{HTMLElement("th")}} elements are not descendants of the `<colgroup>` element, and therefore they do not inherit from it.
     >
-    > If the table does not use a [`colspan`](/en-US/docs/Web/HTML/Reference/Elements/td#colspan) attribute, use the [`td:nth-of-type()`](/en-US/docs/Web/CSS/:nth-of-type) CSS selector per column, e.g., `td:nth-of-type(2) { vertical-align: middle; }` to center the second column cells vertically.
+    > If the table does not use a [`colspan`](/en-US/docs/Web/HTML/Reference/Elements/td#colspan) attribute, use the [`td:nth-of-type()`](/en-US/docs/Web/CSS/Reference/Selectors/:nth-of-type) CSS selector per column, e.g., `td:nth-of-type(2) { vertical-align: middle; }` to center the second column cells vertically.
     >
     > If the table does use a [`colspan`](/en-US/docs/Web/HTML/Reference/Elements/td#colspan) attribute, the effect can be achieved by combining adequate CSS attribute selectors like `[colspan=n]`, though this is not trivial.
 
@@ -142,33 +146,37 @@ Two `<colgroup>` elements are used to structure a basic table by creating column
   </caption>
   <colgroup span="5" class="weekdays"></colgroup>
   <colgroup span="2" class="weekend"></colgroup>
-  <tr>
-    <th>Mon</th>
-    <th>Tue</th>
-    <th>Wed</th>
-    <th>Thu</th>
-    <th>Fri</th>
-    <th>Sat</th>
-    <th>Sun</th>
-  </tr>
-  <tr>
-    <td>Clean room</td>
-    <td>Football training</td>
-    <td>Dance Course</td>
-    <td>History Class</td>
-    <td>Buy drinks</td>
-    <td>Study hour</td>
-    <td>Free time</td>
-  </tr>
-  <tr>
-    <td>Yoga</td>
-    <td>Chess Club</td>
-    <td>Meet friends</td>
-    <td>Gymnastics</td>
-    <td>Birthday party</td>
-    <td>Fishing trip</td>
-    <td>Free time</td>
-  </tr>
+  <thead>
+    <tr>
+      <th>Mon</th>
+      <th>Tue</th>
+      <th>Wed</th>
+      <th>Thu</th>
+      <th>Fri</th>
+      <th>Sat</th>
+      <th>Sun</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Clean room</td>
+      <td>Football training</td>
+      <td>Dance Course</td>
+      <td>History Class</td>
+      <td>Buy drinks</td>
+      <td>Study hour</td>
+      <td>Free time</td>
+    </tr>
+    <tr>
+      <td>Yoga</td>
+      <td>Chess Club</td>
+      <td>Meet friends</td>
+      <td>Gymnastics</td>
+      <td>Birthday party</td>
+      <td>Fishing trip</td>
+      <td>Free time</td>
+    </tr>
+  </tbody>
 </table>
 ```
 

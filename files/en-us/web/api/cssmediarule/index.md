@@ -25,7 +25,7 @@ _No specific methods; inherits methods from its ancestors {{domxref("CSSConditio
 ## Examples
 
 The CSS below includes a media query with one style rule.
-As this rule lives in the last stylesheet added to the document, it will be the first CSSRule returned by the last stylesheet in the document (`document.styleSheets[document.styleSheets.length-1].cssRules`).
+The MDN [live sample](/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples) infrastructure combines all the CSS blocks in the example into a single inline style with the id `css-output`, so we first use {{domxref("document.getElementById()")}} to find that sheet.
 `myRules[0]` returns a `CSSMediaRule` object, from which we can get the `mediaText`.
 
 ```html
@@ -42,7 +42,7 @@ As this rule lives in the last stylesheet added to the document, it will be the 
 
 ```js
 const log = document.getElementById("log");
-const myRules = document.styleSheets[document.styleSheets.length - 1].cssRules;
+const myRules = document.getElementById("css-output").sheet.cssRules;
 const mediaList = myRules[0]; // a CSSMediaRule representing the media query.
 log.textContent += ` ${mediaList.media.mediaText}`;
 ```

@@ -400,20 +400,20 @@ function draw() {
 ```
 
 ```html hidden
-<table>
-  <tr>
-    <td>
-      <canvas id="canvas" width="150" height="150" role="presentation"></canvas>
-    </td>
-    <td>
-      Change the <code>miterLimit</code> by entering a new value below and
-      clicking the redraw button.<br /><br />
-      <label for="miterLimit">Miter limit</label>
-      <input type="number" id="miterLimit" size="3" min="1" />
-      <input type="submit" id="redraw" value="Redraw" />
-    </td>
-  </tr>
-</table>
+<canvas id="canvas" width="150" height="150" role="presentation"></canvas>
+<div>
+  Change the <code>miterLimit</code> by entering a new value below and clicking
+  the redraw button.<br /><br />
+  <label for="miterLimit">Miter limit</label>
+  <input type="number" id="miterLimit" min="1" />
+  <button id="redraw">Redraw</button>
+</div>
+```
+
+```css hidden
+body {
+  display: flex;
+}
 ```
 
 ```js hidden
@@ -636,7 +636,7 @@ draw();
 
 The first gradient is positioned in the center of the first rectangle and moves a green color stop at the start, to a white one at the end. The angle starts at 2 radians, which is noticeable because of the beginning/end line pointing south east.
 
-The second gradient is also positioned at the center of it's second rectangle. This one has multiple color stops, alternating from black to white at each quarter of the rotation. This gives us the checkered effect.
+The second gradient is also positioned at the center of the second rectangle. This one has multiple color stops, alternating from black to white at each quarter of the rotation. This gives us the checkered effect.
 
 {{EmbedLiveSample("A_createConicGradient_example", "", "160")}}
 
@@ -645,7 +645,7 @@ The second gradient is also positioned at the center of it's second rectangle. T
 In one of the examples on the previous page, we used a series of loops to create a pattern of images. There is, however, a much simpler method: the `createPattern()` method.
 
 - {{domxref("CanvasRenderingContext2D.createPattern", "createPattern(image, type)")}}
-  - : Creates and returns a new canvas pattern object. `image` is the source of the image (that is, an {{domxref("HTMLImageElement")}}, a {{domxref("SVGImageElement")}}, another {{domxref("HTMLCanvasElement")}} or a {{domxref("OffscreenCanvas")}}, an {{domxref("HTMLVideoElement")}} or a {{domxref("VideoFrame")}}, or an {{domxref("ImageBitmap")}}). `type` is a string indicating how to use the image.
+  - : Creates and returns a new canvas pattern object. `image` is the source of the image (that is, an {{domxref("HTMLImageElement")}}, a {{domxref("SVGImageElement")}}, another {{domxref("HTMLCanvasElement")}} or an {{domxref("OffscreenCanvas")}}, an {{domxref("HTMLVideoElement")}} or a {{domxref("VideoFrame")}}, or an {{domxref("ImageBitmap")}}). `type` is a string indicating how to use the image.
 
 The type specifies how to use the image in order to create the pattern, and must be one of the following string values:
 

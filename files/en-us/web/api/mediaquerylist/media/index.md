@@ -45,7 +45,7 @@ A `<span>` to receive the output.
 ```css hidden
 .mq-value {
   font:
-    18px arial,
+    18px "Arial",
     sans-serif;
   font-weight: bold;
   color: #8888ff;
@@ -68,8 +68,8 @@ A `<span>` to receive the output.
 
 ## See also
 
-- [Media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [Using media queries from code](/en-US/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
+- [Media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using)
+- [Using media queries from code](/en-US/docs/Web/CSS/Guides/Media_queries/Testing)
 - {{DOMxRef("window.matchMedia()")}}
 - {{DOMxRef("MediaQueryList")}}
 - {{DOMxRef("MediaQueryListEvent")}}

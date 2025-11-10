@@ -74,7 +74,7 @@ element that allows multiple selections).
     >Choose some music types, then click the button below:</label
   >
   <select id="musicTypes" name="musicTypes" multiple>
-    <option selected>R&B</option>
+    <option selected>R&amp;B</option>
     <option>Jazz</option>
     <option>Blues</option>
     <option>New Age</option>

@@ -63,7 +63,7 @@ Within character classes, more characters can appear literally. For more informa
       <td>✅</td><td>❌</td><td>✅</td><td>❌</td><td>✅</td><td>❌</td>
     </tr>
     <tr>
-      <td><code>!#%&,:;<=>@`~</code></td>
+      <td><code>!#%&,:;&lt;=&gt;@`~</code></td>
       <td>✅</td><td>❌</td><td>✅</td><td>❌</td><td>✅</td><td>✅</td>
     </tr>
     <tr>

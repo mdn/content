@@ -1,5 +1,6 @@
 ---
 title: User input methods and controls
+short-title: UI methods & controls
 slug: Learn_web_development/Extensions/Forms/User_input_methods
 page-type: guide
 sidebar: learnsidebar
@@ -21,7 +22,7 @@ You should always be mindful of keyboard accessibility — many web users only u
 - The [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API) allows you to display your content in fullscreen mode, which is needed if your form is being served on a refrigerator or museum kiosk.
 - When you need to create a custom form control, like a rich-text editor, the [`contentEditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) attribute enables creating editable controls from normally non-editable HTML elements.
 - The [Drag and Drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API) allows users to drag elements around a page and drop them in different locations. This can help improve the user experience when it comes to selecting files for upload or reordering content modules within a page.
-- When screen orientation matters for your layout, you can use [CSS media queries](/en-US/docs/Web/CSS/@media/orientation) to style your forms based on the browser orientation, or even use the [Screen Orientation API](/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation) to read the screen orientation state and perform other actions.
+- When screen orientation matters for your layout, you can use [CSS media queries](/en-US/docs/Web/CSS/Reference/At-rules/@media/orientation) to style your forms based on the browser orientation, or even use the [Screen Orientation API](/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation) to read the screen orientation state and perform other actions.
 
 The following sections provide a set of recommendations and best practices for enabling the widest possible set of users to use your websites and applications.
 
@@ -81,7 +82,7 @@ If you need slightly different layouts depending on whether the user is in portr
 
 When screen orientation matters for your form, you can read the screen orientation state, be informed when this state changes, and able to lock the screen orientation to a specific state (usually portrait or landscape) through the [Screen Orientation API](/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation).
 
-- Orientation data can be retrieved through {{domxref("screenOrientation.type")}} or with CSS through the [`orientation`](/en-US/docs/Web/CSS/@media/orientation) media feature.
+- Orientation data can be retrieved through {{domxref("screenOrientation.type")}} or with CSS through the [`orientation`](/en-US/docs/Web/CSS/Reference/At-rules/@media/orientation) media feature.
 - When the screen orientation changes, the {{domxref("ScreenOrientation.change_event", "change")}} event is fired on the screen object.
 - Locking the screen orientation is made possible by invoking the {{domxref("ScreenOrientation.lock()")}} method.
 - The {{domxref("ScreenOrientation.unlock()")}} method removes all the previous screen locks that have been set.

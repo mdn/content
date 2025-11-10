@@ -11,7 +11,7 @@ The **`<semantics>`** [MathML](/en-US/docs/Web/MathML) element associates annota
 - a first child which is a MathML expression to be annotated.
 - subsequent {{mathmlelement("annotation")}} or {{mathmlelement("annotation-xml")}} elements, the latter being reserved for XML formats such as [Content MathML](https://en.wikipedia.org/wiki/MathML#Content_MathML) or {{glossary("SVG")}}.
 
-By default, only the first child of the `<semantics>` element is rendered while the others have their [display](/en-US/docs/Web/CSS/display) set to `none`.
+By default, only the first child of the `<semantics>` element is rendered while the others have their [display](/en-US/docs/Web/CSS/Reference/Properties/display) set to `none`.
 
 ```css
 semantics > :not(:first-child) {

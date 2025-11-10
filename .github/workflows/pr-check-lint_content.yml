@@ -2,8 +2,6 @@ name: Lint and review content files
 
 on:
   pull_request_target:
-    branches:
-      - main
     paths:
       - .nvmrc
       - "*.md"
@@ -23,7 +21,9 @@ jobs:
 
     steps:
       - name: Checkout BASE
-        uses: actions/checkout@v5
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+        with:
+          persist-credentials: false
 
       - name: Get changed files
         id: check
@@ -55,10 +55,11 @@ jobs:
 
       - name: Checkout HEAD
         if: steps.check.outputs.HAS_FILES == 'true'
-        uses: actions/checkout@v5
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           path: pr_head
+          persist-credentials: false
 
       - name: Get changed content from HEAD
         if: steps.check.outputs.HAS_FILES == 'true'
@@ -78,7 +79,7 @@ jobs:
 
       - name: Setup Node.js environment
         if: steps.check.outputs.HAS_FILES == 'true'
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # v6.0.0
         with:
           node-version-file: ".nvmrc"
           cache: yarn

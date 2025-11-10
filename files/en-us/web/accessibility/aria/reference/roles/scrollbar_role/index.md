@@ -11,7 +11,7 @@ A `scrollbar` is a graphical object that controls the scrolling of content withi
 
 ## Description
 
-A `scrollbar` is a range that controls what part of a viewport's content is currently visible in the viewport's frame; whether the viewport is a full browser size, an iframe, or any element's [block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context).
+A `scrollbar` is a range that controls what part of a viewport's content is currently visible in the viewport's frame; whether the viewport is a full browser size, an iframe, or any element's [block formatting context](/en-US/docs/Web/CSS/Guides/Display/Block_formatting_context).
 
 ### What is scroll bar
 
@@ -25,7 +25,7 @@ If you aren't currently seeing a scroll bar, it may be because your browser only
 
 ### ARIA `scrollbar`
 
-It is always best to use native scroll bars. You can use the CSS {{CSSXref('overflow')}} property to ensure the appearance of native scroll bars. A [CSS scrollbar specification](https://drafts.csswg.org/css-scrollbars/) is being developed. Some browsers allow [styling scroll bars via prefixed pseudo-elements](/en-US/docs/Web/CSS/::-webkit-scrollbar).
+It is always best to use native scroll bars. You can use the CSS {{CSSXref('overflow')}} property to ensure the appearance of native scroll bars. A [CSS scrollbar specification](https://drafts.csswg.org/css-scrollbars/) is being developed. Some browsers allow [styling scroll bars via prefixed pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/::-webkit-scrollbar).
 
 Because native scroll bar styling has historically been limited, you may come across a scrollbar implemented in JavaScript that you need to support and make fully accessible. For this, you can use the `scrollbar` role to inform assistive technologies that a UI control is an interactive scrollbar.
 

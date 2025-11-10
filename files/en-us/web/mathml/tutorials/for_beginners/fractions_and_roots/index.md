@@ -205,7 +205,7 @@ const checkboxes = Array.from(options.getElementsByTagName("input"));
 const status = document.getElementById("status");
 function verifyOption(checkbox) {
   const mathml = checkbox.dataset.highlight
-    ? document.getElementById(mathml)
+    ? document.getElementById(checkbox.dataset.highlight)
     : null;
   if (checkbox.checked) {
     comment.textContent = checkbox.dataset.comment;

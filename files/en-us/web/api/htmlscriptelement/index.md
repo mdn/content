@@ -11,6 +11,9 @@ HTML {{HTMLElement("script")}} elements expose the **`HTMLScriptElement`** inter
 
 JavaScript files should be served with the `text/javascript` [MIME type](/en-US/docs/Web/HTTP/Guides/MIME_types), but browsers are lenient and block them only if the script is served with an image type (`image/*`), video type (`video/*`), audio type (`audio/*`), or `text/csv`. If the script is blocked, its element receives an {{domxref("HTMLElement/error_event", "error")}} event; otherwise, it receives a {{domxref("Window/load_event", "load")}} event.
 
+> [!NOTE]
+> When inserted using the {{domxref("Document.write()")}} method, {{HTMLElement("script")}} elements execute (typically synchronously), but when inserted using {{domxref("Element.innerHTML")}} or {{domxref("Element.outerHTML")}}, they do not execute at all.
+
 {{InheritanceDiagram}}
 
 ## Instance properties
@@ -33,6 +36,9 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
   - : A string; an obsolete way of registering event handlers on elements in an HTML document.
 - {{domxref("HTMLScriptElement.fetchPriority")}}
   - : An optional string representing a hint given to the browser on how it should prioritize fetching of an external script relative to other external scripts. If this value is provided, it must be one of the possible permitted values: `high` to fetch at a high priority, `low` to fetch at a low priority, or `auto` to indicate no preference (which is the default). It reflects the `fetchpriority` attribute of the {{HTMLElement("script")}} element.
+- {{domxref("HTMLScriptElement.innerText")}}
+  - : A property that represents the inline text content of the {{HTMLElement("script")}} element as though it were rendered text.
+    The property accepts either a {{domxref("TrustedScript")}} object or a string.
 - {{domxref("HTMLScriptElement.integrity")}}
   - : A string that contains inline metadata that a browser can use to verify that a fetched resource has been delivered without unexpected manipulation. It reflects the `integrity` attribute of the {{HTMLElement("script")}} element.
 - {{domxref("HTMLScriptElement.noModule")}}
@@ -40,15 +46,19 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLScriptElement.referrerPolicy")}}
   - : A string that reflects the [`referrerPolicy`](/en-US/docs/Web/HTML/Reference/Elements/script#referrerpolicy) HTML attribute indicating which referrer to use when fetching the script, and fetches done by that script.
 - {{domxref("HTMLScriptElement.src")}}
-  - : A string representing the URL of an external script; this can be used as an alternative to embedding a script directly within a document. It reflects the `src` attribute of the {{HTMLElement("script")}} element.
+  - : A string representing the URL of an external script; this can be used as an alternative to embedding a script directly within a document.
+    It reflects the `src` attribute of the {{HTMLElement("script")}} element.
 - {{domxref("HTMLScriptElement.text")}}
-  - : A string that joins and returns the contents of all {{domxref("Text")}} nodes inside the {{HTMLElement("script")}} element (ignoring other nodes like comments) in tree order. On setting, it acts the same way as the {{domxref("Node.textContent")}} property.
-
-    > [!NOTE]
-    > When inserted using the {{domxref("Document.write()")}} method, {{HTMLElement("script")}} elements execute (typically synchronously), but when inserted using {{domxref("Element.innerHTML")}} or {{domxref("Element.outerHTML")}}, they do not execute at all.
-
+  - : A property that represents the inline text content of the {{HTMLElement("script")}} element.
+    The property accepts either a {{domxref("TrustedScript")}} object or a string.
+    It acts the same way as the [`textContent`](/en-US/docs/Web/API/HTMLScriptElement/textContent) property.
+- {{domxref("HTMLScriptElement.textContent")}}
+  - : A property that represents the inline text content of the {{HTMLElement("script")}} element.
+    The property is redefined from {{domxref("Node/textContent","Node")}} to support {{domxref("TrustedScript")}} as an input.
+    On this element it behaves exactly like the [`text`](/en-US/docs/Web/API/HTMLScriptElement/text) property.
 - {{domxref("HTMLScriptElement.type")}}
-  - : A string representing the type of the script. It reflects the `type` attribute of the {{HTMLElement("script")}} element.
+  - : A string representing the type of the script.
+    It reflects the `type` attribute of the {{HTMLElement("script")}} element.
 
 ## Static methods
 

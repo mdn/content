@@ -192,7 +192,7 @@ An emulator might be as simple as testing a device condition. For example, if yo
 More often than not though, you'll have to install some kind of emulator. The most common devices/browsers you'll want to test are as follows:
 
 - The official [Android Studio IDE](https://developer.android.com/studio/) for developing Android apps is a bit heavy weight for just testing websites on Google Chrome or the old Stock Android browser, but it does come with a Robust [emulator](https://developer.android.com/studio/run/emulator.html). If you want something a bit more lightweight, [Andy](https://www.andyroid.net/) is a reasonable option that runs on both Windows and Mac.
-- Apple provides an app called [Simulator](https://help.apple.com/simulator/mac/current/) that runs on top of the [XCode](https://developer.apple.com/xcode/) development environment, and emulates iPad/iPhone/Apple Watch/Apple TV. This includes the native iOS Safari browser. This unfortunately only runs on a Mac.
+- Apple provides an app called [Simulator](https://help.apple.com/simulator/mac/current/) that runs on top of the [Xcode](https://developer.apple.com/xcode/) development environment, and emulates iPad/iPhone/Apple Watch/Apple TV. This includes the native iOS Safari browser. This unfortunately only runs on a Mac.
 
 You can often find simulators for other mobile device environments too, for example:
 

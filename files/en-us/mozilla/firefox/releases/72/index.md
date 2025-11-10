@@ -1,5 +1,5 @@
 ---
-title: Firefox 72 for Developers
+title: Firefox 72 release notes for developers
 short-title: Firefox 72
 slug: Mozilla/Firefox/Releases/72
 page-type: firefox-release-notes
@@ -27,7 +27,7 @@ This article provides information about the changes in Firefox 72 that will affe
 
 [Page Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html):
 
-- You can set a [preference to enable a simulator](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#view-media-rules-for-color-scheme-preference) for different values of the [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) media feature ([Firefox bug 1550804](https://bugzil.la/1550804)).
+- You can set a [preference to enable a simulator](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#view-media-rules-for-color-scheme-preference) for different values of the [`prefers-color-scheme`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) media feature ([Firefox bug 1550804](https://bugzil.la/1550804)).
 
 #### Removals
 
@@ -39,8 +39,8 @@ _No changes._
 
 ### CSS
 
-- CSS Shadow Parts are now enabled. This includes the [`part` attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/part) and [`::part` pseudo-element](/en-US/docs/Web/CSS/::part), which allow shadow hosts to selectively expose chosen elements from their shadow tree to the outside page for styling purposes ([Firefox bug 1559074](https://bugzil.la/1559074)).
-- [CSS Motion Path](/en-US/docs/Web/CSS/CSS_motion_path) has been shipped ([Firefox bug 1582554](https://bugzil.la/1582554), also see the [Intent to Ship](https://groups.google.com/forum/#!topic/mozilla.dev.platform/nOOIRsuxvuc)). This includes:
+- CSS Shadow Parts are now enabled. This includes the [`part` attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/part) and [`::part` pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/::part), which allow shadow hosts to selectively expose chosen elements from their shadow tree to the outside page for styling purposes ([Firefox bug 1559074](https://bugzil.la/1559074)).
+- [CSS Motion Path](/en-US/docs/Web/CSS/Guides/Motion_path) has been shipped ([Firefox bug 1582554](https://bugzil.la/1582554), also see the [Intent to Ship](https://groups.google.com/forum/#!topic/mozilla.dev.platform/nOOIRsuxvuc)). This includes:
   - {{cssxref("offset")}}
   - {{cssxref("offset-path")}}
   - {{cssxref("offset-anchor")}}
@@ -118,7 +118,7 @@ _No changes._
 - The [`browserSettings.ftpProtocolEnabled`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/ftpProtocolEnabled) property has been implemented ([Firefox bug 1592687](https://bugzil.la/1592687)).
 - The [`BrowserSetting.onChange`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/onChange) event has been implemented ([Firefox bug 1410412](https://bugzil.la/1410412)).
 - The [`captivePortal.canonicalURL`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/captivePortal/canonicalURL) property has been implemented ([Firefox bug 1592932](https://bugzil.la/1592932)).
-- The callback functions for the [`browserAction.onClicked`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/onClicked) and [`pageAction.onClicked`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/onClicked) events now include a `OnClickData` property containing an object whose properties describe the mouse button pressed along with any keyboard modifiers ([Firefox bug 1405031](https://bugzil.la/1405031)). This allows support for additional types of mouse click.
+- The callback functions for the [`browserAction.onClicked`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/onClicked) and [`pageAction.onClicked`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/onClicked) events now include an `OnClickData` property containing an object whose properties describe the mouse button pressed along with any keyboard modifiers ([Firefox bug 1405031](https://bugzil.la/1405031)). This allows support for additional types of mouse click.
 - The {{WebExtAPIRef("browserSettings.tlsVersionRestrictionConfig")}} property has been implemented and enables the highest and lowest versions of TLS supported by the browser to be read ([Firefox bug 1593635](https://bugzil.la/1593635)).
 
 ### Manifest changes
