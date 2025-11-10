@@ -92,7 +92,7 @@ const browserType = "mozilla";
 if (browserType.startsWith("zilla")) {
   console.log("It starts with zilla!");
 } else {
-  console.log("It does NOT start with zilla!");
+  console.log("It DOESN'T start with zilla!");
 }
 ```
 
