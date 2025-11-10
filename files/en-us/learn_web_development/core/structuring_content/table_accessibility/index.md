@@ -134,11 +134,11 @@ A caption is placed directly beneath the `<table>` tag.
 
 ### Table caption practice
 
-At this point we'll get you to try out adding a caption to an HTML table, using a language teacher's school timetable as an example.
+At this point we'll get you to try out adding a caption to an HTML table, using the school timetable you met in the previous article.
 
-1. Make a local copy of our [timetable-fixed.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/timetable-fixed.html) file.
-2. Add a suitable caption for the table.
-3. Save your code and open it in a browser to see what it looks like.
+1. Copy the first HTML block in the [Grouping columns with `<colgroup>` and `<col>`](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics#grouping_columns_with_colgroup_and_col) into an HTML file on your local hard drive, or an online editor such as [CodePen](https://codepen.io/) or [JSBin](https://jsbin.com/?html,output).
+2. Add a suitable caption to the table.
+3. Save your code and see what it looks like.
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -148,23 +148,20 @@ Your finished HTML should look something like this:
 ```html
 <table>
   <caption>
-    Florence's weekly lesson timetable
+    St. Winnifred's weekly language lesson timetable
   </caption>
   <colgroup>
     <col span="2" />
-    <col style="background-color: #97DB9A;" />
-    <col style="width: 42px;" />
-    <col style="background-color: #97DB9A;" />
-    <col style="background-color: #DCC48E; border: 4px solid #C1437A;" />
-    <col span="2" style="width: 42px;" />
+    <col class="column-background" />
+    <col class="column-fixed-width" />
+    <col class="column-background" />
+    <col class="column-background-border" />
+    <col span="2" class="column-fixed-width" />
   </colgroup>
-  <tr>
-    <!-- Rest of code omitted for brevity -->
-  </tr>
+
+  <!-- Rest of code omitted for brevity -->
 </table>
 ```
-
-You can find this code on GitHub at [timetable-caption.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/timetable-caption.html) ([see it running live also](https://mdn.github.io/learning-area/html/tables/advanced/timetable-caption.html)).
 
 </details>
 
