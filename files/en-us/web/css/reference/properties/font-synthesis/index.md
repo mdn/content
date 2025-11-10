@@ -47,7 +47,10 @@ font-synthesis: position;
     <p class="chinese">
       中文排版通常不运用<span class="bold">粗体</span>或<span class="italic"
         >斜体</span
-      >，也不会使用<span class="small-caps">小型大写字母</span>和<span class="sub">下标</span><span class="sup">上标</span>变体。
+      >，也不会使用<span class="small-caps">小型大写字母</span>和<span
+        class="sub"
+        >下标</span
+      ><span class="sup">上标</span>变体。
     </p>
   </div>
 </section>
