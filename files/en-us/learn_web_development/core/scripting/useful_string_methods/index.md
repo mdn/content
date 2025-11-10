@@ -90,9 +90,9 @@ Often you'll want to know if a string starts or ends with a particular substring
 const browserType = "mozilla";
 
 if (browserType.startsWith("zilla")) {
-  console.log("Found zilla!");
+  console.log("It starts with zilla!");
 } else {
-  console.log("No zilla here!");
+  console.log("It DOESN'T start with zilla!");
 }
 ```
 
@@ -100,9 +100,9 @@ if (browserType.startsWith("zilla")) {
 const browserType = "mozilla";
 
 if (browserType.endsWith("zilla")) {
-  console.log("Found zilla!");
+  console.log("It ends with zilla!");
 } else {
-  console.log("No zilla here!");
+  console.log("It DOESN'T end with zilla!");
 }
 ```
 
