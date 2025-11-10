@@ -70,6 +70,16 @@ If the {{HTMLElement("source")}}'s media condition evaluates to `false`, the bro
 </picture>
 ```
 
+You can swap image assets for light and dark themes using the [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) media feature:
+
+```html
+<picture>
+  <source srcset="logo-dark.png" media="(prefers-color-scheme: dark)" />
+  <source srcset="logo-light.png" media="(prefers-color-scheme: light)" />
+  <img src="logo-light.png" alt="Product logo" />
+</picture>
+```
+
 ### The srcset attribute
 
 The [srcset](/en-US/docs/Web/HTML/Reference/Elements/source#srcset) attribute is used to offer a list of possible images based on size or the display's pixel density.
@@ -211,3 +221,4 @@ The `type` attribute specifies a [MIME type](/en-US/docs/Web/HTTP/Guides/MIME_ty
 - {{HTMLElement("source")}} element
 - Positioning and sizing the picture within its frame: {{cssxref("object-position")}} and {{cssxref("object-fit")}}
 - [Image file type and format guide](/en-US/docs/Web/Media/Guides/Formats/Image_types)
+- [CSS `prefers-color-scheme` media feature](/en-US/docs/Web/CSS/@media/prefers-color-scheme)
