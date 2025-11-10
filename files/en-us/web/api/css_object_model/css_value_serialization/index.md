@@ -9,47 +9,114 @@ spec-urls:
 
 {{APIRef("CSSOM")}}
 
-When working with CSS through JavaScript APIs, property values are **serialized** into standardized string representations based on the value's [data type](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_data_types). For example, you might set a color using the `hsl(240 100% 50%)` syntax, but when accessed through JavaScript, the value may be returned in the equivalent `"rgb(0, 0, 255)"` syntax.
+Some CSSOM APIs _serialize_ property values into standardized string representations based on the value's [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types). For example, you might set a color using the `hsl(240 100% 50%)` syntax, but when accessed through JavaScript, the value will be returned in the equivalent `"rgb(0, 0, 255)"` syntax.
+
+CSS data types can often be expressed in multiple syntaxes. For example, the [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value) data type can be represented using named colors (`red`), hexadecimal notation (`#ff0000`), functional notation (`rgb(255 0 0)`), and more. These different syntaxes are exactly equivalent at every stage of [CSS value processing](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing), similar to how in JavaScript, the same string can be written with single quotes or double quotes, or the same number can be written in different formats (like `16`, `16.0`, or `0x10`).
+
+Because CSS converts all these surface representations to the same underlying value during value processing, it is often impossible to recover the original syntax from the already-parsed CSSOM. Furthermore, a _canonical_ representation is often more useful for scripts, because it allows comparisons and calculations based on how the content is presented to the user, rather than how it was originally authored.
 
 ## When and how values are serialized
 
-Serialization ensures that CSS values are exposed to JavaScript in a consistent format across browsers. Without this, equivalent values could be returned in different syntaxes (for example, `#f00` vs. `rgb(255, 0, 0)`, or `1em` vs. `16px`), breaking code that relies on string comparisons.
-
-Serialization happens whenever CSS values are read as strings through JavaScript APIs, such as:
+Serialization happens whenever CSS property values are read as strings through JavaScript APIs, such as:
 
 - {{domxref("CSSStyleDeclaration.getPropertyValue()")}}
 - {{domxref("CSSStyleDeclaration.cssText")}}
 - Accessing properties directly on {{domxref("CSSStyleDeclaration")}} objects (e.g., `element.style.backgroundColor`)
 
-Note that different APIs retrieve the value at different stages of [value processing](/en-US/docs/Web/CSS/CSS_cascade/Value_processing), which have slightly different serialization behaviors.
+Different APIs return `CSSStyleDeclaration` objects at different stages of [value processing](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing), which have slightly different serialization behaviors. For example, {{domxref("Window.getComputedStyle()")}} and {{domxref("HTMLElement.style")}} returns the [resolved value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#resolved_value) of properties, while {{domxref("CSSStyleRule.style")}} returns _more or less_ the [declared value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#declared_value).
+
+> [!NOTE]
+> The [CSS Typed OM API](/en-US/docs/Web/API/CSS_Typed_OM_API) is able to represent units and other CSS syntaxes; however, style retrieved from elements is still processed and doesn't preserve the original syntax. For example, `CSS.cm(1).toString()` returns `"1cm"` instead of serializing to pixels, but `element.computedStyleMap().get("margin-left").toString()` still returns the resolved pixel value.
 
 Each CSS value type has an associated serialization format defined by the CSS specifications. Some common rules include:
 
 - Keywords (like `auto`, `block`, `none`) serialize to all lowercase.
-- [`<color>`](/en-US/docs/Web/CSS/color_value):
-  - For sRGB colors: Unless declared using `color()`, serialized as `rgb(R, G, B)` or `rgba(R, G, B, A)`, where all arguments are numbers, and the `rgb` form is selected if the alpha is exactly `1`. The keyword `transparent` serializes as `rgba(0, 0, 0, 0)`.
+- [`<angle>`](/en-US/docs/Web/CSS/Reference/Values/angle): serialized to some angle unit, depending on the context (unspecified). For `element.style` and `getComputedStyle()`, this is `deg`.
+- [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value):
+  - For sRGB colors (named, `transparent`, system colors, hex, `rgb`, `hsl`, `hwb`): serialized as `rgb(R, G, B)` or `rgba(R, G, B, A)`, where all arguments are numbers, and the `rgb` form is selected if the alpha is exactly `1`.
   - For `lab()`, `lch()`, `oklab()`, `oklch()`, and `color()` colors: the function form is preserved, with numeric arguments.
-- [`<length>`](/en-US/docs/Web/CSS/length): resolved to `px`.
-- [`<angle>`](/en-US/docs/Web/CSS/angle): resolved to `deg`.
-- [`<percentage>`](/en-US/docs/Web/CSS/percentage): preserved as a percentage.
-- [`<time>`](/en-US/docs/Web/CSS/time): resolved to `s`.
-- [`<frequency>`](/en-US/docs/Web/CSS/frequency): resolved to `Hz`.
-- [`<resolution>`](/en-US/docs/Web/CSS/resolution): resolved to `dppx`.
-- [`<url>`](/en-US/docs/Web/CSS/url): serialized with `url("...")`, with the URL resolved to an absolute URL.
+  - The keyword `currentColor` serializes as `currentcolor`.
+- [`<percentage>`](/en-US/docs/Web/CSS/Reference/Values/percentage): preserved as a percentage.
+- [`<ratio>`](/en-US/docs/Web/CSS/Reference/Values/ratio): serialized to two numbers separated by `" / "`.
+- [`<url>`](/en-US/docs/Web/CSS/Reference/Values/url_value): serialized with `url("...")`, with the URL resolved to an absolute URL.
 
-For shorthand properties, its constituent longhand properties are serialized and combined according to the rules for that shorthand.
+Note that `<percentage>` values often get computed into absolute dimensions (like `<length>`) during value processing, so they may not appear as percentages when serialized from computed styles. For dimensions with units, such as [`<frequency>`](/en-US/docs/Web/CSS/Reference/Values/frequency), [`<length>`](/en-US/docs/Web/CSS/Reference/Values/length), [`<resolution>`](/en-US/docs/Web/CSS/Reference/Values/resolution), and [`<time>`](/en-US/docs/Web/CSS/Reference/Values/time), the serialized unit depends on the context and is not well-specified. `getComputedStyle()` and `element.style` serialize them into `Hz`, `px`, `dppx`, and `s` respectively.
+
+When serializing the value for shorthand properties, its constituent longhand properties are serialized and combined according to the rules for that shorthand.
+
+> [!NOTE]
+> There are a lot of gory details regarding how CSS properties are serialized, especially for complex properties like `font`. They may be unspecified in the specifications or even inconsistent across browsers. You need to test and verify the behavior for your specific use case.
+
+```html
+<div>Example Element</div>
+```
+
+```css
+div {
+  position: absolute; /* keyword */
+  rotate: 1rad; /* <angle> */
+  color: hsl(240 100% 50%); /* <color> */
+  background-color: hsl(120 50% 50% / 0.3); /* <color> with alpha */
+  border-color: lab(10 -120 -120); /* <color> in non-sRGB space */
+  margin: 2em; /* relative <length> */
+  padding: 2cm; /* absolute <length> */
+  font-size: calc(1em + 2px); /* complex expression */
+  left: 50%; /* <percentage> */
+  animation-duration: 500ms; /* <time> */
+}
+```
+
+```js
+const element = document.querySelector("div");
+const table = document.createElement("table");
+const elemStyle = getComputedStyle(element);
+const ruleStyle = document.getElementById("css-output").sheet.cssRules[0].style;
+const head = table.createTHead().insertRow();
+["Property", "getComputedStyle()", "CSSStyleRule"].forEach((text) => {
+  const th = document.createElement("th");
+  th.textContent = text;
+  head.appendChild(th);
+});
+for (const property of [
+  "position",
+  "rotate",
+  "color",
+  "background-color",
+  "border-color",
+  "margin",
+  "padding",
+  "font-size",
+  "left",
+  "animation-duration",
+]) {
+  const row = document.createElement("tr");
+  const propCell = document.createElement("td");
+  const valueCell = document.createElement("td");
+  const ruleCell = document.createElement("td");
+  propCell.textContent = property;
+  valueCell.textContent = elemStyle.getPropertyValue(property);
+  ruleCell.textContent = ruleStyle.getPropertyValue(property);
+  row.appendChild(propCell);
+  row.appendChild(valueCell);
+  row.appendChild(ruleCell);
+  table.appendChild(row);
+}
+document.body.appendChild(table);
+```
+
+{{EmbedLiveSample("", "", 400)}}
 
 ## Examples
 
 ### Color value serialization
 
-Colors are among the most common types affected by serialization. Regardless of whether you define a color using `hsl()`, `hwb()`, a keyword, or a modern color space, JavaScript usually returns it in [legacy `rgb()` or `rgba()` format](/en-US/docs/Web/CSS/color_value/rgb#syntax).
+Colors are among the most common types affected by serialization. Regardless of whether you define a color using `hsl()`, `hwb()`, a keyword, or a modern color space, JavaScript usually returns it in [legacy `rgb()` or `rgba()` format](/en-US/docs/Web/CSS/Reference/Values/color_value/rgb#syntax).
 
 The following examples demonstrate how different color formats are serialized when accessed through JavaScript.
 
 ```html
 <div class="example hsl">HSL Color</div>
-<div class="example hwb">HWB Color</div>
+<div class="example lab">LAB Color</div>
 <div class="example named">Named Color</div>
 <div class="example alpha">Transparent Color</div>
 <pre id="output"></pre>
@@ -89,7 +156,7 @@ examples.forEach((element) => {
 });
 ```
 
-{{EmbedLiveSample("Color serialization examples", 600, 200)}}
+{{EmbedLiveSample("Color value serialization", , 400)}}
 
 ### Length value serialization
 
@@ -111,6 +178,6 @@ This normalization allows scripts to compare or calculate lengths consistently.
 
 - [`CSSStyleDeclaration.getPropertyValue()`](/en-US/docs/Web/API/CSSStyleDeclaration/getPropertyValue)
 - [`Window.getComputedStyle()`](/en-US/docs/Web/API/Window/getComputedStyle)
-- [CSS colors](/en-US/docs/Web/CSS/CSS_colors)
-- [CSS `<color>`](/en-US/docs/Web/CSS/color_value)
-- [CSS values and units](/en-US/docs/Web/CSS/CSS_values_and_units) module
+- [CSS colors](/en-US/docs/Web/CSS/Guides/Colors)
+- [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value)
+- [CSS values and units](/en-US/docs/Web/CSS/Guides/Values_and_units) module
