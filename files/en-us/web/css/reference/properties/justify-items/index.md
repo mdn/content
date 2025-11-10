@@ -108,7 +108,7 @@ This property can take one of four different forms:
 - Basic keywords: one of the keyword values `normal` or `stretch`.
 - Baseline alignment: the `baseline` keyword, plus optionally one of `first` or `last`.
 - Positional alignment: one of: `center`, `start`, `end`, `flex-start`, `flex-end`, `self-start`, `self-end`, `left`, or `right`. Plus optionally `safe` or `unsafe`.
-- Legacy alignment: the `legacy` keyword, followed by one of `left`/`right`/`center`.
+- Legacy alignment: the `legacy` keyword, followed by one of `left`, `right`, or `center`.
 
 ### Values
 
