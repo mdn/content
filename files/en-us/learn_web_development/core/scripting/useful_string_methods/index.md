@@ -100,7 +100,7 @@ if (browserType.startsWith("zilla")) {
 const browserType = "mozilla";
 
 if (browserType.endsWith("zilla")) {
-  console.log("It deos end with zilla!");
+  console.log("It ends with zilla!");
 } else {
   console.log("IT does NOT end with zilla!");
 }
