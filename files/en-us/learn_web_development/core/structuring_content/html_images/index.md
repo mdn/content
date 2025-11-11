@@ -185,7 +185,7 @@ This means that when the image has been downloaded, the browser doesn't have to 
 
 For an excellent article on the history of this feature, see [Setting height and width on images is important again](https://www.smashingmagazine.com/2020/03/setting-height-width-images-important-again/).
 
-Note that, if there is no content below the image, so re-rendering is not a problem, you can just set the `width` of the image — it you set a `width` but don't set a `height`, the `height` defaults to `auto` which means it is set to a value that maintains the image's [aspect ratio](/en-US/docs/Glossary/Aspect_ratio).
+Note that if there's no content below the image, re-rendering isn't a problem because resizing the image won't cause other elements to shift. In that case, you can set the image's `width` only. If you set a `width` but don't set a `height`, the `height` defaults to `auto` which means it is set to a value that maintains the image's [aspect ratio](/en-US/docs/Glossary/Aspect_ratio).
 
 #### Resizing images
 
