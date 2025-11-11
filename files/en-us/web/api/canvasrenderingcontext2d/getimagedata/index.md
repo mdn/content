@@ -28,7 +28,7 @@ transparent black in the returned `ImageData` object.
 >
 > This means that the returned pixel data might not always be what you expect. For
 > instance, if you set the fill to `rgba(255, 127, 0, 100%)`, draw a rectangle, and call
-> `getImageData()`, the raw RGBA pixel data may *not* be `[255, 127, 0, 255, ...]`!
+> `getImageData()`, the raw RGBA pixel data may _not_ be `[255, 127, 0, 255, ...]`!
 
 You can find more information about `getImageData()` and general
 manipulation of canvas contents in [Pixel manipulation with canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas).
