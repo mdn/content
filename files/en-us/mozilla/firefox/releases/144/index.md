@@ -2,7 +2,7 @@
 title: Firefox 144 release notes for developers (Stable)
 short-title: Firefox 144 (Stable)
 slug: Mozilla/Firefox/Releases/144
-page-type: firefox-release-notes-active
+page-type: firefox-release-notes
 sidebar: firefox
 ---
 
