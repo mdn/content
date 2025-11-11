@@ -21,8 +21,9 @@ transparent black in the returned `ImageData` object.
 > Image data can be painted onto a canvas using the
 > {{domxref("CanvasRenderingContext2D.putImageData()", "putImageData()")}} method.
 
-> [!WARNING] In addition to natural rendering differences between browser engines, some
-> browsers will slightly randomize the data returned by `getImageData()` to prevent
+> [!WARNING]
+> In addition to natural rendering differences between browser engines, some browsers will
+> slightly randomize the data returned by `getImageData()` to prevent
 > [fingerprinting](/en-US/docs/Glossary/Fingerprinting).
 >
 > This means that the returned pixel data might not always be what you expect. For
