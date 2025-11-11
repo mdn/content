@@ -10,7 +10,7 @@ browser-compat: api.CanvasRenderingContext2D.getImageData
 
 The {{domxref("CanvasRenderingContext2D")}} method
 **`getImageData()`** of the Canvas 2D API returns an
-{{domxref("ImageData")}} object representing the underlying pixel data for a specified
+{{domxref("ImageData")}} object approximating the underlying pixel data for a specified
 portion of the canvas.
 
 This method is not affected by the canvas's transformation matrix. If the specified
@@ -20,6 +20,14 @@ transparent black in the returned `ImageData` object.
 > [!NOTE]
 > Image data can be painted onto a canvas using the
 > {{domxref("CanvasRenderingContext2D.putImageData()", "putImageData()")}} method.
+
+> [!WARNING] In addition to natural rendering differences between browser engines, some
+> browsers will slightly randomize the data returned by `getImageData()` to prevent
+> [fingerprinting](/en-US/docs/Glossary/Fingerprinting).
+>
+> This means that the returned pixel data might not always be what you expect. For
+> instance, if you set the fill to `rgba(255, 127, 0, 100%)`, draw a rectangle, and call
+> `getImageData()`, the raw RGBA pixel data may *not* be `[255, 127, 0, 255, ...]`!
 
 You can find more information about `getImageData()` and general
 manipulation of canvas contents in [Pixel manipulation with canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas).

@@ -73,11 +73,15 @@ This method returns an `ImageData` object representing the pixel data for the ar
 > [!NOTE]
 > Any pixels outside the canvas are returned as transparent black in the resulting `ImageData` object.
 
+> [!WARNING] In addition to natural rendering differences between browser engines, some
+> browsers will slightly randomize the data returned by `getImageData()` to prevent
+> [fingerprinting](/en-US/docs/Glossary/Fingerprinting).
+
 This method is also demonstrated in the article [Manipulating video using canvas](/en-US/docs/Web/API/Canvas_API/Manipulating_video_using_canvas).
 
 ## Creating a color picker
 
-In this example, we are using the [`getImageData()`](/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData) method to display the color under the mouse cursor.
+In this example, we are using the [`getImageData()`](/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData) method to display an approximation of the color under the mouse cursor.
 For this, we need the current position of the mouse, then we look up the pixel data at that position in the pixel array that [`getImageData()`](/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData) provides.
 Finally, we use the array data to set a background color and a text in the `<div>` to display the color.
 Clicking on the image will do the same operation but uses the selected color.
@@ -362,6 +366,10 @@ The {{domxref("HTMLCanvasElement")}} provides a `toDataURL()` method, which is u
 > [!NOTE]
 > Be aware that if the canvas contains any pixels that were obtained from another {{Glossary("origin")}} without using CORS, the canvas is **tainted** and its contents can no longer be read and saved.
 > See [Security and tainted canvases](/en-US/docs/Web/HTML/How_to/CORS_enabled_image#security_and_tainted_canvases).
+
+> [!WARNING] In addition to natural rendering differences between browser engines, some
+> browsers will slightly randomize the canvas pixel data captured by `toDataURL()` to prevent
+> [fingerprinting](/en-US/docs/Glossary/Fingerprinting).
 
 - {{domxref("HTMLCanvasElement.toDataURL", "canvas.toDataURL('image/png')")}}
   - : Default setting. Creates a PNG image.

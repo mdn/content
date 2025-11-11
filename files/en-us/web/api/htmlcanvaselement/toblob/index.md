@@ -17,6 +17,10 @@ Browsers are required to support `image/png`; many will support additional forma
 
 The created image will have a resolution of 96dpi for file formats that support encoding resolution metadata.
 
+> [!WARNING] In addition to natural rendering differences between browser engines, some
+> browsers will slightly randomize the canvas pixel data captured by `toBlob()` to prevent
+> [fingerprinting](/en-US/docs/Glossary/Fingerprinting).
+
 ## Syntax
 
 ```js-nolint
