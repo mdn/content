@@ -6,7 +6,6 @@ page-type: css-module
 spec-urls:
   - https://drafts.csswg.org/css-color/
   - https://drafts.csswg.org/css-color-5/
-  - https://drafts.csswg.org/css-color-hdr/
 sidebar: cssref
 ---
 
