@@ -45,68 +45,20 @@ font-synthesis: position;
       <span class="sup">superscript</span> variants.
     </p>
     <p class="chinese">
-      中文排版通常不运用<span class="bold">粗体</span>或<span class="italic"
+      中文排版通常不用<span class="bold">粗体</span>或<span class="italic"
         >斜体</span
-      ><span class="sub">常不</span><span class="sup">运用</span>。
+      >，也不会使用<span class="small-caps">小型大写字母</span>和<span
+        class="sub"
+        >下标</span
+      ><span class="sup">上标</span>变体。
     </p>
   </div>
 </section>
 ```
 
 ```css interactive-example
-@font-face {
-  font-family: "Oxygen";
-  font-style: normal;
-  font-weight: normal;
-  src: url("https://fonts.gstatic.com/s/oxygen/v14/2sDfZG1Wl4LcnbuKjk0m.woff2")
-    format("woff2");
-}
-
-/* [108] */
-@font-face {
-  font-family: "Ma Shan Zheng";
-  font-style: normal;
-  font-weight: normal;
-  font-display: swap;
-  src: url("https://fonts.gstatic.com/s/mashanzheng/v10/NaPecZTRCLxvwo41b4gvzkXaRMGEFoZJFdX0wQ5Xo5Hr21L9zCcRFhbSe5Nk0pIMuUkHEA.108.woff2")
-    format("woff2");
-}
-/* [110] */
-@font-face {
-  font-family: "Ma Shan Zheng";
-  font-style: normal;
-  font-weight: normal;
-  font-display: swap;
-  src: url("https://fonts.gstatic.com/s/mashanzheng/v10/NaPecZTRCLxvwo41b4gvzkXaRMGEFoZJFdX0wQ5Xo5Hr21L9zCcRFhbSe5Nk0pIMuUkHEA.110.woff2")
-    format("woff2");
-}
-/* [117] */
-@font-face {
-  font-family: "Ma Shan Zheng";
-  font-style: normal;
-  font-weight: normal;
-  font-display: swap;
-  src: url("https://fonts.gstatic.com/s/mashanzheng/v10/NaPecZTRCLxvwo41b4gvzkXaRMGEFoZJFdX0wQ5Xo5Hr21L9zCcRFhbSe5Nk0pIMuUkHEA.117.woff2")
-    format("woff2");
-}
-/* [118] */
-@font-face {
-  font-family: "Ma Shan Zheng";
-  font-style: normal;
-  font-weight: normal;
-  font-display: swap;
-  src: url("https://fonts.gstatic.com/s/mashanzheng/v10/NaPecZTRCLxvwo41b4gvzkXaRMGEFoZJFdX0wQ5Xo5Hr21L9zCcRFhbSe5Nk0pIMuUkHEA.118.woff2")
-    format("woff2");
-}
-/* [119] */
-@font-face {
-  font-family: "Ma Shan Zheng";
-  font-style: normal;
-  font-weight: normal;
-  font-display: swap;
-  src: url("https://fonts.gstatic.com/s/mashanzheng/v10/NaPecZTRCLxvwo41b4gvzkXaRMGEFoZJFdX0wQ5Xo5Hr21L9zCcRFhbSe5Nk0pIMuUkHEA.119.woff2")
-    format("woff2");
-}
+@import "https://fonts.googleapis.com/css2?family=Oxygen&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap";
 
 .english {
   font-size: 1.2em;
