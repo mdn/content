@@ -175,7 +175,7 @@ Once the image is loaded, the browser adds the image to the page. Because the im
 
 ![Comparison of page layout while the browser is loading a page and when it has finished, when no size is specified for the image.](no-size.png)
 
-Moving the text like this is extremely distracting to users, especially if they have already started to read it, and it also causes the browser to re-render the content, which is bad for performance.
+Moving the text like this is extremely distracting to users, especially if they have already started to read it, and it also causes the browser to re-render the page, which is bad for performance.
 
 If you specify the actual size of the image in your HTML using the `width` and `height` attributes, then the browser knows how much space to allow for the image, before it has downloaded.
 
