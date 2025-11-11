@@ -677,7 +677,7 @@ Let's look at how the above code renders:
 Notice how the different columns receive the styles specified in the classes.
 
 > [!NOTE]
-> Even though `<colspan>` and `<col>` mainly faciliate styling, they are an HTML feature, therefore we've included them here rather than in our CSS modules. Is it also fair to say that they are a _limited_ feature — as shown on the [`<colgroup>` reference page](/en-US/docs/Web/HTML/Reference/Elements/colgroup#usage_notes), only a limited subset of styles can be applied to a `<col>` element, and most of the other settings that were historically available have beeen deprecated (removed, or flagged for removal).
+> Even though `<colspan>` and `<col>` mainly facilitate styling, they are an HTML feature, therefore we've included them here rather than in our CSS modules. Is it also fair to say that they are a _limited_ feature — as shown on the [`<colgroup>` reference page](/en-US/docs/Web/HTML/Reference/Elements/colgroup#usage_notes), only a limited subset of styles can be applied to a `<col>` element, and most of the other settings that were historically available have been deprecated (removed, or flagged for removal).
 
 ## Summary
 
