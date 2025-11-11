@@ -614,7 +614,7 @@ In this table, there are eight columns. Let's look at the `<colgroup>` and `<col
 
 Looking at the `<col>` elements:
 
-- The first one has `span="2"` set on it, so it represents the first _and_ second columns from the left of the table. We are not targetting these columns with any styles, but we need to include it so that we can target subsequent columns.
+- The first one has `span="2"` set on it, so it represents the first _and_ second columns from the left of the table. We are not targeting these columns with any styles, but we need to include it so that we can target subsequent columns.
 - The second and fourth ones don't have a `span` attribute set, so they will represent a single column — the third and fifth columns in these cases. They have a `class` of `column-background` applied.
 - The third one doesn't have a `span` attribute set, and has a `class` of `column-fixed-width` applied. It represents the fourth column.
 - The fifth one doesn't have a `span` attribute set, and has a `class` of `column-background-border` applied. It represents the sixth column.
