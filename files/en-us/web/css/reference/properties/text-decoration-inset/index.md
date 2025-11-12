@@ -81,7 +81,7 @@ The `text-decoration-inset` property allows you to adjust the start and/or end p
 
 A single `<length>` value will set the inset (if positive) or outset (if negative) on the start and end positions of the text decoration. To set the start and end positions separately, you can use two `<length>` values — the first one applies to the start position of the text decoration and the second one applies to the end.
 
-The `text-decoration-inset` property can also take the `auto` keyword, which causes the browser to choose a value to ensure that, if two decorated text boxes appear side-by-side, a gap is created between them so they do not appear to have a single text decoration. The `auto` value is particularly important in languages such as Chinese, where underlining is a form of punctuation. See [Effect of the `auto` value](/en-US/docs/Web/CSS/Reference/Properties/text-decoration-inset#effect_of_the_auto_value) for en example.
+The `text-decoration-inset` property can also take the `auto` keyword, which causes the browser to choose a value to ensure that, if two decorated text boxes appear side-by-side, a gap is created between them so they do not appear to have a single text decoration. The `auto` value is particularly important when rendering Chinese text, as underlining is used to [punctuate proper nouns](https://www.w3.org/TR/clreq/#id88), and adjacent proper nouns should have separate underlines. See [Effect of the `auto` value](/en-US/docs/Web/CSS/Reference/Properties/text-decoration-inset#effect_of_the_auto_value) for an example.
 
 The `auto` value does not have the same effect as a `text-decoration-inset` value of `0` (which is the initial value) — `0` causes there to be no space between decorations.
 
