@@ -136,7 +136,7 @@ A caption is placed directly beneath the `<table>` tag.
 
 At this point we'll get you to try out adding a caption to an HTML table, using the school timetable you met in the previous article.
 
-1. Copy the first HTML block in the [Grouping columns with `<colgroup>` and `<col>`](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics#grouping_columns_with_colgroup_and_col) into an HTML file on your local hard drive, or an online editor such as [CodePen](https://codepen.io/) or [JSBin](https://jsbin.com/?html,output).
+1. Copy the first HTML block in the [Grouping columns with `<colgroup>` and `<col>`](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics#grouping_columns_with_colgroup_and_col) into an HTML file on your computer, or an online editor such as [CodePen](https://codepen.io/) or [JSBin](https://jsbin.com/?html,output).
 2. Add a suitable caption to the table.
 3. Save your code and see what it looks like.
 
