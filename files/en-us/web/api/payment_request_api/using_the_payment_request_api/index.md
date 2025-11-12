@@ -270,7 +270,7 @@ checkoutButton.addEventListener("click", () => {
     })
     .catch((error) => {
       if (error.name === "NotSupportedError") {
-        window.location.href = "https://bobpay.xyz/#download";
+        window.location.href = "https://bobbucks.dev/#download";
       } else {
         // Other kinds of errors; cancelled or failed payment. For demo purposes:
         introPanel.style.display = "none";
