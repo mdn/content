@@ -23,7 +23,7 @@ navigate(url, options)
 ### Parameters
 
 - `url`
-  - : The destination URL to navigate to. Note that when calling `navigate()` on another window's `navigation` object, the URL will be resolved relative to the target window's URL, not the calling window's URL. This matches the behavior of the [History API](/en-US/docs/Web/API/History_API), but not the behavior of the [Location API](/en-US/docs/Web/API/Location).
+  - : The destination URL to navigate to. Note that when calling `navigate()` on another window's `navigation` object, the URL will be resolved relative to the target window's URL, not the calling window's URL. This matches the behavior of the [History API](/en-US/docs/Web/API/History_API), but not the behavior of the [Location API](/en-US/docs/Web/API/Location). Note also that `javascript:` URLs are disallowed for security reasons.
 - `options` {{optional_inline}}
   - : An options object containing the following properties:
     - `state` {{optional_inline}}
@@ -50,12 +50,14 @@ Either one of these promises rejects if the navigation has failed for some reaso
 ### Exceptions
 
 - `DataCloneError` {{domxref("DOMException")}}
-  - : Thrown if the `state` parameter had values included in it that are not structured-cloneable.
+  - : Thrown if the `state` parameter has values included in it that are not structured-cloneable.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the document is not currently active.
 - `SyntaxError` {{domxref("DOMException")}}
   - : Thrown if the `url` parameter is not a valid URL.
 - `NotSupportedError` {{domxref("DOMException")}}
-  - : Thrown if the `history` option is set to `push`, and any of the following special circumstances are true:
-    - The browser is currently showing the initial `about:blank` document.
+  - : Thrown if:
+    - The `history` option is set to `push`, and the browser is currently showing the initial `about:blank` document.
     - The `url`'s scheme is `javascript`.
 
 ## Examples
