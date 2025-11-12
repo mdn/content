@@ -95,7 +95,7 @@ In the token request:
 
 ### Security features
 
-In this section we will summarize the main security features of the OIDC authentication flow we've just described.
+In this section we will summarize the main security features of the OIDC authentication flow we've just described. For the full details, see [Best Current Practice for OAuth 2.0 Security](http://www.rfc-editor.org/rfc/rfc9700.html).
 
 #### Authorization code flow
 
