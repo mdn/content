@@ -16,7 +16,7 @@ See [Typical resource timing metrics](/en-US/docs/Web/API/PerformanceResourceTim
 
 ## Resource loading timestamps
 
-![Timestamp diagram listing timestamps in the order in which they are recorded for the fetching of a resource](https://mdn.github.io/shared-assets/images/diagrams/api/performance/resource-timing.timestamp-diagram.svg)
+![Timestamp diagram listing timestamps in the order in which they are recorded for the fetching of a resource](https://mdn.github.io/shared-assets/images/diagrams/api/performance/resource-timing/timestamp-diagram.svg)
 Figure 1. Resource loading timestamps ([source](https://w3c.github.io/resource-timing/#attribute-descriptions)).
 
 An application can get timestamps for the various stages used to load a resource. For example the {{domxref('PerformanceEntry.startTime','startTime')}}, DNS timestamps, connection set up times and then various resource download times.
