@@ -227,8 +227,6 @@ In [front channel logout](https://openid.net/specs/openid-connect-frontchannel-1
 
 In [back channel logout](https://openid.net/specs/openid-connect-backchannel-1_0.html), the RP and the IdP communicate directly with each other, bypassing the browser. For example, when the IdP needs to tell the RP to sign the user out, the IdP makes a {{httpmethod("POST")}} request directly to the RP.
 
-## Identity providers
-
 ## Third-party cookies
 
 When implementing a federated identity system, we have to coordinate the interactions between the RP, the IdP, and the user. Some implementations of this coordination depend on browser support for [third-party cookies](/en-US/docs/Web/Privacy/Guides/Third-party_cookies).
@@ -239,6 +237,34 @@ Similarly, while the main [OpenID Connect authentication flow](#authentication_f
 
 However, because third-party cookies are widely used for [tracking users](/en-US/docs/Web/Privacy/Guides/Third-party_cookies#what_is_the_problem_with_third-party_cookies), browsers have taken steps to deprecate and remove support for them, and they are now not supported by default in some browsers.
 
-As such, we don't recommend implementing federated identity features in a way that depends on third-party cookies.
+As such, we recommend not implementing federated identity features in a way that depends on third-party cookies.
 
 ## The FedCM API
+
+The [Federated Credential Management API (FedCM API)](/en-US/docs/Web/API/FedCM_API) provides built-in browser support for federated identity. The API does not yet have cross-browser support and is still being actively developed, so we can't fully recommend its use, but it promises several benefits over implementing a protocol like OpenID Connect directly:
+
+- In the OIDC flow we've previously described, the website using OIDC (that is, the RP) has to coordinate the interactions between itself, the user, and the IdP. As we've seen, this is complicated and error-prone. With FedCM, the browser takes care of this interaction: as an RP, you call a browser API, and the browser locates the IdP, asks the user to authenticate, and returns a token from the IdP that the RP can use to sign the user in.
+- As a consequence of this, you don't have to rely on third-party cookies, so FedCM will work on browsers that block them.
+- In FedCM, the interface in which the user authenticates to the IdP is built into the browser, offering them a more consistent and seamless experience without redirects.
+
+FedCM is integrated into the [Credential Management API](/en-US/docs/Web/API/Credential_Management_API), which is a framework that enables browsers to work with a variety of different sorts of credentials. To authenticate using the FedCM API, you call {{domxref("CredentialsContainer.get()")}}, passing in the various options including:
+
+- Identifiers for the IdP(s) that the user may use to sign into this RP
+- The context in which the RP is using the IdP (for example, whether the user is registering or signing in).
+
+When you call `CredentialsContainer.get()`, the browser will:
+
+- Contact the IdPs that you have specified
+- Ask the user to sign into their chosen IdP, if they are not already signed in
+- Ask the IdP to verify the user's identity
+- Return a token which the RP can use to sign the user in.
+
+### FedCM and federated identity protocols
+
+FedCM does not itself implement a federated identity protocol such as OIDC. You can think of it as providing transport between the RP, the user, and the IdP, but it is agnostic about the items that are exchanged or their interpretation.
+
+For example, in an implementation of OIDC using FedCM, the token returned by `CredentialsContainer.get()` may be an authorization code, and the RP will then have to retrieve the identity token from the IdP's token endpoint. That is, FedCM takes care of only the first part of the [authentication flow](#authentication_flow). The [FedCM for OAuth](https://github.com/aaronpk/oauth-fedcm-profile) document describes how OAuth and OIDC could be implemented using FedCM.
+
+In general, when an RP decides to use a particular IdP for federated login, the RP will register with the IdP, and as part of this process the IdP should explain to the RP exactly which arguments it expected to be given, how it should handle the objects that the IdP returns, and any other behavior it expects the RP to implement.
+
+## Identity providers
