@@ -70,7 +70,7 @@ text-decoration-inset: unset;
 
 One or two {{cssxref("&lt;length>")}} values, or the keyword `auto`.
 
-- {{cssxref("&lt;length>")}} values
+- {{cssxref("&lt;length>")}}
   - : Specifies the amount to adjust the text decoration position by. Positive values inset the text decoration (make it shorter) while negative values outset the text decoration (make it longer). If one value is specified, it applies to both the text decoration start and end points. If two values are specified, the first one applies to the text decoration start point and the second one applies to the text decoration end point.
 - `auto`
   - : The browser chooses an inset amount to ensure that, if two decorated text boxes appear side-by-side, a gap is created between the two so they do not appear to have a single text decoration.
