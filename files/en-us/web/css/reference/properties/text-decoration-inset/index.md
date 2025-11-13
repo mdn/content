@@ -168,7 +168,7 @@ We define two groups of side-by-side {{htmlelement("u")}} elements:
 
 #### CSS
 
-Each `<u>` element has a `red` color and `3px` thickness set on its underline. The first group of `<u>` elements has a `text-decoration-inset` value of `auto` set on them, while the second set has a `text-decoration-inset` value of `0` set on them, for comparison purposes:
+Each `<u>` element has a `red` color and `3px` thickness set on its underline. The first group of `<u>` elements has a `text-decoration-inset` value of `auto` set on them, while the second set has the initial `text-decoration-inset` value of `0` explicitly set on them, for comparison purposes:
 
 ```css hidden live-sample___auto-example
 u {
