@@ -86,7 +86,7 @@ Each parameter can be a `<length>`, a `<percentage>` or one of the keyword value
 
 {{cssxref("flex_value","&lt;flex&gt;")}} value can only be used for _max_, it is invalid for _min_.
 
-If _max_ < _min_, then _max_ is ignored and `minmax(min,max)` is treated as _min_. 
+If _max_ < _min_, then _max_ is ignored and `minmax(min,max)` is treated as _min_.
 
 ### Values
 
