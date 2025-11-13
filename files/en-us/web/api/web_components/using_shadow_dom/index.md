@@ -381,10 +381,10 @@ For more examples, illustrating different aspects of custom element implementati
 - {{domxref("CSSStyleSheet.replace()")}}
 - {{domxref("CSSStyleSheet.replaceSync()")}}
 - {{HTMLelement("template")}}
-- [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) module
+- [CSS scoping](/en-US/docs/Web/CSS/Guides/Scoping) module
 - {{CSSXref(":host")}}
 - {{CSSXref(":host_function", ":host()")}}
 - {{CSSXref(":host-context", ":host-context()")}}
 - {{CSSXref("::slotted", "::slotted()")}}
-- [CSS shadow parts](/en-US/docs/Web/CSS/CSS_shadow_parts) module
+- [CSS shadow parts](/en-US/docs/Web/CSS/Guides/Shadow_parts) module
 - {{CSSXref("::part")}}

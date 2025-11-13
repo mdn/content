@@ -12,7 +12,7 @@ sidebar: cssref
 
 The **`calc-size()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) allows you to perform calculations on [intrinsic size](/en-US/docs/Glossary/Intrinsic_Size) values such as `auto`, [`fit-content`](/en-US/docs/Web/CSS/Reference/Values/fit-content), and [`max-content`](/en-US/docs/Web/CSS/Reference/Values/max-content); this is not supported by the regular {{cssxref("calc()")}} function.
 
-`calc-size()` return values can also be [interpolated](/en-US/docs/Glossary/Interpolation), enabling size keyword values to be used in [animations](/en-US/docs/Web/CSS/CSS_animations) and [transitions](/en-US/docs/Web/CSS/CSS_transitions). In effect, including `calc-size()` in a property value automatically applies [`interpolate-size: allow-keywords`](/en-US/docs/Web/CSS/Reference/Properties/interpolate-size) to the selection.
+`calc-size()` return values can also be [interpolated](/en-US/docs/Glossary/Interpolation), enabling size keyword values to be used in [animations](/en-US/docs/Web/CSS/Guides/Animations) and [transitions](/en-US/docs/Web/CSS/Guides/Transitions). In effect, including `calc-size()` in a property value automatically applies [`interpolate-size: allow-keywords`](/en-US/docs/Web/CSS/Reference/Properties/interpolate-size) to the selection.
 
 Note however that `interpolate-size` is inherited, therefore applying it to an element enables interpolation of intrinsic size keywords for every property applied to that element and its children. As a result, `interpolate-size` is the preferred solution for enabling intrinsic size animations. You should only use `calc-size()` to enable intrinsic size animations if they also require calculations.
 
@@ -67,7 +67,7 @@ The first `calc-size()` argument can be one of the following intrinsic values:
 
 There are also a few special values that this argument can take:
 
-- A nested `calc-size()` value. This isn't something you'd be likely to do very often, but it is available ensuring using a [CSS variable](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) as the `<calc-size-basis>` will always work, provided the variable is a valid value for the property `calc-size()` is being set on. So for example, this will work:
+- A nested `calc-size()` value. This isn't something you'd be likely to do very often, but it is available ensuring using a [CSS variable](/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties) as the `<calc-size-basis>` will always work, provided the variable is a valid value for the property `calc-size()` is being set on. So for example, this will work:
 
   ```css
   section {
@@ -124,7 +124,7 @@ In this expression:
 > [!NOTE]
 > You should avoid animating box model properties if possible, to cut down on layout events and mitigate the resulting impact on performance (see [Critical rendering path > Layout](/en-US/docs/Web/Performance/Guides/Critical_rendering_path#layout)).
 
-For example, you could use a [transition](/en-US/docs/Web/CSS/CSS_transitions) to animate a container `width` between `0` and `auto` like so:
+For example, you could use a [transition](/en-US/docs/Web/CSS/Guides/Transitions) to animate a container `width` between `0` and `auto` like so:
 
 ```css
 section {
@@ -220,7 +220,7 @@ p {
 }
 ```
 
-In the CSS, we use [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) to center the child elements inside the `<section>`, and set the `width` and `height` of the `<section>` to `calc-size()` functions. The `width` is set equal to `fit-content` plus `6rem`. The `height` is set to `auto` multiplied by two.
+In the CSS, we use [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) to center the child elements inside the `<section>`, and set the `width` and `height` of the `<section>` to `calc-size()` functions. The `width` is set equal to `fit-content` plus `6rem`. The `height` is set to `auto` multiplied by two.
 
 ```css
 section {

@@ -8,7 +8,7 @@ browser-compat: api.Element.transitionstart_event
 
 {{APIRef}}
 
-The **`transitionstart`** event is fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) has actually started, i.e., after any {{cssxref("transition-delay")}} has ended.
+The **`transitionstart`** event is fired when a [CSS transition](/en-US/docs/Web/CSS/Guides/Transitions/Using) has actually started, i.e., after any {{cssxref("transition-delay")}} has ended.
 
 This event is not cancelable.
 

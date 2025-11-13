@@ -272,7 +272,7 @@ body {
 
 ### More linear-gradient examples
 
-Please see [using CSS gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients) for more examples.
+Please see [using CSS gradients](/en-US/docs/Web/CSS/Guides/Images/Using_gradients) for more examples.
 
 ## Specifications
 
@@ -284,9 +284,9 @@ Please see [using CSS gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradie
 
 ## See also
 
-- [Using CSS gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+- [Using CSS gradients](/en-US/docs/Web/CSS/Guides/Images/Using_gradients)
 - Other gradient functions: {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
 - [`<hue-interpolation-method>`](/en-US/docs/Web/CSS/Reference/Values/hue-interpolation-method)
 - [`<color-interpolation-method>`](/en-US/docs/Web/CSS/Reference/Values/color-interpolation-method)
 - {{CSSxRef("&lt;image&gt;")}}
-- [CSS images module](/en-US/docs/Web/CSS/CSS_images)
+- [CSS images module](/en-US/docs/Web/CSS/Guides/Images)

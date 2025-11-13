@@ -128,4 +128,4 @@ Scroll the vertical bar to see the square animate as you scroll.
 - [`animation-timeline`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline)
 - [`scroll-timeline`](/en-US/docs/Web/CSS/Reference/Properties/scroll-timeline), [`scroll-timeline-axis`](/en-US/docs/Web/CSS/Reference/Properties/scroll-timeline-axis)
 - {{cssxref("timeline-scope")}}
-- [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations)
+- [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations)

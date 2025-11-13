@@ -86,7 +86,7 @@ The parameters are:
         > For [security reasons](#limitations_and_security) {{CSSxRef("url_value", "&lt;url&gt;")}} is not allowed as an `attr()` data type.
 
     - `<attr-unit>`
-      - : The `<attr-unit>` identifier specifies the unit a numeric value should have (if any). It can be the `%` character (percentage) or a [CSS distance unit](/en-US/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#distance_units) such as `px`, `rem`, `deg`, `s`, etc.
+      - : The `<attr-unit>` identifier specifies the unit a numeric value should have (if any). It can be the `%` character (percentage) or a [CSS distance unit](/en-US/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#distance_units) such as `px`, `rem`, `deg`, `s`, etc.
 
         ```css
         attr(data-size rem)

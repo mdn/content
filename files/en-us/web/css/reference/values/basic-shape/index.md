@@ -288,8 +288,8 @@ div {
 
 - Properties that use this data type: {{cssxref("clip-path")}}, {{cssxref("offset-path")}}, {{cssxref("shape-outside")}}
 - SVG shape elements: {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}
-- [Overview of CSS shapes](/en-US/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
-- [CSS shapes](/en-US/docs/Web/CSS/CSS_shapes) module
-- [Introduction to CSS masking](/en-US/docs/Web/CSS/CSS_masking/Masking)
-- [CSS masking](/en-US/docs/Web/CSS/CSS_masking) module
+- [Overview of CSS shapes](/en-US/docs/Web/CSS/Guides/Shapes/Overview)
+- [CSS shapes](/en-US/docs/Web/CSS/Guides/Shapes) module
+- [Introduction to CSS masking](/en-US/docs/Web/CSS/Guides/Masking/Introduction)
+- [CSS masking](/en-US/docs/Web/CSS/Guides/Masking) module
 - [Edit shape paths in Firefox developer tools](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_shapes/index.html)

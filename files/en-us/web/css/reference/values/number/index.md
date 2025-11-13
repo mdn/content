@@ -54,4 +54,4 @@ When animated, values of the `<number>` CSS data type are interpolated as real, 
 
 - {{CSSxRef("integer")}}
 - {{CSSxRef("ratio")}}
-- [CSS values and units](/en-US/docs/Web/CSS/CSS_values_and_units) module
+- [CSS values and units](/en-US/docs/Web/CSS/Guides/Values_and_units) module

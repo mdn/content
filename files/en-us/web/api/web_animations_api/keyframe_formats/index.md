@@ -117,7 +117,7 @@ logo.animate({ transform: "translateX(300px)", offset: 0.5 }, 1000);
 
 ## Attributes
 
-Keyframes specify property-value pairs of the [CSS properties to be animated](/en-US/docs/Web/CSS/CSS_animated_properties). The property names are specified using {{Glossary("camel_case", "camel case")}} so for example {{cssxref("background-color")}} becomes `backgroundColor` and {{cssxref("background-position-x")}} becomes `backgroundPositionX`. Shorthand values such as {{cssxref("margin")}} are also permitted.
+Keyframes specify property-value pairs of the [CSS properties to be animated](/en-US/docs/Web/CSS/Guides/Animations/Animatable_properties). The property names are specified using {{Glossary("camel_case", "camel case")}} so for example {{cssxref("background-color")}} becomes `backgroundColor` and {{cssxref("background-position-x")}} becomes `backgroundPositionX`. Shorthand values such as {{cssxref("margin")}} are also permitted.
 
 Two exceptional CSS properties are:
 

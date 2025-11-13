@@ -254,5 +254,5 @@ p {
   - [`text-transform`](/en-US/docs/Web/CSS/Reference/Properties/text-transform)
   - {{cssxref('hanging-punctuation')}}
 
-- [CSS Text Decoration](/en-US/docs/Web/CSS/CSS_text_decoration) CSS module
-- [CSS Text module](/en-US/docs/Web/CSS/CSS_text)
+- [CSS Text Decoration](/en-US/docs/Web/CSS/Guides/Text_decoration) CSS module
+- [CSS Text module](/en-US/docs/Web/CSS/Guides/Text)

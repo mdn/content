@@ -1140,6 +1140,7 @@
         "NavigationCurrentEntryChangeEvent",
         "NavigationDestination",
         "NavigationHistoryEntry",
+        "NavigationPrecommitController",
         "NavigationTransition"
       ],
       "methods": [],

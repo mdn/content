@@ -176,15 +176,15 @@ yarn start
 
 Once started, a live preview is available at `http://localhost:5042/`
 
-Set your preferred editor by adding `EDITOR=...` into a `.env` file in the project root.
-To specify VS Code as your preferred editor, for example, use the following command:
+### Environment variables
+
+Environment variables for the project can be found in [.env-dist](.env-dist). Copy this file to `.env`:
 
 ```bash
-echo 'EDITOR=code' >> .env
+cp .env-dist .env
 ```
 
-You can set the `EDITOR` environment variable to any editor you like.
-When browsing a page server locally, you can press **Open in your editor** to edit the current file in your preferred editor.
+Update values as needed. The file contains comments for guidance.
 
 ### Editing files and tracking changes in git
 

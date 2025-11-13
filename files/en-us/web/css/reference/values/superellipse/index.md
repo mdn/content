@@ -233,4 +233,4 @@ setCorners();
 
 - {{cssxref("corner-shape")}}
 - {{cssxref("&lt;corner-shape-value>")}}
-- [CSS borders and box decorations](/en-US/docs/Web/CSS/CSS_borders_and_box_decorations) module
+- [CSS borders and box decorations](/en-US/docs/Web/CSS/Guides/Borders_and_box_decorations) module

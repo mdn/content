@@ -58,9 +58,9 @@ The effect of this property is dependent of the layout mode we are in:
 
 - In block-level layouts, it aligns the items inside their containing block on the inline axis.
 - For absolutely-positioned elements, it aligns the items inside their containing block on the inline axis, accounting for the offset values of top, left, bottom, and right.
-- In table cell layouts, this property is _ignored_ (see [Box alignment for block, absolutely positioned, and table layouts](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables))
-- In flexbox layouts, this property is _ignored_ (see [Box alignment in flexbox](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox))
-- In grid layouts, it aligns the items inside their grid areas on the inline axis (see [Box alignment in grid layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout))
+- In table cell layouts, this property is _ignored_ (see [Box alignment for block, absolutely positioned, and table layouts](/en-US/docs/Web/CSS/Guides/Box_alignment/In_block_abspos_tables))
+- In flexbox layouts, this property is _ignored_ (see [Box alignment in flexbox](/en-US/docs/Web/CSS/Guides/Box_alignment/In_flexbox))
+- In grid layouts, it aligns the items inside their grid areas on the inline axis (see [Box alignment in grid layout](/en-US/docs/Web/CSS/Guides/Box_alignment/In_grid_layout))
 
 ## Syntax
 
@@ -91,8 +91,8 @@ justify-items: safe center;
 justify-items: unsafe center;
 
 /* Legacy alignment */
-justify-items: legacy right;
 justify-items: legacy left;
+justify-items: legacy right;
 justify-items: legacy center;
 
 /* Global values */
@@ -108,7 +108,7 @@ This property can take one of four different forms:
 - Basic keywords: one of the keyword values `normal` or `stretch`.
 - Baseline alignment: the `baseline` keyword, plus optionally one of `first` or `last`.
 - Positional alignment: one of: `center`, `start`, `end`, `flex-start`, `flex-end`, `self-start`, `self-end`, `left`, or `right`. Plus optionally `safe` or `unsafe`.
-- Legacy alignment: the `legacy` keyword, followed by one of `left` or `right`.
+- Legacy alignment: the `legacy` keyword, followed by one of `left`, `right`, or `center`.
 
 ### Values
 
@@ -143,7 +143,7 @@ This property can take one of four different forms:
 - `stretch`
   - : If the combined size of the items is less than the size of the alignment container, any `auto`-sized items have their size increased equally (not proportionally), while still respecting the constraints imposed by {{CSSxRef("max-height")}}/{{CSSxRef("max-width")}} (or equivalent functionality), so that the combined size exactly fills the alignment container.
 - `anchor-center`
-  - : In the case of [anchor-positioned](/en-US/docs/Web/CSS/CSS_anchor_positioning) elements, aligns the items to the center of the associated anchor element in the inline direction. See [Centering on the anchor using `anchor-center`](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#centering_on_the_anchor_using_anchor-center).
+  - : In the case of [anchor-positioned](/en-US/docs/Web/CSS/Guides/Anchor_positioning) elements, aligns the items to the center of the associated anchor element in the inline direction. See [Centering on the anchor using `anchor-center`](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using#centering_on_the_anchor_using_anchor-center).
 - `safe`
   - : If the size of the item overflows the alignment container, the item is instead aligned as if the alignment mode were `start`.
 - `unsafe`
@@ -233,5 +233,5 @@ span {
 - {{CSSxRef("justify-self")}}
 - {{CSSxRef("align-items")}}
 - {{CSSxRef("place-items")}} shorthand
-- [Box alignment in grid layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)
-- [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module
+- [Box alignment in grid layout](/en-US/docs/Web/CSS/Guides/Box_alignment/In_grid_layout)
+- [CSS box alignment](/en-US/docs/Web/CSS/Guides/Box_alignment) module

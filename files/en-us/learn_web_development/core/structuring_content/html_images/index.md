@@ -175,9 +175,9 @@ Once the image is loaded, the browser adds the image to the page. Because the im
 
 ![Comparison of page layout while the browser is loading a page and when it has finished, when no size is specified for the image.](no-size.png)
 
-Moving the text like this is extremely distracting to users, especially if they have already started to read it.
+Moving the text like this is extremely distracting to users, especially if they have already started to read it, and it also causes the browser to re-render the page, which is bad for performance.
 
-If you specify the actual size of the image in your HTML, using the `width` and `height` attributes, then the browser knows, before it has downloaded the image, how much space it has to allow for it.
+If you specify the actual size of the image in your HTML using the `width` and `height` attributes, then the browser knows how much space to allow for the image, before it has downloaded.
 
 This means that when the image has been downloaded, the browser doesn't have to move the surrounding content.
 
@@ -185,12 +185,15 @@ This means that when the image has been downloaded, the browser doesn't have to 
 
 For an excellent article on the history of this feature, see [Setting height and width on images is important again](https://www.smashingmagazine.com/2020/03/setting-height-width-images-important-again/).
 
-> [!NOTE]
-> Although, as we have said, it is good practice to specify the _actual_ size of your images using HTML attributes, you should not use them to _resize_ images.
->
-> If you set the image size too big, you'll end up with images that look grainy, fuzzy, or too small, and wasting bandwidth downloading an image that is not fitting the user's needs. The image may also end up looking distorted, if you don't maintain the correct {{glossary("aspect ratio")}}. You should use an image editor to put your image at the correct size before putting it on your webpage.
->
-> If you do need to alter an image's size, you should use [CSS](/en-US/docs/Learn_web_development/Core/Styling_basics) instead.
+Note that if there's no content below the image, re-rendering isn't a problem because resizing the image won't cause other elements to shift. In that case, you can set the image's `width` only. If you set a `width` but don't set a `height`, the `height` defaults to `auto` which means it is set to a value that maintains the image's [aspect ratio](/en-US/docs/Glossary/Aspect_ratio).
+
+#### Resizing images
+
+Although, as we have said, it is good practice to specify the _actual_ size of your images using HTML attributes, you should not use them to _resize_ images.
+
+If you set the image size too big, you'll end up with images that look grainy, fuzzy, or too small, and wasting bandwidth downloading an image that is not fitting the user's needs. The image may also end up looking distorted, if you don't maintain the correct {{glossary("aspect ratio")}}. You should use an image editor to put your image at the correct size before putting it on your webpage.
+
+If you do need to alter an image's size, you should use [CSS](/en-US/docs/Learn_web_development/Core/Styling_basics) instead.
 
 ### Image titles
 

@@ -61,7 +61,7 @@ grid-auto-flow: row dense;
 ```
 
 > [!NOTE]
-> The `masonry-auto-flow` property was dropped from CSS [Masonry layout](/en-US/docs/Web/CSS/CSS_grid_layout/Masonry_layout) in favor of `grid-auto-flow`.
+> The `masonry-auto-flow` property was dropped from CSS [Masonry layout](/en-US/docs/Web/CSS/Guides/Grid_layout/Masonry_layout) in favor of `grid-auto-flow`.
 > See [csswg-drafts #10231](https://github.com/w3c/csswg-drafts/issues/10231) for details.
 
 ## Syntax
@@ -200,5 +200,5 @@ inputElem.addEventListener("change", changeGridAutoFlow);
 - {{cssxref("grid-auto-rows")}}
 - {{cssxref("grid-auto-columns")}}
 - {{cssxref("grid")}}
-- [Auto-placement in grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
+- [Auto-placement in grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout/Auto-placement)
 - Video: [Introducing grid auto-placement and order](https://gridbyexample.com/video/series-auto-placement-order/)

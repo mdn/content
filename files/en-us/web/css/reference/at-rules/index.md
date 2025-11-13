@@ -7,7 +7,7 @@ spec-urls: https://drafts.csswg.org/css-syntax/
 sidebar: cssref
 ---
 
-**At-rules** are [CSS statements](/en-US/docs/Web/CSS/CSS_syntax/Syntax#css_statements) that instruct CSS how to behave. They are used to group and structure style rules and other at-rules, declare style information not directly associated with selected content, and manage syntactic constructs such as imports and namespaces keyword mappings. They begin with an at-sign, `@` (U+0040 COMMERCIAL AT), followed by an identifier.
+**At-rules** are [CSS statements](/en-US/docs/Web/CSS/Guides/Syntax/Introduction#css_statements) that instruct CSS how to behave. They are used to group and structure style rules and other at-rules, declare style information not directly associated with selected content, and manage syntactic constructs such as imports and namespaces keyword mappings. They begin with an at-sign, `@` (U+0040 COMMERCIAL AT), followed by an identifier.
 
 ## Index of at-rules and at-rule descriptors
 
@@ -115,6 +115,6 @@ sidebar: cssref
 ## See also
 
 - [CSS at-rule functions](/en-US/docs/Web/CSS/Reference/At-rules/At-rule_functions)
-- [Nesting at-rules](/en-US/docs/Web/CSS/CSS_nesting/Nesting_at-rules)
-- [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax) module
-- [CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules) module
+- [Nesting at-rules](/en-US/docs/Web/CSS/Guides/Nesting/At-rules)
+- [CSS syntax](/en-US/docs/Web/CSS/Guides/Syntax) module
+- [CSS conditional rules](/en-US/docs/Web/CSS/Guides/Conditional_rules) module

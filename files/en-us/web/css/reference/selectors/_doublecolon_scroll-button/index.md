@@ -53,13 +53,13 @@ You can generate up to four scroll buttons per scroll container, which will scro
 
 The generated buttons behave just like regular {{htmlelement("button")}} elements, including sharing their default browser styles. They are focusable, accessible, and can be activated like regular buttons. When a scroll button is pressed, the scroll container's content is scrolled in the specified direction by one "page," or approximately the dimension of the scroll container, similar to pressing <kbd>PgUp</kbd> and <kbd>PgDn</kbd> keys.
 
-The recommendation is to set up [CSS scroll snapping](/en-US/docs/Web/CSS/CSS_scroll_snap) on the scroll container and set each separate item of content you want to scroll to as a [snap target](/en-US/docs/Glossary/Scroll_snap#snap_target). This being the case, activating a scroll button will scroll the content to the snap target that is one "page" away. While the scroll buttons will work without scroll snapping, you might not get the desired effect.
+The recommendation is to set up [CSS scroll snapping](/en-US/docs/Web/CSS/Guides/Scroll_snap) on the scroll container and set each separate item of content you want to scroll to as a [snap target](/en-US/docs/Glossary/Scroll_snap#snap_target). This being the case, activating a scroll button will scroll the content to the snap target that is one "page" away. While the scroll buttons will work without scroll snapping, you might not get the desired effect.
 
 When it is not possible to scroll any further in a particular scroll button's scrolling direction, the button is automatically disabled, otherwise it is enabled. You can style the scroll buttons in their enabled and disabled states using the {{cssxref(":enabled")}} and {{cssxref(":disabled")}} pseudo-classes.
 
 ## Examples
 
-See [Creating CSS carousels](/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels) for more carousel examples.
+See [Creating CSS carousels](/en-US/docs/Web/CSS/Guides/Overflow/Carousels) for more carousel examples.
 
 ### Creating scroll buttons
 
@@ -167,11 +167,11 @@ Note how the scroll buttons are created at the bottom left on the carousel. Try 
 
 ### Positioning the scroll buttons
 
-The previous example works, but the buttons are not ideally placed. In this section, we will add some CSS to position them using [anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning).
+The previous example works, but the buttons are not ideally placed. In this section, we will add some CSS to position them using [anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning).
 
 #### CSS
 
-First of all, a reference {{cssxref("anchor-name")}} is set on the `<ul>` to define it as a named anchor. Next, each scroll button has its {{cssxref("position")}} set to `absolute` and its {{cssxref("position-anchor")}} property set to the list's `anchor-name`, to [associate the two together](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#associating_anchor_and_positioned_elements).
+First of all, a reference {{cssxref("anchor-name")}} is set on the `<ul>` to define it as a named anchor. Next, each scroll button has its {{cssxref("position")}} set to `absolute` and its {{cssxref("position-anchor")}} property set to the list's `anchor-name`, to [associate the two together](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using#associating_anchor_and_positioned_elements).
 
 ```css live-sample___positioning-scroll-buttons
 ul {
@@ -223,7 +223,7 @@ ul::scroll-button(right) {
 - {{cssxref("::scroll-marker")}}
 - {{cssxref("::column")}}
 - {{cssxref(":target-current")}}
-- [Creating CSS carousels](/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels)
-- [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
-- [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module
+- [Creating CSS carousels](/en-US/docs/Web/CSS/Guides/Overflow/Carousels)
+- [CSS overflow](/en-US/docs/Web/CSS/Guides/Overflow) module
+- [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) module
 - [CSS Carousel Gallery](https://chrome.dev/carousel/) via chrome.dev (2025)

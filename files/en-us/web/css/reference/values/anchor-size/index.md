@@ -6,9 +6,9 @@ browser-compat: css.types.anchor-size
 sidebar: cssref
 ---
 
-The **`anchor-size()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) enables setting anchor-positioned element's [size](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#sizing_elements_based_on_anchor_size), [position](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#setting_element_position_based_on_anchor_size), and [margins](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#setting_element_margin_based_on_anchor_size) relative to the dimensions of anchor elements. It returns the `<length>` of a specified side of the target anchor element. `anchor-size()` is only valid when used within the value of anchor-positioned elements' [sizing, inset, and margin properties](#properties_that_accept_anchor-size_function_values).
+The **`anchor-size()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) enables setting anchor-positioned element's [size](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using#sizing_elements_based_on_anchor_size), [position](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using#setting_element_position_based_on_anchor_size), and [margins](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using#setting_element_margin_based_on_anchor_size) relative to the dimensions of anchor elements. It returns the `<length>` of a specified side of the target anchor element. `anchor-size()` is only valid when used within the value of anchor-positioned elements' [sizing, inset, and margin properties](#properties_that_accept_anchor-size_function_values).
 
-For detailed information on anchor features and usage, see the [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module landing page and the [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide.
+For detailed information on anchor features and usage, see the [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) module landing page and the [Using CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using) guide.
 
 ## Syntax
 
@@ -60,7 +60,7 @@ The parameters are:
       - : The height of the anchor element.
 
     - `block`
-      - : The length of the anchor element's [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block) in the block direction.
+      - : The length of the anchor element's [containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block) in the block direction.
 
     - `inline`
       - : The length of the anchor element's containing block in the inline direction.
@@ -104,7 +104,7 @@ If an element has sizing, position, or margin properties with `anchor-size()` va
 
 For example, if `width: anchor-size(width, 50px);` were specified on the positioned element but no anchor was associated with it, the fallback value would be used, so `width` would get a computed value of `50px`.
 
-For detailed information on anchor features and usage, see the [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module landing page and the [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide.
+For detailed information on anchor features and usage, see the [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) module landing page and the [Using CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using) guide.
 
 ### Properties that accept `anchor-size()` function values
 
@@ -288,7 +288,7 @@ Use your browser tools to inspect the anchor-positioned elements. The first info
 
 ### Position and margin example
 
-See [`anchor-size()` position and margin example](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#anchor-size_position_and_margin_example).
+See [`anchor-size()` position and margin example](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using#anchor-size_position_and_margin_example).
 
 ## Specifications
 
@@ -303,5 +303,5 @@ See [`anchor-size()` position and margin example](/en-US/docs/Web/CSS/CSS_anchor
 - {{cssxref("anchor-name")}}
 - {{cssxref("position-anchor")}}
 - {{cssxref("anchor()")}} function
-- [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide
-- [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module
+- [Using CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using) guide
+- [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) module

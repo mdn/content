@@ -72,7 +72,7 @@ The rest of this article will explain the various web platform features you migh
 
 ## Media Queries
 
-[Media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) allow us to run a series of tests (for example, whether the user's screen is greater than a certain width or resolution) and apply CSS selectively to style the page appropriately for the user's needs.
+[Media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using) allow us to run a series of tests (for example, whether the user's screen is greater than a certain width or resolution) and apply CSS selectively to style the page appropriately for the user's needs.
 
 For example, the following media query tests to see if the current web page is being displayed as screen media (therefore not a printed document) and the viewport is at least `80rem` wide. The `.container` rule will only be applied if these two things are true.
 
@@ -279,7 +279,7 @@ This scales media elements to ensure they never overflow their containers.
 Other useful tips:
 
 - Always make sure to use an appropriate image format for your website images (such as PNG or JPG), and make sure to optimize the file size using a graphics editor before you put them on your website.
-- You can make use of CSS features like [gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients) and [shadows](/en-US/docs/Web/CSS/Reference/Properties/box-shadow) to implement visual effects without using images.
+- You can make use of CSS features like [gradients](/en-US/docs/Web/CSS/Guides/Images/Using_gradients) and [shadows](/en-US/docs/Web/CSS/Reference/Properties/box-shadow) to implement visual effects without using images.
 - You can use media queries inside the media attribute on {{htmlelement("source")}} elements nested inside {{htmlelement("video")}}/{{htmlelement("audio")}} elements to serve video/audio files as appropriate for different devices (responsive video/audio).
 
 ## Responsive typography

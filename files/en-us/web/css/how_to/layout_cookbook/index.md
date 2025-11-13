@@ -36,8 +36,8 @@ The CSS layout cookbook aims to bring together recipes for common layout pattern
 [pagination]: /en-US/docs/Web/CSS/How_to/Layout_cookbook/Pagination
 [card]: /en-US/docs/Web/CSS/How_to/Layout_cookbook/Card
 [grid-wrapper]: /en-US/docs/Web/CSS/How_to/Layout_cookbook/Grid_wrapper
-[css-grid]: /en-US/docs/Web/CSS/CSS_grid_layout
-[multicol]: /en-US/docs/Web/CSS/CSS_multicol_layout
+[css-grid]: /en-US/docs/Web/CSS/Guides/Grid_layout
+[multicol]: /en-US/docs/Web/CSS/Guides/Multicol_layout
 [flexbox]: /en-US/docs/Web/CSS/CSS_flexible_box_layout
 [box-alignment]: /en-US/docs/Web/CSS/CSS_box_alignment
 

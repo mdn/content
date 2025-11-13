@@ -6,7 +6,7 @@ browser-compat: css.properties.contain-intrinsic-size
 sidebar: cssref
 ---
 
-The **`contain-intrinsic-size`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) sets the size of an element that a browser will use for layout when the element is subject to [size containment](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment#size_containment).
+The **`contain-intrinsic-size`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) sets the size of an element that a browser will use for layout when the element is subject to [size containment](/en-US/docs/Web/CSS/Guides/Containment/Using#size_containment).
 
 ## Constituent properties
 
@@ -360,6 +360,6 @@ However if the content is hidden, having a `contain-intrinsic-size` of `none` co
 
 - {{CSSxRef("contain-intrinsic-block-size")}}
 - {{CSSxRef("contain-intrinsic-inline-size")}}
-- [Using CSS containment](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment)
-- [CSS containment](/en-US/docs/Web/CSS/CSS_containment) module
+- [Using CSS containment](/en-US/docs/Web/CSS/Guides/Containment/Using)
+- [CSS containment](/en-US/docs/Web/CSS/Guides/Containment) module
 - [`content-visibility`: the new CSS property that boosts your rendering performance](https://web.dev/articles/content-visibility) via web.dev (2020)

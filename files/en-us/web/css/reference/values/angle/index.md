@@ -120,6 +120,6 @@ Optionally, it may be preceded by a single `+` or `-` sign. Positive numbers rep
 - [CSS data types](/en-US/docs/Web/CSS/Reference/Values/Data_types)
 - The [`<gradient>`](/en-US/docs/Web/CSS/Reference/Values/gradient) type
 - CSS rotation transforms: [`rotate()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/rotate), [`rotate3d()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/rotate3d), [`rotateX()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/rotateX), [`rotateY()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/rotateY), and [`rotateZ()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/rotateZ)
-- [CSS transforms](/en-US/docs/Web/CSS/CSS_transforms)
-- [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
-- [Using CSS gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+- [CSS transforms](/en-US/docs/Web/CSS/Guides/Transforms)
+- [Using CSS transforms](/en-US/docs/Web/CSS/Guides/Transforms/Using)
+- [Using CSS gradients](/en-US/docs/Web/CSS/Guides/Images/Using_gradients)

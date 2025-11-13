@@ -78,4 +78,4 @@ p {
 ## See also
 
 - The [@media](/en-US/docs/Web/CSS/Reference/At-rules/@media) at-rule, which is used to specify the scan expression.
-- [Using media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) to understand when and how to use a media query.
+- [Using media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using) to understand when and how to use a media query.

@@ -28,7 +28,7 @@ oklch(from var(--color) l c h / calc(alpha - 0.1))
 
 ### Values
 
-Below are descriptions of the allowed values for both absolute and [relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors).
+Below are descriptions of the allowed values for both absolute and [relative colors](/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors).
 
 > [!NOTE]
 > Usually when percentage values have a numeric equivalent in CSS, `100%` is equal to the number `1`.
@@ -549,8 +549,8 @@ The output is as follows:
 ## See also
 
 - [List of all color notations](/en-US/docs/Web/CSS/Reference/Values/color_value)
-- [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)
-- [CSS colors](/en-US/docs/Web/CSS/CSS_colors) module
+- [Using relative colors](/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors)
+- [CSS colors](/en-US/docs/Web/CSS/Guides/Colors) module
 - {{CSSXref("&lt;hue&gt;")}} data type
 - {{cssxref("color_value/lch","lch()")}} and {{cssxref("color_value/oklab","oklab()")}} color functions
 - [Interactive post on OkLCh color space](https://abhisaha.com/blog/interactive-post-oklch-color-space) (2024)

@@ -6,7 +6,7 @@ browser-compat: css.properties.box-decoration-break
 sidebar: cssref
 ---
 
-The **`box-decoration-break`** [CSS](/en-US/docs/Web/CSS) property specifies how an element's [fragments](/en-US/docs/Web/CSS/CSS_fragmentation) should be rendered when broken across multiple lines, columns, or pages.
+The **`box-decoration-break`** [CSS](/en-US/docs/Web/CSS) property specifies how an element's [fragments](/en-US/docs/Web/CSS/Guides/Fragmentation) should be rendered when broken across multiple lines, columns, or pages.
 
 {{InteractiveExample("CSS Demo: box-decoration-break")}}
 

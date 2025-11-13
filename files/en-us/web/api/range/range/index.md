@@ -75,4 +75,4 @@ selection.addRange(range);
 
 - [The DOM interfaces index](/en-US/docs/Web/API/Document_Object_Model)
 - {{domxref("Document.createRange()")}}
-- [CSS custom highlight API](/en-US/docs/Web/CSS/CSS_custom_highlight_API) module
+- [CSS custom highlight API](/en-US/docs/Web/CSS/Guides/Custom_highlight_API) module

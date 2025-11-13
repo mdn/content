@@ -6,7 +6,7 @@ spec-urls: https://drafts.csswg.org/css-box-4/#keywords
 sidebar: cssref
 ---
 
-The **`<box-edge>`** value types represent a [box edge](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) keyword, such as [`content-box`](#content-box) and [`border-box`](#border-box). The box-edge keywords are used to define different aspects of an element's box model and how elements are positioned and rendered on screen.
+The **`<box-edge>`** value types represent a [box edge](/en-US/docs/Web/CSS/Guides/Box_model/Introduction) keyword, such as [`content-box`](#content-box) and [`border-box`](#border-box). The box-edge keywords are used to define different aspects of an element's box model and how elements are positioned and rendered on screen.
 
 The box-edge keywords are the components of, but not limited to, the data types `<visual-box>`, `<layout-box>`, `<paint-box>`, `<coord-box>`, and `<geometry-box>`. These types are applied to properties such as {{cssxref("transform-box")}} and {{cssxref("background-clip")}}.
 
@@ -72,4 +72,4 @@ The `<box-edge>` keywords are defined as follows:
 
 ## See also
 
-- [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module
+- [CSS box model](/en-US/docs/Web/CSS/Guides/Box_model) module

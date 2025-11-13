@@ -6,7 +6,7 @@ browser-compat: css.properties.outline
 sidebar: cssref
 ---
 
-The **`outline`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) sets most of the outline properties in a single declaration.
+The **`outline`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) sets most of the outline properties in a single declaration.
 
 {{InteractiveExample("CSS Demo: outline")}}
 
@@ -78,7 +78,7 @@ outline: revert-layer;
 outline: unset;
 ```
 
-The `outline` property may be specified using one, two, or three of the values listed below. The order of the values does not matter. As with all shorthand properties, any omitted sub-values will be set to their [initial value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value).
+The `outline` property may be specified using one, two, or three of the values listed below. The order of the values does not matter. As with all shorthand properties, any omitted sub-values will be set to their [initial value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#initial_value).
 
 > [!NOTE]
 > The outline will be invisible for many elements if its style is not defined. This is because the style defaults to `none`. A notable exception is `input` elements, which are given default styling by browsers.

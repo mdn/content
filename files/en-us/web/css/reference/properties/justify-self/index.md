@@ -56,9 +56,9 @@ The effect of this property is dependent of the layout mode we are in:
 
 - In block-level layouts, it aligns an item inside its containing block on the inline axis.
 - For absolutely-positioned elements, it aligns an item inside its containing block on the inline axis, accounting for the offset values of top, left, bottom, and right.
-- In table cell layouts, this property is _ignored_. Read more about [alignment in block, absolute positioned and table layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables).
-- In flexbox layouts, this property is _ignored_. Read more about [alignment in flexbox](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox).
-- In grid layouts, it aligns an item inside its grid area on the inline axis. Read more about [alignment in grid layouts](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout).
+- In table cell layouts, this property is _ignored_. Read more about [alignment in block, absolute positioned and table layout](/en-US/docs/Web/CSS/Guides/Box_alignment/In_block_abspos_tables).
+- In flexbox layouts, this property is _ignored_. Read more about [alignment in flexbox](/en-US/docs/Web/CSS/Guides/Box_alignment/In_flexbox).
+- In grid layouts, it aligns an item inside its grid area on the inline axis. Read more about [alignment in grid layouts](/en-US/docs/Web/CSS/Guides/Box_alignment/In_grid_layout).
 
 ## Syntax
 
@@ -141,7 +141,7 @@ This property can take one of three different forms:
 - `stretch`
   - : If the combined size of the items is less than the size of the alignment container, any `auto`-sized items have their size increased equally (not proportionally), while still respecting the constraints imposed by {{CSSxRef("max-height")}}/{{CSSxRef("max-width")}} (or equivalent functionality), so that the combined size exactly fills the alignment container.
 - `anchor-center`
-  - : In the case of [anchor-positioned](/en-US/docs/Web/CSS/CSS_anchor_positioning) elements, aligns the item to the center of the associated anchor element in the inline direction. See [Centering on the anchor using `anchor-center`](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#centering_on_the_anchor_using_anchor-center).
+  - : In the case of [anchor-positioned](/en-US/docs/Web/CSS/Guides/Anchor_positioning) elements, aligns the item to the center of the associated anchor element in the inline direction. See [Centering on the anchor using `anchor-center`](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using#centering_on_the_anchor_using_anchor-center).
 - `safe`
   - : If the size of the item overflows the alignment container, the item is instead aligned as if the alignment mode were `start`.
 - `unsafe`
@@ -233,8 +233,8 @@ span {
 
 ## See also
 
-- [Box alignment in grid layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)
-- [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module
+- [Box alignment in grid layout](/en-US/docs/Web/CSS/Guides/Box_alignment/In_grid_layout)
+- [CSS box alignment](/en-US/docs/Web/CSS/Guides/Box_alignment) module
 - {{CSSxRef("justify-items")}}
 - {{cssxref("align-self")}}
 - {{cssxref("place-self")}}

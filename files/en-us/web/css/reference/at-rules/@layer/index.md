@@ -6,7 +6,7 @@ browser-compat: css.at-rules.layer
 sidebar: cssref
 ---
 
-The **`@layer`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rules) is used to declare a cascade layer and can also be used to define the order of precedence in case of multiple cascade layers.
+The **`@layer`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules) is used to declare a cascade layer and can also be used to define the order of precedence in case of multiple cascade layers.
 
 {{InteractiveExample("CSS Demo: @layer", "tabbed-standard")}}
 
@@ -237,7 +237,7 @@ In the following example, two layers are created with no rules applied, then CSS
 - {{domxref("CSSLayerStatementRule")}}
 - [`!important`](/en-US/docs/Web/CSS/Reference/Values/important)
 - [`revert-layer`](/en-US/docs/Web/CSS/Reference/Values/revert-layer)
-- [Introducing the CSS cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade)
+- [Introducing the CSS cascade](/en-US/docs/Web/CSS/Guides/Cascade/Introduction)
 - [Learn: Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - [Learn: Cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
 - [The future of CSS: Cascade layers](https://www.bram.us/2021/09/15/the-future-of-css-cascade-layers-css-at-layer/) on bram.us (2021)

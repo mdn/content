@@ -70,4 +70,4 @@ Currently, no browsers support this feature.
 ## See also
 
 - {{cssxref("@font-face/font-display", "font-display")}} descriptor for {{cssxref("@font-face")}} at-rule
-- [CSS fonts](/en-US/docs/Web/CSS/CSS_fonts) module
+- [CSS fonts](/en-US/docs/Web/CSS/Guides/Fonts) module

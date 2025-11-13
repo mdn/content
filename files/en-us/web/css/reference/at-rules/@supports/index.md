@@ -6,7 +6,7 @@ browser-compat: css.at-rules.supports
 sidebar: cssref
 ---
 
-The **`@supports`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rules) lets you specify CSS declarations that depend on a browser's support for CSS features.
+The **`@supports`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules) lets you specify CSS declarations that depend on a browser's support for CSS features.
 Using this at-rule is commonly called a _feature query_.
 The rule must be placed at the top level of your code or nested inside any other conditional group at-rule.
 
@@ -348,7 +348,7 @@ body {
 
 ## See also
 
-- [Using feature queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)
+- [Using feature queries](/en-US/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries)
 - [CSS at-rule functions](/en-US/docs/Web/CSS/Reference/At-rules/At-rule_functions)
 - {{DOMxRef("CSSSupportsRule")}}
 - {{DOMxref("CSS.supports_static", "CSS.supports()")}} method

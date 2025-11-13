@@ -273,6 +273,9 @@ tag`string text line 1 \n string text line 2`;
 // including the two characters '\' and 'n'
 ```
 
+> [!NOTE]
+> The template literal syntax is still processed in the same way, which means unescaped backticks and `${` have special syntactic meaning, but escaping these characters create extra backslashes in the raw string. See [raw strings containing template literal syntax](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/raw#raw_strings_containing_template_literal_syntax) for more information.
+
 In addition, the {{jsxref("String.raw()")}} method exists to create raw strings just like the default template function and string concatenation would create.
 
 ```js

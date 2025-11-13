@@ -58,7 +58,7 @@ This example shows how you can use the `hypot()` function to calculate sizes.
 
 #### CSS
 
-Here we are using [CSS custom properties](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) to define the sizes to be used. First we declare the first size (`--size-0`) which is then used to calculate the other sizes.
+Here we are using [CSS custom properties](/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties) to define the sizes to be used. First we declare the first size (`--size-0`) which is then used to calculate the other sizes.
 
 - `--size-1` is calculated with the hypotenuse of `--size-0` (100px). This takes the square value and, as there is no other value, returns the square root of the value, which results in 100px.
 - `--size-2` is calculated with the hypotenuse of `--size-0` (100px), twice. This takes the square of the value (100px \* 100px = 10000px<sup>2</sup>) and adds it to the square of `--size-0` again (10000px<sup>2</sup> + 10000px<sup>2</sup> = 20000px<sup>2</sup>) and returns the square root of the sum (√(20000px<sup>2</sup>)), which results in 141.42px.

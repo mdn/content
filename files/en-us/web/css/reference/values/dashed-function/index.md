@@ -10,7 +10,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`<dashed-function>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types) represents the syntax used to call [CSS custom functions](/en-US/docs/Web/CSS/CSS_custom_functions_and_mixins/Using_custom_functions), which are defined using the {{cssxref("@function")}} at-rule.
+The **`<dashed-function>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types) represents the syntax used to call [CSS custom functions](/en-US/docs/Web/CSS/Guides/Custom_functions_and_mixins/Using_custom_functions), which are defined using the {{cssxref("@function")}} at-rule.
 
 ## Syntax
 
@@ -22,7 +22,7 @@ In cases where you want to [pass comma-containing values as arguments](/en-US/do
 
 ## Examples
 
-For more examples, see our [Using CSS custom functions](/en-US/docs/Web/CSS/CSS_custom_functions_and_mixins/Using_custom_functions) guide.
+For more examples, see our [Using CSS custom functions](/en-US/docs/Web/CSS/Guides/Custom_functions_and_mixins/Using_custom_functions) guide.
 
 ### Basic `<dashed-function>` usage
 
@@ -38,7 +38,7 @@ The markup features a {{htmlelement("p")}} containing some text content:
 
 #### CSS
 
-In our styles, we first define the CSS custom function. The function is called `--transparent` and accepts two parameters: a color and a numeric alpha channel value. Inside the function body, we use [relative color syntax](/en-US/docs/Web/CSS/CSS_colors/Relative_colors) to transform the passed color into an [`oklch()`](/en-US/docs/Web/CSS/Reference/Values/color_value/oklch) color with an alpha channel equal to the passed alpha value; this becomes the function's `result`:
+In our styles, we first define the CSS custom function. The function is called `--transparent` and accepts two parameters: a color and a numeric alpha channel value. Inside the function body, we use [relative color syntax](/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors) to transform the passed color into an [`oklch()`](/en-US/docs/Web/CSS/Reference/Values/color_value/oklch) color with an alpha channel equal to the passed alpha value; this becomes the function's `result`:
 
 ```css live-sample___basic-example
 @function --transparent(--color <color>, --alpha <number>) {
@@ -98,5 +98,5 @@ p {
 - [CSS custom properties](/en-US/docs/Web/CSS/Reference/Properties/--*)
 - {{cssxref("@function")}} at-rule
 - [`type()`](/en-US/docs/Web/CSS/Reference/Values/type) function
-- [Using CSS custom functions](/en-US/docs/Web/CSS/CSS_custom_functions_and_mixins/Using_custom_functions)
-- [CSS custom functions and mixins](/en-US/docs/Web/CSS/CSS_custom_functions_and_mixins) module
+- [Using CSS custom functions](/en-US/docs/Web/CSS/Guides/Custom_functions_and_mixins/Using_custom_functions)
+- [CSS custom functions and mixins](/en-US/docs/Web/CSS/Guides/Custom_functions_and_mixins) module

@@ -36,7 +36,7 @@ When working with color, it's important to know which "color space" you are work
 
 In color printing, your printer likely has cyan, magenta, yellow, and black (CMYK) ink cartridges. CMYK is a subtractive model wherein the four inks _remove_ specific wavelengths of light, reflecting only the narrow range each is associated with. RGB is an additive color model that adds different proportions of red, green, and blue lights.
 
-Currently, the {{glossary("RGB", "RGB color space")}} predominates as the space web developers work in. While HEX, RGB, and HSL color spaces are notated differently, browsers automatically convert values between these color notations. [CSS color modules](/en-US/docs/Web/CSS/CSS_colors) provide additional color spaces. Still, because of the current domination of the RGB color space in measuring color output, most calculations in this document are presumed to be in the RGB color space and, very specifically, in the sRGB color space.
+Currently, the {{glossary("RGB", "RGB color space")}} predominates as the space web developers work in. While HEX, RGB, and HSL color spaces are notated differently, browsers automatically convert values between these color notations. [CSS color modules](/en-US/docs/Web/CSS/Guides/Colors) provide additional color spaces. Still, because of the current domination of the RGB color space in measuring color output, most calculations in this document are presumed to be in the RGB color space and, very specifically, in the sRGB color space.
 
 ## The sRGB color space
 
@@ -121,7 +121,7 @@ In addition to developer tools, many tools can convert RGB to HSL for you and pr
 
 ![Color picker with HSL and RGB, with color contrast values.](microcolorsc.jpg)
 
-As noted earlier, the [CSS color module](/en-US/docs/Web/CSS/CSS_colors) includes adding additional colorspaces, including [`lch()`](/en-US/docs/Web/CSS/Reference/Values/color_value/lch) and [`oklch()`](/en-US/docs/Web/CSS/Reference/Values/color_value/oklch) functional color notation and the [`lab()`](/en-US/docs/Web/CSS/Reference/Values/color_value/lab) and [`oklab()`](/en-US/docs/Web/CSS/Reference/Values/color_value/oklab) color coordinate systems, which can specify any visible color. That said, sRGB is still the default and preferred colorspace for accessibility because of its ubiquity.
+As noted earlier, the [CSS color module](/en-US/docs/Web/CSS/Guides/Colors) includes adding additional colorspaces, including [`lch()`](/en-US/docs/Web/CSS/Reference/Values/color_value/lch) and [`oklch()`](/en-US/docs/Web/CSS/Reference/Values/color_value/oklch) functional color notation and the [`lab()`](/en-US/docs/Web/CSS/Reference/Values/color_value/lab) and [`oklab()`](/en-US/docs/Web/CSS/Reference/Values/color_value/oklab) color coordinate systems, which can specify any visible color. That said, sRGB is still the default and preferred colorspace for accessibility because of its ubiquity.
 
 Where accessibility is concerned, however, standards and guidelines are currently written predominantly using the sRGB color space, especially as it applies to color contrast ratios.
 
@@ -130,7 +130,7 @@ Where accessibility is concerned, however, standards and guidelines are currentl
 
 ### Querying color values
 
-The {{domxref('Window.getComputedStyle()')}} method returns values using the RGB Decimal Reference scale or via `color(srgb...)`. For example, calling `Window.getComputedStyle()` on a `<div>` with `background-color: red` set on it returns the computed background color as `rgb(255, 0, 0)` — the RGB Decimal reference. However, when [using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors) (for example `background-color: rgb(from blue 255 0 0)`), calling `Window.getComputedStyle()` returns the computed background color as `color(srgb 1 0 0)`. Being tied to computer hardware, `Window.getComputedStyle()` measures color in terms of RGB, not how the human eye perceives color.
+The {{domxref('Window.getComputedStyle()')}} method returns values using the RGB Decimal Reference scale or via `color(srgb...)`. For example, calling `Window.getComputedStyle()` on a `<div>` with `background-color: red` set on it returns the computed background color as `rgb(255, 0, 0)` — the RGB Decimal reference. However, when [using relative colors](/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors) (for example `background-color: rgb(from blue 255 0 0)`), calling `Window.getComputedStyle()` returns the computed background color as `color(srgb 1 0 0)`. Being tied to computer hardware, `Window.getComputedStyle()` measures color in terms of RGB, not how the human eye perceives color.
 
 ### Red / green color blindness
 

@@ -1,0 +1,206 @@
+---
+title: CSS selectors
+short-title: Selectors
+slug: Web/CSS/Guides/Selectors
+page-type: css-module
+spec-urls: https://drafts.csswg.org/selectors/
+sidebar: cssref
+---
+
+The **CSS selectors** module defines the patterns to select elements to which a set of CSS rules are then applied along with their [specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity). The CSS selectors module provides us with more than 60 selectors and five combinators. [Other modules](#related_concepts) provide additional pseudo-class selectors and pseudo-elements.
+
+In CSS, selectors are patterns used to match, or select, the elements you want to style. Selectors are also used in JavaScript to enable selecting the DOM nodes to return as a [`NodeList`](/en-US/docs/Web/API/NodeList).
+
+Selectors, whether used in CSS or JavaScript, enable targeting HTML elements based on their type, attributes, current states, and even position in the DOM. Combinators allow you to be more precise when selecting elements by enabling selecting elements based on their relationship to other elements.
+
+## Reference
+
+### Combinators and separators
+
+- `+` ([Next-sibling combinator](/en-US/docs/Web/CSS/Reference/Selectors/Next-sibling_combinator))
+- `>` ([Child combinator](/en-US/docs/Web/CSS/Reference/Selectors/Child_combinator))
+- `~` ([Subsequent sibling combinator](/en-US/docs/Web/CSS/Reference/Selectors/Subsequent-sibling_combinator))
+- " " ([Descendant combinator](/en-US/docs/Web/CSS/Reference/Selectors/Descendant_combinator))
+- `|` ([Namespace separator](/en-US/docs/Web/CSS/Reference/Selectors/Namespace_separator))
+- `,` ([Selector list](/en-US/docs/Web/CSS/Reference/Selectors/Selector_list))
+
+The CSS selectors module also introduces the [column combinator](/en-US/docs/Web/CSS/Reference/Selectors/Column_combinator) (`||`). Currently, no browsers support this feature.
+
+### Selectors
+
+- {{CSSXref(":active")}}
+- {{CSSXref(":any-link")}}
+- {{CSSXref(":autofill")}}
+- {{CSSXref(":buffering")}}
+- {{CSSXref(":checked")}}
+- {{CSSXref(":default")}}
+- {{CSSXref(":defined")}}
+- {{CSSXref(":dir", ":dir()")}}
+- {{CSSXref(":disabled")}}
+- {{CSSXref(":empty")}}
+- {{CSSXref(":enabled")}}
+- {{CSSXref(":first-child")}}
+- {{CSSXref(":first-of-type")}}
+- {{CSSXref(":focus")}}
+- {{CSSXref(":focus-visible")}}
+- {{CSSXref(":focus-within")}}
+- {{CSSXref(":fullscreen")}}
+- {{CSSXref(":future")}}
+- {{CSSXref(":has", ":has()")}}
+- {{CSSXref(":hover")}}
+- {{CSSXref(":in-range")}}
+- {{CSSXref(":indeterminate")}}
+- {{CSSXref(":invalid")}}
+- {{CSSXref(":is", ":is()")}}
+- {{CSSXref(":lang", ":lang()")}}
+- {{CSSXref(":last-child")}}
+- {{CSSXref(":last-of-type")}}
+- {{CSSXref(":link")}}
+- `:matches()` (obsolete legacy selector alias for {{CSSXref( ":is", ":is()")}})
+- {{CSSXref(":modal")}}
+- {{CSSXref(":muted")}}
+- {{CSSXref(":not", ":not()")}}
+- {{CSSXref(":nth-child", ":nth-child()")}}
+- {{CSSXref(":nth-of-type", ":nth-of-type()")}}
+- {{CSSXref(":nth-last-child", ":nth-last-child()")}}
+- {{CSSXref(":nth-last-of-type", ":nth-last-of-type()")}}
+- {{CSSXref(":only-child")}}
+- {{CSSXref(":only-of-type")}}
+- {{CSSXref(":open")}}
+- {{CSSXref(":optional")}}
+- {{CSSXref(":out-of-range")}}
+- {{CSSXref(":past")}}
+- {{CSSXref(":paused")}}
+- {{CSSXref(":picture-in-picture")}}
+- {{CSSXref(":placeholder-shown")}}
+- {{CSSXref(":playing")}}
+- {{CSSXref(":popover-open")}}
+- {{CSSXref(":read-only")}}
+- {{CSSXref(":read-write")}}
+- {{CSSXref(":required")}}
+- {{CSSXref(":root")}}
+- {{CSSXref(":scope")}}
+- {{CSSXref(":seeking")}}
+- {{CSSXref(":stalled")}}
+- {{CSSXref(":target")}}
+- {{CSSXref(":user-invalid")}}
+- {{CSSXref(":user-valid")}}
+- {{CSSXref(":valid")}}
+- {{CSSXref(":visited")}}
+- {{CSSXref(":volume-locked")}}
+- {{CSSXref(":where", ":where()")}}
+- [`:-webkit-` pseudo-classes](/en-US/docs/Web/CSS/Reference/Webkit_extensions#pseudo-classes)
+- [Attribute selectors](/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors)
+- [Class selector](/en-US/docs/Web/CSS/Reference/Selectors/Class_selectors)
+- [ID selectors](/en-US/docs/Web/CSS/Reference/Selectors/ID_selectors)
+- [Type selectors](/en-US/docs/Web/CSS/Reference/Selectors/Type_selectors)
+- [Universal selectors](/en-US/docs/Web/CSS/Reference/Selectors/Universal_selectors)
+
+The CSS selectors module also introduces the {{CSSXref(":blank")}}, {{CSSXref(":current")}}, and {{CSSXref(":local-link")}} pseudo-classes. Currently, no browsers support these features.
+
+## Terms
+
+- {{glossary("Pseudo-class")}} glossary term
+- [Functional pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes#functional_pseudo-classes)
+- [Combinators](/en-US/docs/Web/CSS/Guides/Selectors/Selectors_and_combinators#combinators)
+- [Simple selector](/en-US/docs/Web/CSS/Guides/Selectors/Selector_structure#simple_selector)
+- [Compound selector](/en-US/docs/Web/CSS/Guides/Selectors/Selector_structure#compound_selector)
+- [Complex selector](/en-US/docs/Web/CSS/Guides/Selectors/Selector_structure#complex_selector)
+- [Relative selector](/en-US/docs/Web/CSS/Guides/Selectors/Selector_structure#relative_selector)
+- [Specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity)
+
+## Guides
+
+- [CSS selectors and combinators](/en-US/docs/Web/CSS/Guides/Selectors/Selectors_and_combinators)
+  - : Overview of the different types of simple selectors and various combinators defined in the CSS selectors and the CSS pseudo modules.
+
+- [CSS selector structure](/en-US/docs/Web/CSS/Guides/Selectors/Selector_structure)
+  - : Explanation of the structure of CSS selectors and the terminologies introduced in the CSS selectors module, ranging from "simple selector" to "forgiving relative selector list".
+
+- [Pseudo classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
+  - : Lists the pseudo-classes, selectors that allow the selection of elements based on state information that is not contained in the document tree, defined in the various CSS modules and HTML.
+
+- [Using the `:target` pseudo-class in selectors](/en-US/docs/Web/CSS/Guides/Selectors/Using_:target)
+  - : Learn how to use the {{CSSXref(":target")}} pseudo-class to style the target element a URL's fragment identifier.
+
+- [Privacy and the `:visited` selector](/en-US/docs/Web/CSS/Guides/Selectors/Privacy_and_:visited)
+  - : Explores the style limitations set on the `:visited` class for user privacy.
+
+- [CSS building blocks: CSS selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
+  - : Introduction to basic CSS selectors, including tutorials on [Type, class, and ID selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors), [Attribute selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors), [Pseudo-classes and pseudo-elements](/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements), and [Combinators](/en-US/docs/Learn_web_development/Core/Styling_basics/Combinators).
+
+- [Learn: UI pseudo-classes](/en-US/docs/Learn_web_development/Extensions/Forms/UI_pseudo-classes)
+  - : Learn the different UI pseudo-classes available for styling forms in different states.
+
+- [Selection and traversal on the DOM tree](/en-US/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree)
+  - : The selectors API enables using selectors in JavaScript to retrieve element nodes from the DOM.
+
+## Related concepts
+
+- {{CSSXref(":state","state()")}} pseudo-class
+- [CSS nesting](/en-US/docs/Web/CSS/Guides/Nesting) module
+  - [`&` nesting selector](/en-US/docs/Web/CSS/Reference/Selectors/Nesting_selector)
+- [CSS scoping](/en-US/docs/Web/CSS/Guides/Scoping) module
+  - {{CSSXref(":host")}} pseudo-class
+  - {{CSSXref(":host_function", ":host()")}} pseudo-class
+  - {{CSSXref(":host-context", ":host-context()")}} pseudo-class
+  - {{CSSXref(":has-slotted")}} pseudo-class
+  - {{CSSXref("::slotted")}} pseudo-element
+
+- [CSS overflow](/en-US/docs/Web/CSS/Guides/Overflow) module
+  - {{cssxref("::scroll-button()")}}
+  - {{cssxref("::scroll-marker")}}
+  - {{cssxref("::scroll-marker-group")}}
+  - {{cssxref(":target-current")}}
+
+- [CSS multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout) module
+  - {{cssxref("::column")}}
+
+- [CSS paged media](/en-US/docs/Web/CSS/Guides/Paged_media) module
+  - {{CSSXref(":left")}} pseudo-class
+  - {{CSSXref(":right")}} pseudo-class
+  - {{CSSXref(":first")}} pseudo-class
+  - `:blank` pseudo-class
+
+- [CSS pseudo-element module](/en-US/docs/Web/CSS/Guides/Pseudo-elements) (representing entities not included in HTML)
+  - {{CSSXref("::after")}}
+  - {{CSSXref("::before")}}
+  - {{CSSXref("::file-selector-button")}}
+  - {{CSSXref("::first-letter")}}
+  - {{CSSXref("::first-line")}}
+  - {{CSSXref("::grammar-error")}}
+  - {{CSSXref("::marker")}}
+  - {{CSSXref("::placeholder")}}
+  - {{CSSXref("::selection")}}
+  - {{CSSXref("::spelling-error")}}
+  - {{CSSXref("::target-text")}}
+
+- [CSS shadow parts module](/en-US/docs/Web/CSS/Guides/Shadow_parts)
+  - {{CSSXref("::part")}} pseudo-element
+
+- [CSS positioned layout module](/en-US/docs/Web/CSS/Guides/Positioned_layout)
+  - {{CSSxRef("::backdrop")}}
+
+- Other [pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements)
+  - {{CSSxRef("::cue")}}
+
+- {{CSSXref("@namespace")}} at-rule
+
+- {{cssxref("important", "!important")}}
+- [Specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity)
+- [Cascade](/en-US/docs/Web/CSS/Guides/Cascade/Introduction)
+
+- {{domxref("Document.querySelector")}} method
+- {{domxref("Document.querySelectorAll")}} method
+- {{domxref("NodeList.forEach()")}} method
+
+## Specifications
+
+{{Specifications}}
+
+## See also
+
+- [CSS pseudo-element module](/en-US/docs/Web/CSS/Guides/Pseudo-elements)
+- [CSS cascading and inheritance module](/en-US/docs/Web/CSS/Guides/Cascade)
+- [CSS nesting module](/en-US/docs/Web/CSS/Guides/Nesting)
+- [Using shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM)

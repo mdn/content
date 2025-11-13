@@ -2,13 +2,9 @@
 title: contrast-color()
 slug: Web/CSS/Reference/Values/color_value/contrast-color
 page-type: css-function
-status:
-  - experimental
 browser-compat: css.types.color.contrast-color
 sidebar: cssref
 ---
-
-{{SeeCompatTable}}
 
 The **`contrast-color()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) takes a {{cssxref("color_value","color")}} value and returns a contrasting color. The function commonly ensures [the WCAG AA minimum contrast](https://w3c.github.io/wcag/guidelines/22/#contrast-minimum). The browsers may use different and better algorithms.
 
@@ -109,7 +105,7 @@ updateColor();
 
 ### Light and dark mode usage
 
-In the following example, the [`prefers-color-scheme`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) is used to set a background color based on operating system or browser color scheme settings. The `contrast-color()` function is used to set the text color automatically.
+In the following example, the [`prefers-color-scheme`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) [media query](/en-US/docs/Web/CSS/Guides/Media_queries/Using) is used to set a background color based on operating system or browser color scheme settings. The `contrast-color()` function is used to set the text color automatically.
 
 Try changing the browser or OS dark mode setting to see the effect.
 
@@ -180,7 +176,7 @@ pre {
 ## See also
 
 - [`contrast()`](/en-US/docs/Web/CSS/Reference/Values/filter-function/contrast)
-- [CSS colors](/en-US/docs/Web/CSS/CSS_colors) module
+- [CSS colors](/en-US/docs/Web/CSS/Guides/Colors) module
 - [CSS custom properties](/en-US/docs/Web/CSS/Reference/Properties/--*) and {{cssxref("var")}}
 - [`prefers-contrast`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-contrast) and [`prefers-color-scheme`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) {{cssxref("@media")}} features
 - [WCAG: color contrast](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)

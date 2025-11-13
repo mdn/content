@@ -199,7 +199,7 @@ Now that you have worked through our articles on text styling fundamentals, it's
 
 ## See also
 
-- [Variable fonts guide](/en-US/docs/Web/CSS/CSS_fonts/Variable_fonts_guide)
+- [Variable fonts guide](/en-US/docs/Web/CSS/Guides/Fonts/Variable_fonts)
 - [Fonts knowledge](https://fonts.google.com/knowledge), Google Fonts
 
 {{PreviousMenuNext("Learn_web_development/Core/Text_styling/Styling_links", "Learn_web_development/Core/Text_styling/Typesetting_a_homepage", "Learn_web_development/Core/Text_styling")}}
