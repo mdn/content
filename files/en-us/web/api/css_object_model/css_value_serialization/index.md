@@ -26,26 +26,26 @@ Serialization happens whenever CSS property values are read as strings through J
 Different APIs return `CSSStyleDeclaration` objects at different stages of [value processing](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing), which have slightly different serialization behaviors. For example, {{domxref("Window.getComputedStyle()")}} and {{domxref("HTMLElement.style")}} returns the [resolved value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#resolved_value) of properties, while {{domxref("CSSStyleRule.style")}} returns _more or less_ the [declared value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#declared_value).
 
 > [!NOTE]
-> The [CSS Typed OM API](/en-US/docs/Web/API/CSS_Typed_OM_API) is able to represent units and other CSS syntaxes; however, style retrieved from elements is still processed and doesn't preserve the original syntax. For example, `CSS.cm(1).toString()` returns `"1cm"` instead of serializing to pixels, but `element.computedStyleMap().get("margin-left").toString()` still returns the resolved pixel value.
+> The [CSS Typed OM API](/en-US/docs/Web/API/CSS_Typed_OM_API) is able to represent units and other CSS syntaxes; however, style declarations retrieved from an element are still processed and don't preserve the original syntax. For example, `CSS.cm(1).toString()` returns `"1cm"` instead of serializing to pixels, but `element.computedStyleMap().get("margin-left").toString()` returns the resolved pixel value.
 
 Each CSS value type has an associated serialization format defined by the CSS specifications. Some common rules include:
 
 - Keywords (like `auto`, `block`, `none`) serialize to all lowercase.
 - [`<angle>`](/en-US/docs/Web/CSS/Reference/Values/angle): serialized to some angle unit, depending on the context (unspecified). For `element.style` and `getComputedStyle()`, this is `deg`.
 - [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value):
-  - For sRGB colors (named, `transparent`, system colors, hex, `rgb`, `hsl`, `hwb`): serialized as `rgb(R, G, B)` or `rgba(R, G, B, A)`, where all arguments are numbers, and the `rgb` form is selected if the alpha is exactly `1`.
+  - For sRGB colors ({{cssxref("named-color")}}, `transparent`, {{cssxref("system-color")}}, {{cssxref("hex-color")}}, `rgb`, `hsl`, `hwb`): serialized as legacy comma-separated syntax `rgb(R, G, B)` or `rgba(R, G, B, A)`, where all arguments are numbers. The `rgb` form is selected if the alpha is exactly `1`.
   - For `lab()`, `lch()`, `oklab()`, `oklch()`, and `color()` colors: the function form is preserved, with numeric arguments.
   - The keyword `currentColor` serializes as `currentcolor`.
 - [`<percentage>`](/en-US/docs/Web/CSS/Reference/Values/percentage): preserved as a percentage.
 - [`<ratio>`](/en-US/docs/Web/CSS/Reference/Values/ratio): serialized to two numbers separated by `" / "`.
-- [`<url>`](/en-US/docs/Web/CSS/Reference/Values/url_value): serialized with `url("...")`, with the URL resolved to an absolute URL.
+- [`<url>`](/en-US/docs/Web/CSS/Reference/Values/url_value): serialized as a quoted {{cssxref("&lt;url&gt;")}} (`url("...")`), with the URL resolved to an absolute URL.
 
-Note that `<percentage>` values often get computed into absolute dimensions (like `<length>`) during value processing, so they may not appear as percentages when serialized from computed styles. For dimensions with units, such as [`<frequency>`](/en-US/docs/Web/CSS/Reference/Values/frequency), [`<length>`](/en-US/docs/Web/CSS/Reference/Values/length), [`<resolution>`](/en-US/docs/Web/CSS/Reference/Values/resolution), and [`<time>`](/en-US/docs/Web/CSS/Reference/Values/time), the serialized unit depends on the context and is not well-specified. `getComputedStyle()` and `element.style` serialize them into `Hz`, `px`, `dppx`, and `s` respectively.
+Note that `<percentage>` values often get computed into absolute dimensions (like `<length>`) during value processing, so they may not appear as percentages when serialized from computed styles. For dimensions with units, such as {{cssxref("&lt;frequency&gt;")}}, {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;resolution&gt;")}}, and {{cssxref("&lt;time&gt;")}}, the serialized unit depends on the context and is not well-specified. `getComputedStyle()` and `element.style` serialize them into `Hz`, `px`, `dppx`, and `s` respectively.
 
 When serializing the value for shorthand properties, its constituent longhand properties are serialized and combined according to the rules for that shorthand.
 
 > [!NOTE]
-> There are a lot of gory details regarding how CSS properties are serialized, especially for complex properties like `font`. They may be unspecified in the specifications or even inconsistent across browsers. You need to test and verify the behavior for your specific use case.
+> There are a lot of complex details regarding how CSS properties are serialized, especially for complex properties like `font`. They may be unspecified in the specifications or even inconsistent across browsers. You need to test and verify the behavior for your specific use case.
 
 ```html
 <div>Example Element</div>
