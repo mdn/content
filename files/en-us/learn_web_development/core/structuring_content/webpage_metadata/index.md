@@ -201,18 +201,23 @@ The humble favicon has been around for many years. It is the first icon of this 
 
 A favicon can be added to your page by:
 
-1. Saving it in a supported format such as `.ico`, `.gif`, or `.png` somewhere inside your website directory (in this example, it would be saved in the same directory as the HTML file).
-2. Adding the following {{htmlelement("link")}} element into your HTML's {{HTMLElement("head")}} block, which references the [path](/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links#a_quick_primer_on_urls_and_paths) to the favicon file (in this case, the path is just the file name because the favicon is in the same directory as the HTML):
+1. Saving it in a supported format such as `.ico`, `.gif`, or `.png` somewhere inside your website folder structure.
+2. Adding a {{htmlelement("link")}} element into your HTML's {{HTMLElement("head")}} block, which references the path to the favicon file:
 
    ```html
-   <link rel="icon" href="favicon.ico" type="image/x-icon" />
+   <link rel="icon" href="/favicon.ico" type="image/x-icon" />
    ```
+
+> [!NOTE]
+> In this example, the path to the favicon file starts with `/`, which means "look for the file in the top-level (or _root_) directory of your site". This may be in a different place in the source code, depending on what system you are using to create your site: different web frameworks for example put the site content root in different places. Bear in mind also that most browsers these days automatically use a `favicon.ico` file found at the site root as a favicon, so many sites don't even bother to include the `<link>` element. It is still useful to know about in case you want to locate your favicon file somewhere else.
+>
+> Don't worry too much about the intricacies of file paths for now; you'll learn more about them later on (check out [A quick primer on URLs and paths](/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links#a_quick_primer_on_urls_and_paths) if you are curious).
 
 Here is an example of a favicon in a bookmarks panel:
 
 ![The Firefox bookmarks panel, showing a bookmarked example with a favicon displayed next to it.](bookmark-favicon.png)
 
-You may also need different icons for different contexts. For example, you'll find this in the source code of the MDN Web Docs homepage:
+You may also want to include different icons for different contexts. For example:
 
 ```html
 <link rel="icon" href="/favicon-48x48.[some hex hash].png" />
@@ -246,9 +251,6 @@ This is a way to make the site show an icon when saved to an Apple device's home
 The comments explain what each icon is used for — these elements cover things like providing a high-resolution icon to use when the website is saved to an iPad's home screen.
 
 Don't worry too much about implementing all these types of icon right now — this is a fairly advanced feature, and you won't be expected to have knowledge of this to progress through the course. The main purpose here is to let you know what such things are, in case you come across them while browsing other websites' source code. If you do want to learn more about all these values and how to choose them, read the {{HTMLElement("link")}} element's reference page.
-
-> [!NOTE]
-> If your site uses a Content Security Policy (CSP) to enhance its security, the policy applies to the favicon. If you encounter problems with the favicon not loading, verify that the {{HTTPHeader("Content-Security-Policy")}} header's [`img-src` directive](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/img-src) is not preventing access to it.
 
 ## Applying CSS and JavaScript to HTML
 
