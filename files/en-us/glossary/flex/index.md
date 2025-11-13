@@ -11,7 +11,7 @@ There is also a {{cssxref("flex")}} property, which is a shorthand for the flexb
 
 In addition [`<flex>`](/en-US/docs/Web/CSS/Reference/Values/flex_value) can refer to a [flexible length](/en-US/docs/Web/CSS/Reference/Values/flex_value) in CSS Grid Layout.
 
-### Related CSS properties
+## Related CSS properties
 
 - {{cssxref("align-content")}}
 - {{cssxref("align-items")}}

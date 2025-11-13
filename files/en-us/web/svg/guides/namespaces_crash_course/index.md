@@ -7,7 +7,7 @@ sidebar: svgref
 
 As an [XML](/en-US/docs/Glossary/XML) dialect, [SVG](/en-US/docs/Web/SVG) is namespaced. It is important to understand the concept of namespaces and how they are used if you plan to author SVG content. Namespaces are essential to user agents that support multiple XML dialects; browsers must be very strict. Taking the time to understand namespaces now will save you from future headaches.
 
-### Background
+## Background
 
 A long-standing goal of the various W3C specifications is to make it possible for different types of XML-based content to be mixed together in the same XML or HTML file. For example, SVG and [MathML](/en-US/docs/Web/MathML) might be incorporated directly into an HTML based scientific document. Being able to mix content types like this has many advantages, but it also required a very real problem to be solved.
 
@@ -17,7 +17,7 @@ Contrary to popular opinion, the answer to this question is not "it can tell fro
 
 The real answer to the question is that XML content tells the user agent which dialect the element names belong to by giving them explicit "namespace declarations".
 
-### Declaring namespaces
+## Declaring namespaces
 
 So what do these namespace declarations look like, and where do they go? Here is a short example.
 
@@ -31,7 +31,7 @@ The namespace declaration is provided by the `xmlns` parameter. This parameter s
 
 Note that namespace names are just strings, so the fact that the SVG namespace name also looks like a URI isn't important. URIs are commonly used because they are unique, but the intention is not to "link" somewhere. (In fact, URIs are used so frequently that the term "namespace URI" is commonly used instead of "namespace name".)
 
-#### Redeclaring the default namespace
+### Redeclaring the default namespace
 
 If all the descendants of the root element are also defined to be in the default namespace, how do you mix in content from another namespace? To include the SVG namespace in HTML, you include `<svg>`. In XML, you declare a namespace. Here's a short example.
 
@@ -51,7 +51,7 @@ In this example, the `xmlns` attribute on the root `<report>` element declares t
 
 With HTML, `http://www.w3.org/1999/xhtml` is the implied namespace. With SVG, it is `http://www.w3.org/2000/svg`. MathML is `http://www.w3.org/1998/Math/MathML`.
 
-#### Declaring namespace prefixes
+### Declaring namespace prefixes
 
 XML dialects not only define their own elements, but they also declare their own parameters.
 
@@ -92,7 +92,7 @@ As an aside, it's useful to know that namespace prefixes can also be used for el
 
 Note that because a namespace prefix is used for the `<svg:svg>` element and its child `<svg:circle>`, it wasn't necessary to redeclare the default namespace. In general, it is better to redeclare the default namespace rather than prefix lots of elements in this way.
 
-### Scripting in namespaced XML
+## Scripting in namespaced XML
 
 Namespaces affect markup and scripting ([and even CSS](/en-US/docs/Web/CSS/Guides/Namespaces)). If you write scripts for namespaced XML such as SVG, read on.
 
@@ -298,7 +298,7 @@ image.setAttributeNS(null, "height", "100");
 image.setAttributeNS(XLINK_NS, "xlink:href", "flower.png");
 ```
 
-### Conclusion
+## Conclusion
 
 For SVG, HTML, and MathML, the namespace is implied and therefore optional. It is required to declare the namespace for XML files. If you don't, user agents will not recognize the content and will show the XML markup or inform the user that there's an error in the XML.
 
@@ -312,6 +312,6 @@ When writing SVG, it is helpful to use a template that includes all the commonly
 
 Even if you don't use all those namespaces in a particular document, there's no harm in including the namespace declarations. It may save you from some annoying errors if you end up adding content from one of the unused namespaces at a later date.
 
-### A full example
+## A full example
 
 For a full example see [SVG: Namespaces Crash Course: Example](/en-US/docs/Web/SVG/Guides/Namespaces_crash_course/Example).
