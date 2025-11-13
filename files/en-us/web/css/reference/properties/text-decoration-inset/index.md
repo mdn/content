@@ -73,17 +73,19 @@ One or two {{cssxref("&lt;length>")}} values, or the keyword `auto`.
 - {{cssxref("&lt;length>")}}
   - : Specifies the amount to adjust the text decoration position by. Positive values inset the text decoration (make it shorter) while negative values outset the text decoration (make it longer). If one value is specified, it applies to both the text decoration start and end points. If two values are specified, the first one applies to the text decoration start point and the second one applies to the text decoration end point.
 - `auto`
-  - : The browser chooses an inset amount to ensure that, if two decorated text boxes appear side-by-side, a gap is created between the two so they do not appear to have a single text decoration.
+  - : The browser chooses a start and end inset amount to ensure that, if two decorated text boxes appear side-by-side, a gap is created between the two so they do not appear to have a single text decoration.
 
 ## Description
 
-The `text-decoration-inset` property allows you to adjust the start and/or end points of a text container's text decoration, as set by the {{cssxref("text-decoration")}} shorthand and associated longhand properties. This is useful for creating effects where you want the text decoration to be inset or outset from the text itself, or shifted in position. See [Basic use cases](/en-US/docs/Web/CSS/Reference/Properties/text-decoration-inset#basic_use_cases) for an example of each.
+By default, an element's text decoration, as set by the {{cssxref("text-decoration")}} shorthand and associated longhand properties, is the same size as the rendered text.
+
+The `text-decoration-inset` property allows you to adjust the start and/or end points of a text container's text decoration. This is useful for creating effects where you want the text decoration to be inset or outset from the text itself, or shifted in position. See [Basic use cases](/en-US/docs/Web/CSS/Reference/Properties/text-decoration-inset#basic_use_cases) for an example of each.
 
 A single `<length>` value will set the inset (if positive) or outset (if negative) on the start and end positions of the text decoration. To set the start and end positions separately, you can use two `<length>` values — the first one applies to the start position of the text decoration and the second one applies to the end.
 
-The `text-decoration-inset` property can also take the `auto` keyword, which causes the browser to choose a value to ensure that, if two decorated text boxes appear side-by-side, a gap is created between them so they do not appear to have a single text decoration. The `auto` value is particularly important when rendering Chinese text, as underlining is used to [punctuate proper nouns](https://www.w3.org/TR/clreq/#id88), and adjacent proper nouns should have separate underlines. See [Effect of the `auto` value](/en-US/docs/Web/CSS/Reference/Properties/text-decoration-inset#effect_of_the_auto_value) for an example.
+The `text-decoration-inset` property can also take the `auto` keyword. This causes the browser to inset the start and end positions to ensure that, if two decorated text boxes appear side-by-side, a gap is created between them so they do not appear to have a single text decoration. The `auto` value is particularly important when rendering Chinese text, where underlining is used to [punctuate proper nouns](https://www.w3.org/TR/clreq/#id88), and adjacent proper nouns should have separate underlines. See [Effect of the `auto` value](/en-US/docs/Web/CSS/Reference/Properties/text-decoration-inset#effect_of_the_auto_value) for an example.
 
-The `auto` value does not have the same effect as a `text-decoration-inset` value of `0` (which is the initial value) — `0` causes there to be no space between decorations.
+The `auto` value does not have the same effect as the initial value `0`. Setting `text-decoration-inset` to `0` causes there to be no space between decorations.
 
 The `text-decoration-inset` property is not inherited, and it is not a constituent property of the {{cssxref("text-decoration")}} shorthand.
 
@@ -127,6 +129,17 @@ li {
   font-size: 2em;
   margin-bottom: 20px;
 }
+
+@supports not (text-decoration-inset: auto) {
+  body::before {
+    content: "Your browser doesn't support the text-decoration-inset property.";
+    background-color: wheat;
+    display: block;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+  }
+}
 ```
 
 ```css live-sample___use-case-examples
@@ -150,7 +163,7 @@ li {
 
 This renders like so:
 
-{{embedlivesample("use-case-examples", "100%", "200")}}
+{{embedlivesample("use-case-examples", "100%", "230")}}
 
 ### Effect of the `auto` value
 
@@ -161,9 +174,9 @@ This example demonstrates the effect of the `text-decoration-inset: auto` value.
 We define two groups of side-by-side {{htmlelement("u")}} elements:
 
 ```html live-sample___auto-example
-<p id="one"><u>石井</u><u>艾俐俐</u></p>
+<p lang="zh" id="one"><u>石井</u><u>艾俐俐</u></p>
 
-<p id="two"><u>石井</u><u>艾俐俐</u></p>
+<p lang="zh" id="two"><u>石井</u><u>艾俐俐</u></p>
 ```
 
 #### CSS
@@ -174,6 +187,17 @@ Each `<u>` element has a `red` color and `3px` thickness set on its underline. T
 u {
   font-family: sans-serif;
   font-size: 2em;
+}
+
+@supports not (text-decoration-inset: auto) {
+  body::before {
+    content: "Your browser doesn't support the text-decoration-inset property.";
+    background-color: wheat;
+    display: block;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+  }
 }
 ```
 
@@ -198,7 +222,7 @@ This renders like so:
 
 {{embedlivesample("auto-example", "100%", "200")}}
 
-Note how the `auto` value creates a gap in the underlines, whereas the `0` value results in no gap.
+Note how the `auto` value insets the text decoration subtly on both sides, creating a gap in between the underlines of the two elements (no space is added between the two elements themselves). The `0` value results in no gap.
 
 ## Specifications
 
