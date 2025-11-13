@@ -14,7 +14,7 @@ The **Private State Token API** provides a mechanism for conveying trust in a us
 
 ## Concepts and usage
 
-To prevent fraud on the web, websites and services need to establish and convey trust signals that prove a user is who they say they are, and is not a bot pretending to be a human or a malicious third-party defrauding a real person or service.
+To prevent fraud on the web, websites and services need to establish and convey trust signals that prove a user is who they say they are, and is not a bot pretending to be a human or a malicious third party defrauding a real person or service.
 
 - Trust is established using mechanisms such as [CAPTCHAs](https://en.wikipedia.org/wiki/CAPTCHA), verifying email addresses, or making purchases.
 - Trust is traditionally conveyed between different origins using mechanisms such as [third-party cookies](/en-US/docs/Web/Privacy/Guides/Third-party_cookies).
@@ -24,7 +24,7 @@ Unfortunately, current cookie-based techniques for conveying such information ar
 Private state tokens solve this problem, allowing trust signals to be conveyed across origins without passive tracking using the [Privacy Pass protocol](https://privacypass.github.io/) in the background.
 
 > [!NOTE]
-> Private state tokens are not a replacement for CAPTCHAs or other trust establishing mechanisms. Private state tokens provide a way to _convey_ trust in a user, not _establish_ trust in a user.
+> Private state tokens are not a replacement for CAPTCHAs or other trust-establishing mechanisms. Private state tokens provide a way to _convey_ trust in a user, not _establish_ trust in a user.
 
 ### How do private state tokens work?
 
@@ -38,7 +38,7 @@ See [Using the Private State Token API](/en-US/docs/Web/API/Private_State_Token_
 
 ## Interfaces
 
-The Private State Token API API has no distinct interfaces of its own.
+The Private State Token API has no distinct interfaces of its own.
 
 ### Extensions to other interfaces
 
@@ -71,7 +71,7 @@ The Private State Token API API has no distinct interfaces of its own.
 - {{httpheader("Sec-Private-State-Token-Crypto-Version")}}
   - : A request header sent to an issuer server that states which cryptographic protocol version should be used to sign blinded nonces when generating tokens.
 - {{httpheader("Sec-Private-State-Token-Lifetime")}}
-  - : A reponse header, sent by the redeemer server, to indicate to the browser how long it should cache a particular redemption record for.
+  - : A response header, sent by the redeemer server, to indicate to the browser how long it should cache a particular redemption record for.
 
 ## Security considerations
 
