@@ -26,9 +26,9 @@ This model has some benefits for both users and websites:
 In this guide we'll explore how a website can work with an IdP to add federated sign-in for their users. We'll cover:
 
 - The main flows defined in the [OpenID Connect (OIDC)](https://openid.net/developers/how-connect-works/) protocol, which is the dominant standard for federated identity, and good practices to follow when implementing them.
-- Third-party services that can simplify the process of implementing federated identity.
 - How browser restrictions on third-party cookies create problems for federated identity implementations.
 - The [Federated Credential Management (FedCM) API](/en-US/docs/Web/API/FedCM_API), which makes the browser's role much more active, to simplify the role of the RP and avoid relying on third-party cookies.
+- How a website can choose an IdP to work with, and how this choice can affect the process of implementing federated sign-in.
 
 ## OpenID Connect
 
@@ -160,7 +160,7 @@ When PKCE is used:
 - In step 2, the IdP stores the code challenge alongside the attacker's authorization code.
 - In step 5, the RP won't be able to find a code verifier for the user that matches the challenge the IdP stored, so the token request will fail.
 
-An alternative protection against this attack is the `state` parameter defined in OAuth 2.0. In this defense, the RP provides an unpredictable value as a parameter in the authentication request, and the IdP includes the same value in the response: the RP checks that they match. Because the attacker can't predict the value of `state`, they can't pass a matching value to the RP's redirect URL.
+An alternative defense is the `state` parameter defined in OAuth 2.0. In this defense, the RP provides an unpredictable value as a parameter in the authentication request, and the IdP includes the same value in the response: the RP checks that they match. Because the attacker can't predict the value of `state`, they can't pass a matching value to the RP's redirect URL.
 
 ##### Authorization code injection
 
@@ -176,7 +176,7 @@ With an authorization code injection attack:
 
 2. The user tries to sign in. The RP makes an authentication request, the user authenticates, and the IdP redirects the browser to the RP's redirect URL, with the authorization code as a URL parameter.
 
-3. At this point, the browser extension retrieves the authorization code, sends it to the attacker, and terminates the user's authentication flow.
+3. At this point, the malicious browser extension retrieves the authorization code, sends it to the attacker, and terminates the user's authentication flow.
 
 4. The attacker receives the user's authorization code.
 
@@ -275,4 +275,28 @@ For example, in an implementation of OIDC using FedCM, the token returned by `Cr
 
 In general, when an RP decides to use a particular IdP for federated login, the RP will register with the IdP, and as part of this process the IdP should explain to the RP exactly which arguments it expected to be given, how it should handle the objects that the IdP returns, and any other behavior it expects the RP to implement.
 
-## Identity providers
+## Choosing IdPs
+
+When you decide to add federated sign-in to your site, one of the fundamental choices you'll face is choosing which identity providers to work with. If a potential user of your site already has an account with one of your chosen IdPs, it's much easier for them to create a new account on your site.
+
+So you're likely to see more sign-ups if a large proportion of your expected userbase already has an account with your chosen IdP.
+
+It's common for a website to enable its users to sign in with more than one IdP, to cover more users and give them more choice. However, offering too many options leads to a confusing user experience, and users who have accounts at more than one of your IdPs may have trouble remembering which one they signed up with.
+
+It's also common practice to provide a fallback option for users who can't use any of your chosen IdPs. In this option, users authenticate directly with your site using a method such as a [password](/en-US/docs/Web/Security/Authentication/Passwords) or an [OTP](/en-US/docs/Web/Security/Authentication/OTP).
+
+Whichever identity providers you choose will provide detailed instructions and tools for integrating your site with their system, and this is likely to take care of many of the complexities inherent in a protocol like OIDC. However, it's still extremely helpful to understands what's happening under the surface.
+
+## Strengths and weaknesses
+
+For web developers, the biggest benefit of using federated identity is reducing sign-up friction for those users who already have an account with one of the chosen IdPs. Additionally, their chosen IdPs can help websites to securely implement federated identity.
+
+From a security perspective, the biggest benefit is that because users don't have to create new credentials for each account, there's a lower risk of them choosing passwords that are easy to remember (that is, weak) or of them reusing passwords across sites.
+
+We can say that federated identity is a more secure option than just passwords, but it still has problems:
+
+- The advantages to websites of choosing IdPs which have a large userbase means that the space tends to be monopolized by a few very large providers. This in turn tends to lock users into those providers, leading websites to offer a worse experience for users who don't want to (or can't) use them.
+
+- Unless a website is willing to completely lock out users who don't want to (or can't) sign up with their chosen IdPs, then the site still has to deal with all the complexity of implementing a fallback authentication method.
+
+- Like any authentication system that relies on the user entering a secret into a website, federated identity is vulnerable to [phishing](/en-US/docs/Web/Security/Attacks/Phishing) attacks.
