@@ -6,7 +6,7 @@ page-type: guide
 sidebar: cssref
 ---
 
-The [CSS display module](/en-US/docs/Web/CSS/Guides/Display) defines a multi-keyword syntax for the CSS [`display`](/en-US/docs/Web/CSS/Reference/Properties/display) property. This guide explains the multi-keyword syntax.
+The [CSS display module](/en-US/docs/Web/CSS/Guides/Display) defines a multi-keyword syntax for the CSS {{cssxref("display")}} property. This guide explains the multi-keyword syntax.
 
 > [!NOTE]
 > Multi-keyword syntax is also referred to as "two-value syntax" or "multi-value syntax."
