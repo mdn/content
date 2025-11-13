@@ -37,6 +37,13 @@ No notable changes.
   Note that the [`endpoints`](/en-US/docs/Web/HTTP/Reference/Headers/Integrity-Policy#endpoints) key is not yet supported (violations are logged to console).
   ([Firefox bug 1984973](https://bugzil.la/1984973)).
 
+### Security
+
+- When Bounce Tracking Protection (BTP) is enabled, it now runs in "stateless" mode by default.
+  In "stateless" mode, the browser no longer stores which sites acted as bounce trackers and instead detects tracking behavior during navigation for simpler protection that works consistently across browsers.
+  See [Bounce tracking mitigations](/en-US/docs/Web/Privacy/Guides/Bounce_tracking_mitigations) for more information.
+  ([Firefox bug 1990831](https://bugzil.la/1990831)).
+
 ### APIs
 
 - The {{domxref("ToggleEvent/source", "source")}} property of the {{domxref("ToggleEvent")}} interface is now supported.
