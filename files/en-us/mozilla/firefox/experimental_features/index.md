@@ -131,20 +131,6 @@ The {{cssxref('timeline-scope')}}, {{cssxref('animation-range-start')}} and {{cs
 - `layout.css.scroll-driven-animations.enabled`
   - : Set to `true` to enable.
 
-### @scope at-rule
-
-The [@scope](/en-US/docs/Web/CSS/Reference/At-rules/@scope) [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules) allows you to select specific child elements without having to overly increase the specificity of CSS selectors ([Firefox bug 1886441](https://bugzil.la/1886441)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 137           | Yes                 |
-| Developer Edition | 128           | No                  |
-| Beta              | 128           | No                  |
-| Release           | 128           | No                  |
-
-- `layout.css.at-scope.enabled`
-  - : Set to `true` to enable.
-
 ### prefers-reduced-transparency media feature
 
 The CSS [`prefers-reduced-transparency`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-transparency) media feature lets you detect if a user has enabled the setting to minimize the amount of transparent or translucent layer effects on their device.
