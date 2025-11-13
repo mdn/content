@@ -40,10 +40,12 @@ The **CSS text** module defines how to perform text manipulation, like line brea
 
 The specification also defines the `hyphenate-limit-last`, `hyphenate-limit-lines`, `hyphenate-limit-zone`, `line-padding`, `text-align-all`, `text-group-align`, `text-spacing`, `white-space-trim`, `word-space-transform`, `wrap-after`, `wrap-before`, and `wrap-inside` properties, which are not yet supported by any browser.
 
-### Guides
+## Guides
 
 - [Wrapping and breaking text](/en-US/docs/Web/CSS/Guides/Text/Wrapping_breaking_text)
   - : A guide to the various ways in which overflowing text can be managed in CSS.
+- [Handling whitespace](/en-US/docs/Web/CSS/Guides/Text/Whitespace)
+  - : A guide introducing the various CSS properties that control the rendering of whitespace in the DOM, exploring the pitfalls and their mitigations.
 
 ## Related concepts
 

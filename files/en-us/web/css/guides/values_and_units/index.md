@@ -12,6 +12,9 @@ sidebar: cssref
 
 Every CSS declaration consists of a property/value pair. The value can take various forms depending on the property, such as a single integer, keyword, function, or a combination of different items; some values have units, while others do not. Every property also accepts the CSS-wide values. The CSS values and units module defines the data types — values and units — that CSS properties accept. This module also defines the CSS value definition syntax, or formal grammar, used to define the set of valid values for every CSS property and function.
 
+> [!NOTE]
+> This page introduces a CSS module. To find an exhaustive list of all values, types, and functions defined by CSS specifications, see the [values](/en-US/docs/Web/CSS/Reference/Values) reference page.
+
 ## Reference
 
 ### Properties

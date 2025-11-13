@@ -84,8 +84,6 @@ The CSS color module also introduces the `CSSColorProfileRule` interface. Curren
   - : Color theory and resources, including finding the right colors to create an accessible color palette, contrast, and printing in color.
 - [Using relative colors](/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors)
   - : This article explains relative CSS color syntax, shows what the different options are, and looks at some illustrative examples.
-- [Color format converter](/en-US/docs/Web/CSS/Guides/Colors/Color_format_converter)
-  - : A tool that lets you enter or pick a color and copy its corresponding value in any CSS [color format](/en-US/docs/Web/CSS/Reference/Values/color_value).
 - [Understanding color and luminance](/en-US/docs/Web/Accessibility/Guides/Colors_and_Luminance)
   - : Color perception and using colors with color insensitive (color blind) users, reduced vision users and users with vestibular disorders or other neurological disorders in mind.
 - [WCAG 1.4.1: Color contrast](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)
@@ -136,3 +134,5 @@ The CSS color module also introduces the `CSSColorProfileRule` interface. Curren
 - The [`VideoColorSpace`](/en-US/docs/Web/API/VideoColorSpace) interface
 - The SVG [`<feColorMatrix>`](/en-US/docs/Web/SVG/Reference/Element/feColorMatrix) element
 - [Canvas API: applying styles and colors](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#colors)
+- [Color format converter](/en-US/docs/Web/CSS/Guides/Colors/Color_format_converter)
+- [Color mixer](/en-US/docs/Web/CSS/Guides/Colors/Color_mixer)
