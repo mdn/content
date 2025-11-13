@@ -128,7 +128,7 @@ In the token request:
 - The RP passes the code verifier in the _code_verifier_ parameter.
 - The IdP hashes the code verifier, and compares the result with the stored code challenge: if they do not match, then the token request is denied.
 
-This defends against two attacks: [CSRF](/en-US/docs/Web/Security/Attacks/CSRF) against the RP's redirect URL, and authorization code injection.
+This defends against two attacks: [CSRF against the RP's redirect URL](#csrf_against_the_redirect_url), and [authorization code injection](#authorization_code_injection).
 
 ##### CSRF against the redirect URL
 
@@ -194,6 +194,12 @@ PKCE protects against this attack, because:
 - In step 6, the RP's token request contains the _attacker's_ code verifier but the _user's_ code. The IdP looks up the code challenge for the user's code: it won't match the attacker's code verifier, and the token request will be denied.
 
 An alternative to PKCE, specified in OIDC, is the [`nonce`](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-security-topics#name-nonce) value. The RP includes this as another parameter in the authentication request: the IdP stores it, and the token endpoint returns it to the RP along with the tokens. The RP then checks that the returned value is the same as the original value.
+
+##### Ensuring that PKCE is used
+
+Although PKCE provides effective protection against the attacks described here, it's an optional part of the protocol. This means that an RP must ensure that its chosen IdP not only supports PKCE, but that it mandates the use of PKCE, refusing the token request if a valid code verifier is not included.
+
+Otherwise, an RP is vulnerable to a [PKCE downgrade attack](https://datatracker.ietf.org/doc/html/rfc9700#name-pkce-downgrade-attack), in which an attacker tricks the IdP into thinking that the RP does not wish to use PKCE in a token request.
 
 ### Architectures for OIDC clients
 
