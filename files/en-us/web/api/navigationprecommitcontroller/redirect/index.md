@@ -54,7 +54,7 @@ None (`undefined`).
 - `SyntaxError` {{domxref("DOMException")}}
   - : Thrown if the specified `url` is invalid.
 - `SecurityError` {{domxref("DOMException")}}
-  - : Thrown if the current document is unable to have its URL rewritten to the preovided redirect `url`.
+  - : Thrown if the current document is unable to have its URL rewritten to the provided redirect `url`.
 
 ## Examples
 
