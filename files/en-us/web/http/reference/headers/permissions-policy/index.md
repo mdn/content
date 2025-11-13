@@ -22,8 +22,8 @@ For more information, see the main [Permissions Policy](/en-US/docs/Web/HTTP/Gui
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
-      <td>yes</td>
+      <th scope="row">{{Glossary("Forbidden response header name","Forbidden response header")}}</th>
+      <td>no</td>
     </tr>
   </tbody>
 </table>
