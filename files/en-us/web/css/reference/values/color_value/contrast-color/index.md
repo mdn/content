@@ -2,13 +2,9 @@
 title: contrast-color()
 slug: Web/CSS/Reference/Values/color_value/contrast-color
 page-type: css-function
-status:
-  - experimental
 browser-compat: css.types.color.contrast-color
 sidebar: cssref
 ---
-
-{{SeeCompatTable}}
 
 The **`contrast-color()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) takes a {{cssxref("color_value","color")}} value and returns a contrasting color. The function commonly ensures [the WCAG AA minimum contrast](https://w3c.github.io/wcag/guidelines/22/#contrast-minimum). The browsers may use different and better algorithms.
 
