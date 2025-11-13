@@ -99,7 +99,7 @@ The `text-decoration-inset` property is not inherited, and it is not a constitue
 
 ### Basic use cases
 
-In this example we demonstrate an outset, inset, and "shifted" use case.
+In this example, we demonstrate the outset, inset, and "shifted" use cases.
 
 #### HTML
 
