@@ -403,25 +403,25 @@ W
 
 ### Non-standard pseudo-classes
 
-Non-standard, or vendor-prefixed pseudo-classes include the following:
+Non-standard vendor-prefixed pseudo-classes include:
 
 #### `-moz-` prefix
 
-- {{CSSxRef(":-moz-last-node")}}
-- {{CSSxRef(":-moz-handler-disabled")}}
-- {{CSSxRef(":-moz-window-inactive")}}
 - {{CSSxRef(":-moz-broken")}}
+- {{CSSxRef(":-moz-drag-over")}}
+- {{CSSxRef(":-moz-first-node")}}
+- {{CSSxRef(":-moz-handler-blocked")}}
+- {{CSSxRef(":-moz-handler-crashed")}}
+- {{CSSxRef(":-moz-handler-disabled")}}
+- {{CSSxRef(":-moz-last-node")}}
+- {{CSSxRef(":-moz-loading")}}
 - {{CSSxRef(":-moz-locale-dir_ltr")}}
 - {{CSSxRef(":-moz-locale-dir_rtl")}}
 - {{CSSxRef(":-moz-only-whitespace")}}
-- {{CSSxRef(":-moz-first-node")}}
-- {{CSSxRef(":-moz-drag-over")}}
-- {{CSSxRef(":-moz-loading")}}
-- {{CSSxRef(":-moz-suppressed")}}
 - {{CSSxRef(":-moz-submit-invalid")}}
+- {{CSSxRef(":-moz-suppressed")}}
 - {{CSSxRef(":-moz-user-disabled")}}
-- {{CSSxRef(":-moz-handler-blocked")}}
-- {{CSSxRef(":-moz-handler-crashed")}}
+- {{CSSxRef(":-moz-window-inactive")}}
 
 ## Specifications
 

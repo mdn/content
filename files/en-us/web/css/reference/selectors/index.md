@@ -34,8 +34,10 @@ selector {
 - [Attribute selectors](/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors)
 - [Class selectors](/en-US/docs/Web/CSS/Reference/Selectors/Class_selectors)
 - [ID selectors](/en-US/docs/Web/CSS/Reference/Selectors/ID_selectors)
+- [Namespace separator (`|`)](/en-US/docs/Web/CSS/Reference/Selectors/Namespace_separator)
 - [Pseudo-class selectors](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
 - [Pseudo-element selectors](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements)
+- [Selector list](/en-US/docs/Web/CSS/Reference/Selectors/Selector_list)
 - [Type selectors](/en-US/docs/Web/CSS/Reference/Selectors/Type_selectors)
 - [Universal selectors](/en-US/docs/Web/CSS/Reference/Selectors/Universal_selectors)
 

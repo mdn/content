@@ -186,7 +186,7 @@ V
 
 ### Non-standard pseudo-elements
 
-Non-standard, or vendor-prefixed pseudo-elements include the following:
+Non-standard vendor-prefixed pseudo-elements include:
 
 #### `-moz-` prefix
 

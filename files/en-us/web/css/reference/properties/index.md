@@ -595,7 +595,7 @@ Standard properties defined by CSS specifications include the following:
 
 ### Non-standard properties
 
-Non-standard, or vendor-prefixed properties include the following:
+Non-standard vendor-prefixed properties include:
 
 #### `-moz-` prefix
 

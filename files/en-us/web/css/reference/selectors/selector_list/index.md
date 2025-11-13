@@ -1,7 +1,7 @@
 ---
 title: Selector list
 slug: Web/CSS/Reference/Selectors/Selector_list
-page-type: css-combinator
+page-type: css-selector
 browser-compat: css.selectors.list
 sidebar: cssref
 ---
