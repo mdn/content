@@ -144,10 +144,11 @@ On the cross axis the `row-gap` property creates spacing between adjacent flex l
 
 ## See also
 
+- [CSS box alignment](/en-US/docs/Web/CSS/Guides/Box_alignment) module
 - [Box alignment overview](/en-US/docs/Web/CSS/Guides/Box_alignment/Overview)
 - [Box alignment in CSS grid layout](/en-US/docs/Web/CSS/Guides/Box_alignment/In_grid_layout)
 - [Box alignment in multiple-column layout](/en-US/docs/Web/CSS/Guides/Box_alignment/In_multi-column_layout)
-- [Box alignment for block, absolutely positioned and table layout](/en-US/docs/Web/CSS/Guides/Box_alignment/In_block_abspos_tables)
-- [Alignment in flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
+- [Box alignment for block, absolutely positioned, and table layouts](/en-US/docs/Web/CSS/Guides/Box_alignment/In_block_abspos_tables)
+- [Aligning items in flex container](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
 - {{Glossary("Cross axis")}}
 - {{Glossary("Main axis")}}
