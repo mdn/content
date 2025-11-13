@@ -13,7 +13,7 @@ sidebar: cssref
 A CSS **pseudo-element** is a keyword added to a selector that lets you style a specific part of the selected element(s).
 
 > [!NOTE]
-> This page is an index of all pseudo-elements in CSS. The [CSS pseudo-elements](/en-US/docs/Web/CSS/CSS_pseudo-elements) page introduces the module that defines some, but not all, of these pseudo-elements.
+> This page is an index of all pseudo-elements in CSS. The [CSS pseudo-elements](/en-US/docs/Web/CSS/Guides/Pseudo-elements) page introduces the module that defines some, but not all, of these pseudo-elements.
 
 ## Syntax
 

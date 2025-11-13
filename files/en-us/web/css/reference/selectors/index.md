@@ -9,6 +9,9 @@ sidebar: cssref
 
 **CSS selectors** are patterns used in [CSS rules](/en-US/docs/Web/CSS/Guides/Syntax/Introduction#css_rulesets) to target and select specific elements for styling.
 
+> [!NOTE]
+> This page is an index of all selectors in CSS. The [CSS selectors](/en-US/docs/Web/CSS/Guides/Selectors) page introduces the module that defines some, but not all, of these selectors.
+
 For example, to style paragraphs, you will use the `p` [type selector](/en-US/docs/Web/CSS/Reference/Selectors/Type_selectors) to select all {{HTMLElement("p")}} elements and apply a style to them:
 
 ```css

@@ -12,6 +12,9 @@ sidebar: cssref
 
 **CSS values** are the values that can be assigned to CSS properties. These include keywords, [data types](/en-US/docs/Web/CSS/Reference/Values/Data_types), and [functions](/en-US/docs/Web/CSS/Reference/Values/Functions).
 
+> [!NOTE]
+> This page is an index of all value features in CSS. The [CSS values and units](/en-US/docs/Web/CSS/Guides/Values_and_units) page introduces the module that defines some, but not all, of these values.
+
 ## Index of keywords
 
 - {{cssxref("important", "!important")}}
