@@ -414,7 +414,7 @@ So for example:
 
 When animating `<dialog>`s with CSS transitions, the following features are required:
 
-- [`@starting-style`](/en-US/docs/Web/CSS/Reference/At-rules/@starting-style) at-rule
+- {{cssxref("@starting-style")}} at-rule
   - : Provides a set of starting values for properties set on the `<dialog>` that you want to transition from every time it is opened. This is needed to avoid unexpected behavior. By default, CSS transitions only occur when a property changes from one value to another on a visible element; they are not triggered on elements' first style updates, or when the `display` type changes from `none` to another type.
 - {{cssxref("display")}} property
   - : Add `display` to the transitions list so that the `<dialog>` will remain as `display: block` (or another visible `display` value set on the dialog's open state) for the duration of the transition, ensuring the other transitions are visible.
