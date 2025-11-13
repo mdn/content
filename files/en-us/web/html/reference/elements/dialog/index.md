@@ -416,9 +416,9 @@ When animating `<dialog>`s with CSS transitions, the following features are requ
 
 - [`@starting-style`](/en-US/docs/Web/CSS/Reference/At-rules/@starting-style) at-rule
   - : Provides a set of starting values for properties set on the `<dialog>` that you want to transition from every time it is opened. This is needed to avoid unexpected behavior. By default, CSS transitions only occur when a property changes from one value to another on a visible element; they are not triggered on elements' first style updates, or when the `display` type changes from `none` to another type.
-- [`display`](/en-US/docs/Web/CSS/Reference/Properties/display) property
+- {{cssxref("display")}} property
   - : Add `display` to the transitions list so that the `<dialog>` will remain as `display: block` (or another visible `display` value set on the dialog's open state) for the duration of the transition, ensuring the other transitions are visible.
-- [`overlay`](/en-US/docs/Web/CSS/Reference/Properties/overlay) property
+- {{cssxref("overlay")}} property
   - : Include `overlay` in the transitions list to ensure the removal of the `<dialog>` from the top layer is deferred until the transition completes, again ensuring the transition is visible.
 - {{cssxref("transition-behavior")}} property
   - : Set `transition-behavior: allow-discrete` on the `display` and `overlay` transitions (or on the {{cssxref("transition")}} shorthand) to enable discrete transitions on these two properties that are not by default animatable.
