@@ -389,6 +389,21 @@ The {{domxref("CloseWatcher")}} interface allows developers to implement UI comp
 - `dom.closewatcher.enabled`
   - : Set to `true` to enable.
 
+### Navigation API
+
+The Navigation API provides the ability to initiate, intercept, and manage browser navigation actions. It can also examine an application's history entries. This is a successor to previous web platform features such as the {{domxref("History API", "", "", "nocode")}} and {{domxref("window.location")}}, which solves their shortcomings and is specifically aimed at the needs of {{glossary("SPA", "single-page applications (SPAs)")}}.
+([Firefox bug 1979288](https://bugzil.la/1979288)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 146           | Yes                 |
+| Developer Edition | 146           | No                  |
+| Beta              | 146           | No                  |
+| Release           | 146           | No                  |
+
+- `dom.navigation.webidl.enabled`
+  - : Set to `true` to enable.
+
 ### Trusted Types API
 
 The [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API) provides mechanisms to ensure that functions that can potentially be used as vectors for XSS attacks are only able to be called with data that has been validated or sanitized.
