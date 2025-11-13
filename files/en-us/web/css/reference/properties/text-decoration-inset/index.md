@@ -73,7 +73,7 @@ One or two {{cssxref("&lt;length>")}} values, or the keyword `auto`.
 - {{cssxref("&lt;length>")}}
   - : Specifies the amount to adjust the text decoration position by. Positive values inset the text decoration (make it shorter) while negative values outset the text decoration (make it longer). If one value is specified, it applies to both the text decoration start and end points. If two values are specified, the first one applies to the text decoration start point and the second one applies to the text decoration end point.
 - `auto`
-  - : The browser chooses a start and end inset amount to ensure that, if two decorated text boxes appear side-by-side, a gap is created between the two so they do not appear to have a single text decoration.
+  - : The browser chooses a start and end inset amount to ensure that, if two decorated text boxes appear side-by-side, the appearence of a gap is created between their text decorations so they do not appear to have a single text decoration.
 
 ## Description
 
@@ -83,7 +83,7 @@ The `text-decoration-inset` property allows you to adjust the start and/or end p
 
 A single `<length>` value will set the inset (if positive) or outset (if negative) on the start and end positions of the text decoration. To set the start and end positions separately, you can use two `<length>` values — the first one applies to the start position of the text decoration and the second one applies to the end.
 
-The `text-decoration-inset` property can also take the `auto` keyword. This causes the browser to inset the start and end positions to ensure that, if two decorated text boxes appear side-by-side, a gap is created between them so they do not appear to have a single text decoration. The `auto` value is particularly important when rendering Chinese text, where underlining is used to [punctuate proper nouns](https://www.w3.org/TR/clreq/#id88), and adjacent proper nouns should have separate underlines. See [Effect of the `auto` value](/en-US/docs/Web/CSS/Reference/Properties/text-decoration-inset#effect_of_the_auto_value) for an example.
+The `text-decoration-inset` property can also take the `auto` keyword. This causes the browser to inset the text decoration start and end points to ensure that, if two decorated text boxes appear side-by-side, they do not appear to have a single text decoration. The `auto` value is particularly important when rendering Chinese text, where underlining is used to [punctuate proper nouns](https://www.w3.org/TR/clreq/#id88), and adjacent proper nouns should have separate underlines. See [Effect of the `auto` value](/en-US/docs/Web/CSS/Reference/Properties/text-decoration-inset#effect_of_the_auto_value) for an example.
 
 The `auto` value does not have the same effect as the initial value `0`. Setting `text-decoration-inset` to `0` causes there to be no space between decorations.
 
