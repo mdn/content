@@ -14,6 +14,10 @@ The **`editContext`** property of the {{domxref("HTMLElement")}} interface gets 
 
 The {{domxref("EditContext API", "", "", "nocode")}} can be used to build rich text editors on the web that support advanced text input experiences, such as {{glossary("Input Method Editor")}} (IME) composition, emoji picker, or any other platform-specific editing-related UI surfaces.
 
+## Value
+
+An {{domxref("EditContext")}} object or `null`.
+
 ### Possible elements
 
 Setting the `editContext` property only works on certain types of elements:
@@ -44,10 +48,6 @@ To check whether an element is associated with an `EditContext` instance already
 An `EditContext` instance will keep its associated element alive if it has other live references, even if the associated element is removed from the DOM.
 
 If you want to make sure the element is garbage collected, clear the `editContext` property of the element.
-
-## Value
-
-An {{domxref("EditContext")}} object or `null`.
 
 ## Examples
 

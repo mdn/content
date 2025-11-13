@@ -27,6 +27,35 @@ image data. For security reasons, there are a few global rules:
   `"cors"` if the {{domxref("fetchEvent.request")}} object's
   {{domxref("request.mode", "mode")}} is `"same-origin"`.
 
+## Syntax
+
+```js-nolint
+respondWith(response)
+```
+
+### Parameters
+
+- `response`
+  - : A {{domxref("Response")}} or a {{jsxref("Promise")}} that resolves to a
+    `Response`. Otherwise, a network error is returned to Fetch.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+### Exceptions
+
+- `NetworkError` {{domxref("DOMException")}}
+  - : Returned if a network error is triggered on certain combinations of
+    {{domxref("Request.mode","FetchEvent.request.mode")}} and
+    {{domxref("Response.type")}} values, as hinted at in the "global rules"
+    listed above.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Returned if the event has not been dispatched or `respondWith()` has
+    already been invoked.
+
+## Description
+
 ### Specifying the final URL of a resource
 
 From Firefox 59 onwards, when a service worker provides a {{domxref("Response")}} to
@@ -62,33 +91,6 @@ Note that navigation requests for {{domxref("Window","Windows")}} and
 specification handles redirects for navigations ends up using the request URL for the
 resulting {{domxref("Window.location")}}. This means sites can still provide an
 "alternate" view of a web page when offline without changing the user-visible URL.
-
-## Syntax
-
-```js-nolint
-respondWith(response)
-```
-
-### Parameters
-
-- `response`
-  - : A {{domxref("Response")}} or a {{jsxref("Promise")}} that resolves to a
-    `Response`. Otherwise, a network error is returned to Fetch.
-
-### Return value
-
-None ({{jsxref("undefined")}}).
-
-### Exceptions
-
-- `NetworkError` {{domxref("DOMException")}}
-  - : Returned if a network error is triggered on certain combinations of
-    {{domxref("Request.mode","FetchEvent.request.mode")}} and
-    {{domxref("Response.type")}} values, as hinted at in the "global rules"
-    listed above.
-- `InvalidStateError` {{domxref("DOMException")}}
-  - : Returned if the event has not been dispatched or `respondWith()` has
-    already been invoked.
 
 ## Examples
 
