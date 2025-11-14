@@ -6,17 +6,17 @@ spec-urls: https://privacycg.github.io/nav-tracking-mitigations/#bounce-tracking
 sidebar: privacy
 ---
 
-**Bounce tracking mitigations** is a browser feature that enhances user privacy by protecting against **bounce tracking**. This article explains what bounce tracking is, and how bounce tracking mitigations work.
+**Bounce tracking mitigations** (called **bounce tracking protection** in some browsers) is a feature that enhances user privacy by protecting against **bounce tracking**. This article explains what bounce tracking is, and how bounce tracking mitigations work.
 
 ## Bounce tracking defined
 
-Bounce tracking (sometimes called redirect tracking) is an abuse of cross-site navigation in which a tracker redirects a user to their website for the purpose of setting a first-party cookie to track that user across other sites. The redirection can happen so quickly that a user may not even notice it.
+Bounce tracking (also known as **redirect tracking**) is an abuse of cross-site navigation in which a tracker redirects a user to their website for the purpose of setting a first-party cookie to track that user across other sites. The redirection can happen so quickly that a user may not even notice it.
 
 In effect, bounce tracking enables tracking cookies to be set even if the browser has [third-party cookies](/en-US/docs/Web/Privacy/Guides/Third-party_cookies) disabled.
 
 Bounce tracking can be done in a couple of different ways:
 
-1. As a "bounce back". In this case, the user starts on a website (`site1.example`), is navigated to a tracker site (`tracker.example`) where the tracking cookie is set, and then redirected back to `site1.example`.
+1. As a "bounce back". In this case, the user starts on a website (`site1.example`), is navigated to a tracker site (`tracker.example`) where the tracking cookie is set, and is then redirected back to `site1.example`.
 
    <!--
 
@@ -33,7 +33,7 @@ Bounce tracking can be done in a couple of different ways:
 
    ![An illustration of a bounce back example](bounce-back.svg)
 
-2. As a "bounce through". In this case, the user starts on a website (`site1.example`), is navigated to a tracker site (`tracker.example`) where the tracking cookie is set, and then redirected to another site (`site2.example`).
+2. As a "bounce through". In this case, the user starts on a website (`site1.example`), is navigated to a tracker site (`tracker.example`) where the tracking cookie is set, and is then redirected to another site (`site2.example`).
 
       <!--
    
@@ -67,12 +67,20 @@ The process works as follows:
 
 The heuristic operates on sites defined by {{Glossary("eTLD", "eTLD+1")}}. As a result, both `foo.site1.example` and `bar.site1.example` are treated as `site1.example`.
 
+### Stateful versus stateless bounces
+
+Earlier implementations flagged only sites that are part of a "stateful bounce", meaning a "bounce" where the redirect site sets state information (such as a cookie). This was changed because other forms of state — such as network state — are set automatically but can still be manipulated to track users. When you consider these types of state, every bounce becomes effectively stateful, so it is not useful to consider "stateful bounces" as a distinct group.
+
+Implementations were therefore updated to work in "stateless mode".
+
 ## Specifications
 
 {{specifications}}
 
 ## Browser support
 
-- Chromium's implementation of bounce tracking mitigations was shipped in version 116.
-- Firefox [also supports it](https://firefox-source-docs.mozilla.org/toolkit/components/antitracking/anti-tracking/bounce-tracking-protection/).
+- Chromium's implementation of bounce tracking mitigations was shipped in version 116, and works when user settings block third-party cookies (other engines block third-party cookies by default).
+- Firefox [supports bounce tracking protection](https://firefox-source-docs.mozilla.org/toolkit/components/antitracking/anti-tracking/bounce-tracking-protection/) when [Enhanced Tracking Protection](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop) is set to strict mode.
+  - Firefox has kept its existing [redirect tracking protection](/en-US/docs/Web/Privacy/Guides/Redirect_tracking_protection) features alongside bounce tracking protection as it provides a cross-browser approach that doesn't rely on a known tracker list.
+  - Firefox updated its implementation to run in stateless mode in [version 145](/en-US/docs/Mozilla/Firefox/Releases/145).
 - Safari first shipped bounce tracking protection in [ITP 2.0](https://webkit.org/blog/8311/intelligent-tracking-prevention-2-0/).
