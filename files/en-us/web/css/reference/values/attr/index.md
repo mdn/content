@@ -122,6 +122,16 @@ span[data-icon] {
 }
 ```
 
+However, this restriction applies only to places that strictly require a `<url>` type.
+Some functions — such as {{CSSxRef("image/image-set","image-set()")}} — can accept a `<string>` value that is later interpreted as a URL, allowing `attr()` to work in those contexts:
+
+```css
+/* This may work, depending on browser support */
+span[data-icon] {
+  background: image-set(attr(data-icon));
+}
+```
+
 Values that use `attr()` get marked as _`attr()`-tainted_. Using an `attr()`-tainted value as or in a `<url>` makes a declaration become ["invalid at computed value time" or IACVT for short](https://www.bram.us/2024/02/26/css-what-is-iacvt/).
 
 ### Backwards compatibility
