@@ -29,7 +29,7 @@ For more information, see the guide on [Using HTTP cookies](/en-US/docs/Web/HTTP
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden response header name","Forbidden response header")}}</th>
-      <td>No</td>
+      <td>Yes</td>
     </tr>
   </tbody>
 </table>
