@@ -26,7 +26,7 @@ Each header listed in the `Critical-CH` header should also be present in the `Ac
       </td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
+      <th scope="row">{{Glossary("Forbidden response header name","Forbidden response header")}}</th>
       <td>No</td>
     </tr>
   </tbody>

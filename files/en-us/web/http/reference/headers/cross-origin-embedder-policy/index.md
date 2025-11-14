@@ -27,7 +27,7 @@ The policy applies to loaded resources, and resources in {{htmlelement("iframe")
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden response header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden response header name","Forbidden response header")}}</th>
       <td>No</td>
     </tr>
   </tbody>

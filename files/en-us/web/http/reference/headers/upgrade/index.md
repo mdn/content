@@ -26,6 +26,10 @@ For example, it can be used by a client to upgrade a connection from HTTP/1.1 to
       <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>Yes</td>
     </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden response header name","Forbidden response header")}}</th>
+      <td>No</td>
+    </tr>
   </tbody>
 </table>
 

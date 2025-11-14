@@ -26,6 +26,10 @@ For example, a browser uses different values in a request when fetching a CSS st
       <td>No</td>
     </tr>
     <tr>
+      <th scope="row">{{Glossary("Forbidden response header name","Forbidden response header")}}</th>
+      <td>No</td>
+    </tr>
+    <tr>
       <th scope="row">
         {{Glossary("CORS-safelisted request header")}}
       </th>

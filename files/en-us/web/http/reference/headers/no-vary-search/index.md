@@ -23,7 +23,7 @@ This allows the browser to reuse existing resources despite mismatching URL para
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
+      <th scope="row">{{Glossary("Forbidden response header name","Forbidden response header")}}</th>
       <td>No</td>
     </tr>
   </tbody>

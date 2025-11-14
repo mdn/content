@@ -38,6 +38,10 @@ When present it indicates the value that would have applied to the corresponding
       <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>Yes</td>
     </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden response header name","Forbidden response header")}}</th>
+      <td>No</td>
+    </tr>
   </tbody>
 </table>
 

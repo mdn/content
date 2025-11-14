@@ -23,7 +23,7 @@ See [Update login status using the Login Status API](/en-US/docs/Web/API/FedCM_A
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
+      <th scope="row">{{Glossary("Forbidden response header name","Forbidden response header")}}</th>
       <td>No</td>
     </tr>
   </tbody>

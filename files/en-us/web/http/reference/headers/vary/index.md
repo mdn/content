@@ -20,7 +20,7 @@ The same `Vary` header value should be used on all responses for a given URL, in
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
+      <th scope="row">{{Glossary("Forbidden response header name","Forbidden response header")}}</th>
       <td>No</td>
     </tr>
   </tbody>

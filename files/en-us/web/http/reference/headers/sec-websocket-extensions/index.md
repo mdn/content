@@ -29,6 +29,10 @@ The request header is automatically added by the browser based on its own capabi
       <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>Yes (<code>Sec-</code> prefix)</td>
     </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden response header name","Forbidden response header")}}</th>
+      <td>No</td>
+    </tr>
   </tbody>
 </table>
 

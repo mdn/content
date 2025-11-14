@@ -31,6 +31,10 @@ The header should not be sent in responses if the server understands the version
       <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>Yes (<code>Sec-</code> prefix)</td>
     </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden response header name","Forbidden response header")}}</th>
+      <td>No</td>
+    </tr>
   </tbody>
 </table>
 

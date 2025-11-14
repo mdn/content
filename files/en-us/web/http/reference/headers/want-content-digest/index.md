@@ -24,6 +24,10 @@ Some implementations may send unsolicited `Content-Digest` headers without requi
       <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>No</td>
     </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden response header name","Forbidden response header")}}</th>
+      <td>No</td>
+    </tr>
   </tbody>
 </table>
 
