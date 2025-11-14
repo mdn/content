@@ -7269,15 +7269,15 @@
 /en-US/docs/Security/CSP/Using_Content_Security_Policy	/en-US/docs/Web/HTTP/Guides/CSP
 /en-US/docs/Security/Firefox_Security_Guidelines	/en-US/docs/Web/Security/Firefox_Security_Guidelines
 /en-US/docs/Security/HTTP_Strict_Transport_Security	/en-US/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security
-/en-US/docs/Security/InsecurePasswords	/en-US/docs/Web/Security/Insecure_passwords
-/en-US/docs/Security/Insecure_passwords	/en-US/docs/Web/Security/Insecure_passwords
+/en-US/docs/Security/InsecurePasswords	/en-US/docs/Web/Security/Authentication/Passwords
+/en-US/docs/Security/Insecure_passwords	/en-US/docs/Web/Security/Authentication/Passwords
 /en-US/docs/Security/MixedContent	/en-US/docs/Web/Security/Mixed_content
 /en-US/docs/Security/MixedContent/How_to_fix_website_with_mixed_content	/en-US/docs/Web/Security/Mixed_content#developer_console
 /en-US/docs/Security/MixedContent/fix_website_with_mixed_content	/en-US/docs/Web/Security/Mixed_content#developer_console
 /en-US/docs/Security/Mixed_content	/en-US/docs/Web/Security/Mixed_content
 /en-US/docs/Security/Mixed_content/How_to_fix_website_with_mixed_content	/en-US/docs/Web/Security/Mixed_content#developer_console
 /en-US/docs/Security/Securing_your_site	/en-US/docs/Web/Security/Practical_implementation_guides
-/en-US/docs/Security/Weak_Signature_Algorithm	/en-US/docs/Web/Security/Weak_Signature_Algorithm
+/en-US/docs/Security/Weak_Signature_Algorithm	/en-US/docs/Glossary/Hash_function
 /en-US/docs/Security_changes_in_Firefox_3.1	/en-US/docs/Mozilla/Firefox/Releases/3.5/Security_changes
 /en-US/docs/Security_changes_in_Firefox_3.5	/en-US/docs/Mozilla/Firefox/Releases/3.5/Security_changes
 /en-US/docs/Security_in_Firefox_2	/en-US/docs/Mozilla/Firefox/Releases/2/Security_changes
@@ -16302,6 +16302,7 @@
 /en-US/docs/Web/Security/Do_not_track_field_guide/Tutorials/3_Collecting_aggregate_data_based_on_DNT	/en-US/docs/Web/HTTP/Reference/Headers/DNT
 /en-US/docs/Web/Security/Do_not_track_field_guide/Tutorials/Additional_resources	/en-US/docs/Web/HTTP/Reference/Headers/DNT
 /en-US/docs/Web/Security/HTTP_strict_transport_security	/en-US/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security
+/en-US/docs/Web/Security/Insecure_passwords	/en-US/docs/Web/Security/Authentication/Passwords
 /en-US/docs/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content	/en-US/docs/Web/Security/Mixed_content#developer_console
 /en-US/docs/Web/Security/Practical_implementation_guides/CSRF_prevention	/en-US/docs/Web/Security/Attacks/CSRF
 /en-US/docs/Web/Security/Practical_implementation_guides/Clickjacking	/en-US/docs/Web/Security/Attacks/Clickjacking
@@ -16311,6 +16312,7 @@
 /en-US/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion	/en-US/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion
 /en-US/docs/Web/Security/Subdomain_takeovers	/en-US/docs/Web/Security/Attacks/Subdomain_takeover
 /en-US/docs/Web/Security/Types_of_attacks	/en-US/docs/Web/Security/Attacks
+/en-US/docs/Web/Security/Weak_Signature_Algorithm	/en-US/docs/Glossary/Hash_function
 /en-US/docs/Web/Text_fragments	/en-US/docs/Web/URI/Reference/Fragment/Text_fragments
 /en-US/docs/Web/Tutorials	/en-US/docs/MDN/Tutorials
 /en-US/docs/Web/URI/Authority	/en-US/docs/Web/URI/Reference/Authority
