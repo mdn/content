@@ -11,6 +11,14 @@ sidebar: cssref
 
 The **`direction`** [CSS](/en-US/docs/Web/CSS) property sets the direction of text, table and grid columns, and horizontal overflow. Use `rtl` for languages written from right to left (like Hebrew or Arabic), and `ltr` for those written from left to right (like English and most other languages).
 
+Note that text direction is usually defined within a document (e.g., with [HTML's `dir` attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/dir)) rather than through direct use of the `direction` property.
+
+The property sets the base text direction of block-level elements and the direction of embeddings created by the {{Cssxref("unicode-bidi")}} property. It also sets the default alignment of text, block-level elements, and the direction that cells flow within a table or grid row.
+
+Unlike the `dir` attribute in HTML, the `direction` property is not inherited from table columns into table cells, since CSS inheritance follows the document tree, and table cells are inside of rows but not inside of columns.
+
+The `direction` and {{cssxref("unicode-bidi")}} properties are the only two properties which are not affected by the {{cssxref("all")}} shorthand property.
+
 {{InteractiveExample("CSS Demo: direction")}}
 
 ```css interactive-example-choice
@@ -48,14 +56,6 @@ direction: rtl;
   flex: 1;
 }
 ```
-
-Note that text direction is usually defined within a document (e.g., with [HTML's `dir` attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/dir)) rather than through direct use of the `direction` property.
-
-The property sets the base text direction of block-level elements and the direction of embeddings created by the {{Cssxref("unicode-bidi")}} property. It also sets the default alignment of text, block-level elements, and the direction that cells flow within a table or grid row.
-
-Unlike the `dir` attribute in HTML, the `direction` property is not inherited from table columns into table cells, since CSS inheritance follows the document tree, and table cells are inside of rows but not inside of columns.
-
-The `direction` and {{cssxref("unicode-bidi")}} properties are the only two properties which are not affected by the {{cssxref("all")}} shorthand property.
 
 ## Syntax
 

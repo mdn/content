@@ -8,6 +8,9 @@ sidebar: cssref
 
 The **`border-image`** [CSS](/en-US/docs/Web/CSS) property draws an image around a given element. It replaces the element's regular [border](/en-US/docs/Web/CSS/Reference/Properties/border).
 
+> [!NOTE]
+> You should specify a separate {{cssxref("border-style")}} in case the border image fails to load. Although the specification doesn't strictly require it, some browsers don't render the border image if {{cssxref("border-style")}} is `none` or {{cssxref("border-width")}} is `0`.
+
 {{InteractiveExample("CSS Demo: border-image")}}
 
 ```css interactive-example-choice
@@ -55,9 +58,6 @@ border-image: repeating-linear-gradient(30deg, #4d9f0c, #9198e5, #4d9f0c 20px)
   font-size: 1.2em;
 }
 ```
-
-> [!NOTE]
-> You should specify a separate {{cssxref("border-style")}} in case the border image fails to load. Although the specification doesn't strictly require it, some browsers don't render the border image if {{cssxref("border-style")}} is `none` or {{cssxref("border-width")}} is `0`.
 
 ## Constituent properties
 
