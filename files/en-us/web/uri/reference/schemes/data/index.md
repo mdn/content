@@ -32,7 +32,7 @@ A few examples:
 - `data:,Hello%2C%20World%21`
   - : The text/plain data `Hello, World!`. Note how the comma is {{Glossary("Percent-encoding", "percent-encoded")}} as `%2C`, and the space character as `%20`.
 - `data:text/plain,Hello%2C%20%57%6F%72%6C%64%21`
-  - : The text/plain data `Hello, World!` that also has `World` escaped. Similar to {{jsxref("decodeURIComponent()")}}, it decodes all {{Glossary("Percent-encoding", "percent-encoded")}} characters, even if they don't have to be escaped.
+  - : The text/plain data `Hello, World!` that also has `World` escaped. Similar to {{jsxref("decodeURIComponent()")}}, it decodes all {{Glossary("Percent-encoding", "percent-encoded")}} characters, even if they don't have to be escaped.
 - `data:text/plain;base64,SGVsbG8sIFdvcmxkIQ==`
   - : base64-encoded version of the above
 - `data:text/html,%3Ch1%3EHello%2C%20World%21%3C%2Fh1%3E`
