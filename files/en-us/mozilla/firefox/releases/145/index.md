@@ -40,7 +40,7 @@ No notable changes.
 ### Security
 
 - When Bounce Tracking Protection (BTP) is enabled, it now runs in "stateless" mode by default.
-  In "stateless" mode, the browser no longer flags only sites that are part of a "bounce" that set state information (such as a cookie); it flags _all_ sites that are part of a "bounce". See [Bounce tracking mitigations](/en-US/docs/Web/Privacy/Guides/Bounce_tracking_mitigations) for more information on how BTP works.
+  In "stateless" mode, the browser no longer only flags sites that are part of a "bounce" that set state information (such as a cookie); it flags _all_ sites that are part of a "bounce". See [Bounce tracking mitigations](/en-US/docs/Web/Privacy/Guides/Bounce_tracking_mitigations) for more information on how BTP works.
   ([Firefox bug 1990831](https://bugzil.la/1990831)).
 
 ### APIs
