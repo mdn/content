@@ -11,17 +11,9 @@ browser-compat:
 
 {{APIRef("HTML Sanitizer API")}}{{SeeCompatTable}}
 
-The **`SanitizerConfig`** dictionary of the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) represents a sanitizer configuration object.
-The configuration specifies what elements, attributes and comments are allowed or should be removed when inserting strings of HTML into an {{domxref("Element")}} or {{domxref("ShadowRoot")}}, or when parsing an HTML string into a {{domxref("Document")}}.
+The **`SanitizerConfig`** dictionary of the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) specifies what elements, attributes and comments are allowed or should be removed when inserting strings of HTML into an {{domxref("Element")}} or {{domxref("ShadowRoot")}}, or when parsing an HTML string into a {{domxref("Document")}}.
 
-An instance of this type can be passed to the {{domxref("Sanitizer.Sanitizer", "Sanitizer()")}} constructor to configure a {{domxref("Sanitizer")}}, and is returned by {{domxref('Sanitizer.get()')}}.
-It can also be passed as the `option.sanitizer` parameter when calling the [sanitization methods](/en-US/docs/Web/API/HTML_Sanitizer_API#sanitization_methods):
-
-- {{domxref("Element/setHTML","setHTML()")}} or {{domxref("Element/setHTMLUnsafe","setHTMLUnsafe()")}} on {{domxref("Element")}}.
-- {{domxref("ShadowRoot/setHTML","setHTML()")}} or {{domxref("ShadowRoot/setHTMLUnsafe","setHTMLUnsafe()")}} on {{domxref("ShadowRoot")}}.
-- [`Document.parseHTML()`](/en-US/docs/Web/API/Document/parseHTML_static) or [`Document.parseHTMLUnsafe()`](/en-US/docs/Web/API/Document/parseHTMLUnsafe_static) static methods.
-
-Note that normally a {{domxref("Sanitizer")}} instance would be passed as the option instead of `SanitizerConfig` in the above methods, in particular because `sanitizer` instances are more efficient to share and modify.
+Note that normally {{domxref("Sanitizer")}} instances are used instead of `SanitizerConfig` objects, as they are more efficient to share and modify.
 
 ## Instance properties
 
@@ -94,7 +86,36 @@ Note that normally a {{domxref("Sanitizer")}} instance would be passed as the op
 - `comments`
   - : `true` if comments are allowed, and `false` if they are to be removed.
 - `dataAttributes`
-  - : `true` if data attributes are allowed, and `false` if they are to be removed.
+  - : `true` if `data-*` attributes are allowed, and `false` if they are to be removed.
+
+## Description
+
+A **`SanitizerConfig`** specifies what elements, attributes and comments are allowed or should be removed when inserting strings of HTML into an {{domxref("Element")}} or {{domxref("ShadowRoot")}}, or when parsing an HTML string into a {{domxref("Document")}}.
+
+An instance of this type can be passed to the {{domxref("Sanitizer.Sanitizer", "Sanitizer()")}} constructor to configure a {{domxref("Sanitizer")}}, and is returned by {{domxref('Sanitizer.get()')}}.
+It can also be passed as the `option.sanitizer` parameter when calling the [sanitization methods](/en-US/docs/Web/API/HTML_Sanitizer_API#sanitization_methods):
+
+- {{domxref("Element/setHTML","setHTML()")}} or {{domxref("Element/setHTMLUnsafe","setHTMLUnsafe()")}} on {{domxref("Element")}}.
+- {{domxref("ShadowRoot/setHTML","setHTML()")}} or {{domxref("ShadowRoot/setHTMLUnsafe","setHTMLUnsafe()")}} on {{domxref("ShadowRoot")}}.
+- [`Document.parseHTML()`](/en-US/docs/Web/API/Document/parseHTML_static) or [`Document.parseHTMLUnsafe()`](/en-US/docs/Web/API/Document/parseHTMLUnsafe_static) static methods.
+
+### Valid configuration
+
+The configuration object structure allows for the declaration of filter options that are contradictory or redundant, such as specifying an element in both allow and remove lists, or listing an attribute in a list multiple times.
+In order to avoid any ambiguity, methods that take a `SanitizerConfig` instance require that a _valid_ configuration object be passed, and will throw a {{jsxref("TypeError")}} if an invalid configuration is used.
+
+In a valid sanitizer configuration:
+
+- Either the `elements` or `removeElements` array may be defined, but not both
+- Either the `attributes` or `removeAttributes` array may be defined, but not both
+- Within an element, either the `attributes` or `removeAttributes` array may be defined, but not both
+- No array may contain duplicate elements or attributes
+- The `replaceWithChildrenElements` array, if defined, may not have any elements in common with `elements` or `removeElements`
+- A global attribute, defined in `attributes`, may not also be defined in an element's `attribute` or `removeAttribute` list.
+- Custom `data-*` attributes may only be specified within element attribute arrays: not in the global `attributes` array, and only if `dataAttributes` is `true`.
+
+Note that while the empty object `{}` is not technically a valid configuration it can be normalized to one.
+Passing the empty object will not throw a `TypeError`.
 
 ## Examples
 
