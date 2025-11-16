@@ -41,6 +41,7 @@ Fetching the root page of developer.mozilla.org, (`https://developer.mozilla.org
 GET / HTTP/1.1
 Host: developer.mozilla.org
 Accept-Language: fr
+
 ```
 
 Observe that final empty line, this separates the data block from the header block. As there is no `Content-Length` provided in an HTTP header, this data block is presented empty, marking the end of the headers, allowing the server to process the request the moment it receives this empty line.
