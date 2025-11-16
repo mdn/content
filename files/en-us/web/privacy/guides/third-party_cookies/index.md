@@ -34,7 +34,7 @@ Other use cases for third-party cookies include:
 
 - Sharing user preference or theme information across multiple sites.
 - Collecting analytics across multiple sites.
-- Counting ad impressions, and recording user interests to enable ad-tech platforms to serve more relevant ads.
+- Counting ad impressions and recording user interests to enable ad-tech platforms to serve more relevant ads.
 
 Let's further illustrate the sign-in widget example mentioned above with a fictional company, which has separate domains for its online shop (`shop.site`), community discussion forums (`forum.site`), and customer service and returns (`service.site`).
 
@@ -63,28 +63,28 @@ Legislation such as the [General Data Privacy Regulation](https://gdpr.eu/) (GDP
 
 ## How do browsers handle third-party cookies?
 
-Browser vendors know that users don't like the behavior described above, and as a result have all started to block third-party cookies by default, while also including exceptions and heuristics in their source code to work around long-standing third-party cookie issues with popular websites.
+Browser vendors know that users don't like the behavior described above, and as a result have all started to block third-party cookies by default and/or develop alternative mechanisms for implementing legitimate third-party cookie use cases (see [Transitioning from third-party cookies](#transitioning_from_third-party_cookies)).
 
 - Firefox enables [Total Cookie Protection](https://blog.mozilla.org/en/mozilla/firefox-rolls-out-total-cookie-protection-by-default-to-all-users-worldwide/) if [Enhanced Tracking Protection](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop) is enabled, as it is by default. This gives third-party cookies a separate cookie jar per site, preventing cross-site tracking.
-- Safari also has a similar [Tracking prevention policy](https://webkit.org/tracking-prevention-policy/); following this has led to a similar set of third-party cookie protections that are enabled by default; see [Intelligent Tracking Prevention](https://webkit.org/tracking-prevention/#intelligent-tracking-prevention-itp) (ITP) for details.
-- At the time of writing, Google Chrome only blocks third-party cookies in Incognito mode by default, although users can set it to block third-party cookies all the time if they wish via `chrome://settings`. Google has started to disable third-party cookies for a limited percentage of Chrome users to test the impact that will have, while at the same time developing technologies to enable key use cases without requiring third-party cookies. See [Replacing third-party cookies](#replacing_third-party_cookies) for details.
-- Edge blocks trackers from unvisited sites, and blocks known harmful trackers by default. At the time of writing Microsoft are also starting to explore blocking third-party cookies in Edge by default. See [Tracking prevention](https://learn.microsoft.com/en-us/microsoft-edge/web-platform/tracking-prevention) for more information.
+- Safari has a [Tracking prevention policy](https://webkit.org/tracking-prevention-policy/) resulting in a similar set of third-party cookie protections that are enabled by default; see [Intelligent Tracking Prevention](https://webkit.org/tracking-prevention/#intelligent-tracking-prevention-itp) (ITP) for details.
+- Google Chrome only blocks third-party cookies in Incognito mode by default, although users can set Chrome to block third-party cookies all the time if they wish via `chrome://settings`.
+- Edge blocks trackers from unvisited sites, and blocks known harmful trackers by default. See [Tracking prevention](https://learn.microsoft.com/en-us/microsoft-edge/web-platform/tracking-prevention) for more information.
 - The [Brave browser](https://brave.com/) blocks tracking cookies by default.
 
-It is possible to allow usage of third-party cookies on a case-by-case basis in Firefox via browser settings. In Safari however, control is more limited — you can turn off cross-site tracking prevention, but allowing access to third-party cookies per frame can only be done at the code level, via the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API).
+It is possible to allow usage of third-party cookies on a case-by-case basis in Firefox, Chrome, and Edge via browser settings. In Safari however, control is more limited — you can turn off cross-site tracking prevention, but allowing access to third-party cookies per frame can only be done at the code level, via the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API).
 
 > [!NOTE]
 > Third-party cookies (or just tracking cookies) may also be blocked by browser extensions.
 
-Cookie blocking can cause some third-party components (such as social media widgets) not to function as intended. As browsers impose further restrictions on third-party cookies, developers should start to look at ways to reduce their reliance on them: see [Replacing third-party cookies](#replacing_third-party_cookies).
+Cookie blocking can cause website functionality and third-party components (such as social media widgets) not to function as intended. As a result, browsers include exceptions and heuristics in their source code to work around long-standing third-party cookie issues with popular websites.
 
-## Using third-party cookies
+In general, developers should start to look at ways to limit the circumstances in which third-party cookies are sent to reduce their potential for privacy harm, and reduce reliance on them.
 
-### Enabling third-party cookies with `SameSite`
+## Limiting third-party cookies with `SameSite`
 
-The [`SameSite`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) attribute lets servers specify whether/when third-party cookies are sent. If you don't specify `SameSite` in your `Set-Cookie` headers, the default value, `Lax`, is used. This instructs the browser to not send third-party cookies except when the user navigates to the cookie's origin site from a different site. This is useful when you want to send cookies straight away as soon as a user navigates to your site from another site, to for example personalize the experience as soon as they get there.
+The [`SameSite`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) attribute lets servers specify whether/when third-party cookies are sent. If you don't specify `SameSite` in your `Set-Cookie` headers, the default value, `Lax`, is used. This instructs the browser to not send third-party cookies except when the user navigates to the cookie's origin site from a different site. This is useful when you want to send cookies straight away as soon as a user navigates to your site from another site, for example to personalize the experience as soon as they get there.
 
-However, it is no good if you want to embed cross-site content across multiple sites inside `<iframe>`s and rely on third-party cookies for functionality, for example in the case of the sign-in example we looked at above. In such cases, you need to explicitly set `SameSite=None` to allow the browser to pass those cookies around:
+However, this is no good if you want to embed cross-site content across multiple sites inside `<iframe>`s and rely on third-party cookies for functionality, for example in the case of the sign-in example we looked at above. In such cases, you need to explicitly set `SameSite=None` to allow the browser to pass those cookies around:
 
 ```http
 Set-Cookie: widget_session=7yjgj57e4n3d; SameSite=None; Secure; HttpOnly
@@ -95,7 +95,10 @@ Note that if `SameSite=None` is set then the `Secure` attribute must also be set
 > [!NOTE]
 > Cookies that are used for sensitive information should also have a short [lifetime](/en-US/docs/Web/HTTP/Guides/Cookies#removal_defining_the_lifetime_of_a_cookie).
 
-### Transitioning from third-party cookies
+> [!NOTE]
+> You can set a `SameSite` attribute value of `Strict` on cookies if you only want them sent with requests originating from the same site that set the cookie. This effectively blocks third-party cookies from being sent in any circumstances.
+
+## Transitioning from third-party cookies
 
 There are multiple strategies to help sites minimize breakage in browsers where third-party cookies are blocked:
 
@@ -105,21 +108,9 @@ There are multiple strategies to help sites minimize breakage in browsers where 
 4. Gather data via alternative means such as user surveys or quizzes, or look at data you already have to infer trends (for example, product order histories).
 5. Use an alternative client-side storage mechanism such as [Web Storage](/en-US/docs/Web/API/Web_Storage_API) to persist data, or consider a server-side solution.
 6. If your third-party cookies are only used across a small number of related, known websites, you could use the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API) and/or [Related Website Sets](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets) to allow cross-site cookie access only for those specific sites. Storage Access prompts the user to provide permission for a site to use third-party cookies on a per-frame basis.
-   - If you've already implemented a solution using the Storage Access API for Firefox or Safari then this is a good time to check your implementation against Chrome's behavior, which was updated to provide full support in version 119.
    - Related Website Sets can be considered a progressive enhancement of the Storage Access API: The API can be used in just the same way, but sites in the set will not prompt users for permission to access third-party cookies.
 7. If your third-party cookies are being used on a 1:1 basis with the top-level sites they are generated on, you could use [Cookies Having Independent Partitioned State](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies) (CHIPS, aka opt-in partitioned cookies) to opt your cookies into partitioned storage with a separate cookie jar per top-level site. This only requires adding the `partitioned` attribute to your existing cross-site cookies. They can then be used unrestrictedly, but they can't be shared with other sites.
-
-## Replacing third-party cookies
-
-Several features are available to developers who wish to stop using third-party cookies to respect user privacy and minimize tracking while continuing to implement related use cases. Some of these features are in an early experimental stage, but they are worth considering as you begin to prepare for the future.
-
-You can start to explore the different features available in Google's [Privacy Sandbox](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox) project to see if they fit your use case (these are currently experimental, and Chromium-only):
-
-- [Federated Credential Management](/en-US/docs/Web/API/FedCM_API) (FedCM) API: Enables federated identity services allowing users to sign in to multiple sites and services.
-- [Private State Tokens](https://privacysandbox.google.com/protections/private-state-tokens): Enables anti-fraud and anti-spam by exchanging limited, non-identifying information across sites.
-- [Topics API](/en-US/docs/Web/API/Topics_API): Enables interest-based advertising and content personalization.
-- [Protected Audience API](https://privacysandbox.google.com/private-advertising/protected-audience): Use data from one app or site to help select an ad when the user is visiting another app or site.
-- [Attribution Reporting API](https://privacysandbox.google.com/private-advertising/attribution-reporting): Enables measurement of ad impressions and conversions.
+8. The [Private State Token API](https://privacysandbox.google.com/protections/private-state-tokens) is an experimental feature that allows developers to exchange limited, non-identifying information across sites. This is a useful alternative if you are using third-party cookies to convery user trust signals across different web properties.
 
 ## See also
 
