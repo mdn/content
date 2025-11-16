@@ -7,7 +7,7 @@ sidebar: cssref
 ---
 
 The **`cubic-bezier()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) creates a smooth transition using a cubic [Bézier curve](/en-US/docs/Glossary/Bezier_curve).
-As an [`<easing-function>`](/en-US/docs/Web/CSS/Reference/Values/easing-function), it can be used to smooth out the start and end of the {{Glossary("interpolation")}}.
+As an {{cssxref("&lt;easing-function&gt;")}}, it can be used to smooth out the start and end of the {{Glossary("interpolation")}}.
 
 ## Syntax
 

@@ -68,7 +68,7 @@ The `<basic-shape>` data type is used to create basic shapes including rectangle
 The parameters common across the syntax of some basic shape functions include:
 
 - `round <'border-radius'>`
-  - : Defines rounded corners for [rectangles by container insets](#syntax_for_rectangles_by_container_insets), [rectangles by distance](#syntax_for_rectangles_by_distance), and [rectangles with dimensions](#syntax_for_rectangles_with_dimensions) using the same syntax as the CSS [`border-radius`](/en-US/docs/Web/CSS/Reference/Properties/border-radius) shorthand property.
+  - : Defines rounded corners for [rectangles by container insets](#syntax_for_rectangles_by_container_insets), [rectangles by distance](#syntax_for_rectangles_by_distance), and [rectangles with dimensions](#syntax_for_rectangles_with_dimensions) using the same syntax as the CSS {{cssxref("border-radius")}} shorthand property.
 
 - `<shape-radius>`
   - : Defines the radius for a [circle](#syntax_for_circles) or an [ellipse](#syntax_for_ellipses). Valid values include {{cssxref("length")}}, {{cssxref("percentage")}}, `closest-side` (the default), and `farthest-side`. Negative values are invalid.
@@ -76,7 +76,7 @@ The parameters common across the syntax of some basic shape functions include:
     The `closest-side` keyword value uses the length from the center of the shape to the closest side of the reference box to create the radius length. The `farthest-side` keyword value uses the length from the center of the shape to the farthest side of the reference box.
 
 - `<position>`
-  - : Defines the center [`<position>`](/en-US/docs/Web/CSS/Reference/Values/position_value) of a [circle](#syntax_for_circles) or an [ellipse](#syntax_for_ellipses). It defaults to `center` if omitted.
+  - : Defines the center {{cssxref("&lt;position&gt;")}} of a [circle](#syntax_for_circles) or an [ellipse](#syntax_for_ellipses). It defaults to `center` if omitted.
 
 - `<fill-rule>`
   - : Sets the {{SVGAttr("fill-rule")}} that is used to determine how the interior of the shape defined by the basic shapes [polygon](#syntax_for_polygons), [path](#syntax_for_paths), and [shape](#syntax_for_shapes) is to be filled. Possible values are `nonzero` (the default) and `evenodd`.

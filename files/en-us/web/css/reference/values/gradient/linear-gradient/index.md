@@ -111,7 +111,7 @@ As with any gradient, a linear gradient has [no intrinsic dimensions](/en-US/doc
 
 To create a linear gradient that repeats to fill its container, use the {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}} function instead.
 
-Because `<gradient>`s belong to the `<image>` data type, they can only be used where [`<image>`](/en-US/docs/Web/CSS/Reference/Values/image)s can be used. For this reason, `linear-gradient()` won't work on {{CSSxRef("background-color")}} and other properties that use the {{CSSxRef("&lt;color&gt;")}} data type.
+Because `<gradient>`s belong to the `<image>` data type, they can only be used where {{cssxref("&lt;image&gt;")}}s can be used. For this reason, `linear-gradient()` won't work on {{CSSxRef("background-color")}} and other properties that use the {{CSSxRef("&lt;color&gt;")}} data type.
 
 ### Composition of a linear gradient
 
@@ -286,7 +286,7 @@ Please see [using CSS gradients](/en-US/docs/Web/CSS/Guides/Images/Using_gradien
 
 - [Using CSS gradients](/en-US/docs/Web/CSS/Guides/Images/Using_gradients)
 - Other gradient functions: {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
-- [`<hue-interpolation-method>`](/en-US/docs/Web/CSS/Reference/Values/hue-interpolation-method)
-- [`<color-interpolation-method>`](/en-US/docs/Web/CSS/Reference/Values/color-interpolation-method)
+- {{cssxref("&lt;hue-interpolation-method&gt;")}}
+- {{cssxref("&lt;color-interpolation-method&gt;")}}
 - {{CSSxRef("&lt;image&gt;")}}
 - [CSS images module](/en-US/docs/Web/CSS/Guides/Images)

@@ -255,8 +255,8 @@ Please see [Using CSS gradients](/en-US/docs/Web/CSS/Guides/Images/Using_gradien
 
 - [Using CSS gradients](/en-US/docs/Web/CSS/Guides/Images/Using_gradients)
 - Other gradient functions: {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
-- [`<hue-interpolation-method>`](/en-US/docs/Web/CSS/Reference/Values/hue-interpolation-method)
-- [`<color-interpolation-method>`](/en-US/docs/Web/CSS/Reference/Values/color-interpolation-method)
+- {{cssxref("&lt;hue-interpolation-method&gt;")}}
+- {{cssxref("&lt;color-interpolation-method&gt;")}}
 - {{cssxref("&lt;image&gt;")}}
 - {{cssxref("image/image","image()")}}
 - {{cssxref("element", "element()")}}
