@@ -20,6 +20,11 @@ currently in the document tree.
 Unlike {{domxref("document.adoptNode()")}}, the original node is not removed from its
 original document. The imported node is a clone of the original.
 
+**`importNode()`** will cause the `document` to immediately adopt the node, in contrast
+with {{domxref("Node.cloneNode()#return_value", "Node.cloneNode()")}} which will not
+cause the `document` to adopt the node until it is inserted into the document. This makes
+**`importNode()`** ideal for working with the {{htmlelement("template")}} element.
+
 ## Syntax
 
 ```js-nolint
