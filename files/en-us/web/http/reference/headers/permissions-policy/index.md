@@ -170,6 +170,12 @@ You can specify
 - {{httpheader('Permissions-Policy/picture-in-picture', 'picture-in-picture')}} {{Experimental_Inline}}
   - : Controls whether the current document is allowed to play a video in a Picture-in-Picture mode via the corresponding API.
 
+- {{httpheader('Permissions-Policy/private-state-token-issuance','private-state-token-issuance')}} {{Experimental_Inline}}
+  - : Controls usage of [private state token](/en-US/docs/Web/API/Private_State_Token_API) `token-request` operations.
+
+- {{httpheader('Permissions-Policy/private-state-token-redemption','private-state-token-redemption')}} {{Experimental_Inline}}
+  - : Controls usage of [private state token](/en-US/docs/Web/API/Private_State_Token_API) `token-redemption` and `send-redemption-record` operations.
+
 - {{httpheader("Permissions-Policy/publickey-credentials-create", "publickey-credentials-create")}} {{Experimental_Inline}}
   - : Controls whether the current document is allowed to use the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) to create new asymmetric key credentials, i.e., via {{domxref("CredentialsContainer.create", "navigator.credentials.create({publicKey: ..., ...})")}}.
 
