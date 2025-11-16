@@ -62085,19 +62085,6 @@
     "modified": "2020-10-15T21:57:56.935Z",
     "contributors": ["chrisdavidmills", "connorshea", "jpmedley"]
   },
-  "Web/API/Visual_Viewport_API": {
-    "modified": "2020-10-15T21:57:59.333Z",
-    "contributors": [
-      "mhjacobson",
-      "Sheppy",
-      "madebyfabian",
-      "mrvary",
-      "Rifler",
-      "ExE-Boss",
-      "fscholz",
-      "jpmedley"
-    ]
-  },
   "Web/API/WEBGL_color_buffer_float": {
     "modified": "2020-10-15T21:43:41.363Z",
     "contributors": ["fscholz", "nmve", "teoli"]

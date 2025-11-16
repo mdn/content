@@ -40,9 +40,8 @@ const segments = window.viewport.segments;
 - {{domxref("Viewport.segments")}} property
 - {{domxref("Viewport")}} interface
 - {{domxref("VisualViewport")}} interface
-- [Viewport API](/en-US/docs/Web/API/Viewport_API)
 - [Viewport Segments API](/en-US/docs/Web/API/Viewport_segments_API)
-- [Visual Viewport API](/en-US/docs/Web/API/Visual_Viewport_API)
+- [CSSOM view API](/en-US/docs/Web/API/CSSOM_view_API)
 - [Viewport concepts](/en-US/docs/Web/CSS/Guides/CSSOM_view/Viewport_concepts)
 - [CSS viewport](/en-US/docs/Web/CSS/Guides/Viewport) module
 - [CSSOM view](/en-US/docs/Web/CSS/Guides/CSSOM_view) module

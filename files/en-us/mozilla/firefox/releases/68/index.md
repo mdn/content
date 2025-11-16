@@ -98,7 +98,7 @@ _No changes._
 
 #### DOM
 
-- The [Visual Viewport API](/en-US/docs/Web/API/Visual_Viewport_API) has now been enabled by default on Android ([Firefox bug 1512813](https://bugzil.la/1512813)). Adding this API to desktop versions of Firefox is being tracked in [Firefox bug 1551302](https://bugzil.la/1551302).
+- The [Visual Viewport API](/en-US/docs/Web/API/VisualViewport) has now been enabled by default on Android ([Firefox bug 1512813](https://bugzil.la/1512813)). Adding this API to desktop versions of Firefox is being tracked in [Firefox bug 1551302](https://bugzil.la/1551302).
 - The {{domxref("Window")}} feature [`noreferrer`](/en-US/docs/Web/API/Window/open) is now supported; if specified, the new window's content is loaded without sharing the hostname, IP address, URL, or other identifying information about the host device ([Firefox bug 1527287](https://bugzil.la/1527287)).
 - The {{domxref("HTMLImageElement.decode", "decode()")}} method on `HTMLImageElement` is now implemented. This can be used to trigger loading and decoding of an image prior to adding it to the DOM ([Firefox bug 1501794](https://bugzil.la/1501794)).
 - {{domxref("XMLHttpRequest")}} has been updated to no longer accept the non-standard `moz-chunked-arraybuffer` value for {{domxref("XMLHttpRequest.responseType", "responseType")}}. Code still using it should be updated to [use the Fetch API as a stream](/en-US/docs/Web/API/Streams_API/Using_readable_streams#consuming_a_fetch_as_a_stream) ([Firefox bug 1120171](https://bugzil.la/1120171)).
