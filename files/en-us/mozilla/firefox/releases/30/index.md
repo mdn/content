@@ -6,6 +6,8 @@ page-type: firefox-release-notes
 sidebar: firefox
 ---
 
+Firefox 30 was released on June 10th, 2014. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
+
 ## Changes for Web developers
 
 ### Developer Tools
@@ -63,7 +65,7 @@ _No change._
 
 ## Security
 
-_No change._
+- `<form autocomplete="off">` no longer prevents passwords from being saved ([Firefox bug 956906](https://bugzil.la/956906)).
 
 ## Changes for add-on and Mozilla developers
 
