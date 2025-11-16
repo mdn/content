@@ -21,6 +21,12 @@ The universal selector is a special [type selector](/en-US/docs/Web/CSS/Referenc
 - `*|*` - matches all elements
 - `|*` - matches all elements without any declared namespace
 
+> [!NOTE]
+> The universal selector (`*`) matches **elements only**.
+> It does **not** match pseudo-elements by itself.
+>
+> Selectors like `*::before` work because the `*` matches all **elements**, and the pseudo-element selector (`::before`) applies to those elements. The universal selector does not directly select pseudo-elements.
+
 ## Syntax
 
 ```css
