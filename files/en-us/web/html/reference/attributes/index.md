@@ -502,6 +502,17 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Attributes/fetchpriority">fetchpriority</a></code>
+      </td>
+      <td>
+        {{ HTMLElement("img") }},
+        {{ HTMLElement("link") }},
+        {{ HTMLElement("script") }}
+      </td>
+      <td>Signals that fetching a particular image early in the loading process has more or less impact on user experience than a browser can reasonably infer when assigning an internal priority.</td>
+    </tr>
+    <tr>
+      <td>
         <code><a href="/en-US/docs/Web/HTML/Reference/Attributes/for">for</a></code>
       </td>
       <td>

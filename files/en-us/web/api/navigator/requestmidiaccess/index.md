@@ -42,7 +42,7 @@ A {{jsxref('Promise')}} that resolves with a [`MIDIAccess`](/en-US/docs/Web/API/
   - : Thrown if the underlying system raises any errors.
 - `NotSupportedError` {{domxref("DOMException")}}
   - : Thrown if the feature or options are not supported by the system.
-- `SecurityError` {{domxref("DOMException")}}
+- `NotAllowedError` {{domxref("DOMException")}}
   - : Thrown if the user or system denies the application from creating a [MIDIAccess](/en-US/docs/Web/API/MIDIAccess) object with the requested options, or if the document is not allowed to use the feature (for example, because of a [Permission Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy), or because the user previously denied a permission request).
 
 ## Security requirements

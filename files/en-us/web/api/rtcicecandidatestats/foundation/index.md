@@ -16,7 +16,7 @@ It is the same for two candidates that are of the same type, are using the same 
 
 For more information see {{domxref("RTCIceCandidate.foundation")}}.
 
-### Value
+## Value
 
 A string representing the {{domxref("RTCIceCandidate.foundation", "foundation")}} of the corresponding {{domxref("RTCIceCandidate")}}.
 

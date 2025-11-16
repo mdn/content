@@ -272,6 +272,8 @@ All animations, even those with 0 seconds duration, throw animation events.
 
 - [Using CSS animations](/en-US/docs/Web/CSS/Guides/Animations/Using)
   - : Step-by-step tutorial on how to create animations using CSS. This article describes the animation-related CSS properties and at-rule and how they interact with each other.
+- [Animatable CSS properties](/en-US/docs/Web/CSS/Guides/Animations/Animatable_properties)
+  - : Overview of how different CSS properties can be animated, including their animation types and interpolation methods.
 - [Using the Web Animations API](/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API)
   - : Common animation requirements that can be solved with a few lines of JavaScript.
 

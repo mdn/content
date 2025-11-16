@@ -28,7 +28,7 @@ No notable changes.
 ### JavaScript
 
 - Firefox now supports the {{jsxref("Atomics.waitAsync()")}} static method, which allows synchronization of threads based upon the value in a shared memory location.
-  The method waits asynchronously on the value and returns an object representing the result of the operation. It is non-blocking and usable on the main thread.
+  The method waits asynchronously for the value and returns an object representing the operation's result. It is non-blocking and usable on the main thread.
   ([Firefox bug 1884148](https://bugzil.la/1884148)).
 
 ### HTTP
@@ -36,6 +36,12 @@ No notable changes.
 - The {{httpheader("Integrity-Policy")}} and {{httpheader("Integrity-Policy-Report-Only")}} HTTP headers are now supported for script resources. These allow websites to enforce [subresource integrity guarantees](/en-US/docs/Web/Security/Subresource_Integrity) for _scripts_.
   Note that the [`endpoints`](/en-US/docs/Web/HTTP/Reference/Headers/Integrity-Policy#endpoints) key is not yet supported (violations are logged to console).
   ([Firefox bug 1984973](https://bugzil.la/1984973)).
+
+### Security
+
+- When Bounce Tracking Protection (BTP) is enabled, it now runs in "stateless" mode by default.
+  In "stateless" mode, the browser no longer only flags sites that are part of a "bounce" that set state information (such as a cookie); it flags _all_ sites that are part of a "bounce". See [Bounce tracking mitigations](/en-US/docs/Web/Privacy/Guides/Bounce_tracking_mitigations) for more information on how BTP works.
+  ([Firefox bug 1990831](https://bugzil.la/1990831)).
 
 ### APIs
 

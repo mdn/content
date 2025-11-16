@@ -60,7 +60,9 @@ By default (that is, when the attribute is not specified), CORS is not used at a
 > [!NOTE]
 > The `crossorigin` attribute is not supported for [`rel="icon"`](/en-US/docs/Web/HTML/Reference/Attributes/rel#icon) in Chromium-based browsers. See the [open Chromium issue](https://crbug.com/1121645).
 
-### Example: `crossorigin` with the `<script>` element
+## Examples
+
+### `crossorigin` with the `<script>` element
 
 You can use the following {{HTMLElement("script")}} element to tell a browser to execute the `https://example.com/example-framework.js` script without sending user-credentials.
 
@@ -70,7 +72,7 @@ You can use the following {{HTMLElement("script")}} element to tell a browser to
   crossorigin="anonymous"></script>
 ```
 
-### Example: Web manifest with credentials
+### Web manifest with credentials
 
 The `use-credentials` value must be used when fetching a [manifest](/en-US/docs/Web/Progressive_web_apps/Manifest) that requires credentials, even if the file is from the same origin.
 
