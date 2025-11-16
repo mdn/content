@@ -123,7 +123,7 @@ For this project, your task is to mark up a letter that needs to be hosted on a 
 - The names of the sender and receiver (and _Tel_ and _Email_) should be marked up with strong importance.
 - The four dates in the document should be wrapped in appropriate elements containing machine-readable dates.
 - The first address and first date in the letter should have a `class` attribute value of `sender-column` set on them. The CSS you'll add later will cause these to be right aligned, as it should be in the case in a classic letter layout.
-- Mark up the following five acronyms/abbreviations in the main text of the letter — "PhD," "HTML," "CSS," "BC," and "Esq." — to provide expansions of each one.
+- Mark up the following five acronyms/abbreviations in the main text of the letter — "PhD," "HTML," "CSS," "BCE," and "Esq." — to provide expansions of each one.
 - The six sub/superscripts should be marked up appropriately — in the chemical formulae, and the numbers 103 and 104 (they should be 10 to the power of 3 and 4, respectively).
 - Mark up at least two other appropriate words in the text with strong importance/emphasis.
 - Mark up the university motto quote and citation with appropriate elements.
