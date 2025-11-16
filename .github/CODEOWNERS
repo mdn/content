@@ -64,3 +64,4 @@
 # If another reviewer is specified, update the PAT token or auto-merge will cease to be automatic.
 /package.json @mdn/engineering @mdn-bot
 /yarn.lock    @mdn/engineering @mdn-bot
+/SECURITY.md @mdn/engineering
