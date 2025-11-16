@@ -19,7 +19,7 @@ To ensure client hints are sent reliably, the `Accept-CH` header should be persi
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
+      <th scope="row">{{Glossary("Forbidden response header name","Forbidden response header")}}</th>
       <td>No</td>
     </tr>
     <tr>

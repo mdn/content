@@ -19,8 +19,8 @@ See the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) guide f
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
-      <td>no</td>
+      <th scope="row">{{Glossary("Forbidden response header name","Forbidden response header")}}</th>
+      <td>No</td>
     </tr>
   </tbody>
 </table>

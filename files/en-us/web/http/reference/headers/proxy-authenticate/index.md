@@ -17,8 +17,8 @@ It is sent in a {{HTTPStatus("407", "407 Proxy Authentication Required")}} respo
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
-      <td>Yes</td>
+      <th scope="row">{{Glossary("Forbidden response header name","Forbidden response header")}}</th>
+      <td>No</td>
     </tr>
   </tbody>
 </table>

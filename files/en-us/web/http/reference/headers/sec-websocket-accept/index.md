@@ -19,8 +19,8 @@ This header must appear no more than once in the response, and has a directive v
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
-      <td>Yes (<code>Sec-</code> prefix)</td>
+      <th scope="row">{{Glossary("Forbidden response header name","Forbidden response header")}}</th>
+      <td>No</td>
     </tr>
   </tbody>
 </table>
