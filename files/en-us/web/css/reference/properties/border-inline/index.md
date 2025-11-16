@@ -8,10 +8,6 @@ sidebar: cssref
 
 The **`border-inline`** [CSS](/en-US/docs/Web/CSS) property is a [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) for setting the individual logical inline border property values in a single place in the style sheet.
 
-The physical borders to which `border-inline` maps depends on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("border-top")}} and {{cssxref("border-bottom")}} or {{cssxref("border-right")}}, and {{cssxref("border-left")}} properties, depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
-
-The borders in the other dimension can be set with {{cssxref("border-block")}}, which sets {{cssxref("border-block-start")}}, and {{cssxref("border-block-end")}}.
-
 {{InteractiveExample("CSS Demo: border-inline")}}
 
 ```css interactive-example-choice
@@ -82,6 +78,12 @@ The `border-inline` is specified with one or more of the following, in any order
   - : The line style of the border. See {{cssxref("border-style")}}.
 - {{CSSXref("&lt;color&gt;")}}
   - : The color of the border.
+
+## Description
+
+The physical borders to which `border-inline` maps depends on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("border-top")}} and {{cssxref("border-bottom")}} or {{cssxref("border-right")}}, and {{cssxref("border-left")}} properties, depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
+
+The borders in the other dimension can be set with {{cssxref("border-block")}}, which sets {{cssxref("border-block-start")}}, and {{cssxref("border-block-end")}}.
 
 ## Formal definition
 

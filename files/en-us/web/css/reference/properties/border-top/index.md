@@ -8,22 +8,6 @@ sidebar: cssref
 
 The **`border-top`** [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets all the properties of an element's top [border](/en-US/docs/Web/CSS/Reference/Properties/border).
 
-As with all shorthand properties, `border-top` always sets the values of all of the properties that it can set, even if they are not specified. It sets those that are not specified to their default values. Consider the following code:
-
-```css
-border-top-style: dotted;
-border-top: thick green;
-```
-
-It is actually the same as this one:
-
-```css
-border-top-style: dotted;
-border-top: none thick green;
-```
-
-The value of {{cssxref("border-top-style")}} given before `border-top` is ignored. Since the default value of {{cssxref("border-top-style")}} is `none`, not specifying the `border-style` part results in no border.
-
 {{InteractiveExample("CSS Demo: border-top")}}
 
 ```css interactive-example-choice
@@ -97,6 +81,24 @@ The three values of the shorthand property can be specified in any order, and on
   - : See {{cssxref("border-top-style")}}.
 - {{cssxref("&lt;color&gt;")}}
   - : See {{cssxref("border-top-color")}}.
+
+## Description
+
+As with all shorthand properties, `border-top` always sets the values of all of the properties that it can set, even if they are not specified. It sets those that are not specified to their default values. Consider the following code:
+
+```css
+border-top-style: dotted;
+border-top: thick green;
+```
+
+It is actually the same as this one:
+
+```css
+border-top-style: dotted;
+border-top: none thick green;
+```
+
+The value of {{cssxref("border-top-style")}} given before `border-top` is ignored. Since the default value of {{cssxref("border-top-style")}} is `none`, not specifying the `border-style` part results in no border.
 
 ## Formal definition
 

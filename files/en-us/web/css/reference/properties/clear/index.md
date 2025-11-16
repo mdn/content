@@ -8,21 +8,6 @@ sidebar: cssref
 
 The **`clear`** [CSS](/en-US/docs/Web/CSS) property sets whether an element must be moved below (cleared) [floating](/en-US/docs/Web/CSS/Reference/Properties/float) elements that precede it. The `clear` property applies to floating and non-floating elements.
 
-When applied to non-floating blocks, it moves the [border edge](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#border_area) of the element down until it is below the [margin edge](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#margin_area) of all relevant floats. The non-floated block's top margin collapses.
-
-Vertical margins between two floated elements on the other hand will not collapse. When applied to floating elements, the margin edge of the bottom element is moved below the margin edge of all relevant floats. This affects the position of later floats, since later floats cannot be positioned higher than earlier ones.
-
-The floats that are relevant to be cleared are the earlier floats within the same [block formatting context](/en-US/docs/Web/CSS/Guides/Display/Block_formatting_context).
-
-> [!NOTE]
-> If an element contains only floated elements, its height collapses to nothing. If you want it to always be able to resize, so that it contains floating elements inside it, set the value of the element's [`display`](/en-US/docs/Web/CSS/Reference/Properties/display) property to [`flow-root`](/en-US/docs/Web/CSS/Reference/Properties/display#flow-root).
->
-> ```css
-> #container {
->   display: flow-root;
-> }
-> ```
-
 {{InteractiveExample("CSS Demo: clear")}}
 
 ```css interactive-example-choice
@@ -113,6 +98,23 @@ clear: unset;
   - : Is a keyword indicating that the element is moved down to clear floats on _start side of its containing block_, that is the _left_ floats on ltr scripts and the _right_ floats on rtl scripts.
 - `inline-end`
   - : Is a keyword indicating that the element is moved down to clear floats on _end side of its containing block_, that is the _right_ floats on ltr scripts and the _left_ floats on rtl scripts.
+
+## Description
+
+When applied to non-floating blocks, it moves the [border edge](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#border_area) of the element down until it is below the [margin edge](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#margin_area) of all relevant floats. The non-floated block's top margin collapses.
+
+Vertical margins between two floated elements on the other hand will not collapse. When applied to floating elements, the margin edge of the bottom element is moved below the margin edge of all relevant floats. This affects the position of later floats, since later floats cannot be positioned higher than earlier ones.
+
+The floats that are relevant to be cleared are the earlier floats within the same [block formatting context](/en-US/docs/Web/CSS/Guides/Display/Block_formatting_context).
+
+> [!NOTE]
+> If an element contains only floated elements, its height collapses to nothing. If you want it to always be able to resize, so that it contains floating elements inside it, set the value of the element's [`display`](/en-US/docs/Web/CSS/Reference/Properties/display) property to [`flow-root`](/en-US/docs/Web/CSS/Reference/Properties/display#flow-root).
+>
+> ```css
+> #container {
+>   display: flow-root;
+> }
+> ```
 
 ## Formal definition
 

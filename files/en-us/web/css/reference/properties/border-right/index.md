@@ -8,22 +8,6 @@ sidebar: cssref
 
 The **`border-right`** [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets all the properties of an element's right [border](/en-US/docs/Web/CSS/Reference/Properties/border).
 
-As with all shorthand properties, `border-right` always sets the values of all of the properties that it can set, even if they are not specified. It sets those that are not specified to their default values. Consider the following code:
-
-```css
-border-right-style: dotted;
-border-right: thick green;
-```
-
-It is actually the same as this one:
-
-```css
-border-right-style: dotted;
-border-right: none thick green;
-```
-
-The value of {{cssxref("border-right-style")}} given before `border-right` is ignored. Since the default value of {{cssxref("border-right-style")}} is `none`, not specifying the `border-style` part results in no border.
-
 {{InteractiveExample("CSS Demo: border-right")}}
 
 ```css interactive-example-choice
@@ -97,6 +81,24 @@ The three values of the shorthand property can be specified in any order, and on
   - : See {{cssxref("border-right-style")}}.
 - {{cssxref("&lt;color&gt;")}}
   - : See {{cssxref("border-right-color")}}.
+
+## Description
+
+As with all shorthand properties, `border-right` always sets the values of all of the properties that it can set, even if they are not specified. It sets those that are not specified to their default values. Consider the following code:
+
+```css
+border-right-style: dotted;
+border-right: thick green;
+```
+
+It is actually the same as this one:
+
+```css
+border-right-style: dotted;
+border-right: none thick green;
+```
+
+The value of {{cssxref("border-right-style")}} given before `border-right` is ignored. Since the default value of {{cssxref("border-right-style")}} is `none`, not specifying the `border-style` part results in no border.
 
 ## Formal definition
 
