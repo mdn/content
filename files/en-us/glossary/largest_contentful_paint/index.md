@@ -10,7 +10,7 @@ The **Largest Contentful Paint** (LCP) performance metric provides the render ti
 The following elements are considered when determining the LCP:
 
 - {{HTMLElement("img")}} elements.
-- [`<image>`](/en-US/docs/Web/SVG/Reference/Element/image) elements inside an SVG.
+- {{svgelement("image")}} elements inside an SVG.
 - The poster images of {{HTMLElement("video")}} elements.
 - Elements with a {{cssxref("background-image")}}.
 - Groups of text nodes, such as {{HTMLElement("p")}}.
