@@ -86,7 +86,7 @@ The CSS anchor positioning module also introduces the `anchor-scope` property. C
   - {{cssxref("margin-inline")}}
   - {{cssxref("margin-inline-end")}}
   - {{cssxref("margin-inline-start")}}
-  - [Inset properties](/en-US/docs/Glossary/Inset_properties) glossary term
+  - {{glossary("Inset properties")}} glossary term
 - [CSS positioned layout](/en-US/docs/Web/CSS/Guides/Positioned_layout) module:
   - {{cssxref("top")}}
   - {{cssxref("left")}}

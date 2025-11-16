@@ -110,12 +110,12 @@ The CSS color module also introduces the `CSSColorProfileRule` interface. Curren
   - {{cssxref("-webkit-tap-highlight-color")}}
 - {{cssxref("dynamic-range-limit-mix()")}} function
 - SVG color properties that are part of other specifications:
-  - [`fill`](/en-US/docs/Web/SVG/Reference/Attribute/fill)
-  - [`flood-color`](/en-US/docs/Web/SVG/Reference/Attribute/flood-color)
-  - [`lighting-color`](/en-US/docs/Web/SVG/Reference/Attribute/lighting-color)
-  - [`stop-color`](/en-US/docs/Web/SVG/Reference/Attribute/stop-color)
-  - [`stroke`](/en-US/docs/Web/SVG/Reference/Attribute/stroke)
-- SVG [`color`](/en-US/docs/Web/SVG/Reference/Attribute/color) attribute
+  - {{svgattr("fill")}}
+  - {{svgattr("flood-color")}}
+  - {{svgattr("lighting-color")}}
+  - {{svgattr("stop-color")}}
+  - {{svgattr("stroke")}}
+- SVG {{svgattr("color")}} attribute
 - {{glossary("Color wheel")}} glossary term
 - {{glossary("Interpolation")}} glossary term
 - The {{cssxref("@font-palette-values")}} at-rule [`override-colors`](/en-US/docs/Web/CSS/Reference/At-rules/@font-palette-values/override-colors) descriptor
@@ -132,7 +132,7 @@ The CSS color module also introduces the `CSSColorProfileRule` interface. Curren
 - [CSS color adjustment](/en-US/docs/Web/CSS/Guides/Color_adjustment) module and the {{cssxref("print-color-adjust")}} property.
 - [CSS images](/en-US/docs/Web/CSS/Guides/Images) module, which is where CSS {{cssxref("&lt;gradient&gt;")}} images are defined.
 - The [`VideoColorSpace`](/en-US/docs/Web/API/VideoColorSpace) interface
-- The SVG [`<feColorMatrix>`](/en-US/docs/Web/SVG/Reference/Element/feColorMatrix) element
+- The SVG {{svgelement("feColorMatrix")}} element
 - [Canvas API: applying styles and colors](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#colors)
 - [Color format converter](/en-US/docs/Web/CSS/Guides/Colors/Color_format_converter)
 - [Color mixer](/en-US/docs/Web/CSS/Guides/Colors/Color_mixer)
