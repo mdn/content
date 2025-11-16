@@ -8,6 +8,8 @@ sidebar: cssref
 
 The **`animation-duration`** [CSS](/en-US/docs/Web/CSS) property sets the length of time that an animation takes to complete one cycle.
 
+It is often convenient to use the shorthand property {{ cssxref("animation") }} to set all animation properties at once.
+
 {{InteractiveExample("CSS Demo: animation-duration")}}
 
 ```css interactive-example-choice
@@ -82,8 +84,6 @@ button.addEventListener("click", () => {
   }
 });
 ```
-
-It is often convenient to use the shorthand property {{ cssxref("animation") }} to set all animation properties at once.
 
 ## Syntax
 

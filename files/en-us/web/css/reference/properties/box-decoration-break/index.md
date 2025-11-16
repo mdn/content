@@ -8,6 +8,16 @@ sidebar: cssref
 
 The **`box-decoration-break`** [CSS](/en-US/docs/Web/CSS) property specifies how an element's [fragments](/en-US/docs/Web/CSS/Guides/Fragmentation) should be rendered when broken across multiple lines, columns, or pages.
 
+The specified value will impact the appearance of the following properties:
+
+- {{Cssxref("background")}}
+- {{Cssxref("border")}}
+- {{Cssxref("border-image")}}
+- {{Cssxref("box-shadow")}}
+- {{Cssxref("clip-path")}}
+- {{Cssxref("margin")}}
+- {{Cssxref("padding")}}
+
 {{InteractiveExample("CSS Demo: box-decoration-break")}}
 
 ```css interactive-example-choice
@@ -48,16 +58,6 @@ box-decoration-break: clone;
   line-height: 2;
 }
 ```
-
-The specified value will impact the appearance of the following properties:
-
-- {{Cssxref("background")}}
-- {{Cssxref("border")}}
-- {{Cssxref("border-image")}}
-- {{Cssxref("box-shadow")}}
-- {{Cssxref("clip-path")}}
-- {{Cssxref("margin")}}
-- {{Cssxref("padding")}}
 
 ## Syntax
 

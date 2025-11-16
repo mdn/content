@@ -8,6 +8,8 @@ sidebar: cssref
 
 The **`animation-timing-function`** [CSS](/en-US/docs/Web/CSS) property sets how an animation progresses through the duration of each cycle.
 
+It is often convenient to use the shorthand property {{cssxref("animation")}} to set all animation properties at once.
+
 {{InteractiveExample("CSS Demo: animation-timing-function")}}
 
 ```css interactive-example-choice
@@ -85,8 +87,6 @@ button.addEventListener("click", () => {
   }
 });
 ```
-
-It is often convenient to use the shorthand property {{cssxref("animation")}} to set all animation properties at once.
 
 ## Syntax
 

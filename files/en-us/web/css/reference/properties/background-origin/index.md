@@ -8,6 +8,8 @@ sidebar: cssref
 
 The **`background-origin`** [CSS](/en-US/docs/Web/CSS) property sets the background's origin: from the border start, inside the border, or inside the padding.
 
+Note that `background-origin` is ignored when {{cssxref("background-attachment")}} is `fixed`.
+
 {{InteractiveExample("CSS Demo: background-origin")}}
 
 ```css interactive-example-choice
@@ -42,8 +44,6 @@ background-repeat: no-repeat;
   font-weight: bold;
 }
 ```
-
-Note that `background-origin` is ignored when {{cssxref("background-attachment")}} is `fixed`.
 
 ## Syntax
 

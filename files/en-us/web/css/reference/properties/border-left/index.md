@@ -8,6 +8,22 @@ sidebar: cssref
 
 The **`border-left`** [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets all the properties of an element's left [border](/en-US/docs/Web/CSS/Reference/Properties/border).
 
+As with all shorthand properties, `border-left` always sets the values of all of the properties that it can set, even if they are not specified. It sets those that are not specified to their default values. Consider the following code:
+
+```css
+border-left-style: dotted;
+border-left: thick green;
+```
+
+It is actually the same as this one:
+
+```css
+border-left-style: dotted;
+border-left: none thick green;
+```
+
+The value of {{cssxref("border-left-style")}} given before `border-left` is ignored. Since the default value of {{cssxref("border-left-style")}} is `none`, not specifying the `border-style` part results in no border.
+
 {{InteractiveExample("CSS Demo: border-left")}}
 
 ```css interactive-example-choice
@@ -47,22 +63,6 @@ border-left: 4mm ridge rgb(211 220 50 / 0.6);
   height: 100px;
 }
 ```
-
-As with all shorthand properties, `border-left` always sets the values of all of the properties that it can set, even if they are not specified. It sets those that are not specified to their default values. Consider the following code:
-
-```css
-border-left-style: dotted;
-border-left: thick green;
-```
-
-It is actually the same as this one:
-
-```css
-border-left-style: dotted;
-border-left: none thick green;
-```
-
-The value of {{cssxref("border-left-style")}} given before `border-left` is ignored. Since the default value of {{cssxref("border-left-style")}} is `none`, not specifying the `border-style` part results in no border.
 
 ## Constituent properties
 

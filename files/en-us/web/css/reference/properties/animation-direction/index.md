@@ -8,6 +8,8 @@ sidebar: cssref
 
 The **`animation-direction`** [CSS](/en-US/docs/Web/CSS) property sets whether an animation should play forward, backward, or alternate back and forth between playing the sequence forward and backward.
 
+It is often convenient to use the shorthand property {{cssxref("animation")}} to set all animation properties at once.
+
 {{InteractiveExample("CSS Demo: animation-direction")}}
 
 ```css interactive-example-choice
@@ -86,8 +88,6 @@ button.addEventListener("click", () => {
   }
 });
 ```
-
-It is often convenient to use the shorthand property {{cssxref("animation")}} to set all animation properties at once.
 
 ## Syntax
 

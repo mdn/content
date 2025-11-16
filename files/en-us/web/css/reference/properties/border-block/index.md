@@ -8,6 +8,10 @@ sidebar: cssref
 
 The **`border-block`** [CSS](/en-US/docs/Web/CSS) property is a [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) for setting the individual logical block border property values in a single place in the style sheet.
 
+`border-block` can be used to set the values for one or more of {{cssxref("border-block-width")}}, {{cssxref("border-block-style")}}, and {{cssxref("border-block-color")}} setting both the start and end in the block dimension at once. The physical borders to which it maps depends on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("border-top")}} and {{cssxref("border-bottom")}} or {{cssxref("border-right")}}, and {{cssxref("border-left")}} properties depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
+
+The borders in the other dimension can be set with {{cssxref("border-inline")}}, which sets {{cssxref("border-inline-start")}}, and {{cssxref("border-inline-end")}}.
+
 {{InteractiveExample("CSS Demo: border-block")}}
 
 ```css interactive-example-choice
@@ -44,10 +48,6 @@ direction: rtl;
   unicode-bidi: bidi-override;
 }
 ```
-
-`border-block` can be used to set the values for one or more of {{cssxref("border-block-width")}}, {{cssxref("border-block-style")}}, and {{cssxref("border-block-color")}} setting both the start and end in the block dimension at once. The physical borders to which it maps depends on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("border-top")}} and {{cssxref("border-bottom")}} or {{cssxref("border-right")}}, and {{cssxref("border-left")}} properties depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
-
-The borders in the other dimension can be set with {{cssxref("border-inline")}}, which sets {{cssxref("border-inline-start")}}, and {{cssxref("border-inline-end")}}.
 
 ## Constituent properties
 

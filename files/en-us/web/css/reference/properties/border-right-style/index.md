@@ -8,6 +8,9 @@ sidebar: cssref
 
 The **`border-right-style`** [CSS](/en-US/docs/Web/CSS) property sets the line style of an element's right {{cssxref("border")}}.
 
+> [!NOTE]
+> The specification doesn't define how borders of different styles connect in the corners.
+
 {{InteractiveExample("CSS Demo: border-right-style")}}
 
 ```css interactive-example-choice
@@ -56,9 +59,6 @@ body {
   background-color: white;
 }
 ```
-
-> [!NOTE]
-> The specification doesn't define how borders of different styles connect in the corners.
 
 ## Syntax
 

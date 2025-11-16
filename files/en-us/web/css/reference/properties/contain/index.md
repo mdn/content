@@ -9,6 +9,20 @@ sidebar: cssref
 The **`contain`** [CSS](/en-US/docs/Web/CSS) property indicates that an element and its contents are, as much as possible, independent from the rest of the document tree.
 Containment enables isolating a subsection of the DOM, providing performance benefits by limiting calculations of layout, style, paint, size, or any combination to a DOM subtree rather than the entire page. Containment can also be used to scope CSS counters and quotes.
 
+There are four types of CSS containment: size, layout, style, and paint, which are set on the container.
+The property is a space-separated list of a subset of the five standard values or one of the two shorthand values.
+Changes to the contained properties within the container are not propagated outside of the contained element to the rest of the page.
+The main benefit of containment is that the browser does not have to re-render the DOM or page layout as often, leading to small performance benefits during the rendering of static pages and greater performance benefits in more dynamic applications.
+
+Using the `contain` property is useful on pages with groups of elements that are supposed to be independent, as it can prevent element internals from having side effects outside of its bounding-box.
+
+> [!NOTE]
+> Using `layout`, `paint`, `strict` or `content` values for this property creates:
+>
+> 1. A new [containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block) (for the descendants whose {{cssxref("position")}} property is `absolute` or `fixed`).
+> 2. A new [stacking context](/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_context).
+> 3. A new [block formatting context](/en-US/docs/Web/CSS/Guides/Display/Block_formatting_context).
+
 {{InteractiveExample("CSS Demo: contain")}}
 
 ```css interactive-example-choice
@@ -72,20 +86,6 @@ h2 {
   margin: 4px;
 }
 ```
-
-There are four types of CSS containment: size, layout, style, and paint, which are set on the container.
-The property is a space-separated list of a subset of the five standard values or one of the two shorthand values.
-Changes to the contained properties within the container are not propagated outside of the contained element to the rest of the page.
-The main benefit of containment is that the browser does not have to re-render the DOM or page layout as often, leading to small performance benefits during the rendering of static pages and greater performance benefits in more dynamic applications.
-
-Using the `contain` property is useful on pages with groups of elements that are supposed to be independent, as it can prevent element internals from having side effects outside of its bounding-box.
-
-> [!NOTE]
-> Using `layout`, `paint`, `strict` or `content` values for this property creates:
->
-> 1. A new [containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block) (for the descendants whose {{cssxref("position")}} property is `absolute` or `fixed`).
-> 2. A new [stacking context](/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_context).
-> 3. A new [block formatting context](/en-US/docs/Web/CSS/Guides/Display/Block_formatting_context).
 
 ## Syntax
 

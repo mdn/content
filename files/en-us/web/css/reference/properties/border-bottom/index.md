@@ -8,6 +8,22 @@ sidebar: cssref
 
 The **`border-bottom`** [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets an element's bottom [border](/en-US/docs/Web/CSS/Reference/Properties/border). It sets the values of {{cssxref("border-bottom-width")}}, {{cssxref("border-bottom-style")}} and {{cssxref("border-bottom-color")}}.
 
+As with all shorthand properties, `border-bottom` always sets the values of all of the properties that it can set, even if they are not specified. It sets those that are not specified to their default values. Consider the following code:
+
+```css
+border-bottom-style: dotted;
+border-bottom: thick green;
+```
+
+It is actually the same as this one:
+
+```css
+border-bottom-style: dotted;
+border-bottom: none thick green;
+```
+
+The value of {{cssxref("border-bottom-style")}} given before `border-bottom` is ignored. Since the default value of {{cssxref("border-bottom-style")}} is `none`, not specifying the `border-style` part results in no border.
+
 {{InteractiveExample("CSS Demo: border-bottom")}}
 
 ```css interactive-example-choice
@@ -47,22 +63,6 @@ border-bottom: 4mm ridge rgb(211 220 50 / 0.6);
   height: 100px;
 }
 ```
-
-As with all shorthand properties, `border-bottom` always sets the values of all of the properties that it can set, even if they are not specified. It sets those that are not specified to their default values. Consider the following code:
-
-```css
-border-bottom-style: dotted;
-border-bottom: thick green;
-```
-
-It is actually the same as this one:
-
-```css
-border-bottom-style: dotted;
-border-bottom: none thick green;
-```
-
-The value of {{cssxref("border-bottom-style")}} given before `border-bottom` is ignored. Since the default value of {{cssxref("border-bottom-style")}} is `none`, not specifying the `border-style` part results in no border.
 
 ## Constituent properties
 

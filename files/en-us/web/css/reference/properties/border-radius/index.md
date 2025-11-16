@@ -8,6 +8,13 @@ sidebar: cssref
 
 The **`border-radius`** [CSS](/en-US/docs/Web/CSS) property rounds the corners of an element's outer border edge. You can set a single radius to make circular corners, or two radii to make elliptical corners.
 
+The radius applies to the whole {{cssxref("background")}}, even if the element has no border; the exact position of the clipping is defined by the {{cssxref("background-clip")}} property.
+
+The `border-radius` property does not apply to table elements when {{cssxref("border-collapse")}} is `collapse`.
+
+> [!NOTE]
+> As with any shorthand property, individual sub-properties cannot inherit, such as in `border-radius:0 0 inherit inherit`, which would partially override existing definitions. Instead, the individual longhand properties have to be used.
+
 {{InteractiveExample("CSS Demo: border-radius")}}
 
 ```css interactive-example-choice
@@ -54,13 +61,6 @@ border-radius: 50% 20% / 10% 40%;
   padding: 10px;
 }
 ```
-
-The radius applies to the whole {{cssxref("background")}}, even if the element has no border; the exact position of the clipping is defined by the {{cssxref("background-clip")}} property.
-
-The `border-radius` property does not apply to table elements when {{cssxref("border-collapse")}} is `collapse`.
-
-> [!NOTE]
-> As with any shorthand property, individual sub-properties cannot inherit, such as in `border-radius:0 0 inherit inherit`, which would partially override existing definitions. Instead, the individual longhand properties have to be used.
 
 ## Constituent properties
 

@@ -8,6 +8,8 @@ sidebar: cssref
 
 The **`animation-delay`** [CSS](/en-US/docs/Web/CSS) property specifies the amount of time to wait from applying the animation to an element before beginning to perform the animation. The animation can start later, immediately from its beginning, or immediately and partway through the animation.
 
+It is often convenient to use the shorthand property {{cssxref("animation")}} to set all animation properties at once.
+
 {{InteractiveExample("CSS Demo: animation-delay")}}
 
 ```css interactive-example-choice
@@ -104,8 +106,6 @@ observer.observe(el, {
 
 update();
 ```
-
-It is often convenient to use the shorthand property {{cssxref("animation")}} to set all animation properties at once.
 
 ## Syntax
 

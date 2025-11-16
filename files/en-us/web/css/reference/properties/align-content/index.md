@@ -8,6 +8,8 @@ sidebar: cssref
 
 The [CSS](/en-US/docs/Web/CSS) **`align-content`** property sets the distribution of space between and around content items along a [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout)'s [cross axis](/en-US/docs/Glossary/Cross_Axis), or a [grid](/en-US/docs/Web/CSS/Guides/Grid_layout) or [block-level](/en-US/docs/Glossary/Block-level_content) element's block axis.
 
+This property has no effect on single line flex containers (i.e., ones with `flex-wrap: nowrap`).
+
 The interactive example below uses grid layout to demonstrate some of the values of this property.
 
 {{InteractiveExample("CSS Demo: align-content")}}
@@ -55,8 +57,6 @@ align-content: space-around;
   border: 3px solid blue;
 }
 ```
-
-This property has no effect on single line flex containers (i.e., ones with `flex-wrap: nowrap`).
 
 ## Syntax
 

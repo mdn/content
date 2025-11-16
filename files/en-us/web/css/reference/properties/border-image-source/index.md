@@ -8,6 +8,8 @@ sidebar: cssref
 
 The **`border-image-source`** [CSS](/en-US/docs/Web/CSS) property sets the source image used to create an element's [border image](/en-US/docs/Web/CSS/Reference/Properties/border-image).
 
+The {{cssxref("border-image-slice")}} property is used to divide the source image into regions, which are then dynamically applied to the final border image.
+
 {{InteractiveExample("CSS Demo: border-image-source")}}
 
 ```css interactive-example-choice
@@ -52,8 +54,6 @@ border-image-source: none;
   font-size: 1.2em;
 }
 ```
-
-The {{cssxref("border-image-slice")}} property is used to divide the source image into regions, which are then dynamically applied to the final border image.
 
 ## Syntax
 
