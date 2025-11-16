@@ -77,6 +77,7 @@ p {
 
 - {{cssxref("text-decoration")}}
 - {{cssxref("text-decoration-color")}}
+- {{cssxref("text-decoration-inset")}}
 - {{cssxref("text-decoration-line")}}
 - {{cssxref("text-decoration-skip")}}
 - {{cssxref("text-decoration-skip-ink")}}
@@ -90,7 +91,7 @@ p {
 - {{cssxref("text-underline-offset")}}
 - {{cssxref("text-underline-position")}}
 
-The specification also defines the `text-decoration-skip-box`, `text-decoration-skip-self`, `text-decoration-skip-spaces`, `text-decoration-trim`, and `text-emphasis-skip` properties, which are not yet supported by any browser.
+The specification also defines the `text-decoration-skip-box`, `text-decoration-skip-self`, `text-decoration-skip-spaces`, and `text-emphasis-skip` properties, which are not yet supported by any browser.
 
 ## Guides
 
