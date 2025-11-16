@@ -429,13 +429,13 @@ The article [Aligning items in a flex container](/en-US/docs/Web/CSS/Guides/Flex
 
 ### justify-items
 
-The [`justify-items`](/en-US/docs/Web/CSS/Reference/Properties/justify-items) property is ignored in flexbox layouts.
+The {{cssxref("justify-items")}} property is ignored in flexbox layouts.
 
 ### place-items and place-content
 
-The [`place-items`](/en-US/docs/Web/CSS/Reference/Properties/place-items) property is a shorthand property for `align-items` and `justify-items`. If set on a flex container, it will set the alignment but not the justification, as `justify-items` is ignored in flexbox.
+The {{cssxref("place-items")}} property is a shorthand property for `align-items` and `justify-items`. If set on a flex container, it will set the alignment but not the justification, as `justify-items` is ignored in flexbox.
 
-There is another shorthand property, [`place-content`](/en-US/docs/Web/CSS/Reference/Properties/place-content), that defines the {{cssxref("align-content")}} and `justify-content` properties. The `align-content` property only effects flex containers that wrap, and is discussed in [Aligning items in a flex container](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items).
+There is another shorthand property, {{cssxref("place-content")}}, that defines the {{cssxref("align-content")}} and `justify-content` properties. The `align-content` property only effects flex containers that wrap, and is discussed in [Aligning items in a flex container](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items).
 
 ## Next steps
 
