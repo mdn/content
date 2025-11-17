@@ -32,7 +32,7 @@ animation-range-start: contain 100px;
 - {{cssxref("timeline-range-name")}}
   - : A specific named timeline range inside the overall timeline, starting at `0%`.
 - `<timeline-range-name> <length-percentage>`
-  - : The specified percentage or distance through the specified named timeline range, measured from the start of that timeline range.
+  - : A specified percentage or distance through a named timeline range, measured from the start of that timeline range.
 
 ## Description
 
