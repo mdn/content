@@ -714,7 +714,7 @@ The relative colors are as follows:
 - `--bg-color`: A much lighter variant of `--base-color`, intended to be used as a background. This is created by taking an origin color of `--base-color` and adding 40 to its lightness value.
 - `--complementary-color`: A complementary color 180 degrees around the color wheel from `--base-color`. This is created by taking an origin color of `--base-color` and adding 180 to its hue value.
 
-Now have a look at the rest of the CSS and take note of all the places where these colors are used. This includes [backgrounds](/en-US/docs/Web/CSS/Reference/Properties/background), [borders](/en-US/docs/Web/CSS/Reference/Properties/border), [`text-shadow`](/en-US/docs/Web/CSS/Reference/Properties/text-shadow), and even the [`accent-color`](/en-US/docs/Web/CSS/Reference/Properties/accent-color) of the slider.
+Now have a look at the rest of the CSS and take note of all the places where these colors are used. This includes [backgrounds](/en-US/docs/Web/CSS/Reference/Properties/background), [borders](/en-US/docs/Web/CSS/Reference/Properties/border), {{cssxref("text-shadow")}}, and even the {{cssxref("accent-color")}} of the slider.
 
 > [!NOTE]
 > For brevity, only the parts of the CSS relevant to relative color usage are shown.

@@ -35,7 +35,7 @@ The CSS box model module defines physical (or "page relative") properties such a
 
 ### Data types
 
-- [`<box-edge>`](/en-US/docs/Web/CSS/Reference/Values/box-edge)
+- {{cssxref("&lt;box-edge&gt;")}}
   - [`<visual-box>`](/en-US/docs/Web/CSS/Reference/Values/box-edge#visual-box)
   - [`<layout-box>`](/en-US/docs/Web/CSS/Reference/Values/box-edge#layout-box)
   - [`<paint-box>`](/en-US/docs/Web/CSS/Reference/Values/box-edge#paint-box)
