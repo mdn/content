@@ -10,7 +10,7 @@ The **`<alpha-value>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/C
 
 ## Syntax
 
-The value of an `<alpha-value>` is given as either a [`<number>`](/en-US/docs/Web/CSS/Reference/Values/number) or a {{cssxref("percentage")}}.
+The value of an `<alpha-value>` is given as either a {{cssxref("&lt;number&gt;")}} or a {{cssxref("percentage")}}.
 
 If given as a number, the useful range is 0 (fully transparent) to 1.0 (fully opaque), with decimal values in between; that is, 0.5 indicates that half of the foreground color is used and half of the background color is used. Values outside the range of 0 to 1 are permitted, but are [clamped](<https://en.wikipedia.org/wiki/Clamping_(graphics)>) to lie within the range 0 to 1.
 
@@ -28,7 +28,7 @@ When animated, values of the `<alpha-value>` CSS data type are {{Glossary("inter
 
 ### Setting text color opacity
 
-The [`rgb()`](/en-US/docs/Web/CSS/Reference/Values/color_value/rgb) function accepts a fourth optional value to specify an alpha value.
+The {{cssxref("rgb()")}} function accepts a fourth optional value to specify an alpha value.
 The following example shows how to apply a color with 60% opacity using the alpha value:
 
 ```css
@@ -55,4 +55,4 @@ shape-image-threshold: 0.7;
 - [Learn: Fundamental text and font styling](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals)
 - [CSS data types](/en-US/docs/Web/CSS/Reference/Values/Data_types)
 - [CSS Color](/en-US/docs/Web/CSS/Guides/Colors)
-- [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value)
+- {{cssxref("&lt;color&gt;")}}
