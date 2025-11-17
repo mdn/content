@@ -264,7 +264,7 @@ The `--try-fallback-name` is a developer-defined name for the position try fallb
 The `descriptor-list` defines the property values for that individual custom try fallback option, including how the positioned element should be placed and sized, and any margins. The limited list of property descriptors allowed includes:
 
 - {{cssxref("position-area")}}
-- [Inset properties](/en-US/docs/Glossary/Inset_properties)
+- {{glossary("Inset properties")}}
 - Margin properties (e.g., {{cssxref("margin-left")}}, {{cssxref("margin-block-start")}})
 - [self-alignment](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using#centering_on_the_anchor_using_anchor-center) properties
 - Sizing properties ({{cssxref("width")}}, {{cssxref("block-size")}}, etc.)

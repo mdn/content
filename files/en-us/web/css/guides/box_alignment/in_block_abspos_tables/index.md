@@ -12,7 +12,7 @@ The [CSS box alignment](/en-US/docs/Web/CSS/Guides/Box_alignment) module details
 
 The {{cssxref("justify-content")}} property does not apply to block containers or table cells.
 
-The {{cssxref("align-content")}} property applies to the block axis in order to align the contents of the box within its container. If a content distribution method such as `space-between`, `space-around` or `space-evenly` is requested then the fallback alignment will be used, as the content is treated as a single [alignment subject](/en-US/docs/Glossary/Alignment_Subject).
+The {{cssxref("align-content")}} property applies to the block axis in order to align the contents of the box within its container. If a content distribution method such as `space-between`, `space-around` or `space-evenly` is requested then the fallback alignment will be used, as the content is treated as a single {{glossary("alignment subject")}}.
 
 ## justify-self
 

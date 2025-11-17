@@ -32,7 +32,7 @@ CSS nesting helps with the readability, modularity, and maintainability of CSS s
 
 - [Selectors and combinators](/en-US/docs/Web/CSS/Guides/Selectors/Selectors_and_combinators)
 - [Pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
-- [CSS preprocessor](/en-US/docs/Glossary/CSS_preprocessor)
+- {{glossary("CSS preprocessor")}}
 
 ## Specifications
 
