@@ -120,7 +120,7 @@ In this example, we used [CSS masking](/en-US/docs/Web/CSS/Guides/Masking) and [
 ## See also
 
 - {{cssxref("position_value", "&lt;position&gt;")}}
-- [`<easing-function>`](/en-US/docs/Web/CSS/Reference/Values/easing-function)
+- {{cssxref("&lt;easing-function&gt;")}}
 - {{cssxref("radial-gradient")}} function
 - [`prefers-reduced-motion`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) media query
 - {{cssxref("will-change")}} CSS property
