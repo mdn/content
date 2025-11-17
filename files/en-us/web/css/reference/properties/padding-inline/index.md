@@ -54,8 +54,8 @@ direction: rtl;
 
 This property is a shorthand for the following CSS properties:
 
-- [`padding-inline-end`](/en-US/docs/Web/CSS/Reference/Properties/padding-inline-end)
-- [`padding-inline-start`](/en-US/docs/Web/CSS/Reference/Properties/padding-inline-start)
+- {{cssxref("padding-inline-end")}}
+- {{cssxref("padding-inline-start")}}
 
 ## Syntax
 

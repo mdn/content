@@ -49,15 +49,6 @@ background-clip: content-box;
 }
 ```
 
-The rounding can be a circle or an ellipse, or if one of the value is `0`, no rounding is done and the corner is square.
-
-![border-radius.png](border-radius.png)
-
-A background, being an image or a color, is clipped at the border, even a rounded one; the exact location of the clipping is defined by the value of the {{cssxref("background-clip")}} property.
-
-> [!NOTE]
-> If the value of this property is not set in a {{cssxref("border-radius")}} shorthand property that is applied to the element after the `border-top-left-radius` CSS property, the value of this property is then reset to its initial value by the [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties).
-
 ## Syntax
 
 ```css
@@ -92,6 +83,17 @@ With two values:
 
 - `<length-percentage>`
   - : Denotes the size of the circle radius or the semi-major and semi-minor axes of the ellipse. As absolute length it can be expressed in any unit allowed by the CSS {{cssxref("&lt;length&gt;")}} data type. Percentages for the horizontal axis refer to the width of the box, percentages for the vertical axis refer to the height of the box. Negative values are invalid.
+
+## Description
+
+The rounding can be a circle or an ellipse, or if one of the value is `0`, no rounding is done and the corner is square.
+
+![border-radius.png](border-radius.png)
+
+A background, being an image or a color, is clipped at the border, even a rounded one; the exact location of the clipping is defined by the value of the {{cssxref("background-clip")}} property.
+
+> [!NOTE]
+> If the value of this property is not set in a {{cssxref("border-radius")}} shorthand property that is applied to the element after the `border-top-left-radius` CSS property, the value of this property is then reset to its initial value by the [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties).
 
 ## Formal definition
 

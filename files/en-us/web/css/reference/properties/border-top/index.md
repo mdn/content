@@ -48,29 +48,13 @@ border-top: 4mm ridge rgb(211 220 50 / 0.6);
 }
 ```
 
-As with all shorthand properties, `border-top` always sets the values of all of the properties that it can set, even if they are not specified. It sets those that are not specified to their default values. Consider the following code:
-
-```css
-border-top-style: dotted;
-border-top: thick green;
-```
-
-It is actually the same as this one:
-
-```css
-border-top-style: dotted;
-border-top: none thick green;
-```
-
-The value of {{cssxref("border-top-style")}} given before `border-top` is ignored. Since the default value of {{cssxref("border-top-style")}} is `none`, not specifying the `border-style` part results in no border.
-
 ## Constituent properties
 
 This property is a shorthand for the following CSS properties:
 
-- [`border-top-color`](/en-US/docs/Web/CSS/Reference/Properties/border-top-color)
-- [`border-top-style`](/en-US/docs/Web/CSS/Reference/Properties/border-top-style)
-- [`border-top-width`](/en-US/docs/Web/CSS/Reference/Properties/border-top-width)
+- {{cssxref("border-top-color")}}
+- {{cssxref("border-top-style")}}
+- {{cssxref("border-top-width")}}
 
 ## Syntax
 
@@ -97,6 +81,24 @@ The three values of the shorthand property can be specified in any order, and on
   - : See {{cssxref("border-top-style")}}.
 - {{cssxref("&lt;color&gt;")}}
   - : See {{cssxref("border-top-color")}}.
+
+## Description
+
+As with all shorthand properties, `border-top` always sets the values of all of the properties that it can set, even if they are not specified. It sets those that are not specified to their default values. Consider the following code:
+
+```css
+border-top-style: dotted;
+border-top: thick green;
+```
+
+It is actually the same as this one:
+
+```css
+border-top-style: dotted;
+border-top: none thick green;
+```
+
+The value of {{cssxref("border-top-style")}} given before `border-top` is ignored. Since the default value of {{cssxref("border-top-style")}} is `none`, not specifying the `border-style` part results in no border.
 
 ## Formal definition
 
@@ -143,6 +145,6 @@ div {
 
 ## See also
 
-- [`border`](/en-US/docs/Web/CSS/Reference/Properties/border)
-- [`border-block`](/en-US/docs/Web/CSS/Reference/Properties/border-block)
-- [`outline`](/en-US/docs/Web/CSS/Reference/Properties/outline)
+- {{cssxref("border")}}
+- {{cssxref("border-block")}}
+- {{cssxref("outline")}}

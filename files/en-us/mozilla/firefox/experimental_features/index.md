@@ -432,7 +432,7 @@ The [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) allow developer
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 138           | No                  |
+| Nightly           | 146           | Yes                 |
 | Developer Edition | 138           | No                  |
 | Beta              | 138           | No                  |
 | Release           | 138           | No                  |

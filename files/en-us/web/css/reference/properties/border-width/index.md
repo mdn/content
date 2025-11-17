@@ -53,10 +53,10 @@ border-width: 0 4px 8px 12px;
 
 This property is a shorthand for the following CSS properties:
 
-- [`border-bottom-width`](/en-US/docs/Web/CSS/Reference/Properties/border-bottom-width)
-- [`border-left-width`](/en-US/docs/Web/CSS/Reference/Properties/border-left-width)
-- [`border-right-width`](/en-US/docs/Web/CSS/Reference/Properties/border-right-width)
-- [`border-top-width`](/en-US/docs/Web/CSS/Reference/Properties/border-top-width)
+- {{cssxref("border-bottom-width")}}
+- {{cssxref("border-left-width")}}
+- {{cssxref("border-right-width")}}
+- {{cssxref("border-top-width")}}
 
 ## Syntax
 

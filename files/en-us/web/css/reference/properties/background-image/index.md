@@ -46,15 +46,6 @@ background-image:
 }
 ```
 
-The background images are drawn on stacking context layers on top of each other. The first layer specified is drawn as if it is closest to the user.
-
-The [borders](/en-US/docs/Web/CSS/Reference/Properties/border) of the element are then drawn on top of them, and the {{cssxref("background-color")}} is drawn beneath them. How the images are drawn relative to the box and its borders is defined by the {{cssxref("background-clip")}} and {{cssxref("background-origin")}} CSS properties.
-
-If a specified image cannot be drawn (for example, when the file denoted by the specified URI cannot be loaded), browsers handle it as they would a `none` value.
-
-> [!NOTE]
-> Even if the images are opaque and the color won't be displayed in normal circumstances, web developers should always specify a {{cssxref("background-color")}}. If the images cannot be loaded—for instance, when the network is down—the background color will be used as a fallback.
-
 ## Syntax
 
 ```css
@@ -85,6 +76,17 @@ To specify multiple background images, supply multiple values, separated by a co
   - : Is a keyword denoting the absence of images.
 - `<image>`
   - : Is an {{cssxref("&lt;image&gt;")}} denoting the image to display. There can be several of them, separated by commas, as [multiple backgrounds](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds) are supported.
+
+## Description
+
+The background images are drawn on stacking context layers on top of each other. The first layer specified is drawn as if it is closest to the user.
+
+The [borders](/en-US/docs/Web/CSS/Reference/Properties/border) of the element are then drawn on top of them, and the {{cssxref("background-color")}} is drawn beneath them. How the images are drawn relative to the box and its borders is defined by the {{cssxref("background-clip")}} and {{cssxref("background-origin")}} CSS properties.
+
+If a specified image cannot be drawn (for example, when the file denoted by the specified URI cannot be loaded), browsers handle it as they would a `none` value.
+
+> [!NOTE]
+> Even if the images are opaque and the color won't be displayed in normal circumstances, web developers should always specify a {{cssxref("background-color")}}. If the images cannot be loaded—for instance, when the network is down—the background color will be used as a fallback.
 
 ## Accessibility
 
@@ -164,12 +166,12 @@ div {
 
 - {{HTMLElement("img")}}
 - Image-related functions:
-  - {{cssxref("gradient/linear-gradient", "linear-gradient()")}}
+  - {{cssxref("linear-gradient()")}}
   - {{cssxref("gradient/radial-gradient", "radial-gradient()")}}
-  - {{cssxref("gradient/conic-gradient", "conic-gradient()")}}
-  - {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}
+  - {{cssxref("conic-gradient()")}}
+  - {{cssxref("repeating-linear-gradient()")}}
   - {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
-  - {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
+  - {{cssxref("repeating-conic-gradient()")}}
   - {{cssxref("url_value", "&lt;url&gt;")}}
 - [Using CSS gradients](/en-US/docs/Web/CSS/Guides/Images/Using_gradients)
 - [Implementing image sprites in CSS](/en-US/docs/Web/CSS/Guides/Images/Implementing_image_sprites)
