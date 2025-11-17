@@ -131,10 +131,11 @@ The CSS color module also introduces the `CSSColorProfileRule` interface. Curren
 
 ## See also
 
-- [CSS color adjustment](/en-US/docs/Web/CSS/Guides/Color_adjustment) module and the {{cssxref("print-color-adjust")}} property.
-- [CSS images](/en-US/docs/Web/CSS/Guides/Images) module, which is where CSS [`<gradient>`](/en-US/docs/Web/CSS/Reference/Values/gradient) images are defined.
+- [CSS color adjustment](/en-US/docs/Web/CSS/Guides/Color_adjustment) module and {{cssxref("print-color-adjust")}}
+- [`<gradient>`](/en-US/docs/Web/CSS/Reference/Values/gradient) defined in [CSS images](/en-US/docs/Web/CSS/Guides/Images) module
 - The [`VideoColorSpace`](/en-US/docs/Web/API/VideoColorSpace) interface
-- The SVG [`<feColorMatrix>`](/en-US/docs/Web/SVG/Reference/Element/feColorMatrix) element
+- [`<feColorMatrix>`](/en-US/docs/Web/SVG/Reference/Element/feColorMatrix) SVG element
 - [Canvas API: applying styles and colors](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#colors)
-- [Color format converter](/en-US/docs/Web/CSS/Guides/Colors/Color_format_converter)
-- [Color mixer](/en-US/docs/Web/CSS/Guides/Colors/Color_mixer)
+- Tools:
+  - [Color format converter](/en-US/docs/Web/CSS/Guides/Colors/Color_format_converter)
+  - [Color mixer](/en-US/docs/Web/CSS/Guides/Colors/Color_mixer)
