@@ -84,7 +84,7 @@ A notable feature of `increasing` and `decreasing` is that when the hue angle di
 
 ### Comparing hue interpolation algorithms
 
-The following example shows the effect of using different hue interpolation algorithms in a {{CSSXref("gradient/linear-gradient", "linear-gradient()")}}.
+The following example shows the effect of using different hue interpolation algorithms in a {{cssxref("linear-gradient()")}}.
 
 #### HTML
 

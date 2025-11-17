@@ -109,7 +109,7 @@ This example shows one of the several reasons avoiding the important flag is gen
 
 ## Impact on custom properties
 
-When the `!important` flag is added to a custom property value declaration, it makes the value assignment important. The `!important` flag is then stripped from the custom property value. The `!important` flag is not passed as part of the custom property value to the [`var()`](/en-US/docs/Web/CSS/Reference/Values/var) function.
+When the `!important` flag is added to a custom property value declaration, it makes the value assignment important. The `!important` flag is then stripped from the custom property value. The `!important` flag is not passed as part of the custom property value to the {{cssxref("var()")}} function.
 
 ```css
 :root {

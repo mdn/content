@@ -14,7 +14,7 @@ The syntax of `<dashed-ident>` is similar to CSS identifiers (such as property n
 
 The double dash at the beginning makes them easily identifiable when reading through a CSS code block, and helps to avoid name clashes with standard CSS keywords.
 
-Just like [`<custom-ident>`](/en-US/docs/Web/CSS/Reference/Values/custom-ident) `<dashed-ident>`s are defined by the user, but unlike `<custom-ident>` [CSS](/en-US/docs/Web/CSS) will never define a `<dashed-ident>`.
+Just like {{cssxref("&lt;custom-ident&gt;")}} `<dashed-ident>`s are defined by the user, but unlike `<custom-ident>` [CSS](/en-US/docs/Web/CSS) will never define a `<dashed-ident>`.
 
 ## Examples
 
