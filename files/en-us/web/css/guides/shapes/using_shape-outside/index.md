@@ -154,11 +154,11 @@ body {
 
 {{EmbedLiveSample("inset-box", "", "250px")}}
 
-You can also create rectangles based on distances from the top and left edges of the reference box with the [`rect()`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/rect) function, or by width and height with the [`xywh()`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/xywh) function; both of these also support optional rounded corners.
+You can also create rectangles based on distances from the top and left edges of the reference box with the {{cssxref("rect()"0}] function, or by width and height with the {{cssxref("xywh()")}} function; both of these also support optional rounded corners.
 
 ## circle()
 
-The [`circle()`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/circle) value for `shape-outside` can accept two possible arguments: a `<shape-radius>` defining the size and the `<position>` defining its location.
+The {{cssxref("circle()")}} value for `shape-outside` can accept two possible arguments: a `<shape-radius>` defining the size and the `<position>` defining its location.
 
 The `circle()` and `ellipse()` `shape-outside` values both accept [`<shape-radius>`](/en-US/docs/Web/CSS/Reference/Values/basic-shape#shape-radius) as an argument. This can be a {{cssxref("length")}}, a {{cssxref("percentage")}}, or one of the keywords `closest-side` or `farthest-side`.
 
@@ -325,7 +325,7 @@ body {
 
 ## polygon()
 
-The [`polygon()`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/polygon) function is more complex, enabling the creation of multiple-sided polygon shapes. This shape accepts three or more pairs of values (a polygon must at least draw a triangle). Each space-separated pair of values is separated with a comma and represents the coordinates of a single vertex drawn relative to the reference box. Each pair of coordinates defines an edge of the polygon, with the final edge defined by the first and last set of coordinates.
+The {{cssxref("polygon()")}} function is more complex, enabling the creation of multiple-sided polygon shapes. This shape accepts three or more pairs of values (a polygon must at least draw a triangle). Each space-separated pair of values is separated with a comma and represents the coordinates of a single vertex drawn relative to the reference box. Each pair of coordinates defines an edge of the polygon, with the final edge defined by the first and last set of coordinates.
 
 The example below creates a shape for text to follow using the `polygon()` function. Try changing the coordinate values to see how the shape changes.
 
@@ -367,7 +367,7 @@ body {
 
 {{EmbedLiveSample("polygon", "", "250px")}}
 
-To create even more complex shapes, you can define the outline of any shape with the [`path()`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/path) or [`shape()`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/shape) functions.
+To create even more complex shapes, you can define the outline of any shape with the {{cssxref("path()")}} or {{cssxref("shape()")}} functions.
 
 The `inset()`, `circle()`, `ellipse()`, and `polygon()` are inspectable and editable using the Firefox Developer Tools Shape Inspector. The screenshot below shows the shape highlighted in the tool.
 

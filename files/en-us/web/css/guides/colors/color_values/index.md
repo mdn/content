@@ -228,7 +228,7 @@ The last value is semi-opaque; it includes the optional alpha value, preceded by
 
 ### HWB functional notation
 
-The [`hwb()`](/en-US/docs/Web/CSS/Reference/Values/color_value/hwb) color function uses the same hue coordinate system as `hsl()`, with `0deg` being red. However, instead of `hsl()`'s lightness and saturation, `hwb()` functions specify whiteness (`W`) and blackness (`B`). This function is also fairly intuitive — allowing you to pick a hue and then mix in amounts of white and or black to achieve the desired color.
+The {{cssxref("hwb()")}}color function uses the same hue coordinate system as `hsl()`, with `0deg` being red. However, instead of `hsl()`'s lightness and saturation, `hwb()` functions specify whiteness (`W`) and blackness (`B`). This function is also fairly intuitive — allowing you to pick a hue and then mix in amounts of white and or black to achieve the desired color.
 
 `W` and `B` values range from `0%` to `100%` (or `0` to `1`). If the combined value of `W` and `B` is 100% (or `1`) or greater, the color will be grey, similar to setting the `s` to `0%` with `hsl()`. As with `hsl()`, an optional alpha value can be included, preceded by a forward slash `/`.
 
@@ -316,7 +316,7 @@ While `hsl()` and `hwb()` are intuitive, they have a major drawback. With these 
 
 Wouldn't it be fantastic if you could simply change the hue channel of a color on a site without making text illegible? You can with color functions in the CIELAB and Oklab color spaces.
 
-The CIELAB and Oklab color spaces represent the entire range of colors that humans can see. CIE Lab color functions include [`lch()`](/en-US/docs/Web/CSS/Reference/Values/color_value/lch) and [`lab()`](/en-US/docs/Web/CSS/Reference/Values/color_value/lab). Oklab color functions include [`oklch()`](/en-US/docs/Web/CSS/Reference/Values/color_value/oklch) and [`oklab()`](/en-US/docs/Web/CSS/Reference/Values/color_value/oklab). The primary purpose of these models is that they are uniform so that a given distance between any two points in the color space should appear equally different to a viewer. Oklab is a color space that uses the same model type as CIELAB but is built using additional numerical optimization steps, so the values are considered more accurate than CIELAB. Because of this optimization, hues are more perceptually uniform.
+The CIELAB and Oklab color spaces represent the entire range of colors that humans can see. CIE Lab color functions include {{cssxref("lch()")}} and {{cssxref("lab()")}}. Oklab color functions include {{cssxref("oklch()")}} and {{cssxref("oklab()")}}. The primary purpose of these models is that they are uniform so that a given distance between any two points in the color space should appear equally different to a viewer. Oklab is a color space that uses the same model type as CIELAB but is built using additional numerical optimization steps, so the values are considered more accurate than CIELAB. Because of this optimization, hues are more perceptually uniform.
 
 The `lch()` and `oklch()` functions use lightness (`L`), chroma (`C`), and hue (`H`), and are discussed further in this section. The [`lab()` and `oklab()`](#lab_and_oklab) functions work differently, using lightness (`L`), red/green-ness (along the `a`-axis), and yellow/blue-ness (along the `b`-axis). These axes are referred to as rectangular coordinates. The main benefit of these color functions is that the "lightness" is perceived lightness; it is the brightness of a color as perceived by the human eye rather than the lightness as compared to other colors.
 
@@ -441,7 +441,7 @@ for (let l = 0; l <= 100; l += 10) {
 
 ## Lab and OKLab
 
-The [`lab()`](/en-US/docs/Web/CSS/Reference/Values/color_value/lab) functional notation expresses a given color in the CIE L\*a\*b\* color space. The [`oklab()`](/en-US/docs/Web/CSS/Reference/Values/color_value/oklab) function defines colors in the OKLab color space. These functions represent the entire range of colors that humans can see by specifying the color's lightness (`L`), a red/green axis value (`a`), a blue/yellow axis value (`b`), and an optional alpha transparency value.
+The {{cssxref("lab()")}} functional notation expresses a given color in the CIE L\*a\*b\* color space. The {{cssxref("oklab()")}} function defines colors in the OKLab color space. These functions represent the entire range of colors that humans can see by specifying the color's lightness (`L`), a red/green axis value (`a`), a blue/yellow axis value (`b`), and an optional alpha transparency value.
 
 Similar to `lch()` and `oklch()`, the `lightness` is either:
 
@@ -498,7 +498,7 @@ for (let b = -4; b <= 4; b++) {
 
 ### The `color()` function
 
-If you want explicit control over color spaces when defining colors, you can use the [`color()`](/en-US/docs/Web/CSS/Reference/Values/color_value/color) function.
+If you want explicit control over color spaces when defining colors, you can use the {{cssxref("color()")}} function.
 
 This is useful to describe a color for high-definition devices with wider color {{glossary("gamuts")}}.
 For example, if you wanted to show the `display-p3 0 0 1` color, which is outside of the sRGB gamut, you could use a `@media` [`color-gamut`](/en-US/docs/Web/CSS/Reference/At-rules/@media/color-gamut) at-rule to detect if the client's hardware supports colors in this range before trying to use it:

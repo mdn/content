@@ -220,9 +220,9 @@ The CSS borders and box decorations module level 4 also introduces the `border-s
 - {{cssxref("box-decoration-break")}} property
 - {{cssxref("text-shadow")}} property
 - {{cssxref("url_value", "&lt;url&gt;")}} CSS type
-- [`<color>`](/en-US/docs/Web/CSS/Reference/Properties/color) data type
+- {{cssxref("&lt;color&gt;")}} data type
 - {{cssxref("&lt;image&gt;")}} data type
-- [`<position>`](/en-US/docs/Web/CSS/Reference/Properties/position) data type
+- {{cssxref("&lt;position&gt;")}} data type
 - [`currentColor`](/en-US/docs/Web/CSS/Reference/Values/color_value#currentcolor_keyword) keyword
 
 [CSS backgrounds and borders](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders) module
@@ -253,7 +253,7 @@ The CSS borders and box decorations module level 4 also introduces the `border-s
 
 - {{cssxref("filter")}}
 - {{cssxref("backdrop-filter")}}
-- [`drop-shadow()`](/en-US/docs/Web/CSS/Reference/Values/filter-function/drop-shadow) filter function
+- {{cssxref("drop-shadow()")}} filter function
 - [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/Guides/Colors/Applying_color)
 - [Border-image generator](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-image_generator)
 - [Border-radius generator](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-radius_generator)

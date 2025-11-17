@@ -56,7 +56,7 @@ The `filter` and `backdrop-filter` properties accept a filter function list, whi
 
 If you hover over the sepia image below, you'll see the full-color image come into view instantly.
 
-The image is set to be sepia by specifying the value of the `filter` property as the [`sepia()`](/en-US/docs/Web/CSS/Reference/Values/filter-function/sepia) filter function. The filter is removed on [`:hover`](/en-US/docs/Web/CSS/Reference/Selectors/:hover) and [`:focus`](/en-US/docs/Web/CSS/Reference/Selectors/:focus) by setting `filter: none`.
+The image is set to be sepia by specifying the value of the `filter` property as the {{cssxref("sepia()")}} filter function. The filter is removed on {{cssxref(":hover")}} and {{cssxref(":focus")}} by setting `filter: none`.
 
 ```html
 <img tabindex="0" alt="Four trans-people, circa 1912" src="activists.jpg" />
@@ -87,7 +87,7 @@ img {
 
 While generally applied to images, the `filter` and `backdrop-filter` properties can be applied to any element or pseudo-element.
 
-In this example, a glow effect is added using a [`drop-shadow()`](/en-US/docs/Web/CSS/Reference/Values/filter-function/drop-shadow) filter with a `3px` blur and `0` offset.
+In this example, a glow effect is added using a {{cssxref("drop-shadow()")}} filter with a `3px` blur and `0` offset.
 
 ```css
 h1 {
@@ -113,7 +113,7 @@ h1 {
 
 While the sepia `filter` example included only a single filter function, you can set multiple filters. The `filter` and `backdrop-filter` properties accept a space-separated list of filters, which are applied in the order declared.
 
-This example applies two filters — [`hue-rotate()`](/en-US/docs/Web/CSS/Reference/Values/filter-function/hue-rotate) and [`blur()`](/en-US/docs/Web/CSS/Reference/Values/filter-function/blur) — via the `backdrop-filter` property. The backdrop, the area behind the {{HTMLElement("p")}} element, has a color shift and a blur applied.
+This example applies two filters — {{cssxref("hue-rotate()")}} and {{cssxref("blur()")}} — via the `backdrop-filter` property. The backdrop, the area behind the {{HTMLElement("p")}} element, has a color shift and a blur applied.
 
 ```css
 .container {

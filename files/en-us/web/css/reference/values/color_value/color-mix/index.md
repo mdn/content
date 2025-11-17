@@ -65,7 +65,7 @@ The color space must be one of the available color spaces listed in the [formal 
 
 The [`<rectangular-color-space>`](/en-US/docs/Web/CSS/Reference/Values/color-interpolation-method#rectangular-color-space) category includes [`srgb`](/en-US/docs/Glossary/Color_space#srgb), [`srgb-linear`](/en-US/docs/Glossary/Color_space#srgb-linear), [`display-p3`](/en-US/docs/Glossary/Color_space#display-p3), [`a98-rgb`](/en-US/docs/Glossary/Color_space#a98-rgb), [`prophoto-rgb`](/en-US/docs/Glossary/Color_space#prophoto-rgb), [`rec2020`](/en-US/docs/Glossary/Color_space#rec2020), [`lab`](/en-US/docs/Glossary/Color_space#cielab_color_spaces), [`oklab`](/en-US/docs/Glossary/Color_space#oklab), [`xyz`](/en-US/docs/Glossary/Color_space#xyz_color_spaces), [`xyz-d50`](/en-US/docs/Glossary/Color_space#xyz), and [`xyz-d65`](/en-US/docs/Glossary/Color_space#xyz-d50).
 
-The `<polar-color-space>` category includes [`hsl`](/en-US/docs/Web/CSS/Reference/Values/color_value/hsl), [`hwb`](/en-US/docs/Web/CSS/Reference/Values/color_value/hwb), [`lch`](/en-US/docs/Web/CSS/Reference/Values/color_value/lch), and [`oklch`](/en-US/docs/Web/CSS/Reference/Values/color_value/oklch). With these you can optionally follow the color space name with a {{CSSXref("&lt;hue-interpolation-method&gt;")}}. This value defaults to `shorter hue`, but can also be set to `longer hue`, `increasing hue`, or `decreasing hue`.
+The `<polar-color-space>` category includes {{cssxref("hsl")}}, {{cssxref("hwb")}}, {{cssxref("lch")}}, and {{cssxref("oklch")}}. With these you can optionally follow the color space name with a {{CSSXref("&lt;hue-interpolation-method&gt;")}}. This value defaults to `shorter hue`, but can also be set to `longer hue`, `increasing hue`, or `decreasing hue`.
 
 ### Color percentages
 
@@ -178,7 +178,7 @@ This example demonstrates using the `color-mix()` function to add transparency t
 
 #### CSS
 
-The `color-mix()` function is used to add increasing percentages of `red`, which is declared using a [custom property](/en-US/docs/Web/CSS/Reference/Properties/--*) named `--base`, defined on the {{cssxref(":root")}}. The 6th {{htmlelement("li")}} doesn't include a percentage, creating an output color that is half as opaque as the `--base` color. We include a striped background on the {{htmlelement("ul")}} to make the transparency visible.
+The `color-mix()` function is used to add increasing percentages of `red`, which is declared using a {{cssxref("--*", "custom property")}} named `--base`, defined on the {{cssxref(":root")}}. The 6th {{htmlelement("li")}} doesn't include a percentage, creating an output color that is half as opaque as the `--base` color. We include a striped background on the {{htmlelement("ul")}} to make the transparency visible.
 
 ```css hidden
 ul {
@@ -293,7 +293,7 @@ For more information, see {{cssxref("&lt;hue-interpolation-method&gt;")}}.
 
 The `shorter hue` interpolation method takes the shorter route around the color wheel, whereas the `longer hue` interpolation method takes the longer route. With `increasing hue`, the route starts with increasing values. With `decreasing hue` the value decreases. We mix two {{cssxref("named-color")}} values to create a series of `lch()` intermediary colors that differ based on which route is taken around the color wheel. The mixed colors include `red`, `blue`, and `yellow` with LCH hue values of approximately 41deg, 301deg, and 100deg, respectively.
 
-To reduce code redundancy, we used [CSS custom properties](/en-US/docs/Web/CSS/Reference/Properties/--*) for both colors and for the interpolation method, setting different values on each {{htmlelement("ul")}}.
+To reduce code redundancy, we used CSS {{cssxref("--*", "custom properties")}} for both colors and for the interpolation method, setting different values on each {{htmlelement("ul")}}.
 
 ```css hidden
 body {

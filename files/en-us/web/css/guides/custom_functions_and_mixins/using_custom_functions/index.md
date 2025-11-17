@@ -5,7 +5,7 @@ page-type: guide
 sidebar: cssref
 ---
 
-CSS custom functions enable you to create reusable blocks of CSS code that can accept arguments, contain complex logic (defined using features such as CSS {{cssxref("if()")}} functions and {{cssxref("@media")}} at-rules), and return values based on that logic. They work similarly to [CSS custom properties](/en-US/docs/Web/CSS/Reference/Properties/--*), but provide more flexibility.
+CSS custom functions enable you to create reusable blocks of CSS code that can accept arguments, contain complex logic (defined using features such as CSS {{cssxref("if()")}} functions and {{cssxref("@media")}} at-rules), and return values based on that logic. They work similarly to CSS {{cssxref("--*", "custom properties")}}, but provide more flexibility.
 
 In this article, we'll show you how to use them and present some real-world examples.
 
@@ -85,7 +85,7 @@ CSS function parameters are specified as comma-separated custom properties insid
 }
 ```
 
-This function has a name of `--transparent` and takes two custom properties as parameters, `--color` and `--alpha`, which can be used locally inside the function body. The body contains a `result` descriptor, which uses [CSS relative color syntax](/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors) to convert the input `--color` value into an [`oklch()`](/en-US/docs/Web/CSS/Reference/Values/color_value/oklch) color with an alpha channel value as specified in the input `--alpha` value.
+This function has a name of `--transparent` and takes two custom properties as parameters, `--color` and `--alpha`, which can be used locally inside the function body. The body contains a `result` descriptor, which uses [CSS relative color syntax](/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors) to convert the input `--color` value into an {{cssxref("oklch()")}} color with an alpha channel value as specified in the input `--alpha` value.
 
 You can then call this function anywhere you want to produce a semi-transparent version of an existing color.
 
@@ -287,7 +287,7 @@ With this function defined, we can now create variants of this background value 
 
 ## See also
 
-- [CSS custom properties](/en-US/docs/Web/CSS/Reference/Properties/--*)
+- {{cssxref("--*", "CSS custom properties")}}
 - [CSS custom functions and mixins](/en-US/docs/Web/CSS/Guides/Custom_functions_and_mixins) module
 - [Custom CSS Functions in the Browser](https://www.oddbird.net/2025/04/11/custom-functions/) by Miriam Suzanne (2025)
 - [CSS @function + CSS if()](https://www.bram.us/2025/02/18/css-at-function-and-css-if/) by Bramus (2025)

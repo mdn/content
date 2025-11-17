@@ -34,8 +34,8 @@ The CSS anchor positioning module also introduces the `anchor-scope` property. C
 
 ### Functions
 
-- [`anchor()`](/en-US/docs/Web/CSS/Reference/Values/anchor)
-- [`anchor-size()`](/en-US/docs/Web/CSS/Reference/Values/anchor-size)
+- {{cssxref("anchor()")}}
+- {{cssxref("anchor-size()")}}
 
 ### Data types and values
 

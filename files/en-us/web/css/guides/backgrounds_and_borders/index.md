@@ -186,7 +186,7 @@ Click "Play" in the example above to see or edit the code for the animation in t
 
 - {{cssxref("filter")}}
 - {{cssxref("backdrop-filter")}}
-- [`drop-shadow()`](/en-US/docs/Web/CSS/Reference/Values/filter-function/drop-shadow) filter function
+- {{cssxref("drop-shadow()")}} filter function
 - [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/Guides/Colors/Applying_color)
 - [Border-image generator](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-image_generator)
 - [Border-radius generator](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-radius_generator)

@@ -6,11 +6,11 @@ page-type: guide
 sidebar: cssref
 ---
 
-**Custom properties** (sometimes referred to as **CSS variables** or **cascading variables**) are entities defined by CSS authors that represent specific values to be reused throughout a document. They are set using the {{cssxref("@property")}} at-rule or by [custom property syntax](/en-US/docs/Web/CSS/Reference/Properties/--*) (e.g., **`--primary-color: blue;`**). Custom properties are accessed using the CSS {{cssxref("var", "var()")}} function (e.g., **`color: var(--primary-color);`**).
+**Custom properties** (sometimes referred to as **CSS variables** or **cascading variables**) are entities defined by CSS authors that represent specific values to be reused throughout a document. They are set using the {{cssxref("@property")}} at-rule or by {{cssxref("--*", "custom property syntax")}} (e.g., **`--primary-color: blue;`**). Custom properties are accessed using the CSS {{cssxref("var", "var()")}} function (e.g., **`color: var(--primary-color);`**).
 
 Complex websites have very large amounts of CSS, and this often results in a lot of repeated CSS values. For example, it's common to see the same color used in hundreds of different places in stylesheets. Changing a color that's been duplicated in many places requires a search and replace across all rules and CSS files. Custom properties allow a value to be defined in one place, then referenced in multiple other places so that it's easier to work with. Another benefit is readability and semantics. For example, `--main-text-color` is easier to understand than the hexadecimal color `#00ff00`, especially if the color is used in different contexts.
 
-Custom properties defined [using two dashes (`--`)](/en-US/docs/Web/CSS/Reference/Properties/--*) are subject to the [cascade](/en-US/docs/Web/CSS/Guides/Cascade/Introduction) and inherit their value from their parent.
+Custom properties defined {{cssxref("--*", "using two dashes (`--`)")}} are subject to the [cascade](/en-US/docs/Web/CSS/Guides/Cascade/Introduction) and inherit their value from their parent.
 The {{cssxref("@property")}} at-rule allows more control over the custom property and lets you specify whether it inherits its value from a parent, what the initial value is, and the type constraints that should apply.
 
 > [!NOTE]
@@ -353,7 +353,7 @@ You can define fallback values for custom properties using the `var()` function,
 
 ### Defining fallbacks in the `var()` function
 
-Using the [`var()`](/en-US/docs/Web/CSS/Reference/Values/var) function, you can define multiple **fallback values** when the given variable is not yet defined; this can be useful when working with [Custom Elements](/en-US/docs/Web/API/Web_components/Using_custom_elements) and [Shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM).
+Using the {{cssxref("var()")}} function, you can define multiple **fallback values** when the given variable is not yet defined; this can be useful when working with [Custom Elements](/en-US/docs/Web/API/Web_components/Using_custom_elements) and [Shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM).
 
 The first argument to the function is the name of the custom property. The second argument to the function is an optional fallback value, which is used as the substitution value when the referenced custom property is invalid.
 The function accepts two parameters, assigning everything following the first comma as the second parameter. If the second parameter is invalid, the fallback will fail. For example:
@@ -390,7 +390,7 @@ In fact, we've already seen this in the [`@property` inheritance](#using_propert
 
 The following example sets an initial value of `--box-color` to `teal` using the `@property` at-rule.
 In the ruleset following the at-rule, we want to set `--box-color` to `pink`, but there's a typo in the value name.
-The same is true for the third `<div>` where we've used `2rem` for the custom property that's expecting a valid [`<color>` value](/en-US/docs/Web/CSS/Reference/Values/color_value).
+The same is true for the third `<div>` where we've used `2rem` for the custom property that's expecting a valid {{cssxref("&lt;color&gt;")}} value.
 Both `2rem` and `peenk` are invalid color values, so the initial value of `teal` is applied:
 
 ```css live-sample___at-property-initial-value
@@ -553,8 +553,8 @@ element.style.setProperty("--my-var", jsVar + 4);
 
 ## See also
 
-- [Custom property syntax](/en-US/docs/Web/CSS/Reference/Properties/--*)
+- {{cssxref("--*", "Custom property syntax")}}
 - {{cssxref("@property")}} at-rule
-- [`var()`](/en-US/docs/Web/CSS/Reference/Values/var)
+- {{cssxref("var()")}}
 - [CSS Properties and Values API](/en-US/docs/Web/API/CSS_Properties_and_Values_API)
 - [CSS custom properties for cascading variables](/en-US/docs/Web/CSS/Guides/Cascading_variables) module

@@ -95,7 +95,7 @@ input {
 
 In these color swatches, the {{cssxref("background-color")}} is set using the {{cssxref("color_value/hsl", "hsl()")}} {{cssxref("&lt;color&gt;")}} function as `hsl(var(--hue) 50% 50%)`.
 Each color swatch increments the {{cssxref("hue")}} value by 10 degrees like `calc(var(--hue) + 10)`, `calc(var(--hue) + 20)` etc.
-As the slider's value changes from 0 up to 360, the value of the `--hue` [custom property](/en-US/docs/Web/CSS/Reference/Properties/--*) is updated using {{cssxref("calc")}}, and the background color of each box inside the grid is updated, also.
+As the slider's value changes from 0 up to 360, the value of the `--hue` {{cssxref("--*", "custom property")}} is updated using {{cssxref("calc")}}, and the background color of each box inside the grid is updated, also.
 
 ## Reference
 
@@ -128,6 +128,6 @@ As the slider's value changes from 0 up to 360, the value of the `--hue` [custom
 ## See also
 
 - [CSS cascading and inheritance](/en-US/docs/Web/CSS/Guides/Cascade) module
-- [CSS `env()`](/en-US/docs/Web/CSS/Reference/Values/env) function
-- [CSS `calc()`](/en-US/docs/Web/CSS/Reference/Values/calc) function
+- CSS {{cssxref("env()")}} function
+- CSS {{cssxref("calc()")}} function
 - [`getPropertyValue()`](/en-US/docs/Web/API/CSSStyleDeclaration/getPropertyValue) method

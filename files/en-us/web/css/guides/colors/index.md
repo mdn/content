@@ -37,19 +37,19 @@ The CSS colors module also introduces the {{cssxref("@color-profile")}} at-rule,
 ### Functions
 
 - Color functions:
-  - [`rgb()`](/en-US/docs/Web/CSS/Reference/Values/color_value/rgb)
-  - [`hsl()`](/en-US/docs/Web/CSS/Reference/Values/color_value/hsl)
-  - [`hwb()`](/en-US/docs/Web/CSS/Reference/Values/color_value/hwb)
-  - [`lab()`](/en-US/docs/Web/CSS/Reference/Values/color_value/lab)
-  - [`lch()`](/en-US/docs/Web/CSS/Reference/Values/color_value/lch)
-  - [`oklab()`](/en-US/docs/Web/CSS/Reference/Values/color_value/oklab)
-  - [`oklch()`](/en-US/docs/Web/CSS/Reference/Values/color_value/oklch)
-  - [`color()`](/en-US/docs/Web/CSS/Reference/Values/color_value/color)
-- [`color-mix()`](/en-US/docs/Web/CSS/Reference/Values/color_value/color-mix)
-- [`contrast-color()`](/en-US/docs/Web/CSS/Reference/Values/color_value/contrast-color)
-- {{CSSXref("color_value/light-dark", "light-dark()")}}
+  - {{cssxref("rgb()")}}
+  - {{cssxref("hsl()")}}
+  - {{cssxref("hwb()")}}
+  - {{cssxref("lab()")}}
+  - {{cssxref("lch()")}}
+  - {{cssxref("oklab()")}}
+  - {{cssxref("oklch()")}}
+  - {{cssxref("color()")}}
+- {{cssxref("color-mix()")}}
+- {{cssxref("contrast-color()")}}
+- {{CSSXref("light-dark()")}}
 
-The CSS color modules also introduce the {{CSSXref("color_value/device-cmyk", "device-cmyk()")}} function. Currently, no browsers support this feature.
+The CSS color modules also introduce the {{CSSXref("device-cmyk()")}} function. Currently, no browsers support this feature.
 
 ### Data types
 

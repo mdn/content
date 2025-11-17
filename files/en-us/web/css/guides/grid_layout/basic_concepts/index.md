@@ -272,7 +272,7 @@ In this final example, we mix absolute sized tracks with `fr` units. The first t
 
 ### Track listings with repeat() notation
 
-Large grids with many tracks can use the [`repeat()`](/en-US/docs/Web/CSS/Reference/Values/repeat) notation, to repeat all or a section of the list of grid tracks. For example the grid definition:
+Large grids with many tracks can use the {{cssxref("repeat()")}} notation, to repeat all or a section of the list of grid tracks. For example the grid definition:
 
 ```css
 .wrapper {

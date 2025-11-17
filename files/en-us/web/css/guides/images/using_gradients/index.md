@@ -767,7 +767,7 @@ div {
 
 ### Multiple repeating linear gradients
 
-Similar to regular linear and radial gradients, you can include multiple gradients, one on top of the other. This only makes sense if the gradients are partially transparent allowing subsequent gradients to show through the transparent areas, or if you include different [background-sizes](/en-US/docs/Web/CSS/Reference/Properties/background-size), optionally with different [background-position](/en-US/docs/Web/CSS/Reference/Properties/background-position) property values, for each gradient image. We are using transparency.
+Similar to regular linear and radial gradients, you can include multiple gradients, one on top of the other. This only makes sense if the gradients are partially transparent allowing subsequent gradients to show through the transparent areas, or if you include different [background sizes](/en-US/docs/Web/CSS/Reference/Properties/background-size), optionally with different {{cssxref("background-position")}} property values, for each gradient image. We are using transparency.
 
 In this case the gradient lines are 300px, 230px, and 300px long.
 

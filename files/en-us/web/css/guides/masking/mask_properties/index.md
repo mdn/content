@@ -115,7 +115,7 @@ div {
 }
 ```
 
-We declare a [`repeating-linear-gradient`](/en-US/docs/Web/CSS/Reference/Values/gradient/repeating-linear-gradient) with red, transparent, and semi-transparent red diagonal stripes. This gradient is used as our mask and, for the last container, as the background image:
+We declare a {{cssxref("repeating-linear-gradient")}} with red, transparent, and semi-transparent red diagonal stripes. This gradient is used as our mask and, for the last container, as the background image:
 
 ```css live-sample___mode
 img {

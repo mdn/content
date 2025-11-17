@@ -9,7 +9,7 @@ sidebar: cssref
 
 The **CSS custom functions and mixins** module allows developers to create reusable blocks of CSS code that can accept arguments, contain complex logic (defined using features such as CSS {{cssxref("if()")}} functions and {{cssxref("@media")}} at-rules), and return values based on that logic.
 
-CSS custom functions are defined in {{cssxref("@function")}} at-rules and called using {{cssxref("&lt;dashed-function>")}} syntax, which looks very similar to [CSS custom property](/en-US/docs/Web/CSS/Reference/Properties/--*) syntax except that it includes parentheses at the end containing arguments (for example, `--my-function(30px, 3)`). CSS custom functions can be called within any property value, and will return a value based on the arguments passed into the function and the logic inside it.
+CSS custom functions are defined in {{cssxref("@function")}} at-rules and called using {{cssxref("&lt;dashed-function>")}} syntax, which looks very similar to CSS {{cssxref("--*", "custom properties")}} syntax except that it includes parentheses at the end containing arguments (for example, `--my-function(30px, 3)`). CSS custom functions can be called within any property value, and will return a value based on the arguments passed into the function and the logic inside it.
 
 CSS mixins are defined in `@mixin` at-rules and applied using `@apply` at-rules nested inside rulesets. CSS mixins define a set of properties that can be reused inside multiple rulesets and customized with arguments and logic.
 

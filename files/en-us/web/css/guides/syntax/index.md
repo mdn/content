@@ -71,7 +71,7 @@ This module doesn't define any properties, [data types](/en-US/docs/Web/CSS/Refe
 
 [CSS custom properties for cascading variables](/en-US/docs/Web/CSS/Guides/Cascading_variables) module:
 
-- [custom property (`--*`)](/en-US/docs/Web/CSS/Reference/Properties/--*)
+- {{cssxref("--*","custom property (`--*`)")}}
 - {{cssxref("var")}} function
 
 [CSS conditional rules](/en-US/docs/Web/CSS/Guides/Conditional_rules) module:

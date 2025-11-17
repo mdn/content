@@ -7,7 +7,7 @@ spec-urls: https://drafts.csswg.org/css-cascade/
 sidebar: cssref
 ---
 
-The **cascade** is an algorithm that defines how user agents combine property values originating from different sources. The cascade defines the origin and layer that takes precedence when declarations in more than one [origin](#origin_types), [cascade layer](/en-US/docs/Web/CSS/Reference/At-rules/@layer), or {{CSSxRef("@scope")}} block set a value for a property on an element.
+The **cascade** is an algorithm that defines how user agents combine property values originating from different sources. The cascade defines the origin and layer that takes precedence when declarations in more than one [origin](#origin_types), {{cssxref("@layer", "cascade layer")}}, or {{CSSxRef("@scope")}} block set a value for a property on an element.
 
 The cascade lies at the core of CSS, as emphasized by the name: _**Cascading**_ Style Sheets. When a [selector](/en-US/docs/Web/CSS/Guides/Selectors) matches an element, the property value from the origin with the highest precedence gets applied, even if the selector from a lower precedence origin or layer has greater [specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity).
 
@@ -17,7 +17,7 @@ This article explains what the cascade is and the order in which {{Glossary("CSS
 
 The CSS cascade algorithm's job is to select CSS declarations in order to determine the correct values for CSS properties. CSS declarations come from different origin types: **[User-agent stylesheets](#user-agent_stylesheets)**, **[Author stylesheets](#author_stylesheets)**, and **[User stylesheets](#user_stylesheets)**.
 
-Though stylesheets come from these different origins and can be within different [layers](/en-US/docs/Web/CSS/Reference/At-rules/@layer) in each of these origins, they overlap in terms of their default scope; to make this work, the cascade algorithm defines how they interact. Before addressing the interactions, we'll define some key terms in the next few sections.
+Though stylesheets come from these different origins and can be within different {{cssxref("@layer", "layers")}} in each of these origins, they overlap in terms of their default scope; to make this work, the cascade algorithm defines how they interact. Before addressing the interactions, we'll define some key terms in the next few sections.
 
 ### User-agent stylesheets
 
@@ -345,7 +345,7 @@ While the declarations contained in most at-rules — such as those in {{cssxref
 
 Declarations in {{cssxref("@keyframes")}} don't participate in the cascade. As with `@font-face`, only the `@keyframes` as a whole is selected via the cascade algorithm. The [precedence order of animation is described below](#css_animations_and_the_cascade).
 
-When it comes to {{cssxref("@import")}}, the `@import` doesn't participate itself in the cascade, but all of the imported styles do participate. If the `@import` defines a [named or anonymous layer](/en-US/docs/Web/CSS/Reference/At-rules/@layer), the contents of the imported stylesheet are placed into the specified layer. All other CSS imported with `@import` is treated as the last declared layer. This was discussed above.
+When it comes to {{cssxref("@import")}}, the `@import` doesn't participate itself in the cascade, but all of the imported styles do participate. If the `@import` defines a {{cssxref("@layer", "named or anonymous layer")}}, the contents of the imported stylesheet are placed into the specified layer. All other CSS imported with `@import` is treated as the last declared layer. This was discussed above.
 
 Finally, {{cssxref("@charset")}} obeys specific algorithms and isn't affected by the cascade algorithm.
 
