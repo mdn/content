@@ -25,9 +25,7 @@ item(index)
 
 ### Return value
 
-- `touchPoint`
-  - : The requested {{ domxref("Touch") }} object from the {{ domxref("TouchList") }}.
-    Returns `null` if the index is not less than the length of the list.
+The requested {{ domxref("Touch") }} object from the {{ domxref("TouchList") }}. Returns `null` if the index is not less than the length of the list.
 
 ## Examples
 
