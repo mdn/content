@@ -68,9 +68,9 @@ The value of {{cssxref("border-top-style")}} given before `border-top` is ignore
 
 This property is a shorthand for the following CSS properties:
 
-- [`border-top-color`](/en-US/docs/Web/CSS/Reference/Properties/border-top-color)
-- [`border-top-style`](/en-US/docs/Web/CSS/Reference/Properties/border-top-style)
-- [`border-top-width`](/en-US/docs/Web/CSS/Reference/Properties/border-top-width)
+- {{cssxref("border-top-color")}}
+- {{cssxref("border-top-style")}}
+- {{cssxref("border-top-width")}}
 
 ## Syntax
 
@@ -143,6 +143,6 @@ div {
 
 ## See also
 
-- [`border`](/en-US/docs/Web/CSS/Reference/Properties/border)
-- [`border-block`](/en-US/docs/Web/CSS/Reference/Properties/border-block)
-- [`outline`](/en-US/docs/Web/CSS/Reference/Properties/outline)
+- {{cssxref("border")}}
+- {{cssxref("border-block")}}
+- {{cssxref("outline")}}
