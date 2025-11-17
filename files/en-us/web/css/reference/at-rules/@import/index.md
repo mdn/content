@@ -82,7 +82,7 @@ The `@import` rule can also be used to create a [cascade layer](/en-US/docs/Web/
 
 ```css
 @import "custom.css";
-@import url("chrome://communicator/skin/");
+@import url("chrome://communicator/skin/communicator.css");
 ```
 
 The two examples above show how to specify the _url_ as a `<string>` and as a `url()` function.
