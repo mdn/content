@@ -88,6 +88,8 @@ The CSS color module also introduces the `CSSColorProfileRule` interface. Curren
   - : Color perception and using colors with color insensitive (color blind) users, reduced vision users and users with vestibular disorders or other neurological disorders in mind.
 - [WCAG 1.4.1: Color contrast](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)
   - : Explanation of contrast requirements between background and foreground content to ensure legibility.
+- [CSS value serialization](/en-US/docs/Web/API/CSS_Object_Model/CSS_value_serialization)
+  - : How [CSSOM APIs](/en-US/docs/Web/API/CSS_Object_Model) serialize color and other values into standardized string representations.
 
 ## Related concepts
 
