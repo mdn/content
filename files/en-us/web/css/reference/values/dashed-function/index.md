@@ -38,7 +38,7 @@ The markup features a {{htmlelement("p")}} containing some text content:
 
 #### CSS
 
-In our styles, we first define the CSS custom function. The function is called `--transparent` and accepts two parameters: a color and a numeric alpha channel value. Inside the function body, we use [relative color syntax](/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors) to transform the passed color into an [`oklch()`](/en-US/docs/Web/CSS/Reference/Values/color_value/oklch) color with an alpha channel equal to the passed alpha value; this becomes the function's `result`:
+In our styles, we first define the CSS custom function. The function is called `--transparent` and accepts two parameters: a color and a numeric alpha channel value. Inside the function body, we use [relative color syntax](/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors) to transform the passed color into an {{cssxref("oklch()")}} color with an alpha channel equal to the passed alpha value; this becomes the function's `result`:
 
 ```css live-sample___basic-example
 @function --transparent(--color <color>, --alpha <number>) {
