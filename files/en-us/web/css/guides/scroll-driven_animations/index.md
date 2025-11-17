@@ -133,8 +133,8 @@ Scroll the element in the inline direction to see its background color change. S
 
 ### Functions
 
-- [`scroll()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/scroll)
-- [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view)
+- {{cssxref("scroll()")}}
+- {{cssxref("view()")}}
 
 ### Interfaces
 

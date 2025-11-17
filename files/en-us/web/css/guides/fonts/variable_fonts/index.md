@@ -697,7 +697,7 @@ In this case, the `font-style: italic` declaration indicates that this font file
 }
 ```
 
-In this case, the `oblique 0deg 12deg` value indicates that this font file should be used when in a style rule the `font-family` property is `MyVariableFontName` and the [font-style](/en-US/docs/Web/CSS/Reference/Properties/font-style) property is oblique with an angle between zero and 12 degrees inclusive.
+In this case, the `oblique 0deg 12deg` value indicates that this font file should be used when in a style rule the `font-family` property is `MyVariableFontName` and the {{cssxref("font-style")}} property is oblique with an angle between zero and 12 degrees inclusive.
 
 > [!NOTE]
 > Not all browsers have implemented the full syntax for font format, so test carefully. All browsers that support variable fonts will still render them if you set the format to just the file format, rather than format-variations (i.e., `woff2` instead of `woff2-variations`), but it's best to use the proper syntax if possible.
