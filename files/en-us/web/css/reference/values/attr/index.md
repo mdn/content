@@ -27,11 +27,11 @@ blockquote::after {
 
 ```html interactive-example
 <blockquote cite="https://mozilla.org/en-US/about/">
-  Mozilla makes browsers, apps, code, and tools that put people before profit.
+  Mozilla is working to put control of the internet back in the hands of the people using it.
 </blockquote>
 
 <blockquote cite="https://web.dev/about/">
-  Google believes in an open, accessible, private, and secure web.
+  Build beautiful, accessible, fast, and secure websites that work cross-browser.
 </blockquote>
 ```
 
