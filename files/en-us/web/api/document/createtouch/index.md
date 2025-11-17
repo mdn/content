@@ -63,8 +63,7 @@ createTouch(view, target, identifier, pageX, pageY, screenX, screenY)
 
 ### Return value
 
-- `touch`
-  - : A {{DOMxRef("Touch")}} object configured as described by the input parameters.
+A {{DOMxRef("Touch")}} object configured as described by the input parameters.
 
 ## Examples
 
