@@ -32,7 +32,8 @@ blockquote::after {
 </blockquote>
 
 <blockquote cite="https://web.dev/about/">
-  Build beautiful, accessible, fast, and secure websites that work cross-browser.
+  Build beautiful, accessible, fast, and secure websites that work
+  cross-browser.
 </blockquote>
 ```
 
