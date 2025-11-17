@@ -415,8 +415,8 @@ Non-standard vendor-prefixed pseudo-classes include:
 - {{CSSxRef(":-moz-handler-disabled")}}
 - {{CSSxRef(":-moz-last-node")}}
 - {{CSSxRef(":-moz-loading")}}
-- {{CSSxRef(":-moz-locale-dir_ltr")}}
-- {{CSSxRef(":-moz-locale-dir_rtl")}}
+- {{CSSxRef(":-moz-locale-dir_ltr", ":-moz-locale-dir(ltr)")}}
+- {{CSSxRef(":-moz-locale-dir_rtl", ":-moz-locale-dir(rtl)")}}
 - {{CSSxRef(":-moz-only-whitespace")}}
 - {{CSSxRef(":-moz-submit-invalid")}}
 - {{CSSxRef(":-moz-suppressed")}}

@@ -42,7 +42,7 @@ list-style-type: "\1F44D";
     <p>
       <code>space-counter</code> is defined with
       <a
-        href="//developer.mozilla.org/docs/Web/CSS/@counter-style"
+        href="//developer.mozilla.org/docs/Web/CSS/Reference/At-rules/@counter-style"
         target="_parent"
         ><code>@counter-style</code></a
       >
