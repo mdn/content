@@ -10,7 +10,7 @@ The **`scroll-timeline`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US
 
 `scroll-timeline` can contain two constituent values — a name for the named scroll progress timeline, and an optional scroll axis value.
 
-The name is then referenced in an [`animation-timeline`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline) declaration to indicate the container's element that is used to drive the progress of the animation through the scrolling action.
+The name is then referenced in an {{cssxref("animation-timeline")}} declaration to indicate the container's element that is used to drive the progress of the animation through the scrolling action.
 
 > [!NOTE]
 > If the scroller does not overflow its container in the axis dimension or if the overflow is hidden or clipped, no timeline will be created.
@@ -19,8 +19,8 @@ The name is then referenced in an [`animation-timeline`](/en-US/docs/Web/CSS/Ref
 
 This property is a shorthand for the following CSS properties:
 
-- [`scroll-timeline-name`](/en-US/docs/Web/CSS/Reference/Properties/scroll-timeline-name)
-- [`scroll-timeline-axis`](/en-US/docs/Web/CSS/Reference/Properties/scroll-timeline-axis)
+- {{cssxref("scroll-timeline-name")}}
+- {{cssxref("scroll-timeline-axis")}}
 
 ## Syntax
 
@@ -43,15 +43,15 @@ scroll-timeline: --custom_name_for_timeline;
 The `scroll-timeline` shorthand property can be applied to a container element as a combination of the `<scroll-timeline-name>` and `<scroll-timeline-axis>` values. At least one of the values must be specified. If both the values are specified, the order followed must be the `<scroll-timeline-name>` value followed by the `<scroll-timeline-axis>` value.
 
 > [!NOTE]
-> `<scroll-timeline-name>`s must be [`<dashed-ident>`](/en-US/docs/Web/CSS/Reference/Values/dashed-ident) values, which means they must start with `--`. This helps avoid name clashes with standard CSS keywords.
+> `<scroll-timeline-name>`s must be {{cssxref("&lt;dashed-ident&gt;")}} values, which means they must start with `--`. This helps avoid name clashes with standard CSS keywords.
 
 ### Values
 
 - `<scroll-timeline-name>`
-  - : See [`scroll-timeline-name`](/en-US/docs/Web/CSS/Reference/Properties/scroll-timeline-name).
+  - : See {{cssxref("scroll-timeline-name")}}.
 
 - `<scroll-timeline-axis>`
-  - : See [`scroll-timeline-axis`](/en-US/docs/Web/CSS/Reference/Properties/scroll-timeline-axis). The default value is `block`.
+  - : See {{cssxref("scroll-timeline-axis")}}. The default value is `block`.
 
 ## Formal definition
 
@@ -148,7 +148,7 @@ The square animates as you scroll, and the animation duration when using `scroll
 
 ## See also
 
-- [`animation-timeline`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline)
-- [`scroll-timeline-axis`](/en-US/docs/Web/CSS/Reference/Properties/scroll-timeline-axis), [`scroll-timeline-name`](/en-US/docs/Web/CSS/Reference/Properties/scroll-timeline-name)
+- {{cssxref("animation-timeline")}}
+- {{cssxref("scroll-timeline-axis")}}, {{cssxref("scroll-timeline-name")}}
 - {{cssxref("timeline-scope")}}
 - [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations)
