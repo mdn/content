@@ -56,6 +56,7 @@
 /* @mdn/engineering
 # Markdown files in root directory
 /*.md @mdn/content-team
+/SECURITY.md @mdn/engineering
 # Scripts and Tests
 /scripts @mdn/engineering
 /tests   @mdn/engineering
@@ -64,4 +65,3 @@
 # If another reviewer is specified, update the PAT token or auto-merge will cease to be automatic.
 /package.json @mdn/engineering @mdn-bot
 /yarn.lock    @mdn/engineering @mdn-bot
-/SECURITY.md @mdn/engineering
