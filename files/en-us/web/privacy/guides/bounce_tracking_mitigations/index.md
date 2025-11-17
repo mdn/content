@@ -65,7 +65,7 @@ The process works as follows:
 2. The browser periodically examines its list of flagged sites and checks to see if the user has actively used the site by interacting with it within the last 45 days. Example interactions include clicking a button, entering data into a form, and scrolling the site. The interaction can occur before, during, or after the bounce was detected.
 3. If the site does not have any user interaction and third-party cookies are blocked, then its state will be deleted.
 
-The heuristic operates on sites defined by {{Glossary("eTLD", "eTLD+1")}}. As a result, both `foo.site1.example` and `bar.site1.example` are treated as `site1.example`.
+The heuristic operates on {{glossary("site", "sites")}} (as defined by {{Glossary("eTLD#etld1", "eTLD+1")}}). As a result, both `foo.site1.example` and `bar.site1.example` are treated as `site1.example`.
 
 ### Stateful versus stateless bounces
 
@@ -79,8 +79,8 @@ Implementations were therefore updated to work in "stateless mode".
 
 ## Browser support
 
-- Chromium's implementation of bounce tracking mitigations was shipped in version 116, and works when user settings block third-party cookies (other engines block third-party cookies by default).
+- Chromium's implementation of bounce tracking mitigations was shipped in version 116, and works when user settings block third-party cookies. Chromium has third-party cookies disabled by default only when in Chrome Incognito mode (or the equivalent in other browsers, such as Microsoft Edge's InPrivate mode). Browsers based on non-Chromium rendering engines always block third-party cookies by default.
 - Firefox [supports bounce tracking protection](https://firefox-source-docs.mozilla.org/toolkit/components/antitracking/anti-tracking/bounce-tracking-protection/) when [Enhanced Tracking Protection](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop) is set to strict mode.
   - Firefox has kept its existing [redirect tracking protection](/en-US/docs/Web/Privacy/Guides/Redirect_tracking_protection) features alongside bounce tracking protection as it provides a cross-browser approach that doesn't rely on a known tracker list.
   - Firefox updated its implementation to run in stateless mode in [version 145](/en-US/docs/Mozilla/Firefox/Releases/145).
-- Safari first shipped bounce tracking protection in [ITP 2.0](https://webkit.org/blog/8311/intelligent-tracking-prevention-2-0/).
+- Safari doesn't implement bounce tracking mitigations as defined in the [specification](#specifications). Safari has its own list-based bounce tracking protection, which was first shipped in [ITP 2.0](https://webkit.org/blog/8311/intelligent-tracking-prevention-2-0/). See also the [Safari](https://privacycg.github.io/nav-tracking-mitigations/#mitigations-safari) description in the specification.
