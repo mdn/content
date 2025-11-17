@@ -57,7 +57,7 @@ The name is then referenced in an [`animation-timeline`](/en-US/docs/Web/CSS/ani
 
 The `view-timeline` shorthand property can be applied to a container element as a combination of the `<view-timeline-name>`, `<view-timeline-inset>` and `<view-timeline-axis>` values. At least one of the values must be specified. If both the values are specified, the order followed must be the `<view-timeline-name>` value followed by the `<view-timeline-axis>` value and/or the `<view-timeline-inset>` value.
 
-The `<view-timeline-name>` must be [`<dashed-ident>`](/en-US/docs/Web/CSS/dashed-ident) values, which means they must start with `--`, or the keyword `none`.
+The names specified in the `<view-timeline-name>` component must be [`<dashed-ident>`](/en-US/docs/Web/CSS/dashed-ident) values, which means they must start with `--`, or the keyword `none`.
 
 If only one value is declared, the value is the `view-timeline-name`. When setting two values, include the `view-timeline-name` and `view-timeline-axis`. The three value declaration is defined in the order `view-timeline-name`, `view-timeline-inset`, and `view-timeline-axis`.
 
