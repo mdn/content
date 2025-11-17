@@ -73,10 +73,10 @@ The `grid-area` property can also be set to a {{cssxref("&lt;custom-ident&gt;")}
 
 This property is a shorthand for the following CSS properties:
 
-- [`grid-row-start`](/en-US/docs/Web/CSS/Reference/Properties/grid-row-start)
-- [`grid-column-start`](/en-US/docs/Web/CSS/Reference/Properties/grid-column-start)
-- [`grid-row-end`](/en-US/docs/Web/CSS/Reference/Properties/grid-row-end)
-- [`grid-column-end`](/en-US/docs/Web/CSS/Reference/Properties/grid-column-end)
+- {{cssxref("grid-row-start")}}
+- {{cssxref("grid-column-start")}}
+- {{cssxref("grid-row-end")}}
+- {{cssxref("grid-column-end")}}
 
 ## Syntax
 
