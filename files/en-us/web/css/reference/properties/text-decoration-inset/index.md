@@ -2,9 +2,13 @@
 title: text-decoration-inset
 slug: Web/CSS/Reference/Properties/text-decoration-inset
 page-type: css-property
+status:
+  - experimental
 browser-compat: css.properties.text-decoration-inset
 sidebar: cssref
 ---
+
+{{SeeCompatTable}}
 
 The **`text-decoration-inset`** [CSS](/en-US/docs/Web/CSS) property enables adjusting the start and end points of an element's text decoration so it can be shortened, lengthened, or have its position shifted with respect to the rendered text.
 
