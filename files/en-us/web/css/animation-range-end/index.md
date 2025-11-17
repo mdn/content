@@ -36,7 +36,7 @@ animation-range-end: contain 700px;
 
 ## Description
 
-The `animation-range-end` property specifies the end of the animations's attachment range, potentially shifting the end time of the animation (i.e., where keyframes mapped to 100% progress are attached when the iteration count is 1) and/or reducing the duration of the animation.
+The `animation-range-end` property specifies the end of the animation's attachment range, potentially shifting the end time of the animation (i.e., where keyframes mapped to `100%` progress are attached when the iteration count is 1) and/or reducing the duration of the animation.
 
 The value is `normal`, a `<length-percentage>`, or a {{cssxref("timeline-range-name")}}, with or withing a `<length-percentage>`. When the `<timeline-range-name>` value does not include a `<length-percentage>`, the percentage defaults `100%`.
 
