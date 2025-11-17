@@ -86,7 +86,8 @@ Note that normally {{domxref("Sanitizer")}} instances are used instead of `Sanit
 - `comments`
   - : `true` if comments are allowed, and `false` if they are to be removed.
 - `dataAttributes`
-  - : `true` if `data-*` attributes are allowed, and `false` if they are to be removed.
+  - : `true` if all `data-*` attributes will be allowed (in which case `data-*` attributes must not be listed in the `attributes` array).
+    If `false`, any `data-*` attributes to be allowed must be listed in the `attributes` array.
 
 ## Description
 
@@ -108,14 +109,23 @@ In a valid sanitizer configuration:
 
 - Either the `elements` or `removeElements` array may be defined, but not both
 - Either the `attributes` or `removeAttributes` array may be defined, but not both
-- Within an element, either the `attributes` or `removeAttributes` array may be defined, but not both
-- No array may contain duplicate elements or attributes
 - The `replaceWithChildrenElements` array, if defined, may not have any elements in common with `elements` or `removeElements`
-- A global attribute, defined in `attributes`, may not also be defined in an element's `attribute` or `removeAttribute` list.
-- Custom `data-*` attributes may only be specified within element attribute arrays: not in the global `attributes` array, and only if `dataAttributes` is `true`.
+- No array may contain duplicate elements or attributes
+- If the global `attributes` array is defined:
+  - An element may define any or none of `attributes` and `removeAttributes`
+  - An element's `attributes` must not share any values in common with the global `attributes` array
+  - An element's `removeAttributes` array may only contain values that are also present in the global `attributes` array.
+  - If `dataAttributes` is `true` the global and element attribute arrays must not contain `data-*` attributes (since these will automatically be allowed).
+- If the global `removeAttributes` array is defined:
+  - An element may specify either `attributes` or `removeAttributes`, but not both
+  - An element's `attributes` or `removeAttributes` array, depending on which (if either) is defined, must not share any values in common with the global `removeAttributes` array.
+  - The global `dataAttributes` array must not be defined.
 
-Note that while the empty object `{}` is not technically a valid configuration it can be normalized to one.
-Passing the empty object will not throw a `TypeError`.
+The empty object `{}` is a valid configuration.
+
+> [!NOTE]
+> The conditions above are from the perspective of a web developer.
+> The [validity check defined in the specification](https://wicg.github.io/sanitizer-api/#sanitizerconfig-valid) is slightly different because it is executed after canonicalization of the configuration, such as adding `removeElements` when both are missing, and adding default namespaces.
 
 ## Examples
 
