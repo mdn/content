@@ -57,10 +57,10 @@ You can find out more information about border colors in [Applying colors to HTM
 
 This property is a shorthand for the following CSS properties:
 
-- [`border-bottom-color`](/en-US/docs/Web/CSS/Reference/Properties/border-bottom-color)
-- [`border-left-color`](/en-US/docs/Web/CSS/Reference/Properties/border-left-color)
-- [`border-right-color`](/en-US/docs/Web/CSS/Reference/Properties/border-right-color)
-- [`border-top-color`](/en-US/docs/Web/CSS/Reference/Properties/border-top-color)
+- {{cssxref("border-bottom-color")}}
+- {{cssxref("border-left-color")}}
+- {{cssxref("border-right-color")}}
+- {{cssxref("border-top-color")}}
 
 ## Syntax
 
