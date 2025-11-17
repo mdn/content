@@ -25,7 +25,7 @@ The universal selector is a special [type selector](/en-US/docs/Web/CSS/Referenc
 > The universal selector (`*`) matches **elements only**.
 > It does **not** directly match pseudo-elements by itself.
 >
-> Selectors like `*::before` work because the `*` matches all **elements**, and the pseudo-element selector (`::before`) applies to those elements. The universal selector does not directly select pseudo-elements.
+> To match all {{cssxref("::before")}} pseudo-elements on a page, for example, you would have to use a selector like `*::before`. This works because the `*` matches all elements, and the `::before` pseudo-element is available on all elements.
 
 ## Syntax
 
