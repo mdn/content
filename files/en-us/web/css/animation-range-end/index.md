@@ -38,7 +38,7 @@ animation-range-end: contain 700px;
 
 The `animation-range-end` property specifies the end of the animation's attachment range, potentially shifting the end time of the animation (i.e., where keyframes mapped to `100%` progress are attached when the iteration count is 1) and/or reducing the duration of the animation.
 
-The value is `normal`, a `<length-percentage>`, or a {{cssxref("timeline-range-name")}}, with or withing a `<length-percentage>`. When the `<timeline-range-name>` value does not include a `<length-percentage>`, the percentage defaults `100%`.
+The value can be `normal`, a `<length-percentage>`, or a {{cssxref("timeline-range-name")}} with an optional `<length-percentage>`. When the `<timeline-range-name>` value does not include a `<length-percentage>`, the percentage defaults to `100%`.
 
 The `animation-range-end` property is included in the {{cssxref("animation")}} shorthand as a reset-only value. This means that including `animation` resets a previously-declared `animation-range-end` value to `normal`, but the `<animation-range-end>` value cannot be set via `animation`. When creating [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations), you should declare `animation-range-end` after declaring any `animation` shorthand to prevent the value from being reset to `normal`.
 
