@@ -27,7 +27,7 @@ The following sections describe how to use these two methods.
 
 A custom property prefixed with two dashes begins with `--`, followed by the property name (e.g., `--my-property`), and a property value that can be any [valid CSS value](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units).
 Like any other property, this is written inside a ruleset.
-The following example shows how to create a custom property `--main-bg-color` and uses a [`<named-color>`](/en-US/docs/Web/CSS/Reference/Values/named-color) value of `brown`:
+The following example shows how to create a custom property `--main-bg-color` and uses a {{cssxref("&lt;named-color&gt;")}} value of `brown`:
 
 ```css
 section {
@@ -52,7 +52,7 @@ This doesn't always have to be the case: you maybe have a good reason for limiti
 ### Using the `@property` at-rule
 
 The {{cssxref("@property")}} at-rule allows you to be more expressive with the definition of a custom property with the ability to associate a type with the property, set default values, and control inheritance.
-The following example creates a custom property called `--logo-color` which expects a [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value):
+The following example creates a custom property called `--logo-color` which expects a {{cssxref("&lt;color&gt;")}}:
 
 ```css
 @property --logo-color {
@@ -293,7 +293,7 @@ The property is only set for the matching selector and its descendants.
 
 The `@property` at-rule lets you explicitly state whether the property inherits or not.
 The following example creates a custom property using the `@property` at-rule.
-Inheritance is disabled, there's a [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value) data type defined, and an initial value of `teal`.
+Inheritance is disabled, there's a {{cssxref("&lt;color&gt;")}} data type defined, and an initial value of `teal`.
 
 The parent element sets `--box-color` to a value of `green` and uses `--box-color` as a value for its background color.
 The child element also uses `background-color: var(--box-color)`, and we would expect it to have the color `green` if inheritance was enabled (or if it was defined using the double dash syntax).

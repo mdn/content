@@ -18,8 +18,8 @@ A block formatting context is created by at least one of the following:
 - Table captions (elements with {{cssxref("display", "display: table-caption")}}, which is the default for HTML table captions).
 - Anonymous table cells implicitly created by the elements with {{cssxref("display", "display: table")}}, `table-row`, `table-row-group`, `table-header-group`, `table-footer-group` (which is the default for HTML tables, table rows, table bodies, table headers, and table footers, respectively), or `inline-table`.
 - Elements with {{cssxref("display", "display: flow-root")}}.
-- Flex items (direct children of the element with {{cssxref("display", "display: flex")}} or `inline-flex`) if they are neither [flex](/en-US/docs/Glossary/Flex_Container) nor [grid](/en-US/docs/Glossary/Grid_Container) nor [table](/en-US/docs/Web/CSS/Guides/Table) containers themselves.
-- Grid items (direct children of the element with {{cssxref("display", "display: grid")}} or `inline-grid`) if they are neither [flex](/en-US/docs/Glossary/Flex_Container) nor [grid](/en-US/docs/Glossary/Grid_Container) nor [table](/en-US/docs/Web/CSS/Guides/Table) containers themselves.
+- Flex items (direct children of the element with {{cssxref("display", "display: flex")}} or `inline-flex`) if they are neither {{glossary("flex")}} nor [grid](/en-US/docs/Glossary/Grid_Container) nor [table](/en-US/docs/Web/CSS/Guides/Table) containers themselves.
+- Grid items (direct children of the element with {{cssxref("display", "display: grid")}} or `inline-grid`) if they are neither {{glossary("flex")}} nor [grid](/en-US/docs/Glossary/Grid_Container) nor [table](/en-US/docs/Web/CSS/Guides/Table) containers themselves.
 - Block elements where {{ cssxref("overflow") }} has a value other than `visible` and `clip`.
 - Elements with {{cssxref("contain", "contain: layout")}}, `content`, or `paint`.
 - Multicol containers (elements where {{ cssxref("column-count") }} or {{ cssxref("column-width") }} isn't `auto`, including elements with `column-count: 1`).
