@@ -366,6 +366,7 @@ lifecycles
 lightshow
 linecaps
 linkability
+linkified
 linkify
 livemark
 livemarks
@@ -675,6 +676,7 @@ spatializations
 spatialize
 spatialized
 SPDY
+spearphishing
 speedwalk
 spinbuttons
 spinlocking

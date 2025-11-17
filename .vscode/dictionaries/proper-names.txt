@@ -628,6 +628,7 @@ Willee
 Willigers
 Winamp
 Winchelsea
+Winnifred
 Wireshark
 Wirfs
 wisedog
@@ -665,5 +666,6 @@ Zheng
 Zilla
 Zinsser
 Zosia
+zxcvbn
 Émanuel
 Österreich
