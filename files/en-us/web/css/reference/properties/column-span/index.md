@@ -8,6 +8,8 @@ sidebar: cssref
 
 The **`column-span`** [CSS](/en-US/docs/Web/CSS) property makes it possible for an element to span across all columns when its value is set to `all`.
 
+An element that spans more than one column is called a **spanning element**.
+
 {{InteractiveExample("CSS Demo: column-span")}}
 
 ```css interactive-example-choice
@@ -53,8 +55,6 @@ column-span: all;
   color: white;
 }
 ```
-
-An element that spans more than one column is called a **spanning element**.
 
 ## Syntax
 
