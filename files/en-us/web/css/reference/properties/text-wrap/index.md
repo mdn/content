@@ -65,8 +65,8 @@ text-wrap: stable;
 
 This property is a shorthand for the following CSS properties:
 
-- [`text-wrap-mode`](/en-US/docs/Web/CSS/Reference/Properties/text-wrap-mode)
-- [`text-wrap-style`](/en-US/docs/Web/CSS/Reference/Properties/text-wrap-style)
+- {{cssxref("text-wrap-mode")}}
+- {{cssxref("text-wrap-style")}}
 
 ## Syntax
 
