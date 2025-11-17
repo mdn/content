@@ -45,8 +45,7 @@ createPattern(image, repetition)
 
 ### Return value
 
-- {{domxref("CanvasPattern")}}
-  - : An opaque object describing a pattern.
+An opaque {{domxref("CanvasPattern")}} describing a pattern.
 
 If the `image` is not fully loaded ({{domxref("HTMLImageElement.complete")}} is `false`), then [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) is returned.
 
