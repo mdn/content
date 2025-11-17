@@ -8,6 +8,8 @@ sidebar: cssref
 
 The **`animation-play-state`** [CSS](/en-US/docs/Web/CSS) property sets whether an animation is running or paused.
 
+Resuming a paused animation will start the animation from where it left off at the time it was paused, rather than starting over from the beginning of the animation sequence.
+
 {{InteractiveExample("CSS Demo: animation-play-state")}}
 
 ```css interactive-example-choice
@@ -57,8 +59,6 @@ animation-play-state: running;
   }
 }
 ```
-
-Resuming a paused animation will start the animation from where it left off at the time it was paused, rather than starting over from the beginning of the animation sequence.
 
 ## Syntax
 
