@@ -64,11 +64,11 @@ If relevant, provide a short description of how readers can interact with the ex
 
 ## Reference
 
-Create the relevant subsections to list the related properties, functions, data types, and so on. The reference section should include only and all the features introduced in the single specification. If a feature is in the spec but not supported, mention the features in paragraph format under the appropriate header. Related features definied in other specification go under "related concepts", and NOT in this section. 
+Create the relevant subsections to list the related properties, functions, data types, and so on. The reference section should include only and all the features introduced in the single specification. If a feature is in the spec but not supported, mention the features in paragraph format under the appropriate header. Related features definied in other specification go under "related concepts", and NOT in this section.
 
 ### Properties
 
-List of all shorthand and longhand properties provided by the module that are supported in at least once major browser. 
+List of all shorthand and longhand properties provided by the module that are supported in at least once major browser.
 
 Add a paragraph stating the properties that are introduced by the module but not yet supported in any browser, if any.
 
@@ -76,7 +76,7 @@ Omit this section if there are no relevant CSS properties for this module
 
 ### At-rules
 
-List of CSS at-rules provided by the module that are supported in at least once major browser. 
+List of CSS at-rules provided by the module that are supported in at least once major browser.
 
 Add a paragraph stating the at-rules introduced by the module but not yet supported in any browser, if any.
 
@@ -84,7 +84,7 @@ Omit this section if there are no relevant CSS at-rules for this module.
 
 ### Functions
 
-List of CSS functions provided by the module that are supported in at least once major browser. 
+List of CSS functions provided by the module that are supported in at least once major browser.
 
 Add a paragraph stating the functions introduced by the module but not yet supported in any browser, if any.
 
@@ -92,7 +92,7 @@ Omit this section if there are no relevant CSS functions for this module.
 
 ### Data types
 
-List of CSS data types provided by the module that are supported in at least once major browser.. 
+List of CSS data types provided by the module that are supported in at least once major browser..
 
 Add a paragraph stating the data-types introduced by the module but not yet supported in any browser, if any.
 
@@ -108,7 +108,7 @@ Omit this section if there are no relevant events for this module.
 
 ### Interfaces
 
-List the related API and interfaces provided by the module that are supported in at least once major browser. 
+List the related API and interfaces provided by the module that are supported in at least once major browser.
 
 Add a paragraph stating the interfaces introduced by the module but not yet supported in any browser, if any.
 
