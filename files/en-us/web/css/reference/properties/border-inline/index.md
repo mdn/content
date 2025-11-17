@@ -53,9 +53,9 @@ The borders in the other dimension can be set with {{cssxref("border-block")}}, 
 
 This property is a shorthand for the following CSS properties:
 
-- [`border-inline-color`](/en-US/docs/Web/CSS/Reference/Properties/border-inline-color)
-- [`border-inline-style`](/en-US/docs/Web/CSS/Reference/Properties/border-inline-style)
-- [`border-inline-width`](/en-US/docs/Web/CSS/Reference/Properties/border-inline-width)
+- {{cssxref("border-inline-color")}}
+- {{cssxref("border-inline-style")}}
+- {{cssxref("border-inline-width")}}
 
 ## Syntax
 
