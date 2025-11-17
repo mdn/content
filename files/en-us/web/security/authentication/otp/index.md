@@ -5,7 +5,7 @@ page-type: guide
 sidebar: security
 ---
 
-A _one-time password_ (OTP), also known as _one-time PIN_, or _one-time authorization code_ (OTAC) is a generated code that is specific to a single login attempt. The website either sends the code to the user in a separate channel, such as an email, or the user's device independently generates the code. The user then enters the code on the site to log in. Unlike a password, there's no long-term secret to remember or to store securely.
+A _one-time password_ (OTP), also known as _one-time PIN_, or _one-time authorization code_ (OTAC) is a generated code that is specific to a single login attempt. The website either sends the code to the user in a separate channel, such as an email, or the user's device independently generates the code. The user then enters the code on the site to log in.
 
 ## Overview
 
