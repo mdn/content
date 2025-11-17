@@ -59,7 +59,7 @@ position-area: unset;
 
 The property value is two `<position-area>` keyterms, or the keyword `none`. If only one `<position-area>` keyterm is provided, the second keyterm is implied.
 
-- [`<position-area>`](/en-US/docs/Web/CSS/Reference/Values/position-area_value)
+- {{cssxref("&lt;position-area&gt;")}}
   - : Specifies the area of the position area grid on which to place selected positioned elements.
 
 - `none`
@@ -78,7 +78,7 @@ The grid tiles are broken up into rows and columns:
 
 The dimensions of the center tile are defined by the [containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block) of the anchor element, while the dimensions of the grid's outer edge are defined by the positioned element's containing block.
 
-The [`<position-area>`](/en-US/docs/Web/CSS/Reference/Values/position-area_value) value is composed of one or two keywords, which define the region of the grid the positioned element should be placed inside. To be exact, the containing block of the positioned element is set to the grid area.
+The {{cssxref("&lt;position-area&gt;")}} value is composed of one or two keywords, which define the region of the grid the positioned element should be placed inside. To be exact, the containing block of the positioned element is set to the grid area.
 
 For example:
 
@@ -92,7 +92,7 @@ For detailed information on anchor features, usage, and the `position-area` prop
 
 ### Adjusted default behavior
 
-When a [`<position-area>`](/en-US/docs/Web/CSS/Reference/Values/position-area_value) value is set on a positioned element, some of its properties will have their default behavior adjusted to provide a good default alignment.
+When a {{cssxref("&lt;position-area&gt;")}} value is set on a positioned element, some of its properties will have their default behavior adjusted to provide a good default alignment.
 
 #### Self-alignment property `normal` value
 
@@ -109,7 +109,7 @@ When an anchor-positioned element is positioned using the `position-area` proper
 
 ### An aside on positioned element width
 
-If the positioned element does not have a specific size set on it, its size will default to its [intrinsic size](/en-US/docs/Glossary/Intrinsic_Size), but it will also be affected by the size of the position-area grid.
+If the positioned element does not have a specific size set on it, its size will default to its {{glossary("intrinsic size")}}, but it will also be affected by the size of the position-area grid.
 
 If the positioned element is placed in a single top-center, bottom-center, or center-center cell, its block size will be the same as the anchor's containing block size, growing up, down, or in both directions respectively. The positioned element will align with the specified grid square but adopt the same width as the anchor element. However, it won't allow its content to overflow — its minimum `width` will be its `min-content` (as defined by the width of its longest word).
 
@@ -441,7 +441,7 @@ Try selecting new `position-area` values from the `<select>` menu to see the eff
 - {{cssxref("position-anchor")}}
 - {{cssxref("position-try-fallbacks")}}
 - The [`anchor()`](/en-US/docs/Web/CSS/Reference/Values/anchor) function
-- The [`<position-area>`](/en-US/docs/Web/CSS/Reference/Values/position-area_value) value
+- The {{cssxref("&lt;position-area&gt;")}} value
 - [Using CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using) guide
 - [Fallback options and conditional hiding for overflow](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding) guide
 - [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) module

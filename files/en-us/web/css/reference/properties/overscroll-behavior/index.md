@@ -126,7 +126,7 @@ By default, mobile browsers tend to provide a "bounce" effect or even a page ref
 
 In some cases, these behaviors are not desirable. You can use `overscroll-behavior` to get rid of unwanted scroll chaining and the browser's Facebook/Twitter app-inspired "pull to refresh"-type behavior.
 
-Note that this property applies only to {{Glossary("Scroll_container", "scroll containers")}}. In particular, since an [`<iframe>`](/en-US/docs/Web/HTML/Reference/Elements/iframe) is not a scroll container, setting this property on an iframe has no effect. To control scroll chaining from an iframe, set `overscroll-behavior` on both the [`<html>`](/en-US/docs/Web/HTML/Reference/Elements/html) and the [`<body>`](/en-US/docs/Web/HTML/Reference/Elements/body) elements of the iframe's document.
+Note that this property applies only to {{Glossary("Scroll_container", "scroll containers")}}. In particular, since an [`<iframe>`](/en-US/docs/Web/HTML/Reference/Elements/iframe) is not a scroll container, setting this property on an iframe has no effect. To control scroll chaining from an iframe, set `overscroll-behavior` on both the [`<html>`](/en-US/docs/Web/HTML/Reference/Elements/html) and the {{htmlelement("body")}} elements of the iframe's document.
 
 ## Formal definition
 
