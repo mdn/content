@@ -24,14 +24,14 @@ Host: example.com
 Redirects have mandatory headers ({{HTTPHeader("Location")}}):
 
 ```http
-302 Found
+HTTP/1.1 302 Found
 Location: /NewPage.html
 ```
 
 A typical set of headers:
 
 ```http
-304 Not Modified
+HTTP/1.1 304 Not Modified
 Access-Control-Allow-Origin: *
 Age: 2318192
 Cache-Control: public, max-age=315360000
