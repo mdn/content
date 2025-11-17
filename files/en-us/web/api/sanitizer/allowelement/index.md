@@ -11,13 +11,9 @@ browser-compat: api.Sanitizer.allowElement
 {{APIRef("HTML Sanitizer API")}}{{SeeCompatTable}}
 
 The **`allowElement()`** method of the {{domxref("Sanitizer")}} interface sets that the specified element is allowed in the output when the sanitizer is used.
-The element can be specified with lists of attributes that are allowed or disallowed on elements of that type.
 
-The specified element is added to the [`elements`](/en-US/docs/Web/API/SanitizerConfig#elements) list in this sanitizer's configuration.
-If the element is already present in the list, then the existing entry is first removed and the new definition is appended to the end of the list.
-Note that if you need both per-element add-attribute and remove-attribute lists, they must be added in a single call to this method (since if done in two calls, the second call will replace the element definition added in the first call).
-
-The specified element is removed from the sanitizer configuration [`removeElements`](/en-US/docs/Web/API/SanitizerConfig#removeelements) or [`replaceWithChildrenElements`](/en-US/docs/Web/API/SanitizerConfig#replacewithchildrenelements) lists if present.
+The element can be specified with arrays of attributes that are allowed or disallowed on elements of that type.
+If you need both per-element add-attribute and remove-attribute lists, they must be added in a single call to this method (since if done in two calls, the second call will replace the element definition added in the first call).
 
 ## Syntax
 
@@ -54,7 +50,12 @@ allowElement(element)
 
 ### Return value
 
-None (`undefined`).
+`true` if the operation changed the configuration to allow the element, and `false` if the configuration already allowed the element.
+
+Note that `false` might be returned if the internal configuration:
+
+- defines an [`elements`](/en-US/docs/Web/API/SanitizerConfig#elements) array array and the element is already present (it does not need to be added again)
+- instead defines the [`removeElements`](/en-US/docs/Web/API/SanitizerConfig#removeelements) array and the specified element is not present (and is hence already not filtered)
 
 ## Examples
 

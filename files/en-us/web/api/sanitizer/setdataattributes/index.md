@@ -10,9 +10,9 @@ browser-compat: api.Sanitizer.setDataAttributes
 
 {{APIRef("HTML Sanitizer API")}}{{SeeCompatTable}}
 
-The **`setDataAttributes()`** method of the {{domxref("Sanitizer")}} interface sets whether [data attributes](/en-US/docs/Web/HTML/Reference/Global_attributes/data-*) will be allowed or removed by the sanitizer.
+The **`setDataAttributes()`** method of the {{domxref("Sanitizer")}} interface sets whether all [`data-*` attributes](/en-US/docs/Web/HTML/Reference/Global_attributes/data-*) will be allowed by the sanitizer, or if they must be individually specified.
 
-The method sets the [`dataAttributes`](/en-US/docs/Web/API/SanitizerConfig#dataattributes) property in this sanitizer's configuration.
+If this is set `true`, then data attributes are automatically allowed without needing to add them individually using {{domxref('Sanitizer.allowAttribute()')}} (or {{domxref('Sanitizer.allowElement()')}} for local attributes).
 
 ## Syntax
 
@@ -23,11 +23,11 @@ setDataAttributes(allow);
 ### Parameters
 
 - `allow`
-  - : `true` if data attributes are allowed, and `false` if they are to be removed.
+  - : `true` if all `data-*` attributes are allowed, and `false` if they must be explicitly specified.
 
 ### Return value
 
-None (`undefined`).
+`true` if the operation changed the configuration, and `false` if the configuration already set [`dataAttributes`](/en-US/docs/Web/API/SanitizerConfig#dataattributes) to the specified value.
 
 ## Examples
 
@@ -39,10 +39,10 @@ The code below shows the basic usage of the `setDataAttributes()` method.
 // Create sanitizer (in this case the default)
 const sanitizer = new Sanitizer();
 
-// Allow data attributes
+// Allow all data-* attributes
 sanitizer.setDataAttributes(true);
 
-// Remove data attributes
+// Require data-* attributes be added explicitly
 sanitizer.setDataAttributes(false);
 ```
 
