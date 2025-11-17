@@ -97,7 +97,7 @@ The resulting value of `calc()` must be compatible with the context in which it 
 
 When an {{cssxref("&lt;integer&gt;")}} is expected, the `calc()` expression can also evaluate to a `<number>`, which gets rounded to the nearest integer. So, `calc(1.4)` will result in a value of `1`. If the fractional part of the value is exactly `0.5`, the value is rounded towards positive infinity. For example, `calc(1.5)` will result in a value of `2`, while `calc(-1.5)` will round to `-1`.
 
-`calc()` performs floating point math following the IEEE-754 standard, which results in some considerations concerning the `infinity` and `NaN` values. For more details on how constants are serialized, see the [`calc-keyword`](/en-US/docs/Web/CSS/Reference/Values/calc-keyword) page.
+`calc()` performs floating point math following the IEEE-754 standard, which results in some considerations concerning the `infinity` and `NaN` values. For more details on how constants are serialized, see the {{cssxref("calc-keyword")}} page.
 
 ### Input considerations
 
@@ -119,7 +119,7 @@ For a full explanation of typed arithmetic in CSS, along with examples, see [Usi
 
 ### Support for computing color channels in relative colors
 
-The `calc()` function can be used to manipulate color channels directly within the context of [relative colors](/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors). This allows for dynamic adjustments of color channels in color models such as [`rgb()`](/en-US/docs/Web/CSS/Reference/Values/color_value/rgb), [`hsl()`](/en-US/docs/Web/CSS/Reference/Values/color_value/hsl), and [`lch()`](/en-US/docs/Web/CSS/Reference/Values/color_value/lch).
+The `calc()` function can be used to manipulate color channels directly within the context of [relative colors](/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors). This allows for dynamic adjustments of color channels in color models such as {{cssxref("rgb()")}}, {{cssxref("hsl()")}}, and {{cssxref("lch()")}}.
 
 The relative color syntax defines several color-channel keywords, each of which represents the value of the color channel as a {{cssxref("&lt;number&gt;")}} (see [Channel values resolve to `<number>` values](/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors#channel_values_resolve_to_number_values) for more information). The `calc()` function can use these color-channel keywords to perform dynamic adjustments on the color channels, for example, `calc(r + 10)`.
 
@@ -220,8 +220,8 @@ After all variables are expanded, `--width-c`'s value will be `calc(calc(100px /
 
 The `calc()` function can be used to adjust individual color channels in [relative colors](/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors) without the need for storing color channel values as variables.
 
-In the example below, the first paragraph uses a [`<named-color>`](/en-US/docs/Web/CSS/Reference/Values/named-color).
-In the paragraphs that follow, `calc()` is used with the [`rgb()`](/en-US/docs/Web/CSS/Reference/Values/color_value/rgb) and [`hsl()`](/en-US/docs/Web/CSS/Reference/Values/color_value/hsl) functions to adjust the values of each color channel relative to the original named color.
+In the example below, the first paragraph uses a {{cssxref("&lt;named-color&gt;")}}.
+In the paragraphs that follow, `calc()` is used with the {{cssxref("rgb()")}} and {{cssxref("hsl()")}} functions to adjust the values of each color channel relative to the original named color.
 
 ```html
 <p class="original">Original text color in rebeccapurple</p>

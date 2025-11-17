@@ -477,7 +477,7 @@ The output is as follows:
 
 ## See also
 
-- [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value) data type
+- {{cssxref("&lt;color&gt;")}} data type
 - [`<color-function>`](/en-US/docs/Web/CSS/Guides/Colors#functions) data type
 - [Using relative colors](/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors)
 - [CSS colors](/en-US/docs/Web/CSS/Guides/Colors) module

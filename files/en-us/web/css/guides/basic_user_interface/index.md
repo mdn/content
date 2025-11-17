@@ -109,8 +109,8 @@ The CSS basic user interface module also defines the {{CSSxRef("caret")}}, `nav-
 
 ## Related concepts
 
-- CSS [`cursor`](/en-US/docs/Web/CSS/Reference/Properties/cursor) property
-- SVG [`cursor`](/en-US/docs/Web/SVG/Reference/Attribute/cursor) attribute
+- CSS {{cssxref("cursor")}} property
+- SVG {{svgattr("cursor")}} attribute
 - CSS {{CSSxRef(":focus")}}, {{CSSxRef(":focus-within")}}, and {{CSSxRef(":focus-visible")}} pseudoclasses
 - {{DOMXref("CaretPosition")}} Interface
 

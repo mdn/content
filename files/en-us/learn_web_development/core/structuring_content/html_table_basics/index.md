@@ -530,7 +530,7 @@ You can also find this code on GitHub at [animals-table-fixed.html](https://gith
 
 There is a way to target entire table columns as a single entity, for example when applying styles to a table (which you'll learn about later, in [Styling tables](/en-US/docs/Learn_web_development/Core/Styling_basics/Tables)). As you get more experience with creating HTML tables, you'll find that applying a background color, for example, to every cell in a single column is harder than you might think. The {{htmlelement("colgroup")}} and {{htmlelement("col")}} elements provide a solution to this problem.
 
-The `<colspan>` element should be included as a child of the table, just after the opening `<table>` element. Inside the `<colspan>` element you can include one or more `<col>` elements, which represent groups of columns. The `<col>` element can include a `span` attribute that indicates the number of columns in that group. It can also include global attributes such as `style` (if you want to target the group with inline styles) or `class` (if you want to target that group with CSS or JavaScript using a class name). The `<col>` elements represent the table columns from the start of the columns, for example from the left hand side of a table written in a left-to-right language such as English.
+The `<colgroup>` element should be included as a child of the table, just after the opening `<table>` element. Inside the `<colgroup>` element you can include one or more `<col>` elements, which represent groups of columns. The `<col>` element can include a `span` attribute that indicates the number of columns in that group. It can also include global attributes such as `style` (if you want to target the group with inline styles) or `class` (if you want to target that group with CSS or JavaScript using a class name). The `<col>` elements represent the table columns from the start of the columns, for example from the left hand side of a table written in a left-to-right language such as English.
 
 Let's have a look at an example to show what we mean. The following table shows a school timetable:
 
@@ -677,7 +677,7 @@ Let's look at how the above code renders:
 Notice how the different columns receive the styles specified in the classes.
 
 > [!NOTE]
-> Even though `<colspan>` and `<col>` mainly facilitate styling, they are an HTML feature, therefore we've included them here rather than in our CSS modules. Is it also fair to say that they are a _limited_ feature — as shown on the [`<colgroup>` reference page](/en-US/docs/Web/HTML/Reference/Elements/colgroup#usage_notes), only a limited subset of styles can be applied to a `<col>` element, and most of the other settings that were historically available have been deprecated (removed, or flagged for removal).
+> Even though `<colgroup>` and `<col>` mainly facilitate styling, they are an HTML feature, therefore we've covered them here rather than in our CSS modules. Is it also fair to say that they are a _limited_ feature — as shown on the [`<colgroup>` reference page](/en-US/docs/Web/HTML/Reference/Elements/colgroup#usage_notes), only a limited subset of styles can be applied to a `<col>` element, and most of the other settings that were historically available have been deprecated (removed, or flagged for removal).
 
 ## Summary
 

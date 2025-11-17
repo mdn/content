@@ -8,6 +8,8 @@ sidebar: cssref
 
 The **`animation-fill-mode`** [CSS](/en-US/docs/Web/CSS) property sets how a CSS animation applies styles to its target before and after its execution.
 
+It is often convenient to use the shorthand property {{cssxref("animation")}} to set all animation properties at once.
+
 {{InteractiveExample("CSS Demo: animation-fill-mode")}}
 
 ```css interactive-example-choice
@@ -110,8 +112,6 @@ observer.observe(el, {
 update();
 ```
 
-It is often convenient to use the shorthand property {{cssxref("animation")}} to set all animation properties at once.
-
 ## Syntax
 
 ```css
@@ -149,7 +149,7 @@ animation-fill-mode: unset;
     | `alternate-reverse`   | even                        | `100%` or `to`            |
     | `alternate-reverse`   | odd                         | `0%` or `from`            |
 
-    Animated properties behave as if included in a set [`will-change`](/en-US/docs/Web/CSS/Reference/Properties/will-change) property value. If a new stacking context was created during the animation, the target element retains the stacking context after the animation has finished.
+    Animated properties behave as if included in a set {{cssxref("will-change")}} property value. If a new stacking context was created during the animation, the target element retains the stacking context after the animation has finished.
 
 - `backwards`
   - : The animation will apply the values defined in the first relevant [keyframe](/en-US/docs/Web/CSS/Reference/At-rules/@keyframes) as soon as it is applied to the target, and retain this during the {{cssxref("animation-delay")}} period. The first relevant keyframe depends on the value of {{cssxref("animation-direction")}}:

@@ -55,9 +55,9 @@ div {
 
 This property is a shorthand for the following CSS properties:
 
-- [`caret-color`](/en-US/docs/Web/CSS/Reference/Properties/caret-color)
-- [`caret-animation`](/en-US/docs/Web/CSS/Reference/Properties/caret-animation)
-- [`caret-shape`](/en-US/docs/Web/CSS/Reference/Properties/caret-shape)
+- {{cssxref("caret-color")}}
+- {{cssxref("caret-animation")}}
+- {{cssxref("caret-shape")}}
 
 ## Syntax
 
