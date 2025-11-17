@@ -8,6 +8,8 @@ sidebar: cssref
 
 The **`animation-iteration-count`** [CSS](/en-US/docs/Web/CSS) property sets the number of times an animation sequence should be played before stopping.
 
+It is often convenient to use the shorthand property {{cssxref("animation")}} to set all animation properties at once.
+
 {{InteractiveExample("CSS Demo: animation-iteration-count")}}
 
 ```css interactive-example-choice
@@ -102,8 +104,6 @@ observer.observe(el, {
 
 update();
 ```
-
-It is often convenient to use the shorthand property {{cssxref("animation")}} to set all animation properties at once.
 
 ## Syntax
 

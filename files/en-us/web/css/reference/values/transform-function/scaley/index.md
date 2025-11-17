@@ -141,8 +141,8 @@ div {
 
 ## See also
 
-- [`scaleX()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/scaleX)
-- [`scaleZ()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/scaleZ)
+- {{cssxref("scaleX()")}}
+- {{cssxref("scaleZ()")}}
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
 - {{cssxref("transform-origin")}}

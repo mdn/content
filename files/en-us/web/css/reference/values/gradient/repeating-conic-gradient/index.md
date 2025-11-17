@@ -78,11 +78,11 @@ As with any gradient, a repeating-conic gradient has [no intrinsic dimensions](/
 Because `<gradient>`s belong to the `<image>` data type, they can only be used where `<image>`s can be used. For this reason, `repeating-conic-gradient()` won't work on {{CSSxRef("background-color")}} and other properties that use the {{CSSxRef("&lt;color&gt;")}} data type.
 
 > [!NOTE]
-> To create a conic gradient that does not repeat, make the gradient a full 360 degree rotation, or use the {{cssxref("gradient/conic-gradient", "conic-gradient()")}} function instead.
+> To create a conic gradient that does not repeat, make the gradient a full 360 degree rotation, or use the {{cssxref("conic-gradient()")}} function instead.
 
 ### Understanding repeating conic gradients
 
-The repeating-conic-gradient syntax is similar to the {{cssxref("gradient/conic-gradient", "conic-gradient()")}} and {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}} syntax. Like the non-repeating conic-gradient, the color-stops are placed around a gradient arc. Like the repeating radial gradient, the size of the repeating section is the first color stop subtracted from the angle of the last color stop.
+The repeating-conic-gradient syntax is similar to the {{cssxref("conic-gradient()")}} and {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}} syntax. Like the non-repeating conic-gradient, the color-stops are placed around a gradient arc. Like the repeating radial gradient, the size of the repeating section is the first color stop subtracted from the angle of the last color stop.
 
 ![Comparison of the color stops for repeating and non-repeating conic and radial gradients](repeatingconicgradient.png)
 
@@ -254,9 +254,9 @@ Please see [Using CSS gradients](/en-US/docs/Web/CSS/Guides/Images/Using_gradien
 ## See also
 
 - [Using CSS gradients](/en-US/docs/Web/CSS/Guides/Images/Using_gradients)
-- Other gradient functions: {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
-- [`<hue-interpolation-method>`](/en-US/docs/Web/CSS/Reference/Values/hue-interpolation-method)
-- [`<color-interpolation-method>`](/en-US/docs/Web/CSS/Reference/Values/color-interpolation-method)
+- Other gradient functions: {{cssxref("conic-gradient()")}}, {{cssxref("linear-gradient()")}}, {{cssxref("repeating-linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
+- {{cssxref("&lt;hue-interpolation-method&gt;")}}
+- {{cssxref("&lt;color-interpolation-method&gt;")}}
 - {{cssxref("&lt;image&gt;")}}
 - {{cssxref("image/image","image()")}}
 - {{cssxref("element", "element()")}}

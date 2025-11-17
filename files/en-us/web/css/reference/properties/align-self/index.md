@@ -8,6 +8,8 @@ sidebar: cssref
 
 The **`align-self`** [CSS](/en-US/docs/Web/CSS) property overrides a grid or flex item's {{cssxref("align-items")}} value. In grid, it aligns the item inside the {{glossary("Grid Areas", "grid area")}}. In flexbox, it aligns the item on the {{glossary("cross axis")}}.
 
+The property doesn't apply to block-level boxes, or to table cells. If a flexbox item's cross-axis margin is `auto`, then `align-self` is ignored.
+
 {{InteractiveExample("CSS Demo: align-self")}}
 
 ```css interactive-example-choice
@@ -51,8 +53,6 @@ align-self: end;
   border: 3px solid blue;
 }
 ```
-
-The property doesn't apply to block-level boxes, or to table cells. If a flexbox item's cross-axis margin is `auto`, then `align-self` is ignored.
 
 ## Syntax
 

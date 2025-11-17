@@ -8,6 +8,8 @@ sidebar: cssref
 
 The **`color`** [CSS](/en-US/docs/Web/CSS) property sets the foreground [color value](/en-US/docs/Web/CSS/Reference/Values/color_value) of an element's text and [text decorations](/en-US/docs/Web/CSS/Reference/Properties/text-decoration), and sets the [`currentColor`](/en-US/docs/Web/CSS/Reference/Values/color_value#currentcolor_keyword) value. `currentColor` may be used as an indirect value on _other_ properties and is the default for other color properties, such as {{cssxref("border-color")}}.
 
+For an overview of using color in HTML, see [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/Guides/Colors/Applying_color).
+
 {{InteractiveExample("CSS Demo: color")}}
 
 ```css interactive-example-choice
@@ -55,8 +57,6 @@ color: hwb(152deg 0% 58% / 70%);
   padding: 10px;
 }
 ```
-
-For an overview of using color in HTML, see [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/Guides/Colors/Applying_color).
 
 ## Syntax
 

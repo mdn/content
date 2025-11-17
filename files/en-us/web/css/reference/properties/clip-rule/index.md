@@ -128,7 +128,7 @@ We include an SVG with two `<clipPath>` elements that define star shapes, which 
 
 #### CSS
 
-We provide the `<div>` elements with a set {{cssxref("width")}} and {{cssxref("height")}}, adding a [`conic-gradient()`](/en-US/docs/Web/CSS/Reference/Values/gradient/conic-gradient) for their {{cssxref("background-image")}} value:
+We provide the `<div>` elements with a set {{cssxref("width")}} and {{cssxref("height")}}, adding a {{cssxref("conic-gradient()")}} for their {{cssxref("background-image")}} value:
 
 ```css hidden
 body {
