@@ -27,7 +27,8 @@ blockquote::after {
 
 ```html interactive-example
 <blockquote cite="https://mozilla.org/en-US/about/">
-  Mozilla is working to put control of the internet back in the hands of the people using it.
+  Mozilla is working to put control of the internet back in the hands of the
+  people using it.
 </blockquote>
 
 <blockquote cite="https://web.dev/about/">
