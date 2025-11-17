@@ -60,15 +60,6 @@ bottom: 20px;
 }
 ```
 
-The effect of `bottom` depends on how the element is positioned (i.e., the value of the {{cssxref("position")}} property):
-
-- When `position` is set to `absolute` or `fixed`, the `bottom` property specifies the distance between the outer edge of the element's [bottom margin](/en-US/docs/Web/CSS/Guides/Box_model/Introduction) and the outer edge of the containing block's bottom padding, or, in the case of [anchor positioned elements](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using) when the {{cssxref("anchor()")}} function is used within the value, relative to the position of the specified [`<anchor-side>`](/en-US/docs/Web/CSS/Reference/Values/anchor#anchor-side) edge. The `bottom` property is [compatible](/en-US/docs/Web/CSS/Reference/Values/anchor#compatibility_of_inset_properties_and_anchor-side_values) with the `top`, `bottom`, `start`, `end`, `self-start`, `self-end`, `center`, and `<percentage>` values.
-- When `position` is set to `relative`, the `bottom` property specifies the distance the element's bottom edge is moved above its normal position.
-- When `position` is set to `sticky`, the `bottom` property is used to compute the sticky-constraint rectangle.
-- When `position` is set to `static`, the `bottom` property has _no effect_.
-
-When both {{cssxref("top")}} and `bottom` are specified, `position` is set to `absolute` or `fixed`, _and_ {{cssxref("height")}} is unspecified (either `auto` or `100%`) both the `top` and `bottom` distances are respected. In all other situations, if {{cssxref("height")}} is constrained in any way or `position` is set to `relative`, the `top` property takes precedence and the `bottom` property is ignored.
-
 ## Syntax
 
 ```css
@@ -106,6 +97,17 @@ bottom: unset;
   - : Specifies that:
     - for _absolutely positioned elements_, the position of the element is based on the {{Cssxref("top")}} property, while `height: auto` is treated as a height based on the content; or if `top` is also `auto`, the element is positioned where it should vertically be positioned if it were a static element.
     - for _relatively positioned elements_, the distance of the element from its normal position is based on the {{Cssxref("top")}} property; or if `top` is also `auto`, the element is not moved vertically at all.
+
+## Description
+
+The effect of `bottom` depends on how the element is positioned (i.e., the value of the {{cssxref("position")}} property):
+
+- When `position` is set to `absolute` or `fixed`, the `bottom` property specifies the distance between the outer edge of the element's [bottom margin](/en-US/docs/Web/CSS/Guides/Box_model/Introduction) and the outer edge of the containing block's bottom padding, or, in the case of [anchor positioned elements](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using) when the {{cssxref("anchor()")}} function is used within the value, relative to the position of the specified [`<anchor-side>`](/en-US/docs/Web/CSS/Reference/Values/anchor#anchor-side) edge. The `bottom` property is [compatible](/en-US/docs/Web/CSS/Reference/Values/anchor#compatibility_of_inset_properties_and_anchor-side_values) with the `top`, `bottom`, `start`, `end`, `self-start`, `self-end`, `center`, and `<percentage>` values.
+- When `position` is set to `relative`, the `bottom` property specifies the distance the element's bottom edge is moved above its normal position.
+- When `position` is set to `sticky`, the `bottom` property is used to compute the sticky-constraint rectangle.
+- When `position` is set to `static`, the `bottom` property has _no effect_.
+
+When both {{cssxref("top")}} and `bottom` are specified, `position` is set to `absolute` or `fixed`, _and_ {{cssxref("height")}} is unspecified (either `auto` or `100%`) both the `top` and `bottom` distances are respected. In all other situations, if {{cssxref("height")}} is constrained in any way or `position` is set to `relative`, the `top` property takes precedence and the `bottom` property is ignored.
 
 ## Formal definition
 
