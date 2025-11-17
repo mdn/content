@@ -82,7 +82,7 @@ The browser will automatically extract the code from the SMS, and if the origin 
 
 ### WebOTP API
 
-The [WebOTP API](/en-US/docs/Web/API/WebOTP_API) gives websites programmatic access to one-time codes delivered over SMS. However, it doesn't have good cross-browser support, and unless you need programmatic access to the code, you don't need to use this API. Formatting the SMS in the standardized format and using `autocomplete=one-time-code` should be enough for autocomplete to work across browsers.
+The [WebOTP API](/en-US/docs/Web/API/WebOTP_API) gives websites programmatic access to one-time codes delivered over SMS. However, it doesn't have good cross-browser support, and unless you need programmatic access to the code, you don't need to use this API. Using the standardized format and `autocomplete=one-time-code` should be enough for autocomplete to work across browsers.
 
 ## TOTP flows (authenticator app)
 
