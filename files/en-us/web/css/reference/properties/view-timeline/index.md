@@ -11,7 +11,7 @@ The **`view-timeline`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/d
 The visibility of the subject inside the scroller is tracked — by default, the timeline is at 0% when the subject is first visible at one edge of the scroller and 100% when it reaches the opposite edge.
 
 `view-timeline` can contain two constituent values — a name for the named view progress timeline and an optional scroll axis value.
-The name is then referenced in an [`animation-timeline`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline) declaration to indicate the element that will be animated as the timeline progresses. This can be the subject element, but it doesn't have to be — you can animate a different element as the subject moves through the scrolling area.
+The name is then referenced in an {{cssxref("animation-timeline")}} declaration to indicate the element that will be animated as the timeline progresses. This can be the subject element, but it doesn't have to be — you can animate a different element as the subject moves through the scrolling area.
 
 > [!NOTE]
 > If the scroller element does not overflow its container in the axis dimension or if the overflow is hidden or clipped, no scroll progress timeline will be created.
@@ -49,7 +49,7 @@ view-timeline: --custom_name_for_timeline;
 The `view-timeline` shorthand property can be applied to a container element as a combination of the `<view-timeline-name>`, `<view-timeline-inset>` and `<view-timeline-axis>` values. At least one of the values must be specified. If both the values are specified, the order followed must be the `<view-timeline-name>` value followed by the `<view-timeline-axis>` value and/or the `<view-timeline-inset>` value.
 
 > [!NOTE]
-> `<view-timeline-name>`s must be [`<dashed-ident>`](/en-US/docs/Web/CSS/Reference/Values/dashed-ident) values, which means they must start with `--`. This helps avoid name clashes with standard CSS keywords.
+> `<view-timeline-name>`s must be {{cssxref("&lt;dashed-ident&gt;")}} values, which means they must start with `--`. This helps avoid name clashes with standard CSS keywords.
 
 ### Values
 
