@@ -61,11 +61,11 @@ Listen to these events using {{domxref("EventTarget.addEventListener", "addEvent
 
 ## Getting visual viewport information during scrolling and zooming
 
-Our [Visual Viewport API](https://mdn.github.io/dom-examples/visual-viewport-api/) example provides a basic demonstration of how the different visual viewport features work, including the three event types. Load the page in supporting desktop and mobile browsers and try scrolling around the page and pinch-zooming. On `resize` and `scroll`, the information box is repositioned to keep the same position relative to the visual viewport, and the viewport and scroll information it shows is updated. Also, on `resize` and `scroll` we change the box color to indicate something is happening, changing it back on `scrollend`.
+Our [visual viewport](https://mdn.github.io/dom-examples/visual-viewport-api/) example provides a basic demonstration of how the different visual viewport features work, including the three event types. Load the page in supporting desktop and mobile browsers and try scrolling around the page and pinch-zooming. On `resize` and `scroll`, the information box is repositioned to keep the same position relative to the visual viewport, and the viewport and scroll information it shows is updated. Also, on `resize` and `scroll` we change the box color to indicate something is happening, changing it back on `scrollend`.
 
-You'll find that on desktop browsers the {{domxref("Window.scrollX")}} and {{domxref("Window.scrollY")}} values are updated as the window is scrolled — the visual viewport position does not change. On mobile browsers however, the {{domxref("VisualViewport.offsetLeft")}} and {{domxref("VisualViewport.offsetTop")}} values are generally updated — it is usually the visual viewport that changes rather than the window position.
+You'll find that on desktop browsers the {{domxref("Window.scrollX")}} and {{domxref("Window.scrollY")}} values are updated as the window is scrolled — the visual viewport position does not change. On mobile browsers, however, the {{domxref("VisualViewport.offsetLeft")}} and {{domxref("VisualViewport.offsetTop")}} values are generally updated — it is usually the visual viewport that changes rather than the window position.
 
-The example HTML can be seen below. The information box is represented by a {{htmlelement("div")}} with an `id` of `output`.
+In the example, the HTML information box is represented by a {{htmlelement("div")}} with an `id` of `output` while the CSS is hidden for the sake of brevity.
 
 ```html
 <p id="instructions">
@@ -78,8 +78,6 @@ The example HTML can be seen below. The information box is represented by a {{ht
 </div>
 ```
 
-We won't explain the example's CSS for the sake of brevity — it is not important for understanding the demo. You can check it out at the example link above.
-
 In the JavaScript, we start by getting references to the information box we'll be updating as the page is zoomed and scrolled, as well as the two paragraphs contained within it. The first one will contain reported {{domxref("VisualViewport.offsetLeft")}} and {{domxref("VisualViewport.offsetTop")}} values, while the second one will contain reported {{domxref("Window.scrollX")}} and {{domxref("Window.scrollY")}} values.
 
 ```js
@@ -90,7 +88,7 @@ const windowInfo = document.getElementById("window-info");
 
 Next, we define the two key functions we'll run when the events fire:
 
-- `scrollUpdater()` will fire on `resize` and `scroll`: this function updates the position of the information box relative to the visual viewport by querying the {{domxref("VisualViewport.offsetTop")}} and {{domxref("VisualViewport.offsetLeft")}} properties and using their values to update the values of the relevant {{glossary("inset properties")}}. We also change the information box's background color to indicate that something is happening, and run the `updateText()` function to update the values shown in the box.
+- The `scrollUpdater()` function will be executed on `resize` and `scroll`: this function updates the position of the information box relative to the visual viewport by querying the {{domxref("VisualViewport.offsetTop")}} and {{domxref("VisualViewport.offsetLeft")}} properties and using their values to update the values of the relevant {{glossary("inset properties")}}. We also change the information box's background color to indicate that something is happening, and run the `updateText()` function to update the values shown in the box.
 - The `scrollEndUpdater()` function will fire on `scrollend`: this returns the information box to its original color and runs the `updateText()` function to make sure the latest values are shown on `scrollend`.
 
 ```js
@@ -107,7 +105,7 @@ const scrollendUpdater = () => {
 };
 ```
 
-The `updateText()` function looks like so — it sets the {{domxref("HTMLElement.innerText")}} of the first paragraph to show the current `VisualViewport.offsetLeft` and `VisualViewport.offsetTop` values, and the `HTMLElement.innerText` of the second paragraph to show the current `Window.scrollX` and `Window.scrollY` values. After defining `updateText()`, we immediately invoke it so that the information box displays correctly on page load.
+The `updateText()` function sets the {{domxref("HTMLElement.innerText")}} of the first paragraph to show the current `VisualViewport.offsetLeft` and `VisualViewport.offsetTop` values, and the `HTMLElement.innerText` of the second paragraph to show the current `Window.scrollX` and `Window.scrollY` values. After defining `updateText()`, we immediately invoke it so that the information box displays correctly on page load.
 
 ```js
 function updateText() {
@@ -120,8 +118,7 @@ function updateText() {
 updateText();
 ```
 
-> [!NOTE]
-> We truncate all values to two decimal places using the {{jsxref("Number.toFixed()")}} method because some browsers display them as a subpixel value, potentially with a large number of decimal places.
+We truncated all values to two decimal places using the {{jsxref("Number.toFixed()")}} method because some browsers render subpixel values, potentially with a large number of decimal places.
 
 Now we set event handler properties on both the visual viewport and the {{domxref("Window")}} object to run the key functions at the appropriate times on both mobile and desktop:
 
@@ -137,7 +134,7 @@ window.onscroll = scrollUpdater;
 window.onscrollend = scrollendUpdater;
 ```
 
-`scrollUpdater()` will fire on `resize` and `scroll`, while `scrollEndUpdater()` will fire on `scrollend`.
+The `scrollUpdater()` function will fire on `resize` and `scroll`, while `scrollEndUpdater()` will fire on `scrollend`.
 
 ### Hiding an overlaid box on zoom
 
