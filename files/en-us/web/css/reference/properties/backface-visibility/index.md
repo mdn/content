@@ -8,6 +8,8 @@ sidebar: cssref
 
 The **`backface-visibility`** [CSS](/en-US/docs/Web/CSS) property sets whether the back face of an element is visible when turned towards the user.
 
+An element's back face is a mirror image of its front face. Though invisible in 2D, the back face can become visible when a transformation causes the element to be rotated in 3D space. (This property has no effect on 2D transforms, which have no perspective.)
+
 {{InteractiveExample("CSS Demo: backface-visibility")}}
 
 ```css interactive-example-choice
@@ -75,8 +77,6 @@ backface-visibility: hidden;
   transform: rotateX(-90deg) translateZ(50px);
 }
 ```
-
-An element's back face is a mirror image of its front face. Though invisible in 2D, the back face can become visible when a transformation causes the element to be rotated in 3D space. (This property has no effect on 2D transforms, which have no perspective.)
 
 ## Syntax
 
