@@ -19,30 +19,43 @@ TOTPs (time-based one-time passwords) implement the temporal component and the i
 
 This article discusses three common implementations for one-time passwords: email, SMS, and authenticator apps (TOTP). They are all delivery methods for one-time passwords and TOTP is considered the most secure delivery channel in this comparison.
 
-## Email OTP flows
+## Email OTP
 
-For email-based OTP, there are two common methods: In the first method, the website sends a personalized one-time link to an authenticated email address. When the user clicks the link, the website authenticates the user. The link expires right after the user clicked it and often it is only valid for a few minutes. This one-click solution can be highly convenient and quick for the user. However, this requires the user to complete the process on the same device and in the same browser, which can be an issue when logging in from an in-app browser or a different device.. Such links in emails are also quite prone to phishing attacks.
+In email-based OTP, during registration:
 
-In the second method, websites send a personalized one-time authorization code (OTAC) to an authenticated email address. The user is then asked to type the OTAC into the website on their desired device and in their desired browser. This process can be slower and less convenient for the user but it offers greater flexibility as where to login and is considered more secure than using links in emails.
+- The user provides their email address to the website.
+- The website verifies that they have access to this address.
 
-For a great user experience with all email-based OTP methods, it is important to ensure users receive the OTP emails reasonably quick. Otherwise, they will be unable to complete their current action.
+When the user asks to sign in:
 
-To implement email-based OTP, users need to register an email address they would like to use for one-time password authentication. Typically, the user's email address is already part of the account registration process which makes email-based OTP quite common.
+- The website generates the one-time code and emails it to the user.
+- The user enters the code on the website.
+- The website signs the user in.
 
-## SMS OTP flows
+There are two common approaches to delivering the code:
+
+1. The website sends a personalized one-time link to the user's email address. When the user clicks the link, the website authenticates the user. The link is only valid for a few minutes and expires immediately after the user clicks it. This option can be highly convenient for the user. However, it requires the user to complete the process on the same device and in the same browser, which can be an issue when logging in from an in-app browser or a different device. Asking users to click links in emails also makes them more vulnerable to [phishing](/en-US/docs/Web/Security/Attacks/Phishing) attacks.
+
+2. The website sends a personalized one-time code to the user's email address. The user is then asked to type the code into the website on their desired device and in their desired browser. This process can be slower and less convenient for the user but it offers greater flexibility as where to login and is considered more secure than using links in emails.
+
+For a great user experience with all email-based OTP methods, it is important that users receive the OTP emails reasonably quickly.
+
+## SMS OTP
 
 An alternative to email-based OTP is text messaging via Short Message Service (SMS) to the user's phone. However, note that SMS is not considered to be a safe method for a few reasons:
 
-- Although SMS messages can be encrypted using [A5/X stream ciphers](https://en.wikipedia.org/wiki/A5/1), various weaknesses in the cipher have been identified and can messages be decrypted within minutes or seconds.
-- There are known flaws in SMS routing protocols ([SS7](https://en.wikipedia.org/wiki/Signalling_System_No._7)) which results in attackers being able to redirect text messages to them.
+- Although SMS messages can be encrypted using [A5/X stream ciphers](https://en.wikipedia.org/wiki/A5/1), various weaknesses in the cipher have been identified and messages can be decrypted within minutes or seconds.
+- There are known flaws in SMS routing protocols ([SS7](https://en.wikipedia.org/wiki/Signalling_System_No._7)) which result in attackers being able to redirect text messages to them.
 - In [SIM swap scams](https://en.wikipedia.org/wiki/SIM_swap_scam) the attacker abuses the mobile number portability (normally used when switching services, or when a phone is lost or stolen) to impersonate the victim.
 - Carriers can also recycle phone numbers to new users after an account got closed.
 
 Because SMS-based OTP is insecure, it is not recommended for use to establish new sessions or for general authentication. Instead, if at all, only use it as a second factor or for confirming intentions (e.g., payments).
 
-### SMS message format
+### Autocompleting SMS codes
 
-The user experience when using SMS-based OTPs can be quite brittle and users might get tricked into providing the OTP to malicious sites. To help with that, the [standard for origin-bound one-time codes delivered via SMS](https://wicg.github.io/sms-one-time-codes/), defines standard SMS formats that are suitable for programmatic extraction of OTPs and associate OTPs with specific websites (origins). An origin-bound SMS message should be formatted like this:
+To make it easier for users to enter SMS codes into a site, and to reduce the likelihood of phishing attacks, the [standard for origin-bound one-time codes delivered via SMS](https://wicg.github.io/sms-one-time-codes/) enables websites to support autocomplete for one-time code values.
+
+To enable this, you need to format the SMS message like this:
 
 ```plain
 Your verification code is 123456.
@@ -50,9 +63,7 @@ Your verification code is 123456.
 @www.example.com #123456
 ```
 
-### HTML markup
-
-In order for a website to find the associated SMS and propose the OTP code for autocompletion, provide an {{HTMLElement("input")}} element with the `autocomplete=one-time-code` attribute value set.
+Then in your site's login form, provide an {{HTMLElement("input")}} element with the `autocomplete=one-time-code` attribute value set.
 
 ```html
 <form action="/verify-otp" method="POST">
@@ -67,9 +78,11 @@ In order for a website to find the associated SMS and propose the OTP code for a
 </form>
 ```
 
+The browser will automatically extract the code from the SMS, and if the origin given in the message matches the origin of the login form, will autofill the `<input>` element with the code.
+
 ### WebOTP API
 
-In Chromium-based browsers, the [WebOTP API](/en-US/docs/Web/API/WebOTP_API) is available additionally as an extension of the [Credential Management API](/en-US/docs/Web/API/Credential_Management_API). Unless you need programmatic access to the {{domxref("OTPCredential")}}, you don't need to use this API. Formatting the SMS in the standardized format and using `autocomplete=one-time-code` should be enough for autocomplete to work across browsers.
+The [WebOTP API](/en-US/docs/Web/API/WebOTP_API) gives websites programmatic access to one-time codes delivered over SMS. However, it doesn't have good cross-browser support, and unless you need programmatic access to the code, you don't need to use this API. Formatting the SMS in the standardized format and using `autocomplete=one-time-code` should be enough for autocomplete to work across browsers.
 
 ## TOTP flows (authenticator app)
 
