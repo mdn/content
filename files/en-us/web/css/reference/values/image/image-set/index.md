@@ -42,11 +42,11 @@ image-set(
 ### Values
 
 - `<image>`
-  - : The [`<image>`](/en-US/docs/Web/CSS/Reference/Values/image) can be any image type except for an image set. The `image-set()` function may not be nested inside another `image-set()` function.
+  - : The {{cssxref("&lt;image&gt;")}} can be any image type except for an image set. The `image-set()` function may not be nested inside another `image-set()` function.
 - `<string>`
   - : A URL to an image.
 - `<resolution>` {{optional_inline}}
-  - : [`<resolution>`](/en-US/docs/Web/CSS/Reference/Values/resolution) units include `x` or `dppx`, for dots per pixel unit, `dpi`, for dots per inch, and `dpcm` for dots per centimeter. Every image within an `image-set()` must have a unique resolution.
+  - : {{cssxref("&lt;resolution&gt;")}} units include `x` or `dppx`, for dots per pixel unit, `dpi`, for dots per inch, and `dpcm` for dots per centimeter. Every image within an `image-set()` must have a unique resolution.
 - `type(<string>)` {{optional_inline}}
   - : A valid MIME type string, for example "image/jpeg".
 
