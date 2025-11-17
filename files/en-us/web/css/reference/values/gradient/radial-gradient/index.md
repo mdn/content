@@ -228,7 +228,7 @@ Please see [Using CSS gradients](/en-US/docs/Web/CSS/Guides/Images/Using_gradien
 ## See also
 
 - [Using CSS gradients](/en-US/docs/Web/CSS/Guides/Images/Using_gradients)
-- Other gradient functions: {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
+- Other gradient functions: {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("linear-gradient()")}}, {{cssxref("repeating-linear-gradient()")}}, {{cssxref("conic-gradient()")}}, {{cssxref("repeating-conic-gradient()")}}
 - {{cssxref("&lt;hue-interpolation-method&gt;")}}
 - {{cssxref("&lt;color-interpolation-method&gt;")}}
 - {{cssxref("&lt;image&gt;")}}

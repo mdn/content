@@ -200,7 +200,7 @@ hsl(from rgb(255 0 0 / 0.8) calc(h + 60) calc(s - 20) calc(l - 10) / calc(alpha 
 
 ### Using hsl() with conic-gradient()
 
-The `hsl()` function works well with [`conic-gradient()`](/en-US/docs/Web/CSS/Reference/Values/gradient/conic-gradient) as both deal with angles.
+The `hsl()` function works well with {{cssxref("conic-gradient()")}} as both deal with angles.
 
 ```html hidden
 <div></div>

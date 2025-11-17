@@ -12,7 +12,7 @@ sidebar: cssref
 ---
 
 The **`<hue>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types) represents the hue angle of a color.
-It is used in the color functions that accept hue expressed as a single value, specifically [`hsl()`](/en-US/docs/Web/CSS/Reference/Values/color_value/hsl), [`hwb()`](/en-US/docs/Web/CSS/Reference/Values/color_value/hwb), [`lch()`](/en-US/docs/Web/CSS/Reference/Values/color_value/lch), and [`oklch()`](/en-US/docs/Web/CSS/Reference/Values/color_value/oklch) functional notations.
+It is used in the color functions that accept hue expressed as a single value, specifically {{cssxref("hsl()")}}, [`hwb()`](/en-US/docs/Web/CSS/Reference/Values/color_value/hwb), [`lch()`](/en-US/docs/Web/CSS/Reference/Values/color_value/lch), and [`oklch()`](/en-US/docs/Web/CSS/Reference/Values/color_value/oklch) functional notations.
 
 ## Syntax
 

@@ -103,7 +103,7 @@ conic-gradient(
 
 As with any gradient, a conic gradient has [no intrinsic dimensions](/en-US/docs/Web/CSS/Reference/Values/image#description); i.e., it has no natural or preferred size, nor a preferred ratio. Its concrete size will match the size of the element it applies to, or the size of the `<image>` if it is set to something other than the element size.
 
-To create a conic gradient that repeats so as to fill a 360 degree rotation, use the {{CSSxRef("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}} function instead.
+To create a conic gradient that repeats so as to fill a 360 degree rotation, use the {{cssxref("repeating-conic-gradient()")}} function instead.
 
 Because `<gradient>`s belong to the `<image>` data type, they can only be used where `<image>`s can be used. For this reason, `conic-gradient()` won't work on {{CSSxRef("background-color")}} and other properties that use the {{CSSxRef("&lt;color&gt;")}} data type.
 
@@ -325,7 +325,7 @@ Please see [Using CSS gradients](/en-US/docs/Web/CSS/Guides/Images/Using_gradien
 ## See also
 
 - [Using CSS gradients](/en-US/docs/Web/CSS/Guides/Images/Using_gradients)
-- Other gradient functions: {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}, {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
+- Other gradient functions: {{cssxref("repeating-conic-gradient()")}}, {{cssxref("linear-gradient()")}}, {{cssxref("repeating-linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
 - {{cssxref("&lt;hue-interpolation-method&gt;")}}
 - {{cssxref("&lt;color-interpolation-method&gt;")}}
 - {{cssxref("&lt;image&gt;")}}

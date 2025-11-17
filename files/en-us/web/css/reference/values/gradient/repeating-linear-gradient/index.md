@@ -6,7 +6,7 @@ browser-compat: css.types.gradient.repeating-linear-gradient
 sidebar: cssref
 ---
 
-The **`repeating-linear-gradient()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) creates an image consisting of repeating linear gradients. It is similar to {{cssxref("gradient/linear-gradient", "linear-gradient()")}} and takes the same arguments, but it repeats the color stops infinitely in all directions so as to cover its entire container. The function's result is an object of the {{cssxref("&lt;gradient&gt;")}} data type, which is a special kind of {{cssxref("&lt;image&gt;")}}.
+The **`repeating-linear-gradient()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) creates an image consisting of repeating linear gradients. It is similar to {{cssxref("linear-gradient()")}} and takes the same arguments, but it repeats the color stops infinitely in all directions so as to cover its entire container. The function's result is an object of the {{cssxref("&lt;gradient&gt;")}} data type, which is a special kind of {{cssxref("&lt;image&gt;")}}.
 
 {{InteractiveExample("CSS Demo: repeating-linear-gradient()")}}
 
@@ -226,7 +226,7 @@ The box on the top uses [shorter interpolation](/en-US/docs/Web/CSS/Reference/Va
 ## See also
 
 - [Using CSS gradients](/en-US/docs/Web/CSS/Guides/Images/Using_gradients)
-- Other gradient functions: {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
+- Other gradient functions: {{cssxref("linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("conic-gradient()")}}, {{cssxref("repeating-conic-gradient()")}}
 - {{cssxref("&lt;hue-interpolation-method&gt;")}}
 - {{cssxref("&lt;color-interpolation-method&gt;")}}
 - {{cssxref("&lt;image&gt;")}}

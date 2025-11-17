@@ -28,7 +28,7 @@ When animated, values of the `<alpha-value>` CSS data type are {{Glossary("inter
 
 ### Setting text color opacity
 
-The [`rgb()`](/en-US/docs/Web/CSS/Reference/Values/color_value/rgb) function accepts a fourth optional value to specify an alpha value.
+The {{cssxref("rgb()")}} function accepts a fourth optional value to specify an alpha value.
 The following example shows how to apply a color with 60% opacity using the alpha value:
 
 ```css

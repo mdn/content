@@ -68,7 +68,7 @@ These {{cssxref("&lt;dimension&gt;")}} types are used to specify distance and ot
 - {{cssxref("&lt;length&gt;")}}
   - : Lengths are a `<dimension>` and refer to distances.
 - {{cssxref("&lt;angle&gt;")}}
-  - : Angles are used in properties such as {{cssxref("gradient/linear-gradient", "linear-gradient()")}} and are a `<dimension>` with one of `deg`, `grad`, `rad`, or `turn` units attached.
+  - : Angles are used in properties such as {{cssxref("linear-gradient()")}} and are a `<dimension>` with one of `deg`, `grad`, `rad`, or `turn` units attached.
 - {{cssxref("&lt;time&gt;")}}
   - : Duration units are a `<dimension>` with an `s` or `ms` unit.
 - {{cssxref("&lt;frequency&gt;")}}
