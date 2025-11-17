@@ -24,7 +24,7 @@ let removing = browser.browsingData.removeFormData(
 ### Parameters
 
 - `removalOptions`
-  - : `object`. A {{WebExtAPIRef("browsingData.RemovalOptions")}} object, which may be used to clear only form data entered after a given time, and controi whether to clear form data entered in web pages or web pages and extensions.
+  - : `object`. A {{WebExtAPIRef("browsingData.RemovalOptions")}} object, which may be used to clear only form data entered after a given time, and controls whether to clear form data entered in web pages or web pages and extensions.
 
 ### Return value
 

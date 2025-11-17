@@ -56,15 +56,15 @@ animation: 0.5s linear 1s infinite alternate slide-in;
 
 This property is a shorthand for the following CSS properties:
 
-- [`animation-delay`](/en-US/docs/Web/CSS/Reference/Properties/animation-delay)
-- [`animation-direction`](/en-US/docs/Web/CSS/Reference/Properties/animation-direction)
-- [`animation-duration`](/en-US/docs/Web/CSS/Reference/Properties/animation-duration)
-- [`animation-fill-mode`](/en-US/docs/Web/CSS/Reference/Properties/animation-fill-mode)
-- [`animation-iteration-count`](/en-US/docs/Web/CSS/Reference/Properties/animation-iteration-count)
-- [`animation-name`](/en-US/docs/Web/CSS/Reference/Properties/animation-name)
-- [`animation-play-state`](/en-US/docs/Web/CSS/Reference/Properties/animation-play-state)
-- [`animation-timeline`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline)
-- [`animation-timing-function`](/en-US/docs/Web/CSS/Reference/Properties/animation-timing-function)
+- {{cssxref("animation-delay")}}
+- {{cssxref("animation-direction")}}
+- {{cssxref("animation-duration")}}
+- {{cssxref("animation-fill-mode")}}
+- {{cssxref("animation-iteration-count")}}
+- {{cssxref("animation-name")}}
+- {{cssxref("animation-play-state")}}
+- {{cssxref("animation-timeline")}}
+- {{cssxref("animation-timing-function")}}
 
 ## Syntax
 
@@ -123,7 +123,7 @@ While an animation name must be set for an animation to be applied, all values o
 
 When the `animation-duration` value is omitted from the `animation` shorthand property, the value for this property defaults to `0s`. In this case, the animation will still occur (the [`animationStart`](/en-US/docs/Web/API/Element/animationstart_event) and [`animationEnd`](/en-US/docs/Web/API/Element/animationend_event) events will be fired) but no animation will be visible.
 
-In the case of the `animation-fill-mode` [forwards](/en-US/docs/Web/CSS/Reference/Properties/animation-fill-mode#forwards) value, animated properties behave as if included in a set [`will-change`](/en-US/docs/Web/CSS/Reference/Properties/will-change) property value. If a new stacking context is created during the animation, the target element retains the stacking context after the animation has finished.
+In the case of the `animation-fill-mode` [forwards](/en-US/docs/Web/CSS/Reference/Properties/animation-fill-mode#forwards) value, animated properties behave as if included in a set {{cssxref("will-change")}} property value. If a new stacking context is created during the animation, the target element retains the stacking context after the animation has finished.
 
 ## Accessibility
 

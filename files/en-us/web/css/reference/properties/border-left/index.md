@@ -48,22 +48,6 @@ border-left: 4mm ridge rgb(211 220 50 / 0.6);
 }
 ```
 
-As with all shorthand properties, `border-left` always sets the values of all of the properties that it can set, even if they are not specified. It sets those that are not specified to their default values. Consider the following code:
-
-```css
-border-left-style: dotted;
-border-left: thick green;
-```
-
-It is actually the same as this one:
-
-```css
-border-left-style: dotted;
-border-left: none thick green;
-```
-
-The value of {{cssxref("border-left-style")}} given before `border-left` is ignored. Since the default value of {{cssxref("border-left-style")}} is `none`, not specifying the `border-style` part results in no border.
-
 ## Constituent properties
 
 This property is a shorthand for the following CSS properties:
@@ -97,6 +81,24 @@ The three values of the shorthand property can be specified in any order, and on
   - : See {{cssxref("border-left-style")}}.
 - {{cssxref("&lt;color&gt;")}}
   - : See {{cssxref("border-left-color")}}.
+
+## Description
+
+As with all shorthand properties, `border-left` always sets the values of all of the properties that it can set, even if they are not specified. It sets those that are not specified to their default values. Consider the following code:
+
+```css
+border-left-style: dotted;
+border-left: thick green;
+```
+
+It is actually the same as this one:
+
+```css
+border-left-style: dotted;
+border-left: none thick green;
+```
+
+The value of {{cssxref("border-left-style")}} given before `border-left` is ignored. Since the default value of {{cssxref("border-left-style")}} is `none`, not specifying the `border-style` part results in no border.
 
 ## Formal definition
 

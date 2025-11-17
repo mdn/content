@@ -74,8 +74,8 @@ scroll-margin-block: 2em;
 
 This property is a shorthand for the following CSS properties:
 
-- [`scroll-margin-block-end`](/en-US/docs/Web/CSS/Reference/Properties/scroll-margin-block-end)
-- [`scroll-margin-block-start`](/en-US/docs/Web/CSS/Reference/Properties/scroll-margin-block-start)
+- {{cssxref("scroll-margin-block-end")}}
+- {{cssxref("scroll-margin-block-start")}}
 
 ## Syntax
 

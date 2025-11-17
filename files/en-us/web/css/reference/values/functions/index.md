@@ -223,7 +223,7 @@ The {{CSSxRef("&lt;image&gt;")}} CSS [data type](/en-US/docs/Web/CSS/Reference/V
   - : Linear gradients transition colors progressively along an imaginary line.
 - {{CSSxRef("gradient/radial-gradient","radial-gradient()")}}
   - : Radial gradients transition colors progressively from a center point (origin).
-- {{CSSxRef("gradient/conic-gradient", "conic-gradient()")}}
+- {{cssxref("conic-gradient()")}}
   - : Conic gradients transition colors progressively around a circle.
 - {{CSSxRef("gradient/repeating-linear-gradient","repeating-linear-gradient()")}}
   - : Is similar to `linear-gradient()` and takes the same arguments, but it repeats the color stops infinitely in all directions so as to cover its entire container.
@@ -386,7 +386,7 @@ The following functions return an integer value based on the DOM tree, rather th
 - {{cssxref("clamp")}}
 - {{cssxref("color_value/color", "color()")}}
 - {{cssxref("color_value/color-mix", "color-mix()")}}
-- {{cssxref("gradient/conic-gradient", "conic-gradient()")}}
+- {{cssxref("conic-gradient()")}}
 - {{cssxref("filter-function/contrast", "contrast()")}}
 - {{cssxref("color_value/contrast-color", "contrast-color()")}} {{experimental_inline}}
 - {{cssxref("cos")}}
@@ -417,7 +417,7 @@ The following functions return an integer value based on the DOM tree, rather th
 - {{cssxref("color_value/lch", "lch()")}}
 - {{cssxref("color_value/light-dark", "light-dark()")}}
 - {{cssxref("easing-function/linear", "linear()")}}
-- {{cssxref("gradient/linear-gradient", "linear-gradient()")}}
+- {{cssxref("linear-gradient()")}}
 - {{cssxref("log")}}
 - {{cssxref("transform-function/matrix", "matrix()")}}
 - {{cssxref("transform-function/matrix3d", "matrix3d()")}}
@@ -440,22 +440,22 @@ The following functions return an integer value based on the DOM tree, rather th
 - {{cssxref("basic-shape/rect", "rect()")}}
 - {{cssxref("rem")}}
 - {{cssxref("repeat")}}
-- {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
-- {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}
+- {{cssxref("repeating-conic-gradient()")}}
+- {{cssxref("repeating-linear-gradient()")}}
 - {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
 - {{cssxref("color_value/rgb", "rgb()")}}
 - {{cssxref("transform-function/rotate", "rotate()")}}
 - {{cssxref("transform-function/rotate3d", "rotate3d()")}}
-- {{cssxref("transform-function/rotatex", "rotatex()")}}
-- {{cssxref("transform-function/rotatey", "rotatey()")}}
-- {{cssxref("transform-function/rotatez", "rotatez()")}}
+- {{cssxref("transform-function/rotateX", "rotateX()")}}
+- {{cssxref("transform-function/rotateY", "rotateY()")}}
+- {{cssxref("transform-function/rotateZ", "rotateZ()")}}
 - {{cssxref("round")}}
 - {{cssxref("filter-function/saturate", "saturate()")}}
 - {{cssxref("transform-function/scale", "scale()")}}
 - {{cssxref("transform-function/scale3d", "scale3d()")}}
-- {{cssxref("transform-function/scalex", "scalex()")}}
-- {{cssxref("transform-function/scaley", "scaley()")}}
-- {{cssxref("transform-function/scalez", "scalez()")}}
+- {{cssxref("transform-function/scaleX", "scaleX()")}}
+- {{cssxref("transform-function/scaleY", "scaleY()")}}
+- {{cssxref("transform-function/scaleZ", "scaleZ()")}}
 - {{cssxref("animation-timeline/scroll", "scroll()")}}
 - {{cssxref("filter-function/sepia", "sepia()")}}
 - {{cssxref("basic-shape/shape", "shape()")}}
@@ -473,9 +473,9 @@ The following functions return an integer value based on the DOM tree, rather th
 - {{cssxref("tan")}}
 - {{cssxref("transform-function/translate", "translate()")}}
 - {{cssxref("transform-function/translate3d", "translate3d()")}}
-- {{cssxref("transform-function/translatex", "translatex()")}}
-- {{cssxref("transform-function/translatey", "translatey()")}}
-- {{cssxref("transform-function/translatez", "translatez()")}}
+- {{cssxref("transform-function/translateX", "translateX()")}}
+- {{cssxref("transform-function/translateY", "translateY()")}}
+- {{cssxref("transform-function/translateZ", "translateZ()")}}
 - {{cssxref("type")}} {{experimental_inline}}
 - {{cssxref("url_function")}}
 - {{cssxref("var")}}

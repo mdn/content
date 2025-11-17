@@ -53,9 +53,9 @@ writing-mode: vertical-lr;
 
 This property is a shorthand for the following CSS properties:
 
-- [`border-block-start-color`](/en-US/docs/Web/CSS/Reference/Properties/border-block-start-color)
-- [`border-block-start-style`](/en-US/docs/Web/CSS/Reference/Properties/border-block-start-style)
-- [`border-block-start-width`](/en-US/docs/Web/CSS/Reference/Properties/border-block-start-width)
+- {{cssxref("border-block-start-color")}}
+- {{cssxref("border-block-start-style")}}
+- {{cssxref("border-block-start-width")}}
 
 ## Syntax
 

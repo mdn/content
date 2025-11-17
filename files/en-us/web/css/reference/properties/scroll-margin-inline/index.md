@@ -81,8 +81,8 @@ scroll-margin-inline: 0px 3em;
 
 This property is a shorthand for the following CSS properties:
 
-- [`scroll-margin-inline-end`](/en-US/docs/Web/CSS/Reference/Properties/scroll-margin-inline-end)
-- [`scroll-margin-inline-start`](/en-US/docs/Web/CSS/Reference/Properties/scroll-margin-inline-start)
+- {{cssxref("scroll-margin-inline-end")}}
+- {{cssxref("scroll-margin-inline-start")}}
 
 ## Syntax
 

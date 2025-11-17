@@ -57,7 +57,7 @@ match(request, options)
 
 ### Return value
 
-a {{jsxref("Promise")}} that resolves to the matching {{domxref("Response")}}. If
+A {{jsxref("Promise")}} that resolves to the matching {{domxref("Response")}}. If
 no matching response to the specified request is found, the promise resolves
 with `undefined`.
 

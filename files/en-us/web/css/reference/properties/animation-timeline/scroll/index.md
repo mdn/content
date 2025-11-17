@@ -151,4 +151,4 @@ Scroll to see the square element being animated.
 
 - [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations)
 - [Using CSS animations](/en-US/docs/Web/CSS/Guides/Animations/Using)
-- [`animation-timeline`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline)
+- {{cssxref("animation-timeline")}}

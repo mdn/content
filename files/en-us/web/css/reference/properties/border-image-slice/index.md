@@ -51,18 +51,6 @@ border-image-width: 30px 48px;
 }
 ```
 
-The slicing process creates nine regions in total: four corners, four edges, and a middle region. Four slice lines, set a given distance from their respective sides, control the size of the regions.
-
-![The nine regions defined by the border-image or border-image-slice properties](border-image-slice.png)
-
-The above diagram illustrates the location of each region.
-
-- Zones 1-4 are corner regions. Each one is used a single time to form the corners of the final border image.
-- Zones 5-8 are edge regions. These are [repeated, scaled, or otherwise modified](/en-US/docs/Web/CSS/Reference/Properties/border-image-repeat) in the final border image to match the dimensions of the element.
-- Zone 9 is the middle region. It is discarded by default, but is used like a background image if the keyword `fill` is set.
-
-The {{cssxref("border-image-repeat")}}, {{cssxref("border-image-width")}}, and {{cssxref("border-image-outset")}} properties determine how these regions are used to form the final border image.
-
 ## Syntax
 
 ```css
@@ -108,6 +96,20 @@ The optional `fill` value, if used, can be placed anywhere in the declaration.
 - `fill`
   - : Preserves the middle image region and displays it like a background image, but stacked above the actual {{cssxref("background")}}. Its width and height are sized to match the top and left image regions, respectively.
 
+## Description
+
+The slicing process creates nine regions in total: four corners, four edges, and a middle region. Four slice lines, set a given distance from their respective sides, control the size of the regions.
+
+![The nine regions defined by the border-image or border-image-slice properties](border-image-slice.png)
+
+The above diagram illustrates the location of each region.
+
+- Zones 1-4 are corner regions. Each one is used a single time to form the corners of the final border image.
+- Zones 5-8 are edge regions. These are [repeated, scaled, or otherwise modified](/en-US/docs/Web/CSS/Reference/Properties/border-image-repeat) in the final border image to match the dimensions of the element.
+- Zone 9 is the middle region. It is discarded by default, but is used like a background image if the keyword `fill` is set.
+
+The {{cssxref("border-image-repeat")}}, {{cssxref("border-image-width")}}, and {{cssxref("border-image-outset")}} properties determine how these regions are used to form the final border image.
+
 ## Formal definition
 
 {{CSSInfo}}
@@ -124,7 +126,7 @@ The following example shows a `<div>` with a border image set on it. The source 
 
 ![nice multi-colored diamonds](border-diamonds.png)
 
-The diamonds are 30px across, so setting 30 pixels as the value for both [`border-width`](/en-US/docs/Web/CSS/Reference/Properties/border-width) and `border-image-slice` will get you complete and fairly crisp diamonds in your border:
+The diamonds are 30px across, so setting 30 pixels as the value for both {{cssxref("border-width")}} and `border-image-slice` will get you complete and fairly crisp diamonds in your border:
 
 ```css
 border-width: 30px;

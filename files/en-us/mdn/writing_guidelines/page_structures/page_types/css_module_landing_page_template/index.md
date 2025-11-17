@@ -18,7 +18,7 @@ sidebar: mdnsidebar
 > ```md
 > ---
 > title: CSS NameOfTheModule
-> slug: Web/CSS/CSS_NameOfTheModule
+> slug: Web/CSS/Guides/NameOfTheModule
 > page-type: css-module
 > spec-urls:
 >   - url1
@@ -33,8 +33,8 @@ sidebar: mdnsidebar
 >     For example, the title for the [grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout) module landing page is _CSS grid layout_.
 > - **slug**
 >   - : The `slug` value is the end of the URL path after `https://developer.mozilla.org/en-US/docs/`.
->     This will be formatted as `Web/CSS/CSS_NameOfTheModule`.
->     For example, the slug for the [grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout) module landing page is `Web/CSS/CSS_grid_layout`.
+>     This will be formatted as `Web/CSS/Guides/NameOfTheModule`.
+>     For example, the slug for the [grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout) module landing page is `Web/CSS/Guides/Grid_layout`.
 > - **page-type**
 >   - : The `page-type` value for CSS module landing pages is always `css-module`.
 > - **spec-urls**

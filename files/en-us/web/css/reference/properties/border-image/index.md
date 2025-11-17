@@ -8,6 +8,9 @@ sidebar: cssref
 
 The **`border-image`** [CSS](/en-US/docs/Web/CSS) property draws an image around a given element. It replaces the element's regular [border](/en-US/docs/Web/CSS/Reference/Properties/border).
 
+> [!NOTE]
+> You should specify a separate {{cssxref("border-style")}} in case the border image fails to load. Although the specification doesn't strictly require it, some browsers don't render the border image if {{cssxref("border-style")}} is `none` or {{cssxref("border-width")}} is `0`.
+
 {{InteractiveExample("CSS Demo: border-image")}}
 
 ```css interactive-example-choice
@@ -56,18 +59,15 @@ border-image: repeating-linear-gradient(30deg, #4d9f0c, #9198e5, #4d9f0c 20px)
 }
 ```
 
-> [!NOTE]
-> You should specify a separate {{cssxref("border-style")}} in case the border image fails to load. Although the specification doesn't strictly require it, some browsers don't render the border image if {{cssxref("border-style")}} is `none` or {{cssxref("border-width")}} is `0`.
-
 ## Constituent properties
 
 This property is a shorthand for the following CSS properties:
 
-- [`border-image-outset`](/en-US/docs/Web/CSS/Reference/Properties/border-image-outset)
-- [`border-image-repeat`](/en-US/docs/Web/CSS/Reference/Properties/border-image-repeat)
-- [`border-image-slice`](/en-US/docs/Web/CSS/Reference/Properties/border-image-slice)
-- [`border-image-source`](/en-US/docs/Web/CSS/Reference/Properties/border-image-source)
-- [`border-image-width`](/en-US/docs/Web/CSS/Reference/Properties/border-image-width)
+- {{cssxref("border-image-outset")}}
+- {{cssxref("border-image-repeat")}}
+- {{cssxref("border-image-slice")}}
+- {{cssxref("border-image-source")}}
+- {{cssxref("border-image-width")}}
 
 ## Syntax
 
@@ -238,5 +238,5 @@ To match the size of a single diamond, we will use a value of 81 divided by 3, o
 - {{cssxref("box-shadow")}}
 - {{cssxref("background-image")}}
 - {{cssxref("url_value", "&lt;url&gt;")}} type
-- Gradient functions: {{CSSxRef("gradient/conic-gradient", "conic-gradient()")}}, {{CSSxRef("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}, {{CSSxRef("gradient/linear-gradient", "linear-gradient()")}}, {{CSSxRef("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{CSSxRef("gradient/radial-gradient", "radial-gradient()")}}, {{CSSxRef("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
+- Gradient functions: {{cssxref("conic-gradient()")}}, {{cssxref("repeating-conic-gradient()")}}, {{cssxref("linear-gradient()")}}, {{cssxref("repeating-linear-gradient()")}}, {{CSSxRef("gradient/radial-gradient", "radial-gradient()")}}, {{CSSxRef("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
 - [Border images in CSS: A key focus area for Interop 2023](/en-US/blog/border-images-interop-2023/) on MDN blog (2023)
