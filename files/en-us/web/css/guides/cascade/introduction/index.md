@@ -39,7 +39,7 @@ In most browsers, the user (or reader) of the website can choose to override sty
 
 ### Cascade layers
 
-The cascade order is based on origin type. The cascade within each origin type is based on the declaration order of [cascade layers](/en-US/docs/Web/CSS/Reference/At-rules/@layer) within that type. For all origins - user-agent, author, or user - styles can be declared within or outside of named or anonymous layers. When declared using [`layer`, `layer()`](/en-US/docs/Web/CSS/Reference/At-rules/@import) or [`@layer`](/en-US/docs/Web/CSS/Reference/At-rules/@layer), styles are placed into the specified named layer, or into an anonymous layer if no name is provided. Styles declared outside of a layer are treated as being part of an anonymous last declared layer.
+The cascade order is based on origin type. The cascade within each origin type is based on the declaration order of {{cssxref("@layer", "cascade layers")}} within that type. For all origins - user-agent, author, or user - styles can be declared within or outside of named or anonymous layers. When declared using [`layer`, `layer()`](/en-US/docs/Web/CSS/Reference/At-rules/@import) or {{cssxref("@layer")}}, styles are placed into the specified named layer, or into an anonymous layer if no name is provided. Styles declared outside of a layer are treated as being part of an anonymous last declared layer.
 
 Let's take a look at cascading origin type before diving into cascade layers within each origin type.
 
@@ -353,7 +353,7 @@ Finally, {{cssxref("@charset")}} obeys specific algorithms and isn't affected by
 
 Presentational attributes are attributes in the source document that can affect styling. For example, when included, the deprecated `align` attribute sets the alignment on several HTML elements and the `fill` attribute defines the color used to paint SVG shapes and text and defines the final state for SVG animations. While they are author styles, presentational attributes do not participate in the cascade.
 
-If the HTML presentation attribute is supported by the user agent, valid presentational attributes included in HTML and SVG, such as the [`align`](/en-US/docs/Web/HTML/Reference/Elements/img#align) or [`fill`](/en-US/docs/Web/SVG/Reference/Attribute/fill) attributes, are translated to the corresponding CSS rules (all SVG presentation attributes are supported as CSS properties) and inserted in the author stylesheet prior to any other styles with a specificity equal to `0`.
+If the HTML presentation attribute is supported by the user agent, valid presentational attributes included in HTML and SVG, such as the [`align`](/en-US/docs/Web/HTML/Reference/Elements/img#align) or {{svgattr("fill")}} attributes, are translated to the corresponding CSS rules (all SVG presentation attributes are supported as CSS properties) and inserted in the author stylesheet prior to any other styles with a specificity equal to `0`.
 
 Presentational attributes cannot be declared `!important`.
 
