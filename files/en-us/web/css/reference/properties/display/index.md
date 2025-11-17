@@ -318,13 +318,13 @@ There is one exception, which is when animating to or from `display: none`. In t
 - When animating `display` from `none` to `block` (or another visible `display` value), the value will flip to `block` at `0%` of the animation duration so it is visible throughout.
 - When animating `display` from `block` (or another visible `display` value) to `none`, the value will flip to `none` at `100%` of the animation duration so it is visible throughout.
 
-This behavior is useful for creating entry/exit animations where you want to for example remove a container from the DOM with `display: none`, but have it fade out with [`opacity`](/en-US/docs/Web/CSS/Reference/Properties/opacity) rather than disappearing immediately.
+This behavior is useful for creating entry/exit animations where you want to for example remove a container from the DOM with `display: none`, but have it fade out with {{cssxref("opacity")}} rather than disappearing immediately.
 
 When animating `display` with [CSS animations](/en-US/docs/Web/CSS/Guides/Animations), you need to provide the starting `display` value in an explicit keyframe (for example using `0%` or `from`). See [Using CSS animations](/en-US/docs/Web/CSS/Guides/Animations/Using) for an example.
 
 When animating `display` with [CSS transitions](/en-US/docs/Web/CSS/Guides/Transitions), two additional features are needed:
 
-- [`@starting-style`](/en-US/docs/Web/CSS/Reference/At-rules/@starting-style) provides starting values for properties you want to transition from when the animated element is first shown. This is needed to avoid unexpected behavior. By default, CSS transitions are not triggered on an element's first style update or when the `display` type changes from `none` to another type.
+- {{cssxref("@starting-style")}} provides starting values for properties you want to transition from when the animated element is first shown. This is needed to avoid unexpected behavior. By default, CSS transitions are not triggered on an element's first style update or when the `display` type changes from `none` to another type.
 - [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/Reference/Properties/transition-behavior) needs to be set on the {{cssxref("transition-property")}} declaration (or the {{cssxref("transition")}} shorthand) to enable `display` transitions.
 
 For examples of transitioning the `display` property, see the [`@starting-style`](/en-US/docs/Web/CSS/Reference/At-rules/@starting-style#examples) and [`transition-behavior`](/en-US/docs/Web/CSS/Reference/Properties/transition-behavior#examples) pages.
