@@ -376,7 +376,7 @@ When generating content on regular elements (rather than just on pseudo-elements
 
 ### Element replacement with `<gradient>`
 
-This example demonstrates how an element's contents can be replaced by any type of `<image>`, in this case, a CSS gradient. The element's contents are replaced with a {{cssxref("gradient/linear-gradient", "linear-gradient()")}}. We provide alt text because all images should be described for accessibility.
+This example demonstrates how an element's contents can be replaced by any type of `<image>`, in this case, a CSS gradient. The element's contents are replaced with a {{cssxref("linear-gradient()")}}. We provide alt text because all images should be described for accessibility.
 
 #### HTML
 
