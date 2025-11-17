@@ -138,7 +138,7 @@ Based on the intrinsic dimensions and proportions, the rendered size of the back
   - If the image has only one intrinsic dimension but has no intrinsic proportions, it's rendered using the specified dimension and the other dimension of the background positioning area.
 
   > [!NOTE]
-  > SVG images have a [`preserveAspectRatio`](/en-US/docs/Web/SVG/Reference/Attribute/preserveAspectRatio) attribute that defaults to the equivalent of `contain`; an explicit `background-size` causes `preserveAspectRatio` to be ignored.
+  > SVG images have a {{svgattr("preserveAspectRatio")}} attribute that defaults to the equivalent of `contain`; an explicit `background-size` causes `preserveAspectRatio` to be ignored.
 
 - **If the `background-size` has one `auto` component and one non-`auto` component:**
   - If the image has intrinsic proportions, it's stretched to the specified dimension.
