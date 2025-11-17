@@ -16,7 +16,7 @@ In this challenge, we provide you with some data on the planets in our solar sys
 2. Save the following HTML listing inside a file inside your folder called `index.html` (or paste it into your online editor's HTML pane).
 
    ```html
-   <!DOCTYPE html>
+   <!doctype html>
    <html lang="en-US">
      <head>
        <meta charset="utf-8" />

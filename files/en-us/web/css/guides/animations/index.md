@@ -40,7 +40,7 @@ i {
   width: 16px;
   border-radius: 50%;
   animation: falling 3s linear 0s infinite backwards;
-  /* Snowflakes are made with CSS linear gradients (https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients) */
+  /* Snowflakes are made with CSS linear gradients (https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Images/Using_gradients) */
   background-image:
     linear-gradient(180deg, transparent 40%, white 40% 60%, transparent 60%),
     linear-gradient(90deg, transparent 40%, white 40% 60%, transparent 60%),
@@ -48,7 +48,7 @@ i {
     linear-gradient(135deg, transparent 43%, white 43% 57%, transparent 57%);
 }
 i:nth-of-type(4n) {
-  /* Using tree structural pseudo-classes to create randomness - https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-of-type */
+  /* Using tree structural pseudo-classes to create randomness - https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:nth-of-type */
   height: 30px;
   width: 30px;
   transform-origin: right -30px;

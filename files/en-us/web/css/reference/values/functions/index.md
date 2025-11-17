@@ -446,16 +446,16 @@ The following functions return an integer value based on the DOM tree, rather th
 - {{cssxref("color_value/rgb", "rgb()")}}
 - {{cssxref("transform-function/rotate", "rotate()")}}
 - {{cssxref("transform-function/rotate3d", "rotate3d()")}}
-- {{cssxref("transform-function/rotatex", "rotatex()")}}
-- {{cssxref("transform-function/rotatey", "rotatey()")}}
-- {{cssxref("transform-function/rotatez", "rotatez()")}}
+- {{cssxref("transform-function/rotateX", "rotateX()")}}
+- {{cssxref("transform-function/rotateY", "rotateY()")}}
+- {{cssxref("transform-function/rotateZ", "rotateZ()")}}
 - {{cssxref("round")}}
 - {{cssxref("filter-function/saturate", "saturate()")}}
 - {{cssxref("transform-function/scale", "scale()")}}
 - {{cssxref("transform-function/scale3d", "scale3d()")}}
-- {{cssxref("transform-function/scalex", "scalex()")}}
-- {{cssxref("transform-function/scaley", "scaley()")}}
-- {{cssxref("transform-function/scalez", "scalez()")}}
+- {{cssxref("transform-function/scaleX", "scaleX()")}}
+- {{cssxref("transform-function/scaleY", "scaleY()")}}
+- {{cssxref("transform-function/scaleZ", "scaleZ()")}}
 - {{cssxref("animation-timeline/scroll", "scroll()")}}
 - {{cssxref("filter-function/sepia", "sepia()")}}
 - {{cssxref("basic-shape/shape", "shape()")}}
@@ -473,9 +473,9 @@ The following functions return an integer value based on the DOM tree, rather th
 - {{cssxref("tan")}}
 - {{cssxref("transform-function/translate", "translate()")}}
 - {{cssxref("transform-function/translate3d", "translate3d()")}}
-- {{cssxref("transform-function/translatex", "translatex()")}}
-- {{cssxref("transform-function/translatey", "translatey()")}}
-- {{cssxref("transform-function/translatez", "translatez()")}}
+- {{cssxref("transform-function/translateX", "translateX()")}}
+- {{cssxref("transform-function/translateY", "translateY()")}}
+- {{cssxref("transform-function/translateZ", "translateZ()")}}
 - {{cssxref("type")}} {{experimental_inline}}
 - {{cssxref("url_function")}}
 - {{cssxref("var")}}

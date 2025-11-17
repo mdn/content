@@ -26,7 +26,7 @@ delete(cacheName)
 
 ### Return value
 
-a {{jsxref("Promise")}} that resolves to `true` if the {{domxref("Cache")}}
+A {{jsxref("Promise")}} that resolves to `true` if the {{domxref("Cache")}}
 object is found and deleted, and `false` otherwise.
 
 ## Examples
