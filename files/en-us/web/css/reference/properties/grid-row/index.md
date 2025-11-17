@@ -61,8 +61,8 @@ grid-row: 1 / span 2;
 
 This property is a shorthand for the following CSS properties:
 
-- [`grid-row-end`](/en-US/docs/Web/CSS/Reference/Properties/grid-row-end)
-- [`grid-row-start`](/en-US/docs/Web/CSS/Reference/Properties/grid-row-start)
+- {{cssxref("grid-row-end")}}
+- {{cssxref("grid-row-start")}}
 
 ## Syntax
 
