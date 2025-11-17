@@ -164,12 +164,12 @@ div {
 
 - {{HTMLElement("img")}}
 - Image-related functions:
-  - {{cssxref("gradient/linear-gradient", "linear-gradient()")}}
+  - {{cssxref("linear-gradient()")}}
   - {{cssxref("gradient/radial-gradient", "radial-gradient()")}}
-  - {{cssxref("gradient/conic-gradient", "conic-gradient()")}}
-  - {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}
+  - {{cssxref("conic-gradient()")}}
+  - {{cssxref("repeating-linear-gradient()")}}
   - {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
-  - {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
+  - {{cssxref("repeating-conic-gradient()")}}
   - {{cssxref("url_value", "&lt;url&gt;")}}
 - [Using CSS gradients](/en-US/docs/Web/CSS/Guides/Images/Using_gradients)
 - [Implementing image sprites in CSS](/en-US/docs/Web/CSS/Guides/Images/Implementing_image_sprites)
