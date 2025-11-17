@@ -33,7 +33,7 @@ When applying CSS {{cssxref("@keyframes")}} animations to element using [CSS ani
 
 When animating based on view progress timelines, progression of the animation along the timelines is based on visibility of the element, or _subject_. The `view-timeline-axis` property is set on the subject.
 
-The subject must be nested inside a _scroller_, a scrollable element. If the scroller element does not overflow its container in the axis dimension or if the overflow is hidden or clipped, no scroll progress timeline will be created.
+The subject must be nested inside a scrollable element. If the scrollable element does not overflow its container in the axis dimension or if the overflow is hidden or clipped, no scroll progress timeline will be created.
 
 The `view-timeline-axis`, along with the {{cssxref("view-timeline-inset")}} and {{cssxref("view-timeline-name")}} properties are components of the {{cssxref("view-timeline")}} shorthand property.
 
