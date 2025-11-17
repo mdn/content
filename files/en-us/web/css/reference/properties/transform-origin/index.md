@@ -112,7 +112,7 @@ function update() {
   const selected = document.querySelector(".selected");
 
   /* Restart the animation
-           https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Tips */
+           https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Tips */
   el.className = "";
   window.requestAnimationFrame(() => {
     window.requestAnimationFrame(() => {
