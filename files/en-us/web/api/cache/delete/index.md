@@ -46,7 +46,7 @@ delete(request, options)
 
 ### Return value
 
-a {{jsxref("Promise")}} that resolves to `true` if the cache entry is
+A {{jsxref("Promise")}} that resolves to `true` if the cache entry is
 deleted, or `false` otherwise.
 
 ## Examples
