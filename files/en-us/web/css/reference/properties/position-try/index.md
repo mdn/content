@@ -169,7 +169,7 @@ The element appears below its anchor, even though it is initially positioned abo
 - {{cssxref("position-try-fallbacks")}}
 - {{cssxref("position-try-order")}}
 - The {{cssxref("@position-try")}} at-rule
-- The [`<position-area>`](/en-US/docs/Web/CSS/Reference/Values/position-area_value) value
+- The {{cssxref("&lt;position-area&gt;")}} value
 - [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) module
 - [Using CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using) guide
 - [Fallback options and conditional hiding for overflow](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding) guide
