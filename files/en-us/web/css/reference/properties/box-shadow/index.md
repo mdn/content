@@ -50,10 +50,6 @@ box-shadow:
 }
 ```
 
-The `box-shadow` property enables you to cast a drop shadow from the frame of almost any element. If a {{cssxref("border-radius")}} is specified on the element with a box shadow, the box shadow takes on the same rounded corners. The z-ordering of multiple box shadows is the same as multiple [text shadows](/en-US/docs/Web/CSS/Reference/Properties/text-shadow) (the first specified shadow is on top).
-
-[Box-shadow generator](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Box-shadow_generator) is an interactive tool allowing you to generate a `box-shadow`.
-
 ## Syntax
 
 ```css
@@ -125,6 +121,12 @@ To specify multiple shadows, provide a comma-separated list of shadows.
 When animating shadows, such as when multiple shadow values on a box transition to new values on hover, the values are interpolated. {{Glossary("Interpolation")}} determines intermediate values of properties, such as the blur radius, spread radius, and color, as shadows transition. For each shadow in a list of shadows, the color, x, y, blur, and spread transition; the color as {{cssxref("&lt;color&gt;")}}, and the other values as {{cssxref("length")}}s.
 
 In interpolating multiple shadows between two comma-separated lists of multiple box shadows, the shadows are paired, in order, with interpolation occurring between paired shadows. If the lists of shadows have different lengths, then the shorter list is padded at the end with shadows whose color is `transparent`, and X, Y, and blur are `0`, with the inset, or lack of inset, being set to match. If in any pair of shadows, one has `inset` set and the other does not, the entire shadow list is uninterpolated; the shadows will change to the new values without an animating effect.
+
+## Description
+
+The `box-shadow` property enables you to cast a drop shadow from the frame of almost any element. If a {{cssxref("border-radius")}} is specified on the element with a box shadow, the box shadow takes on the same rounded corners. The z-ordering of multiple box shadows is the same as multiple [text shadows](/en-US/docs/Web/CSS/Reference/Properties/text-shadow) (the first specified shadow is on top).
+
+[Box-shadow generator](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Box-shadow_generator) is an interactive tool allowing you to generate a `box-shadow`.
 
 ## Formal definition
 
