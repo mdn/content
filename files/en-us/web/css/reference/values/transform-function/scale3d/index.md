@@ -226,7 +226,7 @@ div {
 - {{cssxref("&lt;transform-function&gt;")}}
 - [`scaleZ()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/scaleZ)
 - [`translate3d()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/translate3d)
-- [`rotate3d()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/rotate3d)
+- {{cssxref("rotate3d()")}}
 - Individual transform properties:
   - {{cssxref("translate")}}
   - {{cssxref("scale")}}

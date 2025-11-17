@@ -26,15 +26,15 @@ The `<transform-function>` data type is specified using one of the transformatio
 
 ### Rotation
 
-- [`rotate()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/rotate)
+- {{cssxref("rotate()")}}
   - : Rotates an element around a fixed point on the 2D plane.
-- [`rotate3d()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/rotate3d)
+- {{cssxref("rotate3d()")}}
   - : Rotates an element around a fixed axis in 3D space.
-- [`rotateX()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/rotateX)
+- {{cssxref("rotateX()")}}
   - : Rotates an element around the horizontal axis.
-- [`rotateY()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/rotateY)
+- {{cssxref("rotateY()")}}
   - : Rotates an element around the vertical axis.
-- [`rotateZ()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/rotateZ)
+- {{cssxref("rotateZ()")}}
   - : Rotates an element around the z-axis.
 
 ### Scaling (resizing)
