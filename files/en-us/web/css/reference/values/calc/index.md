@@ -119,7 +119,7 @@ For a full explanation of typed arithmetic in CSS, along with examples, see [Usi
 
 ### Support for computing color channels in relative colors
 
-The `calc()` function can be used to manipulate color channels directly within the context of [relative colors](/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors). This allows for dynamic adjustments of color channels in color models such as {{cssxref("rgb()")}}, {{cssxref("hsl()")}}, and [`lch()`](/en-US/docs/Web/CSS/Reference/Values/color_value/lch).
+The `calc()` function can be used to manipulate color channels directly within the context of [relative colors](/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors). This allows for dynamic adjustments of color channels in color models such as {{cssxref("rgb()")}}, {{cssxref("hsl()")}}, and {{cssxref("lch()")}}.
 
 The relative color syntax defines several color-channel keywords, each of which represents the value of the color channel as a {{cssxref("&lt;number&gt;")}} (see [Channel values resolve to `<number>` values](/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors#channel_values_resolve_to_number_values) for more information). The `calc()` function can use these color-channel keywords to perform dynamic adjustments on the color channels, for example, `calc(r + 10)`.
 

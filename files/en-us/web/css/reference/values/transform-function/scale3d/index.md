@@ -224,8 +224,8 @@ div {
 
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
-- [`scaleZ()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/scaleZ)
-- [`translate3d()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/translate3d)
+- {{cssxref("scaleZ()")}}
+- {{cssxref("translate3d()")}}
 - {{cssxref("rotate3d()")}}
 - Individual transform properties:
   - {{cssxref("translate")}}

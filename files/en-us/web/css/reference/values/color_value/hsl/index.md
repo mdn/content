@@ -398,7 +398,7 @@ div.legacyHSLA {
 ## See also
 
 - {{CSSXref("&lt;hue&gt;")}} data type
-- [`lch()`](/en-US/docs/Web/CSS/Reference/Values/color_value/lch) and [`hwb()`](/en-US/docs/Web/CSS/Reference/Values/color_value/hwb) color functions
+- {{cssxref("lch()")}} and {{cssxref("hwb()")}} color functions
 - [Hue interpolation in `color-mix()`](/en-US/docs/Web/CSS/Reference/Values/color_value/color-mix#using_hue_interpolation_in_color-mix)
 - [List of all color notations](/en-US/docs/Web/CSS/Reference/Values/color_value)
 - [Color format converter tool](/en-US/docs/Web/CSS/Guides/Colors/Color_format_converter)

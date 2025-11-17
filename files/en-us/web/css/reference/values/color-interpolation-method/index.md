@@ -7,7 +7,7 @@ spec-urls: https://drafts.csswg.org/css-color/#interpolation-space
 sidebar: cssref
 ---
 
-The **`<color-interpolation-method>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types) represents the [color space](/en-US/docs/Glossary/Color_space) used for interpolation between {{CSSXref("&lt;color&gt;")}} values. It can be used to override the default interpolation color space for color-related functional notations such as {{CSSXref("color_value/color-mix", "color-mix()")}} and {{cssxref("linear-gradient()")}}.
+The **`<color-interpolation-method>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types) represents the {{glossary("color space")}} used for interpolation between {{CSSXref("&lt;color&gt;")}} values. It can be used to override the default interpolation color space for color-related functional notations such as {{CSSXref("color_value/color-mix", "color-mix()")}} and {{cssxref("linear-gradient()")}}.
 
 When interpolating `<color>` values, the interpolation color space defaults to Oklab.
 

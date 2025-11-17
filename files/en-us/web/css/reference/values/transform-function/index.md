@@ -39,15 +39,15 @@ The `<transform-function>` data type is specified using one of the transformatio
 
 ### Scaling (resizing)
 
-- [`scale()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/scale)
+- {{cssxref("scale()")}}
   - : Scales an element up or down on the 2D plane.
 - [`scale3d()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/scale3d)
   - : Scales an element up or down in 3D space.
-- [`scaleX()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/scaleX)
+- {{cssxref("scaleX()")}}
   - : Scales an element up or down horizontally.
-- [`scaleY()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/scaleY)
+- {{cssxref("scaleY()")}}
   - : Scales an element up or down vertically.
-- [`scaleZ()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/scaleZ)
+- {{cssxref("scaleZ()")}}
   - : Scales an element up or down along the z-axis.
 
 ### Skewing (distortion)
@@ -63,13 +63,13 @@ The `<transform-function>` data type is specified using one of the transformatio
 
 - [`translate()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/translate)
   - : Translates an element on the 2D plane.
-- [`translate3d()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/translate3d)
+- {{cssxref("translate3d()")}}
   - : Translates an element in 3D space.
-- [`translateX()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/translateX)
+- {{cssxref("translateX()")}}
   - : Translates an element horizontally.
-- [`translateY()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/translateY)
+- {{cssxref("translateY()")}}
   - : Translates an element vertically.
-- [`translateZ()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/translateZ)
+- {{cssxref("translateZ()")}}
   - : Translates an element along the z-axis.
 
 ## Description
