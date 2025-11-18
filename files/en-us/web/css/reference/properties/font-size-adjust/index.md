@@ -66,7 +66,7 @@ The `font-size-adjust` property takes as its value the keyword `none`, one (`<nu
 To ensure compatibility with browsers that don't support `font-size-adjust`, this property is specified as a numeric multiplier of the {{cssxref("font-size")}} property. This number should generally match the aspect value of the first-choice font.
 
 > [!NOTE]
-> If the specified `<font-metric>` has been overridden in {{cssxref("@font-face")}}, e.g., by using the [`size-adjust`](/en-US/docs/Web/CSS/Reference/At-rules/@font-face/size-adjust) descriptor, then the overridden metric will be used in the `font-size-adjust` calculation. This means that when `font-size-adjust` and `size-adjust` are applied together, `size-adjust` does not have any effect.
+> If the specified `<font-metric>` has been overridden in [`@font-face`](/en-US/docs/Web/CSS/Reference/At-rules/@font-face), e.g., by using the [`size-adjust`](/en-US/docs/Web/CSS/Reference/At-rules/@font-face/size-adjust) descriptor, then the overridden metric will be used in the `font-size-adjust` calculation. This means that when `font-size-adjust` and `size-adjust` are applied together, `size-adjust` does not have any effect.
 
 The adjusted font size is calculated using the formula `u  =  ( m / m′ ) s`, where:
 

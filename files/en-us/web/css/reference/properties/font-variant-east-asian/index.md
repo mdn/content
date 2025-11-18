@@ -173,10 +173,10 @@ th {
 
 ## See also
 
-- {{cssxref("font-variant")}}
-- {{cssxref("font-variant-alternates")}}
-- {{cssxref("font-variant-caps")}}
-- {{cssxref("font-variant-emoji")}}
-- {{cssxref("font-variant-ligatures")}}
-- {{cssxref("font-variant-numeric")}}
-- {{cssxref("font-variant-position")}}
+- [`font-variant`](/en-US/docs/Web/CSS/Reference/Properties/font-variant)
+- [`font-variant-alternates`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-alternates)
+- [`font-variant-caps`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-caps)
+- [`font-variant-emoji`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-emoji)
+- [`font-variant-ligatures`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-ligatures)
+- [`font-variant-numeric`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-numeric)
+- [`font-variant-position`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-position)
