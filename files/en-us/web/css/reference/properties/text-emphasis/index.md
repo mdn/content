@@ -53,8 +53,8 @@ The size of the emphasis symbol, like ruby symbols, is about 50% of the size of 
 
 This property is a shorthand for the following CSS properties:
 
-- {{cssxref("text-emphasis-color")}}
-- {{cssxref("text-emphasis-style")}}
+- [`text-emphasis-color`](/en-US/docs/Web/CSS/Reference/Properties/text-emphasis-color)
+- [`text-emphasis-style`](/en-US/docs/Web/CSS/Reference/Properties/text-emphasis-style)
 
 ## Syntax
 
