@@ -11,7 +11,7 @@ A user indicates their preference through an operating system setting (e.g., lig
 
 ## Embedded elements
 
-For SVG and iframes, `prefers-color-scheme` lets you set a CSS style for the SVG or iframe based on the {{cssxref("color-scheme")}} of the parent element in the web page.
+For SVG and iframes, `prefers-color-scheme` lets you set a CSS style for the SVG or iframe based on the [`color-scheme`](/en-US/docs/Web/CSS/Reference/Properties/color-scheme) of the parent element in the web page.
 SVGs must be used embedded (i.e., `<img src="circle.svg" alt="circle" />`) as opposed to [inlined in HTML](/en-US/docs/Web/SVG/Guides/SVG_in_HTML#basic_example).
 An example of using `prefers-color-scheme` in SVGs can be found in the ["Inherited color scheme in embedded elements"](#inherited_color_scheme_in_embedded_elements) section.
 
