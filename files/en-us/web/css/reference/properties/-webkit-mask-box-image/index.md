@@ -19,9 +19,9 @@ The non-standard prefixed **`-webkit-mask-box-image`** [shorthand](/en-US/docs/W
 
 This property is a shorthand for the following CSS properties:
 
-- {{cssxref("-webkit-mask-box-image-source")}}
-- {{cssxref("-webkit-mask-box-image-outset")}}
-- {{cssxref("-webkit-mask-box-image-repeat")}}
+- [`-webkit-mask-box-image-source`](/en-US/docs/Web/CSS/Reference/Properties/mask-border-source)
+- [`-webkit-mask-box-image-outset`](/en-US/docs/Web/CSS/Reference/Properties/mask-border-outset)
+- [`-webkit-mask-box-image-repeat`](/en-US/docs/Web/CSS/Reference/Properties/mask-border-repeat)
 
 The values includes the `<image>` to be used as the mask border, and optionally four border outset values and up to two border repeat styles.
 
