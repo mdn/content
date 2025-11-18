@@ -30,4 +30,4 @@ Refer to the documentation for {{Cssxref("angle")}} and {{Cssxref("percentage")}
 
 - [CSS data types](/en-US/docs/Web/CSS/Reference/Values/Data_types)
 - [Using CSS gradients](/en-US/docs/Web/CSS/Guides/Images/Using_gradients)
-- {{cssxref("conic-gradient()")}} and {{cssxref("repeating-conic-gradient()")}}
+- [`conic-gradient()`](/en-US/docs/Web/CSS/Reference/Values/gradient/conic-gradient) and [`repeating-conic-gradient()`](/en-US/docs/Web/CSS/Reference/Values/gradient/repeating-conic-gradient)

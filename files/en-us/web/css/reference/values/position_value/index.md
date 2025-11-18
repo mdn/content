@@ -87,4 +87,4 @@ bottom top
 - [Learn: CSS Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
 - {{cssxref("background-position")}}
 - {{cssxref("gradient/radial-gradient", "radial-gradient()")}}
-- {{cssxref("conic-gradient()")}}
+- {{cssxref("gradient/conic-gradient", "conic-gradient()")}}

@@ -139,8 +139,8 @@ div {
 
 ## See also
 
-- {{cssxref("scaleY()")}}
-- {{cssxref("scaleZ()")}}
+- [`scaleY()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/scaleY)
+- [`scaleZ()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/scaleZ)
 - {{cssxref("transform")}}
 - {{cssxref("scale")}}
 - {{cssxref("&lt;transform-function&gt;")}}

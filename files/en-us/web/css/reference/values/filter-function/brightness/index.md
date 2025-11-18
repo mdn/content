@@ -72,7 +72,7 @@ brightness(200%)
 
 ### Applying brightness using the backdrop-filter property
 
-This example shows how to apply the `brightness()` filter to a paragraph via the {{cssxref("backdrop-filter")}} CSS property.
+This example shows how to apply the `brightness()` filter to a paragraph via the [`backdrop-filter`](/en-US/docs/Web/CSS/Reference/Properties/backdrop-filter) CSS property.
 
 #### CSS
 
@@ -115,7 +115,7 @@ In this example, the colors in the area behind the `<p>` element shift linearly.
 
 ### Applying brightness using the filter property
 
-In this example, a `brightness()` filter is applied to the entire element, including content, border, and background image via the {{cssxref("filter")}} CSS property. The result shows three variations of different brightness values.
+In this example, a `brightness()` filter is applied to the entire element, including content, border, and background image via the [`filter`](/en-US/docs/Web/CSS/Reference/Properties/filter) CSS property. The result shows three variations of different brightness values.
 
 ```css
 p:first-of-type {

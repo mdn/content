@@ -155,7 +155,7 @@ div {
 ## See also
 
 - [`translate()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/translate)
-- {{cssxref("translateY()")}}
+- [`translateY()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/translateY)
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
 - {{cssxref("translate")}}
