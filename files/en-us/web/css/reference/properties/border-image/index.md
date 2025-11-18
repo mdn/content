@@ -63,11 +63,11 @@ border-image: repeating-linear-gradient(30deg, #4d9f0c, #9198e5, #4d9f0c 20px)
 
 This property is a shorthand for the following CSS properties:
 
-- {{cssxref("border-image-outset")}}
-- {{cssxref("border-image-repeat")}}
-- {{cssxref("border-image-slice")}}
-- {{cssxref("border-image-source")}}
-- {{cssxref("border-image-width")}}
+- [`border-image-outset`](/en-US/docs/Web/CSS/Reference/Properties/border-image-outset)
+- [`border-image-repeat`](/en-US/docs/Web/CSS/Reference/Properties/border-image-repeat)
+- [`border-image-slice`](/en-US/docs/Web/CSS/Reference/Properties/border-image-slice)
+- [`border-image-source`](/en-US/docs/Web/CSS/Reference/Properties/border-image-source)
+- [`border-image-width`](/en-US/docs/Web/CSS/Reference/Properties/border-image-width)
 
 ## Syntax
 
@@ -238,5 +238,5 @@ To match the size of a single diamond, we will use a value of 81 divided by 3, o
 - {{cssxref("box-shadow")}}
 - {{cssxref("background-image")}}
 - {{cssxref("url_value", "&lt;url&gt;")}} type
-- Gradient functions: {{cssxref("conic-gradient()")}}, {{cssxref("repeating-conic-gradient()")}}, {{cssxref("linear-gradient()")}}, {{cssxref("repeating-linear-gradient()")}}, {{CSSxRef("gradient/radial-gradient", "radial-gradient()")}}, {{CSSxRef("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
+- Gradient functions: {{CSSxRef("gradient/conic-gradient", "conic-gradient()")}}, {{CSSxRef("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}, {{CSSxRef("gradient/linear-gradient", "linear-gradient()")}}, {{CSSxRef("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{CSSxRef("gradient/radial-gradient", "radial-gradient()")}}, {{CSSxRef("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
 - [Border images in CSS: A key focus area for Interop 2023](/en-US/blog/border-images-interop-2023/) on MDN blog (2023)
