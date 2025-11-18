@@ -216,7 +216,7 @@ The CSS values and units module also introduces the [`<frequency>`](/en-US/docs/
   - : A look at some of the most frequently used value types, what they are, and how they work.
 
 - [CSS value serialization](/en-US/docs/Web/API/CSS_Object_Model/CSS_value_serialization)
-  - : How [CSSOM APIs](/en-US/docs/Web/API/CSS_Object_Model) serialize values into standardized string representations.
+  - : How [CSSOM APIs](/en-US/docs/Web/API/CSS_Object_Model) serialize color and other values into standardized string representations.
 
 ## Related
 
