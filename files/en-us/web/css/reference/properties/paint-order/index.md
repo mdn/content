@@ -35,7 +35,7 @@ If no value is specified, the default paint order is `fill`, `stroke`, `markers`
 When one value is specified, that one is painted first, followed by the other two in their default order relative to one another. When two values are specified, they will be painted in the order they are specified in, followed by the unspecified one.
 
 > [!NOTE]
-> In the case of this property, markers are only appropriate when drawing SVG shapes involving the use of the `marker-*` properties (e.g., {{svgattr("marker-start")}}) and {{svgelement("marker")}} element. They do not apply to HTML text, so in that case, you can only determine the order of `stroke` and `fill`.
+> In the case of this property, markers are only appropriate when drawing SVG shapes involving the use of the `marker-*` properties (e.g., [`marker-start`](/en-US/docs/Web/SVG/Reference/Attribute/marker-start)) and [`<marker>`](/en-US/docs/Web/SVG/Reference/Element/marker) element. They do not apply to HTML text, so in that case, you can only determine the order of `stroke` and `fill`.
 
 ### Values
 

@@ -118,7 +118,7 @@ offset-path: unset;
 
 ### Values
 
-The `offset-path` property takes as its value an `<offset-path>` value, a [`<coord-box>`](/en-US/docs/Web/CSS/Reference/Values/box-edge#values) value, or both, or the `none` keyword. The `<offset-path>` value is a {{cssxref("ray","ray()")}} function, a {{cssxref("url_value", "&lt;url&gt;")}} value, or a {{cssxref("&lt;basic-shape&gt;")}} value.
+The `offset-path` property takes as its value an `<offset-path>` value, a [`<coord-box>`](/en-US/docs/Web/CSS/Reference/Values/box-edge#values) value, or both, or the `none` keyword. The `<offset-path>` value is a {{cssxref("ray","ray()")}} function, a {{cssxref("url_value", "&lt;url&gt;")}} value, or a [`<basic-shape>`](/en-US/docs/Web/CSS/Reference/Values/basic-shape) value.
 
 - `none`
   - : Specifies that the element does not follow any offset path. The `none` value is equivalent to the element not having any [offset transform](/en-US/docs/Web/CSS/Reference/Properties/offset). The element's movement in this case is determined by its default position properties, such as {{cssxref("top")}} and {{cssxref("left")}}, instead of an offset path. This is the default value.

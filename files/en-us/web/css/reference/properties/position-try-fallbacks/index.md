@@ -64,7 +64,7 @@ The `position-try-fallbacks` property may be specified as either the keyword val
       - : Flips the element's position along the inline axis.
     - `flip-start`
       - : Flips both the inline and block axis values, swapping the `start` properties with each other, and the `end` properties with each other.
-- {{cssxref("position-area")}} value
+- [`position-area`](/en-US/docs/Web/CSS/Reference/Properties/position-area) value
   - : Positions the element relative to the edges of its associated anchor element by placing the positioned element on one or more tiles of an implicit 3x3 [position area grid](/en-US/docs/Web/CSS/Reference/Properties/position-area#description) based on the specified {{cssxref("position-area_value","&lt;position-area>")}} value; the effect is the same as a custom {{cssxref("@position-try")}} fallback option containing only a {{cssxref("position-area")}} descriptor.
 - {{cssxref("dashed-ident")}}
   - : Adds a custom {{cssxref("@position-try")}} option to the fallback options list, the identifying name of which matches the specified `dashed-ident`. If no custom position option exists with that name, the option is ignored.
@@ -368,7 +368,7 @@ See the {{cssxref("@position-try")}} reference page.
 - {{cssxref("position-try-order")}}
 - {{cssxref("@position-try")}} at-rule
 - {{cssxref("position-area")}}
-- {{cssxref("&lt;position-area&gt;")}} value
+- [`<position-area>`](/en-US/docs/Web/CSS/Reference/Values/position-area_value) value
 - [Fallback options and conditional hiding for overflow](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding) guide
 - [Using CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using) guide
 - [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) module
