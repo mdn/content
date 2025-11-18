@@ -34,7 +34,7 @@ Firefox 146 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ### CSS
 
-- The {{cssxref("color_value/contrast-color()")}} [CSS function](/en-US/docs/Web/CSS/Reference/Values/Functions) is now supported. This function takes a {{cssxref("color_value","color")}} value and returns a contrasting color that ensures at least [WCAG AA minimum contrast](https://w3c.github.io/wcag/guidelines/22/#contrast-minimum).
+- The {{cssxref("color_value/contrast-color()")}} function is now supported. This function takes a [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value) value and returns a contrasting color that ensures at least [WCAG AA minimum contrast](https://w3c.github.io/wcag/guidelines/22/#contrast-minimum).
   ([Firefox bug 1682439](https://bugzil.la/1682439)).
 
 - The [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value) data type now supports the `display-p3-linear` color space. This space is similar to [`display-p3`](/en-US/docs/Glossary/Color_space#display-p3), except that it uses a linear-light transfer function and has no gamma-encoding, which allows for a higher precision in the colors displayed.
