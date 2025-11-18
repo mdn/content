@@ -278,7 +278,7 @@ We include two {{htmlElement("div")}} elements and an `<svg>` element containing
 
 #### CSS
 
-We use [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) to allow our elements to sit side-by-side with a gap between them, if there is space available. We define a {{cssxref("conic-gradient()")}} background image on both `<div>` elements, providing an interesting visual to clip, along with a {{cssxref("border")}}.
+We use [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) to allow our elements to sit side-by-side with a gap between them, if there is space available. We define a {{cssxref("gradient/conic-gradient", "conic-gradient()")}} background image on both `<div>` elements, providing an interesting visual to clip, along with a {{cssxref("border")}}.
 
 ```css
 body {
