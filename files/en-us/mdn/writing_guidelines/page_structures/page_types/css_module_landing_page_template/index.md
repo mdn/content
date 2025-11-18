@@ -40,11 +40,14 @@ sidebar: mdnsidebar
 > - **spec-urls**
 >   - : The `spec-urls` value is a URL of the specification or, in cases where there are multiple versions of the same specification, such as levels 1, 2, and 3, present them in a bulleted list. For example, the `spec-urls` key for the [filter effects](/en-US/docs/Web/CSS/Guides/Filter_effects) module landing page is as follows:
 >
->     ```plain
->      spec-urls: 
->         - https://drafts.fxtf.org/filter-effects-2/
->         - https://drafts.fxtf.org/filter-effects-1/
->     ```
+
+```plain
+spec-urls: 
+    - https://drafts.fxtf.org/filter-effects-2/
+    - https://drafts.fxtf.org/filter-effects-1/
+```
+
+> - 
 >    - : Only include modules that are multiple revisions of a single spec.
 >
 > - **sidebar**
