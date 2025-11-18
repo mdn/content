@@ -60,7 +60,7 @@ Begin the page content with an introductory paragraph that names the module and 
 ## NameOfTheModule in action
 
 In this section, include an example using `\{{EmbedLiveSample}}` (see [Live examples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples) for more information) that helps demonstrate the usefulness and power of various properties provided by this module.
-The purpose of this section is to demonstrate use cases and to create interest and curiosity in the minds of the readers learning about this module. Keep the code hidden unless it is essential to understanding the use cases  (for example, namespacing or nesting).
+The purpose of this section is to demonstrate use cases and to create interest and curiosity in the minds of the readers learning about this module. Keep the code hidden unless it is essential to understanding the use cases (for example, namespacing or nesting).
 
 If relevant, provide a short description of how readers can interact with the example.
 
