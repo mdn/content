@@ -84,7 +84,6 @@ A function taking two parameters, _min_ and _max_.
 
 Each parameter can be a `<length>`, a `<percentage>` or one of the keyword values `max-content`, `min-content`, or `auto`.
 
-{{cssxref("flex_value","&lt;flex&gt;")}} value can only be used for _max_, it is invalid for _min_.
 
 If _max_ < _min_, then _max_ is ignored and `minmax(min,max)` is treated as _min_.
 
