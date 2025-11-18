@@ -113,8 +113,8 @@ animation-duration: unset;
 - {{cssxref("&lt;time&gt;")}}
   - : The time that an animation takes to complete one cycle. This may be specified in either seconds (`s`) or milliseconds (`ms`). The value must be positive or zero and the unit is required.
 
-    If no value is provided, the default value of `0s` is used, in which case the animation still executes (the [`animationStart`](/en-US/docs/Web/API/Element/animationstart_event) and [`animationEnd`](/en-US/docs/Web/API/Element/animationend_event) events are fired). Whether or not the animation will be visible when the duration is `0s` will depend on the value of {{cssxref("animation-fill-mode")}}, as explained below:
-    - If `animation-fill-mode` is set to `backwards` or `both`, the first frame of the animation as defined by `animation-direction` will be displayed during {{cssxref("animation-delay")}} countdown.
+    If no value is provided, the default value of `0s` is used, in which case the animation still executes (the [`animationStart`](/en-US/docs/Web/API/Element/animationstart_event) and [`animationEnd`](/en-US/docs/Web/API/Element/animationend_event) events are fired). Whether or not the animation will be visible when the duration is `0s` will depend on the value of [`animation-fill-mode`](/en-US/docs/Web/CSS/Reference/Properties/animation-fill-mode), as explained below:
+    - If `animation-fill-mode` is set to `backwards` or `both`, the first frame of the animation as defined by `animation-direction` will be displayed during [`animation-delay`](/en-US/docs/Web/CSS/Reference/Properties/animation-delay) countdown.
     - If `animation-fill-mode` is set to `forwards` or `both`, the last frame of the animation will be displayed, as defined by `animation-direction`, after the `animation-delay` expires.
     - If `animation-fill-mode` is set to `none`, the animation will have no visible effect.
 
