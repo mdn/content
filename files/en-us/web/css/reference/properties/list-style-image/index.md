@@ -138,7 +138,7 @@ ul {
 
 ### Using a gradient
 
-This example has a [CSS gradient](/en-US/docs/Web/CSS/Guides/Images/Using_gradients) as a marker, which we create uses the {{cssxref("linear-gradient()")}} image function.
+This example has a [CSS gradient](/en-US/docs/Web/CSS/Guides/Images/Using_gradients) as a marker, which we create uses the {{cssxref("gradient/linear-gradient", "linear-gradient()")}} image function.
 
 #### HTML
 
