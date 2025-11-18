@@ -300,7 +300,7 @@ Style containment causes the {{cssxref("counter-increment")}} property to be sco
 
 #### Containment and quotes
 
-CSS quotes are similarly affected in that the {{cssxref("content")}} values relating to quotes are scoped to the element:
+CSS quotes are similarly affected in that the [`content`](/en-US/docs/Web/CSS/Reference/Properties/content) values relating to quotes are scoped to the element:
 
 ```html
 <!-- With style containment -->

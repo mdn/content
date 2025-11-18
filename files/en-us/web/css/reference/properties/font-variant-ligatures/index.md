@@ -224,10 +224,10 @@ p {
 
 ## See also
 
-- {{cssxref("font-variant")}}
-- {{cssxref("font-variant-caps")}}
-- {{cssxref("font-variant-emoji")}}
-- {{cssxref("font-variant-east-asian")}}
-- {{cssxref("font-variant-numeric")}}
-- {{cssxref("font-variant-position")}}
+- [`font-variant`](/en-US/docs/Web/CSS/Reference/Properties/font-variant)
+- [`font-variant-caps`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-caps)
+- [`font-variant-emoji`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-emoji)
+- [`font-variant-east-asian`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-east-asian)
+- [`font-variant-numeric`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-numeric)
+- [`font-variant-position`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-position)
 - [CSS fonts module](/en-US/docs/Web/CSS/Guides/Fonts)
