@@ -194,7 +194,7 @@ In this example, we have three {{htmlelement("div")}} elements with different ba
 
 #### CSS
 
-The background colors are set using the `rgb()` color function. The three colors are the same. The third is semi-transparent, so we included a {{cssxref("repeating-linear-gradient()")}} on the {{htmlelement("body")}} to better demonstrate the transparency of alpha channels.
+The background colors are set using the `rgb()` color function. The three colors are the same. The third is semi-transparent, so we included a {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}} on the {{htmlelement("body")}} to better demonstrate the transparency of alpha channels.
 
 ```css hidden
 div {
