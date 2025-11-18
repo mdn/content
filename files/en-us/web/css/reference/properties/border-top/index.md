@@ -52,9 +52,9 @@ border-top: 4mm ridge rgb(211 220 50 / 0.6);
 
 This property is a shorthand for the following CSS properties:
 
-- {{cssxref("border-top-color")}}
-- {{cssxref("border-top-style")}}
-- {{cssxref("border-top-width")}}
+- [`border-top-color`](/en-US/docs/Web/CSS/Reference/Properties/border-top-color)
+- [`border-top-style`](/en-US/docs/Web/CSS/Reference/Properties/border-top-style)
+- [`border-top-width`](/en-US/docs/Web/CSS/Reference/Properties/border-top-width)
 
 ## Syntax
 
@@ -145,6 +145,6 @@ div {
 
 ## See also
 
-- {{cssxref("border")}}
-- {{cssxref("border-block")}}
-- {{cssxref("outline")}}
+- [`border`](/en-US/docs/Web/CSS/Reference/Properties/border)
+- [`border-block`](/en-US/docs/Web/CSS/Reference/Properties/border-block)
+- [`outline`](/en-US/docs/Web/CSS/Reference/Properties/outline)
