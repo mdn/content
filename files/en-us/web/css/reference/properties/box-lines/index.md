@@ -70,7 +70,7 @@ div {
 }
 ```
 
-The modern flexbox equivalent is {{cssxref("flex-wrap")}}.
+The modern flexbox equivalent is [`flex-wrap`](/en-US/docs/Web/CSS/Reference/Properties/flex-wrap).
 
 ## Specifications
 
