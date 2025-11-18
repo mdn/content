@@ -12,8 +12,8 @@ The **`-webkit-text-stroke`** [CSS](/en-US/docs/Web/CSS) property specifies the 
 
 This property is a shorthand for the following CSS properties:
 
-- {{cssxref("-webkit-text-stroke-color")}}
-- {{cssxref("-webkit-text-stroke-width")}}
+- [`-webkit-text-stroke-color`](/en-US/docs/Web/CSS/Reference/Properties/-webkit-text-stroke-color)
+- [`-webkit-text-stroke-width`](/en-US/docs/Web/CSS/Reference/Properties/-webkit-text-stroke-width)
 
 ## Syntax
 
