@@ -2,7 +2,6 @@
 title: Using the HTML Sanitizer API
 slug: Web/API/HTML_Sanitizer_API/Using_the_HTML_Sanitizer_API
 page-type: guide
-
 ---
 
 {{DefaultAPISidebar("HTML Sanitizer API")}}
