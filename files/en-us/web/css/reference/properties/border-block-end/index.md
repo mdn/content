@@ -53,9 +53,9 @@ writing-mode: vertical-lr;
 
 This property is a shorthand for the following CSS properties:
 
-- {{cssxref("border-block-end-color")}}
-- {{cssxref("border-block-end-style")}}
-- {{cssxref("border-block-end-width")}}
+- [`border-block-end-color`](/en-US/docs/Web/CSS/Reference/Properties/border-block-end-color)
+- [`border-block-end-style`](/en-US/docs/Web/CSS/Reference/Properties/border-block-end-style)
+- [`border-block-end-width`](/en-US/docs/Web/CSS/Reference/Properties/border-block-end-width)
 
 ## Syntax
 

@@ -12,8 +12,8 @@ The **`animation-range`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US
 
 This property is a shorthand for the following CSS properties:
 
-- {{cssxref("animation-range-start")}}
-- {{cssxref("animation-range-end")}}
+- [`animation-range-start`](/en-US/docs/Web/CSS/Reference/Properties/animation-range-start)
+- [`animation-range-end`](/en-US/docs/Web/CSS/Reference/Properties/animation-range-end)
 
 ## Syntax
 
@@ -50,7 +50,7 @@ As shown by the comments in the syntax block above, if only a single value is pr
 
 ### Values
 
-One or two values representing the {{cssxref("animation-range-start")}} and/or {{cssxref("animation-range-end")}}. These values can be one of the following:
+One or two values representing the [`animation-range-start`](/en-US/docs/Web/CSS/Reference/Properties/animation-range-start) and/or [`animation-range-end`](/en-US/docs/Web/CSS/Reference/Properties/animation-range-end). These values can be one of the following:
 
 - `normal`
   - : Represents the start of the timeline in the case of `animation-range-start` and the end of the timeline in the case of `animation-range-end`. This is the default value.
@@ -221,9 +221,9 @@ Scroll to see the subject element being animated.
 
 ## See also
 
-- {{cssxref("animation-timeline")}}
-- {{cssxref("animation-range-end")}}, {{cssxref("animation-range-start")}}
-- {{cssxref("scroll-timeline")}}, {{cssxref("scroll-timeline-axis")}}, {{cssxref("scroll-timeline-name")}}
+- [`animation-timeline`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline)
+- [`animation-range-end`](/en-US/docs/Web/CSS/Reference/Properties/animation-range-end), [`animation-range-start`](/en-US/docs/Web/CSS/Reference/Properties/animation-range-start)
+- [`scroll-timeline`](/en-US/docs/Web/CSS/Reference/Properties/scroll-timeline), [`scroll-timeline-axis`](/en-US/docs/Web/CSS/Reference/Properties/scroll-timeline-axis), [`scroll-timeline-name`](/en-US/docs/Web/CSS/Reference/Properties/scroll-timeline-name)
 - {{cssxref("timeline-scope")}}
-- {{cssxref("view-timeline-inset")}}
+- [`view-timeline-inset`](/en-US/docs/Web/CSS/Reference/Properties/view-timeline-inset)
 - [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations)

@@ -94,7 +94,7 @@ The `all` property is specified as one of the CSS global keyword values. Note th
     - If the rule belongs to the [user origin](/en-US/docs/Web/CSS/Guides/Cascade/Introduction#user_stylesheets), the `revert` value rolls back the [cascade](/en-US/docs/Web/CSS/Guides/Cascade/Introduction) to the user-agent level, so that the [specified values](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#specified_value) are calculated as if no author-level or user-level rules were specified for the element.
     - If the rule belongs to the [user-agent origin](/en-US/docs/Web/CSS/Guides/Cascade/Introduction#user-agent_stylesheets), the `revert` value acts like `unset`.
 - {{cssxref("revert-layer")}}
-  - : Specifies that all the element's properties should roll back the cascade to a previous {{cssxref("@layer", "cascade layer")}}, if one exists. If no other cascade layer exists, the element's properties will roll back to the matching rule, if one exists, in the current layer or to a previous {{glossary("style origin")}}.
+  - : Specifies that all the element's properties should roll back the cascade to a previous [cascade layer](/en-US/docs/Web/CSS/Reference/At-rules/@layer), if one exists. If no other cascade layer exists, the element's properties will roll back to the matching rule, if one exists, in the current layer or to a previous [style origin](/en-US/docs/Glossary/Style_origin).
 
 ## Formal definition
 
