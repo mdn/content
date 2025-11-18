@@ -59,7 +59,7 @@ article:nth-child(2) {
 }
 ```
 
-This was only ever supported in WebKit-based browsers, with a prefix, and in subsequent versions of the spec this functionality does not have an equivalent. Instead, distribution of space inside the flex container is now handled using {{cssxref("flex-basis")}}, {{cssxref("flex-grow")}}, and {{cssxref("flex-shrink")}}.
+This was only ever supported in WebKit-based browsers, with a prefix, and in subsequent versions of the spec this functionality does not have an equivalent. Instead, distribution of space inside the flex container is now handled using [`flex-basis`](/en-US/docs/Web/CSS/Reference/Properties/flex-basis), [`flex-grow`](/en-US/docs/Web/CSS/Reference/Properties/flex-grow), and [`flex-shrink`](/en-US/docs/Web/CSS/Reference/Properties/flex-shrink).
 
 ## Specifications
 

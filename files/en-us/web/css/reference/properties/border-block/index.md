@@ -49,9 +49,9 @@ direction: rtl;
 
 This property is a shorthand for the following CSS properties:
 
-- {{cssxref("border-block-color")}}
-- {{cssxref("border-block-style")}}
-- {{cssxref("border-block-width")}}
+- [`border-block-color`](/en-US/docs/Web/CSS/Reference/Properties/border-block-color)
+- [`border-block-style`](/en-US/docs/Web/CSS/Reference/Properties/border-block-style)
+- [`border-block-width`](/en-US/docs/Web/CSS/Reference/Properties/border-block-width)
 
 ## Syntax
 

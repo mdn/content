@@ -220,4 +220,4 @@ Scroll to see the subject element being animated.
 
 - [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations)
 - [Using CSS animations](/en-US/docs/Web/CSS/Guides/Animations/Using)
-- {{cssxref("animation-timeline")}}
+- [`animation-timeline`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline)

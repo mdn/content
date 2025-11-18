@@ -59,10 +59,10 @@ border-radius: 50% 20% / 10% 40%;
 
 This property is a shorthand for the following CSS properties:
 
-- {{cssxref("border-top-left-radius")}}
-- {{cssxref("border-top-right-radius")}}
-- {{cssxref("border-bottom-right-radius")}}
-- {{cssxref("border-bottom-left-radius")}}
+- [`border-top-left-radius`](/en-US/docs/Web/CSS/Reference/Properties/border-top-left-radius)
+- [`border-top-right-radius`](/en-US/docs/Web/CSS/Reference/Properties/border-top-right-radius)
+- [`border-bottom-right-radius`](/en-US/docs/Web/CSS/Reference/Properties/border-bottom-right-radius)
+- [`border-bottom-left-radius`](/en-US/docs/Web/CSS/Reference/Properties/border-bottom-left-radius)
 
 ## Syntax
 

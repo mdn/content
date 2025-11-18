@@ -61,10 +61,10 @@ body {
 
 This property is a shorthand for the following CSS properties:
 
-- {{cssxref("border-bottom-style")}}
-- {{cssxref("border-left-style")}}
-- {{cssxref("border-right-style")}}
-- {{cssxref("border-top-style")}}
+- [`border-bottom-style`](/en-US/docs/Web/CSS/Reference/Properties/border-bottom-style)
+- [`border-left-style`](/en-US/docs/Web/CSS/Reference/Properties/border-left-style)
+- [`border-right-style`](/en-US/docs/Web/CSS/Reference/Properties/border-right-style)
+- [`border-top-style`](/en-US/docs/Web/CSS/Reference/Properties/border-top-style)
 
 ## Syntax
 

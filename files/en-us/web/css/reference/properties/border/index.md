@@ -52,9 +52,9 @@ border: 4mm ridge rgb(211 220 50 / 0.6);
 
 This property is a shorthand for the following CSS properties:
 
-- {{cssxref("border-width")}}
-- {{cssxref("border-style")}}
-- {{cssxref("border-color")}}
+- [`border-width`](/en-US/docs/Web/CSS/Reference/Properties/border-width)
+- [`border-style`](/en-US/docs/Web/CSS/Reference/Properties/border-style)
+- [`border-color`](/en-US/docs/Web/CSS/Reference/Properties/border-color)
 
 ## Syntax
 
