@@ -190,7 +190,8 @@ CSS isn't the only web technology that supports color. Other examples include:
 
 ## See also
 
-- {{cssxref("&lt;color&gt;")}} data type
+- [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value) data type
 - [CSS color values](/en-US/docs/Web/CSS/Guides/Colors/Color_values) guide
-- [Using color wisely](/en-US/docs/Web/CSS/Guides/Colors/Using_color_wisely) guide
-- [CSS color](/en-US/docs/Web/CSS/Guides/Colors) module
+- [Using color wisely](/en-US/docs/Web/CSS/Guides/Colors/Using_color_wisely)
+- [CSS color module](/en-US/docs/Web/CSS/Guides/Colors)
+- [Drawing graphics](/en-US/docs/Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics)

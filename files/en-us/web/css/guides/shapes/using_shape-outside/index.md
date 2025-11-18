@@ -15,7 +15,7 @@ Before looking at shapes, it is worth understanding two pieces of information th
 
 ## The \<basic-shape> type
 
-The {{cssxref("&lt;basic-shape&gt;")}} type is used as the value for all of our basic shapes. This type is a functional notation: the function parentheses contain arguments used to describe the shape.
+The [`<basic-shape>`](/en-US/docs/Web/CSS/Reference/Values/basic-shape) type is used as the value for all of our basic shapes. This type is a functional notation: the function parentheses contain arguments used to describe the shape.
 
 The accepted arguments vary depending on the shape you are creating. We will cover these in the examples below.
 
@@ -164,7 +164,7 @@ The `circle()` and `ellipse()` `shape-outside` values both accept [`<shape-radiu
 
 The `closest-side` keyword value uses the length from the center of the shape to the closest side of the reference box to create the radius length. The `farthest-side` keyword value uses the length from the center of the shape to the farthest side of the reference box.
 
-The second argument is a `position`, which accepts a one- or two-keyword {{cssxref("&lt;position&gt;")}} value, to indicate the position of the center of the circle. This is specified the same way as {{cssxref("background-position")}}; if one or both values are omitted, the values default to `center`.
+The second argument is a `position`, which accepts a one- or two-keyword [`<position>`](/en-US/docs/Web/CSS/Reference/Values/position_value) value, to indicate the position of the center of the circle. This is specified the same way as {{cssxref("background-position")}}; if one or both values are omitted, the values default to `center`.
 
 To create a circle, we include a single radius value, optionally followed by the keyword **at** followed by a position value. This example has a circle applied to an {{htmlelement("img")}} with a `width` and `height` of `210px` and a `margin` of `20px`. This gives a total width for the reference box of `250px`. The `50%` value for the `<shape-radius>` means the radius is `125px`. The position value is set to `30%`, which is `30%` from the left and at the default vertical `center`.
 

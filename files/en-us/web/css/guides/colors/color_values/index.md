@@ -18,7 +18,7 @@ This guide introduces the different {{cssxref("&lt;color&gt;")}} value types. Fo
 
 The web defines a set of standard color names that lets you use keywords instead of numeric representations to describe colors. This is a simpler albeit more limited approach — there may not be a keyword representing the exact color you want to use.
 
-Color keywords include standard primary and secondary colors (such as `red`, `blue`, or `orange`), shades of gray (from `black` to `white`, including colors like `darkgray` and `lightgrey`), and a variety of other blended colors, including `lightseagreen`, `cornflowerblue`, and `rebeccapurple`. Named colors use the {{glossary("RGB")}} model and are associated with the sRGB (`srgb`) color space.
+Color keywords include standard primary and secondary colors (such as `red`, `blue`, or `orange`), shades of gray (from `black` to `white`, including colors like `darkgray` and `lightgrey`), and a variety of other blended colors, including `lightseagreen`, `cornflowerblue`, and `rebeccapurple`. Named colors use the [RGB](/en-US/docs/Glossary/RGB) model and are associated with the sRGB (`srgb`) color space.
 
 There are over 160 named colors. There are named colors of special interest: [`transparent`](/en-US/docs/Web/CSS/Reference/Values/named-color#transparent) sets a transparent color value, while [`currentColor`](/en-US/docs/Web/CSS/Reference/Values/color_value#currentcolor_keyword) sets the current value of the CSS {{cssxref("color")}} property. There are also named {{cssxref("system-color")}} colors, such as `accentcolortext` and `buttonface`, that reflect the default color choices made by the user, the browser, or the operating system.
 
@@ -26,7 +26,7 @@ All color keywords are case-insensitive. See the {{cssxref("named-color")}} data
 
 ## RGB values
 
-There are two primary ways of defining an {{glossary("RGB")}} color by its red, green, and blue components in CSS — hexadecimal and `rgb()` values. Like named colors, these methods use the {{glossary("RGB")}} model and are associated with the sRGB (`srgb`) color space. However, they allow a much wider range of colors to be specified.
+There are two primary ways of defining an {{glossary("RGB")}} color by its red, green, and blue components in CSS — hexadecimal and `rgb()` values. Like named colors, these methods use the [RGB](/en-US/docs/Glossary/RGB) model and are associated with the sRGB (`srgb`) color space. However, they allow a much wider range of colors to be specified.
 
 ### Hexadecimal string notation
 
@@ -141,13 +141,13 @@ See the {{cssxref("color_value/rgb", "rgb()")}} color function for more informat
 
 ## Color functions with a hue component
 
-The color functions that have a {{cssxref("&lt;hue&gt;")}} component — an {{cssxref("&lt;angle&gt;")}} from that color model's {{glossary("color wheel")}} — include the `srgb` color functions `hsl()` and `hwb()`, CIElab's `lch()` function, and OKLab's `oklch()` color function. These color functions are more intuitive as the hue allows us to tell the difference or similarity between colors like red, orange, yellow, green, blue, etc.
+The color functions that have a [`<hue>`](/en-US/docs/Web/CSS/Reference/Values/hue) component — an [`<angle>`](/en-US/docs/Web/CSS/Reference/Values/angle) from that color model's {{glossary("color wheel")}} — include the `srgb` color functions `hsl()` and `hwb()`, CIElab's `lch()` function, and OKLab's `oklch()` color function. These color functions are more intuitive as the hue allows us to tell the difference or similarity between colors like red, orange, yellow, green, blue, etc.
 
 ### HSL functional notation
 
 The `hsl()` CSS color function was the first hue-based color function to be supported in browsers. `hsl()` is more intuitive than `rgb()` — it is easier to determine the effect of varying hue (`h`), saturation (`s`), and lightness (`l`) values than it is to declare specific colors via red, green, and blue channel values. In addition, HSL is similar to the HSB (hue, saturation, and brightness) color picker in Photoshop, which made it immediately familiar to many people when first supported.
 
-The `hsl()` and `hwb()` sRGB color functions are both cylindrical. Hue defines the color as an {{cssxref("&lt;angle&gt;")}} on a circular {{glossary("color wheel")}}. The diagram below shows an HSL color cylinder. Saturation is a percentage that defines how far the color is along a scale between completely grayscale and having the maximum possible amount of the given hue.
+The `hsl()` and `hwb()` sRGB color functions are both cylindrical. Hue defines the color as an [`<angle>`](/en-US/docs/Web/CSS/Reference/Values/angle) on a circular {{glossary("color wheel")}}. The diagram below shows an HSL color cylinder. Saturation is a percentage that defines how far the color is along a scale between completely grayscale and having the maximum possible amount of the given hue.
 As the value of lightness increases, the color transitions from the darkest to the lightest possible color (from black to white).
 
 ![HSL color cylinder](640px-hsl_color_solid_cylinder.png)
@@ -500,7 +500,7 @@ for (let b = -4; b <= 4; b++) {
 
 If you want explicit control over color spaces when defining colors, you can use the [`color()`](/en-US/docs/Web/CSS/Reference/Values/color_value/color) function.
 
-This is useful to describe a color for high-definition devices with wider color {{glossary("gamuts")}}.
+This is useful to describe a color for high-definition devices with wider color [gamuts](/en-US/docs/Glossary/Gamut).
 For example, if you wanted to show the `display-p3 0 0 1` color, which is outside of the sRGB gamut, you could use a `@media` [`color-gamut`](/en-US/docs/Web/CSS/Reference/At-rules/@media/color-gamut) at-rule to detect if the client's hardware supports colors in this range before trying to use it:
 
 ```css

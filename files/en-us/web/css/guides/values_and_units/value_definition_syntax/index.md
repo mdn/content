@@ -282,7 +282,7 @@ But not:
 
 ## Bracketed range notation (`[min,max]`)
 
-Some types can accept numeric values within a certain range. For example, the {{cssxref("column-count")}} property can accept an integer value between positive 1 and infinity, inclusive. The corresponding syntax looks like this:
+Some types can accept numeric values within a certain range. For example, the [`column-count`](/en-US/docs/Web/CSS/Reference/Properties/column-count) property can accept an integer value between positive 1 and infinity, inclusive. The corresponding syntax looks like this:
 
 {{CSSSyntaxRaw(`example = <integer [1,∞]>`)}}
 

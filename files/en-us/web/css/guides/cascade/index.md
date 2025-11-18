@@ -76,7 +76,7 @@ The opposite also occurs. Sometimes there are no declarations defining the value
   - : The most fundamental concepts of CSS — the cascade, specificity, and inheritance — which control how CSS is applied to HTML and how conflicts are resolved.
 
 - [Learn: Cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
-  - : Introduction to {{cssxref("@layer", "cascade layers")}}, a more advanced feature that builds on the fundamental concepts of the [CSS cascade](/en-US/docs/Web/CSS/Guides/Cascade/Introduction) and [CSS specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity).
+  - : Introduction to [cascade layers](/en-US/docs/Web/CSS/Reference/At-rules/@layer), a more advanced feature that builds on the fundamental concepts of the [CSS cascade](/en-US/docs/Web/CSS/Guides/Cascade/Introduction) and [CSS specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity).
 
 ## Related concepts
 
