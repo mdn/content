@@ -37,6 +37,9 @@ Firefox 146 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - The {{cssxref("color_value/contrast-color()")}} [CSS function](/en-US/docs/Web/CSS/Reference/Values/Functions) is now supported. This function takes a {{cssxref("color_value","color")}} value and returns a contrasting color that ensures at least [WCAG AA minimum contrast](https://w3c.github.io/wcag/guidelines/22/#contrast-minimum).
   ([Firefox bug 1682439](https://bugzil.la/1682439)).
 
+- The CSS {{cssxref("color_value")}} now supports the `display-p3-linear` color space. The `display-p3-linear` color space is the same as `display-p3` except that the transfer function is linear-light and there is no gamma-encoding meaning there is a higher precision in the colors displayed.
+  ([Firefox bug 1996318](https://bugzil.la/1996318)).
+
 - The {{cssxref("text-decoration-inset")}} property is now supported, which enables adjusting the start and end points of an element's {{cssxref("text-decoration")}} so it can be shortened, lengthened, or have its position shifted with respect to the rendered text.
   ([Firefox bug 1979915](https://bugzil.la/1979915), [Firefox bug 1997157](https://bugzil.la/1997157), [Firefox bug 1993043](https://bugzil.la/1993043)).
 
