@@ -49,8 +49,8 @@ columns: 3;
 
 This property is a shorthand for the following CSS properties:
 
-- {{cssxref("column-count")}}
-- {{cssxref("column-width")}}
+- [`column-count`](/en-US/docs/Web/CSS/Reference/Properties/column-count)
+- [`column-width`](/en-US/docs/Web/CSS/Reference/Properties/column-width)
 
 ## Syntax
 

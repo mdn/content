@@ -12,8 +12,8 @@ The **`contain-intrinsic-size`** [CSS](/en-US/docs/Web/CSS) [shorthand property]
 
 This property is a shorthand for the following CSS properties:
 
-- {{cssxref("contain-intrinsic-width")}}
-- {{cssxref("contain-intrinsic-height")}}
+- [`contain-intrinsic-width`](/en-US/docs/Web/CSS/Reference/Properties/contain-intrinsic-width)
+- [`contain-intrinsic-height`](/en-US/docs/Web/CSS/Reference/Properties/contain-intrinsic-height)
 
 ## Syntax
 
@@ -62,7 +62,7 @@ If two `auto [<length> | none]` pairs are specified, the first pair applies to t
 
 ## Description
 
-The property is commonly applied alongside elements that can trigger size containment, such as [`contain: size`](/en-US/docs/Web/CSS/Reference/Properties/contain) and {{cssxref("content-visibility")}}.
+The property is commonly applied alongside elements that can trigger size containment, such as [`contain: size`](/en-US/docs/Web/CSS/Reference/Properties/contain) and [`content-visibility`](/en-US/docs/Web/CSS/Reference/Properties/content-visibility).
 
 Size containment allows a user agent to lay out an element as though it had a fixed size, preventing unnecessary reflows by avoiding the re-rendering of child elements to determine the actual size (thereby improving user experience).
 By default, size containment treats elements as though they had no contents, and may collapse the layout in the same way as if the contents had no width or height.

@@ -126,12 +126,12 @@ p {
 
 ## See also
 
-- {{cssxref("font-variant")}}
-- {{cssxref("font-variant-caps")}}
-- {{cssxref("font-variant-east-asian")}}
-- {{cssxref("font-variant-emoji")}}
-- {{cssxref("font-variant-ligatures")}}
-- {{cssxref("font-variant-numeric")}}
-- {{cssxref("font-variant-position")}}
-- {{cssxref("@font-feature-values")}}
-- {{cssxref("font-feature-settings")}}
+- [`font-variant`](/en-US/docs/Web/CSS/Reference/Properties/font-variant)
+- [`font-variant-caps`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-caps)
+- [`font-variant-east-asian`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-east-asian)
+- [`font-variant-emoji`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-emoji)
+- [`font-variant-ligatures`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-ligatures)
+- [`font-variant-numeric`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-numeric)
+- [`font-variant-position`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-position)
+- [`@font-feature-values`](/en-US/docs/Web/CSS/Reference/At-rules/@font-feature-values)
+- [`font-feature-settings`](/en-US/docs/Web/CSS/Reference/Properties/font-feature-settings)
