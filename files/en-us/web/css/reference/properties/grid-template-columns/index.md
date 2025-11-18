@@ -97,7 +97,7 @@ grid-template-columns: unset;
 - `none`
   - : Indicates that there is no explicit grid. Any columns will be implicitly generated and their size will be determined by the {{cssxref("grid-auto-columns")}} property.
 - `[line-name]`
-  - : A {{cssxref("&lt;custom-ident&gt;")}} specifying a name for the line in that location. The ident may be any valid string other than the reserved words `span` and `auto`. Lines may have multiple names separated by a space inside the square brackets, for example `[line-name-a line-name-b]`.
+  - : A [`<custom-ident>`](/en-US/docs/Web/CSS/Reference/Values/custom-ident) specifying a name for the line in that location. The ident may be any valid string other than the reserved words `span` and `auto`. Lines may have multiple names separated by a space inside the square brackets, for example `[line-name-a line-name-b]`.
 - {{cssxref("&lt;length&gt;")}}
   - : A non-negative length, giving the width of the column.
 - {{cssxref("&lt;percentage&gt;")}}
