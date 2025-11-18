@@ -6,7 +6,7 @@ browser-compat: css.properties.text-shadow
 sidebar: cssref
 ---
 
-The **`text-shadow`** [CSS](/en-US/docs/Web/CSS) property adds shadows to text. It accepts a comma-separated list of shadows to be applied to the text and any of its {{cssxref("decorations")}}. Each shadow is described by some combination of X and Y offsets from the element, blur radius, and color.
+The **`text-shadow`** [CSS](/en-US/docs/Web/CSS) property adds shadows to text. It accepts a comma-separated list of shadows to be applied to the text and any of its [`decorations`](/en-US/docs/Web/CSS/Reference/Properties/text-decoration). Each shadow is described by some combination of X and Y offsets from the element, blur radius, and color.
 
 {{InteractiveExample("CSS Demo: text-shadow")}}
 
