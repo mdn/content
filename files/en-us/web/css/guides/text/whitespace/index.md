@@ -368,7 +368,7 @@ There are a few ways of getting around this problem:
   }
   ```
 
-- If you need to rely on `inline-block`, you could set the {{cssxref("font-size")}} of the list to `0`. This only works if the blocks are not sized with `em` units (since `em` is based on `font-size`, the block size would also end up being sized as `0`). Using `rem` units would be a good choice here:
+- If you need to rely on `inline-block`, you could set the [`font-size`](/en-US/docs/Web/CSS/Reference/Properties/font-size) of the list to `0`. This only works if the blocks are not sized with `em` units (since `em` is based on `font-size`, the block size would also end up being sized as `0`). Using `rem` units would be a good choice here:
 
   ```css
   ul {

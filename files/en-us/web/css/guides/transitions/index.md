@@ -61,7 +61,7 @@ In certain cases, there is no originating "from" value for a transition. For exa
 - {{Glossary("Intrinsic size")}} glossary term
 
 - [CSS easing functions](/en-US/docs/Web/CSS/Guides/Easing_functions) module
-  - {{cssxref("&lt;easing-function&gt;")}} data-type
+  - [`<easing-function>`](/en-US/docs/Web/CSS/Reference/Values/easing-function) data-type
 
 - [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module.
   - {{cssxref("animation")}} shorthand
