@@ -38,7 +38,7 @@ sidebar: mdnsidebar
 > - **page-type**
 >   - : The `page-type` value for CSS module landing pages is always `css-module`.
 > - **spec-urls**
->   - : The `spec-urls` value is a URL of the specification or, in cases where there are multiple versions of the same specification, such as levels 1, 2, and 3, present them in a bulleted list.  For example, the `spec-urls` key for the [filter effects](/en-US/docs/Web/CSS/Guides/Filter_effects) module landing page is as follows:
+>   - : The `spec-urls` value is a URL of the specification or, in cases where there are multiple versions of the same specification, such as levels 1, 2, and 3, present them in a bulleted list. For example, the `spec-urls` key for the [filter effects](/en-US/docs/Web/CSS/Guides/Filter_effects) module landing page is as follows:
 >
 >     ```plain
 >   spec-urls: 
