@@ -107,8 +107,12 @@ In order to avoid any ambiguity, methods that take a `SanitizerConfig` instance 
 
 In a valid sanitizer configuration:
 
-- Either the `elements` or `removeElements` array may be defined, but not both
-- Either the `attributes` or `removeAttributes` array may be defined, but not both
+- Either the `elements` or `removeElements` array may be defined, but not both.
+
+  > [!NOTE]
+  > It is impossible to define per-element attributes if the `removeElements` array is defined, because these are added to elements in the `elements` array.
+
+- Either the global `attributes` or `removeAttributes` array may be defined, but not both
 - The `replaceWithChildrenElements` array, if defined, may not have any elements in common with `elements` or `removeElements`
 - No array may contain duplicate elements or attributes
 - If the global `attributes` array is defined:
@@ -127,11 +131,19 @@ The empty object `{}` is a valid configuration.
 > The conditions above are from the perspective of a web developer.
 > The [validity check defined in the specification](https://wicg.github.io/sanitizer-api/#sanitizerconfig-valid) is slightly different because it is executed after canonicalization of the configuration, such as adding `removeElements` when both are missing, and adding default namespaces.
 
+### Allow and remove configurations
+
+One of the main implications of the previous section is that a valid configuration can specify either `elements` or `removeElements` arrays (but not both) and either the `attributes` or `removeAttributes` arrays (but not both).
+
+A configuration that has the `elements` and/or `attributes` arrays is referred to as an [allow configuration](/en-US/docs/Web/API/HTML_Sanitizer_API#allow_configurations), as it defines the sanitization behavior in terms of the values that are allowed to be present in the output.
+A [remove configuration](/en-US/docs/Web/API/HTML_Sanitizer_API#remove_configurations) is one that has either of `removeElements` and/or `removeAttributes`, and defines the behavior in terms of the values that will be removed from the output.
+
 ## Examples
 
 ### Creating an "allow" configuration
 
-This example shows how you might create an "allow" sanitizer configuration, and in this case pass it to the {{domxref("Sanitizer.Sanitizer", "Sanitizer()")}} constructor.
+This example shows how you might create an "allow" sanitizer configuration that allows specific elements and attributes, replaces {{htmlelement("b")}} elements with their children, allows comments to be included in the output, and requires that `data-*` attributes are explicitly listed in the `attributes` array to be included.
+The configuration object is passed to the {{domxref("Sanitizer.Sanitizer", "Sanitizer()")}} constructor.
 
 ```js
 const sanitizer = new Sanitizer({
@@ -143,11 +155,9 @@ const sanitizer = new Sanitizer({
 });
 ```
 
-Note that you cannot specify both allow and remove lists in the same configuration without causing an exception when passing the configuration to the constructor or a sanitization method.
-
 ### Creating a "remove" configuration
 
-This example shows how you might create a "remove" sanitizer configuration, and in this case pass it to the {{domxref("Sanitizer.Sanitizer", "Sanitizer()")}} constructor.
+This example shows how you might create a "remove" sanitizer configuration that removes both elements and attributes.
 
 ```js
 const sanitizer = new Sanitizer({
@@ -157,7 +167,60 @@ const sanitizer = new Sanitizer({
 });
 ```
 
-Note that you cannot specify both allow and remove lists in the same configuration without causing an exception when passing the configuration to the constructor or a sanitization method.
+### Allow element and remove attribute configuration
+
+This example shows how you might create a "hybrid" sanitizer configuration that allows some elements and removes certain attributes.
+You might similarly specify a configuration that removes elements and allows attributes.
+
+```js
+const sanitizer = new Sanitizer({
+  elements: ["span", "script"],
+  removeAttributes: ["lang", "id"],
+});
+```
+
+Note that you having both allow and remove arrays for elements, or both allow and remove arrays for attributes is not a [valid configuration](#valid_configuration), and would result in a `TypeError`.
+
+### Invalid configurations
+
+This sections shows a number of invalid configurations.
+These will throw a `TypeError`.
+
+Invalid because both `elements` and `removeElements` are defined:
+
+```js
+const sanitizer1 = new Sanitizer({
+  elements: ["span", "script"],
+  removeElements: ["div", "b"],
+});
+```
+
+Invalid because {{htmlelement("span")}} is in both `elements` and `removeElements`.
+
+```js
+const sanitizer2 = new Sanitizer({
+  elements: ["span", "div"],
+  replaceWithChildrenElements: ["span"],
+});
+```
+
+Invalid because the redundant attribute `"data-test"` is defined when `dataAttributes` is true:
+
+```js
+const sanitizer3 = new Sanitizer({
+  attributes: ["lang", "id", "data-test"],
+  datatAttributes: true,
+}); …
+```
+
+Invalid because it has `removeAttributes` and `datatAttributes` defined.
+
+```js
+const sanitizer4 = new Sanitizer({
+  removeAttributes: ["lang", "id"],
+  dataAttributes: true,
+}); …
+```
 
 ## Specifications
 

@@ -12,14 +12,6 @@ browser-compat: api.Sanitizer.Sanitizer
 
 The **`Sanitizer()`** constructor creates a new {{domxref("Sanitizer")}} object, which can be used to filter unwanted elements and attributes from HTML or documents before they are inserted/parsed into the DOM.
 
-The default `Sanitizer()` configuration allows only XSS-safe input by default, omitting elements such as {{HTMLElement("script")}}, {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, `<use>`, and event handler attributes from their respective allow lists, and disallowing data attributes, and comments.
-
-The constructor `configuration` option can be used to customize the sanitizer behavior.
-
-<!--
-Either here or in the config (or both) explain what an (in)valid config looks like
--->
-
 ## Syntax
 
 ```js-nolint
@@ -30,7 +22,7 @@ new Sanitizer(configuration)
 ### Parameters
 
 - `configuration` {{optional_inline}}
-  - : A {{domxref("SanitizerConfig")}} defining a sanitizer configuration, or the string `"default"` to indicate the default configuration.
+  - : A {{domxref("SanitizerConfig")}} defining a [valid configuration](/en-US/docs/Web/API/SanitizerConfig#valid_configuration), or the string `"default"` to indicate the default configuration.
 
 ### Returns
 
@@ -40,9 +32,26 @@ An instance of the {{domxref("Sanitizer")}} object.
 
 - {{jsxref("TypeError")}}
   - : The `configuration` parameter is passed a:
-    - {{domxref("SanitizerConfig")}} that isn't a [valid configuration](/en-US/docs/Web/API/SanitizerConfig#valid_configuration).
+    - {{domxref("SanitizerConfig")}} that isn't a valid configuration.
       For example, a configuration that includes both "allowed" and "removed" configuration settings.
     - String that does not have the value `"default"`.
+
+## Description
+
+The constructor creates a new {{domxref("Sanitizer")}} object, which can be used to filter unwanted elements and attributes from HTML or documents before they are inserted/parsed into the DOM.
+
+The default `Sanitizer` allows only XSS-safe input by default, omitting elements such as {{HTMLElement("script")}}, {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, `<use>`, and event handler attributes from their respective allow lists, and disallowing data attributes, and comments.
+It is created if `"default"` or no object is passed to the constructor.
+
+The constructor can be passed a {{domxref("SanitizerConfig")}} with a [valid configuration](/en-US/docs/Web/API/SanitizerConfig#valid_configuration) to customize the sanitizer behavior.
+
+### Allow and remove configuration is persistent
+
+A valid configuration can specify either `elements` or `removeElements` arrays (but not both) and either the `attributes` or `removeAttributes` arrays (but not both).
+The arrays that are defined when the object is constructed persist for its lifetime, and their contents may be modified by the `Sanitizer` methods.
+In most cases which arrays are defined does not particularly matter because, for example, the {{domxref("Sanitizer/allowAttribute","allowAttribute()")}} method can implement the same behavior by adding the attribute to the `attributes` array or by removing it from the `removeAttributes` array.
+
+The main case to note is that if you have a remove configuration then you cannot have per-element attributes, as these must be defined on the `elements` array.
 
 ## Examples
 
@@ -97,7 +106,7 @@ log(JSON.stringify(defaultConfig, null, 2));
 #### Results
 
 The output is logged below.
-Note that the default configuration is quite big, allowing many elements and attributes.
+Note that the default configuration is an allow configuration, having both `elements` and `attributes` arrays that contain the elements that are allowed when the sanitizer is used.
 
 {{EmbedLiveSample("Creating the default sanitizer","100","480px")}}
 
