@@ -56,6 +56,7 @@
 /* @mdn/engineering
 # Markdown files in root directory
 /*.md @mdn/content-team
+/SECURITY.md @mdn/engineering
 # Scripts and Tests
 /scripts @mdn/engineering
 /tests   @mdn/engineering
