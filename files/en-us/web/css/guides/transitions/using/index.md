@@ -186,7 +186,7 @@ This CSS establishes the look of the menu, with the background and text colors b
 
 ### Transitioning display and content-visibility
 
-This example demonstrates how {{cssxref("display")}} and {{cssxref("content-visibility")}} can be transitioned. This behavior is useful for creating entry/exit animations where you want to for example remove a container from the DOM with `display: none`, but have it fade out with {{cssxref("opacity")}} rather than disappearing immediately.
+This example demonstrates how [`display`](/en-US/docs/Web/CSS/Reference/Properties/display) and [`content-visibility`](/en-US/docs/Web/CSS/Reference/Properties/content-visibility) can be transitioned. This behavior is useful for creating entry/exit animations where you want to for example remove a container from the DOM with `display: none`, but have it fade out with [`opacity`](/en-US/docs/Web/CSS/Reference/Properties/opacity) rather than disappearing immediately.
 
 Supporting browsers transition `display` and `content-visibility` with a variation on the [discrete animation type](/en-US/docs/Web/CSS/Guides/Animations/Animatable_properties#discrete). This generally means that properties will flip between two values 50% through animating between the two.
 
@@ -199,7 +199,7 @@ So for example:
 
 When transitioning these properties [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/Reference/Properties/transition-behavior) needs to be set on the transitions. This effectively enables `display`/`content-visibility` transitions.
 
-When transitioning `display`, {{cssxref("@starting-style")}} is needed to provide a set of starting values for properties set on an element that you want to transition from when the element receives its first style update. This is needed to avoid unexpected behavior. By default, CSS transitions are not triggered on elements' first style updates when they first appear in the DOM, which includes when `display` changes from `none` to another state. `content-visibility` animations do not need starting values specified in a `@starting-style` block. This is because `content-visibility` doesn't hide an element from the DOM like `display` does: it just skips rendering the element's content.
+When transitioning `display`, [`@starting-style`](/en-US/docs/Web/CSS/Reference/At-rules/@starting-style) is needed to provide a set of starting values for properties set on an element that you want to transition from when the element receives its first style update. This is needed to avoid unexpected behavior. By default, CSS transitions are not triggered on elements' first style updates when they first appear in the DOM, which includes when `display` changes from `none` to another state. `content-visibility` animations do not need starting values specified in a `@starting-style` block. This is because `content-visibility` doesn't hide an element from the DOM like `display` does: it just skips rendering the element's content.
 
 #### HTML
 

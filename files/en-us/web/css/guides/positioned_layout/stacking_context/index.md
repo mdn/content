@@ -41,8 +41,8 @@ A stacking context is formed, anywhere in the document, by any element in the fo
 - Element with the {{cssxref("isolation")}} value `isolate`.
 - Element with a {{cssxref("will-change")}} value specifying any property that would create a stacking context on non-initial value.
 - Element with a {{cssxref("contain")}} value of `layout` or `paint`, or a composite value that includes either of these values (i.e., `contain: strict`, `contain: content`).
-- Element placed into the {{glossary("top layer")}} and its corresponding {{cssxref("::backdrop")}}. Examples include [fullscreen](/en-US/docs/Web/API/Fullscreen_API) and [popover](/en-US/docs/Web/API/Popover_API) elements.
-- Element that has had stacking context-creating properties (such as `opacity`) animated using {{cssxref("@keyframes")}}, with {{cssxref("animation-fill-mode")}} set to [`forwards`](/en-US/docs/Web/CSS/Reference/Properties/animation-fill-mode#forwards).
+- Element placed into the [top layer](/en-US/docs/Glossary/Top_layer) and its corresponding {{cssxref("::backdrop")}}. Examples include [fullscreen](/en-US/docs/Web/API/Fullscreen_API) and [popover](/en-US/docs/Web/API/Popover_API) elements.
+- Element that has had stacking context-creating properties (such as `opacity`) animated using {{cssxref("@keyframes")}}, with [`animation-fill-mode`](/en-US/docs/Web/CSS/Reference/Properties/animation-fill-mode) set to [`forwards`](/en-US/docs/Web/CSS/Reference/Properties/animation-fill-mode#forwards).
 
 ## Nested stacking contexts
 

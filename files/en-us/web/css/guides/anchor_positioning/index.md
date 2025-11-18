@@ -42,7 +42,7 @@ The CSS anchor positioning module also introduces the `anchor-scope` property. C
 - [`anchor-center`](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using#centering_on_the_anchor_using_anchor-center)
 - [`<anchor-side>`](/en-US/docs/Web/CSS/Reference/Values/anchor#anchor-side)
 - [`<anchor-size>`](/en-US/docs/Web/CSS/Reference/Values/anchor-size#anchor-size)
-- {{cssxref("&lt;position-area&gt;")}}
+- [`<position-area>`](/en-US/docs/Web/CSS/Reference/Values/position-area_value)
 - [`<try-size>`](/en-US/docs/Web/CSS/Reference/Properties/position-try-order#try-size)
 - [`<try-tactic>`](/en-US/docs/Web/CSS/Reference/Properties/position-try-fallbacks#try-tactic)
 
@@ -86,7 +86,7 @@ The CSS anchor positioning module also introduces the `anchor-scope` property. C
   - {{cssxref("margin-inline")}}
   - {{cssxref("margin-inline-end")}}
   - {{cssxref("margin-inline-start")}}
-  - {{glossary("Inset properties")}} glossary term
+  - [Inset properties](/en-US/docs/Glossary/Inset_properties) glossary term
 - [CSS positioned layout](/en-US/docs/Web/CSS/Guides/Positioned_layout) module:
   - {{cssxref("top")}}
   - {{cssxref("left")}}

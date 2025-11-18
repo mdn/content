@@ -27,7 +27,7 @@ The `filter` and `backdrop-filter` properties accept a space-separated list of f
 
 The CSS filter effects module provides 10 [`<filter-function>`](/en-US/docs/Web/CSS/Reference/Properties/filter#functions) functions, as well as the ability to define an almost endless array of effects using SVG filters applied via a `url()` reference.
 
-The following table lists the 10 filter functions, along with their value types, the minimum valid value if applicable, the largest value that creates an effect, and the initial value used for {{glossary("interpolation")}}.
+The following table lists the 10 filter functions, along with their value types, the minimum valid value if applicable, the largest value that creates an effect, and the initial value used for [interpolation](/en-US/docs/Glossary/Interpolation).
 
 | Filter function                                             | Parameter type                                                     | Min value | Max effect | Default value (no effect) |
 | ----------------------------------------------------------- | ------------------------------------------------------------------ | --------- | ---------- | ------------------------- |
@@ -254,7 +254,7 @@ Just like the {{cssxref("filter-function/blur", "blur()")}} filter function appl
 
 In both the cases, the blur radius value, specified as a {{cssxref("&lt;length&gt;")}} in CSS and as a pixel equivalent {{cssxref("&lt;number&gt;")}} in SVG, defines the value of the standard deviation to the Gaussian function. In other words, it defines the number of pixels on the screen that blend into each other; a larger value creates more blur.
 
-The {{svgelement("filter")}}'s {{SVGAttr("stdDeviation")}} attribute accepts up to two values enabling creating more complex blur values. To create an equivalent blur, we include one value for `stdDeviation`:
+The [`<filter>`](/en-US/docs/Web/SVG/Reference/Element/filter)'s {{SVGAttr("stdDeviation")}} attribute accepts up to two values enabling creating more complex blur values. To create an equivalent blur, we include one value for `stdDeviation`:
 
 ```html hidden
 <table>
@@ -300,7 +300,7 @@ The {{svgelement("filter")}}'s {{SVGAttr("stdDeviation")}} attribute accepts up 
 </svg>
 ```
 
-The SVG `url()` filter value can be included as the value of the SVG {{svgelement("image")}} element's {{svgattr("filter")}} attribute or as part of the value of the CSS `filter` and `backdrop-filter` properties.
+The SVG `url()` filter value can be included as the value of the SVG [`<image>`](/en-US/docs/Web/SVG/Reference/Element/image) element's [`filter`](/en-US/docs/Web/SVG/Reference/Attribute/filter) attribute or as part of the value of the CSS `filter` and `backdrop-filter` properties.
 
 ```css hidden
 th,

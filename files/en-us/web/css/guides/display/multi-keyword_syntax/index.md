@@ -6,7 +6,7 @@ page-type: guide
 sidebar: cssref
 ---
 
-The [CSS display module](/en-US/docs/Web/CSS/Guides/Display) defines a multi-keyword syntax for the CSS {{cssxref("display")}} property. This guide explains the multi-keyword syntax.
+The [CSS display module](/en-US/docs/Web/CSS/Guides/Display) defines a multi-keyword syntax for the CSS [`display`](/en-US/docs/Web/CSS/Reference/Properties/display) property. This guide explains the multi-keyword syntax.
 
 > [!NOTE]
 > Multi-keyword syntax is also referred to as "two-value syntax" or "multi-value syntax."
@@ -226,7 +226,7 @@ p {
 <p id="sibling">The #sibling paragraph (sibling of #parent).</p>
 ```
 
-{{EmbedLiveSample("display_block_flow-root_and_display_inline_flow-root", '90%', 580)}}
+{{EmbedLiveSample("display_block_flow-root_and_display_inline_flow-root", '90%', 380)}}
 
 The `flow-root` value makes sense if you think about block and inline layout, which is sometimes called [normal flow](/en-US/docs/Learn_web_development/Core/CSS_layout/Introduction#normal_layout_flow). Our HTML page creates a new formatting context (floats and margins cannot extend out from the boundaries) and our content lays out in normal flow, using block and inline layout, unless we change the value of `display` to use some other formatting context. Creating a grid or flex container also creates a new formatting context (a grid or flex formatting context, respectively.) These also contain everything inside them. However, if you want to contain floats and margins but continue using block and inline layout, you can create a new flow root, and start over with block and inline layout. From that point downwards everything is contained inside the new flow root.
 

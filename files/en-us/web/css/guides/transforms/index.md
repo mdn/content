@@ -655,9 +655,9 @@ updateTransform();
 
 {{EmbedLiveSample("transforms", "", "850px")}}
 
-You can also use the `perspective` slider to modify the {{cssxref("perspective")}} property of the cube's container, which determines the distance between you and the `z=0` plane.
+You can also use the `perspective` slider to modify the [`perspective`](/en-US/docs/Web/CSS/Reference/Properties/perspective) property of the cube's container, which determines the distance between you and the `z=0` plane.
 
-The {{cssxref("perspective-origin")}} sliders determine where you, the viewer, are looking into the 3D space for purposes of determining the view's _vanishing point_. This vanishing point is indicated by a small red dot. You can imagine modifying these sliders as physically moving your head up, down, left, and right to see different parts of the cube without moving the cube itself.
+The [`perspective-origin`](/en-US/docs/Web/CSS/Reference/Properties/perspective-origin) sliders determine where you, the viewer, are looking into the 3D space for purposes of determining the view's _vanishing point_. This vanishing point is indicated by a small red dot. You can imagine modifying these sliders as physically moving your head up, down, left, and right to see different parts of the cube without moving the cube itself.
 
 The `backface-visibility` checkbox determines whether the cube's back faces are set to `visible` or `hidden`.
 
@@ -723,36 +723,36 @@ The cube in the above example is comprised of six `<div>` elements, all of which
 ## Related concepts
 
 - CSS Properties:
-  - {{cssxref("animation")}}
-  - {{cssxref("background-position")}}
-  - {{cssxref("clip")}}
-  - {{cssxref("clip-path")}}
-  - {{cssxref("contain")}}
-  - {{cssxref("content-visibility")}}
-  - {{cssxref("isolation")}}
-  - {{cssxref("mask")}}
-  - {{cssxref("mask-border-source")}}
-  - {{cssxref("mask-image")}}
-  - {{cssxref("mix-blend-mode")}}
-  - {{cssxref("opacity")}}
-  - {{cssxref("overflow")}}
-  - {{cssxref("transition")}}
-  - {{cssxref("visibility")}}
+  - [`animation`](/en-US/docs/Web/CSS/Reference/Properties/animation)
+  - [`background-position`](/en-US/docs/Web/CSS/Reference/Properties/background-position)
+  - [`clip`](/en-US/docs/Web/CSS/Reference/Properties/clip)
+  - [`clip-path`](/en-US/docs/Web/CSS/Reference/Properties/clip-path)
+  - [`contain`](/en-US/docs/Web/CSS/Reference/Properties/contain)
+  - [`content-visibility`](/en-US/docs/Web/CSS/Reference/Properties/content-visibility)
+  - [`isolation`](/en-US/docs/Web/CSS/Reference/Properties/isolation)
+  - [`mask`](/en-US/docs/Web/CSS/Reference/Properties/mask)
+  - [`mask-border-source`](/en-US/docs/Web/CSS/Reference/Properties/mask-border-source)
+  - [`mask-image`](/en-US/docs/Web/CSS/Reference/Properties/mask-image)
+  - [`mix-blend-mode`](/en-US/docs/Web/CSS/Reference/Properties/mix-blend-mode)
+  - [`opacity`](/en-US/docs/Web/CSS/Reference/Properties/opacity)
+  - [`overflow`](/en-US/docs/Web/CSS/Reference/Properties/overflow)
+  - [`transition`](/en-US/docs/Web/CSS/Reference/Properties/transition)
+  - [`visibility`](/en-US/docs/Web/CSS/Reference/Properties/visibility)
 - Data types:
-  - {{cssxref("&lt;angle&gt;")}}
+  - [`<angle>`](/en-US/docs/Web/CSS/Reference/Values/angle)
   - {{cssxref("length-percentage")}}
   - {{cssxref("length")}}
-  - {{cssxref("&lt;number&gt;")}}
+  - [`<number>`](/en-US/docs/Web/CSS/Reference/Values/number)
   - {{cssxref("percentage")}}
-  - {{cssxref("&lt;position&gt;")}}
+  - [`<position>`](/en-US/docs/Web/CSS/Reference/Values/position_value)
 - Glossary terms:
   - [Interpolation](/en-US/docs/Glossary/Interpolation)
   - [Stacking context](/en-US/docs/Glossary/Stacking_context)
 - [SVG](/en-US/docs/Web/SVG) concepts:
-  - {{svgelement("animate")}} element
-  - {{svgelement("animateTransform")}} element
-  - {{svgelement("set")}} element
-  - {{svgattr("transform")}} element
+  - [`<animate>`](/en-US/docs/Web/SVG/Reference/Element/animate) element
+  - [`<animateTransform>`](/en-US/docs/Web/SVG/Reference/Element/animateTransform) element
+  - [`<set>`](/en-US/docs/Web/SVG/Reference/Element/set) element
+  - [`transform`](/en-US/docs/Web/SVG/Reference/Attribute/transform) element
 
 ## Specifications
 
