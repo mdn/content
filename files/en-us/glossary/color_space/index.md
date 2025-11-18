@@ -39,7 +39,7 @@ The `rgb()` color function is not the only color function that can represent the
   - : Defined by Apple, the [**Display P3**](https://www.color.org/chardata/rgb/DisplayP3.xalter), color space combines the DCI-P3 color gamut, the D65 whitepoint, and sRGB gamma curve. It is a wide gamut space typical of current wide-gamut monitors, enabling more vibrant greens and reds than the sRGB color gamut. The `display-p3` is based on `r`, `g`, and `b`, with in-gamut values ranging from `0` to `1`. The whitepoint is D65.
 
 - `display-p3-linear` color space
-  - : The `display-p3-linear` predefined color space is the same as `display-p3` except that the transfer function is linear-light (there is no gamma-encoding) and there for has a high precision in the colors displayed. The `display-p3-linear` is based on `r`, `g`, and `b`, with in-gamut values ranging from `0` to `1`. The whitepoint is D65.
+  - : The `display-p3-linear` predefined color space is similar to `display-p3`, except that it uses a linear-light transfer function and has no gamma-encoding, which allows for a higher precision in the colors displayed. The `display-p3-linear` space is based on `r`, `g`, and `b` channels, with in-gamut values ranging from `0` to `1`. The whitepoint is D65.
 
 - `a98-rgb` color space
   - : `a98-rgb` is the Adobe® 1998 RGB color space designed to represent all the CMYK colors as RGB. About 50% of the visible colors specified by the [CIELab color space](#cielab_color_spaces) can be achieved, encompassing more cyan-green hues than other RGB color spaces. In-gamut `r`, `g`, and `b` values range from `0` to `1`. The transfer curve is a gamma function, close to but not exactly 1/2.2. The whitepoint is D65.
