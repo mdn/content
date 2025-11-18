@@ -101,4 +101,4 @@ p {
 
 ## See also
 
-- {{cssxref("text-decoration-skip-ink")}}
+- [`text-decoration-skip-ink`](/en-US/docs/Web/CSS/Reference/Properties/text-decoration-skip-ink)
