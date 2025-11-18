@@ -1,7 +1,8 @@
----
+gin---
 title: Using the HTML Sanitizer API
 slug: Web/API/HTML_Sanitizer_API/Using_the_HTML_Sanitizer_API
 page-type: guide
+
 ---
 
 {{DefaultAPISidebar("HTML Sanitizer API")}}
@@ -28,7 +29,7 @@ console.log(someElement.innerHTML); // abc def
 
 The other XSS-safe methods, {{domxref('ShadowRoot.setHTML()')}} and {{domxref('Document/parseHTML_static','Document.parseHTML()')}}, are used in the same way.
 
-### Safe methods further restrict allowed entities
+### Safe methods can further restrict allowed entities
 
 You can specify the HTML entities that you want to allow or remove by passing a {{domxref('Sanitizer')}} in the second argument of all the sanitizer methods.
 
@@ -46,9 +47,9 @@ When used with the safe methods, a permissive sanitizer configuration, will eith
 ## Allowing unsafe sanitization
 
 Sometimes you might want to inject input needs to contain potentially unsafe elements or attributes.
-In this case you can use one of the API XSS-unsafe methods: {{domxref('Element.setHTMLUnsafe()')}}, {{domxref('ShadowRoot.setHTMLUnsafe()')}}, and {{domxref('Document/parseHTMLUnsafe_static','Document.parseHTMLUnsafe()')}}.
+In this case you might use one of the API XSS-unsafe methods: {{domxref('Element.setHTMLUnsafe()')}}, {{domxref('ShadowRoot.setHTMLUnsafe()')}}, and {{domxref('Document/parseHTMLUnsafe_static','Document.parseHTMLUnsafe()')}}.
 
-A common approach is to start from the default sanitizer, which only allows safe elements, and then allow just those unsafe entities that we expect in the input.
+One options is to first construct the default sanitizer, which only allows XSS-safe elements, and then allow just those unsafe entities that we expect in the input.
 
 For example, in the following sanitizer all safe elements are allowed, and we further allow the unsafe `onclick` handler on `button` elements (only).
 
@@ -111,7 +112,7 @@ const sanitizer = new Sanitizer({
 });
 ```
 
-You can add the elements to the `Sanitizer` using its API.
+You can also add the elements to a `Sanitizer` using {{domxref("Sanitizer.allowElement()")}}.
 Here we add the same elements to an empty sanitizer:
 
 ```js
@@ -152,7 +153,7 @@ const sanitizer = new Sanitizer({
 });
 ```
 
-You can also add each of the allowed attributes to the `Sanitizer` using its `allowAttribute()` method:
+You can also add each of the allowed attributes to a `Sanitizer` using the {{domxref("Sanitizer.allowAttribute()")}} method:
 
 ```js
 const sanitizer = new Sanitizer({});
@@ -192,7 +193,8 @@ const sanitizer = new Sanitizer({
 In both cases you can also specify each attribute as an object with `name` and `namespace` properties.
 You can also use set the attribute properties using the same element object passed to {{domxref("Sanitizer.allowElement()")}}.
 
-Note however that you can't specify both element `attributes` and `removeAttributes` in one call. Attempting to do so will raise an exception.
+Note that it is impossible to define per-element attribute behavior on a Sanitizer with a remove configuration, as the (needed) `elements` array is not present.
+Other restrictions on per-element attributes are covered in [valid configurations](/en-US/docs/Web/API/SanitizerConfig#valid_configuration)
 
 ### Replacing child elements
 
@@ -296,9 +298,9 @@ sanitizer.removeAttribute("lang");
 
 ## Comments and data attributes
 
-The {{domxref("SanitizerConfig")}} can also be used to specify whether comments and `data-` attributes will be filtered from injected content, using the [comments](/en-US/docs/Web/API/SanitizerConfig#comments) and [dataAttributes](/en-US/docs/Web/API/SanitizerConfig#dataattributes) boolean properties, respectively.
+The {{domxref("SanitizerConfig")}} can also be used to specify whether comments will be filtered from injected content, using the [comments](/en-US/docs/Web/API/SanitizerConfig#comments) property, and whether `data-` attributes are allowed without having to add them to the `attributes` array using the [dataAttributes](/en-US/docs/Web/API/SanitizerConfig#dataattributes) boolean property.
 
-To allow both comments and data attributes you might use a configuration like this:
+To allow comments and all `data-*` attributes you might use a configuration like this:
 
 ```js
 const sanitizer = new Sanitizer({
@@ -307,7 +309,7 @@ const sanitizer = new Sanitizer({
 });
 ```
 
-You can similarly enable or disable the comments or data-attributes on an existing sanitizer using {{domxref("Sanitizer.setComments()")}} and {{domxref("Sanitizer.setDataAttributes()")}} methods:
+You can similarly set the comments or data-attributes properties on an existing sanitizer using {{domxref("Sanitizer.setComments()")}} and {{domxref("Sanitizer.setDataAttributes()")}} methods:
 
 ```js
 const sanitizer = new Sanitizer({});
@@ -319,15 +321,19 @@ sanitizer.setDataAttributes(true);
 
 All the sanitization methods can be passed a sanitizer configuration that is either a {{domxref("Sanitizer")}} or {{domxref("SanitizerConfig")}} instance.
 
+The {{domxref("SanitizerConfig")}} provides a compact method for specifying multiple elements or attributes that should be allowed or removed at the same time.
+Some care may be required when modifying this object to ensure that it remains a [valid configuration](/en-US/docs/Web/API/SanitizerConfig#valid_configuration).
+
 The {{domxref("Sanitizer")}} object is a wrapper around {{domxref("SanitizerConfig")}} that provides additional useful functionality:
 
 - The default constructor creates a configuration that allows all XSS-safe elements and attributes, and which is therefore a good starting point for creating either slightly more or slightly less restrictive sanitizers.
-- When you use the methods to allow or remove HTML entities, the entities are removed from the "opposite" lists.
-  These normalizations make the configuration more efficient.
+- The `Sanitizer` methods ensure that the underlying `SanitizerConfig` remains a [valid configuration](/en-US/docs/Web/API/SanitizerConfig#valid_configuration).
+  For example, if you call `allowElement()` to allow an element then the element would also be removed from the underlying `replaceWithChildrenElements` array (if present).
+  The normalizations make the configuration more efficient.
 - The {{domxref("Sanitizer.removeUnsafe()")}} method can be used to remove all XSS-unsafe entities from an existing configuration.
 - You can export the configuration to see exactly what entities are allowed and dropped.
 
-Note though, if you can use the safe sanitization methods, then you may not need to define a sanitizer configuration at all.
+Note that if you can use the safe sanitization methods, then you may not need to define a sanitizer configuration at all.
 
 ## Examples
 

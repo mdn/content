@@ -31,7 +31,7 @@ setDataAttributes(allow);
 
 ## Examples
 
-### How to sanitize data attributes
+### Basic usage
 
 The code below shows the basic usage of the `setDataAttributes()` method.
 
@@ -42,7 +42,8 @@ const sanitizer = new Sanitizer();
 // Allow all data-* attributes
 sanitizer.setDataAttributes(true);
 
-// Require data-* attributes be added explicitly
+// data-* attributes are allowed by adding them
+// to the attributes array
 sanitizer.setDataAttributes(false);
 ```
 
