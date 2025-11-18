@@ -91,9 +91,9 @@ The values of this property are applied to list items, including {{HTMLElement("
 
 This property is a shorthand for the following CSS properties:
 
-- {{cssxref("list-style-image")}}
-- {{cssxref("list-style-position")}}
-- {{cssxref("list-style-type")}}
+- [`list-style-image`](/en-US/docs/Web/CSS/Reference/Properties/list-style-image)
+- [`list-style-position`](/en-US/docs/Web/CSS/Reference/Properties/list-style-position)
+- [`list-style-type`](/en-US/docs/Web/CSS/Reference/Properties/list-style-type)
 
 ## Syntax
 
