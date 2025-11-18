@@ -12,7 +12,7 @@ sidebar: mdnsidebar
 >
 > **Page front matter:**
 >
-> The front matter at the top of the page is used to define "page metadata".
+> The front matter at the top of the page defines "page metadata".
 > The values should be updated appropriately for the particular module.
 >
 > ```md
@@ -38,7 +38,7 @@ sidebar: mdnsidebar
 > - **page-type**
 >   - : The `page-type` value for CSS module landing pages is always `css-module`.
 > - **spec-urls**
->   - : The `spec-urls` value is a URL of the specification or bulleted list of the URLs of the multiple levels of the same specification in cases where there are multiple versions of a specification, such as levels 1, 2, and 3. Include only the modules that are revisions of a single spec, in descending order. For example, the `spec-urls` key for the [filter effects](/en-US/docs/Web/CSS/Guides/Filter_effects) module landing page is as follows:
+>   - : The `spec-urls` value is a URL of the specification or a bulleted list of the URLs of multiple levels of the same specification in cases where there are multiple versions of a specification, such as levels 1, 2, and 3. Include only the modules that are revisions of a single spec, in descending order. For example, the `spec-urls` key for the [filter effects](/en-US/docs/Web/CSS/Guides/Filter_effects) module landing page is as follows:
 >
 > ```plain
 > spec-urls:
@@ -71,7 +71,7 @@ Create the relevant subsections to list the related properties, functions, data 
 
 A list of all shorthand and longhand properties provided by the module that are supported in at least one major browser.
 
-Add a paragraph stating the properties that are introduced by the module but not yet supported in any browser, if any.
+Add a paragraph stating the properties introduced by the module that are not yet supported by any browser, if any.
 
 Omit this section if the module does not define any properties.
 
@@ -79,7 +79,7 @@ Omit this section if the module does not define any properties.
 
 A list of CSS at-rules provided by the module that are supported in at least one major browser.
 
-Add a paragraph stating the at-rules introduced by the module but not yet supported in any browser, if any.
+Add a paragraph stating the at-rules introduced by the module that are not yet supported by any browser, if any.
 
 Omit this section if the module does not define any at-rules.
 
@@ -87,7 +87,7 @@ Omit this section if the module does not define any at-rules.
 
 A list of CSS functions provided by the module that are supported in at least one major browser.
 
-Add a paragraph stating the functions introduced by the module but not yet supported in any browser, if any.
+Add a paragraph stating the functions introduced by the module that are not yet supported by any browser, if any.
 
 Omit this section if the module does not define any CSS functions.
 
@@ -95,7 +95,7 @@ Omit this section if the module does not define any CSS functions.
 
 A list of CSS data types provided by the module that are supported in at least one major browser.
 
-Add a paragraph stating the data-types introduced by the module but not yet supported in any browser, if any.
+Add a paragraph stating the data types introduced by the module that are not yet supported by any browser, if any.
 
 Omit this section if the module does not define any data types.
 
@@ -103,7 +103,7 @@ Omit this section if the module does not define any data types.
 
 A list of API events provided by the module that are supported in at least one major browser.
 
-Add a paragraph stating the events introduced by the module but not yet supported in any browser, if any.
+Add a paragraph stating the events introduced by the module that are not yet supported by any browser, if any.
 
 Omit this section if the module does not define any events.
 
@@ -111,7 +111,7 @@ Omit this section if the module does not define any events.
 
 A list of the related API interfaces provided by the module that are supported in at least one major browser.
 
-Add a paragraph stating the interfaces introduced by the module but not yet supported in any browser, if any.
+Add a paragraph stating the interfaces introduced by the module that are not yet supported by any browser, if any.
 
 Omit this section if the module does not define any API interfaces.
 
