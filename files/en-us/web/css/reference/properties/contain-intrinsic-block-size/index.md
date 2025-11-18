@@ -45,7 +45,7 @@ The following values can be specified for the intrinsic block size of an element
 
 ## Description
 
-The property is commonly applied alongside elements that can trigger size containment, such as [`contain: size`](/en-US/docs/Web/CSS/Reference/Properties/contain) and {{cssxref("content-visibility")}}.
+The property is commonly applied alongside elements that can trigger size containment, such as [`contain: size`](/en-US/docs/Web/CSS/Reference/Properties/contain) and [`content-visibility`](/en-US/docs/Web/CSS/Reference/Properties/content-visibility).
 
 Size containment allows a user agent to lay out an element as though it had a fixed size.
 This prevents unnecessary reflows by avoiding the re-rendering of child elements to determine the actual size (thereby improving user experience).
@@ -76,7 +76,7 @@ The HTML below defines an element "contained_element" that will be subject to si
 </div>
 ```
 
-The CSS below sets the {{cssxref("content-visibility")}} of `contained_element` to `auto`, so if the element is hidden it will be size constrained.
+The CSS below sets the [`content-visibility`](/en-US/docs/Web/CSS/Reference/Properties/content-visibility) of `contained_element` to `auto`, so if the element is hidden it will be size constrained.
 The intrinsic block size and inline size that are used when it is size constrained are set at the same time using `contain-intrinsic-block-size` and `contain-intrinsic-inline-size`, respectively.
 
 ```css
