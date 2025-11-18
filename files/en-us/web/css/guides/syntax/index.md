@@ -85,7 +85,7 @@ This module doesn't define any properties, [data types](/en-US/docs/Web/CSS/Refe
 - {{domxref("CSSStyleSheet.insertRule()", "insertRule(rule)")}} method
 - {{domxref("CSSStyleSheet.replace()", "replace(text)")}} method
 
-{{glossary("WHATWG")}} specification:
+[WHATWG](/en-US/docs/Glossary/WHATWG) specification:
 
 - {{HTMLElement("style")}} element
 - {{HTMLElement("link")}} element
