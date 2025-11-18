@@ -49,7 +49,7 @@ The property accepts a comma-separated list of keyword values. Each value is a `
 - `stroke-box`
   - : The painted content is clipped to the stroke bounding box.
 - `view-box`
-  - : Uses the nearest SVG viewport as reference box. If a {{svgattr("viewBox")}} attribute is specified for the element creating the SVG viewport, the reference box is positioned at the origin of the coordinate system established by the `viewBox` attribute and the dimension of the reference box is set to the width and height values of the `viewBox` attribute.
+  - : Uses the nearest SVG viewport as reference box. If a [`viewBox`](/en-US/docs/Web/SVG/Reference/Attribute/viewBox) attribute is specified for the element creating the SVG viewport, the reference box is positioned at the origin of the coordinate system established by the `viewBox` attribute and the dimension of the reference box is set to the width and height values of the `viewBox` attribute.
 - `no-clip`
   - : The painted content is not clipped.
 - `border`
