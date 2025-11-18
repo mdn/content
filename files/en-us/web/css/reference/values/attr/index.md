@@ -123,10 +123,9 @@ span[data-icon] {
 ```
 
 However, this restriction applies only to places that strictly require a `<url>` type.
-Some functions — such as {{CSSxRef("image/image-set","image-set()")}} — can accept a `<string>` value that is later interpreted as a URL, allowing `attr()` to work in those contexts:
+Some functions — such as {{CSSxRef("image/image-set","image-set()")}} — can accept a `<string>` value that is later interpreted as a URL, allowing `attr()` to work in those contexts, depending on browser support:
 
 ```css
-/* This may work, depending on browser support */
 span[data-icon] {
   background: image-set(attr(data-icon));
 }
