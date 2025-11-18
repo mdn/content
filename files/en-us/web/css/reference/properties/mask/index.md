@@ -148,7 +148,7 @@ div {
 }
 ```
 
-We then apply a mask to the `<img>`. The `mask-image` is generated using a {{cssxref("repeating-conic-gradient()")}} function. We define it to be a `100px` by `100px` gradient, which repeats starting at the top and left corner of the image's `content-box`. We include two `<geometry-box>` values; the first sets the `mask-origin` and the second defines the `mask-clip` property value. The gradient goes from transparent to solid `lightgreen`. We used `lightgreen` to demonstrate that it isn't the color of the mask that is important, but rather its transparency.
+We then apply a mask to the `<img>`. The `mask-image` is generated using a {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}} function. We define it to be a `100px` by `100px` gradient, which repeats starting at the top and left corner of the image's `content-box`. We include two `<geometry-box>` values; the first sets the `mask-origin` and the second defines the `mask-clip` property value. The gradient goes from transparent to solid `lightgreen`. We used `lightgreen` to demonstrate that it isn't the color of the mask that is important, but rather its transparency.
 
 ```css
 img {
