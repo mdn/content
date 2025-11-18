@@ -8,12 +8,12 @@ sidebar: cssref
 
 The **`scroll-timeline-name`** [CSS](/en-US/docs/Web/CSS) property is used to define the name of a _named scroll progress timeline_, which is progressed through by scrolling a scrollable element (_scroller_) between top and bottom (or left and right). `scroll-timeline-name` is set on the scroller that will provide the timeline.
 
-The name is then referenced in an {{cssxref("animation-timeline")}} declaration to indicate the container's element that is used to drive the progress of the animation through the scrolling action.
+The name is then referenced in an [`animation-timeline`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline) declaration to indicate the container's element that is used to drive the progress of the animation through the scrolling action.
 
 > [!NOTE]
 > If the element does not overflow its container in the axis dimension or if the overflow is hidden or clipped, no timeline will be created.
 
-The {{cssxref("scroll-timeline-axis")}} and `scroll-timeline-name` properties can also be set using the {{cssxref("scroll-timeline")}} shorthand property.
+The {{cssxref("scroll-timeline-axis")}} and `scroll-timeline-name` properties can also be set using the [`scroll-timeline`](/en-US/docs/Web/CSS/Reference/Properties/scroll-timeline) shorthand property.
 
 ## Syntax
 
@@ -29,10 +29,10 @@ Allowed values for `scroll-timeline-name` are:
 - `none`
   - : The timeline has no name.
 - `<dashed-ident>`
-  - : An arbitrary custom identifier defining a name for a scroll progress timeline, which can then be referenced in an {{cssxref("animation-timeline")}} property.
+  - : An arbitrary custom identifier defining a name for a scroll progress timeline, which can then be referenced in an [`animation-timeline`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline) property.
 
     > [!NOTE]
-    > {{cssxref("&lt;dashed-ident&gt;")}} values must start with `--`, which helps avoid name clashes with standard CSS keywords.
+    > [`<dashed-ident>`](/en-US/docs/Web/CSS/Reference/Values/dashed-ident) values must start with `--`, which helps avoid name clashes with standard CSS keywords.
 
 ## Formal definition
 
@@ -125,7 +125,7 @@ Scroll the vertical bar to see the square animate as you scroll.
 
 ## See also
 
-- {{cssxref("animation-timeline")}}
-- {{cssxref("scroll-timeline")}}, {{cssxref("scroll-timeline-axis")}}
+- [`animation-timeline`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline)
+- [`scroll-timeline`](/en-US/docs/Web/CSS/Reference/Properties/scroll-timeline), [`scroll-timeline-axis`](/en-US/docs/Web/CSS/Reference/Properties/scroll-timeline-axis)
 - {{cssxref("timeline-scope")}}
 - [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations)

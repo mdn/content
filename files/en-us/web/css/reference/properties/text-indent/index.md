@@ -247,11 +247,11 @@ p {
 
 - [Learn to style HTML using CSS](/en-US/docs/Learn_web_development/Core/Styling_basics)
 - Related CSS properties:
-  - {{cssxref("text-justify")}}
-  - {{cssxref("text-orientation")}}
-  - {{cssxref("text-overflow")}}
-  - {{cssxref("text-rendering")}}
-  - {{cssxref("text-transform")}}
+  - [`text-justify`](/en-US/docs/Web/CSS/Reference/Properties/text-justify)
+  - [`text-orientation`](/en-US/docs/Web/CSS/Reference/Properties/text-orientation)
+  - [`text-overflow`](/en-US/docs/Web/CSS/Reference/Properties/text-overflow)
+  - [`text-rendering`](/en-US/docs/Web/CSS/Reference/Properties/text-rendering)
+  - [`text-transform`](/en-US/docs/Web/CSS/Reference/Properties/text-transform)
   - {{cssxref('hanging-punctuation')}}
 
 - [CSS Text Decoration](/en-US/docs/Web/CSS/Guides/Text_decoration) CSS module
