@@ -82,7 +82,7 @@ minmax(auto, 300px)
 
 A function taking two parameters, _min_ and _max_.
 
-Each parameter can be a `<length>`, a `<percentage>` or one of the keyword values `max-content`, `min-content`, or `auto`. 
+Each parameter can be a `<length>`, a `<percentage>` or one of the keyword values `max-content`, `min-content`, or `auto`.
 
 The second parameter _max_ also accepts {{cssxref("flex_value","&lt;flex&gt;")}} values. (this `fr` units can only be used for _max_, and are invalid for _min_.)
 
