@@ -38,17 +38,13 @@ sidebar: mdnsidebar
 > - **page-type**
 >   - : The `page-type` value for CSS module landing pages is always `css-module`.
 > - **spec-urls**
->   - : The `spec-urls` value is a URL of the specification or, in cases where there are multiple versions of the same specification, such as levels 1, 2, and 3, present them in a bulleted list. For example, the `spec-urls` key for the [filter effects](/en-US/docs/Web/CSS/Guides/Filter_effects) module landing page is as follows:
+>   - : The `spec-urls` value is a URL of the specification or bulleted list of the URLs of the multiple levels of the same specification in cases where there are multiple versions of a specification, such as levels 1, 2, and 3. In all cases, only include modules that are revisions of a single spec. For example, the `spec-urls` key for the [filter effects](/en-US/docs/Web/CSS/Guides/Filter_effects) module landing page is as follows:
 >
-
-```plain
-spec-urls: 
-    - https://drafts.fxtf.org/filter-effects-2/
-    - https://drafts.fxtf.org/filter-effects-1/
-```
-
-> - 
->    - : Only include modules that are multiple revisions of a single spec.
+> ```plain
+> spec-urls: 
+>     - https://drafts.fxtf.org/filter-effects-2/
+>     - https://drafts.fxtf.org/filter-effects-1/
+> ```
 >
 > - **sidebar**
 >   - : This is `cssref` for all CSS guide and reference pages.
