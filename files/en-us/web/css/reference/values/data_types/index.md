@@ -32,7 +32,7 @@ These types include keywords and identifiers as well as strings, and URLs.
     - {{CSSXref("revert")}}
       - : Rolls back the cascade to the value of the earlier origin.
     - {{CSSXref("revert-layer")}}
-      - : Rolls back the cascade to the value of the earlier {{cssxref("@layer", "cascade layer")}}.
+      - : Rolls back the cascade to the value of the earlier [cascade layer](/en-US/docs/Web/CSS/Reference/At-rules/@layer).
     - {{CSSXref("unset")}}
       - : Acts as `inherit` or `initial` depending on whether the property is inherited or not.
 - {{cssxref("&lt;custom-ident&gt;")}}
@@ -68,7 +68,7 @@ These {{cssxref("&lt;dimension&gt;")}} types are used to specify distance and ot
 - {{cssxref("&lt;length&gt;")}}
   - : Lengths are a `<dimension>` and refer to distances.
 - {{cssxref("&lt;angle&gt;")}}
-  - : Angles are used in properties such as {{cssxref("linear-gradient()")}} and are a `<dimension>` with one of `deg`, `grad`, `rad`, or `turn` units attached.
+  - : Angles are used in properties such as {{cssxref("gradient/linear-gradient", "linear-gradient()")}} and are a `<dimension>` with one of `deg`, `grad`, `rad`, or `turn` units attached.
 - {{cssxref("&lt;time&gt;")}}
   - : Duration units are a `<dimension>` with an `s` or `ms` unit.
 - {{cssxref("&lt;frequency&gt;")}}

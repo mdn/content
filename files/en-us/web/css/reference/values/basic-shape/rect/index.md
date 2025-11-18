@@ -26,7 +26,7 @@ The inset rectangle is defined by specifying four offset values, starting with t
   - : Makes the edge for which this value is used to coincide with the corresponding edge of the containing block. If `auto` is used for the first (top) or fourth (left) value, the value of `auto` is `0`, and if used for the second (right) or third (bottom) value, the value of `auto` is `100%`.
 
 - `round <'border-radius'>`
-  - : Specifies the radius of the rounded corners of the rectangle using the same syntax as the CSS {{cssxref("border-radius")}} shorthand property. This parameter is optional.
+  - : Specifies the radius of the rounded corners of the rectangle using the same syntax as the CSS [`border-radius`](/en-US/docs/Web/CSS/Reference/Properties/border-radius) shorthand property. This parameter is optional.
 
 ## Formal syntax
 
