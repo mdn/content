@@ -66,11 +66,11 @@ Transitions enable you to define the transition between two states of an element
 
 This property is a shorthand for the following CSS properties:
 
-- {{cssxref("transition-behavior")}}
-- {{cssxref("transition-delay")}}
-- {{cssxref("transition-duration")}}
-- {{cssxref("transition-property")}}
-- {{cssxref("transition-timing-function")}}
+- [`transition-behavior`](/en-US/docs/Web/CSS/Reference/Properties/transition-behavior)
+- [`transition-delay`](/en-US/docs/Web/CSS/Reference/Properties/transition-delay)
+- [`transition-duration`](/en-US/docs/Web/CSS/Reference/Properties/transition-duration)
+- [`transition-property`](/en-US/docs/Web/CSS/Reference/Properties/transition-property)
+- [`transition-timing-function`](/en-US/docs/Web/CSS/Reference/Properties/transition-timing-function)
 
 ## Syntax
 

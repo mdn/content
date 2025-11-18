@@ -142,7 +142,7 @@ update();
 crosshair.style.opacity = "1";
 ```
 
-The transform origin is the point around which a transformation is applied. For example, the transform origin of the {{cssxref("rotate()")}} function is the center of rotation.
+The transform origin is the point around which a transformation is applied. For example, the transform origin of the [`rotate()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/rotate) function is the center of rotation.
 
 In effect, this property wraps a pair of translations around the element's other transformations. The first translation moves the transform origin to the true origin at <math><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></math>. Then the other transformations are applied, and because the transform origin is at <math><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></math>, those transformations act about the transform origin. Finally, the opposite translation is applied, moving the transform origin back to its original location. Consequently, this definition
 
@@ -248,7 +248,7 @@ The keywords are convenience shorthands and match the following {{cssxref("&lt;p
 {{CSSInfo}}
 
 > [!NOTE]
-> The initial value of `transform-origin` is `0 0` for all SVG elements except for root `<svg>` elements and `<svg>` elements that are a direct child of a {{svgelement("foreignObject")}}, and whose `transform-origin` is `50% 50%`, like other CSS elements. See the [SVG transform-origin](/en-US/docs/Web/SVG/Reference/Attribute/transform-origin) attribute for more information.
+> The initial value of `transform-origin` is `0 0` for all SVG elements except for root `<svg>` elements and `<svg>` elements that are a direct child of a [foreignObject](/en-US/docs/Web/SVG/Reference/Element/foreignObject), and whose `transform-origin` is `50% 50%`, like other CSS elements. See the [SVG transform-origin](/en-US/docs/Web/SVG/Reference/Attribute/transform-origin) attribute for more information.
 
 ## Formal syntax
 
