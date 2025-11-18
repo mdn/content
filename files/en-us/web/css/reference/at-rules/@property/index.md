@@ -20,7 +20,7 @@ The `@property` rule represents a custom property registration directly in a sty
 }
 ```
 
-The custom property name is a {{cssxref("&lt;dashed-ident&gt;")}} that starts with `--` and is followed by a valid, user-defined identifier. It is case-sensitive.
+The custom property name is a [`<dashed-ident>`](/en-US/docs/Web/CSS/Reference/Values/dashed-ident) that starts with `--` and is followed by a valid, user-defined identifier. It is case-sensitive.
 
 ### Descriptors
 
@@ -74,7 +74,7 @@ The following code uses the CSS `@property` at-rule to define a custom property 
 }
 ```
 
-We define a second custom property, `--item-color`, using [JavaScript](/en-US/docs/Web/JavaScript) instead of CSS. The JavaScript {{domxref('CSS.registerProperty_static', 'registerProperty()')}} method is equivalent to `@property` at-rule. The property is defined to have an initial value of `aqua`, to accept only {{cssxref("&lt;color&gt;")}} values, and is not inherited.
+We define a second custom property, `--item-color`, using [JavaScript](/en-US/docs/Web/JavaScript) instead of CSS. The JavaScript {{domxref('CSS.registerProperty_static', 'registerProperty()')}} method is equivalent to `@property` at-rule. The property is defined to have an initial value of `aqua`, to accept only [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value) values, and is not inherited.
 
 ```js
 window.CSS.registerProperty({
@@ -130,7 +130,7 @@ For item three, the `--item-size` value gets set to `1000px`. While `1000px` is 
 
 ### Animating a custom property value
 
-In this example, we define a custom property called `--progress` using `@property`: this accepts {{cssxref("&lt;percentage&gt;")}} values and has an initial value of `25%`. We use `--progress` to define the position value of the color stops in a {{cssxref("linear-gradient()")}}, specifying where a green color stops, and black starts. We then animate the value of `--progress` to `100%` over 2.5 seconds, giving the effect of animating a progress bar.
+In this example, we define a custom property called `--progress` using `@property`: this accepts [`<percentage>`](/en-US/docs/Web/CSS/Reference/Values/percentage) values and has an initial value of `25%`. We use `--progress` to define the position value of the color stops in a {{cssxref("linear-gradient()")}}, specifying where a green color stops, and black starts. We then animate the value of `--progress` to `100%` over 2.5 seconds, giving the effect of animating a progress bar.
 
 ```html
 <div class="bar"></div>
