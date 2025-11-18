@@ -76,8 +76,8 @@ The scroll-padding properties define offsets for the _optimal viewing region_ of
 
 This property is a shorthand for the following CSS properties:
 
-- {{cssxref("scroll-padding-block-end")}}
-- {{cssxref("scroll-padding-block-start")}}
+- [`scroll-padding-block-end`](/en-US/docs/Web/CSS/Reference/Properties/scroll-padding-block-end)
+- [`scroll-padding-block-start`](/en-US/docs/Web/CSS/Reference/Properties/scroll-padding-block-start)
 
 ## Syntax
 
