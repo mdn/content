@@ -44,7 +44,7 @@ This example applies a different background color to a {{htmlelement("div")}} el
 </div>
 ```
 
-The `:fullscreen` pseudo-class is used to override the {{cssxref("background-color")}} of the `<div>` when it is in fullscreen mode.
+The `:fullscreen` pseudo-class is used to override the [`background-color`](/en-US/docs/Web/CSS/Reference/Properties/background-color) of the `<div>` when it is in fullscreen mode.
 
 ```css
 .element {
