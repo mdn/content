@@ -65,7 +65,7 @@ The process works as follows:
 2. The browser periodically examines its list of flagged sites and checks to see if the user has actively used the site by interacting with it within the last 45 days. Example interactions include clicking a button, entering data into a form, and scrolling the site. The interaction can occur before, during, or after the bounce was detected.
 3. If the site does not have any user interaction and third-party cookies are blocked, then its state will be deleted.
 
-The heuristic operates on {{glossary("site", "sites")}} (as defined by {{Glossary("eTLD#etld1", "eTLD+1")}}). As a result, both `foo.site1.example` and `bar.site1.example` are treated as `site1.example`.
+The heuristic operates on {{glossary("site", "sites")}} defined by {{Glossary("eTLD#etld1", "eTLD+1")}}. As a result, both `foo.site1.example` and `bar.site1.example` are treated as `site1.example`.
 
 ### Stateful versus stateless bounces
 
