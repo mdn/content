@@ -26,28 +26,28 @@ The `<transform-function>` data type is specified using one of the transformatio
 
 ### Rotation
 
-- {{cssxref("rotate()")}}
+- [`rotate()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/rotate)
   - : Rotates an element around a fixed point on the 2D plane.
-- {{cssxref("rotate3d()")}}
+- [`rotate3d()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/rotate3d)
   - : Rotates an element around a fixed axis in 3D space.
-- {{cssxref("rotateX()")}}
+- [`rotateX()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/rotateX)
   - : Rotates an element around the horizontal axis.
-- {{cssxref("rotateY()")}}
+- [`rotateY()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/rotateY)
   - : Rotates an element around the vertical axis.
-- {{cssxref("rotateZ()")}}
+- [`rotateZ()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/rotateZ)
   - : Rotates an element around the z-axis.
 
 ### Scaling (resizing)
 
-- {{cssxref("scale()")}}
+- [`scale()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/scale)
   - : Scales an element up or down on the 2D plane.
 - [`scale3d()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/scale3d)
   - : Scales an element up or down in 3D space.
-- {{cssxref("scaleX()")}}
+- [`scaleX()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/scaleX)
   - : Scales an element up or down horizontally.
-- {{cssxref("scaleY()")}}
+- [`scaleY()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/scaleY)
   - : Scales an element up or down vertically.
-- {{cssxref("scaleZ()")}}
+- [`scaleZ()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/scaleZ)
   - : Scales an element up or down along the z-axis.
 
 ### Skewing (distortion)
@@ -63,13 +63,13 @@ The `<transform-function>` data type is specified using one of the transformatio
 
 - [`translate()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/translate)
   - : Translates an element on the 2D plane.
-- {{cssxref("translate3d()")}}
+- [`translate3d()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/translate3d)
   - : Translates an element in 3D space.
-- {{cssxref("translateX()")}}
+- [`translateX()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/translateX)
   - : Translates an element horizontally.
-- {{cssxref("translateY()")}}
+- [`translateY()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/translateY)
   - : Translates an element vertically.
-- {{cssxref("translateZ()")}}
+- [`translateZ()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/translateZ)
   - : Translates an element along the z-axis.
 
 ## Description

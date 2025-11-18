@@ -188,4 +188,4 @@ div {
 - {{cssxref("transform")}} property
 - {{cssxref("rotate")}} property
 - {{cssxref("&lt;transform-function&gt;")}}
-- {{cssxref("rotate3d()")}}
+- [`rotate3d()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/rotate3d)

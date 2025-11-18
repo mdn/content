@@ -200,8 +200,8 @@ div {
 
 ## See also
 
-- {{cssxref("scaleX()")}}
-- {{cssxref("scaleY()")}}
+- [`scaleX()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/scaleX)
+- [`scaleY()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/scaleY)
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
 - {{cssxref("transform-origin")}}
