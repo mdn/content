@@ -74,9 +74,9 @@ grid-template:
 
 This property is a shorthand for the following CSS properties:
 
-- {{cssxref("grid-template-areas")}}
-- {{cssxref("grid-template-columns")}}
-- {{cssxref("grid-template-rows")}}
+- [`grid-template-areas`](/en-US/docs/Web/CSS/Reference/Properties/grid-template-areas)
+- [`grid-template-columns`](/en-US/docs/Web/CSS/Reference/Properties/grid-template-columns)
+- [`grid-template-rows`](/en-US/docs/Web/CSS/Reference/Properties/grid-template-rows)
 
 ## Syntax
 
