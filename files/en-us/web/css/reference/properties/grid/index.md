@@ -70,12 +70,12 @@ grid: repeat(3, 80px) / auto-flow;
 
 This property is a shorthand for the following CSS properties:
 
-- {{cssxref("grid-auto-columns")}}
-- {{cssxref("grid-auto-flow")}}
-- {{cssxref("grid-auto-rows")}}
-- {{cssxref("grid-template-areas")}}
-- {{cssxref("grid-template-columns")}}
-- {{cssxref("grid-template-rows")}}
+- [`grid-auto-columns`](/en-US/docs/Web/CSS/Reference/Properties/grid-auto-columns)
+- [`grid-auto-flow`](/en-US/docs/Web/CSS/Reference/Properties/grid-auto-flow)
+- [`grid-auto-rows`](/en-US/docs/Web/CSS/Reference/Properties/grid-auto-rows)
+- [`grid-template-areas`](/en-US/docs/Web/CSS/Reference/Properties/grid-template-areas)
+- [`grid-template-columns`](/en-US/docs/Web/CSS/Reference/Properties/grid-template-columns)
+- [`grid-template-rows`](/en-US/docs/Web/CSS/Reference/Properties/grid-template-rows)
 
 ## Syntax
 
