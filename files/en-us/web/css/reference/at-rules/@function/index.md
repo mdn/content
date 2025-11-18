@@ -25,11 +25,11 @@ The **`@function`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/Gui
 The different parts of the `@function` syntax are as follows:
 
 - `--function-name`
-  - : The identifying name of the function, a {{cssxref("&lt;dashed-ident&gt;")}} that starts with `--` and is followed by a valid, user-defined identifier. It is case-sensitive.
+  - : The identifying name of the function, a [`<dashed-ident>`](/en-US/docs/Web/CSS/Reference/Values/dashed-ident) that starts with `--` and is followed by a valid, user-defined identifier. It is case-sensitive.
 - `<function-parameter>#?` {{optional_inline}}
   - : Zero or more function parameter definitions. Multiple parameter definitions are separated by commas. Each parameter consists of:
     - `--param-name`
-      - : A [CSS custom property](/en-US/docs/Web/CSS/Reference/Properties/--*) name to identify the parameter, a {{cssxref("&lt;dashed-ident&gt;")}} that starts with `--` and is followed by a valid, user-defined identifier. It is case-sensitive. Function parameters can be considered custom properties that are locally scoped to the function body.
+      - : A [CSS custom property](/en-US/docs/Web/CSS/Reference/Properties/--*) name to identify the parameter, a [`<dashed-ident>`](/en-US/docs/Web/CSS/Reference/Values/dashed-ident) that starts with `--` and is followed by a valid, user-defined identifier. It is case-sensitive. Function parameters can be considered custom properties that are locally scoped to the function body.
     - `<css-type>` {{optional_inline}}
       - : A CSS data type or a {{cssxref("type()")}} function that defines the accepted data type(s) for the parameter. If this is not specified, any data type will be valid for the parameter (the same as specifying `type(*)`).
     - `<default-value>` {{optional_inline}}

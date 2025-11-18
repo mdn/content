@@ -232,11 +232,11 @@ In the following example, two layers are created with no rules applied, then CSS
 
 ## See also
 
-- {{cssxref("@import")}}
+- [`@import`](/en-US/docs/Web/CSS/Reference/At-rules/@import)
 - {{domxref("CSSLayerBlockRule")}}
 - {{domxref("CSSLayerStatementRule")}}
 - [`!important`](/en-US/docs/Web/CSS/Reference/Values/important)
-- {{cssxref("revert-layer")}}
+- [`revert-layer`](/en-US/docs/Web/CSS/Reference/Values/revert-layer)
 - [Introducing the CSS cascade](/en-US/docs/Web/CSS/Guides/Cascade/Introduction)
 - [Learn: Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - [Learn: Cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
