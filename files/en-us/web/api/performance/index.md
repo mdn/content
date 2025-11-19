@@ -40,7 +40,7 @@ _The `Performance` interface doesn't inherit any methods._
 - {{domxref("Performance.clearMeasures()")}}
   - : Removes the given _measure_ from the browser's performance entry buffer.
 - {{domxref("Performance.clearResourceTimings()")}}
-  - : Removes all [performance entries](/en-US/docs/Web/API/PerformanceEntry) with a {{domxref("PerformanceEntry.entryType","entryType")}} of `"resource"` from the browser's performance data buffer.
+  - : Removes all [performance entries](/en-US/docs/Web/API/PerformanceEntry) with an {{domxref("PerformanceEntry.entryType","entryType")}} of `"resource"` from the browser's performance data buffer.
 - {{domxref("Performance.getEntries()")}}
   - : Returns a list of {{domxref("PerformanceEntry")}} objects based on the given _filter_.
 - {{domxref("Performance.getEntriesByName()")}}

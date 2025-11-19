@@ -29,15 +29,13 @@ A recipe consists of:
 
 To create a recipe and add it to the CSS layout cookbook, follow these steps:
 
-- [What makes a good recipe?](#what-makes-a-good-recipe)
-- [Steps to publish a recipe](#steps-to-publish-a-recipe)
-  - [1. Build a pattern](#1-build-a-pattern)
-  - [2. Create a live example](#2-create-a-live-example)
-    - [Useful tips](#useful-tips)
-  - [3. Create a downloadable version](#3-create-a-downloadable-version)
-  - [4. Open a pull request with your example](#4-open-a-pull-request-with-your-example)
-  - [5. Create your page](#5-create-your-page)
-- [See also](#see-also)
+- [What makes a good recipe?](#what_makes_a_good_recipe)
+- [Steps to publish a recipe](#steps_to_publish_a_recipe)
+  - [1. Build a pattern](#1._build_a_pattern)
+  - [2. Create a live example](#2._create_a_live_example)
+  - [3. Create a downloadable version](#3._create_a_downloadable_version)
+  - [4. Open a pull request with your example](#4._open_a_pull_request_with_your_example)
+  - [5. Create your page](#5._create_your_page)
 
 ### 1. Build a pattern
 

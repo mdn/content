@@ -11,7 +11,7 @@ sidebar: jsref
 
 {{SeeCompatTable}}
 
-The **`microsecond`** accessor property of {{jsxref("Temporal.ZonedDateTime")}} instances returns a integer from 0 to 999 representing the microsecond (10<sup>-6</sup> second) component of this time.
+The **`microsecond`** accessor property of {{jsxref("Temporal.ZonedDateTime")}} instances returns an integer from 0 to 999 representing the microsecond (10<sup>-6</sup> second) component of this time.
 
 The set accessor of `microsecond` is `undefined`. You cannot change this property directly. Use the {{jsxref("Temporal/ZonedDateTime/with", "with()")}} method to create a new `Temporal.ZonedDateTime` object with the desired new value.
 

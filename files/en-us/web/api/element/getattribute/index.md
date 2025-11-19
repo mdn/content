@@ -45,7 +45,7 @@ const div1 = document.getElementById("div1");
 const exampleAttr = div1.getAttribute("id");
 // "div1"
 
-const align = div1.getAttribute("align");
+const lang = div1.getAttribute("lang");
 // null
 ```
 

@@ -36,7 +36,7 @@ The possible values are: `"top"`, `"middle"`, `"bottom"`, or `"baseline"`
 
 Use CSS `vertical-align`. As {{htmlelement("td")}} elements of a column are not children of {{htmlelement("col")}}, you can't set it directly on a {{HTMLElement("col")}}, you need to select the cells using a `td:nth-child(n)` or similar (`n` is the column number).
 
-An [example](/en-US/docs/Web/CSS/:nth-child#styling_a_table_column) is available on the {{cssxref(":nth-child()")}} page.
+An [example](/en-US/docs/Web/CSS/Reference/Selectors/:nth-child#styling_a_table_column) is available on the {{cssxref(":nth-child()")}} page.
 
 ## Specifications
 

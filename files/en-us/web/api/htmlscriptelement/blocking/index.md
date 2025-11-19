@@ -25,7 +25,7 @@ A string. Must be a space-separated list of blocking tokens listed below indicat
 ## Examples
 
 ```html
-<script id="el" type="text/javascript" async blocking="render"></script>
+<script id="el" async blocking="render"></script>
 ```
 
 ```js

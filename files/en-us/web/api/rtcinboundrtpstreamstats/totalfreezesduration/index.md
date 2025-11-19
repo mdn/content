@@ -21,7 +21,7 @@ The average freeze duration can be calculated using `totalFreezesDuration / free
 
 ## Value
 
-An positive number, in seconds.
+A positive number, in seconds.
 
 ## Specifications
 

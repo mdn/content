@@ -17,7 +17,7 @@ The default `Sanitizer()` configuration allows only XSS-safe input by default, o
 The constructor `configuration` option can be used to customize the sanitizer behavior.
 
 <!--
-Either here or in the config (or both) explain what a (in)valid config looks like
+Either here or in the config (or both) explain what an (in)valid config looks like
 -->
 
 ## Syntax

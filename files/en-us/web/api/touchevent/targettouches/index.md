@@ -21,7 +21,7 @@ This example illustrates the {{domxref("TouchEvent")}} object's `TouchEvent.targ
 In following code snippet, the function compares the length of the `touches` list to the length of the `targetTouches` list and returns `true` if the lengths are the same and returns `false` otherwise.
 
 ```js
-function touches_in_target(ev) {
+function touchesInTarget(ev) {
   // Return true if all of the touches are within the target element;
   // otherwise return false.
   return ev.touches.length === ev.targetTouches.length;

@@ -1,8 +1,8 @@
 ---
-title: Firefox 144 release notes for developers (Stable)
-short-title: Firefox 144 (Stable)
+title: Firefox 144 release notes for developers
+short-title: Firefox 144
 slug: Mozilla/Firefox/Releases/144
-page-type: firefox-release-notes-active
+page-type: firefox-release-notes
 sidebar: firefox
 ---
 
@@ -98,3 +98,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 - **datetime-local time picker:** `dom.forms.datetime.timepicker`.
 
   HTML datetime-local input elements ([`<input type="datetime-local">`](/en-US/docs/Web/HTML/Reference/Elements/input/datetime-local)) now includes a time picker. ([Firefox bug 1726108](https://bugzil.la/1726108)).
+
+- **:heading():** `layout.css.heading-selector.enabled`
+
+  The [`:heading()`](/en-US/docs/Web/CSS/Reference/Selectors/:heading_function) functional pseudo-class now has a much simpler syntax that takes a comma-separated list of integers that match the heading level. ([Firefox bug 1974386](https://bugzil.la/1974386) & [Firefox bug 1984310](https://bugzil.la/1984310)).

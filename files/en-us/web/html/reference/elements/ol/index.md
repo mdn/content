@@ -54,7 +54,7 @@ This element also accepts the [global attributes](/en-US/docs/Web/HTML/Reference
 
 ## Usage notes
 
-Typically, ordered list items display with a preceding [marker](/en-US/docs/Web/CSS/::marker), such as a number or letter.
+Typically, ordered list items display with a preceding [marker](/en-US/docs/Web/CSS/Reference/Selectors/::marker), such as a number or letter.
 
 The `<ol>` and {{HTMLElement("ul")}} (or the synonym {{HTMLElement("menu")}}) elements may nest as deeply as desired, alternating between `<ol>`, `<ul>` (or `<menu>`) as needed.
 
@@ -241,6 +241,6 @@ To determine which list to use, try changing the order of the list items; if the
 - Other list-related HTML Elements: {{HTMLElement("ul")}}, {{HTMLElement("li")}}, {{HTMLElement("menu")}}
 - CSS properties that may be specially useful to style the `<ol>` element:
   - the {{CSSxRef("list-style")}} property, to choose the way the ordinal displays
-  - [CSS counters](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters), to handle complex nested lists
+  - [CSS counters](/en-US/docs/Web/CSS/Guides/Counter_styles/Using_counters), to handle complex nested lists
   - the {{CSSxRef("line-height")}} property, to simulate the deprecated `compact` attribute
   - the {{CSSxRef("margin")}} property, to control the list indentation

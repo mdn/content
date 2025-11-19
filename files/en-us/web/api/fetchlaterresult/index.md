@@ -31,7 +31,7 @@ const result = fetchLater("https://report.example.com", {
   activateAfter: 60000 /* 1 minute */,
 });
 
-function check_if_fetched() {
+function checkIfFetched() {
   return result.activated;
 }
 ```

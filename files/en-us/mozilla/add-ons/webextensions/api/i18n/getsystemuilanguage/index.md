@@ -20,7 +20,7 @@ None.
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) fulfilled with a {{WebExtAPIRef("i18n.LanguageCode")}}.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) fulfilled with an {{WebExtAPIRef("i18n.LanguageCode")}}.
 
 {{WebExtExamples}}
 

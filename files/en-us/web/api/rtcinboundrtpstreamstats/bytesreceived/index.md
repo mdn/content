@@ -20,7 +20,7 @@ The property value is reset to zero if the sender's SSRC identifier changes for 
 
 ## Value
 
-An positive integer.
+A positive integer.
 
 ## Specifications
 

@@ -16,7 +16,7 @@ Either a key or an {{domxref("IDBKeyRange")}} can be passed, allowing one or mul
 records to be deleted from a store. To delete all records in a store, use
 {{domxref("IDBObjectStore.clear")}}.
 
-Bear in mind that if you are using a {{domxref("IDBCursor", "IDBCursor")}}, you can use
+Bear in mind that if you are using an {{domxref("IDBCursor", "IDBCursor")}}, you can use
 the {{domxref("IDBCursor.delete()")}} method to more efficiently delete the current
 record — without having to explicitly look up the record's key.
 

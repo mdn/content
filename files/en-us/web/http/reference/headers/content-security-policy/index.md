@@ -159,10 +159,8 @@ Reporting directives control the destination URL for CSP violation reports in `C
   - : Used to specify an allowlist of [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) policies.
     Trusted Types allows applications to lock down DOM XSS injection sinks to only accept non-spoofable, typed values in place of strings.
 - {{CSP("upgrade-insecure-requests")}}
-  - : Instructs user agents to treat all of a site's insecure URLs (those served over
-    HTTP) as though they have been replaced with secure URLs (those served over HTTPS).
-    This directive is intended for websites with large numbers of insecure legacy URLs
-    that need to be rewritten.
+  - : Instructs user agents to treat all of a site's insecure URLs (those served over HTTP) as though they have been replaced with secure URLs (those served over HTTPS).
+    This directive is intended for websites with large numbers of insecure legacy URLs that need to be rewritten.
 
 ### Deprecated directives
 
@@ -272,14 +270,33 @@ Secure upgrades are allowed. For example:
 - If the document is served from `http://example.com`, then a CSP of `'self'` will also permit resources from `https://example.com`.
 - If the document is served from `ws://example.org`, then a CSP of `'self'` will also permit resources from `wss://example.org`.
 
+### 'trusted-types-eval'
+
+By default, if a CSP contains a `default-src` or a `script-src` directive, then JavaScript functions which evaluate their arguments as JavaScript are disabled.
+This includes [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval), the [`code`](/en-US/docs/Web/API/Window/setTimeout#code) argument to {{domxref("Window.setTimeout()", "setTimeout()")}}, or the {{jsxref("Function/Function()", "Function()")}} constructor.
+
+The `trusted-types-eval` keyword can be used to undo this protection, but only when [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) are enforced and passed to these functions instead of strings.
+This allows dynamic evaluation of strings as JavaScript, but only after inputs have been passed through a transformation function before it is injected, which has the chance to [sanitize](/en-US/docs/Web/Security/Attacks/XSS#sanitization) the input to remove potentially dangerous markup.
+
+The `trusted-types-eval` must be used instead of [`'unsafe-eval'`](#unsafe-eval) when using these methods with trusted types.
+This ensures that access to the methods is blocked on browsers that don't support trusted types.
+
+> [!NOTE]
+> Developers should avoid using `trusted-types-eval` or these methods unless absolutely necessary.
+> Trusted types ensure that the input passes through a transformation function — they don't ensure that the transformation makes the input safe (and this can be very hard to get right).
+
+See [`eval()` and similar APIs](/en-US/docs/Web/HTTP/Guides/CSP#eval_and_similar_apis) in the CSP guide for more usage information.
+
 ### 'unsafe-eval'
 
-By default, if a CSP contains a `default-src` or a `script-src` directive, then JavaScript functions which evaluate their arguments as JavaScript are disabled. This includes [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval), the [`code`](/en-US/docs/Web/API/Window/setTimeout#code) argument to {{domxref("Window.setTimeout()", "setTimeout()")}}, or the {{jsxref("Function/Function()", "Function()")}} constructor.
+By default, if a CSP contains a `default-src` or a `script-src` directive, then JavaScript functions which evaluate their arguments as JavaScript are disabled.
+This includes [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval), the [`code`](/en-US/docs/Web/API/Window/setTimeout#code) argument to {{domxref("Window.setTimeout()", "setTimeout()")}}, or the {{jsxref("Function/Function()", "Function()")}} constructor.
 
 The `unsafe-eval` keyword can be used to undo this protection, allowing dynamic evaluation of strings as JavaScript.
 
 > [!WARNING]
 > Developers should avoid `'unsafe-eval'`, because it defeats much of the purpose of having a CSP.
+> ['trusted-types-eval'](#trusted-types-eval) provides a "potentially" safer alternative if using these methods is necessary.
 
 See [`eval()` and similar APIs](/en-US/docs/Web/HTTP/Guides/CSP#eval_and_similar_apis) in the CSP guide for more usage information.
 

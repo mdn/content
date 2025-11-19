@@ -21,7 +21,7 @@ Firefox 53 was released on April 19, 2017. This article lists key changes that a
 
 #### New features
 
-- The `mask-*` longhand properties (see [CSS Masks](/en-US/docs/Web/CSS/CSS_masking)) are all supported and available by default (see [Firefox bug 1251161](https://bugzil.la/1251161)).
+- The `mask-*` longhand properties (see [CSS Masks](/en-US/docs/Web/CSS/Guides/Masking)) are all supported and available by default (see [Firefox bug 1251161](https://bugzil.la/1251161)).
 - Added {{cssxref("caret-color")}} property ([Firefox bug 1063162](https://bugzil.la/1063162)).
 - Implemented the {{cssxref("place-items")}}/{{cssxref("place-self")}}/{{cssxref("place-content")}} shorthands ([Firefox bug 1319958](https://bugzil.la/1319958)).
 - Added `flow-root` value to {{cssxref("display")}} property ([Firefox bug 1322191](https://bugzil.la/1322191)).
@@ -55,7 +55,7 @@ Firefox 53 was released on April 19, 2017. This article lists key changes that a
 - The {{domxref("CompositionEvent.CompositionEvent", "CompositionEvent")}} constructor has been implemented (see [Firefox bug 1002256](https://bugzil.la/1002256)).
 - The {{domxref("MouseEvent.x")}} and {{domxref("MouseEvent.y")}} aliases of {{domxref("MouseEvent.clientX")}}/{{domxref("MouseEvent.clientY")}} have been implemented (see [Firefox bug 424390](https://bugzil.la/424390)).
 - The {{domxref("Element/auxclick_event", "auxclick")}} event and corresponding event handler have been implemented (see [Firefox bug 1304044](https://bugzil.la/1304044)).
-- The {{domxref("Element/transitioncancel_event", "transitioncancel")}} event is now fired after a [transition](/en-US/docs/Web/CSS/CSS_transitions) is cancelled.
+- The {{domxref("Element/transitioncancel_event", "transitioncancel")}} event is now fired after a [transition](/en-US/docs/Web/CSS/Guides/Transitions) is cancelled.
 
 ### DOM
 

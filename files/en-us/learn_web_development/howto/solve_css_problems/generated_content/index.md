@@ -43,7 +43,7 @@ A text where I need to <span class="ref">something</span>
 
 {{ EmbedLiveSample('Text_content', 600, 30) }}
 
-The character set of a stylesheet is UTF-8 by default, but it can also be specified in the link, in the stylesheet itself, or in other ways. For details, see the [`@charset`](/en-US/docs/Web/CSS/@charset) reference.
+The character set of a stylesheet is UTF-8 by default, but it can also be specified in the link, in the stylesheet itself, or in other ways. For details, see the [`@charset`](/en-US/docs/Web/CSS/Reference/At-rules/@charset) reference.
 
 Individual characters can also be specified by an escape mechanism that uses backslash as the escape character. For example, "\265B" is the chess symbol for a black queen ♛.
 

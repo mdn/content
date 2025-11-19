@@ -147,7 +147,7 @@ Browsers ignore CSS they don't understand. If the property or value you are usin
 
 ![Image of browser DevTools with the grid-template-columns: subgrid crossed out as the subgrid value is not supported.](no-support.png)
 
-You can also take a look at the Browser compatibility tables at the bottom of each property page on MDN. These show you browser support for that property, often broken down if there is support for some usage of the property and not others. [See the compatibility table for the `grid-template-columns` property](/en-US/docs/Web/CSS/grid-template-columns#browser_compatibility).
+You can also take a look at the Browser compatibility tables at the bottom of each property page on MDN. These show you browser support for that property, often broken down if there is support for some usage of the property and not others. [See the compatibility table for the `grid-template-columns` property](/en-US/docs/Web/CSS/Reference/Properties/grid-template-columns#browser_compatibility).
 
 ### Is something else overriding your CSS?
 

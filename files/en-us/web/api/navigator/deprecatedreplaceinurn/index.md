@@ -25,7 +25,7 @@ deprecatedReplaceInURN(UrnOrConfig, replacements)
 ### Parameters
 
 - `UrnOrConfig`
-  - : A `FencedFrameConfig` object or a opaque URN for which you want to substitute parts of the corresponding internal URL.
+  - : A `FencedFrameConfig` object or an opaque URN for which you want to substitute parts of the corresponding internal URL.
 - `replacements`
   - : An object containing one or more properties representing the substitutions you wish to make in the internal URL. Each property key is a URL subsection you wish to replace, and each property value is the string to replace it with. Note that:
     - The URL subsections to replace must be in one of the following formats:

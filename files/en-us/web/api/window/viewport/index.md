@@ -43,6 +43,6 @@ const segments = window.viewport.segments;
 - [Viewport API](/en-US/docs/Web/API/Viewport_API)
 - [Viewport Segments API](/en-US/docs/Web/API/Viewport_segments_API)
 - [Visual Viewport API](/en-US/docs/Web/API/Visual_Viewport_API)
-- [Viewport concepts](/en-US/docs/Web/CSS/CSSOM_view/Viewport_concepts)
-- [CSS viewport](/en-US/docs/Web/CSS/CSS_viewport) module
-- [CSSOM view](/en-US/docs/Web/CSS/CSSOM_view) module
+- [Viewport concepts](/en-US/docs/Web/CSS/Guides/CSSOM_view/Viewport_concepts)
+- [CSS viewport](/en-US/docs/Web/CSS/Guides/Viewport) module
+- [CSSOM view](/en-US/docs/Web/CSS/Guides/CSSOM_view) module

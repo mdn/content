@@ -267,9 +267,8 @@ Several features can be controlled at the same time by including a semi-colon-se
 It is worth giving the `src` value a special mention. We mentioned above that using this allowlist value will mean that the associated feature will be allowed in this `<iframe>`, as long as the document loaded into it comes from the same origin as the URL in its {{HTMLElement('iframe','src','#Attributes')}} attribute. This value is the _default_ `allowlist` value for features listed in `allow`, so the following are equivalent:
 
 ```html
-<iframe src="https://example.com" allow="geolocation 'src'">
-  <iframe src="https://example.com" allow="geolocation"></iframe
-></iframe>
+<iframe src="https://example.com" allow="geolocation 'src'"></iframe>
+<iframe src="https://example.com" allow="geolocation"></iframe>
 ```
 
 ### Denying access to powerful features

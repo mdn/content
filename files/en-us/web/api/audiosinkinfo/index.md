@@ -20,7 +20,7 @@ The **`AudioSinkInfo`** interface of the {{domxref("Web Audio API", "Web Audio A
 
 ## Examples
 
-If a new {{domxref("AudioContext")}} is created with a `sinkId` value of `{ type: 'none' }`, calling {{domxref("AudioContext.sinkId")}} later in the code will return a `AudioSinkInfo` object containing `type: 'none'`. This is currently the only value available.
+If a new {{domxref("AudioContext")}} is created with a `sinkId` value of `{ type: 'none' }`, calling {{domxref("AudioContext.sinkId")}} later in the code will return an `AudioSinkInfo` object containing `type: 'none'`. This is currently the only value available.
 
 ```js
 audioCtx = new window.AudioContext({

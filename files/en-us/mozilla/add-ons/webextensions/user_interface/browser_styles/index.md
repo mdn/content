@@ -190,7 +190,7 @@ The [legacy Firefox Style Guide](https://firefoxux.github.io/StyleGuide/#/naviga
   &#x3C;div class="panel-formElements-item">
     &#x3C;label for="picker01">Label:&#x3C;/label>
     &#x3C;select id="picker01">
-      &#x3C;option value="value1" selected="true">Dropdown&#x3C;/option>
+      &#x3C;option value="value1" selected>Dropdown&#x3C;/option>
       &#x3C;option value="value2">List Item&#x3C;/option>
       &#x3C;option value="value3">List Item&#x3C;/option>
     &#x3C;/select>
@@ -198,7 +198,7 @@ The [legacy Firefox Style Guide](https://firefoxux.github.io/StyleGuide/#/naviga
   &#x3C;div class="panel-formElements-item">
     &#x3C;label for="placeholder01">Label:&#x3C;/label>
     &#x3C;input type="text" placeholder="Placeholder" id="placeholder01" />
-    &#x3C;button name="expander" class="expander">&#x3C;/button>
+    &#x3C;button name="expander" class="expander" aria-label="Expand">&#x3C;/button>
   &#x3C;/div>
 &#x3C;/div></pre
         >

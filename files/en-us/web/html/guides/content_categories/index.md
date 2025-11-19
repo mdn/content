@@ -373,12 +373,40 @@ This category contains several sub-categories:
 
 ## Transparent content model
 
-If an element has a transparent content model, then its contents must be structured such that they would be valid HTML, even if the transparent element were removed and replaced by the child elements.
+In addition to the listed content categories, an element's content model may also be defined as "transparent". If an element X's permitted content is "transparent", then we look at the parent of X. We intersect the permitted content of X's parent with the content categories of X, and the result is what "transparent" means in this context. If the parent of X also has a transparent content model, then we continue up the tree until we find a non-transparent content model. When there's no such parent, "transparent" means "flow content".
 
-For example, the {{HTMLElement("del")}} and {{HTMLElement("ins")}} elements are transparent:
+For example, a {{HTMLElement("ruby")}} element accepts phrasing content. The {{HTMLElement("ins")}} element is of category phrasing content when it contains only phrasing content. Therefore, an {{HTMLElement("ins")}} element can be placed inside a {{HTMLElement("ruby")}} element. The `<ins>` element's permitted content is "transparent", which when nested in `<ruby>` means "phrasing content". However, {{HTMLElement("rt")}} elements are not phrasing content. Therefore, an {{HTMLElement("rt")}} element cannot be nested inside this `<ins>` element, even though both `<rt>` and `<ins>` can be inside `<ruby>`, and `<ins>` is "transparent".
 
-```html
-<p><del>Shopping</del> <ins>Returns</ins> list</p>
+```html example-bad
+<ruby>
+  Text before
+  <ins>
+    <!-- Invalid: rt cannot be placed inside ins here -->
+    <rt>Pronunciation</rt>
+  </ins>
+</ruby>
+```
+
+```html example-good
+<ruby>
+  Text before
+  <!-- Valid: ins can be inside ruby, and rt can be inside ruby -->
+  <ins>Inserted text</ins>
+  <rt>Pronunciation</rt>
+</ruby>
+```
+
+```html example-good
+<ruby>
+  Text before
+  <!-- Valid: rt can be inside ruby, and ins can be inside rt -->
+  <rt><ins>Pronunciation</ins></rt>
+</ruby>
+```
+
+Transparent is a _content model_, not a _content category_, so it only defines what an element can contain, not where the element can be placed. That is, when determining an element's children's licitness, you cannot "see through" transparent children. For example, a {{HTMLElement("ul")}} element accepts only {{HTMLElement("li")}} elements and script-supporting elements, and does not allow `<del>` or `<ins>`, even if the `<del>` only contains `<li>` elements.
+
+```html example-bad
 <ul>
   <del>
     <li>Oranges</li>
@@ -388,13 +416,10 @@ For example, the {{HTMLElement("del")}} and {{HTMLElement("ins")}} elements are 
 </ul>
 ```
 
-If those elements were removed, this fragment would still be valid HTML (if not correct English).
-
-```html
-<p>Shopping Returns list</p>
+```html example-good
 <ul>
-  <li>Oranges</li>
-  <li>Toilet paper</li>
+  <li><del>Oranges</del></li>
+  <li><del>Toilet paper</del></li>
   <li>Toothpaste</li>
 </ul>
 ```

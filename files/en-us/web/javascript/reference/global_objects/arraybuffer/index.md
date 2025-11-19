@@ -80,7 +80,7 @@ These properties are defined on `ArrayBuffer.prototype` and shared by all `Array
 
 ### Creating an ArrayBuffer
 
-In this example, we create a 8-byte buffer with a {{jsxref("Int32Array")}} view referring to the buffer:
+In this example, we create a 8-byte buffer with an {{jsxref("Int32Array")}} view referring to the buffer:
 
 ```js
 const buffer = new ArrayBuffer(8);

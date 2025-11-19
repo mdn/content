@@ -118,7 +118,7 @@ _Doesn't inherit any properties._
 - {{domxref("Navigator.doNotTrack")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{non-standard_inline}}
   - : Reports the value of the user's do-not-track preference. When this value is "1", your website or application should not track the user.
 - {{domxref("Navigator.mimeTypes")}} {{ReadOnlyInline}}
-  - : Returns an {{domxref("MimeTypeArray")}} listing the MIME types supported by the browser.
+  - : Returns a {{domxref("MimeTypeArray")}} listing the MIME types supported by the browser.
 - {{domxref("Navigator.oscpu")}} {{ReadOnlyInline}}
   - : Returns a string that represents the current operating system.
 - {{domxref("Navigator.platform")}} {{ReadOnlyInline}}

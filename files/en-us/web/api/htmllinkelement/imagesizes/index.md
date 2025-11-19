@@ -10,7 +10,7 @@ browser-compat: api.HTMLLinkElement.imageSizes
 
 The **`imageSizes`** property of the {{domxref("HTMLLinkElement")}} interface indicates the size and conditions for the preloaded images defined by the {{domxref("HTMLLinkElement.imageSrcset", "imageSrcset")}} property. It reflects the value of the {{htmlelement("link")}} element's [`imagesizes`](/en-US/docs/Web/HTML/Reference/Elements/link#imagesizes) attribute. This property can retrieve or set the `imagesizes` attribute value.
 
-The `<link>` element's `imagesizes` attribute is the same as the {{htmlelement("img")}} element's `sizes` attribute: a comma-separated **source size** list. Each source size includes a [media condition](/en-US/docs/Web/CSS/CSS_media_queries), the size of the image as a {{cssxref("length")}}, or the keyword `auto`, which must come first. For more information about the syntax of the `sizes` attribute, see [`<img>`](/en-US/docs/Web/HTML/Reference/Elements/img#sizes).
+The `<link>` element's `imagesizes` attribute is the same as the {{htmlelement("img")}} element's `sizes` attribute: a comma-separated **source size** list. Each source size includes a [media condition](/en-US/docs/Web/CSS/Guides/Media_queries), the size of the image as a {{cssxref("length")}}, or the keyword `auto`, which must come first. For more information about the syntax of the `sizes` attribute, see [`<img>`](/en-US/docs/Web/HTML/Reference/Elements/img#sizes).
 
 The `imagesrcset` and `imagesizes` attributes are only relevant on `<link>` elements that have both a `rel` attribute set to `preload` and the `as` attribute set to `image`.
 
@@ -75,5 +75,5 @@ log(`Updated: ${link.imageSizes}`);
 
 - {{domxref("HTMLLinkElement.imageSrcset")}}
 - {{domxref("HTMLImageElement.sizes")}}
-- [Media queries](/en-US/docs/Web/CSS/CSS_media_queries)
+- [Media queries](/en-US/docs/Web/CSS/Guides/Media_queries)
 - [Using the `srcset` and `sizes` attributes](/en-US/docs/Web/HTML/Reference/Elements/img#using_the_srcset_and_sizes_attributes)

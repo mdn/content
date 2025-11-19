@@ -10,7 +10,7 @@ sidebar: mathmlref
 
 {{Deprecated_Header}}
 
-The **`mathsize`** [global attribute](/en-US/docs/Web/MathML/Reference/Global_attributes) sets the [font-size](/en-US/docs/Web/CSS/font-size) of a MathML element.
+The **`mathsize`** [global attribute](/en-US/docs/Web/MathML/Reference/Global_attributes) sets the [font-size](/en-US/docs/Web/CSS/Reference/Properties/font-size) of a MathML element.
 
 > [!NOTE]
 > Use CSS for styling MathML whenever possible. The `mathsize` attribute should only be included for applications that are not CSS-aware and will be overridden by the CSS `font-size` property, if set.

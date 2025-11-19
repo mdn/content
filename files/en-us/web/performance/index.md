@@ -155,7 +155,7 @@ The following APIs are also useful for measuring and influencing page performanc
 
 ### CSS
 
-- [will-change](/en-US/docs/Web/CSS/will-change)
+- [will-change](/en-US/docs/Web/CSS/Reference/Properties/will-change)
 
 ### JavaScript
 

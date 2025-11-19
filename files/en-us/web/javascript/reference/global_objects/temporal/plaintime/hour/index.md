@@ -11,7 +11,7 @@ sidebar: jsref
 
 {{SeeCompatTable}}
 
-The **`hour`** accessor property of {{jsxref("Temporal.PlainTime")}} instances returns a integer from 0 to 23 representing the hour component of this time.
+The **`hour`** accessor property of {{jsxref("Temporal.PlainTime")}} instances returns an integer from 0 to 23 representing the hour component of this time.
 
 The set accessor of `hour` is `undefined`. You cannot change this property directly. Use the {{jsxref("Temporal/PlainTime/with", "with()")}} method to create a new `Temporal.PlainTime` object with the desired new value.
 

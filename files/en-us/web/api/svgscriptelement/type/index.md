@@ -12,7 +12,7 @@ The **`type`** read-only property of the {{domxref("SVGScriptElement")}} interfa
 
 ## Value
 
-An string.
+A string.
 
 ## Examples
 

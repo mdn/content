@@ -147,7 +147,7 @@ Both these standards have good support, and you can use either to represent the 
 > [!NOTE]
 > In this section we'll use CycloneDX as a concrete example of an SBOM format.
 >
-> This section only provides an brief introduction to some of the most fundamental parts of the CycloneDX object model. For the full details, see the CycloneDX [Authoritative Guide to SBOM](https://cyclonedx.org/guides/OWASP_CycloneDX-Authoritative-Guide-to-SBOM-en.pdf).
+> This section only provides a brief introduction to some of the most fundamental parts of the CycloneDX object model. For the full details, see the CycloneDX [Authoritative Guide to SBOM](https://cyclonedx.org/guides/OWASP_CycloneDX-Authoritative-Guide-to-SBOM-en.pdf).
 
 In CycloneDX, all dependencies are either _components_ or _services_.
 

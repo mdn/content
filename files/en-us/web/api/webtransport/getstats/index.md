@@ -24,7 +24,7 @@ None.
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves to a object containing HTTP/3 connection statistics.
+A {{jsxref("Promise")}} that resolves to an object containing HTTP/3 connection statistics.
 The returned object may have the following properties/statistics:
 
 - `timestamp`

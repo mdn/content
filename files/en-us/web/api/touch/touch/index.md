@@ -23,7 +23,7 @@ new Touch(options)
     - `identifier`
       - : A `long` value, that is the identification number for the touch point.
     - `target`
-      - : A {{domxref("EventTarget")}} object, the item at which the touch point started when it was first placed on the surface.
+      - : An {{domxref("EventTarget")}} object, the item at which the touch point started when it was first placed on the surface.
     - `clientX` {{optional_inline}}
       - : Defaults to `0`, of type `double`, that is the horizontal position of the touch on the client window of user's screen, excluding any scroll offset.
     - `clientY` {{optional_inline}}

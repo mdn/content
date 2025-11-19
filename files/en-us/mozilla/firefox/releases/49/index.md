@@ -45,18 +45,18 @@ sidebar: firefox
 - Added {{cssxref("background-position-x")}} and {{cssxref("background-position-y")}}, which allow separately specifying the horizontal and vertical offsets at which to draw a background image; these are components of {{cssxref("background-position")}} ([Firefox bug 550426](https://bugzil.la/550426)).
 - Added support for the `round` and `space` keywords to {{cssxref("background-repeat")}} ([Firefox bug 548372](https://bugzil.la/548372)).
 - On {{cssxref("background-clip")}}, the keyword `text` is now activated by default ([Firefox bug 1264905](https://bugzil.la/1264905)).
-- Added support for specifying colors with an alpha channel using 4- and 8-digit CSS hex [color](/en-US/docs/Web/CSS/color_value) values (#RRGGBBAA and #RGBA) ([Firefox bug 567283](https://bugzil.la/567283)).
+- Added support for specifying colors with an alpha channel using 4- and 8-digit CSS hex [color](/en-US/docs/Web/CSS/Reference/Values/color_value) values (#RRGGBBAA and #RGBA) ([Firefox bug 567283](https://bugzil.la/567283)).
 - The pseudo-class {{cssxref(":dir")}} has been unprefixed ([Firefox bug 859301](https://bugzil.la/859301)).
 - In our experimental implementation (not yet activated by default) of {{cssxref("clip-path")}}, we can now interpolate between {{cssxref("&lt;basic-shape&gt;")}} values ([Firefox bug 1110460](https://bugzil.la/1110460)).
-- Added the [`q` length unit](/en-US/docs/Web/CSS/length#q) ([Firefox bug 1274526](https://bugzil.la/1274526)).
+- Added the [`q` length unit](/en-US/docs/Web/CSS/Reference/Values/length#q) ([Firefox bug 1274526](https://bugzil.la/1274526)).
 - The property {{cssxref("text-align-last")}} has been unprefixed ([Firefox bug 1039541](https://bugzil.la/1039541)).
 - Added support for {{cssxref("overflow-wrap")}}, replacing `word-wrap` that is still supported as an alternative name ([Firefox bug 955857](https://bugzil.la/955857)).
-- Our experimental [CSS Grids](/en-US/docs/Web/CSS/CSS_grid_layout) implementation has been improved:
+- Our experimental [CSS Grids](/en-US/docs/Web/CSS/Guides/Grid_layout) implementation has been improved:
   - Implemented {{cssxref("&lt;percentage&gt;")}} for the `grid-gap`, `grid-row-gap`, and `grid-column-gap` properties ([Firefox bug 1266268](https://bugzil.la/1266268)).
   - Implemented grid layout support for {{cssxref("align-self")}}, {{cssxref("justify-self")}} values `baseline` and `last-baseline` (aka "baseline self-alignment") ([Firefox bug 1221525](https://bugzil.la/1221525)).
   - Implemented grid item baseline content alignment ([Firefox bug 1256429](https://bugzil.la/1256429)).
 
-- Our experimental [CSS Masks](/en-US/docs/Web/CSS/CSS_masking) implementation has been improved:
+- Our experimental [CSS Masks](/en-US/docs/Web/CSS/Guides/Masking) implementation has been improved:
   - The {{cssxref("mask-origin")}} property now uses `border-box` instead of `padding-box` as initial value, to match the spec ([Firefox bug 1258286](https://bugzil.la/1258286)).
   - The {{cssxref("mask-repeat")}} property now supports the `space` and `round` values ([Firefox bug 1258626](https://bugzil.la/1258626)).
   - Fixed an issue preventing the {{cssxref("mask-position")}} attribute from being animated ([Firefox bug 1273804](https://bugzil.la/1273804)).
@@ -259,9 +259,9 @@ In order to improve compatibility with existing content, Firefox now accepts som
 
 - The `WebKitCSSMatrix` interface is an alias of {{domxref("DOMMatrix")}}
 - The following media query features have been implemented:
-  - `-webkit-min-device-pixel-ratio` as an alias of [`min-resolution`](/en-US/docs/Web/CSS/@media/resolution) with the same value (in `dppx)`, though this feature is [disabled by default](https://bugzil.la/1237720) (behind about:config pref `layout.css.prefixes.device-pixel-ratio-webkit`)
-  - `-webkit-max-device-pixel-ratio` as an alias of [`max-resolution`](/en-US/docs/Web/CSS/@media/resolution) of the same value (in `dppx`); this feature is also disabled by default, behind the same about:config pref.
-  - [`-webkit-transform-3d`](/en-US/docs/Web/CSS/@media/-webkit-transform-3d) always matching, indicating 3d transform support.
+  - `-webkit-min-device-pixel-ratio` as an alias of [`min-resolution`](/en-US/docs/Web/CSS/Reference/At-rules/@media/resolution) with the same value (in `dppx)`, though this feature is [disabled by default](https://bugzil.la/1237720) (behind about:config pref `layout.css.prefixes.device-pixel-ratio-webkit`)
+  - `-webkit-max-device-pixel-ratio` as an alias of [`max-resolution`](/en-US/docs/Web/CSS/Reference/At-rules/@media/resolution) of the same value (in `dppx`); this feature is also disabled by default, behind the same about:config pref.
+  - [`-webkit-transform-3d`](/en-US/docs/Web/CSS/Reference/At-rules/@media/-webkit-transform-3d) always matching, indicating 3d transform support.
 
 ## Changes for add-on and Mozilla developers
 

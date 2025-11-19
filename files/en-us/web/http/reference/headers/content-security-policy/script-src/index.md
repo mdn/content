@@ -62,7 +62,7 @@ the following script is blocked and won't be loaded or executed:
 Note that inline event handlers are blocked as well:
 
 ```html
-<button id="btn" onclick="doSomething()"></button>
+<button id="btn" onclick="doSomething()">Click me</button>
 ```
 
 You should replace them with {{domxref("EventTarget.addEventListener", "addEventListener")}} calls:

@@ -31,7 +31,7 @@ someElement.addEventListener("pointerdown", (event) => {
     process_max_pressure(event);
   } else {
     // Default
-    process_pressure(event);
+    processPressure(event);
   }
 });
 ```

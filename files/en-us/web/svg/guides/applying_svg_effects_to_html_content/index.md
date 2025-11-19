@@ -8,7 +8,7 @@ sidebar: svgref
 
 Modern browsers support using [SVG](/en-US/docs/Web/SVG) within [CSS](/en-US/docs/Web/CSS) styles to apply graphical effects to HTML content.
 
-You may specify SVG in styles either within the same document or an external style sheet. There are 3 properties you can use: [`mask`](/en-US/docs/Web/CSS/mask), [`clip-path`](/en-US/docs/Web/CSS/clip-path), and [`filter`](/en-US/docs/Web/CSS/filter).
+You may specify SVG in styles either within the same document or an external style sheet. There are 3 properties you can use: [`mask`](/en-US/docs/Web/CSS/Reference/Properties/mask), [`clip-path`](/en-US/docs/Web/CSS/Reference/Properties/clip-path), and [`filter`](/en-US/docs/Web/CSS/Reference/Properties/filter).
 
 > [!NOTE]
 > References to SVG in external files must be to the [same origin](/en-US/docs/Web/Security/Same-origin_policy) as the referencing document.
@@ -139,7 +139,7 @@ document.querySelector("button").addEventListener("click", toggleRadius);
 
 ### Example: Filtering
 
-This demonstrates applying a filter to HTML content using SVG. It establishes several filters, which are applied with CSS to three elements in both the normal and mouse [hover](/en-US/docs/Web/CSS/:hover) states.
+This demonstrates applying a filter to HTML content using SVG. It establishes several filters, which are applied with CSS to three elements in both the normal and mouse [hover](/en-US/docs/Web/CSS/Reference/Selectors/:hover) states.
 
 ```html
 <p class="target">
@@ -248,7 +248,7 @@ pre.target:hover {
 
 ### Example: Blurred Text
 
-In order to blur text, there is a CSS filter function called [`blur()`](/en-US/docs/Web/CSS/filter-function/blur). You can achieve the same effect using SVG filters.
+In order to blur text, there is a CSS filter function called [`blur()`](/en-US/docs/Web/CSS/Reference/Values/filter-function/blur). You can achieve the same effect using SVG filters.
 
 ```html
 <p class="blur">Time to clean my glasses</p>

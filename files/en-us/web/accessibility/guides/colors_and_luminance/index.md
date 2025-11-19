@@ -18,7 +18,7 @@ The choice of colors and their use is a significant component of accessibility. 
 
 Environment matters. Perception of color in a well-lit room will be different than perception of that same color on that same computer screen in a dark room. Regarding accessibility, using certain color combinations has more impact than others. Font size, [font style](https://www.nngroup.com/articles/glanceable-fonts/) (some fonts are so thin or fancy that they present accessibility problems on their own), background color, the size of the background space around the text, even pixel densities, and more all affect how color is delivered from the screen.
 
-A viewer's distance from the screen, the ambient background, the health of his eyes, and more all affect how that color is received by the viewer. How the viewer perceives color after it gets to their eyes is yet another matter, and can be affected by overall health. Fortunately, there are [media queries](/en-US/docs/Web/CSS/@media) that enable developers to provide styles based on user preferences, including [contrast](/en-US/docs/Web/CSS/@media/prefers-contrast) and [color scheme](/en-US/docs/Web/CSS/@media/prefers-color-scheme) preferences.
+A viewer's distance from the screen, the ambient background, the health of his eyes, and more all affect how that color is received by the viewer. How the viewer perceives color after it gets to their eyes is yet another matter, and can be affected by overall health. Fortunately, there are [media queries](/en-US/docs/Web/CSS/Reference/At-rules/@media) that enable developers to provide styles based on user preferences, including [contrast](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-contrast) and [color scheme](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) preferences.
 
 When supported, the [Ambient Light Sensor](/en-US/docs/Web/API/AmbientLightSensor) interface returns the current light level or illuminance of the ambient light around the hosting device, enabling a web page to be aware of any change in the light intensity, and consequently, adjust the text accordingly. Additionally, the above media queries enable developers to provide alternative user experiences when user preferences indicate preferred contrast levels, automatically adjusting levels depending on the user's location and what kind of screen they are using.
 
@@ -30,17 +30,17 @@ Luminance must be established before the contrast may be. When speaking of color
 
 ### Terminology
 
-Terminology can be confusing because different terms often describe the same thing. "Luminance" and "Saturation" are particularly important to get right. For example, "saturation" is known as "chroma" in some circles. In others, "chroma" and "saturation" are two different concepts. The "L" in the HSL color space is sometimes referred to as "luminosity," and other times as "lightness." Even something seemingly simple, like naming common colors, can be open to debate. For example, the color "crimson red" may be described in hex values as `#990000` by some and `#DC143C` by others. For this document, we'll use terminology as it is defined on the CSS [`<named-color>`](/en-US/docs/Web/CSS/named-color) page.
+Terminology can be confusing because different terms often describe the same thing. "Luminance" and "Saturation" are particularly important to get right. For example, "saturation" is known as "chroma" in some circles. In others, "chroma" and "saturation" are two different concepts. The "L" in the HSL color space is sometimes referred to as "luminosity," and other times as "lightness." Even something seemingly simple, like naming common colors, can be open to debate. For example, the color "crimson red" may be described in hex values as `#990000` by some and `#DC143C` by others. For this document, we'll use terminology as it is defined on the CSS [`<named-color>`](/en-US/docs/Web/CSS/Reference/Values/named-color) page.
 
 When working with color, it's important to know which "color space" you are working in, as different color spaces map to different measurement systems.
 
 In color printing, your printer likely has cyan, magenta, yellow, and black (CMYK) ink cartridges. CMYK is a subtractive model wherein the four inks _remove_ specific wavelengths of light, reflecting only the narrow range each is associated with. RGB is an additive color model that adds different proportions of red, green, and blue lights.
 
-Currently, the {{glossary("RGB", "RGB color space")}} predominates as the space web developers work in. While HEX, RGB, and HSL color spaces are notated differently, browsers automatically convert values between these color notations. [CSS color modules](/en-US/docs/Web/CSS/CSS_colors) provide additional color spaces. Still, because of the current domination of the RGB color space in measuring color output, most calculations in this document are presumed to be in the RGB color space and, very specifically, in the sRGB color space.
+Currently, the {{glossary("RGB", "RGB color space")}} predominates as the space web developers work in. While HEX, RGB, and HSL color spaces are notated differently, browsers automatically convert values between these color notations. [CSS color modules](/en-US/docs/Web/CSS/Guides/Colors) provide additional color spaces. Still, because of the current domination of the RGB color space in measuring color output, most calculations in this document are presumed to be in the RGB color space and, very specifically, in the sRGB color space.
 
 ## The sRGB color space
 
-Color has many ways of being defined, as is apparent in the [`<color>` data type](/en-US/docs/Web/CSS/color_value), including RGB, RGB decimal, RGB percent, HSL, HWB, LCH, Lab, and CMYK, among others.
+Color has many ways of being defined, as is apparent in the [`<color>` data type](/en-US/docs/Web/CSS/Reference/Values/color_value), including RGB, RGB decimal, RGB percent, HSL, HWB, LCH, Lab, and CMYK, among others.
 
 For digital concerns, much of the technology has historically resided in the RGB color space. The RGB color model is extended to include "alpha" — RGBA — to allow specification of the opacity of a color. Other methods for measuring color involve measurements using other color spaces and are supported in modern displays and browsers. Still, color measurements in the RGB color space predominate, including in video production.
 
@@ -95,7 +95,7 @@ color: color(xyz-d65 0.59 0.28 0.96);
 color: color(xyz-d65 0.59 0.28 0.96 / 1);
 ```
 
-The first example uses one of the defined [named colors](/en-US/docs/Web/CSS/named-color).
+The first example uses one of the defined [named colors](/en-US/docs/Web/CSS/Reference/Values/named-color).
 
 We can set the sRGB values directly as a percentage, with 0% being off (black) and 100% being the full value for that color. The values are in the order of red, green, and blue. We can also set the sRGB values directly by a number from 0 to 255.
 
@@ -103,25 +103,25 @@ Shown after that are hex color values. Hexadecimal is a numbering system with ba
 
 If all values are pairs of identical digits, the value can be represented by single digits that the browser will duplicate. Thus `f00` is the same as `ff0000`. If a fourth set of numbers is present, that value is the A in RGBA, the alpha channel defining transparency in terms of the opacity value of the color. A higher value means the color is more opaque and therefore, less transparent. In the examples above, the alpha value is `f`, `ff`, `1`, and `100%` for fully opaque.
 
-The example also shows the legacy syntax for both [`rgb()` and `rgba()`](/en-US/docs/Web/CSS/color_value/rgb#examples). The legacy syntax for color functions is comma-separated, with a separate function for when the alpha channel is included. New color functions only have one syntax with space-separated (rather than comma-separated) values, with the alpha channel, if present, being preceded by a slash. Modern syntax allows for mixing numbers and percents and supports the `none` keyword; the comma-separated legacy syntax does not.
+The example also shows the legacy syntax for both [`rgb()` and `rgba()`](/en-US/docs/Web/CSS/Reference/Values/color_value/rgb#examples). The legacy syntax for color functions is comma-separated, with a separate function for when the alpha channel is included. New color functions only have one syntax with space-separated (rather than comma-separated) values, with the alpha channel, if present, being preceded by a slash. Modern syntax allows for mixing numbers and percents and supports the `none` keyword; the comma-separated legacy syntax does not.
 
-The following examples show "HSL", which stands for _Hue, Saturation, and Lightness_. HSL color values are considered by many to be more intuitive than RGB values. The color produced from the settings are still in the sRGB colorspace, but [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl) is an intuitive syntax for many. The hue is adjusted as an angle, and it is easy to create a user interface using a knob or circular control to adjust the hue. Do note that HSL colors incorporate _lightness_, not _luminance_, which is a significant consideration.
+The following examples show "HSL", which stands for _Hue, Saturation, and Lightness_. HSL color values are considered by many to be more intuitive than RGB values. The color produced from the settings are still in the sRGB colorspace, but [`hsl()`](/en-US/docs/Web/CSS/Reference/Values/color_value/hsl) is an intuitive syntax for many. The hue is adjusted as an angle, and it is easy to create a user interface using a knob or circular control to adjust the hue. Do note that HSL colors incorporate _lightness_, not _luminance_, which is a significant consideration.
 
-The next examples shows "HWB" which stands for _Hue, Whiteness, and Blackness_. With both `hsl()` and [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb) the first value can be a [`<number>`](/en-US/docs/Web/CSS/number) or an [`<angle>`](/en-US/docs/Web/CSS/angle) value. When unitless, the value is interpreted as `deg` degrees.
+The next examples shows "HWB" which stands for _Hue, Whiteness, and Blackness_. With both `hsl()` and [`hwb()`](/en-US/docs/Web/CSS/Reference/Values/color_value/hwb) the first value can be a [`<number>`](/en-US/docs/Web/CSS/Reference/Values/number) or an [`<angle>`](/en-US/docs/Web/CSS/Reference/Values/angle) value. When unitless, the value is interpreted as `deg` degrees.
 
-There are several other color functions and color spaces. The last three examples demonstrate representing magenta using the [`lab()`](/en-US/docs/Web/CSS/color_value/lab), [`oklch()`](/en-US/docs/Web/CSS/color_value/oklch), and [`color()`](/en-US/docs/Web/CSS/color_value/color) color functions.
+There are several other color functions and color spaces. The last three examples demonstrate representing magenta using the [`lab()`](/en-US/docs/Web/CSS/Reference/Values/color_value/lab), [`oklch()`](/en-US/docs/Web/CSS/Reference/Values/color_value/oklch), and [`color()`](/en-US/docs/Web/CSS/Reference/Values/color_value/color) color functions.
 
 ### Conversions
 
 As we saw, one color within the same color space may be expressed in many ways. Looking at how the RGB color space is used to describe the color "magenta", you can see that the same color may be expressed in a shorthand, three-digit hex number that converts to an rgb value as a six-digit hex number that also converts to the same rgb value, or as a rgba value, expressed in percentages.
 
-RGB is hardware-oriented, reflecting the use of CRTs. Many developers and designers prefer the intuitiveness of [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl) notation. Fortunately, browsers convert from RGB to HSL automatically, and shift-clicking on colors in browser developer tools provides conversion functionality.
+RGB is hardware-oriented, reflecting the use of CRTs. Many developers and designers prefer the intuitiveness of [`hsl()`](/en-US/docs/Web/CSS/Reference/Values/color_value/hsl) notation. Fortunately, browsers convert from RGB to HSL automatically, and shift-clicking on colors in browser developer tools provides conversion functionality.
 
 In addition to developer tools, many tools can convert RGB to HSL for you and provide both the RGB hexadecimal and CSS function syntax. A great example of a tool that converts colors for you is Tom Jewett's "[mini color selector](https://colortutorial.design/microColorsC.html)" with HSL, RGB, and Hex options for checking contrast in the browser. Note that developer tools color pickers and this tool all provide WCAG [color contrast](https://webaim.org/resources/contrastchecker/) values.
 
 ![Color picker with HSL and RGB, with color contrast values.](microcolorsc.jpg)
 
-As noted earlier, the [CSS color module](/en-US/docs/Web/CSS/CSS_colors) includes adding additional colorspaces, including [`lch()`](/en-US/docs/Web/CSS/color_value/lch) and [`oklch()`](/en-US/docs/Web/CSS/color_value/oklch) functional color notation and the [`lab()`](/en-US/docs/Web/CSS/color_value/lab) and [`oklab()`](/en-US/docs/Web/CSS/color_value/oklab) color coordinate systems, which can specify any visible color. That said, sRGB is still the default and preferred colorspace for accessibility because of its ubiquity.
+As noted earlier, the [CSS color module](/en-US/docs/Web/CSS/Guides/Colors) includes adding additional colorspaces, including [`lch()`](/en-US/docs/Web/CSS/Reference/Values/color_value/lch) and [`oklch()`](/en-US/docs/Web/CSS/Reference/Values/color_value/oklch) functional color notation and the [`lab()`](/en-US/docs/Web/CSS/Reference/Values/color_value/lab) and [`oklab()`](/en-US/docs/Web/CSS/Reference/Values/color_value/oklab) color coordinate systems, which can specify any visible color. That said, sRGB is still the default and preferred colorspace for accessibility because of its ubiquity.
 
 Where accessibility is concerned, however, standards and guidelines are currently written predominantly using the sRGB color space, especially as it applies to color contrast ratios.
 
@@ -130,7 +130,7 @@ Where accessibility is concerned, however, standards and guidelines are currentl
 
 ### Querying color values
 
-The {{domxref('Window.getComputedStyle()')}} method returns values using the RGB Decimal Reference scale or via `color(srgb...)`. For example, calling `Window.getComputedStyle()` on a `<div>` with `background-color: red` set on it returns the computed background color as `rgb(255, 0, 0)` — the RGB Decimal reference. However, when [using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors) (for example `background-color: rgb(from blue 255 0 0)`), calling `Window.getComputedStyle()` returns the computed background color as `color(srgb 1 0 0)`. Being tied to computer hardware, `Window.getComputedStyle()` measures color in terms of RGB, not how the human eye perceives color.
+The {{domxref('Window.getComputedStyle()')}} method returns values using the RGB Decimal Reference scale or via `color(srgb...)`. For example, calling `Window.getComputedStyle()` on a `<div>` with `background-color: red` set on it returns the computed background color as `rgb(255, 0, 0)` — the RGB Decimal reference. However, when [using relative colors](/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors) (for example `background-color: rgb(from blue 255 0 0)`), calling `Window.getComputedStyle()` returns the computed background color as `color(srgb 1 0 0)`. Being tied to computer hardware, `Window.getComputedStyle()` measures color in terms of RGB, not how the human eye perceives color.
 
 ### Red / green color blindness
 
@@ -218,7 +218,7 @@ Dark adaptation to low luminance is slow. When you come in from outside, where t
 
 Light adaptation is the reverse. Going from a dark room into bright sunlight is quicker but can also hurt.
 
-The implication is that web developers who seek to improve the legibility of text in which the ambient conditions of a room have changed can take advantage of the `AmbientLightSensor` interface and the [`prefers-contrast`](/en-US/docs/Web/CSS/@media/prefers-contrast) media query.
+The implication is that web developers who seek to improve the legibility of text in which the ambient conditions of a room have changed can take advantage of the `AmbientLightSensor` interface and the [`prefers-contrast`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-contrast) media query.
 
 ## Saturation
 
@@ -228,7 +228,7 @@ Saturation is sometimes described as the "purity" or "intensity" of a color. Alt
 
 When it comes to color on a monitor, saturated colors are of a particular wavelength. While the definition of saturation for each color space may differ, saturation is readily measured. The key is to know which color space you are working in and be ready to convert it if necessary.
 
-The color spaces most frequently considered when discussing photosensitivity are the RGB, HSL, and HSV, also known as HSB, color spaces. The HSV color space, which stands for _hue_, _saturation_, and _value_, and the synonym HSB, which stands for _hue_, _saturation_, and _brightness_, are represented in CSS as [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb) for _hue_, _whiteness_, and _blackness_.
+The color spaces most frequently considered when discussing photosensitivity are the RGB, HSL, and HSV, also known as HSB, color spaces. The HSV color space, which stands for _hue_, _saturation_, and _value_, and the synonym HSB, which stands for _hue_, _saturation_, and _brightness_, are represented in CSS as [`hwb()`](/en-US/docs/Web/CSS/Reference/Values/color_value/hwb) for _hue_, _whiteness_, and _blackness_.
 
 It's important to know what color space you're working with. For example, saturated colors have a lightness of `0.5` in HSL, while in HWB, they have a value `1`. Saturation in the RGB color space is usually indicated by an RGB value of `255` or `100%` for the color in question. For example, a saturated red of hex value `#ff0000` has an RGB value of `rgb(255 0 0)` and an HSL value of `hsl(0 100% 50%)`. A different saturated red with a hex value of `#ff3300` has an RGB value of `rgb(255 51 0)` and an HSL value of `hsl(12 100% 50%)`. Both are "saturated" reds. They are two different "hues" but are both considered to be a saturated color.
 
@@ -262,7 +262,7 @@ The nature of blue light causes it to focus at a different location on the retin
 
 ## The special case of red
 
-Not all colors ("hue") are processed similarly by our brains. Human physiology and psychology are affected by the color red, generally speaking, in ways different from that of other colors. We respond physiologically as well as psychologically to colors. For example, it has been demonstrated that [some colors are more likely to cause epileptic fits than others](https://www.sciencedaily.com/releases/2009/09/090925092858.htm). Some devices offer a ["grayscale" setting as an accessibility option](https://ask.metafilter.com/312049/What-is-the-grayscale-setting-for-in-accessibility-options)" which can help people who are photo-sensitive. To mimic the grayscale setting, use the CSS {{cssxref("filter")}} property with a [`grayscale()`](/en-US/docs/Web/CSS/filter-function/grayscale) or [`saturate()`](/en-US/docs/Web/CSS/filter-function/saturate) [`<filter-function>`](/en-US/docs/Web/CSS/filter-function).
+Not all colors ("hue") are processed similarly by our brains. Human physiology and psychology are affected by the color red, generally speaking, in ways different from that of other colors. We respond physiologically as well as psychologically to colors. For example, it has been demonstrated that [some colors are more likely to cause epileptic fits than others](https://www.sciencedaily.com/releases/2009/09/090925092858.htm). Some devices offer a ["grayscale" setting as an accessibility option](https://ask.metafilter.com/312049/What-is-the-grayscale-setting-for-in-accessibility-options)" which can help people who are photo-sensitive. To mimic the grayscale setting, use the CSS {{cssxref("filter")}} property with a [`grayscale()`](/en-US/docs/Web/CSS/Reference/Values/filter-function/grayscale) or [`saturate()`](/en-US/docs/Web/CSS/Reference/Values/filter-function/saturate) [`<filter-function>`](/en-US/docs/Web/CSS/Reference/Values/filter-function).
 
 ### Saturated red
 
@@ -314,8 +314,8 @@ Color as in hues and saturation can affect our mood, and enhance — or de-enhan
 
 - [Accessibility](/en-US/docs/Web/Accessibility)
 - [Accessibility learning path](/en-US/docs/Learn_web_development/Core/Accessibility)
-- CSS [`color`](/en-US/docs/Web/CSS/color) property
-- [`<color>`](/en-US/docs/Web/CSS/color_value) data type
+- CSS [`color`](/en-US/docs/Web/CSS/Reference/Properties/color) property
+- [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value) data type
 - [Web accessibility for seizures and physical reactions](/en-US/docs/Web/Accessibility/Guides/Seizure_disorders)
 - [How the Color Red Influences Our Behavior](https://www.scientificamerican.com/article/how-the-color-red-influences-our-behavior/) Scientific American By Susana Martinez-Conde, Stephen L. Macknik on November 1, 2014
 - [Red Desaturation](https://www.smartoptometry.app/red-desaturation/) The human eye is so sensitively "tuned" to red, that ophthalmologists set up a test using it, assessing the integrity of the optic nerve.
