@@ -101,7 +101,6 @@ You can make other choices about images inside containers. For example, you may 
 
 The {{cssxref("object-fit")}} property can help you here. When using `object-fit` the replaced element can be sized to fit a box in a variety of ways.
 
-
 Below, the first example uses the value `cover`, which sizes the image down, maintaining the aspect ratio so that it neatly fills the box. As the aspect ratio is maintained, some parts of the image will be cropped by the box. The second example uses `contain` as a value: this scales the image down until it is small enough to fit inside the box. This results in "letterboxing" as it is not the same aspect ratio as the box.
 
 ```html live-sample___object-fit
