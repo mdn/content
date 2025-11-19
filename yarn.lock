@@ -744,10 +744,10 @@
   resolved "https://registry.yarnpkg.com/@marijn/find-cluster-break/-/find-cluster-break-1.0.2.tgz#775374306116d51c0c500b8c4face0f9a04752d8"
   integrity sha512-l0h88YhZFyKdXIFNfSWpyjStDjGHwZ/U7iobcK1cQQD8sejsONdQtTVU+1wVN1PBw40PiiHB1vA5S7VTfQiP9g==
 
-"@mdn/fred@1.8.1":
-  version "1.8.1"
-  resolved "https://registry.yarnpkg.com/@mdn/fred/-/fred-1.8.1.tgz#d79ed7c109265796c7bae5755df2e01ba52bc738"
-  integrity sha512-Yt20De72HMB/SR2JM1uRsbBMuVh4bIev0Grszw7mPbeDNlk6V6XNuesMU872QJr41Jwr92tRon3tLrqQ3PV8FQ==
+"@mdn/fred@1.9.0":
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/@mdn/fred/-/fred-1.9.0.tgz#0619f7f9c57f43f17056050021abb7647e3fa0e4"
+  integrity sha512-nlOyHLuOARPKSVvZAwHmg/UCIekomGKZf+Qel8bOv7RJSPdpH9Rqr4WAFLOyLYQpz1Set129+CWwuJ1iRyiDxg==
   dependencies:
     "@codemirror/lang-css" "^6.3.1"
     "@codemirror/lang-html" "^6.4.11"
@@ -759,9 +759,9 @@
     "@lit-labs/ssr" "^3.3.1"
     "@lit-labs/ssr-client" "^1.1.7"
     "@lit/task" "^1.0.3"
-    "@mdn/rari" "0.2.0"
+    "@mdn/rari" "0.2.1"
     "@mdn/watify" "^1.1.5"
-    "@mozilla/glean" "^5.0.6"
+    "@mozilla/glean" "^5.0.7"
     codemirror "^6.0.1"
     compression "^1.8.1"
     concurrently "^9.2.1"
@@ -778,10 +778,10 @@
     prismjs "^1.29.0"
     source-map-support "^0.5.21"
 
-"@mdn/rari@0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@mdn/rari/-/rari-0.2.0.tgz#cc79583d0aad3cd9165dd00911841bad6963eba5"
-  integrity sha512-SXJQxEp5IuXBqxMlRIwzMjI4c5nKCHTOEnPt3QrTWJyyT3pIDlZe1xeAog4Q1HOdAbk34dRUKNwSYT3nawDo2A==
+"@mdn/rari@0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@mdn/rari/-/rari-0.2.1.tgz#6171e62cb17c6f7dd9601e02417b50d4811d6b93"
+  integrity sha512-IAcz6Y5rNWBViP+H7dcdj9XNi7z3jb2X1kG/8Pl3rrk+s3/Hp+jqrT3srZQFuO3QRP0oy9Jjl92PL9k+YdiECw==
   dependencies:
     extract-zip "^2.0.1"
     https-proxy-agent "^7.0.2"
@@ -794,10 +794,10 @@
   resolved "https://registry.yarnpkg.com/@mdn/watify/-/watify-1.1.5.tgz#3a0e2b22741ae668b281c2b6b838b441e818644b"
   integrity sha512-lCiovK+LSowttMZ9ZRXMtf/qH1pggeRwi3Dy7gz415ZcVMXrs09ubSda236vr+QPQPwchxtA5JWV4cypGcyuwA==
 
-"@mozilla/glean@^5.0.6":
-  version "5.0.6"
-  resolved "https://registry.yarnpkg.com/@mozilla/glean/-/glean-5.0.6.tgz#436745643c4b40d58eaf4e0a8b1dee551ae2a41d"
-  integrity sha512-Oz4M+pxHmTcy82iCCmcARjEwwDCsMZCwidRhdZU0pYueEFJgDc5S+u48Y68SxEsExFAthuhzE2H4BcvwsRhYJg==
+"@mozilla/glean@^5.0.7":
+  version "5.0.7"
+  resolved "https://registry.yarnpkg.com/@mozilla/glean/-/glean-5.0.7.tgz#08e6e8e7896c05126b23c44a6e8a3c7bef30ca30"
+  integrity sha512-IcjtCObOnZbcJUH8BoUJpXuIKZ/QBeE7CI7gso0XyAJIDELlcgy61sZCBjBlw7FymjmIyJVGY+OOAQ1CJ3SFbA==
   dependencies:
     fflate "^0.8.0"
     tslib "^2.3.1"
