@@ -15,9 +15,7 @@ One-time passwords can either be used in addition to traditional passwords, or t
 
 Many OTPs are 6 digits long with a 1-in-a-million chance to guess correctly. This is much better than 4 digits with just 10,000 possible combinations. The security mechanism that OTPs rely on is the temporal component: OTPs are usually only valid once for a defined timeframe and invalidated after use. That's why OTPs have a short expiration time (ideally ≤5 minutes; 30–120 seconds for stronger protection).
 
-TOTPs (time-based one-time passwords) implement the temporal component and the invalidation by default.
-
-This article discusses three common implementations for one-time passwords: email, SMS, and authenticator apps (TOTP). They are all delivery methods for one-time passwords and TOTP is considered the most secure delivery channel in this comparison.
+This article discusses three common implementations for one-time passwords: email, SMS, and time-based one-time passwords (TOTP). TOTP is considered the most secure delivery channel in this comparison.
 
 ## Email OTP
 
@@ -38,18 +36,20 @@ There are two common approaches to delivering the code:
 
 2. The website sends a personalized one-time code to the user's email address. The user is then asked to type the code into the website on their desired device and in their desired browser. This process can be slower and less convenient for the user but it offers greater flexibility as where to login and is considered more secure than using links in emails.
 
-For a great user experience with all email-based OTP methods, it is important that users receive the OTP emails reasonably quickly.
+For a good user experience with all email-based OTP methods, it is important that users receive the OTP emails reasonably quickly.
 
 ## SMS OTP
 
-An alternative to email-based OTP is text messaging via Short Message Service (SMS) to the user's phone. However, note that SMS is not considered to be a safe method for a few reasons:
+In SMS OTP, the user provides their cellphone number during registration, and at sign-in the website sends the one-time code to the phone in an SMS message.
+
+A weakness of both email and SMS methods is that an attacker could intercept the message that contains the code. However, SMS is considered more vulnerable:
 
 - Although SMS messages can be encrypted using [A5/X stream ciphers](https://en.wikipedia.org/wiki/A5/1), various weaknesses in the cipher have been identified and messages can be decrypted within minutes or seconds.
 - There are known flaws in SMS routing protocols ([SS7](https://en.wikipedia.org/wiki/Signalling_System_No._7)) which result in attackers being able to redirect text messages to them.
 - In [SIM swap scams](https://en.wikipedia.org/wiki/SIM_swap_scam) the attacker abuses the mobile number portability (normally used when switching services, or when a phone is lost or stolen) to impersonate the victim.
-- Carriers can also recycle phone numbers to new users after an account got closed.
+- Carriers can also recycle phone numbers to new users after an account is closed.
 
-Because SMS-based OTP is insecure, it is not recommended for use to establish new sessions or for general authentication. Instead, if at all, only use it as a second factor or for confirming intentions (e.g., payments).
+Because of this, you should not use SMS OTP on its own to establish new sessions or for general authentication. Instead, if at all, only use it as a second factor or for confirming intentions (e.g., payments).
 
 ### Autocompleting SMS codes
 
@@ -84,77 +84,88 @@ The browser will automatically extract the code from the SMS, and if the origin 
 
 The [WebOTP API](/en-US/docs/Web/API/WebOTP_API) gives websites programmatic access to one-time codes delivered over SMS. However, it doesn't have good cross-browser support, and unless you need programmatic access to the code, you don't need to use this API. Using the standardized format and `autocomplete=one-time-code` should be enough for autocomplete to work across browsers.
 
-## TOTP flows (authenticator app)
+## TOTP
 
-The time-based one-time password (TOTP) algorithm is specified in [RFC 6238](https://www.rfc-editor.org/rfc/rfc6238). It creates one-time codes that are 6 digits long and which are only valid for a limited amount of time (usually 30 seconds). It is similar to other OTP systems but implements time-based validity and automatic invalidation by design.
+With time-based one-time passwords, the website does not send the sign-in code to the user. Instead, the website and the user are able to generate the same code independently of each other, based on the current time and a shared secret. To generate the code, the user must install an app on their device: this is called an _authenticator app_.
 
-In order for TOTP to work, the following steps will need to happen:
+At registration time:
 
-1. The website generates and shares a secret seed (which can be made accessible using a QR code).
-2. The user generates a TOTP token based on the secret seed and the current time (authenticator apps can help with this).
-3. The user enters the TOTP token on the website to authenticate.
+1. The user installs an authenticator app, if they don't have one already.
+2. The website:
+   - Generates the shared secret.
+   - Securely stores the secret, associating it with the user's account.
+   - Embeds the secret and some related metadata in an [`otpauth`](https://www.rfc-editor.org/rfc/rfc6238) URI.
+   - Encodes the URI as a QR code and invites the user to scan it.
 
-### TOTP secret sharing
+3. The authenticator app on the user's device decodes the URI from the QR code and parses the URI, storing the secret and related metadata.
 
-To setup TOTP, a website needs to share a secret key with the user. A TOTP secret key is a randomly generated [Base32](https://en.wikipedia.org/wiki/Base32) encoded seed. For example, the following command generates a 32-character Base32 random string::
+At sign-in time, the user provides the current code value, which the authenticator app calculates based on the secret and the current time. The website is able to perform the same calculation, and if the values match, the user can be signed in.
+
+### TOTP algorithm
+
+The time-based one-time password (TOTP) algorithm is specified in {{rfc("6238")}}. It is an extension of the HMAC-Based One-Time Password Algorithm (HOTP), which is specified in {{rfc("4226")}}.
+
+The algorithm creates one-time codes that are 6 digits long and which are only valid for a limited amount of time (usually 30 seconds). This means that unlike the other OTP systems we've described, TOTP implements time-based validity and automatic invalidation by design.
+
+The secret key is a random value recommended to be at least 160 bits long.
+
+You should use a well-regarded third-party package to implement TOTP, such as [pyotp](https://pyauth.github.io/pyotp/), for Python, or [otpauth](https://www.npmjs.com/package/otpauth), for Node.
+
+### The `otpauth` URI format
+
+The `otpauth` URI format is defined in this [IETF draft](https://www.ietf.org/archive/id/draft-linuxgemini-otpauth-uri-00.html).
+
+For TOTP, the URI is formatted like this:
 
 ```plain
-LC_ALL=C tr -dc 'A-Z2-7' </dev/urandom | head -c 32; echo
+otpauth://totp/LABEL?secret=MQCHJLS6FJXT2BGQJ6QMG3WCAVUC2HJZ&issuer=My_Website
 ```
 
-This secret can be provided to the user in the form of a QR code, however, if you want to avoid QR codes, all you really need is an URI in the `otpauth` URI format as defined in this [IETF draft](https://www.ietf.org/archive/id/draft-linuxgemini-otpauth-uri-00.html).
+The `LABEL` component identifies the user: for example, it could be their username.
 
-The URI must be formatted like this:
-
-```plain
-otpauth://totp/?secret=MQCHJLS6FJXT2BGQJ6QMG3WCAVUC2HJZ
-```
-
-Usually, users will store multiple TOTP secrets in their TOTP authenticator app, therefore it can be useful to provide a label for the issuer, so that the shared secret is associated with a service. However, labels can also reveal service names to an attacker if they gain access to the authenticator app.
-
-```plain
-otpauth://totp/ExampleWebsite?secret=MQCHJLS6FJXT2BGQJ6QMG3WCAVUC2HJZ
-```
-
-The URI is an URL query string and it has a few parameters (support in authenticator applications may vary). The most interesting parameters are:
+The URI includes a number of query string parameters, of which the most important are:
 
 - `secret`
-  - : The shared secret encoded in `base32`.
-- `algorithm` {{optional_inline}}
-  - : The algorithm used for the TOTP tokens. Possible values: `sha1` (default), `sha256`, `sha512`.
-- `digits` {{optional_inline}}
-  - : The number of digits that should be outputted for the TOTP token. 6 digits is the default value.
-- `period` {{optional_inline}}
-  - : The refresh period in seconds for the TOTP tokens.
+  - : The shared secret encoded in [Base32](https://en.wikipedia.org/wiki/Base32).
+- `issuer`
+  - : The name of the provider or service that this account is associated with. Technically optional, but strongly recommended.
 
-If you'd like to use QR codes, you can use [`qrencode`](https://fukuchi.org/works/qrencode/) or similar libraries and create an image from the command line, for example:
+### Authenticator apps
 
-```plain
-qrencode -t PNG -o qr-totp.png 'otpauth://totp/ExampleWebsite?secret=MQCHJLS6FJXT2BGQJ6QMG3WCAVUC2HJZ'
-```
+A large number of authenticator apps, both proprietary and open source, support TOTP. For example: [Ente Auth](https://ente.io/auth/), [2FAS](https://2fas.com) and [Microsoft Authenticator](https://www.microsoft.com/en-US/security/mobile-authenticator-app).
 
-### Generating TOTP codes
+### Securing the secret
 
-With the shared secret key and the current time as inputs, you can now produce a unique, time-based code. This usually gets done using a cryptographic algorithm, typically `HMAC-SHA1` or `HMAC-SHA256`.
+With TOTP the secret key must be stored securely in both the server and the client.
 
-Several apps, like [Ente Auth](https://ente.io/auth/), [2FAS](https://2fas.com) or [Microsoft Authenticator](https://www.microsoft.com/en-US/security/mobile-authenticator-app), allow you to store secrets you've received from various websites or services. You don't necessarily need to use an authenticator app, but if you do, choose one that is trustworthy and secure. For example, there are several TOTP token generator tools online, but you might not know what they are doing with your shared secrets. If you use online services to quickly generate TOTP tokens, at least consider to not provide details for which service the shared secret is intended for.
+For the server, the considerations are similar to those for [password storage](/en-US/docs/Web/Security/Authentication/Passwords#storing_passwords): the server must store TOTP secrets in such a way that the attacker cannot access them, even if they get access to the server's database.
+
+For the client, the authenticator app should provide some degree of protection for the secret key.
+
+## Strengths and weaknesses
+
+Compared with [passwords](/en-US/docs/Web/Security/Authentication/Passwords), the biggest strength of OTP is that the user is not involved in creating or remembering secrets, so OTP is not vulnerable to [guessing](/en-US/docs/Web/Security/Authentication/Passwords#guessing) or [credential stuffing](/en-US/docs/Web/Security/Authentication/Passwords#credential_stuffing) attacks.
+
+### Weaknesses
+
+- SMS and email-based OTP have the risk that an attacker could intercept OTP codes sent from the server, and SMS is much weaker than email in this respect.
+
+- TOTP is not vulnerable to interception, but adds the risk that an attacker could get access to the shared secret.
+
+- All forms of OTP are vulnerable to [phishing attacks](/en-US/docs/Web/Security/Attacks/Phishing#multi-factor_authentication).
+
+Security aside, OTP has some usability issues:
+
+- SMS and email-based OTP can be awkward to use, especially if there is significant latency between the server sending the code and the user receiving it.
+- For TOTP, the need to install an authenticator app is a significant barrier to sign-up: but of course, if the user has already installed the app for a different site, then they won't need to do it again when they sign up to your site.
 
 ## OTP recommendations
 
-OTP, and in particular TOTP, can be useful as an additional (2FA) authentication method and for confirming user intentions, for example when making a payment. For general authentication purposes, much stronger mechanism, such as [WebAuthn](/en-US/docs/Web/API/Web_Authentication_API), should be considered. If you implement one-time passwords, consider the following recommendations:
+OTP, and in particular TOTP, can be useful as an {{glossary("Multi-factor authentication", "additional authentication factor")}} and for confirming user intentions, for example when making a payment. For general authentication purposes, it is better to use [passkeys](/en-US/docs/Web/Security/Authentication/Passwords), which are more resistant to phishing attacks.
 
-- Bind the (T)OTP to a single session or transaction only.
-- Use TOTP instead of your own OTP algorithm.
-- If you implement your own OTP:
-  - Use 6 or more digits.
-  - Set short expiry (ideally ≤5 minutes; 30–120 seconds for stronger protection).
-  - Invalidate OTPs after use.
-- If you use email:
-  - Ensure users receive the OTP emails quickly.
-  - Prefer one-time authorization codes over providing clickable links.
-- If you use SMS:
-  - Format messages in origin-bound standard format.
-  - Use `autocomplete=one-time-code`.
-  - Monitor and mitigate SIM swap and interception risks.
-- If you use TOTP (authenticator apps):
-  - Use a trustworthy authenticator app to safely store shared secrets.
+If you implement OTP, consider the following recommendations:
+
+- Prefer TOTP to email-based or SMS-based OTP, and especially avoid SMS-based OTP
+- If you use TOTP:
+  - Use a reputable library to generate secrets and OTP codes
+  - Store the secret securely in the server
