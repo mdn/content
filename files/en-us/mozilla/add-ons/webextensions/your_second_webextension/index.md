@@ -5,40 +5,40 @@ page-type: guide
 sidebar: addonsidebar
 ---
 
-If you've been through the [Your first extension](/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension) article, you've already got an idea of how to write an extension. In this article, you'll write a slightly more complex extension that demonstrates a few more of the APIs.
+The [Your first extension](/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension) tutorial introduced you to the basic process of writing an extension. In this article, you write a slightly more complex extension that demonstrates additional APIs.
 
-The extension adds a new button to the Firefox toolbar. When the user clicks the button, we display a popup enabling them to choose an animal. Once they choose an animal, we'll replace the current page's content with a picture of the chosen animal.
+The extension you develop illustrates many of the basic concepts of the WebExtensions API, including:
 
-To implement this, we will:
+- Adding a button to the toolbar.
+- Defining a popup panel using HTML, CSS, and JavaScript.
+- Injecting content scripts into web pages.
+- Communicating between content scripts and the rest of the extension.
+- Packaging resources with your extension that web pages can use.
 
-- **define a [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button), which is a button attached to the Firefox toolbar**.
-  For the button we'll supply:
-  - an icon, called "beasts-32.png"
-  - a popup to open when the button is pressed. The popup will include HTML, CSS, and JavaScript.
+The extension adds a button to the Firefox toolbar. When the user clicks the button, the extension displays a popup that lets them choose an animal. When the user chooses an animal, the extension replaces the active page's content with a picture of that animal.
 
-- **define an icon for the extension**, called "beasts-48.png". This will be shown in the Add-ons Manager.
-- **write a content script, "beastify.js" that will be injected into web pages**.
-  This is the code that will actually modify the pages.
-- **package some images of the animals, to replace images in the web page**.
-  We'll make the images "web accessible resources" so the web page can refer to them.
+To implement this, you:
+
+- **Define an `action`, which is a [button](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button) attached to the Firefox toolbar**.
+  For the button you supply:
+  - An icon, called "beasts-32.png".
+  - A popup to open when the user presses the button. The popup includes HTML, CSS, and JavaScript.
+
+- **Define an icon for the extension**, called "beasts-48.png". The Add-ons Manager displays this icon with the extension's details.
+- **Write a content script, "beastify.js" that the extension injects into web pages**.
+  This code modifies the pages to add or remove beasts.
+- **Package some images of the animals as web accessible resources.**.
+  These images are referred to by the pages updated by the content script to display a beast.
 
 You could visualize the overall structure of the extension like this:
 
-![The manifest.json file includes icons, browser actions, including popups, and web accessible resources. The choose beast JavaScript popup resource calls in the beastify script.](untitled-1.png)
+![The manifest.json file includes icons, actions, including popups, and web accessible resources. The choose beast JavaScript popup resource calls in the beastify script.](untitled-1.png)
 
-It's a simple extension, but shows many of the basic concepts of the WebExtensions API:
-
-- adding a button to the toolbar
-- defining a popup panel using HTML, CSS, and JavaScript
-- injecting content scripts into web pages
-- communicating between content scripts and the rest of the extension
-- packaging resources with your extension that can be used by web pages
-
-You can find [complete source code for the extension on GitHub](https://github.com/mdn/webextensions-examples/tree/main/beastify).
+You can find the [complete source code for the extension on GitHub](https://github.com/mdn/webextensions-examples/tree/main/beastify).
 
 ## Writing the extension
 
-Create a new directory and navigate to it:
+Create a directory and navigate to it:
 
 ```bash
 mkdir beastify
@@ -47,56 +47,76 @@ cd beastify
 
 ### manifest.json
 
-Now create a new file called "manifest.json", and give it the following contents:
+Now create a file called "manifest.json", and give it this content:
 
 ```json
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Beastify",
   "version": "1.0",
 
   "description": "Adds a browser action icon to the toolbar. Click the button to choose a beast. The active tab's body content is then replaced with a picture of the chosen beast. See https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Examples#beastify",
-  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/main/beastify",
+  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/beastify",
+
   "icons": {
     "48": "icons/beasts-48.png"
   },
 
-  "permissions": ["activeTab"],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "beastify@mozilla.org",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  },
 
-  "browser_action": {
+  "permissions": ["activeTab", "scripting"],
+
+  "action": {
     "default_icon": "icons/beasts-32.png",
+    "theme_icons": [
+      {
+        "light": "icons/beasts-32-light.png",
+        "dark": "icons/beasts-32.png",
+        "size": 32
+      }
+    ],
     "default_title": "Beastify",
     "default_popup": "popup/choose_beast.html"
   },
 
   "web_accessible_resources": [
-    "beasts/frog.jpg",
-    "beasts/turtle.jpg",
-    "beasts/snake.jpg"
+    {
+      "resources": ["beasts/*.jpg"],
+      "matches": ["*://*/*"]
+    }
   ]
 }
 ```
 
-- The first three keys: [`manifest_version`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version), [`name`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name), and [`version`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version), are mandatory and contain basic metadata for the extension.
+- The first three keys—[`manifest_version`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version), [`name`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name), and [`version`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version)—are mandatory and contain basic metadata for the extension.
 - [`description`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description) and [`homepage_url`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url) are optional, but recommended: they provide useful information about the extension.
-- [`icons`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) is optional, but recommended: it allows you to specify an icon for the extension, that will be shown in the Add-ons Manager.
-- [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) lists permissions the extension needs. We're just asking for the [`activeTab` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission) here.
-- [`browser_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) specifies the toolbar button. We're supplying three pieces of information here:
-  - `default_icon` is mandatory, and points to the icon for the button
-  - `default_title` is optional, and will be shown in a tooltip
-  - `default_popup` is used if you want a popup to be shown when the user clicks the button. We do, so we've included this key and made it point to an HTML file included with the extension.
+- [`icons`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) is optional but recommended; it lets you specify an icon for the extension.
+- [`browser_specific_settings`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) is required. The `gecko` property provides addons.mozilla.org and Firefox with extra configuration information about the extension:
+  - [`id`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings#id) defines a unique identifier for the extension. This ID is needed before an extension can be published on addons.mozilla.org (AMO).
+  - [`data_collection_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings#data_collection_permissions) provides information on whether the extension collects and transmits personally identifiable information. This example doesn't collect or transmit any data.
+- [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) lists permissions the extension needs. In this example, the extension asks for the [`activeTab` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission).
+- [`action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) specifies the toolbar button. You supply three pieces of information here, all of which are optional:
+  - `default_icon` points to the button's icon.
+  - `default_title` provides text for a tooltip displayed for the action button.
+  - `default_popup` points to an HTML file included with the extension that defines the popups content.
+- [`web_accessible_resources`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) lists files that you want to make accessible to web pages. As the extension replaces the page's content with images packaged in the extension, you need to make those images accessible to the page.
 
-- [`web_accessible_resources`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) lists files that we want to make accessible to web pages. Since the extension replaces the content in the page with images we've packaged with the extension, we need to make these images accessible to the page.
-
-Note that all paths given are relative to manifest.json itself.
+Note that all paths given are relative to the manifest.json file.
 
 ### The icon
 
-The extension should have an icon. This will be shown next to the extension's listing in the Add-ons Manager (you can open this by visiting the URL "about:addons"). Our manifest.json promised that we would have an icon for the toolbar at "icons/beasts-48.png".
+The extension should have an icon. This icon is displayed by the Add-ons Manager ("about:addons") next to the extension's listing. The manifest.json specifies that the extension's icon is at "icons/beasts-48.png".
 
-Create the "icons" directory and save an icon there named "beasts-48.png". You could use [the one from our example](https://raw.githubusercontent.com/mdn/webextensions-examples/main/beastify/icons/beasts-48.png), which is taken from the [Aha-Soft's Free Retina iconset](https://www.aha-soft.com/free-icons/free-retina-icon-set/), and used under the terms of its license.
+Create the "icons" directory and save an icon there named "beasts-48.png". You could use [the one from the example](https://raw.githubusercontent.com/mdn/webextensions-examples/main/beastify/icons/beasts-48.png), which is taken from [Aha-Soft's Free Retina iconset](https://www.aha-soft.com/free-icons/free-retina-icon-set/), and used under the terms of its license.
 
-If you choose to supply your own icon, It should be 48x48 pixels. You could also supply a 96x96 pixel icon, for high-resolution displays, and if you do this it will be specified as the `96` property of the `icons` object in manifest.json:
+If you choose to supply an icon, it should be 48x48 pixels. You can supply a 96x96 pixel icon too, for high-resolution displays; specify it as the `96` property of the `icons` object in manifest.json:
 
 ```json
 "icons": {
@@ -107,21 +127,21 @@ If you choose to supply your own icon, It should be 48x48 pixels. You could also
 
 ### The toolbar button
 
-The toolbar button also needs an icon, and our manifest.json promised that we would have an icon for the toolbar at "icons/beasts-32.png".
+The toolbar button also needs an icon, and manifest.json specifies that it is at "icons/beasts-32.png".
 
-Save an icon named "beasts-32.png" in the "icons" directory. You could use [the one from our example](https://raw.githubusercontent.com/mdn/webextensions-examples/main/beastify/icons/beasts-32.png), which is taken from the [IconBeast Lite icon set](https://www.iconbeast.com/free/) and used under the terms of its [license](https://www.iconbeast.com/faq/).
-
-If you don't supply a popup, then a click event is dispatched to your extension when the user clicks the button. If you do supply a popup, the click event is not dispatched, but instead, the popup is opened. We want a popup, so let's create that next.
+Save an icon named "beasts-32.png" in the "icons" directory. You could use [the one from the example](https://raw.githubusercontent.com/mdn/webextensions-examples/main/beastify/icons/beasts-32.png), which is taken from the [IconBeast Lite icon set](https://www.iconbeast.com/free/) and used under its [license](https://www.iconbeast.com/faq/).
 
 ### The popup
 
-The function of the popup is to enable the user to choose one of three beasts.
+If you don't supply a popup, when the user clicks the toolbar button, Firefox dispatches a click event to your extension. If you supply a popup, when the user clicks the toolbar button and the popup opens, Firefox doesn't dispatch a click event.
 
-Create a new directory called "popup" under the extension root. This is where we'll keep the code for the popup. The popup will consist of three files:
+For this example, you want a popup. The function of the popup is to enable the user to choose one of three beasts.
 
-- **`choose_beast.html`** defines the content of the panel
-- **`choose_beast.css`** styles the content
-- **`choose_beast.js`** handles the user's choice by running a content script in the active tab
+Create a directory called "popup" under the extension root. This directory is where you create the popup's code. The popup consists of three files:
+
+- `choose_beast.html` defines the content of the panel.
+- `choose_beast.css` styles the content.
+- `choose_beast.js` handles the user's choice by running a content script in the active tab.
 
 ```bash
 mkdir popup
@@ -157,13 +177,13 @@ The HTML file looks like this:
 </html>
 ```
 
-We have a [`<div>`](/en-US/docs/Web/HTML/Reference/Elements/div) element with an ID of `"popup-content"` that contains a button for each animal choice and a reset button. We have another `<div>` with an ID of `"error-content"` and a class `"hidden"`. We'll use that in case there's a problem initializing the popup.
+The HTML includes a [`<div>`](/en-US/docs/Web/HTML/Reference/Elements/div) element with an ID of `"popup-content"`. The element contains a button for each animal choice and a reset button. Another `<div>` has the ID of `"error-content"` and a class `"hidden"`. The extension uses this second `<div>` if it cannot initialize the popup.
 
-Note that we include the CSS and JS files from this file, just like a web page.
+Note that the HTML includes the CSS and JavaScript files from the directory, just as a web page can.
 
 #### choose_beast.css
 
-The CSS fixes the size of the popup, ensures that the three choices fill the space, and gives them some basic styling. It also hides elements with `class="hidden"`: this means that our `<div id="error-content"...` element will be hidden by default.
+The CSS fixes the popup size, ensures the three choices fill the space, and adds basic styling. It also hides elements with `class="hidden"`, which means the extension hides the `<div id="error-content"...` element by default.
 
 ```css
 html,
@@ -213,13 +233,21 @@ const hidePage = `body > :not(.beastify-image) {
                   }`;
 
 /**
+ * CSS to hide everything on the page,
+ * except for elements that have the ".beastify-image" class.
+ */
+const hidePage = `body > :not(.beastify-image) {
+                    display: none;
+                  }`;
+
+/**
  * Listen for clicks on the buttons, and send the appropriate message to
  * the content script in the page.
  */
 function listenForClicks() {
   document.addEventListener("click", (e) => {
     /**
-     * Given the name of a beast, get the URL to the corresponding image.
+     * Given the name of a beast, get the URL for the corresponding image.
      */
     function beastNameToURL(beastName) {
       switch (beastName) {
@@ -234,33 +262,45 @@ function listenForClicks() {
 
     /**
      * Insert the page-hiding CSS into the active tab,
-     * then get the beast URL and
+     * get the beast URL, and
      * send a "beastify" message to the content script in the active tab.
      */
     function beastify(tabs) {
-      browser.tabs.insertCSS({ code: hidePage }).then(() => {
-        const url = beastNameToURL(e.target.textContent);
-        browser.tabs.sendMessage(tabs[0].id, {
-          command: "beastify",
-          beastURL: url,
+      const tabId = tabs[0].id;
+      browser.scripting
+        .insertCSS({
+          target: { tabId },
+          css: hidePage,
+        })
+        .then(() => {
+          const url = beastNameToURL(e.target.textContent);
+          browser.tabs.sendMessage(tabId, {
+            command: "beastify",
+            beastURL: url,
+          });
         });
-      });
     }
 
     /**
-     * Remove the page-hiding CSS from the active tab,
+     * Remove the page-hiding CSS from the active tab and
      * send a "reset" message to the content script in the active tab.
      */
     function reset(tabs) {
-      browser.tabs.removeCSS({ code: hidePage }).then(() => {
-        browser.tabs.sendMessage(tabs[0].id, {
-          command: "reset",
+      const tabId = tabs[0].id;
+      browser.scripting
+        .removeCSS({
+          target: { tabId },
+          css: hidePage,
+        })
+        .then(() => {
+          browser.tabs.sendMessage(tabId, {
+            command: "reset",
+          });
         });
-      });
     }
 
     /**
-     * Just log the error to the console.
+     * Log the error to the console.
      */
     function reportError(error) {
       console.error(`Could not beastify: ${error}`);
@@ -299,47 +339,53 @@ function reportExecuteScriptError(error) {
 }
 
 /**
- * When the popup loads, inject a content script into the active tab,
+ * When the popup loads, inject a content script into the active tab
  * and add a click handler.
- * If we couldn't inject the script, handle the error.
+ * If the extension couldn't inject the script, handle the error.
  */
 browser.tabs
-  .executeScript({ file: "/content_scripts/beastify.js" })
+  .query({ active: true, currentWindow: true })
+  .then(([tab]) =>
+    browser.scripting.executeScript({
+      target: { tabId: tab.id },
+      files: ["/content_scripts/beastify.js"],
+    }),
+  )
   .then(listenForClicks)
   .catch(reportExecuteScriptError);
 ```
 
-The place to start here is line 99. The popup script executes a content script in the active tab as soon as the popup is loaded, using the [`browser.tabs.executeScript()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript) API. If executing the content script is successful, then the content script will stay loaded in the page until the tab is closed or the user navigates to a different page.
+The popup script executes [the content script](#the-content-script) in the active tab as soon as the popup is loaded, using the [`browser.scripting.executeScript()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/scripting/executeScript) API. If the content script execution is successful, it stays loaded in the page until the tab is closed or the user navigates to a different page.
 
-A common reason the `browser.tabs.executeScript()` call might fail is that you can't execute content scripts in all pages. For example, you can't execute them in privileged browser pages like about:debugging, and you can't execute them on pages in the [addons.mozilla.org](https://addons.mozilla.org/) domain. If it does fail, `reportExecuteScriptError()` will hide the `<div id="popup-content">` element, show the `<div id="error-content"...` element, and log an error to the [console](https://extensionworkshop.com/documentation/develop/debugging/).
+The `browser.scripting.executeScript()` call can fail if the extension can't execute content scripts in the active page. For example, an extension can't execute scripts in privileged browser pages such as `about:debugging`, or on pages in the [addons.mozilla.org](https://addons.mozilla.org/) domain. If the call fails, `reportExecuteScriptError()` hides the `<div id="popup-content">` element, displays the `<div id="error-content"...` element, and logs an error to the [console](https://extensionworkshop.com/documentation/develop/debugging/).
 
-If executing the content script is successful, we call `listenForClicks()`. This listens for clicks on the popup.
+If the content script executes, the code calls `listenForClicks()`. This code listens for clicks on the popup. Then:
 
-- If the click was not on a button in the popup, we ignore it and do nothing.
-- If the click was on a button with `type="reset"`, then we call `reset()`.
-- If the click was on any other button (i.e., the beast buttons), then we call `beastify()`.
+- If a click isn't on a button in the popup, it's ignored, and nothing is done.
+- If a click is on a button with `type="reset"`, then the code calls `reset()`.
+- If a click is on any other button (i.e., a beast button), then the code calls `beastify()`.
 
 The `beastify()` function does three things:
 
-- map the button clicked to a URL pointing to an image of a particular beast
-- hide the page's whole content by injecting some CSS, using the [`browser.tabs.insertCSS()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS) API
-- send a "beastify" message to the content script using the [`browser.tabs.sendMessage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage) API, asking it to beastify the page, and passing it the URL to the beast image.
+- Maps the button clicked to a URL pointing to an image of a beast.
+- Hides the page's content by injecting CSS, using the [`browser.scripting.insertCSS()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/scripting/insertCSS) API.
+- Sends a "beastify" message to the content script using the [`browser.tabs.sendMessage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage) API, passing it the URL to the beast image and asking it to beastify the page.
 
-The `reset()` function essentially undoes a beastify:
+The `reset()` function undoes a beastify. It:
 
-- remove the CSS we added, using the [`browser.tabs.removeCSS()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/removeCSS) API
-- send a "reset" message to the content script asking it to reset the page.
+- Removes the added CSS, using the [`browser.scripting.removeCSS()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/scripting/removeCSS) API.
+- Sends a "reset" message to the content script, asking it to reset the page.
 
 ### The content script
 
-Create a new directory, under the extension root, called "content_scripts" and create a new file in it called "beastify.js", with the following contents:
+Create a directory, under the extension root, called "content_scripts" and create a file in it called "beastify.js", with this content:
 
 ```js
-(() => {
+(function () {
   /**
-   * Check and set a global guard variable.
-   * If this content script is injected into the same page again,
-   * it will do nothing next time.
+   * Check and set a global guard variable to
+   * ensure that if this content script is injected into a page again,
+   * it returns (and does nothing).
    */
   if (window.hasRun) {
     return;
@@ -347,13 +393,13 @@ Create a new directory, under the extension root, called "content_scripts" and c
   window.hasRun = true;
 
   /**
-   * Given a URL to a beast image, remove all existing beasts, then
-   * create and style an IMG node pointing to
-   * that image, then insert the node into the document.
+   * Given a URL for a beast image, remove all beasts,
+   * then create and style an IMG node pointing to the image and
+   * insert the node into the document.
    */
   function insertBeast(beastURL) {
     removeExistingBeasts();
-    const beastImage = document.createElement("img");
+    let beastImage = document.createElement("img");
     beastImage.setAttribute("src", beastURL);
     beastImage.style.height = "100vh";
     beastImage.className = "beastify-image";
@@ -361,18 +407,18 @@ Create a new directory, under the extension root, called "content_scripts" and c
   }
 
   /**
-   * Remove every beast from the page.
+   * Remove all beasts from the page.
    */
   function removeExistingBeasts() {
-    const existingBeasts = document.querySelectorAll(".beastify-image");
-    for (const beast of existingBeasts) {
+    let existingBeasts = document.querySelectorAll(".beastify-image");
+    for (let beast of existingBeasts) {
       beast.remove();
     }
   }
 
   /**
    * Listen for messages from the background script.
-   * Call "insertBeast()" or "removeExistingBeasts()".
+   * Depending on the message, call "beastify()" or "reset()".
    */
   browser.runtime.onMessage.addListener((message) => {
     if (message.command === "beastify") {
@@ -384,18 +430,18 @@ Create a new directory, under the extension root, called "content_scripts" and c
 })();
 ```
 
-The first thing the content script does is to check for a global variable `window.hasRun`: if it's set the script returns early, otherwise it sets `window.hasRun` and continues. The reason we do this is that every time the user opens the popup, the popup executes a content script in the active tab, so we could have multiple instances of the script running in a single tab. If this happens, we need to make sure that only the first instance is actually going to do anything.
+The first thing the content script does is check for the global variable `window.hasRun`: if it's set, the script returns; otherwise, it sets `window.hasRun` and continues. The reason for this is that whenever the user opens the popup, it executes a content script in the active tab, so the extension could have multiple instances of the script running in a single tab. If this happens, the code needs to ensure that only the first instance does anything.
 
-After that, the place to start is line 40, where the content script listens for messages from the popup, using the [`browser.runtime.onMessage`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage) API. We saw above that the popup script can send two different sorts of messages: "beastify" and "reset".
+The content script then listens for messages from the popup, using the [`browser.runtime.onMessage`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage) API. You previously saw that the popup script can send two messages: "beastify" and "reset".
 
-- if the message is "beastify", we expect it to contain a URL pointing to a beast image. We remove any beasts that might have been added by previous "beastify" calls, then construct and append an [`<img>`](/en-US/docs/Web/HTML/Reference/Elements/img) element whose `src` attribute is set to the beast URL.
-- if the message is "reset", we just remove any beasts that might have been added.
+- If the message is "beastify", the code expects it to contain a URL pointing to a beast image. The extension removes any beasts added by previous "beastify" calls, then constructs and appends an [`<img>`](/en-US/docs/Web/HTML/Reference/Elements/img) element, whose `src` attribute is set, to the beast URL.
+- If the message is "reset", the extension removes any added beasts.
 
 ### The beasts
 
-Finally, we need to include the images of the beasts.
+Finally, you include the images of the beasts.
 
-Create a new directory called "beasts", and add the three images in that directory, with the appropriate names. You can get the images from [the GitHub repository](https://github.com/mdn/webextensions-examples/tree/main/beastify/beasts), or from here:
+Create a directory called "beasts" and add the three images to it, with the appropriate names. You can get the images from [the GitHub repository](https://github.com/mdn/webextensions-examples/tree/main/beastify/beasts), or from here:
 
 ![A brown frog.](frog.jpg)
 
@@ -405,7 +451,7 @@ Create a new directory called "beasts", and add the three images in that directo
 
 ## Testing it out
 
-First, double check that you have the right files in the right places:
+First, double-check that you've the right files in the right places:
 
 ```plain
 beastify/
@@ -430,7 +476,7 @@ beastify/
     manifest.json
 ```
 
-Now load the extension as a temporary add-on. Open "about:debugging" in Firefox, click "Load Temporary Add-on", and select your **manifest.json** file. You should then see the extension's icon appear in the Firefox toolbar:
+Now load the extension as a temporary add-on. Open `about:debugging` in Firefox, click **This Firefox** and then **Load Temporary Add-on**, and select your manifest.json file. You see the extension's icon appear in the Firefox toolbar:
 
 ![The beastify icon in the Firefox toolbar](beastify_icon.png)
 
@@ -440,18 +486,18 @@ Open a web page, click the icon, select a beast, and see the web page change:
 
 ## Developing from the command line
 
-You can automate the temporary installation step by using the [web-ext](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/) tool. Try this:
+You can automate the temporary installation step by using the [`web-ext`](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/) tool. After installing `web-ext`, try this:
 
 ```bash
 cd beastify
 web-ext run
 ```
 
-## What's next?
+## What next?
 
-Now that you've created a more advanced WebExtension for Firefox:
+Now that you've created a more advanced Web extension for Firefox:
 
-- [read about the anatomy of an extension](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
-- [explore the extension examples](/en-US/docs/Mozilla/Add-ons/WebExtensions/Examples)
-- [find out what you need to develop, test, and publish your extension](/en-US/docs/Mozilla/Add-ons/WebExtensions/What_next)
-- [take your learning further](/en-US/docs/Mozilla/Add-ons/WebExtensions/What_next#continue_your_learning_experience).
+- [Read about the anatomy of an extension](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
+- [Explore the extension examples](/en-US/docs/Mozilla/Add-ons/WebExtensions/Examples)
+- [Find out what you need to develop, test, and publish your extension](/en-US/docs/Mozilla/Add-ons/WebExtensions/What_next)
+- [Take your learning further](/en-US/docs/Mozilla/Add-ons/WebExtensions/What_next#continue_your_learning_experience).
