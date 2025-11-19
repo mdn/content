@@ -20,12 +20,12 @@ The `<timeline-range-name>` keyword values are used in the following longhand an
 Valid `<timeline-range-name>` values:
 
 - `cover`
-  - : Represents the full range of a view progress timeline, from the point where the subject element's start border edge first starts to enter the scroll port's view progress visibility range (0% progress) to the point where the end border edge has completely left it (100% progress).
+  - : Represents the full range of a view progress timeline, from the point where the subject element's start border edge first enters the scroll port's view progress visibility range (`0%` progress) to the point where the end border edge has completely left it (`100%` progress).
 
 - `contain`
   - : Represents the range of a view progress timeline where the subject element is fully contained by, or fully contains, the view progress visibility range within the [scrollport](/en-US/docs/Glossary/Scroll_container#scrollport)
-    - If the subject element is smaller than the scrollport, it ranges from the point where the subject element is first completely contained by the scroll port (0% progress), to the point where it is no longer completely contained by the scroll port (100% progress).
-    - If the subject element is larger than the scrollport, it ranges from the point where the subject element first completely covers the scroll port (0% progress), to the point where it no longer completely covers the scroll port (100% progress).
+    - If the subject element is smaller than the scrollport, it ranges from the point where the subject element is first completely contained by the scroll port (`0%` progress), to the point where it is no longer completely contained by the scroll port (`100%` progress).
+    - If the subject element is larger than the scrollport, it ranges from the point where the subject element first completely covers the scroll port (`0%` progress), to the point where it no longer completely covers the scroll port (`100%` progress).
 
 - `entry`
   - : Represents the range of a view progress timeline from the point where the subject element first starts to enter the scroll port, to the point where it has completely entered the scroll port. `0%` is equivalent to `0%` of the `cover` range. `100%` is equivalent to `0%` of the `contain` range.

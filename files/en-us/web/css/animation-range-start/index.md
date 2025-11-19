@@ -58,7 +58,7 @@ The `animation-range-start` is included in the {{cssxref("animation")}} shorthan
 
 ### Creating a named view progress timeline with range start
 
-In this example, a `subject` in a large block of text will be made to fade in and size up as it moves up it's {{glossary("scroll container")}}. We'll use the `animation-range-start` property to make the animation begin later than expected.
+In this example, a `subject` in a large block of text will fade in and increase in width as it moves up its {{glossary("scroll container")}}. We'll use the `animation-range-start` property to cause the animation to begin later than expected.
 
 #### HTML
 

@@ -32,16 +32,16 @@ scroll-timeline: none y;
 ### Values
 
 - [`<scroll-timeline-name>`](/en-US/docs/Web/CSS/scroll-timeline-name)
-  - : {{cssxref("dashed-ident")}} or the keyword `none`.
+  - : A {{cssxref("dashed-ident")}} or the keyword `none`.
 
 - [`<scroll-timeline-axis>`](/en-US/docs/Web/CSS/scroll-timeline-axis)
-  - : [`<axis>`](/en-US/docs/Web/CSS/axis). The default value is `block`.
+  - : An [`<axis>`](/en-US/docs/Web/CSS/axis) keyword. The default value is `block`.
 
 ## Description
 
-The `scroll-timeline` shorthand property can be applied to a container element setting both the `scroll-timeline-name` and `scroll-timeline-axis` properties. It is set on the scroller that will provide the timeline. At least one of the property's values must be specified. If the container has no overflow to scroll, or if the scroller does not overflow its container in the `<axis>` dimension or if the overflow is hidden or clipped, no timeline will be created.
+The `scroll-timeline` shorthand property can be applied to a container element to set both the `scroll-timeline-name` and `scroll-timeline-axis` properties. It is set on the scroller that will provide the timeline. If the container has no overflow to scroll, if the scroller does not overflow its container in the `<axis>` dimension, or if the overflow is hidden or clipped, no timeline will be created.
 
-The `scroll-timeline` can contain two constituent values: a `<scroll-timeline-name>` and a `<scroll-timeline-axis>`. The value for the {{cssxref("scroll-timeline-name")}}, if not set to `none`, must be a [`<dashed-ident>`](/en-US/docs/Web/CSS/dashed-ident), which means it must start with `--`. This helps avoid name clashes with standard CSS keywords. The name can then be used as the value of the {{cssxref("animation-timeline")}} property of elements to define the container element is to be used as the [timeline for the animation](/en-us/web/css/css_scroll-driven_animations/timelines), driving the progress of the animation through the scrolling action.
+The value for the {{cssxref("scroll-timeline-name")}}, if not set to `none`, must be a [`<dashed-ident>`](/en-US/docs/Web/CSS/dashed-ident), which means it must start with `--`. This helps avoid name clashes with standard CSS keywords. The name can then be used as the value of an element's {{cssxref("animation-timeline")}} property to define the scrolling container element that will define its [animation timeline](/en-us/web/css/css_scroll-driven_animations/timelines), driving the animation progress as it scrolls.
 
 The optional scroll [`<axis>`](/en-US/docs/Web/CSS/axis) value defines the {{cssxref("scroll-timeline-axis")}}, which defaults to `block` if omitted. If both a name and axis are specified, the order must be the `<scroll-timeline-name>` value followed by the `<axis>` value. If the `<axis>` is listed first, the declaration is invalid and will be ignored.
 
@@ -73,9 +73,9 @@ We include a container with two child `<div>` elements.
 
 #### CSS
 
-We set the container to be `300px` tall with a vertical scrollbar present on overflow.
+We set the container to `300px` tall to make it scroll vertically.
 
-Using the `scroll-timeline` property, we define the container as the source of a scroll timeline named `--square-timeline`, explicitly setting the default `vertical` scrollbar as the timeline controller.
+Using the `scroll-timeline` property, we define the container as the source of a scroll timeline named `--square-timeline`, explicitly setting the default vertical scrollbar as the timeline controller.
 
 ```css
 #container {
@@ -90,7 +90,7 @@ Using the `scroll-timeline` property, we define the container as the source of a
 }
 ```
 
-We provide basic styles for the square. We apply the `rotateAnimation` using the {{cssxref("animation-name")}} property. By default, this would use the time-based document timeline. By setting the `animation-timeline` property to the `--square-timeline` timeline named above, we set the square to rotate according to the scroll based timeline based on the scrolling of the container.
+We provide basic styles for the square. We apply the `rotateAnimation` using the {{cssxref("animation-name")}} property. By default, this would use the time-based document timeline. By setting the `animation-timeline` property to the `--square-timeline` timeline named above, we set the square to rotate according to the scroll-based timeline, which progresses as the container scrolls.
 
 ```css
 #square {

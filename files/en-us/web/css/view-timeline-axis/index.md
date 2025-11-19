@@ -29,7 +29,7 @@ view-timeline-axis: x;
 
 The `view-timeline-axis` property specifies the direction, or `<axis>`, of [named view progress timelines](/en-us/web/css/css_scroll-driven_animations/timelines#named_view_progress_timeline) derived from the element's box.
 
-When applying CSS {{cssxref("@keyframes")}} animations to element using [CSS animations](/en-US/docs/Web/CSS/CSS_animations), animation are progressed through based on an timeline. When setting the animation progress via a view progress timeline, `view-timeline-axis` is used to define which direction, or axis, controls the timeline progression.
+When applying CSS {{cssxref("@keyframes")}} animations to elements using [CSS animations](/en-US/docs/Web/CSS/CSS_animations), by default, the animations progress based on the time-based default timeline. When setting the animation progress via a view progress timeline, `view-timeline-axis` defines which direction, or axis, controls the timeline progression.
 
 When animating based on view progress timelines, progression of the animation along the timelines is based on visibility of the element, or _subject_. The `view-timeline-axis` property is set on the subject.
 

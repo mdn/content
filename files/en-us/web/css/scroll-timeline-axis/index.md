@@ -27,7 +27,7 @@ scroll-timeline-axis: x;
 
 ## Description
 
-The `scroll-timeline-axis`property specifies which scrollbar will be used to provide the timeline for a [scroll progress timeline](/en-us/web/css/css_scroll-driven_animations/timelines) animation. The value is the `<axis>` of the scrollbar. The `scroll-timeline` property is set on the scroller that will provide the timeline.
+The `scroll-timeline-axis` property specifies which scrollbar will be used to provide the timeline for a [scroll progress timeline](/en-us/web/css/css_scroll-driven_animations/timelines) animation. The value is the `<axis>` of the scrollbar. The `scroll-timeline` property is set on the scroller that will provide the timeline.
 
 If the scroller element does not overflow its container in the axis dimension or if the overflow is hidden or clipped, no scroll progress timeline will be created.
 
