@@ -74,8 +74,8 @@ This example creates a password credential from a {{domxref("PasswordCredentialI
 
 ```js
 const credInit = {
-  id: "1234",
-  name: "Serpentina",
+  id: "serp1234", // "username" in a typical username/password pair
+  name: "Serpentina", // display name for credential
   origin: "https://example.org",
   password: "the last visible dog",
 };
@@ -88,6 +88,8 @@ makeCredential.addEventListener("click", async () => {
   });
   console.log(cred.name);
   // Serpentina
+  console.log(cred.id);
+  // serp1234
   console.log(cred.password);
   // the last visible dog
 });
