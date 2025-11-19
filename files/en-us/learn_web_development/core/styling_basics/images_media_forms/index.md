@@ -101,6 +101,7 @@ You can make other choices about images inside containers. For example, you may 
 
 The {{cssxref("object-fit")}} property can help you here. When using `object-fit` the replaced element can be sized to fit a box in a variety of ways.
 
+
 Below, the first example uses the value `cover`, which sizes the image down, maintaining the aspect ratio so that it neatly fills the box. As the aspect ratio is maintained, some parts of the image will be cropped by the box. The second example uses `contain` as a value: this scales the image down until it is small enough to fit inside the box. This results in "letterboxing" as it is not the same aspect ratio as the box.
 
 ```html live-sample___object-fit
@@ -153,6 +154,10 @@ img {
 {{EmbedLiveSample("object-fit", "", "250px")}}
 
 You could also try the value of `fill`, which will fill the box but not maintain the aspect ratio.
+
+> [!NOTE]
+> For the {{cssxref("object-fit")}} property to be applied successfully to an image, `width` and `height` properties should typically be set to `100%`.
+> In the example above, you can comment out the `height: 100%;` or `width: 100%;` declarations —or both— from the `img` selctor, to observe that the {{cssxref("object-fit")}} property is no longer effective.
 
 ## Replaced elements in layout
 
