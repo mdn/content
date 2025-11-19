@@ -22,7 +22,7 @@ This article discusses three common implementations for one-time passwords: emai
 In email-based OTP, during registration:
 
 - The user provides their email address to the website.
-- The website verifies that they have access to this address.
+- The website verifies that they have access to this email address.
 
 When the user asks to sign in:
 
@@ -48,6 +48,8 @@ A weakness of both email and SMS methods is that an attacker could intercept the
 - There are known flaws in SMS routing protocols ([SS7](https://en.wikipedia.org/wiki/Signalling_System_No._7)) which result in attackers being able to redirect text messages to them.
 - In [SIM swap scams](https://en.wikipedia.org/wiki/SIM_swap_scam) the attacker abuses the mobile number portability (normally used when switching services, or when a phone is lost or stolen) to impersonate the victim.
 - Carriers can also recycle phone numbers to new users after an account is closed.
+
+Also, users might be using a different SIM card or an eSIM when traveling and might have disabled their usual SIM card or SMS services to save costs, in which case they won't receive any SMS one-time passwords.
 
 Because of this, you should not use SMS OTP on its own to establish new sessions or for general authentication. Instead, if at all, only use it as a second factor or for confirming intentions (e.g., payments).
 
@@ -78,7 +80,7 @@ Then in your site's login form, provide an {{HTMLElement("input")}} element with
 </form>
 ```
 
-The browser will automatically extract the code from the SMS, and if the origin given in the message matches the origin of the login form, will autofill the `<input>` element with the code.
+The browser will automatically extract the code from the SMS, and if the origin given in the message matches the origin of the login form, it will autofill the `<input>` element with the code.
 
 ### WebOTP API
 
