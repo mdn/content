@@ -9,7 +9,7 @@ A _one-time password_ (OTP), also known as _one-time PIN_, or _one-time authoriz
 
 ## Overview
 
-Authentication flows with one-time passwords are based on something the user has (a phone, an email address, an authenticator) rather than something they know (a password) or something they are (biometric information, such as a fingerprint).
+Authentication flows with one-time passwords are based on something the user has (a phone, an email address, a secret stored in an authenticator app) rather than something they know (a password) or something they are (biometric information, such as a fingerprint).
 
 One-time passwords can either be used in addition to traditional passwords, or they can replace them. Often they are used to confirm the user's intentions, for example when making a payment.
 
@@ -132,7 +132,7 @@ The URI includes a number of query string parameters, of which the most importan
 
 ### Authenticator apps
 
-A large number of authenticator apps, both proprietary and open source, support TOTP. For example: [Ente Auth](https://ente.io/auth/), [2FAS](https://2fas.com) and [Microsoft Authenticator](https://www.microsoft.com/en-US/security/mobile-authenticator-app).
+A large number of authenticator apps, both proprietary and open source, support TOTP. For example: [Ente Auth](https://ente.io/auth/), [2FAS](https://2fas.com), and [Microsoft Authenticator](https://www.microsoft.com/en-US/security/mobile-authenticator-app).
 
 ### Securing the secret
 
