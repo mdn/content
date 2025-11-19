@@ -1314,7 +1314,10 @@
     },
     "Popover API": {
       "overview": ["Popover API"],
-      "guides": ["/docs/Web/API/Popover_API/Using"],
+      "guides": [
+        "/docs/Web/API/Popover_API/Using",
+        "/docs/Web/API/Popover_API/Interest_invokers"
+      ],
       "interfaces": ["ToggleEvent"],
       "methods": [
         "HTMLElement.hidePopover()",

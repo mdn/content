@@ -23,7 +23,7 @@ Popovers created using the Popover API are always non-modal. If you want to crea
 
 Typical use cases for the popover API include user-interactive elements like action menus, custom "toast" notifications, form element suggestions, content pickers, or teaching UI.
 
-You can create popovers in two different ways:
+You can create popovers in multiple different ways:
 
 - Via a set of new HTML attributes. A simple popover with a toggle button can be created using the following code:
 
@@ -34,12 +34,14 @@ You can create popovers in two different ways:
 
 - Via a JavaScript API. For example, {{domxref("HTMLElement.togglePopover()")}} can be used to toggle a popover between shown and hidden.
 
-There are also new events to react to a popover being toggled, and CSS features to aid in styling popovers. All the new features are listed below.
+There are also new events to react to a popover being toggled, and CSS features to aid in styling popovers. See [Using the popover API](/en-US/docs/Web/API/Popover_API/Using) for a detailed guide to using this API.
 
-See [Using the popover API](/en-US/docs/Web/API/Popover_API/Using) for a detailed guide to using this API.
+A related feature — **interest invokers** — can be used to show popovers on hover/focus, without requiring JavaScript. Check out [Using interest invokers](/en-US/docs/Web/API/Popover_API/Interest_invokers) to learn more.
 
 ## HTML attributes
 
+- [`interestfor`](/en-US/docs/Web/HTML/Reference/Elements/button#interestfor)
+  - : Defines an HTML {{htmlelement("a")}}, {{htmlelement("button")}}, or {{htmlelement("area")}} element, or an SVG [`<a>`](/en-US/docs/Web/SVG/Reference/Element/a) element, as an interest invoker. Takes as its value the `id` of a target element that will be affected in some way (normally shown or hidden) when interest is shown or lost on the invoker element.
 - [`popover`](/en-US/docs/Web/HTML/Reference/Global_attributes/popover)
   - : A global attribute that turns an element into a popover element; takes a popover state (`"auto"`, `"hint"`, or `"manual"`) as its value.
 - [`popovertarget`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertarget)
@@ -51,11 +53,17 @@ See [Using the popover API](/en-US/docs/Web/API/Popover_API/Using) for a detaile
 
 - {{cssxref("::backdrop")}}
   - : The `::backdrop` pseudo-element is a full-screen element placed directly behind popover elements, allowing effects to be added to the page content behind the popover(s) if desired (for example blurring it out).
+- {{cssxref("interest-delay")}}, {{cssxref("interest-delay-start")}}, and {{cssxref("interest-delay-end")}}
+  - : The {{cssxref("interest-delay")}} shorthand property and its related {{cssxref("interest-delay-start")}} and {{cssxref("interest-delay-end")}} longhands can be set to add a delay between the user showing/losing interest and the interest change being acted on by the browser.
+- {{cssxref(":interest-source")}} and {{cssxref(":interest-target")}}
+  - : Can be used to apply styles to the interest invoker and its associated target element, respectively, only when interest is being shown.
 - {{cssxref(":popover-open")}}
   - : The `:popover-open` pseudo-class matches a popover element only when it is in the showing state — it can be used to style popover elements when they are showing.
 
 ## Interfaces
 
+- {{domxref("InterestEvent")}}
+  - : The event object for the {{domxref("HTMLElement.interest_event", "interest")}} and {{domxref("HTMLElement.loseinterest_event", "loseinterest")}} events. This includes a `source` property that contains a reference to the associated interest invoker element.
 - {{domxref("ToggleEvent")}}
   - : Represents an event that fires when a popover element is toggled between being shown and hidden. It is the event object for the {{domxref("HTMLElement.beforetoggle_event", "beforetoggle")}} and {{domxref("HTMLElement.toggle_event", "toggle")}} events, which fire on popovers when their state changes.
 
@@ -63,6 +71,8 @@ See [Using the popover API](/en-US/docs/Web/API/Popover_API/Using) for a detaile
 
 ### Instance properties
 
+- {{domxref("HTMLButtonElement.interestForElement", "interestForElement")}}
+  - : Returns a reference to the element being targeted by an interest invoker. This will be the element whose `id` is referenced in the equivalent HTML or SVG interest invoker element's `interestfor` attribute. Available on the {{domxref("HTMLButtonElement")}}, {{domxref("HTMLAnchorElement")}}, {{domxref("HTMLAreaElement")}}, and {{domxref("SVGAElement")}} interfaces.
 - {{domxref("HTMLElement.popover")}}
   - : Gets and sets an element's popover state via JavaScript (`"auto"`, `"hint"`, or `"manual"`), and can be used for feature detection. Reflects the value of the [`popover`](/en-US/docs/Web/HTML/Reference/Global_attributes/popover) global HTML attribute.
 - {{domxref("HTMLButtonElement.popoverTargetElement")}} and {{domxref("HTMLInputElement.popoverTargetElement")}}
@@ -81,6 +91,10 @@ See [Using the popover API](/en-US/docs/Web/API/Popover_API/Using) for a detaile
 
 ### Events
 
+- {{domxref("HTMLElement.interest_event", "HTMLElement.interest")}}
+  - : Fired on an interest invoker's target element when interest is shown, allowing custom code to be run in response.
+- {{domxref("HTMLElement.loseinterest_event", "HTMLElement.loseinterest")}}
+  - : Fired on an interest invoker's target element when interest is lost, allowing custom code to be run in response.
 - {{domxref("HTMLElement.beforetoggle_event","HTMLElement.beforetoggle")}} event
   - : Fired just before a popover element's state changes between showing and hidden, or vice versa.
     Can be used to prevent a popover from opening, or to update other elements that need to be triggered by popover state.
@@ -89,7 +103,7 @@ See [Using the popover API](/en-US/docs/Web/API/Popover_API/Using) for a detaile
 
 ## Examples
 
-See our [Popover API examples landing page](https://mdn.github.io/dom-examples/popover-api/) to access the full collection of MDN popover examples.
+See our [Popover API examples landing page](https://mdn.github.io/dom-examples/popover-api/) to access multiple popover examples.
 
 ## Specifications
 
