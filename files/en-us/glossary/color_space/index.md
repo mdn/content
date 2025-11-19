@@ -13,9 +13,9 @@ The _sRGB_ color space (standard red, green, and blue) was created for the web, 
 
 ## Named color spaces
 
-The predefined [RGB color spaces](#rgb_color_spaces) include `srgb`, `srgb-linear`, `display-p3`, `a98-rgb`, `prophoto-rgb`, and `rec2020`. The predefined [CIELAB color spaces](#cielab_color_spaces) include `lab-d50` and `lab-d65`. The predefined [XYZ color spaces](#xyz_color_spaces) include `xyz-d50`, and `xyz-d65` (and `xyz`, an alias for `xyz-d65`).
+The predefined [RGB color spaces](#rgb_color_spaces) include `srgb`, `srgb-linear`, `display-p3`, `display-p3-linear`, `a98-rgb`, `prophoto-rgb`, and `rec2020`. The predefined [CIELAB color spaces](#cielab_color_spaces) include `lab-d50` and `lab-d65`. The predefined [XYZ color spaces](#xyz_color_spaces) include `xyz-d50`, and `xyz-d65` (and `xyz`, an alias for `xyz-d65`).
 
-Color spaces are either [rectangular or polar](https://ericportis.com/posts/2024/okay-color-spaces/). Rectangular color spaces include `srgb`, `srgb-linear`, `display-p3`, `a98-rgb`, `prophoto-rgb`, `rec2020`, `lab`, `oklab`, `xyz-d50`, and `xyz-d65` (or `xyz`). The polar color spaces include `hsl`, `hwb`, `lch`, and `oklch`.
+Color spaces are either [rectangular or polar](https://ericportis.com/posts/2024/okay-color-spaces/). Rectangular color spaces include `srgb`, `srgb-linear`, `display-p3`, `display-p3-linear`, `a98-rgb`, `prophoto-rgb`, `rec2020`, `lab`, `oklab`, `xyz-d50`, and `xyz-d65` (or `xyz`). The polar color spaces include `hsl`, `hwb`, `lch`, and `oklch`.
 
 ### RGB color spaces
 
@@ -36,7 +36,10 @@ The `rgb()` color function is not the only color function that can represent the
   - : The predefined linear-light sRGB color space, `srgb-linear`, is the same as `srgb` except that the transfer function is linear-light with no gamma-encoding. The `srgb-linear` color space accepts the three `r`, `g`, and `b` values as numeric parameters, with in-gamut colors ranging from `0` to `1`. The whitepoint is D65.
 
 - `display-p3` color space
-  - : Defined by Apple, the [**Display P3**](https://www.color.org/chardata/rgb/DisplayP3.xalter), color space combines the DCI-P3 color gamut, the D65 whitepoint, and sRGB gamma curve. It is a wide gamut space typical of current wide-gamut monitors, enabling more vibrant greens and reds than the sRGB color gamut. The `display-p3` is based on `r`, `g`, and `b`, with in-gamut values ranging from `0` to `1`. The whitepoint is D65.
+  - : Defined by Apple, the [**Display P3**](https://www.color.org/chardata/rgb/DisplayP3.xalter), color space combines the DCI-P3 color gamut, the D65 whitepoint, and sRGB gamma curve. It is a wide gamut space typical of current wide-gamut monitors, enabling more vibrant greens and reds than the sRGB color gamut. The `display-p3` space is based on `r`, `g`, and `b` channels, with in-gamut values ranging from `0` to `1`. The whitepoint is D65.
+
+- `display-p3-linear` color space
+  - : The `display-p3-linear` predefined color space is similar to `display-p3`, except that it uses a linear-light transfer function and has no gamma-encoding, which allows for a higher precision in the colors displayed. The `display-p3-linear` space is based on `r`, `g`, and `b` channels, with in-gamut values ranging from `0` to `1`. The whitepoint is D65.
 
 - `a98-rgb` color space
   - : `a98-rgb` is the Adobe® 1998 RGB color space designed to represent all the CMYK colors as RGB. About 50% of the visible colors specified by the [CIELab color space](#cielab_color_spaces) can be achieved, encompassing more cyan-green hues than other RGB color spaces. In-gamut `r`, `g`, and `b` values range from `0` to `1`. The transfer curve is a gamma function, close to but not exactly 1/2.2. The whitepoint is D65.
