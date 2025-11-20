@@ -91,14 +91,14 @@ A related feature — **interest invokers** — can be used to show popovers on 
 
 ### Events
 
-- {{domxref("HTMLElement.interest_event", "HTMLElement.interest")}}
+- {{domxref("HTMLElement.interest_event", "interest")}}
   - : Fired on an interest invoker's target element when interest is shown, allowing custom code to be run in response.
-- {{domxref("HTMLElement.loseinterest_event", "HTMLElement.loseinterest")}}
+- {{domxref("HTMLElement.loseinterest_event", "loseinterest")}}
   - : Fired on an interest invoker's target element when interest is lost, allowing custom code to be run in response.
-- {{domxref("HTMLElement.beforetoggle_event","HTMLElement.beforetoggle")}} event
+- {{domxref("HTMLElement.beforetoggle_event","beforetoggle")}} event
   - : Fired just before a popover element's state changes between showing and hidden, or vice versa.
     Can be used to prevent a popover from opening, or to update other elements that need to be triggered by popover state.
-- {{domxref("HTMLElement.toggle_event", "HTMLElement.toggle")}} event
+- {{domxref("HTMLElement.toggle_event", "toggle")}} event
   - : Fired just after a popover element's state changes between showing and hidden, or vice versa.
 
 ## Examples
