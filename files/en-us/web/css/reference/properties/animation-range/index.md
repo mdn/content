@@ -207,9 +207,9 @@ Scroll to see the element being animated.
 
 {{EmbedLiveSample("Examples", "100%", "480px")}}
 
-Note how the `from` or `0%` keyframe property values are not applied to the animated element until the top block border edge is 10% past the container's bottom edge; it is full size, fully opaque, and magenta, then jumps to the values defined by the `0%` keyframe selector when the animation keyframes are applied, and jumps back to the original values when the `animation-range-end` is reached. This is because we did not set `animation-fill-mode` on the animated element.
+Note how the `from`, or `0%`, keyframe property values are not applied to the animated element until the top block border edge is 10% past the container's bottom edge; it is full size, fully opaque, and magenta, then jumps to the values defined by the `0%` keyframe selector when the animation keyframes are applied, and jumps back to the original values when the `animation-range-end` is reached, which is 25% from the top of the scrollport. The jumping to the default state is because we did not set the `animation-fill-mode` property on the element, which can be used to apply an animation's styles to an element before and after the animation's execution.
 
-Scroll to the end of the content and check the checkbox to apply the `0%` keyframe before the animation starts and the `100%` keyframe property values after the animation ends when the range end is reached.
+Scroll to the end of the content and check the checkbox to add ``animation-fill-mode: both` to the element, which applies the `0%` keyframe before the animation starts and the `100%` keyframe property values after the animation ends (when the range-end is reached).
 
 ## Specifications
 
