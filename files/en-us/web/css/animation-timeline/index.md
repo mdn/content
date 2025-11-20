@@ -56,7 +56,7 @@ animation-timeline: unset;
 
 ## Description
 
-The default timeline for an CSS keyframe animation is the {{domxref("DocumentTimeline")}}. The `animation-timeline` property can be used to explicitly set the [default document timeline be used](#regular_css_animations_default_document_timeline) timeline that is used to control the progress of a CSS animation.
+The default timeline for a CSS keyframe animation is the {{domxref("DocumentTimeline")}}. The `animation-timeline` property can be used to explicitly set the [default document timeline to be used](#regular_css_animations_default_document_timeline) to control the progress of a CSS animation.
 
 The following types of timelines can be set via `animation-timeline`:
 
