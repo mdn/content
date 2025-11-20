@@ -110,10 +110,10 @@ When targeting popovers with interest invokers, you can use the same styling tec
 
 That said, there are some interest invoker-specific CSS features that you should know about:
 
-- The {{cssxref("interest-delay")}} shorthand property and its related {{cssxref("interest-delay-start")}} and {{cssxref("interest-delay-end")}} longhands, which can be set to add a delay between the user showing/losing interest and the interest change being acted on by the browser — for example, the popover being shown/hidden.
+- The [`interest-delay`](/en-US/docs/Web/CSS/Reference/Properties/interest-delay) shorthand property and its related [`interest-delay-start`](/en-US/docs/Web/CSS/Reference/Properties/interest-delay-start) and [`interest-delay-end`](/en-US/docs/Web/CSS/Reference/Properties/interest-delay-end) longhands, which can be set to add a delay between the user showing/losing interest and the interest change being acted on by the browser — for example, the popover being shown/hidden.
 - The {{cssxref(":interest-source")}} and {{cssxref(":interest-target")}} pseudo-classes, which can be used to apply styles to the interest invoker and its associated target element, respectively, only when interest is being shown.
 
-Let's look at a simple example that demsonstrates their use.
+Let's look at a simple example that demonstrates their use.
 
 The HTML is very similar to the previous example, except that this time we only have the tooltip, shown/hidden when the user shows/loses interest in the `<button>`:
 
@@ -451,7 +451,7 @@ In the markup, we include a link to my GitHub profile inside a short paragraph, 
 
 ### CSS
 
-We begin our styles by setting an {{cssxref("interest-delay-start")}} value of `1s` on the link (the `a[interestfor]` selector is useful for selecting only links that are interest invokers). We are setting this so that you only get the popover appearing after a short pause on a link. It could be annoying to have popovers appearing immediately on a dense, link-heavy page.
+We begin our styles by setting an [`interest-delay-start`](/en-US/docs/Web/CSS/Reference/Properties/interest-delay-start) value of `1s` on the link (the `a[interestfor]` selector is useful for selecting only links that are interest invokers). We are setting this to increase the delay between a user pausing over a link and the popover appearing. It could be annoying to have popovers appearing too quickly on a dense, link-heavy page.
 
 ```css hidden live-sample___link-preview-popover
 html {
