@@ -7,7 +7,7 @@ spec-urls: https://drafts.csswg.org/scroll-animations/#typedef-axis
 sidebar: cssref
 ---
 
-The **`<axis>`** {{glossary("enumerated")}} data type is a CSS keyword specifying the scrolling direction of the {{glossary("scroll container")}} controlling a [scroll timeline](/en-US/docs/Web/CSS/guides/Scroll-driven_animations/Timelines).
+The **`<axis>`** {{glossary("enumerated")}} data type specifies the scrolling direction of the {{glossary("scroll container")}} controlling a [scroll timeline](/en-US/docs/Web/CSS/guides/Scroll-driven_animations/Timelines).
 
 The `<axis>` keyword values are used in the following [CSS functions](/en-US/docs/Web/CSS/Reference/Values/Functions) and properties:
 
