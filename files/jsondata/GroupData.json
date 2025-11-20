@@ -1318,7 +1318,7 @@
         "/docs/Web/API/Popover_API/Using",
         "/docs/Web/API/Popover_API/Interest_invokers"
       ],
-      "interfaces": ["ToggleEvent"],
+      "interfaces": ["InterestEvent", "ToggleEvent"],
       "methods": [
         "HTMLElement.hidePopover()",
         "HTMLElement.showPopover()",
@@ -1329,9 +1329,18 @@
         "HTMLButtonElement.popoverTargetElement",
         "HTMLElement.popover",
         "HTMLInputElement.popoverTargetAction",
-        "HTMLInputElement.popoverTargetElement"
+        "HTMLInputElement.popoverTargetElement",
+        "HTMLAnchorElement.interestForElement",
+        "HTMLAreaElement.interestForElement",
+        "HTMLButtonElement.interestForElement",
+        "SVGAElement.interestForElement"
       ],
-      "events": ["HTMLElement: beforetoggle", "HTMLElement: toggle"]
+      "events": [
+        "HTMLElement: beforetoggle",
+        "HTMLElement: toggle",
+        "HTMLElement: interest",
+        "HTMLElement: loseinterest"
+      ]
     },
     "Presentation API": {
       "overview": ["Presentation API"],

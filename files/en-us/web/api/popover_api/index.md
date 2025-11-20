@@ -40,7 +40,7 @@ A related feature — **interest invokers** — can be used to show popovers on 
 
 ## HTML attributes
 
-- [`interestfor`](/en-US/docs/Web/HTML/Reference/Elements/button#interestfor)
+- [`interestfor`](/en-US/docs/Web/HTML/Reference/Elements/button#interestfor) {{experimental_inline}}
   - : Defines an HTML {{htmlelement("a")}}, {{htmlelement("button")}}, or {{htmlelement("area")}} element, or an SVG [`<a>`](/en-US/docs/Web/SVG/Reference/Element/a) element, as an interest invoker. Takes as its value the `id` of a target element that will be affected in some way (normally shown or hidden) when interest is shown or lost on the invoker element.
 - [`popover`](/en-US/docs/Web/HTML/Reference/Global_attributes/popover)
   - : A global attribute that turns an element into a popover element; takes a popover state (`"auto"`, `"hint"`, or `"manual"`) as its value.
@@ -53,7 +53,7 @@ A related feature — **interest invokers** — can be used to show popovers on 
 
 - {{cssxref("::backdrop")}}
   - : The `::backdrop` pseudo-element is a full-screen element placed directly behind popover elements, allowing effects to be added to the page content behind the popover(s) if desired (for example blurring it out).
-- {{cssxref("interest-delay")}}, {{cssxref("interest-delay-start")}}, and {{cssxref("interest-delay-end")}}
+- {{cssxref("interest-delay")}}, {{cssxref("interest-delay-start")}}, and {{cssxref("interest-delay-end")}} {{experimental_inline}}
   - : The {{cssxref("interest-delay")}} shorthand property and its related {{cssxref("interest-delay-start")}} and {{cssxref("interest-delay-end")}} longhands can be set to add a delay between the user showing/losing interest and the interest change being acted on by the browser.
 - {{cssxref(":interest-source")}} and {{cssxref(":interest-target")}}
   - : Can be used to apply styles to the interest invoker and its associated target element, respectively, only when interest is being shown.
@@ -62,7 +62,7 @@ A related feature — **interest invokers** — can be used to show popovers on 
 
 ## Interfaces
 
-- {{domxref("InterestEvent")}}
+- {{domxref("InterestEvent")}} {{experimental_inline}}
   - : The event object for the {{domxref("HTMLElement.interest_event", "interest")}} and {{domxref("HTMLElement.loseinterest_event", "loseinterest")}} events. This includes a `source` property that contains a reference to the associated interest invoker element.
 - {{domxref("ToggleEvent")}}
   - : Represents an event that fires when a popover element is toggled between being shown and hidden. It is the event object for the {{domxref("HTMLElement.beforetoggle_event", "beforetoggle")}} and {{domxref("HTMLElement.toggle_event", "toggle")}} events, which fire on popovers when their state changes.
@@ -71,7 +71,7 @@ A related feature — **interest invokers** — can be used to show popovers on 
 
 ### Instance properties
 
-- {{domxref("HTMLButtonElement.interestForElement", "interestForElement")}}
+- {{domxref("HTMLButtonElement.interestForElement", "interestForElement")}} {{experimental_inline}}
   - : Returns a reference to the element being targeted by an interest invoker. This will be the element whose `id` is referenced in the equivalent HTML or SVG interest invoker element's `interestfor` attribute. Available on the {{domxref("HTMLButtonElement")}}, {{domxref("HTMLAnchorElement")}}, {{domxref("HTMLAreaElement")}}, and {{domxref("SVGAElement")}} interfaces.
 - {{domxref("HTMLElement.popover")}}
   - : Gets and sets an element's popover state via JavaScript (`"auto"`, `"hint"`, or `"manual"`), and can be used for feature detection. Reflects the value of the [`popover`](/en-US/docs/Web/HTML/Reference/Global_attributes/popover) global HTML attribute.
@@ -91,15 +91,15 @@ A related feature — **interest invokers** — can be used to show popovers on 
 
 ### Events
 
-- {{domxref("HTMLElement.interest_event", "interest")}}
-  - : Fired on an interest invoker's target element when interest is shown, allowing custom code to be run in response.
-- {{domxref("HTMLElement.loseinterest_event", "loseinterest")}}
-  - : Fired on an interest invoker's target element when interest is lost, allowing custom code to be run in response.
 - {{domxref("HTMLElement.beforetoggle_event","beforetoggle")}} event
   - : Fired just before a popover element's state changes between showing and hidden, or vice versa.
     Can be used to prevent a popover from opening, or to update other elements that need to be triggered by popover state.
 - {{domxref("HTMLElement.toggle_event", "toggle")}} event
   - : Fired just after a popover element's state changes between showing and hidden, or vice versa.
+- {{domxref("HTMLElement.interest_event", "interest")}} {{experimental_inline}}
+  - : Fired on an interest invoker's target element when interest is shown, allowing code to be run in response.
+- {{domxref("HTMLElement.loseinterest_event", "loseinterest")}} {{experimental_inline}}
+  - : Fired on an interest invoker's target element when interest is lost, allowing code to be run in response.
 
 ## Examples
 

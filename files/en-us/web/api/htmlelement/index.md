@@ -140,6 +140,13 @@ _Also, inherits events from its parent, {{DOMxRef("Element")}}._
 - {{DOMxRef("HTMLElement/drop_event", "drop")}}
   - : This event is fired when an element or text selection is dropped on a valid drop target.
 
+### Interest invoker events
+
+- {{domxref("HTMLElement.interest_event", "interest")}} {{experimental_inline}}
+  - : Fired on an [interest invoker](/en-US/docs/Web/API/Popover_API/Interest_invokers)'s target element when interest is shown, allowing code to be run in response.
+- {{domxref("HTMLElement.loseinterest_event", "loseinterest")}} {{experimental_inline}}
+  - : Fired on an interest invoker's target element when interest is lost, allowing code to be run in response.
+
 ### Toggle events
 
 - {{DOMxRef("HTMLElement/beforetoggle_event", "beforetoggle")}}
