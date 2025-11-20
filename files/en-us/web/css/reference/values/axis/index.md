@@ -26,10 +26,10 @@ Valid `<axis>` values:
   - : The block axis of the scroller element, which is the axis in the direction perpendicular to the flow of text within a line. For horizontal writing modes, such as standard English, this is the same as `y`, while for vertical writing modes, it is the same as `x`.
 - `inline`
   - : The inline axis of the scroller element, which is the axis in the direction parallel to the flow of text in a line. For horizontal writing modes, this is the same as `x`, while for vertical writing modes, this is the same as `y`.
-- `y`
-  - : The vertical axis of the scroller element.
 - `x`
   - : The horizontal axis of the scroller element.
+- `y`
+  - : The vertical axis of the scroller element.
 
 ## Formal syntax
 
