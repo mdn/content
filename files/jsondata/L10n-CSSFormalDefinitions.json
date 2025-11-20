@@ -1,0 +1,1373 @@
+{
+  "0": {
+    "en-US": "0"
+  },
+  "0 1 auto": {
+    "en-US": "0 1 auto"
+  },
+  "0%": {
+    "en-US": "0%"
+  },
+  "0% 0%": {
+    "en-US": "0% 0%"
+  },
+  "0px": {
+    "en-US": "0px"
+  },
+  "0px 0px": {
+    "en-US": "0px 0px"
+  },
+  "0s": {
+    "en-US": "0s"
+  },
+  "1": {
+    "en-US": "1"
+  },
+  "100%": {
+    "en-US": "100%"
+  },
+  "1dppx": {
+    "en-US": "1dppx"
+  },
+  "1px": {
+    "en-US": "1px"
+  },
+  "2": {
+    "en-US": "2"
+  },
+  "4": {
+    "en-US": "4"
+  },
+  "50%": {
+    "en-US": "50%"
+  },
+  "50% 50%": {
+    "en-US": "50% 50%"
+  },
+  "8": {
+    "en-US": "8"
+  },
+  "?": {
+    "en-US": "?"
+  },
+  "A list, each item consisting of: a pair of offsets (horizontal and vertical) from the top left origin each given as a combination of an absolute length and a percentage": {
+    "en-US": "A list, each item consisting of: a pair of offsets (horizontal and vertical) from the top left origin each given as a combination of an absolute length and a percentage"
+  },
+  "A list, each item consisting of: an offset given as a computed <length-percentage> value, plus an origin keyword": {
+    "en-US": "A list, each item consisting of: an offset given as a computed <length-percentage> value, plus an origin keyword"
+  },
+  "A list, each item consisting of: two keywords, one per dimension": {
+    "en-US": "A list, each item consisting of: two keywords, one per dimension"
+  },
+  "Absolutely positioned elements. In SVG, it applies to elements which establish a new viewport, pattern elements and mask elements.": {
+    "en-US": "Absolutely positioned elements. In SVG, it applies to elements which establish a new viewport, pattern elements and mask elements."
+  },
+  "All HTML elements": {
+    "en-US": "All HTML elements"
+  },
+  "All elements": {
+    "en-US": "All elements"
+  },
+  "All elements except table row groups, table column groups, table rows, table columns, ruby base containers, ruby annotation containers": {
+    "en-US": "All elements except table row groups, table column groups, table rows, table columns, ruby base containers, ruby annotation containers"
+  },
+  "All elements, but not pseudo-elements such as ::first-line, ::first-letter, ::before or ::after.": {
+    "en-US": "All elements, but not pseudo-elements such as ::first-line, ::first-letter, ::before or ::after."
+  },
+  "All elements, except internal table elements when border-collapse is collapse": {
+    "en-US": "All elements, except internal table elements when border-collapse is collapse"
+  },
+  "All elements. In SVG, it applies to container elements excluding the defs element, all graphics elements and the use element": {
+    "en-US": "All elements. In SVG, it applies to container elements excluding the defs element, all graphics elements and the use element"
+  },
+  "All elements. In SVG, it applies to container elements without the defs element and all graphics elements": {
+    "en-US": "All elements. In SVG, it applies to container elements without the defs element and all graphics elements"
+  },
+  "All elements. In SVG, it applies to container elements without the defs element, all graphics elements and the use element.": {
+    "en-US": "All elements. In SVG, it applies to container elements without the defs element, all graphics elements and the use element."
+  },
+  "All elements. In SVG, it applies to container elements, graphics elements and graphics referencing elements. [SVG11]": {
+    "en-US": "All elements. In SVG, it applies to container elements, graphics elements and graphics referencing elements. [SVG11]"
+  },
+  "All filter primitives": {
+    "en-US": "All filter primitives"
+  },
+  "Applies to SVG graphics elements": {
+    "en-US": "Applies to SVG graphics elements"
+  },
+  "CSS Regions": {
+    "en-US": "CSS Regions"
+  },
+  "CanvasText": {
+    "en-US": "CanvasText"
+  },
+  "Direct block-level, grid item, or flex item children of a reading flow container.": {
+    "en-US": "Direct block-level, grid item, or flex item children of a reading flow container."
+  },
+  "N/A": {
+    "en-US": "N/A"
+  },
+  "Non-replaced block containers. This might be expanded in future versions of the specification to allow other types of containers to receive flow content.": {
+    "en-US": "Non-replaced block containers. This might be expanded in future versions of the specification to allow other types of containers to receive flow content."
+  },
+  "SVG shapes": {
+    "en-US": "SVG shapes"
+  },
+  "Same as column-rule and row-rule": {
+    "en-US": "Same as column-rule and row-rule"
+  },
+  "Same as column-rule-break and row-rule-break": {
+    "en-US": "Same as column-rule-break and row-rule-break"
+  },
+  "Same as column-rule-color and row-rule-color": {
+    "en-US": "Same as column-rule-color and row-rule-color"
+  },
+  "Same as column-rule-outset and row-rule-outset": {
+    "en-US": "Same as column-rule-outset and row-rule-outset"
+  },
+  "Same as column-rule-style and row-rule-style": {
+    "en-US": "Same as column-rule-style and row-rule-style"
+  },
+  "Same as column-rule-width and row-rule-width": {
+    "en-US": "Same as column-rule-width and row-rule-width"
+  },
+  "Same as corresponding margin-* properties": {
+    "en-US": "Same as corresponding margin-* properties"
+  },
+  "Same as corresponding padding-* properties": {
+    "en-US": "Same as corresponding padding-* properties"
+  },
+  "Same as height and width": {
+    "en-US": "Same as height and width"
+  },
+  "Same as height, width": {
+    "en-US": "Same as height, width"
+  },
+  "Same as margin-top": {
+    "en-US": "Same as margin-top"
+  },
+  "Same as max-height, max-width": {
+    "en-US": "Same as max-height, max-width"
+  },
+  "Same as min-height, min-width": {
+    "en-US": "Same as min-height, min-width"
+  },
+  "Same as padding-top": {
+    "en-US": "Same as padding-top"
+  },
+  "Same as specified value": {
+    "en-US": "Same as specified value"
+  },
+  "See Interpolation of Basic Shapes": {
+    "en-US": "See Interpolation of Basic Shapes"
+  },
+  "See below": {
+    "en-US": "See below"
+  },
+  "See individual properties": {
+    "en-US": "See individual properties"
+  },
+  "See prose": {
+    "en-US": "See prose"
+  },
+  "See prose below": {
+    "en-US": "See prose below"
+  },
+  "See prose in Animation of Filters.": {
+    "en-US": "See prose in Animation of Filters."
+  },
+  "TBD": {
+    "en-US": "TBD"
+  },
+  "The computed value for auto is auto. For <color> values, see CSS Color 4 § 14. Resolving <color> Values.": {
+    "en-US": "The computed value for auto is auto. For <color> values, see CSS Color 4 § 14. Resolving <color> Values."
+  },
+  "The normal or auto keywords, or a computed <position>": {
+    "en-US": "The normal or auto keywords, or a computed <position>"
+  },
+  "a computed <length-percentage> value": {
+    "en-US": "a computed <length-percentage> value"
+  },
+  "a keyword value, and optionally also a percentage relative to the keyword (if not 100%)": {
+    "en-US": "a keyword value, and optionally also a percentage relative to the keyword (if not 100%)"
+  },
+  "a list consisting of two-value pairs representing the start and end insets each as either the keyword auto or a computed <length-percentage> value": {
+    "en-US": "a list consisting of two-value pairs representing the start and end insets each as either the keyword auto or a computed <length-percentage> value"
+  },
+  "a list of the keywords specified": {
+    "en-US": "a list of the keywords specified"
+  },
+  "a list, each item a pair of offsets (horizontal and vertical) from the top left origin, each offset given as a computed <length-percentage> value": {
+    "en-US": "a list, each item a pair of offsets (horizontal and vertical) from the top left origin, each offset given as a computed <length-percentage> value"
+  },
+  "a number": {
+    "en-US": "a number"
+  },
+  "a number, see below": {
+    "en-US": "a number, see below"
+  },
+  "a pair of keywords representing the inner and outer display types plus optional list-item flag, or a <display-internal> or <display-box> keyword; see prose in a variety of specs for computation rules": {
+    "en-US": "a pair of keywords representing the inner and outer display types plus optional list-item flag, or a <display-internal> or <display-box> keyword; see prose in a variety of specs for computation rules"
+  },
+  "a percentage, see below": {
+    "en-US": "a percentage, see below"
+  },
+  "a set of zero to four keywords indicating which sides to trim": {
+    "en-US": "a set of zero to four keywords indicating which sides to trim"
+  },
+  "absolute length": {
+    "en-US": "absolute length"
+  },
+  "absolute length, snapped as a border width; 0 if the outline style is none.": {
+    "en-US": "absolute length, snapped as a border width; 0 if the outline style is none."
+  },
+  "absolute length, snapped as a border width; zero if the border style is none or hidden": {
+    "en-US": "absolute length, snapped as a border width; zero if the border style is none or hidden"
+  },
+  "absolutely positioned boxes": {
+    "en-US": "absolutely positioned boxes"
+  },
+  "add": {
+    "en-US": "add"
+  },
+  "all": {
+    "en-US": "all"
+  },
+  "all <length> property values of all elements": {
+    "en-US": "all <length> property values of all elements"
+  },
+  "all <length>s made absolute, otherwise as specified": {
+    "en-US": "all <length>s made absolute, otherwise as specified"
+  },
+  "all elements": {
+    "en-US": "all elements"
+  },
+  "all elements (but see prose)": {
+    "en-US": "all elements (but see prose)"
+  },
+  "all elements and pseudo-elements": {
+    "en-US": "all elements and pseudo-elements"
+  },
+  "all elements and pseudo-elements, but not ::first-line or ::first-letter.": {
+    "en-US": "all elements and pseudo-elements, but not ::first-line or ::first-letter."
+  },
+  "all elements and text": {
+    "en-US": "all elements and text"
+  },
+  "all elements except inline boxes": {
+    "en-US": "all elements except inline boxes"
+  },
+  "all elements except inline boxes and internal ruby or table boxes": {
+    "en-US": "all elements except inline boxes and internal ruby or table boxes"
+  },
+  "all elements except inline-level boxes, internal ruby boxes, table column boxes, table column group boxes, absolutely-positioned boxes": {
+    "en-US": "all elements except inline-level boxes, internal ruby boxes, table column boxes, table column group boxes, absolutely-positioned boxes"
+  },
+  "all elements except internal table elements, ruby base containers, and ruby annotation containers": {
+    "en-US": "all elements except internal table elements, ruby base containers, and ruby annotation containers"
+  },
+  "all elements except non-replaced inlines": {
+    "en-US": "all elements except non-replaced inlines"
+  },
+  "all elements except ruby base containers and ruby annotation containers": {
+    "en-US": "all elements except ruby base containers and ruby annotation containers"
+  },
+  "all elements except table row groups, rows, column groups, and columns; and text": {
+    "en-US": "all elements except table row groups, rows, column groups, and columns; and text"
+  },
+  "all elements except table-column-group and table-column": {
+    "en-US": "all elements except table-column-group and table-column"
+  },
+  "all elements except: internal table elements other than table cells, ruby base containers, and ruby annotation containers": {
+    "en-US": "all elements except: internal table elements other than table cells, ruby base containers, and ruby annotation containers"
+  },
+  "all elements except: non-replaced inline elements, table rows, row groups, table columns, and column groups.": {
+    "en-US": "all elements except: non-replaced inline elements, table rows, row groups, table columns, and column groups."
+  },
+  "all elements that accept width or height": {
+    "en-US": "all elements that accept width or height"
+  },
+  "all elements that generate a principal box": {
+    "en-US": "all elements that generate a principal box"
+  },
+  "all elements where border-radius can apply": {
+    "en-US": "all elements where border-radius can apply"
+  },
+  "all elements, and optionally to the ::before and ::after pseudo-elements": {
+    "en-US": "all elements, and optionally to the ::before and ::after pseudo-elements"
+  },
+  "all elements, but not pseudo-elements": {
+    "en-US": "all elements, but not pseudo-elements"
+  },
+  "all elements, but see prose": {
+    "en-US": "all elements, but see prose"
+  },
+  "all elements, except table element when border-collapse is collapse": {
+    "en-US": "all elements, except table element when border-collapse is collapse"
+  },
+  "all elements, tree-abiding pseudo-elements, and page margin boxes": {
+    "en-US": "all elements, tree-abiding pseudo-elements, and page margin boxes"
+  },
+  "all elements.": {
+    "en-US": "all elements."
+  },
+  "all enabled elements": {
+    "en-US": "all enabled elements"
+  },
+  "alpha": {
+    "en-US": "alpha"
+  },
+  "alphabetic": {
+    "en-US": "alphabetic"
+  },
+  "alternate": {
+    "en-US": "alternate"
+  },
+  "an RGBA color": {
+    "en-US": "an RGBA color"
+  },
+  "an absolute length": {
+    "en-US": "an absolute length"
+  },
+  "an absolute length and/or a percentage": {
+    "en-US": "an absolute length and/or a percentage"
+  },
+  "an absolute length or percentage": {
+    "en-US": "an absolute length or percentage"
+  },
+  "an integer, see below": {
+    "en-US": "an integer, see below"
+  },
+  "anchors-visible": {
+    "en-US": "anchors-visible"
+  },
+  "as SLERP, but see below for none": {
+    "en-US": "as SLERP, but see below for none"
+  },
+  "as defined for <basic-shape> (with <shape-box> following, if supplied); else the computed <image>; else the keyword as specified": {
+    "en-US": "as defined for <basic-shape> (with <shape-box> following, if supplied); else the computed <image>; else the keyword as specified"
+  },
+  "as defined for <basic-shape>, otherwise discrete": {
+    "en-US": "as defined for <basic-shape>, otherwise discrete"
+  },
+  "as for background-position": {
+    "en-US": "as for background-position"
+  },
+  "as if possible, otherwise discrete": {
+    "en-US": "as if possible, otherwise discrete"
+  },
+  "as length": {
+    "en-US": "as length"
+  },
+  "as shadow list": {
+    "en-US": "as shadow list"
+  },
+  "as specified": {
+    "en-US": "as specified"
+  },
+  "as specified except for element’s whose float computed value is not none, in which case the computed value is auto.": {
+    "en-US": "as specified except for element’s whose float computed value is not none, in which case the computed value is auto."
+  },
+  "as specified, but with <color> values computed and <url> values made absolute": {
+    "en-US": "as specified, but with <color> values computed and <url> values made absolute"
+  },
+  "as specified, but with <percentage> converted to the equivalent <number>": {
+    "en-US": "as specified, but with <percentage> converted to the equivalent <number>"
+  },
+  "as specified, but with <url> values (that are part of a <marker-ref>) made absolute": {
+    "en-US": "as specified, but with <url> values (that are part of a <marker-ref>) made absolute"
+  },
+  "as specified, but with <url> values made absolute": {
+    "en-US": "as specified, but with <url> values made absolute"
+  },
+  "as specified, but with lengths made absolute": {
+    "en-US": "as specified, but with lengths made absolute"
+  },
+  "as specified, but with lengths made absolute and omitted auto keywords filled in": {
+    "en-US": "as specified, but with lengths made absolute and omitted auto keywords filled in"
+  },
+  "as specified, except with any relative URLs converted to absolute": {
+    "en-US": "as specified, except with any relative URLs converted to absolute"
+  },
+  "as specified, with <length-percentage> values computed": {
+    "en-US": "as specified, with <length-percentage> values computed"
+  },
+  "as specified, with <length> values computed": {
+    "en-US": "as specified, with <length> values computed"
+  },
+  "as specified, with any <image> computed": {
+    "en-US": "as specified, with any <image> computed"
+  },
+  "as specified, with lengths made absolute": {
+    "en-US": "as specified, with lengths made absolute"
+  },
+  "auto": {
+    "en-US": "auto"
+  },
+  "auto auto": {
+    "en-US": "auto auto"
+  },
+  "balance": {
+    "en-US": "balance"
+  },
+  "baseline": {
+    "en-US": "baseline"
+  },
+  "black": {
+    "en-US": "black"
+  },
+  "block": {
+    "en-US": "block"
+  },
+  "block container elements": {
+    "en-US": "block container elements"
+  },
+  "block containers": {
+    "en-US": "block containers"
+  },
+  "block containers [CSS2], flex containers [CSS3-FLEXBOX], and grid containers [CSS3-GRID-LAYOUT]": {
+    "en-US": "block containers [CSS2], flex containers [CSS3-FLEXBOX], and grid containers [CSS3-GRID-LAYOUT]"
+  },
+  "block containers [CSS2], flex containers [CSS3-FLEXBOX], grid containers [CSS3-GRID-LAYOUT]": {
+    "en-US": "block containers [CSS2], flex containers [CSS3-FLEXBOX], grid containers [CSS3-GRID-LAYOUT]"
+  },
+  "block containers and inline boxes": {
+    "en-US": "block containers and inline boxes"
+  },
+  "block containers and multicol containers": {
+    "en-US": "block containers and multicol containers"
+  },
+  "block containers except table wrapper boxes": {
+    "en-US": "block containers except table wrapper boxes"
+  },
+  "block containers hat establish an inline formatting context": {
+    "en-US": "block containers hat establish an inline formatting context"
+  },
+  "block containers that establish an inline formatting context": {
+    "en-US": "block containers that establish an inline formatting context"
+  },
+  "block containers which are also either line-clamp containers or fragmentation containers that capture region breaks": {
+    "en-US": "block containers which are also either line-clamp containers or fragmentation containers that capture region breaks"
+  },
+  "block containers, inline boxes, table rows, grid containers, flex containers, and SVG text content elements": {
+    "en-US": "block containers, inline boxes, table rows, grid containers, flex containers, and SVG text content elements"
+  },
+  "block containers, multi-column containers, and inline boxes": {
+    "en-US": "block containers, multi-column containers, and inline boxes"
+  },
+  "block containers, multi-column containers, flex containers, grid containers": {
+    "en-US": "block containers, multi-column containers, flex containers, grid containers"
+  },
+  "block containers, multicol containers, flex containers, and grid containers": {
+    "en-US": "block containers, multicol containers, flex containers, and grid containers"
+  },
+  "block, flex and grid containers": {
+    "en-US": "block, flex and grid containers"
+  },
+  "block-level boxes": {
+    "en-US": "block-level boxes"
+  },
+  "block-level boxes and internal table elements except table cells": {
+    "en-US": "block-level boxes and internal table elements except table cells"
+  },
+  "block-level boxes, absolutely-positioned boxes, and grid items": {
+    "en-US": "block-level boxes, absolutely-positioned boxes, and grid items"
+  },
+  "block-level boxes, grid items, flex items, table row groups, table rows (but see prose)": {
+    "en-US": "block-level boxes, grid items, flex items, table row groups, table rows (but see prose)"
+  },
+  "block-level elements": {
+    "en-US": "block-level elements"
+  },
+  "block-level elements (but see text)": {
+    "en-US": "block-level elements (but see text)"
+  },
+  "block-level elements, floats, regions, pages": {
+    "en-US": "block-level elements, floats, regions, pages"
+  },
+  "block-level elements.": {
+    "en-US": "block-level elements."
+  },
+  "border-box": {
+    "en-US": "border-box"
+  },
+  "bounding-box": {
+    "en-US": "bounding-box"
+  },
+  "boxes that create class A break points": {
+    "en-US": "boxes that create class A break points"
+  },
+  "boxes to which overflow applies": {
+    "en-US": "boxes to which overflow applies"
+  },
+  "butt": {
+    "en-US": "butt"
+  },
+  "by computed value": {
+    "en-US": "by computed value"
+  },
+  "by computed value if <length>, otherwise discrete": {
+    "en-US": "by computed value if <length>, otherwise discrete"
+  },
+  "by computed value type": {
+    "en-US": "by computed value type"
+  },
+  "by computed value type, recursing into fit-content()": {
+    "en-US": "by computed value type, recursing into fit-content()"
+  },
+  "by computed value type;normal animates as oblique 0deg": {
+    "en-US": "by computed value type;normal animates as oblique 0deg"
+  },
+  "by computed value, but see below for none": {
+    "en-US": "by computed value, but see below for none"
+  },
+  "by computed value, recursing into fit-content()": {
+    "en-US": "by computed value, recursing into fit-content()"
+  },
+  "by computed value, treating none as 0 0 when interpolated with non-none values.": {
+    "en-US": "by computed value, treating none as 0 0 when interpolated with non-none values."
+  },
+  "by dynamic-range-limit-mix()": {
+    "en-US": "by dynamic-range-limit-mix()"
+  },
+  "center": {
+    "en-US": "center"
+  },
+  "certain inline-level boxes and ::first-letter and inside ::marker boxes (see prose)": {
+    "en-US": "certain inline-level boxes and ::first-letter and inside ::marker boxes (see prose)"
+  },
+  "clip": {
+    "en-US": "clip"
+  },
+  "collapse": {
+    "en-US": "collapse"
+  },
+  "computed <angle> value, optionally preceded by auto": {
+    "en-US": "computed <angle> value, optionally preceded by auto"
+  },
+  "computed <length-percentage> value": {
+    "en-US": "computed <length-percentage> value"
+  },
+  "computed <length-percentage> value, plus any specified keywords": {
+    "en-US": "computed <length-percentage> value, plus any specified keywords"
+  },
+  "computed color": {
+    "en-US": "computed color"
+  },
+  "computed color, see resolving color values": {
+    "en-US": "computed color, see resolving color values"
+  },
+  "computed lengths for <basic-shape>, the absolute URL for <url>, otherwise as specified": {
+    "en-US": "computed lengths for <basic-shape>, the absolute URL for <url>, otherwise as specified"
+  },
+  "computed lengths for any <basic-shape>, the absolute URI for <uri>, otherwise as specified": {
+    "en-US": "computed lengths for any <basic-shape>, the absolute URI for <uri>, otherwise as specified"
+  },
+  "container elements, graphics elements and ‘use’": {
+    "en-US": "container elements, graphics elements and ‘use’"
+  },
+  "container elements, graphics elements, gradient elements, ‘use’ and ‘animate’": {
+    "en-US": "container elements, graphics elements, gradient elements, ‘use’ and ‘animate’"
+  },
+  "content(text)": {
+    "en-US": "content(text)"
+  },
+  "content-box": {
+    "en-US": "content-box"
+  },
+  "currentcolor": {
+    "en-US": "currentcolor"
+  },
+  "depends on user agent": {
+    "en-US": "depends on user agent"
+  },
+  "disc": {
+    "en-US": "disc"
+  },
+  "discrete": {
+    "en-US": "discrete"
+  },
+  "discrete if the keywords differ, otherwise by computed value type": {
+    "en-US": "discrete if the keywords differ, otherwise by computed value type"
+  },
+  "ease": {
+    "en-US": "ease"
+  },
+  "economy": {
+    "en-US": "economy"
+  },
+  "either the keyword none or a list, each item consisting of four absolute lengths plus a computed color and optionally also an inset keyword": {
+    "en-US": "either the keyword none or a list, each item consisting of four absolute lengths plus a computed color and optionally also an inset keyword"
+  },
+  "elements": {
+    "en-US": "elements"
+  },
+  "elements for which size containment can apply": {
+    "en-US": "elements for which size containment can apply"
+  },
+  "elements that are scroll containers and optionally replaced elements such as images, videos, and iframes": {
+    "en-US": "elements that are scroll containers and optionally replaced elements such as images, videos, and iframes"
+  },
+  "elements with default preferred size": {
+    "en-US": "elements with default preferred size"
+  },
+  "elements with size containment": {
+    "en-US": "elements with size containment"
+  },
+  "feDiffuseLighting and feSpecularLighting elements": {
+    "en-US": "feDiffuseLighting and feSpecularLighting elements"
+  },
+  "feFlood and feDropShadow elements": {
+    "en-US": "feFlood and feDropShadow elements"
+  },
+  "fill": {
+    "en-US": "fill"
+  },
+  "fixed": {
+    "en-US": "fixed"
+  },
+  "flat": {
+    "en-US": "flat"
+  },
+  "flex containers": {
+    "en-US": "flex containers"
+  },
+  "flex containers, grid containers, masonry containers": {
+    "en-US": "flex containers, grid containers, masonry containers"
+  },
+  "flex items": {
+    "en-US": "flex items"
+  },
+  "flex items and grid items": {
+    "en-US": "flex items and grid items"
+  },
+  "flex items, grid items, and absolutely-positioned boxes": {
+    "en-US": "flex items, grid items, and absolutely-positioned boxes"
+  },
+  "floats": {
+    "en-US": "floats"
+  },
+  "floats and initial letter boxes": {
+    "en-US": "floats and initial letter boxes"
+  },
+  "four values, each a number or absolute length": {
+    "en-US": "four values, each a number or absolute length"
+  },
+  "four values, each either a number or percentage; plus a fill keyword if specified": {
+    "en-US": "four values, each either a number or percentage; plus a fill keyword if specified"
+  },
+  "four values, each either a number, the keyword auto, or a computed <length-percentage> value": {
+    "en-US": "four values, each either a number, the keyword auto, or a computed <length-percentage> value"
+  },
+  "from-image": {
+    "en-US": "from-image"
+  },
+  "graphics elements and ‘use’": {
+    "en-US": "graphics elements and ‘use’"
+  },
+  "grid containers": {
+    "en-US": "grid containers"
+  },
+  "grid containers, flex containers, and masonry containers": {
+    "en-US": "grid containers, flex containers, and masonry containers"
+  },
+  "grid containers, flex containers, multicol containers, and masonry containers": {
+    "en-US": "grid containers, flex containers, multicol containers, and masonry containers"
+  },
+  "grid items and absolutely-positioned boxes whose containing block is a grid container": {
+    "en-US": "grid items and absolutely-positioned boxes whose containing block is a grid container"
+  },
+  "horizontal-tb": {
+    "en-US": "horizontal-tb"
+  },
+  "if the list lengths match, by computed value type per item in the computed track list (see § 7.2.5 Computed Value of a Track Listing and § 7.2.3.3 Interpolation/Combination of repeat()); discrete otherwise": {
+    "en-US": "if the list lengths match, by computed value type per item in the computed track list (see § 7.2.5 Computed Value of a Track Listing and § 7.2.3.3 Interpolation/Combination of repeat()); discrete otherwise"
+  },
+  "if the list lengths match, by computed value type per item; discrete otherwise": {
+    "en-US": "if the list lengths match, by computed value type per item; discrete otherwise"
+  },
+  "implementation-dependent": {
+    "en-US": "implementation-dependent"
+  },
+  "in-flow block-level elements": {
+    "en-US": "in-flow block-level elements"
+  },
+  "inline": {
+    "en-US": "inline"
+  },
+  "inline boxes": {
+    "en-US": "inline boxes"
+  },
+  "inline boxes and block containers": {
+    "en-US": "inline boxes and block containers"
+  },
+  "inline boxes and text": {
+    "en-US": "inline boxes and text"
+  },
+  "inline boxes, but not ruby container boxes nor internal ruby boxes": {
+    "en-US": "inline boxes, but not ruby container boxes nor internal ruby boxes"
+  },
+  "inline-level boxes": {
+    "en-US": "inline-level boxes"
+  },
+  "inline-level boxes and SVG text content elements": {
+    "en-US": "inline-level boxes and SVG text content elements"
+  },
+  "inline-level boxes and flex items": {
+    "en-US": "inline-level boxes and flex items"
+  },
+  "inline-level boxes, flex items, grid items, table cells, and SVG text content elements": {
+    "en-US": "inline-level boxes, flex items, grid items, table cells, and SVG text content elements"
+  },
+  "interlinear ruby annotation containers": {
+    "en-US": "interlinear ruby annotation containers"
+  },
+  "keyword as specified, except for match-parent which computes as defined above": {
+    "en-US": "keyword as specified, except for match-parent which computes as defined above"
+  },
+  "keyword, but see prose": {
+    "en-US": "keyword, but see prose"
+  },
+  "leading": {
+    "en-US": "leading"
+  },
+  "legacy": {
+    "en-US": "legacy"
+  },
+  "linearRGB": {
+    "en-US": "linearRGB"
+  },
+  "list items": {
+    "en-US": "list items"
+  },
+  "list of absolute lengths, snapped as a border width, or 0 under conditions described below": {
+    "en-US": "list of absolute lengths, snapped as a border width, or 0 under conditions described below"
+  },
+  "list, each item a <length>": {
+    "en-US": "list, each item a <length>"
+  },
+  "list, each item a computed <easing-function>": {
+    "en-US": "list, each item a computed <easing-function>"
+  },
+  "list, each item a computed color": {
+    "en-US": "list, each item a computed color"
+  },
+  "list, each item a duration": {
+    "en-US": "list, each item a duration"
+  },
+  "list, each item a keyword as specified": {
+    "en-US": "list, each item a keyword as specified"
+  },
+  "list, each item a pair of keywords, one per dimension": {
+    "en-US": "list, each item a pair of keywords, one per dimension"
+  },
+  "list, each item a pair of sizes (one per axis) each represented as either a keyword or a computed <length-percentage> value": {
+    "en-US": "list, each item a pair of sizes (one per axis) each represented as either a keyword or a computed <length-percentage> value"
+  },
+  "list, each item a string and/or <generic-family> keywords": {
+    "en-US": "list, each item a string and/or <generic-family> keywords"
+  },
+  "list, each item as specified, but with lengths made absolute": {
+    "en-US": "list, each item as specified, but with lengths made absolute"
+  },
+  "list, each item consists of two keywords representing the origin and two offsets from that origin, each given as an absolute length (if given a <length>), otherwise as a percentage.": {
+    "en-US": "list, each item consists of two keywords representing the origin and two offsets from that origin, each given as an absolute length (if given a <length>), otherwise as a percentage."
+  },
+  "list, each item either a case-sensitive css identifier or the keyword none": {
+    "en-US": "list, each item either a case-sensitive css identifier or the keyword none"
+  },
+  "list, each item either a number or the keyword infinite": {
+    "en-US": "list, each item either a number or the keyword infinite"
+  },
+  "list, each item either a time or the keyword auto": {
+    "en-US": "list, each item either a time or the keyword auto"
+  },
+  "list, each item either an <image> or the keyword none": {
+    "en-US": "list, each item either an <image> or the keyword none"
+  },
+  "list, each item either none or a pair of offsets (horizontal and vertical) from the element‘s box": {
+    "en-US": "list, each item either none or a pair of offsets (horizontal and vertical) from the element‘s box"
+  },
+  "list, each item either the keyword none, the keyword auto, a case-sensitive css identifier, a computed scroll() function, or a computed view() function": {
+    "en-US": "list, each item either the keyword none, the keyword auto, a case-sensitive css identifier, a computed scroll() function, or a computed view() function"
+  },
+  "list, each item either the keyword normal or a timeline range and progress percentage": {
+    "en-US": "list, each item either the keyword normal or a timeline range and progress percentage"
+  },
+  "list, each item either the keyword normal or a timeline range center subject and a length-percentage value": {
+    "en-US": "list, each item either the keyword normal or a timeline range center subject and a length-percentage value"
+  },
+  "list, each item one of the keywords": {
+    "en-US": "list, each item one of the keywords"
+  },
+  "list, each item the keyword as specified": {
+    "en-US": "list, each item the keyword as specified"
+  },
+  "list, each item the keyword none, a computed <image>, or a computed <url>": {
+    "en-US": "list, each item the keyword none, a computed <image>, or a computed <url>"
+  },
+  "ltr": {
+    "en-US": "ltr"
+  },
+  "luminance": {
+    "en-US": "luminance"
+  },
+  "manual": {
+    "en-US": "manual"
+  },
+  "margin-box": {
+    "en-US": "margin-box"
+  },
+  "mask elements": {
+    "en-US": "mask elements"
+  },
+  "masonry containers": {
+    "en-US": "masonry containers"
+  },
+  "match-parent": {
+    "en-US": "match-parent"
+  },
+  "match-self": {
+    "en-US": "match-self"
+  },
+  "match-source": {
+    "en-US": "match-source"
+  },
+  "medium": {
+    "en-US": "medium"
+  },
+  "miter": {
+    "en-US": "miter"
+  },
+  "mixed": {
+    "en-US": "mixed"
+  },
+  "multi-column containers, flex containers, grid containers": {
+    "en-US": "multi-column containers, flex containers, grid containers"
+  },
+  "multicol containers": {
+    "en-US": "multicol containers"
+  },
+  "multicol containers, flex containers, and grid containers": {
+    "en-US": "multicol containers, flex containers, and grid containers"
+  },
+  "n/a": {
+    "en-US": "n/a"
+  },
+  "no": {
+    "en-US": "no"
+  },
+  "no (but see prose)": {
+    "en-US": "no (but see prose)"
+  },
+  "no (but see prose, above)": {
+    "en-US": "no (but see prose, above)"
+  },
+  "no-ellipsis": {
+    "en-US": "no-ellipsis"
+  },
+  "no-limit": {
+    "en-US": "no-limit"
+  },
+  "non-replaced inline boxes and SVG text content elements": {
+    "en-US": "non-replaced inline boxes and SVG text content elements"
+  },
+  "none": {
+    "en-US": "none"
+  },
+  "nonzero": {
+    "en-US": "nonzero"
+  },
+  "normal": {
+    "en-US": "normal"
+  },
+  "normal, or a list consisting of absolute lengths, or percentages as specified": {
+    "en-US": "normal, or a list consisting of absolute lengths, or percentages as specified"
+  },
+  "not animatable": {
+    "en-US": "not animatable"
+  },
+  "not defined for shorthand properties": {
+    "en-US": "not defined for shorthand properties"
+  },
+  "nowrap": {
+    "en-US": "nowrap"
+  },
+  "number": {
+    "en-US": "number"
+  },
+  "numeric-only": {
+    "en-US": "numeric-only"
+  },
+  "one of the predefined pitch keywords if only the keyword is specified by itself, otherwise an absolute frequency calculated by converting the keyword value (if any) to a fixed frequency based on the current voice-family and by applying the specified relative offset (if any)": {
+    "en-US": "one of the predefined pitch keywords if only the keyword is specified by itself, otherwise an absolute frequency calculated by converting the keyword value (if any) to a fixed frequency based on the current voice-family and by applying the specified relative offset (if any)"
+  },
+  "open": {
+    "en-US": "open"
+  },
+  "outset": {
+    "en-US": "outset"
+  },
+  "outside": {
+    "en-US": "outside"
+  },
+  "over right": {
+    "en-US": "over right"
+  },
+  "padding-box": {
+    "en-US": "padding-box"
+  },
+  "pair of computed <length-percentage> values": {
+    "en-US": "pair of computed <length-percentage> values"
+  },
+  "per computed value if the <visual-box> values match; otherwise discrete": {
+    "en-US": "per computed value if the <visual-box> values match; otherwise discrete"
+  },
+  "per grammar": {
+    "en-US": "per grammar"
+  },
+  "per side, an absolute length": {
+    "en-US": "per side, an absolute length"
+  },
+  "per side, either the keyword auto or a computed <length-percentage> value": {
+    "en-US": "per side, either the keyword auto or a computed <length-percentage> value"
+  },
+  "positioned boxes with a default anchor box": {
+    "en-US": "positioned boxes with a default anchor box"
+  },
+  "positioned elements": {
+    "en-US": "positioned elements"
+  },
+  "repeat": {
+    "en-US": "repeat"
+  },
+  "repeatable list": {
+    "en-US": "repeatable list"
+  },
+  "repeatable list, see § 3.4.1 Interpolation behavior.": {
+    "en-US": "repeatable list, see § 3.4.1 Interpolation behavior."
+  },
+  "replace": {
+    "en-US": "replace"
+  },
+  "replaced elements": {
+    "en-US": "replaced elements"
+  },
+  "round": {
+    "en-US": "round"
+  },
+  "row": {
+    "en-US": "row"
+  },
+  "row-over-column": {
+    "en-US": "row-over-column"
+  },
+  "ruby annotation containers": {
+    "en-US": "ruby annotation containers"
+  },
+  "ruby bases, ruby annotations, ruby base containers, ruby annotation containers": {
+    "en-US": "ruby bases, ruby annotations, ruby base containers, ruby annotation containers"
+  },
+  "running": {
+    "en-US": "running"
+  },
+  "sRGB": {
+    "en-US": "sRGB"
+  },
+  "same as height and width": {
+    "en-US": "same as height and width"
+  },
+  "scroll": {
+    "en-US": "scroll"
+  },
+  "scroll container elements": {
+    "en-US": "scroll container elements"
+  },
+  "scroll containers": {
+    "en-US": "scroll containers"
+  },
+  "see Computed Value for dynamic-range-limit": {
+    "en-US": "see Computed Value for dynamic-range-limit"
+  },
+  "see Track Sizing": {
+    "en-US": "see Track Sizing"
+  },
+  "see background-position": {
+    "en-US": "see background-position"
+  },
+  "see below": {
+    "en-US": "see below"
+  },
+  "see individual properties": {
+    "en-US": "see individual properties"
+  },
+  "see prose": {
+    "en-US": "see prose"
+  },
+  "see prose in Filter Effects 1 § 14. Animation of Filters.": {
+    "en-US": "see prose in Filter Effects 1 § 14. Animation of Filters."
+  },
+  "see superellipse interpolation": {
+    "en-US": "see superellipse interpolation"
+  },
+  "see § 2.9 Animating and Interpolating display": {
+    "en-US": "see § 2.9 Animating and Interpolating display"
+  },
+  "see § 4.1 Animating and Interpolating content-visibility": {
+    "en-US": "see § 4.1 Animating and Interpolating content-visibility"
+  },
+  "sensitive text inputs": {
+    "en-US": "sensitive text inputs"
+  },
+  "separate": {
+    "en-US": "separate"
+  },
+  "shapes": {
+    "en-US": "shapes"
+  },
+  "shapes and text content elements": {
+    "en-US": "shapes and text content elements"
+  },
+  "show": {
+    "en-US": "show"
+  },
+  "silent, or a keyword value and optionally also a decibel offset (if not zero)": {
+    "en-US": "silent, or a keyword value and optionally also a decibel offset (if not zero)"
+  },
+  "slice": {
+    "en-US": "slice"
+  },
+  "solid": {
+    "en-US": "solid"
+  },
+  "space-around": {
+    "en-US": "space-around"
+  },
+  "spaces punctuation": {
+    "en-US": "spaces punctuation"
+  },
+  "spanning-item": {
+    "en-US": "spanning-item"
+  },
+  "spatial navigation containers": {
+    "en-US": "spatial navigation containers"
+  },
+  "specified integer": {
+    "en-US": "specified integer"
+  },
+  "specified keyword": {
+    "en-US": "specified keyword"
+  },
+  "specified keyword (except for the distribute legacy value)": {
+    "en-US": "specified keyword (except for the distribute legacy value)"
+  },
+  "specified keyword or a computed <length-percentage> value": {
+    "en-US": "specified keyword or a computed <length-percentage> value"
+  },
+  "specified keyword or a pair of numbers": {
+    "en-US": "specified keyword or a pair of numbers"
+  },
+  "specified keyword or absolute length": {
+    "en-US": "specified keyword or absolute length"
+  },
+  "specified keyword or computed <length-percentage> value": {
+    "en-US": "specified keyword or computed <length-percentage> value"
+  },
+  "specified keyword or integer": {
+    "en-US": "specified keyword or integer"
+  },
+  "specified keyword or percentage": {
+    "en-US": "specified keyword or percentage"
+  },
+  "specified keyword or two computed colors": {
+    "en-US": "specified keyword or two computed colors"
+  },
+  "specified keyword(s)": {
+    "en-US": "specified keyword(s)"
+  },
+  "specified keyword(s) and/or <resolution> (possibly adjusted for snap, see below)": {
+    "en-US": "specified keyword(s) and/or <resolution> (possibly adjusted for snap, see below)"
+  },
+  "specified keyword(s) except for skip-all, see below": {
+    "en-US": "specified keyword(s) except for skip-all, see below"
+  },
+  "specified keyword(s), except for legacy (see prose)": {
+    "en-US": "specified keyword(s), except for legacy (see prose)"
+  },
+  "specified keyword, else a computed <length-percentage> value": {
+    "en-US": "specified keyword, else a computed <length-percentage> value"
+  },
+  "specified keyword, identifier or <palette-mix()> function. <palette-mix()> must be simplified to a single keyword or identifier if resulting palette is equivalent.": {
+    "en-US": "specified keyword, identifier or <palette-mix()> function. <palette-mix()> must be simplified to a single keyword or identifier if resulting palette is equivalent."
+  },
+  "specified keyword, identifier, and/or integer": {
+    "en-US": "specified keyword, identifier, and/or integer"
+  },
+  "specified keyword, or computed function": {
+    "en-US": "specified keyword, or computed function"
+  },
+  "specified keyword, plus integer if digits": {
+    "en-US": "specified keyword, plus integer if digits"
+  },
+  "specified number": {
+    "en-US": "specified number"
+  },
+  "specified number, clamped to the range [0,1]": {
+    "en-US": "specified number, clamped to the range [0,1]"
+  },
+  "specified string or the keyword none": {
+    "en-US": "specified string or the keyword none"
+  },
+  "specified value": {
+    "en-US": "specified value"
+  },
+  "specified value, with lengths made absolute": {
+    "en-US": "specified value, with lengths made absolute"
+  },
+  "start": {
+    "en-US": "start"
+  },
+  "start end": {
+    "en-US": "start end"
+  },
+  "static": {
+    "en-US": "static"
+  },
+  "stretch": {
+    "en-US": "stretch"
+  },
+  "table grid boxes": {
+    "en-US": "table grid boxes"
+  },
+  "table grid boxes when border-collapse is separate": {
+    "en-US": "table grid boxes when border-collapse is separate"
+  },
+  "table-caption boxes": {
+    "en-US": "table-caption boxes"
+  },
+  "table-cell boxes": {
+    "en-US": "table-cell boxes"
+  },
+  "text": {
+    "en-US": "text"
+  },
+  "text and SVG shapes": {
+    "en-US": "text and SVG shapes"
+  },
+  "text content elements": {
+    "en-US": "text content elements"
+  },
+  "text or elements that accept text input": {
+    "en-US": "text or elements that accept text input"
+  },
+  "the absolute length, or percentage": {
+    "en-US": "the absolute length, or percentage"
+  },
+  "the auto keyword or a computed <position>": {
+    "en-US": "the auto keyword or a computed <position>"
+  },
+  "the computed <length> and a <visual-box> keyword": {
+    "en-US": "the computed <length> and a <visual-box> keyword"
+  },
+  "the computed color": {
+    "en-US": "the computed color"
+  },
+  "the computed color and/or a one-dimensional image function": {
+    "en-US": "the computed color and/or a one-dimensional image function"
+  },
+  "the corresponding superellipse() value": {
+    "en-US": "the corresponding superellipse() value"
+  },
+  "the horizontal component of the <position>, followed by the vertical component": {
+    "en-US": "the horizontal component of the <position>, followed by the vertical component"
+  },
+  "the keyword auto or a computed <length-percentage> value": {
+    "en-US": "the keyword auto or a computed <length-percentage> value"
+  },
+  "the keyword auto or a computed color": {
+    "en-US": "the keyword auto or a computed color"
+  },
+  "the keyword auto or an absolute length": {
+    "en-US": "the keyword auto or an absolute length"
+  },
+  "the keyword none else a list of identifiers": {
+    "en-US": "the keyword none else a list of identifiers"
+  },
+  "the keyword none or a computed track list": {
+    "en-US": "the keyword none or a computed track list"
+  },
+  "the keyword none or a list of CSS identifiers": {
+    "en-US": "the keyword none or a list of CSS identifiers"
+  },
+  "the keyword none or a list of string values": {
+    "en-US": "the keyword none or a list of string values"
+  },
+  "the keyword none or a list, each item an identifier or a reversed() function paired with an integer": {
+    "en-US": "the keyword none or a list, each item an identifier or a reversed() function paired with an integer"
+  },
+  "the keyword none or a list, each item an identifier paired with a list of string values": {
+    "en-US": "the keyword none or a list, each item an identifier paired with a list of string values"
+  },
+  "the keyword none or a list, each item an identifier paired with an integer": {
+    "en-US": "the keyword none or a list, each item an identifier paired with an integer"
+  },
+  "the keyword none or a pair of computed <length-percentage> values and an absolute length": {
+    "en-US": "the keyword none or a pair of computed <length-percentage> values and an absolute length"
+  },
+  "the keyword none or a pair of keywords, see § 3.1.3 Computed Value and Serialization of <position-area>": {
+    "en-US": "the keyword none or a pair of keywords, see § 3.1.3 Computed Value and Serialization of <position-area>"
+  },
+  "the keyword none or an absolute length": {
+    "en-US": "the keyword none or an absolute length"
+  },
+  "the keyword none or an integer": {
+    "en-US": "the keyword none or an integer"
+  },
+  "the keyword none or one or more of size, layout, paint": {
+    "en-US": "the keyword none or one or more of size, layout, paint"
+  },
+  "the keyword none or the computed <image>": {
+    "en-US": "the keyword none or the computed <image>"
+  },
+  "the keyword none or the specified integer": {
+    "en-US": "the keyword none or the specified integer"
+  },
+  "the keyword none, a pair of keywords representing the shape and fill, or a string": {
+    "en-US": "the keyword none, a pair of keywords representing the shape and fill, or a string"
+  },
+  "the keyword none, or a list of 3 <number>s": {
+    "en-US": "the keyword none, or a list of 3 <number>s"
+  },
+  "the keyword none, or a pair of a metric keyword and a <number>": {
+    "en-US": "the keyword none, or a pair of a metric keyword and a <number>"
+  },
+  "the keyword none, or an <angle> with an axis consisting of a list of three <number>s": {
+    "en-US": "the keyword none, or an <angle> with an axis consisting of a list of three <number>s"
+  },
+  "the keyword none, or an ordered list of identifiers": {
+    "en-US": "the keyword none, or an ordered list of identifiers"
+  },
+  "the keyword none, the keyword auto or match-parent, or a list, each item a pair of string values": {
+    "en-US": "the keyword none, the keyword auto or match-parent, or a list, each item a pair of string values"
+  },
+  "the keyword noneor the computed <image>": {
+    "en-US": "the keyword noneor the computed <image>"
+  },
+  "the keyword normal or a computed time": {
+    "en-US": "the keyword normal or a computed time"
+  },
+  "the keyword normal or a list, each item a string paired with a number": {
+    "en-US": "the keyword normal or a list, each item a string paired with a number"
+  },
+  "the keyword normal or a number paired with an integer": {
+    "en-US": "the keyword normal or a number paired with an integer"
+  },
+  "the keyword normal, or an ordered list of specified color scheme keywords": {
+    "en-US": "the keyword normal, or an ordered list of specified color scheme keywords"
+  },
+  "the keyword specified, plus angle in degrees if specified": {
+    "en-US": "the keyword specified, plus angle in degrees if specified"
+  },
+  "the specified keyword": {
+    "en-US": "the specified keyword"
+  },
+  "the specified keyword or a computed <length-percentage> value": {
+    "en-US": "the specified keyword or a computed <length-percentage> value"
+  },
+  "the specified keyword, a number, or a computed <length> value": {
+    "en-US": "the specified keyword, a number, or a computed <length> value"
+  },
+  "the specified keyword, or an <angle>, rounded and normalized (see text), plus optionally a flip keyword": {
+    "en-US": "the specified keyword, or an <angle>, rounded and normalized (see text), plus optionally a flip keyword"
+  },
+  "the specified number or absolute length": {
+    "en-US": "the specified number or absolute length"
+  },
+  "the specified value converted to a <number>, clamped to the range [0,1]": {
+    "en-US": "the specified value converted to a <number>, clamped to the range [0,1]"
+  },
+  "the specified value converted to a number, clamped to the range [0,1]": {
+    "en-US": "the specified value converted to a number, clamped to the range [0,1]"
+  },
+  "the specified value resolved to a <number> between -100 and 100 (inclusive)": {
+    "en-US": "the specified value resolved to a <number> between -100 and 100 (inclusive)"
+  },
+  "they keyword none or the computed <image>": {
+    "en-US": "they keyword none or the computed <image>"
+  },
+  "three values, each either the auto keyword or an integer": {
+    "en-US": "three values, each either the auto keyword or an integer"
+  },
+  "top": {
+    "en-US": "top"
+  },
+  "transform list, see interpolation rules": {
+    "en-US": "transform list, see interpolation rules"
+  },
+  "transformable elements": {
+    "en-US": "transformable elements"
+  },
+  "transparent": {
+    "en-US": "transparent"
+  },
+  "two absolute lengths": {
+    "en-US": "two absolute lengths"
+  },
+  "two keywords": {
+    "en-US": "two keywords"
+  },
+  "two keywords, one per axis": {
+    "en-US": "two keywords, one per axis"
+  },
+  "up": {
+    "en-US": "up"
+  },
+  "usually specified value, but see text": {
+    "en-US": "usually specified value, but see text"
+  },
+  "view-box": {
+    "en-US": "view-box"
+  },
+  "visible": {
+    "en-US": "visible"
+  },
+  "weight style small-caps position": {
+    "en-US": "weight style small-caps position"
+  },
+  "white": {
+    "en-US": "white"
+  },
+  "wrap": {
+    "en-US": "wrap"
+  },
+  "yes": {
+    "en-US": "yes"
+  },
+  "yes?": {
+    "en-US": "yes?"
+  },
+  "‘circle’ and ‘ellipse’ elements": {
+    "en-US": "‘circle’ and ‘ellipse’ elements"
+  },
+  "‘circle’ element": {
+    "en-US": "‘circle’ element"
+  },
+  "‘ellipse’, ‘rect’": {
+    "en-US": "‘ellipse’, ‘rect’"
+  },
+  "‘ellipse’, ‘rect’ elements": {
+    "en-US": "‘ellipse’, ‘rect’ elements"
+  },
+  "‘path’": {
+    "en-US": "‘path’"
+  },
+  "‘svg’, ‘rect’, ‘image’, ‘foreignObject’ elements": {
+    "en-US": "‘svg’, ‘rect’, ‘image’, ‘foreignObject’ elements"
+  },
+  "‘text’": {
+    "en-US": "‘text’"
+  },
+  "‘text’ elements": {
+    "en-US": "‘text’ elements"
+  }
+}
