@@ -9,7 +9,7 @@ browser-compat: api.ReportBody
 
 The **`ReportBody`** interface of the {{domxref('Reporting API','','',' ')}} represents the body of a report. Individual report types inherit from this interface, adding specific attributes relevant to the particular report.
 
-### Reports that inherit from `ReportBody`
+The following interfaces inherit from `ReportBody`:
 
 - {{domxref("CSPViolationReportBody")}}
 - {{domxref("DeprecationReportBody")}}

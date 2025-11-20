@@ -8,6 +8,8 @@ sidebar: cssref
 
 The **`background-position-y`** [CSS](/en-US/docs/Web/CSS) property sets the initial vertical position for each background image. The position is relative to the position layer set by {{cssxref("background-origin")}}.
 
+The value of this property is overridden by any declaration of the {{cssxref("background")}} or {{cssxref("background-position")}} shorthand properties applied to the element after it.
+
 {{InteractiveExample("CSS Demo: background-position-y")}}
 
 ```css interactive-example-choice
@@ -44,8 +46,6 @@ background-position-y: bottom 32px;
   height: 100%;
 }
 ```
-
-The value of this property is overridden by any declaration of the {{cssxref("background")}} or {{cssxref("background-position")}} shorthand properties applied to the element after it.
 
 ## Syntax
 

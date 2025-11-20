@@ -35,7 +35,7 @@ Given the image map named `mainmenu-map`, you can dynamically construct images t
 
 ```js
 const image = new Image();
-image.src = "menubox.png";
+image.src = "menu-box.png";
 image.alt = "";
 image.useMap = "#mainmenu-map";
 ```

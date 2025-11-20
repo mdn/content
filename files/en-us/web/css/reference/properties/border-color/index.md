@@ -49,10 +49,6 @@ border-color: red yellow green transparent;
 }
 ```
 
-Each side can be set individually using {{CSSxRef("border-top-color")}}, {{CSSxRef("border-right-color")}}, {{CSSxRef("border-bottom-color")}}, and {{CSSxRef("border-left-color")}}; or using the writing mode-aware {{CSSxRef("border-block-start-color")}}, {{CSSxRef("border-block-end-color")}}, {{CSSxRef("border-inline-start-color")}}, and {{CSSxRef("border-inline-end-color")}}.
-
-You can find out more information about border colors in [Applying colors to HTML elements](/en-US/docs/Web/CSS/Guides/Colors/Applying_color#borders).
-
 ## Constituent properties
 
 This property is a shorthand for the following CSS properties:
@@ -96,6 +92,12 @@ The `border-color` property may be specified using one, two, three, or four valu
 
 - {{CSSxRef("&lt;color&gt;")}}
   - : Defines the color of the border.
+
+## Description
+
+Each side can be set individually using {{CSSxRef("border-top-color")}}, {{CSSxRef("border-right-color")}}, {{CSSxRef("border-bottom-color")}}, and {{CSSxRef("border-left-color")}}; or using the writing mode-aware {{CSSxRef("border-block-start-color")}}, {{CSSxRef("border-block-end-color")}}, {{CSSxRef("border-inline-start-color")}}, and {{CSSxRef("border-inline-end-color")}}.
+
+You can find out more information about border colors in [Applying colors to HTML elements](/en-US/docs/Web/CSS/Guides/Colors/Applying_color#borders).
 
 ## Formal definition
 

@@ -14,7 +14,7 @@ The **Remote Playback API** extends the {{domxref("HTMLMediaElement")}} to enabl
 
 Remote playback devices are connected devices such as TVs, projectors, or speakers. The API takes into account wired devices connected via HDMI or DVI, and wireless devices, for example Chromecast or AirPlay.
 
-The API enables a page, which has an media element such as a video or audio file, to initiate and control playback of that media on a connected remote device. For example, playing a video on a connected TV.
+The API enables a page, which has a media element such as a video or audio file, to initiate and control playback of that media on a connected remote device. For example, playing a video on a connected TV.
 
 > [!NOTE]
 > Safari for iOS has some APIs which enable remote playback on AirPlay. Details of these can be found in [the Safari 9.0 release notes](https://developer.apple.com/library/archive/releasenotes/General/WhatsNewInSafari/Articles/Safari_9_0.html#//apple_ref/doc/uid/TP40014305-CH9-SW16).
