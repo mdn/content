@@ -8,6 +8,11 @@ sidebar: cssref
 
 The **`animation-range-end`** [CSS](/en-US/docs/Web/CSS) property is used to set the end of an animation's attachment range along its timeline, i.e., where along the timeline an animation will end.
 
+The `animation-range-end` and {{cssxref("animation-range-start")}} properties can also be set using the [`animation-range`](/en-US/docs/Web/CSS/Reference/Properties/animation-range) shorthand property.
+
+> [!NOTE]
+> `animation-range-end` is included in the {{cssxref("animation")}} shorthand as a reset-only value. This means that including `animation` resets a previously-declared `animation-range-end` value to `normal`, but a specific value cannot be set via `animation`. When creating [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations), you need to declare `animation-range-end` after declaring any `animation` shorthand for it to take effect.
+
 ## Syntax
 
 ```css
@@ -25,24 +30,9 @@ animation-range-end: contain 700px;
 
 ### Values
 
-- `normal`
-  - : Represents the end of the timeline. This is the default value.
-- {{cssxref("length-percentage")}}
-  - : A length or percentage value measured from the beginning of the timeline.
-- {{cssxref("timeline-range-name")}}
-  - : A specific named timeline range inside the overall timeline, starting at `0%`.
-- `<timeline-range-name> <length-percentage>`
-  - : A specified percentage or distance through a named timeline range, measured from the start of that timeline range.
+Allowed values for `animation-range-end` are `normal`, a {{cssxref("length-percentage")}}, a `<timeline-range-name>`, or a `<timeline-range-name>` with a `<length-percentage>` following it. See [`animation-range`](/en-US/docs/Web/CSS/Reference/Properties/animation-range) for a detailed description of the available values.
 
-## Description
-
-The `animation-range-end` property specifies the end of the animation's attachment range, potentially shifting the end time of the animation (i.e., where keyframes mapped to `100%` progress are attached when the iteration count is 1) and/or reducing the duration of the animation.
-
-The value can be `normal`, a `<length-percentage>`, or a {{cssxref("timeline-range-name")}} with an optional `<length-percentage>`. When the `<timeline-range-name>` value does not include a `<length-percentage>`, the percentage defaults to `100%`.
-
-The `animation-range-end` property is included in the {{cssxref("animation")}} shorthand as a reset-only value. This means that including `animation` resets a previously-declared `animation-range-end` value to `normal`, but the `<animation-range-end>` value cannot be set via `animation`. When creating [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations), you should declare `animation-range-end` after declaring any `animation` shorthand to prevent the value from being reset to `normal`.
-
-The `animation-range-end` property (and the {{cssxref("animation-range-start")}} property) can also be set using the {{cssxref("animation-range")}} shorthand property.
+Also check out the [View Timeline Ranges Visualizer](https://scroll-driven-animations.style/tools/view-timeline/ranges/), which shows exactly what the different values mean in an easy visual format.
 
 ## Formal definition
 
@@ -177,10 +167,10 @@ Scroll to see the subject element being animated.
 
 ## See also
 
-- {{cssxref("animation-timeline")}}
-- {{cssxref("animation-range")}}
-- {{cssxref("animation-range-start")}}
-- {{cssxref("view-timeline-inset")}}
-- {{domxref("Element.animate()")}} `rangeStart` property
-- [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations) module
-- [View timeline ranges visualizer](https://scroll-driven-animations.style/tools/view-timeline/ranges/)
+- [`animation-timeline`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline)
+- [`animation-range`](/en-US/docs/Web/CSS/Reference/Properties/animation-range), [`animation-range-start`](/en-US/docs/Web/CSS/Reference/Properties/animation-range-start)
+- [`scroll-timeline`](/en-US/docs/Web/CSS/Reference/Properties/scroll-timeline), [`scroll-timeline-axis`](/en-US/docs/Web/CSS/Reference/Properties/scroll-timeline-axis), [`scroll-timeline-name`](/en-US/docs/Web/CSS/Reference/Properties/scroll-timeline-name)
+- {{cssxref("timeline-scope")}}
+- [`view-timeline-inset`](/en-US/docs/Web/CSS/Reference/Properties/view-timeline-inset)
+- The JavaScript equivalent: The `rangeEnd` property available in {{domxref("Element.animate()")}} calls
+- [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations)
