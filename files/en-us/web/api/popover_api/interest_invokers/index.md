@@ -27,10 +27,8 @@ It is possible to use an interest invoker to run custom code in [non-popover cas
 
 Declaratively creating an interest invoker requires two things, at a basic level:
 
-1. An element with a `id`, which will be the invoker element's **target** — it can be affected or controlled when interest is shown lost. This can take just about any form. We also set a `popover` attribute on it to turn it into a popover.
-2. An invoker element to show interest in, to trigger some kind of action, in this case showing/hiding a popover. This is given an [`interestfor`](/en-US/docs/Web/HTML/Reference/Elements/button#interestfor) attribute that takes the `id` of the popover element as its value. The interest invoker element can be an HTML {{htmlelement("a")}}, {{htmlelement("button")}}, or {{htmlelement("area")}} element, or an SVG [`<a>`](/en-US/docs/Web/SVG/Reference/Element/a) element.
-
-Setting the `popover` attribute on the popover element causes it to be hidden (via {{cssxref("display", "display: none")}}) and centered on the screen. Showing interest in the invoker causes the popover to be displayed.
+1. An **invoker** element to show interest in, which will trigger some kind of action — in this case showing/hiding a popover. This element is given an [`interestfor`](/en-US/docs/Web/HTML/Reference/Elements/a#interestfor) attribute that takes the `id` of the popover element to show as its value. The interest invoker element can be an HTML {{htmlelement("a")}}, {{htmlelement("button")}}, or {{htmlelement("area")}} element, or an SVG [`<a>`](/en-US/docs/Web/SVG/Reference/Element/a) element.
+2. An element with a `id`, which will be the invoker element's **target** — it can be affected or controlled when interest is shown or lost. This can be just about any element type. We also set a `popover` attribute on it to turn it into a popover.
 
 Let's look at a simple example:
 
@@ -59,6 +57,8 @@ if (!supported) {
 </p>
 <p id="mypopover" popover>A not-very-useful link</p>
 ```
+
+Setting the `popover` attribute on the target element causes it to be hidden (via {{cssxref("display", "display: none")}}) and centered on the screen. Showing interest in the invoker causes the popover to be displayed.
 
 This renders as follows:
 
