@@ -60,4 +60,4 @@ Currently, no browsers support this feature.
 ## See also
 
 - {{CSSxRef(":empty")}}
-- [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module
+- [CSS selectors](/en-US/docs/Web/CSS/Guides/Selectors) module

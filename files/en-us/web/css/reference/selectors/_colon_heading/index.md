@@ -15,7 +15,7 @@ The **`:heading`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS
 This pseudo-class matches only elements that by default are semantically recognized as headings (`<h1>` through `<h6>`). Elements with [`role="heading"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/heading_role) are not matched; you can select those by using the `[role="heading"]` [attribute selector](/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors).
 
 > [!NOTE]
-> The `:heading` pseudo-class has the same [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity#how_is_specificity_calculated) as a class selector, that is, `0-1-0`. So `:heading` would have a specificity of `0-1-0`, and `section:heading` would have a specificity of `0-1-1`.
+> The `:heading` pseudo-class has the same [specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity#how_is_specificity_calculated) as a class selector, that is, `0-1-0`. So `:heading` would have a specificity of `0-1-0`, and `section:heading` would have a specificity of `0-1-1`.
 
 ## Syntax
 
@@ -59,4 +59,4 @@ The `:heading` pseudo-class applies the `color` to all the headings in the docum
 
 ## See also
 
-- {{CSSXRef(":heading_function", ":heading()")}}
+- [`:heading()`](/en-US/docs/Web/CSS/Reference/Selectors/:heading_function)

@@ -97,7 +97,7 @@ grid-template-columns: unset;
 - `none`
   - : Indicates that there is no explicit grid. Any columns will be implicitly generated and their size will be determined by the {{cssxref("grid-auto-columns")}} property.
 - `[line-name]`
-  - : A [`<custom-ident>`](/en-US/docs/Web/CSS/custom-ident) specifying a name for the line in that location. The ident may be any valid string other than the reserved words `span` and `auto`. Lines may have multiple names separated by a space inside the square brackets, for example `[line-name-a line-name-b]`.
+  - : A [`<custom-ident>`](/en-US/docs/Web/CSS/Reference/Values/custom-ident) specifying a name for the line in that location. The ident may be any valid string other than the reserved words `span` and `auto`. Lines may have multiple names separated by a space inside the square brackets, for example `[line-name-a line-name-b]`.
 - {{cssxref("&lt;length&gt;")}}
   - : A non-negative length, giving the width of the column.
 - {{cssxref("&lt;percentage&gt;")}}
@@ -128,9 +128,9 @@ grid-template-columns: unset;
   - : Represents the formula `max(minimum, min(limit, max-content))`, where _minimum_ represents an `auto` minimum (which is often, but not always, equal to a {{cssxref("min-content")}} minimum), and _limit_ is the track sizing function passed as an argument to fit-content(). This is essentially calculated as the smaller of `minmax(auto, max-content)` and `minmax(auto, limit)`.
 - {{cssxref("repeat", "repeat( [ &lt;positive-integer&gt; | auto-fill | auto-fit ] , &lt;track-list&gt; )")}}
   - : Represents a repeated fragment of the track list, allowing a large number of columns that exhibit a recurring pattern to be written in a more compact form.
-- [`masonry`](/en-US/docs/Web/CSS/CSS_grid_layout/Masonry_layout)
+- [`masonry`](/en-US/docs/Web/CSS/Guides/Grid_layout/Masonry_layout)
   - : The masonry value indicates that this axis should be laid out according to the masonry algorithm.
-- [`subgrid`](/en-US/docs/Web/CSS/CSS_grid_layout/Subgrid)
+- [`subgrid`](/en-US/docs/Web/CSS/Guides/Grid_layout/Subgrid)
   - : The `subgrid` value indicates that the grid will adopt the spanned portion of its parent grid in that axis. Rather than being specified explicitly, the sizes of the grid rows/columns will be taken from the parent grid's definition.
 
 ## Formal definition
@@ -189,6 +189,6 @@ grid-template-columns: unset;
 - {{cssxref("grid-template-rows")}}
 - {{cssxref("grid-template-areas")}}
 - {{cssxref("grid-template")}}
-- [Basic concepts of grid layout: grid tracks](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#grid_tracks)
+- [Basic concepts of grid layout: grid tracks](/en-US/docs/Web/CSS/Guides/Grid_layout/Basic_concepts#grid_tracks)
 - Video: [Defining a grid](https://gridbyexample.com/video/series-define-a-grid/)
-- [Subgrid](/en-US/docs/Web/CSS/CSS_grid_layout/Subgrid)
+- [Subgrid](/en-US/docs/Web/CSS/Guides/Grid_layout/Subgrid)

@@ -70,5 +70,5 @@ example|h1 {
 
 ## See also
 
-- [CSS Selectors](/en-US/docs/Web/CSS/CSS_selectors)
+- [CSS Selectors](/en-US/docs/Web/CSS/Guides/Selectors)
 - [Learn CSS: Basic selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)

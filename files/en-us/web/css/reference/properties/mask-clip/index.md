@@ -156,8 +156,8 @@ body {
 - {{cssxref("mask-border")}}
 - {{cssxref("clip-path")}}
 - {{cssxref("background-clip")}}
-- [Introduction to CSS clipping](/en-US/docs/Web/CSS/CSS_masking/Clipping)
-- [Introduction to CSS masking](/en-US/docs/Web/CSS/CSS_masking/Masking)
-- [CSS `mask` properties](/en-US/docs/Web/CSS/CSS_masking/Mask_properties)
-- [Declaring multiple masks](/en-US/docs/Web/CSS/CSS_masking/Multiple_masks)
-- [CSS masking](/en-US/docs/Web/CSS/CSS_masking) module
+- [Introduction to CSS clipping](/en-US/docs/Web/CSS/Guides/Masking/Clipping)
+- [Introduction to CSS masking](/en-US/docs/Web/CSS/Guides/Masking/Introduction)
+- [CSS `mask` properties](/en-US/docs/Web/CSS/Guides/Masking/Mask_properties)
+- [Declaring multiple masks](/en-US/docs/Web/CSS/Guides/Masking/Multiple_masks)
+- [CSS masking](/en-US/docs/Web/CSS/Guides/Masking) module

@@ -47,13 +47,13 @@ Support for the prefixed version is typically dropped eventually, so use the sta
 - {{CSSxRef("backface-visibility", "-moz-backface-visibility")}} {{deprecated_inline}}: Prefixed version still supported.
 - `-moz-background-clip` {{deprecated_inline}}: Not supported; use {{CSSxRef("background-clip")}}.
 - `-moz-background-origin` {{deprecated_inline}}: Not supported; use {{CSSxRef("background-origin")}}.
-- `-moz-box-align` {{deprecated_inline}}: Use [CSS flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) with {{CSSxRef("align-items")}}.
+- `-moz-box-align` {{deprecated_inline}}: Use [CSS flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) with {{CSSxRef("align-items")}}.
 - `-moz-background-inline-policy` {{deprecated_inline}}: Not supported; use {{CSSxRef("box-decoration-break")}}.
-- `-moz-box-direction` {{deprecated_inline}}: Use [CSS flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) with {{CSSxRef("flex-direction")}}.
-- `-moz-box-flex` {{deprecated_inline}}: Use [CSS flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) with {{CSSxRef("flex-grow")}}.
-- `-moz-box-ordinal-group` {{deprecated_inline}}: Use [CSS flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) with {{CSSxRef("order")}}.
-- `-moz-box-orient` {{deprecated_inline}}: Use [CSS flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) with {{CSSxRef("flex-direction")}}.
-- `-moz-box-pack` {{deprecated_inline}}: Use [CSS flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) with {{CSSxRef("justify-content")}}.
+- `-moz-box-direction` {{deprecated_inline}}: Use [CSS flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) with {{CSSxRef("flex-direction")}}.
+- `-moz-box-flex` {{deprecated_inline}}: Use [CSS flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) with {{CSSxRef("flex-grow")}}.
+- `-moz-box-ordinal-group` {{deprecated_inline}}: Use [CSS flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) with {{CSSxRef("order")}}.
+- `-moz-box-orient` {{deprecated_inline}}: Use [CSS flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) with {{CSSxRef("flex-direction")}}.
+- `-moz-box-pack` {{deprecated_inline}}: Use [CSS flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) with {{CSSxRef("justify-content")}}.
 - `-moz-background-size` {{deprecated_inline}}: Not supported; use {{CSSxRef("background-size")}}.
 - `-moz-border-end` {{deprecated_inline}}: Not supported; use {{CSSxRef("border-inline-end")}}.
 - `-moz-border-end-color` {{deprecated_inline}}: Not supported; use {{CSSxRef("border-inline-end-color")}}.

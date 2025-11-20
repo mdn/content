@@ -69,7 +69,7 @@ body {
 
 ## Choices made
 
-To display list items inline, we use [flexbox layout](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox), thus demonstrating how a line of CSS can give us our navigation. The separators are added using [CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content). You could change these to any separator that you like.
+To display list items inline, we use [flexbox layout](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox), thus demonstrating how a line of CSS can give us our navigation. The separators are added using [CSS generated content](/en-US/docs/Web/CSS/Guides/Generated_content). You could change these to any separator that you like.
 
 ## Accessibility concerns
 
@@ -77,12 +77,12 @@ We used the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attribut
 
 Be aware that the separator arrows `→` added via the {{cssxref("content")}} CSS property in the example above are exposed to assistive technologies (AT), including screen readers and braille displays. For a quieter solution, use a decorative {{HTMLElement("img")}} in your HTML with an empty `alt` attribute. An ARIA [`role`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles) set to [`none`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/none_role) or [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) will also prevent the image from being exposed to AT.
 
-Alternatively, silence the [CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content) by including an empty string as alternative text, preceded by a slash (`/`); for example, `content: url("arrow.png") / "";`.
+Alternatively, silence the [CSS generated content](/en-US/docs/Web/CSS/Guides/Generated_content) by including an empty string as alternative text, preceded by a slash (`/`); for example, `content: url("arrow.png") / "";`.
 
 If including generated separators that will be exposed to AT, opt for creating the generated content using the {{cssxref("::after")}} pseudo-element selector instead of {{cssxref("::before")}}, so the separator content is announced after the HTML content instead of before it.
 
 ## See also
 
-- [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout)
+- [CSS flexible box layout](/en-US/docs/Web/CSS/Guides/Flexible_box_layout)
 - [Providing a breadcrumb trail](https://www.w3.org/TR/WCAG20-TECHS/G65.html)
 - [Using the `aria-current` attribute](https://tink.uk/using-the-aria-current-attribute/)

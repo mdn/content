@@ -19,7 +19,7 @@ The following types of timelines can be set via `animation-timeline`:
   - An _anonymous view progress timeline_ is one where the subject is given a {{cssxref("animation-timeline/view", "view()")}} function as an `animation-timeline` value, causing it to be animated based on its position inside its nearest parent scroller.
 
 > [!NOTE]
-> `animation-timeline` is included in the {{cssxref("animation")}} shorthand as a reset-only value. This means that including `animation` resets a previously-declared `animation-timeline` value to `auto`, but a specific value cannot be set via `animation`. When creating [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations), you need to declare `animation-timeline` after declaring any `animation` shorthand for it to take effect.
+> `animation-timeline` is included in the {{cssxref("animation")}} shorthand as a reset-only value. This means that including `animation` resets a previously-declared `animation-timeline` value to `auto`, but a specific value cannot be set via `animation`. When creating [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations), you need to declare `animation-timeline` after declaring any `animation` shorthand for it to take effect.
 
 <!-- {{EmbedInteractiveExample("pages/css/animation-name.html")}} -->
 
@@ -77,7 +77,7 @@ animation-timeline: unset;
     > If two or more timelines share the same name, the last declared within the cascade will be used. Also, if no timeline is found that matches the given name, the animation is not associated with a timeline.
 
     > [!NOTE]
-    > The [`<dashed-ident>`](/en-US/docs/Web/CSS/dashed-ident) values must start with `--`. This helps avoid name clashes with standard CSS keywords.
+    > The [`<dashed-ident>`](/en-US/docs/Web/CSS/Reference/Values/dashed-ident) values must start with `--`. This helps avoid name clashes with standard CSS keywords.
 
 ## Formal definition
 
@@ -466,5 +466,5 @@ Scroll to see the subject element being animated.
 - {{cssxref("timeline-scope")}}
 - {{cssxref("view-timeline-name")}}, {{cssxref("view-timeline-axis")}}, {{cssxref("view-timeline")}}, {{cssxref("view-timeline-inset")}}
 - The JavaScript equivalent: The `timeline` property available in {{domxref("Element.animate()")}} calls
-- [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations)
-- [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations)
+- [Using CSS animations](/en-US/docs/Web/CSS/Guides/Animations/Using)

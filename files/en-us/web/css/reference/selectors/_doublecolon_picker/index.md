@@ -41,9 +41,9 @@ The `<select>` element and the picker have an implicit invoker/popover relations
 
 ### Picker anchor positioning
 
-A further side-effect of the implicit invoker/popover relationship mentioned above is that the `<select>` element and the picker also have an implicit anchor reference, meaning that the picker is automatically associated with the select via [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning). This has several advantages, most notably:
+A further side-effect of the implicit invoker/popover relationship mentioned above is that the `<select>` element and the picker also have an implicit anchor reference, meaning that the picker is automatically associated with the select via [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning). This has several advantages, most notably:
 
-- The browser default styles position the picker relative to the button (the anchor) and you can customize this position as explained in [Positioning elements relative to their anchor](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#positioning_elements_relative_to_their_anchor). For reference, the related default styles are as follows:
+- The browser default styles position the picker relative to the button (the anchor) and you can customize this position as explained in [Positioning elements relative to their anchor](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using#positioning_elements_relative_to_their_anchor). For reference, the related default styles are as follows:
 
   ```css
   inset: auto;
@@ -57,7 +57,7 @@ A further side-effect of the implicit invoker/popover relationship mentioned abo
   position-area: block-end span-inline-end;
   ```
 
-- The browser default styles also define some position-try fallbacks that reposition the picker if it is in danger of overflowing the viewport. Position-try fallbacks are explained in the [Fallback options and conditional hiding for overflow](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide. For reference, the related default fallback styles are as follows:
+- The browser default styles also define some position-try fallbacks that reposition the picker if it is in danger of overflowing the viewport. Position-try fallbacks are explained in the [Fallback options and conditional hiding for overflow](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding) guide. For reference, the related default fallback styles are as follows:
 
   ```css
   position-try-order: most-block-size;
@@ -71,7 +71,7 @@ A further side-effect of the implicit invoker/popover relationship mentioned abo
   ```
 
 > [!NOTE]
-> If you want to remove the implicit anchor reference to stop the picker from being anchored to the `<select>` element, you can do so by setting the `position-anchor` property of the picker to an anchor name that doesn't exist in the current document, such as `--not-an-anchor-name`. See also [removing an anchor association](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#removing_an_anchor_association).
+> If you want to remove the implicit anchor reference to stop the picker from being anchored to the `<select>` element, you can do so by setting the `position-anchor` property of the picker to an anchor name that doesn't exist in the current document, such as `--not-an-anchor-name`. See also [removing an anchor association](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using#removing_an_anchor_association).
 
 ## Examples
 

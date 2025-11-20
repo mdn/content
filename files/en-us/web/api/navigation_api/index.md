@@ -104,6 +104,8 @@ There are a few perceived limitations with the Navigation API:
   - : Represents the destination being navigated to in the current navigation.
 - {{domxref("NavigationHistoryEntry")}} {{Experimental_Inline}}
   - : Represents a single navigation history entry.
+- {{domxref("NavigationPrecommitController")}} {{Experimental_Inline}}
+  - : Defines redirect behavior for a navigation precommit handler, when passed into the [`precommitHandler`](/en-US/docs/Web/API/NavigateEvent/intercept#precommithandler) callback of a {{domxref("NavigateEvent.intercept()")}} method call.
 - {{domxref("NavigationTransition")}} {{Experimental_Inline}}
   - : Represents an ongoing navigation.
 

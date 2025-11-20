@@ -93,7 +93,7 @@ The `appearance` property can be applied to all elements and pseudo-elements, bu
 Some non-standard values are also supported in some browsers:
 
 - `slider-vertical`
-  - : Makes the slider vertical when applied to `<input type="range">` elements. To [create a vertical slider](/en-US/docs/Web/CSS/CSS_writing_modes/Vertical_controls) you should instead set the {{cssxref("writing-mode")}} to `vertical-lr` and the {{cssxref("direction")}} to `rtl`.
+  - : Makes the slider vertical when applied to `<input type="range">` elements. To [create a vertical slider](/en-US/docs/Web/CSS/Guides/Writing_modes/Vertical_controls) you should instead set the {{cssxref("writing-mode")}} to `vertical-lr` and the {{cssxref("direction")}} to `rtl`.
 
 - `-apple-pay-button`
   - : Displays the Apple Pay logo when set on a {{htmlelement("button")}}, {{htmlelement("a")}}, or {{htmlelement("input")}} element of type `button` or `reset`.
@@ -110,7 +110,7 @@ Some widgets disappear completely when set to `appearance: none`. The hidden con
 
 Because `none` can cause a widget to be hidden, the `base` value is being added to provide widgets with a base appearance. When supported, the `base` value will ensure widgets maintain their native appearance while enabling CSS to be used to change a widget's styles that are not changeable by default. Unlike `none`, which can make radio buttons and checkboxes disappear, `base` gives the widget a primitive appearance with default native styles that are usable and interoperable, as well as enabling a good degree of customization via CSS. While this `base` value is not yet supported, the many `<compat-auto>` values provide similar functionality but are type-specific and not global.
 
-The `base-select` value, which is relevant only to the {{htmlelement("select")}} element and {{cssxref("::picker()", "::picker(select)")}} pseudo-element, enables [styling `<select>` elements and the select picker](#setting_the_appearance_of_a_select) (which contains the `<option>` elements). The picker is rendered in the top layer, similar to a popover. When `base-select` is set, the picker can be positioned relative to the select (or other elements) using [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) features. In addition, the `base-select` value causes the `<select>` not to render outside the browser pane or to trigger built-in mobile operating system components. It is also no longer sized based on the width of the widest `<option>`.
+The `base-select` value, which is relevant only to the {{htmlelement("select")}} element and {{cssxref("::picker()", "::picker(select)")}} pseudo-element, enables [styling `<select>` elements and the select picker](#setting_the_appearance_of_a_select) (which contains the `<option>` elements). The picker is rendered in the top layer, similar to a popover. When `base-select` is set, the picker can be positioned relative to the select (or other elements) using [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) features. In addition, the `base-select` value causes the `<select>` not to render outside the browser pane or to trigger built-in mobile operating system components. It is also no longer sized based on the width of the widest `<option>`.
 
 ### Prefixed non-standard values
 
@@ -395,4 +395,4 @@ Notice that, by default, the inline-size of the `<select>` is generally the inli
 
 ## See also
 
-- [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme)
+- [`prefers-color-scheme`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme)

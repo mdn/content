@@ -68,4 +68,4 @@ This example shows how to set an SVG {{SVGelement("script")}} element priority t
 ## See also
 
 - SVG {{SVGelement("script")}} element
-- HTML `<script>` element's [`fetchpriority`](/en-US/docs/Web/HTML/Reference/Elements/script#fetchpriority) attribute
+- HTML [`fetchpriority`](/en-US/docs/Web/HTML/Reference/Attributes/fetchpriority) attribute

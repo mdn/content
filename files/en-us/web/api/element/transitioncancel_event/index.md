@@ -8,7 +8,7 @@ browser-compat: api.Element.transitioncancel_event
 
 {{APIRef}}
 
-The **`transitioncancel`** event is fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) is canceled.
+The **`transitioncancel`** event is fired when a [CSS transition](/en-US/docs/Web/CSS/Guides/Transitions/Using) is canceled.
 
 ## Syntax
 

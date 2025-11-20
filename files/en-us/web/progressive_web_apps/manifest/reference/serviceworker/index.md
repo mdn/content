@@ -13,7 +13,7 @@ sidebar: pwasidebar
 
 The `serviceworker` member specifies a serviceworker that is Just-In-Time (JIT)-installed and registered to run a web-based payment app providing a payment mechanism for a specified payment method in a merchant website. See {{domxref("Payment Handler API", "Payment Handler API", "", "nocode")}} for more details.
 
-### Values
+## Values
 
 `serviceworker` objects may contain the following values:
 

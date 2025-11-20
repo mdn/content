@@ -144,4 +144,3 @@ Content-Security-Policy: upgrade-insecure-requests;
 - [Transport layer security (TLS)](/en-US/docs/Web/Security/Transport_Layer_Security)
 - [Certificate Transparency](/en-US/docs/Web/Security/Certificate_Transparency)
 - [Mixed content](/en-US/docs/Web/Security/Mixed_content)
-- [Weak signature algorithms](/en-US/docs/Web/Security/Weak_Signature_Algorithm)

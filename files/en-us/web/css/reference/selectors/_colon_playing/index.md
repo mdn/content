@@ -43,4 +43,4 @@ An element is considered to be playing if it is currently playing the media reso
 - {{cssxref(":seeking")}}
 - {{cssxref(":stalled")}}
 - {{cssxref(":volume-locked")}}
-- [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors)
+- [CSS selectors](/en-US/docs/Web/CSS/Guides/Selectors)

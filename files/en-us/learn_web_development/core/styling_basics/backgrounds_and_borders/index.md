@@ -37,11 +37,11 @@ In this lesson, we will take a look at some of the creative things you can do wi
 
 ## Background colors
 
-The {{cssxref("background-color")}} property defines the background color on any element in CSS. The property accepts any valid [`<color>`](/en-US/docs/Web/CSS/color_value). A `background-color` extends underneath the content and padding box of the element.
+The {{cssxref("background-color")}} property defines the background color on any element in CSS. The property accepts any valid [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value). A `background-color` extends underneath the content and padding box of the element.
 
 In the example below, we have used various color values to add a background color to the box, a heading, and a {{htmlelement("span")}} element.
 
-Try editing the example and swapping out the specified colors with any available [`<color>`](/en-US/docs/Web/CSS/color_value) values.
+Try editing the example and swapping out the specified colors with any available [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value) values.
 
 ```html live-sample___color
 <div class="box">
@@ -268,7 +268,7 @@ Use the example below to play around with these values and move the star around 
 
 A gradient — when used for a background — acts just like an image and is also set by using the {{cssxref("background-image")}} property.
 
-You can find out about the different types of gradient value and things you can do with them on the MDN page for the [`<gradient>`](/en-US/docs/Web/CSS/gradient) data type.
+You can find out about the different types of gradient value and things you can do with them on the MDN page for the [`<gradient>`](/en-US/docs/Web/CSS/Reference/Values/gradient) data type.
 
 Try some different gradient values in the example below. Initially, we have a linear gradient that is stretched over the whole first box, and a radial gradient with a set size, repeating over the second box.
 
@@ -430,7 +430,7 @@ Screen readers cannot parse background images; therefore, they should be purely 
 
 When learning about the [box model](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model), we discovered how borders affect the size of our box. In this lesson, we will look at how to use borders creatively.
 
-Typically, when we add borders to an element with CSS we use the {{cssxref("border")}} shorthand property to set the color, width, and [style](/en-US/docs/Web/CSS/line-style) of the border on all four sides of a box in one declaration:
+Typically, when we add borders to an element with CSS we use the {{cssxref("border")}} shorthand property to set the color, width, and [style](/en-US/docs/Web/CSS/Reference/Values/line-style) of the border on all four sides of a box in one declaration:
 
 ```css
 .box {
@@ -467,7 +467,7 @@ There are also longhand properties for width, style, and color for each of the f
 ```
 
 > [!NOTE]
-> These top, right, bottom, and left border properties also have mapped [_logical_ border properties](/en-US/docs/Web/CSS/CSS_logical_properties_and_values#properties) that relate to the writing mode of the document (e.g., left-to-right or right-to-left text, or top-to-bottom). You can read about these in [handling different text directions](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions).
+> These top, right, bottom, and left border properties also have mapped [_logical_ border properties](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values#properties) that relate to the writing mode of the document (e.g., left-to-right or right-to-left text, or top-to-bottom). You can read about these in [handling different text directions](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions).
 
 ### Playing with borders
 
@@ -521,11 +521,11 @@ Or to make the top right corner have a horizontal radius of `1em`, and a vertica
 ```
 
 > [!NOTE]
-> Like with the border properties above, these border-radius properties also have mapped [_logical_ border-radius properties](/en-US/docs/Web/CSS/CSS_logical_properties_and_values#properties).
+> Like with the border properties above, these border-radius properties also have mapped [_logical_ border-radius properties](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values#properties).
 
 ### Playing with border radius
 
-We have set all four corners in the example below and then changed the values for the top right corner to make it different. You can play with the values to change the corners. Take a look at the property page for {{cssxref("border-radius")}} to see the available syntax options. The [border-radius generator](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator) can be used to output rounded corner values for you.
+We have set all four corners in the example below and then changed the values for the top right corner to make it different. You can play with the values to change the corners. Take a look at the property page for {{cssxref("border-radius")}} to see the available syntax options. The [border-radius generator](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-radius_generator) can be used to output rounded corner values for you.
 
 ```html live-sample___corners
 <div class="box">

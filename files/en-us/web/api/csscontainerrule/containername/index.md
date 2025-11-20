@@ -28,7 +28,7 @@ If the `@container` is not [named](/en-US/docs/Web/API/CSSContainerRule#unnamed_
 ## Examples
 
 The example below defines a named {{cssxref("@container")}} rule, and displays the properties of the associated {{domxref("CSSContainerRule")}}.
-The CSS is very similar to that in the `@container` example [Creating named container contexts](/en-US/docs/Web/CSS/@container#creating_named_container_contexts).
+The CSS is very similar to that in the `@container` example [Creating named container contexts](/en-US/docs/Web/CSS/Reference/At-rules/@container#creating_named_container_contexts).
 
 ```html hidden
 <div id="log">
@@ -112,6 +112,6 @@ The title in the card section should double in size as the width of the page goe
 ## See also
 
 - CSS {{cssxref("container")}} shorthand property
-- [CSS containment module](/en-US/docs/Web/CSS/CSS_containment)
-- [Container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries)
-- [Using container size and style queries](/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries)
+- [CSS containment module](/en-US/docs/Web/CSS/Guides/Containment)
+- [Container queries](/en-US/docs/Web/CSS/Guides/Containment/Container_queries)
+- [Using container size and style queries](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries)

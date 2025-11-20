@@ -131,7 +131,7 @@ The parts of the 3D elements that are behind the user — i.e., their z-axis coo
 
 The _vanishing point_ is by default placed at the center of the element, but its position can be changed using the {{cssxref("perspective-origin")}} property.
 
-Using this property with a value other than `none` creates a new [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context). Also, in that case, the object will act as a containing block for `position: fixed` elements that it contains.
+Using this property with a value other than `none` creates a new [stacking context](/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_context). Also, in that case, the object will act as a containing block for `position: fixed` elements that it contains.
 
 ## Formal definition
 
@@ -145,7 +145,7 @@ Using this property with a value other than `none` creates a new [stacking conte
 
 ### Setting perspective
 
-An example showing how a cube varies if the `perspective` is set at different positions is given in [Using CSS transforms > Setting perspective](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms#setting_perspective).
+An example showing how a cube varies if the `perspective` is set at different positions is given in [Using CSS transforms > Setting perspective](/en-US/docs/Web/CSS/Guides/Transforms/Using#setting_perspective).
 
 ## Specifications
 
@@ -157,4 +157,4 @@ An example showing how a cube varies if the `perspective` is set at different po
 
 ## See also
 
-- [Using CSS Transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [Using CSS Transforms](/en-US/docs/Web/CSS/Guides/Transforms/Using)

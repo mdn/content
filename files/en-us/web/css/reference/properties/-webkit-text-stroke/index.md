@@ -6,7 +6,7 @@ browser-compat: css.properties.-webkit-text-stroke
 sidebar: cssref
 ---
 
-The **`-webkit-text-stroke`** [CSS](/en-US/docs/Web/CSS) property specifies the [width](/en-US/docs/Web/CSS/length) and [color](/en-US/docs/Web/CSS/color_value) of strokes for text characters. This is a shorthand property for the longhand properties {{cssxref("-webkit-text-stroke-width")}} and {{cssxref("-webkit-text-stroke-color")}}.
+The **`-webkit-text-stroke`** [CSS](/en-US/docs/Web/CSS) property specifies the [width](/en-US/docs/Web/CSS/Reference/Values/length) and [color](/en-US/docs/Web/CSS/Reference/Values/color_value) of strokes for text characters. This is a shorthand property for the longhand properties {{cssxref("-webkit-text-stroke-width")}} and {{cssxref("-webkit-text-stroke-color")}}.
 
 ## Constituent properties
 

@@ -58,7 +58,7 @@ See [Using the Document Picture-in-Picture API](/en-US/docs/Web/API/Document_Pic
 ## CSS additions
 
 - {{cssxref("@media/display-mode", "display-mode")}}, the `picture-in-picture` value
-  - : A [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) value that allows developers to apply CSS to a document based on whether it is being displayed in Picture-in-Picture mode.
+  - : A [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Reference/At-rules/@media#media_features) value that allows developers to apply CSS to a document based on whether it is being displayed in Picture-in-Picture mode.
 
 ## Examples
 

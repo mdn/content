@@ -6,7 +6,7 @@ browser-compat: css.selectors.root
 sidebar: cssref
 ---
 
-The **`:root`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) matches the root element of a tree representing the document. In HTML, `:root` represents the {{HTMLElement("html")}} element and is identical to the selector `html`, except that its [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity) is higher.
+The **`:root`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) matches the root element of a tree representing the document. In HTML, `:root` represents the {{HTMLElement("html")}} element and is identical to the selector `html`, except that its [specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity) is higher.
 
 ```css
 /* Selects the root element of the document:
@@ -28,7 +28,7 @@ The **`:root`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Re
 
 ### Declaring global CSS variables
 
-`:root` can be useful for declaring global [CSS variables](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties):
+`:root` can be useful for declaring global [CSS variables](/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties):
 
 ```css
 :root {

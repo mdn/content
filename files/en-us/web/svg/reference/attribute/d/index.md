@@ -49,7 +49,7 @@ For {{SVGElement('path')}}, `d` is a string containing a series of path commands
     <tr>
       <th scope="row">Value</th>
       <td>
-        <strong><a href="/en-US/docs/Web/CSS/string">&#x3C;string></a></strong>
+        <strong><a href="/en-US/docs/Web/CSS/Reference/Values/string">&#x3C;string></a></strong>
       </td>
     </tr>
     <tr>
@@ -66,7 +66,7 @@ For {{SVGElement('path')}}, `d` is a string containing a series of path commands
 ## Using d as a CSS property
 
 `d` is a presentation attribute, and hence can be also be modified using CSS.
-The property takes either [`path()`](/en-US/docs/Web/CSS/basic-shape/path) or `none`.
+The property takes either [`path()`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/path) or `none`.
 
 The example below shows how you might apply a new path on hover over an element.
 The new path is the same as the old one, but adds a line across the heart.

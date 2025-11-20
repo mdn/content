@@ -416,7 +416,7 @@ Although both do the same thing, the readability is significantly improved.
 In this article we've recapped CSS selectors, which enable you to target particular HTML elements, looking at type, class, and ID selectors in a bit more depth than we did previously. In the next article we will dive into attribute selectors.
 
 > [!NOTE]
-> For a complete list of selectors, see our [CSS selectors reference](/en-US/docs/Web/CSS/CSS_selectors).
+> For a complete list of selectors, see our [CSS selectors reference](/en-US/docs/Web/CSS/Guides/Selectors).
 
 ## See also
 

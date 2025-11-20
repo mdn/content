@@ -31,12 +31,10 @@ selector1 combinator selector2 {
 - [Child combinator (`>`)](/en-US/docs/Web/CSS/Reference/Selectors/Child_combinator)
 - [Column combinator (`||`)](/en-US/docs/Web/CSS/Reference/Selectors/Column_combinator)
 - [Descendant combinator (" ")](/en-US/docs/Web/CSS/Reference/Selectors/Descendant_combinator)
-- [Namespace separator (`|`)](/en-US/docs/Web/CSS/Reference/Selectors/Namespace_separator)
 - [Next-sibling combinator (`+`)](/en-US/docs/Web/CSS/Reference/Selectors/Next-sibling_combinator)
-- [Selector list (`,`)](/en-US/docs/Web/CSS/Reference/Selectors/Selector_list)
 - [Subsequent-sibling combinator (`~`)](/en-US/docs/Web/CSS/Reference/Selectors/Subsequent-sibling_combinator)
 
 ## See also
 
-- [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module
-- [Selectors and combinators](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators)
+- [CSS selectors](/en-US/docs/Web/CSS/Guides/Selectors) module
+- [Selectors and combinators](/en-US/docs/Web/CSS/Guides/Selectors/Selectors_and_combinators)

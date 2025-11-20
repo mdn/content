@@ -72,9 +72,21 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Referenc
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#phrasing_content"
-          >Phrasing content</a
-        >.
+        One or more groups, each consisting of two parts:
+        <ol>
+          <li>The base text, which is either:
+            <ul>
+              <li><a href="/en-US/docs/Web/HTML/Guides/Content_categories#phrasing_content">Phrasing content</a>, but with no <code>&lt;ruby&gt;</code> elements and with no <code>&lt;ruby&gt;</code> element descendants, or</li>
+              <li>A single <code>&lt;ruby&gt;</code> element that itself has no <code>&lt;ruby&gt;</code> element descendants.</li>
+            </ul>
+          </li>
+          <li>The annotations for the base text, which is either:
+            <ul>
+              <li>One or more {{HTMLElement("rt")}} elements, or</li>
+              <li>An {{HTMLElement("rp")}} element followed by one or more {{HTMLElement("rt")}} elements, each of which is itself followed by an {{HTMLElement("rp")}} element (that is, <code>rp, rt, rp, rt, ..., rp</code>).</li>
+            </ul>
+          </li>
+        </ol>
       </td>
     </tr>
     <tr>

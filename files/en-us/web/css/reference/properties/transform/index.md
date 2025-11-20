@@ -7,10 +7,10 @@ sidebar: cssref
 ---
 
 The **`transform`** [CSS](/en-US/docs/Web/CSS) property lets you rotate, scale, skew, or translate an element.
-It modifies the coordinate space of the CSS [visual formatting model](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model).
+It modifies the coordinate space of the CSS [visual formatting model](/en-US/docs/Web/CSS/Guides/Display/Visual_formatting_model).
 
-If the property has a value different from `none`, a [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context) will be created.
-In that case, the element will act as a [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block) for any `position: fixed;` or `position: absolute;` elements that it contains.
+If the property has a value different from `none`, a [stacking context](/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_context) will be created.
+In that case, the element will act as a [containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block) for any `position: fixed;` or `position: absolute;` elements that it contains.
 
 You can also use the individual transform properties: {{cssxref('translate')}}, {{cssxref('rotate')}}, and {{cssxref('scale')}}. These properties are applied in the order: `translate`, `rotate`, `scale`, and finally `transform`.
 
@@ -100,7 +100,7 @@ The `transform` property may be specified as either the keyword value `none` or 
 ### Values
 
 - {{cssxref("&lt;transform-function&gt;")}}
-  - : One or more of the [CSS transform functions](/en-US/docs/Web/CSS/transform-function) to be applied.
+  - : One or more of the [CSS transform functions](/en-US/docs/Web/CSS/Reference/Values/transform-function) to be applied.
     The transform functions are multiplied in order from left to right, meaning that composite transforms are effectively [applied in order from right to left](#transform_order).
 - `none`
   - : Specifies that no transform should be applied.
@@ -110,7 +110,7 @@ The `transform` property may be specified as either the keyword value `none` or 
 Scaling/zooming animations are problematic for accessibility, as they are a common trigger for certain types of migraine.
 If you need to include such animations on your website, you should provide a control to allow users to turn off animations, preferably site-wide.
 
-Also, consider making use of the {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} media feature — use it to write a [media query](/en-US/docs/Web/CSS/CSS_media_queries) that will turn off animations if the user has reduced animation specified in their system preferences.
+Also, consider making use of the {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} media feature — use it to write a [media query](/en-US/docs/Web/CSS/Guides/Media_queries) that will turn off animations if the user has reduced animation specified in their system preferences.
 
 Find out more:
 
@@ -216,7 +216,7 @@ When an element is rotated before being translated, the translate direction is o
 
 ### More examples
 
-Please see [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms) and {{cssxref("&lt;transform-function&gt;")}} for more examples.
+Please see [Using CSS transforms](/en-US/docs/Web/CSS/Guides/Transforms/Using) and {{cssxref("&lt;transform-function&gt;")}} for more examples.
 
 ## Specifications
 
@@ -228,7 +228,7 @@ Please see [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_t
 
 ## See also
 
-- [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [Using CSS transforms](/en-US/docs/Web/CSS/Guides/Transforms/Using)
 - {{cssxref("&lt;transform-function&gt;")}} data type with all the transform functions explained.
 - Individual CSS properties: {{cssxref('translate')}}, {{cssxref('rotate')}}, and {{cssxref('scale')}} (there is no `skew` property).
 - SVG {{SVGAttr("transform")}} attribute

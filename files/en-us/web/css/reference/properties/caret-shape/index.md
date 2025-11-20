@@ -293,4 +293,4 @@ label {
 
 - {{cssxref("caret-color")}}, {{cssxref("caret-animation")}}
 - {{cssxref("caret")}} shorthand
-- [CSS basic user interface](/en-US/docs/Web/CSS/CSS_basic_user_interface) module
+- [CSS basic user interface](/en-US/docs/Web/CSS/Guides/Basic_user_interface) module

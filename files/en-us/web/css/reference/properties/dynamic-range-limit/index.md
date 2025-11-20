@@ -117,4 +117,4 @@ img:focus {
 
 ## See also
 
-[`dynamic-range`](/en-US/docs/Web/CSS/@media/dynamic-range) and [`video-dynamic-range`](/en-US/docs/Web/CSS/@media/video-dynamic-range) media features
+[`dynamic-range`](/en-US/docs/Web/CSS/Reference/At-rules/@media/dynamic-range) and [`video-dynamic-range`](/en-US/docs/Web/CSS/Reference/At-rules/@media/video-dynamic-range) media features

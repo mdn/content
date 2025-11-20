@@ -85,7 +85,7 @@ When wrapping is allowed (see {{CSSXRef("text-wrap-mode")}}), the `text-wrap-sty
   - : Text is wrapped such that when the user is editing the content, the lines that come before the lines they are editing remain static rather than the whole block of text re-wrapping.
 
 > [!NOTE]
-> The [CSS text](/en-US/docs/Web/CSS/CSS_text) module defines an `avoid-orphans` value for the `text-wrap-style` property to avoid excessively short last lines and expect the user agent to consider more than one line when making break decisions. This value is not yet supported in any browser.
+> The [CSS text](/en-US/docs/Web/CSS/Guides/Text) module defines an `avoid-orphans` value for the `text-wrap-style` property to avoid excessively short last lines and expect the user agent to consider more than one line when making break decisions. This value is not yet supported in any browser.
 
 ## Description
 

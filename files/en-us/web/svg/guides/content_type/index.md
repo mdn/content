@@ -107,7 +107,7 @@ SVG makes use of a number of data types. This article lists these types along wi
 ## FuncIRI
 
 - \<FuncIRI>
-  - : Functional notation for a reference. The syntax for this reference is the same as the [CSS URI](/en-US/docs/Web/CSS/url_value).
+  - : Functional notation for a reference. The syntax for this reference is the same as the [CSS URI](/en-US/docs/Web/CSS/Reference/Values/url_value).
 
 ## Integer
 

@@ -17,14 +17,14 @@ sidebar: mdnsidebar
 >
 > ```md
 > ---
-> title: :NameOfTheSelector
-> slug: Web/CSS/:NameOfTheSelector
+> title: :name-of-the-selector
+> slug: Web/CSS/Reference/Selectors/:name-of-the-selector
 > page-type: css-selector OR css-pseudo-class OR css-pseudo-element OR css-combinator
 > status:
 >   - deprecated
 >   - experimental
 >   - non-standard
-> browser-compat: css.selectors.NameOfTheSelector
+> browser-compat: css.selectors.name-of-the-selector
 > sidebar: cssref
 > ---
 > ```
@@ -33,10 +33,10 @@ sidebar: mdnsidebar
 >   - : Title heading displayed at the top of the page. Format as _:NameOfTheSelector_.
 >     For example, the [`:hover`](/en-US/docs/Web/CSS/Reference/Selectors/:hover) selector has a title of _:hover_.
 > - **slug**
->   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`). This will be formatted like `Web/CSS/:NameOfTheSelector`.
->     For example, the [`:hover`](/en-US/docs/Web/CSS/Reference/Selectors/:hover) selector slug is `Web/CSS/:hover`.
+>   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`). This will be formatted like `Web/CSS/Reference/Selectors/:name-of-the-selector`.
+>     For example, the [`:hover`](/en-US/docs/Web/CSS/Reference/Selectors/:hover) selector slug is `Web/CSS/Reference/Selectors/:hover`.
 > - **page-type**
->   - : The `page-type` key for CSS properties is one of `css-selector`, `css-pseudo-class`, or `css-pseudo-element`, depending on whether the selector is a [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes), a [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements), a [combinator](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#combinators), or a [simple selector](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#simple_selector).
+>   - : The `page-type` key for CSS properties is one of `css-selector`, `css-pseudo-class`, or `css-pseudo-element`, depending on whether the selector is a [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes), a [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements), a [combinator](/en-US/docs/Web/CSS/Guides/Selectors/Selectors_and_combinators#combinators), or a [simple selector](/en-US/docs/Web/CSS/Guides/Selectors/Selector_structure#simple_selector).
 > - **status**
 >   - : Flags describing the status of this feature. An array which may contain one or more of the following: `experimental`, `deprecated`, `non-standard`. This key should not be set manually: it is set automatically based on values in the browser compatibility data for the feature. See ["How feature statuses are added or updated"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated).
 > - **browser-compat**

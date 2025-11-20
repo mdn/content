@@ -1,4 +1,19 @@
 {
+  "applyingToMultiple": {
+    "de": "$1$. Auch anwendbar auf $2$.",
+    "en-US": "$1$. It also applies to $2$.",
+    "fr": "$1$. S'applique aussi à $2$.",
+    "ja": "$1$。 $2$ にも適用されます。",
+    "ru": "$1$. Это также применяется к $2$."
+  },
+  "asLonghands": {
+    "de": "wie die jeweiligen Kurzschreibweisen:",
+    "en-US": "as each of the properties of the shorthand:",
+    "fr": "pour chaque propriété individuelle de la propriété raccourcie&nbsp;:",
+    "ja": "一括指定の次の各プロパティとして",
+    "ru": "как и у каждого из подсвойств этого свойства:",
+    "zh-CN": "该简写所对应的每个属性："
+  },
   "0": {
     "en-US": "0"
   },

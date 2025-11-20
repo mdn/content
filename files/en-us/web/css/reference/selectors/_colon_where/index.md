@@ -8,7 +8,7 @@ sidebar: cssref
 
 The **`:where()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) function takes a selector list as its argument, and selects any element that can be selected by one of the selectors in that list.
 
-The difference between `:where()` and {{CSSxRef(":is", ":is()")}} is that `:where()` always has 0 [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity), whereas `:is()` takes on the specificity of the most specific selector in its arguments.
+The difference between `:where()` and {{CSSxRef(":is", ":is()")}} is that `:where()` always has 0 [specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity), whereas `:is()` takes on the specificity of the most specific selector in its arguments.
 
 {{InteractiveExample("CSS Demo: :where", "tabbed-shorter")}}
 
@@ -65,7 +65,7 @@ ol {
 
 ### Parameters
 
-The `:where()` pseudo-class requires a [selector list](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#selector_list), a comma-separated list of one or more selectors, as its argument. The list must not contain a [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements), but any other simple, compound, and complex selectors are allowed.
+The `:where()` pseudo-class requires a [selector list](/en-US/docs/Web/CSS/Guides/Selectors/Selector_structure#selector_list), a comma-separated list of one or more selectors, as its argument. The list must not contain a [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements), but any other simple, compound, and complex selectors are allowed.
 
 ### Forgiving Selector Parsing
 

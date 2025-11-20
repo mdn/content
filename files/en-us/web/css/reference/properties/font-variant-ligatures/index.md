@@ -230,4 +230,4 @@ p {
 - [`font-variant-east-asian`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-east-asian)
 - [`font-variant-numeric`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-numeric)
 - [`font-variant-position`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-position)
-- [CSS fonts module](/en-US/docs/Web/CSS/CSS_fonts)
+- [CSS fonts module](/en-US/docs/Web/CSS/Guides/Fonts)

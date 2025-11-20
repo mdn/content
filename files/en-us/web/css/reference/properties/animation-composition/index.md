@@ -30,7 +30,7 @@ animation-composition: unset;
 ```
 
 > [!NOTE]
-> When you specify multiple comma-separated values on an `animation-*` property, they will be applied to the animations in the order in which the {{cssxref("animation-name")}}s appear. If the number of animations and compositions differ, the values listed in the `animation-composition` property will cycle from the first to the last `animation-name`, looping until all the animations have an assigned `animation-composition` value. For more information, see [Setting multiple animation property values](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations#setting_multiple_animation_property_values).
+> When you specify multiple comma-separated values on an `animation-*` property, they will be applied to the animations in the order in which the {{cssxref("animation-name")}}s appear. If the number of animations and compositions differ, the values listed in the `animation-composition` property will cycle from the first to the last `animation-name`, looping until all the animations have an assigned `animation-composition` value. For more information, see [Setting multiple animation property values](/en-US/docs/Web/CSS/Guides/Animations/Using#setting_multiple_animation_property_values).
 
 ### Values
 
@@ -43,7 +43,7 @@ animation-composition: unset;
 
 ## Description
 
-Each property that is targeted by the [@keyframes](/en-US/docs/Web/CSS/@keyframes) at-rule is associated with an effect stack. The value of the effect stack is calculated by combining the _underlying value_ of a property in a CSS style rule with the _effect value_ of that property in the keyframe. The `animation-composition` property helps to specify how to combine the underlying value with the effect value.
+Each property that is targeted by the [@keyframes](/en-US/docs/Web/CSS/Reference/At-rules/@keyframes) at-rule is associated with an effect stack. The value of the effect stack is calculated by combining the _underlying value_ of a property in a CSS style rule with the _effect value_ of that property in the keyframe. The `animation-composition` property helps to specify how to combine the underlying value with the effect value.
 
 For example, in the CSS below, `blur(5px)` is the underlying value, and `blur(10px)` is the effect value. The `animation-composition` property specifies the operation to perform to produce the final effect value after compositing the effect of the underlying value and the effect value.
 
@@ -176,6 +176,6 @@ Here the underlying value is `translateX(50px) rotate(45deg)`.
 
 ## See also
 
-- [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [Using CSS animations](/en-US/docs/Web/CSS/Guides/Animations/Using)
 - [Composite property of KeyFrameEffect](/en-US/docs/Web/API/KeyframeEffect/composite)
 - Other related animation properties: {{cssxref("animation")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timeline")}}, {{cssxref("animation-timing-function")}}

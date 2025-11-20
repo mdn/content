@@ -34,12 +34,12 @@ li::marker {
 
 The `::marker` pseudo-element supports a limited number of CSS properties, including:
 
-- All [font properties](/en-US/docs/Web/CSS/CSS_fonts)
+- All [font properties](/en-US/docs/Web/CSS/Guides/Fonts)
 - The {{CSSxRef("white-space")}} property
 - {{CSSxRef("color")}}
 - {{CSSxRef("text-combine-upright")}}, {{CSSxRef("unicode-bidi")}}, and {{CSSxRef("direction")}} properties
 - The {{CSSxRef("content")}} property
-- All [animation](/en-US/docs/Web/CSS/CSS_animations#properties) and [transition](/en-US/docs/Web/CSS/CSS_transitions#properties) properties
+- All [animation](/en-US/docs/Web/CSS/Guides/Animations#properties) and [transition](/en-US/docs/Web/CSS/Guides/Transitions#properties) properties
 
 > [!NOTE]
 > The specification states that additional CSS properties may be supported in the future.
@@ -88,6 +88,6 @@ ul li::marker {
 ## See also
 
 - HTML elements that have marker boxes by default: {{HTMLElement("ol")}}, {{HTMLElement("li")}}, {{HTMLElement("summary")}}
-- [CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content) module
-- [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
-- [CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles) module
+- [CSS generated content](/en-US/docs/Web/CSS/Guides/Generated_content) module
+- [CSS lists and counters](/en-US/docs/Web/CSS/Guides/Lists) module
+- [CSS counter styles](/en-US/docs/Web/CSS/Guides/Counter_styles) module

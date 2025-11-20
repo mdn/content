@@ -8,6 +8,10 @@ sidebar: cssref
 
 The **`border-collapse`** [CSS](/en-US/docs/Web/CSS) property sets whether cells inside a {{htmlElement("table")}} have shared or separate borders.
 
+When cells are collapsed, the {{cssxref("border-style")}} value of `inset` behaves like `ridge`, and `outset` behaves like `groove`.
+
+When cells are separated, the distance between cells is defined by the {{cssxref("border-spacing")}} property.
+
 {{InteractiveExample("CSS Demo: border-collapse")}}
 
 ```css interactive-example-choice
@@ -51,10 +55,6 @@ td {
   padding: 0.75rem;
 }
 ```
-
-When cells are collapsed, the {{cssxref("border-style")}} value of `inset` behaves like `ridge`, and `outset` behaves like `groove`.
-
-When cells are separated, the distance between cells is defined by the {{cssxref("border-spacing")}} property.
 
 ## Syntax
 
@@ -226,4 +226,4 @@ table td {
 
 - {{cssxref("border-spacing")}}, {{cssxref("border-style")}}
 - The `border-collapse` property alters the appearance of the {{htmlelement("table")}} HTML element.
-- [CSS table](/en-US/docs/Web/CSS/CSS_table) module
+- [CSS table](/en-US/docs/Web/CSS/Guides/Table) module

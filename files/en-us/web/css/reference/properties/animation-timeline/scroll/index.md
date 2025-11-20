@@ -6,7 +6,7 @@ browser-compat: css.properties.animation-timeline.scroll
 sidebar: cssref
 ---
 
-The **`scroll()`** [CSS function](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) can be used with {{cssxref("animation-timeline")}} to indicate a scrollable element (_scroller_) and scrollbar axis that will provide an anonymous scroll progress timeline for animating the current element. The scroll progress timeline is progressed through by scrolling the scroller between top and bottom (or left and right). The position in the scroll range is converted into a percentage of progress — 0% at the start and 100% at the end.
+The **`scroll()`** [CSS function](/en-US/docs/Web/CSS/Reference/Values/Functions) can be used with {{cssxref("animation-timeline")}} to indicate a scrollable element (_scroller_) and scrollbar axis that will provide an anonymous scroll progress timeline for animating the current element. The scroll progress timeline is progressed through by scrolling the scroller between top and bottom (or left and right). The position in the scroll range is converted into a percentage of progress — 0% at the start and 100% at the end.
 
 > [!NOTE]
 > If the indicated axis does not contain a scrollbar, then the animation timeline will be inactive (have zero progress).
@@ -149,6 +149,6 @@ Scroll to see the square element being animated.
 
 ## See also
 
-- [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations)
-- [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations)
+- [Using CSS animations](/en-US/docs/Web/CSS/Guides/Animations/Using)
 - [`animation-timeline`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline)

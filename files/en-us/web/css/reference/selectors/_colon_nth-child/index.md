@@ -515,4 +515,4 @@ tbody tr :nth-child(3) {
 - {{ Cssxref(":nth-last-child", ":nth-last-child()") }}
 - {{ Cssxref(":has", ":has()") }}: pseudo-class for selecting parent element
 - [Tree-structural pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes#tree-structural_pseudo-classes)
-- [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module
+- [CSS selectors](/en-US/docs/Web/CSS/Guides/Selectors) module

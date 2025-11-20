@@ -31,7 +31,7 @@ Note that syntactically (but not specificity-wise), this is equivalent to the fo
 }
 ```
 
-The `id_value` value must be a valid [CSS identifier](/en-US/docs/Web/CSS/ident). HTML `id` attributes which are not valid CSS identifiers must be [escaped](/en-US/docs/Web/CSS/ident#escaping_characters) before they can be used in ID selectors.
+The `id_value` value must be a valid [CSS identifier](/en-US/docs/Web/CSS/Reference/Values/ident). HTML `id` attributes which are not valid CSS identifiers must be [escaped](/en-US/docs/Web/CSS/Reference/Values/ident#escaping_characters) before they can be used in ID selectors.
 
 ## Examples
 
@@ -100,5 +100,5 @@ The ID selectors in the following rules are not valid CSS identifiers, and will 
 
 ## See also
 
-- [CSS Selectors](/en-US/docs/Web/CSS/CSS_selectors)
+- [CSS Selectors](/en-US/docs/Web/CSS/Guides/Selectors)
 - [Learn CSS: Basic selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)

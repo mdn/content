@@ -6,7 +6,7 @@ browser-compat: css.properties.transition-timing-function
 sidebar: cssref
 ---
 
-The **`transition-timing-function`** [CSS](/en-US/docs/Web/CSS) property sets how intermediate values are calculated for CSS properties being affected by a [transition effect](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions).
+The **`transition-timing-function`** [CSS](/en-US/docs/Web/CSS) property sets how intermediate values are calculated for CSS properties being affected by a [transition effect](/en-US/docs/Web/CSS/Guides/Transitions/Using).
 
 {{InteractiveExample("CSS Demo: transition-timing-function")}}
 
@@ -133,7 +133,7 @@ transition-timing-function: unset;
 
 Some animations can be helpful such as to guide users to understand what actions are expected, to show relationships within the user interface, and to inform users as to what actions have occurred. Animations can help reduce cognitive load, prevent change blindness, and establish better recall in spatial relationships. However, some animations can be problematic for people with cognitive concerns such as Attention Deficit Hyperactivity Disorder (ADHD) and certain kinds of motion can be a trigger for Vestibular disorders, epilepsy, and migraine and Scotopic sensitivity.
 
-Consider providing a mechanism for pausing or disabling animation, as well as using the [Reduced Motion Media Query](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) (or equivalent [User Agent client hint](/en-US/docs/Web/HTTP/Guides/Client_hints#user_agent_client_hints) {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}) to create a complimentary experience for users who have expressed a preference for less animation.
+Consider providing a mechanism for pausing or disabling animation, as well as using the [Reduced Motion Media Query](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) (or equivalent [User Agent client hint](/en-US/docs/Web/HTTP/Guides/Client_hints#user_agent_client_hints) {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}) to create a complimentary experience for users who have expressed a preference for less animation.
 
 ## Formal definition
 
@@ -297,9 +297,9 @@ const intervalID = setInterval(updateTransition, 10000);
 
 ## See also
 
-- [Using CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
-- [`<easing-function>`](/en-US/docs/Web/CSS/easing-function)
-- [CSS easing functions](/en-US/docs/Web/CSS/CSS_easing_functions) module
+- [Using CSS transitions](/en-US/docs/Web/CSS/Guides/Transitions/Using)
+- [`<easing-function>`](/en-US/docs/Web/CSS/Reference/Values/easing-function)
+- [CSS easing functions](/en-US/docs/Web/CSS/Guides/Easing_functions) module
 - {{cssxref('transition')}}
 - {{cssxref('transition-property')}}
 - {{cssxref('transition-duration')}}
