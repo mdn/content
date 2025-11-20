@@ -63,7 +63,7 @@ The following types of timelines can be set via `animation-timeline`:
 - [DocumentTimeline](/en-US/docs/Web/API/DocumentTimeline)
   - : The default document timeline, which is progressed through by the passing of time since the document was first loaded in the browser. This is the timeline traditionally associated with CSS animations and is selected with a value of `auto`, or by not specifying an `animation-timeline` value at all.
 - Scroll progress timeline
-  - : The animation is progressed through by scrolling a scrollable element (_scroller_) between top and bottom (or left and right). The position in the scroll range is converted into a percentage of progress — 0% at the start and 100% at the end. The element that provides the scroll progress timeline can be specified in two ways:
+  - : The animation is progressed through by scrolling a scrollable element (_scroller_) between top and bottom (or left and right). The position in the scroll range is converted into a progress percentage — `0%` at the start and `100%` at the end. The element that provides the scroll progress timeline can be specified in two ways:
 - Named scroll progress timeline
   - : The scroller providing the scroll progress timeline is explicitly named using the {{cssxref("scroll-timeline-name")}} property (or the {{cssxref("scroll-timeline")}} shorthand property). The name is then linked to the element to animate by specifying it as the value of that element's `animation-timeline` property.
 - Anonymous scroll progress timeline
