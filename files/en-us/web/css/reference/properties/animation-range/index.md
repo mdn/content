@@ -82,7 +82,7 @@ The {{glossary("Scroll container", "scroll port")}} area known as the view progr
 
 ### Basic usage of the `animation-range` property
 
-In this example, we reduce the duration of the view progress scroll animation by using the `animation-range` property to offset the start and end of the animation.
+In this example, we reduce the duration of the view progress scroll animation by using the `animation-range` property to offset the start and end of the animation, and demonstrate the effect of the {{cssxref("animation-fill-mode")}} property on shortened animation timelines.
 
 #### HTML
 
@@ -115,20 +115,28 @@ In the middle of a wall of text, we include an element that we will animate. We 
 ```
 
 ```html hidden
-  <p>
-    Adipiscing enim eu turpis egestas pretium aenean pharetra magna ac. Arcu
-    cursus vitae congue mauris rhoncus aenean vel. Sit amet cursus sit amet
-    dictum. Augue neque gravida in fermentum et. Gravida rutrum quisque non
-    tellus orci ac auctor augue mauris. Risus quis varius quam quisque id diam
-    vel quam elementum. Nibh praesent tristique magna sit amet purus gravida
-    quis. Duis ultricies lacus sed turpis tincidunt id aliquet. In egestas erat
-    imperdiet sed euismod nisi. Eget egestas purus viverra accumsan in nisl nisi
-    scelerisque. Netus et malesuada fames ac.
-  </p>
-  <p>
-    <label>
-      <input type="checkbox"> Add <code>animation-fill-mode: both;</code>
-    </label>
+<p>
+  Adipiscing enim eu turpis egestas pretium aenean pharetra magna ac. Arcu
+  cursus vitae congue mauris rhoncus aenean vel. Sit amet cursus sit amet
+  dictum. Augue neque gravida in fermentum et. Gravida rutrum quisque non tellus
+  orci ac auctor augue mauris. Risus quis varius quam quisque id diam vel quam
+  elementum. Nibh praesent tristique magna sit amet purus gravida quis. Duis
+  ultricies lacus sed turpis tincidunt id aliquet. In egestas erat imperdiet sed
+  euismod nisi. Eget egestas purus viverra accumsan in nisl nisi scelerisque.
+  Netus et malesuada fames ac.
+</p>
+<p></p>
+```
+
+We also includes a toggle checkbox to demonstrate the effect of the {{cssxref("animation-fill-mode")}} property on shortened animation timelines.
+
+```html
+<label>
+  <input type="checkbox" /> Add <code>animation-fill-mode: both;</code>
+</label>
+```
+
+```html hidden
   </p>
 </div>
 ```
@@ -164,7 +172,15 @@ Lastly, an `animation-range` declaration is also set to make the animation begin
 }
 ```
 
-The `animatedElement` and its container's other styles were hidden for the sake of brevity.
+We also include conditional styling: when the checkbox is checked, the `animation-fill-mode` property gets applied to the animated element:
+
+```css
+:has(:checked) .animatedElement {
+  animation-fill-mode: both;
+}
+```
+
+The other styles were hidden for the sake of brevity.
 
 ```css hidden
 .animatedElement {
@@ -207,7 +223,7 @@ Scroll to see the element being animated.
 
 Note how the `from`, or `0%`, keyframe property values are not applied to the animated element until the top block border edge is 10% past the container's bottom edge; it is full size, fully opaque, and magenta, then jumps to the values defined by the `0%` keyframe selector when the animation keyframes are applied, and jumps back to the original values when the `animation-range-end` is reached, which is 25% from the top of the scrollport. The jumping to the default state is because we did not set the `animation-fill-mode` property on the element, which can be used to apply an animation's styles to an element before and after the animation's execution.
 
-Scroll to the end of the content and check the checkbox to add ``animation-fill-mode: both` to the element, which applies the `0%` keyframe before the animation starts and the `100%` keyframe property values after the animation ends (when the range-end is reached).
+Scroll to the end of the content and check the checkbox. When the animation `0%` keyframe is applied before the animation starts and the `100%` keyframe property values are applied after the animation ends (when the range-end is reached), you will not longer see the animated element in it's non-animated full-sized magenta state.
 
 ## Specifications
 
