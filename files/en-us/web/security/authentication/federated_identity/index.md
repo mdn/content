@@ -78,7 +78,7 @@ In the token request:
 
 1. The RP makes a {{httpmethod("POST")}} request to the token endpoint. This request includes the following parameters:
    - `client_id`: Identifies this RP to the IdP.
-   - `client_secret`: The secret used to authenticate the RP to the IdP. The RP could use some alternative mechanism for client authentication, such as TLS client authentication.
+   - `client_secret`: The secret used to authenticate the RP to the IdP: this could be any value previously agreed between the RP and the IdP. Instead of a shared secret, the RP and the IdP could use some alternative mechanism for client authentication, such as TLS client authentication.
    - `grant_type`: This should be `"authorization_code"`.
    - `code`: The authorization code.
    - `code_verifier`: This is the original secret that was used to produce the `code_challenge` parameter in the authentication request.
