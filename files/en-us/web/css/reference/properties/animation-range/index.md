@@ -58,11 +58,11 @@ The `animation-range` shorthand property sets the `animation-range-start` and `a
 
 The property can be applied to a container element as a combination of the `<animation-range-start>` and `<animation-range-end>` values. If both the values are specified, they will be interpreted in the order `<animation-range-start>` then `<animation-range-end>`.
 
-The value of each component is either the keyword `normal`, a {{cssxref("length-percentage")}}, or a {{cssxref("timeline-range-name")}}, optionally defined with a `<length-percentage>`
+The value of each component is either the keyword `normal`, a {{cssxref("length-percentage")}}, or a [`<timeline-range-name>`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name), optionally defined with a `<length-percentage>`
 
 If the value is a {{cssxref("length-percentage")}} or `normal`, this is the value for the `<animation-range-start>` and `<animation-range-end>` will equal `normal`. For example, `animation-range: 20%;` is the equivalent to `animation-range: 20% normal;` and `animation-range: normal;` is the equivalent to `animation-range: normal normal;`.
 
-If the value is a {{cssxref("timeline-range-name")}} without a `<length-percentage>` following it, that timeline range name is applied to both the start and end animation range components at `0%` and `100%`. For example, `animation-range: contain;` is equivalent to `animation-range: contain 0% contain 100%;`.
+If the value is a [`<timeline-range-name>`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name) without a `<length-percentage>` following it, that timeline range name is applied to both the start and end animation range components at `0%` and `100%`. For example, `animation-range: contain;` is equivalent to `animation-range: contain 0% contain 100%;`.
 
 If the value is a single `<timeline-range-name>` with a `<length-percentage>` following it, in that order, the pair defines the range start and the `<timeline-range-name>` is also applied to the range end set to `100%`. For example, `animation-range: cover 20%;` is equivalent to `animation-range: cover 20% cover 100%` and `animation-range: contain 100px;` is equivalent to `animation-range: contain 100px contain 100%`.
 
