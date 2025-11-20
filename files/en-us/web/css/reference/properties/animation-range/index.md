@@ -137,11 +137,9 @@ In the middle of a wall of text, we include an element that we will animate. We 
 
 We define an animation that animates an element's opacity, scale, and color, causing it to fade in, size up, and change colors as the animation progresses. We apply this animation to the `animatedElement` with the {{cssxref("animation")}} shorthand.
 
-A view progress timeline is created by setting the [`view()`]() function as the value of the {{cssxref("animation-timeline")}} property on our `animatedElement`. The result is that the element animates as it moves upwards through the document as it is scrolled. We declared the shorthand before the `animation-timeline`, as the shorthand resets this property.
+A view progress timeline is created by setting the [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view) function as the value of the {{cssxref("animation-timeline")}} property on our `animatedElement`. The result is that the element animates as it moves upwards through the document as it is scrolled. We declared the shorthand before the `animation-timeline`, as the shorthand resets this property.
 
 Lastly, an `animation-range` declaration is also set to make the animation begin later than expected, and finish earlier.
-
-it moves up the scroller.
 
 ```css
 .animatedElement {
