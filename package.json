@@ -61,7 +61,7 @@
     "cheerio": "1.1.2",
     "cspell": "9.3.2",
     "cspell-group-by-file-reporter": "^1.0.1",
-    "file-type": "^21.1.0",
+    "file-type": "^21.1.1",
     "fs-extra": "^11.3.2",
     "imagemin": "^9.0.1",
     "imagemin-gifsicle": "^7.0.0",
