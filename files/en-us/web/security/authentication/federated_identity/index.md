@@ -136,7 +136,7 @@ This defends against two attacks: [CSRF against the RP's redirect URL](#csrf_aga
 
 In a CSRF attack, the attacker tricks the user's browser into signing the user into the attacker's account. This can have various bad effects: for example, any private data the user uploads to the account is available to, and under control of, the attacker.
 
-The CSRF attack works as follows:
+If PKCE were not used, the CSRF attack works as follows:
 
 1. The attacker asks to sign into the RP. The RP makes an authentication request to the IdP and the attacker authenticates to the IdP.
 
@@ -170,7 +170,7 @@ It's generally accepted that authorization codes in OIDC are vulnerable, in part
 
 The main mitigation here is [client authentication](#client_authentication): because the RP authenticates itself to the IdP when it makes a token request, an attacker can't just make their own token request with the stolen code. However, with the authorization code injection attack, it's the real RP making the token request, so client authentication is successful.
 
-With an authorization code injection attack:
+If PKCE were not used, the authorization code injection attack works as follows:
 
 1. The attacker is able to steal the user's authorization code. For example, the user has installed a malicious browser extension that can access the URLs that the browser visits.
 
