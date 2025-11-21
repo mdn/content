@@ -137,7 +137,7 @@ Not only are we providing the MIME type hints in the `type` attributes, but we a
 
 ## Including media
 
-One nice feature of `<link>` elements is their ability to accept [`media`](/en-US/docs/Web/HTML/Reference/Elements/link#media) attributes. These can accept [media types](/en-US/docs/Web/CSS/Reference/At-rules/@media#media_types) or full-blown [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries), allowing you to do responsive preloading!
+One nice feature of `<link>` elements is their ability to accept [`media`](/en-US/docs/Web/HTML/Reference/Elements/link#media) attributes. These can accept [media types](/en-US/docs/Web/CSS/Reference/At-rules/@media#media_types) or full-blown [media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using), allowing you to do responsive preloading!
 
 Let's look at an example (see it on GitHub — [source code](https://github.com/mdn/html-examples/tree/main/link-rel-preload/media), [live example](https://mdn.github.io/html-examples/link-rel-preload/media/)):
 
@@ -177,7 +177,7 @@ Let's look at an example (see it on GitHub — [source code](https://github.com/
 </body>
 ```
 
-We include `media` attributes on our `<link>` elements so that a narrow image is preloaded if the user has a narrow viewport, and a wider image is loaded if they have a wide viewport. We use {{domxref("Window.matchMedia")}} / {{domxref("MediaQueryList")}} to do this (see [Testing media queries](/en-US/docs/Web/CSS/CSS_media_queries/Testing_media_queries) for more).
+We include `media` attributes on our `<link>` elements so that a narrow image is preloaded if the user has a narrow viewport, and a wider image is loaded if they have a wide viewport. We use {{domxref("Window.matchMedia")}} / {{domxref("MediaQueryList")}} to do this (see [Testing media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Testing) for more).
 
 This same technique also applies to other resource types. For example, when used with fonts, preloading makes it more likely the font will be available at render time, reducing the chance of a flash of unstyled text (FOUT).
 

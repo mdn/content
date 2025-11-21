@@ -19,7 +19,7 @@ This article provides information about the changes in Firefox 111 that affect d
 
 - CSS color functions `color()`, `lab()`, `lch()`, `oklab()`, and `oklch()` are now supported.
   These features are disabled by default and can be enabled by setting the preference `layout.css.more_color_4.enabled` to true.
-  For more information, see the [CSS color value](/en-US/docs/Web/CSS/color_value) documentation ([Firefox bug 1352757](https://bugzil.la/1352757) and [Firefox bug 1128204](https://bugzil.la/1128204)).
+  For more information, see the [CSS color value](/en-US/docs/Web/CSS/Reference/Values/color_value) documentation ([Firefox bug 1352757](https://bugzil.la/1352757) and [Firefox bug 1128204](https://bugzil.la/1128204)).
 
 ### JavaScript
 

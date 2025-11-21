@@ -8,6 +8,8 @@ sidebar: cssref
 
 The **`background-blend-mode`** [CSS](/en-US/docs/Web/CSS) property sets how an element's background images should blend with each other and with the element's background color.
 
+Blending modes should be defined in the same order as the {{cssxref("background-image")}} property. If the blending modes' and background images' list lengths are not equal, it will be repeated and/or truncated until lengths match.
+
 {{InteractiveExample("CSS Demo: background-blend-mode")}}
 
 ```css interactive-example-choice
@@ -42,8 +44,6 @@ background-blend-mode: difference;
   height: 305px;
 }
 ```
-
-Blending modes should be defined in the same order as the {{cssxref("background-image")}} property. If the blending modes' and background images' list lengths are not equal, it will be repeated and/or truncated until lengths match.
 
 ## Syntax
 

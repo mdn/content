@@ -123,7 +123,7 @@ z-index: 7;
 
 For a positioned box (that is, one with any `position` other than `static`), the `z-index` property specifies:
 
-1. The stack level of the box in the current [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context).
+1. The stack level of the box in the current [stacking context](/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_context).
 2. Whether the box establishes a local stacking context.
 
 ## Syntax
@@ -227,4 +227,4 @@ The `z-index` property is specified as either the keyword `auto` or an `<integer
 ## See also
 
 - CSS {{Cssxref("position")}} property
-- [Understanding CSS z-indexes](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)
+- [Understanding CSS z-indexes](/en-US/docs/Web/CSS/Guides/Positioned_layout/Understanding_z-index)

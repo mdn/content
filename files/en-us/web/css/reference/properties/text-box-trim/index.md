@@ -287,5 +287,5 @@ Try changing the `<select>` values to see the effect they have on the display te
 ## See also
 
 - {{cssxref("text-box")}}, {{cssxref("text-box-edge")}}
-- [CSS inline layout](/en-US/docs/Web/CSS/CSS_inline_layout) module
+- [CSS inline layout](/en-US/docs/Web/CSS/Guides/Inline_layout) module
 - [CSS text-box-trim](https://developer.chrome.com/blog/css-text-box-trim) on developer.chrome.com (2025)

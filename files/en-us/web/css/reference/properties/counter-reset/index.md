@@ -6,7 +6,7 @@ browser-compat: css.properties.counter-reset
 sidebar: cssref
 ---
 
-The **`counter-reset`** [CSS](/en-US/docs/Web/CSS) property creates named [CSS counters](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) and initializes them to a specific value. It supports creating counters that count up from one to the number of elements, as well as those that count down from the number of elements to one.
+The **`counter-reset`** [CSS](/en-US/docs/Web/CSS) property creates named [CSS counters](/en-US/docs/Web/CSS/Guides/Counter_styles/Using_counters) and initializes them to a specific value. It supports creating counters that count up from one to the number of elements, as well as those that count down from the number of elements to one.
 
 {{InteractiveExample("CSS Demo: counter-reset")}}
 
@@ -110,7 +110,7 @@ The `counter-reset` property accepts a list of one or more space-separated count
 The `counter-reset` property can create both regular and, in browsers that support it, reversed counters. You can create multiple regular and reversed counters, each separated by a space. Counters can be a standalone name or a space-separated name-value pair.
 
 > [!WARNING]
-> There is [a difference between `counter-reset` and `counter-set` properties](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters#difference_between_counter-set_and_counter-reset). After creating a counter using `counter-reset`, you can adjust its value by using the {{cssxref("counter-set")}} property. This is counterintuitive because, despite its name, the `counter-reset` property is used for creating and initializing counters, while the `counter-set` property is used for resetting the value of an existing counter.
+> There is [a difference between `counter-reset` and `counter-set` properties](/en-US/docs/Web/CSS/Guides/Counter_styles/Using_counters#difference_between_counter-set_and_counter-reset). After creating a counter using `counter-reset`, you can adjust its value by using the {{cssxref("counter-set")}} property. This is counterintuitive because, despite its name, the `counter-reset` property is used for creating and initializing counters, while the `counter-set` property is used for resetting the value of an existing counter.
 
 Setting `counter-increment: none` on a selector with greater specificity overrides the creation of the named counter set on selectors with lower specificity.
 
@@ -238,12 +238,12 @@ In the output, the items are numbered in reversed order from 5 to 1. Notice in t
 
 ## See also
 
-- [Using CSS Counters](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) guide
+- [Using CSS Counters](/en-US/docs/Web/CSS/Guides/Counter_styles/Using_counters) guide
 - {{cssxref("counter-increment")}} property
 - {{cssxref("counter-set")}} property
 - {{cssxref("@counter-style")}} at-rule
 - {{cssxref("counter", "counter()")}} and {{cssxref("counters", "counters()")}} functions
 - {{cssxref("content")}} property
 - {{cssxref("::marker")}} pseudo-class
-- [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
-- [CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles) module
+- [CSS lists and counters](/en-US/docs/Web/CSS/Guides/Lists) module
+- [CSS counter styles](/en-US/docs/Web/CSS/Guides/Counter_styles) module

@@ -26,7 +26,7 @@ It can be particularly noticeable in contexts like the task switcher or when the
 ### Values
 
 - `theme_color`
-  - : A string that specifies a valid [color value](/en-US/docs/Web/CSS/color_value).
+  - : A string that specifies a valid [color value](/en-US/docs/Web/CSS/Reference/Values/color_value).
 
     > [!NOTE]
     > Browsers may ignore the alpha component of the color based on the context.

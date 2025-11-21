@@ -6,7 +6,7 @@ browser-compat: css.at-rules.container
 sidebar: cssref
 ---
 
-The **`@container`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rules) is a conditional group rule that applies styles to a [containment context](/en-US/docs/Web/CSS/CSS_containment/Container_queries#naming_containment_contexts).
+The **`@container`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules) is a conditional group rule that applies styles to a [containment context](/en-US/docs/Web/CSS/Guides/Containment/Container_queries#naming_containment_contexts).
 Style declarations are filtered by a condition and applied to the container if the condition is true.
 The condition is evaluated when the queried container size, [`<style-feature>`](#container_style_queries), or scroll-state changes.
 
@@ -127,7 +127,7 @@ The `<container-condition>` queries include [size](#size_container_descriptors) 
 
 #### Size container descriptors
 
-The `<container-condition>` can include one or more boolean size queries, each within a set of parentheses. A size query includes a size descriptor, a value, and — depending on the descriptor — a comparison operator. The queries always measures the [content box](/en-US/docs/Web/CSS/box-edge#content-box) as the comparison. The syntax for including multiple conditions is the same as for [`@media`](/en-US/docs/Web/CSS/Reference/At-rules/@media) size feature queries.
+The `<container-condition>` can include one or more boolean size queries, each within a set of parentheses. A size query includes a size descriptor, a value, and — depending on the descriptor — a comparison operator. The queries always measures the [content box](/en-US/docs/Web/CSS/Reference/Values/box-edge#content-box) as the comparison. The syntax for including multiple conditions is the same as for [`@media`](/en-US/docs/Web/CSS/Reference/At-rules/@media) size feature queries.
 
 ```css
 @container (min-width: 400px) {
@@ -217,7 +217,7 @@ Supported keywords for scroll-state container descriptors include physical and {
     ```
 
 - `snapped`
-  - : Queries whether the container is going to be snapped to a [scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) container ancestor along the given axis. Valid `snapped` values include the following keywords:
+  - : Queries whether the container is going to be snapped to a [scroll snap](/en-US/docs/Web/CSS/Guides/Scroll_snap) container ancestor along the given axis. Valid `snapped` values include the following keywords:
     - `none`
       - : The container is not a scroll [snap target](/en-US/docs/Glossary/Scroll_snap#snap_target) for its ancestor scroll container. When implementing a `snapped: none` query, containers that _are_ snap targets for the scroll container will _not_ have the `@container` styles applied, whereas non-snap targets _will_ have the styles applied.
     - `x`
@@ -406,7 +406,7 @@ The following query evaluates to true and applies the declared style if the cont
 
 ### Container style queries
 
-Container queries can also evaluate the computed style of the container element. A _container style query_ is a `@container` query that uses one or more `style()` functional notations. The boolean syntax and logic combining style features into a style query is the same as for [CSS feature queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries).
+Container queries can also evaluate the computed style of the container element. A _container style query_ is a `@container` query that uses one or more `style()` functional notations. The boolean syntax and logic combining style features into a style query is the same as for [CSS feature queries](/en-US/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries).
 
 ```css
 @container style(<style-feature>),
@@ -417,7 +417,7 @@ Container queries can also evaluate the computed style of the container element.
 }
 ```
 
-The parameter of each `style()` is a single `<style-feature>`. A **`<style-feature>`** is a valid CSS [declaration](/en-US/docs/Web/CSS/CSS_syntax/Syntax#css_declarations), a CSS property, or a [`<custom-property-name>`](/en-US/docs/Web/CSS/var#values).
+The parameter of each `style()` is a single `<style-feature>`. A **`<style-feature>`** is a valid CSS [declaration](/en-US/docs/Web/CSS/Guides/Syntax/Introduction#css_declarations), a CSS property, or a [`<custom-property-name>`](/en-US/docs/Web/CSS/Reference/Values/var#values).
 
 ```css
 @container style(--themeBackground),
@@ -432,7 +432,7 @@ A style feature without a value evaluates to true if the computed value is diffe
 
 If the `<style-feature>` passed as the `style()` function's argument is a declaration, the style query evaluates to true if the declaration's value is the same as the computed value of that property for the container being queried. Otherwise, it resolves to false.
 
-The following container query checks if the [computed value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value) of the container element's `--accent-color` is `blue`:
+The following container query checks if the [computed value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#computed_value) of the container element's `--accent-color` is `blue`:
 
 ```css
 @container style(--accent-color: blue) {
@@ -449,7 +449,7 @@ The global `revert` and `revert-layer` are invalid as values in a `<style-featur
 
 ### Scroll-state queries
 
-See [Using container scroll-state queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries) for full walkthroughs of scroll-state query examples.
+See [Using container scroll-state queries](/en-US/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries) for full walkthroughs of scroll-state query examples.
 
 ## Specifications
 
@@ -461,12 +461,12 @@ See [Using container scroll-state queries](/en-US/docs/Web/CSS/CSS_conditional_r
 
 ## See also
 
-- [Using container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries)
-- [Using container size and style queries](/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries)
-- [Using container scroll-state queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries)
+- [Using container queries](/en-US/docs/Web/CSS/Guides/Containment/Container_queries)
+- [Using container size and style queries](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries)
+- [Using container scroll-state queries](/en-US/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries)
 - {{Cssxref("container-name")}}
 - {{Cssxref("container-type")}}
 - {{Cssxref("contain")}}
 - {{Cssxref("content-visibility")}}
-- [CSS containment module](/en-US/docs/Web/CSS/CSS_containment)
+- [CSS containment module](/en-US/docs/Web/CSS/Guides/Containment)
 - [CSS at-rule functions](/en-US/docs/Web/CSS/Reference/At-rules/At-rule_functions)

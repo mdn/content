@@ -6,7 +6,7 @@ browser-compat: css.properties.scroll-margin-inline
 sidebar: cssref
 ---
 
-The `scroll-margin-inline` [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) sets the scroll margins of an element in the inline dimension.
+The `scroll-margin-inline` [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) sets the scroll margins of an element in the inline dimension.
 
 {{InteractiveExample("CSS Demo: scroll-margin-inline")}}
 
@@ -212,5 +212,5 @@ Try it for yourself:
 
 ## See also
 
-- [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap)
+- [CSS scroll snap](/en-US/docs/Web/CSS/Guides/Scroll_snap)
 - [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap)

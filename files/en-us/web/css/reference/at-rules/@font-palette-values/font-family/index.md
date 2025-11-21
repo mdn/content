@@ -17,7 +17,7 @@ The [@font-palette-values](/en-US/docs/Web/CSS/Reference/At-rules/@font-palette-
 }
 ```
 
-Other palette values that follow apply only to the specified font family. You can create [@font-palette-values](/en-US/docs/Web/CSS/Reference/At-rules/@font-palette-values) for other font families by using the same [&lt;dashed-ident&gt;s](/en-US/docs/Web/CSS/dashed-ident). This means that if you have multiple Color Fonts and can use the same identifier for each.
+Other palette values that follow apply only to the specified font family. You can create [@font-palette-values](/en-US/docs/Web/CSS/Reference/At-rules/@font-palette-values) for other font families by using the same [&lt;dashed-ident&gt;s](/en-US/docs/Web/CSS/Reference/Values/dashed-ident). This means that if you have multiple Color Fonts and can use the same identifier for each.
 
 ### Values
 
@@ -109,7 +109,7 @@ h2 {
 ## See also
 
 - {{cssxref("@font-face/font-family", "font-family")}}
-- {{cssxref("@font-palette-values/", "@font-palette-values")}}
+- {{cssxref("@font-palette-values")}}
 - {{cssxref("@font-palette-values/override-colors", "override-colors")}} descriptor
 - {{cssxref("font-palette")}} property
 - {{domxref("CSSFontPaletteValuesRule.fontFamily")}}

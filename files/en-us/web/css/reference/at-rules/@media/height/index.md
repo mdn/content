@@ -6,7 +6,7 @@ browser-compat: css.at-rules.media.height
 sidebar: cssref
 ---
 
-The **`height`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Reference/At-rules/@media#media_features) can be used to apply styles based on the height of the {{glossary("viewport")}} (or the page box, for [paged media](/en-US/docs/Web/CSS/CSS_paged_media)).
+The **`height`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Reference/At-rules/@media#media_features) can be used to apply styles based on the height of the {{glossary("viewport")}} (or the page box, for [paged media](/en-US/docs/Web/CSS/Guides/Paged_media)).
 
 ## Syntax
 
@@ -59,5 +59,5 @@ The `height` feature is specified as a {{cssxref("&lt;length&gt;")}} value repre
 
 ## See also
 
-- [Using media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Using media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using)
 - [@media](/en-US/docs/Web/CSS/Reference/At-rules/@media)

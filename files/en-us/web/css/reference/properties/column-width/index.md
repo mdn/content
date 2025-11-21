@@ -8,6 +8,8 @@ sidebar: cssref
 
 The **`column-width`** [CSS](/en-US/docs/Web/CSS) property sets the ideal column width in a multi-column layout. The container will have as many columns as can fit without any of them having a width less than the `column-width` value. If the width of the container is narrower than the specified value, the single column's width will be smaller than the declared column width.
 
+This property can help you create responsive designs that fit different screen sizes. Especially in the presence of the {{cssxref("column-count")}} property (which has precedence), you must specify all related length values to achieve an exact column width. In horizontal text these are {{cssxref('width')}}, `column-width`, {{cssxref('column-gap')}}, and {{cssxref('column-rule-width')}}.
+
 {{InteractiveExample("CSS Demo: column-width")}}
 
 ```css interactive-example-choice
@@ -45,8 +47,6 @@ column-width: 18ch;
   text-align: left;
 }
 ```
-
-This property can help you create responsive designs that fit different screen sizes. Especially in the presence of the {{cssxref("column-count")}} property (which has precedence), you must specify all related length values to achieve an exact column width. In horizontal text these are {{cssxref('width')}}, `column-width`, {{cssxref('column-gap')}}, and {{cssxref('column-rule-width')}}.
 
 ## Syntax
 
@@ -122,4 +122,4 @@ The `column-width` property is specified as one of the values listed below.
 ## See also
 
 - [Learn: Multiple-column Layout](/en-US/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout) (Learn Layout)
-- [Basic Concepts of Multicol](/en-US/docs/Web/CSS/CSS_multicol_layout/Basic_concepts)
+- [Basic Concepts of Multicol](/en-US/docs/Web/CSS/Guides/Multicol_layout/Basic_concepts)

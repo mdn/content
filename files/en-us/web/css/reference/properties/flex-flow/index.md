@@ -6,7 +6,7 @@ browser-compat: css.properties.flex-flow
 sidebar: cssref
 ---
 
-The **`flex-flow`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) specifies the direction of a flex container, as well as its wrapping behavior.
+The **`flex-flow`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) specifies the direction of a flex container, as well as its wrapping behavior.
 
 {{InteractiveExample("CSS Demo: flex-flow")}}
 
@@ -123,5 +123,5 @@ In this example, the main-axis is the block direction with a reversed main-start
 
 ## See also
 
-- [Basic concepts of flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- [Ordering flex items](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)
+- [Basic concepts of flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
+- [Ordering flex items](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items)

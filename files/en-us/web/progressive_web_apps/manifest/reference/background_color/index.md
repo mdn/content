@@ -25,7 +25,7 @@ This color appears in the application window before your application's styleshee
 ### Values
 
 - `background_color`
-  - : A string that specifies a valid [color value](/en-US/docs/Web/CSS/color_value).
+  - : A string that specifies a valid [color value](/en-US/docs/Web/CSS/Reference/Values/color_value).
 
 ## Description
 

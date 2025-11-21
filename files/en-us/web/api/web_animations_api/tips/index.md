@@ -10,7 +10,7 @@ CSS animations make it possible to do incredible things with the elements that m
 
 ## Run an animation again
 
-The [CSS Animations](/en-US/docs/Web/CSS/CSS_animations) specification doesn't offer a way to run an animation again. You can't just set the element's {{cssxref("animation-play-state")}} to `"running"` again once the animation ends. Instead, you have to use JavaScript to get a completed animation to replay.
+The [CSS Animations](/en-US/docs/Web/CSS/Guides/Animations) specification doesn't offer a way to run an animation again. You can't just set the element's {{cssxref("animation-play-state")}} to `"running"` again once the animation ends. Instead, you have to use JavaScript to get a completed animation to replay.
 
 This is one way to do it that is a stable and reliable method.
 
@@ -128,4 +128,4 @@ In the case of [`animation-fill-mode: forwards`](/en-US/docs/Web/CSS/Reference/P
 
 - [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
 - [Animation Interface](/en-US/docs/Web/API/Animation/Animation)
-- [CSS animations](/en-US/docs/Web/CSS/CSS_animations) module
+- [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module

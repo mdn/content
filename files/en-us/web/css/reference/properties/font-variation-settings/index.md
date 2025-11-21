@@ -6,7 +6,7 @@ browser-compat: css.properties.font-variation-settings
 sidebar: cssref
 ---
 
-The **`font-variation-settings`** [CSS](/en-US/docs/Web/CSS) property provides low-level control over [variable font](/en-US/docs/Web/CSS/CSS_fonts/Variable_fonts_guide) characteristics by letting you specify the four letter axis names of the characteristics you want to vary along with their values.
+The **`font-variation-settings`** [CSS](/en-US/docs/Web/CSS) property provides low-level control over [variable font](/en-US/docs/Web/CSS/Guides/Fonts/Variable_fonts) characteristics by letting you specify the four letter axis names of the characteristics you want to vary along with their values.
 
 {{InteractiveExample("CSS Demo: font-variation-settings")}}
 
@@ -136,7 +136,7 @@ To use variable fonts on your operating system, you need to make sure that it is
 
 ## Examples
 
-You can find a number of other variable font examples in our [Variable fonts](/en-US/docs/Web/CSS/CSS_fonts/Variable_fonts_guide) guide.
+You can find a number of other variable font examples in our [Variable fonts](/en-US/docs/Web/CSS/Guides/Fonts/Variable_fonts) guide.
 
 ### Controlling variable font weight (wght)
 
@@ -318,7 +318,7 @@ angle.addEventListener("input", (e) => {
 
 ## See also
 
-- [Variable fonts guide](/en-US/docs/Web/CSS/CSS_fonts/Variable_fonts_guide)
+- [Variable fonts guide](/en-US/docs/Web/CSS/Guides/Fonts/Variable_fonts)
 - [OpenType font variations overview](https://learn.microsoft.com/en-us/typography/opentype/spec/otvaroverview) on microsoft.com
 - [OpenType design-variation axis tag registry](https://learn.microsoft.com/en-us/typography/opentype/spec/dvaraxisreg) on microsoft.com
 - [OpenType variable fonts](https://www.axis-praxis.org/) on axis-praxis.org

@@ -49,5 +49,5 @@ video:volume-locked {
 - {{cssxref(":playing")}}
 - {{cssxref(":seeking")}}
 - {{cssxref(":stalled")}}
-- [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors)
+- [CSS selectors](/en-US/docs/Web/CSS/Guides/Selectors)
 - [`volume`](/en-US/docs/Web/API/HTMLMediaElement/volume) property of {{domxref("HTMLMediaElement")}} objects

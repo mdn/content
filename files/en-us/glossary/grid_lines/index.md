@@ -5,7 +5,7 @@ page-type: glossary-definition
 sidebar: glossarysidebar
 ---
 
-**Grid lines** are created anytime you use a [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout).
+**Grid lines** are created anytime you use a [CSS grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout).
 
 ## Example
 
@@ -54,7 +54,7 @@ In the following example there is a grid with three column tracks and two row tr
 
 {{ EmbedLiveSample('Example', '500', '250') }}
 
-Lines can be addressed using their line number. In a left-to-right language such as English, column line 1 will be on the left of the grid, row line 1 on the top. Lines numbers respect the [writing mode](/en-US/docs/Web/CSS/CSS_writing_modes) of the document and so in a right-to-left language for example, column line 1 will be on the right of the grid. The image below shows the line numbers of the grid, assuming the language is left-to-right.
+Lines can be addressed using their line number. In a left-to-right language such as English, column line 1 will be on the left of the grid, row line 1 on the top. Lines numbers respect the [writing mode](/en-US/docs/Web/CSS/Guides/Writing_modes) of the document and so in a right-to-left language for example, column line 1 will be on the right of the grid. The image below shows the line numbers of the grid, assuming the language is left-to-right.
 
 ![Diagram showing the grid with lines numbered.](1_diagram_numbered_grid_lines.png)
 
@@ -174,8 +174,8 @@ The lines created in the _explicit grid_ can be named, by adding the name in squ
 ### Further reading
 
 - CSS grid layout guides:
-  - [Basic concepts of grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
-  - [Line-based placement with CSS grid](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
-  - [Layout using named grid lines](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
-  - [CSS grids, logical values and writing modes](/en-US/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
+  - [Basic concepts of grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)
+  - [Line-based placement with CSS grid](/en-US/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)
+  - [Layout using named grid lines](/en-US/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines)
+  - [CSS grids, logical values and writing modes](/en-US/docs/Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes)
 - [Definition of grid lines in the CSS grid layout specification](https://drafts.csswg.org/css-grid/#grid-line-concept)

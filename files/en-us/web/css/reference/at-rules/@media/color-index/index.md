@@ -51,11 +51,11 @@ p {
 This HTML will apply a special stylesheet for devices that have at least 256 colors.
 
 ```html
-<link rel="stylesheet" href="http://foo.bar.com/base.css" />
+<link rel="stylesheet" href="https://cdn.example.com/base.css" />
 <link
   rel="stylesheet"
   media="(color-index >= 256)"
-  href="http://foo.bar.com/color-stylesheet.css" />
+  href="https://cdn.example.com/color-stylesheet.css" />
 ```
 
 ## Specifications
@@ -68,5 +68,5 @@ This HTML will apply a special stylesheet for devices that have at least 256 col
 
 ## See also
 
-- [Using Media Queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Using Media Queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using)
 - [@media](/en-US/docs/Web/CSS/Reference/At-rules/@media)

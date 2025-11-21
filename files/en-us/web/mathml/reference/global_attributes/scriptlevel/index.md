@@ -6,7 +6,7 @@ browser-compat: mathml.global_attributes.scriptlevel
 sidebar: mathmlref
 ---
 
-The **`scriptlevel`** [global attribute](/en-US/docs/Web/MathML/Reference/Global_attributes) sets the [math-depth](/en-US/docs/Web/CSS/Reference/Properties/math-depth) of a MathML element. It allows overriding rules from the [user agent stylesheet](/en-US/docs/Web/CSS/CSS_cascade/Cascade#user-agent_stylesheets) that define automatic calculation of [font-size](/en-US/docs/Web/CSS/Reference/Properties/font-size) within MathML formulas.
+The **`scriptlevel`** [global attribute](/en-US/docs/Web/MathML/Reference/Global_attributes) sets the [math-depth](/en-US/docs/Web/CSS/Reference/Properties/math-depth) of a MathML element. It allows overriding rules from the [user agent stylesheet](/en-US/docs/Web/CSS/Guides/Cascade/Introduction#user-agent_stylesheets) that define automatic calculation of [font-size](/en-US/docs/Web/CSS/Reference/Properties/font-size) within MathML formulas.
 
 ## Syntax
 
@@ -18,7 +18,7 @@ The **`scriptlevel`** [global attribute](/en-US/docs/Web/MathML/Reference/Global
 
 ### Values
 
-If `<U>` is an unsigned [integer](/en-US/docs/Web/CSS/integer) (i.e., with prefix sign symbol removed) then the accepted values are:
+If `<U>` is an unsigned [integer](/en-US/docs/Web/CSS/Reference/Values/integer) (i.e., with prefix sign symbol removed) then the accepted values are:
 
 - `<U>`
   - : Sets the `math-depth` to value `<U>`. This will set `font-size` of the element to the same value as the one of elements at the specified depth.

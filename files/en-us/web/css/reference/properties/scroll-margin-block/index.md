@@ -6,7 +6,7 @@ browser-compat: css.properties.scroll-margin-block
 sidebar: cssref
 ---
 
-The `scroll-margin-block` [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) sets the scroll margins of an element in the block dimension.
+The `scroll-margin-block` [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) sets the scroll margins of an element in the block dimension.
 
 {{InteractiveExample("CSS Demo: scroll-margin-block")}}
 
@@ -119,5 +119,5 @@ The scroll-margin values represent outsets defining the scroll snap area that is
 
 ## See also
 
-- [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap)
+- [CSS scroll snap](/en-US/docs/Web/CSS/Guides/Scroll_snap)
 - [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap)

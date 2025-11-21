@@ -65,7 +65,7 @@ ol {
 
 ### Parameters
 
-The `:is()` pseudo-class requires a [selector list](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#selector_list), a comma-separated list of one or more selectors as its argument. The list must not contain a [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements), but any other simple, compound, and complex selectors are allowed.
+The `:is()` pseudo-class requires a [selector list](/en-US/docs/Web/CSS/Guides/Selectors/Selector_structure#selector_list), a comma-separated list of one or more selectors as its argument. The list must not contain a [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements), but any other simple, compound, and complex selectors are allowed.
 
 ### Difference between :is() and :where()
 
@@ -268,6 +268,6 @@ some-element::after {
 
 ## See also
 
-- {{CSSxRef(":where", ":where()")}} - Like `:is()`, but with 0 [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity).
+- {{CSSxRef(":where", ":where()")}} - Like `:is()`, but with 0 [specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity).
 - [Selector list](/en-US/docs/Web/CSS/Reference/Selectors/Selector_list)
 - [Web components](/en-US/docs/Web/API/Web_components)

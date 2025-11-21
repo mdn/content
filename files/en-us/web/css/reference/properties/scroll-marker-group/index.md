@@ -55,7 +55,7 @@ scroll-marker-group: unset;
 
 ## Examples
 
-See [Creating CSS carousels](/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels) for full examples that use the `scroll-marker-group` property.
+See [Creating CSS carousels](/en-US/docs/Web/CSS/Guides/Overflow/Carousels) for full examples that use the `scroll-marker-group` property.
 
 ### Placement of the scroll markers
 
@@ -187,6 +187,6 @@ Note the placement of the scroll marker group container. Check out how the keybo
 - {{cssxref("::scroll-marker-group")}}
 - {{cssxref("::scroll-marker")}}
 - {{cssxref(":target-current")}}
-- [Creating CSS carousels](/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels)
-- [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
+- [Creating CSS carousels](/en-US/docs/Web/CSS/Guides/Overflow/Carousels)
+- [CSS overflow](/en-US/docs/Web/CSS/Guides/Overflow) module
 - [CSS Carousel Gallery](https://chrome.dev/carousel/) via chrome.dev (2025)

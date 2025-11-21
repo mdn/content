@@ -401,6 +401,28 @@ W
 
 - {{CSSxRef(":where", ":where()")}}
 
+### Non-standard pseudo-classes
+
+Non-standard vendor-prefixed pseudo-classes include:
+
+#### `-moz-` prefix
+
+- {{CSSxRef(":-moz-broken")}}
+- {{CSSxRef(":-moz-drag-over")}}
+- {{CSSxRef(":-moz-first-node")}}
+- {{CSSxRef(":-moz-handler-blocked")}}
+- {{CSSxRef(":-moz-handler-crashed")}}
+- {{CSSxRef(":-moz-handler-disabled")}}
+- {{CSSxRef(":-moz-last-node")}}
+- {{CSSxRef(":-moz-loading")}}
+- {{CSSxRef(":-moz-locale-dir_ltr", ":-moz-locale-dir(ltr)")}}
+- {{CSSxRef(":-moz-locale-dir_rtl", ":-moz-locale-dir(rtl)")}}
+- {{CSSxRef(":-moz-only-whitespace")}}
+- {{CSSxRef(":-moz-submit-invalid")}}
+- {{CSSxRef(":-moz-suppressed")}}
+- {{CSSxRef(":-moz-user-disabled")}}
+- {{CSSxRef(":-moz-window-inactive")}}
+
 ## Specifications
 
 {{Specifications}}
@@ -408,4 +430,4 @@ W
 ## See also
 
 - [Pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements)
-- [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module
+- [CSS selectors](/en-US/docs/Web/CSS/Guides/Selectors) module

@@ -116,4 +116,4 @@ The `:host { background: rgb(0 0 0 / 10%); padding: 2px 5px; }` rule styles all 
 - {{cssxref(":host-context", ":host-context()")}}
 - {{CSSxref("::slotted")}}
 - {{CSSxRef(":state",":state()")}}
-- [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) module
+- [CSS scoping](/en-US/docs/Web/CSS/Guides/Scoping) module

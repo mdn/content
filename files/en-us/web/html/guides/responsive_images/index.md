@@ -75,7 +75,7 @@ The `srcset` and `sizes` attributes look complicated, but they're not too hard t
 3. The **width of the slot** the image will fill when the media condition is true (`480px`)
 
 > [!NOTE]
-> In `sizes`, you can use any [length value](/en-US/docs/Web/CSS/length). For example, rather than providing an absolute width (for example, `480px`), you can alternatively provide a width relative to the viewport (for example, `50vw`). However, you cannot use a percentage as the slot width. You may have noticed that the last slot width has no media condition (this is the default that is chosen when none of the media conditions are true). The browser ignores everything after the first matching condition, so be careful how you order the media conditions.
+> In `sizes`, you can use any [length value](/en-US/docs/Web/CSS/Reference/Values/length). For example, rather than providing an absolute width (for example, `480px`), you can alternatively provide a width relative to the viewport (for example, `50vw`). However, you cannot use a percentage as the slot width. You may have noticed that the last slot width has no media condition (this is the default that is chosen when none of the media conditions are true). The browser ignores everything after the first matching condition, so be careful how you order the media conditions.
 
 So, with these attributes in place, the browser will:
 

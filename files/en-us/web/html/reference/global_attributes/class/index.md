@@ -41,7 +41,7 @@ The **`class`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attribu
 
 The `class` attribute is a list of class values separated by [ASCII whitespace](/en-US/docs/Glossary/Whitespace#in_html).
 
-Each class value may contain any Unicode characters (except, of course, ASCII whitespace). However, when used in CSS selectors, either from JavaScript using APIs like {{domxref("Document.querySelector()")}} or in CSS stylesheets, class attribute values must be valid [CSS identifiers](/en-US/docs/Web/CSS/ident). This means that if a class attribute value is not a valid CSS identifier (for example, `my?class` or `1234`) then it must be escaped before being used in a selector, either using the {{domxref("CSS.escape_static", "CSS.escape()")}} method or [manually](/en-US/docs/Web/CSS/ident#escaping_characters).
+Each class value may contain any Unicode characters (except, of course, ASCII whitespace). However, when used in CSS selectors, either from JavaScript using APIs like {{domxref("Document.querySelector()")}} or in CSS stylesheets, class attribute values must be valid [CSS identifiers](/en-US/docs/Web/CSS/Reference/Values/ident). This means that if a class attribute value is not a valid CSS identifier (for example, `my?class` or `1234`) then it must be escaped before being used in a selector, either using the {{domxref("CSS.escape_static", "CSS.escape()")}} method or [manually](/en-US/docs/Web/CSS/Reference/Values/ident#escaping_characters).
 
 For this reason, it's recommended that developers choose values for class attributes that are valid CSS identifiers that don't require escaping.
 

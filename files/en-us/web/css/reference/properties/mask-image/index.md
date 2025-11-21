@@ -47,7 +47,7 @@ mask-image: unset;
 
 The `mask-image` property provides a mask that hides part of the element to which it is applied. The value is a comma-separated list of mask references. Each mask reference is an `<image>`, a `<mask-source>`, or the keyword `none`.
 
-An `<image>` can be any type of image, including generated images such as [CSS gradients](/en-US/docs/Web/CSS/gradient).
+An `<image>` can be any type of image, including generated images such as [CSS gradients](/en-US/docs/Web/CSS/Reference/Values/gradient).
 
 If only one value is specified in the `mask-image` property value, and that value is `none`, no masking effect will be apparent. If multiple values are specified, a `none` value included in the list may have no direct effect, however, other `mask-*` values in the same list position will apply to a transparent black mask layer and have no visual effect.
 
@@ -81,7 +81,7 @@ The `mask-mode` value is significant, because it determines whether the masking 
 
 ### Gradient as a mask image
 
-In this example, we use an `<image>` value as a mask, defining a CSS [radial gradient](/en-US/docs/Web/CSS/gradient/radial-gradient) as our mask image to create a round image with a soft edge.
+In this example, we use an `<image>` value as a mask, defining a CSS [radial gradient](/en-US/docs/Web/CSS/Reference/Values/gradient/radial-gradient) as our mask image to create a round image with a soft edge.
 
 #### HTML
 
@@ -287,7 +287,7 @@ Toggle the checkbox to toggle the value of the `mask-mode` between `alpha` (chec
 - {{cssxref("mask-border")}}
 - {{cssxref("clip-path")}}
 - {{cssxref("background-image")}}
-- [Introduction to CSS masking](/en-US/docs/Web/CSS/CSS_masking/Masking)
-- [CSS `mask` properties](/en-US/docs/Web/CSS/CSS_masking/Mask_properties)
-- [Declaring multiple masks](/en-US/docs/Web/CSS/CSS_masking/Multiple_masks)
-- [CSS masking](/en-US/docs/Web/CSS/CSS_masking) module
+- [Introduction to CSS masking](/en-US/docs/Web/CSS/Guides/Masking/Introduction)
+- [CSS `mask` properties](/en-US/docs/Web/CSS/Guides/Masking/Mask_properties)
+- [Declaring multiple masks](/en-US/docs/Web/CSS/Guides/Masking/Multiple_masks)
+- [CSS masking](/en-US/docs/Web/CSS/Guides/Masking) module

@@ -171,7 +171,7 @@ p {
 
 ## Choices made
 
-I have chosen to use [grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) for the media object as it allows me to control the layout in two dimensions when I need to. This means that when we have a footer, with short content above, the footer can be pushed down to the bottom of the media object.
+I have chosen to use [grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout) for the media object as it allows me to control the layout in two dimensions when I need to. This means that when we have a footer, with short content above, the footer can be pushed down to the bottom of the media object.
 
 Another reason to use grid layout is in order that I can use {{cssxref("fit-content")}} for the track sizing of the image. By using `fit-content` with a maximum size of 200 pixels, when we have a small image such as the icon, the track only gets as large as the size of that image — the `max-content` size. If the image is larger, the track stops growing at 200 pixels and as the image has a {{cssxref("max-width")}} of 100% applied, it scales down so that it continues to fit inside the column.
 
@@ -184,5 +184,5 @@ When we nest one media object inside another we need to place it into the second
 ## See also
 
 - {{cssxref("fit-content")}} property
-- [Using grid template areas](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
-- [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) module
+- [Using grid template areas](/en-US/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas)
+- [CSS grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout) module

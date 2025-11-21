@@ -15,7 +15,7 @@ The `color` feature is specified as an {{cssxref("&lt;integer&gt;")}} value that
 > [!NOTE]
 > If the various color components are represented by different numbers of bits, the smallest number is used. For example, if a display uses 5 bits for blue and red and 6 bits for green, then the device is considered to use 5 bits per color component. If the device uses indexed colors, the minimum number of bits per color component in the color table is used.
 
-See [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color) to learn more about using CSS to apply color to HTML.
+See [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/Guides/Colors/Applying_color) to learn more about using CSS to apply color to HTML.
 
 ## Examples
 

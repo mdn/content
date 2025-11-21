@@ -6,7 +6,7 @@ browser-compat: css.at-rules.property
 sidebar: cssref
 ---
 
-The **`@property`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rules) is part of the [CSS Houdini](/en-US/docs/Web/API/Houdini_APIs) set of APIs. It allows developers to explicitly define [CSS custom properties](/en-US/docs/Web/CSS/Reference/Properties/--*), allowing for property type checking and constraining, setting default values, and defining whether a custom property can inherit values or not.
+The **`@property`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules) is part of the [CSS Houdini](/en-US/docs/Web/API/Houdini_APIs) set of APIs. It allows developers to explicitly define [CSS custom properties](/en-US/docs/Web/CSS/Reference/Properties/--*), allowing for property type checking and constraining, setting default values, and defining whether a custom property can inherit values or not.
 
 The `@property` rule represents a custom property registration directly in a stylesheet without having to run any JavaScript. Valid `@property` rules result in a registered custom property, which is similar to calling {{domxref('CSS.registerProperty_static', 'registerProperty()')}} with equivalent parameters.
 
@@ -20,7 +20,7 @@ The `@property` rule represents a custom property registration directly in a sty
 }
 ```
 
-The custom property name is a [`<dashed-ident>`](/en-US/docs/Web/CSS/dashed-ident) that starts with `--` and is followed by a valid, user-defined identifier. It is case-sensitive.
+The custom property name is a [`<dashed-ident>`](/en-US/docs/Web/CSS/Reference/Values/dashed-ident) that starts with `--` and is followed by a valid, user-defined identifier. It is case-sensitive.
 
 ### Descriptors
 
@@ -74,7 +74,7 @@ The following code uses the CSS `@property` at-rule to define a custom property 
 }
 ```
 
-We define a second custom property, `--item-color`, using [JavaScript](/en-US/docs/Web/JavaScript) instead of CSS. The JavaScript {{domxref('CSS.registerProperty_static', 'registerProperty()')}} method is equivalent to `@property` at-rule. The property is defined to have an initial value of `aqua`, to accept only [`<color>`](/en-US/docs/Web/CSS/color_value) values, and is not inherited.
+We define a second custom property, `--item-color`, using [JavaScript](/en-US/docs/Web/JavaScript) instead of CSS. The JavaScript {{domxref('CSS.registerProperty_static', 'registerProperty()')}} method is equivalent to `@property` at-rule. The property is defined to have an initial value of `aqua`, to accept only [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value) values, and is not inherited.
 
 ```js
 window.CSS.registerProperty({
@@ -130,7 +130,7 @@ For item three, the `--item-size` value gets set to `1000px`. While `1000px` is 
 
 ### Animating a custom property value
 
-In this example, we define a custom property called `--progress` using `@property`: this accepts [`<percentage>`](/en-US/docs/Web/CSS/percentage) values and has an initial value of `25%`. We use `--progress` to define the position value of the color stops in a {{cssxref("linear-gradient()")}}, specifying where a green color stops, and black starts. We then animate the value of `--progress` to `100%` over 2.5 seconds, giving the effect of animating a progress bar.
+In this example, we define a custom property called `--progress` using `@property`: this accepts [`<percentage>`](/en-US/docs/Web/CSS/Reference/Values/percentage) values and has an initial value of `25%`. We use `--progress` to define the position value of the color stops in a {{cssxref("linear-gradient()")}}, specifying where a green color stops, and black starts. We then animate the value of `--progress` to `100%` over 2.5 seconds, giving the effect of animating a progress bar.
 
 ```html
 <div class="bar"></div>
@@ -180,5 +180,5 @@ In this example, we define a custom property called `--progress` using `@propert
 - [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API)
 - [CSS Typed Object Model](/en-US/docs/Web/API/CSS_Typed_OM_API)
 - [Houdini APIs](/en-US/docs/Web/API/Houdini_APIs)
-- [Using CSS custom properties (variables)](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) guide
-- [CSS custom properties for cascading variables](/en-US/docs/Web/CSS/CSS_cascading_variables) module
+- [Using CSS custom properties (variables)](/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties) guide
+- [CSS custom properties for cascading variables](/en-US/docs/Web/CSS/Guides/Cascading_variables) module

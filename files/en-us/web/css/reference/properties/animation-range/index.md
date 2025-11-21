@@ -6,7 +6,7 @@ browser-compat: css.properties.animation-range
 sidebar: cssref
 ---
 
-The **`animation-range`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) is used to set the start and end of an animation's attachment range along its timeline, i.e., where along the timeline an animation will start and end.
+The **`animation-range`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) is used to set the start and end of an animation's attachment range along its timeline, i.e., where along the timeline an animation will start and end.
 
 ## Constituent properties
 
@@ -59,7 +59,7 @@ One or two values representing the [`animation-range-start`](/en-US/docs/Web/CSS
 - `<timeline-range-name>`
   - : A specific named timeline range inside the overall timeline. Possible values are:
     - `cover`
-      - : Represents the full range of a _named view progress timeline_ (see [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations) for more details), from the point where the subject element first starts to enter the scroll port's view progress visibility range (0% progress) to the point where it has completely left it (100% progress).
+      - : Represents the full range of a _named view progress timeline_ (see [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) for more details), from the point where the subject element first starts to enter the scroll port's view progress visibility range (0% progress) to the point where it has completely left it (100% progress).
     - `contain`
       - : Represents the range of a _named view progress timeline_ where the subject element is fully contained by, or fully contains, the scroll port's view progress visibility range.
         - If the subject element is smaller than the scrollport, it ranges from the point where the subject element is first completely contained by the scroll port (0% progress), to the point where it is no longer completely contained by the scroll port (100% progress).
@@ -226,4 +226,4 @@ Scroll to see the subject element being animated.
 - [`scroll-timeline`](/en-US/docs/Web/CSS/Reference/Properties/scroll-timeline), [`scroll-timeline-axis`](/en-US/docs/Web/CSS/Reference/Properties/scroll-timeline-axis), [`scroll-timeline-name`](/en-US/docs/Web/CSS/Reference/Properties/scroll-timeline-name)
 - {{cssxref("timeline-scope")}}
 - [`view-timeline-inset`](/en-US/docs/Web/CSS/Reference/Properties/view-timeline-inset)
-- [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations)
+- [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations)

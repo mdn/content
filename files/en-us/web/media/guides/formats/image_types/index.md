@@ -984,7 +984,7 @@ It's not generally useful for strictly bitmap or photographic images, although i
       <th scope="row">Supported color modes</th>
       <td>
         Colors in SVG are specified using
-        <a href="/en-US/docs/Web/CSS/color_value">CSS color syntax</a>.
+        <a href="/en-US/docs/Web/CSS/Reference/Values/color_value">CSS color syntax</a>.
       </td>
     </tr>
     <tr>

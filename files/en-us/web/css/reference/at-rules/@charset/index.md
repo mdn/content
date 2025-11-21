@@ -6,9 +6,9 @@ browser-compat: css.at-rules.charset
 sidebar: cssref
 ---
 
-The **`@charset`** [CSS](/en-US/docs/Web/CSS) rule specifies the character encoding used in the style sheet. This syntax is useful when using non-{{Glossary("ASCII")}} characters in some CSS properties, like {{ cssxref("content") }}. Although the first character in `@charset` is the `@` symbol, it is not an [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rules). It is a specific byte sequence that can only be placed at the very beginning of a stylesheet. No other characters, except the Unicode byte-order mark, are allowed before it. It also does not follow normal CSS syntax rules such as use of quotes or whitespace.
+The **`@charset`** [CSS](/en-US/docs/Web/CSS) rule specifies the character encoding used in the style sheet. This syntax is useful when using non-{{Glossary("ASCII")}} characters in some CSS properties, like {{ cssxref("content") }}. Although the first character in `@charset` is the `@` symbol, it is not an [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules). It is a specific byte sequence that can only be placed at the very beginning of a stylesheet. No other characters, except the Unicode byte-order mark, are allowed before it. It also does not follow normal CSS syntax rules such as use of quotes or whitespace.
 
-If a `@charset` is not recognized as the charset declaration, it is parsed as a normal at-rule. The [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax) module deprecates this fallback behavior, defining it as an unrecognized legacy rule to be dropped when a stylesheet is grammar-checked.
+If a `@charset` is not recognized as the charset declaration, it is parsed as a normal at-rule. The [CSS syntax](/en-US/docs/Web/CSS/Guides/Syntax) module deprecates this fallback behavior, defining it as an unrecognized legacy rule to be dropped when a stylesheet is grammar-checked.
 
 As there are several ways to define the character encoding of a style sheet, the browser will try the following methods in the following order (and stop as soon as one yields a result):
 

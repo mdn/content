@@ -8,7 +8,7 @@ browser-compat: api.Element.animationend_event
 
 {{APIRef("Web Animations")}}
 
-The **`animationend`** event is fired when a [CSS Animation](/en-US/docs/Web/CSS/CSS_animations) has completed. If the animation aborts before reaching completion, such as if the element is removed from the DOM or the animation is removed from the element, the `animationend` event is not fired.
+The **`animationend`** event is fired when a [CSS Animation](/en-US/docs/Web/CSS/Guides/Animations) has completed. If the animation aborts before reaching completion, such as if the element is removed from the DOM or the animation is removed from the element, the `animationend` event is not fired.
 
 ## Syntax
 
@@ -161,7 +161,7 @@ applyAnimation.addEventListener("click", () => {
 
 ## See also
 
-- [CSS Animations](/en-US/docs/Web/CSS/CSS_animations)
-- [Using CSS Animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [CSS Animations](/en-US/docs/Web/CSS/Guides/Animations)
+- [Using CSS Animations](/en-US/docs/Web/CSS/Guides/Animations/Using)
 - {{domxref("AnimationEvent")}}
 - Related events: {{domxref("Element/animationstart_event", "animationstart")}}, {{domxref("Element/animationcancel_event", "animationcancel")}}, {{domxref("Element/animationiteration_event", "animationiteration")}}

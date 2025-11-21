@@ -95,7 +95,7 @@ if ("virtualKeyboard" in navigator) {
 ```
 
 For styles, you can also do feature detection in CSS using the [`@supports`](/en-US/docs/Web/CSS/Reference/At-rules/@supports) at-rule, combined with the `not` keyword if you want to check for the absence of a feature.
-See [Using feature queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries) for information on using this in CSS.
+See [Using feature queries](/en-US/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries) for information on using this in CSS.
 
 ```css
 @supports (display: grid) {
@@ -127,9 +127,9 @@ if (navigator.maxTouchPoints > 1) {
 }
 ```
 
-For other concerns, like layout, use modern CSS like [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) and [grid](/en-US/docs/Web/CSS/CSS_grid_layout) for flexible layouts.
+For other concerns, like layout, use modern CSS like [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) and [grid](/en-US/docs/Web/CSS/Guides/Grid_layout) for flexible layouts.
 Instead of hiding content on smaller screens, adjust the layout dynamically.
-[Media queries](/en-US/docs/Web/CSS/CSS_media_queries) should handle most layout changes, reducing the need for JavaScript-based adjustments.
+[Media queries](/en-US/docs/Web/CSS/Guides/Media_queries) should handle most layout changes, reducing the need for JavaScript-based adjustments.
 
 If you want to ensure smooth transitions when users rotate their devices or switch between different screen modes, you can look at [Detecting device orientation](/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation).
 For foldable devices, there are newer APIs such as the [Device Posture API](/en-US/docs/Web/API/Device_Posture_API), although be sure to check compatibility data as support varies widely.
@@ -309,7 +309,7 @@ If the device is large enough that it's not marked with `Mobi`, you should serve
 
 ## See also
 
-- [CSS Media Queries](/en-US/docs/Web/CSS/CSS_media_queries)
+- [CSS Media Queries](/en-US/docs/Web/CSS/Guides/Media_queries)
 - [HTTP Client hints](/en-US/docs/Web/HTTP/Guides/Client_hints)
 - [Implementing feature detection](/en-US/docs/Learn_web_development/Extensions/Testing/Feature_detection)
 - [Migrate to User-Agent Client Hints](https://web.dev/articles/migrate-to-ua-ch#strategy_legacy_support) on web.dev (2021)

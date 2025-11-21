@@ -42,15 +42,15 @@ The anchor element accepts one or more `<dashed-ident>` anchor names set on it v
 
 If multiple anchor elements have the same anchor name set on them, and that name is referenced by the `position-anchor` property value of a positioned element, that positioned element will be associated with the last anchor element with that anchor name in the source order.
 
-Anchor positioning changes the [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block) of anchor-positioned elements, making its `position` relative to its anchor rather than to the nearest positioned ancestor element.
+Anchor positioning changes the [containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block) of anchor-positioned elements, making its `position` relative to its anchor rather than to the nearest positioned ancestor element.
 
 To tether and place a positioned element in a specific location relative to an anchor element, an anchor positioning feature is needed, such as the {{cssxref("anchor()")}} function (set within an {{glossary("inset properties", "inset property's")}} value) or the {{cssxref("position-area")}} property.
 
-You cannot associate a positioned element with an anchor element if the anchor is hidden, such as with {{cssxref("display", "display: none")}} or {{cssxref("visibility", "visibility: hidden")}}, or if the anchor is part of the [skipped contents](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment#skips_its_contents) of another element due to it having {{cssxref("content-visibility", "content-visibility: hidden")}} set on it.
+You cannot associate a positioned element with an anchor element if the anchor is hidden, such as with {{cssxref("display", "display: none")}} or {{cssxref("visibility", "visibility: hidden")}}, or if the anchor is part of the [skipped contents](/en-US/docs/Web/CSS/Guides/Containment/Using#skips_its_contents) of another element due to it having {{cssxref("content-visibility", "content-visibility: hidden")}} set on it.
 
 The `anchor-name` property is supported on all elements that generate a principal box. This means that [pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements), including generated content created using {{cssxref("::before")}} and {{cssxref("::after")}}, and UI features like the [`range` input](/en-US/docs/Web/HTML/Reference/Elements/input/range) thumb ({{cssxref("::-webkit-slider-thumb")}}) can be anchor elements. Pseudo elements are implicitly anchored to the same element as the pseudo-element's originating element, unless otherwise specified.
 
-For more information on anchor features and usage, see the [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module landing page and the [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide.
+For more information on anchor features and usage, see the [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) module landing page and the [Using CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using) guide.
 
 ## Formal definition
 
@@ -383,5 +383,5 @@ Scroll the page to see how both of the infoboxes are tethered to the anchor.
 
 - {{cssxref("position-anchor")}}
 - HTML [`anchor`](/en-US/docs/Web/HTML/Reference/Global_attributes/anchor) attribute
-- [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module
-- [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide
+- [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) module
+- [Using CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using) guide

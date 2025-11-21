@@ -8,6 +8,8 @@ sidebar: cssref
 
 The **`column-span`** [CSS](/en-US/docs/Web/CSS) property makes it possible for an element to span across all columns when its value is set to `all`.
 
+An element that spans more than one column is called a **spanning element**.
+
 {{InteractiveExample("CSS Demo: column-span")}}
 
 ```css interactive-example-choice
@@ -53,8 +55,6 @@ column-span: all;
   color: white;
 }
 ```
-
-An element that spans more than one column is called a **spanning element**.
 
 ## Syntax
 
@@ -148,6 +148,6 @@ h2 {
 
 ## See also
 
-- [Spanning and balancing columns](/en-US/docs/Web/CSS/CSS_multicol_layout/Spanning_balancing_columns)
+- [Spanning and balancing columns](/en-US/docs/Web/CSS/Guides/Multicol_layout/Spanning_balancing_columns)
 - [Inline-level elements](/en-US/docs/Glossary/Inline-level_content)
 - {{domxref("HTMLSpanElement")}}

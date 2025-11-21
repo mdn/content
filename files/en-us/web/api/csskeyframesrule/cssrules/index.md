@@ -8,7 +8,7 @@ browser-compat: api.CSSKeyframesRule.cssRules
 
 {{APIRef("CSSOM") }}
 
-The read-only **`cssRules`** property of the {{domxref("CSSKeyframeRule")}} interface returns a {{domxref("CSSRuleList")}} containing the rules in the keyframes [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rules).
+The read-only **`cssRules`** property of the {{domxref("CSSKeyframeRule")}} interface returns a {{domxref("CSSRuleList")}} containing the rules in the keyframes [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules).
 
 > [!NOTE]
 > The `CSSKeyframeRule` itself is indexable like an array, and functions similarly to its `cssRules` property.

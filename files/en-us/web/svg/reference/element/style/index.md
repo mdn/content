@@ -25,7 +25,7 @@ The **`<style>`** [SVG](/en-US/docs/Web/SVG) element allows style sheets to be e
     _Value type_: [**`<media-query-list>`**](/en-US/docs/Web/CSS/Reference/At-rules/@media#syntax); _Default value_: `all`; _Animatable_: **no**
 - {{SVGAttr("title")}}
   - : This attribute is the title of the style sheet which can be used to switch between [alternate style sheets](/en-US/docs/Web/HTML/Reference/Attributes/rel/alternate_stylesheet).
-    _Value type_: [**`<string>`**](/en-US/docs/Web/CSS/string); _Default value_: _none_; _Animatable_: **no**
+    _Value type_: [**`<string>`**](/en-US/docs/Web/CSS/Reference/Values/string); _Default value_: _none_; _Animatable_: **no**
 
 ## DOM Interface
 

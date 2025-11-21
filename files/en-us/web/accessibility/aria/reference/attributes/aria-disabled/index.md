@@ -51,7 +51,7 @@ If you are purposefully using the `aria-disabled` attribute to allow for a form 
 }
 ```
 
-The [`forced-colors` media query](/en-US/docs/Web/CSS/Reference/At-rules/@media/forced-colors) detects if the [user agent](/en-US/docs/Glossary/User_agent) has enabled a forced colors mode; if so, the text and border colors are both set to the [system color `greyText`](/en-US/docs/Web/CSS/system-color#syntax).
+The [`forced-colors` media query](/en-US/docs/Web/CSS/Reference/At-rules/@media/forced-colors) detects if the [user agent](/en-US/docs/Glossary/User_agent) has enabled a forced colors mode; if so, the text and border colors are both set to the [system color `greyText`](/en-US/docs/Web/CSS/Reference/Values/system-color#syntax).
 
 Another thing to keep in mind, when using `aria-disabled` over the native HTML attribute, is that the ARIA attribute will require the manual styling necessary to visually communicate the element as disabled in Windows High Contrast Mode.
 

@@ -8,7 +8,7 @@ browser-compat: api.Element.contentvisibilityautostatechange_event
 
 {{APIRef("CSS Containment")}}
 
-The **`contentvisibilityautostatechange`** event fires on any element with {{cssxref("content-visibility", "content-visibility: auto")}} set on it when it starts or stops being [relevant to the user](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment#relevant_to_the_user) and [skipping its contents](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment#skips_its_contents).
+The **`contentvisibilityautostatechange`** event fires on any element with {{cssxref("content-visibility", "content-visibility: auto")}} set on it when it starts or stops being [relevant to the user](/en-US/docs/Web/CSS/Guides/Containment/Using#relevant_to_the_user) and [skipping its contents](/en-US/docs/Web/CSS/Guides/Containment/Using#skips_its_contents).
 
 While the element is not relevant (between the start and end events), the user agent skips an element's rendering, including layout and painting, which can significantly improve page rendering speed.
 The `contentvisibilityautostatechange` event provides a way for an app's code to also start or stop rendering processes (e.g., drawing on a {{htmlelement("canvas")}}) when they are not needed, thereby conserving processing power.
@@ -67,6 +67,6 @@ function stopCanvasUpdates(canvas) {
 ## See also
 
 - {{domxref("ContentVisibilityAutoStateChangeEvent")}}
-- [CSS Containment](/en-US/docs/Web/CSS/CSS_containment)
+- [CSS Containment](/en-US/docs/Web/CSS/Guides/Containment)
 - The {{cssxref("content-visibility")}} property
 - The {{cssxref("contain")}} property

@@ -18,7 +18,7 @@ The viewport segments API provides features that allow you to detect (in CSS and
 
 ## Viewport segment media features
 
-Two [media query](/en-US/docs/Web/CSS/CSS_media_queries) features are available that enable testing whether a device has a specific number of viewport segments laid out horizontally or vertically. These look like so:
+Two [media query](/en-US/docs/Web/CSS/Guides/Media_queries) features are available that enable testing whether a device has a specific number of viewport segments laid out horizontally or vertically. These look like so:
 
 ```css
 /* Segments are laid out horizontally. */
@@ -44,7 +44,7 @@ The {{cssxref("@media/horizontal-viewport-segments")}} media feature detects whe
 
 ## Viewport segment environment variables
 
-To be fit a layout precisely into the available viewport segments, the [viewport segment environment variables](/en-US/docs/Web/CSS/env#viewport-segment-width) provide access to each segments dimensions and placement inside the overall viewport. The browser provides [environment variables] enabling access to each segment's width and height and the offset positions of its top, right, bottom, and left edges:
+To be fit a layout precisely into the available viewport segments, the [viewport segment environment variables](/en-US/docs/Web/CSS/Reference/Values/env#viewport-segment-width) provide access to each segments dimensions and placement inside the overall viewport. The browser provides [environment variables] enabling access to each segment's width and height and the offset positions of its top, right, bottom, and left edges:
 
 - `viewport-segment-width`
 - `viewport-segment-height`

@@ -15,7 +15,7 @@ The **`overlay`** [CSS](/en-US/docs/Web/CSS) property specifies whether an eleme
 It is important to note that `overlay` can _only_ be set by the browser — author styles cannot change the `overlay` value of any element. You can, however, add `overlay` to the [list of transition properties](/en-US/docs/Web/CSS/Reference/Properties/transition-property) set on an element. This causes its removal from the top layer to be deferred so it can be animated instead of disappearing immediately.
 
 > [!NOTE]
-> When transitioning `overlay`, you need to set [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/Reference/Properties/transition-behavior) on the transition so that it will animate. `overlay` animations differ from normal [discrete animations](/en-US/docs/Web/CSS/CSS_animated_properties#discrete) in that the visible (i.e., `auto`) state will always be shown for the full duration of the transition, regardless of whether it is the start or end state.
+> When transitioning `overlay`, you need to set [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/Reference/Properties/transition-behavior) on the transition so that it will animate. `overlay` animations differ from normal [discrete animations](/en-US/docs/Web/CSS/Guides/Animations/Animatable_properties#discrete) in that the visible (i.e., `auto`) state will always be shown for the full duration of the transition, regardless of whether it is the start or end state.
 
 ## Syntax
 
@@ -51,7 +51,7 @@ overlay: unset;
 
 ### Transitioning a popover
 
-In this example, a [popover](/en-US/docs/Web/API/Popover_API) is animated as it [transitions](/en-US/docs/Web/CSS/CSS_transitions) from hidden to shown and back again.
+In this example, a [popover](/en-US/docs/Web/API/Popover_API) is animated as it [transitions](/en-US/docs/Web/CSS/Guides/Transitions) from hidden to shown and back again.
 
 #### HTML
 
@@ -160,7 +160,7 @@ The code renders as follows:
 
 ## See also
 
-- [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions) module
+- [CSS transitions](/en-US/docs/Web/CSS/Guides/Transitions) module
 - [`@starting-style`](/en-US/docs/Web/CSS/Reference/At-rules/@starting-style)
 - [`transition-behavior`](/en-US/docs/Web/CSS/Reference/Properties/transition-behavior)
 - [Four new CSS features for smooth entry and exit animations](https://developer.chrome.com/blog/entry-exit-animations/) on developer.chrome.com (2023)

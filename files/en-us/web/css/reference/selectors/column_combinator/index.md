@@ -86,4 +86,4 @@ Currently, no browsers support this feature.
 - {{CSSxRef("grid")}}
 - {{CSSxRef(":nth-of-type")}}
 - {{CSSxRef(":nth-last-of-type")}}
-- [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module
+- [CSS selectors](/en-US/docs/Web/CSS/Guides/Selectors) module

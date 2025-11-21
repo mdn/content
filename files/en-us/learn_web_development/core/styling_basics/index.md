@@ -19,7 +19,7 @@ Before starting this module, you should have a basic work environment set up (as
 ## Tutorials and challenges
 
 - [What is CSS?](/en-US/docs/Learn_web_development/Core/Styling_basics/What_is_CSS)
-  - : CSS allows you to create great-looking web pages, but how does it work under the hood? This article explains what CSS, what the basic syntax looks like, and how your browser applies CSS to HTML to style it.
+  - : CSS allows you to create great-looking web pages, but how does it work under the hood? This article explains what CSS is, what the basic syntax looks like, and how your browser applies CSS to HTML to style it.
 - [Getting started with CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Getting_started)
   - : In this article, we will take a simple HTML document and apply CSS to it, learning some practical details of the language along the way. We will also review the CSS syntax features you've not looked at yet.
 - [Styling a biography page](/en-US/docs/Learn_web_development/Core/Styling_basics/Styling_a_bio_page) <sup>Challenge</sup>
@@ -39,13 +39,13 @@ Before starting this module, you should have a basic work environment set up (as
 - [Fixing blog page styles](/en-US/docs/Learn_web_development/Core/Styling_basics/Fixing_blog_styles) <sup>Challenge</sup>
   - : In this challenge we give you a basic blog page example that is partially styled. We need you to fix some problems with the existing CSS and add some styles to finish it off. Along the way we will test your knowledge of selectors, the box model, and conflicts/cascade.
 - [Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
-  - : CSS rules contain [declarations](/en-US/docs/Web/CSS/CSS_syntax/Syntax#css_declarations), which in turn are composed of properties and values. Each property used in CSS has a **value type** that describes what kind of values it is allowed to have. In this lesson, we will take a look at some of the most frequently used value types, what they are, and how they work.
+  - : CSS rules contain [declarations](/en-US/docs/Web/CSS/Guides/Syntax/Introduction#css_declarations), which in turn are composed of properties and values. Each property used in CSS has a **value type** that describes what kind of values it is allowed to have. In this lesson, we will take a look at some of the most frequently used value types, what they are, and how they work.
 - [Sizing items in CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Sizing)
   - : Understanding how big the different features in your design will be is important. In this lesson we will summarize the various ways elements get a size via CSS and define a few terms about sizing that will help you in the future.
 - [Backgrounds and borders](/en-US/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
   - : In this lesson, we will take a look at some of the creative things you can do with CSS backgrounds and borders. From adding gradients, background images, and rounded corners, backgrounds and borders are the answer to a lot of styling questions in CSS.
 - [Challenge: Sizing and decorating a content panel](/en-US/docs/Learn_web_development/Core/Styling_basics/Size_decorate_content_panel) <sup>Challenge</sup>
-  - : In this challenge you are provided with a lightly styled page structure that renders a content panel, with a heading at the top and a button bar at the bottom. we want you to follow the instructions to size and decorate it, producing an interesting layout as a result. Along the way, we'll test your knowledge of CSS values and units, sizing, and background and borders.
+  - : In this challenge you are provided with a lightly styled page structure that renders a content panel, with a heading at the top and a button bar at the bottom. We want you to follow the instructions to size and decorate it, producing an interesting layout as a result. Along the way, we'll test your knowledge of CSS values and units, sizing, and backgrounds and borders.
 - [Overflowing content](/en-US/docs/Learn_web_development/Core/Styling_basics/Overflow)
   - : Overflow is what happens when there is too much content to fit inside an element box. In this lesson, you will learn how to manage overflow using CSS.
 - [Images, media, and form elements](/en-US/docs/Learn_web_development/Core/Styling_basics/Images_media_forms)
@@ -66,7 +66,7 @@ These tutorials are not part of the learning pathway, but they are interesting n
 - [Advanced styling effects](/en-US/docs/Learn_web_development/Core/Styling_basics/Advanced_styling_effects)
   - : This article acts as a box of tricks, providing an introduction to some interesting advanced styling features such as box shadows, blend modes, and filters.
 - [Cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
-  - : This lesson aims to introduce you to [cascade layers](/en-US/docs/Web/CSS/Reference/At-rules/@layer), a more advanced feature that builds on the fundamental concepts of the [CSS cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade) and [CSS specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity).
+  - : This lesson aims to introduce you to [cascade layers](/en-US/docs/Web/CSS/Reference/At-rules/@layer), a more advanced feature that builds on the fundamental concepts of the [CSS cascade](/en-US/docs/Web/CSS/Guides/Cascade/Introduction) and [CSS specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity).
 - [Handling different text directions](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions)
   - : In recent years, CSS has evolved in order to better support different directionality of content, including right-to-left but also top-to-bottom content (such as Japanese) — these different directionalities are called writing modes. As you progress in your study and begin to work with layout, an understanding of writing modes will be very helpful to you, therefore we will introduce them in this article.
 - [Organizing CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Organizing)

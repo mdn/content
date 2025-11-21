@@ -257,14 +257,14 @@ button:active {
 }
 ```
 
-Here we are providing an [RGB](/en-US/docs/Web/CSS/color_value/rgb) {{cssxref("background-color")}} that changes opacity on hover to give the user a hint that the button is interactive, and some semi-transparent inset {{cssxref("box-shadow")}} shades to give the button a bit of texture and depth. While now fully supported, RGB colors and box shadows haven't been around forever; starting in IE9. Browsers that didn't support RGB colors would ignore the declaration meaning in old browsers the background just wouldn't show up at all so the text would be unreadable, no good at all!
+Here we are providing an [RGB](/en-US/docs/Web/CSS/Reference/Values/color_value/rgb) {{cssxref("background-color")}} that changes opacity on hover to give the user a hint that the button is interactive, and some semi-transparent inset {{cssxref("box-shadow")}} shades to give the button a bit of texture and depth. While now fully supported, RGB colors and box shadows haven't been around forever; starting in IE9. Browsers that didn't support RGB colors would ignore the declaration meaning in old browsers the background just wouldn't show up at all so the text would be unreadable, no good at all!
 
 ![Hard to see pill button with white text on an almost white background](unreadable-button.png)
 
 To sort this out, we have added a second `background-color` declaration, which just specifies the `red` color keyword — this is supported way back in really old browsers, and acts as a fallback if the modern shiny features don't work. What happens is a browser visiting this page first applies the first `background-color` value; when it gets to the second `background-color` declaration, it will override the initial value with this value if it supports RGB colors. If not, it will just ignore the entire declaration and move on.
 
 > [!NOTE]
-> The same is true for other CSS features like [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries), [`@font-face`](/en-US/docs/Web/CSS/Reference/At-rules/@font-face) and [`@supports`](/en-US/docs/Web/CSS/Reference/At-rules/@supports) blocks — if they are not supported, the browser just ignores them.
+> The same is true for other CSS features like [media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using), [`@font-face`](/en-US/docs/Web/CSS/Reference/At-rules/@font-face) and [`@supports`](/en-US/docs/Web/CSS/Reference/At-rules/@supports) blocks — if they are not supported, the browser just ignores them.
 
 ### Selector support
 
@@ -330,7 +330,7 @@ If you do need to include modern features, test for feature support using [`@sup
 
 ### Responsive design problems
 
-Responsive design is the practice of creating web layouts that change to suit different device form factors — for example, different screen widths, orientations (portrait or landscape), or resolutions. A desktop layout for example will look terrible when viewed on a mobile device, so you need to provide a suitable mobile layout using [media queries](/en-US/docs/Web/CSS/CSS_media_queries), and make sure it is applied correctly using [viewport](/en-US/docs/Web/HTML/Reference/Elements/meta/name/viewport). You can find a detailed account of such practices in [our responsive design tutorial](/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design).
+Responsive design is the practice of creating web layouts that change to suit different device form factors — for example, different screen widths, orientations (portrait or landscape), or resolutions. A desktop layout for example will look terrible when viewed on a mobile device, so you need to provide a suitable mobile layout using [media queries](/en-US/docs/Web/CSS/Guides/Media_queries), and make sure it is applied correctly using [viewport](/en-US/docs/Web/HTML/Reference/Elements/meta/name/viewport). You can find a detailed account of such practices in [our responsive design tutorial](/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design).
 
 Resolution is a big issue too — for example, mobile devices are less likely to need big heavy images than desktop computers, and are more likely to have slower internet connections and possibly even expensive data plans that make wasted bandwidth more of a problem. In addition, different devices can have a range of different resolutions, meaning that smaller images could appear pixelated. There are a number of techniques that allow you to work around such problems, from [media queries](/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design#media_queries) to more complex [responsive image techniques](/en-US/docs/Web/HTML/Guides/Responsive_images#resolution_switching_different_sizes), including {{HTMLElement('picture')}} and the {{HTMLElement('img')}} element's [`srcset`](/en-US/docs/Web/HTML/Reference/Elements/img#srcset) and [`sizes`](/en-US/docs/Web/HTML/Reference/Elements/img#sizes) attributes.
 

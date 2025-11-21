@@ -114,5 +114,5 @@ scroll-padding-block-end: unset;
 
 ## See also
 
-- [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap)
+- [CSS scroll snap](/en-US/docs/Web/CSS/Guides/Scroll_snap)
 - [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap)

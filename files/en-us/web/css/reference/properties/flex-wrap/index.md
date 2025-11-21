@@ -74,7 +74,7 @@ The `flex-wrap` property is specified as a single keyword chosen from the follow
 - `nowrap`
   - : The flex items are laid out in a single line which may cause the flex container to overflow. The cross-start is the equivalent of [inline-start or block-start](/en-US/docs/Glossary/Flow_relative_values), depending on the {{cssxref("flex-direction")}} value. This is the default value.
 - `wrap`
-  - : The flex items break into multiple lines. The cross-start is the equivalent of [inline-start or block-start](/en-US/docs/Glossary/Flow_relative_values), depending on the current [writing mode](/en-US/docs/Web/CSS/CSS_writing_modes), and the {{cssxref("flex-direction")}} value.
+  - : The flex items break into multiple lines. The cross-start is the equivalent of [inline-start or block-start](/en-US/docs/Glossary/Flow_relative_values), depending on the current [writing mode](/en-US/docs/Web/CSS/Guides/Writing_modes), and the {{cssxref("flex-direction")}} value.
 - `wrap-reverse`
   - : Behaves the same as `wrap`, but cross-start and cross-end are inverted.
 
@@ -174,6 +174,6 @@ The `flex-wrap` property is specified as a single keyword chosen from the follow
 
 - {{CSSXRef("flex-direction")}}
 - {{CSSXRef("flex-flow")}} shorthand
-- [Basic concepts of flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- [Mastering wrapping of flex items](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)
-- [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module
+- [Basic concepts of flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
+- [Mastering wrapping of flex items](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Wrapping_items)
+- [CSS flexible box layout](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) module

@@ -33,7 +33,7 @@ Allowed values for `view-timeline-name` are:
   - : An arbitrary custom identifier defining a name for a view progress timeline, which can then be referenced in an [`animation-timeline`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline) property.
 
     > [!NOTE]
-    > [`<dashed-ident>`](/en-US/docs/Web/CSS/dashed-ident) values must start with `--`, which helps avoid name clashes with standard CSS keywords.
+    > [`<dashed-ident>`](/en-US/docs/Web/CSS/Reference/Values/dashed-ident) values must start with `--`, which helps avoid name clashes with standard CSS keywords.
 
 ## Formal definition
 
@@ -168,4 +168,4 @@ Scroll to see the subject element being animated.
 - {{cssxref("animation-timeline")}}
 - {{cssxref("timeline-scope")}}
 - {{cssxref("view-timeline")}}, {{cssxref("view-timeline-axis")}}, {{cssxref("view-timeline-inset")}}
-- [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations)
+- [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations)

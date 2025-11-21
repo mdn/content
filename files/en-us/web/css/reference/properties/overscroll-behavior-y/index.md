@@ -73,4 +73,4 @@ See {{cssxref("overscroll-behavior")}} for a full example and explanation.
 - {{cssxref("overscroll-behavior-x")}}
 - {{cssxref("overscroll-behavior-inline")}}
 - {{cssxref("overscroll-behavior-block")}}
-- [CSS overscroll behavior](/en-US/docs/Web/CSS/CSS_overscroll_behavior) module
+- [CSS overscroll behavior](/en-US/docs/Web/CSS/Guides/Overscroll_behavior) module

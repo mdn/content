@@ -10,7 +10,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`palette-mix()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) can be used to create a new {{cssxref("font-palette")}} value by blending together two `font-palette` values by specified percentages and color interpolation methods.
+The **`palette-mix()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) can be used to create a new {{cssxref("font-palette")}} value by blending together two `font-palette` values by specified percentages and color interpolation methods.
 
 ## Syntax
 
@@ -128,5 +128,5 @@ The output looks like this:
 - {{cssxref("font-palette")}}
 - {{cssxref("@font-palette-values", "@font-palette-values")}}
 - {{cssxref("color_value/color-mix", "color-mix()")}}
-- [CSS color values](/en-US/docs/Web/CSS/CSS_colors/Color_values) guide
+- [CSS color values](/en-US/docs/Web/CSS/Guides/Colors/Color_values) guide
 - {{glossary("Color space")}}
