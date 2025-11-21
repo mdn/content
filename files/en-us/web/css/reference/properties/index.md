@@ -530,6 +530,7 @@ Standard properties defined by CSS specifications include the following:
 - {{CSSxRef("text-box")}} (shorthand)
 - {{CSSxRef("text-combine-upright")}}
 - {{CSSxRef("text-decoration-color")}}
+- {{CSSxRef("text-decoration-inset")}}
 - {{CSSxRef("text-decoration-line")}}
 - {{CSSxRef("text-decoration-skip-ink")}}
 - {{CSSxRef("text-decoration-skip")}}
