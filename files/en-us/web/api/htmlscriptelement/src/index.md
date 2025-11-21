@@ -111,14 +111,16 @@ const trustedScriptURL = policy.createScriptURL(untrustedScript);
 el.src = trustedScriptURL;
 ```
 
-### Reading the `src` element
+### Reading the `src` property
 
-Assume the code is running on a website whose URL is `https://example.com`.
+This example shows how you can read the `src` property for the two script elements below, assuming page URL is `https://example.com`.
 
 ```html
 <script id="script-with-src" type="module" src="/main.js"></script>
 <script id="script-without-src" type="module"></script>
 ```
+
+The code reads each of the script elements and logs the output of the `src` property.
 
 ```js
 const scriptWithSrc = document.getElementById("script-with-src");
