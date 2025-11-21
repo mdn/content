@@ -9,7 +9,7 @@ browser-compat:
 sidebar: svgref
 ---
 
-The crossorigin attribute, valid on the {{SVGElement("image")}}, {{SVGElement("feImage")}} and {{SVGElement("script")}} elements, provides support for configuration of the Cross-Origin Resource Sharing ([CORS](/en-US/docs/Web/HTTP/Guides/CORS)) requests for the element's fetched data.
+The `crossorigin` attribute, valid on the {{SVGElement("image")}}, {{SVGElement("feImage")}}, and {{SVGElement("script")}} elements, provides support for configuration of Cross-Origin Resource Sharing ([CORS](/en-US/docs/Web/HTTP/Guides/CORS)) requests for the element's fetched data.
 
 This table shows possible keywords and their meaning:
 
