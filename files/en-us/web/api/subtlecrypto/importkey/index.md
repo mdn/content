@@ -78,9 +78,11 @@ This API supports four different key import/export formats: Raw, PKCS #8, Subjec
 
 ### Raw
 
-You can use this format to import or export AES or HMAC secret keys, or Elliptic Curve public keys.
+You can use this format to import or export AES or HMAC secret keys, or Elliptic Curve public keys (ECDSA or ECDH).
 
 In this format the key is supplied as an [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) containing the raw bytes for the key.
+
+Note that when importing Elliptic Curve public keys the data may contain _compressed_ elliptic curve points.
 
 ### PKCS #8
 
@@ -183,7 +185,8 @@ A JSON Web Key looks something like this (this is an EC private key):
 
 ### Raw import
 
-This example imports an AES key from an `ArrayBuffer` containing the raw bytes to use. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/import-key/raw.js)
+This example imports an AES key from an `ArrayBuffer` containing the raw bytes to use.
+[See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/import-key/raw.js)
 
 ```js
 const rawKey = window.crypto.getRandomValues(new Uint8Array(16));
