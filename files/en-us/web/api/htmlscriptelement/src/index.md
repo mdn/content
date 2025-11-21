@@ -48,7 +48,6 @@ This can restrict scripts to those from the current origin, or a specific set of
 
 If you're using this property and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) (using the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) CSP directive), you will need to always assign {{domxref("TrustedScriptURL")}} objects instead of strings.
 This ensures that the input is passed through a transformation function, which has the chance to reject or modify the URL before it is injected.
-If you're permitting some sources using `CSP: script-src`, the transformation function would use the sources as an allow-list.
 
 Even if the resource is trusted by your website, it may still be compromised in a [supply chain attack](/en-US/docs/Web/Security/Attacks/Supply_chain_attacks).
 To mitigate against this kind of attack you should use the [subresource integrity](/en-US/docs/Web/Security/Attacks/Supply_chain_attacks#using_subresource_integrity) feature.
@@ -70,8 +69,7 @@ if (typeof trustedTypes === "undefined")
 
 Next we create a {{domxref("TrustedTypePolicy")}} that defines a {{domxref("TrustedTypePolicy/createScriptURL", "createScriptURL()")}} method for transforming input strings into {{domxref("TrustedScriptURL")}} instances.
 
-For the purpose of this example we'll assume that we want to allow a set URLs in the `scriptAllowList` array and log any other scripts.
-Note that if we were using a `CSP: script-src` we might just be able to pass through all URLs.
+For the purpose of this example we'll assume that we want to allow a predefined set of URLs in the `scriptAllowList` array and log any other scripts.
 
 ```js
 const scriptAllowList = [
