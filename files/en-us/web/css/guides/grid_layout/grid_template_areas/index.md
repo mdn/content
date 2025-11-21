@@ -484,4 +484,4 @@ We will revisit the other functionality offered by this shorthand when we take a
 
 ## Next steps
 
-If you've been working along the [grid guides](/en-US/docs/Web/CSS/Guides/Grid_layout#guides), you should be in a position to create grid layouts using [line-based placement](/en-US/docs/Web/CSS/Guides/Grid_layout/Line-based_placement) or named areas. Now let's take a look at creating [grid layouts using named grid lines](/en-US/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines).
+If you've been working along the [grid guides](/en-US/docs/Web/CSS/Guides/Grid_layout#guides), you should be in a position to create grid layouts using [line-based placement](/en-US/docs/Web/CSS/Guides/Grid_layout/Line-based_placement) or named template areas. Now let's take a look at creating [grid layouts using named grid lines](/en-US/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines).
