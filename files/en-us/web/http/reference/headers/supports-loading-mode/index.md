@@ -20,10 +20,6 @@ The HTTP **`Supports-Loading-Mode`** {{Glossary("response header")}} allows a re
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden response header name","Forbidden response header")}}</th>
-      <td>No</td>
-    </tr>
-    <tr>
       <th scope="row">
         {{Glossary("CORS-safelisted response header")}}
       </th>

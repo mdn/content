@@ -17,10 +17,6 @@ An empty `Allow` value indicates that the resource allows no request methods, wh
       <th scope="row">Header type</th>
       <td>{{Glossary("Response header")}}</td>
     </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden response header name","Forbidden response header")}}</th>
-      <td>No</td>
-    </tr>
   </tbody>
 </table>
 

@@ -28,10 +28,6 @@ See [Using the Topics API](/en-US/docs/Web/API/Topics_API/Using) for more detail
         {{Glossary("Response header")}}
       </td>
     </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden response header name","Forbidden response header")}}</th>
-      <td>No</td>
-    </tr>
   </tbody>
 </table>
 

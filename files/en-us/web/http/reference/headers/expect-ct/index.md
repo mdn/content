@@ -41,10 +41,6 @@ CT requirements can be satisfied via any one of the following mechanisms:
       <th scope="row">Header type</th>
       <td>{{Glossary("Response header")}}</td>
     </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden response header name","Forbidden response header")}}</th>
-      <td>No</td>
-    </tr>
   </tbody>
 </table>
 

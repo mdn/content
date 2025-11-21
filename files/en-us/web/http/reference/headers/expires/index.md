@@ -21,10 +21,6 @@ The value `0` is used to represent a date in the past, indicating the resource h
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden response header name","Forbidden response header")}}</th>
-      <td>No</td>
-    </tr>
-    <tr>
       <th scope="row">
         {{Glossary("CORS-safelisted response header")}}
       </th>

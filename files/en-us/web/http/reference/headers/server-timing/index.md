@@ -16,10 +16,6 @@ It is used to surface backend server timing metrics (for example, database read/
       <th scope="row">Header type</th>
       <td>{{Glossary("Response header")}}</td>
     </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden response header name","Forbidden response header")}}</th>
-      <td>No</td>
-    </tr>
   </tbody>
 </table>
 

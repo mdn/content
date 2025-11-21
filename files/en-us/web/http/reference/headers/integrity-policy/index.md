@@ -23,10 +23,6 @@ This helps guard against content manipulation of fetched subresources.
       <th scope="row">Header type</th>
       <td>{{Glossary("Response header")}}</td>
     </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden response header name","Forbidden response header")}}</th>
-      <td>No</td>
-    </tr>
   </tbody>
 </table>
 
