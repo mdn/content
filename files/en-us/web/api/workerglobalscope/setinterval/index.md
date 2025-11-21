@@ -8,7 +8,7 @@ banners:
   - AvailableInWorkers: ["window_and_worker"]
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}} {{AvailableInWorkers("window_and_worker")}}
 
 > [!WARNING]
 > When the `code` parameter is used, this method dynamically executes its value as JavaScript.
