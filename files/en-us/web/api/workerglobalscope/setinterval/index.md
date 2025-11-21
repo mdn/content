@@ -4,8 +4,6 @@ short-title: setInterval()
 slug: Web/API/WorkerGlobalScope/setInterval
 page-type: web-api-instance-method
 browser-compat: api.setInterval
-banners:
-  - AvailableInWorkers: ["window_and_worker"]
 ---
 
 {{APIRef("HTML DOM")}} {{AvailableInWorkers("window_and_worker")}}
