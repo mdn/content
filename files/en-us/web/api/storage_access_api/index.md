@@ -41,7 +41,7 @@ The Storage Access API is intended to solve this problem; embedded cross-site co
 It can also check whether it already has access via the {{domxref("Document.hasStorageAccess()")}} method.
 
 > [!NOTE]
-> The [storage access headers](/en-US/docs/Web/API/Storage_Access_API#storage_access_headers) are an HTTP extension to the API that enables a more efficient storage API workflow, and can also be used to activate a previously granted storage access permission for passive resources, such as images.
+> The [storage access headers](#storage_access_headers) are an HTTP extension to the API that enables a more efficient storage API workflow, and can also be used to activate a previously granted storage access permission for passive resources, such as images.
 
 ### Unpartitioned versus partitioned cookies
 

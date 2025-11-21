@@ -81,7 +81,7 @@ body:has(input:checked) div {
   box-shadow: none;
 }
 
-@layer pageSetUp {
+@layer page-setup {
   html {
     font-family: "Helvetica", "Arial", sans-serif;
   }
@@ -255,5 +255,6 @@ The CSS borders and box decorations module level 4 also introduces the `border-s
 - {{cssxref("backdrop-filter")}}
 - [`drop-shadow()`](/en-US/docs/Web/CSS/Reference/Values/filter-function/drop-shadow) filter function
 - [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/Guides/Colors/Applying_color)
-- [Border-image generator](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-image_generator)
-- [Border-radius generator](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-radius_generator)
+- Tools:
+  - [Border-image generator](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-image_generator)
+  - [Border-radius generator](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-radius_generator)

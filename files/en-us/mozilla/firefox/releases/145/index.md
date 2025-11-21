@@ -1,36 +1,19 @@
 ---
-title: Firefox 145 release notes for developers (Beta)
-short-title: Firefox 145 (Beta)
+title: Firefox 145 release notes for developers (Stable)
+short-title: Firefox 145 (Stable)
 slug: Mozilla/Firefox/Releases/145
 page-type: firefox-release-notes-active
 sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 145 that affect developers.
-Firefox 145 is the current [Beta version of Firefox](https://www.firefox.com/en-US/channel/desktop/#beta) and ships on [November 11, 2025](https://whattrainisitnow.com/release/?version=145).
-
-> [!NOTE]
-> The release notes for this Firefox version are still a work in progress.
-
-<!-- Authors: Please uncomment any headings you are writing notes for -->
+Firefox 145 was released on [November 11, 2025](https://whattrainisitnow.com/release/?version=145).
 
 ## Changes for web developers
 
-<!-- ### Developer Tools -->
+### HTML
 
-<!-- ### HTML -->
-
-<!-- No notable changes. -->
-
-<!-- #### Removals -->
-
-<!-- ### MathML -->
-
-<!-- #### Removals -->
-
-<!-- ### SVG -->
-
-<!-- #### Removals -->
+No notable changes.
 
 ### CSS
 
@@ -42,15 +25,11 @@ Firefox 145 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - Separators can appear in {{htmlelement("select")}} menus since {{htmlelement("hr")}} in `<select>` was implemented.
   These are now also supported in Firefox for Android. ([Firefox bug 1867045](https://bugzil.la/1867045), [Firefox bug 1830909](https://bugzil.la/1830909)).
 
-<!-- #### Removals -->
-
 ### JavaScript
 
 - Firefox now supports the {{jsxref("Atomics.waitAsync()")}} static method, which allows synchronization of threads based upon the value in a shared memory location.
-  The method waits asynchronously on the value and returns an object representing the result of the operation. It is non-blocking and usable on the main thread.
+  The method waits asynchronously for the value and returns an object representing the operation's result. It is non-blocking and usable on the main thread.
   ([Firefox bug 1884148](https://bugzil.la/1884148)).
-
-<!-- #### Removals -->
 
 ### HTTP
 
@@ -58,11 +37,11 @@ Firefox 145 is the current [Beta version of Firefox](https://www.firefox.com/en-
   Note that the [`endpoints`](/en-US/docs/Web/HTTP/Reference/Headers/Integrity-Policy#endpoints) key is not yet supported (violations are logged to console).
   ([Firefox bug 1984973](https://bugzil.la/1984973)).
 
-<!-- #### Removals -->
+### Security
 
-<!-- ### Security -->
-
-<!-- #### Removals -->
+- When Bounce Tracking Protection (BTP) is enabled, it now runs in "stateless" mode by default.
+  In "stateless" mode, the browser no longer only flags sites that are part of a "bounce" that set state information (such as a cookie); it flags _all_ sites that are part of a "bounce". See [Bounce tracking mitigations](/en-US/docs/Web/Privacy/Guides/Bounce_tracking_mitigations) for more information on how BTP works.
+  ([Firefox bug 1990831](https://bugzil.la/1990831)).
 
 ### APIs
 
@@ -72,19 +51,11 @@ Firefox 145 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - A {{domxref("CSSStyleProperties")}} instance is now returned for the `style` property on {{domxref("HTMLElement.style", "HTMLElement")}}, {{domxref("MathMLElement.style", "MathMLElement")}}, {{domxref("SVGElement.style", "SVGElement")}}, and {{domxref("CSSStyleRule.style", "CSSStyleRule")}}, and the {{domxref("Window.getComputedStyle()")}} method. Previously a {{domxref("CSSStyleDeclaration")}} instance was returned.
   ([Firefox bug 1989925](https://bugzil.la/1989925))
 
-<!-- #### DOM -->
-
 #### Media, WebRTC, and Web Audio
 
 - {{domxref("RTCEncodedVideoFrame")}} and {{domxref("RTCEncodedAudioFrame")}} are now {{glossary("Serializable object", "serializable objects")}}, and {{domxref("RTCEncodedAudioFrame/RTCEncodedAudioFrame", "RTCEncodedAudioFrame()")}} and {{domxref("RTCEncodedVideoFrame/RTCEncodedVideoFrame", "RTCEncodedVideoFrame()")}} copy constructors are supported. These changes allow frames to be cloned, and to be shared between workers and the main thread. ([Firefox bug 1868223](https://bugzil.la/1868223) and [Firefox bug 1975032](https://bugzil.la/1975032)).
 
 - The [Matroska container](/en-US/docs/Web/Media/Guides/Formats/Containers) (`.mkv`) is now supported for the most commonly-used codecs: AVC, HEVC, VP8, VP9, AV1, AAC, Opus, and Vorbis. ([Firefox bug 1991752](https://bugzil.la/1991752)).
-
-<!-- #### Removals -->
-
-<!-- ### WebAssembly -->
-
-<!-- #### Removals -->
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -102,10 +73,6 @@ Firefox 145 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 - Cookies created with {{WebExtAPIRef("cookies.set()")}} are now validated, and invalid cookies are rejected. This change was implemented in Nightly only from Firefox 142. ([Firefox bug 1976509](https://bugzil.la/1976509))
 
-<!-- ### Removals -->
-
-<!-- ### Other -->
-
 ## Experimental web features
 
 These features are shipping in Firefox 145 but are disabled by default.
@@ -116,7 +83,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
   Nightly builds now support [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) by default, which allows you to tether elements together.
   The anchor-positioned elements can then have their size and position set relative to the size and location of the anchor elements to which they are bound.
-  (General: [Firefox bug 1988224](https://bugzil.la/1988224), `position-area`: [Firefox bug 1924086](https://bugzil.la/1924086)).
+  (General: [Firefox bug 1988224](https://bugzil.la/1988224), {{cssxref("position-area")}}: [Firefox bug 1924086](https://bugzil.la/1924086), custom {{cssxref("@position-try")}} fallbacks: [Firefox bug 1962598](https://bugzil.la/1962598)).
 
 - **CSS module scripts:** (Nightly) and `layout.css.module-scripts.enabled`.
 

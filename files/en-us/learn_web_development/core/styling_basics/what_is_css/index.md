@@ -72,7 +72,7 @@ The CSS language is organized into _modules_ that contain related functionality.
 
 ## CSS syntax basics
 
-CSS is a rule-based language — you define rules by specifying groups of styles that should be applied to particular element or groups of elements on your web page.
+CSS is a rule-based language — you define rules by specifying groups of styles that should be applied to a particular element or groups of elements on your web page.
 
 For example, you might decide to style the main heading on your page as large red text. The following code shows a very simple CSS rule that would achieve this:
 

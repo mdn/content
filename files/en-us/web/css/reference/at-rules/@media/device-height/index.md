@@ -27,7 +27,7 @@ The `device-height` feature is specified as a {{cssxref("&lt;length&gt;")}} valu
 <link
   rel="stylesheet"
   media="screen and (max-device-height: 799px)"
-  href="http://foo.bar.com/short-styles.css" />
+  href="https://cdn.example.com/short-styles.css" />
 ```
 
 ## Specifications

@@ -8,6 +8,8 @@ sidebar: cssref
 
 The [CSS](/en-US/docs/Web/CSS) **`align-items`** property sets the {{cssxref("align-self")}} value on all direct children as a group. In flexbox, it controls the alignment of items on the {{glossary("cross axis")}}. In grid layout, it controls the alignment of items on the block axis within their {{glossary("grid areas")}}.
 
+The interactive example below uses grid layout to demonstrate some of the values of this property.
+
 {{InteractiveExample("CSS Demo: align-items")}}
 
 ```css interactive-example-choice
@@ -53,8 +55,6 @@ align-items: end;
   border: 3px solid blue;
 }
 ```
-
-The interactive example below demonstrates some of the values for `align-items` using grid and flex layout.
 
 ## Syntax
 

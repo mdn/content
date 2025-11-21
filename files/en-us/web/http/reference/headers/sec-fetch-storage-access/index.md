@@ -3,9 +3,13 @@ title: Sec-Fetch-Storage-Access header
 short-title: Sec-Fetch-Storage-Access
 slug: Web/HTTP/Reference/Headers/Sec-Fetch-Storage-Access
 page-type: http-header
+status:
+  - experimental
 browser-compat: http.headers.Sec-Fetch-Storage-Access
 sidebar: http
 ---
+
+{{SeeCompatTable}}
 
 The HTTP **`Sec-Fetch-Storage-Access`** {{Glossary("fetch metadata request header")}} provides the "storage access status" for the current fetch context.
 

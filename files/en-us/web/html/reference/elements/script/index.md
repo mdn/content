@@ -344,5 +344,5 @@ so that the script doesn't block parsing but is guaranteed to be evaluated befor
 ## See also
 
 - {{domxref("document.currentScript")}}
-- [Flavio Copes' article on loading JavaScript efficiently and explaining the differences between `async` and `defer`](https://flaviocopes.com/javascript-async-defer/)
+- [Flavio Copes' article on loading JavaScript efficiently and explaining the differences between `async` and `defer`](https://thevalleyofcode.com/javascript-async-defer/)
 - [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules) guide

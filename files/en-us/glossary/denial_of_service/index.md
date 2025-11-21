@@ -11,7 +11,7 @@ Computers have limited resources, for example computation power or memory. When 
 
 There are also {{Glossary("Distributed Denial of Service", "Distributed Denial of Service (DDoS)")}} attacks in which a multitude of servers are used to exhaust the computing capacity of an attacked computer.
 
-### Types of DoS attack
+## Types of DoS attack
 
 DoS attacks are more of a category than a particular kind of attack. Here is a non-exhaustive list of DoS attack types:
 

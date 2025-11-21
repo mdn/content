@@ -27,7 +27,7 @@ The `device-width` feature is specified as a {{cssxref("&lt;length&gt;")}} value
 <link
   rel="stylesheet"
   media="screen and (max-device-width: 799px)"
-  href="http://foo.bar.com/narrow-styles.css" />
+  href="https://cdn.example.com/narrow-styles.css" />
 ```
 
 ## Specifications

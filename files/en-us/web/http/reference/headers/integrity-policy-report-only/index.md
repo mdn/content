@@ -22,10 +22,6 @@ The header allows developers to test [integrity policies](/en-US/docs/Web/Securi
       <th scope="row">Header type</th>
       <td>{{Glossary("Response header")}}</td>
     </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
-      <td>no</td>
-    </tr>
   </tbody>
 </table>
 

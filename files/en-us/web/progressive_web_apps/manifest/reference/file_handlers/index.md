@@ -19,7 +19,7 @@ For example, a PWA can be registered to handle files that match the `text/plain`
 > [!NOTE]
 > While the `file_handlers` member is used to register a PWA with a given set of file types, this only results in the operating system launching the PWA when a matching file is opened. The PWA then needs to actually handle the file using JavaScript code. See [Handling the files](#handling_the_files) for more information.
 
-### Values
+## Values
 
 An array of objects. Each object in the array must contain the following values (`action` and `accept` are required):
 

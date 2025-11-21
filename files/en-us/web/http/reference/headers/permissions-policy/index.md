@@ -21,10 +21,6 @@ For more information, see the main [Permissions Policy](/en-US/docs/Web/HTTP/Gui
       <th scope="row">Header type</th>
       <td>{{Glossary("Response header")}}</td>
     </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
-      <td>yes</td>
-    </tr>
   </tbody>
 </table>
 

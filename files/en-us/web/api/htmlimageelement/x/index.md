@@ -34,18 +34,22 @@ In this example, we see a table showing information about users of a website, in
     <col span="2" class="group1" />
     <col />
   </colgroup>
-  <tr>
-    <th>UserID</th>
-    <th>Name</th>
-    <th>Avatar</th>
-  </tr>
-  <tr>
-    <td>12345678</td>
-    <td>Johnny Rocket</td>
-    <td>
-      <img src="/shared-assets/images/examples/grapefruit-slice.jpg" />
-    </td>
-  </tr>
+  <thead>
+    <tr>
+      <th>UserID</th>
+      <th>Name</th>
+      <th>Avatar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>12345678</td>
+      <td>Johnny Rocket</td>
+      <td>
+        <img src="/shared-assets/images/examples/grapefruit-slice.jpg" />
+      </td>
+    </tr>
+  </tbody>
 </table>
 <pre id="log"></pre>
 ```

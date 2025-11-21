@@ -10,6 +10,7 @@ sidebar:
   - type: listSubPages
     path: /Web/Privacy/Guides/Privacy_sandbox
     link: /Web/Privacy/Guides/Privacy_sandbox
+  - link: /Web/Privacy/Guides/Bounce_tracking_mitigations
   - link: /Web/Privacy/Guides/Redirect_tracking_protection
   - link: /Web/Privacy/Guides/State_Partitioning
   - type: listSubPages
