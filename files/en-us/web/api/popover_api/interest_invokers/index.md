@@ -111,7 +111,7 @@ When targeting popovers with interest invokers, you can use the same styling tec
 That said, there are some interest invoker-specific CSS features that you should know about:
 
 - The [`interest-delay`](/en-US/docs/Web/CSS/Reference/Properties/interest-delay) shorthand property and its related [`interest-delay-start`](/en-US/docs/Web/CSS/Reference/Properties/interest-delay-start) and [`interest-delay-end`](/en-US/docs/Web/CSS/Reference/Properties/interest-delay-end) longhands, which can be set to add a delay between the user showing/losing interest and the interest change being acted on by the browser — for example, the popover being shown/hidden.
-- The {{cssxref(":interest-source")}} and {{cssxref(":interest-target")}} pseudo-classes, which can be used to apply styles to the interest invoker and its associated target element, respectively, only when interest is being shown.
+- The [`:interest-source`](/en-US/docs/Web/CSS/Reference/Selectors/:interest-source) and [`:interest-target`](/en-US/docs/Web/CSS/Reference/Selectors/:interest-target) pseudo-classes, which can be used to apply styles to the interest invoker and its associated target element, respectively, only when interest is being shown.
 
 Let's look at a simple example that demonstrates their use.
 
@@ -345,7 +345,7 @@ p {
 }
 ```
 
-Next, we apply some styles to the buttons, only when interest is being shown, using the {{cssxref(":interest-source")}} pseudo-class. This allows users to easily see which button interest is being shown on at any point:
+Next, we apply some styles to the buttons, only when interest is being shown, using the [`:interest-source`](/en-US/docs/Web/CSS/Reference/Selectors/:interest-source) pseudo-class. This allows users to easily see which button interest is being shown on at any point:
 
 ```css live-sample___non-popover
 button:interest-source {
@@ -502,7 +502,7 @@ Our next CSS rule sets a `position-area` value of `bottom right` on our popover 
 }
 ```
 
-In our last CSS block, we to animate the popover's {{cssxref("opacity")}} property smoothly as it appears (when interest is shown, as specified by the {{cssxref(":interest-target")}} pseudo-class). Because the popover is animating from being hidden (via `display: none`), there are a few extra features required to achieve this. We need to animate the {{cssxref("overlay")}} and {{cssxref("display")}} properties, setting [`allow-discrete`](/en-US/docs/Web/CSS/Reference/Properties/transition-behavior#allow-discrete) as we do so to allow discrete animations, and we need to use a {{cssxref("@starting-style")}} block to set the starting styles for the popover in the "interest target" state, as it has not previously been rendered visually.
+In our last CSS block, we to animate the popover's {{cssxref("opacity")}} property smoothly as it appears (when interest is shown, as specified by the [`:interest-target`](/en-US/docs/Web/CSS/Reference/Selectors/:interest-target) pseudo-class). Because the popover is animating from being hidden (via `display: none`), there are a few extra features required to achieve this. We need to animate the {{cssxref("overlay")}} and {{cssxref("display")}} properties, setting [`allow-discrete`](/en-US/docs/Web/CSS/Reference/Properties/transition-behavior#allow-discrete) as we do so to allow discrete animations, and we need to use a {{cssxref("@starting-style")}} block to set the starting styles for the popover in the "interest target" state, as it has not previously been rendered visually.
 
 ```css hidden live-sample___link-preview-popover
 [popover]:interest-target {
