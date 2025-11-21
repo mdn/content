@@ -8,9 +8,7 @@ browser-compat: api.SubtleCrypto.importKey
 
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}{{AvailableInWorkers}}
 
-The **`importKey()`** method of the {{domxref("SubtleCrypto")}}
-interface imports a key: that is, it takes as input a key in an external, portable
-format and gives you a {{domxref("CryptoKey")}} object that you can use in the [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API).
+The **`importKey()`** method of the {{domxref("SubtleCrypto")}} interface imports a key: that is, it takes as input a key in an external, portable format and gives you a {{domxref("CryptoKey")}} object that you can use in the [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API).
 
 The function accepts several import formats: see [Supported formats](#supported_formats) for details.
 
@@ -63,40 +61,32 @@ importKey(format, keyData, algorithm, extractable, keyUsages)
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-that fulfills with the imported key as a {{domxref("CryptoKey")}} object.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that fulfills with the imported key as a {{domxref("CryptoKey")}} object.
 
 ### Exceptions
 
 The promise is rejected when one of the following exceptions is encountered:
 
 - `SyntaxError` {{domxref("DOMException")}}
-  - : Raised when `keyUsages` is empty but the unwrapped key is of
-    type `secret` or `private`.
+  - : Raised when `keyUsages` is empty but the unwrapped key is of type `secret` or `private`.
 - {{jsxref("TypeError")}}
-  - : Raised when trying to use an invalid format or if the `keyData`
-    is not suited for that format.
+  - : Raised when trying to use an invalid format or if the `keyData` is not suited for that format.
 
 ## Supported formats
 
-This API supports four different key import/export formats: Raw, PKCS #8,
-SubjectPublicKeyInfo, and JSON Web Key.
+This API supports four different key import/export formats: Raw, PKCS #8, SubjectPublicKeyInfo, and JSON Web Key.
 
 ### Raw
 
-You can use this format to import or export AES or HMAC secret keys, or Elliptic Curve
-public keys.
+You can use this format to import or export AES or HMAC secret keys, or Elliptic Curve public keys.
 
-In this format the key is supplied as an
-[`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
-containing the raw bytes for the key.
+In this format the key is supplied as an [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) containing the raw bytes for the key.
 
 ### PKCS #8
 
 You can use this format to import or export RSA or Elliptic Curve private keys.
 
-The PKCS #8 format is defined in [RFC 5208](https://datatracker.ietf.org/doc/html/rfc5208),
-using the [ASN.1 notation](https://en.wikipedia.org/wiki/ASN.1):
+The PKCS #8 format is defined in [RFC 5208](https://datatracker.ietf.org/doc/html/rfc5208), using the [ASN.1 notation](https://en.wikipedia.org/wiki/ASN.1):
 
 ```plain
 PrivateKeyInfo ::= SEQUENCE {
@@ -106,16 +96,12 @@ PrivateKeyInfo ::= SEQUENCE {
     attributes           [0]  IMPLICIT Attributes OPTIONAL }
 ```
 
-The `importKey()` method expects to receive this object as an
-[`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
-containing the [DER-encoded](https://luca.ntop.org/Teaching/Appunti/asn1.html)
-form of the `PrivateKeyInfo`. DER is a set of rules for encoding ASN.1
-structures into a binary form.
+The `importKey()` method expects to receive this object as an [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) containing the [DER-encoded](https://luca.ntop.org/Teaching/Appunti/asn1.html) form of the `PrivateKeyInfo`.
+DER is a set of rules for encoding ASN.1 structures into a binary form.
 
-You are most likely to encounter this object in [PEM format](https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail). PEM format
-is a way to encode binary data in ASCII. It consists of a header and a footer, and in
-between, the [base64-encoded](/en-US/docs/Glossary/Base64)
-binary data. A PEM-encoded `PrivateKeyInfo` looks like this:
+You are most likely to encounter this object in [PEM format](https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail).
+PEM format is a way to encode binary data in ASCII. It consists of a header and a footer, and in between, the [base64-encoded](/en-US/docs/Glossary/Base64) binary data.
+A PEM-encoded `PrivateKeyInfo` looks like this:
 
 ```plain
 -----BEGIN PRIVATE KEY-----
@@ -126,8 +112,7 @@ ml2FIkoovZh/8yeTKmjUMb804g6OmjUc9vVojCRV0YdaSmYkkJMJbLg=
 -----END PRIVATE KEY-----
 ```
 
-To get this into a format you can give to `importKey()` you need to do two
-things:
+To get this into a format you can give to `importKey()` you need to do two things:
 
 - base64-decode the part between header and footer, using {{domxref("Window.atob()")}}.
 - convert the resulting string into an {{jsxref("ArrayBuffer")}}.
@@ -138,8 +123,7 @@ See the [Examples](#examples) section for more concrete guidance.
 
 You can use this format to import or export RSA or Elliptic Curve public keys.
 
-`SubjectPublicKey` is defined in [RFC 5280, Section 4.1](https://datatracker.ietf.org/doc/html/rfc5280#section-4.1) using
-the [ASN.1 notation](https://en.wikipedia.org/wiki/ASN.1):
+`SubjectPublicKey` is defined in [RFC 5280, Section 4.1](https://datatracker.ietf.org/doc/html/rfc5280#section-4.1) using the [ASN.1 notation](https://en.wikipedia.org/wiki/ASN.1):
 
 ```plain
 SubjectPublicKeyInfo  ::=  SEQUENCE  {
@@ -147,11 +131,7 @@ SubjectPublicKeyInfo  ::=  SEQUENCE  {
     subjectPublicKey     BIT STRING  }
 ```
 
-Just like [PKCS #8](#pkcs_8), the `importKey()` method expects to
-receive this object as an
-[`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
-containing the [DER-encoded](https://luca.ntop.org/Teaching/Appunti/asn1.html)
-form of the `SubjectPublicKeyInfo`.
+Just like [PKCS #8](#pkcs_8), the `importKey()` method expects to receive this object as an [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) containing the [DER-encoded](https://luca.ntop.org/Teaching/Appunti/asn1.html) form of the `SubjectPublicKeyInfo`.
 
 Again, you are most likely to encounter this object in [PEM format](https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail).
 A PEM-encoded `SubjectPublicKeyInfo` looks like this:
@@ -168,8 +148,7 @@ gQIDAQAB
 -----END PUBLIC KEY-----
 ```
 
-Just as with [PKCS #8](#pkcs_8), to get this into a format you can give to
-`importKey()` you need to do two things:
+Just as with [PKCS #8](#pkcs_8), to get this into a format you can give to `importKey()` you need to do two things:
 
 - base64-decode the part between header and footer, using {{domxref("Window.atob()")}}.
 - convert the resulting string into an {{jsxref("ArrayBuffer")}}.
@@ -178,8 +157,7 @@ See the [Examples](#examples) section for more concrete guidance.
 
 ### JSON Web Key
 
-You can use JSON Web Key format to import or export RSA or Elliptic Curve public or
-private keys, as well as AES and HMAC secret keys.
+You can use JSON Web Key format to import or export RSA or Elliptic Curve public or private keys, as well as AES and HMAC secret keys.
 
 JSON Web Key format is defined in [RFC 7517](https://datatracker.ietf.org/doc/html/rfc7517).
 It describes a way to represent public, private, and secret keys as JSON objects.
@@ -205,8 +183,7 @@ A JSON Web Key looks something like this (this is an EC private key):
 
 ### Raw import
 
-This example imports an AES key from an `ArrayBuffer` containing the raw bytes
-to use. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/import-key/raw.js)
+This example imports an AES key from an `ArrayBuffer` containing the raw bytes to use. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/import-key/raw.js)
 
 ```js
 const rawKey = window.crypto.getRandomValues(new Uint8Array(16));
@@ -280,8 +257,7 @@ function importPrivateKey(pem) {
 
 ### SubjectPublicKeyInfo import
 
-This example imports an RSA public encryption key from a PEM-encoded
-SubjectPublicKeyInfo object. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/import-key/spki.js)
+This example imports an RSA public encryption key from a PEM-encoded `SubjectPublicKeyInfo` object. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/import-key/spki.js)
 
 ```js
 // from https://developers.google.com/web/updates/2012/06/How-to-convert-ArrayBuffer-to-and-from-String
@@ -326,8 +302,8 @@ function importRsaKey(pem) {
 
 ### JSON Web Key import
 
-This code imports an ECDSA private signing key, given a JSON Web Key object that
-represents it. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/import-key/jwk.js)
+This code imports an ECDSA private signing key, given a JSON Web Key object that represents it.
+[See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/import-key/jwk.js)
 
 ```js
 const jwkEcKey = {
