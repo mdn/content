@@ -76,7 +76,7 @@ In the authentication request:
 
 In the token request:
 
-1. The RP makes a {{httpmethod("POST")}} request to the token endpoint. This request includes the following parameters:
+1. The RP makes a {{httpmethod("POST")}} request to the IdP's token endpoint. This request includes the following parameters:
    - `client_id`: Identifies this RP to the IdP.
    - `client_secret`: The secret used to authenticate the RP to the IdP: this could be any value previously agreed between the RP and the IdP. Instead of a shared secret, the RP and the IdP could use some alternative mechanism for client authentication, such as TLS client authentication.
    - `grant_type`: This should be `"authorization_code"`.
@@ -84,7 +84,7 @@ In the token request:
    - `code_verifier`: This is the original secret that was used to produce the `code_challenge` parameter in the authentication request.
 
 2. The IdP validates the request:
-   - It authenticates the RP using client authentication.
+   - It authenticates that the request is from the particular RP using the client secret or some other form of client authentication.
    - It hashes the `code_verifier` parameter, and then checks that the result matches `code_challenge`.
 
 3. If the request is valid, the IdP responds with two tokens:
@@ -130,7 +130,7 @@ In the token request:
 - The RP passes the code verifier in the _code_verifier_ parameter.
 - The IdP hashes the code verifier, and compares the result with the stored code challenge: if they do not match, then the token request is denied.
 
-This defends against two attacks: [CSRF against the RP's redirect URL](#csrf_against_the_redirect_url), and [authorization code injection](#authorization_code_injection).
+PKCE defends against two attacks: [CSRF against the RP's redirect URL](#csrf_against_the_redirect_url), and [authorization code injection](#authorization_code_injection).
 
 ##### CSRF against the redirect URL
 
@@ -188,7 +188,7 @@ If PKCE were not used, the authorization code injection attack works as follows:
 
 8. The RP signs the attacker into the user's account.
 
-Note that the `state` parameter doesn't help here, because the authentication request and response really do belong to the same flow - the attacker's.
+Note that using a `state` parameter doesn't help in this case, because the authentication request and response really do belong to the same flow - the attacker's.
 
 PKCE protects against this attack, because:
 
@@ -199,7 +199,7 @@ An alternative to PKCE, specified in OIDC, is the [`nonce`](https://datatracker.
 
 ##### Ensuring that PKCE is used
 
-Although PKCE provides effective protection against the attacks described here, it's an optional part of the protocol. This means that an RP must ensure that its chosen IdP not only supports PKCE, but that it mandates the use of PKCE, refusing the token request if a valid code verifier is not included.
+To ensure that PKCE is used, the RP must confirm that its chosen IdP not only supports PKCE, but that it also _mandates_ the use of PKCE — refusing the token request if a valid code verifier is not included.
 
 Otherwise, an RP is vulnerable to a [PKCE downgrade attack](https://datatracker.ietf.org/doc/html/rfc9700#name-pkce-downgrade-attack), in which an attacker tricks the IdP into thinking that the RP does not wish to use PKCE in a token request.
 
@@ -249,9 +249,9 @@ As such, we recommend not implementing federated identity features in a way that
 
 ## The FedCM API
 
-The [Federated Credential Management API (FedCM API)](/en-US/docs/Web/API/FedCM_API) provides built-in browser support for federated identity. The API does not yet have cross-browser support and is still being actively developed, so we can't fully recommend its use, but it promises several benefits over implementing a protocol like OpenID Connect directly:
+The [Federated Credential Management API (FedCM API)](/en-US/docs/Web/API/FedCM_API) provides built-in browser support for federated identity. We can't fully recommend its use, because the API does not yet have cross-browser support and is still being actively developed. However it promises several benefits over implementing a protocol like OpenID Connect directly:
 
-- In the OIDC flow we've previously described, the website using OIDC (that is, the RP) has to coordinate the interactions between itself, the user, and the IdP. As we've seen, this is complicated and error-prone. With FedCM, the browser takes care of this interaction: as an RP, you call a browser API, and the browser locates the IdP, asks the user to authenticate, and returns a token from the IdP that the RP can use to sign the user in.
+- In the OIDC flow we've previously described, the website using OIDC (that is, the RP) has to coordinate the interactions between itself, the user, and the IdP. As we've seen, this is complicated, and hence error-prone. With FedCM, the browser takes care of this interaction: as an RP, you call a browser API, and the browser locates the IdP, asks the user to authenticate, and returns a token from the IdP that the RP can use to sign the user in.
 - As a consequence of this, you don't have to rely on third-party cookies, so FedCM will work on browsers that block them.
 - In FedCM, the interface in which the user authenticates to the IdP is built into the browser, offering them a more consistent and seamless experience without redirects.
 
@@ -291,9 +291,9 @@ Whichever identity providers you choose will provide detailed instructions and t
 
 For web developers, the biggest benefit of using federated identity is reducing sign-up friction for those users who already have an account with one of the chosen IdPs. Additionally, their chosen IdPs can help websites to securely implement federated identity.
 
-From a security perspective, the biggest benefit is that because users don't have to create new credentials for each account, there's a lower risk of them choosing passwords that are easy to remember (that is, weak) or of them reusing passwords across sites.
+From a security perspective, the biggest benefit is that because users don't have to create new credentials for each account, there's a lower risk of them choosing weak passwords that are easier to remember, or of them reusing passwords across sites.
 
-We can say that federated identity is a more secure option than just passwords, but it still has problems:
+Using federated identity is a more secure option than just passwords, but it still has problems:
 
 - The advantages to websites of choosing IdPs which have a large userbase means that the space tends to be monopolized by a few very large providers. This in turn tends to lock users into those providers, leading websites to offer a worse experience for users who don't want to (or can't) use them.
 
