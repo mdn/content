@@ -18,5 +18,5 @@ In CSS, the value of a property in a CSS rule is the _underlying value_ of that 
 
 ## See also
 
-- [`animation-composition`](/en-US/docs/Web/CSS/Reference/Properties/animation-composition)
+- {{cssxref("animation-composition")}}
 - [`KeyframeEffect.composite`](/en-US/docs/Web/API/KeyframeEffect/composite)
