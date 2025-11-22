@@ -107,7 +107,7 @@ For this reason, websites should always use the authorization code flow. Even if
 
 In the flow we have described, the RP authenticates itself to the token endpoint when it makes the token request. This means that if an attacker does manage to steal the authorization code, it still has to successfully impersonate the RP to get the tokens from the IdP.
 
-The OAuth specification distinguishes between [_confidential_ and _public_ clients](https://datatracker.ietf.org/doc/html/rfc6749#section-2.1). Confidential clients are essentially clients that can keep a secret, and public clients are those that can't.
+The OAuth specification distinguishes between [_confidential_ and _public_ clients](https://datatracker.ietf.org/doc/html/rfc6749#section-2.1). Confidential clients are essentially RPs that can keep a secret, and public clients are those that can't.
 
 The specification considers that clients running on the user's browser are public clients, for the same reason we've already encountered: it's too easy for an attacker to access secrets in a browser via attacks such as XSS. Clients running on a web _server_ are confidential clients.
 
