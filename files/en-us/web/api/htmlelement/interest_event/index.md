@@ -9,8 +9,6 @@ browser-compat: api.HTMLElement.interest_event
 
 The **`interest`** event of the {{domxref("HTMLElement")}} interface is fired on an [interest invoker](/en-US/docs/Web/API/Popover_API/Interest_invokers)'s target element when interest is shown, allowing code to be run in response.
 
-This event is not [cancelable](/en-US/docs/Web/API/Event/cancelable).
-
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.

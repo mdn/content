@@ -8,7 +8,7 @@ browser-compat: api.HTMLAreaElement.interestForElement
 
 {{ApiRef("HTML DOM")}}
 
-The **`interestForElement`** property of the {{domxref("HTMLAreaElement")}} interface returns a reference to the interest invoker target element, in cases where the associated {{htmlelement("area")}} element has been specified as an interest invoker.
+The **`interestForElement`** property of the {{domxref("HTMLAreaElement")}} interface gets or sets the interest invoker target element, in cases where the associated {{htmlelement("area")}} element is specified as an interest invoker.
 
 See [Creating an interest invoker](/en-US/docs/Web/API/Popover_API/Interest_invokers#creating_an_interest_invoker) for more details.
 
@@ -20,15 +20,15 @@ An {{domxref("Element")}} object instance, or `null` if the associated `<area>` 
 
 ### Basic `interestForElement` usage
 
-In this example, we use an `<area>` element's `interestForElement` property to retrieve its target element's `tagName`. The `tagName` is then printed into the `<area>` element's text content.
+In this example, we use an `<area>` element's `interestForElement` property to set its interest invoker target element and then retrieve its target element's `tagName`. The `tagName` is then printed into the `<area>` element's text content.
 
 #### HTML
 
-We set up a relationship between the `<area>` element interest invoker and its target — a `<div>` element — by setting the `<area>` element's `interestfor` attribute equal to the `<div>` element's `id`. We also turn the `<div>` element into a popover by setting a `popover` attribute on it.
+We include an `<area>` element and a `<div>` element. We turn the `<div>` element into a popover by setting a `popover` attribute on it.
 
 ```html live-sample___basic-interest-invoker
 <map>
-  <area href="#" shape="default" interestfor="mypopover" />
+  <area href="#" shape="default" />
 </map>
 <div id="mypopover" popover>I am a <code>&lt;div&gt;</code> element.</div>
 ```
@@ -44,10 +44,14 @@ map {
 
 #### JavaScript
 
-We grab a reference to the `<area>` element in script, then set its text content equal to a string containing the target element's `tagName`, retrieved via `invoker.interestForElement.tagName`.
+We grab references to the `<area>` and `<div>` elements in script, then declare an interest invoker/target relationship between the `<area>` and the `<div>` by setting the `<area>` element's `interestForElement` property equal to a reference to the `<div>`. We then set the `<area>` element's text content equal to a string containing the target element's `tagName`, retrieved via `invoker.interestForElement.tagName`.
 
 ```js live-sample___basic-interest-invoker
-const invoker = document.querySelector("[interestfor]");
+const invoker = document.querySelector("area");
+const popover = document.querySelector("div");
+
+invoker.interestForElement = popover;
+
 invoker.textContent = `My target is a ${invoker.interestForElement.tagName} element`;
 ```
 

@@ -8,7 +8,7 @@ browser-compat: api.SVGAElement.interestForElement
 
 {{ApiRef("HTML DOM")}}
 
-The **`interestForElement`** property of the {{domxref("SVGAElement")}} interface returns a reference to the interest invoker target element, in cases where the associated {{svgelement("a")}} element has been specified as an interest invoker.
+The **`interestForElement`** property of the {{domxref("SVGAElement")}} interface gets or sets the interest invoker target element, in cases where the associated {{svgelement("a")}} element is specified as an interest invoker.
 
 See [Creating an interest invoker](/en-US/docs/Web/API/Popover_API/Interest_invokers#creating_an_interest_invoker) for more details.
 
@@ -20,15 +20,15 @@ An {{domxref("Element")}} object instance, or `null` if the associated `<a>` ele
 
 ### Basic `interestForElement` usage
 
-In this example, we use an SVG `<a>` element's `interestForElement` property to retrieve its target element's `tagName`. The `tagName` is then printed into the `<a>` element's text content.
+In this example, we use an SVG `<a>` element's `interestForElement` property to set its interest invoker target element and then retrieve its target element's `tagName`. The `tagName` is then printed into the `<a>` element's text content.
 
 #### HTML
 
-We set up a relationship between the `<a>` element interest invoker and its target — a `<div>` element — by setting the `<a>` element's `interestfor` attribute equal to the `<div>` element's `id`. We also turn the `<div>` element into a popover by setting a `popover` attribute on it, and include some link text inside a {{svgelement("text")}} element.
+We include an SVG `<a>` element with a `<text>` element inside it, and an HTML `<div>` element. We turn the `<div>` element into a popover by setting a `popover` attribute on it, and include some link text inside a {{svgelement("text")}} element.
 
 ```html live-sample___basic-interest-invoker
 <svg>
-  <a href="#" interestfor="mypopover">
+  <a href="#">
     <text x="90" y="20" text-anchor="middle">A link</text>
   </a>
 </svg>
@@ -44,11 +44,15 @@ svg {
 
 #### JavaScript
 
-We grab references to the `<a>` and `<text>` elements in script, then set the text content equal to a string containing the invoker target element's `tagName`, retrieved via `invoker.interestForElement.tagName`.
+We grab references to the `<a>`, `<text>`, and `<div>` elements in script, then declare an interest invoker/target relationship between the `<a>` and the `<div>` by setting the `<a>` element's `interestForElement` property equal to a reference to the `<div>`. We then set the `<text>` content equal to a string containing the invoker target element's `tagName`, retrieved via `invoker.interestForElement.tagName`.
 
 ```js live-sample___basic-interest-invoker
-const invoker = document.querySelector("[interestfor]");
+const invoker = document.querySelector("a");
 const invokerText = document.querySelector("text");
+const popover = document.querySelector("div");
+
+invoker.interestForElement = popover;
+
 invokerText.textContent = `My target is a ${invoker.interestForElement.tagName} element`;
 ```
 

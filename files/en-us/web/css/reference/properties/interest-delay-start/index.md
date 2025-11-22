@@ -10,7 +10,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`interest-delay-start`** [CSS](/en-US/docs/Web/CSS) property specifies a delay between the user showing interest in an [interest invoker](/en-US/docs/Web/API/Popover_API/Interest_invokers) element and the target element effect starting.
+The **`interest-delay-start`** [CSS](/en-US/docs/Web/CSS) property specifies a delay between the user showing interest in an [interest invoker](/en-US/docs/Web/API/Popover_API/Interest_invokers) element and the {{domxref("HTMLElement.interest_event", "interest")}} event being fired, which typically starts an effect on the target.
 
 The `interest-delay-start` and [`interest-delay-end`](/en-US/docs/Web/CSS/Reference/Properties/interest-delay-end) properties can both be set using the [`interest-delay`](/en-US/docs/Web/CSS/Reference/Properties/interest-delay) shorthand.
 

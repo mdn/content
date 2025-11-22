@@ -27,8 +27,8 @@ _This interface also inherits properties from its parent, {{domxref("SVGGraphics
   - : An {{domxref("SVGAnimatedString")}} that reflects the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} {{deprecated_inline}} attribute.
 - {{domxref("SVGAElement.hreflang")}}
   - : A string indicating the language of the linked resource.
-- {{domxref("SVGAElement.interestForElement")}} {{experimental_inline}} {{ReadOnlyInline}}
-  - : Returns a reference to the interest invoker target element, in cases where the associated {{svgelement("a")}} element has been specified as an [interest invoker](/en-US/docs/Web/API/Popover_API/Interest_invokers#creating_an_interest_invoker).
+- {{domxref("SVGAElement.interestForElement")}} {{experimental_inline}}
+  - : Gets or sets the interest invoker target element, in cases where the associated {{svgelement("a")}} element is specified as an [interest invoker](/en-US/docs/Web/API/Popover_API/Interest_invokers#creating_an_interest_invoker).
 - {{domxref("SVGAElement.origin")}} {{ReadOnlyInline}}
   - : Returns a string containing the origin of the URL — that is, its scheme, its domain and its port.
 - {{domxref("SVGAElement.pathname")}}

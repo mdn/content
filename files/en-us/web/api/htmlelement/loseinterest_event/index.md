@@ -9,7 +9,7 @@ browser-compat: api.HTMLElement.loseinterest_event
 
 The **`loseinterest`** event of the {{domxref("HTMLElement")}} interface is fired on an [interest invoker](/en-US/docs/Web/API/Popover_API/Interest_invokers)'s target element when interest is lost, allowing code to be run in response.
 
-This event is not [cancelable](/en-US/docs/Web/API/Event/cancelable).
+This event is normally [cancelable](/en-US/docs/Web/API/Event/cancelable), except when the user hits the <kbd>Esc</kbd> key to lose interest in all interest invokers contained in the document.
 
 ## Syntax
 

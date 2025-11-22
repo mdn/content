@@ -34,7 +34,7 @@ You can create popovers in multiple different ways:
 
 - Via a JavaScript API. For example, {{domxref("HTMLElement.togglePopover()")}} can be used to toggle a popover between shown and hidden.
 
-There are also new events to react to a popover being toggled, and CSS features to aid in styling popovers. See [Using the popover API](/en-US/docs/Web/API/Popover_API/Using) for a detailed guide to using this API.
+The Popover API also provides events to react to a popover being toggled, and CSS features to aid in styling popovers. See [Using the popover API](/en-US/docs/Web/API/Popover_API/Using) for a detailed guide to the API.
 
 A related feature — **interest invokers** — can be used to show popovers on hover/focus, without requiring JavaScript. Check out [Using interest invokers](/en-US/docs/Web/API/Popover_API/Interest_invokers) to learn more.
 
@@ -72,7 +72,7 @@ A related feature — **interest invokers** — can be used to show popovers on 
 ### Instance properties
 
 - {{domxref("HTMLButtonElement.interestForElement", "interestForElement")}} {{experimental_inline}}
-  - : Returns a reference to the element being targeted by an interest invoker. This will be the element whose `id` is referenced in the equivalent HTML or SVG interest invoker element's `interestfor` attribute. Available on the {{domxref("HTMLButtonElement")}}, {{domxref("HTMLAnchorElement")}}, {{domxref("HTMLAreaElement")}}, and {{domxref("SVGAElement")}} interfaces.
+  - : Gets or sets a reference to the element being targeted by an interest invoker. If an HTML or SVG interest invoker references a target element in its `interestfor` attribute, that element will be referenced in the equivalent DOM object's `interestForElement` property. Available on the {{domxref("HTMLButtonElement")}}, {{domxref("HTMLAnchorElement")}}, {{domxref("HTMLAreaElement")}}, and {{domxref("SVGAElement")}} interfaces.
 - {{domxref("HTMLElement.popover")}}
   - : Gets and sets an element's popover state via JavaScript (`"auto"`, `"hint"`, or `"manual"`), and can be used for feature detection. Reflects the value of the [`popover`](/en-US/docs/Web/HTML/Reference/Global_attributes/popover) global HTML attribute.
 - {{domxref("HTMLButtonElement.popoverTargetElement")}} and {{domxref("HTMLInputElement.popoverTargetElement")}}

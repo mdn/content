@@ -30,6 +30,9 @@ Declaratively creating an interest invoker requires two things, at a basic level
 1. An **invoker** element to show interest in, which will trigger some kind of action — in this case showing/hiding a popover. This element is given an [`interestfor`](/en-US/docs/Web/HTML/Reference/Elements/a#interestfor) attribute that takes the `id` of the popover element to show as its value. The interest invoker element can be an HTML {{htmlelement("a")}}, {{htmlelement("button")}}, or {{htmlelement("area")}} element, or an SVG [`<a>`](/en-US/docs/Web/SVG/Reference/Element/a) element.
 2. An element with a `id`, which will be the invoker element's **target** — it can be affected or controlled when interest is shown or lost. This can be just about any element type. We also set a `popover` attribute on it to turn it into a popover.
 
+> [!NOTE]
+> You can also set an invoker element's target element programmatically, by setting its `interestForElement` DOM property equal to a reference to the target element. See [The interest invoker JavaScript API](#the_interest_invoker_javascript_api) for more information.
+
 Let's look at a simple example:
 
 ```css hidden live-sample___basic-interest-invoker live-sample___interest-invoker-popover-interaction live-sample___interest-invoker-styling live-sample___interest-invoker-api live-sample___non-popover live-sample___link-preview-popover
@@ -115,22 +118,17 @@ That said, there are some interest invoker-specific CSS features that you should
 
 Let's look at a simple example that demonstrates their use.
 
-The HTML is very similar to the previous example, except that this time we only have the tooltip, shown/hidden when the user shows/loses interest in the `<button>`:
+We specify two buttons and a tooltip, which is shown/hidden when the user shows/loses interest in the `<button>`:
 
 ```html live-sample___interest-invoker-styling
-<p>
-  Some basic text with
-  <button interestfor="mytooltip">a button</button>
-  inside it.
+<p class="container">
+  <button interestfor="mytooltip">Button 1</button>
+  <button interestfor="mytooltip">Button 2</button>
 </p>
 <p id="mytooltip" popover="hint">A hover toolip</p>
 ```
 
 In the CSS, we set an `interest-delay` of `1s 2s` on the `<button>` — this creates a delay of 1 second between the user showing interest and the popover appearing, and a delay of 2 seconds between the user losing interest and the popover disappearing. We also use the `button:interest-source` selector to set an `orange` {{cssxref("background-color")}} on the `<button>` only when interest is being shown.
-
-Next, we give the popover a {{cssxref("position-area")}} of `right`; this causes the popover to be positioned to the right of the `<button>`. This is possible because associating any kind of popover with its invoker creates an implicit anchor reference between the two (see [Popover anchor positioning](/en-US/docs/Web/API/Popover_API/Using#popover_anchor_positioning) for more details).
-
-Finally, we use the `#mytooltip:interest-target` selector to set a dashed border on the popover only when interest is being shown.
 
 ```css live-sample___interest-invoker-styling
 button {
@@ -141,10 +139,22 @@ button:interest-source {
   background-color: orange;
 }
 
-#mytooltip {
-  position-area: right;
+.container:has(:interest-source) {
+  interest-delay-start: 0s;
 }
+```
 
+Next, we give the popover a {{cssxref("position-area")}} of `bottom`; this causes the popover to be positioned below the `<button>`. This is possible because associating any kind of popover with its invoker creates an implicit anchor reference between the two (see [Popover anchor positioning](/en-US/docs/Web/API/Popover_API/Using#popover_anchor_positioning) for more details).
+
+```css live-sample___interest-invoker-styling
+#mytooltip {
+  position-area: bottom;
+}
+```
+
+Finally, we use the `#mytooltip:interest-target` selector to set a dashed border on the popover only when interest is being shown.
+
+```css live-sample___interest-invoker-styling
 #mytooltip:interest-target {
   border-style: dashed;
 }
@@ -198,14 +208,14 @@ We then use that class in our CSS to display a "not supported" banner:
 
 ### API example
 
-Now we'll look at a basic example that shows some of the API features in action. Here we've got three links, each of which has an `interestfor` attribute referencing the same popover element's `id`.
+Now we'll look at a basic example that shows the API features in action. Here we've got three links and a paragraph set to be a popover.
 
 ```html live-sample___interest-invoker-api
 <p>
   Here's some links:
-  <a href="#" interestfor="mytooltip">Link one</a>
-  <a href="#" interestfor="mytooltip">Link two</a>
-  <a href="#" interestfor="mytooltip">Link three</a>
+  <a href="#">Link one</a>
+  <a href="#">Link two</a>
+  <a href="#"">Link three</a>
 </p>
 <p id="mytooltip" popover="hint">A hover toolip</p>
 ```
@@ -220,11 +230,17 @@ html {
 }
 ```
 
-In our JavaScript, we grab a reference to our popover, then attach `interest` and `loseinterest` event handlers to it. When interest is shown on one of the links, we update the popover's text content to include the text content of the link (retrieved via the event object's `source` property), so you can see which link caused the popover to appear. When interest is lost, we append an asterisk to the `source` element's text content, so you can see how many times each one has been used to show interest.
+In our JavaScript, we grab references to our popover and the three links. We then loop through the links, setting the {{domxref("HTMLAnchorElement.interestForElement", "interestForElement")}} property of each one to equal the reference to our popover. This sets up the interest invoker/target relationship between the popover and each of the three links programmatically.
 
 ```js live-sample___interest-invoker-api
 const tooltip = document.getElementById("mytooltip");
+const links = document.querySelectorAll("a");
+links.forEach((link) => (link.interestForElement = tooltip));
+```
 
+We then attach `interest` and `loseinterest` event handlers to the popover. When interest is shown on one of the links, we update the popover's text content to include the text content of the link (retrieved via the event object's `source` property), so you can see which link caused the popover to appear. When interest is lost, we append an asterisk to the `source` element's text content, so you can see how many times each one has been used to show interest.
+
+```js live-sample___interest-invoker-api
 tooltip.addEventListener("interest", (e) => {
   tooltip.textContent = `Interest gained via ${e.source.textContent}`;
 });
