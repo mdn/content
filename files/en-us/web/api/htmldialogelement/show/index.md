@@ -43,6 +43,7 @@ button.
 <!-- Simple pop-up dialog box, containing a form -->
 <dialog id="favDialog">
   <form method="dialog">
+    <button type="button" id="close" aria-label="close">X</button>
     <section>
       <p>
         <label for="favAnimal">Favorite animal:</label>
@@ -70,7 +71,7 @@ button.
 
 ```js
 const updateButton = document.getElementById("updateDetails");
-const cancelButton = document.getElementById("cancel");
+const closeButton = document.getElementById("close");
 const dialog = document.getElementById("favDialog");
 dialog.returnValue = "favAnimal";
 
@@ -89,7 +90,7 @@ updateButton.addEventListener("click", () => {
 });
 
 // Form cancel button closes the dialog box
-cancelButton.addEventListener("click", () => {
+closeButton.addEventListener("click", () => {
   dialog.close("animalNotChosen");
   openCheck(dialog);
 });
