@@ -12,12 +12,12 @@ The **`mask-border`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/doc
 
 This property is a shorthand for the following CSS properties:
 
-- {{cssxref("mask-border-mode")}}
-- {{cssxref("mask-border-outset")}}
-- {{cssxref("mask-border-repeat")}}
-- {{cssxref("mask-border-slice")}}
-- {{cssxref("mask-border-source")}}
-- {{cssxref("mask-border-width")}}
+- [`mask-border-mode`](/en-US/docs/Web/CSS/Reference/Properties/mask-border-mode)
+- [`mask-border-outset`](/en-US/docs/Web/CSS/Reference/Properties/mask-border-outset)
+- [`mask-border-repeat`](/en-US/docs/Web/CSS/Reference/Properties/mask-border-repeat)
+- [`mask-border-slice`](/en-US/docs/Web/CSS/Reference/Properties/mask-border-slice)
+- [`mask-border-source`](/en-US/docs/Web/CSS/Reference/Properties/mask-border-source)
+- [`mask-border-width`](/en-US/docs/Web/CSS/Reference/Properties/mask-border-width)
 
 ## Syntax
 

@@ -219,7 +219,7 @@ If declarations from the same origin and cascade layer conflict and one property
 
 Using `!important` to override specificity is considered a **bad practice** and should be avoided for this purpose. Understanding and effectively using specificity and the cascade can remove any need for the `!important` flag.
 
-Instead of using `!important` to override foreign CSS (from external libraries, like Bootstrap or normalize.css), import the third-party scripts directly into {{cssxref("@layer", "cascade layers")}}. If you must use `!important` in your CSS, comment your usage so future code maintainers know why the declaration was marked important and know not to override it. But definitely, don't use `!important` when writing plugins or frameworks that other developers will need to incorporate without being able to control.
+Instead of using `!important` to override foreign CSS (from external libraries, like Bootstrap or normalize.css), import the third-party scripts directly into [cascade layers](/en-US/docs/Web/CSS/Reference/At-rules/@layer). If you must use `!important` in your CSS, comment your usage so future code maintainers know why the declaration was marked important and know not to override it. But definitely, don't use `!important` when writing plugins or frameworks that other developers will need to incorporate without being able to control.
 
 ### The `:where()` exception
 
@@ -476,18 +476,17 @@ A few things to remember about specificity:
 
 ## See also
 
-- ["Specificity" in "Handling conflicts"](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#specificity_2)
-- [SpeciFISHity](https://specifishity.com/)
-- [Specificity Calculator](https://specificity.keegan.st/): An interactive website to test and understand your own CSS rules
-- [_ID-CLASS-TYPE_ exercise](https://estelle.github.io/CSS/selectors/exercises/specificity.html) a specificity quiz
-- [CSS syntax](/en-US/docs/Web/CSS/Guides/Syntax/Introduction) guide
+- [CSS cascading and inheritance](/en-US/docs/Web/CSS/Guides/Cascade) module
+- [Learn: Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#specificity_2)
+- [Learn: Cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
 - [CSS syntax](/en-US/docs/Web/CSS/Guides/Syntax) module
+- [Introduction to CSS syntax: declarations, rulesets, and statements](/en-US/docs/Web/CSS/Guides/Syntax/Introduction)
 - [CSS error handling](/en-US/docs/Web/CSS/Guides/Syntax/Error_handling)
 - [At-rules](/en-US/docs/Web/CSS/Guides/Syntax/At-rules)
 - [Inheritance](/en-US/docs/Web/CSS/Guides/Cascade/Inheritance)
-- [Initial](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#initial_value), [computed](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#computed_value), [used](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#used_value), and [actual](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#actual_value) values
+- Values: [initial](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#initial_value), [computed](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#computed_value), [used](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#used_value), and [actual](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#actual_value)
 - [Value definition syntax](/en-US/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)
-- [Learn: Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
-- [Learn: cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
-- [CSS cascading and inheritance](/en-US/docs/Web/CSS/Guides/Cascade) module
-- [CSS nesting module](/en-US/docs/Web/CSS/Guides/Nesting)
+- [CSS nesting](/en-US/docs/Web/CSS/Guides/Nesting) module
+- [Specificity Calculator](https://specificity.keegan.st/) on specificity.keegan.st: An interactive website to test and understand your own CSS rules
+- [SpeciFISHity](https://specifishity.com/) on specifishity.com: A fun way to learn about CSS specificity
+- [_ID-CLASS-TYPE_ exercise](https://estelle.github.io/CSS/selectors/exercises/specificity.html): A specificity quiz by Estelle Weyl

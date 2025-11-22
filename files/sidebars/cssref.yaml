@@ -190,15 +190,15 @@ sidebar:
     children:
       - /Web/CSS/Guides/Grid_layout/Basic_concepts
       - /Web/CSS/Guides/Grid_layout/Relationship_with_other_layout_methods
-      - /Web/CSS/Guides/Grid_layout/Grid_template_areas
       - /Web/CSS/Guides/Grid_layout/Line-based_placement
+      - /Web/CSS/Guides/Grid_layout/Grid_template_areas
       - /Web/CSS/Guides/Grid_layout/Named_grid_lines
       - /Web/CSS/Guides/Grid_layout/Auto-placement
       - /Web/CSS/Guides/Grid_layout/Box_alignment
       - /Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes
+      - /Web/CSS/Guides/Grid_layout/Accessibility
       - /Web/CSS/Guides/Grid_layout/Common_grid_layouts
       - /Web/CSS/Guides/Grid_layout/Subgrid
-      - /Web/CSS/Guides/Grid_layout/Accessibility
       - /Web/CSS/Guides/Grid_layout/Masonry_layout
   - title: Images
     details: closed

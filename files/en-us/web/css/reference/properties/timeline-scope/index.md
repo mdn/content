@@ -32,7 +32,7 @@ Allowed values for `timeline-scope` are:
   - : Specifies the name of an existing named timeline (i.e., declared using {{cssxref("scroll-timeline-name")}} or {{cssxref("view-timeline-name")}}) defined on a descendant element. This causes the timeline scope to be increased to the element that `timeline-scope` is set on and any of its descendants.
 
     > [!NOTE]
-    > {{cssxref("&lt;dashed-ident&gt;")}} values must start with `--`, which helps to avoid name clashes with standard CSS keywords.
+    > [`<dashed-ident>`](/en-US/docs/Web/CSS/Reference/Values/custom-ident) values must start with `--`, which helps to avoid name clashes with standard CSS keywords.
 
 ## Formal definition
 
@@ -144,7 +144,7 @@ Scroll the vertical bar on the pink area to see the square animate.
 
 ## See also
 
-- {{cssxref("animation-timeline")}}
-- {{cssxref("scroll-timeline")}}, {{cssxref("scroll-timeline-name")}}
-- {{cssxref("view-timeline")}}, {{cssxref("view-timeline-name")}}
+- [`animation-timeline`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline)
+- [`scroll-timeline`](/en-US/docs/Web/CSS/Reference/Properties/scroll-timeline), [`scroll-timeline-name`](/en-US/docs/Web/CSS/Reference/Properties/scroll-timeline-name)
+- [`view-timeline`](/en-US/docs/Web/CSS/Reference/Properties/view-timeline), [`view-timeline-name`](/en-US/docs/Web/CSS/Reference/Properties/view-timeline-name)
 - [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations)

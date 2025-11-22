@@ -245,14 +245,14 @@ See [Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/H
 
 ## See also
 
-- [CSS syntax](/en-US/docs/Web/CSS/Guides/Syntax/Introduction)
+- [CSS cascading and inheritance](/en-US/docs/Web/CSS/Guides/Cascade) module
+- [Introduction to CSS syntax: declarations, rulesets, and statements](/en-US/docs/Web/CSS/Guides/Syntax/Introduction)
 - [At-rules](/en-US/docs/Web/CSS/Guides/Syntax/At-rules)
 - [Specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity)
 - [Inheritance](/en-US/docs/Web/CSS/Guides/Cascade/Inheritance)
-- [Introducing the CSS Cascade](/en-US/docs/Web/CSS/Guides/Cascade/Introduction)
+- [Introduction to the CSS cascade](/en-US/docs/Web/CSS/Guides/Cascade/Introduction)
 - [Learn: Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - [Learn: Cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
-- [CSS cascading and inheritance](/en-US/docs/Web/CSS/Guides/Cascade) module
 - [Visual formatting models](/en-US/docs/Web/CSS/Guides/Display/Visual_formatting_model)
-- [Initial](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#initial_value), [computed](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#computed_value), [used](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#used_value), and [actual](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#actual_value) values
+- Values: [initial](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#initial_value), [computed](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#computed_value), [used](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#used_value), and [actual](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#actual_value)
 - [Value definition syntax](/en-US/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)

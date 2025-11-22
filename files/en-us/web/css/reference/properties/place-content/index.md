@@ -62,8 +62,8 @@ place-content: end;
 
 This property is a shorthand for the following CSS properties:
 
-- {{cssxref("align-content")}}
-- {{cssxref("justify-content")}}
+- [`align-content`](/en-US/docs/Web/CSS/Reference/Properties/align-content)
+- [`justify-content`](/en-US/docs/Web/CSS/Reference/Properties/justify-content)
 
 ## Syntax
 

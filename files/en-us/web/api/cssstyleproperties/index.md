@@ -43,7 +43,7 @@ For an object representing an inline style declaration (not computed styles) thi
 
 - {{DOMxRef("HTMLElement.style")}}, {{domxref("SVGElement.style")}}, and {{domxref("MathMLElement.style")}}: Used to get and set the _inline style_ of a single element (e.g., `<div style="…">`).
 - {{DOMxRef("Window.getComputedStyle()")}}: Used to get the (read only) computed style of an element, which includes the effects of both inline and external styles.
-- {{DOMxRef("CSSStyleRule.style")}}: Used to get and set the styles of a stye rule ({{DOMxRef("CSSStyleRule")}}).
+- {{DOMxRef("CSSStyleRule.style")}}: Used to get and set the styles of a style rule ({{DOMxRef("CSSStyleRule")}}).
 
 ## Examples
 
