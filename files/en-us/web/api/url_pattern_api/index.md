@@ -389,8 +389,8 @@ console.log(patternSlash.test("https://example.com/books")); // false
 console.log(patternSlash.test("https://example.com/books/")); // true
 
 const patternNoSlash = new URLPattern({ pathname: "/books" });
-console.log(patternNoSlash.test("https://example.com/books")); // false
-console.log(patternNoSlash.test("https://example.com/books/")); // true
+console.log(patternNoSlash.test("https://example.com/books")); // true
+console.log(patternNoSlash.test("https://example.com/books/")); // false
 ```
 
 If you want to match both then you need to use a match pattern that allows either.
