@@ -15,7 +15,7 @@ Although classes are now widely adopted and have become a new paradigm in JavaSc
 
 ### Inheriting properties
 
-JavaScript objects are dynamic "bags" of properties (referred to as **own properties**). JavaScript objects have a link to a prototype object. When trying to access a property of an object, the property will not only be sought on the object but on the prototype of the object, the prototype of the prototype, and so on until either a property with a matching name is found or the end of the prototype chain is reached.
+JavaScript objects are dynamic "bags" of properties (referred to as **own properties**). JavaScript objects have a link to a prototype object. When trying to access a property of an object, the property will not only be sought on the object, but also on the prototype of the object, the prototype of the prototype and so on, until either a property with a matching name is found or the end of the prototype chain is reached.
 
 > [!NOTE]
 > Following the ECMAScript standard, the notation `someObject.[[Prototype]]` is used to designate the prototype of `someObject`. The `[[Prototype]]` internal slot can be accessed and modified with the {{jsxref("Object.getPrototypeOf()")}} and {{jsxref("Object.setPrototypeOf()")}} functions respectively. This is equivalent to the JavaScript accessor [`__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) which is non-standard but de-facto implemented by many JavaScript engines. To prevent confusion while keeping it succinct, in our notation we will avoid using `obj.__proto__` but use `obj.[[Prototype]]` instead. This corresponds to `Object.getPrototypeOf(obj)`.
