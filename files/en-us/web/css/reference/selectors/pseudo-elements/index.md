@@ -12,6 +12,9 @@ sidebar: cssref
 
 A CSS **pseudo-element** is a keyword added to a selector that lets you style a specific part of the selected element(s).
 
+> [!NOTE]
+> This page is an index of all pseudo-elements in CSS. The [CSS pseudo-elements](/en-US/docs/Web/CSS/Guides/Pseudo-elements) page introduces the module that defines some, but not all, of these pseudo-elements.
+
 ## Syntax
 
 ```css
@@ -180,6 +183,39 @@ V
 - {{cssxref("::view-transition-group()")}}
 - {{cssxref("::view-transition-new()")}}
 - {{cssxref("::view-transition-old()")}}
+
+### Non-standard pseudo-elements
+
+Non-standard vendor-prefixed pseudo-elements include:
+
+#### `-moz-` prefix
+
+- {{CSSxRef("::-moz-color-swatch")}}
+- {{CSSxRef("::-moz-focus-inner")}}
+- {{CSSxRef("::-moz-list-bullet")}}
+- {{CSSxRef("::-moz-list-number")}}
+- {{CSSxRef("::-moz-meter-bar")}}
+- {{CSSxRef("::-moz-progress-bar")}}
+- {{CSSxRef("::-moz-range-progress")}}
+- {{CSSxRef("::-moz-range-thumb")}}
+- {{CSSxRef("::-moz-range-track")}}
+
+#### `-webkit-` prefix
+
+- {{CSSxRef("::-webkit-inner-spin-button")}}
+- {{CSSxRef("::-webkit-meter-bar")}}
+- {{CSSxRef("::-webkit-meter-even-less-good-value")}}
+- {{CSSxRef("::-webkit-meter-inner-element")}}
+- {{CSSxRef("::-webkit-meter-optimum-value")}}
+- {{CSSxRef("::-webkit-meter-suboptimum-value")}}
+- {{CSSxRef("::-webkit-progress-bar")}}
+- {{CSSxRef("::-webkit-progress-inner-element")}}
+- {{CSSxRef("::-webkit-progress-value")}}
+- {{CSSxRef("::-webkit-scrollbar")}}
+- {{CSSxRef("::-webkit-search-cancel-button")}}
+- {{CSSxRef("::-webkit-search-results-button")}}
+- {{CSSxRef("::-webkit-slider-runnable-track")}}
+- {{CSSxRef("::-webkit-slider-thumb")}}
 
 ## Nesting pseudo-elements
 

@@ -12,7 +12,7 @@ One of WebRTC's main issues is that it is pretty complicated to use and develop 
 
 In this series of articles we will create a simple phone application using PeerJS. We'll be using both the server and the client-side framework, but most of our work will be involved with handling the client-side code.
 
-### Prerequisites
+## Prerequisites
 
 This is an intermediate level tutorial; before attempting it you should already be comfortable with:
 

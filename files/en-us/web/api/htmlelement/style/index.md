@@ -124,7 +124,7 @@ We also see that the {{cssxref("border-top")}} property corresponding to the ele
 {{EmbedLiveSample("Basic usage", "100", "280")}}
 
 Note that `font-weight` is defined on the `CSSStyleProperties` (as are all other CSS properties, though we have not logged them).
-However it is not an inline stye for the nested element, so its value is set to the empty string (`""`).
+However it is not an inline style for the nested element, so its value is set to the empty string (`""`).
 
 ### Enumerating style information
 

@@ -164,7 +164,7 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 
 ### Security
 
-- When login pages (i.e., those containing an [`<input type="password">`](/en-US/docs/Web/HTML/Reference/Elements/input/password) field) are created so that they would be submitted insecurely, Firefox displays an in-context warning message below the password field to warn users ([Firefox bug 1319119](https://bugzil.la/1319119)). Autofill is also disabled on insecure login forms ([Firefox bug 1217152](https://bugzil.la/1217152)). See [Insecure passwords](/en-US/docs/Web/Security/Insecure_passwords) for more details.
+- When login pages (i.e., those containing an [`<input type="password">`](/en-US/docs/Web/HTML/Reference/Elements/input/password) field) are created so that they would be submitted insecurely, Firefox displays an in-context warning message below the password field to warn users ([Firefox bug 1319119](https://bugzil.la/1319119)). Autofill is also disabled on insecure login forms ([Firefox bug 1217152](https://bugzil.la/1217152)).
 - Support for SHA-1 SSL certificates has been removed; navigating to a secure page that uses a SHA-1 certificate will now result in an `Untrusted Connection` error ([Firefox bug 1330043](https://bugzil.la/1330043)).
 
 ## Plugins

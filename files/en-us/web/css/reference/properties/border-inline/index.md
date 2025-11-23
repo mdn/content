@@ -45,10 +45,6 @@ direction: rtl;
 }
 ```
 
-The physical borders to which `border-inline` maps depends on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("border-top")}} and {{cssxref("border-bottom")}} or {{cssxref("border-right")}}, and {{cssxref("border-left")}} properties, depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
-
-The borders in the other dimension can be set with {{cssxref("border-block")}}, which sets {{cssxref("border-block-start")}}, and {{cssxref("border-block-end")}}.
-
 ## Constituent properties
 
 This property is a shorthand for the following CSS properties:
@@ -82,6 +78,12 @@ The `border-inline` is specified with one or more of the following, in any order
   - : The line style of the border. See {{cssxref("border-style")}}.
 - {{CSSXref("&lt;color&gt;")}}
   - : The color of the border.
+
+## Description
+
+The physical borders to which `border-inline` maps depends on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("border-top")}} and {{cssxref("border-bottom")}} or {{cssxref("border-right")}}, and {{cssxref("border-left")}} properties, depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
+
+The borders in the other dimension can be set with {{cssxref("border-block")}}, which sets {{cssxref("border-block-start")}}, and {{cssxref("border-block-end")}}.
 
 ## Formal definition
 

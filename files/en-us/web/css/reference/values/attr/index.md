@@ -27,11 +27,13 @@ blockquote::after {
 
 ```html interactive-example
 <blockquote cite="https://mozilla.org/en-US/about/">
-  Mozilla makes browsers, apps, code, and tools that put people before profit.
+  Mozilla is working to put control of the internet back in the hands of the
+  people using it.
 </blockquote>
 
 <blockquote cite="https://web.dev/about/">
-  Google believes in an open, accessible, private, and secure web.
+  Build beautiful, accessible, fast, and secure websites that work
+  cross-browser.
 </blockquote>
 ```
 
@@ -119,6 +121,15 @@ The `attr()` function can reference attributes that were never intended for styl
 ```css
 span[data-icon] {
   background-image: url(attr(data-icon));
+}
+```
+
+However, this restriction applies only to places that strictly require a `<url>` type.
+Some functions — such as {{CSSxRef("image/image-set","image-set()")}} — can accept a `<string>` value that is later interpreted as a URL, allowing `attr()` to work in those contexts, depending on browser support:
+
+```css
+span[data-icon] {
+  background: image-set(attr(data-icon));
 }
 ```
 
