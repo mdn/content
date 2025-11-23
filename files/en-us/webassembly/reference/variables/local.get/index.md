@@ -1,12 +1,12 @@
 ---
-title: "local: Wasm text instruction"
-short-title: local
-slug: WebAssembly/Reference/Variables/local
+title: "local.get: Wasm text instruction"
+short-title: local.get
+slug: WebAssembly/Reference/Variables/local.get
 page-type: webassembly-instruction
 sidebar: webassemblysidebar
 ---
 
-The **`local`** instruction declares a new local variable.
+The **`local.get`** instruction loads the value of a local variable onto the stack.
 
 {{InteractiveExample("Wat Demo: local", "tabbed-taller")}}
 
@@ -33,6 +33,10 @@ await WebAssembly.instantiateStreaming(fetch(url), { console });
 ## Syntax
 
 ```wat
-;; declare new variable named $val of type i32
-(local $val i32)
+;; load the value of a local variable onto the stack
+local.get $val
 ```
+
+| Instruction | Binary opcode |
+| ----------- | ------------- |
+| `local.get` | `0x20`        |

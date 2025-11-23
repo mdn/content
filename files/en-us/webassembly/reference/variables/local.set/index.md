@@ -1,12 +1,12 @@
 ---
-title: "local: Wasm text instruction"
-short-title: local
-slug: WebAssembly/Reference/Variables/local
+title: "local.set: Wasm text instruction"
+short-title: local.set
+slug: WebAssembly/Reference/Variables/local.set
 page-type: webassembly-instruction
 sidebar: webassemblysidebar
 ---
 
-The **`local`** instruction declares a new local variable.
+The **`local.set`** instruction sets the values of a local variable.
 
 {{InteractiveExample("Wat Demo: local", "tabbed-taller")}}
 
@@ -33,6 +33,13 @@ await WebAssembly.instantiateStreaming(fetch(url), { console });
 ## Syntax
 
 ```wat
-;; declare new variable named $val of type i32
-(local $val i32)
+;; load the number 2 onto the stack
+i32.const 2
+
+;; store the number 2 in the variable $val
+local.set $val
 ```
+
+| Instruction | Binary opcode |
+| ----------- | ------------- |
+| `local.set` | `0x21`        |
