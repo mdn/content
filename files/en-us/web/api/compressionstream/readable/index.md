@@ -8,7 +8,12 @@ browser-compat: api.CompressionStream.readable
 
 {{APIRef("Compression Streams API")}}{{AvailableInWorkers}}
 
-The **`readable`** read-only property of the {{domxref("CompressionStream")}} interface returns a {{domxref("ReadableStream")}}.
+The **`readable`** read-only property of the {{domxref("CompressionStream")}} interface
+returns a {{domxref("ReadableStream")}} containing the compressed output data.
+
+This stream provides the result of data written into the {{domxref("CompressionStream.writable")}}
+property. Developers can consume the compressed content from this stream using
+methods such as `pipeTo()`, `pipeThrough()`, or by manually reading chunks with a reader.
 
 ## Value
 
