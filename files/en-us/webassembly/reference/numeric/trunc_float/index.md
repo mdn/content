@@ -10,7 +10,7 @@ The **`trunc`** instructions, short for _truncate_, are used for getting the val
 
 **`trunc`** differs from **`floor`** when used on negative numbers, **`floor`** will round down in those cases while **`trunc`** will round up.
 
-There's another [**`trunc`**](/en-US/docs/WebAssembly/Reference/Numeric/Truncate_float_to_int) instruction that truncates the fractional part of a floating point and converts it to an integer.
+There's another [**`trunc`**](/en-US/docs/WebAssembly/Reference/Numeric/trunc_int) instruction that truncates the fractional part of a floating point and converts it to an integer.
 
 {{InteractiveExample("Wat Demo: trunc_float_to_float", "tabbed-taller")}}
 
