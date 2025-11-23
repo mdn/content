@@ -28,6 +28,8 @@ Firefox 146 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 - Operator mirroring in right-to-left (RTL) modes and stretching now work properly when used in combination.
   ([Firefox bug 1994172](https://bugzil.la/1994172)).
+- The {{cssxref("math-shift")}} property is now supported. This allows developers to indicate whether superscript rendering in MathML formulas should be normal or compact, affecting the height to which superscript text is shifted.
+  ([Firefox bug 1994171](https://bugzil.la/1994171)).
 
 <!-- #### Removals -->
 
