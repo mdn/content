@@ -62,7 +62,7 @@ This identifier, often referred to as an "interval ID", can be passed to {{domxr
 - {{jsxref("SyntaxError")}}
   - : The `code` can't be parsed as a script.
 - {{jsxref("TypeError")}}
-  - : Thrown if the `code` parameter is set to a string when [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) are [enforced by a CSP](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) and no default policy is defined.
+  - : Thrown if the `code` parameter is set to a string when [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) are [enforced by CSP](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) and no default policy is defined.
     It is also thrown if the first parameter is not one of the supported types: a function, string or `TrustedScript`.
 
 ## Examples
