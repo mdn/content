@@ -38,8 +38,8 @@ In the first above example, the width will be at most 200px, but will be smaller
 ## Syntax
 
 ```css
-max(1, 2, 3)
-max(1px, 2px, 3px)
+min(1, 2, 3)
+min(1px, 2px, 3px)
 ```
 
 ### Parameters

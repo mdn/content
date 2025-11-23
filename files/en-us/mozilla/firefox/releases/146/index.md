@@ -51,7 +51,9 @@ Firefox 146 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### JavaScript -->
+### JavaScript
+
+- {{jsxref("WeakMap")}} and {{jsxref("WeakSet")}} now accept {{jsxref("Symbol")}} objects as keys, except for those that are [registered](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry). ([Firefox bug 1966745](https://bugzil.la/1966745)).
 
 <!-- No notable changes. -->
 

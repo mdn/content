@@ -100,14 +100,13 @@ We can see here another border around the word "emphasized text".
 ## See also
 
 - CSS values for controlling inheritance: [`inherit`](/en-US/docs/Web/CSS/Reference/Values/inherit), [`initial`](/en-US/docs/Web/CSS/Reference/Values/initial), [`revert`](/en-US/docs/Web/CSS/Reference/Values/revert), [`revert-layer`](/en-US/docs/Web/CSS/Reference/Values/revert-layer), and [`unset`](/en-US/docs/Web/CSS/Reference/Values/unset)
-- [CSS error handling](/en-US/docs/Web/CSS/Guides/Syntax/Error_handling)
-- [Introducing the CSS cascade](/en-US/docs/Web/CSS/Guides/Cascade/Introduction)
-- [Learn: Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
-- [Learn: cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
 - [CSS cascading and inheritance](/en-US/docs/Web/CSS/Guides/Cascade) module
-- [CSS syntax](/en-US/docs/Web/CSS/Guides/Syntax/Introduction) guide
-- [CSS syntax](/en-US/docs/Web/CSS/Guides/Syntax) module
+- [CSS error handling](/en-US/docs/Web/CSS/Guides/Syntax/Error_handling)
+- [Introduction to the CSS cascade](/en-US/docs/Web/CSS/Guides/Cascade/Introduction)
+- [Learn: Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
+- [Learn: Cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
+- [Introduction to CSS syntax: declarations, rulesets, and statements](/en-US/docs/Web/CSS/Guides/Syntax/Introduction)
 - [At-rules](/en-US/docs/Web/CSS/Guides/Syntax/At-rules)
-- [Initial](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#initial_value), [computed](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#computed_value), [used](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#used_value), and [actual](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#actual_value) values
+- Values: [initial](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#initial_value), [computed](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#computed_value), [used](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#used_value), and [actual](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#actual_value)
 - [Value definition syntax](/en-US/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)
-- [CSS nesting module](/en-US/docs/Web/CSS/Guides/Nesting)
+- [CSS nesting](/en-US/docs/Web/CSS/Guides/Nesting) module

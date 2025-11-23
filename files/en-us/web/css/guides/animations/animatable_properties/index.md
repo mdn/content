@@ -47,5 +47,6 @@ For unregistered custom properties, the animation type is discrete.
 
 - {{cssxref("transition-behavior")}}
 - {{cssxref("@starting-style")}}
+- [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module
 - [Using CSS Animations](/en-US/docs/Web/CSS/Guides/Animations/Using)
 - [Using CSS Transitions](/en-US/docs/Web/CSS/Guides/Transitions/Using)
