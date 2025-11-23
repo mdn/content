@@ -54,7 +54,7 @@ Arabic-based systems are typically written using a right-to-left inline directio
 Han-based systems are commonly written using a left-to-right inline direction with a top-to-bottom block flow direction, or a top-to-bottom inline direction with a right-to-left block flow direction. Traditionally, Chinese, Vietnamese, Korean, and Japanese are written vertically in columns, going from top to bottom, with a right-to-left block direction, but will often be rendered horizontally online, going from left to right.
 
 ```html
-<p lang="jp-JP" dir="auto">これは日本語で書かれています</p>
+<p lang="ja-JP" dir="auto">これは日本語で書かれています</p>
 ```
 
 Mongolian-based systems are typically written vertically, top to bottom, in columns that flow left to right; a top-to-bottom inline direction with a left-to-right block flow direction. This differs from Chinese, Japanese, and Korean, whose vertical text columns are read right to left. It derives from the fact that Mongolian script descended from Old Uyghur, which was written left-to-right.
@@ -68,7 +68,7 @@ To render the writing modes correctly, we use the global HTML [`dir`](/en-US/doc
 For vertical languages, we use the {{cssxref("writing-mode")}} and {{cssxref("text-orientation")}} properties:
 
 ```css
-[lang|="jp"] {
+[lang|="ja"] {
   writing-mode: vertical-rl;
   text-orientation: upright;
 }
@@ -81,7 +81,7 @@ For vertical languages, we use the {{cssxref("writing-mode")}} and {{cssxref("te
 {{EmbedLiveSample("Writing system modes", "100%", "500")}}
 
 ```css hidden
-[lang|="jp"],
+[lang|="ja"],
 [lang|="mn"] {
   float: left;
 }
