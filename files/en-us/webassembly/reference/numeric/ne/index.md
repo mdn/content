@@ -1,6 +1,7 @@
 ---
-title: Not equal
-slug: WebAssembly/Reference/Numeric/Not_equal
+title: "ne: Wasm text instruction"
+short-title: ne
+slug: WebAssembly/Reference/Numeric/ne
 page-type: webassembly-instruction
 sidebar: webassemblysidebar
 ---

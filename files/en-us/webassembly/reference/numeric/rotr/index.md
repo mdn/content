@@ -1,6 +1,7 @@
 ---
-title: Right rotate
-slug: WebAssembly/Reference/Numeric/Right_rotate
+title: "rotr: Wasm text instruction"
+short-title: rotr
+slug: WebAssembly/Reference/Numeric/rotr
 page-type: webassembly-instruction
 sidebar: webassemblysidebar
 ---

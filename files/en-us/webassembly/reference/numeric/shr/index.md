@@ -1,6 +1,7 @@
 ---
-title: Right shift
-slug: WebAssembly/Reference/Numeric/Right_shift
+title: "shr: Wasm text instruction"
+short-title: shr
+slug: WebAssembly/Reference/Numeric/shr
 page-type: webassembly-instruction
 sidebar: webassemblysidebar
 ---

@@ -1,11 +1,12 @@
 ---
-title: Truncate (float to int)
-slug: WebAssembly/Reference/Numeric/Truncate_float_to_int
+title: "trunc (to int): Wasm text instruction"
+short-title: trunc (to int)
+slug: WebAssembly/Reference/Numeric/trunc_int
 page-type: webassembly-instruction
 sidebar: webassemblysidebar
 ---
 
-The **`trunc`** instructions, are used for converting floating points to integers. It's named truncate since it truncates the fractional part of the number when doing the conversion. There are signed and unsigned versions of this instruction.
+The **`trunc`** instructions, short for _truncate_, are used for converting floating points to integers. It's named truncate since it truncates the fractional part of the number when doing the conversion. There are signed and unsigned versions of this instruction.
 
 There's another [**`trunc`**](/en-US/docs/WebAssembly/Reference/Numeric/Truncate_float_to_float) instruction that truncates the fractional part of a floating point without converting it to and integer.
 

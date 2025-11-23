@@ -1,6 +1,7 @@
 ---
-title: Remainder
-slug: WebAssembly/Reference/Numeric/Remainder
+title: "rem: Wasm text instruction"
+short-title: rem
+slug: WebAssembly/Reference/Numeric/rem
 page-type: webassembly-instruction
 sidebar: webassemblysidebar
 ---

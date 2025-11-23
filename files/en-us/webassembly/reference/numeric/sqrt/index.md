@@ -1,6 +1,7 @@
 ---
-title: Square root
-slug: WebAssembly/Reference/Numeric/Square_root
+title: "sqrt: Wasm text instruction"
+short-title: sqrt
+slug: WebAssembly/Reference/Numeric/sqrt
 page-type: webassembly-instruction
 sidebar: webassemblysidebar
 ---

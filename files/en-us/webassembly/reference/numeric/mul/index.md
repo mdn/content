@@ -1,6 +1,7 @@
 ---
-title: Multiplication
-slug: WebAssembly/Reference/Numeric/Multiplication
+title: "mul: Wasm text instruction"
+short-title: mul
+slug: WebAssembly/Reference/Numeric/mul
 page-type: webassembly-instruction
 sidebar: webassemblysidebar
 ---

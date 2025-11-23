@@ -16777,6 +16777,17 @@
 /en-US/docs/WebAssembly/Reference/Numeric/Left_rotate	/en-US/docs/WebAssembly/Reference/Numeric/rotl
 /en-US/docs/WebAssembly/Reference/Numeric/Left_shift	/en-US/docs/WebAssembly/Reference/Numeric/shl
 /en-US/docs/WebAssembly/Reference/Numeric/Less_or_equal	/en-US/docs/WebAssembly/Reference/Numeric/le
+/en-US/docs/WebAssembly/Reference/Numeric/Multiplication	/en-US/docs/WebAssembly/Reference/Numeric/mul
+/en-US/docs/WebAssembly/Reference/Numeric/Negate	/en-US/docs/WebAssembly/Reference/Numeric/neg
+/en-US/docs/WebAssembly/Reference/Numeric/Not_equal	/en-US/docs/WebAssembly/Reference/Numeric/ne
+/en-US/docs/WebAssembly/Reference/Numeric/Population_count	/en-US/docs/WebAssembly/Reference/Numeric/popcnt
+/en-US/docs/WebAssembly/Reference/Numeric/Remainder	/en-US/docs/WebAssembly/Reference/Numeric/rem
+/en-US/docs/WebAssembly/Reference/Numeric/Right_rotate	/en-US/docs/WebAssembly/Reference/Numeric/rotr
+/en-US/docs/WebAssembly/Reference/Numeric/Right_shift	/en-US/docs/WebAssembly/Reference/Numeric/shr
+/en-US/docs/WebAssembly/Reference/Numeric/Square_root	/en-US/docs/WebAssembly/Reference/Numeric/sqrt
+/en-US/docs/WebAssembly/Reference/Numeric/Subtraction	/en-US/docs/WebAssembly/Reference/Numeric/sub
+/en-US/docs/WebAssembly/Reference/Numeric/Truncate_float_to_float	/en-US/docs/WebAssembly/Reference/Numeric/trunc_float
+/en-US/docs/WebAssembly/Reference/Numeric/Truncate_float_to_int	/en-US/docs/WebAssembly/Reference/Numeric/trunc_int
 /en-US/docs/WebAssembly/Reference/Variables/Local_get	/en-US/docs/WebAssembly/Reference/Variables/local.get
 /en-US/docs/WebAssembly/Reference/Variables/Local_set	/en-US/docs/WebAssembly/Reference/Variables/local.set
 /en-US/docs/WebAssembly/Reference/Variables/Local_tee	/en-US/docs/WebAssembly/Reference/Variables/local.tee

@@ -1,6 +1,7 @@
 ---
-title: Truncate (float to float)
-slug: WebAssembly/Reference/Numeric/Truncate_float_to_float
+title: "trunc (to float): Wasm text instruction"
+short-title: trunc (to float)
+slug: WebAssembly/Reference/Numeric/trunc_float
 page-type: webassembly-instruction
 sidebar: webassemblysidebar
 ---

@@ -1,6 +1,7 @@
 ---
-title: Population count
-slug: WebAssembly/Reference/Numeric/Population_count
+title: "popcnt: Wasm text instruction"
+short-title: popcnt
+slug: WebAssembly/Reference/Numeric/popcnt
 page-type: webassembly-instruction
 sidebar: webassemblysidebar
 ---

@@ -1,6 +1,7 @@
 ---
-title: Negate
-slug: WebAssembly/Reference/Numeric/Negate
+title: "neg: Wasm text instruction"
+short-title: neg
+slug: WebAssembly/Reference/Numeric/neg
 page-type: webassembly-instruction
 sidebar: webassemblysidebar
 ---

@@ -1,6 +1,7 @@
 ---
-title: Subtraction
-slug: WebAssembly/Reference/Numeric/Subtraction
+title: "sub: Wasm text instruction"
+short-title: sub
+slug: WebAssembly/Reference/Numeric/sub
 page-type: webassembly-instruction
 sidebar: webassemblysidebar
 ---
