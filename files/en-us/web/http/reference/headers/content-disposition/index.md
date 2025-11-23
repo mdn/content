@@ -55,7 +55,10 @@ Browsers may apply transformations to conform to the file system requirements, s
 
 ### As a header for a multipart body
 
-A `multipart/form-data` body requires a `Content-Disposition` header to provide information about each subpart of the form (e.g., for every form field and any files that are part of field data). The first directive is always `form-data`, and the header must also include a `name` parameter to identify the relevant field. Additional directives are case-insensitive. Their arguments usually use quoted-string syntax after the `=` sign; although the standard allows unquoted tokens here, many server implementations expect the values to be quoted. Multiple parameters are separated by a semicolon (`;`).
+A `multipart/form-data` body requires a `Content-Disposition` header to provide information about each subpart of the form (e.g., for every form field and any files that are part of field data).
+The first directive is always `form-data`, and the header must also include a `name` parameter to identify the relevant field. Additional directives are case-insensitive.
+Their arguments usually use quoted-string syntax after the `=` sign; although the standard allows unquoted tokens here, many server implementations expect the values to be quoted.
+Multiple parameters are separated by a semicolon (`;`).
 
 ```http
 Content-Disposition: form-data; name="fieldName"
