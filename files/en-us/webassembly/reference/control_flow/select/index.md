@@ -1,6 +1,6 @@
 ---
-title: Select
-slug: WebAssembly/Reference/Control_flow/Select
+title: select
+slug: WebAssembly/Reference/Control_flow/select
 page-type: webassembly-instruction
 sidebar: webassemblysidebar
 ---
