@@ -82,7 +82,7 @@ You can use this format to import or export AES or HMAC secret keys, or Elliptic
 
 In this format the key is supplied as an [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) containing the raw bytes for the key.
 
-Note that when importing Elliptic Curve public keys the data may contain _compressed_ elliptic curve points.
+Note that when importing Elliptic Curve public keys, the data may contain _compressed_ elliptic curve points.
 
 ### PKCS #8
 

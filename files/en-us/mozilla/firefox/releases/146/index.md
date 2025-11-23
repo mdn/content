@@ -67,7 +67,7 @@ Firefox 146 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ### APIs
 
-- {{domxref("SubtleCrypto.importKey()")}} now allows you to import keys defined as compressed elliptic curve points, when using the [ECDSA](/en-US/docs/Web/API/SubtleCrypto/sign#ecdsa) or [ECDH](/en-US/docs/Web/API/SubtleCrypto/deriveKey#ecdh) algorithms. ([Firefox bug 1971499](https://bugzil.la/1971499)).
+- {{domxref("SubtleCrypto.importKey()")}} now allows you to import keys defined as compressed elliptic curve points when using the [ECDSA](/en-US/docs/Web/API/SubtleCrypto/sign#ecdsa) or [ECDH](/en-US/docs/Web/API/SubtleCrypto/deriveKey#ecdh) algorithms. ([Firefox bug 1971499](https://bugzil.la/1971499)).
 
 <!-- #### DOM -->
 
