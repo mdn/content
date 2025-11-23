@@ -209,9 +209,11 @@ A favicon can be added to your page by:
    ```
 
 > [!NOTE]
-> In this example, the path to the favicon file starts with `/`, which means "look for the file in the top-level (or _root_) directory of your site". This may be in a different place in the source code, depending on what system you are using to create your site: different web frameworks for example put the site content root in different places. Bear in mind also that most browsers these days automatically use a `favicon.ico` file found at the site root as a favicon, so many sites don't even bother to include the `<link>` element. It is still useful to know about in case you want to locate your favicon file somewhere else.
+> In this example, the path to the favicon file starts with `/`, which means "look for the file in the top-level (or _root_) directory of your site". This may be in a different place in the source code, depending on what system you are using to create your site: web frameworks usually reserve a special folder for files in the site root, such as `static` or `public`.
 >
 > Don't worry too much about the intricacies of file paths for now; you'll learn more about them later on (check out [A quick primer on URLs and paths](/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links#a_quick_primer_on_urls_and_paths) if you are curious).
+>
+> Most browsers and software applications these days automatically use a `favicon.ico` file found at the site root as a favicon, so many sites don't even bother to include the `<link>` element. An explicit element is still useful in case you want to locate your favicon file somewhere else.
 
 Here is an example of a favicon in a bookmarks panel:
 
