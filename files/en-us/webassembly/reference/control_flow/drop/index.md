@@ -1,11 +1,12 @@
 ---
-title: drop
+title: "drop: Wasm text instruction"
+short-title: drop
 slug: WebAssembly/Reference/Control_flow/drop
 page-type: webassembly-instruction
 sidebar: webassemblysidebar
 ---
 
-The **`drop`** instruction, pops a value from the stack, and discards it.
+The **`drop`** instruction pops a value from the stack, and discards it.
 
 {{InteractiveExample("Wat Demo: drop", "tabbed-taller")}}
 

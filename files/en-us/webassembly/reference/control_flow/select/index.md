@@ -1,5 +1,6 @@
 ---
-title: select
+title: "select: Wasm text instruction"
+short-title: select
 slug: WebAssembly/Reference/Control_flow/select
 page-type: webassembly-instruction
 sidebar: webassemblysidebar
