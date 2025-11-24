@@ -28,7 +28,7 @@ animation-timeline: view(axis inset);
 
 /* Multiple values */
 animation-timeline: --progress-bar-timeline, --carousel-timeline;
-animation-timeline: none, --sliding-timeline;
+animation-timeline: auto, auto, none, --sliding-timeline;
 
 /* Global values */
 animation-timeline: inherit;
@@ -46,7 +46,7 @@ The `animation-timeline` property is specified as one or more comma-separated va
   - : The animation is not associated with a timeline, and no animation occurs.
 
 - `auto`
-  - : The animation's timeline is the document's default {{domxref("DocumentTimeline")}}".
+  - : The animation's timeline is the document's default {{domxref("DocumentTimeline")}}". This is the default.
 
 - {{cssxref("animation-timeline/scroll", "scroll()")}}
   - : Defines the root, nearest scroller, or self as the anonymous scroll progress timeline, and optionally the scroll direction of the scroller.
@@ -64,7 +64,7 @@ The default timeline for a CSS keyframe animation is the time-based {{domxref("D
 The following types of timelines can be set via `animation-timeline`:
 
 - {{domxref("DocumentTimeline")}}
-  - : The default document timeline, which is progressed through by the passing of time since the document was first loaded in the browser. This is the timeline traditionally associated with CSS animations and is selected with a value of `auto`, or by not specifying an `animation-timeline` value at all.
+  - : The default document timeline, which is progressed through by the passing of time since the document was first loaded in the browser. This is the timeline traditionally associated with CSS animations and is selected with a value of `auto`, or by not specifying an `animation-timeline` value at all, as this is the default value.
 - [Scroll progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#scroll_progress_timelines)
   - : The animation is progressed through by scrolling a scrollable element, or _scroller_, horizontally or vertically. The element that provides the scroll progress timeline can be specified in two ways:
     - [Named scroll progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#named_scroll_progress_timelines)
@@ -232,6 +232,19 @@ The CSS below defines a square that rotates in alternate directions according to
 }
 ```
 
+```css hidden live-sample___named_scroll  live-sample___named_view
+@layer no-support {
+  @supports not (animation-timeline: --square-timeline) {
+    body::before {
+      content: "Your browser doesn't support named animation timelines.";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+    }
+  }
+}
+```
+
 #### Result
 
 Scroll to see the element being animated.
@@ -252,11 +265,24 @@ We include all the CSS from the previous example, only setting the `animation-ti
 }
 ```
 
+```css hidden live-sample___anonymous_scroll
+@layer no-support {
+  @supports not (animation-timeline: scroll()) {
+    body::before {
+      content: "Your browser doesn't support the scroll() function.";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+    }
+  }
+}
+```
+
 #### Result
 
 Scroll to see the square element being animated.
 
-{{EmbedLiveSample("anonymous_scroll", "100%", "320px")}}
+{{EmbedLiveSample("anonymous_scroll", "100%", "150px")}}
 
 ### Setting a named view progress timeline
 
@@ -433,11 +459,24 @@ In the middle of the wall of text, we include two `<div>` elements that we will 
 }
 ```
 
+```css hidden live-sample___anonymous_view
+@layer no-support {
+  @supports not (animation-timeline: view()) {
+    body::before {
+      content: "Your browser doesn't support the scroll driven animation functions.";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+    }
+  }
+}
+```
+
 #### Result
 
 Scroll to see the subject element being animated.
 
-{{EmbedLiveSample("anonymous_view", "100%", "480px")}}
+{{EmbedLiveSample("anonymous_view", "100%", "350px")}}
 
 ## Specifications
 
@@ -454,7 +493,6 @@ Scroll to see the subject element being animated.
 - {{cssxref("timeline-scope")}}
 - {{cssxref("view-timeline-name")}}, {{cssxref("view-timeline-axis")}}, {{cssxref("view-timeline")}}, {{cssxref("view-timeline-inset")}}
 - {{domxref("AnimationTimeline")}}
-- [Guide: Scroll-driven animation timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeslines)
 - [Guide: Using CSS animations](/en-US/docs/Web/CSS/Guides/Animations/Using_CSS_animations)
 - [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module
 - [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) module
