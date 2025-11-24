@@ -24,7 +24,7 @@ Create a `main.js` file. This file will contain the code for a simple HTTP serve
 
 ```js
 Deno.serve({
-  port: 80,
+  port: 8080,
   async handler(request) {
     if (request.headers.get("upgrade") !== "websocket") {
       // If the request is a normal HTTP request,
@@ -56,7 +56,7 @@ Deno.serve({
 [`Deno.serve()`](https://docs.deno.com/api/deno/~/Deno.serve) uses `Deno.listen()` and `Deno.serveHttp()` under the hood, and is a higher-level interface to easily set up a HTTP server. Without it, the code would look something like this.
 
 ```js
-for await (const conn of Deno.listen({ port: 80 })) {
+for await (const conn of Deno.listen({ port: 8080 })) {
   for await (const { request, respondWith } of Deno.serveHttp(conn)) {
     respondWith(handler(request));
   }
@@ -115,12 +115,12 @@ websocket.onerror = (e) => {
 With the two files, run the app using Deno.
 
 ```sh
-deno run --allow-net=0.0.0.0:80 --allow-read=./index.html main.js
+deno run --allow-net=0.0.0.0:8080 --allow-read=./index.html main.js
 ```
 
 Deno requires us to give explicit permissions for what we can access on the host machine.
 
-- `--allow-net=0.0.0.0:80` allows the app to attach to localhost on port 80
+- `--allow-net=0.0.0.0:8080` allows the app to attach to localhost on port 8080
 - `--allow-read=./index.html` allows access to the HTML file for the client
 
 ## See also
