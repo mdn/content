@@ -290,6 +290,6 @@ For more examples, please see [Using media queries](/en-US/docs/Web/CSS/Guides/M
 - [CSS media queries](/en-US/docs/Web/CSS/Guides/Media_queries) module
 - [Using media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using)
 - {{domxref("CSSMediaRule")}} interface
-- CSS {{cssxref("@@custom-media")}} at-rule
+- CSS {{cssxref("@custom-media")}} at-rule
 - [Extended Mozilla media features](/en-US/docs/Web/CSS/Reference/Mozilla_extensions#media_features)
 - [Extended WebKit media features](/en-US/docs/Web/CSS/Reference/Webkit_extensions#media_features)
