@@ -313,16 +313,22 @@ class Color {
     // values is now an HSL array!
     this.values = rgbToHSL([r, g, b]);
   }
+
   getRed() {
-    return this.values[0];
+    // Convert HSL → RGB and return the red channel
+    return hslToRGB(this.values)[0];
   }
+
   setRed(value) {
-    this.values[0] = value;
+    // Convert HSL → RGB, update red channel, convert back to HSL
+    const rgb = hslToRGB(this.values);
+    rgb[0] = value;
+    this.values = rgbToHSL(rgb);
   }
 }
 
 const red = new Color(255, 0, 0);
-console.log(red.values[0]); // 0; It's not 255 anymore, because the H value for pure red is 0
+console.log(red.getRed()); // 255
 ```
 
 The user assumption that `values` means the RGB value suddenly collapses, and it may cause their logic to break. So, if you are an implementor of a class, you would want to hide the internal data structure of your instance from your user, both to keep the API clean and to prevent the user's code from breaking when you do some "harmless refactors". In classes, this is done through [_private fields_](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements).
