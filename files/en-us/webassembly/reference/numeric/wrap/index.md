@@ -1,6 +1,7 @@
 ---
-title: Wrap
-slug: WebAssembly/Reference/Numeric/Wrap
+title: "wrap: Wasm text instruction"
+short-title: wrap
+slug: WebAssembly/Reference/Numeric/wrap
 page-type: webassembly-instruction
 sidebar: webassemblysidebar
 ---
