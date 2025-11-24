@@ -232,7 +232,7 @@ The CSS below defines a square that rotates in alternate directions according to
 }
 ```
 
-```css hidden live-sample___named_scroll  live-sample___named_view
+```css hidden live-sample___named_scroll live-sample___named_view
 @layer no-support {
   @supports not (animation-timeline: --square-timeline) {
     body::before {
