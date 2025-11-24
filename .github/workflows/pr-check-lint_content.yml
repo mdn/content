@@ -155,7 +155,7 @@ jobs:
 
       - name: Setup reviewdog
         if: steps.lint.outputs.FILES_MODIFIED == 'true' || steps.lint.outputs.MD_LINT_FAILED == 'true'
-        uses: reviewdog/action-setup@d8edfce3dd5e1ec6978745e801f9c50b5ef80252 # v1.4.0
+        uses: reviewdog/action-setup@d8a7baabd7f3e8544ee4dbde3ee41d0011c3a93f # v1.5.0
         with:
           reviewdog_version: latest
 
