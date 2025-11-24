@@ -117,6 +117,7 @@ In this example, we reduce the duration of the view progress scroll animation by
 #### HTML
 
 In the middle of a wall of text, we include an element that we will animate. We added a lot of text in to ensure that our content overflows its container, but this was hidden for the sake of brevity.
+The checkbox included to toggle the demonstration of the effect of the {{cssxref("animation-fill-mode")}} property on shortened animation timelines is also hidden.
 
 ```html hidden
 <div class="content">
@@ -156,17 +157,9 @@ In the middle of a wall of text, we include an element that we will animate. We 
   Netus et malesuada fames ac.
 </p>
 <p></p>
-```
-
-We also includes a toggle checkbox to demonstrate the effect of the {{cssxref("animation-fill-mode")}} property on shortened animation timelines.
-
-```html
 <label>
   <input type="checkbox" /> Add <code>animation-fill-mode: both;</code>
 </label>
-```
-
-```html hidden
   </p>
 </div>
 ```
@@ -242,6 +235,15 @@ h1 {
 p {
   font-size: 1.5rem;
   line-height: 1.5;
+}
+@supports not (animation-range: normal) {
+  body::before {
+    content: "Your browser does not support the 'animation-range' property.";
+    background-color: #ffcd33;
+    display: block;
+    text-align: center;
+    padding: 1rem 0;
+  }
 }
 ```
 
