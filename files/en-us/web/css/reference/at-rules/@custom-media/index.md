@@ -1,6 +1,6 @@
 ---
 title: "@custom-media"
-slug: Web/CSS/@custom-media
+slug: Web/CSS/Reference/At-rules/@custom-media
 page-type: css-at-rule
 status:
   - experimental
