@@ -73,7 +73,7 @@ To mitigate the potential impact this can have on performance, once intervals ar
 Attempts to specify a value less than 4 ms in deeply-nested calls to `setInterval()` will be pinned to 4 ms.
 
 Browsers may enforce even more stringent minimum values for the interval under some circumstances, although these should not be common.
-Note also that the actual amount of time that elapses between calls to the callback may be longer than the given `delay`; see [Reasons for delays longer than specified](/en-US/docs/Web/API/Window/setTimeout#reasons_for_delays_longer_than_specified) for examples.
+Note also that the actual amount of time that elapses between calls to the callback may be longer than the given `delay`; see [Reasons for delays longer than specified](/en-US/docs/Web/API/Window/setTimeout#reasons_for_longer_delays_than_specified) for examples.
 
 > [!NOTE]
 > The `delay` argument is converted to a signed 32-bit integer, which limits the value to 2147483647 ms, or roughly 24.8 days.
