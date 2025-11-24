@@ -43,7 +43,7 @@ button.
 <!-- Simple pop-up dialog box, containing a form -->
 <dialog id="favDialog">
   <form method="dialog">
-    <button type="button" id="close" aria-label="close">X</button>
+    <button type="button" id="cancel">Cancel</button>
     <section>
       <p>
         <label for="favAnimal">Favorite animal:</label>
@@ -71,7 +71,7 @@ button.
 
 ```js
 const updateButton = document.getElementById("updateDetails");
-const closeButton = document.getElementById("close");
+const cancelButton = document.getElementById("cancel");
 const dialog = document.getElementById("favDialog");
 dialog.returnValue = "favAnimal";
 
