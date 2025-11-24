@@ -90,7 +90,7 @@ updateButton.addEventListener("click", () => {
 });
 
 // Form cancel button closes the dialog box
-closeButton.addEventListener("click", () => {
+cancelButton.addEventListener("click", () => {
   dialog.close("animalNotChosen");
   openCheck(dialog);
 });
