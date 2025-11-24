@@ -79,7 +79,7 @@ By grouping all the breakpoints in a single location, it's easier to control the
 The custom media query is evaluated logically. For instance, the following code snippet:
 
 ```css
-@custom-media --modern (color), (hover);Expand commentComment on line R82ResolvedCode has comments. Press enter to view.
+@custom-media --modern (color), (hover);
 
 @media (--modern) and (width > 1024px) {
 }
