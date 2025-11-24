@@ -127,7 +127,7 @@ A _container style query_ is a `@container` query that evaluates computed styles
 }
 ```
 
-The parameter of each `style()` function is a single **`<style-feature>`**. Per the CSS containment specification, a `<style-feature>` can be a valid CSS [declaration](/en-US/docs/Web/CSS/Guides/Syntax/Introduction#css_declarations), a CSS property, or a [`<custom-property-name>`](/en-US/docs/Web/CSS/Reference/Values/var#values). The only style feature currently supported is custom properties, with or without a value. See the [browser compatibility table for `@container`](/en-US/docs/Web/CSS/Reference/At-rules/@container#browser_compatibility).
+The parameter of each `style()` function is a single **`<style-feature>`**. Per the CSS containment specification, a `<style-feature>` can be a valid CSS [declaration](/en-US/docs/Web/CSS/Guides/Syntax/Introduction#css_declarations), a CSS property, or a [`<custom-property-name>`](/en-US/docs/Web/CSS/Reference/Values/var#values). The only style feature currently supported is custom properties, with or without a value, and with a direct comparison or a syntax range. See the [browser compatibility table for `@container`](/en-US/docs/Web/CSS/Reference/At-rules/@container#browser_compatibility).
 
 If the `<style-feature>` includes a value, the style query evaluates to true if the computed value of the custom property (or, in the future, the CSS declaration) passed as the `style()` argument is true for the container being queried. Otherwise, it resolves to false.
 A style feature without a value evaluates to true if the computed value is different from the [initial value](#registered_properties) for the given property.
@@ -144,13 +144,13 @@ In the future, we'll be able to write style queries like so:
 }
 ```
 
-The `style()` functional notation is used to differentiate style queries from size queries. While not yet supported, we will eventually be able to query regular CSS declarations such as `max-width: 600px`. Querying `@container (max-width: 600px)` is a size query; containment with {{cssxref("container-type")}}, or the {{cssxref("container")}} shorthand, is needed. That query will return true if the container is 600px or less. That is different from querying `@container style(max-width: 600px)`, which is a style query; when supported, this query will return true if the container has a {{cssxref("max-width")}} value of `600px`.
+The `style()` functional notation is used to differentiate style queries from size queries. While not yet supported, we will eventually be able to query regular CSS declarations such as `max-width: 600px`. Querying `@container (max-width: 600px)` is a size query; containment with {{cssxref("container-type")}}, or the {{cssxref("container")}} shorthand, is needed. That query will return true if the container is `600px` or less. That is different from querying `@container style(max-width: 600px)`, which is a style query; when supported, this query will return true if the container has a {{cssxref("max-width")}} value of `600px`.
 
 Until style queries for regular CSS declarations and properties are supported, we are limited to including only custom properties as the `style()` parameter, with or without a value:
 
 ```css
 @container style(--themeBackground),
-    style(--themeColor: blue) or style(--themeColor: purple) {
+    style(--themeColor: blue) or style(--inner-padding > 1em) {
   /* <stylesheet> */
 }
 ```
@@ -351,6 +351,20 @@ If you enter `unset` or `gibberish`, the JavaScript updates the `style` on the {
 
 > [!NOTE]
 > When declaring custom properties, consider using `@property` with the {{cssxref("@property/syntax","syntax")}} descriptor so the browser can properly compare computed values.
+
+#### Style query specifying a range
+
+When using range syntax for container style queries, you can use comparison operators (`<`, `<=`, `>`, `>=`) to compare:
+
+- Custom property values, for example `style(--inner-padding > 1em)`.
+- Literal values, for example `style(1em < 20px)`.
+- Values from substitution functions such as [`attr()`](/en-US/docs/Web/CSS/Reference/Values/attr), for example `style(attr(data-columns, type<number>) > 2)`.
+
+The following numeric types can be compared: {{cssxref("&lt;length>")}}, {{cssxref("&lt;number>")}}, {{cssxref("&lt;percentage>")}}, {{cssxref("&lt;angle>")}}, {{cssxref("&lt;time>")}}, {{cssxref("&lt;frequency>")}}, and {{cssxref("&lt;resolution>")}}. Both sides of the comparison must resolve to the same data type, otherwise the container query is invalid.
+
+##### Example
+
+See [Styling a heading based on a reference size style](/en-US/docs/Web/CSS/Reference/At-rules/@container#styling_a_heading_based_on_a_reference_size_style) for container style query range examples.
 
 ### Nested queries
 
