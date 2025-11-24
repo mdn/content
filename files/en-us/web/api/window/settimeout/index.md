@@ -78,8 +78,8 @@ If you wish to call a function repeatedly (e.g., every _N_ milliseconds), you ca
 
 ### Working with asynchronous functions
 
-`setTimeout()` is an asynchronous function, meaning that the timer function will not pause execution of other functions in the function's stack.
-In other words, you cannot use `setTimeout()` to create a "pause" before the next function in the stack fires.
+`setTimeout()` is an asynchronous function, meaning that it completes immediately, and does not block the execution of the following code.
+In other words, you cannot use `setTimeout()` to create a "pause" before the next line is executed.
 
 See the following example:
 
