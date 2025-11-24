@@ -73,7 +73,7 @@ For the purpose of this example we'll assume that we want to allow a predefined 
 
 ```js
 const scriptAllowList = [
-  /*Some list of allowed URLs */
+  /* Some list of allowed URLs */
 ];
 const policy = trustedTypes.createPolicy("script-url-policy", {
   createScriptURL(input) {
@@ -89,7 +89,7 @@ const policy = trustedTypes.createPolicy("script-url-policy", {
 Next we'll create the script element to which we will assign the value and get a handle to the element.
 
 ```html
-<script id="el" type="text/javascript"></script>
+<script id="el"></script>
 ```
 
 ```js
