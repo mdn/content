@@ -22,7 +22,7 @@ In this challenge, we provide you with some data on the planets in our solar sys
        <meta charset="utf-8" />
        <meta name="viewport" content="width=device-width" />
        <title>Planet data table</title>
-       <link href="minimal-table.css" rel="stylesheet" type="text/css" />
+       <link href="style.css" rel="stylesheet" type="text/css" />
      </head>
      <body>
        <h1>Planet data table</h1>
