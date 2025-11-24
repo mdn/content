@@ -96,11 +96,7 @@ div::after {
       content: "Your browser doesn't support scroll-driven animations.";
       background-color: wheat;
       display: block;
-      width: 100%;
       text-align: center;
-    }
-    body > * {
-      display: none;
     }
   }
 }

@@ -239,7 +239,7 @@ p {
 @supports not (animation-range: normal) {
   body::before {
     content: "Your browser does not support the 'animation-range' property.";
-    background-color: #ffcd33;
+    background-color: wheat;
     display: block;
     text-align: center;
     padding: 1rem 0;
