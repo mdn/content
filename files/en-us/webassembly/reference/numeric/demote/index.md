@@ -1,11 +1,12 @@
 ---
-title: Demote
-slug: WebAssembly/Reference/Numeric/Demote
+title: "demote: Wasm text instruction"
+short-title: demote
+slug: WebAssembly/Reference/Numeric/demote
 page-type: webassembly-instruction
 sidebar: webassemblysidebar
 ---
 
-The **`demote`** instruction, is used to convert (demote) numbers of type `f64` to type `f32`.
+The **`demote`** instructions are used to convert (demote) numbers of type `f64` to type `f32`.
 
 {{InteractiveExample("Wat Demo: demote", "tabbed-taller")}}
 
