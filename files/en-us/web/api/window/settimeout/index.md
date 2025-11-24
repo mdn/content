@@ -8,6 +8,13 @@ browser-compat: api.setTimeout
 
 {{APIRef("HTML DOM")}}
 
+> [!WARNING]
+> When the `code` parameter is used, this method dynamically executes its value as JavaScript.
+> APIs like this are known as [injection sinks](/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage), and are potentially a vector for [cross-site-scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks.
+>
+> You can mitigate this risk by always assigning {{domxref("TrustedScript")}} objects instead of strings and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types).
+> See [Security considerations](#security_considerations) for more information.
+
 The **`setTimeout()`** method of the {{domxref("Window")}} interface sets a timer which executes a function or specified piece of code once the timer expires.
 
 ## Syntax
@@ -16,76 +23,63 @@ The **`setTimeout()`** method of the {{domxref("Window")}} interface sets a time
 setTimeout(code)
 setTimeout(code, delay)
 
-setTimeout(functionRef)
-setTimeout(functionRef, delay)
-setTimeout(functionRef, delay, param1)
-setTimeout(functionRef, delay, param1, param2)
-setTimeout(functionRef, delay, param1, param2, /* …, */ paramN)
+setTimeout(func)
+setTimeout(func, delay)
+setTimeout(func, delay, param1)
+setTimeout(func, delay, param1, param2)
+setTimeout(func, delay, param1, param2, /* …, */ paramN)
 ```
 
 ### Parameters
 
-- `functionRef`
+- `func`
   - : A {{jsxref("function")}} to be executed after the timer expires.
 - `code`
-  - : An alternative syntax that allows you to include a string instead of a function,
-    which is compiled and executed when the timer expires. This syntax is **not
-    recommended** for the same reasons that make using
-    {{jsxref("Global_Objects/eval", "eval()")}} a security risk.
+  - : A {{domxref("TrustedScript")}} or a string of arbitrary code that is compiled and executed every `delay` milliseconds.
+    This can be used instead of passing a function, but is _strongly discouraged_ for the same reasons that make using {{jsxref("Global_Objects/eval", "eval()")}} a security risk.
 - `delay` {{optional_inline}}
-  - : The time, in milliseconds that the timer should wait before
-    the specified function or code is executed. If this parameter is omitted, a value of 0
-    is used, meaning execute "immediately", or more accurately, the next event cycle.
+  - : The time that the timer should wait before the specified function or code is executed, in milliseconds.
+    Defaults to 0 if not specified.
 
-    Note that in either case, the actual delay may be longer than intended; see [Reasons for delays longer than specified](#reasons_for_delays_longer_than_specified) below.
-
-    Also note that if the value isn't a number, implicit [type coercion](/en-US/docs/Glossary/Type_coercion) is silently done on the value to convert it to a number — which can lead to unexpected and surprising results; see [Non-number delay values are silently coerced into numbers](#non-number_delay_values_are_silently_coerced_into_numbers) for an example.
+    Note:
+    - The delay has a maximum value of 2147483647 ms — specifying larger values may result in overflow or a 0 value being used.
+      See [maximum delay value](#maximum_delay_value) below for more information.
+    - The actual delay may be longer than set.
+      For example, setting `delay` to 0 will execute in the next event cycle rather than "immediately".
+      See [Reasons for longer delays than specified](#reasons_for_longer_delays_than_specified) for more information.
+    - If the value isn't a number, implicit [type coercion](/en-US/docs/Glossary/Type_coercion) is silently done on the value to convert it to a number.
+      This can lead to unexpected and surprising results — see [Non-number delay values are silently coerced into numbers](#non-number_delay_values_are_silently_coerced_into_numbers) for an example.
 
 - `param1`, …, `paramN` {{optional_inline}}
-  - : Additional arguments which are passed through to the function specified by `functionRef`.
+  - : Additional arguments which are passed through to the function specified by `func`.
 
 ### Return value
 
-The `setTimeout()` method returns a positive integer (typically within the range of 1 to 2,147,483,647) that uniquely identifies the timer created by the call. This identifier, often referred to as a "timeout ID", can be passed to {{domxref("Window.clearTimeout","clearTimeout()")}} to cancel the timer.
+A positive integer (typically within the range of 1 to 2,147,483,647) that uniquely identifies the timer created by the call.
+This identifier, often referred to as a "timeout ID", can be passed to {{domxref("Window.clearTimeout","clearTimeout()")}} to cancel the timer.
 
-Within the same global environment (e.g., a specific window or worker) the timeout ID is guaranteed not to be reused for any new timer as long as the original timer remains active. However, separate global environments maintain their own independent pools of timer IDs.
+Within the same global environment (e.g., a specific window or worker) the timeout ID is guaranteed not to be reused for any new timer as long as the original timer remains active.
+However, separate global environments maintain their own independent pools of timer IDs.
+
+### Exceptions
+
+- {{jsxref("SyntaxError")}}
+  - : The `code` can't be parsed as a script.
+- {{jsxref("TypeError")}}
+  - : Thrown if the `code` parameter is set to a string when [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) are [enforced by a CSP](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) and no default policy is defined.
+    It is also thrown if the first parameter is not one of the supported types: a function, string or `TrustedScript`.
 
 ## Description
 
-Timeouts are cancelled using {{domxref("Window.clearTimeout()")}}.
+The `setTimeout()` function is commonly used to call a function that is executed just once, after a delay.
+The timeout can be cancelled before it completes using {{domxref("Window.clearTimeout()")}}.
 
-To call a function repeatedly (e.g., every _N_ milliseconds), consider using {{domxref("Window.setInterval", "setInterval()")}}.
-
-### Non-number delay values are silently coerced into numbers
-
-If `setTimeout()` is called with [_delay_](#delay) value that's not a number, implicit [type coercion](/en-US/docs/Glossary/Type_coercion) is silently done on the value to convert it to a number. For example, the following code incorrectly uses the string `"1000"` for the _delay_ value, rather than the number `1000` – but it nevertheless works, because when the code runs, the string is coerced into the number `1000`, and so the code executes 1 second later.
-
-```js example-bad
-setTimeout(() => {
-  console.log("Delayed for 1 second.");
-}, "1000");
-```
-
-But in many cases, the implicit type coercion can lead to unexpected and surprising results. For example, when the following code runs, the string `"1 second"` ultimately gets coerced into the number `0` — and so, the code executes immediately, with zero delay.
-
-```js example-bad
-setTimeout(() => {
-  console.log("Delayed for 1 second.");
-}, "1 second");
-```
-
-Therefore, don't use strings for the _delay_ value but instead always use numbers:
-
-```js example-good
-setTimeout(() => {
-  console.log("Delayed for 1 second.");
-}, 1000);
-```
+If you wish to call a function repeatedly (e.g., every _N_ milliseconds), you can use {{domxref("Window.setInterval", "setInterval()")}}.
 
 ### Working with asynchronous functions
 
-`setTimeout()` is an asynchronous function, meaning that the timer function will not pause execution of other functions in the functions stack.
-In other words, you cannot use `setTimeout()` to create a "pause" before the next function in the function stack fires.
+`setTimeout()` is an asynchronous function, meaning that the timer function will not pause execution of other functions in the function's stack.
+In other words, you cannot use `setTimeout()` to create a "pause" before the next function in the stack fires.
 
 See the following example:
 
@@ -107,90 +101,48 @@ setTimeout(() => {
 // this is the first message
 ```
 
-Notice that the first function does not create a 5-second "pause" before calling the second function. Instead, the first function is called, but waits 5 seconds to
-execute. While the first function is waiting to execute, the second function is called, and a 3-second wait is applied to the second function before it executes. Since neither
-the first nor the second function's timers have completed, the third function is called and completes its execution first. Then the second follows. Then finally the first function
-is executed after its timer finally completes.
+Notice that the first function does not create a 5-second "pause" before calling the second function.
+Instead, the first function is called, but waits 5 seconds to execute.
+While the first function is waiting to execute, the second function is called, and a 3-second wait is applied to the second function before it executes.
+Since neither the first nor the second function's timers have completed, the third function is called and completes its execution first.
+Then the second follows.
+Then finally the first function is executed after its timer finally completes.
 
 To create a progression in which one function only fires after the completion of another function, see the documentation on [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-### The "this" problem
+### Functions are called with the global `this`
 
-When you pass a method to `setTimeout()`, it will be invoked with a `this` value that may differ from your
-expectation. The general issue is explained in detail in the [JavaScript reference](/en-US/docs/Web/JavaScript/Reference/Operators/this#callbacks).
+Methods or functions passed to `setTimeout()` do not run in the same execution context as `setTimeout()`, and hence do not have the same [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) as the function that called `setTimeout()`.
+Instead the called function has a `this` keyword set to the `window` (or `global`) object.
+This problem is explained in detail in the [JavaScript reference](/en-US/docs/Web/JavaScript/Reference/Operators/this#callbacks).
 
-Code executed by `setTimeout()` is called from an execution context separate
-from the function from which `setTimeout` was called. The usual rules for
-setting the `this` keyword for the called function apply, and if you have not
-set `this` in the call or with `bind`, it will default to
-the `window` (or `global`) object, even in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode). It will not be the same as the
-`this` value for the function that called `setTimeout`.
-
-See the following example:
+The following example demonstrates how this can cause unexpected behavior:
 
 ```js
-const myArray = ["zero", "one", "two"];
+myArray = ["zero", "one", "two"];
+
 myArray.myMethod = function (sProperty) {
-  console.log(arguments.length > 0 ? this[sProperty] : this);
+  alert(arguments.length > 0 ? this[sProperty] : this);
 };
 
 myArray.myMethod(); // prints "zero,one,two"
 myArray.myMethod(1); // prints "one"
+setTimeout(myArray.myMethod, 1000); // Alerts "[object Window]" after 1 second
+setTimeout(myArray.myMethod, 1500, "1"); // Alerts "undefined" after 1.5 seconds
 ```
 
-The above works because when `myMethod` is called, its `this` is
-set to `myArray` by the call, so within the function,
-`this[sProperty]` is equivalent to `myArray[sProperty]`. However,
-in the following:
+You can use [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) to adopt the `this` of the function in which `setTimeout()` is called (arrow functions have a lexical `this`).
+
+You can test this with the following code.
 
 ```js
-setTimeout(myArray.myMethod, 1.0 * 1000); // prints "[object Window]" after 1 second
-setTimeout(myArray.myMethod, 1.5 * 1000, "1"); // prints "undefined" after 1.5 seconds
+setTimeout(() => myArray.myMethod(), 1000); // Alert "zero,one,two" after 1 second
+setTimeout(() => myArray.myMethod(1), 1500); // Alert "one" after 1.5 seconds
+setTimeout(() => myArray.myMethod(2), 3000); // Alert "one" after 3 seconds
 ```
 
-The `myArray.myMethod` function is passed to `setTimeout`, then
-when it's called, its `this` is not set, so it defaults to the
-`window` object.
-
-There's also no option to pass a `thisArg` to
-`setTimeout` as there is in Array methods such as {{jsxref("Array.forEach()", "forEach()")}} and {{jsxref("Array.reduce()", "reduce()")}}. As shown below,
-using `call` to set `this` doesn't work either.
-
-```js
-setTimeout.call(myArray, myArray.myMethod, 2.0 * 1000); // error
-setTimeout.call(myArray, myArray.myMethod, 2.5 * 1000, 2); // same error
-```
-
-#### Solutions
-
-##### Use a wrapper function
-
-A common way to solve the problem is to use a wrapper function that sets
-`this` to the required value:
-
-```js
-setTimeout(function () {
-  myArray.myMethod();
-}, 2.0 * 1000); // prints "zero,one,two" after 2 seconds
-setTimeout(function () {
-  myArray.myMethod("1");
-}, 2.5 * 1000); // prints "one" after 2.5 seconds
-```
-
-The wrapper function can be an arrow function:
-
-```js
-setTimeout(() => {
-  myArray.myMethod();
-}, 2.0 * 1000); // prints "zero,one,two" after 2 seconds
-setTimeout(() => {
-  myArray.myMethod("1");
-}, 2.5 * 1000); // prints "one" after 2.5 seconds
-```
-
-##### Use bind()
-
-Alternatively, you can use {{jsxref("Function.bind()", "bind()")}} to set the value of `this` for all calls to a given function:
+You might also use the [`Function.prototype.bind()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) method, which lets you specify the value that should be used as `this` for all calls to a given function.
+That lets you bypass problems where it's unclear what `this` will be, depending on the context from which your function was called:
 
 ```js
 const myArray = ["zero", "one", "two"];
@@ -204,38 +156,66 @@ setTimeout(myBoundMethod, 1.0 * 1000); // still prints "zero,one,two" after 1 se
 setTimeout(myBoundMethod, 1.5 * 1000, "1"); // prints "one" after 1.5 seconds
 ```
 
-### Passing string literals
+### Non-number delay values are silently coerced into numbers
 
-Passing a string instead of a function to `setTimeout()` has the same problems as using
-[`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval).
+If `setTimeout()` is called with [_delay_](#delay) value that's not a number, implicit [type coercion](/en-US/docs/Glossary/Type_coercion) is silently done on the value to convert it to a number.
+For example, the following code incorrectly uses the string `"1000"` for the _delay_ value, rather than the number `1000` – but it nevertheless works, because when the code runs, the string is coerced into the number `1000`, and so the code executes 1 second later.
 
 ```js example-bad
-// Don't do this
-setTimeout("console.log('Hello World!');", 500);
+setTimeout(() => {
+  console.log("Delayed for 1 second.");
+}, "1000");
 ```
+
+In many cases, the implicit type coercion can lead to unexpected and surprising results.
+For example, when the following code runs, the string `"1 second"` ultimately gets coerced into the number `0` — and so, the code executes with zero delay.
+
+```js example-bad
+setTimeout(() => {
+  console.log("Delayed for 1 second.");
+}, "1 second");
+```
+
+Therefore, don't use strings for the _delay_ value but instead always use numbers:
 
 ```js example-good
-// Do this instead
 setTimeout(() => {
-  console.log("Hello World!");
-}, 500);
+  console.log("Delayed for 1 second.");
+}, 1000);
 ```
 
-A string passed to `setTimeout()` is evaluated in the global context, so local symbols in the context where `setTimeout()` was called will not be available when the string is evaluated as code.
+### Maximum delay value
 
-### Reasons for delays longer than specified
+The `delay` argument is converted to a signed 32-bit integer, which limits the value to 2147483647 ms, or roughly 24.8 days.
+Delays of more than this value will cause an integer overflow.
+So for example, this code:
+
+```js
+setTimeout(() => console.log("hi!"), 2 ** 32 - 5000);
+```
+
+…results in the timeout being executed immediately (since `2**32 - 5000` overflows to a negative number), while the following code:
+
+```js
+setTimeout(() => console.log("hi!"), 2 ** 32 + 5000);
+```
+
+…results in the timeout being executed after approximately 5 seconds.
+
+> [!NOTE]
+> In Node.js, any timeout larger than 2,147,483,647 ms results in immediate execution.
+
+### Reasons for longer delays than specified
 
 There are a number of reasons why a timeout may take longer to fire than anticipated.
 This section describes the most common reasons.
 
 #### Nested timeouts
 
-As specified in the [HTML standard](https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#timers),
-browsers will enforce a minimum timeout of 4 milliseconds once a nested call to `setTimeout` has been scheduled 5 times.
+As specified in the [HTML standard](https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#timers), browsers will enforce a minimum timeout of 4 milliseconds once a nested call to `setTimeout` has been scheduled 5 times.
 
-This can be seen in the following example, in which we nest a call to `setTimeout` with a delay of `0` milliseconds,
-and log the delay each time the handler is called. The first four times, the delay is approximately 0 milliseconds, and after that it is
-approximately 4 milliseconds:
+This can be seen in the following example, in which we nest a call to `setTimeout` with a delay of `0` milliseconds, and log the delay each time the handler is called.
+The first four times, the delay is approximately 0 milliseconds, and after that it is approximately 4 milliseconds:
 
 ```html
 <button id="run">Run</button>
@@ -307,13 +287,12 @@ table {
 }
 ```
 
-{{EmbedLiveSample("Nested_timeouts", 100, 420)}}
+{{EmbedLiveSample("Nested_timeouts", 100, 250)}}
 
 #### Timeouts in inactive tabs
 
-To reduce the load (and associated battery usage) from background tabs, browsers will enforce
-a minimum timeout delay in inactive tabs. It may also be waived if a page is playing sound
-using a Web Audio API {{domxref("AudioContext")}}.
+To reduce the load (and associated battery usage) from background tabs, browsers will enforce a minimum timeout delay in inactive tabs.
+It may also be waived if a page is playing sound using a Web Audio API {{domxref("AudioContext")}}.
 
 The specifics of this are browser-dependent:
 
@@ -340,18 +319,15 @@ The specifics of this are browser-dependent:
 #### Throttling of tracking scripts
 
 Firefox enforces additional throttling for scripts that it recognizes as tracking scripts.
-When running in the foreground, the throttling minimum delay is still 4ms. In background tabs, however,
-the throttling minimum delay is 10,000 ms, or 10 seconds, which comes into effect 30 seconds after a
-document has first loaded.
+When running in the foreground, the throttling minimum delay is still 4ms. In background tabs, however, the throttling minimum delay is 10,000 ms, or 10 seconds, which comes into effect 30 seconds after a document has first loaded.
 
-See [Tracking Protection](https://wiki.mozilla.org/Security/Tracking_protection) for
-more details.
+See [Tracking Protection](https://wiki.mozilla.org/Security/Tracking_protection) for more details.
 
 #### Late timeouts
 
 The timeout can also fire later than expected if the page (or the OS/browser) is busy with other tasks.
-One important case to note is that the function or code snippet cannot be executed until
-the thread that called `setTimeout()` has terminated. For example:
+One important case to note is that the function or code snippet cannot be executed until the thread that called `setTimeout()` has terminated.
+For example:
 
 ```js
 function foo() {
@@ -368,53 +344,44 @@ After setTimeout
 foo has been called
 ```
 
-This is because even though `setTimeout` was called with a delay of zero,
-it's placed on a queue and scheduled to run at the next opportunity; not immediately.
-Currently-executing code must complete before functions on the queue are executed, thus
-the resulting execution order may not be as expected.
+This is because even though `setTimeout` was called with a delay of zero, it's placed on a queue and scheduled to run at the next opportunity; not immediately.
+Currently-executing code must complete before functions on the queue are executed, thus the resulting execution order may not be as expected.
 
 #### Deferral of timeouts during pageload
 
-Firefox will defer firing `setTimeout()` timers
-while the current tab is loading. Firing is deferred until the main thread is deemed
-idle (similar to {{domxref("Window.requestIdleCallback()")}}),
-or until the load event is fired.
+Firefox will defer firing `setTimeout()` timers while the current tab is loading. Firing is deferred until the main thread is deemed idle (similar to {{domxref("Window.requestIdleCallback()")}}), or until the load event is fired.
 
 ### WebExtension background pages and timers
 
-In [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions), `setTimeout()`
-does not work reliably. Extension authors should use the [`alarms`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/alarms)
-API instead.
+In [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions), `setTimeout()` does not work reliably. Extension authors should use the [`alarms`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/alarms) API instead.
 
-### Maximum delay value
+### Security considerations
 
-Browsers store the delay as a 32-bit signed integer internally. This causes an integer
-overflow when using delays larger than 2,147,483,647 ms (about 24.8 days). So for example, this code:
+The method can be used to execute arbitrary input passed in the `code` parameter.
+If the input is a potentially unsafe string provided by a user, this is a possible vector for [Cross-site-scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks.
+For example, the following example assumes the `scriptElement` is an executable `<script>` element, and that `untrustedCode` was provided by a user:
 
-```js
-setTimeout(() => console.log("hi!"), 2 ** 32 - 5000);
+```js example-bad
+const untrustedCode = "alert('Potentially evil code!');";
+const id = setTimeout(untrustedCode, 1000);
 ```
 
-…results in the timeout being executed immediately (since `2**32 - 5000` overflows to a negative number), while the following code:
+Websites with a [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) will prevent such code running by default; if you need to use the method with `code` then you will first need to allow the [`unsafe-eval`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#unsafe-eval) in your CSP [`script-src`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src).
 
-```js
-setTimeout(() => console.log("hi!"), 2 ** 32 + 5000);
-```
+If you must allow the scripts to run you can mitigate these issues by always assigning {{domxref("TrustedScript")}} objects instead of strings, and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) using the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) CSP directive.
+This ensures that the input is passed through a transformation function.
 
-…results in the timeout being executed after approximately 5 seconds.
-
-**Note**: That doesn't match `setTimeout` behavior in Node.js, where any timeout larger than 2,147,483,647 ms
-results in an immediate execution.
+The behavior of the transformation function will depend on the specific use case that requires a user provided script.
+If possible you should lock the allowed scripts to exactly the code that you trust to run.
+If that is not possible, you might allow or block the use of certain functions within the provided string.
 
 ## Examples
 
 ### Setting and clearing timeouts
 
-The following example sets up two simple buttons in a web page and hooks them to the
-`setTimeout()` and `clearTimeout()` routines. Pressing the first
-button will set a timeout which shows a message after two seconds and stores the
-timeout id for use by `clearTimeout()`. You may optionally cancel this
-timeout by pressing on the second button.
+The following example sets up two simple buttons in a web page and hooks them to the `setTimeout()` and `clearTimeout()` routines.
+Pressing the first button will set a timeout which shows a message after two seconds and stores the timeout id for use by `clearTimeout()`.
+You may optionally cancel this timeout by pressing on the second button.
 
 #### HTML
 

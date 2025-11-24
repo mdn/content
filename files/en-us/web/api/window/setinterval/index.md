@@ -25,9 +25,9 @@ setInterval(code, delay)
 
 setInterval(func)
 setInterval(func, delay)
-setInterval(func, delay, arg1)
-setInterval(func, delay, arg1, arg2)
-setInterval(func, delay, arg1, arg2, /* …, */ argN)
+setInterval(func, delay, param1)
+setInterval(func, delay, param1, param2)
+setInterval(func, delay, param1, param2, /* …, */ paramN)
 ```
 
 ### Parameters
@@ -42,7 +42,7 @@ setInterval(func, delay, arg1, arg2, /* …, */ argN)
   - : The delay time between executions of the specified function or code, in milliseconds.
     Defaults to 0 if not specified.
     See [Delay restrictions](#delay_restrictions) below for details on the permitted range of `delay` values.
-- `arg1`, …, `argN` {{optional_inline}}
+- `param1`, …, `paramN` {{optional_inline}}
   - : Additional arguments which are passed through to the function specified by _func_ once the timer expires.
 
 ### Return value
@@ -76,8 +76,7 @@ Browsers may enforce even more stringent minimum values for the interval under s
 Note also that the actual amount of time that elapses between calls to the callback may be longer than the given `delay`; see [Reasons for delays longer than specified](/en-US/docs/Web/API/Window/setTimeout#reasons_for_delays_longer_than_specified) for examples.
 
 > [!NOTE]
-> The `delay` argument is converted to a signed 32-bit integer.
-> This effectively limits `delay` to 2147483647 ms, roughly 24.8 days, since it's specified as a signed integer in the IDL.
+> The `delay` argument is converted to a signed 32-bit integer, which limits the value to 2147483647 ms, or roughly 24.8 days.
 
 ### Interval IDs are shared with `setTimeout()`
 
