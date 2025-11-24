@@ -49,6 +49,8 @@ Firefox 146 is the current [Beta version of Firefox](https://www.firefox.com/en-
   This keyword is an alias for the recently-standardized `stretch` keyword (i.e., [`width: stretch`](/en-US/docs/Web/CSS/Reference/Properties/width#stretch) and [`height: stretch`](/en-US/docs/Web/CSS/Reference/Properties/height#stretch)), which isn't yet supported in Firefox.
   ([Firefox bug 1988938](https://bugzil.la/1988938), [Firefox bug 1789477](https://bugzil.la/1789477)).
 
+- The {{cssxref("@custom-media")}} [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules) is now supported by default. This enables you to defines aliases/variables for long or complex {{CSSxRef("@media")}} queries. ([Firefox bug 1991105](https://bugzil.la/1744292)).
+
 <!-- #### Removals -->
 
 ### JavaScript
