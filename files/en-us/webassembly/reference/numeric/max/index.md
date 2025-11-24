@@ -1,11 +1,12 @@
 ---
-title: Max
-slug: WebAssembly/Reference/Numeric/Max
+title: "max: Wasm text instruction"
+short-title: max
+slug: WebAssembly/Reference/Numeric/max
 page-type: webassembly-instruction
 sidebar: webassemblysidebar
 ---
 
-The **`max`** instructions, are used for getting the higher of two numbers.
+The **`max`** instructions are used for getting the higher of two numbers.
 
 {{InteractiveExample("Wat Demo: max", "tabbed-taller")}}
 

@@ -1,5 +1,6 @@
 ---
-title: br_if
+title: "br_if: Wasm text instruction"
+short-title: br_if
 slug: WebAssembly/Reference/Control_flow/br_if
 page-type: webassembly-instruction
 sidebar: webassemblysidebar

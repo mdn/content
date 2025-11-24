@@ -1,11 +1,12 @@
 ---
-title: Nearest
-slug: WebAssembly/Reference/Numeric/Nearest
+title: "nearest: Wasm text instruction"
+short-title: nearest
+slug: WebAssembly/Reference/Numeric/nearest
 page-type: webassembly-instruction
 sidebar: webassemblysidebar
 ---
 
-The **`nearest`** instructions, are used for getting the value of a number rounded to the nearest integer.
+The **`nearest`** instructions are used for getting the value of a number rounded to the nearest integer.
 
 {{InteractiveExample("Wat Demo: nearest", "tabbed-standard")}}
 
