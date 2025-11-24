@@ -46,7 +46,7 @@ The `animation-timeline` property is specified as one or more comma-separated va
   - : The animation is not associated with a timeline, and no animation occurs.
 
 - `auto`
-  - : The animation's timeline is the document's default {{domxref("DocumentTimeline")}}". This is the default.
+  - : The animation's timeline is the document's default {{domxref("DocumentTimeline")}}. This is the default.
 
 - {{cssxref("animation-timeline/scroll", "scroll()")}}
   - : Defines the root, nearest scroller, or self as the anonymous scroll progress timeline, and optionally the scroll direction of the scroller.
@@ -98,7 +98,7 @@ If two or more timelines share the same `<dashed-ident>` name and same specifici
 
 ### Basic usage
 
-This example demonstrates basic usage of the `animation-timeline` property.
+This example demonstrates basic usage of the `animation-timeline` property, along with the `none`, `auto`, and default (`auto`) values.
 
 #### HTML
 
