@@ -290,7 +290,7 @@ In this example, we demonstrate creating and applying an named view progress tim
 
 #### HTML
 
-```html hidden live-sample___named_view
+```html-nolint hidden live-sample___named_view
 <main class="scroller">
   <div class="container">
     <h1>Directions</h1>
@@ -302,8 +302,6 @@ In this example, we demonstrate creating and applying an named view progress tim
       <li>Turn right onto West Basin Dr</li>
       <li>Look up when you reach 64 Independence Ave!</li>
     </ol>
-  </div>
-</main>
 ```
 
 Our HTML includes a lot of text in a container within a scroller, which we've hidden for brevity. In the middle of the wall of text, we include two `<div>` elements that we will animate based on the visibility of the element itself in the first case and based on the visibility of its parent in the second case:
@@ -410,7 +408,7 @@ In this example, we recreate the previous example, but using the `view()` and `s
 
 #### HTML
 
-```html hidden live-sample___anonymous_view
+```html-nolint hidden live-sample___anonymous_view
 <main class="scroller">
   <div class="container">
     <h1>Directions</h1>
@@ -422,8 +420,6 @@ In this example, we recreate the previous example, but using the `view()` and `s
       <li>Turn right onto West Basin Dr</li>
       <li>Look up when you reach 64 Independence Ave!</li>
     </ol>
-  </div>
-</main>
 ```
 
 In the middle of the wall of text, we include two `<div>` elements that we will animate based on the scrolling of its parent in the first case and based on the visibility of the element itself in the second case:
