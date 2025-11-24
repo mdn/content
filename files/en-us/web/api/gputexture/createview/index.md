@@ -89,7 +89,7 @@ createView(descriptor)
         - `1`
           - : Enforces a value of `1`.
 
-        For example, `swizzle: "grba"` would result in the texture's red and green channel values being swapped when a shader accesses the view. Texture component swizzle allows developers to optimize performance, correct component ordering mismatches, and reuse shader code across various texture formats when sampling textures.
+        For example, `swizzle: "rgba"` would result in the texture's red and green channel values being swapped when a shader accesses the view. Texture component swizzle allows developers to optimize performance, correct component ordering mismatches, and reuse shader code across various texture formats when sampling textures.
 
         > [!NOTE]
         > To use the `swizzle` property, you must enable the `texture-component-swizzle` [feature](/en-US/docs/Web/API/GPUSupportedFeatures) in your {{domxref("GPUDevice")}} by specifying it in the `requiredFeatures` array of the {{domxref("GPUAdapter.requestDevice()")}} descriptor. If this feature is not enabled, the `swizzle` property will have no effect.
